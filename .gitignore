@@ -1,0 +1,12 @@
+/.venv/
+/.tools/
+/.cache/
+/.tmp/
+/baselines/runtime/
+/docs/screens/
+/external/
+*.pyc
+__pycache__/
+*.bak
+*.log
+!/baselines/*.log
