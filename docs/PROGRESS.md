@@ -15,6 +15,16 @@
 - Reached and screenshot-verified the clean vanilla menu autonomously.
 - Captured the vanilla error baseline. Its only normalized messages are repeated
   store-backend misses for unavailable DLC item IDs 3865300 and 3699010.
+- Extracted 28,573 locations and the current symbols/content/encoding/DLC
+  inventories into `docs/vanilla_symbols/`.
+- Verified the start/end-date defines and the build's actual split setup layout
+  against local files and the read-only 1444 precedent.
+- Harvested the local console command list. The current build's
+  `script_docs`/`dump_data_types` exporters do not return; captured a documented
+  community fallback and recorded the stricter local-script+smoke rule.
+- Completed `make full`: static validation green, clean vanilla menu reached,
+  zero new normalized errors.
+- Closed M0 with `docs/playtests/M0_REPORT.md`.
 
-Next: finish the tolerant vanilla extractor; harvest engine docs through the
-console; analyze the 1444 precedent; complete ENGINE_FACTS and the M0 gate.
+Next: M1 metadata, thumbnail, link restoration, fully scripted mod enablement,
+and a mod-active zero-new-error menu smoke.

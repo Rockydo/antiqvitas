@@ -1,0 +1,1380 @@
+oos_prompt [<local/dummy>]
+ - Shows the oos_prompt window
+
+oos_dump
+ - Dumps OOS info
+
+print_randomlog
+ - Prints the current randomlog
+
+force_oos
+ - Force a desync, modifies the random count
+
+force_resync
+ - Host will force a resync in an MP game
+
+event [eventid] [target]
+ - Trigger an event 
+
+test_event_trigger [eventid] [target]
+ - Test the triggers for an event 
+
+achievement [achievement]
+ - Tests an achievement
+
+Manpower
+ - adds currency (Manpower)
+
+Sailors
+ - adds currency (Sailors)
+
+cash
+ - adds currency (cash)
+
+Stability
+ - adds currency (Stability)
+
+WarExhaustion
+ - adds currency (WarExhaustion)
+
+Inflation
+ - adds currency (Inflation)
+
+Prestige
+ - adds currency (Prestige)
+
+ArmyTradition
+ - adds currency (ArmyTradition)
+
+NavyTradition
+ - adds currency (NavyTradition)
+
+GovernmentPower
+ - adds currency (GovernmentPower)
+
+Karma
+ - adds currency (Karma)
+
+ReligiousInfluence
+ - adds currency (ReligiousInfluence)
+
+Purity
+ - adds currency (Purity)
+
+Honor
+ - adds currency (Honor)
+
+Doom
+ - adds currency (Doom)
+
+RitePower
+ - adds currency (RitePower)
+
+Yanantin
+ - adds currency (Yanantin)
+
+Righteousness
+ - adds currency (Righteousness)
+
+Harmony
+ - adds currency (Harmony)
+
+SelfControl
+ - adds currency (SelfControl)
+
+Complacency
+ - adds currency (Complacency)
+
+YesMan
+ - toggles the cheat mode YesMan
+
+NoMan
+ - toggles the cheat mode NoMan
+
+WatchWindows
+ - toggles the cheat mode WatchWindows
+
+LoadingScreen
+ - toggles the cheat mode LoadingScreen
+
+InstantMove
+ - toggles the cheat mode InstantMove
+
+InstantSiege
+ - toggles the cheat mode InstantSiege
+
+NoRandom
+ - toggles the cheat mode NoRandom
+
+FastDiplo
+ - toggles the cheat mode FastDiplo
+
+DelayDiploReply
+ - toggles the cheat mode DelayDiploReply
+
+InstantWar
+ - toggles the cheat mode InstantWar
+
+InstantConstruction
+ - toggles the cheat mode InstantConstruction
+
+InstantConquistadors
+ - toggles the cheat mode InstantConquistadors
+
+InstantCasusBelli
+ - toggles the cheat mode InstantCasusBelli
+
+InstantExploration
+ - toggles the cheat mode InstantExploration
+
+InstantMission
+ - toggles the cheat mode InstantMission
+
+InstantImplementation
+ - toggles the cheat mode InstantImplementation
+
+FastRebels
+ - toggles the cheat mode FastRebels
+
+ByPassRequirements
+ - toggles the cheat mode ByPassRequirements
+
+RemoveFogOfWar
+ - toggles the cheat mode RemoveFogOfWar
+
+no_peace_deals
+ - toggles the cheat mode no_peace_deals
+
+recalc_cached_data
+ - Recalculates the cached data in the gamestate which is not persisted in the savegame
+
+update_pop_cache
+ - Recalculates the cached data related to pops in the player country
+
+form_union [<junior partner>]
+ - Form a union with another country
+
+change_government(changeGov) [<Government Type>]
+ - Change government of your country
+
+parliament_issue [<parliament_issue>]
+ - Change parliament issue in your country
+
+end_parliament_issue
+ - Ends a parliament issue in your country with success
+
+enact_hre_policy [<policy_key>]
+ - Force the HRE to enact the given policy. Finalises an active policy_vote if one is running, otherwise starts and resolves one in a single step.
+
+ignore_paused_time(ignore_pause) [<Bool Type>]
+ - Make the time smoother to ignore that the game is paused so animation can run even when the game is paused.
+
+discover(ti) [<location key> / all]
+ - Discover one or all locations
+
+discover_area(da) [<area key> / all]
+ - Discover one or all areas
+
+override_scale_time(overr_scale,) [<Bool Type> <Float Type>]
+ - Override the scale for gfx time based on game speed
+
+debug_animation_time
+ - Ignores pause and overrides scale time setting it to 1.0.
+
+change_devastation(chg_deva) [<location> <amount>]
+ - Changes devastation, quantity is expected to be between 0.0 a 1.0f
+
+tick_population [<location>]
+ - Montly tick for population in a location
+
+weather [<location> <front/cyclone/tornado>]
+ - Creates a new weather in target location
+
+change_control(chg_ctrl) [<location> <amount>]
+ - Changes Control, quantity is expected to be between 0.0 a 1.0f
+
+change_winter(chg_winter) [<location> <amount>]
+ - Changes winter level, level is expected to be between 0 to 3
+
+reload_terrain2_materials()
+ - Reload terrain2 textures
+
+print_selected_illustration_info(prt_ill_info) [eventidverbose]
+ - Prints debug info about selecting a illustration
+
+print_selected_images_info(prt_img_info) [eventid] [verbose]
+ - Prints debug info about image selection in the illustration of an event
+
+trigger_flag_animation()
+ - 
+
+MapObjects.CheckLocators() [[optional] numbers of pixels to search for other location]
+ - Checks what locators are inside the province that should contain them
+
+PrintLocationBiome [[optional] location id to print biome for]
+ - Prints the biome of the hovered (or entered as argument) location
+
+famine
+ - Completely wipes food stockpiles in markets and provinces
+
+destroy_market_stockpiles
+ - Destroys all goods stockpiles in all markets
+
+build_everything(be) [<location> <id> / <country> <tag> / <region> <id> / all]
+ - Build everything possible in a location / country or region
+
+list_dhe_for
+ - Lists what DHEs were fired for a tag
+
+Cities.PrintUsedSchematics
+ - Prints a list of all of the schematics used in city mesh lists
+
+MapObjects.DebugDefaultLocatorTransforms
+ - Generates debug lines for game object locator default placement
+
+reload_pin_collections()
+ - Reload Pin Collections
+
+spawn_in_every_location()
+ - Spawn an schematic of the desired type in every location. It can be limmited in fov, fow or player
+
+event_probabilities [<on_action key> [lean]]
+ - dump in error log of breakdown of events (triggers, probabilities...) for the on_action in input.
+use 'lean' option for a simpler breakdown.
+limited to the following on_action:
+monthly_country_pulse
+yearly_country_pulse
+biyearly_country_pulse
+four_yearly_country_pulse
+
+Map.SavePNGScaled [<map mode>] [<file name>] [<yes/no> Should render flat (optional)]
+ - Save a png of the map with a specific color mode with a selected size
+
+inspect_player_country
+ - Opens the inspector with the player country
+
+copy_mouse_pos
+ - Copies the mouse position into the clipboard
+
+set_ruler [<country_tag>] [<character_id>]
+ - Sets a character as the new ruler of a country. Usage: set_ruler <country_tag> <character_id>
+
+recalc_connectivity [tag]
+ - Recalculate subject territory connectivity for a country by tag
+
+fake_whisper [[message...]]
+ - Simulates an incoming DM for testing the whisper notification toast
+
+unit_viewer
+ - Unit Viewer Dockable
+
+unit_age [<age>]
+ - Forces a Debug age for all units on screen
+
+start_location_gfx_test [<Frames per Location>]
+ - Starts gfx location tests
+
+stop_location_gfx_test
+ - Ends gfx location tests
+
+ecs_scene_viewer_dockable
+ - Ecs Scene Viewer Dockable
+
+portrait_editor(pe)
+ - Open the portrait editor
+
+Portrait.ClearCache
+ - Clears the portrait cache. Forces all portraits to refresh
+
+mesh_importer_browser
+ - Mesh Importer Browser
+
+mesh_importer
+ - Mesh Importer
+
+ecs_dependency_editor
+ - ECS Dependency Graph Editor
+
+init_flow_editor
+ - Init Flow Dependency Editor
+
+update_flow_editor
+ - Update Flow Dependency Editor
+
+Adjacencies.Rebuild
+ - Rebuild all adjacencies
+
+spawnline [<line name>] [<start position 'x,y,z'> (no spaces)] [<end position x,y,z> (no spaces)]
+ - Spawns specified line between 2 positions
+
+clearlines
+ - Clear lines
+
+spawn_schematic [schematic name]
+ - Runs entity schematic with the specified parameters
+
+clear_spawned_schematics
+ - Removes all debug entities (spawned via spawn_schematic)
+
+Ecs.RunRenderingBenchmark [Schematic name] [Number of instances] [Duration (s)]
+ - Executes the ecs rendering benchmark
+
+spawnentity [<entity name>] [<state> (optional)]
+ - Spawns specified entity at cursor position
+
+spawnentity_at [<entity name>] [x] [y] [<state> (optional)]
+ - Spawns specified entity at xy-position
+
+list_entity_nodes [{entity name}]
+ - Shows a list with the names of the nodes of the specified entity
+
+list_entity_submeshes [{entity name}]
+ - Shows a list with the names of the submeshes of the specified entity
+
+clearspawnedentities
+ - Clears entities spawned with spawnentity command
+
+MapObjects.GenerateGameLocators [<type>] [<filename> (optional)]
+ - Generates locators for the game's map objects
+
+MapObjects.Debug
+ - Prints out map object debug information
+
+Camera.Debug
+ - Prints out camera debug information
+
+Camera.Save
+ - Save camera position
+
+Camera.Load
+ - Load camera position
+
+Camera.SetTransform [X] [Y] [Z] [Zoom] [Pitch] [Yaw]
+ - Sets camera transform
+
+Map.SavePNG [<map mode>] [<file name>] [<yes/no> Should render flat (optional)]
+ - Save a png of the map with a specific color mode
+
+SplineNetwork.AppendAssets
+ - 
+
+SplineNetwork.ClearAssets
+ - 
+
+terrain2.reload [data source ('empty' or 'dataset')]
+ - Reloads the terrain or terrain related assets
+
+save_game_analyzer
+ - Open the save game analyzer
+
+entity_designer
+ - Opens the Entity Designer Previewer
+
+entity_designer_node_editor [Name of the schematic to open]
+ - Opens the Entity Designer Node Editor
+
+update_graph_nodeeditor
+ - Update Graph Editor
+
+animation_editor
+ - Opens the Animation Editor
+
+scene_editor
+ - Opens the Scene Editor
+
+entity_editor
+ - Entity Editor Dockable
+
+gui_animation_curve_editor
+ - GUI Animation Curve Editor Dockable
+
+gui_animation_editor
+ - GUI Animation Editor Dockable
+
+tweak
+ - Spawns a tweaker GUI
+
+dump_tweakables
+ - Dumps all available tweakables to the specified file in the user folder.
+
+gui_data_profiler
+ - Gui Data Profiler
+
+log_viewer
+ - Log Viewer Dockable
+
+log_status
+ - Log Status Dockable
+
+Script.Profiling.Gui
+ - Show script profiler gui
+
+script_docs(script_documentation)
+ - Prints script documentation
+
+Script.Profiling.Start
+ - Starts capturing script profiling data
+
+Script.Profiling.Stop
+ - Stop capturing script profiling data
+
+Script.Profiling.Restart
+ - Stop and then restart capturing script profiling data
+
+Script.Profiling.Dump
+ - Dump roots of current script profiling data
+
+Script.Profiling.DumpAll
+ - Dump all current script profiling data
+
+Session.GetEnabledDLCs
+ - Gets the enabled DLCs for this session
+
+shader_debug
+ - 
+
+dump_ref_lookup_memory_report
+ - 
+
+particleeditor
+ - Particle Editor
+
+shader_editor
+ - Shader Editor Dockable
+
+compound_nodeeditor
+ - Compound Node Editor
+
+data_types_explorer
+ - Opens the data types explorer dockable
+
+drawcmdsviewer
+ - Draw Cmds Viewer
+
+tools.skins
+ - Skin Editor
+
+screenshot
+ - Take screenshot
+
+settings
+ - Spawns a settings GUI with an optional argument for an initially selected category 
+
+textureviewer
+ - Texture Viewer
+
+texturelist
+ - Texture List
+
+RandomLog
+ - Toggles random logging
+
+measure_frame_time ["start" or "stop" measuring]
+ - Measures avg/min/max frame time and prints the result to debug.log once stopped
+
+io_stats(iostats)
+ - Toggles IO Stats
+
+io_stats.Reset(iostats.reset)
+ - Resets IO Stats
+
+net_stats(netstats)
+ - Toggles Net Stats
+
+net_stats.Reset(netstats.reset)
+ - Resets Net Stats
+
+memory_stats(memstats)
+ - Toggles Memory Stats
+
+memory_stats.Reset(memstats.reset)
+ - Resets Memory Stats
+
+3dstats
+ - Toggles 3D Stats
+
+3dstats.EnableGfxZoneStats
+ - Toggles 3D Gfx Zone Stats
+
+3dstats.EnableTextureStats
+ - Toggles Texture Stats
+
+3dstats.EnableDescriptorStats
+ - Toggles Descriptor Stats
+
+MipLevelDebugTool
+ - Toggles MipLevelDebugTool
+
+Graphics.CapFramerate
+ - 
+
+GUI.AnimationTimeline.LogStats
+ - Dump stats of the GUI Animation Timeline system to the debug log.
+
+audio.list_events
+ - List audio events
+
+audio.play_event [Audio event]
+ - Play audio event
+
+audio.cpu_info
+ - Shows current cpu usage
+
+audio.set_rtpc [RTPC name] [RTPC value]
+ - Set Wwise RTPC
+
+audio.set_state [State name] [State value]
+ - Set Wwise State
+
+audio.set_switch [Switch name] [Switch value]
+ - Set Wwise Switch
+
+SDL.EventLogging
+ - 
+
+Localization.ToggleSkipDataSystemInLocOutput
+ - Don't run the data system at all in loc
+
+Localization.ToggleIncludeKeyInLocOutput
+ - Includes the loc key in localization output
+
+Localization.ToggleOnlyKeyInLocOutput
+ - Shows only the loc key in localization output
+
+rendertype
+ - Reports what render backend is used
+
+Debug.TextureMode [Name of debug mode]
+ - Enables a texture mode for debugging
+
+vsync
+ - Toggle main swapchains vsync
+
+swapchain.buffers
+ - Query/Set swapchain buffers
+
+gfx.reloadtexture
+ - Reload textures
+
+FullSettings [Optional file where the full settings will be saved]
+ - Generates a settings with all the options, even unmodified ones
+
+Threading.TaskThreadCount [The number of task threads]
+ - Set or get the number of task threads
+
+log [Various, see below]
+ - log list: Print a list of all log categories and sinks
+- log [on/off/level]: Turn all logs on/off or set global level
+- log "[Format Pattern]" Set global format pattern
+- log "[Category]" [on/off/level]: Turn all logs on/off or set level for Category
+- log "[Category]" "[Format Pattern]" Set format pattern for Category
+
+Log.ClearErrorLog
+ - Clears out error.log and resets the error count
+
+Log.ClearAll
+ - Clears all logs
+
+log_ticktask_performance
+ - Start outputing ticktask performance data to profiling.log
+
+ai_currency_misses
+ - Prints the missed ai currency modifiers to log file
+
+TickTask.Graph
+ - Open a graph view of the tick tasks
+
+TickTask.List
+ - Open a graph view of the tick tasks
+
+CrashReporter.SimulateCrash
+ - Simulates a crash (resulting in the game exiting).
+
+CrashReporter.DeleteCrashData
+ - Delete local crash dumps older than X days.
+
+minidump [file path]
+ - Creates a minidump
+
+gfx.skin
+ - select active gfx skin
+
+Dockables.Create [Dockable name]
+ - Create dockable
+
+Dockables.CreateUserLayout [Dockable layout name]
+ - Create a new user layout copy of current layout, with new name.
+
+Dockables.SaveUserLayout [Dockable layout name]
+ - Save current layout to disk as user layout, optionally under a new name.
+
+Dockables.DeleteUserLayout [Dockable layout name]
+ - Delete layout as user layout
+
+Dockables.ShowLayout [Dockable layout name]
+ - Show an existing (user) layout, hide current layout
+
+Dockables.HideLayout
+ - Hide any shown dockable layout
+
+Dockables.ShowManager
+ - Show dockable layout manager
+
+map_editor
+ - Toggle map editor
+
+AudioPersistentObjectManager.PostAudioEvent
+ - Runs an audio even on a "persistent" audio object
+
+Debug.Achievements.ToggleDebug [<value>]
+ - Puts the achievements system in debug mode
+
+Debug.Achievements.ListAll [<value>]
+ - Puts the achievements system in debug mode
+
+Debug.Achievements.ResetAll
+ - Locks all achievements again
+
+switchlanguage [language name]
+ - Reload localization files and switch language
+
+reload [file name]
+ - Reloads assets
+
+time
+ - What time is it?
+
+crash
+ - Cause the application to crash
+
+vram_end
+ - Cause the application to experience an out of vram
+
+debug_mode
+ - Toggles debug mode
+
+release_mode
+ - Toggles release mode
+
+GUI.CreateWidget(gui_test,test_gui) [File name] [Widget name]
+ - Create dummy widget. With 0 arguments the file name will be gui/test_gui.gui, and the widget name will be test_window
+
+GUI.CreateDockable [File name] [Widget name] [Dockable id. If doesn't exist, it will be registered]
+ - Create dummy dockable widget. With 0 arguments the file name will be gui/test_gui.gui, and the widget name will be test_window
+
+GUI.ClearWidgets
+ - Clear dummy widget
+
+pseudoLoc
+ - Enable/Disable Pseudo Localization on Text Widgets
+
+dump_data_types(DumpDataTypes)
+ - dumps the registered data types
+
+explorer
+ - Shows an object explorer window
+
+explorer_reset
+ - Resets the object explorer position and defaults
+
+helplog
+ - Print out all console commands to game.log file.
+
+help [command name]
+ - Print out all console commands or a specific command description.
+
+version
+ - Prints the version to the console and the game log.
+
+endgame(gameover)
+ - Forces the endgame screen to appear.
+
+tick_day [number of days]
+ - Ticks any number of days
+
+load [file name]
+ - Load gamestate from savegame on disk
+
+test_save
+ - Check save and load persistence
+
+save [file name]
+ - Saves current gamestate to disk
+
+save_replay [file name]
+ - Saves current recorded replay to disk
+
+start_recording
+ - Snapshot current gamestate and start recording commands
+
+stop_recording [file name]
+ - Stop recording and write the .replay file
+
+play_recording [file name]
+ - Load a .replay file and play back its recorded commands
+
+observe(ob)
+ - start observing the game
+
+watch(ww)
+ - Enables watch windows
+
+error
+ - Show errors in log
+
+clear_pools
+ - Clear UI pools
+
+clear_map
+ - Clear map (just for debugging)
+
+gamelog
+ - Show game log
+
+action_timer
+ - Dump times to process each action type
+
+t [<CountryNamePrefix>]
+ - Change player to specific country name (only unique prefix needed)
+
+tag [<CountryTag>]
+ - Change player to specific tag
+
+ai [<CountryTag>]
+ - Create/disable AI for tag
+
+braindeadai [<CountryTag>]
+ - Enable/disable brain dead AI for tag
+
+only_ai(ai_only) [<CountryTag>]
+ - Disable all AI for all countries except one, enable it for that one
+
+only_ai_continent(ai_only_continent) [<Continent>]
+ - Disable all AI for all countries except countries on specified continent, enable it for those
+
+clear_ai_objectives [<CountryTag>]
+ - Clears AI military and diplomatic objectives for tag
+
+subject_stance [<CountryTag>, <Stance>]
+ - Set subject stance for tag
+
+ai_recalc_strategy
+ - Recalculate AI strategy for all countries
+
+ai_tactical_dryrun ['hourly'/'daily', <CountryTag>]
+ - Run tactical AI without executing
+
+ai_tactical_print ['hourly'/'daily', <CountryTag>]
+ - Run tactical AI and print results
+
+ai_tactical_execute ['hourly'/'daily', <CountryTag>]
+ - Run tactical AI for single country
+
+ai_daily_dryrun [<CountryTag>]
+ - Run AI daily tick without executing
+
+ai_daily_print [<CountryTag>]
+ - Run AI daily tick and print results
+
+ai_daily_execute [<CountryTag>]
+ - Run AI daily tick
+
+ai_monthly_dryrun [<CountryTag>]
+ - Run AI monthly tick without executing
+
+ai_monthly_execute [<CountryTag>]
+ - Run AI monthly tick
+
+ai_monthly_print [<CountryTag>]
+ - Run AI monthly tick and print results
+
+ai_recalc_peace_deals
+ - Recalculate AI peace deals
+
+enable_all_commands [<location_id>]
+ - Be the QA you always dreamed to be
+
+DebugCurrency [<CountryTag>] [<CurrencyType>]
+ - output the currency income and outgoings to the log
+
+recalc_trade_path_cache
+ - Recalculate all trade path caches
+
+ai_currency [<currency>, <amount>, <location/rebel>]
+ - Evaluate additional currency for AI
+
+ai_monthly_currency [<currency>, <amount>, <location/rebel>]
+ - Evaluate additional monthly currency for AI
+
+mapmode [<MapMode>]
+ - Give select unit to target country
+
+give_units [<CountryTag>]
+ - Give select unit to target country
+
+kill_all_units [<CountryTag>]
+ - kill all units in target country
+
+kill_unit [<UnitID>]
+ - kill the unit with this ID, kills selected unit when no id is supplied
+
+resupply_all_units [<CountryTag>]
+ - max food for all units in target country
+
+recalc_supply_all_units [<CountryTag>]
+ - recalculate supply paths for all units in target country
+
+damage_all_units [<CountryTag>]
+ - damage all units in target country
+
+nibble_all_units [<CountryTag>]
+ - damage a random amount of strength to all units in target country
+
+world_levies
+ - raise all levies in the world
+
+debug_estate_logic
+ - runs some estate logic for debug
+
+start_annex [<country-tag>]
+ - starts an annexation of the given country
+
+lose_to [<country-tag>]
+ - makes the player lose to the target country
+
+cb(add_casus_belli,casus_belli) [<country-tag> <casus_belli>]
+ - add a cb on target country
+
+lend [<CountryTag> <amount> <interest> <months>]
+ - lend money to target country
+
+spy(spies) [<CountryTag> <amount>]
+ - adds spies to your network in a target country
+
+favor(favors) [<CountryTag> <amount>]
+ - adds favors in a target country
+
+trust [<CountryTag> <amount>]
+ - adds trust in a target country
+
+trust_equilibrium(trust_eq) [<CountryTag> <amount>]
+ - adds trust equilibrium in a target country
+
+rebel_progress [<id> <progress>]
+ - Adds rebel_progress to a rebel
+
+all_rebels [<progress>]
+ - Adds rebel_progress to all active rebels in player country
+
+set_societal_value [<societal_value> <position>]
+ - Sets the societal value 
+
+add_subunit [<subunit_def>]
+ - Adds a subunit
+
+estate_satisfaction [<estate_type> <progress>]
+ - Adds satisfaction to an estate
+
+estate_gold [<estate_type> <gold>]
+ - Adds gold to an estate
+
+disease(spawn_disease) [<disease>]
+ - Spawns a Disease
+
+movement(spawn_movement) [<movement> <location>]
+ - Spawns a Movement
+
+building(add_building) [<building_type> <location>]
+ - Adds a building to a location
+
+add_random_trait [<id>]
+ - Adds a ruler trait to a character
+
+add_trait [<trait>]
+ - Adds a specific trait to the ruler
+
+set_adm [<id> <ability>]
+ - Sets adm ability for a character
+
+set_dip [<id> <ability>]
+ - Sets dip ability for a character
+
+set_mil [<id> <ability>]
+ - Sets mil ability for a character
+
+bankrupt [<CountryTag>]
+ - Bankrupts a nation
+
+remove_bankruptcy [<CountryTag>]
+ - Removes the bankruptcy modifier from a nation
+
+opinion [<CountryTag> <amount>]
+ - Adds Opinion for target country versus player
+
+convert_character [<religion> <id>]
+ - changes religion of a character
+
+kill_character [<id>]
+ - Kills a character
+
+replace_court [<CountryTag>]
+ - Replace Court
+
+impregnate [<id>]
+ - Impregnate a character
+
+give_birth [<id>]
+ - force a pregnant to give birth
+
+impregnate_and_give_birth [<id>]
+ - Impregnate a character and then force them to give birth
+
+kill [<id>]
+ - Kills a character
+
+suicide [<id>]
+ - Kills a character, defaults to yourself
+
+update_employment [<location>]
+ - updated employment for a loction
+
+update_integration [<location>]
+ - updated integration for a loction
+
+colonize [<location>]
+ - creates a colony for target locations' province
+
+colonize_and_finish [<location>]
+ - creates a colony for target locations' province and then finishes the colonial charter immediately
+
+finish_colony [<location>]
+ - finishes a colony for target locations' colonial charter
+
+finish_all_colonies
+ - finishes a colony for target locations' colonial charter
+
+move_random_pop [<source location> <destination location>]
+ - moves a random pop from source to destination
+
+population [<location>]
+ - changes a location's population
+
+finish_constructions [<location>]
+ - finish all constructions in a location
+
+change_garrison [<location>]
+ - changes a location's garrison
+
+freeze [<location>]
+ - freezes a sea location
+
+thaw [<location>]
+ - thaws a sea location
+
+recalc_loc [<location>]
+ - recalcs modifiers in a location
+
+pirate [<area>]
+ - adds a pirate to the area
+
+imperial_authority [<amount>]
+ - adds a imperial_authority to the hre
+
+annex [<CountryTag>]
+ - Player annexes a tag
+
+remove_truce [<CountryTag>]
+ - Removes the truce between player and a tag
+
+add_truce [<CountryTag>]
+ - Adds a truce between player and a tag
+
+reset_agendas
+ - Resets agendas in parliament
+
+war_on_player [<CountryTag>]
+ - A declaring country optionally followed by the victim (defaults to player)
+
+declarewar [<CountryTag>]
+ - A victim country optionally followed by attacker (defaults to player)
+
+revolt [<rebel_id>]
+ - A revolt starts in target country
+
+religion [<religion>]
+ - changes religion
+
+culture [<culture>]
+ - changes culture
+
+cultural_tradition [<culture> <value>]
+ - changes cultural Tradition
+
+cultural_influence [<culture> <value>]
+ - changes cultural Influence
+
+location_language_loc [<language/dialect> <region/area>]
+ - outputs missing location locs to the error log by language or dialect
+
+dialect_override [<language/dialect>]
+ - overrides all dynasties, characters, locations display names with this dialect
+
+convert [<location>]
+ - changes religion of all pops in location to state religion
+
+convert_province [<province_definition>]
+ - changes religion of all pops in a province to state religion
+
+win_siege [<location>]
+ - forces a siege to be won in the target location
+
+add_siege_progress(add_siege_accumulation,add_siege_memory) [<location> <progress>]
+ - adds siege progress to an ongoing siege
+
+economy
+ - resets the pop demands and processes the markets
+
+reset_pop_demand
+ - resets the pop demands for the player
+
+set_flag [<flag_definition>]
+ - overrides this country's flag
+
+coa [<country>]
+ - dumps the country's COA representation to error log
+
+coa_export [<string>]
+ - dumps COAs that start with this string to your documents. If the argument is 'random' it will generate 100 random COA based on the current player country. If you leave the string empty it will output all CoA in the game!
+
+no_owner_pops
+ - dumps to the error log any locations that have no pops of the location's owner
+
+buildings_over_limit
+ - dumps to the error log any buildings that have a level set that is above the maximum
+
+slavery
+ - ticks the slavery process
+
+raid [<location_id>]
+ - raids slaves from the target location
+
+join_war [<warid> <countrytag>]
+ - joins the war with given id on given countries side
+
+building_queue_stats [<countrytag>]
+ - Shows queue of buildings in AI memory
+
+run_select_expand_objectives [<countrytag>]
+ - Runs the select expand objectives for the country
+
+building_queue_buildings [<countrytag>]
+ - Shows which buildings are on the building queue
+
+building_queue_top [<countrytag>]
+ - Shows the top 5 candidates in a building queue in AI memory
+
+building_queue_clear [<countrytag>]
+ - Clears all candidates in a building queue in AI memory
+
+recalc_conquer_desire
+ - Clears all candidates in a building queue in AI memory
+
+number_of_buildings [<countrytag>]
+ - Shows building numbers
+
+make_subject [<subject_type> <countrytag>]
+ - makes subject out of a country
+
+change_country_type [<country_type>]
+ - changes the country type
+
+change_location_rank [<location> <location_rank>]
+ - changes the rank of a location
+
+occupy_location [<location_id>]
+ - occupies a location
+
+occupy_floodfill [<location_id>]
+ - occupies a location
+
+occupy_country [<countrytag>]
+ - occupies a country
+
+occupy_province [<province>]
+ - occupies a province, only locations belonging to nations at war with the player
+
+occupy_area [<area>]
+ - occupies an area, only locations belonging to nations at war with the player
+
+occupy_region [<region>]
+ - occupies a region, only locations belonging to nations at war with the player
+
+occupy_war_enemies
+ - occupies every war enemy
+
+conquer [<location_id>]
+ - conquers an location
+
+conquer_country [<countrytag>]
+ - conquers a country
+
+conquer_province [<province_definition>]
+ - conquers a province definition
+
+conquer_area [<area>]
+ - conquers an area
+
+conquer_region [<region>]
+ - conquers a region
+
+change_dynastic_name [<countrytag>]
+ - Changes dynastic name of a country
+
+remove_location_from_all_ios [<location_id>]
+ - removes location from ios
+
+age(change_age) [<age_tag>]
+ - changes the age
+
+birth_age [<age_tag>]
+ - changes the birth age of all characters (used for testing late game portaits). No arguments will revert to default behaviour
+
+situation(activate_situation) [<situation>]
+ - activate situation
+
+monthly_situation [<situation>]
+ - ticks a month for a situation
+
+disaster(activate_disaster) [<disaster>]
+ - activate disaster
+
+change_date(change_date) [<year>]
+ - changes the date
+
+add_institution_progress(institution) [<instituion_tag> <location_tag> <amount>]
+ - adds institution progress
+
+spawn_institution [<institution_tag> <location_tag>]
+ - spawns an institution at a location if not already spawned
+
+dynasties_report
+ - writes out the dynasty per country
+
+formable_report
+ - writes out the formables without advances
+
+content_report(cr)
+ - writes out the amount of unique content per tag
+
+seazone_report
+ - checks if any seazone has any errors
+
+building_report(br)
+ - reports the base upkeep cost for all buildings
+
+area_report
+ - checks if any areas has any problems
+
+mapmode_report
+ - checks if any mapmode is missing a tooltip
+
+icon_report
+ - checks if any icon database is missing a tooltip
+
+bad_goods
+ - checks if any locations has bad raw materials
+
+overpopulation(op)
+ - writes out the locations with overpopulation
+
+societal_values_report(svr)
+ - checks if all societal values have enough impact it
+
+river_validation_report(rvr)
+ - checks if the river bitmap is valid
+
+process_areas
+ - processes area distances
+
+country_report
+ - writes out data about countries
+
+write_popdata(popdata)
+ - writes out pop information
+
+print_location_list(location_list)
+ - Writes data about locations in a csv format
+
+export_goods_supply_demand(goods_supply_demand)
+ - Exports a tab-separated file with goods key, total supply, and total demand
+
+export_bloc_strengths(bloc_strengths)
+ - Exports a TSV of all countries sorted by economical base, and all alliance pairs with their economical bases
+
+export_market_capacity(market_capacity)
+ - Exports a tab-separated file with market name, trade capacity, burgher trade capacity, oversupply, undersupply, and total imbalance
+
+analyse_market(analyze_market) [<location_key|id>]
+ - Exports a TSV of (a) local deficit goods and where to source them, (b) every producing PM of every building in the market sorted by current profit ascending with output/input local surplus columns, and (c) a per-building-type roll-up (count, levels, open/closed/subsidized counts, totals, avg profit per level). Profit matches the in-game building tooltip (CBuilding::GetProfit). Arg: location key or numeric ID
+
+export_goods_by_market(goods_by_market) [<goods_key>]
+ - Exports a TSV of per-market production, trade imports, supply, demand, and surplus for a given good, sorted by production descending. Arg: goods key
+
+printmap [<mapmode>] [<filename>] [<yes/no> Should render flat (optional)]
+ - Writes out the current worldmap to file
+
+setup_editor
+ - Toggles the setup editor.
+
+pop_editor
+ - Toggles the pop editor.
+
+cd_pop_editor
+ - Toggles the CD pop editor.
+
+war_viewer
+ - Toggles the War Viewer.
+
+ai_currency_viewer
+ - Toggles the Ai Currency Viewer.
+
+ai_diplomatic_objectives_viewer
+ - Toggles the Ai Diplomatic Objectives Viewer.
+
+ai_targets_viewer
+ - Toggles the Ai Targets Viewer.
+
+port_editor
+ - Toggles the port editor.
+
+institution_editor
+ - Toggles the institution editor.
+
+road_editor
+ - Toggles the road editor.
+
+players
+ - Lists all players on server
+
+kick [<Player name>]
+ - Kicks a player with the given name
+
+new_culture [<name>]
+ - Makes a new culture for the player with the given name
+
+merge_culture_group [<name>]
+ - Merges a culture group
+
+update_characters
+ - update character counts for player
+
+create_character [<male/female>] [lowborn/random/new]
+ - Create a Character
+
+artist [<artist_type>]
+ - Create an artist
+
+workofart [<work_of_art_type> [<location> [<quality>]]]]
+ - Create a work of art
+
+policy(add_policy) [<policy>]
+ - changes a policy
+
+border_distance [<CountryTag>]
+ - gets border distance between current and given country
+
+diplomats [<amount>]
+ - Gain diplomatic actions
+
+liberty_desire [<amount>]
+ - Add liberty desire
+
+stockpile [<market location key> <goods key> [<amount>]]
+ - Stockpile goods
+
+do_burgher_trade [<market location key>]
+ - do the burgher trade calculation for a market
+
+reform_desire [<amount>]
+ - players religion gets reform desire
+
+add_core [<amount>]
+ - Add a core location
+
+maritime_presence [<amount>]
+ - Add maritime presence to seazone
+
+add_research(addresearch) [<amount>]
+ - Gain Research Progreess
+
+list_bankruptcies
+ - Shows a list of all bankrupt countries
+
+list_high_debt_countries
+ - Shows a list of all high debt countries
+
+show_diplomacy_stats
+ - Shows the diplomacy stats
+
+run_economy_stats
+ - Runs the economy stats gathering
+
+show_economy_stats
+ - Shows the economy stats
+
+show_saving_mode [<CountryTag>]
+ - Shows the saving mode a country has
+
+calc_threat_level [<CountryTag> <CountryTag>]
+ - Shows the threat level second nation poses to first nation 0-1
+
+codetest
+ - Command for easy code testing
+
+research_all
+ - Researched all advances in all trees
+
+finish_current_religious_focus
+ - Completed progress on current religious focus
+
+integrate_all
+ - Integrates all provinces
+
+antagonism [[<location>] <value>]
+ - Gives antagonism centred on nations capital or location parameter if supplied
+
+finalise_resolution [<ResolutionID>]
+ - Finalizes a resolution in an IO
+
+create_pu [<CountryTag>]
+ - Creates a personal union with another country
+
+research [<advance>]
+ - researches a specific advance
+
+embrace_all
+ - Embraces all active institutions
+
+event_counts
+ - Print event debug counts
+
+trigger_animations
+ - Trigger a named set of animations
+
+effect [{effect script}]
+ - execute effect
+
+run [{effect file}]
+ - execute effect file in /run
+
+trigger [{trigger script}]
+ - test trigger script
+
+clear(clr)
+ - Clear console.
+
+Camera.Goto(goto) [<location>]
+ - Moves the camera to a location
+
+copy_dna [<id>]
+ - Copy/shows adn of a character

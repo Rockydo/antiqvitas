@@ -203,6 +203,18 @@ def activate_window():
     return window
 
 
+def focus_game():
+    import pyautogui
+
+    window = activate_window()
+    pyautogui.click(
+        window.left + int(window.width * 0.75),
+        window.top + int(window.height * 0.45),
+    )
+    time.sleep(0.5)
+    return window
+
+
 def screenshot(args: argparse.Namespace) -> int:
     import pyautogui
 
@@ -225,21 +237,61 @@ def press_console_key(vk: int) -> None:
     ctypes.windll.user32.keybd_event(vk, 0, key_up, 0)
 
 
+def press_scan_code(scan_code: int) -> None:
+    key_up = 0x0002
+    scan_flag = 0x0008
+    ctypes.windll.user32.keybd_event(0, scan_code, scan_flag, 0)
+    ctypes.windll.user32.keybd_event(0, scan_code, scan_flag | key_up, 0)
+
+
 def console(args: argparse.Namespace) -> int:
     import pyautogui
 
-    activate_window()
-    before = pyautogui.screenshot()
-    for vk in (0xC0, 0xDE):
-        press_console_key(vk)
+    window = focus_game()
+    # Physical key directly below Escape (scan code 0x29) works across QWERTY
+    # and AZERTY layouts; virtual-key fallbacks cover OEM mappings.
+    if args.already_open:
+        pyautogui.click(
+            window.left + int(window.width * 0.14),
+            window.top + int(window.height * 0.74),
+        )
+        time.sleep(0.4)
+    else:
+        press_scan_code(0x29)
         time.sleep(1)
-        after = pyautogui.screenshot()
-        if after.tobytes() != before.tobytes():
-            break
-    pyautogui.write(args.command, interval=0.015)
-    pyautogui.press("enter")
+    if args.paste:
+        import pyperclip
+
+        pyperclip.copy(args.command)
+        pyautogui.hotkey("ctrl", "v")
+        time.sleep(0.5)
+    else:
+        for index, segment in enumerate(args.command.split("_")):
+            if index:
+                # Raw VK_8 without Shift emits '_' on the active French layout.
+                press_console_key(0x38)
+            pyautogui.write(segment, interval=0.015)
+    press_scan_code(0x1C)
     time.sleep(args.settle)
+    if not args.leave_open:
+        press_scan_code(0x29)
+        time.sleep(0.5)
     print(f"console command sent: {args.command}")
+    return 0
+
+
+def key(args: argparse.Namespace) -> int:
+    import pyautogui
+
+    focus_game()
+    if args.char:
+        pyautogui.press(args.code)
+    elif args.scan:
+        press_scan_code(int(args.code, 0))
+    else:
+        press_console_key(int(args.code, 0))
+    time.sleep(args.settle)
+    print(f"key sent: {'scan' if args.scan else 'vk'} {args.code}")
     return 0
 
 
@@ -283,7 +335,16 @@ def build_parser() -> argparse.ArgumentParser:
     console_parser = sub.add_parser("console")
     console_parser.add_argument("command")
     console_parser.add_argument("--settle", type=float, default=2)
+    console_parser.add_argument("--already-open", action="store_true")
+    console_parser.add_argument("--leave-open", action="store_true")
+    console_parser.add_argument("--paste", action="store_true")
     console_parser.set_defaults(func=console)
+    key_parser = sub.add_parser("key")
+    key_parser.add_argument("code")
+    key_parser.add_argument("--scan", action="store_true")
+    key_parser.add_argument("--char", action="store_true")
+    key_parser.add_argument("--settle", type=float, default=1)
+    key_parser.set_defaults(func=key)
     stop_parser = sub.add_parser("stop")
     stop_parser.add_argument("--timeout", type=int, default=10)
     stop_parser.set_defaults(func=stop)
