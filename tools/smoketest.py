@@ -9,7 +9,6 @@ import re
 import shutil
 import subprocess
 import sys
-from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -34,15 +33,15 @@ def run(*args: str, check: bool = True) -> subprocess.CompletedProcess[str]:
     return result
 
 
-def normalize(path: Path) -> Counter[str]:
+def normalize(path: Path) -> set[str]:
     if not path.exists():
-        return Counter()
+        return set()
     lines = []
     for raw in path.read_text(encoding="utf-8-sig", errors="replace").splitlines():
         line = TIMESTAMP.sub("", raw).strip().replace("\\", "/")
         if line:
             lines.append(line)
-    return Counter(lines)
+    return set(lines)
 
 
 def main() -> int:
@@ -55,12 +54,13 @@ def main() -> int:
     config = json.loads(
         (ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig")
     )
+    baseline_only = args.baseline_only or not (ROOT / ".metadata/metadata.json").exists()
     baseline = ROOT / "baselines/vanilla_error.log"
     accepted = ROOT / "baselines/last_accepted_error.log"
     if not baseline.is_file():
         print("smoketest: FAIL (vanilla baseline not captured)", file=sys.stderr)
         return 1
-    if not args.baseline_only and not Path(str(config["mod_dir"])).exists():
+    if not baseline_only and not Path(str(config["mod_dir"])).exists():
         subprocess.run(
             [
                 "powershell",
@@ -73,10 +73,10 @@ def main() -> int:
             cwd=ROOT,
             check=True,
         )
-    mode = "--vanilla" if args.baseline_only else "--enable"
+    mode = "--vanilla" if baseline_only else "--enable"
     run("tools/enable_mod.py", mode)
     launch = ["tools/gamedriver.py", "launch", "--mode"]
-    launch.append("vanilla" if args.baseline_only else "mod")
+    launch.append("vanilla" if baseline_only else "mod")
     if args.leavepops:
         launch.append("--leavepops")
     run(*launch)
@@ -98,14 +98,14 @@ def main() -> int:
         run("tools/gamedriver.py", "stop", check=False)
     actual_path = Path(str(config["user_dir"])) / "logs/error.log"
     actual = normalize(actual_path)
-    reference = normalize(baseline if args.baseline_only else accepted)
-    new = actual - reference
-    fixed = reference - actual
+    reference = normalize(baseline if baseline_only else accepted)
+    new = sorted(actual - reference)
+    fixed = sorted(reference - actual)
     report = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "mode": "vanilla" if args.baseline_only else "mod",
-        "new": dict(new),
-        "fixed": dict(fixed),
+        "mode": "vanilla" if baseline_only else "mod",
+        "new": new,
+        "fixed": fixed,
         "actual_unique_lines": len(actual),
         "reference_unique_lines": len(reference),
     }
@@ -114,12 +114,12 @@ def main() -> int:
     target.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     if new:
         print("smoketest: FAIL — NEW error.log lines")
-        for line, count in new.items():
-            print(f"  {count}x {line}")
+        for line in new:
+            print(f"  {line}")
         return 1
     if args.accept:
         shutil.copy2(actual_path, accepted)
-    print(f"smoketest: PASS (zero new lines; {sum(fixed.values())} baseline occurrences absent)")
+    print(f"smoketest: PASS (zero new lines; {len(fixed)} baseline line types absent)")
     return 0
 
 

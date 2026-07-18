@@ -1,0 +1,822 @@
+{
+  "advance_icons": {
+    "directory": "main_menu/gfx/interface/advance",
+    "file_count": 1634,
+    "sample_count": 12,
+    "sample_formats": {
+      "DDS 256x256 8-bit srgba 4.0": 12
+    },
+    "examples": [
+      {
+        "path": "main_menu/gfx/interface/advance/_default.dds",
+        "format": "DDS",
+        "width": 256,
+        "height": 256,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/advance/_no_research.dds",
+        "format": "DDS",
+        "width": 256,
+        "height": 256,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/advance/a_central_power.dds",
+        "format": "DDS",
+        "width": 256,
+        "height": 256,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/advance/a_dynamic_society.dds",
+        "format": "DDS",
+        "width": 256,
+        "height": 256,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/advance/a_fortified_border.dds",
+        "format": "DDS",
+        "width": 256,
+        "height": 256,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/advance/a_magnanimous_empire.dds",
+        "format": "DDS",
+        "width": 256,
+        "height": 256,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/advance/a_mining_heritage.dds",
+        "format": "DDS",
+        "width": 256,
+        "height": 256,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/advance/a_modern_nation.dds",
+        "format": "DDS",
+        "width": 256,
+        "height": 256,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/advance/a_neverending_crusade.dds",
+        "format": "DDS",
+        "width": 256,
+        "height": 256,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/advance/a_new_dawn.dds",
+        "format": "DDS",
+        "width": 256,
+        "height": 256,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/advance/a_permanent_capital.dds",
+        "format": "DDS",
+        "width": 256,
+        "height": 256,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/advance/a_tolerant_society.dds",
+        "format": "DDS",
+        "width": 256,
+        "height": 256,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      }
+    ]
+  },
+  "building_icons": {
+    "directory": "main_menu/gfx/interface/icons/buildings",
+    "file_count": 473,
+    "sample_count": 12,
+    "sample_formats": {
+      "DDS 125x125 8-bit srgba 4.0": 7,
+      "DDS 128x128 8-bit srgba 4.0": 5
+    },
+    "examples": [
+      {
+        "path": "main_menu/gfx/interface/icons/buildings/_default.dds",
+        "format": "DDS",
+        "width": 125,
+        "height": 125,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/buildings/ablaq_palace.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/buildings/academy_of_sciences.dds",
+        "format": "DDS",
+        "width": 125,
+        "height": 125,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/buildings/adm_vatican_library.dds",
+        "format": "DDS",
+        "width": 125,
+        "height": 125,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/buildings/admiralty.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/buildings/al_azhar_madrasa.dds",
+        "format": "DDS",
+        "width": 125,
+        "height": 125,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/buildings/alhambra.dds",
+        "format": "DDS",
+        "width": 125,
+        "height": 125,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/buildings/ambras_castle.dds",
+        "format": "DDS",
+        "width": 125,
+        "height": 125,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/buildings/amsterdam_admiralty.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/buildings/apothecary.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/buildings/aqueduct_system.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/buildings/archive_of_the_indies.dds",
+        "format": "DDS",
+        "width": 125,
+        "height": 125,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      }
+    ]
+  },
+  "estate_icons": {
+    "directory": "main_menu/gfx/interface/icons/estates",
+    "file_count": 10,
+    "sample_count": 10,
+    "sample_formats": {
+      "DDS 36x36 8-bit srgba 4.0": 2,
+      "DDS 128x128 8-bit srgba 4.0": 8
+    },
+    "examples": [
+      {
+        "path": "main_menu/gfx/interface/icons/estates/_default.dds",
+        "format": "DDS",
+        "width": 36,
+        "height": 36,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/estates/_default_flat.dds",
+        "format": "DDS",
+        "width": 36,
+        "height": 36,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/estates/burghers_estate.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/estates/clergy_estate.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/estates/cossacks_estate.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/estates/crown_estate.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/estates/dhimmi_estate.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/estates/nobles_estate.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/estates/peasants_estate.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/estates/tribes_estate.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      }
+    ]
+  },
+  "event_illustrations": {
+    "directory": "main_menu/gfx/interface/illustrations/event",
+    "file_count": 220,
+    "sample_count": 12,
+    "sample_formats": {
+      "DDS 1080x440 8-bit srgb  3.0": 12
+    },
+    "examples": [
+      {
+        "path": "main_menu/gfx/interface/illustrations/event/backgrounds/exterior/burghers/ashanti_burghers_exterior.dds",
+        "format": "DDS",
+        "width": 1080,
+        "height": 440,
+        "depth": 8,
+        "channels": "srgb  3.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/illustrations/event/backgrounds/exterior/burghers/asian_burghers_exterior.dds",
+        "format": "DDS",
+        "width": 1080,
+        "height": 440,
+        "depth": 8,
+        "channels": "srgb  3.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/illustrations/event/backgrounds/exterior/burghers/aztec_burghers_exterior.dds",
+        "format": "DDS",
+        "width": 1080,
+        "height": 440,
+        "depth": 8,
+        "channels": "srgb  3.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/illustrations/event/backgrounds/exterior/burghers/indian_burghers_exterior.dds",
+        "format": "DDS",
+        "width": 1080,
+        "height": 440,
+        "depth": 8,
+        "channels": "srgb  3.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/illustrations/event/backgrounds/exterior/burghers/iroquois_burghers_exterior.dds",
+        "format": "DDS",
+        "width": 1080,
+        "height": 440,
+        "depth": 8,
+        "channels": "srgb  3.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/illustrations/event/backgrounds/exterior/burghers/north_german_burghers_exterior.dds",
+        "format": "DDS",
+        "width": 1080,
+        "height": 440,
+        "depth": 8,
+        "channels": "srgb  3.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/illustrations/event/backgrounds/exterior/burghers/syrian_burghers_exterior.dds",
+        "format": "DDS",
+        "width": 1080,
+        "height": 440,
+        "depth": 8,
+        "channels": "srgb  3.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/illustrations/event/backgrounds/exterior/clergy/ashanti_clergy_exterior.dds",
+        "format": "DDS",
+        "width": 1080,
+        "height": 440,
+        "depth": 8,
+        "channels": "srgb  3.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/illustrations/event/backgrounds/exterior/clergy/asian_clergy_exterior.dds",
+        "format": "DDS",
+        "width": 1080,
+        "height": 440,
+        "depth": 8,
+        "channels": "srgb  3.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/illustrations/event/backgrounds/exterior/clergy/aztec_clergy_exterior.dds",
+        "format": "DDS",
+        "width": 1080,
+        "height": 440,
+        "depth": 8,
+        "channels": "srgb  3.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/illustrations/event/backgrounds/exterior/clergy/indian_clergy_exterior.dds",
+        "format": "DDS",
+        "width": 1080,
+        "height": 440,
+        "depth": 8,
+        "channels": "srgb  3.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/illustrations/event/backgrounds/exterior/clergy/north_german_clergy_exterior.dds",
+        "format": "DDS",
+        "width": 1080,
+        "height": 440,
+        "depth": 8,
+        "channels": "srgb  3.0"
+      }
+    ]
+  },
+  "goods_icons": {
+    "directory": "main_menu/gfx/interface/icons/trade_goods",
+    "file_count": 150,
+    "sample_count": 12,
+    "sample_formats": {
+      "DDS 128x128 8-bit srgba 4.0": 12
+    },
+    "examples": [
+      {
+        "path": "main_menu/gfx/interface/icons/trade_goods/_default.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/trade_goods/icon_goods_alum.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/trade_goods/icon_goods_amber.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/trade_goods/icon_goods_beer.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/trade_goods/icon_goods_beeswax.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/trade_goods/icon_goods_books.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/trade_goods/icon_goods_cannons.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/trade_goods/icon_goods_chili.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/trade_goods/icon_goods_clay.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/trade_goods/icon_goods_cloth.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/trade_goods/icon_goods_cloves.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/trade_goods/icon_goods_coal.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      }
+    ]
+  },
+  "government_icons": {
+    "directory": "main_menu/gfx/interface/icons/government_types",
+    "file_count": 8,
+    "sample_count": 8,
+    "sample_formats": {
+      "DDS 64x64 8-bit srgba 4.0": 8
+    },
+    "examples": [
+      {
+        "path": "main_menu/gfx/interface/icons/government_types/_default.dds",
+        "format": "DDS",
+        "width": 64,
+        "height": 64,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/government_types/legitimacy.dds",
+        "format": "DDS",
+        "width": 64,
+        "height": 64,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/government_types/monarchy.dds",
+        "format": "DDS",
+        "width": 64,
+        "height": 64,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/government_types/republic.dds",
+        "format": "DDS",
+        "width": 64,
+        "height": 64,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/government_types/republic2.dds",
+        "format": "DDS",
+        "width": 64,
+        "height": 64,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/government_types/steppe_horde.dds",
+        "format": "DDS",
+        "width": 64,
+        "height": 64,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/government_types/theocracy.dds",
+        "format": "DDS",
+        "width": 64,
+        "height": 64,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/government_types/tribe.dds",
+        "format": "DDS",
+        "width": 64,
+        "height": 64,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      }
+    ]
+  },
+  "institution_icons": {
+    "directory": "main_menu/gfx/interface/icons/institutions",
+    "file_count": 21,
+    "sample_count": 12,
+    "sample_formats": {
+      "DDS 128x128 8-bit srgba 4.0": 12
+    },
+    "examples": [
+      {
+        "path": "main_menu/gfx/interface/icons/institutions/_default.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/institutions/artillery_institution.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/institutions/background.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/institutions/background_not_available.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/institutions/banking.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/institutions/confessionalism.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/institutions/enlightenment.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/institutions/feudalism.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/institutions/global_trade.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/institutions/industrialization.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/institutions/legalism.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/institutions/levee_en_masse.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      }
+    ]
+  },
+  "religion_icons": {
+    "directory": "main_menu/gfx/interface/icons/religion",
+    "file_count": 294,
+    "sample_count": 12,
+    "sample_formats": {
+      "DDS 128x128 8-bit srgba 4.0": 12
+    },
+    "examples": [
+      {
+        "path": "main_menu/gfx/interface/icons/religion/_default.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/religion/a_fat_roog_religion.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/religion/abu_religion.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/religion/abwoi_religion.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/religion/adamawa_religion.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/religion/adat_musi_religion.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/religion/adat_puun_religion.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/religion/ainu_religion.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/religion/ajok_religion.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/religion/akan_religion.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/religion/akinha_ekugu_religion.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      },
+      {
+        "path": "main_menu/gfx/interface/icons/religion/akuj_religion.dds",
+        "format": "DDS",
+        "width": 128,
+        "height": 128,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      }
+    ]
+  },
+  "loading_screens": {
+    "directory": "loading_screen/gfx/loadingscreens",
+    "file_count": 1,
+    "sample_count": 1,
+    "sample_formats": {
+      "DDS 1920x1080 8-bit srgba 4.0": 1
+    },
+    "examples": [
+      {
+        "path": "loading_screen/gfx/loadingscreens/startscreen.dds",
+        "format": "DDS",
+        "width": 1920,
+        "height": 1080,
+        "depth": 8,
+        "channels": "srgba 4.0"
+      }
+    ]
+  }
+}

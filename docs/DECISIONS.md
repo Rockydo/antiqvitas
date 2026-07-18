@@ -34,3 +34,12 @@ EU5 reads metadata from every directory below `USER_DIR\mod` even when its
 playset entry is disabled. The vanilla M0 baseline was therefore captured with
 the ANTIQVITAS junction temporarily absent. The link tool recreates it
 idempotently once valid M1 metadata exists.
+
+## 2026-07-19 — Current-script verification with documented fallback
+
+The installed `script_docs` exporter did not return after two instrumented
+attempts (see `BLOCKERS.md`). The project uses the community dump from
+GlossMod/EU5-Modding-Mcp commit
+`90790df9478a61035a2099c115b21ba7f04c3763` only as an index. Because that dump
+is dated 2025-11-07, current-build behavior is accepted only when a key is also
+present in local 1.3.1.1 scripts and a real-game smoke test is green.

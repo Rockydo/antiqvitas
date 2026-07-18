@@ -8,13 +8,13 @@ after `make full` and its autonomous driver report are green.
 - [x] Discover Steam libraries, game/user paths, disk space, and write `config/local_paths.json`.
 - [x] Create the repo on the game drive; move the master plan into `docs/`; configure caches and local Python environment.
 - [x] Establish mod visibility using user-dir relocation, a directory junction, or direct CLI loading, in that order.
-- [ ] Build Steam startup, launcher/playset enablement, game driver console tier, vanilla extractor, linter, pop checker, smoke tester, DDS/date/localization tools.
+- [x] Build Steam startup, launcher/playset enablement, game driver console tier, vanilla extractor, linter, pop checker, smoke tester, DDS/date/localization tools.
 - [x] Capture scrubbed vanilla error baseline with all existing mods disabled.
-- [ ] Harvest `script_docs`, `dump_data_types`, and `helplog` autonomously.
-- [ ] Clone and analyze EU5-1444-Start-Date read-only.
-- [ ] Extract vanilla symbols, encodings, setup/content/DLC inventories.
-- [ ] Complete `docs/ENGINE_FACTS.md`, including every §3 verification item.
-- [ ] Run `make full`; create `docs/playtests/M0_REPORT.md`; tag `M0-done`.
+- [x] Harvest `script_docs`, `dump_data_types`, and `helplog` autonomously. (`helplog` local; documented community fallback for the two non-returning exporters.)
+- [x] Clone and analyze EU5-1444-Start-Date read-only.
+- [x] Extract vanilla symbols, encodings, setup/content/DLC inventories.
+- [x] Complete `docs/ENGINE_FACTS.md`, including every §3 verification item.
+- [x] Run `make full`; create `docs/playtests/M0_REPORT.md`; tag `M0-done`.
 
 ## M1 — Skeleton loads
 
