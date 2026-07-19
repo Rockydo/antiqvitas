@@ -61,3 +61,14 @@ but do not justify an office, engine parent or marriage link, ability, exact
 date, residence, political role, or future punishment. The three personal
 labels are intentionally separate except for Wang Yu's direct placement in the
 already documented Wang clan.
+
+## Scholarly court
+
+The *Han Shu* Yang Xiong biography says that Yang held the same court post
+through the reigns of Cheng, Ai, and Ping (`CTP-YX`). He is consequently a
+bounded scholarly court figure at the campaign boundary, not an engine
+officeholder with an inferred rank, ability, personal calendar, or later Xin
+service. Huan Tan's academic study identifies him as a scholar-official who
+maintained a court position across four reigns (`UM-HUAN`). Its summary does
+not resolve his exact January AD 1 portfolio, so his Han context is explicitly
+contested and likewise carries no office or later career script.
