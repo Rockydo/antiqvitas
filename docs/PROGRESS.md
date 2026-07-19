@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-19 - M6 Persis court
+
+- Replaced Persis's generic ruler with Nambed, using an academic numismatic
+  record whose broad AD 1-100 date range supports an AD 1 court but no precise
+  accession, biography, or successor. The court and continuity label are
+  explicitly marked contested.
+- Reused the bounded Parthian Sub-Kingdom adapter, preserving the historical
+  intent without claiming a finished subject treaty or complete Persid
+  constitution. The source ledger records both the Iranica context and the
+  IRIS coin record.
+- Regenerated M6/start data. `make validate` reports 25 dynasties, 37
+  characters, 28 government profiles, and 25 ruler terms; enabled-mod smoke
+  reached the rendered menu with zero new error-log lines.
+
+Next: continue the remaining source-qualified Tier-1/2 courts and political
+mechanics; the broad Persid dating remains visibly qualified.
+
 ## 2026-07-19 - M6 Characene court
 
 - Replaced Characene's generic ruler with coin-attested Attambelos II and a

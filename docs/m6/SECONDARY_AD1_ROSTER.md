@@ -66,6 +66,19 @@ finished subject treaty or a full Characenian constitution; those diplomatic
 terms remain M9 work. Sources: P8.2; OCD; `IRAN-CHA`; `SCHU-CHA` in the
 [source ledger](../world_1ad/SOURCES.md).
 
+## Persis
+
+Nambed replaces Persis's generic start ruler on a deliberately narrow
+numismatic basis. The IRIS academic coin record dates his authority broadly to
+AD 1-100, supporting an AD 1 court but neither an accession day nor a
+successor. The Persid royal-house key is an engine continuity label, not a
+reconstructed genealogy.
+
+The court reuses the bounded Parthian Sub-Kingdom adapter, describing a local
+Persid court in an Arsacid-facing world rather than a finished subject treaty
+or constitution. Sources: P8.2; OCD; `IRAN-PRS`; `IRIS-NAM` in the
+[source ledger](../world_1ad/SOURCES.md).
+
 ## Intentional limits
 
 The dynasty labels marked `contested` are engine continuity labels where the

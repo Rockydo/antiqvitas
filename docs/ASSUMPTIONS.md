@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-19 - Nambed's Persid court rests on a broad numismatic date range
+
+The available academic coin record dates Nambed of Persis only broadly to AD
+1-100. It supports making a court visible at the campaign boundary, but not a
+precise accession, biography, successor, or reconstructed dynasty. The start
+data thus scripts the technical campaign term alone and marks the entire record
+contested. Sources weighed: P8.2; OCD; Josef Wiesehöfer's [*Encyclopaedia
+Iranica* Persis entry](https://www.iranicaonline.org/articles/persis-kings-of/); and [IRIS / Greek Coinage's Nambed record](https://greekcoinage.org/iris/id/persepolis.nambed.klose_museler.2008.4.44-5?lang=en).
+[secure for the broad AD 1 coin range; contested for current-court and
+dynastic inference]
+
 ## 2026-07-19 - Attambelos II is current at AD 1, with a qualified coin chronology
 
 Coin-based reconstructions place Attambelos II of Characene across the AD 1
