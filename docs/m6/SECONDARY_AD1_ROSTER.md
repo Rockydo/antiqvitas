@@ -49,6 +49,14 @@ is a technical proxy for Buddhist monastic institutions, and the law represents
 attested royal endowment rather than a reconstructed Lankan legal code. Sources:
 P8.4; CAH-XI; `SRI-BHAT` in the [source ledger](../world_1ad/SOURCES.md).
 
+Mahadathika Mahanaga is a second, source-qualified Anuradhapura court record.
+The Siddham paired-inscription entry identifies him as Bhatikabhaya's younger
+brother and successor in AD 9-21, while the *Mahavamsa* likewise names the
+brother relationship and later succession. This establishes his living AD 1
+context, not an engine heir appointment, office, accession day, or full
+genealogy. Sources: P8.4; `SRI-MAH`; `MV-MAH` in the
+[source ledger](../world_1ad/SOURCES.md).
+
 ## Indian ganasanghas
 
 Yaudheya, Arjunayana, and Kuninda now use the installed `republic` government

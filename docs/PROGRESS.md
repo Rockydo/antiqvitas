@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-19 - M6 Anuradhapura Mahadathika court record
+
+- Added Mahadathika Mahanaga as Bhatikabhaya Abhaya's source-qualified younger
+  brother and eventual successor, using the paired inscription record and
+  *Mahavamsa* corroboration.
+- The character is only a living court record. No ruler/heir mechanic, office,
+  date, residence, or reconstructed family graph is added.
+
+Next: regenerate, validate, smoke-test, then continue source-led Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Indo-Greek Strato III court record
 
 - Added Strato III as a contested late Indo-Greek court figure from the
