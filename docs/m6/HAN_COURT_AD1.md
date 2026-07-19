@@ -16,14 +16,15 @@ runtime contract recorded in `BLOCKERS.md`.
 
 ## Active regency circle
 
-The same *Han Shu* account names Zhen Feng and Zhen Han as actors in decisive
-regency business, Ping Yan as managing secret affairs, and Liu Xin as handling
-literary matters. The first Yuan Shi-year decree also names the two Zhens
-(`CTP-HR` in the source ledger). All four are therefore court figures, not
-engine officeholders: their specific portfolios, dates, personal abilities, and
-relationships are not reconstructed in M6.
+The same *Han Shu* account names Wang Yi, Sun Jian, Zhen Feng and his named son
+Zhen Xun, Zhen Han, Ping Yan, Liu Xin and his named son Liu Fen, Cui Fa, and
+Chen Chong in the active regency circle. The first Yuan Shi-year decree also
+names the two Zhens (`CTP-HR` in the source ledger). They are court figures,
+not engine officeholders: their specific portfolios, dates, personal abilities,
+and relationships beyond the two directly stated father-son links are not
+reconstructed in M6.
 
-The three engine identity labels are deliberately narrow. They preserve separate
+The engine identity labels are deliberately narrow. They preserve separate
 people rather than folding unrelated officials into a fictional common dynasty;
-the shared Zhen label does not assert kinship, and none of the labels claims a
-full genealogy.
+the Zhen and Liu Xin labels carry only the directly attested father-son ties,
+and none of the labels claims a full genealogy.

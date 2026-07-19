@@ -1245,3 +1245,15 @@ Tier-1/2 polities.
 
 Next: continue direct-evidence court coverage across the remaining Tier-1/2
 polities.
+
+## 2026-07-19 - M6 expanded Han regency circle
+
+- Added Wang Yi, Sun Jian, Zhen Xun, Liu Fen, Cui Fa, and Chen Chong from the
+  same direct *Han Shu* account of Wang Mang's active AD 1 circle. The only
+  family links retained are the two explicitly named father-son relationships.
+- All six are court-only records: there are no engine offices, dates, ability
+  scores, regency assignments, or extrapolated genealogies. The broader source
+  limits are recorded in [the Han court note](m6/HAN_COURT_AD1.md).
+
+Next: continue source-led Tier-1/2 roster breadth while retaining the separate
+Han runtime-regency blocker.
