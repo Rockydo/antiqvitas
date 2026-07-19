@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-19 — Core political mechanics are bounded adapters
+
+The first Rome/Han/Parthia privilege and law set represents documented
+political relationships rather than claiming an exact ancient legal code or a
+medieval estate structure. Roman senatorial fiscal protection, urban grain
+provision, and professional forces; Han commandery-centred administration; and
+the Arsacid accommodation with powerful Iranian houses all have strong
+historical bases, but their individual game modifiers and estate buckets are
+technical abstractions. The special Roman/Han court and military adapters are
+therefore marked contested where the mapping is interpretive. Sources weighed:
+plan sections 8.1-8.3 and 13; *Oxford Classical Dictionary*; *Cambridge Ancient
+History*, vol. XI; *The Book of the Former Han* and the Han chronology linked in
+`docs/m6/CORE_FOUNDATION.md`. [secure for the underlying institutions;
+contested for the engine mapping]
+
 ## 2026-07-19 — M6 core ruler chronology and date precision
 
 The first roster follows plan §§8.1–8.3 and §19: Augustus/Livia/Gaius Caesar

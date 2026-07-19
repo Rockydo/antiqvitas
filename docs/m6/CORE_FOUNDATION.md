@@ -37,3 +37,15 @@ unique reforms on the installed `monarchy` type, never claims that their
 institutions were generic early-modern monarchies. Their modifiers use only
 keys found in the local government-reform registry. Rome's successor is Gaius
 Caesar; Tiberius remains a non-heir character until the planned AD 4 event path.
+
+The second core slice renders five source-labelled privileges, four laws, and
+per-profile societal-value positions from CSV ledgers. It uses only installed
+estate keys, law categories, government groups, modifier keys, and country
+start syntax harvested from build 24187685. The technical `nobles_estate` and
+`burghers_estate` adapters stand in for Roman senators/urban plebs, Han court
+personnel, and Parthian great houses; they do not classify those historical
+groups as medieval estates. The Roman civic-status and recruitment laws, Han
+commandery administration, and Parthian great-house compact are constrained
+gameplay representations, not reconstructions of a uniform written legal code.
+Each source row records the relevant plan section and synthesis source; the
+historically interpretive proxies are marked `contested` in their ledger.

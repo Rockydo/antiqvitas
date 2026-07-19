@@ -1,5 +1,24 @@
 # Progress
 
+## 2026-07-19 — M6 core political mechanics
+
+- Extended the checked M6 power ledger with five source-labelled estate
+  privileges, four laws, and distinct societal-value positions for Rome,
+  Western Han, and Parthia. The generator now validates every referenced local
+  estate, modifier, law option, and country-start assignment before it renders
+  the exact installed script contracts and full localization mirrors.
+- Rome now begins with its senatorial/annona/military adapters and civic-status
+  and professional-legion laws; Western Han with a palace-bureau adapter and
+  commandery administration; Parthia with great-house autonomy and compact.
+  The documented technical and historical limits are in
+  [M6 core foundation](m6/CORE_FOUNDATION.md).
+- `make validate` and the enabled-mod `make smoke` are green. The smoke test
+  reached the rendered menu and reported zero new `error.log` lines versus the
+  accepted baseline.
+
+Next: extend the same checked data model to the remaining Tier-1/2 rulers and
+government forms, while retaining the targeted inspector-driver gap as open.
+
 ## 2026-07-19 — M6 core power foundation
 
 - Added a checked data-to-script pipeline for three core historical government

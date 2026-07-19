@@ -72,6 +72,7 @@ after `make full` and its autonomous driver report are green.
 ## M6 — Power
 
 - [x] Establish a checked, sourced Rome/Han/Parthia core: historical reforms, dynasties, nine named characters, Gaius Caesar as Rome's heir, Wang Mang's regency, and the AD 1 Chang'an capital correction.
+- [x] Add source-labelled core estate adapters, privileges, laws, and societal values for the Rome/Han/Parthia profiles through locally verified engine contracts.
 - [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories.
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 
