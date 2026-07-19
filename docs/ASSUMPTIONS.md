@@ -1,5 +1,21 @@
 # Historical Assumptions
 
+## 2026-07-19 — Five dedicated ancient trade goods
+
+Alexandria is used as an Egyptian papyrus production-and-export proxy; Barca
+stands for the Cyrenaican silphium district; Hit is a Mesopotamian natural
+bitumen/naphtha proxy; Khotan is a Tarim jade anchor; and Medina is a deliberately
+narrow Arabian dromedary-trade proxy. These are map-key approximations, not
+claims that the named town alone produced the full regional output. The later
+loss of silphium is reserved for M10 rather than being projected backward from
+its imperial-era scarcity. Sources weighed: P12.1; Cambridge, “Silphium in
+Ancient Art” (https://www.cambridge.org/core/journals/libyan-studies/article/abs/silphium-in-ancient-art/22D6AD4632F135C6630050CDD7D5426B);
+University of Chicago OIP 147 (https://isac.uchicago.edu/sites/default/files/uploads/shared/docs/Publications/OIP/oip147.pdf);
+University of Washington Silk Road sources on Khotan jade
+(https://depts.washington.edu/silkroad/texts/hhshu/notes4.html) and caravan
+animals (https://depts.washington.edu/silkroad/culture/animals/animals.html).
+[contested]
+
 ## 2026-07-19 — Specialist production and civic-building anchors
 
 The design bible explicitly identifies glassware at Sidon, Alexandria, and

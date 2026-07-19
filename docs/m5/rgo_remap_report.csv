@@ -14,6 +14,7 @@ al_shuqayq,Arabia,regional_rule,sugar,fiber_crops
 alamganj,India,regional_rule,silk,fiber_crops
 alasehir,Rome,regional_rule,silk,fiber_crops
 alcazar_de_san_juan,Rome,regional_rule,saltpeter,salt
+alexandria,Rome,anchor,salt,antq_papyrus
 amol,Iran,regional_rule,silk,fiber_crops
 amora_gadal,Africa,regional_rule,sugar,fiber_crops
 amorgos,Rome,regional_rule,silk,fiber_crops
@@ -39,6 +40,7 @@ banten,Southeast Asia,regional_rule,pepper,medicaments
 baoning,China,regional_rule,pepper,medicaments
 baramulla,India,regional_rule,silk,fiber_crops
 baran,India,regional_rule,silk,fiber_crops
+barca,Rome,anchor,wheat,antq_silphium
 baris,Rome,regional_rule,sugar,fiber_crops
 basra,Iran,regional_rule,sugar,fiber_crops
 belchite,Rome,regional_rule,silk,fiber_crops
@@ -110,6 +112,7 @@ haleri,India,regional_rule,silk,fiber_crops
 hamidiyeh,Iran,regional_rule,silk,fiber_crops
 harar,Africa,regional_rule,coffee,medicaments
 hatthigiripura,Lanka,regional_rule,elephants,livestock
+hit,Iran,anchor,legumes,antq_naphtha
 hiw,Rome,regional_rule,sugar,fiber_crops
 hovtva,Eastern Europe,regional_rule,saltpeter,salt
 huelva,Rome,anchor,salt,silver
@@ -142,6 +145,7 @@ khairabad,India,regional_rule,silk,fiber_crops
 khargerd,Iran,regional_rule,silk,fiber_crops
 kharsawan,India,regional_rule,incense,medicaments
 khordong,Central Asia,regional_rule,tea,medicaments
+khotan,Tarim,anchor,gems,antq_jade
 kitou,Japan,regional_rule,tea,medicaments
 kodungallur,India,anchor,fish,pepper
 kol,India,regional_rule,saltpeter,salt
@@ -188,6 +192,7 @@ maskanah,Iran,regional_rule,sugar,fiber_crops
 massawa,Africa,anchor,gems,incense
 mateur,Rome,regional_rule,sugar,fiber_crops
 mazara,Rome,regional_rule,saltpeter,salt
+medina,Arabia,anchor,fruit,antq_camels
 meizhou,China,regional_rule,pepper,medicaments
 merv,Central Asia,regional_rule,silk,fiber_crops
 miandoab,Iran,regional_rule,sugar,fiber_crops
@@ -327,9 +332,14 @@ zozan,Iran,regional_rule,sugar,fiber_crops
 # anchor:copper->tin,1
 # anchor:cotton->dyes,1
 # anchor:fish->pepper,1
+# anchor:fruit->antq_camels,1
+# anchor:gems->antq_jade,1
 # anchor:gems->incense,1
+# anchor:legumes->antq_naphtha,1
 # anchor:rice->silk,1
+# anchor:salt->antq_papyrus,1
 # anchor:salt->silver,1
+# anchor:wheat->antq_silphium,1
 # regional_rule:coffee->medicaments,8
 # regional_rule:elephants->livestock,2
 # regional_rule:incense->medicaments,33

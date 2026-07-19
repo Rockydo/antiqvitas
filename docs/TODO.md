@@ -60,7 +60,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Seed and smoke-check 25 source-labelled ancient transport-corridor segments.
 - [x] Seed and smoke-check the transparent city/town/road development profile.
 - [x] Expand the specialist urban economy with source-led glassware, lacquerware, pottery, water, mint, library, and Pharos building anchors.
-- [ ] Implement the remaining goods/RGOs, buildings/town setups, roads, and development.
+- [x] Add five distinct, source-labelled ancient raw goods (papyrus, silphium, naphtha/bitumen, jade, and camels), their full UI-art/modifier contracts, and five audited RGO anchors.
+- [ ] Implement the remaining goods/RGOs, buildings/town setups, roads, and development beyond this first dedicated-goods pass.
 - [ ] Verify ancient trade flows; run milestone gate and tag `M5-done`.
 
 ## M6 — Power

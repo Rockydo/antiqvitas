@@ -85,6 +85,17 @@ The extractor inspected every local file and recorded the result in
 - A direct M5 smoke confirmed that `in_game/common/town_setups` also requires
   UTF-8 BOM; the generated town-setup writer and its stale-file check enforce
   it.
+- A direct M5 custom-goods smoke confirmed that `in_game/common/goods` also
+  requires UTF-8 BOM. A raw-good definition causes the parser to resolve eight
+  modifier types: `can_extract_<good>`, export/import bans, local/global
+  output, global pop demand, inflation, and minting. Their UI requires
+  `MODIFIER_TYPE_NAME_<type>` and `MODIFIER_TYPE_DESC_<type>` localization.
+- Trade-good item textures are 128x128 DXT5 DDS files with eight mip levels;
+  their matching `gfx/interface/icons/trade_goods/illustrations` textures are
+  1080x440 DXT5 with eleven levels. The engine reports a streamed-texture error
+  when either level chain is absent. ImageMagick auto-generates such a chain
+  only for power-of-two dimensions, so `tools/dds.py` assembles the compressed
+  non-power-of-two illustration levels itself.
 
 ## Metadata and replacement
 

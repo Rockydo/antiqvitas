@@ -1,5 +1,24 @@
 # Progress
 
+## 2026-07-19 — M5 dedicated ancient raw goods
+
+- Added five real raw-goods definitions instead of mislabelling vanilla goods:
+  papyrus (Alexandria), silphium (Barca/Cyrenaica proxy), naphtha and bitumen
+  (Hit), jade (Khotan), and camels (Medina). The checked RGO pass now records
+  326 corrections.
+- Generated the complete locally verified engine contract for each good: eight
+  modifier types, neutral vanilla fallback modifier icons, name/description
+  localization in all supported client files, unique RGB goods colors, and
+  both 128x128 item icons and 1080x440 illustrations. The generated DDS layer
+  includes full mip chains, including the non-power-of-two illustration size.
+- `make validate` and a real `make smoke` are green with zero new lines. An
+  enabled-playset observer session reached `11:00, 3 January, 1`; the runtime
+  log had no custom-good, texture, or modifier match. Evidence is in
+  `docs/playtests/M5_CUSTOM_GOODS.md`.
+
+Next: expand the remaining dated/gated goods and production anchors, then run
+the longer M5 trade-flow gate.
+
 ## 2026-07-19 — M5 specialist buildings and production anchors
 
 - Expanded the M5 ledgers to 39 source-labelled markets and urban nodes. Sidon,
