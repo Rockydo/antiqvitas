@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-19 — M6 Herodian client tetrarchy
+
+- Added Herod Archelaus, Herod Antipas, and Philip the Tetrarch to a shared
+  Herodian dynasty and installed them in Judea/Samaria, Galilee-Peraea, and
+  Batanea respectively. Each uses the checked Roman client-monarchy adapter;
+  their distinct historical titles remain in source notes rather than being
+  collapsed into a new, unverified engine type.
+- `make validate` is green with 13 dynasties, 23 characters, and 13 government
+  profiles. The enabled-mod `make smoke` reached a rendered menu with zero new
+  error-log lines.
+
+Next: continue the named Roman client-ruler and Tier-1/2 roster coverage while
+leaving Judean priestly mechanics for their own sourced M6 pass.
+
 ## 2026-07-19 — M6 secondary AD 1 rulers and government forms
 
 - Added eleven named secondary AD 1 people and nine explicitly qualified

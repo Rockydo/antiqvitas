@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-19 — Herodian division uses titles, not invented constitutional types
+
+Archelaus's ethnarchy and Antipas/Philip's tetrarchies are kept as three
+separate Roman client tags at the AD 1 start. EU5 lacks native ethnarch and
+tetrarch government types, so the common client-monarchy adapter is strictly a
+technical surface and does not erase the different titles or claim a shared
+constitution. Parentage, spouses, and day-level biography dates are omitted
+pending a dedicated Herodian prosopography pass. Sources weighed: P8.1; OCD;
+the [Encyclopedia of the Bible overview](https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Herod).
+[secure for the three rulers and division; contested only for the engine adapter]
+
 ## 2026-07-19 — Secondary ruler roster preserves uncertainty explicitly
 
 The first secondary M6 roster promotes the plan's named Juba II/Cleopatra
