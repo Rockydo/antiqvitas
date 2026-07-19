@@ -19,6 +19,20 @@ ROOT = Path(__file__).resolve().parents[1]
 STATE = ROOT / "baselines/runtime/gamedriver_session.json"
 
 
+def enable_dpi_awareness() -> None:
+    """Keep pygetwindow and pyautogui in the same physical-pixel coordinate space."""
+    try:
+        ctypes.windll.shcore.SetProcessDpiAwareness(2)
+    except (AttributeError, OSError):
+        try:
+            ctypes.windll.user32.SetProcessDPIAware()
+        except AttributeError:
+            pass
+
+
+enable_dpi_awareness()
+
+
 def config() -> dict[str, object]:
     return json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
 
@@ -245,6 +259,13 @@ def activate_window():
         720,
         swp_showwindow | swp_noownerzorder,
     )
+    # pygetwindow objects retain their old geometry after SetWindowPos. Refresh
+    # before converting normalized driver coordinates, otherwise clicks may land
+    # on a different monitor even though screenshots look plausible.
+    time.sleep(0.2)
+    window = find_window()
+    if not window:
+        raise RuntimeError("EU5 window disappeared after fixed-window positioning")
     try:
         window.activate()
     except Exception:
