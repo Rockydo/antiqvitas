@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 - Exiled Julia and Scribonia retain Roman-world context only
+
+Oxford's Julia and Scribonia entries put both women in Julia's exile from 2
+BCE through Julia's death late in AD 14. The `ROM` engine context denotes the
+Roman political and cultural world, not a physical residence in Rome or a
+claim that either woman held a court post. No island location, exile system,
+marriage relation, office, ability, or later move is scripted. Sources weighed:
+P8.1; `OUP-JUL`; `OCD-SCR` in `docs/world_1ad/SOURCES.md`. [secure survival;
+contested engine context]
+
 ## 2026-07-19 - Rhascyporis is an AD 1 court survivor, not a co-ruler
 
 Tacitus places Rhascyporis (his Rhescuporis), Rhoemetalces I's brother, in the
