@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
-RULES = ROOT / "docs/m5/rgo_rules.csv"
+RULES = ROOT / "docs/goods_remap.csv"
 OUTPUT = ROOT / "in_game/map_data/location_templates.txt"
 REPORT = ROOT / "docs/m5/rgo_remap_report.csv"
 LINE = re.compile(r"^(?P<location>[A-Za-z0-9_]+)\s*=\s*\{(?P<body>.*?\braw_material\s*=\s*)(?P<good>[A-Za-z0-9_]+)(?P<tail>.*)$", re.MULTILINE)
