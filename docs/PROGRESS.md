@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 - M6 Roman AD 1 consular court
+
+- Added Lucius Aemilius Paullus, the directly attested ordinary colleague of
+  Gaius Caesar, and Marcus Herennius Picens, the Fasti's 1 July suffect consul.
+- The latter's later-in-year record establishes only AD 1 survival: neither
+  character receives a campaign-start office, marriage, genealogy, residence,
+  ability, or biography date. The evidence limits are recorded in
+  [the Roman court note](m6/ROMAN_COURT_AD1.md).
+
+Next: regenerate, validate, smoke-test, then continue direct-evidence Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Nabataean Huldu consort
 
 - Added Huldu as Aretas IV's source-attested current consort. The British
