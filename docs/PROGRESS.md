@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 — M5 Taxila market correction
+
+- Added the plan-listed Taxila market and city node at the pre-existing
+  coordinate-reviewed Attock proxy in the Indo-Scythian polity. This removes a
+  specific omission from the market list and raises the generated M5 manager to
+  40 markets and 40 urban nodes.
+- `make validate` and a real enabled-playset `make smoke` are green with zero
+  new error-log lines.
+
+Next: continue the named ancient transport corridors and remaining economy
+anchors before assessing the M5 trade-flow gate.
+
 ## 2026-07-19 — M5 civic and hydraulic infrastructure anchors
 
 - Expanded the checked source ledger from 11 to 15 AD 1 specialist buildings:

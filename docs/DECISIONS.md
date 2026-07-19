@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Taxila reuses the reviewed Attock geographic proxy
+
+The installed map has no `taxila` key. The world roster already resolves the
+Indo-Scythian capital and territorial anchor through nearby `attock`, with a
+recorded coordinate candidate and contested confidence. The M5 market and city
+node intentionally reuse that one audited proxy rather than introduce an
+unverified map substitution or omit the plan-listed city.
+
 ## 2026-07-19 — Civic infrastructure uses conservative installed proxies
 
 The installed building vocabulary has no literal Circus Maximus, Roman bath, or
