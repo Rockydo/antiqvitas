@@ -1003,3 +1003,12 @@ numismatic source route establishes Tigranes V's survival into his later AD
 children, office, physical residence, claim, succession, or biography date.
 Sources weighed: P8.1; `WIL-LIV`; `JOS-TIG`; `OCD-TIG5`; `ANRO-TIG5` in
 `docs/world_1ad/SOURCES.md`. [secure survival; contested engine context]
+## 2026-07-19 - Tacitus's later notices supply survival, not AD 1 careers
+
+Tacitus directly attests Arruntius, Manius Lepidus, Haterius, Piso, Plancina,
+Cremutius Cordus, Asinius Agrippa, and Aelius Lamia alive after the campaign
+boundary. The corresponding `ROM` identities contain no campaign office,
+command, literary role, marriage, residence, ability, precise biography date,
+genealogy, trial, or death mechanic. Sources weighed: P8.1;
+`TAC-LATER-COURT` in `docs/world_1ad/SOURCES.md`. [secure survival;
+contested engine context]

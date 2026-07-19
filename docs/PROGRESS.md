@@ -1659,3 +1659,12 @@ separate Han runtime-regency blocker.
 - Neither record gets a marriage, children, office, physical residence, heir,
   claim, succession, or biography date, preserving both later careers for M10
   history rather than importing them into AD 1.
+## 2026-07-19 - M6 Tacitean Augustan court slice
+
+- Added eight Roman-world identities whose survival past AD 1 is directly
+  documented by Tacitus: Arruntius, Manius Lepidus, Haterius, Piso, Plancina,
+  Lamia, Cremutius Cordus, and Asinius Agrippa.
+- The later Tiberian notices are used solely as survival evidence; none of the
+  new records receives an office, command, marriage, residence, ability,
+  precise biography date, genealogy, trial, or death mechanic.
+- This brings the source-led M6 roster to 133 characters and 79 dynasties.
