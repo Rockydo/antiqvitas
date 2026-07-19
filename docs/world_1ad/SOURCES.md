@@ -37,6 +37,8 @@ a row reaches `implemented` status.
 - `SRI-BHAT`: The [Siddham Asian Inscription Database's Bhātika Abhaya entry](https://siddham.network/tag/bhatika-abhaya/) and Abeywardana et al., ["Evolution of the dry zone water harvesting and management systems in Sri Lanka during the Anuradhapura Kingdom"](https://www.researchgate.net/publication/334206109_Evolution_of_the_dry_zone_water_harvesting_and_management_systems_in_Sri_Lanka_during_the_Anuradhapura_Kingdom_a_study_based_on_ancient_chronicles_and_lithic_inscriptions), used for Bhatikabhaya Abhaya's AD 1 overlap and attested canal endowments; exact regnal endpoints remain contested.
 - `IRAN-CHA`: John Hansman's *Encyclopaedia Iranica*, ["Characene and Charax"](https://www.iranicaonline.org/articles/characene-and-charax-spasinou-in-pre-islamic-times/), used for the Characene/Mesene polity and its Arsacid-facing context.
 - `SCHU-CHA`: Monika Schuol, *Die Charakene: Ein mesopotamisches Königreich in hellenistisch-parthischer Zeit* (Steiner, 2000), pp. 226, 318-20, used for the coin-based Attambelos II chronology; its endpoints are retained as contested.
+- `IRAN-PRS`: Josef Wiesehöfer's *Encyclopaedia Iranica*, ["Persis, Kings of"](https://www.iranicaonline.org/articles/persis-kings-of/), used for the sparse, coin-led evidence base and Parthian representative context of Persis.
+- `IRIS-NAM`: [IRIS / Greek Coinage's Nambed of Persis record](https://greekcoinage.org/iris/id/persepolis.nambed.klose_museler.2008.4.44-5?lang=en), used for the broad AD 1-100 numismatic dating; it does not establish a precise accession, biography, or succession.
 
 Rows marked `contested` have a corresponding entry in `docs/ASSUMPTIONS.md`.
 `TBD` map capitals are historical roster records awaiting a verified mapping to
