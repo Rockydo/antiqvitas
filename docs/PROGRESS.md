@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-19 — M5 raw-material anachronism pass
+
+- Added an auditable RGO rule table and deterministic generator for the full
+  installed location-template surface. It preserves every unlisted template
+  field and corrects only controlled AD 1 locations: 9 coffee, 23 tea, 64
+  sugar, and 32 saltpeter occurrences.
+- Coffee and saltpeter are removed globally; tea is retained only in China,
+  sugar only in India and Southeast Asia, and American crops remain eligible
+  only in the Americas. `docs/m5/rgo_remap_report.csv` is the complete output
+  ledger, while the generator rejects unknown goods, regions, or duplicate
+  rules.
+- `make validate` and a real `make smoke` are green with zero new error lines.
+
+Next: add the plan's era-specific goods and then compatible towns, buildings,
+roads, and development before attempting trade-flow observer verification.
+
 ## 2026-07-19 — M5 ancient market foundation
 
 - Added 36 source-labelled AD 1 market hubs across the Mediterranean, Indian

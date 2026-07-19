@@ -54,7 +54,8 @@ after `make full` and its autonomous driver report are green.
 ## M5 — Economy
 
 - [x] Seed and smoke-check 36 source-labelled AD 1 market hubs.
-- [ ] Implement goods/RGOs, buildings/town setups, roads, and development.
+- [x] Remap the plan-listed anachronistic raw goods on controlled AD 1 map locations (128 audited corrections).
+- [ ] Implement the remaining goods/RGOs, buildings/town setups, roads, and development.
 - [ ] Verify ancient trade flows; run milestone gate and tag `M5-done`.
 
 ## M6 — Power
