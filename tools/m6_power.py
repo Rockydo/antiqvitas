@@ -473,6 +473,16 @@ antq_han_imperial_bureaucracy = {
 	years = 2
 }
 
+antq_lankan_kingdom = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_crown_estate_power = 0.05
+		country_cabinet_efficiency = 0.025
+	}
+	years = 2
+}
+
 antq_parthian_king_of_kings = {
 	major = yes
 	government = monarchy
@@ -596,6 +606,8 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_principate_desc", "A republic-facade monarchy centred on the princeps and his auctoritas."),
         ("antq_han_imperial_bureaucracy", "Han Imperial Bureaucracy"),
         ("antq_han_imperial_bureaucracy_desc", "A palace-centred bureaucracy whose Mandate of Heaven is represented through legitimacy and effective rule."),
+        ("antq_lankan_kingdom", "Anuradhapura Kingship"),
+        ("antq_lankan_kingdom_desc", "A Lankan royal court whose monastic and irrigation patronage is a central source of authority."),
         ("antq_parthian_king_of_kings", "Parthian King of Kings"),
         ("antq_parthian_king_of_kings_desc", "An Arsacid monarchy balancing the royal court with powerful Iranian noble houses."),
         ("antq_client_monarchy", "Client Monarchy"),
