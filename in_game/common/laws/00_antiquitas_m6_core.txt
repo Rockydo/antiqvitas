@@ -217,3 +217,45 @@ antq_judean_temple_law = {
 		}
 	}
 }
+
+antq_roman_coinage_law = {
+	law_category = socioeconomic
+	law_gov_group = monarchy
+	potential = {
+		government_type = government_type:monarchy
+	}
+	antq_augustan_bimetallic_standard = {
+		country_modifier = {
+			goods_gold_used_for_minting = yes
+			silver_used_for_minting = yes
+			minting_inflation_threshold = 0.03
+			minting_income_factor = 0.1
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+}
+
+antq_han_coinage_law = {
+	law_category = socioeconomic
+	law_gov_group = monarchy
+	potential = {
+		government_type = government_type:monarchy
+	}
+	antq_wuzhu_copper_cash = {
+		country_modifier = {
+			copper_used_for_minting = yes
+			copper_impacts_inflation = 0.1
+			goods_gold_impacts_inflation = -1.0
+			silver_impacts_inflation = -1.0
+			minting_inflation_threshold = -0.025
+			minting_income_factor = 0.2
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+}
