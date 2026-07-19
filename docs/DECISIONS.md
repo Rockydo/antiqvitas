@@ -5,7 +5,8 @@
 The installed start managers do not provide a raw-material initialization
 surface; raw materials are defined in the complete `map_data/location_templates`
 file. M5 therefore generates an exact-name copy of that installed file,
-preserving every unmodified template and changing only rule-selected raw goods
+preserving every unmodified template and changing only source-labelled
+`docs/goods_remap.csv` raw-good rules
 on locations controlled in the AD 1 ownership ledger. The generated override is
 version-pinned to the local game base and must be regenerated after a game-map
 patch. This is preferable to an incomplete partial map file whose replacement
