@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Raw-material corrections use an exact map-template override
+
+The installed start managers do not provide a raw-material initialization
+surface; raw materials are defined in the complete `map_data/location_templates`
+file. M5 therefore generates an exact-name copy of that installed file,
+preserving every unmodified template and changing only rule-selected raw goods
+on locations controlled in the AD 1 ownership ledger. The generated override is
+version-pinned to the local game base and must be regenerated after a game-map
+patch. This is preferable to an incomplete partial map file whose replacement
+semantics could discard unrelated location data.
+
 ## 2026-07-19 — Markets are generated from explicit ancient hub records
 
 The M5 market manager is generated from `docs/m5/markets.csv`, not inferred

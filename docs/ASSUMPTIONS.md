@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-19 — First-pass raw-material localization
+
+The first RGO pass implements only the explicit section 12.1 prohibitions and
+limits: coffee is absent, saltpeter is removed from the pre-gunpowder layer,
+tea remains only in the broad China region, sugar only in India and Southeast
+Asia, and tobacco/cocoa/maize/potato remain in the Americas. `medicaments`,
+`fiber_crops`, `fruit`, `millet`, `legumes`, and `salt` are engine-valid
+technical replacements, not claims that each altered location produced that
+specific ancient commodity. China is a deliberately coarse temporary proxy for
+the plan's Sichuan-only tea qualification; the subsequent source-led RGO pass
+must narrow it. Sources weighed: P12.1; P8.4; P8.9; P8.10. [contested]
+
 ## 2026-07-19 — Market geographic proxies
 
 Several plan-specified AD 1 hubs have no exact installed location key. Baghdad
