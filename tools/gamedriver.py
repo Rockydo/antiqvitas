@@ -384,7 +384,11 @@ def key(args: argparse.Namespace) -> int:
 
 
 def stop(args: argparse.Namespace) -> int:
-    process = process_from_state()
+    try:
+        process = process_from_state()
+    except (FileNotFoundError, psutil.NoSuchProcess):
+        print("gamedriver: already stopped")
+        return 0
     if process.is_running():
         process.terminate()
         try:

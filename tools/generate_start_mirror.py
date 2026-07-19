@@ -14,7 +14,13 @@ import argparse
 import csv
 import json
 import sys
+from collections import defaultdict
+from dataclasses import dataclass
+from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
+
+from extract_vanilla import tokenize
+from generate_country_definitions import historical_profile_for
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "main_menu/setup/start"
@@ -23,14 +29,16 @@ TAG_MAP = ROOT / "docs/world_1ad/tag_map.json"
 OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
 SUBJECTS = ROOT / "docs/world_1ad/subjects.csv"
 SUBJECT_TYPES = ROOT / "docs/vanilla_symbols/subject_type.json"
+POPULATION_TARGETS = ROOT / "docs/m4/population_targets.csv"
+POPULATION_ALLOCATIONS = ROOT / "docs/m4/population_region_allocations.csv"
 SUBJECT_FIELDS = ("overlord", "subject", "relationship", "source", "confidence", "note")
+THOUSANDTH = Decimal("0.001")
 
 STATIC_FILES = {
     "02_core.txt": """institution_manager = {\n}\n\nreligion_manager = {\n}\n""",
     "03_markets.txt": "market_manager = {\n}\n",
     "04_dynasties.txt": "dynasty_manager = {\n}\n",
     "05_characters.txt": "character_db = {\n}\n",
-    "06_pops.txt": "locations = {\n}\n",
     "07_cities_and_buildings.txt": "locations = {\n}\n",
     "08_institutions.txt": "locations = {\n}\n",
     "09_roads.txt": "road_network = {\n}\n",
@@ -50,6 +58,215 @@ STATIC_FILES = {
     "26_ai_personalities.txt": "countries = {\n\tcountries = {\n\t}\n}\n",
     "27_armies.txt": "unit_manager = {\n}\n",
 }
+
+
+@dataclass(frozen=True)
+class MacroTarget:
+    target: Decimal
+    minimum: Decimal | None
+    maximum: Decimal | None
+    source: str
+    confidence: str
+    note: str
+
+
+@dataclass(frozen=True)
+class RegionalAllocation:
+    macro: str
+    target: Decimal
+    source: str
+    confidence: str
+    note: str
+
+
+def csv_rows(path: Path) -> list[dict[str, str]]:
+    with path.open(encoding="utf-8-sig", newline="") as handle:
+        return list(csv.DictReader(handle))
+
+
+def decimal_field(row: dict[str, str], field: str, path: Path) -> Decimal:
+    value = row.get(field, "").strip()
+    if not value:
+        raise ValueError(f"{path.relative_to(ROOT)} has a blank {field}")
+    try:
+        parsed = Decimal(value)
+    except Exception as exc:
+        raise ValueError(f"{path.relative_to(ROOT)} has invalid {field}={value!r}") from exc
+    if parsed <= 0:
+        raise ValueError(f"{path.relative_to(ROOT)} has non-positive {field}={value!r}")
+    return parsed
+
+
+def load_population_plan() -> tuple[dict[str, MacroTarget], dict[str, RegionalAllocation]]:
+    """Read the auditable M4 population targets and regional allocation plan."""
+    macros: dict[str, MacroTarget] = {}
+    for row in csv_rows(POPULATION_TARGETS):
+        macro = row.get("macro", "").strip()
+        if not macro or macro in macros:
+            raise ValueError(f"{POPULATION_TARGETS.relative_to(ROOT)} has invalid or duplicate macro {macro!r}")
+        minimum = row.get("min_thousands", "").strip()
+        maximum = row.get("max_thousands", "").strip()
+        if bool(minimum) != bool(maximum):
+            raise ValueError(f"{POPULATION_TARGETS.relative_to(ROOT)} {macro}: min/max must both be set or blank")
+        for field in ("source", "confidence", "note"):
+            if not row.get(field, "").strip():
+                raise ValueError(f"{POPULATION_TARGETS.relative_to(ROOT)} {macro}: blank {field}")
+        macros[macro] = MacroTarget(
+            decimal_field(row, "target_thousands", POPULATION_TARGETS),
+            Decimal(minimum) if minimum else None,
+            Decimal(maximum) if maximum else None,
+            row["source"].strip(),
+            row["confidence"].strip(),
+            row["note"].strip(),
+        )
+    if "world" not in macros:
+        raise ValueError(f"{POPULATION_TARGETS.relative_to(ROOT)} must define a world target")
+    allocations: dict[str, RegionalAllocation] = {}
+    for row in csv_rows(POPULATION_ALLOCATIONS):
+        region = row.get("region", "").strip()
+        macro = row.get("macro", "").strip()
+        if not region or region in allocations:
+            raise ValueError(f"{POPULATION_ALLOCATIONS.relative_to(ROOT)} has invalid or duplicate region {region!r}")
+        if macro not in macros or macro == "world":
+            raise ValueError(f"{POPULATION_ALLOCATIONS.relative_to(ROOT)} {region}: unknown macro {macro!r}")
+        for field in ("source", "confidence", "note"):
+            if not row.get(field, "").strip():
+                raise ValueError(f"{POPULATION_ALLOCATIONS.relative_to(ROOT)} {region}: blank {field}")
+        allocations[region] = RegionalAllocation(
+            macro,
+            decimal_field(row, "target_thousands", POPULATION_ALLOCATIONS),
+            row["source"].strip(),
+            row["confidence"].strip(),
+            row["note"].strip(),
+        )
+    allocated = defaultdict(Decimal)
+    for allocation in allocations.values():
+        allocated[allocation.macro] += allocation.target
+    for macro, target in macros.items():
+        if macro == "world":
+            continue
+        if allocated[macro] != target.target:
+            raise ValueError(
+                f"{macro} allocations total {allocated[macro]} but target is {target.target} thousand"
+            )
+    if sum(allocated.values(), Decimal()) != macros["world"].target:
+        raise ValueError(
+            f"regional allocations total {sum(allocated.values(), Decimal())} but world target is "
+            f"{macros['world'].target} thousand"
+        )
+    return macros, allocations
+
+
+def vanilla_pop_weights() -> dict[str, Decimal]:
+    """Read installed-pop density as a geographic weighting template only."""
+    config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
+    source = Path(config["game_dir"]) / "game/main_menu/setup/start/06_pops.txt"
+    if not source.is_file():
+        raise ValueError(f"installed vanilla pop template is missing: {source}")
+    tokens = list(tokenize(source.read_text(encoding="utf-8-sig", errors="replace")))
+    stack: list[str] = []
+    weights: defaultdict[str, Decimal] = defaultdict(Decimal)
+    index = 0
+    while index < len(tokens):
+        value = tokens[index].value
+        if (
+            index + 2 < len(tokens)
+            and tokens[index + 1].value == "="
+            and tokens[index + 2].value == "{"
+        ):
+            stack.append(value)
+            index += 3
+            continue
+        if value == "}":
+            if stack:
+                stack.pop()
+            index += 1
+            continue
+        if (
+            value == "size"
+            and index + 2 < len(tokens)
+            and tokens[index + 1].value == "="
+            and len(stack) == 3
+            and stack[0] == "locations"
+            and stack[2] == "define_pop"
+        ):
+            try:
+                weights[stack[1]] += Decimal(tokens[index + 2].value)
+            except Exception as exc:
+                raise ValueError(f"invalid vanilla pop size at {stack[1]}") from exc
+            index += 3
+            continue
+        index += 1
+    if not weights:
+        raise ValueError("could not read any installed vanilla population weights")
+    return dict(weights)
+
+
+def population_manager() -> tuple[str, int, Decimal]:
+    """Render all controlled AD 1 locations against section 12.4 target totals."""
+    roster_rows = csv_rows(ROSTER)
+    roster = {row["tag"]: row for row in roster_rows}
+    macros, allocations = load_population_plan()
+    roster_regions = {row["region"] for row in roster_rows}
+    missing_regions = sorted(roster_regions - set(allocations))
+    extra_regions = sorted(set(allocations) - roster_regions)
+    if missing_regions or extra_regions:
+        raise ValueError(f"population regional coverage mismatch; missing={missing_regions}, extra={extra_regions}")
+    owners: dict[str, str] = {}
+    with OWNERSHIP.open(encoding="utf-8-sig", newline="") as handle:
+        for entry in csv.DictReader(line for line in handle if not line.startswith("#")):
+            location = entry["location"]
+            tag = entry["tag"]
+            if tag not in roster:
+                raise ValueError(f"population ownership references unknown tag {tag}")
+            if location in owners:
+                raise ValueError(f"population ownership assigns {location} more than once")
+            owners[location] = tag
+    weights = vanilla_pop_weights()
+    by_region: defaultdict[str, list[str]] = defaultdict(list)
+    for location, tag in owners.items():
+        by_region[roster[tag]["region"]].append(location)
+    floor = Decimal("0.050")
+    sizes: dict[str, Decimal] = {}
+    for region, locations in by_region.items():
+        target = allocations[region].target
+        ordered = sorted(locations)
+        regional_weights = {location: max(weights.get(location, Decimal()), floor) for location in ordered}
+        total_weight = sum(regional_weights.values(), Decimal())
+        if not total_weight:
+            raise ValueError(f"population region {region} has no usable geographic weight")
+        scaled = {
+            location: (regional_weights[location] * target / total_weight).quantize(
+                THOUSANDTH, rounding=ROUND_HALF_UP
+            )
+            for location in ordered
+        }
+        correction = target - sum(scaled.values(), Decimal())
+        largest = max(ordered, key=lambda location: (regional_weights[location], location))
+        scaled[largest] += correction
+        if scaled[largest] <= 0:
+            raise ValueError(f"population rounding made {largest} non-positive")
+        sizes.update(scaled)
+    lines = [
+        "# Generated by tools/generate_start_mirror.py --write.",
+        "# M4 AD 1 population totals: plan section 12.4; regional allocation is source-labelled in docs/m4/.",
+        "# Installed vanilla density is a geographic weighting template only, never a historical population source.",
+        "locations = {",
+    ]
+    for location in sorted(owners):
+        row = roster[owners[location]]
+        profile = historical_profile_for(row)
+        pop_type = "tribesmen" if row["kind"] == "sop" else "peasants"
+        lines.extend(
+            (
+                f"\t{location} = {{",
+                f"\t\tdefine_pop = {{ type = {pop_type} size = {sizes[location]:.3f} "
+                f"culture = {profile.culture} religion = {profile.religion} }}",
+                "\t}",
+            )
+        )
+    lines.extend(("}", ""))
+    return "\n".join(lines), len(owners), sum(sizes.values(), Decimal())
 
 
 def country_manager() -> tuple[str, int, int]:
@@ -164,10 +381,18 @@ def diplomacy_manager() -> tuple[str, int]:
     return "\n".join(lines) + "\n", len(dependencies)
 
 
-def generated_files() -> tuple[dict[str, str], int, int, int]:
+def generated_files() -> tuple[dict[str, str], int, int, int, int, Decimal]:
+    pops, pop_locations, pop_total = population_manager()
     countries, count, controlled = country_manager()
     diplomacy, dependencies = diplomacy_manager()
-    return {**STATIC_FILES, "10_countries.txt": countries, "12_diplomacy.txt": diplomacy}, count, controlled, dependencies
+    return (
+        {**STATIC_FILES, "06_pops.txt": pops, "10_countries.txt": countries, "12_diplomacy.txt": diplomacy},
+        count,
+        controlled,
+        dependencies,
+        pop_locations,
+        pop_total,
+    )
 
 
 def installed_start_filenames() -> set[str]:
@@ -185,7 +410,7 @@ def main() -> int:
         parser.error("provide exactly one of --write or --check")
     failures: list[str] = []
     try:
-        files, country_count, controlled, dependencies = generated_files()
+        files, country_count, controlled, dependencies, pop_locations, pop_total = generated_files()
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         print(f"start_mirror: FAIL\n  - {exc}")
         return 1
@@ -218,7 +443,8 @@ def main() -> int:
     print(
         f"start_mirror: PASS ({len(files)} exact manager filenames; "
         f"{country_count} verified-capital countries; {controlled} controlled locations; "
-        f"{dependencies} dependencies)"
+        f"{dependencies} dependencies; {pop_locations} populated locations; "
+        f"{pop_total:,.3f} thousand people)"
     )
     return 0
 

@@ -49,6 +49,13 @@ def main() -> int:
     parser.add_argument("--baseline-only", action="store_true")
     parser.add_argument("--leavepops", action="store_true")
     parser.add_argument("--accept", action="store_true")
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="wait for an already-launched game, then stop and diff its log",
+    )
+    parser.add_argument("--menu-minimum", type=int, default=30)
+    parser.add_argument("--quiet-seconds", type=int, default=15)
     parser.add_argument("--timeout", type=int, default=480)
     args = parser.parse_args()
     config = json.loads(
@@ -60,26 +67,27 @@ def main() -> int:
     if not baseline.is_file():
         print("smoketest: FAIL (vanilla baseline not captured)", file=sys.stderr)
         return 1
-    if not baseline_only and not Path(str(config["mod_dir"])).exists():
-        subprocess.run(
-            [
-                "powershell",
-                "-NoProfile",
-                "-ExecutionPolicy",
-                "Bypass",
-                "-File",
-                str(ROOT / "tools/link_mod.ps1"),
-            ],
-            cwd=ROOT,
-            check=True,
-        )
-    mode = "--vanilla" if baseline_only else "--enable"
-    run("tools/enable_mod.py", mode)
-    launch = ["tools/gamedriver.py", "launch", "--mode"]
-    launch.append("vanilla" if baseline_only else "mod")
-    if args.leavepops:
-        launch.append("--leavepops")
-    run(*launch)
+    if not args.resume:
+        if not baseline_only and not Path(str(config["mod_dir"])).exists():
+            subprocess.run(
+                [
+                    "powershell",
+                    "-NoProfile",
+                    "-ExecutionPolicy",
+                    "Bypass",
+                    "-File",
+                    str(ROOT / "tools/link_mod.ps1"),
+                ],
+                cwd=ROOT,
+                check=True,
+            )
+        mode = "--vanilla" if baseline_only else "--enable"
+        run("tools/enable_mod.py", mode)
+        launch = ["tools/gamedriver.py", "launch", "--mode"]
+        launch.append("vanilla" if baseline_only else "mod")
+        if args.leavepops:
+            launch.append("--leavepops")
+        run(*launch)
     try:
         ready = run(
             "tools/gamedriver.py",
@@ -87,9 +95,9 @@ def main() -> int:
             "--timeout",
             str(args.timeout),
             "--minimum",
-            "30",
+            str(args.menu_minimum),
             "--quiet-seconds",
-            "15",
+            str(args.quiet_seconds),
             check=False,
         )
         if ready.returncode:
