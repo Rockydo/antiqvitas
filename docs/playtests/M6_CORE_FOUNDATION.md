@@ -58,3 +58,17 @@ minority-regency shape (Ping as `heir`, no concurrent ruler or current term,
 and the native field order). Both produced the same fallback with no new
 `error.log` line. The screenshots and recovery are retained in `BLOCKERS.md`.
 This is not an M6 acceptance result.
+
+## 2026-07-19 Parthian country-panel result
+
+A fresh enabled-mod selector run reached `08:00, 1 January, 1`, selected XAH,
+and opened its Country tab. The visible panel identifies Count Phraates V
+Arsacid at Ctesiphon with nine subjects; it shows the Parthian profile with one
+reform and fifteen laws. Evidence is retained at
+`docs/screens/20260719_200913/M6_runtime_parthia/parthia_selected.png` and
+`docs/screens/20260719_200939/M6_runtime_parthia/parthia_country_tab.png`.
+
+Phraates renders as age 0 because his source-led record intentionally omits an
+unknown birth date. This presentation defect is tracked in `KNOWN_ISSUES.md`;
+no invented date was added. The result is a Parthian runtime pass only, not an
+M6 milestone pass while the Han regency fallback remains unresolved.

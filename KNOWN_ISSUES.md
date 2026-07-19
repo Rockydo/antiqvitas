@@ -1,15 +1,26 @@
 # Known Issues
 
-## M6 country-inspector driver coverage gap
+## M6 country-inspector coverage is partial
 
-The M6 core observer session successfully rendered the AD 1 map at `08:00,
-1 January, 1`, but the driver could not reliably select Rome/Han/Parthia or
-open the visible console panel under the host's scaled window geometry. Two
-recorded console attempts reached `console_history.txt`, while the screenshot
-surface continued to show the map. The session's `error.log` contains no M6
-identifier; its broad vanilla-government/HRE errors remain the existing
-M3/M9 runtime boundary. The targeted country UI verification remains open;
-see `docs/playtests/M6_CORE_FOUNDATION.md`.
+The foreground-safe driver now selects countries and opens their Country panel
+under the host's scaled geometry. Rome's prior run and the new Parthian run
+visibly show the intended rulers and their government/law profiles. Han has a
+separate, reproducible silent minority-regency fallback and therefore blocks
+M6 acceptance; see `BLOCKERS.md` and `docs/playtests/M6_CORE_FOUNDATION.md`.
+
+The Parthian run also included an unrelated `chrome.exe` error modal in the
+desktop capture. It did not prevent country selection or the Country tab, but
+the driver must continue to capture the actual game window and must not close
+or interfere with unrelated desktop applications.
+
+## M6 missing biography dates render as age zero
+
+EU5 renders a source-deliberate blank `birth_date` as age 0 in the live
+country panel. The fresh Parthian run displayed Phraates V correctly by name,
+government, capital, religion, and subjects but as age 0. The project will not
+manufacture a birth date merely to alter this UI value. A later sourced
+prosopography pass needs either evidence-qualified ranges or a locally verified
+display-safe contract; this does not invalidate the loaded government profile.
 
 ## M5 RGO runtime coverage gap
 

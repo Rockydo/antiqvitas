@@ -664,3 +664,13 @@ Zhang rather than resolving Emperor Ping and Wang Mang, with no new log line.
 This native-shape adapter is consequently retained as the least speculative
 script form, not treated as proof of runtime correctness. `BLOCKERS.md`
 records both attempts and keeps the M6 milestone unaccepted.
+
+## 2026-07-19 - Unknown biography dates remain blank despite the age-zero UI
+
+The Parthian inspector confirms that this EU5 build displays a character with
+no `birth_date` as age 0. Several current AD 1 figures, including Phraates V,
+have no defensible birth day or year in the project source set. The data keeps
+those fields blank rather than inserting a plausible-looking value just to
+change the UI. This is a source-integrity choice; the later prosopography pass
+may only replace it with an evidence-qualified date or a locally verified
+display contract.
