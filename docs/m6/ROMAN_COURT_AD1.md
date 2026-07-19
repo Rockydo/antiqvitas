@@ -34,6 +34,20 @@ personal statistic, residence claim, or biography date. Their narrow court-line
 keys are generator identities, not a reconstructed Aemilian or Herennian
 genealogy. Dated consulship history remains an M10 responsibility.
 
+## AD 2-13 consular survival
+
+The successive AD 2-13 entries of the *Fasti Capitolini* name thirty-six
+additional ordinary or named July suffect consuls who do not already appear in
+the Roman roster (`FASTI-CONS-2-13`). A consulship attested within twelve years
+of the campaign boundary securely establishes an adult, living Roman figure at
+the start. The roster adds each one only as a court-context identity.
+
+The source does not license a 1 January AD 1 magistracy for any of them. Their
+engine entries therefore omit an office, consulship term, residence, marriage,
+parent graph, estate, ability, biography date, or later career. Separate
+court-line keys preserve identities without turning the Fasti filiation into a
+reconstructed Roman genealogy; dated careers remain M10 work.
+
 ## Living Augustan figures
 
 British Museum biographies establish Publius Quinctilius Varus's active period
