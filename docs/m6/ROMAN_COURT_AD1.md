@@ -20,6 +20,20 @@ Neither source provides a needed day-level biography date or an AD 1 office
 assignment, so both fields remain blank. The M10 dated-history pass owns their
 later careers.
 
+## AD 1 consular record
+
+The AD 1 entry in the *Fasti Capitolini* names Gaius Caesar and Lucius Aemilius
+Paullus as ordinary consuls and names Marcus Herennius Picens from 1 July
+(`FASTI-CONS-AD1` in the source ledger). Paullus consequently joins the Roman
+start-context roster as the directly documented current-year colleague of the
+existing heir. Picens is likewise visible as an AD 1 court-context figure, but
+the later July entry supplies no January appointment and none is created.
+
+Neither character receives an engine office, marriage field, family graph,
+personal statistic, residence claim, or biography date. Their narrow court-line
+keys are generator identities, not a reconstructed Aemilian or Herennian
+genealogy. Dated consulship history remains an M10 responsibility.
+
 ## Claudian household figures
 
 The British Museum records Antonia the Younger's relationship to Augustus,
