@@ -1,5 +1,38 @@
 # Blockers
 
+## 2026-07-19 — M2 calendar waits on M3's full setup mirror
+
+Status: M2's calendar and save/reload proof succeeded, but its runtime layer is
+deferred rather than committed until M3 can remove the obsolete vanilla setup.
+
+`tools/dates.py --write-m2` generated an AD 1 to AD 476 calendar, five campaign
+ages, the required non-playable sixth-key compatibility sentinel, placeholder
+advances, and mirrored localization. The real game reached a new-game map at
+`08:00, 1 January, 1`, displayed `Age of Principate`, saved successfully, and
+reloaded that save through the Load Game UI at the same date. Screenshots are
+preserved under `docs/screens/M2/`.
+
+However, the vanilla 1337 setup snapshot that M2 is explicitly permitted to
+retain contains ruler-term histories. At a year-one start the engine validates
+them as simultaneously active and emits 868 distinct new
+`ruler_term_container.cpp:109` lines. The direct M2 runtime probe therefore
+cannot meet the project-wide zero-new-error requirement until M3 mirror-replaces
+the setup managers and supplies AD 1 characters/ruler histories.
+
+Tried:
+
+1. Defined only five age keys. The engine required the vanilla-referenced
+   `age_6_revolutions` key, producing an immediate reference-error cascade.
+2. Added a year-477, never-playable compatibility key and fixed the local
+   UTF-8-BOM requirements. Menu smoke then returned clean, and the AD 1 UI plus
+   save/reload both succeeded.
+
+Recovery: the generated game-visible M2 files are removed before committing,
+returning the tree to a clean menu smoke. The generator, timeline, linter
+coverage, driver improvements, and visual evidence are retained. Re-run
+`tools/dates.py --write-m2` as part of M3 once the setup mirror is in place,
+then close M2 with a full runtime log check.
+
 ## 2026-07-19 — Local documentation exporters do not complete
 
 Status: fallback in use; does not block other M0 work.

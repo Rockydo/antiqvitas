@@ -1,5 +1,22 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Five campaign ages with a compatibility sentinel
+
+The campaign has five real ages: Principate, High Empires, Crisis, Dominate,
+and Migrations. The installed engine validates references to all six vanilla
+age keys while loading unrelated vanilla databases. Once the M3 mirror is
+ready, the generated M2 file will therefore retain `age_6_revolutions` as an
+unreachable year-477 compatibility sentinel; it is not a campaign age and does
+not make any date after 4 September 476 playable.
+
+## 2026-07-19 — M2 deferment until setup replacement
+
+The year-one calendar itself works, including a real save/reload. Enabling it
+against the retained vanilla snapshot yields 868 ruler-term validation errors.
+Because M3 already requires exact replacement of every setup manager and AD 1
+ruler histories, the generated M2 layer is deferred rather than normalizing or
+accepting those errors. This preserves the zero-new-error invariant.
+
 ## 2026-07-19 — Metadata compatibility and thumbnail placement
 
 The in-game version label is `1.3.1.1`, but the metadata comparator rejects

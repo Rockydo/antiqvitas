@@ -218,7 +218,6 @@ def focus_game():
 def screenshot(args: argparse.Namespace) -> int:
     import pyautogui
 
-    value = state()
     session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
     target = ROOT / "docs/screens" / session / f"{args.name}.png"
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -228,6 +227,51 @@ def screenshot(args: argparse.Namespace) -> int:
     )
     image.save(target)
     print(target)
+    return 0
+
+
+def click(args: argparse.Namespace) -> int:
+    import pyautogui
+
+    window = activate_window()
+    if not (0 <= args.x <= 1 and 0 <= args.y <= 1):
+        raise ValueError("click coordinates must be normalized fractions from 0 through 1")
+    x = window.left + round(window.width * args.x)
+    y = window.top + round(window.height * args.y)
+    pyautogui.click(x, y)
+    time.sleep(args.settle)
+    print(f"clicked normalized ({args.x:.3f}, {args.y:.3f}) at ({x}, {y})")
+    if args.capture:
+        session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
+        target = ROOT / "docs/screens" / session / f"{args.capture}.png"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        image = pyautogui.screenshot(
+            region=(window.left, window.top, window.width, window.height)
+        )
+        image.save(target)
+        print(target)
+    return 0
+
+
+def hotkey(args: argparse.Namespace) -> int:
+    import pyautogui
+
+    window = focus_game()
+    keys = tuple(part.strip() for part in args.keys.split("+") if part.strip())
+    if not keys:
+        raise ValueError("hotkey must contain one or more keys separated by '+'")
+    pyautogui.hotkey(*keys)
+    time.sleep(args.settle)
+    print(f"hotkey sent: {'+'.join(keys)}")
+    if args.capture:
+        session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
+        target = ROOT / "docs/screens" / session / f"{args.capture}.png"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        image = pyautogui.screenshot(
+            region=(window.left, window.top, window.width, window.height)
+        )
+        image.save(target)
+        print(target)
     return 0
 
 
@@ -332,6 +376,19 @@ def build_parser() -> argparse.ArgumentParser:
     screenshot_parser.add_argument("name")
     screenshot_parser.add_argument("--session")
     screenshot_parser.set_defaults(func=screenshot)
+    click_parser = sub.add_parser("click")
+    click_parser.add_argument("x", type=float, help="horizontal normalized position")
+    click_parser.add_argument("y", type=float, help="vertical normalized position")
+    click_parser.add_argument("--settle", type=float, default=2)
+    click_parser.add_argument("--capture", help="capture this name after the click")
+    click_parser.add_argument("--session")
+    click_parser.set_defaults(func=click)
+    hotkey_parser = sub.add_parser("hotkey")
+    hotkey_parser.add_argument("keys", help="keys separated by '+', e.g. ctrl+s")
+    hotkey_parser.add_argument("--settle", type=float, default=2)
+    hotkey_parser.add_argument("--capture", help="capture this name after the hotkey")
+    hotkey_parser.add_argument("--session")
+    hotkey_parser.set_defaults(func=hotkey)
     console_parser = sub.add_parser("console")
     console_parser.add_argument("command")
     console_parser.add_argument("--settle", type=float, default=2)
