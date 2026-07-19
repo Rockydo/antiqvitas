@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 - M6 Han Mandate adapter
+
+- Added a conservative `monthly_legitimacy` modifier to Han Imperial
+  Bureaucracy, using a local Chinese bureaucracy/government-reform contract to
+  make the Mandate of Heaven legible in the AD 1 profile. The dated loss and
+  restoration cycle remains deliberately reserved for M10.
+- `make validate` and the enabled-mod `make smoke` are green; smoke reached a
+  rendered menu with zero new error-log lines.
+
+Next: continue source-qualified Tier-1/2 court and political-mechanics work;
+the Han start adapter does not substitute for the historical dynastic cycle.
+
 ## 2026-07-19 - M6 Roman and Han coinage standards
 
 - Added the locally verified socioeconomic-law surface for an Augustan

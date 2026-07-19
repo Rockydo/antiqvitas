@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 - The Han Mandate is a legitimacy adapter, not a full cycle model
+
+The Western Han reform receives a small, locally verified legitimacy modifier
+to make the Mandate of Heaven mechanically visible at the AD 1 start. It does
+not identify the Mandate with a European legal doctrine or pre-decide its
+future loss; Wang Mang's usurpation, flood, and civil-war collapse remain
+dated M10 content. Sources weighed: P8.3; P13; BHR; CAH-XI. [secure for the
+Mandate's centrality to the Han imperial framework; contested for the
+legitimacy-meter mapping]
+
 ## 2026-07-19 - AD 1 coinage laws are bounded monetary adapters
 
 Rome receives a gold-and-silver Augustan coinage law and Western Han a

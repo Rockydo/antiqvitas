@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-19 - Han Mandate maps to the installed legitimacy surface
+
+The local Chinese bureaucracy definitions and government-reform files use
+`monthly_legitimacy` as a live monarchy power modifier. M6 therefore adds the
+same conservative `0.05` contract to Han Imperial Bureaucracy and makes the
+mapping explicit in localization. It does not use `monthly_celestial_authority`:
+that is tied to unadopted later-game bureaucracy systems whose runtime behavior
+is not yet established for the AD 1 Han profile. M10 owns the dynamic collapse
+and restoration mechanics.
+
 ## 2026-07-19 - M6 coinage laws reuse the installed socioeconomic contract
 
 The local `common/laws/01_common.txt` defines `coin_laws` in the
