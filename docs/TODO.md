@@ -41,10 +41,10 @@ after `make full` and its autonomous driver report are green.
 
 ## M4 — Peoples & faiths
 
-- [x] Seed and smoke-check the additive culture/religion foundation (69 cultures, 37 religions, 30 culture groups, and 13 religion groups).
+- [x] Seed and smoke-check the additive culture/religion foundation (69 cultures, 37 religions, 27 culture groups, and 14 religion groups).
 - [x] Generate and smoke-check engine-valid ancient dialect/namelist layers (27 language roots, dialects, and localized source-name pools).
-- [ ] Bind the sourced culture/faith tree to country profiles and global pop data.
-- [ ] Implement cultures, languages, namelists, religions, global pops, and ancient dynamic names.
+- [x] Bind the sourced culture/faith tree to all 157 country profiles (34 regional bases and 45 source-labelled tag overrides).
+- [ ] Bind the sourced culture/faith tree to global pop data and generate ancient dynamic names.
 - [ ] Pass population, culture, religion, and `-leavepops` checks.
 - [ ] Run milestone gate and tag `M4-done`.
 
