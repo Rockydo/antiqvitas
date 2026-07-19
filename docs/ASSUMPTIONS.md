@@ -608,3 +608,13 @@ tribal profile with an engine-generated ruler, not an invented historical
 court. The shared elder-council and societal-value settings are gameplay
 adapters for non-dynastic political organization, not claims of a uniform
 constitution. Sources weighed: P8.7; P13; CAH-XI. [contested]
+
+## 2026-07-19 - Anonymous Brittonic and Irish governments
+
+The start roster preserves the named Brittonic and Irish polities required by
+P8.7, but its source route does not establish a current ruler for the
+Trinovantes, Iceni, Brigantes, Atrebates, Silures, Ordovices, Dumnonii,
+Caledonian societies, or Ulaid on 1 January AD 1. They receive anonymous tribal
+profiles rather than fabricated courts. Boudica, Cartimandua, Verica, and the
+Roman-conquest sequence remain dated M10 history rather than evidence for a
+start-date incumbent. Sources weighed: P8.7; P13; CAH-XI. [contested]

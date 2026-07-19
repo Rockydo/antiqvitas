@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-19 - M6 anonymous Brittonic and Irish profiles
+
+- Replaced nine generic M3 ruler stubs for the Trinovantes, Iceni, Brigantes,
+  Atrebates, Silures, Ordovices, Dumnonii, Caledonian societies, and Ulaid with
+  the same source-qualified anonymous tribal profile. Later named figures and
+  Rome's AD 43/AD 60s arcs remain dated M10 content.
+- Regenerated M6/start data. `make validate` reports 58 government profiles;
+  the enabled-mod smoke reached the rendered menu with zero new error-log
+  lines.
+
+Next: continue the Tier-1/2 government surface with source-qualified courts or
+explicit anonymous profiles where the evidence establishes a polity but not an
+AD 1 incumbent.
+
 ## 2026-07-19 - M6 anonymous northern tribal governments
 
 - Replaced 19 generic M3 ruler stubs with source-qualified `tribe` profiles
