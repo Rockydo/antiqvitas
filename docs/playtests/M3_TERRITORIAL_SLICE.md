@@ -12,10 +12,10 @@ proven ownable in the installed setup, rejects overlaps, and writes the checked
 The initial pass painted 4,153 locations under 56 roster polities: the Roman,
 Parthian, and Western Han cores are multi-location data; the smaller reviewed
 polities retain their conservative capital-control seeds. Subsequent
-Pleiades/anchor review now covers all 133 roster polities, resolving 4,230
-locations and 25 dependencies. It deliberately does not claim that unassigned
-edge areas, SoP extents, or subject territories are finished. Those remain the
-M3 research backlog.
+Pleiades/anchor review now covers all 133 roster polities. The subsequent
+source-labelled Indian Ocean pass resolves 5,575 locations and 25 dependencies.
+It deliberately does not claim that unassigned edge areas, SoP extents, or
+subject territories are finished. Those remain the M3 research backlog.
 
 Validation: `make validate` passed; a real-game `make smoke` returned zero new
 error lines. The autonomous new-game selector reaches `08:00, 1 January, 1`

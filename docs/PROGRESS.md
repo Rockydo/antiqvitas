@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-19 — M3 Indian Ocean territorial pass
+
+- Expanded only source-labelled, coarse local geography frames for the AD 1
+  Indian and Southeast Asian roster: Indo-Scythian north-west, Satavahana
+  Deccan, Kalinga, Chera, Anuradhapura, Jiaozhi, and the named Pyu, Mon,
+  Khmer, Malay, Javanese, Philippine, and Bornean society frames.
+- The ownership resolver now produces 5,575 non-overlapping locations for all
+  133 roster polities and retains 25 source-recorded dependencies.
+- `make validate` and a real-game smoke are green with zero new error lines.
+
+Next: make the same source-conservative territorial pass through Barbaricum,
+the steppe, Africa, and the Americas; do not use a local-map area as an
+unlabelled substitute for a period border.
+
 ## 2026-07-19 — M3 full capital-anchor coverage
 
 - Completed the collision-checked local-map anchor registry for all 133 AD 1
