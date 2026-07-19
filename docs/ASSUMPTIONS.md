@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-19 — Civic and hydraulic infrastructure proxies
+
+Rome's Circus Maximus, Alexandria's Roman-period maritime role, the
+Dujiangyan system serving the Chengdu plain, and Anuradhapura's early
+reservoirs all predate the AD 1 start. They are represented as engine capacity
+anchors, not as claims that the abstract building slots reproduce their exact
+form or full footprint. Sources weighed: Italian cultural-heritage material on
+the Circus Maximus (https://digitallibrary.cultura.gov.it/notizie/al-massimo-dello-splendore/);
+Cambridge, “Alexandria and the sea in Hellenistic and Roman times”
+(https://www.cambridge.org/core/books/abs/sea-in-history-the-ancient-world/alexandria-and-the-sea-in-hellenistic-and-roman-times/63CE49E6514F84622EB8A8FF848156B4);
+UNESCO on Dujiangyan (https://whc.unesco.org/en/list/1001/) and Anuradhapura
+reservoirs (https://whc.unesco.org/document/163318). [contested]
+
 ## 2026-07-19 — Five dedicated ancient trade goods
 
 Alexandria is used as an Egyptian papyrus production-and-export proxy; Barca
