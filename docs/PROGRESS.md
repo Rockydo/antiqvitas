@@ -1554,6 +1554,22 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-19 - M6 near-boundary court slice
+
+- Added Flavus, Thusnelda, and the explicitly qualified Segimundus to the
+  Cheruscan context from Tacitus; the anonymous Cheruscan government is
+  unchanged.
+- Added the contested near-boundary court identities Artabanus II, Orodes III,
+  and Abinergaos I from scholarly chronology, Josephus, and an institutional
+  coin record. Phraates V and Attambelos II remain the only relevant engine
+  rulers.
+- `make validate` and `make smoke` are green, with a menu-ready game launch and
+  zero new error-log lines. The roster now holds 145 source-led characters and
+  80 dynasties.
+
+Next: continue named Tier-1/2 court coverage in thin regional tags while
+preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Pythodorid household extension
 
 - Added Artaxias III and Polemo II from the British Museum's direct Pythodorid
