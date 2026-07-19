@@ -255,8 +255,8 @@ def load_power_data() -> PowerData:
         if row["government_type"] not in government_types:
             failures.append(f"government {row['design_tag']} uses unknown type {row['government_type']}")
         random_ruler = row["ruler"] == "random"
-        if random_ruler and row["government_type"] != "republic":
-            failures.append(f"government {row['design_tag']} uses random ruler outside a republic")
+        if random_ruler and row["government_type"] not in {"monarchy", "republic", "tribe"}:
+            failures.append(f"government {row['design_tag']} uses random ruler with an unverified type")
         for field in ("ruler", "heir", "consort", "active_regent"):
             if row[field] and row[field] not in character_keys and not (field == "ruler" and random_ruler):
                 failures.append(f"government {row['design_tag']} references unknown {field} {row[field]}")

@@ -86,6 +86,22 @@ keeps the verified Praetorian Donatives privilege as the plan's fallback; M10
 will add the dated legionary succession/crisis interactions when its event and
 disaster systems are implemented.
 
+## Anonymous northern tribal profiles
+
+The M6 local-start audit confirms that `ruler = random` works with a `tribe`
+government using `tribal_oldest_male`, as well as the already used republic and
+monarchy contracts. The generator permits the sentinel only for those observed
+types and does not emit a ruler term for an anonymous profile.
+
+Nineteen named Northern polities with no defensible AD 1 officeholder now use
+that bounded contract: Cherusci, Chatti, Frisii, Batavi, Langobardi, Semnones,
+Hermunduri, Quadi, Gutones, Vandili, Rugii, Burgundiones, Angles, Saxons,
+Jutes, Suiones, Aestii, Venedi, and Finnic societies. The shared reform,
+elder-council privilege, law, and societal values are engine adapters rather
+than a reconstruction of a common tribal constitution. Arminius is retained
+as a sourced Roman auxiliary court figure; he is not made an AD 1 Cheruscan
+king. Sources: P8.7; P13; CAH-XI.
+
 ## Coinage standards
 
 Rome's socioeconomic law uses the installed gold-and-silver minting contract

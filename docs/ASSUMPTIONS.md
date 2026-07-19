@@ -597,3 +597,14 @@ century. This is an evidence-led omission, not an assertion that the kingdoms
 lacked rulers; a name is added only when a source connects an individual to AD
 1. Sources weighed: P8.6; `OCD-HIM`; `ABG-QAT` in
 `docs/world_1ad/SOURCES.md`. [contested]
+
+## 2026-07-19 - Anonymous northern tribal governments
+
+The source set establishes the Cherusci, Chatti, Frisii, Batavi, Langobardi,
+Semnones, Hermunduri, Quadi, Gutones, Vandili, Rugii, Burgundiones,
+Angles/Saxons/Jutes, Suiones, Aestii, Venedi, and Finnic societies without a
+reliable named incumbent on 1 January AD 1. Each therefore receives a bounded
+tribal profile with an engine-generated ruler, not an invented historical
+court. The shared elder-council and societal-value settings are gameplay
+adapters for non-dynastic political organization, not claims of a uniform
+constitution. Sources weighed: P8.7; P13; CAH-XI. [contested]

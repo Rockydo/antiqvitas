@@ -1,5 +1,23 @@
 # Progress
 
+## 2026-07-19 - M6 anonymous northern tribal governments
+
+- Replaced 19 generic M3 ruler stubs with source-qualified `tribe` profiles
+  for the unnamed Tier-1 Cheruscan, Germanic, Scandinavian, Baltic, Venedi,
+  and Finnic polities. `ruler = random` avoids inventing an AD 1 officeholder;
+  Arminius remains a Roman auxiliary court figure, not a fictitious Cheruscan
+  king.
+- Re-verified the local start-data contract: anonymous rulers work with
+  `tribe`/`tribal_oldest_male`, along with the previously used republican and
+  monarchic forms. The generator limits the sentinel to those observed types.
+- Regenerated M6/start data. `make validate` reports 49 government profiles;
+  the enabled-mod smoke reached the rendered menu with zero new error-log
+  lines.
+
+Next: continue the Tier-1/2 government surface with source-qualified courts or
+explicit anonymous profiles where the evidence establishes a polity but not an
+AD 1 incumbent.
+
 ## 2026-07-19 - M6 northern Indian courts
 
 - Replaced generic Indo-Scythian and Indo-Greek rulers with the plan's Azes

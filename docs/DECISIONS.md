@@ -9,14 +9,15 @@ two labelled reforms, paired privileges, and administrative laws. Their notes
 make clear that `nobles_estate` and `burghers_estate` are UI proxies, not
 claims of a shared feudal or municipal constitution.
 
-## 2026-07-19 - M6 supports source-qualified collective republics
+## 2026-07-19 - M6 supports source-qualified collective and anonymous profiles
 
-Local start data establishes that `republic`, `oligarchic_elective`, and
-`ruler = random` form a valid government contract. The M6 generator now permits
-that sentinel only for republic profiles and does not require a campaign ruler
-term for it. This preserves the audit requirement for every named ruler while
-allowing a historically attested collective polity to be mechanically distinct
-when no secure individual current officeholder exists.
+Local start data establishes `ruler = random` for `republic`, `tribe`, and
+`monarchy` profiles; its 1337 examples use `tribal_oldest_male` for the tribal
+form. The M6 generator permits that sentinel only for those locally observed
+types and does not require a campaign ruler term for it. This preserves the
+audit requirement for every named ruler while allowing either an attested
+collective polity or a source-qualified polity with no identifiable AD 1
+incumbent to retain a historically bounded government profile.
 
 ## 2026-07-19 - Roman civic-cult practice uses the installed religious-law category
 
