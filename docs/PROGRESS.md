@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 — M3 start-manager purge
+
+- Generated all 25 exact-name start-manager overrides using the locally
+  verified manager roots and no-BOM encoding. The validator now fails if a game
+  patch changes the installed inventory.
+- Real-game smoke accepted the full mirror with zero new error-log lines,
+  eliminating the retained vanilla 1337 state (including the M2-blocking ruler
+  histories) without touching the game installation.
+
+Next: activate the generated AD 1 calendar against this clean base, then fill
+the country/ownership manager from the verified capital data.
+
 ## 2026-07-19 — M3 capital mapping pipeline
 
 - Added a checked candidate report derived from the installed base-English
