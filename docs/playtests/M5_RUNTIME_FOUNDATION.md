@@ -1,7 +1,7 @@
 # M5 Runtime Foundation Report
 
-Run date: 2026-07-19  
-Game: EU5 1.3.1.1 (Pavia), build 24187685  
+Run date: 2026-07-19
+Game: EU5 1.3.1.1 (Pavia), build 24187685
 Mode: enabled ANTIQVITAS playset, debug-mode autonomous driver
 
 ## Evidence
