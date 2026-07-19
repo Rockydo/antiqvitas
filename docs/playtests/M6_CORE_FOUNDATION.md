@@ -6,9 +6,9 @@ Mod mode: enabled `ANTIQVITAS` playset via relocated user directory
 
 ## Implemented, checked surface
 
-- `tools/m6_power.py --check` reports 17 dynasties, 28 characters, 17
-  government profiles, 10 privileges, and 9 laws from source-labelled M6 CSV
-  ledgers.
+- `tools/m6_power.py --check` reports 31 dynasties, 46 characters, 107
+  government profiles, 20 privileges, 23 laws, 28 ruler terms, and 15
+  regnal-history rows from source-labelled M6 CSV ledgers.
 - Generated Rome uses `antq_principate`, Augustus, Livia, and Gaius Caesar as
   heir. Tiberius is present but neither adopted nor heir.
 - Generated Western Han uses `antq_han_imperial_bureaucracy`, Emperor Ping,

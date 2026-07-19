@@ -703,3 +703,13 @@ Dayuan, Sogdian city-states, and Khwarazm use anonymous regional kingship;
 this identifies an attested political form without asserting a unitary court
 for every Sogdian city. Sources weighed: P8.7-P8.8; P13; CAH-XI; CHG; PLE.
 [contested]
+
+## 2026-07-19 - Wang Shun is a bounded Han court record
+
+The Chinese Text Project's Wang Shun data record points to *Han Shu* and names
+him a Wang-clan official appointed when Emperor Ping acceded, but its English
+biography is automatically generated. The project consequently includes him
+only as a contested AD 1 court figure: it does not script a birth or death
+date, an ongoing command, abilities, a formal office mechanic, or a regency
+role. Sources weighed: P8.3; `CTP-WSH` in `docs/world_1ad/SOURCES.md`.
+[contested]

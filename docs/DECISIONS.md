@@ -674,3 +674,12 @@ those fields blank rather than inserting a plausible-looking value just to
 change the UI. This is a source-integrity choice; the later prosopography pass
 may only replace it with an evidence-qualified date or a locally verified
 display contract.
+
+## 2026-07-19 - Han court dynasties use natal-clan identity
+
+The engine's dynasty field is a character-family label, not the dynasty of the
+state the character serves. Grand Empress Dowager Wang and Wang Mang therefore
+use a Wang-clan label rather than the Han imperial House of Liu. The label makes
+the documented consort-kin distinction visible while neither inventing parent
+links nor attempting a complete Wang genealogy. Wang Shun uses the same narrow
+label as a court figure only; no government field depends on it.
