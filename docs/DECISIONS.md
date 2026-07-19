@@ -9,6 +9,14 @@ validator rejects tag collisions and any asserted-but-invalid map key; this
 keeps scholarly uncertainty visible while allowing the world-mapping pipeline
 to proceed region by region.
 
+## 2026-07-19 — Collision-free engine tags
+
+The installed country database already defines 67 of the roster's natural
+three-letter codes. `docs/world_1ad/tag_map.json` preserves a natural code as
+the design identifier where possible and assigns a deterministic `X..` engine
+tag only for a collision. This avoids unverified duplicate-key precedence while
+keeping historical sources and later event writing readable through the map.
+
 ## 2026-07-19 — Five campaign ages with a compatibility sentinel
 
 The campaign has five real ages: Principate, High Empires, Crisis, Dominate,
