@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 - Xian (Wulei) is a bounded Xiongnu court record
+
+The *Tongdian* preserves an early Tianfeng-era notice that names Wulei Ruodi
+Chanyu Xian as Wuzhuliu Chanyu's younger brother. The post-boundary source
+date secures Xian's survival across AD 1, but does not identify a campaign-start
+title, office, exact biography date, residence, or a complete Luandi genealogy.
+He is therefore a living court character only, with no chanyu or heir mechanic.
+Sources weighed: P8.3; `CTP-WUL` in `docs/world_1ad/SOURCES.md`. [secure for
+the living court record; no claim for the omitted mechanics]
+
 ## 2026-07-19 - Mahadathika Mahanaga is a bounded Anuradhapura court record
 
 Siddham's paired-inscription record identifies Mahadathika Mahanaga as the
