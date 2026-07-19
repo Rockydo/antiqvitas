@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-19 - M6 Nabataean Huldu consort
+
+- Added Huldu as Aretas IV's source-attested current consort. The British
+  Museum names her as his first wife through the opening twenty-two years of
+  his reign and records joint coins in AD 1-2.
+- The engine consort field records the marriage only: it does not supply an
+  office, constitutional role, biography date, natal genealogy, or succession.
+  The evidence limits are recorded in [the Nabataean court note](m6/NABATAEAN_COURT_AD1.md).
+
+Next: regenerate, validate, smoke-test, then continue direct-evidence
+Tier-1/2 roster breadth while preserving the separate Han runtime-regency
+blocker.
+
 ## 2026-07-19 - M6 Han maternal-family and Wang Yu slice
 
 - Added Wei Ji, Wei Bao, Wei Xuan, Wang Yu, Wu Zhang, and Lu Kuan from the
