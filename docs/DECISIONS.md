@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-19 - M6 distinguishes advanced chiefdoms and settled town clusters
+
+Plan P8.5 explicitly differentiates emerging Aksum from Djenné-Djenno's
+settled town cluster. M6 adds an `Advanced Chiefdom` reform on the installed
+`tribe` type and a `Settled Town Cluster` reform on the installed `republic`
+type, each with a deliberately small labelled estate/law adapter. Both use a
+random ruler rather than manufacturing an individual or constitutional detail.
+They are bounded representations of political scale and settlement form, not
+claims that Aksum or Djenné-Djenno used later European-style institutions.
+
 ## 2026-07-19 - M6 uses a bounded Regional Kingship adapter
 
 The installed `monarchy` surface is the narrowest valid contract for an

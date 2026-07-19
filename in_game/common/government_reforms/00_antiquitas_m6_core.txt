@@ -141,6 +141,26 @@ antq_regional_kingship = {
 	years = 2
 }
 
+antq_advanced_chiefdom = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.05
+		country_cabinet_efficiency = 0.025
+	}
+	years = 2
+}
+
+antq_settled_town_cluster = {
+	major = yes
+	government = republic
+	country_modifier = {
+		global_burghers_estate_power = 0.05
+		country_cabinet_efficiency = 0.025
+	}
+	years = 2
+}
+
 antq_tribal_kingdom = {
 	major = yes
 	government = tribe

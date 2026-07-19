@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-19 - M6 India and Africa anonymous profiles
+
+- Added anonymous Regional Kingship profiles for Satavahana, Kalinga, Chera,
+  Chola, Pandya, and Garamantes. This preserves the plan's interregnum,
+  Sangam-era, and Fezzan state contexts without inventing current rulers.
+- Added an Advanced Chiefdom adapter for emerging Aksum, tribal SoP profiles
+  for Blemmyes and Beja, and a distinct Settled Town Cluster adapter for
+  Djenné-Djenno rather than mislabelling it a monarchy or tribe.
+- Regenerated M6/start data. `make validate` reports 94 government profiles,
+  20 privileges, and 23 laws; the enabled-mod smoke reached the rendered menu
+  with zero new error-log lines.
+
+Next: complete the Danubian/Pontic and Central Asian Tier-1/2 profile surface,
+then assess the named-roster and mechanic gaps still needed for M6.
+
 ## 2026-07-19 - M6 Iranian Caucasian and South Arabian profiles
 
 - Added anonymous Parthian-facing profiles for Elymais, Adiabene, Gordyene,
