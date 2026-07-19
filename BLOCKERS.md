@@ -1,5 +1,32 @@
 # Blockers
 
+## 2026-07-19 — M4 full culture remap lacks a redistributable historical dataset
+
+Status: **deferred; M4 remains untagged.**
+
+The plan requires a 350–500-culture, location-level AD 1 atlas. The current
+69-culture M4 foundation, 61 reviewed dynamic capital names, and 680-row active
+template audit are green, but they are not a defensible substitute for the
+regional historical data required to split every template culture.
+
+Tried:
+
+1. Parsed every installed template used by the 13,552 controlled locations.
+   The 680 active labels repeatedly span incompatible ancient profiles (for
+   example `greek_culture` occurs under Latin, Greek, and Aramaic profiles), so
+   an automatic vanilla-key translation would manufacture historical claims.
+2. Audited the available source pipeline. The cached Pleiades release supplies
+   ancient places, names, and coordinates, not a worldwide ethnic/cultural map.
+   CHGIS supplies a valuable China-only historical GIS, but its V4 terms forbid
+   redistribution, so its layers cannot be copied into the mod's committed data.
+
+Recovery: acquire or author a source-labelled, redistributable regional culture
+dataset (beginning with a licensed Han commandery layer and reviewed regional
+atlases), then add mappings in geographic batches through the existing audit.
+The tree is green (`make validate` and the last game-visible smoke are clean);
+move to M5's independent economy scaffolding and revisit this task when that
+evidence exists.
+
 ## 2026-07-19 - M3 observer runtime reaches vanilla systems not yet owned
 
 Status: **deferred to M5/M6/M9; M3 remains untagged.**
