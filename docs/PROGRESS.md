@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-19 — M5 anchored ancient production
+
+- Added a higher-priority source-anchor layer over the regional goods rules.
+  It gives the plan's named sites their intended goods where the installed map
+  was wrong: Huelva/Rio Tinto silver, Cornwall tin, Sidon purple-dye proxy,
+  Muza/Adulis incense proxies, Chang'an and Chengdu silk, and Muziris pepper.
+- The RGO report now identifies every change as either a regional rule or an
+  explicit anchor. It validates anchor uniqueness, installed map keys, AD 1
+  control, good keys, sources, and confidence labels before rendering.
+- `make validate` and a real `make smoke` are green with zero new error lines.
+
+Next: source and generate roads and development, then expand the era-specific
+goods and building catalogue before trade-flow observer verification.
+
 ## 2026-07-19 — M5 urban-market foundation
 
 - Generated a 36-row city/town ledger keyed one-to-one to the active ancient
