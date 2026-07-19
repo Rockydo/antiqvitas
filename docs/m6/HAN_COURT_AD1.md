@@ -72,3 +72,19 @@ service. Huan Tan's academic study identifies him as a scholar-official who
 maintained a court position across four reigns (`UM-HUAN`). Its summary does
 not resolve his exact January AD 1 portfolio, so his Han context is explicitly
 contested and likewise carries no office or later career script.
+
+## First Yuan Shi-year royal and ritual records
+
+The *Han Shu* annal directly names Kai Ming and Chengdu when they were
+enfeoffed as kings, and Gongsun Xiangru and Kong Jun when they were enfeoffed
+to maintain Zhou and Confucian rites. The same first-year material names Wang
+An and Wang Lin among Anhan Gong Wang Mang's sons made marquises, and Grand
+Honglu Zuo Xian among officials recognized in the accession settlement
+(`CTP-PING2` in the source ledger).
+
+These are deliberately contested AD 1 context records. A first-year decree
+does not establish a 1 January office, physical residence, personal ability,
+engine family graph, ongoing title, or later career. Kai Ming and Chengdu use
+separate court-line labels rather than an asserted House-of-Liu genealogy;
+Wang An and Wang Lin use the existing narrow Wang label without engine parent
+links. None changes the minority-regency runtime contract in `BLOCKERS.md`.
