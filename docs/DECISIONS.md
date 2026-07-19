@@ -80,6 +80,16 @@ Osroene now uses Urfa and Elymais Shush after Pleiades coordinate review;
 Khwarazm is intentionally reset to `TBD`. Name equality alone is therefore no
 longer considered a capital verification method.
 
+## 2026-07-19 — M3 subject-contract adapter
+
+The first 20 sourced AD 1 dependencies are generated into the exact
+`12_diplomacy.txt` start-manager mirror. They use the installed `vassal` and
+`tributary` types because those keys and `dependency` syntax are locally
+verified and smoke-clean. This is deliberately an M3 political-map adapter:
+M9 replaces it with the plan's own client-kingdom, satrapy, tributary, and
+foederati contracts rather than treating medieval UI labels as historical
+descriptions.
+
 ## 2026-07-19 — Five campaign ages with a compatibility sentinel
 
 The campaign has five real ages: Principate, High Empires, Crisis, Dominate,
