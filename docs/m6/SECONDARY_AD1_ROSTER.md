@@ -21,6 +21,22 @@ those ledgers.
 chronology cross-check identifies Yuri as the second Goguryeo king, reigning
 from 19 BCE to AD 18: [Encyclopedia of Korean Culture](https://encykorea.aks.ac.kr/Article/E0041388).
 
+## Anuradhapura
+
+Bhatikabhaya Abhaya is added as the current Anuradhapura ruler at the AD 1
+campaign boundary. The Siddham inscription record identifies him with the
+king who granted a canal and places his conventional reign across the boundary;
+a scholarly study of the island's irrigation inscriptions likewise records
+canal works during his reign. The exact endpoints differ among chronologies,
+so the ledger marks the historical range contested and scripts neither an
+accession day nor a successor.
+
+The new Anuradhapura Kingship reform, Monastic Patronage privilege, and Royal
+Canal Endowments law are deliberately bounded adapters. The `clergy_estate`
+is a technical proxy for Buddhist monastic institutions, and the law represents
+attested royal endowment rather than a reconstructed Lankan legal code. Sources:
+P8.4; CAH-XI; `SRI-BHAT` in the [source ledger](../world_1ad/SOURCES.md).
+
 ## Intentional limits
 
 The dynasty labels marked `contested` are engine continuity labels where the

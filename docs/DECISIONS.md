@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-19 - Anuradhapura uses bounded monastic and irrigation adapters
+
+The local registry verifies `clergy_estate`, crown-estate power, cabinet
+efficiency, and food-consumption modifiers, but supplies no ancient Lankan
+institutional category. M6 therefore uses a narrowly labelled monarchy reform,
+a monastic-patronage privilege, and a canal-endowments law. These make a
+source-attested court pattern visible while stating in the generated data that
+they do not reconstruct Buddhist fiscal jurisdiction, a water-law code, or a
+complete Anuradhapura constitution.
+
 ## 2026-07-19 - Legion political power uses the privilege/disaster fallback
 
 The local `common/estates/00_default.txt` is a global estate-type registry.

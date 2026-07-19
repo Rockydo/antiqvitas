@@ -83,6 +83,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add source-qualified AD 1 coinage standards for Augustan Rome and Western Han through verified socioeconomic-law contracts.
 - [x] Make the Han Mandate of Heaven explicit through a verified legitimacy adapter while deferring its dated collapse cycle.
 - [x] Verify Legion-estate feasibility and retain the plan's privilege-plus-M10-disaster fallback where the engine lacks a safe country-specific estate surface.
+- [x] Add Bhatikabhaya Abhaya's Anuradhapura court with explicit source-qualified monastic and canal-patronage adapters.
 - [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories.
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 

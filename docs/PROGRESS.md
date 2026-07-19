@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-19 - M6 Anuradhapura court
+
+- Replaced Anuradhapura's random ruler with Bhatikabhaya Abhaya, a
+  source-qualified AD 1 court anchor. The disputed conventional reign endpoints
+  remain ledger metadata; no unsupported accession day or successor is scripted.
+- Added bounded Anuradhapura Kingship, Monastic Patronage, and Royal Canal
+  Endowments contracts using locally verified government, estate, and law
+  surfaces. The historical and technical adapters are explicitly documented.
+- Regenerated M6/start data. `make validate` reports 23 dynasties, 35
+  characters, 23 government profiles, 23 ruler terms, 14 privileges, and 15
+  laws; the enabled-mod smoke reached the rendered menu with zero new error-log
+  lines.
+
+Next: continue the remaining source-qualified Tier-1/2 courts and political
+mechanics; Anuradhapura's later succession and broader water system remain
+future history/economy work.
+
 ## 2026-07-19 - M6 Legion-estate feasibility result
 
 - Inspected the local estate registry, setup surface, effects, UI, and related

@@ -104,6 +104,16 @@ a deliberately conservative starting-state support value, not an assertion
 that the Mandate was a generic European legitimacy system. Its historically
 contingent loss in the Wang Mang, flood, and civil-war arc remains M10 work.
 
+## Anuradhapura court adapter
+
+Anuradhapura receives Bhatikabhaya Abhaya as its source-qualified current AD 1
+ruler, with an explicitly contested conventional reign range rather than an
+invented exact accession. Its new monarchy reform applies only verified crown
+power and cabinet-efficiency contracts. The associated monastic-patronage
+privilege and canal-endowments law make the documented court, Buddhist
+institutions, and irrigation patronage legible without treating either estate
+or law labels as a reconstructed ancient constitution.
+
 ## Secondary AD 1 roster
 
 The next slice adds Maroboduus, Arminius, Juba II, Cleopatra Selene II, Aretas

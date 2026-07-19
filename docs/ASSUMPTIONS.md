@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-19 - Bhatikabhaya Abhaya is an AD 1 court anchor, not a fixed reign chronology
+
+Inscription-focused sources securely place Bhatikabhaya Abhaya in office across
+the AD 1 boundary and record royal canal patronage, but conventional regnal
+endpoints vary among source traditions. The ledger therefore gives him no
+biographical or accession-day dates and starts his engine ruler term only at
+the campaign boundary. The Anuradhapura royal-house label is a continuity
+handle, not a claim to a reconstructed formal house name or genealogy.
+Sources weighed: P8.4; CAH-XI; the [Siddham inscription record](https://siddham.network/tag/bhatika-abhaya/); and Abeywardana et al.'s [irrigation study](https://www.researchgate.net/publication/334206109_Evolution_of_the_dry_zone_water_harvesting_and_management_systems_in_Sri_Lanka_during_the_Anuradhapura_Kingdom_a_study_based_on_ancient_chronicles_and_lithic_inscriptions).
+[secure for the AD 1 overlap and canal patronage; contested for exact regnal
+endpoints and the engine dynasty label]
+
 ## 2026-07-19 - The Han Mandate is a legitimacy adapter, not a full cycle model
 
 The Western Han reform receives a small, locally verified legitimacy modifier

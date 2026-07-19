@@ -34,6 +34,8 @@ a row reaches `implemented` status.
 - `BM-AUG-COIN`: British Museum records for an Augustan [gold aureus](https://www.britishmuseum.org/collection/object/C_1867-0101-596) and [silver denarius](https://www.britishmuseum.org/collection/object/C_1920-1102-2), used only to verify the gold-and-silver monetary surface at the AD 1 start.
 - `BM-WUZHU`: British Museum [Han Wuzhu copper-alloy coin](https://www.britishmuseum.org/collection/object/C_1978-0919-113), cross-checked with its [Wuzhu mould record](https://www.britishmuseum.org/collection/object/C_OR-12070), used to verify the long-running cast-copper Han coinage surface.
 
+- `SRI-BHAT`: The [Siddham Asian Inscription Database's Bhātika Abhaya entry](https://siddham.network/tag/bhatika-abhaya/) and Abeywardana et al., ["Evolution of the dry zone water harvesting and management systems in Sri Lanka during the Anuradhapura Kingdom"](https://www.researchgate.net/publication/334206109_Evolution_of_the_dry_zone_water_harvesting_and_management_systems_in_Sri_Lanka_during_the_Anuradhapura_Kingdom_a_study_based_on_ancient_chronicles_and_lithic_inscriptions), used for Bhatikabhaya Abhaya's AD 1 overlap and attested canal endowments; exact regnal endpoints remain contested.
+
 Rows marked `contested` have a corresponding entry in `docs/ASSUMPTIONS.md`.
 `TBD` map capitals are historical roster records awaiting a verified mapping to
 the installed EU5 location key; they are not silently guessed.
