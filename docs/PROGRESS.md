@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 - M6 Indo-Greek Strato III court record
+
+- Added Strato III as a contested late Indo-Greek court figure from the
+  University of Queensland's coin record identifying him as Strato II's son
+  and eventual co-ruler across a broad boundary-spanning coin horizon.
+- He receives no ruler/heir mechanic, office, accession, biography date, or
+  further genealogy; the undated joint-issue problem is recorded in
+  `ASSUMPTIONS.md`.
+
+Next: regenerate, validate, smoke-test, then continue source-led Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Odrysian Cotys court record
 
 - Added Cotys of Thrace from Tacitus's direct account of the Augustan

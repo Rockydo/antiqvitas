@@ -107,6 +107,13 @@ claims of an exact constitution or medieval social order. Sources: P8.4;
 CAH-XI; `IRAN-AZES`; `IRAN-IGR` in the
 [source ledger](../world_1ad/SOURCES.md).
 
+The University of Queensland's Indo-Greek drachm record identifies Strato III
+as Strato II's son and eventual co-ruler, and gives the object a broad 25 BCE-
+AD 10 date. That range reaches the campaign boundary but does not date the
+joint issue itself. Strato III is consequently a contested court figure only:
+he receives no engine ruler or heir status, office, accession date, or further
+genealogy. Source: `UQ-STR` in the [source ledger](../world_1ad/SOURCES.md).
+
 ## Intentional limits
 
 The dynasty labels marked `contested` are engine continuity labels where the
