@@ -1,5 +1,38 @@
 # Blockers
 
+## 2026-07-19 - M6 Han minority-regency start falls back to a generated ruler
+
+Status: **deferred; M6 continues with independent power work and remains
+untagged.**
+
+The AD 1 country inspector consistently identifies Western Han (`XAR`) but
+shows the generated `Han Zhang` as regent instead of Emperor Ping and Wang
+Mang. The country, its Chang'an capital, 57.658M population, Han culture,
+Chinese State Cult, and the M6 reform/law counts all load; no corresponding
+new `error.log` line exists. This is therefore a silent runtime setup-contract
+failure, not a parser or localization error.
+
+Tried:
+
+1. Rendered Ping as `ruler` together with Wang Mang as `active_regent` and a
+   campaign-valid ruler term. The driver selected XAR at `08:00, 1 January, 1`
+   and the inspector showed `Han Zhang`.
+2. Matched the local vanilla minority-regency shape: no simultaneous `ruler`,
+   Ping in `heir`, no current Ping term, and native order of regency, regent,
+   dates, then heir. The same fresh live probe again showed `Han Zhang`.
+
+Both attempts passed `make validate` and a mod-enabled `make smoke` with zero
+new error-log lines. Evidence is in
+`docs/screens/20260719_194101/M6_runtime_retry/han_probe.png` and
+`docs/screens/20260719_194918/M6_runtime_retry/han_order_second_probe.png`.
+
+Recovery: retain the source-led Han roster and the locally evidenced native
+script shape, but do not claim that it yields the intended live regency or
+close M6. A later isolated start-manager fixture must identify the hidden
+minor/ruler linkage before this profile is accepted. Continue the independent
+M6 government, estate, law, roster, and regnal-history work; Rome and Parthia
+can still receive their own driver probes.
+
 ## 2026-07-19 - M6 Rajuvula cannot be placed at the AD 1 campaign boundary
 
 Status: **deferred; M6 continues with other court and mechanics work.**

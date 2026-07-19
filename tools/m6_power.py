@@ -242,7 +242,7 @@ def load_power_data() -> PowerData:
     governments: dict[str, dict[str, str]] = {}
     for row in governments_rows:
         required = (
-            "design_tag", "government_type", "heir_selection", "ruler", "reform", "privileges", "laws",
+            "design_tag", "government_type", "heir_selection", "reform", "privileges", "laws",
             "societal_values", "source", "confidence", "note",
         )
         if any(not row[field] for field in required):
@@ -255,16 +255,28 @@ def load_power_data() -> PowerData:
             failures.append(f"government references unknown design tag {row['design_tag']}")
         if row["government_type"] not in government_types:
             failures.append(f"government {row['design_tag']} uses unknown type {row['government_type']}")
+        regency = bool(row["regency"])
+        if not row["ruler"] and not (regency and row["heir"]):
+            failures.append(
+                f"government {row['design_tag']} needs a ruler, or a regency heir"
+            )
+        if regency and row["ruler"]:
+            failures.append(
+                f"government {row['design_tag']} must use heir rather than ruler during a regency"
+            )
         random_ruler = row["ruler"] == "random"
         if random_ruler and row["government_type"] not in {"monarchy", "republic", "tribe"}:
             failures.append(f"government {row['design_tag']} uses random ruler with an unverified type")
         for field in ("ruler", "heir", "consort", "active_regent"):
             if row[field] and row[field] not in character_keys and not (field == "ruler" and random_ruler):
                 failures.append(f"government {row['design_tag']} references unknown {field} {row[field]}")
-        if row["ruler"] in character_keys:
-            ruler = next(character for character in characters if character["key"] == row["ruler"])
+        government_head = row["heir"] if regency else row["ruler"]
+        if government_head in character_keys:
+            ruler = next(character for character in characters if character["key"] == government_head)
             if ruler["design_tag"] != row["design_tag"]:
-                failures.append(f"government {row['design_tag']} ruler belongs to {ruler['design_tag']}")
+                failures.append(
+                    f"government {row['design_tag']} active head belongs to {ruler['design_tag']}"
+                )
         terms = tuple(row[field] for field in ("regency", "start_regency_date", "end_regency_date"))
         if any(terms) and not all(terms):
             failures.append(f"government {row['design_tag']} has an incomplete regency")
@@ -320,7 +332,11 @@ def load_power_data() -> PowerData:
             failures.append(f"ruler term references unknown government profile {row['design_tag']}")
         if row["character"] not in character_keys:
             failures.append(f"ruler term references unknown character {row['character']}")
-        elif row["design_tag"] in governments and row["character"] != governments[row["design_tag"]]["ruler"]:
+        elif row["design_tag"] in governments and row["character"] != (
+            governments[row["design_tag"]]["heir"]
+            if governments[row["design_tag"]]["regency"]
+            else governments[row["design_tag"]]["ruler"]
+        ):
             failures.append(f"ruler term for {row['design_tag']} must use the active government ruler")
         pair = (row["design_tag"], row["character"])
         if pair in term_pairs:
@@ -342,7 +358,11 @@ def load_power_data() -> PowerData:
         if row["confidence"] not in {"secure", "contested"}:
             failures.append(f"ruler term for {row['design_tag']} has invalid confidence {row['confidence']}")
     for design_tag, government in governments.items():
-        if government["ruler"] != "random" and design_tag not in term_tags:
+        if (
+            government["ruler"] != "random"
+            and not government["regency"]
+            and design_tag not in term_tags
+        ):
             failures.append(f"government {design_tag} has no campaign-valid ruler term")
 
     history_by_tag: dict[str, list[int]] = {}
@@ -431,23 +451,44 @@ def government_block(row: dict[str, str], ruler_terms: tuple[dict[str, str], ...
         "\t\t\tgovernment = {",
         f"\t\t\t\ttype = {row['government_type']}",
         f"\t\t\t\their_selection = {row['heir_selection']}",
-        f"\t\t\t\truler = {row['ruler']}",
     ]
-    for field in ("heir", "consort", "active_regent", "regency", "start_regency_date", "end_regency_date"):
+    if row["ruler"]:
+        lines.append(f"\t\t\t\truler = {row['ruler']}")
+
+    def append_field(field: str) -> None:
         if row[field]:
-            lines.append(f"\t\t\t\t{field} = {row[field]}")
-    for term in ruler_terms:
-        if term["design_tag"] != row["design_tag"]:
-            continue
-        values = [
-            f"character = {term['character']}",
-            f"start_date = {AntqDate.parse(term['engine_start_date']).engine()}",
-        ]
-        if term["engine_end_date"]:
-            values.append(f"end_date = {AntqDate.parse(term['engine_end_date']).engine()}")
-        if term["regnal_number"]:
-            values.append(f"regnal_number = {term['regnal_number']}")
-        lines.append(f"\t\t\t\truler_term = {{ {' '.join(values)} }}")
+            value = (
+                AntqDate.parse(row[field]).engine()
+                if field in {"start_regency_date", "end_regency_date"}
+                else row[field]
+            )
+            lines.append(f"\t\t\t\t{field} = {value}")
+
+    def append_terms() -> None:
+        for term in ruler_terms:
+            if term["design_tag"] != row["design_tag"]:
+                continue
+            values = [
+                f"character = {term['character']}",
+                f"start_date = {AntqDate.parse(term['engine_start_date']).engine()}",
+            ]
+            if term["engine_end_date"]:
+                values.append(f"end_date = {AntqDate.parse(term['engine_end_date']).engine()}")
+            if term["regnal_number"]:
+                values.append(f"regnal_number = {term['regnal_number']}")
+            lines.append(f"\t\t\t\truler_term = {{ {' '.join(values)} }}")
+
+    if row["regency"]:
+        # Match the installed native sequence: historical terms, regency,
+        # regent, dates, then the nominal heir. Do not add a concurrent ruler
+        # field; runtime acceptance is separately recorded in BLOCKERS.md.
+        append_terms()
+        for field in ("regency", "active_regent", "start_regency_date", "end_regency_date", "heir", "consort"):
+            append_field(field)
+    else:
+        for field in ("heir", "consort", "active_regent", "regency", "start_regency_date", "end_regency_date"):
+            append_field(field)
+        append_terms()
     lines.extend((
         "\t\t\t\treforms = {",
         f"\t\t\t\t\t{row['reform']}",
