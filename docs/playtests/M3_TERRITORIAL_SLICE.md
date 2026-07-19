@@ -1,6 +1,6 @@
 # M3 Territorial Political-Map Slice
 
-Date: 2026-07-19  
+Date: 2026-07-19
 Scope: sourced imperial-core ownership pass; not the M3 milestone gate
 
 `ownership_areas.csv` names reviewed EU5 geography-hierarchy keys and records
