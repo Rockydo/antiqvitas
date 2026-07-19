@@ -1,5 +1,35 @@
 # Blockers
 
+## 2026-07-19 - M3 observer runtime reaches vanilla systems not yet owned
+
+Status: **deferred to M5/M6/M9; M3 remains untagged.**
+
+The autonomous driver loaded the full AD 1 political map, entered observer
+mode, started an actual observer session, and advanced it a month. Its runtime
+log has new lines for unset `market`, `international_organization`, and
+`character` links plus evaluations in vanilla `common_building_types`, HRE
+country interactions, formables, steppe-horde reforms, common laws, and an
+Athens DHE event. These are consequences of M3 deliberately not yet replacing
+the plan-owned M5 economy, M6 government/law/character, and M9 diplomacy/IO
+systems, not a menu-load failure.
+
+Tried:
+
+1. Exact-name blank overrides for the vanilla generic-action, building, and
+   HRE surfaces. The menu then produced required-action/building failures
+   (`mason`, missing AI-list actions, and an HRE-objective parse failure), so
+   this was removed rather than suppressing data the engine still requires.
+2. Narrow inert language/market action definitions and an empty HRE-objective
+   override. The menu smoke returned green, but an actual observer session
+   still emitted the runtime system errors above. The overlays were removed;
+   `make full` is again green at the required menu-smoke boundary.
+
+Recovery: M5 must seed valid ancient markets/buildings/town setups and replace
+the vanilla market automation; M6 must replace the government, law, character,
+and formable dependencies; M9 must replace HRE interactions/objectives and
+international organizations. Re-run the M3 observer capture and tag only after
+that shared runtime surface produces zero new normalized lines.
+
 ## 2026-07-19 — M2 calendar waits on M3's full setup mirror
 
 Status: **resolved 2026-07-19.** M3 now mirrors all 25 start-manager files;

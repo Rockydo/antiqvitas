@@ -286,3 +286,24 @@ year-one new-game/save-reload verification.
   setup mirror is the correct fix; evidence and recovery are in BLOCKERS.
 
 Next: begin M3's AD 1 setup mirror, which unblocks M2's clean runtime gate.
+
+## 2026-07-19 - M3 global territory coverage and runtime boundary
+
+- Completed the global political surface: 157 sourced AD 1 polities own or
+  control 13,552 locations. The coverage audit accounts for all 13,576
+  installed ownable locations as 13,535 assigned plus 41 deliberately empty
+  post-period/remote locations; the 25 sourced dependencies remain intact.
+- The residual-coverage ledger only fills still-unclaimed ownable locations and
+  runs after named territorial rows, preserving the resolver's no-overlap rule.
+  All broad SoP frames remain explicitly contested historical proxies.
+- A real AD 1 selector showed the world political map at `08:00, 1 January, 1`;
+  the driver enabled observer mode, started an actual observer game, and
+  advanced it through its first month. The captures are retained in
+  `docs/screens/M3_global_coverage/`.
+- `make full` is green at the menu. The observer log exposed calls from
+  untouched vanilla market/building, government/law, formable, and HRE systems;
+  the failed milestone gate and bounded remediation attempts are recorded in
+  `BLOCKERS.md`. M3 remains untagged rather than accepting those new lines.
+
+Next: start M4's sourced people-and-faith data while the M3 runtime dependency
+waits for its owning M5/M6/M9 replacement work.

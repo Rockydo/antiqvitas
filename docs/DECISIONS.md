@@ -214,3 +214,18 @@ GlossMod/EU5-Modding-Mcp commit
 `90790df9478a61035a2099c115b21ba7f04c3763` only as an index. Because that dump
 is dated 2025-11-07, current-build behavior is accepted only when a key is also
 present in local 1.3.1.1 scripts and a real-game smoke test is green.
+
+## 2026-07-19 - Exhaustive ownership needs a residual ledger
+
+Named historical area and direct-location rows are resolved first. A separate,
+ordered `ownership_residual_areas.csv` then assigns only locations still
+unclaimed by those rows, and `intentional_empty_areas.csv` is the sole allowed
+exception. `territory_coverage.py` fails the build unless every locally
+ownable location is either assigned or in that explicit exception list. This
+keeps an exhaustive M3 political surface reproducible without allowing a broad
+SoP fallback to overwrite a reviewed state/client claim.
+
+The 41 exceptions are the plan-required empty Iceland, Madagascar, and
+post-period eastern-Polynesian locations. The residual frames are technical
+geometry adapters for named societies of peoples; M4 replaces their temporary
+country-shaped representation with population-based societies.

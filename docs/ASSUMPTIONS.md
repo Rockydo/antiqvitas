@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-19 - Residual societies-of-peoples coverage
+
+The final M3 coverage ledger assigns otherwise-unclaimed inhabited land only to
+an explicitly named residual people/society family (for example Caucasian,
+Brittonic, Germanic, Siberian, Tibetan, Bedouin, Central/Gangetic Indian,
+Southeast Asian, Berber, Mesoamerican, Andean, Melanesian, and Micronesian
+societies). These are broad political/cultural frames, not claims of a unitary
+state or exact border in AD 1, and are all treated as `contested` until M4 can
+model their peoples at the population layer. Iceland, Madagascar, and eastern
+Polynesia remain unpopulated as required by P8.9/P8.10. Sources weighed:
+P8.1-P8.10; CAH-XI; regional archaeology syntheses. [contested]
+
 ## 2026-07-19 — American SoP regional coverage
 
 Plains/Coastal and Pacific Coast SoPs are separate from Hopewell, Basketmaker,

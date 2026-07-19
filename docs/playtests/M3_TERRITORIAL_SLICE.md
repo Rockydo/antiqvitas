@@ -1,32 +1,35 @@
-# M3 Territorial Political-Map Slice
+# M3 Global Territorial Political-Map Pass
 
 Date: 2026-07-19
-Scope: sourced imperial-core ownership pass; not the M3 milestone gate
 
-`ownership_areas.csv` names reviewed EU5 geography-hierarchy keys and records
-the relevant plan/scholarly source for each. `tools/ownership_map.py` expands
-them against the locally harvested hierarchy, filters broad areas to locations
-proven ownable in the installed setup, rejects overlaps, and writes the checked
-`ownership_resolved.csv`. Direct location rows remain explicit and reviewed.
+Scope: global M3 map evidence; milestone gate remains pending.
 
-The initial pass painted 4,153 locations under 56 roster polities: the Roman,
-Parthian, and Western Han cores are multi-location data; the smaller reviewed
-polities retain their conservative capital-control seeds. Subsequent
-Pleiades/anchor review now covers all 133 roster polities. The subsequent
-source-labelled Indian Ocean, Barbaricum, Han-world, African, and American
-passes resolve 8,442 locations across 138 roster polities and 25 dependencies.
-It deliberately does not claim that unassigned edge areas, SoP extents, or
-subject territories are finished. Those remain the M3 research backlog.
+The source-labelled area and direct-location ledgers resolve before the ordered
+residual SoP ledger. `tools/ownership_map.py` expands only the locally harvested
+EU5 hierarchy, filters area rows to the installed ownable surface, and rejects
+an overlap before rendering the exact manager. The residual ledger can claim
+only a location that no earlier row owns. `tools/territory_coverage.py` then
+requires every ownable location to be assigned or listed in the audited
+intentional-empty ledger.
 
-Validation: `make validate` passed; a real-game `make smoke` returned zero new
-error lines. The autonomous new-game selector reaches `08:00, 1 January, 1`
-and visibly shows the Roman and Parthian territorial surfaces. A later
-foreground-guarded driver checkpoint confirms a clean active-mod game menu.
-This run also
-exposed false modern-key textual matches: `edessa` was Macedonian Edessa,
-`susa` Italian Susa, and `khwar` a Rey-area location. Osroene was corrected to
-Urfa, Elymais to Shush, and Khwarazm was returned to `TBD` pending a genuine
-capital mapping.
+The active AD 1 setup contains 157 roster polities, 13,552 controlled
+locations, and 25 sourced dependencies. Of 13,576 installed ownable locations,
+13,535 are assigned and 41 are documented intentional empties: Iceland,
+Madagascar, and the plan-required post-period eastern-Polynesian locations.
+The broad residual society frames are explicitly contested historical proxies,
+not a claim that present map-area lines reproduce ancient borders.
 
-Curated evidence: `docs/screens/M3_territorial_slice/M3_territories_start_select_retry.png`
-and `docs/screens/M3_driver_guard/M3_driver_guard_menu.png`.
+`make full` is green for static validation and the real menu smoke. The driver
+loaded the AD 1 selector at `08:00, 1 January, 1`, visually confirming the
+Roman, Parthian, Germanic, steppe, and other worldwide surfaces; it then
+enabled observer mode, entered an actual observer game, and advanced a month
+without a crash. The observer log does add errors from still-active vanilla
+market/building, government/law, formable, and HRE systems. Per the
+zero-new-error rule, this is not accepted as the M3 milestone gate; the two
+bounded suppression attempts and M5/M6/M9 recovery ownership are recorded in
+`BLOCKERS.md`.
+
+Curated evidence:
+
+- `docs/screens/M3_global_coverage/M3_runtime_wait_retry.png` (AD 1 selector)
+- `docs/screens/M3_global_coverage/M3_runtime_observer_started.png` (active observer game)
