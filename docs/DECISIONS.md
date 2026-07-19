@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-19 - Roman civic-cult practice uses the installed religious-law category
+
+The installed religious laws and government reforms prove the `religious` law
+category and `tolerance_heathen` modifier are live engine contracts. M6 extends
+its ledger validator to that verified category and uses a Rome-specific law
+with a single small tolerance value. The label and data explicitly reject a
+modern-freedom reading; the later persecution/toleration ladder requires dated
+M10 events and is not claimed complete here.
+
 ## 2026-07-19 - Roman legal status reuses the installed slavery-law contract
 
 The local `slavery_laws` contract establishes `slavery_blocked` and the two

@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-19 - M6 Roman civic-cult baseline
+
+- Added a Roman religious law in the locally verified religious-law category.
+  It models plural civic-cult practice with a small technical tolerance value,
+  explicitly not modern religious freedom or a pre-scripted persecution system.
+- Regenerated M6/start data. `make validate` reports 23 dynasties, 35
+  characters, 23 government profiles, 23 ruler terms, 14 privileges, and 17
+  laws; enabled-mod smoke reached the rendered menu with zero new error-log
+  lines.
+
+Next: continue remaining source-qualified Tier-1/2 courts and political
+mechanics; the later religious-policy ladder remains M10 content.
+
 ## 2026-07-19 - M6 Roman legal-status baseline
 
 - Added an explicit Roman socioeconomic law using the installed legal-status

@@ -122,6 +122,14 @@ baseline for the historical legal order and does not quantify enslaved people,
 manumission, provincial variation, or social experience. Those population and
 history questions remain separate M4 and M10 work.
 
+## Roman civic-cult adapter
+
+Rome now uses the installed religious-law category and tolerance modifier for a
+bounded AD 1 civic-cult practice law. It represents the coexistence of Roman
+public rites with many local cults, not modern religious freedom or a denial
+of particular coercions, exclusions, and later Christian-persecution policies.
+The latter remain dated M10 history rather than being pre-scripted at start.
+
 ## Secondary AD 1 roster
 
 The next slice adds Maroboduus, Arminius, Juba II, Cleopatra Selene II, Aretas
