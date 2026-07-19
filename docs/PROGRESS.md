@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-19 - M6 Han maternal-family and Wang Yu slice
+
+- Added Wei Ji, Wei Bao, Wei Xuan, Wang Yu, Wu Zhang, and Lu Kuan from the
+  *Han Shu* Wang Mang biography. The Wei family remains at a documented
+  Zhongshan/Lunu engine proxy; the Wang Yu circle remains court context only.
+- No office, Chang'an residence, engine relationship, ability, life date, or
+  later punishment was inferred. Source limits are recorded in
+  [the Han court note](m6/HAN_COURT_AD1.md) and `ASSUMPTIONS.md`.
+
+Next: regenerate, validate, smoke-test, then continue direct-evidence
+Tier-1/2 roster breadth while preserving the separate Han runtime-regency
+blocker.
+
 ## 2026-07-19 - M6 Rajuvula start-date review deferred
 
 - Reviewed the plan's Rajuvula reference against detailed Oxford numismatic

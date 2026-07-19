@@ -43,3 +43,21 @@ biography date, regency role, family link, or mechanical privilege for this
 group. In particular, Wang Yun is not placed in the Wang consort-kin clan, Liu
 Bu'e is not folded into the imperial House of Liu, and Kong Yong is not made
 kin to Kong Guang.
+
+## Maternal family and Wang Yu circle
+
+The *Han Shu* Wang Mang biography directly names Emperor Ping's mother Wei Ji,
+her named brothers Wei Bao and Wei Xuan, and the order that all three remain in
+Zhongshan. The same account names Wang Yu as Wang Mang's son, with Wu Zhang as
+Yu's teacher and Lu Kuan as his relative by marriage, during the early Yuan Shi
+court conflict (`CTP-WY` in the source ledger). The local Zhongshan family
+anchor uses the installed Dingzhou location as a Lunu proxy (`CTP-ZHONG`); it is
+not a claim that the group entered Chang'an.
+
+The Wei group is therefore represented only as a bounded maternal family at the
+Zhongshan proxy. Wang Yu, Wu Zhang, and Lu Kuan are contested Han-context
+figures: their later actions establish survival across the campaign boundary,
+but do not justify an office, engine parent or marriage link, ability, exact
+date, residence, political role, or future punishment. The three personal
+labels are intentionally separate except for Wang Yu's direct placement in the
+already documented Wang clan.

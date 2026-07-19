@@ -786,3 +786,16 @@ only as contested Chang'an court records. No office, date, ability, regency,
 privilege, or family link is scripted; Wang Yun, Liu Bu'e, and Kong Yong remain
 separate from the similarly named Wang, Liu, and Kong labels. Sources weighed:
 P8.3; `CTP-PING1` in `docs/world_1ad/SOURCES.md`. [contested]
+
+## 2026-07-19 - Wei maternal family and Wang Yu circle remain bounded
+
+The *Han Shu* directly identifies Wei Ji as Emperor Ping's mother and Wei Bao
+and Wei Xuan as her named brothers, ordering all three to remain in Zhongshan.
+It separately names Wang Yu, Wang Mang's son, with Wu Zhang and Lu Kuan in an
+early Yuan Shi court conflict. The evidence establishes these people and the
+named relationships, but it does not license a Chang'an residence for the Wei
+family, a full Wei genealogy, an office, biography date, parent/marriage
+engine link, personal abilities, or a forecast of later punishment. The Wei
+home field therefore uses a documented Lunu/Dingzhou *engine proxy*, while all
+six records remain context-only. Sources weighed: P8.3; `CTP-WY`; `CTP-ZHONG`
+in `docs/world_1ad/SOURCES.md`. [contested]
