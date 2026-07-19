@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-19 - M6 living Augustan court
+
+- Added Publius Quinctilius Varus and Marcus Valerius Messalla Corvinus from
+  British Museum biographical records whose spans cross AD 1.
+- Their Roman tag is only start context: no current command, German frontier
+  posting, Teutoburg result, consulship, residence, ability, or genealogy is
+  asserted. The narrow evidence limits are recorded in the Roman court note.
+
+Next: regenerate, validate, smoke-test, then continue source-led Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Han scholarly court
 
 - Added Yang Xiong from the *Han Shu* record of his continuing court post

@@ -34,6 +34,20 @@ personal statistic, residence claim, or biography date. Their narrow court-line
 keys are generator identities, not a reconstructed Aemilian or Herennian
 genealogy. Dated consulship history remains an M10 responsibility.
 
+## Living Augustan figures
+
+British Museum biographies establish Publius Quinctilius Varus's active period
+from 8 BCE through AD 9 and Marcus Valerius Messalla Corvinus's 64 BCE-AD 8
+life span (`BM-VAR` and `BM-MES`). Both therefore join the Roman start-context
+roster as living Augustan figures. Varus's later Rhine-frontier command and
+Teutoburg defeat are deliberately not pre-scripted; Messalla's former
+consulship, patronage, and any current residence or office are likewise not
+turned into mechanics.
+
+Their separate court-line keys avoid inventing a Quinctilian or Valerian family
+tree. Neither receives an engine command, estate, ability, relationship,
+biography date, or dated career history.
+
 ## Claudian household figures
 
 The British Museum records Antonia the Younger's relationship to Augustus,
