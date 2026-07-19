@@ -664,6 +664,17 @@ rather than fabricated courts. Boudica, Cartimandua, Verica, and the
 Roman-conquest sequence remain dated M10 history rather than evidence for a
 start-date incumbent. Sources weighed: P8.7; P13; CAH-XI. [contested]
 
+## 2026-07-19 - Brittonic druidic authority is a bounded religious-estate proxy
+
+Classical-source evidence identifies druids as religious leaders in Iron Age
+Britain, but it does not supply a constitutional map or prove one common council
+for every polity. The M6 `clergy_estate` privilege is therefore restricted to
+the eight named pre-conquest Brittonic profiles and keeps the separate
+kin-based elder council. It deliberately excludes Caledonian and Irish SoP
+profiles, supplies no officeholder, and makes no claim about a pan-British
+institution. Sources weighed: P8.7; P13; CAH-XI; `BM-DRU` in
+`docs/world_1ad/SOURCES.md`. [contested]
+
 Tincomarus is the source-qualified Atrebatic exception: the Oxford Celtic Coin
 Index dates a coin naming him as Atrebatic authority to 20 BCE-AD 10, which
 covers the campaign boundary. The engine record adds neither a life date nor

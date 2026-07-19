@@ -1270,3 +1270,15 @@ Han runtime-regency blocker.
 
 Next: continue direct-evidence Tier-1/2 roster coverage while preserving the
 separate Han runtime-regency blocker.
+
+## 2026-07-19 - M6 Brittonic druidic-authority adapter
+
+- Added a separately visible `clergy_estate` privilege for source-qualified
+  druidic religious authority in the eight named pre-conquest Brittonic
+  profiles. Their existing kin-based elder council remains intact.
+- The adapter is deliberately bounded: it creates no common constitutional
+  council, named officeholder, Caledonian, or Irish inference. The evidence and
+  limits are recorded in [the Brittonic adapter note](m6/BRITTONIC_DRUIDIC_AD1.md).
+
+Next: continue source-led M6 roster and mechanics coverage while retaining the
+separate Han runtime-regency blocker.
