@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 - Rhascyporis is an AD 1 court survivor, not a co-ruler
+
+Tacitus places Rhascyporis (his Rhescuporis), Rhoemetalces I's brother, in the
+Augustan division of Thrace in AD 12. That later attestation securely entails
+his survival at the AD 1 boundary, but it does not establish his title,
+territory, residence, co-rule, office, date of accession, or a full Sapaean
+genealogy on that day. The record is therefore limited to living court context.
+Sources weighed: P8.1; `TAC-THR`; `MGL-THR` in `docs/world_1ad/SOURCES.md`. [secure
+survival; contested AD 1 status]
+
 ## 2026-07-19 - Augustan cultural and legal figures are Roman-world records, not officeholders
 
 Livy, Ovid, Strabo, Athenodorus Cananites, Verrius Flaccus, Gaius Asinius
