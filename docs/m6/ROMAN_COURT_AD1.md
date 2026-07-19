@@ -48,6 +48,18 @@ Their separate court-line keys avoid inventing a Quinctilian or Valerian family
 tree. Neither receives an engine command, estate, ability, relationship,
 biography date, or dated career history.
 
+## Later-attested Augustan contemporaries
+
+Tacitus directly attests Lucius Arruntius, Manius Lepidus, and Quintus Haterius
+as living in AD 14; he records Gnaeus Piso and Munatia Plancina through the AD
+20 proceedings, Cremutius Cordus and Asinius Agrippa through the later 20s, and
+Lucius Aelius Lamia in the later Tiberian era. Each later notice entails AD 1
+survival, so all eight are bounded Roman-world identities. The records do not
+assign a current office, command, literary or rhetorical role, marriage,
+residence, ability, precise biography date, genealogy, trial, or death outcome.
+Those careers remain M10 history. Source: `TAC-LATER-COURT` in the
+[source ledger](../world_1ad/SOURCES.md).
+
 ## Claudian household figures
 
 The British Museum records Antonia the Younger's relationship to Augustus,
