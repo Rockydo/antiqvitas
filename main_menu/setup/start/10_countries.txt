@@ -2021,7 +2021,16 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = antq_augustus
+				heir = antq_gaius_caesar
+				consort = antq_livia
+				reforms = {
+					antq_principate
+				}
+			}
 			capital = rome
 		}
 
@@ -2893,7 +2902,15 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = antq_phraates_v
+				consort = antq_musa
+				reforms = {
+					antq_parthian_king_of_kings
+				}
+			}
 			capital = baghdad
 		}
 
@@ -5161,8 +5178,19 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
-			capital = luoyang
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = antq_emperor_ping
+				active_regent = antq_wang_mang
+				regency = nobles_estate_regency
+				start_regency_date = 1.1.1
+				end_regency_date = 6.2.3
+				reforms = {
+					antq_han_imperial_bureaucracy
+				}
+			}
+			capital = jingzhao
 		}
 
 		XIO = { # Xiongnu Confederation; P8.3;CAH-XI

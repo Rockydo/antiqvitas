@@ -12,6 +12,12 @@ ROOT = Path(__file__).resolve().parents[1]
 START = (1, 1, 1)
 END = (476, 9, 4)
 AUC_OFFSET = 753
+# Character biographies can legitimately predate the playable calendar: the
+# AD 1 roster includes, for example, Augustus (born 63 BCE).  This deliberately
+# narrow range is *not* a second campaign calendar.  All dates that drive game
+# time continue to use AntqDate below.
+BIOGRAPHY_START_YEAR = -1000
+BIOGRAPHY_END_YEAR = END[0]
 M2_TIMELINE_KEYS = (
     "start",
     "age_principate",
@@ -83,6 +89,38 @@ class AntqDate:
     def engine(self, auc: bool = False) -> str:
         year = self.year + AUC_OFFSET if auc else self.year
         return f"{year}.{self.month}.{self.day}"
+
+    def __str__(self) -> str:
+        return f"{self.year}.{self.month}.{self.day}"
+
+
+@dataclass(frozen=True, order=True)
+class BiographyDate:
+    """Validate a signed historical date used only in character biographies."""
+
+    year: int
+    month: int
+    day: int
+
+    @classmethod
+    def parse(cls, value: str) -> "BiographyDate":
+        pieces = value.strip().split(".")
+        if len(pieces) != 3:
+            raise ValueError(f"biography date must be Y.M.D: {value!r}")
+        result = cls(*(int(piece) for piece in pieces))
+        result.validate()
+        return result
+
+    def validate(self) -> None:
+        if not (BIOGRAPHY_START_YEAR <= self.year <= BIOGRAPHY_END_YEAR) or self.year == 0:
+            raise ValueError(f"biography year outside supported historical range: {self}")
+        if not (1 <= self.month <= 12):
+            raise ValueError(f"month out of range: {self}")
+        if not (1 <= self.day <= 31):
+            raise ValueError(f"day out of range: {self}")
+
+    def engine(self) -> str:
+        return str(self)
 
     def __str__(self) -> str:
         return f"{self.year}.{self.month}.{self.day}"
@@ -250,6 +288,11 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("date", nargs="?")
     parser.add_argument("--auc", action="store_true")
+    parser.add_argument(
+        "--biography",
+        metavar="DATE",
+        help="validate a signed character-biography date; campaign dates remain AntqDate-only",
+    )
     parser.add_argument("--timeline", type=Path)
     parser.add_argument(
         "--write-m2",
@@ -272,6 +315,10 @@ def main() -> int:
     elif args.timeline:
         rows = load_timeline(args.timeline)
         print(f"validated {len(rows)} timeline rows")
+    elif args.biography:
+        if args.date:
+            parser.error("provide either DATE or --biography DATE, not both")
+        print(BiographyDate.parse(args.biography).engine())
     elif args.date:
         print(AntqDate.parse(args.date).engine(args.auc))
     else:

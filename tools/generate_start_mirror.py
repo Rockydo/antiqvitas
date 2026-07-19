@@ -21,6 +21,7 @@ from pathlib import Path
 
 from extract_vanilla import tokenize
 from generate_country_definitions import historical_profile_for
+from m6_power import character_manager, dynasty_manager, government_block, load_power_data
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "main_menu/setup/start"
@@ -59,8 +60,6 @@ antiqvitas_market_city = {
 
 STATIC_FILES = {
     "02_core.txt": """institution_manager = {\n}\n\nreligion_manager = {\n}\n""",
-    "04_dynasties.txt": "dynasty_manager = {\n}\n",
-    "05_characters.txt": "character_db = {\n}\n",
     "08_institutions.txt": "locations = {\n}\n",
     "11_art.txt": "work_of_art_manager = {\n}\n",
     "13_religion.txt": "building_manager = {\n}\n",
@@ -558,9 +557,9 @@ def population_manager() -> tuple[str, int, Decimal]:
 def country_manager() -> tuple[str, int, int]:
     """Render M3 countries from checked ownership plus verified capitals.
 
-    The generic template and random rulers are explicit transitional scaffolding
-    for the political-map milestone; M6 replaces them with sourced governments,
-    characters, and dynasties.
+    Generic random-ruler scaffolding remains only for countries outside the
+    source-labelled M6 foundation. M6 country profiles are generated from the
+    checked `docs/m6/governments.csv` ledger.
     """
     with ROSTER.open(encoding="utf-8-sig", newline="") as handle:
         rows = list(csv.DictReader(handle))
@@ -568,6 +567,7 @@ def country_manager() -> tuple[str, int, int]:
         entry["design_tag"]: entry["engine_tag"]
         for entry in json.loads(TAG_MAP.read_text(encoding="utf-8"))["entries"]
     }
+    power = load_power_data()
     ownership: dict[str, dict[str, list[str]]] = {}
     with OWNERSHIP.open(encoding="utf-8-sig", newline="") as handle:
         for entry in csv.DictReader(line for line in handle if not line.startswith("#")):
@@ -597,15 +597,12 @@ def country_manager() -> tuple[str, int, int]:
             lines.extend(f"\t\t\t\t{location}" for location in locations)
             lines.extend(("\t\t\t}", ""))
             controlled += len(locations)
-        lines.extend(
-            (
-                f'\t\t\tinclude = "{template}"',
-                "\t\t\tgovernment = { ruler = random }",
-                f"\t\t\tcapital = {capital}",
-                "\t\t}",
-                "",
-            )
-        )
+        lines.append(f'\t\t\tinclude = "{template}"')
+        if row["tag"] in power.governments:
+            lines.extend(government_block(power.governments[row["tag"]]))
+        else:
+            lines.append("\t\t\tgovernment = { ruler = random }")
+        lines.extend((f"\t\t\tcapital = {capital}", "\t\t}", ""))
         count += 1
     lines.extend(("\t}", "}"))
     return "\n".join(lines) + "\n", count, controlled
@@ -674,12 +671,15 @@ def generated_files() -> tuple[dict[str, str], int, int, int, int, Decimal, int,
     roads, road_count = road_network()
     development, development_count = development_manager()
     pops, pop_locations, pop_total = population_manager()
+    power = load_power_data()
     countries, count, controlled = country_manager()
     diplomacy, dependencies = diplomacy_manager()
     return (
         {
             **STATIC_FILES,
             "03_markets.txt": markets,
+            "04_dynasties.txt": dynasty_manager(power),
+            "05_characters.txt": character_manager(power),
             "06_pops.txt": pops,
             "07_cities_and_buildings.txt": urban + "\n" + special_buildings,
             "09_roads.txt": roads,

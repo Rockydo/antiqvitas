@@ -26,6 +26,9 @@ LOC_LINE = re.compile(r'^\s*([\w.-]+):\s*"([^"]+)"')
 ALIASES = {
     "roma": "rome",
     "aksum": "axum",
+    # The installed Jingzhao/Xi'an location is the correct Western Han capital
+    # anchor. A different local `changan` key exists north of the historic city.
+    "changan": "jingzhao",
     "turfan": "turpan",
     "teotihuacan": "tehotihuacan",  # installed key spelling
 }
