@@ -505,6 +505,33 @@ DJN = { # Djenne-Djenno; P8.5;CAH-XI
 	is_historic = yes
 }
 
+WAF = { # West African Iron-Age Societies; P8.5;CAH-XI
+	color = rgb { 128 94 55 }
+	color2 = rgb { 127 161 200 }
+
+	culture_definition = somali_culture
+	religion_definition = bantu_religion
+	is_historic = yes
+}
+
+XDE = { # Bantu Societies; P8.5;CAH-XI
+	color = rgb { 134 100 68 }
+	color2 = rgb { 121 155 187 }
+
+	culture_definition = nubian
+	religion_definition = hellenism_religion
+	is_historic = yes
+}
+
+XDF = { # Barbaria Societies; P8.5;CAH-XI
+	color = rgb { 127 104 57 }
+	color2 = rgb { 128 151 198 }
+
+	culture_definition = nubian
+	religion_definition = hellenism_religion
+	is_historic = yes
+}
+
 XBI = { # Saba; P8.6;CAH-XI
 	color = rgb { 77 120 88 }
 	color2 = rgb { 178 135 167 }
