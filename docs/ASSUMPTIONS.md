@@ -1026,3 +1026,18 @@ and Arminius's existing Roman-service context is not altered. Sources weighed:
 P8.1; P8.3; P8.7; `LBD-EME`; `CTP-XIO`; `TAC-CHER`; `DIO-CHER` in
 `docs/world_1ad/SOURCES.md`. [secure survival where the primary notices are
 direct; contested engine context and Emesan descent]
+
+## 2026-07-19 - Near-boundary adult roles are court evidence only
+
+Tacitus directly identifies Flavus and Thusnelda in roles requiring pre-AD 1
+adult or family continuity, while the same account calls Segimundus a youth and
+only recalls his AD 9 altar role: the latter is retained as contested. Artabanus
+II, Orodes III, and Abinergaos I appear as rulers or coin authority within a
+decade after the campaign boundary. Their entries make the conservative
+inference that these were living political actors at AD 1, but do not script a
+current ruler/heir slot, claim, title, office, location, succession, ability,
+biography date, marriage, or parent graph. Phraates V and Attambelos II remain
+the relevant engine rulers. Sources weighed: P8.2; P8.7; `TAC-CHER`;
+`IRAN-ARTAB`; `JOS-ORO`; `IRIS-ABI` in `docs/world_1ad/SOURCES.md`.
+[secure for Flavus and Thusnelda; contested for the remaining near-boundary
+records]

@@ -32,3 +32,20 @@ leaders. Their post-boundary activity establishes survival at AD 1. They remain
 non-ruling `CRU` court identities: the anonymous Cheruscan government persists,
 and Arminius's existing `ROM` service-context record is unchanged. Sources:
 `TAC-CHER`; `DIO-CHER`.
+
+The same Tacitean account names Flavus as Arminius's veteran Roman-service
+brother, Thusnelda as Segestes's daughter and Arminius's wife in a pre-AD 9
+marriage conflict, and Segimundus as Segestes's son whose earlier altar role is
+recalled in the AD 16 narrative. Flavus and Thusnelda have secure boundary
+survival; Segimundus is deliberately contested because the source supplies no
+age. None gains an engine command, priesthood, marriage, residence, or title.
+
+## Near-boundary Arsacid and Characenian records
+
+Artabanus II, Orodes III, and Abinergaos I are cautiously added as *living
+court* identities from accession or coin evidence no more than a decade after
+the campaign boundary. The evidence does not establish any campaign-start
+office, claim, residence, succession, personal statistic, or day-level
+biography; each record is therefore marked contested. Phraates V remains the
+sole Parthian engine ruler and Attambelos II the sole Characenian engine ruler.
+Sources: `IRAN-ARTAB`; `JOS-ORO`; `IRIS-ABI`.
