@@ -118,7 +118,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Add five contested, accession-credited Han court figures without translating titles, residence, kinship, or later offices into start-state mechanics.
 - [x] Add Artaxias III and Polemo II as bounded Pythodorid family-court figures without projecting later Armenian or Pontic reigns into AD 1.
 - [x] Add Emperor Ping's named maternal Wei family and Wang Yu's named early Yuan Shi circle without inferring offices, careers, or future punishments.
-- [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories. (85 source-led characters and 23 privilege adapters currently.)
+- [x] Add the coin-attested Nabataean Queen Huldu as Aretas IV's documented AD 1 consort without inventing a constitutional role or genealogy.
+- [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories. (86 source-led characters and 23 privilege adapters currently.)
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 
 ## M7 — War
