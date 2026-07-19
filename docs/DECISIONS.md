@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Metadata compatibility and thumbnail placement
+
+The in-game version label is `1.3.1.1`, but the metadata comparator rejects
+that form and accepts `1.3.11`. ANTIQVITAS therefore pins
+`supported_game_version` to `1.3.11`, with the successful M1 menu smoke as
+runtime evidence. The manifest declares `picture = "thumbnail.png"`; the same
+512x512, sub-1-MB PNG is deliberately present both at the mod root (the
+observed Workshop convention) and inside `.metadata` (the plan's required
+placement). The linter enforces both copies while the engine convention remains
+underdocumented.
+
 ## 2026-07-19 — Repository location
 
 The repository root is `G:\antiqvitas`, on the same drive as the verified EU5

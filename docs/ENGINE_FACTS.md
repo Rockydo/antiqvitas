@@ -5,6 +5,9 @@ screenshot reports **Europa Universalis V 1.3.1.1 (Pavia), checksum 7917**.
 All paths below are relative to the verified read-only game directory unless
 otherwise stated.
 
+Metadata compatibility uses the internal comparator string `1.3.11` (verified
+by an initial M1 smoke), even though the UI formats the same build as `1.3.1.1`.
+
 ## Runtime and paths
 
 - `binaries/eu5.exe` exists and the three content trees are `game/in_game`,
@@ -75,8 +78,11 @@ mods; thumbnails may be beside `.metadata` at the mod root.
 
 Both `replace_path` and `replace_paths` strings exist in the executable, and DLC
 manifests expose a `replace_path` array. No installed Workshop metadata uses
-either key, so mod-metadata replace-path support is not yet accepted. M1 will
-test it in isolation; otherwise M3 uses exact-filename mirror overrides.
+either key, so mod-metadata replace-path support is not accepted. A metadata
+parser that quietly ignores an unknown key cannot distinguish unsupported input
+from an accepted empty replacement, so M1 does not use an inconclusive probe as
+evidence. M3 will use exact-filename mirror overrides, the mechanism verified
+by the plan and local loading behavior.
 
 EU5 enumerates metadata for every directory under `USER_DIR/mod` even when the
 playset disables it. This is why M0's true vanilla baseline was captured with
@@ -127,7 +133,8 @@ message is permitted.
 
 ## Deferred runtime probes
 
-- M1 will test metadata `replace_path(s)` in isolation.
+- M3 will verify the complete exact-filename setup mirror while no unproven
+  metadata replacement key is in use.
 - Symbol extraction will become reference-aware as each content surface is
   implemented; current top-level counts intentionally include valid wrapper
   constructs where the engine database permits them.
