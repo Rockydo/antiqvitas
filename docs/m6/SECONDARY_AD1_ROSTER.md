@@ -79,6 +79,22 @@ Persid court in an Arsacid-facing world rather than a finished subject treaty
 or constitution. Sources: P8.2; OCD; `IRAN-PRS`; `IRIS-NAM` in the
 [source ledger](../world_1ad/SOURCES.md).
 
+## Northern Indian royal courts
+
+Azes II and Strato II replace the Indo-Scythian and Indo-Greek generic rulers.
+Iranica places the Azes dynasty in the broader 50 BCE-CE 30 period and describes
+the coin-led internal sequence; the plan's Azes start is therefore represented
+as Azes II but remains contested. Iranica directly places the last Greek
+bastion at Sagala under Strato II until its c. AD 10 fall, so his current AD 1
+court is secure while its exact term metadata remains qualified.
+
+The distinct Indo-Scythian and late Indo-Greek monarchy reforms make their
+different regional elite bases visible through already verified estate/law
+contracts. Satrapal and city-elite estate labels are technical proxies, not
+claims of an exact constitution or medieval social order. Sources: P8.4;
+CAH-XI; `IRAN-AZES`; `IRAN-IGR` in the
+[source ledger](../world_1ad/SOURCES.md).
+
 ## Intentional limits
 
 The dynasty labels marked `contested` are engine continuity labels where the

@@ -130,6 +130,15 @@ public rites with many local cults, not modern religious freedom or a denial
 of particular coercions, exclusions, and later Christian-persecution policies.
 The latter remain dated M10 history rather than being pre-scripted at start.
 
+## Northern Indian court adapters
+
+The Indo-Scythian and late Indo-Greek courts receive separate, locally verified
+monarchy reforms plus narrow elite privileges and administrative laws. Their
+modifiers distinguish a composite regional-satrapal court from a remaining
+Hellenic city-court setting, while their data explicitly rejects any claim to a
+complete constitutional reconstruction. The planned AD 10 Indo-Greek fall is
+reserved for later history content.
+
 ## Secondary AD 1 roster
 
 The next slice adds Maroboduus, Arminius, Juba II, Cleopatra Selene II, Aretas

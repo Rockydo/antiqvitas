@@ -39,6 +39,8 @@ a row reaches `implemented` status.
 - `SCHU-CHA`: Monika Schuol, *Die Charakene: Ein mesopotamisches Königreich in hellenistisch-parthischer Zeit* (Steiner, 2000), pp. 226, 318-20, used for the coin-based Attambelos II chronology; its endpoints are retained as contested.
 - `IRAN-PRS`: Josef Wiesehöfer's *Encyclopaedia Iranica*, ["Persis, Kings of"](https://www.iranicaonline.org/articles/persis-kings-of/), used for the sparse, coin-led evidence base and Parthian representative context of Persis.
 - `IRIS-NAM`: [IRIS / Greek Coinage's Nambed of Persis record](https://greekcoinage.org/iris/id/persepolis.nambed.klose_museler.2008.4.44-5?lang=en), used for the broad AD 1-100 numismatic dating; it does not establish a precise accession, biography, or succession.
+- `IRAN-AZES`: David MacDowall's *Encyclopaedia Iranica*, ["Azes"](https://www.iranicaonline.org/articles/azes/), used for the Indo-Scythian Azes dynasty, its coin-led sequence, and the broad 50 BCE-CE 30 context.
+- `IRAN-IGR`: Osmund Bopearachchi's *Encyclopaedia Iranica*, ["Indo-Greek Dynasty"](https://www.iranicaonline.org/articles/indo-greek-dynasty/), used for Strato II's last eastern-Punjab court and its fall around AD 10.
 
 Rows marked `contested` have a corresponding entry in `docs/ASSUMPTIONS.md`.
 `TBD` map capitals are historical roster records awaiting a verified mapping to
