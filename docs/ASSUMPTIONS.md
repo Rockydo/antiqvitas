@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 - Vipsania Agrippina and Asinius Gallus are Roman-world records
+
+Oxford's entries establish both Vipsania Agrippina and Gaius Asinius Gallus
+were alive across AD 1, and directly document their marriage and the link from
+Gallus to Pollio. The `ROM` and dynasty labels preserve only identity context;
+they do not assert a physical residence or script marriage, children, career,
+office, ability, or a full Vipsanian/Asinian genealogy. Sources weighed: P8.1;
+`OCD-VIP`; `OCD-GAL` in `docs/world_1ad/SOURCES.md`. [secure survival;
+contested engine context]
+
 ## 2026-07-19 - Exiled Julia and Scribonia retain Roman-world context only
 
 Oxford's Julia and Scribonia entries put both women in Julia's exile from 2

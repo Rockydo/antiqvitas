@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-19 - M6 Vipsania and Gallus court slice
+
+- Added Vipsania Agrippina and Gaius Asinius Gallus as source-qualified living
+  Roman-world records, with a dedicated bounded identity label for Vipsania.
+- Oxford's directly stated marriage and parentage are retained only in the
+  source notes; no marriage, child, office, career, ability, residence, or
+  full genealogy enters the engine state.
+
+Next: regenerate, validate, smoke-test, then continue direct-evidence Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 exiled Augustan household slice
 
 - Added Julia the Elder and Scribonia as source-qualified living Roman-world
