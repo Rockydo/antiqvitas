@@ -1554,6 +1554,22 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-19 - M6 independently dated Roman figures
+
+- Added Velleius Paterculus, Servius Sulpicius Galba, and Lucius Annaeus
+  Seneca from their independently documented life spans, bringing the roster
+  to the plan's initial 250-character threshold.
+- Their narrow cultural or court-context records contain no engine biography
+  dates, campaign offices, commands, residences, abilities, adoption, family
+  graph, or later career. Galba is explicitly distinguished from the separate
+  Gaius Sulpicius Galba in the AD 22 Fasti cohort.
+- `make validate` and the real-game `make smoke` are green, with the game
+  reaching the menu and zero new `error.log` lines. The M6 roster is now 250
+  source-led characters and 183 dynasties.
+
+Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
+separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 first Yuan Shi Han court records
 
 - Added Kai Ming, Chengdu, Gongsun Xiangru, Kong Jun, Wang An, Wang Lin, and
