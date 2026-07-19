@@ -657,12 +657,21 @@ constitution. Sources weighed: P8.7; P13; CAH-XI. [contested]
 ## 2026-07-19 - Anonymous Brittonic and Irish governments
 
 The start roster preserves the named Brittonic and Irish polities required by
-P8.7, but its source route does not establish a current ruler for the
-Trinovantes, Iceni, Brigantes, Silures, Ordovices, Dumnonii, Caledonian
-societies, or Ulaid on 1 January AD 1. They receive anonymous tribal profiles
-rather than fabricated courts. Boudica, Cartimandua, Verica, and the
+P8.7, but its source route does not establish a current ruler for the Iceni,
+Brigantes, Silures, Ordovices, Dumnonii, Caledonian societies, or Ulaid on 1
+January AD 1. They receive anonymous tribal profiles rather than fabricated
+courts. Boudica, Cartimandua, Verica, and the
 Roman-conquest sequence remain dated M10 history rather than evidence for a
 start-date incumbent. Sources weighed: P8.7; P13; CAH-XI. [contested]
+
+Dubnovellaunos is the source-qualified Trinovantian exception. Oxford's CCI
+89.0006 names him as ruler and the Trinovantes as state and dates the coin type
+20 BCE-AD 10, but it also has Cantii authority metadata; the British Museum
+corroborates a 20 BCE-AD 10 coin associated with Trinovantes/Catuvellauni.
+The record consequently replaces only the generated Trinovantian ruler, leaves
+the tribal/druidic adapter intact, and scripts no biography, genealogy,
+accession day, fixed political geography, or later Catuvellaunian sequence.
+Sources weighed: P8.7; `CCI-DUB` in `docs/world_1ad/SOURCES.md`. [contested]
 
 ## 2026-07-19 - Brittonic druidic authority is a bounded religious-estate proxy
 

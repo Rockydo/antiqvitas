@@ -1295,6 +1295,19 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-19 - M6 Trinovantian ruler correction
+
+- Replaced Trinovantes' generated ruler with coin-attested Dubnovellaunos from
+  the Oxford Celtic Coin Index, whose record names him as ruler and the
+  Trinovantes as state across a range including AD 1.
+- The surviving date range and Cantii/Catuvellaunian metadata leave chronology
+  and political geography contested. The existing tribal and druidic adapters
+  remain unchanged; no biography, succession, or territorial conclusion is
+  scripted.
+
+Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
+separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Eppillus court record
 
 - Added Eppillus as a contested Atrebatic-context court figure from the Oxford
