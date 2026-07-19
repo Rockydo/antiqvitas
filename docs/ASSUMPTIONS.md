@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-19 - Mahadathika Mahanaga is a bounded Anuradhapura court record
+
+Siddham's paired-inscription record identifies Mahadathika Mahanaga as the
+younger brother and successor of Bhatikabhaya Abhaya, with the latter's reign
+crossing AD 1 and the former's conventional term beginning in AD 9. The
+*Mahavamsa* independently names him as Bhatikabhaya's younger brother and
+later successor. He is therefore secure as a living court figure at the
+boundary, but neither source licenses a campaign-start heir office, exact
+biography date, office, residence, accession mechanic, or full genealogy.
+Sources weighed: P8.4; `SRI-MAH`; `MV-MAH` in
+`docs/world_1ad/SOURCES.md`. [secure for the living court record; no claim for
+the omitted mechanics]
+
 ## 2026-07-19 - Strato III remains a contested Indo-Greek court figure
 
 The University of Queensland collection describes a coin dated broadly from
