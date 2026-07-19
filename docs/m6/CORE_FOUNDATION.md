@@ -78,6 +78,14 @@ court. This is a UI proxy, not a Christian clerical hierarchy or a claim to
 reconstruct the high priesthood's exact legal jurisdiction; its associated
 privilege and administrative law say so explicitly.
 
+The Legion estate feasibility review found that the local estate registry is
+global and exposes no safe country-scoped attachment point in setup or scripted
+effects. Creating a new estate would therefore add an unproven system-wide UI,
+event, and population contract rather than a Rome-only political actor. M6
+keeps the verified Praetorian Donatives privilege as the plan's fallback; M10
+will add the dated legionary succession/crisis interactions when its event and
+disaster systems are implemented.
+
 ## Coinage standards
 
 Rome's socioeconomic law uses the installed gold-and-silver minting contract
