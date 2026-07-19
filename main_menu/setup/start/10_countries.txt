@@ -2556,6 +2556,7 @@ countries = {
 				aerzhai
 				amchok
 				ami
+				anbang
 				anbian
 				ande
 				anding
@@ -2588,6 +2589,7 @@ countries = {
 				anyuan_lianzhou
 				anyue
 				anzhou
+				bac_thai_nguyen
 				bada
 				badong
 				bafan
@@ -2611,6 +2613,7 @@ countries = {
 				bangban
 				banpu
 				banqiao
+				bao_lac
 				baoan
 				baoan_baoan
 				baoan_dongguan
@@ -2636,8 +2639,11 @@ countries = {
 				beishe
 				beisheng
 				binchuan
+				binh_lam
+				binh_nguyen
 				bishan
 				biyang
+				bo_hai_khau
 				boai
 				bobai
 				bochuan
@@ -2647,6 +2653,7 @@ countries = {
 				boxing
 				boye
 				bozhou
+				cam_hoa
 				cangwu
 				cangxi
 				caoni
@@ -2700,6 +2707,7 @@ countries = {
 				chengzhou
 				chenxi
 				chenyang
+				chi_la
 				chijin
 				chiping
 				chongan
@@ -2716,7 +2724,9 @@ countries = {
 				chuqiu
 				cili
 				cixi
+				co_dang
 				conghua
+				da_giang
 				daan
 				dacheng
 				dadandang
@@ -2725,6 +2735,7 @@ countries = {
 				dagu
 				dagu_shunyuan
 				daguan
+				dai_man
 				daizhou
 				dancheng
 				dangcheng
@@ -2768,6 +2779,7 @@ countries = {
 				dianjiang
 				diaomen
 				didao
+				dien_chau
 				dingan
 				dingbian
 				dingbian_shunning
@@ -3008,6 +3020,8 @@ countries = {
 				hezhong
 				hezhou
 				hezhou_he
+				hoan_chau
+				hong_chau
 				hongshui
 				hongtong
 				hongxian
@@ -3181,6 +3195,8 @@ countries = {
 				kedu
 				kehu
 				kelan
+				khet_theu
+				khoai_chau
 				khuzhupai
 				kongwei
 				kuanhe_xingzhou
@@ -3190,12 +3206,16 @@ countries = {
 				kunyang
 				kuozhou
 				kuyu_shazhou
+				ky_son
+				lai_chau
 				laian
 				laian_tianzhou
 				laibin
 				laishui
 				laiwu
 				laiyang
+				lang_giang
+				lang_son
 				langning
 				langqiong
 				langqu
@@ -3314,6 +3334,7 @@ countries = {
 				liyuan
 				lizhou
 				lizhou_mahu
+				loc_chau
 				longan
 				longchang
 				longchuan
@@ -3405,10 +3426,12 @@ countries = {
 				malong_qujing
 				malongtalang
 				mancheng
+				mang_viet
 				mangbu
 				mangshi
 				maoming
 				maping
+				mat_chau
 				matman
 				maxia
 				mayang
@@ -3453,15 +3476,19 @@ countries = {
 				mixian
 				miyun
 				mizhi
+				muang_sam_tai
 				muchuan
 				muge
 				mulian
+				muong
+				muong_cha
 				muong_te
 				muping
 				musuo
 				nadi
 				naiman
 				nalou
+				nam_sach
 				nanan
 				nanan_quanzhou
 				nanbu
@@ -3496,6 +3523,9 @@ countries = {
 				neijiang
 				neiqiu
 				neixiang
+				nga_lac
+				nghe_ann
+				nhat_nam
 				nianbo
 				ningbian
 				ningde
@@ -3651,6 +3681,9 @@ countries = {
 				qixian_tongchuan
 				qiyang
 				qizhou
+				quan_da_chau
+				quang_uyen
+				quang_yen
 				quanjiao
 				quanning
 				queshan
@@ -3659,7 +3692,10 @@ countries = {
 				qujiang_guangan
 				qushan
 				quwo
+				quy_chau
+				quy_hoa
 				quyang
+				quynh_lam
 				quzhou
 				rangxian
 				rencheng
@@ -3803,6 +3839,7 @@ countries = {
 				siming
 				sishui
 				situo
+				son_la
 				songming
 				songxi
 				songyang
@@ -3846,6 +3883,7 @@ countries = {
 				taizhou
 				taktsang
 				talang
+				tam_dai
 				tanchang
 				tancheng
 				tangcheng
@@ -3862,6 +3900,17 @@ countries = {
 				tengdong
 				tengxian
 				tewo
+				thai_binh
+				thai_nguyen
+				thang_long
+				thanh_hoa
+				that_nguyen
+				thien_quan
+				thien_truong
+				tho_hoang
+				thu_vat
+				thuan_chau
+				thuy_vi
 				tianchang
 				tiancheng
 				tianping
@@ -3895,10 +3944,18 @@ countries = {
 				tongwei
 				tongxu
 				tongzhou
+				trang_an
 				tso_gon
 				tunliu
 				tunxi
+				tuyen_hoa
+				tuyen_quang
 				uraqai
+				van_ban
+				van_don
+				van_kiep
+				vo_nhai
+				vu_ninh
 				wadian
 				wanan
 				wanan_wananjun
@@ -4483,7 +4540,243 @@ countries = {
 
 		SAT = { # Satavahana; P8.4;CAH-XI
 			own_control_core = {
+				adanki
+				adilabad
+				adlur
+				adoni
+				aheri
+				ahmednagar
+				ahobalam
+				aimangala
+				ajara
+				akola
+				amrabad
+				amravati
+				anantapur
+				anegandi
+				anumagallu
+				asifabad
+				athani
+				aundh
+				ausa
+				badami
+				bagalkot
+				balaghat
+				balkonda
+				ballalapura
+				ballarpur
+				bandhugara
+				bangalore
+				bankapura
+				basavana_bagewadi
+				basavapattana
+				basim
+				bassein
+				bednur
+				belgaum
+				bellari
+				belur
+				bhadrachalam
+				bhalki
+				bhatkal
+				bhongir
+				bidar
+				bijapur
+				bir
+				bobbili
+				bombay
+				bramhapuri
+				chakan
+				chambargonda
+				chandor
+				chaul
+				chennur
+				chhaparagarh
+				chitapur
+				chitradurga
+				chittoor
+				cuddapah
+				cumbum
+				dabhol
+				dahrur
+				dang
+				darwar
 				daulatabad
+				devadurga
+				devanahalli
+				devarakonda
+				devgarh
+				dharampur
+				dharmavaram
+				dhone
+				dongartal
+				durgarazpatnam
+				dvarasamudra
+				ellur
+				gadag
+				gadchiroli
+				gadwal
+				gandikota
+				ghampur
+				goa
+				gokak
+				golconda
+				gudur
+				gulbarga
+				guntur
+				gurramkonda
+				gutti
+				haleri
+				hanagal
+				hassan_karnataka
+				haveri
+				honnavara
+				hoskote
+				hubli
+				ikkeri
+				jalna
+				janjira
+				jath
+				jawhar
+				junnar
+				kadiri
+				kadur
+				kalahasti
+				kalam
+				kalluru
+				kalyan
+				kalyani
+				kandakura
+				kangundi
+				kanigiri
+				karad
+				karwar
+				katol
+				kaulas
+				kavali
+				kelapur
+				kembhavi
+				khammamet
+				khanapur
+				kohir
+				koilkonda
+				kolar
+				kolhapur
+				kondapalli
+				kondavidu
+				koppal
+				korutla
+				kothagudem
+				kundgol
+				kurnool
+				londa
+				macherla
+				madgaon
+				madugula
+				magadi
+				mahagaon
+				mahur
+				makhtal
+				mangapet
+				manikdrug
+				mankunda
+				manyakheta
+				manyapura
+				markapur
+				masulipatnam
+				mayuragiri
+				medak
+				medanapalle
+				mehkar
+				miraj
+				molangur
+				motupalli
+				mudgal
+				mudhol
+				mysore
+				naldrug
+				nalgonda
+				nandagiri
+				nander
+				nandyal
+				nanjanagud
+				narsipur
+				nasik
+				nellore
+				nirmal
+				nuzvid
+				pakala
+				palampet
+				palasamudram
+				pallakolu
+				panar
+				panugallu
+				parenda
+				parkal
+				pathri
+				pavagada
+				pazhaverkadu
+				peddapalli
+				penukonda
+				pithapuram
+				porumamilla
+				pottapi
+				pratapgarh
+				pune
+				puvina_padangile
+				qandhar
+				rachakonda
+				raichur
+				raigarh
+				rajamahendry
+				rajapur
+				ramagiri
+				rampa
+				rayachoti
+				rayadurga
+				raybag
+				sagar
+				salagiri
+				sangamesvara
+				satara
+				sathyagala
+				savantvadi
+				seringapatam
+				shimoga
+				sholhapur
+				shravanabelagola
+				sindagi
+				sindkedh
+				singarh
+				sinnar
+				sira
+				sirpur
+				sonda_karnataka
+				srigangapatna
+				sringeri
+				srisailam
+				talikota
+				tandur
+				tirupati
+				tumkur
+				tuni
+				tupran
+				uchangidurga
+				udayagiri
+				udgir
+				ummatur
+				undrugonda
+				vempalle
+				vemulawada
+				vijayanagar
+				vinukonda
+				visakhapatnam
+				vizianagaram
+				wairagarh
+				warangal
+				wazirabad
+				yedagiri
+				yegaladapa
 			}
 
 			include = "east_asia_monarchy"
@@ -4493,7 +4786,219 @@ countries = {
 
 		XAX = { # Indo-Scythian Realm; P8.4;CAH-XI;PLE
 			own_control_core = {
+				agham_kot
+				agror
+				ahmad_khan
+				akora
+				altit
+				aror
+				asadabad_kunar
+				astore
 				attock
+				bab_kot
+				bajaur
+				bajaura
+				bajwara
+				baligram
+				banihal
+				bannu
+				baramulla
+				barmaur
+				batala
+				bathinda
+				behali
+				bhakkar
+				bhera
+				bhimber
+				bijnot
+				bunji
+				busal
+				chakwal
+				chamba_india
+				channan_pir
+				chichawatni
+				chilas
+				chiniot
+				chishtian
+				chitral
+				chor
+				dadri
+				dajal
+				daraban
+				dasu
+				dera_bugti
+				dera_ghazi_khan
+				dera_ismail_khan
+				derawar
+				dhadar
+				dijkot
+				dina
+				dinkot
+				dipalpur
+				dir
+				dubbi
+				duki
+				dunga_bunga
+				eminabad
+				faridkot
+				fatehabad
+				firozpur
+				gandava
+				ganderbal
+				ghotki
+				gilgit
+				gugera
+				gujrat
+				hajiabad
+				hajner
+				hala
+				hangu
+				hansi
+				harrand
+				hisar
+				isakhel
+				ishkoman
+				islamgarh
+				islamkot
+				jalalpur_pirwala
+				jalandhar
+				jammu
+				jaranwala
+				jhal
+				jhang
+				jhatpat
+				jijial
+				kahan
+				kahlur
+				kalam_swat
+				kalanaur
+				kamalia
+				kandia
+				kandiaro
+				kapurthala
+				karor
+				karor_2
+				karur_punjab
+				kashmore
+				kasur
+				kathua
+				keylong
+				khairpur
+				khewra
+				khost
+				khushab
+				kishtwar
+				kohat
+				kohtali
+				koksar
+				kot_addu
+				kot_lalu
+				kot_marot
+				kotri
+				kupwara
+				kutlehar
+				lahore
+				lahri
+				lalian
+				lalpur
+				laribandar
+				lorelai
+				mailsi
+				malakand
+				mandi
+				mankera
+				manora
+				mansura
+				mardan
+				marwah
+				mastuj
+				milwat
+				mir_garh_qila
+				misgar
+				mithankot
+				mithri
+				moro_sindh
+				muhammad_tur
+				muktsar
+				mulkhow
+				multan
+				nagar
+				nagarkot
+				nagarparkar
+				naggar
+				nahan
+				naserpur
+				nawakot
+				nurpur
+				omerkot
+				paat
+				paddar
+				pakpattan
+				palampur
+				pangi
+				parun
+				pasrur
+				passu
+				pathankot
+				peshawar
+				phander
+				pindi_bhattian
+				pindi_gheb
+				poonch
+				pulawama
+				punial
+				rahon
+				raikot
+				rajabar
+				rajouri
+				rakni
+				ranikot
+				rasyal
+				rawalakot
+				rawalpindi
+				rohri
+				sangni
+				sarahan
+				sarsuti
+				sehwan
+				shadodkot
+				shahpur
+				sharda
+				sherwan
+				shikarpur
+				shorkot
+				sialkot
+				sillanwali
+				sitpur
+				siwi
+				sonda
+				soonpur
+				srinagar
+				sui_pakistan
+				suket
+				sukkur
+				sultanwind
+				sunam
+				talwandi
+				tangir
+				tank
+				thal_daman
+				thatta
+				timergara
+				tulamba
+				uch
+				udabhanda
+				udamphur
+				umarkot
+				urgun
+				urtsun
+				vingur
+				virkgarh
+				wana
+				wanga_bazar
+				yarkhun
+				yasin
+				zhob
 			}
 
 			include = "east_asia_monarchy"
@@ -4513,7 +5018,45 @@ countries = {
 
 		YUE = { # Yuezhi Confederation; P8.4;CAH-XI
 			own_control_core = {
+				aiwanj
+				araska
 				balkh
+				basand
+				daroot_korgon
+				darzanji
+				denov
+				farkhor
+				fayzabad
+				gharm
+				gunt
+				hissar
+				hulbuk
+				ishkashim
+				jurm
+				karakol
+				kham_bahar
+				kulob
+				muksu
+				munk
+				murghab
+				oksu
+				qalai_khumb
+				qila_panjeh
+				qubodijon
+				ragh
+				roshtqala
+				sangvor
+				sar_sang
+				sarhad
+				shighnan
+				shiveh
+				shuman
+				termez
+				vakhs
+				vamar
+				vanch
+				wesgird
+				zebak
 			}
 
 			include = "east_asia_monarchy"
@@ -4543,7 +5086,67 @@ countries = {
 
 		XAZ = { # Kuninda; P8.4;CAH-XI
 			own_control_core = {
+				acham
+				ajayameru
+				almora
+				askot
+				badrinath
+				baijnath
+				bajhang
+				bajura
+				chainpur
+				champavati
+				chandpur_garhi
+				chaudandi
+				chaughera
+				devprayag
+				dhading
+				dipayal
+				dolakha
+				dolpo
+				dudhakunda
+				dullu
+				dwarahat
+				gangadvara
+				gorkha
+				gulmi
+				halesi
+				hanol
+				jagatipur
+				jumla
+				kailali
 				kalsi
+				kanchapur
+				kashipur
+				kathmandu
+				kharpunath
+				lamjung
+				malneta
+				musikot
+				nainital
+				nuwakot
+				okhaldhunga
+				phakphok
+				pokhara
+				pyuthan
+				rajanari
+				ramechhap
+				ranibas
+				rudrapur_kumaon
+				salianah
+				sindhuli
+				sinja
+				srinagar_garhwal
+				sunkoshi
+				takam
+				tanahun
+				tansen
+				taplejung
+				thalisain
+				upardang
+				uttarkashi
+				vijayapur
+				yanal_densa
 			}
 
 			include = "east_asia_monarchy"
@@ -4553,7 +5156,79 @@ countries = {
 
 		XBA = { # Kalinga; P8.4;CAH-XI
 			own_control_core = {
+				angul
+				asika
+				athmallik
+				badamgarh
+				balangir
+				balasore
+				bargarh
+				baripada
+				basna
+				baud
+				belkhandi
+				bhadrak
+				bhuban
+				birugarh
+				bissam_cuttack
+				bonaigarh
+				brahmapur
+				chaibasa
+				debagarh
+				dhenkanal
+				ganjam
+				ghasipura
+				ghatgaon
+				ghatsila
+				gunupur
+				harishpur
+				jajjaldeypur
+				jajnagar
+				jalesar
+				jashpur_nagar
+				jyotipur
+				kalahandinagara
 				kalinganagara
+				kalingapattanam
+				kanthi
+				kasipur
+				kataka
+				keonjhar
+				khariar
+				khiching
+				khurda
+				kotagad
+				kotpad
+				kuchinda
+				kulada
+				kunjabangarh
+				malkangiri
+				nandapur
+				narsinghpur
+				nayagarh
+				nilagiri
+				nilakamberu
+				nowrangapur
+				paikmal
+				pal_lahara
+				parlakimidi
+				patna_garjat
+				phulbani
+				puri
+				rabkob
+				raigadh
+				raighar
+				rairangpur
+				ratnagiri
+				rayagada
+				redhakhol
+				saintala
+				samasingha
+				sambalpur
+				sitapur
+				sonepur
+				sundergarh
+				udayagiri_kotagad
 			}
 
 			include = "east_asia_monarchy"
@@ -4563,7 +5238,31 @@ countries = {
 
 		XBB = { # Chera; P8.4;PER
 			own_control_core = {
+				angadippuram
+				edappaly
+				kannur
+				kanyakumari
+				karikkode
+				karkala
+				kasaragod
+				kochi
 				kodungallur
+				kollam
+				kottarakkara
+				kozhikode
+				malapuram
+				mangalore
+				manikandapuram
+				palghat
+				pandalam
+				ponnani
+				prakkad
+				thalassery
+				thiruvananthapuram
+				thrissur
+				udupi
+				uppinangady
+				wayanad
 			}
 
 			include = "east_asia_monarchy"
@@ -4594,6 +5293,30 @@ countries = {
 		XBD = { # Anuradhapura; P8.4;CAH-XI
 			own_control_core = {
 				anuradhapura
+				badulla
+				devanagara
+				digavapi
+				galle
+				gampola
+				hambantota
+				hatthigiripura
+				jaffna
+				kandy
+				kotte
+				kurunegala
+				madakalapu
+				mahatittha
+				medawachchiya
+				mullaitivu
+				negombo
+				polonnaruva
+				ratnapura_LKA
+				salavata
+				sitavaka
+				tissamaharama
+				trincomalee
+				vavuniya
+				yapavu
 			}
 
 			include = "east_asia_monarchy"
@@ -5173,7 +5896,77 @@ countries = {
 
 		PYU = { # Pyu Cities; P8.9;CAH-XI
 			own_control_core = {
+				amyint
+				butalin
+				dagon
+				dala
+				danubyu
+				dhipaesyin
+				donwun
+				haungtharaw
+				hinthada
+				hmawbi
+				hpa_an
+				htilin
+				ingapu
+				kale
+				kanna
+				kawliya
+				kawthaung
+				kyainseikgyi
+				kyaukkyi
+				kyaukse
+				laungshe
+				lewe
 				magway
+				martaban
+				maubin
+				mawlamyine
+				mergui
+				mindon
+				mingin
+				moksobo
+				myanaung
+				myaungmya
+				myede
+				myitta
+				naungyo
+				ngape
+				ngaputaw
+				nwamethin
+				nyaungyan
+				pagan
+				pakokku
+				papun
+				pathein
+				paungde
+				pegu
+				phyu
+				pindale
+				pinle
+				pinya
+				pyay
+				pyinmana
+				sagaing
+				sagu
+				salay
+				salin
+				saw
+				singkhon
+				sittaung
+				talok
+				taungdwingyi
+				taungoo
+				tavoy
+				tenasserim
+				thandaunggyi
+				thanlyin
+				tharrawaddy
+				thaton
+				thayet
+				thayetchaung
+				twante
+				ye
 			}
 
 			include = "asia_advanced_tribe"
@@ -5183,7 +5976,42 @@ countries = {
 
 		XCK = { # Mon Precursors; P8.9;CAH-XI
 			own_control_core = {
+				ayodhya
+				ban_pa_la_ta
+				chai_nat
 				chaisri
+				chakangrao
+				chumphon
+				dong_lakhon
+				dong_si_maha_phot
+				kanchanaburi
+				lopburi
+				mae_sot
+				muang_khuan_kra_buri
+				muang_na_rang
+				mueng_bang_yom
+				mueng_rat
+				nakhon_chum
+				nakhon_sawan
+				nakhon_thai
+				phanat
+				phayuhakhiri
+				phetchaburi
+				phraek
+				phuenchapura
+				prachinburi
+				ratchaburi
+				rayong
+				sa_kaeo
+				saraburi
+				song_khwae
+				sra_luang
+				sri_satchanalai
+				sri_thep
+				sukhothai
+				suphanburi
+				tak
+				wang_pho
 			}
 
 			include = "asia_advanced_tribe"
@@ -5194,6 +6022,119 @@ countries = {
 		XCL = { # Proto-Khmer; P8.9;CAH-XI
 			own_control_core = {
 				angkor
+				angkor_borei
+				angkor_knong
+				ban_khon
+				ban_phone
+				banlung
+				banon
+				banteay_chhmar
+				battambang
+				beng_mealea
+				bolikham
+				buriram
+				chaiyaphum
+				champasak
+				chhmuoh_thmei
+				chiang_khan
+				damrey_trom
+				dan_sai
+				doh_kromum
+				idkabue
+				indrapura_khmer
+				ishanapura
+				kampong_roessei
+				kampong_saom
+				kaset_sombun
+				keutkeut
+				kham_muang
+				khamkeut
+				khon_kaen
+				khon_san
+				khorat
+				khukhan
+				koh_ker
+				koh_kong
+				kracheh
+				kramuon_sa
+				kut_ling
+				loei
+				longvek
+				lumphat
+				mahaxay
+				mancha_khiri
+				muang_khemarat
+				muang_mang
+				muang_nakhon
+				muang_nong_han_luang
+				muang_phalan
+				muang_phin
+				muang_phuan
+				muang_ta_oi
+				muang_tam
+				mueng_fa_daet
+				mueng_thung_yai
+				mukdahan
+				ngoc_ma
+				nokor_reach_seyma
+				nong_bok
+				nong_bua_lamphu
+				nong_khay
+				or_keo
+				pak_huei_lang
+				peam
+				phanom_rung
+				phimai
+				phnom_penh
+				phnom_santuk
+				phnom_srok
+				phon_hong
+				phonsavan
+				phsar_dek
+				phu_wiang
+				phutthaisong
+				pouthi_loeu
+				prasat_andet
+				prasat_don_an
+				prasat_don_kau
+				prasat_pram_lovet
+				prasat_thong_lang
+				prathai_saman
+				preah_khan_kompong_svay
+				preah_ko
+				preah_vihear
+				prey_nokor
+				pursat
+				rattanaburi
+				roi_et
+				rong_damrel
+				sampheak_borak
+				samxay
+				sandan
+				sangkha
+				savannakhet
+				sayniabuli
+				sdok_kok_thom
+				sepon
+				srey_sarchhor
+				srok_khleang
+				stung_treng
+				suwannaphum
+				tboung_khmum
+				thakhek
+				that_phanom
+				thoulakhom
+				thuan_binh
+				thung_samrit
+				toek_khmau
+				tonle_kong
+				tuol_ta_mouk
+				udon_thani
+				vang_vieng
+				vat_phou
+				vientiane
+				vyadhapura
+				yasothon
 			}
 
 			include = "asia_advanced_tribe"
@@ -5203,7 +6144,171 @@ countries = {
 
 		XCM = { # Malay Polities; P8.9;CAH-XI
 			own_control_core = {
+				anambas_islands
+				asahan
+				badau
+				bagansiapipi
+				bahal
+				balige
+				bandar_aceh
+				baru
+				barus
+				batang_tabir
+				batang_tebo
+				batang_tembesi
+				bengkalis
+				bengkulu
+				bera
+				berbak
+				beruas
+				bilah
+				bingin
+				buantan
+				bujang
+				buluranriding
+				bumi_ayu
+				calang
+				chaiya
+				daik
+				daya
+				deli
+				dharmasraya
+				dumai
+				dungun
+				gayo_lues
+				gelanggi
+				gerik
+				gunung_sahilan
+				gunung_sugih
+				hulu_mesuji
+				hulu_musi
+				inderapura
+				jambi
+				jerantut
+				johor_lama
+				kajang
+				kalianda
+				kampar
+				kampung_buloh
+				karang_brahi
+				karo
 				kedah
+				kelantan
+				klang
+				ko_samui
+				koba
+				komering
+				kota_kapur
+				kota_pinang
+				kota_rentang
+				kotabumi
+				krabi
+				kraburi
+				krui
+				kuala_kampar
+				kuala_lipis
+				kualuh
+				kuantan
+				kuantan_riau
+				kubu_rokan
+				kunto
+				lakitan
+				lalan
+				lampung
+				lebonghitam
+				leko
+				lematang
+				linge
+				liwa_lampung
+				lubai
+				lumpur
+				malacca
+				manjung
+				manna
+				mardelong
+				menara
+				menggala
+				mesuji
+				meulaboh
+				muar
+				muara_sabak
+				mukomuko
+				musi
+				musi_hilir
+				natal
+				natuna_islands
+				padang
+				pagaruyung
+				pahang
+				paka
+				pakpak
+				palas_pasemah
+				palembang
+				pangkalan_kerinci
+				pangkalpinang
+				pannai
+				panyabungan
+				pariaman
+				pasai
+				pasaman
+				pattani
+				pelalawan
+				peranap
+				perbatasan
+				perbaungan
+				perlis
+				pesagi
+				peureulak
+				prabumulih
+				prasong
+				pulai
+				rantau_benar
+				rantau_panjang
+				rengat
+				rokan
+				sakai_riau
+				satingpura
+				semerlanga
+				senapelan
+				siak
+				sibolga
+				sichon
+				sigli
+				silou
+				singgora
+				singingi
+				singkil
+				sionomhudon
+				solok
+				sontang
+				sorkam
+				subi_islands
+				sukadana_lampung
+				sungai_jujuhan
+				sungai_penuh
+				susoh
+				takua_pa
+				talang_mamak
+				tambusai
+				tamiang
+				tanah_putih
+				tanjung_balai
+				tanjungpinang
+				tapaktuan
+				temasek
+				tembesi
+				tenggulang
+				tha_tong
+				thalang
+				thammarat
+				tingkip
+				tiyuh_tuha
+				topos
+				trang
+				trengganu
+				tungkal
+				wiang_sa
+				yala
 			}
 
 			include = "asia_advanced_tribe"
@@ -5213,7 +6318,70 @@ countries = {
 
 		JAV = { # Javanese Polities; P8.9;CAH-XI
 			own_control_core = {
+				bagaluhan
+				bajrajinaparamitapura
+				balambangan
+				balibo
+				bangkalan
+				banten
+				bawean
+				bima
+				borobudur
+				cianjur
+				cibadak
+				cibuaya
+				cimanuk
+				cirebon
+				daha
+				demak
+				dieng
+				dompu
+				gresik
+				jagaraga
+				jepara
+				julah
+				kandangwesi
+				kangean
+				kawali
+				lamakera
+				laran
+				larantuka
+				likusaen
+				lombok
+				lumajang
+				malang
+				matahun
 				mataram
+				melara
+				pacitan
+				pajang
+				pakembangan
+				pakuan
+				pandansalas
+				pangandaran
+				pangguyangan
+				pati
+				pekalongan
+				pulasari
+				purwalingga
+				sadeng
+				samprangan
+				sasak
+				semarang
+				sindangkasih
+				sugeneb
+				sumbawa
+				sumedang
+				sunda_kelapa
+				surabaya
+				taliwang
+				tegal
+				trowulan
+				tuban_java
+				tulungagung
+				tutuala
+				wangung
+				wengker
 			}
 
 			include = "asia_advanced_tribe"
@@ -5223,7 +6391,75 @@ countries = {
 
 		PHL = { # Philippine Societies; P8.9;CAH-XI
 			own_control_core = {
+				agno
+				agoo
+				aklan
+				araut
+				bago_negros
+				balabak
+				basud
+				batan
+				bay
+				bayambang
+				binalatongan
+				binalbagan
+				binawangan
+				bolinao
+				bongao
+				bool
+				botolan
+				buayan
+				buluan
+				busuanga
+				butuan
+				cabadbaran
+				cantilan
+				daet
+				dapitan
+				hubek
+				ibalong
+				ilog
+				initao
+				irong_irong
+				kabacan
+				kainta
+				kalalaw
+				kalamansig
+				kalapang
+				kangdaya
+				kumintang
+				kuta_watu
+				lamitan
+				langan
+				magalo
+				maimbung
+				makar
+				malabang
+				malandog
+				mamburao
+				mangarin
 				maynila
+				minduso
+				naga_bikol
+				panaon
+				pulilan
+				pulilu
+				samboangan
+				sarangani
+				sawangan
+				sibugay
+				sindangan
+				singhapala
+				siocon
+				surigao
+				talacogon
+				talibon
+				tanjay
+				taytay
+				tboli
+				tondo
+				tukuran
+				vidak
 			}
 
 			include = "asia_advanced_tribe"
@@ -5233,7 +6469,116 @@ countries = {
 
 		XCN = { # Bornean Societies; P8.9;CAH-XI
 			own_control_core = {
+				air_hitam
+				api_api
+				bangkalan_borneo
+				banjar
+				banua_lawas
+				barito
+				barulo
+				belayan
+				bengalon
+				berune
+				bunut
+				cantung
+				hulu_jelai
+				hulu_labuk
+				hulu_limbang
+				hulu_mahakam
+				hulu_padas
+				hulu_paser
+				hulu_pawan
+				hulu_sambas
+				hulu_segama
+				hulu_telen
+				igan
+				jelai
+				jembayan
+				jongkong
+				julau
+				julau_kutai
+				kahayan
+				kahayan_hilir
+				karangan
+				karau
+				kayan
+				kedang_pahu
+				kelay
+				kelinjau
+				kendawangan
+				kinabatangan
+				kota_marudu
+				kotawaringin_lama
+				kuamut
+				kubu
+				kudat
+				kumai
+				kuripan
+				kutai_lama
+				lahad_datu
+				lokan
+				mahakam
+				mandor
+				martapura
+				mempawah
+				mendawai
+				monterado
+				muara_bahan
+				muarakaman
+				mukah
+				nagara_borneo
+				ngabang
+				niah
+				padas
+				pagatan
+				paser
+				pegalan
+				pelaihari
+				pesaguan
 				pinoh
+				pontianak
+				sabangau
+				samarahan
+				sambaliung
+				sambas
+				sampit
+				sandakan
+				sandaran
+				sangata
+				sanggau
+				santubong
+				saribas
+				sarikei
+				sebuku
+				sebuyau
+				segah
+				sekadau
+				sekayam
+				selimbau
+				sepinang
+				seruyan
+				sesayap
+				sibumbong
+				sigam
+				silat
+				sugut
+				sukadana
+				sungai_lati
+				tandang_sari
+				tanjung_palas
+				tanjungpura
+				tanjungpuri
+				tarakan
+				tatau
+				tawau
+				tayan
+				telen
+				teluk_melano
+				tenggarong
+				tong_talun
+				trusan
+				tutong
+				tuyuk
 			}
 
 			include = "asia_advanced_tribe"
