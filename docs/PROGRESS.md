@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-19 - M6 complete Tier-1/2 government-profile coverage
+
+- Added anonymous tribal profiles for the fragmented Dacian, Getic, Bastarnae,
+  Sarmatian, and Alan polities, preserving their later migration and unification
+  paths rather than pre-scripting rulers.
+- Added anonymous Regional Kingship profiles for Kangju, Wusun, Dayuan, the
+  Sogdian city-state frame, and Khwarazm. Every Tier-1/2 roster tag now has a
+  generated government profile: 107 of 107.
+- Added a generator invariant that fails validation if that Tier-1/2 profile
+  coverage regresses.
+- Regenerated M6/start data. `make validate` reports 107 government profiles;
+  the enabled-mod smoke reached the rendered menu with zero new error-log
+  lines.
+
+Next: expand the still-thin named-character/dynasty and regnal-history rosters,
+then driver-test Rome, Han, and Parthia against the M6 acceptance screens.
+
 ## 2026-07-19 - M6 India and Africa anonymous profiles
 
 - Added anonymous Regional Kingship profiles for Satavahana, Kalinga, Chera,

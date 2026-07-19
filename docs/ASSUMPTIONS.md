@@ -648,3 +648,13 @@ invented incumbents. Aksum is modelled as an advanced chiefdom as required by
 P8.5; Blemmyes and Beja retain anonymous SoP tribal profiles. Djenné-Djenno is
 represented as a settled town cluster with no named ruler or asserted council
 constitution. Sources weighed: P8.4-P8.5; P13; CAH-XI; PER; PLE. [contested]
+
+## 2026-07-19 - Danubian Pontic and Central Asian anonymous profiles
+
+The fragmented Dacian, Getic, Bastarnae, Iazyges, Roxolani, Aorsi, Siraces, and
+Alan frames retain anonymous tribal governments, rather than importing later
+leaders, migrations, or Decebalus's consolidation into AD 1. Kangju, Wusun,
+Dayuan, Sogdian city-states, and Khwarazm use anonymous regional kingship;
+this identifies an attested political form without asserting a unitary court
+for every Sogdian city. Sources weighed: P8.7-P8.8; P13; CAH-XI; CHG; PLE.
+[contested]

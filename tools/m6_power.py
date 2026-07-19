@@ -15,6 +15,7 @@ from dates import AntqDate, BiographyDate, M2_MIRROR_LANGUAGES
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "docs/m6"
 TAG_MAP = ROOT / "docs/world_1ad/tag_map.json"
+POLITIES = ROOT / "docs/world_1ad/polities.csv"
 GOVERNMENT_TYPES = ROOT / "docs/vanilla_symbols/government_type.json"
 LOC_ROOT = ROOT / "main_menu/localization"
 REFORM_OUTPUT = ROOT / "in_game/common/government_reforms/00_antiquitas_m6_core.txt"
@@ -297,6 +298,15 @@ def load_power_data() -> PowerData:
                 failures.append(f"government {row['design_tag']} uses unknown societal value {key}")
             if not re.fullmatch(r"-?\d+", value) or not -100 <= int(value) <= 100:
                 failures.append(f"government {row['design_tag']} has invalid societal value {key}={value}")
+
+    with POLITIES.open(encoding="utf-8-sig", newline="") as handle:
+        tier_tags = {
+            row["tag"]
+            for row in csv.DictReader(handle)
+            if row.get("tier") in {"1", "2"} and row.get("tag")
+        }
+    for design_tag in sorted(tier_tags - set(governments)):
+        failures.append(f"missing M6 government profile for Tier-1/2 tag {design_tag}")
 
     term_tags: set[str] = set()
     term_pairs: set[tuple[str, str]] = set()
