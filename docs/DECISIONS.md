@@ -1,5 +1,17 @@
 # Technical and Design Decisions
 
+## 2026-07-19 - Legion political power uses the privilege/disaster fallback
+
+The local `common/estates/00_default.txt` is a global estate-type registry.
+Its seven installed definitions have no country-potential or setup attachment
+field, and a local search found no `add_estate`/`remove_estate` effect that
+could instantiate a Rome-only estate. Estate UI, privileges, events, and
+parliament resources also enumerate fixed installed estate identities. A custom
+Legion estate would consequently be a system-wide unverified contract, not the
+plan's country-specific political actor. M6 retains the locally tested
+Praetorian Donatives privilege on its explicit noble-estate adapter; M10 owns
+legionary donative, acclamation, and crisis-disaster interactions.
+
 ## 2026-07-19 - Han Mandate maps to the installed legitimacy surface
 
 The local Chinese bureaucracy definitions and government-reform files use

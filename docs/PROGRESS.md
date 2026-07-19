@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-19 - M6 Legion-estate feasibility result
+
+- Inspected the local estate registry, setup surface, effects, UI, and related
+  content. Estates are global fixed types and no safe country-scoped attach or
+  create effect is available, so a bespoke Roman Legion estate would be an
+  unproven system-wide contract rather than a Rome-only mechanic.
+- Retained the plan's permitted fallback: the existing, smoke-tested Praetorian
+  Donatives privilege represents the AD 1 military-patronage surface; dated
+  legionary acclamation and third-century crisis interactions belong to M10.
+
+Next: continue source-qualified Tier-1/2 court and political-mechanics work;
+the legionary crisis path is deferred by design, not silently omitted.
+
 ## 2026-07-19 - M6 Han Mandate adapter
 
 - Added a conservative `monthly_legitimacy` modifier to Han Imperial
