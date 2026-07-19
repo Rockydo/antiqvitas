@@ -44,8 +44,9 @@ after `make full` and its autonomous driver report are green.
 - [x] Seed and smoke-check the additive culture/religion foundation (69 cultures, 37 religions, 27 culture groups, and 14 religion groups).
 - [x] Generate and smoke-check engine-valid ancient dialect/namelist layers (27 language roots, dialects, and localized source-name pools).
 - [x] Bind the sourced culture/faith tree to all 157 country profiles (34 regional bases and 45 source-labelled tag overrides).
-- [ ] Bind the sourced culture/faith tree to global pop data and generate ancient dynamic names.
-- [ ] Pass population, culture, religion, and `-leavepops` checks.
+- [x] Bind the sourced culture/faith tree to global pop data (13,552 base pops; 230,000 thousand total; all section 12.4 macro checks).
+- [ ] Generate ancient dynamic location names and expand the culture/location remap toward the 350–500-culture target.
+- [ ] Pass the final culture/religion atlas checks; population and raw `-leavepops` checks are green.
 - [ ] Run milestone gate and tag `M4-done`.
 
 ## M5 — Economy
