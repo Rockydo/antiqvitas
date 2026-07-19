@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 — M5 Via Appia and Uttarapatha expansion
+
+- Added four checked road segments: the Via Appia from Rome through the
+  available Benevento, Taranto, and Brindisi proxies, plus a high-level
+  Attock/Taxila–Mathura Uttarapatha connection. The M5 road manager now has 29
+  source-labelled segments.
+- `make validate` and an enabled-playset `make smoke` are green with zero new
+  error-log lines.
+
+Next: continue the remaining M5 economy anchors and begin the focused
+trade-flow verification rather than treating this sparse network as a survey.
+
 ## 2026-07-19 — M5 Taxila market correction
 
 - Added the plan-listed Taxila market and city node at the pre-existing

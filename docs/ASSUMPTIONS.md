@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-19 — Via Appia and Uttarapatha map-link proxies
+
+The Via Appia reached Brindisi but cannot be represented at its first historical
+intermediate stop because the installed map lacks Capua. Rome–Benevento is
+therefore a deliberately long first engine link; Benevento–Taranto–Brindisi
+follows as separate legs. Taxila/Attock–Mathura is likewise a high-level
+Uttarapatha edge, reflecting the UNESCO-listed ancient highway's named cities
+rather than a claim of a single uninterrupted road segment. Sources weighed:
+ORBIS; Italian Ministry of Culture on the Appian Way
+(https://cultura.gov.it/luogo/parco-archeologico-dell-appia-antica-tratto-demaniale-della-via-appia-con-annessi-monumenti-e-mausolei);
+UNESCO on Uttarapatha (https://whc.unesco.org/en/tentativelists/5492/).
+[contested]
+
 ## 2026-07-19 — Taxila market represented at Attock
 
 The Taxila archaeological complex included Sirsukh, a first-century AD city,
