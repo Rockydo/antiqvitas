@@ -3234,7 +3234,25 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = antq_nambed
+				ruler_term = { character = antq_nambed start_date = 1.1.1 }
+				reforms = {
+					antq_parthian_subkingdom
+				}
+				privilege = {
+					antq_parthian_subking_autonomy
+				}
+				laws = {
+					antq_parthian_subking_law = antq_regional_court_compact
+				}
+				centralization_vs_decentralization = 15
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -25
+				capital_economy_vs_traditional_economy = 15
+			}
 			capital = istakhr
 		}
 
