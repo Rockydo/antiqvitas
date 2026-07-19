@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-19 — M4 state-profile overrides
+
+The 45 `docs/m4/tag_profiles.csv` overrides use the roster's relevant P8
+section together with the culture and religion catalogues' P10/P11/CAH-XI/OCD
+citations. They identify unusually well-attested state or court profiles such
+as Roman Latin civic religion, Second Temple Jewish Herodian clients, Arsacid
+Iranian courts, Tamilakam kingdoms, South Arabian kingdoms, and named American
+societies. They do not assert that every inhabitant shared the listed profile.
+All remaining countries inherit their explicitly labelled regional scaffold;
+those broad defaults remain contested until location-level M4 population
+allocation is researched and generated. [contested]
+
 ## 2026-07-19 - Residual societies-of-peoples coverage
 
 The final M3 coverage ledger assigns otherwise-unclaimed inhabited land only to

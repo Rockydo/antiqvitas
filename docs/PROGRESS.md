@@ -1,5 +1,24 @@
 # Progress
 
+## 2026-07-19 — M4 country-profile binding
+
+- Replaced all temporary vanilla culture/religion country-definition references
+  with M4's source-labelled profiles. The catalogue supplies 34 regional bases
+  for all 157 active polities and 45 reviewed tag-level overrides for states
+  whose profile is materially clearer than its regional scaffold.
+- The generator now validates complete regional coverage, roster-tag validity,
+  and M4 culture/religion symbols before it writes anything. Existing M3 map
+  colors and placeholder flags remain deliberately separate from the historical
+  profile data.
+- `make validate` and a real menu `make smoke` both passed, with zero new
+  `error.log` line types. The smoke detector now uses a 30-second minimum plus
+  15 seconds of debug-log quiescence, which completed successfully in the
+  constrained automation slice.
+
+Next: allocate source-labelled AD 1 population totals through the ownership
+ledger, then verify the raw and adjusted setup with the required `-leavepops`
+and ordinary runs.
+
 ## 2026-07-19 — M3 American SoP coverage
 
 - Added the explicitly required Plains/Coastal and Pacific Coast SoP families,

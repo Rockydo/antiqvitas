@@ -1,5 +1,23 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — M4 profiles are data, not presentation fallbacks
+
+M3's `Profile` records remain the source of map colors and placeholder flag
+colors only. M4 introduces separate, source-labelled regional and tag profile
+tables; the generator combines the two at render time. This prevents a visual
+fallback from becoming an unreviewed historical assertion. It rejects a missing
+roster region, an unknown tag override, or an M4 symbol that has not been
+generated, rather than falling back to a vanilla culture or faith.
+
+## 2026-07-19 — Bounded menu-ready smoke heuristic
+
+The game-driver smoke check now requires a visible game window, 30 seconds
+from launch, and 15 seconds without debug-log growth. The previous 45+20
+second floor could not complete within the available 60-second automation
+command slice even after the game had reached the menu. The new threshold was
+proven against a full normal `make smoke`; it remains a menu-load check, not a
+substitute for milestone observer verification.
+
 ## 2026-07-19 — Roster before setup generation
 
 M3 starts from a CSV roster with explicit source, confidence, historical
