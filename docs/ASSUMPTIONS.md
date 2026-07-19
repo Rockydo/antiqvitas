@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 - Addedomaros has a contested Trinovantian court context
+
+Oxford's CCI 73.0310 dates an Addedomaros stater type 50 BCE-AD 10 and names
+him ruler of the Trinovantes, while recording Catuvellaunian authority metadata.
+The range crosses AD 1 but is insufficient to establish an exact reign or
+sequence. Addedomaros is therefore a contested court record only;
+Dubnovellaunos remains the engine ruler and no kinship, territorial settlement,
+office, or biography date is scripted. Sources weighed: P8.7; `CCI-ADD` in
+`docs/world_1ad/SOURCES.md`. [contested]
+
 ## 2026-07-19 - Agrippa's brothers are bounded Herodian court figures
 
 Josephus names Herod and Aristobulus as Agrippa's brothers, describes the

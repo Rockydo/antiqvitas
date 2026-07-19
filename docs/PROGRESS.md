@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-19 - M6 Trinovantian Addedomaros court record
+
+- Added Addedomaros as a contested Trinovantian court record from Oxford's
+  50 BCE-AD 10 coin-type range.
+- Dubnovellaunos remains the only engine ruler; no exact reign, kinship,
+  territorial settlement, office, or biography date is inferred.
+
+Next: regenerate, validate, smoke-test, then continue source-led Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Herodian brother court records
 
 - Added Herod and Aristobulus, Agrippa I's named brothers, as bounded
