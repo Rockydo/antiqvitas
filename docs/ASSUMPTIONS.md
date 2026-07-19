@@ -658,11 +658,17 @@ constitution. Sources weighed: P8.7; P13; CAH-XI. [contested]
 
 The start roster preserves the named Brittonic and Irish polities required by
 P8.7, but its source route does not establish a current ruler for the
-Trinovantes, Iceni, Brigantes, Atrebates, Silures, Ordovices, Dumnonii,
-Caledonian societies, or Ulaid on 1 January AD 1. They receive anonymous tribal
-profiles rather than fabricated courts. Boudica, Cartimandua, Verica, and the
+Trinovantes, Iceni, Brigantes, Silures, Ordovices, Dumnonii, Caledonian
+societies, or Ulaid on 1 January AD 1. They receive anonymous tribal profiles
+rather than fabricated courts. Boudica, Cartimandua, Verica, and the
 Roman-conquest sequence remain dated M10 history rather than evidence for a
 start-date incumbent. Sources weighed: P8.7; P13; CAH-XI. [contested]
+
+Tincomarus is the source-qualified Atrebatic exception: the Oxford Celtic Coin
+Index dates a coin naming him as Atrebatic authority to 20 BCE-AD 10, which
+covers the campaign boundary. The engine record adds neither a life date nor
+the later deposition/Verica sequence. Sources weighed: P8.7; `CCI-TIN` in
+`docs/world_1ad/SOURCES.md`.
 
 ## 2026-07-19 - Eastern anonymous courts and societies
 
