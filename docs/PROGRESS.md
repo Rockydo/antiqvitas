@@ -1,5 +1,27 @@
 # Progress
 
+## 2026-07-19 — M6 core power foundation
+
+- Added a checked data-to-script pipeline for three core historical government
+  profiles, three dynasties, and nine named AD 1 characters. Rome now has the
+  Principate reform with Augustus, Livia, and Gaius Caesar as explicit heir;
+  Tiberius is deliberately not an heir. Western Han has Emperor Ping and Wang
+  Mang's dated regency; Parthia has Phraates V and Musa. The source and
+  chronology ledger is [M6 core foundation](m6/CORE_FOUNDATION.md).
+- The character-date gateway now allows constrained signed B.C.E. biography
+  dates only in `birth_date`/`death_date`; campaign time remains constrained to
+  AD 1–476. The build uses the locally verified five government types as
+  technical adapters, with new historical reforms rather than invented types.
+- Corrected Western Han's AD 1 capital from Luoyang to Chang'an through the
+  existing Jingzhao/Xi'an anchor; the rebuilt geographical review is 4.4 px
+  from the sourced coordinate and the dynamic-name layer now has 62 anchors.
+- `make validate` and the enabled-mod `make smoke` are green with zero new
+  menu-log lines. An observer game reached `08:00, 1 January, 1`; the detailed
+  partial runtime record is [M6 core playtest](playtests/M6_CORE_FOUNDATION.md).
+
+Next: extend the M6 ledger across the remaining Tier-1/2 governments and
+rosters while the country-inspector driver coverage issue remains recorded.
+
 ## 2026-07-19 — M5 Han Taixue anchor
 
 - Added the Taixue at Chang'an through the engine-valid `confucian_academy`

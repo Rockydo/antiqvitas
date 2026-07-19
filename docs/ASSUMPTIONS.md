@@ -1,5 +1,29 @@
 # Historical Assumptions
 
+## 2026-07-19 — M6 core ruler chronology and date precision
+
+The first roster follows plan §§8.1–8.3 and §19: Augustus/Livia/Gaius Caesar
+(with Tiberius present but not heir before AD 4), Emperor Ping under Wang
+Mang's regency, and Phraates V with Musa. Where an ancient source supports a
+year but not a day/month, the generated data uses 1 January strictly as an
+engine convention and labels that entry `contested`; Musa and Phraates V have
+no biographical date scripted rather than an invented one. Sources weighed:
+the project `OCD` and `CAH-XI` syntheses; Columbia's [introduction to Ban Gu's
+*Book of the Former Han*](https://www.columbia.edu/itc/religion/f2001/docs/pan_ku.html);
+Mark Edward Lewis's [Han chronology](https://openresearch-repository.anu.edu.au/server/api/core/bitstreams/3df5d9aa-26db-44c1-8372-14d21d5a4250/content);
+and Marek Jan Olbrycht's *Encyclopaedia Iranica*, [“Phraates
+V”](https://www.iranicaonline.org/articles/phraates-v/). [secure except where
+the ledger marks a date contested]
+
+## 2026-07-19 — Chang'an, not Luoyang, is the Western Han AD 1 capital
+
+Luoyang is intentionally retained as a major Han metropolitan market, but it
+was not Western Han's capital under Emperor Ping. The country capital and
+dynamic historical name therefore use the locally mapped Jingzhao/Xi'an anchor
+for Chang'an. Its 34.265 N, 108.950 E source coordinate projects 4.4 pixels
+from Jingzhao in the installed map. Sources weighed: P8.3; BHR; the Han
+chronology linked above. [secure]
+
 ## 2026-07-19 — Via Appia and Uttarapatha map-link proxies
 
 The Via Appia reached Brindisi but cannot be represented at its first historical

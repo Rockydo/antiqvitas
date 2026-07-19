@@ -1,5 +1,16 @@
 # Known Issues
 
+## M6 country-inspector driver coverage gap
+
+The M6 core observer session successfully rendered the AD 1 map at `08:00,
+1 January, 1`, but the driver could not reliably select Rome/Han/Parthia or
+open the visible console panel under the host's scaled window geometry. Two
+recorded console attempts reached `console_history.txt`, while the screenshot
+surface continued to show the map. The session's `error.log` contains no M6
+identifier; its broad vanilla-government/HRE errors remain the existing
+M3/M9 runtime boundary. The targeted country UI verification remains open;
+see `docs/playtests/M6_CORE_FOUNDATION.md`.
+
 ## M5 RGO runtime coverage gap
 
 The source-led RGO ledger and generated full location-template file pass static
