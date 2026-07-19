@@ -942,3 +942,18 @@ profiles to country/pop coverage, and only then render the M4 global pop pass.
 
 Next: bind sourced profiles to every active country and render populations from
 the territorial ownership ledger against the section 12.4 targets.
+
+## 2026-07-19 - M6 southern Arabian court evidence pass
+
+- Rechecked the M3/Saba-Himyar-Qataban profiles and two specialist-source
+  routes for a campaign-boundary ruler. The evidence supports the polities and
+  later first-century activity, but not a named incumbent on 1 January AD 1.
+- Recorded the bounded omission in `BLOCKERS.md`, `ASSUMPTIONS.md`, and the
+  source ledger. Existing M3/M4 profiles remain in place; no game-visible
+  data was invented or changed.
+- The native `make.cmd validate` entry point is green: pdxlint, M6 generation,
+  roster, start mirror, dates, and population checks all pass. This was a
+  documentation-only evidence pass, so it required no game-visible smoke.
+
+Next: continue the M6 Tier-1/2 roster with courts whose AD 1 incumbency can be
+placed from a source.

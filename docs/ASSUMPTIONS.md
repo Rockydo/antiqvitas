@@ -585,3 +585,15 @@ Taixue, rather than a later examination-era academy. Its city-scale placement
 is a proxy for the capital institution; it does not map a precise building
 footprint. Source weighed: University of Chicago Press, *History of
 Humanities*, "The Humanities in China: History and Challenges." [secure]
+
+## 2026-07-19 - Southern Arabian AD 1 named courts withheld
+
+Saba, Himyar, and Qataban remain represented by their already sourced polity,
+culture, and religious profiles, but no named ruler is added at the campaign
+boundary. The Oxford Classical Dictionary establishes first-century Himyarite-
+Sabaean competition without supplying a current king, while the available
+Qatabanian epigraphic evidence places Yuhargib III in the middle of the first
+century. This is an evidence-led omission, not an assertion that the kingdoms
+lacked rulers; a name is added only when a source connects an individual to AD
+1. Sources weighed: P8.6; `OCD-HIM`; `ABG-QAT` in
+`docs/world_1ad/SOURCES.md`. [contested]

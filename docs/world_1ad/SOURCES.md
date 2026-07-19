@@ -41,6 +41,8 @@ a row reaches `implemented` status.
 - `IRIS-NAM`: [IRIS / Greek Coinage's Nambed of Persis record](https://greekcoinage.org/iris/id/persepolis.nambed.klose_museler.2008.4.44-5?lang=en), used for the broad AD 1-100 numismatic dating; it does not establish a precise accession, biography, or succession.
 - `IRAN-AZES`: David MacDowall's *Encyclopaedia Iranica*, ["Azes"](https://www.iranicaonline.org/articles/azes/), used for the Indo-Scythian Azes dynasty, its coin-led sequence, and the broad 50 BCE-CE 30 context.
 - `IRAN-IGR`: Osmund Bopearachchi's *Encyclopaedia Iranica*, ["Indo-Greek Dynasty"](https://www.iranicaonline.org/articles/indo-greek-dynasty/), used for Strato II's last eastern-Punjab court and its fall around AD 10.
+- `OCD-HIM`: *Oxford Classical Dictionary*, ["Himyar"](https://academic.oup.com/edited-volume/61673/chapter-abstract/548062792), used for first-century South Arabian political context, not a current AD 1 ruler.
+- `ABG-QAT`: M. A. A. Bayoumi, ["Two Old South Arabian Inscriptions: Early and Late"](https://abgad.journals.ekb.eg/article_55744_3863aa70f25af459bb9fd21541fe81c4.pdf), used to establish that the Yuhargib III evidence is mid-first-century rather than campaign-boundary evidence.
 
 Rows marked `contested` have a corresponding entry in `docs/ASSUMPTIONS.md`.
 `TBD` map capitals are historical roster records awaiting a verified mapping to
