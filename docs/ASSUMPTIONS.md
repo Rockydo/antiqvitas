@@ -1091,3 +1091,16 @@ career. The seven records are consequently narrow, contested court context;
 the two royal figures use separate labels rather than asserting a House-of-Liu
 genealogy. Sources weighed: P8.3; `CTP-PING2` in
 `docs/world_1ad/SOURCES.md`. [contested]
+
+## 2026-07-19 - Independently dated Roman lives establish survival, not roles
+
+The University of Louvain places Velleius Paterculus c. 19 BCE-AD 30; Roman
+Inscriptions of Britain gives Servius Sulpicius Galba's 24 December 3 BCE-15
+January AD 69 life; and the British Museum gives Lucius Annaeus Seneca a 4
+BCE?-AD 65 span. Those dates securely put all three across the campaign
+boundary, independently of the Fasti age inference. They do not establish a
+1 January office, command, residence, ability, adoption, family graph,
+biography field, or later career. Galba's record is separate from the AD 22
+consul Gaius Sulpicius Galba rather than an asserted Sulpician genealogy.
+Sources weighed: P8.1; `UCL-VEL`; `RIB-GAL`; `BM-SEN` in
+`docs/world_1ad/SOURCES.md`. [secure survival; contested engine context]
