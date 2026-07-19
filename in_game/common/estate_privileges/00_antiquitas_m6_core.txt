@@ -160,3 +160,21 @@ antq_regional_royal_court = {
 		country_cabinet_efficiency = 0.025
 	}
 }
+
+antq_chiefly_court = {
+	estate = tribes_estate
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		tribes_estate_target_satisfaction = small_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.025
+	}
+}
+
+antq_town_cluster_council = {
+	estate = burghers_estate
+	country_modifier = {
+		global_burghers_estate_power = 0.10
+		burghers_estate_target_satisfaction = small_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.025
+	}
+}

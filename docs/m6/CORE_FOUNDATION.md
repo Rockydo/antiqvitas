@@ -131,6 +131,16 @@ entries improve the shared government surface but do not resolve the existing
 named-court research blockers for Elymais, Adiabene, Gordyene, Saba, Himyar,
 or Qataban. Sources: P8.2; P8.6; P13; CAH-XI; OCD; PLE.
 
+## Indian and African anonymous profiles
+
+Satavahana, Kalinga, Chera, Chola, Pandya, and Garamantes use anonymous
+Regional Kingship profiles. Emerging Aksum uses the plan-required Advanced
+Chiefdom adapter, Blemmyes and Beja use anonymous tribal profiles, and
+Djenné-Djenno uses a distinct Settled Town Cluster republic adapter. The latter
+two specialised adapters distinguish polity/settlement form only; neither
+invents a ruler or constitutional detail. Sources: P8.4-P8.5; P13; CAH-XI;
+PER; PLE.
+
 ## Coinage standards
 
 Rome's socioeconomic law uses the installed gold-and-silver minting contract

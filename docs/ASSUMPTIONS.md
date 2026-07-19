@@ -639,3 +639,12 @@ governmental adapters for attested polities, not claims of known start-date
 incumbents. The three existing named-court evidence gaps and the Southern
 Arabian named-court gap remain documented in `BLOCKERS.md`. Sources weighed:
 P8.2; P8.6; P13; CAH-XI; OCD; PLE. [contested]
+
+## 2026-07-19 - Indian and African anonymous political profiles
+
+Satavahana's AD 1 interregnum, Kalinga, the Sangam-era Tamil kingdoms, and the
+Garamantes are represented by anonymous regional monarchies rather than
+invented incumbents. Aksum is modelled as an advanced chiefdom as required by
+P8.5; Blemmyes and Beja retain anonymous SoP tribal profiles. Djenné-Djenno is
+represented as a settled town cluster with no named ruler or asserted council
+constitution. Sources weighed: P8.4-P8.5; P13; CAH-XI; PER; PLE. [contested]
