@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-19 - M6 Near Eastern court roster
+
+- Replaced the random-ruler profiles of Emesa, Osroene, Media Atropatene, and
+  Armenia with Iamblichus II, Abgar V Ukkama, Ariobarzanes II, and the contested
+  Tigranes IV-Erato court. New source-labelled dynasties and current terms are
+  validated alongside each profile.
+- Added checked Parthian Sub-Kingdom and Buffer Kingdom adapters with their
+  own court-autonomy privileges and governance laws. They are deliberately
+  bounded before M9 implements true subject contracts. The detailed source and
+  uncertainty record is in [the secondary M6 roster](m6/SECONDARY_AD1_ROSTER.md).
+- `make validate` is green with 21 dynasties, 33 characters, 21 government
+  profiles, 12 privileges, and 11 laws; the enabled-mod smoke reached a
+  rendered menu with zero new error-log lines.
+
+Next: continue across source-qualified Tier-1/2 courts and political mechanics
+without treating the narrow Near Eastern slice as a complete Parthian system.
+
 ## 2026-07-19 — M6 current ruler terms and regnal-ledger boundary
 
 - Added a checked 17-row current-ruler-term ledger and rendered it into every

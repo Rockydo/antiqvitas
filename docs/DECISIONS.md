@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-19 - Near Eastern courts use explicit regional adapters
+
+EU5 provides no historical sub-kingdom or border-court government type. M6
+therefore adds `antq_parthian_subkingdom` and `antq_buffer_kingdom` as unique
+reforms over the locally verified monarchy type, with separately labelled
+privilege/law adapters. Media Atropatene uses the former; Osroene and Armenia
+use the latter. These are strictly pre-M9 political adapters: they do not
+assert a finished Parthian satrapy, Roman client, or neutral-buffer subject
+contract, which requires the planned diplomacy work.
+
 ## 2026-07-19 — Regnal histories are ledgered; current terms start at the campaign boundary
 
 The installed engine accepts a signed pre-AD-1 `ruler_term` while parsing the

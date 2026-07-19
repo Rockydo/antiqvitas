@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-19 - Armenian AD 1 is a deliberately open succession boundary
+
+Tigranes IV and Erato are represented as the current Armenian court at the
+campaign boundary, but their fall and the transition toward Ariobarzanes II
+occur within AD 1 and are chronologically disputed at a granularity the start
+state cannot safely encode. The ledger therefore gives neither character a
+scripted death or end date, labels the court contested, and reserves any
+intra-year transition for a sourced M10 situation. Sources weighed: P8.2;
+CAH-XI; Pleiades; *Encyclopaedia Iranica* on [Armenia and Iran](https://www.iranicaonline.org/articles/armenia-ii/) and
+[Media Atropatene](https://www.iranicaonline.org/articles/azerbaijan-iii/).
+[contested for the exact AD 1 sequence; secure for the late Artaxiad court and
+Ariobarzanes II's subsequent role]
+
 ## 2026-07-19 — Regnal ledger separates conventional chronology from engine start state
 
 Augustus's 27 BCE–AD 14 reign and the contiguous Western Han sequence through

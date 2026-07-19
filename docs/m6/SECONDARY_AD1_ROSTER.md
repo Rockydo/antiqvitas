@@ -63,3 +63,19 @@ identifies Antiochus III as the son of the Commagene king whose death led to
 the AD 17 annexation: [collection record](https://www.britishmuseum.org/collection/term/BIOG205268).
 The exact Bosporan succession remains contested as required by the master plan;
 the data preserves Dynamis without adding unsupported succession links.
+
+## Near Eastern border courts
+
+The next M6 slice replaces four Tier-1 random-ruler profiles with five named
+people: Iamblichus II of Emesa, Abgar V Ukkama of Osroene, Ariobarzanes II of
+Media Atropatene, and the Armenian co-rulers Tigranes IV and Erato. It adds a
+Parthian Sub-Kingdom adapter for Atropatene and a narrowly labelled Buffer
+Kingdom adapter for Osroene and Armenia; both are technical representations of
+frontier-court politics, not claims of a uniform constitution.
+
+The Emesan and Osroene starts are secure from the project's OCD/Pleiades
+source route. The public scholarly cross-checks for the eastern courts are
+*Encyclopaedia Iranica* on [Media Atropatene](https://www.iranicaonline.org/articles/azerbaijan-iii/) and
+[Armenia and Iran](https://www.iranicaonline.org/articles/armenia-ii/). The
+Tigranes IV–Erato succession falls within AD 1, so it remains contested and
+open-ended: no death date, successor, or intra-year tag change is pre-scripted.

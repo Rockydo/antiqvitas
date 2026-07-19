@@ -77,6 +77,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the AD 1 Herodian client tetrarchy: Archelaus in Judea, Antipas in Galilee-Peraea, and Philip in Batanea.
 - [x] Add the next named Roman client rulers: Archelaus of Cappadocia, Antiochus III of Commagene, Rhoemetalces I of Thrace, and Dynamis of Bosporus.
 - [x] Render campaign-valid current `ruler_term` records for every implemented government and retain source-led Augustus/Western Han regnal back-history without scripting pre-AD-1 campaign dates.
+- [x] Add named Near Eastern courts for Emesa, Osroene, Media Atropatene, and contested AD 1 Armenia with qualified regional government adapters.
 - [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories.
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 

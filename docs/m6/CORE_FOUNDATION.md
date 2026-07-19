@@ -52,6 +52,13 @@ institutions were generic early-modern monarchies. Their modifiers use only
 keys found in the local government-reform registry. Rome's successor is Gaius
 Caesar; Tiberius remains a non-heir character until the planned AD 4 event path.
 
+The later M6 regional slice adds two equally narrow `monarchy` reforms:
+Parthian Sub-Kingdom for Ariobarzanes II's Media Atropatene and Buffer Kingdom
+for Osroene and Armenia. The first represents a regional Iranian court's
+relationship to the Arsacid political world; the second represents frontier
+balancing. Neither establishes a bespoke subject contract; that belongs to the
+M9 satrapy/client mechanics pass.
+
 The second core slice renders five source-labelled privileges, four laws, and
 per-profile societal-value positions from CSV ledgers. It uses only installed
 estate keys, law categories, government groups, modifier keys, and country
