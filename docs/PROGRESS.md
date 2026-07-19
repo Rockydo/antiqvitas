@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-19 — M5 development foundation
+
+- Generated the installed development manager's first AD 1 profile: zero
+  inferred regional base, +2 for a road, +4 for a town, and +10 for a city.
+  The input table is small on purpose and rejects duplicate, unknown, or
+  uncontrolled selectors and out-of-range values.
+- This is engine scaling attached to the already source-labelled urban and
+  transport layers, not a substitute for M4's population history or a claim of
+  precise urban output. `make validate` and a real `make smoke` are green with
+  zero new error lines.
+
+Next: expand remaining ancient goods/buildings and repeat a longer observer
+trade-flow check before considering M5 complete.
+
 ## 2026-07-19 — M5 ancient transport corridors
 
 - Generated 25 source-labelled road segments for the Via Aurelia, Via Egnatia,

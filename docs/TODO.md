@@ -58,6 +58,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Seed and smoke-check 36 source-labelled urban market settlements with engine-valid town setups.
 - [x] Run the AD 1 observer foundation probe (map, observer mode, and ten days of market activity).
 - [x] Seed and smoke-check 25 source-labelled ancient transport-corridor segments.
+- [x] Seed and smoke-check the transparent city/town/road development profile.
 - [ ] Implement the remaining goods/RGOs, buildings/town setups, roads, and development.
 - [ ] Verify ancient trade flows; run milestone gate and tag `M5-done`.
 
