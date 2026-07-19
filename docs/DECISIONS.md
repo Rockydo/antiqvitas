@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Via Appia starts at the first installed inland proxy
+
+The installed location map has no Capua key. The road generator therefore uses
+one source-labelled Rome–Benevento high-level leg, then resumes the attested
+Benevento–Taranto–Brindisi sequence. This is marked contested in the ledger;
+it neither fabricates a Capua location nor presents the abstract engine edge as
+a geometrically exact Roman-road reconstruction. The Taxila–Mathura link uses
+the same explicit high-level convention for the named Uttarapatha corridor.
+
 ## 2026-07-19 — Taxila reuses the reviewed Attock geographic proxy
 
 The installed map has no `taxila` key. The world roster already resolves the
