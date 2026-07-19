@@ -110,6 +110,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add Kong Guang as a bounded senior Han court figure without turning a source office into an unsupported engine role.
 - [x] Add the named Han regency-circle officials Zhen Feng, Zhen Han, Ping Yan, and Liu Xin as court-only records.
 - [x] Replace Atrebates' anonymous government ruler with coin-attested Tincomarus, without projecting later British succession.
+- [x] Add Salome I to the Herodian Judean court without converting her settlement holdings into a separate state.
 - [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories.
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 
