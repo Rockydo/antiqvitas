@@ -106,3 +106,12 @@ antq_border_court_autonomy = {
 		country_cabinet_efficiency = 0.025
 	}
 }
+
+antq_second_temple_priesthood = {
+	estate = clergy_estate
+	country_modifier = {
+		global_clergy_estate_power = 0.20
+		clergy_estate_target_satisfaction = small_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.025
+	}
+}

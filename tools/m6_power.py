@@ -52,7 +52,8 @@ SOCIAL_VALUE_KEYS = frozenset((
 ))
 LAW_CATEGORIES = frozenset(("administrative", "military"))
 MODIFIER_KEYS = frozenset((
-    "country_cabinet_efficiency", "global_burghers_estate_power", "global_crown_estate_power",
+	"clergy_estate_target_satisfaction", "country_cabinet_efficiency", "global_burghers_estate_power",
+	"global_clergy_estate_power", "global_crown_estate_power",
     "global_levy_size_modifier", "global_nobles_estate_power", "global_pop_assimilation_speed_modifier",
     "global_pop_food_consumption", "global_tribes_estate_power",
     "burghers_estate_target_satisfaction", "land_morale_modifier", "monthly_towards_aristocracy",

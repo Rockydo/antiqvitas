@@ -198,3 +198,22 @@ antq_buffer_kingdom_law = {
 		}
 	}
 }
+
+antq_judean_temple_law = {
+	law_category = administrative
+	law_gov_group = monarchy
+	potential = {
+		government_type = government_type:monarchy
+	}
+	antq_temple_priestly_administration = {
+		country_modifier = {
+			global_clergy_estate_power = 0.05
+			country_cabinet_efficiency = 0.025
+		}
+		years = 2
+		estate_preferences = {
+			clergy_estate
+			nobles_estate
+		}
+	}
+}
