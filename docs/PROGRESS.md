@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-19 — M5 observer foundation probe
+
+- The autonomous driver loaded the active AD 1 world at `08:00, 1 January, 1`,
+  entered Observer Mode, and advanced the clock to `13:00, 11 January, 1`.
+  Captured frames show the intended political map plus AI market-construction
+  notifications while time is running.
+- No market, town-setup, RGO, or road errors appeared in the observer log. The
+  remaining runtime errors are the already tracked unset capital/government and
+  international-organization/HRE surfaces, now narrowed to M6 and M9.
+- The detailed, screenshot-linked record is `docs/playtests/M5_RUNTIME_FOUNDATION.md`.
+
+Next: add source-labelled roads and development, expand the remaining ancient
+goods/buildings, then repeat the longer trade-flow observer test.
+
 ## 2026-07-19 — Runtime-driver readiness repair
 
 - An inspected M5 driver screenshot revealed that the former log-quiescence
