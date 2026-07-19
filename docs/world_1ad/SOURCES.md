@@ -53,3 +53,8 @@ The Indian Ocean ownership expansion records P8.3/P8.4/P8.9 and, where useful,
 CAH-XI or *Periplus* on every area row. It captures coarse reviewed frames only;
 all such rows are explicitly `contested` rather than silently treating the
 installed area geometry as a period border.
+
+The Barbaricum expansion likewise uses P8.1/P8.2/P8.7 with CAH-XI. Its rows
+are deliberately marked `contested`: broad regional labels are a visible
+political-map scaffold, never an assertion that a present map-area boundary was
+an AD 1 frontier.
