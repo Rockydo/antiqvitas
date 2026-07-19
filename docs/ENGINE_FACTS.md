@@ -157,5 +157,11 @@ culture tag and a unique named color. Its `language` property resolves a nested
 dialect key, not a root language key. Each religion needs a nonempty
 `definition_modifier`, and culture/religion localization keys occupy one shared
 namespace. M4's generator now enforces the graphical-tag, unique-color,
-modifier, and namespace rules; a separate dialect extractor/generator is
-required before root-language catalogue entries can become runtime links.
+modifier, and namespace rules; its separate dialect generator is required
+before root-language catalogue entries can become runtime links.
+
+The completed M4 generator supplies 27 custom language roots/dialects. The
+language-family value is a fixed installed registry (new arbitrary values
+error); every name-pool token must resolve as a localization key. The generator
+therefore uses a source-recorded technical family adapter and emits a unique
+localized key for each source name.
