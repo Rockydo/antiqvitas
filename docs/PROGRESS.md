@@ -1233,3 +1233,15 @@ regency failure as a separately documented blocker.
 
 Next: continue source-led ruler and court coverage in the underrepresented
 Tier-1/2 polities.
+
+## 2026-07-19 - M6 Herodian court slice
+
+- Added Salome I, Herod's sister, to the Judean court. Josephus records her
+  post-4 BCE holdings of Jamnia, Ashdod, and Phasaelis within Archelaus's
+  governmental sphere.
+- The record does not turn that local settlement into a separate country or
+  add a life date, formal office, or deterministic succession. Its source
+  limits are recorded in [the Herodian court note](m6/HERODIAN_COURT_AD1.md).
+
+Next: continue direct-evidence court coverage across the remaining Tier-1/2
+polities.
