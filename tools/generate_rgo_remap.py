@@ -15,6 +15,7 @@ OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
 RULES = ROOT / "docs/goods_remap.csv"
 ANCHORS = ROOT / "docs/m5/rgo_anchors.csv"
+CUSTOM_GOODS = ROOT / "docs/m5/custom_goods.csv"
 OUTPUT = ROOT / "in_game/map_data/location_templates.txt"
 REPORT = ROOT / "docs/m5/rgo_remap_report.csv"
 LINE = re.compile(r"^(?P<location>[A-Za-z0-9_]+)\s*=\s*\{(?P<body>.*?\braw_material\s*=\s*)(?P<good>[A-Za-z0-9_]+)(?P<tail>.*)$", re.MULTILINE)
@@ -47,6 +48,11 @@ def rendered() -> tuple[str, str, int]:
             raise ValueError(f"RGO rules duplicate source good {source_good}")
         rules[source_good] = rule
     valid_goods = set(json.loads((ROOT / "docs/vanilla_symbols/good.json").read_text(encoding="utf-8-sig")))
+    custom_goods = rows(CUSTOM_GOODS)
+    custom_keys = {row.get("key", "").strip() for row in custom_goods}
+    if "" in custom_keys or len(custom_keys) != len(custom_goods):
+        raise ValueError("custom_goods.csv has blank or duplicate custom-good keys")
+    valid_goods |= custom_keys
     valid_regions = {row["region"] for row in roster_rows}
     for source_good, rule in rules.items():
         if source_good not in valid_goods or rule["replacement_good"] not in valid_goods:

@@ -1,5 +1,22 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Dedicated ancient goods use the full generated engine contract
+
+Papyrus, silphium, naphtha/bitumen, jade, and camels are separate raw goods,
+not cosmetic renames of paper, medicaments, tar, gems, or livestock. The local
+goods parser synthesizes eight modifier types for every good, so the generator
+renders the exact installed type contracts, their required UI name and
+description keys, and a neutral existing vanilla modifier-icon fallback. This
+keeps the new definitions additive, visible, and free of missing-symbol UI
+errors while preserving later balancing freedom.
+
+The installed game also requires BOM-encoded raw-goods scripts and streams
+both the 128x128 good icon and 1080x440 illustration. `tools/dds.py` now
+builds a complete DXT5 mip chain for every asset. It assembles individually
+ImageMagick-compressed levels for non-power-of-two illustrations because the
+upstream writer only auto-generates mips for power-of-two textures. The output
+headers and byte sizes match the inspected vanilla silk samples exactly.
+
 ## 2026-07-19 — Specialist buildings use the verified start manager
 
 The locally installed `07_cities_and_buildings.txt` proves that a start file
