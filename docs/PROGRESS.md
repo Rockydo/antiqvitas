@@ -1,5 +1,25 @@
 # Progress
 
+## 2026-07-19 — M5 specialist buildings and production anchors
+
+- Expanded the M5 ledgers to 39 source-labelled markets and urban nodes. Sidon,
+  Cologne, and Chengdu now supply period-appropriate specialist trade anchors
+  alongside the original hub set.
+- Added a checked `special_buildings.csv` generator layer that resolves each
+  installation's exact AD 1 owner tag and refuses an unknown building, map key,
+  uncontrolled site, non-urban site, duplicate, malformed level, or missing
+  source. It seeds 11 period-safe buildings: Rome's aqueduct/mint and pottery
+  proxy, Alexandria's library/Pharos/glass, Sidon and Cologne glassware, and
+  Chang'an/Luoyang/Chengdu lacquerware.
+- `make validate`, a real `make smoke`, and an autonomous observer probe are
+  green for this surface. The probe reached `16:00, 7 January, 1` with AI
+  market activity; no new specialist-building errors appeared. Evidence is in
+  `docs/playtests/M5_SPECIALIST_BUILDINGS.md`.
+
+Next: implement the genuinely missing custom-good and later-period-gated
+economy work without using misleading vanilla substitutions, then expand road
+and development density before the M5 trade-flow gate.
+
 ## 2026-07-19 — M5 development foundation
 
 - Generated the installed development manager's first AD 1 profile: zero

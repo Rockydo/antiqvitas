@@ -1,5 +1,22 @@
 # Historical Assumptions
 
+## 2026-07-19 — Specialist production and civic-building anchors
+
+The design bible explicitly identifies glassware at Sidon, Alexandria, and
+Cologne; Han lacquerware export; terra sigillata; the Roman aqueduct/mint
+layer; and the Alexandrian Pharos/library complex. These are represented with
+the installed period-neutral `glass_guild`, `lacquerware_guild`,
+`pottery_guild`, aqueduct, mint, library, and event-only Pharos slots. Sidon,
+Cologne, and Chengdu are deliberately added as source-labelled market-town or
+market-city anchors rather than inferred from the later vanilla urban map.
+
+`pottery` is an engine proxy for the plan's fine-ceramic/terra-sigillata
+production; it does not assert that every pottery output was terra sigillata.
+Papyrus, silphium, jade as a distinct good, camels, and naphtha/bitumen are not
+mislabelled as paper, gems, livestock, or wood tar here. They need dedicated
+good definitions, localization, UI art, and in some cases date gating. Sources
+weighed: P12.1; P12.3; P8.1–P8.3; P8.7; CAH-XI; BHR. [contested]
+
 ## 2026-07-19 — Development profile is not historical output data
 
 EU5's scalar development cannot be equated with ancient population, wealth, or

@@ -59,6 +59,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Run the AD 1 observer foundation probe (map, observer mode, and ten days of market activity).
 - [x] Seed and smoke-check 25 source-labelled ancient transport-corridor segments.
 - [x] Seed and smoke-check the transparent city/town/road development profile.
+- [x] Expand the specialist urban economy with source-led glassware, lacquerware, pottery, water, mint, library, and Pharos building anchors.
 - [ ] Implement the remaining goods/RGOs, buildings/town setups, roads, and development.
 - [ ] Verify ancient trade flows; run milestone gate and tag `M5-done`.
 

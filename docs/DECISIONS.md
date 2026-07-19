@@ -1,5 +1,21 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Specialist buildings use the verified start manager
+
+The locally installed `07_cities_and_buildings.txt` proves that a start file
+may provide `building_manager = { building = { tag = <engine tag> level = 1
+location = <location> } }`. M5 now renders that exact contract from a compact,
+source-labelled CSV rather than editing a large copied vanilla building file.
+The generator resolves the owner from the AD 1 ownership ledger and requires
+the location to have an AD 1 town/city profile, so ownership changes cannot
+silently leave an invalid building tag behind. The live new-game probe accepted
+the event-only Pharos and all other entries without a building-manager error.
+
+This pass uses only locally verified era-compatible building keys and level 1.
+It deliberately does not repurpose a later mill/manufactory or override a
+vanilla production method merely to claim a historical good; custom goods and
+their art remain a separate M5 implementation task.
+
 ## 2026-07-19 — Development is a transparent engine scale, not a census
 
 The installed development manager adds values from selectors such as `road`,
