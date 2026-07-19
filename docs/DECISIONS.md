@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Menu readiness requires visible rendering
+
+Driver readiness cannot be inferred from a quiet debug log or a surviving
+process: an M5 probe produced a black, hung window under those conditions. The
+driver now requires the Windows hung-app check to pass and samples the game
+client pixels, requiring at least five percent non-black coverage. This makes
+the stored screenshots evidence of a usable menu state rather than a process
+liveness artifact.
+
 ## 2026-07-19 — Source anchors override regional RGO rules
 
 `docs/goods_remap.csv` establishes broad ancient production limits, while
