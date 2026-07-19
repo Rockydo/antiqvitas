@@ -1,5 +1,17 @@
 # Technical and Design Decisions
 
+## 2026-07-19 - Second Temple priesthood uses the installed clergy estate
+
+The installed `common/estates/00_default.txt` and
+`common/estate_privileges/clergy_estate.txt` verify `clergy_estate`,
+`global_clergy_estate_power`, and `clergy_estate_target_satisfaction` as live
+contracts. M6 therefore represents the Second Temple priesthood with a
+namespaced clergy-estate privilege and a Judean administrative law, rather than
+adding an unproven country-specific estate. The generated profile and its
+enabled-mod smoke are green. This preserves a visible political actor while
+labelling the estate bucket as a narrow technical adapter, not a Christian or
+medieval social classification.
+
 ## 2026-07-19 - Near Eastern courts use explicit regional adapters
 
 EU5 provides no historical sub-kingdom or border-court government type. M6

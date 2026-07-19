@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-19 - M6 Second Temple priesthood adapter
+
+- Added a source-labelled Second Temple priesthood privilege and Judean Temple
+  Administration law for Herodian Judea. Both use the locally verified
+  `clergy_estate` surface, while the records explicitly limit it to a technical
+  proxy rather than a Christian hierarchy or exact high-priestly constitution.
+- Regenerated the M6/start data. `make validate` reports 22 dynasties, 34
+  characters, 22 government profiles, 22 ruler terms, 13 privileges, and 12
+  laws; enabled-mod `make smoke` reached the rendered menu with zero new
+  error-log lines.
+
+Next: continue sourced Tier-1/2 court and political-mechanics coverage; this
+Judean slice does not close M6's broader estate, government, or roster work.
+
 ## 2026-07-19 - M6 Caucasian Iberia court
 
 - Replaced Caucasian Iberia's random ruler with Pharasmanes I, a source-labelled

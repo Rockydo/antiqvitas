@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 - Second Temple priesthood is a bounded Judean gameplay proxy
+
+Herodian Judea in AD 1 is given a technical `clergy_estate` representation for
+the Second Temple priesthood, reflecting its major civic and religious role
+alongside Archelaus's ethnarchy. The mapping neither identifies the ancient
+priesthood with a Christian clerical hierarchy nor claims to reconstruct the
+precise legal authority, offices, or succession of the high priesthood. Sources
+weighed: P8.1; P11; P13; OCD. [secure for the Temple priesthood's historical
+importance; contested for the estate and administrative-law mapping]
+
 ## 2026-07-19 - Pharasmanes I is a campaign-boundary Iberian court record
 
 The plan identifies Pharasmanes I as the Caucasian Iberian ruler acceding about
