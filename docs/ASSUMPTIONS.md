@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 - Glaphyra is a bounded Cappadocian court figure
+
+Josephus names Glaphyra as King Archelaus of Cappadocia's daughter and recounts
+her life in the later tenth-year episode of Herod Archelaus's government. That
+post-boundary episode secures her survival at AD 1, but does not establish an
+exact birth or death date, campaign-start marriage, residence, office,
+succession, or further genealogy. She is therefore a living court character
+only. Sources weighed: P8.1; `JOS-GLA` in `docs/world_1ad/SOURCES.md`.
+[secure for the living court record; no claim for the omitted mechanics]
+
 ## 2026-07-19 - Malichus II is a qualified Nabataean court figure
 
 Ciecielag's peer-reviewed numismatic reconstruction treats Malichus, the
