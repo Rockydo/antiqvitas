@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 — Dynamic capital names are a limited first pass
+
+M4's first 61 dynamic names reproduce only the `historical_capital` labels of
+secure capital-coordinate rows. Pleiades/CHGIS/Samguk Sagi coordinate review
+establishes that the installed location is an acceptable anchor, not that every
+surrounding location has an attested AD 1 name. Contested anchors and all SoP
+geographic seeds retain their existing display name until a source-specific
+toponym review can distinguish an attested name from a plausible invention.
+Sources weighed: P8.1–P8.10; Pleiades; CHGIS; SAM. [contested]
+
 ## 2026-07-19 — AD 1 population distribution scaffold
 
 `docs/m4/population_targets.csv` implements every numeric range in plan §12.4,

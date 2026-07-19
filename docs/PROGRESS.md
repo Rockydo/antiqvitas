@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-19 — M4 dynamic-name v1
+
+- Added 61 conservative dynamic historical capital names from secure,
+  coordinate-reviewed anchors. The generated report records each location,
+  culture, language/dialect key, tag, and source; broad SoP proxies and
+  contested anchors remain intentionally untouched.
+- Every client localization receives the same English historical name. Both
+  language-root and dialect keys are emitted, matching the installed game’s
+  `location.language` naming convention and the M4 dialect culture contract.
+- `make validate` and a real `make smoke` passed with zero new error-log lines.
+
+Next: create the much denser, source-reviewed culture/location remap; do not
+mistake this auditable capital layer for the final M4 atlas.
+
 ## 2026-07-19 — M4 global-population foundation
 
 - Generated one culture-and-faith-checked base pop at each of the 13,552

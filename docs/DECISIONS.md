@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Conservative dynamic-name v1
+
+The first dynamic-name layer is limited to secure, coordinate-reviewed capital
+anchors and uses the period historical-capital label already recorded in the
+roster. It emits both `location.<M4 language>` and `location.<M4 dialect>`
+keys because cultures use the engine-required dialect form while installed
+location-name files demonstrate root-language keys. This is a verified-safe
+compatibility layer; it deliberately does not rename broad geographical
+proxies, for which a plausible label would be a historical assertion.
+
 ## 2026-07-19 — Population allocation is target-led and geographically weighted
 
 The M4 population generator makes section 12.4's documented macro totals its
