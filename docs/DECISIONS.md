@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Source anchors override regional RGO rules
+
+`docs/goods_remap.csv` establishes broad ancient production limits, while
+`docs/m5/rgo_anchors.csv` records a small set of source-labelled places whose
+goods are specifically named by the design bible. The generator resolves an
+anchor before a regional rule. This lets an attested silk, incense, pepper, or
+mine site correct the installed map without granting the same good to a broad
+region; the report records which mechanism changed each location.
+
 ## 2026-07-19 — M5 urban profiles are intentionally small and generated
 
 The 36 source-labelled market hubs each receive exactly one generated town or

@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 — Named resource anchor proxies
+
+Huelva represents the Rio Tinto district, Truro Cornwall tin, Sidon the Tyrian
+purple-dye coast, Al Mukha Muza, and Massawa Adulis/Horn incense. These are
+deliberately location-key proxies rather than claims of exact mine or workshop
+coordinates. Khotan retains the installed `gems` good as an engine proxy for
+jade; Paphos already carried the correct copper good and is retained as a
+checked anchor. Sources weighed: P12.1; P8.1–P8.7; Pleiades; *Periplus*;
+CAH-XI. [contested]
+
 ## 2026-07-19 — First-pass urban market ranks
 
 The M5 city/town classifications identify an engine settlement tier for the
