@@ -35,7 +35,9 @@ dynamic naming layer renders the ancient name. Current examples are
 Tiberias→Safed, Petra→Shoubak, Tyana→Bor, Samosata→Samsat, Emesa→Homs,
 Seuthopolis→Boruy/Stara Zagora, Ctesiphon→Baghdad, Persepolis→Istakhr,
 Arbela→Erbil, Artaxata→Khor Virap, Phasis→Poti, Kabalaka→Qabala,
-Uraiyur→Srirangam, Meroe→Shendi, Garama→Ubari, and Zafar→Dhafar. Sources
+Uraiyur→Srirangam, Meroe→Shendi, Garama→Ubari, Zafar→Dhafar, Taxila→Attock,
+Talmis→Kalabsha, Batavodurum→Nijmegen, Venta Icenorum→Norwich,
+Isurium→Ripon, Calleva→Basingstoke, and Caerwent→Monmouth. Sources
 weighed: P8.1–P8.6; Pleiades; local EU5 raster coordinate index. The nearby
 location is explicit in `polities.csv` and may be revised when a closer map key
 or an ancient naming overlay is available.

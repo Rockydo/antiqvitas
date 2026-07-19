@@ -264,6 +264,16 @@ countries = {
 			capital = turpan
 		}
 
+		XAX = { # Indo-Scythian Realm; P8.4;CAH-XI;PLE
+			own_control_core = {
+				attock
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = attock
+		}
+
 		XAY = { # Indo-Greek Rump; P8.4;CAH-XI
 			own_control_core = {
 				sagala
@@ -384,6 +394,16 @@ countries = {
 			capital = ubari
 		}
 
+		XBG = { # Blemmyes; P8.5;CAH-XI;PLE
+			own_control_core = {
+				kalabsha
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = kalabsha
+		}
+
 		DJN = { # Djenne-Djenno; P8.5;CAH-XI
 			own_control_core = {
 				djenne
@@ -432,6 +452,56 @@ countries = {
 			include = "east_asia_monarchy"
 			government = { ruler = random }
 			capital = prague
+		}
+
+		BTV = { # Batavi; P8.7;CAH-XI;PLE
+			own_control_core = {
+				nijmegen
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = nijmegen
+		}
+
+		XBX = { # Iceni; P8.7;CAH-XI;PLE
+			own_control_core = {
+				norwich
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = norwich
+		}
+
+		XBY = { # Brigantes; P8.7;CAH-XI;PLE
+			own_control_core = {
+				ripon
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = ripon
+		}
+
+		XBZ = { # Atrebates; P8.7;CAH-XI;PLE
+			own_control_core = {
+				basingstoke
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = basingstoke
+		}
+
+		XCA = { # Silures; P8.7;CAH-XI;PLE
+			own_control_core = {
+				monmouth
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = monmouth
 		}
 
 		DUM = { # Dumnonii; P8.7;CAH-XI
