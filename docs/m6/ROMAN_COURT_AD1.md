@@ -31,3 +31,8 @@ campaign boundary; his Parthian dynasty, culture, and religion remain Arsacid.
 This is not a premature succession script. Vonones's later Parthian and
 Armenian reigns stay with M10 history, and the record supplies neither an
 engine title, claim, office, nor biography date.
+
+The same Iranica record names his brothers Phraates the Younger, Seraspadanes,
+and Rhodaspes among the sons sent to Rome. They complete the evidenced Arsacid
+hostage group as court figures under the same narrow contract: their origin is
+Arsacid, their start context is Roman, and no later political role is inferred.

@@ -1185,3 +1185,14 @@ minority-regency runtime blocker remains open.
 
 Next: continue direct-evidence court coverage and mechanics work while the Han
 minority-regency runtime blocker remains isolated.
+
+## 2026-07-19 - M6 Roman-hosted Arsacid group
+
+- Added Phraates the Younger, Seraspadanes, and Rhodaspes alongside Vonones.
+  The *Encyclopaedia Iranica* source names all four sons of Phraates IV among
+  the people forwarded to Rome around 10 BCE.
+- Each remains a Roman-hosted court figure with Parthian/Arsacid identity and
+  no projected Parthian claim, office, ability score, or biography date.
+
+Next: continue direct-evidence court coverage while keeping later political
+careers in the M10 history pass.
