@@ -1,5 +1,17 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Regnal histories are ledgered; current terms start at the campaign boundary
+
+The installed engine accepts a signed pre-AD-1 `ruler_term` while parsing the
+menu, but the prior live AD 1 probe showed that historic term dates are
+validated against the campaign window at game instantiation. M6 consequently
+retains source-led back-history in `docs/m6/regnal_histories.csv`, while
+`tools/m6_power.py` renders exactly one current ruler term per implemented
+government at campaign-valid `1.1.1`. It validates every emitted term through
+`AntqDate`, forbids pre-campaign dates, and does not invent accession days.
+Later succession situations will consume the ledger instead of treating a
+technical start date as a historical accession claim.
+
 ## 2026-07-19 — Biography dates are a narrow signed-date domain
 
 Campaign time remains exclusively `AntqDate` (`1.1.1` through `476.9.4`).

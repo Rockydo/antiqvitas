@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-19 — Regnal ledger separates conventional chronology from engine start state
+
+Augustus's 27 BCE–AD 14 reign and the contiguous Western Han sequence through
+Ping (1 BCE–AD 6) are retained as source-labelled historical ledger entries.
+They are not emitted as a fictional pre-campaign game history: every active
+AD 1 ruler instead receives an engine term at the campaign boundary. This
+preserves the planned regnal context without asserting an invented accession
+day or overriding the campaign calendar. Sources weighed: OCD; BHR; the
+Metropolitan Museum's [Roman-empire chronology](https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d); and the plan-permitted
+[Han emperor chronology cross-check](https://en.wikipedia.org/wiki/List_of_emperors_of_the_Han_dynasty).
+[secure for the conventional reign spans; no claim is made for a day-level
+accession date]
+
 ## 2026-07-19 — Further Roman client courts avoid false precision
 
 Archelaus of Cappadocia and Antiochus III of Commagene are secure AD 1 rulers.

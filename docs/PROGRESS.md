@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-19 — M6 current ruler terms and regnal-ledger boundary
+
+- Added a checked 17-row current-ruler-term ledger and rendered it into every
+  implemented M6 government start profile. Every engine date is parsed through
+  `AntqDate` and begins at the AD 1 campaign boundary; no accession day is
+  invented.
+- Added the source-labelled Augustus and contiguous Western Han back-history
+  ledger (15 rows). An isolated signed pre-AD 1 parser probe added no menu-log
+  line, while prior live AD 1 evidence already shows such historical terms are
+  rejected when the start is instantiated. The technical/historical boundary is
+  recorded in [the M6 foundation note](m6/CORE_FOUNDATION.md).
+
+Next: add source-qualified courts and mechanics across the remaining Tier-1/2
+profiles; this bounded ledger is not the complete M6 character or succession pass.
+
 ## 2026-07-19 — M6 Roman client courts expansion
 
 - Added Archelaus of Cappadocia, Antiochus III of Commagene, Rhoemetalces I
