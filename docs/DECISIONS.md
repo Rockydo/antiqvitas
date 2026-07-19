@@ -60,6 +60,14 @@ Because M3 already requires exact replacement of every setup manager and AD 1
 ruler histories, the generated M2 layer is deferred rather than normalizing or
 accepting those errors. This preserves the zero-new-error invariant.
 
+## 2026-07-19 — M2 reactivated on the clean M3 mirror
+
+Once all 25 start-manager files were exact-name mirrored, the M2 generator was
+reactivated. A fresh smoke has zero new errors, and a driver-created AD 1
+observer save reloads at `08:00, 1 January, 1` with the Age of Principate
+header. M2 is therefore complete and tagged; the intentionally blank map in
+its final report is the separate, visible M3 ownership backlog.
+
 ## 2026-07-19 — Metadata compatibility and thumbnail placement
 
 The in-game version label is `1.3.1.1`, but the metadata comparator rejects

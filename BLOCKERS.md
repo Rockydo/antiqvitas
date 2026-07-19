@@ -2,8 +2,9 @@
 
 ## 2026-07-19 — M2 calendar waits on M3's full setup mirror
 
-Status: M2's calendar and save/reload proof succeeded, but its runtime layer is
-deferred rather than committed until M3 can remove the obsolete vanilla setup.
+Status: **resolved 2026-07-19.** M3 now mirrors all 25 start-manager files;
+M2 is active, smoke-clean, save/reload verified, committed, and tagged
+`M2-done`. The following is the historical reproduction record.
 
 `tools/dates.py --write-m2` generated an AD 1 to AD 476 calendar, five campaign
 ages, the required non-playable sixth-key compatibility sentinel, placeholder
@@ -32,6 +33,11 @@ returning the tree to a clean menu smoke. The generator, timeline, linter
 coverage, driver improvements, and visual evidence are retained. Re-run
 `tools/dates.py --write-m2` as part of M3 once the setup mirror is in place,
 then close M2 with a full runtime log check.
+
+Resolution: the exact M3 mirror was accepted by smoke, then the generated M2
+layer was restored. `make full` now passes with zero new lines; observer mode
+shows 1 January 1 / Age of Principate and a newly written save reloads at that
+same date. See `docs/playtests/M2_REPORT.md`.
 
 ## 2026-07-19 — Local documentation exporters do not complete
 

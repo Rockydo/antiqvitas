@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-19 — M2 closed on M3's clean base
+
+- Activated the generated 1 January AD 1–4 September 476 calendar, five live
+  age skeletons, and temporary M8 advance scaffolds on the exact M3 mirror.
+- `make full` is green with zero new errors. The autonomous driver entered
+  AD 1 observer mode, wrote an AD 1 save, and loaded it through the UI at the
+  same displayed date. M2 is tagged `M2-done`.
+- The report's blank map is intentional: historical countries/ownership remain
+  the next M3 content batch, while M2's date and save compatibility are now
+  independently clean.
+
+Next: expand verified capital mapping into country/capital/ownership data for
+the M3 start manager.
+
 ## 2026-07-19 — M3 start-manager purge
 
 - Generated all 25 exact-name start-manager overrides using the locally
