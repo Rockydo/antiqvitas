@@ -44,6 +44,13 @@ therefore prevents an out-of-range term from being emitted, while retaining the
 cited reign spans for later succession situations. This is intentional date
 safety, not a claim that every ruler acceded on 1 January AD 1.
 
+Western Han additionally renders a bounded Wang Clan Regency privilege. The
+*Han Shu* says that the Grand Empress Dowager entrusted the child emperor's
+government to Wang Mang and places administrative, military, and palace
+channels under his authority. The locally verified `nobles_estate` is only an
+affinal-regency proxy, not a claim that Wang kin were a European-style estate
+or that the full Han constitution has been reconstructed.
+
 ## Technical adapter
 
 EU5 1.3.1.1 exposes only `monarchy`, `republic`, `steppe_horde`, `theocracy`,

@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-19 - Wang-clan power is a bounded affinal-regency adapter
+
+The *Han Shu* reports that, at Emperor Ping's accession, the Grand Empress
+Dowager placed military seals, official reports, palace guards, and governance
+under Wang Mang and identifies his trusted regency circle. The game therefore
+uses the verified `nobles_estate` only as a technical proxy for that affinal
+network. It neither makes Wang kin a hereditary European-style estate nor
+reconstructs a complete Han constitution, later usurpation, or later court
+politics. Sources weighed: P8.3; P13; `CTP-WM` in
+`docs/world_1ad/SOURCES.md`. [contested technical representation]
+
 ## 2026-07-19 - Addedomaros has a contested Trinovantian court context
 
 Oxford's CCI 73.0310 dates an Addedomaros stater type 50 BCE-AD 10 and names

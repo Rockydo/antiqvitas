@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 - M6 Han Wang-clan regency adapter
+
+- Added a source-qualified Wang Clan Regency privilege to Western Han's active
+  AD 1 government profile.
+- It renders the Grand Empress Dowager's documented entrustment of governance
+  to Wang Mang through a bounded nobles-estate proxy, without claiming a full
+  Han constitution or projecting the later Xin usurpation.
+
+Next: regenerate, validate, smoke-test, then continue source-led Tier-1/2
+roster and institutional breadth while preserving the separate Han
+runtime-regency blocker.
+
 ## 2026-07-19 - M6 Trinovantian Addedomaros court record
 
 - Added Addedomaros as a contested Trinovantian court record from Oxford's
