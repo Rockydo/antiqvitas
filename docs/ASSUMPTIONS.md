@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-19 — Secondary ruler roster preserves uncertainty explicitly
+
+The first secondary M6 roster promotes the plan's named Juba II/Cleopatra
+Selene II, Aretas IV, Natakamani/Amanitore, Wuzhuliu, Yuri, Maroboduus,
+Arminius, Tasciovanus, and Cunobelinus. Where the project sources establish a
+ruler or court role but do not support a full genealogy or a day-level birth
+and death chronology, the data omits the date and uses a clearly named engine
+continuity label instead of inventing either. The Kushite co-rule maps to the
+engine ruler/consort slots without deciding a debated personal relationship.
+Sources weighed: P8.1, P8.3, P8.5, P8.7, and P13; CAH-XI; OCD; Pleiades; and
+the *Samguk Sagi* chronology, independently cross-checked against the
+[Encyclopedia of Korean Culture](https://encykorea.aks.ac.kr/Article/E0041388).
+[secure for plan-named ruler roles; contested for dynasty reconstruction and
+engine mappings]
+
 ## 2026-07-19 — Core political mechanics are bounded adapters
 
 The first Rome/Han/Parthia privilege and law set represents documented

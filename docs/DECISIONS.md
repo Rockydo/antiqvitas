@@ -29,6 +29,15 @@ and start-manager syntax validate. This avoids treating a technical UI bucket
 as a historical social classification, while giving the three core profiles
 distinct playable constraints.
 
+## 2026-07-19 — M6 uses the installed tribe and steppe-horde government types
+
+The installed `government_types/00_default.txt` permits
+`tribal_oldest_male` for both `tribe` and `steppe_horde`; the latter exposes
+horde-unity behavior. M6 therefore uses `steppe_horde` for Wuzhuliu's Xiongnu
+confederation and `tribe` for the Marcomannic and Catuvellaunian kingdoms,
+with source-labelled reforms, laws, and privileges. This is a tested engine
+choice, not a claim that the named polities were mechanically identical.
+
 ## 2026-07-19 — Western Han uses the Jingzhao/Xi'an Chang'an anchor
 
 The installed key `changan` is north of the historical city. The local

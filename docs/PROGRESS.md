@@ -1,5 +1,23 @@
 # Progress
 
+## 2026-07-19 — M6 secondary AD 1 rulers and government forms
+
+- Added eleven named secondary AD 1 people and nine explicitly qualified
+  dynastic labels: Maroboduus, Arminius, Juba II, Cleopatra Selene II, Aretas
+  IV, Natakamani, Amanitore, Wuzhuliu Chanyu, Yuri, Tasciovanus, and
+  Cunobelinus.
+- Mauretania and Nabataea now use client-monarchy adapters; Kush has named
+  Natakamani-Amanitore co-rule; Xiongnu uses the installed steppe-horde type;
+  Goguryeo has an early kingdom adapter; and Marcomanni/Catuvellauni use the
+  installed tribal type. The scoped source and uncertainty record is in the
+  [secondary roster note](m6/SECONDARY_AD1_ROSTER.md).
+- `make validate` is green with 12 dynasties, 20 characters, 10 governments,
+  10 privileges, and 9 laws. The enabled-mod `make smoke` also reached a
+  rendered menu with zero new `error.log` lines.
+
+Next: continue the Tier-1/2 ruler and government coverage rather than treating
+this focused secondary roster as the complete M6 character pass.
+
 ## 2026-07-19 — M6 core political mechanics
 
 - Extended the checked M6 power ledger with five source-labelled estate
