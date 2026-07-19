@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-19 - Wang Clan Regency reuses the verified nobles-estate contract
+
+The installed estate interface has no safe country-specific estate attachment,
+whereas the existing `nobles_estate` contract supports the small power,
+satisfaction, and cabinet modifiers needed for a bounded court-network adapter.
+The Wang privilege is assigned only to Western Han's AD 1 profile, so it does
+not create a global Han estate or a new engine system. Its historical limits
+are recorded separately in `ASSUMPTIONS.md` and the source ledger.
+
 ## 2026-07-19 - M6 enforces Tier-1/2 government coverage
 
 `tools/m6_power.py` now reads the reviewed AD 1 polity roster and fails if a
