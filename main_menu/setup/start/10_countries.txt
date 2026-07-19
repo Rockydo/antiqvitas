@@ -11063,7 +11063,8 @@ countries = {
 			government = {
 				type = tribe
 				heir_selection = tribal_oldest_male
-				ruler = random
+				ruler = antq_dubnovellaunos
+				ruler_term = { character = antq_dubnovellaunos start_date = 1.1.1 }
 				reforms = {
 					antq_tribal_kingdom
 				}
