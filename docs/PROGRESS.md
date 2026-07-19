@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 - M6 Adiabenian Monobazus I
+
+- Replaced Adiabene's anonymous ruler with the source-qualified Monobazus I
+  from an Iranica overview and a peer-reviewed numismatic chronology.
+- The reconstruction remains contested: the engine gets only a campaign-boundary
+  term, with no accession day, family graph, conversion, treaty, or later
+  succession. The limits are recorded in the Adiabenian court note and
+  `ASSUMPTIONS.md`.
+
+Next: regenerate, validate, smoke-test, then continue source-led Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 living Augustan court
 
 - Added Publius Quinctilius Varus and Marcus Valerius Messalla Corvinus from
