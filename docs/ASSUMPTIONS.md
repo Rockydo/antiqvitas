@@ -995,3 +995,11 @@ identity context scripts neither their later Jewish conversion nor a start
 marriage, parent graph, designated heir, succession, office, residence, or
 biography date. Sources weighed: P8.2; `IRAN-ADI`; `POS-ADI` in
 `docs/world_1ad/SOURCES.md`. [secure survival; contested engine context]
+## 2026-07-19 - Livilla and Tigranes V remain court-context records
+
+Wiley dates Livilla c. 13 BCE-AD 31, and the combined Josephus, Oxford, and
+numismatic source route establishes Tigranes V's survival into his later AD
+6-12 Armenian reign. Their `ROM` and `CAP` placements script no later marriage,
+children, office, physical residence, claim, succession, or biography date.
+Sources weighed: P8.1; `WIL-LIV`; `JOS-TIG`; `OCD-TIG5`; `ANRO-TIG5` in
+`docs/world_1ad/SOURCES.md`. [secure survival; contested engine context]
