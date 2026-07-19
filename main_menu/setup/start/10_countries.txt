@@ -3504,7 +3504,24 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = antq_pharasmanes_i
+				ruler_term = { character = antq_pharasmanes_i start_date = 1.1.1 }
+				reforms = {
+					antq_buffer_kingdom
+				}
+				privilege = {
+					antq_border_court_autonomy
+				}
+				laws = {
+					antq_buffer_kingdom_law = antq_balanced_allegiance
+				}
+				centralization_vs_decentralization = 10
+				aristocracy_vs_plutocracy = -25
+				capital_economy_vs_traditional_economy = 30
+			}
 			capital = mtskheta
 		}
 
