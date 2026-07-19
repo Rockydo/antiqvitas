@@ -4,20 +4,21 @@
 
 - Parsed the installed 16,384×8,192 location raster and all named-location RGB
   values into a build-bound centroid index for 28,573 EU5 locations.
-- Added a conservative, sourced historical-coordinate candidate report. Its
-  local projection has a 14.8-pixel anchor RMSE and proposes nearby map keys
-  for review without silently converting fuzzy geography into ownership.
+- Added a conservative, sourced historical-coordinate candidate report, then
+  improved its global affine fit with nearby-anchor residual correction for
+  northern latitudes. It proposes nearby map keys for review without silently
+  converting fuzzy geography into ownership.
 
 Next: assess the high-confidence geographic candidates one by one, then expand
 the capital-control slice from verified map locations.
 
 ## 2026-07-19 — M3 capital-control slice
 
-- Extended the exact start-manager generator from empty roots to 50 sourced
+- Extended the exact start-manager generator from empty roots to 57 sourced
   roster polities with a direct verified capital key. Each controls its capital
   through a collision-safe engine tag.
 - A real AD 1 new-game screen shows the initial 34-state version at their map
-  locations; the reviewed 50-state expansion remains smoke-clean at zero new
+  locations; the reviewed 57-state expansion remains smoke-clean at zero new
   error lines. The visual and scope judgment are recorded in
   `M3_CAPITAL_SLICE.md`.
 

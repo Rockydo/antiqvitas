@@ -50,7 +50,7 @@ def location_names() -> dict[str, str]:
     return result
 
 
-def projection(map_locations: dict[str, dict[str, float]]) -> tuple[float, float, float, float, float]:
+def projection(map_locations: dict[str, dict[str, float]]) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray, float]:
     anchors = rows(ANCHORS, REQUIRED_ANCHORS)
     longitudes = np.asarray([float(row["longitude"]) for row in anchors])
     latitudes = np.asarray([float(row["latitude"]) for row in anchors])
@@ -59,10 +59,38 @@ def projection(map_locations: dict[str, dict[str, float]]) -> tuple[float, float
         ys = np.asarray([map_locations[row["location"]]["y"] for row in anchors])
     except KeyError as exc:
         raise ValueError(f"projection anchor has no local map coordinate: {exc}") from exc
-    x_scale, x_offset = np.polyfit(longitudes, xs, 1)
-    y_scale, y_offset = np.polyfit(latitudes, ys, 1)
-    residual = float(np.sqrt(np.mean((xs - (x_scale * longitudes + x_offset)) ** 2 + (ys - (y_scale * latitudes + y_offset)) ** 2)))
-    return float(x_scale), float(x_offset), float(y_scale), float(y_offset), residual
+    matrix = np.column_stack((longitudes, latitudes, np.ones(len(anchors))))
+    x_model = np.linalg.lstsq(matrix, xs, rcond=None)[0]
+    y_model = np.linalg.lstsq(matrix, ys, rcond=None)[0]
+    x_residuals = xs - matrix @ x_model
+    y_residuals = ys - matrix @ y_model
+    residual = float(np.sqrt(np.mean(x_residuals**2 + y_residuals**2)))
+    return x_model, y_model, latitudes, longitudes, x_residuals, y_residuals, residual
+
+
+def project(
+    latitude: float,
+    longitude: float,
+    x_model: np.ndarray,
+    y_model: np.ndarray,
+    anchor_latitudes: np.ndarray,
+    anchor_longitudes: np.ndarray,
+    x_residuals: np.ndarray,
+    y_residuals: np.ndarray,
+) -> tuple[float, float]:
+    """Fit an affine world map, then locally correct its residuals by IDW."""
+    point = np.asarray((longitude, latitude, 1.0))
+    x = float(point @ x_model)
+    y = float(point @ y_model)
+    longitude_distance = (anchor_longitudes - longitude) * np.cos(
+        np.radians((anchor_latitudes + latitude) / 2)
+    )
+    distances = np.hypot(anchor_latitudes - latitude, longitude_distance)
+    nearest = np.argsort(distances)[: min(6, len(distances))]
+    weights = 1.0 / np.maximum(distances[nearest], 0.05) ** 2
+    x += float(np.average(x_residuals[nearest], weights=weights))
+    y += float(np.average(y_residuals[nearest], weights=weights))
+    return x, y
 
 
 def rendered() -> tuple[str, list[str]]:
@@ -72,7 +100,7 @@ def rendered() -> tuple[str, list[str]]:
     map_payload = json.loads(MAP_COORDINATES.read_text(encoding="utf-8"))
     map_locations = map_payload["locations"]
     names = location_names()
-    x_scale, x_offset, y_scale, y_offset, residual = projection(map_locations)
+    x_model, y_model, anchor_latitudes, anchor_longitudes, x_residuals, y_residuals, residual = projection(map_locations)
     image_width = float(map_payload["image_size"]["width"])
     location_items = [
         (key, float(value["x"]), float(value["y"]))
@@ -99,8 +127,17 @@ def rendered() -> tuple[str, list[str]]:
         if not (-90 <= latitude <= 90 and -180 <= longitude <= 180):
             failures.append(f"{tag}: coordinate outside geographic bounds")
             continue
-        projected_x = (x_scale * longitude + x_offset) % image_width
-        projected_y = y_scale * latitude + y_offset
+        projected_x, projected_y = project(
+            latitude,
+            longitude,
+            x_model,
+            y_model,
+            anchor_latitudes,
+            anchor_longitudes,
+            x_residuals,
+            y_residuals,
+        )
+        projected_x %= image_width
         nearest = sorted(
             location_items,
             key=lambda item: (item[1] - projected_x) ** 2 + (item[2] - projected_y) ** 2,
