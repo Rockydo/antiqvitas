@@ -7,6 +7,7 @@ import argparse
 import csv
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -58,23 +59,80 @@ def generated_tags() -> list[str]:
             yield f"X{second}{third}"
 
 
+def prior_engine_tags() -> dict[str, str]:
+    """Retain valid previous allocations when the roster grows.
+
+    Design tags are deliberately allowed to collide with vanilla and
+    localization namespaces.  A sequential fresh allocation would therefore
+    renumber every later collision when a new row is inserted midway through
+    the historical roster.  Those internal tag changes are needless save and
+    tooling churn, so preserve any prior allocation that remains safe against
+    the current build's reserved namespaces.
+    """
+    raw: str | None = None
+    try:
+        # Prefer the committed map.  During a roster-edit working tree the
+        # generated output may already contain a provisional allocation, while
+        # HEAD is the last accepted stable allocation.
+        completed = subprocess.run(
+            ["git", "show", "HEAD:docs/world_1ad/tag_map.json"],
+            cwd=ROOT,
+            capture_output=True,
+            check=False,
+            text=True,
+        )
+        if completed.returncode == 0:
+            raw = completed.stdout
+    except OSError:
+        pass
+    if raw is None and OUTPUT.is_file():
+        try:
+            raw = OUTPUT.read_text(encoding="utf-8")
+        except OSError:
+            return {}
+    if raw is None:
+        return {}
+    try:
+        payload = json.loads(raw)
+        entries = payload.get("entries", [])
+    except json.JSONDecodeError:
+        return {}
+    result: dict[str, str] = {}
+    for entry in entries:
+        design = entry.get("design_tag")
+        engine = entry.get("engine_tag")
+        if isinstance(design, str) and isinstance(engine, str) and ENGINE_TAG.fullmatch(engine):
+            result[design] = engine
+    return result
+
+
 def build_map() -> dict[str, object]:
     with ROSTER.open(encoding="utf-8-sig", newline="") as handle:
         roster = list(csv.DictReader(handle))
     vanilla = vanilla_tags()
     loc_keys = localization_keys()
-    used = set(vanilla) | loc_keys | HASH_COLLISION_TAGS
+    blocked = set(vanilla) | loc_keys | HASH_COLLISION_TAGS
+    prior = prior_engine_tags()
+    reserved = blocked | set(prior.values())
+    allocated = set(blocked)
     replacement = generated_tags()
     entries: list[dict[str, object]] = []
     for row in roster:
         design = row["tag"]
         vanilla_collision = design in vanilla
         localization_collision = design in loc_keys
-        if design not in used:
+        previous = prior.get(design)
+        if previous and previous not in blocked and previous not in allocated:
+            engine = previous
+        elif design not in reserved and design not in allocated:
             engine = design
         else:
-            engine = next(candidate for candidate in replacement if candidate not in used)
-        used.add(engine)
+            engine = next(
+                candidate
+                for candidate in replacement
+                if candidate not in reserved and candidate not in allocated
+            )
+        allocated.add(engine)
         entries.append(
             {
                 "design_tag": design,
