@@ -45,10 +45,12 @@ SOCIAL_VALUE_KEYS = frozenset((
 ))
 LAW_CATEGORIES = frozenset(("administrative", "military"))
 MODIFIER_KEYS = frozenset((
-    "country_cabinet_efficiency", "global_burghers_estate_power", "global_levy_size_modifier",
-    "global_nobles_estate_power", "global_pop_assimilation_speed_modifier", "global_pop_food_consumption",
+    "country_cabinet_efficiency", "global_burghers_estate_power", "global_crown_estate_power",
+    "global_levy_size_modifier", "global_nobles_estate_power", "global_pop_assimilation_speed_modifier",
+    "global_pop_food_consumption", "global_tribes_estate_power",
     "burghers_estate_target_satisfaction", "land_morale_modifier", "monthly_towards_aristocracy",
     "monthly_towards_centralization", "monthly_towards_decentralization", "nobles_estate_target_satisfaction",
+    "tribes_estate_target_satisfaction",
 ))
 
 
@@ -387,6 +389,56 @@ antq_parthian_king_of_kings = {
 	}
 	years = 2
 }
+
+antq_client_monarchy = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_crown_estate_power = 0.05
+		monthly_towards_centralization = societal_value_minor_monthly_move
+	}
+	years = 2
+}
+
+antq_kushite_dual_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_crown_estate_power = 0.05
+		country_cabinet_efficiency = 0.025
+	}
+	years = 2
+}
+
+antq_steppe_confederation = {
+	major = yes
+	government = steppe_horde
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		monthly_towards_decentralization = societal_value_monthly_move
+	}
+	years = 2
+}
+
+antq_early_korean_kingdom = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.05
+		country_cabinet_efficiency = 0.025
+	}
+	years = 2
+}
+
+antq_tribal_kingdom = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+	}
+	years = 2
+}
 """
 
 
@@ -433,6 +485,16 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_han_imperial_bureaucracy_desc", "A palace-centred bureaucracy whose mandate rests on effective and legitimate rule."),
         ("antq_parthian_king_of_kings", "Parthian King of Kings"),
         ("antq_parthian_king_of_kings_desc", "An Arsacid monarchy balancing the royal court with powerful Iranian noble houses."),
+        ("antq_client_monarchy", "Client Monarchy"),
+        ("antq_client_monarchy_desc", "A local royal court whose position is shaped by imperial patronage."),
+        ("antq_kushite_dual_kingship", "Kushite Dual Kingship"),
+        ("antq_kushite_dual_kingship_desc", "A Kushite royal court represented through the named Natakamani-Amanitore co-rule."),
+        ("antq_steppe_confederation", "Steppe Confederation"),
+        ("antq_steppe_confederation_desc", "A confederation whose chanyu must balance the leading clans."),
+        ("antq_early_korean_kingdom", "Early Korean Kingdom"),
+        ("antq_early_korean_kingdom_desc", "A developing royal kingdom supported by leading political houses."),
+        ("antq_tribal_kingdom", "Tribal Kingdom"),
+        ("antq_tribal_kingdom_desc", "A kingship sustained and constrained by leading kin groups."),
     ))
     for row in data.privileges:
         entries.extend(((row["key"], row["name"]), (f"{row['key']}_desc", row["description"])))

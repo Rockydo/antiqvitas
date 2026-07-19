@@ -72,3 +72,93 @@ antq_parthian_autonomy_law = {
 		}
 	}
 }
+
+antq_client_governance_law = {
+	law_category = administrative
+	law_gov_group = monarchy
+	potential = {
+		government_type = government_type:monarchy
+	}
+	antq_roman_client_compact = {
+		country_modifier = {
+			global_crown_estate_power = 0.05
+			monthly_towards_centralization = societal_value_minor_monthly_move
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+		}
+	}
+}
+
+antq_kushite_governance_law = {
+	law_category = administrative
+	law_gov_group = monarchy
+	potential = {
+		government_type = government_type:monarchy
+	}
+	antq_kushite_sacral_kingship = {
+		country_modifier = {
+			global_crown_estate_power = 0.05
+			country_cabinet_efficiency = 0.025
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+		}
+	}
+}
+
+antq_steppe_governance_law = {
+	law_category = administrative
+	law_gov_group = steppe_horde
+	potential = {
+		government_type = government_type:steppe_horde
+	}
+	antq_confederated_chanyu = {
+		country_modifier = {
+			global_tribes_estate_power = 0.10
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+		}
+	}
+}
+
+antq_early_korean_governance_law = {
+	law_category = administrative
+	law_gov_group = monarchy
+	potential = {
+		government_type = government_type:monarchy
+	}
+	antq_goguryeo_royal_court = {
+		country_modifier = {
+			global_nobles_estate_power = 0.05
+			country_cabinet_efficiency = 0.025
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+		}
+	}
+}
+
+antq_tribal_governance_law = {
+	law_category = administrative
+	law_gov_group = tribe
+	potential = {
+		government_type = government_type:tribe
+	}
+	antq_elder_council = {
+		country_modifier = {
+			global_tribes_estate_power = 0.10
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+		}
+	}
+}
