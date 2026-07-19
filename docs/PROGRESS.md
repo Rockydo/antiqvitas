@@ -1134,3 +1134,14 @@ and regnal-history work rather than claiming a silent runtime fallback passed.
 
 Next: continue filling evidenced Tier-1/2 court rosters while the Han runtime
 regency blocker remains isolated and M6's broader mechanics work continues.
+
+## 2026-07-19 - M6 Mauretanian court slice
+
+- Added Ptolemy of Mauretania to the Juba II-Cleopatra Selene court from the
+  *Oxford Classical Dictionary* record of his parentage and later reign.
+- The current government deliberately leaves its heir field empty: later
+  succession does not establish a formal AD 1 appointment. The source boundary
+  and implementation are recorded in [the Mauretanian court note](m6/MAURETANIAN_COURT_AD1.md).
+
+Next: continue source-led court roster coverage without converting later
+successions into unsupported start-date claims.
