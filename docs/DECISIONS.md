@@ -63,6 +63,23 @@ nearby anchor residual correction. It is a discovery and review aid only:
 every promoted local key remains an explicit sourced `polities.csv` edit, and
 the 2D model is never treated as evidence on its own.
 
+## 2026-07-19 — Hierarchy-resolved ownership, not implicit borders
+
+M3 territory rows name installed EU5 geography keys with a historical source,
+confidence, and scope note. `ownership_map.py` recursively expands them from
+the harvested map hierarchy, filters broad rows to locations owned in the
+installed vanilla setup, rejects inter-tag overlap, and emits a checked engine
+location list. Exact site rows may use a currently unowned archaeological
+location only after real-game smoke. This keeps the large Roman, Parthian, and
+Han surfaces reproducible while refusing to infer unfinished frontier,
+subordinate, and SoP boundaries.
+
+The first run exposed three same-name traps in the current map: `edessa` is
+Macedonian Edessa, `susa` is Italian Susa, and `khwar` is in the Rey area.
+Osroene now uses Urfa and Elymais Shush after Pleiades coordinate review;
+Khwarazm is intentionally reset to `TBD`. Name equality alone is therefore no
+longer considered a capital verification method.
+
 ## 2026-07-19 — Five campaign ages with a compatibility sentinel
 
 The campaign has five real ages: Principate, High Empires, Crisis, Dominate,

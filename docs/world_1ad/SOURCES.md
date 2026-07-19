@@ -29,3 +29,10 @@ gazetteer coordinates used to generate review candidates. The coordinate
 projection is fitted against directly matched local-map anchors, and a nearest
 location is never promoted into `polities.csv` without an explicit geographic
 judgment.
+
+`ownership_areas.csv` uses the P8 historical requirements with CAH-XI and BHR
+as applicable. It does not import borders from an external game or silently
+turn coordinate proximity into territory: `tools/ownership_map.py` expands
+only the installed EU5 geography hierarchy, filters broad rows through the
+installed ownable-location surface, and makes the final location list reviewable
+in `ownership_resolved.csv`.
