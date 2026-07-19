@@ -1,8 +1,8 @@
 {
   "game_build": "24187685",
-  "entry_count": 133,
-  "collision_count": 67,
-  "localization_collision_count": 73,
+  "entry_count": 136,
+  "collision_count": 69,
+  "localization_collision_count": 75,
   "reserved_hash_collision_tags": [
     "XAD"
   ],
@@ -398,6 +398,27 @@
       "vanilla_collision": false,
       "localization_collision": false,
       "name": "Djenne-Djenno"
+    },
+    {
+      "design_tag": "WAF",
+      "engine_tag": "WAF",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "West African Iron-Age Societies"
+    },
+    {
+      "design_tag": "BNT",
+      "engine_tag": "XDE",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Bantu Societies"
+    },
+    {
+      "design_tag": "BAR",
+      "engine_tag": "XDF",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Barbaria Societies"
     },
     {
       "design_tag": "SAB",
