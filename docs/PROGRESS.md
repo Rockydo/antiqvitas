@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 — M3 source-backed dependency slice
+
+- Generated 20 checked dependencies: the active Roman client ring, Arsacid
+  sub-kings, and Han Western-Regions tributaries.
+- The exact diplomacy-manager mirror uses only locally verified `vassal` and
+  `tributary` keys as an interim political-map adapter; M9 owns the ancient
+  contract mechanics.
+- `make validate` and real-game smoke are green with zero new error lines.
+
+Next: map remaining capitals and source the unfinished client, satellite, and
+SoP territorial extents.
+
 ## 2026-07-19 — M3 territorial ownership slice
 
 - Added checked area and direct-location source tables, resolving 4,153 unique

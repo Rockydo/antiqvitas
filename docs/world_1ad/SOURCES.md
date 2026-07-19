@@ -36,3 +36,8 @@ turn coordinate proximity into territory: `tools/ownership_map.py` expands
 only the installed EU5 geography hierarchy, filters broad rows through the
 installed ownable-location surface, and makes the final location list reviewable
 in `ownership_resolved.csv`.
+
+`subjects.csv` likewise records only source-backed AD 1 relationships. P8.1
+supplies the Roman client ring, P8.2 the Arsacid sub-kings, and P8.3 the Han
+Western Regions. The M3 engine-contract label is technical scaffolding and is
+not used as a historical source claim.
