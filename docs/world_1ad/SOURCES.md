@@ -23,3 +23,9 @@ a row reaches `implemented` status.
 Rows marked `contested` have a corresponding entry in `docs/ASSUMPTIONS.md`.
 `TBD` map capitals are historical roster records awaiting a verified mapping to
 the installed EU5 location key; they are not silently guessed.
+
+`capital_coordinates.csv` holds only conservative Pleiades/CHGIS-style
+gazetteer coordinates used to generate review candidates. The coordinate
+projection is fitted against directly matched local-map anchors, and a nearest
+location is never promoted into `polities.csv` without an explicit geographic
+judgment.

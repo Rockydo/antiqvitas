@@ -34,6 +34,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate collision-safe country definitions, mirrored names, and M3 placeholder CoAs for every roster polity.
 - [x] Add a checked capital-location candidate report and record direct local-map matches.
 - [x] Render and smoke-check a 34-polity verified-capital ownership slice.
+- [x] Build a local-raster coordinate index and sourced capital-candidate report.
 - [ ] Research and create tags/world rosters, country definitions, flags, ownership, subjects, SoPs, and capitals.
 - [x] Mirror-replace the exact 25 installed start-manager files, removing the vanilla 1337 start layer.
 - [ ] Run milestone gate and tag `M3-done`.
