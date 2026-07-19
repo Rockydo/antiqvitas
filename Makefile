@@ -6,6 +6,7 @@ validate:
 	.venv/Scripts/python.exe tools/generate_tag_map.py --check
 	.venv/Scripts/python.exe tools/generate_country_definitions.py --check
 	.venv/Scripts/python.exe tools/capital_mapper.py --check
+	.venv/Scripts/python.exe tools/generate_start_mirror.py --check
 	.venv/Scripts/python.exe tools/popcheck.py
 
 smoke:

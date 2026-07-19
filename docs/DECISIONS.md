@@ -34,6 +34,15 @@ labels use `Roman Commonwealth` and `Parthia` rather than duplicate/compound
 `Empire` forms. This is a technical display adaptation, not a historical
 renaming.
 
+## 2026-07-19 — Exact M3 start-manager mirror
+
+The installed build has 25 `main_menu/setup/start` manager files. Their
+empty, correctly named manager roots load with zero new errors, whereas leaving
+any filename unmirrored would retain its additive 1337 state. The generated M3
+mirror tracks that installed inventory during `make validate`, uses the
+installed no-BOM convention, and is the safe base that later M3 generators
+extend with country, ownership, pop, character, market, and other AD 1 state.
+
 ## 2026-07-19 — Five campaign ages with a compatibility sentinel
 
 The campaign has five real ages: Principate, High Empires, Crisis, Dominate,
