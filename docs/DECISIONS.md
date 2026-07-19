@@ -38,6 +38,15 @@ confederation and `tribe` for the Marcomannic and Catuvellaunian kingdoms,
 with source-labelled reforms, laws, and privileges. This is a tested engine
 choice, not a claim that the named polities were mechanically identical.
 
+## 2026-07-19 — Herodian tetrarchs retain client-monarchy mechanics in AD 1
+
+Archelaus, Antipas, and Philip are distinct AD 1 client rulers. The engine has
+no native ethnarch/tetrarch government type, so their three start profiles use
+the already smoke-tested client-monarchy adapter while their separate tags and
+source notes preserve the historical division. A Judean priestly/theocratic
+flavor layer remains separate rather than being asserted through an unverified
+government type.
+
 ## 2026-07-19 — Western Han uses the Jingzhao/Xi'an Chang'an anchor
 
 The installed key `changan` is north of the historical city. The local

@@ -34,3 +34,17 @@ does not resolve the debated nature of their personal relationship. Likewise,
 the client-monarchy law, the Xiongnu confederation law, and the two tribal
 adapters model political relationships rather than claiming a shared written
 constitution.
+
+## Herodian tetrarchy
+
+The next client-king slice adds Herod Archelaus for Judea/Samaria, Herod
+Antipas for Galilee-Peraea, and Philip for the northern/Batanean tetrarchy.
+All three use the existing Herodian dynasty and the previously tested client
+monarchy adapter. This preserves the plan's AD 1 division without prematurely
+turning Judea into the later directly administered province.
+
+The trio and their territories are required by P8.1 and cross-checked against
+the project's OCD entries. An independent reference also describes Archelaus
+as ethnarch and Antipas/Philip as tetrarchs after Herod's 4 BCE death:
+[Encyclopedia of the Bible](https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Herod).
+No parent links, spouses, or day-level biography dates are fabricated here.
