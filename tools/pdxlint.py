@@ -10,9 +10,14 @@ from pathlib import Path
 
 from PIL import Image
 
+from dates import BiographyDate
+
 ROOT = Path(__file__).resolve().parents[1]
 GAME_TREES = ("in_game", "main_menu", "loading_screen")
-DATE_RE = re.compile(r"(?<![\w.])(\d{1,4})\.(\d{1,2})\.(\d{1,2})(?![\w.])")
+DATE_RE = re.compile(r"(?<![\w.\-])(\d{1,4})\.(\d{1,2})\.(\d{1,2})(?![\w.])")
+BIOGRAPHY_DATE_RE = re.compile(
+    r"(?m)^\s*(?:birth_date|death_date)\s*=\s*(-?\d{1,4}\.\d{1,2}\.\d{1,2})\s*(?:#.*)?$"
+)
 
 
 def balanced_script(text: str) -> tuple[bool, str]:
@@ -105,6 +110,13 @@ def validate() -> list[str]:
                 okay, reason = balanced_script(text)
                 if not okay:
                     failures.append(f"{path.relative_to(ROOT)}: {reason}")
+            for match in BIOGRAPHY_DATE_RE.finditer(text):
+                try:
+                    BiographyDate.parse(match.group(1))
+                except ValueError as exc:
+                    failures.append(
+                        f"{path.relative_to(ROOT)}: invalid biography date {match.group(1)} ({exc})"
+                    )
             for match in DATE_RE.finditer(text):
                 year, month, day = (int(value) for value in match.groups())
                 if not (1 <= year <= 476 and 1 <= month <= 12 and 1 <= day <= 31):
