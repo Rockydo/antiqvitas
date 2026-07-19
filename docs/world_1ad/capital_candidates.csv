@@ -2,7 +2,7 @@
 ROM,Roma,rome,exact,rome (Rome)
 JUD,Jerusalem,jerusalem,exact,jerusalem (Jerusalem)
 GAL,Tiberias,safed,fuzzy,timbedra (Timbedra)
-BAT,Caesarea Philippi,TBD,none,
+BAT,Caesarea Philippi,antilebanon_mountains1,none,
 NAB,Petra,shoubak,fuzzy,petrinja (Petrinja); perija (Perija); peoria (Peoria)
 CAP,Tyana,bor_tur,fuzzy,tyanya (Teene); tynda (Tynda); tyaia (Tyaia)
 COM,Samosata,samsat,fuzzy,samsat (Samsat); samos (Sámos); salemata (Salémata)
@@ -25,7 +25,7 @@ IBR,Mtskheta,mtskheta,exact,mtskheta (Mtskheta)
 CLZ,Phasis,poti_caucasus,fuzzy,phari (Phari)
 ALC,Kabalaka,qabala,fuzzy,karbala (Karbala); kalmanka (Kalmanka); kaliakra (Kaliakra)
 HAN,Luoyang,luoyang,exact,luoyang_wenzhou (Luóyáng); luoyang (Luòyáng)
-XIO,Longcheng,TBD,fuzzy,longchang (Lóngchǎng); longchuan_xunzhou (Lóngchuān); longchuan (Lǒngchuān); longmen_chicheng (Lóngmén)
+XIO,Longcheng,qingzhou_mongol,fuzzy,longchang (Lóngchǎng); longchuan_xunzhou (Lóngchuān); longchuan (Lǒngchuān); longmen_chicheng (Lóngmén)
 KHT,Khotan,khotan,exact,khotan (Khotan)
 KUC,Kucha,kucha,exact,kucha (Kucha)
 KAS,Kashgar,kashgar,exact,kashgar (Kashgar)
@@ -37,13 +37,13 @@ MAH,Mahan,naju,exact,mahan (Māhān)
 JIN,Jinhan,gyeongju,fuzzy,jinan (Jinan); jingshan (Jīngshān); jingshan_mountains (Jīngshān); jinchang (Jīnchāng)
 BYE,Byeonhan,uian,none,
 WAA,Yayoi polities,nara,none,
-SAT,Pratishthana,TBD,fuzzy,pristina (Priština)
+SAT,Pratishthana,daulatabad,fuzzy,pristina (Priština)
 ISK,Taxila,attock,fuzzy,tala_mx (Tala); tala (Tala); tai_lake (Lake Tài); talas (Talas)
 IGR,Sagala,sagala,exact,sagala (Sagala)
 YUE,Balkh,balkh,exact,balkh (Balkh)
 YDH,Rohtak,rohtak,exact,rohtak (Rohtak)
 ARJ,Mathura,mathura,exact,mathura (Mathura)
-KUN,Kuninda,TBD,fuzzy,kuchinda (Kuchinda); kutina (Kutina); kundar (Kundar)
+KUN,Kuninda,kalsi,fuzzy,kuchinda (Kuchinda); kutina (Kutina); kundar (Kundar)
 KAL,Kalinganagara,kalinganagara,exact,kalinganagara (Kalinganagara)
 CHE,Kodungallur,kodungallur,exact,kodungallur (Kodungallur)
 CHL,Uraiyur,srirangam,fuzzy,uryuu (Uryū); urayrah (Urayrah)
@@ -53,33 +53,33 @@ KUS,Meroe,shendi,fuzzy,mestre (Mestre); mergen (Mergen); merano (Merano)
 AKS,Aksum,axum,exact,axum (Axum)
 GAR,Garama,ubari,fuzzy,gardman (Gardman); garacad (Garacad); garha (Garha)
 BLM,Talmis,kalabsha,fuzzy,talisi (Talisi); tammisha (Tamīšeh); talitsa_yelets (Talitsa); talitsa (Talitsa)
-BEJ,Beja country,TBD,fuzzy,beja_coast (Beja Coast)
+BEJ,Beja country,khawr_nubt,fuzzy,beja_coast (Beja Coast)
 DJN,Djenne,djenne,exact,djenne (Djenné)
 SAB,Marib,marib,exact,marib (Ma'rib)
 HIM,Zafar,dhafar,fuzzy,zafra (Zafra); zadar (Zadar); zalari (Zalari)
-QAT,Timna,TBD,fuzzy,timana (Timana); tim_samarkand (Tim); tirana (Tirana)
+QAT,Timna,bayhan,fuzzy,timana (Timana); tim_samarkand (Tim); tirana (Tirana)
 HAD,Shabwa,shabwa,exact,shabwa (Šabwa)
-KIN,Qaryat al-Faw,TBD,fuzzy,qaryat_ulya (Qaryat al-'Ulya); qaryatayn (Al Qaryatayn)
+KIN,Qaryat al-Faw,aqiq_banu_uqayi,fuzzy,qaryat_ulya (Qaryat al-'Ulya); qaryatayn (Al Qaryatayn)
 MCM,Marobudum,prague,none,
-CRU,Lower Weser,TBD,none,
-CHT,Hesse,TBD,fuzzy,hessequa (Hessequa)
-FRI,Frisia,TBD,fuzzy,friesach (Friesach); freising (Freising)
+CRU,Lower Weser,nienburg,none,
+CHT,Hesse,ziegenhain,fuzzy,hessequa (Hessequa)
+FRI,Frisia,stavoren,fuzzy,friesach (Friesach); freising (Freising)
 BTV,Batavodurum,nijmegen,none,
-LAN,Lower Elbe,TBD,fuzzy,loree (Loree); lower_ulz (Lower Ulz)
-SEM,Elbe basin,TBD,fuzzy,elbasan (Sopot)
-HER,Thuringia,TBD,none,
-QUA,Danube valley,TBD,none,
-GUT,Vistula delta,TBD,fuzzy,vistula_lagoon (Vistula Lagoon)
-VAN,Oder basin,TBD,fuzzy,kiwigapawa (Odeba)
-RUG,Pomerania,TBD,fuzzy,pommeranian_bay (Pommeranian Bay); pommeranian_coast (Pomeranian Coast); podmuran (Podmuráň)
-BRG,Oder basin,TBD,fuzzy,kiwigapawa (Odeba)
-ANG,Angeln,TBD,fuzzy,anren_raozhou (Ānrén); anren (Ānrén); angul (Angul); anelo (Anelo)
-SAX,Lower Elbe,TBD,fuzzy,loree (Loree); lower_ulz (Lower Ulz)
-JUT,Jutland,TBD,none,
-SUI,Uppland,TBD,fuzzy,uppsala (Uppsala)
-AES,Sambia,TBD,fuzzy,samba (Samba); samba_kongo (Samba); samira (Samīrā); sambir (Sambir)
-VEN,Vistula basin,TBD,fuzzy,vistula_lagoon (Vistula Lagoon)
-FIN,Finnic coast,TBD,none,
+LAN,Lower Elbe,winsen,fuzzy,loree (Loree); lower_ulz (Lower Ulz)
+SEM,Elbe basin,teltow,fuzzy,elbasan (Sopot)
+HER,Thuringia,erfurt,none,
+QUA,Danube valley,holic,none,
+GUT,Vistula delta,gdansk,fuzzy,vistula_lagoon (Vistula Lagoon)
+VAN,Oder basin,torzym,fuzzy,kiwigapawa (Odeba)
+RUG,Pomerania,bobolice,fuzzy,pommeranian_bay (Pommeranian Bay); pommeranian_coast (Pomeranian Coast); podmuran (Podmuráň)
+BRG,Oder basin,gryfow,fuzzy,kiwigapawa (Odeba)
+ANG,Angeln,slesvig,fuzzy,anren_raozhou (Ānrén); anren (Ānrén); angul (Angul); anelo (Anelo)
+SAX,Lower Elbe,soltau,fuzzy,loree (Loree); lower_ulz (Lower Ulz)
+JUT,Jutland,grindsted,none,
+SUI,Uppland,uppsala,fuzzy,uppsala (Uppsala)
+AES,Sambia,konigsberg,fuzzy,samba (Samba); samba_kongo (Samba); samira (Samīrā); sambir (Sambir)
+VEN,Vistula basin,rawa,fuzzy,vistula_lagoon (Vistula Lagoon)
+FIN,Finnic coast,helsinge,none,
 CAT,Verlamion,st_albans,fuzzy,vel_mo (Vel'mo)
 TRI,Camulodunum,colchester,fuzzy,campulung_moldovenesc (Câmpulung)
 ICE,Venta Icenorum,norwich,none,
@@ -91,8 +91,8 @@ DUM,Exeter,exeter,exact,exeter (Exeter)
 CAL,Caledonia,inverness,fuzzy,cardona (Cardona); caoni (Cáoní); cania (Cania)
 ULA,Ulster,armagh,none,
 DAC,Sarmizegetusa,sebes,none,
-GET,Lower Danube,TBD,none,
-BAS,Carpathian foreland,TBD,none,
+GET,Lower Danube,orasul_de_floci,none,
+BAS,Carpathian foreland,vatra_dornei,none,
 IAZ,Tisza plain,heves,fuzzy,tizatlan (Tizatlan)
 ROX,Lower Don,tana,fuzzy,london (London)
 AOR,Lower Don,semikarakorsk,fuzzy,london (London)
@@ -102,33 +102,33 @@ KNG,Syr Darya,otrar,none,
 WSN,Ili valley,gulja,fuzzy,ilibalyk (Ilibalyk)
 DAY,Fergana,fergana,exact,fergana (Fergana)
 SOG,Samarkand,samarkand,exact,samarkand (Samarkand)
-KHW,Khwarazm,TBD,fuzzy,khwar (Khwar); khewra (Khewra); kharga (Kharga)
+KHW,Khwarazm,kath,fuzzy,khwar (Khwar); khewra (Khewra); kharga (Kharga)
 XIA,Eastern steppe,dalai_nur_lake,fuzzy,eastern_desert (Eastern Desert); north_eastern_desert (Eastern Desert); south_eastern_desert (Eastern Desert)
 WHU,Liaoxi,yizhou_jinzhou,fuzzy,linxi (Línxī)
-DNG,Upper Yenisei,TBD,none,
-PYU,Beikthano,TBD,fuzzy,betanzos (Betanzos)
-MON,Lower Chao Phraya,TBD,none,
-KHM,Mekong basin,TBD,fuzzy,mengban_weiyuan (Mèngbān); mengban_jihong (Měngbàn); mekkongo_bay (Mekkongo Bay)
-MAL,Malay Peninsula,TBD,none,
-JAV,Java,TBD,fuzzy,javad (Javad); javaes (Javaes); jativa (Játiva)
-PHL,Philippines,TBD,fuzzy,philippine_sea (Philippine Sea); japan_high_sea1 (Philippines Sea); japan_high_sea2 (Philippines Sea); japan_high_sea3 (Philippines Sea); japan_high_sea4 (Philippines Sea)
-BOR,Borneo,TBD,fuzzy,bore (Boré); bone (Bone); borun (Borun)
-TON,Western Polynesia,TBD,fuzzy,north_western_pyrenees (Western Pyrenees); south_western_pyrenees1 (Western Pyrenees); south_western_pyrenees2 (Western Pyrenees); south_western_pyrenees3 (Western Pyrenees); western_gotland_basin (Gotlands Västra Kust)
+DNG,Upper Yenisei,tes,none,
+PYU,Beikthano,magway,fuzzy,betanzos (Betanzos)
+MON,Lower Chao Phraya,chaisri,none,
+KHM,Mekong basin,angkor,fuzzy,mengban_weiyuan (Mèngbān); mengban_jihong (Měngbàn); mekkongo_bay (Mekkongo Bay)
+MAL,Malay Peninsula,kedah,none,
+JAV,Java,mataram,fuzzy,javad (Javad); javaes (Javaes); jativa (Játiva)
+PHL,Philippines,maynila,fuzzy,philippine_sea (Philippine Sea); japan_high_sea1 (Philippines Sea); japan_high_sea2 (Philippines Sea); japan_high_sea3 (Philippines Sea); japan_high_sea4 (Philippines Sea)
+BOR,Borneo,pinoh,fuzzy,bore (Boré); bone (Bone); borun (Borun)
+TON,Western Polynesia,tongatapu,fuzzy,north_western_pyrenees (Western Pyrenees); south_western_pyrenees1 (Western Pyrenees); south_western_pyrenees2 (Western Pyrenees); south_western_pyrenees3 (Western Pyrenees); western_gotland_basin (Gotlands Västra Kust)
 TEO,Teotihuacan,tehotihuacan,exact,tehotihuacan (Teōtīhuacān)
-CUI,Cuicuilco,TBD,fuzzy,cupilco (Cupilco); cuilo (Cuilo)
-MAY,Tikal,TBD,fuzzy,tiwal (Tiwal); tilala (Tilala)
-ZAP,Monte Alban,TBD,fuzzy,montalban (Montalbán); montauban (Montauban); monte_lagoon (Monte Lagoon)
-EPI,La Mojarra,TBD,fuzzy,la_mamora (La Mamora); lamakera (Lamakera); lake_marmara (Lake Marmara)
-WMS,West Mexico,TBD,none,
-MOC,Moche,TBD,fuzzy,mohe (Mòhé); moschevo (Moschevo)
+CUI,Cuicuilco,azcapotzalco,fuzzy,cupilco (Cupilco); cuilo (Cuilo)
+MAY,Tikal,yax_mutal,fuzzy,tiwal (Tiwal); tilala (Tilala)
+ZAP,Monte Alban,sosola,fuzzy,montalban (Montalbán); montauban (Montauban); monte_lagoon (Monte Lagoon)
+EPI,La Mojarra,tlacotlalpan,fuzzy,la_mamora (La Mamora); lamakera (Lamakera); lake_marmara (Lake Marmara)
+WMS,West Mexico,huaxtla,none,
+MOC,Moche,chan_chan,fuzzy,mohe (Mòhé); moschevo (Moschevo)
 NAZ,Cahuachi,cahuachi,exact,cahuachi (Cahuachi)
-LIM,Lima,TBD,fuzzy,limari (Limari); liwa (Līwā); liwa_lampung (Liwa); lida (Lida)
-REC,Callejon de Huaylas,TBD,none,
+LIM,Lima,rimaq,fuzzy,limari (Limari); liwa (Līwā); liwa_lampung (Liwa); lida (Lida)
+REC,Callejon de Huaylas,waricoto,none,
 TIW,Tiwanaku,tiwanaku,exact,tiwanaku (Tiwanaku)
-CHI,Altiplano Cundiboyacense,TBD,none,
-HOP,Ohio Valley,TBD,none,
-BSK,Four Corners,TBD,none,
-DOR,Arctic,TBD,fuzzy,arti (Arti); arica (Arica); arcot (Arcot)
-ARA,Orinoco,TBD,fuzzy,orinucu (Orinucu)
-TUP,Amazon basin,TBD,none,
-CAR,Lesser Antilles,TBD,exact,lesser_antilles_wastelands (Lesser Antilles)
+CHI,Altiplano Cundiboyacense,paribari,none,
+HOP,Ohio Valley,olentangy,none,
+BSK,Four Corners,moanunts,none,
+DOR,Arctic,iqaluit,fuzzy,arti (Arti); arica (Arica); arcot (Arcot)
+ARA,Orinoco,guamontey,fuzzy,orinucu (Orinucu)
+TUP,Amazon basin,manaos,none,
+CAR,Lesser Antilles,carucairi,exact,lesser_antilles_wastelands (Lesser Antilles)

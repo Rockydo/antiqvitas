@@ -2014,6 +2014,16 @@ countries = {
 			capital = safed
 		}
 
+		XAC = { # Herodian Batanea; P8.1;OCD;PLE
+			own_control_core = {
+				antilebanon_mountains1
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = antilebanon_mountains1
+		}
+
 		NAB = { # Nabataea; P8.1;OCD;PLE
 			own_control_core = {
 				shoubak
@@ -4351,6 +4361,16 @@ countries = {
 			capital = luoyang
 		}
 
+		XIO = { # Xiongnu Confederation; P8.3;CAH-XI
+			own_control_core = {
+				qingzhou_mongol
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = qingzhou_mongol
+		}
+
 		XAS = { # Khotan; P8.3;CHG
 			own_control_core = {
 				khotan
@@ -4461,6 +4481,16 @@ countries = {
 			capital = nara
 		}
 
+		SAT = { # Satavahana; P8.4;CAH-XI
+			own_control_core = {
+				daulatabad
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = daulatabad
+		}
+
 		XAX = { # Indo-Scythian Realm; P8.4;CAH-XI;PLE
 			own_control_core = {
 				attock
@@ -4509,6 +4539,16 @@ countries = {
 			include = "east_asia_monarchy"
 			government = { ruler = random }
 			capital = mathura
+		}
+
+		XAZ = { # Kuninda; P8.4;CAH-XI
+			own_control_core = {
+				kalsi
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = kalsi
 		}
 
 		XBA = { # Kalinga; P8.4;CAH-XI
@@ -4601,6 +4641,16 @@ countries = {
 			capital = kalabsha
 		}
 
+		XBH = { # Beja; P8.5;CAH-XI
+			own_control_core = {
+				khawr_nubt
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = khawr_nubt
+		}
+
 		DJN = { # Djenne-Djenno; P8.5;CAH-XI
 			own_control_core = {
 				djenne
@@ -4631,6 +4681,16 @@ countries = {
 			capital = dhafar
 		}
 
+		QAT = { # Qataban; P8.6;CAH-XI
+			own_control_core = {
+				bayhan
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = bayhan
+		}
+
 		XBJ = { # Hadramawt; P8.6;CAH-XI
 			own_control_core = {
 				shabwa
@@ -4639,6 +4699,16 @@ countries = {
 			include = "east_asia_monarchy"
 			government = { ruler = random }
 			capital = shabwa
+		}
+
+		KIN = { # Kindah; P8.6;CAH-XI;PLE
+			own_control_core = {
+				aqiq_banu_uqayi
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = aqiq_banu_uqayi
 		}
 
 		XBK = { # Marcomanni; P8.7;CAH-XI
@@ -4651,6 +4721,36 @@ countries = {
 			capital = prague
 		}
 
+		CRU = { # Cherusci; P8.7;CAH-XI
+			own_control_core = {
+				nienburg
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = nienburg
+		}
+
+		XBL = { # Chatti; P8.7;CAH-XI
+			own_control_core = {
+				ziegenhain
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = ziegenhain
+		}
+
+		XBM = { # Frisii; P8.7;CAH-XI
+			own_control_core = {
+				stavoren
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = stavoren
+		}
+
 		BTV = { # Batavi; P8.7;CAH-XI;PLE
 			own_control_core = {
 				nijmegen
@@ -4659,6 +4759,156 @@ countries = {
 			include = "east_asia_monarchy"
 			government = { ruler = random }
 			capital = nijmegen
+		}
+
+		XBN = { # Langobardi; P8.7;CAH-XI
+			own_control_core = {
+				winsen
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = winsen
+		}
+
+		SEM = { # Semnones; P8.7;CAH-XI
+			own_control_core = {
+				teltow
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = teltow
+		}
+
+		HER = { # Hermunduri; P8.7;CAH-XI
+			own_control_core = {
+				erfurt
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = erfurt
+		}
+
+		XBO = { # Quadi; P8.7;CAH-XI
+			own_control_core = {
+				holic
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = holic
+		}
+
+		GUT = { # Gutones; P8.7;CAH-XI
+			own_control_core = {
+				gdansk
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = gdansk
+		}
+
+		VAN = { # Vandili; P8.7;CAH-XI
+			own_control_core = {
+				torzym
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = torzym
+		}
+
+		RUG = { # Rugii; P8.7;CAH-XI
+			own_control_core = {
+				bobolice
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = bobolice
+		}
+
+		XBP = { # Burgundiones; P8.7;CAH-XI
+			own_control_core = {
+				gryfow
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = gryfow
+		}
+
+		XBQ = { # Angles; P8.7;CAH-XI
+			own_control_core = {
+				slesvig
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = slesvig
+		}
+
+		XBR = { # Saxons; P8.7;CAH-XI
+			own_control_core = {
+				soltau
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = soltau
+		}
+
+		JUT = { # Jutes; P8.7;CAH-XI
+			own_control_core = {
+				grindsted
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = grindsted
+		}
+
+		XBS = { # Suiones; P8.7;CAH-XI
+			own_control_core = {
+				uppsala
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = uppsala
+		}
+
+		AES = { # Aestii; P8.7;CAH-XI
+			own_control_core = {
+				konigsberg
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = konigsberg
+		}
+
+		XBT = { # Venedi; P8.7;CAH-XI
+			own_control_core = {
+				rawa
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = rawa
+		}
+
+		XBU = { # Finnic Societies; P8.7;CAH-XI
+			own_control_core = {
+				helsinge
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = helsinge
 		}
 
 		XBV = { # Catuvellauni; P8.7;CAH-XI
@@ -4771,6 +5021,26 @@ countries = {
 			capital = sebes
 		}
 
+		GET = { # Getae; P8.7;CAH-XI
+			own_control_core = {
+				orasul_de_floci
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = orasul_de_floci
+		}
+
+		XCD = { # Bastarnae; P8.7;CAH-XI
+			own_control_core = {
+				vatra_dornei
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = vatra_dornei
+		}
+
 		IAZ = { # Iazyges; P8.7;CAH-XI
 			own_control_core = {
 				heves
@@ -4861,6 +5131,16 @@ countries = {
 			capital = samarkand
 		}
 
+		KHW = { # Khwarazm; P8.8;CHG
+			own_control_core = {
+				kath
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = kath
+		}
+
 		XIA = { # Xianbei; P8.8;CAH-XI
 			own_control_core = {
 				dalai_nur_lake
@@ -4881,6 +5161,96 @@ countries = {
 			capital = yizhou_jinzhou
 		}
 
+		XCJ = { # Dingling; P8.8;CAH-XI
+			own_control_core = {
+				tes
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = tes
+		}
+
+		PYU = { # Pyu Cities; P8.9;CAH-XI
+			own_control_core = {
+				magway
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = magway
+		}
+
+		XCK = { # Mon Precursors; P8.9;CAH-XI
+			own_control_core = {
+				chaisri
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = chaisri
+		}
+
+		XCL = { # Proto-Khmer; P8.9;CAH-XI
+			own_control_core = {
+				angkor
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = angkor
+		}
+
+		XCM = { # Malay Polities; P8.9;CAH-XI
+			own_control_core = {
+				kedah
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = kedah
+		}
+
+		JAV = { # Javanese Polities; P8.9;CAH-XI
+			own_control_core = {
+				mataram
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = mataram
+		}
+
+		PHL = { # Philippine Societies; P8.9;CAH-XI
+			own_control_core = {
+				maynila
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = maynila
+		}
+
+		XCN = { # Bornean Societies; P8.9;CAH-XI
+			own_control_core = {
+				pinoh
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = pinoh
+		}
+
+		XCO = { # Tonga-Samoa-Fiji; P8.9;CAH-XI
+			own_control_core = {
+				tongatapu
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = tongatapu
+		}
+
 		XCQ = { # Teotihuacan; P8.10;CAH-XI
 			own_control_core = {
 				tehotihuacan
@@ -4889,6 +5259,66 @@ countries = {
 			include = "east_asia_monarchy"
 			government = { ruler = random }
 			capital = tehotihuacan
+		}
+
+		XCR = { # Cuicuilco; P8.10;CAH-XI
+			own_control_core = {
+				azcapotzalco
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = azcapotzalco
+		}
+
+		XCS = { # Early Maya Polities; P8.10;CAH-XI
+			own_control_core = {
+				yax_mutal
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = yax_mutal
+		}
+
+		XCU = { # Monte Alban; P8.10;CAH-XI
+			own_control_core = {
+				sosola
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = sosola
+		}
+
+		XCV = { # Epi-Olmec; P8.10;CAH-XI
+			own_control_core = {
+				tlacotlalpan
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = tlacotlalpan
+		}
+
+		WMS = { # West Mexican Societies; P8.10;CAH-XI
+			own_control_core = {
+				huaxtla
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = huaxtla
+		}
+
+		MOC = { # Moche; P8.10;CAH-XI
+			own_control_core = {
+				chan_chan
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = chan_chan
 		}
 
 		NAZ = { # Nazca; P8.10;CAH-XI
@@ -4901,6 +5331,26 @@ countries = {
 			capital = cahuachi
 		}
 
+		XCW = { # Lima Culture; P8.10;CAH-XI
+			own_control_core = {
+				rimaq
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = rimaq
+		}
+
+		REC = { # Recuay; P8.10;CAH-XI
+			own_control_core = {
+				waricoto
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = waricoto
+		}
+
 		TIW = { # Early Tiwanaku; P8.10;CAH-XI
 			own_control_core = {
 				tiwanaku
@@ -4909,6 +5359,76 @@ countries = {
 			include = "east_asia_monarchy"
 			government = { ruler = random }
 			capital = tiwanaku
+		}
+
+		XCX = { # Chibchan Societies; P8.10;CAH-XI
+			own_control_core = {
+				paribari
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = paribari
+		}
+
+		XCY = { # Hopewell Sphere; P8.10;CAH-XI
+			own_control_core = {
+				olentangy
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = olentangy
+		}
+
+		XCZ = { # Basketmaker II; P8.10;CAH-XI
+			own_control_core = {
+				moanunts
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = moanunts
+		}
+
+		DOR = { # Dorset; P8.10;CAH-XI
+			own_control_core = {
+				iqaluit
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = iqaluit
+		}
+
+		XDB = { # Arawak Societies; P8.10;CAH-XI
+			own_control_core = {
+				guamontey
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = guamontey
+		}
+
+		XDC = { # Tupi Societies; P8.10;CAH-XI
+			own_control_core = {
+				manaos
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = manaos
+		}
+
+		XDD = { # Carib Societies; P8.10;CAH-XI
+			own_control_core = {
+				carucairi
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = carucairi
 		}
 
 	}
