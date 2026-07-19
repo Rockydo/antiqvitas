@@ -1,5 +1,13 @@
 # Historical Assumptions
 
+## 2026-07-19 - Piso and Quirinius are bounded Augustan contemporaries
+
+Oxford's Piso entry and Tacitus's Quirinius notice securely span the AD 1
+boundary. Their Roman-world and engine identity labels do not assign a current
+office, command, governorship, census, residence, ability, or a reconstructed
+Calpurnian/Sulpician genealogy. Sources weighed: P8.1; `OCD-PISO`; `TAC-QUI`
+in `docs/world_1ad/SOURCES.md`. [secure survival; contested engine context]
+
 ## 2026-07-19 - Vipsania Agrippina and Asinius Gallus are Roman-world records
 
 Oxford's entries establish both Vipsania Agrippina and Gaius Asinius Gallus
