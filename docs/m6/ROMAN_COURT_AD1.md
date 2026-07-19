@@ -20,6 +20,20 @@ Neither source provides a needed day-level biography date or an AD 1 office
 assignment, so both fields remain blank. The M10 dated-history pass owns their
 later careers.
 
+## Claudian household figures
+
+The British Museum records Antonia the Younger's relationship to Augustus,
+Germanicus, and Claudius; its Drusus the Younger and Claudius biographies give
+life spans that cross the campaign boundary (`BM-JUL` in the source ledger).
+Antonia, Drusus, and Claudius consequently appear as Julio-Claudian court-only
+figures. The engine start-context field makes them visible with the Roman
+roster; it does not assert a specific physical residence in AD 1.
+
+No biography date, marriage, household office, consulship, public command,
+adoption, or succession status is scripted. In particular, Drusus's first
+consulship (AD 15) and Claudius's later accession remain outside the start
+state and belong to M10 history.
+
 ## Vipsanian grandchildren
 
 Suetonius names Agrippa Postumus, Julia the Younger, and Agrippina the Elder as

@@ -1282,3 +1282,15 @@ separate Han runtime-regency blocker.
 
 Next: continue source-led M6 roster and mechanics coverage while retaining the
 separate Han runtime-regency blocker.
+
+## 2026-07-19 - M6 Claudian household slice
+
+- Added Antonia the Younger, Drusus the Younger, and Claudius from the British
+  Museum prosopography route. Each record is court-only and has no biography
+  date, office, marriage, adoption, or succession field.
+- The source records their life spans and family relationships across the AD 1
+  boundary; the Roman engine context exposes them in the start roster without
+  claiming a particular physical residence.
+
+Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
+separate Han runtime-regency blocker.
