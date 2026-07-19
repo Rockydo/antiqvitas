@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-19 - M6 Colchian Pythodoris court
+
+- Replaced Colchis's anonymous ruler with Pythodoris of Pontus. Strabo directly
+  names her as ruling the Colchians after Polemon; the scholarly cross-check
+  still finds her in power around AD 19/20. No day-level dates, successor, or
+  broader Pontic realm is fabricated.
+- Regenerated M6/start data. `make validate` reports 28 dynasties, 40
+  characters, and 28 current ruler terms; the enabled-mod smoke reached the
+  rendered menu with zero new error-log lines.
+
+Next: continue the source-qualified named-court pass, retaining anonymous
+profiles wherever the evidence does not place an AD 1 incumbent.
+
 ## 2026-07-19 - M6 complete Tier-1/2 government-profile coverage
 
 - Added anonymous tribal profiles for the fragmented Dacian, Getic, Bastarnae,
