@@ -64,6 +64,21 @@ without claiming a reconstructed family tree; the second Gaius Asinius Pollio
 is explicitly labelled by his AD 23 consulship to avoid conflation with the
 Augustan author.
 
+## AD 25-32 non-imperial consular survival
+
+Cooley's scholarly consular fasti records twenty-seven additional non-imperial
+ordinary or identified-suffect consuls in AD 25-32 (`COO-FASTI-25-32`). The
+normal Augustan cursus set the consulship at age thirty-three (`OUP-CURSUS`),
+so this cohort supports a deliberately contested inference that each was alive
+at the AD 1 boundary. This is the last cohort supported by that age rule: an
+AD 33 consul could in principle have been born during AD 1.
+
+Every record remains a Roman court-context identity only. It receives no start
+office, term, residence, marriage, parent graph, estate, ability, biography
+date, or later career. Court-line labels distinguish the AD 27 Piso, AD 29
+Nonius Asprenas, and AD 30 Cassius Longinus from existing namesakes without
+claiming a reconstructed family tree.
+
 ## Living Augustan figures
 
 British Museum biographies establish Publius Quinctilius Varus's active period
