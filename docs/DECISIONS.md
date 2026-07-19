@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-19 - Roman legal status reuses the installed slavery-law contract
+
+The local `slavery_laws` contract establishes `slavery_blocked` and the two
+slave-goods trade flags as live country modifiers. M6 adds a namespaced Roman
+law that explicitly sets their permitted baseline instead of relying on an
+implicit vanilla default. It deliberately adds no numerical economic bonus and
+does not attempt an unverified population reclassification; M4/M10 own those
+separate historical systems.
+
 ## 2026-07-19 - Anuradhapura uses bounded monastic and irrigation adapters
 
 The local registry verifies `clergy_estate`, crown-estate power, cabinet
