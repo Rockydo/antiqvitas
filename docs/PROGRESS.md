@@ -1220,3 +1220,16 @@ Han minority-regency runtime blocker.
 
 Next: continue direct-evidence roster coverage while retaining the Han runtime
 regency failure as a separately documented blocker.
+
+## 2026-07-19 - M6 Atrebatic ruler correction
+
+- Replaced Atrebates' anonymous start ruler with Tincomarus. Oxford's Celtic
+  Coin Index dates his Atrebatic coin authority to 20 BCE-AD 10, which directly
+  covers 1 January AD 1.
+- The existing tribal-government adapter remains a technical representation;
+  no life date, genealogy, succession day, or later Verica/deposition sequence
+  has been pre-scripted. The resolved former assumption is recorded in
+  `ASSUMPTIONS.md`.
+
+Next: continue source-led ruler and court coverage in the underrepresented
+Tier-1/2 polities.
