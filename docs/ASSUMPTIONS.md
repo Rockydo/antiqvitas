@@ -25,3 +25,17 @@ turn them into silent certainties.
 - **Cuicuilco timing (CUI):** the entity is present for the planned Xitle
   disaster window, with the exact eruption chronology left event-configurable.
   Sources weighed: P8.10; CAH-XI Mesoamerican archaeology syntheses. †
+
+## 2026-07-19 — Capital geometry proxies
+
+Where an AD 1 capital has no identically named EU5 location, M3 uses a nearby
+local-map key only after its Pleiades coordinate projects onto the matching
+geographic site. These are geometry proxies, not historical renamings: M4's
+dynamic naming layer renders the ancient name. Current examples are
+Tiberias→Safed, Petra→Shoubak, Tyana→Bor, Samosata→Samsat, Emesa→Homs,
+Seuthopolis→Boruy/Stara Zagora, Ctesiphon→Baghdad, Persepolis→Istakhr,
+Arbela→Erbil, Artaxata→Khor Virap, Phasis→Poti, Kabalaka→Qabala,
+Uraiyur→Srirangam, Meroe→Shendi, Garama→Ubari, and Zafar→Dhafar. Sources
+weighed: P8.1–P8.6; Pleiades; local EU5 raster coordinate index. The nearby
+location is explicit in `polities.csv` and may be revised when a closer map key
+or an ancient naming overlay is available.

@@ -24,6 +24,66 @@ countries = {
 			capital = jerusalem
 		}
 
+		XAB = { # Herodian Galilee-Peraea; P8.1;OCD;PLE
+			own_control_core = {
+				safed
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = safed
+		}
+
+		NAB = { # Nabataea; P8.1;OCD;PLE
+			own_control_core = {
+				shoubak
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = shoubak
+		}
+
+		CAP = { # Cappadocia; P8.1;OCD;PLE
+			own_control_core = {
+				bor_tur
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = bor_tur
+		}
+
+		XAE = { # Commagene; P8.1;OCD;PLE
+			own_control_core = {
+				samsat
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = samsat
+		}
+
+		EME = { # Emesa; P8.1;OCD;PLE
+			own_control_core = {
+				homs
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = homs
+		}
+
+		THR = { # Odrysian Thrace; P8.1;OCD;PLE
+			own_control_core = {
+				boruy
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = boruy
+		}
+
 		XAG = { # Mauretania; P8.1;CAH-XI
 			own_control_core = {
 				volubilis
@@ -34,6 +94,16 @@ countries = {
 			capital = volubilis
 		}
 
+		XAH = { # Parthian Empire; P8.2;CAH-XI;PLE
+			own_control_core = {
+				baghdad
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = baghdad
+		}
+
 		XAJ = { # Elymais; P8.2;OCD
 			own_control_core = {
 				susa
@@ -42,6 +112,26 @@ countries = {
 			include = "east_asia_monarchy"
 			government = { ruler = random }
 			capital = susa
+		}
+
+		PRS = { # Persis; P8.2;OCD;PLE
+			own_control_core = {
+				istakhr
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = istakhr
+		}
+
+		ADI = { # Adiabene; P8.2;OCD;PLE
+			own_control_core = {
+				erbil
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = erbil
 		}
 
 		OSR = { # Osroene; P8.2;OCD
@@ -74,6 +164,16 @@ countries = {
 			capital = merv
 		}
 
+		XAO = { # Kingdom of Armenia; P8.2;CAH-XI;PLE
+			own_control_core = {
+				khor_virap
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = khor_virap
+		}
+
 		IBR = { # Caucasian Iberia; P8.2;OCD
 			own_control_core = {
 				mtskheta
@@ -82,6 +182,26 @@ countries = {
 			include = "east_asia_monarchy"
 			government = { ruler = random }
 			capital = mtskheta
+		}
+
+		CLZ = { # Colchis; P8.2;OCD;PLE
+			own_control_core = {
+				poti_caucasus
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = poti_caucasus
+		}
+
+		XAQ = { # Caucasian Albania; P8.2;OCD;PLE
+			own_control_core = {
+				qabala
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = qabala
 		}
 
 		XAR = { # Western Han; P8.3;BHR
@@ -204,6 +324,16 @@ countries = {
 			capital = kodungallur
 		}
 
+		XBC = { # Chola; P8.4;PER;PLE
+			own_control_core = {
+				srirangam
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = srirangam
+		}
+
 		PND = { # Pandya Kingdom; P8.4;PER
 			own_control_core = {
 				madurai
@@ -224,6 +354,16 @@ countries = {
 			capital = anuradhapura
 		}
 
+		XBE = { # Kush; P8.5;CAH-XI;PLE
+			own_control_core = {
+				shendi
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = shendi
+		}
+
 		AKS = { # Aksum; P8.5;PER
 			own_control_core = {
 				axum
@@ -232,6 +372,16 @@ countries = {
 			include = "east_asia_monarchy"
 			government = { ruler = random }
 			capital = axum
+		}
+
+		XBF = { # Garamantes; P8.5;CAH-XI;PLE
+			own_control_core = {
+				ubari
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = ubari
 		}
 
 		DJN = { # Djenne-Djenno; P8.5;CAH-XI
@@ -252,6 +402,16 @@ countries = {
 			include = "east_asia_monarchy"
 			government = { ruler = random }
 			capital = marib
+		}
+
+		HIM = { # Himyar; P8.6;CAH-XI;PLE
+			own_control_core = {
+				dhafar
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = dhafar
 		}
 
 		XBJ = { # Hadramawt; P8.6;CAH-XI
