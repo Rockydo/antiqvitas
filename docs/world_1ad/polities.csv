@@ -8,16 +8,16 @@ CAP,Cappadocia,1,subject,Anatolia,Tyana,bor_tur,P8.1;OCD;PLE,secure,mapped
 COM,Commagene,1,subject,Anatolia,Samosata,samsat,P8.1;OCD;PLE,secure,mapped
 EME,Emesa,1,subject,Levant,Emesa,homs,P8.1;OCD;PLE,secure,mapped
 THR,Odrysian Thrace,1,subject,Balkans,Seuthopolis,boruy,P8.1;OCD;PLE,secure,mapped
-BOS,Bosporan Kingdom,1,subject,Pontic,Cimmerian Bosporus,TBD,P8.1;OCD,contested,researched
+BOS,Bosporan Kingdom,1,subject,Pontic,Cimmerian Bosporus,taman,P8.1;OCD;PLE,contested,mapped
 MAU,Mauretania,1,subject,Africa,Volubilis,volubilis,P8.1;CAH-XI,secure,researched
 PAR,Parthian Empire,1,country,Iran,Ctesiphon,baghdad,P8.2;CAH-XI;PLE,secure,mapped
-CHA,Characene,1,subject,Iran,Charax Spasinu,TBD,P8.2;OCD,secure,researched
+CHA,Characene,1,subject,Iran,Charax Spasinu,muhammerah,P8.2;OCD;PLE,contested,mapped
 ELY,Elymais,1,subject,Iran,Susa,shush,P8.2;OCD;PLE,secure,mapped
 PRS,Persis,1,subject,Iran,Persepolis,istakhr,P8.2;OCD;PLE,secure,mapped
-ATR,Media Atropatene,1,subject,Iran,Ganzak,TBD,P8.2;OCD,secure,researched
+ATR,Media Atropatene,1,subject,Iran,Ganzak,malekan,P8.2;OCD;PLE,secure,mapped
 ADI,Adiabene,1,subject,Mesopotamia,Arbela,erbil,P8.2;OCD;PLE,secure,mapped
 OSR,Osroene,1,subject,Mesopotamia,Edessa,urfa,P8.2;OCD;PLE,secure,mapped
-GOR,Gordyene,1,subject,Mesopotamia,Corduene,TBD,P8.2;OCD,secure,researched
+GOR,Gordyene,1,subject,Mesopotamia,Corduene,eruh,P8.2;OCD;PLE,secure,mapped
 SKT,Sakastan,1,subject,Iran,Zaranj,zaranj,P8.2;CAH-XI,secure,mapped
 MRG,Margiana,1,subject,Central Asia,Merv,merv,P8.2;CAH-XI,secure,researched
 ARM,Kingdom of Armenia,1,country,Caucasus,Artaxata,khor_virap,P8.2;CAH-XI;PLE,secure,mapped
@@ -31,12 +31,12 @@ KUC,Kucha,1,subject,Tarim,Kucha,kucha,P8.3;CHG,secure,researched
 KAS,Kashgar,1,subject,Tarim,Kashgar,kashgar,P8.3;CHG,secure,researched
 LOU,Loulan,1,subject,Tarim,Loulan,loulan,P8.3;CHG,secure,researched
 TUR,Turfan,1,subject,Tarim,Turfan,turpan,P8.3;CHG,secure,researched
-GOG,Goguryeo,1,country,Korea,Gungnae,TBD,P8.3;SAM,secure,researched
-BUY,Buyeo,2,country,Korea,Buyeo,TBD,P8.3;SAM,secure,researched
-MAH,Mahan,2,sop,Korea,Mahan,TBD,P8.3;SAM,contested,researched
-JIN,Jinhan,2,sop,Korea,Jinhan,TBD,P8.3;SAM,contested,researched
-BYE,Byeonhan,2,sop,Korea,Byeonhan,TBD,P8.3;SAM,contested,researched
-WAA,Wa Polities,2,sop,Japan,Yayoi polities,TBD,P8.3;CAH-XI,secure,researched
+GOG,Goguryeo,1,country,Korea,Gungnae,ganggye,P8.3;SAM,secure,mapped
+BUY,Buyeo,2,country,Korea,Buyeo,nongan,P8.3;SAM,secure,mapped
+MAH,Mahan,2,sop,Korea,Mahan,naju,P8.3;SAM,contested,mapped
+JIN,Jinhan,2,sop,Korea,Jinhan,gyeongju,P8.3;SAM,contested,mapped
+BYE,Byeonhan,2,sop,Korea,Byeonhan,uian,P8.3;SAM,contested,mapped
+WAA,Wa Polities,2,sop,Japan,Yayoi polities,nara,P8.3;CAH-XI,secure,mapped
 SAT,Satavahana,2,country,India,Pratishthana,TBD,P8.4;CAH-XI,contested,researched
 ISK,Indo-Scythian Realm,2,country,India,Taxila,attock,P8.4;CAH-XI;PLE,contested,mapped
 IGR,Indo-Greek Rump,2,country,India,Sagala,sagala,P8.4;CAH-XI,contested,mapped
@@ -80,31 +80,31 @@ SUI,Suiones,1,sop,Scandinavia,Uppland,TBD,P8.7;CAH-XI,secure,researched
 AES,Aestii,1,sop,Baltic,Sambia,TBD,P8.7;CAH-XI,secure,researched
 VEN,Venedi,1,sop,Eastern Europe,Vistula basin,TBD,P8.7;CAH-XI,secure,researched
 FIN,Finnic Societies,1,sop,Finland,Finnic coast,TBD,P8.7;CAH-XI,secure,researched
-CAT,Catuvellauni,1,country,Britain,Camulodunum,TBD,P8.7;CAH-XI,secure,researched
-TRI,Trinovantes,1,country,Britain,Camulodunum,TBD,P8.7;CAH-XI,secure,researched
+CAT,Catuvellauni,1,country,Britain,Verlamion,st_albans,P8.7;CAH-XI,secure,mapped
+TRI,Trinovantes,1,country,Britain,Camulodunum,colchester,P8.7;CAH-XI;PLE,secure,mapped
 ICE,Iceni,1,country,Britain,Venta Icenorum,norwich,P8.7;CAH-XI;PLE,secure,mapped
 BRI,Brigantes,1,country,Britain,Isurium,ripon,P8.7;CAH-XI;PLE,secure,mapped
 ATB,Atrebates,1,country,Britain,Calleva,basingstoke,P8.7;CAH-XI;PLE,secure,mapped
 SIL,Silures,1,country,Britain,Caerwent,monmouth,P8.7;CAH-XI;PLE,secure,mapped
-ORD,Ordovices,1,country,Britain,North Wales,TBD,P8.7;CAH-XI,secure,researched
+ORD,Ordovices,1,country,Britain,North Wales,carnarvon,P8.7;CAH-XI,secure,mapped
 DUM,Dumnonii,1,country,Britain,Exeter,exeter,P8.7;CAH-XI,secure,mapped
-CAL,Caledonian Societies,1,sop,Britain,Caledonia,TBD,P8.7;CAH-XI,secure,researched
-ULA,Ulaid,1,sop,Ireland,Ulster,TBD,P8.7;CAH-XI,secure,researched
-DAC,Dacian Kingdoms,2,country,Danube,Sarmizegetusa,TBD,P8.7;CAH-XI,secure,researched
+CAL,Caledonian Societies,1,sop,Britain,Caledonia,inverness,P8.7;CAH-XI,secure,mapped
+ULA,Ulaid,1,sop,Ireland,Ulster,armagh,P8.7;CAH-XI,secure,mapped
+DAC,Dacian Kingdoms,2,country,Danube,Sarmizegetusa,sebes,P8.7;CAH-XI;PLE,secure,mapped
 GET,Getae,2,sop,Danube,Lower Danube,TBD,P8.7;CAH-XI,secure,researched
 BAS,Bastarnae,2,sop,Danube,Carpathian foreland,TBD,P8.7;CAH-XI,secure,researched
-IAZ,Iazyges,2,country,Danube,Tisza plain,TBD,P8.7;CAH-XI,secure,researched
-ROX,Roxolani,2,country,Pontic,Lower Don,TBD,P8.7;CAH-XI,secure,researched
-AOR,Aorsi,2,country,Pontic,Lower Don,TBD,P8.7;CAH-XI,secure,researched
-SIR,Siraces,2,country,Pontic,Kuban basin,TBD,P8.7;CAH-XI,secure,researched
-ALA,Alans,2,country,Pontic,North Caucasus,TBD,P8.7;CAH-XI,secure,researched
-KNG,Kangju,2,country,Central Asia,Syr Darya,TBD,P8.8;CHG,secure,researched
-WSN,Wusun,2,country,Central Asia,Ili valley,TBD,P8.8;CHG,secure,researched
+IAZ,Iazyges,2,country,Danube,Tisza plain,heves,P8.7;CAH-XI,secure,mapped
+ROX,Roxolani,2,country,Pontic,Lower Don,tana,P8.7;CAH-XI,secure,mapped
+AOR,Aorsi,2,country,Pontic,Lower Don,semikarakorsk,P8.7;CAH-XI,secure,mapped
+SIR,Siraces,2,country,Pontic,Kuban basin,armavir,P8.7;CAH-XI;PLE,secure,mapped
+ALA,Alans,2,country,Pontic,North Caucasus,targim,P8.7;CAH-XI,secure,mapped
+KNG,Kangju,2,country,Central Asia,Syr Darya,otrar,P8.8;CHG,secure,mapped
+WSN,Wusun,2,country,Central Asia,Ili valley,gulja,P8.8;CHG,secure,mapped
 DAY,Dayuan,2,country,Central Asia,Fergana,fergana,P8.8;CHG,secure,researched
 SOG,Sogdian Cities,2,sop,Central Asia,Samarkand,samarkand,P8.8;CHG,secure,researched
 KHW,Khwarazm,2,country,Central Asia,Khwarazm,TBD,P8.8;CHG,secure,researched
-XIA,Xianbei,2,country,Steppe,Eastern steppe,TBD,P8.8;CAH-XI,secure,researched
-WHU,Wuhuan,2,country,Steppe,Liaoxi,TBD,P8.8;CAH-XI,secure,researched
+XIA,Xianbei,2,country,Steppe,Eastern steppe,dalai_nur_lake,P8.8;CAH-XI,secure,mapped
+WHU,Wuhuan,2,country,Steppe,Liaoxi,yizhou_jinzhou,P8.8;CAH-XI,secure,mapped
 DNG,Dingling,2,sop,Steppe,Upper Yenisei,TBD,P8.8;CAH-XI,secure,researched
 PYU,Pyu Cities,3,sop,Southeast Asia,Beikthano,TBD,P8.9;CAH-XI,secure,researched
 MON,Mon Precursors,3,sop,Southeast Asia,Lower Chao Phraya,TBD,P8.9;CAH-XI,secure,researched

@@ -90,6 +90,15 @@ M9 replaces it with the plan's own client-kingdom, satrapy, tributary, and
 foederati contracts rather than treating medieval UI labels as historical
 descriptions.
 
+## 2026-07-19 — Cross-check imperial-core and frontier assignments
+
+The ownership resolver rejects a location before it can belong to two active
+AD 1 tags. Its first frontier expansion found the initially selected Xianbei
+and Wuhuan anchors inside the broad Han geography frame; they were moved to
+nearby non-Han local keys before generation. This is an intentional guardrail:
+a visual capital proxy must not silently create a contradictory sovereignty
+claim at an imperial frontier.
+
 ## 2026-07-19 — Five campaign ages with a compatibility sentinel
 
 The campaign has five real ages: Principate, High Empires, Crisis, Dominate,

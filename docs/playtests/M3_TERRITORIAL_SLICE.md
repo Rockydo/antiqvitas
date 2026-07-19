@@ -9,9 +9,11 @@ them against the locally harvested hierarchy, filters broad areas to locations
 proven ownable in the installed setup, rejects overlaps, and writes the checked
 `ownership_resolved.csv`. Direct location rows remain explicit and reviewed.
 
-This pass paints 4,153 locations under 56 roster polities: the Roman,
+The initial pass painted 4,153 locations under 56 roster polities: the Roman,
 Parthian, and Western Han cores are multi-location data; the smaller reviewed
-polities retain their conservative capital-control seeds. It deliberately does
+polities retain their conservative capital-control seeds. A subsequent
+Pleiades/anchor review expanded the current generated state to 4,178 locations
+under 81 polities and 21 dependencies; its smoke is green. It deliberately does
 not claim that unassigned edge areas, SoP extents, or subject territories are
 finished. Those remain the M3 research backlog.
 
