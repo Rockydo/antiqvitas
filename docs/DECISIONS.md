@@ -43,6 +43,16 @@ mirror tracks that installed inventory during `make validate`, uses the
 installed no-BOM convention, and is the safe base that later M3 generators
 extend with country, ownership, pop, character, market, and other AD 1 state.
 
+## 2026-07-19 — Verified-capital political slice
+
+The first active AD 1 country manager assigns ownership only where a roster
+capital directly matches a local EU5 location key: 34 entries at this point.
+Each owns/controls its capital under a current-engine generic template and a
+random ruler, both explicitly temporary until M6 supplies sourced state forms
+and characters. This creates a real, smoke-clean map surface without inventing
+territory from fuzzy city-name matches; all remaining ownership stays absent
+until its source mapping exists.
+
 ## 2026-07-19 — Five campaign ages with a compatibility sentinel
 
 The campaign has five real ages: Principate, High Empires, Crisis, Dominate,
