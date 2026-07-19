@@ -152,8 +152,13 @@ Classical Dictionary's [Archelaus entry](https://academic.oup.com/edited-volume/
 which dates his Cappadocian reign from 36 BCE to AD 17. The British Museum
 identifies Antiochus III as the son of the Commagene king whose death led to
 the AD 17 annexation: [collection record](https://www.britishmuseum.org/collection/term/BIOG205268).
-The exact Bosporan succession remains contested as required by the master plan;
-the data preserves Dynamis without adding unsupported succession links.
+The exact Bosporan succession remains contested as required by the master plan.
+The data preserves Dynamis as ruler, while a separately represented Aspurgus
+exposes the competing court claim without adding an unsupported heir, parent,
+spouse, or accession script. Zavoykina's epigraphic and numismatic revision
+places Aspurgus's royal status by AD 6/7 and argues for an earlier reign, but
+that is not used to overrule the plan's deliberately unresolved anchor. Source:
+`ZAV-ASP` in the [source ledger](../world_1ad/SOURCES.md).
 
 ## Near Eastern border courts
 

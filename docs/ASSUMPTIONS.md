@@ -13,6 +13,17 @@ key is only an engine-continuity handle rather than a claim of uninterrupted
 state or family continuity. Sources weighed: P8.3; SAM; `AKS-DAE`; `KCI-BUY`
 in `docs/world_1ad/SOURCES.md`. [contested]
 
+## 2026-07-19 - Bosporan Aspurgus is a court claimant, not a forced succession
+
+The plan deliberately uses Dynamis as the contested Bosporan AD 1 ruler. Newer
+epigraphic and numismatic scholarship instead argues that Aspurgus was already
+king by the campaign boundary, relying in part on a royal dedication dated AD
+6/7. This conflict supports adding Aspurgus as a visible contested claimant,
+but does not license resolving the start state through a formal heir, parent,
+spouse, accession day, or immediate tag switch. The engine retains Dynamis as
+ruler pending a sourced M10 outcome. Sources weighed: P8.1; OCD; PLE;
+`ZAV-ASP` in `docs/world_1ad/SOURCES.md`. [contested]
+
 ## 2026-07-19 - Northern Indian courts distinguish secure continuity from contested sequence
 
 The plan names Azes for the Indo-Scythian AD 1 start, and Iranica establishes

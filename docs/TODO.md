@@ -99,6 +99,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Give every 107 Tier-1/2 roster tag a source-qualified M6 government profile without fabricating unknown AD 1 rulers.
 - [x] Add Pythodoris of Pontus as the source-qualified Colchian ruler without inventing biography or succession dates.
 - [x] Add Daeso's traditionally dated Buyeo court while explicitly retaining the Northern/Eastern Buyeo continuity question as contested.
+- [x] Add Aspurgus as a contested Bosporan court claimant without resolving the plan's Dynamis start anchor.
 - [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories.
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 
