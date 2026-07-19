@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 - Roman civic-cult pluralism is a narrow tolerance mapping
+
+At the AD 1 start, the Roman public cult coexisted with many locally observed
+religious practices across the empire, but the historical record does not map
+onto a modern neutral-freedom category and includes specific coercions and
+exclusions. M6 therefore gives Rome a small installed tolerance modifier only
+as a technical plural-cult adapter, while dating later Christian policy changes
+in M10. Sources weighed: P8.1; P11; P13; OCD.
+[secure for plural cult practice; contested for the tolerance-meter mapping]
+
 ## 2026-07-19 - Roman legal status is an explicit but bounded AD 1 baseline
 
 The Augustan start permits slavery and slave-goods movement through the
