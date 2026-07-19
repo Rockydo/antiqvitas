@@ -2052,7 +2052,23 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = antq_herod_archelaus
+				reforms = {
+					antq_client_monarchy
+				}
+				privilege = {
+					antq_client_royal_autonomy
+				}
+				laws = {
+					antq_client_governance_law = antq_roman_client_compact
+				}
+				centralization_vs_decentralization = 20
+				aristocracy_vs_plutocracy = -20
+				capital_economy_vs_traditional_economy = 25
+			}
 			capital = jerusalem
 		}
 
@@ -2062,7 +2078,23 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = antq_herod_antipas
+				reforms = {
+					antq_client_monarchy
+				}
+				privilege = {
+					antq_client_royal_autonomy
+				}
+				laws = {
+					antq_client_governance_law = antq_roman_client_compact
+				}
+				centralization_vs_decentralization = 15
+				aristocracy_vs_plutocracy = -20
+				capital_economy_vs_traditional_economy = 25
+			}
 			capital = safed
 		}
 
@@ -2072,7 +2104,23 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = antq_philip_tetrarch
+				reforms = {
+					antq_client_monarchy
+				}
+				privilege = {
+					antq_client_royal_autonomy
+				}
+				laws = {
+					antq_client_governance_law = antq_roman_client_compact
+				}
+				centralization_vs_decentralization = 15
+				aristocracy_vs_plutocracy = -20
+				capital_economy_vs_traditional_economy = 25
+			}
 			capital = antilebanon_mountains1
 		}
 
