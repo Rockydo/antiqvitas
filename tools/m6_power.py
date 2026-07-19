@@ -50,15 +50,18 @@ SOCIAL_VALUE_KEYS = frozenset((
     "serfdom_vs_free_subjects", "mercantilism_vs_free_trade", "offensive_vs_defensive", "quality_vs_quantity",
     "capital_economy_vs_traditional_economy", "individualism_vs_communalism", "outward_vs_inward",
 ))
-LAW_CATEGORIES = frozenset(("administrative", "military"))
+LAW_CATEGORIES = frozenset(("administrative", "military", "socioeconomic"))
 MODIFIER_KEYS = frozenset((
 	"clergy_estate_target_satisfaction", "country_cabinet_efficiency", "global_burghers_estate_power",
 	"global_clergy_estate_power", "global_crown_estate_power",
+	"copper_impacts_inflation", "copper_used_for_minting", "goods_gold_impacts_inflation",
+	"goods_gold_used_for_minting",
     "global_levy_size_modifier", "global_nobles_estate_power", "global_pop_assimilation_speed_modifier",
     "global_pop_food_consumption", "global_tribes_estate_power",
     "burghers_estate_target_satisfaction", "land_morale_modifier", "monthly_towards_aristocracy",
-    "monthly_towards_centralization", "monthly_towards_decentralization", "nobles_estate_target_satisfaction",
-    "tribes_estate_target_satisfaction",
+	"minting_income_factor", "minting_inflation_threshold", "monthly_towards_centralization",
+	"monthly_towards_decentralization", "nobles_estate_target_satisfaction", "silver_impacts_inflation",
+	"silver_used_for_minting", "tribes_estate_target_satisfaction",
 ))
 
 
