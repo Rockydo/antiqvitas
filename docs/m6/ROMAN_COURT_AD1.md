@@ -93,6 +93,21 @@ Their separate court-line keys avoid inventing a Quinctilian or Valerian family
 tree. Neither receives an engine command, estate, ability, relationship,
 biography date, or dated career history.
 
+## Independently dated Roman cultural and court figures
+
+The University of Louvain's Velleius Paterculus survey dates Velleius to
+c. 19 BCE-AD 30 (`UCL-VEL`); Roman Inscriptions of Britain records Servius
+Sulpicius Galba's 24 December 3 BCE-15 January AD 69 life (`RIB-GAL`); and
+the British Museum gives Lucius Annaeus Seneca a 4 BCE?-AD 65 span
+(`BM-SEN`). All three therefore cross the campaign boundary independently of
+the Fasti age inference.
+
+They remain bounded Roman-world context records only. No engine biography
+date, campaign office, command, adoption, physical residence, ability, family
+graph, or later career is scripted. Galba's individual court-line label is
+kept separate from the distinct Gaius Sulpicius Galba named in the AD 22
+consular fasti.
+
 ## Later-attested Augustan contemporaries
 
 Tacitus directly attests Lucius Arruntius, Manius Lepidus, and Quintus Haterius
