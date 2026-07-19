@@ -1196,3 +1196,15 @@ minority-regency runtime blocker remains isolated.
 
 Next: continue direct-evidence court coverage while keeping later political
 careers in the M10 history pass.
+
+## 2026-07-19 - M6 senior Han court slice
+
+- Added Kong Guang as a senior Han court figure from the *Han Shu* source
+  route. The historical record places him in Emperor Ping's minority and
+  records the Yuan Shi first-year Grand Tutor/Grand Master sequence.
+- The generated start state does not turn that evidence into a formal engine
+  office, date, ability score, or regency role. Its exact limits are recorded
+  in [the Han court note](m6/HAN_COURT_AD1.md).
+
+Next: continue direct-evidence court coverage while preserving the independent
+Han minority-regency runtime blocker.
