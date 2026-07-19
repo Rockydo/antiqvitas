@@ -10,7 +10,7 @@ those ledgers.
 | Mauretania | Juba II, Cleopatra Selene II | Client Monarchy | P8.1; OCD |
 | Nabataea | Aretas IV | Client Monarchy | P8.1; OCD |
 | Kush | Natakamani, Amanitore | Kushite Dual Kingship | P8.5; CAH-XI; PLE |
-| Xiongnu | Wuzhuliu Chanyu | Steppe Confederation | P8.3; CAH-XI |
+| Xiongnu | Wuzhuliu Chanyu, Xian (Wulei) | Steppe Confederation | P8.3; CAH-XI; CTP-WUL |
 | Goguryeo | Yuri | Early Korean Kingdom | P8.3; SAM |
 | Marcomanni | Maroboduus | Tribal Kingdom | P8.7; CAH-XI |
 | Catuvellauni | Tasciovanus, Cunobelinus | Tribal Kingdom | P8.7; CAH-XI |
@@ -20,6 +20,15 @@ those ledgers.
 [AD 1 source ledger](../world_1ad/SOURCES.md). The independent Korean
 chronology cross-check identifies Yuri as the second Goguryeo king, reigning
 from 19 BCE to AD 18: [Encyclopedia of Korean Culture](https://encykorea.aks.ac.kr/Article/E0041388).
+
+## Xiongnu
+
+Xian, later Wulei Chanyu, is a bounded second Xiongnu court record. The
+*Tongdian* preserves the early Tianfeng-era notice naming him Wuzhuliu's
+younger brother. Its post-boundary date demonstrates that he was alive at the
+campaign boundary, but does not establish an AD 1 chanyu title, office,
+accession date, residence, or complete family graph. Source: P8.3; `CTP-WUL`
+in the [source ledger](../world_1ad/SOURCES.md).
 
 ## Buyeo
 
