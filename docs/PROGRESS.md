@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-19 — M3 full capital-anchor coverage
+
+- Completed the collision-checked local-map anchor registry for all 133 AD 1
+  roster polities. The setup generator now creates an active country and an
+  explicit capital-control seed for each; the ownership resolver produces
+  4,230 non-overlapping locations and 25 source-recorded dependencies.
+- Added transparent regional-anchor assumptions for non-state societies and
+  places without a one-to-one EU5 local key. They are map geometry adapters,
+  not assertions of a formal ancient capital or final territorial extent.
+- `make validate` and a real-game smoke are green with zero new error lines.
+  The foreground-guarded driver also captured a clean mod-menu checkpoint.
+
+Next: replace one-location anchors with researched territorial extents and SoP
+coverage, beginning with the regions still outside the Roman, Parthian, and Han
+core frames.
+
 ## 2026-07-19 — M3 frontier capital tranche
 
 - Expanded the checked active-capital set from 56 to 81 polities with
