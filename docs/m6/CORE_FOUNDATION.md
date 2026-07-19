@@ -49,3 +49,11 @@ commandery administration, and Parthian great-house compact are constrained
 gameplay representations, not reconstructions of a uniform written legal code.
 Each source row records the relevant plan section and synthesis source; the
 historically interpretive proxies are marked `contested` in their ledger.
+
+## Secondary AD 1 roster
+
+The next slice adds Maroboduus, Arminius, Juba II, Cleopatra Selene II, Aretas
+IV, Natakamani, Amanitore, Wuzhuliu Chanyu, Yuri of Goguryeo, Tasciovanus, and
+Cunobelinus. It gives Mauretania, Nabataea, Kush, the Xiongnu, Goguryeo,
+Marcomanni, and Catuvellauni source-labelled start profiles. The detailed
+source and uncertainty record is [the secondary roster note](SECONDARY_AD1_ROSTER.md).
