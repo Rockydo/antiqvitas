@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 - M6 Nabataean Malichus court record
+
+- Added Malichus II as Aretas IV's contested, source-qualified court figure:
+  a peer-reviewed numismatic reconstruction puts him before a fourth son whose
+  coin-associated birth is 5 BCE, and ANS confirms his later succession.
+- No birth date, mother, heir mechanic, office, or broader genealogy is
+  imported. The evidentiary chain is retained in the Nabataean court note and
+  `ASSUMPTIONS.md`.
+
+Next: regenerate, validate, smoke-test, then continue source-led Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Xiongnu Xian court record
 
 - Added Xian, later Wulei Chanyu, as Wuzhuliu's source-qualified younger
