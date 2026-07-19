@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-19 - Daeso's Buyeo court is a contested traditional chronology
+
+The Academy of Korean Studies records Daeso as Buyeo's fifth king with the
+conventional 20 BCE-AD 22 reign, which spans the campaign boundary. It is
+enough to replace the anonymous start ruler, but it is not enough to state an
+exact accession day, biography date, successor, or a detailed political map.
+Recent scholarship further cautions that historical uses of Buyeo can encompass
+different political realities such as Northern and Eastern Buyeo. The project's
+broad Buyeo tag therefore receives Daeso as a contested court, and its dynasty
+key is only an engine-continuity handle rather than a claim of uninterrupted
+state or family continuity. Sources weighed: P8.3; SAM; `AKS-DAE`; `KCI-BUY`
+in `docs/world_1ad/SOURCES.md`. [contested]
+
 ## 2026-07-19 - Northern Indian courts distinguish secure continuity from contested sequence
 
 The plan names Azes for the Indo-Scythian AD 1 start, and Iranica establishes

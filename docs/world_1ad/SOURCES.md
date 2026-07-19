@@ -46,6 +46,8 @@ a row reaches `implemented` status.
 
 - `STR-CLZ`: Strabo, [*Geography* 11.2.18](https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Aabo%3Atlg%2C0099%2C001%3A11), the primary account that Pythodoris ruled the Colchians after Polemon's death.
 - `TSU-CLZ`: Tedo Dundua, ["Colchis and Pontus of Polemons"](https://dspace.tsu.ge/bitstreams/2d55da34-a15f-44c1-a68b-cd1a3d6e0d02/download), used as the scholarly cross-check that Pythodoris remained alive and ruling Colchis c. AD 19/20.
+- `AKS-DAE`: Academy of Korean Studies, ["Daeso"](https://encykorea.aks.ac.kr/Article/E0014524), used for the conventional record of Daeso as Buyeo's fifth king reigning 20 BCE-AD 22.
+- `KCI-BUY`: Byungjin Jang, ["The Buyeo Succession of Goguryeo and Its Historical Reality"](https://www.kci.go.kr/kciportal/mobile/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003320607), *Northeast Asian History Review* 91 (2026), used for the caution that historical uses of "Buyeo" may encompass differing political realities including Northern and Eastern Buyeo.
 
 Rows marked `contested` have a corresponding entry in `docs/ASSUMPTIONS.md`.
 `TBD` map capitals are historical roster records awaiting a verified mapping to

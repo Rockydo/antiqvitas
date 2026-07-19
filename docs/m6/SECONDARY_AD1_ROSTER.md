@@ -21,6 +21,18 @@ those ledgers.
 chronology cross-check identifies Yuri as the second Goguryeo king, reigning
 from 19 BCE to AD 18: [Encyclopedia of Korean Culture](https://encykorea.aks.ac.kr/Article/E0041388).
 
+## Buyeo
+
+Daeso replaces Buyeo's anonymous regional-kingship ruler. The Academy of
+Korean Studies records the conventional 20 BCE-AD 22 reign of the fifth Buyeo
+king, so the campaign boundary falls within the source's chronology. A recent
+scholarly review, however, warns that "Buyeo" can cover distinct Northern and
+Eastern political realities. The project consequently treats both the court
+and its engine dynasty label as contested: it supplies no exact accession day,
+biography date, successor, or claim that the broad roster tag is one
+uninterrupted state. Sources: P8.3; SAM; `AKS-DAE`; `KCI-BUY` in the
+[source ledger](../world_1ad/SOURCES.md).
+
 ## Anuradhapura
 
 Bhatikabhaya Abhaya is added as the current Anuradhapura ruler at the AD 1
