@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-19 — M5 ancient transport corridors
+
+- Generated 25 source-labelled road segments for the Via Aurelia, Via Egnatia,
+  Via Maris, Syrian and Royal-Road corridors, Tarim/Transoxianian links, Han
+  trunks, and the Indian northern/western trade axes.
+- The generator validates installed map endpoints, AD 1 ownership, confidence,
+  and duplicate undirected links before emitting the exact bare-endpoint syntax
+  used by the installed road start manager.
+- `make validate` and a real `make smoke` are green with zero new error lines.
+
+Next: generate the development pass and expand the remaining era-specific goods
+and buildings before a longer observer trade-flow check.
+
 ## 2026-07-19 — M5 observer foundation probe
 
 - The autonomous driver loaded the active AD 1 world at `08:00, 1 January, 1`,
