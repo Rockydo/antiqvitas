@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-19 - M6 Iranian Caucasian and South Arabian profiles
+
+- Added anonymous Parthian-facing profiles for Elymais, Adiabene, Gordyene,
+  Sakastan, and Margiana; the first three retain their existing named-court
+  evidence blockers. Colchis and Caucasian Albania use the bounded frontier
+  court adapter.
+- Added anonymous regional-kingship profiles for Saba, Himyar, Qataban, and
+  Hadramawt plus a tribal Kindah profile. The Southern Arabian named-ruler
+  deferral remains explicit rather than inventing a court.
+- Regenerated M6/start data. `make validate` reports 84 government profiles;
+  the enabled-mod smoke reached the rendered menu with zero new error-log
+  lines.
+
+Next: complete the remaining Indian African Danubian and Central Asian Tier-1/2
+profiles, then assess the named-roster and mechanic gaps still needed for M6.
+
 ## 2026-07-19 - M6 eastern anonymous government profiles
 
 - Added the bounded Regional Kingship reform, court privilege, and law for

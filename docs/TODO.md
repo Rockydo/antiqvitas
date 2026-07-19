@@ -94,6 +94,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add anonymous, source-qualified tribal government profiles for 19 northern Tier-1 polities where no AD 1 incumbent is defensible.
 - [x] Add anonymous, source-qualified tribal government profiles for nine Brittonic and Irish Tier-1 polities where no AD 1 incumbent is defensible.
 - [x] Add a bounded regional-kingship adapter and anonymous source-qualified Tarim Buyeo and eastern-confederacy profiles.
+- [x] Add anonymous source-qualified Iranian Caucasian and South Arabian profiles while preserving named-court evidence blockers.
 - [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories.
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 

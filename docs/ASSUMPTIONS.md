@@ -628,3 +628,14 @@ Jinhan, Byeonhan, Yayoi Wa, Yuezhi, Xianbei, Wuhuan, and Dingling are explicitly
 SoP or confederacy frames and therefore receive anonymous tribal profiles.
 Neither adapter claims a shared constitution or an unrecorded dynasty. Sources
 weighed: P8.3-P8.4; P8.8; P13; CAH-XI; CHG; SAM. [contested]
+
+## 2026-07-19 - Iranian Caucasian and South Arabian anonymous profiles
+
+Elymais, Adiabene, Gordyene, Sakastan, and Margiana use an anonymous
+Parthian-facing profile; Colchis and Caucasian Albania use an anonymous
+frontier-court profile. Saba, Himyar, Qataban, and Hadramawt use anonymous
+regional kingship while Kindah remains an anonymous tribal profile. These are
+governmental adapters for attested polities, not claims of known start-date
+incumbents. The three existing named-court evidence gaps and the Southern
+Arabian named-court gap remain documented in `BLOCKERS.md`. Sources weighed:
+P8.2; P8.6; P13; CAH-XI; OCD; PLE. [contested]

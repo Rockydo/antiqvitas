@@ -121,6 +121,16 @@ the existing anonymous tribal contract because the plan identifies them as
 confederacy or society-of-peoples frames. Sources: P8.3-P8.4; P8.8; P13;
 CAH-XI; CHG; SAM.
 
+## Iranian Caucasian and South Arabian anonymous profiles
+
+Elymais, Adiabene, Gordyene, Sakastan, and Margiana use the Parthian
+Sub-Kingdom adapter without a named ruler. Colchis and Caucasian Albania use
+the bounded frontier adapter. Saba, Himyar, Qataban, and Hadramawt use
+Regional Kingship, while Kindah uses the anonymous tribal adapter. These
+entries improve the shared government surface but do not resolve the existing
+named-court research blockers for Elymais, Adiabene, Gordyene, Saba, Himyar,
+or Qataban. Sources: P8.2; P8.6; P13; CAH-XI; OCD; PLE.
+
 ## Coinage standards
 
 Rome's socioeconomic law uses the installed gold-and-silver minting contract
