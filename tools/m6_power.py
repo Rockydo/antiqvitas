@@ -61,7 +61,8 @@ MODIFIER_KEYS = frozenset((
     "burghers_estate_target_satisfaction", "land_morale_modifier", "monthly_towards_aristocracy",
 	"minting_income_factor", "minting_inflation_threshold", "monthly_towards_centralization",
 	"monthly_towards_decentralization", "nobles_estate_target_satisfaction", "silver_impacts_inflation",
-	"silver_used_for_minting", "tribes_estate_target_satisfaction",
+	"silver_used_for_minting", "tribes_estate_target_satisfaction", "slavery_blocked",
+	"ban_exports_of_slaves_goods", "ban_imports_of_slaves_goods",
 ))
 
 
