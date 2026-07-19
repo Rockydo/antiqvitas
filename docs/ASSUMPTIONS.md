@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-19 - Cotys is a bounded Odrysian court figure
+
+Tacitus explicitly names Cotys as Rhoemetalces I's son when narrating the
+Augustan settlement made after Rhoemetalces's death. The already accepted OCD
+chronology places Rhoemetalces's rule across the AD 1 boundary and that death
+after it; Cotys therefore has a secure living court context at the campaign
+start. This does not establish Cotys's exact age, engine-heir status, title,
+office, accession, precise residence, or a complete Sapaean genealogy. Sources
+weighed: P8.1; OCD; `TAC-THR` in `docs/world_1ad/SOURCES.md`. [secure for the
+living court record; no claim for the omitted mechanics]
+
 ## 2026-07-19 - Monobazus I is a qualified Adiabenian AD 1 ruler
 
 Marciak's numismatic reconstruction describes Monobazus I's c. 5 BCE-AD 30

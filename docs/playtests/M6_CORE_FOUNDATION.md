@@ -6,7 +6,7 @@ Mod mode: enabled `ANTIQVITAS` playset via relocated user directory
 
 ## Implemented, checked surface
 
-- `tools/m6_power.py --check` reports 59 dynasties, 93 characters, 107
+- `tools/m6_power.py --check` reports 59 dynasties, 94 characters, 107
   government profiles, 23 privileges, 23 laws, 31 ruler terms, and 15
   regnal-history rows from source-labelled M6 CSV ledgers.
 - Generated Rome uses `antq_principate`, Augustus, Livia, and Gaius Caesar as
