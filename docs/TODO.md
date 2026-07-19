@@ -116,7 +116,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Add a bounded, source-qualified druidic-authority privilege to the eight pre-conquest Brittonic polity profiles without asserting a pan-British constitution.
 - [x] Driver-test the Roman government panel: ROM renders Roma, one reform, nineteen laws, and all five Roman estate adapters, including Equestrian Service and Priestly Colleges.
 - [x] Add five contested, accession-credited Han court figures without translating titles, residence, kinship, or later offices into start-state mechanics.
-- [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories. (77 source-led characters and 23 privilege adapters currently.)
+- [x] Add Artaxias III and Polemo II as bounded Pythodorid family-court figures without projecting later Armenian or Pontic reigns into AD 1.
+- [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories. (79 source-led characters and 23 privilege adapters currently.)
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 
 ## M7 — War

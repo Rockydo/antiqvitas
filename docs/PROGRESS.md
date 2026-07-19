@@ -1295,6 +1295,19 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-19 - M6 Pythodorid household extension
+
+- Added Artaxias III and Polemo II from the British Museum's direct Pythodorid
+  family record, which names Polemo's parents and both siblings and gives him a
+  life span crossing AD 1.
+- They remain contested `CLZ` court-only records: no specific residence,
+  Armenian or Pontic title, office, marriage, children, claim, succession, or
+  biography date is inferred. The source and limits are recorded in [the
+  Colchian court note](m6/COLCHIAN_COURT_AD1.md) and `ASSUMPTIONS.md`.
+
+Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
+separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Han accession-court slice
 
 - Added Wang Yun, Liu Bu'e, Ren Cen, Kong Yong, and Shi Xu from the first
