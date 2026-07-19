@@ -3120,7 +3120,24 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = antq_attambelos_ii
+				ruler_term = { character = antq_attambelos_ii start_date = 1.1.1 }
+				reforms = {
+					antq_parthian_subkingdom
+				}
+				privilege = {
+					antq_parthian_subking_autonomy
+				}
+				laws = {
+					antq_parthian_subking_law = antq_regional_court_compact
+				}
+				centralization_vs_decentralization = -10
+				aristocracy_vs_plutocracy = -35
+				capital_economy_vs_traditional_economy = 20
+			}
 			capital = muhammerah
 		}
 
