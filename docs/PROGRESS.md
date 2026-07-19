@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-19 - M6 eastern anonymous government profiles
+
+- Added the bounded Regional Kingship reform, court privilege, and law for
+  attested regional monarchies whose AD 1 incumbent is unknown. It now covers
+  Khotan, Kucha, Kashgar, Loulan, Turfan, and Buyeo; their tributary/diplomatic
+  relationships remain M9 work.
+- Added anonymous tribal profiles for Mahan, Jinhan, Byeonhan, Yayoi Wa, the
+  Yuezhi confederation, Xianbei, Wuhuan, and Dingling. These preserve the
+  plan's SoP/confederacy framing without inventing courts or later rulers.
+- Regenerated M6/start data. `make validate` reports 72 government profiles,
+  18 privileges, and 21 laws; the enabled-mod smoke reached the rendered menu
+  with zero new error-log lines.
+
+Next: continue the Tier-1/2 government surface with source-qualified courts or
+explicit anonymous profiles where the evidence establishes a polity but not an
+AD 1 incumbent.
+
 ## 2026-07-19 - M6 anonymous Brittonic and Irish profiles
 
 - Replaced nine generic M3 ruler stubs for the Trinovantes, Iceni, Brigantes,

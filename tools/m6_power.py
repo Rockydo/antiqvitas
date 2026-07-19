@@ -588,6 +588,16 @@ antq_early_korean_kingdom = {
 	years = 2
 }
 
+antq_regional_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_crown_estate_power = 0.05
+		country_cabinet_efficiency = 0.025
+	}
+	years = 2
+}
+
 antq_tribal_kingdom = {
 	major = yes
 	government = tribe
@@ -663,6 +673,8 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_steppe_confederation_desc", "A confederation whose chanyu must balance the leading clans."),
         ("antq_early_korean_kingdom", "Early Korean Kingdom"),
         ("antq_early_korean_kingdom_desc", "A developing royal kingdom supported by leading political houses."),
+        ("antq_regional_kingship", "Regional Kingship"),
+        ("antq_regional_kingship_desc", "A bounded technical monarchy adapter for an attested regional court without a defensible current ruler."),
         ("antq_tribal_kingdom", "Tribal Kingdom"),
         ("antq_tribal_kingdom_desc", "A kingship sustained and constrained by leading kin groups."),
     ))

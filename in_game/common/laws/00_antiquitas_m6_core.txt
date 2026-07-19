@@ -370,3 +370,21 @@ antq_han_coinage_law = {
 		}
 	}
 }
+
+antq_regional_kingship_law = {
+	law_category = administrative
+	law_gov_group = monarchy
+	potential = {
+		government_type = government_type:monarchy
+	}
+	antq_royal_court_governance = {
+		country_modifier = {
+			global_crown_estate_power = 0.05
+			country_cabinet_efficiency = 0.025
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+		}
+	}
+}

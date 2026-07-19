@@ -93,6 +93,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Record and defer the South Arabian named-court gap rather than inventing AD 1 rulers for Saba, Himyar, or Qataban.
 - [x] Add anonymous, source-qualified tribal government profiles for 19 northern Tier-1 polities where no AD 1 incumbent is defensible.
 - [x] Add anonymous, source-qualified tribal government profiles for nine Brittonic and Irish Tier-1 polities where no AD 1 incumbent is defensible.
+- [x] Add a bounded regional-kingship adapter and anonymous source-qualified Tarim Buyeo and eastern-confederacy profiles.
 - [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories.
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 

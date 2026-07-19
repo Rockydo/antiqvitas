@@ -107,6 +107,20 @@ Brigantes, Atrebates, Silures, Ordovices, Dumnonii, Caledonian societies, and
 Ulaid. Their later named figures and Roman-conquest arcs are dated M10 content,
 not a warrant for inventing a start-date court.
 
+## Regional Kingship adapter and eastern profiles
+
+`antq_regional_kingship`, `antq_regional_royal_court`, and
+`antq_regional_kingship_law` form a deliberately generic monarchy adapter:
+small crown and court values only, with no claim that its users shared a
+constitution. It covers Khotan, Kucha, Kashgar, Loulan, Turfan, and Buyeo when
+the project source route establishes the polity but not a current AD 1 ruler.
+Their Han tributary and external relationships remain M9 work.
+
+Mahan, Jinhan, Byeonhan, Yayoi Wa, Yuezhi, Xianbei, Wuhuan, and Dingling use
+the existing anonymous tribal contract because the plan identifies them as
+confederacy or society-of-peoples frames. Sources: P8.3-P8.4; P8.8; P13;
+CAH-XI; CHG; SAM.
+
 ## Coinage standards
 
 Rome's socioeconomic law uses the installed gold-and-silver minting contract
