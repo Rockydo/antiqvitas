@@ -1307,6 +1307,17 @@ separate Han runtime-regency blocker.
 Next: continue source-led M6 roster and mechanics coverage while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-19 - M6 Colchian household slice
+
+- Added Antonia Tryphaena, directly identified by the British Museum as
+  Pythodoris of Pontus's daughter and alive across the AD 1 boundary.
+- Her Colchian engine context is deliberately contested because the source does
+  not fix her physical residence that day. No later Thracian life, marriage,
+  children, office, or succession is imported into the start state.
+
+Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
+separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Trinovantian ruler correction
 
 - Replaced Trinovantes' generated ruler with coin-attested Dubnovellaunos from

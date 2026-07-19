@@ -702,6 +702,17 @@ kinship, office, date, second ruler slot, or territorial conclusion is
 scripted. Sources weighed: P8.7; `CCI-EPP` in
 `docs/world_1ad/SOURCES.md`. [contested]
 
+## 2026-07-19 - Antonia Tryphaena uses a contested Colchian court context
+
+The British Museum identifies Antonia Tryphaena as Pythodoris of Pontus's
+daughter and gives a 10 BCE-AD 55 life span, establishing her survival at the
+campaign boundary. It does not locate her on 1 January AD 1. The roster
+therefore places her in Pythodoris's Colchian court context solely to make the
+attested mother-daughter household legible, not to claim a physical residence
+or a finished Pythodorid genealogy. No marriage, later Thracian queenship,
+children, office, succession, or biography date is scripted. Sources weighed:
+`BM-TRY` in `docs/world_1ad/SOURCES.md`. [contested]
+
 ## 2026-07-19 - Eastern anonymous courts and societies
 
 The plan establishes Tarim city-states and Buyeo as regional courts but does
