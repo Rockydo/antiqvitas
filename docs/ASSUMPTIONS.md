@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-19 - Attambelos II is current at AD 1, with a qualified coin chronology
+
+Coin-based reconstructions place Attambelos II of Characene across the AD 1
+boundary. Their conventional endpoints differ in notation and the ruler is
+otherwise sparsely attested, so the start record supplies neither biography
+dates nor a successor and begins the engine term only at the campaign boundary.
+The Characenian royal-house key is an explicitly limited continuity label.
+Sources weighed: P8.2; OCD; John Hansman's [*Encyclopaedia Iranica* Characene entry](https://www.iranicaonline.org/articles/characene-and-charax-spasinou-in-pre-islamic-times/); and Monika Schuol, *Die Charakene* (2000), pp. 226, 318-20.
+[secure for the AD 1 overlap; contested for exact endpoints and dynastic
+reconstruction]
+
 ## 2026-07-19 - Ganasangha leadership remains collective where no AD 1 individual is secure
 
 Yaudheya, Arjunayana, and Kuninda are represented as republican ganasanghas as

@@ -52,6 +52,20 @@ leading warrior clans; neither claims a European-style republic, a hereditary
 nobility, an exact constitutional text, or a membership roll. Sources: P8.4;
 P13; CAH-XI.
 
+## Characene
+
+Attambelos II replaces Characene's generic start ruler. Coin-based chronology
+places him in office across AD 1; the exact conventional endpoints vary in
+notation and are deliberately retained as contested metadata rather than an
+engine accession date. The Characenian royal-house key is only an engine
+continuity label and asserts no reconstructed genealogy.
+
+Characene reuses the narrow Parthian Sub-Kingdom adapter already tested for
+Media Atropatene. It identifies an Arsacid-facing regional court, not a
+finished subject treaty or a full Characenian constitution; those diplomatic
+terms remain M9 work. Sources: P8.2; OCD; `IRAN-CHA`; `SCHU-CHA` in the
+[source ledger](../world_1ad/SOURCES.md).
+
 ## Intentional limits
 
 The dynasty labels marked `contested` are engine continuity labels where the
