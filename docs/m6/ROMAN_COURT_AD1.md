@@ -20,6 +20,18 @@ Neither source provides a needed day-level biography date or an AD 1 office
 assignment, so both fields remain blank. The M10 dated-history pass owns their
 later careers.
 
+## Vipsanian grandchildren
+
+Suetonius names Agrippa Postumus, Julia the Younger, and Agrippina the Elder as
+the children of Agrippa and Julia, and describes Augustus raising his
+grandchildren in his own household (`SUET-JUL` in the source ledger). All three
+therefore appear as court figures under a narrow Vipsanian family label.
+
+Their records deliberately do not turn that upbringing into a present heir
+appointment, adoption, marriage field, public office, exile, later family, or
+biography date. In particular, Agrippa Postumus's adoption belongs to AD 4,
+outside the start state.
+
 ## Arsacid guest
 
 Vonones, an Arsacid son of Phraates IV, is also recorded at Rome. *Encyclopaedia

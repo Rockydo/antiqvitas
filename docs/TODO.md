@@ -102,6 +102,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add Aspurgus as a contested Bosporan court claimant without resolving the plan's Dynamis start anchor.
 - [x] Run and record two evidence-based Han minority-regency runtime probes; defer the silent generated-ruler fallback in `BLOCKERS.md`.
 - [x] Add Lucius Caesar and Germanicus to the source-led Julio-Claudian court without inventing an AD 1 office command or a second heir slot.
+- [x] Add Agrippa Postumus, Julia the Younger, and Agrippina the Elder as bounded Augustan household figures without importing later adoptions, marriages, or careers.
 - [x] Add Ptolemy of Mauretania to Juba II and Cleopatra Selene's court without projecting his later succession into an AD 1 heir appointment.
 - [x] Driver-test the Parthian profile: Phraates V, Ctesiphon, nine subjects, one reform, and fifteen laws rendered in the AD 1 Country panel.
 - [x] Correct the Han Wang-clan dynasty labels and add the bounded Wang Shun court record from the *Book of Han* source route.
