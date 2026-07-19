@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-19 — M3 American SoP coverage
+
+- Added the explicitly required Plains/Coastal and Pacific Coast SoP families,
+  then conservative Mesoamerican, Andean, northern-Andean, and North American
+  frames for the named roster entities. The resolver rejected the Pacific Coast
+  broad area because it has no vanilla-ownable locations; its direct geographic
+  anchor is retained without inventing a territory row.
+- The live M3 setup now contains 138 polities, 8,442 resolved locations, and
+  25 dependencies. Empty and late-settlement lands remain outside ownership
+  expansion and are reserved for M4's zero-pop audit.
+- `make validate` and a real-game smoke are green with zero new error lines.
+
+Next: implement checked residual coverage for still-unassigned ownable land,
+assigning it only to an explicit documented SoP or recording it as intentionally
+empty; then render a new AD 1 political-map evidence capture.
+
 ## 2026-07-19 — M3 African SoP coverage
 
 - Added the design-bible's West African iron-age, Bantu-expansion, and
