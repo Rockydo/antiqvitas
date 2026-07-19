@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 - M6 exiled Augustan household slice
+
+- Added Julia the Elder and Scribonia as source-qualified living Roman-world
+  records. Oxford documents their shared exile across the AD 1 boundary.
+- `ROM` is deliberately context rather than claimed residence: neither record
+  scripts an office, marriage mechanism, island placement, exile mechanic,
+  ability, or later move. Scribonia gets a narrow identity label rather than a
+  reconstructed genealogy.
+
+Next: regenerate, validate, smoke-test, then continue direct-evidence Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Thracian succession-court slice
 
 - Added Rhascyporis of Thrace as a living Sapaean court record. Tacitus's AD
