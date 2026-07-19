@@ -16,3 +16,9 @@ later death; the British Museum corroborates his Roman education from age six.
 This secures his Roman setting at the campaign boundary but does not import a
 start-state title, office, command, precise birth date, or his later kingship
 (`JOS-AGR`; `BM-AGR` in the source ledger).
+
+Josephus also names Herod and Aristobulus as Agrippa's brothers, children left
+when their father was executed and subsequently named as adults. They are
+therefore included only as contested Judean dynastic-court context: the source
+does not establish an AD 1 residence, start-state marriage, office, date, or
+later title for either brother (`JOS-AGR` in the source ledger).

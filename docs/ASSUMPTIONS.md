@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-19 - Agrippa's brothers are bounded Herodian court figures
+
+Josephus names Herod and Aristobulus as Agrippa's brothers, describes the
+brothers as children left by their father when he was executed, and later names
+them as adults. That sequence secures AD 1 survival, but does not locate either
+brother in a particular court on the boundary. The ledger therefore assigns
+them only a contested Judean Herodian family-court context, with no residence,
+marriage, office, date, or later title scripted. Sources weighed: P8.1;
+`JOS-AGR` in `docs/world_1ad/SOURCES.md`. [secure for living status;
+contested for the country-court context; no claim for the omitted mechanics]
+
 ## 2026-07-19 - Agrippa I is a bounded Roman-hosted Herodian court youth
 
 Josephus says that Agrippa lived and was raised at Rome before Herod's death,

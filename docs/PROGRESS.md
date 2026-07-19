@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-19 - M6 Herodian brother court records
+
+- Added Herod and Aristobulus, Agrippa I's named brothers, as bounded
+  source-qualified family-court figures.
+- Their AD 1 survival is secure; the Judean court context is explicitly
+  contested, and no residence, marriage, office, date, or later title is
+  introduced.
+
+Next: regenerate, validate, smoke-test, then continue source-led Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Roman-hosted Agrippa I court record
 
 - Added Herod Agrippa I as a source-qualified Roman-hosted Herodian youth.
