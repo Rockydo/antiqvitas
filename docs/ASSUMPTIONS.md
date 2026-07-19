@@ -52,3 +52,21 @@ not a claim that modern area edges reproduce every Roman provincial frontier.
 Client areas, frontier Germania, Parthian sub-kings, and all SoP extents are
 left narrower or unassigned until their own sourced rows exist. Sources
 weighed: P8.1–P8.3; CAH-XI; Book of Han geography tradition. †
+
+## 2026-07-19 — Confederacy and frontier anchor proxies
+
+Several M3 polity rows describe a people or a broad region rather than an
+attested single capital. Their map keys are therefore explicitly geographic
+anchors: Naju/Gyeongju/Uian for the three Samhan clusters, Nara for the Wa
+polities, Inverness and Armagh for the Caledonian/Ulaid clusters, Heves and the
+Lower Don/Caucasus keys for Sarmatian groups, and Otrar/Gulja/Dalai Nur/Yizhou
+for the Central-Asian and eastern-steppe groups. They are not claims that the
+modern-label settlement was a period capital; M4 dynamic names and later M3
+territory rows will replace the display/geographic scaffolding. Sources
+weighed: P8.3, P8.7, P8.8; CAH-XI; CHGIS; *Samguk Sagi*. †
+
+Bosporus uses Taman and Characene Al-Muhammerah as constrained capital-region
+proxies; both remain contested because Panticapaeum/Charax Spasinu mapping is
+not a one-to-one local-key match. Ganzak→Malekan and Corduene→Eruh are
+Pleiades-coordinate matches; the remaining classical site proxies are listed
+in `capital_coordinates.csv`. Sources weighed: P8.1–P8.2; OCD; Pleiades. †

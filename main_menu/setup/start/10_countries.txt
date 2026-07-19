@@ -2064,6 +2064,16 @@ countries = {
 			capital = boruy
 		}
 
+		XAF = { # Bosporan Kingdom; P8.1;OCD;PLE
+			own_control_core = {
+				taman
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = taman
+		}
+
 		XAG = { # Mauretania; P8.1;CAH-XI
 			own_control_core = {
 				volubilis
@@ -2400,6 +2410,16 @@ countries = {
 			capital = baghdad
 		}
 
+		XAI = { # Characene; P8.2;OCD;PLE
+			own_control_core = {
+				muhammerah
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = muhammerah
+		}
+
 		XAJ = { # Elymais; P8.2;OCD;PLE
 			own_control_core = {
 				shush
@@ -2420,6 +2440,16 @@ countries = {
 			capital = istakhr
 		}
 
+		XAK = { # Media Atropatene; P8.2;OCD;PLE
+			own_control_core = {
+				malekan
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = malekan
+		}
+
 		ADI = { # Adiabene; P8.2;OCD;PLE
 			own_control_core = {
 				erbil
@@ -2438,6 +2468,16 @@ countries = {
 			include = "east_asia_monarchy"
 			government = { ruler = random }
 			capital = urfa
+		}
+
+		XAM = { # Gordyene; P8.2;OCD;PLE
+			own_control_core = {
+				eruh
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = eruh
 		}
 
 		XAN = { # Sakastan; P8.2;CAH-XI
@@ -4361,6 +4401,66 @@ countries = {
 			capital = turpan
 		}
 
+		GOG = { # Goguryeo; P8.3;SAM
+			own_control_core = {
+				ganggye
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = ganggye
+		}
+
+		BUY = { # Buyeo; P8.3;SAM
+			own_control_core = {
+				nongan
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = nongan
+		}
+
+		XAW = { # Mahan; P8.3;SAM
+			own_control_core = {
+				naju
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = naju
+		}
+
+		JIN = { # Jinhan; P8.3;SAM
+			own_control_core = {
+				gyeongju
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = gyeongju
+		}
+
+		BYE = { # Byeonhan; P8.3;SAM
+			own_control_core = {
+				uian
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = uian
+		}
+
+		WAA = { # Wa Polities; P8.3;CAH-XI
+			own_control_core = {
+				nara
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = nara
+		}
+
 		XAX = { # Indo-Scythian Realm; P8.4;CAH-XI;PLE
 			own_control_core = {
 				attock
@@ -4561,6 +4661,26 @@ countries = {
 			capital = nijmegen
 		}
 
+		XBV = { # Catuvellauni; P8.7;CAH-XI
+			own_control_core = {
+				st_albans
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = st_albans
+		}
+
+		XBW = { # Trinovantes; P8.7;CAH-XI;PLE
+			own_control_core = {
+				colchester
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = colchester
+		}
+
 		XBX = { # Iceni; P8.7;CAH-XI;PLE
 			own_control_core = {
 				norwich
@@ -4601,6 +4721,16 @@ countries = {
 			capital = monmouth
 		}
 
+		XCB = { # Ordovices; P8.7;CAH-XI
+			own_control_core = {
+				carnarvon
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = carnarvon
+		}
+
 		DUM = { # Dumnonii; P8.7;CAH-XI
 			own_control_core = {
 				exeter
@@ -4609,6 +4739,106 @@ countries = {
 			include = "east_asia_monarchy"
 			government = { ruler = random }
 			capital = exeter
+		}
+
+		CAL = { # Caledonian Societies; P8.7;CAH-XI
+			own_control_core = {
+				inverness
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = inverness
+		}
+
+		XCC = { # Ulaid; P8.7;CAH-XI
+			own_control_core = {
+				armagh
+			}
+
+			include = "asia_advanced_tribe"
+			government = { ruler = random }
+			capital = armagh
+		}
+
+		DAC = { # Dacian Kingdoms; P8.7;CAH-XI;PLE
+			own_control_core = {
+				sebes
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = sebes
+		}
+
+		IAZ = { # Iazyges; P8.7;CAH-XI
+			own_control_core = {
+				heves
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = heves
+		}
+
+		ROX = { # Roxolani; P8.7;CAH-XI
+			own_control_core = {
+				tana
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = tana
+		}
+
+		AOR = { # Aorsi; P8.7;CAH-XI
+			own_control_core = {
+				semikarakorsk
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = semikarakorsk
+		}
+
+		XCE = { # Siraces; P8.7;CAH-XI;PLE
+			own_control_core = {
+				armavir
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = armavir
+		}
+
+		XCF = { # Alans; P8.7;CAH-XI
+			own_control_core = {
+				targim
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = targim
+		}
+
+		XCI = { # Kangju; P8.8;CHG
+			own_control_core = {
+				otrar
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = otrar
+		}
+
+		WSN = { # Wusun; P8.8;CHG
+			own_control_core = {
+				gulja
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = gulja
 		}
 
 		DAY = { # Dayuan; P8.8;CHG
@@ -4629,6 +4859,26 @@ countries = {
 			include = "asia_advanced_tribe"
 			government = { ruler = random }
 			capital = samarkand
+		}
+
+		XIA = { # Xianbei; P8.8;CAH-XI
+			own_control_core = {
+				dalai_nur_lake
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = dalai_nur_lake
+		}
+
+		WHU = { # Wuhuan; P8.8;CAH-XI
+			own_control_core = {
+				yizhou_jinzhou
+			}
+
+			include = "east_asia_monarchy"
+			government = { ruler = random }
+			capital = yizhou_jinzhou
 		}
 
 		XCQ = { # Teotihuacan; P8.10;CAH-XI

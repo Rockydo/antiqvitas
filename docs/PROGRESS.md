@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-19 — M3 frontier capital tranche
+
+- Expanded the checked active-capital set from 56 to 81 polities with
+  Pleiades-backed classical sites and explicitly documented regional anchors
+  across Korea, Britain/Ireland, the Danube/Pontic steppe, and Central Asia.
+- The ownership collision gate rejected two anchors inside the Han core; both
+  were remapped to non-Han local keys before the game saw them. The source
+  tables now resolve 4,178 locations and 21 dependencies.
+- `make validate` and real-game smoke are green with zero new error lines.
+
+Next: map the remaining 52 capitals, then extend each regional anchor into
+sourced ownership or SoP coverage rather than leaving a one-location polity.
+
 ## 2026-07-19 — M3 source-backed dependency slice
 
 - Generated 20 checked dependencies: the active Roman client ring, Arsacid
