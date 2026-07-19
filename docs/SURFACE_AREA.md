@@ -7,7 +7,7 @@ for its milestone; `deferred` = non-goal or dependency with rationale.
 | --- | --- | --- |
 | Metadata and thumbnail | done | M1, real menu smoke |
 | Loading-screen defines | done | M2 generated calendar, real AD 1 save/reload |
-| Setup start managers | planned | M3 exact 25-file mirror |
+| Setup start managers | in progress | exact 25-file mirror plus 34 verified-capital countries |
 | Setup country definitions | in progress | 133 generated, localized and smoke-clean; templates remain M3 |
 | Placeholder coats of arms | in progress | 133 simple engine-native M3 flags; sourced designs are M11 |
 | Common ages and advances | in progress | M2 five-age scaffold; M8 full tree |

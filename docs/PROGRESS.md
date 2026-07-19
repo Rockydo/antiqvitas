@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 — M3 capital-control slice
+
+- Extended the exact start-manager generator from empty roots to 34 sourced
+  roster polities with a direct verified capital key. Each controls its capital
+  through a collision-safe engine tag.
+- A real AD 1 new-game screen shows these states at their map locations; smoke
+  remains at zero new error lines. The visual and scope judgment are recorded
+  in `M3_CAPITAL_SLICE.md`.
+
+Next: research and map the remaining capitals, then add sourced multi-location
+ownership, subjects, and SoPs rather than extrapolating from fuzzy candidates.
+
 ## 2026-07-19 — M2 closed on M3's clean base
 
 - Activated the generated 1 January AD 1–4 September 476 calendar, five live
