@@ -62,6 +62,13 @@ adoption, or succession status is scripted. In particular, Drusus's first
 consulship (AD 15) and Claudius's later accession remain outside the start
 state and belong to M10 history.
 
+Livilla is included as a separately sourced Julio-Claudian court identity.
+The *Encyclopedia of Ancient History* dates her c. 13 BCE-AD 31 and identifies
+her as the daughter of Drusus and Antonia Minor. Her court record therefore
+does not pre-script either of her later marriages, children, an office,
+residence, or the Sejanus narrative. Source: `WIL-LIV` in the
+[source ledger](../world_1ad/SOURCES.md).
+
 ## Vipsanian grandchildren
 
 Suetonius names Agrippa Postumus, Julia the Younger, and Agrippina the Elder as

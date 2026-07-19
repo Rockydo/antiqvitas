@@ -353,6 +353,15 @@ character_db = {
 		tag = XAA
 	}
 
+	antq_livilla = {
+		first_name = { name = antq_livilla }
+		culture = antq_latin
+		religion = antq_religio_romana
+		female = yes
+		dynasty = antq_julio_claudian_dynasty
+		tag = XAA
+	}
+
 	antq_drusus_younger = {
 		first_name = { name = antq_drusus_younger }
 		culture = antq_latin
@@ -930,6 +939,14 @@ character_db = {
 		culture = antq_greek_koine
 		religion = antq_hellenic
 		female = yes
+		dynasty = antq_cappadocian_royal_house
+		tag = CAP
+	}
+
+	antq_tigranes_v_cappadocia = {
+		first_name = { name = antq_tigranes_v_cappadocia }
+		culture = antq_greek_koine
+		religion = antq_hellenic
 		dynasty = antq_cappadocian_royal_house
 		tag = CAP
 	}

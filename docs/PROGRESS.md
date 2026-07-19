@@ -1651,3 +1651,11 @@ separate Han runtime-regency blocker.
   first-century careers out of the AD 1 state.
 - This brings the M6 roster to 123 source-led characters, while retaining the
   separate Han runtime-regency blocker.
+## 2026-07-19 - M6 Livilla and Tigranes V court slice
+
+- Added the securely date-bounded Livilla to the Roman Julio-Claudian court
+  and Tigranes V to the Cappadocian court, bringing the source-led roster to
+  125 characters.
+- Neither record gets a marriage, children, office, physical residence, heir,
+  claim, succession, or biography date, preserving both later careers for M10
+  history rather than importing them into AD 1.
