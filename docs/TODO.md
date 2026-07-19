@@ -56,6 +56,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Seed and smoke-check 36 source-labelled AD 1 market hubs.
 - [x] Localize and anchor the plan-listed ancient raw goods on controlled AD 1 map locations (321 audited corrections).
 - [x] Seed and smoke-check 36 source-labelled urban market settlements with engine-valid town setups.
+- [x] Run the AD 1 observer foundation probe (map, observer mode, and ten days of market activity).
 - [ ] Implement the remaining goods/RGOs, buildings/town setups, roads, and development.
 - [ ] Verify ancient trade flows; run milestone gate and tag `M5-done`.
 

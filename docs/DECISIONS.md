@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Runtime probes distinguish economic from later-system failures
+
+The first observer run is recorded as an M5 foundation probe, not a milestone
+pass. It verifies that the new markets, RGO override, town setups, and their AI
+tick surface do not emit runtime errors through 11 January AD 1. Vanilla
+coat-of-arms triggers still fail on absent governments and international
+organizations; those errors are explicitly attributed to M6/M9 and remain
+outside the M5 economic acceptance claim.
+
 ## 2026-07-19 — Menu readiness requires visible rendering
 
 Driver readiness cannot be inferred from a quiet debug log or a surviving

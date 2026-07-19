@@ -31,6 +31,12 @@ evidence exists.
 
 Status: **deferred to M5/M6/M9; M3 remains untagged.**
 
+M5 update: a subsequent AD 1 observer probe reached 11 January with market
+construction notifications and no market, town-setup, RGO, or road errors.
+The remaining active categories are unset capital/government and
+international-organization/HRE references, so M3's shared runtime dependency
+is now confined to M6/M9. Evidence: `docs/playtests/M5_RUNTIME_FOUNDATION.md`.
+
 The autonomous driver loaded the full AD 1 political map, entered observer
 mode, started an actual observer session, and advanced it a month. Its runtime
 log has new lines for unset `market`, `international_organization`, and
@@ -51,11 +57,10 @@ Tried:
    still emitted the runtime system errors above. The overlays were removed;
    `make full` is again green at the required menu-smoke boundary.
 
-Recovery: M5 must seed valid ancient markets/buildings/town setups and replace
-the vanilla market automation; M6 must replace the government, law, character,
-and formable dependencies; M9 must replace HRE interactions/objectives and
-international organizations. Re-run the M3 observer capture and tag only after
-that shared runtime surface produces zero new normalized lines.
+Recovery: M6 must replace the government, law, character, capital, and formable
+dependencies; M9 must replace HRE interactions/objectives and international
+organizations. Re-run the M3 observer capture and tag only after that shared
+runtime surface produces zero new normalized lines.
 
 ## 2026-07-19 — M2 calendar waits on M3's full setup mirror
 
