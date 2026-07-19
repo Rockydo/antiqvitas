@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-19 - Malichus II is a qualified Nabataean court figure
+
+Ciecielag's peer-reviewed numismatic reconstruction treats Malichus, the
+later successor of Aretas IV, as probably firstborn in a sequence that places a
+fourth son at a coin-associated birth in 5 BCE. The American Numismatic Society
+independently identifies the later father-son succession. That evidence makes
+Malichus's presence at the AD 1 boundary a reasonable but not exact inference,
+so the ledger marks it contested and scripts neither birth date, maternal link,
+engine-heir status, office, nor further genealogy. Sources weighed: P8.1;
+`HEI-MAL`; `ANS-MAL` in `docs/world_1ad/SOURCES.md`. [contested]
+
 ## 2026-07-19 - Xian (Wulei) is a bounded Xiongnu court record
 
 The *Tongdian* preserves an early Tianfeng-era notice that names Wulei Ruodi
