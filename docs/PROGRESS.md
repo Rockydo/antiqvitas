@@ -325,3 +325,17 @@ waits for its owning M5/M6/M9 replacement work.
 
 Next: generate the verified dialect and namelist layer, extend the source
 profiles to country/pop coverage, and only then render the M4 global pop pass.
+
+## 2026-07-19 - M4 ancient dialect and namelist layer
+
+- Added 27 source-labelled language roots and dialects, with male, female, and
+  dynasty pools rendered through namespaced localization keys. All 69 M4
+  culture definitions now use those engine-valid dialects rather than a root
+  language key.
+- A bounded game probe established that the language-family registry is fixed
+  and that every name-list item must be localized. The generator enforces both
+  rules, and the repaired result passes `make validate` plus a clean real-game
+  smoke with zero new lines.
+
+Next: bind sourced profiles to every active country and render populations from
+the territorial ownership ledger against the section 12.4 targets.

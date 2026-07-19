@@ -244,3 +244,17 @@ unique named colors, complete shared-namespace localization, and a minimal
 valid religion modifier. It deliberately leaves language binding until M4 can
 generate historically sourced dialect/name pools, rather than attaching a
 modern or unrelated name list just to make a parser pass.
+
+## 2026-07-19 - Language families are a fixed engine registry
+
+The engine rejects invented language-family keys. M4 therefore maps each new
+language root to the closest installed technical family while its own culture
+group and source record remain the historical authority. This adapter is not a
+claim that, for example, the UI's nearest available family resolves every
+ancient language classification. The generated dialect itself, its source
+name-pool, and the culture grouping remain namespaced ANTIQVITAS data.
+
+The engine also treats a bare name-pool token as a localization key. The
+generator converts every source token to a unique `antq_name_*` key and mirrors
+its display text into every supported localization file; raw name strings are
+therefore forbidden in generated language scripts.
