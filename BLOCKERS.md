@@ -1,5 +1,33 @@
 # Blockers
 
+## 2026-07-19 — M5 location-template RGO overrides are not runtime-effective
+
+Status: **deferred; M5 remains untagged.**
+
+The generated `in_game/map_data/location_templates.txt` is an exact copy of
+the installed map-template file with 326 checked alterations. It parses and
+the menu smoke is clean, but a fresh AD 1 observer session continues to use
+vanilla raw materials. `export_goods_by_market wheat` reports Roma producing
+roughly 23.46 wheat with no imports even after its generated template was
+changed to clay; `antq_papyrus` likewise has no producer. The intended RGO
+corrections therefore cannot yet be claimed as game-effective.
+
+Tried:
+
+1. Same-filename full-file override, which is the locally proven mechanism for
+   the start managers. It left the fresh observer's Roma wheat output intact.
+2. The exact DLC-manifest metadata shape, `"replace_path":
+   ["in_game/map_data/location_templates.txt"]`. The menu still loaded with
+   zero new lines, but the fresh observer export again reported the same Roma
+   wheat output; the field was removed because it did not demonstrate
+   replacement.
+
+Recovery: identify a current-build, runtime-effective raw-material setup
+surface (or a working mod-level directory replacement contract) using local
+files and console exports. Until then retain the source-led RGO ledger as
+static design data only, do not tag M5, and continue with M6's independent
+government/character work. Evidence: `docs/playtests/M5_TRADE_FLOW.md`.
+
 ## 2026-07-19 — M4 full culture remap lacks a redistributable historical dataset
 
 Status: **deferred; M4 remains untagged.**

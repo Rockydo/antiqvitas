@@ -1,5 +1,25 @@
 # Progress
 
+## 2026-07-19 — M5 trade-flow export probe and RGO boundary
+
+- A live observer run reached late May AD 1. Build-provided console exports
+  show established market capacity and real pepper transfers: Attock imported
+  11.63 pepper while the Malabar producers remained surplus. The same exports
+  show silk and incense production at their expected eastern/southern sources,
+  but no westward/northward transfer at this early point.
+- The probe also found Roma locally surplus in wheat, contrary to the required
+  annona pattern. A source-led clay substitution in the generated location
+  template, followed by a fresh observer export, did not alter Roma's wheat
+  production. A second fresh-start test using the locally observed
+  `replace_path` metadata array was likewise ineffective, although its menu
+  smoke stayed green.
+- The experiment was restored to the prior green tree. M5 is not claimed as
+  complete; its exact runtime limitation, evidence, and recovery route are in
+  `docs/playtests/M5_TRADE_FLOW.md`, `BLOCKERS.md`, and `KNOWN_ISSUES.md`.
+
+Next: take the highest-priority unblocked M6 power-system foundation task while
+keeping the M5 RGO/trade gate open.
+
 ## 2026-07-19 — M5 Via Appia and Uttarapatha expansion
 
 - Added four checked road segments: the Via Appia from Rome through the

@@ -1,5 +1,16 @@
 # Known Issues
 
+## M5 RGO runtime coverage gap
+
+The source-led RGO ledger and generated full location-template file pass static
+validation, but two fresh observer probes show that this build retains vanilla
+raw materials at runtime. The tested Roma wheat-to-clay correction and custom
+papyrus anchor did not affect console market exports. The attempted
+file-specific `replace_path` metadata contract was also ineffective and has
+been removed. M5 trade-flow acceptance therefore remains open; see the exact
+reproduction and recovery route in `BLOCKERS.md` and
+`docs/playtests/M5_TRADE_FLOW.md`.
+
 ## M3 political-map runtime boundary
 
 The active M3 mirror removes every vanilla 1337 start-manager entry and loads
