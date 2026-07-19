@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-19 - M6 Augustan cultural-record batch
+
+- Added five source-qualified contemporaries to the AD 1 Roman-world roster:
+  Livy, Ovid, Strabo, Athenodorus Cananites, and Verrius Flaccus.
+- Their entries are bounded cultural records only; none creates a court office,
+  exact residence, family reconstruction, ability score, or later outcome.
+
+Next: regenerate, validate, smoke-test, then continue source-led Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Han Wang-clan regency adapter
 
 - Added a source-qualified Wang Clan Regency privilege to Western Han's active
