@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 — M4 culture-remap evidence gap
+
+- Completed two bounded evidence checks: the active-map audit proves installed
+  culture labels cannot be mechanically re-dated, and the available Pleiades
+  cache is a place/name gazetteer rather than a global culture map. CHGIS is
+  useful for research but not redistributable as committed mod data.
+- Recorded the gap in `BLOCKERS.md` without changing game content; the tree
+  remains green. M4 is intentionally not tagged complete.
+
+Next: proceed with M5's independent economy scaffolding, then return to the
+location culture atlas when licensed source data has been assembled.
+
 ## 2026-07-19 — M4 active culture-geography audit
 
 - Generated a deterministic audit of 680 installed culture templates actually

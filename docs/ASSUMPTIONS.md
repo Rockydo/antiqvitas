@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-19 — No automatic re-dating of installed culture keys
+
+The installed location-template culture field is retained only as a geographic
+index pending source review. Labels such as Turkish, Muscovite, or Greek cannot
+be projected back to AD 1 without a region-specific historical decision; where
+one label occurs across several M4 profiles, the audit records that ambiguity
+rather than selecting one. Pleiades supports ancient toponyms and coordinates,
+not a worldwide ethnic map. [contested]
+
 ## 2026-07-19 — Missing installed culture-template proxies
 
 Antilebanon Mountains, Monterey Coast, and Dalai Nur Lake are controlled map
