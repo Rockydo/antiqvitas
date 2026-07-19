@@ -55,6 +55,7 @@ after `make full` and its autonomous driver report are green.
 
 - [x] Seed and smoke-check 36 source-labelled AD 1 market hubs.
 - [x] Localize the plan-listed ancient raw goods on controlled AD 1 map locations (314 audited corrections).
+- [x] Seed and smoke-check 36 source-labelled urban market settlements with engine-valid town setups.
 - [ ] Implement the remaining goods/RGOs, buildings/town setups, roads, and development.
 - [ ] Verify ancient trade flows; run milestone gate and tag `M5-done`.
 

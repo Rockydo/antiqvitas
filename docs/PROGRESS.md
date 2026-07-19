@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-19 — M5 urban-market foundation
+
+- Generated a 36-row city/town ledger keyed one-to-one to the active ancient
+  market hubs. Its profile and source checks reject missing markets, unowned
+  locations, unknown map keys, invalid ranks, and invalid confidence labels.
+- Market cities receive only engine-valid M5 proxy buildings (temple,
+  marketplace, entrepot, granary, mason); market towns receive the smaller
+  temple/marketplace/entrepot profile. The profiles are deliberately compact
+  until the dedicated ancient building reskin is implemented.
+- The live game established that `common/town_setups` requires UTF-8 BOM. The
+  generator now writes and validates that encoding. After the correction,
+  `make validate` and a real `make smoke` are green with zero new error lines.
+
+Next: source and generate roads and development, then expand the era-specific
+goods and building catalogue before trade-flow observer verification.
+
 ## 2026-07-19 — M5 raw-material anachronism pass
 
 - Added an auditable `docs/goods_remap.csv` rule table and deterministic generator for the full
