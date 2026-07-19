@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-19 — M6 Roman client courts expansion
+
+- Added Archelaus of Cappadocia, Antiochus III of Commagene, Rhoemetalces I
+  and Pythodoris of Thrace, and Dynamis of Bosporus. Their four client-country
+  starts use the checked client-monarchy contract while keeping the contested
+  Thracian and Bosporan mappings explicit.
+- `make validate` is green with 17 dynasties, 28 characters, and 17 government
+  profiles. The enabled-mod menu smoke is green with zero new `error.log`
+  lines. The exact historical boundaries are in
+  [the secondary roster note](m6/SECONDARY_AD1_ROSTER.md).
+
+Next: move to the remaining source-qualified Tier-1/2 courts and Parthian
+sub-king roster rather than treating this Roman client slice as exhaustive.
+
 ## 2026-07-19 — M6 Herodian client tetrarchy
 
 - Added Herod Archelaus, Herod Antipas, and Philip the Tetrarch to a shared

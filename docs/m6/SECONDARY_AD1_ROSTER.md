@@ -48,3 +48,18 @@ the project's OCD entries. An independent reference also describes Archelaus
 as ethnarch and Antipas/Philip as tetrarchs after Herod's 4 BCE death:
 [Encyclopedia of the Bible](https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Herod).
 No parent links, spouses, or day-level biography dates are fabricated here.
+
+## Further Roman client courts
+
+Archelaus of Cappadocia, Antiochus III of Commagene, Rhoemetalces I of Thrace,
+Pythodoris of Thrace, and Dynamis of Bosporus extend the plan's named Roman
+client ring. They use the established client-monarchy adapter rather than
+inventing distinct engine types for each client arrangement.
+
+The Cappadocian ruler's AD 1 place is strongly supported by the Oxford
+Classical Dictionary's [Archelaus entry](https://academic.oup.com/edited-volume/61673/chapter/548528356),
+which dates his Cappadocian reign from 36 BCE to AD 17. The British Museum
+identifies Antiochus III as the son of the Commagene king whose death led to
+the AD 17 annexation: [collection record](https://www.britishmuseum.org/collection/term/BIOG205268).
+The exact Bosporan succession remains contested as required by the master plan;
+the data preserves Dynamis without adding unsupported succession links.
