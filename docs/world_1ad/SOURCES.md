@@ -66,3 +66,8 @@ residual SoP/source pass rather than being silently collapsed to one owner.
 P8.5 and CAH-XI support the explicit African SoP families. Their map anchors
 are documented geographic handles, not claimed state capitals; every broad
 ownership row remains `contested` until the population-map phase.
+
+The American SoP expansion is grounded in P8.10 and CAH-XI. Plains/Coastal and
+Pacific Coast society anchors do not claim an AD 1 state capital. A broad row
+is rejected when the installed start data has no ownable location surface,
+preserving the distinction between a reviewed geography anchor and territory.

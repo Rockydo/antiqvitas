@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 — American SoP regional coverage
+
+Plains/Coastal and Pacific Coast SoPs are separate from Hopewell, Basketmaker,
+and Dorset because the plan names those landscapes separately. Omaha and
+Monterey Coast are geographic anchors, not AD 1 capitals. The remaining area
+rows are broad cultural-political frames for named Mesoamerican and Andean
+entities, all marked `contested`. Pacific Coast has no vanilla-ownable surface
+in the installed start data, so it intentionally retains only its reviewed
+anchor. Sources weighed: P8.10; CAH-XI. †
+
 ## 2026-07-19 — African SoP regional coverage
 
 West African iron-age societies, Bantu-expansion societies, and Barbaria/Horn
