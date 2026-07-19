@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-19 - Agrippa I is a bounded Roman-hosted Herodian court youth
+
+Josephus says that Agrippa lived and was raised at Rome before Herod's death,
+then left Rome only after the later death of Drusus. The British Museum
+corroborates Roman education from age six and a death at fifty-four in AD 44.
+The ledger therefore records him only as a Roman-hosted Herodian court figure,
+without an engine office, title, command, precise birth date, or a projected
+later kingship. Sources weighed: P8.1; `JOS-AGR`; `BM-AGR` in
+`docs/world_1ad/SOURCES.md`. [secure for the living Roman court record; no
+claim for the omitted mechanics]
+
 ## 2026-07-19 - Glaphyra is a bounded Cappadocian court figure
 
 Josephus names Glaphyra as King Archelaus of Cappadocia's daughter and recounts
