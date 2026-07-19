@@ -1667,7 +1667,7 @@ royston = { topography = flatland vegetation = grasslands climate = oceanic reli
 hertford = { topography = flatland vegetation = farmland climate = oceanic religion = catholic culture = english raw_material = wheat}
 st_albans = { topography = flatland vegetation = grasslands climate = oceanic religion = catholic culture = english raw_material = wheat}
 launceston = { topography = flatland vegetation = grasslands climate = oceanic religion = catholic culture = cornish raw_material = tin natural_harbor_suitability = 0.00}
-truro = { topography = flatland vegetation = grasslands climate = oceanic religion = catholic culture = cornish raw_material = copper natural_harbor_suitability = 0.85}
+truro = { topography = flatland vegetation = grasslands climate = oceanic religion = catholic culture = cornish raw_material = tin natural_harbor_suitability = 0.85}
 bodmin = { topography = flatland vegetation = sparse climate = oceanic religion = catholic culture = cornish raw_material = fish natural_harbor_suitability = 0.00}
 scilly_isles = { topography = flatland_wasteland vegetation = sparse climate = oceanic}
 wells = { topography = wetlands vegetation = woods climate = oceanic religion = catholic culture = english raw_material = stone}
@@ -2848,7 +2848,7 @@ lucena = { topography = flatland vegetation = woods climate = mediterranean reli
 palma_del_rio = { topography = flatland vegetation = farmland climate = mediterranean religion = catholic culture = castilian raw_material = wine}
 pedroche = { topography = hills vegetation = woods climate = mediterranean religion = catholic culture = castilian raw_material = livestock}
 santa_eufemia = { topography = hills vegetation = woods climate = cold_arid religion = catholic culture = castilian raw_material = tin}
-huelva = { topography = wetlands vegetation = woods climate = mediterranean religion = catholic culture = castilian raw_material = salt natural_harbor_suitability = 0.50}
+huelva = { topography = wetlands vegetation = woods climate = mediterranean religion = catholic culture = castilian raw_material = silver natural_harbor_suitability = 0.50}
 almonaster_la_real = { topography = hills vegetation = forest climate = mediterranean religion = catholic culture = castilian raw_material = copper}
 aracena = { topography = hills vegetation = woods climate = mediterranean religion = catholic culture = castilian raw_material = lumber}
 aroche = { topography = hills vegetation = woods climate = mediterranean religion = catholic culture = castilian raw_material = lead}
@@ -7143,7 +7143,7 @@ tartus = { topography = flatland vegetation = grasslands climate = mediterranean
 beirut = { topography = hills vegetation = forest climate = mediterranean religion = miaphysite culture = syriac_culture raw_material = wine natural_harbor_suitability = 0.25}
 baalbek = { topography = plateau vegetation = farmland climate = mediterranean religion = sunni culture = levantine_culture raw_material = fruit}
 deir_qamar = { topography = hills vegetation = forest climate = mediterranean religion = miaphysite culture = syriac_culture raw_material = fiber_crops natural_harbor_suitability = 0.00}
-sidon = { topography = hills vegetation = woods climate = mediterranean religion = sunni culture = levantine_culture raw_material = cotton natural_harbor_suitability = 0.25}
+sidon = { topography = hills vegetation = woods climate = mediterranean religion = sunni culture = levantine_culture raw_material = dyes natural_harbor_suitability = 0.25}
 tripoli_syria = { topography = hills vegetation = forest climate = mediterranean religion = miaphysite culture = syriac_culture raw_material = fish natural_harbor_suitability = 0.25}
 lebanon_mountains = { topography = mountain_wasteland vegetation = forest climate = continental}
 damascus = { modifier = damascus_base topography = hills vegetation = farmland climate = mediterranean religion = sunni culture = levantine_culture raw_material = olives}
@@ -7590,7 +7590,7 @@ markha = { topography = mountains vegetation = desert climate = arid religion = 
 nisab = { topography = mountains vegetation = desert climate = arid religion = sunni culture = yemeni_culture raw_material = medicaments}
 taizz = { modifier = coffee_yemen_base topography = mountains vegetation = woods climate = cold_arid religion = sunni culture = yemeni_culture raw_material = medicaments}
 al_mandab = { topography = flatland vegetation = desert climate = arid religion = sunni culture = yemeni_culture raw_material = pearls natural_harbor_suitability = 0.00}
-al_mukha = { modifier = coffee_yemen_base topography = flatland vegetation = desert climate = arid religion = sunni culture = yemeni_culture raw_material = medicaments natural_harbor_suitability = 0.00}
+al_mukha = { modifier = coffee_yemen_base topography = flatland vegetation = desert climate = arid religion = sunni culture = yemeni_culture raw_material = incense natural_harbor_suitability = 0.00}
 hays = { topography = flatland vegetation = desert climate = arid religion = sunni culture = yemeni_culture raw_material = pearls natural_harbor_suitability = 0.00}
 mawza = { topography = mountains vegetation = grasslands climate = arid religion = sunni culture = yemeni_culture raw_material = fruit}
 haraz_mountains3 = { topography = mountain_wasteland vegetation = sparse climate = cold_arid}
@@ -11713,7 +11713,7 @@ chengcheng = { topography = flatland vegetation = woods climate = continental re
 hancheng = { topography = flatland vegetation = grasslands climate = continental religion = mahayana culture = qin_culture raw_material = iron}
 heyang_xian = { topography = flatland vegetation = grasslands climate = continental religion = mahayana culture = qin_culture raw_material = rice}
 fucheng = { topography = mountains vegetation = forest climate = continental religion = mahayana culture = qin_culture raw_material = lumber}
-jingzhao = { topography = flatland vegetation = grasslands climate = continental religion = mahayana culture = qin_culture raw_material = clay}
+jingzhao = { topography = flatland vegetation = grasslands climate = continental religion = mahayana culture = qin_culture raw_material = silk}
 xianning_xian = { topography = flatland vegetation = grasslands climate = continental religion = mahayana culture = qin_culture raw_material = livestock}
 huxian = { topography = flatland vegetation = grasslands climate = continental religion = mahayana culture = qin_culture raw_material = medicaments}
 jingyang = { topography = flatland vegetation = grasslands climate = cold_arid religion = mahayana culture = qin_culture raw_material = cotton}
@@ -11854,7 +11854,7 @@ zengkou = { topography = hills vegetation = woods climate = subtropical religion
 nanjiang = { topography = mountains vegetation = forest climate = subtropical religion = sanjiao culture = shu_culture raw_material = marble}
 tongjiang = { topography = mountains vegetation = forest climate = subtropical religion = sanjiao culture = shu_culture raw_material = legumes}
 dabashan2 = { topography = mountain_wasteland vegetation = forest climate = continental}
-chengdu = { topography = flatland vegetation = farmland climate = subtropical religion = mahayana culture = shu_culture raw_material = rice}
+chengdu = { topography = flatland vegetation = farmland climate = subtropical religion = mahayana culture = shu_culture raw_material = silk}
 pixian = { topography = plateau vegetation = farmland climate = subtropical religion = mahayana culture = shu_culture raw_material = tea}
 shuangliu = { topography = flatland vegetation = farmland climate = subtropical religion = mahayana culture = shu_culture raw_material = tea}
 xindu = { topography = flatland vegetation = farmland climate = subtropical religion = mahayana culture = shu_culture raw_material = rice}
@@ -14479,7 +14479,7 @@ wayanad = { topography = mountains vegetation = jungle climate = tropical religi
 thalassery = { topography = flatland vegetation = grasslands climate = tropical religion = hindu culture = malayali raw_material = sand natural_harbor_suitability = 0.00}
 palghat = { topography = hills vegetation = jungle climate = tropical religion = hindu culture = malayali raw_material = pepper}
 angadippuram = { topography = hills vegetation = jungle climate = tropical religion = hindu culture = malayali raw_material = fruit}
-kodungallur = { topography = flatland vegetation = jungle climate = tropical religion = hindu culture = malayali raw_material = fish natural_harbor_suitability = 0.50}
+kodungallur = { topography = flatland vegetation = jungle climate = tropical religion = hindu culture = malayali raw_material = pepper natural_harbor_suitability = 0.50}
 ponnani = { topography = flatland vegetation = jungle climate = tropical religion = hindu culture = malayali raw_material = pepper natural_harbor_suitability = 0.00}
 kozhikode = { topography = flatland vegetation = farmland climate = tropical religion = hindu culture = malayali raw_material = pepper natural_harbor_suitability = 0.60}
 malapuram = { topography = flatland vegetation = jungle climate = tropical religion = hindu culture = malayali raw_material = medicaments}
@@ -16922,7 +16922,7 @@ rahayta = { topography = flatland vegetation = desert climate = arid religion = 
 zula = { topography = flatland vegetation = sparse climate = arid religion = miaphysite culture = tigrinya raw_material = pearls natural_harbor_suitability = 0.40}
 debre_bizen = { topography = mountains vegetation = sparse climate = arid religion = miaphysite culture = tigrinya raw_material = livestock}
 dekemhare = { topography = hills vegetation = grasslands climate = arid religion = miaphysite culture = tigrinya raw_material = livestock}
-massawa = { topography = flatland vegetation = sparse climate = arid religion = miaphysite culture = tigre raw_material = gems natural_harbor_suitability = 0.00}
+massawa = { topography = flatland vegetation = sparse climate = arid religion = miaphysite culture = tigre raw_material = incense natural_harbor_suitability = 0.00}
 dahlak = { topography = flatland vegetation = desert climate = arid religion = sunni culture = tigre raw_material = pearls natural_harbor_suitability = 0.00}
 nafka = { topography = flatland vegetation = desert climate = arid religion = sunni culture = tigre raw_material = fish natural_harbor_suitability = 0.00}
 eritrean_mountains = { topography = mountain_wasteland vegetation = sparse climate = cold_arid}

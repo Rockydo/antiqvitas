@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
 RULES = ROOT / "docs/goods_remap.csv"
+ANCHORS = ROOT / "docs/m5/rgo_anchors.csv"
 OUTPUT = ROOT / "in_game/map_data/location_templates.txt"
 REPORT = ROOT / "docs/m5/rgo_remap_report.csv"
 LINE = re.compile(r"^(?P<location>[A-Za-z0-9_]+)\s*=\s*\{(?P<body>.*?\braw_material\s*=\s*)(?P<good>[A-Za-z0-9_]+)(?P<tail>.*)$", re.MULTILINE)
@@ -58,28 +59,52 @@ def rendered() -> tuple[str, str, int]:
         unknown_regions = allowed - valid_regions
         if unknown_regions:
             raise ValueError(f"RGO rule for {source_good} has unknown regions {sorted(unknown_regions)}")
-    changes: list[tuple[str, str, str, str]] = []
+    locations = set(json.loads((ROOT / "docs/vanilla_symbols/locations.json").read_text(encoding="utf-8-sig")))
+    anchors: dict[str, dict[str, str]] = {}
+    for anchor in rows(ANCHORS):
+        location = anchor.get("location", "").strip()
+        if location in anchors:
+            raise ValueError(f"RGO anchors duplicate location {location}")
+        if not all(anchor.get(field, "").strip() for field in ("location", "good", "source", "confidence", "note")):
+            raise ValueError("RGO anchor has blank required field")
+        if location not in locations:
+            raise ValueError(f"RGO anchor has unknown installed location {location}")
+        if location not in owner_region:
+            raise ValueError(f"RGO anchor location {location} is not controlled in AD 1")
+        if anchor["good"] not in valid_goods:
+            raise ValueError(f"RGO anchor {location} has unknown good {anchor['good']}")
+        if anchor["confidence"] not in {"secure", "contested"}:
+            raise ValueError(f"RGO anchor {location} has invalid confidence {anchor['confidence']}")
+        anchors[location] = anchor
+    changes: list[tuple[str, str, str, str, str]] = []
     def replace(match: re.Match[str]) -> str:
         location, good = match["location"], match["good"]
-        rule = rules.get(good)
+        anchor = anchors.get(location)
         region = owner_region.get(location)
+        if anchor:
+            replacement = anchor["good"]
+            if good == replacement:
+                return match.group(0)
+            changes.append((location, region, "anchor", good, replacement))
+            return f"{location} = {{{match['body']}{replacement}{match['tail']}"
+        rule = rules.get(good)
         if not rule or not region:
             return match.group(0)
         allowed = {item for item in rule.get("allowed_regions", "").split("|") if item}
         if allowed and region in allowed:
             return match.group(0)
         replacement = rule["replacement_good"]
-        changes.append((location, region, good, replacement))
+        changes.append((location, region, "regional_rule", good, replacement))
         return f"{location} = {{{match['body']}{replacement}{match['tail']}"
     content = LINE.sub(replace, source.read_text(encoding="utf-8"))
     if not changes:
         raise ValueError("RGO rules produced no owned-location corrections")
-    counts = Counter((old, new) for _, _, old, new in changes)
-    report = ["location,region,source_good,replacement_good"]
+    counts = Counter((operation, old, new) for _, _, operation, old, new in changes)
+    report = ["location,region,operation,source_good,replacement_good"]
     report.extend(",".join(row) for row in sorted(changes))
     report.append("")
     report.append("# counts")
-    report.extend(f"# {old}->{new},{count}" for (old, new), count in sorted(counts.items()))
+    report.extend(f"# {operation}:{old}->{new},{count}" for (operation, old, new), count in sorted(counts.items()))
     return content, "\n".join(report) + "\n", len(changes)
 
 
