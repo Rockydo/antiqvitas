@@ -8,6 +8,8 @@ import re
 import sys
 from pathlib import Path
 
+from PIL import Image
+
 ROOT = Path(__file__).resolve().parents[1]
 GAME_TREES = ("in_game", "main_menu", "loading_screen")
 DATE_RE = re.compile(r"(?<![\w.])(\d{1,4})\.(\d{1,2})\.(\d{1,2})(?![\w.])")
@@ -95,15 +97,41 @@ def validate() -> list[str]:
                     failures.append(
                         f"{path.relative_to(ROOT)}: out-of-range scripted date {match.group(0)}"
                     )
-    metadata = ROOT / ".metadata/metadata.json"
+    metadata_dir = ROOT / ".metadata"
+    metadata = metadata_dir / "metadata.json"
     if metadata.exists():
         try:
             value = json.loads(metadata.read_text(encoding="utf-8"))
             for key in ("name", "id", "version", "supported_game_version"):
                 if key not in value:
                     failures.append(f".metadata/metadata.json: missing {key}")
+            picture = value.get("picture")
+            if not isinstance(picture, str) or not picture:
+                failures.append(".metadata/metadata.json: picture must name a thumbnail")
+            else:
+                metadata_thumbnail = metadata_dir / picture
+                root_thumbnail = ROOT / picture
+                if not metadata_thumbnail.is_file():
+                    failures.append(f".metadata/{picture}: missing metadata thumbnail")
+                if not root_thumbnail.is_file():
+                    failures.append(f"{picture}: missing root thumbnail")
+                for thumbnail in (metadata_thumbnail, root_thumbnail):
+                    if not thumbnail.is_file():
+                        continue
+                    if thumbnail.stat().st_size >= 1_000_000:
+                        failures.append(f"{thumbnail.relative_to(ROOT)}: thumbnail must be under 1 MB")
+                    try:
+                        with Image.open(thumbnail) as image:
+                            if image.size != (512, 512):
+                                failures.append(
+                                    f"{thumbnail.relative_to(ROOT)}: thumbnail must be 512x512, got {image.size[0]}x{image.size[1]}"
+                                )
+                    except OSError as exc:
+                        failures.append(f"{thumbnail.relative_to(ROOT)}: unreadable image: {exc}")
         except json.JSONDecodeError as exc:
             failures.append(f".metadata/metadata.json: invalid JSON: {exc}")
+    elif metadata_dir.exists():
+        failures.append(".metadata/metadata.json: missing")
     return failures
 
 

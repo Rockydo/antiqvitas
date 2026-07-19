@@ -26,5 +26,13 @@
   zero new normalized errors.
 - Closed M0 with `docs/playtests/M0_REPORT.md`.
 
-Next: M1 metadata, thumbnail, link restoration, fully scripted mod enablement,
-and a mod-active zero-new-error menu smoke.
+M1 added metadata, a project-generated 512x512 thumbnail, empty valid content
+roots, and a linter gate for both thumbnail placements and their size. The
+engine rejected the UI-formatted `1.3.1.1` metadata value but accepted `1.3.11`;
+that internal comparator distinction is recorded in ENGINE_FACTS. ANTIQVITAS
+was enabled only through the backed-up `playsets.json` automation, reached the
+mod-active menu twice, and has an independently reviewed screenshot. M1 closed
+with a green `make full` and zero new normalized `error.log` line types.
+
+Next: M2 calendar defines, five age skeletons and placeholder advances, then a
+year-one new-game/save-reload verification.

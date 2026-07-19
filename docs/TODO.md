@@ -18,9 +18,9 @@ after `make full` and its autonomous driver report are green.
 
 ## M1 — Skeleton loads
 
-- [ ] Add valid metadata and thumbnail; enable entirely by tooling.
-- [ ] Reach the menu with the mod active and zero new errors.
-- [ ] Run milestone gate and tag `M1-done`.
+- [x] Add valid metadata and thumbnail; enable entirely by tooling.
+- [x] Reach the menu with the mod active and zero new errors.
+- [x] Run milestone gate and tag `M1-done`.
 
 ## M2 — Time itself
 
