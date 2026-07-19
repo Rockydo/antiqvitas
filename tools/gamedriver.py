@@ -147,6 +147,34 @@ def find_window():
     return max(candidates, key=lambda item: item.width * item.height) if candidates else None
 
 
+def rendered_frame_state(window) -> tuple[bool, float]:
+    """Return whether the game client area is visibly rendered and its non-black share."""
+    import pyautogui
+
+    title_height = min(32, max(0, window.height // 8))
+    client_height = window.height - title_height
+    if client_height < 40:
+        return False, 0.0
+    image = pyautogui.screenshot(
+        region=(window.left, window.top + title_height, window.width, client_height)
+    ).convert("RGB").resize((64, 36))
+    pixels = image.load()
+    total = image.width * image.height
+    non_black = sum(
+        1
+        for y in range(image.height)
+        for x in range(image.width)
+        if max(pixels[x, y]) > 20
+    )
+    share = non_black / total
+    return share >= 0.05, share
+
+
+def is_hung_window(window) -> bool:
+    """Use Windows' own hung-window check; a visible black window is not ready."""
+    return bool(ctypes.windll.user32.IsHungAppWindow(window._hWnd))
+
+
 def wait_ready(args: argparse.Namespace) -> int:
     process = process_from_state()
     value = state()
@@ -163,6 +191,8 @@ def wait_ready(args: argparse.Namespace) -> int:
             return 1
         window = find_window()
         saw_window = saw_window or window is not None
+        responsive = bool(window) and not is_hung_window(window)
+        rendered, non_black = rendered_frame_state(window) if window and responsive else (False, 0.0)
         size = debug.stat().st_size if debug.exists() else 0
         if size != last_size:
             last_size = size
@@ -171,11 +201,14 @@ def wait_ready(args: argparse.Namespace) -> int:
         cpu = process.cpu_percent(interval=1)
         elapsed = time.monotonic() - (deadline - args.timeout)
         print(
-            f"wait {elapsed:5.0f}s window={bool(window)} debug={size} quiet={quiet:.0f}s cpu={cpu:.1f}%",
+            f"wait {elapsed:5.0f}s window={bool(window)} responsive={responsive} rendered={rendered} "
+            f"nonblack={non_black:.1%} debug={size} quiet={quiet:.0f}s cpu={cpu:.1f}%",
             flush=True,
         )
         if (
             saw_window
+            and responsive
+            and rendered
             and elapsed >= args.minimum
             and quiet >= args.quiet_seconds
             and cpu < args.max_cpu
