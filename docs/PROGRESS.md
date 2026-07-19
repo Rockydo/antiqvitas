@@ -1294,3 +1294,15 @@ separate Han runtime-regency blocker.
 
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
+
+## 2026-07-19 - M6 Eppillus court record
+
+- Added Eppillus as a contested Atrebatic-context court figure from the Oxford
+  Celtic Coin Index and British Museum coin records whose date ranges include
+  AD 1.
+- The sources leave Atrebatic-Cantii political geography and Eppillus's exact
+  chronology unresolved. Tincomarus remains the sole engine ruler; no kinship,
+  second ruler, office, date, or territorial conclusion is scripted.
+
+Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
+separate Han runtime-regency blocker.

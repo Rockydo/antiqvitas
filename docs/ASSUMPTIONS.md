@@ -681,6 +681,18 @@ covers the campaign boundary. The engine record adds neither a life date nor
 the later deposition/Verica sequence. Sources weighed: P8.7; `CCI-TIN` in
 `docs/world_1ad/SOURCES.md`.
 
+## 2026-07-19 - Eppillus has a contested Atrebatic start context
+
+Oxford's CCI 04.0502 dates an Eppillus coin type to 20 BCE-AD 40 and labels its
+state Atrebates and authority Cantii; a British Museum Eppillus coin associated
+with Cantii is dated c. 20 BCE-AD 10. Both type ranges cover the campaign
+boundary but do not establish an exact reign, a singular territorial polity, or
+his relationship to Tincomarus. Eppillus is therefore a court-only character
+in the Atrebatic start context, while Tincomarus remains the one ruler. No
+kinship, office, date, second ruler slot, or territorial conclusion is
+scripted. Sources weighed: P8.7; `CCI-EPP` in
+`docs/world_1ad/SOURCES.md`. [contested]
+
 ## 2026-07-19 - Eastern anonymous courts and societies
 
 The plan establishes Tarim city-states and Buyeo as regional courts but does
