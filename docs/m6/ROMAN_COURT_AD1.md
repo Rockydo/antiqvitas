@@ -39,7 +39,7 @@ genealogy. Dated consulship history remains an M10 responsibility.
 The successive AD 2-13 entries of the *Fasti Capitolini* name thirty-six
 additional ordinary or named July suffect consuls who do not already appear in
 the Roman roster (`FASTI-CONS-2-13`). A consulship attested within twelve years
-of the campaign boundary securely establishes an adult, living Roman figure at
+of the campaign boundary securely establishes a living Roman figure at
 the start. The roster adds each one only as a court-context identity.
 
 The source does not license a 1 January AD 1 magistracy for any of them. Their
