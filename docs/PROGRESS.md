@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 — M5 ancient market foundation
+
+- Added 36 source-labelled AD 1 market hubs across the Mediterranean, Indian
+  Ocean, Silk Road, East Asia, Southeast Asia, and the Americas. Every market
+  uses an installed location key checked by the generator.
+- `make validate` and a real `make smoke` are green with zero new error lines.
+  The market manager is now a valid foundation for the later RGO, town, road,
+  and development layers that the earlier M3 observer blocker requires.
+
+Next: build the source-labelled goods/RGO remap from the installed location
+template surface, then seed compatible town setups and buildings.
+
 ## 2026-07-19 — M4 culture-remap evidence gap
 
 - Completed two bounded evidence checks: the active-map audit proves installed
