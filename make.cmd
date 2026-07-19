@@ -12,6 +12,7 @@ exit /b 2
 
 :validate
 "%PYTHON%" tools\pdxlint.py || exit /b 1
+"%PYTHON%" tools\world_roster.py || exit /b 1
 "%PYTHON%" tools\popcheck.py || exit /b 1
 exit /b 0
 

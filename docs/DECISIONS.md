@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Roster before setup generation
+
+M3 starts from a CSV roster with explicit source, confidence, historical
+capital, and verified-map-capital fields. A capital is `TBD` rather than guessed
+until it is matched to the current game's extracted location keys. The build
+validator rejects tag collisions and any asserted-but-invalid map key; this
+keeps scholarly uncertainty visible while allowing the world-mapping pipeline
+to proceed region by region.
+
 ## 2026-07-19 — Five campaign ages with a compatibility sentinel
 
 The campaign has five real ages: Principate, High Empires, Crisis, Dominate,
