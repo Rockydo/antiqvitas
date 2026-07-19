@@ -78,6 +78,16 @@ court. This is a UI proxy, not a Christian clerical hierarchy or a claim to
 reconstruct the high priesthood's exact legal jurisdiction; its associated
 privilege and administrative law say so explicitly.
 
+## Coinage standards
+
+Rome's socioeconomic law uses the installed gold-and-silver minting contract
+for an Augustan aureus-and-denarius standard. Western Han uses the corresponding
+copper contract for cast Wuzhu cash. Both are baseline AD 1 monetary surfaces:
+their exact denomination ratios, circulation, and fiscal administration remain
+outside the adapter, while dated debasement and Wang Mang's later coin changes
+belong to M10 history work. The source ledger records the relevant British
+Museum objects alongside P8.1/P8.3, P13, OCD, and BHR.
+
 ## Secondary AD 1 roster
 
 The next slice adds Maroboduus, Arminius, Juba II, Cleopatra Selene II, Aretas

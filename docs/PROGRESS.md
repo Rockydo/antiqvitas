@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-19 - M6 Roman and Han coinage standards
+
+- Added the locally verified socioeconomic-law surface for an Augustan
+  gold-and-silver monetary standard and Western Han Wuzhu copper cash. The
+  source notes use British Museum object records and explicitly defer later
+  debasement and Wang Mang's coin changes to dated M10 work.
+- Regenerated M6/start data. `make validate` reports 22 dynasties, 34
+  characters, 22 government profiles, 22 ruler terms, 13 privileges, and 14
+  laws; the enabled-mod `make smoke` reached the rendered menu with zero new
+  error-log lines.
+
+Next: continue source-qualified Tier-1/2 court and political-mechanics work;
+the baseline coinage pass is not the later monetary-crisis history system.
+
 ## 2026-07-19 - M6 Second Temple priesthood adapter
 
 - Added a source-labelled Second Temple priesthood privilege and Judean Temple

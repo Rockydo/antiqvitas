@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-19 - M6 coinage laws reuse the installed socioeconomic contract
+
+The local `common/laws/01_common.txt` defines `coin_laws` in the
+`socioeconomic` category and supplies live gold, silver, and copper minting
+modifiers. M6 exposes only that proven surface: a gold-and-silver Rome law and
+a copper Han law, both restricted to monarchy profiles. The values are the
+installed coin-law contracts, not a numerical reconstruction of ancient fiscal
+systems. This gives the two imperial cores visibly distinct AD 1 monetary
+standards while reserving crisis debasement and Wang Mang's later reforms for
+dated M10 content.
+
 ## 2026-07-19 - Second Temple priesthood uses the installed clergy estate
 
 The installed `common/estates/00_default.txt` and

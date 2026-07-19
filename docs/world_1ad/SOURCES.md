@@ -31,6 +31,8 @@ a row reaches `implemented` status.
 - `IRAN-ATR`: *Encyclopaedia Iranica*, [Azerbaijan iii. Pre-Islamic History](https://www.iranicaonline.org/articles/azerbaijan-iii/), used for Ariobarzanes II's Media Atropatene appointment and regional context.
 - `IRAN-ARM`: *Encyclopaedia Iranica*, [Armenia and Iran ii. The Pre-Islamic Period](https://www.iranicaonline.org/articles/armenia-ii/), used for the disputed late Artaxiad/Atropatenian succession context.
 - `TOUM-IBR`: Cyril Toumanoff, [Chronology of the Early Kings of Iberia](https://www.attalus.org/armenian/Toum_1969_Early_Iberian_Kings.pdf), used for the conventional but disputed Pharasmanes I accession at the AD 1 boundary.
+- `BM-AUG-COIN`: British Museum records for an Augustan [gold aureus](https://www.britishmuseum.org/collection/object/C_1867-0101-596) and [silver denarius](https://www.britishmuseum.org/collection/object/C_1920-1102-2), used only to verify the gold-and-silver monetary surface at the AD 1 start.
+- `BM-WUZHU`: British Museum [Han Wuzhu copper-alloy coin](https://www.britishmuseum.org/collection/object/C_1978-0919-113), cross-checked with its [Wuzhu mould record](https://www.britishmuseum.org/collection/object/C_OR-12070), used to verify the long-running cast-copper Han coinage surface.
 
 Rows marked `contested` have a corresponding entry in `docs/ASSUMPTIONS.md`.
 `TBD` map capitals are historical roster records awaiting a verified mapping to
