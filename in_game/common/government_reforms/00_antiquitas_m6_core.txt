@@ -14,6 +14,7 @@ antq_han_imperial_bureaucracy = {
 	major = yes
 	government = monarchy
 	country_modifier = {
+		monthly_legitimacy = 0.05
 		monthly_towards_centralization = societal_value_monthly_move
 		monthly_towards_innovative = societal_value_monthly_move
 	}

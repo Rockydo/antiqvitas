@@ -466,6 +466,7 @@ antq_han_imperial_bureaucracy = {
 	major = yes
 	government = monarchy
 	country_modifier = {
+		monthly_legitimacy = 0.05
 		monthly_towards_centralization = societal_value_monthly_move
 		monthly_towards_innovative = societal_value_monthly_move
 	}
@@ -594,7 +595,7 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_principate", "Principate"),
         ("antq_principate_desc", "A republic-facade monarchy centred on the princeps and his auctoritas."),
         ("antq_han_imperial_bureaucracy", "Han Imperial Bureaucracy"),
-        ("antq_han_imperial_bureaucracy_desc", "A palace-centred bureaucracy whose mandate rests on effective and legitimate rule."),
+        ("antq_han_imperial_bureaucracy_desc", "A palace-centred bureaucracy whose Mandate of Heaven is represented through legitimacy and effective rule."),
         ("antq_parthian_king_of_kings", "Parthian King of Kings"),
         ("antq_parthian_king_of_kings_desc", "An Arsacid monarchy balancing the royal court with powerful Iranian noble houses."),
         ("antq_client_monarchy", "Client Monarchy"),
