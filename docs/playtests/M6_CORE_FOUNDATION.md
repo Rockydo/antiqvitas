@@ -7,7 +7,7 @@ Mod mode: enabled `ANTIQVITAS` playset via relocated user directory
 ## Implemented, checked surface
 
 - `tools/m6_power.py --check` reports 43 dynasties, 71 characters, 107
-  government profiles, 21 privileges, 23 laws, 30 ruler terms, and 15
+  government profiles, 23 privileges, 23 laws, 30 ruler terms, and 15
   regnal-history rows from source-labelled M6 CSV ledgers.
 - Generated Rome uses `antq_principate`, Augustus, Livia, and Gaius Caesar as
   heir. Tiberius is present but neither adopted nor heir.
@@ -16,6 +16,8 @@ Mod mode: enabled `ANTIQVITAS` playset via relocated user directory
 - Generated Parthia uses `antq_parthian_king_of_kings`, Phraates V, and Musa.
 - The start profiles now also render source-labelled estate adapters, laws, and
   direct societal values through the locally verified country-manager syntax.
+- Rome now separates senatorial, equestrian, priestly, urban-pleb, and military
+  fallback adapters through distinct source-labelled privileges.
 - The secondary AD 1 slice adds source-labelled starts for Mauretania,
   Nabataea, Kush, Xiongnu, Goguryeo, Marcomanni, and Catuvellauni; its detailed
   limits are recorded in `docs/m6/SECONDARY_AD1_ROSTER.md`.
