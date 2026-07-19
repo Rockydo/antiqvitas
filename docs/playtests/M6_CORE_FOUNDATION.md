@@ -46,3 +46,15 @@ recorded in `console_history.txt`, but the visible country/console panel did
 not follow those inputs reliably under the host's scaled window geometry. The
 specific Rome/Han/Parthia UI verification therefore remains open in TODO and
 is recorded in `KNOWN_ISSUES.md`; no human action is required or requested.
+
+## 2026-07-19 Han minority-regency retest
+
+The new foreground-safe driver selected Western Han in a fresh selector and
+captured the country inspector. XAR's territory, capital, population, culture,
+faith, M6 reform, and laws loaded, but its regent was the generated `Han Zhang`
+rather than Wang Mang, and Emperor Ping was not the nominal ruler. The first
+probe used a direct `ruler = antq_emperor_ping`; the second used the exact local
+minority-regency shape (Ping as `heir`, no concurrent ruler or current term,
+and the native field order). Both produced the same fallback with no new
+`error.log` line. The screenshots and recovery are retained in `BLOCKERS.md`.
+This is not an M6 acceptance result.

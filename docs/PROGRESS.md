@@ -1103,3 +1103,21 @@ the territorial ownership ledger against the section 12.4 targets.
 
 Next: continue the M6 Tier-1/2 roster with courts whose AD 1 incumbency can be
 placed from a source.
+
+## 2026-07-19 - M6 Han minority-regency runtime probe
+
+- The autonomous driver selected Western Han (`XAR`) in a fresh AD 1 country
+  selector. Its territory, Chang'an capital, population, culture, faith,
+  government reform, and law count appeared, but the inspector silently
+  supplied `Han Zhang` instead of the intended Ping/Wang Mang regency.
+- Two locally grounded script variants were tested: first an explicit ruler;
+  then the exact native child-regency form with Ping as heir, no concurrent
+  term, and native field order. Both produced the same generated regent while
+  `make validate` and the enabled-mod smoke remained green with zero new log
+  lines.
+- The unresolved engine contract is recorded in `BLOCKERS.md`; M6 is not
+  tagged and the direct Han gate remains open. The generator preserves the
+  locally evidenced native syntax and uses `AntqDate` for every regency date.
+
+Next: continue M6's independent source-led government, estate, law, roster,
+and regnal-history work rather than claiming a silent runtime fallback passed.

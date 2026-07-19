@@ -5598,12 +5598,11 @@ countries = {
 			government = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
-				ruler = antq_emperor_ping
-				active_regent = antq_wang_mang
 				regency = nobles_estate_regency
+				active_regent = antq_wang_mang
 				start_regency_date = 1.1.1
 				end_regency_date = 6.2.3
-				ruler_term = { character = antq_emperor_ping start_date = 1.1.1 }
+				heir = antq_emperor_ping
 				reforms = {
 					antq_han_imperial_bureaucracy
 				}

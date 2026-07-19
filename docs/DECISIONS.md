@@ -653,3 +653,14 @@ The engine also treats a bare name-pool token as a localization key. The
 generator converts every source token to a unique `antq_name_*` key and mirrors
 its display text into every supported localization file; raw name strings are
 therefore forbidden in generated language scripts.
+
+## 2026-07-19 - Han minority regency follows native shape but is not accepted
+
+The installed start file consistently represents a minority without a
+simultaneous `ruler`: it places the nominal monarch in `heir`, then supplies a
+regency, active regent, and dates. The M6 generator now emits that exact order
+and passes dates through `AntqDate`. A fresh AD 1 inspector still creates Han
+Zhang rather than resolving Emperor Ping and Wang Mang, with no new log line.
+This native-shape adapter is consequently retained as the least speculative
+script form, not treated as proof of runtime correctness. `BLOCKERS.md`
+records both attempts and keeps the M6 milestone unaccepted.

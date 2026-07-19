@@ -76,7 +76,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the first Tier-1/2 secondary-ruler slice: eleven named AD 1 figures, seven country profiles, and source-labelled client, Kushite, steppe, Korean, and tribal-government adapters.
 - [x] Add the AD 1 Herodian client tetrarchy: Archelaus in Judea, Antipas in Galilee-Peraea, and Philip in Batanea.
 - [x] Add the next named Roman client rulers: Archelaus of Cappadocia, Antiochus III of Commagene, Rhoemetalces I of Thrace, and Dynamis of Bosporus.
-- [x] Render campaign-valid current `ruler_term` records for every implemented government and retain source-led Augustus/Western Han regnal back-history without scripting pre-AD-1 campaign dates.
+- [x] Render campaign-valid current `ruler_term` records for every implemented non-regency government and retain source-led Augustus/Western Han regnal back-history without scripting pre-AD-1 campaign dates.
 - [x] Add named Near Eastern courts for Emesa, Osroene, Media Atropatene, and contested AD 1 Armenia with qualified regional government adapters.
 - [x] Add Pharasmanes I's contested AD 1 Caucasian Iberian court without inventing an intra-year accession date.
 - [x] Add a bounded Second Temple priesthood adapter to Herodian Judea through verified estate and law contracts.
@@ -100,6 +100,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add Pythodoris of Pontus as the source-qualified Colchian ruler without inventing biography or succession dates.
 - [x] Add Daeso's traditionally dated Buyeo court while explicitly retaining the Northern/Eastern Buyeo continuity question as contested.
 - [x] Add Aspurgus as a contested Bosporan court claimant without resolving the plan's Dynamis start anchor.
+- [x] Run and record two evidence-based Han minority-regency runtime probes; defer the silent generated-ruler fallback in `BLOCKERS.md`.
 - [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories.
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 

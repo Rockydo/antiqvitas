@@ -351,6 +351,68 @@ def click(args: argparse.Namespace) -> int:
     return 0
 
 
+def drag(args: argparse.Namespace) -> int:
+    """Drag across the rendered game window using normalized coordinates."""
+    import pyautogui
+
+    # Window activation is sufficient for pointer drags. Unlike `focus_game`,
+    # it does not click the map first and therefore preserves the inspected
+    # country while testing viewport movement.
+    window = activate_window()
+    coordinates = (args.start_x, args.start_y, args.end_x, args.end_y)
+    if any(not 0 <= value <= 1 for value in coordinates):
+        raise ValueError("drag coordinates must be normalized fractions from 0 through 1")
+    start = (
+        window.left + round(window.width * args.start_x),
+        window.top + round(window.height * args.start_y),
+    )
+    end = (
+        window.left + round(window.width * args.end_x),
+        window.top + round(window.height * args.end_y),
+    )
+    pyautogui.moveTo(*start)
+    pyautogui.dragTo(*end, duration=args.duration, button=args.button)
+    time.sleep(args.settle)
+    print(
+        f"dragged {args.button} normalized ({args.start_x:.3f}, {args.start_y:.3f}) "
+        f"to ({args.end_x:.3f}, {args.end_y:.3f})"
+    )
+    if args.capture:
+        session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
+        target = ROOT / "docs/screens" / session / f"{args.capture}.png"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        image = pyautogui.screenshot(
+            region=(window.left, window.top, window.width, window.height)
+        )
+        image.save(target)
+        print(target)
+    return 0
+
+
+def move(args: argparse.Namespace) -> int:
+    """Move the pointer without clicking, for edge-scroll and hover probes."""
+    import pyautogui
+
+    window = activate_window()
+    if not (0 <= args.x <= 1 and 0 <= args.y <= 1):
+        raise ValueError("move coordinates must be normalized fractions from 0 through 1")
+    x = window.left + round(window.width * args.x)
+    y = window.top + round(window.height * args.y)
+    pyautogui.moveTo(x, y, duration=args.duration)
+    time.sleep(args.settle)
+    print(f"moved normalized ({args.x:.3f}, {args.y:.3f}) to ({x}, {y})")
+    if args.capture:
+        session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
+        target = ROOT / "docs/screens" / session / f"{args.capture}.png"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        image = pyautogui.screenshot(
+            region=(window.left, window.top, window.width, window.height)
+        )
+        image.save(target)
+        print(target)
+    return 0
+
+
 def hotkey(args: argparse.Namespace) -> int:
     import pyautogui
 
@@ -389,7 +451,9 @@ def press_scan_code(scan_code: int) -> None:
 def console(args: argparse.Namespace) -> int:
     import pyautogui
 
-    window = focus_game()
+    # The debug console is a window-level surface; foregrounding it must not
+    # first select a map country, which made country-inspection runs unstable.
+    window = activate_window()
     # Physical key directly below Escape (scan code 0x29) works across QWERTY
     # and AZERTY layouts; virtual-key fallbacks cover OEM mappings.
     if args.already_open:
@@ -425,7 +489,8 @@ def console(args: argparse.Namespace) -> int:
 def key(args: argparse.Namespace) -> int:
     import pyautogui
 
-    focus_game()
+    # Preserve map/country selection when sending viewport or UI shortcuts.
+    activate_window()
     if args.char:
         pyautogui.press(args.code)
     elif args.scan:
@@ -485,6 +550,25 @@ def build_parser() -> argparse.ArgumentParser:
     click_parser.add_argument("--capture", help="capture this name after the click")
     click_parser.add_argument("--session")
     click_parser.set_defaults(func=click)
+    drag_parser = sub.add_parser("drag")
+    drag_parser.add_argument("start_x", type=float, help="starting horizontal normalized position")
+    drag_parser.add_argument("start_y", type=float, help="starting vertical normalized position")
+    drag_parser.add_argument("end_x", type=float, help="ending horizontal normalized position")
+    drag_parser.add_argument("end_y", type=float, help="ending vertical normalized position")
+    drag_parser.add_argument("--button", choices=("left", "middle", "right"), default="right")
+    drag_parser.add_argument("--duration", type=float, default=1)
+    drag_parser.add_argument("--settle", type=float, default=2)
+    drag_parser.add_argument("--capture", help="capture this name after the drag")
+    drag_parser.add_argument("--session")
+    drag_parser.set_defaults(func=drag)
+    move_parser = sub.add_parser("move")
+    move_parser.add_argument("x", type=float, help="horizontal normalized position")
+    move_parser.add_argument("y", type=float, help="vertical normalized position")
+    move_parser.add_argument("--duration", type=float, default=0.2)
+    move_parser.add_argument("--settle", type=float, default=2)
+    move_parser.add_argument("--capture", help="capture this name after waiting")
+    move_parser.add_argument("--session")
+    move_parser.set_defaults(func=move)
     hotkey_parser = sub.add_parser("hotkey")
     hotkey_parser.add_argument("keys", help="keys separated by '+', e.g. ctrl+s")
     hotkey_parser.add_argument("--settle", type=float, default=2)

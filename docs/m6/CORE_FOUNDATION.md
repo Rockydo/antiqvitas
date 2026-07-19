@@ -35,13 +35,14 @@ no scripted biography date because the cited evidence does not justify one.
 Western Han succession sequences, including the two short Lu-regency reigns and
 Liu He. It is historical reference data, not a pre-campaign script calendar.
 `ruler_terms.csv` renders one current-ruler `ruler_term` for every implemented
-government profile, all beginning at `1.1.1` through `AntqDate`. A signed
-pre-campaign term parses at the menu, but the existing live AD 1 start probe
-already demonstrated that the engine validates historic terms against the new
-campaign boundary. The generator therefore prevents an out-of-range term from
-being emitted, while retaining the cited reign spans for later succession
-situations. This is intentional date safety, not a claim that every ruler
-acceded on 1 January AD 1.
+non-regency profile, all beginning at `1.1.1` through `AntqDate`. The native
+minority-regency form instead identifies the nominal monarch as `heir` and has
+no concurrent current term. A signed pre-campaign term parses at the menu, but
+the existing live AD 1 start probe already demonstrated that the engine
+validates historic terms against the new campaign boundary. The generator
+therefore prevents an out-of-range term from being emitted, while retaining the
+cited reign spans for later succession situations. This is intentional date
+safety, not a claim that every ruler acceded on 1 January AD 1.
 
 ## Technical adapter
 
