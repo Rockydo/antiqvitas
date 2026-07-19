@@ -1,5 +1,26 @@
 # Blockers
 
+## 2026-07-19 - M6 Adiabenian AD 1 court cannot be named without false precision
+
+Status: **deferred; M6 continues with other court and mechanics work.**
+
+The M3 roster correctly retains Adiabene as a Parthian subordinate realm, but
+the available evidence does not establish a defensible named ruler on 1 January
+AD 1. A source-led M6 character would therefore invent the very court chronology
+the project is meant to qualify.
+
+Tried:
+
+1. Rechecked the project's P8.2/OCD/Pleiades roster route and the generated AD
+   1 profile. It establishes the polity and Arbela anchor, not a dated start
+   ruler.
+2. Checked two independent *Encyclopaedia Iranica* entries: [Adiabene](https://www.iranicaonline.org/articles/adiabene/) and [Arbela](https://www.iranicaonline.org/articles/arbela-assyrian-arbailu-old/). They describe the earliest recorded Izates as succeeded about AD 30 by Monobazus I and place the reconstituted vassal state only at an unspecified point in the first quarter of the century.
+
+Recovery: add a named Adiabenian court only if a source supports its status at
+the campaign boundary; otherwise retain the sourced polity/profile and cover
+its later Monobazus/Izates II sequence through dated M10 content. The tree is
+green after this evidence-only pass.
+
 ## 2026-07-19 — M5 location-template RGO overrides are not runtime-effective
 
 Status: **deferred; M5 remains untagged.**
