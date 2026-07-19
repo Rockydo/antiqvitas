@@ -352,3 +352,11 @@ Roma receives the installed `granary` building as a city-scale representation
 of the Augustan annona's storage and distribution function. It is not an exact
 claim about one surviving warehouse at the location key. Source weighed: Oxford
 Classical Dictionary, *annona (grain)*. [secure]
+
+## 2026-07-19 — Han Taixue academy proxy
+
+The installed `confucian_academy` at Jingzhao represents the pre-existing Han
+Taixue, rather than a later examination-era academy. Its city-scale placement
+is a proxy for the capital institution; it does not map a precise building
+footprint. Source weighed: University of Chicago Press, *History of
+Humanities*, "The Humanities in China: History and Challenges." [secure]

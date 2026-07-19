@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 — M5 Han Taixue anchor
+
+- Added the Taixue at Chang'an through the engine-valid `confucian_academy`
+  proxy. The careful source-led placement distinguishes Han's capital
+  institution from later academy/examination systems. The ledger now has 17
+  specialist buildings; rationale and source are in `docs/m5/M5_TAIXUE.md`.
+- `make validate` is green, reporting the 17-building ledger, and real
+  enabled-mod `make smoke` is green with zero new error-log lines.
+
+Next: continue source-led M5 infrastructure anchors while M5's RGO runtime
+surface remains deferred.
+
 ## 2026-07-19 — M5 Roma annona granary
 
 - Added a sourced `granary` anchor at Roma as the engine-valid city-scale proxy
