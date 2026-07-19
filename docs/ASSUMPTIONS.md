@@ -12,6 +12,16 @@ model their peoples at the population layer. Iceland, Madagascar, and eastern
 Polynesia remain unpopulated as required by P8.9/P8.10. Sources weighed:
 P8.1-P8.10; CAH-XI; regional archaeology syntheses. [contested]
 
+## 2026-07-19 - M4 regional culture and faith frames
+
+The first M4 catalog uses broad regional cultures and religious communities as
+a transparent foundation, not a final ethnographic atlas. Secure rows cover
+the best-attested Roman, Han, Parthian, Armenian, Judean, Tamil, Buddhist, and
+major American traditions; mobile, frontier, and many regional folk frames
+remain `contested`. The later location-level remap and population pass must
+split them before M4 can be called complete. Sources weighed: P10-P11;
+CAH-XI; BHR; OCD. [contested]
+
 ## 2026-07-19 — American SoP regional coverage
 
 Plains/Coastal and Pacific Coast SoPs are separate from Hopewell, Basketmaker,

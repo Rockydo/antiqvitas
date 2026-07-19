@@ -229,3 +229,18 @@ The 41 exceptions are the plan-required empty Iceland, Madagascar, and
 post-period eastern-Polynesian locations. The residual frames are technical
 geometry adapters for named societies of peoples; M4 replaces their temporary
 country-shaped representation with population-based societies.
+
+## 2026-07-19 - M4 definitions are additive and runtime-proven
+
+M4 begins with additive files rather than broad directory replacement, so
+untouched vanilla references remain parsable while the ancient database grows.
+The initial real smoke established four build-specific contracts: cultures need
+at least one valid graphical tag, culture/religion colors must be unique named
+colors, a culture `language` field expects a nested dialect rather than a
+language root, and every religion needs a nonempty definition modifier.
+
+The generator therefore supplies verified graphical fallback tags, deterministic
+unique named colors, complete shared-namespace localization, and a minimal
+valid religion modifier. It deliberately leaves language binding until M4 can
+generate historically sourced dialect/name pools, rather than attaching a
+modern or unrelated name list just to make a parser pass.

@@ -307,3 +307,21 @@ Next: begin M3's AD 1 setup mirror, which unblocks M2's clean runtime gate.
 
 Next: start M4's sourced people-and-faith data while the M3 runtime dependency
 waits for its owning M5/M6/M9 replacement work.
+
+## 2026-07-19 - M4 culture and religion foundation
+
+- Added machine-checked, source-labelled catalogues for 69 ancient-culture and
+  37 religion definitions, 34 regional population profiles, unique map colors,
+  and English-mirrored localization. The definitions load additively and retain
+  contested regional frames as documented scaffolding rather than settled fact.
+- The local smoke exposed that culture records need graphical tags, unique named
+  colors, and a nested dialect rather than a language root; religions need a
+  real modifier; and culture/religion localization keys share one namespace.
+  The generator now enforces the first three engine constraints and has a
+  clean menu smoke with zero new errors.
+- The language catalogue remains data-only until the dialect/namelist pass can
+  provide source-based engine-valid dialect keys. No M3 country profile or pop
+  has been silently switched to the new cultural scaffolding.
+
+Next: generate the verified dialect and namelist layer, extend the source
+profiles to country/pop coverage, and only then render the M4 global pop pass.
