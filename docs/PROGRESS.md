@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-19 - M6 Herodian survival-context slice
+
+- Added Herod II and Herodias as source-qualified living Judean-world records
+  from Josephus's later Aretas-conflict narrative.
+- The records do not encode a residence, marriage, office, title, ability, or
+  a reconstructed Herodian genealogy; the later narrative is used solely to
+  prove survival across the campaign boundary.
+
+Next: regenerate, validate, smoke-test, then continue direct-evidence Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Augustan contemporaries slice
 
 - Added Lucius Calpurnius Piso and Publius Sulpicius Quirinius as source-led

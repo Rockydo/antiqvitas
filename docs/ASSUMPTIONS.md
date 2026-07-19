@@ -1,5 +1,13 @@
 # Historical Assumptions
 
+## 2026-07-19 - Herod II and Herodias are bounded Judean-world records
+
+Josephus's later Aretas-conflict narrative names both Herod II and Herodias,
+securely proving their survival past AD 1. The `JUD` engine context is not a
+physical residence or a start-state marriage, office, title, ability, or a full
+Herodian genealogy. Sources weighed: P8.1; `JOS-HER2` in
+`docs/world_1ad/SOURCES.md`. [secure survival; contested engine context]
+
 ## 2026-07-19 - Piso and Quirinius are bounded Augustan contemporaries
 
 Oxford's Piso entry and Tacitus's Quirinius notice securely span the AD 1

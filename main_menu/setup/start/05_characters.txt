@@ -851,6 +851,23 @@ character_db = {
 		tag = JUD
 	}
 
+	antq_herod_ii = {
+		first_name = { name = antq_herod_ii }
+		culture = antq_judean
+		religion = antq_judaism
+		dynasty = antq_herodian_dynasty
+		tag = JUD
+	}
+
+	antq_herodias = {
+		first_name = { name = antq_herodias }
+		culture = antq_judean
+		religion = antq_judaism
+		female = yes
+		dynasty = antq_herodian_dynasty
+		tag = JUD
+	}
+
 	antq_herod_archelaus = {
 		first_name = { name = antq_herod_archelaus }
 		culture = antq_judean
