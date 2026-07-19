@@ -1012,3 +1012,17 @@ command, literary role, marriage, residence, ability, precise biography date,
 genealogy, trial, or death mechanic. Sources weighed: P8.1;
 `TAC-LATER-COURT` in `docs/world_1ad/SOURCES.md`. [secure survival;
 contested engine context]
+
+## 2026-07-19 - Peripheral courts use survival evidence, not reconstructed rule
+
+The *Han Shu* succession material records Yu and Yituzhiyashi after the AD 1
+boundary; the Emesan source retains an unresolved descent question; Tacitus and
+Dio provide later Germanic survival evidence for Segestes, Inguiomerus, and
+Segimerus. The six resulting records are therefore court-only. They do not
+receive a campaign office, ruler or heir slot, specific residence,
+marriage/parent graph, ability, title, accession, biography date, or later
+historical outcome. In particular, the anonymous CRU government remains intact
+and Arminius's existing Roman-service context is not altered. Sources weighed:
+P8.1; P8.3; P8.7; `LBD-EME`; `CTP-XIO`; `TAC-CHER`; `DIO-CHER` in
+`docs/world_1ad/SOURCES.md`. [secure survival where the primary notices are
+direct; contested engine context and Emesan descent]
