@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-19 — M4 active culture-geography audit
+
+- Generated a deterministic audit of 680 installed culture templates actually
+  used by the 13,552 controlled AD 1 locations. Each row records its frequency,
+  candidate M4 profile cultures, regional distribution, and sample map keys.
+- Three controlled map proxies have no installed culture template; their
+  source-labelled exceptions are explicit and retain their reviewed tag profile
+  until a local historical culture decision is made.
+- `make validate` is green. This audit is evidence for the location remap, not
+  a claim that the installed later-period culture labels describe AD 1 peoples.
+
+Next: make the remap in source-labelled regional batches from this audit.
+
 ## 2026-07-19 — M4 dynamic-name v1
 
 - Added 61 conservative dynamic historical capital names from secure,
