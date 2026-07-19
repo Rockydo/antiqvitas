@@ -19,3 +19,15 @@ one receives an invented military command or civil office.
 Neither source provides a needed day-level biography date or an AD 1 office
 assignment, so both fields remain blank. The M10 dated-history pass owns their
 later careers.
+
+## Arsacid guest
+
+Vonones, an Arsacid son of Phraates IV, is also recorded at Rome. *Encyclopaedia
+Iranica* records that Phraates sent four sons to Rome around 10 BCE and names
+Vonones among the older two (`IRAN-PHR` in the source ledger). The roster uses
+Rome as his start-context tag because he is resident in the Roman court at the
+campaign boundary; his Parthian dynasty, culture, and religion remain Arsacid.
+
+This is not a premature succession script. Vonones's later Parthian and
+Armenian reigns stay with M10 history, and the record supplies neither an
+engine title, claim, office, nor biography date.

@@ -105,6 +105,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add Ptolemy of Mauretania to Juba II and Cleopatra Selene's court without projecting his later succession into an AD 1 heir appointment.
 - [x] Driver-test the Parthian profile: Phraates V, Ctesiphon, nine subjects, one reform, and fifteen laws rendered in the AD 1 Country panel.
 - [x] Correct the Han Wang-clan dynasty labels and add the bounded Wang Shun court record from the *Book of Han* source route.
+- [x] Add the Rome-hosted Arsacid prince Vonones without anticipating his later Parthian or Armenian reigns.
 - [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories.
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 
