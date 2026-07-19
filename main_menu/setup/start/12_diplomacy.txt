@@ -7,11 +7,15 @@ diplomacy_manager = {
 	dependency = { first = XAR second = LOU subject_type = tributary } # P8.3;CHG: Loulan Western Regions tributary
 	dependency = { first = XAR second = XAV subject_type = tributary } # P8.3;CHG: Turfan Western Regions tributary
 	dependency = { first = XAH second = ADI subject_type = vassal } # P8.2;OCD: Adiabene Arsacid sub-king
+	dependency = { first = XAH second = XAK subject_type = vassal } # P8.2;OCD;PLE: Media Atropatene Arsacid sub-king
+	dependency = { first = XAH second = XAI subject_type = vassal } # P8.2;OCD;PLE: Characene Arsacid sub-king
 	dependency = { first = XAH second = XAJ subject_type = vassal } # P8.2;OCD: Elymais Arsacid sub-king
+	dependency = { first = XAH second = XAM subject_type = vassal } # P8.2;OCD;PLE: Gorduene Arsacid sub-king
 	dependency = { first = XAH second = MRG subject_type = vassal } # P8.2;CAH-XI: Margiana Arsacid subordinate realm
 	dependency = { first = XAH second = OSR subject_type = vassal } # P8.2;OCD: Osroene Arsacid sub-king
 	dependency = { first = XAH second = PRS subject_type = vassal } # P8.2;OCD: Persis Arsacid sub-king
 	dependency = { first = XAH second = XAN subject_type = vassal } # P8.2;CAH-XI: Sakastan Arsacid subordinate realm
+	dependency = { first = XAA second = XAC subject_type = vassal } # P8.1;OCD;PLE: Herodian Batanea Roman client
 	dependency = { first = XAA second = XAF subject_type = vassal } # P8.1;OCD;PLE: Dynamis Bosporan Roman client
 	dependency = { first = XAA second = BTV subject_type = vassal } # P8.7;CAH-XI: Batavian Roman client community
 	dependency = { first = XAA second = CAP subject_type = vassal } # P8.1;OCD: Archelaus Cappadocian Roman client
