@@ -130,6 +130,32 @@ character_db = {
 		tag = XAA
 	}
 
+	antq_agrippa_postumus = {
+		first_name = { name = antq_agrippa_postumus }
+		culture = antq_latin
+		religion = antq_religio_romana
+		dynasty = antq_vipsanian_court_line
+		tag = XAA
+	}
+
+	antq_julia_younger = {
+		first_name = { name = antq_julia_younger }
+		culture = antq_latin
+		religion = antq_religio_romana
+		female = yes
+		dynasty = antq_vipsanian_court_line
+		tag = XAA
+	}
+
+	antq_agrippina_elder = {
+		first_name = { name = antq_agrippina_elder }
+		culture = antq_latin
+		religion = antq_religio_romana
+		female = yes
+		dynasty = antq_vipsanian_court_line
+		tag = XAA
+	}
+
 	antq_vonones_i = {
 		first_name = { name = antq_vonones_i }
 		culture = antq_parthian

@@ -1257,3 +1257,16 @@ polities.
 
 Next: continue source-led Tier-1/2 roster breadth while retaining the separate
 Han runtime-regency blocker.
+
+## 2026-07-19 - M6 Augustan household slice
+
+- Added Agrippa Postumus, Julia the Younger, and Agrippina the Elder from
+  Suetonius's direct identification of Augustus's grandchildren and their
+  upbringing in his household.
+- They remain court-only Vipsanian family records. The start state does not
+  project Agrippa's AD 4 adoption, any marriage, office, exile, later children,
+  or a biography date. The source limits are recorded in [the Roman court
+  note](m6/ROMAN_COURT_AD1.md).
+
+Next: continue direct-evidence Tier-1/2 roster coverage while preserving the
+separate Han runtime-regency blocker.
