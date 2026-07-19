@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-19 - Augustan cultural figures are Roman-world records, not officeholders
+
+Livy, Ovid, Strabo, Athenodorus Cananites, and Verrius Flaccus have sources
+that establish life across the campaign boundary and a relationship to the
+Roman world or Augustan household. The character ledger uses `ROM` only as a
+Roman-world engine context; it does not assert that every figure resided in
+Rome or the palace on 1 January AD 1. No office, exact residence, kinship,
+ability score, or day-level biography date is scripted. Sources weighed:
+P8.1; `OCD-LIV`; `AAP-OVID`; `BRILL-STR`; `OCD-ATH`; `EB-ATH`; `SUET-VER` in
+`docs/world_1ad/SOURCES.md`. [contested contextual representation]
+
 ## 2026-07-19 - Wang-clan power is a bounded affinal-regency adapter
 
 The *Han Shu* reports that, at Emperor Ping's accession, the Grand Empress
