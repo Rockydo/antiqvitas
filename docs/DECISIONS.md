@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-19 - M6 supports source-qualified collective republics
+
+Local start data establishes that `republic`, `oligarchic_elective`, and
+`ruler = random` form a valid government contract. The M6 generator now permits
+that sentinel only for republic profiles and does not require a campaign ruler
+term for it. This preserves the audit requirement for every named ruler while
+allowing a historically attested collective polity to be mechanically distinct
+when no secure individual current officeholder exists.
+
 ## 2026-07-19 - Roman civic-cult practice uses the installed religious-law category
 
 The installed religious laws and government reforms prove the `religious` law

@@ -37,6 +37,21 @@ is a technical proxy for Buddhist monastic institutions, and the law represents
 attested royal endowment rather than a reconstructed Lankan legal code. Sources:
 P8.4; CAH-XI; `SRI-BHAT` in the [source ledger](../world_1ad/SOURCES.md).
 
+## Indian ganasanghas
+
+Yaudheya, Arjunayana, and Kuninda now use the installed `republic` government
+type with an Indian Ganasangha reform, a leading-clan council privilege, and a
+council-governance law. The plan and CAH-XI support their republican political
+forms, but the project source set does not securely identify an individual
+current leader at the AD 1 boundary. Each therefore retains the engine's
+locally verified `ruler = random` contract rather than receiving an invented
+name, dynasty, or ruler term.
+
+The republic and the `nobles_estate` council bucket are technical surfaces for
+leading warrior clans; neither claims a European-style republic, a hereditary
+nobility, an exact constitutional text, or a membership roll. Sources: P8.4;
+P13; CAH-XI.
+
 ## Intentional limits
 
 The dynasty labels marked `contested` are engine continuity labels where the

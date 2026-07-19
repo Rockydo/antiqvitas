@@ -86,6 +86,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add Bhatikabhaya Abhaya's Anuradhapura court with explicit source-qualified monastic and canal-patronage adapters.
 - [x] Add a bounded Roman legal-status baseline using the locally verified slavery-law contract.
 - [x] Add a bounded AD 1 Roman civic-cult law and defer later persecution/toleration changes to history content.
+- [x] Add Yaudheya, Arjunayana, and Kuninda as source-qualified ganasangha republics without inventing individual rulers.
 - [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories.
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 
