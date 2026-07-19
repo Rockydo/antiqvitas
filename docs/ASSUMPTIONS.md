@@ -41,3 +41,14 @@ Isurium→Ripon, Calleva→Basingstoke, and Caerwent→Monmouth. Sources
 weighed: P8.1–P8.6; Pleiades; local EU5 raster coordinate index. The nearby
 location is explicit in `polities.csv` and may be revised when a closer map key
 or an ancient naming overlay is available.
+
+## 2026-07-19 — Area-frame ownership pass
+
+The first territorial pass uses whole current-EU5 area/region hierarchy keys
+only where they sit unambiguously inside a named AD 1 macro-region in P8.1,
+P8.2, or P8.3 (for example, Italia, the Hispaniae, core Gaul, the Han
+commandery frame, and the Iranian Arsacid core). This is a geometry adapter,
+not a claim that modern area edges reproduce every Roman provincial frontier.
+Client areas, frontier Germania, Parthian sub-kings, and all SoP extents are
+left narrower or unassigned until their own sourced rows exist. Sources
+weighed: P8.1–P8.3; CAH-XI; Book of Han geography tradition. †

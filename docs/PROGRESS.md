@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-19 — M3 territorial ownership slice
+
+- Added checked area and direct-location source tables, resolving 4,153 unique
+  engine-valid locations for 56 AD 1 polities. The Roman, Parthian, and Western
+  Han core frames are now territorial rather than one-capital placeholders.
+- Corrected three unsafe same-name capital matches through Pleiades/map review:
+  Osroene now uses Urfa, Elymais Shush, and Khwarazm is returned to `TBD`.
+- `make validate` and a real-game smoke are green. The autonomous AD 1 selector
+  visibly shows the new territorial surface; evidence and limits are recorded
+  in `M3_TERRITORIAL_SLICE.md`.
+
+Next: map remaining capitals, source subject relations and territorial extents,
+then seed SoP coverage rather than treating unassigned map space as settled
+states.
+
 ## 2026-07-19 — M3 geospatial capital index
 
 - Parsed the installed 16,384×8,192 location raster and all named-location RGB
@@ -22,8 +37,8 @@ the capital-control slice from verified map locations.
   error lines. The visual and scope judgment are recorded in
   `M3_CAPITAL_SLICE.md`.
 
-Next: research and map the remaining capitals, then add sourced multi-location
-ownership, subjects, and SoPs rather than extrapolating from fuzzy candidates.
+Superseded for ownership by the territorial slice above; the remaining capital,
+subject, and SoP work continues under its stated limits.
 
 ## 2026-07-19 — M2 closed on M3's clean base
 
