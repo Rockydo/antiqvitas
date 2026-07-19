@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 — Development profile is not historical output data
+
+EU5's scalar development cannot be equated with ancient population, wealth, or
+urbanization without a separate calibrated study. The M5 profile therefore
+uses only a zero base and relative road/town/city increments to make the
+source-labelled settlement and transport layers legible to the engine. It does
+not claim that one point equals a measurable ancient quantity; any later
+location-specific calibration must cite an explicit historical dataset. Sources
+weighed: P12.2; P12.4; ORB. [contested]
+
 ## 2026-07-19 — First-pass ancient road corridors
 
 The 25 M5 road rows are high-level engine links between reviewed location

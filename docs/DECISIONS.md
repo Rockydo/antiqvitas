@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Development is a transparent engine scale, not a census
+
+The installed development manager adds values from selectors such as `road`,
+`town`, and `city`. M5 uses only those four selectors and leaves the global
+base at zero, preventing later-period regional bonuses from becoming silent AD
+1 history. M4 population totals and M5 city/town classifications remain the
+historical sources; the four development values are intentionally modest,
+validated technical parameters.
+
 ## 2026-07-19 — M5 roads use the installed base-road start syntax
 
 The installed `09_roads.txt` records a road as a bare `origin = destination`
