@@ -18,10 +18,10 @@ ATR,Media Atropatene,1,subject,Iran,Ganzak,TBD,P8.2;OCD,secure,researched
 ADI,Adiabene,1,subject,Mesopotamia,Arbela,TBD,P8.2;OCD,secure,researched
 OSR,Osroene,1,subject,Mesopotamia,Edessa,edessa,P8.2;OCD,secure,researched
 GOR,Gordyene,1,subject,Mesopotamia,Corduene,TBD,P8.2;OCD,secure,researched
-SKT,Sakastan,1,subject,Iran,Zaranj,TBD,P8.2;CAH-XI,secure,researched
+SKT,Sakastan,1,subject,Iran,Zaranj,zaranj,P8.2;CAH-XI,secure,mapped
 MRG,Margiana,1,subject,Central Asia,Merv,merv,P8.2;CAH-XI,secure,researched
 ARM,Kingdom of Armenia,1,country,Caucasus,Artaxata,TBD,P8.2;CAH-XI,secure,researched
-IBR,Caucasian Iberia,1,country,Caucasus,Mtskheta,TBD,P8.2;OCD,secure,researched
+IBR,Caucasian Iberia,1,country,Caucasus,Mtskheta,mtskheta,P8.2;OCD,secure,mapped
 CLZ,Colchis,2,country,Caucasus,Phasis,TBD,P8.2;OCD,secure,researched
 ALC,Caucasian Albania,2,country,Caucasus,Kabalaka,TBD,P8.2;OCD,secure,researched
 HAN,Western Han,1,country,China,Luoyang,luoyang,P8.3;BHR,secure,researched
@@ -39,12 +39,12 @@ BYE,Byeonhan,2,sop,Korea,Byeonhan,TBD,P8.3;SAM,contested,researched
 WAA,Wa Polities,2,sop,Japan,Yayoi polities,TBD,P8.3;CAH-XI,secure,researched
 SAT,Satavahana,2,country,India,Pratishthana,TBD,P8.4;CAH-XI,contested,researched
 ISK,Indo-Scythian Realm,2,country,India,Taxila,TBD,P8.4;CAH-XI,contested,researched
-IGR,Indo-Greek Rump,2,country,India,Sagala,TBD,P8.4;CAH-XI,contested,researched
+IGR,Indo-Greek Rump,2,country,India,Sagala,sagala,P8.4;CAH-XI,contested,mapped
 YUE,Yuezhi Confederation,2,country,Central Asia,Balkh,balkh,P8.4;CAH-XI,secure,researched
-YDH,Yaudheya,2,country,India,Rohtak,TBD,P8.4;CAH-XI,secure,researched
+YDH,Yaudheya,2,country,India,Rohtak,rohtak,P8.4;CAH-XI,secure,mapped
 ARJ,Arjunayana,2,country,India,Mathura,mathura,P8.4;CAH-XI,secure,researched
 KUN,Kuninda,2,country,India,Kuninda,TBD,P8.4;CAH-XI,secure,researched
-KAL,Kalinga,2,country,India,Kalinganagara,TBD,P8.4;CAH-XI,secure,researched
+KAL,Kalinga,2,country,India,Kalinganagara,kalinganagara,P8.4;CAH-XI,secure,mapped
 CHE,Chera,2,country,India,Kodungallur,kodungallur,P8.4;PER,secure,researched
 CHL,Chola,2,country,India,Uraiyur,TBD,P8.4;PER,secure,researched
 PND,Pandya Kingdom,2,country,India,Madurai,madurai,P8.4;PER,secure,researched
@@ -54,7 +54,7 @@ AKS,Aksum,2,country,Africa,Aksum,axum,P8.5;PER,secure,researched
 GAR,Garamantes,2,country,Africa,Garama,TBD,P8.5;CAH-XI,secure,researched
 BLM,Blemmyes,2,sop,Africa,Talmis,TBD,P8.5;CAH-XI,secure,researched
 BEJ,Beja,2,sop,Africa,Beja country,TBD,P8.5;CAH-XI,secure,researched
-DJN,Djenne-Djenno,2,sop,West Africa,Djenne,TBD,P8.5;CAH-XI,contested,researched
+DJN,Djenne-Djenno,2,sop,West Africa,Djenne,djenne,P8.5;CAH-XI,contested,mapped
 SAB,Saba,2,country,Arabia,Marib,marib,P8.6;CAH-XI,secure,researched
 HIM,Himyar,2,country,Arabia,Zafar,TBD,P8.6;CAH-XI,secure,researched
 QAT,Qataban,2,country,Arabia,Timna,TBD,P8.6;CAH-XI,secure,researched
@@ -87,7 +87,7 @@ BRI,Brigantes,1,country,Britain,Isurium,TBD,P8.7;CAH-XI,secure,researched
 ATB,Atrebates,1,country,Britain,Calleva,TBD,P8.7;CAH-XI,secure,researched
 SIL,Silures,1,country,Britain,Caerwent,TBD,P8.7;CAH-XI,secure,researched
 ORD,Ordovices,1,country,Britain,North Wales,TBD,P8.7;CAH-XI,secure,researched
-DUM,Dumnonii,1,country,Britain,Exeter,TBD,P8.7;CAH-XI,secure,researched
+DUM,Dumnonii,1,country,Britain,Exeter,exeter,P8.7;CAH-XI,secure,mapped
 CAL,Caledonian Societies,1,sop,Britain,Caledonia,TBD,P8.7;CAH-XI,secure,researched
 ULA,Ulaid,1,sop,Ireland,Ulster,TBD,P8.7;CAH-XI,secure,researched
 DAC,Dacian Kingdoms,2,country,Danube,Sarmizegetusa,TBD,P8.7;CAH-XI,secure,researched
@@ -114,17 +114,17 @@ JAV,Javanese Polities,3,sop,Southeast Asia,Java,TBD,P8.9;CAH-XI,contested,resear
 PHL,Philippine Societies,3,sop,Southeast Asia,Philippines,TBD,P8.9;CAH-XI,secure,researched
 BOR,Bornean Societies,3,sop,Southeast Asia,Borneo,TBD,P8.9;CAH-XI,secure,researched
 TON,Tonga-Samoa-Fiji,3,sop,Oceania,Western Polynesia,TBD,P8.9;CAH-XI,secure,researched
-TEO,Teotihuacan,3,country,Mesoamerica,Teotihuacan,TBD,P8.10;CAH-XI,secure,researched
+TEO,Teotihuacan,3,country,Mesoamerica,Teotihuacan,tehotihuacan,P8.10;CAH-XI,secure,mapped
 CUI,Cuicuilco,3,country,Mesoamerica,Cuicuilco,TBD,P8.10;CAH-XI,contested,researched
 MAY,Early Maya Polities,3,country,Mesoamerica,Tikal,TBD,P8.10;CAH-XI,secure,researched
 ZAP,Monte Alban,3,country,Mesoamerica,Monte Alban,TBD,P8.10;CAH-XI,secure,researched
 EPI,Epi-Olmec,3,sop,Mesoamerica,La Mojarra,TBD,P8.10;CAH-XI,secure,researched
 WMS,West Mexican Societies,3,sop,Mesoamerica,West Mexico,TBD,P8.10;CAH-XI,secure,researched
 MOC,Moche,3,country,Andes,Moche,TBD,P8.10;CAH-XI,secure,researched
-NAZ,Nazca,3,country,Andes,Cahuachi,TBD,P8.10;CAH-XI,secure,researched
+NAZ,Nazca,3,country,Andes,Cahuachi,cahuachi,P8.10;CAH-XI,secure,mapped
 LIM,Lima Culture,3,sop,Andes,Lima,TBD,P8.10;CAH-XI,secure,researched
 REC,Recuay,3,country,Andes,Callejon de Huaylas,TBD,P8.10;CAH-XI,secure,researched
-TIW,Early Tiwanaku,3,country,Andes,Tiwanaku,TBD,P8.10;CAH-XI,secure,researched
+TIW,Early Tiwanaku,3,country,Andes,Tiwanaku,tiwanaku,P8.10;CAH-XI,secure,mapped
 CHI,Chibchan Societies,3,sop,Northern Andes,Altiplano Cundiboyacense,TBD,P8.10;CAH-XI,secure,researched
 HOP,Hopewell Sphere,3,sop,North America,Ohio Valley,TBD,P8.10;CAH-XI,secure,researched
 BSK,Basketmaker II,3,sop,North America,Four Corners,TBD,P8.10;CAH-XI,secure,researched

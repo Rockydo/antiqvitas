@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 — M3 capital mapping pipeline
+
+- Added a checked candidate report derived from the installed base-English
+  location names, so direct city matches and unresolved geographic approximations
+  are distinguishable in review.
+- Recorded ten additional exact capital keys (including Zaranj, Mtskheta,
+  Sagala, Rohtak, Kalinganagara, Djenné, Exeter, Teotihuacan, Cahuachi, and
+  Tiwanaku). Ambiguous fuzzy matches remain `TBD` rather than becoming map data.
+
+Next: continue sourced capital mapping and use the verified set to generate the
+first ownership/capital slice of the M3 start-manager mirror.
+
 ## 2026-07-19 — M3 country database foundation
 
 - Generated 133 BOM-safe country definitions from the sourced roster and the
