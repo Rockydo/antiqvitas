@@ -21,13 +21,15 @@ a row reaches `implemented` status.
   modern archaeology does not confirm a date.
 - `MET`: The Metropolitan Museum of Art's Roman-empire chronology, used for
   the non-controversial Augustan reign span only:
-  [The Roman Empire, 27 B.C.–393 A.D.](https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d).
+  [The Roman Empire, 27 B.C.-393 A.D.](https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d).
 - `WIKI-HAN`: Wikipedia's [*List of emperors of the Han dynasty*](https://en.wikipedia.org/wiki/List_of_emperors_of_the_Han_dynasty), used only as the
   plan-permitted gazetteer-level cross-check for conventional Western Han
   accession/reign years; `BHR` remains the project's substantive Han source.
 - `IRAN-PHR`: Marek Jan Olbrycht's peer-reviewed *Encyclopaedia Iranica*
-  [â€œPhraates Vâ€](https://www.iranicaonline.org/articles/phraates-v/), used for
-  the 2 BCEâ€“AD 4 Phraates V reign span and Musa co-rule.
+  [Phraates V](https://www.iranicaonline.org/articles/phraates-v/), used for
+  the 2 BCE-AD 4 Phraates V reign span and Musa co-rule.
+- `IRAN-ATR`: *Encyclopaedia Iranica*, [Azerbaijan iii. Pre-Islamic History](https://www.iranicaonline.org/articles/azerbaijan-iii/), used for Ariobarzanes II's Media Atropatene appointment and regional context.
+- `IRAN-ARM`: *Encyclopaedia Iranica*, [Armenia and Iran ii. The Pre-Islamic Period](https://www.iranicaonline.org/articles/armenia-ii/), used for the disputed late Artaxiad/Atropatenian succession context.
 
 Rows marked `contested` have a corresponding entry in `docs/ASSUMPTIONS.md`.
 `TBD` map capitals are historical roster records awaiting a verified mapping to
@@ -68,7 +70,7 @@ are deliberately marked `contested`: broad regional labels are a visible
 political-map scaffold, never an assertion that a present map-area boundary was
 an AD 1 frontier.
 
-The Han-world expansion records P8.1–P8.3/P8.8 with CAH-XI, CHGIS, or *Samguk
+The Han-world expansion records P8.1-P8.3/P8.8 with CAH-XI, CHGIS, or *Samguk
 Sagi* as appropriate. Multi-capital regions are deliberately retained for the
 residual SoP/source pass rather than being silently collapsed to one owner.
 
