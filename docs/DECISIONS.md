@@ -99,6 +99,24 @@ nearby non-Han local keys before generation. This is an intentional guardrail:
 a visual capital proxy must not silently create a contradictory sovereignty
 claim at an imperial frontier.
 
+## 2026-07-19 — Complete capital anchors are not a completed political map
+
+M3 now requires every roster tag to have one unique, engine-valid local-map
+capital anchor. The generated capital-control seed makes all 133 polities
+visible and lets the ownership resolver reject overlap before the game starts.
+That invariant is deliberately narrower than historical territorial completion:
+area ownership and SoP coverage remain separately sourced M3 work, and M4 will
+replace the temporary generic-country handling of societies of peoples with
+their population-based representation.
+
+## 2026-07-19 — Foreground-only game screenshots
+
+The autonomous driver moves the EU5 window to a fixed game rectangle and refuses
+to capture unless that process owns the foreground window. It uses the Windows
+foreground attachment sequence before taking the image. This prevents a game
+test artifact from including another application when focus changes during
+launcher handoff; the clean menu checkpoint is retained as M3 driver evidence.
+
 ## 2026-07-19 — Five campaign ages with a compatibility sentinel
 
 The campaign has five real ages: Principate, High Empires, Crisis, Dominate,

@@ -70,3 +70,17 @@ proxies; both remain contested because Panticapaeum/Charax Spasinu mapping is
 not a one-to-one local-key match. Ganzak→Malekan and Corduene→Eruh are
 Pleiades-coordinate matches; the remaining classical site proxies are listed
 in `capital_coordinates.csv`. Sources weighed: P8.1–P8.2; OCD; Pleiades. †
+
+## 2026-07-19 — Final M3 capital-anchor coverage
+
+The completed M3 anchor registry must not be read as an atlas of formal ancient
+capitals. For broad regional peoples and societies of peoples, the local key is
+an explicitly labelled geographic seed pending a sourced territorial and pop
+pass. Examples include Caesarea Philippi→Antilebanon Mountains for Batanea,
+Longcheng→Qingzhou Mongol for the Xiongnu, Pratishthana→Daulatabad, Qaryat
+al-Faw→Aqiq, Kath for Khwarazm, Mataram for Java, Azcapotzalco for Cuicuilco,
+Chan Chan for the Moche, and regional anchors for the Americas and Oceania.
+They are transparent map proxies rather than claims about exact period names,
+polities, or borders. M4 dynamic names and the unfinished M3 territory rows are
+the required corrective layers. Sources weighed: P8.4–P8.10; CAH-XI; Pleiades;
+CHGIS. †

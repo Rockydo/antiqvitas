@@ -41,3 +41,10 @@ in `ownership_resolved.csv`.
 supplies the Roman client ring, P8.2 the Arsacid sub-kings, and P8.3 the Han
 Western Regions. The M3 engine-contract label is technical scaffolding and is
 not used as a historical source claim.
+
+All 133 roster rows now have a reviewed local-map capital anchor. For an
+attested city, the anchor is a direct local match or a conservative geometry
+proxy with coordinate evidence; for a society of peoples or broad regional
+polity, it is an explicitly documented geographic seed. Capital anchoring is
+not evidence of a final border, formal capital, or population distribution.
+Those claims require the separate ownership/SoP and M4 population source passes.
