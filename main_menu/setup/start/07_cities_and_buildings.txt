@@ -45,13 +45,17 @@ locations = {
 # M5 AD 1 specialist buildings; sources and proxy rationale: docs/m5/special_buildings.csv.
 building_manager = {
 	glass_guild = { tag = XAA level = 1 location = alexandria } # alexandria_glass; P12.1;P12.3
+	protected_harbor = { tag = XAA level = 1 location = alexandria } # alexandria_harbor; P12.2;CAM-ALEX
 	library = { tag = XAA level = 1 location = alexandria } # alexandria_library; P12.3;P8.1
 	lighthouse_of_alexandria = { tag = XAA level = 1 location = alexandria } # alexandria_pharos; P12.3;P8.1
+	irrigation_systems = { tag = XBD level = 1 location = anuradhapura } # anuradhapura_irrigation; P12.3;UNESCO-ANU
 	lacquerware_guild = { tag = XAR level = 1 location = jingzhao } # changan_lacquerware; P12.1;P8.3;BHR
+	irrigation_systems = { tag = XAR level = 1 location = chengdu } # chengdu_irrigation; P12.3;UNESCO-DJJ
 	lacquerware_guild = { tag = XAR level = 1 location = chengdu } # chengdu_lacquerware; P12.1;P8.3;BHR
 	glass_guild = { tag = XDK level = 1 location = cologne } # cologne_glass; P12.1;P8.7
 	lacquerware_guild = { tag = XAR level = 1 location = luoyang } # luoyang_lacquerware; P12.1;P8.3;BHR
 	aqueduct_system = { tag = XAA level = 1 location = rome } # roma_aqueduct; P12.3;P8.1
+	hippodrome = { tag = XAA level = 1 location = rome } # roma_circus; P12.3;BRI-CIRC
 	minting_office = { tag = XAA level = 1 location = rome } # roma_mint; P12.3;P8.1
 	pottery_guild = { tag = XAA level = 1 location = rome } # roma_terra_sigillata; P12.1;P12.3
 	glass_guild = { tag = XAH level = 1 location = sidon } # sidon_glass; P12.1;P8.2;CAH-XI

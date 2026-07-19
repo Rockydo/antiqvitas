@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Civic infrastructure uses conservative installed proxies
+
+The installed building vocabulary has no literal Circus Maximus, Roman bath, or
+ancient reservoir key. The M5 ledger therefore maps the Circus Maximus to the
+verified `hippodrome` slot, Alexandria's period harbor to `protected_harbor`,
+and the Dujiangyan/Abhayawewa water systems to `irrigation_systems`. Each row
+states that it is a technical proxy, rather than quietly claiming a one-to-one
+architectural identity. All are level one, source-labelled, and restricted by
+the existing AD 1 owner and urban-location checks.
+
 ## 2026-07-19 — Dedicated ancient goods use the full generated engine contract
 
 Papyrus, silphium, naphtha/bitumen, jade, and camels are separate raw goods,

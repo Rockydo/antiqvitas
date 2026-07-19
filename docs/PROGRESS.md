@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-19 — M5 civic and hydraulic infrastructure anchors
+
+- Expanded the checked source ledger from 11 to 15 AD 1 specialist buildings:
+  a Circus Maximus proxy at Rome, Alexandria's maritime-emporium harbor,
+  Dujiangyan irrigation at Chengdu, and the Abhayawewa reservoir complex at
+  Anuradhapura.
+- Used only locally verified building keys and the existing owner/urban-site
+  validation. `make validate` reports all 15 entries; the real menu smoke is
+  green with zero new error-log lines.
+
+Next: continue the remaining M5 building, road, development, and dated-goods
+work before the trade-flow milestone gate.
+
 ## 2026-07-19 — M5 dedicated ancient raw goods
 
 - Added five real raw-goods definitions instead of mislabelling vanilla goods:
