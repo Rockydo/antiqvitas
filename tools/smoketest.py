@@ -87,9 +87,9 @@ def main() -> int:
             "--timeout",
             str(args.timeout),
             "--minimum",
-            "45",
+            "30",
             "--quiet-seconds",
-            "20",
+            "15",
             check=False,
         )
         if ready.returncode:
