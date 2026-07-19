@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-19 - M6 Odrysian Cotys court record
+
+- Added Cotys of Thrace from Tacitus's direct account of the Augustan
+  succession settlement following Rhoemetalces I's later death.
+- The evidence establishes a living son, not an AD 1 office or a settled
+  succession: Cotys is only a Sapaean court character, with no heir mechanic,
+  title, reign, date, or reconstructed genealogy.
+
+Next: regenerate, validate, smoke-test, then continue source-led Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Adiabenian Monobazus I
 
 - Replaced Adiabene's anonymous ruler with the source-qualified Monobazus I

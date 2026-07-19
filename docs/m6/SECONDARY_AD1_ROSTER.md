@@ -160,6 +160,17 @@ places Aspurgus's royal status by AD 6/7 and argues for an earlier reign, but
 that is not used to overrule the plan's deliberately unresolved anchor. Source:
 `ZAV-ASP` in the [source ledger](../world_1ad/SOURCES.md).
 
+## Odrysian court boundary
+
+Cotys of Thrace is a second, deliberately bounded, Sapaean court record.
+Tacitus's later account of the Augustan settlement explicitly calls Cotys the
+son of Rhoemetalces when the kingdom was divided following Rhoemetalces's
+death. The existing OCD chronology puts that succession after the campaign
+boundary, so Cotys is source-qualified as living on 1 January AD 1. The record
+does not assign him the engine heir flag, a title, an office, a birth date, a
+reign, or a reconstructed family tree. Sources: P8.1; OCD; `TAC-THR` in the
+[source ledger](../world_1ad/SOURCES.md).
+
 ## Near Eastern border courts
 
 The next M6 slice replaces four Tier-1 random-ruler profiles with five named
