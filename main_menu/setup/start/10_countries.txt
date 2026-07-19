@@ -2082,7 +2082,23 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = antq_aretas_iv
+				reforms = {
+					antq_client_monarchy
+				}
+				privilege = {
+					antq_client_royal_autonomy
+				}
+				laws = {
+					antq_client_governance_law = antq_roman_client_compact
+				}
+				centralization_vs_decentralization = 10
+				aristocracy_vs_plutocracy = -20
+				capital_economy_vs_traditional_economy = 25
+			}
 			capital = shoubak
 		}
 
@@ -2384,7 +2400,24 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = antq_juba_ii
+				consort = antq_cleopatra_selene_ii
+				reforms = {
+					antq_client_monarchy
+				}
+				privilege = {
+					antq_client_royal_autonomy
+				}
+				laws = {
+					antq_client_governance_law = antq_roman_client_compact
+				}
+				centralization_vs_decentralization = 10
+				aristocracy_vs_plutocracy = -20
+				capital_economy_vs_traditional_economy = 25
+			}
 			capital = volubilis
 		}
 
@@ -5373,7 +5406,24 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = steppe_horde
+				heir_selection = tribal_oldest_male
+				ruler = antq_wuzhuliu
+				reforms = {
+					antq_steppe_confederation
+				}
+				privilege = {
+					antq_steppe_clan_autonomy
+				}
+				laws = {
+					antq_steppe_governance_law = antq_confederated_chanyu
+				}
+				centralization_vs_decentralization = -55
+				traditionalist_vs_innovative = -40
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
 			capital = qingzhou_mongol
 		}
 
@@ -5492,7 +5542,24 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = antq_yuri_goguryeo
+				reforms = {
+					antq_early_korean_kingdom
+				}
+				privilege = {
+					antq_korean_royal_court
+				}
+				laws = {
+					antq_early_korean_governance_law = antq_goguryeo_royal_court
+				}
+				centralization_vs_decentralization = 25
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -25
+				capital_economy_vs_traditional_economy = 35
+			}
 			capital = ganggye
 		}
 
@@ -6747,7 +6814,24 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = antq_natakamani
+				consort = antq_amanitore
+				reforms = {
+					antq_kushite_dual_kingship
+				}
+				privilege = {
+					antq_kushite_royal_court
+				}
+				laws = {
+					antq_kushite_governance_law = antq_kushite_sacral_kingship
+				}
+				centralization_vs_decentralization = 30
+				traditionalist_vs_innovative = -10
+				capital_economy_vs_traditional_economy = 20
+			}
 			capital = shendi
 		}
 
@@ -7643,7 +7727,24 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = antq_maroboduus
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -35
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 65
+			}
 			capital = prague
 		}
 
@@ -9691,7 +9792,25 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = antq_tasciovanus
+				heir = antq_cunobelinus
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -30
+				traditionalist_vs_innovative = -35
+				aristocracy_vs_plutocracy = -35
+				capital_economy_vs_traditional_economy = 55
+			}
 			capital = st_albans
 		}
 

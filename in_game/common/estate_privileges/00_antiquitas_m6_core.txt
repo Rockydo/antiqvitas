@@ -43,3 +43,48 @@ antq_parthian_great_house_autonomy = {
 		monthly_towards_decentralization = societal_value_monthly_move
 	}
 }
+
+antq_client_royal_autonomy = {
+	estate = nobles_estate
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		nobles_estate_target_satisfaction = small_privilege_target_satisfaction
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+	}
+}
+
+antq_kushite_royal_court = {
+	estate = nobles_estate
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		nobles_estate_target_satisfaction = small_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.025
+	}
+}
+
+antq_steppe_clan_autonomy = {
+	estate = tribes_estate
+	country_modifier = {
+		global_tribes_estate_power = 0.25
+		tribes_estate_target_satisfaction = medium_privilege_target_satisfaction
+		monthly_towards_decentralization = societal_value_monthly_move
+	}
+}
+
+antq_korean_royal_court = {
+	estate = nobles_estate
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		nobles_estate_target_satisfaction = small_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.025
+	}
+}
+
+antq_tribal_elder_council = {
+	estate = tribes_estate
+	country_modifier = {
+		global_tribes_estate_power = 0.20
+		tribes_estate_target_satisfaction = small_privilege_target_satisfaction
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+	}
+}
