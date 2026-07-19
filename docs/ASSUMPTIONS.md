@@ -1077,3 +1077,17 @@ only, without a campaign office, term, residence, genealogy, estate, ability,
 biography date, or later career. Sources weighed: P8.1; `COO-FASTI-25-32`;
 `OUP-CURSUS` in `docs/world_1ad/SOURCES.md`. [contested survival; contested
 engine context]
+
+## 2026-07-19 - First Yuan Shi decrees establish context, not 1 January posts
+
+The first Yuan Shi-year *Han Shu* annal names Kai Ming and Chengdu in royal
+enfeoffments; Gongsun Xiangru and Kong Jun in ritual enfeoffments; Wang An and
+Wang Lin among Anhan Gong Wang Mang's sons made marquises; and Grand Honglu
+Zuo Xian in the accession settlement. The linked English layer is an
+automatically generated aid to the primary text, and a first-year decree does
+not establish a 1 January AD 1 office, active title, physical residence,
+ability, regency function, engine family graph, biography date, or later
+career. The seven records are consequently narrow, contested court context;
+the two royal figures use separate labels rather than asserting a House-of-Liu
+genealogy. Sources weighed: P8.3; `CTP-PING2` in
+`docs/world_1ad/SOURCES.md`. [contested]

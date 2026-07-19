@@ -1554,6 +1554,21 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-19 - M6 first Yuan Shi Han court records
+
+- Added Kai Ming, Chengdu, Gongsun Xiangru, Kong Jun, Wang An, Wang Lin, and
+  Zuo Xian from first Yuan Shi-year *Han Shu* decrees and commemorations.
+- These are deliberately contested context records only. The first-year source
+  does not establish a 1 January office, active title, residence, ability,
+  family graph, biography date, regency role, or later career; the two royal
+  figures therefore do not assert a House-of-Liu genealogy.
+- `make validate` and the real-game `make smoke` are green, with the game
+  reaching the menu and zero new `error.log` lines. The M6 roster is now 247
+  source-led characters and 180 dynasties.
+
+Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
+separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 near-boundary court slice
 
 - Added Flavus, Thusnelda, and the explicitly qualified Segimundus to the
