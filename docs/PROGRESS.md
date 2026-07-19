@@ -1173,3 +1173,15 @@ runtime evidence and Han as the explicit failed gate.
 
 Next: continue M6 roster breadth and mechanics work while the independent Han
 minority-regency runtime blocker remains open.
+
+## 2026-07-19 - M6 Rome-hosted Arsacid court slice
+
+- Added Vonones as a Roman-hosted Arsacid court figure from the
+  *Encyclopaedia Iranica* record that Phraates IV sent his sons to Rome around
+  10 BCE. His culture, religion, and dynasty remain Parthian/Arsacid.
+- The roster does not anticipate his later Parthian or Armenian reigns with a
+  title, office, claim, or engine-heir assignment. The source boundary is
+  documented in [the Roman court note](m6/ROMAN_COURT_AD1.md).
+
+Next: continue direct-evidence court coverage and mechanics work while the Han
+minority-regency runtime blocker remains isolated.

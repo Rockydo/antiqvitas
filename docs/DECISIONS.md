@@ -683,3 +683,12 @@ use a Wang-clan label rather than the Han imperial House of Liu. The label makes
 the documented consort-kin distinction visible while neither inventing parent
 links nor attempting a complete Wang genealogy. Wang Shun uses the same narrow
 label as a court figure only; no government field depends on it.
+
+## 2026-07-19 - A hosted court character keeps the host's start context
+
+The M6 character tag identifies the campaign-start court context that makes a
+character visible to the engine, not an assertion of their ethnicity or natal
+dynasty. Vonones therefore uses the Roman start context while retaining his
+Parthian culture, Arsacid religion, and Arsacid dynasty. This narrow mapping
+records his documented residence in Rome without pre-scripting the later
+Parthian or Armenian reigns that belong to M10.
