@@ -49,6 +49,11 @@ as ethnarch and Antipas/Philip as tetrarchs after Herod's 4 BCE death:
 [Encyclopedia of the Bible](https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Herod).
 No parent links, spouses, or day-level biography dates are fabricated here.
 
+The later mechanics slice gives Judea a `clergy_estate` privilege and an
+administrative law for the Second Temple priesthood. These use locally verified
+estate contracts to express a documented political and religious actor, not a
+Christian hierarchy or a complete reconstruction of high-priestly authority.
+
 ## Further Roman client courts
 
 Archelaus of Cappadocia, Antiochus III of Commagene, Rhoemetalces I of Thrace,

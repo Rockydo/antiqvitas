@@ -71,6 +71,13 @@ gameplay representations, not reconstructions of a uniform written legal code.
 Each source row records the relevant plan section and synthesis source; the
 historically interpretive proxies are marked `contested` in their ledger.
 
+The Judean profile adds a narrower `clergy_estate` adapter for the Second
+Temple priesthood. Its verified power and satisfaction modifiers make the
+Temple's civic and religious weight playable alongside Archelaus's client
+court. This is a UI proxy, not a Christian clerical hierarchy or a claim to
+reconstruct the high priesthood's exact legal jurisdiction; its associated
+privilege and administrative law say so explicitly.
+
 ## Secondary AD 1 roster
 
 The next slice adds Maroboduus, Arminius, Juba II, Cleopatra Selene II, Aretas

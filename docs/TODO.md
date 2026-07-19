@@ -79,6 +79,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Render campaign-valid current `ruler_term` records for every implemented government and retain source-led Augustus/Western Han regnal back-history without scripting pre-AD-1 campaign dates.
 - [x] Add named Near Eastern courts for Emesa, Osroene, Media Atropatene, and contested AD 1 Armenia with qualified regional government adapters.
 - [x] Add Pharasmanes I's contested AD 1 Caucasian Iberian court without inventing an intra-year accession date.
+- [x] Add a bounded Second Temple priesthood adapter to Herodian Judea through verified estate and law contracts.
 - [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories.
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 
