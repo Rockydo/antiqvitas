@@ -1,5 +1,23 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Population allocation is target-led and geographically weighted
+
+The M4 population generator makes section 12.4's documented macro totals its
+authoritative input. It uses the installed vanilla pop file only to distribute
+each regional target among existing location geometry, with a small non-zero
+floor so every controlled land location receives a base population. The source
+tables, not the later-period vanilla snapshot, remain the historical claim.
+This gives the game a complete working start state while making each regional
+allocation inspectable and replaceable as local research improves.
+
+## 2026-07-19 — Resumable smoke completion
+
+`smoketest.py --resume` performs the normal readiness, termination, and
+error-log diff stages against a game launched by the same driver. It exists for
+automation hosts that interrupt a single long cold-start command; normal
+`make smoke` remains the default path. The driver also treats a stale saved
+process ID as already stopped, rather than failing a later autonomous run.
+
 ## 2026-07-19 — M4 profiles are data, not presentation fallbacks
 
 M3's `Profile` records remain the source of map colors and placeholder flag

@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-19 — M4 global-population foundation
+
+- Generated one culture-and-faith-checked base pop at each of the 13,552
+  controlled locations. The resulting AD 1 setup totals exactly 230,000
+  thousand people: Rome 47,500, Han 57,671, Parthia 9,000, India 40,000, and
+  every other section 12.4 macro sits within its prescribed range.
+- The generator scales the installed game's population density only as a
+  geographic weighting template; targets and regional allocations remain
+  source-labelled CSV inputs. `popcheck` independently tokenizes the generated
+  script and validates every location's ownership, culture, faith, macro, and
+  total instead of trusting the generator's calculation.
+- `make validate`, standard `make smoke`, and explicit normal plus
+  `-leavepops` menu launches all passed with zero new `error.log` line types.
+
+Next: replace the current broad regional culture scaffold with the location
+remap/dynamic-name layer, while retaining this checked population ledger.
+
 ## 2026-07-19 — M4 country-profile binding
 
 - Replaced all temporary vanilla culture/religion country-definition references

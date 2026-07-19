@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-19 — AD 1 population distribution scaffold
+
+`docs/m4/population_targets.csv` implements every numeric range in plan §12.4,
+including the AD 2 Han census of 57,671 thousand. Its 34 regional allocations
+sum exactly to the plan's 230,000-thousand world target. Where the plan gives
+only a macro range, the regional split is a transparent working allocation,
+not a claimed census: especially the 29.5 million residual Mediterranean,
+West Asian, and Oceanian bucket and the distribution inside broad SoP frames.
+The installed later-period pop density provides location weighting only; it is
+not used as historical evidence. Sources weighed: P8.1–P8.10; P12.4; BHR;
+CAH-XI. [contested]
+
 ## 2026-07-19 — M4 state-profile overrides
 
 The 45 `docs/m4/tag_profiles.csv` overrides use the roster's relevant P8
