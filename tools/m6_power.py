@@ -498,6 +498,26 @@ antq_indian_ganasangha = {
 	years = 2
 }
 
+antq_indo_scythian_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.05
+		land_morale_modifier = 0.025
+	}
+	years = 2
+}
+
+antq_indo_greek_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_burghers_estate_power = 0.05
+		country_cabinet_efficiency = 0.025
+	}
+	years = 2
+}
+
 antq_parthian_king_of_kings = {
 	major = yes
 	government = monarchy
@@ -625,6 +645,10 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_lankan_kingdom_desc", "A Lankan royal court whose monastic and irrigation patronage is a central source of authority."),
         ("antq_indian_ganasangha", "Indian Ganasangha"),
         ("antq_indian_ganasangha_desc", "A clan-based republican council represented through the installed republic government type."),
+        ("antq_indo_scythian_kingship", "Indo-Scythian Kingship"),
+        ("antq_indo_scythian_kingship_desc", "A politically composite northern Indian monarchy supported by regional military elites."),
+        ("antq_indo_greek_kingship", "Late Indo-Greek Kingship"),
+        ("antq_indo_greek_kingship_desc", "The final eastern-Punjab Indo-Greek court, supported by a compact with its urban elites."),
         ("antq_parthian_king_of_kings", "Parthian King of Kings"),
         ("antq_parthian_king_of_kings_desc", "An Arsacid monarchy balancing the royal court with powerful Iranian noble houses."),
         ("antq_client_monarchy", "Client Monarchy"),
