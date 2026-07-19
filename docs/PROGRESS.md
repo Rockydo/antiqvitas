@@ -1657,6 +1657,21 @@ separate Han runtime-regency blocker.
 
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
+
+## 2026-07-19 - M6 Augustan consular Fasti roster
+
+- Added 36 named ordinary or July-suffect consuls from the AD 2-13
+  *Fasti Capitolini* entries, while retaining the separate AD 1 records and
+  avoiding existing Roman identities already covered by independent evidence.
+- Every new record is court context only: no January AD 1 office, dated term,
+  residence, marriage, parent graph, estate, ability, biography date, or later
+  career is generated.
+- `make validate` and the real-game `make smoke` are green, with the game
+  reaching the menu and zero new `error.log` lines. The M6 roster is now 181
+  source-led characters and 116 dynasties.
+
+Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
+separate Han runtime-regency blocker.
 ## 2026-07-19 - M6 Adiabenian family-context slice
 
 - Added Helena, Izates, and the elder Monobazus to the source-led Adiabenian
