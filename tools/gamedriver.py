@@ -195,12 +195,56 @@ def activate_window():
         raise RuntimeError("EU5 window not found")
     if window.isMinimized:
         window.restore()
+    user32 = ctypes.windll.user32
+    # Screenshot capture reads desktop pixels rather than a private window
+    # buffer. Keep the game visibly above unrelated applications and refuse to
+    # capture if Windows will not grant foreground ownership; this avoids
+    # accidentally recording material outside the game surface.
+    hwnd_topmost = -1
+    swp_showwindow = 0x0040
+    swp_noownerzorder = 0x0200
+    user32.SetWindowPos(
+        window._hWnd,
+        hwnd_topmost,
+        0,
+        0,
+        1280,
+        720,
+        swp_showwindow | swp_noownerzorder,
+    )
     try:
         window.activate()
     except Exception:
-        ctypes.windll.user32.SetForegroundWindow(window._hWnd)
-    time.sleep(1)
-    return window
+        user32.SetForegroundWindow(window._hWnd)
+    foreground = user32.GetForegroundWindow()
+    kernel32 = ctypes.windll.kernel32
+    current_thread = kernel32.GetCurrentThreadId()
+    foreground_thread = user32.GetWindowThreadProcessId(foreground, None) if foreground else 0
+    game_thread = user32.GetWindowThreadProcessId(window._hWnd, None)
+    attached_foreground = bool(foreground_thread) and bool(
+        user32.AttachThreadInput(foreground_thread, current_thread, True)
+    )
+    attached_game = bool(game_thread) and bool(
+        user32.AttachThreadInput(game_thread, current_thread, True)
+    )
+    try:
+        user32.AllowSetForegroundWindow(-1)
+        user32.BringWindowToTop(window._hWnd)
+        user32.SetActiveWindow(window._hWnd)
+        user32.SetFocus(window._hWnd)
+        user32.SetForegroundWindow(window._hWnd)
+    finally:
+        if attached_game:
+            user32.AttachThreadInput(game_thread, current_thread, False)
+        if attached_foreground:
+            user32.AttachThreadInput(foreground_thread, current_thread, False)
+    for _ in range(4):
+        user32.BringWindowToTop(window._hWnd)
+        user32.SetForegroundWindow(window._hWnd)
+        time.sleep(0.4)
+        if user32.GetForegroundWindow() == window._hWnd:
+            return window
+    raise RuntimeError("EU5 could not be foregrounded; refusing desktop-pixel capture")
 
 
 def focus_game():
