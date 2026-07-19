@@ -52,6 +52,10 @@ def expected_bom(path: Path) -> bool | None:
     if (
         "/in_game/common/age/" in f"/{relative}"
         or "/in_game/common/advances/" in f"/{relative}"
+        or "/in_game/common/culture_groups/" in f"/{relative}"
+        or "/in_game/common/cultures/" in f"/{relative}"
+        or "/in_game/common/religion_groups/" in f"/{relative}"
+        or "/in_game/common/religions/" in f"/{relative}"
         or "/loading_screen/common/defines/" in f"/{relative}"
     ):
         return True
