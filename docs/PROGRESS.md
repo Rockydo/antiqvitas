@@ -1121,3 +1121,16 @@ placed from a source.
 
 Next: continue M6's independent source-led government, estate, law, roster,
 and regnal-history work rather than claiming a silent runtime fallback passed.
+
+## 2026-07-19 - M6 Julio-Claudian court slice
+
+- Added Lucius Caesar and Germanicus as sourced Roman court figures. Gaius
+  remains the sole engine heir; the records add neither a second heir slot nor
+  an invented AD 1 civil or military office.
+- Tacitus supports Lucius's Caesarian dynastic standing, while the British
+  Museum supplies Germanicus's life-span and Julio-Claudian relationship. Both
+  source routes and the deliberately withheld later careers are documented in
+  [the Roman court note](m6/ROMAN_COURT_AD1.md).
+
+Next: continue filling evidenced Tier-1/2 court rosters while the Han runtime
+regency blocker remains isolated and M6's broader mechanics work continues.

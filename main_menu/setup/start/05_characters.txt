@@ -103,6 +103,14 @@ character_db = {
 		tag = XAA
 	}
 
+	antq_lucius_caesar = {
+		first_name = { name = antq_lucius_caesar }
+		culture = antq_latin
+		religion = antq_religio_romana
+		dynasty = antq_julio_claudian_dynasty
+		tag = XAA
+	}
+
 	antq_tiberius = {
 		first_name = { name = antq_tiberius }
 		culture = antq_latin
@@ -110,6 +118,14 @@ character_db = {
 		birth_date = -42.11.16
 		death_date = 37.3.16
 		birth = rome
+		dynasty = antq_julio_claudian_dynasty
+		tag = XAA
+	}
+
+	antq_germanicus = {
+		first_name = { name = antq_germanicus }
+		culture = antq_latin
+		religion = antq_religio_romana
 		dynasty = antq_julio_claudian_dynasty
 		tag = XAA
 	}

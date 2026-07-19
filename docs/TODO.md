@@ -101,6 +101,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add Daeso's traditionally dated Buyeo court while explicitly retaining the Northern/Eastern Buyeo continuity question as contested.
 - [x] Add Aspurgus as a contested Bosporan court claimant without resolving the plan's Dynamis start anchor.
 - [x] Run and record two evidence-based Han minority-regency runtime probes; defer the silent generated-ruler fallback in `BLOCKERS.md`.
+- [x] Add Lucius Caesar and Germanicus to the source-led Julio-Claudian court without inventing an AD 1 office command or a second heir slot.
 - [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories.
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 
