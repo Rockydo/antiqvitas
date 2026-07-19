@@ -3349,7 +3349,8 @@ countries = {
 			government = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
-				ruler = random
+				ruler = antq_monobazus_i
+				ruler_term = { character = antq_monobazus_i start_date = 1.1.1 }
 				reforms = {
 					antq_parthian_subkingdom
 				}

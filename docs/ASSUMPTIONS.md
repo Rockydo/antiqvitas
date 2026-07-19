@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 - Monobazus I is a qualified Adiabenian AD 1 ruler
+
+Marciak's numismatic reconstruction describes Monobazus I's c. 5 BCE-AD 30
+reign as most likely, and Iranica independently places a ruler Monobazus in
+Adiabene during the first decades of the Christian era. Together they support
+his AD 1 placement but not exact endpoints, family reconstruction, conversion,
+or a day-level accession. The installed ruler and campaign-only term are
+therefore contested, with all of those later claims omitted. Sources weighed:
+P8.2; `IRAN-ADI`; `CAM-ADI` in `docs/world_1ad/SOURCES.md`. [contested]
+
 ## 2026-07-19 - Huan Tan is a qualified Han scholarly court figure
 
 Pokora's academic study identifies Huan Tan as a scholar-official who held a
