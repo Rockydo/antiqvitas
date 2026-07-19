@@ -21,6 +21,16 @@ antq_han_imperial_bureaucracy = {
 	years = 2
 }
 
+antq_lankan_kingdom = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_crown_estate_power = 0.05
+		country_cabinet_efficiency = 0.025
+	}
+	years = 2
+}
+
 antq_parthian_king_of_kings = {
 	major = yes
 	government = monarchy
