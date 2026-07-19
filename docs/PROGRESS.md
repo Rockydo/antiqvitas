@@ -1160,3 +1160,16 @@ successions into unsupported start-date claims.
 
 Next: continue M6 content expansion while retaining Parthia as completed
 runtime evidence and Han as the explicit failed gate.
+
+## 2026-07-19 - M6 Han Wang-clan court correction
+
+- Corrected Grand Empress Dowager Wang and Wang Mang from the imperial House
+  of Liu to a dedicated Wang-clan engine label. This preserves the documented
+  consort-kin distinction without fabricating a full genealogy.
+- Added Wang Shun as a deliberately narrow contested court figure from the
+  *Han Shu* source route: his record assigns no dates, office mechanic,
+  military statistics, or regency role. The source qualification and limits
+  are recorded in [the Han Wang court note](m6/HAN_WANG_COURT_AD1.md).
+
+Next: continue M6 roster breadth and mechanics work while the independent Han
+minority-regency runtime blocker remains open.

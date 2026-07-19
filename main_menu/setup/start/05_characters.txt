@@ -137,7 +137,7 @@ character_db = {
 		female = yes
 		birth_date = -70.1.1
 		death_date = 13.2.15
-		dynasty = antq_han_liu_dynasty
+		dynasty = antq_wang_clan
 		tag = XAR
 	}
 
@@ -157,7 +157,15 @@ character_db = {
 		religion = antq_chinese_state_cult
 		birth_date = -45.1.1
 		death_date = 23.10.6
-		dynasty = antq_han_liu_dynasty
+		dynasty = antq_wang_clan
+		tag = XAR
+	}
+
+	antq_wang_shun = {
+		first_name = { name = antq_wang_shun }
+		culture = antq_han
+		religion = antq_chinese_state_cult
+		dynasty = antq_wang_clan
 		tag = XAR
 	}
 
