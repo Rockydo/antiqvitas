@@ -1,5 +1,30 @@
 # Blockers
 
+## 2026-07-19 - M6 Elymais and Gordyene AD 1 courts lack defensible named current rulers
+
+Status: **deferred; M6 continues with other court and mechanics work.**
+
+The sourced M3 roster correctly retains both Elymais and Gordyene as Parthian
+subordinate polities, but the available evidence does not support assigning a
+named current ruler to either on 1 January AD 1. A generated court would turn
+an evidence gap into false precision.
+
+Tried:
+
+1. Rechecked the project's P8.2/OCD/Pleiades roster route and M3 profiles. It
+   supports the two polities and their map anchors, not AD 1 officeholders.
+2. Searched specialist reference material. *Encyclopaedia Iranica*'s
+   [Elymais entry](https://www.iranicaonline.org/articles/elymais/) establishes
+   the polity's longer semi-independent history but leaves a gap between the
+   late-first-century-BCE evidence and the AD 36 political episode. A targeted
+   Gordyene search produced no scholarly source placing a named ruler at the
+   campaign boundary.
+
+Recovery: retain the sourced polity profiles and add named courts only on a
+source that places an individual in office at the AD 1 boundary. Later regional
+figures can enter through dated M10 content. The tree is green after the
+independent Persis court slice.
+
 ## 2026-07-19 - M6 Adiabenian AD 1 court cannot be named without false precision
 
 Status: **deferred; M6 continues with other court and mechanics work.**
