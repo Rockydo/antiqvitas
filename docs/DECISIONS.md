@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-19 - M6 enforces Tier-1/2 government coverage
+
+`tools/m6_power.py` now reads the reviewed AD 1 polity roster and fails if a
+Tier-1 or Tier-2 tag has no M6 government profile. This turns the 107-of-107
+coverage result into a maintained build invariant, while deliberately not
+equating a generated anonymous ruler with completion of the separate named
+character, dynasty, or regnal-history requirements.
+
 ## 2026-07-19 - M6 distinguishes advanced chiefdoms and settled town clusters
 
 Plan P8.5 explicitly differentiates emerging Aksum from Djenné-Djenno's

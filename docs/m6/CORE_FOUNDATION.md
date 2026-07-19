@@ -141,6 +141,17 @@ two specialised adapters distinguish polity/settlement form only; neither
 invents a ruler or constitutional detail. Sources: P8.4-P8.5; P13; CAH-XI;
 PER; PLE.
 
+## Complete Tier-1/2 government-profile coverage
+
+The final profile pass adds anonymous tribal governments for Dacian, Getic,
+Bastarnae, Iazyges, Roxolani, Aorsi, Siraces, and Alan frames; and anonymous
+Regional Kingship profiles for Kangju, Wusun, Dayuan, Sogdian city-states, and
+Khwarazm. `tools/m6_power.py` now validates a profile for every Tier-1 and
+Tier-2 `polities.csv` tag: 107 of 107. This is complete *government-profile*
+coverage, not a claim that the much larger named-character, dynasty, regnal,
+estate, and history requirements of M6 are complete. Sources: P8.7-P8.8; P13;
+CAH-XI; CHG; PLE.
+
 ## Coinage standards
 
 Rome's socioeconomic law uses the installed gold-and-silver minting contract
