@@ -1295,6 +1295,19 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-19 - M6 Han accession-court slice
+
+- Added Wang Yun, Liu Bu'e, Ren Cen, Kong Yong, and Shi Xu from the first
+  Yuan Shi-year *Han Shu* annal's accession-credited official group.
+- Each is a contested, court-only figure. The source does not establish a
+  retained 1 January office, precise residence, ability, regency role, or
+  same-surname kinship, so M6 scripts none of those claims. The source and
+  limits are recorded in [the Han court note](m6/HAN_COURT_AD1.md) and
+  `ASSUMPTIONS.md`.
+
+Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
+separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Roman government-panel probe
 
 - A fresh enabled-mod AD 1 run selected ROM and opened the live Government
