@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-19 - Strato III remains a contested Indo-Greek court figure
+
+The University of Queensland collection describes a coin dated broadly from
+25 BCE to AD 10 as issued by Strato II or his son and eventual co-ruler Strato
+III. That establishes the named relationship and a coin horizon spanning AD 1,
+but does not date the joint issue or prove an exact 1 January constitutional
+position. Strato III is therefore a contested court record only, not a ruler,
+heir, officeholder, or bearer of an accession/biography date; no relationship
+other than the source's father-son statement is scripted. Sources weighed:
+P8.4; `IRAN-IGR`; `UQ-STR` in `docs/world_1ad/SOURCES.md`. [contested]
+
 ## 2026-07-19 - Cotys is a bounded Odrysian court figure
 
 Tacitus explicitly names Cotys as Rhoemetalces I's son when narrating the
