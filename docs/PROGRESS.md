@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-19 - M6 Cappadocian Glaphyra court record
+
+- Added Glaphyra as King Archelaus of Cappadocia's source-qualified daughter
+  and a bounded living court figure.
+- Josephus's later tenth-year episode establishes survival beyond AD 1 only;
+  no marriage, office, date, residence, succession, or further genealogy is
+  imported.
+
+Next: regenerate, validate, smoke-test, then continue source-led Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Nabataean Malichus court record
 
 - Added Malichus II as Aretas IV's contested, source-qualified court figure:
