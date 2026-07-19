@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-19 — M3 roster foundation
+
+- Created the machine-validated initial AD 1 roster: 133 country, subject, and
+  SoP entries across every region named in the design bible, with source and
+  confidence fields rather than invented certainty.
+- Added `tools/world_roster.py` to the required validation target. It rejects
+  duplicate/invalid tags and invalid mapped-capital keys while exposing mapping
+  coverage for the next M3 batch.
+- Seeded `docs/SURFACE_AREA.md` and logged contested roster decisions with
+  sources in ASSUMPTIONS.
+
+Next: map every roster capital to local EU5 locations, generate country
+definitions/localization, then construct the exact 25-file M3 setup mirror.
+
 ## 2026-07-19
 
 - Read the complete master plan and reread Part I for this session.
