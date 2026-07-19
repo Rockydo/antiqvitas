@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Markets are generated from explicit ancient hub records
+
+The M5 market manager is generated from `docs/m5/markets.csv`, not inferred
+from country capitals or a later-period vanilla market list. The generator
+rejects duplicate hubs, unknown locations, missing citations, and invalid
+confidence labels. This preserves an auditable distinction between a historical
+trade hub and the installed location key used to represent it.
+
 ## 2026-07-19 — Installed culture templates are a geographic index only
 
 The M4 audit records the 680 installed template cultures present in controlled

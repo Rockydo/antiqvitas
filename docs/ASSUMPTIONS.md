@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 — Market geographic proxies
+
+Several plan-specified AD 1 hubs have no exact installed location key. Baghdad
+stands for Seleucia-Ctesiphon, Tunis for Carthago, Taman for Panticapaeum, Homs
+for Palmyra, Shendi for Meroe, Massawa for Adulis, Al Mukha for Muza, Khambat
+for Barygaza, and regional map keys for several Southeast Asian and American
+hubs. Each is labelled `contested` in `docs/m5/markets.csv`; it is a gameplay
+market anchor, not a claim that the ancient city occupied the map key exactly.
+Sources weighed: P8.1–P8.10; P12.2; Pleiades; *Periplus*; CAH-XI. [contested]
+
 ## 2026-07-19 — No automatic re-dating of installed culture keys
 
 The installed location-template culture field is retained only as a geographic
