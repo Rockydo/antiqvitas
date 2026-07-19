@@ -125,6 +125,15 @@ antq_tribal_elder_council = {
 	}
 }
 
+antq_brittonic_druidic_council = {
+	estate = clergy_estate
+	country_modifier = {
+		global_clergy_estate_power = 0.10
+		clergy_estate_target_satisfaction = small_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.025
+	}
+}
+
 antq_parthian_subking_autonomy = {
 	estate = nobles_estate
 	country_modifier = {

@@ -120,6 +120,16 @@ enabled-mod smoke are green. This preserves a visible political actor while
 labelling the estate bucket as a narrow technical adapter, not a Christian or
 medieval social classification.
 
+## 2026-07-19 - Brittonic druidic authority uses the installed clergy estate
+
+The installed clergy-estate privilege contract is already live for the Second
+Temple adapter. M6 reuses that verified surface for a separate, source-labelled
+Brittonic druidic-authority privilege rather than creating an unproven estate.
+Its small mechanical effect is paired with the existing kin-based tribal elder
+council, so it represents a distinct religious actor without treating it as a
+single British constitution. The profile scope and historical qualification are
+recorded in `docs/m6/BRITTONIC_DRUIDIC_AD1.md`.
+
 ## 2026-07-19 - Near Eastern courts use explicit regional adapters
 
 EU5 provides no historical sub-kingdom or border-court government type. M6
