@@ -32,6 +32,7 @@ after `make full` and its autonomous driver report are green.
 
 - [x] Create and validate the sourced initial AD 1 polity roster in `docs/world_1ad/`.
 - [x] Generate collision-safe country definitions, mirrored names, and M3 placeholder CoAs for every roster polity.
+- [x] Add a checked capital-location candidate report and record direct local-map matches.
 - [ ] Research and create tags/world rosters, country definitions, flags, ownership, subjects, SoPs, and capitals.
 - [ ] Mirror-replace every vanilla setup input and purge all 1337 countries.
 - [ ] Run milestone gate and tag `M3-done`.
