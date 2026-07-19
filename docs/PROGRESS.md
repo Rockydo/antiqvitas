@@ -1668,3 +1668,18 @@ separate Han runtime-regency blocker.
   new records receives an office, command, marriage, residence, ability,
   precise biography date, genealogy, trial, or death mechanic.
 - This brings the source-led M6 roster to 133 characters and 79 dynasties.
+
+## 2026-07-19 - M6 peripheral-court evidence slice
+
+- Added six bounded court records: Sampsigeramus II in Emesa; Yu and
+  Yituzhiyashi in the Xiongnu succession context; and Segestes, Inguiomerus,
+  and Segimerus for the Cherusci.
+- Rejected a superficially plausible Commagenean Iotapa record during final
+  source review because the open academic passage did not securely identify the
+  intended AD 1 individual. No weak genealogy was committed.
+- `make validate` and `make smoke` are green; the real game reached the menu
+  with zero new error-log lines. The source-led M6 roster is now 139 characters
+  and 79 dynasties.
+
+Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
+separate Han runtime-regency blocker.
