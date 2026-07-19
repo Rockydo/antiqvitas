@@ -102,6 +102,11 @@ than a reconstruction of a common tribal constitution. Arminius is retained
 as a sourced Roman auxiliary court figure; he is not made an AD 1 Cheruscan
 king. Sources: P8.7; P13; CAH-XI.
 
+The same bounded anonymous profile now covers the Trinovantes, Iceni,
+Brigantes, Atrebates, Silures, Ordovices, Dumnonii, Caledonian societies, and
+Ulaid. Their later named figures and Roman-conquest arcs are dated M10 content,
+not a warrant for inventing a start-date court.
+
 ## Coinage standards
 
 Rome's socioeconomic law uses the installed gold-and-silver minting contract
