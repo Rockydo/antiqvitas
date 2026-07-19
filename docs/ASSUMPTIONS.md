@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-19 — Taxila market represented at Attock
+
+The Taxila archaeological complex included Sirsukh, a first-century AD city,
+and occupied a strategic branch of the Silk Road; it is therefore an
+appropriate AD 1 market hub. `attock` is the installed-map proxy rather than a
+claim that the modern-place key is the ancient settlement itself. Sources
+weighed: P12.2; P8.4; UNESCO Taxila
+(https://whc.unesco.org/en/list/139) and UNESCO on the Uttarapatha connection
+of Taxila, Mathura, and Pataliputra
+(https://whc.unesco.org/en/tentativelists/5492/). [contested]
+
 ## 2026-07-19 — Civic and hydraulic infrastructure proxies
 
 Rome's Circus Maximus, Alexandria's Roman-period maritime role, the
