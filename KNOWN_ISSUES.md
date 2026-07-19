@@ -1,8 +1,9 @@
 # Known Issues
 
-## Deferred M2 year-one runtime cleanliness
+## M3 political map in progress
 
-The calendar generator has been proven in the UI, including a real save/reload,
-but its generated files are intentionally not enabled until M3 replaces the
-vanilla 1337 setup snapshot. That snapshot creates 868 ruler-term validation
-errors at an AD 1 start. See `BLOCKERS.md` for reproduction and recovery.
+The active M3 mirror deliberately removes every vanilla 1337 start-manager
+entry before it adds AD 1 countries and ownership. The current M2 verification
+therefore shows an empty political map at AD 1. This is a visible development
+state, not an error-log issue; the next M3 batches populate it from the sourced
+roster and verified capital mapping.

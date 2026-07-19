@@ -211,21 +211,39 @@ def m2_localization(language: str) -> str:
     return "\n".join(lines) + "\n"
 
 
-def write_m2(root: Path, timeline: dict[str, AntqDate], auc: bool = False) -> None:
+def m2_outputs(root: Path, timeline: dict[str, AntqDate], auc: bool = False) -> dict[Path, str]:
     outputs = {
         root / "loading_screen/common/defines/antq_dates.txt": m2_defines(timeline, auc),
         root / "in_game/common/age/00_default.txt": m2_ages(timeline, auc),
         root / "in_game/common/advances/antq_age_scaffolds.txt": m2_advances(),
     }
+    for language in ("english", *M2_MIRROR_LANGUAGES):
+        path = root / f"main_menu/localization/{language}/antq_m2_ages_l_{language}.yml"
+        outputs[path] = m2_localization(language)
+    return outputs
+
+
+def write_m2(root: Path, timeline: dict[str, AntqDate], auc: bool = False) -> None:
+    outputs = m2_outputs(root, timeline, auc)
     for path, content in outputs.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content, encoding="utf-8-sig", newline="\n")
         print(f"wrote {path.relative_to(root)}")
-    for language in ("english", *M2_MIRROR_LANGUAGES):
-        path = root / f"main_menu/localization/{language}/antq_m2_ages_l_{language}.yml"
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(m2_localization(language), encoding="utf-8-sig", newline="\n")
-        print(f"wrote {path.relative_to(root)}")
+
+
+def check_m2(root: Path, timeline: dict[str, AntqDate], auc: bool = False) -> bool:
+    failures: list[str] = []
+    for path, expected in m2_outputs(root, timeline, auc).items():
+        if not path.is_file():
+            failures.append(f"missing {path.relative_to(root)}")
+        elif path.read_text(encoding="utf-8-sig") != expected:
+            failures.append(f"stale {path.relative_to(root)}")
+    if failures:
+        print("dates: M2 FAIL")
+        print("\n".join(f"  - {failure}" for failure in failures))
+        return False
+    print("dates: M2 PASS (calendar, five ages, scaffolds, and mirrored localization)")
+    return True
 
 
 def main() -> int:
@@ -238,10 +256,19 @@ def main() -> int:
         action="store_true",
         help="generate M2 date, age, and placeholder-advance scripts from docs/timeline.csv",
     )
+    parser.add_argument(
+        "--check-m2",
+        action="store_true",
+        help="verify M2 generated scripts match docs/timeline.csv",
+    )
     args = parser.parse_args()
     timeline_path = args.timeline or ROOT / "docs/timeline.csv"
+    if args.write_m2 and args.check_m2:
+        parser.error("--write-m2 and --check-m2 are mutually exclusive")
     if args.write_m2:
         write_m2(ROOT, indexed_timeline(timeline_path), args.auc)
+    elif args.check_m2:
+        return 0 if check_m2(ROOT, indexed_timeline(timeline_path), args.auc) else 1
     elif args.timeline:
         rows = load_timeline(args.timeline)
         print(f"validated {len(rows)} timeline rows")

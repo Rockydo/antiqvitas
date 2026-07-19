@@ -24,9 +24,9 @@ after `make full` and its autonomous driver report are green.
 
 ## M2 — Time itself
 
-- [ ] Enable the generated 1.1.1–476.9.4 dates through `tools/dates.py` after M3's setup mirror removes vanilla ruler histories.
-- [ ] Enable the generated five-age skeletons and placeholder advances with that calendar layer.
-- [ ] Verify year-one UI and save reload; run milestone gate and tag `M2-done`.
+- [x] Enable the generated 1.1.1–476.9.4 dates through `tools/dates.py` after M3's setup mirror removes vanilla ruler histories.
+- [x] Enable the generated five-age skeletons and placeholder advances with that calendar layer.
+- [x] Verify year-one UI and save reload; run milestone gate and tag `M2-done`.
 
 ## M3 — Political map
 

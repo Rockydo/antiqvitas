@@ -2,7 +2,7 @@
 
 Date: 2026-07-19
 Game: EU5 1.3.1.1 (Pavia), checksum 3794
-Result: **calendar/save-reload PASS; clean-runtime closure deferred to M3**
+Result: **superseded by the clean M2 closure in `M2_REPORT.md`**
 
 ## What was proven
 
