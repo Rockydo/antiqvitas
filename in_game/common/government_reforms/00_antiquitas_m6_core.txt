@@ -31,6 +31,16 @@ antq_lankan_kingdom = {
 	years = 2
 }
 
+antq_indian_ganasangha = {
+	major = yes
+	government = republic
+	country_modifier = {
+		monthly_republican_tradition = 0.05
+		global_nobles_estate_power = 0.05
+	}
+	years = 2
+}
+
 antq_parthian_king_of_kings = {
 	major = yes
 	government = monarchy
