@@ -42,7 +42,7 @@ supplies the Roman client ring, P8.2 the Arsacid sub-kings, and P8.3 the Han
 Western Regions. The M3 engine-contract label is technical scaffolding and is
 not used as a historical source claim.
 
-All 133 roster rows now have a reviewed local-map capital anchor. For an
+All 157 roster rows now have a reviewed local-map capital anchor. For an
 attested city, the anchor is a direct local match or a conservative geometry
 proxy with coordinate evidence; for a society of peoples or broad regional
 polity, it is an explicitly documented geographic seed. Capital anchoring is
@@ -71,3 +71,12 @@ The American SoP expansion is grounded in P8.10 and CAH-XI. Plains/Coastal and
 Pacific Coast society anchors do not claim an AD 1 state capital. A broad row
 is rejected when the installed start data has no ownable location surface,
 preserving the distinction between a reviewed geography anchor and territory.
+
+`ownership_residual_areas.csv` documents the final named society-of-peoples
+fallbacks needed to account for the installed ownable surface after all exact
+and source-labelled area rows resolve. The resolver applies them only to still
+unclaimed locations, so they cannot overwrite a reviewed polity. These broad
+frames are P8.1-P8.10/CAH-XI historical proxies, marked `contested`, and are
+not assertions of formal state borders. `intentional_empty_areas.csv` records
+the plan-required Iceland, Madagascar, and eastern-Polynesian exceptions; the
+coverage validator permits no other unassigned ownable location.
