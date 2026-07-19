@@ -692,3 +692,12 @@ dynasty. Vonones therefore uses the Roman start context while retaining his
 Parthian culture, Arsacid religion, and Arsacid dynasty. This narrow mapping
 records his documented residence in Rome without pre-scripting the later
 Parthian or Armenian reigns that belong to M10.
+
+## 2026-07-19 - Thin court identities do not invent kinship
+
+When a directly attested court figure needs an engine dynasty but the source
+route does not establish a usable genealogy, M6 assigns a person-specific
+court-identity label anchored at the current court. Shared surnames may share a
+label only when the note says that it is not a kinship assertion. This keeps
+the character database structurally valid without folding unrelated officials
+into a fabricated royal house.

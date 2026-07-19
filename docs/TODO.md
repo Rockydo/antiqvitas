@@ -108,6 +108,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the Rome-hosted Arsacid prince Vonones without anticipating his later Parthian or Armenian reigns.
 - [x] Add Vonones's three Rome-hosted Arsacid brothers without fabricating offices or succession claims.
 - [x] Add Kong Guang as a bounded senior Han court figure without turning a source office into an unsupported engine role.
+- [x] Add the named Han regency-circle officials Zhen Feng, Zhen Han, Ping Yan, and Liu Xin as court-only records.
 - [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories.
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 
