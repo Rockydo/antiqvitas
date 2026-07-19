@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-19 - Pharasmanes I is a campaign-boundary Iberian court record
+
+The plan identifies Pharasmanes I as the Caucasian Iberian ruler acceding about
+AD 1. The early Iberian sequence is reconstructed from later evidence and its
+precise accession chronology is disputed, so the start data records him as the
+current ruler without a date of birth, death, accession, or successor. The
+Pharnavazid label is likewise a conservative continuity handle rather than a
+claim of a complete genealogy. Sources weighed: P8.2; OCD; Pleiades; Cyril
+Toumanoff's [early-Iberian chronology](https://www.attalus.org/armenian/Toum_1969_Early_Iberian_Kings.pdf).
+[contested for date and dynastic reconstruction; secure for the plan's named
+AD 1 ruler]
+
 ## 2026-07-19 - Armenian AD 1 is a deliberately open succession boundary
 
 Tigranes IV and Erato are represented as the current Armenian court at the

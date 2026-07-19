@@ -79,3 +79,12 @@ source route. The public scholarly cross-checks for the eastern courts are
 [Armenia and Iran](https://www.iranicaonline.org/articles/armenia-ii/). The
 Tigranes IV–Erato succession falls within AD 1, so it remains contested and
 open-ended: no death date, successor, or intra-year tag change is pre-scripted.
+
+## Caucasian Iberia
+
+Pharasmanes I now replaces Caucasian Iberia's random ruler through the existing
+Buffer Kingdom adapter. The plan places his accession at approximately AD 1;
+the source ledger follows Toumanoff's conventional chronology but marks both
+the dynastic label and the exact accession timing contested. The engine record
+therefore begins at the campaign boundary and scripts neither an accession day
+nor a successor.

@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-19 - M6 Caucasian Iberia court
+
+- Replaced Caucasian Iberia's random ruler with Pharasmanes I, a source-labelled
+  current term and conservative Pharnavazid continuity record. The plan's
+  approximately AD 1 accession is explicitly contested, so no day-level event
+  or successor is invented.
+- The profile reuses the already checked Buffer Kingdom adapter. `make validate`
+  reports 22 dynasties, 34 characters, 22 government profiles, and 22 ruler
+  terms; enabled-mod `make smoke` reached a rendered menu with zero new errors.
+
+Next: continue remaining Tier-1/2 court coverage and source-qualified mechanics
+while deferring the exact Caucasian succession path to M10.
+
 ## 2026-07-19 - M6 Near Eastern court roster
 
 - Replaced the random-ruler profiles of Emesa, Osroene, Media Atropatene, and

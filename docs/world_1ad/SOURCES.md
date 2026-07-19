@@ -30,6 +30,7 @@ a row reaches `implemented` status.
   the 2 BCE-AD 4 Phraates V reign span and Musa co-rule.
 - `IRAN-ATR`: *Encyclopaedia Iranica*, [Azerbaijan iii. Pre-Islamic History](https://www.iranicaonline.org/articles/azerbaijan-iii/), used for Ariobarzanes II's Media Atropatene appointment and regional context.
 - `IRAN-ARM`: *Encyclopaedia Iranica*, [Armenia and Iran ii. The Pre-Islamic Period](https://www.iranicaonline.org/articles/armenia-ii/), used for the disputed late Artaxiad/Atropatenian succession context.
+- `TOUM-IBR`: Cyril Toumanoff, [Chronology of the Early Kings of Iberia](https://www.attalus.org/armenian/Toum_1969_Early_Iberian_Kings.pdf), used for the conventional but disputed Pharasmanes I accession at the AD 1 boundary.
 
 Rows marked `contested` have a corresponding entry in `docs/ASSUMPTIONS.md`.
 `TBD` map capitals are historical roster records awaiting a verified mapping to
