@@ -3,7 +3,7 @@
 ## M3 political map in progress
 
 The active M3 mirror removes every vanilla 1337 start-manager entry and now
-loads all 133 AD 1 roster polities with capital-control anchors, 7,522 resolved
+loads all 136 AD 1 roster polities with capital-control anchors, 8,084 resolved
 locations, and 25 technical dependency records. This is not yet a finished
 political map: most non-imperial anchors still need sourced territorial extents,
 and SoPs remain temporary country-shaped map scaffolding until the M4 pop pass.

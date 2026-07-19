@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 — African SoP regional coverage
+
+West African iron-age societies, Bantu-expansion societies, and Barbaria/Horn
+societies are separate SoP families because the design bible explicitly treats
+them as non-state political landscapes. Kumasi, Mombasa, and Mogadishu are map
+anchors, not asserted AD 1 capitals. Their area frames, and the expanded
+Mauretanian/Garamantian/Blemmyan/Aksumite rows, remain `contested` until the M4
+population and culture layers can distinguish settlement clusters from states.
+Sources weighed: P8.5; CAH-XI; *Periplus of the Erythraean Sea*. †
+
 ## 2026-07-19 — Han-world regional extent proxies
 
 The Han-world pass assigns only frames tied directly to the plan's AD 1 roster:
