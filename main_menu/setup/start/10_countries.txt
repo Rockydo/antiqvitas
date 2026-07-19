@@ -3147,7 +3147,23 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_parthian_subkingdom
+				}
+				privilege = {
+					antq_parthian_subking_autonomy
+				}
+				laws = {
+					antq_parthian_subking_law = antq_regional_court_compact
+				}
+				centralization_vs_decentralization = -10
+				aristocracy_vs_plutocracy = -35
+				capital_economy_vs_traditional_economy = 25
+			}
 			capital = shush
 		}
 
@@ -3327,7 +3343,23 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_parthian_subkingdom
+				}
+				privilege = {
+					antq_parthian_subking_autonomy
+				}
+				laws = {
+					antq_parthian_subking_law = antq_regional_court_compact
+				}
+				centralization_vs_decentralization = -15
+				aristocracy_vs_plutocracy = -35
+				capital_economy_vs_traditional_economy = 25
+			}
 			capital = erbil
 		}
 
@@ -3364,7 +3396,23 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_parthian_subkingdom
+				}
+				privilege = {
+					antq_parthian_subking_autonomy
+				}
+				laws = {
+					antq_parthian_subking_law = antq_regional_court_compact
+				}
+				centralization_vs_decentralization = -20
+				aristocracy_vs_plutocracy = -35
+				capital_economy_vs_traditional_economy = 20
+			}
 			capital = eruh
 		}
 
@@ -3427,7 +3475,23 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_parthian_subkingdom
+				}
+				privilege = {
+					antq_parthian_subking_autonomy
+				}
+				laws = {
+					antq_parthian_subking_law = antq_regional_court_compact
+				}
+				centralization_vs_decentralization = -20
+				aristocracy_vs_plutocracy = -40
+				capital_economy_vs_traditional_economy = 30
+			}
 			capital = zaranj
 		}
 
@@ -3437,7 +3501,23 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_parthian_subkingdom
+				}
+				privilege = {
+					antq_parthian_subking_autonomy
+				}
+				laws = {
+					antq_parthian_subking_law = antq_regional_court_compact
+				}
+				centralization_vs_decentralization = -20
+				aristocracy_vs_plutocracy = -40
+				capital_economy_vs_traditional_economy = 30
+			}
 			capital = merv
 		}
 
@@ -3571,7 +3651,23 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_buffer_kingdom
+				}
+				privilege = {
+					antq_border_court_autonomy
+				}
+				laws = {
+					antq_buffer_kingdom_law = antq_balanced_allegiance
+				}
+				centralization_vs_decentralization = 5
+				aristocracy_vs_plutocracy = -25
+				capital_economy_vs_traditional_economy = 30
+			}
 			capital = poti_caucasus
 		}
 
@@ -3610,7 +3706,23 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_buffer_kingdom
+				}
+				privilege = {
+					antq_border_court_autonomy
+				}
+				laws = {
+					antq_buffer_kingdom_law = antq_balanced_allegiance
+				}
+				centralization_vs_decentralization = 5
+				aristocracy_vs_plutocracy = -25
+				capital_economy_vs_traditional_economy = 30
+			}
 			capital = qabala
 		}
 
@@ -8184,7 +8296,24 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_regional_kingship
+				}
+				privilege = {
+					antq_regional_royal_court
+				}
+				laws = {
+					antq_regional_kingship_law = antq_royal_court_governance
+				}
+				centralization_vs_decentralization = 10
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -25
+				capital_economy_vs_traditional_economy = 40
+			}
 			capital = marib
 		}
 
@@ -8194,7 +8323,24 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_regional_kingship
+				}
+				privilege = {
+					antq_regional_royal_court
+				}
+				laws = {
+					antq_regional_kingship_law = antq_royal_court_governance
+				}
+				centralization_vs_decentralization = 15
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -25
+				capital_economy_vs_traditional_economy = 40
+			}
 			capital = dhafar
 		}
 
@@ -8204,7 +8350,24 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_regional_kingship
+				}
+				privilege = {
+					antq_regional_royal_court
+				}
+				laws = {
+					antq_regional_kingship_law = antq_royal_court_governance
+				}
+				centralization_vs_decentralization = 10
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -25
+				capital_economy_vs_traditional_economy = 40
+			}
 			capital = bayhan
 		}
 
@@ -8214,7 +8377,24 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_regional_kingship
+				}
+				privilege = {
+					antq_regional_royal_court
+				}
+				laws = {
+					antq_regional_kingship_law = antq_royal_court_governance
+				}
+				centralization_vs_decentralization = 10
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -25
+				capital_economy_vs_traditional_economy = 40
+			}
 			capital = shabwa
 		}
 
@@ -8224,7 +8404,24 @@ countries = {
 			}
 
 			include = "asia_advanced_tribe"
-			government = { ruler = random }
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -35
+				traditionalist_vs_innovative = -35
+				aristocracy_vs_plutocracy = -40
+				capital_economy_vs_traditional_economy = 60
+			}
 			capital = aqiq_banu_uqayi
 		}
 

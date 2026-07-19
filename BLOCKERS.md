@@ -21,10 +21,10 @@ Tried:
    Late*](https://abgad.journals.ekb.eg/article_55744_3863aa70f25af459bb9fd21541fe81c4.pdf),
    places Qataban's Yuhargib III only in the middle of the first century.
 
-Recovery: retain the sourced M3 polities and M4 cultural/religious profiles;
-add named courts only when a source places an individual at the AD 1 boundary.
-Later attested figures can enter through dated M10 content. The tree remains
-green after this evidence-only pass.
+Recovery: retain the sourced M3/M4 profiles and the anonymous M6 regional-
+kingship profiles; add named courts only when a source places an individual at
+the AD 1 boundary. Later attested figures can enter through dated M10 content.
+The tree remains green after this evidence-only pass.
 
 ## 2026-07-19 - M6 Elymais and Gordyene AD 1 courts lack defensible named current rulers
 
@@ -46,10 +46,10 @@ Tried:
    Gordyene search produced no scholarly source placing a named ruler at the
    campaign boundary.
 
-Recovery: retain the sourced polity profiles and add named courts only on a
-source that places an individual in office at the AD 1 boundary. Later regional
-figures can enter through dated M10 content. The tree is green after the
-independent Persis court slice.
+Recovery: retain the sourced polity and anonymous Parthian-facing M6 profile
+and add a named court only on a source that places an individual in office at
+the AD 1 boundary. Later regional figures can enter through dated M10 content.
+The tree is green after the independent Persis court slice.
 
 ## 2026-07-19 - M6 Adiabenian AD 1 court cannot be named without false precision
 
@@ -68,9 +68,9 @@ Tried:
 2. Checked two independent *Encyclopaedia Iranica* entries: [Adiabene](https://www.iranicaonline.org/articles/adiabene/) and [Arbela](https://www.iranicaonline.org/articles/arbela-assyrian-arbailu-old/). They describe the earliest recorded Izates as succeeded about AD 30 by Monobazus I and place the reconstituted vassal state only at an unspecified point in the first quarter of the century.
 
 Recovery: add a named Adiabenian court only if a source supports its status at
-the campaign boundary; otherwise retain the sourced polity/profile and cover
-its later Monobazus/Izates II sequence through dated M10 content. The tree is
-green after this evidence-only pass.
+the campaign boundary; otherwise retain the sourced polity and anonymous
+Parthian-facing M6 profile and cover its later Monobazus/Izates II sequence
+through dated M10 content. The tree is green after this evidence-only pass.
 
 ## 2026-07-19 — M5 location-template RGO overrides are not runtime-effective
 
