@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -21,7 +22,8 @@ DATA = ROOT / "docs/m4"
 CULTURES = DATA / "cultures.csv"
 RELIGIONS = DATA / "religions.csv"
 PROFILES = DATA / "regional_profiles.csv"
-LANGUAGES = ROOT / "docs/vanilla_symbols/language.json"
+VANILLA_LANGUAGES = ROOT / "docs/vanilla_symbols/language.json"
+M4_LANGUAGES = DATA / "languages.csv"
 SYMBOLS = DATA / "definition_symbols.json"
 COMMON = ROOT / "in_game/common"
 LOC_ROOT = ROOT / "main_menu/localization"
@@ -61,6 +63,21 @@ class Profile:
     note: str
 
 
+@dataclass(frozen=True)
+class Language:
+    group: str
+    key: str
+    name: str
+    family: str
+    fallback: str
+    male_names: str
+    female_names: str
+    dynasty_names: str
+    source: str
+    confidence: str
+    note: str
+
+
 def read_rows(path: Path, expected: tuple[str, ...]) -> list[dict[str, str]]:
     with path.open(encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
@@ -85,13 +102,47 @@ def profiles() -> list[Profile]:
     return [Profile(**row) for row in rows]
 
 
+def languages() -> list[Language]:
+    rows = read_rows(
+        M4_LANGUAGES,
+        (
+            "group",
+            "key",
+            "name",
+            "family",
+            "fallback",
+            "male_names",
+            "female_names",
+            "dynasty_names",
+            "source",
+            "confidence",
+            "note",
+        ),
+    )
+    return [Language(**row) for row in rows]
+
+
 def title(key: str) -> str:
     return key.removeprefix("antq_").removesuffix("_group").replace("_", " ").title()
 
 
-def validate(cultures: list[Definition], religions: list[Definition], regional: list[Profile]) -> list[str]:
+def language_families() -> set[str]:
+    config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
+    root = Path(config["game_dir"]) / "game/in_game/common/languages"
+    pattern = re.compile(r"(?m)^\s*family\s*=\s*([A-Za-z0-9_]+)")
+    return {
+        value
+        for path in root.glob("*.txt")
+        for value in pattern.findall(path.read_text(encoding="utf-8-sig", errors="replace"))
+    }
+
+
+def validate(
+    cultures: list[Definition], religions: list[Definition], regional: list[Profile], language_rows: list[Language]
+) -> list[str]:
     failures: list[str] = []
-    languages = set(json.loads(LANGUAGES.read_text(encoding="utf-8-sig")))
+    vanilla_languages = set(json.loads(VANILLA_LANGUAGES.read_text(encoding="utf-8-sig")))
+    families = language_families()
     for label, rows in (("culture", cultures), ("religion", religions)):
         keys = [row.key for row in rows]
         if len(keys) != len(set(keys)):
@@ -101,7 +152,7 @@ def validate(cultures: list[Definition], religions: list[Definition], regional: 
                 failures.append(f"{label} key is not namespaced: {row.key}")
             if not row.group.startswith("antq_"):
                 failures.append(f"{label} group is not namespaced: {row.group}")
-            if row.language not in languages:
+            if row.language not in vanilla_languages:
                 failures.append(f"{row.key}: unknown locally harvested language {row.language}")
             if row.confidence not in {"secure", "contested"}:
                 failures.append(f"{row.key}: invalid confidence {row.confidence}")
@@ -120,6 +171,24 @@ def validate(cultures: list[Definition], religions: list[Definition], regional: 
             failures.append(f"{row.region}: unknown M4 religion {row.religion}")
         if row.confidence not in {"secure", "contested"}:
             failures.append(f"{row.region}: invalid profile confidence {row.confidence}")
+    groups = [row.group for row in language_rows]
+    if len(groups) != len(set(groups)):
+        failures.append("duplicate M4 culture-group language")
+    keys = [row.key for row in language_rows]
+    if len(keys) != len(set(keys)):
+        failures.append("duplicate M4 language key")
+    for row in language_rows:
+        if not row.group.startswith("antq_") or not row.key.startswith("antq_"):
+            failures.append(f"M4 language is not namespaced: {row.key}")
+        if row.family not in families:
+            failures.append(f"{row.key}: unknown local language family {row.family}")
+        if row.fallback not in vanilla_languages:
+            failures.append(f"{row.key}: unknown local language fallback {row.fallback}")
+        if row.confidence not in {"secure", "contested"}:
+            failures.append(f"{row.key}: invalid language confidence {row.confidence}")
+    for group in {row.group for row in cultures}:
+        if group not in set(groups):
+            failures.append(f"culture group {group} has no M4 language/dialect")
     return sorted(set(failures))
 
 
@@ -130,13 +199,14 @@ def render_groups(groups: set[str], label: str) -> str:
     return "\n".join(lines) + "\n"
 
 
-def render_cultures(rows: list[Definition]) -> str:
+def render_cultures(rows: list[Definition], dialects: dict[str, str]) -> str:
     lines = [f"# Generated by {Path(__file__).name} --write.", "# M4 sourced culture foundation."]
     for row in rows:
         lines.extend(
             (
                 "",
                 f"{row.key} = {{ # {row.source}; {row.note}",
+                f"\tlanguage = {dialects[row.group]}",
                 f"\tcolor = antq_culture_color_{row.key}",
                 "\ttags = { european_gfx }",
                 "\tculture_groups = {",
@@ -175,9 +245,63 @@ def render_religion_groups(groups: set[str]) -> str:
     return "\n".join(lines) + "\n"
 
 
-def render_named_colors(cultures: list[Definition], religions: list[Definition]) -> str:
+def render_languages(rows: list[Language]) -> str:
+    lines = [f"# Generated by {Path(__file__).name} --write.", "# M4 ancient language roots and their engine-valid dialects."]
+    for row in rows:
+        dialect = row.key.replace("_language", "_dialect")
+        male = " ".join(name_key(value) for value in row.male_names.split("|"))
+        female = " ".join(name_key(value) for value in row.female_names.split("|"))
+        dynasty = " ".join(name_key(value) for value in row.dynasty_names.split("|"))
+        lines.extend(
+            (
+                "",
+                f"{row.key} = {{ # {row.source}; {row.note}",
+                f"\tcolor = antq_language_color_{row.key}",
+                f"\tfamily = {row.family}",
+                f"\tfallback = {row.fallback}",
+                "\tmale_names = {",
+                f"\t\t{male}",
+                "\t}",
+                "\tfemale_names = {",
+                f"\t\t{female}",
+                "\t}",
+                "\tdynasty_names = {",
+                f"\t\t{dynasty}",
+                "\t}",
+                "\tlowborn = {",
+                f"\t\t{dynasty}",
+                "\t}",
+                "\tdialects = {",
+                f"\t\t{dialect} = {{ }}",
+                "\t}",
+                "}",
+            )
+        )
+    return "\n".join(lines) + "\n"
+
+
+def name_key(value: str) -> str:
+    return "antq_name_" + re.sub(r"[^a-z0-9_]+", "_", value.lower()).strip("_")
+
+
+def language_name_entries(rows: list[Language]) -> dict[str, str]:
+    entries: dict[str, str] = {}
+    for row in rows:
+        for raw in (*row.male_names.split("|"), *row.female_names.split("|"), *row.dynasty_names.split("|")):
+            key = name_key(raw)
+            old = entries.setdefault(key, raw)
+            if old != raw:
+                raise ValueError(f"name key collision: {old!r} and {raw!r}")
+    return entries
+
+
+def render_named_colors(cultures: list[Definition], religions: list[Definition], languages: list[Language]) -> str:
     """Render unique named colors; the engine reports duplicate culture colors."""
-    rows = [("culture", row) for row in cultures] + [("religion", row) for row in religions]
+    rows = (
+        [("culture", row) for row in cultures]
+        + [("religion", row) for row in religions]
+        + [("language", row) for row in languages]
+    )
     lines = [f"# Generated by {Path(__file__).name} --write.", "colors = {"]
     for index, (kind, row) in enumerate(rows):
         hue = (index * 137 + 19) % 360
@@ -188,7 +312,7 @@ def render_named_colors(cultures: list[Definition], religions: list[Definition])
     return "\n".join(lines) + "\n"
 
 
-def render_localization(cultures: list[Definition], religions: list[Definition], language: str) -> str:
+def render_localization(cultures: list[Definition], religions: list[Definition], languages: list[Language], language: str) -> str:
     lines = [f"l_{language}:", " # M4 names are deliberately mirrored in all supported game languages."]
     for row in cultures:
         lines.append(f' {row.key}: "{row.name}"')
@@ -204,6 +328,11 @@ def render_localization(cultures: list[Definition], religions: list[Definition],
         lines.append(f' {group}: "{title(group)}"')
         lines.append(f' {group}_ADJ: "{title(group)}"')
         lines.append(f' {group}_desc: "{title(group)} religious family."')
+    for row in languages:
+        lines.append(f' {row.key}: "{row.name}"')
+        lines.append(f' {row.key.replace("_language", "_dialect")}: "{row.name}"')
+    for key, name in sorted(language_name_entries(languages).items()):
+        lines.append(f' {key}: "{name}"')
     return "\n".join(lines) + "\n"
 
 
@@ -211,24 +340,31 @@ def outputs() -> tuple[dict[Path, tuple[str, str]], dict[str, object]]:
     culture_rows = definitions(CULTURES)
     religion_rows = definitions(RELIGIONS)
     profile_rows = profiles()
-    failures = validate(culture_rows, religion_rows, profile_rows)
+    language_rows = languages()
+    failures = validate(culture_rows, religion_rows, profile_rows, language_rows)
     if failures:
         raise ValueError("\n".join(failures))
     files: dict[Path, tuple[str, str]] = {
         COMMON / "culture_groups/antq_m4_groups.txt": (render_groups({row.group for row in culture_rows}, "culture"), "utf-8-sig"),
-        COMMON / "cultures/antq_m4_cultures.txt": (render_cultures(culture_rows), "utf-8-sig"),
+        COMMON / "cultures/antq_m4_cultures.txt": (
+            render_cultures(culture_rows, {row.group: row.key.replace("_language", "_dialect") for row in language_rows}),
+            "utf-8-sig",
+        ),
         COMMON / "religion_groups/antq_m4_groups.txt": (render_religion_groups({row.group for row in religion_rows}), "utf-8-sig"),
         COMMON / "religions/antq_m4_religions.txt": (render_religions(religion_rows), "utf-8-sig"),
-        ROOT / "main_menu/common/named_colors/antq_m4_colors.txt": (render_named_colors(culture_rows, religion_rows), "utf-8-sig"),
+        COMMON / "languages/antq_m4_languages.txt": (render_languages(language_rows), "utf-8-sig"),
+        ROOT / "main_menu/common/named_colors/antq_m4_colors.txt": (render_named_colors(culture_rows, religion_rows, language_rows), "utf-8-sig"),
     }
     for language in LOCALIZATION_LANGUAGES:
         files[LOC_ROOT / language / f"antq_m4_people_l_{language}.yml"] = (
-            render_localization(culture_rows, religion_rows, language),
+            render_localization(culture_rows, religion_rows, language_rows, language),
             "utf-8-sig",
         )
     index: dict[str, object] = {
         "cultures": [row.key for row in culture_rows],
         "religions": [row.key for row in religion_rows],
+        "languages": [row.key for row in language_rows],
+        "dialects": [row.key.replace("_language", "_dialect") for row in language_rows],
         "regional_profiles": {row.region: {"culture": row.culture, "religion": row.religion} for row in profile_rows},
     }
     return files, index

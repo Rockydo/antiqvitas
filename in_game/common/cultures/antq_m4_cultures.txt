@@ -2,6 +2,7 @@
 # M4 sourced culture foundation.
 
 antq_latin = { # P10;CAH-XI; Latin-speaking Roman core
+	language = antq_italic_dialect
 	color = antq_culture_color_antq_latin
 	tags = { european_gfx }
 	culture_groups = {
@@ -10,6 +11,7 @@ antq_latin = { # P10;CAH-XI; Latin-speaking Roman core
 }
 
 antq_etruscan = { # P10;CAH-XI; Residual Etruscan communities
+	language = antq_italic_dialect
 	color = antq_culture_color_antq_etruscan
 	tags = { european_gfx }
 	culture_groups = {
@@ -18,6 +20,7 @@ antq_etruscan = { # P10;CAH-XI; Residual Etruscan communities
 }
 
 antq_oscan_umbrian = { # P10;CAH-XI; Residual Italic communities
+	language = antq_italic_dialect
 	color = antq_culture_color_antq_oscan_umbrian
 	tags = { european_gfx }
 	culture_groups = {
@@ -26,6 +29,7 @@ antq_oscan_umbrian = { # P10;CAH-XI; Residual Italic communities
 }
 
 antq_venetic = { # P10;CAH-XI; Adriatic Venetic continuity
+	language = antq_italic_dialect
 	color = antq_culture_color_antq_venetic
 	tags = { european_gfx }
 	culture_groups = {
@@ -34,6 +38,7 @@ antq_venetic = { # P10;CAH-XI; Adriatic Venetic continuity
 }
 
 antq_greek_koine = { # P10;CAH-XI; Greek eastern Mediterranean continuum
+	language = antq_hellenic_dialect
 	color = antq_culture_color_antq_greek_koine
 	tags = { european_gfx }
 	culture_groups = {
@@ -42,6 +47,7 @@ antq_greek_koine = { # P10;CAH-XI; Greek eastern Mediterranean continuum
 }
 
 antq_macedonian = { # P10;CAH-XI; Hellenized Macedonian regional identity
+	language = antq_hellenic_dialect
 	color = antq_culture_color_antq_macedonian
 	tags = { european_gfx }
 	culture_groups = {
@@ -50,6 +56,7 @@ antq_macedonian = { # P10;CAH-XI; Hellenized Macedonian regional identity
 }
 
 antq_gallic = { # P10;CAH-XI; Transalpine Celtic continuum
+	language = antq_celtic_dialect
 	color = antq_culture_color_antq_gallic
 	tags = { european_gfx }
 	culture_groups = {
@@ -58,6 +65,7 @@ antq_gallic = { # P10;CAH-XI; Transalpine Celtic continuum
 }
 
 antq_belgic = { # P10;CAH-XI; Northern Gallic-Belgic continuum
+	language = antq_celtic_dialect
 	color = antq_culture_color_antq_belgic
 	tags = { european_gfx }
 	culture_groups = {
@@ -66,6 +74,7 @@ antq_belgic = { # P10;CAH-XI; Northern Gallic-Belgic continuum
 }
 
 antq_brittonic = { # P10;CAH-XI; British Celtic continuum
+	language = antq_celtic_dialect
 	color = antq_culture_color_antq_brittonic
 	tags = { european_gfx }
 	culture_groups = {
@@ -74,6 +83,7 @@ antq_brittonic = { # P10;CAH-XI; British Celtic continuum
 }
 
 antq_caledonian = { # P10;CAH-XI; Northern British societies
+	language = antq_celtic_dialect
 	color = antq_culture_color_antq_caledonian
 	tags = { european_gfx }
 	culture_groups = {
@@ -82,6 +92,7 @@ antq_caledonian = { # P10;CAH-XI; Northern British societies
 }
 
 antq_gaelic = { # P10;CAH-XI; Hibernian societies
+	language = antq_celtic_dialect
 	color = antq_culture_color_antq_gaelic
 	tags = { european_gfx }
 	culture_groups = {
@@ -90,6 +101,7 @@ antq_gaelic = { # P10;CAH-XI; Hibernian societies
 }
 
 antq_celtiberian = { # P10;CAH-XI; Iberian Celtic communities
+	language = antq_celtic_dialect
 	color = antq_culture_color_antq_celtiberian
 	tags = { european_gfx }
 	culture_groups = {
@@ -98,6 +110,7 @@ antq_celtiberian = { # P10;CAH-XI; Iberian Celtic communities
 }
 
 antq_galatian = { # P10;CAH-XI; Anatolian Celtic communities
+	language = antq_celtic_dialect
 	color = antq_culture_color_antq_galatian
 	tags = { european_gfx }
 	culture_groups = {
@@ -106,6 +119,7 @@ antq_galatian = { # P10;CAH-XI; Anatolian Celtic communities
 }
 
 antq_germanic = { # P10;CAH-XI; Germanic regional base
+	language = antq_germanic_dialect
 	color = antq_culture_color_antq_germanic
 	tags = { european_gfx }
 	culture_groups = {
@@ -114,6 +128,7 @@ antq_germanic = { # P10;CAH-XI; Germanic regional base
 }
 
 antq_gothic = { # P10;CAH-XI; Proto-Gothic communities
+	language = antq_germanic_dialect
 	color = antq_culture_color_antq_gothic
 	tags = { european_gfx }
 	culture_groups = {
@@ -122,6 +137,7 @@ antq_gothic = { # P10;CAH-XI; Proto-Gothic communities
 }
 
 antq_vandalic = { # P10;CAH-XI; Vandilic communities
+	language = antq_germanic_dialect
 	color = antq_culture_color_antq_vandalic
 	tags = { european_gfx }
 	culture_groups = {
@@ -130,6 +146,7 @@ antq_vandalic = { # P10;CAH-XI; Vandilic communities
 }
 
 antq_suebian = { # P10;CAH-XI; Suebian communities
+	language = antq_germanic_dialect
 	color = antq_culture_color_antq_suebian
 	tags = { european_gfx }
 	culture_groups = {
@@ -138,6 +155,7 @@ antq_suebian = { # P10;CAH-XI; Suebian communities
 }
 
 antq_parthian = { # P10;CAH-XI; Arsacid Iranian court culture
+	language = antq_iranian_dialect
 	color = antq_culture_color_antq_parthian
 	tags = { european_gfx }
 	culture_groups = {
@@ -146,6 +164,7 @@ antq_parthian = { # P10;CAH-XI; Arsacid Iranian court culture
 }
 
 antq_persian = { # P10;CAH-XI; Persian regional culture
+	language = antq_iranian_dialect
 	color = antq_culture_color_antq_persian
 	tags = { european_gfx }
 	culture_groups = {
@@ -154,6 +173,7 @@ antq_persian = { # P10;CAH-XI; Persian regional culture
 }
 
 antq_median = { # P10;CAH-XI; Median regional identity
+	language = antq_iranian_dialect
 	color = antq_culture_color_antq_median
 	tags = { european_gfx }
 	culture_groups = {
@@ -162,6 +182,7 @@ antq_median = { # P10;CAH-XI; Median regional identity
 }
 
 antq_sogdian = { # P10;CAH-XI; Transoxianan urban culture
+	language = antq_iranian_dialect
 	color = antq_culture_color_antq_sogdian
 	tags = { european_gfx }
 	culture_groups = {
@@ -170,6 +191,7 @@ antq_sogdian = { # P10;CAH-XI; Transoxianan urban culture
 }
 
 antq_bactrian = { # P10;CAH-XI; Bactrian-Yuezhi frontier culture
+	language = antq_iranian_dialect
 	color = antq_culture_color_antq_bactrian
 	tags = { european_gfx }
 	culture_groups = {
@@ -178,6 +200,7 @@ antq_bactrian = { # P10;CAH-XI; Bactrian-Yuezhi frontier culture
 }
 
 antq_saka = { # P10;CAH-XI; Eastern Iranian steppe communities
+	language = antq_iranian_dialect
 	color = antq_culture_color_antq_saka
 	tags = { european_gfx }
 	culture_groups = {
@@ -186,6 +209,7 @@ antq_saka = { # P10;CAH-XI; Eastern Iranian steppe communities
 }
 
 antq_sarmatian = { # P10;CAH-XI; Pontic Iranian steppe communities
+	language = antq_iranian_dialect
 	color = antq_culture_color_antq_sarmatian
 	tags = { european_gfx }
 	culture_groups = {
@@ -194,6 +218,7 @@ antq_sarmatian = { # P10;CAH-XI; Pontic Iranian steppe communities
 }
 
 antq_alan = { # P10;CAH-XI; Alan steppe communities
+	language = antq_iranian_dialect
 	color = antq_culture_color_antq_alan
 	tags = { european_gfx }
 	culture_groups = {
@@ -202,6 +227,7 @@ antq_alan = { # P10;CAH-XI; Alan steppe communities
 }
 
 antq_armenian = { # P10;CAH-XI; Armenian highland culture
+	language = antq_caucasian_dialect
 	color = antq_culture_color_antq_armenian
 	tags = { european_gfx }
 	culture_groups = {
@@ -210,6 +236,7 @@ antq_armenian = { # P10;CAH-XI; Armenian highland culture
 }
 
 antq_kartvelian = { # P10;CAH-XI; Iberian-Colchian continuum
+	language = antq_caucasian_dialect
 	color = antq_culture_color_antq_kartvelian
 	tags = { european_gfx }
 	culture_groups = {
@@ -218,6 +245,7 @@ antq_kartvelian = { # P10;CAH-XI; Iberian-Colchian continuum
 }
 
 antq_caucasian_albanian = { # P10;CAH-XI; Albanian Caucasus communities
+	language = antq_caucasian_dialect
 	color = antq_culture_color_antq_caucasian_albanian
 	tags = { european_gfx }
 	culture_groups = {
@@ -226,6 +254,7 @@ antq_caucasian_albanian = { # P10;CAH-XI; Albanian Caucasus communities
 }
 
 antq_aramaic = { # P10;CAH-XI; Near Eastern lingua franca communities
+	language = antq_semitic_dialect
 	color = antq_culture_color_antq_aramaic
 	tags = { european_gfx }
 	culture_groups = {
@@ -234,6 +263,7 @@ antq_aramaic = { # P10;CAH-XI; Near Eastern lingua franca communities
 }
 
 antq_judean = { # P10;OCD; Judean and diaspora communities
+	language = antq_semitic_dialect
 	color = antq_culture_color_antq_judean
 	tags = { european_gfx }
 	culture_groups = {
@@ -242,6 +272,7 @@ antq_judean = { # P10;OCD; Judean and diaspora communities
 }
 
 antq_nabataean_arab = { # P10;CAH-XI; Nabataean urban communities
+	language = antq_semitic_dialect
 	color = antq_culture_color_antq_nabataean_arab
 	tags = { european_gfx }
 	culture_groups = {
@@ -250,6 +281,7 @@ antq_nabataean_arab = { # P10;CAH-XI; Nabataean urban communities
 }
 
 antq_arab = { # P10;CAH-XI; Arabian communities
+	language = antq_semitic_dialect
 	color = antq_culture_color_antq_arab
 	tags = { european_gfx }
 	culture_groups = {
@@ -258,6 +290,7 @@ antq_arab = { # P10;CAH-XI; Arabian communities
 }
 
 antq_south_arabian = { # P10;CAH-XI; Sabaean-Himyarite communities
+	language = antq_semitic_dialect
 	color = antq_culture_color_antq_south_arabian
 	tags = { european_gfx }
 	culture_groups = {
@@ -266,6 +299,7 @@ antq_south_arabian = { # P10;CAH-XI; Sabaean-Himyarite communities
 }
 
 antq_egyptian = { # P10;CAH-XI; Egyptian Nile communities
+	language = antq_nile_dialect
 	color = antq_culture_color_antq_egyptian
 	tags = { european_gfx }
 	culture_groups = {
@@ -274,6 +308,7 @@ antq_egyptian = { # P10;CAH-XI; Egyptian Nile communities
 }
 
 antq_nubian = { # P10;CAH-XI; Kushite-Nubian communities
+	language = antq_nile_dialect
 	color = antq_culture_color_antq_nubian
 	tags = { european_gfx }
 	culture_groups = {
@@ -282,6 +317,7 @@ antq_nubian = { # P10;CAH-XI; Kushite-Nubian communities
 }
 
 antq_berber = { # P10;CAH-XI; Maghrebi Berber communities
+	language = antq_berber_dialect
 	color = antq_culture_color_antq_berber
 	tags = { european_gfx }
 	culture_groups = {
@@ -290,6 +326,7 @@ antq_berber = { # P10;CAH-XI; Maghrebi Berber communities
 }
 
 antq_bantu = { # P10;CAH-XI; Bantu expansion population frame
+	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_bantu
 	tags = { european_gfx }
 	culture_groups = {
@@ -298,6 +335,7 @@ antq_bantu = { # P10;CAH-XI; Bantu expansion population frame
 }
 
 antq_mande = { # P10;CAH-XI; West African Mande-area communities
+	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_mande
 	tags = { european_gfx }
 	culture_groups = {
@@ -306,6 +344,7 @@ antq_mande = { # P10;CAH-XI; West African Mande-area communities
 }
 
 antq_indo_aryan = { # P10;CAH-XI; Northern Indian regional Prakrits
+	language = antq_indian_dialect
 	color = antq_culture_color_antq_indo_aryan
 	tags = { european_gfx }
 	culture_groups = {
@@ -314,6 +353,7 @@ antq_indo_aryan = { # P10;CAH-XI; Northern Indian regional Prakrits
 }
 
 antq_tamil = { # P10;CAH-XI; Tamilakam culture
+	language = antq_indian_dialect
 	color = antq_culture_color_antq_tamil
 	tags = { european_gfx }
 	culture_groups = {
@@ -322,6 +362,7 @@ antq_tamil = { # P10;CAH-XI; Tamilakam culture
 }
 
 antq_han = { # P10;BHR; Han Chinese population base
+	language = antq_sinitic_dialect
 	color = antq_culture_color_antq_han
 	tags = { european_gfx }
 	culture_groups = {
@@ -330,6 +371,7 @@ antq_han = { # P10;BHR; Han Chinese population base
 }
 
 antq_tibeto_burman = { # P10;CAH-XI; Highland and frontier communities
+	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_tibeto_burman
 	tags = { european_gfx }
 	culture_groups = {
@@ -338,6 +380,7 @@ antq_tibeto_burman = { # P10;CAH-XI; Highland and frontier communities
 }
 
 antq_mon = { # P10;CAH-XI; Mainland Southeast Asian communities
+	language = antq_southeast_asian_dialect
 	color = antq_culture_color_antq_mon
 	tags = { european_gfx }
 	culture_groups = {
@@ -346,6 +389,7 @@ antq_mon = { # P10;CAH-XI; Mainland Southeast Asian communities
 }
 
 antq_khmer = { # P10;CAH-XI; Khmer regional communities
+	language = antq_southeast_asian_dialect
 	color = antq_culture_color_antq_khmer
 	tags = { european_gfx }
 	culture_groups = {
@@ -354,6 +398,7 @@ antq_khmer = { # P10;CAH-XI; Khmer regional communities
 }
 
 antq_austronesian = { # P10;CAH-XI; Island Southeast Asian communities
+	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_austronesian
 	tags = { european_gfx }
 	culture_groups = {
@@ -362,6 +407,7 @@ antq_austronesian = { # P10;CAH-XI; Island Southeast Asian communities
 }
 
 antq_korean = { # P10;CAH-XI; Korean peninsula communities
+	language = antq_korean_dialect
 	color = antq_culture_color_antq_korean
 	tags = { european_gfx }
 	culture_groups = {
@@ -370,6 +416,7 @@ antq_korean = { # P10;CAH-XI; Korean peninsula communities
 }
 
 antq_wa = { # P10;CAH-XI; Yayoi Japanese communities
+	language = antq_japonic_dialect
 	color = antq_culture_color_antq_wa
 	tags = { european_gfx }
 	culture_groups = {
@@ -378,6 +425,7 @@ antq_wa = { # P10;CAH-XI; Yayoi Japanese communities
 }
 
 antq_xiongnu = { # P10;CAH-XI; Xiongnu confederation communities
+	language = antq_steppe_dialect
 	color = antq_culture_color_antq_xiongnu
 	tags = { european_gfx }
 	culture_groups = {
@@ -386,6 +434,7 @@ antq_xiongnu = { # P10;CAH-XI; Xiongnu confederation communities
 }
 
 antq_tungusic = { # P10;CAH-XI; Yilou and Manchurian communities
+	language = antq_steppe_dialect
 	color = antq_culture_color_antq_tungusic
 	tags = { european_gfx }
 	culture_groups = {
@@ -394,6 +443,7 @@ antq_tungusic = { # P10;CAH-XI; Yilou and Manchurian communities
 }
 
 antq_uralic = { # P10;CAH-XI; Finnic-Ugric-Samoyedic communities
+	language = antq_uralic_dialect
 	color = antq_culture_color_antq_uralic
 	tags = { european_gfx }
 	culture_groups = {
@@ -402,6 +452,7 @@ antq_uralic = { # P10;CAH-XI; Finnic-Ugric-Samoyedic communities
 }
 
 antq_baltic = { # P10;CAH-XI; Baltic communities
+	language = antq_baltic_dialect
 	color = antq_culture_color_antq_baltic
 	tags = { european_gfx }
 	culture_groups = {
@@ -410,6 +461,7 @@ antq_baltic = { # P10;CAH-XI; Baltic communities
 }
 
 antq_venedi = { # P10;CAH-XI; Proto-Slavic Venedi communities
+	language = antq_slavic_dialect
 	color = antq_culture_color_antq_venedi
 	tags = { european_gfx }
 	culture_groups = {
@@ -418,6 +470,7 @@ antq_venedi = { # P10;CAH-XI; Proto-Slavic Venedi communities
 }
 
 antq_dacian = { # P10;CAH-XI; Dacian communities
+	language = antq_balkan_dialect
 	color = antq_culture_color_antq_dacian
 	tags = { european_gfx }
 	culture_groups = {
@@ -426,6 +479,7 @@ antq_dacian = { # P10;CAH-XI; Dacian communities
 }
 
 antq_illyrian = { # P10;CAH-XI; Illyrian communities
+	language = antq_balkan_dialect
 	color = antq_culture_color_antq_illyrian
 	tags = { european_gfx }
 	culture_groups = {
@@ -434,6 +488,7 @@ antq_illyrian = { # P10;CAH-XI; Illyrian communities
 }
 
 antq_iberian = { # P10;CAH-XI; Non-Indo-European Iberian communities
+	language = antq_iberian_dialect
 	color = antq_culture_color_antq_iberian
 	tags = { european_gfx }
 	culture_groups = {
@@ -442,6 +497,7 @@ antq_iberian = { # P10;CAH-XI; Non-Indo-European Iberian communities
 }
 
 antq_maya = { # P10;CAH-XI; Maya lowland communities
+	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_maya
 	tags = { european_gfx }
 	culture_groups = {
@@ -450,6 +506,7 @@ antq_maya = { # P10;CAH-XI; Maya lowland communities
 }
 
 antq_zapotec = { # P10;CAH-XI; Zapotec communities
+	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_zapotec
 	tags = { european_gfx }
 	culture_groups = {
@@ -458,6 +515,7 @@ antq_zapotec = { # P10;CAH-XI; Zapotec communities
 }
 
 antq_teotihuacano = { # P10;CAH-XI; Central Mexican urban communities
+	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_teotihuacano
 	tags = { european_gfx }
 	culture_groups = {
@@ -466,6 +524,7 @@ antq_teotihuacano = { # P10;CAH-XI; Central Mexican urban communities
 }
 
 antq_moche = { # P10;CAH-XI; Northern Andean Moche communities
+	language = antq_andean_dialect
 	color = antq_culture_color_antq_moche
 	tags = { european_gfx }
 	culture_groups = {
@@ -474,6 +533,7 @@ antq_moche = { # P10;CAH-XI; Northern Andean Moche communities
 }
 
 antq_nazca = { # P10;CAH-XI; South-coast Andean Nazca communities
+	language = antq_andean_dialect
 	color = antq_culture_color_antq_nazca
 	tags = { european_gfx }
 	culture_groups = {
@@ -482,6 +542,7 @@ antq_nazca = { # P10;CAH-XI; South-coast Andean Nazca communities
 }
 
 antq_chibchan = { # P10;CAH-XI; Northern Andean communities
+	language = antq_andean_dialect
 	color = antq_culture_color_antq_chibchan
 	tags = { european_gfx }
 	culture_groups = {
@@ -490,6 +551,7 @@ antq_chibchan = { # P10;CAH-XI; Northern Andean communities
 }
 
 antq_arawak = { # P10;CAH-XI; Caribbean-Amazonian Arawak communities
+	language = antq_american_dialect
 	color = antq_culture_color_antq_arawak
 	tags = { european_gfx }
 	culture_groups = {
@@ -498,6 +560,7 @@ antq_arawak = { # P10;CAH-XI; Caribbean-Amazonian Arawak communities
 }
 
 antq_tupi = { # P10;CAH-XI; Amazonian Tupi communities
+	language = antq_american_dialect
 	color = antq_culture_color_antq_tupi
 	tags = { european_gfx }
 	culture_groups = {
@@ -506,6 +569,7 @@ antq_tupi = { # P10;CAH-XI; Amazonian Tupi communities
 }
 
 antq_carib = { # P10;CAH-XI; Caribbean Carib communities
+	language = antq_american_dialect
 	color = antq_culture_color_antq_carib
 	tags = { european_gfx }
 	culture_groups = {
@@ -514,6 +578,7 @@ antq_carib = { # P10;CAH-XI; Caribbean Carib communities
 }
 
 antq_algonquian = { # P10;CAH-XI; North American Algonquian communities
+	language = antq_american_dialect
 	color = antq_culture_color_antq_algonquian
 	tags = { european_gfx }
 	culture_groups = {
@@ -522,6 +587,7 @@ antq_algonquian = { # P10;CAH-XI; North American Algonquian communities
 }
 
 antq_siouan = { # P10;CAH-XI; North American Siouan communities
+	language = antq_american_dialect
 	color = antq_culture_color_antq_siouan
 	tags = { european_gfx }
 	culture_groups = {
@@ -530,6 +596,7 @@ antq_siouan = { # P10;CAH-XI; North American Siouan communities
 }
 
 antq_inuit_dorset = { # P10;CAH-XI; Arctic Dorset communities
+	language = antq_american_dialect
 	color = antq_culture_color_antq_inuit_dorset
 	tags = { european_gfx }
 	culture_groups = {
@@ -538,6 +605,7 @@ antq_inuit_dorset = { # P10;CAH-XI; Arctic Dorset communities
 }
 
 antq_polynesian = { # P10;CAH-XI; Western Polynesian communities
+	language = antq_oceanic_dialect
 	color = antq_culture_color_antq_polynesian
 	tags = { european_gfx }
 	culture_groups = {
@@ -546,6 +614,7 @@ antq_polynesian = { # P10;CAH-XI; Western Polynesian communities
 }
 
 antq_australian = { # P10;CAH-XI; Australian communities
+	language = antq_oceanic_dialect
 	color = antq_culture_color_antq_australian
 	tags = { european_gfx }
 	culture_groups = {
