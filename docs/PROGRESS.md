@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-19 — M3 Han-world territorial pass
+
+- Added reviewed regional frames for Cappadocia/Commagene, Media Atropatene,
+  Persis, Sakastan, Khwarazm, Wusun, the Korean roster, Buyeo/Wuhuan, and the
+  AD 1 Xiongnu/Xianbei/Dingling steppe groups. Areas that contain rival capital
+  anchors were left untouched instead of assigning an artificial single owner.
+- The source tables now resolve 7,522 locations for 133 active roster polities
+  and 25 dependencies. The entire addition is marked `contested` where local
+  map geometry cannot express a historical frontier precisely.
+- `make validate` and a real-game smoke are green with zero new error lines.
+
+Next: cover the remaining documented African and American SoP/state frames,
+then introduce a checked residual-coverage ledger for the genuinely broad SoP
+regions that cannot be honestly partitioned by a modern map-area boundary.
+
 ## 2026-07-19 — M3 Barbaricum territorial pass
 
 - Added source-labelled frames for the Caledonian and Hibernian SoPs, selected

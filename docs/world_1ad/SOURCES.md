@@ -58,3 +58,7 @@ The Barbaricum expansion likewise uses P8.1/P8.2/P8.7 with CAH-XI. Its rows
 are deliberately marked `contested`: broad regional labels are a visible
 political-map scaffold, never an assertion that a present map-area boundary was
 an AD 1 frontier.
+
+The Han-world expansion records P8.1–P8.3/P8.8 with CAH-XI, CHGIS, or *Samguk
+Sagi* as appropriate. Multi-capital regions are deliberately retained for the
+residual SoP/source pass rather than being silently collapsed to one owner.

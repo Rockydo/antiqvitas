@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 — Han-world regional extent proxies
+
+The Han-world pass assigns only frames tied directly to the plan's AD 1 roster:
+the Roman/Parthian client edges, Korean polities and Samhan clusters, Buyeo and
+Wuhuan, and the Xiongnu/Xianbei/Dingling pastoral zones. Tarim oasis-state,
+Levantine, Mesopotamian, and Transoxianan areas that contain multiple active
+capital anchors are intentionally not collapsed to one tag. All added broad
+rows remain `contested`. Sources weighed: P8.1–P8.3; P8.8; CAH-XI; CHGIS;
+*Samguk Sagi*. †
+
 ## 2026-07-19 — AD 1 roster entries requiring later review
 
 These entries are deliberately retained as `contested` in
