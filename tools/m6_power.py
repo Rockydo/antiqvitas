@@ -488,6 +488,26 @@ antq_client_monarchy = {
 	years = 2
 }
 
+antq_parthian_subkingdom = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+	}
+	years = 2
+}
+
+antq_buffer_kingdom = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.05
+		country_cabinet_efficiency = 0.025
+	}
+	years = 2
+}
+
 antq_kushite_dual_kingship = {
 	major = yes
 	government = monarchy
@@ -575,6 +595,10 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_parthian_king_of_kings_desc", "An Arsacid monarchy balancing the royal court with powerful Iranian noble houses."),
         ("antq_client_monarchy", "Client Monarchy"),
         ("antq_client_monarchy_desc", "A local royal court whose position is shaped by imperial patronage."),
+        ("antq_parthian_subkingdom", "Parthian Sub-Kingdom"),
+        ("antq_parthian_subkingdom_desc", "A regional Iranian court whose authority rests on local elites and an Arsacid-facing political order."),
+        ("antq_buffer_kingdom", "Buffer Kingdom"),
+        ("antq_buffer_kingdom_desc", "A frontier court balancing local authority against stronger neighbouring powers."),
         ("antq_kushite_dual_kingship", "Kushite Dual Kingship"),
         ("antq_kushite_dual_kingship_desc", "A Kushite royal court represented through the named Natakamani-Amanitore co-rule."),
         ("antq_steppe_confederation", "Steppe Confederation"),
