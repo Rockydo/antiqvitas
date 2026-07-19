@@ -112,6 +112,31 @@ character_db = {
 		tag = XBD
 	}
 
+	antq_helena_adiabene = {
+		first_name = { name = antq_helena_adiabene }
+		culture = antq_aramaic
+		religion = antq_arsacid_zoroastrianism
+		female = yes
+		dynasty = antq_adiabenian_royal_house
+		tag = ADI
+	}
+
+	antq_izates_adiabene = {
+		first_name = { name = antq_izates_adiabene }
+		culture = antq_aramaic
+		religion = antq_arsacid_zoroastrianism
+		dynasty = antq_adiabenian_royal_house
+		tag = ADI
+	}
+
+	antq_monobazus_adiabene_younger = {
+		first_name = { name = antq_monobazus_adiabene_younger }
+		culture = antq_aramaic
+		religion = antq_arsacid_zoroastrianism
+		dynasty = antq_adiabenian_royal_house
+		tag = ADI
+	}
+
 	antq_augustus = {
 		first_name = { name = antq_augustus }
 		culture = antq_latin

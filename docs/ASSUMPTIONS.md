@@ -987,3 +987,11 @@ engine link, personal abilities, or a forecast of later punishment. The Wei
 home field therefore uses a documented Lunu/Dingzhou *engine proxy*, while all
 six records remain context-only. Sources weighed: P8.3; `CTP-WY`; `CTP-ZHONG`
 in `docs/world_1ad/SOURCES.md`. [contested]
+## 2026-07-19 - Helena and the early Adiabenian court are boundary-only records
+
+Josephus places Helena, Izates, and Helena's elder son Monobazus during Herod's
+reign, securely establishing that each survived to AD 1. The Adiabenian
+identity context scripts neither their later Jewish conversion nor a start
+marriage, parent graph, designated heir, succession, office, residence, or
+biography date. Sources weighed: P8.2; `IRAN-ADI`; `POS-ADI` in
+`docs/world_1ad/SOURCES.md`. [secure survival; contested engine context]

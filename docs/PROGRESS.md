@@ -1641,3 +1641,13 @@ separate Han runtime-regency blocker.
 
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
+## 2026-07-19 - M6 Adiabenian family-context slice
+
+- Added Helena, Izates, and the elder Monobazus to the source-led Adiabenian
+  court roster. Josephus places all three during Herod's reign, while the
+  existing Iranica source preserves the first-century Adiabenian setting.
+- The records contain no engine marriage or parent graph, conversion, heir,
+  succession, office, residence, or biography date; this keeps their later
+  first-century careers out of the AD 1 state.
+- This brings the M6 roster to 123 source-led characters, while retaining the
+  separate Han runtime-regency blocker.

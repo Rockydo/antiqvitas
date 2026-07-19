@@ -12,3 +12,12 @@ pre-campaign accession day, biography date, family graph, marriage, religious
 conversion, subject treaty, or later succession is created. The existing
 Parthian sub-kingdom adapter remains a technical government proxy; M9 owns the
 actual diplomatic relationship.
+
+Josephus's Adiabenian account also names Queen Helena and the two sons she had
+with Monobazus: the elder Monobazus and Izates. Its opening places Izates's
+birth during Herod's reign, before 4 BCE, so all three securely survive to the
+AD 1 boundary. They are generated only as court identities. In particular,
+their later Jewish conversion, any marriage or parent link, Izates's
+designation and accession, Monobazus's later succession, offices, residences,
+and biography dates are not imported into the campaign. Sources: P8.2;
+`IRAN-ADI`; `POS-ADI` in the [source ledger](../world_1ad/SOURCES.md).
