@@ -1,8 +1,8 @@
 {
   "game_build": "24187685",
-  "entry_count": 136,
-  "collision_count": 69,
-  "localization_collision_count": 75,
+  "entry_count": 138,
+  "collision_count": 71,
+  "localization_collision_count": 77,
   "reserved_hash_collision_tags": [
     "XAD"
   ],
@@ -937,6 +937,20 @@
       "vanilla_collision": false,
       "localization_collision": false,
       "name": "Dorset"
+    },
+    {
+      "design_tag": "PLA",
+      "engine_tag": "XDG",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Plains and Coastal Societies"
+    },
+    {
+      "design_tag": "PAC",
+      "engine_tag": "XDH",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Pacific Coast Societies"
     },
     {
       "design_tag": "ARA",

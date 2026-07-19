@@ -1198,6 +1198,24 @@ DOR = { # Dorset; P8.10;CAH-XI
 	is_historic = yes
 }
 
+XDG = { # Plains and Coastal Societies; P8.10;CAH-XI
+	color = rgb { 51 115 139 }
+	color2 = rgb { 204 140 116 }
+
+	culture_definition = inuit_culture
+	religion_definition = shamanism
+	is_historic = yes
+}
+
+XDH = { # Pacific Coast Societies; P8.10;CAH-XI
+	color = rgb { 52 109 136 }
+	color2 = rgb { 203 146 119 }
+
+	culture_definition = inuit_culture
+	religion_definition = shamanism
+	is_historic = yes
+}
+
 XDB = { # Arawak Societies; P8.10;CAH-XI
 	color = rgb { 34 144 155 }
 	color2 = rgb { 221 111 100 }
