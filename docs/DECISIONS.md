@@ -117,6 +117,16 @@ foreground attachment sequence before taking the image. This prevents a game
 test artifact from including another application when focus changes during
 launcher handoff; the clean menu checkpoint is retained as M3 driver evidence.
 
+## 2026-07-19 — Coarse area rows require explicit uncertainty
+
+For the Indian Ocean territorial pass, a whole installed geography area is used
+only when it has a direct regional association in the plan's AD 1 synthesis.
+Every such frame is marked `contested` in `ownership_areas.csv`: the installed
+area geometry is a reviewable M3 adapter, not evidence that a modern/local map
+edge is an ancient administrative border. Exact capitals, source labels, and
+the resolver's no-overlap invariant remain stricter than these provisional
+regional extents.
+
 ## 2026-07-19 — Five campaign ages with a compatibility sentinel
 
 The campaign has five real ages: Principate, High Empires, Crisis, Dominate,

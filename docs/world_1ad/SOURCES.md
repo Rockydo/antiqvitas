@@ -48,3 +48,8 @@ proxy with coordinate evidence; for a society of peoples or broad regional
 polity, it is an explicitly documented geographic seed. Capital anchoring is
 not evidence of a final border, formal capital, or population distribution.
 Those claims require the separate ownership/SoP and M4 population source passes.
+
+The Indian Ocean ownership expansion records P8.3/P8.4/P8.9 and, where useful,
+CAH-XI or *Periplus* on every area row. It captures coarse reviewed frames only;
+all such rows are explicitly `contested` rather than silently treating the
+installed area geometry as a period border.

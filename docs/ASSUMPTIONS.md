@@ -84,3 +84,14 @@ They are transparent map proxies rather than claims about exact period names,
 polities, or borders. M4 dynamic names and the unfinished M3 territory rows are
 the required corrective layers. Sources weighed: P8.4–P8.10; CAH-XI; Pleiades;
 CHGIS. †
+
+## 2026-07-19 — Indian Ocean regional extent proxies
+
+The current Indian and Southeast Asian ownership rows use labelled regional
+frames instead of invented province lines: the Indo-Scythian north-west,
+Satavahana Deccan interregnum, Kalinga, Chera coast, Anuradhapura, Han Jiaozhi,
+and the Pyu, Mon, proto-Khmer, Malay, Javanese, Philippine, and Bornean SoP
+clusters. The area boundaries are inherited from the installed map and are not
+claims of period sovereignty at every location. They remain `contested` until
+the M4 pop/culture pass and later local historical research can refine them.
+Sources weighed: P8.3–P8.4; P8.9; CAH-XI; *Periplus of the Erythraean Sea*. †
