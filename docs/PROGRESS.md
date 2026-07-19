@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-19 - M6 Buyeo Daeso court
+
+- Replaced Buyeo's anonymous regional-kingship ruler with Daeso, whose
+  conventional 20 BCE-AD 22 reign is recorded by the Academy of Korean
+  Studies. A recent scholarly warning that Buyeo can denote distinct Northern
+  and Eastern political traditions keeps the court, dynasty label, and term
+  explicitly contested.
+- Regenerated M6/start data; no exact biography date, accession day, successor,
+  or territorial reconstruction was introduced.
+
+Next: continue the source-qualified named-court pass, retaining anonymous
+profiles wherever the evidence does not place an AD 1 incumbent.
+
 ## 2026-07-19 - M6 Colchian Pythodoris court
 
 - Replaced Colchis's anonymous ruler with Pythodoris of Pontus. Strabo directly

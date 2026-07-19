@@ -112,9 +112,16 @@ not a warrant for inventing a start-date court.
 `antq_regional_kingship`, `antq_regional_royal_court`, and
 `antq_regional_kingship_law` form a deliberately generic monarchy adapter:
 small crown and court values only, with no claim that its users shared a
-constitution. It covers Khotan, Kucha, Kashgar, Loulan, Turfan, and Buyeo when
-the project source route establishes the polity but not a current AD 1 ruler.
-Their Han tributary and external relationships remain M9 work.
+constitution. It covers Khotan, Kucha, Kashgar, Loulan, and Turfan where the
+project source route establishes the polity but not a current AD 1 ruler. Their
+Han tributary and external relationships remain M9 work.
+
+Buyeo now uses the same narrow adapter under Daeso. The Academy of Korean
+Studies gives the traditional 20 BCE-AD 22 reign, but a current scholarly
+warning that "Buyeo" can encompass Northern and Eastern political realities
+keeps the ruler, dynasty handle, and tag continuity contested. The campaign
+term supplies neither an exact accession day nor an asserted successor.
+Sources: P8.3; SAM; `AKS-DAE`; `KCI-BUY`.
 
 Mahan, Jinhan, Byeonhan, Yayoi Wa, Yuezhi, Xianbei, Wuhuan, and Dingling use
 the existing anonymous tribal contract because the plan identifies them as
