@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 - Huan Tan is a qualified Han scholarly court figure
+
+Pokora's academic study identifies Huan Tan as a scholar-official who held a
+court position through four reigns, while his conventional life span crosses
+the campaign boundary. That supports a bounded scholarly Han context but does
+not settle his precise post on 1 January AD 1. The roster therefore makes no
+office, ability, family, biography-date, or later Xin/Han career claim, and
+marks the record contested. Sources weighed: P8.3; `UM-HUAN` in
+`docs/world_1ad/SOURCES.md`. [contested]
+
 ## 2026-07-19 - Daeso's Buyeo court is a contested traditional chronology
 
 The Academy of Korean Studies records Daeso as Buyeo's fifth king with the

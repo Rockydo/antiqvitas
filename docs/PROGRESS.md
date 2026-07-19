@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-19 - M6 Han scholarly court
+
+- Added Yang Xiong from the *Han Shu* record of his continuing court post
+  through Emperor Ping and Huan Tan from the scholarly court-career evidence.
+- Yang carries no office mechanics; Huan's unresolved exact January post is
+  explicitly contested in `ASSUMPTIONS.md`. Neither character receives an
+  ability, biography date, genealogy, or later Xin/Han career script.
+
+Next: regenerate, validate, smoke-test, then continue source-led Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Roman AD 1 consular court
 
 - Added Lucius Aemilius Paullus, the directly attested ordinary colleague of
