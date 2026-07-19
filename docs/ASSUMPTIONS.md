@@ -345,3 +345,10 @@ and Caucasian groups where the installed local geography has an unmistakable
 matching macro-region. The real political mosaic was finer and mobile; all
 these rows stay `contested` pending the M4 population/culture map and later
 local research. Sources weighed: P8.1–P8.2; P8.7; CAH-XI. †
+
+## 2026-07-19 — Roma annona at city scale
+
+Roma receives the installed `granary` building as a city-scale representation
+of the Augustan annona's storage and distribution function. It is not an exact
+claim about one surviving warehouse at the location key. Source weighed: Oxford
+Classical Dictionary, *annona (grain)*. [secure]

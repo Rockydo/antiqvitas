@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-19 — M5 Roma annona granary
+
+- Added a sourced `granary` anchor at Roma as the engine-valid city-scale proxy
+  for Augustan public grain storage and distribution. The special-building
+  ledger now contains 16 entries, with the scholarly rationale in
+  `docs/m5/M5_ANNONA_GRANARY.md` and the historical modelling assumption in
+  `ASSUMPTIONS.md`.
+- `make validate` is green and reports the 16-building ledger; the enabled-mod
+  `make smoke` is green with zero new `error.log` lines.
+
+Next: continue the remaining independent M5 infrastructure while the
+runtime-effective RGO discovery remains deferred.
+
 ## 2026-07-19 — M5 trade-flow export probe and RGO boundary
 
 - A live observer run reached late May AD 1. Build-provided console exports
