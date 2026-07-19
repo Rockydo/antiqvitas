@@ -48,6 +48,7 @@ a row reaches `implemented` status.
 - `TSU-CLZ`: Tedo Dundua, ["Colchis and Pontus of Polemons"](https://dspace.tsu.ge/bitstreams/2d55da34-a15f-44c1-a68b-cd1a3d6e0d02/download), used as the scholarly cross-check that Pythodoris remained alive and ruling Colchis c. AD 19/20.
 - `AKS-DAE`: Academy of Korean Studies, ["Daeso"](https://encykorea.aks.ac.kr/Article/E0014524), used for the conventional record of Daeso as Buyeo's fifth king reigning 20 BCE-AD 22.
 - `KCI-BUY`: Byungjin Jang, ["The Buyeo Succession of Goguryeo and Its Historical Reality"](https://www.kci.go.kr/kciportal/mobile/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003320607), *Northeast Asian History Review* 91 (2026), used for the caution that historical uses of "Buyeo" may encompass differing political realities including Northern and Eastern Buyeo.
+- `ZAV-ASP`: Natalia V. Zavoykina, ["Aspurgos - the king of Bosporan state (9/8 BC - AD 38)"](https://archaeolog-ru.academia.edu/NatalyaZavoykina), *Drevnosti Bospora* 28 (2023), used for the revisionist epigraphic and numismatic case that Aspurgus held Bosporan royal status by AD 6/7 and potentially across the AD 1 boundary; this does not settle the project's contested Dynamis start anchor.
 
 Rows marked `contested` have a corresponding entry in `docs/ASSUMPTIONS.md`.
 `TBD` map capitals are historical roster records awaiting a verified mapping to

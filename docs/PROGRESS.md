@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 - M6 Bosporan Aspurgus claimant
+
+- Added Aspurgus as a source-qualified contested Bosporan court claimant. A
+  recent epigraphic/numismatic reassessment places his royal status by AD 6/7
+  and argues for an earlier reign, while the plan retains Dynamis as the
+  contested AD 1 governmental anchor.
+- Kept the game state deliberately unresolved: no forced heir, parentage,
+  marriage, accession day, successor, or tag switch was added.
+
+Next: continue the source-qualified named-court pass, retaining anonymous
+profiles or unresolved court configurations wherever the evidence requires it.
+
 ## 2026-07-19 - M6 Buyeo Daeso court
 
 - Replaced Buyeo's anonymous regional-kingship ruler with Daeso, whose
