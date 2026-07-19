@@ -61,6 +61,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Seed and smoke-check the transparent city/town/road development profile.
 - [x] Expand the specialist urban economy with source-led glassware, lacquerware, pottery, water, mint, library, and Pharos building anchors.
 - [x] Add the source-backed Roma annona granary as an engine-valid city-scale public grain-store proxy.
+- [x] Add the source-backed Han Taixue at Chang'an through the engine-valid Confucian-academy proxy.
 - [x] Add five distinct, source-labelled ancient raw goods (papyrus, silphium, naphtha/bitumen, jade, and camels), their full UI-art/modifier contracts, and five audited RGO anchors.
 - [x] Add plan-listed civic/infrastructure anchors for the Circus Maximus, Alexandria harbor, Dujiangyan, and Anuradhapura reservoirs.
 - [x] Add the plan-listed Taxila market and urban node through its reviewed Attock proxy, reaching 40 market hubs.
