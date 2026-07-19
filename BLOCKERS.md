@@ -1,5 +1,30 @@
 # Blockers
 
+## 2026-07-19 - M6 Rajuvula cannot be placed at the AD 1 campaign boundary
+
+Status: **deferred; M6 continues with other court and mechanics work.**
+
+P8.4 names Rajuvula in the Northern Satrap context, but that alone does not
+support making him ruler of the existing Arjunayana Mathura tag on 1 January
+AD 1. Doing so would replace a plan-required ganasangha with a monarch and
+would manufacture a chronology rather than reconcile it.
+
+Tried:
+
+1. Checked the local M3/M6 ledgers: Mathura is the existing Arjunayana
+   republican anchor, while the separately represented Indo-Scythian realm is
+   Azes's Taxila court. No Northern-Satrap AD 1 tag or reviewed boundary exists.
+2. Searched Rajuvula-specific numismatic and epigraphic material, then read
+   Shailendra Bhandare's Oxford study. It places the Rajuvula/Shodasa Mathura
+   sequence c. AD 40-90 and records competing early-first-century readings;
+   neither supports a defensible 1 January AD 1 placement.
+
+Recovery: retain the Arjunayana republic and Indo-Scythian Azes court; do not
+add Rajuvula as a current ruler or alter ownership. Revisit only in a sourced
+M10 dated-history pass that can model an evidence-qualified later arrival.
+The tree remains green after this evidence-only review. Source: `OX-MTH` in
+`docs/world_1ad/SOURCES.md`.
+
 ## 2026-07-19 - M6 southern Arabian AD 1 courts lack defensible named current rulers
 
 Status: **deferred; M6 continues with other court and mechanics work.**

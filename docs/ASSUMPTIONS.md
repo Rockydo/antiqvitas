@@ -24,6 +24,18 @@ spouse, accession day, or immediate tag switch. The engine retains Dynamis as
 ruler pending a sourced M10 outcome. Sources weighed: P8.1; OCD; PLE;
 `ZAV-ASP` in `docs/world_1ad/SOURCES.md`. [contested]
 
+## 2026-07-19 - Rajuvula is not placed at the AD 1 Mathura start
+
+Although P8.4 names Rajuvula among the Northern Satrap context, the detailed
+numismatic chronology does not securely put him at the campaign boundary.
+Bhandare places the Rajuvula/Shodasa Mathura sequence around c. AD 40-90 while
+also documenting competing earlier readings. M6 therefore retains the sourced
+Arjunayana republican profile at Mathura and the separate Indo-Scythian Azes
+court; it neither adds Rajuvula as an AD 1 ruler nor alters the M3 political
+map. Rajuvula can enter only through a dated history pass if later evidence
+resolves the project chronology. Sources weighed: P8.4; CAH-XI; `OX-MTH` in
+`docs/world_1ad/SOURCES.md`. [contested]
+
 ## 2026-07-19 - Northern Indian courts distinguish secure continuity from contested sequence
 
 The plan names Azes for the Indo-Scythian AD 1 start, and Iranica establishes

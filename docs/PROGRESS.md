@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-19 - M6 Rajuvula start-date review deferred
+
+- Reviewed the plan's Rajuvula reference against detailed Oxford numismatic
+  work. Its c. AD 40-90 Mathura sequence and acknowledged chronology dispute
+  do not support replacing the Arjunayana AD 1 republic with a Rajuvula court.
+- Recorded the conflict in `BLOCKERS.md`; no map change, fictional current
+  ruler, or unsupported court character was introduced.
+
+Next: continue the source-qualified named-court pass away from this deferred
+chronology conflict.
+
 ## 2026-07-19 - M6 Bosporan Aspurgus claimant
 
 - Added Aspurgus as a source-qualified contested Bosporan court claimant. A
