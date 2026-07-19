@@ -1042,12 +1042,12 @@ the relevant engine rulers. Sources weighed: P8.2; P8.7; `TAC-CHER`;
 [secure for Flavus and Thusnelda; contested for the remaining near-boundary
 records]
 
-## 2026-07-19 - Later Augustan consuls establish adult survival, not a start magistracy
+## 2026-07-19 - Later Augustan consuls establish survival, not a start magistracy
 
 The AD 2-13 *Fasti Capitolini* entries identify thirty-six named ordinary or
 July-suffect consuls absent from the prior roster. A named Roman consulship
 within twelve years of the campaign boundary securely establishes a living
-adult at AD 1, but it does not determine an office on 1 January AD 1, residence,
+person at AD 1, but it does not determine an office on 1 January AD 1, residence,
 family graph, estate, ability, biography date, or later career. Each resulting
 `ROM` identity and its court-line label therefore retains only bounded
 court-context representation. Sources weighed: P8.1; `FASTI-CONS-2-13` in
