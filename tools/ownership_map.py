@@ -21,6 +21,7 @@ from extract_vanilla import tokenize
 
 ROOT = Path(__file__).resolve().parents[1]
 AREAS = ROOT / "docs/world_1ad/ownership_areas.csv"
+RESIDUAL_AREAS = ROOT / "docs/world_1ad/ownership_residual_areas.csv"
 DIRECT = ROOT / "docs/world_1ad/ownership_locations.csv"
 OUTPUT = ROOT / "docs/world_1ad/ownership_resolved.csv"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
@@ -97,13 +98,18 @@ def descendants(key: str, hierarchy: dict[str, list[str]], locations: set[str]) 
         seen.add(current)
         if current in locations:
             result.add(current)
-        else:
-            pending.extend(hierarchy.get(current, []))
+        # A few installed geography nodes are both a named location and a
+        # parent for finer locations (for example, Kilkenny and Qingchi).
+        # Retain the parent itself *and* keep walking its children so a broad
+        # sourced area cannot silently leave those nested ownable locations
+        # unassigned.
+        pending.extend(hierarchy.get(current, []))
     return result
 
 
 def source_rows() -> tuple[list[dict[str, str]], dict[str, str], set[str], dict[str, list[str]], set[str]]:
     area_rows = read_rows(AREAS, AREA_FIELDS)
+    residual_rows = read_rows(RESIDUAL_AREAS, AREA_FIELDS)
     direct_rows = read_rows(DIRECT, DIRECT_FIELDS)
     with ROSTER.open(encoding="utf-8-sig", newline="") as handle:
         roster = list(csv.DictReader(handle))
@@ -114,11 +120,12 @@ def source_rows() -> tuple[list[dict[str, str]], dict[str, str], set[str], dict[
     }
     hierarchy = json.loads(HIERARCHY.read_text(encoding="utf-8-sig"))
     locations = set(json.loads(LOCATIONS.read_text(encoding="utf-8-sig")))
-    return area_rows + direct_rows, capital_by_tag, locations, hierarchy, set(tag_map)
+    return area_rows + residual_rows + direct_rows, capital_by_tag, locations, hierarchy, set(tag_map)
 
 
 def render() -> tuple[str, int, int]:
     area_rows = read_rows(AREAS, AREA_FIELDS)
+    residual_rows = read_rows(RESIDUAL_AREAS, AREA_FIELDS)
     direct_rows = read_rows(DIRECT, DIRECT_FIELDS)
     with ROSTER.open(encoding="utf-8-sig", newline="") as handle:
         roster = list(csv.DictReader(handle))
@@ -187,6 +194,40 @@ def render() -> tuple[str, int, int]:
         # filtered through the vanilla ownership surface; exact reviewed keys
         # are instead proved by the real-game smoke gate.
         add(row["tag"], location, row["tenure"], row["source"], row["confidence"], row["note"])
+    # Residual rows are an explicit last-mile SoP ledger.  They only fill
+    # locations still unclaimed after precise area/direct rows and after any
+    # earlier residual row.  Order is therefore a historical priority order,
+    # not an alphabetical override accident; each row must be source-labelled
+    # and produces no claim over an existing polity's reviewed anchor.
+    for row in residual_rows:
+        try:
+            expanded = descendants(row["geography"], hierarchy, locations) & vanilla_owned
+        except KeyError as exc:
+            errors.append(f"{row['tag']}/{row['geography']}: {exc}")
+            continue
+        available: list[str] = []
+        for location in sorted(expanded):
+            owners = {
+                tag
+                for (tag, claimed_location) in assignments
+                if claimed_location == location
+            }
+            if not owners or owners == {row["tag"]}:
+                available.append(location)
+        if not available:
+            errors.append(
+                f"{row['tag']}/{row['geography']}: no unclaimed vanilla-ownable locations"
+            )
+            continue
+        for location in available:
+            add(
+                row["tag"],
+                location,
+                row["tenure"],
+                row["source"],
+                row["confidence"],
+                row["note"],
+            )
     if errors:
         raise ValueError("\n".join(sorted(set(errors))))
 
