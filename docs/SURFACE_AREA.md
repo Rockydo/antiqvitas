@@ -8,7 +8,8 @@ for its milestone; `deferred` = non-goal or dependency with rationale.
 | Metadata and thumbnail | done | M1, real menu smoke |
 | Loading-screen defines | planned | M2 generator, re-enable after M3 setup mirror |
 | Setup start managers | planned | M3 exact 25-file mirror |
-| Setup countries and templates | planned | M3 |
+| Setup country definitions | in progress | 133 generated, localized and smoke-clean; templates remain M3 |
+| Placeholder coats of arms | in progress | 133 simple engine-native M3 flags; sourced designs are M11 |
 | Common ages and advances | planned | M2 scaffold / M8 full tree |
 | Cultures, languages, religions, pops | planned | M4 |
 | Goods, markets, buildings, roads, development | planned | M5 |

@@ -4,6 +4,7 @@ validate:
 	.venv/Scripts/python.exe tools/pdxlint.py
 	.venv/Scripts/python.exe tools/world_roster.py
 	.venv/Scripts/python.exe tools/generate_tag_map.py --check
+	.venv/Scripts/python.exe tools/generate_country_definitions.py --check
 	.venv/Scripts/python.exe tools/popcheck.py
 
 smoke:

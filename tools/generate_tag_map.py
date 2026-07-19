@@ -14,6 +14,12 @@ ROOT = Path(__file__).resolve().parents[1]
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
 OUTPUT = ROOT / "docs/world_1ad/tag_map.json"
 TAG_LINE = re.compile(r"^([A-Z0-9]{3})\s*=\s*\{")
+ENGINE_TAG = re.compile(r"^[A-Z0-9]{3}$")
+# Verified by smoke on build 24187685: XAD hashes to the unrelated localization
+# key name_li3.mandarin_language.  The engine only reports the collision after
+# it hashes both keys, so reserve observed unsafe values in addition to exact
+# localization spelling collisions.
+HASH_COLLISION_TAGS = {"XAD"}
 
 
 def game_dir() -> Path:
@@ -32,6 +38,20 @@ def vanilla_tags() -> set[str]:
     return tags
 
 
+def localization_keys() -> set[str]:
+    """Tags are localization keys too, so they must not collide with any key.
+
+    The country database reports these as hash collisions during load, even if
+    the conflicting key belongs to an unrelated system.
+    """
+    source = ROOT / "docs/vanilla_symbols/localization_key.json"
+    return {
+        key
+        for key in json.loads(source.read_text(encoding="utf-8-sig"))
+        if ENGINE_TAG.fullmatch(key)
+    }
+
+
 def generated_tags() -> list[str]:
     for second in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
         for third in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
@@ -42,23 +62,25 @@ def build_map() -> dict[str, object]:
     with ROSTER.open(encoding="utf-8-sig", newline="") as handle:
         roster = list(csv.DictReader(handle))
     vanilla = vanilla_tags()
-    used = set(vanilla)
+    loc_keys = localization_keys()
+    used = set(vanilla) | loc_keys | HASH_COLLISION_TAGS
     replacement = generated_tags()
     entries: list[dict[str, object]] = []
     for row in roster:
         design = row["tag"]
+        vanilla_collision = design in vanilla
+        localization_collision = design in loc_keys
         if design not in used:
             engine = design
-            collision = False
         else:
             engine = next(candidate for candidate in replacement if candidate not in used)
-            collision = True
         used.add(engine)
         entries.append(
             {
                 "design_tag": design,
                 "engine_tag": engine,
-                "vanilla_collision": collision,
+                "vanilla_collision": vanilla_collision,
+                "localization_collision": localization_collision,
                 "name": row["name"],
             }
         )
@@ -68,6 +90,10 @@ def build_map() -> dict[str, object]:
         )["game_build_id"],
         "entry_count": len(entries),
         "collision_count": sum(1 for entry in entries if entry["vanilla_collision"]),
+        "localization_collision_count": sum(
+            1 for entry in entries if entry["localization_collision"]
+        ),
+        "reserved_hash_collision_tags": sorted(HASH_COLLISION_TAGS),
         "entries": entries,
     }
 
@@ -94,7 +120,8 @@ def main() -> int:
     payload = json.loads(actual)
     print(
         f"tag_map: PASS ({payload['entry_count']} entries; "
-        f"{payload['collision_count']} vanilla collisions remapped)"
+        f"{payload['collision_count']} vanilla and "
+        f"{payload['localization_collision_count']} localization collisions remapped)"
     )
     return 0
 
