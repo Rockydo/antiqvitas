@@ -238,6 +238,15 @@ ORBIS; Italian Ministry of Culture on the Appian Way
 UNESCO on Uttarapatha (https://whc.unesco.org/en/tentativelists/5492/).
 [contested]
 
+## 2026-07-19 - Pythodoris of Pontus at Colchis
+
+Strabo explicitly states that Pythodoris ruled the Colchians after Polemon's
+death, and a Tbilisi State University study places her still in power around AD
+19/20. Her current AD 1 placement is therefore secure. The Pythodorid label is
+only an engine continuity key: no formal dynasty, day-level accession, wider
+Pontic territorial setup, or succession is reconstructed. Sources weighed:
+P8.2; OCD; PLE; `STR-CLZ`; `TSU-CLZ` in `docs/world_1ad/SOURCES.md`. [contested]
+
 ## 2026-07-19 — Taxila market represented at Attock
 
 The Taxila archaeological complex included Sirsukh, a first-century AD city,

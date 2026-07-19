@@ -152,6 +152,16 @@ coverage, not a claim that the much larger named-character, dynasty, regnal,
 estate, and history requirements of M6 are complete. Sources: P8.7-P8.8; P13;
 CAH-XI; CHG; PLE.
 
+## Colchian Pythodoris court
+
+Pythodoris of Pontus replaces Colchis's anonymous ruler. Strabo directly
+records her ruling the Colchians after Polemon's death, and the Tbilisi State
+University cross-check places her in power about AD 19/20. The generated term
+therefore begins only at the campaign boundary; it scripts neither an
+accession day nor a successor. Her Pythodorid royal-house key is an engine
+continuity label, not a reconstructed formal dynasty. Sources: P8.2; OCD; PLE;
+`STR-CLZ`; `TSU-CLZ` in the source ledger.
+
 ## Coinage standards
 
 Rome's socioeconomic law uses the installed gold-and-silver minting contract

@@ -44,6 +44,9 @@ a row reaches `implemented` status.
 - `OCD-HIM`: *Oxford Classical Dictionary*, ["Himyar"](https://academic.oup.com/edited-volume/61673/chapter-abstract/548062792), used for first-century South Arabian political context, not a current AD 1 ruler.
 - `ABG-QAT`: M. A. A. Bayoumi, ["Two Old South Arabian Inscriptions: Early and Late"](https://abgad.journals.ekb.eg/article_55744_3863aa70f25af459bb9fd21541fe81c4.pdf), used to establish that the Yuhargib III evidence is mid-first-century rather than campaign-boundary evidence.
 
+- `STR-CLZ`: Strabo, [*Geography* 11.2.18](https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Aabo%3Atlg%2C0099%2C001%3A11), the primary account that Pythodoris ruled the Colchians after Polemon's death.
+- `TSU-CLZ`: Tedo Dundua, ["Colchis and Pontus of Polemons"](https://dspace.tsu.ge/bitstreams/2d55da34-a15f-44c1-a68b-cd1a3d6e0d02/download), used as the scholarly cross-check that Pythodoris remained alive and ruling Colchis c. AD 19/20.
+
 Rows marked `contested` have a corresponding entry in `docs/ASSUMPTIONS.md`.
 `TBD` map capitals are historical roster records awaiting a verified mapping to
 the installed EU5 location key; they are not silently guessed.
