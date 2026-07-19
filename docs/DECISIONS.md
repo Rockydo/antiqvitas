@@ -1,5 +1,30 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Biography dates are a narrow signed-date domain
+
+Campaign time remains exclusively `AntqDate` (`1.1.1` through `476.9.4`).
+Character `birth_date` and `death_date` are separately parsed through
+`BiographyDate`, which permits only years -1000 through 476 and rejects year
+zero. This is necessary for the plan's AD 1 Augustus roster, while preventing
+an accidental pre-AD-1 campaign script from passing validation. `pdxlint`
+recognizes the exception only on those two named fields.
+
+## 2026-07-19 — M6 reskins installed government types through reforms
+
+Build 24187685 exposes only five government types. The initial Principate, Han
+Imperial Bureaucracy, and Parthian King of Kings are therefore `monarchy`
+profiles with unique, locally verified government-reform modifiers. The
+adapter is explicit in generated data and localization; it is not a historical
+claim that the three states shared one institution. New estates, privileges,
+laws, and values remain subsequent M6 work.
+
+## 2026-07-19 — Western Han uses the Jingzhao/Xi'an Chang'an anchor
+
+The installed key `changan` is north of the historical city. The local
+`jingzhao` (Xi'an) key is the 4.4-pixel coordinate match for Chang'an, so it
+replaces the prior erroneous Luoyang capital. `capital_mapper.py` records that
+specific alias to keep generated candidate reports honest.
+
 ## 2026-07-19 — Via Appia starts at the first installed inland proxy
 
 The installed location map has no Capua key. The road generator therefore uses

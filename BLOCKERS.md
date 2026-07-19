@@ -59,6 +59,12 @@ evidence exists.
 
 Status: **deferred to M5/M6/M9; M3 remains untagged.**
 
+M6 update: the initial Rome/Han/Parthia core now supplies three sourced
+government profiles, three dynasties, and nine characters; an AD 1 observer
+run contains no new M6 identifier. The shared runtime boundary remains because
+the rest of M6's government/law/character surface and M9's IO/HRE replacements
+are still incomplete. The M6 inspector-UI coverage gap is in `KNOWN_ISSUES.md`.
+
 M5 update: a subsequent AD 1 observer probe reached 11 January with market
 construction notifications and no market, town-setup, RGO, or road errors.
 The remaining active categories are unset capital/government and
