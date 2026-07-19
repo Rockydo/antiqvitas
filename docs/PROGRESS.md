@@ -1208,3 +1208,15 @@ careers in the M10 history pass.
 
 Next: continue direct-evidence court coverage while preserving the independent
 Han minority-regency runtime blocker.
+
+## 2026-07-19 - M6 Han regency-circle slice
+
+- Added Zhen Feng, Zhen Han, Ping Yan, and Liu Xin from the direct *Han Shu*
+  account of Wang Mang's active regency circle. The source also supplies the
+  first Yuan Shi-year decree for the two Zhens.
+- Each is a court-only record. Individual engine identity labels avoid
+  fabricating office terms, abilities, regency roles, or a shared genealogy.
+  The source limits are recorded in [the Han court note](m6/HAN_COURT_AD1.md).
+
+Next: continue direct-evidence roster coverage while retaining the Han runtime
+regency failure as a separately documented blocker.
