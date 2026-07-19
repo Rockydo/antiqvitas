@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-19 - M6 Thracian succession-court slice
+
+- Added Rhascyporis of Thrace as a living Sapaean court record. Tacitus's AD
+  12 succession settlement identifies him as Rhoemetalces I's brother, which
+  securely establishes AD 1 survival without supplying an AD 1 office or reign.
+- The record deliberately does not script a title, co-rule, territory,
+  accession date, residence, or expanded genealogy. Cotys remains the sole
+  existing direct heir-context record.
+
+Next: regenerate, validate, smoke-test, then continue direct-evidence Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Augustan legal-record batch
 
 - Added Gaius Asinius Pollio, Marcus Antistius Labeo, and Gaius Ateius Capito
