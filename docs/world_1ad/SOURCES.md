@@ -19,6 +19,15 @@ a row reaches `implemented` status.
   Ocean ports and trade polities.
 - `SAM`: *Samguk Sagi* conventional dates, explicitly marked contested where
   modern archaeology does not confirm a date.
+- `MET`: The Metropolitan Museum of Art's Roman-empire chronology, used for
+  the non-controversial Augustan reign span only:
+  [The Roman Empire, 27 B.C.–393 A.D.](https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d).
+- `WIKI-HAN`: Wikipedia's [*List of emperors of the Han dynasty*](https://en.wikipedia.org/wiki/List_of_emperors_of_the_Han_dynasty), used only as the
+  plan-permitted gazetteer-level cross-check for conventional Western Han
+  accession/reign years; `BHR` remains the project's substantive Han source.
+- `IRAN-PHR`: Marek Jan Olbrycht's peer-reviewed *Encyclopaedia Iranica*
+  [â€œPhraates Vâ€](https://www.iranicaonline.org/articles/phraates-v/), used for
+  the 2 BCEâ€“AD 4 Phraates V reign span and Musa co-rule.
 
 Rows marked `contested` have a corresponding entry in `docs/ASSUMPTIONS.md`.
 `TBD` map capitals are historical roster records awaiting a verified mapping to

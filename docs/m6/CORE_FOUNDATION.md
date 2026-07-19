@@ -29,6 +29,20 @@ new historical claims: `1 January` is a documented engine representation for an
 attested year whose day/month is unknown. Musa and Phraates V deliberately have
 no scripted biography date because the cited evidence does not justify one.
 
+## Regnal-history boundary
+
+`regnal_histories.csv` retains the source-labelled Augustus and continuous
+Western Han succession sequences, including the two short Lu-regency reigns and
+Liu He. It is historical reference data, not a pre-campaign script calendar.
+`ruler_terms.csv` renders one current-ruler `ruler_term` for every implemented
+government profile, all beginning at `1.1.1` through `AntqDate`. A signed
+pre-campaign term parses at the menu, but the existing live AD 1 start probe
+already demonstrated that the engine validates historic terms against the new
+campaign boundary. The generator therefore prevents an out-of-range term from
+being emitted, while retaining the cited reign spans for later succession
+situations. This is intentional date safety, not a claim that every ruler
+acceded on 1 January AD 1.
+
 ## Technical adapter
 
 EU5 1.3.1.1 exposes only `monarchy`, `republic`, `steppe_horde`, `theocracy`,
