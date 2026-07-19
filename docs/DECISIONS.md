@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-19 - M6 uses a bounded Regional Kingship adapter
+
+The installed `monarchy` surface is the narrowest valid contract for an
+attested regional court whose current AD 1 ruler is not defensibly named. M6
+therefore adds `antq_regional_kingship`, a small crown-power/cabinet-efficiency
+reform paired with an explicitly generic court privilege and administrative
+law. It is deliberately lower-claim than the specific Han, Parthian, Roman,
+Kushite, or frontier adapters. The random-ruler sentinel supplies an engine
+character while the ledger keeps the historical omission visible.
+
 ## 2026-07-19 - Northern Indian courts use separate bounded monarchy reforms
 
 The installed monarchy and estate/law modifier contracts are sufficient to

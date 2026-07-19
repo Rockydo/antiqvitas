@@ -131,6 +131,16 @@ antq_early_korean_kingdom = {
 	years = 2
 }
 
+antq_regional_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_crown_estate_power = 0.05
+		country_cabinet_efficiency = 0.025
+	}
+	years = 2
+}
+
 antq_tribal_kingdom = {
 	major = yes
 	government = tribe

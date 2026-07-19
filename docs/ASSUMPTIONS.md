@@ -618,3 +618,13 @@ Caledonian societies, or Ulaid on 1 January AD 1. They receive anonymous tribal
 profiles rather than fabricated courts. Boudica, Cartimandua, Verica, and the
 Roman-conquest sequence remain dated M10 history rather than evidence for a
 start-date incumbent. Sources weighed: P8.7; P13; CAH-XI. [contested]
+
+## 2026-07-19 - Eastern anonymous courts and societies
+
+The plan establishes Tarim city-states and Buyeo as regional courts but does
+not supply a campaign-boundary incumbent in the project source route. They use
+the bounded Regional Kingship adapter with an engine-generated ruler. Mahan,
+Jinhan, Byeonhan, Yayoi Wa, Yuezhi, Xianbei, Wuhuan, and Dingling are explicitly
+SoP or confederacy frames and therefore receive anonymous tribal profiles.
+Neither adapter claims a shared constitution or an unrecorded dynasty. Sources
+weighed: P8.3-P8.4; P8.8; P13; CAH-XI; CHG; SAM. [contested]
