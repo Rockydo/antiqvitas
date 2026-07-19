@@ -2030,6 +2030,18 @@ countries = {
 				reforms = {
 					antq_principate
 				}
+				privilege = {
+					antq_senatorial_land_exemption
+					antq_annona_privilege
+					antq_praetorian_donatives
+				}
+				laws = {
+					antq_citizenship_law = antq_peregrini_status
+					antq_recruitment_law = antq_professional_legions
+				}
+				centralization_vs_decentralization = 55
+				aristocracy_vs_plutocracy = -55
+				capital_economy_vs_traditional_economy = 45
 			}
 			capital = rome
 		}
@@ -2910,6 +2922,15 @@ countries = {
 				reforms = {
 					antq_parthian_king_of_kings
 				}
+				privilege = {
+					antq_parthian_great_house_autonomy
+				}
+				laws = {
+					antq_parthian_autonomy_law = antq_great_house_compact
+				}
+				centralization_vs_decentralization = -35
+				aristocracy_vs_plutocracy = -70
+				capital_economy_vs_traditional_economy = 25
 			}
 			capital = baghdad
 		}
@@ -5189,6 +5210,15 @@ countries = {
 				reforms = {
 					antq_han_imperial_bureaucracy
 				}
+				privilege = {
+					antq_han_palace_bureau
+				}
+				laws = {
+					antq_han_administration_law = antq_commandery_bureaucracy
+				}
+				centralization_vs_decentralization = 65
+				traditionalist_vs_innovative = 15
+				capital_economy_vs_traditional_economy = 35
 			}
 			capital = jingzhao
 		}
