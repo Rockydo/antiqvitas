@@ -249,4 +249,45 @@ character_db = {
 		tag = XAF
 	}
 
+	antq_iamblichus_ii = {
+		first_name = { name = antq_iamblichus_ii }
+		culture = antq_aramaic
+		religion = antq_hellenic
+		dynasty = antq_sampsigeramid_dynasty
+		tag = EME
+	}
+
+	antq_abgar_v = {
+		first_name = { name = antq_abgar_v }
+		culture = antq_aramaic
+		religion = antq_arsacid_zoroastrianism
+		dynasty = antq_abgarid_dynasty
+		tag = OSR
+	}
+
+	antq_ariobarzanes_ii_atropatene = {
+		first_name = { name = antq_ariobarzanes_ii_atropatene }
+		culture = antq_median
+		religion = antq_arsacid_zoroastrianism
+		dynasty = antq_atropatenian_royal_house
+		tag = XAK
+	}
+
+	antq_tigranes_iv = {
+		first_name = { name = antq_tigranes_iv }
+		culture = antq_armenian
+		religion = antq_arsacid_zoroastrianism
+		dynasty = antq_artaxiad_dynasty
+		tag = XAO
+	}
+
+	antq_erato_armenia = {
+		first_name = { name = antq_erato_armenia }
+		culture = antq_armenian
+		religion = antq_arsacid_zoroastrianism
+		female = yes
+		dynasty = antq_artaxiad_dynasty
+		tag = XAO
+	}
+
 }

@@ -2298,7 +2298,24 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = antq_iamblichus_ii
+				ruler_term = { character = antq_iamblichus_ii start_date = 1.1.1 }
+				reforms = {
+					antq_client_monarchy
+				}
+				privilege = {
+					antq_client_royal_autonomy
+				}
+				laws = {
+					antq_client_governance_law = antq_roman_client_compact
+				}
+				centralization_vs_decentralization = 15
+				aristocracy_vs_plutocracy = -20
+				capital_economy_vs_traditional_economy = 30
+			}
 			capital = homs
 		}
 
@@ -3243,7 +3260,24 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = antq_ariobarzanes_ii_atropatene
+				ruler_term = { character = antq_ariobarzanes_ii_atropatene start_date = 1.1.1 }
+				reforms = {
+					antq_parthian_subkingdom
+				}
+				privilege = {
+					antq_parthian_subking_autonomy
+				}
+				laws = {
+					antq_parthian_subking_law = antq_regional_court_compact
+				}
+				centralization_vs_decentralization = -20
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 30
+			}
 			capital = malekan
 		}
 
@@ -3263,7 +3297,24 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = antq_abgar_v
+				ruler_term = { character = antq_abgar_v start_date = 1.1.1 }
+				reforms = {
+					antq_buffer_kingdom
+				}
+				privilege = {
+					antq_border_court_autonomy
+				}
+				laws = {
+					antq_buffer_kingdom_law = antq_balanced_allegiance
+				}
+				centralization_vs_decentralization = 5
+				aristocracy_vs_plutocracy = -25
+				capital_economy_vs_traditional_economy = 35
+			}
 			capital = urfa
 		}
 
@@ -3425,7 +3476,25 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = antq_tigranes_iv
+				consort = antq_erato_armenia
+				ruler_term = { character = antq_tigranes_iv start_date = 1.1.1 }
+				reforms = {
+					antq_buffer_kingdom
+				}
+				privilege = {
+					antq_border_court_autonomy
+				}
+				laws = {
+					antq_buffer_kingdom_law = antq_balanced_allegiance
+				}
+				centralization_vs_decentralization = 10
+				aristocracy_vs_plutocracy = -30
+				capital_economy_vs_traditional_economy = 30
+			}
 			capital = khor_virap
 		}
 
