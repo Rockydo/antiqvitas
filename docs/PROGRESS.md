@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-19 - M6 Roman-hosted Agrippa I court record
+
+- Added Herod Agrippa I as a source-qualified Roman-hosted Herodian youth.
+- The Museum's age-at-death and age-six Roman education establish only a
+  bounded AD 1 court presence; no office, title, command, exact date, or later
+  kingship has been projected into the start.
+
+Next: regenerate, validate, smoke-test, then continue source-led Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Cappadocian Glaphyra court record
 
 - Added Glaphyra as King Archelaus of Cappadocia's source-qualified daughter

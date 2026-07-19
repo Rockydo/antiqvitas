@@ -9,3 +9,10 @@ The M6 record treats this as court presence and a local Herodian interest. It
 does not create a separate polity, presume an engine office, give a biography
 date, or reconstruct a later succession. Those territorial and chronological
 questions belong to the M3 map and M10 history layers respectively.
+
+Herod Agrippa I is separately a Roman-hosted Herodian court youth. Josephus
+places him in Rome before Herod's death and says he left only after Drusus's
+later death; the British Museum corroborates his Roman education from age six.
+This secures his Roman setting at the campaign boundary but does not import a
+start-state title, office, command, precise birth date, or his later kingship
+(`JOS-AGR`; `BM-AGR` in the source ledger).
