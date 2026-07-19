@@ -14,6 +14,16 @@
 Next: map every roster capital to local EU5 locations, generate country
 definitions/localization, then construct the exact 25-file M3 setup mirror.
 
+## 2026-07-19 — M3 tag isolation
+
+- Compared all 133 planned roster codes to the 2,339 country definitions in
+  the installed build. Sixty-seven names collide with vanilla/releasable tags.
+- Added a deterministic generated tag map: non-conflicting design tags stay
+  readable; collisions receive stable internal `X..` tags. The map is checked
+  against the installed build on every validation run.
+
+Next: use the stable engine-tag map for country definitions and AD 1 setup.
+
 ## 2026-07-19
 
 - Read the complete master plan and reread Part I for this session.

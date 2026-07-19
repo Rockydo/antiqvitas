@@ -1,0 +1,805 @@
+{
+  "game_build": "24187685",
+  "entry_count": 133,
+  "collision_count": 67,
+  "entries": [
+    {
+      "design_tag": "ROM",
+      "engine_tag": "ROM",
+      "vanilla_collision": false,
+      "name": "Roman Empire"
+    },
+    {
+      "design_tag": "JUD",
+      "engine_tag": "JUD",
+      "vanilla_collision": false,
+      "name": "Herodian Judea"
+    },
+    {
+      "design_tag": "GAL",
+      "engine_tag": "XAA",
+      "vanilla_collision": true,
+      "name": "Herodian Galilee-Peraea"
+    },
+    {
+      "design_tag": "BAT",
+      "engine_tag": "XAB",
+      "vanilla_collision": true,
+      "name": "Herodian Batanea"
+    },
+    {
+      "design_tag": "NAB",
+      "engine_tag": "NAB",
+      "vanilla_collision": false,
+      "name": "Nabataea"
+    },
+    {
+      "design_tag": "CAP",
+      "engine_tag": "CAP",
+      "vanilla_collision": false,
+      "name": "Cappadocia"
+    },
+    {
+      "design_tag": "COM",
+      "engine_tag": "XAC",
+      "vanilla_collision": true,
+      "name": "Commagene"
+    },
+    {
+      "design_tag": "EME",
+      "engine_tag": "EME",
+      "vanilla_collision": false,
+      "name": "Emesa"
+    },
+    {
+      "design_tag": "THR",
+      "engine_tag": "THR",
+      "vanilla_collision": false,
+      "name": "Odrysian Thrace"
+    },
+    {
+      "design_tag": "BOS",
+      "engine_tag": "XAD",
+      "vanilla_collision": true,
+      "name": "Bosporan Kingdom"
+    },
+    {
+      "design_tag": "MAU",
+      "engine_tag": "XAE",
+      "vanilla_collision": true,
+      "name": "Mauretania"
+    },
+    {
+      "design_tag": "PAR",
+      "engine_tag": "XAF",
+      "vanilla_collision": true,
+      "name": "Parthian Empire"
+    },
+    {
+      "design_tag": "CHA",
+      "engine_tag": "XAG",
+      "vanilla_collision": true,
+      "name": "Characene"
+    },
+    {
+      "design_tag": "ELY",
+      "engine_tag": "XAH",
+      "vanilla_collision": true,
+      "name": "Elymais"
+    },
+    {
+      "design_tag": "PRS",
+      "engine_tag": "PRS",
+      "vanilla_collision": false,
+      "name": "Persis"
+    },
+    {
+      "design_tag": "ATR",
+      "engine_tag": "XAI",
+      "vanilla_collision": true,
+      "name": "Media Atropatene"
+    },
+    {
+      "design_tag": "ADI",
+      "engine_tag": "ADI",
+      "vanilla_collision": false,
+      "name": "Adiabene"
+    },
+    {
+      "design_tag": "OSR",
+      "engine_tag": "OSR",
+      "vanilla_collision": false,
+      "name": "Osroene"
+    },
+    {
+      "design_tag": "GOR",
+      "engine_tag": "XAJ",
+      "vanilla_collision": true,
+      "name": "Gordyene"
+    },
+    {
+      "design_tag": "SKT",
+      "engine_tag": "XAK",
+      "vanilla_collision": true,
+      "name": "Sakastan"
+    },
+    {
+      "design_tag": "MRG",
+      "engine_tag": "MRG",
+      "vanilla_collision": false,
+      "name": "Margiana"
+    },
+    {
+      "design_tag": "ARM",
+      "engine_tag": "XAM",
+      "vanilla_collision": true,
+      "name": "Armenia"
+    },
+    {
+      "design_tag": "IBR",
+      "engine_tag": "IBR",
+      "vanilla_collision": false,
+      "name": "Caucasian Iberia"
+    },
+    {
+      "design_tag": "CLZ",
+      "engine_tag": "CLZ",
+      "vanilla_collision": false,
+      "name": "Colchis"
+    },
+    {
+      "design_tag": "ALC",
+      "engine_tag": "XAN",
+      "vanilla_collision": true,
+      "name": "Caucasian Albania"
+    },
+    {
+      "design_tag": "HAN",
+      "engine_tag": "HAN",
+      "vanilla_collision": false,
+      "name": "Western Han"
+    },
+    {
+      "design_tag": "XIO",
+      "engine_tag": "XIO",
+      "vanilla_collision": false,
+      "name": "Xiongnu Confederation"
+    },
+    {
+      "design_tag": "KHT",
+      "engine_tag": "XAO",
+      "vanilla_collision": true,
+      "name": "Khotan"
+    },
+    {
+      "design_tag": "KUC",
+      "engine_tag": "KUC",
+      "vanilla_collision": false,
+      "name": "Kucha"
+    },
+    {
+      "design_tag": "KAS",
+      "engine_tag": "XAQ",
+      "vanilla_collision": true,
+      "name": "Kashgar"
+    },
+    {
+      "design_tag": "LOU",
+      "engine_tag": "LOU",
+      "vanilla_collision": false,
+      "name": "Loulan"
+    },
+    {
+      "design_tag": "TUR",
+      "engine_tag": "XAR",
+      "vanilla_collision": true,
+      "name": "Turfan"
+    },
+    {
+      "design_tag": "GOG",
+      "engine_tag": "GOG",
+      "vanilla_collision": false,
+      "name": "Goguryeo"
+    },
+    {
+      "design_tag": "BUY",
+      "engine_tag": "BUY",
+      "vanilla_collision": false,
+      "name": "Buyeo"
+    },
+    {
+      "design_tag": "MAH",
+      "engine_tag": "XAS",
+      "vanilla_collision": true,
+      "name": "Mahan"
+    },
+    {
+      "design_tag": "JIN",
+      "engine_tag": "JIN",
+      "vanilla_collision": false,
+      "name": "Jinhan"
+    },
+    {
+      "design_tag": "BYE",
+      "engine_tag": "BYE",
+      "vanilla_collision": false,
+      "name": "Byeonhan"
+    },
+    {
+      "design_tag": "WAA",
+      "engine_tag": "WAA",
+      "vanilla_collision": false,
+      "name": "Wa"
+    },
+    {
+      "design_tag": "SAT",
+      "engine_tag": "SAT",
+      "vanilla_collision": false,
+      "name": "Satavahana"
+    },
+    {
+      "design_tag": "ISK",
+      "engine_tag": "XAT",
+      "vanilla_collision": true,
+      "name": "Indo-Scythian Realm"
+    },
+    {
+      "design_tag": "IGR",
+      "engine_tag": "XAV",
+      "vanilla_collision": true,
+      "name": "Indo-Greek Rump"
+    },
+    {
+      "design_tag": "YUE",
+      "engine_tag": "YUE",
+      "vanilla_collision": false,
+      "name": "Yuezhi Confederation"
+    },
+    {
+      "design_tag": "YDH",
+      "engine_tag": "YDH",
+      "vanilla_collision": false,
+      "name": "Yaudheya"
+    },
+    {
+      "design_tag": "ARJ",
+      "engine_tag": "ARJ",
+      "vanilla_collision": false,
+      "name": "Arjunayana"
+    },
+    {
+      "design_tag": "KUN",
+      "engine_tag": "XAW",
+      "vanilla_collision": true,
+      "name": "Kuninda"
+    },
+    {
+      "design_tag": "KAL",
+      "engine_tag": "XAX",
+      "vanilla_collision": true,
+      "name": "Kalinga"
+    },
+    {
+      "design_tag": "CHE",
+      "engine_tag": "XAY",
+      "vanilla_collision": true,
+      "name": "Chera"
+    },
+    {
+      "design_tag": "CHL",
+      "engine_tag": "XAZ",
+      "vanilla_collision": true,
+      "name": "Chola"
+    },
+    {
+      "design_tag": "PND",
+      "engine_tag": "PND",
+      "vanilla_collision": false,
+      "name": "Pandya"
+    },
+    {
+      "design_tag": "ANU",
+      "engine_tag": "XBA",
+      "vanilla_collision": true,
+      "name": "Anuradhapura"
+    },
+    {
+      "design_tag": "KUS",
+      "engine_tag": "XBB",
+      "vanilla_collision": true,
+      "name": "Kush"
+    },
+    {
+      "design_tag": "AKS",
+      "engine_tag": "AKS",
+      "vanilla_collision": false,
+      "name": "Aksum"
+    },
+    {
+      "design_tag": "GAR",
+      "engine_tag": "XBC",
+      "vanilla_collision": true,
+      "name": "Garamantes"
+    },
+    {
+      "design_tag": "BLM",
+      "engine_tag": "XBD",
+      "vanilla_collision": true,
+      "name": "Blemmyes"
+    },
+    {
+      "design_tag": "BEJ",
+      "engine_tag": "BEJ",
+      "vanilla_collision": false,
+      "name": "Beja"
+    },
+    {
+      "design_tag": "DJN",
+      "engine_tag": "DJN",
+      "vanilla_collision": false,
+      "name": "Djenne-Djenno"
+    },
+    {
+      "design_tag": "SAB",
+      "engine_tag": "XBE",
+      "vanilla_collision": true,
+      "name": "Saba"
+    },
+    {
+      "design_tag": "HIM",
+      "engine_tag": "HIM",
+      "vanilla_collision": false,
+      "name": "Himyar"
+    },
+    {
+      "design_tag": "QAT",
+      "engine_tag": "QAT",
+      "vanilla_collision": false,
+      "name": "Qataban"
+    },
+    {
+      "design_tag": "HAD",
+      "engine_tag": "XBF",
+      "vanilla_collision": true,
+      "name": "Hadramawt"
+    },
+    {
+      "design_tag": "KIN",
+      "engine_tag": "KIN",
+      "vanilla_collision": false,
+      "name": "Kindah"
+    },
+    {
+      "design_tag": "MCM",
+      "engine_tag": "XBG",
+      "vanilla_collision": true,
+      "name": "Marcomanni"
+    },
+    {
+      "design_tag": "CRU",
+      "engine_tag": "CRU",
+      "vanilla_collision": false,
+      "name": "Cherusci"
+    },
+    {
+      "design_tag": "CHT",
+      "engine_tag": "XBH",
+      "vanilla_collision": true,
+      "name": "Chatti"
+    },
+    {
+      "design_tag": "FRI",
+      "engine_tag": "XBI",
+      "vanilla_collision": true,
+      "name": "Frisii"
+    },
+    {
+      "design_tag": "BTV",
+      "engine_tag": "BTV",
+      "vanilla_collision": false,
+      "name": "Batavi"
+    },
+    {
+      "design_tag": "LAN",
+      "engine_tag": "XBJ",
+      "vanilla_collision": true,
+      "name": "Langobardi"
+    },
+    {
+      "design_tag": "SEM",
+      "engine_tag": "SEM",
+      "vanilla_collision": false,
+      "name": "Semnones"
+    },
+    {
+      "design_tag": "HER",
+      "engine_tag": "HER",
+      "vanilla_collision": false,
+      "name": "Hermunduri"
+    },
+    {
+      "design_tag": "QUA",
+      "engine_tag": "XBK",
+      "vanilla_collision": true,
+      "name": "Quadi"
+    },
+    {
+      "design_tag": "GUT",
+      "engine_tag": "GUT",
+      "vanilla_collision": false,
+      "name": "Gutones"
+    },
+    {
+      "design_tag": "VAN",
+      "engine_tag": "VAN",
+      "vanilla_collision": false,
+      "name": "Vandili"
+    },
+    {
+      "design_tag": "RUG",
+      "engine_tag": "RUG",
+      "vanilla_collision": false,
+      "name": "Rugii"
+    },
+    {
+      "design_tag": "BRG",
+      "engine_tag": "XBL",
+      "vanilla_collision": true,
+      "name": "Burgundiones"
+    },
+    {
+      "design_tag": "ANG",
+      "engine_tag": "XBM",
+      "vanilla_collision": true,
+      "name": "Angles"
+    },
+    {
+      "design_tag": "SAX",
+      "engine_tag": "SAX",
+      "vanilla_collision": false,
+      "name": "Saxons"
+    },
+    {
+      "design_tag": "JUT",
+      "engine_tag": "JUT",
+      "vanilla_collision": false,
+      "name": "Jutes"
+    },
+    {
+      "design_tag": "SUI",
+      "engine_tag": "XBN",
+      "vanilla_collision": true,
+      "name": "Suiones"
+    },
+    {
+      "design_tag": "AES",
+      "engine_tag": "AES",
+      "vanilla_collision": false,
+      "name": "Aestii"
+    },
+    {
+      "design_tag": "VEN",
+      "engine_tag": "XBO",
+      "vanilla_collision": true,
+      "name": "Venedi"
+    },
+    {
+      "design_tag": "FIN",
+      "engine_tag": "XBP",
+      "vanilla_collision": true,
+      "name": "Finnic Societies"
+    },
+    {
+      "design_tag": "CAT",
+      "engine_tag": "XBQ",
+      "vanilla_collision": true,
+      "name": "Catuvellauni"
+    },
+    {
+      "design_tag": "TRI",
+      "engine_tag": "XBR",
+      "vanilla_collision": true,
+      "name": "Trinovantes"
+    },
+    {
+      "design_tag": "ICE",
+      "engine_tag": "XBS",
+      "vanilla_collision": true,
+      "name": "Iceni"
+    },
+    {
+      "design_tag": "BRI",
+      "engine_tag": "XBT",
+      "vanilla_collision": true,
+      "name": "Brigantes"
+    },
+    {
+      "design_tag": "ATB",
+      "engine_tag": "XBU",
+      "vanilla_collision": true,
+      "name": "Atrebates"
+    },
+    {
+      "design_tag": "SIL",
+      "engine_tag": "SIL",
+      "vanilla_collision": false,
+      "name": "Silures"
+    },
+    {
+      "design_tag": "ORD",
+      "engine_tag": "XBV",
+      "vanilla_collision": true,
+      "name": "Ordovices"
+    },
+    {
+      "design_tag": "DUM",
+      "engine_tag": "DUM",
+      "vanilla_collision": false,
+      "name": "Dumnonii"
+    },
+    {
+      "design_tag": "CAL",
+      "engine_tag": "CAL",
+      "vanilla_collision": false,
+      "name": "Caledonian Societies"
+    },
+    {
+      "design_tag": "ULA",
+      "engine_tag": "XBW",
+      "vanilla_collision": true,
+      "name": "Ulaid"
+    },
+    {
+      "design_tag": "DAC",
+      "engine_tag": "DAC",
+      "vanilla_collision": false,
+      "name": "Dacian Kingdoms"
+    },
+    {
+      "design_tag": "GET",
+      "engine_tag": "GET",
+      "vanilla_collision": false,
+      "name": "Getae"
+    },
+    {
+      "design_tag": "BAS",
+      "engine_tag": "XBX",
+      "vanilla_collision": true,
+      "name": "Bastarnae"
+    },
+    {
+      "design_tag": "IAZ",
+      "engine_tag": "IAZ",
+      "vanilla_collision": false,
+      "name": "Iazyges"
+    },
+    {
+      "design_tag": "ROX",
+      "engine_tag": "ROX",
+      "vanilla_collision": false,
+      "name": "Roxolani"
+    },
+    {
+      "design_tag": "AOR",
+      "engine_tag": "AOR",
+      "vanilla_collision": false,
+      "name": "Aorsi"
+    },
+    {
+      "design_tag": "SIR",
+      "engine_tag": "XBY",
+      "vanilla_collision": true,
+      "name": "Siraces"
+    },
+    {
+      "design_tag": "ALA",
+      "engine_tag": "XBZ",
+      "vanilla_collision": true,
+      "name": "Alans"
+    },
+    {
+      "design_tag": "KNG",
+      "engine_tag": "XCA",
+      "vanilla_collision": true,
+      "name": "Kangju"
+    },
+    {
+      "design_tag": "WSN",
+      "engine_tag": "WSN",
+      "vanilla_collision": false,
+      "name": "Wusun"
+    },
+    {
+      "design_tag": "DAY",
+      "engine_tag": "DAY",
+      "vanilla_collision": false,
+      "name": "Dayuan"
+    },
+    {
+      "design_tag": "SOG",
+      "engine_tag": "SOG",
+      "vanilla_collision": false,
+      "name": "Sogdian Cities"
+    },
+    {
+      "design_tag": "KHW",
+      "engine_tag": "KHW",
+      "vanilla_collision": false,
+      "name": "Khwarazm"
+    },
+    {
+      "design_tag": "XIA",
+      "engine_tag": "XIA",
+      "vanilla_collision": false,
+      "name": "Xianbei"
+    },
+    {
+      "design_tag": "WHU",
+      "engine_tag": "WHU",
+      "vanilla_collision": false,
+      "name": "Wuhuan"
+    },
+    {
+      "design_tag": "DNG",
+      "engine_tag": "XCB",
+      "vanilla_collision": true,
+      "name": "Dingling"
+    },
+    {
+      "design_tag": "PYU",
+      "engine_tag": "PYU",
+      "vanilla_collision": false,
+      "name": "Pyu Cities"
+    },
+    {
+      "design_tag": "MON",
+      "engine_tag": "XCC",
+      "vanilla_collision": true,
+      "name": "Mon Precursors"
+    },
+    {
+      "design_tag": "KHM",
+      "engine_tag": "XCD",
+      "vanilla_collision": true,
+      "name": "Proto-Khmer"
+    },
+    {
+      "design_tag": "MAL",
+      "engine_tag": "XCE",
+      "vanilla_collision": true,
+      "name": "Malay Polities"
+    },
+    {
+      "design_tag": "JAV",
+      "engine_tag": "JAV",
+      "vanilla_collision": false,
+      "name": "Javanese Polities"
+    },
+    {
+      "design_tag": "PHL",
+      "engine_tag": "PHL",
+      "vanilla_collision": false,
+      "name": "Philippine Societies"
+    },
+    {
+      "design_tag": "BOR",
+      "engine_tag": "XCF",
+      "vanilla_collision": true,
+      "name": "Bornean Societies"
+    },
+    {
+      "design_tag": "TON",
+      "engine_tag": "XCI",
+      "vanilla_collision": true,
+      "name": "Tonga-Samoa-Fiji"
+    },
+    {
+      "design_tag": "TEO",
+      "engine_tag": "XCJ",
+      "vanilla_collision": true,
+      "name": "Teotihuacan"
+    },
+    {
+      "design_tag": "CUI",
+      "engine_tag": "XCK",
+      "vanilla_collision": true,
+      "name": "Cuicuilco"
+    },
+    {
+      "design_tag": "MAY",
+      "engine_tag": "MAY",
+      "vanilla_collision": false,
+      "name": "Early Maya Polities"
+    },
+    {
+      "design_tag": "ZAP",
+      "engine_tag": "XCL",
+      "vanilla_collision": true,
+      "name": "Monte Alban"
+    },
+    {
+      "design_tag": "EPI",
+      "engine_tag": "XCM",
+      "vanilla_collision": true,
+      "name": "Epi-Olmec"
+    },
+    {
+      "design_tag": "WMS",
+      "engine_tag": "WMS",
+      "vanilla_collision": false,
+      "name": "West Mexican Societies"
+    },
+    {
+      "design_tag": "MOC",
+      "engine_tag": "MOC",
+      "vanilla_collision": false,
+      "name": "Moche"
+    },
+    {
+      "design_tag": "NAZ",
+      "engine_tag": "NAZ",
+      "vanilla_collision": false,
+      "name": "Nazca"
+    },
+    {
+      "design_tag": "LIM",
+      "engine_tag": "XCN",
+      "vanilla_collision": true,
+      "name": "Lima Culture"
+    },
+    {
+      "design_tag": "REC",
+      "engine_tag": "REC",
+      "vanilla_collision": false,
+      "name": "Recuay"
+    },
+    {
+      "design_tag": "TIW",
+      "engine_tag": "TIW",
+      "vanilla_collision": false,
+      "name": "Early Tiwanaku"
+    },
+    {
+      "design_tag": "CHI",
+      "engine_tag": "XCO",
+      "vanilla_collision": true,
+      "name": "Chibchan Societies"
+    },
+    {
+      "design_tag": "HOP",
+      "engine_tag": "XCQ",
+      "vanilla_collision": true,
+      "name": "Hopewell Sphere"
+    },
+    {
+      "design_tag": "BSK",
+      "engine_tag": "XCR",
+      "vanilla_collision": true,
+      "name": "Basketmaker II"
+    },
+    {
+      "design_tag": "DOR",
+      "engine_tag": "DOR",
+      "vanilla_collision": false,
+      "name": "Dorset"
+    },
+    {
+      "design_tag": "ARA",
+      "engine_tag": "XCS",
+      "vanilla_collision": true,
+      "name": "Arawak Societies"
+    },
+    {
+      "design_tag": "TUP",
+      "engine_tag": "XCU",
+      "vanilla_collision": true,
+      "name": "Tupi Societies"
+    },
+    {
+      "design_tag": "CAR",
+      "engine_tag": "XCV",
+      "vanilla_collision": true,
+      "name": "Carib Societies"
+    }
+  ]
+}
