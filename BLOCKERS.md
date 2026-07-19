@@ -1,5 +1,31 @@
 # Blockers
 
+## 2026-07-19 - M6 southern Arabian AD 1 courts lack defensible named current rulers
+
+Status: **deferred; M6 continues with other court and mechanics work.**
+
+The sourced M3 roster correctly retains Saba, Himyar, and Qataban, but the
+available evidence does not identify defensible named officeholders for the
+campaign boundary. A Qatabanian ruler attested around the middle of the first
+century is not evidence that he ruled on 1 January AD 1. Generating courts
+here would therefore turn an evidential gap into false precision.
+
+Tried:
+
+1. Rechecked plan P8.6 and the reviewed M3 polity/profile records. They
+   support the three kingdoms and their regional anchors, not AD 1 rulers.
+2. Searched specialist reference material. The Oxford Classical Dictionary's
+   [Himyar entry](https://academic.oup.com/edited-volume/61673/chapter-abstract/548062792)
+   establishes first-century competition with Saba but no dated current king.
+   A recent epigraphic study, [*Two Old South Arabian Inscriptions: Early and
+   Late*](https://abgad.journals.ekb.eg/article_55744_3863aa70f25af459bb9fd21541fe81c4.pdf),
+   places Qataban's Yuhargib III only in the middle of the first century.
+
+Recovery: retain the sourced M3 polities and M4 cultural/religious profiles;
+add named courts only when a source places an individual at the AD 1 boundary.
+Later attested figures can enter through dated M10 content. The tree remains
+green after this evidence-only pass.
+
 ## 2026-07-19 - M6 Elymais and Gordyene AD 1 courts lack defensible named current rulers
 
 Status: **deferred; M6 continues with other court and mechanics work.**

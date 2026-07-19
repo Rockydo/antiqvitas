@@ -90,6 +90,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add Attambelos II's source-qualified Characenian court with a contested coin-based reign record.
 - [x] Add Nambed's source-qualified Persid court from a broad academic numismatic date range.
 - [x] Add source-qualified Indo-Scythian and late Indo-Greek courts for the plan's Azes and Strato II starts.
+- [x] Record and defer the South Arabian named-court gap rather than inventing AD 1 rulers for Saba, Himyar, or Qataban.
 - [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories.
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 
