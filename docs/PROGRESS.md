@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-19 - M6 Characene court
+
+- Replaced Characene's generic ruler with coin-attested Attambelos II and a
+  source-qualified current ruler term. The evidence supports his AD 1 overlap;
+  contested conventional endpoints remain metadata, so no accession day or
+  successor is fabricated.
+- Reused the bounded Parthian Sub-Kingdom adapter as a regional-court surface,
+  explicitly deferring actual subject terms to M9. The source ledger now
+  records the Iranica polity entry and the modern numismatic chronology.
+- Regenerated M6/start data. `make validate` reports 24 dynasties, 36
+  characters, 27 government profiles, and 24 ruler terms; enabled-mod smoke
+  reached the rendered menu with zero new error-log lines.
+
+Next: continue the remaining source-qualified Tier-1/2 courts and political
+mechanics; coin chronology does not license invented Characenian succession.
+
 ## 2026-07-19 - M6 Indian ganasangha councils
 
 - Replaced the generic monarchies of Yaudheya, Arjunayana, and Kuninda with
