@@ -12,6 +12,8 @@ locations = {
 	tunis = { rank = city town_setup = antiqvitas_market_city } # carthago; P12.2;P12.3;P8.1
 	chan_chan = { rank = town town_setup = antiqvitas_market_town } # chan_chan; P12.2;P8.10;CAH-XI
 	jingzhao = { rank = city town_setup = antiqvitas_market_city } # changan; P12.2;P8.3;BHR
+	chengdu = { rank = city town_setup = antiqvitas_market_city } # chengdu; P12.1;P8.3;BHR
+	cologne = { rank = town town_setup = antiqvitas_market_town } # cologne; P12.1;P8.7
 	corinth = { rank = city town_setup = antiqvitas_market_city } # corinthus; P12.2;P8.1
 	cadiz = { rank = city town_setup = antiqvitas_market_city } # gades; P12.2;P8.1
 	kashgar = { rank = city town_setup = antiqvitas_market_city } # kashgar; P12.2;P8.3;CHG
@@ -32,9 +34,25 @@ locations = {
 	shoubak = { rank = town town_setup = antiqvitas_market_town } # petra; P12.2;P8.1;PLE
 	rome = { rank = city town_setup = antiqvitas_market_city } # roma; P12.2;P12.3;P8.1
 	baghdad = { rank = city town_setup = antiqvitas_market_city } # seleucia_ctesiphon; P12.2;P12.3;P8.2
+	sidon = { rank = town town_setup = antiqvitas_market_town } # sidon; P12.1;P8.2;CAH-XI
 	surabaya = { rank = town town_setup = antiqvitas_market_town } # surabaya; P8.9;CAH-XI
 	temasek = { rank = town town_setup = antiqvitas_market_town } # temasek; P8.9;CAH-XI
 	azcapotzalco = { rank = city town_setup = antiqvitas_market_city } # teotihuacan; P12.2;P8.10;CAH-XI
 	thang_long = { rank = town town_setup = antiqvitas_market_town } # thang_long; P8.9;CAH-XI
 	noh_peten = { rank = town town_setup = antiqvitas_market_town } # tikal; P12.2;P8.10;CAH-XI
+}
+
+# M5 AD 1 specialist buildings; sources and proxy rationale: docs/m5/special_buildings.csv.
+building_manager = {
+	glass_guild = { tag = XAA level = 1 location = alexandria } # alexandria_glass; P12.1;P12.3
+	library = { tag = XAA level = 1 location = alexandria } # alexandria_library; P12.3;P8.1
+	lighthouse_of_alexandria = { tag = XAA level = 1 location = alexandria } # alexandria_pharos; P12.3;P8.1
+	lacquerware_guild = { tag = XAR level = 1 location = jingzhao } # changan_lacquerware; P12.1;P8.3;BHR
+	lacquerware_guild = { tag = XAR level = 1 location = chengdu } # chengdu_lacquerware; P12.1;P8.3;BHR
+	glass_guild = { tag = XDK level = 1 location = cologne } # cologne_glass; P12.1;P8.7
+	lacquerware_guild = { tag = XAR level = 1 location = luoyang } # luoyang_lacquerware; P12.1;P8.3;BHR
+	aqueduct_system = { tag = XAA level = 1 location = rome } # roma_aqueduct; P12.3;P8.1
+	minting_office = { tag = XAA level = 1 location = rome } # roma_mint; P12.3;P8.1
+	pottery_guild = { tag = XAA level = 1 location = rome } # roma_terra_sigillata; P12.1;P12.3
+	glass_guild = { tag = XAH level = 1 location = sidon } # sidon_glass; P12.1;P8.2;CAH-XI
 }
