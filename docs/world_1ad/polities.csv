@@ -1,29 +1,29 @@
 tag,name,tier,kind,region,historical_capital,map_capital,source,confidence,status
 ROM,Roman Empire,1,country,Rome,Roma,rome,P8.1;CAH-XI,secure,researched
 JUD,Herodian Judea,1,subject,Levant,Jerusalem,jerusalem,P8.1;OCD,secure,researched
-GAL,Herodian Galilee-Peraea,1,subject,Levant,Tiberias,TBD,P8.1;OCD,secure,researched
+GAL,Herodian Galilee-Peraea,1,subject,Levant,Tiberias,safed,P8.1;OCD;PLE,secure,mapped
 BAT,Herodian Batanea,1,subject,Levant,Caesarea Philippi,TBD,P8.1;OCD,secure,researched
-NAB,Nabataea,1,subject,Arabia,Petra,TBD,P8.1;OCD,secure,researched
-CAP,Cappadocia,1,subject,Anatolia,Tyana,TBD,P8.1;OCD,secure,researched
-COM,Commagene,1,subject,Anatolia,Samosata,TBD,P8.1;OCD,secure,researched
-EME,Emesa,1,subject,Levant,Emesa,TBD,P8.1;OCD,secure,researched
-THR,Odrysian Thrace,1,subject,Balkans,Seuthopolis,TBD,P8.1;OCD,secure,researched
+NAB,Nabataea,1,subject,Arabia,Petra,shoubak,P8.1;OCD;PLE,secure,mapped
+CAP,Cappadocia,1,subject,Anatolia,Tyana,bor_tur,P8.1;OCD;PLE,secure,mapped
+COM,Commagene,1,subject,Anatolia,Samosata,samsat,P8.1;OCD;PLE,secure,mapped
+EME,Emesa,1,subject,Levant,Emesa,homs,P8.1;OCD;PLE,secure,mapped
+THR,Odrysian Thrace,1,subject,Balkans,Seuthopolis,boruy,P8.1;OCD;PLE,secure,mapped
 BOS,Bosporan Kingdom,1,subject,Pontic,Cimmerian Bosporus,TBD,P8.1;OCD,contested,researched
 MAU,Mauretania,1,subject,Africa,Volubilis,volubilis,P8.1;CAH-XI,secure,researched
-PAR,Parthian Empire,1,country,Iran,Ctesiphon,TBD,P8.2;CAH-XI,secure,researched
+PAR,Parthian Empire,1,country,Iran,Ctesiphon,baghdad,P8.2;CAH-XI;PLE,secure,mapped
 CHA,Characene,1,subject,Iran,Charax Spasinu,TBD,P8.2;OCD,secure,researched
 ELY,Elymais,1,subject,Iran,Susa,susa,P8.2;OCD,secure,researched
-PRS,Persis,1,subject,Iran,Persepolis,TBD,P8.2;OCD,secure,researched
+PRS,Persis,1,subject,Iran,Persepolis,istakhr,P8.2;OCD;PLE,secure,mapped
 ATR,Media Atropatene,1,subject,Iran,Ganzak,TBD,P8.2;OCD,secure,researched
-ADI,Adiabene,1,subject,Mesopotamia,Arbela,TBD,P8.2;OCD,secure,researched
+ADI,Adiabene,1,subject,Mesopotamia,Arbela,erbil,P8.2;OCD;PLE,secure,mapped
 OSR,Osroene,1,subject,Mesopotamia,Edessa,edessa,P8.2;OCD,secure,researched
 GOR,Gordyene,1,subject,Mesopotamia,Corduene,TBD,P8.2;OCD,secure,researched
 SKT,Sakastan,1,subject,Iran,Zaranj,zaranj,P8.2;CAH-XI,secure,mapped
 MRG,Margiana,1,subject,Central Asia,Merv,merv,P8.2;CAH-XI,secure,researched
-ARM,Kingdom of Armenia,1,country,Caucasus,Artaxata,TBD,P8.2;CAH-XI,secure,researched
+ARM,Kingdom of Armenia,1,country,Caucasus,Artaxata,khor_virap,P8.2;CAH-XI;PLE,secure,mapped
 IBR,Caucasian Iberia,1,country,Caucasus,Mtskheta,mtskheta,P8.2;OCD,secure,mapped
-CLZ,Colchis,2,country,Caucasus,Phasis,TBD,P8.2;OCD,secure,researched
-ALC,Caucasian Albania,2,country,Caucasus,Kabalaka,TBD,P8.2;OCD,secure,researched
+CLZ,Colchis,2,country,Caucasus,Phasis,poti_caucasus,P8.2;OCD;PLE,secure,mapped
+ALC,Caucasian Albania,2,country,Caucasus,Kabalaka,qabala,P8.2;OCD;PLE,secure,mapped
 HAN,Western Han,1,country,China,Luoyang,luoyang,P8.3;BHR,secure,researched
 XIO,Xiongnu Confederation,1,country,Steppe,Longcheng,TBD,P8.3;CAH-XI,secure,researched
 KHT,Khotan,1,subject,Tarim,Khotan,khotan,P8.3;CHG,secure,researched
@@ -46,17 +46,17 @@ ARJ,Arjunayana,2,country,India,Mathura,mathura,P8.4;CAH-XI,secure,researched
 KUN,Kuninda,2,country,India,Kuninda,TBD,P8.4;CAH-XI,secure,researched
 KAL,Kalinga,2,country,India,Kalinganagara,kalinganagara,P8.4;CAH-XI,secure,mapped
 CHE,Chera,2,country,India,Kodungallur,kodungallur,P8.4;PER,secure,researched
-CHL,Chola,2,country,India,Uraiyur,TBD,P8.4;PER,secure,researched
+CHL,Chola,2,country,India,Uraiyur,srirangam,P8.4;PER;PLE,secure,mapped
 PND,Pandya Kingdom,2,country,India,Madurai,madurai,P8.4;PER,secure,researched
 ANU,Anuradhapura,2,country,Lanka,Anuradhapura,anuradhapura,P8.4;CAH-XI,secure,researched
-KUS,Kush,2,country,Africa,Meroe,TBD,P8.5;CAH-XI,secure,researched
+KUS,Kush,2,country,Africa,Meroe,shendi,P8.5;CAH-XI;PLE,secure,mapped
 AKS,Aksum,2,country,Africa,Aksum,axum,P8.5;PER,secure,researched
-GAR,Garamantes,2,country,Africa,Garama,TBD,P8.5;CAH-XI,secure,researched
+GAR,Garamantes,2,country,Africa,Garama,ubari,P8.5;CAH-XI;PLE,secure,mapped
 BLM,Blemmyes,2,sop,Africa,Talmis,TBD,P8.5;CAH-XI,secure,researched
 BEJ,Beja,2,sop,Africa,Beja country,TBD,P8.5;CAH-XI,secure,researched
 DJN,Djenne-Djenno,2,sop,West Africa,Djenne,djenne,P8.5;CAH-XI,contested,mapped
 SAB,Saba,2,country,Arabia,Marib,marib,P8.6;CAH-XI,secure,researched
-HIM,Himyar,2,country,Arabia,Zafar,TBD,P8.6;CAH-XI,secure,researched
+HIM,Himyar,2,country,Arabia,Zafar,dhafar,P8.6;CAH-XI;PLE,secure,mapped
 QAT,Qataban,2,country,Arabia,Timna,TBD,P8.6;CAH-XI,secure,researched
 HAD,Hadramawt,2,country,Arabia,Shabwa,shabwa,P8.6;CAH-XI,secure,researched
 KIN,Kindah,2,sop,Arabia,Qaryat al-Faw,TBD,P8.6;CAH-XI,secure,researched
