@@ -6,7 +6,7 @@ Mod mode: enabled `ANTIQVITAS` playset via relocated user directory
 
 ## Implemented, checked surface
 
-- `tools/m6_power.py --check` reports 13 dynasties, 23 characters, 13
+- `tools/m6_power.py --check` reports 17 dynasties, 28 characters, 17
   government profiles, 10 privileges, and 9 laws from source-labelled M6 CSV
   ledgers.
 - Generated Rome uses `antq_principate`, Augustus, Livia, and Gaius Caesar as
@@ -21,6 +21,8 @@ Mod mode: enabled `ANTIQVITAS` playset via relocated user directory
   limits are recorded in `docs/m6/SECONDARY_AD1_ROSTER.md`.
 - Judea, Galilee-Peraea, and Batanea now have the plan-specified Herodian AD 1
   rulers through the same client-monarchy adapter.
+- Cappadocia, Commagene, Odrysian Thrace, and Bosporus now have sourced Roman
+  client-court profiles, with the contested mappings labelled in their ledgers.
 - `make validate` and enabled-mod `make smoke` passed after all generated
   outputs were rebuilt; smoke reported zero new `error.log` lines.
 

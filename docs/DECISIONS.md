@@ -47,6 +47,16 @@ source notes preserve the historical division. A Judean priestly/theocratic
 flavor layer remains separate rather than being asserted through an unverified
 government type.
 
+## 2026-07-19 — Roman client courts reuse one qualified political adapter
+
+The current engine exposes a small fixed government-type set, whereas the AD 1
+Roman client ring includes ethnarchies, tetrarchies, kingdoms, and a contested
+Bosporan queenship. Each verified client court therefore uses the locally
+tested client-monarchy reform, law, and privilege while retaining its own
+source-labelled ruler, dynasty record, and uncertainty note. This keeps the
+shared imperial-patronage relationship playable without erasing historical
+differences or inventing constitutional categories.
+
 ## 2026-07-19 — Western Han uses the Jingzhao/Xi'an Chang'an anchor
 
 The installed key `changan` is north of the historical city. The local

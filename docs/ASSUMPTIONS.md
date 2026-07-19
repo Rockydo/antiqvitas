@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-19 — Further Roman client courts avoid false precision
+
+Archelaus of Cappadocia and Antiochus III of Commagene are secure AD 1 rulers.
+Rhoemetalces I's court representation uses Pythodoris as a provisional engine
+consort, and Dynamis remains the master plan's explicitly contested Bosporan
+choice. No birth dates, parental links, or successor claims are scripted for
+this group. Sources weighed: P8.1; OCD; Pleiades; the OCD
+[Archelaus entry](https://academic.oup.com/edited-volume/61673/chapter/548528356);
+and the [British Museum's Commagene record](https://www.britishmuseum.org/collection/term/BIOG205268).
+[secure for Archelaus and Antiochus III; contested for the Thracian/Bosporan
+engine mapping and dynasty labels]
+
 ## 2026-07-19 — Herodian division uses titles, not invented constitutional types
 
 Archelaus's ethnarchy and Antipas/Philip's tetrarchies are kept as three
