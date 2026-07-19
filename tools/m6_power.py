@@ -18,7 +18,10 @@ TAG_MAP = ROOT / "docs/world_1ad/tag_map.json"
 GOVERNMENT_TYPES = ROOT / "docs/vanilla_symbols/government_type.json"
 LOC_ROOT = ROOT / "main_menu/localization"
 REFORM_OUTPUT = ROOT / "in_game/common/government_reforms/00_antiquitas_m6_core.txt"
+PRIVILEGE_OUTPUT = ROOT / "in_game/common/estate_privileges/00_antiquitas_m6_core.txt"
+LAW_OUTPUT = ROOT / "in_game/common/laws/00_antiquitas_m6_core.txt"
 TOKEN_RE = re.compile(r"^[a-z][a-z0-9_]*$")
+VALUE_RE = re.compile(r"^(?:-?(?:\d+(?:\.\d+)?|\.\d+)|[a-z][a-z0-9_]*)$")
 DYN_FIELDS = ("key", "name", "home", "source", "confidence", "note")
 CHAR_FIELDS = (
     "key", "design_tag", "name", "female", "culture", "religion", "birth_date",
@@ -27,8 +30,26 @@ CHAR_FIELDS = (
 )
 GOV_FIELDS = (
     "design_tag", "government_type", "heir_selection", "ruler", "heir", "consort", "active_regent",
-    "regency", "start_regency_date", "end_regency_date", "reform", "source", "confidence", "note",
+    "regency", "start_regency_date", "end_regency_date", "reform", "privileges", "laws", "societal_values",
+    "source", "confidence", "note",
 )
+PRIV_FIELDS = ("key", "estate", "name", "description", "modifiers", "source", "confidence", "note")
+LAW_FIELDS = (
+    "law", "law_category", "law_gov_group", "name", "description", "option", "option_name",
+    "option_description", "modifiers", "estate_preferences", "source", "confidence", "note",
+)
+SOCIAL_VALUE_KEYS = frozenset((
+    "centralization_vs_decentralization", "traditionalist_vs_innovative", "aristocracy_vs_plutocracy",
+    "serfdom_vs_free_subjects", "mercantilism_vs_free_trade", "offensive_vs_defensive", "quality_vs_quantity",
+    "capital_economy_vs_traditional_economy", "individualism_vs_communalism", "outward_vs_inward",
+))
+LAW_CATEGORIES = frozenset(("administrative", "military"))
+MODIFIER_KEYS = frozenset((
+    "country_cabinet_efficiency", "global_burghers_estate_power", "global_levy_size_modifier",
+    "global_nobles_estate_power", "global_pop_assimilation_speed_modifier", "global_pop_food_consumption",
+    "burghers_estate_target_satisfaction", "land_morale_modifier", "monthly_towards_aristocracy",
+    "monthly_towards_centralization", "monthly_towards_decentralization", "nobles_estate_target_satisfaction",
+))
 
 
 @dataclass(frozen=True)
@@ -36,6 +57,8 @@ class PowerData:
     dynasties: tuple[dict[str, str], ...]
     characters: tuple[dict[str, str], ...]
     governments: dict[str, dict[str, str]]
+    privileges: tuple[dict[str, str], ...]
+    laws: tuple[dict[str, str], ...]
     tags: dict[str, str]
 
 
@@ -52,13 +75,38 @@ def require_token(value: str, label: str) -> None:
         raise ValueError(f"{label} must be a lowercase script token: {value!r}")
 
 
+def pipe_values(value: str, label: str) -> tuple[str, ...]:
+    parts = tuple(value.split("|")) if value else ()
+    if not parts or any(not part for part in parts):
+        raise ValueError(f"{label} must be a non-empty pipe-delimited list")
+    return parts
+
+
+def assignments(value: str, label: str) -> tuple[tuple[str, str], ...]:
+    parsed: list[tuple[str, str]] = []
+    for part in pipe_values(value, label):
+        if part.count("=") != 1:
+            raise ValueError(f"{label} has an invalid assignment {part!r}")
+        key, assigned = part.split("=", 1)
+        require_token(key, f"{label} modifier")
+        if not VALUE_RE.fullmatch(assigned):
+            raise ValueError(f"{label} has an unsafe value {assigned!r}")
+        parsed.append((key, assigned))
+    if len({key for key, _ in parsed}) != len(parsed):
+        raise ValueError(f"{label} contains a duplicate key")
+    return tuple(parsed)
+
+
 def load_power_data() -> PowerData:
     dynasties = read_rows(DATA / "dynasties.csv", DYN_FIELDS)
     characters = read_rows(DATA / "characters.csv", CHAR_FIELDS)
     governments_rows = read_rows(DATA / "governments.csv", GOV_FIELDS)
+    privileges = read_rows(DATA / "privileges.csv", PRIV_FIELDS)
+    laws = read_rows(DATA / "laws.csv", LAW_FIELDS)
     tags = {entry["design_tag"]: entry["engine_tag"] for entry in json.loads(TAG_MAP.read_text(encoding="utf-8"))["entries"]}
     locations = set(json.loads((ROOT / "docs/vanilla_symbols/locations.json").read_text(encoding="utf-8-sig")))
     government_types = set(json.loads(GOVERNMENT_TYPES.read_text(encoding="utf-8-sig")))
+    estates = set(json.loads((ROOT / "docs/vanilla_symbols/estate.json").read_text(encoding="utf-8-sig")))
     failures: list[str] = []
     dynasty_keys: set[str] = set()
     for row in dynasties:
@@ -117,9 +165,66 @@ def load_power_data() -> PowerData:
             if rating and (not rating.isdigit() or not 0 <= int(rating) <= 100):
                 failures.append(f"character {row['key']} has invalid ability rating {rating}")
 
+    privilege_keys: set[str] = set()
+    for row in privileges:
+        if any(not row[field] for field in PRIV_FIELDS):
+            failures.append("privileges.csv contains a blank required field")
+            continue
+        try:
+            require_token(row["key"], "privilege key")
+            parsed_modifiers = assignments(row["modifiers"], f"privilege {row['key']}")
+        except ValueError as exc:
+            failures.append(str(exc))
+            parsed_modifiers = ()
+        if row["key"] in privilege_keys:
+            failures.append(f"duplicate privilege key: {row['key']}")
+        privilege_keys.add(row["key"])
+        if row["estate"] not in estates:
+            failures.append(f"privilege {row['key']} uses unknown estate {row['estate']}")
+        for key, _ in parsed_modifiers:
+            if key not in MODIFIER_KEYS:
+                failures.append(f"privilege {row['key']} uses unharvested modifier {key}")
+        if row["confidence"] not in {"secure", "contested"}:
+            failures.append(f"privilege {row['key']} has invalid confidence {row['confidence']}")
+
+    law_keys: set[str] = set()
+    law_options: set[tuple[str, str]] = set()
+    for row in laws:
+        if any(not row[field] for field in LAW_FIELDS):
+            failures.append("laws.csv contains a blank required field")
+            continue
+        try:
+            for field in ("law", "law_category", "law_gov_group", "option"):
+                require_token(row[field], f"law {row['law']} {field}")
+            parsed_modifiers = assignments(row["modifiers"], f"law {row['law']}")
+            preferences = pipe_values(row["estate_preferences"], f"law {row['law']} estate preferences")
+        except ValueError as exc:
+            failures.append(str(exc))
+            parsed_modifiers = ()
+            preferences = ()
+        if row["law"] in law_keys:
+            failures.append(f"duplicate law key: {row['law']}")
+        law_keys.add(row["law"])
+        law_options.add((row["law"], row["option"]))
+        if row["law_category"] not in LAW_CATEGORIES:
+            failures.append(f"law {row['law']} has unsupported category {row['law_category']}")
+        if row["law_gov_group"] not in government_types:
+            failures.append(f"law {row['law']} has unknown government group {row['law_gov_group']}")
+        for estate in preferences:
+            if estate not in estates:
+                failures.append(f"law {row['law']} uses unknown estate preference {estate}")
+        for key, _ in parsed_modifiers:
+            if key not in MODIFIER_KEYS:
+                failures.append(f"law {row['law']} uses unharvested modifier {key}")
+        if row["confidence"] not in {"secure", "contested"}:
+            failures.append(f"law {row['law']} has invalid confidence {row['confidence']}")
+
     governments: dict[str, dict[str, str]] = {}
     for row in governments_rows:
-        required = ("design_tag", "government_type", "heir_selection", "ruler", "reform", "source", "confidence", "note")
+        required = (
+            "design_tag", "government_type", "heir_selection", "ruler", "reform", "privileges", "laws",
+            "societal_values", "source", "confidence", "note",
+        )
         if any(not row[field] for field in required):
             failures.append("governments.csv contains a blank required field")
             continue
@@ -150,10 +255,30 @@ def load_power_data() -> PowerData:
                 failures.append(f"government {row['design_tag']} invalid regency date: {exc}")
         if row["confidence"] not in {"secure", "contested"}:
             failures.append(f"government {row['design_tag']} has invalid confidence {row['confidence']}")
+        try:
+            assigned_privileges = pipe_values(row["privileges"], f"government {row['design_tag']} privileges")
+            assigned_laws = assignments(row["laws"], f"government {row['design_tag']} laws")
+            assigned_values = assignments(row["societal_values"], f"government {row['design_tag']} societal values")
+        except ValueError as exc:
+            failures.append(str(exc))
+            assigned_privileges = ()
+            assigned_laws = ()
+            assigned_values = ()
+        for privilege in assigned_privileges:
+            if privilege not in privilege_keys:
+                failures.append(f"government {row['design_tag']} references unknown privilege {privilege}")
+        for law, option in assigned_laws:
+            if (law, option) not in law_options:
+                failures.append(f"government {row['design_tag']} references unknown law option {law}={option}")
+        for key, value in assigned_values:
+            if key not in SOCIAL_VALUE_KEYS:
+                failures.append(f"government {row['design_tag']} uses unknown societal value {key}")
+            if not re.fullmatch(r"-?\d+", value) or not -100 <= int(value) <= 100:
+                failures.append(f"government {row['design_tag']} has invalid societal value {key}={value}")
 
     if failures:
         raise ValueError("\n".join(sorted(set(failures))))
-    return PowerData(tuple(dynasties), tuple(characters), governments, tags)
+    return PowerData(tuple(dynasties), tuple(characters), governments, tuple(privileges), tuple(laws), tags)
 
 
 def dynasty_manager(data: PowerData) -> str:
@@ -218,8 +343,15 @@ def government_block(row: dict[str, str]) -> list[str]:
         "\t\t\t\treforms = {",
         f"\t\t\t\t\t{row['reform']}",
         "\t\t\t\t}",
-        "\t\t\t}",
     ))
+    lines.append("\t\t\t\tprivilege = {")
+    lines.extend(f"\t\t\t\t\t{privilege}" for privilege in pipe_values(row["privileges"], "government privileges"))
+    lines.append("\t\t\t\t}")
+    lines.append("\t\t\t\tlaws = {")
+    lines.extend(f"\t\t\t\t\t{law} = {option}" for law, option in assignments(row["laws"], "government laws"))
+    lines.append("\t\t\t\t}")
+    lines.extend(f"\t\t\t\t{key} = {value}" for key, value in assignments(row["societal_values"], "government societal values"))
+    lines.append("\t\t\t}")
     return lines
 
 
@@ -258,6 +390,39 @@ antq_parthian_king_of_kings = {
 """
 
 
+def estate_privileges(data: PowerData) -> str:
+    lines = ["# Generated by tools/m6_power.py --write; M6 historical estate adapters."]
+    for row in data.privileges:
+        lines.extend((
+            f"{row['key']} = {{",
+            f"\testate = {row['estate']}",
+            "\tcountry_modifier = {",
+        ))
+        lines.extend(f"\t\t{key} = {value}" for key, value in assignments(row["modifiers"], f"privilege {row['key']}"))
+        lines.extend(("\t}", "}", ""))
+    return "\n".join(lines)
+
+
+def law_definitions(data: PowerData) -> str:
+    lines = ["# Generated by tools/m6_power.py --write; M6 historical legal adapters."]
+    for row in data.laws:
+        lines.extend((
+            f"{row['law']} = {{",
+            f"\tlaw_category = {row['law_category']}",
+            f"\tlaw_gov_group = {row['law_gov_group']}",
+            "\tpotential = {",
+            f"\t\tgovernment_type = government_type:{row['law_gov_group']}",
+            "\t}",
+            f"\t{row['option']} = {{",
+            "\t\tcountry_modifier = {",
+        ))
+        lines.extend(f"\t\t\t{key} = {value}" for key, value in assignments(row["modifiers"], f"law {row['law']}"))
+        lines.extend(("\t\t}", "\t\tyears = 2", "\t\testate_preferences = {"))
+        lines.extend(f"\t\t\t{estate}" for estate in pipe_values(row["estate_preferences"], f"law {row['law']} estate preferences"))
+        lines.extend(("\t\t}", "\t}", "}", ""))
+    return "\n".join(lines)
+
+
 def localization(data: PowerData, language: str) -> str:
     entries = [(row["key"], row["name"]) for row in data.dynasties]
     entries.extend((row["key"], row["name"]) for row in data.characters)
@@ -269,11 +434,16 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_parthian_king_of_kings", "Parthian King of Kings"),
         ("antq_parthian_king_of_kings_desc", "An Arsacid monarchy balancing the royal court with powerful Iranian noble houses."),
     ))
+    for row in data.privileges:
+        entries.extend(((row["key"], row["name"]), (f"{row['key']}_desc", row["description"])))
+    for row in data.laws:
+        entries.extend(((row["law"], row["name"]), (f"{row['law']}_desc", row["description"])))
+        entries.extend(((row["option"], row["option_name"]), (f"{row['option']}_desc", row["option_description"])))
     return "\n".join([f"l_{language}:", *(f' {key}: "{value}"' for key, value in entries), ""])
 
 
 def outputs(data: PowerData) -> dict[Path, str]:
-    result = {REFORM_OUTPUT: reforms()}
+    result = {REFORM_OUTPUT: reforms(), PRIVILEGE_OUTPUT: estate_privileges(data), LAW_OUTPUT: law_definitions(data)}
     for language in ("english", *M2_MIRROR_LANGUAGES):
         result[LOC_ROOT / language / f"antq_m6_power_l_{language}.yml"] = localization(data, language)
     return result
@@ -297,7 +467,10 @@ def check(data: PowerData) -> bool:
         print("m6_power: FAIL")
         print("\n".join(f"  - {failure}" for failure in failures))
         return False
-    print(f"m6_power: PASS ({len(data.dynasties)} dynasties, {len(data.characters)} characters, {len(data.governments)} governments)")
+    print(
+        f"m6_power: PASS ({len(data.dynasties)} dynasties, {len(data.characters)} characters, "
+        f"{len(data.governments)} governments, {len(data.privileges)} privileges, {len(data.laws)} laws)"
+    )
     return True
 
 
