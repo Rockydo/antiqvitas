@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-19 - AD 1 coinage laws are bounded monetary adapters
+
+Rome receives a gold-and-silver Augustan coinage law and Western Han a
+cast-copper Wuzhu law. Museum records securely establish Augustan aurei and
+denarii as gold and silver coinage and Wuzhu as Han copper-alloy coinage, but
+the game values do not reconstruct denomination ratios, local circulation,
+mint jurisdictions, or fiscal receipts. Later debasement and Wang Mang's coin
+changes are deliberately unscripted until their dated M10 situations. Sources
+weighed: P8.1; P8.3; P13; OCD; BHR; [British Museum Augustan aureus](https://www.britishmuseum.org/collection/object/C_1867-0101-596), [Augustan denarius](https://www.britishmuseum.org/collection/object/C_1920-1102-2), and [Han Wuzhu coin](https://www.britishmuseum.org/collection/object/C_1978-0919-113).
+[secure for the monetary materials and start-era standards; contested for the
+engine balance mapping]
+
 ## 2026-07-19 - Second Temple priesthood is a bounded Judean gameplay proxy
 
 Herodian Judea in AD 1 is given a technical `clergy_estate` representation for
