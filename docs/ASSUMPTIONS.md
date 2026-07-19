@@ -1064,3 +1064,16 @@ campaign-start office, term, residence, genealogy, estate, ability, biography
 date, or later career is scripted. Imperial-prince consulships are excluded
 from this inference. Sources weighed: P8.1; `COO-FASTI-14-24`; `OUP-CURSUS`
 in `docs/world_1ad/SOURCES.md`. [contested survival; contested engine context]
+
+## 2026-07-19 - The Fasti age inference stops at AD 32
+
+Cooley's AD 25-32 non-imperial consul list adds 27 separately identified
+people. Hume's normal Augustan minimum consul age of 33 makes an AD 32 consul
+old enough to have survived the 1 January AD 1 boundary, but the same
+calculation leaves an AD 33 consul potentially born during AD 1. The Fasti
+survival route is consequently ended at AD 32 rather than extending a weak
+inference to later officeholders. Every resulting record remains court context
+only, without a campaign office, term, residence, genealogy, estate, ability,
+biography date, or later career. Sources weighed: P8.1; `COO-FASTI-25-32`;
+`OUP-CURSUS` in `docs/world_1ad/SOURCES.md`. [contested survival; contested
+engine context]
