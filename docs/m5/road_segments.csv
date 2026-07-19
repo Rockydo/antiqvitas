@@ -1,0 +1,26 @@
+origin,destination,corridor,source,confidence,note
+rome,pisa,Via Aurelia,ORB;P8.1,secure,Italian Tyrrhenian trunk leg
+pisa,genoa,Via Aurelia,ORB;P8.1,secure,Ligurian Tyrrhenian trunk leg
+genoa,marseille,Via Aurelia,ORB;P8.1,secure,Ligurian-Gallic coastal trunk leg
+marseille,lyon,Rhone axis,ORB;P8.1,secure,Rhone valley trunk leg
+durres,thessaloniki,Via Egnatia,ORB;P8.1,secure,Adriatic to Macedonian trunk leg
+thessaloniki,constantinople,Via Egnatia,ORB;P8.1,secure,Macedonian to Thracian trunk leg
+alexandria,gaza,Via Maris,ORB;P8.1,secure,Egypt-Levant coastal trunk proxy
+gaza,jerusalem,Via Maris-Judaean branch,ORB;P8.1,secure,Southern Levant trunk branch
+jerusalem,damascus,Levant interior,ORB;P8.1,secure,Judaea to Damascus caravan-road leg
+damascus,homs,Syrian interior,ORB;P8.1,contested,Damascus to Palmyra-proxy trunk leg
+homs,aleppo,Syrian interior,ORB;P8.1,contested,Palmyra-proxy to northern Syria leg
+aleppo,edessa,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+baghdad,susa,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+susa,hamadan,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+kashgar,khotan,Southern Tarim route,ORB;P8.3;CHG,secure,Tarim oasis corridor leg
+balkh,termez,Oxus corridor,P8.4;P8.8;CAH-XI,contested,Bactrian-Oxus corridor leg
+termez,samarkand,Transoxianian corridor,P8.8;CAH-XI,contested,Oxus to Sogdian corridor leg
+samarkand,bukhara,Transoxianian corridor,P8.8;CAH-XI,secure,Sogdian oasis corridor leg
+jingzhao,luoyang,Han trunk road,BHR;P8.3,secure,Chang'an commandery anchor to Luoyang trunk leg
+luoyang,kaifeng,Han trunk road,BHR;P8.3,secure,Luoyang to eastern Henan trunk leg
+kaifeng,xuzhou,Han trunk road,BHR;P8.3,secure,Eastern Henan to lower Huai trunk leg
+patna,varanasi,Uttarapatha,P8.4;CAH-XI,contested,Pataliputra to Varanasi trunk leg
+varanasi,mathura,Uttarapatha,P8.4;CAH-XI,contested,Middle-Gangetic to Mathura corridor leg
+mathura,ujjain,Indian interior trunk,P8.4;CAH-XI,contested,Mathura to Malwa corridor leg
+ujjain,khambat,Western Indian trade road,P8.4;PER,contested,Malwa to Barygaza-proxy corridor leg
