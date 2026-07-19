@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-19 — First-pass ancient road corridors
+
+The 25 M5 road rows are high-level engine links between reviewed location
+anchors, not surveyed reconstructions of every ancient mile. Roman legs are
+sanity-checked against ORBIS's principal-route model; Persian, Han, Central
+Asian, and Indian legs follow the named design-bible corridors and cited
+regional syntheses. Some long or proxy legs remain contested until a
+route-by-route itinerary/coordinate pass can split them into finer map links.
+Sources weighed: ORB; P8.1–P8.8; BHR; CHG; CAH-XI; *Periplus*. [contested]
+
 ## 2026-07-19 — Named resource anchor proxies
 
 Huelva represents the Rio Tinto district, Truro Cornwall tin, Sidon the Tyrian

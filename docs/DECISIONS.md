@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — M5 roads use the installed base-road start syntax
+
+The installed `09_roads.txt` records a road as a bare `origin = destination`
+pair, without a road-type field. The initial ancient network uses that exact
+locally verified contract and does not invent an unverified paved-road syntax.
+Its scope is a small historical corridor ledger, not a copied 1337 network;
+road type progression and broader density remain later M5/M8 work.
+
 ## 2026-07-19 — Runtime probes distinguish economic from later-system failures
 
 The first observer run is recorded as an M5 foundation probe, not a milestone
