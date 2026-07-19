@@ -15,6 +15,7 @@ exit /b 2
 "%PYTHON%" tools\world_roster.py || exit /b 1
 "%PYTHON%" tools\generate_tag_map.py --check || exit /b 1
 "%PYTHON%" tools\generate_m4_definitions.py --check || exit /b 1
+"%PYTHON%" tools\generate_dynamic_names.py --check || exit /b 1
 "%PYTHON%" tools\generate_country_definitions.py --check || exit /b 1
 "%PYTHON%" tools\capital_mapper.py --check || exit /b 1
 "%PYTHON%" tools\extract_map_coordinates.py --check || exit /b 1
