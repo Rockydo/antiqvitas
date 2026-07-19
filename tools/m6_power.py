@@ -38,6 +38,13 @@ LAW_FIELDS = (
     "law", "law_category", "law_gov_group", "name", "description", "option", "option_name",
     "option_description", "modifiers", "estate_preferences", "source", "confidence", "note",
 )
+TERM_FIELDS = (
+    "design_tag", "character", "engine_start_date", "engine_end_date", "regnal_number",
+    "historical_reign", "source", "confidence", "note",
+)
+REGNAL_HISTORY_FIELDS = (
+    "design_tag", "sequence", "name", "historical_start", "historical_end", "source", "confidence", "note",
+)
 SOCIAL_VALUE_KEYS = frozenset((
     "centralization_vs_decentralization", "traditionalist_vs_innovative", "aristocracy_vs_plutocracy",
     "serfdom_vs_free_subjects", "mercantilism_vs_free_trade", "offensive_vs_defensive", "quality_vs_quantity",
@@ -59,6 +66,8 @@ class PowerData:
     dynasties: tuple[dict[str, str], ...]
     characters: tuple[dict[str, str], ...]
     governments: dict[str, dict[str, str]]
+    ruler_terms: tuple[dict[str, str], ...]
+    regnal_histories: tuple[dict[str, str], ...]
     privileges: tuple[dict[str, str], ...]
     laws: tuple[dict[str, str], ...]
     tags: dict[str, str]
@@ -103,6 +112,8 @@ def load_power_data() -> PowerData:
     dynasties = read_rows(DATA / "dynasties.csv", DYN_FIELDS)
     characters = read_rows(DATA / "characters.csv", CHAR_FIELDS)
     governments_rows = read_rows(DATA / "governments.csv", GOV_FIELDS)
+    ruler_terms = read_rows(DATA / "ruler_terms.csv", TERM_FIELDS)
+    regnal_histories = read_rows(DATA / "regnal_histories.csv", REGNAL_HISTORY_FIELDS)
     privileges = read_rows(DATA / "privileges.csv", PRIV_FIELDS)
     laws = read_rows(DATA / "laws.csv", LAW_FIELDS)
     tags = {entry["design_tag"]: entry["engine_tag"] for entry in json.loads(TAG_MAP.read_text(encoding="utf-8"))["entries"]}
@@ -278,9 +289,74 @@ def load_power_data() -> PowerData:
             if not re.fullmatch(r"-?\d+", value) or not -100 <= int(value) <= 100:
                 failures.append(f"government {row['design_tag']} has invalid societal value {key}={value}")
 
+    term_tags: set[str] = set()
+    term_pairs: set[tuple[str, str]] = set()
+    campaign_start = AntqDate.parse("1.1.1")
+    for row in ruler_terms:
+        required = ("design_tag", "character", "engine_start_date", "historical_reign", "source", "confidence", "note")
+        if any(not row[field] for field in required):
+            failures.append("ruler_terms.csv contains a blank required field")
+            continue
+        if row["design_tag"] not in governments:
+            failures.append(f"ruler term references unknown government profile {row['design_tag']}")
+        if row["character"] not in character_keys:
+            failures.append(f"ruler term references unknown character {row['character']}")
+        elif row["design_tag"] in governments and row["character"] != governments[row["design_tag"]]["ruler"]:
+            failures.append(f"ruler term for {row['design_tag']} must use the active government ruler")
+        pair = (row["design_tag"], row["character"])
+        if pair in term_pairs:
+            failures.append(f"duplicate ruler term for {row['design_tag']} / {row['character']}")
+        term_pairs.add(pair)
+        if row["design_tag"] in term_tags:
+            failures.append(f"multiple current ruler terms for {row['design_tag']}")
+        term_tags.add(row["design_tag"])
+        try:
+            start = AntqDate.parse(row["engine_start_date"])
+            if start != campaign_start:
+                failures.append(f"ruler term for {row['design_tag']} must begin on the campaign start")
+            if row["engine_end_date"] and AntqDate.parse(row["engine_end_date"]) <= start:
+                failures.append(f"ruler term for {row['design_tag']} ends on or before its start")
+        except ValueError as exc:
+            failures.append(f"ruler term for {row['design_tag']} has an invalid engine date: {exc}")
+        if row["regnal_number"] and (not row["regnal_number"].isdigit() or not 1 <= int(row["regnal_number"]) <= 999):
+            failures.append(f"ruler term for {row['design_tag']} has an invalid regnal number")
+        if row["confidence"] not in {"secure", "contested"}:
+            failures.append(f"ruler term for {row['design_tag']} has invalid confidence {row['confidence']}")
+    for design_tag in governments:
+        if design_tag not in term_tags:
+            failures.append(f"government {design_tag} has no campaign-valid ruler term")
+
+    history_by_tag: dict[str, list[int]] = {}
+    history_pairs: set[tuple[str, int]] = set()
+    for row in regnal_histories:
+        if any(not row[field] for field in REGNAL_HISTORY_FIELDS):
+            failures.append("regnal_histories.csv contains a blank required field")
+            continue
+        if row["design_tag"] not in tags:
+            failures.append(f"regnal history references unknown design tag {row['design_tag']}")
+        if not row["sequence"].isdigit() or int(row["sequence"]) < 1:
+            failures.append(f"regnal history has invalid sequence {row['sequence']!r}")
+            continue
+        pair = (row["design_tag"], int(row["sequence"]))
+        if pair in history_pairs:
+            failures.append(f"duplicate regnal-history sequence for {row['design_tag']}: {row['sequence']}")
+        history_pairs.add(pair)
+        history_by_tag.setdefault(row["design_tag"], []).append(int(row["sequence"]))
+        if row["confidence"] not in {"secure", "contested"}:
+            failures.append(f"regnal history for {row['design_tag']} has invalid confidence {row['confidence']}")
+    for design_tag in ("ROM", "HAN"):
+        sequence = sorted(history_by_tag.get(design_tag, []))
+        if not sequence:
+            failures.append(f"regnal history is required for {design_tag}")
+        elif sequence != list(range(1, len(sequence) + 1)):
+            failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
+
     if failures:
         raise ValueError("\n".join(sorted(set(failures))))
-    return PowerData(tuple(dynasties), tuple(characters), governments, tuple(privileges), tuple(laws), tags)
+    return PowerData(
+        tuple(dynasties), tuple(characters), governments, tuple(ruler_terms), tuple(regnal_histories),
+        tuple(privileges), tuple(laws), tags,
+    )
 
 
 def dynasty_manager(data: PowerData) -> str:
@@ -331,7 +407,7 @@ def character_manager(data: PowerData) -> str:
     return "\n".join(lines)
 
 
-def government_block(row: dict[str, str]) -> list[str]:
+def government_block(row: dict[str, str], ruler_terms: tuple[dict[str, str], ...]) -> list[str]:
     lines = [
         "\t\t\tgovernment = {",
         f"\t\t\t\ttype = {row['government_type']}",
@@ -341,6 +417,18 @@ def government_block(row: dict[str, str]) -> list[str]:
     for field in ("heir", "consort", "active_regent", "regency", "start_regency_date", "end_regency_date"):
         if row[field]:
             lines.append(f"\t\t\t\t{field} = {row[field]}")
+    for term in ruler_terms:
+        if term["design_tag"] != row["design_tag"]:
+            continue
+        values = [
+            f"character = {term['character']}",
+            f"start_date = {AntqDate.parse(term['engine_start_date']).engine()}",
+        ]
+        if term["engine_end_date"]:
+            values.append(f"end_date = {AntqDate.parse(term['engine_end_date']).engine()}")
+        if term["regnal_number"]:
+            values.append(f"regnal_number = {term['regnal_number']}")
+        lines.append(f"\t\t\t\truler_term = {{ {' '.join(values)} }}")
     lines.extend((
         "\t\t\t\treforms = {",
         f"\t\t\t\t\t{row['reform']}",
@@ -531,7 +619,8 @@ def check(data: PowerData) -> bool:
         return False
     print(
         f"m6_power: PASS ({len(data.dynasties)} dynasties, {len(data.characters)} characters, "
-        f"{len(data.governments)} governments, {len(data.privileges)} privileges, {len(data.laws)} laws)"
+        f"{len(data.governments)} governments, {len(data.ruler_terms)} ruler terms, "
+        f"{len(data.regnal_histories)} regnal-history rows, {len(data.privileges)} privileges, {len(data.laws)} laws)"
     )
     return True
 

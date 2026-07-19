@@ -599,7 +599,7 @@ def country_manager() -> tuple[str, int, int]:
             controlled += len(locations)
         lines.append(f'\t\t\tinclude = "{template}"')
         if row["tag"] in power.governments:
-            lines.extend(government_block(power.governments[row["tag"]]))
+            lines.extend(government_block(power.governments[row["tag"]], power.ruler_terms))
         else:
             lines.append("\t\t\tgovernment = { ruler = random }")
         lines.extend((f"\t\t\tcapital = {capital}", "\t\t}", ""))

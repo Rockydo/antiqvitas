@@ -2027,6 +2027,7 @@ countries = {
 				ruler = antq_augustus
 				heir = antq_gaius_caesar
 				consort = antq_livia
+				ruler_term = { character = antq_augustus start_date = 1.1.1 }
 				reforms = {
 					antq_principate
 				}
@@ -2056,6 +2057,7 @@ countries = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
 				ruler = antq_herod_archelaus
+				ruler_term = { character = antq_herod_archelaus start_date = 1.1.1 }
 				reforms = {
 					antq_client_monarchy
 				}
@@ -2082,6 +2084,7 @@ countries = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
 				ruler = antq_herod_antipas
+				ruler_term = { character = antq_herod_antipas start_date = 1.1.1 }
 				reforms = {
 					antq_client_monarchy
 				}
@@ -2108,6 +2111,7 @@ countries = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
 				ruler = antq_philip_tetrarch
+				ruler_term = { character = antq_philip_tetrarch start_date = 1.1.1 }
 				reforms = {
 					antq_client_monarchy
 				}
@@ -2134,6 +2138,7 @@ countries = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
 				ruler = antq_aretas_iv
+				ruler_term = { character = antq_aretas_iv start_date = 1.1.1 }
 				reforms = {
 					antq_client_monarchy
 				}
@@ -2207,6 +2212,7 @@ countries = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
 				ruler = antq_archelaus_cappadocia
+				ruler_term = { character = antq_archelaus_cappadocia start_date = 1.1.1 }
 				reforms = {
 					antq_client_monarchy
 				}
@@ -2269,6 +2275,7 @@ countries = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
 				ruler = antq_antiochus_iii_commagene
+				ruler_term = { character = antq_antiochus_iii_commagene start_date = 1.1.1 }
 				reforms = {
 					antq_client_monarchy
 				}
@@ -2350,6 +2357,7 @@ countries = {
 				heir_selection = cognatic_primogeniture
 				ruler = antq_rhoemetalces_i
 				consort = antq_pythodoris_thrace
+				ruler_term = { character = antq_rhoemetalces_i start_date = 1.1.1 }
 				reforms = {
 					antq_client_monarchy
 				}
@@ -2390,6 +2398,7 @@ countries = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
 				ruler = antq_dynamis
+				ruler_term = { character = antq_dynamis start_date = 1.1.1 }
 				reforms = {
 					antq_client_monarchy
 				}
@@ -2518,6 +2527,7 @@ countries = {
 				heir_selection = cognatic_primogeniture
 				ruler = antq_juba_ii
 				consort = antq_cleopatra_selene_ii
+				ruler_term = { character = antq_juba_ii start_date = 1.1.1 }
 				reforms = {
 					antq_client_monarchy
 				}
@@ -3065,6 +3075,7 @@ countries = {
 				heir_selection = cognatic_primogeniture
 				ruler = antq_phraates_v
 				consort = antq_musa
+				ruler_term = { character = antq_phraates_v start_date = 1.1.1 }
 				reforms = {
 					antq_parthian_king_of_kings
 				}
@@ -5353,6 +5364,7 @@ countries = {
 				regency = nobles_estate_regency
 				start_regency_date = 1.1.1
 				end_regency_date = 6.2.3
+				ruler_term = { character = antq_emperor_ping start_date = 1.1.1 }
 				reforms = {
 					antq_han_imperial_bureaucracy
 				}
@@ -5523,6 +5535,7 @@ countries = {
 				type = steppe_horde
 				heir_selection = tribal_oldest_male
 				ruler = antq_wuzhuliu
+				ruler_term = { character = antq_wuzhuliu start_date = 1.1.1 }
 				reforms = {
 					antq_steppe_confederation
 				}
@@ -5659,6 +5672,7 @@ countries = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
 				ruler = antq_yuri_goguryeo
+				ruler_term = { character = antq_yuri_goguryeo start_date = 1.1.1 }
 				reforms = {
 					antq_early_korean_kingdom
 				}
@@ -6932,6 +6946,7 @@ countries = {
 				heir_selection = cognatic_primogeniture
 				ruler = antq_natakamani
 				consort = antq_amanitore
+				ruler_term = { character = antq_natakamani start_date = 1.1.1 }
 				reforms = {
 					antq_kushite_dual_kingship
 				}
@@ -7844,6 +7859,7 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = antq_maroboduus
+				ruler_term = { character = antq_maroboduus start_date = 1.1.1 }
 				reforms = {
 					antq_tribal_kingdom
 				}
@@ -9910,6 +9926,7 @@ countries = {
 				heir_selection = tribal_oldest_male
 				ruler = antq_tasciovanus
 				heir = antq_cunobelinus
+				ruler_term = { character = antq_tasciovanus start_date = 1.1.1 }
 				reforms = {
 					antq_tribal_kingdom
 				}
