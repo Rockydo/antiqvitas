@@ -1052,3 +1052,15 @@ family graph, estate, ability, biography date, or later career. Each resulting
 `ROM` identity and its court-line label therefore retains only bounded
 court-context representation. Sources weighed: P8.1; `FASTI-CONS-2-13` in
 `docs/world_1ad/SOURCES.md`. [secure survival; contested engine context]
+
+## 2026-07-19 - AD 14-24 non-imperial consuls are a bounded survival inference
+
+Cooley's scholarly fasti identifies thirty-two additional non-imperial
+ordinary or identified-suffect consuls in AD 14-24. Hume's account of the
+Augustan cursus reform places the normal minimum age for consulship at 33,
+which supports—but cannot prove—each person's survival at the AD 1 boundary.
+The resulting records consequently carry contested survival only: no age,
+campaign-start office, term, residence, genealogy, estate, ability, biography
+date, or later career is scripted. Imperial-prince consulships are excluded
+from this inference. Sources weighed: P8.1; `COO-FASTI-14-24`; `OUP-CURSUS`
+in `docs/world_1ad/SOURCES.md`. [contested survival; contested engine context]
