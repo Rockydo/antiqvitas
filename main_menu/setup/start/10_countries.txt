@@ -6773,7 +6773,24 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = republic
+				heir_selection = oligarchic_elective
+				ruler = random
+				reforms = {
+					antq_indian_ganasangha
+				}
+				privilege = {
+					antq_ganasangha_council
+				}
+				laws = {
+					antq_ganasangha_law = antq_clan_council_governance
+				}
+				centralization_vs_decentralization = -20
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -30
+				capital_economy_vs_traditional_economy = 15
+			}
 			capital = rohtak
 		}
 
@@ -6783,7 +6800,24 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = republic
+				heir_selection = oligarchic_elective
+				ruler = random
+				reforms = {
+					antq_indian_ganasangha
+				}
+				privilege = {
+					antq_ganasangha_council
+				}
+				laws = {
+					antq_ganasangha_law = antq_clan_council_governance
+				}
+				centralization_vs_decentralization = -20
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -30
+				capital_economy_vs_traditional_economy = 15
+			}
 			capital = mathura
 		}
 
@@ -6853,7 +6887,24 @@ countries = {
 			}
 
 			include = "east_asia_monarchy"
-			government = { ruler = random }
+			government = {
+				type = republic
+				heir_selection = oligarchic_elective
+				ruler = random
+				reforms = {
+					antq_indian_ganasangha
+				}
+				privilege = {
+					antq_ganasangha_council
+				}
+				laws = {
+					antq_ganasangha_law = antq_clan_council_governance
+				}
+				centralization_vs_decentralization = -20
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -30
+				capital_economy_vs_traditional_economy = 15
+			}
 			capital = kalsi
 		}
 

@@ -63,6 +63,7 @@ MODIFIER_KEYS = frozenset((
 	"monthly_towards_decentralization", "nobles_estate_target_satisfaction", "silver_impacts_inflation",
 	"silver_used_for_minting", "tribes_estate_target_satisfaction", "slavery_blocked",
 	"ban_exports_of_slaves_goods", "ban_imports_of_slaves_goods", "tolerance_heathen",
+	"monthly_republican_tradition",
 ))
 
 
@@ -253,8 +254,11 @@ def load_power_data() -> PowerData:
             failures.append(f"government references unknown design tag {row['design_tag']}")
         if row["government_type"] not in government_types:
             failures.append(f"government {row['design_tag']} uses unknown type {row['government_type']}")
+        random_ruler = row["ruler"] == "random"
+        if random_ruler and row["government_type"] != "republic":
+            failures.append(f"government {row['design_tag']} uses random ruler outside a republic")
         for field in ("ruler", "heir", "consort", "active_regent"):
-            if row[field] and row[field] not in character_keys:
+            if row[field] and row[field] not in character_keys and not (field == "ruler" and random_ruler):
                 failures.append(f"government {row['design_tag']} references unknown {field} {row[field]}")
         if row["ruler"] in character_keys:
             ruler = next(character for character in characters if character["key"] == row["ruler"])
@@ -327,8 +331,8 @@ def load_power_data() -> PowerData:
             failures.append(f"ruler term for {row['design_tag']} has an invalid regnal number")
         if row["confidence"] not in {"secure", "contested"}:
             failures.append(f"ruler term for {row['design_tag']} has invalid confidence {row['confidence']}")
-    for design_tag in governments:
-        if design_tag not in term_tags:
+    for design_tag, government in governments.items():
+        if government["ruler"] != "random" and design_tag not in term_tags:
             failures.append(f"government {design_tag} has no campaign-valid ruler term")
 
     history_by_tag: dict[str, list[int]] = {}
@@ -484,6 +488,16 @@ antq_lankan_kingdom = {
 	years = 2
 }
 
+antq_indian_ganasangha = {
+	major = yes
+	government = republic
+	country_modifier = {
+		monthly_republican_tradition = 0.05
+		global_nobles_estate_power = 0.05
+	}
+	years = 2
+}
+
 antq_parthian_king_of_kings = {
 	major = yes
 	government = monarchy
@@ -609,6 +623,8 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_han_imperial_bureaucracy_desc", "A palace-centred bureaucracy whose Mandate of Heaven is represented through legitimacy and effective rule."),
         ("antq_lankan_kingdom", "Anuradhapura Kingship"),
         ("antq_lankan_kingdom_desc", "A Lankan royal court whose monastic and irrigation patronage is a central source of authority."),
+        ("antq_indian_ganasangha", "Indian Ganasangha"),
+        ("antq_indian_ganasangha_desc", "A clan-based republican council represented through the installed republic government type."),
         ("antq_parthian_king_of_kings", "Parthian King of Kings"),
         ("antq_parthian_king_of_kings_desc", "An Arsacid monarchy balancing the royal court with powerful Iranian noble houses."),
         ("antq_client_monarchy", "Client Monarchy"),
