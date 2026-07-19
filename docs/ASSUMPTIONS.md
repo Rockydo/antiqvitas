@@ -713,6 +713,18 @@ or a finished Pythodorid genealogy. No marriage, later Thracian queenship,
 children, office, succession, or biography date is scripted. Sources weighed:
 `BM-TRY` in `docs/world_1ad/SOURCES.md`. [contested]
 
+## 2026-07-19 - Pythodorid sons share only a contested family-court context
+
+The British Museum identifies Polemo II as Pythodorida/Pythodoris's son and
+names Artaxias III as his older brother and Antonia Tryphaena as his younger
+sister. Polemo II's 12 BCE-AD 74 life span establishes his survival at the
+campaign boundary. It does not fix either brother's location on 1 January AD
+1 or support importing the later Armenian or Pontic client reigns. Both are
+therefore court-only `CLZ` figures beside their documented mother and sister;
+no title, office, marriage, children, claim, succession, or biography date is
+scripted. Sources weighed: `BM-POLE` in `docs/world_1ad/SOURCES.md`.
+[contested]
+
 ## 2026-07-19 - Eastern anonymous courts and societies
 
 The plan establishes Tarim city-states and Buyeo as regional courts but does
