@@ -1145,3 +1145,18 @@ regency blocker remains isolated and M6's broader mechanics work continues.
 
 Next: continue source-led court roster coverage without converting later
 successions into unsupported start-date claims.
+
+## 2026-07-19 - M6 Parthian country-panel probe
+
+- A fresh enabled-mod selector run selected Parthia (`XAH`) at `08:00, 1
+  January, 1`. The country panel showed Count Phraates V Arsacid, Ctesiphon,
+  nine subjects, the Parthian profile, one reform, and fifteen laws.
+- This independently confirms the Parthian King-of-Kings adapter loads into
+  the live UI. It does not close M6: Han's silent regency fallback remains the
+  acceptance blocker, and the broader M6 surface is unfinished.
+- The same panel exposes the engine's age-zero rendering for intentionally
+  blank biography dates. The source-integrity decision is recorded in
+  `DECISIONS.md`; no false date was inserted.
+
+Next: continue M6 content expansion while retaining Parthia as completed
+runtime evidence and Han as the explicit failed gate.
