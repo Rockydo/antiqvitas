@@ -79,6 +79,9 @@ The extractor inspected every local file and recorded the result in
 - A direct M2 smoke confirmed that `in_game/common/age`,
   `in_game/common/advances`, and `loading_screen/common/defines` also require
   UTF-8 BOM. `pdxlint` enforces this for mod files in those folders.
+- A direct M5 smoke confirmed that `in_game/common/town_setups` also requires
+  UTF-8 BOM; the generated town-setup writer and its stale-file check enforce
+  it.
 
 ## Metadata and replacement
 

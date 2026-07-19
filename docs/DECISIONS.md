@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — M5 urban profiles are intentionally small and generated
+
+The 36 source-labelled market hubs each receive exactly one generated town or
+city record, rather than inheriting a later-period regional town setup. The two
+M5 profiles use only locally verified building keys: market towns get temple,
+marketplace, and entrepot; market cities add a granary and mason. They are
+engine-building proxies, not a claim that a medieval production ladder existed
+in AD 1. The generator writes the required `common/town_setups` definition in
+UTF-8 BOM because the live parser rejected its no-BOM form.
+
 ## 2026-07-19 — Raw-material corrections use an exact map-template override
 
 The installed start managers do not provide a raw-material initialization

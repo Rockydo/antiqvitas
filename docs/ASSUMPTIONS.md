@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-19 — First-pass urban market ranks
+
+The M5 city/town classifications identify an engine settlement tier for the
+plan-listed market hubs; they are not population censuses or claims that every
+proxy location had the exact later map footprint. Rome, Alexandria, Antioch,
+the Han capitals, and other securely attested metropolitan centres use `city`;
+Byzantium and the explicit growth-arc or proxy anchors use the more conservative
+`town`. All geographic proxies retain their existing contested label in
+`docs/m5/urban_nodes.csv`. Sources weighed: P8.1–P8.10; P12.2; P12.3; CAH-XI;
+Pleiades; *Periplus*. [contested]
+
 ## 2026-07-19 — First-pass raw-material localization
 
 The first RGO pass implements the explicit section 12.1 prohibitions and
