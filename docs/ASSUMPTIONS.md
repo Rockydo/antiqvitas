@@ -95,3 +95,13 @@ clusters. The area boundaries are inherited from the installed map and are not
 claims of period sovereignty at every location. They remain `contested` until
 the M4 pop/culture pass and later local historical research can refine them.
 Sources weighed: P8.3–P8.4; P8.9; CAH-XI; *Periplus of the Erythraean Sea*. †
+
+## 2026-07-19 — Barbaricum and northern-frontier extent proxies
+
+The expanded northern-European rows are region-level political frames, not
+archaeological settlement boundaries. They use the plan's named Caledonian,
+Hibernian, Germanic, Scandinavian, Venedi, Dacian/Getic/Sarmatian, Armenian,
+and Caucasian groups where the installed local geography has an unmistakable
+matching macro-region. The real political mosaic was finer and mobile; all
+these rows stay `contested` pending the M4 population/culture map and later
+local research. Sources weighed: P8.1–P8.2; P8.7; CAH-XI. †

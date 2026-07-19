@@ -33,7 +33,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Create and validate the sourced initial AD 1 polity roster in `docs/world_1ad/`.
 - [x] Generate collision-safe country definitions, mirrored names, and M3 placeholder CoAs for every roster polity.
 - [x] Add a checked capital-location candidate report and record direct local-map matches.
-- [x] Render and smoke-check the verified-capital ownership slice (133 current polities; 5,575 controlled locations and 25 dependencies).
+- [x] Render and smoke-check the verified-capital ownership slice (133 current polities; 6,811 controlled locations and 25 dependencies).
 - [x] Build a local-raster coordinate index and sourced capital-candidate report.
 - [ ] Research and create the remaining sourced territorial extents and SoP coverage; the complete roster, country definitions, capital anchors, and first dependency pass are live.
 - [x] Mirror-replace the exact 25 installed start-manager files, removing the vanilla 1337 start layer.

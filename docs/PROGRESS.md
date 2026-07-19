@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-19 — M3 Barbaricum territorial pass
+
+- Added source-labelled frames for the Caledonian and Hibernian SoPs, selected
+  British polities, Marcomannic Bohemia, named Germanic groups, Scandinavia,
+  the Venedi, Danubian groups, Armenia/Caucasus, and the Pontic Sarmatian
+  frontier. The exact-capital and no-overlap guards remain in force.
+- The reviewed setup now resolves 6,811 locations for all 133 roster polities,
+  with all coarse geography rows marked `contested` rather than being presented
+  as final ancient borders.
+- `make validate` and a real-game smoke are green with zero new error lines.
+
+Next: extend source-conservative regional coverage across the Middle East,
+Central Asia, East Asia, Africa, and the Americas; then audit all remaining
+unassigned ownable map locations as either a sourced SoP frame or a documented
+intentional empty land.
+
 ## 2026-07-19 — M3 Indian Ocean territorial pass
 
 - Expanded only source-labelled, coarse local geography frames for the AD 1
