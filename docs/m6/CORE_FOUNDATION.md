@@ -72,6 +72,14 @@ gameplay representations, not reconstructions of a uniform written legal code.
 Each source row records the relevant plan section and synthesis source; the
 historically interpretive proxies are marked `contested` in their ledger.
 
+Rome now also exposes separate equestrian-service and public-priesthood
+privileges as required by the plan. The locally verified `nobles_estate` and
+`clergy_estate` buckets are respectively technical UI adapters for Rome's
+second aristocratic order and its priestly colleges; they do not equate
+equites with senators or Roman public religion with a Christian clergy. No new
+global estate type is introduced, because the local registry has no safe
+country-scoped estate attachment contract.
+
 The Judean profile adds a narrower `clergy_estate` adapter for the Second
 Temple priesthood. Its verified power and satisfaction modifiers make the
 Temple's civic and religious weight playable alongside Archelaus's client

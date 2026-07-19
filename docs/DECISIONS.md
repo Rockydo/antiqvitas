@@ -711,3 +711,13 @@ court-identity label anchored at the current court. Shared surnames may share a
 label only when the note says that it is not a kinship assertion. This keeps
 the character database structurally valid without folding unrelated officials
 into a fabricated royal house.
+
+## 2026-07-19 - Reuse validated estate buckets for Roman civic orders
+
+The current EU5 estate registry is global and has no safe Rome-only attachment
+surface. M6 therefore represents the equestrian order through a distinct
+`nobles_estate` privilege and public priestly colleges through a distinct
+`clergy_estate` privilege, using only locally harvested power, satisfaction,
+and cabinet-efficiency modifiers. This makes the plan's estate adapters visible
+without adding a speculative worldwide estate type or treating either Roman
+group as literally medieval nobility or Christian clergy.

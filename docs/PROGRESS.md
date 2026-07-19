@@ -1295,6 +1295,18 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-19 - M6 Roman civic-order adapters
+
+- Added Equestrian Service and Priestly Colleges to Rome's source-labelled
+  profile, completing the plan-listed senate/equites/priesthoods/plebs/legion
+  adapter set with the existing annona and military fallback privileges.
+- The equestrian and priesthood mappings reuse only verified global estate
+  buckets. Their historical basis and the technical limits are recorded in
+  [the Roman civic note](m6/ROMAN_CIVIC_AD1.md) and `DECISIONS.md`.
+
+Next: continue source-led M6 roster and mechanics coverage while preserving the
+separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Trinovantian ruler correction
 
 - Replaced Trinovantes' generated ruler with coin-attested Dubnovellaunos from
