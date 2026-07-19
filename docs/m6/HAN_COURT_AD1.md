@@ -28,3 +28,18 @@ The engine identity labels are deliberately narrow. They preserve separate
 people rather than folding unrelated officials into a fictional common dynasty;
 the Zhen and Liu Xin labels carry only the directly attested father-son ties,
 and none of the labels claims a full genealogy.
+
+## Accession-credited officials
+
+The first Yuan Shi-year annal of the *Han Shu* names Wang Yun, Liu Bu'e, Ren
+Cen, Kong Yong, and Shi Xu among officials credited with arranging Emperor
+Ping's accession (`CTP-PING1` in the source ledger). They extend the court
+roster as deliberately contested context figures. The annal's wording does not
+settle whether every named official remained in the same office on 1 January,
+their physical residence, or any connection between same-surname individuals.
+
+Accordingly, every record is court-only. M6 scripts no office, ability,
+biography date, regency role, family link, or mechanical privilege for this
+group. In particular, Wang Yun is not placed in the Wang consort-kin clan, Liu
+Bu'e is not folded into the imperial House of Liu, and Kong Yong is not made
+kin to Kong Guang.

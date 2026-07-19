@@ -762,3 +762,15 @@ only as a contested AD 1 court figure: it does not script a birth or death
 date, an ongoing command, abilities, a formal office mechanic, or a regency
 role. Sources weighed: P8.3; `CTP-WSH` in `docs/world_1ad/SOURCES.md`.
 [contested]
+
+## 2026-07-19 - Han accession officials are court context, not dated officeholders
+
+The first Yuan Shi-year *Han Shu* annal names Wang Yun, Liu Bu'e, Ren Cen,
+Kong Yong, and Shi Xu when recounting the arrangements for Emperor Ping's
+accession. That is direct evidence of their imperial-court connection, but it
+does not establish that each retained the stated title on 1 January AD 1, a
+precise residence, or any same-surname kinship. They are consequently entered
+only as contested Chang'an court records. No office, date, ability, regency,
+privilege, or family link is scripted; Wang Yun, Liu Bu'e, and Kong Yong remain
+separate from the similarly named Wang, Liu, and Kong labels. Sources weighed:
+P8.3; `CTP-PING1` in `docs/world_1ad/SOURCES.md`. [contested]
