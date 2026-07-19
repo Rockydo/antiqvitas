@@ -721,3 +721,13 @@ surface. M6 therefore represents the equestrian order through a distinct
 and cabinet-efficiency modifiers. This makes the plan's estate adapters visible
 without adding a speculative worldwide estate type or treating either Roman
 group as literally medieval nobility or Christian clergy.
+
+## 2026-07-19 - Zhongshan family context uses a documented local proxy
+
+EU5 character dynasties require an installed location anchor even when a
+source identifies only a historical region. For Emperor Ping's maternal Wei
+family, M6 uses `anxi_dingzhou`: the project source route connects Han Lunu,
+the Zhongshan centre, to the Dingzhou area. The character tag remains HAN and
+the records have no implied Chang'an residence. This is an engine anchor for a
+bounded family context, not an ownership, border, capital, or exact-residence
+assertion.
