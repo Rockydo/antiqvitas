@@ -3,10 +3,11 @@
 ## M6 country-inspector coverage is partial
 
 The foreground-safe driver now selects countries and opens their Country panel
-under the host's scaled geometry. Rome's prior run and the new Parthian run
-visibly show the intended rulers and their government/law profiles. Han has a
-separate, reproducible silent minority-regency fallback and therefore blocks
-M6 acceptance; see `BLOCKERS.md` and `docs/playtests/M6_CORE_FOUNDATION.md`.
+under the host's scaled geometry. Fresh Roman and Parthian probes visibly show
+their intended government/law profiles, and the Roman player-panel probe also
+confirms all five source-labelled estate adapters. Han has a separate,
+reproducible silent minority-regency fallback and therefore blocks M6
+acceptance; see `BLOCKERS.md` and `docs/playtests/M6_CORE_FOUNDATION.md`.
 
 The Parthian run also included an unrelated `chrome.exe` error modal in the
 desktop capture. It did not prevent country selection or the Country tab, but
