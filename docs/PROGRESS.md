@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-19 — M3 African SoP coverage
+
+- Added the design-bible's West African iron-age, Bantu-expansion, and
+  Barbaria/Horn SoP families as explicit roster entities rather than assigning
+  their areas to nearby settled states. The African pass also adds conservative
+  Mauretanian, Garamantian, Blemmyan, and Aksumite regional frames.
+- The active political-map roster is now 136 polities with 8,084 resolved
+  locations and 25 dependencies. The collision-safe tag generator now retains
+  committed allocations when new roster rows are inserted.
+- `make validate` and a real-game smoke are green with zero new error lines.
+
+Next: give the Americas their equivalent explicitly named SoP coverage, then
+introduce checked residual coverage for remaining broad regions without turning
+empty late-settlement lands into period states.
+
 ## 2026-07-19 — M3 Han-world territorial pass
 
 - Added reviewed regional frames for Cappadocia/Commagene, Media Atropatene,

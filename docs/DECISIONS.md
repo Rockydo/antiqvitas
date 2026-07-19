@@ -117,6 +117,14 @@ foreground attachment sequence before taking the image. This prevents a game
 test artifact from including another application when focus changes during
 launcher handoff; the clean menu checkpoint is retained as M3 driver evidence.
 
+## 2026-07-19 — Append-only collision tag allocation
+
+The tag-map generator first reserves all valid engine tags from the last
+committed map, then allocates only genuinely new collisions. This preserves
+existing internal tags when historical roster rows are inserted and avoids
+needless save/setup churn. It still rejects a previously allocated tag if the
+current game build now reserves it through a vanilla or localization namespace.
+
 ## 2026-07-19 — Coarse area rows require explicit uncertainty
 
 For the Indian Ocean territorial pass, a whole installed geography area is used

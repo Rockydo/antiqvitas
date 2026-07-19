@@ -62,3 +62,7 @@ an AD 1 frontier.
 The Han-world expansion records P8.1–P8.3/P8.8 with CAH-XI, CHGIS, or *Samguk
 Sagi* as appropriate. Multi-capital regions are deliberately retained for the
 residual SoP/source pass rather than being silently collapsed to one owner.
+
+P8.5 and CAH-XI support the explicit African SoP families. Their map anchors
+are documented geographic handles, not claimed state capitals; every broad
+ownership row remains `contested` until the population-map phase.
