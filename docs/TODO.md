@@ -81,6 +81,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add Pharasmanes I's contested AD 1 Caucasian Iberian court without inventing an intra-year accession date.
 - [x] Add a bounded Second Temple priesthood adapter to Herodian Judea through verified estate and law contracts.
 - [x] Add source-qualified AD 1 coinage standards for Augustan Rome and Western Han through verified socioeconomic-law contracts.
+- [x] Make the Han Mandate of Heaven explicit through a verified legitimacy adapter while deferring its dated collapse cycle.
 - [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories.
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 

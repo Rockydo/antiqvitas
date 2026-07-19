@@ -88,6 +88,14 @@ outside the adapter, while dated debasement and Wang Mang's later coin changes
 belong to M10 history work. The source ledger records the relevant British
 Museum objects alongside P8.1/P8.3, P13, OCD, and BHR.
 
+## Mandate adapter
+
+The Han reform now uses the installed monarchy `monthly_legitimacy` surface to
+make the Mandate of Heaven visible in the current government profile. This is
+a deliberately conservative starting-state support value, not an assertion
+that the Mandate was a generic European legitimacy system. Its historically
+contingent loss in the Wang Mang, flood, and civil-war arc remains M10 work.
+
 ## Secondary AD 1 roster
 
 The next slice adds Maroboduus, Arminius, Juba II, Cleopatra Selene II, Aretas
