@@ -36,3 +36,19 @@ with a green `make full` and zero new normalized `error.log` line types.
 
 Next: M2 calendar defines, five age skeletons and placeholder advances, then a
 year-one new-game/save-reload verification.
+
+## 2026-07-19 — M2 runtime probe
+
+- Added a checked-in date timeline and expanded `tools/dates.py` to generate
+  M2's calendar, ages, scaffold advances, and mirrored BOM-safe localization.
+- Verified the engine's five live age boundaries and its required sixth,
+  post-end compatibility key. Verified that current-build age/advance/defines
+  common files require UTF-8 BOM and extended pdxlint accordingly.
+- Drove New Game to a visible `08:00, 1 January, 1` and `Age of Principate`;
+  saved an AD 1 observer session and reloaded it through the UI at the same
+  date. The driver now supports normalized clicks and hotkeys.
+- Deferred the generated M2 game-visible layer before commit: vanilla 1337
+  ruler-term data produces 868 runtime errors at year 1. M3's required complete
+  setup mirror is the correct fix; evidence and recovery are in BLOCKERS.
+
+Next: begin M3's AD 1 setup mirror, which unblocks M2's clean runtime gate.

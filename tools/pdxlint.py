@@ -49,6 +49,12 @@ def expected_bom(path: Path) -> bool | None:
         return False
     if "/setup/countries/" in f"/{relative}" or "/setup/templates/" in f"/{relative}":
         return True
+    if (
+        "/in_game/common/age/" in f"/{relative}"
+        or "/in_game/common/advances/" in f"/{relative}"
+        or "/loading_screen/common/defines/" in f"/{relative}"
+    ):
+        return True
     if path.suffix.lower() == ".yml":
         return True
     return None

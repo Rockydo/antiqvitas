@@ -44,6 +44,14 @@ override both keys in the same loading-screen database. Acceptance of year 1
 and save/UI behavior remain M2 runtime gates; all generated dates already pass
 through `tools/dates.py`, preserving the AUC fallback.
 
+The M2 runtime probe proved that direct values `1.1.1` and `476.9.4` are
+accepted: a New Game map visibly rendered `08:00, 1 January, 1`, displayed the
+localized Age of Principate, and saved/reloaded at that date. The engine still
+requires all six built-in age keys to exist while loading vanilla databases, so
+the fifth campaign age is followed by an unreachable year-477 compatibility
+sentinel. The generated layer is deferred until M3 replaces vanilla setup
+ruler-term data; see `BLOCKERS.md`.
+
 ## Setup layout
 
 The master plan's provisional setup paths differ from build 1.3.1.1:
@@ -68,6 +76,9 @@ The extractor inspected every local file and recorded the result in
   files omit it; ANTIQVITAS follows the plan's stricter BOM rule.
 - All 528 inspected English localization files have BOM.
 - Common definition files such as cultures also use BOM.
+- A direct M2 smoke confirmed that `in_game/common/age`,
+  `in_game/common/advances`, and `loading_screen/common/defines` also require
+  UTF-8 BOM. `pdxlint` enforces this for mod files in those folders.
 
 ## Metadata and replacement
 
