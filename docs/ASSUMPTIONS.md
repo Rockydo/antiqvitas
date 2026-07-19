@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-19 — Missing installed culture-template proxies
+
+Antilebanon Mountains, Monterey Coast, and Dalai Nur Lake are controlled map
+anchors with no installed location-template culture. Their source-labelled
+exceptions retain the reviewed Batanean, Pacific-coastal, and Xianbei profiles
+respectively for now. This is a technical map limitation, not evidence that a
+mountain, coast, or lake had a homogeneous culture. Sources weighed: P8.1;
+P8.8; P8.10; OCD; CAH-XI; Pleiades. [contested]
+
 ## 2026-07-19 — Dynamic capital names are a limited first pass
 
 M4's first 61 dynamic names reproduce only the `historical_capital` labels of

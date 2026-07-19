@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-19 — Installed culture templates are a geographic index only
+
+The M4 audit records the 680 installed template cultures present in controlled
+AD 1 locations alongside the profile that the current historical roster would
+assign there. It is deliberately an inventory, not an automatic translation:
+a modern or later-period template key may cross multiple ancient cultural
+zones. Any many-to-one or one-to-many remap must therefore enter a separate,
+source-labelled table before it changes a pop.
+
 ## 2026-07-19 — Conservative dynamic-name v1
 
 The first dynamic-name layer is limited to secure, coordinate-reviewed capital
