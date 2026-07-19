@@ -48,6 +48,22 @@ parent graph, estate, ability, biography date, or later career. Separate
 court-line keys preserve identities without turning the Fasti filiation into a
 reconstructed Roman genealogy; dated careers remain M10 work.
 
+## AD 14-24 non-imperial consular survival
+
+Cooley's scholarly consular fasti records thirty-two further non-imperial
+ordinary or identified suffect consuls in AD 14-24 (`COO-FASTI-14-24`). The
+normal Augustan cursus set the consulship at age thirty-three (`OUP-CURSUS`),
+so this cohort supports a deliberately contested inference that each was alive
+at the AD 1 boundary. Imperial-prince consulships are not used for this
+inference.
+
+Every record remains a Roman court-context identity only. It receives no start
+office, term, residence, marriage, parent graph, estate, ability, biography
+date, or later career. Individual court-line labels distinguish identity
+without claiming a reconstructed family tree; the second Gaius Asinius Pollio
+is explicitly labelled by his AD 23 consulship to avoid conflation with the
+Augustan author.
+
 ## Living Augustan figures
 
 British Museum biographies establish Publius Quinctilius Varus's active period
