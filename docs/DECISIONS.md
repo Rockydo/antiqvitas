@@ -15,8 +15,19 @@ Build 24187685 exposes only five government types. The initial Principate, Han
 Imperial Bureaucracy, and Parthian King of Kings are therefore `monarchy`
 profiles with unique, locally verified government-reform modifiers. The
 adapter is explicit in generated data and localization; it is not a historical
-claim that the three states shared one institution. New estates, privileges,
-laws, and values remain subsequent M6 work.
+claim that the three states shared one institution. Custom estate identities
+and the remaining world-government coverage remain subsequent M6 work.
+
+## 2026-07-19 — M6 privileges and laws use narrow estate adapters
+
+The engine's installed estate and law contracts are used without adding an
+unverified estate type. `nobles_estate` and `burghers_estate` are therefore
+explicit, source-noted technical adapters for senators, urban plebs, palace
+personnel, and Parthian great houses. Five privileges, four laws, and direct
+societal-value fields are generated only after their CSV keys, local symbols,
+and start-manager syntax validate. This avoids treating a technical UI bucket
+as a historical social classification, while giving the three core profiles
+distinct playable constraints.
 
 ## 2026-07-19 — Western Han uses the Jingzhao/Xi'an Chang'an anchor
 
