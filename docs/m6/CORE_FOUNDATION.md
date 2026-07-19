@@ -114,6 +114,14 @@ privilege and canal-endowments law make the documented court, Buddhist
 institutions, and irrigation patronage legible without treating either estate
 or law labels as a reconstructed ancient constitution.
 
+## Roman legal-status adapter
+
+Rome now has a separate socioeconomic law that explicitly permits enslavement
+and slave-goods movement, mirroring the installed law contract. It is a sober
+baseline for the historical legal order and does not quantify enslaved people,
+manumission, provincial variation, or social experience. Those population and
+history questions remain separate M4 and M10 work.
+
 ## Secondary AD 1 roster
 
 The next slice adds Maroboduus, Arminius, Juba II, Cleopatra Selene II, Aretas

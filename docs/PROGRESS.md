@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-19 - M6 Roman legal-status baseline
+
+- Added an explicit Roman socioeconomic law using the installed legal-status
+  contract for permitted slavery and slave-goods movement. Its data and notes
+  deliberately avoid quantifying enslavement, manumission, or provincial
+  variation; those require dedicated population and history passes.
+- Regenerated M6/start data. `make validate` reports 23 dynasties, 35
+  characters, 23 government profiles, 23 ruler terms, 14 privileges, and 16
+  laws; enabled-mod smoke reached the rendered menu with zero new error-log
+  lines.
+
+Next: continue remaining source-qualified Tier-1/2 courts and political
+mechanics; the legal baseline does not replace population or later-history work.
+
 ## 2026-07-19 - M6 Anuradhapura court
 
 - Replaced Anuradhapura's random ruler with Bhatikabhaya Abhaya, a

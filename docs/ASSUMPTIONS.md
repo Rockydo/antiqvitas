@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-19 - Roman legal status is an explicit but bounded AD 1 baseline
+
+The Augustan start permits slavery and slave-goods movement through the
+installed legal-status surface, reflecting the legal institution's secure
+place in the Roman world. This does not model a uniform Roman practice, set a
+share of the population, define every route to manumission, or make a moral
+claim about the institution. Population composition and later status changes
+need their own sourced M4/M10 work. Sources weighed: P8.1; P13; OCD.
+[secure for the legal baseline; contested for the deliberately minimal engine
+mapping]
+
 ## 2026-07-19 - Bhatikabhaya Abhaya is an AD 1 court anchor, not a fixed reign chronology
 
 Inscription-focused sources securely place Bhatikabhaya Abhaya in office across
