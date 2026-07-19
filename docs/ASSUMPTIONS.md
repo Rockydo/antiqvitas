@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-19 - Northern Indian courts distinguish secure continuity from contested sequence
+
+The plan names Azes for the Indo-Scythian AD 1 start, and Iranica establishes
+the Azes dynasty's broad 50 BCE-CE 30 setting and coin-led succession sequence.
+M6 represents this as Azes II but marks the individual current sequence and
+term contested. By contrast, Iranica identifies Strato II as ruling the final
+eastern-Punjab Indo-Greek bastion until approximately AD 10, so his AD 1 court
+is secure; no biography day, successor, or AD 10 annexation is pre-scripted.
+Sources weighed: P8.4; CAH-XI; [Iranica on Azes](https://www.iranicaonline.org/articles/azes/); and [Iranica on the Indo-Greek dynasty](https://www.iranicaonline.org/articles/indo-greek-dynasty/).
+[contested for Azes II's individual sequence and both engine adapters; secure
+for Strato II's AD 1 court continuity]
+
 ## 2026-07-19 - Nambed's Persid court rests on a broad numismatic date range
 
 The available academic coin record dates Nambed of Persis only broadly to AD

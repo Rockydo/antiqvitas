@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-19 - M6 northern Indian courts
+
+- Replaced generic Indo-Scythian and Indo-Greek rulers with the plan's Azes
+  start and Strato II. Azes II remains explicitly contested because the source
+  supports the dynasty's broad period more firmly than the individual sequence;
+  Strato II's AD 1 court continuity is secure, with his c. AD 10 fall deferred.
+- Added distinct bounded monarchy reforms, elite privileges, and governance
+  laws for the regional-satrapal and late city-court settings using only locally
+  validated contracts. Both technical social proxies are documented.
+- Corrected CSV quoting in the new descriptive ledgers before generation.
+  `make validate` reports 27 dynasties, 39 characters, 30 government profiles,
+  27 ruler terms, 17 privileges, and 20 laws; enabled-mod smoke reached the
+  rendered menu with zero new error-log lines.
+
+Next: continue remaining source-qualified Tier-1/2 courts and political
+mechanics; Northern Indian succession and the AD 10 fall remain history work.
+
 ## 2026-07-19 - M6 Persis court
 
 - Replaced Persis's generic ruler with Nambed, using an academic numismatic

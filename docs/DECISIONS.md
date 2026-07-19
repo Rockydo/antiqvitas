@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-19 - Northern Indian courts use separate bounded monarchy reforms
+
+The installed monarchy and estate/law modifier contracts are sufficient to
+separate the Indo-Scythian regional-satrapal court from the late Indo-Greek
+city-court setting without introducing unverified government types. M6 adds
+two labelled reforms, paired privileges, and administrative laws. Their notes
+make clear that `nobles_estate` and `burghers_estate` are UI proxies, not
+claims of a shared feudal or municipal constitution.
+
 ## 2026-07-19 - M6 supports source-qualified collective republics
 
 Local start data establishes that `republic`, `oligarchic_elective`, and
