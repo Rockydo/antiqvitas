@@ -25,6 +25,9 @@ by an initial M1 smoke), even though the UI formats the same build as `1.3.1.1`.
 - `helplog` works and writes `USER_DIR/console.txt`. The harvested build-specific
   list is `docs/REF_console_commands.txt`.
 - Local `script_docs` is listed but fails to return; see `BLOCKERS.md`.
+- A quiet debug log alone does not prove menu readiness: a live M5 probe held a
+  black hung window while its log was quiescent. The runtime driver therefore
+  verifies both `IsHungAppWindow` and a rendered-frame pixel threshold.
 
 ## Dates
 

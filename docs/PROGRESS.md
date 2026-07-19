@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-19 — Runtime-driver readiness repair
+
+- An inspected M5 driver screenshot revealed that the former log-quiescence
+  heuristic could accept a black, hung EU5 window as menu-ready. The driver now
+  requires a responsive Windows handle and a non-black rendered client frame
+  before it reports readiness.
+- The corrected driver captured the real game menu and passed a subsequent
+  `make validate` plus real `make smoke` with zero new error lines. This restores
+  screenshot evidence as a meaningful runtime gate for the upcoming observer
+  work.
+
 ## 2026-07-19 — M5 anchored ancient production
 
 - Added a higher-priority source-anchor layer over the regional goods rules.
