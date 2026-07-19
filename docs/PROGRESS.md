@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-19 - M6 Indian ganasangha councils
+
+- Replaced the generic monarchies of Yaudheya, Arjunayana, and Kuninda with
+  source-qualified republics. Their shared reform, privilege, law, and values
+  express leading-clan council governance without inventing an AD 1 individual
+  ruler, dynasty, or regnal chronology.
+- Extended the generator's audit rules to permit its locally verified `random`
+  ruler sentinel only for these collective republics; named courts still require
+  a campaign-valid ruler term.
+- Regenerated M6/start data. `make validate` reports 26 government profiles,
+  23 ruler terms, 15 privileges, and 18 laws; enabled-mod smoke reached the
+  rendered menu with zero new error-log lines.
+
+Next: continue remaining source-qualified Tier-1/2 courts and political
+mechanics; collective government support does not close the named-roster pass.
+
 ## 2026-07-19 - M6 Roman civic-cult baseline
 
 - Added a Roman religious law in the locally verified religious-law category.

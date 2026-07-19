@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-19 - Ganasangha leadership remains collective where no AD 1 individual is secure
+
+Yaudheya, Arjunayana, and Kuninda are represented as republican ganasanghas as
+specified in the plan, but the project source set does not support assigning a
+particular current ruler at the campaign boundary. Their profiles therefore
+use an engine-generated republican ruler and explicitly omit invented people,
+dynasties, biographies, and ruler terms. The leading-clan/estate mapping is a
+technical proxy, not an assertion of a European constitutional category.
+Sources weighed: P8.4; P13; CAH-XI. [secure for the plan-required republican
+forms; contested for the engine and estate mappings]
+
 ## 2026-07-19 - Roman civic-cult pluralism is a narrow tolerance mapping
 
 At the AD 1 start, the Roman public cult coexisted with many locally observed
