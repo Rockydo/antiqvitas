@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-19 - M6 Augustan legal-record batch
+
+- Added Gaius Asinius Pollio, Marcus Antistius Labeo, and Gaius Ateius Capito
+  as source-qualified Roman-world records.
+- Their later offices and legal-school associations remain un-scripted; the
+  batch creates no present-day office, ability score, residence, or kinship.
+
+Next: regenerate, validate, smoke-test, then continue source-led Tier-1/2
+roster breadth while preserving the separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Augustan cultural-record batch
 
 - Added five source-qualified contemporaries to the AD 1 Roman-world roster:
