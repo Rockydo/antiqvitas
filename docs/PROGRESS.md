@@ -1295,6 +1295,20 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-19 - M6 Roman government-panel probe
+
+- A fresh enabled-mod AD 1 run selected ROM and opened the live Government
+  panel. It rendered Roma, one reform, nineteen laws, eleven societal values,
+  and all five intended Roman estate adapters: Senatorial Land Exemption,
+  Equestrian Service, Praetorian Donatives, Priestly Colleges, and Annona.
+- The two newest adapters visibly expose their expected cabinet-efficiency
+  modifier. The targeted log scan found no M6 Roman identifier despite the
+  independently deferred global AD 1 runtime error surface. Evidence and its
+  limits are recorded in `docs/playtests/M6_CORE_FOUNDATION.md`.
+
+Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
+separate Han runtime-regency blocker.
+
 ## 2026-07-19 - M6 Roman civic-order adapters
 
 - Added Equestrian Service and Priestly Colleges to Rome's source-labelled

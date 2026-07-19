@@ -74,3 +74,22 @@ Phraates renders as age 0 because his source-led record intentionally omits an
 unknown birth date. This presentation defect is tracked in `KNOWN_ISSUES.md`;
 no invented date was added. The result is a Parthian runtime pass only, not an
 M6 milestone pass while the Han regency fallback remains unresolved.
+
+## 2026-07-19 Roman government-panel result
+
+A fresh enabled-mod selector run reached `08:00, 1 January, 1`, selected ROM,
+and started the paused Roman country session. Its Country tab shows Roma, Latin
+culture, one reform, eleven societal values, and nineteen laws. The live
+Government panel then rendered all five Roman estate adapters by their
+generated names: Senatorial Land Exemption, Equestrian Service, Praetorian
+Donatives, Priestly Colleges, and Annona. In particular, the Equestrian Service
+and Priestly Colleges tooltips show their intended `+2.50%` cabinet-efficiency
+modifier.
+
+Evidence is retained under `docs/screens/20260719_212456/M6_runtime_rome/`,
+including `rome_country_tab.png`, `nobility_privilege_two.png`,
+`clergy_privilege_one.png`, and `annona_privilege.png`. The player-panel probe
+did encounter the already-deferred global AD 1 runtime error surface; a scan
+found no Roman M6 profile, privilege, reform, or character identifier in its
+`error.log`. This is a Roman runtime pass only. The Han minority-regency
+fallback and broader M6 scope still preclude an M6 acceptance result.

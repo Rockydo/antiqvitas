@@ -114,6 +114,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add Salome I to the Herodian Judean court without converting her settlement holdings into a separate state.
 - [x] Extend the directly attested Han regency circle with Wang Yi, Sun Jian, Zhen Xun, Liu Fen, Cui Fa, and Chen Chong without synthesizing offices or genealogies.
 - [x] Add a bounded, source-qualified druidic-authority privilege to the eight pre-conquest Brittonic polity profiles without asserting a pan-British constitution.
+- [x] Driver-test the Roman government panel: ROM renders Roma, one reform, nineteen laws, and all five Roman estate adapters, including Equestrian Service and Priestly Colleges.
 - [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories. (72 source-led characters and 23 privilege adapters currently.)
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 
