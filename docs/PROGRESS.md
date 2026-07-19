@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-19 — M3 country database foundation
+
+- Generated 133 BOM-safe country definitions from the sourced roster and the
+  collision-safe engine-tag map, along with all-language mirrored country-name
+  localization and engine-native placeholder CoAs.
+- Extended tag isolation to avoid the current build's country, localization,
+  and observed hash namespaces. The real smoke found and drove fixes for all
+  six database collisions; the accepted run reaches the active mod menu with
+  zero new error-log lines.
+- M4 remains responsible for replacing the temporary valid culture/religion
+  defaults with the historically sourced population-map trees.
+
+Next: map the remaining capitals and build the exact 25-file AD 1 setup
+mirror, beginning with a clean country/ownership manager.
+
 ## 2026-07-19 — M3 roster foundation
 
 - Created the machine-validated initial AD 1 roster: 133 country, subject, and

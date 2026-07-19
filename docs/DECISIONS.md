@@ -17,6 +17,23 @@ the design identifier where possible and assigns a deterministic `X..` engine
 tag only for a collision. This avoids unverified duplicate-key precedence while
 keeping historical sources and later event writing readable through the map.
 
+## 2026-07-19 — Country-key namespace and temporary definition profiles
+
+Country tags are also localization keys. The M3 allocator therefore excludes
+both three-character vanilla localization keys and engine-hash collisions, not
+only country-definition tags. Build 24187685 proved `XAD` collides by hash with
+`name_li3.mandarin_language`, so it is explicitly reserved and every generated
+tag is smoke-tested before acceptance. The initial 133 country definitions use
+only verified current culture/religion keys to keep M3 parsable; they are
+explicitly temporary database defaults, not a claim about AD 1 map-mode
+culture or faith. M4 replaces them with the sourced ancient trees.
+
+The country database independently rejects duplicate display names and adds
+rank titles itself. The roster remains historically precise, while its M3 UI
+labels use `Roman Commonwealth` and `Parthia` rather than duplicate/compound
+`Empire` forms. This is a technical display adaptation, not a historical
+renaming.
+
 ## 2026-07-19 — Five campaign ages with a compatibility sentinel
 
 The campaign has five real ages: Principate, High Empires, Crisis, Dominate,
