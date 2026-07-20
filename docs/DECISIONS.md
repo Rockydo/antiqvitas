@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M5 maps Prima Porta through Rome rather than inventing a location key
+
+The installed map lacks a Prima Porta key. The verified `noble_villa` building
+is therefore seeded at Rome, the existing city-scale regional anchor, with
+source and proxy limits retained in the special-building ledger. This is a
+technical scale choice, not a decision to treat villa properties as urban or to
+model the generic building name as an exact Roman social category.
+
 ## 2026-07-20 - M5 permits the verified generic monastery for Buddhist institutions
 
 The plan expressly allows monasteries in Buddhist eastern contexts at the
