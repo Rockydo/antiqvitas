@@ -60,6 +60,7 @@ EVENT_IMAGES = {
     "cai_lun_paper": "gfx/interface/illustrations/event/antq_cai_lun_paper.dds",
     "gan_ying": "gfx/interface/illustrations/event/antq_gan_ying.dds",
     "trajan_dacia": "gfx/interface/illustrations/event/antq_trajan_dacia.dds",
+    "trajan_parthia": "gfx/interface/illustrations/event/antq_trajan_parthia.dds",
 }
 
 
