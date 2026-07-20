@@ -148,6 +148,8 @@ antq_m10.1008 = {
 	option = {
 		name = antq_m10.1008.a
 		historical_option = yes
+		change_tag_cosmetic = { tag = KSH }
+		set_country_rank = country_rank:rank_empire
 		add_prestige = prestige_mild_bonus
 		add_legitimacy = legitimacy_mild_bonus
 	}
@@ -231,8 +233,9 @@ antq_m10.1013 = {
 	option = {
 		name = antq_m10.1013.a
 		historical_option = yes
-		add_prestige = prestige_mild_bonus
-		add_legitimacy = legitimacy_mild_bonus
+		change_tag_cosmetic = { tag = XSO }
+		destroy_international_organization = { target = international_organization:antq_xiongnu_confederation }
+		add_stability = stability_mild_penalty
 	}
 }
 
