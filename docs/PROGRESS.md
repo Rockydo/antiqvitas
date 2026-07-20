@@ -1,5 +1,25 @@
 # Progress
 
+## 2026-07-20 - M10 fourth-century historical currents
+
+- Added a generator-owned AD 300-399 layer with fourteen ledger-bound currents:
+  seven situations, one disaster, four dynamic events, one Hunnic formation,
+  and one Roman tag switch. Every script date comes from the shared timeline
+  through `AntqDate`; sources now cover Armenia, Constantine/Nicaea, Shapur,
+  Aksum, the tsunami, Huns, Nicene enforcement, Fei River, Gwanggaeto, Olympic
+  cessation, the Roman courts, and Faxian.
+- Hunnic arrival creates `HNS` at the documented Kazan Volga proxy. The AD 395
+  event creates an Eastern Roman court at Constantinople, changes the continuing
+  state to the Western Roman identity, and transfers a generated 491-row
+  source-qualified regional ledger rather than hiding a territorial split in
+  script. The ledger is expressly not a complete fourth-century provincial map.
+- `make validate` and enabled-mod `make smoke` passed. The first smoke run
+  revealed Unicode in an engine localization identifier; the renderer and smoke
+  diagnostics were corrected, then the second menu run added zero error-log
+  lines. The unchanged observer-modal blocker remains deferred.
+
+Next: render, source-check, and menu-smoke the AD 400-476 finale batch.
+
 ## 2026-07-20 - M10 third-century historical currents
 
 - Added a generator-owned AD 200-299 layer with ten ledger-bound currents:
