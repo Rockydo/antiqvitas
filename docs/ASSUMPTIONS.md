@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Frankish-formation art is landscape-only Lower-Rhine context
+
+The image is an unoccupied early-autumn Lower-Rhine floodplain of a natural
+side-channel, willow and alder stands, reeds, damp meadow, pale gravel, low
+wooded rises, and low cloud. It identifies no Frankish group, person, migration,
+polity, settlement, limes, date, or outcome. It deliberately excludes people,
+military material, structures, roads, forts, banners, Roman symbols, and
+narrative action; it is not a reconstruction of Frankish formation. Sources
+weighed: P8.7; plan sections 9 and 20. [secure broad regional context;
+illustrative composition only]
+
 ## 2026-07-20 - Manichaeism art is landscape-only western-Iranian context
 
 The image is an unoccupied early-autumn western-Iranian river margin of a
