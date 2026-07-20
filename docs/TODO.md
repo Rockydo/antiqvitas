@@ -152,6 +152,12 @@ after `make full` and its autonomous driver report are green.
   - [x] Normalize the plan's complete history spine into the validated
         `docs/timeline.csv` ledger, including its disaster calendar and
         silphium window.
+  - [x] Render and menu-smoke the AD 1-96 current layer: 14 situations, two
+        disasters, nine date-driven events, and the first formation/tag-switch
+        event surfaces.
+  - [ ] Replace the AD 1-96 formation and tag-switch event markers with
+        source-led in-place transformations or true new-polity releases after
+        their setup contracts are locally verified.
 - [ ] Smoke and observer-test every batch; run milestone gate and tag `M10-done`.
 
 ## M11 — Flavor & face

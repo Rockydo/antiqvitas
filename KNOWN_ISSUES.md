@@ -1,5 +1,15 @@
 # Known Issues
 
+## M10 first-century observer coverage is deferred
+
+The AD 1-96 layer has a clean enabled-mod menu smoke and no new `error.log`
+lines. Its observer-to-era playback cannot yet be run because the current
+driver's Observer confirmation has already failed two distinct bounded inputs
+(normalized click and foreground-safe Enter). Repeating that unchanged path
+would not add evidence; after a material driver or UI change, run the M10
+event-window observer route and capture the resulting situations and events.
+See `docs/playtests/M10_001_096.md` and `BLOCKERS.md`.
+
 ## M6 country-inspector coverage is partial
 
 The foreground-safe driver now selects countries and opens their Country panel
