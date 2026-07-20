@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Trajan-Parthia art is non-literal Mesopotamian context
+
+The image is an unoccupied Mesopotamian river plain with slow water, reed
+fringe, dry alluvial earth, sparse scrub, and distant low hills. It identifies
+no war, siege, campaign, revolt, commander, city, route, boundary, Roman or
+Parthian material, person, animal, action, date, or outcome. It deliberately
+excludes military material, boats, bridges, roads, forts, walls, cities, and
+irrigation works; it is not a reconstruction of the AD 113 campaign. Sources
+weighed: P8.2; WIL-TPW; IRAN-TRAJ; plan sections 9 and 20. [secure broad
+regional context; illustrative composition only]
+
 ## 2026-07-20 - Paper-standardization art is non-literal scholarly context
 
 The image is an unoccupied Eastern Han-style scholarly workspace with blank
