@@ -19,7 +19,7 @@ for its milestone; `deferred` = non-goal or dependency with rationale.
 | Diplomacy, subjects, IOs, known world | planned | M9 |
 | Situations, disasters, formables, tag changes | planned | M10 |
 | Events and decisions | planned | M10-M11 |
-| Flags, icons, illustrations, loading and age art | in progress | M11; generated/reused 2D only. First reviewed AD 1 Rome loading screen is engine-sized and smoke-clean; remaining classes continue. |
+| Flags, icons, illustrations, loading and age art | in progress | M11; generated/reused 2D only. The AD 1 Rome loading screen and attached *Immensum Bellum* event illustration are engine-sized, round-trip reviewed, and smoke-clean; remaining classes continue. |
 | Localization and glossary | planned | M2 onward, polish M11 |
 | Main menu | deferred | vanilla menu retained unless anachronism audit requires touchup |
 | Tutorials and hints | planned | M12 audit |

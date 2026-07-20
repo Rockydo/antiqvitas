@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-20 - M11 *Immensum Bellum* event illustration
+
+- Added the first attached M10/M11 event visual: a reviewed, text-free AD 1
+  Roman campaign-column scene, retained as a generation master and exact
+  1080×440 derivative on G:.
+- The event renderer now owns and validates its image reference. The
+  game-facing BC7 DDS was round-tripped to PNG for inspection; `make validate`
+  and enabled-mod smoke are green with zero new error-log lines.
+
+Next: continue source-led M5/M6 audit work and attach further M11 visual
+classes to verified engine surfaces while observer-dependent gates remain
+deferred.
+
 ## 2026-07-20 - M11 AD 1 Rome loading screen
 
 - Added the first generated M11 visual: a reviewed, text-free early-imperial
