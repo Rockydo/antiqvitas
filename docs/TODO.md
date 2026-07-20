@@ -282,7 +282,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Remove the obsolete M2 no-op age-scaffold definitions and their mirrored localization after M8's complete advance tree superseded them.
 - [x] Add the source-keyed concept glossary and project credits, including Pleiades attribution in game-visible metadata.
 - [x] Replace the five active age-view illustrations with reviewed, non-reconstructive 1080x440 DDS panels and retain their source/master chain.
-- [ ] Reach event/decision targets; finish final flags and icon batches, art for new events, remaining loading/common-screen art, and localization polish.
+- [x] Replace the five M8 age-group icon surfaces used by all 250 advances; validate the source/master/DDS chain and the 50-per-group bindings.
+- [ ] Reach event/decision targets; finish final flags and per-advance icon batches, art for new events, remaining loading/common-screen art, and localization polish.
 - [ ] Resolve the M11 generic-action message-registry blocker with a one-action exact-name GUI-overlay pilot; the 40-row source ledger is retained in `docs/m11/decisions.csv`.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 

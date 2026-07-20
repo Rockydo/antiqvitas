@@ -1,5 +1,13 @@
 # Progress
 
+## 2026-07-20 - M11 advance icon group pass
+
+- Replaced the five M8 age-group advance icon surfaces used by all 250 ancient advances with retained generation sources, reviewed 256x256 PNG masters, and BC7 DDS overrides.
+- The new validator confirms exactly 50 tree bindings per icon; the formerly unsupplied `crown_power_advance_discovery` texture is now an explicit mod asset.
+- Full validation and the live menu smoke test both passed with zero new error-log lines.
+
+Next: continue the remaining final-flag, per-advance icon, common-screen, and content-density surfaces.
+
 ## 2026-07-20 - M11 core emblem standards
 
 - Replaced the Rome, Han, and Parthia M3 solid-colour placeholders with validated, locally installed colored-emblem layers under a generated source ledger.

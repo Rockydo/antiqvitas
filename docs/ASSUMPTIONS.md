@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - M11 advance groups use symbolic, non-reconstructive icon motifs
+
+The five shared advance-group icons represent administration, civic law,
+communications, state authority, and civilian movement with generic objects.
+They do not reconstruct an identified object, culture, city, ruler, or event;
+this avoids attaching a false claim to the 50 advances each icon serves. The
+late-antique authority motif is a plain circlet rather than a medieval crown,
+and the migration motif has no ethnic or martial coding. Sources weighed: plan
+sections 15 and 20; installed `GetAdvanceIcon` UI and native icon-mask
+contract. [illustrative composition only]
+
 ## 2026-07-20 - M11 age panels are evocative period frames, not site reconstructions
 
 The five age-interface panels use broad landscapes for civic exchange,
