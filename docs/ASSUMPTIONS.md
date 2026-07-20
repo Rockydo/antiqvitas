@@ -2456,3 +2456,16 @@ visual motif from the source-labelled catalog. None is asserted as a vexillum,
 seal, sacred sign, royal banner, or modern national emblem. Sources weighed:
 plan sections 8.1-8.10 and 20; the roster source fields; local CoA contract.
 [contested visual representation]
+
+## 2026-07-20 - Religion and institution icons are broad UI motifs
+
+The M4 faith ledger contains historical categories, not a catalogue of
+contemporary universal emblems. M11 consequently reuses only broad installed
+motifs for direct-key religion icons: a temple, wheel, gate, folk marker, or
+regional ritual cue. The aliases do not assert that an AD 1 community used the
+source icon as its sign, that later named traditions already existed in the
+same form, or that one group had a single pan-regional practice. The new M8
+institution icons similarly depict generic objects and settings, not named
+artifacts, monuments, saints, councils, treaties, or armies. Sources weighed:
+the M4 ledger's P11/CAH-XI/OCD/BHR routes and plan sections 11, 15, and 20.
+[secure broad context; contested visual representation]

@@ -1,0 +1,66 @@
+# M11 direct-key religion and institution icons
+
+The installed interface calls `GetReligionIcon(Religion.Self)` and
+`GetInstitutionIcon(Institution.Self)`. The installed asset catalog establishes
+their direct filename convention: a definition key `x` resolves
+`main_menu/gfx/interface/icons/{religion,institutions}/x.dds`. The prior M4
+and M8 identifiers had no such files and therefore fell through to
+`_default.dds` in every country, pop, tooltip, technology, and institution
+surface.
+
+M11 supplies all 37 M4 religion keys and all nine M8 institution keys as
+128x128, sRGBA, BC7 DDS textures. `tools/m11_common_icons.py --check` locks
+the complete definition-to-texture inventory, verifies the DDS contract, and
+requires every religion texture to remain an exact alias of its reviewed local
+source. Its `--write` path is the reproducible local build step.
+
+## Religion aliases
+
+The religion set reuses installed engine-native motifs only. A source name is a
+broad readable UI cue, not a claim that the contemporary or historical
+tradition is identical to ANTIQVITAS's sourced category.
+
+| ANTIQVITAS definition keys | Reviewed local motif |
+|---|---|
+| `antq_religio_romana`, `antq_hellenic`, `antq_kemetic`, `antq_kushite_amun`, `antq_aksumite_paganism`, `antq_arabian_polytheism`, `antq_south_arabian_religion`, `antq_punic` | `hellenism_religion` temple |
+| `antq_early_christianity` | `catholic` Christian UI marker |
+| `antq_judaism` | `judaism` menorah |
+| `antq_arsacid_zoroastrianism` | `zoroastrian` winged motif |
+| `antq_manichaeism` | `manichaeism` wheel |
+| `antq_theravada`, `antq_mahayana` | respective installed Buddhist motifs |
+| `antq_brahmanism`, `antq_jainism` | respective installed Indian motifs |
+| `antq_chinese_state_cult`, `antq_daoism` | `sanjiao` balance motif |
+| `antq_kami` | `shinto` gate |
+| `antq_korean_muism`, `antq_siberian` | `shamanism` star motif |
+| `antq_tengri`, `antq_bon` | respective installed steppe/highland motifs |
+| `antq_celtic_religion`, `antq_germanic_religion` | `norse` northern-folk motif |
+| `antq_baltic_slavic`, `antq_finnic` | `romuva`, `muinaisusko` respectively |
+| `antq_berber_religion`, `antq_nile_cushitic`, `antq_west_african`, `antq_bantu_religion` | `guanche_religion`, `ajok_religion`, `songhai_religion`, `bantu_religion` respectively |
+| `antq_mesoamerican`, `antq_andean`, `antq_north_american`, `antq_caribbean` | `mesoamerican`, `inti`, `great_plains_shamanism`, `tain_feyentun_religion` respectively |
+| `antq_austronesian_religion`, `antq_australian_dreaming` | `anitism_religion`, `dreamtime_religion` respectively |
+
+## Institution art
+
+The installed institution art is overwhelmingly medieval or early-modern
+(printing press, firearms, industrial machinery, modern globe). The nine M8
+definitions therefore use ANTIQVITAS-owned retained sources and reviewed PNG
+masters. The seven unique motifs are Hellenistic scroll/olive/ink cup; Roman
+wax tablet, measuring cord, and bridge; Han bamboo slips and uninscribed seal;
+Buddhist stupa, lamp, and cloth; cataphract armour equipment; handmade-paper
+mould and sheets; and a late-antique ascetic cell with lamp and cloak.
+
+Theological Orthodoxy shares the reviewed blank-scroll learning motif after two
+image-service requests for a blank-codex treatment returned no artefact.
+Foederati Statecraft shares the reviewed civilian wagon, bundle, and water-jar
+motif from the Migrations advance icon. Neither fallback depicts a named
+council, treaty, person, people, battle, flag, weapon, or boundary.
+
+All generated sources live in `assets_queue/generated_sources/`; masters are
+in `assets_queue/generated/`; the nine direct-key DDS files are in
+`main_menu/gfx/interface/icons/institutions/`. The generated sources were
+chroma-keyed to alpha, downscaled to the local 128x128 contract, BC7 encoded
+with DirectXTex, then decoded into the inspected nine-panel round-trip sheet.
+
+Local basis: installed `GetReligionIcon` and `GetInstitutionIcon` GUI uses,
+installed religion/institution definition-to-filename pairs, and the local
+icon directories. Design basis: master plan sections 11, 15, and 20.
