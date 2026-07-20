@@ -272,7 +272,9 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 451 Chalcedon and Avarayr illustration through a landscape-only Armenian-highland valley treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 455 Vandal Sack of Rome illustration through a landscape-only lower-Tiber floodplain treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 468 Cape Bon illustration through a landscape-only northeastern-Tunisian coast treatment.
-- [x] Render and review the maintained M11 event-art contact sheet (82 retained 1080x440 masters).
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 476 finale illustration through a landscape-only northern-Italian lowland treatment.
+- [x] Enforce complete reviewed illustration coverage for all 13 final-century generated currents.
+- [x] Render and review the maintained M11 event-art contact sheet (83 retained 1080x440 masters).
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 
