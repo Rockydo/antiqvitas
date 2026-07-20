@@ -68,6 +68,7 @@ EVENT_IMAGES = {
     "kanishka_apogee": "gfx/interface/illustrations/event/antq_kanishka_apogee.dds",
     "trajan_dacia": "gfx/interface/illustrations/event/antq_trajan_dacia.dds",
     "trajan_parthia": "gfx/interface/illustrations/event/antq_trajan_parthia.dds",
+    "verus_parthia": "gfx/interface/illustrations/event/antq_verus_parthia.dds",
 }
 
 
