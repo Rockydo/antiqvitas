@@ -296,8 +296,8 @@ after `make full` and its autonomous driver report are green.
 ## M12 — Ship
 
 - [x] Complete the static pacing/growth/inflation and AI-weight audit; restore bounded local-contract priorities to the seven active M9 CBs.
-- [ ] Complete runtime pacing/growth/inflation balance from observer measurements (the virtual-memory observer blocker is recorded in `BLOCKERS.md`).
-- [ ] Run autonomous observer game to 476 with decade screenshots and live log watch.
+- [ ] Complete runtime pacing/growth/inflation balance from observer measurements (the virtual-memory and coupled-vanilla-runtime blockers are recorded in `BLOCKERS.md`).
+- [ ] Run autonomous observer game to 476 with decade screenshots and live log watch (blocked until the coupled vanilla event/action/effect graph has a locally verified total-replacement path).
 - [x] Finish README, known issues, packaging notes, static finale verification, and the full surface-area inventory audit.
 - [x] Disable the eleven installed anachronistic generic mission packs through checked exact-name visibility overlays; retain their keys for engine references.
 - [x] Pin a static player-facing anachronism audit across all 17 English localization files, with the client-language mirror contract checked separately.

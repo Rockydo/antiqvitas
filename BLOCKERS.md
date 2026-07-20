@@ -1,5 +1,37 @@
 # Blockers
 
+## 2026-07-20 - M12 vanilla-runtime quarantine cannot reach a clean menu through filename overlays alone
+
+Status: **deferred after four source-verified smoke variants; green baseline restored.**
+
+The AD 1 observer exposed dated vanilla startup references.  Four generated
+same-filename overlay variants were tested against the installed build:
+
+1. Empty dated event, situation, disaster, formable, and on-action files
+   caused missing event identifiers from the engine's retained generic graph.
+2. No-op on actions plus hidden unreachable event stubs removed those missing
+   identifiers, but the event manager emitted one orphan diagnostic per stub.
+3. A never-dispatched reference action removed orphan diagnostics, but global
+   country-event stubs produced scope mismatches at location call sites and
+   exposed hundreds of variable/effect dependencies whose setters had been
+   removed with the dated events.
+4. Parse-valid situation/disaster placeholders confirmed that formable-country
+   records use a separate schema; after correcting that branch, the installed
+   generic action, building, parliamentary, and scripted-effect graph still
+   requires the original event scope types and variable network.
+
+The final experiment therefore would have required reconstructing a large
+portion of the removed vanilla historical runtime solely to satisfy loader
+diagnostics, contradicting the total-conversion requirement.  No game install
+file was modified.  All failed variants reached the rendered menu; evidence is
+in the timestamped smoke logs under the configured user directory.
+
+Recovery: identify an installed, engine-supported total-replacement mechanism
+for the coupled event/action/effect graph, or build a separately validated
+minimal generic-system replacement from local script contracts.  Until then,
+retain the previously accepted menu-smoke baseline, do not claim observer
+runtime proof for M3/M5--M10/M12, and continue independent static work.
+
 ## 2026-07-20 - Fully settled observer sessions remain intermittently Vulkan-memory-bound
 
 Status: **deferred after renewed, materially different driver attempts.**
