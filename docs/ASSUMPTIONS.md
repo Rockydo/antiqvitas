@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Adventus-Saxonum art is landscape-only eastern-British coastal context
+
+The image is an unoccupied late-autumn eastern-British coastal wetland of a
+quiet grey-blue tidal inlet, reed beds, low damp meadow, scattered willow, pale
+shingle banks, a softly curving muddy shore, distant low grassy headlands, and
+overcast sky. It identifies no Saxons, Angles, Jutes, migration, ship,
+settlement, city, person, date, or outcome. It is not a reconstruction of the
+Adventus Saxonum. Sources weighed: plan sections 8.7, 9, and 20. [secure broad
+regional context; illustrative composition only]
+
 ## 2026-07-20 - Constantinople-earthquake art is landscape-only Marmara-coast context
 
 The image is an unoccupied early-autumn Marmara coast of a calm slate-blue inlet
