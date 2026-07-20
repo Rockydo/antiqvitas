@@ -286,7 +286,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Reach the section 18 event target with 411 sourced-window events using 83 reviewed shared paintings without inventing historical incidents.
 - [x] Replace the 13 scripted-formation and successor-state solid-color CoAs with reviewed non-reconstructive standards and generation checks.
 - [x] Replace the `_default` fallbacks on every direct-key M4 religion and M8 institution screen surface with checked, source/master/DDS contracts.
-- [ ] Reach the decision target; finish per-advance icon batches, art for new events, and localization polish.
+- [x] Complete the plan-permitted shared-icon fallback coverage: five reviewed advance icons cover all 250 advances, and 83 reviewed paintings cover all 411 historical-current events.
+- [ ] Reach the decision target and complete localization polish.
 - [ ] Resolve the M11 generic-action message-registry blocker with a one-action exact-name GUI-overlay pilot; the 40-row source ledger is retained in `docs/m11/decisions.csv`.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 

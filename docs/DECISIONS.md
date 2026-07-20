@@ -1337,3 +1337,12 @@ engine-native; M8's institution assets are generated and BC7-encoded to the
 same 128x128 sRGBA contract. `tools/m11_common_icons.py` is the ownership and
 patch-drift guard. This is a renderer decision, not a claim that a shared motif
 defines a faith's historical identity.
+
+## 2026-07-20 - Complete advance icon coverage at the reviewed shared tier
+
+M8's five fifty-entry age groups use the master plan's permitted shared-icon
+fallback tier. The M11 generated group textures now cover all 250 entries and
+the validator locks each group to exactly fifty bindings. This completes the
+advance icon surface without manufacturing a separate artifact-like visual
+claim for every abstract advance key; unique art remains warranted only when a
+screen exposes a direct, historically meaningful subject.
