@@ -160,7 +160,10 @@ after `make full` and its autonomous driver report are green.
         colors, CoAs, and localization.
   - [x] Add a source-led Northern-Xiongnu polity release to complete the AD 48
         split after its dynamic-country setup contract is locally verified.
-  - [ ] Render, source-check, and menu-smoke the AD 97-199 history batch.
+  - [x] Render, source-check, and menu-smoke the AD 97-199 history batch:
+        18 currents, including the AD 192 dynamic Champa release from the
+        reviewed Han-Rinan local mesh.
+  - [ ] Render, source-check, and menu-smoke the AD 200-299 history batch.
 - [ ] Smoke and observer-test every batch; run milestone gate and tag `M10-done`.
 
 ## M11 — Flavor & face
