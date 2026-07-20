@@ -58,6 +58,7 @@ TARGETS = {
 # validation proves its texture remains present.
 EVENT_IMAGES = {
     "antioch_earthquake": "gfx/interface/illustrations/event/antq_antioch_earthquake.dds",
+    "bar_kokhba": "gfx/interface/illustrations/event/antq_bar_kokhba.dds",
     "cai_lun_paper": "gfx/interface/illustrations/event/antq_cai_lun_paper.dds",
     "gan_ying": "gfx/interface/illustrations/event/antq_gan_ying.dds",
     "hadrians_wall": "gfx/interface/illustrations/event/antq_hadrians_wall.dds",
