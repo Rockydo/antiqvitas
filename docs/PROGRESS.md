@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-20 - M11 pepper good-art override
+
+- Replaced the two native `pepper` art surfaces with reviewed generated black
+  peppercorn and vine art, retaining the existing M5 good and its historical
+  anchor rather than duplicating it as a new economic symbol.
+- The transparent source, 128x128 icon, and 1080x440 illustration passed
+  local dimension and DDS round-trip review; `make validate` and enabled-mod
+  smoke are green with zero new error-log lines.
+
+Next: continue the independent M11 art queue and the source-led economy/power
+audit while runtime-gated milestone checks remain deferred.
+
 ## 2026-07-20 - M5 Forum Romanum anchor
 
 - Added the Forum Romanum at Rome through the locally verified generic
