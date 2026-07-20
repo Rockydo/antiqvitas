@@ -1,8 +1,90 @@
-key,date,label,source
-start,1.1.1,Start of ANTIQVITAS,ANTIQVITAS master plan §22
-age_principate,1.1.1,Age of the Principate begins,ANTIQVITAS master plan §15
-age_high_empires,96.1.1,Age of the High Empires begins,ANTIQVITAS master plan §15
-age_crisis,192.1.1,Age of Crisis begins,ANTIQVITAS master plan §15
-age_dominate,284.1.1,Age of the Dominate begins,ANTIQVITAS master plan §15
-age_migrations,395.1.1,Age of Migrations begins,ANTIQVITAS master plan §15
-end,476.9.4,End of ANTIQVITAS,ANTIQVITAS master plan §22
+date,key,type,region,summary,rails_strength,end_date,source,label
+1.1.1,start,event,Campaign,Start of ANTIQVITAS,system,,ANTIQVITAS master plan §22,Campaign start
+1.1.1,age_principate,event,Campaign,Age of the Principate begins,system,,ANTIQVITAS master plan §15,Age of the Principate
+1.1.1,gaius_eastern_settlement,situation,Rome and Armenia,Gaius Caesar's eastern settlement and the contested Armenian throne,Strong,5.1.1,ANTIQVITAS master plan §9,Gaius Caesar's Eastern Settlement
+1.1.1,immensum_bellum,situation,Germania,Roman pacification beyond the Rhine,Strong,6.1.1,ANTIQVITAS master plan §9,Immensum Bellum
+6.1.1,illyrian_revolt,situation,Illyricum,Great Illyrian Revolt or Bellum Batonianum,Strong,10.1.1,ANTIQVITAS master plan §9,Great Illyrian Revolt
+9.1.1,teutoburg,event,Germania,Arminius destroys the Roman field army and Rome loses Germania Magna,Strong,10.1.1,ANTIQVITAS master plan §9,Teutoburg Forest
+9.1.1,wang_mang_xin,situation,China,Wang Mang's Xin dynasty with floods Red Eyebrows and Eastern Han restoration,Strong,26.1.1,ANTIQVITAS master plan §9,Xin Dynasty Crisis
+14.1.1,augustan_succession,event,Rome,Augustus dies and the Principate faces its first succession test,Strong,15.1.1,ANTIQVITAS master plan §9,Augustan Succession
+17.1.1,tacfarinas_war,situation,Numidia,Tacfarinas' war against Roman rule,Strong,25.1.1,ANTIQVITAS master plan §9,Tacfarinas' War
+21.1.1,florus_sacrovir,event,Gaul,Florus and Sacrovir lead a Gallic revolt,Strong,22.1.1,ANTIQVITAS master plan §9,Florus and Sacrovir
+30.1.1,kushan_unification,formation,Bactria,Kujula Kadphises unifies the Yuezhi into the Kushan polity,Strong,51.1.1,ANTIQVITAS master plan §9,Kushan Unification
+30.1.1,christianity_foundation,event,Judea,The Crucifixion and the founding of Christianity in Judea,Strong,34.1.1,ANTIQVITAS master plan §9,Christianity Founded
+40.1.1,trung_sisters,situation,Jiaozhi,The Trung sisters revolt against Han rule,Strong,44.1.1,ANTIQVITAS master plan §9,Trung Sisters' Revolt
+40.1.1,mauretania_annexation,situation,Mauretania,Mauretania is annexed and Aedemon's revolt follows,Strong,45.1.1,ANTIQVITAS master plan §9,Mauretania Annexation
+43.1.1,claudian_britain,situation,Britain,Claudian invasion and the Roman conquest of Britain,Strong,44.1.1,ANTIQVITAS master plan §9,Claudian Invasion of Britain
+48.1.1,xiongnu_split,tagswitch,Steppe,The Xiongnu confederation divides into northern and southern polities,Strong,49.1.1,ANTIQVITAS master plan §9,Xiongnu Split
+54.1.1,silphium_extinction,event,Cyrenaica,The silphium harvest collapses and the Cyrenaican good disappears,Strong,69.1.1,ANTIQVITAS master plan §9,Silphium Extinction
+58.1.1,armenian_war,situation,Armenia,Rome and Parthia contest Armenia until the Rhandeia compromise,Strong,64.1.1,ANTIQVITAS master plan §9,Rome-Parthia War over Armenia
+60.1.1,boudica_revolt,situation,Britain,Boudica's revolt against Roman Britain,Strong,62.1.1,ANTIQVITAS master plan §9,Boudica's Revolt
+64.1.1,great_fire_rome,event,Rome,The Great Fire of Rome,Strong,65.1.1,ANTIQVITAS master plan §9,Great Fire of Rome
+65.1.1,buddhism_han_court,event,China,Buddhism reaches the Han court and the White Horse Temple tradition begins,Strong,69.1.1,ANTIQVITAS master plan §9,Buddhism at the Han Court
+66.1.1,tiridates_coronation,event,Armenia,Tiridates is crowned under Roman blessing after Rhandeia,Strong,67.1.1,ANTIQVITAS master plan §9,Tiridates' Coronation
+66.1.1,great_jewish_revolt,situation,Judea,Great Jewish Revolt with Temple destruction and the Rabbinic transformation chain,Strong,74.1.1,ANTIQVITAS master plan §9,Great Jewish Revolt
+68.1.1,year_four_emperors,disaster,Rome,Year of the Four Emperors civil-war disaster,Strong,70.1.1,ANTIQVITAS master plan §9,Year of the Four Emperors
+69.1.1,batavian_revolt,situation,Lower Rhine,Civilis leads the Batavian revolt,Strong,71.1.1,ANTIQVITAS master plan §9,Batavian Revolt
+79.1.1,vesuvius,disaster,Campania,Vesuvius destroys Pompeii and Herculaneum,Strong,80.1.1,ANTIQVITAS master plan §9,Vesuvius
+83.1.1,mons_graupius,event,Caledonia,Agricola fights at Mons Graupius,Strong,84.1.1,ANTIQVITAS master plan §9,Mons Graupius
+85.1.1,dacian_wars,situation,Danube,Domitian's Dacian and Suebic wars and Decebalus' consolidation,Strong,93.1.1,ANTIQVITAS master plan §9,Domitian's Dacian Wars
+89.1.1,han_xianbei,situation,Steppe,Han and Xianbei destroy the Northern Xiongnu,Strong,92.1.1,ANTIQVITAS master plan §9,Han-Xianbei War
+96.1.1,age_high_empires,event,Campaign,Age of the High Empires begins,system,,ANTIQVITAS master plan §15,Age of the High Empires
+97.1.1,gan_ying,event,Persian Gulf,Gan Ying travels toward Rome and reaches the Gulf,Strong,98.1.1,ANTIQVITAS master plan §9,Gan Ying's Mission
+101.1.1,trajan_dacia,situation,Danube,Trajan's Dacian wars create Roman Dacia and Nabataea is annexed,Strong,107.1.1,ANTIQVITAS master plan §9,Trajan's Dacian Wars
+105.1.1,cai_lun_paper,event,China,Cai Lun standardizes papermaking,Strong,106.1.1,ANTIQVITAS master plan §9,Paper Standardized
+113.1.1,trajan_parthia,situation,Mesopotamia,Trajan's Parthian war and the Kitos diaspora revolts,Strong,118.1.1,ANTIQVITAS master plan §9,Trajan's Parthian War
+115.1.1,antioch_earthquake,disaster,Antioch,The Antioch earthquake,Strong,116.1.1,ANTIQVITAS master plan §9,Antioch Earthquake
+122.1.1,hadrians_wall,event,Britain,Hadrian's Wall is begun,Strong,123.1.1,ANTIQVITAS master plan §9,Hadrian's Wall
+127.1.1,kanishka_apogee,situation,Central Asia,Kanishka's Kushan apogee and Buddhist council,Strong,128.1.1,ANTIQVITAS master plan §9,Kushan Apogee
+132.1.1,bar_kokhba,situation,Judea,Bar Kokhba revolt,Strong,136.1.1,ANTIQVITAS master plan §9,Bar Kokhba Revolt
+142.1.1,antonine_wall,event,Britain,Antonine Wall is begun,Strong,143.1.1,ANTIQVITAS master plan §9,Antonine Wall
+142.1.1,celestial_masters,event,China,Way of the Celestial Masters forms as organized Daoism,Strong,143.1.1,ANTIQVITAS master plan §9,Celestial Masters
+160.1.1,gothic_migration,situation,Pontic Steppe,Gothic migration from the Vistula toward the Pontic steppe,Strong,231.1.1,ANTIQVITAS master plan §9,Gothic Migration
+161.1.1,verus_parthia,situation,Mesopotamia,Verus' Parthian war culminates in the sack of Ctesiphon,Strong,167.1.1,ANTIQVITAS master plan §9,Verus' Parthian War
+165.1.1,antonine_plague,disaster,Rome and Han,Antonine Plague and its Han-recorded echoes,Strong,186.1.1,ANTIQVITAS master plan §9,Antonine Plague
+166.1.1,daqin_embassy,event,China,A seaborne Daqin embassy reaches the Han court,Strong,167.1.1,ANTIQVITAS master plan §9,Daqin Embassy
+166.1.1,marcomannic_wars,situation,Danube,Marcomannic Wars and migration pressure,Strong,181.1.1,ANTIQVITAS master plan §9,Marcomannic Wars
+184.1.1,yellow_turbans,situation,China,Yellow Turban Rebellion opens the warlord era and Dong Zhuo crisis,Strong,190.1.1,ANTIQVITAS master plan §9,Yellow Turban Rebellion
+192.1.1,age_crisis,event,Campaign,Age of Crisis begins,system,,ANTIQVITAS master plan §15,Age of Crisis
+192.1.1,champa_formation,formation,Champa,Linyi establishes Champa,Strong,193.1.1,ANTIQVITAS master plan §9,Champa Founded
+193.1.1,five_emperors,situation,Rome,Year of the Five Emperors produces the Severan settlement,Strong,199.1.1,ANTIQVITAS master plan §9,Severan Settlement
+208.1.1,severus_caledonia,event,Britain,Severus campaigns in Caledonia,Strong,212.1.1,ANTIQVITAS master plan §9,Severus in Caledonia
+212.1.1,constitutio_antoniniana,event,Rome,Constitutio Antoniniana extends citizenship to free provincials,Strong,213.1.1,ANTIQVITAS master plan §9,Constitutio Antoniniana
+213.1.1,alemanni_formation,formation,Germania,Alemanni confederate,Strong,214.1.1,ANTIQVITAS master plan §9,Alemanni Formation
+220.1.1,three_kingdoms,situation,China,Han abdication opens the Three Kingdoms arc and Jin reunification,Strong,281.1.1,ANTIQVITAS master plan §9,Three Kingdoms
+224.1.1,sassanid_revolution,tagswitch,Iran,Ardashir overthrows Parthia and creates the Sassanid order,Strong,225.1.1,ANTIQVITAS master plan §9,Sassanid Revolution
+235.1.1,third_century_crisis,disaster,Rome,Crisis of the Third Century with breakaways plague and Aurelianic recovery,Strong,285.1.1,ANTIQVITAS master plan §9,Crisis of the Third Century
+240.1.1,manichaeism_foundation,event,Iran,Mani preaches and Manichaeism spreads,Strong,275.1.1,ANTIQVITAS master plan §9,Manichaeism
+250.1.1,frankish_formation,formation,Germania,Frankish confederation emerges,Strong,261.1.1,ANTIQVITAS master plan §9,Frankish Formation
+284.1.1,age_dominate,event,Campaign,Age of the Dominate begins,system,,ANTIQVITAS master plan §15,Age of the Dominate
+284.1.1,diocletian_dominate,situation,Rome,Diocletian establishes the Dominate and Tetrarchy,Strong,306.1.1,ANTIQVITAS master plan §9,Diocletian and the Dominate
+291.1.1,eight_princes,situation,China,War of the Eight Princes northern collapse Eastern Jin and Sixteen Kingdoms,Strong,318.1.1,ANTIQVITAS master plan §9,War of the Eight Princes
+301.1.1,armenia_conversion,event,Armenia,Armenia becomes the first Christian state,Strong,315.1.1,ANTIQVITAS master plan §9,Armenian Conversion
+306.1.1,constantine_civil_wars,situation,Rome,Constantine's civil wars lead to Milan sole rule and Constantinople,Strong,331.1.1,ANTIQVITAS master plan §9,Constantine's Civil Wars
+325.1.1,nicaea,event,Christian World,Council of Nicaea begins the council mechanic and Arian controversy,Strong,326.1.1,ANTIQVITAS master plan §9,Council of Nicaea
+337.1.1,shapur_julian,situation,Rome and Iran,Shapur II's Roman wars and Julian's failed Persian expedition,Strong,364.1.1,ANTIQVITAS master plan §9,Shapur II and Julian
+350.1.1,aksum_meroë,situation,Nile Valley,Aksum conquers Meroë,Strong,351.1.1,ANTIQVITAS master plan §9,Aksum and Meroë
+365.1.1,crete_earthquake,disaster,Eastern Mediterranean,Crete earthquake and Alexandria tsunami,Strong,366.1.1,ANTIQVITAS master plan §9,Crete Earthquake and Tsunami
+370.1.1,huns_arrive,formation,Volga Steppe,Huns arrive on the Volga and break the Alans,Strong,371.1.1,ANTIQVITAS master plan §9,Hunnic Arrival
+376.1.1,gothic_refugees,situation,Balkans,Gothic refugee crisis Adrianople and the foedus settlement,Strong,383.1.1,ANTIQVITAS master plan §9,Gothic Refugee Crisis
+380.1.1,thessalonica,event,Rome,Edict of Thessalonica establishes Nicene state religion,Strong,381.1.1,ANTIQVITAS master plan §9,Edict of Thessalonica
+383.1.1,fei_river,situation,China,Fei River shatters Former Qin and Northern Wei rises,Strong,440.1.1,ANTIQVITAS master plan §9,Fei River and Northern Wei
+391.1.1,gwanggaeto,situation,Korea,Gwanggaeto's rise and Korean Buddhist transformation,Strong,414.1.1,ANTIQVITAS master plan §9,Gwanggaeto the Great
+393.1.1,olympic_sunset,event,Greece,Theodosius ends the Olympic games,Strong,394.1.1,ANTIQVITAS master plan §9,Olympic Games Sunset
+394.1.1,east_west_division,tagswitch,Rome,Frigidus and the permanent East-West division of the Roman Empire,Strong,396.1.1,ANTIQVITAS master plan §9,East-West Roman Division
+395.1.1,age_migrations,event,Campaign,Age of Migrations begins,system,,ANTIQVITAS master plan §15,Age of Migrations
+399.1.1,faxian_gupta,situation,India and China,Faxian's pilgrimage and Gupta apogee,Strong,413.1.1,ANTIQVITAS master plan §9,Faxian and Gupta Apogee
+405.1.1,radagaisus_rhine,situation,Western Rome,Radagaisus and the Crossing of the Rhine,Strong,407.1.1,ANTIQVITAS master plan §9,Crossing of the Rhine
+407.1.1,britain_abandoned,situation,Britain,Constantine III and Rome's abandonment of Britain,Strong,411.1.1,ANTIQVITAS master plan §9,Britain Abandoned
+410.1.1,alaric_sack,event,Rome,Alaric sacks Rome,Strong,411.1.1,ANTIQVITAS master plan §9,Sack of Rome
+418.1.1,visigoth_settlement,event,Aquitaine,Visigoths settle in Aquitaine as foederati,Strong,419.1.1,ANTIQVITAS master plan §9,Visigothic Settlement
+429.1.1,vandal_africa,situation,Africa,Geiseric's Vandal conquest of Africa and capture of Carthage,Strong,440.1.1,ANTIQVITAS master plan §9,Vandal Conquest of Africa
+434.1.1,attila,situation,Europe,Attila's Hunnic empire through Catalaunian Plains Italy and Nedao,Strong,455.1.1,ANTIQVITAS master plan §9,Attila
+440.1.1,hephthalites,situation,Iran and India,Hephthalite pressure on Persia and Gupta India,Strong,461.1.1,ANTIQVITAS master plan §9,Hephthalites
+447.1.1,constantinople_earthquake,disaster,Constantinople,Earthquake damages Constantinople's walls while Huns threaten the Balkans,Strong,448.1.1,ANTIQVITAS master plan §9,Constantinople Earthquake
+449.1.1,adventus_saxonum,situation,Britain,Adventus Saxonum,Strong,451.1.1,ANTIQVITAS master plan §9,Adventus Saxonum
+451.1.1,chalcedon_avarayr,event,Eastern Mediterranean,Council of Chalcedon and Armenian revolt at Avarayr,Strong,452.1.1,ANTIQVITAS master plan §9,Chalcedon and Avarayr
+455.1.1,vandal_sack_rome,event,Rome,Vandal sack of Rome,Strong,456.1.1,ANTIQVITAS master plan §9,Vandal Sack of Rome
+468.1.1,cape_bon,disaster,Western Mediterranean,Cape Bon expedition is destroyed and the Eastern Empire is nearly bankrupt,Strong,469.1.1,ANTIQVITAS master plan §9,Cape Bon
+476.9.4,odoacer_finale,event,Rome,Odoacer deposes Romulus Augustulus and ends the timeline,Strong,,ANTIQVITAS master plan §9,Odoacer's Deposition
+476.9.4,end,event,Campaign,End of ANTIQVITAS,system,,ANTIQVITAS master plan §22,Campaign end
