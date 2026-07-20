@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Armenian-conversion art is landscape-only highland context
+
+The image is an unoccupied late-spring Armenian highland of a natural stream,
+pale volcanic stone, meadow grass, sparse trees, highland slopes, and distant
+snow-flecked ridges. It identifies no ruler, cleric, conversion, church, polity,
+date, or outcome. It is not a reconstruction of Armenia's conversion or any
+conversion ceremony. Sources weighed: P8.2; plan sections 9, 11, and 20.
+[secure broad regional context; illustrative composition only]
+
 ## 2026-07-20 - Eight-Princes art is landscape-only north-Chinese context
 
 The image is an unoccupied late-autumn north-Chinese loess valley of a natural

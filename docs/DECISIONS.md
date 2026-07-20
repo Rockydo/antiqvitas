@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M11 fourth-century art uses a generator-owned image map
+
+`tools/m10_fourth_century.py` now validates reviewed map keys and the existence
+of each DDS before it renders image fields. Its first entry is Armenia's AD 301
+current; later fourth-century artwork will use the same regenerable contract.
+
+Sources weighed: local fourth-century renderer and the installed country-event
+image contract.
+
 ## 2026-07-20 - M11 third-century art requires full generated-current coverage
 
 `tools/m10_third_century.py` now rejects both orphaned image-map keys and any
