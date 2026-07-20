@@ -59,6 +59,7 @@ TARGETS = {
     "buddhism_han_court": "HAN",
     "tiridates_coronation": "ARM",
     "great_jewish_revolt": "JUD",
+    "second_temple_destruction": "JUD",
     "year_four_emperors": "ROM",
     "batavian_revolt": "BTV",
     "vesuvius": "ROM",
@@ -226,6 +227,8 @@ def validate(records: tuple[Current, ...]) -> None:
 
 
 def event_outcome(record: Current) -> str:
+    if record.key == "second_temple_destruction":
+        return "negative"
     if record.kind == "disaster":
         return "negative"
     if record.kind in {"formation", "tagswitch"}:
@@ -235,6 +238,16 @@ def event_outcome(record: Current) -> str:
 
 def impact_lines(record: Current) -> tuple[str, ...]:
     """Use only effects harvested from installed country-event files."""
+    if record.key == "second_temple_destruction":
+        return (
+            "\t\tlocation:jerusalem = {",
+            "\t\t\tif = {",
+            "\t\t\t\tlimit = { has_building_with_at_least_one_level = temple }",
+            '\t\t\t\tdestroy_building = "building(building_type:temple|owner)"',
+            "\t\t\t}",
+            "\t\t}",
+            "\t\tadd_stability = stability_mild_penalty",
+        )
     if record.key == "kushan_unification":
         return (
             "\t\tchange_tag_cosmetic = { tag = KSH }",
