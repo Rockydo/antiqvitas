@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M5 represents Ephesus through Ayasuluk without renaming the map key
+
+The plan specifically lists Ephesus among its market hubs. The installed map
+has no `ephesus` key but does have the nearby Ayasuluk location under Roman AD
+1 control. M5 adds that checked location to both market and urban-node ledgers,
+then reuses the smoke-proven protected-harbor contract; it does not introduce a
+new geography key or imply a precise Roman shoreline.
+
 ## 2026-07-20 - M5 anchors Dacian gold at Baia de Arieș
 
 The RGO renderer can override only installed controlled locations. A local

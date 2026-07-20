@@ -135,7 +135,7 @@ through dated M10 content. The tree is green after this evidence-only pass.
 Status: **deferred; M5 remains untagged.**
 
 The generated `in_game/map_data/location_templates.txt` is an exact copy of
-the installed map-template file with 326 checked alterations. It parses and
+the installed map-template file with 327 checked alterations. It parses and
 the menu smoke is clean, but a fresh AD 1 observer session continues to use
 vanilla raw materials. `export_goods_by_market wheat` reports Roma producing
 roughly 23.46 wheat with no imports even after its generated template was

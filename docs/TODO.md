@@ -53,9 +53,9 @@ after `make full` and its autonomous driver report are green.
 
 ## M5 — Economy
 
-- [x] Seed and smoke-check 36 source-labelled AD 1 market hubs.
+- [x] Seed and smoke-check 41 source-labelled AD 1 market hubs.
 - [x] Localize and anchor the plan-listed ancient raw goods on controlled AD 1 map locations (327 audited corrections).
-- [x] Seed and smoke-check 36 source-labelled urban market settlements with engine-valid town setups.
+- [x] Seed and smoke-check 41 source-labelled urban market settlements with engine-valid town setups.
 - [x] Run the AD 1 observer foundation probe (map, observer mode, and ten days of market activity).
 - [x] Seed and smoke-check 25 source-labelled ancient transport-corridor segments.
 - [x] Seed and smoke-check the transparent city/town/road development profile.
@@ -71,7 +71,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the plan-required AD 1 Second Temple at Jerusalem and its guarded AD 70 building-destruction current.
 - [x] Add a source-qualified Buddhist monastic proxy at Anuradhapura without applying a later Christian building identity.
 - [x] Add a source-qualified Prima Porta villa proxy without claiming a latifundium census or slave-labor measure.
-- [ ] Implement the remaining goods/RGOs, buildings/town setups, roads, and development beyond this first dedicated-goods pass. Seven source-labelled harbor tiers, Muza's roadstead-market tier, the Second Temple transformation, Anuradhapura and Prima Porta historic-building anchors, and a 36-segment road network now extend the building/transport surfaces; RGO runtime application is deferred in `BLOCKERS.md`, while other independent M5 surfaces may continue.
+- [ ] Implement the remaining goods/RGOs, buildings/town setups, roads, and development beyond this first dedicated-goods pass. Eight source-labelled harbor tiers, Muza's roadstead-market tier, the Second Temple transformation, Anuradhapura and Prima Porta historic-building anchors, and a 36-segment road network now extend the building/transport surfaces; RGO runtime application is deferred in `BLOCKERS.md`, while other independent M5 surfaces may continue.
 - [ ] Verify ancient trade flows; run milestone gate and tag `M5-done`. (Blocked until a runtime-effective RGO surface is found.)
 
 ## M6 — Power
