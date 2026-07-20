@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Vandal-sack art is landscape-only lower-Tiber context
+
+The image is an unoccupied late-spring lower-Tiber floodplain of a slow broad
+river curving through low pale riverbanks, muted green and gold meadow,
+reed-fringed shallows, scattered willow and poplar, distant soft low hills, and
+broad clouded sky. It identifies no Rome, Vandals, sack, destruction, city,
+person, date, or outcome. It is not a reconstruction of the Vandal sack of
+Rome. Sources weighed: plan sections 8.1, 9, and 20. [secure broad regional
+context; illustrative composition only]
+
 ## 2026-07-20 - Chalcedon-Avarayr art is landscape-only Armenian-highland context
 
 The image is an unoccupied early-autumn Armenian-highland valley of a clear
