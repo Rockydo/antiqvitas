@@ -1,18 +1,19 @@
 # Known Issues
 
-## M10 first- through fourth-century observer coverage is deferred
+## M10 all-century observer coverage is deferred
 
-The AD 1-399 layers have clean enabled-mod menu smoke and no new `error.log`
+The AD 1-476 layers have clean enabled-mod menu smoke and no new `error.log`
 lines, including the generated AD 48 Northern-Xiongnu, AD 192 Champa, AD 370
-Hunnic, and AD 395 Eastern-Roman dynamic-country contracts. Their
+Hunnic, AD 395 Eastern-Roman, AD 418 Visigothic, and AD 429 Vandal dynamic
+country contracts. Their
 observer-to-era playback cannot yet be run because the current driver's
 Observer confirmation has already failed two distinct bounded inputs
 (normalized click and foreground-safe Enter). Repeating that unchanged path
 would not add evidence; after a material driver or UI change, run the M10
 event-window observer route and capture the resulting situations and events.
 See `docs/playtests/M10_001_096.md`, `docs/playtests/M10_097_199.md`,
-`docs/playtests/M10_200_299.md`, `docs/playtests/M10_300_399.md`, and
-`BLOCKERS.md`.
+`docs/playtests/M10_200_299.md`, `docs/playtests/M10_300_399.md`,
+`docs/playtests/M10_400_476.md`, and `BLOCKERS.md`.
 
 ## M6 country-inspector coverage is partial
 

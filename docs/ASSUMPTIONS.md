@@ -1301,6 +1301,30 @@ making either tradition derivative of the other. Sources weighed: plan §15;
 CAH-XI; BHR in `docs/world_1ad/SOURCES.md`. [secure broad context; contested
 technical placement]
 
+## 2026-07-20 - Fifth-century successor states use narrow reviewed local proxies
+
+The 418 Visigoth release uses a seven-location Toulouse/Aquitanian proxy, and
+the 429-439 Vandal release uses a five-location Tunis proxy for Carthage and
+its immediate local mesh. Neither source establishes an exact EU5 province
+envelope, a complete ethnic map, a universally Nicene religious profile, or a
+unitary early monarchy. The created states use existing Gothic/Vandalic culture
+and early-Christianity adapters only to make the historically bounded currents
+playable. Sources weighed: plan §9; `CAM-WEST`; `CAM-GAUL`; `CAM-VANDAL`.
+[secure broad settlement/conquest sequence; contested local representation]
+
+## 2026-07-20 - Late Britain, Hephthalites, and the finale remain bounded currents
+
+Britain's separation and the Adventus Saxonum have contested dates and uneven
+regional outcomes, so neither current creates a fictional all-Britain successor
+state. The Hephthalite current is pressure on Iran/India, not an assertion that
+Attila's Huns and the eastern Hunnic confederacies were one polity. The Odoacer
+event activates in the final usable monthly 476 window; the campaign's exact
+4 September end remains the calendar definition, not an asserted date of every
+finale effect. Its cosmetic Italy identity is a terminal gameplay adapter, not
+a complete Odoacer territorial reconstruction. Sources weighed: plan §9;
+`OUP-BRITEND`; `CAM-SAXON`; `CAM-HEPH`; `OUP-ODO`; `OUP-DEN`.
+[contested chronology and technical representation]
+
 ## 2026-07-20 - Fourth-century currents retain the evidence's chronological limits
 
 The plan's AD 301 Armenian-conversion entry is implemented as its traditional

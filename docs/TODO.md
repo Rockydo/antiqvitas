@@ -148,7 +148,7 @@ after `make full` and its autonomous driver report are green.
 
 ## M10 — History in motion
 
-- [ ] Implement all timeline situations/disasters/formables/tag changes in five century batches.
+- [x] Implement all timeline situations/disasters/formables/tag changes in five century batches.
   - [x] Normalize the plan's complete history spine into the validated
         `docs/timeline.csv` ledger, including its disaster calendar and
         silphium window.
@@ -169,6 +169,9 @@ after `make full` and its autonomous driver report are green.
   - [x] Render, source-check, and menu-smoke the AD 300-399 history batch:
         14 currents, including Christianization, Hunnic arrival, and the
         source-qualified East-West Roman transition ledger.
+  - [x] Render, source-check, and menu-smoke the AD 400-476 finale batch:
+        13 currents, including Visigothic/Vandal successor proxies and the
+        source-qualified terminal Odoacer identity transition.
 - [ ] Smoke and observer-test every batch; run milestone gate and tag `M10-done`.
 
 ## M11 — Flavor & face
