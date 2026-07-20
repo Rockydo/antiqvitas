@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-20 - M11 Rome-Parthia War over Armenia event illustration
+
+- Added a reviewed, non-literal late-autumn Armenian frontier-context image to
+  the AD 58 Rome-Parthia War over Armenia current through the generated
+  event-image contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. The maintained
+  M11 contact sheet now has twenty retained event masters.
+
+Next: continue the independent M11 art queue and source-led M5/M6 audit while
+runtime-gated milestone checks remain deferred.
+
 ## 2026-07-20 - M11 Silphium Extinction event illustration
 
 - Added a reviewed, non-botanical Cyrenaican ecological-context image to the

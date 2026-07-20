@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Armenian-war art is a generic highland frontier context
+
+The image is a late-autumn highland gorge with a track, turbulent stream, bare
+slopes, basalt outcrops, and misted ridges. It identifies no battle, commander,
+army, camp, capital, route, treaty, boundary, date, action, or outcome. It
+deliberately excludes people, military material, regalia, religious signs, and
+specific later Armenian architecture; it is not a reconstruction of the AD
+58-64 war or Rhandeia settlement. Sources weighed: P8.2; plan sections 9 and
+20. [secure current context; illustrative composition only]
+
 ## 2026-07-20 - Silphium-extinction art is generic Cyrenaican ecology
 
 The image is a limestone upland above the Mediterranean with low scrub,
