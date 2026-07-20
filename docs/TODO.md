@@ -214,7 +214,9 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 70 Second Temple transformation event illustration through a landscape-only Judean environmental-context treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 83 Mons Graupius event illustration through a landscape-only Caledonian upland-context treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 85 Dacian Wars event illustration through a non-literal Carpathian foothill-context treatment.
-- [x] Render and review the maintained M11 event-art contact sheet (27 retained 1080x440 masters).
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 89 Han-Xianbei War event illustration through a landscape-only northern grassland-context treatment.
+- [x] Complete the reviewed illustration mapping across all 28 generated M10 first-century currents.
+- [x] Render and review the maintained M11 event-art contact sheet (28 retained 1080x440 masters).
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 

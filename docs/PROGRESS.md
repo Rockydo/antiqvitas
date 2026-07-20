@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-20 - M11 Han-Xianbei War event illustration
+
+- Added a reviewed, landscape-only northern grassland-context image to the AD
+  89 Han-Xianbei War current through the generated event-image contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. All 28 generated
+  M10 first-century currents now have reviewed event-image links; the
+  maintained M11 contact sheet has twenty-eight retained event masters.
+
+Next: continue the M11 art queue with later-century currents and source-led
+M5/M6 audit while runtime-gated milestone checks remain deferred.
+
 ## 2026-07-20 - M11 Dacian Wars event illustration
 
 - Added a reviewed, non-literal Carpathian foothill-context image to the AD 85
