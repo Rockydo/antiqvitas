@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Severan-settlement art is landscape-only central-Italian context
+
+The image is an unoccupied late-autumn central-Italian lowland of a natural
+stream, olive trees, weathered limestone, dry grass, and distant Apennine hills.
+It identifies no person, emperor, civil war, Severan, polity, city, road,
+building, date, or outcome. It deliberately excludes human figures, military
+material, architecture, Roman ruins, roads, and narrative action; it is not a
+reconstruction of the Year of the Five Emperors or the Severan settlement.
+Sources weighed: P8.1; plan sections 9 and 20. [secure broad regional context;
+illustrative composition only]
+
 ## 2026-07-20 - Champa-formation art is landscape-only central-Vietnam context
 
 The image is an unoccupied tropical central-Vietnam river margin of a natural
