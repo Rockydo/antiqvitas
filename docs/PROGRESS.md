@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-20 - M5 Second Temple transformation
+
+- Added the plan-required Second Temple building at Jerusalem through a new,
+  source-checked historic-site ledger rather than incorrectly treating the city
+  as an extra market node. The first-century renderer now has a separate AD 70
+  event that removes the building only when it still exists.
+- `make validate` reports 28 first-century currents and passed. Enabled-mod
+  smoke is green with zero new error-log lines. The physical transformation is
+  implemented; broader Rabbinic gameplay remains an explicitly bounded future
+  religious-system surface.
+
+Next: continue remaining independent M5 economy and historical-building work.
+
 ## 2026-07-20 - M5 Muza trade roadstead
 
 - Added a source-labelled `market_warehouse` at the reviewed Al Mukha/Muza
