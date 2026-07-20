@@ -22,6 +22,7 @@ from pathlib import Path
 from extract_vanilla import tokenize
 from generate_country_definitions import historical_profile_for
 from m6_power import character_manager, dynasty_manager, government_block, load_power_data
+from m7_war import load_units, tag_map as m7_tag_map, validate_start_ledgers
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "main_menu/setup/start"
@@ -37,6 +38,8 @@ URBAN_NODES = ROOT / "docs/m5/urban_nodes.csv"
 ROAD_SEGMENTS = ROOT / "docs/m5/road_segments.csv"
 DEVELOPMENT_PROFILE = ROOT / "docs/m5/development_profile.csv"
 SPECIAL_BUILDINGS = ROOT / "docs/m5/special_buildings.csv"
+M7_FORTS = ROOT / "docs/m7/forts.csv"
+M7_ARMIES = ROOT / "docs/m7/armies.csv"
 URBAN_SETUP_OUTPUT = ROOT / "in_game/common/town_setups/00_antiquitas.txt"
 SUBJECT_FIELDS = ("overlord", "subject", "relationship", "source", "confidence", "note")
 THOUSANDTH = Decimal("0.001")
@@ -74,7 +77,6 @@ STATIC_FILES = {
     "24_town_rights.txt": "townrights_manager = {\n}\n",
     "25_area_preferences.txt": "countries = {\n\tcountries = {\n\t}\n}\n",
     "26_ai_personalities.txt": "countries = {\n\tcountries = {\n\t}\n}\n",
-    "27_armies.txt": "unit_manager = {\n}\n",
 }
 
 
@@ -205,10 +207,11 @@ def urban_manager() -> tuple[str, int]:
     return "\n".join(lines), len(nodes)
 
 
-def special_building_manager() -> tuple[str, int]:
-    """Render source-led AD 1 specialist buildings with verified owner tags."""
+def special_building_manager() -> tuple[str, int, int]:
+    """Render source-led M5 buildings and M7 fort proxies with verified owners."""
     required = ("key", "location", "building", "level", "source", "confidence", "note")
-    entries = csv_rows(SPECIAL_BUILDINGS)
+    entries = [(row, "M5") for row in csv_rows(SPECIAL_BUILDINGS)]
+    entries.extend((row, "M7") for row in csv_rows(M7_FORTS))
     if not entries:
         raise ValueError("special_buildings.csv has no specialist-building entries")
     locations = set(json.loads((ROOT / "docs/vanilla_symbols/locations.json").read_text(encoding="utf-8-sig")))
@@ -224,9 +227,10 @@ def special_building_manager() -> tuple[str, int]:
     failures: list[str] = []
     seen_keys: set[str] = set()
     seen_buildings: set[tuple[str, str]] = set()
-    for row in entries:
+    fort_count = 0
+    for row, layer in entries:
         if any(not row.get(field, "").strip() for field in required):
-            failures.append("special_buildings.csv contains a blank required field")
+            failures.append(f"{layer} building ledger contains a blank required field")
             continue
         key = row["key"].strip()
         location = row["location"].strip()
@@ -234,41 +238,76 @@ def special_building_manager() -> tuple[str, int]:
         try:
             level = int(row["level"])
         except ValueError:
-            failures.append(f"special_buildings.csv {key} has non-integer level {row['level']}")
+            failures.append(f"{layer} building ledger {key} has non-integer level {row['level']}")
             continue
         if key in seen_keys:
-            failures.append(f"special_buildings.csv repeats key {key}")
+            failures.append(f"building ledgers repeat key {key}")
         pair = (location, building)
         if pair in seen_buildings:
-            failures.append(f"special_buildings.csv repeats {building} at {location}")
+            failures.append(f"building ledgers repeat {building} at {location}")
         if location not in locations:
-            failures.append(f"special_buildings.csv {key} uses unknown installed location {location}")
+            failures.append(f"{layer} building ledger {key} uses unknown installed location {location}")
         if location not in owners:
-            failures.append(f"special_buildings.csv {key} has no controlled AD 1 location")
-        if location not in urban_locations:
+            failures.append(f"{layer} building ledger {key} has no controlled AD 1 location")
+        if layer == "M5" and location not in urban_locations:
             failures.append(f"special_buildings.csv {key} is not an AD 1 town or city")
+        if layer == "M7" and building != "stockade":
+            failures.append(f"forts.csv {key} must use the verified stockade proxy")
         if building not in buildings:
-            failures.append(f"special_buildings.csv {key} uses unknown installed building {building}")
+            failures.append(f"{layer} building ledger {key} uses unknown installed building {building}")
         if not 1 <= level <= 10:
-            failures.append(f"special_buildings.csv {key} level must be 1 through 10")
+            failures.append(f"{layer} building ledger {key} level must be 1 through 10")
         if row["confidence"].strip() not in {"secure", "contested"}:
-            failures.append(f"special_buildings.csv {key} has invalid confidence {row['confidence']}")
+            failures.append(f"{layer} building ledger {key} has invalid confidence {row['confidence']}")
         seen_keys.add(key)
         seen_buildings.add(pair)
+        fort_count += layer == "M7"
     if failures:
         raise ValueError("\n".join(sorted(set(failures))))
     lines = [
-        "# M5 AD 1 specialist buildings; sources and proxy rationale: docs/m5/special_buildings.csv.",
+        "# M5 specialist buildings plus M7 castra/limes proxies; source rationale: docs/m5/ and docs/m7/.",
         "building_manager = {",
     ]
-    for row in sorted(entries, key=lambda item: item["key"]):
+    for row, _layer in sorted(entries, key=lambda item: item[0]["key"]):
         location = row["location"].strip()
         lines.append(
             f"\t{row['building'].strip()} = {{ tag = {owners[location]} level = {row['level'].strip()} "
             f"location = {location} }} # {row['key'].strip()}; {row['source'].strip()}"
         )
     lines.extend(("}", ""))
-    return "\n".join(lines), len(entries)
+    return "\n".join(lines), len(entries), fort_count
+
+
+def m7_unit_manager() -> tuple[str, int]:
+    """Render M7's source-labelled army and navy seeds into the exact start manager."""
+    units = load_units()
+    validate_start_ledgers(units)
+    unit_keys = {unit.key for unit in units}
+    tags = m7_tag_map()
+    entries = csv_rows(M7_ARMIES)
+    groups: dict[str, list[dict[str, str]]] = {}
+    for row in entries:
+        if row["unit_type"] not in unit_keys:
+            raise ValueError(f"armies.csv references unknown M7 unit {row['unit_type']}")
+        groups.setdefault(row["key"], []).append(row)
+    lines = [
+        "# Generated by tools/generate_start_mirror.py --write.",
+        "# M7 technical force seeds; sources state broad force context, never a reconstructed order of battle.",
+        "unit_manager = {",
+    ]
+    for key in sorted(groups):
+        rows = groups[key]
+        first = rows[0]
+        lines.extend((
+            f"\t{first['kind']} = {{",
+            f"\t\tcountry = {tags[first['country']]}",
+            f"\t\tlocation = {first['location']}",
+            "\t\tsub_units = {",
+        ))
+        lines.extend(f"\t\t\t{row['unit_type']} = {{ strength = {row['strength']} }}" for row in rows)
+        lines.extend(("\t\t}", "\t}", ""))
+    lines.extend(("}", ""))
+    return "\n".join(lines), len(groups)
 
 
 def road_network() -> tuple[str, int]:
@@ -664,10 +703,11 @@ def diplomacy_manager() -> tuple[str, int]:
     return "\n".join(lines) + "\n", len(dependencies)
 
 
-def generated_files() -> tuple[dict[str, str], int, int, int, int, Decimal, int, int, int, int, int]:
+def generated_files() -> tuple[dict[str, str], int, int, int, int, Decimal, int, int, int, int, int, int, int]:
     markets, market_count = market_manager()
     urban, urban_count = urban_manager()
-    special_buildings, special_building_count = special_building_manager()
+    special_buildings, special_building_count, fort_count = special_building_manager()
+    units, unit_manager_count = m7_unit_manager()
     roads, road_count = road_network()
     development, development_count = development_manager()
     pops, pop_locations, pop_total = population_manager()
@@ -686,6 +726,7 @@ def generated_files() -> tuple[dict[str, str], int, int, int, int, Decimal, int,
             "10_countries.txt": countries,
             "12_diplomacy.txt": diplomacy,
             "14_development.txt": development,
+            "27_armies.txt": units,
         },
         count,
         controlled,
@@ -695,6 +736,8 @@ def generated_files() -> tuple[dict[str, str], int, int, int, int, Decimal, int,
         market_count,
         urban_count,
         special_building_count,
+        fort_count,
+        unit_manager_count,
         road_count,
         development_count,
     )
@@ -725,6 +768,8 @@ def main() -> int:
             market_count,
             urban_count,
             special_building_count,
+            fort_count,
+            unit_manager_count,
             road_count,
             development_count,
         ) = generated_files()
@@ -767,7 +812,8 @@ def main() -> int:
         f"{country_count} verified-capital countries; {controlled} controlled locations; "
         f"{dependencies} dependencies; {pop_locations} populated locations; "
         f"{pop_total:,.3f} thousand people; {market_count} M5 markets; {urban_count} M5 urban nodes; "
-        f"{special_building_count} M5 specialist buildings; {road_count} M5 road segments; "
+        f"{special_building_count} M5/M7 buildings including {fort_count} M7 forts; "
+        f"{unit_manager_count} M7 force seeds; {road_count} M5 road segments; "
         f"{development_count} M5 development selectors)"
     )
     return 0

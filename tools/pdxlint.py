@@ -64,6 +64,7 @@ def expected_bom(path: Path) -> bool | None:
         or "/in_game/common/estate_privileges/" in f"/{relative}"
         or "/in_game/common/languages/" in f"/{relative}"
         or "/in_game/common/laws/" in f"/{relative}"
+        or "/in_game/common/unit_types/" in f"/{relative}"
         or "/in_game/common/religion_groups/" in f"/{relative}"
         or "/in_game/common/religions/" in f"/{relative}"
         or "/loading_screen/common/defines/" in f"/{relative}"
