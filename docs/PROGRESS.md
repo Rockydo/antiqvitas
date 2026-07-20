@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-20 - M11 Constitutio Antoniniana event illustration
+
+- Added a reviewed, generic Roman civic-context image to the AD 212 Constitutio
+  Antoniniana current through the generated third-century event-image contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. The maintained M11
+  contact sheet now has forty-eight retained event masters.
+
+Next: continue the M11 later-century art queue and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Severus in Caledonia event illustration
 
 - Added the third-century generator's reviewed event-image contract and attached
