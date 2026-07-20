@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Bar-Kokhba art is landscape-only Judean context
+
+The image is an unoccupied Judean limestone ravine with pale rock shelves, dry
+grass, low natural shrubs, and distant rounded hills. It identifies no person,
+revolt, polity, city, village, route, religious material, animal, action, date,
+or outcome. It deliberately excludes architecture, caves, temples, synagogues,
+ritual material, symbols, ruins, military material, and siege imagery; it is not
+a reconstruction of the Bar Kokhba revolt or its participants. Sources weighed:
+P8.1; plan sections 9, 11, and 20. [secure broad regional context;
+illustrative composition only]
+
 ## 2026-07-20 - Kanishka-apogee art is landscape-only Central-Asian context
 
 The image is an unoccupied Central-Asian highland basin with dry grass, stony
