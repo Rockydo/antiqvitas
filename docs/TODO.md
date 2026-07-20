@@ -246,7 +246,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 291 War of the Eight Princes illustration through a landscape-only north-Chinese loess-valley treatment.
 - [x] Complete reviewed illustration mapping across all ten generated M10 third-century currents and enforce it in the renderer.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 301 Armenian Conversion illustration through a landscape-only Armenian-highland treatment.
-- [x] Render and review the maintained M11 event-art contact sheet (57 retained 1080x440 masters).
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 306 Constantine's Civil Wars illustration through a landscape-only central-Italian foothill treatment.
+- [x] Render and review the maintained M11 event-art contact sheet (58 retained 1080x440 masters).
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 
