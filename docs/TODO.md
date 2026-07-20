@@ -298,5 +298,6 @@ after `make full` and its autonomous driver report are green.
 - [ ] Complete runtime pacing/growth/inflation balance from observer measurements (the observer-confirmation blocker is recorded in `BLOCKERS.md`).
 - [ ] Run autonomous observer game to 476 with decade screenshots and live log watch.
 - [x] Finish README, known issues, packaging notes, static finale verification, and the full surface-area inventory audit.
-- [ ] Resolve the M12 mission/task-definition and game-rule/tutorial/hint audit findings: retain only evidence-safe generic surfaces or disable them through verified exact-name contracts.
+- [x] Disable the eleven installed anachronistic generic mission packs through checked exact-name visibility overlays; retain their keys for engine references.
+- [ ] Resolve the M12 game-rule/tutorial/hint audit finding: retain only evidence-safe generic surfaces or disable them through verified exact-name contracts.
 - [ ] Run final `make full`; create M12 report; tag `M12-done`.
