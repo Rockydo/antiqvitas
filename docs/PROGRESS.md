@@ -1,5 +1,25 @@
 # Progress
 
+## 2026-07-20 - M10 Northern Xiongnu release
+
+- Implemented the AD 48 split as a real dynamic-country release rather than a
+  Southern-Xiongnu rename alone. The locally proven country-creation contract
+  gives `XNO` a stable runtime identity, a northern reviewed M3 territory
+  slice, inherited Xiongnu culture/religion, and steppe government adapters;
+  the continuing country becomes Southern Xiongnu and the old confederation
+  IO is dissolved.
+- The location slice is explicit source-qualified data and is guarded against
+  both the local coordinate index and the current M3 Xiongnu ownership block.
+  It is a documented geographic approximation, not a fabricated exact border
+  or ruler record. The runtime tag has generator-owned temporary localization,
+  color, and CoA support.
+- `make validate` and the enabled-mod `make smoke` passed after the change;
+  smoke reported zero new `error.log` lines and reached the rendered menu.
+  The existing observer-confirmation blocker still prevents a live AD 48
+  event-window capture.
+
+Next: render, source-check, and menu-smoke the AD 97-199 history batch.
+
 ## 2026-07-20 - M10 first-century transformation adapter
 
 - The installed `change_tag_cosmetic` scripted effect is now used by the
