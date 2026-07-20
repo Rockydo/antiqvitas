@@ -73,6 +73,7 @@ TARGETS = {
 # the game-visible reference and validation can prove that its texture exists.
 EVENT_IMAGES = {
     "augustan_succession": "gfx/interface/illustrations/event/antq_augustan_succession.dds",
+    "christianity_foundation": "gfx/interface/illustrations/event/antq_christianity_foundation.dds",
     "florus_sacrovir": "gfx/interface/illustrations/event/antq_florus_sacrovir.dds",
     "gaius_eastern_settlement": "gfx/interface/illustrations/event/antq_gaius_eastern_settlement.dds",
     "illyrian_revolt": "gfx/interface/illustrations/event/antq_illyrian_revolt.dds",
