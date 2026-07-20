@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Anuradhapura's Buddhist complex uses a generic monastery proxy
+
+UNESCO identifies the Anuradhapura monastic complexes as evolving from the
+third century BCE, securely supporting a Buddhist institutional presence at AD
+1. The engine's generic `monastery` is used for that surface, not as a claim of
+a Christian monastery, a particular building plan, an exact estate endowment,
+or the later form of any surviving monument. Sources weighed: `UNESCO-ANU-MON`;
+P11; P12.3. [secure broad pre-AD 1 monastic presence; contested engine
+equivalence and architectural detail]
+
 ## 2026-07-20 - The Second Temple is a dated building proxy, not a full religious reconstruction
 
 The plan requires an AD 1 Temple building at Jerusalem and its AD 70

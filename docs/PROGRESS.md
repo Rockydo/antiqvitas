@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-20 - M5 Anuradhapura monastic anchor
+
+- Added a source-qualified generic-monastery proxy at Anuradhapura, making the
+  plan's Buddhist-east monastic surface visible without applying a later
+  Christian building identity or a reconstructed architectural plan.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines.
+  The generated start manager now reports 30 M5/M7 buildings.
+
+Next: continue remaining independent M5 economy and historic-building work.
+
 ## 2026-07-20 - M5 Second Temple transformation
 
 - Added the plan-required Second Temple building at Jerusalem through a new,
