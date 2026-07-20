@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Vesuvius art is non-literal Campanian environmental context
+
+The image is a quiet Campanian landscape with a dark volcanic mountain, low
+vine rows, dry grass, stone field walls, and distant water. It identifies no
+eruption, source plume, Pompeii, Herculaneum, town, villa, person, victim,
+fire, lava, ash, damage, action, date, or outcome. It deliberately excludes
+disaster spectacle, destruction, archaeological reconstruction, and modern or
+later settlement material; it is not a reconstruction of the AD 79 eruption.
+Sources weighed: P8.1; plan sections 9 and 20. [secure regional context;
+illustrative composition only]
+
 ## 2026-07-20 - Year-of-Four-Emperors art is a non-literal civic context
 
 The image is an empty early-imperial civic square after rainfall, with wet
