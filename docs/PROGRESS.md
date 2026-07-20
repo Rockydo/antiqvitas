@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M5 western Roman corridor
+
+- Extended the generated road network from 29 to 36 source-labelled segments.
+  The new Massilia-to-Tarraco sequence distinguishes secure Via Domitia and Via
+  Augusta corridor anchors from three explicitly contested installed-map links.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines.
+  The work adds connectivity only; it does not treat the RGO remap blocker as
+  resolved or claim a survey-grade reconstruction.
+
+Next: continue the remaining independent M5 economy surfaces.
+
 ## 2026-07-20 - M5 ancient harbor infrastructure
 
 - Added source-labelled protected-harbor tiers at Gades, Massilia, Panyu,
