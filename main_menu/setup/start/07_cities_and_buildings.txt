@@ -43,18 +43,22 @@ locations = {
 	noh_peten = { rank = town town_setup = antiqvitas_market_town } # tikal; P12.2;P8.10;CAH-XI
 }
 
-# M5 AD 1 specialist buildings; sources and proxy rationale: docs/m5/special_buildings.csv.
+# M5 specialist buildings plus M7 castra/limes proxies; source rationale: docs/m5/ and docs/m7/.
 building_manager = {
 	glass_guild = { tag = XAA level = 1 location = alexandria } # alexandria_glass; P12.1;P12.3
 	protected_harbor = { tag = XAA level = 1 location = alexandria } # alexandria_harbor; P12.2;CAM-ALEX
 	library = { tag = XAA level = 1 location = alexandria } # alexandria_library; P12.3;P8.1
 	lighthouse_of_alexandria = { tag = XAA level = 1 location = alexandria } # alexandria_pharos; P12.3;P8.1
 	irrigation_systems = { tag = XBD level = 1 location = anuradhapura } # anuradhapura_irrigation; P12.3;UNESCO-ANU
+	stockade = { tag = XAA level = 1 location = aquileia } # castra_aquileia; P14;CAH-XI
+	stockade = { tag = XAA level = 1 location = sisak } # castra_siscia; P14;CAH-XI
 	lacquerware_guild = { tag = XAR level = 1 location = jingzhao } # changan_lacquerware; P12.1;P8.3;BHR
 	confucian_academy = { tag = XAR level = 1 location = jingzhao } # changan_taixue; P12.3;CHI-TAIXUE
 	irrigation_systems = { tag = XAR level = 1 location = chengdu } # chengdu_irrigation; P12.3;UNESCO-DJJ
 	lacquerware_guild = { tag = XAR level = 1 location = chengdu } # chengdu_lacquerware; P12.1;P8.3;BHR
 	glass_guild = { tag = XDK level = 1 location = cologne } # cologne_glass; P12.1;P8.7
+	stockade = { tag = XAR level = 1 location = jiayu } # han_jiayu_beacon; P14;BHR
+	stockade = { tag = XAR level = 1 location = wuwei } # han_wuwei_beacon; P14;BHR
 	lacquerware_guild = { tag = XAR level = 1 location = luoyang } # luoyang_lacquerware; P12.1;P8.3;BHR
 	granary = { tag = XAA level = 1 location = rome } # roma_annona; P12.3;OCD-ANNONA
 	aqueduct_system = { tag = XAA level = 1 location = rome } # roma_aqueduct; P12.3;P8.1
