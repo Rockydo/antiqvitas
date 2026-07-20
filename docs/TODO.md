@@ -253,7 +253,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 365 Crete earthquake and tsunami illustration through a landscape-only southern-Cretan coastal treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 370 Hunnic Arrival illustration through a landscape-only Volga-steppe treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 376–382 Gothic Refugee Crisis illustration through a landscape-only lower-Danube riparian treatment.
-- [x] Render and review the maintained M11 event-art contact sheet (64 retained 1080x440 masters).
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 380 Edict of Thessalonica illustration through a landscape-only northern-Aegean coastal treatment.
+- [x] Render and review the maintained M11 event-art contact sheet (65 retained 1080x440 masters).
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 

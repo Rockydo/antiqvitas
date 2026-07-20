@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Thessalonica-edict art is landscape-only northern-Aegean context
+
+The image is an unoccupied late-summer northern-Aegean coast of quiet rocky
+shoreline, calm blue-grey sea, low scrub, dry grasses, pale limestone outcrops,
+distant hazy hills across a wide gulf, and sparse Mediterranean pines. It
+identifies no Thessalonica, Christianity, Theodosius, edict, city, date, or
+outcome. It is not a reconstruction of the Edict of Thessalonica or the
+establishment of Nicene state religion. Sources weighed: plan sections 9, 11,
+and 20. [secure broad regional context; illustrative composition only]
+
 ## 2026-07-20 - Gothic-refugee art is landscape-only lower-Danube context
 
 The image is an unoccupied late-summer lower-Danube riparian landscape of a quiet
