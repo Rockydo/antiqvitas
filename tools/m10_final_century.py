@@ -52,6 +52,7 @@ EVENT_IMAGES = {
     "hephthalites": "gfx/interface/illustrations/event/antq_hephthalites.dds",
     "radagaisus_rhine": "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds",
     "vandal_africa": "gfx/interface/illustrations/event/antq_vandal_africa.dds",
+    "vandal_sack_rome": "gfx/interface/illustrations/event/antq_vandal_sack_rome.dds",
     "visigoth_settlement": "gfx/interface/illustrations/event/antq_visigoth_settlement.dds",
 }
 DYNAMIC_TARGETS = {"HNS", "ERO", "VND"}
