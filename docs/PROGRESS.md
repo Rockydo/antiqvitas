@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-20 - M10 first-century transformation adapter
+
+- The installed `change_tag_cosmetic` scripted effect is now used by the
+  Kushan and Xiongnu history events. It changes a country name, adjective,
+  map color, and placeholder CoA in place; Kushan also rises to the empire
+  rank, while the Southern-Xiongnu outcome dissolves the M9 Xiongnu IO.
+- The first load rejected the display text "Kushan Empire" because EU5 appends
+  the country rank. The generated base name is now "Kushan", producing the
+  correct rank-aware display. The corrected static gate and enabled-mod smoke
+  are green with zero new error-log lines.
+
+Next: verify the setup contract for a genuine Northern-Xiongnu country release
+without inventing its territorial split, then resume the AD 97-199 batch.
+
 ## 2026-07-20 - M10 AD 1-96 historical-current layer
 
 - Added `tools/m10_history.py`, a deterministic renderer for the first 27

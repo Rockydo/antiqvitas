@@ -1,5 +1,20 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M10 transformations use cosmetic tags until a new polity is needed
+
+The installed `change_tag_cosmetic` effect is a safe in-place adapter: it sets
+the country name, adjective, map color, and flag without replacing the country
+identity. M10 uses `KSH` for the Yuezhi-to-Kushan formation and raises that
+country to empire rank. It uses `XSO` for the surviving Southern Xiongnu and
+destroys the M9 Xiongnu Confederation IO on the split outcome. Both cosmetic
+keys receive generator-owned temporary map colors and solid CoAs; M11 owns
+their sourced final visual treatment.
+
+The engine rejects a cosmetic name containing a rank word because the UI adds
+the rank itself. The base localization is consequently `Kushan`, not `Kushan
+Empire`. A true Northern-Xiongnu polity is deliberately not fabricated by this
+adapter; it awaits a separately validated dynamic-country release surface.
+
 ## 2026-07-20 - M10 uses the installed dynamic-history event manager
 
 The local 1.3.1.1 event corpus exposes `dynamic_historical_event` with repeated
