@@ -46,6 +46,7 @@ EVENT_IMAGES = {
     "alaric_sack": "gfx/interface/illustrations/event/antq_alaric_sack.dds",
     "britain_abandoned": "gfx/interface/illustrations/event/antq_britain_abandoned.dds",
     "radagaisus_rhine": "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds",
+    "visigoth_settlement": "gfx/interface/illustrations/event/antq_visigoth_settlement.dds",
 }
 DYNAMIC_TARGETS = {"HNS", "ERO", "VND"}
 GENERATED_TAGS = {"VSG", "VND", "ODO"}
