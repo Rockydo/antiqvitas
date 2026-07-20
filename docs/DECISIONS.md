@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M11 third-century art requires full generated-current coverage
+
+`tools/m10_third_century.py` now rejects both orphaned image-map keys and any
+third-century timeline current lacking a reviewed event-image link. All ten AD
+200-299 currents have an inspected retained master and 1080x440 BC7 DDS, so the
+one-to-one check makes that complete surface regeneration-safe rather than a
+manual audit result that could silently regress.
+
+Sources weighed: local `tools/m10_third_century.py`, `docs/timeline.csv`, and
+the installed country-event image contract.
+
 ## 2026-07-20 - M11 second-century art uses the generator-owned image map
 
 `tools/m10_second_century.py` now owns `EVENT_IMAGES`, matching the checked
