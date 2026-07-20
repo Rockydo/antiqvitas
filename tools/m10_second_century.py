@@ -58,6 +58,7 @@ TARGETS = {
 # validation proves its texture remains present.
 EVENT_IMAGES = {
     "gan_ying": "gfx/interface/illustrations/event/antq_gan_ying.dds",
+    "trajan_dacia": "gfx/interface/illustrations/event/antq_trajan_dacia.dds",
 }
 
 
