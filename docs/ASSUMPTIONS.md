@@ -1,5 +1,36 @@
 # Historical Assumptions
 
+## 2026-07-20 - Third-century transformations use bounded political anchors
+
+The source record for the Alemanni cautions that they were a loose and
+politically divided concentration of communities, while the early Frankish
+archaeological and political record is likewise not a single, fixed realm. M10
+therefore uses the reviewed Chatti and Germanic-Societies AD 1 mesh anchors for
+in-place Alemannic and Frankish display identities. They are playable current
+adapters rather than assertions that either source polity alone became the
+whole later group, that a complete territory is reconstructed, or that a
+confederation had a single sovereign. Sources weighed: master-plan sections
+8.7, 9, and 17.3; `OCD-ALE`; `CAM-FRK`; M3 ownership ledger.
+[secure broad chronological emergence; contested engine anchor and geography]
+
+The Sassanid event similarly changes the Parthian state substrate to a
+Sassanid display identity and centralized-monarchy reform after the documented
+224 revolution. `IRAN-ARD` does not support an exact all-Iran map transfer or
+a complete event-date court, so the event does not fabricate Ardashir's
+character sheet, a new dynasty graph, or fixed annexations. Sources weighed:
+master-plan sections 8.2, 9, 13, and 17.3; `IRAN-ARD`.
+[secure 224 revolution; contested game-state continuity]
+
+## 2026-07-20 - AD 212 citizenship is a legal policy, not a population rewrite
+
+`BM-CONST` supports Caracalla's grant of citizenship to free inhabitants of
+the empire. The M10 event replaces Rome's `peregrini` legal-policy adapter
+with universal citizenship; it does not change culture, religion, pop type,
+enslavement status, language, or local identity. This keeps the documented
+legal expansion visible without falsely flattening a highly varied population.
+Sources weighed: master-plan sections 9 and 13; `BM-CONST`.
+[secure legal grant; contested engine representation]
+
 ## 2026-07-20 - The AD 192 Champa release is a bounded Linyi/Rinan proxy
 
 `CHAM-BIRTH` places Linyi's origin broadly in modern Quang Tri and Thua

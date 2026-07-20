@@ -1,5 +1,23 @@
 # Progress
 
+## 2026-07-20 - M10 third-century historical currents
+
+- Added a generator-owned AD 200-299 layer with ten ledger-bound currents:
+  three situations, one disaster, three dynamic events, one tag switch, and
+  two formations. Every script date comes from the shared timeline through
+  `AntqDate`; source records cover the Caledonian, citizenship, Germanic,
+  Chinese, Iranian, crisis, Manichaean, and Tetrarchic claims.
+- The AD 212 current now replaces Rome's bounded legal-policy adapter with
+  universal citizenship. The 224 and 284 transitions exchange the generated
+  Parthian/Principate reforms for Sassanid/Dominate adapters. Alemannic and
+  Frankish identities are explicitly source-qualified in-place anchors, not
+  fabricated unitary early kingdoms or static territorial maps.
+- `make validate` and enabled-mod `make smoke` passed. Smoke reached the
+  rendered menu with zero new `error.log` lines. The unchanged observer-modal
+  blocker remains deferred rather than retried a third time.
+
+Next: render, source-check, and menu-smoke the AD 300-399 history batch.
+
 ## 2026-07-20 - M10 second-century historical currents
 
 - Added a generator-owned AD 97-199 layer with 18 ledger-bound currents: nine

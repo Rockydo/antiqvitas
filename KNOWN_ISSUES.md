@@ -1,16 +1,17 @@
 # Known Issues
 
-## M10 first- and second-century observer coverage is deferred
+## M10 first-, second-, and third-century observer coverage is deferred
 
-The AD 1-199 layers have clean enabled-mod menu smoke and no new `error.log`
+The AD 1-299 layers have clean enabled-mod menu smoke and no new `error.log`
 lines, including the generated AD 48 Northern-Xiongnu and AD 192 Champa
-dynamic-country contracts. Their observer-to-era playback cannot yet be run
-because the current driver's Observer confirmation has already failed two
-distinct bounded inputs (normalized click and foreground-safe Enter). Repeating
-that unchanged path would not add evidence; after a material driver or UI
-change, run the M10 event-window observer route and capture the resulting
-situations and events. See `docs/playtests/M10_001_096.md`,
-`docs/playtests/M10_097_199.md`, and `BLOCKERS.md`.
+dynamic-country contracts and the third-century transition scripts. Their
+observer-to-era playback cannot yet be run because the current driver's
+Observer confirmation has already failed two distinct bounded inputs
+(normalized click and foreground-safe Enter). Repeating that unchanged path
+would not add evidence; after a material driver or UI change, run the M10
+event-window observer route and capture the resulting situations and events.
+See `docs/playtests/M10_001_096.md`, `docs/playtests/M10_097_199.md`,
+`docs/playtests/M10_200_299.md`, and `BLOCKERS.md`.
 
 ## M6 country-inspector coverage is partial
 

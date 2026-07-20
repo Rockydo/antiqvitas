@@ -163,7 +163,10 @@ after `make full` and its autonomous driver report are green.
   - [x] Render, source-check, and menu-smoke the AD 97-199 history batch:
         18 currents, including the AD 192 dynamic Champa release from the
         reviewed Han-Rinan local mesh.
-  - [ ] Render, source-check, and menu-smoke the AD 200-299 history batch.
+  - [x] Render, source-check, and menu-smoke the AD 200-299 history batch:
+        10 currents, including citizenship, Sassanid, and Dominate transition
+        adapters and source-qualified Germanic formation identities.
+  - [ ] Render, source-check, and menu-smoke the AD 300-399 history batch.
 - [ ] Smoke and observer-test every batch; run milestone gate and tag `M10-done`.
 
 ## M11 — Flavor & face

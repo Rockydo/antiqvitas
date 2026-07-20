@@ -1,5 +1,22 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - Third-century history extends the M6 adapters only where a current changes them
+
+The AD 200-299 renderer adds two generated government-reform definitions and
+one additional option within the existing Roman citizenship law. Its dated
+events use the locally harvested `remove_reform`/`add_reform` and
+`remove_policy`/`add_policy` contracts: the Sassanid Revolution exchanges the
+Arsacid great-house reform, Diocletian exchanges the Principate reform, and
+the Constitutio Antoniniana exchanges the legal policy. These are narrow
+transition surfaces, not a broad retroactive rewrite of the AD 1 M6 profiles.
+
+The renderer is intentionally separate from the prior two M10 renderers,
+owns only the AD 200-299 ledger slice, has a unique event-ID range, checks
+its cosmetic identities against the AD 1 runtime tag map, and emits the
+folder-specific BOM/CoA encoding pattern. `ALM`, `SAS`, and `FRK` were also
+checked absent as installed setup-country tags; they are cosmetic identities,
+not dynamically created states. M11 owns their final visual art.
+
 ## 2026-07-20 - Second-century currents use a separate deterministic renderer
 
 `tools/m10_second_century.py` owns the non-overlapping AD 97-199 ledger slice,
