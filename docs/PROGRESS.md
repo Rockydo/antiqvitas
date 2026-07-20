@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-20 - M11 Chalcedon and Avarayr event illustration
+
+- Added a reviewed, landscape-only Armenian-highland valley image to the AD 451 current through the generated final-century event-image contract.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines; the M11 contact sheet now has eighty retained masters.
+
+Next: continue final-century M11 event-art coverage and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Adventus Saxonum event illustration
 
 - Added a reviewed, landscape-only eastern-British coastal-wetland image to the AD 449 current through the generated final-century event-image contract.
