@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-20 - M11 Shapur II and Julian event illustration
+
+- Added a reviewed, landscape-only upper-Mesopotamian river-valley image to the AD 337 current through the generated fourth-century event-image contract.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines; the M11 contact sheet now has sixty retained masters.
+
+Next: continue the M11 fourth-century art queue and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Council of Nicaea event illustration
 
 - Added a reviewed, landscape-only Bithynian foothill-lakeshore image to the AD 325 current through the generated fourth-century event-image contract.
