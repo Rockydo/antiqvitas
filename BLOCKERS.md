@@ -320,3 +320,19 @@ post-content enabled-mod menu smoke were green before this probe.
 Recovery: revalidate the observer-confirmation click sequence after the next
 driver/UI adjustment or game patch, then run the planned high-speed war
 observation. Continue independent M8 work now; no human action is required.
+
+## 2026-07-20 - M8 AI-research observer verification inherits the confirmation blocker
+
+Status: **deferred; M8 milestone gate remains open.**
+
+The M8 enabled-mod run reached the live AD 1 selector and replayed the visible
+OK target of the same irreversible Observer confirmation. It remained open in
+`docs/screens/M8_knowledge_probe/m8_observer_started.png`. This is the same
+input surface already subjected to the M7 normalized-click and foreground-safe
+Enter attempts; no third equivalent retry is treated as new evidence. The
+implementation is otherwise green (`make validate`, M8 graph checks, and a
+zero-new-line menu smoke); see `docs/playtests/M8_KNOWLEDGE.md`.
+
+Recovery: after a material driver/UI change or game patch, revalidate this
+single confirmation path, then observe AI research at high speed. Continue
+with independent M9 work now; no human input is required.
