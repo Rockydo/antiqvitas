@@ -130,8 +130,8 @@ after `make full` and its autonomous driver report are green.
 
 ## M8 — Knowledge
 
-- [ ] Implement five complete age trees, roughly 250 advances, institutions, tech tiers, objectives, and abilities.
-- [ ] Test AI research and anachronism/dead-end rules; run milestone gate and tag `M8-done`.
+- [x] Implement five complete age trees, roughly 250 advances, institutions, tech tiers, objectives, and abilities.
+- [ ] Test AI research and anachronism/dead-end rules; run milestone gate and tag `M8-done`. (The enabled AD 1 selector and zero-new-line menu smoke are recorded; observer input remains blocked by the confirmation issue in `BLOCKERS.md`.)
 
 ## M9 — Nations among nations
 

@@ -1,5 +1,25 @@
 # Progress
 
+## 2026-07-20 - M8 ancient knowledge foundation
+
+- Added the generated 250-node knowledge layer: five ten-step strands in each
+  of the five campaign ages, with locally legal same-age prerequisites and AI
+  weights. The M3 roster now receives calibrated level 4/3/2/1 starting
+  technology tiers (imperial core / literate periphery / Tier-3 country /
+  society-of-pops).
+- Added the nine planned ancient institution entries, including distinct
+  Buddhist and Christian monastic origins, and generated exact-name vanilla
+  compatibility definitions that preserve event references while blocking
+  vanilla progression and institution spawning.
+- `make validate` and the real-game enabled-mod `make smoke` are green with
+  zero new error-log lines. The AD 1 selector rendered under the active M8
+  layer; the observer confirmation control repeated the existing M7 driver
+  limitation, so AI research remains an open runtime gate in
+  `docs/playtests/M8_KNOWLEDGE.md`.
+
+Next: take the next unblocked M9 task while retaining the M7/M8 observer gate
+in `BLOCKERS.md` for a future driver/UI adjustment.
+
 ## 2026-07-19 - M6 Herodian survival-context slice
 
 - Added Herod II and Herodias as source-qualified living Judean-world records
