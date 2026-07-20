@@ -1,5 +1,20 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M11 reaches event density by phase-reviewing existing sourced currents
+
+Section 18 asks for at least 400 events but separately budgets roughly 80
+shared event paintings. M10 already has 83 source-led currents and reviewed
+art links. M11 therefore gives every non-terminal current four no-effect,
+dated review events derived through `dates.py`, rather than inventing hundreds
+of unsupported incidents or images. This produces 411 events while leaving
+the campaign sandboxed. The final 4 September 476 event is deliberately not
+expanded past the campaign end.
+
+The installed engine rejects dynamic historical events addressed to a future
+country at load time. M11 routes only the optional phase notification through
+an existing AD 1 anchor for HNS, ERO, and VND; the original M10 formation and
+current logic continues to own the historical polity transition.
+
 ## 2026-07-20 - M11 keeps the five M8 icon identifiers and supplies exact DDS overrides
 
 The M8 tree already groups its 250 advances into five 50-item visual surfaces.
