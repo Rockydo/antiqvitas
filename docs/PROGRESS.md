@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-20 - Game-driver very-low-profile repair
+
+- Local debug logs revealed that the driver was writing an invalid numeric
+  frame cap and invalid lowercase AA enum. It now writes the installed
+  very-low graphics contract, including disabled map objects, shadows,
+  particles, and post-processing.
+- A fresh enabled-mod menu smoke reached its menu-ready heuristic and passed
+  with zero new error-log lines; no supplied graphics key was rejected and no
+  Vulkan memory failure occurred.
+
+Next: use this material renderer recovery to recreate the narrow country-change
+rule overlay, menu-smoke it, and retry the observer gate.
+
 ## 2026-07-20 - M6 roster evidence boundary
 
 - Completed an auditable M6 Tier-1/2 coverage pass: all 107 profiles remain

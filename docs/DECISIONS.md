@@ -1,5 +1,17 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - The game driver writes the installed very-low graphics contract
+
+The previous fixed-window driver wrote a numeric frame-cap and lowercase
+anti-aliasing value. The game rejected both, logged the failure, and fell back
+from the intended profile. The driver now uses the installed string enum for a
+30-FPS cap and the exact very-low values for AA, map objects, portrait sampling,
+textures, filtering, shadows, effects, terrain-adjacent render features, and
+unit CoAs. A clean enabled-mod menu smoke confirms all supplied values are
+accepted; the engine still notes its optional `multi_sampling` key is absent,
+so the driver does not guess an unsupported value. This is a renderer-stability
+repair, not a content or balance change.
+
 ## 2026-07-20 - M6 measures complete roster coverage without fictionalizing unknown courts
 
 Section 19's 250--400-character target is enforced as a source-led roster
