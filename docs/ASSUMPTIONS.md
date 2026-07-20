@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-20 - Sassanid-Revolution art is landscape-only Fars context
+
+The image is an unoccupied early-spring Fars highland of a natural seasonal
+stream, weathered warm-limestone slopes, sparse grasses, low shrubs, scattered
+trees, and rounded distant mountains. It identifies no ruler, battle, dynastic
+transition, polity, city, palace, sacred site, date, or outcome. It deliberately
+excludes people, military material, architecture, roads, banners, political
+symbols, fire altars, religious symbols, relief carvings, and narrative action;
+it is not a reconstruction of Ardashir's revolt, the Sassanid Revolution, or
+Sassanid state formation. Sources weighed: P8.4; plan sections 9, 13, and 20.
+[secure broad regional context; illustrative composition only]
+
 ## 2026-07-20 - Three-Kingdoms art is landscape-only north-Chinese context
 
 The image is an unoccupied late-summer north-Chinese river valley of a natural
