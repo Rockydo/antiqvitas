@@ -87,6 +87,7 @@ EVENT_IMAGES = {
     "immensum_bellum": "gfx/interface/illustrations/event/antq_immensum_bellum.dds",
     "kushan_unification": "gfx/interface/illustrations/event/antq_kushan_unification.dds",
     "mauretania_annexation": "gfx/interface/illustrations/event/antq_mauretania_annexation.dds",
+    "second_temple_destruction": "gfx/interface/illustrations/event/antq_second_temple_destruction.dds",
     "silphium_extinction": "gfx/interface/illustrations/event/antq_silphium_extinction.dds",
     "tacfarinas_war": "gfx/interface/illustrations/event/antq_tacfarinas_war.dds",
     "teutoburg": "gfx/interface/illustrations/event/antq_teutoburg.dds",
