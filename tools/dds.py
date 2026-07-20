@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 import struct
 import subprocess
 import tempfile
@@ -18,6 +19,12 @@ def magick() -> Path:
     if local.is_file():
         return local
     return Path("magick")
+
+
+def texconv() -> Path | None:
+    """Return the optional local DirectXTex encoder used for BC7 surfaces."""
+    local = ROOT / ".tools/DirectXTex/texconv.exe"
+    return local if local.is_file() else None
 
 
 def identify(path: Path) -> dict[str, str]:
@@ -100,7 +107,36 @@ def write_mipmapped_dds(source: Path, target: Path, compression: str) -> None:
 
 def convert(source: Path, target: Path, compression: str, mipmaps: bool) -> None:
     target.parent.mkdir(parents=True, exist_ok=True)
-    if mipmaps:
+    normalized = compression.casefold()
+    if normalized in {"bc7", "bc7_srgb", "bc7_unorm_srgb"}:
+        encoder = texconv()
+        if encoder is None:
+            raise RuntimeError(
+                "BC7 conversion requires .tools/DirectXTex/texconv.exe; "
+                "install the reviewed DirectXTex tool on the work drive"
+            )
+        temp_root = ROOT / ".tmp"
+        temp_root.mkdir(parents=True, exist_ok=True)
+        with tempfile.TemporaryDirectory(prefix="dds-bc7-", dir=temp_root) as temporary:
+            output = Path(temporary)
+            command = [
+                str(encoder),
+                "-nologo",
+                "-y",
+                "-f",
+                "BC7_UNORM_SRGB",
+                "-m",
+                "0" if mipmaps else "1",
+                "-o",
+                str(output),
+                str(source),
+            ]
+            subprocess.run(command, check=True)
+            encoded = output / f"{source.stem}.dds"
+            if not encoded.is_file():
+                raise RuntimeError(f"DirectXTex did not create DDS: {encoded}")
+            shutil.move(str(encoded), target)
+    elif mipmaps:
         write_mipmapped_dds(source, target, compression)
     else:
         details = identify(source)
