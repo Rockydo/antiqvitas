@@ -1,5 +1,18 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Generate each custom institution's required birth modifier
+
+The installed institution manager asks the static-modifier registry for the
+exact key formed by an institution ID plus _birth. The local vanilla
+institutions file confirms that each such modifier is a location-category
+record. M8 now generates all nine matching records in the correct main-menu
+path and checks their key coverage against the institution manifest. Their
+small, source-theme-aligned local values remain below the corresponding vanilla
+birth-modifier scale. The associated descriptions are included in the English
+source and exact client-language mirrors. Static validation and a 90-second
+enabled-mod menu smoke are green; a fresh observer initialization is still
+required to prove the runtime diagnostics have gone.
+
 ## 2026-07-21 - Use the installed 1920x1080 renderer mode for autonomous driving
 
 The configured 960x540 window string is not a valid enum value in the installed
