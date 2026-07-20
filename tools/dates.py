@@ -5,6 +5,8 @@ from __future__ import annotations
 
 import argparse
 import csv
+from datetime import date as CalendarDate
+from datetime import timedelta
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -84,6 +86,29 @@ class AntqDate:
 
     def __str__(self) -> str:
         return f"{self.year}.{self.month}.{self.day}"
+
+
+def days_between(start: AntqDate, end: AntqDate) -> int:
+    """Return the exact number of calendar days in a campaign-date window."""
+    start.validate()
+    end.validate()
+    distance = (CalendarDate(end.year, end.month, end.day) - CalendarDate(
+        start.year, start.month, start.day
+    )).days
+    if distance <= 0:
+        raise ValueError(f"campaign-date window must be positive: {start} to {end}")
+    return distance
+
+
+def offset_date(start: AntqDate, days: int) -> AntqDate:
+    """Return a campaign date offset from ``start`` without bypassing AntqDate."""
+    start.validate()
+    if days < 0:
+        raise ValueError("campaign-date offsets cannot be negative")
+    shifted = CalendarDate(start.year, start.month, start.day) + timedelta(days=days)
+    result = AntqDate(shifted.year, shifted.month, shifted.day)
+    result.validate()
+    return result
 
 
 @dataclass(frozen=True, order=True)
