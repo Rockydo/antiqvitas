@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M11 replaces the checked vanilla loading-screen filename
+
+The local asset manifest identifies the vanilla loading screen as
+`loading_screen/gfx/loadingscreens/startscreen.dds`, a 1920×1080 DDS texture.
+M11 uses that exact mod-relative filename rather than inventing an unregistered
+asset path. The generated master and resized derivative remain under
+`assets_queue/`, while the reviewed DDS is the only game-facing copy.
+
 ## 2026-07-20 - M5 maps Ferrum Noricum to Friesach's generic iron good
 
 The RGO renderer can write only installed, controlled location keys. `friesach`

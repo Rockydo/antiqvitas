@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - AD 1 Rome loading art is an evocative composite, not a site plan
+
+The first M11 loading screen uses an early-imperial Roman civic panorama as a
+period-signalling illustration. Neither the image nor its generic architectural
+elements are treated as an archaeological reconstruction of one Forum view or
+ceremony. The review excludes obvious post-AD-1 monuments and modern or
+medieval imagery; specific urban topography, statue identities, procession,
+and date are intentionally not asserted. Sources weighed: P8.1; P20. [secure
+period-design intent; illustrative composition]
+
 ## 2026-07-20 - Noricum iron uses a Friesach district proxy
 
 The archaeological project securely places Ferrum Noricum production in the
