@@ -211,6 +211,8 @@ a row reaches `implemented` status.
 
 - `PER-LAURION`: C. W. J. Eliot, ["Laurion"](https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0006%3Aentry%3Dlaurion), *Princeton Encyclopedia of Classical Sites* (1976), used for the Laurion lead-silver district, its Classical peak, and the report that underground mining had ceased by Strabo's time while slag reworking continued. It does not establish AD 1 output, a precise mining-work chronology, or a one-to-one installed-location match.
 
+- `CAM-MELOS-ALUM`: N. Purcell, ["Landed Traders, Trading Agriculturalists? Land in the Economy of the Italian Diaspora in the Greek East"](https://www.cambridge.org/core/journals/journal-of-roman-studies/article/landed-traders-trading-agriculturalists-land-in-the-economy-of-the-italian-diaspora-in-the-greek-east/60418D46558A9A91E27B48B51E30B164), *Journal of Roman Studies* 107 (2017), used for the dramatic Roman-period expansion of Melian alum extraction, processing, and export systems and their first- through third-century AD elite evidence. It does not quantify AD 1 output or establish every extraction cluster's ownership at the campaign boundary.
+
 Rows marked `contested` have a corresponding entry in `docs/ASSUMPTIONS.md`.
 `TBD` map capitals are historical roster records awaiting a verified mapping to
 the installed EU5 location key; they are not silently guessed.

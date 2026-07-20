@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M5 Melos alum anchor
+
+- Added the plan-listed alum emphasis through the direct installed `milos`
+  anchor. Roman-period extraction, processing, and export evidence securely
+  spans the campaign boundary.
+- The already-correct vanilla alum value is retained rather than altered; the
+  new source-qualified ledger entry makes that existing M5 surface reviewable.
+
+Next: continue the remaining source-led M5 economy audit while the
+runtime-effective RGO trade gate remains deferred.
+
 ## 2026-07-20 - M5 Laurion decline audit
 
 - Reviewed the plan-listed fading Laurion source against a classical-site
