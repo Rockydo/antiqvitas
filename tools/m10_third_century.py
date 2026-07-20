@@ -53,6 +53,7 @@ EVENT_IMAGES = {
     "alemanni_formation": "gfx/interface/illustrations/event/antq_alemanni_formation.dds",
     "constitutio_antoniniana": "gfx/interface/illustrations/event/antq_constitutio_antoniniana.dds",
     "diocletian_dominate": "gfx/interface/illustrations/event/antq_diocletian_dominate.dds",
+    "eight_princes": "gfx/interface/illustrations/event/antq_eight_princes.dds",
     "frankish_formation": "gfx/interface/illustrations/event/antq_frankish_formation.dds",
     "manichaeism_foundation": "gfx/interface/illustrations/event/antq_manichaeism_foundation.dds",
     "sassanid_revolution": "gfx/interface/illustrations/event/antq_sassanid_revolution.dds",
