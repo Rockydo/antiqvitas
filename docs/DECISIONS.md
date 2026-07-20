@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - Restrict the automated anachronism sweep to authored player text
+
+The M12 anachronism guard reads the 17 English localization files rather than
+all mod bytes. Exact-name vanilla overlays and technical identifiers must retain
+some later-game names for database compatibility, but they are not campaign
+claims shown to a player. The audit blocks narrowly unambiguous post-476 terms
+and inflections (colonialism, Renaissance/Reformation, firearms, railways, and
+named early-modern polities) while leaving contextual vocabulary such as
+`empire`, `church`, and `feudal` to source review. The exact client-language
+mirror check makes this English-first result apply across the supported UI.
+
 ## 2026-07-20 - Treat host pagefile headroom as a runtime prerequisite
 
 The latest failed launcher experiment's crash metadata recorded 9 MB of free

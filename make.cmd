@@ -39,6 +39,7 @@ exit /b 2
 "%PYTHON%" tools\m11_localization.py --check || exit /b 1
 "%PYTHON%" tools\m12_disable_missions.py --check || exit /b 1
 "%PYTHON%" tools\m12_game_rules.py --check || exit /b 1
+"%PYTHON%" tools\m12_anachronism_audit.py --check || exit /b 1
 "%PYTHON%" tools\generate_country_definitions.py --check || exit /b 1
 "%PYTHON%" tools\capital_mapper.py --check || exit /b 1
 "%PYTHON%" tools\extract_map_coordinates.py --check || exit /b 1

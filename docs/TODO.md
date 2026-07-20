@@ -300,6 +300,7 @@ after `make full` and its autonomous driver report are green.
 - [ ] Run autonomous observer game to 476 with decade screenshots and live log watch.
 - [x] Finish README, known issues, packaging notes, static finale verification, and the full surface-area inventory audit.
 - [x] Disable the eleven installed anachronistic generic mission packs through checked exact-name visibility overlays; retain their keys for engine references.
+- [x] Pin a static player-facing anachronism audit across all 17 English localization files, with the client-language mirror contract checked separately.
 - [x] Resolve the observer country-change rule through a menu-smoked, exact-name installed-file overlay; the driver can now enter Observer without altering any historical or AI rule.
 - [ ] Complete the remaining M12 tutorial/hint audit: retain only evidence-safe generic surfaces or disable dated vanilla hints through a verified exact-name contract.
 - [ ] Run final `make full`; create M12 report; tag `M12-done`.

@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-20 - M12 player-facing anachronism guard
+
+- Added a generated M12 audit across all 17 English localization files and
+  5,074 quoted player-facing values. It rejects a narrow list of clear
+  post-476 concepts such as colonialism, Renaissance/Reformation, industrial
+  production, firearms, railways, and named early-modern polities.
+- The validation gate now checks both the audit and the exact English-to-client
+  mirror contract. Technical identifiers and exact-name vanilla compatibility
+  overlays are intentionally not treated as player-facing historical claims.
+
+Next: retain the still-open tutorial/hint semantic audit and observer gates;
+continue static historical work while host virtual-memory headroom is absent.
+
 ## 2026-07-20 - Observer failure narrowed to host virtual-memory headroom
 
 - A materially different early-window constraint did not reach the menu. Its
