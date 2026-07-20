@@ -64,6 +64,7 @@ TARGETS = {
 # cannot silently drop a reviewed game-facing texture.
 EVENT_IMAGES = {
     "armenia_conversion": "gfx/interface/illustrations/event/antq_armenia_conversion.dds",
+    "constantine_civil_wars": "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds",
 }
 
 # A deliberately limited political envelope for the eastern court.  The list
