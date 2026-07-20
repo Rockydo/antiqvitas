@@ -2825,6 +2825,16 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-20 - M11 replaces all AD 1 solid-field CoA placeholders
+
+- Added a 34-region, source-labelled CoA theme ledger and converted every one
+  of the 157 AD 1 roster entries to a layered, locally validated emblem-on-field
+  standard. Rome, Han, and Parthia retain their separately reviewed direct
+  standards over the regional fallback.
+- The visual identity layer is explicitly non-reconstructive; it does not turn
+  an engine emblem into a historical banner claim. Renderer validation and the
+  enabled-mod smoke both passed with zero new error-log lines.
+
 ## 2026-07-20 - M11 decision ledger is source-complete, runtime integration deferred
 
 - Built and validated a 40-row M11 decision ledger spanning all seven plan

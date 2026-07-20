@@ -11,8 +11,8 @@ Rome uses the locally installed generic eagle on a purple field, Han a generic
 Chinese rosette on red, and Parthia a generic horse on deep red. They are
 period-inspired UI standards selected under the master plan's emblem-on-field
 design language, not reconstructions of historical flags, vexilla, court
-banners, or state standards. All other entries remain marked M3 placeholders
-until separately reviewed.
+banners, or state standards. They retain direct-country priority over the
+regional standards subsequently documented in `M11_COA_STANDARDS.md`.
 
 The generator, `make validate`, and enabled-mod `make smoke` passed with zero
 new error-log lines.

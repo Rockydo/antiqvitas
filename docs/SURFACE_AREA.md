@@ -7,9 +7,9 @@ for its milestone; `deferred` = non-goal or dependency with rationale.
 | --- | --- | --- |
 | Metadata and thumbnail | done | M1, real menu smoke |
 | Loading-screen defines | done | M2 generated calendar, real AD 1 save/reload |
-| Setup start managers | in progress | exact 25-file mirror plus 34 verified-capital countries |
-| Setup country definitions | in progress | 133 generated, localized and smoke-clean; templates remain M3 |
-| Placeholder coats of arms | in progress | 133 simple engine-native M3 flags; sourced designs are M11 |
+| Setup start managers | in progress | exact 25-file mirror plus 157 verified-capital countries |
+| Setup country definitions | in progress | 157 generated, localized and smoke-clean; templates remain M3 |
+| Coats of arms | done | M11: 157 engine-native, source-labelled, non-reconstructive UI standards; direct core reviews override regional themes |
 | Common ages and advances | in progress | M2 five-age scaffold; M8 full tree |
 | Cultures, languages, religions, pops | planned | M4 |
 | Goods, markets, buildings, roads, development | planned | M5 |
@@ -19,7 +19,7 @@ for its milestone; `deferred` = non-goal or dependency with rationale.
 | Diplomacy, subjects, IOs, known world | planned | M9 |
 | Situations, disasters, formables, tag changes | planned | M10 |
 | Events and decisions | planned | M10-M11 |
-| Flags, icons, illustrations, loading and age art | in progress | M11; generated/reused 2D only. The AD 1 Rome loading screen and attached *Immensum Bellum* event illustration are engine-sized, round-trip reviewed, and smoke-clean; remaining classes continue. |
+| Flags, icons, illustrations, loading and age art | in progress | M11; all AD 1 CoAs, the AD 1 Rome loading screen, and 83 event illustrations are engine-sized/reviewed/smoke-clean; remaining icon and common-screen classes continue. |
 | Localization and glossary | planned | M2 onward, polish M11 |
 | Main menu | deferred | vanilla menu retained unless anachronism audit requires touchup |
 | Tutorials and hints | planned | M12 audit |

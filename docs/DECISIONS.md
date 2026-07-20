@@ -1244,3 +1244,12 @@ action work must begin with a one-action pilot based on an exact-name copy of
 the locally installed `messagetypes.txt`; retain every vanilla type and record
 the source hash before expanding the overlay. This is a compatibility decision,
 not an assertion about any historical institution.
+
+## 2026-07-20 - CoA standards replace the one generated placeholder file
+
+The CoA generator now writes `antq_00_coa_standards.txt` and the superseded
+placeholder file is removed. This avoids duplicate country keys and never
+relies on alphabetical file order. Direct CoA reviews win over the regional
+theme catalog; both must resolve to local colored-emblem textures. This is a
+technical rendering decision, with the historical non-reconstruction boundary
+recorded in `ASSUMPTIONS.md`.
