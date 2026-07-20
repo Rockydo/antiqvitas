@@ -10,8 +10,8 @@ path and checks their key coverage against the institution manifest. Their
 small, source-theme-aligned local values remain below the corresponding vanilla
 birth-modifier scale. The associated names and descriptions are included in the English
 source and exact client-language mirrors. Static validation and a 90-second
-enabled-mod menu smoke are green; a fresh observer initialization is still
-required to prove the runtime diagnostics have gone.
+enabled-mod menu smoke are green. A fresh AD 1 observer initialization verified
+that neither the missing-modifier nor missing-localization diagnostic remains.
 
 ## 2026-07-21 - Use the installed 1920x1080 renderer mode for autonomous driving
 

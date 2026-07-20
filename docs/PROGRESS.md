@@ -7,9 +7,12 @@
 - The new manifest coverage guard, full validation suite, regenerated M12
   authored-text audit, and enabled-mod 90-second smoke all pass with zero new
   error-log lines.
+- A fresh AD 1 observer initialization then verified that neither the former
+  missing-modifier IDs nor their paired name-localization diagnostics remain.
+  The evidence is in docs/playtests/M8_BIRTH_MODIFIERS_20260721.md.
 
-Next: initialize a new observer session to verify that all nine former
-missing-modifier diagnostics are absent before retrying longer playback.
+Next: retain the resolved M8 contract and address only the remaining
+government/IO runtime fall-through before retrying longer playback.
 
 ## 2026-07-21 - Supported autonomous renderer profile is menu-smoked
 
