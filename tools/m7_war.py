@@ -25,6 +25,7 @@ ARMIES = DATA / "armies.csv"
 FORTS = DATA / "forts.csv"
 UNIT_OUTPUT = ROOT / "in_game/common/unit_types/00_antiquitas_m7_units.txt"
 ADVANCE_OUTPUT = ROOT / "in_game/common/advances"
+M8_TREE = ADVANCE_OUTPUT / "00_antiquitas_m8_tree.txt"
 LOC_ROOT = ROOT / "main_menu/localization"
 
 UNIT_FIELDS = (
@@ -275,6 +276,10 @@ def localization(units: tuple[Unit, ...], language: str) -> str:
 
 
 def advance_overrides() -> dict[Path, str]:
+    # M8 owns the complete exact-name advance replacement.  Retaining this
+    # interim M7 layer after it is active would overwrite M8's clean blanks.
+    if M8_TREE.is_file():
+        return {}
     config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
     source = Path(config["game_dir"]) / "game/in_game/common/advances"
     if not source.is_dir():
@@ -327,7 +332,8 @@ def check(units: tuple[Unit, ...]) -> bool:
         print("\n".join(f"  - {failure}" for failure in failures))
         return False
     override_count = len(advance_overrides())
-    print(f"m7_war: PASS ({len(units)} ancient unit types; {override_count} vanilla advance overrides; no vanilla unit or levy unlocks)")
+    layer = "M8 owns complete advance replacement" if M8_TREE.is_file() else f"{override_count} vanilla advance overrides"
+    print(f"m7_war: PASS ({len(units)} ancient unit types; {layer}; no vanilla unit or levy unlocks)")
     return True
 
 

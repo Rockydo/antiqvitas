@@ -760,3 +760,27 @@ country/location per named force. The source ledgers permit only M7 units that
 are available to their own bounded country tag. The starting strengths are
 technical test seeds rather than historical orders of battle; the runtime
 observer probe remains the acceptance test for their behavior.
+
+## 2026-07-19 - M8 replaces advances and institutions by installed filename manifest
+
+The local build distributes advances and institutions over many additive files.
+M8 therefore generates UTF-8-BOM exact-name replacements for every installed
+definition file, then puts the complete namespaced ancient tree and institution
+set in its own files. Vanilla advance keys remain as permanently unavailable
+definitions (with unit/levy unlocks stripped), while vanilla institutions
+remain defined with `can_spawn = { always = no }`; this preserves hardcoded
+event and trigger references without leaving their gameplay content reachable.
+The generator re-reads the pinned local manifest and fails on a stale or
+unexpected file; it never changes the game install. M7 detects the M8 tree and
+yields ownership of its temporary 48-file unlock-filter layer.
+
+The installed `victory_card` and `unique` age fields are the verified objective
+and ability mechanisms. M8 uses those fields rather than inventing unsupported
+syntax. It reuses five locally verified vanilla advance icon keys only as an
+interim UI adapter; the plan's generated per-advance icon batch remains M11
+visual work.
+
+Smoke testing further established that the engine validates an advance's
+`requires` only within the same age. M8 therefore uses five complete ten-step
+strands inside each age rather than cross-age prerequisites; the age transition
+is the historical gate between their thematic continuations.

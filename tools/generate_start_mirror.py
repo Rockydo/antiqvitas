@@ -23,6 +23,7 @@ from extract_vanilla import tokenize
 from generate_country_definitions import historical_profile_for
 from m6_power import character_manager, dynasty_manager, government_block, load_power_data
 from m7_war import load_units, tag_map as m7_tag_map, validate_start_ledgers
+from m8_knowledge import institution_manager as m8_institution_manager, technology_level as m8_technology_level
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "main_menu/setup/start"
@@ -637,6 +638,7 @@ def country_manager() -> tuple[str, int, int]:
             lines.extend(("\t\t\t}", ""))
             controlled += len(locations)
         lines.append(f'\t\t\tinclude = "{template}"')
+        lines.append(f'\t\t\tstarting_technology_level = {m8_technology_level(row)}')
         if row["tag"] in power.governments:
             lines.extend(government_block(power.governments[row["tag"]], power.ruler_terms))
         else:
@@ -717,6 +719,7 @@ def generated_files() -> tuple[dict[str, str], int, int, int, int, Decimal, int,
     return (
         {
             **STATIC_FILES,
+            "02_core.txt": m8_institution_manager() + "religion_manager = {\n}\n",
             "03_markets.txt": markets,
             "04_dynasties.txt": dynasty_manager(power),
             "05_characters.txt": character_manager(power),
