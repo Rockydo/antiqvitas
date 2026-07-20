@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Shapur-Julian art is landscape-only upper-Mesopotamian context
+
+The image is an unoccupied early-autumn upper-Mesopotamian river valley of a
+natural river, pale limestone foothills, reeds, sparse trees, dry grass, and
+hazy ridges. It identifies no ruler, campaign, battle, polity, city, date, or
+outcome. It is not a reconstruction of Shapur II, Julian, or either campaign.
+Sources weighed: P8.4; plan sections 9 and 20. [secure broad regional context;
+illustrative composition only]
+
 ## 2026-07-20 - Nicaea art is landscape-only Bithynian context
 
 The image is an unoccupied late-spring Bithynian foothill lakeshore of a natural
