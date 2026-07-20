@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M5 anchors Dacian gold at Baia de Arieș
+
+The RGO renderer can override only installed controlled locations. A local
+coordinate projection makes `baia_de_aries` the nearest reviewed candidate to
+Roșia Montană, and it is already controlled by the Dacian start tag. M5 changes
+only its raw-material key to the installed `goods_gold`; the site is not given
+a market, building, event, or a claim to be the later Roman mine itself.
+
 ## 2026-07-20 - M5 maps Carthage harbor through the reviewed Tunis anchor
 
 The building renderer accepts a protected-harbor row only at a checked M5 urban

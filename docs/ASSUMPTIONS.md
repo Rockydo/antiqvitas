@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Dacian gold uses the nearest Apuseni map proxy
+
+The cited mining synthesis identifies pre-conquest exploitation in the Roșia
+Montană/Apuseni district, but cannot establish a production level, precise AD
+1 mine working, or direct mapping to the installed EU5 surface. The coordinate
+review selects nearby `baia_de_aries`, a Dacian-controlled mountain location,
+for the engine's gold good. The representation deliberately separates this
+small pre-conquest resource proxy from the much greater Roman-era complex after
+AD 106. Sources weighed: `SPR-ROS-GOLD`; P8.7; P12.1. [secure district gold
+context; contested precise location and start-date production]
+
 ## 2026-07-20 - Carthage's harbor uses the existing Tunis proxy
 
 UNESCO records Roman Carthage, its antique port complex, and its long-lived
