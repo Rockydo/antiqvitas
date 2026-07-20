@@ -2825,6 +2825,17 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-20 - M11 decision ledger is source-complete, runtime integration deferred
+
+- Built and validated a 40-row M11 decision ledger spanning all seven plan
+  flavor arcs. Rows use only reviewed AD 1 tags, source labels, bounded notes,
+  gold costs, cooldowns, and locally documented generic-action effects.
+- Local smoke showed that this build requires every generic action's explicit
+  GUI message-type registration. Its GUI registry did not accept an additive
+  file, so all game-visible output was removed after the second bounded route.
+  The retained ledger and renderer are documented in `docs/m11/M11_DECISIONS.md`;
+  the exact-name-overlay recovery is recorded in `BLOCKERS.md`.
+
 ## 2026-07-19 - M7 ancient warfare foundation
 
 - Added a checked, source-labelled 26-type ancient roster: regulars and levies,

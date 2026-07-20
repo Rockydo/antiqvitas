@@ -1232,3 +1232,15 @@ runtime recipients only after their prior historical-current creators run.
 Visigoth and Vandal releases use collision-checked dynamic tags and explicit
 local lists. The campaign finale derives its 476 activation window and exact
 end from `tools/dates.py`; no standalone scripted calendar literal is used.
+
+## 2026-07-20 - M11 actions require a registered message type, not only localization
+
+The installed generic-action contract accepts player-only `owncountry` actions
+with tag scopes, gold gates, cooldowns, and ordinary country effects. It also
+registers a `PERFORM_<action>_ACTION` message at database load. Mirroring the
+message-localization keys alone is insufficient, and the current build does
+not load a separate additive `main_menu/gui` message-type file. Future M11
+action work must begin with a one-action pilot based on an exact-name copy of
+the locally installed `messagetypes.txt`; retain every vanilla type and record
+the source hash before expanding the overlay. This is a compatibility decision,
+not an assertion about any historical institution.

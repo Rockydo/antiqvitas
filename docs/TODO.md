@@ -280,6 +280,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Render and review the maintained M11 event-art contact sheet (83 retained 1080x440 masters).
 - [x] Replace the Rome, Han, and Parthia solid-colour placeholders with validated, explicitly non-reconstructed core emblem standards.
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
+- [ ] Resolve the M11 generic-action message-registry blocker with a one-action exact-name GUI-overlay pilot; the 40-row source ledger is retained in `docs/m11/decisions.csv`.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 
 ## M12 — Ship
