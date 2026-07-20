@@ -74,6 +74,7 @@ TARGETS = {
 EVENT_IMAGES = {
     "gaius_eastern_settlement": "gfx/interface/illustrations/event/antq_gaius_eastern_settlement.dds",
     "immensum_bellum": "gfx/interface/illustrations/event/antq_immensum_bellum.dds",
+    "wang_mang_xin": "gfx/interface/illustrations/event/antq_xin_dynasty_crisis.dds",
 }
 
 
