@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - AD-476-finale art is landscape-only northern-Italian lowland context
+
+The image is an unoccupied early-autumn northern-Italian lowland of a slow side
+channel through reed beds and pale-gold meadow, scattered willow and poplar,
+shallow wet ground, distant blue-grey foothills, and soft-clouded sky. It
+identifies no Odoacer, Romulus Augustulus, deposition, Rome, city, emperor,
+court, person, date, or outcome. It is not a reconstruction of the AD 476
+finale. Sources weighed: plan sections 9, 17.5, and 20. [secure broad regional
+context; illustrative composition only]
+
 ## 2026-07-20 - Cape-Bon art is landscape-only northeastern-Tunisian coast context
 
 The image is an unoccupied late-spring northeastern-Tunisian coast of a low

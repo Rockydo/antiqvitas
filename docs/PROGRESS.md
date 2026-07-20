@@ -1,5 +1,13 @@
 # Progress
 
+## 2026-07-20 - M11 AD 476 finale illustration and complete final-century coverage
+
+- Added a reviewed, landscape-only northern-Italian lowland image to the AD 476 finale through the generated final-century event-image contract.
+- Made the renderer reject any of its thirteen currents without a reviewed image mapping; all thirteen now have inspected retained masters and BC7 DDS textures.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines; the M11 contact sheet now has eighty-three retained masters.
+
+Next: resume source-led M5/M6 audit work and continue remaining M11 flavor coverage.
+
 ## 2026-07-20 - M11 Cape Bon event illustration
 
 - Added a reviewed, landscape-only northeastern-Tunisian coast image to the AD 468 current through the generated final-century event-image contract.

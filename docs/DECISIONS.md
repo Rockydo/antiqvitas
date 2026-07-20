@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M11 final-century art requires full generated-current coverage
+
+`tools/m10_final_century.py` now rejects both orphaned image-map keys and any
+final-century timeline current lacking a reviewed event-image link. All thirteen
+AD 400-476 currents have an inspected retained master and 1080x440 BC7 DDS, so
+the one-to-one check makes this complete surface regeneration-safe rather than a
+manual audit result that could silently regress.
+
+Sources weighed: local `tools/m10_final_century.py`, `docs/timeline.csv`, and
+the installed country-event image contract.
+
 ## 2026-07-20 - M11 fourth-century art requires full generated-current coverage
 
 `tools/m10_fourth_century.py` now rejects both orphaned image-map keys and any
