@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M5 represents Oc Eo through Angkor Borei without pre-creating Funan
+
+The plan includes Oc Eo as a Southeast Asian growth hub, while the installed
+map contains `angkor_borei` rather than an exact Oc Eo key. The source records
+a canal connection between Angkor Borei and the Oc Eo region, so M5 adds that
+checked location to the market and town ledgers as a clearly contested
+near-region proxy. It does not change ownership, create a Funan tag, rename an
+installed location, or add unsupported harbour infrastructure.
+
 ## 2026-07-20 - M5 represents Ephesus through Ayasuluk without renaming the map key
 
 The plan specifically lists Ephesus among its market hubs. The installed map

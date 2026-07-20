@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-20 - Oc Eo uses an Angkor Borei near-region growth proxy
+
+The Cambodia-submitted UNESCO Tentative List describes Angkor Borei as an early
+complex-polity centre from the first millennium BCE into the late sixth century
+CE and records its canal connection with the Oc Eo region. It does not identify
+the exact Oc Eo footprint, prove an AD 1 city scale, or settle the status and
+extent of Funan at the start date. `angkor_borei` therefore represents a
+conservative town-tier growth and market proxy only; the existing `angkor`
+anchor remains distinct, and no independent Funan state or port construction is
+projected into AD 1. Sources weighed: `UNESCO-AB-OC`; P8.9; P12.2. [secure
+source-attributed early occupation/canal context; contested site mapping and
+engine adapter]
+
 ## 2026-07-20 - Ephesus uses an Ayasuluk near-site market and harbor proxy
 
 UNESCO securely establishes Roman Ephesus as provincial capital and harbour
