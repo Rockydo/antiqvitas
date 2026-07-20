@@ -72,6 +72,7 @@ TARGETS = {
 # here instead of hand-editing the generated script so regeneration preserves
 # the game-visible reference and validation can prove that its texture exists.
 EVENT_IMAGES = {
+    "gaius_eastern_settlement": "gfx/interface/illustrations/event/antq_gaius_eastern_settlement.dds",
     "immensum_bellum": "gfx/interface/illustrations/event/antq_immensum_bellum.dds",
 }
 
