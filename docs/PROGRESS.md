@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-20 - M11 Illyrian Revolt event illustration
+
+- Added a reviewed, text-free early-imperial Roman mountain-column image to
+  the AD 6-9 Illyrian Revolt current through the checked event-image contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines.
+
+Next: continue the independent M11 art queue and the source-led economy/power
+audit while runtime-gated milestone checks remain deferred.
+
 ## 2026-07-20 - M11 pepper good-art override
 
 - Replaced the two native `pepper` art surfaces with reviewed generated black
