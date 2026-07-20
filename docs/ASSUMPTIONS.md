@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Han-Xianbei-War art is landscape-only northern context
+
+The image is an unoccupied northern grassland with tawny grass, a shallow
+reed-fringed watercourse, weathered stones, and distant low hills. It identifies
+no war, migration, alliance, group, site, boundary, person, animal, Han or
+Xianbei material, action, date, or outcome. It deliberately excludes armies,
+horses, camps, carts, fences, walls, forts, and later steppe material; it is
+not a reconstruction of the AD 89 conflict. Sources weighed: P8.1; plan
+sections 9 and 20. [secure broad regional context; illustrative composition
+only]
+
 ## 2026-07-20 - Dacian-Wars art is non-literal Carpathian context
 
 The image is a quiet Carpathian foothill landscape of mixed autumn woodland,
