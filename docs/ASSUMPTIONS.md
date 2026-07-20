@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Eastern-settlement art is a generic diplomatic encounter
+
+The image for Gaius Caesar's AD 1-4 eastern current signals Roman, Parthian,
+and Armenian diplomatic context without identifying an historical meeting,
+participant, frontier venue, or settled terms. It makes no claim that the
+depicted garments or buildings reconstruct a particular court. Sources
+weighed: P8.1; plan §§9 and 20. [secure current context; illustrative
+composition only]
+
 ## 2026-07-20 - Laurion fading is represented by no AD 1 silver RGO
 
 The plan's Laurion note is a decline requirement, not evidence for a fresh
