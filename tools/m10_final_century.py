@@ -44,6 +44,7 @@ TARGETS = {
 # cannot silently drop a game-facing texture.
 EVENT_IMAGES = {
     "alaric_sack": "gfx/interface/illustrations/event/antq_alaric_sack.dds",
+    "attila": "gfx/interface/illustrations/event/antq_attila.dds",
     "britain_abandoned": "gfx/interface/illustrations/event/antq_britain_abandoned.dds",
     "radagaisus_rhine": "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds",
     "vandal_africa": "gfx/interface/illustrations/event/antq_vandal_africa.dds",
