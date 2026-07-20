@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Rhine-crossing art is landscape-only lower-Rhine context
+
+The image is an unoccupied late-autumn lower-Rhine floodplain of a broad slow
+river, reed-fringed banks, flat wet meadow, sparse alder and willow, a low misty
+horizon, brown-gold grass, and overcast sky. It identifies no Radagaisus, Rhine
+crossing, Vandals, Alans, Suebi, city, date, or outcome. It is not a
+reconstruction of the crossing or any migration episode. Sources weighed: P8.7;
+plan sections 9 and 20. [secure broad regional context; illustrative composition only]
+
 ## 2026-07-20 - Faxian-Gupta art is landscape-only northern-Indian context
 
 The image is an unoccupied late-monsoon northern-Indian river plain of a broad

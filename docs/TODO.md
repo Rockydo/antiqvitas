@@ -260,7 +260,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 394–395 East-West Roman Division illustration through a landscape-only central-Balkan river-and-foothill treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 399–413 Faxian and Gupta Apogee illustration through a landscape-only northern-Indian river-plain treatment.
 - [x] Complete reviewed illustration mapping across all fourteen generated M10 fourth-century currents and enforce it in the renderer.
-- [x] Render and review the maintained M11 event-art contact sheet (70 retained 1080x440 masters).
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 405–406 Crossing of the Rhine illustration through a landscape-only lower-Rhine floodplain treatment.
+- [x] Render and review the maintained M11 event-art contact sheet (71 retained 1080x440 masters).
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 

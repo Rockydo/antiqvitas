@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-20 - M11 Crossing of the Rhine event illustration
+
+- Added a reviewed, landscape-only lower-Rhine floodplain image to the AD 405–406 current through the generated final-century event-image contract.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines; the M11 contact sheet now has seventy-one retained masters.
+
+Next: continue final-century M11 event-art coverage and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Faxian and Gupta Apogee event illustration
 
 - Added a reviewed, landscape-only northern-Indian river-plain image to the AD 399–413 current through the generated fourth-century event-image contract.
