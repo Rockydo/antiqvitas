@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-20 - M9 ancient subject-contract foundation
+
+- Added a generated five-contract layer for Roman client kingdoms, Arsacid
+  satrapies, Han tributaries, autonomous cities, and the late-antique
+  foederati. The existing 25-entry historical dependency ledger now selects
+  those ancient adapters for the Roman, Parthian, and Han networks.
+- Foederati availability is generated from the calendar gateway at 382.1.1;
+  all eleven supported localization mirrors and the start-manager adapter are
+  checked as build outputs.
+- `make validate` and the real-game enabled-mod `make smoke` are green, with
+  the game reaching the menu and zero new `error.log` lines.
+
+Next: implement M9 CBs, wargoals, peace terms, IOs, and historically bounded
+known-world discovery sets; the separate M7/M8 observer confirmation blocker
+remains recorded in `BLOCKERS.md`.
+
 ## 2026-07-20 - M8 ancient knowledge foundation
 
 - Added the generated 250-node knowledge layer: five ten-step strands in each
