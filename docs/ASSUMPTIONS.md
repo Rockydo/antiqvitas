@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - M11 age panels are evocative period frames, not site reconstructions
+
+The five age-interface panels use broad landscapes for civic exchange,
+transcontinental trade, system strain, consolidation, and movement. They do
+not identify a named ancient town, trade route, bridge, fort, city, people,
+religion, campaign, or political outcome. The central-Asian-style caravan and
+late-antique river scenes are deliberately non-specific visual context, not
+evidence for an exact reconstruction. Sources weighed: plan sections 15 and
+20; local advance-view asset contract. [illustrative composition only]
+
 ## 2026-07-20 - Core CoA emblems are UI standards, not reconstructed ancient flags
 
 The Rome eagle, Han rosette, and Parthian horse are period-inspired

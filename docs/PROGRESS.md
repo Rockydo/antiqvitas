@@ -2865,6 +2865,16 @@ separate Han runtime-regency blocker.
   credit Pleiades and ORBIS, with Pleiades' CC BY 3.0 data attribution. Static
   validation and enabled-mod smoke passed with zero new `error.log` lines.
 
+## 2026-07-20 - M11 age-view illustration pass
+
+- Replaced the five exact engine age-banner paths with reviewed 1080x440 BC7
+  panels for Principate, High Empires, Crisis, Dominate, and Migrations. Their
+  sources and fixed-size masters are retained; the High Empires draft was
+  regenerated before selection to remove an anachronistic-looking skyline.
+- Added a persistent age-art validator and kept the 83-image event review
+  sheet distinct from the new age panel review. Static validation and
+  enabled-mod smoke passed with zero new `error.log` lines.
+
 ## 2026-07-19 - M7 ancient warfare foundation
 
 - Added a checked, source-labelled 26-type ancient roster: regulars and levies,

@@ -1,5 +1,19 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M11 replaces the five exact age-illustration filenames
+
+The installed advance view obtains its banner through
+`AdvancesLateralView.GetAgeIllustration`, while the installed asset inventory
+contains one 1080x440 illustration for each of the five playable vanilla age
+keys. M11 therefore keeps the compatible keys and overrides only those exact
+filenames with reviewed BC7 panels. The post-end sixth age is intentionally
+untouched. `tools/m11_age_art.py` makes the retained source/master/DDS chain a
+validation invariant, and the event contact-sheet filter excludes age masters
+so two visual review surfaces do not drift together.
+
+Sources weighed: local advance-view UI, asset inventory, and master plan
+sections 15 and 20.
+
 ## 2026-07-20 - M11 credits use the verified metadata description surface
 
 The local metadata schema exposes `short_description`, not a separate long
