@@ -28,7 +28,10 @@ def title(path: Path) -> str:
 
 
 def sources() -> list[Path]:
-    entries = sorted(MASTERS.glob(f"antq_*{SUFFIX}"))
+    entries = sorted(
+        path for path in MASTERS.glob(f"antq_*{SUFFIX}")
+        if not path.stem.startswith("antq_age_")
+    )
     if not entries:
         raise RuntimeError("No M11 event masters found")
     return entries
