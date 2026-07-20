@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Gothic-migration art is landscape-only northern-Pontic context
+
+The image is an unoccupied northern-Pontic steppe of rough grass, a natural
+stream with reeds, wildflowers, weathered stone, distant low hills, and a broad
+sky. It identifies no person, Gothic group, migration, polity, city, village,
+route, animal, action, date, or outcome. It deliberately excludes travel,
+vehicles, camps, military material, and cultural identifiers; it is not a
+reconstruction of a Gothic migration or the Wielbark-to-Chernyakhov transition.
+Sources weighed: P8.7; plan sections 9 and 20. [secure broad regional context;
+illustrative composition only]
+
 ## 2026-07-20 - Celestial-Masters art is landscape-only inland-Chinese context
 
 The image is an unoccupied inland-Chinese woodland valley with bamboo, a natural
