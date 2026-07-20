@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - The Second Temple is a dated building proxy, not a full religious reconstruction
+
+The plan requires an AD 1 Temple building at Jerusalem and its AD 70
+destruction. The generic engine `temple` represents that site before a guarded
+destruction event removes it in the historically attested year. The proxy does
+not recreate the Temple's architecture, priesthood, ritual, or the full
+Rabbinic institutional transformation; the current supplies the material break
+without inventing those systems. Sources weighed: P11; plan section 9;
+`OCD-JER`. [secure Second Temple/AD 70 destruction; contested engine proxy and
+scope of post-destruction transformation]
+
 ## 2026-07-20 - Muza is represented as a roadstead market, not an invented harbor
 
 Casson's translation of the *Periplus* calls first-century Muza a legally

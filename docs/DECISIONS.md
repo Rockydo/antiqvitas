@@ -1,5 +1,17 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - Historic buildings may use a checked non-market site ledger
+
+The original M5 renderer restricted specialist buildings to the forty market
+nodes. The plan-required Jerusalem Temple demonstrates that a historically
+central site need not be a trade hub. `historic_building_sites.csv` is therefore
+validated for installed location, AD 1 owner, unique key/location, source, and
+confidence before it can authorize a non-market M5 building.
+
+The AD 70 event uses the installed location-scope `has_building_with_at_least_one_level`
+and `destroy_building = "building(building_type:temple|owner)"` contracts. The
+guard makes the dated event safe if gameplay has already removed the proxy.
+
 ## 2026-07-20 - M5 distinguishes a roadstead from a harbor building
 
 The source's explicit no-harbor statement rules out reusing the
