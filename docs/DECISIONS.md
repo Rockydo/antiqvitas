@@ -8,7 +8,7 @@ institutions file confirms that each such modifier is a location-category
 record. M8 now generates all nine matching records in the correct main-menu
 path and checks their key coverage against the institution manifest. Their
 small, source-theme-aligned local values remain below the corresponding vanilla
-birth-modifier scale. The associated descriptions are included in the English
+birth-modifier scale. The associated names and descriptions are included in the English
 source and exact client-language mirrors. Static validation and a 90-second
 enabled-mod menu smoke are green; a fresh observer initialization is still
 required to prove the runtime diagnostics have gone.

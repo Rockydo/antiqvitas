@@ -3,7 +3,7 @@
 ## 2026-07-21 - M8 institution-origin contracts are generated and green
 
 - Added generator-owned, locally schema-verified location modifiers for all
-  nine M8 institution birthplaces, plus exact localized descriptions.
+  nine M8 institution birthplaces, plus exact localized names and descriptions.
 - The new manifest coverage guard, full validation suite, regenerated M12
   authored-text audit, and enabled-mod 90-second smoke all pass with zero new
   error-log lines.
