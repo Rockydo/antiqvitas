@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-20 - M11 Gothic Migration event illustration
+
+- Added a reviewed, landscape-only northern-Pontic steppe image to the AD 160
+  Gothic Migration current through the generated event-image contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. The maintained M11
+  contact sheet now has thirty-nine retained event masters.
+
+Next: continue the M11 later-century art queue and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Celestial Masters event illustration
 
 - Added a reviewed, landscape-only inland-Chinese woodland image to the AD 142
