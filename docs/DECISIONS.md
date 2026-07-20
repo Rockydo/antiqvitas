@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - Do not stub the coupled vanilla event runtime by filename overlay
+
+The installed loader validates vanilla event calls from generic actions,
+buildings, parliaments, scripted effects, and other registries even when their
+direct on-actions are neutralized. Empty event files leave missing references;
+uniform hidden stubs become orphaned or have the wrong scope; preserving their
+variable/effect network would reintroduce the dated subsystem. M12 therefore
+does not ship a speculative partial quarantine. The exact source-verified
+attempts are documented in `BLOCKERS.md`, and the clean pre-experiment baseline
+is retained until a locally proven whole-graph replacement surface exists.
+
 ## 2026-07-20 - Disable only dated and dynastic vanilla hints
 
 M12 uses an exact-name overlay of the installed scriptable-hint file to add an

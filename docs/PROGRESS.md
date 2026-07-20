@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-20 - M12 coupled vanilla-runtime boundary recorded; green baseline restored
+
+- The first recovered observer launch reached a live AD 1 session, but its
+  subsequent runtime errors exposed dated vanilla actions and event references.
+  Four exact-name, source-verified quarantine designs were exercised.
+- Empty files left required identifiers absent; inert event stubs became
+  orphaned; a private reference action then exposed scope-specific event calls
+  and the original variable/effect network. Reconstructing that coupled graph
+  would retain the dated runtime rather than replace it, so the experiment was
+  deliberately reverted.
+- The pre-experiment content baseline again passes `make validate` and the
+  settled enabled-mod `make smoke` with zero new error-log lines. The evidence
+  and recovery boundary are recorded in `BLOCKERS.md`.
+
+Next: keep M3/M5--M10/M12 observer acceptance deferred, and take the next
+unblocked static milestone task without claiming runtime proof.
+
 ## 2026-07-20 - M12 historical-hint semantic audit closed
 
 - The recovered virtual-memory state first produced a clean enabled-mod baseline
