@@ -77,6 +77,7 @@ EVENT_IMAGES = {
     "illyrian_revolt": "gfx/interface/illustrations/event/antq_illyrian_revolt.dds",
     "immensum_bellum": "gfx/interface/illustrations/event/antq_immensum_bellum.dds",
     "kushan_unification": "gfx/interface/illustrations/event/antq_kushan_unification.dds",
+    "tacfarinas_war": "gfx/interface/illustrations/event/antq_tacfarinas_war.dds",
     "teutoburg": "gfx/interface/illustrations/event/antq_teutoburg.dds",
     "wang_mang_xin": "gfx/interface/illustrations/event/antq_xin_dynasty_crisis.dds",
 }
