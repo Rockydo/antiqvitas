@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-20 - M5 Oc Eo growth market
+
+- Added the plan-listed Oc Eo growth hub through a sourced, explicitly
+  contested Angkor Borei near-region proxy. It uses a town-tier market only,
+  preserving the distinction from later Angkor and avoiding an unsupported AD
+  1 Funan state or harbour.
+- `make validate` reports 42 markets/urban nodes and 33 M5/M7 buildings.
+  Enabled-mod smoke is green with zero new error-log lines.
+
+Next: complete the remaining source-led M5 audit, then continue unblocked M6
+power-system work while the runtime RGO gate remains deferred.
+
 ## 2026-07-20 - M5 Ephesus market and harbor
 
 - Added the plan-listed Roman provincial capital of Ephesus through a sourced,
