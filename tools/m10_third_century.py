@@ -55,6 +55,7 @@ EVENT_IMAGES = {
     "sassanid_revolution": "gfx/interface/illustrations/event/antq_sassanid_revolution.dds",
     "severus_caledonia": "gfx/interface/illustrations/event/antq_severus_caledonia.dds",
     "three_kingdoms": "gfx/interface/illustrations/event/antq_three_kingdoms.dds",
+    "third_century_crisis": "gfx/interface/illustrations/event/antq_third_century_crisis.dds",
 }
 
 # These are visual country identities, intentionally not runtime country tags.
