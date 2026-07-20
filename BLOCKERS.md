@@ -425,8 +425,8 @@ exact-name overlay for future changes.
 
 ## 2026-07-20 - M12 historical-hint overlay cannot receive a menu smoke
 
-Status: **deferred after two bounded smoke attempts; no hint overlay is
-retained.**
+Status: **deferred after four bounded smoke attempts across two materially
+different driver profiles; no hint overlay is retained.**
 
 The local audit identified 32 dated or dynasty-specific vanilla hints (Black
 Death, Ottomans, Reformation, Tordesillas, colonial revolution, later regional
@@ -434,12 +434,16 @@ dynasties, and comparable situations) and built an exact-name overlay that
 made only their `priority` triggers impossible. Static validation passed,
 including the source inventory and all existing M0--M11 checks.
 
-Both enabled-mod smoke attempts exited before the menu at the same Vulkan
-`ErrorOutOfDeviceMemory` assertion. Neither `error.log` nor the loader output
-contained a hint key, script parse error, or ANTIQVITAS content error. Repeating
-the unchanged launch would not distinguish the UI overlay from the established
-renderer instability, so the uncommitted overlay and its validator were
-removed and the last menu-smoked tree was restored.
+The original two enabled-mod smoke attempts exited before the menu at the same
+Vulkan `ErrorOutOfDeviceMemory` assertion. After the driver was corrected to
+use the installed 960x540 very-low profile and a 90-second post-splash gate,
+the overlay was rebuilt from the current source and static validation passed.
+Two new smoke attempts again exited at 42--57 seconds during resource loading;
+neither `error.log` nor the loader output contained a hint key, script parse
+error, or ANTIQVITAS content error. Repeating the unchanged launch would not
+distinguish the UI overlay from the established renderer instability, so the
+uncommitted overlay and its validator were removed and the last menu-smoked
+tree was restored.
 
 Recovery: after a material driver/renderer change yields stable menu launches,
 recreate the narrow source-checked overlay and test it once before committing.
