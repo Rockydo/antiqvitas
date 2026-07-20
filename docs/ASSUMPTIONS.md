@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Marcomannic-Wars art is landscape-only Danubian context
+
+The image is an unoccupied early-autumn Danubian floodplain of a natural river,
+silver birches, reeds, tawny grass, pale gravel, and distant low hills. It
+identifies no person, Marcomannic group, war, migration, polity, settlement,
+road, camp, fort, vessel, date, or outcome. It deliberately excludes military
+material, frontier infrastructure, boats, bridges, and narrative action; it is
+not a reconstruction of combat or migration in the Marcomannic Wars. Sources
+weighed: P8.7; plan sections 9 and 20. [secure broad regional context;
+illustrative composition only]
+
 ## 2026-07-20 - Daqin-embassy art is landscape-only South-China-Sea context
 
 The image is an unoccupied South-China-Sea coast of calm water, pale granite,
