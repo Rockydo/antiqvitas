@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Constitutio-Antoniniana art is generic Roman civic context
+
+The image is an unoccupied Roman municipal colonnade of pale paving, a plain
+fountain basin, plane trees, and low rooflines. It identifies no edict,
+inscription, ruler, official, legal act, place, date, or outcome. It deliberately
+excludes people, documents, text, statues, military material, and narrative
+action; it is not a reconstruction of the Constitutio Antoniniana. Sources
+weighed: P8.1; plan sections 9, 13, and 20. [secure broad civic context;
+illustrative composition only]
+
 ## 2026-07-20 - Severus-in-Caledonia art is landscape-only northern-Caledonian context
 
 The image is an unoccupied northern Caledonian upland of a natural burn, heather
