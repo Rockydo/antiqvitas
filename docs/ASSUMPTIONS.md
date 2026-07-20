@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Chalcedon-Avarayr art is landscape-only Armenian-highland context
+
+The image is an unoccupied early-autumn Armenian-highland valley of a clear
+narrow stream over pale stones, rolling highland grassland, scattered low thorny
+shrubs, gentle grey-brown volcanic hills, distant blue-grey ridges, and broad
+soft-clouded sky. It identifies no Chalcedon, Christianity, Avarayr, revolt,
+battle, city, person, date, or outcome. It is not a reconstruction of the
+council or revolt. Sources weighed: plan sections 9, 10, and 20. [secure broad
+regional context; illustrative composition only]
+
 ## 2026-07-20 - Adventus-Saxonum art is landscape-only eastern-British coastal context
 
 The image is an unoccupied late-autumn eastern-British coastal wetland of a
