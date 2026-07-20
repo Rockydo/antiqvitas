@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-20 - M5 independent-surface ledger closure
+
+- Re-audited the M5 ledgers while triaging the remaining autonomous queue. The
+  former broad TODO is complete: it records 42 market/urban nodes, eight
+  protected-harbor tiers, Muza's explicitly non-harbor warehouse, the planned
+  historic-building anchors, and 43 sourced road segments.
+- The only M5 acceptance gap is the already documented runtime-effective RGO
+  and trade-flow issue; it is not obscured by a stale implementation task.
+
+Next: retain the M5 trade-flow blocker and continue independently source-led
+M6 breadth work where the ledger admits it.
+
 ## 2026-07-20 - M12 generic-mission closure
 
 - Audited all eleven installed generic mission packs and found post-antique
