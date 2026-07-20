@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Antioch-earthquake art is landscape-only Orontes context
+
+The image is an unoccupied Orontes-valley landscape with a narrow calm river,
+pale limestone, riparian trees, reeds, dry grass, and distant hills. It
+identifies no earthquake, city, Antioch, building, ruin, victim, person, action,
+date, or outcome. It deliberately excludes settlement, debris, cracks,
+collapse, and disaster spectacle; it is not a reconstruction of the AD 115
+earthquake. Sources weighed: P8.1; plan sections 9 and 20. [secure broad
+regional context; illustrative composition only]
+
 ## 2026-07-20 - Trajan-Parthia art is non-literal Mesopotamian context
 
 The image is an unoccupied Mesopotamian river plain with slow water, reed
