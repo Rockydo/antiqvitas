@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Attila art is landscape-only Pannonian context
+
+The image is an unoccupied late-summer Pannonian grassland of open undulating
+steppe, a small slow meandering stream, dry gold and muted green meadow,
+scattered low shrubs, distant dark tree clumps, soft low hills, and a lightly
+clouded sky. It identifies no Attila, Huns, tribute, battle, Rome, city, person,
+date, or outcome. It is not a reconstruction of any Attilan campaign or the
+post-453 collapse. Sources weighed: plan sections 8.8, 9, and 20. [secure broad
+regional context; illustrative composition only]
+
 ## 2026-07-20 - Vandal-Africa art is landscape-only North-African littoral context
 
 The image is an unoccupied late-spring North-African littoral landscape of a

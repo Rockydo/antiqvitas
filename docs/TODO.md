@@ -265,7 +265,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 410 Sack of Rome illustration through a landscape-only central-Italian treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 418 Visigothic Settlement illustration through a landscape-only southwestern-Gaul river-plain treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 429–439 Vandal Conquest of Africa illustration through a landscape-only North-African littoral treatment.
-- [x] Render and review the maintained M11 event-art contact sheet (75 retained 1080x440 masters).
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 434–453 Attila illustration through a landscape-only Pannonian grassland treatment.
+- [x] Render and review the maintained M11 event-art contact sheet (76 retained 1080x440 masters).
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 

@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-20 - M11 Attila event illustration
+
+- Added a reviewed, landscape-only Pannonian grassland image to the AD 434–453 current through the generated final-century event-image contract.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines; the M11 contact sheet now has seventy-six retained masters.
+
+Next: continue final-century M11 event-art coverage and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Vandal Conquest of Africa event illustration
 
 - Added a reviewed, landscape-only North-African littoral image to the AD 429–439 current through the generated final-century event-image contract.
