@@ -2846,6 +2846,15 @@ separate Han runtime-regency blocker.
   The retained ledger and renderer are documented in `docs/m11/M11_DECISIONS.md`;
   the exact-name-overlay recovery is recorded in `BLOCKERS.md`.
 
+## 2026-07-20 - M11 retires superseded age scaffolds
+
+- Removed the five M2 no-op advance records and their mirrored localization.
+  M8's checked 250-advance ancient tree is now the sole advance definition
+  surface; M2 continues to own only the shared calendar and five age records.
+- `tools/dates.py --write-m2` no longer regenerates obsolete output. Static
+  validation and enabled-mod smoke both passed; the rendered menu produced
+  zero new `error.log` lines.
+
 ## 2026-07-19 - M7 ancient warfare foundation
 
 - Added a checked, source-labelled 26-type ancient roster: regulars and levies,

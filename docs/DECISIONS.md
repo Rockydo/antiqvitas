@@ -1,5 +1,17 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M11 retires M2's no-op advance scaffolds
+
+M2's five age records remain the campaign-calendar surface. Its five
+`potential = { always = no }` advance records were deliberately temporary
+compatibility scaffolds; M8 has since supplied the complete 250-advance
+ancient tree. M11 therefore removes the old definitions, source-generator
+branch, and mirrored localization rather than leaving unreachable entries in
+the research UI or a second nominal owner for the age surface.
+
+Sources weighed: local M8 generated advance tree, `tools/dates.py`, and master
+plan sections 4, 8, and 22.
+
 ## 2026-07-20 - M11 core CoAs use a data-validated engine-emblem contract
 
 `docs/m11/core_coas.csv` owns the bounded Rome/Han/Parthia override set.

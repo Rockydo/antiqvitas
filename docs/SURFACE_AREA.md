@@ -10,7 +10,7 @@ for its milestone; `deferred` = non-goal or dependency with rationale.
 | Setup start managers | in progress | exact 25-file mirror plus 157 verified-capital countries |
 | Setup country definitions | in progress | 157 generated, localized and smoke-clean; templates remain M3 |
 | Coats of arms | done | M11: 157 engine-native, source-labelled, non-reconstructive UI standards; direct core reviews override regional themes |
-| Common ages and advances | in progress | M2 five-age scaffold; M8 full tree |
+| Common ages and advances | in progress | M2 five-age calendar; M8 full tree; obsolete M2 no-op scaffolds retired in M11 |
 | Cultures, languages, religions, pops | planned | M4 |
 | Goods, markets, buildings, roads, development | planned | M5 |
 | Governments, laws, estates, characters, dynasties | planned | M6 |
