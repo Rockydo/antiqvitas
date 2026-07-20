@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M11 Severan Settlement event illustration
+
+- Added a reviewed, landscape-only central-Italian lowland image to the AD 193
+  Year of the Five Emperors / Severan Settlement current through the generated
+  event-image contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. The maintained M11
+  contact sheet now has forty-six retained event masters.
+
+Next: continue the M11 later-century art queue and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Champa formation event illustration
 
 - Added a reviewed, landscape-only tropical central-Vietnam river-and-foothill
