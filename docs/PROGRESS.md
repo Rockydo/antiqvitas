@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M5 Carthage harbor proxy
+
+- Added a source-qualified protected-harbor tier at the existing Tunis/Carthago
+  city proxy, representing Roman Carthage's inherited antique port and
+  Mediterranean exchange function without claiming a precise surviving harbor
+  layout.
+- `make validate` reports 32 M5/M7 buildings and passed. Enabled-mod smoke is
+  green with zero new error-log lines against the accepted baseline.
+
+Next: continue remaining independent M5 economy and transport coverage.
+
 ## 2026-07-20 - M5 Prima Porta villa proxy
 
 - Added a source-labelled `noble_villa` at the Rome regional anchor for Livia's

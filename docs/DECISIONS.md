@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M5 maps Carthage harbor through the reviewed Tunis anchor
+
+The building renderer accepts a protected-harbor row only at a checked M5 urban
+node under its AD 1 owner. Carthago already has the reviewed `tunis` city-node
+proxy; adding the locally verified harbor contract there preserves that
+constraint and avoids inventing a new map key or a special Punic/Roman harbor
+type. Its source ledger and contested metadata make the spatial approximation
+visible.
+
 ## 2026-07-20 - M5 maps Prima Porta through Rome rather than inventing a location key
 
 The installed map lacks a Prima Porta key. The verified `noble_villa` building

@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-20 - Carthage's harbor uses the existing Tunis proxy
+
+UNESCO records Roman Carthage, its antique port complex, and its long-lived
+Mediterranean exchange role, which support a port function at the campaign
+boundary. The source does not provide an AD 1 harbor footprint and the
+installed map uses Tunis as the project's already contested Carthago location.
+The generic protected-harbor tier therefore represents an inherited maritime
+function, not a claim that the Punic cothon, Roman port capacity, or exact
+archaeological layout remained unchanged. Sources weighed: `UNESCO-CAR-HAR`;
+P8.1; P12.2. [secure Roman-Carthage/port context; contested map and building
+proxy]
+
 ## 2026-07-20 - Prima Porta is a Rome-region villa proxy, not a latifundium survey
 
 The Ministry of Culture describes Livia's Prima Porta villa as a suburban
