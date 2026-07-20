@@ -60,6 +60,12 @@ TARGETS = {
     "faxian_gupta": "HAN",
 }
 
+# Retain event-art links in the generator so regenerated fourth-century scripts
+# cannot silently drop a reviewed game-facing texture.
+EVENT_IMAGES = {
+    "armenia_conversion": "gfx/interface/illustrations/event/antq_armenia_conversion.dds",
+}
+
 # A deliberately limited political envelope for the eastern court.  The list
 # tracks the active Roman locations within these local-map regions and is not a
 # claim that all listed 1337 geography describes the 395 provincial boundary.
@@ -216,6 +222,13 @@ def validate(records: tuple[Current, ...]) -> None:
         raise ValueError(f"M10 fourth-century ledger/target mismatch: missing={missing}, extra={extra}")
     if len({record.event_id for record in records}) != len(records):
         raise ValueError("M10 fourth-century event IDs must be unique")
+    unknown_images = sorted(set(EVENT_IMAGES) - record_keys)
+    if unknown_images:
+        raise ValueError(f"M10 fourth-century illustration map has no corresponding current: {unknown_images}")
+    for image in EVENT_IMAGES.values():
+        texture = ROOT / "main_menu" / image
+        if not texture.is_file():
+            raise ValueError(f"M10 fourth-century event illustration is missing: {texture}")
     mapped_tags = engine_tags()
     collisions = sorted((COSMETIC_TAGS | DYNAMIC_TAGS) & set(mapped_tags.values()))
     if collisions:
@@ -359,6 +372,9 @@ def event_script(records: tuple[Current, ...], eastern_locations: tuple[tuple[st
             f"\toutcome = {event_outcome(record)}",
             "\tfire_only_once = yes",
         ))
+        image = EVENT_IMAGES.get(record.key)
+        if image is not None:
+            lines.append(f'\timage = "{image}"')
         if record.kind not in {"situation", "disaster"}:
             lines.extend((
                 "\tdynamic_historical_event = {",
