@@ -1356,3 +1356,16 @@ fifteen source-file names, UTF-8 BOMs, entries, and values across the ten
 supported folders. This is clearer and safer than accumulating incomplete or
 machine-translated strings, and prevents raw-key regressions without extending
 the project's translation scope.
+
+## 2026-07-20 - Active ancient CBs use bounded installed-contract AI scores
+
+The local casus-belli contract uses an additive `ai_will_do` block, with the
+vanilla attack-threat CB setting its base score to 10. M9's uniform
+`value = -1` sentinel was appropriate only for the three deliberately hidden
+future-unification CBs; on the seven visible CBs it prevented AI selection
+entirely. M12 therefore uses bounded 4--16 scores near that local baseline,
+leaving each CB's historical visibility and eligibility restrictions as the
+primary safeguard against universal aggression. The dormant Chinese, Sasanid,
+and Gupta definitions retain their hidden and disabled state. This is a
+technical AI-contract correction; the observer run remains the authority for
+runtime frequency tuning.

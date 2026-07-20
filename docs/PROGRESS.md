@@ -1,5 +1,23 @@
 # Progress
 
+## 2026-07-20 - M12 static balance and casus-belli AI pass
+
+- Audited the full 250-entry M8 tree: costs rise monotonically from 2.0 to
+  14.5 per advance, giving age totals of 212.5, 312.5, 412.5, 512.5, and 612.5;
+  active research weights remain in the 55--100 range.
+- Confirmed the AD 1 230-million population baseline and the active Roman and
+  Han minting-law contracts without inventing an unmeasured global-growth or
+  third-century-inflation adjustment.
+- Replaced the accidental AI-disable sentinel on seven visible M9 CBs with
+  conservative priorities from the installed CB contract. The three future,
+  hidden unification CBs remain unavailable by design, and the generator now
+  rejects any registry drift.
+- Runtime pacing, population, inflation, and war-frequency judgement remain
+  explicitly contingent on the autonomous observer session.
+
+Next: complete the remaining M12 ship documentation and surface audit while
+retaining the observer run as the final empirical gate.
+
 ## 2026-07-20 - M11 direct-key common-screen icon pass
 
 - Replaced the automatic `_default` fallback for all 37 ANTIQVITAS religions and nine M8 institutions with checked direct-key DDS assets.
