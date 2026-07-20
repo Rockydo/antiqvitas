@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M11 Severus in Caledonia event illustration
+
+- Added the third-century generator's reviewed event-image contract and attached
+  a landscape-only northern Caledonian upland image to the AD 208-211 Severus
+  in Caledonia current.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. The maintained M11
+  contact sheet now has forty-seven retained event masters.
+
+Next: continue the M11 later-century art queue and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Severan Settlement event illustration
 
 - Added a reviewed, landscape-only central-Italian lowland image to the AD 193

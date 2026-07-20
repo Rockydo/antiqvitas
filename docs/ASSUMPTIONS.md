@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Severus-in-Caledonia art is landscape-only northern-Caledonian context
+
+The image is an unoccupied northern Caledonian upland of a natural burn, heather
+moor, rough stone, scattered birches, and low cloud over distant ridges. It
+identifies no person, Severus, campaign, polity, fort, wall, settlement, road,
+date, or outcome. It deliberately excludes human figures, military material,
+Roman works, Pictish symbols, buildings, roads, and narrative action; it is not
+a reconstruction of Severus' campaign in Caledonia. Sources weighed: P8.7;
+plan sections 9 and 20. [secure broad regional context; illustrative composition only]
+
 ## 2026-07-20 - Severan-settlement art is landscape-only central-Italian context
 
 The image is an unoccupied late-autumn central-Italian lowland of a natural
