@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-20 - M11 Buddhism at the Han Court event illustration
+
+- Added a reviewed, non-literal Eastern Han scholarly-courtyard context image
+  to the AD 65 Buddhism-at-the-Han-Court current through the generated
+  event-image contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. The maintained
+  M11 contact sheet now has sixteen retained event masters.
+
+Next: continue the independent M11 art queue and source-led M5/M6 audit while
+runtime-gated milestone checks remain deferred.
+
 ## 2026-07-20 - M11 Great Fire of Rome event illustration
 
 - Added a reviewed, non-literal early-imperial urban dusk image to the AD 64

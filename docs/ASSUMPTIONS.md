@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Buddhism-at-Han-court art is a generic scholarly context
+
+The image is an unoccupied early-Eastern-Han-style scholarly courtyard with a
+timber hall, tiled roof, bamboo, and unmarked bamboo slips. It identifies no
+capital, palace, emperor, envoy, monk, temple, text, doctrine, conversion,
+journey, or outcome. It deliberately excludes sacred figures, ceremony, and
+the White Horse Temple tradition as a visual reconstruction, whose precise
+early date and circumstances cannot be safely inferred from the event label.
+Sources weighed: P8.3; plan sections 9, 11, and 20. [secure current context;
+illustrative composition only]
+
 ## 2026-07-20 - Great-Fire art is a non-literal AD 64 urban context
 
 The image shows a restrained early-imperial cityscape at dusk: ordinary
