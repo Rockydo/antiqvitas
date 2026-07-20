@@ -1117,3 +1117,17 @@ bounded castra/beacon proxies. They neither claim continuous walls nor project
 Hadrian's Wall, the later Gorgan Wall, or a precise garrison structure into AD
 1. Sources weighed: P14; `CAH-XI`; `BHR` in `docs/world_1ad/SOURCES.md`.
 [secure broad context; contested local technical representation]
+
+## 2026-07-19 - M8 institution origins are bounded map anchors
+
+Plan §15 specifies the ancient knowledge themes and each institution's broad
+origin/date. The current map's usable local anchors are Athens, Rome,
+Jingzhao/Chang'an, Anuradhapura, Merv, Luoyang, Alexandria, Iznik, and Edirne.
+M8 uses Merv as an Iranian-world proxy for Cataphract Warfare, Iznik for Nicaea,
+and Edirne for Thrace. These are engine spawn anchors, not assertions of a
+single inventor, exact workshop, council building, uninterrupted diffusion
+route, or political ownership at the later release date. Buddhist and Christian
+monastic entries implement the plan's explicitly dual-origin conception without
+making either tradition derivative of the other. Sources weighed: plan §15;
+CAH-XI; BHR in `docs/world_1ad/SOURCES.md`. [secure broad context; contested
+technical placement]
