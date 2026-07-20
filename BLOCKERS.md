@@ -1,5 +1,27 @@
 # Blockers
 
+## 2026-07-20 - Fully settled observer sessions remain intermittently Vulkan-memory-bound
+
+Status: **deferred after renewed, materially different driver attempts.**
+
+The driver now emits the installed very-low graphics contract, drives a
+960x540 window, holds a rendered menu for 90 seconds, and clears only detached
+reporters from the configured EU5 installation. Two post-splash enabled-mod
+smokes completed with zero new error-log lines. A subsequent clean session,
+with no inherited reporter dialog, exited at 48 seconds while initializing
+portrait colour palettes. The local debug log records the exact renderer
+assertion: `gfx_vk_master_context.cpp:2227` / `ErrorOutOfDeviceMemory`.
+
+This is not an ANTIQVITAS script or overlay parse failure: the same commit has
+passed complete static validation and earlier full-settle menu smokes. It
+prevents a reliable Observer session and therefore blocks the M6/M7/M8/M9/M10
+empirical gates and M12's long observer run.
+
+Recovery: retry only after a material graphics-driver, renderer-cache, or
+available-memory change; do not repeat unchanged launches. The execution
+environment rejected the attempted destructive cache reset, so that path is
+not presently available.
+
 ## 2026-07-20 - M5 Nubian-gold key lacks a defensible AD 1 site-date match
 
 Status: **deferred; M5 continues with other source-led work.**
