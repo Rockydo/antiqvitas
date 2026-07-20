@@ -158,8 +158,9 @@ after `make full` and its autonomous driver report are green.
   - [x] Apply the locally verified in-place transformation adapter to Kushan
         formation and the Southern-Xiongnu outcome, with generated temporary
         colors, CoAs, and localization.
-  - [ ] Add a source-led Northern-Xiongnu polity release to complete the AD 48
+  - [x] Add a source-led Northern-Xiongnu polity release to complete the AD 48
         split after its dynamic-country setup contract is locally verified.
+  - [ ] Render, source-check, and menu-smoke the AD 97-199 history batch.
 - [ ] Smoke and observer-test every batch; run milestone gate and tag `M10-done`.
 
 ## M11 — Flavor & face
