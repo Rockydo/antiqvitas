@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Batavian-Revolt art is generic Lower Rhine context
+
+The image is an unoccupied Lower Rhine wetland with a broad slow river branch,
+reed beds, willow and alder, low grassy islands, a grey horizon, and a faint
+muddy track. It identifies no Civilis, Batavian group, army, fort, boat,
+settlement, campaign, battle, action, or outcome. It deliberately excludes
+people, military material, later Dutch landscapes, and any reconstruction of
+the AD 69 revolt. Sources weighed: P8.1; plan sections 9 and 20. [secure
+current context; illustrative composition only]
+
 ## 2026-07-20 - Great-Jewish-Revolt art is a landscape-only Judean context
 
 The image is an unoccupied Judean hill landscape with limestone terraces, olive
