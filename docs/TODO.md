@@ -217,7 +217,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 89 Han-Xianbei War event illustration through a landscape-only northern grassland-context treatment.
 - [x] Complete the reviewed illustration mapping across all 28 generated M10 first-century currents.
 - [x] Extend the generated second-century event-art contract and smoke-test the AD 97 Gan Ying's Mission illustration through a non-literal Persian Gulf coastal-context treatment.
-- [x] Render and review the maintained M11 event-art contact sheet (29 retained 1080x440 masters).
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 101 Trajan's Dacian Wars event illustration through a non-literal Danube-Carpathian river-context treatment.
+- [x] Render and review the maintained M11 event-art contact sheet (30 retained 1080x440 masters).
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 

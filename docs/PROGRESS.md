@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M11 Trajan's Dacian Wars event illustration
+
+- Added a reviewed, non-literal Danube–Carpathian river-context image to the AD
+  101 Trajan's Dacian Wars current through the generated event-image contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. The maintained M11
+  contact sheet now has thirty retained event masters.
+
+Next: continue the M11 later-century art queue and source-led M5/M6 audit
+while runtime-gated milestone checks remain deferred.
+
 ## 2026-07-20 - M11 Gan Ying's Mission event illustration
 
 - Extended the generated second-century event-art contract with texture-existence

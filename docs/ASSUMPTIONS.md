@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Trajan-Dacia art is non-literal Danube-Carpathian context
+
+The image is an unoccupied Danube–Carpathian river landscape with a pebbled
+bank, willows, weathered stone, and distant forested foothills. It identifies
+no war, annexation, commander, crossing, route, bridge, capital, Roman or
+Dacian material, person, animal, action, date, or outcome. It deliberately
+excludes boats, roads, forts, walls, settlements, military material, and later
+infrastructure; it is not a reconstruction of the AD 101 campaign. Sources
+weighed: P8.1; plan sections 9 and 20. [secure broad regional context;
+illustrative composition only]
+
 ## 2026-07-20 - Gan-Ying art is non-literal Persian Gulf coastal context
 
 The image is an unoccupied Persian Gulf shoreline of pale rock, calm water,
