@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Claudian-Britain art is a generic Channel-coast context
+
+The image signals a first-century southern British coastal setting through
+chalk cliffs, grassy headlands, sea, and seabirds. It identifies no landing
+place, commander, British polity, Roman unit, ship, city, fort, battle, or
+outcome. It deliberately presents neither people nor combat and is not a
+reconstruction of the AD 43 invasion. Sources weighed: P8.7; plan sections 9
+and 20. [secure current context; illustrative composition only]
+
 ## 2026-07-20 - Mauretania-annexation art is a generic coastal context
 
 The image signals a first-century Mauretanian Mediterranean setting through
