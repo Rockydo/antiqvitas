@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Vandal-Africa art is landscape-only North-African littoral context
+
+The image is an unoccupied late-spring North-African littoral landscape of a
+quiet pale sand-and-stone Mediterranean shoreline, low salt-tolerant scrub,
+sparse tawny grasses, shallow turquoise water, gentle rounded coastal rises,
+weathered rocks, distant hazy headlands, and broad softly clouded sky. It
+identifies no Geiseric, Vandals, conquest, Carthage, city, person, date, or
+outcome. It is not a reconstruction of the Vandal conquest of Africa. Sources
+weighed: plan sections 8.5, 9, and 20. [secure broad regional context;
+illustrative composition only]
+
 ## 2026-07-20 - Visigothic-settlement art is landscape-only southwestern-Gaul context
 
 The image is an unoccupied late-summer southwestern-Gaul river plain of a broad
