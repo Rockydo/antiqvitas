@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Diocletian-Dominate art is landscape-only central-Balkan context
+
+The image is an unoccupied early-autumn central-Balkan upland of a natural
+stream, pale karst stone, rough grass, scattered trees, weathered ridges, and
+distant mountains. It identifies no emperor, court, Tetrarchy, reform, polity,
+city, palace, date, or outcome. It deliberately excludes people, military
+material, buildings, roads, banners, imperial symbols, and narrative action; it
+is not a reconstruction of Diocletian, the Dominate, or the Tetrarchy. Sources
+weighed: P8.1; plan sections 9, 13, and 20. [secure broad regional context;
+illustrative composition only]
+
 ## 2026-07-20 - Frankish-formation art is landscape-only Lower-Rhine context
 
 The image is an unoccupied early-autumn Lower-Rhine floodplain of a natural
