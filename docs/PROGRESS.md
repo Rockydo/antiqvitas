@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-20 - M11 Adventus Saxonum event illustration
+
+- Added a reviewed, landscape-only eastern-British coastal-wetland image to the AD 449 current through the generated final-century event-image contract.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines; the M11 contact sheet now has seventy-nine retained masters.
+
+Next: continue final-century M11 event-art coverage and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Constantinople Earthquake event illustration
 
 - Added a reviewed, landscape-only Marmara-coast image to the AD 447 disaster through the generated final-century event-image contract.
