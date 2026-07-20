@@ -66,6 +66,7 @@ EVENT_IMAGES = {
     "aksum_meroë": "gfx/interface/illustrations/event/antq_aksum_meroe.dds",
     "armenia_conversion": "gfx/interface/illustrations/event/antq_armenia_conversion.dds",
     "constantine_civil_wars": "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds",
+    "crete_earthquake": "gfx/interface/illustrations/event/antq_crete_earthquake.dds",
     "nicaea": "gfx/interface/illustrations/event/antq_nicaea.dds",
     "shapur_julian": "gfx/interface/illustrations/event/antq_shapur_julian.dds",
 }
