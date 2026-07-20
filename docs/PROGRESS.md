@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-20 - M5 building-contract audit
+
+- Verified that the installed building symbol table has no bathhouse/thermae
+  contract, so no unsupported bath proxy was introduced for the already
+  represented Augustan Roman water-infrastructure layer.
+- The road ledger already covers the plan's Persian Royal Road legacy and Han
+  trunk-road examples; remaining M5 work continues on independently mappable
+  economy surfaces.
+
+Next: continue the source-led M5/M6 audit while the runtime-effective RGO
+trade-flow gate remains deferred.
+
 ## 2026-07-20 - M11 Trung Sisters' Revolt event illustration
 
 - Added a reviewed, landscape-only Jiaozhi river-delta context image to the
