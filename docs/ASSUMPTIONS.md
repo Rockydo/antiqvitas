@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Paper-standardization art is non-literal scholarly context
+
+The image is an unoccupied Eastern Han-style scholarly workspace with blank
+pale fiber sheets, unmarked bamboo slips, a plain bowl, a brush holder, timber,
+and bamboo. It identifies no person, official, inventor, workshop, technique,
+process, inscription, text, date, or outcome. It deliberately excludes
+papermaking equipment and all readable writing; it is not a reconstruction of
+Cai Lun or the standardization process. Sources weighed: P8.3; SMI-CAI; plan
+sections 9 and 20. [secure general scholarly-material context; illustrative
+composition only]
+
 ## 2026-07-20 - Trajan-Dacia art is non-literal Danube-Carpathian context
 
 The image is an unoccupied Danube–Carpathian river landscape with a pebbled
