@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Faiyum irrigation is a bounded Roman-period site proxy
+
+The direct installed `faiyum` location represents a long-lived hydraulic and
+agricultural landscape, not one named canal, dam, estate, output level, or
+centrally controlled system. A level-one generic irrigation building indicates
+only canal-fed cultivation and reclamation at the AD 1 boundary. Sources
+weighed: `UNESCO-FAY`; P12.3. [secure Roman-period irrigation context;
+contested engine scale and production effect]
+
 ## 2026-07-20 - Augustan-succession art is a generic AD 14 civic transition
 
 The visual signals early-imperial Roman civic uncertainty without portraying

@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M5 Faiyum irrigation anchor
+
+- Added the direct installed Faiyum location as a source-qualified, level-one
+  `irrigation_systems` proxy for its continuing Roman-period canal-fed
+  cultivation and reclamation.
+- The bounded historic-site adapter passed `make validate`; enabled-mod smoke
+  reached the menu with zero new error-log lines.
+
+Next: continue the remaining source-led M5 audit while the runtime-effective
+RGO trade-flow gate remains deferred.
+
 ## 2026-07-20 - M11 Augustan Succession event illustration
 
 - Added a reviewed, text-free AD 14 Roman civic-transition illustration to the
