@@ -195,6 +195,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 9 Teutoburg Forest event illustration.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 30 Kushan Unification event illustration.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 17 Tacfarinas' War event illustration.
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 21 Florus and Sacrovir revolt event illustration.
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 

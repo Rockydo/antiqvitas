@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Florus-and-Sacrovir art is a generic provincial Gaul scene
+
+The image signals a first-century Gallic provincial context through a river
+quay, modest bridge, cargo boats, fields, and non-identifying travellers. It
+identifies no Florus, Sacrovir, tribe, city, Roman unit, revolt scene, route,
+engagement, or outcome. It deliberately presents neither combat nor casualties
+and is not a literal reconstruction of the AD 21 revolt. Sources weighed:
+P8.1; plan sections 9 and 20. [secure current context; illustrative
+composition only]
+
 ## 2026-07-20 - Tacfarinas-war art is a generic North African frontier scene
 
 The image signals an early-imperial North African frontier context through a
