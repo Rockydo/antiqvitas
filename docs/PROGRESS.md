@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M11 third-century current-art coverage
+
+- Completed and generator-enforced reviewed event-art coverage for all ten AD
+  200-299 historical currents, from Severus in Caledonia through the War of the
+  Eight Princes.
+- The exact third-century renderer rejects both orphaned art keys and uncovered
+  currents; `make validate` is green. The maintained M11 contact sheet holds
+  fifty-six retained event masters.
+
+Next: continue the M11 fourth-century art queue and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 War of the Eight Princes event illustration
 
 - Added a reviewed, landscape-only north-Chinese loess-valley image to the AD
