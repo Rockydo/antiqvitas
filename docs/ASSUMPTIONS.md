@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Christianity-founded art is a respectful landscape context
+
+The image is a generic first-century Judean hill landscape with olive trees,
+terraces, and non-identifying travellers. It intentionally depicts neither a
+sacred figure nor a sacred event, religious emblem, ritual, city, temple, or
+theological claim. It is visual context for the AD 30 current only, not a
+literal reconstruction or devotional representation. Sources weighed: P8.1;
+plan sections 9 and 20. [secure current context; illustrative composition only]
+
 ## 2026-07-20 - Florus-and-Sacrovir art is a generic provincial Gaul scene
 
 The image signals a first-century Gallic provincial context through a river
