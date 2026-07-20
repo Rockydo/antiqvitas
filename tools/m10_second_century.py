@@ -59,6 +59,7 @@ TARGETS = {
 EVENT_IMAGES = {
     "antioch_earthquake": "gfx/interface/illustrations/event/antq_antioch_earthquake.dds",
     "antonine_wall": "gfx/interface/illustrations/event/antq_antonine_wall.dds",
+    "antonine_plague": "gfx/interface/illustrations/event/antq_antonine_plague.dds",
     "bar_kokhba": "gfx/interface/illustrations/event/antq_bar_kokhba.dds",
     "cai_lun_paper": "gfx/interface/illustrations/event/antq_cai_lun_paper.dds",
     "celestial_masters": "gfx/interface/illustrations/event/antq_celestial_masters.dds",
