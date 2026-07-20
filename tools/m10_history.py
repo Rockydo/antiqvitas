@@ -94,6 +94,7 @@ EVENT_IMAGES = {
     "trung_sisters": "gfx/interface/illustrations/event/antq_trung_sisters.dds",
     "wang_mang_xin": "gfx/interface/illustrations/event/antq_xin_dynasty_crisis.dds",
     "xiongnu_split": "gfx/interface/illustrations/event/antq_xiongnu_split.dds",
+    "year_four_emperors": "gfx/interface/illustrations/event/antq_year_four_emperors.dds",
 }
 
 
