@@ -63,6 +63,7 @@ EVENT_IMAGES = {
     "bar_kokhba": "gfx/interface/illustrations/event/antq_bar_kokhba.dds",
     "cai_lun_paper": "gfx/interface/illustrations/event/antq_cai_lun_paper.dds",
     "celestial_masters": "gfx/interface/illustrations/event/antq_celestial_masters.dds",
+    "champa_formation": "gfx/interface/illustrations/event/antq_champa_formation.dds",
     "daqin_embassy": "gfx/interface/illustrations/event/antq_daqin_embassy.dds",
     "gan_ying": "gfx/interface/illustrations/event/antq_gan_ying.dds",
     "gothic_migration": "gfx/interface/illustrations/event/antq_gothic_migration.dds",
