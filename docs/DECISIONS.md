@@ -1,5 +1,21 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - Second-century currents use a separate deterministic renderer
+
+`tools/m10_second_century.py` owns the non-overlapping AD 97-199 ledger slice,
+all of its events, current managers, temporary Champa visual assets, and
+eleven mirrored localization files. Like the first-century renderer, it reads
+each game date from `docs/timeline.csv` through `AntqDate`, resolves its
+recipient through the generated tag map, and treats situations/disasters as
+locally proven manager contracts rather than copied vanilla pulses.
+
+The AD 192 formation uses the locally harvested
+`create_country_from_location`/`define_unique_country_tag` surface to make
+`CPC`, which was checked absent from the installed setup, common, event, and
+main-menu scripts as well as the AD 1 tag map. Its placement is guarded by the
+current Han ownership block for the four reviewed Rinan locations. The color
+and solid CoA are intentional M10 temporary assets; M11 owns their final art.
+
 ## 2026-07-20 - Population exceptions are checked separately from ownership
 
 M3 political ownership is not a safe proxy for every local population's

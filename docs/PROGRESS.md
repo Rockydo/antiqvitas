@@ -1,5 +1,24 @@
 # Progress
 
+## 2026-07-20 - M10 second-century historical currents
+
+- Added a generator-owned AD 97-199 layer with 18 ledger-bound currents: nine
+  situations, two disasters, six dynamic events, and the AD 192 Champa
+  formation. Every emitted script date comes from the shared timeline through
+  `AntqDate`; source records now substantiate the Dacian, paper, Parthian,
+  Celestial-Masters/Yellow-Turban, Antonine-plague, and Linyi rows.
+- Champa is a genuine dynamically created `CPC` country from the corrected
+  Han-Rinan mesh. It preserves the population layer's local Austronesian
+  culture/religion rather than treating administrative Han ownership as a
+  population conversion. The explicitly provisional color and solid CoA pass
+  local load checks; no unsupported event-date ruler is invented.
+- `make validate` and enabled-mod `make smoke` passed. Smoke reached the
+  rendered menu and reported zero new `error.log` lines. The observer-confirmation
+  blocker remains unchanged, so runtime playback of this and the preceding
+  M10 batch is still deferred without a third duplicate input attempt.
+
+Next: render, source-check, and menu-smoke the AD 200-299 history batch.
+
 ## 2026-07-20 - Rinan prerequisite for the Champa formation
 
 - Corrected the M3 residual-map result for four reviewed Huế/Rinan proxy

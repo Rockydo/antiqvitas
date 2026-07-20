@@ -1,5 +1,21 @@
 # Historical Assumptions
 
+## 2026-07-20 - The AD 192 Champa release is a bounded Linyi/Rinan proxy
+
+`CHAM-BIRTH` places Linyi's origin broadly in modern Quang Tri and Thua
+Thien-Huế and discusses the AD 192 revolt, but it does not supply an exact
+EU5 boundary, a ruler at the event date, or later Champa extent. The M10
+formation consequently releases the four reviewed Han-Rinan local-mesh
+locations as `CPC` from an Amarendrapura seed. It carries the indigenous
+Austronesian culture/religion profile already preserved in the population
+ledger and uses a monarchy/regional-kingship technical adapter; it deliberately
+creates no invented ruler, dynasty, or precise frontier. This is a constrained
+playable representation of the formation, not a claim that the locations
+exhaust historical Linyi or that its political institutions are fully known.
+Sources weighed: master-plan sections 8.3, 8.9, and 9; `CHAM-BIRTH`.
+[secure revolt context and broad geography; contested local-mesh partition and
+institutional adapter]
+
 ## 2026-07-20 - Rinan is Han-administered without a claim of local Sinicization
 
 The plan requires the 192 Linyi/Champa formation to rise from Han Rinan.

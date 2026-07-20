@@ -40,6 +40,26 @@ a row reaches `implemented` status.
   territory broadly in present-day Quang Tri and Thua Thien-Huế and discusses
   the AD 192 revolt. It does not license an exact modern-to-EU5-location
   conversion, a dated ruler record, or later Champa territorial extent.
+- `UNE-DAC`: Michael Schmitz, [*The Dacian Threat 101-106
+  AD*](https://rune.une.edu.au/web/handle/1959.11/9087), used for the two
+  Trajanic Dacian campaigns in AD 101-102 and 105-106. It supports the dated
+  conflict window, not a deterministic conquest result for every playthrough.
+- `SMI-CAI`: Smithsonian Museum Conservation Institute, [*Paper History and
+  Production*](https://mci.si.edu/node/1301320), used for Cai Lun's AD 105
+  court report on improved paper production. It supports the bounded
+  standardization current, not an exclusive invention claim for all paper.
+- `WIL-TPW`: Jonathan P. Roth, ["Trajanic Parthian War"](https://doi.org/10.1002/9781119099000.wbabat0650), used for the AD 113-117 Trajanic
+  Parthian-war window. It supports a dated regional current, not a fixed
+  imperial territorial outcome.
+- `IRAN-TRAJ`: Klaus Schippmann, *Encyclopaedia Iranica*, ["Trajan"](https://www.iranicaonline.org/articles/trajan/), used as a scholarly
+  cross-check for Trajan's eastern expedition and its Arsacid context.
+- `SCI-ANT`: Charles Haas, ["The Antonine Plague"](https://doi.org/10.1016/S0001-4079(19)33258-3), used for a c. AD 165/166 onset and the outbreak's
+  later second-century span. It does not establish a single pathogen or an
+  exact province-by-province casualty profile.
+- `CAM-CM`: Terry F. Kleeman, *Celestial Masters: History and Ritual in Early
+  Daoist Communities*, reviewed in [*Journal of Chinese History*](https://www.cambridge.org/core/journals/journal-of-chinese-history/article/celestial-masters-history-and-ritual-in-early-daoist-communities-by-terry-f-kleeman-cambridge-mass-harvard-university-press-2016-446-pages-49-95-163-99-cloth/9F4DDD1189BEBA1C38A9E5D5F58A4D6C), used for the conventional AD 142 Celestial-Masters foundation context.
+  It supports that current and contextualizes, but does not conflate it with,
+  the later Yellow-Turban revolt.
 - `IRAN-ATR`: *Encyclopaedia Iranica*, [Azerbaijan iii. Pre-Islamic History](https://www.iranicaonline.org/articles/azerbaijan-iii/), used for Ariobarzanes II's Media Atropatene appointment and regional context.
 - `IRAN-ADI`: David Sellwood, *Encyclopaedia Iranica*, ["Adiabene"](https://www.iranicaonline.org/articles/adiabene/), used for Monobazus as Adiabenian ruler in the first decades of the Christian era and for the kingdom's Parthian-era context. It does not supply a day-level accession, complete genealogy, conversion date, or later succession.
 - `CAM-ADI`: Michal Marciak, ["Images of Kings of Adiabene: Numismatic and Sculptural Evidence"](https://www.cambridge.org/core/journals/iraq/article/images-of-kings-of-adiabene-numismatic-and-sculptural-evidence/585AC7947F510E51A1AD2297922DE103), *Iraq* 78 (2016), used for the qualified c. 5 BCE-AD 30 Monobazus I chronology and its numismatic context. The study calls the range most likely, so the roster retains it as contested metadata rather than scripted biography dates.
