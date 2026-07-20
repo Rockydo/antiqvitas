@@ -81,6 +81,7 @@ EVENT_IMAGES = {
     "kushan_unification": "gfx/interface/illustrations/event/antq_kushan_unification.dds",
     "tacfarinas_war": "gfx/interface/illustrations/event/antq_tacfarinas_war.dds",
     "teutoburg": "gfx/interface/illustrations/event/antq_teutoburg.dds",
+    "trung_sisters": "gfx/interface/illustrations/event/antq_trung_sisters.dds",
     "wang_mang_xin": "gfx/interface/illustrations/event/antq_xin_dynasty_crisis.dds",
 }
 
