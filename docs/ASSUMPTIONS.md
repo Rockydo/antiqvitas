@@ -1,5 +1,27 @@
 # Historical Assumptions
 
+## 2026-07-20 - AD 1 subject webs use imperial-form adapters, not treaty texts
+
+The Roman client ring, Arsacid sub-kings, and Han Western Regions entries are
+already individually sourced in `docs/world_1ad/subjects.csv`. M9 maps those
+three groups to client-kingdom, satrapy, and tributary contracts respectively.
+That preserves the plan's political distinction while making no assertion
+that every named relationship had identical obligations, autonomy, tribute
+amount, or written terms on 1 January AD 1. Sources weighed: plan sections
+8.1-8.3 and 16.2; `OCD`, `PLE`, `CAH-XI`, and `CHG` as cited per ledger row in
+`docs/world_1ad/SOURCES.md`. [secure membership where ledger says secure;
+contested where ledger says contested; contested mechanical equivalence]
+
+## 2026-07-20 - Foederati begin with the 382 treaty threshold
+
+Plan section 10's Gothic-refugee / Adrianople sequence identifies the 382
+foedus as the release point, and section 16.2 specifically assigns that date
+to the foederati subject type. The contract is therefore unavailable before
+382.1.1. This is a campaign pacing gate, not a claim that every federate
+settlement began on that day or had one uniform legal status. Sources weighed:
+plan sections 10 and 16.2. [secure plan-defined threshold; contested legal
+uniformity]
+
 ## 2026-07-19 - Herod II and Herodias are bounded Judean-world records
 
 Josephus's later Aretas-conflict narrative names both Herod II and Herodias,

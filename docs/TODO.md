@@ -136,6 +136,10 @@ after `make full` and its autonomous driver report are green.
 ## M9 — Nations among nations
 
 - [ ] Implement CBs, wargoals, treaties, subjects, IOs, and known-world sets.
+  - [x] Add the generated AD 1 client-kingdom, satrapy, tributary, foederati,
+        and autonomous-city contracts; map the sourced Roman, Arsacid, and Han
+        dependency web onto the first three.
+  - [ ] Add the plan's CB, wargoal, peace-treaty, IO, and discovery surfaces.
 - [ ] Verify ancient diplomatic webs; run milestone gate and tag `M9-done`.
 
 ## M10 — History in motion

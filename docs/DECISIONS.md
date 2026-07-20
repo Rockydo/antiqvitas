@@ -1,5 +1,19 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M9 subjects are generated adapters over the reviewed ledger
+
+The local 1.3.1.1 `vassal` and `tributary` definitions establish the field
+shapes used by the five M9 subject contracts. `tools/m9_diplomacy.py` owns
+those UTF-8-BOM scripts, their eleven localization mirrors, and the 382
+foederati date through `AntqDate`; `generate_start_mirror.py` imports its
+design-tag adapter table rather than duplicating a relationship mapping.
+
+This separates historically reviewed membership from technical behavior:
+`docs/world_1ad/subjects.csv` remains the sole source for each AD 1 edge,
+while M9 contracts model the distinct Roman, Arsacid, and Han forms without
+claiming a uniform legal text. The implementation is additive and does not
+modify the installed game files.
+
 ## 2026-07-19 - Wang Clan Regency reuses the verified nobles-estate contract
 
 The installed estate interface has no safe country-specific estate attachment,
