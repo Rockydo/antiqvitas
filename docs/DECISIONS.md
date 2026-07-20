@@ -1,5 +1,20 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M9 war contracts distinguish historical availability from AI policy
+
+The local 1.3.1.1 CB, wargoal, and peace-treaty files establish the generated
+field vocabulary. Client-king and tributary CBs refer only to their matching
+custom treaties; every custom treaty has a distinct key because this build
+reports duplicate localization keys even when CB and treaty labels coincide.
+The installed engine also requires a registered antagonism bias whenever a
+peace term sets `base_antagonism`, so the ancient terms intentionally use its
+verified zero-antagonism default instead of inventing global bias entries.
+
+The unification CB definitions are intentionally invisible and AI-disabled
+until M10's dated, source-led situations grant them. All current custom CBs
+are AI-disabled as well: their historical granting and weighting belongs to
+specific situations rather than an unsourced blanket war policy at AD 1.
+
 ## 2026-07-20 - M9 subjects are generated adapters over the reviewed ledger
 
 The local 1.3.1.1 `vassal` and `tributary` definitions establish the field

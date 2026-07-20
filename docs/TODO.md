@@ -139,7 +139,10 @@ after `make full` and its autonomous driver report are green.
   - [x] Add the generated AD 1 client-kingdom, satrapy, tributary, foederati,
         and autonomous-city contracts; map the sourced Roman, Arsacid, and Han
         dependency web onto the first three.
-  - [ ] Add the plan's CB, wargoal, peace-treaty, IO, and discovery surfaces.
+  - [x] Add the plan's punitive, client-king, tribute, frontier, raid,
+        succession, late-religious, and dormant historical-unification CBs;
+        their wargoals and three subject-imposition peace terms.
+  - [ ] Add the plan's IO and discovery surfaces.
 - [ ] Verify ancient diplomatic webs; run milestone gate and tag `M9-done`.
 
 ## M10 — History in motion

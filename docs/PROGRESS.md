@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-20 - M9 ancient war-contract foundation
+
+- Added ten generated CBs, eight wargoals, and three subject-imposition peace
+  terms. They cover the plan's punitive, client-king, tribute, frontier, raid,
+  succession, and post-325 religious surfaces; Chinese, Sasanid, and Gupta
+  unification CBs remain dormant until M10 supplies their historical moments.
+- A first real-game load found duplicate CB/treaty localization keys and
+  unregistered peace-antagonism biases. The generator now has distinct treaty
+  keys and uses the locally accepted zero-antagonism default.
+- `make validate` and the corrected enabled-mod `make smoke` are green, with
+  zero new `error.log` lines.
+
+Next: add the M9 international organizations and bounded known-world
+discovery sets, then inspect the diplomacy surface in-game when the observer
+driver path is repaired.
+
 ## 2026-07-20 - M9 ancient subject-contract foundation
 
 - Added a generated five-contract layer for Roman client kingdoms, Arsacid
