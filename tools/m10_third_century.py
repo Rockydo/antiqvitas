@@ -50,6 +50,7 @@ TARGETS = {
 # rendered script: regeneration preserves every game-facing reference and
 # validation proves its texture remains present.
 EVENT_IMAGES = {
+    "constitutio_antoniniana": "gfx/interface/illustrations/event/antq_constitutio_antoniniana.dds",
     "severus_caledonia": "gfx/interface/illustrations/event/antq_severus_caledonia.dds",
 }
 
