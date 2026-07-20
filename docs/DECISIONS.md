@@ -1,5 +1,25 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - Northern Xiongnu is a unique dynamic country, not a static tag
+
+The installed event corpus proves the required contract: a location-scoped
+`create_country_from_location` can define a stable three-letter runtime tag,
+set its name/adjective/color/flag, and then receive locations through
+`change_location_owner`. M10 uses the unoccupied `XNO` runtime tag for Northern
+Xiongnu. The generated event creates it at the reviewed northern seed,
+inherits the continuing Xiongnu culture/religion, and applies the locally
+verified steppe-horde, reform, and heir-selection effects before moving the
+remaining reviewed slice. `XSO` remains a cosmetic identity for the Southern
+continuity.
+
+The release seed is explicit data rather than an implicit geographic query. Its
+generator validates every location against both the locally indexed map and
+the current AD 1 Xiongnu ownership block, so a future M3 map change fails
+validation until this dated historical approximation is reviewed again. `XNO`
+is absent from the installed setup/common/event/main-menu scripts and from the
+AD 1 tag map. The color and solid CoA are M10 temporary assets; M11 owns their
+historical visual replacement.
+
 ## 2026-07-20 - M10 transformations use cosmetic tags until a new polity is needed
 
 The installed `change_tag_cosmetic` effect is a safe in-place adapter: it sets

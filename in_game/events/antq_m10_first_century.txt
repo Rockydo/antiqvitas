@@ -217,7 +217,7 @@ antq_m10.1012 = {
 	}
 }
 
-# Xiongnu Split; ANTIQVITAS master plan §9; recipient=XIO
+# Xiongnu Split; ANTIQVITAS master plan §9; IRAN-XIO; recipient=XIO
 antq_m10.1013 = {
 	type = country_event
 	title = antq_m10.1013.title
@@ -233,6 +233,65 @@ antq_m10.1013 = {
 	option = {
 		name = antq_m10.1013.a
 		historical_option = yes
+		# Northern slice: IRAN-XIO; local M3 coordinate proxy, documented in docs/m10/.
+		location:anaa = {
+			create_country_from_location = {
+				define_unique_country_tag = XNO
+				change_country_name = XNO
+				change_country_adjective = XNO
+				change_country_color = map_XNO
+				change_country_flag = XNO
+				change_culture = ROOT.culture
+				change_religion = ROOT.religion
+				change_government_type = government_type:steppe_horde
+				add_reform = government_reform:antq_steppe_confederation
+				change_heir_selection = heir_selection:tribal_oldest_male
+			}
+			add_core = c:XNO
+		}
+		every_owned_location = {
+			limit = {
+				OR = {
+					this = location:khurbe
+					this = location:ude_baikal
+					this = location:selenge
+					this = location:khudan
+					this = location:bureen
+					this = location:khilgo
+					this = location:ulenkhe
+					this = location:khimni
+					this = location:khilgoson
+					this = location:sulkhari
+					this = location:non
+					this = location:ung
+					this = location:gan
+					this = location:uur
+					this = location:zed
+					this = location:dobkuri
+					this = location:khatgal
+					this = location:zelterijin
+					this = location:kyakhta
+					this = location:tsokh
+					this = location:ulaamgom
+					this = location:delger_moron
+					this = location:menlu
+					this = location:eringiin
+					this = location:nuomin
+					this = location:tsagaan_usun
+					this = location:khadanzaa
+					this = location:alyanbulag
+					this = location:erzin
+					this = location:turuum
+					this = location:kuile
+					this = location:khan_khentii
+					this = location:altan_gadas
+					this = location:tarvagatai
+					this = location:dzaigil
+				}
+			}
+			change_location_owner = c:XNO
+			add_core = c:XNO
+		}
 		change_tag_cosmetic = { tag = XSO }
 		destroy_international_organization = { target = international_organization:antq_xiongnu_confederation }
 		add_stability = stability_mild_penalty
