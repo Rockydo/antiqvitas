@@ -92,6 +92,7 @@ EVENT_IMAGES = {
     "teutoburg": "gfx/interface/illustrations/event/antq_teutoburg.dds",
     "tiridates_coronation": "gfx/interface/illustrations/event/antq_tiridates_coronation.dds",
     "trung_sisters": "gfx/interface/illustrations/event/antq_trung_sisters.dds",
+    "vesuvius": "gfx/interface/illustrations/event/antq_vesuvius.dds",
     "wang_mang_xin": "gfx/interface/illustrations/event/antq_xin_dynasty_crisis.dds",
     "xiongnu_split": "gfx/interface/illustrations/event/antq_xiongnu_split.dds",
     "year_four_emperors": "gfx/interface/illustrations/event/antq_year_four_emperors.dds",
