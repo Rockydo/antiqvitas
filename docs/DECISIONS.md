@@ -1392,3 +1392,15 @@ inventory similarly marks retained vanilla generic missions and rule/hint
 surfaces as open until they are consciously retained or disabled through a
 local-contract test. This prevents release-facing documents from converting a
 technical load result into a historical or gameplay claim.
+
+## 2026-07-20 - Disable vanilla generic missions by exact-name visibility gates
+
+The installed generic mission packs explicitly depend on vanilla Discovery,
+colonial, Renaissance, Reformation, banking, paper-guild, and institution
+surfaces. Rather than selectively reinterpret their rewards or leave hidden
+anachronisms reachable, M12 mirrors all eleven exact source filenames and adds
+`always = no` only to each top-level visibility trigger. The definitions and
+keys remain loaded for references, while `tools/m12_disable_missions.py`
+regenerates against the installed inventory and fails patch drift. Future
+ancient missions must be independently source-led rather than reviving a
+vanilla generic pack.

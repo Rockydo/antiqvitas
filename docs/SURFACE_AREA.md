@@ -22,7 +22,7 @@ has passed the observer gate.
 | Generic actions and action message types | done | 40 source-led player actions; exact registry overlay is pinned and menu-smoked. |
 | Scripted effects, triggers, values, on-actions | done | No unsupported custom global hook is retained; current layers use locally checked native contracts. |
 | Diseases | deferred | The vanilla disease taxonomy is retained; long-run disease-current behaviour awaits observer evidence. |
-| Missions and mission-task definitions | open | Installed generic mission files exist and need an explicit M12 semantic-retention or clean-disable decision before release. |
+| Missions and mission-task definitions | done | M12 disables all 11 anachronistic generic packs by checked exact-name visibility overlays; task definitions have no active standalone gameplay file. |
 | Game rules, tutorials, and hints | open | Game-rule/hint surfaces require the final anachronism and usability review. |
 | Localization, glossary, credits | done | 17 English files mirror exactly to ten clients; glossary and Pleiades/ORBIS credits are present. |
 | Flags, goods/religion/advance/estate/government icons, event/age/loading art | done | M11 audit covers direct-key common screens, 83 event images, 5 age panels, and source/master/DDS chains. |

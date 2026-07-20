@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-20 - M12 generic-mission closure
+
+- Audited all eleven installed generic mission packs and found post-antique
+  Discovery, colonial, Renaissance, Reformation, banking, paper-guild, and
+  vanilla-institution content.
+- Added an exact-name generated unavailable layer that preserves every mission
+  key while making each top-level pack invisible. The checker re-reads the
+  local inventory and source content so patch drift cannot silently reactivate
+  it.
+- Full validation and an enabled-mod menu smoke are green with zero new
+  error-log lines after one renderer-only retry.
+
+Next: complete the game-rule/tutorial/hint semantic audit, then return to the
+observer-dependent empirical ship gates.
+
 ## 2026-07-20 - M12 ship documentation and surface inventory
 
 - Added the project README, release-payload and Workshop handoff notes, an
