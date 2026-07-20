@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-21 - M8 institution-origin contracts are generated and green
+
+- Added generator-owned, locally schema-verified location modifiers for all
+  nine M8 institution birthplaces, plus exact localized descriptions.
+- The new manifest coverage guard, full validation suite, regenerated M12
+  authored-text audit, and enabled-mod 90-second smoke all pass with zero new
+  error-log lines.
+
+Next: initialize a new observer session to verify that all nine former
+missing-modifier diagnostics are absent before retrying longer playback.
+
 ## 2026-07-21 - Supported autonomous renderer profile is menu-smoked
 
 - Replaced the engine-rejected 960x540 request with the locally evidenced

@@ -143,6 +143,7 @@ after `make full` and its autonomous driver report are green.
 
 ## M8 — Knowledge
 
+- [x] Generate and validate the required birth-location static-modifier contract for all nine custom institutions.
 - [x] Implement five complete age trees, roughly 250 advances, institutions, tech tiers, objectives, and abilities.
 - [ ] Test AI research and anachronism/dead-end rules; run milestone gate and tag `M8-done`. (The enabled AD 1 selector and zero-new-line menu smoke are recorded; observer runtime remains blocked by the renderer condition in `BLOCKERS.md`.)
 
