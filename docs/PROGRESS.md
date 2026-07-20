@@ -2855,6 +2855,16 @@ separate Han runtime-regency blocker.
   validation and enabled-mod smoke both passed; the rendered menu produced
   zero new `error.log` lines.
 
+## 2026-07-20 - M11 glossary and source-credit pass
+
+- Added the source-keyed player-facing glossary, preserving distinctions such
+  as client kingdom, tributary, satrapy, foederati, SoP, and historical
+  current. It states explicitly where a game label is an abstraction rather
+  than a reconstructed institution.
+- Reworked `CREDITS.md` and the supported metadata description surface to
+  credit Pleiades and ORBIS, with Pleiades' CC BY 3.0 data attribution. Static
+  validation and enabled-mod smoke passed with zero new `error.log` lines.
+
 ## 2026-07-19 - M7 ancient warfare foundation
 
 - Added a checked, source-labelled 26-type ancient roster: regulars and levies,
