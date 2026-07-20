@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Forum Romanum uses an economic-civic proxy
+
+The generic `marketplace` at Rome signals the Forum Romanum's long-lived
+commercial, legal, and civic roles; it is not an archaeological site plan,
+claim about every Forum structure, or a reconstruction of all Augustan works.
+The modest level does not quantify trading volume, public assembly capacity, or
+legal authority. Sources weighed: `PARC-FORUM`; P12.3. [secure function and
+AD 1 context; contested engine effect and scale]
+
 ## 2026-07-20 - Faiyum irrigation is a bounded Roman-period site proxy
 
 The direct installed `faiyum` location represents a long-lived hydraulic and

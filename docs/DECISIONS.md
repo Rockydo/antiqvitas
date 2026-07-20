@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M5 uses the verified marketplace contract for Forum Romanum
+
+The installed building catalogue has no forum- or agora-specific contract. The
+source records the Forum Romanum as both marketplace and political/legal civic
+centre, so M5 uses the engine-valid generic `marketplace` at the already
+validated Rome city node. This avoids inventing a building key or attaching a
+misleading later monument; source and assumption records bound the generic
+building's interpretation.
+
 ## 2026-07-20 - M11 attaches *Immensum Bellum* through the checked event-image contract
 
 The installed `earthquake_events.txt` uses an `image` key directly on a

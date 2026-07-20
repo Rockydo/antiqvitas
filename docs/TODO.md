@@ -74,6 +74,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add a source-qualified Buddhist monastic proxy at Anuradhapura without applying a later Christian building identity.
 - [x] Add a source-qualified Prima Porta villa proxy without claiming a latifundium census or slave-labor measure.
 - [x] Add a source-qualified Roman-period Faiyum irrigation proxy at the direct installed hydraulic-agricultural location.
+- [x] Add the Forum Romanum through the verified marketplace proxy without inventing a forum-specific building key or a reconstruction of its physical plan.
 - [ ] Implement the remaining goods/RGOs, buildings/town setups, roads, and development beyond this first dedicated-goods pass. The plan-listed Ephesus and Oc Eo growth hubs, Noricum iron anchor, eight source-labelled harbor tiers, Muza's roadstead-market tier, the Second Temple transformation, Anuradhapura and Prima Porta historic-building anchors, and a 36-segment road network now extend the building/transport surfaces; RGO runtime application is deferred in `BLOCKERS.md`, while other independent M5 surfaces may continue.
 - [ ] Verify ancient trade flows; run milestone gate and tag `M5-done`. (Blocked until a runtime-effective RGO surface is found.)
 
