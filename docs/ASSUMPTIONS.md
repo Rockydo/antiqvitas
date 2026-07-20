@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Britain-abandoned art is landscape-only south-British coastal context
+
+The image is an unoccupied late-autumn south-British Channel coast of a quiet
+chalky shoreline, low grass-covered cliffs, wind-shaped shrubs, a stony beach,
+calm slate-blue sea, distant headlands, soft grey cloud cover, and muted autumn
+light. It identifies no Rome, Constantine III, withdrawal, Britain, city, date,
+or outcome. It is not a reconstruction of Roman withdrawal from Britain. Sources
+weighed: P8.7; plan sections 9 and 20. [secure broad regional context;
+illustrative composition only]
+
 ## 2026-07-20 - Rhine-crossing art is landscape-only lower-Rhine context
 
 The image is an unoccupied late-autumn lower-Rhine floodplain of a broad slow
