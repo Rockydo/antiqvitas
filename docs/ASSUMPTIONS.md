@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Laurion fading is represented by no AD 1 silver RGO
+
+The plan's Laurion note is a decline requirement, not evidence for a fresh
+full-scale silver anchor. The reviewed source reports no underground working by
+Strabo's time and only slag reprocessing, while the installed map lacks a
+Laurion/Sounion key. The broad `athens` location therefore keeps its marble
+material rather than becoming a fictional city-scale mine. This deliberately
+does not quantify residual reprocessing or deny later activity. Sources
+weighed: `PER-LAURION`; P12.1. [secure Classical-to-Strabo decline context;
+contested exact AD 1 residual activity and map adapter]
+
 ## 2026-07-20 - *Immensum Bellum* art is a generic AD 1 campaign scene
 
 The M11 event visual depicts Roman movement beside a Rhine-frontier river in
