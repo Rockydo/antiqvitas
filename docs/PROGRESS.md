@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-21 - UI-verified reduced renderer profile is green
+
+- The installed Graphics menu proved that upscaling was already disabled and
+  supplied the exact 70-percent Render Scale value, which the game persisted.
+- The driver now pins that 0.7 scale; full static validation and a rendered
+  90-second enabled-mod smoke are green with zero new error-log lines.
+
+Next: use this materially reduced profile for one bounded observer playback
+probe before making any renderer-stability claim.
+
 ## 2026-07-21 - M8 institution-origin contracts are generated and green
 
 - Added generator-owned, locally schema-verified location modifiers for all

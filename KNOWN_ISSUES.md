@@ -8,8 +8,9 @@ the play action with an `ffxFsr2ResourceIsNull`-stack access violation. The
 latest bundle had 14.6 GB RAM and 17.3 GB pagefile free, so the earlier
 low-pagefile observation is insufficient to explain the current failure. The
 former 960x540 request was rejected and persisted as 2560x1440. The driver
-now uses the locally evidenced 1920x1080 mode, which has a clean menu smoke;
-its materially changed observer probe remains pending. This prevents reliable
+now uses the locally evidenced 1920x1080 mode and a UI-verified 70-percent
+render scale, both with clean menu smoke; its materially changed observer probe
+remains pending. This prevents reliable
 observer playback; the exact evidence and recovery boundary is in
 `BLOCKERS.md`.
 

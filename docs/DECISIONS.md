@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Pin the UI-verified 70-percent render scale in the game driver
+
+The installed Graphics settings UI reports Upscale Method Disabled and Upscale
+Quality Off, so setting an imagined FSR-off enum would not be a real recovery
+change. Its Render Scale control supplied the verified numeric contract:
+100, 90, 80, then 70 percent, persisted as Graphics.render_scale = 0.700000.
+The autonomous driver now writes that exact 0.7 value while retaining the
+supported 1920x1080 windowed profile and the existing very-low options. Full
+validation and a 90-second enabled-mod smoke are green. A fresh observer
+playback is required before judging whether the FSR crash is delayed or cured.
+
 ## 2026-07-21 - Generate each custom institution's required birth modifier
 
 The installed institution manager asks the static-modifier registry for the

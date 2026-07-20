@@ -67,10 +67,10 @@ quarantine loader error. Screenshots and the bounded reproduction are recorded
 in `docs/playtests/M12_OBSERVER_RETRY_20260721.md`.
 
 Recovery: the supported 1920x1080 profile now reaches a live observer and has
-advanced through 1 June at maximum speed before the same FSR stack recurs.
-Do not repeat that unchanged profile. First locally verify a second material
-renderer change, preferably disabling the upscaler through a documented
-installed setting, then repeat the bounded play-control probe.
+advanced through 1 June at maximum speed before the same FSR stack recurs. The
+installed Graphics UI shows upscaling was already disabled; it has now supplied
+a separately verified 70-percent render scale. Run the bounded play-control
+probe on that new profile before judging the remaining renderer failure.
 
 ## 2026-07-20 - M5 Nubian-gold key lacks a defensible AD 1 site-date match
 
