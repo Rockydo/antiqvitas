@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-20 - M5 Via Aemilia corridor
+
+- Extended the generated Roman road network from 37 to 41 source-labelled segments, connecting the available Rimini, Bologna, Modena, Parma, and Piacenza anchors along the documented Via Aemilia corridor.
+- The two links that bridge missing map anchors are expressly contested. `make validate` and enabled-mod smoke are green with zero new error-log lines.
+
+Next: continue the remaining independent M5 economy surfaces.
+
 ## 2026-07-20 - M5 Via Flaminia eastern branch
 
 - Extended the generated Roman road network from 36 to 37 source-labelled segments with the explicitly contested Narni-Spoleto high-level proxy for Via Flaminia's eastern branch.

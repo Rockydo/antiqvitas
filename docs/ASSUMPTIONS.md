@@ -1,5 +1,19 @@
 # Historical Assumptions
 
+## 2026-07-20 - Via-Aemilia corridor uses documented endpoints and explicit map proxies
+
+The Via Aemilia connected Rimini to Piacenza from 187 BCE; the available
+Ministry record also identifies its Bologna-Modena-Reggio Emilia axis. The
+installed AD 1 map has Roman-controlled Rimini, Bologna, Modena, Parma, and
+Piacenza, but not Reggio Emilia or the smaller stations. The network therefore
+uses four endpoint links, marking Rimini-Bologna and Modena-Parma contested
+high-level proxies; it does not claim a survey-grade reconstruction. Sources
+weighed: plan sections 8.1 and 12.2; ORBIS; Italian Ministry of Culture,
+["Città romana di Ariminum /
+Rimini"](https://catalogo.cultura.gov.it/detail/ibc/ArchaeologicalProperty/261525)
+and ["La storia infinita della via
+Emilia"](https://asmo.cultura.gov.it/mostre/archivio-mostre/la-storia-infinita-della-via-emilia).
+
 ## 2026-07-20 - Via-Flaminia eastern branch uses a high-level Narni-Spoleto proxy
 
 The Italian Ministry of Culture describes the Via Flaminia's eastern branch as
