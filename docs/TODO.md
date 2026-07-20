@@ -202,11 +202,12 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 43 Claudian Invasion of Britain event illustration through a landscape-only Channel-coast treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 48 Xiongnu Split event illustration through a non-literal eastern-steppe fragmentation-context treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 54 Silphium Extinction event illustration through a non-botanical Cyrenaican ecological-context treatment.
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 58 Rome-Parthia War over Armenia event illustration through a non-literal late-autumn Armenian frontier-context treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 60 Boudica's Revolt event illustration through a landscape-only eastern-Britain treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 64 Great Fire of Rome event illustration through a restrained non-literal urban context treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 65 Buddhism at the Han Court event illustration through a non-literal Eastern Han scholarly-courtyard context treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 66 Tiridates' Coronation event illustration through a non-literal Armenian highland diplomacy-context treatment.
-- [x] Render and review the maintained M11 event-art contact sheet (19 retained 1080x440 masters).
+- [x] Render and review the maintained M11 event-art contact sheet (20 retained 1080x440 masters).
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 
