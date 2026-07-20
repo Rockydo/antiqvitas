@@ -2,7 +2,7 @@
 
 ## 2026-07-20 - M12 vanilla-runtime quarantine cannot reach a clean menu through filename overlays alone
 
-Status: **deferred after four source-verified smoke variants; green baseline restored.**
+Status: **partially resolved; exact source-preserving event quarantine is expanding.**
 
 The AD 1 observer exposed dated vanilla startup references.  Four generated
 same-filename overlay variants were tested against the installed build:
@@ -26,11 +26,14 @@ diagnostics, contradicting the total-conversion requirement.  No game install
 file was modified.  All failed variants reached the rendered menu; evidence is
 in the timestamped smoke logs under the configured user directory.
 
-Recovery: identify an installed, engine-supported total-replacement mechanism
-for the coupled event/action/effect graph, or build a separately validated
-minimal generic-system replacement from local script contracts.  Until then,
-retain the previously accepted menu-smoke baseline, do not claim observer
-runtime proof for M3/M5--M10/M12, and continue independent static work.
+The next source-preserving pilot retained all 112 definitions in the installed
+`random_event.txt`, replaced every direct eligibility trigger with
+`always = no`, removed direct historical schedulers, and normalized only
+out-of-period script dates through `tools/dates.py`.  It preserved event scope,
+option, and variable/effect contracts and passed both full static validation and
+a settled enabled-mod smoke with zero new lines.  This is the proven expansion
+path; it remains incomplete until the whole vanilla event inventory and its
+coupled situation/disaster/formable contracts are covered and observer-tested.
 
 ## 2026-07-20 - Fully settled observer sessions remain intermittently Vulkan-memory-bound
 
