@@ -12,6 +12,7 @@ validate:
 	.venv/Scripts/python.exe tools/generate_rgo_remap.py --check
 	.venv/Scripts/python.exe tools/m7_war.py --check
 	.venv/Scripts/python.exe tools/m8_knowledge.py --check
+	.venv/Scripts/python.exe tools/m9_diplomacy.py --check
 	.venv/Scripts/python.exe tools/generate_country_definitions.py --check
 	.venv/Scripts/python.exe tools/capital_mapper.py --check
 	.venv/Scripts/python.exe tools/extract_map_coordinates.py --check
