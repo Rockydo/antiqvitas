@@ -424,6 +424,30 @@ recreate the narrow source-checked overlay and test it once before committing.
 Keep generic economy, war, stability, estate, and research hints; the separate
 tutorial audit confirms all four installed tutorial chains are non-automatic.
 
+## 2026-07-20 - Observer confirmation root cause is known but untestable
+
+Status: **deferred after two renderer-bound smoke attempts; no game-rule
+overlay is retained.**
+
+Visual inspection of `docs/screens/M7_war_probe/m7_observer_confirm_retry.png`
+shows that the prior Observer confirmation did receive input: it reports
+"Country change is prohibited by game rule." The installed
+`country_change` rule defaults to `country_change_prohibited`, so the old
+normalized-click and Enter attempts could not start an Observer session.
+
+A narrow exact-name overlay was built that retained every installed game-rule
+definition and changed only that default to `country_change_allowed`. Static
+validation passed. Both enabled-mod smoke attempts then exited before the menu
+at the established Vulkan `ErrorOutOfDeviceMemory` condition, with no game-rule
+parse or ANTIQVITAS error. A targeted shader/news-cache cleanup was attempted
+but the execution environment disallowed that destructive cache operation.
+The uncommitted overlay was removed and the last menu-smoked tree restored.
+
+Recovery: after a material graphics/driver or permitted cache-reset change
+produces stable menu launches, recreate and menu-smoke the one-line
+source-checked game-rule overlay, then replay the Observer selection. This is
+a distinct recovery path from the already-exhausted click/Enter input attempts.
+
 ## 2026-07-20 - Two institution-icon prompts returned no image artifact
 
 Status: **resolved through reviewed shared-asset fallbacks; no game-visible
