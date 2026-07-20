@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Via-Popilia corridor is a limited Rimini-Rovigo regional proxy
+
+The Ministry record describes the Via Popilia as a 132 BCE route from Rimini
+through Ravenna and Adria toward Altino. The installed AD 1 map lacks Adria,
+Altino, and intermediate stations, so `rimini = ravenna` and `ravenna = rovigo`
+are contested high-level links only. They do not identify Rovigo with Adria,
+claim a surveyed trace, or imply a pre-period Venice. Sources weighed: plan
+sections 8.1 and 12.2; ORBIS; Italian Ministry of Culture, ["Città romana di
+Ariminum /
+Rimini"](https://catalogo.cultura.gov.it/detail/ibc/ArchaeologicalProperty/261525).
+
 ## 2026-07-20 - Via-Aemilia corridor uses documented endpoints and explicit map proxies
 
 The Via Aemilia connected Rimini to Piacenza from 187 BCE; the available
