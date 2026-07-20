@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-20 - Observer retry remains renderer-bound after driver recovery
+
+- A clean, fully settled session without inherited crash-reporter windows
+  reached the engine's portrait-colour-palette phase and then exited with the
+  local Vulkan `ErrorOutOfDeviceMemory` assertion.
+- The same very-low 960x540 profile also has two 90-second clean menu smokes,
+  so this is intermittent renderer/device-memory instability rather than an
+  ANTIQVITAS content or rule parse failure. The updated evidence and recovery
+  boundary are recorded in `BLOCKERS.md`.
+
+Next: preserve the observer-dependent gates as blocked and continue the
+independent M12 hint audit when a clean smoke launch is available.
+
 ## 2026-07-20 - Game-driver very-low-profile repair
 
 - Local debug logs revealed that the driver was writing an invalid numeric

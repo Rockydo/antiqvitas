@@ -1,10 +1,19 @@
 # Known Issues
 
+## Intermittent Vulkan device-memory failures during fully settled launches
+
+On the configured RTX 3080, EU5 intermittently exits during late menu resource
+loading with `gfx_vk_master_context.cpp:2227 / ErrorOutOfDeviceMemory`, even
+with the driver-enforced 960x540 very-low profile. Other fully settled
+enabled-mod menu smokes pass with zero new error-log lines. This presently
+prevents a reliable observer run; see `BLOCKERS.md` for the exact recovery
+boundary.
+
 ## M12 observer and renderer reliability remain release blockers
 
-The final observer-to-476 acceptance run has not been achieved. The driver
-cannot yet dismiss the Observer confirmation after two distinct bounded input
-methods, and repeated menu launches can intermittently exit at Vulkan's
+The final observer-to-476 acceptance run has not been achieved. The observer
+country-change default is now enabled by a menu-smoked exact-name overlay, but
+repeated fully settled menu launches can still exit at Vulkan's
 `ErrorOutOfDeviceMemory` assertion without an ANTIQVITAS script error. The
 full 40-action M11 registry has a successful enabled-mod menu smoke, so this is
 not evidence of a message-registry failure. Do not treat this development build
@@ -25,12 +34,12 @@ The AD 1-476 layers have clean enabled-mod menu smoke and no new `error.log`
 lines, including the generated AD 48 Northern-Xiongnu, AD 192 Champa, AD 370
 Hunnic, AD 395 Eastern-Roman, AD 418 Visigothic, and AD 429 Vandal dynamic
 country contracts. Their
-observer-to-era playback cannot yet be run because the current driver's
-Observer confirmation has already failed two distinct bounded inputs
-(normalized click and foreground-safe Enter). Repeating that unchanged path
-would not add evidence; after a material driver or UI change, run the M10
-event-window observer route and capture the resulting situations and events.
-See `docs/playtests/M10_001_096.md`, `docs/playtests/M10_097_199.md`,
+observer-to-era playback cannot yet be run because fully settled game launches
+remain intermittently Vulkan-memory-bound. The country-change confirmation is
+no longer the blocker: its exact-name rule overlay is menu-smoked. Retry the
+M10 event-window observer route only after a material renderer or memory-state
+change, then capture the resulting situations and events. See
+`docs/playtests/M10_001_096.md`, `docs/playtests/M10_097_199.md`,
 `docs/playtests/M10_200_299.md`, `docs/playtests/M10_300_399.md`,
 `docs/playtests/M10_400_476.md`, and `BLOCKERS.md`.
 
