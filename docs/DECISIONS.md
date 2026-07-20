@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M5 reuses one verified harbor contract across ancient ports
+
+The installed `protected_harbor` building already loads cleanly at Alexandria.
+M5 uses the same country/tag/location/level manager shape for six additional
+source-led market anchors rather than inventing a separate antiquity harbor
+type or placing later-era special buildings. The start renderer validates that
+each target is an existing controlled M5 urban node and rejects a duplicate
+building/location pair.
+
 ## 2026-07-20 - Third-century history extends the M6 adapters only where a current changes them
 
 The smoke harness now configures UTF-8 replacement output before reporting a

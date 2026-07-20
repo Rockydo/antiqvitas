@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-20 - M5 ancient harbor infrastructure
+
+- Added source-labelled protected-harbor tiers at Gades, Massilia, Panyu,
+  Barygaza/Khambat, Muziris/Kodungallur, and Adulis/Massawa. The six rows reuse
+  the locally verified building-manager contract and are tied to existing M5
+  market and urban anchors.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines.
+  The RGO runtime blocker remains explicit; this adds an independent building
+  surface rather than treating static remaps as working trade flows.
+
+Next: continue independent M5 building, urban, road, and development coverage.
+
 ## 2026-07-20 - M10 finale historical currents
 
 - Added a generator-owned AD 400-476 layer with all thirteen final ledger

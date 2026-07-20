@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - M5 harbor tiers are market-anchor proxies, not port surveys
+
+Gades, Massilia, Panyu, Barygaza, Muziris, and Adulis are source-labelled
+ancient trade and market anchors. The installed `protected_harbor` building is
+used as a common, engine-valid tier for their maritime function. It does not
+claim the same built form, capacity, ownership regime, seasonal reliability,
+or archaeological footprint for all six ports; the three geographic proxy
+locations retain their ledger qualification. Sources weighed: plan sections
+12.2-12.3; `PER`; `BHR`; P8.1 and P8.3-P8.5. [secure broad port function;
+contested technical building equivalence]
+
 ## 2026-07-20 - Third-century transformations use bounded political anchors
 
 The source record for the Alemanni cautions that they were a loose and
