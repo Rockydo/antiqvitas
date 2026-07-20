@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Silphium-extinction art is generic Cyrenaican ecology
+
+The image is a limestone upland above the Mediterranean with low scrub,
+sun-bleached stones, wind-bent grass, and tiny unidentified wildflowers. It
+identifies no silphium specimen, field, crop, harvest, trade, town, port,
+person, date, mechanism, or outcome. The morphology and historical decline of
+silphium cannot be safely reconstructed from the event label, so the image
+deliberately excludes named plants, diagrams, symbols, and fantasy flowers.
+Sources weighed: P8.5; plan sections 9, 12.1, and 20. [secure current context;
+illustrative composition only]
+
 ## 2026-07-20 - Xiongnu-split art is generic eastern-steppe context
 
 The image is an unoccupied eastern Eurasian steppe with a braided stream, low
