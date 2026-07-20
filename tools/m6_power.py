@@ -518,6 +518,17 @@ antq_principate = {
 	years = 2
 }
 
+antq_dominate = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_crown_estate_power = 0.15
+		monthly_towards_centralization = societal_value_monthly_move
+		country_cabinet_efficiency = 0.025
+	}
+	years = 2
+}
+
 antq_han_imperial_bureaucracy = {
 	major = yes
 	government = monarchy
@@ -575,6 +586,17 @@ antq_parthian_king_of_kings = {
 	country_modifier = {
 		global_nobles_estate_power = 0.15
 		monthly_towards_decentralization = societal_value_monthly_move
+	}
+	years = 2
+}
+
+antq_sassanid_centralized_monarchy = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_crown_estate_power = 0.15
+		monthly_towards_centralization = societal_value_monthly_move
+		land_morale_modifier = 0.025
 	}
 	years = 2
 }
@@ -710,7 +732,22 @@ def law_definitions(data: PowerData) -> str:
         lines.extend(f"\t\t\t{key} = {value}" for key, value in assignments(row["modifiers"], f"law {row['law']}"))
         lines.extend(("\t\t}", "\t\tyears = 2", "\t\testate_preferences = {"))
         lines.extend(f"\t\t\t{estate}" for estate in pipe_values(row["estate_preferences"], f"law {row['law']} estate preferences"))
-        lines.extend(("\t\t}", "\t}", "}", ""))
+        lines.extend(("\t\t}", "\t}"))
+        if row["law"] == "antq_citizenship_law":
+            lines.extend((
+                "\tantq_universal_citizenship = {",
+                "\t\tcountry_modifier = {",
+                "\t\t\tglobal_pop_assimilation_speed_modifier = 0.02",
+                "\t\t\tmonthly_towards_centralization = societal_value_minor_monthly_move",
+                "\t\t}",
+                "\t\tyears = 2",
+                "\t\testate_preferences = {",
+                "\t\t\tburghers_estate",
+                "\t\t\tnobles_estate",
+                "\t\t}",
+                "\t}",
+            ))
+        lines.extend(("}", ""))
     return "\n".join(lines)
 
 
@@ -720,6 +757,8 @@ def localization(data: PowerData, language: str) -> str:
     entries.extend((
         ("antq_principate", "Principate"),
         ("antq_principate_desc", "A republic-facade monarchy centred on the princeps and his auctoritas."),
+        ("antq_dominate", "Dominate"),
+        ("antq_dominate_desc", "A later Roman monarchy emphasizing central court authority and regional administration."),
         ("antq_han_imperial_bureaucracy", "Han Imperial Bureaucracy"),
         ("antq_han_imperial_bureaucracy_desc", "A palace-centred bureaucracy whose Mandate of Heaven is represented through legitimacy and effective rule."),
         ("antq_lankan_kingdom", "Anuradhapura Kingship"),
@@ -732,6 +771,8 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_indo_greek_kingship_desc", "The final eastern-Punjab Indo-Greek court, supported by a compact with its urban elites."),
         ("antq_parthian_king_of_kings", "Parthian King of Kings"),
         ("antq_parthian_king_of_kings_desc", "An Arsacid monarchy balancing the royal court with powerful Iranian noble houses."),
+        ("antq_sassanid_centralized_monarchy", "Sassanid Centralized Monarchy"),
+        ("antq_sassanid_centralized_monarchy_desc", "A centralized Iranian monarchy that supersedes the Arsacid great-house adapter after the Sassanid revolution."),
         ("antq_client_monarchy", "Client Monarchy"),
         ("antq_client_monarchy_desc", "A local royal court whose position is shaped by imperial patronage."),
         ("antq_parthian_subkingdom", "Parthian Sub-Kingdom"),
@@ -758,6 +799,10 @@ def localization(data: PowerData, language: str) -> str:
     for row in data.laws:
         entries.extend(((row["law"], row["name"]), (f"{row['law']}_desc", row["description"])))
         entries.extend(((row["option"], row["option_name"]), (f"{row['option']}_desc", row["option_description"])))
+    entries.extend((
+        ("antq_universal_citizenship", "Universal Citizenship"),
+        ("antq_universal_citizenship_desc", "A legal-status adapter for Caracalla's AD 212 grant of citizenship to free imperial inhabitants."),
+    ))
     return "\n".join([f"l_{language}:", *(f' {key}: "{value}"' for key, value in entries), ""])
 
 

@@ -127,6 +127,17 @@ antq_citizenship_law = {
 			burghers_estate
 		}
 	}
+	antq_universal_citizenship = {
+		country_modifier = {
+			global_pop_assimilation_speed_modifier = 0.02
+			monthly_towards_centralization = societal_value_minor_monthly_move
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			nobles_estate
+		}
+	}
 }
 
 antq_recruitment_law = {
