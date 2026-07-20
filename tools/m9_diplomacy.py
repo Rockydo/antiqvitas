@@ -10,7 +10,9 @@ the one date-gated contract.  Keeping the date here forces it through
 from __future__ import annotations
 
 import argparse
+import csv
 from dataclasses import dataclass
+import json
 from pathlib import Path
 
 from dates import AntqDate, M2_MIRROR_LANGUAGES
@@ -20,7 +22,12 @@ SUBJECT_OUTPUT = ROOT / "in_game/common/subject_types/00_antiquitas_m9_subjects.
 CB_OUTPUT = ROOT / "in_game/common/casus_belli/00_antiquitas_m9.txt"
 WARGOAL_OUTPUT = ROOT / "in_game/common/wargoals/00_antiquitas_m9.txt"
 PEACE_OUTPUT = ROOT / "in_game/common/peace_treaties/00_antiquitas_m9.txt"
+IO_OUTPUT = ROOT / "in_game/common/international_organizations/00_antiquitas_m9.txt"
+BIAS_OUTPUT = ROOT / "in_game/common/biases/00_antiquitas_m9.txt"
 LOC_ROOT = ROOT / "main_menu/localization"
+ROSTER = ROOT / "docs/world_1ad/polities.csv"
+TAG_MAP = ROOT / "docs/world_1ad/tag_map.json"
+REGIONS = ROOT / "docs/vanilla_symbols/regions.json"
 
 # The historical relations themselves and their citations are in
 # docs/world_1ad/subjects.csv.  These adapters are deliberately keyed by the
@@ -32,6 +39,7 @@ START_ADAPTERS = {
 }
 FOEDERATI_UNLOCK = AntqDate.parse("382.1.1")
 HOLY_SUPPRESSION_UNLOCK = AntqDate.parse("325.1.1")
+CAMPAIGN_START = AntqDate.parse("1.1.1")
 
 
 @dataclass(frozen=True)
@@ -56,6 +64,77 @@ class PeaceTreaty:
     label: str
     description: str
     script: str
+
+
+@dataclass(frozen=True)
+class InternationalOrganization:
+    key: str
+    label: str
+    description: str
+    script: str
+
+
+# Discovery profiles encode the plan's bounded knowledge horizons.  Each is a
+# set of installed region keys rather than a claim that every settlement,
+# route, or polity within that region was equally well known.
+ROMAN_OIKOUMENE = (
+    "italy_region", "iberia_region", "france_region", "north_german_region",
+    "south_german_region", "great_britain_region", "ireland_region",
+    "scandinavian_region", "baltic_region", "balkan_region", "carpathia_region",
+    "maghreb_region", "egypt_region", "nubia_region", "ethiopia_region",
+    "somalia_region", "swahili_coast_region", "arabia_region", "crescent_region",
+    "anatolia_region", "caucasus_region", "persia_region", "khorasan_region",
+    "western_india_region", "central_india_region", "deccan_region",
+    "hindustan_region", "bengal_region", "indian_ocean_region", "east_china_region",
+)
+HAN_HORIZON = (
+    "north_china_region", "east_china_region", "south_china_region", "west_china_region",
+    "xinjiang_region", "tibet_region", "mongolia_region", "manchuria_region",
+    "korea_region", "steppes_region", "khorasan_region", "persia_region",
+    "crescent_region", "anatolia_region",
+)
+INDIAN_OCEAN_HORIZON = (
+    "arabia_region", "crescent_region", "persia_region", "khorasan_region",
+    "western_india_region", "central_india_region", "deccan_region", "hindustan_region",
+    "bengal_region", "indian_ocean_region", "indochina_region", "indonesia_region",
+    "south_china_region", "east_china_region",
+)
+REGIONAL_DISCOVERY = {
+    "Africa": ("maghreb_region", "sahel_region", "nubia_region", "ethiopia_region", "somalia_region"),
+    "Anatolia": ("anatolia_region",),
+    "Andes": ("andes_region",),
+    "Arabia": ("arabia_region", "crescent_region", "persia_region", "indian_ocean_region"),
+    "Balkans": ("balkan_region",),
+    "Baltic": ("baltic_region",),
+    "Britain": ("great_britain_region", "ireland_region"),
+    "Caribbean-Amazon": ("caribbean_region", "brazil_region"),
+    "Caucasus": ("caucasus_region", "anatolia_region", "persia_region"),
+    "Central Asia": ("steppes_region", "xinjiang_region", "khorasan_region", "persia_region"),
+    "China": ("north_china_region", "east_china_region", "south_china_region", "west_china_region"),
+    "Danube": ("balkan_region", "carpathia_region"),
+    "Eastern Europe": ("ruthenia_region", "russian_region"),
+    "Finland": ("scandinavian_region",),
+    "Germania": ("north_german_region", "south_german_region", "baltic_region"),
+    "India": INDIAN_OCEAN_HORIZON,
+    "Iran": ("persia_region", "khorasan_region", "caucasus_region", "crescent_region"),
+    "Ireland": ("ireland_region", "great_britain_region"),
+    "Japan": ("japan_region", "korea_region", "east_china_region"),
+    "Korea": ("korea_region", "manchuria_region", "north_china_region"),
+    "Lanka": INDIAN_OCEAN_HORIZON,
+    "Levant": ("crescent_region", "anatolia_region", "arabia_region", "egypt_region"),
+    "Mesoamerica": ("mesoamerica_region",),
+    "Mesopotamia": ("crescent_region", "persia_region", "arabia_region"),
+    "North America": ("alaska_region", "canada_region", "great_lakes_region", "great_plains_region", "east_coast_region", "west_coast_region"),
+    "Northern Andes": ("colombia_region", "andes_region"),
+    "Oceania": ("melanesia_region", "micronesia_region", "polynesia_region"),
+    "Pontic": ("steppes_region", "caucasus_region", "balkan_region"),
+    "Rome": ROMAN_OIKOUMENE,
+    "Scandinavia": ("scandinavian_region", "baltic_region", "ireland_region"),
+    "Southeast Asia": ("indochina_region", "indonesia_region", "south_china_region", "indian_ocean_region"),
+    "Steppe": ("steppes_region", "mongolia_region", "xinjiang_region", "north_china_region", "manchuria_region"),
+    "Tarim": ("xinjiang_region", "west_china_region", "north_china_region", "steppes_region", "khorasan_region"),
+    "West Africa": ("sahel_region", "guinea_region", "maghreb_region"),
+}
 
 
 def standard_contract(
@@ -398,10 +477,210 @@ def peace_script(records: tuple[PeaceTreaty, ...]) -> str:
     return "\n".join(blocks)
 
 
+def leader_io(*, map_visible: bool, leader_modifier: tuple[str, ...]) -> str:
+    """The locally verified minimal leader-country IO contract."""
+    lines = [
+        "\thas_target = no",
+        "\tunique = yes",
+        "\texpel_members_who_are_targets_of_other_members = no",
+        f"\tshow_on_diplomatic_map = {'yes' if map_visible else 'no'}",
+        "\thas_leader_country = yes",
+        "\tleader_type = country",
+        "\tleader_color = define:NMapColors|INTERNATIONAL_ORGANIZATION_LEADER_COLOR",
+        "\tcreate_visible_trigger = { always = no }",
+        "\tinvite_visible_trigger = { always = no }",
+        "\tcan_declare_war = { always = yes }",
+        "\tcan_join_trigger = { always = no }",
+        "\tcan_leave_trigger = { always = no }",
+        "\tauto_leave_trigger = { always = no }",
+        "\tauto_disband_trigger = { always = no }",
+        "\ton_joined = {",
+        "\t}",
+        "\ton_left = {",
+        "\t}",
+        "\tvariables = {",
+        "\t}",
+    ]
+    if leader_modifier:
+        lines[10:10] = ("\tleader_modifier = {", *leader_modifier, "\t}")
+    return "\n".join(lines)
+
+
+def organization_records() -> tuple[InternationalOrganization, ...]:
+    return (
+        InternationalOrganization(
+            "antq_han_tributary_system", "Han Tributary System",
+            "An AD 1 network of tribute, recognition, and frontier diplomacy centred on the Han court.",
+            "\n".join((
+                leader_io(map_visible=True, leader_modifier=("\t\tmonthly_prestige = 0.05", "\t\tdiplomatic_capacity_modifier = 0.10")),
+                "\tonly_leader_country_joins_defensive_wars = yes",
+                "\tjoin_defensive_wars_auto_call = {",
+                "\t\tscope:target ?= { NOT = { is_member_of_international_organization = root } }",
+                "\t}",
+            )),
+        ),
+        InternationalOrganization(
+            "antq_xiongnu_confederation", "Xiongnu Confederation",
+            "The Chanyu's confederation is represented separately from the Xiongnu country to preserve its later shatter-and-reform path.",
+            leader_io(map_visible=True, leader_modifier=("\t\tmonthly_prestige = 0.05", "\t\tmonthly_tribal_cohesion = 0.03")),
+        ),
+        InternationalOrganization(
+            "antq_panhellenic_games", "Panhellenic Games",
+            "A prestige institution maintained as a light, non-territorial organization until its late-antique sunset.",
+            "\n".join((
+                "\thas_target = no",
+                "\tunique = yes",
+                "\texpel_members_who_are_targets_of_other_members = no",
+                "\tshow_on_diplomatic_map = no",
+                "\thas_leader_country = no",
+                "\tcreate_visible_trigger = { always = no }",
+                "\tinvite_visible_trigger = { always = no }",
+                "\tcan_declare_war = { always = yes }",
+                "\tcan_join_trigger = { always = no }",
+                "\tcan_leave_trigger = { always = no }",
+                "\tauto_leave_trigger = { always = no }",
+                "\tauto_disband_trigger = { always = no }",
+                "\ton_joined = {",
+                "\t}",
+                "\ton_left = {",
+                "\t}",
+                "\tvariables = {",
+                "\t}",
+            )),
+        ),
+        InternationalOrganization(
+            "antq_christian_church", "Christian Church",
+            "A dormant scaffold for the post-Nicaea council and orthodoxy system; it has no AD 1 instance.",
+            "\n".join((
+                "\thas_target = no",
+                "\tunique = yes",
+                "\texpel_members_who_are_targets_of_other_members = no",
+                "\tshow_on_diplomatic_map = no",
+                "\thas_leader_country = no",
+                "\tcreate_visible_trigger = { always = no }",
+                "\tinvite_visible_trigger = { always = no }",
+                "\tcan_declare_war = { always = yes }",
+                "\tcan_join_trigger = { always = no }",
+                "\tcan_leave_trigger = { always = no }",
+                "\tauto_leave_trigger = { always = no }",
+                "\tauto_disband_trigger = { always = no }",
+                "\ton_joined = {",
+                "\t}",
+                "\ton_left = {",
+                "\t}",
+                "\tvariables = {",
+                "\t}",
+            )),
+        ),
+    )
+
+
+def organization_script(records: tuple[InternationalOrganization, ...]) -> str:
+    blocks = [
+        "# Generated by tools/m9_diplomacy.py --write; M9 ancient international organizations.",
+        "# Start membership and all future dated activation are separate from these type contracts.",
+        "",
+    ]
+    for record in records:
+        blocks.extend((f"{record.key} = {{", record.script, "}", ""))
+    return "\n".join(blocks)
+
+
+def io_bias_script(records: tuple[InternationalOrganization, ...]) -> str:
+    values = {
+        "antq_han_tributary_system": 5,
+        "antq_xiongnu_confederation": 10,
+        "antq_panhellenic_games": 0,
+        "antq_christian_church": 0,
+    }
+    blocks = [
+        "# Generated by tools/m9_diplomacy.py --write; required IO member-opinion biases.",
+        "",
+    ]
+    for record in records:
+        blocks.extend((f"io_opinion_{record.key} = {{", f"\tvalue = {values[record.key]}", "}", ""))
+    return "\n".join(blocks)
+
+
+def engine_tag_map() -> dict[str, str]:
+    return {
+        entry["design_tag"]: entry["engine_tag"]
+        for entry in json.loads(TAG_MAP.read_text(encoding="utf-8-sig"))["entries"]
+    }
+
+
+def international_organization_manager() -> str:
+    """Render only source-bounded AD 1 IO instances.
+
+    The one-member Xiongnu instance is intentional: its country is the
+    attested confederation at the campaign boundary, while constituent
+    membership is left to the M10 fracture/reform events rather than invented.
+    Rome is a non-leader technical custodian for a non-territorial Games IO;
+    no claim about a uniform Roman membership is implied.
+    """
+    tags = engine_tag_map()
+    start = CAMPAIGN_START.engine()
+    entries = (
+        ("antq_han_tributary_system", ("HAN", "KHT", "KUC", "KAS", "LOU", "TUR"), "HAN", "hsv360 { 8 72 82 }"),
+        ("antq_xiongnu_confederation", ("XIO",), "XIO", "hsv360 { 34 54 58 }"),
+        ("antq_panhellenic_games", ("ROM",), None, "hsv360 { 220 18 74 }"),
+    )
+    blocks = [
+        "# Generated by tools/m9_diplomacy.py through generate_start_mirror.py --write.",
+        "# M9 AD 1 organizations; source limits and technical adapters: docs/m9/.",
+        "international_organization_manager = {",
+    ]
+    for io_type, members, leader, color in entries:
+        blocks.extend((
+            "\tadd_international_organization = {",
+            f"\t\ttype = {io_type}",
+            f"\t\tcreation_date = {start}",
+            f"\t\tmap_color = {color}",
+            f"\t\tmembers = {{ {' '.join(tags[tag] for tag in members)} }}",
+        ))
+        if leader:
+            blocks.append(f"\t\tleader = {tags[leader]}")
+        blocks.extend(("\t}", ""))
+    blocks.append("}")
+    return "\n".join(blocks) + "\n"
+
+
+def discovery_regions(row: dict[str, str]) -> tuple[str, ...]:
+    if row["tag"] == "ROM":
+        return ROMAN_OIKOUMENE
+    if row["tag"] == "HAN":
+        return HAN_HORIZON
+    try:
+        return REGIONAL_DISCOVERY[row["region"]]
+    except KeyError as exc:
+        raise ValueError(f"no M9 discovery profile for {row['tag']} region {row['region']}") from exc
+
+
+def validate_discovery() -> int:
+    valid_regions = set(json.loads(REGIONS.read_text(encoding="utf-8-sig")))
+    with ROSTER.open(encoding="utf-8-sig", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    failures: list[str] = []
+    for row in rows:
+        profile = discovery_regions(row)
+        if not profile:
+            failures.append(f"{row['tag']} has an empty discovery profile")
+        unknown = sorted(set(profile) - valid_regions)
+        if unknown:
+            failures.append(f"{row['tag']} has unknown discovery regions {unknown}")
+        forbidden = {"north_atlantic_ocean_region", "north_pacific_ocean_region", "south_atlantic_region", "south_pacific_ocean_region"}
+        if set(profile) & forbidden:
+            failures.append(f"{row['tag']} crosses an ocean discovery boundary")
+    if failures:
+        raise ValueError("\n".join(failures))
+    return len(rows)
+
+
 def localization(
     subjects: tuple[SubjectContract, ...],
     cbs: tuple[CasusBelli, ...],
     treaties: tuple[PeaceTreaty, ...],
+    organizations: tuple[InternationalOrganization, ...],
     language: str,
 ) -> str:
     entries: list[tuple[str, str]] = []
@@ -421,6 +700,15 @@ def localization(
             (f"{record.key}_entry", record.label),
             (f"{record.key}_entry_short", record.label),
         ))
+    for record in organizations:
+        entries.extend((
+            (record.key, record.label),
+            (f"{record.key}_desc", record.description),
+            (f"io_opinion_{record.key}", f"{record.label} Member Opinion"),
+            (f"diplomatic_status_{record.key}_name", record.label),
+            (f"diplomatic_status_{record.key}_tooltip", f"#T {record.label}#!\\nThis country is a member of the {record.label}."),
+            (f"{record.key}_list_who_tt", f"$WHO$ is in the {record.label} with $LIST$"),
+        ))
     for key, label, description in (
         ("antq_punitive_superiority", "Win battles", "Win battles to demonstrate punitive superiority."),
         ("antq_raid_superiority", "Win raids", "Win battles while conducting a limited raid."),
@@ -438,14 +726,19 @@ def localization(
 def outputs(subjects: tuple[SubjectContract, ...]) -> dict[Path, str]:
     cbs = cb_records()
     treaties = peace_records()
+    organizations = organization_records()
     rendered = {
         SUBJECT_OUTPUT: subject_script(subjects),
         CB_OUTPUT: cb_script(cbs),
         WARGOAL_OUTPUT: wargoal_script(),
         PEACE_OUTPUT: peace_script(treaties),
+        IO_OUTPUT: organization_script(organizations),
+        BIAS_OUTPUT: io_bias_script(organizations),
     }
     for language in ("english", *M2_MIRROR_LANGUAGES):
-        rendered[LOC_ROOT / language / f"antq_m9_subjects_l_{language}.yml"] = localization(subjects, cbs, treaties, language)
+        rendered[LOC_ROOT / language / f"antq_m9_subjects_l_{language}.yml"] = localization(
+            subjects, cbs, treaties, organizations, language
+        )
     return rendered
 
 
@@ -466,6 +759,14 @@ def validate(records: tuple[SubjectContract, ...]) -> None:
     treaty_keys = [record.key for record in peace_records()]
     if len(treaty_keys) != len(set(treaty_keys)):
         raise ValueError("M9 peace-treaty keys must be unique")
+    io_keys = [record.key for record in organization_records()]
+    if len(io_keys) != len(set(io_keys)):
+        raise ValueError("M9 international-organization keys must be unique")
+    tags = engine_tag_map()
+    required_start_tags = {"ROM", "HAN", "KHT", "KUC", "KAS", "LOU", "TUR", "XIO"}
+    if missing := sorted(required_start_tags - set(tags)):
+        raise ValueError(f"M9 IO start tags are absent from the tag map: {', '.join(missing)}")
+    validate_discovery()
 
 
 def write(records: tuple[SubjectContract, ...]) -> None:
@@ -488,7 +789,8 @@ def check(records: tuple[SubjectContract, ...]) -> bool:
         return False
     print(
         f"m9_diplomacy: PASS ({len(records)} subject contracts; {len(cb_records())} casus belli; "
-        f"{len(peace_records())} peace treaties; foederati unlock {FOEDERATI_UNLOCK.engine()})"
+        f"{len(peace_records())} peace treaties; {len(organization_records())} IO types; "
+        f"{validate_discovery()} discovery profiles; foederati unlock {FOEDERATI_UNLOCK.engine()})"
     )
     return True
 

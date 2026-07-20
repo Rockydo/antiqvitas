@@ -24,7 +24,11 @@ from generate_country_definitions import historical_profile_for
 from m6_power import character_manager, dynasty_manager, government_block, load_power_data
 from m7_war import load_units, tag_map as m7_tag_map, validate_start_ledgers
 from m8_knowledge import institution_manager as m8_institution_manager, technology_level as m8_technology_level
-from m9_diplomacy import START_ADAPTERS
+from m9_diplomacy import (
+    START_ADAPTERS,
+    discovery_regions as m9_discovery_regions,
+    international_organization_manager as m9_international_organization_manager,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "main_menu/setup/start"
@@ -73,7 +77,6 @@ STATIC_FILES = {
     "08_institutions.txt": "locations = {\n}\n",
     "11_art.txt": "work_of_art_manager = {\n}\n",
     "13_religion.txt": "building_manager = {\n}\n",
-    "15_international_organizations.txt": "international_organization_manager = {\n}\n",
     "16_wars.txt": "war_manager = {\n}\n",
     "18_opinions.txt": "diplomacy_manager = {\n}\n",
     "19_diseases.txt": "disease_outbreak_manager = {\n}\n",
@@ -645,6 +648,9 @@ def country_manager() -> tuple[str, int, int]:
             controlled += len(locations)
         lines.append(f'\t\t\tinclude = "{template}"')
         lines.append(f'\t\t\tstarting_technology_level = {m8_technology_level(row)}')
+        lines.append("\t\t\tdiscovered_regions = {")
+        lines.extend(f"\t\t\t\t{region}" for region in m9_discovery_regions(row))
+        lines.append("\t\t\t}")
         if row["tag"] in power.governments:
             lines.extend(government_block(power.governments[row["tag"]], power.ruler_terms))
         else:
@@ -736,6 +742,7 @@ def generated_files() -> tuple[dict[str, str], int, int, int, int, Decimal, int,
             "10_countries.txt": countries,
             "12_diplomacy.txt": diplomacy,
             "14_development.txt": development,
+            "15_international_organizations.txt": m9_international_organization_manager(),
             "27_armies.txt": units,
         },
         count,

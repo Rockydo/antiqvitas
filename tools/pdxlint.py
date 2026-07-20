@@ -72,6 +72,8 @@ def expected_bom(path: Path) -> bool | None:
         or "/in_game/common/casus_belli/" in f"/{relative}"
         or "/in_game/common/wargoals/" in f"/{relative}"
         or "/in_game/common/peace_treaties/" in f"/{relative}"
+        or "/in_game/common/international_organizations/" in f"/{relative}"
+        or "/in_game/common/biases/" in f"/{relative}"
         or "/loading_screen/common/defines/" in f"/{relative}"
         or "/main_menu/common/modifier_icons/" in f"/{relative}"
         or "/main_menu/common/modifier_type_definitions/" in f"/{relative}"
