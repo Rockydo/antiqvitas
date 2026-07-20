@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Western Roman road links are a connectivity model, not a route survey
+
+The Oxford Classical Dictionary securely identifies the Via Domitia's
+Arelate-Nemausus-Narbo sequence, while Spain's National Atlas securely places
+the Via Augusta at Barcino and Tarraco. The generated links use the available
+EU5 locations as high-level corridor anchors. Massilia-Arelate and the
+Narbo/Perpignan/Gerunda transition are deliberately marked contested: neither
+source turns those endpoint pairs into a metre-accurate ancient alignment.
+Sources weighed: `OCD-DOM`; `IGN-ROAD`; `ORB`; P8.1. [secure corridor anchors;
+contested engine link geometry]
+
 ## 2026-07-20 - M5 harbor tiers are market-anchor proxies, not port surveys
 
 Gades, Massilia, Panyu, Barygaza, Muziris, and Adulis are source-labelled

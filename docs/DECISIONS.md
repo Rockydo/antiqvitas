@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M5 splits the western Roman corridor into reviewed map links
+
+The road generator accepts only installed, AD 1-controlled endpoint pairs and
+emits the vanilla bare `origin = destination` contract. The western extension
+therefore uses seven short reviewable links rather than a single Rome-to-Iberia
+edge. Exact Domitia legs, broad Via Augusta legs, and unavoidable connector
+proxies keep their separate source and confidence metadata in the CSV.
+
 ## 2026-07-20 - M5 reuses one verified harbor contract across ancient ports
 
 The installed `protected_harbor` building already loads cleanly at Alexandria.
