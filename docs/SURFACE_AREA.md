@@ -20,7 +20,7 @@ for its milestone; `deferred` = non-goal or dependency with rationale.
 | Situations, disasters, formables, tag changes | planned | M10 |
 | Events and decisions | planned | M10-M11 |
 | Flags, icons, illustrations, loading and age art | in progress | M11; all AD 1 CoAs, the AD 1 Rome loading screen, and 83 event illustrations are engine-sized/reviewed/smoke-clean; remaining icon and common-screen classes continue. |
-| Localization and glossary | planned | M2 onward, polish M11 |
+| Localization and glossary | in progress | M2 onward; M11 source-keyed glossary and credits complete, broader text-polish audit remains |
 | Main menu | deferred | vanilla menu retained unless anachronism audit requires touchup |
 | Tutorials and hints | planned | M12 audit |
 | Music and sound | deferred | explicit v1 non-goal; vanilla audio remains |

@@ -280,6 +280,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Render and review the maintained M11 event-art contact sheet (83 retained 1080x440 masters).
 - [x] Replace all 157 AD 1 solid-colour CoA placeholders with validated, explicitly non-reconstructed standards; retain direct Rome, Han, and Parthia reviews above the regional catalog.
 - [x] Remove the obsolete M2 no-op age-scaffold definitions and their mirrored localization after M8's complete advance tree superseded them.
+- [x] Add the source-keyed concept glossary and project credits, including Pleiades attribution in game-visible metadata.
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Resolve the M11 generic-action message-registry blocker with a one-action exact-name GUI-overlay pilot; the 40-row source ledger is retained in `docs/m11/decisions.csv`.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.

@@ -1,5 +1,17 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M11 credits use the verified metadata description surface
+
+The local metadata schema exposes `short_description`, not a separate long
+description or credits field. M11 keeps that schema unchanged, adds a concise
+Pleiades/ORBIS pointer to `short_description`, and makes `CREDITS.md` the
+complete attribution record. Pleiades' official download page confirms its
+downloadable data is CC BY 3.0; ORBIS is credited as a route-sanity source
+without claiming a license or reproducing its map data.
+
+Sources weighed: local metadata schema in `ENGINE_FACTS.md`; Pleiades data
+download page; master plan sections 20-21.
+
 ## 2026-07-20 - M11 retires M2's no-op advance scaffolds
 
 M2's five age records remain the campaign-calendar surface. Its five
