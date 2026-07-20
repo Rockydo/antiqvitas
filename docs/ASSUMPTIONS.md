@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Antonine-Plague art is landscape-only Mediterranean context
+
+The image is an unoccupied Mediterranean upland of dry meadow, olive trees,
+weathered limestone, a natural spring channel, and distant low hills. It
+identifies no person, illness, death, polity, settlement, medical material,
+animal, action, date, or outcome. It deliberately excludes all illness, bodies,
+graves, mourning, doctors, medical symbols, and disaster spectacle; it is not a
+reconstruction of the Antonine Plague. Sources weighed: P8.1; P8.3; plan
+sections 9 and 20. [secure broad regional context; illustrative composition
+only]
+
 ## 2026-07-20 - Verus-Parthia art is landscape-only Mesopotamian context
 
 The image is an unoccupied Mesopotamian river margin of calm water, natural
