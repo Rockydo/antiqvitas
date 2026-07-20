@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - East-West-division art is landscape-only central-Balkan context
+
+The image is an unoccupied early-autumn central-Balkan river-and-foothill
+landscape of a clear river, pale limestone foothills, mixed oak woodland, dry
+grass, muted autumn shrubs, stony banks, distant layered blue-grey ridges, and a
+soft clouded sky. It identifies no Rome, Frigidus, Theodosius, empire, division,
+city, date, or outcome. It is not a reconstruction of the battle of the Frigidus
+or the Roman political division. Sources weighed: plan sections 9 and 20.
+[secure broad regional context; illustrative composition only]
+
 ## 2026-07-20 - Olympic-sunset art is landscape-only western-Peloponnese context
 
 The image is an unoccupied late-summer western-Peloponnese river valley of a
