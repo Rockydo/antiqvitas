@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Dacian-Wars art is non-literal Carpathian context
+
+The image is a quiet Carpathian foothill landscape of mixed autumn woodland,
+rounded rock, a small stream, an open valley, and distant hills. It identifies
+no war, battle, commander, capital, route, fortification, Roman or Dacian
+material, person, animal, action, date, or outcome. It deliberately excludes
+military material, settlement, roads, and later architecture; it is not a
+reconstruction of the AD 85 wars. Sources weighed: P8.1; plan sections 9 and
+20. [secure regional context; illustrative composition only]
+
 ## 2026-07-20 - Mons-Graupius art is landscape-only Caledonian context
 
 The image is an unoccupied Caledonian upland of heather, coarse grass, granite,
