@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M5 Ephesus market and harbor
+
+- Added the plan-listed Roman provincial capital of Ephesus through a sourced,
+  explicitly contested Ayasuluk near-site proxy. It now has a city market node
+  and protected-harbor tier appropriate to its documented Roman port role.
+- `make validate` reports 41 markets/urban nodes and 33 M5/M7 buildings.
+  Enabled-mod smoke is green with zero new error-log lines.
+
+Next: complete the remaining source-led M5 audit, then continue the unblocked
+M6 power-system work while the runtime RGO gate remains deferred.
+
 ## 2026-07-20 - M5 Dacian gold anchor
 
 - Corrected the nearest reviewed Roșia Montană/Apuseni map proxy from beeswax

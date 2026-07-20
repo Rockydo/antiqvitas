@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Ephesus uses an Ayasuluk near-site market and harbor proxy
+
+UNESCO securely establishes Roman Ephesus as provincial capital and harbour
+city, but the historical urban/harbour zone moved with estuarine sedimentation.
+The installed `ayasuluk` key represents the nearby hill/settlement component,
+not a one-to-one Roman city footprint. Its city and protected-harbor adapters
+therefore represent Ephesus's AD 1 economic role without locating the ancient
+harbour basin exactly or projecting later Byzantine Ayasuluk into the start.
+Sources weighed: `UNESCO-EPH`; P8.1; P12.2. [secure Roman Ephesus port/capital
+context; contested map and building proxy]
+
 ## 2026-07-20 - Dacian gold uses the nearest Apuseni map proxy
 
 The cited mining synthesis identifies pre-conquest exploitation in the Roșia
