@@ -51,6 +51,7 @@ EVENT_IMAGES = {
     "chalcedon_avarayr": "gfx/interface/illustrations/event/antq_chalcedon_avarayr.dds",
     "constantinople_earthquake": "gfx/interface/illustrations/event/antq_constantinople_earthquake.dds",
     "hephthalites": "gfx/interface/illustrations/event/antq_hephthalites.dds",
+    "odoacer_finale": "gfx/interface/illustrations/event/antq_odoacer_finale.dds",
     "radagaisus_rhine": "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds",
     "vandal_africa": "gfx/interface/illustrations/event/antq_vandal_africa.dds",
     "vandal_sack_rome": "gfx/interface/illustrations/event/antq_vandal_sack_rome.dds",
@@ -119,6 +120,9 @@ def validate(records: tuple[Current, ...]) -> None:
     unknown_images = sorted(set(EVENT_IMAGES) - {r.key for r in records})
     if unknown_images:
         raise ValueError(f"final-century illustration map has no corresponding current: {unknown_images}")
+    missing_images = sorted({r.key for r in records} - set(EVENT_IMAGES))
+    if missing_images:
+        raise ValueError(f"final-century currents lack reviewed illustration mappings: {missing_images}")
     for image in EVENT_IMAGES.values():
         texture = ROOT / "main_menu" / image
         if not texture.is_file():
