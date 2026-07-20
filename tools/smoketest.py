@@ -59,7 +59,12 @@ def main() -> int:
         action="store_true",
         help="wait for an already-launched game, then stop and diff its log",
     )
-    parser.add_argument("--menu-minimum", type=int, default=30)
+    parser.add_argument(
+        "--menu-minimum",
+        type=int,
+        default=90,
+        help="hold the rendered menu through the post-splash resource-load phase",
+    )
     parser.add_argument("--quiet-seconds", type=int, default=15)
     parser.add_argument("--timeout", type=int, default=480)
     args = parser.parse_args()

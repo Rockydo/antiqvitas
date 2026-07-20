@@ -17,6 +17,8 @@ import psutil
 
 ROOT = Path(__file__).resolve().parents[1]
 STATE = ROOT / "baselines/runtime/gamedriver_session.json"
+WINDOW_WIDTH = 960
+WINDOW_HEIGHT = 540
 
 
 def enable_dpi_awareness() -> None:
@@ -74,7 +76,7 @@ def set_fixed_settings(user_dir: Path) -> None:
     value.setdefault("Graphics", {}).update(
         {
             "display_mode": "windowed",
-            "resolution": "1280x720",
+            "resolution": "960x540",
             "vsync": False,
             "setting_framerate_cap": "30",
             "quality": "very_low",
@@ -273,8 +275,8 @@ def activate_window():
         hwnd_topmost,
         0,
         0,
-        1280,
-        720,
+        WINDOW_WIDTH,
+        WINDOW_HEIGHT,
         swp_showwindow | swp_noownerzorder,
     )
     # pygetwindow objects retain their old geometry after SetWindowPos. Refresh
