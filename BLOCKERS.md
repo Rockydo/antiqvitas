@@ -1,5 +1,31 @@
 # Blockers
 
+## 2026-07-20 - M5 Nubian-gold key lacks a defensible AD 1 site-date match
+
+Status: **deferred; M5 continues with other source-led work.**
+
+P12.1 names Nubian gold, but the accessible evidence does not yet connect a
+specific installed EU5 location to securely active AD 1 extraction. Adding a
+generic desert gold RGO would turn a regional fact into false site-level
+precision; the static RGO override also remains separately runtime-ineffective.
+
+Tried:
+
+1. Reviewed Klemm and Klemm's *Gold and Gold Mining in Ancient Egypt and
+   Nubia*, whose catalogue establishes ancient gold-mining landscapes and
+   Ptolemaic/Roman chronological categories across the Egyptian and Sudanese
+   Eastern Deserts, but whose accessible record does not date one candidate
+   map cell to AD 1.
+2. Reviewed the exact installed `deraheib` candidate through Cambridge's
+   *Deraheib Gold Mines* and later archaeological summaries. They identify the
+   Wadi Allaqi gold-mining site but leave its ancient working phase disputed
+   between Ptolemaic, possible Roman, and much better attested medieval use.
+
+Recovery: add a source-qualified anchor only when a site publication securely
+places a reviewed installed key in production at the campaign boundary. Until
+then retain no Nubian-gold correction rather than projecting a later gold rush
+into AD 1. Sources reviewed: [Klemm and Klemm](https://link.springer.com/book/10.1007/978-3-642-22508-6), [NewBold](https://www.cambridge.org/core/journals/antiquity/article/deraheib-gold-mines/08FAF70EAD381341D1D84EB3473D74DF), and [the Oxford Handbook survey](https://academic.oup.com/edited-volume/35472/chapter-abstract/303804653).
+
 ## 2026-07-19 - M6 Han minority-regency start falls back to a generated ruler
 
 Status: **deferred; M6 continues with independent power work and remains

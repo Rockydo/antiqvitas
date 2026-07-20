@@ -181,6 +181,7 @@ after `make full` and its autonomous driver report are green.
 
 ## M11 — Flavor & face
 
+- [x] Generate, dimension-check, round-trip review, and smoke-test the first AD 1 Rome loading-screen master and DDS override.
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 

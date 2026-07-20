@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-20 - M11 AD 1 Rome loading screen
+
+- Added the first generated M11 visual: a reviewed, text-free early-imperial
+  Roman civic panorama. The full master and exact 1920×1080 derivative are
+  retained on G:, and the game-facing DDS overrides the checked loading-screen
+  filename.
+- The DDS was round-tripped to PNG for visual inspection. `make validate` and
+  enabled-mod smoke are green with zero new error-log lines.
+
+Next: continue the source-led M5/M6 audit and build the remaining M11 visual
+classes while observer-dependent milestone gates remain deferred.
+
 ## 2026-07-20 - M5 Noricum iron anchor
 
 - Added the plan-named Ferrum Noricum source district through a source-qualified,
