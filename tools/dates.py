@@ -27,6 +27,8 @@ M2_TIMELINE_KEYS = (
     "age_migrations",
     "end",
 )
+TIMELINE_CONTENT_TYPES = frozenset({"situation", "disaster", "event", "tagswitch", "formation"})
+TIMELINE_RAILS = frozenset({"Strong", "Mild", "Off", "system"})
 M2_LOCALIZATIONS = {
     "age_1_traditions": "Principate",
     "age_1_traditions_desc": "The Mediterranean and East Asian imperial orders enter the first century of ANTIQVITAS.",
@@ -129,10 +131,35 @@ class BiographyDate:
 def load_timeline(path: Path) -> list[dict[str, str]]:
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
         rows = list(csv.DictReader(handle))
+    if not rows:
+        raise ValueError("timeline must contain at least one row")
+    keys: set[str] = set()
+    previous: AntqDate | None = None
     for row in rows:
-        value = row.get("date", "")
-        if value and value[0].isdigit() and value.count(".") == 2:
-            AntqDate.parse(value)
+        key = row.get("key", "").strip()
+        value = row.get("date", "").strip()
+        if not key or not value:
+            raise ValueError("timeline rows require both key and date")
+        if key in keys:
+            raise ValueError(f"duplicate timeline key: {key}")
+        keys.add(key)
+        start = AntqDate.parse(value)
+        if previous is not None and start < previous:
+            raise ValueError(f"timeline key {key} is out of chronological order")
+        previous = start
+        end_value = row.get("end_date", "").strip()
+        if end_value:
+            end = AntqDate.parse(end_value)
+            if end <= start:
+                raise ValueError(f"timeline window for {key} must end after its start")
+        content_type = row.get("type", "").strip()
+        if content_type and content_type not in TIMELINE_CONTENT_TYPES:
+            raise ValueError(f"timeline key {key} has unsupported type {content_type!r}")
+        rails = row.get("rails_strength", "").strip()
+        if rails and rails not in TIMELINE_RAILS:
+            raise ValueError(f"timeline key {key} has unsupported rails strength {rails!r}")
+        if content_type and (not row.get("region", "").strip() or not row.get("summary", "").strip()):
+            raise ValueError(f"timeline key {key} requires region and summary")
     return rows
 
 
