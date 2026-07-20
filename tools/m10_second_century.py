@@ -65,6 +65,7 @@ EVENT_IMAGES = {
     "celestial_masters": "gfx/interface/illustrations/event/antq_celestial_masters.dds",
     "champa_formation": "gfx/interface/illustrations/event/antq_champa_formation.dds",
     "daqin_embassy": "gfx/interface/illustrations/event/antq_daqin_embassy.dds",
+    "five_emperors": "gfx/interface/illustrations/event/antq_five_emperors.dds",
     "gan_ying": "gfx/interface/illustrations/event/antq_gan_ying.dds",
     "gothic_migration": "gfx/interface/illustrations/event/antq_gothic_migration.dds",
     "hadrians_wall": "gfx/interface/illustrations/event/antq_hadrians_wall.dds",
