@@ -965,3 +965,13 @@ checked cosmetic identity. The 395 event derives its actual activation date
 from the shared `age_migrations` timeline row, while retaining the plan's 394
 Frigidus-to-396 current window. This makes the source-qualified territorial
 approximation explicit and preserves the event's no-hardcoded-date invariant.
+
+## 2026-07-20 - Final M10 current layer resolves dynamic successor recipients
+
+`tools/m10_final_century.py` owns the thirteen AD 400-476 ledger rows. It
+uses the established situation `content_trigger` contract (not the
+disaster-only country scope) and names `HNS`, `ERO`, and post-429 `VND` as
+runtime recipients only after their prior historical-current creators run.
+Visigoth and Vandal releases use collision-checked dynamic tags and explicit
+local lists. The campaign finale derives its 476 activation window and exact
+end from `tools/dates.py`; no standalone scripted calendar literal is used.

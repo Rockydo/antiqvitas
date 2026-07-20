@@ -1,5 +1,24 @@
 # Progress
 
+## 2026-07-20 - M10 finale historical currents
+
+- Added a generator-owned AD 400-476 layer with all thirteen final ledger
+  currents: seven situations, one disaster, and five dynamic events. The layer
+  carries Rome's western decline, Britain, Visigoths, Vandal Africa, Attila,
+  Hephthalite pressure, Chalcedon/Avarayr, Cape Bon, and the Odoacer finale.
+- Visigoths and Vandals now form as collision-checked playable states through
+  narrow source-qualified Toulouse/Aquitanian and Tunis/Carthaginian local
+  proxies. Dynamic Hunnic/Eastern-Roman/Vandal targets are sequenced after their
+  prerequisite currents. The exact campaign end remains `476.9.4` in the
+  generated calendar.
+- `make validate` and enabled-mod smoke are green. Smoke exposed and then
+  verified the correction of a situation-scope contract; the accepted rerun
+  added zero error-log lines. Observer playback remains deferred by the
+  existing, non-duplicated driver modal blocker.
+
+Next: address the highest unblocked post-M10 milestone work and retain the
+observer gap as explicit acceptance coverage.
+
 ## 2026-07-20 - M10 fourth-century historical currents
 
 - Added a generator-owned AD 300-399 layer with fourteen ledger-bound currents:
