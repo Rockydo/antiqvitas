@@ -79,6 +79,7 @@ EVENT_IMAGES = {
     "buddhism_han_court": "gfx/interface/illustrations/event/antq_buddhism_han_court.dds",
     "christianity_foundation": "gfx/interface/illustrations/event/antq_christianity_foundation.dds",
     "claudian_britain": "gfx/interface/illustrations/event/antq_claudian_britain.dds",
+    "dacian_wars": "gfx/interface/illustrations/event/antq_dacian_wars.dds",
     "florus_sacrovir": "gfx/interface/illustrations/event/antq_florus_sacrovir.dds",
     "gaius_eastern_settlement": "gfx/interface/illustrations/event/antq_gaius_eastern_settlement.dds",
     "great_fire_rome": "gfx/interface/illustrations/event/antq_great_fire_rome.dds",
