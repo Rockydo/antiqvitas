@@ -40,6 +40,11 @@ TARGETS = {
     "cape_bon": "ERO",
     "odoacer_finale": "ROM",
 }
+# Retain reviewed M11 event-image links in the generator so regenerated scripts
+# cannot silently drop a game-facing texture.
+EVENT_IMAGES = {
+    "radagaisus_rhine": "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds",
+}
 DYNAMIC_TARGETS = {"HNS", "ERO", "VND"}
 GENERATED_TAGS = {"VSG", "VND", "ODO"}
 VISIGOTH_LOCATIONS = (
@@ -100,6 +105,13 @@ def validate(records: tuple[Current, ...]) -> None:
         raise ValueError("final-century ledger does not exactly match the target table")
     if len({r.event_id for r in records}) != len(records):
         raise ValueError("final-century event IDs are not unique")
+    unknown_images = sorted(set(EVENT_IMAGES) - {r.key for r in records})
+    if unknown_images:
+        raise ValueError(f"final-century illustration map has no corresponding current: {unknown_images}")
+    for image in EVENT_IMAGES.values():
+        texture = ROOT / "main_menu" / image
+        if not texture.is_file():
+            raise ValueError(f"final-century event illustration is missing: {texture}")
     collisions = GENERATED_TAGS & set(engine_tags().values())
     if collisions:
         raise ValueError(f"generated final-century tag collision: {sorted(collisions)}")
@@ -192,6 +204,9 @@ def event_script(records: tuple[Current, ...]) -> str:
             "\ttype = country_event", f"\ttitle = {record.event_key}.title", f"\tdesc = {record.event_key}.desc",
             f"\toutcome = {outcome(record)}", "\tfire_only_once = yes",
         ))
+        image = EVENT_IMAGES.get(record.key)
+        if image is not None:
+            lines.append(f'\timage = "{image}"')
         if record.kind not in {"situation", "disaster"}:
             lines.extend(("\tdynamic_historical_event = {", f"\t\ttag = {record.engine_tag}", f"\t\tfrom = {start.engine()}", f"\t\tto = {end.engine()}", "\t\tmonthly_chance = 100", "\t}"))
         lines.extend(("\toption = {", f"\t\tname = {record.event_key}.a", "\t\thistorical_option = yes", *impact(record), "\t}", "}", ""))
