@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M5 Muza trade roadstead
+
+- Added a source-labelled `market_warehouse` at the reviewed Al Mukha/Muza
+  market. The primary commercial description supports the market function but
+  explicitly denies a harbor, so no protected-harbor tier was added.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines.
+  This is a bounded infrastructure proxy, not an archaeological reconstruction
+  or a resolution of the runtime RGO limitation.
+
+Next: continue the remaining independent M5 economy surfaces.
+
 ## 2026-07-20 - M5 western Roman corridor
 
 - Extended the generated road network from 29 to 36 source-labelled segments.
