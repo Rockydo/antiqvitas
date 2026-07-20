@@ -60,6 +60,7 @@ EVENT_IMAGES = {
     "antioch_earthquake": "gfx/interface/illustrations/event/antq_antioch_earthquake.dds",
     "cai_lun_paper": "gfx/interface/illustrations/event/antq_cai_lun_paper.dds",
     "gan_ying": "gfx/interface/illustrations/event/antq_gan_ying.dds",
+    "hadrians_wall": "gfx/interface/illustrations/event/antq_hadrians_wall.dds",
     "trajan_dacia": "gfx/interface/illustrations/event/antq_trajan_dacia.dds",
     "trajan_parthia": "gfx/interface/illustrations/event/antq_trajan_parthia.dds",
 }
