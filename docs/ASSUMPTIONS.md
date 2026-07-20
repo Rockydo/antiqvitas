@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Sack-of-Rome art is landscape-only central-Italian context
+
+The image is an unoccupied early-autumn central-Italian landscape of softly
+rolling pale limestone hills, dry tawny grassland, scattered low oak scrub, a
+narrow quiet stream, distant hazy blue-grey ridges, and broad natural sky. It
+identifies no Alaric, sack, Rome, city, person, date, or outcome. It is not a
+reconstruction of the Sack of Rome. Sources weighed: plan sections 8.1, 9, and
+20. [secure broad regional context; illustrative composition only]
+
 ## 2026-07-20 - Britain-abandoned art is landscape-only south-British coastal context
 
 The image is an unoccupied late-autumn south-British Channel coast of a quiet
