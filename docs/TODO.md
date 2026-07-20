@@ -237,7 +237,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Extend the generated third-century event-art contract and smoke-test the AD 208-211 Severus in Caledonia illustration through a landscape-only northern-Caledonian treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 212 Constitutio Antoniniana illustration through a generic Roman civic-context treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 213 Alemanni formation illustration through a landscape-only Upper-Rhine treatment.
-- [x] Render and review the maintained M11 event-art contact sheet (49 retained 1080x440 masters).
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 220 Three Kingdoms illustration through a landscape-only north-Chinese river-valley treatment.
+- [x] Render and review the maintained M11 event-art contact sheet (50 retained 1080x440 masters).
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 

@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Three-Kingdoms art is landscape-only north-Chinese context
+
+The image is an unoccupied late-summer north-Chinese river valley of a natural
+river, wooded low hills, reeds, pale stone, willows, and distant mist. It
+identifies no ruler, court, partition, battle, polity, city, palace, date, or
+outcome. It deliberately excludes people, military material, buildings,
+fortifications, banners, political symbols, roads, bridges, vessels, and
+narrative action; it is not a reconstruction of the Han abdication, the Three
+Kingdoms, or Jin reunification. Sources weighed: P8.3; plan sections 9, 17.3,
+and 20. [secure broad regional context; illustrative composition only]
+
 ## 2026-07-20 - Alemanni-formation art is landscape-only Upper-Rhine context
 
 The image is an unoccupied early-autumn Upper-Rhine floodplain of a natural

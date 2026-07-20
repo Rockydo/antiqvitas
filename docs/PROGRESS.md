@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M11 Three Kingdoms event illustration
+
+- Added a reviewed, landscape-only north-Chinese river-valley image to the AD
+  220 Three Kingdoms current through the generated third-century event-image
+  contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. The maintained M11
+  contact sheet now has fifty retained event masters.
+
+Next: continue the M11 later-century art queue and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Alemanni formation event illustration
 
 - Added a reviewed, landscape-only Upper-Rhine floodplain image to the AD 213
