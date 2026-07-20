@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M11 Champa formation event illustration
+
+- Added a reviewed, landscape-only tropical central-Vietnam river-and-foothill
+  image to the AD 192 Champa formation current through the generated event-image
+  contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. The maintained M11
+  contact sheet now has forty-five retained event masters.
+
+Next: continue the M11 later-century art queue and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Yellow Turbans event illustration
 
 - Added a reviewed, landscape-only North China Plain image to the AD 184 Yellow
