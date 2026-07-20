@@ -1,5 +1,13 @@
 # Historical Assumptions
 
+## 2026-07-20 - Xin-crisis art is a generic AD 9 court transition
+
+The Xin Dynasty Crisis visual signals an early-imperial Chinese court setting
+without claiming to portrait Wang Mang, Emperor Ping, a decree, or a known
+Chang'an building. It is period-signalling event art, not a reconstruction of
+the AD 9 transition. Sources weighed: P8.3; plan §§9 and 20. [secure current
+context; illustrative composition only]
+
 ## 2026-07-20 - Eastern-settlement art is a generic diplomatic encounter
 
 The image for Gaius Caesar's AD 1-4 eastern current signals Roman, Parthian,
