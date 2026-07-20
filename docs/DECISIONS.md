@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M5 maps Ferrum Noricum to Friesach's generic iron good
+
+The RGO renderer can write only installed, controlled location keys. `friesach`
+is the reviewed nearby Carinthian candidate for Hüttenberg; M5 changes only its
+raw-material key to the locally verified vanilla `iron` symbol. It does not add
+a new good, special mine building, market node, or a claim that static RGO data
+currently drives runtime trade.
+
 ## 2026-07-20 - M5 represents Oc Eo through Angkor Borei without pre-creating Funan
 
 The plan includes Oc Eo as a Southeast Asian growth hub, while the installed

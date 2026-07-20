@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M5 Noricum iron anchor
+
+- Added the plan-named Ferrum Noricum source district through a source-qualified,
+  explicitly contested Friesach proxy. It changes only the generic raw material
+  to iron and does not claim a surveyed mine or live trade result.
+- `make validate` reports 328 RGO-ledger corrections. Enabled-mod smoke is
+  green with zero new error-log lines.
+
+Next: complete the remaining source-led M5 audit, then continue unblocked M6
+power-system work while the runtime RGO gate remains deferred.
+
 ## 2026-07-20 - M5 Oc Eo growth market
 
 - Added the plan-listed Oc Eo growth hub through a sourced, explicitly

@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Noricum iron uses a Friesach district proxy
+
+The archaeological project securely places Ferrum Noricum production in the
+Hüttenberg area across the AD 1 boundary, but it does not convert an historic
+industrial district into one exact EU5 location or quantify output. The nearby
+Roman-controlled `friesach` location therefore receives the generic `iron` good
+as a district proxy only. It does not represent a surveyed mine, the special
+quality of Noric steel, or proven live market supply. Sources weighed:
+`FWF-NORIC`; P8.1; P12.1. [secure production-period context; contested map and
+engine proxy]
+
 ## 2026-07-20 - Oc Eo uses an Angkor Borei near-region growth proxy
 
 The Cambodia-submitted UNESCO Tentative List describes Angkor Borei as an early
