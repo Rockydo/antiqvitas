@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-20 - M11 Mauretania Annexation event illustration
+
+- Added a reviewed, non-literal Mauretanian coastal-upland landscape to the
+  AD 40 annexation current through the generated event-image contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines.
+
+Next: continue the independent M11 art queue and source-led M5/M6 audit while
+runtime-gated milestone checks remain deferred.
+
 ## 2026-07-20 - M5 building-contract audit
 
 - Verified that the installed building symbol table has no bathhouse/thermae
