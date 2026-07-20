@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M11 moves dynamic CoAs into their owning M10 generators
+
+Five M10 generators emitted thirteen temporary solid-color CoAs for future
+formations and successor identities. M11 changes those source generators,
+rather than overlaying their output, so a normal regeneration preserves the
+reviewed standard. A dedicated validator confirms each tag, its colored-emblem
+asset, and its three-color contract against the installed game catalogue.
+
 ## 2026-07-20 - M11 reaches event density by phase-reviewing existing sourced currents
 
 Section 18 asks for at least 400 events but separately budgets roughly 80
