@@ -68,6 +68,7 @@ EVENT_IMAGES = {
     "constantine_civil_wars": "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds",
     "crete_earthquake": "gfx/interface/illustrations/event/antq_crete_earthquake.dds",
     "east_west_division": "gfx/interface/illustrations/event/antq_east_west_division.dds",
+    "faxian_gupta": "gfx/interface/illustrations/event/antq_faxian_gupta.dds",
     "fei_river": "gfx/interface/illustrations/event/antq_fei_river.dds",
     "gothic_refugees": "gfx/interface/illustrations/event/antq_gothic_refugees.dds",
     "gwanggaeto": "gfx/interface/illustrations/event/antq_gwanggaeto.dds",
