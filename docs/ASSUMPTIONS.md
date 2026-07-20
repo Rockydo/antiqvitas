@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Kanishka-apogee art is landscape-only Central-Asian context
+
+The image is an unoccupied Central-Asian highland basin with dry grass, stony
+foothills, a natural stream, sparse shrubs, and distant snowy mountains. It
+identifies no ruler, council, state, city, route, caravan, religious material,
+person, animal, action, date, or outcome. It deliberately excludes architecture,
+Buddhist symbols, Buddhist material, military material, and Silk-Road imagery;
+it is not a reconstruction of Kanishka, the Kushan state, or the Buddhist
+council. Sources weighed: P8.4; plan sections 9 and 20. [secure broad regional
+context; illustrative composition only]
+
 ## 2026-07-20 - Hadrians-Wall art is landscape-only northern-British context
 
 The image is an unoccupied northern-British upland of heather, grass, stone, a

@@ -222,7 +222,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 113 Trajan's Parthian War event illustration through a non-literal Mesopotamian river-plain treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 115 Antioch earthquake event illustration through a landscape-only Orontes-valley treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 122 Hadrian's Wall event illustration through a landscape-only northern-British upland treatment.
-- [x] Render and review the maintained M11 event-art contact sheet (34 retained 1080x440 masters).
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 127 Kanishka-apogee event illustration through a landscape-only Central-Asian highland treatment.
+- [x] Render and review the maintained M11 event-art contact sheet (35 retained 1080x440 masters).
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 
