@@ -1,5 +1,13 @@
 # Historical Assumptions
 
+## 2026-07-20 - Teutoburg art is a generic AD 9 forest tension scene
+
+The image evokes a rain-damp Germanic forest and a dispersed Roman baggage
+party, but identifies no commander, Germanic group, route, moment, ambush, or
+battlefield. It deliberately shows neither combat nor casualties and is not a
+literal reconstruction of the Teutoburg disaster. Sources weighed: P8.1; plan
+sections 9 and 20. [secure current context; illustrative composition only]
+
 ## 2026-07-20 - Illyrian-revolt art is a generic mountain-column scene
 
 The image signals a cautious early-imperial Roman passage in a rugged Balkan
