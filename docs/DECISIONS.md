@@ -1,5 +1,18 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Use the installed 1920x1080 renderer mode for autonomous driving
+
+The configured 960x540 window string is not a valid enum value in the installed
+EU5 build: the debug log rejected it and the engine retained the 2560x1440
+desktop mode before the two FSR crashes. The installed loading-screen scripts
+explicitly contain the `1920x1080` mode. The driver therefore now writes that
+lower, supported windowed resolution through its single width/height constants
+while retaining the already locally accepted very-low graphics values. A
+90-second enabled-mod smoke loaded a rendered menu with the persisted 1920x1080
+setting and zero new error-log lines. This is a bounded recovery change; only a
+fresh observer play-control probe can establish whether it cures the renderer
+fault.
+
 ## 2026-07-21 - Quarantine vanilla events by preserving their loader contract
 
 EU5's generic systems validate referenced events, their scope types, and parts
