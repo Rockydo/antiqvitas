@@ -155,9 +155,11 @@ after `make full` and its autonomous driver report are green.
   - [x] Render and menu-smoke the AD 1-96 current layer: 14 situations, two
         disasters, nine date-driven events, and the first formation/tag-switch
         event surfaces.
-  - [ ] Replace the AD 1-96 formation and tag-switch event markers with
-        source-led in-place transformations or true new-polity releases after
-        their setup contracts are locally verified.
+  - [x] Apply the locally verified in-place transformation adapter to Kushan
+        formation and the Southern-Xiongnu outcome, with generated temporary
+        colors, CoAs, and localization.
+  - [ ] Add a source-led Northern-Xiongnu polity release to complete the AD 48
+        split after its dynamic-country setup contract is locally verified.
 - [ ] Smoke and observer-test every batch; run milestone gate and tag `M10-done`.
 
 ## M11 — Flavor & face

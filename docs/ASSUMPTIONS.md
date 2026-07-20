@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - The AD 48 surviving Xiongnu tag represents the southern polity
+
+The plan requires a northern-southern Xiongnu split in AD 48. The currently
+verified in-place transformation can safely represent only the continuing
+state, so `XIO` becomes the Southern Xiongnu display identity and its start
+confederation IO is dissolved. This is not a claim that the northern polity
+ceased to exist, that it held no territory, or that the southern continuity
+alone exhausts the event; its separate release remains open until its dynamic
+country-creation contract is verified. Sources weighed: master-plan sections
+8.3, 8.8, 9, and 16.3. [secure split requirement; contested temporary adapter]
+
 ## 2026-07-20 - First-century current recipients are notification anchors
 
 Several section 9 currents involve more than one polity. The first renderer
