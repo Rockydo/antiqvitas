@@ -1,5 +1,17 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M5 does not invent a bathhouse building contract
+
+The locally extracted base-game building symbol table has no bathhouse, thermae,
+spa, or equivalent public-bath building key. The existing `aqueduct_system` at
+Rome remains the verified water-infrastructure representation; M5 does not add
+an unsupported script symbol or relabel an unrelated building as a literal bath
+complex. The Baths of Agrippa were already supplied by the Aqua Virgo before
+AD 1, but that historical fact does not establish a safe engine contract.
+
+Sources weighed: local `docs/vanilla_symbols/building.json`; ANTIQVITAS master
+plan section 12.3; Digital Augustan Rome's Thermae Agrippae record.
+
 ## 2026-07-20 - M11 replaces native pepper art without duplicating the good
 
 The installed game already defines `pepper` and exposes exact matching
