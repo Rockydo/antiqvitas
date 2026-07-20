@@ -1,4 +1,4 @@
-.PHONY: validate smoke full
+.PHONY: validate smoke full art-review
 
 validate:
 	.venv/Scripts/python.exe tools/pdxlint.py
@@ -32,3 +32,6 @@ smoke:
 	.venv/Scripts/python.exe tools/smoketest.py
 
 full: validate smoke
+
+art-review:
+	.venv/Scripts/python.exe tools/m11_contact_sheet.py

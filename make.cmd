@@ -7,6 +7,7 @@ if "%TARGET%"=="" set "TARGET=validate"
 if /I "%TARGET%"=="validate" goto validate
 if /I "%TARGET%"=="smoke" goto smoke
 if /I "%TARGET%"=="full" goto full
+if /I "%TARGET%"=="art-review" goto art_review
 echo Unknown target: %TARGET%
 exit /b 2
 
@@ -46,4 +47,8 @@ exit /b 0
 :full
 call "%~f0" validate || exit /b 1
 call "%~f0" smoke || exit /b 1
+exit /b 0
+
+:art_review
+"%PYTHON%" tools\m11_contact_sheet.py || exit /b 1
 exit /b 0

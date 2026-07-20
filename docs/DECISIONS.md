@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M11 art review derives from retained masters
+
+The M11 review surface is generated from every
+`assets_queue/generated/antq_*_1080x440.png` master rather than manually
+maintained. `make art-review` renders both the browsable HTML sheet and a
+compact PNG, so each added event image enters the visual audit automatically.
+The review assets remain documentation only; game-facing DDS textures continue
+to be individually dimension-checked and wired through `EVENT_IMAGES`.
+
 ## 2026-07-20 - M5 does not invent a bathhouse building contract
 
 The locally extracted base-game building symbol table has no bathhouse, thermae,
