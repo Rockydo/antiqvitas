@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-20 - Observer failure narrowed to host virtual-memory headroom
+
+- A materially different early-window constraint did not reach the menu. Its
+  crash bundle shows the engine still selected a 2560x1440 internal resolution,
+  but, more importantly, had only 9 MB of free Windows pagefile while using
+  2.5 GB of the RTX 3080's 10 GB dedicated memory.
+- This is stronger evidence for a host virtual-memory commitment limit than
+  for a mod asset, syntax, or currently exhausted GPU-VRAM failure. The
+  unproven window experiment was removed; the previous static-green driver
+  behavior is restored.
+
+Next: do not repeat unchanged launches; retain the observer gates as deferred
+until pagefile or renderer headroom changes, and continue static work.
+
 ## 2026-07-20 - Driver crash-path evidence hardening
 
 - The readiness probe now handles EU5 exiting between its liveness check and

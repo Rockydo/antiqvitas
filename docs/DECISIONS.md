@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - Treat host pagefile headroom as a runtime prerequisite
+
+The latest failed launcher experiment's crash metadata recorded 9 MB of free
+pagefile, 4.85 GB system RAM available, and only 2.5 GB used from the RTX
+3080's 10 GB dedicated pool. The mod therefore treats the reported Vulkan
+out-of-device-memory exception as a host virtual-memory condition until a run
+with material pagefile headroom proves otherwise. The unproven early physical
+window resize is not retained. Changing the system pagefile or terminating
+unrelated host processes is outside the mod's safe project scope; the evidence
+is logged and independent work continues instead.
+
 ## 2026-07-20 - Preserve crash evidence across an early game-process exit
 
 The autonomous driver treats a process disappearing during its CPU-sampling
