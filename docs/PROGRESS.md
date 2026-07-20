@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M11 Alemanni formation event illustration
+
+- Added a reviewed, landscape-only Upper-Rhine floodplain image to the AD 213
+  Alemanni formation current through the generated third-century event-image
+  contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. The maintained M11
+  contact sheet now has forty-nine retained event masters.
+
+Next: continue the M11 later-century art queue and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Constitutio Antoniniana event illustration
 
 - Added a reviewed, generic Roman civic-context image to the AD 212 Constitutio
