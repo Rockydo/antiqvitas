@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Unknown AD 1 incumbents remain anonymous rather than fictional
+
+For 75 Tier-1/2 polities, confederations, or town clusters, the project source
+route establishes the political or settlement frame but not a defensible named
+incumbent on 1 January AD 1. Their generated M6 profile therefore retains a
+source-qualified anonymous or collective head rather than assigning a generic
+character a historical office. This is an evidential limit, not a claim that
+these societies lacked leadership. Sources weighed: plan sections 8, 13, and
+19; each profile's cited P8/CAH-XI/CHG/PLE route in `docs/m6/governments.csv`.
+[contested individual officeholders]
+
 ## 2026-07-20 - Scripted successor CoAs are standards, not reconstructed flags
 
 The thirteen later formation and successor-state CoAs use the same generic

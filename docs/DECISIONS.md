@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M6 measures complete roster coverage without fictionalizing unknown courts
+
+Section 19's 250--400-character target is enforced as a source-led roster
+floor, not as a mandate to create a named person for every Tier-1/2 tag. The
+existing 107 profile ledger separates 32 governments with a named active head
+from 75 documented anonymous or collective starts. `m6_power.py` now validates
+that split and emits the reviewable roster report. This preserves an engine
+valid random-ruler contract where local source routes establish the polity but
+not an AD 1 officeholder; later M10 currents may introduce a named figure only
+when dated evidence warrants it.
+
 ## 2026-07-20 - M11 moves dynamic CoAs into their owning M10 generators
 
 Five M10 generators emitted thirteen temporary solid-color CoAs for future

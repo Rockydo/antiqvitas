@@ -176,6 +176,25 @@ coverage, not a claim that the much larger named-character, dynasty, regnal,
 estate, and history requirements of M6 are complete. Sources: P8.7-P8.8; P13;
 CAH-XI; CHG; PLE.
 
+## Tier-1/2 roster evidence boundary
+
+The plan's character target is 250--400 records, with a ruler, consort, heir,
+and court/generals wherever the AD 1 evidence sustains them. The current
+source-led roster reaches the 250-record floor while preserving the distinction
+between a missing person and an unknown person: 32 of 107 Tier-1/2 profiles
+have a named active head; the remaining 75 use the locally verified
+`ruler = random` contract because their source routes establish a polity,
+confederation, or town cluster but not an incumbent at the campaign boundary.
+
+`tools/m6_power.py` now enforces the 250--400 roster range, all 107
+Tier-1/2 government profiles, a minimum of 32 named active heads, and an
+explicit `Anonymous` evidence note for every generated-head profile. Its
+generated [roster coverage report](ROSTER_COVERAGE.md) lists both groups and
+their source routes. This keeps the plan's roster requirement measurable while
+refusing to manufacture a ruler or court merely to make every row look equally
+complete. The existing documented gaps (notably the South Arabian and selected
+Iranian courts) remain eligible only for sourced M10 dated-history additions.
+
 ## Colchian Pythodoris court
 
 Pythodoris of Pontus replaces Colchis's anonymous ruler. Strabo directly

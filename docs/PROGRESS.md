@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-20 - M6 roster evidence boundary
+
+- Completed an auditable M6 Tier-1/2 coverage pass: all 107 profiles remain
+  represented, the source-led roster meets the plan's 250-person floor, and 32
+  profiles have defensible named active heads.
+- The other 75 profiles are now explicitly guarded as anonymous or collective
+  start states rather than becoming fictional courts. The generator validates
+  the plan's 250--400 roster range, profile coverage, named-head floor, and
+  every anonymous-profile note; its generated report lists the complete split
+  and source routes.
+
+Next: retain the documented Han-regency runtime limitation, then attempt the
+M6 driver gate again only after the observer game-rule overlay can receive a
+clean menu smoke.
+
 ## 2026-07-20 - M5 independent-surface ledger closure
 
 - Re-audited the M5 ledgers while triaging the remaining autonomous queue. The
