@@ -1104,3 +1104,16 @@ biography field, or later career. Galba's record is separate from the AD 22
 consul Gaius Sulpicius Galba rather than an asserted Sulpician genealogy.
 Sources weighed: P8.1; `UCL-VEL`; `RIB-GAL`; `BM-SEN` in
 `docs/world_1ad/SOURCES.md`. [secure survival; contested engine context]
+
+## 2026-07-19 - M7 force seeds and fort proxies are bounded technical representations
+
+Section 14 of the design bible, read with `CAH-XI` and `BHR`, supports the
+broad regional force types, Roman/Danubian and Han Hexi frontier contexts, and
+the listed naval traditions. It does not supply a complete 1 January AD 1
+order of battle, ship register, garrison return, or tower-by-tower frontier
+survey. The `armies.csv` entries are therefore explicitly technical combat
+seeds; Aquileia, Siscia, Jiayu, and Wuwei use the installed `stockade` only as
+bounded castra/beacon proxies. They neither claim continuous walls nor project
+Hadrian's Wall, the later Gorgan Wall, or a precise garrison structure into AD
+1. Sources weighed: P14; `CAH-XI`; `BHR` in `docs/world_1ad/SOURCES.md`.
+[secure broad context; contested local technical representation]

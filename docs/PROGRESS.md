@@ -1554,6 +1554,24 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-19 - M7 ancient warfare foundation
+
+- Added a checked, source-labelled 26-type ancient roster: regulars and levies,
+  four era companies, late-Roman age-gated types, and the six plan-listed
+  naval classes. Ship definitions explicitly set `cannons = 0`.
+- Added four bounded AD 1 frontier proxies (Aquileia, Siscia, Jiayu, and Wuwei)
+  through the verified level-one `stockade` surface, plus ten technical army
+  and navy force seeds. Neither ledger claims a reconstructed order of battle.
+- Generated exact-filename overrides for all 48 installed advance files that
+  unlock a unit or levy. They retain non-unit content but remove every such
+  vanilla unlock; M8 owns the replacement ancient advance trees.
+- `make validate` and enabled-mod `make smoke` are green. The real game reached
+  the menu with zero new `error.log` lines after correcting the locally verified
+  terrain token to `grasslands`.
+
+Next: run the M7 observer-war probe and inspect its screenshots and logs before
+claiming the milestone's combat acceptance gate.
+
 ## 2026-07-19 - M6 independently dated Roman figures
 
 - Added Velleius Paterculus, Servius Sulpicius Galba, and Lucius Annaeus

@@ -740,3 +740,23 @@ the Zhongshan centre, to the Dingzhou area. The character tag remains HAN and
 the records have no implied Chang'an residence. This is an engine anchor for a
 bounded family context, not an ownership, border, capital, or exact-residence
 assertion.
+
+## 2026-07-19 - M7 gates vanilla military unlocks by exact-name source-derived overrides
+
+The installed build distributes unit and levy unlocks through 48 advance files,
+not only the generic army and ship files. M7 therefore generates a UTF-8-BOM
+exact-name override for every local file containing `unlock_unit` or
+`unlock_levy`, retaining all non-unit statements verbatim while stripping those
+two statements. `tools/m7_war.py --check` regenerates against the pinned local
+install and fails stale if its source changes. This is the narrowest verified
+way to prevent gunpowder and oceanic unit progression before M8 replaces the
+complete advance tree; it does not modify the game installation.
+
+## 2026-07-19 - M7 force seeds use locally accepted unit-manager shapes
+
+The local unit reference establishes `army`, `navy`, and `sub_units` as the
+unit-manager vocabulary, while the generated start manager retains one
+country/location per named force. The source ledgers permit only M7 units that
+are available to their own bounded country tag. The starting strengths are
+technical test seeds rather than historical orders of battle; the runtime
+observer probe remains the acceptance test for their behavior.
