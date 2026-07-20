@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Gan-Ying art is non-literal Persian Gulf coastal context
+
+The image is an unoccupied Persian Gulf shoreline of pale rock, calm water,
+salt-tolerant scrub, and low dry hills. It identifies no traveler, ship, boat,
+port, route, destination, Han, Roman, Persian material, person, action, date,
+or outcome. It deliberately excludes vessels, harbors, trade goods, buildings,
+and maps; it is not a reconstruction of Gan Ying's AD 97 mission. Sources
+weighed: P8.2; plan sections 9 and 20. [secure broad regional context;
+illustrative composition only]
+
 ## 2026-07-20 - Han-Xianbei-War art is landscape-only northern context
 
 The image is an unoccupied northern grassland with tawny grass, a shallow

@@ -1,5 +1,17 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M11 second-century art uses the generator-owned image map
+
+`tools/m10_second_century.py` now owns `EVENT_IMAGES`, matching the checked
+first-century generator contract. It rejects unknown timeline keys and missing
+mod-relative DDS textures before rendering, and it emits the event `image`
+field from that map. This keeps later M10 art references regenerable rather
+than hand-editing generated events and prevents orphaned or silently dropped
+game-facing textures.
+
+Sources weighed: local `tools/m10_history.py`,
+`tools/m10_second_century.py`, and the installed country-event image contract.
+
 ## 2026-07-20 - M11 art review derives from retained masters
 
 The M11 review surface is generated from every

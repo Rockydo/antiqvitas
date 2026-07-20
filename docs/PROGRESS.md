@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-20 - M11 Gan Ying's Mission event illustration
+
+- Extended the generated second-century event-art contract with texture-existence
+  validation and added a reviewed, non-literal Persian Gulf coastal-context
+  image to the AD 97 Gan Ying's Mission current.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. The maintained M11
+  contact sheet now has twenty-nine retained event masters.
+
+Next: continue the M11 later-century art queue and source-led M5/M6 audit
+while runtime-gated milestone checks remain deferred.
+
 ## 2026-07-20 - M11 Han-Xianbei War event illustration
 
 - Added a reviewed, landscape-only northern grassland-context image to the AD
