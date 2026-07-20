@@ -207,7 +207,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 64 Great Fire of Rome event illustration through a restrained non-literal urban context treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 65 Buddhism at the Han Court event illustration through a non-literal Eastern Han scholarly-courtyard context treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 66 Tiridates' Coronation event illustration through a non-literal Armenian highland diplomacy-context treatment.
-- [x] Render and review the maintained M11 event-art contact sheet (20 retained 1080x440 masters).
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 66 Great Jewish Revolt event illustration through a landscape-only Judean environmental-context treatment.
+- [x] Render and review the maintained M11 event-art contact sheet (21 retained 1080x440 masters).
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 
