@@ -1,17 +1,18 @@
 # Technical and Design Decisions
 
-## 2026-07-21 - Disable vanilla events by preserving their loader contract
+## 2026-07-21 - Quarantine vanilla events by preserving their loader contract
 
 EU5's generic systems validate referenced events, their scope types, and parts
 of their variable/effect graph at load time. Empty files and generic stubs lose
-that information. The checked M12 renderer instead mirrors the exact installed
-event source, removes direct historical schedulers, and replaces only each
-event's top-level eligibility trigger with `always = no`. The initial
-112-definition random-event pilot produced no new static or settled-menu log
-lines, so future vanilla event files use this source-preserving mechanism rather
-than empty/stub overlays. Any period-external script date emitted by the
-renderer is normalized through `tools/dates.py`; unreachable event contents are
-otherwise retained only as technical compatibility data.
+that information. The checked M12 renderer instead mirrors all 347 installed
+event files (7,440 definitions), preserves direct historical schedulers, and
+adds `current_date > 476.9.4` inside every direct event trigger. The date
+condition is unreachable in the AD 1--476 campaign but is not a compile-time
+false constant, so EU5 retains each scheduler/reference graph and emits neither
+orphan nor unused-variable diagnostics. Files without a trigger receive the
+same guarded trigger. Period-external dates are normalized through `tools/dates.py`.
+The full overlay passed static validation and a settled enabled-mod smoke with
+zero new lines; event contents remain compatibility data only.
 
 ## 2026-07-20 - Do not stub the coupled vanilla event runtime by filename overlay
 

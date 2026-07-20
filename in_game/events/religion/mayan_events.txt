@@ -1,0 +1,121 @@
+﻿namespace = mayan_events
+
+#K'atun Celebration
+mayan_events.1 = {
+	type = country_event
+	title = mayan_events.1.title
+	desc = mayan_events.1.desc
+	outcome = neutral
+
+	trigger = {
+		current_date > 476.9.4
+		religion = religion:mayan
+		#Check the date for each K'atun
+		OR = { 
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+			current_date = 476.9.4
+		}
+	}
+
+	illustration_tags = {
+		10 = happy
+		10 = exterior
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:peasants_estate }
+	}
+
+	option = { #Very ready
+		name = mayan_events.1.a
+		trigger = {
+			religious_influence >= 90
+		}
+		add_religious_influence = {
+			value = religious_influence
+			multiply = -1
+		}
+		add_country_modifier = { 
+			modifier = katun_celebration
+			years = 10
+			mode = add_and_extend
+			size = 2
+		}
+	}
+
+	option = { #Rush
+		name = mayan_events.1.b
+		trigger = {
+			religious_influence >= 75
+			religious_influence < 90
+		}
+		add_religious_influence = {
+			value = religious_influence
+			multiply = -1
+		}
+		add_country_modifier = { 
+			modifier = katun_celebration
+			years = 10
+			mode = add_and_extend
+			size = 2
+		}
+		change_gold_effect = { scale = -10 }
+	}
+
+	option = { #Prepared
+		name = mayan_events.1.c
+		trigger = {
+			religious_influence >= 50
+			religious_influence < 90
+		}
+		add_religious_influence = {
+			value = religious_influence
+			multiply = -1
+		}
+		add_country_modifier = { 
+			modifier = katun_celebration
+			years = 10
+			mode = add_and_extend
+		}
+	}
+
+	option = { #Unprepared
+		name = mayan_events.1.d
+		trigger = {
+			religious_influence < 50
+		}
+		add_religious_influence = {
+			value = religious_influence
+			multiply = -1
+		}
+		add_country_modifier = { 
+			modifier = katun_celebration_bad
+			years = 10
+			mode = add_and_extend
+		}
+	}
+}

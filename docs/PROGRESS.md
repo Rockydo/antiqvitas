@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-21 - M12 full vanilla-event quarantine is green
+
+- Expanded the checked source-preserving renderer from its 112-event pilot to
+  all 7,440 definitions in the 347 installed vanilla event files.
+- Every direct event trigger now contains the generated out-of-era date guard
+  while preserving the source scheduler, scope, option, variable, and effect
+  graph. This avoids both in-era eligibility and EU5's orphan/unused-variable
+  loader diagnostics; every outside-calendar date is rendered through the
+  shared date utility.
+- Full `make validate` and the settled enabled-mod `make smoke` both passed
+  with zero new error-log lines and a rendered menu.
+
+Next: use future observer evidence to audit the remaining separate
+situation/disaster/formable/on-action surfaces; the host virtual-memory risk
+still prevents claiming observer-dependent milestone completion.
+
 ## 2026-07-21 - M12 source-preserving event-quarantine pilot is green
 
 - The previous runtime experiment correctly found that empty and uniform-stub

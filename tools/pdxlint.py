@@ -24,7 +24,12 @@ def balanced_script(text: str) -> tuple[bool, str]:
     depth = 0
     quoted = False
     escaped = False
+    comment = False
     for char in text:
+        if comment:
+            if char in "\r\n":
+                comment = False
+            continue
         if quoted:
             if escaped:
                 escaped = False
@@ -35,6 +40,8 @@ def balanced_script(text: str) -> tuple[bool, str]:
             continue
         if char == '"':
             quoted = True
+        elif char == "#":
+            comment = True
         elif char == "{":
             depth += 1
         elif char == "}":
