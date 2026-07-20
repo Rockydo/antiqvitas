@@ -45,6 +45,7 @@ URBAN_NODES = ROOT / "docs/m5/urban_nodes.csv"
 ROAD_SEGMENTS = ROOT / "docs/m5/road_segments.csv"
 DEVELOPMENT_PROFILE = ROOT / "docs/m5/development_profile.csv"
 SPECIAL_BUILDINGS = ROOT / "docs/m5/special_buildings.csv"
+HISTORIC_BUILDING_SITES = ROOT / "docs/m5/historic_building_sites.csv"
 M7_FORTS = ROOT / "docs/m7/forts.csv"
 M7_ARMIES = ROOT / "docs/m7/armies.csv"
 URBAN_SETUP_OUTPUT = ROOT / "in_game/common/town_setups/00_antiquitas.txt"
@@ -235,6 +236,30 @@ def special_building_manager() -> tuple[str, int, int]:
             if location in owners:
                 raise ValueError(f"ownership has duplicate location {location}")
             owners[location] = row["engine_tag"]
+    historic_required = ("key", "location", "source", "confidence", "note")
+    historic_sites: set[str] = set()
+    historic_keys: set[str] = set()
+    site_failures: list[str] = []
+    for row in csv_rows(HISTORIC_BUILDING_SITES):
+        if any(not row.get(field, "").strip() for field in historic_required):
+            site_failures.append("historic_building_sites.csv contains a blank required field")
+            continue
+        key = row["key"].strip()
+        location = row["location"].strip()
+        if key in historic_keys:
+            site_failures.append(f"historic_building_sites.csv repeats key {key}")
+        if location in historic_sites:
+            site_failures.append(f"historic_building_sites.csv repeats location {location}")
+        if location not in locations:
+            site_failures.append(f"historic_building_sites.csv {key} uses unknown installed location {location}")
+        if location not in owners:
+            site_failures.append(f"historic_building_sites.csv {key} has no controlled AD 1 location")
+        if row["confidence"].strip() not in {"secure", "contested"}:
+            site_failures.append(f"historic_building_sites.csv {key} has invalid confidence {row['confidence']}")
+        historic_keys.add(key)
+        historic_sites.add(location)
+    if site_failures:
+        raise ValueError("\n".join(sorted(set(site_failures))))
     failures: list[str] = []
     seen_keys: set[str] = set()
     seen_buildings: set[tuple[str, str]] = set()
@@ -260,8 +285,8 @@ def special_building_manager() -> tuple[str, int, int]:
             failures.append(f"{layer} building ledger {key} uses unknown installed location {location}")
         if location not in owners:
             failures.append(f"{layer} building ledger {key} has no controlled AD 1 location")
-        if layer == "M5" and location not in urban_locations:
-            failures.append(f"special_buildings.csv {key} is not an AD 1 town or city")
+        if layer == "M5" and location not in urban_locations | historic_sites:
+            failures.append(f"special_buildings.csv {key} is not an AD 1 market node or historic site")
         if layer == "M7" and building != "stockade":
             failures.append(f"forts.csv {key} must use the verified stockade proxy")
         if building not in buildings:

@@ -449,15 +449,41 @@ antq_m10.1022 = {
 	}
 }
 
-# Vesuvius; ANTIQVITAS master plan §9; recipient=ROM
+# Destruction of the Second Temple; ANTIQVITAS master plan §9; OCD-JER; recipient=JUD
 antq_m10.1023 = {
 	type = country_event
 	title = antq_m10.1023.title
 	desc = antq_m10.1023.desc
 	outcome = negative
 	fire_only_once = yes
+	dynamic_historical_event = {
+		tag = JUD
+		from = 70.1.1
+		to = 71.1.1
+		monthly_chance = 100
+	}
 	option = {
 		name = antq_m10.1023.a
+		historical_option = yes
+		location:jerusalem = {
+			if = {
+				limit = { has_building_with_at_least_one_level = temple }
+				destroy_building = "building(building_type:temple|owner)"
+			}
+		}
+		add_stability = stability_mild_penalty
+	}
+}
+
+# Vesuvius; ANTIQVITAS master plan §9; recipient=ROM
+antq_m10.1024 = {
+	type = country_event
+	title = antq_m10.1024.title
+	desc = antq_m10.1024.desc
+	outcome = negative
+	fire_only_once = yes
+	option = {
+		name = antq_m10.1024.a
 		historical_option = yes
 		add_stability = stability_mild_penalty
 		add_prestige = prestige_mild_penalty
@@ -465,10 +491,10 @@ antq_m10.1023 = {
 }
 
 # Mons Graupius; ANTIQVITAS master plan §9; recipient=ROM
-antq_m10.1024 = {
+antq_m10.1025 = {
 	type = country_event
-	title = antq_m10.1024.title
-	desc = antq_m10.1024.desc
+	title = antq_m10.1025.title
+	desc = antq_m10.1025.desc
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
@@ -478,27 +504,13 @@ antq_m10.1024 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m10.1024.a
+		name = antq_m10.1025.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
 	}
 }
 
 # Domitian's Dacian Wars; ANTIQVITAS master plan §9; recipient=DAC
-antq_m10.1025 = {
-	type = country_event
-	title = antq_m10.1025.title
-	desc = antq_m10.1025.desc
-	outcome = neutral
-	fire_only_once = yes
-	option = {
-		name = antq_m10.1025.a
-		historical_option = yes
-		add_stability = stability_weak_penalty
-	}
-}
-
-# Han-Xianbei War; ANTIQVITAS master plan §9; recipient=HAN
 antq_m10.1026 = {
 	type = country_event
 	title = antq_m10.1026.title
@@ -507,6 +519,20 @@ antq_m10.1026 = {
 	fire_only_once = yes
 	option = {
 		name = antq_m10.1026.a
+		historical_option = yes
+		add_stability = stability_weak_penalty
+	}
+}
+
+# Han-Xianbei War; ANTIQVITAS master plan §9; recipient=HAN
+antq_m10.1027 = {
+	type = country_event
+	title = antq_m10.1027.title
+	desc = antq_m10.1027.desc
+	outcome = neutral
+	fire_only_once = yes
+	option = {
+		name = antq_m10.1027.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
 	}

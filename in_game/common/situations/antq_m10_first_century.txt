@@ -283,7 +283,7 @@ antq_m10_dacian_wars = {
 		country_exists = c:DAC
 	}
 	on_start = {
-		c:DAC = { trigger_event_non_silently = antq_m10.1025 }
+		c:DAC = { trigger_event_non_silently = antq_m10.1026 }
 	}
 }
 
@@ -305,6 +305,6 @@ antq_m10_han_xianbei = {
 		country_exists = c:XAR
 	}
 	on_start = {
-		c:XAR = { trigger_event_non_silently = antq_m10.1026 }
+		c:XAR = { trigger_event_non_silently = antq_m10.1027 }
 	}
 }
