@@ -1,5 +1,17 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M11 core CoAs use a data-validated engine-emblem contract
+
+`docs/m11/core_coas.csv` owns the bounded Rome/Han/Parthia override set.
+`tools/generate_country_definitions.py` validates each source tag and the
+installed `ce_*.dds` colored-emblem texture, then emits the locally observed
+solid-pattern, named-colour, colored-emblem, and instance syntax. This replaces
+only three conspicuous M3 placeholders and leaves all other flags visibly
+pending rather than silently converting generic design into asserted history.
+
+Sources weighed: local installed CoA definitions and textures; plan sections
+8.1-8.3 and 20.
+
 ## 2026-07-20 - M5 Via Popilia stops before unavailable Adria and Altino
 
 The available source documents Popilia's Rimini-Ravenna-Adria-Altino
