@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Hephthalite art is landscape-only Inner-Asian foothill context
+
+The image is an unoccupied late-summer Inner-Asian foothill river landscape of a
+clear snow-fed stream, a broad dry valley of pale gravel, muted gold grass,
+sparse low shrubs, gently rising tawny foothills, distant blue-grey mountains,
+and open high thin-cloud sky. It identifies no Hephthalites, Persia, Gupta India,
+campaign route, city, person, date, or outcome. It is not a reconstruction of
+Hephthalite movement or conflict. Sources weighed: plan sections 8.4, 8.8, 9,
+and 20. [secure broad regional context; illustrative composition only]
+
 ## 2026-07-20 - Attila art is landscape-only Pannonian context
 
 The image is an unoccupied late-summer Pannonian grassland of open undulating
