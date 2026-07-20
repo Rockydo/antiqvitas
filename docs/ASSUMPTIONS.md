@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Cape-Bon art is landscape-only northeastern-Tunisian coast context
+
+The image is an unoccupied late-spring northeastern-Tunisian coast of a low
+pale sandy-limestone headland beside a quiet blue bay, salt-tolerant scrub,
+sparse spring grass, wave-worn rocks, open sea, and broad soft-clouded sky. It
+identifies no fleet, naval battle, Geiseric, Rome, city, port, person, date, or
+outcome. It is not a reconstruction of the Cape Bon expedition. Sources
+weighed: plan sections 9 and 20. [secure broad regional context; illustrative
+composition only]
+
 ## 2026-07-20 - Vandal-sack art is landscape-only lower-Tiber context
 
 The image is an unoccupied late-spring lower-Tiber floodplain of a slow broad
