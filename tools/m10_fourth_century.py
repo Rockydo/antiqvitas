@@ -69,6 +69,7 @@ EVENT_IMAGES = {
     "crete_earthquake": "gfx/interface/illustrations/event/antq_crete_earthquake.dds",
     "fei_river": "gfx/interface/illustrations/event/antq_fei_river.dds",
     "gothic_refugees": "gfx/interface/illustrations/event/antq_gothic_refugees.dds",
+    "gwanggaeto": "gfx/interface/illustrations/event/antq_gwanggaeto.dds",
     "huns_arrive": "gfx/interface/illustrations/event/antq_huns_arrive.dds",
     "nicaea": "gfx/interface/illustrations/event/antq_nicaea.dds",
     "shapur_julian": "gfx/interface/illustrations/event/antq_shapur_julian.dds",
