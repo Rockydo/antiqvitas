@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Gothic-refugee art is landscape-only lower-Danube context
+
+The image is an unoccupied late-summer lower-Danube riparian landscape of a quiet
+broad river, open floodplain meadow, reed beds, willow and poplar silhouettes,
+pale alluvial banks, and distant low Balkan foothills. It identifies no Goths,
+Romans, refugees, river crossing, Adrianople, foedus, city, date, or outcome. It
+is not a reconstruction of any episode of the Gothic refugee crisis, the battle
+of Adrianople, or the 382 settlement. Sources weighed: P8.7; plan sections 9
+and 20. [secure broad regional context; illustrative composition only]
+
 ## 2026-07-20 - Hunnic-arrival art is landscape-only Volga-steppe context
 
 The image is an unoccupied late-summer Volga-steppe landscape of broad grassland
