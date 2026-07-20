@@ -1381,3 +1381,14 @@ contract, and 1,348-entry inventory, so a game update fails validation rather
 than silently replacing changed vanilla GUI data. This is a technical
 compatibility overlay; its decision content remains bounded by the existing
 source ledger and player-only action contract.
+
+## 2026-07-20 - M12 documentation distinguishes static proof from runtime proof
+
+The ship documentation records generated-contract validation and enabled-menu
+smokes as static/load evidence, not as proof of long-run AI, economy, disease,
+or finale behaviour. The AD 476 event is therefore documented as a checked
+terminal contract while its screenshot acceptance remains open. The surface
+inventory similarly marks retained vanilla generic missions and rule/hint
+surfaces as open until they are consciously retained or disabled through a
+local-contract test. This prevents release-facing documents from converting a
+technical load result into a historical or gameplay claim.

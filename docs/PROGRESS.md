@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-20 - M12 ship documentation and surface inventory
+
+- Added the project README, release-payload and Workshop handoff notes, an
+  explicit Known Issues release boundary, and a static-versus-runtime AD 476
+  finale verification record.
+- Rebuilt the surface-area audit against the actual mod tree. It records every
+  planned appendix surface, preserving known runtime gaps rather than calling
+  them complete.
+- The audit leaves two semantic release tasks unhidden: decide the installed
+  generic mission/task surface, and complete the game-rule/tutorial/hint audit.
+  Observer, RGO, and M6/M7/M8/M10 runtime gaps remain separately tracked.
+
+Next: audit the installed mission/task and game-rule/hint contracts before
+attempting the final observer-dependent ship gate.
+
 ## 2026-07-20 - M11 decision registry and milestone closure
 
 - Restored all 40 source-led M11 player actions after a one-action exact-name

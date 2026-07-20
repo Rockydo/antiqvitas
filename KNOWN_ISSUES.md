@@ -1,5 +1,24 @@
 # Known Issues
 
+## M12 observer and renderer reliability remain release blockers
+
+The final observer-to-476 acceptance run has not been achieved. The driver
+cannot yet dismiss the Observer confirmation after two distinct bounded input
+methods, and repeated menu launches can intermittently exit at Vulkan's
+`ErrorOutOfDeviceMemory` assertion without an ANTIQVITAS script error. The
+full 40-action M11 registry has a successful enabled-mod menu smoke, so this is
+not evidence of a message-registry failure. Do not treat this development build
+as release-ready for a long observer campaign; see `BLOCKERS.md` and
+`docs/m12/M12_FINALE_VERIFICATION.md`.
+
+## The exact message registry is pinned to the installed EU5 build
+
+M11 mirrors the exact `main_menu/gui/messagetypes.txt` filename because the
+installed registry does not load additive sibling files. The renderer rejects
+a changed game build, SHA-256, or 1,348-entry source inventory. On an EU5
+update, regenerate and menu-smoke this guarded overlay before use; do not copy
+or edit the game installation.
+
 ## M10 all-century observer coverage is deferred
 
 The AD 1-476 layers have clean enabled-mod menu smoke and no new `error.log`

@@ -297,5 +297,6 @@ after `make full` and its autonomous driver report are green.
 - [x] Complete the static pacing/growth/inflation and AI-weight audit; restore bounded local-contract priorities to the seven active M9 CBs.
 - [ ] Complete runtime pacing/growth/inflation balance from observer measurements (the observer-confirmation blocker is recorded in `BLOCKERS.md`).
 - [ ] Run autonomous observer game to 476 with decade screenshots and live log watch.
-- [ ] Finish README, known issues, packaging notes, finale verification, and full surface-area audit.
+- [x] Finish README, known issues, packaging notes, static finale verification, and the full surface-area inventory audit.
+- [ ] Resolve the M12 mission/task-definition and game-rule/tutorial/hint audit findings: retain only evidence-safe generic surfaces or disable them through verified exact-name contracts.
 - [ ] Run final `make full`; create M12 report; tag `M12-done`.
