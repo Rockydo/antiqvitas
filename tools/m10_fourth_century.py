@@ -238,6 +238,9 @@ def validate(records: tuple[Current, ...]) -> None:
     unknown_images = sorted(set(EVENT_IMAGES) - record_keys)
     if unknown_images:
         raise ValueError(f"M10 fourth-century illustration map has no corresponding current: {unknown_images}")
+    missing_images = sorted(record_keys - set(EVENT_IMAGES))
+    if missing_images:
+        raise ValueError(f"M10 fourth-century current is missing an illustration: {missing_images}")
     for image in EVENT_IMAGES.values():
         texture = ROOT / "main_menu" / image
         if not texture.is_file():
