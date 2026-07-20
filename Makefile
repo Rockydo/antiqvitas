@@ -18,6 +18,7 @@ validate:
 	.venv/Scripts/python.exe tools/m10_third_century.py --check
 	.venv/Scripts/python.exe tools/m10_fourth_century.py --check
 	.venv/Scripts/python.exe tools/m10_final_century.py --check
+	.venv/Scripts/python.exe tools/m11_age_art.py --check
 	.venv/Scripts/python.exe tools/generate_country_definitions.py --check
 	.venv/Scripts/python.exe tools/capital_mapper.py --check
 	.venv/Scripts/python.exe tools/extract_map_coordinates.py --check
