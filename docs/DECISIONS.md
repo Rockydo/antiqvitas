@@ -1,5 +1,19 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M10 preserves one calendar ledger for campaign and history
+
+The existing `docs/timeline.csv` was the M2 campaign-calendar input. M10
+extends it in place rather than creating a parallel history calendar: each
+row has a validated date/key/type/region/summary/rails surface plus an optional
+end date. `tools/dates.py` now rejects duplicate keys, unsupported content
+types or rail strengths, reversed windows, and out-of-order records before any
+renderer can consume them. This retains the plan's single date authority and
+prevents future history scripts from carrying independent date literals.
+
+The first date of a plan-specified year or window is a technical activation
+boundary, not a claim about an undocumented calendar day. Date-specific claims
+will only be narrowed when their source record supports that precision.
+
 ## 2026-07-20 - M9 IO instances are deliberately narrow and generated
 
 The installed IO parser requires a per-type `io_opinion_<type>` bias and three

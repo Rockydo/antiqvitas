@@ -149,6 +149,9 @@ after `make full` and its autonomous driver report are green.
 ## M10 — History in motion
 
 - [ ] Implement all timeline situations/disasters/formables/tag changes in five century batches.
+  - [x] Normalize the plan's complete history spine into the validated
+        `docs/timeline.csv` ledger, including its disaster calendar and
+        silphium window.
 - [ ] Smoke and observer-test every batch; run milestone gate and tag `M10-done`.
 
 ## M11 — Flavor & face
