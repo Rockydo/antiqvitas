@@ -24,6 +24,7 @@ exit /b 2
 "%PYTHON%" tools\m8_knowledge.py --check || exit /b 1
 "%PYTHON%" tools\m9_diplomacy.py --check || exit /b 1
 "%PYTHON%" tools\m10_history.py --check || exit /b 1
+"%PYTHON%" tools\m10_second_century.py --check || exit /b 1
 "%PYTHON%" tools\generate_country_definitions.py --check || exit /b 1
 "%PYTHON%" tools\capital_mapper.py --check || exit /b 1
 "%PYTHON%" tools\extract_map_coordinates.py --check || exit /b 1
