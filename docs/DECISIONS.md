@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M5 Via Aemilia preserves its missing-anchor uncertainty
+
+The source establishes a Rimini-Piacenza corridor and its central
+Bologna-Modena-Reggio Emilia axis, while the installed map lacks Reggio Emilia
+and minor stations. The renderer consequently writes four endpoint links, with
+the two long links marked contested in the source ledger. This preserves an
+engine-valid regional connection without inventing a detailed route.
+
+Sources weighed: local `tools/generate_start_mirror.py`; plan sections 8.1 and
+12.2; ORBIS; the Italian Ministry of Culture records listed in `MIC-AEM`.
+
 ## 2026-07-20 - M5 Via Flaminia uses one explicit high-level engine link
 
 The local road renderer only accepts installed, AD 1-controlled endpoints, but

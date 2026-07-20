@@ -18,6 +18,13 @@ a row reaches `implemented` status.
   used for the road's 220-219 BCE construction, Augustan repair context, and
   eastern Narni-Terni-Spoleto branch. It does not license a survey-grade
   conversion into modern EU5 map links.
+- `MIC-AEM`: Italian Ministry of Culture, ["Città romana di Ariminum /
+  Rimini"](https://catalogo.cultura.gov.it/detail/ibc/ArchaeologicalProperty/261525),
+  used for the 187 BCE Via Aemilia and its Rimini-Piacenza corridor; and the
+  Ministry's [Modena archive
+  record](https://asmo.cultura.gov.it/mostre/archivio-mostre/la-storia-infinita-della-via-emilia)
+  for its Bologna-Modena-Reggio Emilia axis. They do not license a survey-grade
+  conversion into modern EU5 map links.
 - `CHG`: China Historical GIS Han-era layers, subject to its attribution and
   non-commercial license review before data import.
 - `PER`: *Periplus of the Erythraean Sea* and modern scholarship for Indian
