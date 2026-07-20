@@ -39,36 +39,36 @@ disasters, formables, and on-action callers remain separate runtime surfaces;
 their need for an exact-name override is to be established from future observer
 evidence rather than assumed from the old failed blank-overlay experiment.
 
-## 2026-07-20 - Fully settled observer sessions remain intermittently Vulkan-memory-bound
+## 2026-07-21 - Observer playback remains renderer-bound after two renewed attempts
 
-Status: **deferred after renewed, materially different driver attempts.**
+Status: **deferred after two bounded observer attempts; menu baseline remains green.**
 
-The driver now emits the installed very-low graphics contract, drives a
-960x540 window, holds a rendered menu for 90 seconds, and clears only detached
-reporters from the configured EU5 installation. Two post-splash enabled-mod
-smokes completed with zero new error-log lines. A subsequent clean session,
-with no inherited reporter dialog, exited at 48 seconds while initializing
-portrait colour palettes. The local debug log records the exact renderer
-assertion: `gfx_vk_master_context.cpp:2227` / `ErrorOutOfDeviceMemory`.
+The current event-quarantine commit passed full static validation and an
+enabled-mod 90-second smoke with zero new lines. Two fresh New Game sessions
+then reached the AD 1 selector, entered Observer Mode, and rendered the active
+map. The corrected second attempt used the actual observed play-control target
+after a keyboard toggle failed to change pause state. Each session exited only
+after the play action; neither reached an advancing date.
 
-This is not an ANTIQVITAS script or overlay parse failure: the same commit has
-passed complete static validation and earlier full-settle menu smokes. It
-prevents a reliable Observer session and therefore blocks the M6/M7/M8/M9/M10
-empirical gates and M12's long observer run.
+The second crash bundle is
+`G:\antiqvitas_user_data\crashes\Europa Universalis V20260720_225407`.
+It records `Unhandled Exception C0000005` in the `ffxFsr2ResourceIsNull` /
+renderer stack. This session had 14.6 GB free RAM and 17.3 GB free pagefile,
+so the earlier low-pagefile diagnosis no longer explains the failure. The
+driver's requested 960x540 string is also rejected by this game build and the
+engine persists a 2560x1440 windowed resolution, making the renderer profile a
+separate concrete issue.
 
-The latest attempt constrained the native window as soon as it appeared, but
-the game persisted `2560x1440` internally and again aborted before the menu.
-Its crash metadata materially narrows the host condition: the RTX 3080 had
-only 2.5 GB of its 10 GB dedicated memory in use, while Windows reported just
-**9 MB** of free pagefile/swap (`SwapSizeAvailable: 9`). The same bundle records
-4.85 GB of system RAM available. This makes virtual-memory commitment, not a
-mod texture or a high current GPU allocation, the active limiting condition.
+The crash logs also expose nonfatal AD 1 runtime work still needed (nine
+missing generated institution birth modifiers and vanilla HRE/COA fall-through
+on unset government or international-organization scopes), but no event
+quarantine loader error. Screenshots and the bounded reproduction are recorded
+in `docs/playtests/M12_OBSERVER_RETRY_20260721.md`.
 
-Recovery: retry only after a material graphics-driver, renderer-cache, or
-available-memory change, especially several GB of free pagefile; do not repeat
-unchanged launches. The execution environment rejected the attempted
-destructive cache reset, and system pagefile changes are outside the mod tree,
-so neither path is being altered here.
+Recovery: do not repeat the unchanged observer route. First make a material,
+locally verified renderer-profile change (a supported low window resolution or
+driver/FSR change), then repeat the play-control probe and address the separate
+runtime data diagnostics only from a surviving session.
 
 ## 2026-07-20 - M5 Nubian-gold key lacks a defensible AD 1 site-date match
 

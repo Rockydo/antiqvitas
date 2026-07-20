@@ -1,25 +1,25 @@
 # Known Issues
 
-## Virtual-memory-starved Vulkan failures during fully settled launches
+## Renderer failures during observer playback
 
-On the configured RTX 3080, EU5 intermittently exits during late menu resource
-loading with `gfx_vk_master_context.cpp:2227 / ErrorOutOfDeviceMemory`, even
-with the driver-enforced 960x540 very-low profile. The most recent crash used
-only 2.5 GB of the card's 10 GB dedicated memory but recorded just 9 MB of free
-Windows pagefile, which is the current actionable host constraint. Other fully
-settled enabled-mod menu smokes pass with zero new error-log lines. This
-presently prevents a reliable observer run; see `BLOCKERS.md` for the exact
-recovery boundary.
+The full event-quarantine build passes a settled enabled-mod menu smoke, and
+two fresh sessions reach a live AD 1 Observer map. Both exit immediately after
+the play action with an `ffxFsr2ResourceIsNull`-stack access violation. The
+latest bundle had 14.6 GB RAM and 17.3 GB pagefile free, so the earlier
+low-pagefile observation is insufficient to explain the current failure. The
+game also rejects the driver's 960x540 resolution string and persists 2560x1440
+windowed mode. This prevents reliable observer playback; the exact evidence and
+recovery boundary are in `BLOCKERS.md`.
 
 ## M12 observer and renderer reliability remain release blockers
 
 The final observer-to-476 acceptance run has not been achieved. The observer
 country-change default is now enabled by a menu-smoked exact-name overlay, but
-repeated fully settled menu launches can still exit at Vulkan's
-`ErrorOutOfDeviceMemory` assertion without an ANTIQVITAS script error. The
-full 40-action M11 registry has a successful enabled-mod menu smoke, so this is
-not evidence of a message-registry failure. Do not treat this development build
-as release-ready for a long observer campaign; see `BLOCKERS.md` and
+the current game build exits in an FSR renderer access-violation stack on the
+first play action. The full 40-action M11 registry and the 7,440-event
+quarantine both have successful enabled-mod menu smokes, so this is not evidence
+of a message-registry or event-loader failure. Do not treat this development
+build as release-ready for a long observer campaign; see `BLOCKERS.md` and
 `docs/m12/M12_FINALE_VERIFICATION.md`.
 
 ## The exact message registry is pinned to the installed EU5 build
@@ -36,11 +36,11 @@ The AD 1-476 layers have clean enabled-mod menu smoke and no new `error.log`
 lines, including the generated AD 48 Northern-Xiongnu, AD 192 Champa, AD 370
 Hunnic, AD 395 Eastern-Roman, AD 418 Visigothic, and AD 429 Vandal dynamic
 country contracts. Their
-observer-to-era playback cannot yet be run because fully settled game launches
-remain intermittently Vulkan-memory-bound. The country-change confirmation is
-no longer the blocker: its exact-name rule overlay is menu-smoked. Retry the
-M10 event-window observer route only after a material renderer or memory-state
-change, then capture the resulting situations and events. See
+observer-to-era playback cannot yet be run because the first play action hits
+the documented FSR renderer access violation. The country-change confirmation
+is no longer the blocker: its exact-name rule overlay is menu-smoked. Retry the
+M10 event-window observer route only after a material verified renderer-profile
+or driver change, then capture the resulting situations and events. See
 `docs/playtests/M10_001_096.md`, `docs/playtests/M10_097_199.md`,
 `docs/playtests/M10_200_299.md`, `docs/playtests/M10_300_399.md`,
 `docs/playtests/M10_400_476.md`, and `BLOCKERS.md`.
