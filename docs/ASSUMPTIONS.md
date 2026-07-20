@@ -1,5 +1,30 @@
 # Historical Assumptions
 
+## 2026-07-20 - M9 IO membership stops where the AD 1 evidence stops
+
+The Han IO begins with the five Western Regions tributaries already enumerated
+in the sourced relationship ledger. Xiongnu is a start-date confederation
+under Wuzhuliu but no source in the project defines a safe roster of separate
+constituent country members; it therefore begins as a one-country IO awaiting
+M10's documented split/reform sequence. The Panhellenic Games use a Roman
+custodian solely because Olympia lay inside the Roman imperial order at AD 1;
+this does not assert Rome was an athletic participant or that all Greek cities
+shared one membership contract. The Church has no AD 1 instance. Sources
+weighed: plan sections 8.3, 8.8, 16.3, and 10; `CAH-XI` and `CHG` through
+`docs/world_1ad/SOURCES.md`. [secure Han ledger and Xiongnu start context;
+contested technical membership representation]
+
+## 2026-07-20 - Known-world regions model horizons, not uniform knowledge
+
+Plan section 16.4 defines Rome's oikoumene, Han's western horizon, India's
+two-directional connections, American self-containment, and the prohibition
+on Atlantic/Pacific crossings. M9 represents these with installed map regions:
+Roman Ireland/Scandinavia and East China, and Han Persia-to-Anatolia, are
+deliberately broad proxies for the plan's fuzzy or dim knowledge. No profile
+asserts an equally detailed map, routine contact, or political intelligence for
+every place in a discovered region. Sources weighed: plan section 16.4 and
+the regional context of section 8. [secure scope; contested geometric proxy]
+
 ## 2026-07-20 - M9 war labels are bounded mechanical categories
 
 Plan section 16.1 requires punitive expeditions, client-king imposition,

@@ -1,5 +1,23 @@
 # Progress
 
+## 2026-07-20 - M9 organizations and known-world foundation
+
+- Added generated type contracts for the Han Tributary System, Xiongnu
+  Confederation, Panhellenic Games, and dormant Christian Church. The start
+  manager creates the source-bounded Han, Xiongnu, and games instances; the
+  Church remains a 325/M10 activation scaffold.
+- Added a validated `discovered_regions` profile to every one of the 157 AD 1
+  country records. Rome, Han, and the Indian Ocean world receive the plan's
+  wider horizons, while every other profile remains in its own regional world;
+  none contains an Atlantic or Pacific ocean-discovery region.
+- Two bounded engine iterations supplied required IO member-opinion biases and
+  display-status localization. `make validate` and the final enabled-mod
+  `make smoke` are green with zero new `error.log` lines.
+
+Next: the M9 implementation surface is complete. Its in-game diplomacy-panel
+verification remains deferred behind the documented observer-confirmation
+driver issue; take the next unblocked M10 task.
+
 ## 2026-07-20 - M9 ancient war-contract foundation
 
 - Added ten generated CBs, eight wargoals, and three subject-imposition peace
