@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-20 - M11 Tiridates' Coronation event illustration
+
+- Added a reviewed, non-literal Armenian highland diplomacy-context image to
+  the AD 66 Tiridates' Coronation current through the generated event-image
+  contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. The maintained
+  M11 contact sheet now has seventeen retained event masters.
+
+Next: continue the independent M11 art queue and source-led M5/M6 audit while
+runtime-gated milestone checks remain deferred.
+
 ## 2026-07-20 - M11 Buddhism at the Han Court event illustration
 
 - Added a reviewed, non-literal Eastern Han scholarly-courtyard context image

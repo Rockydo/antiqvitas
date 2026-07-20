@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Tiridates-coronation art is a generic Armenian context
+
+The image is a generic highland valley with a road, river, dry grass, sparse
+trees, and distant snowy ridges. It identifies no coronation, Tiridates, Roman
+or Armenian official, capital, palace, route, treaty, date, action, or outcome.
+It deliberately contains no people, regalia, army, battle, ritual, or religious
+symbol and is not a reconstruction of the AD 66 settlement or ceremony.
+Sources weighed: P8.2; plan sections 9 and 20. [secure current context;
+illustrative composition only]
+
 ## 2026-07-20 - Buddhism-at-Han-court art is a generic scholarly context
 
 The image is an unoccupied early-Eastern-Han-style scholarly courtyard with a
