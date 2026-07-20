@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Nicaea art is landscape-only Bithynian context
+
+The image is an unoccupied late-spring Bithynian foothill lakeshore of a natural
+freshwater shore, pale stone, reeds, trees, low hills, and distant mountains.
+It identifies no council, cleric, emperor, doctrine, church, polity, date, or
+outcome. It is not a reconstruction of Nicaea or its controversy. Sources
+weighed: P8.1; plan sections 9, 11, and 20. [secure broad regional context;
+illustrative composition only]
+
 ## 2026-07-20 - Constantine-civil-wars art is landscape-only central-Italian context
 
 The image is an unoccupied early-summer central-Italian foothill of a natural
