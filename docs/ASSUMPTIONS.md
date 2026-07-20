@@ -2413,3 +2413,15 @@ Roman mesh (or its later prior currents) supplies a complete 395 provincial
 atlas, every frontier, Arcadius/Honorius's personal histories, or a formal
 international-law rupture. Sources weighed: plan §9; `OUP-EW`; `CAM-DYNASTY`;
 `CAM-ATT`. [contested local technical representation]
+
+## 2026-07-20 - AD 1 CoAs are legible UI standards, not recovered flags
+
+The evidence ledger establishes the AD 1 polities and their regional context;
+it does not provide a reliable, comparable flag or banner for every one of 157
+states and societies. M11 therefore gives every roster entry an engine-native,
+period-inspired emblem-on-field UI identity. Rome, Han, and Parthia have
+separately reviewed direct standards; all remaining entries inherit a regional
+visual motif from the source-labelled catalog. None is asserted as a vexillum,
+seal, sacred sign, royal banner, or modern national emblem. Sources weighed:
+plan sections 8.1-8.10 and 20; the roster source fields; local CoA contract.
+[contested visual representation]
