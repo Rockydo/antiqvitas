@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M11 keeps the five M8 icon identifiers and supplies exact DDS overrides
+
+The M8 tree already groups its 250 advances into five 50-item visual surfaces.
+Keeping those identifiers avoids a data-only rewrite while replacing all five
+rendered surfaces. The installed game supplies four of the names as vanilla
+files, but it has no `crown_power_advance_discovery.dds`; the mod now provides
+that exact name rather than relying on a non-existent fallback. The dedicated
+validator makes the five-to-250 mapping, source/master chain, and texture
+contract explicit.
+
 ## 2026-07-20 - M11 replaces the five exact age-illustration filenames
 
 The installed advance view obtains its banner through

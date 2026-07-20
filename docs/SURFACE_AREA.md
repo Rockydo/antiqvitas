@@ -19,7 +19,7 @@ for its milestone; `deferred` = non-goal or dependency with rationale.
 | Diplomacy, subjects, IOs, known world | planned | M9 |
 | Situations, disasters, formables, tag changes | planned | M10 |
 | Events and decisions | planned | M10-M11 |
-| Flags, icons, illustrations, loading and age art | in progress | M11; all AD 1 CoAs, the AD 1 Rome loading screen, five age panels, and 83 event illustrations are engine-sized/reviewed/smoke-clean; final icon and common-screen classes continue. |
+| Flags, icons, illustrations, loading and age art | in progress | M11; all AD 1 CoAs, the AD 1 Rome loading screen, five age panels, five advance-group icons covering all 250 advances, and 83 event illustrations are engine-sized/reviewed/smoke-clean; final icon and common-screen classes continue. |
 | Localization and glossary | in progress | M2 onward; M11 source-keyed glossary and credits complete, broader text-polish audit remains |
 | Main menu | deferred | vanilla menu retained unless anachronism audit requires touchup |
 | Tutorials and hints | planned | M12 audit |
