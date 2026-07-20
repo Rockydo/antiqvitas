@@ -1,5 +1,20 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M11 attaches *Immensum Bellum* through the checked event-image contract
+
+The installed `earthquake_events.txt` uses an `image` key directly on a
+country-event definition, and its checked texture is 1080×440 BC7. The first
+M10 event illustration therefore uses that same mod-relative event-art path,
+owned by `EVENT_IMAGES` in `tools/m10_history.py`; the generator validates
+that every mapped texture exists before it renders the event. This avoids an
+unregistered art asset and makes regeneration safe.
+
+ImageMagick can inspect the installed BC7 DDS but its local encoder falls back
+to DXT output. `tools/dds.py` therefore dispatches explicitly requested BC7
+textures to the locally installed work-drive DirectXTex `texconv.exe`, retaining
+the source PNG's opaque alpha and generating the full mip chain. The tool is
+ignored under `.tools/`, so no binary build dependency is committed.
+
 ## 2026-07-20 - M11 replaces the checked vanilla loading-screen filename
 
 The local asset manifest identifies the vanilla loading screen as

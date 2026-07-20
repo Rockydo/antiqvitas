@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - *Immensum Bellum* art is a generic AD 1 campaign scene
+
+The M11 event visual depicts Roman movement beside a Rhine-frontier river in
+forest, but does not identify a particular crossing, commander, unit, march,
+or engagement. Its column and scout are period-signalling composition rather
+than a reconstruction of the plan's *Immensum Bellum* current, and the review
+excludes Teutoburg, later limes, medieval imagery, and combat. Sources
+weighed: P8.1; plan §§9 and 20. [secure period/current intent; illustrative
+composition only]
+
 ## 2026-07-20 - AD 1 Rome loading art is an evocative composite, not a site plan
 
 The first M11 loading screen uses an early-imperial Roman civic panorama as a
