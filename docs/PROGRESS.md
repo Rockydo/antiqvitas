@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-20 - M11 event-art contact sheet
+
+- Added a deterministic `art-review` target that renders the HTML and PNG
+  contact sheet from retained event-art masters.
+- Reviewed all fourteen current 1080x440 images in one grid; labels are legible
+  and no image is omitted or clipped.
+
+Next: continue the independent M11 art queue and source-led M5/M6 audit while
+runtime-gated milestone checks remain deferred.
+
 ## 2026-07-20 - M11 Boudica's Revolt event illustration
 
 - Added a reviewed, landscape-only eastern-British lowland image to the AD 60
