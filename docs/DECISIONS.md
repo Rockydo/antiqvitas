@@ -2,6 +2,11 @@
 
 ## 2026-07-20 - Third-century history extends the M6 adapters only where a current changes them
 
+The smoke harness now configures UTF-8 replacement output before reporting a
+log diff. This is diagnostic-only: it prevents a Windows cp1252 console from
+hiding a real engine error containing replacement characters; the baseline and
+comparison logic are unchanged.
+
 The AD 200-299 renderer adds two generated government-reform definitions and
 one additional option within the existing Roman citizenship law. Its dated
 events use the locally harvested `remove_reform`/`add_reform` and
@@ -949,3 +954,14 @@ Smoke testing further established that the engine validates an advance's
 `requires` only within the same age. M8 therefore uses five complete ten-step
 strands inside each age rather than cross-age prerequisites; the age transition
 is the historical gate between their thematic continuations.
+
+## 2026-07-20 - M10 fourth-century renderer uses generated transition ledgers
+
+`tools/m10_fourth_century.py` owns all fourteen AD 300-399 currents and emits
+dates only through `AntqDate`. Its Hunnic and Roman-partition adapters produce
+reviewable CSV ledgers alongside game content. `HNS` and `ERO` are checked
+dynamic identifiers rather than reused vanilla/runtime tags; `WRE` is a
+checked cosmetic identity. The 395 event derives its actual activation date
+from the shared `age_migrations` timeline row, while retaining the plan's 394
+Frigidus-to-396 current window. This makes the source-qualified territorial
+approximation explicit and preserves the event's no-hardcoded-date invariant.

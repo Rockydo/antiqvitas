@@ -166,7 +166,9 @@ after `make full` and its autonomous driver report are green.
   - [x] Render, source-check, and menu-smoke the AD 200-299 history batch:
         10 currents, including citizenship, Sassanid, and Dominate transition
         adapters and source-qualified Germanic formation identities.
-  - [ ] Render, source-check, and menu-smoke the AD 300-399 history batch.
+  - [x] Render, source-check, and menu-smoke the AD 300-399 history batch:
+        14 currents, including Christianization, Hunnic arrival, and the
+        source-qualified East-West Roman transition ledger.
 - [ ] Smoke and observer-test every batch; run milestone gate and tag `M10-done`.
 
 ## M11 — Flavor & face

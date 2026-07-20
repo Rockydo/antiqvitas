@@ -1300,3 +1300,42 @@ monastic entries implement the plan's explicitly dual-origin conception without
 making either tradition derivative of the other. Sources weighed: plan §15;
 CAH-XI; BHR in `docs/world_1ad/SOURCES.md`. [secure broad context; contested
 technical placement]
+
+## 2026-07-20 - Fourth-century currents retain the evidence's chronological limits
+
+The plan's AD 301 Armenian-conversion entry is implemented as its traditional
+strong current, but Iranica identifies a serious 314-315 alternative for the
+main conversion process. The current therefore changes the Armenian court
+religion only and does not claim an exact January conversion, a pop conversion,
+or an uncontested first-state chronology. The Aksum-Meroë row likewise remains
+a bounded stability current: Oxford's synthesis says Meroë ended around 350
+and that an Aksumite invasion is often assigned as its cause, not that an exact
+annexation frontier is settled. Sources weighed: plan §9; `IRAN-ARMCONV`;
+`OUP-MERO` in `docs/world_1ad/SOURCES.md`. [contested]
+
+## 2026-07-20 - Hunnic, Korean, Chinese, and Olympic mechanics are bounded proxies
+
+Kazan is a reviewed M3 Siberian-Societies Volga proxy for the c. 370 Hunnic
+arrival; it is not asserted as an exact ethnogenesis or crossing point. The
+new dynamic Hunnic state temporarily inherits its seed location's culture and
+religion because the project has no source-derived Hunnic culture ledger; that
+technical identity is not an ethnic-origin claim. Fei River and Gwanggaeto use
+their broad Han/Goguryeo anchors without inventing a Northern-Wei or royal
+successor map. The AD 393 Olympic event destroys the project's panhellenic
+games institution as a gameplay proxy for a conventionally dated cessation,
+not a claim that every athletic contest stopped on a known day. Sources weighed:
+plan §9; `CAM-HUN`; `CAM-ATT`; `BRILL-FEI`; `KCI-GWANG`; `OLY-ANCIENT`.
+[contested local representation]
+
+## 2026-07-20 - The 395 Roman partition is a transparent technical envelope
+
+Theodosius's sons governed eastern and western halves after 395, although the
+imperium remained formally one and scholarship warns against treating the
+division as instantly absolute. The M10 event waits for the shared AD 395 age
+boundary, forms the Eastern Roman court at Constantinople, and transfers only
+the generated, reviewable regional envelope in
+`docs/m10/eastern_roman_395_locations.csv`. It does not claim that the AD 1
+Roman mesh (or its later prior currents) supplies a complete 395 provincial
+atlas, every frontier, Arcadius/Honorius's personal histories, or a formal
+international-law rupture. Sources weighed: plan §9; `OUP-EW`; `CAM-DYNASTY`;
+`CAM-ATT`. [contested local technical representation]
