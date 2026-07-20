@@ -65,6 +65,7 @@ TARGETS = {
 EVENT_IMAGES = {
     "armenia_conversion": "gfx/interface/illustrations/event/antq_armenia_conversion.dds",
     "constantine_civil_wars": "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds",
+    "nicaea": "gfx/interface/illustrations/event/antq_nicaea.dds",
 }
 
 # A deliberately limited political envelope for the eastern court.  The list
