@@ -362,3 +362,33 @@ zero-new-line menu smoke); see `docs/playtests/M8_KNOWLEDGE.md`.
 Recovery: after a material driver/UI change or game patch, revalidate this
 single confirmation path, then observe AI research at high speed. Continue
 with independent M9 work now; no human input is required.
+
+## 2026-07-20 - M11 generic-action message registration does not load additively
+
+Status: **deferred after two bounded contract attempts; M11 decision target remains open.**
+
+The installed build accepted the generated `owncountry` action syntax, the
+reviewed tag scopes, `gold` trigger, `add_gold`, and weak prestige/legitimacy/
+stability effects. Its enabled-mod menu load nevertheless requires an explicit
+`PERFORM_antq_<action>_ACTION` message type for every action. A source-led
+40-row decision ledger and renderer are retained in `docs/m11/decisions.csv`
+and `tools/m11_decisions.py`, but all generated game-visible action, GUI, and
+localization output has been removed so the working tree returns to green.
+
+Tried:
+
+1. Rendered actions with UTF-8 BOM and action localization only. The engine
+   parsed the action contract but emitted one missing-message-type line per
+   action.
+2. Mirrored the locally installed message localization bundle, then rendered
+   each `PERFORM_*_ACTION` definition in a BOM-safe additive
+   `main_menu/gui/antq_m11_messagetypes.txt` using the exact local schema.
+   The menu still reported the same missing types, showing that this GUI
+   registry is not additively loaded by this build.
+
+Recovery: make a controlled, exact-name override of the installed
+`main_menu/gui/messagetypes.txt`, preserve every vanilla entry, append one
+generated M11 definition, and smoke-test that one pilot before expanding to
+all 40. Record the base-file hash and the overridden inventory so a game patch
+cannot silently drop vanilla message types. Do not retry additive GUI files.
+The post-removal validation and smoke checks must be green before moving on.
