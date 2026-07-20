@@ -390,6 +390,10 @@ def localization(records: tuple[Advance, ...], language: str) -> str:
         lines.append(f' {item.key}: "{item.name}"')
         lines.append(f' {item.key}_desc: "{item.description}"')
         lines.append(
+            f' STATIC_MODIFIER_NAME_{item.key}_birth: '
+            f'"Birthplace of ${item.key}$"'
+        )
+        lines.append(
             f' STATIC_MODIFIER_DESC_{item.key}_birth: '
             f'"Historic origin of the {item.name} institution."'
         )
