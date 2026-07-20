@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Hunnic-arrival art is landscape-only Volga-steppe context
+
+The image is an unoccupied late-summer Volga-steppe landscape of broad grassland
+beside a slow river, low grassy bluffs, reed fringes, dry-gold grasses, low
+shrubs, distant open horizon, and a pale clouded sky. It identifies no Huns,
+Alans, migration, invader, army, city, date, or outcome. It is not a
+reconstruction of Hunnic arrival on the Volga or the breaking of the Alans.
+Sources weighed: P8.8; plan sections 9 and 20. [secure broad regional context;
+illustrative composition only]
+
 ## 2026-07-20 - Crete-earthquake art is landscape-only southern-Cretan context
 
 The image is an unoccupied late-summer southern-Cretan natural coast of quiet
