@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M11 replaces native pepper art without duplicating the good
+
+The installed game already defines `pepper` and exposes exact matching
+128x128 and 1080x440 DXT5 surfaces named `icon_goods_pepper.dds`. M11 replaces
+those same mod-relative filenames with inspected generated DDS files rather
+than adding an unneeded `antq_pepper` economic symbol. This preserves M5's
+existing good and RGO mapping while making its visible art reviewable.
+
 ## 2026-07-20 - M5 uses the verified marketplace contract for Forum Romanum
 
 The installed building catalogue has no forum- or agora-specific contract. The

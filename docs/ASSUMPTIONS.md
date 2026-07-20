@@ -1,5 +1,13 @@
 # Historical Assumptions
 
+## 2026-07-20 - Pepper art is a generic botanical and commodity study
+
+The pepper icon depicts whole black peppercorns, unripe clusters, and a generic
+vine sprig. It does not claim a particular Muziris/Kodungallur grove, basket,
+merchant, trade volume, or route; it is visual support for the existing native
+pepper good only. Sources weighed: P12.1; P20. [secure commodity context;
+illustrative composition only]
+
 ## 2026-07-20 - Forum Romanum uses an economic-civic proxy
 
 The generic `marketplace` at Rome signals the Forum Romanum's long-lived

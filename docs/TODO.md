@@ -190,6 +190,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 1-4 Gaius Caesar eastern-settlement event illustration.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 9 Xin Dynasty Crisis event illustration.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 14 Augustan Succession event illustration.
+- [x] Generate, chroma-key review, dimension-check, round-trip review, and smoke-test the native pepper-good icon and illustration overrides.
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 
