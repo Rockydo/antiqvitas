@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Aksum-Meroë art is landscape-only middle-Nile context
+
+The image is an unoccupied late-summer middle-Nile river margin of a natural
+river, reeds, pale sandstone, acacia-like trees, dry grass, and low desert hills.
+It identifies no ruler, conquest, polity, city, monument, date, or outcome. It
+is not a reconstruction of the Aksumite conquest of Meroë. Sources weighed:
+P8.5; plan sections 9 and 20. [secure broad regional context; illustrative
+composition only]
+
 ## 2026-07-20 - Shapur-Julian art is landscape-only upper-Mesopotamian context
 
 The image is an unoccupied early-autumn upper-Mesopotamian river valley of a
