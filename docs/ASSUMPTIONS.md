@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Hadrians-Wall art is landscape-only northern-British context
+
+The image is an unoccupied northern-British upland of heather, grass, stone, a
+shallow beck, and distant hills. It identifies no wall, fort, worker, road,
+Roman material, construction, person, date, or outcome. It deliberately omits
+all fortification and is not a reconstruction of Hadrian's Wall. Sources
+weighed: P8.1; plan sections 9 and 20. [secure regional context; illustrative
+composition only]
+
 ## 2026-07-20 - Antioch-earthquake art is landscape-only Orontes context
 
 The image is an unoccupied Orontes-valley landscape with a narrow calm river,

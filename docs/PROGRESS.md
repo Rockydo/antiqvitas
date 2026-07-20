@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-20 - M11 Hadrian's Wall event illustration
+
+- Added a reviewed, landscape-only northern-British upland image to the AD 122
+  Hadrian's Wall current through the generated event-image contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. The maintained M11
+  contact sheet now has thirty-four retained event masters.
+
+Next: continue the M11 later-century art queue and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Antioch earthquake event illustration
 
 - Added a reviewed, landscape-only Orontes-valley image to the AD 115 Antioch
