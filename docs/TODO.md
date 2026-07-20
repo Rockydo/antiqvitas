@@ -197,6 +197,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 17 Tacfarinas' War event illustration.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 21 Florus and Sacrovir revolt event illustration.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 30 Christianity-founded event illustration through a respectful landscape-only treatment.
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 40 Trung Sisters' Revolt event illustration through a landscape-only Jiaozhi treatment.
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 

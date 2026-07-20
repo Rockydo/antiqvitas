@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Trung-Sisters art is an environmental Jiaozhi context
+
+The image is a generic humid river-delta landscape with no people, boat,
+building, artefact, named figure, or event action. It therefore makes no claim
+about either Trung sister, attire, weaponry, support, location, course, or
+outcome of the AD 40 revolt, and deliberately excludes later Vietnamese visual
+symbols. Sources weighed: P8.3; plan sections 9 and 20. [secure current
+context; illustrative composition only]
+
 ## 2026-07-20 - Christianity-founded art is a respectful landscape context
 
 The image is a generic first-century Judean hill landscape with olive trees,
