@@ -80,6 +80,7 @@ def expected_bom(path: Path) -> bool | None:
         or "/loading_screen/common/defines/" in f"/{relative}"
         or "/main_menu/common/modifier_icons/" in f"/{relative}"
         or "/main_menu/common/modifier_type_definitions/" in f"/{relative}"
+        or "/main_menu/common/named_colors/" in f"/{relative}"
     ):
         return True
     if path.suffix.lower() == ".yml":
