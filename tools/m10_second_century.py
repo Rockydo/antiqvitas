@@ -68,6 +68,7 @@ EVENT_IMAGES = {
     "gothic_migration": "gfx/interface/illustrations/event/antq_gothic_migration.dds",
     "hadrians_wall": "gfx/interface/illustrations/event/antq_hadrians_wall.dds",
     "kanishka_apogee": "gfx/interface/illustrations/event/antq_kanishka_apogee.dds",
+    "marcomannic_wars": "gfx/interface/illustrations/event/antq_marcomannic_wars.dds",
     "trajan_dacia": "gfx/interface/illustrations/event/antq_trajan_dacia.dds",
     "trajan_parthia": "gfx/interface/illustrations/event/antq_trajan_parthia.dds",
     "verus_parthia": "gfx/interface/illustrations/event/antq_verus_parthia.dds",
