@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-20 - M11 Boudica's Revolt event illustration
+
+- Added a reviewed, landscape-only eastern-British lowland image to the AD 60
+  Boudica's Revolt current through the generated event-image contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines.
+
+Next: continue the independent M11 art queue and source-led M5/M6 audit while
+runtime-gated milestone checks remain deferred.
+
 ## 2026-07-20 - M11 Claudian Britain event illustration
 
 - Added a reviewed, landscape-only southern British Channel coast image to the

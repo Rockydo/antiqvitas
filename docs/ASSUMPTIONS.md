@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Boudica-revolt art is a generic eastern-British context
+
+The image is a generic first-century eastern-British lowland with stream,
+bracken, meadow, oak, and distant hills. It identifies no Boudica, tribe,
+town, Roman unit, route, battle, action, or outcome. It deliberately presents
+neither people nor conflict and is not a reconstruction of the AD 60-61 revolt.
+Sources weighed: P8.7; plan sections 9 and 20. [secure current context;
+illustrative composition only]
+
 ## 2026-07-20 - Claudian-Britain art is a generic Channel-coast context
 
 The image signals a first-century southern British coastal setting through
