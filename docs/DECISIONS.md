@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - Preserve crash evidence across an early game-process exit
+
+The autonomous driver treats a process disappearing during its CPU-sampling
+window as a normal failed readiness result, not a driver exception. It also
+performs stale-reporter cleanup when the recorded game PID is already gone.
+Cleanup remains path-pinned to the configured EU5 installation's
+`crash_reporter/binaries/CrashReporter.exe`; broad process-name cleanup would
+be unsafe and could close unrelated applications. This is diagnostic tooling
+only and does not change game content or relax the observer retry boundary.
+
 ## 2026-07-20 - The driver cleans only detached crash reporters from this EU5 install
 
 Past failed game launches left detached `CrashReporter.exe` dialogs above later

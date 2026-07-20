@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-20 - Driver crash-path evidence hardening
+
+- The readiness probe now handles EU5 exiting between its liveness check and
+  CPU sample without emitting a Python traceback, preserving the engine's own
+  error-log evidence.
+- `stop` now clears only the configured installation's CrashReporter process
+  even after the game PID has already disappeared. This leaves the next
+  autonomous launch free of a modal stale-reporter window while never touching
+  unrelated crash reporters.
+- `make validate` is green. This is tooling-only work; no game-visible content
+  changed and the existing renderer retry boundary remains in `BLOCKERS.md`.
+
+Next: retain the unchanged-launch restriction and continue unblocked static
+work while a material renderer recovery is unavailable.
+
 ## 2026-07-20 - Observer retry remains renderer-bound after driver recovery
 
 - A clean, fully settled session without inherited crash-reporter windows
