@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Xiongnu-split art is generic eastern-steppe context
+
+The image is an unoccupied eastern Eurasian steppe with a braided stream, low
+stones, distant hills, and two unmarked tracks diverging toward separate
+horizons. It identifies no chanyu, group, migration, army, camp, route,
+boundary, alliance, battle, action, or outcome. It deliberately excludes
+people, horses, tents, carts, banners, walls, and later Mongol-era visual
+material; the branching tracks are illustrative rather than a reconstruction
+of the AD 48 division. Sources weighed: P8.3; plan sections 9 and 20. [secure
+current context; illustrative composition only]
+
 ## 2026-07-20 - Tiridates-coronation art is a generic Armenian context
 
 The image is a generic highland valley with a road, river, dry grass, sparse

@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M11 Xiongnu Split event illustration
+
+- Added a reviewed, non-literal eastern-steppe fragmentation-context image to
+  the AD 48 Xiongnu Split current through the generated event-image contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. The maintained
+  M11 contact sheet now has eighteen retained event masters.
+
+Next: continue the independent M11 art queue and source-led M5/M6 audit while
+runtime-gated milestone checks remain deferred.
+
 ## 2026-07-20 - M11 Tiridates' Coronation event illustration
 
 - Added a reviewed, non-literal Armenian highland diplomacy-context image to
