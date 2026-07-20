@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M11 Kushan Unification event illustration
+
+- Added a reviewed, text-free Central Asian caravan-and-riders image to the
+  AD 30 Kushan Unification formation current through the checked event-image
+  contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines.
+
+Next: continue the independent M11 art queue and the source-led economy/power
+audit while runtime-gated milestone checks remain deferred.
+
 ## 2026-07-20 - M11 Teutoburg Forest event illustration
 
 - Added a reviewed, text-free rainy Germanic-forest column image to the AD 9

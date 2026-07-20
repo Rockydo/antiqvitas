@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Kushan-unification art is a generic Central Asian gathering
+
+The image signals first-century Central Asian caravan and mounted-group context
+without portraying Kujula Kadphises, an accession, an oath, a coin, a specific
+Yuezhi group, Bactrian town, or fixed territorial outcome. The revised review
+excludes later religious monuments and conspicuous medieval or later imperial
+regalia. Sources weighed: P8.4; plan sections 9 and 20. [secure current
+context; illustrative composition only]
+
 ## 2026-07-20 - Teutoburg art is a generic AD 9 forest tension scene
 
 The image evokes a rain-damp Germanic forest and a dispersed Roman baggage

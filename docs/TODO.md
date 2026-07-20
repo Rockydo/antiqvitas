@@ -193,6 +193,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, chroma-key review, dimension-check, round-trip review, and smoke-test the native pepper-good icon and illustration overrides.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 6-9 Illyrian Revolt event illustration.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 9 Teutoburg Forest event illustration.
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 30 Kushan Unification event illustration.
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 
