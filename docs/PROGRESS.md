@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-20 - M5 Laurion decline audit
+
+- Reviewed the plan-listed fading Laurion source against a classical-site
+  reference. Its Strabo-period evidence supports decline and slag reworking,
+  not a fresh productive AD 1 silver mine.
+- Kept the broader installed Athens surface at marble and recorded the
+  non-anchor explicitly, avoiding both a false location match and a false
+  production claim.
+
+Next: continue the remaining source-led M5 economy audit while the
+runtime-effective RGO trade gate remains deferred.
+
 ## 2026-07-20 - M11 *Immensum Bellum* event illustration
 
 - Added the first attached M10/M11 event visual: a reviewed, text-free AD 1

@@ -209,6 +209,8 @@ a row reaches `implemented` status.
 - `UNESCO-AB-OC`: UNESCO World Heritage Centre, ["The Site of Angkor Borei and Phnom Da"](https://whc.unesco.org/en/tentativelists/6455/), reproducing Cambodia's Tentative List submission, used for Angkor Borei's long early occupation and canal connection to the Oc Eo region. It does not establish Oc Eo's exact AD 1 footprint, urban scale, political status, or a one-to-one installed-map match.
 - `FWF-NORIC`: Austrian Science Fund, ["Ferrum Noricum Hüttenberg, archaeology"](https://www.fwf.ac.at/en/research-radar/10.55776/P16069), used for the Hüttenberg district as a centre of Ferrum Noricum production from the later first century BCE into the fourth century CE. It does not establish a mine output, exact AD 1 working, or a one-to-one installed-location match.
 
+- `PER-LAURION`: C. W. J. Eliot, ["Laurion"](https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0006%3Aentry%3Dlaurion), *Princeton Encyclopedia of Classical Sites* (1976), used for the Laurion lead-silver district, its Classical peak, and the report that underground mining had ceased by Strabo's time while slag reworking continued. It does not establish AD 1 output, a precise mining-work chronology, or a one-to-one installed-location match.
+
 Rows marked `contested` have a corresponding entry in `docs/ASSUMPTIONS.md`.
 `TBD` map capitals are historical roster records awaiting a verified mapping to
 the installed EU5 location key; they are not silently guessed.
