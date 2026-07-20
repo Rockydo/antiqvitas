@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Prima Porta is a Rome-region villa proxy, not a latifundium survey
+
+The Ministry of Culture describes Livia's Prima Porta villa as a suburban
+landed property with productive and residential functions. The installed map
+has no dedicated Prima Porta location, so the Rome city node carries a generic
+`noble_villa` proxy. It does not locate the estate inside Rome, quantify villas
+or labor, or make a universal claim about Roman agriculture. Sources weighed:
+`ITA-LIVIA`; P12.3. [secure estate context; contested map/building proxy]
+
 ## 2026-07-20 - Anuradhapura's Buddhist complex uses a generic monastery proxy
 
 UNESCO identifies the Anuradhapura monastic complexes as evolving from the

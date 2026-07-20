@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-20 - M5 Prima Porta villa proxy
+
+- Added a source-labelled `noble_villa` at the Rome regional anchor for Livia's
+  documented productive suburban estate. It gives the plan's villa surface a
+  concrete AD 1 example while retaining the geographic and social limits.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines.
+  The generated start manager now reports 31 M5/M7 buildings.
+
+Next: continue remaining independent M5 economy and historic-building work.
+
 ## 2026-07-20 - M5 Anuradhapura monastic anchor
 
 - Added a source-qualified generic-monastery proxy at Anuradhapura, making the
