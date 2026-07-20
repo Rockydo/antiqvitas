@@ -61,6 +61,36 @@ def ensure_steam() -> None:
     print(result.stdout.strip())
 
 
+def close_game_crash_reporters(game_exe: Path) -> int:
+    """Close only stale reporters belonging to this exact EU5 installation."""
+    expected = (
+        game_exe.parent / "crash_reporter" / "binaries" / "CrashReporter.exe"
+    ).resolve()
+    reporters: list[psutil.Process] = []
+    for process in psutil.process_iter(("name", "exe")):
+        try:
+            if process.info["name"] != "CrashReporter.exe" or not process.info["exe"]:
+                continue
+            if Path(str(process.info["exe"])).resolve() == expected:
+                reporters.append(process)
+        except (psutil.AccessDenied, psutil.NoSuchProcess, OSError):
+            continue
+    for process in reporters:
+        try:
+            process.terminate()
+        except (psutil.AccessDenied, psutil.NoSuchProcess):
+            pass
+    _, still_running = psutil.wait_procs(reporters, timeout=5)
+    for process in still_running:
+        try:
+            process.kill()
+        except (psutil.AccessDenied, psutil.NoSuchProcess):
+            pass
+    if reporters:
+        print(f"gamedriver: closed {len(reporters)} stale EU5 crash reporter(s)")
+    return len(reporters)
+
+
 def set_fixed_settings(user_dir: Path) -> None:
     path = user_dir / "pdx_settings.json"
     value = json.loads(path.read_text(encoding="utf-8-sig")) if path.exists() else {}
@@ -131,11 +161,13 @@ def launch(args: argparse.Namespace) -> int:
     ensure_steam()
     cfg = config()
     user_dir = Path(str(cfg["user_dir"]))
+    game_exe = Path(str(cfg["game_exe"]))
+    close_game_crash_reporters(game_exe)
     set_fixed_settings(user_dir)
     logs = user_dir / "logs"
     logs.mkdir(parents=True, exist_ok=True)
     command = [
-        str(cfg["game_exe"]),
+        str(game_exe),
         f"--user_dir={user_dir}",
         "-debug_mode",
         "--ignore-disable-mods-on-crash",
@@ -148,7 +180,7 @@ def launch(args: argparse.Namespace) -> int:
         flags |= subprocess.CREATE_NO_WINDOW
     popen = subprocess.Popen(
         command,
-        cwd=Path(str(cfg["game_exe"])).parent,
+        cwd=game_exe.parent,
         creationflags=flags,
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
@@ -535,6 +567,7 @@ def stop(args: argparse.Namespace) -> int:
         except psutil.TimeoutExpired:
             process.kill()
             process.wait(timeout=10)
+    close_game_crash_reporters(Path(str(config()["game_exe"])))
     print("gamedriver: stopped")
     return 0
 

@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - The driver cleans only detached crash reporters from this EU5 install
+
+Past failed game launches left detached `CrashReporter.exe` dialogs above later
+healthy EU5 windows, confusing screenshot-driven UI automation. The driver now
+matches the reporter's resolved executable path against this installation's
+`binaries/crash_reporter/binaries/CrashReporter.exe` and closes only those
+processes before launch and after a controlled stop. It never matches by name
+alone or touches a reporter outside the configured game directory. The
+cleanup-enabled, 90-second menu smoke is green.
+
 ## 2026-07-20 - Observer access uses a one-default exact-name game-rule overlay
 
 The installed `country_change` rule defaults to prohibited, which is why the

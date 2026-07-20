@@ -13,6 +13,17 @@
 Next: use this material renderer recovery to recreate the narrow country-change
 rule overlay, menu-smoke it, and retry the observer gate.
 
+## 2026-07-20 - Game-driver stale-reporter cleanup
+
+- Confirmed eight detached CrashReporter windows all belonged to the configured
+  EU5 install and originated in prior crash directories. The driver now clears
+  only that exact executable before a new launch and after stopping EU5.
+- The cleanup-enabled, 90-second enabled-mod smoke passed with zero new
+  error-log lines, leaving the next observer session free of inherited modals.
+
+Next: enter Observer under the menu-smoked country-change rule and resume the
+M6--M10 empirical gates.
+
 ## 2026-07-20 - M6 roster evidence boundary
 
 - Completed an auditable M6 Tier-1/2 coverage pass: all 107 profiles remain
