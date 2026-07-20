@@ -131,7 +131,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add Artaxias III and Polemo II as bounded Pythodorid family-court figures without projecting later Armenian or Pontic reigns into AD 1.
 - [x] Add Emperor Ping's named maternal Wei family and Wang Yu's named early Yuan Shi circle without inferring offices, careers, or future punishments.
 - [x] Add the coin-attested Nabataean Queen Huldu as Aretas IV's documented AD 1 consort without inventing a constitutional role or genealogy.
-- [ ] Expand that foundation to the plan's governments, estates, privileges, laws, societal values, full Tier-1/2 rosters, and regnal histories. (250 source-led characters and 24 privilege adapters currently.)
+- [x] Complete the evidence-bounded Tier-1/2 power foundation: all 107 government profiles, 250 source-led characters, 32 named active heads, 75 explicitly anonymous/collective profiles, 24 privilege adapters, and campaign-valid regnal histories. The generated M6 coverage report preserves the source boundary rather than inventing rulers.
 - [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
 
 ## M7 — War
