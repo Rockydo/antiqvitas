@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Visigothic-settlement art is landscape-only southwestern-Gaul context
+
+The image is an unoccupied late-summer southwestern-Gaul river plain of a broad
+calm pale-blue river, light alluvial grassland, scattered willow and alder, low
+rough meadow, pale gravel banks, distant soft blue foothills, and lightly
+clouded sky. It identifies no Visigoths, foederati, migration, settlement, city,
+person, date, or outcome. It is not a reconstruction of Visigothic settlement in
+Aquitaine. Sources weighed: plan sections 9 and 20. [secure broad regional
+context; illustrative composition only]
+
 ## 2026-07-20 - Sack-of-Rome art is landscape-only central-Italian context
 
 The image is an unoccupied early-autumn central-Italian landscape of softly
