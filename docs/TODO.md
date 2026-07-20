@@ -243,7 +243,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 240 Manichaeism illustration through a landscape-only western-Iranian river-margin treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 250 Frankish formation illustration through a landscape-only Lower-Rhine floodplain treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 284 Diocletian and the Dominate illustration through a landscape-only central-Balkan upland treatment.
-- [x] Render and review the maintained M11 event-art contact sheet (55 retained 1080x440 masters).
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 291 War of the Eight Princes illustration through a landscape-only north-Chinese loess-valley treatment.
+- [x] Render and review the maintained M11 event-art contact sheet (56 retained 1080x440 masters).
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 

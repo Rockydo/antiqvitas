@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Eight-Princes art is landscape-only north-Chinese context
+
+The image is an unoccupied late-autumn north-Chinese loess valley of a natural
+watercourse, loess hills, reeds, sparse willows, pale eroded earth, and distant
+ridges. It identifies no prince, court, battle, polity, city, palace, date, or
+outcome. It deliberately excludes people, military material, buildings, roads,
+banners, imperial symbols, and narrative action; it is not a reconstruction of
+the War of the Eight Princes, northern collapse, Eastern Jin, or the Sixteen
+Kingdoms. Sources weighed: P8.3; plan sections 9, 17.3, and 20. [secure broad
+regional context; illustrative composition only]
+
 ## 2026-07-20 - Diocletian-Dominate art is landscape-only central-Balkan context
 
 The image is an unoccupied early-autumn central-Balkan upland of a natural
