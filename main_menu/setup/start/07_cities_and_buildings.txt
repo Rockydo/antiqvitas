@@ -15,6 +15,7 @@ locations = {
 	chengdu = { rank = city town_setup = antiqvitas_market_city } # chengdu; P12.1;P8.3;BHR
 	cologne = { rank = town town_setup = antiqvitas_market_town } # cologne; P12.1;P8.7
 	corinth = { rank = city town_setup = antiqvitas_market_city } # corinthus; P12.2;P8.1
+	ayasuluk = { rank = city town_setup = antiqvitas_market_city } # ephesus; P12.2;P8.1;UNESCO-EPH
 	cadiz = { rank = city town_setup = antiqvitas_market_city } # gades; P12.2;P8.1
 	kashgar = { rank = city town_setup = antiqvitas_market_city } # kashgar; P12.2;P8.3;CHG
 	lyon = { rank = city town_setup = antiqvitas_market_city } # lugdunum; P12.2;P8.1
@@ -61,6 +62,7 @@ building_manager = {
 	irrigation_systems = { tag = XAR level = 1 location = chengdu } # chengdu_irrigation; P12.3;UNESCO-DJJ
 	lacquerware_guild = { tag = XAR level = 1 location = chengdu } # chengdu_lacquerware; P12.1;P8.3;BHR
 	glass_guild = { tag = XDK level = 1 location = cologne } # cologne_glass; P12.1;P8.7
+	protected_harbor = { tag = XAA level = 1 location = ayasuluk } # ephesus_harbor; P12.2;P8.1;UNESCO-EPH
 	protected_harbor = { tag = XAA level = 1 location = cadiz } # gades_harbor; P12.2;P8.1
 	stockade = { tag = XAR level = 1 location = jiayu } # han_jiayu_beacon; P14;BHR
 	stockade = { tag = XAR level = 1 location = wuwei } # han_wuwei_beacon; P14;BHR
