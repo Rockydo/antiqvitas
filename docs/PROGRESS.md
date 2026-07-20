@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-20 - M11 East-West Roman Division event illustration
+
+- Added a reviewed, landscape-only central-Balkan river-and-foothill image to the AD 394–395 current through the generated fourth-century event-image contract.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines; the M11 contact sheet now has sixty-nine retained masters.
+
+Next: continue the M11 fourth-century art queue and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Olympic Games Sunset event illustration
 
 - Added a reviewed, landscape-only western-Peloponnese river-valley image to the AD 393 current through the generated fourth-century event-image contract.
