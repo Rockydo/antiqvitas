@@ -52,6 +52,7 @@ TARGETS = {
 EVENT_IMAGES = {
     "alemanni_formation": "gfx/interface/illustrations/event/antq_alemanni_formation.dds",
     "constitutio_antoniniana": "gfx/interface/illustrations/event/antq_constitutio_antoniniana.dds",
+    "frankish_formation": "gfx/interface/illustrations/event/antq_frankish_formation.dds",
     "manichaeism_foundation": "gfx/interface/illustrations/event/antq_manichaeism_foundation.dds",
     "sassanid_revolution": "gfx/interface/illustrations/event/antq_sassanid_revolution.dds",
     "severus_caledonia": "gfx/interface/illustrations/event/antq_severus_caledonia.dds",
