@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-20 - M11 Fei River and Northern Wei event illustration
+
+- Added a reviewed, landscape-only inland north-Chinese river-plain image to the AD 383–440 current through the generated fourth-century event-image contract.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines; the M11 contact sheet now has sixty-six retained masters.
+
+Next: continue the M11 fourth-century art queue and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Edict of Thessalonica event illustration
 
 - Added a reviewed, landscape-only northern-Aegean coastal image to the AD 380 current through the generated fourth-century event-image contract.

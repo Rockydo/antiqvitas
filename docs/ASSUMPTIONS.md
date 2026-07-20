@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Fei-River art is landscape-only north-Chinese river-plain context
+
+The image is an unoccupied late-summer inland north-Chinese river plain of a slow
+wide river, pale-green and dry-gold alluvial ground, reed margins, scattered
+deciduous trees, low loess-coloured hills in haze, and wide layered clouds. It
+identifies no Fei River battle, Former Qin, Northern Wei, city, date, or outcome.
+It is not a reconstruction of the battle, a dynastic collapse, or Northern
+Wei's rise. Sources weighed: P8.3; plan sections 9 and 20. [secure broad
+regional context; illustrative composition only]
+
 ## 2026-07-20 - Thessalonica-edict art is landscape-only northern-Aegean context
 
 The image is an unoccupied late-summer northern-Aegean coast of quiet rocky
