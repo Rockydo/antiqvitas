@@ -61,6 +61,7 @@ EVENT_IMAGES = {
     "antonine_wall": "gfx/interface/illustrations/event/antq_antonine_wall.dds",
     "bar_kokhba": "gfx/interface/illustrations/event/antq_bar_kokhba.dds",
     "cai_lun_paper": "gfx/interface/illustrations/event/antq_cai_lun_paper.dds",
+    "celestial_masters": "gfx/interface/illustrations/event/antq_celestial_masters.dds",
     "gan_ying": "gfx/interface/illustrations/event/antq_gan_ying.dds",
     "hadrians_wall": "gfx/interface/illustrations/event/antq_hadrians_wall.dds",
     "kanishka_apogee": "gfx/interface/illustrations/event/antq_kanishka_apogee.dds",
