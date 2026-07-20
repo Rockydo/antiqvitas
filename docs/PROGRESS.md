@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-20 - M11 Gothic Refugee Crisis event illustration
+
+- Added a reviewed, landscape-only lower-Danube riparian image to the AD 376–382 current through the generated fourth-century event-image contract.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines; the M11 contact sheet now has sixty-four retained masters.
+
+Next: continue the M11 fourth-century art queue and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Hunnic Arrival event illustration
 
 - Added a reviewed, landscape-only Volga-steppe image to the AD 370 current through the generated fourth-century event-image contract.
