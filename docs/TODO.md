@@ -232,7 +232,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 166 Daqin Embassy event illustration through a landscape-only South-China-Sea coastal treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 166-180 Marcomannic Wars event illustration through a landscape-only Danubian floodplain treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 184 Yellow Turbans event illustration through a landscape-only North China Plain treatment.
-- [x] Render and review the maintained M11 event-art contact sheet (44 retained 1080x440 masters).
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 192 Champa formation event illustration through a landscape-only tropical central-Vietnam treatment.
+- [x] Render and review the maintained M11 event-art contact sheet (45 retained 1080x440 masters).
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 

@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Champa-formation art is landscape-only central-Vietnam context
+
+The image is an unoccupied tropical central-Vietnam river margin of a natural
+watercourse, sandy alluvial bank, riverside vegetation, and misted green hills.
+It identifies no person, Linyi, Champa, polity, settlement, harbor, boat, field,
+monument, date, or outcome. It deliberately excludes human figures, buildings,
+ports, vessels, agricultural patterns, military material, and narrative action;
+it is not a reconstruction of Champa's formation or the Linyi/Rinan transition.
+Sources weighed: P8.9; plan sections 9, 17.3, and 20. [secure broad regional
+context; illustrative composition only]
+
 ## 2026-07-20 - Yellow-Turbans art is landscape-only North-China-Plain context
 
 The image is an unoccupied late-summer North China Plain landscape of a natural
