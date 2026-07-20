@@ -21,3 +21,18 @@ Historical basis: plan sections 8.1-8.3 and 16.2; row-level `OCD`, `PLE`,
 `CAH-XI`, and `CHG` citations in `docs/world_1ad/SOURCES.md`. The foederati
 threshold is the plan's 382 foedus sequence (sections 10 and 16.2), rendered
 through `tools/dates.py`'s `AntqDate` gateway.
+
+## War-contract extension
+
+The same generator now owns ten named casus belli, eight wargoals, and three
+custom peace terms. They implement the plan's punitive, client-king, tribute,
+frontier, raid, succession, and late religious categories. Chinese warlord,
+Sasanid, and Gupta unification CBs are deliberately dormant until M10's dated
+historical sequences can grant them to a documented actor.
+
+The local build accepts the CB/wargoal/peace field shapes, but a first smoke
+found that a CB and peace treaty may not share a localization key and that an
+unregistered `base_antagonism` is an error. Treaty keys are therefore
+namespaced separately and use zero antagonism pending a sourced M10 policy.
+The corrected enabled-mod smoke has zero new log lines. Historical basis:
+plan section 16.1; see `ASSUMPTIONS.md` for the scope limit.

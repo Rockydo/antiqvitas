@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-20 - M9 war labels are bounded mechanical categories
+
+Plan section 16.1 requires punitive expeditions, client-king imposition,
+tribute demand, frontier rectification, loot raids, succession intervention,
+late holy suppression, and Chinese/Sasanid/Gupta unification wars. The M9
+definitions treat those names as gameplay categories, not evidence for one
+uniform antique law of war, automatic claim, claimant, raid practice, or peace
+settlement. In particular, the unification definitions stay dormant until the
+dated M10 sequences provide a source-led actor and target. Sources weighed:
+plan section 16.1; P8's regional political context. [secure plan scope;
+contested generic mechanical representation]
+
 ## 2026-07-20 - AD 1 subject webs use imperial-form adapters, not treaty texts
 
 The Roman client ring, Arsacid sub-kings, and Han Western Regions entries are
