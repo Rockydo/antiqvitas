@@ -47,6 +47,7 @@ EVENT_IMAGES = {
     "adventus_saxonum": "gfx/interface/illustrations/event/antq_adventus_saxonum.dds",
     "attila": "gfx/interface/illustrations/event/antq_attila.dds",
     "britain_abandoned": "gfx/interface/illustrations/event/antq_britain_abandoned.dds",
+    "cape_bon": "gfx/interface/illustrations/event/antq_cape_bon.dds",
     "chalcedon_avarayr": "gfx/interface/illustrations/event/antq_chalcedon_avarayr.dds",
     "constantinople_earthquake": "gfx/interface/illustrations/event/antq_constantinople_earthquake.dds",
     "hephthalites": "gfx/interface/illustrations/event/antq_hephthalites.dds",
