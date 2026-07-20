@@ -67,6 +67,7 @@ EVENT_IMAGES = {
     "armenia_conversion": "gfx/interface/illustrations/event/antq_armenia_conversion.dds",
     "constantine_civil_wars": "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds",
     "crete_earthquake": "gfx/interface/illustrations/event/antq_crete_earthquake.dds",
+    "fei_river": "gfx/interface/illustrations/event/antq_fei_river.dds",
     "gothic_refugees": "gfx/interface/illustrations/event/antq_gothic_refugees.dds",
     "huns_arrive": "gfx/interface/illustrations/event/antq_huns_arrive.dds",
     "nicaea": "gfx/interface/illustrations/event/antq_nicaea.dds",
