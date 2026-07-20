@@ -135,14 +135,15 @@ after `make full` and its autonomous driver report are green.
 
 ## M9 — Nations among nations
 
-- [ ] Implement CBs, wargoals, treaties, subjects, IOs, and known-world sets.
+- [x] Implement CBs, wargoals, treaties, subjects, IOs, and known-world sets.
   - [x] Add the generated AD 1 client-kingdom, satrapy, tributary, foederati,
         and autonomous-city contracts; map the sourced Roman, Arsacid, and Han
         dependency web onto the first three.
   - [x] Add the plan's punitive, client-king, tribute, frontier, raid,
         succession, late-religious, and dormant historical-unification CBs;
         their wargoals and three subject-imposition peace terms.
-  - [ ] Add the plan's IO and discovery surfaces.
+  - [x] Add the plan's Han, Xiongnu, Games, and Church IO surfaces plus
+        validated discovery profiles for every AD 1 polity.
 - [ ] Verify ancient diplomatic webs; run milestone gate and tag `M9-done`.
 
 ## M10 — History in motion

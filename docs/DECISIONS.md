@@ -1,5 +1,31 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M9 IO instances are deliberately narrow and generated
+
+The installed IO parser requires a per-type `io_opinion_<type>` bias and three
+diplomatic-status localization keys, even for a dormant type. M9 generates
+those required support surfaces with the IO contracts so the local build cannot
+silently drift out of sync. The initialized Han instance contains only the
+Han court and the five sourced Western Regions tributaries; the Xiongnu
+instance contains Xiongnu itself because no separate AD 1 constituent-member
+ledger exists; the games use Rome as a non-leader technical custodian. The
+Christian Church is a type-only 325 scaffold.
+
+This avoids inventing a Panhellenic city roster, Xiongnu constituent hierarchy,
+or an AD 1 pan-Christian institution merely to populate a UI list. M10 owns
+dated membership, shatter/reform, councils, votes, and the games sunset.
+
+## 2026-07-20 - M9 discovery profiles use regions as a deliberately coarse horizon
+
+EU5's installed start interface accepts `discovered_regions`, `areas`, and
+`provinces` but exposes no source-safe dimness tier. The generator uses only
+locally harvested region keys, gives Rome/Han/Indian Ocean tags the explicitly
+specified broad horizons, and gives every other polity an ownership-world
+regional profile. It rejects every Atlantic and Pacific ocean discovery region
+as a permanent M9 invariant. A discovered region therefore means an
+era-appropriate map horizon, never equal survey quality or direct diplomacy
+with all countries inside it.
+
 ## 2026-07-20 - M9 war contracts distinguish historical availability from AI policy
 
 The local 1.3.1.1 CB, wargoal, and peace-treaty files establish the generated
