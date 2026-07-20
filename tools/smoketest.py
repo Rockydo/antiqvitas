@@ -16,6 +16,11 @@ ROOT = Path(__file__).resolve().parents[1]
 PYTHON = ROOT / ".venv/Scripts/python.exe"
 TIMESTAMP = re.compile(r"^\[\d\d:\d\d:\d\d\]")
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="backslashreplace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="backslashreplace")
+
 
 def run(*args: str, check: bool = True) -> subprocess.CompletedProcess[str]:
     result = subprocess.run(

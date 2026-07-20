@@ -16,6 +16,7 @@ validate:
 	.venv/Scripts/python.exe tools/m10_history.py --check
 	.venv/Scripts/python.exe tools/m10_second_century.py --check
 	.venv/Scripts/python.exe tools/m10_third_century.py --check
+	.venv/Scripts/python.exe tools/m10_fourth_century.py --check
 	.venv/Scripts/python.exe tools/generate_country_definitions.py --check
 	.venv/Scripts/python.exe tools/capital_mapper.py --check
 	.venv/Scripts/python.exe tools/extract_map_coordinates.py --check
