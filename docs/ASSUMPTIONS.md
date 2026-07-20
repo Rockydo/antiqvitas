@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Illyrian-revolt art is a generic mountain-column scene
+
+The image signals a cautious early-imperial Roman passage in a rugged Balkan
+landscape without depicting a named commander, tribe, pass, operation, battle,
+or result. Its distant figures are intentionally non-identifying and it makes
+no claim about an exact AD 6-9 campaign route or equipment reconstruction.
+Sources weighed: P8.1; plan sections 9 and 20. [secure current context;
+illustrative composition only]
+
 ## 2026-07-20 - Pepper art is a generic botanical and commodity study
 
 The pepper icon depicts whole black peppercorns, unripe clusters, and a generic
