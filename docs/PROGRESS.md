@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M11 Crisis of the Third Century event illustration
+
+- Added a reviewed, landscape-only central-Italian foothill image to the AD 235
+  Crisis of the Third Century current through the generated third-century
+  event-image contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. The maintained M11
+  contact sheet now has fifty-two retained event masters.
+
+Next: continue the M11 later-century art queue and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Sassanid Revolution event illustration
 
 - Added a reviewed, landscape-only Fars highland image to the AD 224 Sassanid
