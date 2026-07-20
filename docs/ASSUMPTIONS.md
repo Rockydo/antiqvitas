@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Celestial-Masters art is landscape-only inland-Chinese context
+
+The image is an unoccupied inland-Chinese woodland valley with bamboo, a natural
+stream, mossy stone, and distant misty ridges. It identifies no person, movement,
+polity, temple, shrine, religious material, animal, action, date, or outcome. It
+deliberately excludes Daoist symbols, talismans, ritual material, priests, sacred
+objects, and religious buildings; it is not a reconstruction of the Celestial
+Masters movement or its religious practice. Sources weighed: P8.3; plan sections
+9, 11, and 20. [secure broad regional context; illustrative composition only]
+
 ## 2026-07-20 - Antonine-Wall art is landscape-only northern-British context
 
 The image is an unoccupied northern-British moor of heather, rough grass,
