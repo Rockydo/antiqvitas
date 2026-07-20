@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Core CoA emblems are UI standards, not reconstructed ancient flags
+
+The Rome eagle, Han rosette, and Parthian horse are period-inspired
+emblem-on-field UI standards selected from the locally installed generic CoA
+catalogue. They identify no exact vexillum, court banner, dynastic standard,
+or historical colour scheme; each remains explicitly contested visual design
+rather than a historical reconstruction. Sources weighed: plan sections 8.1,
+8.2, 8.3, and 20; local CoA asset catalogue.
+
 ## 2026-07-20 - Via-Popilia corridor is a limited Rimini-Rovigo regional proxy
 
 The Ministry record describes the Via Popilia as a 132 BCE route from Rimini

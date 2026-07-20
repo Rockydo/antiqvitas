@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-20 - M11 core emblem standards
+
+- Replaced the Rome, Han, and Parthia M3 solid-colour placeholders with validated, locally installed colored-emblem layers under a generated source ledger.
+- The three standards are expressly period-inspired UI design rather than reconstructed ancient flags. `make validate` and enabled-mod smoke are green with zero new error-log lines.
+
+Next: continue M11 final-flag coverage and event/decision implementation without making unsupported heraldic claims.
+
 ## 2026-07-20 - M5 Via Popilia corridor
 
 - Extended the generated Roman road network from 41 to 43 source-labelled segments with explicitly contested Rimini-Ravenna-Rovigo regional links for the documented Via Popilia trajectory.
