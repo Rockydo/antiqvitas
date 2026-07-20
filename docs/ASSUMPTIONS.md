@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Constantinople-earthquake art is landscape-only Marmara-coast context
+
+The image is an unoccupied early-autumn Marmara coast of a calm slate-blue inlet
+below low pale limestone hills, dry grass, scattered wind-shaped shrubs, a
+narrow rocky shoreline, distant hazy hills across the water, and broad soft
+cloud cover. It identifies no Constantinople, walls, earthquake, Huns, city,
+person, date, or outcome. It is not a reconstruction of the AD 447 earthquake
+or its damage. Sources weighed: plan sections 9 and 20. [secure broad regional
+context; illustrative composition only]
+
 ## 2026-07-20 - Hephthalite art is landscape-only Inner-Asian foothill context
 
 The image is an unoccupied late-summer Inner-Asian foothill river landscape of a
