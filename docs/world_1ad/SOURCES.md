@@ -25,6 +25,10 @@ a row reaches `implemented` status.
   record](https://asmo.cultura.gov.it/mostre/archivio-mostre/la-storia-infinita-della-via-emilia)
   for its Bologna-Modena-Reggio Emilia axis. They do not license a survey-grade
   conversion into modern EU5 map links.
+- `MIC-POP`: Italian Ministry of Culture, ["Città romana di Ariminum /
+  Rimini"](https://catalogo.cultura.gov.it/detail/ibc/ArchaeologicalProperty/261525),
+  used for the 132 BCE Via Popilia's Rimini-Ravenna-Adria-Altino trajectory. It
+  does not license a survey-grade conversion into modern EU5 map links.
 - `CHG`: China Historical GIS Han-era layers, subject to its attribution and
   non-commercial license review before data import.
 - `PER`: *Periplus of the Erythraean Sea* and modern scholarship for Indian

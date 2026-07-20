@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M5 Via Popilia stops before unavailable Adria and Altino
+
+The available source documents Popilia's Rimini-Ravenna-Adria-Altino
+trajectory, but the installed map has neither Adria nor Altino. The road ledger
+therefore ends after two labelled, contested regional links at the available
+Rovigo proxy; it does not use Venice as an anachronistic terminus or manufacture
+unavailable intermediate map keys.
+
+Sources weighed: local `tools/generate_start_mirror.py`; plan sections 8.1 and
+12.2; ORBIS; the Italian Ministry of Culture record listed in `MIC-POP`.
+
 ## 2026-07-20 - M5 Via Aemilia preserves its missing-anchor uncertainty
 
 The source establishes a Rimini-Piacenza corridor and its central

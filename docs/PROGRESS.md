@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-20 - M5 Via Popilia corridor
+
+- Extended the generated Roman road network from 41 to 43 source-labelled segments with explicitly contested Rimini-Ravenna-Rovigo regional links for the documented Via Popilia trajectory.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines; unavailable Adria and Altino remain unrepresented rather than being replaced by false anchors.
+
+Next: continue the remaining independent M5 economy surfaces.
+
 ## 2026-07-20 - M5 Via Aemilia corridor
 
 - Extended the generated Roman road network from 37 to 41 source-labelled segments, connecting the available Rimini, Bologna, Modena, Parma, and Piacenza anchors along the documented Via Aemilia corridor.
