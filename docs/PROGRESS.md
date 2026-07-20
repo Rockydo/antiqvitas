@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-20 - M11 Cape Bon event illustration
+
+- Added a reviewed, landscape-only northeastern-Tunisian coast image to the AD 468 current through the generated final-century event-image contract.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines; the M11 contact sheet now has eighty-two retained masters.
+
+Next: complete final-century M11 event-art coverage with the AD 476 finale, then enforce complete mapping coverage.
+
 ## 2026-07-20 - M11 Vandal Sack of Rome event illustration
 
 - Added a reviewed, landscape-only lower-Tiber floodplain image to the AD 455 current through the generated final-century event-image contract.
