@@ -69,13 +69,14 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the plan-listed Taxila market and urban node through its reviewed Attock proxy, reaching 40 market hubs.
 - [x] Extend the road network with the Via Appia and Taxila–Mathura Uttarapatha legs (29 audited segments).
 - [x] Extend the western Roman road corridor through the reviewed Massilia-to-Tarraco anchors (36 audited segments).
+- [x] Add the source-qualified Via Flaminia eastern-branch proxy through the available Narni-Spoleto anchors (37 audited segments).
 - [x] Model Muza's active commercial roadstead with a market-warehouse proxy, explicitly avoiding a false harbor tier.
 - [x] Add the plan-required AD 1 Second Temple at Jerusalem and its guarded AD 70 building-destruction current.
 - [x] Add a source-qualified Buddhist monastic proxy at Anuradhapura without applying a later Christian building identity.
 - [x] Add a source-qualified Prima Porta villa proxy without claiming a latifundium census or slave-labor measure.
 - [x] Add a source-qualified Roman-period Faiyum irrigation proxy at the direct installed hydraulic-agricultural location.
 - [x] Add the Forum Romanum through the verified marketplace proxy without inventing a forum-specific building key or a reconstruction of its physical plan.
-- [ ] Implement the remaining goods/RGOs, buildings/town setups, roads, and development beyond this first dedicated-goods pass. The plan-listed Ephesus and Oc Eo growth hubs, Noricum iron anchor, eight source-labelled harbor tiers, Muza's roadstead-market tier, the Second Temple transformation, Anuradhapura and Prima Porta historic-building anchors, and a 36-segment road network now extend the building/transport surfaces; RGO runtime application is deferred in `BLOCKERS.md`, while other independent M5 surfaces may continue.
+- [ ] Implement the remaining goods/RGOs, buildings/town setups, roads, and development beyond this first dedicated-goods pass. The plan-listed Ephesus and Oc Eo growth hubs, Noricum iron anchor, eight source-labelled harbor tiers, Muza's roadstead-market tier, the Second Temple transformation, Anuradhapura and Prima Porta historic-building anchors, and a 37-segment road network now extend the building/transport surfaces; RGO runtime application is deferred in `BLOCKERS.md`, while other independent M5 surfaces may continue.
 - [ ] Verify ancient trade flows; run milestone gate and tag `M5-done`. (Blocked until a runtime-effective RGO surface is found.)
 
 ## M6 — Power

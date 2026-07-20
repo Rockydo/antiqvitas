@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-20 - M5 Via Flaminia eastern branch
+
+- Extended the generated Roman road network from 36 to 37 source-labelled segments with the explicitly contested Narni-Spoleto high-level proxy for Via Flaminia's eastern branch.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines. This adds connectivity only and leaves the runtime-effective RGO/trade-flow gate open.
+
+Next: continue the remaining independent M5 economy surfaces.
+
 ## 2026-07-20 - M11 AD 476 finale illustration and complete final-century coverage
 
 - Added a reviewed, landscape-only northern-Italian lowland image to the AD 476 finale through the generated final-century event-image contract.

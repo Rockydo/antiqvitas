@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-20 - Via-Flaminia eastern branch uses a high-level Narni-Spoleto proxy
+
+The Italian Ministry of Culture describes the Via Flaminia's eastern branch as
+passing from Narni through Terni and Spoleto before it rejoined the western
+branch at Forum Flaminii. The installed map lacks Terni and the intermediate
+route anchors, so `narni = spoleto` is a deliberately long, contested engine
+link. It represents regional connectivity only, not a survey-grade road trace
+or a claim that the ancient roadway ran directly between the two map-cell
+centres. Sources weighed: plan sections 8.1 and 12.2; ORBIS; Italian Ministry
+of Culture, ["Archeologia Via
+Flaminia"](https://sabapumbria.cultura.gov.it/archeologia-e-territorio/archeologia-via-flaminia/).
+
 ## 2026-07-20 - AD-476-finale art is landscape-only northern-Italian lowland context
 
 The image is an unoccupied early-autumn northern-Italian lowland of a slow side
