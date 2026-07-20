@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Crete-earthquake art is landscape-only southern-Cretan context
+
+The image is an unoccupied late-summer southern-Cretan natural coast of quiet
+blue-grey sea, pale limestone, sparse shrubs, dry grass, rocky coves, and distant
+headlands. It identifies no earthquake, tsunami, Alexandria, disaster, city,
+date, or outcome. It is not a reconstruction of the Crete earthquake, tsunami,
+or its effects. Sources weighed: P8.1; plan sections 9 and 20. [secure broad
+regional context; illustrative composition only]
+
 ## 2026-07-20 - Aksum-Meroë art is landscape-only middle-Nile context
 
 The image is an unoccupied late-summer middle-Nile river margin of a natural
