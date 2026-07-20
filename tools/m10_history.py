@@ -78,6 +78,7 @@ EVENT_IMAGES = {
     "claudian_britain": "gfx/interface/illustrations/event/antq_claudian_britain.dds",
     "florus_sacrovir": "gfx/interface/illustrations/event/antq_florus_sacrovir.dds",
     "gaius_eastern_settlement": "gfx/interface/illustrations/event/antq_gaius_eastern_settlement.dds",
+    "great_fire_rome": "gfx/interface/illustrations/event/antq_great_fire_rome.dds",
     "illyrian_revolt": "gfx/interface/illustrations/event/antq_illyrian_revolt.dds",
     "immensum_bellum": "gfx/interface/illustrations/event/antq_immensum_bellum.dds",
     "kushan_unification": "gfx/interface/illustrations/event/antq_kushan_unification.dds",
