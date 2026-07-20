@@ -74,6 +74,7 @@ TARGETS = {
 EVENT_IMAGES = {
     "augustan_succession": "gfx/interface/illustrations/event/antq_augustan_succession.dds",
     "boudica_revolt": "gfx/interface/illustrations/event/antq_boudica_revolt.dds",
+    "buddhism_han_court": "gfx/interface/illustrations/event/antq_buddhism_han_court.dds",
     "christianity_foundation": "gfx/interface/illustrations/event/antq_christianity_foundation.dds",
     "claudian_britain": "gfx/interface/illustrations/event/antq_claudian_britain.dds",
     "florus_sacrovir": "gfx/interface/illustrations/event/antq_florus_sacrovir.dds",
