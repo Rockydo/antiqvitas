@@ -212,7 +212,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 68 Year of the Four Emperors event illustration through a non-literal rain-wet Roman civic-context treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 79 Vesuvius event illustration through a non-literal Campanian volcanic-landscape treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 70 Second Temple transformation event illustration through a landscape-only Judean environmental-context treatment.
-- [x] Render and review the maintained M11 event-art contact sheet (25 retained 1080x440 masters).
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 83 Mons Graupius event illustration through a landscape-only Caledonian upland-context treatment.
+- [x] Render and review the maintained M11 event-art contact sheet (26 retained 1080x440 masters).
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 
