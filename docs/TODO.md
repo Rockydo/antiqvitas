@@ -224,7 +224,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 122 Hadrian's Wall event illustration through a landscape-only northern-British upland treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 127 Kanishka-apogee event illustration through a landscape-only Central-Asian highland treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 132 Bar Kokhba revolt event illustration through a landscape-only Judean limestone treatment.
-- [x] Render and review the maintained M11 event-art contact sheet (36 retained 1080x440 masters).
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 142 Antonine Wall event illustration through a landscape-only northern-British moorland treatment.
+- [x] Render and review the maintained M11 event-art contact sheet (37 retained 1080x440 masters).
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 

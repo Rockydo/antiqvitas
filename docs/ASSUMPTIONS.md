@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Antonine-Wall art is landscape-only northern-British context
+
+The image is an unoccupied northern-British moor of heather, rough grass,
+weathered boulders, a natural burn, and distant soft hills. It identifies no
+wall, fort, ditch, worker, road, Roman material, construction, person, animal,
+action, date, or outcome. It deliberately excludes all earthworks, fortification
+and military material; it is not a reconstruction of the Antonine Wall. Sources
+weighed: P8.1; plan sections 9 and 20. [secure regional context; illustrative
+composition only]
+
 ## 2026-07-20 - Bar-Kokhba art is landscape-only Judean context
 
 The image is an unoccupied Judean limestone ravine with pale rock shelves, dry
