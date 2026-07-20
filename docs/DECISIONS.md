@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M5 permits the verified generic monastery for Buddhist institutions
+
+The plan expressly allows monasteries in Buddhist eastern contexts at the
+campaign start. M5 therefore uses the installed generic `monastery` at the
+source-qualified Anuradhapura node, with a ledger note preventing its display
+or mechanics from being read as a Christian or later monastic structure. No
+new building type or unsupported religion-specific contract was invented.
+
 ## 2026-07-20 - Historic buildings may use a checked non-market site ledger
 
 The original M5 renderer restricted specialist buildings to the forty market
