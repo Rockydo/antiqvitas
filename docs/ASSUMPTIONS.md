@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Second-Temple-transformation art is landscape-only context
+
+The image is a quiet generic Judean limestone valley with olive shrubs, low
+dry-stone terraces, dry grass, and distant ridges. It identifies no Temple,
+Jerusalem, shrine, city, building, person, religious figure, symbol, ritual,
+fire, violence, damage, action, date, or outcome. It deliberately excludes
+destruction spectacle and historical or archaeological reconstruction; it is
+not a depiction of the AD 70 destruction. Sources weighed: P8.1; P11; plan
+sections 9 and 20. [secure regional context; illustrative composition only]
+
 ## 2026-07-20 - Vesuvius art is non-literal Campanian environmental context
 
 The image is a quiet Campanian landscape with a dark volcanic mountain, low
