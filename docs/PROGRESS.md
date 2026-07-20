@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-20 - M11 Christianity-founded event illustration
+
+- Added a reviewed, landscape-only Judean context image to the AD 30
+  Christianity-founded current through the checked generated event-image contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines.
+
+Next: continue the independent M11 art queue and the source-led economy/power
+audit while runtime-gated milestone checks remain deferred.
+
 ## 2026-07-20 - M11 Florus and Sacrovir event illustration
 
 - Added a reviewed, text-free Gaul river-and-market context image to the AD 21
