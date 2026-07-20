@@ -53,6 +53,13 @@ TARGETS = {
     "five_emperors": "ROM",
 }
 
+# Keep reviewed event-art links in the generator rather than hand-editing the
+# rendered script: regeneration then preserves every game-facing reference and
+# validation proves its texture remains present.
+EVENT_IMAGES = {
+    "gan_ying": "gfx/interface/illustrations/event/antq_gan_ying.dds",
+}
+
 
 @dataclass(frozen=True)
 class Current:
@@ -122,6 +129,13 @@ def validate(records: tuple[Current, ...]) -> None:
         raise ValueError(f"M10 second-century ledger/target mismatch: missing={missing}, extra={extra}")
     if len({record.event_id for record in records}) != len(records):
         raise ValueError("M10 second-century event IDs must be unique")
+    unknown_images = sorted(set(EVENT_IMAGES) - {record.key for record in records})
+    if unknown_images:
+        raise ValueError(f"M10 second-century illustration map has no corresponding current: {unknown_images}")
+    for image in EVENT_IMAGES.values():
+        texture = ROOT / "main_menu" / image
+        if not texture.is_file():
+            raise ValueError(f"M10 second-century event illustration is missing: {texture}")
     mapped_tags = engine_tags()
     if CHAMPA_TAG in mapped_tags.values():
         raise ValueError(f"M10 dynamic tag {CHAMPA_TAG} collides with the AD 1 tag map")
@@ -222,6 +236,9 @@ def event_script(records: tuple[Current, ...]) -> str:
             f"\toutcome = {event_outcome(record)}",
             "\tfire_only_once = yes",
         ))
+        image = EVENT_IMAGES.get(record.key)
+        if image is not None:
+            lines.append(f'\timage = "{image}"')
         if record.kind not in {"situation", "disaster"}:
             lines.extend((
                 "\tdynamic_historical_event = {",
