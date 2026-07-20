@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Olympic-sunset art is landscape-only western-Peloponnese context
+
+The image is an unoccupied late-summer western-Peloponnese river valley of a
+quiet shallow river, sunlit limestone valley, scattered olive trees, dry grasses,
+pale rounded hills, low reeds, and distant blue-grey slopes. It identifies no
+Olympia, Olympic games, Theodosius, closure, city, date, or outcome. It is not a
+reconstruction of any end to the Olympic games. Sources weighed: plan sections
+9 and 20. [secure broad regional context; illustrative composition only]
+
 ## 2026-07-20 - Gwanggaeto art is landscape-only Korean upland river-valley context
 
 The image is an unoccupied early-autumn Korean upland river valley of a clear
