@@ -18,9 +18,10 @@ observer playback; the exact evidence and recovery boundary is in
 The final observer-to-476 acceptance run has not been achieved. The observer
 country-change default is now enabled by a menu-smoked exact-name overlay, but
 the current game build exits in an FSR renderer access-violation stack on the
-first play action. The full 40-action M11 registry and the 7,440-event
-quarantine both have successful enabled-mod menu smokes, so this is not evidence
-of a message-registry or event-loader failure. Do not treat this development
+first play action. The full 40-action M11 registry, the resolved M8
+institution-birth contracts, and the 7,440-event quarantine all have successful
+enabled-mod evidence, so this is not evidence of a message-registry or
+event-loader failure. Do not treat this development
 build as release-ready for a long observer campaign; see `BLOCKERS.md` and
 `docs/m12/M12_FINALE_VERIFICATION.md`.
 

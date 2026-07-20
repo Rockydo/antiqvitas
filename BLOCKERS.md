@@ -59,16 +59,18 @@ driver's requested 960x540 string is also rejected by this game build and the
 engine persists a 2560x1440 windowed resolution, making the renderer profile a
 separate concrete issue.
 
-The crash logs also expose nonfatal AD 1 runtime work still needed (nine
-missing generated institution birth modifiers and vanilla HRE/COA fall-through
-on unset government or international-organization scopes), but no event
+The crash logs also exposed nonfatal AD 1 runtime work. The nine generated
+institution birth modifiers and their name-localization keys were subsequently
+fixed and fresh-observer verified; vanilla HRE/COA fall-through on unset
+government or international-organization scopes remains. There is no event
 quarantine loader error. Screenshots and the bounded reproduction are recorded
 in `docs/playtests/M12_OBSERVER_RETRY_20260721.md`.
 
-Recovery: do not repeat the unchanged observer route. First make a material,
-locally verified renderer-profile change (a supported low window resolution or
-driver/FSR change), then repeat the play-control probe and address the separate
-runtime data diagnostics only from a surviving session.
+Recovery: the supported 1920x1080 profile now reaches a live observer and has
+advanced through 1 June at maximum speed before the same FSR stack recurs.
+Do not repeat that unchanged profile. First locally verify a second material
+renderer change, preferably disabling the upscaler through a documented
+installed setting, then repeat the bounded play-control probe.
 
 ## 2026-07-20 - M5 Nubian-gold key lacks a defensible AD 1 site-date match
 
