@@ -1369,3 +1369,15 @@ primary safeguard against universal aggression. The dormant Chinese, Sasanid,
 and Gupta definitions retain their hidden and disabled state. This is a
 technical AI-contract correction; the observer run remains the authority for
 runtime frequency tuning.
+
+## 2026-07-20 - M11 messages use a pinned exact-name overlay
+
+The installed message registry does not load additive sibling files, but the
+generic-action database requires a registered `PERFORM_<action>_ACTION` type.
+After a one-action exact-name pilot was menu-smoke-clean, M11 copies the
+configured build's exact `messagetypes.txt` bytes and appends the 40 validated
+action entries. The renderer pins the local build, SHA-256, file-ending
+contract, and 1,348-entry inventory, so a game update fails validation rather
+than silently replacing changed vanilla GUI data. This is a technical
+compatibility overlay; its decision content remains bounded by the existing
+source ledger and player-only action contract.

@@ -365,15 +365,14 @@ with independent M9 work now; no human input is required.
 
 ## 2026-07-20 - M11 generic-action message registration does not load additively
 
-Status: **deferred after two bounded contract attempts; M11 decision target remains open.**
+Status: **resolved through an exact-name, source-pinned overlay.**
 
 The installed build accepted the generated `owncountry` action syntax, the
 reviewed tag scopes, `gold` trigger, `add_gold`, and weak prestige/legitimacy/
 stability effects. Its enabled-mod menu load nevertheless requires an explicit
 `PERFORM_antq_<action>_ACTION` message type for every action. A source-led
 40-row decision ledger and renderer are retained in `docs/m11/decisions.csv`
-and `tools/m11_decisions.py`, but all generated game-visible action, GUI, and
-localization output has been removed so the working tree returns to green.
+and `tools/m11_decisions.py`.
 
 Tried:
 
@@ -386,12 +385,21 @@ Tried:
    The menu still reported the same missing types, showing that this GUI
    registry is not additively loaded by this build.
 
-Recovery: make a controlled, exact-name override of the installed
-`main_menu/gui/messagetypes.txt`, preserve every vanilla entry, append one
-generated M11 definition, and smoke-test that one pilot before expanding to
-all 40. Record the base-file hash and the overridden inventory so a game patch
-cannot silently drop vanilla message types. Do not retry additive GUI files.
-The post-removal validation and smoke checks must be green before moving on.
+Resolution: `tools/m11_message_overlay.py` made the prescribed one-action
+exact-name pilot by copying the configured build's registry byte-for-byte and
+appending `PERFORM_antq_endow_public_games_ACTION`. The pilot reached the menu
+with zero new error-log lines. The tool then expanded the same pinned overlay
+to all 40 ledger entries. It verifies build `24187685`, SHA-256
+`610D35361A27253F93EBF6EC3F74247124C998A859B0E6D2BC8908D8741BBD1F`, final
+newline behaviour, and the 1,348-definition vanilla inventory before it writes
+anything. The full registry passed `make validate` and a clean-retry menu smoke
+with zero new lines. Two later full-gate launches exited at the renderer layer
+with `ErrorOutOfDeviceMemory` and no parser, registry, or `antq_` log line;
+one 960x540 fixed-window retry did not alter that outcome and was reverted.
+The successful full-registry menu smoke remains the content acceptance result;
+the intermittent Vulkan-memory condition is retained as an M12 long-run
+driver-risk, not a reason to retry additive GUI files. Use the guarded
+exact-name overlay for future changes.
 
 ## 2026-07-20 - Two institution-icon prompts returned no image artifact
 
