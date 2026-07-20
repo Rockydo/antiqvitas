@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Daqin-embassy art is landscape-only South-China-Sea context
+
+The image is an unoccupied South-China-Sea coast of calm water, pale granite,
+low natural shrubs, and distant hazy islands. It identifies no person, embassy,
+vessel, polity, port, route, trade good, animal, action, date, or outcome. It
+deliberately excludes boats, ships, docks, harbors, markets, trade material, and
+Han or Roman identifiers; it is not a reconstruction of the Daqin embassy or any
+voyage. Sources weighed: P8.3; plan sections 9 and 20. [secure broad regional
+context; illustrative composition only]
+
 ## 2026-07-20 - Antonine-Plague art is landscape-only Mediterranean context
 
 The image is an unoccupied Mediterranean upland of dry meadow, olive trees,
