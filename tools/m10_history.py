@@ -86,6 +86,7 @@ EVENT_IMAGES = {
     "mauretania_annexation": "gfx/interface/illustrations/event/antq_mauretania_annexation.dds",
     "tacfarinas_war": "gfx/interface/illustrations/event/antq_tacfarinas_war.dds",
     "teutoburg": "gfx/interface/illustrations/event/antq_teutoburg.dds",
+    "tiridates_coronation": "gfx/interface/illustrations/event/antq_tiridates_coronation.dds",
     "trung_sisters": "gfx/interface/illustrations/event/antq_trung_sisters.dds",
     "wang_mang_xin": "gfx/interface/illustrations/event/antq_xin_dynasty_crisis.dds",
 }
