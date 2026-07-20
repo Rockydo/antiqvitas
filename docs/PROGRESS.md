@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M11 Trajan's Parthian War event illustration
+
+- Added a reviewed, non-literal Mesopotamian river-plain image to the AD 113
+  Trajan's Parthian War current through the generated event-image contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. The maintained M11
+  contact sheet now has thirty-two retained event masters.
+
+Next: continue the M11 later-century art queue and source-led M5/M6 audit
+while runtime-gated milestone checks remain deferred.
+
 ## 2026-07-20 - M11 paper-standardization event illustration
 
 - Added a reviewed, non-literal Eastern Han scholarly-material image to the AD
