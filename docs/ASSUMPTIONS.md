@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Faxian-Gupta art is landscape-only northern-Indian context
+
+The image is an unoccupied late-monsoon northern-Indian river plain of a broad
+calm river, sandy pale banks, lush green grass after monsoon, scattered broadleaf
+trees, distant low blue-grey hills, thin reeds, and humid soft clouds. It covers
+only an Indian regional setting, not the whole China-and-India current. It
+identifies no Faxian, pilgrimage, Gupta ruler, empire, Buddhism, city, date, or
+outcome. It is not a reconstruction of Faxian's journey or Gupta apogee. Sources
+weighed: P8.3, P8.4; plan sections 9 and 20. [secure broad regional context;
+illustrative composition only]
+
 ## 2026-07-20 - East-West-division art is landscape-only central-Balkan context
 
 The image is an unoccupied early-autumn central-Balkan river-and-foothill

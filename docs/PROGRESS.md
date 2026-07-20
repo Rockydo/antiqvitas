@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-20 - M11 Faxian and Gupta Apogee event illustration
+
+- Added a reviewed, landscape-only northern-Indian river-plain image to the AD 399–413 current through the generated fourth-century event-image contract.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines; the M11 contact sheet now has seventy retained masters.
+
+Next: continue M11 coverage into the final-century current set and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 East-West Roman Division event illustration
 
 - Added a reviewed, landscape-only central-Balkan river-and-foothill image to the AD 394–395 current through the generated fourth-century event-image contract.
