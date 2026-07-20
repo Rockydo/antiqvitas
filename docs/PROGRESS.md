@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-20 - Rinan prerequisite for the Champa formation
+
+- Corrected the M3 residual-map result for four reviewed Huế/Rinan proxy
+  locations: they are now Han-controlled, matching the plan's Linyi revolt
+  from Han Rinan rather than a pre-existing Southeast-Asian SoP ownership.
+- Added a narrow source-qualified population-override surface so that the map
+  correction does not falsely convert its indigenous population to Han. The
+  checked output preserves its Austronesian profile and Southeast-Asian
+  allocation while still modelling Han administration.
+- `make validate` and the enabled-mod `make smoke` passed with zero new
+  `error.log` lines. This is an M10 prerequisite; Champa's AD 192 dynamic
+  formation is the next material item in the AD 97-199 renderer.
+
 ## 2026-07-20 - M10 Northern Xiongnu release
 
 - Implemented the AD 48 split as a real dynamic-country release rather than a
