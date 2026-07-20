@@ -43,6 +43,7 @@ TARGETS = {
 # Retain reviewed M11 event-image links in the generator so regenerated scripts
 # cannot silently drop a game-facing texture.
 EVENT_IMAGES = {
+    "britain_abandoned": "gfx/interface/illustrations/event/antq_britain_abandoned.dds",
     "radagaisus_rhine": "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds",
 }
 DYNAMIC_TARGETS = {"HNS", "ERO", "VND"}
