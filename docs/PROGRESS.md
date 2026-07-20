@@ -14,8 +14,17 @@ Next: continue the remaining decision and localization work.
 - Recorded the plan-permitted shared-icon completion: five reviewed advance
   textures cover all 250 knowledge entries, and 83 retained paintings cover
   all 411 primary and source-window historical events.
-- The remaining M11 scope is the separately logged decision-registry blocker
-  and localization polish; no unseen icon or event-art placeholder is left.
+- The remaining M11 scope is the separately logged decision-registry blocker;
+  no unseen icon or event-art placeholder is left.
+
+## 2026-07-20 - M11 localization mirror audit
+
+- Verified that all fifteen English localization files are replicated exactly
+  to the ten supported non-English client folders after their language headers,
+  with valid BOMs and zero game-visible TODO or placeholder strings.
+- Added a permanent static validator for the inventory, headers, English-text
+  mirrors, and stub scan. M11 now has only its separately logged decision
+  registry blocker outstanding.
 
 ## 2026-07-20 - M11 scripted-formation CoA pass
 
