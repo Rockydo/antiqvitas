@@ -9,6 +9,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Create the repo on the game drive; move the master plan into `docs/`; configure caches and local Python environment.
 - [x] Establish mod visibility using user-dir relocation, a directory junction, or direct CLI loading, in that order.
 - [x] Build Steam startup, launcher/playset enablement, game driver console tier, vanilla extractor, linter, pop checker, smoke tester, DDS/date/localization tools.
+- [x] Harden the game driver's early-exit reporting and exact-install crash-reporter cleanup so failed launches leave usable autonomous evidence.
 - [x] Capture scrubbed vanilla error baseline with all existing mods disabled.
 - [x] Harvest `script_docs`, `dump_data_types`, and `helplog` autonomously. (`helplog` local; documented community fallback for the two non-returning exporters.)
 - [x] Clone and analyze EU5-1444-Start-Date read-only.

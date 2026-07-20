@@ -250,10 +250,22 @@ def wait_ready(args: argparse.Namespace) -> int:
     last_size = -1
     unchanged_since = time.monotonic()
     saw_window = False
-    process.cpu_percent()
+    try:
+        process.cpu_percent()
+    except psutil.NoSuchProcess:
+        print("gamedriver: process exited before readiness probe", file=sys.stderr)
+        return 1
     while time.monotonic() < deadline:
-        if not process.is_running() or process.status() == psutil.STATUS_ZOMBIE:
-            print(f"gamedriver: process exited with {process.wait(timeout=1)}", file=sys.stderr)
+        try:
+            alive = process.is_running() and process.status() != psutil.STATUS_ZOMBIE
+        except psutil.NoSuchProcess:
+            alive = False
+        if not alive:
+            try:
+                exit_code = process.wait(timeout=1)
+            except psutil.NoSuchProcess:
+                exit_code = "unknown"
+            print(f"gamedriver: process exited with {exit_code}", file=sys.stderr)
             return 1
         window = find_window()
         saw_window = saw_window or window is not None
@@ -264,7 +276,11 @@ def wait_ready(args: argparse.Namespace) -> int:
             last_size = size
             unchanged_since = time.monotonic()
         quiet = time.monotonic() - unchanged_since
-        cpu = process.cpu_percent(interval=1)
+        try:
+            cpu = process.cpu_percent(interval=1)
+        except psutil.NoSuchProcess:
+            print("gamedriver: process exited during readiness probe", file=sys.stderr)
+            return 1
         elapsed = time.monotonic() - (deadline - args.timeout)
         print(
             f"wait {elapsed:5.0f}s window={bool(window)} responsive={responsive} rendered={rendered} "
@@ -555,19 +571,24 @@ def key(args: argparse.Namespace) -> int:
 
 
 def stop(args: argparse.Namespace) -> int:
+    game_exe = Path(str(config()["game_exe"]))
     try:
         process = process_from_state()
     except (FileNotFoundError, psutil.NoSuchProcess):
+        close_game_crash_reporters(game_exe)
         print("gamedriver: already stopped")
         return 0
-    if process.is_running():
-        process.terminate()
-        try:
-            process.wait(timeout=args.timeout)
-        except psutil.TimeoutExpired:
-            process.kill()
-            process.wait(timeout=10)
-    close_game_crash_reporters(Path(str(config()["game_exe"])))
+    try:
+        if process.is_running():
+            process.terminate()
+            try:
+                process.wait(timeout=args.timeout)
+            except psutil.TimeoutExpired:
+                process.kill()
+                process.wait(timeout=10)
+    except psutil.NoSuchProcess:
+        pass
+    close_game_crash_reporters(game_exe)
     print("gamedriver: stopped")
     return 0
 
