@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-20 - M12 historical-hint semantic audit closed
+
+- The recovered virtual-memory state first produced a clean enabled-mod baseline
+  smoke, then a second settled-menu smoke with the hint overlay enabled; both
+  added zero error-log lines.
+- The checked exact-name renderer disables 33 post-antique dated/dynastic hints
+  while preserving generic economy, food, stability, warfare, estates, slavery,
+  and research guidance. Tutorials were already non-automatic.
+
+Next: retain the observer/finale gates as the remaining M12 acceptance work;
+continue independent static work whenever no fresh runtime measurement is safe.
+
 ## 2026-07-20 - M12 player-facing anachronism guard
 
 - Added a generated M12 audit across all 17 English localization files and

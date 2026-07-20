@@ -24,7 +24,7 @@ has passed the observer gate.
 | Diseases | deferred | The vanilla disease taxonomy is retained; long-run disease-current behaviour awaits observer evidence. |
 | Missions and mission-task definitions | done | M12 disables all 11 anachronistic generic packs by checked exact-name visibility overlays; task definitions have no active standalone gameplay file. |
 | Authored-text anachronism sweep | done | `m12_anachronism_audit.py` pins 17 English player-text files and 5,074 entries against narrow clear post-476 vocabulary; technical compatibility identifiers are deliberately outside this text-only check. |
-| Game rules, tutorials, and hints | open | The exact country-change rule is now menu-smoked for autonomous Observer access; tutorials are non-automatic, while the dated-hint overlay remains the final semantic audit. |
+| Game rules, tutorials, and hints | done | Country change is enabled only for autonomous Observer access; all four tutorials are non-automatic; 33 dated/dynastic hints are disabled by a guarded, menu-smoked exact-name overlay while generic guidance is retained. |
 | Localization, glossary, credits | done | 17 English files mirror exactly to ten clients; glossary and Pleiades/ORBIS credits are present. |
 | Flags, goods/religion/advance/estate/government icons, event/age/loading art | done | M11 audit covers direct-key common screens, 83 event images, 5 age panels, and source/master/DDS chains. |
 | Main menu, GUI, fonts | deferred | Vanilla menu and fonts are retained; GUI is touched only for the guarded M11 registry overlay. |
@@ -33,6 +33,6 @@ has passed the observer gate.
 | Achievements | deferred | Explicit v1 non-goal; no achievement support is claimed. |
 | Packaging and Workshop metadata | open | Release notes are present in `docs/m12/PACKAGING.md`; no external upload before M12 observer/finale acceptance. |
 
-The two `open` semantic audits and the observer-dependent rows are tracked in
-`docs/TODO.md`, `KNOWN_ISSUES.md`, and `BLOCKERS.md`. No row is silently
+The remaining `open` packaging gate and all observer-dependent rows are tracked
+in `docs/TODO.md`, `KNOWN_ISSUES.md`, and `BLOCKERS.md`. No row is silently
 treated as a release pass.

@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - Disable only dated and dynastic vanilla hints
+
+M12 uses an exact-name overlay of the installed scriptable-hint file to add an
+impossible `priority` trigger to 33 post-antique definitions. The selected
+inventory is limited to named historical crises/situations, later named states,
+and HRE/Eastern-Roman country cues. The renderer copies every other source byte,
+so generic economic, food, stability, warfare, estates, slavery, and research
+guidance stays available. Its source inventory and priority contract are checked
+on every validation, and the enabled overlay has a clean settled-menu smoke.
+
 ## 2026-07-20 - Restrict the automated anachronism sweep to authored player text
 
 The M12 anachronism guard reads the 17 English localization files rather than

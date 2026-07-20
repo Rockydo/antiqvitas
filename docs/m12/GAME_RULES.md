@@ -13,7 +13,6 @@ drift. The change is an observer/playtest accessibility setting; it does not
 alter a country, historical current, economy, or AI rule.
 
 The separate tutorial audit found all four installed tutorials use
-`start_automatically = no` and no dated historical lesson text. The remaining
-hint audit is retained as a separate M12 task because dated vanilla hints must
-be disabled only after this exact-name overlay itself receives a clean menu
-smoke.
+`start_automatically = no` and no dated historical lesson text. The dedicated
+hint audit now disables only the 33 dated/dynastic post-antique definitions
+through a menu-smoked exact-name overlay; see `docs/m12/HINT_AUDIT.md`.
