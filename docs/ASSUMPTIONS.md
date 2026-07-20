@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Mons-Graupius art is landscape-only Caledonian context
+
+The image is an unoccupied Caledonian upland of heather, coarse grass, granite,
+shallow peaty ground, a weathered ridge, and misted hills. It identifies no
+battle, army, commander, route, site, fort, Roman material, Caledonian group,
+person, animal, action, date, or outcome. It deliberately excludes military
+material, settlement, roads, and medieval or modern Scottish imagery; it is not
+a reconstruction of the AD 83 battle. Sources weighed: P8.1; plan sections 9
+and 20. [secure regional context; illustrative composition only]
+
 ## 2026-07-20 - Second-Temple-transformation art is landscape-only context
 
 The image is a quiet generic Judean limestone valley with olive shrubs, low
