@@ -297,3 +297,26 @@ GlossMod/EU5-Modding-Mcp dump at commit
 1.3.1.1, so every effect/trigger used by the mod must additionally be confirmed
 against current local scripts and smoke-tested. The local `helplog` command list
 was harvested successfully as `docs/REF_console_commands.txt`.
+
+## 2026-07-19 - M7 observer confirmation is ignored by the current game driver
+
+Status: **deferred after two bounded attempts; M7 milestone gate remains open.**
+
+The enabled mod reached the live AD 1 selector at `08:00, 1 January, 1`, with
+the total-conversion world visible in
+`docs/screens/M7_war_probe/m7_selector_ready_retry.png`. Selecting Observer
+opened the irreversible country-change confirmation. The first normalized
+pointer click targeted the visible OK control and left the dialog unchanged;
+the second attempt used the driver's foreground-safe Enter key and likewise
+left it unchanged. The process remained responsive throughout. Screenshots are
+`m7_observer_started.png`, `m7_observer_confirm_retry.png`, and
+`m7_observer_after_enter.png` in the same session directory.
+
+The runtime log has no `antq_` unit, `unit_manager`, `antq_legionaries`,
+`antq_liburnian`, or fort-proxy error identifier. The only matched `antq_`
+lines concern existing religion-pop coverage, not M7. `make validate` and the
+post-content enabled-mod menu smoke were green before this probe.
+
+Recovery: revalidate the observer-confirmation click sequence after the next
+driver/UI adjustment or game patch, then run the planned high-speed war
+observation. Continue independent M8 work now; no human action is required.

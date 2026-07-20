@@ -125,7 +125,8 @@ after `make full` and its autonomous driver report are green.
 ## M7 — War
 
 - [x] Implement ancient units, levies/regulars, mercenaries, forts/limes, and navies; remove gunpowder/oceanic units.
-- [ ] Observer-test wars; run milestone gate and tag `M7-done`.
+- [ ] Observer-test wars; run milestone gate and tag `M7-done`. (Two current
+  driver confirmation attempts are recorded in `BLOCKERS.md`; continue M8.)
 
 ## M8 — Knowledge
 
