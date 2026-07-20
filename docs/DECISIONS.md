@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - Observer access uses a one-default exact-name game-rule overlay
+
+The installed `country_change` rule defaults to prohibited, which is why the
+previously visible Observer confirmation could not complete despite receiving
+input. The M12 overlay mirrors the full installed rules file and changes only
+that default to `country_change_allowed`, with source re-rendering and drift
+checks on every validation. Its enabled-mod menu smoke is clean. This enables
+the autonomous test hand without changing historical currents, AI choices,
+country data, or normal rule definitions.
+
 ## 2026-07-20 - The game driver writes the installed very-low graphics contract
 
 The previous fixed-window driver wrote a numeric frame-cap and lowercase

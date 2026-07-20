@@ -424,10 +424,9 @@ recreate the narrow source-checked overlay and test it once before committing.
 Keep generic economy, war, stability, estate, and research hints; the separate
 tutorial audit confirms all four installed tutorial chains are non-automatic.
 
-## 2026-07-20 - Observer confirmation root cause is known but untestable
+## 2026-07-20 - Observer confirmation root cause is resolved
 
-Status: **deferred after two renderer-bound smoke attempts; no game-rule
-overlay is retained.**
+Status: **resolved through a menu-smoked exact-name game-rule overlay.**
 
 Visual inspection of `docs/screens/M7_war_probe/m7_observer_confirm_retry.png`
 shows that the prior Observer confirmation did receive input: it reports
@@ -435,18 +434,16 @@ shows that the prior Observer confirmation did receive input: it reports
 `country_change` rule defaults to `country_change_prohibited`, so the old
 normalized-click and Enter attempts could not start an Observer session.
 
-A narrow exact-name overlay was built that retained every installed game-rule
-definition and changed only that default to `country_change_allowed`. Static
-validation passed. Both enabled-mod smoke attempts then exited before the menu
-at the established Vulkan `ErrorOutOfDeviceMemory` condition, with no game-rule
-parse or ANTIQVITAS error. A targeted shader/news-cache cleanup was attempted
-but the execution environment disallowed that destructive cache operation.
-The uncommitted overlay was removed and the last menu-smoked tree restored.
+A narrow exact-name overlay retains every installed game-rule definition and
+changes only that default to `country_change_allowed`. The prior two smokes
+were renderer-bound, not rule errors. After the driver was repaired to emit the
+installed very-low graphics contract, the regenerated overlay passed full
+validation and an enabled-mod menu smoke with zero new error-log lines. The
+guarded generator is retained as `tools/m12_game_rules.py`.
 
-Recovery: after a material graphics/driver or permitted cache-reset change
-produces stable menu launches, recreate and menu-smoke the one-line
-source-checked game-rule overlay, then replay the Observer selection. This is
-a distinct recovery path from the already-exhausted click/Enter input attempts.
+Recovery completed: replay the Observer selection with the now-active rule.
+The old normalized-click and Enter attempts remain superseded by the explicit
+rule diagnosis rather than counted as a UI-input limitation.
 
 ## 2026-07-20 - Two institution-icon prompts returned no image artifact
 
