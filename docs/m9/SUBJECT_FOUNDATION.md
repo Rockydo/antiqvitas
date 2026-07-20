@@ -30,6 +30,13 @@ frontier, raid, succession, and late religious categories. Chinese warlord,
 Sasanid, and Gupta unification CBs are deliberately dormant until M10's dated
 historical sequences can grant them to a documented actor.
 
+The seven visible categories use conservative additive AI priorities close to
+the installed attack-threat baseline: punitive 10, client king 8, tribute 7,
+frontier rectification 16, raid 14, succession 6, and holy suppression 4.
+Their eligibility triggers remain the substantive historical limit. Only the
+three deliberately invisible future-unification CBs retain the `value = -1`
+AI-disable sentinel.
+
 The local build accepts the CB/wargoal/peace field shapes, but a first smoke
 found that a CB and peace treaty may not share a localization key and that an
 unregistered `base_antagonism` is an error. Treaty keys are therefore

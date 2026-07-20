@@ -6,7 +6,12 @@ antq_punitive_expedition = {
 	create_visible = { scope:target = { is_neighbor_of = root } }
 	create_enabled = { not = { has_truce_with = scope:target } }
 	war_goal_type = antq_punitive_superiority
-	ai_will_do = { value = -1 }
+	ai_will_do = {
+		add = {
+			desc = "BASE"
+			value = 10
+		}
+	}
 }
 
 antq_impose_client_king = {
@@ -29,7 +34,12 @@ antq_impose_client_king = {
 		}
 	}
 	war_goal_type = antq_client_capital
-	ai_will_do = { value = -1 }
+	ai_will_do = {
+		add = {
+			desc = "BASE"
+			value = 8
+		}
+	}
 }
 
 antq_demand_tribute = {
@@ -52,7 +62,12 @@ antq_demand_tribute = {
 		}
 	}
 	war_goal_type = antq_tribute_capital
-	ai_will_do = { value = -1 }
+	ai_will_do = {
+		add = {
+			desc = "BASE"
+			value = 7
+		}
+	}
 }
 
 antq_frontier_rectification = {
@@ -61,7 +76,12 @@ antq_frontier_rectification = {
 	create_enabled = { not = { has_truce_with = scope:target } }
 	province = { any_location_in_province = { is_core_of = scope:actor } }
 	war_goal_type = antq_frontier_recovery
-	ai_will_do = { value = -1 }
+	ai_will_do = {
+		add = {
+			desc = "BASE"
+			value = 16
+		}
+	}
 }
 
 antq_loot_raid = {
@@ -75,7 +95,12 @@ antq_loot_raid = {
 	}
 	create_enabled = { not = { has_truce_with = scope:target } }
 	war_goal_type = antq_raid_superiority
-	ai_will_do = { value = -1 }
+	ai_will_do = {
+		add = {
+			desc = "BASE"
+			value = 14
+		}
+	}
 }
 
 antq_succession_intervention = {
@@ -86,7 +111,12 @@ antq_succession_intervention = {
 	}
 	create_enabled = { not = { has_truce_with = scope:target } }
 	war_goal_type = antq_succession_capital
-	ai_will_do = { value = -1 }
+	ai_will_do = {
+		add = {
+			desc = "BASE"
+			value = 6
+		}
+	}
 }
 
 antq_holy_suppression = {
@@ -94,7 +124,12 @@ antq_holy_suppression = {
 	create_visible = { current_date >= 325.1.1 religion != scope:target.religion }
 	create_enabled = { current_date >= 325.1.1 not = { has_truce_with = scope:target } }
 	war_goal_type = antq_holy_superiority
-	ai_will_do = { value = -1 }
+	ai_will_do = {
+		add = {
+			desc = "BASE"
+			value = 4
+		}
+	}
 }
 
 antq_chinese_warlord_unification = {

@@ -41,6 +41,25 @@ FOEDERATI_UNLOCK = AntqDate.parse("382.1.1")
 HOLY_SUPPRESSION_UNLOCK = AntqDate.parse("325.1.1")
 CAMPAIGN_START = AntqDate.parse("1.1.1")
 
+# The active CBs use the installed ``ai_will_do = { add = { ... } }``
+# contract.  Values stay deliberately close to the local attack-threat
+# baseline (10): eligibility supplies the historical guardrails, while the
+# priority only stops valid opportunities being silently unavailable to AI.
+ACTIVE_CB_AI_WEIGHTS = {
+    "antq_punitive_expedition": 10,
+    "antq_impose_client_king": 8,
+    "antq_demand_tribute": 7,
+    "antq_frontier_rectification": 16,
+    "antq_loot_raid": 14,
+    "antq_succession_intervention": 6,
+    "antq_holy_suppression": 4,
+}
+DORMANT_CB_KEYS = {
+    "antq_chinese_warlord_unification",
+    "antq_sasanid_unification",
+    "antq_gupta_digvijaya",
+}
+
 
 @dataclass(frozen=True)
 class SubjectContract:
@@ -260,11 +279,25 @@ def subject_script(records: tuple[SubjectContract, ...]) -> str:
 
 
 def _ai_disabled() -> str:
-    """M10 historical situations will grant and weight these contextually."""
+    """Keep a deliberately hidden, future historical CB unavailable to AI."""
     return "\tai_will_do = { value = -1 }"
 
 
-def subject_cb(key: str, subject_type: str, treaty: str, war_goal: str) -> str:
+def _ai_weight(value: int) -> str:
+    """Render the locally harvested additive AI-CB priority contract."""
+    if value < 0:
+        raise ValueError("active casus-belli AI weights must be non-negative")
+    return "\n".join((
+        "\tai_will_do = {",
+        "\t\tadd = {",
+        "\t\t\tdesc = \"BASE\"",
+        f"\t\t\tvalue = {value}",
+        "\t\t}",
+        "\t}",
+    ))
+
+
+def subject_cb(subject_type: str, treaty: str, war_goal: str, ai_weight: int) -> str:
     return "\n".join((
         "\tyears = 15",
         "\tcreate_visible = { scope:target = { subject_type_is_not_locked = yes } }",
@@ -285,7 +318,7 @@ def subject_cb(key: str, subject_type: str, treaty: str, war_goal: str) -> str:
         "\t\t}",
         "\t}",
         f"\twar_goal_type = {war_goal}",
-        _ai_disabled(),
+        _ai_weight(ai_weight),
     ))
 
 
@@ -300,18 +333,18 @@ def cb_records() -> tuple[CasusBelli, ...]:
                 "\tcreate_visible = { scope:target = { is_neighbor_of = root } }",
                 "\tcreate_enabled = { not = { has_truce_with = scope:target } }",
                 "\twar_goal_type = antq_punitive_superiority",
-                _ai_disabled(),
+                _ai_weight(ACTIVE_CB_AI_WEIGHTS["antq_punitive_expedition"]),
             )),
         ),
         CasusBelli(
             "antq_impose_client_king", "Impose Client King",
             "Compel a defeated court to accept a protected client-king relationship.",
-            subject_cb("antq_impose_client_king", "antq_client_kingdom", "antq_treaty_impose_client_king", "antq_client_capital"),
+            subject_cb("antq_client_kingdom", "antq_treaty_impose_client_king", "antq_client_capital", ACTIVE_CB_AI_WEIGHTS["antq_impose_client_king"]),
         ),
         CasusBelli(
             "antq_demand_tribute", "Demand Tribute",
             "Compel a defeated polity to enter a tributary relationship.",
-            subject_cb("antq_demand_tribute", "antq_tributary", "antq_treaty_demand_tribute", "antq_tribute_capital"),
+            subject_cb("antq_tributary", "antq_treaty_demand_tribute", "antq_tribute_capital", ACTIVE_CB_AI_WEIGHTS["antq_demand_tribute"]),
         ),
         CasusBelli(
             "antq_frontier_rectification", "Frontier Rectification",
@@ -322,7 +355,7 @@ def cb_records() -> tuple[CasusBelli, ...]:
                 "\tcreate_enabled = { not = { has_truce_with = scope:target } }",
                 "\tprovince = { any_location_in_province = { is_core_of = scope:actor } }",
                 "\twar_goal_type = antq_frontier_recovery",
-                _ai_disabled(),
+                _ai_weight(ACTIVE_CB_AI_WEIGHTS["antq_frontier_rectification"]),
             )),
         ),
         CasusBelli(
@@ -339,7 +372,7 @@ def cb_records() -> tuple[CasusBelli, ...]:
                 "\t}",
                 "\tcreate_enabled = { not = { has_truce_with = scope:target } }",
                 "\twar_goal_type = antq_raid_superiority",
-                _ai_disabled(),
+                _ai_weight(ACTIVE_CB_AI_WEIGHTS["antq_loot_raid"]),
             )),
         ),
         CasusBelli(
@@ -353,7 +386,7 @@ def cb_records() -> tuple[CasusBelli, ...]:
                 "\t}",
                 "\tcreate_enabled = { not = { has_truce_with = scope:target } }",
                 "\twar_goal_type = antq_succession_capital",
-                _ai_disabled(),
+                _ai_weight(ACTIVE_CB_AI_WEIGHTS["antq_succession_intervention"]),
             )),
         ),
         CasusBelli(
@@ -364,7 +397,7 @@ def cb_records() -> tuple[CasusBelli, ...]:
                 f"\tcreate_visible = {{ current_date >= {holy_date} religion != scope:target.religion }}",
                 f"\tcreate_enabled = {{ current_date >= {holy_date} not = {{ has_truce_with = scope:target }} }}",
                 "\twar_goal_type = antq_holy_superiority",
-                _ai_disabled(),
+                _ai_weight(ACTIVE_CB_AI_WEIGHTS["antq_holy_suppression"]),
             )),
         ),
         CasusBelli(
@@ -756,6 +789,18 @@ def validate(records: tuple[SubjectContract, ...]) -> None:
     cb_keys = [record.key for record in cb_records()]
     if len(cb_keys) != len(set(cb_keys)):
         raise ValueError("M9 casus belli keys must be unique")
+    cb_by_key = {record.key: record for record in cb_records()}
+    expected_cb_keys = set(ACTIVE_CB_AI_WEIGHTS) | DORMANT_CB_KEYS
+    if set(cb_by_key) != expected_cb_keys:
+        raise ValueError("M9 CB AI registry is out of sync with rendered casus belli")
+    for key, weight in ACTIVE_CB_AI_WEIGHTS.items():
+        script = cb_by_key[key].script
+        if _ai_weight(weight) not in script or "value = -1" in script:
+            raise ValueError(f"active M9 CB {key} lacks its bounded AI priority")
+    for key in DORMANT_CB_KEYS:
+        script = cb_by_key[key].script
+        if _ai_disabled() not in script or "create_visible = { always = no }" not in script:
+            raise ValueError(f"dormant M9 CB {key} must remain unavailable")
     treaty_keys = [record.key for record in peace_records()]
     if len(treaty_keys) != len(set(treaty_keys)):
         raise ValueError("M9 peace-treaty keys must be unique")
