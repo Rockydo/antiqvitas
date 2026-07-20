@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-20 - M11 Augustan Succession event illustration
+
+- Added a reviewed, text-free AD 14 Roman civic-transition illustration to the
+  Augustan Succession current through the checked event-image contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines.
+
+Next: continue the independent M11 art queue and the source-led economy/power
+audit while runtime-gated milestone checks remain deferred.
+
 ## 2026-07-20 - M11 Xin Dynasty Crisis event illustration
 
 - Added a reviewed, text-free AD 9 early-imperial Chinese court illustration to
