@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-21 - Supported autonomous renderer profile is menu-smoked
+
+- Replaced the engine-rejected 960x540 request with the locally evidenced
+  1920x1080 mode while retaining the driver's very-low graphics contract.
+- `make validate` is fully green; the enabled-mod 90-second smoke rendered a
+  menu, persisted 1920x1080, and added zero new `error.log` lines.
+
+Next: perform the materially changed observer play-control probe before making
+any renderer-recovery claim.
+
 ## 2026-07-21 - M12 observer retry reaches live AD 1 map but hits renderer fault
 
 - Two fresh autonomous New Game sessions reached `08:00, 1 January, 1`, entered

@@ -17,8 +17,11 @@ import psutil
 
 ROOT = Path(__file__).resolve().parents[1]
 STATE = ROOT / "baselines/runtime/gamedriver_session.json"
-WINDOW_WIDTH = 960
-WINDOW_HEIGHT = 540
+# The installed build explicitly recognizes this display mode in its own UI
+# layout scripts.  960x540 was rejected as an enum value and silently fell
+# back to the 2560x1440 desktop mode before observer playback.
+WINDOW_WIDTH = 1920
+WINDOW_HEIGHT = 1080
 
 
 def enable_dpi_awareness() -> None:
@@ -106,7 +109,7 @@ def set_fixed_settings(user_dir: Path) -> None:
     value.setdefault("Graphics", {}).update(
         {
             "display_mode": "windowed",
-            "resolution": "960x540",
+            "resolution": f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}",
             "vsync": False,
             "setting_framerate_cap": "30",
             "quality": "very_low",

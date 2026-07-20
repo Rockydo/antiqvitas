@@ -7,9 +7,11 @@ two fresh sessions reach a live AD 1 Observer map. Both exit immediately after
 the play action with an `ffxFsr2ResourceIsNull`-stack access violation. The
 latest bundle had 14.6 GB RAM and 17.3 GB pagefile free, so the earlier
 low-pagefile observation is insufficient to explain the current failure. The
-game also rejects the driver's 960x540 resolution string and persists 2560x1440
-windowed mode. This prevents reliable observer playback; the exact evidence and
-recovery boundary are in `BLOCKERS.md`.
+former 960x540 request was rejected and persisted as 2560x1440. The driver
+now uses the locally evidenced 1920x1080 mode, which has a clean menu smoke;
+its materially changed observer probe remains pending. This prevents reliable
+observer playback; the exact evidence and recovery boundary is in
+`BLOCKERS.md`.
 
 ## M12 observer and renderer reliability remain release blockers
 
