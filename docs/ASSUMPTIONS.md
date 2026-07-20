@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Muza is represented as a roadstead market, not an invented harbor
+
+Casson's translation of the *Periplus* calls first-century Muza a legally
+limited, commercially active port of trade with a good roadstead, but says it
+had no harbor. The existing Al Mukha location remains a contested Muza proxy,
+so an engine `market_warehouse` represents the trade function without claiming
+a physical warehouse or sheltered harbor. Sources weighed: `CAS-PER`; `PER`;
+P8.6; P12.2. [secure trade/roadstead function; contested geographic and
+building proxy]
+
 ## 2026-07-20 - Western Roman road links are a connectivity model, not a route survey
 
 The Oxford Classical Dictionary securely identifies the Via Domitia's

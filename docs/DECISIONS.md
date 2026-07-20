@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M5 distinguishes a roadstead from a harbor building
+
+The source's explicit no-harbor statement rules out reusing the
+`protected_harbor` contract at Muza. M5 instead seeds the verified
+`market_warehouse` building at the already validated market-town location.
+This keeps the game-visible trade effect while preserving the historical
+distinction in the ledger rather than silently homogenizing every port.
+
 ## 2026-07-20 - M5 splits the western Roman corridor into reviewed map links
 
 The road generator accepts only installed, AD 1-controlled endpoint pairs and

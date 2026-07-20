@@ -67,7 +67,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the plan-listed Taxila market and urban node through its reviewed Attock proxy, reaching 40 market hubs.
 - [x] Extend the road network with the Via Appia and Taxila–Mathura Uttarapatha legs (29 audited segments).
 - [x] Extend the western Roman road corridor through the reviewed Massilia-to-Tarraco anchors (36 audited segments).
-- [ ] Implement the remaining goods/RGOs, buildings/town setups, roads, and development beyond this first dedicated-goods pass. Six source-labelled harbor tiers and a 36-segment road network now extend the building/transport surfaces; RGO runtime application is deferred in `BLOCKERS.md`, while other independent M5 surfaces may continue.
+- [x] Model Muza's active commercial roadstead with a market-warehouse proxy, explicitly avoiding a false harbor tier.
+- [ ] Implement the remaining goods/RGOs, buildings/town setups, roads, and development beyond this first dedicated-goods pass. Six source-labelled harbor tiers, Muza's roadstead-market tier, and a 36-segment road network now extend the building/transport surfaces; RGO runtime application is deferred in `BLOCKERS.md`, while other independent M5 surfaces may continue.
 - [ ] Verify ancient trade flows; run milestone gate and tag `M5-done`. (Blocked until a runtime-effective RGO surface is found.)
 
 ## M6 — Power
