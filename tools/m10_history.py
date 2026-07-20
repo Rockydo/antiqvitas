@@ -79,6 +79,7 @@ EVENT_IMAGES = {
     "illyrian_revolt": "gfx/interface/illustrations/event/antq_illyrian_revolt.dds",
     "immensum_bellum": "gfx/interface/illustrations/event/antq_immensum_bellum.dds",
     "kushan_unification": "gfx/interface/illustrations/event/antq_kushan_unification.dds",
+    "mauretania_annexation": "gfx/interface/illustrations/event/antq_mauretania_annexation.dds",
     "tacfarinas_war": "gfx/interface/illustrations/event/antq_tacfarinas_war.dds",
     "teutoburg": "gfx/interface/illustrations/event/antq_teutoburg.dds",
     "trung_sisters": "gfx/interface/illustrations/event/antq_trung_sisters.dds",
