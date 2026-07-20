@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Alemanni-formation art is landscape-only Upper-Rhine context
+
+The image is an unoccupied early-autumn Upper-Rhine floodplain of a natural
+side-channel, alder and oak woodland, rough meadow, pale gravel bars, and low
+forested hills. It identifies no Alemannic group, person, migration, polity,
+settlement, limes, date, or outcome. It deliberately excludes human figures,
+military material, roads, forts, structures, banners, and narrative action; it
+is not a reconstruction of the Alemanni formation. Sources weighed: P8.7; plan
+sections 9 and 20. [secure broad regional context; illustrative composition only]
+
 ## 2026-07-20 - Constitutio-Antoniniana art is generic Roman civic context
 
 The image is an unoccupied Roman municipal colonnade of pale paving, a plain
