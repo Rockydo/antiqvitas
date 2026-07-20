@@ -1,5 +1,19 @@
 # Historical Assumptions
 
+## 2026-07-20 - Rinan is Han-administered without a claim of local Sinicization
+
+The plan requires the 192 Linyi/Champa formation to rise from Han Rinan.
+`CHAM-BIRTH` places Linyi broadly in modern Quang Tri and Thua Thien-Huế, but
+does not identify an exact EU5 boundary. Four reviewed locations in the local
+Huế mesh are therefore Han-controlled at AD 1 as a contested Rinan proxy.
+Their base pops retain a regional Austronesian profile and Southeast-Asian
+population allocation rather than being silently recast as Han by their
+political owner. This does not claim a uniform ethnic, linguistic, religious,
+or administrative identity for every inhabitant, nor that the full Han
+commandery frontier is reconstructed. Sources weighed: master-plan sections
+8.3, 8.9, and 9; `CHAM-BIRTH`. [secure Han-Rinan/Linyi sequence; contested
+local-mesh partition and population profile]
+
 ## 2026-07-20 - AD 48 Northern Xiongnu uses a bounded Mongolian map proxy
 
 `IRAN-XIO` states that the Xiongnu split into Northern and Southern branches

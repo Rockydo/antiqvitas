@@ -1,5 +1,17 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - Population exceptions are checked separately from ownership
+
+M3 political ownership is not a safe proxy for every local population's
+culture, religion, social form, or macro-population allocation. The start
+renderer now accepts a small source-qualified population-location ledger and
+the population checker applies the same expected culture/religion and region
+contract. This first protects the Rinan/Linyi Han frontier from both an
+accidental Southeast-Asian SoP ownership assignment and an opposite accidental
+Han-population conversion. The ledger is deliberately narrow: every exception
+must name its local location, culture, religion, pop type, allocation region,
+source, confidence, and reason.
+
 ## 2026-07-20 - Northern Xiongnu is a unique dynamic country, not a static tag
 
 The installed event corpus proves the required contract: a location-scoped
