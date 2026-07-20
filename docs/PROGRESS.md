@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-20 - M11 Constantine's Civil Wars event illustration
+
+- Added a reviewed, landscape-only central-Italian foothill image to the AD 306 current through the generated fourth-century event-image contract.
+- `make validate` and enabled-mod smoke are green with zero new error-log lines; the M11 contact sheet now has fifty-eight retained masters.
+
+Next: continue the M11 fourth-century art queue and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Armenian Conversion event illustration
 
 - Added a reviewed, landscape-only Armenian-highland image to the AD 301 current through the generated fourth-century event-image contract.

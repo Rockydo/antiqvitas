@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-20 - Constantine-civil-wars art is landscape-only central-Italian context
+
+The image is an unoccupied early-summer central-Italian foothill of a natural
+stream, weathered limestone, meadow grass, scattered pines and oaks, low hills,
+and distant mountains. It identifies no emperor, war, battle, polity, Milan,
+Constantinople, date, or outcome. It is not a reconstruction of Constantine's
+civil wars. Sources weighed: P8.1; plan sections 9, 13, and 20. [secure broad
+regional context; illustrative composition only]
+
 ## 2026-07-20 - Armenian-conversion art is landscape-only highland context
 
 The image is an unoccupied late-spring Armenian highland of a natural stream,
