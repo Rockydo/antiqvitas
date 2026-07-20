@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Yellow-Turbans art is landscape-only North-China-Plain context
+
+The image is an unoccupied late-summer North China Plain landscape of a natural
+stream, reed beds, sun-dried loess, willows, and distant low hills. It
+identifies no person, rebel, scarf, war, polity, settlement, field, road,
+religious symbol, date, or outcome. It deliberately excludes military material,
+human figures, buildings, field patterns, banners, religious signs, and
+narrative action; it is not a reconstruction of the Yellow Turban Rebellion.
+Sources weighed: P8.3; plan sections 9 and 20. [secure broad regional context;
+illustrative composition only]
+
 ## 2026-07-20 - Marcomannic-Wars art is landscape-only Danubian context
 
 The image is an unoccupied early-autumn Danubian floodplain of a natural river,
