@@ -1,5 +1,25 @@
 # Progress
 
+## 2026-07-20 - M10 AD 1-96 historical-current layer
+
+- Added `tools/m10_history.py`, a deterministic renderer for the first 27
+  non-system timeline rows: 14 situations, two disasters, nine dynamic events,
+  a formation, and a tag-switch event. All game-script dates are parsed from
+  the shared timeline ledger and all target tags resolve through the generated
+  design-tag map.
+- Local 1.3.1.1 event files established the `dynamic_historical_event` date
+  contract, so events now use engine-managed per-tag windows rather than a
+  copied country-pulse override. The two generated live-current managers use
+  the installed `monthly_spawn_chance_unique` contract.
+- The first mod smoke found and corrected two load-time contracts: event-state
+  variables must be consumed to be legal, and dynamic historical events require
+  `.entry` localization. The corrected `make validate` and enabled-mod
+  `make smoke` are green with zero new error-log lines.
+
+Next: implement the source-led transformations behind the first formation and
+tag-switch events, then begin the AD 97-199 batch. Observer playback remains
+deferred under the already exhausted confirmation-modal path.
+
 ## 2026-07-20 - M10 dated-history ledger
 
 - Replaced the M2-only calendar list with the plan's complete section 9

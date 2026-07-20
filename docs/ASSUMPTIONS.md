@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - First-century current recipients are notification anchors
+
+Several section 9 currents involve more than one polity. The first renderer
+uses Armenia for the Gaius and Rhandeia currents, Judea for the Christian and
+Jewish currents, Yuezhi for Kushan formation, Iceni for Boudica, and the
+relevant imperial or local polity for the remaining currents. A recipient is a
+bounded engine anchor for a visible historical event, situation, or disaster;
+it does not assert sole agency, territorial ownership, a predetermined outcome,
+or an exclusive historical memory. Sources weighed: master-plan sections 8.1,
+8.3, 8.4, 8.7, and 9. [secure broad current; contested technical recipient]
+
 ## 2026-07-20 - M10 broad dates use activation windows rather than false precision
 
 The plan's section 9 spine fixes many entries to a year or multi-year interval

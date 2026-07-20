@@ -1,5 +1,21 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M10 uses the installed dynamic-history event manager
+
+The local 1.3.1.1 event corpus exposes `dynamic_historical_event` with repeated
+`tag`, `from`, `to`, and `monthly_chance` fields. M10 uses that contract for
+single-date and formation/tag-switch notifications, while multi-year currents
+use the locally established situation and disaster managers. This is narrower
+and more engine-native than overriding `country_yearly.txt`; no vanilla
+on-action file is copied into the mod.
+
+The first real load also proved two required support contracts: the loader
+rejects a set-but-never-read variable and dynamic events need an `.entry`
+localization key. The generator omits premature state variables and emits both
+long and short entry labels. Its initial formation and tag-switch events are
+explicit launch surfaces, not a claim that their in-place/new-tag
+transformations are already implemented.
+
 ## 2026-07-20 - M10 preserves one calendar ledger for campaign and history
 
 The existing `docs/timeline.csv` was the M2 campaign-calendar input. M10
