@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Augustan-succession art is a generic AD 14 civic transition
+
+The visual signals early-imperial Roman civic uncertainty without portraying
+Augustus, Tiberius, a funeral, a succession proclamation, or a specific Forum
+view. It is period-signalling event art, not an archaeological reconstruction
+or literal depiction of the AD 14 succession. Review excluded later Roman
+monuments, modern or medieval material, battle imagery, and readable text.
+Sources weighed: P8.1; plan sections 9 and 20. [secure current context;
+illustrative composition only]
+
 ## 2026-07-20 - Xin-crisis art is a generic AD 9 court transition
 
 The Xin Dynasty Crisis visual signals an early-imperial Chinese court setting
