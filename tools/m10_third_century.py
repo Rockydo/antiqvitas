@@ -46,6 +46,13 @@ TARGETS = {
     "eight_princes": "HAN",
 }
 
+# Keep reviewed event-art links in the generator rather than hand-editing the
+# rendered script: regeneration preserves every game-facing reference and
+# validation proves its texture remains present.
+EVENT_IMAGES = {
+    "severus_caledonia": "gfx/interface/illustrations/event/antq_severus_caledonia.dds",
+}
+
 # These are visual country identities, intentionally not runtime country tags.
 COSMETIC_TAGS = {"ALM", "SAS", "FRK"}
 
@@ -119,6 +126,13 @@ def validate(records: tuple[Current, ...]) -> None:
         raise ValueError(f"M10 third-century ledger/target mismatch: missing={missing}, extra={extra}")
     if len({record.event_id for record in records}) != len(records):
         raise ValueError("M10 third-century event IDs must be unique")
+    unknown_images = sorted(set(EVENT_IMAGES) - record_keys)
+    if unknown_images:
+        raise ValueError(f"M10 third-century illustration map has no corresponding current: {unknown_images}")
+    for image in EVENT_IMAGES.values():
+        texture = ROOT / "main_menu" / image
+        if not texture.is_file():
+            raise ValueError(f"M10 third-century event illustration is missing: {texture}")
     mapped_tags = engine_tags()
     collisions = sorted(COSMETIC_TAGS & set(mapped_tags.values()))
     if collisions:
@@ -202,6 +216,9 @@ def event_script(records: tuple[Current, ...]) -> str:
             f"\toutcome = {event_outcome(record)}",
             "\tfire_only_once = yes",
         ))
+        image = EVENT_IMAGES.get(record.key)
+        if image is not None:
+            lines.append(f'\timage = "{image}"')
         if record.kind not in {"situation", "disaster"}:
             lines.extend((
                 "\tdynamic_historical_event = {",
