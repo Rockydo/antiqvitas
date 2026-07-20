@@ -9,6 +9,14 @@
 
 Next: continue the remaining decision and localization work.
 
+## 2026-07-20 - M11 shared-art scope closed
+
+- Recorded the plan-permitted shared-icon completion: five reviewed advance
+  textures cover all 250 knowledge entries, and 83 retained paintings cover
+  all 411 primary and source-window historical events.
+- The remaining M11 scope is the separately logged decision-registry blocker
+  and localization polish; no unseen icon or event-art placeholder is left.
+
 ## 2026-07-20 - M11 scripted-formation CoA pass
 
 - Replaced the thirteen temporary M10 formation and successor CoAs with locally available generic emblems and reviewed color fields; no solid-color placeholder survives in those generator outputs.

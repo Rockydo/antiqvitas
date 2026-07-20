@@ -24,6 +24,15 @@ heraldry, religious signs, weapons, ethnic costume, or recognizable monument.
 The migration motif is intentionally civilian, and the Dominate circlet is a
 plain band rather than a medieval crown.
 
+## Shared-icon completion
+
+The master plan permits shared-icon fallback tiers. Each reviewed group icon is
+therefore the complete visual contract for its fifty advances, rather than an
+interim placeholder: the five generated textures cover all 250 M8 entries and
+the validator rejects any missing or differently grouped binding. A unique
+icon for every individual advance would add a false layer of visual specificity
+without changing the knowledge tree or its historical evidence.
+
 ## Engine and asset verification
 
 The installed build's `main_menu/gfx/interface/advance/` established the
