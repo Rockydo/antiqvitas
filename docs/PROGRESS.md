@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-20 - M10 dated-history ledger
+
+- Replaced the M2-only calendar list with the plan's complete section 9
+  history spine: 89 ordered rows across situations, disasters, events,
+  formations, and tag switches. The required natural-disaster calendar and
+  the AD 54-68 silphium window are explicit rows rather than undocumented work.
+- Extended the single calendar gateway to validate every row's key, type,
+  rails setting, start date, optional end date, and chronological order. M2
+  continues to derive its five campaign ages from the same file.
+- `make validate` is green. This is a data-and-tooling foundation only; the
+  first AD 1-96 game-visible batch is next and will receive its own smoke and
+  observer report.
+
+Next: generate the first-century situation/event/disaster surfaces from this
+ledger using the locally verified yearly-pulse interface.
+
 ## 2026-07-20 - M9 organizations and known-world foundation
 
 - Added generated type contracts for the Han Tributary System, Xiongnu

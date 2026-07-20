@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - M10 broad dates use activation windows rather than false precision
+
+The plan's section 9 spine fixes many entries to a year or multi-year interval
+rather than a day. The timeline ledger records those entries at the first day
+of the documented year and gives them an exclusive end boundary; this is an
+engine activation convention, not an assertion that the historical event
+occurred on 1 January. The exact 4 September 476 finale remains date-specific
+because the plan supplies that date. Sources weighed: ANTIQVITAS master plan
+sections 9 and 22. [secure plan chronology; contested technical activation day]
+
 ## 2026-07-20 - M9 IO membership stops where the AD 1 evidence stops
 
 The Han IO begins with the five Western Regions tributaries already enumerated
