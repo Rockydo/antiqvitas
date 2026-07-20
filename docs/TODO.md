@@ -55,6 +55,7 @@ after `make full` and its autonomous driver report are green.
 
 - [x] Seed and smoke-check 42 source-labelled AD 1 market hubs.
 - [x] Localize and anchor the plan-listed ancient raw goods on controlled AD 1 map locations (328 audited corrections).
+- [x] Source-qualify the plan-listed alum emphasis at the direct installed Melos anchor; the existing alum value is retained.
 - [x] Audit the plan-listed “Laurion fading” note as a documented non-anchor; no active AD 1 silver RGO is asserted.
 - [x] Seed and smoke-check 42 source-labelled urban market settlements with engine-valid town setups.
 - [x] Run the AD 1 observer foundation probe (map, observer mode, and ten days of market activity).
