@@ -23,6 +23,8 @@ validate:
 	.venv/Scripts/python.exe tools/m11_flavor_events.py --check
 	.venv/Scripts/python.exe tools/m11_dynamic_coas.py --check
 	.venv/Scripts/python.exe tools/m11_common_icons.py --check
+	.venv/Scripts/python.exe tools/m11_decisions.py --check --scope all
+	.venv/Scripts/python.exe tools/m11_message_overlay.py --check --scope all
 	.venv/Scripts/python.exe tools/m11_localization.py --check
 	.venv/Scripts/python.exe tools/generate_country_definitions.py --check
 	.venv/Scripts/python.exe tools/capital_mapper.py --check

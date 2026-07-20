@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-20 - M11 decision registry and milestone closure
+
+- Restored all 40 source-led M11 player actions after a one-action exact-name
+  message-registry pilot reached the enabled-mod menu with zero new errors.
+- The checked overlay reproduces the installed 1,348-entry registry byte for
+  byte from a pinned build/hash and appends only the 40 required action types;
+  any game update or registry drift now fails validation.
+- The full 40-action pass is green in static validation and a retrying
+  enabled-mod smoke. Two later graphics-memory exits contained no parser or
+  registry error; a lower-resolution driver experiment did not cure them and
+  was reverted as an M12 driver-risk note.
+- With all common-screen placeholder, localization, art, event, and decision
+  work now closed, M11 is ready for its milestone tag.
+
+Next: M12 ship documentation, surface audit, and the separately blocked
+observer-based empirical run.
+
 ## 2026-07-20 - M12 static balance and casus-belli AI pass
 
 - Audited the full 250-entry M8 tree: costs rise monotonically from 2.0 to
