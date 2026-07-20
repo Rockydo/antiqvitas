@@ -144,7 +144,7 @@ after `make full` and its autonomous driver report are green.
 ## M8 — Knowledge
 
 - [x] Implement five complete age trees, roughly 250 advances, institutions, tech tiers, objectives, and abilities.
-- [ ] Test AI research and anachronism/dead-end rules; run milestone gate and tag `M8-done`. (The enabled AD 1 selector and zero-new-line menu smoke are recorded; observer runtime remains blocked by the virtual-memory condition in `BLOCKERS.md`.)
+- [ ] Test AI research and anachronism/dead-end rules; run milestone gate and tag `M8-done`. (The enabled AD 1 selector and zero-new-line menu smoke are recorded; observer runtime remains blocked by the renderer condition in `BLOCKERS.md`.)
 
 ## M9 — Nations among nations
 
@@ -297,8 +297,8 @@ after `make full` and its autonomous driver report are green.
 
 - [x] Complete the static pacing/growth/inflation and AI-weight audit; restore bounded local-contract priorities to the seven active M9 CBs.
 - [x] Quarantine all 7,440 installed vanilla event definitions in 347 files through a source-preserving, date-gated overlay that retains the loader's scheduler/scope/effect graph.
-- [ ] Complete runtime pacing/growth/inflation balance from observer measurements (the virtual-memory blocker and remaining runtime-surface audit are recorded in `BLOCKERS.md`).
-- [ ] Run autonomous observer game to 476 with decade screenshots and live log watch (event-graph coverage is green; the driver still needs stable virtual-memory headroom and runtime evidence for adjacent surfaces).
+- [ ] Complete runtime pacing/growth/inflation balance from observer measurements (the renderer blocker and remaining runtime-surface audit are recorded in `BLOCKERS.md`).
+- [ ] Run autonomous observer game to 476 with decade screenshots and live log watch (event-graph coverage is green; the driver still needs a verified stable renderer profile and runtime evidence for adjacent surfaces).
 - [x] Finish README, known issues, packaging notes, static finale verification, and the full surface-area inventory audit.
 - [x] Disable the eleven installed anachronistic generic mission packs through checked exact-name visibility overlays; retain their keys for engine references.
 - [x] Pin a static player-facing anachronism audit across all 17 English localization files, with the client-language mirror contract checked separately.

@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-21 - M12 observer retry reaches live AD 1 map but hits renderer fault
+
+- Two fresh autonomous New Game sessions reached `08:00, 1 January, 1`, entered
+  Observer Mode, and rendered the live Age of Principate map after the full
+  event quarantine.
+- Both exited only after the play action. The second crash bundle records an
+  FSR-renderer access violation despite 14.6 GB free RAM and 17.3 GB free swap;
+  the driver also confirmed that 960x540 is rejected and 2560x1440 persists.
+- The sessions exposed nine missing generated institution birth modifiers and
+  existing HRE/coat-of-arms fall-through, but no event-quarantine loader error.
+  The observer gate remains open and the bounded evidence is in
+  `docs/playtests/M12_OBSERVER_RETRY_20260721.md`.
+
+Next: retain the known green menu baseline, avoid an unchanged observer retry,
+and continue the next independent static milestone task while planning a
+supported low-resolution renderer profile.
+
 ## 2026-07-21 - M12 full vanilla-event quarantine is green
 
 - Expanded the checked source-preserving renderer from its 112-event pilot to
