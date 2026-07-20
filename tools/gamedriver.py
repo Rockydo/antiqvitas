@@ -110,6 +110,10 @@ def set_fixed_settings(user_dir: Path) -> None:
         {
             "display_mode": "windowed",
             "resolution": f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}",
+            # 70% is an installed-UI setting value verified in a live menu.
+            # The local UI already reports Upscale Method Disabled and Upscale
+            # Quality Off, so this is a standalone render-load reduction.
+            "render_scale": 0.7,
             "vsync": False,
             "setting_framerate_cap": "30",
             "quality": "very_low",
