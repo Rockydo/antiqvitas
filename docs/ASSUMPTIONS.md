@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Gwanggaeto art is landscape-only Korean upland river-valley context
+
+The image is an unoccupied early-autumn Korean upland river valley of a clear
+river, wooded foothills, granite outcrops, mixed pine and deciduous forest
+turning muted gold, pale stony banks, and blue-grey ridges in haze. It identifies
+no Gwanggaeto, Goguryeo, Buddhism, conquest, city, date, or outcome. It is not a
+reconstruction of Gwanggaeto's rule or the Korean Buddhist transformation.
+Sources weighed: P8.3; plan sections 9 and 20. [secure broad regional context;
+illustrative composition only]
+
 ## 2026-07-20 - Fei-River art is landscape-only north-Chinese river-plain context
 
 The image is an unoccupied late-summer inland north-Chinese river plain of a slow
