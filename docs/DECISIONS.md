@@ -1,5 +1,18 @@
 # Technical and Design Decisions
 
+## 2026-07-20 - M5 Via Flaminia uses one explicit high-level engine link
+
+The local road renderer only accepts installed, AD 1-controlled endpoints, but
+the historic eastern branch runs through unavailable Terni and intermediate
+anchors. It therefore emits one labelled, contested `narni = spoleto` link,
+rather than fabricating a detailed trace or silently omitting the documented
+connection. The generated value uses the locally verified bare endpoint
+contract and leaves the independent RGO/trade-flow blocker open.
+
+Sources weighed: local `tools/generate_start_mirror.py`; plan sections 8.1 and
+12.2; ORBIS; Italian Ministry of Culture, ["Archeologia Via
+Flaminia"](https://sabapumbria.cultura.gov.it/archeologia-e-territorio/archeologia-via-flaminia/).
+
 ## 2026-07-20 - M11 final-century art requires full generated-current coverage
 
 `tools/m10_final_century.py` now rejects both orphaned image-map keys and any

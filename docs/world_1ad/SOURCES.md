@@ -13,6 +13,11 @@ a row reaches `implemented` status.
 - `PLE`: Pleiades ancient places dataset, used for classical capital and
   toponym matching; credit/license review is retained for the M4 naming pass.
 - `ORB`: Stanford ORBIS network model, used only for route/market sanity.
+- `MIC-FLAM`: Italian Ministry of Culture, ["Archeologia Via
+  Flaminia"](https://sabapumbria.cultura.gov.it/archeologia-e-territorio/archeologia-via-flaminia/),
+  used for the road's 220-219 BCE construction, Augustan repair context, and
+  eastern Narni-Terni-Spoleto branch. It does not license a survey-grade
+  conversion into modern EU5 map links.
 - `CHG`: China Historical GIS Han-era layers, subject to its attribution and
   non-commercial license review before data import.
 - `PER`: *Periplus of the Erythraean Sea* and modern scholarship for Indian
