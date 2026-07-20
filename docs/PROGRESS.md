@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-20 - M5 Forum Romanum anchor
+
+- Added the Forum Romanum at Rome through the locally verified generic
+  `marketplace` building, a bounded proxy for its well-attested civic,
+  commercial, and legal functions at the AD 1 boundary.
+- The generated start mirror reports 35 M5/M7 buildings; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines.
+
+Next: continue the remaining source-led M5 audit while the runtime-effective
+RGO trade-flow gate remains deferred.
+
 ## 2026-07-20 - M5 Faiyum irrigation anchor
 
 - Added the direct installed Faiyum location as a source-qualified, level-one
