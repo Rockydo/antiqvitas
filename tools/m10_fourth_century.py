@@ -72,6 +72,7 @@ EVENT_IMAGES = {
     "gwanggaeto": "gfx/interface/illustrations/event/antq_gwanggaeto.dds",
     "huns_arrive": "gfx/interface/illustrations/event/antq_huns_arrive.dds",
     "nicaea": "gfx/interface/illustrations/event/antq_nicaea.dds",
+    "olympic_sunset": "gfx/interface/illustrations/event/antq_olympic_sunset.dds",
     "shapur_julian": "gfx/interface/illustrations/event/antq_shapur_julian.dds",
     "thessalonica": "gfx/interface/illustrations/event/antq_thessalonica.dds",
 }
