@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-07-20 - M11 direct-key common-screen icon pass
+
+- Replaced the automatic `_default` fallback for all 37 ANTIQVITAS religions and nine M8 institutions with checked direct-key DDS assets.
+- Religion icons reuse deliberately broad installed motifs; the period-sensitive institution set uses seven generated motifs plus two explicit, reviewed shared-asset fallbacks after the image service returned no file twice for each narrow request.
+- `tools/m11_common_icons.py` locks definition coverage, source/master chains, exact religion aliases, and the 128x128 sRGBA DDS contract. The final DDS round-trip sheet was visually inspected.
+- Full validation and the enabled-mod smoke pass are green; the game reached the rendered menu and produced zero new error-log lines.
+
+Next: continue the remaining decision and localization work.
+
 ## 2026-07-20 - M11 scripted-formation CoA pass
 
 - Replaced the thirteen temporary M10 formation and successor CoAs with locally available generic emblems and reviewed color fields; no solid-color placeholder survives in those generator outputs.

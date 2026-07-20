@@ -1324,3 +1324,16 @@ relies on alphabetical file order. Direct CoA reviews win over the regional
 theme catalog; both must resolve to local colored-emblem textures. This is a
 technical rendering decision, with the historical non-reconstruction boundary
 recorded in `ASSUMPTIONS.md`.
+
+## 2026-07-20 - Direct-key UI icons supersede default fallbacks
+
+The installed GUI resolves religion and institution art with `GetReligionIcon`
+and `GetInstitutionIcon`; the installed asset trees establish direct
+definition-key filenames, not a field in the script definitions. M4's 37
+religions and M8's nine institutions had no key-matched textures and fell back
+to `_default.dds`. M11 now provides every direct-key file. Religion assets are
+exact local aliases so their format, alpha, and filename behavior remain
+engine-native; M8's institution assets are generated and BC7-encoded to the
+same 128x128 sRGBA contract. `tools/m11_common_icons.py` is the ownership and
+patch-drift guard. This is a renderer decision, not a claim that a shared motif
+defines a faith's historical identity.

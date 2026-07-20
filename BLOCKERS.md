@@ -392,3 +392,24 @@ generated M11 definition, and smoke-test that one pilot before expanding to
 all 40. Record the base-file hash and the overridden inventory so a game patch
 cannot silently drop vanilla message types. Do not retry additive GUI files.
 The post-removal validation and smoke checks must be green before moving on.
+
+## 2026-07-20 - Two institution-icon prompts returned no image artifact
+
+Status: **resolved through reviewed shared-asset fallbacks; no game-visible
+placeholder remains.**
+
+The built-in image pipeline returned no output on two bounded prompts for the
+Theological Orthodoxy blank-codex motif, including a simplified
+scholarly-consensus rewording. It likewise returned no output on two bounded
+Foederati Statecraft clasp-and-cord prompts, including a simplified isolated
+object request. The preceding seven institution prompts completed and were
+reviewed normally. The image-generation skill forbids silently switching to
+its API/CLI fallback without explicit authorization.
+
+Recovery: the static direct-key contract uses the reviewed Hellenistic
+scroll/olive icon as a deliberately generic literature proxy for theological
+orthodoxy and the reviewed civilian Migrations wagon/bundle icon as a
+settlement proxy for foederati. `docs/m11/M11_COMMON_SCREEN_ICONS.md` records
+both as non-reconstructive shared assets. Reconsider unique replacements only
+after a material image-service change or explicit authorization for its CLI
+fallback; do not repeat the same built-in prompts.
