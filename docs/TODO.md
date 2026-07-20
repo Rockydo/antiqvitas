@@ -249,7 +249,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 306 Constantine's Civil Wars illustration through a landscape-only central-Italian foothill treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 325 Council of Nicaea illustration through a landscape-only Bithynian lakeshore treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 337 Shapur II and Julian illustration through a landscape-only upper-Mesopotamian river-valley treatment.
-- [x] Render and review the maintained M11 event-art contact sheet (60 retained 1080x440 masters).
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 350 Aksum and Meroë illustration through a landscape-only middle-Nile river-margin treatment.
+- [x] Render and review the maintained M11 event-art contact sheet (61 retained 1080x440 masters).
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 
