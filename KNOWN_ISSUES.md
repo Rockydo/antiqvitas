@@ -1,13 +1,15 @@
 # Known Issues
 
-## Intermittent Vulkan device-memory failures during fully settled launches
+## Virtual-memory-starved Vulkan failures during fully settled launches
 
 On the configured RTX 3080, EU5 intermittently exits during late menu resource
 loading with `gfx_vk_master_context.cpp:2227 / ErrorOutOfDeviceMemory`, even
-with the driver-enforced 960x540 very-low profile. Other fully settled
-enabled-mod menu smokes pass with zero new error-log lines. This presently
-prevents a reliable observer run; see `BLOCKERS.md` for the exact recovery
-boundary.
+with the driver-enforced 960x540 very-low profile. The most recent crash used
+only 2.5 GB of the card's 10 GB dedicated memory but recorded just 9 MB of free
+Windows pagefile, which is the current actionable host constraint. Other fully
+settled enabled-mod menu smokes pass with zero new error-log lines. This
+presently prevents a reliable observer run; see `BLOCKERS.md` for the exact
+recovery boundary.
 
 ## M12 observer and renderer reliability remain release blockers
 

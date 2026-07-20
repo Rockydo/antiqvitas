@@ -144,7 +144,7 @@ after `make full` and its autonomous driver report are green.
 ## M8 — Knowledge
 
 - [x] Implement five complete age trees, roughly 250 advances, institutions, tech tiers, objectives, and abilities.
-- [ ] Test AI research and anachronism/dead-end rules; run milestone gate and tag `M8-done`. (The enabled AD 1 selector and zero-new-line menu smoke are recorded; observer input remains blocked by the confirmation issue in `BLOCKERS.md`.)
+- [ ] Test AI research and anachronism/dead-end rules; run milestone gate and tag `M8-done`. (The enabled AD 1 selector and zero-new-line menu smoke are recorded; observer runtime remains blocked by the virtual-memory condition in `BLOCKERS.md`.)
 
 ## M9 — Nations among nations
 
@@ -296,7 +296,7 @@ after `make full` and its autonomous driver report are green.
 ## M12 — Ship
 
 - [x] Complete the static pacing/growth/inflation and AI-weight audit; restore bounded local-contract priorities to the seven active M9 CBs.
-- [ ] Complete runtime pacing/growth/inflation balance from observer measurements (the observer-confirmation blocker is recorded in `BLOCKERS.md`).
+- [ ] Complete runtime pacing/growth/inflation balance from observer measurements (the virtual-memory observer blocker is recorded in `BLOCKERS.md`).
 - [ ] Run autonomous observer game to 476 with decade screenshots and live log watch.
 - [x] Finish README, known issues, packaging notes, static finale verification, and the full surface-area inventory audit.
 - [x] Disable the eleven installed anachronistic generic mission packs through checked exact-name visibility overlays; retain their keys for engine references.

@@ -17,10 +17,19 @@ passed complete static validation and earlier full-settle menu smokes. It
 prevents a reliable Observer session and therefore blocks the M6/M7/M8/M9/M10
 empirical gates and M12's long observer run.
 
+The latest attempt constrained the native window as soon as it appeared, but
+the game persisted `2560x1440` internally and again aborted before the menu.
+Its crash metadata materially narrows the host condition: the RTX 3080 had
+only 2.5 GB of its 10 GB dedicated memory in use, while Windows reported just
+**9 MB** of free pagefile/swap (`SwapSizeAvailable: 9`). The same bundle records
+4.85 GB of system RAM available. This makes virtual-memory commitment, not a
+mod texture or a high current GPU allocation, the active limiting condition.
+
 Recovery: retry only after a material graphics-driver, renderer-cache, or
-available-memory change; do not repeat unchanged launches. The execution
-environment rejected the attempted destructive cache reset, so that path is
-not presently available.
+available-memory change, especially several GB of free pagefile; do not repeat
+unchanged launches. The execution environment rejected the attempted
+destructive cache reset, and system pagefile changes are outside the mod tree,
+so neither path is being altered here.
 
 ## 2026-07-20 - M5 Nubian-gold key lacks a defensible AD 1 site-date match
 
