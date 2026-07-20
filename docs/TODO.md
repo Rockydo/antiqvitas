@@ -240,7 +240,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 220 Three Kingdoms illustration through a landscape-only north-Chinese river-valley treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 224 Sassanid Revolution illustration through a landscape-only Fars highland treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 235 Crisis of the Third Century illustration through a landscape-only central-Italian foothill treatment.
-- [x] Render and review the maintained M11 event-art contact sheet (52 retained 1080x440 masters).
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 240 Manichaeism illustration through a landscape-only western-Iranian river-margin treatment.
+- [x] Render and review the maintained M11 event-art contact sheet (53 retained 1080x440 masters).
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 

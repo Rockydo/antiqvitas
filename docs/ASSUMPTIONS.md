@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Manichaeism art is landscape-only western-Iranian context
+
+The image is an unoccupied early-autumn western-Iranian river margin of a
+natural watercourse, reeds, weathered pale stone, sparse trees, tawny foothills,
+and hazy distant ridges. It identifies no teacher, religion, court, polity,
+city, sacred site, date, or outcome. It deliberately excludes people, religious
+symbols, fire altars, manuscripts, relief carvings, military material,
+architecture, roads, banners, and narrative action; it is not a reconstruction
+of Mani's preaching, Manichaeism, or its spread. Sources weighed: P8.4; plan
+sections 9, 11, and 20. [secure broad regional context; illustrative composition only]
+
 ## 2026-07-20 - Third-century-crisis art is landscape-only central-Italian context
 
 The image is an unoccupied late-spring central-Italian foothill of a natural
