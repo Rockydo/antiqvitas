@@ -63,6 +63,7 @@ TARGETS = {
 # Retain event-art links in the generator so regenerated fourth-century scripts
 # cannot silently drop a reviewed game-facing texture.
 EVENT_IMAGES = {
+    "aksum_meroë": "gfx/interface/illustrations/event/antq_aksum_meroe.dds",
     "armenia_conversion": "gfx/interface/illustrations/event/antq_armenia_conversion.dds",
     "constantine_civil_wars": "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds",
     "nicaea": "gfx/interface/illustrations/event/antq_nicaea.dds",
