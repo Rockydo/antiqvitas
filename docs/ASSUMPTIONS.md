@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-20 - Third-century-crisis art is landscape-only central-Italian context
+
+The image is an unoccupied late-spring central-Italian foothill of a natural
+stream, weathered limestone, muted grassland, scattered umbrella pines and
+oaks, low rounded hills, and distant pale mountains. It identifies no emperor,
+battle, breakaway, plague, polity, city, date, or outcome. It deliberately
+excludes people, military material, buildings, roads, banners, imperial symbols,
+disease imagery, death, ruins, and narrative action; it is not a reconstruction
+of the Crisis of the Third Century, imperial succession, or Aurelianic recovery.
+Sources weighed: P8.1; plan sections 9 and 20. [secure broad regional context;
+illustrative composition only]
+
 ## 2026-07-20 - Sassanid-Revolution art is landscape-only Fars context
 
 The image is an unoccupied early-spring Fars highland of a natural seasonal
