@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Year-of-Four-Emperors art is a non-literal civic context
+
+The image is an empty early-imperial civic square after rainfall, with wet
+paving, a simple portico, tiled roofs, closed shutters, and distant low
+buildings. It identifies no claimant, ruler, legion, institution, forum,
+monument, battle, action, chronology, or outcome. It deliberately excludes
+military and political symbols and is not a reconstruction of the AD 68-69
+civil war. Sources weighed: P8.1; plan sections 9 and 20. [secure current
+context; illustrative composition only]
+
 ## 2026-07-20 - Batavian-Revolt art is generic Lower Rhine context
 
 The image is an unoccupied Lower Rhine wetland with a broad slow river branch,
