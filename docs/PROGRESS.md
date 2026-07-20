@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-20 - M11 Verus' Parthian War event illustration
+
+- Added a reviewed, landscape-only Mesopotamian river-margin image to the AD
+  161 Verus' Parthian War current through the generated event-image contract.
+- The engine-sized BC7 texture was round-trip inspected; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines. The maintained M11
+  contact sheet now has forty retained event masters.
+
+Next: continue the M11 later-century art queue and source-led M5/M6 audit.
+
 ## 2026-07-20 - M11 Gothic Migration event illustration
 
 - Added a reviewed, landscape-only northern-Pontic steppe image to the AD 160

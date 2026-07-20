@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Verus-Parthia art is landscape-only Mesopotamian context
+
+The image is an unoccupied Mesopotamian river margin of calm water, natural
+reeds and tamarisk, alluvial bank, sparse scrub, and distant low hills. It
+identifies no person, war, polity, city, route, animal, action, date, or outcome.
+It deliberately excludes military material, boats, bridges, roads, settlements,
+and irrigation works; it is not a reconstruction of the Verus–Parthian War or
+Ctesiphon's sack. Sources weighed: P8.2; plan sections 9 and 20. [secure broad
+regional context; illustrative composition only]
+
 ## 2026-07-20 - Gothic-migration art is landscape-only northern-Pontic context
 
 The image is an unoccupied northern-Pontic steppe of rough grass, a natural
