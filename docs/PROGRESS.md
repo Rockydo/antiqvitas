@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-07-20 - M11 section-18 event-density pass
+
+- Added 328 source-window phase events to the 83 M10 primary currents, reaching 411 total events with their existing 83 reviewed shared paintings.
+- The no-effect notifications preserve alt-history outcomes and avoid inventing separate historical incidents; the terminal 476 finale remains unexpanded.
+- Updated the date gateway with checked campaign-date interpolation and anchored only future-only event recipients to existing AD 1 tags after the enabled-game loader rejected them directly.
+- Full validation and a corrective enabled-mod menu smoke are green with zero new error-log lines.
+
+Next: resolve the decision GUI registry blocker if the exact-name overlay path becomes viable; otherwise continue final flag, per-advance-icon, common-screen, and localization surfaces.
+
 ## 2026-07-20 - M11 advance icon group pass
 
 - Replaced the five M8 age-group advance icon surfaces used by all 250 ancient advances with retained generation sources, reviewed 256x256 PNG masters, and BC7 DDS overrides.
