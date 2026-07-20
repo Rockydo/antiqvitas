@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Scripted successor CoAs are standards, not reconstructed flags
+
+The thirteen later formation and successor-state CoAs use the same generic
+emblem-on-field approach as the AD 1 roster. A horse, boar, conch, or eagle is
+a broad UI category selected from the installed catalogue, not a claim about a
+Hunnic, Sasanian, Visigothic, Vandal, Roman, or Italian state flag. Color
+differences distinguish game states without asserting historical banner
+schemes. Sources weighed: plan sections 8, 17, and 20; local CoA catalogue.
+[illustrative composition only]
+
 ## 2026-07-20 - M11 advance groups use symbolic, non-reconstructive icon motifs
 
 The five shared advance-group icons represent administration, civic law,

@@ -1,5 +1,13 @@
 # Progress
 
+## 2026-07-20 - M11 scripted-formation CoA pass
+
+- Replaced the thirteen temporary M10 formation and successor CoAs with locally available generic emblems and reviewed color fields; no solid-color placeholder survives in those generator outputs.
+- Added a validator for every dynamic tag, emblem asset, and full color contract. The standards are explicitly UI design, not claims about historical flags.
+- Full validation and enabled-mod smoke are green with zero new error-log lines.
+
+Next: continue the decision, per-advance-icon, common-screen, and localization surfaces.
+
 ## 2026-07-20 - M11 section-18 event-density pass
 
 - Added 328 source-window phase events to the 83 M10 primary currents, reaching 411 total events with their existing 83 reviewed shared paintings.
