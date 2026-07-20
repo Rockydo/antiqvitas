@@ -28,6 +28,12 @@ a row reaches `implemented` status.
 - `IRAN-PHR`: Marek Jan Olbrycht's peer-reviewed *Encyclopaedia Iranica*
   [Phraates V](https://www.iranicaonline.org/articles/phraates-v/), used for
   the 2 BCE-AD 4 Phraates V reign span and Musa co-rule.
+- `IRAN-XIO`: Étienne de la Vaissière's *Encyclopaedia Iranica*,
+  ["Xiongnu"](https://www.iranicaonline.org/articles/xiongnu/), used for the
+  AD 48 Northern/Southern Xiongnu division; the Southern branch's movement
+  into northern China in AD 50; and the Northern branch's continued Mongolian
+  presence until its AD 91 displacement. It does not provide an exact
+  location-by-location AD 48 frontier, ruler record, or state boundary.
 - `IRAN-ATR`: *Encyclopaedia Iranica*, [Azerbaijan iii. Pre-Islamic History](https://www.iranicaonline.org/articles/azerbaijan-iii/), used for Ariobarzanes II's Media Atropatene appointment and regional context.
 - `IRAN-ADI`: David Sellwood, *Encyclopaedia Iranica*, ["Adiabene"](https://www.iranicaonline.org/articles/adiabene/), used for Monobazus as Adiabenian ruler in the first decades of the Christian era and for the kingdom's Parthian-era context. It does not supply a day-level accession, complete genealogy, conversion date, or later succession.
 - `CAM-ADI`: Michal Marciak, ["Images of Kings of Adiabene: Numismatic and Sculptural Evidence"](https://www.cambridge.org/core/journals/iraq/article/images-of-kings-of-adiabene-numismatic-and-sculptural-evidence/585AC7947F510E51A1AD2297922DE103), *Iraq* 78 (2016), used for the qualified c. 5 BCE-AD 30 Monobazus I chronology and its numismatic context. The study calls the range most likely, so the roster retains it as contested metadata rather than scripted biography dates.

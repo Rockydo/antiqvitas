@@ -1,5 +1,22 @@
 # Historical Assumptions
 
+## 2026-07-20 - AD 48 Northern Xiongnu uses a bounded Mongolian map proxy
+
+`IRAN-XIO` states that the Xiongnu split into Northern and Southern branches
+in AD 48, that the Southern branch entered northern China in AD 50, and that
+the Northern branch remained in Mongolia until displacement in AD 91. It does
+not yield an exact AD 48 border in the installed EU5 location mesh. The M10
+release therefore gives Northern Xiongnu the 36 northernmost reviewed Xiongnu
+locations in the M3 ownership surface (all below the documented local
+raster-coordinate boundary); the remaining Xiongnu country becomes Southern
+Xiongnu. This is a visible geographic proxy for the broad north/frontier
+distinction, not a claim that every selected location was a state border,
+capital district, continuously controlled tract, or a complete ethnographic
+map. No unverified ruler is assigned. Sources weighed: Étienne de la
+Vaissière, `IRAN-XIO`; master-plan sections 8.3, 8.8, and 9; locally harvested
+M3 location-coordinate index. [secure split and broad disposition; contested
+EU5-location partition]
+
 ## 2026-07-20 - The AD 48 surviving Xiongnu tag represents the southern polity
 
 The plan requires a northern-southern Xiongnu split in AD 48. The currently

@@ -10,7 +10,9 @@ Every emitted date originates in ``docs/timeline.csv`` and passes through
 from __future__ import annotations
 
 import argparse
+import csv
 import json
+import re
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -25,7 +27,12 @@ DISASTER_OUTPUT = ROOT / "in_game/common/disasters/antq_m10_first_century.txt"
 LOC_ROOT = ROOT / "main_menu/localization"
 COLOR_OUTPUT = ROOT / "main_menu/common/named_colors/antq_m10_transformations.txt"
 COA_OUTPUT = ROOT / "main_menu/common/coat_of_arms/coat_of_arms/antq_m10_transformations.txt"
+NORTH_XIONGNU_SEED = ROOT / "docs/m10/northern_xiongnu_48_locations.csv"
+START_COUNTRIES = ROOT / "main_menu/setup/start/10_countries.txt"
+LOCATION_COORDINATES = ROOT / "docs/vanilla_symbols/location_coordinates.json"
 BATCH_END = AntqDate.parse("96.1.1")
+NORTH_XIONGNU_TAG = "XNO"
+NORTH_XIONGNU_MAX_Y = 1945.0
 
 # The event recipient is the narrowest safe political actor for each current.
 # It determines the game-facing notification and effects, not exclusive
@@ -90,6 +97,73 @@ def engine_tags() -> dict[str, str]:
     return {entry["design_tag"]: entry["engine_tag"] for entry in payload["entries"]}
 
 
+def matching_block(text: str, open_brace: int) -> str:
+    """Return one balanced Paradox block, including its braces."""
+    depth = 0
+    for index, character in enumerate(text[open_brace:], open_brace):
+        if character == "{":
+            depth += 1
+        elif character == "}":
+            depth -= 1
+            if depth == 0:
+                return text[open_brace : index + 1]
+    raise ValueError("unterminated Paradox block")
+
+
+def start_country_locations(tag: str) -> frozenset[str]:
+    """Read the checked M3 start surface so a later map revision cannot silently
+    turn a dated release into an empty country.
+    """
+    text = START_COUNTRIES.read_text(encoding="utf-8-sig")
+    country = re.search(rf"(?m)^\s*{re.escape(tag)}\s*=\s*\{{", text)
+    if country is None:
+        raise ValueError(f"M10 source country {tag} is absent from the AD 1 start")
+    country_block = matching_block(text, country.end() - 1)
+    ownership = re.search(r"\bown_control_core\s*=\s*\{", country_block)
+    if ownership is None:
+        raise ValueError(f"M10 source country {tag} has no core ownership block")
+    ownership_block = matching_block(country_block, ownership.end() - 1)
+    return frozenset(re.findall(r"(?m)^\s*([A-Za-z][A-Za-z0-9_]*)\s*$", ownership_block[1:-1]))
+
+
+def northern_xiongnu_locations() -> tuple[str, ...]:
+    """Load the reviewed AD 48 Northern-Xiongnu map proxy.
+
+    `IRAN-XIO` fixes the broad historical distinction--the northern polity
+    remained in Mongolia while the southern polity moved within Han's northern
+    frontier--but does not provide EU5 location-by-location borders.  The CSV
+    materializes the northern slice of the reviewed M3 Xiongnu surface; checks
+    below keep that approximation explicit and reviewable.
+    """
+    with NORTH_XIONGNU_SEED.open(encoding="utf-8-sig", newline="") as handle:
+        rows = tuple(csv.DictReader(handle))
+    required_fields = {"location", "role", "selection", "source"}
+    if not rows or not required_fields.issubset(rows[0]):
+        raise ValueError("Northern Xiongnu seed has an invalid header")
+    locations = tuple(row["location"].strip() for row in rows)
+    if any(not location for location in locations):
+        raise ValueError("Northern Xiongnu seed contains an empty location")
+    if len(locations) != len(set(locations)):
+        raise ValueError("Northern Xiongnu seed contains duplicate locations")
+    capitals = tuple(row["location"].strip() for row in rows if row["role"].strip() == "capital")
+    if len(capitals) != 1 or capitals[0] != locations[0]:
+        raise ValueError("Northern Xiongnu seed must begin with its sole capital location")
+    if any(not row["selection"].strip() or not row["source"].strip() for row in rows):
+        raise ValueError("Northern Xiongnu seed lacks its approximation rationale")
+
+    coordinates = json.loads(LOCATION_COORDINATES.read_text(encoding="utf-8"))["locations"]
+    missing_coordinates = sorted(set(locations) - set(coordinates))
+    if missing_coordinates:
+        raise ValueError(f"Northern Xiongnu locations absent from coordinate index: {missing_coordinates}")
+    too_southern = [location for location in locations if coordinates[location]["y"] >= NORTH_XIONGNU_MAX_Y]
+    if too_southern:
+        raise ValueError(f"Northern Xiongnu location slice crosses its documented coordinate boundary: {too_southern}")
+    absent_from_xiongnu = sorted(set(locations) - start_country_locations("XIO"))
+    if absent_from_xiongnu:
+        raise ValueError(f"Northern Xiongnu locations are not AD 1 Xiongnu holdings: {absent_from_xiongnu}")
+    return locations
+
+
 def currents() -> tuple[Current, ...]:
     mapped_tags = engine_tags()
     result: list[Current] = []
@@ -136,6 +210,10 @@ def validate(records: tuple[Current, ...]) -> None:
         raise ValueError(f"M10 first-century ledger/target mismatch: missing={missing}, extra={extra}")
     if len({record.event_id for record in records}) != len(records):
         raise ValueError("M10 event IDs must be unique")
+    mapped_tags = engine_tags()
+    if NORTH_XIONGNU_TAG in mapped_tags.values():
+        raise ValueError(f"M10 dynamic tag {NORTH_XIONGNU_TAG} collides with the AD 1 tag map")
+    northern_xiongnu_locations()
     for record in records:
         if record.kind not in {"situation", "disaster", "event", "tagswitch", "formation"}:
             raise ValueError(f"unsupported M10 kind for {record.key}: {record.kind}")
@@ -165,11 +243,41 @@ def impact_lines(record: Current) -> tuple[str, ...]:
             "\t\tadd_legitimacy = legitimacy_mild_bonus",
         )
     if record.key == "xiongnu_split":
-        return (
+        locations = northern_xiongnu_locations()
+        capital, *territory = locations
+        lines = [
+            "\t\t# Northern slice: IRAN-XIO; local M3 coordinate proxy, documented in docs/m10/.",
+            f"\t\tlocation:{capital} = {{",
+            "\t\t\tcreate_country_from_location = {",
+            f"\t\t\t\tdefine_unique_country_tag = {NORTH_XIONGNU_TAG}",
+            f"\t\t\t\tchange_country_name = {NORTH_XIONGNU_TAG}",
+            f"\t\t\t\tchange_country_adjective = {NORTH_XIONGNU_TAG}",
+            f"\t\t\t\tchange_country_color = map_{NORTH_XIONGNU_TAG}",
+            f"\t\t\t\tchange_country_flag = {NORTH_XIONGNU_TAG}",
+            "\t\t\t\tchange_culture = ROOT.culture",
+            "\t\t\t\tchange_religion = ROOT.religion",
+            "\t\t\t\tchange_government_type = government_type:steppe_horde",
+            "\t\t\t\tadd_reform = government_reform:antq_steppe_confederation",
+            "\t\t\t\tchange_heir_selection = heir_selection:tribal_oldest_male",
+            "\t\t\t}",
+            f"\t\t\tadd_core = c:{NORTH_XIONGNU_TAG}",
+            "\t\t}",
+            "\t\tevery_owned_location = {",
+            "\t\t\tlimit = {",
+            "\t\t\t\tOR = {",
+        ]
+        lines.extend(f"\t\t\t\t\tthis = location:{location}" for location in territory)
+        lines.extend((
+            "\t\t\t\t}",
+            "\t\t\t}",
+            f"\t\t\tchange_location_owner = c:{NORTH_XIONGNU_TAG}",
+            f"\t\t\tadd_core = c:{NORTH_XIONGNU_TAG}",
+            "\t\t}",
             "\t\tchange_tag_cosmetic = { tag = XSO }",
             "\t\tdestroy_international_organization = { target = international_organization:antq_xiongnu_confederation }",
             "\t\tadd_stability = stability_mild_penalty",
-        )
+        ))
+        return tuple(lines)
     if record.kind == "disaster":
         return ("\t\tadd_stability = stability_mild_penalty", "\t\tadd_prestige = prestige_mild_penalty")
     if record.kind == "situation":
@@ -289,6 +397,8 @@ def localization(records: tuple[Current, ...], language: str) -> str:
     lines.extend((
         ' KSH: "Kushan"',
         ' KSH_ADJ: "Kushan"',
+        ' XNO: "Northern Xiongnu"',
+        ' XNO_ADJ: "Northern Xiongnu"',
         ' XSO: "Southern Xiongnu"',
         ' XSO_ADJ: "Southern Xiongnu"',
     ))
@@ -314,6 +424,7 @@ def transformation_colors() -> str:
         "# Generated by tools/m10_history.py --write; temporary M10 transformation colors.",
         "colors = {",
         "\tmap_KSH = rgb { 157 102 47 }",
+        "\tmap_XNO = rgb { 88 101 126 }",
         "\tmap_XSO = rgb { 96 118 84 }",
         "}",
         "",
@@ -332,6 +443,12 @@ def transformation_coas() -> str:
         "XSO = {",
         "\tpattern = \"pattern_solid.dds\"",
         "\tcolor1 = \"green\"",
+        "\tcolor2 = \"yellow\"",
+        "}",
+        "",
+        "XNO = {",
+        "\tpattern = \"pattern_solid.dds\"",
+        "\tcolor1 = \"blue\"",
         "\tcolor2 = \"yellow\"",
         "}",
         "",
