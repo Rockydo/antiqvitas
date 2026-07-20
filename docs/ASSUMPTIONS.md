@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Mauretania-annexation art is a generic coastal context
+
+The image signals a first-century Mauretanian Mediterranean setting through
+coastal uplands, olive groves, a track, and an indistinct roadside structure.
+It identifies no Juba, Ptolemy, Aedemon, Roman unit, city, annexation act,
+campaign, revolt, or outcome. It deliberately presents neither people nor
+combat and is not a reconstruction of the AD 40-44 transition. Sources weighed:
+P8.1; plan sections 9 and 20. [secure current context; illustrative
+composition only]
+
 ## 2026-07-20 - Trung-Sisters art is an environmental Jiaozhi context
 
 The image is a generic humid river-delta landscape with no people, boat,
