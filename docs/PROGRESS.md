@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-20 - M5 Dacian gold anchor
+
+- Corrected the nearest reviewed Roșia Montană/Apuseni map proxy from beeswax
+  to gold, adding the plan-listed Dacian mineral district without projecting
+  the later Roman extraction complex back into AD 1.
+- The RGO ledger now has 327 generated corrections. `make validate` and
+  enabled-mod smoke are green with zero new error-log lines.
+
+Next: continue remaining independent M5 economy and transport coverage.
+
 ## 2026-07-20 - M5 Carthage harbor proxy
 
 - Added a source-qualified protected-harbor tier at the existing Tunis/Carthago
