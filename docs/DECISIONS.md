@@ -1346,3 +1346,13 @@ the validator locks each group to exactly fifty bindings. This completes the
 advance icon surface without manufacturing a separate artifact-like visual
 claim for every abstract advance key; unique art remains warranted only when a
 screen exposes a direct, historically meaningful subject.
+
+## 2026-07-20 - Enforce English-first localization rather than partial translation
+
+The plan makes English the only authored localization and requires other
+clients to see that text. M11 therefore treats every non-English file as an
+exact source mirror with only its required header changed, and validates all
+fifteen source-file names, UTF-8 BOMs, entries, and values across the ten
+supported folders. This is clearer and safer than accumulating incomplete or
+machine-translated strings, and prevents raw-key regressions without extending
+the project's translation scope.
