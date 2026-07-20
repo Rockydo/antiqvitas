@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Great-Jewish-Revolt art is a landscape-only Judean context
+
+The image is an unoccupied Judean hill landscape with limestone terraces, olive
+shrubs, a dry-stone retaining wall, a narrow seasonal channel, and pale hills.
+It identifies no revolt participant, army, town, Temple, synagogue, sacred
+figure, ritual, campaign, action, course, or outcome. It deliberately excludes
+religious imagery, people, violence, and destruction and is not a reconstruction
+of the AD 66 revolt. Sources weighed: P8.1; plan sections 9, 11, and 20.
+[secure current context; illustrative composition only]
+
 ## 2026-07-20 - Armenian-war art is a generic highland frontier context
 
 The image is a late-autumn highland gorge with a track, turbulent stream, bare
