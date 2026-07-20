@@ -1,16 +1,45 @@
-# Credits
+# ANTIQVITAS Credits and Attribution
 
-## Project art
+ANTIQVITAS is an unofficial, non-commercial fan modification for *Europa
+Universalis V*. It is not affiliated with or endorsed by Paradox Interactive.
+It requires a legitimate copy of the game. No Paradox audio is changed, and no
+third-party mod content is bundled.
 
-The ANTIQVITAS thumbnail, AD 1 Rome loading screen, reviewed event
-illustrations, and pepper-good art are generated for this project through
-OpenAI's built-in image-generation pipeline, then inspected and converted
-locally. Their masters and engine-sized derivatives are preserved under
-`assets_queue/`; their scope and review records are in `docs/m11/`. The project
-reuses Europa Universalis V assets only where permitted for a game mod and does
-not redistribute audio.
+## Historical and geographic research
 
-## Data sources
+The project's source-led historical data is indexed by claim in
+[`docs/world_1ad/SOURCES.md`](docs/world_1ad/SOURCES.md), with additional
+milestone-specific citations beside their data ledgers. The following sources
+are particularly important:
 
-Formal source credits for Pleiades, ORBIS, CHGIS, and the historical datasets
-listed in the master plan will be expanded as each pipeline is introduced.
+- [Pleiades](https://pleiades.stoa.org/) ancient-place gazetteer, used for
+  conservative classical-place and coordinate matching. Its downloadable data
+  is shared under [CC BY 3.0](https://pleiades.stoa.org/downloads); retained
+  project data records attribution and uses only reviewed matches.
+- [Stanford ORBIS](https://orbis.stanford.edu/), used as a route and market
+  plausibility check rather than as a survey-grade reconstruction of every
+  game-map connection.
+- China Historical GIS, *Book of Han* geographic and census traditions, and
+  the scholarly works identified by the `BHR` and `CHG` source codes in the
+  roster catalogue.
+- *The Cambridge Ancient History*, the *Oxford Classical Dictionary*,
+  *Encyclopaedia Iranica*, primary texts, museums, and academic publications
+  individually identified in that same catalogue.
+
+Sources inform data and original paraphrase; their prose, maps, and artwork
+are not reproduced here unless an applicable license and attribution record
+explicitly permits it.
+
+## Visual and technical work
+
+- Original 2D mod art is generated and reviewed through the repository's
+  documented asset pipeline. Retained source masters, conversion records, and
+  review notes live under `assets_queue/` and `docs/m11/`.
+- The mod uses the installed game's engine-native texture, coat-of-arms, UI,
+  and model interfaces. Such assets remain the property of their respective
+  rights holders and are not presented as original ANTIQVITAS artwork.
+- The project keeps the game's existing audio unchanged by design.
+
+See [`docs/glossary.md`](docs/glossary.md) for the controlled terminology used
+in player-facing text and [`docs/ASSUMPTIONS.md`](docs/ASSUMPTIONS.md) for
+explicit historical judgement calls.
