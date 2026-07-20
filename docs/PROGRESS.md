@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-21 - M12 source-preserving event-quarantine pilot is green
+
+- The previous runtime experiment correctly found that empty and uniform-stub
+  overlays break EU5's cross-file event graph, but the conclusion did not hold
+  for source-preserving overlays.
+- `tools/m12_event_quarantine.py` now renders the installed 112-definition
+  random-event inventory with every direct event trigger set to `always = no`.
+  It retains each event's native scope, options, variables, and effects, removes
+  direct historical schedulers, and derives any future-date normalization from
+  `tools/dates.py`.
+- `make validate` and the 90-second enabled-mod `make smoke` are green with
+  zero new log lines. The renderer is now part of the static gate.
+
+Next: expand this proven contract in bounded installed-file batches, then
+re-enter observer testing before making runtime-completion claims.
+
 ## 2026-07-20 - M12 coupled vanilla-runtime boundary recorded; green baseline restored
 
 - The first recovered observer launch reached a live AD 1 session, but its
