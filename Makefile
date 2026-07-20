@@ -27,6 +27,7 @@ validate:
 	.venv/Scripts/python.exe tools/m11_message_overlay.py --check --scope all
 	.venv/Scripts/python.exe tools/m11_localization.py --check
 	.venv/Scripts/python.exe tools/m12_disable_missions.py --check
+	.venv/Scripts/python.exe tools/m12_game_rules.py --check
 	.venv/Scripts/python.exe tools/generate_country_definitions.py --check
 	.venv/Scripts/python.exe tools/capital_mapper.py --check
 	.venv/Scripts/python.exe tools/extract_map_coordinates.py --check

@@ -23,7 +23,7 @@ has passed the observer gate.
 | Scripted effects, triggers, values, on-actions | done | No unsupported custom global hook is retained; current layers use locally checked native contracts. |
 | Diseases | deferred | The vanilla disease taxonomy is retained; long-run disease-current behaviour awaits observer evidence. |
 | Missions and mission-task definitions | done | M12 disables all 11 anachronistic generic packs by checked exact-name visibility overlays; task definitions have no active standalone gameplay file. |
-| Game rules, tutorials, and hints | open | Game-rule/hint surfaces require the final anachronism and usability review. |
+| Game rules, tutorials, and hints | open | The exact country-change rule is now menu-smoked for autonomous Observer access; tutorials are non-automatic, while the dated-hint overlay remains the final semantic audit. |
 | Localization, glossary, credits | done | 17 English files mirror exactly to ten clients; glossary and Pleiades/ORBIS credits are present. |
 | Flags, goods/religion/advance/estate/government icons, event/age/loading art | done | M11 audit covers direct-key common screens, 83 event images, 5 age panels, and source/master/DDS chains. |
 | Main menu, GUI, fonts | deferred | Vanilla menu and fonts are retained; GUI is touched only for the guarded M11 registry overlay. |
