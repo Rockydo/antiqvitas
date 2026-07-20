@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-20 - M11 eastern-settlement event illustration
+
+- Added and attached a reviewed, text-free AD 1 Roman-Parthian diplomatic
+  illustration to the Gaius Caesar eastern-settlement current.
+- Its BC7 DDS passed dimensions and round-trip inspection; `make validate` and
+  enabled-mod smoke are green with zero new error-log lines.
+
+Next: continue source-led M5/M6 work and add M11 visuals only through checked
+engine surfaces.
+
 ## 2026-07-20 - M5 Melos alum anchor
 
 - Added the plan-listed alum emphasis through the direct installed `milos`

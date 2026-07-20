@@ -185,6 +185,7 @@ after `make full` and its autonomous driver report are green.
 
 - [x] Generate, dimension-check, round-trip review, and smoke-test the first AD 1 Rome loading-screen master and DDS override.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the first M10 event illustration for AD 1 *Immensum Bellum*.
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 1-4 Gaius Caesar eastern-settlement event illustration.
 - [ ] Reach event/decision targets; finish flags, icons, illustrations, loading/age art, localization, glossary, and credits.
 - [ ] Remove common-screen placeholders; run milestone gate and tag `M11-done`.
 
