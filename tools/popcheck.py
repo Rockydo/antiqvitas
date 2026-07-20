@@ -12,7 +12,7 @@ from pathlib import Path
 
 from extract_vanilla import tokenize
 from generate_country_definitions import historical_profile_for
-from generate_start_mirror import load_population_plan
+from generate_start_mirror import load_population_plan, population_location_overrides
 
 ROOT = Path(__file__).resolve().parents[1]
 POP_FILE = ROOT / "main_menu/setup/start/06_pops.txt"
@@ -91,6 +91,7 @@ def main() -> int:
     valid_religions = set(m4_symbols["religions"])
     valid_types = set(json.loads(POP_TYPES.read_text(encoding="utf-8-sig")))
     macros, allocations = load_population_plan()
+    overrides = population_location_overrides(owners, allocations)
     failures: list[str] = []
     records_by_location: defaultdict[str, list[dict[str, str]]] = defaultdict(list)
     region_totals: defaultdict[str, Decimal] = defaultdict(Decimal)
@@ -123,12 +124,15 @@ def main() -> int:
             continue
         tag = owners[location]
         profile = historical_profile_for(roster[tag])
-        if record["culture"] != profile.culture or record["religion"] != profile.religion:
+        override = overrides.get(location, {})
+        expected_culture = override.get("culture", profile.culture)
+        expected_religion = override.get("religion", profile.religion)
+        if record["culture"] != expected_culture or record["religion"] != expected_religion:
             failures.append(
                 f"{location}: profile {record['culture']}/{record['religion']} does not match {tag} "
-                f"({profile.culture}/{profile.religion})"
+                f"({expected_culture}/{expected_religion})"
             )
-        region = roster[tag]["region"]
+        region = override.get("region", roster[tag]["region"])
         region_totals[region] += size
         macro_totals[allocations[region].macro] += size
         total += size

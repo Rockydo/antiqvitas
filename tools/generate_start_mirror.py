@@ -39,6 +39,7 @@ SUBJECTS = ROOT / "docs/world_1ad/subjects.csv"
 SUBJECT_TYPES = ROOT / "docs/vanilla_symbols/subject_type.json"
 POPULATION_TARGETS = ROOT / "docs/m4/population_targets.csv"
 POPULATION_ALLOCATIONS = ROOT / "docs/m4/population_region_allocations.csv"
+POPULATION_LOCATION_OVERRIDES = ROOT / "docs/m4/population_location_overrides.csv"
 MARKETS = ROOT / "docs/m5/markets.csv"
 URBAN_NODES = ROOT / "docs/m5/urban_nodes.csv"
 ROAD_SEGMENTS = ROOT / "docs/m5/road_segments.csv"
@@ -491,6 +492,39 @@ def load_population_plan() -> tuple[dict[str, MacroTarget], dict[str, RegionalAl
     return macros, allocations
 
 
+def population_location_overrides(
+    owners: dict[str, str],
+    allocations: dict[str, RegionalAllocation],
+) -> dict[str, dict[str, str]]:
+    """Load exceptional source-led populations without treating political
+    ownership as proof of a uniform local culture or religion.
+    """
+    required = ("location", "culture", "religion", "pop_type", "region", "source", "confidence", "note")
+    rows = csv_rows(POPULATION_LOCATION_OVERRIDES)
+    overrides: dict[str, dict[str, str]] = {}
+    failures: list[str] = []
+    for row in rows:
+        location = row.get("location", "").strip()
+        if any(not row.get(field, "").strip() for field in required):
+            failures.append(f"{POPULATION_LOCATION_OVERRIDES.relative_to(ROOT)} has a blank required field")
+            continue
+        if location in overrides:
+            failures.append(f"{POPULATION_LOCATION_OVERRIDES.relative_to(ROOT)} repeats {location}")
+        elif location not in owners:
+            failures.append(f"{POPULATION_LOCATION_OVERRIDES.relative_to(ROOT)} {location} is not controlled")
+        elif row["region"].strip() not in allocations:
+            failures.append(f"{POPULATION_LOCATION_OVERRIDES.relative_to(ROOT)} {location} has an unknown region")
+        elif row["confidence"].strip() not in {"secure", "contested"}:
+            failures.append(f"{POPULATION_LOCATION_OVERRIDES.relative_to(ROOT)} {location} has invalid confidence")
+        elif row["pop_type"].strip() not in {"peasants", "tribesmen"}:
+            failures.append(f"{POPULATION_LOCATION_OVERRIDES.relative_to(ROOT)} {location} has invalid pop_type")
+        else:
+            overrides[location] = {key: value.strip() for key, value in row.items()}
+    if failures:
+        raise ValueError("\n".join(sorted(set(failures))))
+    return overrides
+
+
 def vanilla_pop_weights() -> dict[str, Decimal]:
     """Read installed-pop density as a geographic weighting template only."""
     config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
@@ -556,10 +590,11 @@ def population_manager() -> tuple[str, int, Decimal]:
             if location in owners:
                 raise ValueError(f"population ownership assigns {location} more than once")
             owners[location] = tag
+    overrides = population_location_overrides(owners, allocations)
     weights = vanilla_pop_weights()
     by_region: defaultdict[str, list[str]] = defaultdict(list)
     for location, tag in owners.items():
-        by_region[roster[tag]["region"]].append(location)
+        by_region[overrides.get(location, {}).get("region", roster[tag]["region"])].append(location)
     floor = Decimal("0.050")
     sizes: dict[str, Decimal] = {}
     for region, locations in by_region.items():
@@ -590,12 +625,15 @@ def population_manager() -> tuple[str, int, Decimal]:
     for location in sorted(owners):
         row = roster[owners[location]]
         profile = historical_profile_for(row)
-        pop_type = "tribesmen" if row["kind"] == "sop" else "peasants"
+        override = overrides.get(location, {})
+        pop_type = override.get("pop_type", "tribesmen" if row["kind"] == "sop" else "peasants")
+        culture = override.get("culture", profile.culture)
+        religion = override.get("religion", profile.religion)
         lines.extend(
             (
                 f"\t{location} = {{",
                 f"\t\tdefine_pop = {{ type = {pop_type} size = {sizes[location]:.3f} "
-                f"culture = {profile.culture} religion = {profile.religion} }}",
+                f"culture = {culture} religion = {religion} }}",
                 "\t}",
             )
         )

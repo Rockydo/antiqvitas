@@ -34,6 +34,12 @@ a row reaches `implemented` status.
   into northern China in AD 50; and the Northern branch's continued Mongolian
   presence until its AD 91 displacement. It does not provide an exact
   location-by-location AD 48 frontier, ruler record, or state boundary.
+- `CHAM-BIRTH`: Anne-Valérie Schweyer's, ["The Birth of
+  Champa"](https://www.researchgate.net/publication/331160829_The_Birth_of_Champa),
+  scholarly synthesis of Linyi and Champa. It places Linyi's origins and
+  territory broadly in present-day Quang Tri and Thua Thien-Huế and discusses
+  the AD 192 revolt. It does not license an exact modern-to-EU5-location
+  conversion, a dated ruler record, or later Champa territorial extent.
 - `IRAN-ATR`: *Encyclopaedia Iranica*, [Azerbaijan iii. Pre-Islamic History](https://www.iranicaonline.org/articles/azerbaijan-iii/), used for Ariobarzanes II's Media Atropatene appointment and regional context.
 - `IRAN-ADI`: David Sellwood, *Encyclopaedia Iranica*, ["Adiabene"](https://www.iranicaonline.org/articles/adiabene/), used for Monobazus as Adiabenian ruler in the first decades of the Christian era and for the kingdom's Parthian-era context. It does not supply a day-level accession, complete genealogy, conversion date, or later succession.
 - `CAM-ADI`: Michal Marciak, ["Images of Kings of Adiabene: Numismatic and Sculptural Evidence"](https://www.cambridge.org/core/journals/iraq/article/images-of-kings-of-adiabene-numismatic-and-sculptural-evidence/585AC7947F510E51A1AD2297922DE103), *Iraq* 78 (2016), used for the qualified c. 5 BCE-AD 30 Monobazus I chronology and its numismatic context. The study calls the range most likely, so the roster retains it as contested metadata rather than scripted biography dates.
