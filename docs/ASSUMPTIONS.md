@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-20 - Tacfarinas-war art is a generic North African frontier scene
+
+The image signals an early-imperial North African frontier context through a
+small patrol, distant mounted travellers, a modest shelter, and a semi-arid
+landscape. It identifies no Tacfarinas, tribe, Roman unit, exact site, route,
+engagement, or outcome. It deliberately presents neither combat nor casualties
+and is not a literal reconstruction of the AD 17-25 war. Sources weighed:
+P8.1; plan sections 9 and 20. [secure current context; illustrative
+composition only]
+
 ## 2026-07-20 - Kushan-unification art is a generic Central Asian gathering
 
 The image signals first-century Central Asian caravan and mounted-group context
