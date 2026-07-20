@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-20 - Great-Fire art is a non-literal AD 64 urban context
+
+The image shows a restrained early-imperial cityscape at dusk: ordinary
+plaster-and-brick buildings, tiled roofs, an empty street, and only distant
+smoke and firelight. It identifies no neighbourhood, monument, emperor,
+official, cause, response, victim, action, course, or outcome. It deliberately
+excludes people, bodily harm, specific later monuments (including the
+Colosseum), religious spectacle, and a claim to reconstruct the AD 64 fire.
+Sources weighed: P8.1; plan sections 9 and 20. [secure current context;
+illustrative composition only]
+
 ## 2026-07-20 - Boudica-revolt art is a generic eastern-British context
 
 The image is a generic first-century eastern-British lowland with stream,
