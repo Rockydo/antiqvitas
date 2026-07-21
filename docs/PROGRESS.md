@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-21 - M4 Surgut-Narym Ob Kulay atlas batch is smoke-verified
+
+- Added a contested twelve-location Kulay archaeological proxy for the
+  installed Surgut, Kargasok, and Tomsk provinces. The ledger now has 328
+  selectors resolving 12,030 locations across 151 mapped cultures; the M4
+  catalogue contains 172 cultures.
+- The source dates Kulay from the fifth century BCE through the fifth century
+  CE and identifies its Surgut-Narym/Ob origin. The frame does not assert an
+  ethnicity, language, state, exact boundary, or later Siberian identity.
+- Full validation and enabled-mod smoke testing passed with no new error-log
+  lines over the accepted baseline.
+
+Next: continue the residual-source review for the highest-priority defensible
+M4 selector, then complete the final M4 representation and definition audits.
+
 ## 2026-07-21 - M4 central-Oman Samad atlas batch is smoke-verified
 
 - Added a contested seven-location central-Oman Samad archaeological proxy for

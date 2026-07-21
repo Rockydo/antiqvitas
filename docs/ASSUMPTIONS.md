@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-21 - Kulay is a bounded Ob archaeological frame, not a language map
+
+The thirty-seventh source-led M4 batch assigns Kulay only to the installed
+Surgut, Kargasok, and Tomsk provinces: twelve controlled locations in the
+Surgut-Narym/Ob zone. The Tomsk Regional Museum dates Kulay from the fifth
+century BCE through the fifth century CE and locates its origin in that zone.
+The record is consequently an AD 1 archaeological proxy, not a claim about an
+ethnicity, speech community, state, exact territorial boundary, or modern
+Siberian identity. Its Uralic/Sami engine adapter is technical only.
+
+Sources: P8.8; P10; `TOM-KUL`.
+
+[secure campaign-boundary archaeological chronology and core geography;
+contested selector extent and local representation]
+
 ## 2026-07-21 - Samad is a central-Oman archaeological, not ethnic, frame
 
 The thirty-sixth source-led M4 batch introduces a Samad proxy only for the
