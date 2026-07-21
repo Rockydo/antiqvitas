@@ -307,6 +307,24 @@ antq_kashgar_oasis = { # P8.3;P10;IRAN-KAS; AD 1 Kashgar oasis proxy; technical 
 	}
 }
 
+antq_hami_oasis = { # P8.3;P10;IRAN-CT; AD 1 Hami oasis regional proxy; technical Iranian naming adapter does not determine first-century language
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_hami_oasis
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
+antq_turpan_oasis = { # P8.3;P10;IRAN-CT; AD 1 Turpan oasis regional proxy; technical Iranian naming adapter does not determine first-century language
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_turpan_oasis
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
 antq_sarmatian = { # P10;CAH-XI; Pontic Iranian steppe communities
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_sarmatian
