@@ -1,5 +1,29 @@
 # Historical Assumptions
 
+## 2026-07-21 - Non-capital dynamic names are direct toponym anchors, not a speech map
+
+The M4 naming ledger now adds 24 secure, non-capital ancient toponyms to the
+61 coordinate-verified capital anchors. Pleiades supports direct classical
+toponym/location matching; the *Book of Han* supports the selected Han names;
+and the plan's reviewed market/road anchors identify the installed map keys.
+Each row is a name-at-location judgment only. It does not establish a precise
+city footprint, political sovereignty, demographic majority, or uniform spoken
+language across the selected game location.
+
+The `culture` column selects an engine-valid dynamic-language lookup, normally
+the AD 1 owner profile. It is not a claim that the toponym was spoken in that
+language: for example, Greek Antiochia is retained through the Arsacid Iranian
+rendering adapter, while the name itself remains the reviewed city form. Names
+whose site match or first-century form was not sufficiently direct were left
+unchanged rather than given a plausible invented replacement.
+
+Sources: `PLE`; `BHR`; `P8.1`; `P8.2`; `P8.3`; `P8.4`; `P8.8`; `P12.1`;
+`P12.2`; `ORB` only as a route/anchor cross-check; `CAH-XI` where the city
+context requires it. See `docs/m4/dynamic_location_name_overrides.csv`.
+
+[secure direct toponym/location anchors; contested local extent, language,
+population, political affiliation, and cultural continuity]
+
 ## 2026-07-21 - Germanic, Baltic, and Fennian names are bounded campaign frames
 
 The forty-seventh M4 batch adds 36 named frames from the Oder and Lower Rhine

@@ -1,5 +1,25 @@
 # Progress
 
+## 2026-07-21 - M4 dynamic-name ledger now extends beyond capitals
+
+- The dynamic-name generator now combines 61 coordinate-verified capital
+  anchors with 24 secure non-capital historical toponyms. The curated entries
+  cover Roman, Hellenic, Iranian, Indian, Sogdian, and Han contexts and are
+  independently tied to installed location keys, culture/language contracts,
+  and source rows rather than inferred from vanilla template names.
+- The new rows include Gades, Massilia, Lugdunum, Byzantion, Pataliputra,
+  Marakanda, Bactra, Ecbatana, Tarentum, Brundisium, Bononia, Mutina,
+  Placentia, Genua, Pisae, Dyrrachium, and Thessalonica. Names already close
+  to their historical forms remain explicit when their ANTIQVITAS language
+  contract needs a root/dialect lookup.
+- `make validate` passed with 85 reviewed anchors and 5,462 mirrored
+  localization entries. Enabled-mod smoke completed at 20:15 UTC with zero new
+  normalized `error.log` lines.
+
+Next: preserve the blocked M4 map-mode gate, then take the next unblocked
+milestone task without converting a technical language adapter into a claim
+about local spoken language.
+
 ## 2026-07-21 - M4 350-definition observer gate is runtime-blocked
 
 - The current `make full` completed on the 350-culture build; its enabled-mod
