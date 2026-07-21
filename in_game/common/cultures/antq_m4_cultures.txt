@@ -1261,6 +1261,429 @@ antq_lusonian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Eastern Celtiberian Lusones
 	}
 }
 
+antq_auscian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Aquitanian Ausci regional frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_auscian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_tarbellian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Aquitanian Tarbelli regional frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_tarbellian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_bigerrionian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Aquitanian Bigerriones regional frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_bigerrionian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_convenian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Pyrenean Convenae regional frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_convenian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_elusatian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Aquitanian Elusates regional frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_elusatian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_nitiobrigian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Garonne-basin Nitiobriges regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_nitiobrigian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_viviscan = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Bituriges Vivisci regional frame around Burdigala
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_viviscan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_petrocorian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Dordogne-basin Petrocorii regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_petrocorian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_cadurcian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Quercy Cadurci regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_cadurcian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_rutenian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Ruteni regional frame in the southern Massif Central
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_rutenian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_santonian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Atlantic Santoni regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_santonian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_pictonian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Atlantic Pictones regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_pictonian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_venetian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Armorican Veneti regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_venetian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_namnetian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Armorican Namnetes regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_namnetian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_osismian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Armorican Osismi regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_osismian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_redonian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Armorican Redones regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_redonian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_coriosolitan = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Armorican Coriosolitae regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_coriosolitan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_aulerci_cenomanian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Aulerci Cenomani regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_aulerci_cenomanian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_aulerci_diablintian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Aulerci Diablintes regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_aulerci_diablintian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_aulerci_eburovician = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Aulerci Eburovices regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_aulerci_eburovician
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_unellian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Norman Unelli regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_unellian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_caletian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Norman Caletes regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_caletian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_baiocassian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Norman Baiocasses regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_baiocassian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_veliocassian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Norman Veliocasses regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_veliocassian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_andecavian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Loire Andecavi regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_andecavian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_arvernian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Massif Central Arverni regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_arvernian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_biturigan_cubian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Bituriges Cubi regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_biturigan_cubian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_aeduan = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Saone-basin Aedui regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_aeduan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_senonian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Upper-Seine Senones regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_senonian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_carnutian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Central Loire Carnutes regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_carnutian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_parisian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Seine Parisii regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_parisian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_suessionian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Northeastern Suessiones regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_suessionian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_bellovacian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Northern Bellovaci regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_bellovacian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_ambianian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Somme Ambiani regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_ambianian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_remian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Champagne Remi regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_remian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_treverian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Moselle Treveri regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_treverian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_mediomatrician = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Moselle Mediomatrici regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_mediomatrician
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_leucian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Upper-Moselle Leuci regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_leucian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_sequanian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Jura Sequani regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_sequanian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_lingonian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Langres Lingones regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_lingonian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_volcan_arecomican = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Volcae Arecomici regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_volcan_arecomican
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_volcan_tectosagian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Volcae Tectosages regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_volcan_tectosagian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_allobrogian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Rhone-Alps Allobroges regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_allobrogian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_vocontian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Pre-Alpine Vocontii regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_vocontian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_saluvian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Lower-Rhone Saluvii regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_saluvian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_cavaric = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Lower-Rhone Cavares regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_cavaric
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_helvian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Rhone-side Helvii regional frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_helvian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
 antq_gallaecian = { # P10;CAH-XI;PLE; Northwestern Iberian communities
 	language = antq_celtic_dialect
 	color = antq_culture_color_antq_gallaecian
