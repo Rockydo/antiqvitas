@@ -379,6 +379,51 @@ antq_tamil = { # P10;CAH-XI; Tamilakam culture
 	}
 }
 
+antq_gandhari = { # P8.4;P10;CAH-XI; Northwestern South Asian regional proxy centered on the Gandharan cultural horizon
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_gandhari
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_kalingan = { # P8.4;P10;CAH-XI; Kalinga regional proxy without projecting a later linguistic boundary
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_kalingan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_deccan_prakrit = { # P8.4;P10;CAH-XI; Satavahana Deccan regional Prakrit proxy
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_deccan_prakrit
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_proto_telugu_kannada = { # P8.4;P10;CAH-XI; Eastern and southern Deccan Dravidian regional proxy before later standard languages
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_proto_telugu_kannada
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_sinhala = { # P8.4;P10;CAH-XI; Anuradhapura Lankan regional proxy
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_sinhala
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
 antq_han = { # P10;BHR; Han Chinese population base
 	language = antq_sinitic_dialect
 	color = antq_culture_color_antq_han
@@ -415,9 +460,63 @@ antq_khmer = { # P10;CAH-XI; Khmer regional communities
 	}
 }
 
+antq_pyu = { # P8.9;P10;CAH-XI; Pyu city-network regional proxy
+	language = antq_southeast_asian_dialect
+	color = antq_culture_color_antq_pyu
+	tags = { european_gfx }
+	culture_groups = {
+		antq_southeast_asian_group
+	}
+}
+
+antq_vietic = { # P8.3;P10;CAH-XI; Red River regional proxy before later Vietnamese standardization
+	language = antq_southeast_asian_dialect
+	color = antq_culture_color_antq_vietic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_southeast_asian_group
+	}
+}
+
 antq_austronesian = { # P10;CAH-XI; Island Southeast Asian communities
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_austronesian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_austronesian_group
+	}
+}
+
+antq_malay = { # P8.9;P10;CAH-XI; Malay Peninsula and Sumatra regional proxy before later state identities
+	language = antq_austronesian_dialect
+	color = antq_culture_color_antq_malay
+	tags = { european_gfx }
+	culture_groups = {
+		antq_austronesian_group
+	}
+}
+
+antq_javanese = { # P8.9;P10;CAH-XI; Java and Lesser Sunda regional proxy before later court traditions
+	language = antq_austronesian_dialect
+	color = antq_culture_color_antq_javanese
+	tags = { european_gfx }
+	culture_groups = {
+		antq_austronesian_group
+	}
+}
+
+antq_philippine = { # P8.9;P10;CAH-XI; Philippine societies regional proxy rather than a single identity
+	language = antq_austronesian_dialect
+	color = antq_culture_color_antq_philippine
+	tags = { european_gfx }
+	culture_groups = {
+		antq_austronesian_group
+	}
+}
+
+antq_bornean = { # P8.9;P10;CAH-XI; Bornean societies regional proxy rather than a single identity
+	language = antq_austronesian_dialect
+	color = antq_culture_color_antq_bornean
 	tags = { european_gfx }
 	culture_groups = {
 		antq_austronesian_group

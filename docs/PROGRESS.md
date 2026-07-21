@@ -1,5 +1,23 @@
 # Progress
 
+## 2026-07-21 - M4 South and Southeast Asia batch is observer-verified
+
+- Added 29 non-overlapping selectors across India, Lanka, Jiaozhi, mainland
+  Southeast Asia, Malay/Sumatra, Java/Lesser Sunda, the Philippines, and
+  Borneo. They resolve 1,320 more locations, lifting the ledger to 121
+  selectors, 4,208 locations, and 52 mapped cultures.
+- Added eleven source-labelled culture definitions, raising the generated M4
+  catalogue to 102 cultures without adding a new technical language contract.
+  Full validation is green; the enabled-mod smoke has zero new normalized
+  error-log lines.
+- A fresh paused Observer culture map visibly renders Gandhari and Indo-Aryan
+  in South Asia plus Pyu, Mon, Proto-Khmer, and Vietic in the Southeast Asian
+  view. The archived run has zero `jomini_script_system` and zero missing-law
+  diagnostics. Evidence: `docs/playtests/M4_SOUTH_SOUTHEAST_ATLAS_20260721.md`.
+
+Next: continue bounded atlas batches, prioritizing source-supported cultural
+distinctions rather than remapping from vanilla culture keys.
+
 ## 2026-07-21 - M4 northern selector batch is observer-verified
 
 - Added 46 non-overlapping source-labelled selectors for Britain, Ireland,
