@@ -1161,3 +1161,138 @@ antq_new_guinean = { # P8.9;P10;CAM-NGU; New Guinea regional proxy rather than a
 		antq_oceanic_group
 	}
 }
+
+antq_yan_han = { # P8.3;P10;BHR;CAM-HAN-REG; Northern Han regional proxy retaining the Yan cultural horizon
+	language = antq_sinitic_dialect
+	color = antq_culture_color_antq_yan_han
+	tags = { european_gfx }
+	culture_groups = {
+		antq_sinitic_group
+	}
+}
+
+antq_jin_han = { # P8.3;P10;BHR;CAM-HAN-REG; Shanxi and northern frontier Han regional proxy retaining the Jin cultural horizon
+	language = antq_sinitic_dialect
+	color = antq_culture_color_antq_jin_han
+	tags = { european_gfx }
+	culture_groups = {
+		antq_sinitic_group
+	}
+}
+
+antq_zhongyuan_han = { # P8.3;P10;BHR;CAM-HAN-REG; Central Plains Han regional proxy
+	language = antq_sinitic_dialect
+	color = antq_culture_color_antq_zhongyuan_han
+	tags = { european_gfx }
+	culture_groups = {
+		antq_sinitic_group
+	}
+}
+
+antq_qilu_han = { # P8.3;P10;BHR;CAM-HAN-REG; Shandong Han regional proxy retaining the Qi-Lu cultural horizon
+	language = antq_sinitic_dialect
+	color = antq_culture_color_antq_qilu_han
+	tags = { european_gfx }
+	culture_groups = {
+		antq_sinitic_group
+	}
+}
+
+antq_wu_yue = { # P8.3;P10;BHR;CAM-HAN-REG;CAM-YUE; Lower Yangtze regional proxy rather than a single ethnic boundary
+	language = antq_sinitic_dialect
+	color = antq_culture_color_antq_wu_yue
+	tags = { european_gfx }
+	culture_groups = {
+		antq_sinitic_group
+	}
+}
+
+antq_chu_han = { # P8.3;P10;BHR;CAM-HAN-REG; Middle Yangtze Han regional proxy retaining the Chu cultural horizon
+	language = antq_sinitic_dialect
+	color = antq_culture_color_antq_chu_han
+	tags = { european_gfx }
+	culture_groups = {
+		antq_sinitic_group
+	}
+}
+
+antq_poyang_han = { # P8.3;P10;BHR;CAM-HAN-REG; Jiangxi and Poyang-basin Han regional proxy
+	language = antq_sinitic_dialect
+	color = antq_culture_color_antq_poyang_han
+	tags = { european_gfx }
+	culture_groups = {
+		antq_sinitic_group
+	}
+}
+
+antq_min_yue = { # P8.3;P10;BHR;CAM-YUE; Fujian regional proxy retaining a fluid Yue frontier identity
+	language = antq_sinitic_dialect
+	color = antq_culture_color_antq_min_yue
+	tags = { european_gfx }
+	culture_groups = {
+		antq_sinitic_group
+	}
+}
+
+antq_dian = { # P8.3;P10;BHR;CAM-DIAN; Yunnan Dian regional proxy after Han incorporation
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_dian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_yelang = { # P8.3;P10;BHR;JAS-YEL; Guizhou Yelang regional proxy with unresolved language and extent
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_yelang
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_lingnan_yue = { # P8.3;P10;BHR;CAM-YUE; Lingnan Yue regional proxy after Han annexation rather than a fixed ethnicity
+	language = antq_sinitic_dialect
+	color = antq_culture_color_antq_lingnan_yue
+	tags = { european_gfx }
+	culture_groups = {
+		antq_sinitic_group
+	}
+}
+
+antq_ba_han = { # P8.3;P10;BHR;CAM-HAN-REG; Eastern Sichuan regional proxy retaining the Ba cultural horizon
+	language = antq_sinitic_dialect
+	color = antq_culture_color_antq_ba_han
+	tags = { european_gfx }
+	culture_groups = {
+		antq_sinitic_group
+	}
+}
+
+antq_shu_han = { # P8.3;P10;BHR;CAM-HAN-REG; Sichuan basin regional proxy retaining the Shu cultural horizon
+	language = antq_sinitic_dialect
+	color = antq_culture_color_antq_shu_han
+	tags = { european_gfx }
+	culture_groups = {
+		antq_sinitic_group
+	}
+}
+
+antq_qin_han = { # P8.3;P10;BHR;CAM-HAN-REG; Shaanxi Han regional proxy retaining the Qin cultural horizon
+	language = antq_sinitic_dialect
+	color = antq_culture_color_antq_qin_han
+	tags = { european_gfx }
+	culture_groups = {
+		antq_sinitic_group
+	}
+}
+
+antq_hexi_han = { # P8.3;P10;BHR;CAM-HAN-REG; Hexi and Gansu Han regional proxy
+	language = antq_sinitic_dialect
+	color = antq_culture_color_antq_hexi_han
+	tags = { european_gfx }
+	culture_groups = {
+		antq_sinitic_group
+	}
+}

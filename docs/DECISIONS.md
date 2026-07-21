@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Southwest China keeps an explicit engine-language fallback
+
+The installed language inventory lacks a verified Dian or Yelang language root.
+Those two source-led culture records therefore use the existing highland group
+and its engine-valid fallback dialect, `mongolian_language`, solely so EU5 can
+render a valid nested language record. The attached historical labels remain
+contested regional proxies; this technical fallback does not assert a
+Mongolic language, a uniform southwest population, or a resolved affiliation.
+
 ## 2026-07-21 - Preserve the Micronesian map gap with a disjoint province selector
 
 The harvested `micronesia_region` resolves to the controlled Yap/Ulithi surface
