@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-21 - M4 Petén Maya atlas batch is smoke-verified
+
+- Added the remaining Petén area to the existing Late-Preclassic Maya proxy.
+  The ledger now has 309 selectors, 11,621 locations, and 139 mapped cultures.
+- The cited archaeology anchors a lowland Maya horizon before AD 1; it does not
+  assert later Classic dynastic territories. The existing 160-culture catalogue
+  is retained. Full validation and enabled-mod smoke are green, with zero new
+  normalized error-log lines.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Jazira Aramaic atlas batch is smoke-verified
 
 - Added the unmapped Jazira area to the existing northern-Mesopotamian Aramaic
