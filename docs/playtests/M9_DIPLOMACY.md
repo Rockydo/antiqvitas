@@ -25,6 +25,11 @@ The selector and observer-state evidence is retained with those panels. The
 initial country-card overlap around Longcheng required the no-time-advance
 `tag XIO` fallback; it did not create a save or run the simulation.
 
+That fallback also invokes a separate legacy player-context UI surface that
+emits 212 vanilla HRE/Curia/Middle-Kingdom/dynastic scope diagnostics. They do
+not occur in plain Observer mode and are recorded, after two bounded attempts,
+in `BLOCKERS.md`; they are not evidence against the generated M9 contracts.
+
 ## Remaining acceptance work
 
 M9 remains open. The paused panels establish that the generated client,

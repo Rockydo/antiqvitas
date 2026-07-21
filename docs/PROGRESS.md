@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-21 - Player-context scope audit is bounded and deferred
+
+- A paused AD 1 Observer -> `tag XIO` probe confirmed the Xiongnu player
+  context but exposed 212 legacy HRE/Curia/Middle-Kingdom/dynastic UI scope
+  errors that do not occur in plain Observer mode.
+- An exact-source 60-gate experiment passed static validation but left every
+  error intact because this UI evaluator resolves nested scopes behind false
+  availability conditions. The uncommitted overlays were removed.
+- The documented two-attempt blocker preserves the smoke-green clean
+  Observer checkpoint and rules out repeating the same date-gate strategy.
+
+Next: leave this player-context surface deferred until a materially different
+engine contract is evidenced; long playback remains separately renderer-bound.
+
 ## 2026-07-21 - AD 1 government-law compatibility is observer-verified
 
 - The custom ancient advance tree now carries each locally required
