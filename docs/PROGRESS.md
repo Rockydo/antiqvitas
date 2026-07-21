@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-22 - M7 observer route reopened; AI-war playback remains renderer-blocked
+
+- The exact country-change game-rule overlay successfully enabled and started
+  Observer Mode. At maximum speed the live session advanced from 4 January to
+  15 March AD 1 in 35 seconds.
+- The console route now uses engine tags from the generated tag map. A controlled
+  `XAA` Rome versus `XAH` Parthia war populated the live War Viewer with the
+  Parthian subject network, then both sides returned to AI Observer control.
+- The game exited before the first periodic war capture with the existing
+  `ffxFsr2ResourceIsNull` / `NVSDK_NGX_D3D12_Shutdown1` renderer access
+  violation. The crash log has no M7 identifier. The two bounded findings and
+  recovery condition are in `docs/playtests/M7_WAR.md` and `BLOCKERS.md`.
+
+Next: continue to M8's independent acceptance work; retry M7 only after a
+material renderer, driver, or game-build change.
+
 ## 2026-07-21 - M6 current-ruler binding repaired; Han regency remains blocked
 
 - Installed start files establish ordinary named heads through a paired,

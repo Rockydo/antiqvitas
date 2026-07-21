@@ -34,13 +34,23 @@ for both removal diagnostics; see `docs/playtests/AD1_STARTUP_DEFAULTS_20260721.
 
 The final observer-to-476 acceptance run has not been achieved. The observer
 country-change default is now enabled by a menu-smoked exact-name overlay, but
-the current game build exits in an FSR renderer access-violation stack on the
-first play action. The full 40-action M11 registry, the resolved M8
+the current game build exits in an FSR renderer access-violation stack during
+sustained high-speed observer playback. The M7 Rome-Parthia controlled AI war
+reproduced the same `ffxFsr2ResourceIsNull` / `NVSDK_NGX_D3D12_Shutdown1`
+crash after the live War Viewer had populated. The full 40-action M11 registry, the resolved M8
 institution-birth contracts, and the 7,440-event quarantine all have successful
 enabled-mod evidence, so this is not evidence of a message-registry or
 event-loader failure. Do not treat this development
 build as release-ready for a long observer campaign; see `BLOCKERS.md` and
 `docs/m12/M12_FINALE_VERIFICATION.md`.
+
+## M7 AI-war observer acceptance is deferred
+
+Observer entry, maximum speed, and a controlled Rome-Parthia war all work on
+the current build. The game crashes in the shared FSR renderer path before a
+periodic AI-war capture can be taken, with no M7 unit, fleet, fort, or manager
+identifier in the crash log. The exact evidence and retry boundary are in
+`docs/playtests/M7_WAR.md` and `BLOCKERS.md`.
 
 ## The exact message registry is pinned to the installed EU5 build
 
