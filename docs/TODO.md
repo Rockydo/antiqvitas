@@ -61,6 +61,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Extend the selector ledger through the Roman world: 39 further selectors resolve 838 locations and add 4 culture definitions, bringing the audited atlas to 9,200 locations across 120 mapped cultures.
 - [x] Extend the selector ledger through the source-led Venedi SoP frames: 2 further selectors resolve 845 locations and add 2 culture definitions, bringing the audited atlas to 10,045 locations across 122 mapped cultures.
 - [x] Extend the selector ledger through core Yayoi Wa, the Tibetan plateau, and interior Arabia: 13 further selectors resolve 714 locations, bringing the audited atlas to 10,759 locations across 125 mapped cultures.
+- [x] Extend the selector ledger through bounded South Asian Prakrit, Tamil, and Himalayan frames: 14 further selectors resolve 467 locations and add 2 culture definitions, bringing the audited atlas to 11,226 locations across 127 mapped cultures.
 - [ ] Expand the culture/location remap toward the 350–500-culture target and add reviewed dynamic names beyond capital anchors (deferred in `BLOCKERS.md`: no redistributable global culture dataset yet).
 - [ ] Pass the final culture/religion atlas checks; population and raw `-leavepops` checks are green.
 - [ ] Run milestone gate and tag `M4-done`.

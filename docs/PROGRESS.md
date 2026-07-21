@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-21 - M4 South Asian regional-Prakrit atlas batch is smoke-verified
+
+- Added fourteen non-overlapping selectors for Magadhi and Shauraseni Prakrit,
+  broad Indian regional proxies, Tamilakam, and bounded Himalayan/Assam frames.
+  They resolve 467 further locations, lifting the ledger to 297 selectors,
+  11,226 locations, and 127 mapped cultures.
+- Added Magadhi Prakrit and Shauraseni Prakrit, raising the M4 catalogue to
+  152 cultures. Munda, Gondwana, and the Maldives remain deliberately
+  unmapped pending period-specific evidence. Full validation and enabled-mod
+  smoke are green, with zero new normalized error-log lines.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 East Asian highland and Arabian regional-atlas batch is smoke-verified
 
 - Added thirteen non-overlapping selectors for core Yayoi Wa, the Tibetan

@@ -1,5 +1,19 @@
 # Historical Assumptions
 
+## 2026-07-21 - South Asian Prakrit and highland frames avoid later national languages
+
+The thirteenth selector batch uses Magadhi and Shauraseni as historical
+regional-Prakrit proxies, not as labels for later Bengali, Bhojpuri, Hindi,
+Awadhi, Maithili, Gujarati, Rajasthani, or Malvi standards. The Tamil row
+retains Tamilakam rather than projecting later Malayalam differentiation.
+Assam and the eastern Himalayan rows are broad Trans-Himalayan highland
+proxies, not a resolution of their local linguistic diversity. Munda history is
+explicitly left unmapped: its prehistory and AD 1 distribution remain too
+uncertain to turn Chota Nagpur, Jharkhand, or Gondwana into a single identity.
+Sources weighed: plan sections 8.4 and 10 (P8.4; P10); CAH-XI; INFLIB-PRK;
+RGU-PRK; CAM-TH.
+[secure broad Prakrit and Tamil context; contested local representation]
+
 ## 2026-07-21 - East Asian highland, core Wa, and interior-Arabian frames remain bounded
 
 The twelfth selector batch maps only the Japanese areas inside the plan's Wa
