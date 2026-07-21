@@ -8,8 +8,10 @@ change. Its Render Scale control supplied the verified numeric contract:
 100, 90, 80, then 70 percent, persisted as Graphics.render_scale = 0.700000.
 The autonomous driver now writes that exact 0.7 value while retaining the
 supported 1920x1080 windowed profile and the existing very-low options. Full
-validation and a 90-second enabled-mod smoke are green. A fresh observer
-playback is required before judging whether the FSR crash is delayed or cured.
+validation and a 90-second enabled-mod smoke are green. The fresh observer
+playback reached 1 June but reproduced the same FSR crash as the full-scale
+profile; retain this profile for smoke stability, but pause further profile
+changes until a material engine or driver recovery is evidenced.
 
 ## 2026-07-21 - Generate each custom institution's required birth modifier
 

@@ -41,23 +41,31 @@ evidence rather than assumed from the old failed blank-overlay experiment.
 
 ## 2026-07-21 - Observer playback remains renderer-bound after two renewed attempts
 
-Status: **deferred after two bounded observer attempts; menu baseline remains green.**
+Status: **deferred after two material renderer-profile attempts; menu baseline remains green.**
 
 The current event-quarantine commit passed full static validation and an
-enabled-mod 90-second smoke with zero new lines. Two fresh New Game sessions
-then reached the AD 1 selector, entered Observer Mode, and rendered the active
-map. The corrected second attempt used the actual observed play-control target
-after a keyboard toggle failed to change pause state. Each session exited only
-after the play action; neither reached an advancing date.
+enabled-mod 90-second smoke with zero new lines. Fresh New Game sessions on two
+material renderer profiles reached the AD 1 selector, entered Observer Mode,
+and rendered the active map. The corrected play-control target advances time:
+the supported 1920x1080 profile reached about 1 June at maximum speed before
+the renderer fault recurred.
 
-The second crash bundle is
-`G:\antiqvitas_user_data\crashes\Europa Universalis V20260720_225407`.
+The former 960x540 request is rejected by this game build and persisted as
+2560x1440, so the driver now uses a locally supported 1920x1080 windowed mode.
+The installed Graphics UI also verified that both Upscale Method and Upscale
+Quality were already disabled. Its 70-percent Render Scale setting was then
+persisted and passed full static validation plus a 90-second enabled-mod smoke.
+That second material profile reached 4 January after ten seconds of ordinary
+play and 1 June after ten seconds at maximum speed, but the game exited before
+the next 20-second screenshot.
+
+The latest crash bundle is
+`G:\antiqvitas_user_data\crashes\Europa Universalis V20260720_235625`.
 It records `Unhandled Exception C0000005` in the `ffxFsr2ResourceIsNull` /
-renderer stack. This session had 14.6 GB free RAM and 17.3 GB free pagefile,
-so the earlier low-pagefile diagnosis no longer explains the failure. The
-driver's requested 960x540 string is also rejected by this game build and the
-engine persists a 2560x1440 windowed resolution, making the renderer profile a
-separate concrete issue.
+renderer stack, including the FSR and NGX shutdown frames. The same stack also
+occurred on the full-scale profile with 14.6 GB free RAM and 17.3 GB free
+pagefile, so neither reduced rendering nor the earlier low-pagefile observation
+explains the failure.
 
 The crash logs also exposed nonfatal AD 1 runtime work. The nine generated
 institution birth modifiers and their name-localization keys were subsequently
@@ -66,11 +74,12 @@ government or international-organization scopes remains. There is no event
 quarantine loader error. Screenshots and the bounded reproduction are recorded
 in `docs/playtests/M12_OBSERVER_RETRY_20260721.md`.
 
-Recovery: the supported 1920x1080 profile now reaches a live observer and has
-advanced through 1 June at maximum speed before the same FSR stack recurs. The
-installed Graphics UI shows upscaling was already disabled; it has now supplied
-a separately verified 70-percent render scale. Run the bounded play-control
-probe on that new profile before judging the remaining renderer failure.
+Recovery: renderer-profile experimentation is paused after the two material
+attempts. Retain the smoke-green 1920x1080, 70-percent profile and continue
+with the independent government, coat-of-arms, and international-organization
+runtime audit exposed by the live session. Do not claim observer-to-476
+coverage until a separately evidenced engine or driver change makes another
+attempt material.
 
 ## 2026-07-20 - M5 Nubian-gold key lacks a defensible AD 1 site-date match
 
