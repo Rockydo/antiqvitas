@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-21 - Roman M4 labels retain provincial and regional limits
+
+The tenth selector batch maps Italic residuals, Gallic and Belgic frames,
+Egyptian, Greek, Phoenician-Punic, and Alpine regional labels through the
+Roman world. Roman administration did not make every selected location
+culturally homogeneous; Pontic, Noric, Rhaetic, and Helvetian entries are
+bounded regional proxies, not claims of a uniform language or continuity.
+Sources weighed: plan sections 8.1 and 10 (P8.1; P10); CAH-XI; PLE.
+[secure provincial context; contested local representation]
+
 ## 2026-07-21 - Chinese M4 labels are regional frames, not an ethnic census
 
 The ninth selector batch retains Qin, Chu, Qi-Lu, Yan, Jin, Ba, Shu, and

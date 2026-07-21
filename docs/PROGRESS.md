@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-21 - M4 Roman regional-atlas batch is smoke-verified
+
+- Added 39 non-overlapping selectors through Italy, Gaul, Roman Egypt,
+  Cyrenaica, western Anatolia, the Pontic, Noricum, Raetia, and Helvetia.
+  They resolve 838 further locations, lifting the ledger to 268 selectors,
+  9,200 locations, and 117 mapped cultures.
+- Added Pontic, Noric, Rhaetic, and Helvetian definitions, raising the M4
+  catalogue to 148 cultures. Full validation and enabled-mod smoke are green,
+  with zero new normalized error-log lines.
+- Every label remains a contested regional proxy inside the Roman provincial
+  order; the technical Rhaetic language fallback is documented separately.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 China regional-atlas batch is smoke-verified
 
 - Added 32 non-overlapping selectors through the four Han administrative
