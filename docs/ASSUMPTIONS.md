@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-21 - East Asian highland, core Wa, and interior-Arabian frames remain bounded
+
+The twelfth selector batch maps only the Japanese areas inside the plan's Wa
+and Yayoi frame: Ryukyu is deliberately left for a later source-qualified
+pass. The Tibetan plateau is a high-level Tibeto-Burman proxy, not a resolution
+of Qiang, Zhangzhung, or other local histories. The Arabian rows cover only the
+plan's interior Bedouin frame; South Arabia retains its Sabaean/Himyarite
+mapping and the Gulf/Oman are not silently folded into a generic Arab label.
+None of these selectors makes a homogeneous ethnic, linguistic, or political
+claim for every installed location. Sources weighed: plan sections 8.3, 8.6,
+and 10 (P8.3; P8.6; P10); CAH-XI.
+[secure broad regional context; contested local representation]
+
 ## 2026-07-21 - Venedi M4 frames do not project later Rus identities backward
 
 The eleventh selector batch divides the already source-led Venedi SoP surface

@@ -4,7 +4,7 @@ Date: 2026-07-21
 
 This tenth source-led batch adds 39 non-overlapping selectors, resolving 838
 more controlled locations. The audited ledger now has 268 selectors, 9,200
-locations, and 117 mapped cultures. Pontic, Noric, Rhaetic, and Helvetian
+locations, and 120 mapped cultures. Pontic, Noric, Rhaetic, and Helvetian
 raise the generated M4 catalogue from 144 to 148 cultures.
 
 `make validate` passed with all 13,552 populated locations and the
