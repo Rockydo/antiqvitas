@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Gallic and Aquitanian labels reuse verified language adapters
+
+The installed language registry has no verified roots for the 47 named Gallic
+and Aquitanian frames. The generator consequently uses its existing
+Celtic/Gaelic and Iberian/Latin rendering contracts. These are loadability
+adapters only, not a decision on individual languages, language-family
+membership, Romanization, or ethnicity. (Sources `STR-GAL`, `PLN-GAL`, and
+`OCD-GAL`.)
+
 ## 2026-07-21 - Narrower sourced culture selectors refine broad sourced frames
 
 The initial culture ledger rejected every overlap. That made a reviewed

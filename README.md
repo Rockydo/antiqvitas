@@ -19,7 +19,7 @@ campaign.
 
 - AD 1 start state: 157 documented polities, 13,552 controlled locations,
   25 dependencies, and a 230-million population baseline;
-- 217 cultures, 37 religions, 42 markets, 43 audited transport segments, five
+- 264 cultures, 37 religions, 42 markets, 43 audited transport segments, five
   ancient custom goods, M6 law/government adapters, and 26 ancient unit types;
 - five ancient ages, 250 advances, nine institutions, M9 subject/CB/IO
   contracts, and 416 source-window historical-current events through AD 476;

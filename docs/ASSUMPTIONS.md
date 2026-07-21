@@ -1,5 +1,26 @@
 # Historical Assumptions
 
+## 2026-07-21 - Named Gallic peoples are bounded ethnographic frames, not a Roman provincial map
+
+The forty-fifth M4 batch adds 47 named frames across Aquitania, Armorica,
+central and northern Gaul, the Rhine/Moselle corridor, and Narbonensis. Strabo
+and Pliny provide named peoples, regional order, and civic anchors near the
+campaign boundary, while the modern cross-check emphasizes that Roman Gaul was
+not culturally homogeneous. Each installed province is therefore only a
+reproducible campaign-boundary proxy; it does not establish a survey-grade
+tribal perimeter, uniform population, shared polity, or fixed language map.
+
+The existing Celtic and Iberian engine groups with Gaelic/Latin fallbacks are
+technical render contracts. They do not make every Aquitanian or Gallic frame a
+homogeneous language community, and they do not erase Roman, Greek-colonial,
+Ligurian, Iberian, or Germanic interaction.
+
+Sources: P10; `STR-GAL`; `PLN-GAL`; `OCD-GAL`; Pleiades (`PLE`) only for
+ancient-place matching.
+
+[secure named first-century/near-contemporary contexts; contested selector
+extent, local representation, language, and continuity]
+
 ## 2026-07-21 - Iberian named peoples are bounded ethnographic frames, not a literal tribal map
 
 The forty-fourth M4 batch refines broad Iberian representations with 38 named
