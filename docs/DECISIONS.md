@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Hami and Turpan retain the existing Iranian naming adapter
+
+The locally verified M4 contract renders `antq_iranian_group` through the
+engine-valid Persian fallback. The Hami and Turpan Oasis records reuse that
+adapter rather than inventing unverified local languages. It is a rendering
+choice only: it does not identify AD 1 Hami or Turpan as Iranian, settle their
+languages or ethnicities, or impose population majorities. (Source `IRAN-CT`.)
+
 ## 2026-07-21 - Kashgar retains the existing Iranian naming adapter
 
 The locally verified M4 contract renders `antq_iranian_group` through the

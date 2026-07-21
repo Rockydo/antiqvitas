@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-21 - M4 Hami-Turpan Oasis atlas batch is smoke-verified
+
+- Added contested exact Hami and Turpan Oasis proxies. The ledger now has 335
+  selectors resolving 12,037 locations across 158 mapped cultures; the M4
+  catalogue contains 179 cultures.
+- The source establishes both as ancient northern Silk Road oasis states, but
+  not their AD 1 languages, ethnicities, state boundaries, or wider regional
+  allocations.
+- Full validation and enabled-mod smoke testing passed with no new error-log
+  lines over the accepted baseline.
+
+Next: continue the residual-source review for the highest-priority defensible
+M4 selector, then complete the final M4 representation and definition audits.
+
 ## 2026-07-21 - M4 Kashgar Oasis atlas batch is smoke-verified
 
 - Added a contested exact Kashgar Oasis proxy. The ledger now has 333 selectors
