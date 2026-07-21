@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 GAME_TREES = ("in_game", "main_menu", "loading_screen")
 EXACT_SOURCE_DATE_OVERLAYS = frozenset((
     "in_game/common/on_action/_hardcoded.txt",
+    "main_menu/common/scripted_triggers/00_coa_triggers.txt",
 ))
 DATE_RE = re.compile(r"(?<![\w.\-])(\d{1,4})\.(\d{1,2})\.(\d{1,2})(?![\w.])")
 BIOGRAPHY_DATE_RE = re.compile(

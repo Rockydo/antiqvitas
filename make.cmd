@@ -40,6 +40,7 @@ exit /b 2
 "%PYTHON%" tools\m12_disable_missions.py --check || exit /b 1
 "%PYTHON%" tools\m12_game_rules.py --check || exit /b 1
 "%PYTHON%" tools\m12_hardcoded_startup.py --check || exit /b 1
+"%PYTHON%" tools\m12_coa_scope_guard.py --check || exit /b 1
 "%PYTHON%" tools\m12_anachronism_audit.py --check || exit /b 1
 "%PYTHON%" tools\m12_disable_historical_hints.py --check || exit /b 1
 "%PYTHON%" tools\m12_event_quarantine.py --check || exit /b 1
