@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-21 - American M4 frames retain regional and archaeological limits
+
+The seventh selector batch uses Maya, Zapotec, Epi-Olmec, West Mexican, Nazca,
+Tiwanaku, Recuay, Chibchan, and Plains-Woodland frames. These labels represent
+source-qualified regional and archaeological contexts, not uniform ethnicity,
+language, or state control in every selected location. The Plains-Woodland row
+is deliberately a broad Hopewell-era interaction proxy; it does not identify a
+single people. Sources weighed: plan section 8.10 (P8.10); section 10 (P10);
+*Cambridge Ancient History*, volume XI (CAH-XI).
+[secure broad regional context; contested local representation]
+
 ## 2026-07-21 - African M4 frames describe regional frontiers, not single peoples
 
 The sixth selector batch uses Berber, Gaetulian, Garamantian, Blemmyan,
