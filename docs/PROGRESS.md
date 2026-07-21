@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-21 - M4 Jazira Aramaic atlas batch is smoke-verified
+
+- Added the unmapped Jazira area to the existing northern-Mesopotamian Aramaic
+  proxy. The ledger now has 308 selectors, 11,617 locations, and 139 mapped
+  cultures.
+- The source route preserves dialectal, Arab, Arsacid, and other local
+  diversity; this is not an ethnicity or political-allegiance claim. The
+  existing 160-culture catalogue is retained. Full validation and enabled-mod
+  smoke are green, with zero new normalized error-log lines.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Georgian Kartvelian atlas batch is smoke-verified
 
 - Added the remaining Georgia area to the existing Iberian-Colchian Kartvelian
