@@ -1,5 +1,24 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Narrower sourced culture selectors refine broad sourced frames
+
+The initial culture ledger rejected every overlap. That made a reviewed
+province-scale ethnographic frame impossible to add without deleting the broad
+regional source frame that remains necessary for all other locations. The
+resolver now applies a deterministic source-specificity order: location >
+province > area > region. It rejects equally-specific overlap and does not use
+CSV order as evidence. This keeps a broad source as the documented fallback
+while permitting a newer, independently sourced narrower frame to refine it.
+
+## 2026-07-21 - Iberian culture-group languages are rendering adapters
+
+The installed language registry has no verified roots for the 38 named Iberian
+communities. Their generated records reuse the existing Celtic/Gaelic and
+Iberian/Latin technical contracts only so the engine can render valid nested
+language records. The adapters do not resolve local speech, language-family
+membership, ethnicity, or Romanization. (Sources `STR-IBR`, `PLN-IBR`,
+`OCD-HIS`, and `MAI-IBR` where applicable.)
+
 ## 2026-07-21 - Observer readiness uses visual/log quiescence without a CPU cap
 
 The fresh M4 observer launch rendered a responsive menu and an AD 1 Observer

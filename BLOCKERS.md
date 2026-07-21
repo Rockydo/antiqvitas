@@ -2,15 +2,15 @@
 
 ## 2026-07-21 - M4 culture atlas is partially unblocked by an authored ledger
 
-Status: **M4 final gate blocked; continue independent milestones.**
+Status: **M4 final acceptance remains open; continue source-led expansion and independent milestones.**
 
 The 2026-07-19 evidence review remains valid for a fully automated global
 dataset: installed template cultures are not historical AD 1 evidence,
 Pleiades is a place gazetteer rather than a culture atlas, and CHGIS cannot be
 redistributed in this project. It no longer blocks all M4 work. The authored
-`docs/culture_remap.csv` ledger now supplies 335 source-labelled geographic
-selectors, resolving 12,037 controlled locations across 158 distinct mapped
-cultures without copying external map data. The full M4 catalogue contains 179
+`docs/culture_remap.csv` ledger now supplies 373 source-labelled geographic
+selectors, resolving 12,037 controlled locations across 196 distinct mapped
+cultures without copying external map data. The full M4 catalogue contains 217
 cultures, including the non-ledger definitions needed for the Moche chronology
 correction.
 
@@ -35,22 +35,23 @@ Kama-Perm archaeological-linguistic contexts, the deliberately narrow
 central-Oman Samad archaeological context, the Surgut-Narym Ob Kulay
 archaeological context, the exact Kucha Oasis frame, the exact Loulan
 city-oasis frame, the exact Yarkand Oasis frame, the exact Aksu Oasis frame,
-the exact Kashgar Oasis frame, and the exact Hami and Turpan Oasis frames.
+the exact Kashgar Oasis frame, and the exact Hami and Turpan Oasis frames. A
+subsequent Strabo/Pliny primary-source pass adds 38 carefully bounded named
+Iberian ethnographic frames through explicit province-over-area refinement.
 Its contested rows record broad proxies rather than uniform ethnic boundaries.
-It raises the catalogue to 179, not the plan's final 350-500 cultures.
+It raises the catalogue to 217, not the plan's final 350-500 cultures.
 
 The 2026-07-21 M4 gate attempt ran `make full` successfully and reached a fresh
 AD 1 Observer screen through the game driver. Earlier observer probes establish
 that the Culture/Religion map surfaces render; the fresh current-build start
 confirmed a live 08:00, 1 January, 1 session. The gate cannot be tagged: the
-source-led recovery added exact Aksu,
-Kashgar, Hami, and Turpan oasis frames, but these good-faith bounded batches
-do not close a 171-culture evidence gap. Treat this as the second confirmed
-global-density evidence limit; do not manufacture cultures from installed
-template keys merely to reach the number.
+source-led recovery added exact Aksu, Kashgar, Hami, and Turpan oasis frames.
+The subsequent independent Iberian corpus demonstrates that the target can be
+advanced without template inference, but a 133-culture gap remains. Do not
+manufacture cultures from installed template keys merely to reach the number.
 
-Recovery: resume source-labelled geographic batches only when a new
-comparably reviewed dataset or a bounded source corpus supports them. Do not
+Recovery: continue source-labelled geographic batches only when a new
+comparably reviewed dataset or bounded source corpus supports them. Do not
 infer a historical culture directly from a vanilla template key; reserve the
 remaining worldwide density claim until it has a comparably reviewed ledger.
 

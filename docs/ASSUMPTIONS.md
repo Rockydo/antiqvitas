@@ -1,5 +1,26 @@
 # Historical Assumptions
 
+## 2026-07-21 - Iberian named peoples are bounded ethnographic frames, not a literal tribal map
+
+The forty-fourth M4 batch refines broad Iberian representations with 38 named
+frames drawn from Strabo and Pliny. Those texts identify peoples and provide
+regional sequence/town anchors near the campaign boundary; they do not provide
+survey-grade, date-exact polygons. The installed province selector is therefore
+only a reproducible campaign-boundary proxy. It does not establish an exact
+frontier, uniform population, shared political allegiance, or an unbroken
+ethnolinguistic identity for every location in that selector.
+
+The modern cross-check emphasizes Iberia's marked cultural heterogeneity. The
+existing Celtic and Iberian engine groups and their Gaelic/Latin fallback
+languages are rendering adapters, not an assertion that every named community
+spoke either fallback language or belonged to a homogeneous macro-people.
+
+Sources: P10; `STR-IBR`; `PLN-IBR`; `OCD-HIS`; and, for the three named
+Celtiberian frames, `MAI-IBR`; Pleiades (`PLE`) only for ancient-place matching.
+
+[secure named first-century/near-contemporary contexts; contested selector
+extent, local representation, language, and continuity]
+
 ## 2026-07-21 - Hami and Turpan are exact oasis frames, not cultural maps
 
 The forty-third source-led M4 batch assigns only the installed Hami and Turpan
