@@ -5,6 +5,15 @@ requirements in the corresponding section of the ANTIQVITAS master plan; those
 requirements are cross-checked against the following research pipeline before
 a row reaches `implemented` status.
 
+- `JST-SUL`: Suryatman, Budianto Hakim, and Fakhri, ["The Sakkarra site:
+  New data on prehistoric occupation from the Metal Phase (2000 BP) along the
+  Karama drainage, West Sulawesi"](https://www.jstor.org/stable/j.ctv8bt3bw.18),
+  in Sue O'Connor, David Bulbeck, and Juliet Meyer (eds.), *The Archaeology of
+  Sulawesi* (ANU Press, 2018), reports an Austronesian movement into Sulawesi
+  by about 3500 cal BP and an Early Metal Phase from about 2500-2000 cal BP.
+  It supports a broad Austronesian campaign-boundary context, not a
+  location-level identity, a later Bugis or Makassarese people, or an islandwide
+  uniform language map.
 - `WIL-SAR`: Natalia Mordvintseva, ["The Sarmatians: The Creation of
   Archaeological Evidence"](https://doi.org/10.1111/ojoa.12010), *Oxford
   Journal of Archaeology* 32 (2013), surveys the conventional assignment of
