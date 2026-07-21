@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-21 - M4 Loulan city-oasis atlas batch is smoke-verified
+
+- Added a contested exact Loulan city-oasis proxy. The ledger now has 330
+  selectors resolving 12,032 locations across 153 mapped cultures; the M4
+  catalogue contains 174 cultures.
+- Radiocarbon evidence places Loulan's florescence in the first through fourth
+  centuries CE. The frame makes no ethnicity, language, state-boundary, or
+  wider Lop-Nur/Tarim claim.
+- Full validation and enabled-mod smoke testing passed with no new error-log
+  lines over the accepted baseline.
+
+Next: continue the residual-source review for the highest-priority defensible
+M4 selector, then complete the final M4 representation and definition audits.
+
 ## 2026-07-21 - M4 Kucha Oasis atlas batch is smoke-verified
 
 - Added a contested exact Kucha Oasis proxy for its single installed anchor.

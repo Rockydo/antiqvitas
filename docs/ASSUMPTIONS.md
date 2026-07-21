@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-21 - Loulan is an exact city-oasis frame, not a cultural map
+
+The thirty-ninth source-led M4 batch assigns only the installed Loulan location
+to a Loulan Oasis proxy. Systematic radiocarbon dating establishes human
+activity from 350 BCE and florescence in the first through fourth centuries CE.
+This contested frame therefore represents only the AD 1 city-oasis context; it
+does not assign an ethnicity, language, state boundary, or wider Lop-Nur/Tarim
+allocation. Its Iranian/Persian engine adapter is technical only.
+
+Sources: P8.3; P10; `CAM-LOU`.
+
+[secure campaign-boundary city-oasis chronology; contested local representation]
+
 ## 2026-07-21 - Kucha is an exact oasis frame, not a late-language map
 
 The thirty-eighth source-led M4 batch assigns only the installed Kucha location
