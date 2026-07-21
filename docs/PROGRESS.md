@@ -1,5 +1,23 @@
 # Progress
 
+## 2026-07-21 - M4 350-definition observer gate is runtime-blocked
+
+- The current `make full` completed on the 350-culture build; its enabled-mod
+  smoke finished at 18:49 UTC with zero new normalized `error.log` lines.
+- A current driver launch reached the visible, responsive EU5 menu. Two
+  controlled New Game/observer-start attempts then terminated before a playable
+  AD 1 map or Culture/Religion map mode could be captured. Crash bundles at
+  `Europa Universalis V20260721_185453` and `...185750` have the same
+  `NVSDK_NGX_D3D12_Shutdown1`/`ffxFsr2ResourceIsNull` renderer-family stack.
+- The driver now restores minimized EU5 windows before activation and
+  re-foregrounds EU5 before a post-input capture, preventing unrelated desktop
+  windows from being mis-recorded as game evidence. The current menu screenshot
+  is valid; the post-input capture from the first failed attempt is excluded.
+
+Next: leave the M4 observer/map-mode gate blocked until a material renderer or
+driver condition changes; proceed with reviewed dynamic names beyond capital
+anchors.
+
 ## 2026-07-21 - M4 Germanic atlas reaches the plan's culture-density floor
 
 - A fourth source-led corpus adds 36 expressly contested Germanic, Baltic, and

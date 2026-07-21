@@ -6,7 +6,7 @@ Build: EU5 1.3.11 / local Steam build 24187685
 ## Current green gate
 
 `make full` passed on the current tree. It includes all static/generated
-validators, a 179-culture and 37-religion M4 definition check, 416 historical
+validators, a 350-culture and 37-religion M4 definition check, 416 historical
 current events, the 230,000.000-thousand population target, and an enabled-mod
 smoke run with zero new normalized `error.log` lines.
 

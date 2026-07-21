@@ -1,5 +1,17 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Game-driver activation handles minimized EU5 windows and capture focus
+
+EU5 can be minimized by Windows between a valid menu screenshot and the next
+driver input. A minimized Win32 window reports only a title-bar geometry; the
+previous title/size filter rejected it before `activate_window()` could restore
+it. The discovery routine now retains title-matched minimized windows, and the
+click path foregrounds EU5 again immediately before its evidence capture.
+
+This is a driver-integrity repair: it prevents capture of an unrelated desktop
+application after a game input. It does not alter game data or make a failed
+observer start appear successful.
+
 ## 2026-07-21 - Germanic corpus uses existing language-group render contracts
 
 The locally harvested M4 language registry has no verified dedicated roots for

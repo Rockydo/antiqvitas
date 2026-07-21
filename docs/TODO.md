@@ -100,8 +100,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Refine the Balkan-Anatolian atlas with 50 named primary-source ethnographic frames: 50 province selectors now refine broad regional proxies, leaving 470 reviewed selectors resolving 12,058 locations across 292 mapped cultures and raising the catalogue to 314 definitions.
 - [x] Refine the Germanic and Baltic atlas with 36 cautiously bounded source frames: 36 province/location selectors now refine broad regional proxies, leaving 506 reviewed selectors resolving 12,058 locations across 329 mapped cultures and raising the catalogue to the plan's 350-definition floor.
 - [x] Run the untagged M4 full and observer gate: generated map content reaches a fresh AD 1 Observer screen and `make full` is green, but the culture-density target remains historically blocked.
-- [ ] Final M4 acceptance: the catalogue reaches the plan's 350-culture floor; run a current `make full` and observer/map-mode gate without relaxing the no-template-inference rule.
-- [ ] Pass the final culture/religion atlas checks; population and raw `-leavepops` checks are green.
+- [ ] [BLOCKED] Final M4 acceptance: the catalogue reaches the plan's 350-culture floor and the current `make full` is green, but two current observer-start attempts crash before map-mode capture; do not relax the no-template-inference rule.
+- [ ] [BLOCKED] Pass the final culture/religion atlas checks; population and raw `-leavepops` checks are green, while current observer initialization is blocked by the documented renderer crash.
 - [ ] Run milestone gate and tag `M4-done`.
 
 ## M5 — Economy

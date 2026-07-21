@@ -1,5 +1,33 @@
 # Blockers
 
+## 2026-07-21 - M4 observer/map-mode acceptance reproduces the renderer crash
+
+Status: **M4 content and menu gates are green; final visual acceptance is blocked.**
+
+The current 350-culture build passed `make full`; its final enabled-mod smoke at
+18:49 UTC recorded zero new normalized `error.log` lines. A fresh driver launch
+then reached the responsive EU5 menu, documented by the valid
+`docs/screens/20260721_205223/m4_350_menu.png` capture.
+
+Two controlled New Game/observer-start attempts followed. Both process runs
+terminated before the AD 1 map or Culture/Religion map modes rendered. The
+crash bundles `Europa Universalis V20260721_185453` and
+`Europa Universalis V20260721_185750` both report an abnormal termination with
+the `NVSDK_NGX_D3D12_Shutdown1` / `ffxFsr2ResourceIsNull` renderer-family
+stack. The second run was made after correcting the driver's minimized-window
+handling, so the repeated engine crash is not a stale-window or click-target
+failure.
+
+No current M4 map-mode acceptance is claimed and `M4-done` remains untagged.
+Do not repeat renderer-profile experiments until a material renderer, driver,
+or installed-game change creates a distinct test condition. The current driver
+repair prevents unrelated desktop windows from being captured as game evidence;
+it does not alter any game data.
+
+Recovery: continue unblocked M4 data work (reviewed dynamic names) and retain
+the green content/menu baseline. Resume the visual gate only after the stated
+material condition changes.
+
 ## 2026-07-21 - M4 culture atlas is partially unblocked by an authored ledger
 
 Status: **M4 density target is met; current full and observer/map-mode acceptance remain open.**
