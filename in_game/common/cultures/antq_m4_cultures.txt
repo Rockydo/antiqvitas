@@ -1350,3 +1350,21 @@ antq_dnieper_venedi = { # P8.7;P10;CAH-XI; Dnieper Venedi regional proxy rather 
 		antq_slavic_group
 	}
 }
+
+antq_magadhi_prakrit = { # P8.4;P10;CAH-XI;INFLIB-PRK; Magadhan regional Prakrit proxy without projecting later Bengali or Bhojpuri identities
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_magadhi_prakrit
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_shauraseni_prakrit = { # P8.4;P10;CAH-XI;RGU-PRK; Mathura and upper-Gangetic Prakrit proxy without projecting later Hindi identities
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_shauraseni_prakrit
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
