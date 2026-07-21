@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-21 - M4 Vyatka Permic atlas batch is smoke-verified
+
+- Added a contested 18-location Vyatka Permic proxy. The ledger now has 323
+  selectors, 11,989 locations, and 149 mapped cultures; the generated
+  catalogue rises to 170 cultures.
+- This is an early archaeological-linguistic reconstruction, not a later
+  Komi/Udmurt identity, fixed language boundary, or institutional-continuity
+  claim. Full validation and enabled-mod smoke are green, with zero new
+  normalized error-log lines.
+
+Next: continue source-led global M4 density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Khotan Oasis atlas batch is smoke-verified
 
 - Added a contested exact-map-anchor Khotan Oasis culture. The ledger now has

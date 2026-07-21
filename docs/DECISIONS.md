@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Permic retains the existing Uralic naming adapter
+
+The verified M4 language contract has no separate Permic root, while the
+established `antq_uralic_group` renders through the engine-valid
+`sami_language` fallback. The new Permic proxy therefore uses that existing
+adapter without inventing a second dialect or a locally unverified language
+root. It is a rendering contract only: it does not identify early Permic as
+Sami, settle the reconstructed affiliation, or project later Komi/Udmurt
+languages into the start date.
+
 ## 2026-07-21 - Khotan retains the existing Iranian naming adapter
 
 The locally verified M4 contract already supplies `antq_iranian_group` through
