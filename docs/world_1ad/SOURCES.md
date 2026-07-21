@@ -5,6 +5,7 @@ requirements in the corresponding section of the ANTIQVITAS master plan; those
 requirements are cross-checked against the following research pipeline before
 a row reaches `implemented` status.
 
+- `OCD-PAN`: John Wilkes, ["Pannonia"](https://academic.oup.com/edited-volume/61673/chapter-abstract/549687162), *Oxford Classical Dictionary* (2016), identifies the Pannonii as Illyrian peoples with varying Celtic influence in the Drava-Sava/Danube setting. It records completed Roman control before AD 1 and treats the formal province as an AD 9 institution. It supports a cautious Transdanubian Pannonian frame, not a CE 9 province, uniform Romanization, or an exact tribal boundary.
 - `RAS-SAR`: Sergei G. Botalov and Vladimir S. Mosin, ["Radiocarbon
   Chronology of Sites of the Sargatka Culture of Western
   Siberia"](https://www.ra.iaran.ru/?lang=en&page_id=4766), *Russian

@@ -81,6 +81,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the cautious southern-Lake-Chad Chadic Basin frame: 1 further selector resolves 18 locations and adds 1 culture definition, bringing the audited atlas to 11,867 locations across 145 mapped cultures.
 - [x] Add the fading late-Nok central-Nigerian horizon: 1 further selector resolves 21 locations and adds 1 culture definition, bringing the audited atlas to 11,888 locations across 146 mapped cultures.
 - [x] Add the cautious Omsk-Irtysh Sargat frame: 1 further selector resolves 28 locations and adds 1 culture definition, bringing the audited atlas to 11,916 locations across 147 mapped cultures.
+- [x] Add the cautious Transdanubian Pannonian frame: 1 further selector resolves 31 locations, bringing the audited atlas to 11,947 locations across 147 mapped cultures.
 - [ ] Pass the final culture/religion atlas checks; population and raw `-leavepops` checks are green.
 - [ ] Run milestone gate and tag `M4-done`.
 

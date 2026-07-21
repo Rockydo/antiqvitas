@@ -1,5 +1,21 @@
 # Historical Assumptions
 
+## 2026-07-21 - Transdanubia is a Pannonian regional frame, not a CE 9 province
+
+The thirty-first selector batch maps the installed Transdanubia area to the
+existing Pannonian proxy. The source identifies the Pannonii as Illyrian
+peoples, with varied Celtic influence, in the Drava-Sava/Danube setting and
+places the Roman conquest before the campaign boundary. It also explicitly
+dates the formal province to CE 9. This contested row therefore does not create
+a province at AD 1, equate the full modern-game area with an exact Pannonian
+tribal boundary, claim uniform Romanization, or resolve local Celtic and
+Illyrian diversity.
+
+Sources weighed: plan sections 8.7 (P8.7) and 10 (P10); Wilkes, *Oxford
+Classical Dictionary* (OCD-PAN).
+[secure broad campaign-boundary Pannonian context; contested selector extent
+and local representation]
+
 ## 2026-07-21 - Sargat is an Omsk-Irtysh archaeological, not ethnic, frame
 
 The thirtieth selector batch introduces a Sargat culture for the installed Omsk

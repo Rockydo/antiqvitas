@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-21 - M4 Transdanubian Pannonian atlas batch is smoke-verified
+
+- Added a cautious 31-location Transdanubian Pannonian regional proxy. The
+  ledger now has 320 selectors, 11,947 locations, and 147 mapped cultures; the
+  existing 168-culture catalogue is retained.
+- The Pannonian context predates the campaign boundary, but the Roman province
+  is a CE 9 institution. This is consequently not a provincial claim, a fixed
+  tribal boundary, or a uniform-Romanization map. Full validation and
+  enabled-mod smoke are green, with zero new normalized error-log lines.
+
+Next: continue source-led global M4 density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Sargat atlas batch is smoke-verified
 
 - Added a cautious 28-location Omsk-Irtysh Sargat archaeological proxy. The
