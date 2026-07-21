@@ -91,6 +91,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the exact Kucha Oasis frame: 1 further selector resolves 1 location and adds 1 culture definition, bringing the audited atlas to 12,031 locations across 152 mapped cultures.
 - [x] Add the exact Loulan city-oasis frame: 1 further selector resolves 1 location and adds 1 culture definition, bringing the audited atlas to 12,032 locations across 153 mapped cultures.
 - [x] Add the exact Yarkand Oasis frame: 1 further selector resolves 1 location and adds 1 culture definition, bringing the audited atlas to 12,033 locations across 154 mapped cultures.
+- [x] Add the exact Aksu Oasis frame: 1 further selector resolves 1 location and adds 1 culture definition, bringing the audited atlas to 12,034 locations across 155 mapped cultures.
 - [ ] Pass the final culture/religion atlas checks; population and raw `-leavepops` checks are green.
 - [ ] Run milestone gate and tag `M4-done`.
 

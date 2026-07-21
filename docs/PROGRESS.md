@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-21 - M4 Aksu Oasis atlas batch is smoke-verified
+
+- Added a contested exact Aksu Oasis proxy. The ledger now has 332 selectors
+  resolving 12,034 locations across 155 mapped cultures; the M4 catalogue
+  contains 176 cultures.
+- The source establishes Aksu as a northern-Tarim Silk Road oasis during the
+  Han period, but not its AD 1 language, ethnicity, state boundary, or wider
+  regional allocation.
+- Full validation and enabled-mod smoke testing passed with no new error-log
+  lines over the accepted baseline.
+
+Next: continue the residual-source review for the highest-priority defensible
+M4 selector, then complete the final M4 representation and definition audits.
+
 ## 2026-07-21 - M4 Yarkand Oasis atlas batch is smoke-verified
 
 - Added a contested exact Yarkand Oasis proxy. The ledger now has 331 selectors
