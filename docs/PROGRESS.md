@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-21 - M4 Africa selector batch is smoke-verified
+
+- Added 13 non-overlapping area and region selectors for the Maghreb, Fezzan,
+  Lower Nubia, Aksumite highlands, the Horn, West Africa, and the Bantu
+  frontier. They resolve 533 more locations, bringing the ledger to 174
+  selectors, 6,199 locations, and 85 mapped cultures.
+- Added Gaetulian, Garamantian, Cushitic, and five regional Bantu-frontier
+  definitions, raising the M4 catalogue to 120 cultures. The resolver now
+  validates source-labelled installed region selectors with the same strict
+  expansion, empty-coverage, and overlap contract as areas and provinces.
+- Full validation is green and the enabled-mod smoke has zero new normalized
+  error-log lines. Evidence: `docs/playtests/M4_AFRICA_ATLAS_20260721.md`.
+
+Next: return to observer map inspection at the next M4 visual checkpoint;
+continue source-led cultural distinctions without claiming worldwide density.
+
 ## 2026-07-21 - M4 Korean and northeast-steppe batch is map-verified
 
 - Added 15 non-overlapping selectors for Goguryeo/Buyeo, Samhan, Wuhuan,

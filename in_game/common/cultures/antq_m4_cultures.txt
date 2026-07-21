@@ -379,6 +379,24 @@ antq_berber = { # P10;CAH-XI; Maghrebi Berber communities
 	}
 }
 
+antq_gaetulian = { # P8.5;P10;CAH-XI; Southwestern Maghrebi Gaetulian regional proxy
+	language = antq_berber_dialect
+	color = antq_culture_color_antq_gaetulian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_berber_group
+	}
+}
+
+antq_garamantian = { # P8.5;P10;CAH-XI; Garamantian Fezzan regional proxy
+	language = antq_berber_dialect
+	color = antq_culture_color_antq_garamantian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_berber_group
+	}
+}
+
 antq_bantu = { # P10;CAH-XI; Bantu expansion population frame
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_bantu
@@ -391,6 +409,60 @@ antq_bantu = { # P10;CAH-XI; Bantu expansion population frame
 antq_mande = { # P10;CAH-XI; West African Mande-area communities
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_mande
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_cushitic = { # P8.5;P10;CAH-XI; Horn regional proxy; technical naming layer does not decide local ethnolinguistic detail
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_cushitic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_equatorial_bantu = { # P8.5;P10;CAH-XI; Central African Bantu-frontier regional proxy
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_equatorial_bantu
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_kongo_bantu = { # P8.5;P10;CAH-XI; Kongo-basin Bantu-frontier regional proxy
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_kongo_bantu
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_great_lakes_bantu = { # P8.5;P10;CAH-XI; Great Lakes Bantu-frontier regional proxy
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_great_lakes_bantu
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_eastern_bantu = { # P8.5;P10;CAH-XI; Eastern African Bantu-frontier regional proxy before later Swahili identities
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_eastern_bantu
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_southern_bantu = { # P8.5;P10;CAH-XI; Southern African Bantu-frontier regional proxy
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_southern_bantu
 	tags = { european_gfx }
 	culture_groups = {
 		antq_subsaharan_group

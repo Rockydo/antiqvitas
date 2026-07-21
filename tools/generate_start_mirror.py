@@ -46,6 +46,7 @@ GEOGRAPHY_HIERARCHY = ROOT / "docs/vanilla_symbols/geography_hierarchy.json"
 VANILLA_AREAS = ROOT / "docs/vanilla_symbols/areas.json"
 VANILLA_PROVINCES = ROOT / "docs/vanilla_symbols/provinces.json"
 VANILLA_LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
+VANILLA_REGIONS = ROOT / "docs/vanilla_symbols/regions.json"
 MARKETS = ROOT / "docs/m5/markets.csv"
 URBAN_NODES = ROOT / "docs/m5/urban_nodes.csv"
 ROAD_SEGMENTS = ROOT / "docs/m5/road_segments.csv"
@@ -584,6 +585,7 @@ def population_culture_remaps(owners: dict[str, str]) -> dict[str, dict[str, str
         "area": set(json.loads(VANILLA_AREAS.read_text(encoding="utf-8-sig"))),
         "province": set(json.loads(VANILLA_PROVINCES.read_text(encoding="utf-8-sig"))),
         "location": set(json.loads(VANILLA_LOCATIONS.read_text(encoding="utf-8-sig"))),
+        "region": set(json.loads(VANILLA_REGIONS.read_text(encoding="utf-8-sig"))),
     }
 
     def leaves(selector: str, trail: tuple[str, ...] = ()) -> set[str]:
