@@ -90,9 +90,10 @@ intentional-empty locations). SoPs remain temporary country-shaped scaffolding
 until M4's population pass.
 
 The real observer-start test exposed generic startup and legacy-country
-evaluations. The source-preserving hardcoded-startup overlay now removes the
-absent Catholic/Shinto IO and dated China/Majapahit/Byzantium start errors in a
-fresh observer initialization. Vanilla coat-of-arms template lists still
-evaluate blank legacy government and IO scopes. They are not accepted baseline
-lines; M3 remains untagged and the exact reproduction/recovery plan is in
-`BLOCKERS.md`. M5, M6, and M9 own the required system replacements.
+evaluations. The source-preserving hardcoded-startup overlay removes the
+absent Catholic/Shinto IO and dated China/Majapahit/Byzantium start errors.
+The subsequent exact-source CoA trigger overlay clears the blank
+government/IO errors. One remaining vanilla flag definition evaluates an
+invalid capital on an inactive legacy tag; M3 remains untagged until that
+separate runtime contract is verified. The exact recovery plan is in
+`BLOCKERS.md`; M5, M6, and M9 own the required system replacements.

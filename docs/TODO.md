@@ -299,6 +299,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Complete the static pacing/growth/inflation and AI-weight audit; restore bounded local-contract priorities to the seven active M9 CBs.
 - [x] Quarantine all 7,440 installed vanilla event definitions in 347 files through a source-preserving, date-gated overlay that retains the loader's scheduler/scope/effect graph.
 - [x] Guard the five absent-IO and eight dated country-startup branches in the installed hardcoded on-game-start handler through a checked exact-name overlay; fresh AD 1 observer initialization has zero former hardcoded runtime errors.
+- [x] Guard four optional-government and three HRE special-status CoA predicates through a checked exact-name overlay; fresh AD 1 observer initialization has zero former CoA scope errors.
 - [ ] Complete runtime pacing/growth/inflation balance from observer measurements (the renderer blocker and remaining runtime-surface audit are recorded in `BLOCKERS.md`).
 - [ ] Run autonomous observer game to 476 with decade screenshots and live log watch (event-graph coverage is green; two material renderer profiles reproduce the FSR crash, while the adjacent government/IO runtime audit remains actionable).
 - [x] Finish README, known issues, packaging notes, static finale verification, and the full surface-area inventory audit.
