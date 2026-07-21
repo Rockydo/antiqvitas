@@ -579,3 +579,31 @@ settlement proxy for foederati. `docs/m11/M11_COMMON_SCREEN_ICONS.md` records
 both as non-reconstructive shared assets. Reconsider unique replacements only
 after a material image-service change or explicit authorization for its CLI
 fallback; do not repeat the same built-in prompts.
+
+## 2026-07-21 - Player-context legacy UI scope audit is deferred
+
+Status: **deferred after two evidence-producing attempts; plain Observer
+initialization remains clean.**
+
+The paused `tag XIO` audit starts from the clean AD 1 Observer map and never
+advances time, but opening the Xiongnu player context makes the engine evaluate
+legacy HRE, Curia, Middle-Kingdom, dynastic-disaster, and steppe-reform UI
+availability scripts. The first run recorded 212 `jomini_script_system`
+errors: 196 absent international-organization scopes, seven absent-dynasty
+comparisons, and nine absent-character/dynasty disaster predicates. Evidence
+is retained in `G:\antiqvitas_user_data\logs\error.player_context_pre_guard_20260721_0402.log`
+and `docs/screens/player_context_audit/xiongnu_player.png`.
+
+The second attempt generated 18 exact-name local overlays, adding the shared
+post-campaign date gate from `tools/dates.py` to all 60 direct availability
+blocks in the observed files. Static validation passed, but the same paused
+Xiongnu test still emitted all 212 errors: this UI path evaluates nested
+scopes despite the enclosing unavailable condition. The overlays and their
+validator were removed rather than committed. The confirming log is
+`G:\antiqvitas_user_data\logs\error.player_context_guard_attempt_20260721_0409.log`.
+
+Recovery: retain the clean Observer-only checkpoint for initialization and
+M9 country-card verification. Do not repeat the same date-gate approach.
+Resume this audit only with a materially different engine contract, such as a
+locally demonstrated optional scope operator valid for the affected nested
+UI predicates, or after a game patch changes the evaluator.
