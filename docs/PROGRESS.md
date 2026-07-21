@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-21 - M12 CoA scope compatibility is observer-verified
+
+- Added a source-preserving exact-name overlay of the installed CoA predicates.
+  It converts four optional government comparisons to the local safe form and
+  requires an HRE instance before three special-status queries.
+- Full validation and the enabled-mod smoke are green. A fresh AD 1 observer
+  initialization then reduced all government-type, invalid-comparison, and
+  HRE special-status CoA signatures to zero.
+- The sole remaining script-system diagnostic is a separate invalid capital
+  lookup in one vanilla flag definition. Evidence is in
+  docs/playtests/M12_COA_SCOPE_20260721.md.
+
+Next: inspect that exact flag-definition contract before adding any further
+legacy-compatibility overlay.
+
 ## 2026-07-21 - M12 hardcoded startup compatibility is observer-verified
 
 - Added a source-preserving exact-name overlay of the installed hardcoded

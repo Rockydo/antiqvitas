@@ -1,5 +1,19 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Make legacy CoA predicates false rather than fabricate state
+
+Vanilla CoA template registries evaluate generic monarchy, republic,
+theocracy, and HRE special-status predicates for inactive legacy tags. Their
+government and IO scopes are absent in the AD 1 start, causing script errors
+without implicating any ANTIQVITAS standard. The installed engine already uses
+government_type ?= comparisons and HRE existence guards in adjacent scripts.
+The M12 renderer therefore preserves the installed CoA trigger file while
+changing exactly four comparisons and inserting exactly three HRE guards. This
+makes the predicates false on absent state and leaves real ANTIQVITAS
+governments and standards eligible. The generated overlay passed static and
+menu smoke gates, then removed every targeted signature in a fresh observer
+initialization.
+
 ## 2026-07-21 - Guard hardcoded startup compatibility by exact local contracts
 
 The installed on-game-start handler presumes that Catholic and Shinto

@@ -49,10 +49,17 @@ The generated overlay, full validation, and enabled-mod smoke are green. A
 fresh AD 1 observer initialization recorded zero of all six former hardcoded
 error signatures; see docs/playtests/M12_HARDCODED_STARTUP_20260721.md.
 
-The remaining live surface is distinct: vanilla coat-of-arms template lists
-evaluate blank legacy-country government and IO scopes. That needs a separate,
-source-verified compatibility design; it is not evidence that the resolved
-startup-handler overlay is incomplete.
+That distinct coat-of-arms surface is now also resolved by a second
+source-preserving exact-name overlay: four installed government comparisons
+use the locally evidenced optional comparison form, and three HRE
+special-status predicates first establish that an HRE instance exists. A fresh
+observer initialization has zero government-scope, invalid-comparison, or HRE
+special-status errors. Evidence is in docs/playtests/M12_COA_SCOPE_20260721.md.
+
+The same clean probe leaves one new, separate generic diagnostic: a vanilla
+flag definition evaluates an invalid capital on an inactive legacy tag. This
+is the next narrow runtime surface; it must be examined locally before any
+compatibility overlay is added.
 
 ## 2026-07-21 - Observer playback remains renderer-bound after two renewed attempts
 
