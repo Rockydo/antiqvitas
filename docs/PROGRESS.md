@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-21 - M4 Central Mexican Teotihuacan atlas batch is smoke-verified
+
+- Added the contested Central Mexican Teotihuacan-rise regional proxy. The
+  ledger now has 316 selectors, 11,849 locations, and 144 mapped cultures; the
+  existing 165-culture catalogue is retained.
+- First-century urban construction supports the campaign-boundary context, but
+  not a state boundary, uniform language, or a later Mexica/Aztec identity.
+  Full validation and enabled-mod smoke are green, with zero new normalized
+  error-log lines.
+
+Next: continue source-led global M4 density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Sulawesi Austronesian atlas batch is smoke-verified
 
 - Added the Sulawesi Austronesian regional proxy. The ledger now has 315
