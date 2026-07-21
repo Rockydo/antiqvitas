@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-21 - M4 Upper-Selenga Xiongnu atlas batch is smoke-verified
+
+- Added a contested 23-location Upper-Selenga/Orkhon-Tuul Xiongnu core proxy.
+  The ledger now has 321 selectors, 11,970 locations, and 147 mapped cultures;
+  the existing 168-culture catalogue is retained.
+- The first-century empire is explicitly multiethnic, multicultural, and
+  polyglot in the source. This is not a homogeneous culture/language map, an
+  exact imperial boundary, or a pre-commitment of its later split. Full
+  validation and enabled-mod smoke are green, with zero new normalized
+  error-log lines.
+
+Next: continue source-led global M4 density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Transdanubian Pannonian atlas batch is smoke-verified
 
 - Added a cautious 31-location Transdanubian Pannonian regional proxy. The

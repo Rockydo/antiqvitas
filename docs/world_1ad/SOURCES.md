@@ -5,6 +5,7 @@ requirements in the corresponding section of the ANTIQVITAS master plan; those
 requirements are cross-checked against the following research pipeline before
 a row reaches `implemented` status.
 
+- `OUP-XIO`: Hyun Jin Kim, ["The Xiongnu"](https://academic.oup.com/edited-volume/61799/chapter-abstract/546289184), *Oxford Research Encyclopedia of Asian History* (2017), describes a first-millennium-BCE/first-century-CE Inner Asian empire reaching from the Baikal region to Ordos/Gansu and stresses its multiethnic, multicultural, and polyglot character. It supports a contested Upper-Selenga campaign-boundary regional frame, not a homogeneous culture, language, or exact polity boundary.
 - `OCD-PAN`: John Wilkes, ["Pannonia"](https://academic.oup.com/edited-volume/61673/chapter-abstract/549687162), *Oxford Classical Dictionary* (2016), identifies the Pannonii as Illyrian peoples with varying Celtic influence in the Drava-Sava/Danube setting. It records completed Roman control before AD 1 and treats the formal province as an AD 9 institution. It supports a cautious Transdanubian Pannonian frame, not a CE 9 province, uniform Romanization, or an exact tribal boundary.
 - `RAS-SAR`: Sergei G. Botalov and Vladimir S. Mosin, ["Radiocarbon
   Chronology of Sites of the Sargatka Culture of Western
