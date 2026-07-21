@@ -1,5 +1,25 @@
 # Historical Assumptions
 
+## 2026-07-21 - Balkan and Anatolian named peoples are bounded regional frames
+
+The forty-sixth M4 batch adds 50 named frames in the Balkans and Anatolia.
+Strabo identifies their names and relative regional settings close to the start
+date, but also records displacement, intermixture, and historical reduction.
+The installed province mapping is consequently a reproducible, contested AD 1
+proxy; it does not establish exact borders, population uniformity, sovereignty,
+or an unbroken ethnic/language identity for each selected location.
+
+The existing Balkan, Anatolian, Hellenic, and Celtic engine groups use their
+locally verified Greek/Gaelic fallback languages solely for rendering. They do
+not settle whether an individual community spoke the fallback, nor dissolve the
+documented cultural variety of Roman and post-Hellenistic Asia Minor.
+
+Sources: P10; `STR-BAL`; `STR-ANA`; `MIT-ANA`; `CAH-XI`; Pleiades (`PLE`) only
+for ancient-place matching.
+
+[secure named regional contexts; contested selector extent, local
+representation, language, continuity, and political affiliation]
+
 ## 2026-07-21 - Named Gallic peoples are bounded ethnographic frames, not a Roman provincial map
 
 The forty-fifth M4 batch adds 47 named frames across Aquitania, Armorica,

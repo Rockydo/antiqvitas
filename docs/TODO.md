@@ -68,7 +68,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Complete the remaining Korean peninsula surface with Samhan and guarded generic-Korean frames: 3 further selectors resolve 52 locations, bringing the audited atlas to 11,520 locations across 138 mapped cultures.
 - [x] Map the bounded Iberian-Colchian Kartvelian continuum across the remaining Georgia area: 1 further selector resolves 49 locations, bringing the audited atlas to 11,569 locations across 139 mapped cultures.
 - [x] Extend the bounded northern-Mesopotamian Aramaic proxy through Jazira: 1 further selector resolves 48 locations, bringing the audited atlas to 11,617 locations across 139 mapped cultures.
-- [ ] Expand the culture/location remap toward the 350–500-culture target and add reviewed dynamic names beyond capital anchors (264 definitions now; continue with reviewed regional primary-source corpora and never infer AD 1 identities from vanilla template keys).
+- [ ] Expand the culture/location remap toward the 350–500-culture target and add reviewed dynamic names beyond capital anchors (314 definitions now; continue with reviewed regional primary-source corpora and never infer AD 1 identities from vanilla template keys).
 - [x] Add the Late-Preclassic Petén lowland Maya frame: 1 further selector resolves 4 locations, bringing the audited atlas to 11,621 locations across 139 mapped cultures.
 - [x] Add a bounded lower-Rhine Batavian proxy for the wholly Batavian Holland scope: 1 further selector resolves 18 locations and adds 1 culture definition, bringing the audited atlas to 11,639 locations across 140 mapped cultures.
 - [x] Add the bounded Moravian Quadi frame: 1 further selector resolves 16 locations and adds 1 culture definition, bringing the audited atlas to 11,655 locations across 141 mapped cultures.
@@ -96,8 +96,9 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the exact Hami and Turpan Oasis frames: 2 further selectors resolve 2 locations and add 2 culture definitions, bringing the audited atlas to 12,037 locations across 158 mapped cultures.
 - [x] Refine the Iberian atlas with 38 named primary-source ethnographic frames: 38 province selectors now refine broad regional proxies, leaving 373 reviewed selectors resolving 12,037 locations across 196 mapped cultures and raising the catalogue to 217 definitions.
 - [x] Refine the Gallic atlas with 47 named primary-source ethnographic frames: 47 province selectors now refine broad regional proxies, leaving 420 reviewed selectors resolving 12,037 locations across 243 mapped cultures and raising the catalogue to 264 definitions.
+- [x] Refine the Balkan-Anatolian atlas with 50 named primary-source ethnographic frames: 50 province selectors now refine broad regional proxies, leaving 470 reviewed selectors resolving 12,058 locations across 292 mapped cultures and raising the catalogue to 314 definitions.
 - [x] Run the untagged M4 full and observer gate: generated map content reaches a fresh AD 1 Observer screen and `make full` is green, but the culture-density target remains historically blocked.
-- [ ] Final M4 acceptance: the 264-culture catalogue remains below the plan's 350-500 target; do not replace missing evidence with template-key inference (see `BLOCKERS.md`).
+- [ ] Final M4 acceptance: the 314-culture catalogue remains below the plan's 350-500 target; do not replace missing evidence with template-key inference (see `BLOCKERS.md`).
 - [ ] Pass the final culture/religion atlas checks; population and raw `-leavepops` checks are green.
 - [ ] Run milestone gate and tag `M4-done`.
 
