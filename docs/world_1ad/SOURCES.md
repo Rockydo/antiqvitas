@@ -5,6 +5,22 @@ requirements in the corresponding section of the ANTIQVITAS master plan; those
 requirements are cross-checked against the following research pipeline before
 a row reaches `implemented` status.
 
+- `WIL-SAR`: Natalia Mordvintseva, ["The Sarmatians: The Creation of
+  Archaeological Evidence"](https://doi.org/10.1111/ojoa.12010), *Oxford
+  Journal of Archaeology* 32 (2013), surveys the conventional assignment of
+  Sarmatian material culture across the northern Black Sea, Volga, and Ural
+  steppes from the third century BCE to the mid-third century CE, while
+  cautioning against simply equating archaeological culture with the named
+  peoples of written sources. It supports a deliberately contested regional
+  material-cultural proxy, not a tribal frontier, uniform ethnicity, or
+  language map.
+- `ANA-SAR`: Mikhail V. Treister, ["Sarmatian Elites of the Lower
+  Volga-and-Don Region and their Relations with the Outside World (3rd c. BC
+  - 3rd c. AD)"](https://journals.ur.edu.pl/anabasis/article/view/10385),
+  *Anabasis. Studia Classica et Orientalia* 10 (2019), reviews the Lower
+  Volga-Don Sarmatian-era archaeological record through the campaign period.
+  It supports the lower-Volga regional context, not a precise EU5 boundary or
+  the identity of every local community.
 - `PNAS-VIR`: Charles S. Spencer and Elsa M. Redmond,
   ["Territorial expansion and primary state formation"](https://pmc.ncbi.nlm.nih.gov/articles/PMC2867764/), *Proceedings of the National Academy of Sciences* 107 (2010), places the Gallinazo period at roughly 100 BCE-AD 200 and distinguishes its Viru-Valley evidence from the later Moche emergence in the Moche Valley. It supports an AD 1 Gallinazo archaeological proxy, not a fixed inter-valley frontier or a reconstructed state boundary.
 - `WIL-GAL`: Celeste M. Gagnon, ["Using General Estimating Equations to Analyze Oral Health Indicators"](https://doi.org/10.1002/oa.1284), *International Journal of Osteoarchaeology* 23 (2013), identifies the Gallinazo phase in the Moche Valley as AD 1-200. It supports the campaign-boundary local context, not a uniform ethnicity, language, or polity.

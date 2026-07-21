@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-21 - Lower-Yik is a cautious Sarmatian material-cultural frame
+
+The twenty-fifth selector batch maps the installed lower-Yik area to the
+existing Sarmatian proxy. The research supports a Sarmatian archaeological
+horizon across the lower-Volga/Ural steppe in the campaign period but also
+warns that the material culture cannot simply be equated with any named tribe
+in every locality. This selector is therefore contested: it does not name the
+area Roxolanian, establish a tribal frontier, homogenize language or ethnicity,
+or use the M3 residual polity owner as cultural evidence.
+
+Sources weighed: plan section 8.7 (P8.7); section 10 (P10); Mordvintseva,
+*Oxford Journal of Archaeology* (WIL-SAR); Treister, *Anabasis* (ANA-SAR).
+[secure broad Sarmatian archaeological context; contested selector extent and
+local representation]
+
 ## 2026-07-21 - Moche is a later emergence, not an AD 1 state
 
 The plan explicitly schedules Moche formation around AD 100. The prior AD 1

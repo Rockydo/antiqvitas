@@ -75,6 +75,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the archaeology-first central-Vietnam Sa Huynh frame: 1 further selector resolves 29 locations and adds 1 culture definition, bringing the audited atlas to 11,684 locations across 142 mapped cultures.
 - [x] Add the bounded interior Gaetulian high-plateau frame: 1 further selector resolves 30 locations, bringing the audited atlas to 11,714 locations across 142 mapped cultures.
 - [x] Correct the backdated Moche AD 1 start: replace it with a contested Gallinazo Moche-Valley SoP, use a generic non-uniform Andes scaffold, and create plural Moche Polities through the sourced AD 100 historical current (165 culture definitions; the 313-selector atlas remains at 11,714 locations).
+- [x] Add the cautious lower-Yik Sarmatian material-cultural frame: 1 further selector resolves 33 locations, bringing the audited atlas to 11,747 locations across 142 mapped cultures.
 - [ ] Pass the final culture/religion atlas checks; population and raw `-leavepops` checks are green.
 - [ ] Run milestone gate and tag `M4-done`.
 
