@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Kulay retains the existing Uralic naming adapter
+
+The verified M4 language contract has no Kulay root, while the established
+`antq_uralic_group` renders through the engine-valid `sami_language` fallback.
+The Kulay archaeological proxy reuses that contract rather than inventing an
+unverified language definition. It is a rendering choice only: it does not
+identify Kulay material culture as Uralic or Sami, settle its linguistic
+affiliation, or project a later Siberian identity into AD 1. (Source
+`TOM-KUL`.)
+
 ## 2026-07-21 - Samad retains the verified Semitic naming adapter
 
 The M4 language contract renders `antq_semitic_group` through the existing
