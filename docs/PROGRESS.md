@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-21 - M4 Georgian Kartvelian atlas batch is smoke-verified
+
+- Added the remaining Georgia area to the existing Iberian-Colchian Kartvelian
+  proxy. The ledger now has 307 selectors, 11,569 locations, and 139 mapped
+  cultures.
+- The academic source route preserves uncertain ancient ethnic composition and
+  the distinct Colchian and Iberian political contexts; no homogeneous culture
+  or state is claimed. The existing 160-culture catalogue is retained. Full
+  validation and enabled-mod smoke are green, with zero new normalized
+  error-log lines.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Korean peninsula atlas batch is smoke-verified
 
 - Added three non-overlapping selectors for Yeongnam's Samhan context and the
