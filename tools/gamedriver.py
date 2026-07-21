@@ -345,6 +345,12 @@ def activate_window():
     window = find_window()
     if not window:
         raise RuntimeError("EU5 window disappeared after fixed-window positioning")
+    # A foreground EU5 window is already safe to capture.  Re-running the
+    # cross-thread focus dance in that state can make Windows revoke focus from
+    # a topmost window between the safety check and the input, despite the game
+    # never leaving the foreground.
+    if user32.GetForegroundWindow() == window._hWnd:
+        return window
     try:
         window.activate()
     except Exception:
