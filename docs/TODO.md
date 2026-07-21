@@ -365,6 +365,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Pin a static player-facing anachronism audit across all 17 English localization files, with the client-language mirror contract checked separately.
 - [x] Resolve the observer country-change rule through a menu-smoked, exact-name installed-file overlay; the driver can now enter Observer without altering any historical or AI rule.
 - [x] Complete the M12 tutorial/hint audit: retain evidence-safe generic surfaces and disable 33 dated/dynastic vanilla hints through a menu-smoked, verified exact-name contract.
-- [ ] Run final `make full`; create M12 report; tag `M12-done`.
+- [x] Run and record the final static/menu `make full` gate (rerun 2026-07-21:
+      all checks pass and the enabled-mod smoke has zero new lines).
 - [x] Run the current full gate and record its report: `make full` is green at 350 cultures, 37 religions, 416 historical-current events, and the 230,000.000-thousand population target, with zero new smoke lines.
 - [ ] [BLOCKED] Tag `M12-done`: observer pacing, the AD 1-to-476 run, and screenshot evidence remain unavailable after the documented renderer attempts.
