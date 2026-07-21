@@ -1,5 +1,21 @@
 # Historical Assumptions
 
+## 2026-07-21 - Amur Yilou frame is archaeological and deliberately bounded
+
+The fifteenth selector batch applies the existing Tungusic/Yilou proxy only to
+the middle Amur, lower Amur, and Ussuri-Maritime areas. The National Museum of
+Japanese History identifies Pol'tse culture as the best current archaeological
+fit for Han-Wei Yilou conditions across the middle/lower Amur and Maritime
+coast, but also documents distinct Mudan and Qixing basin cultures and a more
+complex actual distribution. The batch therefore makes no claim of a uniform
+Tungusic language, fixed Yilou territory, or identity across every mapped
+location. Liaodong and Songhua retain their existing Wuhuan and
+Buyeo-Goguryeoic frames.
+
+Sources weighed: plan section 8.3 (P8.3); section 10 (P10); National Museum of
+Japanese History Yilou archaeology (NMJH-YIL).
+[secure archaeological regional context; contested local representation]
+
 ## 2026-07-21 - Germanic tribal labels are regional frames, not fixed frontiers
 
 The fourteenth selector batch replaces six broad Germanic/Suebian regional

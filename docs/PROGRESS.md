@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-21 - M4 Amur-Yilou archaeological atlas batch is smoke-verified
+
+- Added three non-overlapping middle-Amur, lower-Amur, and Ussuri-Maritime
+  selectors to the existing Tungusic/Yilou proxy. The ledger now has 301
+  selectors, 11,391 locations, and 135 mapped cultures; Liaodong and Songhua
+  retain their distinct Wuhuan and Buyeo-Goguryeoic frames.
+- The National Museum of Japanese History's Yilou archaeology supports the
+  bounded Pol'tse proxy while documenting a more complex Mudan/Qixing record;
+  no fixed ethnic boundary or uniform identity is asserted. The existing
+  159-culture catalogue is retained. Full validation and enabled-mod smoke are
+  green, with zero new normalized error-log lines.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Germanic tribal-atlas batch is smoke-verified
 
 - Replaced six broad north/central Germanic selectors with bounded Frisian,
