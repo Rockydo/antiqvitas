@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-21 - Sulawesi uses a broad pre-state Austronesian proxy
+
+The twenty-sixth selector batch maps the installed Sulawesi area to the
+existing Austronesian proxy. The archaeological synthesis places an
+Austronesian movement into Sulawesi well before the campaign boundary and
+describes the local Early Metal Phase in the first millennium BCE/early first
+millennium CE. It does not license a Bugis, Makassarese, or other later named
+identity at AD 1, nor an islandwide ethnic or linguistic boundary. The new row
+therefore remains an explicitly contested regional frame.
+
+Sources weighed: plan section 8.9 (P8.9); section 10 (P10); Suryatman,
+Hakim, and Fakhri in *The Archaeology of Sulawesi* (JST-SUL).
+[secure Austronesian campaign-boundary context; contested selector extent and
+local representation]
+
 ## 2026-07-21 - Lower-Yik is a cautious Sarmatian material-cultural frame
 
 The twenty-fifth selector batch maps the installed lower-Yik area to the

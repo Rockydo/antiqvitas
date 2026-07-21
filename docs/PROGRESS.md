@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-21 - M4 Sulawesi Austronesian atlas batch is smoke-verified
+
+- Added the Sulawesi Austronesian regional proxy. The ledger now has 315
+  selectors, 11,804 locations, and 143 mapped cultures; the existing
+  165-culture catalogue is retained.
+- The source establishes Austronesian context at the campaign boundary, but
+  does not support later Bugis/Makassarese labels, a state boundary, or a
+  uniform language map. Full validation and enabled-mod smoke are green, with
+  zero new normalized error-log lines.
+
+Next: continue source-led global M4 density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 lower-Yik Sarmatian atlas batch is smoke-verified
 
 - Added the lower-Yik/lower-Volga-Ural Sarmatian material-cultural proxy. The
