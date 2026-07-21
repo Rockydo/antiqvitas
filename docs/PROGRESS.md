@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-21 - M6 current-ruler binding repaired; Han regency remains blocked
+
+- Installed start files establish ordinary named heads through a paired,
+  date-less `ruler_term`; a boundary-dated term is rejected as future. The M6
+  generator now emits that no-date contract for 31 non-regency incumbents.
+  Fresh live panels bind Augustus and Phraates V instead of generated heads.
+- Two materially distinct Han minority-regency forms with Ping's date-less term
+  both still rendered generated `Wang Guangwu, 35`. Only those failed Han
+  changes were reverted. The exact screenshots and recovery boundary are in
+  `docs/playtests/M6_CORE_FOUNDATION.md` and `BLOCKERS.md`.
+- `make validate` and enabled-mod `make smoke` passed with zero new normalized
+  `error.log` lines after restoration.
+
+Next: take the M7 observer-war acceptance task; M6 remains untagged until a
+new isolated Han start-manager finding makes another retest material.
+
 ## 2026-07-21 - AD 1 startup-template regression is resolved
 
 - The fresh AD 1 observer archive contained 440 incompatibility removals:
@@ -23,11 +39,11 @@ long-observer playback remains separately blocked by the renderer issue.
 ## 2026-07-21 - M4 culture and faith atlas gate accepted
 
 - The generated AD 1 start initially logged `Future start date specified` for
-  every current `ruler_term`, plus invalid active-heir/regent diagnostics. The
-  installed start parser accepts the AD 1 calendar but rejects an open term
-  whose start is exactly the campaign boundary. `tools/m6_power.py` now keeps
-  the 31 source-led campaign-boundary term records in its audit ledger and
-  renders current heads through the native `ruler`/`heir` start fields instead.
+  every boundary-dated `ruler_term`, plus invalid active-heir/regent
+  diagnostics. The installed start parser accepts the AD 1 calendar but rejects
+  an open term whose start is exactly the campaign boundary. The generator now
+  emits date-less current terms for named non-regency heads and retains the
+  source-led campaign-boundary ledger without scripting an accession date.
 - After this material repair, a fully autonomous New Game run reached the
   paused AD 1 selector and then Observer Mode. The live screens show
   `08:00, 1 January, 1`, the Age of Principate, Culture (Location), and

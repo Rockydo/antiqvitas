@@ -18,18 +18,21 @@ no imported laws or privileges. The fresh paused observer test has zero
 removal diagnostics, so this is the engine-correct contract rather than a
 suppression of valid ANTIQVITAS content.
 
-## 2026-07-21 - Current rulers use native start fields, not boundary terms
+## 2026-07-21 - Named AD 1 incumbents use date-less current terms
 
 The installed start parser accepts `START_DATE = 1.1.1` but rejects an open
-`ruler_term` beginning at that exact instant as a future term. A current head
-is validly established through `ruler`, or through `heir` inside the native
-regency shape. The M6 generator therefore retains the checked 31-row
-campaign-boundary ledger for source audit but does not serialize it into
-`10_countries.txt`.
+`ruler_term` beginning at that exact instant as a future term. Installed
+ordinary starts pair their named `ruler` with a `ruler_term`; omitting that
+term silently generated a replacement head in live Rome and Parthia probes.
+The M6 generator consequently serializes a date-less current term for each of
+the 31 source-led non-regency incumbents. It carries no `start_date`, so it
+does not turn the campaign boundary into a fabricated accession day.
 
 This follows the local engine contract rather than fabricating a pre-campaign
-accession date. It removed all current `Future start date specified`, invalid
-heir, and invalid regent diagnostics and enabled the AD 1 observer map.
+accession date. Fresh live panels bind Augustus and Phraates V correctly, and
+validation plus smoke report zero new errors. The native Han minority-regency
+shape remains an explicit exception: two date-less Ping variants still produced
+a generated ruler and are deferred in `BLOCKERS.md`.
 
 ## 2026-07-21 - Dynamic names use a separate secure curated ledger
 

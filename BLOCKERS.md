@@ -228,38 +228,45 @@ places a reviewed installed key in production at the campaign boundary. Until
 then retain no Nubian-gold correction rather than projecting a later gold rush
 into AD 1. Sources reviewed: [Klemm and Klemm](https://link.springer.com/book/10.1007/978-3-642-22508-6), [NewBold](https://www.cambridge.org/core/journals/antiquity/article/deraheib-gold-mines/08FAF70EAD381341D1D84EB3473D74DF), and [the Oxford Handbook survey](https://academic.oup.com/edited-volume/35472/chapter-abstract/303804653).
 
-## 2026-07-19 - M6 Han minority-regency start falls back to a generated ruler
+## 2026-07-21 - M6 Han minority-regency start still falls back to a generated ruler
 
 Status: **deferred; M6 continues with independent power work and remains
 untagged.**
 
 The AD 1 country inspector consistently identifies Western Han (`XAR`) but
-shows the generated `Han Zhang` as regent instead of Emperor Ping and Wang
-Mang. The country, its Chang'an capital, 57.658M population, Han culture,
-Chinese State Cult, and the M6 reform/law counts all load; no corresponding
-new `error.log` line exists. This is therefore a silent runtime setup-contract
+does not bind the sourced minority ruler. The earlier probes showed `Han
+Zhang`; the current post-template-repair probe shows generated `Wang Guangwu,
+35` rather than Emperor Ping. The country, Chang'an capital, population,
+Han culture, Chinese State Cult, and M6 reform/law profile load without a
+corresponding new `error.log` line. This is a silent runtime setup-contract
 failure, not a parser or localization error.
 
 Tried:
 
-1. Rendered Ping as `ruler` together with Wang Mang as `active_regent` and a
-   campaign-valid ruler term. The driver selected XAR at `08:00, 1 January, 1`
-   and the inspector showed `Han Zhang`.
-2. Matched the local vanilla minority-regency shape: no simultaneous `ruler`,
-   Ping in `heir`, no current Ping term, and native order of regency, regent,
-   dates, then heir. The same fresh live probe again showed `Han Zhang`.
+1. The 2026-07-19 native forms were tested both with Ping as `ruler` and with
+   the installed minority form (Ping as `heir`, no simultaneous ruler/current
+   term). Both fresh XAR panels showed `Han Zhang`.
+2. The 2026-07-21 installed-start inspection established that named ordinary
+   incumbents require a paired, date-less `ruler_term`: it binds Augustus and
+   Phraates V without asserting an unsupported pre-campaign accession date.
+   Applying that term to Ping while retaining the native heir/regency shape,
+   then repeating Ping as both `ruler` and `heir`, each produced `Wang
+   Guangwu, 35` in a fresh live XAR Government panel.
 
-Both attempts passed `make validate` and a mod-enabled `make smoke` with zero
-new error-log lines. Evidence is in
-`docs/screens/20260719_194101/M6_runtime_retry/han_probe.png` and
-`docs/screens/20260719_194918/M6_runtime_retry/han_order_second_probe.png`.
+Every attempt passed `make validate` and a mod-enabled `make smoke` with zero
+new error-log lines. Evidence is retained in
+`docs/screens/20260719_194101/M6_runtime_retry/han_probe.png`,
+`docs/screens/20260719_194918/M6_runtime_retry/han_order_second_probe.png`,
+`docs/screens/20260721_m6_termless/termless_han_panel.png`, and
+`docs/screens/20260721_m6_han_final/han_final_government.png`.
 
 Recovery: retain the source-led Han roster and the locally evidenced native
-script shape, but do not claim that it yields the intended live regency or
-close M6. A later isolated start-manager fixture must identify the hidden
-minor/ruler linkage before this profile is accepted. Continue the independent
-M6 government, estate, law, roster, and regnal-history work; Rome and Parthia
-can still receive their own driver probes.
+heir/regency shape, but do not serialize the failed Ping current term or repeat
+him as `ruler`. A later isolated start-manager fixture must identify the hidden
+minor/ruler linkage before this profile is accepted. The verified date-less
+current-term contract remains in place for the 31 non-regency incumbents. M6
+cannot be tagged while this exact Han condition is unresolved; proceed with the
+next unblocked milestone work.
 
 ## 2026-07-19 - M6 Rajuvula cannot be placed at the AD 1 campaign boundary
 
