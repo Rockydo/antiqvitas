@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-21 - Aksu is an exact oasis frame, not a cultural or language map
+
+The forty-first source-led M4 batch assigns only the installed Aksu location to
+an Aksu Oasis proxy. The source identifies the northwest-Tarim oasis as an
+important stop on the northern Silk Road during Han rule from the second
+century BCE to the second century CE. This contested frame therefore does not
+settle a language, ethnicity, state boundary, or wider northern-Tarim
+allocation. Its Iranian/Persian engine adapter is technical only.
+
+Sources: P8.3; P10; `IRAN-AKS`.
+
+[secure campaign-boundary oasis attestation; contested local representation]
+
 ## 2026-07-21 - Yarkand is an exact oasis frame, not a Saka language map
 
 The fortieth source-led M4 batch assigns only the installed Yarkand location to
