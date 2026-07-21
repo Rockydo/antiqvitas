@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-21 - Oceanian M4 labels retain settlement and regional limits
+
+The eighth selector batch separates Samoan and Tongan regional frames after
+the pre-AD 1 Lapita settlement sequence. Micronesian and New Guinean labels
+are archaeological and geographic proxies, not claims that their controlled
+locations shared a homogeneous ethnicity, language, or later state identity.
+The separate Marianas selector repairs a harvested-map hierarchy gap without
+turning it into a historical boundary. Sources weighed: plan section 8.9
+(P8.9); section 10 (P10); CAM-LAP; ANU-MIC; CAM-NGU.
+[secure settlement chronology; contested local representation]
+
 ## 2026-07-21 - American M4 frames retain regional and archaeological limits
 
 The seventh selector batch uses Maya, Zapotec, Epi-Olmec, West Mexican, Nazca,
