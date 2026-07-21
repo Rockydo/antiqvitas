@@ -215,7 +215,11 @@ def find_window():
     candidates = [
         window
         for window in pygetwindow.getAllWindows()
-        if "Europa Universalis V" in window.title and window.width > 300
+        # A minimized Win32 window reports a tiny title-bar geometry.  Keep it
+        # eligible so activate_window() can restore it before asking for a
+        # rendered frame; filtering it here makes the autonomous driver lose a
+        # perfectly healthy game between screenshot and click.
+        if "Europa Universalis V" in window.title
     ]
     return max(candidates, key=lambda item: item.width * item.height) if candidates else None
 
@@ -417,6 +421,11 @@ def click(args: argparse.Namespace) -> int:
         f"clicked {args.button} normalized ({args.x:.3f}, {args.y:.3f}) at ({x}, {y})"
     )
     if args.capture:
+        # Another topmost desktop application can briefly cover the game during
+        # the settle period.  Re-activate and refresh the geometry before the
+        # evidence capture so a post-input screenshot never documents an
+        # unrelated window as if it were EU5 state.
+        window = activate_window()
         session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
         target = ROOT / "docs/screens" / session / f"{args.capture}.png"
         target.parent.mkdir(parents=True, exist_ok=True)

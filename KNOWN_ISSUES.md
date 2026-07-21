@@ -12,6 +12,15 @@ observation is insufficient to explain it. Renderer-profile experiments are
 therefore paused; this prevents reliable observer playback. The exact evidence
 and recovery boundary is in `BLOCKERS.md`.
 
+The current 350-culture M4 build also reproduces the renderer-family failure
+at observer initialization itself: two fresh menu-ready launches exited after
+the automated New Game input, before the AD 1 map and Culture/Religion modes
+could render. Their 2026-07-21 crash bundles share the
+`NVSDK_NGX_D3D12_Shutdown1`/`ffxFsr2ResourceIsNull` stack family. The M4 static
+and enabled-mod menu gates remain green, but its required current visual gate is
+not accepted. Do not repeat renderer-profile experiments absent a material
+renderer, driver, or installed-game change.
+
 ## M12 observer and renderer reliability remain release blockers
 
 The final observer-to-476 acceptance run has not been achieved. The observer
