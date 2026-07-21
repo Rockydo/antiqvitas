@@ -1,5 +1,26 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Normalize only direct self-members in the harvested location hierarchy
+
+The installed hierarchy occasionally represents a parent location both as a
+container and as one of its own children (for example, `kilkenny` contains
+`cullahill` and `kilkenny`). Treating that shape as a general recursive cycle
+wrongly rejects an otherwise valid geography selector. The M4 resolver now
+accepts only a direct self-member as that location's leaf while retaining its
+strict rejection of every indirect cycle. This is a local topology
+normalization, not an expansion of selector scope or a historical judgement.
+
+## 2026-07-21 - Guard the dormant GLH horde localization against absent government scope
+
+The fresh northern-atlas observer replay identified the installed `GLH` custom
+localization's strict `government_type = government_type:steppe_horde`
+comparison as another inactive-legacy-tag scope error. Adjacent installed
+scripts use the optional `?=` comparison for this precise case. The checked
+renderer preserves the local source file and changes only that comparison, so
+the horde label remains available for a real scope and evaluates false without
+an error when the legacy country has no government. This is an engine
+compatibility guard, not a change to any AD 1 polity.
+
 ## 2026-07-21 - Culture remaps use source-labelled geography selectors, never vanilla culture keys
 
 The installed template-culture field is a later-period geographic helper, not

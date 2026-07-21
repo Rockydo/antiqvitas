@@ -9,10 +9,10 @@ The generated catalogue currently contains 91 culture definitions across the
 plan's principal Italic, Hellenic, Celtic, Germanic, Iranian, Caucasian,
 Semitic, Nile, African, Indian, Sinitic, Southeast Asian, steppe, Uralic,
 Balkan, and American/Oceanic families. It remains a foundation rather than the
-finished 350-500 culture target. Its first source-led location batch resolves
-1,406 controlled locations through `docs/culture_remap.csv`; later batches
-must not silently turn a regional frame into a claim of a homogeneous
-population.
+finished 350-500 culture target. Its first two source-led location batches use
+93 selectors to resolve 2,888 controlled locations through
+`docs/culture_remap.csv`; later batches must not silently turn a regional frame
+into a claim of a homogeneous population.
 
 `culture_remap.csv` accepts only installed area, province, or location selectors
 and resolves them to exact controlled locations through the harvested geography

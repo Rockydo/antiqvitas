@@ -1,5 +1,16 @@
 # Historical Assumptions
 
+## 2026-07-21 - Northern M4 frames remain regional proxies rather than claims of uniform peoples
+
+The second selector batch represents broad AD 1 frames for Brittonic,
+Caledonian, Gaelic, Germanic, Suebian, Gothic, Vandalic, Uralic, Baltic,
+Venedi, and Belgic populations. It does not assert a homogeneous language,
+identity, legal status, or allegiance for every location within those frames.
+The ledger marks every such row `contested`; Sami and finer tribal-cultural
+coverage remain deliberately unresolved. Sources weighed: plan sections 8.7
+and 10 (P8.7; P10); *Cambridge Ancient History*, volume XI (CAH-XI).
+[secure broad regional context; contested local representation]
+
 ## 2026-07-21 - First M4 remap batch uses regional frames, not homogeneous ethnic borders
 
 The 47 selectors in `docs/culture_remap.csv` make bounded regional statements
