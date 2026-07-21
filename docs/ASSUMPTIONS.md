@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-21 - Venedi M4 frames do not project later Rus identities backward
+
+The eleventh selector batch divides the already source-led Venedi SoP surface
+into northeastern and Dnieper regional frames. Neither label identifies a
+later Russian, Ruthenian, or standardized Slavic identity, nor settles the
+mixed Baltic, Finnic, and steppe affiliations of every selected location.
+Sources weighed: plan sections 8.7 and 10 (P8.7; P10); CAH-XI.
+[secure broad Venedi SoP context; contested local representation]
+
 ## 2026-07-21 - Roman M4 labels retain provincial and regional limits
 
 The tenth selector batch maps Italic residuals, Gallic and Belgic frames,

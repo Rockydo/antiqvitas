@@ -1332,3 +1332,21 @@ antq_helvetian = { # P8.1;P10;CAH-XI;PLE; Helvetian regional proxy within Roman 
 		antq_celtic_group
 	}
 }
+
+antq_northeast_venedi = { # P8.7;P10;CAH-XI; Northeastern Venedi regional proxy rather than a later Russian identity
+	language = antq_slavic_dialect
+	color = antq_culture_color_antq_northeast_venedi
+	tags = { european_gfx }
+	culture_groups = {
+		antq_slavic_group
+	}
+}
+
+antq_dnieper_venedi = { # P8.7;P10;CAH-XI; Dnieper Venedi regional proxy rather than a later Ruthenian identity
+	language = antq_slavic_dialect
+	color = antq_culture_color_antq_dnieper_venedi
+	tags = { european_gfx }
+	culture_groups = {
+		antq_slavic_group
+	}
+}
