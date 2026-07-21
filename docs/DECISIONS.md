@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Yarkand retains the existing Iranian naming adapter
+
+The locally verified M4 contract renders `antq_iranian_group` through the
+engine-valid Persian fallback. The Yarkand Oasis record reuses that adapter
+rather than inventing an unverified local language. It is a rendering choice
+only: it does not identify AD 1 Yarkand as Iranian or Saka, settle its language
+or ethnicity, or impose a population majority. (Source `IRAN-YAR`.)
+
 ## 2026-07-21 - Loulan retains the existing Iranian naming adapter
 
 The locally verified M4 contract renders `antq_iranian_group` through the
