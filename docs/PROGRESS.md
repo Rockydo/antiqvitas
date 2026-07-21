@@ -1,5 +1,23 @@
 # Progress
 
+## 2026-07-21 - M4 Korean and northeast-steppe batch is map-verified
+
+- Added 15 non-overlapping selectors for Goguryeo/Buyeo, Samhan, Wuhuan,
+  Xiongnu, Xianbei, and Dingling areas. They resolve 365 more locations,
+  bringing the ledger to 161 selectors, 5,666 locations, and 74 mapped
+  cultures.
+- Added Buyeo-Goguryeoic, Samhan, Wuhuan, Xianbei, and Dingling definitions,
+  raising the M4 catalogue to 112 cultures. Full validation is green and the
+  enabled-mod smoke has zero new normalized error-log lines.
+- A fresh paused Observer culture map visibly renders Xiongnu, Xianbei,
+  Wuhuan, and Dingling. An exploratory country-selection click then reproduced
+  the separately deferred legacy player-context HRE/IO scope surface in
+  `BLOCKERS.md`; it is not part of the smoke baseline or the map-label result.
+  Evidence: `docs/playtests/M4_NORTHEAST_ATLAS_20260721.md`.
+
+Next: continue source-led atlas batches and retain the existing player-context
+runtime boundary until a materially different engine contract is available.
+
 ## 2026-07-21 - M4 Iran, Caucasus, Central Asia, and Pontic batch is observer-verified
 
 - Added 25 non-overlapping selectors for the Armenian highlands, Caucasus,
