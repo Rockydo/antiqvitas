@@ -366,5 +366,5 @@ after `make full` and its autonomous driver report are green.
 - [x] Resolve the observer country-change rule through a menu-smoked, exact-name installed-file overlay; the driver can now enter Observer without altering any historical or AI rule.
 - [x] Complete the M12 tutorial/hint audit: retain evidence-safe generic surfaces and disable 33 dated/dynastic vanilla hints through a menu-smoked, verified exact-name contract.
 - [ ] Run final `make full`; create M12 report; tag `M12-done`.
-- [x] Run the current full gate and record its report: `make full` is green at 179 cultures and 416 historical-current events, with zero new smoke lines.
+- [x] Run the current full gate and record its report: `make full` is green at 350 cultures, 37 religions, 416 historical-current events, and the 230,000.000-thousand population target, with zero new smoke lines.
 - [ ] [BLOCKED] Tag `M12-done`: observer pacing, the AD 1-to-476 run, and screenshot evidence remain unavailable after the documented renderer attempts.

@@ -19,8 +19,9 @@ script-error lines.
 
 The acceptance criterion is stricter: a driver-run observer campaign must
 reach the terminal date and provide a screenshot that visibly shows the finale
-firing. That evidence is absent because the observer confirmation control is
-still blocked, and repeated post-launch Vulkan-memory exits make long-run
-automation unreliable. This file must be updated with the session path, final
-date, screenshot filename, and log-diff result before M12 can close.
-
+firing. Observer entry is no longer blocked: the exact country-change overlay
+and the 2026-07-22 M7 Rome-Parthia AI-war replay both entered a live observer
+session and reached maximum speed. Sustained play nevertheless still exits in
+the documented `ffxFsr2ResourceIsNull` / `NVSDK_NGX_D3D12_Shutdown1` renderer
+path before periodic captures. This file must be updated with the session path,
+final date, screenshot filename, and log-diff result before M12 can close.
