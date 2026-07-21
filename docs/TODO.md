@@ -99,10 +99,10 @@ after `make full` and its autonomous driver report are green.
 - [x] Refine the Gallic atlas with 47 named primary-source ethnographic frames: 47 province selectors now refine broad regional proxies, leaving 420 reviewed selectors resolving 12,037 locations across 243 mapped cultures and raising the catalogue to 264 definitions.
 - [x] Refine the Balkan-Anatolian atlas with 50 named primary-source ethnographic frames: 50 province selectors now refine broad regional proxies, leaving 470 reviewed selectors resolving 12,058 locations across 292 mapped cultures and raising the catalogue to 314 definitions.
 - [x] Refine the Germanic and Baltic atlas with 36 cautiously bounded source frames: 36 province/location selectors now refine broad regional proxies, leaving 506 reviewed selectors resolving 12,058 locations across 329 mapped cultures and raising the catalogue to the plan's 350-definition floor.
-- [x] Run the untagged M4 full and observer gate: generated map content reaches a fresh AD 1 Observer screen and `make full` is green, but the culture-density target remains historically blocked.
-- [ ] [BLOCKED] Final M4 acceptance: the catalogue reaches the plan's 350-culture floor and the current `make full` is green, but two current observer-start attempts crash before map-mode capture; do not relax the no-template-inference rule.
-- [ ] [BLOCKED] Pass the final culture/religion atlas checks; population and raw `-leavepops` checks are green, while current observer initialization is blocked by the documented renderer crash.
-- [ ] Run milestone gate and tag `M4-done`.
+- [x] Run the initial M4 full and observer gate; preserve the two failed pre-repair startup attempts as historical evidence rather than relaxing the no-template-inference rule.
+- [x] Final M4 acceptance: the current build reaches a paused AD 1 observer at `08:00, 1 January, 1`; Culture (Location) and Religions (Location) both render from the 350-culture/37-religion atlas.
+- [x] Pass the final culture/religion atlas checks and complete the current `make full` gate with zero new smoke lines.
+- [x] Run milestone gate and tag `M4-done`.
 
 ## M5 — Economy
 
@@ -197,7 +197,7 @@ after `make full` and its autonomous driver report are green.
 
 - [x] Generate and validate the required birth-location static-modifier contract for all nine custom institutions.
 - [x] Implement five complete age trees, roughly 250 advances, institutions, tech tiers, objectives, and abilities.
-- [x] Verify a fresh paused AD 1 observer start retains all engine-native law and policy categories used by the historical government adapters (zero removed-law, missing-advance, or invalid-policy diagnostics).
+- [ ] [REGRESSION] Restore a fresh paused AD 1 observer start with zero removed-law and invalid-estate diagnostics; the current successful observer initialization exposes 213 removed laws and 227 removed estate privileges inherited from vanilla setup templates.
 - [ ] Test AI research and anachronism/dead-end rules; run milestone gate and tag `M8-done`. (The enabled AD 1 selector and zero-new-line menu smoke are recorded; observer runtime remains blocked by the renderer condition in `BLOCKERS.md`.)
 
 ## M9 — Nations among nations

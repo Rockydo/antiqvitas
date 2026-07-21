@@ -1,5 +1,18 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Current rulers use native start fields, not boundary terms
+
+The installed start parser accepts `START_DATE = 1.1.1` but rejects an open
+`ruler_term` beginning at that exact instant as a future term. A current head
+is validly established through `ruler`, or through `heir` inside the native
+regency shape. The M6 generator therefore retains the checked 31-row
+campaign-boundary ledger for source audit but does not serialize it into
+`10_countries.txt`.
+
+This follows the local engine contract rather than fabricating a pre-campaign
+accession date. It removed all current `Future start date specified`, invalid
+heir, and invalid regent diagnostics and enabled the AD 1 observer map.
+
 ## 2026-07-21 - Dynamic names use a separate secure curated ledger
 
 `tools/generate_dynamic_names.py` now accepts a second, explicit ledger for
@@ -23,6 +36,11 @@ click path foregrounds EU5 again immediately before its evidence capture.
 This is a driver-integrity repair: it prevents capture of an unrelated desktop
 application after a game input. It does not alter game data or make a failed
 observer start appear successful.
+
+The final M4 run also found that repeating the cross-thread focus sequence
+while EU5 was already foregrounded could make Windows revoke that focus. The
+driver now returns immediately in that safe state; successful screenshot and
+input evidence confirms the narrower safeguard.
 
 ## 2026-07-21 - Germanic corpus uses existing language-group render contracts
 

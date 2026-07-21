@@ -12,14 +12,22 @@ observation is insufficient to explain it. Renderer-profile experiments are
 therefore paused; this prevents reliable observer playback. The exact evidence
 and recovery boundary is in `BLOCKERS.md`.
 
-The current 350-culture M4 build also reproduces the renderer-family failure
-at observer initialization itself: two fresh menu-ready launches exited after
-the automated New Game input, before the AD 1 map and Culture/Religion modes
-could render. Their 2026-07-21 crash bundles share the
-`NVSDK_NGX_D3D12_Shutdown1`/`ffxFsr2ResourceIsNull` stack family. The M4 static
-and enabled-mod menu gates remain green, but its required current visual gate is
-not accepted. Do not repeat renderer-profile experiments absent a material
-renderer, driver, or installed-game change.
+The two 350-culture M4 startup crashes were resolved by a material generated
+start-data repair: open current ruler terms at `1.1.1` were invalid for the
+installed parser. The current observer reaches both required map modes; see
+`docs/playtests/M4_FINAL_GATE_350_20260721.md`. This does not resolve the
+separate M12 playback crash after game time advances.
+
+## Fresh AD 1 startup still inherits invalid vanilla government defaults
+
+The now-successful observer initialization records 213 removed laws and 227
+removed estate privileges. The messages concern vanilla defaults such as
+`royal_court_customs_law`, `medieval_levy_law`,
+`noble_fortification_licenses`, and `clergy_literacy_rights`, not invalid
+ANTIQVITAS definition keys. They must be cleared or replaced through a
+locally verified start-template contract before M6/M8 and long-run runtime
+claims can be accepted. This is a content-compatibility task, not an accepted
+baseline line.
 
 ## M12 observer and renderer reliability remain release blockers
 
