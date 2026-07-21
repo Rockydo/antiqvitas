@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-22 - Current full release gate is clean; M12 remains observer-blocked
+
+- `make full` passed on the committed tree: all static/generated contracts,
+  350 cultures, 37 religions, 416 historical-current events, and the
+  230,000.000-thousand population target validated successfully.
+- The enabled ANTIQVITAS playset completed the settled 90-second menu smoke
+  with zero new normalized `error.log` lines.
+- The observer gate remains untagged rather than overstating that clean menu
+  result: the M7 AI-war replay confirms Observer entry and maximum speed, then
+  reproduces the existing FSR renderer access violation before periodic
+  evidence. `docs/m12/M12_FINAL_GATE.md` records the exact boundary.
+
+Next: all remaining milestone acceptance work is documented as renderer- or
+engine-contract-blocked; resume the relevant retests only after a material
+engine, graphics-driver, or renderer change.
+
 ## 2026-07-22 - M7 observer route reopened; AI-war playback remains renderer-blocked
 
 - The exact country-change game-rule overlay successfully enabled and started
