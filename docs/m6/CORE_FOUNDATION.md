@@ -34,15 +34,16 @@ no scripted biography date because the cited evidence does not justify one.
 `regnal_histories.csv` retains the source-labelled Augustus and continuous
 Western Han succession sequences, including the two short Lu-regency reigns and
 Liu He. It is historical reference data, not a pre-campaign script calendar.
-`ruler_terms.csv` renders one current-ruler `ruler_term` for every implemented
-non-regency profile, all beginning at `1.1.1` through `AntqDate`. The native
-minority-regency form instead identifies the nominal monarch as `heir` and has
-no concurrent current term. A signed pre-campaign term parses at the menu, but
-the existing live AD 1 start probe already demonstrated that the engine
-validates historic terms against the new campaign boundary. The generator
-therefore prevents an out-of-range term from being emitted, while retaining the
-cited reign spans for later succession situations. This is intentional date
-safety, not a claim that every ruler acceded on 1 January AD 1.
+`ruler_terms.csv` supplies one current-ruler ledger row for every implemented
+non-regency profile. The generator emits a paired, date-less `ruler_term` for
+each of those named incumbents: a `1.1.1` start date is rejected as future, but
+the installed parser accepts the date-less current-term form. It therefore
+binds a sourced present ruler without claiming that every ruler acceded on 1
+January AD 1. The native minority-regency form instead identifies the nominal
+monarch as `heir` with no concurrent term. Two live Ping variations using the
+date-less contract still silently generated a replacement ruler; that limited
+engine exception is retained in `BLOCKERS.md`, not converted into a historical
+claim.
 
 Western Han additionally renders a bounded Wang Clan Regency privilege. The
 *Han Shu* says that the Grand Empress Dowager entrusted the child emperor's

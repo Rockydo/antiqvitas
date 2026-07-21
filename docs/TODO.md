@@ -141,7 +141,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the first Tier-1/2 secondary-ruler slice: eleven named AD 1 figures, seven country profiles, and source-labelled client, Kushite, steppe, Korean, and tribal-government adapters.
 - [x] Add the AD 1 Herodian client tetrarchy: Archelaus in Judea, Antipas in Galilee-Peraea, and Philip in Batanea.
 - [x] Add the next named Roman client rulers: Archelaus of Cappadocia, Antiochus III of Commagene, Rhoemetalces I of Thrace, and Dynamis of Bosporus.
-- [x] Render campaign-valid current `ruler_term` records for every implemented non-regency government and retain source-led Augustus/Western Han regnal back-history without scripting pre-AD-1 campaign dates.
+- [x] Render date-less current `ruler_term` records for every implemented non-regency government and retain source-led Augustus/Western Han regnal back-history without scripting a pre-AD-1 accession date.
 - [x] Add named Near Eastern courts for Emesa, Osroene, Media Atropatene, and contested AD 1 Armenia with qualified regional government adapters.
 - [x] Add Pharasmanes I's contested AD 1 Caucasian Iberian court without inventing an intra-year accession date.
 - [x] Add a bounded Second Temple priesthood adapter to Herodian Judea through verified estate and law contracts.
@@ -185,7 +185,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add Emperor Ping's named maternal Wei family and Wang Yu's named early Yuan Shi circle without inferring offices, careers, or future punishments.
 - [x] Add the coin-attested Nabataean Queen Huldu as Aretas IV's documented AD 1 consort without inventing a constitutional role or genealogy.
 - [x] Complete the evidence-bounded Tier-1/2 power foundation: all 107 government profiles, 250 source-led characters, 32 named active heads, 75 explicitly anonymous/collective profiles, 24 privilege adapters, and campaign-valid regnal histories. The generated M6 coverage report preserves the source boundary rather than inventing rulers.
-- [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`.
+- [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`. Rome and Parthia pass the current-term probe; Han's twice-reproduced minority-regency fallback remains recorded in `BLOCKERS.md`.
 
 ## M7 — War
 

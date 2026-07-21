@@ -61,6 +61,29 @@ and the native field order). Both produced the same fallback with no new
 `error.log` line. The screenshots and recovery are retained in `BLOCKERS.md`.
 This is not an M6 acceptance result.
 
+## 2026-07-21 current-term contract and Han retest
+
+Installed start data pairs ordinary named `ruler` values with `ruler_term`.
+An open term dated `1.1.1` is rejected as future, but a date-less current term
+binds the incumbent without asserting an accession day. The generator now uses
+that locally verified form for all 31 non-regency ledger rows. Fresh government
+panels show `Augustus Valerii, 35` for ROM and `Count Phraates V Arsacid, 0`
+for PAR; the latter age remains the separate no-invented-birth-date issue.
+Evidence is retained in
+`docs/screens/20260721_m6_termless/termless_rome_government.png` and
+`docs/screens/20260721_m6_termless/termless_parthia_panel.png`.
+
+Han was tested twice after this material engine-contract finding. First, Ping
+received a date-less current term while retaining the native heir/regency
+shape; then he was repeated as both `ruler` and `heir` with that term. Both
+fresh XAR Government panels rendered generated `Wang Guangwu, 35`, not Emperor
+Ping. The second capture is
+`docs/screens/20260721_m6_han_final/han_final_government.png`; the first is
+`docs/screens/20260721_m6_termless/termless_han_panel.png`. Each shape passed
+static validation and enabled-mod smoke with zero new error-log lines. The
+failed Han-only variation was reverted, while the verified non-regency contract
+was retained. This remains an M6 acceptance blocker.
+
 ## 2026-07-19 Parthian country-panel result
 
 A fresh enabled-mod selector run reached `08:00, 1 January, 1`, selected XAH,
