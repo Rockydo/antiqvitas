@@ -10,6 +10,15 @@ duplicating a second language record for the group. Its documentation and
 definition explicitly state that this is a naming/rendering contract, not a
 claim that Chadic was Mande or a resolution of local Chadic languages.
 
+## 2026-07-21 - Sargat retains the existing Uralic language adapter
+
+The Sargat archaeological culture has no locally verified language key, and
+the Uralic-group contract already renders through the engine-valid
+`sami_language` fallback. The new Sargat entry therefore uses that existing
+adapter without introducing an invented language root or a second dialect for
+the same culture group. This is a rendering/naming contract only: the source
+does not identify Sargat as Sami, uniformly Ugric, or linguistically settled.
+
 ## 2026-07-21 - Moche uses a future-only dynamic tag anchored to VIR
 
 `MOC` must not appear in the AD 1 roster or tag map because Moche is a later
