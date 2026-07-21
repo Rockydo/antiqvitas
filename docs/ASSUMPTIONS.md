@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-21 - Upper Selenga is a multiethnic Xiongnu core frame
+
+The thirty-second selector batch maps the installed Upper Selenga area, including
+the Orkhon-Tuul core, to the existing Xiongnu proxy. The source places the
+Baikal region within the Xiongnu empire's broad first-century extent but
+explicitly characterizes that empire as multiethnic, multicultural, and
+polyglot. This contested row is therefore a campaign-boundary regional frame;
+it does not make every local community Xiongnu, identify a language, fix an
+imperial boundary, or pre-commit the later Northern/Southern Xiongnu split.
+
+Sources weighed: plan sections 8.8 (P8.8) and 10 (P10); Kim, *Oxford Research
+Encyclopedia of Asian History* (OUP-XIO).
+[secure broad campaign-boundary imperial context; contested selector extent and
+local representation]
+
 ## 2026-07-21 - Transdanubia is a Pannonian regional frame, not a CE 9 province
 
 The thirty-first selector batch maps the installed Transdanubia area to the
