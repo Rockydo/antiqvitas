@@ -982,6 +982,24 @@ antq_teotihuacano = { # P10;CAH-XI; Central Mexican urban communities
 	}
 }
 
+antq_epi_olmec = { # P8.10;P10;CAH-XI; Veracruz Epi-Olmec regional proxy
+	language = antq_mesoamerican_dialect
+	color = antq_culture_color_antq_epi_olmec
+	tags = { european_gfx }
+	culture_groups = {
+		antq_mesoamerican_group
+	}
+}
+
+antq_west_mexican = { # P8.10;P10;CAH-XI; West Mexican shaft-tomb and northern-frontier regional proxy
+	language = antq_mesoamerican_dialect
+	color = antq_culture_color_antq_west_mexican
+	tags = { european_gfx }
+	culture_groups = {
+		antq_mesoamerican_group
+	}
+}
+
 antq_moche = { # P10;CAH-XI; Northern Andean Moche communities
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_moche
@@ -994,6 +1012,24 @@ antq_moche = { # P10;CAH-XI; Northern Andean Moche communities
 antq_nazca = { # P10;CAH-XI; South-coast Andean Nazca communities
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_nazca
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_tiwanaku = { # P8.10;P10;CAH-XI; Early Tiwanaku altiplano regional proxy
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_tiwanaku
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_recuay = { # P8.10;P10;CAH-XI; Recuay highland regional proxy
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_recuay
 	tags = { european_gfx }
 	culture_groups = {
 		antq_andean_group
@@ -1048,6 +1084,15 @@ antq_algonquian = { # P10;CAH-XI; North American Algonquian communities
 antq_siouan = { # P10;CAH-XI; North American Siouan communities
 	language = antq_american_dialect
 	color = antq_culture_color_antq_siouan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_american_group
+	}
+}
+
+antq_plains_woodland = { # P8.10;P10;CAH-XI; Plains and eastern Woodland regional proxy including Hopewell interaction frames
+	language = antq_american_dialect
+	color = antq_culture_color_antq_plains_woodland
 	tags = { european_gfx }
 	culture_groups = {
 		antq_american_group

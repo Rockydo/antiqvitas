@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-21 - M4 Americas selector batch is smoke-verified
+
+- Added 17 non-overlapping selectors across Mesoamerica, the Andes, northern
+  Andes, and North American Plains/Woodland frames. They resolve 344 further
+  locations, lifting the ledger to 191 selectors, 6,543 locations, and 94
+  mapped cultures.
+- Added Epi-Olmec, West Mexican, Tiwanaku, Recuay, and Plains-Woodland
+  definitions, raising the M4 catalogue to 125 cultures. Full validation and
+  enabled-mod smoke are green, with zero new normalized error-log lines.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Africa selector batch is smoke-verified
 
 - Added 13 non-overlapping area and region selectors for the Maghreb, Fezzan,
