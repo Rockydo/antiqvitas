@@ -586,6 +586,15 @@ antq_vietic = { # P8.3;P10;CAH-XI; Red River regional proxy before later Vietnam
 	}
 }
 
+antq_sa_huynh = { # P8.9;P10;CAM-SAH;VASS-SAH; Sa Huynh archaeological central-Vietnam proxy; technical Malay language fallback is not a language claim
+	language = antq_austronesian_dialect
+	color = antq_culture_color_antq_sa_huynh
+	tags = { european_gfx }
+	culture_groups = {
+		antq_austronesian_group
+	}
+}
+
 antq_austronesian = { # P10;CAH-XI; Island Southeast Asian communities
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_austronesian

@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-21 - Sa Huynh frame precedes Champa and is archaeological
+
+The twenty-third selector batch maps the central-Vietnam Champa-named area to a
+Sa Huynh archaeological proxy. The source chronology covers AD 1 and documents
+a central/coastal-highland distribution, but it also describes a long transition
+to Champa rather than a finished Champa polity. Neither source resolves a local
+ethnicity or language. The generated culture therefore uses a technical Malay
+language fallback only; it is not a claim that Sa Huynh speakers were Malay or
+that the entire selector had one identity.
+
+Sources weighed: plan section 8.9 (P8.9); section 10 (P10); Dzung’s Central
+Vietnam study (CAM-SAH); Nguyen, Nguyen, and Vu’s geoarchaeology study
+(VASS-SAH).
+[secure chronology/archaeological regional context; contested identity, language, and selector extent]
+
 ## 2026-07-21 - Quadi frame stops at the Moravian selector
 
 The twenty-second selector batch maps Moravia to a Quadi regional proxy. The
