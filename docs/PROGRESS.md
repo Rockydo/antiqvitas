@@ -1,5 +1,23 @@
 # Progress
 
+## 2026-07-21 - M4 Germanic atlas reaches the plan's culture-density floor
+
+- A fourth source-led corpus adds 36 expressly contested Germanic, Baltic, and
+  northeastern Fennian campaign-boundary frames. Strabo is near-contemporary;
+  Tacitus (c. AD 98) is a constrained cross-check only, never proof of exact
+  AD 1 placement, language, or borders.
+- The ledger now has 506 reviewed selectors resolving 12,058 controlled
+  locations across 329 mapped cultures; the catalogue reaches 350 culture
+  definitions, the lower bound of the plan's 350-500 target. Population remains
+  230,000.000 thousand.
+- The first selected Fennian province was empty in the actual AD 1 setup; the
+  generator rejected it. The mapping was replaced by a controlled Karelia
+  location, then generation, `make validate`, and enabled-mod smoke passed.
+  Smoke completed at 18:42 UTC with zero new normalized `error.log` lines.
+
+Next: run the current M4 full and driver-observer/map-mode acceptance gate;
+keep every new frame contested and retain the no-template-inference rule.
+
 ## 2026-07-21 - M4 Balkan-Anatolian atlas batch is smoke-verified
 
 - Strabo's Balkan and Anatolian books, with a modern Anatolian synthesis, add
@@ -55,8 +73,8 @@ reviewed historical corpus, retaining the no-template-inference rule.
   enabled-mod smoke reported zero new normalized `error.log` lines.
 - At that M12 full gate, the public build inventory matched the generated
   checks: 179 cultures, 37 religions, and 416 source-window historical-current
-  events. The later M4 Iberian, Gallic, and Balkan-Anatolian batches above
-  raise the culture count to 314.
+  events. The later M4 Iberian, Gallic, Balkan-Anatolian, and Germanic batches
+  above raise the culture count to 350.
 - This does not tag M12. The renderer fault still prevents the required
   observer pacing measurements, full AD 1-to-476 run, and finale screenshot
   evidence after two material profile attempts.

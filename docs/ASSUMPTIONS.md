@@ -1,5 +1,30 @@
 # Historical Assumptions
 
+## 2026-07-21 - Germanic, Baltic, and Fennian names are bounded campaign frames
+
+The forty-seventh M4 batch adds 36 named frames from the Oder and Lower Rhine
+through Jutland, the Baltic, interior central Europe, Scandinavia, and one
+controlled Karelia location. Strabo offers a campaign-boundary witness for a
+subset of the names; Tacitus's *Germania* was composed around AD 98 and is used
+only as a deliberately time-late cross-check. The installed province/location
+selectors are therefore contested, reproducible proxies, not exact tribal
+polygons, a linguistic census, claims of political independence, or proof that
+the relevant communities occupied the exact same positions in AD 1.
+
+The existing Germanic, Baltic, and Uralic engine groups reuse locally verified
+language rendering adapters. Those adapters do not decide the speech, ancestry,
+or cultural uniformity of the named communities. The initial Savolax selector
+was rejected because it held no controlled AD 1 location, so the Fennian proxy
+uses one controlled Karelia location rather than inventing population coverage
+for an empty scope.
+
+Sources: P10; `STR-GER`; `TAC-GER`; `OCD-GER`; Pleiades (`PLE`) only for
+campaign-boundary geography matching.
+
+[secure named ancient/near-first-century contexts where applicable; contested
+AD 1 placement, selector extent, local representation, language, continuity,
+and political affiliation]
+
 ## 2026-07-21 - Balkan and Anatolian named peoples are bounded regional frames
 
 The forty-sixth M4 batch adds 50 named frames in the Balkans and Anatolia.

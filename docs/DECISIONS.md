@@ -1,5 +1,18 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Germanic corpus uses existing language-group render contracts
+
+The locally harvested M4 language registry has no verified dedicated roots for
+the 36 new Germanic, Baltic, and Fennian frames. The generator therefore uses
+the existing engine-valid Germanic/German, Baltic/Baltic, and Uralic/Sami
+contracts. These choices make valid nested culture records; they are not a
+historical decision on individual local languages, ancestry, or identity.
+
+The start-mirror generator also correctly rejects a culture selector that
+resolves to no controlled AD 1 locations. The rejected Savolax selector was
+replaced by a documented controlled Karelia location; this retains a visible,
+reviewable approximation instead of manufacturing a population scope.
+
 ## 2026-07-21 - Culture symbol yields to the existing Liburnian unit key
 
 The M7 navy already owns the global localization key `antq_liburnian`. The
