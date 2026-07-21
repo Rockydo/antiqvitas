@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-21 - Gaetulian frame is limited to the interior high plateau
+
+The twenty-fourth selector batch maps only the high-plateau/pre-desert area to
+the existing Gaetulian proxy. Ancient geographical usage varied, but the source
+does place the label south of the coastal Mauretanian/Numidian belt and north of
+the Great Desert. The row is contested, keeps the coastal Algiers area
+unassigned, and does not assert a fixed tribal boundary or uniform identity.
+
+Sources weighed: plan section 8.5 (P8.5); section 10 (P10); *Cambridge Ancient
+History*, volume XI (CAH-XI); Gabrieli’s *Enciclopedia Italiana* entry
+(TRE-GAE).
+[secure interior regional context; contested selector extent and local representation]
+
 ## 2026-07-21 - Sa Huynh frame precedes Champa and is archaeological
 
 The twenty-third selector batch maps the central-Vietnam Champa-named area to a

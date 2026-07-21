@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-21 - M4 Gaetulian high-plateau atlas batch is smoke-verified
+
+- Added the high-plateau/pre-desert area to the existing Gaetulian proxy. The
+  ledger now has 313 selectors, 11,714 locations, and 142 mapped cultures; the
+  existing 163-culture catalogue is retained.
+- The source places ancient Gaetulian usage south of the coastal Maghreb and
+  north of the Great Desert; the mixed Algiers coast is deliberately unchanged.
+  Full validation and enabled-mod smoke are green, with zero new normalized
+  error-log lines.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Sa Huynh central-Vietnam atlas batch is smoke-verified
 
 - Added a Sa Huynh archaeological proxy across the central-Vietnam area. The
