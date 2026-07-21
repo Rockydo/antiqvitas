@@ -775,6 +775,15 @@ antq_sargat = { # P8.8;P10;RAS-SAR;HUM-SAR; Omsk-Irtysh Sargat archaeological pr
 	}
 }
 
+antq_permic = { # P8.7;P10;PAR-PER; Early Permic Vyatka-Kama archaeological-linguistic proxy; technical Sami fallback is not a language claim
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_permic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
 antq_baltic = { # P10;CAH-XI; Baltic communities
 	language = antq_baltic_dialect
 	color = antq_culture_color_antq_baltic

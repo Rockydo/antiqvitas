@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-21 - Vyatka is an early Permic reconstruction, not a modern ethnicity
+
+The thirty-fourth selector batch introduces a Permic proxy for the installed
+Vyatka area. The archaeological-linguistic reconstruction places an ancestral
+Permic context on the Vyatka and Kama system across the campaign boundary, but
+does not make an exact AD 1 ethnographic map. This contested frame therefore
+does not assert a later Komi or Udmurt identity, an unbroken institutional
+continuity, uniform local speech, or a fixed territorial boundary. Its
+Uralic/Sami engine adapter is technical only.
+
+Sources weighed: plan sections 8.7 (P8.7) and 10 (P10); Parpola,
+*Suomalais-Ugrilaisen Seuran Toimituksia* (PAR-PER).
+[secure reconstructed campaign-boundary context; contested selector extent and
+local representation]
+
 ## 2026-07-21 - Khotan is a local oasis frame, not an early language map
 
 The thirty-third selector batch adds a Khotan Oasis culture only at the exact
