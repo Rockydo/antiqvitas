@@ -563,9 +563,12 @@ def population_culture_remaps(owners: dict[str, str]) -> dict[str, dict[str, str
     The source ledger deliberately accepts installed geographic selectors, not
     vanilla culture keys.  Thus an area can be assigned only after a historical
     judgment is recorded with its source, and a selector's concrete location
-    expansion stays auditable after a map patch.  Location overrides remain a
-    narrower, higher-precedence exception for places such as the Rinan/Linyi
-    frontier.
+    expansion stays auditable after a map patch.  A narrower, independently
+    sourced selector may refine a broader regional frame: precedence is
+    location > province > area > region.  Equally specific overlap remains an
+    error, so the ledger cannot silently choose between competing historical
+    claims.  Location overrides remain the final, higher-precedence exception
+    for places such as the Rinan/Linyi frontier.
     """
     required = ("selector_type", "selector", "culture", "source", "confidence", "note")
     with CULTURE_REMAP.open(encoding="utf-8-sig", newline="") as handle:
@@ -610,6 +613,7 @@ def population_culture_remaps(owners: dict[str, str]) -> dict[str, dict[str, str
         return resolved
 
     remaps: dict[str, dict[str, str]] = {}
+    specificity = {"region": 0, "area": 1, "province": 2, "location": 3}
     selectors: set[tuple[str, str]] = set()
     failures: list[str] = []
     for number, row in enumerate(rows, start=2):
@@ -655,11 +659,16 @@ def population_culture_remaps(owners: dict[str, str]) -> dict[str, dict[str, str
         for location in selected:
             existing = remaps.get(location)
             if existing:
-                failures.append(
-                    f"{CULTURE_REMAP.relative_to(ROOT)}:{number}: overlaps {location} from "
-                    f"{existing['selector_type']} {existing['selector']}"
-                )
-                continue
+                current_rank = specificity[selector_type]
+                existing_rank = specificity[existing["selector_type"]]
+                if current_rank == existing_rank:
+                    failures.append(
+                        f"{CULTURE_REMAP.relative_to(ROOT)}:{number}: equally-specific overlap at {location} from "
+                        f"{existing['selector_type']} {existing['selector']}"
+                    )
+                    continue
+                if current_rank < existing_rank:
+                    continue
             remaps[location] = values
     if failures:
         raise ValueError("\n".join(sorted(set(failures))))
