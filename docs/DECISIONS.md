@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Chadic Basin retains the existing Sub-Saharan language adapter
+
+The verified M4 language contract provides one generated dialect per culture
+group, and the established `antq_subsaharan_group` uses the engine-valid
+`mande_language` fallback. The new Chadic Basin culture therefore joins that
+existing group rather than inventing an unverified Chadic engine language or
+duplicating a second language record for the group. Its documentation and
+definition explicitly state that this is a naming/rendering contract, not a
+claim that Chadic was Mande or a resolution of local Chadic languages.
+
 ## 2026-07-21 - Moche uses a future-only dynamic tag anchored to VIR
 
 `MOC` must not appear in the AD 1 roster or tag map because Moche is a later

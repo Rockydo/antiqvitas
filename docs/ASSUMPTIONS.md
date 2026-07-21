@@ -1,5 +1,23 @@
 # Historical Assumptions
 
+## 2026-07-21 - Bornu is a Lake Chad Basin Chadic frame, not a modern map
+
+The twenty-eighth selector batch introduces a Chadic Basin culture only for
+the installed Bornu area around the southern Lake Chad Basin. The source
+explicitly warns against identifying direct archaeological correlates for a
+speech community, but judges that most communities in the region spoke Chadic
+languages through the early/mid first millennium CE. The culture thus denotes a
+contested regional linguistic-historical frame rather than a material culture,
+an ethnic or political unity, a Hausa identity, or a modern language map. Its
+engine-valid Mande language fallback is inherited from the existing broad
+Sub-Saharan naming group and is not a Chadic-language assertion.
+
+Sources weighed: plan section 8.5 (P8.5); section 10 (P10); MacEachern,
+*Oxford Handbook of African Archaeology* (OUP-CHAD); Connah, *Journal of
+African History* (CAM-DAI).
+[secure basin chronology and broad speech-community context; contested local
+representation, language distribution, and selector extent]
+
 ## 2026-07-21 - Central Mexico is a Teotihuacan-rise regional proxy
 
 The twenty-seventh selector batch maps the installed Central Mexican area to
