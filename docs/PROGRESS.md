@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-21 - Resume audit confirms the clean gate; no renderer change
+
+- Re-read the master plan and reconciled every open acceptance item with its
+  evidence. The installed EU5 build remains Steam build 24187685 and the RTX
+  3080 driver remains 591.86, so neither supplies the material change required
+  for another high-speed observer retry.
+- A fresh `make full` passed: all generated/static contracts passed, and the
+  enabled playset completed the settled menu smoke with zero new normalized
+  `error.log` lines.
+- No game-visible content changed. M3 and M5--M10/M12 acceptance remains
+  accurately open only where the recorded engine-contract or renderer blockers
+  prevent the required runtime evidence.
+
+Next: preserve the green baseline; resume observer acceptance only after a
+material installed-game, graphics-driver, or renderer change.
+
 ## 2026-07-22 - Current full release gate is clean; M12 remains observer-blocked
 
 - `make full` passed on the committed tree: all static/generated contracts,

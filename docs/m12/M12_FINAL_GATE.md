@@ -15,6 +15,14 @@ This establishes the present release baseline: the mod parses, the generated
 contracts agree, the active playset launches, and the menu-ready smoke path is
 clean.
 
+## 2026-07-21 resume audit
+
+A fresh autonomous `make full` rerun also passed after the recorded M7 retest.
+It again reached the settled enabled-mod menu with zero new normalized
+`error.log` lines. The installed Steam build remains 24187685 and the RTX 3080
+driver remains 591.86, matching the renderer-blocker environment; therefore no
+additional high-speed observer retry was performed.
+
 ## Release gate not accepted
 
 M12 is not tagged. The plan requires observer-based pacing measurements and an
