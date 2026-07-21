@@ -89,6 +89,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the cautious central-Oman Samad archaeological frame: 1 further selector resolves 7 locations and adds 1 culture definition, bringing the audited atlas to 12,018 locations across 150 mapped cultures.
 - [x] Add the bounded Surgut-Narym Ob Kulay archaeological frame: 3 further selectors resolve 12 locations and add 1 culture definition, bringing the audited atlas to 12,030 locations across 151 mapped cultures.
 - [x] Add the exact Kucha Oasis frame: 1 further selector resolves 1 location and adds 1 culture definition, bringing the audited atlas to 12,031 locations across 152 mapped cultures.
+- [x] Add the exact Loulan city-oasis frame: 1 further selector resolves 1 location and adds 1 culture definition, bringing the audited atlas to 12,032 locations across 153 mapped cultures.
 - [ ] Pass the final culture/religion atlas checks; population and raw `-leavepops` checks are green.
 - [ ] Run milestone gate and tag `M4-done`.
 
