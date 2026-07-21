@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-21 - M4 Korean peninsula atlas batch is smoke-verified
+
+- Added three non-overlapping selectors for Yeongnam's Samhan context and the
+  Gyeonggi/Haeseo generic Korean community frame. The ledger now has 306
+  selectors, 11,520 locations, and 138 mapped cultures.
+- The new mapping distinguishes population culture from the Lelang political
+  commandery and does not project Silla/Gaya backward. The existing
+  160-culture catalogue is retained. Full validation and enabled-mod smoke are
+  green, with zero new normalized error-log lines.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Carpathian Dacian/Getic atlas batch is smoke-verified
 
 - Added two non-overlapping selectors for intra-Carpathian Dacian Transylvania
