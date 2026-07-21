@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-21 - M4 Germanic tribal-atlas batch is smoke-verified
+
+- Replaced six broad north/central Germanic selectors with bounded Frisian,
+  Cheruscan, Chattic, Semnonic, Hermunduric, and Istvaeonic frames, and added
+  an unassigned Bohemian Marcomannic selector. The ledger now has 298
+  selectors, 11,266 locations, and 134 mapped cultures.
+- Added seven source-qualified Germanic definitions, raising the M4 catalogue
+  to 159 cultures. Silesia remains Venedi rather than receiving an unsupported
+  Burgundian remap. Full validation and enabled-mod smoke are green, with zero
+  new normalized error-log lines.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 South Asian regional-Prakrit atlas batch is smoke-verified
 
 - Added fourteen non-overlapping selectors for Magadhi and Shauraseni Prakrit,

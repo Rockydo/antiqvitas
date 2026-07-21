@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-21 - Germanic tribal labels are regional frames, not fixed frontiers
+
+The fourteenth selector batch replaces six broad Germanic/Suebian regional
+labels with Frisian, Cheruscan, Chattic, Semnonic, Hermunduric, and Istvaeonic
+proxies, and adds the plan's Marcomannic Bohemian frame. The surviving ancient
+sources classify and locate these peoples unevenly; none supports a modern-area
+border, a unitary state, a homogeneous language, or later Frankish/Frisian
+standards. Silesia remains on its existing Venedi frame because the reviewed
+evidence does not justify overwriting it with a Burgundian map claim. Sources
+weighed: plan sections 8.7 and 10 (P8.7; P10); CAH-XI; CAM-GERM; OCD-CHER.
+[secure broad tribal context; contested local representation]
+
 ## 2026-07-21 - South Asian Prakrit and highland frames avoid later national languages
 
 The thirteenth selector batch uses Magadhi and Shauraseni as historical
