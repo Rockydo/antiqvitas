@@ -253,6 +253,15 @@ antq_saka = { # P10;CAH-XI; Eastern Iranian steppe communities
 	}
 }
 
+antq_khotan_oasis = { # IRAN-KHO;IRAN-CT; AD 1 Khotan oasis regional proxy; technical Iranian naming adapter does not determine first-century language
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_khotan_oasis
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
 antq_sarmatian = { # P10;CAH-XI; Pontic Iranian steppe communities
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_sarmatian

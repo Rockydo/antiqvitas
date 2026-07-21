@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-21 - Khotan is a local oasis frame, not an early language map
+
+The thirty-third selector batch adds a Khotan Oasis culture only at the exact
+installed Khotan anchor. Han-era sources establish the oasis/kingdom context,
+but the historical synthesis says the references do not determine whether its
+inhabitants were Iranian; concrete Iranian-presence evidence is later. This is
+therefore a contested local frame, not a Khotanese-Saka language claim, a
+southern-Tarim map, a Buddhist identity, a fixed territory, or a specific AD 1
+ruler. Its existing Iranian/Persian naming adapter is technical only.
+
+Sources weighed: plan sections 8.8 (P8.8) and 10 (P10); Kumamoto,
+*Encyclopaedia Iranica* (IRAN-KHO); Frye, *Encyclopaedia Iranica* (IRAN-CT).
+[secure local oasis context; contested population representation, language, and
+selector scope]
+
 ## 2026-07-21 - Upper Selenga is a multiethnic Xiongnu core frame
 
 The thirty-second selector batch maps the installed Upper Selenga area, including
