@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-21 - M4 controlled-Oceania batch is smoke-verified
+
+- Added six non-overlapping selectors for Samoa, Tonga, the controlled
+  Micronesian surface, and the controlled New Guinea proxy. They resolve 12
+  further locations, lifting the ledger to 197 selectors, 6,555 locations,
+  and 98 mapped cultures.
+- Added Samoan, Tongan, Micronesian, and New Guinean definitions, raising the
+  M4 catalogue to 129 cultures. Full validation and enabled-mod smoke are
+  green, with zero new normalized error-log lines.
+- Settlement evidence supports the pre-AD 1 western-Polynesian frames; the
+  regional labels remain explicitly contested archaeological proxies.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Americas selector batch is smoke-verified
 
 - Added 17 non-overlapping selectors across Mesoamerica, the Andes, northern

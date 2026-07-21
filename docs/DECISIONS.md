@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Preserve the Micronesian map gap with a disjoint province selector
+
+The harvested `micronesia_region` resolves to the controlled Yap/Ulithi surface
+but not the separately controlled Mariana location in `piranga_province`.
+The M4 ledger therefore uses the region plus that disjoint installed province,
+rather than falsely treating the map hierarchy as a historical boundary or
+silently omitting the verified M3 Micronesian surface. The resolver expands
+both selectors to concrete locations and rejects any overlap.
+
 ## 2026-07-21 - Culture-ledger regions use the harvested hierarchy with the same strict coverage contract
 
 Some source-qualified AD 1 frames, including the Bantu-frontier ledger, are

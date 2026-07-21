@@ -1125,3 +1125,39 @@ antq_australian = { # P10;CAH-XI; Australian communities
 		antq_oceanic_group
 	}
 }
+
+antq_samoan = { # P8.9;P10;CAM-LAP; Pre-AD 1 Samoan regional frame after Lapita settlement
+	language = antq_oceanic_dialect
+	color = antq_culture_color_antq_samoan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_oceanic_group
+	}
+}
+
+antq_tongan = { # P8.9;P10;CAM-LAP; Pre-AD 1 Tongan regional frame after Lapita settlement
+	language = antq_oceanic_dialect
+	color = antq_culture_color_antq_tongan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_oceanic_group
+	}
+}
+
+antq_micronesian = { # P8.9;P10;ANU-MIC; Micronesian regional archaeological proxy with distinct local histories
+	language = antq_oceanic_dialect
+	color = antq_culture_color_antq_micronesian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_oceanic_group
+	}
+}
+
+antq_new_guinean = { # P8.9;P10;CAM-NGU; New Guinea regional proxy rather than a homogeneous ethnolinguistic claim
+	language = antq_oceanic_dialect
+	color = antq_culture_color_antq_new_guinean
+	tags = { european_gfx }
+	culture_groups = {
+		antq_oceanic_group
+	}
+}
