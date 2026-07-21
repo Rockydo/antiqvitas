@@ -31,6 +31,7 @@ validate:
 	.venv/Scripts/python.exe tools/m12_hardcoded_startup.py --check
 	.venv/Scripts/python.exe tools/m12_coa_scope_guard.py --check
 	.venv/Scripts/python.exe tools/m12_flag_capital_guard.py --check
+	.venv/Scripts/python.exe tools/m12_marriage_policy_guard.py --check
 	.venv/Scripts/python.exe tools/m12_anachronism_audit.py --check
 	.venv/Scripts/python.exe tools/m12_disable_historical_hints.py --check
 	.venv/Scripts/python.exe tools/m12_event_quarantine.py --check

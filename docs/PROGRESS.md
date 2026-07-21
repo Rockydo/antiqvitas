@@ -1,5 +1,23 @@
 # Progress
 
+## 2026-07-21 - AD 1 government-law compatibility is observer-verified
+
+- The custom ancient advance tree now carries each locally required
+  engine-native law-category unlock while continuing to suppress vanilla unit
+  and levy unlocks. It also retains the one native court-policy gate needed by
+  the start-state monarchy adapters.
+- ANTIQVITAS's historically named faith families now map to the closest native
+  mechanics group for hardcoded pagan contracts. A checksum-guarded overlay of
+  the installed marriage law extends availability (but never assigns a policy)
+  for the Buddhist, Dharmic, Iranian, and Manichaean mechanics groups.
+- Full validation and the enabled-mod smoke are green. A fresh paused AD 1
+  observer start records zero removed-law, missing-advance, or invalid-policy
+  diagnostics. The same run preserves the prior clean script-system startup
+  result; sustained observer playback remains renderer-blocked.
+
+Next: retain this clean initialization checkpoint and continue the open M8/M9
+runtime gates without accepting a renderer-bound long-run claim.
+
 ## 2026-07-21 - M12 AD 1 observer initialization is script-clean
 
 - Added the one-token exact-source guard for Catalonia's dormant Sitges-capital

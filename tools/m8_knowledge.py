@@ -44,6 +44,37 @@ TOP_LEVEL = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*\s*=\s*\{")
 POTENTIAL = re.compile(r"^\s*potential\s*=")
 CAN_SPAWN = re.compile(r"^\s*can_spawn\s*=")
 CORE_TAGS = frozenset(("ROM", "HAN", "PAR"))
+# The AD 1 setup retains a small, engine-native law/policy surface for
+# administrative continuity.  M8 replaces the vanilla advances that formerly
+# unlocked these categories, so matching ancient advances must carry the
+# unlocks or the engine strips otherwise valid start laws at initialization.
+# These are mechanics-category bridges, not claims that their vanilla labels
+# describe the historical institutions represented by M6's custom adapters.
+START_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
+    "antq_imperial_cult": (("unlock_law", "legal_code_law"),),
+    "antq_provincial_census": (("unlock_law", "administrative_system"),),
+    "antq_tax_registers": (("unlock_law", "distribution_of_power_law"),),
+    "antq_road_milestones": (("unlock_law", "royal_court_customs_law"),),
+    "antq_legal_petitions": (("unlock_law", "education_masses_law"),),
+    "antq_municipal_charters": (("unlock_law", "feudal_de_jure_law"),),
+    # Vanilla's first infantry advance unlocks this court policy.  Its units
+    # are deliberately suppressed, but this category bridge is still needed
+    # for monarchies that retain the engine-native court selection.
+    "antq_professional_standing_armies": (
+        ("unlock_law", "medieval_levy_law"),
+        ("unlock_policy", "aristocratic_court_policy"),
+    ),
+    "antq_auxiliary_service": (("unlock_law", "tribal_religious_values_law"),),
+    "antq_drill_routines": (("unlock_law", "tribal_organization_law"),),
+    "antq_supply_columns": (("unlock_law", "tribal_legal_basis_law"),),
+    "antq_monsoon_navigation": (("unlock_law", "coin_laws"),),
+    "antq_red_sea_piloting": (("unlock_law", "mining_law"),),
+    "antq_caravan_accounting": (("unlock_law", "immigration_law"),),
+    "antq_paper_precursors": (("unlock_law", "cultural_traditions_law"),),
+    # Polygyny is a policy inside the religious marriage_law category; it is
+    # not itself granted by a vanilla advance.  Unlock its parent category.
+    "antq_civic_associations": (("unlock_law", "marriage_law"),),
+}
 
 
 # Five ten-step strands run continuously through all five ages.  Their names
@@ -209,6 +240,16 @@ def validate(records: tuple[Advance, ...]) -> None:
     if len(roots) != 25:
         failures.append("the five strands in each age must have exactly 25 roots")
     key_set = set(keys)
+    unknown_unlock_keys = sorted(set(START_UNLOCKS) - key_set)
+    if unknown_unlock_keys:
+        failures.append(
+            "M8 start-unlock mapping has unknown advances: " + ", ".join(unknown_unlock_keys)
+        )
+    unlock_targets = [target for unlocks in START_UNLOCKS.values() for _field, target in unlocks]
+    if len(unlock_targets) != len(set(unlock_targets)):
+        failures.append("M8 start-unlock mapping repeats a law or policy category")
+    if {field for unlocks in START_UNLOCKS.values() for field, _target in unlocks} - {"unlock_law", "unlock_policy"}:
+        failures.append("M8 start-unlock mapping uses an unsupported unlock field")
     by_key = {record.key: record for record in records}
     required_by = {record.requires for record in records if record.requires}
     leaves = [record.key for record in records if record.key not in required_by]
@@ -252,6 +293,8 @@ def advance_script(records: tuple[Advance, ...]) -> str:
     ]
     for record in records:
         lines.extend((f"{record.key} = {{", f"\tage = {record.age}", f"\ticon = {ICONS[record.age_index]}", f"\tdepth = {record.depth}", f"\tresearch_cost = {2 + record.age_index * 2 + record.depth * 0.5:.1f}"))
+        for field, target in START_UNLOCKS.get(record.key, ()):
+            lines.append(f"\t{field} = {target}")
         if record.age_index == 0:
             lines.append(f"\tstarting_technology_level = {min(4, 1 + record.depth // 3)}")
         if record.requires:

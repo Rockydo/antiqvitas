@@ -1,5 +1,31 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Preserve native government categories through ancient advances
+
+The AD 1 government adapters intentionally retain a small set of installed
+law and policy categories, but M8 disables the vanilla advances that normally
+unlock them. A fresh paused observer run proved that the engine was stripping
+otherwise valid start-state laws. The M8 generator now carries the fifteen
+locally evidenced category bridges on historically named ancient advances,
+including the installed `aristocratic_court_policy` gate while retaining no
+vanilla unit or levy unlock. The marriage category is unlocked rather than
+pretending that polygyny itself is a technology. This is a mechanics bridge,
+not a claim that the vanilla labels describe ancient institutions; M6's
+source-led adapters remain the player-facing historical layer.
+
+## 2026-07-21 - Keep historical faith families while using native mechanics groups
+
+The local religion-group registry and the installed `polygyny` rule show that
+EU5's hardcoded pagan contracts recognise native folk groups. ANTIQVITAS keeps
+its namespaced historical families in source data and localization, but maps
+each religion's engine-facing group to the closest installed family. This lets
+the game's pagan/reform/marriage mechanics recognise AD 1 faiths without
+renaming them. The remaining Buddhist, Dharmic, Iranian, and Manichaean start
+policies are covered by a checksum-guarded exact overlay of the installed
+`01_common.txt`; it extends policy availability only and fails validation if
+the local source file changes. A fresh paused observer start has zero invalid
+policy removals.
+
 ## 2026-07-21 - Make the dormant Sitges flag test optional
 
 The sole remaining observer-initialization script error came from the

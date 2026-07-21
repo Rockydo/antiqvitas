@@ -411,9 +411,11 @@ def click(args: argparse.Namespace) -> int:
         raise ValueError("click coordinates must be normalized fractions from 0 through 1")
     x = window.left + round(window.width * args.x)
     y = window.top + round(window.height * args.y)
-    pyautogui.click(x, y)
+    pyautogui.click(x, y, button=args.button)
     time.sleep(args.settle)
-    print(f"clicked normalized ({args.x:.3f}, {args.y:.3f}) at ({x}, {y})")
+    print(
+        f"clicked {args.button} normalized ({args.x:.3f}, {args.y:.3f}) at ({x}, {y})"
+    )
     if args.capture:
         session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
         target = ROOT / "docs/screens" / session / f"{args.capture}.png"
@@ -627,6 +629,9 @@ def build_parser() -> argparse.ArgumentParser:
     click_parser = sub.add_parser("click")
     click_parser.add_argument("x", type=float, help="horizontal normalized position")
     click_parser.add_argument("y", type=float, help="vertical normalized position")
+    click_parser.add_argument(
+        "--button", choices=("left", "middle", "right"), default="left"
+    )
     click_parser.add_argument("--settle", type=float, default=2)
     click_parser.add_argument("--capture", help="capture this name after the click")
     click_parser.add_argument("--session")

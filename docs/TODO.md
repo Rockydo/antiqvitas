@@ -145,6 +145,7 @@ after `make full` and its autonomous driver report are green.
 
 - [x] Generate and validate the required birth-location static-modifier contract for all nine custom institutions.
 - [x] Implement five complete age trees, roughly 250 advances, institutions, tech tiers, objectives, and abilities.
+- [x] Verify a fresh paused AD 1 observer start retains all engine-native law and policy categories used by the historical government adapters (zero removed-law, missing-advance, or invalid-policy diagnostics).
 - [ ] Test AI research and anachronism/dead-end rules; run milestone gate and tag `M8-done`. (The enabled AD 1 selector and zero-new-line menu smoke are recorded; observer runtime remains blocked by the renderer condition in `BLOCKERS.md`.)
 
 ## M9 — Nations among nations
@@ -158,6 +159,7 @@ after `make full` and its autonomous driver report are green.
         their wargoals and three subject-imposition peace terms.
   - [x] Add the plan's Han, Xiongnu, Games, and Church IO surfaces plus
         validated discovery profiles for every AD 1 polity.
+- [x] Inspect paused live diplomacy/country panels for Rome, Western Han, and Xiongnu; retain screenshots and the country/tag/capital/subject evidence in `docs/playtests/M9_DIPLOMACY.md`.
 - [ ] Verify ancient diplomatic webs; run milestone gate and tag `M9-done`.
 
 ## M10 — History in motion
