@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-21 - Kashgar is an exact oasis frame, not a cultural or language map
+
+The forty-second source-led M4 batch assigns only the installed Kashgar
+location to a Kashgar Oasis proxy. The source records Kashgar/Shule in the
+*Hanshu* and its formal Han relationship from 59 BCE to 23 CE. This contested
+frame therefore does not settle a language, ethnicity, state boundary, or wider
+western-Tarim allocation. Its Iranian/Persian engine adapter is technical only.
+
+Sources: P8.3; P10; `IRAN-KAS`.
+
+[secure campaign-boundary oasis attestation; contested local representation]
+
 ## 2026-07-21 - Aksu is an exact oasis frame, not a cultural or language map
 
 The forty-first source-led M4 batch assigns only the installed Aksu location to
