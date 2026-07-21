@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-21 - Hami and Turpan are exact oasis frames, not cultural maps
+
+The forty-third source-led M4 batch assigns only the installed Hami and Turpan
+locations to separate oasis proxies. The source lists Kumul (Hami) and Turfan
+among ancient northern Silk Road oasis states, but does not establish their AD
+1 ethnic or language composition. These contested frames therefore do not
+settle a language, ethnicity, state boundary, or wider eastern-Tarim allocation.
+Their Iranian/Persian engine adapters are technical only.
+
+Sources: P8.3; P10; `IRAN-CT`.
+
+[secure campaign-boundary oasis attestations; contested local representation]
+
 ## 2026-07-21 - Kashgar is an exact oasis frame, not a cultural or language map
 
 The forty-second source-led M4 batch assigns only the installed Kashgar
