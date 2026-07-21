@@ -18,16 +18,17 @@ installed parser. The current observer reaches both required map modes; see
 `docs/playtests/M4_FINAL_GATE_350_20260721.md`. This does not resolve the
 separate M12 playback crash after game time advances.
 
-## Fresh AD 1 startup still inherits invalid vanilla government defaults
+## Fresh AD 1 startup inherited invalid vanilla government defaults (resolved)
 
-The now-successful observer initialization records 213 removed laws and 227
-removed estate privileges. The messages concern vanilla defaults such as
-`royal_court_customs_law`, `medieval_levy_law`,
-`noble_fortification_licenses`, and `clergy_literacy_rights`, not invalid
-ANTIQVITAS definition keys. They must be cleared or replaced through a
-locally verified start-template contract before M6/M8 and long-run runtime
-claims can be accepted. This is a content-compatibility task, not an accepted
-baseline line.
+The first successful observer initialization recorded 213 removed laws and
+227 removed estate privileges from the installed `east_asia_monarchy` and
+`asia_advanced_tribe` templates, including `royal_court_customs_law`,
+`medieval_levy_law`, `noble_fortification_licenses`, and
+`clergy_literacy_rights`. These were template defaults, not invalid
+ANTIQVITAS definition keys. The generated country starts now render their
+explicit ANTIQVITAS government block, or a minimal locally verified fallback,
+without either template. The fresh paused AD 1 Observer test has zero matches
+for both removal diagnostics; see `docs/playtests/AD1_STARTUP_DEFAULTS_20260721.md`.
 
 ## M12 observer and renderer reliability remain release blockers
 

@@ -1,5 +1,25 @@
 # Progress
 
+## 2026-07-21 - AD 1 startup-template regression is resolved
+
+- The fresh AD 1 observer archive contained 440 incompatibility removals:
+  213 laws and 227 estate privileges. Local inspection showed every generated
+  country had imported `east_asia_monarchy` or `asia_advanced_tribe`, whose
+  medieval defaults were merged alongside the historical government adapters.
+- Country-start generation now writes no vanilla government-template include.
+  The 107 source-led M6 government rows are unchanged; the 50 intentionally
+  unsourced profiles receive only their installed base type, succession key,
+  and random-ruler fallback. Explicit M8 technology and M9 discovery data
+  remain direct generated fields.
+- `make validate` and enabled-mod `make smoke` both passed. The autonomous
+  paused AD 1 Observer map at `08:00, 1 January, 1` has zero `Removing invalid
+  law` and zero `Removing invalid estate privilege` diagnostics, as recorded
+  in `docs/playtests/AD1_STARTUP_DEFAULTS_20260721.md` and
+  `docs/screens/20260721_template_removal/template_removal_observing.png`.
+
+Next: return to the highest-priority unblocked M6/M7/M8 acceptance work;
+long-observer playback remains separately blocked by the renderer issue.
+
 ## 2026-07-21 - M4 culture and faith atlas gate accepted
 
 - The generated AD 1 start initially logged `Future start date specified` for
@@ -19,12 +39,13 @@
   window that is already foregrounded, allowing the recorded New Game and
   Observer inputs to proceed without weakening capture safety.
 - The current `make full` passed with 350 cultures, 37 religions, and zero new
-  normalized smoke lines. The 213 removed-law and 227 invalid-estate lines
-  exposed only by actual game initialization are recorded as the next runtime
-  compatibility task; they do not invalidate the M4 culture/religion gate.
+  normalized smoke lines. Actual game initialization then exposed 213
+  removed-law and 227 invalid-estate lines; the subsequent self-contained
+  country-start repair resolved them without invalidating the M4
+  culture/religion gate.
 
-Next: eliminate the inherited vanilla government defaults in a fresh observer
-start before reopening M6/M8 runtime acceptance or long observer playback.
+Next at that point was the inherited-default repair, now accepted in the newer
+AD 1 startup-template entry above.
 
 ## 2026-07-21 - M4 dynamic-name ledger now extends beyond capitals
 
@@ -818,7 +839,7 @@ global culture dataset before claiming the M4 milestone.
 Next: leave this player-context surface deferred until a materially different
 engine contract is evidenced; long playback remains separately renderer-bound.
 
-## 2026-07-21 - AD 1 government-law compatibility is observer-verified
+## 2026-07-21 - M8 government-law compatibility probe (superseded)
 
 - The custom ancient advance tree now carries each locally required
   engine-native law-category unlock while continuing to suppress vanilla unit
@@ -828,13 +849,15 @@ engine contract is evidenced; long playback remains separately renderer-bound.
   mechanics group for hardcoded pagan contracts. A checksum-guarded overlay of
   the installed marriage law extends availability (but never assigns a policy)
   for the Buddhist, Dharmic, Iranian, and Manichaean mechanics groups.
-- Full validation and the enabled-mod smoke are green. A fresh paused AD 1
-  observer start records zero removed-law, missing-advance, or invalid-policy
-  diagnostics. The same run preserves the prior clean script-system startup
-  result; sustained observer playback remains renderer-blocked.
+- Full validation and the enabled-mod smoke were green. The probe reported
+  zero removed-law, missing-advance, or invalid-policy diagnostics, but the
+  later full country-start observer exposed 440 inherited-template removals
+  outside that probe's coverage. The direct template-free repair and its fresh
+  zero-removal observer evidence supersede this assertion; see
+  `docs/playtests/AD1_STARTUP_DEFAULTS_20260721.md`.
 
-Next: retain this clean initialization checkpoint and continue the open M8/M9
-runtime gates without accepting a renderer-bound long-run claim.
+Next: use the later clean initialization checkpoint for the remaining M8/M9
+runtime gates; sustained observer playback remains renderer-blocked.
 
 ## 2026-07-21 - M12 AD 1 observer initialization is script-clean
 
