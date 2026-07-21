@@ -1296,3 +1296,39 @@ antq_hexi_han = { # P8.3;P10;BHR;CAM-HAN-REG; Hexi and Gansu Han regional proxy
 		antq_sinitic_group
 	}
 }
+
+antq_pontic = { # P8.1;P10;CAH-XI;PLE; Pontic regional proxy across a mixed coastal and inland Roman province
+	language = antq_anatolian_dialect
+	color = antq_culture_color_antq_pontic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_anatolian_group
+	}
+}
+
+antq_noric = { # P8.1;P10;CAH-XI;PLE; Noricum regional proxy without a claim of uniform Celtic continuity
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_noric
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_rhaetic = { # P8.1;P10;CAH-XI;PLE; Alpine Rhaetic regional proxy with a technical Latin language fallback
+	language = antq_italic_dialect
+	color = antq_culture_color_antq_rhaetic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_italic_group
+	}
+}
+
+antq_helvetian = { # P8.1;P10;CAH-XI;PLE; Helvetian regional proxy within Roman provincial society
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_helvetian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}

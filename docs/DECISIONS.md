@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Rhaetic uses the existing technical Latin fallback
+
+The verified build has no Rhaetic language root. The bounded Rhaetic culture
+therefore uses the same engine-valid Latin fallback already used for other
+under-documented residual European cultures. It is an implementation contract
+only and does not claim that Rhaetic was Latin or erase Alpine linguistic
+uncertainty.
+
 ## 2026-07-21 - Southwest China keeps an explicit engine-language fallback
 
 The installed language inventory lacks a verified Dian or Yelang language root.
