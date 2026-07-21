@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-21 - Korean peninsula frames separate population from commandery and later states
+
+The seventeenth selector batch maps Yeongnam to the existing Samhan proxy and
+Gyeonggi/Haeseo to the generic Korean community proxy. The latter is not a
+claim that Lelang's political commandery was a culture, that all residents were
+Han Chinese or indigenous, or that its contested boundary coincided with the
+installed areas. The Samhan row retains Jinhan-Byeonhan regional context and
+does not project Silla or Gaya identities backward. Already reviewed
+Buyeo-Goguryeoic, Wuhuan, and Songhua frames remain untouched.
+
+Sources weighed: plan section 8.3 (P8.3); section 10 (P10); National Institute
+of Korean History Lelang synthesis (HKG-LEL); OpenStax Samhan synthesis
+(OS-SAM).
+[secure broad regional context; contested local representation]
+
 ## 2026-07-21 - Carpathian Dacian and Getic frames retain the identity debate
 
 The sixteenth selector batch represents intra-Carpathian Transylvania with the
