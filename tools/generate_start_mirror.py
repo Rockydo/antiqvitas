@@ -792,6 +792,26 @@ def population_manager() -> tuple[str, int, Decimal]:
     return "\n".join(lines), len(owners), sum(sizes.values(), Decimal())
 
 
+def fallback_government_block(kind: str) -> list[str]:
+    """Render the minimal installed government shape for unsourced profiles.
+
+    The AD 1 source ledger deliberately leaves some collective and otherwise
+    un-attested polities outside the M6 historical-government roster.  They
+    still need a valid country government, but must not inherit one of the
+    vanilla 1337 templates: those templates serialize medieval laws and estate
+    privileges that the ANTIQVITAS government adapters correctly reject.
+    """
+    government_type = "tribe" if kind == "sop" else "monarchy"
+    heir_selection = "tribal_oldest_male" if kind == "sop" else "cognatic_primogeniture"
+    return [
+        "\t\t\tgovernment = {",
+        f"\t\t\t\ttype = {government_type}",
+        f"\t\t\t\their_selection = {heir_selection}",
+        "\t\t\t\truler = random",
+        "\t\t\t}",
+    ]
+
+
 def country_manager() -> tuple[str, int, int]:
     """Render M3 countries from checked ownership plus verified capitals.
 
@@ -826,7 +846,6 @@ def country_manager() -> tuple[str, int, int]:
         capital = row["map_capital"]
         if capital == "TBD":
             continue
-        template = "asia_advanced_tribe" if row["kind"] == "sop" else "east_asia_monarchy"
         lines.append(f'\t\t{tag_map[row["tag"]]} = {{ # {row["name"]}; {row["source"]}')
         groups = ownership.get(row["tag"], {"own_control_core": [capital]})
         for tenure in sorted(groups):
@@ -835,7 +854,9 @@ def country_manager() -> tuple[str, int, int]:
             lines.extend(f"\t\t\t\t{location}" for location in locations)
             lines.extend(("\t\t\t}", ""))
             controlled += len(locations)
-        lines.append(f'\t\t\tinclude = "{template}"')
+        # Do not include installed vanilla country templates.  Their modern
+        # default laws and estate privileges survive alongside the M6 adapter
+        # and emit invalid-government diagnostics at every AD 1 startup.
         lines.append(f'\t\t\tstarting_technology_level = {m8_technology_level(row)}')
         lines.append("\t\t\tdiscovered_regions = {")
         lines.extend(f"\t\t\t\t{region}" for region in m9_discovery_regions(row))
@@ -843,7 +864,7 @@ def country_manager() -> tuple[str, int, int]:
         if row["tag"] in power.governments:
             lines.extend(government_block(power.governments[row["tag"]]))
         else:
-            lines.append("\t\t\tgovernment = { ruler = random }")
+            lines.extend(fallback_government_block(row["kind"]))
         lines.extend((f"\t\t\tcapital = {capital}", "\t\t}", ""))
         count += 1
     lines.extend(("\t}", "}"))
