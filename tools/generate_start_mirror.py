@@ -593,11 +593,18 @@ def population_culture_remaps(owners: dict[str, str]) -> dict[str, dict[str, str
                 f"{' -> '.join((*trail, selector))}"
             )
         children = hierarchy.get(selector)
+        # The harvested hierarchy can list a location alongside its subordinate
+        # locations (for example ``kilkenny`` -> ``cullahill``, ``kilkenny``).
+        # Treat that direct self member as a leaf while retaining strict cycle
+        # detection for every indirect loop.
         if not children:
             return {selector}
         resolved: set[str] = set()
         for child in children:
-            resolved.update(leaves(child, (*trail, selector)))
+            if child == selector:
+                resolved.add(child)
+            else:
+                resolved.update(leaves(child, (*trail, selector)))
         return resolved
 
     remaps: dict[str, dict[str, str]] = {}

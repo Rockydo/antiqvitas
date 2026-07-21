@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-21 - M4 northern selector batch is observer-verified
+
+- Added 46 non-overlapping source-labelled selectors for Britain, Ireland,
+  Germania, Scandinavia, Finland, and the Baltic. They resolve 1,482 further
+  controlled locations, bringing the reviewed ledger to 93 selectors, 2,888
+  locations, and 37 mapped cultures.
+- `make validate` and the enabled-mod smoke are green; the latter has zero new
+  normalized error-log lines.
+- A fresh long-settle Observer map shows the Gaelic, Brittonic, Belgic,
+  Suebian, Baltic, and Uralic regional frames. Its archived log has zero
+  `jomini_script_system` and zero missing-law diagnostics after culture-panel
+  interaction. Evidence: `docs/playtests/M4_NORTHERN_ATLAS_20260721.md`.
+
+Next: extend the same source-qualified method into another bounded region; do
+not claim worldwide culture density or homogeneous local identities.
+
 ## 2026-07-21 - M4 source-led culture remap batch is observer-verified
 
 - Added a deterministic geography-selector ledger with 47 reviewed source
