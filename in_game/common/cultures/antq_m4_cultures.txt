@@ -1368,3 +1368,66 @@ antq_shauraseni_prakrit = { # P8.4;P10;CAH-XI;RGU-PRK; Mathura and upper-Gangeti
 		antq_indian_group
 	}
 }
+
+antq_frisian = { # P8.7;P10;CAH-XI;CAM-GERM; North Sea Frisian regional proxy without projecting a later Frisian standard
+	language = antq_germanic_dialect
+	color = antq_culture_color_antq_frisian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_germanic_group
+	}
+}
+
+antq_cheruscan = { # P8.7;P10;CAH-XI;OCD-CHER; Middle-Weser Cheruscan regional proxy without fixing a tribal frontier
+	language = antq_germanic_dialect
+	color = antq_culture_color_antq_cheruscan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_germanic_group
+	}
+}
+
+antq_chattic = { # P8.7;P10;CAH-XI;CAM-GERM; Hessian Chatti regional proxy without fixing a tribal frontier
+	language = antq_germanic_dialect
+	color = antq_culture_color_antq_chattic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_germanic_group
+	}
+}
+
+antq_semnonic = { # P8.7;P10;CAH-XI;CAM-GERM; Elbe-Havel Semnones regional proxy without treating a confederation as a state
+	language = antq_germanic_dialect
+	color = antq_culture_color_antq_semnonic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_germanic_group
+	}
+}
+
+antq_hermunduric = { # P8.7;P10;CAH-XI;CAM-GERM; Central German Hermunduri regional proxy without fixing a tribal frontier
+	language = antq_germanic_dialect
+	color = antq_culture_color_antq_hermunduric
+	tags = { european_gfx }
+	culture_groups = {
+		antq_germanic_group
+	}
+}
+
+antq_istvaeonic = { # P8.7;P10;CAH-XI;CAM-GERM; Lower-Rhine Istvaeonic regional proxy before later Frankish formations
+	language = antq_germanic_dialect
+	color = antq_culture_color_antq_istvaeonic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_germanic_group
+	}
+}
+
+antq_marcomannic = { # P8.7;P10;CAH-XI;CAM-GERM; Bohemian Marcomannic regional proxy under Maroboduus without a full tribal-border claim
+	language = antq_germanic_dialect
+	color = antq_culture_color_antq_marcomannic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_germanic_group
+	}
+}
