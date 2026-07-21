@@ -23,26 +23,63 @@ antq_m10_second.2000 = {
 	}
 }
 
-# Trajan's Dacian Wars; ANTIQVITAS master plan §9; UNE-DAC; recipient=ROM
+# Moche Emergence; P8.10;JSTOR-MOC;CAM-MOC; recipient=VIR
 antq_m10_second.2001 = {
 	type = country_event
 	title = antq_m10_second.2001.title
 	desc = antq_m10_second.2001.desc
+	outcome = positive
+	fire_only_once = yes
+	image = "gfx/interface/illustrations/event/antq_moche_formation.dds"
+	dynamic_historical_event = {
+		tag = VIR
+		from = 100.1.1
+		to = 101.1.1
+		monthly_chance = 100
+	}
+	option = {
+		name = antq_m10_second.2001.a
+		historical_option = yes
+		# P8.10; JSTOR-MOC; CAM-MOC; coarse north-coast local-mesh proxy.
+		location:chan_chan = {
+			create_country_from_location = {
+				define_unique_country_tag = MOC
+				change_country_name = MOC
+				change_country_adjective = MOC
+				change_country_color = map_MOC
+				change_country_flag = MOC
+				change_culture = culture:antq_moche
+				change_religion = religion:antq_andean
+				change_government_type = government_type:monarchy
+				add_reform = government_reform:antq_regional_kingship
+				change_heir_selection = heir_selection:cognatic_primogeniture
+			}
+			add_core = c:MOC
+		}
+		add_prestige = prestige_mild_bonus
+	}
+}
+
+# Trajan's Dacian Wars; ANTIQVITAS master plan §9; UNE-DAC; recipient=ROM
+antq_m10_second.2002 = {
+	type = country_event
+	title = antq_m10_second.2002.title
+	desc = antq_m10_second.2002.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_trajan_dacia.dds"
 	option = {
-		name = antq_m10_second.2001.a
+		name = antq_m10_second.2002.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
 	}
 }
 
 # Paper Standardized; ANTIQVITAS master plan §9; SMI-CAI; recipient=HAN
-antq_m10_second.2002 = {
+antq_m10_second.2003 = {
 	type = country_event
-	title = antq_m10_second.2002.title
-	desc = antq_m10_second.2002.desc
+	title = antq_m10_second.2003.title
+	desc = antq_m10_second.2003.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_cai_lun_paper.dds"
@@ -53,37 +90,37 @@ antq_m10_second.2002 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m10_second.2002.a
+		name = antq_m10_second.2003.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
 	}
 }
 
 # Trajan's Parthian War; ANTIQVITAS master plan §9; WIL-TPW; IRAN-TRAJ; recipient=ROM
-antq_m10_second.2003 = {
+antq_m10_second.2004 = {
 	type = country_event
-	title = antq_m10_second.2003.title
-	desc = antq_m10_second.2003.desc
+	title = antq_m10_second.2004.title
+	desc = antq_m10_second.2004.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_trajan_parthia.dds"
 	option = {
-		name = antq_m10_second.2003.a
+		name = antq_m10_second.2004.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
 	}
 }
 
 # Antioch Earthquake; ANTIQVITAS master plan §9; recipient=ROM
-antq_m10_second.2004 = {
+antq_m10_second.2005 = {
 	type = country_event
-	title = antq_m10_second.2004.title
-	desc = antq_m10_second.2004.desc
+	title = antq_m10_second.2005.title
+	desc = antq_m10_second.2005.desc
 	outcome = negative
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_antioch_earthquake.dds"
 	option = {
-		name = antq_m10_second.2004.a
+		name = antq_m10_second.2005.a
 		historical_option = yes
 		add_stability = stability_mild_penalty
 		add_prestige = prestige_mild_penalty
@@ -91,10 +128,10 @@ antq_m10_second.2004 = {
 }
 
 # Hadrian's Wall; ANTIQVITAS master plan §9; recipient=ROM
-antq_m10_second.2005 = {
+antq_m10_second.2006 = {
 	type = country_event
-	title = antq_m10_second.2005.title
-	desc = antq_m10_second.2005.desc
+	title = antq_m10_second.2006.title
+	desc = antq_m10_second.2006.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_hadrians_wall.dds"
@@ -105,35 +142,20 @@ antq_m10_second.2005 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m10_second.2005.a
+		name = antq_m10_second.2006.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
 	}
 }
 
 # Kushan Apogee; ANTIQVITAS master plan §9; recipient=YUE
-antq_m10_second.2006 = {
-	type = country_event
-	title = antq_m10_second.2006.title
-	desc = antq_m10_second.2006.desc
-	outcome = neutral
-	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_kanishka_apogee.dds"
-	option = {
-		name = antq_m10_second.2006.a
-		historical_option = yes
-		add_stability = stability_weak_penalty
-	}
-}
-
-# Bar Kokhba Revolt; ANTIQVITAS master plan §9; recipient=JUD
 antq_m10_second.2007 = {
 	type = country_event
 	title = antq_m10_second.2007.title
 	desc = antq_m10_second.2007.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_bar_kokhba.dds"
+	image = "gfx/interface/illustrations/event/antq_kanishka_apogee.dds"
 	option = {
 		name = antq_m10_second.2007.a
 		historical_option = yes
@@ -141,37 +163,31 @@ antq_m10_second.2007 = {
 	}
 }
 
-# Antonine Wall; ANTIQVITAS master plan §9; recipient=ROM
+# Bar Kokhba Revolt; ANTIQVITAS master plan §9; recipient=JUD
 antq_m10_second.2008 = {
 	type = country_event
 	title = antq_m10_second.2008.title
 	desc = antq_m10_second.2008.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_antonine_wall.dds"
-	dynamic_historical_event = {
-		tag = XAA
-		from = 142.1.1
-		to = 143.1.1
-		monthly_chance = 100
-	}
+	image = "gfx/interface/illustrations/event/antq_bar_kokhba.dds"
 	option = {
 		name = antq_m10_second.2008.a
 		historical_option = yes
-		add_prestige = prestige_mild_bonus
+		add_stability = stability_weak_penalty
 	}
 }
 
-# Celestial Masters; ANTIQVITAS master plan §9; CAM-CM; recipient=HAN
+# Antonine Wall; ANTIQVITAS master plan §9; recipient=ROM
 antq_m10_second.2009 = {
 	type = country_event
 	title = antq_m10_second.2009.title
 	desc = antq_m10_second.2009.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_celestial_masters.dds"
+	image = "gfx/interface/illustrations/event/antq_antonine_wall.dds"
 	dynamic_historical_event = {
-		tag = XAR
+		tag = XAA
 		from = 142.1.1
 		to = 143.1.1
 		monthly_chance = 100
@@ -183,29 +199,35 @@ antq_m10_second.2009 = {
 	}
 }
 
-# Gothic Migration; ANTIQVITAS master plan §9; recipient=GUT
+# Celestial Masters; ANTIQVITAS master plan §9; CAM-CM; recipient=HAN
 antq_m10_second.2010 = {
 	type = country_event
 	title = antq_m10_second.2010.title
 	desc = antq_m10_second.2010.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_gothic_migration.dds"
+	image = "gfx/interface/illustrations/event/antq_celestial_masters.dds"
+	dynamic_historical_event = {
+		tag = XAR
+		from = 142.1.1
+		to = 143.1.1
+		monthly_chance = 100
+	}
 	option = {
 		name = antq_m10_second.2010.a
 		historical_option = yes
-		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
 	}
 }
 
-# Verus' Parthian War; ANTIQVITAS master plan §9; recipient=ROM
+# Gothic Migration; ANTIQVITAS master plan §9; recipient=GUT
 antq_m10_second.2011 = {
 	type = country_event
 	title = antq_m10_second.2011.title
 	desc = antq_m10_second.2011.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_verus_parthia.dds"
+	image = "gfx/interface/illustrations/event/antq_gothic_migration.dds"
 	option = {
 		name = antq_m10_second.2011.a
 		historical_option = yes
@@ -213,16 +235,31 @@ antq_m10_second.2011 = {
 	}
 }
 
-# Antonine Plague; ANTIQVITAS master plan §9; SCI-ANT; recipient=ROM
+# Verus' Parthian War; ANTIQVITAS master plan §9; recipient=ROM
 antq_m10_second.2012 = {
 	type = country_event
 	title = antq_m10_second.2012.title
 	desc = antq_m10_second.2012.desc
+	outcome = neutral
+	fire_only_once = yes
+	image = "gfx/interface/illustrations/event/antq_verus_parthia.dds"
+	option = {
+		name = antq_m10_second.2012.a
+		historical_option = yes
+		add_stability = stability_weak_penalty
+	}
+}
+
+# Antonine Plague; ANTIQVITAS master plan §9; SCI-ANT; recipient=ROM
+antq_m10_second.2013 = {
+	type = country_event
+	title = antq_m10_second.2013.title
+	desc = antq_m10_second.2013.desc
 	outcome = negative
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_antonine_plague.dds"
 	option = {
-		name = antq_m10_second.2012.a
+		name = antq_m10_second.2013.a
 		historical_option = yes
 		add_stability = stability_mild_penalty
 		add_prestige = prestige_mild_penalty
@@ -234,10 +271,10 @@ antq_m10_second.2012 = {
 }
 
 # Daqin Embassy; ANTIQVITAS master plan §9; recipient=HAN
-antq_m10_second.2013 = {
+antq_m10_second.2014 = {
 	type = country_event
-	title = antq_m10_second.2013.title
-	desc = antq_m10_second.2013.desc
+	title = antq_m10_second.2014.title
+	desc = antq_m10_second.2014.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_daqin_embassy.dds"
@@ -248,35 +285,20 @@ antq_m10_second.2013 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m10_second.2013.a
+		name = antq_m10_second.2014.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
 	}
 }
 
 # Marcomannic Wars; ANTIQVITAS master plan §9; recipient=ROM
-antq_m10_second.2014 = {
-	type = country_event
-	title = antq_m10_second.2014.title
-	desc = antq_m10_second.2014.desc
-	outcome = neutral
-	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_marcomannic_wars.dds"
-	option = {
-		name = antq_m10_second.2014.a
-		historical_option = yes
-		add_stability = stability_weak_penalty
-	}
-}
-
-# Yellow Turban Rebellion; ANTIQVITAS master plan §9; CAM-CM; recipient=HAN
 antq_m10_second.2015 = {
 	type = country_event
 	title = antq_m10_second.2015.title
 	desc = antq_m10_second.2015.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_yellow_turbans.dds"
+	image = "gfx/interface/illustrations/event/antq_marcomannic_wars.dds"
 	option = {
 		name = antq_m10_second.2015.a
 		historical_option = yes
@@ -284,11 +306,26 @@ antq_m10_second.2015 = {
 	}
 }
 
-# Champa Founded; ANTIQVITAS master plan §9; CHAM-BIRTH; recipient=HAN
+# Yellow Turban Rebellion; ANTIQVITAS master plan §9; CAM-CM; recipient=HAN
 antq_m10_second.2016 = {
 	type = country_event
 	title = antq_m10_second.2016.title
 	desc = antq_m10_second.2016.desc
+	outcome = neutral
+	fire_only_once = yes
+	image = "gfx/interface/illustrations/event/antq_yellow_turbans.dds"
+	option = {
+		name = antq_m10_second.2016.a
+		historical_option = yes
+		add_stability = stability_weak_penalty
+	}
+}
+
+# Champa Founded; ANTIQVITAS master plan §9; CHAM-BIRTH; recipient=HAN
+antq_m10_second.2017 = {
+	type = country_event
+	title = antq_m10_second.2017.title
+	desc = antq_m10_second.2017.desc
 	outcome = positive
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_champa_formation.dds"
@@ -299,7 +336,7 @@ antq_m10_second.2016 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m10_second.2016.a
+		name = antq_m10_second.2017.a
 		historical_option = yes
 		# CHAM-BIRTH; Linyi/Rinan local-mesh proxy, documented in docs/ASSUMPTIONS.md.
 		location:amarendrapura = {
@@ -333,15 +370,15 @@ antq_m10_second.2016 = {
 }
 
 # Severan Settlement; ANTIQVITAS master plan §9; recipient=ROM
-antq_m10_second.2017 = {
+antq_m10_second.2018 = {
 	type = country_event
-	title = antq_m10_second.2017.title
-	desc = antq_m10_second.2017.desc
+	title = antq_m10_second.2018.title
+	desc = antq_m10_second.2018.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_five_emperors.dds"
 	option = {
-		name = antq_m10_second.2017.a
+		name = antq_m10_second.2018.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
 	}

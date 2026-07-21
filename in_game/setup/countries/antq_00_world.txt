@@ -1117,11 +1117,11 @@ WMS = { # West Mexican Societies; P8.10;CAH-XI
 	is_historic = yes
 }
 
-MOC = { # Moche; P8.10;CAH-XI
-	color = rgb { 157 90 55 }
-	color2 = rgb { 98 165 200 }
+VIR = { # Gallinazo Communities; P8.10;PNAS-VIR;WIL-GAL
+	color = rgb { 150 91 34 }
+	color2 = rgb { 105 164 221 }
 
-	culture_definition = antq_moche
+	culture_definition = antq_gallinazo
 	religion_definition = antq_andean
 	is_historic = yes
 }
@@ -1139,7 +1139,7 @@ XCW = { # Lima Culture; P8.10;CAH-XI
 	color = rgb { 158 89 32 }
 	color2 = rgb { 97 166 223 }
 
-	culture_definition = antq_moche
+	culture_definition = antq_andean_regional
 	religion_definition = antq_andean
 	is_historic = yes
 }
@@ -1148,7 +1148,7 @@ REC = { # Recuay; P8.10;CAH-XI
 	color = rgb { 169 96 36 }
 	color2 = rgb { 86 159 219 }
 
-	culture_definition = antq_moche
+	culture_definition = antq_recuay
 	religion_definition = antq_andean
 	is_historic = yes
 }
@@ -1157,7 +1157,7 @@ TIW = { # Early Tiwanaku; P8.10;CAH-XI
 	color = rgb { 175 93 34 }
 	color2 = rgb { 80 162 221 }
 
-	culture_definition = antq_moche
+	culture_definition = antq_tiwanaku
 	religion_definition = antq_andean
 	is_historic = yes
 }
@@ -1391,7 +1391,7 @@ AND = { # Andean Societies; P8.10;CAH-XI
 	color = rgb { 162 83 44 }
 	color2 = rgb { 93 172 211 }
 
-	culture_definition = antq_moche
+	culture_definition = antq_andean_regional
 	religion_definition = antq_andean
 	is_historic = yes
 }

@@ -1018,7 +1018,25 @@ antq_west_mexican = { # P8.10;P10;CAH-XI; West Mexican shaft-tomb and northern-f
 	}
 }
 
-antq_moche = { # P10;CAH-XI; Northern Andean Moche communities
+antq_andean_regional = { # P8.10;P10;P11; Generic non-uniform Andean population scaffold; technical Quechuan fallback is not a linguistic-uniformity claim
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_andean_regional
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_gallinazo = { # PNAS-VIR;WIL-GAL; North-coast archaeological proxy at AD 1; technical Quechuan fallback is not a language claim
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_gallinazo
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_moche = { # JSTOR-MOC;CAM-MOC; Post-AD 100 north-coast Moche cultural proxy; not a claim of a unified state
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_moche
 	tags = { european_gfx }

@@ -164,7 +164,7 @@ walloon,25,antq_germanic:1|antq_latin:24,Germania:1|Rome:24,arlon;ath;bastogne;b
 welsh,25,antq_brittonic:25,Britain:25,aberystwyth;anglesey;brecknock;builth;caerphilly;cardiff;cardigan;carmarthen
 yucatec_culture,25,antq_teotihuacano:25,Mesoamerica:25,calkini;chacchoben;chakan_yucatan;chichen_itza;coba;dzibilnocac;dzilam;ekab
 yuehai_culture,25,antq_han:25,China:25,baoan_dongguan;conghua;dongguan;duanxi;ducheng;gaoming;gaoyao;guanfu
-aimara_culture,24,antq_moche:21|antq_nazca:3,Andes:24,achacachi;axawiri;ayaviri;ayopaya;calamarca;chucuito;chuqiyapu;contornasa
+aimara_culture,24,antq_nazca:3|antq_tiwanaku:21,Andes:24,achacachi;axawiri;ayaviri;ayopaya;calamarca;chucuito;chuqiyapu;contornasa
 bosnian,24,antq_latin:24,Rome:24,borac;doboj;drijeva;gacko;glamoc;glaz;jajce;kljuc
 karelian,24,antq_uralic:19|antq_venedi:5,Eastern Europe:5|Finland:19,beryozovskoye;karhumagi;kizhi;kondpoga;konevets;korela;kurkijoki;kyyrola
 soninke,24,antq_mande:24,West Africa:24,bafoulabe;bakel;balle;ballou;diakha;diamou;diangounte_camara;diara
@@ -207,7 +207,7 @@ rakhine_culture,18,antq_mon:18,Southeast Asia:18,akyab;ann;chakaria;chittagong;g
 sinhalese,18,antq_indo_aryan:18,Lanka:18,anuradhapura;badulla;devanagara;galle;gampola;hambantota;hatthigiripura;kandy
 tigrinya,18,antq_nubian:18,Africa:18,abala;abiy_addi;adigrat;adwa;agula;antalo;asmara;axum
 venetian,18,antq_latin:18,Rome:18,bassano;belluno;castelfranco;ceneda;chioggia;conegliano;feltre;legnago
-wari_culture,18,antq_moche:11|antq_nazca:7,Andes:18,aruni;cahuachi;choccalpata;illapa;kaxa_marca;llucho;markahuamachuco;paqwayranra
+wari_culture,18,antq_andean_regional:1|antq_nazca:7|antq_recuay:4|antq_tiwanaku:6,Andes:18,aruni;cahuachi;choccalpata;illapa;kaxa_marca;llucho;markahuamachuco;paqwayranra
 yongzhou_culture,18,antq_han:18,China:18,changning;chenyang;dongan_yongzhou;guiyang_hengyang;lanshan;leiyang;lengshuitan;lianzhou
 albanian,17,antq_latin:17,Rome:17,argyrokastro;avlonya;ballsh;berat;butrint;debar;devol;dukagjini
 cham_culture,17,antq_han:4|antq_mon:13,China:4|Southeast Asia:13,amaravati;amarendrapura;aryaru;bal_cattinon;bong_son;camp_po_thit;chan_bo;dien_ban
@@ -301,7 +301,7 @@ mansi_culture,10,antq_xiongnu:10,Steppe:10,armizonskoye;berdyuzhye;chastoozerye;
 nivkh_culture,10,antq_xiongnu:10,Steppe:10,amgun;bitki;bulava;dzhuk;idy_sakhalin;nanghaer;nurgan;porokotan
 orang_rimba_culture,10,antq_mon:10,Southeast Asia:10,bingin;karang_brahi;lakitan;lalan;leko;musi;perbatasan;tembesi
 pruthenian,10,antq_baltic:10,Baltic:10,balga;brandenburg_prussia;gerdauen;gumbinnen;insterburg;labiau;ryn_poland;szczytno
-sacha_p_qulla_culture,10,antq_moche:10,Andes:10,chatuza;congona;huamanpata;huancachaca;karajia;kuelap;lamas;moyobamba
+sacha_p_qulla_culture,10,antq_andean_regional:6|antq_recuay:4,Andes:10,chatuza;congona;huamanpata;huancachaca;karajia;kuelap;lamas;moyobamba
 wolof,10,antq_mande:10,West Africa:10,beer_dun;dagana;diourbel;koki;linguere;mboune;ndar;ndiaganiao
 xinxiang_culture,10,antq_han:10,China:10,anhua_anhua;changsha;lukou;ningxiang;qiaokou;qingxiang;xiangtan;xiangyin
 akan,9,antq_mande:9,West Africa:9,begho;bondoukou;bono_manso;dormaa;fomena;goaso;kumasi;sampa
@@ -322,7 +322,7 @@ romagnol,9,antq_latin:9,Rome:9,cesena;faenza;imola;modigliana;montefeltro;pesaro
 serer,9,antq_mande:9,West Africa:9,diakhao;djilor;fandene;joal;kahone;portudal;sorokogne;tattaguine
 szekely_culture,9,antq_dacian:9,Danube:9,chezdi_osorheiu;covasna;cristuru_secuiesc;felvint;gheorgheni;miercurea_cluc;odorhei;sfantu_gheorghe
 braji,8,antq_indo_aryan:8,India:8,agra;chandwar;etawah;jalesar_doab;kanauj;kol;mathura;sargadwari
-chanka_culture,8,antq_moche:8,Andes:8,allpas;challwanqa;churkampa;huaman_karpa;llacsapallanca;sondor;tampu_machay;tayaccasa
+chanka_culture,8,antq_tiwanaku:8,Andes:8,allpas;challwanqa;churkampa;huaman_karpa;llacsapallanca;sondor;tampu_machay;tayaccasa
 dalmatian,8,antq_latin:8,Rome:8,brac;dubrovnik;krk;pag;sibenik;slano;split;zadar
 edo,8,antq_mande:8,West Africa:8,benin;ewu;idah;ozoro;ugbodu;ukunzu;uromi;uzea
 friulian,8,antq_latin:8,Rome:8,aquileia;cividale;gemona;pordenone;spilimbergo;tolmezzo;trieste;udine
@@ -384,13 +384,13 @@ santal_culture,6,antq_indo_aryan:6,India:6,baragram;bhadrak;dumka;ghasipura;jang
 tharu_culture,6,antq_indo_aryan:6,India:6,chaughera;kailali;kanchapur;kherigarh;lumbini;salianah
 tigre,6,antq_nubian:6,Africa:6,agordat;anseba;dahlak;keren;massawa;nafka
 wuzhou_culture,6,antq_han:6,China:6,dongyang;jinhua;jinyun;lanxi;wuyi_jinhua;yongkang
-xllang_culture,6,antq_moche:6,Andes:6,apurlec;farfan;pakatnamu;sana;tantaricuy;xllang
+xllang_culture,6,antq_andean_regional:5|antq_recuay:1,Andes:6,apurlec;farfan;pakatnamu;sana;tantaricuy;xllang
 yulin_culture,6,antq_han:6,China:6,beiliu;bobai;luchuan_rongzhou;nanliu;puning_rongzhou;shahe_bobai
 abkhazian_culture,5,antq_armenian:5,Caucasus:5,anacopia;bedia;lata_georgia;pitsunda;sukhumi
 anglo_irish,5,antq_gaelic:5,Ireland:5,cork;dublin;new_ross;waterford;wexford
 bazombo,5,antq_nubian:5,Africa:5,ambuila;cuilo;damba;nkunga;wembo
 bicolano_culture,5,antq_mon:5,Southeast Asia:5,daet;ibalong;naga_bikol;sawangan;vidak
-charka_culture,5,antq_moche:2|antq_nazca:3,Andes:5,arque;charka;colquechaca;sachchaa_mukku;sarkajpa
+charka_culture,5,antq_nazca:3|antq_tiwanaku:2,Andes:5,arque;charka;colquechaca;sachchaa_mukku;sarkajpa
 chitrali,5,antq_saka:5,India:5,chitral;mastuj;mulkhow;urtsun;yarkhun
 cuitlatec_culture,5,antq_teotihuacano:5,Mesoamerica:5,ajuchitlan;cihuatlan;cutzamala;tecpan;tetellan
 dongjiang_culture,5,antq_han:5,China:5,heping;heyuan;lankou;lianping;longchuan_xunzhou
@@ -426,7 +426,7 @@ avar_culture,4,antq_sarmatian:4,Pontic:4,kara_bazaar;khunzakh;terek;tindi
 balanta,4,antq_mande:4,West Africa:4,bafata;farim;geregia;marsassoum
 bobo,4,antq_mande:4,West Africa:4,faramana;niantjila;niena;sanzana
 burusho,4,antq_saka:4,India:4,altit;misgar;nagar;passu
-chimu_culture,4,antq_moche:4,Andes:4,chan_chan;chao;chimu;paramonga
+chimu_culture,4,antq_andean_regional:2|antq_gallinazo:1|antq_recuay:1,Andes:4,chan_chan;chao;chimu;paramonga
 chutia_culture,4,antq_indo_aryan:4,India:4,bengmara;dibrugarh;gomsi;sadiya
 chuvash_culture,4,antq_venedi:4,Eastern Europe:4,cherdakly;melekess;staraya_mayna;stavropol_na_volge
 dagbani,4,antq_mande:4,West Africa:4,banda_ahenkro;bole;nakpa;yendi
@@ -439,7 +439,7 @@ iranun_culture,4,antq_mon:4,Southeast Asia:4,initao;kalalaw;malabang;tukuran
 kaili_culture,4,antq_mon:4,Southeast Asia:4,donggala;managalang;parigi;sigi
 kamarupi,4,antq_indo_aryan:4,India:4,jalpaiguri;kamatapur;panchagarh;rangpur_bengal
 keres_culture,4,antq_teotihuacano:4,Mesoamerica:4,aaku;shiewhibak;teypana;tsiya
-killke_culture,4,antq_moche:2|antq_nazca:2,Andes:4,auccapana;quillarumiyoc;willka_pampa;yanahuara
+killke_culture,4,antq_nazca:2|antq_tiwanaku:2,Andes:4,auccapana;quillarumiyoc;willka_pampa;yanahuara
 kumyk_culture,4,antq_sarmatian:4,Pontic:4,boynak;endirey;tarki;temirkhan_shura
 lahu_culture,4,antq_han:4,China:4,kainan;nanan;yinshaluo;zheledian
 laz_culture,4,antq_latin:4,Rome:4,akkus;gumushane;khupati;mesudiye
@@ -480,7 +480,7 @@ blaan_culture,3,antq_mon:3,Southeast Asia:3,buluan;kabacan;minduso
 cappadocian_greek_culture,3,antq_greek_koine:1|antq_latin:2,Anatolia:1|Rome:2,aksaray;bekarlar;eregli_kar
 caxcan_culture,3,antq_teotihuacano:3,Mesoamerica:3,nochistlan;teulinchan;xochipillan
 cebuano_culture,3,antq_mon:3,Southeast Asia:3,kangdaya;singhapala;tanjay
-chincha_culture,3,antq_moche:3,Andes:3,chinchay;ica;puka_tampu
+chincha_culture,3,antq_andean_regional:3,Andes:3,chinchay;ica;puka_tampu
 chorti_culture,3,antq_teotihuacano:3,Mesoamerica:3,chiquimula;ocotepec;opoa
 cornish,3,antq_brittonic:3,Britain:3,bodmin;launceston;truro
 dehwar_culture,3,antq_parthian:3,Iran:3,kharan;khuzdar;mastung
@@ -493,7 +493,7 @@ guinan_culture,3,antq_han:3,China:3,lingfang;ningpu;xuanhua_nanning
 gurung_culture,3,antq_indo_aryan:3,India:3,dudhakunda;pokhara;tanahun
 gutnish,3,antq_germanic:3,Scandinavia:3,hoborg;slite;visby
 hengzhou_culture,3,antq_han:3,China:3,hengshan;hengyang;xincheng
-huarco_culture,3,antq_moche:3,Andes:3,chilca;huarco;incahuasi
+huarco_culture,3,antq_andean_regional:3,Andes:3,chilca;huarco;incahuasi
 huizhou_hakka_culture,3,antq_han:3,China:3,guishan;pingshan_huiyang;zuokeng
 jingpo_culture,3,antq_mon:3,Southeast Asia:3,injangyang;putao;suamprabon
 jola,3,antq_mande:3,West Africa:3,bintang;diaboudior;gambia
@@ -541,14 +541,14 @@ tomini_culture,3,antq_mon:3,Southeast Asia:3,pendau;toli_toli;tomini
 tonga_oceania_culture,3,antq_austronesian:3,Oceania:3,haapai;tongatapu;vauvau
 tsonga_culture,3,antq_nubian:3,Africa:3,chibuene;inhambane;manyikeni
 xianxi_culture,3,antq_han:3,China:3,chenxi;madi_yuanling;xupu
-ychsma_culture,3,antq_moche:3,Andes:3,huarochiri;ishma;rimaq
+ychsma_culture,3,antq_andean_regional:3,Andes:3,huarochiri;ishma;rimaq
 benue,2,antq_mande:2,West Africa:2,jos;zuba
 blang_culture,2,antq_han:2,China:2,shunning;youdian
 boholano_culture,2,antq_mon:2,Southeast Asia:2,bool;talibon
 buruwai_culture,2,antq_austronesian:2,Oceania:2,buruwai;kaimana
 buton_culture,2,antq_mon:2,Southeast Asia:2,butung;kalisusu
 butuanon_culture,2,antq_mon:2,Southeast Asia:2,butuan;cabadbaran
-churajon_culture,2,antq_moche:2,Andes:2,atico;caraveli
+churajon_culture,2,antq_andean_regional:2,Andes:2,atico;caraveli
 cuyonon_culture,2,antq_mon:2,Southeast Asia:2,busuanga;taytay
 dargin_culture,2,antq_sarmatian:2,Pontic:2,kubachi;terekli_mekteb
 fulao_culture,2,antq_han:2,China:2,haifeng;lufeng_haifeng
@@ -605,10 +605,10 @@ banggai_culture,1,antq_mon:1,Southeast Asia:1,banggai
 bima_culture,1,antq_mon:1,Southeast Asia:1,bima
 bungku_culture,1,antq_mon:1,Southeast Asia:1,bungku
 cabinda,1,antq_nubian:1,Africa:1,bungu_kongo
-canta_culture,1,antq_moche:1,Andes:1,cantamarca
+canta_culture,1,antq_andean_regional:1,Andes:1,cantamarca
 chiapanec_culture,1,antq_teotihuacano:1,Mesoamerica:1,jaltenango
-chiribaya_culture,1,antq_moche:1,Andes:1,arequipa
-collique_culture,1,antq_moche:1,Andes:1,collique
+chiribaya_culture,1,antq_andean_regional:1,Andes:1,arequipa
+collique_culture,1,antq_andean_regional:1,Andes:1,collique
 daga_papua_culture,1,antq_austronesian:1,Oceania:1,daga_papua
 deori_culture,1,antq_indo_aryan:1,India:1,tengapani
 derung_culture,1,antq_han:1,China:1,gongshan
@@ -618,7 +618,7 @@ fataluku_culture,1,antq_mon:1,Southeast Asia:1,tutuala
 fon,1,antq_mande:1,West Africa:1,ketu
 german_silesian,1,antq_germanic:1,Germania:1,rothenburg_oberlausitz
 gothic_culture,1,antq_sarmatian:1,Pontic:1,theodoro
-huayla_culture,1,antq_moche:1,Andes:1,waricoto
+huayla_culture,1,antq_recuay:1,Andes:1,waricoto
 huazhou_culture,1,antq_han:1,China:1,shilong
 hui_muslim_culture,1,antq_han:1,China:1,kaicheng_guyuan
 ibaloi_culture,1,antq_mon:1,Southeast Asia:1,agno

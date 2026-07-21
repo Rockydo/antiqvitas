@@ -14661,13 +14661,13 @@ countries = {
 			capital = huaxtla
 		}
 
-		MOC = { # Moche; P8.10;CAH-XI
+		VIR = { # Gallinazo Communities; P8.10;PNAS-VIR;WIL-GAL
 			own_control_core = {
 				chan_chan
 			}
 
-			include = "east_asia_monarchy"
-			starting_technology_level = 2
+			include = "asia_advanced_tribe"
+			starting_technology_level = 1
 			discovered_regions = {
 				andes_region
 			}

@@ -2206,11 +2206,87 @@ antq_m11_flavor.6115 = {
 	}
 }
 
-# Trajan's Dacian Wars — Conditions Develop; ANTIQVITAS master plan §9; UNE-DAC; recipient=XAA; trigger=XAA
+# Moche Emergence — Conditions Develop; P8.10;JSTOR-MOC;CAM-MOC; recipient=VIR; trigger=VIR
 antq_m11_flavor.6116 = {
 	type = country_event
 	title = antq_m11_flavor.6116.title
 	desc = antq_m11_flavor.6116.desc
+	outcome = neutral
+	fire_only_once = yes
+	image = "gfx/interface/illustrations/event/antq_moche_formation.dds"
+	dynamic_historical_event = {
+		tag = VIR
+		from = 100.3.15
+		to = 100.5.16
+		monthly_chance = 100
+	}
+	option = {
+		name = antq_m11_flavor.6116.a
+	}
+}
+
+# Moche Emergence — Pressure Builds; P8.10;JSTOR-MOC;CAM-MOC; recipient=VIR; trigger=VIR
+antq_m11_flavor.6117 = {
+	type = country_event
+	title = antq_m11_flavor.6117.title
+	desc = antq_m11_flavor.6117.desc
+	outcome = neutral
+	fire_only_once = yes
+	image = "gfx/interface/illustrations/event/antq_moche_formation.dds"
+	dynamic_historical_event = {
+		tag = VIR
+		from = 100.5.27
+		to = 100.7.28
+		monthly_chance = 100
+	}
+	option = {
+		name = antq_m11_flavor.6117.a
+	}
+}
+
+# Moche Emergence — A Contested Moment; P8.10;JSTOR-MOC;CAM-MOC; recipient=VIR; trigger=VIR
+antq_m11_flavor.6118 = {
+	type = country_event
+	title = antq_m11_flavor.6118.title
+	desc = antq_m11_flavor.6118.desc
+	outcome = neutral
+	fire_only_once = yes
+	image = "gfx/interface/illustrations/event/antq_moche_formation.dds"
+	dynamic_historical_event = {
+		tag = VIR
+		from = 100.8.8
+		to = 100.10.9
+		monthly_chance = 100
+	}
+	option = {
+		name = antq_m11_flavor.6118.a
+	}
+}
+
+# Moche Emergence — The Window Narrows; P8.10;JSTOR-MOC;CAM-MOC; recipient=VIR; trigger=VIR
+antq_m11_flavor.6119 = {
+	type = country_event
+	title = antq_m11_flavor.6119.title
+	desc = antq_m11_flavor.6119.desc
+	outcome = neutral
+	fire_only_once = yes
+	image = "gfx/interface/illustrations/event/antq_moche_formation.dds"
+	dynamic_historical_event = {
+		tag = VIR
+		from = 100.10.20
+		to = 100.12.21
+		monthly_chance = 100
+	}
+	option = {
+		name = antq_m11_flavor.6119.a
+	}
+}
+
+# Trajan's Dacian Wars — Conditions Develop; ANTIQVITAS master plan §9; UNE-DAC; recipient=XAA; trigger=XAA
+antq_m11_flavor.6120 = {
+	type = country_event
+	title = antq_m11_flavor.6120.title
+	desc = antq_m11_flavor.6120.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_trajan_dacia.dds"
@@ -2221,15 +2297,15 @@ antq_m11_flavor.6116 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6116.a
+		name = antq_m11_flavor.6120.a
 	}
 }
 
 # Trajan's Dacian Wars — Pressure Builds; ANTIQVITAS master plan §9; UNE-DAC; recipient=XAA; trigger=XAA
-antq_m11_flavor.6117 = {
+antq_m11_flavor.6121 = {
 	type = country_event
-	title = antq_m11_flavor.6117.title
-	desc = antq_m11_flavor.6117.desc
+	title = antq_m11_flavor.6121.title
+	desc = antq_m11_flavor.6121.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_trajan_dacia.dds"
@@ -2240,15 +2316,15 @@ antq_m11_flavor.6117 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6117.a
+		name = antq_m11_flavor.6121.a
 	}
 }
 
 # Trajan's Dacian Wars — A Contested Moment; ANTIQVITAS master plan §9; UNE-DAC; recipient=XAA; trigger=XAA
-antq_m11_flavor.6118 = {
+antq_m11_flavor.6122 = {
 	type = country_event
-	title = antq_m11_flavor.6118.title
-	desc = antq_m11_flavor.6118.desc
+	title = antq_m11_flavor.6122.title
+	desc = antq_m11_flavor.6122.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_trajan_dacia.dds"
@@ -2259,15 +2335,15 @@ antq_m11_flavor.6118 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6118.a
+		name = antq_m11_flavor.6122.a
 	}
 }
 
 # Trajan's Dacian Wars — The Window Narrows; ANTIQVITAS master plan §9; UNE-DAC; recipient=XAA; trigger=XAA
-antq_m11_flavor.6119 = {
+antq_m11_flavor.6123 = {
 	type = country_event
-	title = antq_m11_flavor.6119.title
-	desc = antq_m11_flavor.6119.desc
+	title = antq_m11_flavor.6123.title
+	desc = antq_m11_flavor.6123.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_trajan_dacia.dds"
@@ -2278,15 +2354,15 @@ antq_m11_flavor.6119 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6119.a
+		name = antq_m11_flavor.6123.a
 	}
 }
 
 # Paper Standardized — Conditions Develop; ANTIQVITAS master plan §9; SMI-CAI; recipient=XAR; trigger=XAR
-antq_m11_flavor.6120 = {
+antq_m11_flavor.6124 = {
 	type = country_event
-	title = antq_m11_flavor.6120.title
-	desc = antq_m11_flavor.6120.desc
+	title = antq_m11_flavor.6124.title
+	desc = antq_m11_flavor.6124.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_cai_lun_paper.dds"
@@ -2297,15 +2373,15 @@ antq_m11_flavor.6120 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6120.a
+		name = antq_m11_flavor.6124.a
 	}
 }
 
 # Paper Standardized — Pressure Builds; ANTIQVITAS master plan §9; SMI-CAI; recipient=XAR; trigger=XAR
-antq_m11_flavor.6121 = {
+antq_m11_flavor.6125 = {
 	type = country_event
-	title = antq_m11_flavor.6121.title
-	desc = antq_m11_flavor.6121.desc
+	title = antq_m11_flavor.6125.title
+	desc = antq_m11_flavor.6125.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_cai_lun_paper.dds"
@@ -2316,15 +2392,15 @@ antq_m11_flavor.6121 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6121.a
+		name = antq_m11_flavor.6125.a
 	}
 }
 
 # Paper Standardized — A Contested Moment; ANTIQVITAS master plan §9; SMI-CAI; recipient=XAR; trigger=XAR
-antq_m11_flavor.6122 = {
+antq_m11_flavor.6126 = {
 	type = country_event
-	title = antq_m11_flavor.6122.title
-	desc = antq_m11_flavor.6122.desc
+	title = antq_m11_flavor.6126.title
+	desc = antq_m11_flavor.6126.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_cai_lun_paper.dds"
@@ -2335,15 +2411,15 @@ antq_m11_flavor.6122 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6122.a
+		name = antq_m11_flavor.6126.a
 	}
 }
 
 # Paper Standardized — The Window Narrows; ANTIQVITAS master plan §9; SMI-CAI; recipient=XAR; trigger=XAR
-antq_m11_flavor.6123 = {
+antq_m11_flavor.6127 = {
 	type = country_event
-	title = antq_m11_flavor.6123.title
-	desc = antq_m11_flavor.6123.desc
+	title = antq_m11_flavor.6127.title
+	desc = antq_m11_flavor.6127.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_cai_lun_paper.dds"
@@ -2354,15 +2430,15 @@ antq_m11_flavor.6123 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6123.a
+		name = antq_m11_flavor.6127.a
 	}
 }
 
 # Trajan's Parthian War — Conditions Develop; ANTIQVITAS master plan §9; WIL-TPW; IRAN-TRAJ; recipient=XAA; trigger=XAA
-antq_m11_flavor.6124 = {
+antq_m11_flavor.6128 = {
 	type = country_event
-	title = antq_m11_flavor.6124.title
-	desc = antq_m11_flavor.6124.desc
+	title = antq_m11_flavor.6128.title
+	desc = antq_m11_flavor.6128.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_trajan_parthia.dds"
@@ -2373,15 +2449,15 @@ antq_m11_flavor.6124 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6124.a
+		name = antq_m11_flavor.6128.a
 	}
 }
 
 # Trajan's Parthian War — Pressure Builds; ANTIQVITAS master plan §9; WIL-TPW; IRAN-TRAJ; recipient=XAA; trigger=XAA
-antq_m11_flavor.6125 = {
+antq_m11_flavor.6129 = {
 	type = country_event
-	title = antq_m11_flavor.6125.title
-	desc = antq_m11_flavor.6125.desc
+	title = antq_m11_flavor.6129.title
+	desc = antq_m11_flavor.6129.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_trajan_parthia.dds"
@@ -2392,15 +2468,15 @@ antq_m11_flavor.6125 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6125.a
+		name = antq_m11_flavor.6129.a
 	}
 }
 
 # Trajan's Parthian War — A Contested Moment; ANTIQVITAS master plan §9; WIL-TPW; IRAN-TRAJ; recipient=XAA; trigger=XAA
-antq_m11_flavor.6126 = {
+antq_m11_flavor.6130 = {
 	type = country_event
-	title = antq_m11_flavor.6126.title
-	desc = antq_m11_flavor.6126.desc
+	title = antq_m11_flavor.6130.title
+	desc = antq_m11_flavor.6130.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_trajan_parthia.dds"
@@ -2411,15 +2487,15 @@ antq_m11_flavor.6126 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6126.a
+		name = antq_m11_flavor.6130.a
 	}
 }
 
 # Trajan's Parthian War — The Window Narrows; ANTIQVITAS master plan §9; WIL-TPW; IRAN-TRAJ; recipient=XAA; trigger=XAA
-antq_m11_flavor.6127 = {
+antq_m11_flavor.6131 = {
 	type = country_event
-	title = antq_m11_flavor.6127.title
-	desc = antq_m11_flavor.6127.desc
+	title = antq_m11_flavor.6131.title
+	desc = antq_m11_flavor.6131.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_trajan_parthia.dds"
@@ -2430,15 +2506,15 @@ antq_m11_flavor.6127 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6127.a
+		name = antq_m11_flavor.6131.a
 	}
 }
 
 # Antioch Earthquake — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6128 = {
+antq_m11_flavor.6132 = {
 	type = country_event
-	title = antq_m11_flavor.6128.title
-	desc = antq_m11_flavor.6128.desc
+	title = antq_m11_flavor.6132.title
+	desc = antq_m11_flavor.6132.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_antioch_earthquake.dds"
@@ -2449,15 +2525,15 @@ antq_m11_flavor.6128 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6128.a
+		name = antq_m11_flavor.6132.a
 	}
 }
 
 # Antioch Earthquake — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6129 = {
+antq_m11_flavor.6133 = {
 	type = country_event
-	title = antq_m11_flavor.6129.title
-	desc = antq_m11_flavor.6129.desc
+	title = antq_m11_flavor.6133.title
+	desc = antq_m11_flavor.6133.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_antioch_earthquake.dds"
@@ -2468,15 +2544,15 @@ antq_m11_flavor.6129 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6129.a
+		name = antq_m11_flavor.6133.a
 	}
 }
 
 # Antioch Earthquake — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6130 = {
+antq_m11_flavor.6134 = {
 	type = country_event
-	title = antq_m11_flavor.6130.title
-	desc = antq_m11_flavor.6130.desc
+	title = antq_m11_flavor.6134.title
+	desc = antq_m11_flavor.6134.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_antioch_earthquake.dds"
@@ -2487,15 +2563,15 @@ antq_m11_flavor.6130 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6130.a
+		name = antq_m11_flavor.6134.a
 	}
 }
 
 # Antioch Earthquake — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6131 = {
+antq_m11_flavor.6135 = {
 	type = country_event
-	title = antq_m11_flavor.6131.title
-	desc = antq_m11_flavor.6131.desc
+	title = antq_m11_flavor.6135.title
+	desc = antq_m11_flavor.6135.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_antioch_earthquake.dds"
@@ -2506,15 +2582,15 @@ antq_m11_flavor.6131 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6131.a
+		name = antq_m11_flavor.6135.a
 	}
 }
 
 # Hadrian's Wall — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6132 = {
+antq_m11_flavor.6136 = {
 	type = country_event
-	title = antq_m11_flavor.6132.title
-	desc = antq_m11_flavor.6132.desc
+	title = antq_m11_flavor.6136.title
+	desc = antq_m11_flavor.6136.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_hadrians_wall.dds"
@@ -2525,15 +2601,15 @@ antq_m11_flavor.6132 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6132.a
+		name = antq_m11_flavor.6136.a
 	}
 }
 
 # Hadrian's Wall — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6133 = {
+antq_m11_flavor.6137 = {
 	type = country_event
-	title = antq_m11_flavor.6133.title
-	desc = antq_m11_flavor.6133.desc
+	title = antq_m11_flavor.6137.title
+	desc = antq_m11_flavor.6137.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_hadrians_wall.dds"
@@ -2544,15 +2620,15 @@ antq_m11_flavor.6133 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6133.a
+		name = antq_m11_flavor.6137.a
 	}
 }
 
 # Hadrian's Wall — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6134 = {
+antq_m11_flavor.6138 = {
 	type = country_event
-	title = antq_m11_flavor.6134.title
-	desc = antq_m11_flavor.6134.desc
+	title = antq_m11_flavor.6138.title
+	desc = antq_m11_flavor.6138.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_hadrians_wall.dds"
@@ -2563,15 +2639,15 @@ antq_m11_flavor.6134 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6134.a
+		name = antq_m11_flavor.6138.a
 	}
 }
 
 # Hadrian's Wall — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6135 = {
+antq_m11_flavor.6139 = {
 	type = country_event
-	title = antq_m11_flavor.6135.title
-	desc = antq_m11_flavor.6135.desc
+	title = antq_m11_flavor.6139.title
+	desc = antq_m11_flavor.6139.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_hadrians_wall.dds"
@@ -2582,15 +2658,15 @@ antq_m11_flavor.6135 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6135.a
+		name = antq_m11_flavor.6139.a
 	}
 }
 
 # Kushan Apogee — Conditions Develop; ANTIQVITAS master plan §9; recipient=YUE; trigger=YUE
-antq_m11_flavor.6136 = {
+antq_m11_flavor.6140 = {
 	type = country_event
-	title = antq_m11_flavor.6136.title
-	desc = antq_m11_flavor.6136.desc
+	title = antq_m11_flavor.6140.title
+	desc = antq_m11_flavor.6140.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_kanishka_apogee.dds"
@@ -2601,15 +2677,15 @@ antq_m11_flavor.6136 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6136.a
+		name = antq_m11_flavor.6140.a
 	}
 }
 
 # Kushan Apogee — Pressure Builds; ANTIQVITAS master plan §9; recipient=YUE; trigger=YUE
-antq_m11_flavor.6137 = {
+antq_m11_flavor.6141 = {
 	type = country_event
-	title = antq_m11_flavor.6137.title
-	desc = antq_m11_flavor.6137.desc
+	title = antq_m11_flavor.6141.title
+	desc = antq_m11_flavor.6141.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_kanishka_apogee.dds"
@@ -2620,15 +2696,15 @@ antq_m11_flavor.6137 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6137.a
+		name = antq_m11_flavor.6141.a
 	}
 }
 
 # Kushan Apogee — A Contested Moment; ANTIQVITAS master plan §9; recipient=YUE; trigger=YUE
-antq_m11_flavor.6138 = {
+antq_m11_flavor.6142 = {
 	type = country_event
-	title = antq_m11_flavor.6138.title
-	desc = antq_m11_flavor.6138.desc
+	title = antq_m11_flavor.6142.title
+	desc = antq_m11_flavor.6142.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_kanishka_apogee.dds"
@@ -2639,15 +2715,15 @@ antq_m11_flavor.6138 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6138.a
+		name = antq_m11_flavor.6142.a
 	}
 }
 
 # Kushan Apogee — The Window Narrows; ANTIQVITAS master plan §9; recipient=YUE; trigger=YUE
-antq_m11_flavor.6139 = {
+antq_m11_flavor.6143 = {
 	type = country_event
-	title = antq_m11_flavor.6139.title
-	desc = antq_m11_flavor.6139.desc
+	title = antq_m11_flavor.6143.title
+	desc = antq_m11_flavor.6143.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_kanishka_apogee.dds"
@@ -2658,15 +2734,15 @@ antq_m11_flavor.6139 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6139.a
+		name = antq_m11_flavor.6143.a
 	}
 }
 
 # Bar Kokhba Revolt — Conditions Develop; ANTIQVITAS master plan §9; recipient=JUD; trigger=JUD
-antq_m11_flavor.6140 = {
+antq_m11_flavor.6144 = {
 	type = country_event
-	title = antq_m11_flavor.6140.title
-	desc = antq_m11_flavor.6140.desc
+	title = antq_m11_flavor.6144.title
+	desc = antq_m11_flavor.6144.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_bar_kokhba.dds"
@@ -2677,15 +2753,15 @@ antq_m11_flavor.6140 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6140.a
+		name = antq_m11_flavor.6144.a
 	}
 }
 
 # Bar Kokhba Revolt — Pressure Builds; ANTIQVITAS master plan §9; recipient=JUD; trigger=JUD
-antq_m11_flavor.6141 = {
+antq_m11_flavor.6145 = {
 	type = country_event
-	title = antq_m11_flavor.6141.title
-	desc = antq_m11_flavor.6141.desc
+	title = antq_m11_flavor.6145.title
+	desc = antq_m11_flavor.6145.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_bar_kokhba.dds"
@@ -2696,15 +2772,15 @@ antq_m11_flavor.6141 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6141.a
+		name = antq_m11_flavor.6145.a
 	}
 }
 
 # Bar Kokhba Revolt — A Contested Moment; ANTIQVITAS master plan §9; recipient=JUD; trigger=JUD
-antq_m11_flavor.6142 = {
+antq_m11_flavor.6146 = {
 	type = country_event
-	title = antq_m11_flavor.6142.title
-	desc = antq_m11_flavor.6142.desc
+	title = antq_m11_flavor.6146.title
+	desc = antq_m11_flavor.6146.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_bar_kokhba.dds"
@@ -2715,15 +2791,15 @@ antq_m11_flavor.6142 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6142.a
+		name = antq_m11_flavor.6146.a
 	}
 }
 
 # Bar Kokhba Revolt — The Window Narrows; ANTIQVITAS master plan §9; recipient=JUD; trigger=JUD
-antq_m11_flavor.6143 = {
+antq_m11_flavor.6147 = {
 	type = country_event
-	title = antq_m11_flavor.6143.title
-	desc = antq_m11_flavor.6143.desc
+	title = antq_m11_flavor.6147.title
+	desc = antq_m11_flavor.6147.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_bar_kokhba.dds"
@@ -2734,96 +2810,20 @@ antq_m11_flavor.6143 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6143.a
-	}
-}
-
-# Antonine Wall — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6144 = {
-	type = country_event
-	title = antq_m11_flavor.6144.title
-	desc = antq_m11_flavor.6144.desc
-	outcome = neutral
-	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_antonine_wall.dds"
-	dynamic_historical_event = {
-		tag = XAA
-		from = 142.3.15
-		to = 142.5.16
-		monthly_chance = 100
-	}
-	option = {
-		name = antq_m11_flavor.6144.a
-	}
-}
-
-# Antonine Wall — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6145 = {
-	type = country_event
-	title = antq_m11_flavor.6145.title
-	desc = antq_m11_flavor.6145.desc
-	outcome = neutral
-	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_antonine_wall.dds"
-	dynamic_historical_event = {
-		tag = XAA
-		from = 142.5.27
-		to = 142.7.28
-		monthly_chance = 100
-	}
-	option = {
-		name = antq_m11_flavor.6145.a
-	}
-}
-
-# Antonine Wall — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6146 = {
-	type = country_event
-	title = antq_m11_flavor.6146.title
-	desc = antq_m11_flavor.6146.desc
-	outcome = neutral
-	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_antonine_wall.dds"
-	dynamic_historical_event = {
-		tag = XAA
-		from = 142.8.8
-		to = 142.10.9
-		monthly_chance = 100
-	}
-	option = {
-		name = antq_m11_flavor.6146.a
-	}
-}
-
-# Antonine Wall — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6147 = {
-	type = country_event
-	title = antq_m11_flavor.6147.title
-	desc = antq_m11_flavor.6147.desc
-	outcome = neutral
-	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_antonine_wall.dds"
-	dynamic_historical_event = {
-		tag = XAA
-		from = 142.10.20
-		to = 142.12.21
-		monthly_chance = 100
-	}
-	option = {
 		name = antq_m11_flavor.6147.a
 	}
 }
 
-# Celestial Masters — Conditions Develop; ANTIQVITAS master plan §9; CAM-CM; recipient=XAR; trigger=XAR
+# Antonine Wall — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6148 = {
 	type = country_event
 	title = antq_m11_flavor.6148.title
 	desc = antq_m11_flavor.6148.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_celestial_masters.dds"
+	image = "gfx/interface/illustrations/event/antq_antonine_wall.dds"
 	dynamic_historical_event = {
-		tag = XAR
+		tag = XAA
 		from = 142.3.15
 		to = 142.5.16
 		monthly_chance = 100
@@ -2833,11 +2833,87 @@ antq_m11_flavor.6148 = {
 	}
 }
 
-# Celestial Masters — Pressure Builds; ANTIQVITAS master plan §9; CAM-CM; recipient=XAR; trigger=XAR
+# Antonine Wall — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6149 = {
 	type = country_event
 	title = antq_m11_flavor.6149.title
 	desc = antq_m11_flavor.6149.desc
+	outcome = neutral
+	fire_only_once = yes
+	image = "gfx/interface/illustrations/event/antq_antonine_wall.dds"
+	dynamic_historical_event = {
+		tag = XAA
+		from = 142.5.27
+		to = 142.7.28
+		monthly_chance = 100
+	}
+	option = {
+		name = antq_m11_flavor.6149.a
+	}
+}
+
+# Antonine Wall — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+antq_m11_flavor.6150 = {
+	type = country_event
+	title = antq_m11_flavor.6150.title
+	desc = antq_m11_flavor.6150.desc
+	outcome = neutral
+	fire_only_once = yes
+	image = "gfx/interface/illustrations/event/antq_antonine_wall.dds"
+	dynamic_historical_event = {
+		tag = XAA
+		from = 142.8.8
+		to = 142.10.9
+		monthly_chance = 100
+	}
+	option = {
+		name = antq_m11_flavor.6150.a
+	}
+}
+
+# Antonine Wall — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+antq_m11_flavor.6151 = {
+	type = country_event
+	title = antq_m11_flavor.6151.title
+	desc = antq_m11_flavor.6151.desc
+	outcome = neutral
+	fire_only_once = yes
+	image = "gfx/interface/illustrations/event/antq_antonine_wall.dds"
+	dynamic_historical_event = {
+		tag = XAA
+		from = 142.10.20
+		to = 142.12.21
+		monthly_chance = 100
+	}
+	option = {
+		name = antq_m11_flavor.6151.a
+	}
+}
+
+# Celestial Masters — Conditions Develop; ANTIQVITAS master plan §9; CAM-CM; recipient=XAR; trigger=XAR
+antq_m11_flavor.6152 = {
+	type = country_event
+	title = antq_m11_flavor.6152.title
+	desc = antq_m11_flavor.6152.desc
+	outcome = neutral
+	fire_only_once = yes
+	image = "gfx/interface/illustrations/event/antq_celestial_masters.dds"
+	dynamic_historical_event = {
+		tag = XAR
+		from = 142.3.15
+		to = 142.5.16
+		monthly_chance = 100
+	}
+	option = {
+		name = antq_m11_flavor.6152.a
+	}
+}
+
+# Celestial Masters — Pressure Builds; ANTIQVITAS master plan §9; CAM-CM; recipient=XAR; trigger=XAR
+antq_m11_flavor.6153 = {
+	type = country_event
+	title = antq_m11_flavor.6153.title
+	desc = antq_m11_flavor.6153.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_celestial_masters.dds"
@@ -2848,15 +2924,15 @@ antq_m11_flavor.6149 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6149.a
+		name = antq_m11_flavor.6153.a
 	}
 }
 
 # Celestial Masters — A Contested Moment; ANTIQVITAS master plan §9; CAM-CM; recipient=XAR; trigger=XAR
-antq_m11_flavor.6150 = {
+antq_m11_flavor.6154 = {
 	type = country_event
-	title = antq_m11_flavor.6150.title
-	desc = antq_m11_flavor.6150.desc
+	title = antq_m11_flavor.6154.title
+	desc = antq_m11_flavor.6154.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_celestial_masters.dds"
@@ -2867,15 +2943,15 @@ antq_m11_flavor.6150 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6150.a
+		name = antq_m11_flavor.6154.a
 	}
 }
 
 # Celestial Masters — The Window Narrows; ANTIQVITAS master plan §9; CAM-CM; recipient=XAR; trigger=XAR
-antq_m11_flavor.6151 = {
+antq_m11_flavor.6155 = {
 	type = country_event
-	title = antq_m11_flavor.6151.title
-	desc = antq_m11_flavor.6151.desc
+	title = antq_m11_flavor.6155.title
+	desc = antq_m11_flavor.6155.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_celestial_masters.dds"
@@ -2886,15 +2962,15 @@ antq_m11_flavor.6151 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6151.a
+		name = antq_m11_flavor.6155.a
 	}
 }
 
 # Gothic Migration — Conditions Develop; ANTIQVITAS master plan §9; recipient=GUT; trigger=GUT
-antq_m11_flavor.6152 = {
+antq_m11_flavor.6156 = {
 	type = country_event
-	title = antq_m11_flavor.6152.title
-	desc = antq_m11_flavor.6152.desc
+	title = antq_m11_flavor.6156.title
+	desc = antq_m11_flavor.6156.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_gothic_migration.dds"
@@ -2905,15 +2981,15 @@ antq_m11_flavor.6152 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6152.a
+		name = antq_m11_flavor.6156.a
 	}
 }
 
 # Gothic Migration — Pressure Builds; ANTIQVITAS master plan §9; recipient=GUT; trigger=GUT
-antq_m11_flavor.6153 = {
+antq_m11_flavor.6157 = {
 	type = country_event
-	title = antq_m11_flavor.6153.title
-	desc = antq_m11_flavor.6153.desc
+	title = antq_m11_flavor.6157.title
+	desc = antq_m11_flavor.6157.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_gothic_migration.dds"
@@ -2924,15 +3000,15 @@ antq_m11_flavor.6153 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6153.a
+		name = antq_m11_flavor.6157.a
 	}
 }
 
 # Gothic Migration — A Contested Moment; ANTIQVITAS master plan §9; recipient=GUT; trigger=GUT
-antq_m11_flavor.6154 = {
+antq_m11_flavor.6158 = {
 	type = country_event
-	title = antq_m11_flavor.6154.title
-	desc = antq_m11_flavor.6154.desc
+	title = antq_m11_flavor.6158.title
+	desc = antq_m11_flavor.6158.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_gothic_migration.dds"
@@ -2943,15 +3019,15 @@ antq_m11_flavor.6154 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6154.a
+		name = antq_m11_flavor.6158.a
 	}
 }
 
 # Gothic Migration — The Window Narrows; ANTIQVITAS master plan §9; recipient=GUT; trigger=GUT
-antq_m11_flavor.6155 = {
+antq_m11_flavor.6159 = {
 	type = country_event
-	title = antq_m11_flavor.6155.title
-	desc = antq_m11_flavor.6155.desc
+	title = antq_m11_flavor.6159.title
+	desc = antq_m11_flavor.6159.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_gothic_migration.dds"
@@ -2962,15 +3038,15 @@ antq_m11_flavor.6155 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6155.a
+		name = antq_m11_flavor.6159.a
 	}
 }
 
 # Verus' Parthian War — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6156 = {
+antq_m11_flavor.6160 = {
 	type = country_event
-	title = antq_m11_flavor.6156.title
-	desc = antq_m11_flavor.6156.desc
+	title = antq_m11_flavor.6160.title
+	desc = antq_m11_flavor.6160.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_verus_parthia.dds"
@@ -2981,15 +3057,15 @@ antq_m11_flavor.6156 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6156.a
+		name = antq_m11_flavor.6160.a
 	}
 }
 
 # Verus' Parthian War — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6157 = {
+antq_m11_flavor.6161 = {
 	type = country_event
-	title = antq_m11_flavor.6157.title
-	desc = antq_m11_flavor.6157.desc
+	title = antq_m11_flavor.6161.title
+	desc = antq_m11_flavor.6161.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_verus_parthia.dds"
@@ -3000,15 +3076,15 @@ antq_m11_flavor.6157 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6157.a
+		name = antq_m11_flavor.6161.a
 	}
 }
 
 # Verus' Parthian War — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6158 = {
+antq_m11_flavor.6162 = {
 	type = country_event
-	title = antq_m11_flavor.6158.title
-	desc = antq_m11_flavor.6158.desc
+	title = antq_m11_flavor.6162.title
+	desc = antq_m11_flavor.6162.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_verus_parthia.dds"
@@ -3019,15 +3095,15 @@ antq_m11_flavor.6158 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6158.a
+		name = antq_m11_flavor.6162.a
 	}
 }
 
 # Verus' Parthian War — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6159 = {
+antq_m11_flavor.6163 = {
 	type = country_event
-	title = antq_m11_flavor.6159.title
-	desc = antq_m11_flavor.6159.desc
+	title = antq_m11_flavor.6163.title
+	desc = antq_m11_flavor.6163.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_verus_parthia.dds"
@@ -3038,15 +3114,15 @@ antq_m11_flavor.6159 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6159.a
+		name = antq_m11_flavor.6163.a
 	}
 }
 
 # Antonine Plague — Conditions Develop; ANTIQVITAS master plan §9; SCI-ANT; recipient=XAA; trigger=XAA
-antq_m11_flavor.6160 = {
+antq_m11_flavor.6164 = {
 	type = country_event
-	title = antq_m11_flavor.6160.title
-	desc = antq_m11_flavor.6160.desc
+	title = antq_m11_flavor.6164.title
+	desc = antq_m11_flavor.6164.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_antonine_plague.dds"
@@ -3057,15 +3133,15 @@ antq_m11_flavor.6160 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6160.a
+		name = antq_m11_flavor.6164.a
 	}
 }
 
 # Antonine Plague — Pressure Builds; ANTIQVITAS master plan §9; SCI-ANT; recipient=XAA; trigger=XAA
-antq_m11_flavor.6161 = {
+antq_m11_flavor.6165 = {
 	type = country_event
-	title = antq_m11_flavor.6161.title
-	desc = antq_m11_flavor.6161.desc
+	title = antq_m11_flavor.6165.title
+	desc = antq_m11_flavor.6165.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_antonine_plague.dds"
@@ -3076,15 +3152,15 @@ antq_m11_flavor.6161 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6161.a
+		name = antq_m11_flavor.6165.a
 	}
 }
 
 # Antonine Plague — A Contested Moment; ANTIQVITAS master plan §9; SCI-ANT; recipient=XAA; trigger=XAA
-antq_m11_flavor.6162 = {
+antq_m11_flavor.6166 = {
 	type = country_event
-	title = antq_m11_flavor.6162.title
-	desc = antq_m11_flavor.6162.desc
+	title = antq_m11_flavor.6166.title
+	desc = antq_m11_flavor.6166.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_antonine_plague.dds"
@@ -3095,15 +3171,15 @@ antq_m11_flavor.6162 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6162.a
+		name = antq_m11_flavor.6166.a
 	}
 }
 
 # Antonine Plague — The Window Narrows; ANTIQVITAS master plan §9; SCI-ANT; recipient=XAA; trigger=XAA
-antq_m11_flavor.6163 = {
+antq_m11_flavor.6167 = {
 	type = country_event
-	title = antq_m11_flavor.6163.title
-	desc = antq_m11_flavor.6163.desc
+	title = antq_m11_flavor.6167.title
+	desc = antq_m11_flavor.6167.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_antonine_plague.dds"
@@ -3114,15 +3190,15 @@ antq_m11_flavor.6163 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6163.a
+		name = antq_m11_flavor.6167.a
 	}
 }
 
 # Daqin Embassy — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
-antq_m11_flavor.6164 = {
+antq_m11_flavor.6168 = {
 	type = country_event
-	title = antq_m11_flavor.6164.title
-	desc = antq_m11_flavor.6164.desc
+	title = antq_m11_flavor.6168.title
+	desc = antq_m11_flavor.6168.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_daqin_embassy.dds"
@@ -3133,15 +3209,15 @@ antq_m11_flavor.6164 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6164.a
+		name = antq_m11_flavor.6168.a
 	}
 }
 
 # Daqin Embassy — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
-antq_m11_flavor.6165 = {
+antq_m11_flavor.6169 = {
 	type = country_event
-	title = antq_m11_flavor.6165.title
-	desc = antq_m11_flavor.6165.desc
+	title = antq_m11_flavor.6169.title
+	desc = antq_m11_flavor.6169.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_daqin_embassy.dds"
@@ -3152,15 +3228,15 @@ antq_m11_flavor.6165 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6165.a
+		name = antq_m11_flavor.6169.a
 	}
 }
 
 # Daqin Embassy — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
-antq_m11_flavor.6166 = {
+antq_m11_flavor.6170 = {
 	type = country_event
-	title = antq_m11_flavor.6166.title
-	desc = antq_m11_flavor.6166.desc
+	title = antq_m11_flavor.6170.title
+	desc = antq_m11_flavor.6170.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_daqin_embassy.dds"
@@ -3171,15 +3247,15 @@ antq_m11_flavor.6166 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6166.a
+		name = antq_m11_flavor.6170.a
 	}
 }
 
 # Daqin Embassy — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
-antq_m11_flavor.6167 = {
+antq_m11_flavor.6171 = {
 	type = country_event
-	title = antq_m11_flavor.6167.title
-	desc = antq_m11_flavor.6167.desc
+	title = antq_m11_flavor.6171.title
+	desc = antq_m11_flavor.6171.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_daqin_embassy.dds"
@@ -3190,15 +3266,15 @@ antq_m11_flavor.6167 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6167.a
+		name = antq_m11_flavor.6171.a
 	}
 }
 
 # Marcomannic Wars — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6168 = {
+antq_m11_flavor.6172 = {
 	type = country_event
-	title = antq_m11_flavor.6168.title
-	desc = antq_m11_flavor.6168.desc
+	title = antq_m11_flavor.6172.title
+	desc = antq_m11_flavor.6172.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_marcomannic_wars.dds"
@@ -3209,15 +3285,15 @@ antq_m11_flavor.6168 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6168.a
+		name = antq_m11_flavor.6172.a
 	}
 }
 
 # Marcomannic Wars — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6169 = {
+antq_m11_flavor.6173 = {
 	type = country_event
-	title = antq_m11_flavor.6169.title
-	desc = antq_m11_flavor.6169.desc
+	title = antq_m11_flavor.6173.title
+	desc = antq_m11_flavor.6173.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_marcomannic_wars.dds"
@@ -3228,15 +3304,15 @@ antq_m11_flavor.6169 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6169.a
+		name = antq_m11_flavor.6173.a
 	}
 }
 
 # Marcomannic Wars — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6170 = {
+antq_m11_flavor.6174 = {
 	type = country_event
-	title = antq_m11_flavor.6170.title
-	desc = antq_m11_flavor.6170.desc
+	title = antq_m11_flavor.6174.title
+	desc = antq_m11_flavor.6174.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_marcomannic_wars.dds"
@@ -3247,15 +3323,15 @@ antq_m11_flavor.6170 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6170.a
+		name = antq_m11_flavor.6174.a
 	}
 }
 
 # Marcomannic Wars — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6171 = {
+antq_m11_flavor.6175 = {
 	type = country_event
-	title = antq_m11_flavor.6171.title
-	desc = antq_m11_flavor.6171.desc
+	title = antq_m11_flavor.6175.title
+	desc = antq_m11_flavor.6175.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_marcomannic_wars.dds"
@@ -3266,15 +3342,15 @@ antq_m11_flavor.6171 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6171.a
+		name = antq_m11_flavor.6175.a
 	}
 }
 
 # Yellow Turban Rebellion — Conditions Develop; ANTIQVITAS master plan §9; CAM-CM; recipient=XAR; trigger=XAR
-antq_m11_flavor.6172 = {
+antq_m11_flavor.6176 = {
 	type = country_event
-	title = antq_m11_flavor.6172.title
-	desc = antq_m11_flavor.6172.desc
+	title = antq_m11_flavor.6176.title
+	desc = antq_m11_flavor.6176.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_yellow_turbans.dds"
@@ -3285,15 +3361,15 @@ antq_m11_flavor.6172 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6172.a
+		name = antq_m11_flavor.6176.a
 	}
 }
 
 # Yellow Turban Rebellion — Pressure Builds; ANTIQVITAS master plan §9; CAM-CM; recipient=XAR; trigger=XAR
-antq_m11_flavor.6173 = {
+antq_m11_flavor.6177 = {
 	type = country_event
-	title = antq_m11_flavor.6173.title
-	desc = antq_m11_flavor.6173.desc
+	title = antq_m11_flavor.6177.title
+	desc = antq_m11_flavor.6177.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_yellow_turbans.dds"
@@ -3304,15 +3380,15 @@ antq_m11_flavor.6173 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6173.a
+		name = antq_m11_flavor.6177.a
 	}
 }
 
 # Yellow Turban Rebellion — A Contested Moment; ANTIQVITAS master plan §9; CAM-CM; recipient=XAR; trigger=XAR
-antq_m11_flavor.6174 = {
+antq_m11_flavor.6178 = {
 	type = country_event
-	title = antq_m11_flavor.6174.title
-	desc = antq_m11_flavor.6174.desc
+	title = antq_m11_flavor.6178.title
+	desc = antq_m11_flavor.6178.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_yellow_turbans.dds"
@@ -3323,15 +3399,15 @@ antq_m11_flavor.6174 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6174.a
+		name = antq_m11_flavor.6178.a
 	}
 }
 
 # Yellow Turban Rebellion — The Window Narrows; ANTIQVITAS master plan §9; CAM-CM; recipient=XAR; trigger=XAR
-antq_m11_flavor.6175 = {
+antq_m11_flavor.6179 = {
 	type = country_event
-	title = antq_m11_flavor.6175.title
-	desc = antq_m11_flavor.6175.desc
+	title = antq_m11_flavor.6179.title
+	desc = antq_m11_flavor.6179.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_yellow_turbans.dds"
@@ -3342,15 +3418,15 @@ antq_m11_flavor.6175 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6175.a
+		name = antq_m11_flavor.6179.a
 	}
 }
 
 # Champa Founded — Conditions Develop; ANTIQVITAS master plan §9; CHAM-BIRTH; recipient=XAR; trigger=XAR
-antq_m11_flavor.6176 = {
+antq_m11_flavor.6180 = {
 	type = country_event
-	title = antq_m11_flavor.6176.title
-	desc = antq_m11_flavor.6176.desc
+	title = antq_m11_flavor.6180.title
+	desc = antq_m11_flavor.6180.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_champa_formation.dds"
@@ -3361,15 +3437,15 @@ antq_m11_flavor.6176 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6176.a
+		name = antq_m11_flavor.6180.a
 	}
 }
 
 # Champa Founded — Pressure Builds; ANTIQVITAS master plan §9; CHAM-BIRTH; recipient=XAR; trigger=XAR
-antq_m11_flavor.6177 = {
+antq_m11_flavor.6181 = {
 	type = country_event
-	title = antq_m11_flavor.6177.title
-	desc = antq_m11_flavor.6177.desc
+	title = antq_m11_flavor.6181.title
+	desc = antq_m11_flavor.6181.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_champa_formation.dds"
@@ -3380,15 +3456,15 @@ antq_m11_flavor.6177 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6177.a
+		name = antq_m11_flavor.6181.a
 	}
 }
 
 # Champa Founded — A Contested Moment; ANTIQVITAS master plan §9; CHAM-BIRTH; recipient=XAR; trigger=XAR
-antq_m11_flavor.6178 = {
+antq_m11_flavor.6182 = {
 	type = country_event
-	title = antq_m11_flavor.6178.title
-	desc = antq_m11_flavor.6178.desc
+	title = antq_m11_flavor.6182.title
+	desc = antq_m11_flavor.6182.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_champa_formation.dds"
@@ -3399,15 +3475,15 @@ antq_m11_flavor.6178 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6178.a
+		name = antq_m11_flavor.6182.a
 	}
 }
 
 # Champa Founded — The Window Narrows; ANTIQVITAS master plan §9; CHAM-BIRTH; recipient=XAR; trigger=XAR
-antq_m11_flavor.6179 = {
+antq_m11_flavor.6183 = {
 	type = country_event
-	title = antq_m11_flavor.6179.title
-	desc = antq_m11_flavor.6179.desc
+	title = antq_m11_flavor.6183.title
+	desc = antq_m11_flavor.6183.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_champa_formation.dds"
@@ -3418,15 +3494,15 @@ antq_m11_flavor.6179 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6179.a
+		name = antq_m11_flavor.6183.a
 	}
 }
 
 # Severan Settlement — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6180 = {
+antq_m11_flavor.6184 = {
 	type = country_event
-	title = antq_m11_flavor.6180.title
-	desc = antq_m11_flavor.6180.desc
+	title = antq_m11_flavor.6184.title
+	desc = antq_m11_flavor.6184.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_five_emperors.dds"
@@ -3437,15 +3513,15 @@ antq_m11_flavor.6180 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6180.a
+		name = antq_m11_flavor.6184.a
 	}
 }
 
 # Severan Settlement — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6181 = {
+antq_m11_flavor.6185 = {
 	type = country_event
-	title = antq_m11_flavor.6181.title
-	desc = antq_m11_flavor.6181.desc
+	title = antq_m11_flavor.6185.title
+	desc = antq_m11_flavor.6185.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_five_emperors.dds"
@@ -3456,15 +3532,15 @@ antq_m11_flavor.6181 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6181.a
+		name = antq_m11_flavor.6185.a
 	}
 }
 
 # Severan Settlement — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6182 = {
+antq_m11_flavor.6186 = {
 	type = country_event
-	title = antq_m11_flavor.6182.title
-	desc = antq_m11_flavor.6182.desc
+	title = antq_m11_flavor.6186.title
+	desc = antq_m11_flavor.6186.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_five_emperors.dds"
@@ -3475,15 +3551,15 @@ antq_m11_flavor.6182 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6182.a
+		name = antq_m11_flavor.6186.a
 	}
 }
 
 # Severan Settlement — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6183 = {
+antq_m11_flavor.6187 = {
 	type = country_event
-	title = antq_m11_flavor.6183.title
-	desc = antq_m11_flavor.6183.desc
+	title = antq_m11_flavor.6187.title
+	desc = antq_m11_flavor.6187.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_five_emperors.dds"
@@ -3494,15 +3570,15 @@ antq_m11_flavor.6183 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6183.a
+		name = antq_m11_flavor.6187.a
 	}
 }
 
 # Severus in Caledonia — Conditions Develop; ANTIQVITAS master plan §9; CAM-SEV; recipient=XAA; trigger=XAA
-antq_m11_flavor.6184 = {
+antq_m11_flavor.6188 = {
 	type = country_event
-	title = antq_m11_flavor.6184.title
-	desc = antq_m11_flavor.6184.desc
+	title = antq_m11_flavor.6188.title
+	desc = antq_m11_flavor.6188.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_severus_caledonia.dds"
@@ -3513,15 +3589,15 @@ antq_m11_flavor.6184 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6184.a
+		name = antq_m11_flavor.6188.a
 	}
 }
 
 # Severus in Caledonia — Pressure Builds; ANTIQVITAS master plan §9; CAM-SEV; recipient=XAA; trigger=XAA
-antq_m11_flavor.6185 = {
+antq_m11_flavor.6189 = {
 	type = country_event
-	title = antq_m11_flavor.6185.title
-	desc = antq_m11_flavor.6185.desc
+	title = antq_m11_flavor.6189.title
+	desc = antq_m11_flavor.6189.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_severus_caledonia.dds"
@@ -3532,15 +3608,15 @@ antq_m11_flavor.6185 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6185.a
+		name = antq_m11_flavor.6189.a
 	}
 }
 
 # Severus in Caledonia — A Contested Moment; ANTIQVITAS master plan §9; CAM-SEV; recipient=XAA; trigger=XAA
-antq_m11_flavor.6186 = {
+antq_m11_flavor.6190 = {
 	type = country_event
-	title = antq_m11_flavor.6186.title
-	desc = antq_m11_flavor.6186.desc
+	title = antq_m11_flavor.6190.title
+	desc = antq_m11_flavor.6190.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_severus_caledonia.dds"
@@ -3551,15 +3627,15 @@ antq_m11_flavor.6186 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6186.a
+		name = antq_m11_flavor.6190.a
 	}
 }
 
 # Severus in Caledonia — The Window Narrows; ANTIQVITAS master plan §9; CAM-SEV; recipient=XAA; trigger=XAA
-antq_m11_flavor.6187 = {
+antq_m11_flavor.6191 = {
 	type = country_event
-	title = antq_m11_flavor.6187.title
-	desc = antq_m11_flavor.6187.desc
+	title = antq_m11_flavor.6191.title
+	desc = antq_m11_flavor.6191.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_severus_caledonia.dds"
@@ -3570,15 +3646,15 @@ antq_m11_flavor.6187 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6187.a
+		name = antq_m11_flavor.6191.a
 	}
 }
 
 # Constitutio Antoniniana — Conditions Develop; ANTIQVITAS master plan §9; BM-CONST; recipient=XAA; trigger=XAA
-antq_m11_flavor.6188 = {
+antq_m11_flavor.6192 = {
 	type = country_event
-	title = antq_m11_flavor.6188.title
-	desc = antq_m11_flavor.6188.desc
+	title = antq_m11_flavor.6192.title
+	desc = antq_m11_flavor.6192.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_constitutio_antoniniana.dds"
@@ -3589,15 +3665,15 @@ antq_m11_flavor.6188 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6188.a
+		name = antq_m11_flavor.6192.a
 	}
 }
 
 # Constitutio Antoniniana — Pressure Builds; ANTIQVITAS master plan §9; BM-CONST; recipient=XAA; trigger=XAA
-antq_m11_flavor.6189 = {
+antq_m11_flavor.6193 = {
 	type = country_event
-	title = antq_m11_flavor.6189.title
-	desc = antq_m11_flavor.6189.desc
+	title = antq_m11_flavor.6193.title
+	desc = antq_m11_flavor.6193.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_constitutio_antoniniana.dds"
@@ -3608,15 +3684,15 @@ antq_m11_flavor.6189 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6189.a
+		name = antq_m11_flavor.6193.a
 	}
 }
 
 # Constitutio Antoniniana — A Contested Moment; ANTIQVITAS master plan §9; BM-CONST; recipient=XAA; trigger=XAA
-antq_m11_flavor.6190 = {
+antq_m11_flavor.6194 = {
 	type = country_event
-	title = antq_m11_flavor.6190.title
-	desc = antq_m11_flavor.6190.desc
+	title = antq_m11_flavor.6194.title
+	desc = antq_m11_flavor.6194.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_constitutio_antoniniana.dds"
@@ -3627,15 +3703,15 @@ antq_m11_flavor.6190 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6190.a
+		name = antq_m11_flavor.6194.a
 	}
 }
 
 # Constitutio Antoniniana — The Window Narrows; ANTIQVITAS master plan §9; BM-CONST; recipient=XAA; trigger=XAA
-antq_m11_flavor.6191 = {
+antq_m11_flavor.6195 = {
 	type = country_event
-	title = antq_m11_flavor.6191.title
-	desc = antq_m11_flavor.6191.desc
+	title = antq_m11_flavor.6195.title
+	desc = antq_m11_flavor.6195.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_constitutio_antoniniana.dds"
@@ -3646,15 +3722,15 @@ antq_m11_flavor.6191 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6191.a
+		name = antq_m11_flavor.6195.a
 	}
 }
 
 # Alemanni Formation — Conditions Develop; ANTIQVITAS master plan §9; OCD-ALE; recipient=XBL; trigger=XBL
-antq_m11_flavor.6192 = {
+antq_m11_flavor.6196 = {
 	type = country_event
-	title = antq_m11_flavor.6192.title
-	desc = antq_m11_flavor.6192.desc
+	title = antq_m11_flavor.6196.title
+	desc = antq_m11_flavor.6196.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_alemanni_formation.dds"
@@ -3665,15 +3741,15 @@ antq_m11_flavor.6192 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6192.a
+		name = antq_m11_flavor.6196.a
 	}
 }
 
 # Alemanni Formation — Pressure Builds; ANTIQVITAS master plan §9; OCD-ALE; recipient=XBL; trigger=XBL
-antq_m11_flavor.6193 = {
+antq_m11_flavor.6197 = {
 	type = country_event
-	title = antq_m11_flavor.6193.title
-	desc = antq_m11_flavor.6193.desc
+	title = antq_m11_flavor.6197.title
+	desc = antq_m11_flavor.6197.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_alemanni_formation.dds"
@@ -3684,15 +3760,15 @@ antq_m11_flavor.6193 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6193.a
+		name = antq_m11_flavor.6197.a
 	}
 }
 
 # Alemanni Formation — A Contested Moment; ANTIQVITAS master plan §9; OCD-ALE; recipient=XBL; trigger=XBL
-antq_m11_flavor.6194 = {
+antq_m11_flavor.6198 = {
 	type = country_event
-	title = antq_m11_flavor.6194.title
-	desc = antq_m11_flavor.6194.desc
+	title = antq_m11_flavor.6198.title
+	desc = antq_m11_flavor.6198.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_alemanni_formation.dds"
@@ -3703,15 +3779,15 @@ antq_m11_flavor.6194 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6194.a
+		name = antq_m11_flavor.6198.a
 	}
 }
 
 # Alemanni Formation — The Window Narrows; ANTIQVITAS master plan §9; OCD-ALE; recipient=XBL; trigger=XBL
-antq_m11_flavor.6195 = {
+antq_m11_flavor.6199 = {
 	type = country_event
-	title = antq_m11_flavor.6195.title
-	desc = antq_m11_flavor.6195.desc
+	title = antq_m11_flavor.6199.title
+	desc = antq_m11_flavor.6199.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_alemanni_formation.dds"
@@ -3722,15 +3798,15 @@ antq_m11_flavor.6195 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6195.a
+		name = antq_m11_flavor.6199.a
 	}
 }
 
 # Three Kingdoms — Conditions Develop; ANTIQVITAS master plan §9; OUP-3K; recipient=XAR; trigger=XAR
-antq_m11_flavor.6196 = {
+antq_m11_flavor.6200 = {
 	type = country_event
-	title = antq_m11_flavor.6196.title
-	desc = antq_m11_flavor.6196.desc
+	title = antq_m11_flavor.6200.title
+	desc = antq_m11_flavor.6200.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_three_kingdoms.dds"
@@ -3741,15 +3817,15 @@ antq_m11_flavor.6196 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6196.a
+		name = antq_m11_flavor.6200.a
 	}
 }
 
 # Three Kingdoms — Pressure Builds; ANTIQVITAS master plan §9; OUP-3K; recipient=XAR; trigger=XAR
-antq_m11_flavor.6197 = {
+antq_m11_flavor.6201 = {
 	type = country_event
-	title = antq_m11_flavor.6197.title
-	desc = antq_m11_flavor.6197.desc
+	title = antq_m11_flavor.6201.title
+	desc = antq_m11_flavor.6201.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_three_kingdoms.dds"
@@ -3760,15 +3836,15 @@ antq_m11_flavor.6197 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6197.a
+		name = antq_m11_flavor.6201.a
 	}
 }
 
 # Three Kingdoms — A Contested Moment; ANTIQVITAS master plan §9; OUP-3K; recipient=XAR; trigger=XAR
-antq_m11_flavor.6198 = {
+antq_m11_flavor.6202 = {
 	type = country_event
-	title = antq_m11_flavor.6198.title
-	desc = antq_m11_flavor.6198.desc
+	title = antq_m11_flavor.6202.title
+	desc = antq_m11_flavor.6202.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_three_kingdoms.dds"
@@ -3779,15 +3855,15 @@ antq_m11_flavor.6198 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6198.a
+		name = antq_m11_flavor.6202.a
 	}
 }
 
 # Three Kingdoms — The Window Narrows; ANTIQVITAS master plan §9; OUP-3K; recipient=XAR; trigger=XAR
-antq_m11_flavor.6199 = {
+antq_m11_flavor.6203 = {
 	type = country_event
-	title = antq_m11_flavor.6199.title
-	desc = antq_m11_flavor.6199.desc
+	title = antq_m11_flavor.6203.title
+	desc = antq_m11_flavor.6203.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_three_kingdoms.dds"
@@ -3798,15 +3874,15 @@ antq_m11_flavor.6199 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6199.a
+		name = antq_m11_flavor.6203.a
 	}
 }
 
 # Sassanid Revolution — Conditions Develop; ANTIQVITAS master plan §9; IRAN-ARD; recipient=XAH; trigger=XAH
-antq_m11_flavor.6200 = {
+antq_m11_flavor.6204 = {
 	type = country_event
-	title = antq_m11_flavor.6200.title
-	desc = antq_m11_flavor.6200.desc
+	title = antq_m11_flavor.6204.title
+	desc = antq_m11_flavor.6204.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_sassanid_revolution.dds"
@@ -3817,15 +3893,15 @@ antq_m11_flavor.6200 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6200.a
+		name = antq_m11_flavor.6204.a
 	}
 }
 
 # Sassanid Revolution — Pressure Builds; ANTIQVITAS master plan §9; IRAN-ARD; recipient=XAH; trigger=XAH
-antq_m11_flavor.6201 = {
+antq_m11_flavor.6205 = {
 	type = country_event
-	title = antq_m11_flavor.6201.title
-	desc = antq_m11_flavor.6201.desc
+	title = antq_m11_flavor.6205.title
+	desc = antq_m11_flavor.6205.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_sassanid_revolution.dds"
@@ -3836,15 +3912,15 @@ antq_m11_flavor.6201 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6201.a
+		name = antq_m11_flavor.6205.a
 	}
 }
 
 # Sassanid Revolution — A Contested Moment; ANTIQVITAS master plan §9; IRAN-ARD; recipient=XAH; trigger=XAH
-antq_m11_flavor.6202 = {
+antq_m11_flavor.6206 = {
 	type = country_event
-	title = antq_m11_flavor.6202.title
-	desc = antq_m11_flavor.6202.desc
+	title = antq_m11_flavor.6206.title
+	desc = antq_m11_flavor.6206.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_sassanid_revolution.dds"
@@ -3855,15 +3931,15 @@ antq_m11_flavor.6202 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6202.a
+		name = antq_m11_flavor.6206.a
 	}
 }
 
 # Sassanid Revolution — The Window Narrows; ANTIQVITAS master plan §9; IRAN-ARD; recipient=XAH; trigger=XAH
-antq_m11_flavor.6203 = {
+antq_m11_flavor.6207 = {
 	type = country_event
-	title = antq_m11_flavor.6203.title
-	desc = antq_m11_flavor.6203.desc
+	title = antq_m11_flavor.6207.title
+	desc = antq_m11_flavor.6207.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_sassanid_revolution.dds"
@@ -3874,15 +3950,15 @@ antq_m11_flavor.6203 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6203.a
+		name = antq_m11_flavor.6207.a
 	}
 }
 
 # Crisis of the Third Century — Conditions Develop; ANTIQVITAS master plan §9; OUP-CRISIS; recipient=XAA; trigger=XAA
-antq_m11_flavor.6204 = {
+antq_m11_flavor.6208 = {
 	type = country_event
-	title = antq_m11_flavor.6204.title
-	desc = antq_m11_flavor.6204.desc
+	title = antq_m11_flavor.6208.title
+	desc = antq_m11_flavor.6208.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_third_century_crisis.dds"
@@ -3893,15 +3969,15 @@ antq_m11_flavor.6204 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6204.a
+		name = antq_m11_flavor.6208.a
 	}
 }
 
 # Crisis of the Third Century — Pressure Builds; ANTIQVITAS master plan §9; OUP-CRISIS; recipient=XAA; trigger=XAA
-antq_m11_flavor.6205 = {
+antq_m11_flavor.6209 = {
 	type = country_event
-	title = antq_m11_flavor.6205.title
-	desc = antq_m11_flavor.6205.desc
+	title = antq_m11_flavor.6209.title
+	desc = antq_m11_flavor.6209.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_third_century_crisis.dds"
@@ -3912,15 +3988,15 @@ antq_m11_flavor.6205 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6205.a
+		name = antq_m11_flavor.6209.a
 	}
 }
 
 # Crisis of the Third Century — A Contested Moment; ANTIQVITAS master plan §9; OUP-CRISIS; recipient=XAA; trigger=XAA
-antq_m11_flavor.6206 = {
+antq_m11_flavor.6210 = {
 	type = country_event
-	title = antq_m11_flavor.6206.title
-	desc = antq_m11_flavor.6206.desc
+	title = antq_m11_flavor.6210.title
+	desc = antq_m11_flavor.6210.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_third_century_crisis.dds"
@@ -3931,15 +4007,15 @@ antq_m11_flavor.6206 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6206.a
+		name = antq_m11_flavor.6210.a
 	}
 }
 
 # Crisis of the Third Century — The Window Narrows; ANTIQVITAS master plan §9; OUP-CRISIS; recipient=XAA; trigger=XAA
-antq_m11_flavor.6207 = {
+antq_m11_flavor.6211 = {
 	type = country_event
-	title = antq_m11_flavor.6207.title
-	desc = antq_m11_flavor.6207.desc
+	title = antq_m11_flavor.6211.title
+	desc = antq_m11_flavor.6211.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_third_century_crisis.dds"
@@ -3950,15 +4026,15 @@ antq_m11_flavor.6207 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6207.a
+		name = antq_m11_flavor.6211.a
 	}
 }
 
 # Manichaeism — Conditions Develop; ANTIQVITAS master plan §9; IRAN-MANI; recipient=XAH; trigger=XAH
-antq_m11_flavor.6208 = {
+antq_m11_flavor.6212 = {
 	type = country_event
-	title = antq_m11_flavor.6208.title
-	desc = antq_m11_flavor.6208.desc
+	title = antq_m11_flavor.6212.title
+	desc = antq_m11_flavor.6212.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_manichaeism_foundation.dds"
@@ -3969,15 +4045,15 @@ antq_m11_flavor.6208 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6208.a
+		name = antq_m11_flavor.6212.a
 	}
 }
 
 # Manichaeism — Pressure Builds; ANTIQVITAS master plan §9; IRAN-MANI; recipient=XAH; trigger=XAH
-antq_m11_flavor.6209 = {
+antq_m11_flavor.6213 = {
 	type = country_event
-	title = antq_m11_flavor.6209.title
-	desc = antq_m11_flavor.6209.desc
+	title = antq_m11_flavor.6213.title
+	desc = antq_m11_flavor.6213.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_manichaeism_foundation.dds"
@@ -3988,15 +4064,15 @@ antq_m11_flavor.6209 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6209.a
+		name = antq_m11_flavor.6213.a
 	}
 }
 
 # Manichaeism — A Contested Moment; ANTIQVITAS master plan §9; IRAN-MANI; recipient=XAH; trigger=XAH
-antq_m11_flavor.6210 = {
+antq_m11_flavor.6214 = {
 	type = country_event
-	title = antq_m11_flavor.6210.title
-	desc = antq_m11_flavor.6210.desc
+	title = antq_m11_flavor.6214.title
+	desc = antq_m11_flavor.6214.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_manichaeism_foundation.dds"
@@ -4007,15 +4083,15 @@ antq_m11_flavor.6210 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6210.a
+		name = antq_m11_flavor.6214.a
 	}
 }
 
 # Manichaeism — The Window Narrows; ANTIQVITAS master plan §9; IRAN-MANI; recipient=XAH; trigger=XAH
-antq_m11_flavor.6211 = {
+antq_m11_flavor.6215 = {
 	type = country_event
-	title = antq_m11_flavor.6211.title
-	desc = antq_m11_flavor.6211.desc
+	title = antq_m11_flavor.6215.title
+	desc = antq_m11_flavor.6215.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_manichaeism_foundation.dds"
@@ -4026,15 +4102,15 @@ antq_m11_flavor.6211 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6211.a
+		name = antq_m11_flavor.6215.a
 	}
 }
 
 # Frankish Formation — Conditions Develop; ANTIQVITAS master plan §9; CAM-FRK; recipient=XDK; trigger=XDK
-antq_m11_flavor.6212 = {
+antq_m11_flavor.6216 = {
 	type = country_event
-	title = antq_m11_flavor.6212.title
-	desc = antq_m11_flavor.6212.desc
+	title = antq_m11_flavor.6216.title
+	desc = antq_m11_flavor.6216.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_frankish_formation.dds"
@@ -4045,15 +4121,15 @@ antq_m11_flavor.6212 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6212.a
+		name = antq_m11_flavor.6216.a
 	}
 }
 
 # Frankish Formation — Pressure Builds; ANTIQVITAS master plan §9; CAM-FRK; recipient=XDK; trigger=XDK
-antq_m11_flavor.6213 = {
+antq_m11_flavor.6217 = {
 	type = country_event
-	title = antq_m11_flavor.6213.title
-	desc = antq_m11_flavor.6213.desc
+	title = antq_m11_flavor.6217.title
+	desc = antq_m11_flavor.6217.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_frankish_formation.dds"
@@ -4064,15 +4140,15 @@ antq_m11_flavor.6213 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6213.a
+		name = antq_m11_flavor.6217.a
 	}
 }
 
 # Frankish Formation — A Contested Moment; ANTIQVITAS master plan §9; CAM-FRK; recipient=XDK; trigger=XDK
-antq_m11_flavor.6214 = {
+antq_m11_flavor.6218 = {
 	type = country_event
-	title = antq_m11_flavor.6214.title
-	desc = antq_m11_flavor.6214.desc
+	title = antq_m11_flavor.6218.title
+	desc = antq_m11_flavor.6218.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_frankish_formation.dds"
@@ -4083,15 +4159,15 @@ antq_m11_flavor.6214 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6214.a
+		name = antq_m11_flavor.6218.a
 	}
 }
 
 # Frankish Formation — The Window Narrows; ANTIQVITAS master plan §9; CAM-FRK; recipient=XDK; trigger=XDK
-antq_m11_flavor.6215 = {
+antq_m11_flavor.6219 = {
 	type = country_event
-	title = antq_m11_flavor.6215.title
-	desc = antq_m11_flavor.6215.desc
+	title = antq_m11_flavor.6219.title
+	desc = antq_m11_flavor.6219.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_frankish_formation.dds"
@@ -4102,15 +4178,15 @@ antq_m11_flavor.6215 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6215.a
+		name = antq_m11_flavor.6219.a
 	}
 }
 
 # Diocletian and the Dominate — Conditions Develop; ANTIQVITAS master plan §9; CAH-DIO; CAM-TET; recipient=XAA; trigger=XAA
-antq_m11_flavor.6216 = {
+antq_m11_flavor.6220 = {
 	type = country_event
-	title = antq_m11_flavor.6216.title
-	desc = antq_m11_flavor.6216.desc
+	title = antq_m11_flavor.6220.title
+	desc = antq_m11_flavor.6220.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_diocletian_dominate.dds"
@@ -4121,15 +4197,15 @@ antq_m11_flavor.6216 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6216.a
+		name = antq_m11_flavor.6220.a
 	}
 }
 
 # Diocletian and the Dominate — Pressure Builds; ANTIQVITAS master plan §9; CAH-DIO; CAM-TET; recipient=XAA; trigger=XAA
-antq_m11_flavor.6217 = {
+antq_m11_flavor.6221 = {
 	type = country_event
-	title = antq_m11_flavor.6217.title
-	desc = antq_m11_flavor.6217.desc
+	title = antq_m11_flavor.6221.title
+	desc = antq_m11_flavor.6221.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_diocletian_dominate.dds"
@@ -4140,15 +4216,15 @@ antq_m11_flavor.6217 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6217.a
+		name = antq_m11_flavor.6221.a
 	}
 }
 
 # Diocletian and the Dominate — A Contested Moment; ANTIQVITAS master plan §9; CAH-DIO; CAM-TET; recipient=XAA; trigger=XAA
-antq_m11_flavor.6218 = {
+antq_m11_flavor.6222 = {
 	type = country_event
-	title = antq_m11_flavor.6218.title
-	desc = antq_m11_flavor.6218.desc
+	title = antq_m11_flavor.6222.title
+	desc = antq_m11_flavor.6222.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_diocletian_dominate.dds"
@@ -4159,15 +4235,15 @@ antq_m11_flavor.6218 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6218.a
+		name = antq_m11_flavor.6222.a
 	}
 }
 
 # Diocletian and the Dominate — The Window Narrows; ANTIQVITAS master plan §9; CAH-DIO; CAM-TET; recipient=XAA; trigger=XAA
-antq_m11_flavor.6219 = {
+antq_m11_flavor.6223 = {
 	type = country_event
-	title = antq_m11_flavor.6219.title
-	desc = antq_m11_flavor.6219.desc
+	title = antq_m11_flavor.6223.title
+	desc = antq_m11_flavor.6223.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_diocletian_dominate.dds"
@@ -4178,15 +4254,15 @@ antq_m11_flavor.6219 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6219.a
+		name = antq_m11_flavor.6223.a
 	}
 }
 
 # War of the Eight Princes — Conditions Develop; ANTIQVITAS master plan §9; CAM-8P; recipient=XAR; trigger=XAR
-antq_m11_flavor.6220 = {
+antq_m11_flavor.6224 = {
 	type = country_event
-	title = antq_m11_flavor.6220.title
-	desc = antq_m11_flavor.6220.desc
+	title = antq_m11_flavor.6224.title
+	desc = antq_m11_flavor.6224.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_eight_princes.dds"
@@ -4197,15 +4273,15 @@ antq_m11_flavor.6220 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6220.a
+		name = antq_m11_flavor.6224.a
 	}
 }
 
 # War of the Eight Princes — Pressure Builds; ANTIQVITAS master plan §9; CAM-8P; recipient=XAR; trigger=XAR
-antq_m11_flavor.6221 = {
+antq_m11_flavor.6225 = {
 	type = country_event
-	title = antq_m11_flavor.6221.title
-	desc = antq_m11_flavor.6221.desc
+	title = antq_m11_flavor.6225.title
+	desc = antq_m11_flavor.6225.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_eight_princes.dds"
@@ -4216,15 +4292,15 @@ antq_m11_flavor.6221 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6221.a
+		name = antq_m11_flavor.6225.a
 	}
 }
 
 # War of the Eight Princes — A Contested Moment; ANTIQVITAS master plan §9; CAM-8P; recipient=XAR; trigger=XAR
-antq_m11_flavor.6222 = {
+antq_m11_flavor.6226 = {
 	type = country_event
-	title = antq_m11_flavor.6222.title
-	desc = antq_m11_flavor.6222.desc
+	title = antq_m11_flavor.6226.title
+	desc = antq_m11_flavor.6226.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_eight_princes.dds"
@@ -4235,15 +4311,15 @@ antq_m11_flavor.6222 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6222.a
+		name = antq_m11_flavor.6226.a
 	}
 }
 
 # War of the Eight Princes — The Window Narrows; ANTIQVITAS master plan §9; CAM-8P; recipient=XAR; trigger=XAR
-antq_m11_flavor.6223 = {
+antq_m11_flavor.6227 = {
 	type = country_event
-	title = antq_m11_flavor.6223.title
-	desc = antq_m11_flavor.6223.desc
+	title = antq_m11_flavor.6227.title
+	desc = antq_m11_flavor.6227.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_eight_princes.dds"
@@ -4254,15 +4330,15 @@ antq_m11_flavor.6223 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6223.a
+		name = antq_m11_flavor.6227.a
 	}
 }
 
 # Armenian Conversion — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
-antq_m11_flavor.6224 = {
+antq_m11_flavor.6228 = {
 	type = country_event
-	title = antq_m11_flavor.6224.title
-	desc = antq_m11_flavor.6224.desc
+	title = antq_m11_flavor.6228.title
+	desc = antq_m11_flavor.6228.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_armenia_conversion.dds"
@@ -4273,15 +4349,15 @@ antq_m11_flavor.6224 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6224.a
+		name = antq_m11_flavor.6228.a
 	}
 }
 
 # Armenian Conversion — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
-antq_m11_flavor.6225 = {
+antq_m11_flavor.6229 = {
 	type = country_event
-	title = antq_m11_flavor.6225.title
-	desc = antq_m11_flavor.6225.desc
+	title = antq_m11_flavor.6229.title
+	desc = antq_m11_flavor.6229.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_armenia_conversion.dds"
@@ -4292,15 +4368,15 @@ antq_m11_flavor.6225 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6225.a
+		name = antq_m11_flavor.6229.a
 	}
 }
 
 # Armenian Conversion — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
-antq_m11_flavor.6226 = {
+antq_m11_flavor.6230 = {
 	type = country_event
-	title = antq_m11_flavor.6226.title
-	desc = antq_m11_flavor.6226.desc
+	title = antq_m11_flavor.6230.title
+	desc = antq_m11_flavor.6230.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_armenia_conversion.dds"
@@ -4311,15 +4387,15 @@ antq_m11_flavor.6226 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6226.a
+		name = antq_m11_flavor.6230.a
 	}
 }
 
 # Armenian Conversion — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
-antq_m11_flavor.6227 = {
+antq_m11_flavor.6231 = {
 	type = country_event
-	title = antq_m11_flavor.6227.title
-	desc = antq_m11_flavor.6227.desc
+	title = antq_m11_flavor.6231.title
+	desc = antq_m11_flavor.6231.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_armenia_conversion.dds"
@@ -4330,15 +4406,15 @@ antq_m11_flavor.6227 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6227.a
+		name = antq_m11_flavor.6231.a
 	}
 }
 
 # Constantine's Civil Wars — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6228 = {
+antq_m11_flavor.6232 = {
 	type = country_event
-	title = antq_m11_flavor.6228.title
-	desc = antq_m11_flavor.6228.desc
+	title = antq_m11_flavor.6232.title
+	desc = antq_m11_flavor.6232.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds"
@@ -4349,15 +4425,15 @@ antq_m11_flavor.6228 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6228.a
+		name = antq_m11_flavor.6232.a
 	}
 }
 
 # Constantine's Civil Wars — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6229 = {
+antq_m11_flavor.6233 = {
 	type = country_event
-	title = antq_m11_flavor.6229.title
-	desc = antq_m11_flavor.6229.desc
+	title = antq_m11_flavor.6233.title
+	desc = antq_m11_flavor.6233.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds"
@@ -4368,15 +4444,15 @@ antq_m11_flavor.6229 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6229.a
+		name = antq_m11_flavor.6233.a
 	}
 }
 
 # Constantine's Civil Wars — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6230 = {
+antq_m11_flavor.6234 = {
 	type = country_event
-	title = antq_m11_flavor.6230.title
-	desc = antq_m11_flavor.6230.desc
+	title = antq_m11_flavor.6234.title
+	desc = antq_m11_flavor.6234.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds"
@@ -4387,15 +4463,15 @@ antq_m11_flavor.6230 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6230.a
+		name = antq_m11_flavor.6234.a
 	}
 }
 
 # Constantine's Civil Wars — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6231 = {
+antq_m11_flavor.6235 = {
 	type = country_event
-	title = antq_m11_flavor.6231.title
-	desc = antq_m11_flavor.6231.desc
+	title = antq_m11_flavor.6235.title
+	desc = antq_m11_flavor.6235.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds"
@@ -4406,15 +4482,15 @@ antq_m11_flavor.6231 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6231.a
+		name = antq_m11_flavor.6235.a
 	}
 }
 
 # Council of Nicaea — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6232 = {
+antq_m11_flavor.6236 = {
 	type = country_event
-	title = antq_m11_flavor.6232.title
-	desc = antq_m11_flavor.6232.desc
+	title = antq_m11_flavor.6236.title
+	desc = antq_m11_flavor.6236.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_nicaea.dds"
@@ -4425,15 +4501,15 @@ antq_m11_flavor.6232 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6232.a
+		name = antq_m11_flavor.6236.a
 	}
 }
 
 # Council of Nicaea — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6233 = {
+antq_m11_flavor.6237 = {
 	type = country_event
-	title = antq_m11_flavor.6233.title
-	desc = antq_m11_flavor.6233.desc
+	title = antq_m11_flavor.6237.title
+	desc = antq_m11_flavor.6237.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_nicaea.dds"
@@ -4444,15 +4520,15 @@ antq_m11_flavor.6233 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6233.a
+		name = antq_m11_flavor.6237.a
 	}
 }
 
 # Council of Nicaea — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6234 = {
+antq_m11_flavor.6238 = {
 	type = country_event
-	title = antq_m11_flavor.6234.title
-	desc = antq_m11_flavor.6234.desc
+	title = antq_m11_flavor.6238.title
+	desc = antq_m11_flavor.6238.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_nicaea.dds"
@@ -4463,15 +4539,15 @@ antq_m11_flavor.6234 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6234.a
+		name = antq_m11_flavor.6238.a
 	}
 }
 
 # Council of Nicaea — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6235 = {
+antq_m11_flavor.6239 = {
 	type = country_event
-	title = antq_m11_flavor.6235.title
-	desc = antq_m11_flavor.6235.desc
+	title = antq_m11_flavor.6239.title
+	desc = antq_m11_flavor.6239.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_nicaea.dds"
@@ -4482,15 +4558,15 @@ antq_m11_flavor.6235 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6235.a
+		name = antq_m11_flavor.6239.a
 	}
 }
 
 # Shapur II and Julian — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
-antq_m11_flavor.6236 = {
+antq_m11_flavor.6240 = {
 	type = country_event
-	title = antq_m11_flavor.6236.title
-	desc = antq_m11_flavor.6236.desc
+	title = antq_m11_flavor.6240.title
+	desc = antq_m11_flavor.6240.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_shapur_julian.dds"
@@ -4501,15 +4577,15 @@ antq_m11_flavor.6236 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6236.a
+		name = antq_m11_flavor.6240.a
 	}
 }
 
 # Shapur II and Julian — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
-antq_m11_flavor.6237 = {
+antq_m11_flavor.6241 = {
 	type = country_event
-	title = antq_m11_flavor.6237.title
-	desc = antq_m11_flavor.6237.desc
+	title = antq_m11_flavor.6241.title
+	desc = antq_m11_flavor.6241.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_shapur_julian.dds"
@@ -4520,15 +4596,15 @@ antq_m11_flavor.6237 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6237.a
+		name = antq_m11_flavor.6241.a
 	}
 }
 
 # Shapur II and Julian — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
-antq_m11_flavor.6238 = {
+antq_m11_flavor.6242 = {
 	type = country_event
-	title = antq_m11_flavor.6238.title
-	desc = antq_m11_flavor.6238.desc
+	title = antq_m11_flavor.6242.title
+	desc = antq_m11_flavor.6242.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_shapur_julian.dds"
@@ -4539,15 +4615,15 @@ antq_m11_flavor.6238 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6238.a
+		name = antq_m11_flavor.6242.a
 	}
 }
 
 # Shapur II and Julian — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
-antq_m11_flavor.6239 = {
+antq_m11_flavor.6243 = {
 	type = country_event
-	title = antq_m11_flavor.6239.title
-	desc = antq_m11_flavor.6239.desc
+	title = antq_m11_flavor.6243.title
+	desc = antq_m11_flavor.6243.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_shapur_julian.dds"
@@ -4558,15 +4634,15 @@ antq_m11_flavor.6239 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6239.a
+		name = antq_m11_flavor.6243.a
 	}
 }
 
 # Aksum and Meroë — Conditions Develop; ANTIQVITAS master plan §9; recipient=AKS; trigger=AKS
-antq_m11_flavor.6240 = {
+antq_m11_flavor.6244 = {
 	type = country_event
-	title = antq_m11_flavor.6240.title
-	desc = antq_m11_flavor.6240.desc
+	title = antq_m11_flavor.6244.title
+	desc = antq_m11_flavor.6244.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_aksum_meroe.dds"
@@ -4577,15 +4653,15 @@ antq_m11_flavor.6240 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6240.a
+		name = antq_m11_flavor.6244.a
 	}
 }
 
 # Aksum and Meroë — Pressure Builds; ANTIQVITAS master plan §9; recipient=AKS; trigger=AKS
-antq_m11_flavor.6241 = {
+antq_m11_flavor.6245 = {
 	type = country_event
-	title = antq_m11_flavor.6241.title
-	desc = antq_m11_flavor.6241.desc
+	title = antq_m11_flavor.6245.title
+	desc = antq_m11_flavor.6245.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_aksum_meroe.dds"
@@ -4596,15 +4672,15 @@ antq_m11_flavor.6241 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6241.a
+		name = antq_m11_flavor.6245.a
 	}
 }
 
 # Aksum and Meroë — A Contested Moment; ANTIQVITAS master plan §9; recipient=AKS; trigger=AKS
-antq_m11_flavor.6242 = {
+antq_m11_flavor.6246 = {
 	type = country_event
-	title = antq_m11_flavor.6242.title
-	desc = antq_m11_flavor.6242.desc
+	title = antq_m11_flavor.6246.title
+	desc = antq_m11_flavor.6246.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_aksum_meroe.dds"
@@ -4615,15 +4691,15 @@ antq_m11_flavor.6242 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6242.a
+		name = antq_m11_flavor.6246.a
 	}
 }
 
 # Aksum and Meroë — The Window Narrows; ANTIQVITAS master plan §9; recipient=AKS; trigger=AKS
-antq_m11_flavor.6243 = {
+antq_m11_flavor.6247 = {
 	type = country_event
-	title = antq_m11_flavor.6243.title
-	desc = antq_m11_flavor.6243.desc
+	title = antq_m11_flavor.6247.title
+	desc = antq_m11_flavor.6247.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_aksum_meroe.dds"
@@ -4634,15 +4710,15 @@ antq_m11_flavor.6243 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6243.a
+		name = antq_m11_flavor.6247.a
 	}
 }
 
 # Crete Earthquake and Tsunami — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6244 = {
+antq_m11_flavor.6248 = {
 	type = country_event
-	title = antq_m11_flavor.6244.title
-	desc = antq_m11_flavor.6244.desc
+	title = antq_m11_flavor.6248.title
+	desc = antq_m11_flavor.6248.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_crete_earthquake.dds"
@@ -4653,15 +4729,15 @@ antq_m11_flavor.6244 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6244.a
+		name = antq_m11_flavor.6248.a
 	}
 }
 
 # Crete Earthquake and Tsunami — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6245 = {
+antq_m11_flavor.6249 = {
 	type = country_event
-	title = antq_m11_flavor.6245.title
-	desc = antq_m11_flavor.6245.desc
+	title = antq_m11_flavor.6249.title
+	desc = antq_m11_flavor.6249.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_crete_earthquake.dds"
@@ -4672,15 +4748,15 @@ antq_m11_flavor.6245 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6245.a
+		name = antq_m11_flavor.6249.a
 	}
 }
 
 # Crete Earthquake and Tsunami — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6246 = {
+antq_m11_flavor.6250 = {
 	type = country_event
-	title = antq_m11_flavor.6246.title
-	desc = antq_m11_flavor.6246.desc
+	title = antq_m11_flavor.6250.title
+	desc = antq_m11_flavor.6250.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_crete_earthquake.dds"
@@ -4691,15 +4767,15 @@ antq_m11_flavor.6246 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6246.a
+		name = antq_m11_flavor.6250.a
 	}
 }
 
 # Crete Earthquake and Tsunami — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6247 = {
+antq_m11_flavor.6251 = {
 	type = country_event
-	title = antq_m11_flavor.6247.title
-	desc = antq_m11_flavor.6247.desc
+	title = antq_m11_flavor.6251.title
+	desc = antq_m11_flavor.6251.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_crete_earthquake.dds"
@@ -4710,15 +4786,15 @@ antq_m11_flavor.6247 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6247.a
+		name = antq_m11_flavor.6251.a
 	}
 }
 
 # Hunnic Arrival — Conditions Develop; ANTIQVITAS master plan §9; recipient=XDO; trigger=XDO
-antq_m11_flavor.6248 = {
+antq_m11_flavor.6252 = {
 	type = country_event
-	title = antq_m11_flavor.6248.title
-	desc = antq_m11_flavor.6248.desc
+	title = antq_m11_flavor.6252.title
+	desc = antq_m11_flavor.6252.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_huns_arrive.dds"
@@ -4729,15 +4805,15 @@ antq_m11_flavor.6248 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6248.a
+		name = antq_m11_flavor.6252.a
 	}
 }
 
 # Hunnic Arrival — Pressure Builds; ANTIQVITAS master plan §9; recipient=XDO; trigger=XDO
-antq_m11_flavor.6249 = {
+antq_m11_flavor.6253 = {
 	type = country_event
-	title = antq_m11_flavor.6249.title
-	desc = antq_m11_flavor.6249.desc
+	title = antq_m11_flavor.6253.title
+	desc = antq_m11_flavor.6253.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_huns_arrive.dds"
@@ -4748,15 +4824,15 @@ antq_m11_flavor.6249 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6249.a
+		name = antq_m11_flavor.6253.a
 	}
 }
 
 # Hunnic Arrival — A Contested Moment; ANTIQVITAS master plan §9; recipient=XDO; trigger=XDO
-antq_m11_flavor.6250 = {
+antq_m11_flavor.6254 = {
 	type = country_event
-	title = antq_m11_flavor.6250.title
-	desc = antq_m11_flavor.6250.desc
+	title = antq_m11_flavor.6254.title
+	desc = antq_m11_flavor.6254.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_huns_arrive.dds"
@@ -4767,15 +4843,15 @@ antq_m11_flavor.6250 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6250.a
+		name = antq_m11_flavor.6254.a
 	}
 }
 
 # Hunnic Arrival — The Window Narrows; ANTIQVITAS master plan §9; recipient=XDO; trigger=XDO
-antq_m11_flavor.6251 = {
+antq_m11_flavor.6255 = {
 	type = country_event
-	title = antq_m11_flavor.6251.title
-	desc = antq_m11_flavor.6251.desc
+	title = antq_m11_flavor.6255.title
+	desc = antq_m11_flavor.6255.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_huns_arrive.dds"
@@ -4786,15 +4862,15 @@ antq_m11_flavor.6251 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6251.a
+		name = antq_m11_flavor.6255.a
 	}
 }
 
 # Gothic Refugee Crisis — Conditions Develop; ANTIQVITAS master plan §9; recipient=GUT; trigger=GUT
-antq_m11_flavor.6252 = {
+antq_m11_flavor.6256 = {
 	type = country_event
-	title = antq_m11_flavor.6252.title
-	desc = antq_m11_flavor.6252.desc
+	title = antq_m11_flavor.6256.title
+	desc = antq_m11_flavor.6256.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_gothic_refugees.dds"
@@ -4805,15 +4881,15 @@ antq_m11_flavor.6252 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6252.a
+		name = antq_m11_flavor.6256.a
 	}
 }
 
 # Gothic Refugee Crisis — Pressure Builds; ANTIQVITAS master plan §9; recipient=GUT; trigger=GUT
-antq_m11_flavor.6253 = {
+antq_m11_flavor.6257 = {
 	type = country_event
-	title = antq_m11_flavor.6253.title
-	desc = antq_m11_flavor.6253.desc
+	title = antq_m11_flavor.6257.title
+	desc = antq_m11_flavor.6257.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_gothic_refugees.dds"
@@ -4824,15 +4900,15 @@ antq_m11_flavor.6253 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6253.a
+		name = antq_m11_flavor.6257.a
 	}
 }
 
 # Gothic Refugee Crisis — A Contested Moment; ANTIQVITAS master plan §9; recipient=GUT; trigger=GUT
-antq_m11_flavor.6254 = {
+antq_m11_flavor.6258 = {
 	type = country_event
-	title = antq_m11_flavor.6254.title
-	desc = antq_m11_flavor.6254.desc
+	title = antq_m11_flavor.6258.title
+	desc = antq_m11_flavor.6258.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_gothic_refugees.dds"
@@ -4843,15 +4919,15 @@ antq_m11_flavor.6254 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6254.a
+		name = antq_m11_flavor.6258.a
 	}
 }
 
 # Gothic Refugee Crisis — The Window Narrows; ANTIQVITAS master plan §9; recipient=GUT; trigger=GUT
-antq_m11_flavor.6255 = {
+antq_m11_flavor.6259 = {
 	type = country_event
-	title = antq_m11_flavor.6255.title
-	desc = antq_m11_flavor.6255.desc
+	title = antq_m11_flavor.6259.title
+	desc = antq_m11_flavor.6259.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_gothic_refugees.dds"
@@ -4862,15 +4938,15 @@ antq_m11_flavor.6255 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6255.a
+		name = antq_m11_flavor.6259.a
 	}
 }
 
 # Edict of Thessalonica — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6256 = {
+antq_m11_flavor.6260 = {
 	type = country_event
-	title = antq_m11_flavor.6256.title
-	desc = antq_m11_flavor.6256.desc
+	title = antq_m11_flavor.6260.title
+	desc = antq_m11_flavor.6260.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_thessalonica.dds"
@@ -4881,15 +4957,15 @@ antq_m11_flavor.6256 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6256.a
+		name = antq_m11_flavor.6260.a
 	}
 }
 
 # Edict of Thessalonica — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6257 = {
+antq_m11_flavor.6261 = {
 	type = country_event
-	title = antq_m11_flavor.6257.title
-	desc = antq_m11_flavor.6257.desc
+	title = antq_m11_flavor.6261.title
+	desc = antq_m11_flavor.6261.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_thessalonica.dds"
@@ -4900,15 +4976,15 @@ antq_m11_flavor.6257 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6257.a
+		name = antq_m11_flavor.6261.a
 	}
 }
 
 # Edict of Thessalonica — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6258 = {
+antq_m11_flavor.6262 = {
 	type = country_event
-	title = antq_m11_flavor.6258.title
-	desc = antq_m11_flavor.6258.desc
+	title = antq_m11_flavor.6262.title
+	desc = antq_m11_flavor.6262.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_thessalonica.dds"
@@ -4919,15 +4995,15 @@ antq_m11_flavor.6258 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6258.a
+		name = antq_m11_flavor.6262.a
 	}
 }
 
 # Edict of Thessalonica — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6259 = {
+antq_m11_flavor.6263 = {
 	type = country_event
-	title = antq_m11_flavor.6259.title
-	desc = antq_m11_flavor.6259.desc
+	title = antq_m11_flavor.6263.title
+	desc = antq_m11_flavor.6263.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_thessalonica.dds"
@@ -4938,15 +5014,15 @@ antq_m11_flavor.6259 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6259.a
+		name = antq_m11_flavor.6263.a
 	}
 }
 
 # Fei River and Northern Wei — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
-antq_m11_flavor.6260 = {
+antq_m11_flavor.6264 = {
 	type = country_event
-	title = antq_m11_flavor.6260.title
-	desc = antq_m11_flavor.6260.desc
+	title = antq_m11_flavor.6264.title
+	desc = antq_m11_flavor.6264.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_fei_river.dds"
@@ -4957,15 +5033,15 @@ antq_m11_flavor.6260 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6260.a
+		name = antq_m11_flavor.6264.a
 	}
 }
 
 # Fei River and Northern Wei — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
-antq_m11_flavor.6261 = {
+antq_m11_flavor.6265 = {
 	type = country_event
-	title = antq_m11_flavor.6261.title
-	desc = antq_m11_flavor.6261.desc
+	title = antq_m11_flavor.6265.title
+	desc = antq_m11_flavor.6265.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_fei_river.dds"
@@ -4976,15 +5052,15 @@ antq_m11_flavor.6261 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6261.a
+		name = antq_m11_flavor.6265.a
 	}
 }
 
 # Fei River and Northern Wei — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
-antq_m11_flavor.6262 = {
+antq_m11_flavor.6266 = {
 	type = country_event
-	title = antq_m11_flavor.6262.title
-	desc = antq_m11_flavor.6262.desc
+	title = antq_m11_flavor.6266.title
+	desc = antq_m11_flavor.6266.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_fei_river.dds"
@@ -4995,15 +5071,15 @@ antq_m11_flavor.6262 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6262.a
+		name = antq_m11_flavor.6266.a
 	}
 }
 
 # Fei River and Northern Wei — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
-antq_m11_flavor.6263 = {
+antq_m11_flavor.6267 = {
 	type = country_event
-	title = antq_m11_flavor.6263.title
-	desc = antq_m11_flavor.6263.desc
+	title = antq_m11_flavor.6267.title
+	desc = antq_m11_flavor.6267.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_fei_river.dds"
@@ -5014,15 +5090,15 @@ antq_m11_flavor.6263 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6263.a
+		name = antq_m11_flavor.6267.a
 	}
 }
 
 # Gwanggaeto the Great — Conditions Develop; ANTIQVITAS master plan §9; recipient=GOG; trigger=GOG
-antq_m11_flavor.6264 = {
+antq_m11_flavor.6268 = {
 	type = country_event
-	title = antq_m11_flavor.6264.title
-	desc = antq_m11_flavor.6264.desc
+	title = antq_m11_flavor.6268.title
+	desc = antq_m11_flavor.6268.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_gwanggaeto.dds"
@@ -5033,15 +5109,15 @@ antq_m11_flavor.6264 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6264.a
+		name = antq_m11_flavor.6268.a
 	}
 }
 
 # Gwanggaeto the Great — Pressure Builds; ANTIQVITAS master plan §9; recipient=GOG; trigger=GOG
-antq_m11_flavor.6265 = {
+antq_m11_flavor.6269 = {
 	type = country_event
-	title = antq_m11_flavor.6265.title
-	desc = antq_m11_flavor.6265.desc
+	title = antq_m11_flavor.6269.title
+	desc = antq_m11_flavor.6269.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_gwanggaeto.dds"
@@ -5052,15 +5128,15 @@ antq_m11_flavor.6265 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6265.a
+		name = antq_m11_flavor.6269.a
 	}
 }
 
 # Gwanggaeto the Great — A Contested Moment; ANTIQVITAS master plan §9; recipient=GOG; trigger=GOG
-antq_m11_flavor.6266 = {
+antq_m11_flavor.6270 = {
 	type = country_event
-	title = antq_m11_flavor.6266.title
-	desc = antq_m11_flavor.6266.desc
+	title = antq_m11_flavor.6270.title
+	desc = antq_m11_flavor.6270.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_gwanggaeto.dds"
@@ -5071,15 +5147,15 @@ antq_m11_flavor.6266 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6266.a
+		name = antq_m11_flavor.6270.a
 	}
 }
 
 # Gwanggaeto the Great — The Window Narrows; ANTIQVITAS master plan §9; recipient=GOG; trigger=GOG
-antq_m11_flavor.6267 = {
+antq_m11_flavor.6271 = {
 	type = country_event
-	title = antq_m11_flavor.6267.title
-	desc = antq_m11_flavor.6267.desc
+	title = antq_m11_flavor.6271.title
+	desc = antq_m11_flavor.6271.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_gwanggaeto.dds"
@@ -5090,15 +5166,15 @@ antq_m11_flavor.6267 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6267.a
+		name = antq_m11_flavor.6271.a
 	}
 }
 
 # Olympic Games Sunset — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6268 = {
+antq_m11_flavor.6272 = {
 	type = country_event
-	title = antq_m11_flavor.6268.title
-	desc = antq_m11_flavor.6268.desc
+	title = antq_m11_flavor.6272.title
+	desc = antq_m11_flavor.6272.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_olympic_sunset.dds"
@@ -5109,15 +5185,15 @@ antq_m11_flavor.6268 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6268.a
+		name = antq_m11_flavor.6272.a
 	}
 }
 
 # Olympic Games Sunset — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6269 = {
+antq_m11_flavor.6273 = {
 	type = country_event
-	title = antq_m11_flavor.6269.title
-	desc = antq_m11_flavor.6269.desc
+	title = antq_m11_flavor.6273.title
+	desc = antq_m11_flavor.6273.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_olympic_sunset.dds"
@@ -5128,15 +5204,15 @@ antq_m11_flavor.6269 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6269.a
+		name = antq_m11_flavor.6273.a
 	}
 }
 
 # Olympic Games Sunset — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6270 = {
+antq_m11_flavor.6274 = {
 	type = country_event
-	title = antq_m11_flavor.6270.title
-	desc = antq_m11_flavor.6270.desc
+	title = antq_m11_flavor.6274.title
+	desc = antq_m11_flavor.6274.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_olympic_sunset.dds"
@@ -5147,15 +5223,15 @@ antq_m11_flavor.6270 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6270.a
+		name = antq_m11_flavor.6274.a
 	}
 }
 
 # Olympic Games Sunset — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6271 = {
+antq_m11_flavor.6275 = {
 	type = country_event
-	title = antq_m11_flavor.6271.title
-	desc = antq_m11_flavor.6271.desc
+	title = antq_m11_flavor.6275.title
+	desc = antq_m11_flavor.6275.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_olympic_sunset.dds"
@@ -5166,15 +5242,15 @@ antq_m11_flavor.6271 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6271.a
+		name = antq_m11_flavor.6275.a
 	}
 }
 
 # East-West Roman Division — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6272 = {
+antq_m11_flavor.6276 = {
 	type = country_event
-	title = antq_m11_flavor.6272.title
-	desc = antq_m11_flavor.6272.desc
+	title = antq_m11_flavor.6276.title
+	desc = antq_m11_flavor.6276.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_east_west_division.dds"
@@ -5185,15 +5261,15 @@ antq_m11_flavor.6272 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6272.a
+		name = antq_m11_flavor.6276.a
 	}
 }
 
 # East-West Roman Division — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6273 = {
+antq_m11_flavor.6277 = {
 	type = country_event
-	title = antq_m11_flavor.6273.title
-	desc = antq_m11_flavor.6273.desc
+	title = antq_m11_flavor.6277.title
+	desc = antq_m11_flavor.6277.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_east_west_division.dds"
@@ -5204,15 +5280,15 @@ antq_m11_flavor.6273 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6273.a
+		name = antq_m11_flavor.6277.a
 	}
 }
 
 # East-West Roman Division — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6274 = {
+antq_m11_flavor.6278 = {
 	type = country_event
-	title = antq_m11_flavor.6274.title
-	desc = antq_m11_flavor.6274.desc
+	title = antq_m11_flavor.6278.title
+	desc = antq_m11_flavor.6278.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_east_west_division.dds"
@@ -5223,15 +5299,15 @@ antq_m11_flavor.6274 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6274.a
+		name = antq_m11_flavor.6278.a
 	}
 }
 
 # East-West Roman Division — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6275 = {
+antq_m11_flavor.6279 = {
 	type = country_event
-	title = antq_m11_flavor.6275.title
-	desc = antq_m11_flavor.6275.desc
+	title = antq_m11_flavor.6279.title
+	desc = antq_m11_flavor.6279.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_east_west_division.dds"
@@ -5242,15 +5318,15 @@ antq_m11_flavor.6275 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6275.a
+		name = antq_m11_flavor.6279.a
 	}
 }
 
 # Faxian and Gupta Apogee — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
-antq_m11_flavor.6276 = {
+antq_m11_flavor.6280 = {
 	type = country_event
-	title = antq_m11_flavor.6276.title
-	desc = antq_m11_flavor.6276.desc
+	title = antq_m11_flavor.6280.title
+	desc = antq_m11_flavor.6280.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_faxian_gupta.dds"
@@ -5261,15 +5337,15 @@ antq_m11_flavor.6276 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6276.a
+		name = antq_m11_flavor.6280.a
 	}
 }
 
 # Faxian and Gupta Apogee — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
-antq_m11_flavor.6277 = {
+antq_m11_flavor.6281 = {
 	type = country_event
-	title = antq_m11_flavor.6277.title
-	desc = antq_m11_flavor.6277.desc
+	title = antq_m11_flavor.6281.title
+	desc = antq_m11_flavor.6281.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_faxian_gupta.dds"
@@ -5280,15 +5356,15 @@ antq_m11_flavor.6277 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6277.a
+		name = antq_m11_flavor.6281.a
 	}
 }
 
 # Faxian and Gupta Apogee — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
-antq_m11_flavor.6278 = {
+antq_m11_flavor.6282 = {
 	type = country_event
-	title = antq_m11_flavor.6278.title
-	desc = antq_m11_flavor.6278.desc
+	title = antq_m11_flavor.6282.title
+	desc = antq_m11_flavor.6282.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_faxian_gupta.dds"
@@ -5299,15 +5375,15 @@ antq_m11_flavor.6278 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6278.a
+		name = antq_m11_flavor.6282.a
 	}
 }
 
 # Faxian and Gupta Apogee — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
-antq_m11_flavor.6279 = {
+antq_m11_flavor.6283 = {
 	type = country_event
-	title = antq_m11_flavor.6279.title
-	desc = antq_m11_flavor.6279.desc
+	title = antq_m11_flavor.6283.title
+	desc = antq_m11_flavor.6283.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_faxian_gupta.dds"
@@ -5318,15 +5394,15 @@ antq_m11_flavor.6279 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6279.a
+		name = antq_m11_flavor.6283.a
 	}
 }
 
 # Crossing of the Rhine — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6280 = {
+antq_m11_flavor.6284 = {
 	type = country_event
-	title = antq_m11_flavor.6280.title
-	desc = antq_m11_flavor.6280.desc
+	title = antq_m11_flavor.6284.title
+	desc = antq_m11_flavor.6284.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds"
@@ -5337,15 +5413,15 @@ antq_m11_flavor.6280 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6280.a
+		name = antq_m11_flavor.6284.a
 	}
 }
 
 # Crossing of the Rhine — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6281 = {
+antq_m11_flavor.6285 = {
 	type = country_event
-	title = antq_m11_flavor.6281.title
-	desc = antq_m11_flavor.6281.desc
+	title = antq_m11_flavor.6285.title
+	desc = antq_m11_flavor.6285.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds"
@@ -5356,15 +5432,15 @@ antq_m11_flavor.6281 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6281.a
+		name = antq_m11_flavor.6285.a
 	}
 }
 
 # Crossing of the Rhine — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6282 = {
+antq_m11_flavor.6286 = {
 	type = country_event
-	title = antq_m11_flavor.6282.title
-	desc = antq_m11_flavor.6282.desc
+	title = antq_m11_flavor.6286.title
+	desc = antq_m11_flavor.6286.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds"
@@ -5375,15 +5451,15 @@ antq_m11_flavor.6282 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6282.a
+		name = antq_m11_flavor.6286.a
 	}
 }
 
 # Crossing of the Rhine — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6283 = {
+antq_m11_flavor.6287 = {
 	type = country_event
-	title = antq_m11_flavor.6283.title
-	desc = antq_m11_flavor.6283.desc
+	title = antq_m11_flavor.6287.title
+	desc = antq_m11_flavor.6287.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds"
@@ -5394,15 +5470,15 @@ antq_m11_flavor.6283 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6283.a
+		name = antq_m11_flavor.6287.a
 	}
 }
 
 # Britain Abandoned — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6284 = {
+antq_m11_flavor.6288 = {
 	type = country_event
-	title = antq_m11_flavor.6284.title
-	desc = antq_m11_flavor.6284.desc
+	title = antq_m11_flavor.6288.title
+	desc = antq_m11_flavor.6288.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_britain_abandoned.dds"
@@ -5413,15 +5489,15 @@ antq_m11_flavor.6284 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6284.a
+		name = antq_m11_flavor.6288.a
 	}
 }
 
 # Britain Abandoned — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6285 = {
+antq_m11_flavor.6289 = {
 	type = country_event
-	title = antq_m11_flavor.6285.title
-	desc = antq_m11_flavor.6285.desc
+	title = antq_m11_flavor.6289.title
+	desc = antq_m11_flavor.6289.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_britain_abandoned.dds"
@@ -5432,15 +5508,15 @@ antq_m11_flavor.6285 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6285.a
+		name = antq_m11_flavor.6289.a
 	}
 }
 
 # Britain Abandoned — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6286 = {
+antq_m11_flavor.6290 = {
 	type = country_event
-	title = antq_m11_flavor.6286.title
-	desc = antq_m11_flavor.6286.desc
+	title = antq_m11_flavor.6290.title
+	desc = antq_m11_flavor.6290.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_britain_abandoned.dds"
@@ -5451,15 +5527,15 @@ antq_m11_flavor.6286 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6286.a
+		name = antq_m11_flavor.6290.a
 	}
 }
 
 # Britain Abandoned — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6287 = {
+antq_m11_flavor.6291 = {
 	type = country_event
-	title = antq_m11_flavor.6287.title
-	desc = antq_m11_flavor.6287.desc
+	title = antq_m11_flavor.6291.title
+	desc = antq_m11_flavor.6291.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_britain_abandoned.dds"
@@ -5470,15 +5546,15 @@ antq_m11_flavor.6287 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6287.a
+		name = antq_m11_flavor.6291.a
 	}
 }
 
 # Sack of Rome — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6288 = {
+antq_m11_flavor.6292 = {
 	type = country_event
-	title = antq_m11_flavor.6288.title
-	desc = antq_m11_flavor.6288.desc
+	title = antq_m11_flavor.6292.title
+	desc = antq_m11_flavor.6292.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_alaric_sack.dds"
@@ -5489,15 +5565,15 @@ antq_m11_flavor.6288 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6288.a
+		name = antq_m11_flavor.6292.a
 	}
 }
 
 # Sack of Rome — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6289 = {
+antq_m11_flavor.6293 = {
 	type = country_event
-	title = antq_m11_flavor.6289.title
-	desc = antq_m11_flavor.6289.desc
+	title = antq_m11_flavor.6293.title
+	desc = antq_m11_flavor.6293.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_alaric_sack.dds"
@@ -5508,15 +5584,15 @@ antq_m11_flavor.6289 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6289.a
+		name = antq_m11_flavor.6293.a
 	}
 }
 
 # Sack of Rome — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6290 = {
+antq_m11_flavor.6294 = {
 	type = country_event
-	title = antq_m11_flavor.6290.title
-	desc = antq_m11_flavor.6290.desc
+	title = antq_m11_flavor.6294.title
+	desc = antq_m11_flavor.6294.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_alaric_sack.dds"
@@ -5527,15 +5603,15 @@ antq_m11_flavor.6290 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6290.a
+		name = antq_m11_flavor.6294.a
 	}
 }
 
 # Sack of Rome — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6291 = {
+antq_m11_flavor.6295 = {
 	type = country_event
-	title = antq_m11_flavor.6291.title
-	desc = antq_m11_flavor.6291.desc
+	title = antq_m11_flavor.6295.title
+	desc = antq_m11_flavor.6295.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_alaric_sack.dds"
@@ -5546,15 +5622,15 @@ antq_m11_flavor.6291 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6291.a
+		name = antq_m11_flavor.6295.a
 	}
 }
 
 # Visigothic Settlement — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6292 = {
+antq_m11_flavor.6296 = {
 	type = country_event
-	title = antq_m11_flavor.6292.title
-	desc = antq_m11_flavor.6292.desc
+	title = antq_m11_flavor.6296.title
+	desc = antq_m11_flavor.6296.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_visigoth_settlement.dds"
@@ -5565,15 +5641,15 @@ antq_m11_flavor.6292 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6292.a
+		name = antq_m11_flavor.6296.a
 	}
 }
 
 # Visigothic Settlement — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6293 = {
+antq_m11_flavor.6297 = {
 	type = country_event
-	title = antq_m11_flavor.6293.title
-	desc = antq_m11_flavor.6293.desc
+	title = antq_m11_flavor.6297.title
+	desc = antq_m11_flavor.6297.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_visigoth_settlement.dds"
@@ -5584,15 +5660,15 @@ antq_m11_flavor.6293 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6293.a
+		name = antq_m11_flavor.6297.a
 	}
 }
 
 # Visigothic Settlement — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6294 = {
+antq_m11_flavor.6298 = {
 	type = country_event
-	title = antq_m11_flavor.6294.title
-	desc = antq_m11_flavor.6294.desc
+	title = antq_m11_flavor.6298.title
+	desc = antq_m11_flavor.6298.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_visigoth_settlement.dds"
@@ -5603,15 +5679,15 @@ antq_m11_flavor.6294 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6294.a
+		name = antq_m11_flavor.6298.a
 	}
 }
 
 # Visigothic Settlement — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6295 = {
+antq_m11_flavor.6299 = {
 	type = country_event
-	title = antq_m11_flavor.6295.title
-	desc = antq_m11_flavor.6295.desc
+	title = antq_m11_flavor.6299.title
+	desc = antq_m11_flavor.6299.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_visigoth_settlement.dds"
@@ -5622,15 +5698,15 @@ antq_m11_flavor.6295 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6295.a
+		name = antq_m11_flavor.6299.a
 	}
 }
 
 # Vandal Conquest of Africa — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6296 = {
+antq_m11_flavor.6300 = {
 	type = country_event
-	title = antq_m11_flavor.6296.title
-	desc = antq_m11_flavor.6296.desc
+	title = antq_m11_flavor.6300.title
+	desc = antq_m11_flavor.6300.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_vandal_africa.dds"
@@ -5641,15 +5717,15 @@ antq_m11_flavor.6296 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6296.a
+		name = antq_m11_flavor.6300.a
 	}
 }
 
 # Vandal Conquest of Africa — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6297 = {
+antq_m11_flavor.6301 = {
 	type = country_event
-	title = antq_m11_flavor.6297.title
-	desc = antq_m11_flavor.6297.desc
+	title = antq_m11_flavor.6301.title
+	desc = antq_m11_flavor.6301.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_vandal_africa.dds"
@@ -5660,15 +5736,15 @@ antq_m11_flavor.6297 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6297.a
+		name = antq_m11_flavor.6301.a
 	}
 }
 
 # Vandal Conquest of Africa — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6298 = {
+antq_m11_flavor.6302 = {
 	type = country_event
-	title = antq_m11_flavor.6298.title
-	desc = antq_m11_flavor.6298.desc
+	title = antq_m11_flavor.6302.title
+	desc = antq_m11_flavor.6302.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_vandal_africa.dds"
@@ -5679,15 +5755,15 @@ antq_m11_flavor.6298 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6298.a
+		name = antq_m11_flavor.6302.a
 	}
 }
 
 # Vandal Conquest of Africa — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6299 = {
+antq_m11_flavor.6303 = {
 	type = country_event
-	title = antq_m11_flavor.6299.title
-	desc = antq_m11_flavor.6299.desc
+	title = antq_m11_flavor.6303.title
+	desc = antq_m11_flavor.6303.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_vandal_africa.dds"
@@ -5698,15 +5774,15 @@ antq_m11_flavor.6299 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6299.a
+		name = antq_m11_flavor.6303.a
 	}
 }
 
 # Attila — Conditions Develop; ANTIQVITAS master plan §9; recipient=HNS; trigger=XIO
-antq_m11_flavor.6300 = {
+antq_m11_flavor.6304 = {
 	type = country_event
-	title = antq_m11_flavor.6300.title
-	desc = antq_m11_flavor.6300.desc
+	title = antq_m11_flavor.6304.title
+	desc = antq_m11_flavor.6304.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_attila.dds"
@@ -5717,15 +5793,15 @@ antq_m11_flavor.6300 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6300.a
+		name = antq_m11_flavor.6304.a
 	}
 }
 
 # Attila — Pressure Builds; ANTIQVITAS master plan §9; recipient=HNS; trigger=XIO
-antq_m11_flavor.6301 = {
+antq_m11_flavor.6305 = {
 	type = country_event
-	title = antq_m11_flavor.6301.title
-	desc = antq_m11_flavor.6301.desc
+	title = antq_m11_flavor.6305.title
+	desc = antq_m11_flavor.6305.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_attila.dds"
@@ -5736,15 +5812,15 @@ antq_m11_flavor.6301 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6301.a
+		name = antq_m11_flavor.6305.a
 	}
 }
 
 # Attila — A Contested Moment; ANTIQVITAS master plan §9; recipient=HNS; trigger=XIO
-antq_m11_flavor.6302 = {
+antq_m11_flavor.6306 = {
 	type = country_event
-	title = antq_m11_flavor.6302.title
-	desc = antq_m11_flavor.6302.desc
+	title = antq_m11_flavor.6306.title
+	desc = antq_m11_flavor.6306.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_attila.dds"
@@ -5755,15 +5831,15 @@ antq_m11_flavor.6302 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6302.a
+		name = antq_m11_flavor.6306.a
 	}
 }
 
 # Attila — The Window Narrows; ANTIQVITAS master plan §9; recipient=HNS; trigger=XIO
-antq_m11_flavor.6303 = {
+antq_m11_flavor.6307 = {
 	type = country_event
-	title = antq_m11_flavor.6303.title
-	desc = antq_m11_flavor.6303.desc
+	title = antq_m11_flavor.6307.title
+	desc = antq_m11_flavor.6307.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_attila.dds"
@@ -5774,15 +5850,15 @@ antq_m11_flavor.6303 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6303.a
+		name = antq_m11_flavor.6307.a
 	}
 }
 
 # Hephthalites — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
-antq_m11_flavor.6304 = {
+antq_m11_flavor.6308 = {
 	type = country_event
-	title = antq_m11_flavor.6304.title
-	desc = antq_m11_flavor.6304.desc
+	title = antq_m11_flavor.6308.title
+	desc = antq_m11_flavor.6308.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_hephthalites.dds"
@@ -5793,15 +5869,15 @@ antq_m11_flavor.6304 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6304.a
+		name = antq_m11_flavor.6308.a
 	}
 }
 
 # Hephthalites — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
-antq_m11_flavor.6305 = {
+antq_m11_flavor.6309 = {
 	type = country_event
-	title = antq_m11_flavor.6305.title
-	desc = antq_m11_flavor.6305.desc
+	title = antq_m11_flavor.6309.title
+	desc = antq_m11_flavor.6309.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_hephthalites.dds"
@@ -5812,15 +5888,15 @@ antq_m11_flavor.6305 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6305.a
+		name = antq_m11_flavor.6309.a
 	}
 }
 
 # Hephthalites — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
-antq_m11_flavor.6306 = {
+antq_m11_flavor.6310 = {
 	type = country_event
-	title = antq_m11_flavor.6306.title
-	desc = antq_m11_flavor.6306.desc
+	title = antq_m11_flavor.6310.title
+	desc = antq_m11_flavor.6310.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_hephthalites.dds"
@@ -5831,15 +5907,15 @@ antq_m11_flavor.6306 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6306.a
+		name = antq_m11_flavor.6310.a
 	}
 }
 
 # Hephthalites — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
-antq_m11_flavor.6307 = {
+antq_m11_flavor.6311 = {
 	type = country_event
-	title = antq_m11_flavor.6307.title
-	desc = antq_m11_flavor.6307.desc
+	title = antq_m11_flavor.6311.title
+	desc = antq_m11_flavor.6311.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_hephthalites.dds"
@@ -5850,15 +5926,15 @@ antq_m11_flavor.6307 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6307.a
+		name = antq_m11_flavor.6311.a
 	}
 }
 
 # Constantinople Earthquake — Conditions Develop; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
-antq_m11_flavor.6308 = {
+antq_m11_flavor.6312 = {
 	type = country_event
-	title = antq_m11_flavor.6308.title
-	desc = antq_m11_flavor.6308.desc
+	title = antq_m11_flavor.6312.title
+	desc = antq_m11_flavor.6312.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_constantinople_earthquake.dds"
@@ -5869,15 +5945,15 @@ antq_m11_flavor.6308 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6308.a
+		name = antq_m11_flavor.6312.a
 	}
 }
 
 # Constantinople Earthquake — Pressure Builds; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
-antq_m11_flavor.6309 = {
+antq_m11_flavor.6313 = {
 	type = country_event
-	title = antq_m11_flavor.6309.title
-	desc = antq_m11_flavor.6309.desc
+	title = antq_m11_flavor.6313.title
+	desc = antq_m11_flavor.6313.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_constantinople_earthquake.dds"
@@ -5888,15 +5964,15 @@ antq_m11_flavor.6309 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6309.a
+		name = antq_m11_flavor.6313.a
 	}
 }
 
 # Constantinople Earthquake — A Contested Moment; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
-antq_m11_flavor.6310 = {
+antq_m11_flavor.6314 = {
 	type = country_event
-	title = antq_m11_flavor.6310.title
-	desc = antq_m11_flavor.6310.desc
+	title = antq_m11_flavor.6314.title
+	desc = antq_m11_flavor.6314.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_constantinople_earthquake.dds"
@@ -5907,15 +5983,15 @@ antq_m11_flavor.6310 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6310.a
+		name = antq_m11_flavor.6314.a
 	}
 }
 
 # Constantinople Earthquake — The Window Narrows; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
-antq_m11_flavor.6311 = {
+antq_m11_flavor.6315 = {
 	type = country_event
-	title = antq_m11_flavor.6311.title
-	desc = antq_m11_flavor.6311.desc
+	title = antq_m11_flavor.6315.title
+	desc = antq_m11_flavor.6315.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_constantinople_earthquake.dds"
@@ -5926,15 +6002,15 @@ antq_m11_flavor.6311 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6311.a
+		name = antq_m11_flavor.6315.a
 	}
 }
 
 # Adventus Saxonum — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6312 = {
+antq_m11_flavor.6316 = {
 	type = country_event
-	title = antq_m11_flavor.6312.title
-	desc = antq_m11_flavor.6312.desc
+	title = antq_m11_flavor.6316.title
+	desc = antq_m11_flavor.6316.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_adventus_saxonum.dds"
@@ -5945,15 +6021,15 @@ antq_m11_flavor.6312 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6312.a
+		name = antq_m11_flavor.6316.a
 	}
 }
 
 # Adventus Saxonum — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6313 = {
+antq_m11_flavor.6317 = {
 	type = country_event
-	title = antq_m11_flavor.6313.title
-	desc = antq_m11_flavor.6313.desc
+	title = antq_m11_flavor.6317.title
+	desc = antq_m11_flavor.6317.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_adventus_saxonum.dds"
@@ -5964,15 +6040,15 @@ antq_m11_flavor.6313 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6313.a
+		name = antq_m11_flavor.6317.a
 	}
 }
 
 # Adventus Saxonum — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6314 = {
+antq_m11_flavor.6318 = {
 	type = country_event
-	title = antq_m11_flavor.6314.title
-	desc = antq_m11_flavor.6314.desc
+	title = antq_m11_flavor.6318.title
+	desc = antq_m11_flavor.6318.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_adventus_saxonum.dds"
@@ -5983,15 +6059,15 @@ antq_m11_flavor.6314 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6314.a
+		name = antq_m11_flavor.6318.a
 	}
 }
 
 # Adventus Saxonum — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
-antq_m11_flavor.6315 = {
+antq_m11_flavor.6319 = {
 	type = country_event
-	title = antq_m11_flavor.6315.title
-	desc = antq_m11_flavor.6315.desc
+	title = antq_m11_flavor.6319.title
+	desc = antq_m11_flavor.6319.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_adventus_saxonum.dds"
@@ -6002,15 +6078,15 @@ antq_m11_flavor.6315 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6315.a
+		name = antq_m11_flavor.6319.a
 	}
 }
 
 # Chalcedon and Avarayr — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
-antq_m11_flavor.6316 = {
+antq_m11_flavor.6320 = {
 	type = country_event
-	title = antq_m11_flavor.6316.title
-	desc = antq_m11_flavor.6316.desc
+	title = antq_m11_flavor.6320.title
+	desc = antq_m11_flavor.6320.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_chalcedon_avarayr.dds"
@@ -6021,15 +6097,15 @@ antq_m11_flavor.6316 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6316.a
+		name = antq_m11_flavor.6320.a
 	}
 }
 
 # Chalcedon and Avarayr — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
-antq_m11_flavor.6317 = {
+antq_m11_flavor.6321 = {
 	type = country_event
-	title = antq_m11_flavor.6317.title
-	desc = antq_m11_flavor.6317.desc
+	title = antq_m11_flavor.6321.title
+	desc = antq_m11_flavor.6321.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_chalcedon_avarayr.dds"
@@ -6040,15 +6116,15 @@ antq_m11_flavor.6317 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6317.a
+		name = antq_m11_flavor.6321.a
 	}
 }
 
 # Chalcedon and Avarayr — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
-antq_m11_flavor.6318 = {
+antq_m11_flavor.6322 = {
 	type = country_event
-	title = antq_m11_flavor.6318.title
-	desc = antq_m11_flavor.6318.desc
+	title = antq_m11_flavor.6322.title
+	desc = antq_m11_flavor.6322.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_chalcedon_avarayr.dds"
@@ -6059,15 +6135,15 @@ antq_m11_flavor.6318 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6318.a
+		name = antq_m11_flavor.6322.a
 	}
 }
 
 # Chalcedon and Avarayr — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
-antq_m11_flavor.6319 = {
+antq_m11_flavor.6323 = {
 	type = country_event
-	title = antq_m11_flavor.6319.title
-	desc = antq_m11_flavor.6319.desc
+	title = antq_m11_flavor.6323.title
+	desc = antq_m11_flavor.6323.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_chalcedon_avarayr.dds"
@@ -6078,15 +6154,15 @@ antq_m11_flavor.6319 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6319.a
+		name = antq_m11_flavor.6323.a
 	}
 }
 
 # Vandal Sack of Rome — Conditions Develop; ANTIQVITAS master plan §9; recipient=VND; trigger=XAA
-antq_m11_flavor.6320 = {
+antq_m11_flavor.6324 = {
 	type = country_event
-	title = antq_m11_flavor.6320.title
-	desc = antq_m11_flavor.6320.desc
+	title = antq_m11_flavor.6324.title
+	desc = antq_m11_flavor.6324.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_vandal_sack_rome.dds"
@@ -6097,15 +6173,15 @@ antq_m11_flavor.6320 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6320.a
+		name = antq_m11_flavor.6324.a
 	}
 }
 
 # Vandal Sack of Rome — Pressure Builds; ANTIQVITAS master plan §9; recipient=VND; trigger=XAA
-antq_m11_flavor.6321 = {
+antq_m11_flavor.6325 = {
 	type = country_event
-	title = antq_m11_flavor.6321.title
-	desc = antq_m11_flavor.6321.desc
+	title = antq_m11_flavor.6325.title
+	desc = antq_m11_flavor.6325.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_vandal_sack_rome.dds"
@@ -6116,15 +6192,15 @@ antq_m11_flavor.6321 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6321.a
+		name = antq_m11_flavor.6325.a
 	}
 }
 
 # Vandal Sack of Rome — A Contested Moment; ANTIQVITAS master plan §9; recipient=VND; trigger=XAA
-antq_m11_flavor.6322 = {
+antq_m11_flavor.6326 = {
 	type = country_event
-	title = antq_m11_flavor.6322.title
-	desc = antq_m11_flavor.6322.desc
+	title = antq_m11_flavor.6326.title
+	desc = antq_m11_flavor.6326.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_vandal_sack_rome.dds"
@@ -6135,15 +6211,15 @@ antq_m11_flavor.6322 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6322.a
+		name = antq_m11_flavor.6326.a
 	}
 }
 
 # Vandal Sack of Rome — The Window Narrows; ANTIQVITAS master plan §9; recipient=VND; trigger=XAA
-antq_m11_flavor.6323 = {
+antq_m11_flavor.6327 = {
 	type = country_event
-	title = antq_m11_flavor.6323.title
-	desc = antq_m11_flavor.6323.desc
+	title = antq_m11_flavor.6327.title
+	desc = antq_m11_flavor.6327.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_vandal_sack_rome.dds"
@@ -6154,15 +6230,15 @@ antq_m11_flavor.6323 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6323.a
+		name = antq_m11_flavor.6327.a
 	}
 }
 
 # Cape Bon — Conditions Develop; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
-antq_m11_flavor.6324 = {
+antq_m11_flavor.6328 = {
 	type = country_event
-	title = antq_m11_flavor.6324.title
-	desc = antq_m11_flavor.6324.desc
+	title = antq_m11_flavor.6328.title
+	desc = antq_m11_flavor.6328.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_cape_bon.dds"
@@ -6173,15 +6249,15 @@ antq_m11_flavor.6324 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6324.a
+		name = antq_m11_flavor.6328.a
 	}
 }
 
 # Cape Bon — Pressure Builds; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
-antq_m11_flavor.6325 = {
+antq_m11_flavor.6329 = {
 	type = country_event
-	title = antq_m11_flavor.6325.title
-	desc = antq_m11_flavor.6325.desc
+	title = antq_m11_flavor.6329.title
+	desc = antq_m11_flavor.6329.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_cape_bon.dds"
@@ -6192,15 +6268,15 @@ antq_m11_flavor.6325 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6325.a
+		name = antq_m11_flavor.6329.a
 	}
 }
 
 # Cape Bon — A Contested Moment; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
-antq_m11_flavor.6326 = {
+antq_m11_flavor.6330 = {
 	type = country_event
-	title = antq_m11_flavor.6326.title
-	desc = antq_m11_flavor.6326.desc
+	title = antq_m11_flavor.6330.title
+	desc = antq_m11_flavor.6330.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_cape_bon.dds"
@@ -6211,15 +6287,15 @@ antq_m11_flavor.6326 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6326.a
+		name = antq_m11_flavor.6330.a
 	}
 }
 
 # Cape Bon — The Window Narrows; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
-antq_m11_flavor.6327 = {
+antq_m11_flavor.6331 = {
 	type = country_event
-	title = antq_m11_flavor.6327.title
-	desc = antq_m11_flavor.6327.desc
+	title = antq_m11_flavor.6331.title
+	desc = antq_m11_flavor.6331.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_cape_bon.dds"
@@ -6230,6 +6306,6 @@ antq_m11_flavor.6327 = {
 		monthly_chance = 100
 	}
 	option = {
-		name = antq_m11_flavor.6327.a
+		name = antq_m11_flavor.6331.a
 	}
 }

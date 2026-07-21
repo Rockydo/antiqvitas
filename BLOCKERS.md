@@ -9,8 +9,10 @@ dataset: installed template cultures are not historical AD 1 evidence,
 Pleiades is a place gazetteer rather than a culture atlas, and CHGIS cannot be
 redistributed in this project. It no longer blocks all M4 work. A new authored
 `docs/culture_remap.csv` ledger supplies 313 source-labelled geographic
-selectors, resolving to 11,714 controlled locations and 94 additional culture
-definitions without copying external map data.
+selectors, resolving to 11,714 controlled locations and 94 additional
+selector-led culture definitions without copying external map data. Two
+additional non-ledger culture definitions support the Moche chronology
+correction, bringing the catalogue to 165.
 
 This first batch is deliberately limited to source-qualified regional frames in
 Italy, Iberia, Aquitania/Armorica, the Balkans, Anatolia, the Levant, Punic
@@ -26,7 +28,7 @@ Samhan/local-community, Iberian-Colchian Kartvelian, northern-Mesopotamian
 Aramaic, Late-Preclassic Petén Maya, lower-Rhine Batavian, Moravian Quadi, and
 central-Vietnam Sa Huynh archaeological, and interior Gaetulian frames.
 Its contested rows record broad proxies rather than uniform ethnic boundaries.
-It raises the catalogue to 160, not the plan's final 350-500 cultures.
+It raises the catalogue to 165, not the plan's final 350-500 cultures.
 
 Recovery: continue source-labelled geographic batches with the same selector
 and overlap audit. Do not infer a historical culture directly from a vanilla

@@ -5,6 +5,13 @@ requirements in the corresponding section of the ANTIQVITAS master plan; those
 requirements are cross-checked against the following research pipeline before
 a row reaches `implemented` status.
 
+- `PNAS-VIR`: Charles S. Spencer and Elsa M. Redmond,
+  ["Territorial expansion and primary state formation"](https://pmc.ncbi.nlm.nih.gov/articles/PMC2867764/), *Proceedings of the National Academy of Sciences* 107 (2010), places the Gallinazo period at roughly 100 BCE-AD 200 and distinguishes its Viru-Valley evidence from the later Moche emergence in the Moche Valley. It supports an AD 1 Gallinazo archaeological proxy, not a fixed inter-valley frontier or a reconstructed state boundary.
+- `WIL-GAL`: Celeste M. Gagnon, ["Using General Estimating Equations to Analyze Oral Health Indicators"](https://doi.org/10.1002/oa.1284), *International Journal of Osteoarchaeology* 23 (2013), identifies the Gallinazo phase in the Moche Valley as AD 1-200. It supports the campaign-boundary local context, not a uniform ethnicity, language, or polity.
+- `JSTOR-MOC`: Steve Bourget and Kimberly L. Jones (eds.), [*The Art and Archaeology of the Moche*](https://www.jstor.org/stable/10.7560/718678), University of Texas Press, describes the Moche north-coast culture in the Early Intermediate Period (about AD 100-800). It supports the plan's post-start formation horizon, not an exact founding day or a single state.
+- `CAM-MOC`: Jeffrey Quilter and Michele L. Koons,
+  ["The Fall of the Moche: A Critique of Claims for South America's First State"](https://www.cambridge.org/core/journals/latin-american-antiquity/article/abs/fall-of-the-moche-a-critique-of-claims-for-south-americas-first-state/31E4D98BF0F087FA9B535DD9979E26DB), *Latin American Antiquity* 23 (2012), cautions against reifying the Moche archaeological culture as one political system. It motivates the plural Moche-polities adapter and does not establish a unitary realm.
+
 - `CAH-XI`: *The Cambridge Ancient History*, Volume XI, especially Roman
   imperial, Parthian, Germanic, and demographic syntheses.
 - `OCD`: *Oxford Classical Dictionary*, polity, ruler, and chronology entries.
