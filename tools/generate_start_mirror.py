@@ -826,6 +826,7 @@ def country_manager() -> tuple[str, int, int]:
         for entry in json.loads(TAG_MAP.read_text(encoding="utf-8"))["entries"]
     }
     power = load_power_data()
+    current_terms = {term["design_tag"]: term for term in power.ruler_terms}
     ownership: dict[str, dict[str, list[str]]] = {}
     with OWNERSHIP.open(encoding="utf-8-sig", newline="") as handle:
         for entry in csv.DictReader(line for line in handle if not line.startswith("#")):
@@ -862,7 +863,11 @@ def country_manager() -> tuple[str, int, int]:
         lines.extend(f"\t\t\t\t{region}" for region in m9_discovery_regions(row))
         lines.append("\t\t\t}")
         if row["tag"] in power.governments:
-            lines.extend(government_block(power.governments[row["tag"]]))
+            lines.extend(
+                government_block(
+                    power.governments[row["tag"]], current_terms.get(row["tag"])
+                )
+            )
         else:
             lines.extend(fallback_government_block(row["kind"]))
         lines.extend((f"\t\t\tcapital = {capital}", "\t\t}", ""))
