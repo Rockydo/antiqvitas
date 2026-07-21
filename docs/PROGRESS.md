@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-21 - M4 atlas overlays are observer-verified
+
+- In a fresh, paused AD 1 Observer session, `Cultures (Location)` rendered the
+  generated regional culture atlas, including Celtic, Germanic, Italic,
+  Sarmatian, Uralić, Latin, and Baltic areas.
+- `Religions (Location)` rendered its paired atlas, including Religio Romana,
+  Germanic, Baltic-Slavic, Finnic, Tengri, Catharic, and Sámi Shamanist areas.
+- The archived session log has zero `script_system` diagnostics. This confirms
+  map-mode visibility only; M4 remains open because the 350–500-culture
+  expansion is separately deferred.
+
+Next: retain the map-mode checkpoint and await a redistributable reviewed
+global culture dataset before claiming the M4 milestone.
+
 ## 2026-07-21 - Player-context scope audit is bounded and deferred
 
 - A paused AD 1 Observer -> `tag XIO` probe confirmed the Xiongnu player
