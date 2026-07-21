@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render conservative M4 dynamic capital names from reviewed coordinate anchors."""
+"""Render conservative M4 dynamic names from reviewed source anchors."""
 
 from __future__ import annotations
 
@@ -18,6 +18,7 @@ CULTURES = ROOT / "docs/m4/cultures.csv"
 LANGUAGES = ROOT / "docs/m4/languages.csv"
 LOC_ROOT = ROOT / "main_menu/localization"
 REPORT = ROOT / "docs/m4/dynamic_location_names.csv"
+CURATED = ROOT / "docs/m4/dynamic_location_name_overrides.csv"
 ENGINE_LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
 CLIENT_LANGUAGES = (
     "english",
@@ -41,6 +42,67 @@ def rows(path: Path) -> list[dict[str, str]]:
 
 def esc(value: str) -> str:
     return value.replace('"', "'")
+
+
+def curated_entries(
+    culture_groups: dict[str, str],
+    group_languages: dict[str, str],
+    installed_locations: set[str],
+    seen_locations: set[str],
+) -> list[dict[str, str]]:
+    """Load reviewed non-capital toponyms without inventing name forms."""
+    required = ("location", "culture", "historical_name", "source", "confidence", "note")
+    with CURATED.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if tuple(reader.fieldnames or ()) != required:
+            raise ValueError(f"{CURATED.relative_to(ROOT)} must use header {','.join(required)}")
+        rows_ = list(reader)
+    if not rows_:
+        raise ValueError(f"{CURATED.relative_to(ROOT)} has no reviewed non-capital name rows")
+    output: list[dict[str, str]] = []
+    failures: list[str] = []
+    for number, row in enumerate(rows_, start=2):
+        value = {field: row.get(field, "").strip() for field in required}
+        if any(not value[field] for field in required):
+            failures.append(f"{CURATED.relative_to(ROOT)}:{number}: blank required field")
+            continue
+        location = value["location"]
+        culture = value["culture"]
+        if location not in installed_locations:
+            failures.append(f"{CURATED.relative_to(ROOT)}:{number}: unknown installed location {location}")
+            continue
+        if location in seen_locations:
+            failures.append(f"{CURATED.relative_to(ROOT)}:{number}: duplicate dynamic-name location {location}")
+            continue
+        group = culture_groups.get(culture)
+        if not group:
+            failures.append(f"{CURATED.relative_to(ROOT)}:{number}: unknown M4 culture {culture}")
+            continue
+        language = group_languages.get(group)
+        if not language or not language.endswith("_language"):
+            failures.append(f"{CURATED.relative_to(ROOT)}:{number}: culture {culture} has no valid language")
+            continue
+        if value["confidence"] != "secure":
+            failures.append(f"{CURATED.relative_to(ROOT)}:{number}: only secure direct toponyms are permitted")
+            continue
+        output.append(
+            {
+                "location": location,
+                "anchor_kind": "curated",
+                "tag": "",
+                "historical_name": value["historical_name"],
+                "culture": culture,
+                "language": language,
+                "dialect": language.removesuffix("_language") + "_dialect",
+                "source": value["source"],
+                "confidence": value["confidence"],
+                "note": value["note"],
+            }
+        )
+        seen_locations.add(location)
+    if failures:
+        raise ValueError("\n".join(sorted(set(failures))))
+    return output
 
 
 def entries() -> list[dict[str, str]]:
@@ -77,6 +139,7 @@ def entries() -> list[dict[str, str]]:
         output.append(
             {
                 "location": location,
+                "anchor_kind": "capital",
                 "tag": tag,
                 "historical_name": row["historical_capital"],
                 "culture": profile.culture,
@@ -84,9 +147,11 @@ def entries() -> list[dict[str, str]]:
                 "dialect": language.removesuffix("_language") + "_dialect",
                 "source": f"{coordinate['source']};{row['source']}",
                 "confidence": coordinate["confidence"],
+                "note": "Coordinate-verified AD 1 capital anchor",
             }
         )
         seen_locations.add(location)
+    output.extend(curated_entries(culture_groups, group_languages, installed_locations, seen_locations))
     if not output:
         raise ValueError("no secure dynamic-name anchors were selected")
     return sorted(output, key=lambda entry: (entry["location"], entry["language"]))
@@ -95,7 +160,7 @@ def entries() -> list[dict[str, str]]:
 def localization(entries_: list[dict[str, str]], language: str) -> str:
     lines = [
         f"l_{language}:",
-        " # Generated from reviewed M4 coordinate anchors; English is mirrored by design.",
+        " # Generated from reviewed M4 capital anchors and curated toponym ledger; English is mirrored by design.",
     ]
     for entry in entries_:
         name = esc(entry["historical_name"])
@@ -107,12 +172,12 @@ def localization(entries_: list[dict[str, str]], language: str) -> str:
 
 
 def report(entries_: list[dict[str, str]]) -> str:
-    lines = ["location,tag,historical_name,culture,language,dialect,source,confidence"]
+    lines = ["location,anchor_kind,tag,historical_name,culture,language,dialect,source,confidence,note"]
     for entry in entries_:
         lines.append(
             ",".join(
                 entry[field]
-                for field in ("location", "tag", "historical_name", "culture", "language", "dialect", "source", "confidence")
+                for field in ("location", "anchor_kind", "tag", "historical_name", "culture", "language", "dialect", "source", "confidence", "note")
             )
         )
     return "\n".join(lines) + "\n"
@@ -156,7 +221,10 @@ def main() -> int:
         print("dynamic_names: FAIL")
         print("\n".join(f"  - {failure}" for failure in failures))
         return 1
-    print(f"dynamic_names: PASS ({len(entries())} reviewed anchors; {len(CLIENT_LANGUAGES)} mirrored localizations)")
+    selected = entries()
+    capitals = sum(entry["anchor_kind"] == "capital" for entry in selected)
+    curated = len(selected) - capitals
+    print(f"dynamic_names: PASS ({capitals} capital + {curated} curated anchors; {len(CLIENT_LANGUAGES)} mirrored localizations)")
     return 0
 
 
