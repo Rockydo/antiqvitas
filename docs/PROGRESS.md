@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-21 - M4 Bornu Chadic Basin atlas batch is smoke-verified
+
+- Added a cautious 18-location southern-Lake-Chad Chadic Basin proxy and its
+  generated culture definition. The ledger now has 317 selectors, 11,867
+  locations, and 145 mapped cultures; the catalogue rises to 166 cultures.
+- The source's own warning against direct archaeological language attribution
+  is retained: this is neither a Hausa/modern-language map nor a material
+  culture or state boundary. Full validation and enabled-mod smoke are green,
+  with zero new normalized error-log lines.
+
+Next: continue source-led global M4 density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Central Mexican Teotihuacan atlas batch is smoke-verified
 
 - Added the contested Central Mexican Teotihuacan-rise regional proxy. The

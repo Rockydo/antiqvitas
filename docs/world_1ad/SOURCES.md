@@ -5,6 +5,20 @@ requirements in the corresponding section of the ANTIQVITAS master plan; those
 requirements are cross-checked against the following research pipeline before
 a row reaches `implemented` status.
 
+- `OUP-CHAD`: Scott MacEachern, ["Understanding Distributions of Chadic
+  Languages: Archaeological Perspectives"](https://www.researchgate.net/publication/326404525_Understanding_distributions_of_chadic_languages_Archaeological_perspectives),
+  in *The Oxford Handbook of African Archaeology* (2018), stresses that direct
+  archaeological correlates for Chadic speech communities are difficult to
+  prove, but concludes that most southern Lake Chad Basin communities in the
+  early and mid-first millennium CE would have spoken Chadic languages. It
+  supports a cautious basin frame, not a direct material-culture label,
+  modern-language map, or precise boundary.
+- `CAM-DAI`: Graham Connah, ["The Daima Sequence and the Prehistoric
+  Chronology of the Lake Chad Region of Nigeria"](https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/daima-sequence-and-the-prehistoric-chronology-of-the-lake-chad-region-of-nigeria/CFBDEAA1165E352C8D7A4BC85CAF4F2C),
+  *Journal of African History* 20 (1979), documents the Daima/Bornu regional
+  sequence from the end of the second millennium BCE through the early-modern
+  period. It supports continuous regional occupation at AD 1, not the identity
+  or language of every location.
 - `INAH-TEO`: Julie Gazzola, [*La cerámica en fases tempranas (100-200 d.C.)
   de Teotihuacán y su interacción con otras áreas de
   Mesoamérica*](https://difusion.inah.gob.mx/publicaciones/libros/5516.html),

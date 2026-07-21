@@ -415,6 +415,15 @@ antq_mande = { # P10;CAH-XI; West African Mande-area communities
 	}
 }
 
+antq_chadic = { # P8.5;P10;OUP-CHAD;CAM-DAI; Lake Chad Basin Chadic regional proxy; technical Mande fallback is not a language claim
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_chadic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
 antq_cushitic = { # P8.5;P10;CAH-XI; Horn regional proxy; technical naming layer does not decide local ethnolinguistic detail
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_cushitic
