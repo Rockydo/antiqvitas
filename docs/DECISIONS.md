@@ -1,5 +1,22 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Culture symbol yields to the existing Liburnian unit key
+
+The M7 navy already owns the global localization key `antq_liburnian`. The
+first real-game smoke correctly reported the collision when M4 introduced a
+same-named culture. The culture is therefore namespaced as
+`antq_liburnian_culture`, while its player-facing name remains "Liburnian".
+This preserves the M7 unit contract and avoids a second global localization
+definition; a fresh validation and smoke prove the repair.
+
+## 2026-07-21 - Balkan-Anatolian language groups are rendering adapters
+
+The locally harvested language registry lacks verified roots for the 50 new
+frames. Their Balkan/Anatolian/Hellenic/Celtic group fallbacks are technical
+engine adapters only, not conclusions about local speech, language-family
+membership, ethnicity, or Romanization. (Sources `STR-BAL`, `STR-ANA`,
+`MIT-ANA`, and `CAH-XI`.)
+
 ## 2026-07-21 - Gallic and Aquitanian labels reuse verified language adapters
 
 The installed language registry has no verified roots for the 47 named Gallic
