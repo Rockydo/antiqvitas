@@ -10,7 +10,8 @@
 - The observer gate remains untagged rather than overstating that clean menu
   result: the M7 AI-war replay confirms Observer entry and maximum speed, then
   reproduces the existing FSR renderer access violation before periodic
-  evidence. `docs/m12/M12_FINAL_GATE.md` records the exact boundary.
+  evidence. The M8 and five M10 reports now consistently record that current
+  renderer boundary. `docs/m12/M12_FINAL_GATE.md` records the exact boundary.
 
 Next: all remaining milestone acceptance work is documented as renderer- or
 engine-contract-blocked; resume the relevant retests only after a material

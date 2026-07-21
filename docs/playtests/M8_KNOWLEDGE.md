@@ -25,10 +25,11 @@ the worldwide political surface is visible in
 This follows the clean menu launch in
 [`m8_menu_ready.png`](../screens/M8_knowledge_probe/m8_menu_ready.png).
 
-The driver then opened the existing Observer confirmation and replayed the
-visible OK target. The confirmation remained open in
-[`m8_observer_started.png`](../screens/M8_knowledge_probe/m8_observer_started.png),
-matching the two bounded M7 attempts already documented in `BLOCKERS.md`.
-Because no observer game could be entered, AI research behavior cannot yet be
-observed; the M8 milestone gate remains open. The static research-graph and
+The historical confirmation finding is now superseded. The exact-name
+country-change overlay enters Observer Mode, and the 2026-07-22 M7 replay
+reached maximum speed in a live AI-war session. That material retest then hit
+the existing `ffxFsr2ResourceIsNull` / `NVSDK_NGX_D3D12_Shutdown1` renderer
+crash before a periodic capture. AI research behavior therefore still cannot
+be observed; the M8 milestone gate remains open. The static research-graph and
 anachronism checks, together with the clean real-game menu load, remain green.
+See `docs/playtests/M7_WAR.md` and `BLOCKERS.md` for the current retry boundary.
