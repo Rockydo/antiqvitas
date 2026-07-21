@@ -1,8 +1,8 @@
 # Blockers
 
-## 2026-07-21 - M4 observer/map-mode acceptance reproduces the renderer crash
+## 2026-07-21 - M4 observer/map-mode acceptance is resolved by the boundary-term repair
 
-Status: **M4 content and menu gates are green; final visual acceptance is blocked.**
+Status: **resolved 2026-07-21.**
 
 The current 350-culture build passed `make full`; its final enabled-mod smoke at
 18:49 UTC recorded zero new normalized `error.log` lines. A fresh driver launch
@@ -18,19 +18,25 @@ stack. The second run was made after correcting the driver's minimized-window
 handling, so the repeated engine crash is not a stale-window or click-target
 failure.
 
-No current M4 map-mode acceptance is claimed and `M4-done` remains untagged.
-Do not repeat renderer-profile experiments until a material renderer, driver,
-or installed-game change creates a distinct test condition. The current driver
-repair prevents unrelated desktop windows from being captured as game evidence;
-it does not alter any game data.
+The required material condition was the generated AD 1 start data: local
+diagnostics showed that every open current `ruler_term` at `1.1.1` was rejected
+as a future term, alongside the invalid named-heir/regent reports. The M6
+generator now retains those terms as a source ledger but uses the installed
+native `ruler`/`heir` start fields. A new autonomous run reached a paused
+`08:00, 1 January, 1` observer, then rendered the required Culture (Location)
+and Religions (Location) maps. The successful evidence is in
+`docs/screens/20260721_boundary_term_fix/` and the accepted report is
+`docs/playtests/M4_FINAL_GATE_350_20260721.md`.
 
-Recovery: continue unblocked M4 data work (reviewed dynamic names) and retain
-the green content/menu baseline. Resume the visual gate only after the stated
-material condition changes.
+The earlier two crash bundles remain valid historical diagnostics, but they no
+longer block M4. Separate renderer and long-observer reliability issues remain
+open for M12; the successful M4 session was paused and does not claim an
+observer-to-476 result.
 
 ## 2026-07-21 - M4 culture atlas is partially unblocked by an authored ledger
 
-Status: **M4 density target is met; current full and observer/map-mode acceptance remain open.**
+Status: **M4 density target and final observer/map-mode acceptance are met
+2026-07-21.**
 
 The 2026-07-19 evidence review remains valid for a fully automated global
 dataset: installed template cultures are not historical AD 1 evidence,
@@ -74,17 +80,17 @@ Tacitus is explicitly a later cross-check, never date-exact placement evidence.
 All new rows remain contested proxies rather than uniform ethnic boundaries.
 The catalogue now meets the plan's 350-culture lower bound.
 
-The 2026-07-21 M4 gate attempt ran `make full` successfully and reached a fresh
-AD 1 Observer screen through the game driver. Earlier observer probes establish
-that the Culture/Religion map surfaces render; the fresh current-build start
-confirmed a live 08:00, 1 January, 1 session. The density criterion is now met,
-but the milestone still needs a current full and driver-observer/map-mode gate
-against the 350-definition build. Do not manufacture additional cultures from
-installed template keys merely to increase the number.
+The 2026-07-21 M4 gate ran `make full` successfully and, after the separate
+boundary-term repair recorded above, reached a fresh AD 1 Observer screen
+through the game driver. The current 350-definition build rendered both the
+Culture (Location) and Religions (Location) map modes in the paused `08:00,
+1 January, 1` session. Do not manufacture additional cultures from installed
+template keys merely to increase the number.
 
-Recovery: retain the source-labelled ledger and complete the current M4 gate.
-Future refinements still require a comparably reviewed dataset or bounded source
-corpus; do not infer a historical culture directly from a vanilla template key.
+Recovery: retain the source-labelled ledger and the accepted M4 evidence.
+Future refinements still require a comparably reviewed dataset or bounded
+source corpus; do not infer a historical culture directly from a vanilla
+template key.
 
 ## 2026-07-20 - M12 vanilla-runtime quarantine requires source-preserving overlays
 

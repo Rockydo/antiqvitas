@@ -1,5 +1,31 @@
 # Progress
 
+## 2026-07-21 - M4 culture and faith atlas gate accepted
+
+- The generated AD 1 start initially logged `Future start date specified` for
+  every current `ruler_term`, plus invalid active-heir/regent diagnostics. The
+  installed start parser accepts the AD 1 calendar but rejects an open term
+  whose start is exactly the campaign boundary. `tools/m6_power.py` now keeps
+  the 31 source-led campaign-boundary term records in its audit ledger and
+  renders current heads through the native `ruler`/`heir` start fields instead.
+- After this material repair, a fully autonomous New Game run reached the
+  paused AD 1 selector and then Observer Mode. The live screens show
+  `08:00, 1 January, 1`, the Age of Principate, Culture (Location), and
+  Religions (Location):
+  `docs/screens/20260721_boundary_term_fix/boundary_fix_post_load.png`,
+  `boundary_fix_observing.png`, `boundary_fix_culture_map.png`, and
+  `boundary_fix_religion_map.png`.
+- The focused-window safeguard in `tools/gamedriver.py` now preserves an EU5
+  window that is already foregrounded, allowing the recorded New Game and
+  Observer inputs to proceed without weakening capture safety.
+- The current `make full` passed with 350 cultures, 37 religions, and zero new
+  normalized smoke lines. The 213 removed-law and 227 invalid-estate lines
+  exposed only by actual game initialization are recorded as the next runtime
+  compatibility task; they do not invalidate the M4 culture/religion gate.
+
+Next: eliminate the inherited vanilla government defaults in a fresh observer
+start before reopening M6/M8 runtime acceptance or long observer playback.
+
 ## 2026-07-21 - M4 dynamic-name ledger now extends beyond capitals
 
 - The dynamic-name generator now combines 61 coordinate-verified capital
