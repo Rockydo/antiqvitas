@@ -757,6 +757,15 @@ antq_dacian = { # P10;CAH-XI; Dacian communities
 	}
 }
 
+antq_getic = { # P8.7;P10;PER-DAC;JBRI-DAC; Lower-Danube Getic regional proxy without resolving the Dacian-Getae identity debate
+	language = antq_balkan_dialect
+	color = antq_culture_color_antq_getic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_balkan_group
+	}
+}
+
 antq_illyrian = { # P10;CAH-XI; Illyrian communities
 	language = antq_balkan_dialect
 	color = antq_culture_color_antq_illyrian
