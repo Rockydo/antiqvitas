@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Venedi regional frames retain the proto-Slavic fallback dialect
+
+The installed language inventory has no verified proto-Slavic root. The two
+regional Venedi records use the existing `west_slavic_language` fallback so
+EU5 can render valid nested language records. This is an engine contract, not
+a claim that AD 1 northeastern or Dnieper populations spoke a later West Slavic
+standard or that their affiliations are resolved.
+
 ## 2026-07-21 - Rhaetic uses the existing technical Latin fallback
 
 The verified build has no Rhaetic language root. The bounded Rhaetic culture

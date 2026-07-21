@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-21 - M4 Venedi regional-atlas batch is smoke-verified
+
+- Added two non-overlapping residual SoP selectors for the northeastern and
+  Dnieper Venedi frames. They resolve 845 further locations, lifting the
+  ledger to 270 selectors, 10,045 locations, and 119 mapped cultures.
+- Added Northeastern Venedi and Dnieper Venedi definitions, raising the M4
+  catalogue to 150 cultures. Full validation and enabled-mod smoke are green,
+  with zero new normalized error-log lines.
+- These are carefully bounded regional proxies, not later Rus identities; the
+  engine's Slavic-language fallback is documented separately.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Roman regional-atlas batch is smoke-verified
 
 - Added 39 non-overlapping selectors through Italy, Gaul, Roman Egypt,
