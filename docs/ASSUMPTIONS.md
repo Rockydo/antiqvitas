@@ -1,5 +1,19 @@
 # Historical Assumptions
 
+## 2026-07-21 - First M4 remap batch uses regional frames, not homogeneous ethnic borders
+
+The 47 selectors in `docs/culture_remap.csv` make bounded regional statements
+for AD 1 Italy, Iberia, Aquitania/Armorica, the Balkans, Greece/Anatolia, the
+Levant, Punic coasts, South Arabia, and northeast Africa. They do not identify
+every settlement's language, legal status, ancestry, self-description, or
+political allegiance. The rows are marked `contested` where the selected map
+area necessarily compresses mixed, Romanized, Hellenized, inland, coastal, or
+frontier populations; a narrower later override may replace them. In
+particular, the South Yemen selector is a broad Himyarite proxy and does not
+erase Hadramawt diversity. Sources weighed: master-plan section 10 (P10);
+CAH-XI; OCD; Pleiades geographic context (PLE), as routed in the ledger.
+[secure broad regional context; contested local representation]
+
 ## 2026-07-20 - Unknown AD 1 incumbents remain anonymous rather than fictional
 
 For 75 Tier-1/2 polities, confederations, or town clusters, the project source

@@ -51,11 +51,19 @@ CORE_TAGS = frozenset(("ROM", "HAN", "PAR"))
 # These are mechanics-category bridges, not claims that their vanilla labels
 # describe the historical institutions represented by M6's custom adapters.
 START_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
-    "antq_imperial_cult": (("unlock_law", "legal_code_law"),),
+    # Every AD 1 technology tier receives the five depth-zero advances.  The
+    # installed tribal templates set these two engine-native law categories at
+    # creation, so their category bridges must live at that universally held
+    # depth rather than at later thematic advances.  This is only a mechanical
+    # compatibility mapping; M6's custom laws remain the historical surface.
+    "antq_imperial_cult": (
+        ("unlock_law", "legal_code_law"),
+        ("unlock_law", "education_masses_law"),
+        ("unlock_law", "tribal_legal_basis_law"),
+    ),
     "antq_provincial_census": (("unlock_law", "administrative_system"),),
     "antq_tax_registers": (("unlock_law", "distribution_of_power_law"),),
     "antq_road_milestones": (("unlock_law", "royal_court_customs_law"),),
-    "antq_legal_petitions": (("unlock_law", "education_masses_law"),),
     "antq_municipal_charters": (("unlock_law", "feudal_de_jure_law"),),
     # Vanilla's first infantry advance unlocks this court policy.  Its units
     # are deliberately suppressed, but this category bridge is still needed
@@ -66,7 +74,6 @@ START_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
     ),
     "antq_auxiliary_service": (("unlock_law", "tribal_religious_values_law"),),
     "antq_drill_routines": (("unlock_law", "tribal_organization_law"),),
-    "antq_supply_columns": (("unlock_law", "tribal_legal_basis_law"),),
     "antq_monsoon_navigation": (("unlock_law", "coin_laws"),),
     "antq_red_sea_piloting": (("unlock_law", "mining_law"),),
     "antq_caravan_accounting": (("unlock_law", "immigration_law"),),

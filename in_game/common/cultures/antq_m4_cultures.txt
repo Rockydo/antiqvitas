@@ -154,6 +154,24 @@ antq_suebian = { # P10;CAH-XI; Suebian communities
 	}
 }
 
+antq_cisalpine_gallic = { # P10;CAH-XI;PLE; Po Valley Celtic communities before Roman cultural consolidation
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_cisalpine_gallic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_armorican = { # P10;CAH-XI;PLE; Northwestern Gallic communities
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_armorican
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
 antq_parthian = { # P10;CAH-XI; Arsacid Iranian court culture
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_parthian
@@ -493,6 +511,186 @@ antq_iberian = { # P10;CAH-XI; Non-Indo-European Iberian communities
 	tags = { european_gfx }
 	culture_groups = {
 		antq_iberian_group
+	}
+}
+
+antq_gallaecian = { # P10;CAH-XI;PLE; Northwestern Iberian communities
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_gallaecian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_aquitanian = { # P10;CAH-XI;PLE; Western Pyrenean communities
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_aquitanian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_lusitanian = { # P10;CAH-XI;PLE; Western Iberian communities
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_lusitanian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_turdetanian = { # P10;CAH-XI;PLE; Southwestern Iberian communities
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_turdetanian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_ligurian = { # P10;CAH-XI;PLE; Ligurian communities represented with the nearest verified technical language layer
+	language = antq_italic_dialect
+	color = antq_culture_color_antq_ligurian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_italic_group
+	}
+}
+
+antq_nuragic = { # P10;CAH-XI;PLE; Sardinian Nuragic-residual communities
+	language = antq_italic_dialect
+	color = antq_culture_color_antq_nuragic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_italic_group
+	}
+}
+
+antq_thracian = { # P10;CAH-XI;PLE; Thracian communities
+	language = antq_balkan_dialect
+	color = antq_culture_color_antq_thracian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_balkan_group
+	}
+}
+
+antq_pannonian = { # P10;CAH-XI;PLE; Pannonian communities
+	language = antq_balkan_dialect
+	color = antq_culture_color_antq_pannonian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_balkan_group
+	}
+}
+
+antq_phrygian = { # P10;CAH-XI;PLE; Central Anatolian residue after Hellenization
+	language = antq_anatolian_dialect
+	color = antq_culture_color_antq_phrygian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_anatolian_group
+	}
+}
+
+antq_cappadocian = { # P10;CAH-XI;PLE; Cappadocian regional communities
+	language = antq_anatolian_dialect
+	color = antq_culture_color_antq_cappadocian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_anatolian_group
+	}
+}
+
+antq_isaurian = { # P10;CAH-XI;PLE; Isaurian highland communities
+	language = antq_anatolian_dialect
+	color = antq_culture_color_antq_isaurian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_anatolian_group
+	}
+}
+
+antq_lycian_carian = { # P10;CAH-XI;PLE; Southwestern Anatolian residue communities
+	language = antq_anatolian_dialect
+	color = antq_culture_color_antq_lycian_carian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_anatolian_group
+	}
+}
+
+antq_phoenician_punic = { # P10;CAH-XI;PLE; Phoenician and Punic communities
+	language = antq_semitic_dialect
+	color = antq_culture_color_antq_phoenician_punic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_semitic_group
+	}
+}
+
+antq_samaritan = { # P10;OCD;PLE; Samaritan communities distinct from Judean profile
+	language = antq_semitic_dialect
+	color = antq_culture_color_antq_samaritan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_semitic_group
+	}
+}
+
+antq_sabaean = { # P10;CAH-XI;PLE; Sabaean South Arabian communities
+	language = antq_semitic_dialect
+	color = antq_culture_color_antq_sabaean
+	tags = { european_gfx }
+	culture_groups = {
+		antq_semitic_group
+	}
+}
+
+antq_himyarite = { # P10;CAH-XI;PLE; Himyarite South Arabian communities
+	language = antq_semitic_dialect
+	color = antq_culture_color_antq_himyarite
+	tags = { european_gfx }
+	culture_groups = {
+		antq_semitic_group
+	}
+}
+
+antq_geez = { # P10;CAH-XI;PLE; Northern Ethiopian Ethio-Semitic communities
+	language = antq_semitic_dialect
+	color = antq_culture_color_antq_geez
+	tags = { european_gfx }
+	culture_groups = {
+		antq_semitic_group
+	}
+}
+
+antq_meroitic = { # P10;CAH-XI;PLE; Meroitic heartland communities
+	language = antq_nile_dialect
+	color = antq_culture_color_antq_meroitic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_nile_group
+	}
+}
+
+antq_blemmyan = { # P10;CAH-XI;PLE; Eastern Desert Blemmyan communities
+	language = antq_nile_dialect
+	color = antq_culture_color_antq_blemmyan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_nile_group
+	}
+}
+
+antq_beja = { # P10;CAH-XI;PLE; Red Sea Beja communities
+	language = antq_nile_dialect
+	color = antq_culture_color_antq_beja
+	tags = { european_gfx }
+	culture_groups = {
+		antq_nile_group
 	}
 }
 

@@ -49,6 +49,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate conservative sourced dynamic-name v1 (61 coordinate-verified capital anchors, localized for all supported clients).
 - [x] Audit the 680 installed culture templates active in the AD 1 ownership surface, with profile candidates and explicit no-template exceptions.
 - [x] Probe the paused AD 1 Observer culture and location-religion map modes; both render sourced regional atlases without script-system diagnostics.
+- [x] Add a source-labelled geography-selector culture ledger: 47 reviewed regional selectors resolve 1,406 exact controlled locations, and 22 new culture definitions bring the catalog to 91.
 - [ ] Expand the culture/location remap toward the 350–500-culture target and add reviewed dynamic names beyond capital anchors (deferred in `BLOCKERS.md`: no redistributable global culture dataset yet).
 - [ ] Pass the final culture/religion atlas checks; population and raw `-leavepops` checks are green.
 - [ ] Run milestone gate and tag `M4-done`.

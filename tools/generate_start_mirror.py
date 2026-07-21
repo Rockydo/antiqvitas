@@ -40,6 +40,12 @@ SUBJECT_TYPES = ROOT / "docs/vanilla_symbols/subject_type.json"
 POPULATION_TARGETS = ROOT / "docs/m4/population_targets.csv"
 POPULATION_ALLOCATIONS = ROOT / "docs/m4/population_region_allocations.csv"
 POPULATION_LOCATION_OVERRIDES = ROOT / "docs/m4/population_location_overrides.csv"
+CULTURE_REMAP = ROOT / "docs/culture_remap.csv"
+M4_SYMBOLS = ROOT / "docs/m4/definition_symbols.json"
+GEOGRAPHY_HIERARCHY = ROOT / "docs/vanilla_symbols/geography_hierarchy.json"
+VANILLA_AREAS = ROOT / "docs/vanilla_symbols/areas.json"
+VANILLA_PROVINCES = ROOT / "docs/vanilla_symbols/provinces.json"
+VANILLA_LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
 MARKETS = ROOT / "docs/m5/markets.csv"
 URBAN_NODES = ROOT / "docs/m5/urban_nodes.csv"
 ROAD_SEGMENTS = ROOT / "docs/m5/road_segments.csv"
@@ -550,6 +556,107 @@ def population_location_overrides(
     return overrides
 
 
+def population_culture_remaps(owners: dict[str, str]) -> dict[str, dict[str, str]]:
+    """Resolve the source-labelled M4 culture atlas to exact owned locations.
+
+    The source ledger deliberately accepts installed geographic selectors, not
+    vanilla culture keys.  Thus an area can be assigned only after a historical
+    judgment is recorded with its source, and a selector's concrete location
+    expansion stays auditable after a map patch.  Location overrides remain a
+    narrower, higher-precedence exception for places such as the Rinan/Linyi
+    frontier.
+    """
+    required = ("selector_type", "selector", "culture", "source", "confidence", "note")
+    with CULTURE_REMAP.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if tuple(reader.fieldnames or ()) != required:
+            raise ValueError(
+                f"{CULTURE_REMAP.relative_to(ROOT)} must use header {','.join(required)}"
+            )
+        rows = list(reader)
+    if not rows:
+        raise ValueError(f"{CULTURE_REMAP.relative_to(ROOT)} has no remap rows")
+
+    m4_symbols = json.loads(M4_SYMBOLS.read_text(encoding="utf-8"))
+    cultures = set(m4_symbols["cultures"])
+    hierarchy = json.loads(GEOGRAPHY_HIERARCHY.read_text(encoding="utf-8-sig"))
+    valid = {
+        "area": set(json.loads(VANILLA_AREAS.read_text(encoding="utf-8-sig"))),
+        "province": set(json.loads(VANILLA_PROVINCES.read_text(encoding="utf-8-sig"))),
+        "location": set(json.loads(VANILLA_LOCATIONS.read_text(encoding="utf-8-sig"))),
+    }
+
+    def leaves(selector: str, trail: tuple[str, ...] = ()) -> set[str]:
+        if selector in trail:
+            raise ValueError(
+                f"{CULTURE_REMAP.relative_to(ROOT)} has cyclic geography selector "
+                f"{' -> '.join((*trail, selector))}"
+            )
+        children = hierarchy.get(selector)
+        if not children:
+            return {selector}
+        resolved: set[str] = set()
+        for child in children:
+            resolved.update(leaves(child, (*trail, selector)))
+        return resolved
+
+    remaps: dict[str, dict[str, str]] = {}
+    selectors: set[tuple[str, str]] = set()
+    failures: list[str] = []
+    for number, row in enumerate(rows, start=2):
+        values = {key: row.get(key, "").strip() for key in required}
+        if any(not values[key] for key in required):
+            failures.append(f"{CULTURE_REMAP.relative_to(ROOT)}:{number}: blank required field")
+            continue
+        selector_type = values["selector_type"]
+        selector = values["selector"]
+        selector_key = (selector_type, selector)
+        if selector_type not in valid:
+            failures.append(
+                f"{CULTURE_REMAP.relative_to(ROOT)}:{number}: invalid selector type {selector_type}"
+            )
+            continue
+        if selector not in valid[selector_type]:
+            failures.append(
+                f"{CULTURE_REMAP.relative_to(ROOT)}:{number}: unknown {selector_type} {selector}"
+            )
+            continue
+        if selector_key in selectors:
+            failures.append(
+                f"{CULTURE_REMAP.relative_to(ROOT)}:{number}: duplicate selector {selector_type} {selector}"
+            )
+            continue
+        selectors.add(selector_key)
+        if values["culture"] not in cultures:
+            failures.append(
+                f"{CULTURE_REMAP.relative_to(ROOT)}:{number}: unknown M4 culture {values['culture']}"
+            )
+            continue
+        if values["confidence"] not in {"secure", "contested"}:
+            failures.append(
+                f"{CULTURE_REMAP.relative_to(ROOT)}:{number}: invalid confidence {values['confidence']}"
+            )
+            continue
+        selected = leaves(selector) & set(owners)
+        if not selected:
+            failures.append(
+                f"{CULTURE_REMAP.relative_to(ROOT)}:{number}: {selector_type} {selector} has no controlled locations"
+            )
+            continue
+        for location in selected:
+            existing = remaps.get(location)
+            if existing:
+                failures.append(
+                    f"{CULTURE_REMAP.relative_to(ROOT)}:{number}: overlaps {location} from "
+                    f"{existing['selector_type']} {existing['selector']}"
+                )
+                continue
+            remaps[location] = values
+    if failures:
+        raise ValueError("\n".join(sorted(set(failures))))
+    return remaps
+
+
 def vanilla_pop_weights() -> dict[str, Decimal]:
     """Read installed-pop density as a geographic weighting template only."""
     config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
@@ -616,6 +723,7 @@ def population_manager() -> tuple[str, int, Decimal]:
                 raise ValueError(f"population ownership assigns {location} more than once")
             owners[location] = tag
     overrides = population_location_overrides(owners, allocations)
+    culture_remaps = population_culture_remaps(owners)
     weights = vanilla_pop_weights()
     by_region: defaultdict[str, list[str]] = defaultdict(list)
     for location, tag in owners.items():
@@ -652,7 +760,7 @@ def population_manager() -> tuple[str, int, Decimal]:
         profile = historical_profile_for(row)
         override = overrides.get(location, {})
         pop_type = override.get("pop_type", "tribesmen" if row["kind"] == "sop" else "peasants")
-        culture = override.get("culture", profile.culture)
+        culture = override.get("culture", culture_remaps.get(location, {}).get("culture", profile.culture))
         religion = override.get("religion", profile.religion)
         lines.extend(
             (
