@@ -757,6 +757,15 @@ antq_uralic = { # P10;CAH-XI; Finnic-Ugric-Samoyedic communities
 	}
 }
 
+antq_sargat = { # P8.8;P10;RAS-SAR;HUM-SAR; Omsk-Irtysh Sargat archaeological proxy; technical Sami fallback is not a language claim
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_sargat
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
 antq_baltic = { # P10;CAH-XI; Baltic communities
 	language = antq_baltic_dialect
 	color = antq_culture_color_antq_baltic

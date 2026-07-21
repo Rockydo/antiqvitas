@@ -5,6 +5,18 @@ requirements in the corresponding section of the ANTIQVITAS master plan; those
 requirements are cross-checked against the following research pipeline before
 a row reaches `implemented` status.
 
+- `RAS-SAR`: Sergei G. Botalov and Vladimir S. Mosin, ["Radiocarbon
+  Chronology of Sites of the Sargatka Culture of Western
+  Siberia"](https://www.ra.iaran.ru/?lang=en&page_id=4766), *Russian
+  Archaeology* (2018), supports a Sargatka Early Iron Age span from the early
+  fifth century BCE to the first half of the fourth century CE in the Western
+  Siberian forest-steppe. It supports a campaign-period archaeological horizon,
+  not an ethnicity or language.
+- `HUM-SAR`: D. S. Pilipenko *et al.*, ["Investigation of Ancient DNA from
+  Western Siberia and the Sargat Culture"](https://digitalcommons.wayne.edu/humbiol/vol82/iss2/2/),
+  *Human Biology* 82 (2010), treats the Sargat sample as a potential zone of
+  interaction among native Ugrian/Siberian and southern steppe populations. It
+  motivates an explicitly non-uniform proxy rather than an ethnic assignment.
 - `JAA-NOK`: Gabriele Franke, ["A Chronology of the Central Nigerian Nok
   Culture - 1500 BC to the Beginning of the Common Era"](https://doi.org/10.3213/2191-5784-10297),
   *Journal of African Archaeology* 14 (2016), places the distinctive Nok late

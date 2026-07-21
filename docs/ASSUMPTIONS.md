@@ -1,5 +1,22 @@
 # Historical Assumptions
 
+## 2026-07-21 - Sargat is an Omsk-Irtysh archaeological, not ethnic, frame
+
+The thirtieth selector batch introduces a Sargat culture for the installed Omsk
+area. The directly dated Sargat horizon spans the campaign boundary in the
+Western Siberian forest-steppe, but the evidence describes interaction among
+native Ugrian/Siberian and southern steppe populations rather than a single
+people or language. The selector is therefore contested and does not assert an
+Ugric ethnicity, a steppe identity, a political boundary, or uniform local
+descent. Its Uralic-group/Sami fallback is an existing engine naming adapter,
+not a language determination.
+
+Sources weighed: plan section 8.8 (P8.8); section 10 (P10); Botalov and
+Mosin, *Russian Archaeology* (RAS-SAR); Pilipenko *et al.*, *Human Biology*
+(HUM-SAR).
+[secure archaeological chronology and broad location; contested local
+representation, affiliation, and selector extent]
+
 ## 2026-07-21 - Late Nok is a fading archaeological horizon at AD 1
 
 The twenty-ninth selector batch introduces a Late Nok Horizon culture for the

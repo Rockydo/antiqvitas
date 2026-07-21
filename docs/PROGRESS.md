@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-21 - M4 Sargat atlas batch is smoke-verified
+
+- Added a cautious 28-location Omsk-Irtysh Sargat archaeological proxy. The
+  ledger now has 319 selectors, 11,916 locations, and 147 mapped cultures; the
+  catalogue rises to 168 cultures.
+- Sargat is retained as an archaeological, not ethnic, frame: the evidence
+  describes a non-uniform interaction zone. Full validation and enabled-mod
+  smoke are green, with zero new normalized error-log lines.
+
+Next: continue source-led global M4 density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 late-Nok atlas batch is smoke-verified
 
 - Added a contested 21-location Late Nok Horizon culture for the plan's fading
