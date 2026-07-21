@@ -481,7 +481,9 @@ def character_manager(data: PowerData) -> str:
     return "\n".join(lines)
 
 
-def government_block(row: dict[str, str]) -> list[str]:
+def government_block(
+    row: dict[str, str], current_term: dict[str, str] | None = None
+) -> list[str]:
     lines = [
         "\t\t\tgovernment = {",
         f"\t\t\t\ttype = {row['government_type']}",
@@ -489,6 +491,17 @@ def government_block(row: dict[str, str]) -> list[str]:
     ]
     if row["ruler"]:
         lines.append(f"\t\t\t\truler = {row['ruler']}")
+    if current_term:
+        # The installed start data pairs a named current ruler with a
+        # `ruler_term`.  At an AD 1 campaign boundary the source ledger cannot
+        # honestly supply a pre-start accession date, while `1.1.1` itself is
+        # rejected as future.  A date-less current term establishes the
+        # sourced incumbent without asserting an unsupported accession day.
+        lines.append("\t\t\t\truler_term = {")
+        lines.append(f"\t\t\t\t\tcharacter = {current_term['character']}")
+        if current_term["regnal_number"]:
+            lines.append(f"\t\t\t\t\tregnal_number = {current_term['regnal_number']}")
+        lines.append("\t\t\t\t}")
 
     def append_field(field: str) -> None:
         if row[field]:
@@ -509,10 +522,6 @@ def government_block(row: dict[str, str]) -> list[str]:
     else:
         for field in ("heir", "consort", "active_regent", "regency", "start_regency_date", "end_regency_date"):
             append_field(field)
-    # Native start data represents a current ruler with `ruler`, not an open
-    # `ruler_term` at the campaign boundary.  M6 keeps its fully sourced
-    # campaign-boundary term ledger for historical audit, but does not emit
-    # invalid start-date terms into the live setup manager.
     lines.extend((
         "\t\t\t\treforms = {",
         f"\t\t\t\t\t{row['reform']}",
