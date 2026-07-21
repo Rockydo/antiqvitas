@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-21 - M12 AD 1 observer initialization is script-clean
+
+- Added the one-token exact-source guard for Catalonia's dormant Sitges-capital
+  flag variant after local source inspection found the installed safe form.
+- Full validation and the enabled-mod 90-second smoke are green. The replayed
+  autonomous path reached the AD 1 live Observer map with script_errors=0.
+- This closes the currently evidenced startup, on-action, CoA, and flag
+  compatibility surface. The retained renderer failure still blocks sustained
+  observer acceptance.
+
+Next: retain the clean initialization checkpoint and continue independent
+milestone work while renderer-bound playback remains deferred.
+
 ## 2026-07-21 - M12 CoA scope compatibility is observer-verified
 
 - Added a source-preserving exact-name overlay of the installed CoA predicates.

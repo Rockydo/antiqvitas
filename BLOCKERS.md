@@ -56,10 +56,16 @@ special-status predicates first establish that an HRE instance exists. A fresh
 observer initialization has zero government-scope, invalid-comparison, or HRE
 special-status errors. Evidence is in docs/playtests/M12_COA_SCOPE_20260721.md.
 
-The same clean probe leaves one new, separate generic diagnostic: a vanilla
-flag definition evaluates an invalid capital on an inactive legacy tag. This
-is the next narrow runtime surface; it must be examined locally before any
-compatibility overlay is added.
+The remaining flag diagnostic was a single direct Sitges-capital comparison in
+the installed Catalan flag definition. A third exact-name renderer changes it
+to the locally evidenced optional capital comparison form. Full validation and
+smoke are green, and a fresh AD 1 observer initialization now reports zero
+script-system errors in total. The screenshots and log count are recorded in
+docs/playtests/M12_CLEAN_INITIALIZATION_20260721.md.
+
+This closes the currently evidenced startup, on-action, CoA, and flag-runtime
+fall-through surface. It does not close the renderer-bound sustained-playback
+gate, the Han regency presentation gap, or the separate M5 trade-flow result.
 
 ## 2026-07-21 - Observer playback remains renderer-bound after two renewed attempts
 

@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Make the dormant Sitges flag test optional
+
+The sole remaining observer-initialization script error came from the
+Catalan Sitges flag variant comparing an absent capital on an inactive legacy
+tag. The installed game uses capital ?= location comparisons throughout its
+own scripts. A checked exact-source overlay changes only this one comparison,
+so the variant remains available when a real country has Sitges as capital
+and evaluates false rather than emitting an error otherwise. Full validation,
+smoke, and a fresh AD 1 observer initialization are green; the latter records
+zero script-system errors.
+
 ## 2026-07-21 - Make legacy CoA predicates false rather than fabricate state
 
 Vanilla CoA template registries evaluate generic monarchy, republic,

@@ -90,10 +90,8 @@ intentional-empty locations). SoPs remain temporary country-shaped scaffolding
 until M4's population pass.
 
 The real observer-start test exposed generic startup and legacy-country
-evaluations. The source-preserving hardcoded-startup overlay removes the
-absent Catholic/Shinto IO and dated China/Majapahit/Byzantium start errors.
-The subsequent exact-source CoA trigger overlay clears the blank
-government/IO errors. One remaining vanilla flag definition evaluates an
-invalid capital on an inactive legacy tag; M3 remains untagged until that
-separate runtime contract is verified. The exact recovery plan is in
-`BLOCKERS.md`; M5, M6, and M9 own the required system replacements.
+evaluations. Exact-source startup, CoA, and flag overlays now make absent
+IO, government, HRE-status, and capital references safely false for inactive
+legacy tags. A fresh AD 1 observer initialization reports zero script-system
+errors. M3 remains untagged because M5, M6, and M9 still need their separate
+runtime acceptance work; the exact recovery plan is in `BLOCKERS.md`.
