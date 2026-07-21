@@ -5,16 +5,16 @@ master plan: regional culture definitions use locally verified EU5 language
 keys, while the source tables retain the historical grouping, source, and
 confidence judgment separately from engine syntax.
 
-The generated catalogue currently contains 112 culture definitions across the
+The generated catalogue currently contains 120 culture definitions across the
 plan's principal Italic, Hellenic, Celtic, Germanic, Iranian, Caucasian,
 Semitic, Nile, African, Indian, Sinitic, Southeast Asian, steppe, Uralic,
 Balkan, and American/Oceanic families. It remains a foundation rather than the
-finished 350-500 culture target. Its first five source-led location batches
-use 161 selectors to resolve 5,666 controlled locations through
+finished 350-500 culture target. Its first six source-led location batches
+use 174 selectors to resolve 6,199 controlled locations through
 `docs/culture_remap.csv`; later batches must not silently turn a regional frame
 into a claim of a homogeneous population.
 
-`culture_remap.csv` accepts only installed area, province, or location selectors
+`culture_remap.csv` accepts only installed area, province, location, or region selectors
 and resolves them to exact controlled locations through the harvested geography
 hierarchy. Every selector carries a source, confidence, and rationale; the
 generator rejects unknown symbols, nested-selector overlap, empty selectors,

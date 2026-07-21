@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Culture-ledger regions use the harvested hierarchy with the same strict coverage contract
+
+Some source-qualified AD 1 frames, including the Bantu-frontier ledger, are
+installed geographic regions rather than a fabricated collection of smaller
+selectors. The local harvested hierarchy already resolves regions to concrete
+locations. The M4 resolver therefore accepts an explicit `region` selector in
+addition to area, province, and location, validates it against the local
+symbol inventory, and applies its existing non-empty and overlap checks after
+expansion. This is a bounded topology capability; every regional cultural
+assignment still requires a source, confidence, and rationale in the ledger.
+
 ## 2026-07-21 - Normalize only direct self-members in the harvested location hierarchy
 
 The installed hierarchy occasionally represents a parent location both as a

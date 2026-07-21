@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-21 - African M4 frames describe regional frontiers, not single peoples
+
+The sixth selector batch uses Berber, Gaetulian, Garamantian, Blemmyan,
+Ge'ez, Mande, Cushitic, and five broad Bantu-frontier labels. These are
+bounded regional AD 1 frames: they do not assert that modern map regions had
+one identity or language, and the Bantu labels deliberately describe a
+source-led expansion frontier rather than one static people. The Cushitic
+entry also retains a technical naming fallback without asserting detailed local
+onomastics. Sources weighed: plan section 8.5 (P8.5); section 10 (P10);
+*Cambridge Ancient History*, volume XI (CAH-XI).
+[secure broad regional context; contested local representation]
+
 ## 2026-07-21 - Korean and northeast-steppe M4 frames do not settle later identities
 
 The fifth selector batch uses Buyeo-Goguryeoic, Samhan, Wuhuan, Xianbei, and
