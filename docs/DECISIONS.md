@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Samad retains the verified Semitic naming adapter
+
+The M4 language contract renders `antq_semitic_group` through the existing
+`antq_semitic_dialect`, whose root has the locally verified
+`aramaic_language` fallback. Samad reuses that engine adapter rather than
+inventing an unverified Samad language. Its `arabic_language` validation seed
+and the rendered dialect are technical compatibility choices only; neither
+identifies the Samad archaeological context as an Arab or Aramaic tribe,
+language community, state, or later Omani identity. (Sources `IRAQ-SAM`;
+`OUP-GUL`.)
+
 ## 2026-07-21 - Permic retains the existing Uralic naming adapter
 
 The verified M4 language contract has no separate Permic root, while the

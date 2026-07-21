@@ -352,6 +352,15 @@ antq_arab = { # P10;CAH-XI; Arabian communities
 	}
 }
 
+antq_samad = { # P8.6;P10;IRAQ-SAM;OUP-GUL; Late pre-Islamic central-Oman archaeological proxy; technical Arabic fallback is not a language claim
+	language = antq_semitic_dialect
+	color = antq_culture_color_antq_samad
+	tags = { european_gfx }
+	culture_groups = {
+		antq_semitic_group
+	}
+}
+
 antq_south_arabian = { # P10;CAH-XI; Sabaean-Himyarite communities
 	language = antq_semitic_dialect
 	color = antq_culture_color_antq_south_arabian

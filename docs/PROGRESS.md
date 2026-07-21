@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-21 - M4 central-Oman Samad atlas batch is smoke-verified
+
+- Added a contested seven-location central-Oman Samad archaeological proxy for
+  the installed Nizwa province. The ledger now has 325 selectors resolving
+  12,018 locations across 150 mapped cultures; the M4 catalogue contains 171
+  cultures.
+- The frame starts after 300 BCE and is deliberately not a claim about a
+  tribe, language, state, full-Oman boundary, or later Omani identity. The
+  existing engine-verified Semitic naming adapter is technical rendering only.
+- Full validation and enabled-mod smoke testing passed with no new error-log
+  lines over the accepted baseline.
+
+Next: continue the residual-source review for the highest-priority defensible
+M4 selector, then complete the final M4 representation and definition audits.
+
 ## 2026-07-21 - M4 Kama-Perm Permic atlas batch is smoke-verified
 
 - Added a contested 22-location Kama-Perm/Belaya Permic proxy. The ledger now

@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-21 - Samad is a central-Oman archaeological, not ethnic, frame
+
+The thirty-sixth source-led M4 batch introduces a Samad proxy only for the
+installed Nizwa province. Yule places the Samad culture after 300 BCE in central
+Oman, including the late pre-Islamic period. The evidence does not establish a
+tribe, a language, a state, or a homogeneous identity for the whole Oman
+peninsula. Nizwa is therefore a deliberately narrow archaeological selector;
+the Hellenized Gulf islands and the varied coast remain outside this claim.
+
+Sources: P8.6; P10; `IRAQ-SAM`; `OUP-GUL`.
+
+[secure campaign-boundary central-Oman archaeology; contested selector and local representation]
+
 ## 2026-07-21 - Kama-Perm extends the same early Permic regional reconstruction
 
 The thirty-fifth selector batch maps the installed Perm area to the existing
