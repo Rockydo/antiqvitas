@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-21 - South and Southeast Asian M4 labels are bounded regional proxies
+
+The third selector batch uses Gandhari, Kalingan, Deccan Prakrit,
+Proto-Telugu-Kannada, Sinhala, Pyu, Vietic, Early Malay, Early Javanese,
+Philippine, and Bornean as broad AD 1 regional frames. It does not turn the
+modern map's areas into claims of uniform ethnicity, language, or state
+identity. In particular, the Dravidian labels predate later standard languages,
+the Red River label does not project Vietnamese standardization backward, and
+the Philippine/Bornean rows deliberately remain plural regional proxies.
+Sources weighed: plan sections 8.3, 8.4, and 8.9 (P8.3; P8.4; P8.9); section
+10 (P10); *Cambridge Ancient History*, volume XI (CAH-XI).
+[secure broad regional context; contested local representation]
+
 ## 2026-07-21 - Northern M4 frames remain regional proxies rather than claims of uniform peoples
 
 The second selector batch represents broad AD 1 frames for Brittonic,
