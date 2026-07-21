@@ -39,6 +39,21 @@ disasters, formables, and on-action callers remain separate runtime surfaces;
 their need for an exact-name override is to be established from future observer
 evidence rather than assumed from the old failed blank-overlay experiment.
 
+The first live follow-up isolated one such on-action caller: the installed
+hardcoded startup handler unconditionally addressed Catholic and Shinto IO
+instances that ANTIQVITAS intentionally does not create, then executed
+China/Majapahit/Byzantium-era country setup on empty legacy tags. Its
+source-preserving exact-name overlay now makes the five absent-IO references
+safe and dynamically gates eight dated startup blocks after the campaign end.
+The generated overlay, full validation, and enabled-mod smoke are green. A
+fresh AD 1 observer initialization recorded zero of all six former hardcoded
+error signatures; see docs/playtests/M12_HARDCODED_STARTUP_20260721.md.
+
+The remaining live surface is distinct: vanilla coat-of-arms template lists
+evaluate blank legacy-country government and IO scopes. That needs a separate,
+source-verified compatibility design; it is not evidence that the resolved
+startup-handler overlay is incomplete.
+
 ## 2026-07-21 - Observer playback remains renderer-bound after two renewed attempts
 
 Status: **deferred after two material renderer-profile attempts; menu baseline remains green.**

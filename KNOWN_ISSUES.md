@@ -89,8 +89,10 @@ records, and complete installed-ownable coverage (13,535 assigned plus 41
 intentional-empty locations). SoPs remain temporary country-shaped scaffolding
 until M4's population pass.
 
-The real observer-start test exposes unset market/event links and related
-vanilla building, government/law, formable, and HRE interaction evaluations.
-They are not accepted baseline lines; M3 remains untagged and the exact
-reproduction/recovery plan is in `BLOCKERS.md`. M5, M6, and M9 own the required
-system replacements.
+The real observer-start test exposed generic startup and legacy-country
+evaluations. The source-preserving hardcoded-startup overlay now removes the
+absent Catholic/Shinto IO and dated China/Majapahit/Byzantium start errors in a
+fresh observer initialization. Vanilla coat-of-arms template lists still
+evaluate blank legacy government and IO scopes. They are not accepted baseline
+lines; M3 remains untagged and the exact reproduction/recovery plan is in
+`BLOCKERS.md`. M5, M6, and M9 own the required system replacements.

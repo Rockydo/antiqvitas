@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-21 - M12 hardcoded startup compatibility is observer-verified
+
+- Added a source-preserving exact-name overlay of the installed hardcoded
+  on-game-start handler. It makes five absent Catholic/Shinto IO lookups safe
+  and date-gates eight post-campaign legacy-country setup blocks through the
+  shared calendar gateway.
+- Full validation and the enabled-mod 90-second smoke are green with zero new
+  error-log lines. A fresh AD 1 observer initialization then confirmed zero
+  former hardcoded IO, China/Majapahit, and Byzantine setup errors.
+- The remaining observed runtime errors are narrowed to blank legacy
+  government/IO scopes in vanilla coat-of-arms templates. Evidence is in
+  docs/playtests/M12_HARDCODED_STARTUP_20260721.md.
+
+Next: audit the coat-of-arms template contract without hiding valid ANTIQVITAS
+standards or inventing governments for historical social polities.
+
 ## 2026-07-21 - Reduced renderer profile reproduces the FSR observer crash
 
 - The 70-percent profile reached 4 January under ordinary play and 1 June at

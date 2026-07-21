@@ -1,5 +1,20 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Guard hardcoded startup compatibility by exact local contracts
+
+The installed on-game-start handler presumes that Catholic and Shinto
+international-organization instances exist and runs country-specific setup for
+China, Majapahit, Japan, Byzantium, Verona, the Teutonic Order, and Bulgaria.
+Those instances and empty legacy country tags are deliberately absent from the
+AD 1 conversion, producing runtime scope errors even though ANTIQVITAS's own
+Han and other profiles were valid. The M12 renderer preserves the installed
+file, changes only five of its absent-IO references to the locally evidenced
+safe-scope form, and wraps exactly eight dated country blocks in a dynamic
+post-end-date condition rendered from tools/dates.py. Its own check rejects
+source inventory drift, and pdxlint's date exemption is limited to this
+re-rendered exact-source overlay. A fresh observer initialization reduced all
+former targeted signatures to zero without modifying the game installation.
+
 ## 2026-07-21 - Pin the UI-verified 70-percent render scale in the game driver
 
 The installed Graphics settings UI reports Upscale Method Disabled and Upscale
