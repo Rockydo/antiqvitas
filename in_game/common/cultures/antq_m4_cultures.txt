@@ -298,6 +298,15 @@ antq_aksu_oasis = { # P8.3;P10;IRAN-AKS; AD 1 Aksu oasis regional proxy; technic
 	}
 }
 
+antq_kashgar_oasis = { # P8.3;P10;IRAN-KAS; AD 1 Kashgar oasis proxy; technical Iranian naming adapter does not determine first-century language
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_kashgar_oasis
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
 antq_sarmatian = { # P10;CAH-XI; Pontic Iranian steppe communities
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_sarmatian
