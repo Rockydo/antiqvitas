@@ -5,6 +5,18 @@ requirements in the corresponding section of the ANTIQVITAS master plan; those
 requirements are cross-checked against the following research pipeline before
 a row reaches `implemented` status.
 
+- `INAH-TEO`: Julie Gazzola, [*La cerámica en fases tempranas (100-200 d.C.)
+  de Teotihuacán y su interacción con otras áreas de
+  Mesoamérica*](https://difusion.inah.gob.mx/publicaciones/libros/5516.html),
+  Instituto Nacional de Antropología e Historia (2024), describes the first
+  century CE beginning of Teotihuacan's city construction and its early
+  Tzacualli/Miccaotli phases. It supports a campaign-boundary urban-regional
+  context, not a complete Central Mexican culture map or political frontier.
+- `UNESCO-TEO`: UNESCO World Heritage Centre, ["Pre-Hispanic City of
+  Teotihuacan"](https://whc.unesco.org/en/list/414/), places the settlement's
+  development as one of the Americas' largest ancient cities between the first
+  and seventh centuries CE. It supports a broad chronological context only,
+  not a location-level identity, language, or territorial claim.
 - `JST-SUL`: Suryatman, Budianto Hakim, and Fakhri, ["The Sakkarra site:
   New data on prehistoric occupation from the Metal Phase (2000 BP) along the
   Karama drainage, West Sulawesi"](https://www.jstor.org/stable/j.ctv8bt3bw.18),

@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-21 - Central Mexico is a Teotihuacan-rise regional proxy
+
+The twenty-seventh selector batch maps the installed Central Mexican area to
+the existing Teotihuacano proxy. Archaeology directly places Teotihuacan's
+urban construction in the first century CE, and the wider site's development
+continues through the period. This does not turn every local community into a
+Teotihuacano polity, identify their language, project a later Mexica/Aztec
+identity into AD 1, or claim Teotihuacan's subsequent political reach. The row
+is therefore contested and limited to a regional cultural horizon.
+
+Sources weighed: plan section 8.10 (P8.10); section 10 (P10); Gazzola for
+INAH (INAH-TEO); UNESCO World Heritage Centre (UNESCO-TEO).
+[secure first-century urban context; contested selector extent and local
+representation]
+
 ## 2026-07-21 - Sulawesi uses a broad pre-state Austronesian proxy
 
 The twenty-sixth selector batch maps the installed Sulawesi area to the
