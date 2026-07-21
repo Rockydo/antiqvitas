@@ -5,6 +5,7 @@ antq_imperial_cult = {
 	icon = abacus_advance
 	depth = 0
 	research_cost = 2.0
+	unlock_law = legal_code_law
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
@@ -14,6 +15,7 @@ antq_provincial_census = {
 	icon = abacus_advance
 	depth = 1
 	research_cost = 2.5
+	unlock_law = administrative_system
 	starting_technology_level = 1
 	requires = antq_imperial_cult
 	ai_weight = { add = 95 }
@@ -24,6 +26,7 @@ antq_tax_registers = {
 	icon = abacus_advance
 	depth = 2
 	research_cost = 3.0
+	unlock_law = distribution_of_power_law
 	starting_technology_level = 1
 	requires = antq_provincial_census
 	ai_weight = { add = 90 }
@@ -34,6 +37,7 @@ antq_road_milestones = {
 	icon = abacus_advance
 	depth = 3
 	research_cost = 3.5
+	unlock_law = royal_court_customs_law
 	starting_technology_level = 2
 	requires = antq_tax_registers
 	ai_weight = { add = 85 }
@@ -44,6 +48,7 @@ antq_legal_petitions = {
 	icon = abacus_advance
 	depth = 4
 	research_cost = 4.0
+	unlock_law = education_masses_law
 	starting_technology_level = 2
 	requires = antq_road_milestones
 	ai_weight = { add = 80 }
@@ -54,6 +59,7 @@ antq_municipal_charters = {
 	icon = abacus_advance
 	depth = 5
 	research_cost = 4.5
+	unlock_law = feudal_de_jure_law
 	starting_technology_level = 2
 	requires = antq_legal_petitions
 	ai_weight = { add = 75 }
@@ -460,6 +466,8 @@ antq_professional_standing_armies = {
 	icon = abacus_advance
 	depth = 0
 	research_cost = 2.0
+	unlock_law = medieval_levy_law
+	unlock_policy = aristocratic_court_policy
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
@@ -469,6 +477,7 @@ antq_auxiliary_service = {
 	icon = abacus_advance
 	depth = 1
 	research_cost = 2.5
+	unlock_law = tribal_religious_values_law
 	starting_technology_level = 1
 	requires = antq_professional_standing_armies
 	ai_weight = { add = 95 }
@@ -479,6 +488,7 @@ antq_drill_routines = {
 	icon = abacus_advance
 	depth = 2
 	research_cost = 3.0
+	unlock_law = tribal_organization_law
 	starting_technology_level = 1
 	requires = antq_auxiliary_service
 	ai_weight = { add = 90 }
@@ -489,6 +499,7 @@ antq_supply_columns = {
 	icon = abacus_advance
 	depth = 3
 	research_cost = 3.5
+	unlock_law = tribal_legal_basis_law
 	starting_technology_level = 2
 	requires = antq_drill_routines
 	ai_weight = { add = 85 }
@@ -915,6 +926,7 @@ antq_monsoon_navigation = {
 	icon = abacus_advance
 	depth = 0
 	research_cost = 2.0
+	unlock_law = coin_laws
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
@@ -924,6 +936,7 @@ antq_red_sea_piloting = {
 	icon = abacus_advance
 	depth = 1
 	research_cost = 2.5
+	unlock_law = mining_law
 	starting_technology_level = 1
 	requires = antq_monsoon_navigation
 	ai_weight = { add = 95 }
@@ -934,6 +947,7 @@ antq_caravan_accounting = {
 	icon = abacus_advance
 	depth = 2
 	research_cost = 3.0
+	unlock_law = immigration_law
 	starting_technology_level = 1
 	requires = antq_red_sea_piloting
 	ai_weight = { add = 90 }
@@ -1370,6 +1384,7 @@ antq_paper_precursors = {
 	icon = abacus_advance
 	depth = 0
 	research_cost = 2.0
+	unlock_law = cultural_traditions_law
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
@@ -1825,6 +1840,7 @@ antq_civic_associations = {
 	icon = abacus_advance
 	depth = 0
 	research_cost = 2.0
+	unlock_law = marriage_law
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }

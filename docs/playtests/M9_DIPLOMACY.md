@@ -1,20 +1,36 @@
 # M9 Diplomacy Foundation Verification
 
-## Automated result
+## Static and smoke result
 
-On 20 July 2026, the enabled ANTIQVITAS playset completed `make validate` and
-the real-game `make smoke` after the M9 subject, war-contract, IO, and
-known-world layers were generated. The game reached its menu-ready state and
-the smoke comparison reported zero new `error.log` lines.
+The generated M9 subject, war-contract, IO, and known-world layers pass
+`make validate`: five subject contracts, ten casus belli, three peace terms,
+four IO types, and discovery profiles for all 157 AD 1 polities. The enabled
+playset also passes `make smoke` with zero new error-log lines.
 
-The IO pass required two concrete local-build corrections: one generated
-`io_opinion_<type>` bias per organization type, then the matching member-status
-localization keys. Both are now generator-owned and covered by `make validate`.
+## Paused AD 1 observer inspection - 21 July 2026
 
-## Remaining gate
+The autonomous driver selected New Game, enabled Observer, and started the
+paused AD 1 map. The resulting country panels confirm the live diplomatic
+surface without advancing time:
 
-The game driver has not yet crossed the existing Observer confirmation modal;
-see `BLOCKERS.md`. No third identical click sequence is useful evidence. After
-a material driver/UI change, inspect the Han, Xiongnu, and Roman diplomacy
-panels and then observe the ancient war/subject rules at speed. The M9
-implementation is green; this interactive verification remains open.
+- Rome renders as Roman Commonwealth (`XAA`), capital Roma, with eleven
+  subjects: `docs/screens/m9_diplomacy_probe/rome_runtime_panel.png`.
+- Western Han renders as `XAR`, capital Chang'an, with five subjects:
+  `docs/screens/m9_diplomacy_probe/han_runtime_panel2.png`.
+- A controlled, paused tag fallback confirms the Xiongnu Confederation Horde
+  (`XIO`), Longcheng, its Chanyu, Tengri faith, and Xiongnu culture:
+  `docs/screens/m9_diplomacy_probe/xiongnu_player_panel.png`.
+
+The selector and observer-state evidence is retained with those panels. The
+initial country-card overlap around Longcheng required the no-time-advance
+`tag XIO` fallback; it did not create a save or run the simulation.
+
+## Remaining acceptance work
+
+M9 remains open. The paused panels establish that the generated client,
+tributary, and confederation structures render coherently, but cannot prove
+war resolution, subject behavior over time, or later foederati gating. The
+two documented renderer-profile attempts crash in the FSR stack after play is
+pressed, so a third identical autoplay test would not be material evidence.
+Retry the M9 speed/war observation only after a verified renderer or driver
+change; see `BLOCKERS.md`.

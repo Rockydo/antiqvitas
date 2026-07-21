@@ -96,11 +96,12 @@ pagefile, so neither reduced rendering nor the earlier low-pagefile observation
 explains the failure.
 
 The crash logs also exposed nonfatal AD 1 runtime work. The nine generated
-institution birth modifiers and their name-localization keys were subsequently
-fixed and fresh-observer verified; vanilla HRE/COA fall-through on unset
-government or international-organization scopes remains. There is no event
-quarantine loader error. Screenshots and the bounded reproduction are recorded
-in `docs/playtests/M12_OBSERVER_RETRY_20260721.md`.
+institution birth modifiers, legacy hardcoded startup/CoA/flag fall-through,
+and the M8/M4 government-law compatibility surface were subsequently fixed and
+fresh-observer verified. There is no event-quarantine loader error. The clean
+initialization checkpoint does not replace the sustained-playback gate: keep
+the bounded renderer reproduction in
+`docs/playtests/M12_OBSERVER_RETRY_20260721.md` as the controlling blocker.
 
 Recovery: renderer-profile experimentation is paused after the two material
 attempts. Retain the smoke-green 1920x1080, 70-percent profile and continue
