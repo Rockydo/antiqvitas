@@ -69,6 +69,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Map the bounded Iberian-Colchian Kartvelian continuum across the remaining Georgia area: 1 further selector resolves 49 locations, bringing the audited atlas to 11,569 locations across 139 mapped cultures.
 - [x] Extend the bounded northern-Mesopotamian Aramaic proxy through Jazira: 1 further selector resolves 48 locations, bringing the audited atlas to 11,617 locations across 139 mapped cultures.
 - [ ] Expand the culture/location remap toward the 350–500-culture target and add reviewed dynamic names beyond capital anchors (deferred in `BLOCKERS.md`: no redistributable global culture dataset yet).
+- [x] Add the Late-Preclassic Petén lowland Maya frame: 1 further selector resolves 4 locations, bringing the audited atlas to 11,621 locations across 139 mapped cultures.
 - [ ] Pass the final culture/religion atlas checks; population and raw `-leavepops` checks are green.
 - [ ] Run milestone gate and tag `M4-done`.
 

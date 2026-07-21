@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-21 - Peten Maya frame is Late-Preclassic, not a Classic polity map
+
+The twentieth selector batch maps the remaining Peten area to the existing Maya
+proxy. Late-Preclassic San Bartolo evidence directly predates the campaign
+start, but it neither establishes later Classic political territories nor
+resolves a local cultural boundary at every installed location. The selector is
+therefore a contested lowland-Maya regional frame; later political and dynastic
+identities remain outside this population pass.
+
+Sources weighed: plan section 8.10 (P8.10); section 10 (P10); Saturno, Stuart,
+and Beltrán's San Bartolo study (SCI-MAY).
+[secure Late-Preclassic regional context; contested local representation]
+
 ## 2026-07-21 - Jazira Aramaic frame retains linguistic and political diversity
 
 The nineteenth selector batch extends the existing Mesopotamian Aramaic proxy
