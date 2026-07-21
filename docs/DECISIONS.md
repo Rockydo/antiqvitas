@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Kucha retains the existing Iranian naming adapter
+
+The locally verified M4 contract renders `antq_iranian_group` through the
+engine-valid Persian fallback. The Kucha Oasis record reuses that existing
+adapter rather than inventing an unverified Kucha language. This is a rendering
+choice only: it does not claim an AD 1 Iranian or Kuchean language, ethnicity,
+or population majority. (Source `IRAN-KUC`.)
+
 ## 2026-07-21 - Kulay retains the existing Uralic naming adapter
 
 The verified M4 language contract has no Kulay root, while the established

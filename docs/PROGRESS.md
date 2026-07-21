@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-21 - M4 Kucha Oasis atlas batch is smoke-verified
+
+- Added a contested exact Kucha Oasis proxy for its single installed anchor.
+  The ledger now has 329 selectors resolving 12,031 locations across 152 mapped
+  cultures; the M4 catalogue contains 173 cultures.
+- Han-era Kucha is securely attested before AD 1, but the source cautions
+  against retrojecting later language evidence. The result does not claim a
+  language, ethnicity, state boundary, or wider northern-Tarim allocation.
+- Full validation and enabled-mod smoke testing passed with no new error-log
+  lines over the accepted baseline.
+
+Next: continue the residual-source review for the highest-priority defensible
+M4 selector, then complete the final M4 representation and definition audits.
+
 ## 2026-07-21 - M4 Surgut-Narym Ob Kulay atlas batch is smoke-verified
 
 - Added a contested twelve-location Kulay archaeological proxy for the

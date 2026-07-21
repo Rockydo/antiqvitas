@@ -1,5 +1,19 @@
 # Historical Assumptions
 
+## 2026-07-21 - Kucha is an exact oasis frame, not a late-language map
+
+The thirty-eighth source-led M4 batch assigns only the installed Kucha location
+to a Kucha Oasis proxy. The *Hanshu* attests the Han-era kingdom before the
+campaign boundary, and its early-first-century political history is documented.
+The source expressly does not permit reconstruction of the local language for
+that period. This contested frame therefore does not project later Kuchean,
+ethnicity, a kingdom-wide boundary, or a language community into AD 1. Its
+Iranian/Persian engine adapter is technical only.
+
+Sources: P8.3; P10; `IRAN-KUC`.
+
+[secure campaign-boundary oasis context; contested selector/local representation]
+
 ## 2026-07-21 - Kulay is a bounded Ob archaeological frame, not a language map
 
 The thirty-seventh source-led M4 batch assigns Kulay only to the installed
