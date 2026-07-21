@@ -841,7 +841,7 @@ def country_manager() -> tuple[str, int, int]:
         lines.extend(f"\t\t\t\t{region}" for region in m9_discovery_regions(row))
         lines.append("\t\t\t}")
         if row["tag"] in power.governments:
-            lines.extend(government_block(power.governments[row["tag"]], power.ruler_terms))
+            lines.extend(government_block(power.governments[row["tag"]]))
         else:
             lines.append("\t\t\tgovernment = { ruler = random }")
         lines.extend((f"\t\t\tcapital = {capital}", "\t\t}", ""))
