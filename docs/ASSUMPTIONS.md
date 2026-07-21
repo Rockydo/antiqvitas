@@ -1,5 +1,19 @@
 # Historical Assumptions
 
+## 2026-07-21 - Kama-Perm extends the same early Permic regional reconstruction
+
+The thirty-fifth selector batch maps the installed Perm area to the existing
+Permic proxy. The same reconstruction includes the middle/lower Kama and lower
+Belaya alongside Vyatka across the campaign boundary. The row remains
+contested because the evidence cannot make the installed area into an exact AD
+1 ethnographic boundary. It does not identify later Komi or Udmurt groups,
+assert uniform speech, an unbroken institution, or a fixed territorial extent.
+
+Sources weighed: plan sections 8.7 (P8.7) and 10 (P10); Parpola,
+*Suomalais-Ugrilaisen Seuran Toimituksia* (PAR-PER).
+[secure reconstructed regional context; contested selector extent and local
+representation]
+
 ## 2026-07-21 - Vyatka is an early Permic reconstruction, not a modern ethnicity
 
 The thirty-fourth selector batch introduces a Permic proxy for the installed

@@ -8,8 +8,8 @@ The 2026-07-19 evidence review remains valid for a fully automated global
 dataset: installed template cultures are not historical AD 1 evidence,
 Pleiades is a place gazetteer rather than a culture atlas, and CHGIS cannot be
 redistributed in this project. It no longer blocks all M4 work. The authored
-`docs/culture_remap.csv` ledger now supplies 323 source-labelled geographic
-selectors, resolving 11,989 controlled locations across 149 distinct mapped
+`docs/culture_remap.csv` ledger now supplies 324 source-labelled geographic
+selectors, resolving 12,011 controlled locations across 149 distinct mapped
 cultures without copying external map data. The full M4 catalogue contains 170
 cultures, including the non-ledger definitions needed for the Moche chronology
 correction.
@@ -31,7 +31,7 @@ lower-Yik Sarmatian context, Sulawesi Austronesian context, central-Mexican
 Teotihuacan context, Bornu Chadic context, Late Nok archaeological horizon,
 Omsk Sargat archaeological context, Transdanubian Pannonian context,
 Upper-Selenga Xiongnu context, the exact Khotan Oasis frame, and the Vyatka
-Permic archaeological-linguistic context.
+and Kama-Perm archaeological-linguistic contexts.
 Its contested rows record broad proxies rather than uniform ethnic boundaries.
 It raises the catalogue to 170, not the plan's final 350-500 cultures.
 
