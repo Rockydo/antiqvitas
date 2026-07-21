@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Observer readiness uses visual/log quiescence without a CPU cap
+
+The fresh M4 observer launch rendered a responsive menu and an AD 1 Observer
+screen, but its live renderer sustained about 110 percent aggregate CPU after
+the debug log became quiet. A manually supplied `--max-cpu 10` constraint
+therefore produced a false driver timeout. The smoke harness's normal
+visual/log-based readiness predicate passed on the same build. Future observer
+launches use that normal predicate unless a task specifically needs a CPU
+measurement; CPU is telemetry, not menu-readiness evidence.
+
 ## 2026-07-21 - Hami and Turpan retain the existing Iranian naming adapter
 
 The locally verified M4 contract renders `antq_iranian_group` through the

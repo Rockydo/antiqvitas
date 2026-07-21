@@ -2,7 +2,7 @@
 
 ## 2026-07-21 - M4 culture atlas is partially unblocked by an authored ledger
 
-Status: **continue bounded regional batches; final global density remains open.**
+Status: **M4 final gate blocked; continue independent milestones.**
 
 The 2026-07-19 evidence review remains valid for a fully automated global
 dataset: installed template cultures are not historical AD 1 evidence,
@@ -39,10 +39,20 @@ the exact Kashgar Oasis frame, and the exact Hami and Turpan Oasis frames.
 Its contested rows record broad proxies rather than uniform ethnic boundaries.
 It raises the catalogue to 179, not the plan's final 350-500 cultures.
 
-Recovery: continue source-labelled geographic batches with the same selector
-and overlap audit. Do not infer a historical culture directly from a vanilla
-template key; reserve the remaining worldwide density claim until it has a
-comparably reviewed ledger.
+The 2026-07-21 M4 gate attempt ran `make full` successfully and reached a fresh
+AD 1 Observer screen through the game driver. Earlier observer probes establish
+that the Culture/Religion map surfaces render; the fresh current-build start
+confirmed a live 08:00, 1 January, 1 session. The gate cannot be tagged: the
+source-led recovery added exact Aksu,
+Kashgar, Hami, and Turpan oasis frames, but these good-faith bounded batches
+do not close a 171-culture evidence gap. Treat this as the second confirmed
+global-density evidence limit; do not manufacture cultures from installed
+template keys merely to reach the number.
+
+Recovery: resume source-labelled geographic batches only when a new
+comparably reviewed dataset or a bounded source corpus supports them. Do not
+infer a historical culture directly from a vanilla template key; reserve the
+remaining worldwide density claim until it has a comparably reviewed ledger.
 
 ## 2026-07-20 - M12 vanilla-runtime quarantine requires source-preserving overlays
 
