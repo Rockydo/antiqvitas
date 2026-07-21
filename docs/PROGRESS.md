@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-21 - M4 final gate is green technically, held historically
+
+- `make full` passed at 179 cultures, 37 religions, 335 source-labelled
+  selectors, 12,037 resolved locations, and the fixed 230,000.000-thousand
+  population target. Its enabled-mod smoke result had zero new `error.log`
+  lines.
+- A fresh visible driver launch reached the responsive main menu and then a
+  paused AD 1 Observer screen at 08:00, 1 January, 1. The direct wait probe
+  exposed a false timeout from an optional 10-percent CPU ceiling; the normal
+  smoke readiness predicate passes for the same rendered session.
+- M4 cannot be tagged: the atlas remains at 179 rather than the specified
+  350-500 cultures. The evidence-density limit is now recorded as a confirmed
+  blocker, without creating unsupported labels to satisfy a numeric target.
+
+Next: take the highest-priority unblocked milestone task; resume M4 only with
+a new reviewed source corpus or dataset.
+
 ## 2026-07-21 - M4 Hami-Turpan Oasis atlas batch is smoke-verified
 
 - Added contested exact Hami and Turpan Oasis proxies. The ledger now has 335

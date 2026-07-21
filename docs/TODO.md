@@ -94,6 +94,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the exact Aksu Oasis frame: 1 further selector resolves 1 location and adds 1 culture definition, bringing the audited atlas to 12,034 locations across 155 mapped cultures.
 - [x] Add the exact Kashgar Oasis frame: 1 further selector resolves 1 location and adds 1 culture definition, bringing the audited atlas to 12,035 locations across 156 mapped cultures.
 - [x] Add the exact Hami and Turpan Oasis frames: 2 further selectors resolve 2 locations and add 2 culture definitions, bringing the audited atlas to 12,037 locations across 158 mapped cultures.
+- [x] Run the untagged M4 full and observer gate: generated map content reaches a fresh AD 1 Observer screen and `make full` is green, but the culture-density target remains historically blocked.
+- [ ] [BLOCKED] Final M4 acceptance: the 179-culture catalogue remains below the plan's 350-500 target; do not replace missing evidence with template-key inference (see `BLOCKERS.md`).
 - [ ] Pass the final culture/religion atlas checks; population and raw `-leavepops` checks are green.
 - [ ] Run milestone gate and tag `M4-done`.
 
