@@ -424,6 +424,15 @@ antq_chadic = { # P8.5;P10;OUP-CHAD;CAM-DAI; Lake Chad Basin Chadic regional pro
 	}
 }
 
+antq_nok = { # P8.5;P10;JAA-NOK;OUP-NOK; Central Nigerian late Nok archaeological horizon at the campaign boundary; technical Mande fallback is not a language claim
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_nok
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
 antq_cushitic = { # P8.5;P10;CAH-XI; Horn regional proxy; technical naming layer does not decide local ethnolinguistic detail
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_cushitic
