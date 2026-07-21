@@ -28,6 +28,7 @@ validate:
 	.venv/Scripts/python.exe tools/m11_localization.py --check
 	.venv/Scripts/python.exe tools/m12_disable_missions.py --check
 	.venv/Scripts/python.exe tools/m12_game_rules.py --check
+	.venv/Scripts/python.exe tools/m12_hardcoded_startup.py --check
 	.venv/Scripts/python.exe tools/m12_anachronism_audit.py --check
 	.venv/Scripts/python.exe tools/m12_disable_historical_hints.py --check
 	.venv/Scripts/python.exe tools/m12_event_quarantine.py --check
