@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-21 - M4 Khotan Oasis atlas batch is smoke-verified
+
+- Added a contested exact-map-anchor Khotan Oasis culture. The ledger now has
+  322 selectors, 11,971 locations, and 148 mapped cultures; the generated
+  catalogue rises to 169 cultures.
+- Han-era material supports the oasis context but does not establish an Iranian
+  population at AD 1. The record consequently does not project later
+  Khotanese-Saka language evidence, Buddhism, an oasis-state boundary, or a
+  named AD 1 ruler. Full validation and enabled-mod smoke are green, with zero
+  new normalized error-log lines.
+
+Next: continue source-led global M4 density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Upper-Selenga Xiongnu atlas batch is smoke-verified
 
 - Added a contested 23-location Upper-Selenga/Orkhon-Tuul Xiongnu core proxy.

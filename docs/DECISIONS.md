@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Khotan retains the existing Iranian naming adapter
+
+The locally verified M4 contract already supplies `antq_iranian_group` through
+the engine-valid Persian fallback. The Khotan Oasis record uses that existing
+adapter so the generated culture remains loadable, while the primary historical
+source specifically warns that Han-era evidence does not determine whether
+Khotan's inhabitants were Iranian. This is therefore a rendering/naming
+contract only: it does not claim an AD 1 Khotanese-Saka language, ethnicity,
+or Iranian population majority.
+
 ## 2026-07-21 - Chadic Basin retains the existing Sub-Saharan language adapter
 
 The verified M4 language contract provides one generated dialect per culture
