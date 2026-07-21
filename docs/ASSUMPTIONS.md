@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-21 - Georgia's Kartvelian proxy does not erase Colchis and Iberia
+
+The eighteenth selector batch maps the remaining Georgia area to the existing
+Kartvelian proxy. The source route describes a South-Caucasian/Kartvelian
+language context while retaining uncertain ancient ethnic composition, and it
+distinguishes western Colchis from eastern Iberia as political contexts. This
+map layer therefore claims neither a homogeneous population nor a single
+Georgian state, language standard, or fixed tribal boundary.
+
+Sources weighed: plan section 8.2 (P8.2); section 10 (P10); *Encyclopaedia
+Iranica* Colchis and Georgia syntheses (IRAN-COL; IRAN-GEO).
+[secure broad regional context; contested local representation]
+
 ## 2026-07-21 - Korean peninsula frames separate population from commandery and later states
 
 The seventeenth selector batch maps Yeongnam to the existing Samhan proxy and
