@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-21 - Reduced renderer profile reproduces the FSR observer crash
+
+- The 70-percent profile reached 4 January under ordinary play and 1 June at
+  maximum speed, confirming that the observer control path and live simulation
+  advance correctly.
+- Before the next 20-second capture the game exited with the same
+  ffxFsr2ResourceIsNull renderer stack as the supported full-scale profile.
+  The installed UI already had both upscale controls disabled, so no third
+  speculative profile will be tried without a material engine or driver change.
+- Screenshots and the exact crash-bundle path are recorded in
+  docs/playtests/M12_RENDER_SCALE70_20260721.md. The 0.7 menu-smoke profile
+  remains the known-green checkpoint.
+
+Next: audit the independent government, coat-of-arms, and
+international-organization runtime fall-through exposed in the live session.
+
 ## 2026-07-21 - UI-verified reduced renderer profile is green
 
 - The installed Graphics menu proved that upscaling was already disabled and
@@ -7,8 +23,8 @@
 - The driver now pins that 0.7 scale; full static validation and a rendered
   90-second enabled-mod smoke are green with zero new error-log lines.
 
-Next: use this materially reduced profile for one bounded observer playback
-probe before making any renderer-stability claim.
+Next: complete; the bounded playback probe reproduced the renderer fault and
+is recorded above.
 
 ## 2026-07-21 - M8 institution-origin contracts are generated and green
 

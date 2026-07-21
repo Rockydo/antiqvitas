@@ -3,16 +3,14 @@
 ## Renderer failures during observer playback
 
 The full event-quarantine build passes a settled enabled-mod menu smoke, and
-two fresh sessions reach a live AD 1 Observer map. Both exit immediately after
-the play action with an `ffxFsr2ResourceIsNull`-stack access violation. The
-latest bundle had 14.6 GB RAM and 17.3 GB pagefile free, so the earlier
-low-pagefile observation is insufficient to explain the current failure. The
-former 960x540 request was rejected and persisted as 2560x1440. The driver
-now uses the locally evidenced 1920x1080 mode and a UI-verified 70-percent
-render scale, both with clean menu smoke; its materially changed observer probe
-remains pending. This prevents reliable
-observer playback; the exact evidence and recovery boundary is in
-`BLOCKERS.md`.
+the live AD 1 Observer map advances through 1 June before exiting with an
+`ffxFsr2ResourceIsNull`-stack access violation. The failure reproduced on two
+material profiles: supported 1920x1080 at full scale, then the Graphics-UI
+verified 70-percent Render Scale with upscaling already disabled. The latest
+bundle had 14.6 GB RAM and 17.3 GB pagefile free, so the earlier low-pagefile
+observation is insufficient to explain it. Renderer-profile experiments are
+therefore paused; this prevents reliable observer playback. The exact evidence
+and recovery boundary is in `BLOCKERS.md`.
 
 ## M12 observer and renderer reliability remain release blockers
 
