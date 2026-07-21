@@ -4143,6 +4143,18 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-22 - M6 direct-parent fixture is not a Han-regency fix
+
+- A fresh AD 1 mod start rendered Emperor Ping's source-attested maternal link
+  and an analogous Gaius link before both heirs, then reached the live observer
+  selector.
+- The local start loader still rejected both heirs and Wang Mang as regent.
+  The fixture was removed and the generated start mirror restored, preserving
+  the prior source boundary and smoke-green tree.
+
+Next: leave the Han minority-regency gate deferred and take the next unblocked
+milestone task; do not retry this loader shape without a material engine clue.
+
 ## 2026-07-20 - M11 replaces all AD 1 solid-field CoA placeholders
 
 - Added a 34-region, source-labelled CoA theme ledger and converted every one

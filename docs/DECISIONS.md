@@ -1983,3 +1983,13 @@ keys remain loaded for references, while `tools/m12_disable_missions.py`
 regenerates against the installed inventory and fails patch drift. Future
 ancient missions must be independently source-led rather than reviving a
 vanilla generic pack.
+
+## 2026-07-22 - A direct parent link is not a start-loader workaround
+
+The installed character format accepts `mother`, and the source ledger directly
+identifies Wei Ji as Emperor Ping's mother. A clean, parent-before-child
+fixture nevertheless left both named heirs and Wang Mang invalid during start
+load. The relationship fields and generated output were therefore reverted.
+Keep the bounded historical records, but do not add engine family links merely
+to satisfy the Han minority-regency loader until a local fixture identifies the
+actual contract.

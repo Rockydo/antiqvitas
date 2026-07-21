@@ -252,13 +252,23 @@ Tried:
    Applying that term to Ping while retaining the native heir/regency shape,
    then repeating Ping as both `ruler` and `heir`, each produced `Wang
    Guangwu, 35` in a fresh live XAR Government panel.
+3. A 2026-07-22 clean-start fixture rendered Ping's directly attested maternal
+   link and an analogous Gaius link (`mother = antq_julia_elder` and
+   `mother = antq_wei_ji`), with the parents emitted before their children.
+   The fresh mod-enabled observer reached 1 January AD 1, but its
+   `debug.log` still reported `Invalid heir` for Gaius and Ping and `Invalid
+   regent` for Wang Mang. The fixture therefore rules out a sole direct-parent
+   link as the hidden start-loader condition; it was fully reverted rather
+   than turning a narrow source record into unused gameplay data.
 
 Every attempt passed `make validate` and a mod-enabled `make smoke` with zero
 new error-log lines. Evidence is retained in
 `docs/screens/20260719_194101/M6_runtime_retry/han_probe.png`,
 `docs/screens/20260719_194918/M6_runtime_retry/han_order_second_probe.png`,
 `docs/screens/20260721_m6_termless/termless_han_panel.png`, and
-`docs/screens/20260721_m6_han_final/han_final_government.png`.
+`docs/screens/20260721_m6_han_final/han_final_government.png`; the reverted
+parent-link fixture is retained locally in
+`docs/screens/20260722_m6_parent_link/`.
 
 Recovery: retain the source-led Han roster and the locally evidenced native
 heir/regency shape, but do not serialize the failed Ping current term or repeat
