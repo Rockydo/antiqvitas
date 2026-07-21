@@ -481,7 +481,7 @@ def character_manager(data: PowerData) -> str:
     return "\n".join(lines)
 
 
-def government_block(row: dict[str, str], ruler_terms: tuple[dict[str, str], ...]) -> list[str]:
+def government_block(row: dict[str, str]) -> list[str]:
     lines = [
         "\t\t\tgovernment = {",
         f"\t\t\t\ttype = {row['government_type']}",
@@ -499,31 +499,20 @@ def government_block(row: dict[str, str], ruler_terms: tuple[dict[str, str], ...
             )
             lines.append(f"\t\t\t\t{field} = {value}")
 
-    def append_terms() -> None:
-        for term in ruler_terms:
-            if term["design_tag"] != row["design_tag"]:
-                continue
-            values = [
-                f"character = {term['character']}",
-                f"start_date = {AntqDate.parse(term['engine_start_date']).engine()}",
-            ]
-            if term["engine_end_date"]:
-                values.append(f"end_date = {AntqDate.parse(term['engine_end_date']).engine()}")
-            if term["regnal_number"]:
-                values.append(f"regnal_number = {term['regnal_number']}")
-            lines.append(f"\t\t\t\truler_term = {{ {' '.join(values)} }}")
-
     if row["regency"]:
-        # Match the installed native sequence: historical terms, regency,
-        # regent, dates, then the nominal heir. Do not add a concurrent ruler
-        # field; runtime acceptance is separately recorded in BLOCKERS.md.
-        append_terms()
+        # Match the installed native regency shape.  The source ledger retains
+        # the sitting head, but an open ruler_term at exactly 1.1.1 is rejected
+        # by the installed engine as a future term; the heir field supplies the
+        # current head for the start state.
         for field in ("regency", "active_regent", "start_regency_date", "end_regency_date", "heir", "consort"):
             append_field(field)
     else:
         for field in ("heir", "consort", "active_regent", "regency", "start_regency_date", "end_regency_date"):
             append_field(field)
-        append_terms()
+    # Native start data represents a current ruler with `ruler`, not an open
+    # `ruler_term` at the campaign boundary.  M6 keeps its fully sourced
+    # campaign-boundary term ledger for historical audit, but does not emit
+    # invalid start-date terms into the live setup manager.
     lines.extend((
         "\t\t\t\treforms = {",
         f"\t\t\t\t\t{row['reform']}",
