@@ -197,7 +197,7 @@ after `make full` and its autonomous driver report are green.
 
 - [x] Generate and validate the required birth-location static-modifier contract for all nine custom institutions.
 - [x] Implement five complete age trees, roughly 250 advances, institutions, tech tiers, objectives, and abilities.
-- [ ] [REGRESSION] Restore a fresh paused AD 1 observer start with zero removed-law and invalid-estate diagnostics; the current successful observer initialization exposes 213 removed laws and 227 removed estate privileges inherited from vanilla setup templates.
+- [x] Restore a fresh paused AD 1 observer start with zero removed-law and invalid-estate diagnostics. Removing the inherited vanilla setup templates reduced the archived 213 removed laws plus 227 invalid estate privileges to zero in the fresh driver-observer run; evidence: `docs/playtests/AD1_STARTUP_DEFAULTS_20260721.md`.
 - [ ] Test AI research and anachronism/dead-end rules; run milestone gate and tag `M8-done`. (The enabled AD 1 selector and zero-new-line menu smoke are recorded; observer runtime remains blocked by the renderer condition in `BLOCKERS.md`.)
 
 ## M9 — Nations among nations

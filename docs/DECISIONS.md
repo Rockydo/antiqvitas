@@ -1,5 +1,23 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - AD 1 country starts do not include vanilla government templates
+
+All 157 generated country starts previously included either installed
+`east_asia_monarchy` (96) or `asia_advanced_tribe` (61). Those templates
+serialize medieval law and estate-default sets before ANTIQVITAS's explicit
+government adapters. A live AD 1 observer consequently removed 213 laws and
+227 estate privileges as incompatible at game start.
+
+`tools/generate_start_mirror.py` now renders only the independently generated
+technology tier, discovery profile, and government block. The 107 source-led
+M6 profiles remain byte-for-byte defined by their ledger. The 50 deliberately
+unsourced/collective profiles receive the minimal locally verified equivalent
+of their former template type: a monarchy with cognatic primogeniture, or an
+SoP tribe with tribal-oldest-male succession, each with `ruler = random` and
+no imported laws or privileges. The fresh paused observer test has zero
+removal diagnostics, so this is the engine-correct contract rather than a
+suppression of valid ANTIQVITAS content.
+
 ## 2026-07-21 - Current rulers use native start fields, not boundary terms
 
 The installed start parser accepts `START_DATE = 1.1.1` but rejects an open
