@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-21 - Chinese M4 labels are regional frames, not an ethnic census
+
+The ninth selector batch retains Qin, Chu, Qi-Lu, Yan, Jin, Ba, Shu, and
+other regional-horizon labels inside the Han world. Book of Han commandery
+data supports the administrative surface, while it cannot convert every
+installed location into a uniform ethnic boundary. Yue identities are treated
+as fluid southern-frontier frames after annexation; Dian and Yelang remain
+localized southwest proxies with unresolved extent and language. Sources
+weighed: plan sections 8.3 and 10 (P8.3; P10); BHR; CAM-HAN-REG; CAM-YUE;
+CAM-DIAN; JAS-YEL.
+[secure regional-horizon context; contested local representation]
+
 ## 2026-07-21 - Oceanian M4 labels retain settlement and regional limits
 
 The eighth selector batch separates Samoan and Tongan regional frames after

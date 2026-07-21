@@ -57,6 +57,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Extend the selector ledger through Africa: 13 further selectors resolve 533 locations and add 8 culture definitions, bringing the audited atlas to 6,199 locations across 85 mapped cultures.
 - [x] Extend the selector ledger through the Americas: 17 further selectors resolve 344 locations and add 5 culture definitions, bringing the audited atlas to 6,543 locations across 94 mapped cultures.
 - [x] Extend the selector ledger across the controlled Oceanian surface: 6 further selectors resolve 12 locations and add 4 culture definitions, bringing the audited atlas to 6,555 locations across 98 mapped cultures.
+- [x] Extend the selector ledger through Han China and its southern/southwestern frontiers: 32 further selectors resolve 1,807 locations and add 15 culture definitions, bringing the audited atlas to 8,362 locations across 113 mapped cultures.
 - [ ] Expand the culture/location remap toward the 350–500-culture target and add reviewed dynamic names beyond capital anchors (deferred in `BLOCKERS.md`: no redistributable global culture dataset yet).
 - [ ] Pass the final culture/religion atlas checks; population and raw `-leavepops` checks are green.
 - [ ] Run milestone gate and tag `M4-done`.

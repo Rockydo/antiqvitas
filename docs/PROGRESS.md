@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-21 - M4 China regional-atlas batch is smoke-verified
+
+- Added 32 non-overlapping selectors through the four Han administrative
+  frames. They resolve 1,807 further locations, lifting the ledger to 229
+  selectors, 8,362 locations, and 113 mapped cultures.
+- Added 15 regional definitions, including Qin-Han, Chu-Han, Qi-Lu Han,
+  Wu-Yue, Min-Yue, Dian, Yelang, Ba-Han, and Shu-Han. The M4 catalogue is now
+  144 cultures. Full validation and enabled-mod smoke are green, with zero
+  new normalized error-log lines.
+- The labels retain regional cultural horizons and southern/southwestern
+  frontier identities rather than claiming a homogeneous Han population.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 controlled-Oceania batch is smoke-verified
 
 - Added six non-overlapping selectors for Samoa, Tonga, the controlled
