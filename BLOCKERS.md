@@ -21,8 +21,8 @@ failure.
 The required material condition was the generated AD 1 start data: local
 diagnostics showed that every open current `ruler_term` at `1.1.1` was rejected
 as a future term, alongside the invalid named-heir/regent reports. The M6
-generator now retains those terms as a source ledger but uses the installed
-native `ruler`/`heir` start fields. A new autonomous run reached a paused
+generator now uses date-less current terms paired with native ruler fields for
+named non-regency incumbents, while retaining the source ledger. A new autonomous run reached a paused
 `08:00, 1 January, 1` observer, then rendered the required Culture (Location)
 and Religions (Location) maps. The successful evidence is in
 `docs/screens/20260721_boundary_term_fix/` and the accepted report is
@@ -533,9 +533,9 @@ GlossMod/EU5-Modding-Mcp dump at commit
 against current local scripts and smoke-tested. The local `helplog` command list
 was harvested successfully as `docs/REF_console_commands.txt`.
 
-## 2026-07-19 - M7 observer confirmation is ignored by the current game driver
+## 2026-07-19 - M7 observer confirmation diagnosis (superseded)
 
-Status: **deferred after two bounded attempts; M7 milestone gate remains open.**
+Status: **superseded by the resolved country-change game-rule overlay.**
 
 The enabled mod reached the live AD 1 selector at `08:00, 1 January, 1`, with
 the total-conversion world visible in
@@ -552,25 +552,68 @@ The runtime log has no `antq_` unit, `unit_manager`, `antq_legionaries`,
 lines concern existing religion-pop coverage, not M7. `make validate` and the
 post-content enabled-mod menu smoke were green before this probe.
 
-Recovery: revalidate the observer-confirmation click sequence after the next
-driver/UI adjustment or game patch, then run the planned high-speed war
-observation. Continue independent M8 work now; no human action is required.
+The later game-rule audit established that these inputs did reach the UI: the
+dialog was rejecting them because `country_change` defaulted to prohibited.
+The exact-name overlay documented below now defaults it to allowed. The
+2026-07-22 replay entered Observer Mode and reached high speed; its distinct
+war-playback result is recorded next.
 
-## 2026-07-20 - M8 AI-research observer verification inherits the confirmation blocker
+## 2026-07-22 - M7 AI-war playback reaches the renderer crash boundary
 
-Status: **deferred; M8 milestone gate remains open.**
+Status: **deferred after two bounded runtime findings; M7 remains untagged.**
+
+The country-change overlay now lets the driver enable Observer and start a live
+session. A maximum-speed observer capture advanced from 4 January to 15 March
+AD 1 in 35 seconds. To exercise a real conflict rather than wait for an
+uncertain early AI declaration, the driver used the generated engine tags
+(`XAA` Rome, `XAH` Parthia), declared the controlled Rome-Parthia test war from
+the active Rome player context, and returned to Observer. The live War Viewer
+listed Roman Commonwealth as attacker against Parthia, Characene, Elymais,
+Media Atropatene, Adiabene, Osroene, Gordyene, Sakastan, and Margiana.
+
+Tried:
+
+1. In Observer Mode, tested the locally harvested `declarewar` console contract
+   with default and explicit country arguments. The empty War Viewer established
+   that it needs an active player context; this was a command-scope finding,
+   not a warfare parser failure.
+2. Started an active random country, switched with the checked `XAA` engine
+   tag, issued `declarewar XAH`, verified the populated War Viewer, then ran
+   both sides under the AI Observer at maximum speed. Before the first periodic
+   capture the game exited and produced crash bundle
+   `Europa Universalis V20260721_221809`. Its exception is the existing
+   renderer-family `ffxFsr2ResourceIsNull` / `NVSDK_NGX_D3D12_Shutdown1`
+   access violation, not an ANTIQVITAS M7 reference. The crash log contains
+   zero matches for `antq_legionaries`, `antq_liburnian`,
+   `antq_han_crossbow_infantry`, `antq_cataphracts`, `antq_warbands`,
+   `unit_manager`, or `stockade`.
+
+Evidence is retained in `docs/screens/20260721_m7_observer_retest/` and
+`docs/screens/20260721_m7_player_war/`; the detailed report is
+`docs/playtests/M7_WAR.md`.
+
+Recovery: do not repeat the same renderer profile. The existing M12 renderer
+blocker already has two profile attempts, and this M7 replay reproduces the
+same engine crash after successfully creating the AI war. Retry M7 only after a
+material driver, renderer, or game-build change; then capture the evolving War
+Viewer and map at periodic high-speed intervals.
+
+## 2026-07-20 - M8 AI-research observer verification (confirmation finding superseded)
+
+Status: **deferred at the shared renderer boundary; M8 milestone gate remains open.**
 
 The M8 enabled-mod run reached the live AD 1 selector and replayed the visible
-OK target of the same irreversible Observer confirmation. It remained open in
-`docs/screens/M8_knowledge_probe/m8_observer_started.png`. This is the same
-input surface already subjected to the M7 normalized-click and foreground-safe
-Enter attempts; no third equivalent retry is treated as new evidence. The
+OK target of the same irreversible Observer confirmation. The later exact-name
+game-rule overlay established that the input was received but country change
+was prohibited by the installed default. A 2026-07-22 M7 retest now enters
+Observer and runs at maximum speed, but sustained playback reaches the shared
+FSR renderer access violation before periodic evidence can be captured. The
 implementation is otherwise green (`make validate`, M8 graph checks, and a
 zero-new-line menu smoke); see `docs/playtests/M8_KNOWLEDGE.md`.
 
-Recovery: after a material driver/UI change or game patch, revalidate this
-single confirmation path, then observe AI research at high speed. Continue
-with independent M9 work now; no human input is required.
+Recovery: after a material renderer, driver, or game-build change, observe AI
+research at high speed. Continue with independent work now; no human input is
+required.
 
 ## 2026-07-20 - M11 generic-action message registration does not load additively
 

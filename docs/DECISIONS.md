@@ -1,5 +1,18 @@
 # Technical and Design Decisions
 
+## 2026-07-22 - Runtime console controls use generated engine tags
+
+ANTIQVITAS's historical design tags are collision-safe source identifiers, not
+always the tags loaded by the EU5 runtime. The checked
+`docs/world_1ad/tag_map.json` maps Rome `ROM` to `XAA` and Parthia `PAR` to
+`XAH`; console `tag` and `declarewar` require the latter. The M7 controlled
+war probe verified `tag XAA` from an active player and `declarewar XAH` through
+the populated live War Viewer.
+
+Tools and playtests must read that generated map rather than typing a design
+tag into engine-facing console commands. This is a technical namespace rule;
+it does not rename any historical polity or alter the source ledger.
+
 ## 2026-07-21 - AD 1 country starts do not include vanilla government templates
 
 All 157 generated country starts previously included either installed
