@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-21 - Jazira Aramaic frame retains linguistic and political diversity
+
+The nineteenth selector batch extends the existing Mesopotamian Aramaic proxy
+to the remaining Jazira area. Aramaic is used as a regional linguistic-cultural
+frame, not an assertion of a uniform ethnic population, dialect, political
+allegiance, or religious community. The historical record retains Arab and
+Arsacid influence, as well as other local groups; mixed Levantine, Cilician,
+Khuzestani, and Gulf areas remain outside this pass.
+
+Sources weighed: plan section 8.2 (P8.2); section 10 (P10); *Encyclopaedia
+Iranica* Aramaic synthesis (IRAN-ARA).
+[secure broad regional context; contested local representation]
+
 ## 2026-07-21 - Georgia's Kartvelian proxy does not erase Colchis and Iberia
 
 The eighteenth selector batch maps the remaining Georgia area to the existing
