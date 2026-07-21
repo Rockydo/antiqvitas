@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-21 - M4 Kashgar Oasis atlas batch is smoke-verified
+
+- Added a contested exact Kashgar Oasis proxy. The ledger now has 333 selectors
+  resolving 12,035 locations across 156 mapped cultures; the M4 catalogue
+  contains 177 cultures.
+- The source records Kashgar/Shule in the *Hanshu* and its formal Han
+  relationship across AD 1, but not its AD 1 language, ethnicity, state
+  boundary, or wider regional allocation.
+- Full validation and enabled-mod smoke testing passed with no new error-log
+  lines over the accepted baseline.
+
+Next: continue the residual-source review for the highest-priority defensible
+M4 selector, then complete the final M4 representation and definition audits.
+
 ## 2026-07-21 - M4 Aksu Oasis atlas batch is smoke-verified
 
 - Added a contested exact Aksu Oasis proxy. The ledger now has 332 selectors
