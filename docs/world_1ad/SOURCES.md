@@ -103,6 +103,10 @@ a row reaches `implemented` status.
 
 - `CAH-XI`: *The Cambridge Ancient History*, Volume XI, especially Roman
   imperial, Parthian, Germanic, and demographic syntheses.
+- `STR-IBR`: Strabo, [*Geography* 3.1-3.4](https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0239%3Abook%3D3), written across the campaign boundary, describes Iberian peoples in regional sequence and anchors the Bastetani/Bastuli, Oretani, Edetani, Indicetes, Celtiberians, and northwestern communities. It is a contemporary geographic witness, not an exact tribal-polygon atlas or a linguistic census.
+- `PLN-IBR`: Pliny the Elder, [*Natural History* 3.3-3.4](https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0137%3Abook%3D3&force=y), records Iberian administrative geography and named peoples in the first century CE. Its regional ordering and town anchors support bounded campaign-start ethnographic frames, not fixed modern-province boundaries or homogeneous populations.
+- `OCD-HIS`: Simon J. Keay, ["Spain"](https://academic.oup.com/edited-volume/61673/chapter/550566422), *Oxford Classical Dictionary* (2016), emphasizes Iberia's cultural heterogeneity and the distinct development of its Mediterranean, central, western, northern, and southern zones. It prevents treating the primary-source ethnonyms as a uniform linguistic or political atlas.
+- `MAI-IBR`: Bernhard Maier, ["The Celts of Iberia"](https://academic.oup.com/edinburgh-scholarship-online/book/14555/chapter-abstract/168645815), *The Celts: A History from Earliest Times to the Present* (2003), specifically locates the Belli, Arevaci, Pelendones, and Berones among the numerous Celtiberian communities. It supports bounded upper-Duero/Jalon frames, not complete or permanent territorial polygons.
 - `OCD`: *Oxford Classical Dictionary*, polity, ruler, and chronology entries.
 - `BHR`: *Book of Han* geography/census tradition, read with Hans Bielenstein
   for the AD 2 commandery population allocation.

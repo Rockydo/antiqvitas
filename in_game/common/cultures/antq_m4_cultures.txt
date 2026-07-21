@@ -919,6 +919,348 @@ antq_iberian = { # P10;CAH-XI; Non-Indo-European Iberian communities
 	}
 }
 
+antq_artabrian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Northwestern Iberian ethnographic frame around Cape Nerium
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_artabrian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_limican = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Northwestern Iberian ethnographic frame in the upper Mino hinterland
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_limican
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_bracaran = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Northwestern Iberian ethnographic frame around Bracara
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_bracaran
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_cynetan = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Southern Portuguese ethnographic frame without projecting a later Algarve identity
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_cynetan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_celtician = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Southwestern Iberian Celtici frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_celtician
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_turdulian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Western Baetican Turduli frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_turdulian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_vettonian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Western Meseta Vettones frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_vettonian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_bastetan = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Southeastern Iberian Bastetani frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_bastetan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_bastulian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Southern coastal Bastuli frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_bastulian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_oretan = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Upper Baetis Oretani frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_oretan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_edetan = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Ebro-south eastern-coast Edetani frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_edetan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_contestanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Southeastern Mediterranean Contestani frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_contestanian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_ilercavonian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Lower-Ebro Ilercavones frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_ilercavonian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_ilergetian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Middle-Ebro Ilergetes frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_ilergetian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_lacetanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Central Catalan Lacetani frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_lacetanian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_ausetanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Central Catalan Ausetani frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_ausetanian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_indigetan = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Northeastern coastal Indigetes frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_indigetan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_ceretanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Eastern Pyrenean Ceretani frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_ceretanian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_vasconian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Upper-Ebro Vascones frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_vasconian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_suessetanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Middle-Ebro Suessetani frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_suessetanian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_sedetanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Middle-Ebro Sedetani frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_sedetanian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_iacetanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Pyrenean-footland Iacetani frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_iacetanian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_arevacian = { # P10;STR-IBR;PLN-IBR;MAI-IBR;OCD-HIS;PLE; Upper-Duero Arevaci frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_arevacian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_pelendonian = { # P10;STR-IBR;PLN-IBR;MAI-IBR;OCD-HIS;PLE; Upper-Duero Pelendones frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_pelendonian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_vaccaean = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Duero-basin Vaccaei frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_vaccaean
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_carpetanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Central Meseta Carpetani frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_carpetanian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_olcadian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Eastern Meseta Olcades frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_olcadian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_turmodigian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Northern Meseta Turmodigi frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_turmodigian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_cantabrian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Northern coastal Cantabri frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_cantabrian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_asturian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Northwestern inland Astures frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_asturian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_paesician = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Northern Asturian Paesici frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_paesician
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_gigurrian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Upper-Sil Astures Gigurri frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_gigurrian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_luggonian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Northern Asturian Luggones frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_luggonian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_caristian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Western Pyrenean Caristii frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_caristian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_vardulian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Western Pyrenean Varduli frame
+	language = antq_iberian_dialect
+	color = antq_culture_color_antq_vardulian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iberian_group
+	}
+}
+
+antq_autrigonian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Western Pyrenean Autrigones frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_autrigonian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_bellian = { # P10;STR-IBR;PLN-IBR;MAI-IBR;OCD-HIS;PLE; Jalon-basin Belli frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_bellian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_lusonian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Eastern Celtiberian Lusones frame
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_lusonian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
 antq_gallaecian = { # P10;CAH-XI;PLE; Northwestern Iberian communities
 	language = antq_celtic_dialect
 	color = antq_culture_color_antq_gallaecian
