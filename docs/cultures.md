@@ -5,12 +5,12 @@ master plan: regional culture definitions use locally verified EU5 language
 keys, while the source tables retain the historical grouping, source, and
 confidence judgment separately from engine syntax.
 
-The generated catalogue currently contains 161 culture definitions across the
+The generated catalogue currently contains 162 culture definitions across the
 plan's principal Italic, Hellenic, Celtic, Germanic, Iranian, Caucasian,
 Semitic, Nile, African, Indian, Sinitic, Southeast Asian, steppe, Uralic,
 Balkan, and American/Oceanic families. It remains a foundation rather than the
-finished 350-500 culture target. Its first twenty-one source-led location batches
-use 310 selectors to resolve 11,639 controlled locations through
+finished 350-500 culture target. Its first twenty-two source-led location batches
+use 311 selectors to resolve 11,655 controlled locations through
 `docs/culture_remap.csv`; later batches must not silently turn a regional frame
 into a claim of a homogeneous population.
 

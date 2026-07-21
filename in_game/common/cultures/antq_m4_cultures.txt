@@ -1449,3 +1449,12 @@ antq_marcomannic = { # P8.7;P10;CAH-XI;CAM-GERM; Bohemian Marcomannic regional p
 		antq_germanic_group
 	}
 }
+
+antq_quadi = { # P8.7;P10;OCD-QUA; Moravian Quadi regional proxy without extending it through the heterogeneous Slovakian scope
+	language = antq_germanic_dialect
+	color = antq_culture_color_antq_quadi
+	tags = { european_gfx }
+	culture_groups = {
+		antq_germanic_group
+	}
+}

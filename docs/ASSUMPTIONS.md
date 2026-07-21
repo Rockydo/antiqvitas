@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-21 - Quadi frame stops at the Moravian selector
+
+The twenty-second selector batch maps Moravia to a Quadi regional proxy. The
+source places the Suebic Quadi in Moravia from about 8 BCE and connects them to
+the Marcomanni, but it does not resolve a modern-area boundary, every local
+community, or the more heterogeneous Slovakia scope. The row is therefore
+contested and intentionally stops at the installed Moravia selector.
+
+Sources weighed: plan section 8.7 (P8.7); section 10 (P10); Schehl and
+Drinkwater, *Oxford Classical Dictionary* (OCD-QUA).
+[secure Moravian people/context; contested local representation and boundary]
+
 ## 2026-07-21 - Batavian frame is a lower-Rhine proxy, not an Insula boundary
 
 The twenty-first selector batch maps the game’s wholly Batavian Holland scope to
