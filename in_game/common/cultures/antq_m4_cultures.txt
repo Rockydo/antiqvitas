@@ -1387,6 +1387,15 @@ antq_frisian = { # P8.7;P10;CAH-XI;CAM-GERM; North Sea Frisian regional proxy wi
 	}
 }
 
+antq_batavian = { # P8.7;P10;TAC-BAT; Lower-Rhine Batavian regional proxy without fixing the Insula Batavorum boundary
+	language = antq_germanic_dialect
+	color = antq_culture_color_antq_batavian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_germanic_group
+	}
+}
+
 antq_cheruscan = { # P8.7;P10;CAH-XI;OCD-CHER; Middle-Weser Cheruscan regional proxy without fixing a tribal frontier
 	language = antq_germanic_dialect
 	color = antq_culture_color_antq_cheruscan
