@@ -199,6 +199,33 @@ antq_median = { # P10;CAH-XI; Median regional identity
 	}
 }
 
+antq_chorasmian = { # P8.8;P10;CAH-XI; Khwarazm oasis regional culture
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_chorasmian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
+antq_carmanian = { # P8.2;P10;CAH-XI; Carmania regional Iranian proxy
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_carmanian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
+antq_hyrcanian = { # P8.2;P10;CAH-XI; Hyrcanian Caspian regional proxy
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_hyrcanian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
 antq_sogdian = { # P10;CAH-XI; Transoxianan urban culture
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_sogdian
@@ -229,6 +256,15 @@ antq_saka = { # P10;CAH-XI; Eastern Iranian steppe communities
 antq_sarmatian = { # P10;CAH-XI; Pontic Iranian steppe communities
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_sarmatian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
+antq_scythian = { # P8.7;P10;CAH-XI; Crimean Scythian-remnant regional proxy
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_scythian
 	tags = { european_gfx }
 	culture_groups = {
 		antq_iranian_group
@@ -544,6 +580,15 @@ antq_wa = { # P10;CAH-XI; Yayoi Japanese communities
 antq_xiongnu = { # P10;CAH-XI; Xiongnu confederation communities
 	language = antq_steppe_dialect
 	color = antq_culture_color_antq_xiongnu
+	tags = { european_gfx }
+	culture_groups = {
+		antq_steppe_group
+	}
+}
+
+antq_wusun = { # P8.8;P10;CAH-XI; Zhetysu Wusun regional proxy without resolving ethnolinguistic affiliation
+	language = antq_steppe_dialect
+	color = antq_culture_color_antq_wusun
 	tags = { european_gfx }
 	culture_groups = {
 		antq_steppe_group

@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-21 - Iran, Caucasus, Central Asian, and Pontic M4 labels remain cautious regional frames
+
+The fourth selector batch uses Armenian, Caucasian Albanian, Alan, Sarmatian,
+Scythian, Median, Persian, Saka, Chorasmian, Wusun, Carmanian, Hyrcanian,
+Parthian, Bactrian, Sogdian, and Aramaic frames. These are regional AD 1
+proxies, not claims that whole modern map areas were ethnically homogeneous.
+The Wusun entry intentionally does not decide their disputed linguistic
+affiliation; the northern Caucasus, Crimea, and Transoxiana rows retain the
+same caution about mixed highland, Bosporan, Kangju, and Dayuan communities.
+Sources weighed: plan sections 8.1, 8.2, 8.7, and 8.8 (P8.1; P8.2; P8.7; P8.8);
+section 10 (P10); *Cambridge Ancient History*, volume XI (CAH-XI).
+[secure broad regional context; contested local representation]
+
 ## 2026-07-21 - South and Southeast Asian M4 labels are bounded regional proxies
 
 The third selector batch uses Gandhari, Kalingan, Deccan Prakrit,

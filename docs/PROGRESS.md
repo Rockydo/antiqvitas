@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-21 - M4 Iran, Caucasus, Central Asia, and Pontic batch is observer-verified
+
+- Added 25 non-overlapping selectors for the Armenian highlands, Caucasus,
+  Iran, Mesopotamia, the Pontic, and Central Asia. They resolve 1,093 more
+  locations, bringing the ledger to 146 selectors, 5,301 locations, and 68
+  mapped cultures.
+- Added Chorasmian, Carmanian, Hyrcanian, Scythian, and Wusun definitions,
+  raising the M4 catalogue to 107 cultures. Full validation is green and the
+  enabled-mod smoke has zero new normalized error-log lines.
+- A fresh paused Observer culture map visibly renders Wusun, Sogdian,
+  Bactrian, Chorasmian, Parthian, Median, Scythian, and Sarmatian frames. Its
+  archive has zero `jomini_script_system` and zero missing-law diagnostics.
+  Evidence: `docs/playtests/M4_IRAN_CENTRAL_ASIA_ATLAS_20260721.md`.
+
+Next: continue bounded source-led batches toward a global atlas without
+equating political ownership or vanilla templates with a culture assignment.
+
 ## 2026-07-21 - M4 South and Southeast Asia batch is observer-verified
 
 - Added 29 non-overlapping selectors across India, Lanka, Jiaozhi, mainland

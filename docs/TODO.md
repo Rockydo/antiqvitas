@@ -52,6 +52,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add a source-labelled geography-selector culture ledger: 47 reviewed regional selectors resolve 1,406 exact controlled locations, and 22 new culture definitions bring the catalog to 91.
 - [x] Extend the selector ledger across Britain, Ireland, Germania, Scandinavia, Finland, and the Baltic: 46 further selectors resolve 1,482 locations, bringing the audited atlas to 2,888 locations across 37 mapped cultures.
 - [x] Extend the selector ledger through South Asia and Southeast Asia: 29 further selectors resolve 1,320 locations and add 11 culture definitions, bringing the audited atlas to 4,208 locations across 52 mapped cultures.
+- [x] Extend the selector ledger through Iran, the Caucasus, Central Asia, and the Pontic: 25 further selectors resolve 1,093 locations and add 5 culture definitions, bringing the audited atlas to 5,301 locations across 68 mapped cultures.
 - [ ] Expand the culture/location remap toward the 350–500-culture target and add reviewed dynamic names beyond capital anchors (deferred in `BLOCKERS.md`: no redistributable global culture dataset yet).
 - [ ] Pass the final culture/religion atlas checks; population and raw `-leavepops` checks are green.
 - [ ] Run milestone gate and tag `M4-done`.
