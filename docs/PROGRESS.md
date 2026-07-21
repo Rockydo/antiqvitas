@@ -1,10 +1,25 @@
 # Progress
 
+## 2026-07-21 - M4 East Asian highland and Arabian regional-atlas batch is smoke-verified
+
+- Added thirteen non-overlapping selectors for core Yayoi Wa, the Tibetan
+  plateau, and the Arabian interior. They resolve 714 further locations,
+  lifting the ledger to 283 selectors, 10,759 locations, and 125 mapped
+  cultures.
+- The existing 150-culture catalogue is retained: this coverage batch adds no
+  speculative identity definitions. Full validation and enabled-mod smoke are
+  green, with zero new normalized error-log lines.
+- Ryukyu, Qiang/Zhangzhung distinctions, the Gulf/Oman, and South Arabia's
+  existing Sabaean/Himyarite frames remain explicitly outside this broad pass.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Venedi regional-atlas batch is smoke-verified
 
 - Added two non-overlapping residual SoP selectors for the northeastern and
   Dnieper Venedi frames. They resolve 845 further locations, lifting the
-  ledger to 270 selectors, 10,045 locations, and 119 mapped cultures.
+  ledger to 270 selectors, 10,045 locations, and 122 mapped cultures.
 - Added Northeastern Venedi and Dnieper Venedi definitions, raising the M4
   catalogue to 150 cultures. Full validation and enabled-mod smoke are green,
   with zero new normalized error-log lines.
@@ -19,7 +34,7 @@ Observer atlas review as the visual M4 checkpoint.
 - Added 39 non-overlapping selectors through Italy, Gaul, Roman Egypt,
   Cyrenaica, western Anatolia, the Pontic, Noricum, Raetia, and Helvetia.
   They resolve 838 further locations, lifting the ledger to 268 selectors,
-  9,200 locations, and 117 mapped cultures.
+  9,200 locations, and 120 mapped cultures.
 - Added Pontic, Noric, Rhaetic, and Helvetian definitions, raising the M4
   catalogue to 148 cultures. Full validation and enabled-mod smoke are green,
   with zero new normalized error-log lines.

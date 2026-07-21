@@ -8,8 +8,8 @@ The 2026-07-19 evidence review remains valid for a fully automated global
 dataset: installed template cultures are not historical AD 1 evidence,
 Pleiades is a place gazetteer rather than a culture atlas, and CHGIS cannot be
 redistributed in this project. It no longer blocks all M4 work. A new authored
-`docs/culture_remap.csv` ledger supplies 270 source-labelled geographic
-selectors, resolving to 10,045 controlled locations and 81 additional culture
+`docs/culture_remap.csv` ledger supplies 283 source-labelled geographic
+selectors, resolving to 10,759 controlled locations and 81 additional culture
 definitions without copying external map data.
 
 This first batch is deliberately limited to source-qualified regional frames in
@@ -18,7 +18,8 @@ coasts, South Arabia, northeast Africa, Britain, Ireland, Germania,
 Scandinavia, Finland, the Baltic, South Asia, Southeast Asia, Iran, the
 Caucasus, Central Asia, the Pontic, Korea, the northeast steppe, Africa, the
 Americas, the controlled Oceanian surface, Han China with its southern and
-southwestern frontiers, the Roman world, and the Venedi SoP frames.
+southwestern frontiers, the Roman world, the Venedi SoP frames, core Yayoi Wa,
+the Tibetan plateau, and interior Arabia.
 Its contested rows record broad proxies rather than uniform ethnic boundaries.
 It raises the catalogue to 150, not the plan's final 350-500 cultures.
 
