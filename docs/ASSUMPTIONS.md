@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-21 - Yarkand is an exact oasis frame, not a Saka language map
+
+The fortieth source-led M4 batch assigns only the installed Yarkand location to
+a Yarkand Oasis proxy. The *Hanshu* records the territory in the first century
+BCE as Shache, while the source treats a relation between that name and Saka as
+only possible. This contested frame therefore does not settle a language,
+ethnicity, state boundary, or wider southern-Tarim allocation. Its
+Iranian/Persian engine adapter is technical only.
+
+Sources: P8.3; P10; `IRAN-YAR`.
+
+[secure campaign-boundary oasis attestation; contested local representation]
+
 ## 2026-07-21 - Loulan is an exact city-oasis frame, not a cultural map
 
 The thirty-ninth source-led M4 batch assigns only the installed Loulan location

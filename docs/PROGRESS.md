@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-21 - M4 Yarkand Oasis atlas batch is smoke-verified
+
+- Added a contested exact Yarkand Oasis proxy. The ledger now has 331 selectors
+  resolving 12,033 locations across 154 mapped cultures; the M4 catalogue
+  contains 175 cultures.
+- The *Hanshu* attests the oasis before AD 1, but the source treats a relation
+  to Saka as uncertain. The frame makes no language, ethnicity, state-boundary,
+  or wider southern-Tarim claim.
+- Full validation and enabled-mod smoke testing passed with no new error-log
+  lines over the accepted baseline.
+
+Next: continue the residual-source review for the highest-priority defensible
+M4 selector, then complete the final M4 representation and definition audits.
+
 ## 2026-07-21 - M4 Loulan city-oasis atlas batch is smoke-verified
 
 - Added a contested exact Loulan city-oasis proxy. The ledger now has 330

@@ -8,9 +8,9 @@ The 2026-07-19 evidence review remains valid for a fully automated global
 dataset: installed template cultures are not historical AD 1 evidence,
 Pleiades is a place gazetteer rather than a culture atlas, and CHGIS cannot be
 redistributed in this project. It no longer blocks all M4 work. The authored
-`docs/culture_remap.csv` ledger now supplies 330 source-labelled geographic
-selectors, resolving 12,032 controlled locations across 153 distinct mapped
-cultures without copying external map data. The full M4 catalogue contains 174
+`docs/culture_remap.csv` ledger now supplies 331 source-labelled geographic
+selectors, resolving 12,033 controlled locations across 154 distinct mapped
+cultures without copying external map data. The full M4 catalogue contains 175
 cultures, including the non-ledger definitions needed for the Moche chronology
 correction.
 
@@ -34,9 +34,9 @@ Upper-Selenga Xiongnu context, the exact Khotan Oasis frame, the Vyatka and
 Kama-Perm archaeological-linguistic contexts, the deliberately narrow
 central-Oman Samad archaeological context, the Surgut-Narym Ob Kulay
 archaeological context, the exact Kucha Oasis frame, and the exact Loulan
-city-oasis frame.
+city-oasis frame, and the exact Yarkand Oasis frame.
 Its contested rows record broad proxies rather than uniform ethnic boundaries.
-It raises the catalogue to 174, not the plan's final 350-500 cultures.
+It raises the catalogue to 175, not the plan's final 350-500 cultures.
 
 Recovery: continue source-labelled geographic batches with the same selector
 and overlap audit. Do not infer a historical culture directly from a vanilla
