@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-21 - M4 Batavian lower-Rhine atlas batch is smoke-verified
+
+- Added the wholly Batavian Holland scope to a cautious lower-Rhine Batavian
+  proxy. The ledger now has 310 selectors, 11,639 locations, and 140 mapped
+  cultures; the generated catalogue rises to 161 cultures.
+- Tacitus attests the Batavi in the Rhine island/banks and their Roman alliance,
+  but the game selector is a broader regional proxy rather than an ancient
+  boundary. Full validation and enabled-mod smoke are green, with zero new
+  normalized error-log lines.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Petén Maya atlas batch is smoke-verified
 
 - Added the remaining Petén area to the existing Late-Preclassic Maya proxy.

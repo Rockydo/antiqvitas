@@ -1,5 +1,19 @@
 # Historical Assumptions
 
+## 2026-07-21 - Batavian frame is a lower-Rhine proxy, not an Insula boundary
+
+The twenty-first selector batch maps the game’s wholly Batavian Holland scope to
+a new Batavian proxy. Tacitus describes the people in the Rhine island and only
+a small adjoining bank, while the installed area is a coarse lower-Rhine scope
+that includes locations not demonstrably inside an ancient tribal frontier. The
+row is consequently contested and represents a regional population context,
+not a fixed boundary, uniform ethnicity, or a claim that all inhabitants shared
+one language, status, or Roman allegiance.
+
+Sources weighed: plan section 8.7 (P8.7); section 10 (P10); Tacitus,
+*Germania* 29 (TAC-BAT).
+[secure people/place attestation; contested selector extent and local representation]
+
 ## 2026-07-21 - Peten Maya frame is Late-Preclassic, not a Classic polity map
 
 The twentieth selector batch maps the remaining Peten area to the existing Maya
