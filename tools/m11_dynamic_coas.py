@@ -26,6 +26,7 @@ COAS = (
     DynamicCoa("antq_m10_transformations.txt", "XSO", "ce_horse_salient.dds"),
     DynamicCoa("antq_m10_transformations.txt", "XNO", "ce_horse_salient.dds"),
     DynamicCoa("antq_m10_second_century.txt", "CPC", "ce_auspicious_conch_shell_simple.dds"),
+    DynamicCoa("antq_m10_second_century.txt", "MOC", "ce_andean_small_bird.dds"),
     DynamicCoa("antq_m10_third_century.txt", "ALM", "ce_boar_passant.dds"),
     DynamicCoa("antq_m10_third_century.txt", "SAS", "ce_horse_salient.dds"),
     DynamicCoa("antq_m10_third_century.txt", "FRK", "ce_boar_passant.dds"),

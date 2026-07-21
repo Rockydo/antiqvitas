@@ -1,5 +1,25 @@
 # Progress
 
+## 2026-07-21 - Moche chronology correction is smoke-verified
+
+- Replaced the backdated AD 1 Moche country with a contested Gallinazo
+  Moche-Valley SoP and replaced the Andes-wide Moche default with a generic,
+  explicitly non-uniform Andean population scaffold. Nazca, Recuay, and early
+  Tiwanaku retain their appropriate profiles; no start tag or default pop now
+  labels the Andes as Moche.
+- Added a source-labelled AD 100 Moche-Polities formation from the local proxy,
+  plus a reviewed 1080x440 BC7 river-valley illustration. The second-century
+  batch now has 19 currents, M11 has 84 retained event masters and 416 total
+  source-window events, and the catalogue has 165 cultures. The source-led
+  geography ledger remains 313 selectors / 11,714 locations / 142 mapped
+  cultures.
+- Full validation and enabled-mod smoke are green, with zero new normalized
+  `error.log` lines. Observer advancement remains the already-recorded driver
+  coverage gap; the corrected menu, scripts, art, and log-diff surfaces pass.
+
+Next: continue source-led global M4 density work and preserve the M10 observer
+coverage gap for a material game-driver improvement.
+
 ## 2026-07-21 - M4 Gaetulian high-plateau atlas batch is smoke-verified
 
 - Added the high-plateau/pre-desert area to the existing Gaetulian proxy. The

@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Moche uses a future-only dynamic tag anchored to VIR
+
+`MOC` must not appear in the AD 1 roster or tag map because Moche is a later
+historical current. The second-century generator therefore reserves `MOC` as a
+locally checked `define_unique_country_tag`, emits its color, CoA, and
+localization in the same generated future-formation layer, and validates that
+the AD 1 `VIR` proxy owns its only seed location before rendering. M11's
+pre-formation phase notices anchor on `VIR`, which exists at campaign start;
+the primary M10 event alone creates `MOC`. This follows the installed
+dynamic-country contract without a phantom start-country definition.
+
 ## 2026-07-21 - Venedi regional frames retain the proto-Slavic fallback dialect
 
 The installed language inventory has no verified proto-Slavic root. The two

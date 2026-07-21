@@ -44,7 +44,7 @@ after `make full` and its autonomous driver report are green.
 
 - [x] Seed and smoke-check the additive culture/religion foundation (69 cultures, 37 religions, 27 culture groups, and 14 religion groups).
 - [x] Generate and smoke-check engine-valid ancient dialect/namelist layers (27 language roots, dialects, and localized source-name pools).
-- [x] Bind the sourced culture/faith tree to all 157 country profiles (34 regional bases and 45 source-labelled tag overrides).
+- [x] Bind the sourced culture/faith tree to all 157 country profiles (34 regional bases and 48 source-labelled tag overrides).
 - [x] Bind the sourced culture/faith tree to global pop data (13,552 base pops; 230,000 thousand total; all section 12.4 macro checks).
 - [x] Generate conservative sourced dynamic-name v1 (61 coordinate-verified capital anchors, localized for all supported clients).
 - [x] Audit the 680 installed culture templates active in the AD 1 ownership surface, with profile candidates and explicit no-template exceptions.
@@ -74,6 +74,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the bounded Moravian Quadi frame: 1 further selector resolves 16 locations and adds 1 culture definition, bringing the audited atlas to 11,655 locations across 141 mapped cultures.
 - [x] Add the archaeology-first central-Vietnam Sa Huynh frame: 1 further selector resolves 29 locations and adds 1 culture definition, bringing the audited atlas to 11,684 locations across 142 mapped cultures.
 - [x] Add the bounded interior Gaetulian high-plateau frame: 1 further selector resolves 30 locations, bringing the audited atlas to 11,714 locations across 142 mapped cultures.
+- [x] Correct the backdated Moche AD 1 start: replace it with a contested Gallinazo Moche-Valley SoP, use a generic non-uniform Andes scaffold, and create plural Moche Polities through the sourced AD 100 historical current (165 culture definitions; the 313-selector atlas remains at 11,714 locations).
 - [ ] Pass the final culture/religion atlas checks; population and raw `-leavepops` checks are green.
 - [ ] Run milestone gate and tag `M4-done`.
 
@@ -201,9 +202,10 @@ after `make full` and its autonomous driver report are green.
         colors, CoAs, and localization.
   - [x] Add a source-led Northern-Xiongnu polity release to complete the AD 48
         split after its dynamic-country setup contract is locally verified.
-  - [x] Render, source-check, and menu-smoke the AD 97-199 history batch:
-        18 currents, including the AD 192 dynamic Champa release from the
-        reviewed Han-Rinan local mesh.
+    - [x] Render, source-check, and menu-smoke the AD 97-199 history batch:
+          19 currents, including the AD 100 dynamic Moche release from the
+          reviewed Gallinazo local proxy and the AD 192 Champa release from the
+          reviewed Han-Rinan local mesh.
   - [x] Render, source-check, and menu-smoke the AD 200-299 history batch:
         10 currents, including citizenship, Sassanid, and Dominate transition
         adapters and source-qualified Germanic formation identities.
@@ -265,6 +267,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 166-180 Marcomannic Wars event illustration through a landscape-only Danubian floodplain treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 184 Yellow Turbans event illustration through a landscape-only North China Plain treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 192 Champa formation event illustration through a landscape-only tropical central-Vietnam treatment.
+- [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 100 Moche-emergence event illustration through a bounded north-coast Peruvian river-valley treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 193 Severan Settlement event illustration through a landscape-only central-Italian lowland treatment.
 - [x] Extend the generated third-century event-art contract and smoke-test the AD 208-211 Severus in Caledonia illustration through a landscape-only northern-Caledonian treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 212 Constitutio Antoniniana illustration through a generic Roman civic-context treatment.
@@ -306,16 +309,16 @@ after `make full` and its autonomous driver report are green.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 468 Cape Bon illustration through a landscape-only northeastern-Tunisian coast treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 476 finale illustration through a landscape-only northern-Italian lowland treatment.
 - [x] Enforce complete reviewed illustration coverage for all 13 final-century generated currents.
-- [x] Render and review the maintained M11 event-art contact sheet (83 retained 1080x440 masters).
+- [x] Render and review the maintained M11 event-art contact sheet (84 retained 1080x440 masters).
 - [x] Replace all 157 AD 1 solid-colour CoA placeholders with validated, explicitly non-reconstructed standards; retain direct Rome, Han, and Parthia reviews above the regional catalog.
 - [x] Remove the obsolete M2 no-op age-scaffold definitions and their mirrored localization after M8's complete advance tree superseded them.
 - [x] Add the source-keyed concept glossary and project credits, including Pleiades attribution in game-visible metadata.
 - [x] Replace the five active age-view illustrations with reviewed, non-reconstructive 1080x440 DDS panels and retain their source/master chain.
 - [x] Replace the five M8 age-group icon surfaces used by all 250 advances; validate the source/master/DDS chain and the 50-per-group bindings.
-- [x] Reach the section 18 event target with 411 sourced-window events using 83 reviewed shared paintings without inventing historical incidents.
-- [x] Replace the 13 scripted-formation and successor-state solid-color CoAs with reviewed non-reconstructive standards and generation checks.
+- [x] Reach the section 18 event target with 416 sourced-window events using 84 reviewed shared paintings without inventing historical incidents.
+- [x] Replace the 14 scripted-formation and successor-state solid-color CoAs with reviewed non-reconstructive standards and generation checks.
 - [x] Replace the `_default` fallbacks on every direct-key M4 religion and M8 institution screen surface with checked, source/master/DDS contracts.
-- [x] Complete the plan-permitted shared-icon fallback coverage: five reviewed advance icons cover all 250 advances, and 83 reviewed paintings cover all 411 historical-current events.
+- [x] Complete the plan-permitted shared-icon fallback coverage: five reviewed advance icons cover all 250 advances, and 84 reviewed paintings cover all 416 historical-current events.
 - [x] Complete the English-first localization audit: fifteen source files mirror exactly across all ten supported clients, with no game-visible stub text.
 - [x] Reach the decision target with 40 source-led own-country actions, exact action-message localization, and bounded player-only effects.
 - [x] Resolve the M11 generic-action message-registry blocker through a one-action exact-name pilot and a pinned full 40-action overlay; the source ledger is retained in `docs/m11/decisions.csv`.

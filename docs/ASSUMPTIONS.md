@@ -1,5 +1,24 @@
 # Historical Assumptions
 
+## 2026-07-21 - Moche is a later emergence, not an AD 1 state
+
+The plan explicitly schedules Moche formation around AD 100. The prior AD 1
+Moche country and Andes-wide Moche population scaffold were therefore removed.
+At campaign start, the single local north-coast map proxy is a contested
+Gallinazo-community SoP centred on the Moche-Valley archaeological context;
+the residual Andes use an intentionally generic, non-uniform population frame.
+The dated M10 event then creates plural-labelled Moche Polities from that local
+proxy. This does not claim that the later Chan Chan city existed at AD 1, that
+Gallinazo controlled a fixed territory, that every Andean community was one
+people or language, or that Moche was one unitary state.
+
+Sources weighed: plan section 8.10 (P8.10); Spencer and Redmond, *PNAS*
+(PNAS-VIR); Gagnon, *International Journal of Osteoarchaeology* (WIL-GAL);
+Bourget and Jones, *The Art and Archaeology of the Moche* (JSTOR-MOC); and
+Quilter and Koons, *Latin American Antiquity* (CAM-MOC).
+[secure chronology that Moche is post-start; contested local proxy, population
+frame, formation date, and political representation]
+
 ## 2026-07-21 - Gaetulian frame is limited to the interior high plateau
 
 The twenty-fourth selector batch maps only the high-plateau/pre-desert area to
