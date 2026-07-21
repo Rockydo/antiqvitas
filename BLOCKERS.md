@@ -7,12 +7,12 @@ Status: **continue bounded regional batches; final global density remains open.*
 The 2026-07-19 evidence review remains valid for a fully automated global
 dataset: installed template cultures are not historical AD 1 evidence,
 Pleiades is a place gazetteer rather than a culture atlas, and CHGIS cannot be
-redistributed in this project. It no longer blocks all M4 work. A new authored
-`docs/culture_remap.csv` ledger supplies 313 source-labelled geographic
-selectors, resolving to 11,714 controlled locations and 94 additional
-selector-led culture definitions without copying external map data. Two
-additional non-ledger culture definitions support the Moche chronology
-correction, bringing the catalogue to 165.
+redistributed in this project. It no longer blocks all M4 work. The authored
+`docs/culture_remap.csv` ledger now supplies 319 source-labelled geographic
+selectors, resolving 11,916 controlled locations across 147 distinct mapped
+cultures without copying external map data. The full M4 catalogue contains 168
+cultures, including the non-ledger definitions needed for the Moche chronology
+correction.
 
 This first batch is deliberately limited to source-qualified regional frames in
 Italy, Iberia, Aquitania/Armorica, the Balkans, Anatolia, the Levant, Punic
@@ -26,9 +26,12 @@ Prakrit, Tamil, Himalayan, source-qualified Germanic tribal, bounded
 Amur-Yilou archaeological, bounded Carpathian Dacian/Getic, Korean
 Samhan/local-community, Iberian-Colchian Kartvelian, northern-Mesopotamian
 Aramaic, Late-Preclassic Petén Maya, lower-Rhine Batavian, Moravian Quadi, and
-central-Vietnam Sa Huynh archaeological, and interior Gaetulian frames.
+central-Vietnam Sa Huynh archaeological, interior Gaetulian frames, a bounded
+lower-Yik Sarmatian context, Sulawesi Austronesian context, central-Mexican
+Teotihuacan context, Bornu Chadic context, Late Nok archaeological horizon,
+and Omsk Sargat archaeological context.
 Its contested rows record broad proxies rather than uniform ethnic boundaries.
-It raises the catalogue to 165, not the plan's final 350-500 cultures.
+It raises the catalogue to 168, not the plan's final 350-500 cultures.
 
 Recovery: continue source-labelled geographic batches with the same selector
 and overlap audit. Do not infer a historical culture directly from a vanilla
