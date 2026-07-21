@@ -10,18 +10,19 @@ historical currents.
 
 The repository targets EU5 `1.3.11` (local build `24187685`). M11 is complete;
 M12 remains in progress for observer-based pacing, full-timeline, and finale
-verification. The static tree, menu smoke, and all generated contracts are
-guarded by the included tooling. See [Known Issues](KNOWN_ISSUES.md) before
-using this development build for a long campaign.
+verification. The current full static and enabled-mod menu gate is green, but
+the long observer run remains blocked by the documented renderer fault. See
+[Known Issues](KNOWN_ISSUES.md) before using this development build for a long
+campaign.
 
 ## Included scope
 
 - AD 1 start state: 157 documented polities, 13,552 controlled locations,
   25 dependencies, and a 230-million population baseline;
-- 69 cultures, 37 religions, 42 markets, 43 audited transport segments, five
+- 179 cultures, 37 religions, 42 markets, 43 audited transport segments, five
   ancient custom goods, M6 law/government adapters, and 26 ancient unit types;
 - five ancient ages, 250 advances, nine institutions, M9 subject/CB/IO
-  contracts, and 411 source-window historical-current events through AD 476;
+  contracts, and 416 source-window historical-current events through AD 476;
 - 40 source-led player actions, English-first localization mirrored to ten
   other clients, and reviewed 2D art with no audio changes.
 
@@ -54,4 +55,5 @@ machine-specific and are not release metadata.
   [packaging notes](docs/m12/PACKAGING.md) describe release obligations.
 - [Finale verification](docs/m12/M12_FINALE_VERIFICATION.md) distinguishes
   the checked terminal contract from the still-required observer evidence.
-
+- [M12 final-gate status](docs/m12/M12_FINAL_GATE.md) records the current
+  full-gate result and the remaining release blocker.

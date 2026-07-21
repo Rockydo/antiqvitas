@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-21 - M12 current full gate is green; release evidence remains blocked
+
+- The current `make full` gate passed all generated/static contracts and its
+  enabled-mod smoke reported zero new normalized `error.log` lines.
+- The public build inventory now matches the generated checks: 179 cultures,
+  37 religions, and 416 source-window historical-current events.
+- This does not tag M12. The renderer fault still prevents the required
+  observer pacing measurements, full AD 1-to-476 run, and finale screenshot
+  evidence after two material profile attempts.
+
+Next: retain the green static release baseline and resume observer-only work
+only after a material renderer or game-driver change.
+
 ## 2026-07-21 - M4 final gate is green technically, held historically
 
 - `make full` passed at 179 cultures, 37 religions, 335 source-labelled
