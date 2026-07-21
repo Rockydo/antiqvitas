@@ -43,6 +43,27 @@ antq_andean_language = { # P10;CAH-XI; Regional naming foundation
 	}
 }
 
+antq_anatolian_language = { # P10;CAH-XI;PLE; Anatolian residue naming adapter with Greek fallback; it is not a claim of linguistic uniformity
+	color = antq_language_color_antq_anatolian_language
+	family = romance_language_family
+	fallback = greek_language
+	male_names = {
+		antq_name_ariarathes antq_name_attis antq_name_midas antq_name_zeno
+	}
+	female_names = {
+		antq_name_ariarathia antq_name_laodice antq_name_nysa antq_name_stratonice
+	}
+	dynasty_names = {
+		antq_name_ariarathid antq_name_cappadocian antq_name_phrygian
+	}
+	lowborn = {
+		antq_name_ariarathid antq_name_cappadocian antq_name_phrygian
+	}
+	dialects = {
+		antq_anatolian_dialect = { }
+	}
+}
+
 antq_austronesian_language = { # P10;CAH-XI; Regional naming foundation
 	color = antq_language_color_antq_austronesian_language
 	family = oceanic_language_family

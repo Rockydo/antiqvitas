@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-21 - M4 source-led culture remap batch is observer-verified
+
+- Added a deterministic geography-selector ledger with 47 reviewed source
+  rows that resolve to 1,406 controlled locations. Twenty-two new generated
+  cultures raise the M4 catalogue from 69 to 91 without importing a third-party
+  culture-map dataset.
+- Full validation is green (`m4_definitions` 91 cultures / 37 religions;
+  `popcheck` 13,552 locations / 230M). The enabled-mod smoke has zero new
+  normalized error-log lines.
+- A fresh long-settle autonomous Observer start reached the paused AD 1 map;
+  the culture view visibly includes the new regional frames. The final run has
+  zero `jomini_script_system` and zero `Setting a law` diagnostics. Evidence:
+  `docs/playtests/M4_CULTURE_REMAP_20260721.md`.
+
+Next: continue bounded source-labelled batches toward the 350-500-culture
+target; do not claim a complete worldwide density atlas yet.
+
 ## 2026-07-21 - M4 atlas overlays are observer-verified
 
 - In a fresh, paused AD 1 Observer session, `Cultures (Location)` rendered the

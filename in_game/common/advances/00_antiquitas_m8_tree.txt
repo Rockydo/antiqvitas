@@ -6,6 +6,8 @@ antq_imperial_cult = {
 	depth = 0
 	research_cost = 2.0
 	unlock_law = legal_code_law
+	unlock_law = education_masses_law
+	unlock_law = tribal_legal_basis_law
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
@@ -48,7 +50,6 @@ antq_legal_petitions = {
 	icon = abacus_advance
 	depth = 4
 	research_cost = 4.0
-	unlock_law = education_masses_law
 	starting_technology_level = 2
 	requires = antq_road_milestones
 	ai_weight = { add = 80 }
@@ -499,7 +500,6 @@ antq_supply_columns = {
 	icon = abacus_advance
 	depth = 3
 	research_cost = 3.5
-	unlock_law = tribal_legal_basis_law
 	starting_technology_level = 2
 	requires = antq_drill_routines
 	ai_weight = { add = 85 }

@@ -12,7 +12,11 @@ from pathlib import Path
 
 from extract_vanilla import tokenize
 from generate_country_definitions import historical_profile_for
-from generate_start_mirror import load_population_plan, population_location_overrides
+from generate_start_mirror import (
+    load_population_plan,
+    population_culture_remaps,
+    population_location_overrides,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 POP_FILE = ROOT / "main_menu/setup/start/06_pops.txt"
@@ -92,6 +96,7 @@ def main() -> int:
     valid_types = set(json.loads(POP_TYPES.read_text(encoding="utf-8-sig")))
     macros, allocations = load_population_plan()
     overrides = population_location_overrides(owners, allocations)
+    culture_remaps = population_culture_remaps(owners)
     failures: list[str] = []
     records_by_location: defaultdict[str, list[dict[str, str]]] = defaultdict(list)
     region_totals: defaultdict[str, Decimal] = defaultdict(Decimal)
@@ -125,7 +130,7 @@ def main() -> int:
         tag = owners[location]
         profile = historical_profile_for(roster[tag])
         override = overrides.get(location, {})
-        expected_culture = override.get("culture", profile.culture)
+        expected_culture = override.get("culture", culture_remaps.get(location, {}).get("culture", profile.culture))
         expected_religion = override.get("religion", profile.religion)
         if record["culture"] != expected_culture or record["religion"] != expected_religion:
             failures.append(

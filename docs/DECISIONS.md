@@ -1,5 +1,38 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Culture remaps use source-labelled geography selectors, never vanilla culture keys
+
+The installed template-culture field is a later-period geographic helper, not
+evidence for an AD 1 population identity. M4 therefore resolves an explicit
+area, province, or location selector through the harvested hierarchy and
+requires an ANTIQVITAS culture, source, confidence, rationale, non-empty
+coverage, and no selector overlap. The generated population mirror applies a
+narrow location override first, then this audited ledger, then only the
+existing regional profile fallback. This makes the 1,406-location first batch
+reproducible and prevents a broad regional source judgement from silently
+overwriting a documented frontier exception.
+
+## 2026-07-21 - Legacy parliament scope checks are guarded as local exact-source overlays
+
+The complete observer save-load exposed eight installed `government_type`
+comparisons on absent legacy country scopes in two parliament-issue files.
+The engine's locally evidenced `?=` form yields false for such a scope while
+preserving the ordinary result for active countries. The renderer copies both
+local source files, changes only those eight identified comparisons, and
+verifies their per-file line inventory before writing. This is an initialization
+compatibility decision, not a change to the historical availability of any
+parliament issue.
+
+## 2026-07-21 - Universal start law categories belong at technology tier one
+
+The installed tribal start templates assign `education_masses_law` and
+`tribal_legal_basis_law` before the AD 1 knowledge tree is evaluated. Placing
+their category bridges on later advances emitted missing-advance diagnostics
+for tier-one societies. M8 now places both on the universally granted
+depth-zero `antq_imperial_cult` node, without restoring vanilla units or
+levies. This is an engine-category bridge only; the historical government
+meaning remains in M6's namespaced reforms and laws.
+
 ## 2026-07-21 - Preserve native government categories through ancient advances
 
 The AD 1 government adapters intentionally retain a small set of installed
