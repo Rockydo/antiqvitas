@@ -8,8 +8,8 @@ The 2026-07-19 evidence review remains valid for a fully automated global
 dataset: installed template cultures are not historical AD 1 evidence,
 Pleiades is a place gazetteer rather than a culture atlas, and CHGIS cannot be
 redistributed in this project. It no longer blocks all M4 work. A new authored
-`docs/culture_remap.csv` ledger supplies 310 source-labelled geographic
-selectors, resolving to 11,639 controlled locations and 92 additional culture
+`docs/culture_remap.csv` ledger supplies 311 source-labelled geographic
+selectors, resolving to 11,655 controlled locations and 93 additional culture
 definitions without copying external map data.
 
 This first batch is deliberately limited to source-qualified regional frames in
@@ -23,7 +23,8 @@ the Tibetan plateau, interior Arabia, source-qualified South Asian regional
 Prakrit, Tamil, Himalayan, source-qualified Germanic tribal, bounded
 Amur-Yilou archaeological, bounded Carpathian Dacian/Getic, Korean
 Samhan/local-community, Iberian-Colchian Kartvelian, northern-Mesopotamian
-Aramaic, Late-Preclassic Petén Maya, and lower-Rhine Batavian frames.
+Aramaic, Late-Preclassic Petén Maya, lower-Rhine Batavian, and Moravian Quadi
+frames.
 Its contested rows record broad proxies rather than uniform ethnic boundaries.
 It raises the catalogue to 160, not the plan's final 350-500 cultures.
 

@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-21 - M4 Moravian Quadi atlas batch is smoke-verified
+
+- Added the Moravia-only Quadi proxy. The ledger now has 311 selectors, 11,655
+  locations, and 141 mapped cultures; the generated catalogue rises to 162
+  cultures.
+- The source places the Suebic Quadi in Moravia around 8 BCE, but does not
+  resolve an exact local boundary or broader Slovakia. Full validation and
+  enabled-mod smoke are green, with zero new normalized error-log lines.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Batavian lower-Rhine atlas batch is smoke-verified
 
 - Added the wholly Batavian Holland scope to a cautious lower-Rhine Batavian
