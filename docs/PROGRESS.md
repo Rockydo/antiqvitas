@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-21 - M4 Sa Huynh central-Vietnam atlas batch is smoke-verified
+
+- Added a Sa Huynh archaeological proxy across the central-Vietnam area. The
+  ledger now has 312 selectors, 11,684 locations, and 142 mapped cultures; the
+  generated catalogue rises to 163 cultures.
+- The sources cover AD 1 but describe a transition to, rather than a completed,
+  Champa context. The fallback language is technical only. Full validation and
+  enabled-mod smoke are green, with zero new normalized error-log lines.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Moravian Quadi atlas batch is smoke-verified
 
 - Added the Moravia-only Quadi proxy. The ledger now has 311 selectors, 11,655
