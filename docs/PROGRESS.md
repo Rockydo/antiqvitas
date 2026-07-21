@@ -1,11 +1,29 @@
 # Progress
 
+## 2026-07-21 - M4 Iberian ethnographic atlas batch is smoke-verified
+
+- A primary-source pass grounded in Strabo and Pliny, cross-checked against the
+  *Oxford Classical Dictionary*, adds 38 named Iberian ethnographic frames.
+  Each is a deliberately contested, province-sized campaign-boundary proxy,
+  rather than a claim to exact tribal polygons, language, or political borders.
+- The ledger now has 373 reviewed selectors resolving 12,037 controlled
+  locations across 196 mapped cultures; the definition catalogue rises from 179
+  to 217 cultures. The population total remains 230,000.000 thousand.
+- The resolver now makes source specificity explicit: a location/province
+  selector refines a broader sourced area/region; an equally specific overlap
+  remains a validation failure. `make validate` and the enabled-mod smoke both
+  passed with zero new error-log lines.
+
+Next: continue the 350-500 culture recovery through another independently
+reviewed historical corpus, retaining the no-template-inference rule.
+
 ## 2026-07-21 - M12 current full gate is green; release evidence remains blocked
 
 - The current `make full` gate passed all generated/static contracts and its
   enabled-mod smoke reported zero new normalized `error.log` lines.
-- The public build inventory now matches the generated checks: 179 cultures,
-  37 religions, and 416 source-window historical-current events.
+- At that M12 full gate, the public build inventory matched the generated
+  checks: 179 cultures, 37 religions, and 416 source-window historical-current
+  events. The later M4 Iberian batch above raises the culture count to 217.
 - This does not tag M12. The renderer fault still prevents the required
   observer pacing measurements, full AD 1-to-476 run, and finale screenshot
   evidence after two material profile attempts.
