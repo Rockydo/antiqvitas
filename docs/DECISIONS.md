@@ -1,5 +1,17 @@
 # Technical and Design Decisions
 
+## 2026-07-21 - Dynamic names use a separate secure curated ledger
+
+`tools/generate_dynamic_names.py` now accepts a second, explicit ledger for
+reviewed non-capital names. It rejects an unknown location/culture, a duplicate
+location, a missing language contract, an empty source/note, or any confidence
+grade other than `secure`. Capital anchors remain coordinate-derived; the
+generated report now identifies each row as `capital` or `curated`.
+
+This separation prevents a market, road, or vanilla localization key from
+silently becoming a historical name. The owner-profile culture is an engine
+lookup adapter, not evidence that the selected city had one spoken language.
+
 ## 2026-07-21 - Game-driver activation handles minimized EU5 windows and capture focus
 
 EU5 can be minimized by Windows between a valid menu screenshot and the next

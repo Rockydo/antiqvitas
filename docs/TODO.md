@@ -69,7 +69,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Map the bounded Iberian-Colchian Kartvelian continuum across the remaining Georgia area: 1 further selector resolves 49 locations, bringing the audited atlas to 11,569 locations across 139 mapped cultures.
 - [x] Extend the bounded northern-Mesopotamian Aramaic proxy through Jazira: 1 further selector resolves 48 locations, bringing the audited atlas to 11,617 locations across 139 mapped cultures.
 - [x] Expand the culture/location remap to the plan's 350-culture density floor with reviewed regional primary-source corpora; the 506 selectors resolve 12,058 controlled locations across 329 mapped cultures, and no AD 1 identity was inferred from a vanilla template key.
-- [ ] Add reviewed dynamic names beyond capital anchors without collapsing distinct local historical contexts.
+- [x] Add reviewed dynamic names beyond capital anchors: 24 secure direct toponyms extend the 61 coordinate-verified capital anchors, with each dynamic-language lookup and source recorded in `docs/m4/dynamic_location_name_overrides.csv`.
 - [x] Add the Late-Preclassic Petén lowland Maya frame: 1 further selector resolves 4 locations, bringing the audited atlas to 11,621 locations across 139 mapped cultures.
 - [x] Add a bounded lower-Rhine Batavian proxy for the wholly Batavian Holland scope: 1 further selector resolves 18 locations and adds 1 culture definition, bringing the audited atlas to 11,639 locations across 140 mapped cultures.
 - [x] Add the bounded Moravian Quadi frame: 1 further selector resolves 16 locations and adds 1 culture definition, bringing the audited atlas to 11,655 locations across 141 mapped cultures.
