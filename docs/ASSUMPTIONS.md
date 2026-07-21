@@ -1,5 +1,21 @@
 # Historical Assumptions
 
+## 2026-07-21 - Late Nok is a fading archaeological horizon at AD 1
+
+The twenty-ninth selector batch introduces a Late Nok Horizon culture for the
+installed southern-Hausa/central-Nigeria area. The chronology puts the late Nok
+phase into the final pre-Common-Era centuries and its disappearance around the
+campaign boundary, which is why the plan characterizes Nok as fading. This is
+a contested start snapshot, not a claim that Nok was a unified people, language,
+state, or later Hausaland identity; it also does not assert a fixed archaeological
+boundary or durable cultural continuity through the full campaign.
+
+Sources weighed: plan section 8.5 (P8.5); section 10 (P10); Franke, *Journal
+of African Archaeology* (JAA-NOK); Breunig and Rupp, *Oxford Research
+Encyclopedia of African History* (OUP-NOK).
+[secure late-horizon chronology; contested selector extent and local
+representation]
+
 ## 2026-07-21 - Bornu is a Lake Chad Basin Chadic frame, not a modern map
 
 The twenty-eighth selector batch introduces a Chadic Basin culture only for

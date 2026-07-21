@@ -5,6 +5,19 @@ requirements in the corresponding section of the ANTIQVITAS master plan; those
 requirements are cross-checked against the following research pipeline before
 a row reaches `implemented` status.
 
+- `JAA-NOK`: Gabriele Franke, ["A Chronology of the Central Nigerian Nok
+  Culture - 1500 BC to the Beginning of the Common Era"](https://doi.org/10.3213/2191-5784-10297),
+  *Journal of African Archaeology* 14 (2016), places the distinctive Nok late
+  phase into the last centuries BCE and its disappearance around the turn of
+  the Common Era. It supports a fading campaign-boundary archaeological
+  horizon, not an ethnicity, language, state, or an enduring post-start
+  identity.
+- `OUP-NOK`: Peter Breunig and Nicole Rupp, ["The Archaeology of Nok Culture
+  in Nigeria (2nd/1st Millennium BCE)"](https://academic.oup.com/edited-volume/61663/chapter-abstract/553397313),
+  *Oxford Research Encyclopedia of African History* (2023), describes a
+  complex ritual system spread over a large Central Nigerian area while warning
+  that the available evidence cannot establish social or political complexity.
+  It supports a broad, contested regional horizon only.
 - `OUP-CHAD`: Scott MacEachern, ["Understanding Distributions of Chadic
   Languages: Archaeological Perspectives"](https://www.researchgate.net/publication/326404525_Understanding_distributions_of_chadic_languages_Archaeological_perspectives),
   in *The Oxford Handbook of African Archaeology* (2018), stresses that direct

@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-21 - M4 late-Nok atlas batch is smoke-verified
+
+- Added a contested 21-location Late Nok Horizon culture for the plan's fading
+  central Nigerian context. The ledger now has 318 selectors, 11,888 locations,
+  and 146 mapped cultures; the catalogue rises to 167 cultures.
+- Nok is only a campaign-boundary archaeological horizon, not a later Hausa
+  identity, a state, a uniform language, or a claim of later continuity. Full
+  validation and enabled-mod smoke are green, with zero new normalized
+  error-log lines.
+
+Next: continue source-led global M4 density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Bornu Chadic Basin atlas batch is smoke-verified
 
 - Added a cautious 18-location southern-Lake-Chad Chadic Basin proxy and its
