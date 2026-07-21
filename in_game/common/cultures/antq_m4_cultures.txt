@@ -568,6 +568,24 @@ antq_korean = { # P10;CAH-XI; Korean peninsula communities
 	}
 }
 
+antq_buyeo_goguryeoic = { # P8.3;P10;CAH-XI; Buyeo and Goguryeo regional proxy before later Korean consolidation
+	language = antq_korean_dialect
+	color = antq_culture_color_antq_buyeo_goguryeoic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_korean_group
+	}
+}
+
+antq_samhan = { # P8.3;P10;CAH-XI; Samhan confederacy regional proxy before later peninsular states
+	language = antq_korean_dialect
+	color = antq_culture_color_antq_samhan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_korean_group
+	}
+}
+
 antq_wa = { # P10;CAH-XI; Yayoi Japanese communities
 	language = antq_japonic_dialect
 	color = antq_culture_color_antq_wa
@@ -589,6 +607,33 @@ antq_xiongnu = { # P10;CAH-XI; Xiongnu confederation communities
 antq_wusun = { # P8.8;P10;CAH-XI; Zhetysu Wusun regional proxy without resolving ethnolinguistic affiliation
 	language = antq_steppe_dialect
 	color = antq_culture_color_antq_wusun
+	tags = { european_gfx }
+	culture_groups = {
+		antq_steppe_group
+	}
+}
+
+antq_wuhuan = { # P8.8;P10;CAH-XI; Liaodong Wuhuan regional proxy without resolving ethnolinguistic affiliation
+	language = antq_steppe_dialect
+	color = antq_culture_color_antq_wuhuan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_steppe_group
+	}
+}
+
+antq_xianbei = { # P8.8;P10;CAH-XI; Eastern-steppe Xianbei regional proxy before later confederation formations
+	language = antq_steppe_dialect
+	color = antq_culture_color_antq_xianbei
+	tags = { european_gfx }
+	culture_groups = {
+		antq_steppe_group
+	}
+}
+
+antq_dingling = { # P8.8;P10;CAH-XI; Upper-Yenisei Dingling regional proxy without resolving later Tiele identities
+	language = antq_steppe_dialect
+	color = antq_culture_color_antq_dingling
 	tags = { european_gfx }
 	culture_groups = {
 		antq_steppe_group

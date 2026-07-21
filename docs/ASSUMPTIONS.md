@@ -1,5 +1,17 @@
 # Historical Assumptions
 
+## 2026-07-21 - Korean and northeast-steppe M4 frames do not settle later identities
+
+The fifth selector batch uses Buyeo-Goguryeoic, Samhan, Wuhuan, Xianbei, and
+Dingling as AD 1 regional frames. It does not project later Korean state
+formation, later Tiele identities, or a resolution of the disputed linguistic
+affiliations of Wuhuan and Xianbei into the start date. The Xiongnu rows are
+likewise geographic pastoral proxies rather than a claim that every selected
+location belonged to one uniform confederation. Sources weighed: plan sections
+8.3 and 8.8 (P8.3; P8.8); section 10 (P10); *Cambridge Ancient History*,
+volume XI (CAH-XI).
+[secure broad regional context; contested local representation]
+
 ## 2026-07-21 - Iran, Caucasus, Central Asian, and Pontic M4 labels remain cautious regional frames
 
 The fourth selector batch uses Armenian, Caucasian Albanian, Alan, Sarmatian,
