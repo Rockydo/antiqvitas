@@ -85,6 +85,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the contested Upper-Selenga Xiongnu core frame: 1 further selector resolves 23 locations, bringing the audited atlas to 11,970 locations across 147 mapped cultures.
 - [x] Add the exact Khotan Oasis frame: 1 further selector resolves 1 location and adds 1 culture definition, bringing the audited atlas to 11,971 locations across 148 mapped cultures.
 - [x] Add the cautious Vyatka Permic frame: 1 further selector resolves 18 locations and adds 1 culture definition, bringing the audited atlas to 11,989 locations across 149 mapped cultures.
+- [x] Add the cautious Kama-Perm Permic frame: 1 further selector resolves 22 locations, bringing the audited atlas to 12,011 locations across 149 mapped cultures.
 - [ ] Pass the final culture/religion atlas checks; population and raw `-leavepops` checks are green.
 - [ ] Run milestone gate and tag `M4-done`.
 
