@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-21 - M4 Gallic ethnographic atlas batch is smoke-verified
+
+- Strabo and Pliny's Gallic surveys, checked against the *Oxford Classical
+  Dictionary*, add 47 named Aquitanian, Armorican, Gallic, Belgic, Alpine, and
+  Narbonensian frames. Each is a contested province-sized proxy, not an exact
+  tribal boundary, language census, or claim of political independence.
+- The ledger now has 420 reviewed selectors resolving 12,037 controlled
+  locations across 243 mapped cultures; the catalogue rises from 217 to 264
+  culture definitions. Population remains 230,000.000 thousand.
+- `make validate` and enabled-mod smoke passed with zero new error-log lines;
+  the smoke completed at 18:18 UTC.
+
+Next: recover the remaining 86 definitions through another distinct,
+independently reviewed historical corpus.
+
 ## 2026-07-21 - M4 Iberian ethnographic atlas batch is smoke-verified
 
 - A primary-source pass grounded in Strabo and Pliny, cross-checked against the
@@ -23,7 +38,8 @@ reviewed historical corpus, retaining the no-template-inference rule.
   enabled-mod smoke reported zero new normalized `error.log` lines.
 - At that M12 full gate, the public build inventory matched the generated
   checks: 179 cultures, 37 religions, and 416 source-window historical-current
-  events. The later M4 Iberian batch above raises the culture count to 217.
+  events. The later M4 Iberian and Gallic batches above raise the culture count
+  to 264.
 - This does not tag M12. The renderer fault still prevents the required
   observer pacing measurements, full AD 1-to-476 run, and finale screenshot
   evidence after two material profile attempts.
