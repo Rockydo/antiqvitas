@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-21 - M4 Carpathian Dacian/Getic atlas batch is smoke-verified
+
+- Added two non-overlapping selectors for intra-Carpathian Dacian Transylvania
+  and the lower-Danube Getic Romanian Plain. The ledger now has 303 selectors,
+  11,468 locations, and 137 mapped cultures.
+- Added one source-qualified Getic definition, raising the M4 catalogue to 160
+  cultures. The cited scholarship distinguishes the regional contexts while
+  retaining the Dacian-Getae identity debate; Moldavia, the Tisza plain, and
+  the other Carpathian areas remain deliberately unresolved. Full validation
+  and enabled-mod smoke are green, with zero new normalized error-log lines.
+
+Next: continue source-led global density work and retain a later combined
+Observer atlas review as the visual M4 checkpoint.
+
 ## 2026-07-21 - M4 Amur-Yilou archaeological atlas batch is smoke-verified
 
 - Added three non-overlapping middle-Amur, lower-Amur, and Ussuri-Maritime

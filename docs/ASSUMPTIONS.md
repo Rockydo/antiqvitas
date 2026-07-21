@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-21 - Carpathian Dacian and Getic frames retain the identity debate
+
+The sixteenth selector batch represents intra-Carpathian Transylvania with the
+existing Dacian proxy and the lower-Danube Romanian Plain with a new Getic
+proxy. Scholarship records both a geographic distinction and a continuing
+Dacian-Getae identity debate; these labels are regional aids rather than a
+decision that the groups were separate peoples, a uniform language map, or
+fixed tribal and political borders. Moldavia, the Tisza plain, and the other
+Carpathian areas remain unmapped because this source route does not support a
+more exact AD 1 allocation.
+
+Sources weighed: plan section 8.7 (P8.7); section 10 (P10); Pogăciaş's Dacian
+study (PER-DAC); Kızgut's Dacia historical geography (JBRI-DAC).
+[secure broad regional context; contested local representation]
+
 ## 2026-07-21 - Amur Yilou frame is archaeological and deliberately bounded
 
 The fifteenth selector batch applies the existing Tungusic/Yilou proxy only to
