@@ -35,22 +35,22 @@ FIELDS = (
 )
 CATEGORIES = {
     "basic_industry_category", "cultural_category", "government_category",
-    "infrastructure_category", "religious_category", "trade_category",
+    "infrastructure_category", "naval_category", "religious_category", "trade_category",
 }
-POP_TYPES = {"burghers", "clergy", "laborers", "nobles"}
+POP_TYPES = {"burghers", "clergy", "laborers", "nobles", "soldiers"}
 EMPLOYMENT = {
-    "cultural_employment", "generic_burgher_employment", "generic_peasant_building_employment",
+    "cultural_employment", "dock_employment", "generic_burgher_employment", "generic_peasant_building_employment",
     "guild_employment", "religious_building_employment", "trade_employment",
 }
 BUILD_TIMES = {
     "cultural_building_time", "government_build_time", "guild_build_time",
-    "infrastructure_build_time", "market_build_time", "religious_building_time",
+    "infrastructure_build_time", "market_build_time", "medium_port_building_time", "religious_building_time",
 }
 MODIFIERS = {
     "local_clergy_max_literacy", "local_cultural_tradition", "local_disease_resistance",
     "local_life_expectancy", "local_max_control", "local_merchant_capacity",
     "local_merchant_power", "local_monthly_food_modifier", "local_population_capacity",
-    "local_production_efficiency", "local_unrest",
+    "local_production_efficiency", "local_repair_speed", "local_sailors", "local_unrest",
 }
 
 

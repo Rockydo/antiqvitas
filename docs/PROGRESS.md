@@ -4252,6 +4252,24 @@ separate Han runtime-regency blocker.
 Next: add a separately sourced military-supply/frontier building layer, then
 continue the user-priority Roman period-name expansion.
 
+## 2026-07-22 - Navalia Romae naval-supply building pass
+
+- Added the Republican-period Tiberine `Navalia` as Rome's seventeenth named
+  special building. Its verified `naval_category` / `dock_employment` contract
+  creates modest local sailor and repair effects while consuming tar, naval
+  supplies, tools, lumber, and cloth; it does not assert an AD 1 fleet roster,
+  port geometry, or shipbuilding scale.
+- Added a dedicated, locally reviewed 128px BC7 icon from an original
+  illustrated Tiber ship-shed source and rebuilt the checked building contact
+  sheet. The ledger records Digital Augustan Rome's Republican dating and the
+  contested state of the exact Augustan configuration.
+- `make validate` is green at 17 direct-icon Roman buildings and 45 M5/M7
+  start buildings. The controlled vanilla/mod menu smoke is green with zero
+  new error-log lines.
+
+Next: retain generic M7 frontier proxies until direct AD 1 anchors permit a
+named layer; continue the user-priority Roman period-name expansion.
+
 ## 2026-07-22 - Fresh-start diagnostic and smoke-control recovery
 
 - A new-game probe reaches the AD 1 country-selection map but exposes 327
