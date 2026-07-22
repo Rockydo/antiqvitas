@@ -28,6 +28,12 @@ quantities.
 - **MET-ROMAN** — Metropolitan Museum of Art, [The Roman World](https://www.metmuseum.org/pt/-/media/files/learn/for-educators/publications-for-educators/roman.pdf).  Used only for the broad, well-attested class of urban Roman milling and baking, not for a precise Rome-site attribution.
 - **OCD-ANNONA**, **ITA-LIVIA**, **P12.1**, **P12.3**, and **P8.1** remain the plan's reviewed source identifiers for annona, the Prima Porta proxy, technical craft anchors, special-building seeding, and civic coinage respectively.
 
+### Campus Martius civic additions
+
+`DAR-PANTHEUM` is Digital Augustan Rome's [Pantheum record](https://www.digitalaugustanrome.org/records/pantheum/): Agrippa's temple was erected around 27 BC, but its original form is only partly recoverable beneath Hadrian's later rebuilding. `DAR-SAEPTA` is its [Saepta Iulia record](https://www.digitalaugustanrome.org/records/saepta-iulia/): Agrippa dedicated the great porticoed tribal-voting enclosure in 26 BC. `DAR-DIRIBITORIUM` is its [Diribitorium record](https://www.digitalaugustanrome.org/records/diribitorium/): Augustus completed the vote-counting hall in 7 BC, with exceptional long timber roof trusses.
+
+The three Rome specials are limited city-point proxies. Pantheum Agrippae does not use the later Hadrianic rotunda; Saepta Iulia does not import its later luxury-market use; and the Diribitorium does not reconstruct a ballot procedure, staff, or count. Their modest upkeep distinguishes stone, marble, timber, cloth, tools, incense, wine, pottery, and beeswax as relevant ancient goods or services without treating the values as a historical inventory.
+
 ## Technical mapping
 
 The definitions use only contracts read from the installed build's
@@ -40,9 +46,10 @@ Their start-state presence is rendered through the existing verified
 
 ## Art review
 
-Four source sheets under `assets_queue/generated_sources/` plus a dedicated
-Navalia, Classis Ravennatis, and Castrum Mogontiacum source images were visually reviewed, cropped to 128px masters,
-converted to direct BC7 DDS files, and compiled into [the contact sheet](ROMAN_BUILDING_ICON_CONTACT_SHEET.png).
+The direct Pantheum Agrippae, Saepta Iulia, and Diribitorium source images were
+visually reviewed, cropped to 128px masters, converted to direct BC7 DDS
+files, and added to [the contact sheet](ROMAN_BUILDING_ICON_CONTACT_SHEET.png)
+alongside the existing named-building set.
 The generator rejects a missing, wrong-size, or non-RGBA direct building icon;
 the ledger's `icon_subject` column records the subject of each illustration.
 
