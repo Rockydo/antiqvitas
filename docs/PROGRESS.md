@@ -40,9 +40,11 @@ location names where an exact secure source-to-map match can be established.
   ledger-driven migration: each completed advance receives its own source PNG,
   reviewed 256px master, BC7 DDS, and exact M8-tree icon binding, while the
   five age motifs remain only for unfinished rows.
-- The first completed icon is the Principate advance `Imperial Cult`, using a
+- The first two completed Principate icons are `Imperial Cult`, using a
   deliberately non-reconstructive civic altar, wreath, incense burner, and
-  votive bowl rather than a named deity, person, monument, or rite.
+  votive bowl, and `Public Granaries`, using an uninscribed generic grain-store
+  facade with sacks and amphorae. Neither identifies a named deity, person,
+  monument, horreum, city, rite, or policy.
 - The validator now checks the completed icon's known advance key and age,
   direct source/master/DDS chain, exactly-one tree use, and the adjusted age
   fallback count. `gmake validate` and the controlled vanilla/enabled
@@ -51,6 +53,19 @@ location names where an exact secure source-to-map match can be established.
 
 Next: continue direct advance art alongside source-led Roman building and AD 1
 location-name work.
+
+## 2026-07-22 - Direct Public Granaries icon accepted; Census motif rejected
+
+- Added, visually reviewed, and smoke-checked the second direct M8 icon:
+  `Public Granaries` now has its own source PNG, 256px master, BC7 DDS, ledger
+  row, and exact live tree binding.
+- Rejected two separate Provincial Census icon drafts because their wax tablets
+  read as metal ring binders. The uncommitted drafts were discarded; the narrow
+  retry condition is recorded in `BLOCKERS.md`, and work moved directly to the
+  independent provisioning icon without weakening the visual-accuracy bar.
+
+Next: continue the remaining direct-icon ledger one subject at a time; do not
+reuse the rejected census drafts.
 
 ## 2026-07-22 - M5 merchant contract narrowed; unproven capacity calibration rejected
 

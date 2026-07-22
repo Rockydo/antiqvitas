@@ -3321,3 +3321,12 @@ local peoples, or establish a precise urban extent. Sources weighed: Pleiades
 snapshot provenance in `docs/world_1ad/PLEIADES_PROVENANCE.md`; individual
 `PLE:<id>` rows in `docs/m4/dynamic_location_name_overrides.csv`. [secure
 toponym; contested linguistic representation]
+
+## 2026-07-22 - Public Granaries advance art is a generic provisioning motif
+
+The accepted Public Granaries icon depicts an uninscribed small grain store,
+grain sacks, amphorae, and wheat. It signals broad ancient provisioning context
+only; it does not identify Horrea Galbana, a Roman city, a civic annona law,
+store capacity, a workforce, or a date. Sources weighed: plan sections 15 and
+20; local M8 direct-icon contract. [secure broad context; contested visual
+representation]
