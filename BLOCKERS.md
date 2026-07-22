@@ -1,5 +1,31 @@
 # Blockers
 
+## 2026-07-22 - M12 fresh AD 1 initialization: installed culture suppressor is not runtime-valid
+
+Status: **deferred after two local engine probes; the working tree is restored
+to a smoke-green compatibility state before pursuing an authored population
+solution.**
+
+The installed `common/cultures/00_cultures.info` advertises
+`suppress_no_pops_error = yes` for historical/future cultures without setup
+pops. The actual EU5 runtime rejects that token in culture definitions with
+`pdx_persistent_reader.cpp:289` diagnostics. The same problem occurred when
+the key was placed immediately after the opening brace and when it was placed
+after the documented culture payload. It is therefore not an acceptable
+suppression mechanism for this installed build; it must not be reintroduced
+without a successful live probe.
+
+The compatibility generator retains exact vanilla culture copies without the
+invalid field and gates vanilla religion definitions at the terminal campaign
+date through their locally used `enable` field. Future work must make the AD 1
+population assignment authoritative enough that the engine finds represented
+cultures/religions, or discover a different locally accepted definition/start
+contract. No baseline is relaxed and neither failed run is accepted.
+
+Evidence: smoke sessions started at `2026-07-22T07:24:31Z` and
+`2026-07-22T07:28:57Z` in the configured user log; both reached the rendered
+menu but emitted one runtime parser error per inserted culture token.
+
 ## 2026-07-22 - M5 annona routing lacks a demonstrated startup merchant contract
 
 Status: **deferred after two material local market-route attempts and a

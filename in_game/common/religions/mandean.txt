@@ -1,0 +1,24 @@
+﻿# Generated from installed vanilla religions/mandean.txt by generate_m4_definitions.py --write.
+# ANTIQVITAS exact-name compatibility overlay; do not hand-edit.
+mandeaism = { 
+	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
+	color = religion_mandeaism
+	group = mandean_group
+	language = iraqi_dialect
+	
+	
+	definition_modifier = {
+		research_speed_modifier = 0.05
+		global_defensive = 0.1
+	}
+	
+	opinions = {
+	}
+
+	unique_names = {
+		
+	}	
+
+	tags = { abrahamic_gfx }
+}
+

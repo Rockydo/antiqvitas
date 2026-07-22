@@ -4233,6 +4233,29 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-22 - Fresh-start diagnostic and smoke-control recovery
+
+- A new-game probe reaches the AD 1 country-selection map but exposes 327
+  vanilla culture and 123 religion no-pop diagnostic types. It does not
+  reproduce the earlier XDP overlap or self-relation assertion at creation.
+- `generate_m4_definitions.py` now records the exact set of ANTIQVITAS faiths
+  absent from the generated AD 1 population file and renders exact-name
+  installed-definition mirrors. Vanilla religions use their demonstrated
+  terminal-date availability field, retaining symbols without making them
+  active in the campaign.
+- The installed culture schema advertises `suppress_no_pops_error`, but two
+  rendered-menu probes reject it at both tested field positions. The failed
+  engine route is recorded in `BLOCKERS.md`; it was removed before recovery.
+- Current GPU/driver state emits the same DX12 Options8 assertion unmodded and
+  modded. Smoke now runs a same-machine vanilla control before the enabled mod
+  and fails on every mod-unique normalized line. Full static validation and
+  the controlled two-pass menu smoke are green; the archived baseline remains
+  unchanged.
+
+Next: rerun the fresh AD 1 country-selection probe against the religion
+availability overlay, then implement a source-led, engine-accepted population
+contract for every remaining active definition.
+
 ## 2026-07-22 - M12 DX12 autonomous Observer result
 
 - The installed UI exposes `DX12` alongside Vulkan. DX12 initialized on the

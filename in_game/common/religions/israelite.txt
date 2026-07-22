@@ -1,0 +1,58 @@
+﻿# Generated from installed vanilla religions/israelite.txt by generate_m4_definitions.py --write.
+# ANTIQVITAS exact-name compatibility overlay; do not hand-edit.
+judaism = { 
+	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
+	color = religion_jewish
+	group = israelite_group
+	
+	language = hebrew_language
+	
+	culture_locked = yes
+	
+	definition_modifier = {
+		global_max_literacy = 5
+		clergy_estate_target_satisfaction = medium_permanent_target_satisfaction
+		global_hostile_attrition = 1
+	}
+	
+	opinions = {
+		#Christians
+		catholic = negative
+		bogomilism = negative
+		bosnian_church = negative
+		catharism = negative
+		orthodox = negative
+		miaphysite = negative
+		nestorianism = negative
+		paulicianism = negative
+		strigolniki = negative
+		waldensian = negative
+        #Druzes
+		druzism = negative
+	}
+
+	tags = { judaism_gfx abrahamic_gfx }
+}
+
+samaritanism = { 
+	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
+	color = religion_samaritanism
+	group = israelite_group
+	
+	language = hebrew_language
+	
+	
+	culture_locked = yes
+	
+	definition_modifier = {
+		global_clergy_estate_power = 0.10
+		global_clergy_max_literacy = 10
+	}
+	
+	opinions = {
+	
+	}
+
+	tags = { judaism_gfx abrahamic_gfx }
+}
+

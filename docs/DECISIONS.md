@@ -1,5 +1,20 @@
 # Technical and Design Decisions
 
+## 2026-07-22 - Menu smoke uses a same-machine vanilla control
+
+The archived M0 vanilla baseline predates a reproducible current-machine DX12
+`D3D12_FEATURE_D3D12_OPTIONS8` assertion. A 22 July unmodded menu run emits
+the same three normalized lines as the enabled ANTIQVITAS run and otherwise
+reaches the rendered menu. It is not evidence of a mod regression.
+
+`tools/smoketest.py` consequently launches vanilla immediately before every
+enabled-mod smoke and fails on every line unique to the mod, using the union of
+the accepted baseline and that same-run vanilla log as its reference. The
+archived-baseline delta remains in the JSON report; it is neither accepted into
+the ANTIQVITAS baseline nor hidden. This gives each content batch an actual
+control under the current GPU/driver state while preserving strict detection of
+mod-only diagnostics.
+
 ## 2026-07-22 - RGO worker ceilings are not current-labour seeds
 
 The installed location-scoped `change_max_raw_material_workers` effect changes

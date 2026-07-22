@@ -1,0 +1,40 @@
+﻿# Generated from installed vanilla religions/folk_polynesia.txt by generate_m4_definitions.py --write.
+# ANTIQVITAS exact-name compatibility overlay; do not hand-edit.
+tapu_religion = {#https://en.wikipedia.org/wiki/Tapu_(Polynesian_culture)
+	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
+	#https://en.wikipedia.org/wiki/Hawaiian_religion
+	#https://en.wikipedia.org/wiki/Rapa_Nui_mythology
+	#https://en.wikipedia.org/wiki/Religion_of_M%C4%81ori_people
+	color = map_hawaiian
+	group = folk_polynesian_group
+
+	religious_aspects = 1
+	
+	definition_modifier = {
+		navy_movement_speed = 0.1
+		allow_open_sea_exploration = yes
+		exploration_maintenance_efficiency = 0.20
+	}
+	
+	opinions = {
+	}
+
+}
+
+tokelauan_religion = { #https://en.wikipedia.org/wiki/Tui_Tokelau
+	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
+	color = map_tokelauan
+	group = folk_polynesian_group
+
+	religious_aspects = 1
+	
+	definition_modifier = {
+		navy_movement_speed = 0.1
+		allow_open_sea_exploration = yes
+		exploration_maintenance_efficiency = 0.20
+	}
+	
+	opinions = {
+	}
+
+}

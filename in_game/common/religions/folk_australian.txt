@@ -1,0 +1,20 @@
+﻿# Generated from installed vanilla religions/folk_australian.txt by generate_m4_definitions.py --write.
+# ANTIQVITAS exact-name compatibility overlay; do not hand-edit.
+dreamtime_religion = { #https://en.wikipedia.org/wiki/The_Dreaming
+	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
+    #https://en.wikipedia.org/wiki/Australian_Aboriginal_religion_and_mythology
+    #https://en.wikipedia.org/wiki/Songline
+    color = map_noongar
+    group = folk_australian_group
+
+	religious_aspects = 1
+    
+    definition_modifier = {
+        global_pop_food_consumption = -0.1
+        retreat_delay = -5
+    }
+    
+    opinions = {
+    }
+
+}

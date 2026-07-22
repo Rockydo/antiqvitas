@@ -1,0 +1,52 @@
+﻿# Generated from installed vanilla religions/folk_micronesia.txt by generate_m4_definitions.py --write.
+# ANTIQVITAS exact-name compatibility overlay; do not hand-edit.
+puntan_religion = { #https://en.wikipedia.org/wiki/Chamorro_people#Cosmogony_and_religion
+	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
+	color = map_chamoru
+	group = folk_micronesian_group
+
+	religious_aspects = 1
+	
+	definition_modifier = {
+		army_disembark_speed = 0.10
+		navy_movement_speed = 0.1
+	}
+	
+	opinions = {
+	}
+
+}
+
+kajoor_ri_majel_religion = {
+	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
+	color = map_kajoor_ri_majel
+	group = folk_micronesian_group
+
+	religious_aspects = 1
+	
+	definition_modifier = {
+		army_disembark_speed = 0.10
+		navy_movement_speed = 0.1
+	}
+	
+	opinions = {
+	}
+
+}
+
+yanolop_religion = { #https://en.wikipedia.org/wiki/Religion_in_Yap#Traditional_religion
+	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
+	color = map_yap
+	group = folk_micronesian_group
+
+	religious_aspects = 1
+	
+	definition_modifier = {
+		army_disembark_speed = 0.10
+		navy_movement_speed = 0.1
+	}
+	
+	opinions = {
+	}
+
+}

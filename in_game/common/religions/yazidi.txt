@@ -1,0 +1,23 @@
+﻿# Generated from installed vanilla religions/yazidi.txt by generate_m4_definitions.py --write.
+# ANTIQVITAS exact-name compatibility overlay; do not hand-edit.
+yazidism = { 
+	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
+	color = religion_yazidism
+	group = yazidi_group
+	language = kurdish_language
+	
+	
+	definition_modifier = {
+		tolerance_own = 1
+		global_separatism = -0.05
+		allow_mysticism_vs_jurisprudence = yes
+	}
+	
+	opinions = {
+	}
+
+	unique_names = {
+	}	
+
+	tags = { abrahamic_gfx }
+}
