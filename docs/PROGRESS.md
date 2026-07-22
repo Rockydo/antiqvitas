@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-22 - M5 merchant contract narrowed; unproven capacity calibration rejected
+
+- Read the installed Create Trade generic action: it requires merchant-market
+  capacity and a source `market_possible_goods_trade_surplus`. Roma has live
+  trade capacity, but the fresh Alexandria wheat market was still in a
+  `-6.82064` deficit.
+- A disposable Faiyum maximum-worker calibration did not seed any current
+  labour or change the relevant market state through 21 January. It was
+  reverted and regenerated rather than becoming an unsourced economic boost.
+- `make validate` and the enabled-mod `make smoke` are green after the
+  rollback; smoke found zero new normalized error-log lines.
+
+Next: M5 remains blocked on a supported historical source-surplus/merchant
+contract. Preserve this exact boundary and continue only with independent
+unblocked work.
+
 ## 2026-07-22 - M3 political map accepted
 
 - Added `tools/m3_political_map.py` to the mandatory validation pipeline. It
