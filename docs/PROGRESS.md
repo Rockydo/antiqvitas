@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-23 - Direct institution fallback replacement
+
+- Replaced the last two shared M8 institution visual sources with dedicated
+  Theological Orthodoxy and Foederati Statecraft illustrations. The contact
+  sheet confirms distinct blank-study and civilian-settlement compositions.
+- Tightened `m11_common_icons.py` so every institution must retain a unique
+  generated source and master, preventing a shared fallback from re-entering
+  the player-facing institution screen.
+- `gmake validate` passed with nine unique institution source/master contracts.
+  The bounded vanilla/enabled `gmake smoke` pair reached the menu in both runs
+  and found zero new mod-only error-log lines.
+
+Next: continue the remaining visual audit, prioritizing direct religion and
+privilege art alongside the ledger-driven advance migration.
+
 ## 2026-07-23 - Direct Crisis coordination-and-provisioning icon batch
 
 - Added direct, ledger-bound illustrations for Regional Commands, Emergency

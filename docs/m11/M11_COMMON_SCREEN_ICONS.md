@@ -44,22 +44,26 @@ tradition is identical to ANTIQVITAS's sourced category.
 The installed institution art is overwhelmingly medieval or early-modern
 (printing press, firearms, industrial machinery, modern globe). The nine M8
 definitions therefore use ANTIQVITAS-owned retained sources and reviewed PNG
-masters. The seven unique motifs are Hellenistic scroll/olive/ink cup; Roman
+masters. The nine unique motifs are Hellenistic scroll/olive/ink cup; Roman
 wax tablet, measuring cord, and bridge; Han bamboo slips and uninscribed seal;
 Buddhist stupa, lamp, and cloth; cataphract armour equipment; handmade-paper
-mould and sheets; and a late-antique ascetic cell with lamp and cloak.
+mould and sheets; a late-antique ascetic cell with lamp and cloak; a blank
+codex, scroll, lamp, cloth, and stylus; and a civilian settlement still life of
+cart wheel, travel bundle, water jar, rope, key, and blank tags.
 
-Theological Orthodoxy shares the reviewed blank-scroll learning motif after two
-image-service requests for a blank-codex treatment returned no artefact.
-Foederati Statecraft shares the reviewed civilian wagon, bundle, and water-jar
-motif from the Migrations advance icon. Neither fallback depicts a named
-council, treaty, person, people, battle, flag, weapon, or boundary.
+Theological Orthodoxy and Foederati Statecraft now have separate generated
+sources and masters. The validator rejects any shared generated source or
+master in the institution set. The former shows only unmarked study materials;
+the latter only civilian settlement materials. Neither depicts a named council,
+treaty, person, people, battle, flag, weapon, or boundary.
 
 All generated sources live in `assets_queue/generated_sources/`; masters are
 in `assets_queue/generated/`; the nine direct-key DDS files are in
 `main_menu/gfx/interface/icons/institutions/`. The generated sources were
-chroma-keyed to alpha, downscaled to the local 128x128 contract, BC7 encoded
-with DirectXTex, then decoded into the inspected nine-panel round-trip sheet.
+reviewed, downscaled to the local 128x128 contract, BC7 encoded with
+DirectXTex, then decoded into the inspected nine-panel round-trip sheet. The
+two replacement masters are reviewed together in
+[DIRECT_INSTITUTION_ICON_BATCH_02.png](DIRECT_INSTITUTION_ICON_BATCH_02.png).
 
 Local basis: installed `GetReligionIcon` and `GetInstitutionIcon` GUI uses,
 installed religion/institution definition-to-filename pairs, and the local

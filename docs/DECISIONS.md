@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-23 - Institution visuals require source and master uniqueness
+
+The M11 direct-key contract is tightened beyond a unique filename: every M8
+institution now needs its own generated source and its own 128px master. The
+common-icon validator rejects shared institution sources and masters, preventing
+a visually shared fallback from returning later. The new Theology and settlement
+statecraft motifs remain generic, uninscribed material contexts rather than
+claims about a specific council, treaty, people, or event.
+
 ## 2026-07-22 - Dense regional production uses reusable families, not fictional monuments
 
 The user's 100-building expansion is implemented as ten reusable AD 1
