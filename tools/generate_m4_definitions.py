@@ -17,6 +17,8 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
+from dates import AntqDate, END
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "docs/m4"
 CULTURES = DATA / "cultures.csv"
@@ -28,6 +30,8 @@ M4_LANGUAGES = DATA / "languages.csv"
 SYMBOLS = DATA / "definition_symbols.json"
 COMMON = ROOT / "in_game/common"
 LOC_ROOT = ROOT / "main_menu/localization"
+START_POPS = ROOT / "main_menu/setup/start/06_pops.txt"
+LOCAL_PATHS = ROOT / "config/local_paths.json"
 LOCALIZATION_LANGUAGES = (
     "english",
     "french",
@@ -162,7 +166,7 @@ def native_religion_group(row: Definition) -> str:
 
 
 def language_families() -> set[str]:
-    config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
+    config = json.loads(LOCAL_PATHS.read_text(encoding="utf-8-sig"))
     root = Path(config["game_dir"]) / "game/in_game/common/languages"
     pattern = re.compile(r"(?m)^\s*family\s*=\s*([A-Za-z0-9_]+)")
     return {
@@ -170,6 +174,101 @@ def language_families() -> set[str]:
         for path in root.glob("*.txt")
         for value in pattern.findall(path.read_text(encoding="utf-8-sig", errors="replace"))
     }
+
+
+def game_definition_dir(kind: str) -> Path:
+    """Return a read-only vanilla definition folder verified by local paths."""
+    config = json.loads(LOCAL_PATHS.read_text(encoding="utf-8-sig"))
+    directory = Path(config["game_dir"]) / "game/in_game/common" / kind
+    if not directory.is_dir():
+        raise ValueError(f"missing locally installed vanilla {kind} directory: {directory}")
+    return directory
+
+
+def brace_delta(line: str) -> int:
+    """Count script braces while ignoring comments and quoted text."""
+    quoted = False
+    escaped = False
+    delta = 0
+    for char in line:
+        if quoted:
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == '"':
+                quoted = False
+        elif char == '#':
+            break
+        elif char == '"':
+            quoted = True
+        elif char == '{':
+            delta += 1
+        elif char == '}':
+            delta -= 1
+    return delta
+
+
+TOP_LEVEL_DEFINITION = re.compile(r"^\s*[A-Za-z0-9_]+\s*=\s*\{")
+TOP_LEVEL_ENABLE = re.compile(r"^\s*enable\s*=")
+
+
+def render_vanilla_compatibility(path: Path, kind: str) -> str:
+    """Mirror one vanilla definition file with total-conversion start guards.
+
+    Exact-name overlays retain symbols used by otherwise inert vanilla scripts.
+    The live engine rejects the culture suppressor shown in its shipped schema,
+    so culture mirrors remain byte-equivalent compatibility copies. Religion
+    definitions use their locally demonstrated availability field, generated
+    from the single campaign calendar at the terminal campaign date, so vanilla
+    religions cannot appear in an AD 1 start.
+    """
+    if kind not in {"cultures", "religions"}:
+        raise ValueError(f"unsupported vanilla compatibility kind: {kind}")
+    lines = path.read_text(encoding="utf-8-sig", errors="strict").splitlines()
+    output = [
+        f"# Generated from installed vanilla {kind}/{path.name} by {Path(__file__).name} --write.",
+        "# ANTIQVITAS exact-name compatibility overlay; do not hand-edit.",
+    ]
+    depth = 0
+    terminal_date = AntqDate(*END).engine()
+    for line in lines:
+        code = line.split("#", 1)[0]
+        delta = brace_delta(line)
+        top_level_open = depth == 0 and TOP_LEVEL_DEFINITION.match(code)
+        direct_child = depth == 1
+        if kind == "religions" and direct_child and TOP_LEVEL_ENABLE.match(code):
+            depth += delta
+            continue
+        output.append(line)
+        if top_level_open:
+            if kind == "religions":
+                output.append(
+                    f"\tenable = {terminal_date} # unavailable before ANTIQVITAS campaign end"
+                )
+        depth += delta
+        if depth < 0:
+            raise ValueError(f"unbalanced vanilla source {path}")
+    if depth:
+        raise ValueError(f"unbalanced vanilla source {path}")
+    return "\n".join(output) + "\n"
+
+
+def vanilla_compatibility_outputs(kind: str) -> dict[Path, tuple[str, str]]:
+    source = game_definition_dir(kind)
+    source_files = sorted(source.glob("*.txt"))
+    if not source_files:
+        raise ValueError(f"no vanilla {kind} definition files found in {source}")
+    return {
+        COMMON / kind / path.name: (render_vanilla_compatibility(path, kind), "utf-8-sig")
+        for path in source_files
+    }
+
+
+def starting_pop_religions() -> set[str]:
+    if not START_POPS.is_file():
+        raise ValueError(f"missing generated AD 1 population setup: {START_POPS.relative_to(ROOT)}")
+    return set(re.findall(r"\breligion\s*=\s*([A-Za-z0-9_]+)", START_POPS.read_text(encoding="utf-8")))
 
 
 def validate(
@@ -389,6 +488,7 @@ def outputs() -> tuple[dict[Path, tuple[str, str]], dict[str, object]]:
     failures = validate(culture_rows, religion_rows, profile_rows, language_rows)
     if failures:
         raise ValueError("\n".join(failures))
+    absent_from_start = {row.key for row in religion_rows} - starting_pop_religions()
     files: dict[Path, tuple[str, str]] = {
         COMMON / "culture_groups/antq_m4_groups.txt": (render_groups({row.group for row in culture_rows}, "culture"), "utf-8-sig"),
         COMMON / "cultures/antq_m4_cultures.txt": (
@@ -400,6 +500,8 @@ def outputs() -> tuple[dict[Path, tuple[str, str]], dict[str, object]]:
         COMMON / "languages/antq_m4_languages.txt": (render_languages(language_rows), "utf-8-sig"),
         ROOT / "main_menu/common/named_colors/antq_m4_colors.txt": (render_named_colors(culture_rows, religion_rows, language_rows), "utf-8-sig"),
     }
+    files.update(vanilla_compatibility_outputs("cultures"))
+    files.update(vanilla_compatibility_outputs("religions"))
     for language in LOCALIZATION_LANGUAGES:
         files[LOC_ROOT / language / f"antq_m4_people_l_{language}.yml"] = (
             render_localization(culture_rows, religion_rows, language_rows, language),
@@ -411,6 +513,7 @@ def outputs() -> tuple[dict[Path, tuple[str, str]], dict[str, object]]:
         "languages": [row.key for row in language_rows],
         "dialects": [row.key.replace("_language", "_dialect") for row in language_rows],
         "regional_profiles": {row.region: {"culture": row.culture, "religion": row.religion} for row in profile_rows},
+        "religions_absent_from_start": sorted(absent_from_start),
     }
     return files, index
 

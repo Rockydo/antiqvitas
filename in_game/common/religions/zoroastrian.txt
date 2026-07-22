@@ -1,0 +1,19 @@
+﻿# Generated from installed vanilla religions/zoroastrian.txt by generate_m4_definitions.py --write.
+# ANTIQVITAS exact-name compatibility overlay; do not hand-edit.
+zoroastrian = { 
+	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
+	color = religion_zoroastrian
+	group = zoroastrian_group
+	
+	language = persian_language
+	
+	
+	definition_modifier = {
+		tolerance_own = 1
+		selling_efficiency = medium_trade_efficiency_bonus
+	}
+	
+	opinions = {
+	}
+}
+
