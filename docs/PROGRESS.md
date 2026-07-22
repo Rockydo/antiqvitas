@@ -4199,6 +4199,16 @@ separate Han runtime-regency blocker.
   create runtime markets. The technical rationale and evidence are recorded in
   `DECISIONS.md` and `BLOCKERS.md`.
 
+## 2026-07-22 - M12 debug time-tick probe rejected
+
+- A paused debug Observer accepted the locally documented `tick_day 365`
+  command but reached only 31 January AD 1, emitted unset-market generic-action
+  scopes, and crashed in the already documented FSR/NGX access-violation path.
+- The attempt is recorded in `BLOCKERS.md`; it is not evidence for a complete
+  chronology run and does not alter the clean non-debug first-month checkpoint.
+- The stable non-debug profile does not expose a console surface, so it cannot
+  use the tick command without re-entering the FSR-prone debug renderer.
+
 ## 2026-07-19 - M6 Brittonic druidic-authority adapter
 
 - Added a separately visible `clergy_estate` privilege for source-qualified

@@ -54,3 +54,15 @@ intervention 6, and holy suppression 4. The three source-led future
 unification CBs remain both invisible and AI-disabled. Eligibility conditions,
 not a high arbitrary score, still constrain every active CB; a runtime
 observer remains required to judge war frequency and outcomes.
+
+## Rejected debug time-tick shortcut
+
+The locally harvested console documents `tick_day <days>`, but a paused debug
+Observer `tick_day 365` probe reached only 31 January AD 1, produced unset
+market-action scopes, and exited through the known FSR/NGX crash path. It is
+therefore not a valid way to measure annual population, inflation, research, or
+war outcomes. The non-debug Observer remains the only clean runtime profile;
+the full campaign still needs real simulation and decade captures.
+
+The stable non-debug profile exposes no console surface at all, so it cannot
+invoke this command without returning to the crash-prone debug renderer.
