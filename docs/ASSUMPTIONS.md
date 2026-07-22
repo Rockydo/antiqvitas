@@ -40,6 +40,24 @@ context requires it. See `docs/m4/dynamic_location_name_overrides.csv`.
 [secure direct toponym/location anchors; contested local extent, language,
 population, political affiliation, and cultural continuity]
 
+## 2026-07-22 - Italian and Sicilian names are site labels, not reconstructions
+
+The Roman-world name pass adds 17 secure direct forms from Pleiades points:
+Augusta Praetoria, Augusta Taurinorum, Ariminum, Barium, Beneventum,
+Florentia, Luca, Lupiae, Messana, Neapolis, Perusia, Regium, Regium Lepidum,
+Salernum, Saena, Syracusae, and Ticinum. The installed key was retained only
+after local coordinate review; the detailed Pleiades IDs and points are in
+`docs/m4/ROMAN_TOPONYM_EXPANSION.md`.
+
+The labels do not assert that a modern-key polygon equals the ancient city,
+that a Greek-origin settlement was monolingually Latin in AD 1, or that every
+site had the later political, administrative, or demographic character
+associated with its familiar modern name. Sources: `PLE:383579`, `383580`,
+`383755`, `383798`, `393379`, `403234`, `413138`, `413248`, `413293`,
+`432721`, `433014`, `433075`, `442500`, `442642`, `452416`, `462503`,
+`462538`; `MIC-AEM` for Ariminum. [secure direct toponym/site association;
+contested local extent and social context]
+
 ## 2026-07-21 - Germanic, Baltic, and Fennian names are bounded campaign frames
 
 The forty-seventh M4 batch adds 36 named frames from the Oder and Lower Rhine

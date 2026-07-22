@@ -4270,6 +4270,24 @@ continue the user-priority Roman period-name expansion.
 Next: retain generic M7 frontier proxies until direct AD 1 anchors permit a
 named layer; continue the user-priority Roman period-name expansion.
 
+## 2026-07-22 - Roman-world dynamic-name expansion
+
+- Added seventeen direct Italian and Sicilian forms to the curated naming
+  ledger: Augusta Praetoria, Augusta Taurinorum, Ariminum, Barium,
+  Beneventum, Florentia, Luca, Lupiae, Messana, Neapolis, Perusia, Regium,
+  Regium Lepidum, Salernum, Saena, Syracusae, and Ticinum.
+- Each row names the exact Pleiades place ID, retains only a secure direct
+  toponym, and was checked against the installed location key using the local
+  map projection. The dedicated review note is
+  `docs/m4/ROMAN_TOPONYM_EXPANSION.md`; no city footprint, speech community,
+  or political ownership is inferred from the dynamic language lookup.
+- The generated layer now contains 61 capital and 41 curated anchors across
+  all eleven client localizations. `make validate` and the controlled
+  vanilla/mod smoke are green with zero new error-log lines.
+
+Next: continue the period-name expansion only with comparably direct matches;
+maintain the separately prioritized Roman building and direct-art passes.
+
 ## 2026-07-22 - Fresh-start diagnostic and smoke-control recovery
 
 - A new-game probe reaches the AD 1 country-selection map but exposes 327
