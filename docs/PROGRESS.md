@@ -1,5 +1,23 @@
 # Progress
 
+## 2026-07-22 - M9 diplomatic foundation accepted
+
+- A fresh, no-time-advance AD 1 Observer session reached the paused map and
+  showed Parthia (`XAH`), Ctesiphon, and nine subjects. Together with the
+  retained clean Rome (11) and Western Han (5) panels, the live counts exactly
+  match all 25 relationships in `docs/world_1ad/subjects.csv`.
+- The generated start manager and IO audit confirms the three distinct subject
+  contracts, Han tributary system, Xiongnu Confederation, Panhellenic Games,
+  and bounded known-world profiles. The Church remains intentionally dormant
+  at the AD 1 start.
+- `make full` passed: every generator and static contract is green, and the
+  enabled-mod smoke test found zero new normalized error-log lines. The M9
+  report now records the scope boundary: later foederati, AI war, and long
+  observer behavior belong to M10/M7/M12 rather than this founding-web gate.
+
+Next: M9 is tagged. Keep the M6 Han-regency boundary explicit for M3, and do
+not repeat renderer-bound long-observer tests without a material change.
+
 ## 2026-07-22 - M5 runtime RGO renderer recovered; trade acceptance remains deferred
 
 - The generated startup overlay now applies all 328 source-led RGO corrections
