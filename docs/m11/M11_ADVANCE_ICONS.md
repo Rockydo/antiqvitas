@@ -1,4 +1,4 @@
-# M11 advance-icon group pass
+# M11 advance-icon migration
 
 The complete M8 tree has 250 advances in five age groups of 50. Its existing
 five icon identifiers are retained, but all now resolve to ANTIQVITAS-owned,
@@ -24,14 +24,23 @@ heraldry, religious signs, weapons, ethnic costume, or recognizable monument.
 The migration motif is intentionally civilian, and the Dominate circlet is a
 plain band rather than a medieval crown.
 
-## Shared-icon completion
+## Direct-icon migration
 
-The master plan permits shared-icon fallback tiers. Each reviewed group icon is
-therefore the complete visual contract for its fifty advances, rather than an
-interim placeholder: the five generated textures cover all 250 M8 entries and
-the validator rejects any missing or differently grouped binding. A unique
-icon for every individual advance would add a false layer of visual specificity
-without changing the knowledge tree or its historical evidence.
+The five age-group motifs remain a checked **transitional fallback** while the
+project moves to one dedicated player-facing illustration per advance. A
+completed row in `direct_advance_icons.csv` replaces only its matching M8
+advance binding; the remaining advances continue to use their age-group motif
+until their individually reviewed asset chains exist. This prevents a missing
+or speculative illustration from appearing in game while making every finished
+icon visible immediately.
+
+The first direct icon is `antq_imperial_cult`: a restrained early-imperial
+civic altar, laurel wreath, incense burner, and votive bowl. It is an
+appropriate broad cult context, not a depiction of a named god, altar,
+priest, monument, ritual, or state doctrine. The direct ledger records the
+subject, confidence, status, and non-reconstructive boundary for every future
+row. The required final state is 250 completed direct rows and no remaining
+transitional binding.
 
 ## Engine and asset verification
 
@@ -44,9 +53,10 @@ second, third, and fifth identifiers as vanilla filenames, but no vanilla
 the mod rather than silently falling through.
 
 `tools/m11_advance_icons.py --check` verifies the source/master/texture chain,
-the 256x256 DDS contract, and exactly 50 uses of each identifier in the M8
-tree. The masters were converted with DirectXTex BC7 and then decoded to a
-five-panel round-trip review strip before the live smoke test.
+the 256x256 DDS contract, the direct ledger's advance and age binding, one
+tree use per direct icon, and the remaining fallback count for each age. The
+masters are converted with DirectXTex BC7 and inspected before the live smoke
+test.
 
 Local basis: installed `advances_tooltips.gui`, installed
 `main_menu/gfx/interface/advance/`, and the M8 tree. Design basis: master plan
