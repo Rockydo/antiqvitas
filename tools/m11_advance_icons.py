@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -11,11 +12,13 @@ from pathlib import Path
 from PIL import Image
 
 from dds import identify
+from m8_knowledge import AGE_NAMES, advance_records
 
 
 ROOT = Path(__file__).resolve().parents[1]
 DIMENSIONS = (256, 256)
 ADVANCE_TREE = ROOT / "in_game/common/advances/00_antiquitas_m8_tree.txt"
+DIRECT_LEDGER = ROOT / "docs/m11/direct_advance_icons.csv"
 
 
 @dataclass(frozen=True)
@@ -68,25 +71,72 @@ def png_size(path: Path) -> tuple[int, int]:
         return image.size
 
 
-def validate_tree_mapping() -> None:
+def direct_assets() -> list[AdvanceIcon]:
+    if not DIRECT_LEDGER.is_file():
+        return []
+    required = ("key", "age", "subject", "source", "confidence", "status", "note")
+    with DIRECT_LEDGER.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if tuple(reader.fieldnames or ()) != required:
+            raise ValueError(f"{DIRECT_LEDGER.relative_to(ROOT)} must use header {','.join(required)}")
+        rows = list(reader)
+    result: list[AdvanceIcon] = []
+    seen: set[str] = set()
+    record_ages = {record.key: AGE_NAMES[record.age_index] for record in advance_records()}
+    for number, row in enumerate(rows, start=2):
+        if (row.get("status") or "").strip() != "complete":
+            continue
+        key = (row.get("key") or "").strip()
+        if not re.fullmatch(r"antq_[a-z0-9_]+", key) or key in seen:
+            raise ValueError(f"{DIRECT_LEDGER.relative_to(ROOT)}:{number}: invalid or duplicate completed key {key!r}")
+        if (row.get("confidence") or "").strip() != "secure":
+            raise ValueError(f"{DIRECT_LEDGER.relative_to(ROOT)}:{number}: completed art must use secure confidence")
+        if key not in record_ages:
+            raise ValueError(f"{DIRECT_LEDGER.relative_to(ROOT)}:{number}: completed art has unknown advance {key}")
+        age = (row.get("age") or "").strip()
+        if age != record_ages[key]:
+            raise ValueError(
+                f"{DIRECT_LEDGER.relative_to(ROOT)}:{number}: {key} must use age "
+                f"{record_ages[key]!r}, not {age!r}"
+            )
+        if not (row.get("subject") or "").strip() or not (row.get("source") or "").strip():
+            raise ValueError(f"{DIRECT_LEDGER.relative_to(ROOT)}:{number}: completed art needs subject and source")
+        slug = key.removeprefix("antq_")
+        result.append(AdvanceIcon(
+            age, f"antq_advance_{slug}",
+            f"assets_queue/generated_sources/antq_advance_{slug}_source.png",
+            f"assets_queue/generated/antq_advance_{slug}_256.png",
+            f"main_menu/gfx/interface/advance/antq_advance_{slug}.dds",
+        ))
+        seen.add(key)
+    return result
+
+
+def validate_tree_mapping(direct: list[AdvanceIcon]) -> None:
     text = ADVANCE_TREE.read_text(encoding="utf-8")
     found = re.findall(r"^\s*icon\s*=\s*([^\s#]+)", text, flags=re.MULTILINE)
-    expected = {asset.icon for asset in ADVANCE_ICONS}
+    expected = {asset.icon for asset in ADVANCE_ICONS} | {asset.icon for asset in direct}
     if set(found) != expected:
         raise ValueError(
             "M8 advance icons and the M11 reviewed icon mapping diverge: "
             f"expected {sorted(expected)}, found {sorted(set(found))}"
         )
-    for icon in expected:
-        if found.count(icon) != 50:
-            raise ValueError(f"M8 icon {icon} must cover exactly 50 advances, found {found.count(icon)}")
+    by_age = {asset.age: asset.icon for asset in ADVANCE_ICONS}
+    for age, icon in by_age.items():
+        expected_count = 50 - sum(asset.age == age for asset in direct)
+        if found.count(icon) != expected_count:
+            raise ValueError(f"M8 fallback icon {icon} must cover {expected_count} advances, found {found.count(icon)}")
+    for asset in direct:
+        if found.count(asset.icon) != 1:
+            raise ValueError(f"M8 direct icon {asset.icon} must cover exactly one advance, found {found.count(asset.icon)}")
 
 
 def validate() -> None:
     if len({asset.icon for asset in ADVANCE_ICONS}) != len(ADVANCE_ICONS):
         raise ValueError("duplicate M11 advance icon identifier")
-    validate_tree_mapping()
-    for asset in ADVANCE_ICONS:
+    direct = direct_assets()
+    validate_tree_mapping(direct)
+    for asset in (*ADVANCE_ICONS, *direct):
         source = ROOT / asset.source
         master = ROOT / asset.master
         texture = ROOT / asset.texture
@@ -110,7 +160,8 @@ def main() -> int:
     parser.add_argument("--check", action="store_true", help="validate the fixed M11 advance icon set")
     parser.parse_args()
     validate()
-    print(f"m11_advance_icons: PASS ({len(ADVANCE_ICONS)} reviewed icons for 250 advances)")
+    direct = direct_assets()
+    print(f"m11_advance_icons: PASS ({len(direct)} direct icons + {len(ADVANCE_ICONS)} reviewed transitional group icons for 250 advances)")
     return 0
 
 
