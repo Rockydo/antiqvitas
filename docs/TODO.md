@@ -8,6 +8,7 @@ after `make full` and its autonomous driver report are green.
 - [ ] Continue the rich, source-led Roman building system with frontier infrastructure only where a specific AD 1 source and engine-safe contract support it; retain conservative proxies rather than backdating later castra.
 - [ ] Expand the AD 1 dynamic-location naming layer beyond anchors, prioritizing the Roman world and every player-facing map location with a secure period form.
 - [ ] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review.
+  - [x] Start and smoke-check the direct M8 migration: a ledger-driven, one-icon-at-a-time renderer path is live; the reviewed Imperial Cult icon is the first of 250 direct advance illustrations.
 
 ## M0 — Discovery & tooling
 
@@ -355,6 +356,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the source-keyed concept glossary and project credits, including Pleiades attribution in game-visible metadata.
 - [x] Replace the five active age-view illustrations with reviewed, non-reconstructive 1080x440 DDS panels and retain their source/master chain.
 - [x] Replace the five M8 age-group icon surfaces used by all 250 advances; validate the source/master/DDS chain and the 50-per-group bindings.
+- [x] Establish and smoke-check the direct M8 advance-icon migration, beginning with Imperial Cult; completion remains open until every advance has its dedicated checked asset.
 - [x] Reach the section 18 event target with 416 sourced-window events using 84 reviewed shared paintings without inventing historical incidents.
 - [x] Replace the 14 scripted-formation and successor-state solid-color CoAs with reviewed non-reconstructive standards and generation checks.
 - [x] Replace the `_default` fallbacks on every direct-key M4 religion and M8 institution screen surface with checked, source/master/DDS contracts.
