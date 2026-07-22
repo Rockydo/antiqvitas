@@ -523,3 +523,90 @@ antq_villa_liviae = {
 	}
 	construction_demand = town_building_construction
 }
+
+antq_pantheum_agrippae = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = clergy
+	max_levels = 1
+	category = religious_category
+	employment_size = religious_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = religious_building_time
+	modifier = {
+		local_unrest = -0.01
+		local_clergy_max_literacy = 0.5
+	}
+	unique_production_methods = {
+		antq_pantheum_agrippae_maintenance = {
+			incense = 0.10
+			wine = 0.06
+			masonry = 0.06
+			marble = 0.03
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_saepta_iulia = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	category = government_category
+	employment_size = generic_burgher_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = government_build_time
+	modifier = {
+		local_max_control = 0.03
+		local_cultural_tradition = 0.04
+	}
+	unique_production_methods = {
+		antq_saepta_iulia_maintenance = {
+			masonry = 0.12
+			marble = 0.04
+			cloth = 0.03
+			pottery = 0.02
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_diribitorium = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	category = government_category
+	employment_size = generic_burgher_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = government_build_time
+	modifier = {
+		local_max_control = 0.025
+	}
+	unique_production_methods = {
+		antq_diribitorium_maintenance = {
+			lumber = 0.16
+			masonry = 0.12
+			tools = 0.08
+			beeswax = 0.06
+			cloth = 0.04
+			pottery = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
