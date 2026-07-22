@@ -40,6 +40,12 @@ The three Rome specials are limited city-point proxies. Pantheum Agrippae does n
 
 The Temple of Apollo is a modest cult-complex proxy only; it does not rebuild its lost interior programme, priesthood, rites, or the later imperial palace. The library's pre-AD 1 function is retained while its uncertain plan and opening sequence are explicitly marked contested. Its `books` input is an engine-good proxy for scroll collections, not a claim for codices, a surviving catalogue, or stock volume; beeswax stands only for the ordinary tablet-and-record context. The two separate direct illustrations deliberately omit named persons, inscriptions, later buildings, and Christian imagery.
 
+### Senate house and public-portico additions
+
+`DAR-CURIA-IULIA` is Digital Augustan Rome's [Curia Iulia record](https://www.digitalaugustanrome.org/records/curia-iulia/): the Senate house was essentially built by Augustus in 29 BC, while the adjacent Chalcidicum's identification remains debated. `DAR-PORTICUS-OCTAVIAE` is its [Porticus Octaviae record](https://www.digitalaugustanrome.org/records/porticus-octaviae/): the Republican portico was restored between 27 and 23 BC with a library, `schola`, and `curia`, though the construction sponsor and detailed arrangement are contested.
+
+The Curia Iulia uses a narrow government-and-records proxy rather than setting a Senate membership, law, vote, or later restoration. Porticus Octaviae is a cultural public-space proxy, not a collapsed group of temples, a commerce arcade, or a copied library building. Both use restrained material and service goods as upkeep demand; no value claims an ancient budget or stock. Their reviewed direct art distinguishes the rectangular senate hall from the open quadriporticus and omits inscriptions, named figures, later reconstructions, and religious anachronisms.
+
 ## Technical mapping
 
 The definitions use only contracts read from the installed build's
@@ -52,7 +58,7 @@ Their start-state presence is rendered through the existing verified
 
 ## Art review
 
-The direct Pantheum Agrippae, Saepta Iulia, Diribitorium, Temple of Apollo, and Palatine Library source images were
+The direct Pantheum Agrippae, Saepta Iulia, Diribitorium, Temple of Apollo, Palatine Library, Curia Iulia, and Porticus Octaviae source images were
 visually reviewed, cropped to 128px masters, converted to direct BC7 DDS
 files, and added to [the contact sheet](ROMAN_BUILDING_ICON_CONTACT_SHEET.png)
 alongside the existing named-building set.
