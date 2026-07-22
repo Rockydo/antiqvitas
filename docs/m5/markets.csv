@@ -1,4 +1,4 @@
-key,name,location,source,confidence,note
+key,name,location,source,confidence,note,startup_mode
 roma,Roma,rome,P12.2;P8.1,secure,Direct installed location
 alexandria,Alexandria,alexandria,P12.2;P8.1,secure,Direct installed location
 antiochia,Antiochia,antioch,P12.2;P8.1,secure,Direct installed location
@@ -15,7 +15,7 @@ panticapaeum,Panticapaeum,taman,P12.2;P8.1,contested,Installed Taman location is
 petra,Petra,shoubak,P12.2;P8.1;PLE,secure,Reviewed Nabataean capital proxy
 palmyra,Palmyra,homs,P12.2;P8.1;PLE,contested,Installed Homs location is the nearest reviewed Syrian proxy
 meroe,Meroe,shendi,P12.2;P8.5;PLE,contested,Installed Shendi location is the reviewed Meroitic-capital proxy
-adulis,Adulis,massawa,P12.2;P8.5;PER,contested,Installed Massawa location is the Red Sea port proxy
+adulis,Adulis,massawa,P12.2;P8.5;PER,contested,Installed Massawa location is the Red Sea port proxy,deferred
 muza,Muza,al_mukha,P12.2;P8.6;PER,contested,Installed Al Mukha location is the Yemen port proxy
 barygaza,Barygaza,khambat,P12.2;P8.4;PER,contested,Installed Khambat location is the Gulf of Khambhat port proxy
 muziris,Muziris,kodungallur,P12.2;P8.4;PER,contested,Installed Kodungallur location is the Malabar port proxy

@@ -4188,6 +4188,17 @@ Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster coverage while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-22 - M12 first-month market runtime correction
+
+- Isolated the AD 1 `Getting relation with itself` assertion to the installed
+  pre-game `market_manager` contract: the empty-manager control passed through
+  14 February, while Massawa-only and the full 41-seed fixtures reproduced the
+  first-month assertion.
+- Retained all 42 source-led M5 urban/historic anchors but deferred every
+  explicit engine market seed, letting the installed automatic initializer
+  create runtime markets. The technical rationale and evidence are recorded in
+  `DECISIONS.md` and `BLOCKERS.md`.
+
 ## 2026-07-19 - M6 Brittonic druidic-authority adapter
 
 - Added a separately visible `clergy_estate` privilege for source-qualified

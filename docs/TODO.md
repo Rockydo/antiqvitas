@@ -106,7 +106,7 @@ after `make full` and its autonomous driver report are green.
 
 ## M5 — Economy
 
-- [x] Seed and smoke-check 42 source-labelled AD 1 market hubs.
+- [x] Catalogue and smoke-check 42 source-labelled AD 1 market/urban hubs; the installed pre-game market-manager seeds are deferred after a first-month runtime assertion, while every source-led urban and harbor anchor remains active (see `BLOCKERS.md` and `DECISIONS.md`).
 - [x] Localize and anchor the plan-listed ancient raw goods on controlled AD 1 map locations (328 audited corrections).
 - [x] Source-qualify the plan-listed alum emphasis at the direct installed Melos anchor; the existing alum value is retained.
 - [x] Audit the plan-listed “Laurion fading” note as a documented non-anchor; no active AD 1 silver RGO is asserted.

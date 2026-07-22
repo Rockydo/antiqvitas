@@ -815,3 +815,21 @@ M9 country-card verification. Do not repeat the same date-gate approach.
 Resume this audit only with a materially different engine contract, such as a
 locally demonstrated optional scope operator valid for the affected nested
 UI predicates, or after a game patch changes the evaluator.
+
+## 2026-07-22 - AD 1 pre-game market-manager seeds are unsupported
+
+Status: **resolved as a technical compatibility mitigation; M5's separate
+merchant-route acceptance blocker remains open.**
+
+The first non-debug full Observer run reached February AD 1 and logged
+`Getting relation with itself`. Two bounded, evidence-producing isolations were
+then completed: an empty `market_manager` control reached 14 February without
+the assertion, while a Massawa-only fixture reproduced it at the first monthly
+pulse. Deferring Massawa alone was insufficient: the otherwise full 41-seed
+build also reproduced the same assertion at 18:00 on 1 February.
+
+The generator now retains all 42 source-led market rows and their urban/harbor
+anchors but emits no pre-game `add_market` records. The installed game's own
+initializer visibly creates runtime markets during the clean Observer control.
+Do not restore an explicit seed without a materially different local contract
+and a fresh post-February zero-assertion run.
