@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-23 - Direct Crisis fiscal-and-mobilization icon batch
+
+- Added direct, ledger-bound illustrations for Emergency Levies, Fiscal
+  Reassessment, and Mint Accounting. The planned binding rises to thirty-two
+  individual advance illustrations.
+- Reviewed the final 256px contact sheet. The assets remain bounded to generic
+  emergency equipment, blank measurement materials, and uninscribed monetary
+  materials, without asserting a named person, army, polity, campaign, tax
+  regime, valuation, mint, ruler, city, empire, denomination, or currency
+  system.
+- `gmake validate` passed with thirty-two direct advance icons. The bounded
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: continue the ledger-driven direct-art migration in small, inspected
+batches while preserving exact one-icon-to-one-advance bindings.
+
 ## 2026-07-23 - Direct High Empires and Crisis icon batch
 
 - Added direct, ledger-bound illustrations for Law of Persons, High Empire
