@@ -170,7 +170,7 @@ antq_imperial_rescripts = {
 
 antq_law_of_persons = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_law_of_persons
 	depth = 7
 	research_cost = 7.5
 	requires = antq_imperial_rescripts
@@ -188,7 +188,7 @@ antq_provincial_governance = {
 
 antq_high_empire_administration = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_high_empire_administration
 	depth = 9
 	research_cost = 8.5
 	requires = antq_provincial_governance
@@ -197,7 +197,7 @@ antq_high_empire_administration = {
 
 antq_crisis_coinage = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_crisis_coinage
 	depth = 0
 	research_cost = 6.0
 	ai_weight = { add = 100 }
