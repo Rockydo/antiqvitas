@@ -857,3 +857,21 @@ The non-debug `time` probe reached a paused AD 1 Observer map but displayed no
 console surface and did not alter the map state. Thus the stable renderer
 profile cannot invoke `tick_day`; it cannot supply an accelerated campaign
 path without a game-supported release-console contract.
+
+## 2026-07-22 - Non-debug observer also reproduces the renderer crash
+
+Status: **blocked after the third materially distinct renderer profile; no
+further unchanged playback retry is warranted.**
+
+The clean all-deferred-market build passed validation and menu smoke, then ran
+normally in non-debug Observer from `08:00, 1 January, 1` through `11:00,
+18 March, 1`. The driver captured four periodic frames and observed no
+self-relation assertion. At about 240 seconds, however, EU5 exited with the
+same `ffxFsr2ResourceIsNull` / `NVSDK_NGX_D3D12_Shutdown1` C0000005 recorded
+in `G:\antiqvitas_user_data\crashes\Europa Universalis V20260722_043956`.
+
+`docs/playtests/M12_NONDEBUG_PACING_20260722.md` records the 0.316792
+simulated-days/second measurement and the resulting 6.35-day best-case wall
+time for a full campaign. The renderer remains the sole blocker to the required
+AD 1-476 evidence run; do not repeat an unchanged profile. Resume only after a
+material game, GPU-driver, or renderer change.

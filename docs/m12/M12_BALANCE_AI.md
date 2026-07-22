@@ -66,3 +66,11 @@ the full campaign still needs real simulation and decade captures.
 
 The stable non-debug profile exposes no console surface at all, so it cannot
 invoke this command without returning to the crash-prone debug renderer.
+
+## Non-debug pacing measurement
+
+The all-deferred-market non-debug Observer run covered 76.125 days in 240.3
+seconds (0.316792 days/second) before the same FSR/NGX crash. This confirms the
+market assertion repair over 2.5 months and provides an initial simulation
+rate, but cannot measure annual or third-century outcomes. See
+`docs/playtests/M12_NONDEBUG_PACING_20260722.md`.
