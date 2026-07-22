@@ -1,6 +1,367 @@
 ﻿on_game_start = {
 	effect = {
 		setup_area_preferences = yes
+		# ANTIQVITAS M5 runtime RGO remap; generated from docs/m5 source ledgers.
+		location:abrahamtelke = { change_raw_material = goods:salt }
+		location:acre = { change_raw_material = goods:fiber_crops }
+		location:adan = { change_raw_material = goods:fiber_crops }
+		location:adra = { change_raw_material = goods:fiber_crops }
+		location:agaro = { change_raw_material = goods:medicaments }
+		location:agra = { change_raw_material = goods:fiber_crops }
+		location:ahlat = { change_raw_material = goods:fiber_crops }
+		location:ahvaz = { change_raw_material = goods:fiber_crops }
+		location:akbarpur = { change_raw_material = goods:fiber_crops }
+		location:akyazi = { change_raw_material = goods:fiber_crops }
+		location:al_mukha = { change_raw_material = goods:incense }
+		location:al_shuqayq = { change_raw_material = goods:fiber_crops }
+		location:alamganj = { change_raw_material = goods:fiber_crops }
+		location:alasehir = { change_raw_material = goods:fiber_crops }
+		location:alcazar_de_san_juan = { change_raw_material = goods:salt }
+		location:alexandria = {
+			change_raw_material = goods:antq_papyrus
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
+		location:amol = { change_raw_material = goods:fiber_crops }
+		location:amora_gadal = { change_raw_material = goods:fiber_crops }
+		location:amorgos = { change_raw_material = goods:fiber_crops }
+		location:angkor_knong = { change_raw_material = goods:medicaments }
+		location:anqiu = { change_raw_material = goods:medicaments }
+		location:antioch = { change_raw_material = goods:fiber_crops }
+		location:arrah = { change_raw_material = goods:salt }
+		location:ashaval = { change_raw_material = goods:fiber_crops }
+		location:ashigara = { change_raw_material = goods:medicaments }
+		location:ashraf = { change_raw_material = goods:fiber_crops }
+		location:awaji = { change_raw_material = goods:medicaments }
+		location:awaran = { change_raw_material = goods:fiber_crops }
+		location:axochiapan = { change_raw_material = goods:medicaments }
+		location:ayasuluk = { change_raw_material = goods:fiber_crops }
+		location:azghand = { change_raw_material = goods:fiber_crops }
+		location:baia_de_aries = { change_raw_material = goods:goods_gold }
+		location:balkh = { change_raw_material = goods:medicaments }
+		location:bandar_aceh = { change_raw_material = goods:medicaments }
+		location:bandar_charak = { change_raw_material = goods:fiber_crops }
+		location:bandar_e_jask = { change_raw_material = goods:fiber_crops }
+		location:baniachang = { change_raw_material = goods:fiber_crops }
+		location:bannajbur = { change_raw_material = goods:fiber_crops }
+		location:banten = { change_raw_material = goods:medicaments }
+		location:baoning = { change_raw_material = goods:medicaments }
+		location:baramulla = { change_raw_material = goods:fiber_crops }
+		location:baran = { change_raw_material = goods:fiber_crops }
+		location:barca = {
+			change_raw_material = goods:antq_silphium
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
+		location:baris = { change_raw_material = goods:fiber_crops }
+		location:basra = { change_raw_material = goods:fiber_crops }
+		location:belchite = { change_raw_material = goods:fiber_crops }
+		location:belur = { change_raw_material = goods:medicaments }
+		location:bidar = { change_raw_material = goods:fiber_crops }
+		location:bihar_sharif = { change_raw_material = goods:fiber_crops }
+		location:bobai = { change_raw_material = goods:fiber_crops }
+		location:bologna = { change_raw_material = goods:fiber_crops }
+		location:bonga = { change_raw_material = goods:medicaments }
+		location:bor_tur = { change_raw_material = goods:salt }
+		location:boseong = { change_raw_material = goods:medicaments }
+		location:bursa = { change_raw_material = goods:fiber_crops }
+		location:bzou = { change_raw_material = goods:fiber_crops }
+		location:catania = { change_raw_material = goods:fiber_crops }
+		location:catanzaro = { change_raw_material = goods:fiber_crops }
+		location:chai_nat = { change_raw_material = goods:fiber_crops }
+		location:chebba = { change_raw_material = goods:fiber_crops }
+		location:chengdu = { change_raw_material = goods:silk }
+		location:cherchell = { change_raw_material = goods:fiber_crops }
+		location:chinon = { change_raw_material = goods:fiber_crops }
+		location:chittoor = { change_raw_material = goods:medicaments }
+		location:churumekua = { change_raw_material = goods:medicaments }
+		location:conghua = { change_raw_material = goods:fiber_crops }
+		location:constantinople = { change_raw_material = goods:fiber_crops }
+		location:corbeil = { change_raw_material = goods:fiber_crops }
+		location:cosenza = { change_raw_material = goods:fiber_crops }
+		location:dadu = { change_raw_material = goods:medicaments }
+		location:dakkar = { change_raw_material = goods:medicaments }
+		location:dangila = { change_raw_material = goods:medicaments }
+		location:darwar = { change_raw_material = goods:medicaments }
+		location:dayr_aqul = { change_raw_material = goods:fiber_crops }
+		location:deir_qamar = { change_raw_material = goods:fiber_crops }
+		location:dergaon = { change_raw_material = goods:medicaments }
+		location:dien_ban = { change_raw_material = goods:medicaments }
+		location:dongguan = { change_raw_material = goods:medicaments }
+		location:dvarasamudra = { change_raw_material = goods:fiber_crops }
+		location:el_buwit = { change_raw_material = goods:fiber_crops }
+		location:emei = { change_raw_material = goods:salt }
+		location:erode = { change_raw_material = goods:medicaments }
+		location:esna = { change_raw_material = goods:fiber_crops }
+		location:fenouillet = { change_raw_material = goods:fiber_crops }
+		location:florac = { change_raw_material = goods:fiber_crops }
+		location:florence = { change_raw_material = goods:fiber_crops }
+		location:french_ales = { change_raw_material = goods:fiber_crops }
+		location:friesach = { change_raw_material = goods:iron }
+		location:fuchi = { change_raw_material = goods:medicaments }
+		location:fuqiang = { change_raw_material = goods:medicaments }
+		location:fuwa = { change_raw_material = goods:fiber_crops }
+		location:fuzhou_sichuan = { change_raw_material = goods:medicaments }
+		location:gaeryeong = { change_raw_material = goods:medicaments }
+		location:gampola = { change_raw_material = goods:medicaments }
+		location:gandia = { change_raw_material = goods:fiber_crops }
+		location:geneve = { change_raw_material = goods:fiber_crops }
+		location:genoa = { change_raw_material = goods:fiber_crops }
+		location:ghatsila = { change_raw_material = goods:salt }
+		location:giza = { change_raw_material = goods:fiber_crops }
+		location:gonabad = { change_raw_material = goods:fiber_crops }
+		location:gonda = { change_raw_material = goods:fiber_crops }
+		location:gongju = { change_raw_material = goods:medicaments }
+		location:goraghat = { change_raw_material = goods:fiber_crops }
+		location:gremi = { change_raw_material = goods:fiber_crops }
+		location:guangchang = { change_raw_material = goods:medicaments }
+		location:guwan = { change_raw_material = goods:medicaments }
+		location:ha_va_nguon = { change_raw_material = goods:medicaments }
+		location:hadibu = { change_raw_material = goods:fiber_crops }
+		location:haditha = { change_raw_material = goods:fiber_crops }
+		location:hadong = { change_raw_material = goods:medicaments }
+		location:hagios_pavlos = { change_raw_material = goods:fiber_crops }
+		location:haleri = { change_raw_material = goods:fiber_crops }
+		location:hamidiyeh = { change_raw_material = goods:fiber_crops }
+		location:harar = { change_raw_material = goods:medicaments }
+		location:hatthigiripura = { change_raw_material = goods:livestock }
+		location:hit = {
+			change_raw_material = goods:antq_naphtha
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
+		location:hiw = { change_raw_material = goods:fiber_crops }
+		location:hovtva = { change_raw_material = goods:salt }
+		location:huelva = { change_raw_material = goods:silver }
+		location:ihara = { change_raw_material = goods:medicaments }
+		location:ikkeri = { change_raw_material = goods:fiber_crops }
+		location:ilimo = { change_raw_material = goods:medicaments }
+		location:isfahan = { change_raw_material = goods:fiber_crops }
+		location:jeongeup = { change_raw_material = goods:medicaments }
+		location:jiangan = { change_raw_material = goods:medicaments }
+		location:jiangshan_laiyang = { change_raw_material = goods:medicaments }
+		location:jinan = { change_raw_material = goods:medicaments }
+		location:jingzhao = { change_raw_material = goods:silk }
+		location:jinjam = { change_raw_material = goods:medicaments }
+		location:jinju = { change_raw_material = goods:fiber_crops }
+		location:jinkang = { change_raw_material = goods:fiber_crops }
+		location:jowhar = { change_raw_material = goods:fiber_crops }
+		location:junnar = { change_raw_material = goods:medicaments }
+		location:kaifeng = { change_raw_material = goods:salt }
+		location:kallakurichi = { change_raw_material = goods:medicaments }
+		location:kanauj = { change_raw_material = goods:fiber_crops }
+		location:kandiaro = { change_raw_material = goods:fiber_crops }
+		location:kandy = { change_raw_material = goods:medicaments }
+		location:karpus_mahal = { change_raw_material = goods:fiber_crops }
+		location:karytaina = { change_raw_material = goods:salt }
+		location:kashima = { change_raw_material = goods:fiber_crops }
+		location:kataka = { change_raw_material = goods:fiber_crops }
+		location:kawachi = { change_raw_material = goods:medicaments }
+		location:kembhavi = { change_raw_material = goods:medicaments }
+		location:khairabad = { change_raw_material = goods:fiber_crops }
+		location:khargerd = { change_raw_material = goods:fiber_crops }
+		location:kharsawan = { change_raw_material = goods:medicaments }
+		location:khordong = { change_raw_material = goods:medicaments }
+		location:khotan = {
+			change_raw_material = goods:antq_jade
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
+		location:kitou = { change_raw_material = goods:medicaments }
+		location:kodungallur = { change_raw_material = goods:pepper }
+		location:kol = { change_raw_material = goods:salt }
+		location:konya = { change_raw_material = goods:fiber_crops }
+		location:koshi = { change_raw_material = goods:fiber_crops }
+		location:kotagad = { change_raw_material = goods:medicaments }
+		location:kothagudem = { change_raw_material = goods:salt }
+		location:ksar_el_kebir = { change_raw_material = goods:fiber_crops }
+		location:kuji = { change_raw_material = goods:medicaments }
+		location:kuse = { change_raw_material = goods:medicaments }
+		location:kushinagar = { change_raw_material = goods:fiber_crops }
+		location:langarud = { change_raw_material = goods:fiber_crops }
+		location:larantuka = { change_raw_material = goods:medicaments }
+		location:larnaca = { change_raw_material = goods:fiber_crops }
+		location:leuktron = { change_raw_material = goods:fiber_crops }
+		location:lidian = { change_raw_material = goods:salt }
+		location:liege = { change_raw_material = goods:salt }
+		location:likusaen = { change_raw_material = goods:medicaments }
+		location:limassol = { change_raw_material = goods:fiber_crops }
+		location:limbdi = { change_raw_material = goods:salt }
+		location:linfen = { change_raw_material = goods:salt }
+		location:lingshan = { change_raw_material = goods:fiber_crops }
+		location:linshui = { change_raw_material = goods:medicaments }
+		location:lop = { change_raw_material = goods:fiber_crops }
+		location:lorca = { change_raw_material = goods:salt }
+		location:lukchun = { change_raw_material = goods:salt }
+		location:lumajang = { change_raw_material = goods:salt }
+		location:luoji = { change_raw_material = goods:medicaments }
+		location:luotian = { change_raw_material = goods:medicaments }
+		location:luoxiong = { change_raw_material = goods:medicaments }
+		location:lyon = { change_raw_material = goods:fiber_crops }
+		location:madaran = { change_raw_material = goods:fiber_crops }
+		location:madugula = { change_raw_material = goods:medicaments }
+		location:madurai = { change_raw_material = goods:fiber_crops }
+		location:malaga = { change_raw_material = goods:fiber_crops }
+		location:malapuram = { change_raw_material = goods:medicaments }
+		location:mandar_parvat = { change_raw_material = goods:fiber_crops }
+		location:mang_viet = { change_raw_material = goods:salt }
+		location:manresa = { change_raw_material = goods:salt }
+		location:mansoura = { change_raw_material = goods:fiber_crops }
+		location:maoming = { change_raw_material = goods:fiber_crops }
+		location:marghinan = { change_raw_material = goods:fiber_crops }
+		location:maskanah = { change_raw_material = goods:fiber_crops }
+		location:massawa = { change_raw_material = goods:incense }
+		location:mateur = { change_raw_material = goods:fiber_crops }
+		location:mazara = { change_raw_material = goods:salt }
+		location:medina = {
+			change_raw_material = goods:antq_camels
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
+		location:meizhou = { change_raw_material = goods:medicaments }
+		location:merv = { change_raw_material = goods:fiber_crops }
+		location:miandoab = { change_raw_material = goods:fiber_crops }
+		location:mima = { change_raw_material = goods:medicaments }
+		location:minab = { change_raw_material = goods:fiber_crops }
+		location:minokamo = { change_raw_material = goods:fiber_crops }
+		location:minqing = { change_raw_material = goods:fiber_crops }
+		location:minxian = { change_raw_material = goods:fiber_crops }
+		location:modica = { change_raw_material = goods:fiber_crops }
+		location:muang_sua = { change_raw_material = goods:medicaments }
+		location:muko = { change_raw_material = goods:medicaments }
+		location:murcia = { change_raw_material = goods:fiber_crops }
+		location:mysore = { change_raw_material = goods:fiber_crops }
+		location:najran = { change_raw_material = goods:fiber_crops }
+		location:nakijin = { change_raw_material = goods:medicaments }
+		location:namhsan = { change_raw_material = goods:medicaments }
+		location:namwon = { change_raw_material = goods:medicaments }
+		location:nandurbar = { change_raw_material = goods:fiber_crops }
+		location:negombo = { change_raw_material = goods:medicaments }
+		location:neijiang = { change_raw_material = goods:fiber_crops }
+		location:niihari = { change_raw_material = goods:medicaments }
+		location:niwa = { change_raw_material = goods:fiber_crops }
+		location:nora_eth = { change_raw_material = goods:fiber_crops }
+		location:noto_jap = { change_raw_material = goods:fiber_crops }
+		location:nyemo = { change_raw_material = goods:medicaments }
+		location:omkoi = { change_raw_material = goods:medicaments }
+		location:orgiva = { change_raw_material = goods:fiber_crops }
+		location:ormara = { change_raw_material = goods:fiber_crops }
+		location:osh = { change_raw_material = goods:fiber_crops }
+		location:pal_lahara = { change_raw_material = goods:medicaments }
+		location:palanpur = { change_raw_material = goods:fiber_crops }
+		location:palermo = { change_raw_material = goods:fiber_crops }
+		location:panugallu = { change_raw_material = goods:fiber_crops }
+		location:pesagi = { change_raw_material = goods:salt }
+		location:piazza = { change_raw_material = goods:salt }
+		location:pisa = { change_raw_material = goods:fiber_crops }
+		location:pithapuram = { change_raw_material = goods:salt }
+		location:pontikokastro = { change_raw_material = goods:fiber_crops }
+		location:pulawama = { change_raw_material = goods:fiber_crops }
+		location:pyay = { change_raw_material = goods:fiber_crops }
+		location:qalhat = { change_raw_material = goods:fiber_crops }
+		location:qinjiang = { change_raw_material = goods:fiber_crops }
+		location:rahatgarh = { change_raw_material = goods:salt }
+		location:rahba = { change_raw_material = goods:fiber_crops }
+		location:raigadh = { change_raw_material = goods:fiber_crops }
+		location:ramhormoz = { change_raw_material = goods:fiber_crops }
+		location:rangamati = { change_raw_material = goods:medicaments }
+		location:rasht = { change_raw_material = goods:fiber_crops }
+		location:rath = { change_raw_material = goods:salt }
+		location:ratnapura = { change_raw_material = goods:fiber_crops }
+		location:ratnapura_LKA = { change_raw_material = goods:medicaments }
+		location:rattanaburi = { change_raw_material = goods:fiber_crops }
+		location:raybag = { change_raw_material = goods:medicaments }
+		location:rey = { change_raw_material = goods:fiber_crops }
+		location:sadiya = { change_raw_material = goods:medicaments }
+		location:sagaing = { change_raw_material = goods:fiber_crops }
+		location:sakju = { change_raw_material = goods:fiber_crops }
+		location:samarkand = { change_raw_material = goods:fiber_crops }
+		location:sangju = { change_raw_material = goods:fiber_crops }
+		location:sanhe_chaozhou = { change_raw_material = goods:fiber_crops }
+		location:sasaram = { change_raw_material = goods:fiber_crops }
+		location:seta = { change_raw_material = goods:fiber_crops }
+		location:shamakhi = { change_raw_material = goods:fiber_crops }
+		location:sheikh_hussein = { change_raw_material = goods:medicaments }
+		location:shida = { change_raw_material = goods:medicaments }
+		location:shuqra = { change_raw_material = goods:fiber_crops }
+		location:shuuchi = { change_raw_material = goods:medicaments }
+		location:sidon = { change_raw_material = goods:dyes }
+		location:simhapura = { change_raw_material = goods:medicaments }
+		location:sivas = { change_raw_material = goods:fiber_crops }
+		location:sofala = { change_raw_material = goods:fiber_crops }
+		location:soltaniyeh = { change_raw_material = goods:fiber_crops }
+		location:sringeri = { change_raw_material = goods:fiber_crops }
+		location:suixi = { change_raw_material = goods:fiber_crops }
+		location:sunda_kelapa = { change_raw_material = goods:medicaments }
+		location:sunju = { change_raw_material = goods:medicaments }
+		location:suwa = { change_raw_material = goods:fiber_crops }
+		location:suwayda = { change_raw_material = goods:fiber_crops }
+		location:syracuse = { change_raw_material = goods:fiber_crops }
+		location:taizz = { change_raw_material = goods:medicaments }
+		location:takai = { change_raw_material = goods:fiber_crops }
+		location:takakusa = { change_raw_material = goods:medicaments }
+		location:takaoka = { change_raw_material = goods:medicaments }
+		location:talak_burma = { change_raw_material = goods:medicaments }
+		location:tam_dai = { change_raw_material = goods:medicaments }
+		location:tamdegost = { change_raw_material = goods:fiber_crops }
+		location:tarascon = { change_raw_material = goods:fiber_crops }
+		location:tarsus = { change_raw_material = goods:fiber_crops }
+		location:temasek = { change_raw_material = goods:medicaments }
+		location:tetouan = { change_raw_material = goods:fiber_crops }
+		location:thakhek = { change_raw_material = goods:salt }
+		location:tharrawaddy = { change_raw_material = goods:medicaments }
+		location:thebes = { change_raw_material = goods:fiber_crops }
+		location:thien_quan = { change_raw_material = goods:fiber_crops }
+		location:tidsi = { change_raw_material = goods:fiber_crops }
+		location:tiruccirapalli = { change_raw_material = goods:medicaments }
+		location:tissamaharama = { change_raw_material = goods:medicaments }
+		location:tonami = { change_raw_material = goods:salt }
+		location:tonekabon = { change_raw_material = goods:fiber_crops }
+		location:torbat_e_jam = { change_raw_material = goods:fiber_crops }
+		location:tosan = { change_raw_material = goods:medicaments }
+		location:toyoda = { change_raw_material = goods:medicaments }
+		location:trebizond = { change_raw_material = goods:fiber_crops }
+		location:trincomalee = { change_raw_material = goods:medicaments }
+		location:tripolitsa = { change_raw_material = goods:fiber_crops }
+		location:truro = { change_raw_material = goods:tin }
+		location:tsonentsiio = { change_raw_material = goods:salt }
+		location:tsuru = { change_raw_material = goods:fiber_crops }
+		location:tunliu = { change_raw_material = goods:medicaments }
+		location:unju = { change_raw_material = goods:fiber_crops }
+		location:urfa = { change_raw_material = goods:fiber_crops }
+		location:valencia = { change_raw_material = goods:fiber_crops }
+		location:vang_vieng = { change_raw_material = goods:salt }
+		location:velez_malaga = { change_raw_material = goods:fiber_crops }
+		location:wanggika = { change_raw_material = goods:medicaments }
+		location:watarai = { change_raw_material = goods:medicaments }
+		location:wazirabad = { change_raw_material = goods:salt }
+		location:wujiang = { change_raw_material = goods:fiber_crops }
+		location:xiaozhenan = { change_raw_material = goods:livestock }
+		location:xinhui = { change_raw_material = goods:medicaments }
+		location:xuanhua = { change_raw_material = goods:medicaments }
+		location:xuanhua_nanning = { change_raw_material = goods:fiber_crops }
+		location:yazd = { change_raw_material = goods:fiber_crops }
+		location:yeongyang = { change_raw_material = goods:medicaments }
+		location:yeonsan = { change_raw_material = goods:medicaments }
+		location:yongchuan = { change_raw_material = goods:medicaments }
+		location:yuzhou = { change_raw_material = goods:medicaments }
+		location:zaranj = { change_raw_material = goods:fiber_crops }
+		location:zhenfeng = { change_raw_material = goods:medicaments }
+		location:zmiiv = { change_raw_material = goods:salt }
+		location:zompanco = { change_raw_material = goods:medicaments }
+		location:zozan = { change_raw_material = goods:fiber_crops }
+		# ANTIQVITAS M5 annona grain capacity seeds; source ledger: docs/m5/annona_grain_anchors.csv.
+		location:cagliari = {
+			change_raw_material = goods:wheat
+			change_max_raw_material_workers = 3
+		}
+		location:faiyum = {
+			change_raw_material = goods:wheat
+			change_max_raw_material_workers = 6
+		}
+		location:sousse = {
+			change_raw_material = goods:wheat
+			change_max_raw_material_workers = 5
+		}
+		location:syracuse = {
+			change_raw_material = goods:wheat
+			change_max_raw_material_workers = 4
+		}
 		#catholics
 		if = {
 			limit = { NOT = { has_global_variable_list = pope_countries } }

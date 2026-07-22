@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Guard obsolete installed on-game-start branches in an exact-name overlay.
+"""Guard obsolete startup branches and apply generated AD 1 raw-material effects.
 
 EU5's generic hardcoded startup handler retains several country-specific 1337
 initializers and assumes that Catholic and Shinto IO instances always exist.
@@ -18,6 +18,8 @@ from collections import Counter
 from pathlib import Path
 
 from dates import AntqDate, END
+from generate_rgo_remap import rendered as rendered_rgo_remap
+from generate_rgo_remap import runtime_worker_seeds
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -31,6 +33,7 @@ SAFE_SCOPE = re.compile(
     r"international_organization:catholic_church|"
     r"international_organization:shinto)\s*=\s*\{"
 )
+RGO_SETUP_ANCHOR = re.compile(r"^\s*setup_area_preferences\s*=\s*yes\s*(?:#.*)?$")
 EXPECTED_COUNTRY_GATES = Counter({
     "CHI": 1,
     "MAJ": 1,
@@ -45,6 +48,15 @@ EXPECTED_SAFE_SCOPES = Counter({
     "international_organization:catholic_church": 2,
     "international_organization:shinto": 2,
 })
+EXPECTED_RGO_CHANGE_COUNT = 328
+EXPECTED_CUSTOM_RGO_GOODS = frozenset({
+    "antq_camels",
+    "antq_jade",
+    "antq_naphtha",
+    "antq_papyrus",
+    "antq_silphium",
+})
+EXPECTED_ANNONA_SEED_LOCATIONS = frozenset({"cagliari", "faiyum", "sousse", "syracuse"})
 
 
 def source_path() -> Path:
@@ -67,6 +79,67 @@ def newline_for(line: str) -> str:
     return "\r\n" if line.endswith("\r\n") else "\n"
 
 
+def runtime_rgo_effects(newline: str) -> list[str]:
+    """Render the M5 ledger as effects at the one proven runtime surface.
+
+    Location-template files are parsed but not instantiated by the installed
+    build at bookmark creation.  ``change_raw_material`` is locally documented
+    and console-proven against a vanilla good, while ``on_game_start`` is the
+    earliest source-pinned effect context after AD 1 locations exist.
+    """
+    _, _, changes = rendered_rgo_remap()
+    if len(changes) != EXPECTED_RGO_CHANGE_COUNT:
+        raise ValueError(
+            "runtime RGO inventory drift: "
+            f"expected {EXPECTED_RGO_CHANGE_COUNT}, found {len(changes)}"
+        )
+    locations = [location for location, _, _, _, _ in changes]
+    if len(locations) != len(set(locations)):
+        raise ValueError("runtime RGO ledger contains duplicate location effects")
+    custom_goods = {replacement_good for _, _, _, _, replacement_good in changes if replacement_good.startswith("antq_")}
+    if custom_goods != EXPECTED_CUSTOM_RGO_GOODS:
+        raise ValueError(
+            "runtime custom-good inventory drift: "
+            f"expected {sorted(EXPECTED_CUSTOM_RGO_GOODS)}, found {sorted(custom_goods)}"
+        )
+    annona_seeds = runtime_worker_seeds()
+    if {location for location, *_ in annona_seeds} != EXPECTED_ANNONA_SEED_LOCATIONS:
+        raise ValueError(
+            "runtime annona-seed inventory drift: "
+            f"expected {sorted(EXPECTED_ANNONA_SEED_LOCATIONS)}, "
+            f"found {sorted(location for location, *_ in annona_seeds)}"
+        )
+    effects = [
+        f"\t\t# ANTIQVITAS M5 runtime RGO remap; generated from docs/m5 source ledgers.{newline}",
+    ]
+    for location, _region, _operation, _source_good, replacement_good in sorted(changes):
+        if replacement_good.startswith("antq_"):
+            effects.extend(
+                (
+                    f"\t\tlocation:{location} = {{{newline}",
+                    f"\t\t\tchange_raw_material = goods:{replacement_good}{newline}",
+                    "\t\t\tchange_max_raw_material_workers = 1 "
+                    f"# Seed one localized RGO level for a runtime-added good.{newline}",
+                    f"\t\t}}{newline}",
+                )
+            )
+        else:
+            effects.append(
+                f"\t\tlocation:{location} = {{ change_raw_material = goods:{replacement_good} }}{newline}"
+            )
+    effects.append(f"\t\t# ANTIQVITAS M5 annona grain capacity seeds; source ledger: docs/m5/annona_grain_anchors.csv.{newline}")
+    for location, good, workers, _source, _confidence, _note in annona_seeds:
+        effects.extend(
+            (
+                f"\t\tlocation:{location} = {{{newline}",
+                f"\t\t\tchange_raw_material = goods:{good}{newline}",
+                f"\t\t\tchange_max_raw_material_workers = {workers}{newline}",
+                f"\t\t}}{newline}",
+            )
+        )
+    return effects
+
+
 def render() -> bytes:
     source = source_path()
     raw = source.read_bytes()
@@ -79,6 +152,7 @@ def render() -> bytes:
     country_gates: Counter[str] = Counter()
     safe_scopes: Counter[str] = Counter()
     out_of_campaign = AntqDate(*END).engine()
+    rgo_injected = False
 
     for line in lines:
         code = line.split("#", 1)[0]
@@ -87,6 +161,13 @@ def render() -> bytes:
 
         country = COUNTRY_HEADER.match(code) if in_start and gated_depth is None else None
         safe = SAFE_SCOPE.match(code) if in_start and gated_depth is None else None
+
+        if in_start and not rgo_injected and RGO_SETUP_ANCHOR.match(code):
+            rendered.append(line)
+            rendered.extend(runtime_rgo_effects(newline_for(line)))
+            rgo_injected = True
+            depth += brace_delta(code)
+            continue
 
         if country is not None and country.group("tag") in EXPECTED_COUNTRY_GATES:
             indent = country.group("indent")
@@ -129,6 +210,8 @@ def render() -> bytes:
         raise ValueError(f"hardcoded startup handler brace depth ends at {depth}")
     if gated_depth is not None:
         raise ValueError("dated country setup block did not close")
+    if not rgo_injected:
+        raise ValueError("installed startup handler is missing the runtime RGO insertion anchor")
     if country_gates != EXPECTED_COUNTRY_GATES:
         raise ValueError(
             f"dated startup-country inventory drift: expected={dict(EXPECTED_COUNTRY_GATES)} "
@@ -160,7 +243,7 @@ def check() -> bool:
         return False
     print(
         "m12_hardcoded_startup: PASS "
-        "(5 safe absent-IO scopes; 8 dated country-startup gates)"
+        f"(5 safe absent-IO scopes; 8 dated country-startup gates; {EXPECTED_RGO_CHANGE_COUNT} runtime RGO corrections)"
     )
     return True
 

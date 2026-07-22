@@ -131,8 +131,9 @@ after `make full` and its autonomous driver report are green.
 - [x] Add a source-qualified Prima Porta villa proxy without claiming a latifundium census or slave-labor measure.
 - [x] Add a source-qualified Roman-period Faiyum irrigation proxy at the direct installed hydraulic-agricultural location.
 - [x] Add the Forum Romanum through the verified marketplace proxy without inventing a forum-specific building key or a reconstruction of its physical plan.
-- [x] Complete the independent M5 market, urban, building, harbor, road, and development surface: 42 market/urban nodes, eight source-labelled harbor tiers, Muza's roadstead warehouse, the historic-building anchors, and 43 audited road segments are present. Runtime RGO application remains separately blocked in `BLOCKERS.md`.
-- [ ] Verify ancient trade flows; run milestone gate and tag `M5-done`. (Blocked until a runtime-effective RGO surface is found.)
+- [x] Complete the independent M5 market, urban, building, harbor, road, and development surface: 42 market/urban nodes, eight source-labelled harbor tiers, Muza's roadstead warehouse, the historic-building anchors, and 43 audited road segments are present.
+- [x] Apply the 328 source-led RGO corrections through the locally proven runtime startup effect; register and locally seed all five custom goods.
+- [ ] Verify ancient trade flows; run milestone gate and tag `M5-done`. (Runtime RGO now works; the two bounded annona-route probes are deferred in `BLOCKERS.md`.)
 
 ## M6 — Power
 
