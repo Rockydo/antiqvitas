@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-22 - Direct Principate warfare-icon batch
+
+- Added direct, ledger-bound illustrations for Professional Standing Armies,
+  Auxiliary Service, and Drill Routines. The checked advance migration now has
+  eight individual illustrations replacing three more transitional bindings.
+- Reviewed the three-icon contact sheet at its final 256px master size. The
+  icon subjects are deliberately unmarked military equipment and an empty
+  practice yard: no person, polity, standard, unit, ethnic identity, battle,
+  or military narrative is asserted.
+- `gmake validate` passed with eight direct advance icons. The controlled
+  vanilla/enabled `gmake smoke` pair rendered both menus with zero new mod-only
+  error-log lines.
+
+Next: continue the ledger-driven direct-art migration in small, inspected
+batches while preserving exact one-icon-to-one-advance bindings.
+
 ## 2026-07-22 - Direct Principate statecraft-icon batch
 
 - Added directly illustrated, ledger-bound UI assets for Provincial Census,

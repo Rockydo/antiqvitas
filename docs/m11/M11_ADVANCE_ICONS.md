@@ -34,17 +34,19 @@ until their individually reviewed asset chains exist. This prevents a missing
 or speculative illustration from appearing in game while making every finished
 icon visible immediately.
 
-The first five direct icons are `antq_imperial_cult`, a restrained
+The first eight direct icons are `antq_imperial_cult`, a restrained
 early-imperial civic altar; `antq_public_granaries`, an uninscribed grain-store
 facade; `antq_provincial_census`, an uninscribed counting table;
-`antq_tax_registers`, a wax-tablet and storage-jar still life; and
-`antq_road_milestones`, a blank roadside milestone. They are broad cult,
-provisioning, administrative, and road-maintenance contexts, not depictions of
+`antq_tax_registers`, a wax-tablet and storage-jar still life;
+`antq_road_milestones`, a blank roadside milestone; and three warfare-context
+icons for `antq_professional_standing_armies`, `antq_auxiliary_service`, and
+`antq_drill_routines`. They are broad cult, provisioning, administrative,
+road-maintenance, service, equipment, and training contexts, not depictions of
 a named god, altar, priest, monument, horreum, census figure, tax regime,
-inscription, route, ruler, or state doctrine. The direct ledger records the
-subject, confidence, status, and non-reconstructive boundary for every future
-row. The required final state is 250 completed direct rows and no remaining
-transitional binding.
+inscription, route, ruler, army, legion, individual, ethnicity, unit, battle,
+or state doctrine. The direct ledger records the subject, confidence, status,
+and non-reconstructive boundary for every future row. The required final state
+is 250 completed direct rows and no remaining transitional binding.
 
 ### Batch two review
 
@@ -56,6 +58,18 @@ uses a completely blank cylindrical stone with a dispatch pouch and survey
 tools beside an antique road; it does not identify an emperor, city, route,
 distance, monument, or road network. The reviewed three-icon source/master
 batch is [here](DIRECT_ADVANCE_ICON_BATCH_02.png).
+
+### Batch three review
+
+The three warfare illustrations deliberately show equipment and an empty
+practice context instead of people or a military narrative. The standing-forces
+icon uses plain shields, a helmet, spears, a pouch, and a folded cloak; the
+auxiliary-service icon uses a plain shield, spear, pack, water skin, and
+sandals; and the drill icon uses wooden posts, practice shields, wooden spears,
+and cord. None assigns an army, legion, nationality, ethnic identity, campaign,
+battle, training doctrine, standard, uniform, inscription, or ruler. The
+reviewed source/master batch is
+[here](DIRECT_ADVANCE_ICON_BATCH_03.png).
 
 ## Engine and asset verification
 
