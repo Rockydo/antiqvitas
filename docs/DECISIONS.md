@@ -1,5 +1,22 @@
 # Technical and Design Decisions
 
+## 2026-07-22 - Raw-material remaps use the startup effect, not map templates
+
+The installed `location_templates.txt` is parsed for a mod but does not
+instantiate its changed raw materials at the AD 1 bookmark. Local effect docs
+and a live Roma clay probe establish that location-scoped
+`change_raw_material` is the runtime contract. The generated exact-name
+`_hardcoded.txt` overlay therefore injects the 328 reviewed corrections after
+the source `setup_area_preferences` anchor, with count, duplicate, custom-key,
+and annona-seed guards.
+
+The installed goods registry also requires each custom raw good in
+`pop_demands.txt`; an exact source-pinned mirror supplies the five keys. A
+localized worker seed is necessary for each runtime-added good. A trial
+`base_production` value was rejected because it created global market supply,
+not output at the historical anchor. This is an engine-loading decision, not a
+change to the source ledger.
+
 ## 2026-07-22 - Runtime console controls use generated engine tags
 
 ANTIQVITAS's historical design tags are collision-safe source identifiers, not

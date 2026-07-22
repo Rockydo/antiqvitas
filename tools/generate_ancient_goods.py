@@ -15,6 +15,8 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 INPUT = ROOT / "docs/m5/custom_goods.csv"
 OUTPUT = ROOT / "in_game/common/goods/00_antiquitas_raw_goods.txt"
+POP_DEMAND_SOURCE_RELATIVE = Path("game/in_game/common/goods_demand/pop_demands.txt")
+POP_DEMAND_OUTPUT = ROOT / "in_game/common/goods_demand/pop_demands.txt"
 ASSET_SOURCE = ROOT / "assets_queue/generated"
 ICON_DIR = ROOT / "main_menu/gfx/interface/icons/trade_goods"
 ILLUSTRATION_DIR = ICON_DIR / "illustrations"
@@ -53,6 +55,7 @@ FIELDS = (
 )
 KEY_RE = re.compile(r"^antq_[a-z0-9_]+$")
 METHODS = {"farming", "gathering", "mining", "hunting", "forestry"}
+POP_DEMAND_INSERTION = re.compile(r"^(?P<indent>[ \t]*)mercury\s*=\s*1(?P<ending>\r?\n)$", re.MULTILINE)
 
 
 def rows() -> list[dict[str, str]]:
@@ -102,6 +105,47 @@ def render_goods(entries: list[dict[str, str]]) -> str:
             )
         )
     return "\n".join(lines)
+
+
+def pop_demand_source() -> Path:
+    try:
+        config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
+        source = Path(str(config["game_dir"])) / POP_DEMAND_SOURCE_RELATIVE
+    except (OSError, KeyError, json.JSONDecodeError) as exc:
+        raise ValueError(f"cannot resolve installed pop-demand registry: {exc}") from exc
+    if not source.is_file():
+        raise ValueError(f"installed pop-demand registry is missing: {source}")
+    return source
+
+
+def render_pop_demands(entries: list[dict[str, str]]) -> bytes:
+    """Copy the engine's special demand registry and add every ANTIQVITAS good.
+
+    ``pop_demand`` is not an additive generic script object: engine setup warns
+    when a good's pop demand is absent from this one registry.  An exact-name
+    source-pinned overlay keeps every installed demand key while extending the
+    raw-material section with the generated custom-good inventory.
+    """
+    source = pop_demand_source()
+    raw = source.read_bytes()
+    has_bom = raw.startswith(b"\xef\xbb\xbf")
+    content = raw.decode("utf-8-sig")
+    matches = list(POP_DEMAND_INSERTION.finditer(content))
+    if len(matches) != 1:
+        raise ValueError(
+            "installed pop-demand registry drift: expected exactly one mercury raw-material anchor, "
+            f"found {len(matches)}"
+        )
+    match = matches[0]
+    ending = match.group("ending")
+    indent = match.group("indent")
+    injected = [
+        f"{indent}# ANTIQVITAS custom raw materials; generated from docs/m5/custom_goods.csv.{ending}",
+    ]
+    injected.extend(f"{indent}{row['key']} = 1{ending}" for row in sorted(entries, key=lambda item: item["key"]))
+    rendered = content[: match.end()] + "".join(injected) + content[match.end() :]
+    payload = rendered.encode("utf-8")
+    return (b"\xef\xbb\xbf" if has_bom else b"") + payload
 
 
 def modifier_names(row: dict[str, str]) -> tuple[tuple[str, str], ...]:
@@ -295,6 +339,7 @@ def main() -> int:
             raise ValueError("custom_goods.csv has no entries")
         validate(entries)
         outputs = expected_files(entries)
+        pop_demands = render_pop_demands(entries)
     except (OSError, ValueError, csv.Error, subprocess.CalledProcessError) as exc:
         print(f"ancient_goods: FAIL\n  - {exc}")
         return 1
@@ -303,12 +348,17 @@ def main() -> int:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(content, encoding=encoding, newline="\n")
             print(f"ancient_goods: wrote {path.relative_to(ROOT)}")
+        POP_DEMAND_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+        POP_DEMAND_OUTPUT.write_bytes(pop_demands)
+        print(f"ancient_goods: wrote {POP_DEMAND_OUTPUT.relative_to(ROOT)}")
         return 0
     stale = [
         path.relative_to(ROOT).as_posix()
         for path, (content, encoding) in outputs.items()
         if not path.is_file() or path.read_text(encoding=encoding) != content
     ]
+    if not POP_DEMAND_OUTPUT.is_file() or POP_DEMAND_OUTPUT.read_bytes() != pop_demands:
+        stale.append(POP_DEMAND_OUTPUT.relative_to(ROOT).as_posix())
     if stale:
         print("ancient_goods: FAIL\n  - stale or missing " + "\n  - ".join(stale))
         return 1

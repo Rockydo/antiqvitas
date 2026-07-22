@@ -16,6 +16,7 @@ ROSTER = ROOT / "docs/world_1ad/polities.csv"
 RULES = ROOT / "docs/goods_remap.csv"
 ANCHORS = ROOT / "docs/m5/rgo_anchors.csv"
 CUSTOM_GOODS = ROOT / "docs/m5/custom_goods.csv"
+ANNONA_GRAIN_ANCHORS = ROOT / "docs/m5/annona_grain_anchors.csv"
 OUTPUT = ROOT / "in_game/map_data/location_templates.txt"
 REPORT = ROOT / "docs/m5/rgo_remap_report.csv"
 LINE = re.compile(r"^(?P<location>[A-Za-z0-9_]+)\s*=\s*\{(?P<body>.*?\braw_material\s*=\s*)(?P<good>[A-Za-z0-9_]+)(?P<tail>.*)$", re.MULTILINE)
@@ -27,7 +28,42 @@ def rows(path: Path, comments: bool = False) -> list[dict[str, str]]:
         return list(csv.DictReader(source))
 
 
-def rendered() -> tuple[str, str, int]:
+def runtime_worker_seeds() -> tuple[tuple[str, str, int, str, str, str], ...]:
+    """Validate the source-led RGO capacity seeds that need a live effect."""
+    required = ("location", "good", "worker_levels", "source", "confidence", "note")
+    seeds: list[tuple[str, str, int, str, str, str]] = []
+    seen: set[str] = set()
+    locations = set(json.loads((ROOT / "docs/vanilla_symbols/locations.json").read_text(encoding="utf-8-sig")))
+    controlled = {row["location"] for row in rows(OWNERSHIP, comments=True)}
+    valid_goods = set(json.loads((ROOT / "docs/vanilla_symbols/good.json").read_text(encoding="utf-8-sig")))
+    valid_goods |= {row.get("key", "").strip() for row in rows(CUSTOM_GOODS)}
+    for row in rows(ANNONA_GRAIN_ANCHORS):
+        if any(not row.get(field, "").strip() for field in required):
+            raise ValueError("annona_grain_anchors.csv has a blank required field")
+        location = row["location"]
+        good = row["good"]
+        if location in seen:
+            raise ValueError(f"annona_grain_anchors.csv repeats location {location}")
+        if location not in locations or location not in controlled:
+            raise ValueError(f"annona_grain_anchors.csv has an unknown or uncontrolled location {location}")
+        if good not in valid_goods:
+            raise ValueError(f"annona_grain_anchors.csv has unknown good {good}")
+        try:
+            workers = int(row["worker_levels"])
+        except ValueError as exc:
+            raise ValueError(f"annona_grain_anchors.csv {location} has invalid worker_levels") from exc
+        if not 1 <= workers <= 10:
+            raise ValueError(f"annona_grain_anchors.csv {location} worker_levels must be 1 through 10")
+        if row["confidence"] not in {"secure", "contested"}:
+            raise ValueError(f"annona_grain_anchors.csv {location} has invalid confidence")
+        seeds.append((location, good, workers, row["source"], row["confidence"], row["note"]))
+        seen.add(location)
+    if not seeds:
+        raise ValueError("annona_grain_anchors.csv has no worker seeds")
+    return tuple(sorted(seeds))
+
+
+def rendered() -> tuple[str, str, tuple[tuple[str, str, str, str, str], ...]]:
     config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
     source = Path(config["game_dir"]) / "game/in_game/map_data/location_templates.txt"
     roster_rows = rows(ROSTER)
@@ -111,7 +147,11 @@ def rendered() -> tuple[str, str, int]:
     report.append("")
     report.append("# counts")
     report.extend(f"# {operation}:{old}->{new},{count}" for (operation, old, new), count in sorted(counts.items()))
-    return content, "\n".join(report) + "\n", len(changes)
+    seeds = runtime_worker_seeds()
+    report.append("")
+    report.append("# runtime worker seeds")
+    report.extend(f"# {location},{good},{workers}" for location, good, workers, *_ in seeds)
+    return content, "\n".join(report) + "\n", tuple(changes)
 
 
 def main() -> int:
@@ -122,7 +162,7 @@ def main() -> int:
     if args.write == args.check:
         parser.error("provide exactly one of --write or --check")
     try:
-        content, report, change_count = rendered()
+        content, report, changes = rendered()
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         print(f"rgo_remap: FAIL\n  - {exc}")
         return 1
@@ -130,7 +170,7 @@ def main() -> int:
         OUTPUT.parent.mkdir(parents=True, exist_ok=True)
         OUTPUT.write_text(content, encoding="utf-8", newline="\n")
         REPORT.write_text(report, encoding="utf-8-sig", newline="\n")
-        print(f"rgo_remap: wrote {OUTPUT.relative_to(ROOT)} ({change_count} corrections)")
+        print(f"rgo_remap: wrote {OUTPUT.relative_to(ROOT)} ({len(changes)} corrections)")
         return 0
     failures = []
     for path, expected, encoding in ((OUTPUT, content, "utf-8"), (REPORT, report, "utf-8-sig")):
@@ -139,7 +179,7 @@ def main() -> int:
     if failures:
         print("rgo_remap: FAIL\n  - " + "\n  - ".join(failures))
         return 1
-    print(f"rgo_remap: PASS ({change_count} corrections)")
+    print(f"rgo_remap: PASS ({len(changes)} corrections)")
     return 0
 
 

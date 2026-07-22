@@ -1,5 +1,40 @@
 # Blockers
 
+## 2026-07-22 - M5 annona routing lacks a demonstrated startup merchant contract
+
+Status: **deferred after two material local market-route attempts; runtime RGO
+surface is recovered and green.**
+
+The earlier static `location_templates.txt` blocker is resolved only as a
+renderer finding: local `script_docs` documents location-scoped
+`change_raw_material`, and a live Roma clay probe proved its effect. The exact
+startup overlay now applies all 328 source-led corrections after
+`setup_area_preferences = yes`; the static mirror remains source-audit data,
+not the runtime mechanism.
+
+The fresh May AD 1 Observer export proves the annona wheat anchors execute:
+Tunis produced 4.26409 wheat and Alexandria 2.97279. It has no Roma wheat
+import row. The same session proves other economy legs can route goods
+(Khambat and Attock import pepper; Meroe imports incense), but it does not yet
+show silk westward, pepper to Egypt, or the complete required pattern.
+
+Tried:
+
+1. Added the source-led Egyptian, African, Sicilian, and Sardinian annona
+   wheat anchors with bounded local worker capacities. Live production appeared
+   at the Egyptian/African source markets but no Roma import did.
+2. Used the installed country-scoped `create_trade` effect for a locked
+   Faiyum-market to Roma-market wheat order, then repeated it after adding a
+   disposable Faiyum wheat stockpile. Neither post-tick export created a Roma
+   import row.
+
+Recovery: do not add a fabricated market transfer or claim an automatic route.
+Resume only after a materially different local engine contract identifies the
+required merchant/market setup, or an installed-build change alters the route
+semantics. Preserve the runtime RGO renderer and continue with independent
+milestone work. Evidence: `docs/playtests/M5_TRADE_FLOW.md` and
+`docs/screens/20260722_m5_annona/`.
+
 ## 2026-07-21 - M4 observer/map-mode acceptance is resolved by the boundary-term repair
 
 Status: **resolved 2026-07-21.**

@@ -1,5 +1,21 @@
 # Historical Assumptions
 
+## 2026-07-22 - Annona sources use bounded installed-location proxies
+
+The Augustan grain supply drew chiefly on Sicily, Sardinia, Africa, and, from
+Augustus's reign, Egypt. The installed map cannot express those regions as
+their historical administrative or shipment units, so the source ledger uses
+Faiyum, Sousse, Syracuse, and Cagliari as reproducible regional proxies.
+Their one-to-six worker-capacity seeds are engine limits, not estimates of
+acreage, harvest, fiscal quota, population, or cargo volume. No successful
+route is claimed from the anchors while the market evidence remains incomplete.
+
+Sources: `OCD-ANNONA`; `P8.1`; `P12.3`, as catalogued in
+`docs/world_1ad/SOURCES.md` and `docs/m5/annona_grain_anchors.csv`.
+
+[secure broad supply regions; contested installed-location representation and
+all quantitative engine settings]
+
 ## 2026-07-21 - Non-capital dynamic names are direct toponym anchors, not a speech map
 
 The M4 naming ledger now adds 24 secure, non-capital ancient toponyms to the

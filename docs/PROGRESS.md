@@ -1,5 +1,23 @@
 # Progress
 
+## 2026-07-22 - M5 runtime RGO renderer recovered; trade acceptance remains deferred
+
+- The generated startup overlay now applies all 328 source-led RGO corrections
+  through the installed location-scoped `change_raw_material` contract. The
+  five custom goods are registered in the exact source-pinned demand registry;
+  live Alexandria-only papyrus production verifies localized custom output.
+- `make validate` and enabled-mod `make smoke` passed with zero new normalized
+  error-log lines. A fresh Observer session reached May AD 1 without a renderer
+  failure and confirmed active wheat source production plus real pepper and
+  incense imports.
+- Roma wheat imports, silk westward, and pepper-to-Egypt are still unproven.
+  Two documented local `create_trade` variants failed to yield the Roma import
+  row, so M5 remains untagged rather than treating static data or a console
+  request as a trade result.
+
+Next: preserve the runtime renderer; move to independent unblocked milestone
+work unless a material local market-route contract is found.
+
 ## 2026-07-21 - Resume audit confirms the clean gate; no renderer change
 
 - Re-read the master plan and reconciled every open acceptance item with its
