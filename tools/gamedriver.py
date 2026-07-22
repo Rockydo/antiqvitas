@@ -461,12 +461,7 @@ def screenshot(args: argparse.Namespace) -> int:
 def click(args: argparse.Namespace) -> int:
     import pyautogui
 
-    window = activate_window()
-    if not (0 <= args.x <= 1 and 0 <= args.y <= 1):
-        raise ValueError("click coordinates must be normalized fractions from 0 through 1")
-    x = window.left + round(window.width * args.x)
-    y = window.top + round(window.height * args.y)
-    pyautogui.click(x, y, button=args.button)
+    x, y = click_normalized(args.x, args.y, button=args.button)
     time.sleep(args.settle)
     print(
         f"clicked {args.button} normalized ({args.x:.3f}, {args.y:.3f}) at ({x}, {y})"
@@ -486,6 +481,321 @@ def click(args: argparse.Namespace) -> int:
         image.save(target)
         print(target)
     return 0
+
+
+def click_normalized(x_fraction: float, y_fraction: float, *, button: str = "left") -> tuple[int, int]:
+    """Click a fixed-window UI target expressed as a fraction of the client area."""
+    import pyautogui
+
+    if not (0 <= x_fraction <= 1 and 0 <= y_fraction <= 1):
+        raise ValueError("click coordinates must be normalized fractions from 0 through 1")
+    window = activate_window()
+    x = window.left + round(window.width * x_fraction)
+    y = window.top + round(window.height * y_fraction)
+    pyautogui.click(x, y, button=button)
+    return x, y
+
+
+def save_window_capture(target: Path) -> object:
+    """Capture the foreground EU5 window, never the surrounding desktop."""
+    import pyautogui
+
+    window = activate_window()
+    image = pyautogui.screenshot(
+        region=(window.left, window.top, window.width, window.height)
+    )
+    target.parent.mkdir(parents=True, exist_ok=True)
+    image.save(target)
+    print(target)
+    return image
+
+
+def autosave_fingerprint(user_dir: Path) -> list[dict[str, object]]:
+    """Describe the newest rotating autosaves without parsing or mutating them."""
+    candidates: list[Path] = []
+    for directory_name in ("save games", "savegames"):
+        directory = user_dir / directory_name
+        if directory.exists():
+            candidates.extend(directory.glob("autosave_*.eu5"))
+    newest = sorted(
+        {path.resolve() for path in candidates},
+        key=lambda path: path.stat().st_mtime_ns,
+        reverse=True,
+    )[:3]
+    return [
+        {
+            "path": str(path.relative_to(user_dir)),
+            "bytes": path.stat().st_size,
+            "modified_utc": datetime.fromtimestamp(
+                path.stat().st_mtime, timezone.utc
+            ).isoformat(),
+        }
+        for path in newest
+    ]
+
+
+def wait_for_observer_pause(timeout: int, poll_interval: float = 1.0) -> bool:
+    """Wait for the live Observer HUD's red pause banner after a menu transition."""
+    import pyautogui
+
+    deadline = time.monotonic() + timeout
+    while time.monotonic() < deadline:
+        try:
+            window = activate_window()
+        except RuntimeError:
+            return False
+        image = pyautogui.screenshot(
+            region=(window.left, window.top, window.width, window.height)
+        )
+        paused, ratio = observer_pause_banner(image)
+        if paused:
+            print(f"gamedriver: live Observer pause banner detected (red={ratio:.3f})")
+            return True
+        time.sleep(poll_interval)
+    return False
+
+
+def wait_for_transition_log(
+    user_dir: Path, start_offset: int, timeout: int, cache_settle: int
+) -> bool:
+    """Wait for EU5's own MainMenu->Game completion marker after Continue.
+
+    A loaded save can display an almost-full loading bar for several minutes;
+    a fixed sleep was therefore unsafe.  The installed build writes state 4
+    only after committing the MainMenu->Game transaction.  The same local log
+    then records cached-data rebuilds; waiting for it to go quiet after their
+    completion prevents clicks landing on the 98%-complete loading screen.
+    """
+    debug = user_dir / "logs" / "debug.log"
+    deadline = time.monotonic() + timeout
+    scan_offset = start_offset
+    saw_state_four = False
+    saw_cache_finish = False
+    last_change = time.monotonic()
+    last_size = start_offset
+    while time.monotonic() < deadline:
+        if debug.exists():
+            size = debug.stat().st_size
+            # A fresh engine transition can rotate or truncate debug.log.
+            # Rebase rather than treating the old byte offset as permanent.
+            if size < scan_offset:
+                scan_offset = 0
+            if size != last_size:
+                last_change = time.monotonic()
+                last_size = size
+            if size > scan_offset:
+                with debug.open("rb") as stream:
+                    stream.seek(scan_offset)
+                    suffix = stream.read().decode("utf-8", errors="replace")
+                scan_offset = size
+                saw_state_four = saw_state_four or (
+                    "Setting Task state 4" in suffix and "MainMenu->Game" in suffix
+                )
+                saw_cache_finish = saw_cache_finish or (
+                    "Finished ClearAndRecalculateCachedData" in suffix
+                )
+        if (
+            saw_state_four
+            and saw_cache_finish
+            and time.monotonic() - last_change >= cache_settle
+        ):
+            print("gamedriver: MainMenu->Game and cached-data completion detected")
+            return True
+        time.sleep(2)
+    return False
+
+
+def enter_live_observer(args: argparse.Namespace, target_dir: Path, prefix: str) -> bool:
+    """Turn the loaded country-selection map into a paused live Observer HUD."""
+    # A visible country-selection map is not necessarily input-ready directly
+    # after its cache transaction.  Wait before the first Observer click;
+    # screenshots from the local recovery probe showed that clicking earlier
+    # merely opened the map's Country tooltip and did not toggle Observer.
+    time.sleep(args.country_selection_settle)
+    click_normalized(0.23, 0.047)
+    time.sleep(args.ui_settle)
+    save_window_capture(target_dir / f"{prefix}_observer_enabled.png")
+    # The map is visible as soon as cached data finishes, but the observer
+    # start button is not reliably interactive until its following UI frame.
+    # This value was calibrated against the local save-load sequence.
+    for start_attempt in range(1, 3):
+        time.sleep(args.observer_enable_settle if start_attempt == 1 else args.ui_settle)
+        click_normalized(0.50, 0.88)
+        time.sleep(args.ui_settle)
+        save_window_capture(target_dir / f"{prefix}_start_attempt{start_attempt}.png")
+        if wait_for_observer_pause(max(15, args.live_timeout // 2)):
+            save_window_capture(target_dir / f"{prefix}_live.png")
+            return True
+        print(
+            f"gamedriver: Observer start attempt {start_attempt} did not show "
+            "the pause banner; retrying"
+        )
+    return False
+
+
+def recovery_evidence_path(session: str) -> Path:
+    return ROOT / "docs/screens" / session / "observer_recovery.json"
+
+
+def record_recovery_evidence(session: str, item: dict[str, object]) -> None:
+    """Append machine-readable checkpoint/relaunch evidence beside screenshots."""
+    path = recovery_evidence_path(session)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if path.exists():
+        history = json.loads(path.read_text(encoding="utf-8"))
+    else:
+        history = []
+    history.append(item)
+    path.write_text(json.dumps(history, indent=2) + "\n", encoding="utf-8")
+
+
+def resume_observer_from_autosave(args: argparse.Namespace, cycle: int) -> bool:
+    """Launch, continue the latest autosave, and return at the live Observer HUD.
+
+    EU5's normal menu has a stable, locally verified route for a previously
+    observed save: Continue -> Continue as Observer -> Observe -> Start
+    Observing the game.  This is deliberately UI-driven instead of depending
+    on undocumented save-file formats or console load semantics.
+    """
+    session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
+    target_dir = ROOT / "docs/screens" / session
+    cfg = config()
+    user_dir = Path(str(cfg["user_dir"]))
+    prefix = f"recovery_{cycle:02d}"
+    evidence: dict[str, object] = {
+        "cycle": cycle,
+        "started_at": now(),
+        "autosaves_before": autosave_fingerprint(user_dir),
+        "steps": [],
+    }
+
+    for ui_attempt in range(1, 3):
+        evidence["ui_attempt"] = ui_attempt
+        print(f"gamedriver: recovery cycle {cycle}, menu attempt {ui_attempt}")
+        launch(
+            argparse.Namespace(
+                mode="mod",
+                leavepops=False,
+                debug_mode=False,
+                hidden=False,
+                extra=[],
+            )
+        )
+        ready = wait_ready(
+            argparse.Namespace(
+                timeout=args.menu_timeout,
+                minimum=args.menu_minimum,
+                quiet_seconds=args.menu_quiet_seconds,
+                max_cpu=args.menu_max_cpu,
+            )
+        )
+        if ready:
+            evidence["steps"].append("menu-ready-failed")
+            record_recovery_evidence(session, evidence)
+            continue
+
+        save_window_capture(target_dir / f"{prefix}_menu_attempt{ui_attempt}.png")
+        debug = user_dir / "logs" / "debug.log"
+        debug_offset = debug.stat().st_size if debug.exists() else 0
+        click_normalized(0.13, 0.325)
+        time.sleep(args.ui_settle)
+        save_window_capture(target_dir / f"{prefix}_continue_attempt{ui_attempt}.png")
+        # The dialog advertises Enter as the Ok binding.  It is more reliable
+        # than a mouse click while the menu is still composing its widgets.
+        time.sleep(args.confirm_settle)
+        activate_window()
+        press_scan_code(0x1C)
+        if not wait_for_transition_log(
+            user_dir, debug_offset, args.load_timeout, args.cache_settle
+        ):
+            evidence["steps"].append("mainmenu-to-game-transition-timeout")
+            record_recovery_evidence(session, evidence)
+            continue
+        time.sleep(args.ui_settle)
+        save_window_capture(target_dir / f"{prefix}_country_select_attempt{ui_attempt}.png")
+
+        # In the country-selection lobby, enabling Observer reveals the
+        # bottom-centre 'Start Observing the game' control.  Do not use Space
+        # here: the clock has not been started at this stage.
+        attempt_prefix = f"{prefix}_attempt{ui_attempt}"
+        if enter_live_observer(args, target_dir, attempt_prefix):
+            evidence["steps"].append("live-observer-ready")
+            evidence["completed_at"] = now()
+            evidence["autosaves_after"] = autosave_fingerprint(user_dir)
+            record_recovery_evidence(session, evidence)
+            return True
+        evidence["steps"].append("live-observer-banner-timeout")
+        record_recovery_evidence(session, evidence)
+    return False
+
+
+def resume_observer(args: argparse.Namespace) -> int:
+    """Expose the autosave-to-live-Observer transition as a bounded command."""
+    if resume_observer_from_autosave(args, cycle=0):
+        print("gamedriver: autosave resumed into live Observer")
+        return 0
+    print("gamedriver: could not resume latest autosave into live Observer", file=sys.stderr)
+    return 1
+
+
+def start_observer(args: argparse.Namespace) -> int:
+    """Exercise the final country-selection-to-Observer UI transition."""
+    session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
+    target_dir = ROOT / "docs/screens" / session
+    if enter_live_observer(args, target_dir, "manual_selection"):
+        print("gamedriver: country selection entered live Observer")
+        return 0
+    print("gamedriver: could not enter live Observer", file=sys.stderr)
+    return 1
+
+
+def observer_recover(args: argparse.Namespace) -> int:
+    """Run Observer from durable autosaves, relaunching after renderer exits."""
+    session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
+    args.session = session
+    if not resume_observer_from_autosave(args, cycle=0):
+        return 1
+    # `--seconds` is gameplay time under observation, not menu/load time.
+    # A cold autosave reload can legitimately take several minutes.
+    started = time.monotonic()
+    restarts = 0
+    while True:
+        remaining = args.seconds - (time.monotonic() - started)
+        if remaining <= 0:
+            print(f"gamedriver: recovery observer completed with {restarts} restart(s)")
+            return 0
+        monitor = argparse.Namespace(
+            seconds=remaining,
+            capture_interval=args.capture_interval,
+            status_interval=args.status_interval,
+            poll_interval=args.poll_interval,
+            session=session,
+            maximum_speed=args.maximum_speed,
+        )
+        result = observer_run(monitor)
+        if not result:
+            print(f"gamedriver: recovery observer completed with {restarts} restart(s)")
+            return 0
+        restarts += 1
+        record_recovery_evidence(
+            session,
+            {
+                "cycle": restarts,
+                "renderer_exit_at": now(),
+                "autosaves_after_exit": autosave_fingerprint(
+                    Path(str(config()["user_dir"]))
+                ),
+            },
+        )
+        if restarts > args.max_restarts:
+            print(
+                f"gamedriver: renderer exited {restarts} time(s), exceeding "
+                f"--max-restarts={args.max_restarts}",
+                file=sys.stderr,
+            )
+            return 1
+        if not resume_observer_from_autosave(args, cycle=restarts):
+            return 1
 
 
 def drag(args: argparse.Namespace) -> int:
@@ -867,6 +1177,83 @@ def build_parser() -> argparse.ArgumentParser:
         help="start a fresh paused Observer session at the configured maximum-tick setting",
     )
     observer_parser.set_defaults(func=observer_run)
+    resume_parser = sub.add_parser("resume-observer")
+    resume_parser.add_argument("--session", help="evidence session directory")
+    resume_parser.add_argument("--menu-timeout", type=int, default=240)
+    resume_parser.add_argument("--menu-minimum", type=int, default=25)
+    resume_parser.add_argument("--menu-quiet-seconds", type=int, default=15)
+    resume_parser.add_argument("--menu-max-cpu", type=float, default=1000)
+    resume_parser.add_argument(
+        "--load-timeout",
+        type=int,
+        default=600,
+        help="maximum seconds for EU5's logged MainMenu-to-Game transition",
+    )
+    resume_parser.add_argument(
+        "--cache-settle",
+        type=int,
+        default=15,
+        help="quiet seconds after the logged cached-data rebuild",
+    )
+    resume_parser.add_argument(
+        "--live-timeout",
+        type=int,
+        default=60,
+        help="seconds to wait for the live Observer pause banner",
+    )
+    resume_parser.add_argument("--ui-settle", type=float, default=2)
+    resume_parser.add_argument(
+        "--confirm-settle",
+        type=float,
+        default=5,
+        help="seconds for the Continue confirmation dialog to become interactive",
+    )
+    resume_parser.add_argument(
+        "--observer-enable-settle",
+        type=float,
+        default=10,
+        help="seconds for the post-cache Observer start button to become interactive",
+    )
+    resume_parser.add_argument(
+        "--country-selection-settle",
+        type=float,
+        default=15,
+        help="seconds for a cache-complete country-selection map to accept input",
+    )
+    resume_parser.set_defaults(func=resume_observer)
+    start_observer_parser = sub.add_parser("start-observer")
+    start_observer_parser.add_argument("--session", help="evidence session directory")
+    start_observer_parser.add_argument("--live-timeout", type=int, default=60)
+    start_observer_parser.add_argument("--ui-settle", type=float, default=2)
+    start_observer_parser.add_argument("--observer-enable-settle", type=float, default=10)
+    start_observer_parser.add_argument("--country-selection-settle", type=float, default=0)
+    start_observer_parser.set_defaults(func=start_observer)
+    recover_parser = sub.add_parser("observer-recover")
+    recover_parser.add_argument(
+        "--seconds", type=float, default=600, help="total live-Observer monitoring interval"
+    )
+    recover_parser.add_argument("--max-restarts", type=int, default=8)
+    recover_parser.add_argument("--capture-interval", type=float, default=10)
+    recover_parser.add_argument("--status-interval", type=float, default=10)
+    recover_parser.add_argument("--poll-interval", type=float, default=1)
+    recover_parser.add_argument("--session", help="evidence session directory")
+    recover_parser.add_argument(
+        "--maximum-speed",
+        action="store_true",
+        help="use the configured maximum-tick setting after each autosave resume",
+    )
+    recover_parser.add_argument("--menu-timeout", type=int, default=240)
+    recover_parser.add_argument("--menu-minimum", type=int, default=25)
+    recover_parser.add_argument("--menu-quiet-seconds", type=int, default=15)
+    recover_parser.add_argument("--menu-max-cpu", type=float, default=1000)
+    recover_parser.add_argument("--load-timeout", type=int, default=600)
+    recover_parser.add_argument("--cache-settle", type=int, default=15)
+    recover_parser.add_argument("--live-timeout", type=int, default=60)
+    recover_parser.add_argument("--ui-settle", type=float, default=2)
+    recover_parser.add_argument("--confirm-settle", type=float, default=5)
+    recover_parser.add_argument("--observer-enable-settle", type=float, default=10)
+    recover_parser.add_argument("--country-selection-settle", type=float, default=15)
+    recover_parser.set_defaults(func=observer_recover)
     stop_parser = sub.add_parser("stop")
     stop_parser.add_argument("--timeout", type=int, default=10)
     stop_parser.set_defaults(func=stop)

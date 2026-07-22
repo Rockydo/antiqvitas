@@ -914,3 +914,22 @@ This is a reproducibility fingerprint, not a claim that a particular component
 is defective. A later game build or GPU-driver change is the next materially
 different test condition; no repository-only content or configuration edit is
 left that can discharge the long-observer acceptance gate.
+
+## 2026-07-22 - Renderer exits now have a checkpointed recovery path
+
+Status: **mitigated for continuation; long-run acceptance remains open.** The
+Vulkan/DX12 FSR/NGX exit fingerprint above still applies, but it no longer
+requires abandoning the autonomous chronology at the first renderer loss.
+`tools/gamedriver.py observer-recover` fingerprints the normal rotating
+autosaves, relaunches the configured exact EU5 installation, and drives the
+locally verified Continue-as-Observer sequence with bounded retries and
+screen/log evidence.
+
+The passing recovery probe is recorded in
+`docs/playtests/M12_OBSERVER_RECOVERY_20260722.md`: after a controlled process
+restart it loaded the AD 7 checkpoint, entered live Observer on its second
+bounded map-input attempt, advanced to 29 April AD 7, and produced newer
+autosaves. The unproven part is deliberately narrow: run long enough to hit an
+actual renderer exit, verify that the next cycle loads the newest checkpoint,
+and carry that loop through the required decade evidence. Do not re-run the old
+single-process Vulkan/DX12 tests as a substitute.
