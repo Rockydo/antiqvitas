@@ -3309,3 +3309,15 @@ specials use restrained building and upkeep proxies only. Sources weighed:
 `DAR-PANTHEUM`, `DAR-SAEPTA`, and `DAR-DIRIBITORIUM` in
 `docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`. [secure broad context; contested
 architectural and functional representation]
+
+## 2026-07-22 - New Italian display names are city labels, not speech maps
+
+The cached official Pleiades places record supplies the secure ancient points
+and title variants for Arretium, Bergomum, Brixia, Caralis, Comum, Mediolanum,
+Pisaurum, Patavium, Tridentum, Tergeste, and Vicetia. Their local game matches
+are reviewed as named-city labels only. Applying each Latin form through the
+`antq_latin` dynamic adapter does not assert a uniform spoken language, erase
+local peoples, or establish a precise urban extent. Sources weighed: Pleiades
+snapshot provenance in `docs/world_1ad/PLEIADES_PROVENANCE.md`; individual
+`PLE:<id>` rows in `docs/m4/dynamic_location_name_overrides.csv`. [secure
+toponym; contested linguistic representation]

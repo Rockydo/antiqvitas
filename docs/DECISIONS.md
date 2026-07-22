@@ -2231,3 +2231,13 @@ modest unrest/literacy context for the Pantheum, modest control/tradition for
 the Saepta, and modest control for the Diribitorium. Their upkeeps create
 small demand for actual materials and services rather than setting economic
 output, vote totals, a cult calendar, or administrative staffing.
+
+## 2026-07-22 - Dynamic names require an exact archaeological-city match
+
+The Italian expansion retains only Pleiades points whose reviewed projection
+lands directly on the named installed location. Eleven Cisalpine/central and
+Sardinian city forms met that bar. Near but non-identical candidates are not
+silently promoted: Ferrara is not relabeled Spina, and Palermo is not relabeled
+from an unmatched Panormus record. The M4 culture-language adapter remains an
+engine localization route, not a claim that every resident used the displayed
+Latin form in daily speech.

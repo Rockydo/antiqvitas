@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-22 - Roman toponym expansion across Cisalpine Italy and Sardinia
+
+- Added eleven secure Pleiades-to-installed-map names: Arretium, Bergomum,
+  Brixia, Caralis, Comum, Mediolanum, Pisaurum, Patavium, Tridentum,
+  Tergeste, and Vicetia. The curated layer now holds 52 names alongside 61
+  coordinate-verified capital anchors.
+- Each candidate was retained only after its cached Pleiades point projected
+  directly onto the installed game location; ambiguous nearby or later sites
+  (including Ferrara/Spina and Palermo/Panormus) remain unchanged.
+- `gmake validate` passed with 5,582 localized player-facing entries and zero
+  prohibited terms; the controlled vanilla/enabled smoke pair reached the menu
+  with zero new mod-only error lines.
+
+Next: return to source-led Roman buildings and direct UI art, then continue
+period-name work only through similarly exact reviewed matches.
+
 ## 2026-07-22 - Campus Martius building and goods pass
 
 - Added three direct-icon Rome specials: Pantheum Agrippae (c. 27 BC), Saepta
