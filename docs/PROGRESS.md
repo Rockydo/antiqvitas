@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-22 - Augustan public-spaces pass
+
+- Added direct illustrated specials for the Naumachia Augusti (2 BC) and the
+  Horologium Augusti (10 BC). Both retain narrow public-space roles: no naval
+  battle, combatant list, timekeeping system, complete calendar, or exact
+  reconstruction is inferred.
+- Reviewed the 30-icon building contact sheet. `gmake validate` passed with
+  30 direct building-icon contracts and 5,606 localized entries; the
+  controlled vanilla/enabled smoke pair reached rendered menus with zero new
+  mod-only error-log lines.
+
+Next: fulfill the expanded building target with source-led regional building
+families and direct art, starting with Europe, North Africa, and the Middle
+East while retaining individually bounded claims.
+
 ## 2026-07-22 - Roman toponym expansion across Cisalpine Italy and Sardinia
 
 - Added eleven secure Pleiades-to-installed-map names: Arretium, Bergomum,

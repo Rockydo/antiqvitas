@@ -3372,3 +3372,15 @@ Naumachia plan, or agricultural output. Sources weighed:
 `DAR-PORTICUS-AEMILIA` and `DAR-AQUA-ALSIETINA` in
 `docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`. [secure broad context; contested
 identification, layout, and economic representation]
+
+## 2026-07-22 - Naumachia and Horologium retain only their secure contexts
+
+Digital Augustan Rome records the 2 BC Naumachia's aquatic-display purpose and
+the 10 BC Horologium's obelisk gnomon and bronze meridian line. Its respective
+records also leave a detailed Naumachia plan and the Horologium's overall
+layout unresolved. The building icons therefore show generic public basin and
+plaza contexts only. They do not establish a combat roster, performance,
+capacity, exact calendar, full plaza, or inscription. Sources weighed:
+`DAR-NAUMACHIA` and `DAR-HOROLOGIUM` in
+`docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`. [secure broad context; contested
+architectural and operational representation]
