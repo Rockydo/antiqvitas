@@ -3230,3 +3230,16 @@ contested case is labeled in `docs/m5/roman_buildings.csv`. Sources weighed:
 `DAR-TABULARIUM`, `MET-ROMAN`, `ITA-LIVIA`; full URLs and reasoning are in
 `docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`. [secure broad context; contested
 city-point and functional representation]
+
+## 2026-07-22 - Navalia Romae is a bounded Republican-to-Augustan proxy
+
+The Navalia's Republican-period Tiberine ship sheds and arsenal are securely
+attested, but the surviving evidence does not settle an exact AD 1 layout,
+workforce, fleet complement, or volume of construction and repair. The
+building is therefore one modest city-point naval-supply proxy with a
+source-keyed contested label, not a reconstruction of Augustan naval policy
+or Rome's river frontage. Castra Praetoria is not used as a substitute because
+its AD 21-23 construction is outside the start date. Sources weighed:
+`DAR-NAVALIA` in `docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`; Turismo Roma,
+`Castro Pretorio`. [secure broad context; contested city-point and functional
+representation]

@@ -5,7 +5,7 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [ ] Extend the rich, source-led Roman building system with military-supply and frontier-infrastructure layers, explicitly tied to the ancient goods and services the engine supports.
+- [ ] Continue the rich, source-led Roman building system with frontier infrastructure only where a specific AD 1 source and engine-safe contract support it; retain conservative proxies rather than backdating later castra.
 - [ ] Expand the AD 1 dynamic-location naming layer beyond anchors, prioritizing the Roman world and every player-facing map location with a secure period form.
 - [ ] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review.
 
@@ -113,7 +113,8 @@ after `make full` and its autonomous driver report are green.
 ## M5 — Economy
 
 - [x] Replace Rome's generic civic/economic proxies with a source-led named building pass: 16 direct-icon specials now cover water, public grain storage, Forum Romanum/Augusti, Basilica Aemilia, macellum, Horrea Galbana, baths, Theatre of Marcellus, Mars Ultor cult, Tabularium, Circus, mint, workshops, mill/bakery, and Villa Liviae. See `docs/m5/roman_buildings.csv` and `M5_ROMAN_CIVIC_BUILDINGS.md`.
-- [ ] Add the follow-on Roman military-supply and frontier-infrastructure pass only where a specific AD 1 source and a locally verified building contract support it; keep the existing M7 castra/limes proxies conservative until then.
+- [x] Add the source-led naval-supply pass: Navalia Romae is now a named, direct-icon special tied to tar, naval supplies, tools, lumber, and cloth, with modest sailor/repair effects and an explicitly contested Augustan configuration.
+- [ ] Add further Roman frontier infrastructure only where a specific AD 1 source and a locally verified building contract support it; keep the existing M7 castra/limes proxies conservative and do not backdate Castra Praetoria (AD 21-23).
 - [x] Catalogue and smoke-check 42 source-labelled AD 1 market/urban hubs; the installed pre-game market-manager seeds are deferred after a first-month runtime assertion, while every source-led urban and harbor anchor remains active (see `BLOCKERS.md` and `DECISIONS.md`).
 - [x] Localize and anchor the plan-listed ancient raw goods on controlled AD 1 map locations (328 audited corrections).
 - [x] Source-qualify the plan-listed alum emphasis at the direct installed Melos anchor; the existing alum value is retained.

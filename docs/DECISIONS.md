@@ -2150,3 +2150,18 @@ first actual smoke found that the installed `common/building_types` folder
 requires UTF-8 BOM and that unique production-method keys need localization;
 the generator locks both requirements in. This is a presentation and mechanics
 decision, not a claim of a precisely mapped monument for every function.
+
+## 2026-07-22 - Navalia Romae is a conservative naval-supply special
+
+Digital Augustan Rome securely places the Navalia in the Republican Tiberine
+arsenal tradition, but its precise Augustan arrangement remains debated. M5
+therefore adds one city-scale, named naval-supply special rather than a fleet
+roster, harbour reconstruction, dockyard chain, or shipbuilding output model.
+The local installed `naval_category` and `dock_employment` contracts support
+the limited sailors/repair effect and the historically legible tar, naval
+supplies, tools, lumber, and cloth maintenance basket.
+
+The existing M7 frontier stockades remain deliberately generic. In particular,
+Castra Praetoria is excluded: the reviewed local historical source dates its
+construction under Tiberius in AD 21-23, after the start. This prefers an
+honest bounded proxy to an attractive but anachronistic named building.

@@ -24,6 +24,7 @@ quantities.
 - **TR-THEATRE-MARCELLUS** — Turismo Roma, [The Theatre of Marcellus](https://www.turismoroma.it/en/places/theatre-marcellus).  Gives the Caesarian/Augustan construction sequence and 13/11 BC inauguration.
 - **DAR-TABULARIUM** — Digital Augustan Rome, [Tabularium](https://www.digitalaugustanrome.org/records/tabularium/).  Supports the physical building while requiring a contested confidence for the exact archival interpretation.
 - **DAR-CIRCUS** — Digital Augustan Rome, [Circus Maximus](https://www.digitalaugustanrome.org/records/circus-maximus/).  Records its long-standing public-entertainment functions.
+- **DAR-NAVALIA** — Digital Augustan Rome, [Navalia](https://www.digitalaugustanrome.org/records/navalia/).  Records the Republican-period Tiberine naval arsenal and ship sheds; the precise Augustan configuration remains debated.
 - **MET-ROMAN** — Metropolitan Museum of Art, [The Roman World](https://www.metmuseum.org/pt/-/media/files/learn/for-educators/publications-for-educators/roman.pdf).  Used only for the broad, well-attested class of urban Roman milling and baking, not for a precise Rome-site attribution.
 - **OCD-ANNONA**, **ITA-LIVIA**, **P12.1**, **P12.3**, and **P8.1** remain the plan's reviewed source identifiers for annona, the Prima Porta proxy, technical craft anchors, special-building seeding, and civic coinage respectively.
 
@@ -39,8 +40,8 @@ Their start-state presence is rendered through the existing verified
 
 ## Art review
 
-Four source sheets under `assets_queue/generated_sources/` were visually
-reviewed, cropped to 128px masters, converted to direct BC7 DDS files, and
-compiled into [the 16-icon contact sheet](ROMAN_BUILDING_ICON_CONTACT_SHEET.png).
+Four source sheets under `assets_queue/generated_sources/` plus a dedicated
+Navalia source image were visually reviewed, cropped to 128px masters,
+converted to direct BC7 DDS files, and compiled into [the contact sheet](ROMAN_BUILDING_ICON_CONTACT_SHEET.png).
 The generator rejects a missing, wrong-size, or non-RGBA direct building icon;
 the ledger's `icon_subject` column records the subject of each illustration.
