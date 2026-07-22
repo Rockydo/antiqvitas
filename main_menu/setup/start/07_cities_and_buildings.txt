@@ -73,13 +73,22 @@ building_manager = {
 	market_warehouse = { tag = BED level = 1 location = al_mukha } # muza_warehouse; P12.2;P8.6;CAS-PER
 	protected_harbor = { tag = XBB level = 1 location = kodungallur } # muziris_harbor; P12.2;P8.4;PER
 	protected_harbor = { tag = XAR level = 1 location = panyu } # panyu_harbor; P12.2;P8.3;BHR
-	granary = { tag = XAA level = 1 location = rome } # roma_annona; P12.3;OCD-ANNONA
-	aqueduct_system = { tag = XAA level = 1 location = rome } # roma_aqueduct; P12.3;P8.1
-	hippodrome = { tag = XAA level = 1 location = rome } # roma_circus; P12.3;BRI-CIRC
-	marketplace = { tag = XAA level = 1 location = rome } # roma_forum; P12.3;PARC-FORUM
-	minting_office = { tag = XAA level = 1 location = rome } # roma_mint; P12.3;P8.1
-	noble_villa = { tag = XAA level = 1 location = rome } # roma_prima_porta_villa; P12.3;ITA-LIVIA
-	pottery_guild = { tag = XAA level = 1 location = rome } # roma_terra_sigillata; P12.1;P12.3
+	antq_horrea_publica = { tag = XAA level = 1 location = rome } # roma_annona; OCD-ANNONA;P12.3
+	antq_aqua_virgo = { tag = XAA level = 1 location = rome } # roma_aqua_virgo; SOV-AQUA-VIRGO;TR-BATHS-AGRIPPA
+	antq_basilica_aemilia = { tag = XAA level = 1 location = rome } # roma_basilica_aemilia; PARCO-AEMILIA
+	antq_circus_maximus = { tag = XAA level = 1 location = rome } # roma_circus; DAR-CIRCUS
+	antq_forum_romanum = { tag = XAA level = 1 location = rome } # roma_forum; PARC-FORUM;P12.3
+	antq_forum_augusti = { tag = XAA level = 1 location = rome } # roma_forum_augusti; DAR-FORUM-AUG
+	antq_horrea_galbana = { tag = XAA level = 1 location = rome } # roma_horrea_galbana; DAR-HORREA-GALBANA
+	antq_macellum_romanum = { tag = XAA level = 1 location = rome } # roma_macellum; DAR-MACELLUM
+	antq_monetarium_roma = { tag = XAA level = 1 location = rome } # roma_mint; P12.3;P8.1
+	antq_officinae_urbanae = { tag = XAA level = 1 location = rome } # roma_officinae; P12.1;P12.3
+	antq_pistrina_urbana = { tag = XAA level = 1 location = rome } # roma_pistrina; MET-ROMAN;P12.3
+	antq_villa_liviae = { tag = XAA level = 1 location = rome } # roma_prima_porta_villa; ITA-LIVIA;P12.3
+	antq_tabularium = { tag = XAA level = 1 location = rome } # roma_tabularium; DAR-TABULARIUM
+	antq_templum_martis_ultoris = { tag = XAA level = 1 location = rome } # roma_temple_mars_ultor; DAR-FORUM-AUG
+	antq_theatrum_marcelli = { tag = XAA level = 1 location = rome } # roma_theatre_marcellus; TR-THEATRE-MARCELLUS
+	antq_thermae_agrippae = { tag = XAA level = 1 location = rome } # roma_thermae_agrippae; TR-BATHS-AGRIPPA;SOV-AQUA-VIRGO
 	temple = { tag = JUD level = 1 location = jerusalem } # second_temple; P11;OCD-JER
 	glass_guild = { tag = XAH level = 1 location = sidon } # sidon_glass; P12.1;P8.2;CAH-XI
 }

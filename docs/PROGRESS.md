@@ -4233,6 +4233,25 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-22 - Named Roman civic-building and direct-art pass
+
+- Replaced the generic Rome building proxies with sixteen named AD 1 special
+  buildings. The data-first ledger covers water, annona, civic and legal
+  forums, a basilica, food market, Emporium warehouses, bathing, theatre,
+  state cult, archive, circus, minting, workshops, milling/baking, and the
+  guarded Prima Porta villa proxy.
+- Added a generator that validates every source/confidence row, direct start
+  seed, local engine category/employment/build-time/modifier/goods contract,
+  generated localization, and direct 128px BC7 DDS icon. Four inspected source
+  sheets supply all sixteen dedicated building illustrations.
+- The first smoke load identified and fixed two real engine contracts: this
+  folder requires UTF-8 BOM, and each custom maintenance production method
+  requires its own localized label. The final controlled vanilla/mod menu
+  comparison is green with zero new error-log lines.
+
+Next: add a separately sourced military-supply/frontier building layer, then
+continue the user-priority Roman period-name expansion.
+
 ## 2026-07-22 - Fresh-start diagnostic and smoke-control recovery
 
 - A new-game probe reaches the AD 1 country-selection map but exposes 327

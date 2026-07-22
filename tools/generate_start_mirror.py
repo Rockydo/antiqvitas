@@ -52,6 +52,7 @@ URBAN_NODES = ROOT / "docs/m5/urban_nodes.csv"
 ROAD_SEGMENTS = ROOT / "docs/m5/road_segments.csv"
 DEVELOPMENT_PROFILE = ROOT / "docs/m5/development_profile.csv"
 SPECIAL_BUILDINGS = ROOT / "docs/m5/special_buildings.csv"
+ROMAN_BUILDINGS = ROOT / "docs/m5/roman_buildings.csv"
 HISTORIC_BUILDING_SITES = ROOT / "docs/m5/historic_building_sites.csv"
 M7_FORTS = ROOT / "docs/m7/forts.csv"
 M7_ARMIES = ROOT / "docs/m7/armies.csv"
@@ -246,6 +247,12 @@ def special_building_manager() -> tuple[str, int, int]:
         raise ValueError("special_buildings.csv has no specialist-building entries")
     locations = set(json.loads((ROOT / "docs/vanilla_symbols/locations.json").read_text(encoding="utf-8-sig")))
     buildings = set(json.loads((ROOT / "docs/vanilla_symbols/building.json").read_text(encoding="utf-8-sig")))
+    # M5's named Roman specials are mod-owned building types.  Their complete
+    # contracts, source ledger, generated definitions, direct icons, and start
+    # rows are checked by tools/m5_roman_buildings.py before this manager is
+    # emitted; include only its explicit antq_ keys here.
+    with ROMAN_BUILDINGS.open(encoding="utf-8-sig", newline="") as handle:
+        buildings.update((row.get("key") or "").strip() for row in csv.DictReader(handle))
     urban_locations = {row["location"].strip() for row in csv_rows(URBAN_NODES)}
     owners: dict[str, str] = {}
     with OWNERSHIP.open(encoding="utf-8-sig", newline="") as handle:

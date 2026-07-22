@@ -1,10 +1,11 @@
 key,location,building,level,source,confidence,note
-roma_aqueduct,rome,aqueduct_system,1,P12.3;P8.1,secure,The locally verified aqueduct slot represents the pre-AD 1 Roman water network
-roma_annona,rome,granary,1,P12.3;OCD-ANNONA,secure,The granary represents the Augustan annona and the capital's public grain-storage infrastructure
-roma_mint,rome,minting_office,1,P12.3;P8.1,secure,The mint slot represents imperial civic coinage at Roma
-roma_forum,rome,marketplace,1,P12.3;PARC-FORUM,secure,The generic marketplace slot represents the Forum Romanum as the civic commercial and legal centre renewed under Caesar and Augustus
-roma_terra_sigillata,rome,pottery_guild,1,P12.1;P12.3,contested,Pottery is the installed technical good for the plan's fine-ceramics terra-sigillata layer
-roma_prima_porta_villa,rome,noble_villa,1,P12.3;ITA-LIVIA,contested,The noble-villa slot is a Rome-region proxy for Livia's productive suburban Prima Porta estate rather than a census of Roman villas or labor relations
+roma_aqua_virgo,rome,antq_aqua_virgo,1,SOV-AQUA-VIRGO;TR-BATHS-AGRIPPA,secure,Named Aqua Virgo water infrastructure replaces the generic aqueduct proxy
+roma_annona,rome,antq_horrea_publica,1,OCD-ANNONA;P12.3,secure,Named public horrea represent the Augustan annona and capital grain storage
+roma_mint,rome,antq_monetarium_roma,1,P12.3;P8.1,secure,Named Roman mint represents imperial civic coinage
+roma_forum,rome,antq_forum_romanum,1,PARC-FORUM;P12.3,secure,Named Forum Romanum represents civic commercial legal and assembly functions
+roma_officinae,rome,antq_officinae_urbanae,1,P12.1;P12.3,contested,Named urban workshops represent a cautious aggregate craft-production layer
+roma_pistrina,rome,antq_pistrina_urbana,1,MET-ROMAN;P12.3,contested,Named urban mill-and-bakery layer models bread supply without a single-site claim
+roma_prima_porta_villa,rome,antq_villa_liviae,1,ITA-LIVIA;P12.3,contested,Named Villa Liviae remains a conservative Rome-region productive-estate proxy
 alexandria_library,alexandria,library,1,P12.3;P8.1,secure,The library slot represents the Alexandrian scholarly complex specified by the design bible
 alexandria_pharos,alexandria,lighthouse_of_alexandria,1,P12.3;P8.1,secure,The event-only special building is seeded through the verified start building manager for the standing Pharos
 alexandria_glass,alexandria,glass_guild,1,P12.1;P12.3,secure,The installed glass guild represents the plan's Alexandrian glassware industry
@@ -14,7 +15,15 @@ changan_lacquerware,jingzhao,lacquerware_guild,1,P12.1;P8.3;BHR,secure,Jingzhao 
 changan_taixue,jingzhao,confucian_academy,1,P12.3;CHI-TAIXUE,secure,The installed Confucian academy is the technical proxy for the Han imperial Taixue at the capital
 luoyang_lacquerware,luoyang,lacquerware_guild,1,P12.1;P8.3;BHR,secure,Luoyang is a source-labelled Han metropolitan lacquerware anchor
 chengdu_lacquerware,chengdu,lacquerware_guild,1,P12.1;P8.3;BHR,secure,Chengdu is the reviewed Sichuan Han-production anchor
-roma_circus,rome,hippodrome,1,P12.3;BRI-CIRC,secure,The installed hippodrome slot is the technical proxy for the standing Circus Maximus
+roma_circus,rome,antq_circus_maximus,1,DAR-CIRCUS,secure,Named Circus Maximus replaces the generic hippodrome proxy
+roma_forum_augusti,rome,antq_forum_augusti,1,DAR-FORUM-AUG,secure,Forum and Temple of Mars Ultor dedicated in 2 BC
+roma_basilica_aemilia,rome,antq_basilica_aemilia,1,PARCO-AEMILIA,secure,Augustan rebuilt civic basilica in the Forum
+roma_macellum,rome,antq_macellum_romanum,1,DAR-MACELLUM,secure,Pre-AD 1 Forum food market
+roma_horrea_galbana,rome,antq_horrea_galbana,1,DAR-HORREA-GALBANA,secure,Pre-AD 1 Emporium warehouse complex
+roma_thermae_agrippae,rome,antq_thermae_agrippae,1,TR-BATHS-AGRIPPA;SOV-AQUA-VIRGO,secure,Public baths built 25-19 BC and supplied by Aqua Virgo
+roma_theatre_marcellus,rome,antq_theatrum_marcelli,1,TR-THEATRE-MARCELLUS,secure,Theatre inaugurated in 13 or 11 BC
+roma_temple_mars_ultor,rome,antq_templum_martis_ultoris,1,DAR-FORUM-AUG,secure,Temple of Mars Ultor dedicated 2 BC
+roma_tabularium,rome,antq_tabularium,1,DAR-TABULARIUM,contested,Cautious archival-administrative proxy for the Capitoline complex
 alexandria_harbor,alexandria,protected_harbor,1,P12.2;CAM-ALEX,secure,The protected-harbor slot represents Alexandria as the Roman maritime emporium
 carthago_harbor,tunis,protected_harbor,1,P12.2;P8.1;UNESCO-CAR-HAR,contested,The protected-harbor slot is a Tunis-location proxy for Roman Carthage's inherited antique port complex and Mediterranean exchange role
 chengdu_irrigation,chengdu,irrigation_systems,1,P12.3;UNESCO-DJJ,secure,The irrigation slot represents the pre-AD 1 Dujiangyan system serving the Chengdu plain

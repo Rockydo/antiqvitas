@@ -3209,3 +3209,24 @@ institution icons similarly depict generic objects and settings, not named
 artifacts, monuments, saints, councils, treaties, or armies. Sources weighed:
 the M4 ledger's P11/CAH-XI/OCD/BHR routes and plan sections 11, 15, and 20.
 [secure broad context; contested visual representation]
+
+## 2026-07-22 - Rome's named building layer is a bounded city-point proxy
+
+The installed map supplies one `rome` location, while the AD 1 city contained
+multiple districts and suburban sites. The named Aqua Virgo, Forum Augusti,
+Basilica Aemilia, macellum, Horrea Galbana, Baths of Agrippa, Theatre of
+Marcellus, Temple of Mars Ultor, and Circus Maximus all pre-date the start and
+are directly recorded in the source ledger. Their combined seed at one game
+point is therefore a technical city-scale representation, not a survey of
+every monument's exact footprint or economic output.
+
+The Tabularium's archival role, aggregate Officinae Urbanae, urban Pistrina,
+and Villa Liviae at Prima Porta remain explicitly contested: their sources
+support the building/class or regional estate, not a single fully resolved AD
+1 urban location and function. Effects are intentionally modest and each
+contested case is labeled in `docs/m5/roman_buildings.csv`. Sources weighed:
+`DAR-FORUM-AUG`, `DAR-MACELLUM`, `DAR-HORREA-GALBANA`, `PARCO-AEMILIA`,
+`TR-BATHS-AGRIPPA`, `TR-THEATRE-MARCELLUS`, `DAR-CIRCUS`,
+`DAR-TABULARIUM`, `MET-ROMAN`, `ITA-LIVIA`; full URLs and reasoning are in
+`docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`. [secure broad context; contested
+city-point and functional representation]
