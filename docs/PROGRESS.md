@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-23 - Direct Crisis coordination-and-provisioning icon batch
+
+- Added direct, ledger-bound illustrations for Regional Commands, Emergency
+  Rescripts, and Grain Annona. The planned binding rises to thirty-five
+  individual advance illustrations.
+- Reviewed the final 256px contact sheet. It confines the assets to unmarked
+  planning, correspondence, and grain-storage materials, without asserting a
+  named person, army, region, command, province, empire, law, decree, annona
+  policy, granary, city, ruler, or distribution scene.
+- `gmake validate` passed with thirty-five direct advance icons. The bounded
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: continue the ledger-driven direct-art migration in small, inspected
+batches while preserving exact one-icon-to-one-advance bindings.
+
 ## 2026-07-23 - Direct Crisis fiscal-and-mobilization icon batch
 
 - Added direct, ledger-bound illustrations for Emergency Levies, Fiscal
