@@ -412,7 +412,8 @@ through dated M10 content. The tree is green after this evidence-only pass.
 
 ## 2026-07-19 — M5 location-template RGO overrides are not runtime-effective
 
-Status: **deferred; M5 remains untagged.**
+Status: **superseded as a runtime-renderer blocker on 2026-07-22; the separate
+M5 market-route acceptance blocker remains open.**
 
 The generated `in_game/map_data/location_templates.txt` is an exact copy of
 the installed map-template file with 327 checked alterations. It parses and
@@ -467,7 +468,7 @@ evidence exists.
 
 ## 2026-07-19 - M3 observer runtime reaches vanilla systems not yet owned
 
-Status: **deferred to M5/M6/M9; M3 remains untagged.**
+Status: **deferred to M6/M9; M3 remains untagged.**
 
 M6 update: the initial Rome/Han/Parthia core now supplies three sourced
 government profiles, three dynasties, and nine characters; an AD 1 observer
