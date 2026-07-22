@@ -1,6 +1,6 @@
 # Roman-world dynamic-name expansion
 
-This 22 July 2026 batch extends the curated M4 name ledger with seventeen
+This 22 July 2026 batch extends the curated M4 name ledger with twenty-eight
 Italian and Sicilian AD 1 forms. The Pleiades CSV snapshot in the project
 cache supplies each direct ancient point, historical title, date range, and
 permanent place path. The local affine-plus-residual projection check was used
@@ -10,22 +10,32 @@ archaeological city polygon.
 | Installed key | AD 1 display form | Pleiades place | Point | Local-match result |
 | --- | --- | --- | --- | --- |
 | aosta | Augusta Praetoria | 383579 | 45.73744, 7.31617 | direct local key retained |
+| arezzo | Arretium | 413032 | 43.47127, 11.86305 | direct local key retained |
 | bari | Barium | 442500 | 41.12922, 16.87033 | direct local key retained |
 | benevento | Beneventum | 432721 | 41.13044, 14.78116 | direct local key retained |
+| bergamo | Bergomum | 383589 | 45.69491, 9.66995 | direct local key retained |
+| brescia | Brixia | 383603 | 45.53977, 10.22314 | direct local key retained |
+| cagliari | Caralis | 471899 | 39.21489, 9.10952 | direct local key retained |
+| como | Comum | 383627 | 45.81192, 9.08578 | direct local key retained |
 | florence | Florentia | 413138 | 43.76980, 11.25564 | direct local key retained |
 | lecce | Lupiae | 442642 | 40.35215, 18.17243 | direct local key retained |
 | lucca | Luca | 403234 | 43.84184, 10.50703 | direct local key retained |
+| milano | Mediolanum | 383706 | 45.46375, 9.18806 | direct local key retained |
 | messina | Messana | 462538 | 38.19225, 15.55663 | direct local key retained |
 | naples | Neapolis | 433014 | 40.84000, 14.25287 | direct local key retained |
 | pavia | Ticinum | 383798 | 45.18590, 9.15656 | direct local key retained |
 | perugia | Perusia | 413248 | 43.11119, 12.38991 | direct local key retained |
+| pesaro | Pisaurum | 413256 | 43.91208, 12.91577 | direct local key retained |
 | reggiocal | Regium | 452416 | 38.10928, 15.64393 | direct local key retained |
 | reggioem | Regium Lepidum | 383755 | 44.69814, 10.63072 | direct local key retained |
 | rimini | Ariminum | 393379 | 44.05896, 12.56319 | direct local key retained |
 | salerno | Salernum | 433075 | 40.67799, 14.76592 | direct local key retained |
 | siena | Saena | 413293 | 43.31862, 11.33108 | direct local key retained |
 | syracuse | Syracusae | 462503 | 37.07008, 15.28334 | direct local key retained |
+| trento | Tridentum | 383804 | 46.06677, 11.11914 | direct local key retained |
+| trieste | Tergeste | 187578 | 45.64915, 13.77170 | direct local key retained |
 | turin | Augusta Taurinorum | 383580 | 45.07178, 7.68600 | direct local key retained |
+| vicenza | Vicetia | 393513 | 45.54577, 11.54028 | direct local key retained |
 
 The source notation `PLE:<id>` in
 `dynamic_location_name_overrides.csv` resolves to
