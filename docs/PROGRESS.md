@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-23 - Direct High Empires and Crisis icon batch
+
+- Added direct, ledger-bound illustrations for Law of Persons, High Empire
+  Administration, and Crisis Coinage. The planned binding rises to twenty-nine
+  individual advance illustrations.
+- Reviewed the final 256px contact sheet. It confines the assets to blank legal,
+  administrative, and monetary materials, without asserting a named law, court,
+  person, status, empire, emperor, ruler, office, city, province, mint,
+  denomination, reform, crisis event, or procedure.
+- `gmake validate` passed with twenty-nine direct advance icons. The controlled
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: continue the ledger-driven direct-art migration in small, inspected
+batches while preserving exact one-icon-to-one-advance bindings.
+
 ## 2026-07-23 - Direct High Empires registry-icon batch
 
 - Added direct, ledger-bound illustrations for Municipal Accounting, Estate

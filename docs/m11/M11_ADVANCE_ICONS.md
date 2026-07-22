@@ -34,7 +34,7 @@ until their individually reviewed asset chains exist. This prevents a missing
 or speculative illustration from appearing in game while making every finished
 icon visible immediately.
 
-The first twenty-six direct icons are `antq_imperial_cult`, a restrained
+The first twenty-nine direct icons are `antq_imperial_cult`, a restrained
 early-imperial civic altar; `antq_public_granaries`, an uninscribed grain-store
 facade; `antq_provincial_census`, an uninscribed counting table;
 `antq_tax_registers`, a wax-tablet and storage-jar still life;
@@ -48,13 +48,16 @@ icons for `antq_professional_standing_armies`, `antq_auxiliary_service`, and
 `antq_jurists_law`, `antq_commentary_schools`, and
 `antq_provincial_assizes`; three accounting-and-correspondence-context icons for
 `antq_municipal_accounting`, `antq_estate_registries`, and
-`antq_imperial_rescripts`; plus the exchange-context
+`antq_imperial_rescripts`; three law-administration-and-coinage icons for
+`antq_law_of_persons`, `antq_high_empire_administration`, and
+`antq_crisis_coinage`; plus the exchange-context
 `antq_monsoon_navigation`, `antq_red_sea_piloting`, and
 `antq_caravan_accounting`; and the learning-context `antq_paper_precursors`,
 `antq_bamboo_registers`, and `antq_library_catalogues`. They are broad cult,
 provisioning, administrative, road-maintenance, civic-document, dispatch,
 archive, civil-survey, legal-study, hearing, service, equipment, training,
-accounting, registry, correspondence, maritime, and trade contexts, not depictions of a
+accounting, registry, correspondence, law, administration, coinage, maritime,
+and trade contexts, not depictions of a
 named god, altar, priest, monument, horreum, census figure, tax regime,
 inscription, court, law, municipality, charter, frontier, route, ruler, army,
 legion, individual, ethnicity, unit, battle, ship, port, cargo, crew, inventor,
@@ -145,6 +148,16 @@ They do not identify a municipality, estate, owner, emperor, ruler, court,
 office, city, province, empire, tax, currency, law, decree, procedure, register,
 text, or inscription. The reviewed source/master batch is
 [here](DIRECT_ADVANCE_ICON_BATCH_09.png).
+
+### Batch ten review
+
+The law-administration-and-coinage illustrations use blank wax tablets, a scale,
+measuring rod, stylus, clay disk, cup, writing board, tally tags, document pouch,
+ink cup, cord, weight, uninscribed coin discs, stone weights, cloth pouch, and
+clay tray. They do not identify a law, code, court, person, status, empire,
+emperor, ruler, office, city, province, mint, denomination, reform, crisis
+event, procedure, date, text, inscription, or portrait. The reviewed
+source/master batch is [here](DIRECT_ADVANCE_ICON_BATCH_10.png).
 
 ## Engine and asset verification
 
