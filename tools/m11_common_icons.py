@@ -123,18 +123,14 @@ INSTITUTION_ICONS = (
         "assets_queue/generated_sources/antq_institution_christian_monasticism_source.png",
         "assets_queue/generated/antq_institution_christian_monasticism_128.png",
     ),
-    # The image service returned no new artifact after two narrow requests;
-    # a reviewed scroll motif is deliberately shared as the conservative proxy.
     InstitutionIcon(
         "antq_theological_orthodoxy",
-        "assets_queue/generated_sources/antq_institution_hellenism_source.png",
+        "assets_queue/generated_sources/antq_institution_theological_orthodoxy_source.png",
         "assets_queue/generated/antq_institution_theological_orthodoxy_128.png",
     ),
-    # The reviewed civilian-migration icon is deliberately shared for the
-    # settlement side of the foederati concept; it depicts no armed person.
     InstitutionIcon(
         "antq_foederati_statecraft",
-        "assets_queue/generated_sources/antq_advance_migrations_source.png",
+        "assets_queue/generated_sources/antq_institution_foederati_statecraft_source.png",
         "assets_queue/generated/antq_institution_foederati_statecraft_128.png",
     ),
 )
@@ -205,6 +201,10 @@ def validate() -> None:
             f"definitions-only={sorted(institution_keys - mapped_institutions)}, "
             f"icons-only={sorted(mapped_institutions - institution_keys)}"
         )
+    if len({icon.source for icon in INSTITUTION_ICONS}) != len(INSTITUTION_ICONS):
+        raise ValueError("M11 institution icons must not share a generated source")
+    if len({icon.master for icon in INSTITUTION_ICONS}) != len(INSTITUTION_ICONS):
+        raise ValueError("M11 institution icons must not share a generated master")
     vanilla_dir = game_dir() / "game/main_menu/gfx/interface/icons/religion"
     for icon in RELIGION_ICONS:
         source = vanilla_dir / f"{icon.vanilla_source}.dds"
