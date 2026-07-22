@@ -232,7 +232,7 @@ antq_mint_accounting = {
 
 antq_regional_commands = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_regional_commands
 	depth = 4
 	research_cost = 8.0
 	requires = antq_mint_accounting
@@ -241,7 +241,7 @@ antq_regional_commands = {
 
 antq_emergency_rescripts = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_emergency_rescripts
 	depth = 5
 	research_cost = 8.5
 	requires = antq_regional_commands
@@ -250,7 +250,7 @@ antq_emergency_rescripts = {
 
 antq_grain_annona = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_grain_annona
 	depth = 6
 	research_cost = 9.0
 	requires = antq_emergency_rescripts
