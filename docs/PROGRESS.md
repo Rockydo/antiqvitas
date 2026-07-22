@@ -4244,6 +4244,17 @@ separate Han runtime-regency blocker.
   Vulkan; its full evidence record is
   `docs/playtests/M12_DX12_RENDERER_20260722.md`. M12 remains renderer-blocked.
 
+## 2026-07-22 - Continuation blocker audit
+
+- Re-read Part I, inspected the current TODO and all residual acceptance gaps.
+  There is no unblocked repository task: M5 and M6 retain their separate local
+  engine-contract findings, and M7/M8/M10/M12 require the shared sustained
+  Observer run.
+- Recorded the exact EU5 build, executable digest, GPU, and driver fingerprint
+  for the Vulkan/DX12 C0000005 reproductions in `BLOCKERS.md`. The worktree
+  remains validation-green; resume runtime gates only on a material external
+  game or driver change.
+
 ## 2026-07-22 - M12 non-debug pacing measurement
 
 - The automated no-debug Observer run reached 11:00 on 18 March AD 1 from the

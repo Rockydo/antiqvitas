@@ -899,3 +899,18 @@ are retained under `baselines/runtime/` and
 The alternate native backend is now exhausted. Do not repeat Vulkan or DX12
 unchanged; resume this gate only after a material game build, GPU driver, or
 renderer change.
+
+## 2026-07-22 - Renderer reproduction fingerprint
+
+The four Observer reproductions were made against EU5 1.3.11 (Steam app
+`3450310`, build `24187685`; `eu5.exe` SHA-256
+`C0DB888DA5E132CD6AB50C2C531C7CAE419488BEA0054CF8AC348616332683EF`) on an
+NVIDIA GeForce RTX 3080 with driver 591.86 (Windows driver
+`32.0.15.9186`, dated 20 January 2026). Both locally exposed backends, Vulkan
+and DX12, end in the FSR/NGX C0000005 family despite Upscale Method and Quality
+being disabled in the game UI.
+
+This is a reproducibility fingerprint, not a claim that a particular component
+is defective. A later game build or GPU-driver change is the next materially
+different test condition; no repository-only content or configuration edit is
+left that can discharge the long-observer acceptance gate.
