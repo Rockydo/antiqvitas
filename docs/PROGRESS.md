@@ -4306,6 +4306,25 @@ maintain the separately prioritized Roman building and direct-art passes.
 Next: retain generic frontier forts until a direct AD 1 source supports a named
 site, while continuing the direct-art and period-name priorities.
 
+## 2026-07-22 - Castrum Mogontiacum frontier-building pass
+
+- Added `Castrum Mogontiacum` as the nineteenth named Roman civic/naval/frontier
+  special at Mainz. The City of Mainz dates Drusus' camp at the Main confluence
+  to 13 BC (with the broader foundation convention expressed as 13/12 BC), so
+  its conservative AD 1 presence is secure.
+- Extended the data-driven building contract with only installed defense-category,
+  stockade-employment, small-fort, garrison, and low non-propagating fort-level
+  terms. The named special represents timber-and-earth camp infrastructure;
+  it does not create a later stone fortress, two-legion force seed, or detailed
+  frontier system.
+- Added original, reviewed direct BC7 icon art and rebuilt the contact sheet.
+  `make validate` is green at 19 direct-icon Roman buildings and 47 M5/M7 start
+  buildings; controlled vanilla/mod smoke has zero new error-log lines.
+
+Next: research any additional named frontier site to this same evidence bar;
+otherwise retain the explicit M7 generic stockade proxies and proceed with the
+direct-art and period-name priorities.
+
 ## 2026-07-22 - Fresh-start diagnostic and smoke-control recovery
 
 - A new-game probe reaches the AD 1 country-selection map but exposes 327
