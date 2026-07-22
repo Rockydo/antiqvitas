@@ -34,13 +34,14 @@ until their individually reviewed asset chains exist. This prevents a missing
 or speculative illustration from appearing in game while making every finished
 icon visible immediately.
 
-The first direct icon is `antq_imperial_cult`: a restrained early-imperial
-civic altar, laurel wreath, incense burner, and votive bowl. It is an
-appropriate broad cult context, not a depiction of a named god, altar,
-priest, monument, ritual, or state doctrine. The direct ledger records the
-subject, confidence, status, and non-reconstructive boundary for every future
-row. The required final state is 250 completed direct rows and no remaining
-transitional binding.
+The initial direct icons are `antq_imperial_cult`, a restrained early-imperial
+civic altar with a laurel wreath, incense burner, and votive bowl, and
+`antq_public_granaries`, an uninscribed grain-store facade with sacks and
+amphorae. They are broad cult and provisioning contexts, not depictions of a
+named god, altar, priest, monument, horreum, ritual, or state doctrine. The
+direct ledger records the subject, confidence, status, and non-reconstructive
+boundary for every future row. The required final state is 250 completed direct
+rows and no remaining transitional binding.
 
 ## Engine and asset verification
 
