@@ -53,6 +53,8 @@ ROAD_SEGMENTS = ROOT / "docs/m5/road_segments.csv"
 DEVELOPMENT_PROFILE = ROOT / "docs/m5/development_profile.csv"
 SPECIAL_BUILDINGS = ROOT / "docs/m5/special_buildings.csv"
 ROMAN_BUILDINGS = ROOT / "docs/m5/roman_buildings.csv"
+REGIONAL_BUILDINGS = ROOT / "docs/m5/regional_building_families.csv"
+REGIONAL_BUILDING_SEEDS = ROOT / "docs/m5/regional_building_seeds.csv"
 HISTORIC_BUILDING_SITES = ROOT / "docs/m5/historic_building_sites.csv"
 M7_FORTS = ROOT / "docs/m7/forts.csv"
 M7_ARMIES = ROOT / "docs/m7/armies.csv"
@@ -239,9 +241,14 @@ def urban_manager() -> tuple[str, int]:
 
 
 def special_building_manager() -> tuple[str, int, int]:
-    """Render source-led M5 buildings and M7 fort proxies with verified owners."""
+    """Render source-led M5 buildings, regional production families, and M7 forts."""
     required = ("key", "location", "building", "level", "source", "confidence", "note")
     entries = [(row, "M5") for row in csv_rows(SPECIAL_BUILDINGS)]
+    for row in csv_rows(REGIONAL_BUILDING_SEEDS):
+        entry = dict(row)
+        entry["building"] = row["family"]
+        entry["level"] = "1"
+        entries.append((entry, "M5 regional"))
     entries.extend((row, "M7") for row in csv_rows(M7_FORTS))
     if not entries:
         raise ValueError("special_buildings.csv has no specialist-building entries")
@@ -252,6 +259,8 @@ def special_building_manager() -> tuple[str, int, int]:
     # rows are checked by tools/m5_roman_buildings.py before this manager is
     # emitted; include only its explicit antq_ keys here.
     with ROMAN_BUILDINGS.open(encoding="utf-8-sig", newline="") as handle:
+        buildings.update((row.get("key") or "").strip() for row in csv.DictReader(handle))
+    with REGIONAL_BUILDINGS.open(encoding="utf-8-sig", newline="") as handle:
         buildings.update((row.get("key") or "").strip() for row in csv.DictReader(handle))
     urban_locations = {row["location"].strip() for row in csv_rows(URBAN_NODES)}
     owners: dict[str, str] = {}
@@ -310,8 +319,8 @@ def special_building_manager() -> tuple[str, int, int]:
             failures.append(f"{layer} building ledger {key} uses unknown installed location {location}")
         if location not in owners:
             failures.append(f"{layer} building ledger {key} has no controlled AD 1 location")
-        if layer == "M5" and location not in urban_locations | historic_sites:
-            failures.append(f"special_buildings.csv {key} is not an AD 1 market node or historic site")
+        if layer in {"M5", "M5 regional"} and location not in urban_locations | historic_sites:
+            failures.append(f"{layer} building ledger {key} is not an AD 1 market node or historic site")
         if layer == "M7" and building != "stockade":
             failures.append(f"forts.csv {key} must use the verified stockade proxy")
         if building not in buildings:
@@ -326,7 +335,7 @@ def special_building_manager() -> tuple[str, int, int]:
     if failures:
         raise ValueError("\n".join(sorted(set(failures))))
     lines = [
-        "# M5 specialist buildings plus M7 castra/limes proxies; source rationale: docs/m5/ and docs/m7/.",
+        "# M5 specialist/regional-production buildings plus M7 castra/limes proxies; source rationale: docs/m5/ and docs/m7/.",
         "building_manager = {",
     ]
     for row, _layer in sorted(entries, key=lambda item: item[0]["key"]):
