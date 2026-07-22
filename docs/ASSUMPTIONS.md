@@ -3285,3 +3285,13 @@ its AD 21-23 construction is outside the start date. Sources weighed:
 `DAR-NAVALIA` in `docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`; Turismo Roma,
 `Castro Pretorio`. [secure broad context; contested city-point and functional
 representation]
+
+## 2026-07-22 - Imperial Cult advance art is intentionally non-reconstructive
+
+The first direct M8 icon uses an uninscribed generic civic altar, laurel
+wreath, incense burner, and votive bowl. These provide broad early-imperial
+Roman civic-cult context without assigning an image to a particular deity,
+temple, altar, priest, province, ritual, or constitutional doctrine. It should
+not be read as evidence for a uniform cult practice or an iconographic standard
+in AD 1. Sources weighed: plan sections 15 and 20; local M8 advance contract.
+[secure broad context; contested visual representation]

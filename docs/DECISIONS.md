@@ -2208,3 +2208,15 @@ The definition deliberately copies the stockade's non-propagating low-fort
 behavior, then uses substantially smaller garrison/unrest effects. This models
 a timber-and-earth camp without importing later stone fortification, an AD 1
 unit roster, a fixed legion count, or a complete German frontier map.
+
+## 2026-07-22 - M8 uses a checked per-advance art migration
+
+The former five age-group advance illustrations remain available only as a
+transitional fallback. The user-facing final requirement is one dedicated
+illustration per advance, but generating all 250 before a single engine check
+would conceal broken binding and DDS assumptions. M8 therefore reads a
+completed-row ledger and swaps only that advance's icon identifier; its M11
+validator requires the real known advance/age, source PNG, 256px master, BC7
+DDS, one tree use, and adjusted group count. This is a technical migration
+decision, not a claim that an icon's broad visual motif reconstructs a
+historical object or practice.

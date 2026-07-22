@@ -1,5 +1,23 @@
 # Progress
 
+## 2026-07-22 - Direct advance-art migration started
+
+- Replaced the former all-or-nothing group-art assumption with a safe,
+  ledger-driven migration: each completed advance receives its own source PNG,
+  reviewed 256px master, BC7 DDS, and exact M8-tree icon binding, while the
+  five age motifs remain only for unfinished rows.
+- The first completed icon is the Principate advance `Imperial Cult`, using a
+  deliberately non-reconstructive civic altar, wreath, incense burner, and
+  votive bowl rather than a named deity, person, monument, or rite.
+- The validator now checks the completed icon's known advance key and age,
+  direct source/master/DDS chain, exactly-one tree use, and the adjusted age
+  fallback count. `gmake validate` and the controlled vanilla/enabled
+  `gmake smoke` both passed; smoke found zero new mod-only error-log lines.
+  The end state remains 250 direct advances with no fallback.
+
+Next: continue direct advance art alongside source-led Roman building and AD 1
+location-name work.
+
 ## 2026-07-22 - M5 merchant contract narrowed; unproven capacity calibration rejected
 
 - Read the installed Create Trade generic action: it requires merchant-market
