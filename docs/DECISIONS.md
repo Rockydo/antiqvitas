@@ -2283,3 +2283,13 @@ goods without producing, moving, or quantifying them. Aqua Alsietina likewise
 uses only small infrastructure modifiers. Both names/configurations remain
 explicitly contested where the sources require it, and neither substitutes for
 a tested market relation or a full urban water-distribution simulation.
+
+## 2026-07-22 - Augustan public spaces are not automated spectacles or clocks
+
+The existing cultural-building contract can convey public-space context, but
+cannot model a naval performance or calendar system faithfully. Naumachia and
+Horologium therefore receive distinct, modest one-level cultural specials: the
+former has maintenance for water-display infrastructure and the latter uses
+copper solely as the engine proxy for bronze. Neither creates a battle, an
+observer spectacle, a timekeeping effect, exact dimensions, or a reconstructed
+Campus Martius plan.

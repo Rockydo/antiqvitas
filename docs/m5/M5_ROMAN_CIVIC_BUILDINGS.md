@@ -52,6 +52,12 @@ The Curia Iulia uses a narrow government-and-records proxy rather than setting a
 
 Porticus Aemilia uses a trade contract with a broad but deliberately non-quantified handling demand for grain, wine, olives, fish, salt, pottery, lumber, and tools. It does not claim a particular annual cargo, ship type, warehouse plan, or a settled debate over the building's ancient name. Aqua Alsietina uses only modest capacity and food context with masonry, tools, and pottery upkeep; it does not construct a Naumachia, assign water volume, or reproduce a distribution network. Their direct illustrations distinguish the active river warehouse from low practical water infrastructure.
 
+### Naumachia and solar-calendar additions
+
+`DAR-NAUMACHIA` is Digital Augustan Rome's [Naumachia record](https://www.digitalaugustanrome.org/records/naumachia/): Augustus' Trans-Tiberim basin was dedicated in 2 BC for aquatic displays, with a central island and a bridge reported in the sources. `DAR-HOROLOGIUM` is its [Horologium Augusti record](https://www.digitalaugustanrome.org/records/horologium-augusti/): the 10 BC Campus Martius monument used an obelisk gnomon and bronze meridian line, but its complete layout is debated.
+
+The Naumachia is only a public aquatic-display proxy with modest cultural and upkeep context. It does not script a battle, capacity, spectator list, or a reconstruction of the basin. The Horologium is only an open solar-calendar-space proxy; copper is the engine-good stand-in for bronze, not a material inventory, and the special does not claim a full clock, calendar marks, or plaza plan.
+
 ## Technical mapping
 
 The definitions use only contracts read from the installed build's
@@ -64,7 +70,7 @@ Their start-state presence is rendered through the existing verified
 
 ## Art review
 
-The direct Pantheum Agrippae, Saepta Iulia, Diribitorium, Temple of Apollo, Palatine Library, Curia Iulia, Porticus Octaviae, Emporium warehouse, and Aqua Alsietina source images were
+The direct Pantheum Agrippae, Saepta Iulia, Diribitorium, Temple of Apollo, Palatine Library, Curia Iulia, Porticus Octaviae, Emporium warehouse, Aqua Alsietina, Naumachia, and Horologium source images were
 visually reviewed, cropped to 128px masters, converted to direct BC7 DDS
 files, and added to [the contact sheet](ROMAN_BUILDING_ICON_CONTACT_SHEET.png)
 alongside the existing named-building set.
