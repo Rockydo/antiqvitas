@@ -360,7 +360,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Guard four optional-government and three HRE special-status CoA predicates through a checked exact-name overlay; fresh AD 1 observer initialization has zero former CoA scope errors.
 - [x] Guard the installed Catalan Sitges-capital flag predicate through a checked exact-name overlay; a fresh AD 1 observer initialization has zero script-system errors.
 - [ ] Complete runtime pacing/growth/inflation balance from observer measurements (the renderer blocker and remaining runtime-surface audit are recorded in `BLOCKERS.md`).
-- [ ] Run autonomous observer game to 476 with decade screenshots and live log watch (event-graph coverage is green; two material renderer profiles reproduce the FSR crash, and the player-context legacy-scope audit is separately deferred after two attempts in `BLOCKERS.md`).
+- [ ] Run autonomous observer game to 476 with decade screenshots and live log watch (event-graph coverage is green; the two renderer profiles plus the rejected debug `tick_day` probe reproduce the FSR crash, the stable non-debug profile has no console, and the player-context legacy-scope audit is separately deferred in `BLOCKERS.md`).
 - [x] Finish README, known issues, packaging notes, static finale verification, and the full surface-area inventory audit.
 - [x] Disable the eleven installed anachronistic generic mission packs through checked exact-name visibility overlays; retain their keys for engine references.
 - [x] Pin a static player-facing anachronism audit across all 17 English localization files, with the client-language mirror contract checked separately.

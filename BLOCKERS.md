@@ -833,3 +833,27 @@ anchors but emits no pre-game `add_market` records. The installed game's own
 initializer visibly creates runtime markets during the clean Observer control.
 Do not restore an explicit seed without a materially different local contract
 and a fresh post-February zero-assertion run.
+
+## 2026-07-22 - Debug `tick_day` cannot replace an Observer chronology run
+
+Status: **blocked after a third material renderer-path reproduction; retain the
+non-debug first-month Observer checkpoint only.**
+
+The locally harvested console reference documents `tick_day <days>`, so a
+paused debug Observer session was given `tick_day 365` after the project
+calendar validated AD 2. The screen reached only 13:00 on 31 January AD 1,
+emitted repeated unset-market generic-action scopes, and exited. The crash at
+`G:\antiqvitas_user_data\crashes\Europa Universalis V20260722_032111` is the
+same `ffxFsr2ResourceIsNull` / `NVSDK_NGX_D3D12_Shutdown1` access-violation
+family as the two previously documented normal-play renderer profiles.
+
+The console batch is not a chronological substitute: it neither completed the
+requested tick count nor kept a live observer or market-action surface clean.
+Do not retry `tick_day` in debug mode. A non-debug console-capability probe is
+the remaining materially different option; a completed campaign still requires
+normal simulation and decade captures.
+
+The non-debug `time` probe reached a paused AD 1 Observer map but displayed no
+console surface and did not alter the map state. Thus the stable renderer
+profile cannot invoke `tick_day`; it cannot supply an accelerated campaign
+path without a game-supported release-console contract.

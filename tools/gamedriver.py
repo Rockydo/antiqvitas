@@ -169,11 +169,50 @@ def process_from_state() -> psutil.Process:
     return process
 
 
+def installed_game_processes(game_exe: Path) -> list[psutil.Process]:
+    """Return only processes whose executable is this configured EU5 install."""
+    expected = game_exe.resolve()
+    matches: list[psutil.Process] = []
+    for process in psutil.process_iter(("pid", "exe")):
+        try:
+            executable = process.info.get("exe")
+            if executable and Path(str(executable)).resolve() == expected:
+                matches.append(process)
+        except (psutil.AccessDenied, psutil.NoSuchProcess, OSError):
+            continue
+    return matches
+
+
+def stop_installed_game_processes(game_exe: Path, timeout: int) -> list[int]:
+    """Terminate stale sessions of the exact configured EU5 executable."""
+    processes = installed_game_processes(game_exe)
+    if not processes:
+        return []
+    pids = [process.pid for process in processes]
+    for process in processes:
+        try:
+            process.terminate()
+        except psutil.NoSuchProcess:
+            pass
+    _, alive = psutil.wait_procs(processes, timeout=timeout)
+    for process in alive:
+        try:
+            process.kill()
+        except psutil.NoSuchProcess:
+            pass
+    if alive:
+        psutil.wait_procs(alive, timeout=10)
+    return pids
+
+
 def launch(args: argparse.Namespace) -> int:
     ensure_steam()
     cfg = config()
     user_dir = Path(str(cfg["user_dir"]))
     game_exe = Path(str(cfg["game_exe"]))
+    stale = stop_installed_game_processes(game_exe, timeout=10)
+    if stale:
+        print(f"gamedriver: stopped stale configured EU5 session(s): {stale}")
     close_game_crash_reporters(game_exe)
     set_fixed_settings(user_dir)
     logs = user_dir / "logs"
@@ -708,24 +747,12 @@ def observer_run(args: argparse.Namespace) -> int:
 
 def stop(args: argparse.Namespace) -> int:
     game_exe = Path(str(config()["game_exe"]))
-    try:
-        process = process_from_state()
-    except (FileNotFoundError, psutil.NoSuchProcess):
-        close_game_crash_reporters(game_exe)
-        print("gamedriver: already stopped")
-        return 0
-    try:
-        if process.is_running():
-            process.terminate()
-            try:
-                process.wait(timeout=args.timeout)
-            except psutil.TimeoutExpired:
-                process.kill()
-                process.wait(timeout=10)
-    except psutil.NoSuchProcess:
-        pass
+    stopped = stop_installed_game_processes(game_exe, timeout=args.timeout)
     close_game_crash_reporters(game_exe)
-    print("gamedriver: stopped")
+    if stopped:
+        print(f"gamedriver: stopped configured EU5 session(s): {stopped}")
+    else:
+        print("gamedriver: already stopped")
     return 0
 
 
