@@ -44,6 +44,7 @@ validate:
 	.venv/Scripts/python.exe tools/ownership_map.py --check
 	.venv/Scripts/python.exe tools/territory_coverage.py
 	.venv/Scripts/python.exe tools/generate_start_mirror.py --check
+	.venv/Scripts/python.exe tools/m3_political_map.py
 	.venv/Scripts/python.exe tools/dates.py --check-m2
 	.venv/Scripts/python.exe tools/popcheck.py
 

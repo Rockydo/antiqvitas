@@ -1,5 +1,19 @@
 # Technical and Design Decisions
 
+## 2026-07-22 - M3 acceptance proves the political map, not later systems
+
+M3's master-plan acceptance is an AD 1 Earth political map containing every
+§8 polity with no vanilla 1337 country-start layer. The project now verifies
+that directly with a focused static census of the roster, runtime tags,
+definitions, exact manager mirror, capitals, and ownership ledger, plus a
+fresh paused Observer map.
+
+The earlier month-long M3 observer finding correctly exposed systems that were
+then still owned by M5, M6, and M9. It is not a reason to redefine the stated
+map criterion as a long AI simulation. The unresolved Han minority-regency
+binding remains M6 work, and sustained observer evidence remains M7/M8/M10/M12
+work; neither is silently accepted by the M3 tag.
+
 ## 2026-07-22 - M9 foundation acceptance is a paused AD 1 web gate
 
 The master plan assigns M9 a concrete founding-state acceptance: diplomacy

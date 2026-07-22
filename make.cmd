@@ -55,6 +55,7 @@ exit /b 2
 "%PYTHON%" tools\ownership_map.py --check || exit /b 1
 "%PYTHON%" tools\territory_coverage.py || exit /b 1
 "%PYTHON%" tools\generate_start_mirror.py --check || exit /b 1
+"%PYTHON%" tools\m3_political_map.py || exit /b 1
 "%PYTHON%" tools\dates.py --check-m2 || exit /b 1
 "%PYTHON%" tools\popcheck.py || exit /b 1
 exit /b 0
