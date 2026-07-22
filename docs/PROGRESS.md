@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-22 - Direct Principate learning-icon batch
+
+- Added direct, ledger-bound illustrations for Paper Precursors, Bamboo
+  Registers, and Library Catalogues. The checked migration will rise to
+  fourteen individual advance illustrations once the binding and smoke gate
+  complete.
+- Added `SIA-TABLETS` and `MET-HAN` to the source ledger. The images are
+  strictly uninscribed material contexts and make no claim about an inventor,
+  recipe, text, catalogue, office, or named library.
+- `gmake validate` passed with fourteen direct advance icons. The controlled
+  vanilla/enabled `gmake smoke` pair rendered both menus with zero new mod-only
+  error-log lines.
+
+Next: continue the ledger-driven direct-art migration in small, inspected
+batches while preserving exact one-icon-to-one-advance bindings.
+
 ## 2026-07-22 - Direct Principate exchange-icon batch
 
 - Added direct, ledger-bound illustrations for Monsoon Navigation, Red Sea
