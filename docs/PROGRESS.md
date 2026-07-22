@@ -4,7 +4,7 @@
 
 - Added eleven secure Pleiades-to-installed-map names: Arretium, Bergomum,
   Brixia, Caralis, Comum, Mediolanum, Pisaurum, Patavium, Tridentum,
-  Tergeste, and Vicetia. The curated layer now holds 52 names alongside 61
+  Tergeste, and Vicetia. The curated layer now holds 51 names alongside 61
   coordinate-verified capital anchors.
 - Each candidate was retained only after its cached Pleiades point projected
   directly onto the installed game location; ambiguous nearby or later sites
@@ -15,6 +15,25 @@
 
 Next: return to source-led Roman buildings and direct UI art, then continue
 period-name work only through similarly exact reviewed matches.
+
+## 2026-07-22 - Palatine temple and library building pass
+
+- Added two separately sourced and directly illustrated Rome specials: the
+  `Templum Apollinis in Palatio`, dedicated in 28 BC, and the Palatine
+  `Bibliotheca Latina Graecaque`, in use by about 23 BC. The latter is
+  explicitly contested only where the Augustan plan and exact opening sequence
+  are uncertain.
+- The temple uses a restrained cult contract with incense, wine, marble, and
+  tools. The library uses a distinct cultural contract with books, beeswax,
+  marble, and tools; its `books` good is documented as a scroll-collection
+  proxy rather than a claim about codices or an inventory.
+- Visually reviewed the refreshed 24-cell direct-icon contact sheet. `gmake
+  validate` passed with 24 named Roman icon contracts and 5,588 localized
+  entries; the controlled vanilla/enabled smoke pair reached rendered menus
+  with zero new mod-only error-log lines.
+
+Next: continue the unblocked Roman building queue using exact AD 1 sources,
+period-appropriate goods, and individual direct illustrations.
 
 ## 2026-07-22 - Campus Martius building and goods pass
 
