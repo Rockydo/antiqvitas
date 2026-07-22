@@ -2081,7 +2081,8 @@ material renderer change, not an unsupported launch switch or a game-install
 edit.
 
 After DX12 reached a clean AD 1 Observer map and advanced to 18:00 on 13 January
-without exiting, the autonomous driver was launched for a bounded three-day
-maximum-speed interval. Its independent stdout/stderr logs are kept under
-`baselines/runtime/`; the result must be assessed before M12's renderer blocker
-is closed or retained.
+without exiting, the autonomous driver was launched for a bounded maximum-speed
+interval. Its clean 3 March checkpoint justified extending the independent
+controller to sixteen days with hourly captures. Its stdout/stderr logs are kept
+under `baselines/runtime/`; the result must be assessed before M12's renderer
+blocker is closed or retained.

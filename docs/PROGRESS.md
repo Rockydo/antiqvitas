@@ -4239,10 +4239,10 @@ separate Han runtime-regency blocker.
   local RTX 3080, entered AD 1 Observer, and advanced to 18:00 on 13 January
   before the first short controller interval was stopped by its shell timeout,
   not a game exit.
-- A three-day maximum-speed driver interval is now running independently, with
-  hourly screenshots and five-minute log-status entries under
-  `baselines/runtime/`. Its terminal result determines whether the prior Vulkan
-  renderer blocker remains applicable.
+- A clean checkpoint at 14:00 on 3 March justified extending the independent
+  maximum-speed driver to sixteen days, with hourly screenshots and five-minute
+  log-status entries under `baselines/runtime/`. Its terminal result determines
+  whether the prior Vulkan renderer blocker remains applicable.
 
 ## 2026-07-22 - M12 non-debug pacing measurement
 
