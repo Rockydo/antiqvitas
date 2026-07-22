@@ -1,5 +1,24 @@
 # Progress
 
+## 2026-07-22 - Regional antique production-building system
+
+- Added ten direct-art reusable production families and 112 start placements:
+  55 in Europe, 15 in North Africa, and 42 in the Middle East. The families
+  are olive and wine presses, fish salteries, pottery kilns, fullonicae,
+  glassworks, dye workshops, metalwork shops, stone yards, and shipyards.
+- Kept the system dense without fabricating 112 unique monuments. Each seed is
+  explicitly a contested city-market/hinterland proxy, while the production
+  classes themselves are source-led and their maintenance uses appropriate
+  existing antique goods.
+- Reviewed the ten-icon direct-art contact sheet; generated BC7 DDS files and
+  source masters are checked by `tools/m5_regional_buildings.py`. `gmake
+  validate` passed with 5,636 localized entries and the start mirror now has
+  170 M5/M7 building placements. The controlled vanilla/enabled `gmake smoke`
+  pair rendered menus with zero new mod-only error-log lines.
+
+Next: extend direct art beyond buildings and continue exact period-name work,
+starting with the most-visible remaining Roman-world locations.
+
 ## 2026-07-22 - Augustan public-spaces pass
 
 - Added direct illustrated specials for the Naumachia Augusti (2 BC) and the

@@ -1,5 +1,29 @@
 # Historical Assumptions
 
+## 2026-07-22 - Regional production placements represent city markets and hinterlands
+
+The 112 M5 regional-production placements represent the working economic
+landscape of an AD 1 city and its connected hinterland, not individually
+excavated workshops inside each installed EU5 location polygon. Direct evidence
+supports the production classes: olive-oil factory contexts, amphora-borne
+wine/oil trade, Baelo's fish-salting works, early imperial ceramic workshops,
+Pompeian fulling/textile craft, Roman glasswork's eastern-Mediterranean
+lineage, and Tyre's purple-dye association. It does not support a named
+artisan, exact workshop plan, workforce, output, cargo volume, quarry, mine,
+or fleet at every seed.
+
+The family definitions are therefore secure where the broad craft class is
+documented; every city-point placement is contested. Europe, North Africa, and
+Middle East macro labels are a practical geographic audit, not a claim about
+the political region of the current AD 1 owner.
+
+Sources: `MET-ROMAN-HOUSING`; `MET-ROMAN-TRADE`; `BAELO-SALTERY`;
+`BM-ARRETINE`; `BM-MEMPHIS`; `POM-FULLONICA`; `MET-ROMAN-GLASS`;
+`UNESCO-TYRE`; `P12.1`, all catalogued in `docs/world_1ad/SOURCES.md`.
+
+[secure production-class contexts; contested individual location, scale,
+workforce, output, and exact archaeological attribution]
+
 ## 2026-07-22 - Annona sources use bounded installed-location proxies
 
 The Augustan grain supply drew chiefly on Sicily, Sardinia, Africa, and, from
