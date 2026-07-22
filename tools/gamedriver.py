@@ -116,6 +116,11 @@ def set_fixed_settings(user_dir: Path) -> None:
             "render_scale": 0.7,
             "vsync": False,
             "setting_framerate_cap": "30",
+            # The installed settings tooltip documents this as the maximum-speed
+            # simulation priority toggle.  It is especially appropriate for
+            # long autonomous Observer runs, where capture cadence matters more
+            # than a smooth rendered frame rate.
+            "maximize_tick_speed": True,
             "quality": "very_low",
             "mapobject_quality": "off",
             "anti_aliasing": "DISABLED",
@@ -176,9 +181,10 @@ def launch(args: argparse.Namespace) -> int:
     command = [
         str(game_exe),
         f"--user_dir={user_dir}",
-        "-debug_mode",
         "--ignore-disable-mods-on-crash",
     ]
+    if args.debug_mode:
+        command.append("-debug_mode")
     if args.leavepops:
         command.append("-leavepops")
     command.extend(args.extra)
@@ -594,6 +600,112 @@ def key(args: argparse.Namespace) -> int:
     return 0
 
 
+def observer_pause_banner(image) -> tuple[bool, float]:
+    """Detect the centered red `Game is Paused` banner in the fixed EU5 layout.
+
+    This deliberately uses only a narrow, stable UI region.  It avoids sending
+    a blind Space key while the game is already running, which would otherwise
+    alternate between accelerating and pausing an Observer playback run.
+    """
+    width, height = image.size
+    left = int(width * 0.42)
+    top = int(height * 0.16)
+    right = int(width * 0.58)
+    bottom = int(height * 0.24)
+    region = image.crop((left, top, right, bottom)).convert("RGB").resize((80, 40))
+    pixels = list(
+        region.get_flattened_data()
+        if hasattr(region, "get_flattened_data")
+        else region.getdata()
+    )
+    red = sum(
+        1
+        for value_r, value_g, value_b in pixels
+        if value_r >= 80 and value_r >= value_g * 1.45 and value_r >= value_b * 1.65
+    )
+    ratio = red / len(pixels)
+    return ratio >= 0.18, ratio
+
+
+def observer_run(args: argparse.Namespace) -> int:
+    """Autonomously keep an active Observer session running and capture evidence."""
+    import pyautogui
+
+    try:
+        process = process_from_state()
+    except (FileNotFoundError, psutil.NoSuchProcess):
+        print("gamedriver: no active game session", file=sys.stderr)
+        return 1
+    value = state()
+    user_dir = Path(str(value["user_dir"]))
+    error_log = user_dir / "logs" / "error.log"
+    error_size = error_log.stat().st_size if error_log.exists() else 0
+    session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
+    target_dir = ROOT / "docs/screens" / session
+    target_dir.mkdir(parents=True, exist_ok=True)
+    deadline = time.monotonic() + args.seconds
+    next_capture = time.monotonic()
+    next_status = time.monotonic()
+    captures = 0
+    resumes = 0
+    last_pause_state: bool | None = None
+
+    if args.maximum_speed:
+        # A direct UI coordinate is not stable here: in the current 1920px
+        # layout the former target is the multiplayer control.  Fresh Observer
+        # games enter paused; physical Space is the locally verified play
+        # toggle and keeps the existing maximum-tick-speed setting effective.
+        activate_window()
+        press_scan_code(0x39)
+        time.sleep(0.5)
+
+    while time.monotonic() < deadline:
+        try:
+            alive = process.is_running() and process.status() != psutil.STATUS_ZOMBIE
+        except psutil.NoSuchProcess:
+            alive = False
+        if not alive:
+            print("gamedriver: observer process exited", file=sys.stderr)
+            return 1
+        window = activate_window()
+        image = pyautogui.screenshot(
+            region=(window.left, window.top, window.width, window.height)
+        )
+        paused, red_ratio = observer_pause_banner(image)
+        if paused:
+            press_scan_code(0x39)
+            resumes += 1
+            time.sleep(0.35)
+        if time.monotonic() >= next_capture:
+            capture = target_dir / f"observer_{captures:04d}.png"
+            image.save(capture)
+            print(capture)
+            captures += 1
+            next_capture += args.capture_interval
+        current_error_size = error_log.stat().st_size if error_log.exists() else 0
+        if current_error_size != error_size:
+            print(
+                f"observer: error.log changed {error_size}->{current_error_size}",
+                flush=True,
+            )
+            error_size = current_error_size
+        if time.monotonic() >= next_status or paused != last_pause_state:
+            elapsed = args.seconds - max(0.0, deadline - time.monotonic())
+            print(
+                f"observer {elapsed:5.1f}s paused={paused} banner_red={red_ratio:.3f} "
+                f"resumes={resumes} captures={captures}",
+                flush=True,
+            )
+            last_pause_state = paused
+            next_status += args.status_interval
+        time.sleep(args.poll_interval)
+    print(
+        f"gamedriver: observer interval complete ({args.seconds:.1f}s; "
+        f"resumes={resumes}; captures={captures}; error_log={error_size})"
+    )
+    return 0
+
+
 def stop(args: argparse.Namespace) -> int:
     game_exe = Path(str(config()["game_exe"]))
     try:
@@ -623,6 +735,13 @@ def build_parser() -> argparse.ArgumentParser:
     launch_parser = sub.add_parser("launch")
     launch_parser.add_argument("--mode", choices=("vanilla", "mod"), default="mod")
     launch_parser.add_argument("--leavepops", action="store_true")
+    launch_parser.add_argument(
+        "--no-debug-mode",
+        action="store_false",
+        dest="debug_mode",
+        help="Launch without -debug_mode for a bounded non-debug renderer probe.",
+    )
+    launch_parser.set_defaults(debug_mode=True)
     launch_parser.add_argument("--hidden", action="store_true")
     launch_parser.add_argument("extra", nargs="*")
     launch_parser.set_defaults(func=launch)
@@ -689,6 +808,26 @@ def build_parser() -> argparse.ArgumentParser:
     key_parser.add_argument("--char", action="store_true")
     key_parser.add_argument("--settle", type=float, default=1)
     key_parser.set_defaults(func=key)
+    observer_parser = sub.add_parser("observer")
+    observer_parser.add_argument(
+        "--seconds", type=float, default=45, help="bounded playback interval"
+    )
+    observer_parser.add_argument(
+        "--capture-interval", type=float, default=10, help="seconds between captures"
+    )
+    observer_parser.add_argument(
+        "--status-interval", type=float, default=10, help="seconds between status lines"
+    )
+    observer_parser.add_argument(
+        "--poll-interval", type=float, default=1, help="pause/process polling interval"
+    )
+    observer_parser.add_argument("--session", help="evidence session directory")
+    observer_parser.add_argument(
+        "--maximum-speed",
+        action="store_true",
+        help="start a fresh paused Observer session at the configured maximum-tick setting",
+    )
+    observer_parser.set_defaults(func=observer_run)
     stop_parser = sub.add_parser("stop")
     stop_parser.add_argument("--timeout", type=int, default=10)
     stop_parser.set_defaults(func=stop)
