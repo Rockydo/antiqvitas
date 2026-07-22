@@ -1,5 +1,20 @@
 # Technical and Design Decisions
 
+## 2026-07-22 - RGO worker ceilings are not current-labour seeds
+
+The installed location-scoped `change_max_raw_material_workers` effect changes
+an RGO's maximum workforce; it does not allocate workers at an AD 1 start.
+A disposable Faiyum wheat calibration from six to 30 worker levels left the
+fresh Observer market output and capacity state unchanged through 21 January.
+The project therefore retains the reviewed source-led level of six and rejects
+using a larger ceiling as a synthetic annona or trade-route fix.
+
+The installed Create Trade generic action also requires source-market surplus
+and a merchant market with country capacity. Those predicates explain why a
+valid route syntax alone does not establish Roma grain imports. M5 remains
+blocked pending a locally documented, historically defensible source-surplus
+contract; no static transfer or current workforce is fabricated.
+
 ## 2026-07-22 - M3 acceptance proves the political map, not later systems
 
 M3's master-plan acceptance is an AD 1 Earth political map containing every

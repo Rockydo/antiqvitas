@@ -2,7 +2,8 @@
 
 ## 2026-07-22 - M5 annona routing lacks a demonstrated startup merchant contract
 
-Status: **deferred after two material local market-route attempts; runtime RGO
+Status: **deferred after two material local market-route attempts and a
+third, non-persistent merchant/surplus contract investigation; runtime RGO
 surface is recovered and green.**
 
 The earlier static `location_templates.txt` blocker is resolved only as a
@@ -27,9 +28,23 @@ Tried:
    Faiyum-market to Roma-market wheat order, then repeated it after adding a
    disposable Faiyum wheat stockpile. Neither post-tick export created a Roma
    import row.
+3. Read the installed `common/generic_actions/markets.txt` contract. It
+   selects a merchant market only where the country has merchant capacity and
+   requires `market_possible_goods_trade_surplus` for the source. Roma had
+   `8.0325` trade capacity, and the locally documented `add_merchant_power`
+   effect at the Roman capital logged `console_success`; however, the fresh
+   export had Alexandria wheat output `2.97569` against demand `9.79633`
+   (deficit `-6.82064`). A disposable Faiyum maximum-worker calibration from
+   6 to 30 passed static and smoke checks but, by 21 January, did not allocate
+   a worker or alter that output/capacity state. The engine effect changes a
+   ceiling, not current labour, so the calibration was regenerated back to the
+   source-led value before this record. A later `--already-open` console route
+   input logged no `console_success`; it is not counted as an attempted route
+   or as contrary evidence.
 
-Recovery: do not add a fabricated market transfer or claim an automatic route.
-Resume only after a materially different local engine contract identifies the
+Recovery: do not add a fabricated market transfer, fabricate workers, or claim
+an automatic route. Resume only after a materially different local engine
+contract can establish current RGO labour/source surplus, identifies the
 required merchant/market setup, or an installed-build change alters the route
 semantics. Preserve the runtime RGO renderer and continue with independent
 milestone work. Evidence: `docs/playtests/M5_TRADE_FLOW.md` and

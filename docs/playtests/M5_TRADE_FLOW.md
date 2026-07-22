@@ -59,3 +59,29 @@ pepper-to-Egypt acceptance pattern is not yet fully substantiated. The two
 bounded annona-route attempts are recorded in `BLOCKERS.md`; do not claim a
 trade result until a materially different local market-route contract is
 demonstrated.
+
+## Merchant and surplus follow-up
+
+The installed `common/generic_actions/markets.txt` Create Trade action requires
+a merchant market with capacity for the acting country and a positive
+`market_possible_goods_trade_surplus` at the source (or food in the source
+market). This is a material refinement of the earlier route probe. Roma's live
+market exposed `8.0325` trade capacity, and the local
+`capital.market.add_merchant_power` contract produced a `console_success`
+record, so neither mod visibility nor the merchant-power effect is the missing
+surface.
+
+The fresh live export instead showed Alexandria wheat output `2.97569`, demand
+`9.79633`, and a `-6.82064` market balance. A temporary source edit increased
+Faiyum's maximum workers from the source-led six to 30 solely to test whether
+the startup correction seeded current labour. The build passed validation and
+smoke, but a fresh paused Observer game had the same capacity/output state by
+21 January. The local `change_max_raw_material_workers` surface therefore sets
+a ceiling rather than labour; the edit and all derived output were regenerated
+back to their committed values before this report update.
+
+A direct route input sent with the driver's `--already-open` mode did not emit
+`console_success`, so it was not executed and is deliberately not treated as a
+failed route test. The remaining evidence gap is now precise: establish a
+locally supported way to create historical current source surplus (or an
+equivalent documented market setup) without inventing a transfer or workers.

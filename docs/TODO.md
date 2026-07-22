@@ -133,7 +133,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the Forum Romanum through the verified marketplace proxy without inventing a forum-specific building key or a reconstruction of its physical plan.
 - [x] Complete the independent M5 market, urban, building, harbor, road, and development surface: 42 market/urban nodes, eight source-labelled harbor tiers, Muza's roadstead warehouse, the historic-building anchors, and 43 audited road segments are present.
 - [x] Apply the 328 source-led RGO corrections through the locally proven runtime startup effect; register and locally seed all five custom goods.
-- [ ] Verify ancient trade flows; run milestone gate and tag `M5-done`. (Runtime RGO now works; the two bounded annona-route probes are deferred in `BLOCKERS.md`.)
+- [ ] Verify ancient trade flows; run milestone gate and tag `M5-done`. (Runtime RGO now works; M5 is deferred pending a locally supported source-surplus and merchant-market contract, documented in `BLOCKERS.md`.)
 
 ## M6 — Power
 
