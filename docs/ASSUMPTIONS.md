@@ -3358,3 +3358,17 @@ temple plan or a commercial arcade. Their effects convey only broad civic
 context. Sources weighed: `DAR-CURIA-IULIA` and `DAR-PORTICUS-OCTAVIAE` in
 `docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`. [secure broad context; contested
 architectural and institutional representation]
+
+## 2026-07-22 - Emporium and Alsietina stay bounded city-point proxies
+
+Digital Augustan Rome documents the Tiber-side Emporium warehouse and its
+large vaulting, but describes the traditional Porticus Aemilia identification
+as debated. It also documents Augustus' Aqua Alsietina and its irrigation and
+emergency-water roles while noting that much of its course and terminal area
+are reconstructed from Frontinus. The two AD 1 specials therefore mean a broad
+river-warehouse and waterwork context at the Rome point only. They do not fix
+an ancient building name, cargo inventory, route, distribution volume,
+Naumachia plan, or agricultural output. Sources weighed:
+`DAR-PORTICUS-AEMILIA` and `DAR-AQUA-ALSIETINA` in
+`docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`. [secure broad context; contested
+identification, layout, and economic representation]

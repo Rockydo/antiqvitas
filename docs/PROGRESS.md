@@ -52,6 +52,23 @@ Next: continue unblocked source-led Roman building work; retain the exact
 source and engine-contract threshold for every additional civic or frontier
 anchor.
 
+## 2026-07-22 - Roman trade and water infrastructure pass
+
+- Added the Tiber-side Emporium warehouse traditionally called Porticus
+  Aemilia as a contested named trade special. Its maintenance makes a bounded
+  demand for wheat, wine, olives, fish, salt, pottery, lumber, and tools;
+  it does not assert a cargo ledger or settle the name debate.
+- Added Aqua Alsietina as a contested practical waterwork, with only modest
+  capacity and food context plus masonry, tools, and pottery upkeep. Its icon
+  and contract exclude a Naumachia, water-volume figure, or full route map.
+- Visually reviewed the 28-icon contact sheet. `gmake validate` passed with
+  28 direct building-icon contracts and 5,600 localized entries; the
+  controlled vanilla/enabled smoke pair reached rendered menus with zero new
+  mod-only error-log lines.
+
+Next: continue the Roman building queue through source-led goods and
+infrastructure, then return to exact period-name expansion.
+
 ## 2026-07-22 - Campus Martius building and goods pass
 
 - Added three direct-icon Rome specials: Pantheum Agrippae (c. 27 BC), Saepta
