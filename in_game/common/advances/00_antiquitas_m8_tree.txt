@@ -464,7 +464,7 @@ antq_post_roman_statecraft = {
 
 antq_professional_standing_armies = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_professional_standing_armies
 	depth = 0
 	research_cost = 2.0
 	unlock_law = medieval_levy_law
@@ -475,7 +475,7 @@ antq_professional_standing_armies = {
 
 antq_auxiliary_service = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_auxiliary_service
 	depth = 1
 	research_cost = 2.5
 	unlock_law = tribal_religious_values_law
@@ -486,7 +486,7 @@ antq_auxiliary_service = {
 
 antq_drill_routines = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_drill_routines
 	depth = 2
 	research_cost = 3.0
 	unlock_law = tribal_organization_law
