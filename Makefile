@@ -11,6 +11,7 @@ validate:
 	.venv/Scripts/python.exe tools/generate_ancient_goods.py --check
 	.venv/Scripts/python.exe tools/generate_rgo_remap.py --check
 	.venv/Scripts/python.exe tools/m5_roman_buildings.py --check
+	.venv/Scripts/python.exe tools/m5_regional_buildings.py --check
 	.venv/Scripts/python.exe tools/m7_war.py --check
 	.venv/Scripts/python.exe tools/m8_knowledge.py --check
 	.venv/Scripts/python.exe tools/m9_diplomacy.py --check
