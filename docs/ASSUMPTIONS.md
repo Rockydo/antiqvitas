@@ -3345,3 +3345,16 @@ its lost interior decoration, cult image, rites, or later palace. Sources
 weighed: `DAR-APOLLO-PAL` and `DAR-BIBLIOTHECA-PAL` in
 `docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`. [secure broad context; contested
 architectural and administrative representation]
+
+## 2026-07-22 - Augustan civic-space specials avoid late reconstructions
+
+Digital Augustan Rome securely identifies the Curia Iulia as essentially built
+by Augustus in 29 BC, but treats the adjacent Chalcidicum's identity as
+debated. It identifies the Porticus Octaviae as a 27–23 BC restoration with
+library and civic rooms, while the sponsor and detailed arrangement remain
+uncertain. The Curia icon is therefore a generic early civic hall, not the
+later Diocletianic fabric; the Porticus is an open quadriporticus, not a mapped
+temple plan or a commercial arcade. Their effects convey only broad civic
+context. Sources weighed: `DAR-CURIA-IULIA` and `DAR-PORTICUS-OCTAVIAE` in
+`docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`. [secure broad context; contested
+architectural and institutional representation]
