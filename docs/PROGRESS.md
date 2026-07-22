@@ -35,6 +35,23 @@ period-name work only through similarly exact reviewed matches.
 Next: continue the unblocked Roman building queue using exact AD 1 sources,
 period-appropriate goods, and individual direct illustrations.
 
+## 2026-07-22 - Curia Iulia and Porticus Octaviae civic-space pass
+
+- Added the source-secure 29 BC Curia Iulia as a separate, restrained Senate
+  house and records special. Its icon is a rectangular civic hall, not a
+  temple or a copy of its later restoration.
+- Added the 27–23 BC Porticus Octaviae restoration as a separately contested
+  public-portico special. It models a public cultural space rather than
+  inventing a room plan, sponsor, market inventory, or a merged temple complex.
+- Reviewed the 26-icon contact sheet. `gmake validate` passed with 26 named
+  direct building-icon contracts and 5,594 localized entries; the controlled
+  vanilla/enabled smoke pair reached rendered menus with zero new mod-only
+  error-log lines.
+
+Next: continue unblocked source-led Roman building work; retain the exact
+source and engine-contract threshold for every additional civic or frontier
+anchor.
+
 ## 2026-07-22 - Campus Martius building and goods pass
 
 - Added three direct-icon Rome specials: Pantheum Agrippae (c. 27 BC), Saepta

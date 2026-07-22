@@ -2261,3 +2261,14 @@ control inputs. The local generic `books` good represents scroll collections;
 it is not relabelled or treated as evidence for a codex collection. This keeps
 both game-facing roles legible without inventing an unsupported palace,
 library-room, rite, staff, or inventory system.
+
+## 2026-07-22 - Curia Iulia and Porticus Octaviae are separate civic spaces
+
+The Curia Iulia and Porticus Octaviae sources describe materially different
+AD 1 civic environments, so they receive separate one-level specials rather
+than one generic "Roman civic complex." Curia's government contract carries
+modest control and records inputs; the portico's cultural contract carries
+only modest tradition and public-order context. The debated Chalcidicum,
+Porticus sponsor, internal room layout, individual temples, and any precise
+Senate procedure remain outside both effects. This preserves player-facing
+distinction without claiming an engine model of Roman constitutional practice.
