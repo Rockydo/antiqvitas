@@ -4233,6 +4233,16 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-22 - M12 non-debug pacing measurement
+
+- The automated no-debug Observer run reached 11:00 on 18 March AD 1 from the
+  1 January start, measuring 0.316792 simulated days/second (3.157 seconds per
+  day) before the known FSR/NGX crash.
+- The run stayed free of the repaired self-relation assertion, but the renderer
+  stopped it after 240 seconds. The report is
+  `docs/playtests/M12_NONDEBUG_PACING_20260722.md`; M12's long-run gate remains
+  renderer-blocked.
+
 ## 2026-07-22 - M6 direct-parent fixture is not a Han-regency fix
 
 - A fresh AD 1 mod start rendered Emperor Ping's source-attested maternal link

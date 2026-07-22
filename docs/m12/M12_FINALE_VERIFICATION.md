@@ -23,5 +23,8 @@ firing. Observer entry is no longer blocked: the exact country-change overlay
 and the 2026-07-22 M7 Rome-Parthia AI-war replay both entered a live observer
 session and reached maximum speed. Sustained play nevertheless still exits in
 the documented `ffxFsr2ResourceIsNull` / `NVSDK_NGX_D3D12_Shutdown1` renderer
-path before periodic captures. This file must be updated with the session path,
-final date, screenshot filename, and log-diff result before M12 can close.
+path. The 22 July non-debug run reached 11:00 on 18 March AD 1 with four
+periodic captures before this failure; see
+`docs/playtests/M12_NONDEBUG_PACING_20260722.md`. This file must be updated
+with a terminal-date session path, finale screenshot, and log-diff result
+before M12 can close.
