@@ -1,5 +1,19 @@
 # Technical and Design Decisions
 
+## 2026-07-22 - M9 foundation acceptance is a paused AD 1 web gate
+
+The master plan assigns M9 a concrete founding-state acceptance: diplomacy
+screens must be coherent and client/tributary webs must match the reviewed AD
+1 ledger. This gate therefore pairs a no-time-advance Observer inspection of
+Rome, Western Han, and Parthia with the generated dependency and IO audit; the
+live counts are 11, 5, and 9 and exactly total the ledger's 25 edges.
+
+War resolution and sustained AI observation are not silently substituted into
+that criterion. They remain M7 and M12 work, while dated foederati behavior is
+M10 work. This keeps the accepted M9 result technically bounded and prevents a
+renderer-limited long replay from obscuring a successfully validated AD 1
+diplomatic foundation.
+
 ## 2026-07-22 - Raw-material remaps use the startup effect, not map templates
 
 The installed `location_templates.txt` is parsed for a mod but does not

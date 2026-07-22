@@ -468,19 +468,21 @@ evidence exists.
 
 ## 2026-07-19 - M3 observer runtime reaches vanilla systems not yet owned
 
-Status: **deferred to M6/M9; M3 remains untagged.**
+Status: **deferred to the remaining M6 runtime surface; M3 remains untagged.**
 
 M6 update: the initial Rome/Han/Parthia core now supplies three sourced
 government profiles, three dynasties, and nine characters; an AD 1 observer
 run contains no new M6 identifier. The shared runtime boundary remains because
-the rest of M6's government/law/character surface and M9's IO/HRE replacements
-are still incomplete. The M6 inspector-UI coverage gap is in `KNOWN_ISSUES.md`.
+the rest of M6's government/law/character surface is incomplete. The M6
+inspector-UI coverage gap is in `KNOWN_ISSUES.md`.
 
 M5 update: a subsequent AD 1 observer probe reached 11 January with market
 construction notifications and no market, town-setup, RGO, or road errors.
-The remaining active categories are unset capital/government and
-international-organization/HRE references, so M3's shared runtime dependency
-is now confined to M6/M9. Evidence: `docs/playtests/M5_RUNTIME_FOUNDATION.md`.
+The remaining active categories were unset capital/government and
+international-organization/HRE references. M9's checked foundation gate now
+owns and accepts the diplomacy/IO side; M3's remaining shared dependency is
+therefore M6. Evidence: `docs/playtests/M5_RUNTIME_FOUNDATION.md` and
+`docs/playtests/M9_DIPLOMACY.md`.
 
 The autonomous driver loaded the full AD 1 political map, entered observer
 mode, started an actual observer session, and advanced it a month. Its runtime
@@ -502,10 +504,9 @@ Tried:
    still emitted the runtime system errors above. The overlays were removed;
    `make full` is again green at the required menu-smoke boundary.
 
-Recovery: M6 must replace the government, law, character, capital, and formable
-dependencies; M9 must replace HRE interactions/objectives and international
-organizations. Re-run the M3 observer capture and tag only after that shared
-runtime surface produces zero new normalized lines.
+Recovery: M6 must resolve the remaining government, law, character, capital,
+and formable dependencies. Re-run the M3 observer capture and tag only after
+that shared runtime surface produces zero new normalized lines.
 
 ## 2026-07-19 — M2 calendar waits on M3's full setup mirror
 

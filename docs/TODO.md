@@ -38,7 +38,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Build a local-raster coordinate index and sourced capital-candidate report.
 - [x] Research and create the remaining territorial/SoP coverage with an ordered residual-coverage ledger and an explicit intentional-empty audit.
 - [x] Mirror-replace the exact 25 installed start-manager files, removing the vanilla 1337 start layer.
-- [ ] Run milestone gate and tag `M3-done` (observer runtime is deferred in `BLOCKERS.md` until M5/M6/M9 replace vanilla systems that require markets, governments/laws, and HRE diplomacy).
+- [ ] Run milestone gate and tag `M3-done` (observer runtime is deferred in `BLOCKERS.md` only for the remaining M6 government/law/character surface; M5's runtime foundation and M9's diplomatic foundation are now accepted).
 
 ## M4 — Peoples & faiths
 
@@ -213,8 +213,8 @@ after `make full` and its autonomous driver report are green.
         their wargoals and three subject-imposition peace terms.
   - [x] Add the plan's Han, Xiongnu, Games, and Church IO surfaces plus
         validated discovery profiles for every AD 1 polity.
-- [x] Inspect paused live diplomacy/country panels for Rome, Western Han, and Xiongnu; retain screenshots and the country/tag/capital/subject evidence in `docs/playtests/M9_DIPLOMACY.md`.
-- [ ] Verify ancient diplomatic webs; run milestone gate and tag `M9-done`.
+- [x] Inspect paused live diplomacy/country panels for Rome, Western Han, and Parthia; retain screenshots and the country/tag/capital/subject evidence in `docs/playtests/M9_DIPLOMACY.md`.
+- [x] Verify the ancient diplomatic webs, pass `make full`, and tag `M9-done` (22 July 2026; 11 Roman clients, 9 Arsacid satrapies, and 5 Han tributaries match the reviewed AD 1 ledger).
 
 ## M10 — History in motion
 

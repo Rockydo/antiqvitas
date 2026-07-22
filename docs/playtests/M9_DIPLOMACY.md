@@ -1,44 +1,60 @@
 # M9 Diplomacy Foundation Verification
 
-## Static and smoke result
+## Result
 
-The generated M9 subject, war-contract, IO, and known-world layers pass
-`make validate`: five subject contracts, ten casus belli, three peace terms,
-four IO types, and discovery profiles for all 157 AD 1 polities. The enabled
-playset also passes `make smoke` with zero new error-log lines.
+**PASS — M9-done foundation gate, 22 July 2026.**
 
-## Paused AD 1 observer inspection - 21 July 2026
+The generated AD 1 diplomatic web renders coherently in a paused Observer
+session and matches the reviewed `docs/world_1ad/subjects.csv` ledger exactly.
+The required project-wide `make full` gate also passed: all generators and
+static contracts validated, and the enabled-mod smoke test found zero new
+normalized `error.log` lines.
 
-The autonomous driver selected New Game, enabled Observer, and started the
-paused AD 1 map. The resulting country panels confirm the live diplomatic
-surface without advancing time:
+## Ledger and generated-start audit
 
-- Rome renders as Roman Commonwealth (`XAA`), capital Roma, with eleven
-  subjects: `docs/screens/m9_diplomacy_probe/rome_runtime_panel.png`.
-- Western Han renders as `XAR`, capital Chang'an, with five subjects:
+`tools/m9_diplomacy.py --check`, run by `make full`, reports five subject
+contracts, ten CBs, three peace treaties, four IO types, 157 discovery
+profiles, and the 382.1.1 foederati unlock. Its checked subject adapter table
+and `main_menu/setup/start/12_diplomacy.txt` render all 25 source-led AD 1
+dependencies:
+
+| Senior polity | Contract | Ledger relationships | Live panel |
+| --- | --- | ---: | --- |
+| Roman Commonwealth (`XAA`) | `antq_client_kingdom` | 11 | 11 |
+| Parthia (`XAH`) | `antq_satrapy` | 9 | 9 |
+| Western Han (`XAR`) | `antq_tributary` | 5 | 5 |
+
+The generated IO setup separately contains the Han tributary system with the
+Han court and its five Western Regions members, the Xiongnu Confederation, and
+the Panhellenic Games. The Church type remains deliberately dormant at AD 1.
+The 157 known-world profiles retain the generator's enforced Atlantic/Pacific
+ocean exclusions.
+
+## Paused live inspection
+
+The autonomous driver selected New Game, enabled Observer, and entered the
+paused AD 1 map at `08:00, 1 January, 1`; no simulation time was advanced.
+
+- Rome is retained in the prior clean paused panel as Roman Commonwealth,
+  Roma, with **11** subjects:
+  `docs/screens/m9_diplomacy_probe/rome_runtime_panel.png`.
+- Western Han is retained in the prior clean paused panel as `XAR`, Chang'an,
+  with **5** subjects:
   `docs/screens/m9_diplomacy_probe/han_runtime_panel2.png`.
-- A controlled, paused tag fallback confirms the Xiongnu Confederation Horde
-  (`XIO`), Longcheng, its Chanyu, Tengri faith, and Xiongnu culture:
-  `docs/screens/m9_diplomacy_probe/xiongnu_player_panel.png`.
+- The fresh current run selected Parthia (`XAH`), Ctesiphon, and displayed
+  **9** subjects: `docs/screens/20260722_m9_gate/m9_current_parthia.png`.
+- The fresh observer-state capture is retained at
+  `docs/screens/20260722_m9_gate/m9_current_observer.png`.
 
-The selector and observer-state evidence is retained with those panels. The
-initial country-card overlap around Longcheng required the no-time-advance
-`tag XIO` fallback; it did not create a save or run the simulation.
+These live counts exactly match the source-led relationship ledger and the
+generated dependency manager. No player-context tag fallback was used in this
+gate, so its known legacy UI diagnostics are not part of the acceptance run.
 
-That fallback also invokes a separate legacy player-context UI surface that
-emits 212 vanilla HRE/Curia/Middle-Kingdom/dynastic scope diagnostics. They do
-not occur in plain Observer mode and are recorded, after two bounded attempts,
-in `BLOCKERS.md`; they are not evidence against the generated M9 contracts.
+## Scope boundary
 
-## Remaining acceptance work
-
-M9 remains open. The paused panels establish that the generated client,
-tributary, and confederation structures render coherently, but cannot prove
-war resolution, subject behavior over time, or later foederati gating. The
-2026-07-22 M7 replay materially supersedes the old Observer-input limitation:
-it entered Observer, reached maximum speed, created a Rome-Parthia war with
-the full Parthian dependency network, and then hit the same FSR renderer crash
-before a periodic AI-war capture. That is relevant shared runtime evidence but
-does not prove M9's later foederati gate. Do not repeat the same renderer
-profile; retry M9 only after a verified renderer, driver, or game-build change.
-See `docs/playtests/M7_WAR.md` and `BLOCKERS.md`.
+M9's master-plan acceptance requires coherent diplomacy screens and founding
+client/tributary webs matching the AD 1 ledger. It does not claim a resolved
+war, a long AI replay, or a future foederati transition: AI war behavior is
+M7, dated historical behavior is M10, and sustained observer/finale evidence
+is M12. Those later runtime gates remain independently open or renderer-bound
+as recorded in their reports and `BLOCKERS.md`.
