@@ -2250,3 +2250,14 @@ showed notebook-like metal binder loops, so neither entered the repository or
 the M8 tree. Public Granaries, a separate non-reconstructive subject, was
 accepted instead. A failed individual art subject must not stall independent
 icons or reduce the validator's source/master/DDS requirements.
+
+## 2026-07-22 - Palatine temple and library retain distinct engine contracts
+
+The direct sources establish a temple and a bilingual library as related
+Palatine Augustan structures, but not as a single undifferentiated palace
+building. M5 therefore renders a religious Temple of Apollo with modest cult
+inputs separately from a cultural Palatine Library with modest tradition and
+control inputs. The local generic `books` good represents scroll collections;
+it is not relabelled or treated as evidence for a codex collection. This keeps
+both game-facing roles legible without inventing an unsupported palace,
+library-room, rite, staff, or inventory system.

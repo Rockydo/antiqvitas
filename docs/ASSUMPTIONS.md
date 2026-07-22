@@ -3330,3 +3330,18 @@ only; it does not identify Horrea Galbana, a Roman city, a civic annona law,
 store capacity, a workforce, or a date. Sources weighed: plan sections 15 and
 20; local M8 direct-icon contract. [secure broad context; contested visual
 representation]
+
+## 2026-07-22 - Palatine library is a bounded scroll-library proxy
+
+Digital Augustan Rome dates the Temple of Apollo's dedication to 9 October 28
+BC and describes the Greek-and-Latin Palatine library as probably open and in
+use by 23 BC, while preserving debate over its exact Augustan layout and
+opening sequence. The AD 1 special therefore represents the library's broad
+dual-language and senatorial context only. Its `books` upkeep means a generic
+engine good standing in for scroll collections; it does not claim codices, a
+catalogue, shelf count, room plan, or an exact Senate procedure. The paired
+temple art is likewise a generic marble sanctuary, not a reconstruction of
+its lost interior decoration, cult image, rites, or later palace. Sources
+weighed: `DAR-APOLLO-PAL` and `DAR-BIBLIOTHECA-PAL` in
+`docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`. [secure broad context; contested
+architectural and administrative representation]
