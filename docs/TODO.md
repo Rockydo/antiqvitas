@@ -359,8 +359,8 @@ after `make full` and its autonomous driver report are green.
 - [x] Guard the five absent-IO and eight dated country-startup branches in the installed hardcoded on-game-start handler through a checked exact-name overlay; fresh AD 1 observer initialization has zero former hardcoded runtime errors.
 - [x] Guard four optional-government and three HRE special-status CoA predicates through a checked exact-name overlay; fresh AD 1 observer initialization has zero former CoA scope errors.
 - [x] Guard the installed Catalan Sitges-capital flag predicate through a checked exact-name overlay; a fresh AD 1 observer initialization has zero script-system errors.
-- [ ] Complete runtime pacing/growth/inflation balance from observer measurements (the clean non-debug run measured 0.316792 simulated days/second through 18 March AD 1 before the renderer crash; annual growth/inflation and long-run AI remain blocked in `BLOCKERS.md`).
-- [ ] Run autonomous observer game to 476 with decade screenshots and live log watch (event-graph coverage is green; three materially distinct FSR/NGX profiles reproduce the renderer crash, the stable non-debug profile has no console, and the player-context legacy-scope audit is separately deferred in `BLOCKERS.md`).
+- [ ] Complete runtime pacing/growth/inflation balance from observer measurements (the clean Vulkan run measured 0.316792 simulated days/second through 18 March AD 1 before the renderer crash; the material DX12 observer run is now in progress, while annual growth/inflation and long-run AI await its result).
+- [ ] Run autonomous observer game to 476 with decade screenshots and live log watch (event-graph coverage is green; three Vulkan FSR/NGX profiles reproduced the renderer crash, while a native DX12 run with hourly captures is currently in progress; the player-context legacy-scope audit remains deferred in `BLOCKERS.md`).
 - [x] Finish README, known issues, packaging notes, static finale verification, and the full surface-area inventory audit.
 - [x] Disable the eleven installed anachronistic generic mission packs through checked exact-name visibility overlays; retain their keys for engine references.
 - [x] Pin a static player-facing anachronism audit across all 17 English localization files, with the client-language mirror contract checked separately.
@@ -369,4 +369,4 @@ after `make full` and its autonomous driver report are green.
 - [x] Run and record the final static/menu `make full` gate (rerun 2026-07-21:
       all checks pass and the enabled-mod smoke has zero new lines).
 - [x] Run the current full gate and record its report: `make full` is green at 350 cultures, 37 religions, 416 historical-current events, and the 230,000.000-thousand population target, with zero new smoke lines.
-- [ ] [BLOCKED] Tag `M12-done`: observer pacing, the AD 1-to-476 run, and screenshot evidence remain unavailable after three materially distinct FSR/NGX renderer reproductions documented in `BLOCKERS.md`.
+- [ ] Tag `M12-done` after the active DX12 observer run has either supplied the required AD 1-to-476 screenshots and log evidence or produced a documented terminal renderer result.

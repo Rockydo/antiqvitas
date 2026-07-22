@@ -875,3 +875,20 @@ simulated-days/second measurement and the resulting 6.35-day best-case wall
 time for a full campaign. The renderer remains the sole blocker to the required
 AD 1-476 evidence run; do not repeat an unchanged profile. Resume only after a
 material game, GPU-driver, or renderer change.
+
+## 2026-07-22 - Native DX12 alternate-renderer run is in progress
+
+Status: **the prior Vulkan-only renderer blocker is suspended pending this
+materially different run; it is not resolved.**
+
+The installed Graphics UI exposes `DX12` and `Vulkan`. DX12 was selected and
+persisted through the relocated user directory; the local startup log confirms
+`gfx_dx12_master_context` on the NVIDIA GeForce RTX 3080. It reached a clean AD
+1 Observer map and advanced to 18:00 on 13 January before the initial short
+controller process was intentionally stopped after its shell timeout.
+
+An independent maximum-speed Observer driver is now running for three days with
+hourly screenshots and five-minute status/log checks. Its outputs are retained
+under `baselines/runtime/` and `docs/screens/20260722_m12_dx12_background`.
+Do not claim M12 complete until that process exits or reaches the terminal date
+and its capture/log evidence has been reviewed.
