@@ -2075,14 +2075,14 @@ explicit seed must first demonstrate a zero-assertion monthly Observer run.
 
 The installed Graphics screen exposes exactly `Vulkan` and `DX12`; the project
 had only exercised Vulkan profiles. The selected native `DX12` setting persisted
-to the relocated user directory and its startup log confirms
-`gfx_dx12_master_context` on the local NVIDIA GeForce RTX 3080. This is a
+to the relocated user directory and its startup log confirmed
+`gfx_dx12_master_context` on the local NVIDIA GeForce RTX 3080. This was a
 material renderer change, not an unsupported launch switch or a game-install
 edit.
 
-After DX12 reached a clean AD 1 Observer map and advanced to 18:00 on 13 January
-without exiting, the autonomous driver was launched for a bounded maximum-speed
-interval. Its clean 3 March checkpoint justified extending the independent
-controller to sixteen days with hourly captures. Its stdout/stderr logs are kept
-under `baselines/runtime/`; the result must be assessed before M12's renderer
-blocker is closed or retained.
+DX12 reached a clean AD 1 Observer map, 18:00 on 13 January, and a live 14:00
+3 March checkpoint before exiting at 07:05:19 through the same
+`ffxFsr2ResourceIsNull` / `NVSDK_NGX_D3D12_Shutdown1` C0000005 family as
+Vulkan. Retain the native renderer selection evidence, but do not repeat either
+backend unchanged; the result is recorded in
+`docs/playtests/M12_DX12_RENDERER_20260722.md`.

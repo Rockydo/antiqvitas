@@ -706,7 +706,19 @@ def observer_run(args: argparse.Namespace) -> int:
         if not alive:
             print("gamedriver: observer process exited", file=sys.stderr)
             return 1
-        window = activate_window()
+        try:
+            window = activate_window()
+        except RuntimeError as error:
+            # A crashing EU5 process can briefly remain visible to psutil while
+            # Windows has already destroyed its top-level window.  Treat that
+            # as a bounded observer termination rather than emitting a Python
+            # traceback that obscures the game-side crash evidence.
+            print(
+                f"gamedriver: observer window unavailable ({error}); "
+                "ending monitor",
+                file=sys.stderr,
+            )
+            return 1
         image = pyautogui.screenshot(
             region=(window.left, window.top, window.width, window.height)
         )
