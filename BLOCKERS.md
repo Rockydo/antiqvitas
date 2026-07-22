@@ -878,8 +878,8 @@ material game, GPU-driver, or renderer change.
 
 ## 2026-07-22 - Native DX12 alternate-renderer run is in progress
 
-Status: **the prior Vulkan-only renderer blocker is suspended pending this
-materially different run; it is not resolved.**
+Status: **blocked after the native-DX12 reproduction; the alternate backend did
+not resolve the renderer condition.**
 
 The installed Graphics UI exposes `DX12` and `Vulkan`. DX12 was selected and
 persisted through the relocated user directory; the local startup log confirms
@@ -887,9 +887,15 @@ persisted through the relocated user directory; the local startup log confirms
 1 Observer map and advanced to 18:00 on 13 January before the initial short
 controller process was intentionally stopped after its shell timeout.
 
-The first clean DX12 checkpoint reached 14:00 on 3 March, so the controller was
-extended to a sixteen-day maximum-speed interval with hourly screenshots and
-five-minute status/log checks. Its outputs are retained under
-`baselines/runtime/` and `docs/screens/20260722_m12_dx12_long`. Do not claim
-M12 complete until that process exits or reaches the terminal date and its
-capture/log evidence has been reviewed.
+The first clean DX12 checkpoint reached 14:00 on 3 March, after which the
+independent controller found that the game window had disappeared. The crash
+at `G:\antiqvitas_user_data\crashes\Europa Universalis V20260722_050518`
+records C0000005 with `ffxFsr2ResourceIsNull` and
+`NVSDK_NGX_D3D12_Shutdown1`, the same family as the Vulkan reports. Its outputs
+are retained under `baselines/runtime/` and
+`docs/screens/20260722_m12_dx12_long`; see
+`docs/playtests/M12_DX12_RENDERER_20260722.md`.
+
+The alternate native backend is now exhausted. Do not repeat Vulkan or DX12
+unchanged; resume this gate only after a material game build, GPU driver, or
+renderer change.

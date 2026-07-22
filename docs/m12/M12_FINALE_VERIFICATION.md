@@ -28,3 +28,8 @@ periodic captures before this failure; see
 `docs/playtests/M12_NONDEBUG_PACING_20260722.md`. This file must be updated
 with a terminal-date session path, finale screenshot, and log-diff result
 before M12 can close.
+
+The native DX12 fallback reached a live 14:00, 3 March AD 1 checkpoint, but
+then exited with the same FSR/NGX C0000005 family. Its evidence is
+`docs/playtests/M12_DX12_RENDERER_20260722.md`; the alternate backend therefore
+does not currently supply the missing terminal verification.
