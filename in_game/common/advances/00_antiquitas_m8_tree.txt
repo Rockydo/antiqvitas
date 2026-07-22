@@ -143,7 +143,7 @@ antq_civic_patronage = {
 
 antq_municipal_accounting = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_municipal_accounting
 	depth = 4
 	research_cost = 6.0
 	requires = antq_civic_patronage
@@ -152,7 +152,7 @@ antq_municipal_accounting = {
 
 antq_estate_registries = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_estate_registries
 	depth = 5
 	research_cost = 6.5
 	requires = antq_municipal_accounting
@@ -161,7 +161,7 @@ antq_estate_registries = {
 
 antq_imperial_rescripts = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_imperial_rescripts
 	depth = 6
 	research_cost = 7.0
 	requires = antq_estate_registries
