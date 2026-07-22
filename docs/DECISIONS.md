@@ -2272,3 +2272,14 @@ only modest tradition and public-order context. The debated Chalcidicum,
 Porticus sponsor, internal room layout, individual temples, and any precise
 Senate procedure remain outside both effects. This preserves player-facing
 distinction without claiming an engine model of Roman constitutional practice.
+
+## 2026-07-22 - Emporium demand represents handling, not a Roman trade ledger
+
+The installed trade-building contract can represent local merchant capacity
+and a building's upkeep demand, but it cannot prove a precise ancient cargo
+flow or solve M5's separate market-transfer blocker. Porticus Aemilia therefore
+adds modest demand for historically relevant staple, container, and handling
+goods without producing, moving, or quantifying them. Aqua Alsietina likewise
+uses only small infrastructure modifiers. Both names/configurations remain
+explicitly contested where the sources require it, and neither substitutes for
+a tested market relation or a full urban water-distribution simulation.
