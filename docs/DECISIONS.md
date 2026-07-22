@@ -2070,3 +2070,18 @@ start mirror deliberately emits no `add_market` records, allowing the
 installed game's automatic market initializer to construct runtime markets
 without the invalid pre-game relation state. Any future attempt to restore an
 explicit seed must first demonstrate a zero-assertion monthly Observer run.
+
+## 2026-07-22 - Use the game-exposed DX12 renderer for the long Observer retry
+
+The installed Graphics screen exposes exactly `Vulkan` and `DX12`; the project
+had only exercised Vulkan profiles. The selected native `DX12` setting persisted
+to the relocated user directory and its startup log confirms
+`gfx_dx12_master_context` on the local NVIDIA GeForce RTX 3080. This is a
+material renderer change, not an unsupported launch switch or a game-install
+edit.
+
+After DX12 reached a clean AD 1 Observer map and advanced to 18:00 on 13 January
+without exiting, the autonomous driver was launched for a bounded three-day
+maximum-speed interval. Its independent stdout/stderr logs are kept under
+`baselines/runtime/`; the result must be assessed before M12's renderer blocker
+is closed or retained.

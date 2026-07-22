@@ -4233,6 +4233,17 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-22 - M12 DX12 autonomous Observer run launched
+
+- The installed UI exposes `DX12` alongside Vulkan. DX12 initialized on the
+  local RTX 3080, entered AD 1 Observer, and advanced to 18:00 on 13 January
+  before the first short controller interval was stopped by its shell timeout,
+  not a game exit.
+- A three-day maximum-speed driver interval is now running independently, with
+  hourly screenshots and five-minute log-status entries under
+  `baselines/runtime/`. Its terminal result determines whether the prior Vulkan
+  renderer blocker remains applicable.
+
 ## 2026-07-22 - M12 non-debug pacing measurement
 
 - The automated no-debug Observer run reached 11:00 on 18 March AD 1 from the
