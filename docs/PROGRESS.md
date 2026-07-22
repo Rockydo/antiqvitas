@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-22 - Direct Principate statecraft-icon batch
+
+- Added directly illustrated, ledger-bound UI assets for Provincial Census,
+  Tax Registers, and Road Milestones. Each replaces exactly one Principate
+  fallback binding, bringing the checked migration to five direct advance
+  icons.
+- Reviewed the uninscribed counting-table, wax-tablet/storehouse, and blank
+  milestone art at 256px. They deliberately make no claim about a named
+  census, tax regime, document, ruler, route, city, inscription, or metric.
+- `gmake validate` passed with five direct advance icons. The controlled
+  vanilla/enabled `gmake smoke` pair rendered menus with zero new mod-only
+  error-log lines.
+
+Next: continue the ledger-driven direct-art migration in small, inspected
+batches while preserving exact one-icon-to-one-advance bindings.
+
 ## 2026-07-22 - Regional antique production-building system
 
 - Added ten direct-art reusable production families and 112 start placements:
