@@ -1,5 +1,23 @@
 # Progress
 
+## 2026-07-22 - Campus Martius building and goods pass
+
+- Added three direct-icon Rome specials: Pantheum Agrippae (c. 27 BC), Saepta
+  Iulia (26 BC), and the Diribitorium (7 BC). They bring the named Roman layer
+  to 22 buildings and the generated start to 50 M5/M7 building seeds.
+- The original Pantheum is deliberately rendered without Hadrian's later dome;
+  the Saepta remains an AD 1 civic enclosure rather than a later luxury market;
+  the Diribitorium is a restrained civic hall, not a reconstructed election.
+  Their upkeep uses appropriate material and service goods: marble, masonry,
+  timber, tools, incense, wine, cloth, pottery, and beeswax.
+- The refreshed 22-cell building contact sheet was visually reviewed. `gmake
+  validate` passed with 5 custom antiquity goods and zero player-facing
+  anachronism hits; the vanilla/enabled `gmake smoke` pair reached the rendered
+  menu with zero new mod-only error lines.
+
+Next: continue source-led Roman building and direct UI-art work; expand period
+location names where an exact secure source-to-map match can be established.
+
 ## 2026-07-22 - Direct advance-art migration started
 
 - Replaced the former all-or-nothing group-art assumption with a safe,

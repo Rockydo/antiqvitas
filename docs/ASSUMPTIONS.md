@@ -3295,3 +3295,17 @@ temple, altar, priest, province, ritual, or constitutional doctrine. It should
 not be read as evidence for a uniform cult practice or an iconographic standard
 in AD 1. Sources weighed: plan sections 15 and 20; local M8 advance contract.
 [secure broad context; contested visual representation]
+
+## 2026-07-22 - Campus Martius civic buildings use narrow AD 1 proxies
+
+Digital Augustan Rome securely dates Agrippa's Pantheum to about 27 BC, the
+Saepta Iulia to its 26 BC dedication, and the Diribitorium to Augustus' 7 BC
+completion. The original Pantheum's appearance is nevertheless partly inferred
+under the later Hadrianic rebuilding; the Saepta's later luxury-market role is
+not evidence for the AD 1 start; and the Diribitorium's election machinery,
+personnel, and activity are not recoverable as a gameplay census. The Pantheum
+therefore uses a generic open-sky Augustan temple image, while the civic
+specials use restrained building and upkeep proxies only. Sources weighed:
+`DAR-PANTHEUM`, `DAR-SAEPTA`, and `DAR-DIRIBITORIUM` in
+`docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`. [secure broad context; contested
+architectural and functional representation]
