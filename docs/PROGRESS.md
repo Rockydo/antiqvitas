@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-23 - Direct High Empires legal-study icon batch
+
+- Added direct, ledger-bound illustrations for Jurists' Law, Commentary
+  Schools, and Provincial Assizes. The planned binding rises to twenty-three
+  individual advance illustrations.
+- Reviewed the final 256px contact sheet. The images use only blank study and
+  hearing materials and assert no named jurist, teacher, school, court, law,
+  code, trial, city, province, empire, ruler, or procedure.
+- `gmake validate` passed with twenty-three direct advance icons. The controlled
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: continue the ledger-driven direct-art migration in small, inspected
+batches while preserving exact one-icon-to-one-advance bindings.
+
 ## 2026-07-23 - Direct archive-and-administration icon batch
 
 - Added direct, ledger-bound illustrations for Imperial Archives, Standing

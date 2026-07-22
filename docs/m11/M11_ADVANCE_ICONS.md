@@ -34,7 +34,7 @@ until their individually reviewed asset chains exist. This prevents a missing
 or speculative illustration from appearing in game while making every finished
 icon visible immediately.
 
-The first twenty direct icons are `antq_imperial_cult`, a restrained
+The first twenty-three direct icons are `antq_imperial_cult`, a restrained
 early-imperial civic altar; `antq_public_granaries`, an uninscribed grain-store
 facade; `antq_provincial_census`, an uninscribed counting table;
 `antq_tax_registers`, a wax-tablet and storage-jar still life;
@@ -44,17 +44,19 @@ icons for `antq_professional_standing_armies`, `antq_auxiliary_service`, and
 `antq_legal_petitions`, `antq_municipal_charters`, and
 `antq_frontier_dispatches`; three archive-and-administration icons for
 `antq_imperial_archives`, `antq_standing_administration`, and
-`antq_provincial_governance`; plus the exchange-context
+`antq_provincial_governance`; three legal-study-context icons for
+`antq_jurists_law`, `antq_commentary_schools`, and
+`antq_provincial_assizes`; plus the exchange-context
 `antq_monsoon_navigation`, `antq_red_sea_piloting`, and
 `antq_caravan_accounting`; and the learning-context `antq_paper_precursors`,
 `antq_bamboo_registers`, and `antq_library_catalogues`. They are broad cult,
 provisioning, administrative, road-maintenance, civic-document, dispatch,
-archive, civil-survey, service, equipment, training, maritime, and trade
-contexts, not depictions of a
+archive, civil-survey, legal-study, hearing, service, equipment, training,
+maritime, and trade contexts, not depictions of a
 named god, altar, priest, monument, horreum, census figure, tax regime,
 inscription, court, law, municipality, charter, frontier, route, ruler, army,
 legion, individual, ethnicity, unit, battle, ship, port, cargo, crew, inventor,
-text, named archive, library, catalogue, office, province, or state doctrine. The direct ledger records the
+text, named archive, library, catalogue, office, school, court, province, or state doctrine. The direct ledger records the
 subject, confidence, status, and non-reconstructive boundary for every future
 row. The required final state is 250 completed direct rows and no remaining
 transitional binding.
@@ -121,6 +123,15 @@ case, staff, plumb bob, and clay containers. They do not identify an archive,
 library, office, institution, city, province, empire, law, tax, boundary,
 register, ruler, procedure, text, or inscription. The reviewed source/master
 batch is [here](DIRECT_ADVANCE_ICON_BATCH_07.png).
+
+### Batch eight review
+
+The legal-study illustrations show blank wax tablets, a stylus, scale, rolled
+document, clay disk, stool, low writing stand, pens, scrolls, lamp, bench,
+travel writing case, cord, weight, and water jar. They do not identify a jurist,
+teacher, school, court, law, code, trial, case, city, province, empire, ruler,
+official, procedure, text, or inscription. The reviewed source/master batch is
+[here](DIRECT_ADVANCE_ICON_BATCH_08.png).
 
 ## Engine and asset verification
 
