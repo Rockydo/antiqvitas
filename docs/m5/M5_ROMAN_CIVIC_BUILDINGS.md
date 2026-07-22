@@ -46,6 +46,12 @@ The Temple of Apollo is a modest cult-complex proxy only; it does not rebuild it
 
 The Curia Iulia uses a narrow government-and-records proxy rather than setting a Senate membership, law, vote, or later restoration. Porticus Octaviae is a cultural public-space proxy, not a collapsed group of temples, a commerce arcade, or a copied library building. Both use restrained material and service goods as upkeep demand; no value claims an ancient budget or stock. Their reviewed direct art distinguishes the rectangular senate hall from the open quadriporticus and omits inscriptions, named figures, later reconstructions, and religious anachronisms.
 
+### Emporium warehouse and Alsietina waterwork additions
+
+`DAR-PORTICUS-AEMILIA` is Digital Augustan Rome's [Porticus Aemilia (Emporium) record](https://www.digitalaugustanrome.org/records/porticus-aemilia-emporium/): the vast Tiber-side warehouse's role and scale are archaeologically secure, but its traditional name is debated. `DAR-AQUA-ALSIETINA` is its [Aqua Alsietina record](https://www.digitalaugustanrome.org/records/aqua-alsietina/): Augustus' water channel supplied the 2 BC Naumachia, irrigation in Trans Tiberim, and emergency water, although much of its course is reconstructed from Frontinus.
+
+Porticus Aemilia uses a trade contract with a broad but deliberately non-quantified handling demand for grain, wine, olives, fish, salt, pottery, lumber, and tools. It does not claim a particular annual cargo, ship type, warehouse plan, or a settled debate over the building's ancient name. Aqua Alsietina uses only modest capacity and food context with masonry, tools, and pottery upkeep; it does not construct a Naumachia, assign water volume, or reproduce a distribution network. Their direct illustrations distinguish the active river warehouse from low practical water infrastructure.
+
 ## Technical mapping
 
 The definitions use only contracts read from the installed build's
@@ -58,7 +64,7 @@ Their start-state presence is rendered through the existing verified
 
 ## Art review
 
-The direct Pantheum Agrippae, Saepta Iulia, Diribitorium, Temple of Apollo, Palatine Library, Curia Iulia, and Porticus Octaviae source images were
+The direct Pantheum Agrippae, Saepta Iulia, Diribitorium, Temple of Apollo, Palatine Library, Curia Iulia, Porticus Octaviae, Emporium warehouse, and Aqua Alsietina source images were
 visually reviewed, cropped to 128px masters, converted to direct BC7 DDS
 files, and added to [the contact sheet](ROMAN_BUILDING_ICON_CONTACT_SHEET.png)
 alongside the existing named-building set.
