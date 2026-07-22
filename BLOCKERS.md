@@ -887,8 +887,9 @@ persisted through the relocated user directory; the local startup log confirms
 1 Observer map and advanced to 18:00 on 13 January before the initial short
 controller process was intentionally stopped after its shell timeout.
 
-An independent maximum-speed Observer driver is now running for three days with
-hourly screenshots and five-minute status/log checks. Its outputs are retained
-under `baselines/runtime/` and `docs/screens/20260722_m12_dx12_background`.
-Do not claim M12 complete until that process exits or reaches the terminal date
-and its capture/log evidence has been reviewed.
+The first clean DX12 checkpoint reached 14:00 on 3 March, so the controller was
+extended to a sixteen-day maximum-speed interval with hourly screenshots and
+five-minute status/log checks. Its outputs are retained under
+`baselines/runtime/` and `docs/screens/20260722_m12_dx12_long`. Do not claim
+M12 complete until that process exits or reaches the terminal date and its
+capture/log evidence has been reviewed.
