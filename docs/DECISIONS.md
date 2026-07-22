@@ -1,5 +1,25 @@
 # Technical and Design Decisions
 
+## 2026-07-22 - Dense regional production uses reusable families, not fictional monuments
+
+The user's 100-building expansion is implemented as ten reusable AD 1
+production families, each with a unique direct UI illustration and a
+source-labelled engine contract, rather than a hundred unique building types.
+This gives Europe, North Africa, and the Middle East 112 visible economic
+placements while keeping the system legible and avoiding invented named sites.
+
+Each type is an `is_special` one-level start building so its locally verified
+category, employment, build-time, goods-upkeep, and icon contract are stable.
+Its modest upkeep makes existing era goods visible in market demand; it does
+not manufacture a new good, synthesize workforce, or assert historical output.
+Individual placements are limited to reviewed urban or historic city-point
+anchors and are source-bounded regional-hinterland proxies.
+
+This is a technical/content-density choice, not an archaeological claim that
+every listed engine polygon contains a surviving named workshop. The named
+Rome/Ravenna/Mainz layer remains separate and stricter in
+`roman_buildings.csv`.
+
 ## 2026-07-22 - Validation scope is targeted, not a full-timeline observer gate
 
 The user has explicitly replaced the AD 1-to-476 observer-run completion
