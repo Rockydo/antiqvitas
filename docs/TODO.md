@@ -133,7 +133,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add the Forum Romanum through the verified marketplace proxy without inventing a forum-specific building key or a reconstruction of its physical plan.
 - [x] Complete the independent M5 market, urban, building, harbor, road, and development surface: 42 market/urban nodes, eight source-labelled harbor tiers, Muza's roadstead warehouse, the historic-building anchors, and 43 audited road segments are present.
 - [x] Apply the 328 source-led RGO corrections through the locally proven runtime startup effect; register and locally seed all five custom goods.
-- [ ] Verify ancient trade flows; run milestone gate and tag `M5-done`. (Runtime RGO now works; M5 is deferred pending a locally supported source-surplus and merchant-market contract, documented in `BLOCKERS.md`.)
+- [ ] Verify ancient trade flows; run milestone gate and tag `M5-done`. Runtime RGO works, but both pre-seeded and automatic runtime-market paths now reproduce `Getting relation with itself`; M5 remains deferred pending a locally supported market/merchant contract, documented in `BLOCKERS.md`.
 
 ## M6 — Power
 
@@ -186,7 +186,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add Emperor Ping's named maternal Wei family and Wang Yu's named early Yuan Shi circle without inferring offices, careers, or future punishments.
 - [x] Add the coin-attested Nabataean Queen Huldu as Aretas IV's documented AD 1 consort without inventing a constitutional role or genealogy.
 - [x] Complete the evidence-bounded Tier-1/2 power foundation: all 107 government profiles, 250 source-led characters, 32 named active heads, 75 explicitly anonymous/collective profiles, 24 privilege adapters, and campaign-valid regnal histories. The generated M6 coverage report preserves the source boundary rather than inventing rulers.
-- [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`. Rome and Parthia pass the current-term probe; Han's three-probe minority-regency fallback remains recorded in `BLOCKERS.md`.
+- [ ] Driver-test Rome, Han, and Parthia; run milestone gate and tag `M6-done`. Rome and Parthia pass the current-term probe; Han's three-probe minority-regency fallback and the new anonymous-XDP ruler-term overlap are recorded in `BLOCKERS.md`.
 
 ## M7 — War
 
@@ -360,7 +360,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Guard four optional-government and three HRE special-status CoA predicates through a checked exact-name overlay; fresh AD 1 observer initialization has zero former CoA scope errors.
 - [x] Guard the installed Catalan Sitges-capital flag predicate through a checked exact-name overlay; a fresh AD 1 observer initialization has zero script-system errors.
 - [ ] Complete runtime pacing/growth/inflation balance from observer measurements. The checkpointed normal-renderer driver now resumes the latest autosave through the documented menu route; it still needs its first renderer-exit recovery and decade-scale balance evidence.
-- [ ] Run the checkpointed autonomous observer game to 476 with decade screenshots and live log watch. The 22 July recovery probe reloaded AD 7, passed its bounded UI retry, and advanced to 29 April AD 7; the full chronology and the deferred player-context legacy-scope audit remain open.
+- [ ] Run the checkpointed autonomous observer game to 476 with decade screenshots and live log watch. The AD 39 checkpoint campaign reached AD 41, then stopped on the repeated market self-relation assertion; resolve or locally neutralize that runtime market contract before resuming the chronology.
 - [x] Finish README, known issues, packaging notes, static finale verification, and the full surface-area inventory audit.
 - [x] Disable the eleven installed anachronistic generic mission packs through checked exact-name visibility overlays; retain their keys for engine references.
 - [x] Pin a static player-facing anachronism audit across all 17 English localization files, with the client-language mirror contract checked separately.
