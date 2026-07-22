@@ -2086,3 +2086,21 @@ DX12 reached a clean AD 1 Observer map, 18:00 on 13 January, and a live 14:00
 Vulkan. Retain the native renderer selection evidence, but do not repeat either
 backend unchanged; the result is recorded in
 `docs/playtests/M12_DX12_RENDERER_20260722.md`.
+
+## 2026-07-22 - Recover Observer play through the normal autosave menu route
+
+The installed console reference documents save/load commands, but the normal
+non-debug renderer exposes no usable console surface and no save-file parser
+is a safe substitute for an engine load. The locally exercised UI route is
+therefore authoritative: Continue -> Continue as Observer -> Observe -> Start
+Observing the game. `gamedriver.py` waits for the local `MainMenu->Game`
+state-4 and cached-data-completion log records before it clicks the map, records
+the three newest autosaves before and after every cycle, and requires the live
+Observer pause banner before it starts simulation.
+
+This decision deliberately accepts a bounded UI retry after a failed map-input
+attempt. The final 22 July probe established that a renderer restart can return
+to the latest checkpoint autonomously, so the FSR/NGX exit is no longer by
+itself grounds to abandon the long campaign. It is not evidence that a
+multi-century chronology is clean; the campaign must still demonstrate actual
+renderer-exit recovery and decade capture coverage.

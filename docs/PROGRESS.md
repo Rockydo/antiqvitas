@@ -4265,6 +4265,26 @@ separate Han runtime-regency blocker.
   `docs/playtests/M12_NONDEBUG_PACING_20260722.md`; M12's long-run gate remains
   renderer-blocked.
 
+## 2026-07-22 - M12 checkpointed Observer recovery
+
+- Added `resume-observer` and `observer-recover` to the autonomous game driver.
+  They fingerprint the rotating autosaves, relaunch normal EU5 after a window
+  exit, wait for the local `MainMenu->Game` and cache-completion log states,
+  navigate Continue/Observer without a launcher click, and retain a JSON and
+  screenshot trail for every bounded UI attempt.
+- The integrated probe restarted from the latest AD 7 autosave, used the
+  bounded second menu attempt, entered the live paused Observer HUD, and then
+  advanced from `08:00, 1 January, 7` to `08:00, 29 April, 7` during its
+  20-second maximum-speed run. It created three newer autosaves afterwards.
+  Evidence: `docs/playtests/M12_OBSERVER_RECOVERY_20260722.md` and
+  `docs/screens/20260722_m12_checkpoint_recover_pass/`.
+- `make validate` passed after the driver change. This restores a viable route
+  around a renderer exit, but does not yet prove a long chronological campaign
+  or runtime balance.
+
+Next: run the checkpointed Observer through a renderer exit, preserve its
+restart evidence, and continue to decade-scale M7/M8/M10/M12 verification.
+
 ## 2026-07-22 - M6 direct-parent fixture is not a Han-regency fix
 
 - A fresh AD 1 mod start rendered Emperor Ping's source-attested maternal link
