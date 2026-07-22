@@ -35,25 +35,25 @@ FIELDS = (
 )
 CATEGORIES = {
     "basic_industry_category", "cultural_category", "government_category",
-    "infrastructure_category", "naval_category", "religious_category", "trade_category",
+    "defense_category", "infrastructure_category", "naval_category", "religious_category", "trade_category",
 }
 POP_TYPES = {"burghers", "clergy", "laborers", "nobles", "soldiers"}
 EMPLOYMENT = {
     "cultural_employment", "dock_employment", "generic_burgher_employment", "generic_peasant_building_employment",
-    "guild_employment", "religious_building_employment", "trade_employment",
+    "guild_employment", "religious_building_employment", "stockade_employment", "trade_employment",
 }
 BUILD_TIMES = {
     "cultural_building_time", "government_build_time", "guild_build_time",
-    "infrastructure_build_time", "market_build_time", "medium_port_building_time", "religious_building_time",
+    "infrastructure_build_time", "market_build_time", "medium_port_building_time", "religious_building_time", "small_fort_building",
 }
 MODIFIERS = {
     "local_clergy_max_literacy", "local_cultural_tradition", "local_disease_resistance",
-    "local_life_expectancy", "local_max_control", "local_merchant_capacity",
+    "local_garrison_size", "local_life_expectancy", "local_max_control", "local_merchant_capacity",
     "local_merchant_power", "local_monthly_food_modifier", "local_population_capacity",
     "local_production_efficiency", "local_repair_speed", "local_sailors", "local_unrest",
 }
-ROMAN_SPECIAL_LOCATIONS = {"rome", "ravenna"}
-START_KEY_PREFIX = {"rome": "roma", "ravenna": "ravenna"}
+ROMAN_SPECIAL_LOCATIONS = {"mainz", "ravenna", "rome"}
+START_KEY_PREFIX = {"mainz": "mainz", "ravenna": "ravenna", "rome": "roma"}
 
 
 def rows(path: Path) -> list[dict[str, str]]:
@@ -154,7 +154,10 @@ def definition(items: list[dict[str, str]]) -> str:
         lines.extend(("\t}", "\tunique_production_methods = {", f"\t\t{row['key']}_maintenance = {{"))
         for good, amount in pairs(row["maintenance"], "maintenance"):
             lines.append(f"\t\t\t{good} = {amount}")
-        lines.extend(("\t\t\tcategory = building_maintenance", "\t\t}", "\t}", "\tconstruction_demand = town_building_construction", "}", ""))
+        lines.extend(("\t\t\tcategory = building_maintenance", "\t\t}", "\t}", "\tconstruction_demand = town_building_construction"))
+        if row["category"] == "defense_category":
+            lines.extend(("\traw_modifier = {", "\t\tfort_level = 1", "\t\tpure_tooltip_entry = pte_no_propagating_zone_of_control", "\t}"))
+        lines.extend(("}", ""))
     return "\n".join(lines)
 
 

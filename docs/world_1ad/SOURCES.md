@@ -137,6 +137,8 @@ a row reaches `implemented` status.
   does not license a survey-grade conversion into modern EU5 map links.
 - `MIC-CLASSE`: Italian Ministry of Culture, [Civitas Classis / Classe](https://catalogo.beniculturali.it/detail/ibc/ArchaeologicalProperty/156046), records Augustus' military fleet and harbour development at Ravenna/Classe. It supports the AD 1 port-base anchor, not an exact fleet roster, city polygon, or economic volume.
 - `RA-CLASSE`: Ravenna Turismo, [Ancient Port of Classe](https://www.turismo.ra.it/en/myravenna/wave/ancient-port-of-classe/), dates Augustus' military-port construction order to 27 BC and identifies the eastern-Mediterranean fleet role. It supports chronology and function, not a reconstruction of harbour geometry or force strength.
+- `MZ-MOG`: City of Mainz, [Mainz in Roman times](https://www.mainz.de/en/angebote-entdecken/kultur/stadtgeschichte/roemisches-mainz/roemisches-mainz), identifies Mogontiacum as a strategic legionary camp opposite the Main under Drusus. It supports the direct city-point military-camp anchor, not an AD 1 order of battle or exact fort plan.
+- `MZ-DRUSUS`: City of Mainz, [Drusus Stone](https://www.mainz.de/pl/angebote-entdecken/zu-gast-in-mainz/sehenswertes/drususstein), dates the base-camp foundation at the Main confluence to 13 BC. It supports start-date eligibility, not a stone-fortress reconstruction or garrison total.
 - `CHG`: China Historical GIS Han-era layers, subject to its attribution and
   non-commercial license review before data import.
 - `PER`: *Periplus of the Erythraean Sea* and modern scholarship for Indian

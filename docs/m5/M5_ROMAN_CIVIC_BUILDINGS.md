@@ -1,7 +1,7 @@
 # Roman civic, commercial, and naval buildings at the AD 1 start
 
 `roman_buildings.csv` is the canonical data ledger for the named special
-buildings seeded at the installed `rome` or `ravenna` location. Every entry is a
+buildings seeded at the installed `rome`, `ravenna`, or `mainz` location. Every entry is a
 subject-specific ANTIQVITAS building type, with a dedicated UI icon contract,
 localized English name and description, a locally verified EU5 category,
 employment, construction, and modifier contract, and its own source note.
@@ -41,7 +41,7 @@ Their start-state presence is rendered through the existing verified
 ## Art review
 
 Four source sheets under `assets_queue/generated_sources/` plus a dedicated
-Navalia and Classis Ravennatis source images were visually reviewed, cropped to 128px masters,
+Navalia, Classis Ravennatis, and Castrum Mogontiacum source images were visually reviewed, cropped to 128px masters,
 converted to direct BC7 DDS files, and compiled into [the contact sheet](ROMAN_BUILDING_ICON_CONTACT_SHEET.png).
 The generator rejects a missing, wrong-size, or non-RGBA direct building icon;
 the ledger's `icon_subject` column records the subject of each illustration.
@@ -53,3 +53,12 @@ the ledger's `icon_subject` column records the subject of each illustration.
 `Classis Ravennatis` uses the verified naval/dock contract as a modest
 port-base maintenance proxy. Its Ravenna city point does not reconstruct the
 nearby Classe lagoon, ship total, naval order of battle, or supply volume.
+
+## Mogontiacum camp source and boundary
+
+`MZ-MOG` is the City of Mainz's [Roman Mainz history](https://www.mainz.de/en/angebote-entdecken/kultur/stadtgeschichte/roemisches-mainz/roemisches-mainz), which identifies Mogontiacum as a strategic legionary camp opposite the Main under Drusus. `MZ-DRUSUS` is the City of Mainz's [Drusus Stone history](https://www.mainz.de/pl/angebote-entdecken/zu-gast-in-mainz/sehenswertes/drususstein), which dates the base-camp founding to 13 BC.
+
+`Castrum Mogontiacum` uses the installed stockade's low fort-level raw contract
+and modest garrison/unrest modifiers. It is expressly timber-and-earth rather
+than a later stone fortress, and it does not encode a legion count, unit roster,
+frontier line, or stone-wall reconstruction.

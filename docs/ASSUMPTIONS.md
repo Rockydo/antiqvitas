@@ -276,6 +276,19 @@ game modifier. Sources weighed: `MIC-CLASSE` and `RA-CLASSE` in
 `docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`. [secure military-port chronology;
 contested installed-location representation and quantitative scale]
 
+## 2026-07-22 - Castrum Mogontiacum is a bounded timber-and-earth camp proxy
+
+The City of Mainz identifies the Drusus-era base camp at the Main confluence
+and dates it to 13 BC, while the broader 13/12 BC foundation form is used by
+the city's Roman-Mainz history. The installed Mainz point is sufficient for the
+site label, but it cannot represent the camp's exact footprint, the nearby
+Weisenau camp, every barrack, or a two-legion disposition. Its level-one
+non-propagating fort effect is a conservative engine analogue, not evidence
+for a wall, a territorial zone of control, or a measured garrison. Sources
+weighed: `MZ-MOG`; `MZ-DRUSUS` in `docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`.
+[secure founding chronology and site association; contested installed-location
+representation and quantitative force scale]
+
 ## 2026-07-21 - Vyatka is an early Permic reconstruction, not a modern ethnicity
 
 The thirty-fourth selector batch introduces a Permic proxy for the installed

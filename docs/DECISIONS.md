@@ -2194,3 +2194,17 @@ and cloth maintenance. The model does not encode the source's ship count,
 specific vessels, coastal jurisdiction, harbour geometry, or a naval order of
 battle. A direct dedicated DDS ensures that this military-supply layer is not a
 generic dock icon.
+
+## 2026-07-22 - Castrum Mogontiacum receives a low Augustan camp contract
+
+Mainz's city history identifies the Drusus-era legionary camp at the Main
+confluence and its 13/12 BC foundation. The new special is therefore a named
+frontier exception to the generic M7 stockade layer, not evidence for naming
+every fort. The installed `defense_category`, `stockade_employment`,
+`small_fort_building`, and one-level raw `fort_level` contracts were inspected
+locally and generated only for this defense building.
+
+The definition deliberately copies the stockade's non-propagating low-fort
+behavior, then uses substantially smaller garrison/unrest effects. This models
+a timber-and-earth camp without importing later stone fortification, an AD 1
+unit roster, a fixed legion count, or a complete German frontier map.
