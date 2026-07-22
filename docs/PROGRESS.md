@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-22 - Direct Principate exchange-icon batch
+
+- Added direct, ledger-bound illustrations for Monsoon Navigation, Red Sea
+  Piloting, and Caravan Accounting. The checked advance migration now has
+  eleven individual illustrations replacing three further transitional
+  bindings.
+- Reviewed the final 256px contact sheet. The assets depict only broad antique
+  maritime/trade contexts: no named ship, port, sea, route, crew, cargo,
+  merchant, writing, coinage, or polity is asserted.
+- `gmake validate` passed with eleven direct advance icons. The controlled
+  vanilla/enabled `gmake smoke` pair rendered both menus with zero new mod-only
+  error-log lines.
+
+Next: continue the ledger-driven direct-art migration in small, inspected
+batches while preserving exact one-icon-to-one-advance bindings.
+
 ## 2026-07-22 - Direct Principate warfare-icon batch
 
 - Added direct, ledger-bound illustrations for Professional Standing Armies,

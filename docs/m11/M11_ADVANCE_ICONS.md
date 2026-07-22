@@ -34,19 +34,21 @@ until their individually reviewed asset chains exist. This prevents a missing
 or speculative illustration from appearing in game while making every finished
 icon visible immediately.
 
-The first eight direct icons are `antq_imperial_cult`, a restrained
+The first eleven direct icons are `antq_imperial_cult`, a restrained
 early-imperial civic altar; `antq_public_granaries`, an uninscribed grain-store
 facade; `antq_provincial_census`, an uninscribed counting table;
 `antq_tax_registers`, a wax-tablet and storage-jar still life;
 `antq_road_milestones`, a blank roadside milestone; and three warfare-context
 icons for `antq_professional_standing_armies`, `antq_auxiliary_service`, and
-`antq_drill_routines`. They are broad cult, provisioning, administrative,
-road-maintenance, service, equipment, and training contexts, not depictions of
-a named god, altar, priest, monument, horreum, census figure, tax regime,
-inscription, route, ruler, army, legion, individual, ethnicity, unit, battle,
-or state doctrine. The direct ledger records the subject, confidence, status,
-and non-reconstructive boundary for every future row. The required final state
-is 250 completed direct rows and no remaining transitional binding.
+`antq_drill_routines`; plus the exchange-context `antq_monsoon_navigation`,
+`antq_red_sea_piloting`, and `antq_caravan_accounting`. They are broad cult,
+provisioning, administrative, road-maintenance, service, equipment, training,
+maritime, and trade contexts, not depictions of a named god, altar, priest,
+monument, horreum, census figure, tax regime, inscription, route, ruler, army,
+legion, individual, ethnicity, unit, battle, ship, port, cargo, crew, or state
+doctrine. The direct ledger records the subject, confidence, status, and
+non-reconstructive boundary for every future row. The required final state is
+250 completed direct rows and no remaining transitional binding.
 
 ### Batch two review
 
@@ -70,6 +72,17 @@ and cord. None assigns an army, legion, nationality, ethnic identity, campaign,
 battle, training doctrine, standard, uniform, inscription, or ruler. The
 reviewed source/master batch is
 [here](DIRECT_ADVANCE_ICON_BATCH_03.png).
+
+### Batch four review
+
+The exchange illustrations use a broad square-sail merchant hull in open
+water; a plain wooden coastal boat with steering oar, lead line, and oil lamp;
+and blank trade measures with sealed jars and tally sticks. Their use of the
+Periplus source route is bounded to antique Indian-Ocean trade context: no
+specific vessel, port, sea, coastline, cargo, crew, commercial volume, route,
+merchant, coinage, polity, or navigational technique is identified. The
+reviewed source/master batch is
+[here](DIRECT_ADVANCE_ICON_BATCH_04.png).
 
 ## Engine and asset verification
 
