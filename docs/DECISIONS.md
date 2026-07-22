@@ -2220,3 +2220,14 @@ validator requires the real known advance/age, source PNG, 256px master, BC7
 DDS, one tree use, and adjusted group count. This is a technical migration
 decision, not a claim that an icon's broad visual motif reconstructs a
 historical object or practice.
+
+## 2026-07-22 - Campus Martius is modeled as three bounded civic functions
+
+The Pantheum, Saepta, and Diribitorium are each secure pre-AD 1 monuments, but
+the installed map supplies only one Rome location and the engine has no
+period-specific election or cult-system primitive. M5 therefore uses three
+one-level specials with the existing religious/government building contracts:
+modest unrest/literacy context for the Pantheum, modest control/tradition for
+the Saepta, and modest control for the Diribitorium. Their upkeeps create
+small demand for actual materials and services rather than setting economic
+output, vote totals, a cult calendar, or administrative staffing.
