@@ -88,7 +88,7 @@ antq_frontier_dispatches = {
 
 antq_imperial_archives = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_imperial_archives
 	depth = 8
 	research_cost = 6.0
 	starting_technology_level = 3
@@ -98,7 +98,7 @@ antq_imperial_archives = {
 
 antq_standing_administration = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_standing_administration
 	depth = 9
 	research_cost = 6.5
 	starting_technology_level = 4
@@ -179,7 +179,7 @@ antq_law_of_persons = {
 
 antq_provincial_governance = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_provincial_governance
 	depth = 8
 	research_cost = 8.0
 	requires = antq_law_of_persons
