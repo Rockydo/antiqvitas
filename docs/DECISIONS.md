@@ -2053,3 +2053,20 @@ load. The relationship fields and generated output were therefore reverted.
 Keep the bounded historical records, but do not add engine family links merely
 to satisfy the Han minority-regency loader until a local fixture identifies the
 actual contract.
+
+## 2026-07-22 - Defer AD 1 market-manager seeds, retain the historic hub ledger
+
+The installed `market_manager` contract parses and initializes in the AD 1
+setup, but it asserts `Getting relation with itself` at the first monthly pulse.
+An empty-manager Observer control reached 14 February AD 1 without that
+assertion; a Massawa-only fixture reproduced it on 1 February; and the full
+build still reproduced it after Massawa alone was deferred. This is therefore a
+runtime compatibility decision, not evidence against Adulis or any other
+historical exchange centre.
+
+`docs/m5/markets.csv` retains all 42 source-led hubs. Their 42 town/city,
+building, harbor, RGO, road, and localization records remain generated. The
+start mirror deliberately emits no `add_market` records, allowing the
+installed game's automatic market initializer to construct runtime markets
+without the invalid pre-game relation state. Any future attempt to restore an
+explicit seed must first demonstrate a zero-assertion monthly Observer run.
