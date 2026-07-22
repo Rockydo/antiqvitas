@@ -610,3 +610,59 @@ antq_diribitorium = {
 	}
 	construction_demand = town_building_construction
 }
+
+antq_templum_apollinis_palatini = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = clergy
+	max_levels = 1
+	category = religious_category
+	employment_size = religious_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = religious_building_time
+	modifier = {
+		local_unrest = -0.012
+		local_clergy_max_literacy = 0.75
+	}
+	unique_production_methods = {
+		antq_templum_apollinis_palatini_maintenance = {
+			incense = 0.12
+			wine = 0.06
+			marble = 0.08
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_bibliotheca_latina_graecaque = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	category = cultural_category
+	employment_size = cultural_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = cultural_building_time
+	modifier = {
+		local_cultural_tradition = 0.10
+		local_max_control = 0.01
+	}
+	unique_production_methods = {
+		antq_bibliotheca_latina_graecaque_maintenance = {
+			books = 0.08
+			beeswax = 0.04
+			marble = 0.04
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}

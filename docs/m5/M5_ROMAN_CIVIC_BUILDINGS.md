@@ -34,6 +34,12 @@ quantities.
 
 The three Rome specials are limited city-point proxies. Pantheum Agrippae does not use the later Hadrianic rotunda; Saepta Iulia does not import its later luxury-market use; and the Diribitorium does not reconstruct a ballot procedure, staff, or count. Their modest upkeep distinguishes stone, marble, timber, cloth, tools, incense, wine, pottery, and beeswax as relevant ancient goods or services without treating the values as a historical inventory.
 
+### Palatine temple and library additions
+
+`DAR-APOLLO-PAL` is Digital Augustan Rome's [Apollo Templum (Palatium) record](https://www.digitalaugustanrome.org/records/apollo-templum-palatium/): Augustus' Temple of Apollo was dedicated on 9 October 28 BC and was built in Luna marble. `DAR-BIBLIOTHECA-PAL` is its [Bibliotheca Latina Graecaque record](https://www.digitalaugustanrome.org/records/bibliotheca-latina-graecaque/): the Palatine library held Greek and Latin collections, likely opened after 28 BC and was probably in use by 23 BC; it was also used for some Senate meetings.
+
+The Temple of Apollo is a modest cult-complex proxy only; it does not rebuild its lost interior programme, priesthood, rites, or the later imperial palace. The library's pre-AD 1 function is retained while its uncertain plan and opening sequence are explicitly marked contested. Its `books` input is an engine-good proxy for scroll collections, not a claim for codices, a surviving catalogue, or stock volume; beeswax stands only for the ordinary tablet-and-record context. The two separate direct illustrations deliberately omit named persons, inscriptions, later buildings, and Christian imagery.
+
 ## Technical mapping
 
 The definitions use only contracts read from the installed build's
@@ -46,7 +52,7 @@ Their start-state presence is rendered through the existing verified
 
 ## Art review
 
-The direct Pantheum Agrippae, Saepta Iulia, and Diribitorium source images were
+The direct Pantheum Agrippae, Saepta Iulia, Diribitorium, Temple of Apollo, and Palatine Library source images were
 visually reviewed, cropped to 128px masters, converted to direct BC7 DDS
 files, and added to [the contact sheet](ROMAN_BUILDING_ICON_CONTACT_SHEET.png)
 alongside the existing named-building set.
