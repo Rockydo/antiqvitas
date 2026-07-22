@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-23 - Direct archive-and-administration icon batch
+
+- Added direct, ledger-bound illustrations for Imperial Archives, Standing
+  Administration, and Provincial Governance. The planned binding rises to
+  twenty individual advance illustrations.
+- Reviewed the final 256px contact sheet. The assets use only blank archives,
+  office tools, and measurement objects, without asserting a named archive,
+  library, office, province, empire, law, tax, boundary, register, or ruler.
+- `gmake validate` passed with twenty direct advance icons. The controlled
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: continue the ledger-driven direct-art migration in small, inspected
+batches while preserving exact one-icon-to-one-advance bindings.
+
 ## 2026-07-23 - Direct Principate civic-icon batch
 
 - Added direct, ledger-bound illustrations for Legal Petitions, Municipal
