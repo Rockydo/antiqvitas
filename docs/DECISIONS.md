@@ -2179,3 +2179,18 @@ The existing M7 frontier stockades remain deliberately generic. In particular,
 Castra Praetoria is excluded: the reviewed local historical source dates its
 construction under Tiberius in AD 21-23, after the start. This prefers an
 honest bounded proxy to an attractive but anachronistic named building.
+
+## 2026-07-22 - Classis Ravennatis uses Ravenna as a bounded Classe proxy
+
+The Italian Ministry of Culture's Classe record and Ravenna Turismo's
+archaeological-port record independently support Augustus' Ravenna military
+harbour in 27 BC. The installed map has Ravenna but not a separate Classe
+location, so M5 renders a named `Classis Ravennatis` special at Ravenna and
+records the near-site relation in both ledgers.
+
+Its naval/dock contract is intentionally smaller than a fleet reconstruction:
+limited local sailors and repair speed, with tar, naval supplies, tools, lumber,
+and cloth maintenance. The model does not encode the source's ship count,
+specific vessels, coastal jurisdiction, harbour geometry, or a naval order of
+battle. A direct dedicated DDS ensures that this military-supply layer is not a
+generic dock icon.

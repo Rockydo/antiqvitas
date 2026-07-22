@@ -1,7 +1,7 @@
-# Roman civic and commercial buildings at the AD 1 start
+# Roman civic, commercial, and naval buildings at the AD 1 start
 
 `roman_buildings.csv` is the canonical data ledger for the named special
-buildings seeded at the installed `rome` location.  Every entry is a
+buildings seeded at the installed `rome` or `ravenna` location. Every entry is a
 subject-specific ANTIQVITAS building type, with a dedicated UI icon contract,
 localized English name and description, a locally verified EU5 category,
 employment, construction, and modifier contract, and its own source note.
@@ -41,7 +41,15 @@ Their start-state presence is rendered through the existing verified
 ## Art review
 
 Four source sheets under `assets_queue/generated_sources/` plus a dedicated
-Navalia source image were visually reviewed, cropped to 128px masters,
+Navalia and Classis Ravennatis source images were visually reviewed, cropped to 128px masters,
 converted to direct BC7 DDS files, and compiled into [the contact sheet](ROMAN_BUILDING_ICON_CONTACT_SHEET.png).
 The generator rejects a missing, wrong-size, or non-RGBA direct building icon;
 the ledger's `icon_subject` column records the subject of each illustration.
+
+## Ravenna military-port source and boundary
+
+`MIC-CLASSE` is the Italian Ministry of Culture's [Civitas Classis / Classe record](https://catalogo.beniculturali.it/detail/ibc/ArchaeologicalProperty/156046), which records Augustus' military fleet and port development at Ravenna. `RA-CLASSE` is [Ravenna Turismo's Ancient Port of Classe record](https://www.turismo.ra.it/en/myravenna/wave/ancient-port-of-classe/), which dates the military-port order to 27 BC.
+
+`Classis Ravennatis` uses the verified naval/dock contract as a modest
+port-base maintenance proxy. Its Ravenna city point does not reconstruct the
+nearby Classe lagoon, ship total, naval order of battle, or supply volume.

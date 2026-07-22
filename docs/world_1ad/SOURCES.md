@@ -135,6 +135,8 @@ a row reaches `implemented` status.
   Rimini"](https://catalogo.cultura.gov.it/detail/ibc/ArchaeologicalProperty/261525),
   used for the 132 BCE Via Popilia's Rimini-Ravenna-Adria-Altino trajectory. It
   does not license a survey-grade conversion into modern EU5 map links.
+- `MIC-CLASSE`: Italian Ministry of Culture, [Civitas Classis / Classe](https://catalogo.beniculturali.it/detail/ibc/ArchaeologicalProperty/156046), records Augustus' military fleet and harbour development at Ravenna/Classe. It supports the AD 1 port-base anchor, not an exact fleet roster, city polygon, or economic volume.
+- `RA-CLASSE`: Ravenna Turismo, [Ancient Port of Classe](https://www.turismo.ra.it/en/myravenna/wave/ancient-port-of-classe/), dates Augustus' military-port construction order to 27 BC and identifies the eastern-Mediterranean fleet role. It supports chronology and function, not a reconstruction of harbour geometry or force strength.
 - `CHG`: China Historical GIS Han-era layers, subject to its attribution and
   non-commercial license review before data import.
 - `PER`: *Periplus of the Erythraean Sea* and modern scholarship for Indian

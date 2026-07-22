@@ -265,6 +265,17 @@ Sources weighed: plan sections 8.7 (P8.7) and 10 (P10); Parpola,
 [secure reconstructed regional context; contested selector extent and local
 representation]
 
+## 2026-07-22 - Classis Ravennatis is a Ravenna city-point proxy for Classe
+
+Augustus' military port at Classe was approximately four kilometres southeast
+of Ravenna. The installed game exposes Ravenna rather than a separate Classe
+point, so the named special is seeded there as a city-point proxy. It does not
+claim that the whole Ravenna location was harbour, that its landscape exactly
+matches the ancient lagoon, or that the reported fleet scale can be read as a
+game modifier. Sources weighed: `MIC-CLASSE` and `RA-CLASSE` in
+`docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`. [secure military-port chronology;
+contested installed-location representation and quantitative scale]
+
 ## 2026-07-21 - Vyatka is an early Permic reconstruction, not a modern ethnicity
 
 The thirty-fourth selector batch introduces a Permic proxy for the installed

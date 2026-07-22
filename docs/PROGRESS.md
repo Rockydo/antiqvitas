@@ -4288,6 +4288,24 @@ named layer; continue the user-priority Roman period-name expansion.
 Next: continue the period-name expansion only with comparably direct matches;
 maintain the separately prioritized Roman building and direct-art passes.
 
+## 2026-07-22 - Classis Ravennatis military-port building pass
+
+- Added `Classis Ravennatis` as the eighteenth named Roman civic/naval special
+  at the installed Ravenna city point. The Italian Ministry of Culture and
+  Ravenna archaeology records place Augustus' military harbour at nearby Classe
+  in 27 BC, so it is valid at the AD 1 start.
+- The verified naval/dock contract grants a deliberately modest sailor/repair
+  bonus and consumes tar, naval supplies, tools, lumber, and cloth. It does not
+  recreate the Classe lagoon, quote the reported 250 ships as an engine fact,
+  or supply a reconstructed fleet order of battle.
+- Added a dedicated, reviewed BC7 icon from original illustrated source art and
+  rebuilt the contact sheet. `make validate` is green at 18 direct-icon Roman
+  buildings and 46 M5/M7 start buildings; controlled vanilla/mod smoke has
+  zero new error-log lines.
+
+Next: retain generic frontier forts until a direct AD 1 source supports a named
+site, while continuing the direct-art and period-name priorities.
+
 ## 2026-07-22 - Fresh-start diagnostic and smoke-control recovery
 
 - A new-game probe reaches the AD 1 country-selection map but exposes 327

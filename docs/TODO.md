@@ -113,8 +113,9 @@ after `make full` and its autonomous driver report are green.
 
 ## M5 — Economy
 
-- [x] Replace Rome's generic civic/economic proxies with a source-led named building pass: 16 direct-icon specials now cover water, public grain storage, Forum Romanum/Augusti, Basilica Aemilia, macellum, Horrea Galbana, baths, Theatre of Marcellus, Mars Ultor cult, Tabularium, Circus, mint, workshops, mill/bakery, and Villa Liviae. See `docs/m5/roman_buildings.csv` and `M5_ROMAN_CIVIC_BUILDINGS.md`.
+- [x] Replace generic Roman civic/economic proxies with a source-led named building pass: 18 direct-icon specials now cover water, public grain storage, Forum Romanum/Augusti, Basilica Aemilia, macellum, Horrea Galbana, baths, Theatre of Marcellus, Mars Ultor cult, Tabularium, Circus, mint, workshops, mill/bakery, Villa Liviae, and the naval bases at Rome and Ravenna. See `docs/m5/roman_buildings.csv` and `M5_ROMAN_CIVIC_BUILDINGS.md`.
 - [x] Add the source-led naval-supply pass: Navalia Romae is now a named, direct-icon special tied to tar, naval supplies, tools, lumber, and cloth, with modest sailor/repair effects and an explicitly contested Augustan configuration.
+- [x] Add the securely dated Augustan naval-base pass: Classis Ravennatis is now a named Ravenna special, tied to direct military-port evidence at nearby Classe and the same bounded naval-supply goods.
 - [ ] Add further Roman frontier infrastructure only where a specific AD 1 source and a locally verified building contract support it; keep the existing M7 castra/limes proxies conservative and do not backdate Castra Praetoria (AD 21-23).
 - [x] Catalogue and smoke-check 42 source-labelled AD 1 market/urban hubs; the installed pre-game market-manager seeds are deferred after a first-month runtime assertion, while every source-led urban and harbor anchor remains active (see `BLOCKERS.md` and `DECISIONS.md`).
 - [x] Localize and anchor the plan-listed ancient raw goods on controlled AD 1 map locations (328 audited corrections).
