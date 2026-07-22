@@ -34,7 +34,7 @@ until their individually reviewed asset chains exist. This prevents a missing
 or speculative illustration from appearing in game while making every finished
 icon visible immediately.
 
-The first thirty-two direct icons are `antq_imperial_cult`, a restrained
+The first thirty-five direct icons are `antq_imperial_cult`, a restrained
 early-imperial civic altar; `antq_public_granaries`, an uninscribed grain-store
 facade; `antq_provincial_census`, an uninscribed counting table;
 `antq_tax_registers`, a wax-tablet and storage-jar still life;
@@ -52,7 +52,9 @@ icons for `antq_professional_standing_armies`, `antq_auxiliary_service`, and
 `antq_law_of_persons`, `antq_high_empire_administration`, and
 `antq_crisis_coinage`; three Crisis mobilization-and-fiscal-context icons for
 `antq_emergency_levies`, `antq_fiscal_reassessment`, and
-`antq_mint_accounting`; plus the exchange-context
+`antq_mint_accounting`; three Crisis coordination-correspondence-and-provisioning
+icons for `antq_regional_commands`, `antq_emergency_rescripts`, and
+`antq_grain_annona`; plus the exchange-context
 `antq_monsoon_navigation`, `antq_red_sea_piloting`, and
 `antq_caravan_accounting`; and the learning-context `antq_paper_precursors`,
 `antq_bamboo_registers`, and `antq_library_catalogues`. They are broad cult,
@@ -171,6 +173,16 @@ or depict a person, army, legion, polity, campaign, tax regime, valuation,
 city, province, empire, mint, ruler, denomination, currency system, text,
 portrait, or inscription. The reviewed source/master batch is
 [here](DIRECT_ADVANCE_ICON_BATCH_11.png).
+
+### Batch twelve review
+
+The Crisis coordination, correspondence, and provisioning illustrations use an
+unmarked cord-and-marker board, plain travel and document materials, a blank
+scroll, and grain storage materials. They do not identify a person, army,
+command, region, province, city, empire, ruler, campaign, tax regime, mint,
+law, decree, annona policy, granary, recipient, distribution scene, text, or
+inscription. The reviewed source/master batch is
+[here](DIRECT_ADVANCE_ICON_BATCH_12.png).
 
 ## Engine and asset verification
 
