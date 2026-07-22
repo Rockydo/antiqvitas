@@ -108,7 +108,7 @@ antq_standing_administration = {
 
 antq_jurists_law = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_jurists_law
 	depth = 0
 	research_cost = 4.0
 	ai_weight = { add = 100 }
@@ -116,7 +116,7 @@ antq_jurists_law = {
 
 antq_commentary_schools = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_commentary_schools
 	depth = 1
 	research_cost = 4.5
 	requires = antq_jurists_law
@@ -125,7 +125,7 @@ antq_commentary_schools = {
 
 antq_provincial_assizes = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_provincial_assizes
 	depth = 2
 	research_cost = 5.0
 	requires = antq_commentary_schools
