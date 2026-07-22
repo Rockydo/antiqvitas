@@ -4285,6 +4285,25 @@ separate Han runtime-regency blocker.
 Next: run the checkpointed Observer through a renderer exit, preserve its
 restart evidence, and continue to decade-scale M7/M8/M10/M12 verification.
 
+## 2026-07-22 - Checkpointed campaign stopped on market runtime assertion
+
+- The full checkpointed campaign restarted cleanly from `08:00, 1 January,
+  39`, entered live Observer on its first UI attempt, and reached the captured
+  `08:00, 25 April, 41` state. It did not reproduce the former renderer exit.
+- The live log then recorded `Getting relation with itself`, plus a separate
+  anonymous-XDP overlapping-ruler-term warning. The process was stopped rather
+  than continuing an erroring chronology. This is the second material market
+  route to the self-relation assertion: pre-game market seeds fail at the first
+  monthly pulse, while the all-deferred automatic runtime market path fails
+  later in the campaign.
+- The checkpoint driver remains green and viable. The next technical task is a
+  local engine-contract diagnosis for automatic market creation/merchant
+  relations; the planned renderer-exit recovery cannot be assessed until this
+  zero-new-error gate is restored.
+
+Evidence: `docs/playtests/M12_CHECKPOINTED_CAMPAIGN_20260722.md` and
+`docs/screens/20260722_m12_checkpointed_campaign/`.
+
 ## 2026-07-22 - M6 direct-parent fixture is not a Han-regency fix
 
 - A fresh AD 1 mod start rendered Emperor Ping's source-attested maternal link

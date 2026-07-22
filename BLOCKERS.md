@@ -933,3 +933,23 @@ autosaves. The unproven part is deliberately narrow: run long enough to hit an
 actual renderer exit, verify that the next cycle loads the newest checkpoint,
 and carry that loop through the required decade evidence. Do not re-run the old
 single-process Vulkan/DX12 tests as a substitute.
+
+## 2026-07-22 - Automatic runtime markets reproduce the self-relation assertion
+
+Status: **blocked after two materially different market-manager paths.** The
+initial M5 isolation showed that any pre-game `add_market` seed triggers
+`Getting relation with itself` at the first monthly pulse, so the generated
+start manager was intentionally emptied. The 300-second checkpointed campaign
+then exercised the contrary all-deferred path: EU5 created markets at runtime,
+reloaded cleanly at AD 39, and logged the same assertion after the AD 41
+capture. The current error log also contained an unrelated anonymous-XDP
+ruler-term overlap warning.
+
+This is not proof that a particular automatic market is the direct source; the
+engine assertion has no script filename or scope. It is enough to fail the
+required zero-new-error bar, so the campaign was stopped. Keep all 42 historic
+market/urban source rows, but do not re-enable the unsafe pre-game seeds or
+continue the campaign. Resume M5 only with a locally demonstrated market or
+merchant-relation contract that avoids both paths. Evidence:
+`docs/playtests/M12_CHECKPOINTED_CAMPAIGN_20260722.md` and the relocated
+`error.log` at 08:57:56 on 22 July.
