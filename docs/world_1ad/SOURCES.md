@@ -154,6 +154,17 @@ a row reaches `implemented` status.
   non-commercial license review before data import.
 - `PER`: *Periplus of the Erythraean Sea* and modern scholarship for Indian
   Ocean ports and trade polities.
+- `SIA-TABLETS`: Smithsonian Institution, ["Four Wooden Tablets in clerical
+  script"](https://www.si.edu/object/four-wooden-tablets-clerical-script%3Afsg_F1981.4a-e),
+  notes that Han-era Chinese texts were primarily on narrow bamboo and wood
+  strips, commonly bound with cords, before paper became widespread. It supports
+  a broad uninscribed bamboo-register icon, not a text, register, office, or
+  regional provenance.
+- `MET-HAN`: Metropolitan Museum of Art, ["Han Dynasty (206 B.C.-A.D.
+  220)"](https://www.metmuseum.org/essays/han-dynasty-206-b-c-220-a-d),
+  identifies paper development among Han technological achievements. It supports
+  a deliberately generic fibre-sheet/wooden-frame context, not an inventor,
+  recipe, precise date, or claim of universal early-first-century use.
 - `SAM`: *Samguk Sagi* conventional dates, explicitly marked contested where
   modern archaeology does not confirm a date.
 - `MET`: The Metropolitan Museum of Art's Roman-empire chronology, used for
