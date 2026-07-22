@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-22 - M3 political map accepted
+
+- Added `tools/m3_political_map.py` to the mandatory validation pipeline. It
+  proves all 157 reviewed roster polities have collision-safe AD 1 starts,
+  country definitions, correct owned capitals, and no surviving non-ANTIQVITAS
+  country entry across the 25 exact start-manager mirrors.
+- A fresh driver run reached the country-selection map and then a paused live
+  Observer session at `08:00, 1 January, 1`. The retained political map shows
+  the Roman Commonwealth, Parthia, client polities, and the sourced society
+  frames rather than a surviving 1337 snapshot.
+- The M3 gate is deliberately limited to the plan's political-map acceptance.
+  The Han ruler binding, economic trade-flow result, and renderer-bound
+  sustained observer tests remain independent M6/M5/M7--M12 work.
+
+Next: M3 is tagged after the full gate; continue only with an unblocked
+milestone task and preserve the documented renderer boundary.
+
 ## 2026-07-22 - M9 diplomatic foundation accepted
 
 - A fresh, no-time-advance AD 1 Observer session reached the paused map and

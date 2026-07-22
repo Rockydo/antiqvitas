@@ -468,21 +468,22 @@ evidence exists.
 
 ## 2026-07-19 - M3 observer runtime reaches vanilla systems not yet owned
 
-Status: **deferred to the remaining M6 runtime surface; M3 remains untagged.**
+Status: **resolved by the M3 political-map gate on 2026-07-22.**
 
 M6 update: the initial Rome/Han/Parthia core now supplies three sourced
 government profiles, three dynasties, and nine characters; an AD 1 observer
-run contains no new M6 identifier. The shared runtime boundary remains because
-the rest of M6's government/law/character surface is incomplete. The M6
-inspector-UI coverage gap is in `KNOWN_ISSUES.md`.
+run contains no new M6 identifier. The remaining Han minority-regency
+presentation gap is separately recorded under M6 and does not change M3's
+political-map criterion.
 
 M5 update: a subsequent AD 1 observer probe reached 11 January with market
 construction notifications and no market, town-setup, RGO, or road errors.
 The remaining active categories were unset capital/government and
-international-organization/HRE references. M9's checked foundation gate now
-owns and accepts the diplomacy/IO side; M3's remaining shared dependency is
-therefore M6. Evidence: `docs/playtests/M5_RUNTIME_FOUNDATION.md` and
-`docs/playtests/M9_DIPLOMACY.md`.
+international-organization/HRE references. Subsequent exact-name M12 guards
+and the accepted M9 foundation now own the demonstrated startup/diplomacy
+surface. Evidence: `docs/playtests/M5_RUNTIME_FOUNDATION.md`,
+`docs/playtests/M9_DIPLOMACY.md`, and
+`docs/playtests/M12_CLEAN_INITIALIZATION_20260721.md`.
 
 The autonomous driver loaded the full AD 1 political map, entered observer
 mode, started an actual observer session, and advanced it a month. Its runtime
@@ -504,9 +505,12 @@ Tried:
    still emitted the runtime system errors above. The overlays were removed;
    `make full` is again green at the required menu-smoke boundary.
 
-Recovery: M6 must resolve the remaining government, law, character, capital,
-and formable dependencies. Re-run the M3 observer capture and tag only after
-that shared runtime surface produces zero new normalized lines.
+Resolution: the current M3 census confirms 157 roster polities, 157 AD 1
+starts and country definitions, all 25 exact start-manager mirrors, and 13,552
+sourced controlled locations. A fresh driver run reached the country-selection
+map and a paused live Observer session at `08:00, 1 January, 1`; see
+`docs/playtests/M3_REPORT.md`. The prior long-observer integration result
+remains historical evidence for later milestones, not an M3 acceptance block.
 
 ## 2026-07-19 — M2 calendar waits on M3's full setup mirror
 

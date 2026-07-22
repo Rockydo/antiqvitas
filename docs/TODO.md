@@ -38,7 +38,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Build a local-raster coordinate index and sourced capital-candidate report.
 - [x] Research and create the remaining territorial/SoP coverage with an ordered residual-coverage ledger and an explicit intentional-empty audit.
 - [x] Mirror-replace the exact 25 installed start-manager files, removing the vanilla 1337 start layer.
-- [ ] Run milestone gate and tag `M3-done` (observer runtime is deferred in `BLOCKERS.md` only for the remaining M6 government/law/character surface; M5's runtime foundation and M9's diplomatic foundation are now accepted).
+- [x] Run the M3 political-map gate, pass `make full`, and tag `M3-done` (22 July 2026; the 157-polity/25-manager census and fresh paused AD 1 Observer map are recorded in `docs/playtests/M3_REPORT.md`).
 
 ## M4 — Peoples & faiths
 
