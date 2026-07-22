@@ -1,5 +1,19 @@
 # Technical and Design Decisions
 
+## 2026-07-22 - Validation scope is targeted, not a full-timeline observer gate
+
+The user has explicitly replaced the AD 1-to-476 observer-run completion
+requirement with strict smoke checks, static contracts, and short targeted
+driver probes for changed subsystems. The master plan now treats long observer
+runs as optional evidence: no milestone may be held open solely for lack of an
+extreme playthrough. Fresh-start cleanliness and mod-unique error detection
+remain non-negotiable.
+
+The same user direction raises visual scope: every player-facing ANTIQVITAS
+advance, privilege, building, good, religion, and institution requires its own
+dedicated art contract. Roman civic/commercial buildings and period-correct
+location naming are immediate implementation priorities.
+
 ## 2026-07-22 - Menu smoke uses a same-machine vanilla control
 
 The archived M0 vanilla baseline predates a reproducible current-machine DX12
@@ -2119,3 +2133,20 @@ to the latest checkpoint autonomously, so the FSR/NGX exit is no longer by
 itself grounds to abandon the long campaign. It is not evidence that a
 multi-century chronology is clean; the campaign must still demonstrate actual
 renderer-exit recovery and decade capture coverage.
+
+## 2026-07-22 - Rome uses named special buildings, not global medieval labels
+
+The installed game has valid reusable civic, trade, cultural, religious, and
+infrastructure mechanics but its generic labels would make an AD 1 Rome read
+as a later settlement. M5 therefore introduces sixteen one-level,
+`is_special = yes` ANTIQVITAS building types. Each uses only category,
+population, employment, build-time, modifier, good, and maintenance contracts
+read from the installed `common/building_types` files; they are not normal
+construction replacements or a new 3D-model system.
+
+`tools/m5_roman_buildings.py` makes the historical ledger authoritative and
+requires one generated localization and one 128px DDS file per building. The
+first actual smoke found that the installed `common/building_types` folder
+requires UTF-8 BOM and that unique production-method keys need localization;
+the generator locks both requirements in. This is a presentation and mechanics
+decision, not a claim of a precisely mapped monument for every function.
