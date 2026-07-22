@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-23 - Direct High Empires registry-icon batch
+
+- Added direct, ledger-bound illustrations for Municipal Accounting, Estate
+  Registries, and Imperial Rescripts. The planned binding rises to twenty-six
+  individual advance illustrations.
+- Reviewed the final 256px contact sheet. It confines the assets to blank
+  accounting, storage, and correspondence materials, without asserting a named
+  municipality, estate, owner, emperor, court, office, city, province, empire,
+  tax, currency, law, decree, register, or procedure.
+- `gmake validate` passed with twenty-six direct advance icons. The controlled
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: continue the ledger-driven direct-art migration in small, inspected
+batches while preserving exact one-icon-to-one-advance bindings.
+
 ## 2026-07-23 - Direct High Empires legal-study icon batch
 
 - Added direct, ledger-bound illustrations for Jurists' Law, Commentary
