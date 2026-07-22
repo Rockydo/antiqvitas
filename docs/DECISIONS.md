@@ -148,6 +148,20 @@ This separation prevents a market, road, or vanilla localization key from
 silently becoming a historical name. The owner-profile culture is an engine
 lookup adapter, not evidence that the selected city had one spoken language.
 
+## 2026-07-22 - Roman-world names require an exact ancient-point review
+
+The 17-location Italian and Sicilian expansion accepts only entries with a
+named Pleiades ancient point, a campaign-valid form, an installed map-key
+match, and secure confidence. `PLE:<id>` now records the exact source entry
+rather than relying on a generic classical-source label. The coordinate
+projection is a rejection check for a bad key match, not a basis for remapping
+the game map or fabricating a city boundary.
+
+This retains direct Latin-period display forms even at old Greek settlements
+where Pleiades lists multiple historical names. The selected M4 culture remains
+only the engine's dynamic-language adapter; it does not settle local language,
+demography, sovereignty, or civic status.
+
 ## 2026-07-21 - Game-driver activation handles minimized EU5 windows and capture focus
 
 EU5 can be minimized by Windows between a valid menu screenshot and the next
