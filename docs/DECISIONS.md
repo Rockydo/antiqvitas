@@ -2241,3 +2241,12 @@ silently promoted: Ferrara is not relabeled Spina, and Palermo is not relabeled
 from an unmatched Panormus record. The M4 culture-language adapter remains an
 engine localization route, not a claim that every resident used the displayed
 Latin form in daily speech.
+
+## 2026-07-22 - Direct icon review rejects anachronistic visual hardware
+
+The direct-art pipeline is an accuracy gate, not merely a texture-existence
+check. Two Provincial Census drafts passed their file-format constraints but
+showed notebook-like metal binder loops, so neither entered the repository or
+the M8 tree. Public Granaries, a separate non-reconstructive subject, was
+accepted instead. A failed individual art subject must not stall independent
+icons or reduce the validator's source/master/DDS requirements.

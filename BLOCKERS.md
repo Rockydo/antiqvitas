@@ -979,3 +979,16 @@ continue the campaign. Resume M5 only with a locally demonstrated market or
 merchant-relation contract that avoids both paths. Evidence:
 `docs/playtests/M12_CHECKPOINTED_CAMPAIGN_20260722.md` and the relocated
 `error.log` at 08:57:56 on 22 July.
+
+## 2026-07-22 - Provincial Census direct icon rejected after two art passes
+
+Status: **narrow asset blocked; no game content affected.** Two independent
+image-generation prompts for `antq_provincial_census` produced a wax-tablet
+motif with visible metal binder/ring hardware despite explicit exclusions. The
+first was rejected as notebook-like; the second retained the same ambiguity.
+Neither source was copied into the repository or bound in the M8 tree.
+
+Do not accept the current drafts. Resume this icon only with a non-hinged
+object composition (for example separate tablets with a wax seal and survey
+cord) after an art workflow can reliably omit modern binder hardware. Continue
+the independent direct-icon queue in the meantime.

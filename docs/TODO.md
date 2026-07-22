@@ -8,7 +8,7 @@ after `make full` and its autonomous driver report are green.
 - [ ] Continue the rich, source-led Roman building system with frontier infrastructure only where a specific AD 1 source and engine-safe contract support it; retain conservative proxies rather than backdating later castra.
 - [ ] Expand the AD 1 dynamic-location naming layer beyond anchors, prioritizing the Roman world and every player-facing map location with a secure period form.
 - [ ] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review.
-  - [x] Start and smoke-check the direct M8 migration: a ledger-driven, one-icon-at-a-time renderer path is live; the reviewed Imperial Cult icon is the first of 250 direct advance illustrations.
+  - [x] Start and smoke-check the direct M8 migration: a ledger-driven, one-icon-at-a-time renderer path is live; reviewed Imperial Cult and Public Granaries icons are the first two of 250 direct advance illustrations.
 
 ## M0 — Discovery & tooling
 
@@ -77,7 +77,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Extend the bounded northern-Mesopotamian Aramaic proxy through Jazira: 1 further selector resolves 48 locations, bringing the audited atlas to 11,617 locations across 139 mapped cultures.
 - [x] Expand the culture/location remap to the plan's 350-culture density floor with reviewed regional primary-source corpora; the 506 selectors resolve 12,058 controlled locations across 329 mapped cultures, and no AD 1 identity was inferred from a vanilla template key.
 - [x] Add reviewed dynamic names beyond capital anchors: 24 secure direct toponyms extend the 61 coordinate-verified capital anchors, with each dynamic-language lookup and source recorded in `docs/m4/dynamic_location_name_overrides.csv`.
-- [x] Add source-keyed Roman-world naming passes: 28 further Italian and Sicilian locations now render direct AD 1 forms from exact Pleiades city points, bringing the checked layer to 61 capitals plus 52 curated names.
+- [x] Add source-keyed Roman-world naming passes: 28 further Italian and Sicilian locations now render direct AD 1 forms from exact Pleiades city points, bringing the checked layer to 61 capitals plus 51 curated names.
 - [x] Add the Late-Preclassic Petén lowland Maya frame: 1 further selector resolves 4 locations, bringing the audited atlas to 11,621 locations across 139 mapped cultures.
 - [x] Add a bounded lower-Rhine Batavian proxy for the wholly Batavian Holland scope: 1 further selector resolves 18 locations and adds 1 culture definition, bringing the audited atlas to 11,639 locations across 140 mapped cultures.
 - [x] Add the bounded Moravian Quadi frame: 1 further selector resolves 16 locations and adds 1 culture definition, bringing the audited atlas to 11,655 locations across 141 mapped cultures.
