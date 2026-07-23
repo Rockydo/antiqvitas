@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-23 - Ara Pacis and Mausoleum reuse established building contracts
+
+The Ara Pacis uses the installed religious-building contract with small
+cultural and unrest effects; the Mausoleum uses the cultural-building contract.
+Both are one-level Rome city-point specials rendered by the existing M5 ledger,
+start-manager, localization, and 128px direct-art pipeline. No new building
+category, production chain, or speculative ancient statistic is introduced.
+
 ## 2026-07-23 - Privilege art uses the native portrait contract
 
 The estate interface resolves `GetEstatePrivilegeIcon` directly and its

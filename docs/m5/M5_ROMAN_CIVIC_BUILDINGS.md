@@ -29,6 +29,9 @@ quantities.
 - **MET-ROMAN** — Metropolitan Museum of Art, [The Roman World](https://www.metmuseum.org/pt/-/media/files/learn/for-educators/publications-for-educators/roman.pdf).  Used only for the broad, well-attested class of urban Roman milling and baking, not for a precise Rome-site attribution.
 - **OCD-ANNONA**, **ITA-LIVIA**, **P12.1**, **P12.3**, and **P8.1** remain the plan's reviewed source identifiers for annona, the Prima Porta proxy, technical craft anchors, special-building seeding, and civic coinage respectively.
 
+- **DAR-ARA-PACIS** â€” Digital Augustan Rome, [Pax Augusta, Ara](https://www.digitalaugustanrome.org/records/pax-augusta-ara/). Records the Senate's 13 BC decree and 30 January 9 BC dedication of the Ara Pacis Augustae.
+- **DAR-MAUSOLEUM** â€” Digital Augustan Rome, [Mausoleum: Augustus](https://www.digitalaugustanrome.org/records/mausoleum-augustus/). Records a pre-AD 1 Campus Martius tomb and public grove/walk context, while retaining uncertainty about the exact construction sequence.
+
 ### Campus Martius civic additions
 
 `DAR-PANTHEUM` is Digital Augustan Rome's [Pantheum record](https://www.digitalaugustanrome.org/records/pantheum/): Agrippa's temple was erected around 27 BC, but its original form is only partly recoverable beneath Hadrian's later rebuilding. `DAR-SAEPTA` is its [Saepta Iulia record](https://www.digitalaugustanrome.org/records/saepta-iulia/): Agrippa dedicated the great porticoed tribal-voting enclosure in 26 BC. `DAR-DIRIBITORIUM` is its [Diribitorium record](https://www.digitalaugustanrome.org/records/diribitorium/): Augustus completed the vote-counting hall in 7 BC, with exceptional long timber roof trusses.
@@ -71,6 +74,21 @@ a generic theatre silhouette because the theatre's plan and decoration remain
 only partly recoverable; it does not portray a crowd, statue, inscription,
 ritual, named patron, or the Crypta Balbi as an asserted reconstruction.
 
+### Ara Pacis and Mausoleum additions
+
+`DAR-ARA-PACIS` records the Ara Pacis Augustae's Senate decree in 13 BC and
+dedication on 30 January 9 BC. It is therefore a secure AD 1 Campus Martius
+anchor. The special is only a modest open-air cult-space proxy: it deliberately
+omits the historical procession frieze, named family members, a rite, and a
+complete plaza reconstruction.
+
+`DAR-MAUSOLEUM` records Augustus' monumental Campus Martius tomb and public
+groves/walks before AD 1, while preserving the scholarly uncertainty over its
+exact construction sequence. The special is a cultural-landscape proxy only:
+it does not determine the tomb's internal plan, occupants, sculpture, complete
+landscaping, or later ruin state. Both direct icons use restrained exterior
+silhouettes rather than invented scenes.
+
 ## Technical mapping
 
 The definitions use only contracts read from the installed build's
@@ -89,6 +107,8 @@ files, and added to [the contact sheet](ROMAN_BUILDING_ICON_CONTACT_SHEET.png)
 alongside the existing named-building set.
 The generator rejects a missing, wrong-size, or non-RGBA direct building icon;
 the ledger's `icon_subject` column records the subject of each illustration.
+Ara Pacis and Mausoleum source images were reviewed under the same contract;
+the refreshed sheet now contains all 34 named Roman specials.
 
 ## Ravenna military-port source and boundary
 

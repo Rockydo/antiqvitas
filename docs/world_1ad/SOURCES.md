@@ -1,5 +1,8 @@
 # AD 1 World Roster Sources
 
+- `DAR-ARA-PACIS`: Digital Augustan Rome, [Pax Augusta, Ara](https://www.digitalaugustanrome.org/records/pax-augusta-ara/), records the Senate's 13 BC decree and 30 January 9 BC dedication of the Ara Pacis Augustae. It supports a bounded AD 1 open-air altar anchor, not a procession frieze, named family group, rite, or complete plaza reconstruction.
+- `DAR-MAUSOLEUM`: Digital Augustan Rome, [Mausoleum: Augustus](https://www.digitalaugustanrome.org/records/mausoleum-augustus/), records a pre-AD 1 Campus Martius tomb with public groves and walks, while retaining uncertainty over the exact construction sequence. It supports a bounded cultural-landscape anchor, not a tomb plan, occupant list, sculpture programme, full landscaping, or later ruin state.
+
 The roster records a source code on every row. `P8.x` means the historical
 requirements in the corresponding section of the ANTIQVITAS master plan; those
 requirements are cross-checked against the following research pipeline before
