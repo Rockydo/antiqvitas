@@ -3956,3 +3956,13 @@ or commodity flow at any listed city. Each new seed is deliberately contested:
 it represents a city market and its hinterland only. Sources weighed: plan
 P12.1/P12.3 and the already reviewed AD 1 anchor ledger. [secure broad craft
 context and anchor; contested individual placement, scale, and organization]
+
+## 2026-07-23 - Iberian names are direct city-point labels
+
+The Hispalis, Carthago Nova, Valentia, Toletum, Pompelo, Bracara Augusta, Lucus
+Augusti, Asturica Augusta, Salmantica, Segovia, Norba Caesarina, Onuba, Palma,
+Ebusus, Bilbilis, Ilerda, Osca, Gerunda, and Dertosa rows use direct ancient
+city forms from the Pleiades/Barrington gazetteer tradition at the installed
+modern-city points. The Latin dynamic adapter does not assert uniform language,
+territory, civic status, or demographic continuity. [secure direct toponym;
+contested social and territorial inference]
