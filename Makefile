@@ -8,6 +8,7 @@ validate:
 	.venv/Scripts/python.exe tools/generate_m4_definitions.py --check
 	.venv/Scripts/python.exe tools/generate_m4_tier2_names.py --check
 	.venv/Scripts/python.exe tools/generate_m4_tier2_wide_names.py --check
+	.venv/Scripts/python.exe tools/generate_m4_tier2_remote_names.py --check
 	.venv/Scripts/python.exe tools/generate_m4_tier3_names.py --check
 	.venv/Scripts/python.exe tools/generate_dynamic_names.py --check
 	.venv/Scripts/python.exe tools/culture_template_inventory.py --check
