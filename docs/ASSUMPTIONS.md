@@ -4064,3 +4064,12 @@ The twelve new crafts model documented antique production categories, not named
 workshops, routes, owners, outputs, or workforce. Every city placement is a
 contested market-and-hinterland proxy. Sources: P12.1; P12.3; MET-ROMAN-TRADE;
 UNESCO-TYRE. [secure broad craft context; contested placement and scale]
+
+## 2026-07-23 - Tier-2 city labels are explicitly provisional map adapters
+
+The 82 generated labels use only Pleiades settlement records whose declared
+date range contains AD 1, but a nearby game city field can still represent a
+wider district or another settlement. Each row therefore records `PLE:<id>;T2`,
+a measured nearest-field offset no greater than 1.50 pixels, and `tier2`
+confidence; it is not a claim about exact civic extent, polity, culture, or
+population. Source: local Pleiades snapshot, `pleiades_name_candidates.csv`.

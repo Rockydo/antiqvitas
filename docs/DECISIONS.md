@@ -2486,3 +2486,11 @@ removing their direct art or goods-demand texture.
 Nine productive families reuse harvested guild contracts; saltworks, charcoal,
 and spice handling remain maintenance/service adapters. The full system stays
 within the validator's 50-80% productive range at 77.9%.
+
+## 2026-07-23 - M4 separates bounded Tier-2 labels from reviewed names
+
+Tier-2 names are generated only from the checked local Pleiades queue, a
+precise settlement record whose declared range contains AD 1, a nearest-field
+projection of at most 1.50 pixels, and the field's installed pop culture.
+They use a distinct `tier2` confidence and cannot overwrite capitals or the
+secure direct ledger; uncertain or archaeological title forms are rejected.

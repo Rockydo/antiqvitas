@@ -18,5 +18,9 @@ Run:
 .venv\Scripts\python.exe tools\pleiades_name_candidates.py --write
 ```
 
-The committed `pleiades_name_candidates.csv` is an evidence worklist. Only a
-reviewed row in `dynamic_location_name_overrides.csv` is game-visible.
+The committed `pleiades_name_candidates.csv` is an evidence worklist. Secure,
+reviewed rows in `dynamic_location_name_overrides.csv` remain the Tier-1
+runtime source. `tools/generate_m4_tier2_names.py` separately selects a
+bounded subset (nearest AD 1 settlement, no more than 1.50 pixels away), rejects
+uncertain and archaeological title forms, and records its lower-confidence
+proxy status in `tier2_location_name_overrides.csv`. It never edits Tier-1.
