@@ -252,6 +252,16 @@ religion, treasure, coin system, boat, event, map, sign, inscription, writing,
 symbol, emblem, flag, or modern object. The reviewed source/master batch is
 [here](DIRECT_ADVANCE_ICON_BATCH_19.png).
 
+### Batch twenty review
+
+The High Empire trade-infrastructure illustrations distinguish mooring and cargo
+materials, seasonal sea-navigation equipment, a timber customs gate, and four
+separate trade-good classes with measures. They do not identify a named sea,
+ocean, monsoon, route, border, city, ruler, empire, port, merchant, customs
+office, law, tax system, market, currency, event, person, animal, boat, map,
+sign, inscription, writing, symbol, or modern object. The reviewed
+source/master batch is [here](DIRECT_ADVANCE_ICON_BATCH_20.png).
+
 ## Engine and asset verification
 
 The installed build's `main_menu/gfx/interface/advance/` established the
