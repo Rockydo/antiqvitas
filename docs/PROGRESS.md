@@ -5887,3 +5887,10 @@ separate Han runtime-regency blocker.
   cooperage, and spice handling.
 - The M5/M7 audit is 1,152 placements: 77.9% productive and 94.1% scalable.
   `make validate` and menu smoke pass with zero new error lines.
+
+## 2026-07-23 - M4 bounded Tier-2 period-name pass
+
+- Added a reproducible, 82-label AD 1 Pleiades adapter layer: precise settlement
+  points, nearest installed fields, at most 1.50 projection pixels, and an
+  explicit lower-confidence ledger. The runtime layer is now 61 capital, 215
+  direct, and 82 Tier-2 names across all client localizations.
