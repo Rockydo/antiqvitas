@@ -52,8 +52,8 @@ MODIFIERS = {
     "local_merchant_power", "local_monthly_food_modifier", "local_population_capacity",
     "local_production_efficiency", "local_repair_speed", "local_sailors", "local_unrest",
 }
-ROMAN_SPECIAL_LOCATIONS = {"basel", "mainz", "neuss", "ravenna", "rome"}
-START_KEY_PREFIX = {"basel": "basel", "mainz": "mainz", "neuss": "neuss", "ravenna": "ravenna", "rome": "roma"}
+ROMAN_SPECIAL_LOCATIONS = {"basel", "mainz", "neuss", "nijmegen", "ravenna", "rome"}
+START_KEY_PREFIX = {"basel": "basel", "mainz": "mainz", "neuss": "neuss", "nijmegen": "nijmegen", "ravenna": "ravenna", "rome": "roma"}
 
 
 def rows(path: Path) -> list[dict[str, str]]:

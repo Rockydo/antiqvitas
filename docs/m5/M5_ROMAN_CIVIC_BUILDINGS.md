@@ -183,3 +183,17 @@ its reviewed first tile was cropped to
 The call used the inspected vanilla barracks reference retained at
 `assets_queue/references/vanilla_building_barracks_reference.png`; the contact
 sheet above is the final visual review surface.
+
+## Hunnerberg camp source, boundary, and art
+
+`RU-HUNNERBERG` is Radboud University's [Roman-road archaeology record](https://www.ru.nl/en/services/recharge/overview/a-roman-road-on-the-campus-of-radboud-university). It identifies the first Roman troops near Nijmegen's Hunnerberg around 19 BC and describes their camp as a Lower-Rhine military and supply anchor. The ownership ledger retains Nijmegen under its Batavian client: the building represents a Roman military presence, not an invented annexation.
+
+`Castrum Hunnerberg` uses the same low timber-and-earth stockade contract as
+the other AD 1 camp specials. It does not represent a stone fortress, an exact
+camp plan, a legion count, a limes line, or a later Flavian fort. Its direct
+icon was selected from the inspected 3x4 source sheet
+`assets_queue/generated_sources/antq_castrum_hunnerberg_sheet_source.png`,
+cropped to `assets_queue/generated/antq_castrum_hunnerberg_128.png`, and
+encoded as `main_menu/gfx/interface/icons/buildings/antq_castrum_hunnerberg.dds`.
+The source sheet used the inspected vanilla barracks reference named in the
+Novaesium section as a style reference only.

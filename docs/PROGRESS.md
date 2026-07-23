@@ -5106,6 +5106,15 @@ separate Han runtime-regency blocker.
 - Added the permanent building audit: all 327 M5/M7 placements are counted,
   with 64.2% productive and 80.1% scalable. Next: full validation and smoke.
 
+## 2026-07-23 - M5 Castrum Hunnerberg frontier anchor
+
+- Added the source-qualified c.19 BC Augustan Hunnerberg camp at Nijmegen with
+  a direct, reviewed building icon and the established low timber-and-earth
+  stockade contract; Batavian client ownership is unchanged. Added two
+  productive scalable Cologne craft placements to retain the permanent 80%
+  scale floor.
+- Next: validate and smoke the new game-visible building batch.
+
 ## 2026-07-23 - M4 source-keyed city-name expansion
 
 - Added 24 secure, installed-location dynamic-name anchors for Roman Britain,

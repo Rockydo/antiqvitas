@@ -1,7 +1,7 @@
 # Regional antique production buildings
 
 This M5 layer adds ten reusable, directly illustrated antique production
-families and **262 AD 1 start placements**: 132 in Europe, 38 in North Africa,
+families and **264 AD 1 start placements**: 134 in Europe, 38 in North Africa,
 and 92 in the Middle East. The ledger is deliberately a family system rather
 than 262 fictional unique monuments. Each family has a direct PNG source, a
 reviewed BC7 128px DDS icon, localized name/description, a locally verified
@@ -25,10 +25,10 @@ pair, and total at least 100.
 | Pottery kiln | 45 | clay, lumber, tools |
 | Fullonica | 40 | wool, cloth, dyes, tools |
 | Glassworks | 22 | glass, clay, lumber, tools |
-| Dye workshop | 5 | dyes, cloth, fish, tools |
+| Dye workshop | 6 | dyes, cloth, fish, tools |
 | Metalwork shop | 33 | iron, copper, coal, tools |
 | Stone yard | 14 | stone, masonry, marble, lumber, tools |
-| Antique shipyard | 22 | lumber, naval supplies, tar, cloth, tools |
+| Antique shipyard | 23 | lumber, naval supplies, tar, cloth, tools |
 
 These numbers are gameplay demand weights, not reconstructed ancient output,
 workforce, prices, or cargo quantities. Existing antique RGO and goods work
@@ -59,9 +59,9 @@ Hadrumetum. Their `city`/`town` profiles are engine adapters for a regional
 urban market, not population totals, municipal-rank reconstructions, or proof
 of a named production site.
 
-A production-and-scale audit now counts every 327 M5/M7 start placement rather
+A production-and-scale audit now counts every 330 M5/M7 start placement rather
 than only these regional rows. It locks the actual layout at 64.2% productive
-and 80.1% scalable; see [BUILDING_AUDIT.md](BUILDING_AUDIT.md).
+and 80.0% scalable; see [BUILDING_AUDIT.md](BUILDING_AUDIT.md).
 
 ## Art review
 

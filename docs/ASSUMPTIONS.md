@@ -3862,3 +3862,13 @@ and naval-supplies recipes represents city-and-hinterland market texture, not
 an excavated workshop, output estimate, ethnic guild, municipal rank, or
 route. Sources weighed: Pleiades and plan P8.1/P8.2/P11, plus each craft
 family's category source. [secure city anchor; contested economic scale]
+
+## 2026-07-23 - Castrum Hunnerberg preserves Batavian client ownership
+
+Radboud University describes first Roman troops and a large camp at Nijmegen's
+Hunnerberg around 19 BC and around year zero. The installed Nijmegen location
+is owned by the Batavian client in the AD 1 ledger, so the one-level camp is a
+military-presence proxy only; it makes no annexation, legion, stone-fortress,
+limes, exact-plan, supply-volume, or later-Flavian claim. The icon is a
+generic timber-and-earth enclosure, not an archaeological reconstruction.
+Source weighed: `RU-HUNNERBERG`. [secure broad camp context; contested scale]
