@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-23 - High Empire exchange art stays generic
+
+The sixteenth direct advance-icon batch depicts generic stone storage access,
+blank credit-handling materials, standardized market measures, and low
+warehouse-storage materials. It identifies no named road, caravan route, city,
+building, merchant, bank, official, law, polity, currency system, port, tax
+system, animal, person, sign, seal imprint, map, inscription, writing, flag, or
+modern object.
+
+Sources: plan section `P15` and asset-pipeline boundary `P20` in
+`ANTIQVITAS_MASTER_PLAN.md`.
+
+[secure broad material, trade, and storage contexts; contested practice,
+distribution, object provenance, and all visual reconstruction]
+
 ## 2026-07-23 - Logistics and exchange advance art stays generic
 
 The fifteenth direct advance-icon batch depicts blank coin and measure
