@@ -35,3 +35,12 @@ object studies rather than depictions of a Wang person, great house, king,
 emperor, court official, palace, territory, battle, constitutional formula, or
 seal impression. The reviewed portrait contact sheet is
 [here](DIRECT_PRIVILEGE_ICON_BATCH_03.png).
+
+## Fourth Kushite, steppe, and Korean court batch
+
+The next three icons distinguish a Kushite court household, early steppe clan
+household materials, and an early Korean court household. They remain
+uninscribed object studies rather than depictions of a ruler, person, dynasty,
+palace, territory, battle, mounted force, constitutional formula, or seal
+impression. The reviewed portrait contact sheet is
+[here](DIRECT_PRIVILEGE_ICON_BATCH_04.png).
