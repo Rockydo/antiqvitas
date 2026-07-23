@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-23 - Complete direct M6 privilege-icon coverage
+
+- Added the final five dedicated 64x90 privilege icons for northwestern Indian
+  regional and urban households, a leading-clan household, a non-ritual
+  Buddhist monastic grouping, and a non-reconstructive Judean priesthood
+  grouping. All 24 ANTIQVITAS M6 privilege keys now have their own generated
+  source, PNG master, and native-contract DDS; no shared fallback remains.
+- Reviewed the portrait contact sheet and retained strict boundaries: no named
+  satrap, city elite, clan, monk, priest, Temple, person, polity, building,
+  map, battle, constitutional formula, or seal impression.
+
+- `gmake validate` passed with all 24 direct privilege icons. The bounded
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: resume the advance, religion, building, good, and period-name migrations.
+
 ## 2026-07-23 - Direct frontier, regional, chiefly, and town privilege icons
 
 - Added dedicated 64x90 icons for a frontier court, regional court, early
