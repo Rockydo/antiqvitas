@@ -5822,3 +5822,12 @@ separate Han runtime-regency blocker.
   filtered AD 1 settlement candidates not already covered by a capital or
   curated name. It is an evidence worklist only; no proximity-only row is
   allowed into game-visible localization.
+
+## 2026-07-23 - M5 fourth direct-art manufacture pass
+
+- Added 12 illustrated craft families and 120 contested city-and-hinterland
+  placements across Europe, North Africa, and the Middle East. The checked M5
+  system is now 58 direct-art families and 844 regional placements.
+- The whole-system audit is 912 placements, 79.7% productive, and 92.5%
+  scalable. `make validate` and the reduced vanilla/mod menu smoke gate passed
+  with zero new mod log lines.

@@ -2473,3 +2473,10 @@ AD 1 settlement points near installed keys. Proximity is a candidate signal,
 not proof of identity: the queue is deliberately excluded from runtime
 localization and every accepted name still requires a secure, explicit ledger
 row with its source and adapter.
+
+## 2026-07-23 - M5 production ceiling is enforced globally
+
+The fourth pass uses native guild formulas for ten new families and deliberately
+keeps perfumery and waxwork as service contracts. This holds all M5/M7 placed
+buildings at 79.7% productive—inside the requested 50–80% range—without
+removing their direct art or goods-demand texture.
