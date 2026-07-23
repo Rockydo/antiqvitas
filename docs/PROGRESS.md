@@ -5088,6 +5088,16 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-23 - M5 reusable provincial production expansion
+
+- Expanded the direct-art regional-building network from 112 to 212 AD 1
+  placements, adding 100 bounded regional-production proxies at twenty
+  reviewed Roman and North-African city anchors.
+- Added the matching deferred M5 market and urban-node contracts without
+  creating speculative market routes or unique building families.
+- Generated the start mirror successfully: 62 M5 market/urban nodes and 277
+  M5/M7 building placements. Next: validate and smoke the game-visible batch.
+
 ## 2026-07-23 - M4 source-keyed city-name expansion
 
 - Added 24 secure, installed-location dynamic-name anchors for Roman Britain,

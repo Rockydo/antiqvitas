@@ -3842,3 +3842,13 @@ architectural and operational representation]
 
 Wine, pottery, cloth, glass, dyes, tools, and naval supplies reuse exact native
 guild recipes for documented antique craft classes, not ancient prices or scale.
+
+## 2026-07-23 - M5 second-pass provincial market anchors are bounded proxies
+
+Twenty additional Pleiades/plan-reviewed Roman and North-African city points
+are deferred market anchors solely to host reusable craft-family placements.
+Their city/town labels are technical EU5 adapters and each placement remains
+contested: no row asserts a named workshop, output quantity, civic rank,
+population, estate, or trade-route edge. Sources weighed: Pleiades and plan
+P8.1, with the production-category source carried by each family row.
+[secure city-name anchor; contested economic scale and placement]
