@@ -4026,6 +4026,14 @@ adapter only, not a claim about exact extent, culture, polity, or population.
 Sources: PLE:678437; PLE:678179; PLE:668290; PLE:697728; PLE:678073;
 PLE:639073; PLE:687931. [secure direct toponym; contested map-key proxy]
 
+## 2026-07-23 - Anatolian city labels remain point-name adapters
+
+Trapezus, Amisus, Attalea, Mazaka, and Amastris use direct Pleiades settlement
+records. Each installed key is a city-field display adapter only, not a claim
+about exact extent, culture, polity, or population. Sources: PLE:857359;
+PLE:857024; PLE:638778; PLE:629035; PLE:844856. [secure direct toponym;
+contested map-key proxy]
+
 ## 2026-07-23 - Fourth M5 craft pass remains regional
 
 The twelve new craft types express broad antique productive or consumer-service
