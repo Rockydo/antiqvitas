@@ -4018,6 +4018,14 @@ PLE:197312; PLE:197389; PLE:197113; PLE:216907; PLE:216800; PLE:207549;
 PLE:206927; PLE:217016; PLE:206975; PLE:216694. [secure direct toponym;
 contested map-key proxy]
 
+## 2026-07-23 - Levantine city labels remain point-name adapters
+
+Tyros, Heliopolis, Laodicea, Philadelphia, Bostra, Ptolemais, and Ioppe use
+direct Pleiades settlement records. Each installed key is a city-field display
+adapter only, not a claim about exact extent, culture, polity, or population.
+Sources: PLE:678437; PLE:678179; PLE:668290; PLE:697728; PLE:678073;
+PLE:639073; PLE:687931. [secure direct toponym; contested map-key proxy]
+
 ## 2026-07-23 - Fourth M5 craft pass remains regional
 
 The twelve new craft types express broad antique productive or consumer-service
