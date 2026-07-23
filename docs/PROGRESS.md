@@ -6001,3 +6001,8 @@ separate Han runtime-regency blocker.
 - Added a rapid SHA-256 uniqueness guard to both named and regional building
   validators. All 54 Roman specials and all 130 regional families now require
   their own direct DDS texture as well as the existing format checks.
+
+## 2026-07-23 - M11 complete UI-art review
+
+- Added a generated, checked contact sheet of all 509 direct UI assets across
+  seven surfaces; it is now part of the standard validation gate.

@@ -34,6 +34,7 @@ validate:
 	.venv/Scripts/python.exe tools/m11_common_icons.py --check
 	.venv/Scripts/python.exe tools/m11_privilege_icons.py --check
 	.venv/Scripts/python.exe tools/m11_ui_asset_ledger.py --check
+	.venv/Scripts/python.exe tools/m11_ui_asset_contact_sheet.py --check
 	.venv/Scripts/python.exe tools/m11_decisions.py --check --scope all
 	.venv/Scripts/python.exe tools/m11_message_overlay.py --check --scope all
 	.venv/Scripts/python.exe tools/m11_localization.py --check
@@ -66,3 +67,4 @@ full: validate smoke
 
 art-review:
 	.venv/Scripts/python.exe tools/m11_contact_sheet.py
+	.venv/Scripts/python.exe tools/m11_ui_asset_contact_sheet.py --write
