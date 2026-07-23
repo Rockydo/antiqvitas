@@ -5690,3 +5690,12 @@ separate Han runtime-regency blocker.
   `make smoke` gate both passed with zero new log lines.
 - Next: continue source-led naming where direct forms exist, while leaving the
   documented runtime market-relation limitation isolated from this M5 batch.
+
+## 2026-07-23 - Augsburg AD 1 frontier camp
+
+- Added the source-backed Augsburg-Oberhausen military depot/camp as a low,
+  direct-art timber-and-earth special; no later stone fortress or troop roster
+  is asserted.
+- `make validate` and `make smoke` passed. The mirror now records 39 named
+  Roman buildings and 455 total M5/M7 placements (70.1% productive; 85.3%
+  scalable).

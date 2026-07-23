@@ -3873,6 +3873,14 @@ limes, exact-plan, supply-volume, or later-Flavian claim. The icon is a
 generic timber-and-earth enclosure, not an archaeological reconstruction.
 Source weighed: `RU-HUNNERBERG`. [secure broad camp context; contested scale]
 
+## 2026-07-23 - Augsburg camp remains a depot proxy
+
+The Augsburg museum's Oberhausen evidence supports a Roman military camp and
+supply depot around the campaign boundary. The direct location therefore gains
+only a low timber-and-earth camp adapter; it does not assert a recovered plan,
+unit count, stone fort, later civic settlement, or frontier line. Source:
+`AUG-ROMERLAGER`. [secure camp context; contested scale]
+
 ## 2026-07-23 - Manufacture families remain city-and-hinterland proxies
 
 The silk, writing, luxury-craft, arms, textile, dye, joinery, bronze, ivory,
