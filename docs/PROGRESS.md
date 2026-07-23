@@ -1,5 +1,10 @@
 # Progress
 
+## 2026-07-23 - Nile period-name pass
+
+- Added six direct Pleiades city forms: Memphis, Hermopolis Magna, Panopolis,
+  Latopolis, Apollonopolis Magna, and Coptos; the checked layer has 213 names.
+
 ## 2026-07-23 - Anatolian period-name pass
 
 - Added five direct Pleiades city forms: Trapezus, Amisus, Attalea, Mazaka,

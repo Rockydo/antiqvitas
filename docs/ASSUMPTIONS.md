@@ -4034,6 +4034,14 @@ about exact extent, culture, polity, or population. Sources: PLE:857359;
 PLE:857024; PLE:638778; PLE:629035; PLE:844856. [secure direct toponym;
 contested map-key proxy]
 
+## 2026-07-23 - Nile city labels remain point-name adapters
+
+Memphis, Hermopolis Magna, Panopolis, Latopolis, Apollonopolis Magna, and
+Coptos use direct Pleiades settlement records. Each installed key is a
+city-field display adapter only, not a claim about exact extent, culture,
+polity, or population. Sources: PLE:736963; PLE:756574; PLE:756613;
+PLE:786059; PLE:785974; PLE:786010. [secure direct toponym; contested map-key proxy]
+
 ## 2026-07-23 - Fourth M5 craft pass remains regional
 
 The twelve new craft types express broad antique productive or consumer-service
