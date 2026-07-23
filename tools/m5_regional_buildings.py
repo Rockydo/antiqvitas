@@ -127,6 +127,17 @@ PRODUCTION_RECIPES = {
     "antq_reg_beadworks": ("jewelry", "0.1", (("ivory", "0.1042"),)),
     "antq_reg_loomweight_weavery": ("cloth", "0.8", (("fiber_crops", "1.0"),)),
     "antq_reg_bargeyard": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
+    # Fourth pass: new subjects retain only locally harvested guild formulas.
+    "antq_reg_saddlery": ("leather", "1", (("livestock", "1.0873"), ("sand", "0.4345"), ("tar", "0.0819"), ("tools", "0.1627"))),
+    "antq_reg_parchmentery": ("books", "0.3", (("dyes", "0.0503"), ("paper", "0.1995"), ("lumber", "0.0998"))),
+    "antq_reg_mosaic_workshop": ("tools", "1", (("iron", "0.8333"),)),
+    "antq_reg_stuccoworks": ("pottery", "1.0", (("clay", "1.0039"), ("lumber", "0.1201"), ("tools", "0.0504"))),
+    "antq_reg_lead_foundry": ("tools", "1", (("iron", "0.8333"),)),
+    "antq_reg_lapidary": ("jewelry", "1", (("goods_gold", "0.5208"),)),
+    "antq_reg_sailmaker": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
+    "antq_reg_brewhouse": ("wine", "1", (("fruit", "1.154"), ("lumber", "0.157"), ("tools", "0.092"))),
+    "antq_reg_quernworks": ("tools", "1", (("iron", "0.8333"),)),
+    "antq_reg_textile_dye_finisher": ("dyes", "0.3", (("alum", "0.021"), ("lumber", "0.6247"))),
 }
 
 

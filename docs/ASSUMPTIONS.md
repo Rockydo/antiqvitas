@@ -4006,3 +4006,11 @@ AD 1. Applying it to the nearest installed Leicester key is a display decision
 only, not a claim about settlement extent, speech community, legal status,
 population, or control. Source: PLE:79651; P8.7. [secure direct toponym;
 contested map-key proxy and all wider social inference]
+
+## 2026-07-23 - Fourth M5 craft pass remains regional
+
+The twelve new craft types express broad antique productive or consumer-service
+contexts only. Every placement is a contested city-and-hinterland proxy, not a
+named workshop, output figure, merchant, military contract, or cargo record.
+Sources: P12.1; P12.3; MET-ROMAN-TRADE. [secure broad craft context;
+contested placement, scale, and organization]
