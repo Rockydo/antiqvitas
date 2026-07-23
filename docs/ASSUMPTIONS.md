@@ -4057,3 +4057,10 @@ ranges include AD 1 and whose map projections identify the installed city
 fields. Each dynamic label is a city-field display adapter only, not a claim
 about civic extent, culture, polity, or population. Sources: PLE:550738;
 PLE:109126; P8.1; P8.7. [secure direct toponym; contested map-key proxy]
+
+## 2026-07-23 - Sixth M5 manufacture pass remains regional
+
+The twelve new crafts model documented antique production categories, not named
+workshops, routes, owners, outputs, or workforce. Every city placement is a
+contested market-and-hinterland proxy. Sources: P12.1; P12.3; MET-ROMAN-TRADE;
+UNESCO-TYRE. [secure broad craft context; contested placement and scale]

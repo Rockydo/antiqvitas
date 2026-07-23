@@ -5879,3 +5879,11 @@ separate Han runtime-regency blocker.
   215 curated city labels across all client localizations.
 - `make validate` and the reduced vanilla/mod menu smoke both passed with zero
   new normalized error-log lines.
+
+## 2026-07-23 - M5 sixth illustrated manufacture pass
+
+- Added 12 direct icons and 120 regional placements: salt, purple dye, iron,
+  tin, charcoal, glass beads, footwear, nets, pack saddles, stone carving,
+  cooperage, and spice handling.
+- The M5/M7 audit is 1,152 placements: 77.9% productive and 94.1% scalable.
+  `make validate` and menu smoke pass with zero new error lines.
