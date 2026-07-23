@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-23 - Exact Gallic period-name pass
+
+- Added fourteen direct Pleiades city-point forms across Roman Gaul, from
+  Aginnum and Tolosa to Samarobriva Ambianorum and Rotomagus. The checked layer
+  now has 61 capital anchors plus 125 curated exact city labels in all client
+  localizations.
+- Every point is active at AD 1 and lies no farther than 0.62 km from the
+  installed key; already-covered Metz was left untouched. These display labels
+  do not assert a polygon, provincial boundary, language uniformity, civic
+  rank, citizenship, or population.
+
 ## 2026-07-23 - Upper-Rhine, Norican, and Pannonian period names
 
 - Added six exact Pleiades city-point display forms: Vesontio, Emona, Poetovio,

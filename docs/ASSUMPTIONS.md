@@ -20,6 +20,16 @@ boundary, or population. Sources: `PLE:177657`, `PLE:197258`, `PLE:197446`,
 `PLE:197501`, `PLE:197498`, `PLE:128537`. [secure direct place-name point;
 contested social and territorial inference]
 
+## 2026-07-23 - Gallic dynamic names are exact point labels
+
+The fourteen new Gallic names use only Pleiades settlement points active at AD
+1 and located within 0.62 km of their installed city keys. Latin is an
+engine-compatible display adapter, not an assertion of universal speech,
+citizenship, city boundary, civic rank, or population. Source IDs and exact
+coordinates are recorded in `docs/m4/dynamic_location_name_overrides.csv` and
+`docs/m4/ROMAN_TOPONYM_EXPANSION.md`. [secure direct toponym points; contested
+social and territorial inference]
+
 ## 2026-07-23 - Final advance icon sheets
 
 Generic objects only; no named polity, person, place, text, or symbol.

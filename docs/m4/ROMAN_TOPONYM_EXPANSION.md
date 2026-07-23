@@ -87,3 +87,31 @@ direct candidates such as Iuvavum and Veldidena.
 The Latin dynamic-language adapter is an engine display lookup only. It does
 not assert uniform local speech, settlement extent, provincial boundary,
 citizenship, or urban rank.
+
+## 2026-07-23 - Exact Gallic city pass
+
+Fourteen further Roman-controlled city keys have a Pleiades settlement point
+active at AD 1 and no farther than 0.62 km from the installed local anchor.
+`Divodurum/Mettis` at Metz was already present and was not duplicated.
+
+| Installed key | AD 1 display form | Pleiades place | Point offset |
+| --- | --- | --- | --- |
+| agen | Aginnum | 138169 | 0.22 km |
+| amiens | Samarobriva Ambianorum | 109321 | 0.16 km |
+| bourges | Avaricum | 138207 | 0.18 km |
+| cahors | Divona | 138329 | 0.51 km |
+| chartres | Autricum | 108778 | 0.28 km |
+| clermont | Augustonemetum | 138202 | 0.19 km |
+| limoges | Augustoritum | 138203 | 0.62 km |
+| orleans | Cenabum | 138281 | 0.31 km |
+| perigueux | Vesunna | 138650 | 0.02 km |
+| poitiers | Limonum | 138422 | 0.57 km |
+| reims | Durocortorum | 108945 | 0.49 km |
+| rouen | Rotomagus | 109287 | 0.33 km |
+| saintes | Mediolanum | 138458 | 0.25 km |
+| toulouse | Tolosa | 246694 | 0.10 km |
+
+The Pleiades source/master records are retained in the documented project
+cache. As with every curated dynamic row, these are display labels alone, not
+claims of a settlement polygon, local demography, language uniformity, civic
+rank, or provincial boundary.
