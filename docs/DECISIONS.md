@@ -2566,3 +2566,12 @@ the ledger's goods describe historical inputs while avoiding invented prices.
 
 The 6--12px `T2F` layer is separate, source-labelled, and excluded wherever a
 capital, direct, bounded, wide, or remote adapter already exists.
+
+## 2026-07-23 - Keep one checked direct-UI inventory without inventing legacy provenance
+
+The M11 ledger is generated from the same definition and asset ledgers used by
+the specialist validators. It records every direct player-facing texture in one
+reviewable document. Earlier building textures that predate per-key source and
+PNG-master retention are explicitly shown with a dash rather than having a
+fictional provenance inferred from a filename; their existing direct DDS
+contracts remain enforced by the M5 and goods validators.
