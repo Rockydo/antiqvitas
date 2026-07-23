@@ -4231,3 +4231,15 @@ unverified layouts. In particular, the Forum and Campus Martius paintings are
 not architectural reconstructions; they exclude the Colosseum, Hadrianic dome,
 Trajanic forum, and Christian fabric. [secure broad setting; contested visual
 detail intentionally excluded]
+
+## 2026-07-24 - Four market-city direct names override distant Pleiades proxies
+
+Beroia, Damascus, Ravenna, and Sidon are direct Pleiades settlement records
+active at AD 1, each applied to its corresponding installed city field. The
+prior automatic Tier-2 matches selected nearby Chalcis ad Belum, Mezze, Augusta,
+and Kana instead. This correction concerns only display labels; it does not
+assert a city boundary, administrative jurisdiction, population, language
+uniformity, or a precise correspondence between any M5 economic proxy and the
+ancient urban fabric. Sources: PLE:658409; PLE:678106; PLE:393480;
+PLE:678393; P8.1; P8.2; CAH-XI; MIC-CLASSE. [secure direct toponym; contested
+map-field and economic-proxy scope]

@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-24 - Mediterranean market-city name corrections
+
+- Replaced four inaccurate distant Pleiades adapters at visible M5 anchors with
+  direct AD 1 settlement forms: Beroia, Damascus, Ravenna, and Sidon. The
+  curated layer now contains 220 direct city labels; the reviewed mapping and
+  its deliberately narrow claim are in `docs/m4/MEDITERRANEAN_MARKET_TOPONYM_CORRECTIONS.md`.
+
 ## 2026-07-24 - M10 historical currents accepted
 
 - Accepted the five source-led historical-current batches after a fresh green
