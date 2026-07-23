@@ -1,5 +1,19 @@
 # Historical Assumptions
 
+## 2026-07-23 - Building and commerce advance art stays generic
+
+The thirteenth direct advance-icon batch depicts a generic low water channel
+and basin, bathing materials, commercial measures and storage vessels, and
+travel-support materials. It identifies no named aqueduct, bathhouse, port,
+route, city, ruler, ship, sea, caravan, camel, inn, map, inscription, writing,
+religious scene, or modern object.
+
+Sources: plan section `P15` and asset-pipeline boundary `P20` in
+`ANTIQVITAS_MASTER_PLAN.md`.
+
+[secure broad material and engineering contexts; contested building form,
+practice, distribution, object provenance, and all visual reconstruction]
+
 ## 2026-07-23 - Northern, Oceanian, and Caribbean religion art stays material-only
 
 The tenth direct religion-icon batch distinguishes only broad North American,
