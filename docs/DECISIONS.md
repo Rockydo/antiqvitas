@@ -2556,3 +2556,8 @@ low timber-and-earth stockade contract is the sole engine representation. The
 later permanent fortress is deliberately not backdated to AD 1, and the new
 building does not alter the Germanic ownership or produce a legion roster,
 stone plan, or limes claim.
+
+## 2026-07-23 - Tenth M5 pass keeps native economic contracts
+
+Twelve material-specific craft labels reuse existing harvested guild recipes;
+the ledger's goods describe historical inputs while avoiding invented prices.

@@ -4145,3 +4145,9 @@ with the post-AD 9 frontier. The direct Bonn field is a display anchor only;
 the placement does not establish Roman sovereignty, a troop count, a precise
 ground plan, later stone construction, or an enduring limes line. Sources:
 LIV-BONNA; LVR-NGL. [secure early-camp context; contested game-field scope]
+
+## 2026-07-23 - Tenth M5 crafts remain regional proxies
+
+Every new craft is a city-and-hinterland proxy, not a named workshop, owner,
+output, route, or workforce claim. Sources: P12.1; P12.3; MET-ROMAN-TRADE.
+[secure broad craft context; contested placement]

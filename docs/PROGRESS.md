@@ -5959,3 +5959,11 @@ separate Han runtime-regency blocker.
   and 95.4% scalable.
 - `make validate` and the reduced vanilla/mod menu smoke gate pass with zero
   new normalized mod error-log lines.
+
+## 2026-07-23 - M5 tenth craft pass
+
+- Added 12 direct-art craft families and 120 placements: combs, bells, oars,
+  spindles, torches, sieves, mortars, seals, kiln fittings, reed pens, sail
+  needles, and rope pulleys.
+- Audit: 1,634 placements; 76.9% productive; 95.7% scalable. Validate and
+  smoke pass with zero new mod-only lines.
