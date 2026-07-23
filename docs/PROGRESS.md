@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-23 - Direct Roman-and-Han privilege icon batch
+
+- Added dedicated 64x90 icons for public grain provisioning, military-household
+  payment materials, and the early Han court bureau. The transition now has six
+  direct privilege illustrations and eighteen remaining migrations.
+- Reviewed the portrait contact sheet and kept all three images as uninscribed
+  material contexts, without a distribution, tax, unit, battle, emperor,
+  palace, official, document, seal impression, inscription, or person.
+
+- `gmake validate` passed with six direct privilege icons. The bounded
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: continue the privilege and religion migrations.
+
 ## 2026-07-23 - Direct Roman privilege icon migration begins
 
 - Added a checked direct-icon renderer for the 24 estate privileges using the

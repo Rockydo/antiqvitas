@@ -2,18 +2,20 @@
 
 ## 2026-07-23 - Roman privilege illustrations identify material contexts only
 
-The first privilege-art batch treats Senatorial Land Exemption, Equestrian
-Service, and Priestly Colleges as the bounded M6 gameplay adapters already
-recorded in `docs/m6/privileges.csv`. Their imagery uses only uninscribed
-administrative, riding, and public-ritual objects. It does not identify a
-specific Roman family, estate, legal grant, eques, horse, soldier, priest,
-college, deity, temple, sacrifice, office hierarchy, or rite.
+The first two privilege-art batches treat Senatorial Land Exemption,
+Equestrian Service, Priestly Colleges, Annona, Praetorian Donatives, and the
+Han Palace Bureau as the bounded M6 gameplay adapters already recorded in
+`docs/m6/privileges.csv`. Their imagery uses only uninscribed administrative,
+riding, public-ritual, provisioning, payment, and court-bureau materials. It
+does not identify a specific Roman family, estate, legal grant, eques, horse,
+soldier, unit, emperor, priest, college, deity, temple, sacrifice, palace,
+official, office hierarchy, or rite.
 
-Sources: `P8.1`; `P11`; `P13`; `OCD`; `OCD-EQU`; `MET-PRIEST`, catalogued in
-`docs/world_1ad/SOURCES.md` and the M6 privilege ledger.
+Sources: `P8.1`; `P8.3`; `P11`; `P13`; `OCD`; `OCD-EQU`; `MET-PRIEST`; `BHR`,
+catalogued in `docs/world_1ad/SOURCES.md` and the M6 privilege ledger.
 
 [secure broad material contexts; no claim to a specific institution, person,
-object provenance, legal formula, or ritual practice]
+object provenance, legal formula, distribution, payment, or ritual practice]
 
 ## 2026-07-23 - Theatre of Balbus is an AD 1 cultural anchor, not a reconstruction
 
