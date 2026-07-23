@@ -4073,3 +4073,12 @@ wider district or another settlement. Each row therefore records `PLE:<id>;T2`,
 a measured nearest-field offset no greater than 1.50 pixels, and `tier2`
 confidence; it is not a claim about exact civic extent, polity, culture, or
 population. Source: local Pleiades snapshot, `pleiades_name_candidates.csv`.
+
+## 2026-07-23 - Seventh M5 manufacture pass remains regional
+
+Bee products, soap, flax preparation, worked organic materials, ornament,
+marine materials, reedwork, lacquer, instruments, and terracotta smallwares
+are broad antique craft categories only. Each city seed is a contested market
+and hinterland proxy, not a named workshop, extraction site, cargo, workforce,
+or household. Sources: P12.1; P12.3; MET-ROMAN-TRADE; BHR. [secure broad craft
+context; contested placement and organization]

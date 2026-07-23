@@ -159,6 +159,21 @@ PRODUCTION_RECIPES = {
     "antq_reg_packsaddle_workshop": ("leather", "1", (("livestock", "1.0873"), ("sand", "0.4345"), ("tar", "0.0819"), ("tools", "0.1627"))),
     "antq_reg_stone_carver": ("tools", "1", (("iron", "0.8333"),)),
     "antq_reg_cooperage": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
+    # Seventh pass: household, organic-material, and ornament crafts use the
+    # same verified guild formulas while their specific antique inputs remain
+    # transparent in the family ledger.
+    "antq_reg_honey_house": ("wine", "1", (("fruit", "1.154"), ("lumber", "0.157"), ("tools", "0.092"))),
+    "antq_reg_soapworks": ("dyes", "0.2", (("lumber", "0.4444"),)),
+    "antq_reg_flax_retting_yard": ("cloth", "0.8", (("fiber_crops", "1.0"),)),
+    "antq_reg_bone_carver": ("jewelry", "0.1", (("ivory", "0.1042"),)),
+    "antq_reg_hornworker": ("jewelry", "0.1", (("ivory", "0.1042"),)),
+    "antq_reg_amber_carver": ("jewelry", "1", (("goods_gold", "0.5208"),)),
+    "antq_reg_coral_workshop": ("jewelry", "1", (("goods_gold", "0.5208"),)),
+    "antq_reg_sponge_drying_yard": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
+    "antq_reg_reed_matmaker": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
+    "antq_reg_lacquer_workshop": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
+    "antq_reg_instrument_maker": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
+    "antq_reg_figurine_kiln": ("pottery", "1.0", (("clay", "1.0039"), ("lumber", "0.1201"), ("tools", "0.0504"))),
 }
 
 

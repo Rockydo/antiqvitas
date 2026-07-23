@@ -5894,3 +5894,10 @@ separate Han runtime-regency blocker.
   points, nearest installed fields, at most 1.50 projection pixels, and an
   explicit lower-confidence ledger. The runtime layer is now 61 capital, 215
   direct, and 82 Tier-2 names across all client localizations.
+
+## 2026-07-23 - M5 seventh illustrated manufacture pass
+
+- Added twelve direct-art families and 120 regional placements: honey and wax,
+  olive soap, flax preparation, bone, horn, amber, coral, sponge, reed mats,
+  lacquerware, instruments, and terracotta figurines.
+- The M5/M7 audit is 1,272 placements: 80.0% productive and 94.7% scalable.
