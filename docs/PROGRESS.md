@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-23 - Direct Indian religion icon batch
+
+- Added dedicated 128px icons for Buddhist travel-and-learning, early South
+  Asian ritual materials, and Jain material contexts. The transition now has
+  nine direct religion illustrations and twenty-eight remaining reviewed
+  aliases.
+- Reviewed the three-image contact sheet and kept each composition at the
+  material level, without a named monastery, deity, teacher, temple, priest,
+  monk, ruler, city, caste, community, scripture, ritual scene, text, or
+  inscription.
+- `gmake validate` passed with nine direct religion icons. The bounded
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: continue the religion migration and privilege art.
+
 ## 2026-07-23 - Direct religion icon batch two
 
 - Added dedicated 128px icons for Second Temple Jewish community, Iranian
