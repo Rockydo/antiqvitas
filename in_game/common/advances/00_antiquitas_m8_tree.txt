@@ -134,7 +134,7 @@ antq_provincial_assizes = {
 
 antq_civic_patronage = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_civic_patronage
 	depth = 3
 	research_cost = 5.5
 	requires = antq_provincial_assizes
@@ -1937,7 +1937,7 @@ antq_principate_society = {
 
 antq_cosmopolitan_cities = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_cosmopolitan_cities
 	depth = 0
 	research_cost = 4.0
 	ai_weight = { add = 100 }
@@ -1972,7 +1972,7 @@ antq_religious_plurals = {
 
 antq_urban_professions = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_urban_professions
 	depth = 4
 	research_cost = 6.0
 	requires = antq_religious_plurals
@@ -1990,7 +1990,7 @@ antq_provincial_citizenship = {
 
 antq_athletic_festivals = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_athletic_festivals
 	depth = 6
 	research_cost = 7.0
 	requires = antq_provincial_citizenship
