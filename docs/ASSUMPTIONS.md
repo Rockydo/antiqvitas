@@ -4166,3 +4166,16 @@ and Circus Flaminius are not a reconstruction of Rome's street plan, traffic,
 ritual, cult image, market, office, or public programme. Sources: Digital
 Augustan Rome records listed in `M5_ROMAN_CIVIC_BUILDINGS.md`. [secure crossing
 context; contested city-point scope]
+
+## 2026-07-23 - Ultra-far labels remain non-exact source proxies
+
+The 299 `T2U` rows use precise Pleiades settlements active in AD 1 at 12--24px;
+they do not assert exact identity, civic extent, polity, culture, or population.
+[lowest-confidence source proxy]
+
+## 2026-07-23 - Eleventh crafts remain regional proxies
+
+Locks, nails, chains, wire, shields, scabbards, tackle, felt, carpets, cork,
+brushes, and tesserae are broad antique craft categories, not named workshops,
+owners, output, or routes. Sources: P12.1; P12.3; MET-ROMAN-TRADE.
+[secure broad craft context; contested placement]

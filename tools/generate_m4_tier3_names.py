@@ -25,6 +25,7 @@ TIER2 = ROOT / "docs/m4/tier2_location_name_overrides.csv"
 TIER2_WIDE = ROOT / "docs/m4/tier2_wide_location_name_overrides.csv"
 TIER2_REMOTE = ROOT / "docs/m4/tier2_remote_location_name_overrides.csv"
 TIER2_FAR = ROOT / "docs/m4/tier2_far_location_name_overrides.csv"
+TIER2_ULTRA = ROOT / "docs/m4/tier2_ultra_location_name_overrides.csv"
 OUTPUT = ROOT / "docs/m4/tier3_location_name_overrides.csv"
 MAP_OUTPUT = ROOT / "docs/m4/tier3_map_name_fallbacks.csv"
 CULTURES = ROOT / "docs/m4/cultures.csv"
@@ -66,6 +67,7 @@ def render_population() -> str:
     excluded.update(row["location"].strip() for row in ledger_rows(TIER2_WIDE))
     excluded.update(row["location"].strip() for row in ledger_rows(TIER2_REMOTE))
     excluded.update(row["location"].strip() for row in ledger_rows(TIER2_FAR))
+    excluded.update(row["location"].strip() for row in ledger_rows(TIER2_ULTRA))
     rows: list[dict[str, str]] = []
     for location, culture in sorted(pop_cultures().items()):
         name = names.get(location, "").strip()

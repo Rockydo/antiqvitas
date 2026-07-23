@@ -10,6 +10,7 @@ validate:
 	.venv/Scripts/python.exe tools/generate_m4_tier2_wide_names.py --check
 	.venv/Scripts/python.exe tools/generate_m4_tier2_remote_names.py --check
 	.venv/Scripts/python.exe tools/generate_m4_tier2_far_names.py --check
+	.venv/Scripts/python.exe tools/generate_m4_tier2_ultra_names.py --check
 	.venv/Scripts/python.exe tools/generate_m4_tier3_names.py --check
 	.venv/Scripts/python.exe tools/generate_dynamic_names.py --check
 	.venv/Scripts/python.exe tools/culture_template_inventory.py --check
@@ -17,6 +18,7 @@ validate:
 	.venv/Scripts/python.exe tools/generate_rgo_remap.py --check
 	.venv/Scripts/python.exe tools/m5_roman_buildings.py --check
 	.venv/Scripts/python.exe tools/m5_tenth_buildings.py --check
+	.venv/Scripts/python.exe tools/m5_eleventh_buildings.py --check
 	.venv/Scripts/python.exe tools/m5_regional_buildings.py --check
 	.venv/Scripts/python.exe tools/m5_building_audit.py
 	.venv/Scripts/python.exe tools/m7_war.py --check

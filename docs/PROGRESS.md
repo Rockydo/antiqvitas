@@ -6006,3 +6006,11 @@ separate Han runtime-regency blocker.
 
 - Added a generated, checked contact sheet of all 509 direct UI assets across
   seven surfaces; it is now part of the standard validation gate.
+
+## 2026-07-23 - M4 ultra-far names and M5 eleventh craft pass
+
+- Added 299 explicit `T2U` AD 1 Pleiades map proxies at 12--24px; populated
+  retained-label adapters fall to 11,269.
+- Added twelve illustrated productive craft families and 120 reviewed-hub
+  placements. The M5/M7 audit is 1,766 placements: 78.0% productive, 95.4%
+  scalable; the direct UI inventory is 521 assets.

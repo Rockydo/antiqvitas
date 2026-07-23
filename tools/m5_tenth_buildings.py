@@ -52,14 +52,22 @@ def render(path: Path, fields: tuple[str, ...], rows: list[dict[str, str]]) -> s
 
 def outputs() -> dict[Path, str]:
     keys = {f"antq_reg_{item[0]}" for item in FAMILIES_TO_ADD}
-    family_rows = [row for row in read(FAMILIES, FAMILY_FIELDS) if row["key"] not in keys]
+    current_families = read(FAMILIES, FAMILY_FIELDS)
+    family_at = next((index for index, row in enumerate(current_families) if row["key"] in keys), len(current_families))
+    family_rows = [row for row in current_families if row["key"] not in keys]
+    additions = []
     for slug, name, description, category, modifier, maintenance, goods, subject in FAMILIES_TO_ADD:
-        family_rows.append({"key": f"antq_reg_{slug}", "name": name, "description": description, "category": category, "pop_type": "burghers", "employment_size": "guild_employment", "build_time": "guild_build_time", "modifier": modifier, "maintenance": maintenance, "goods": goods, "source": SOURCE, "confidence": "contested", "note": "A broad antique craft proxy rather than a named workshop, owner, output, or route.", "icon_subject": subject})
-    seed_rows = [row for row in read(SEEDS, SEED_FIELDS) if row["family"] not in keys]
+        additions.append({"key": f"antq_reg_{slug}", "name": name, "description": description, "category": category, "pop_type": "burghers", "employment_size": "guild_employment", "build_time": "guild_build_time", "modifier": modifier, "maintenance": maintenance, "goods": goods, "source": SOURCE, "confidence": "contested", "note": "A broad antique craft proxy rather than a named workshop, owner, output, or route.", "icon_subject": subject})
+    family_rows[family_at:family_at] = additions
+    current_seeds = read(SEEDS, SEED_FIELDS)
+    seed_at = next((index for index, row in enumerate(current_seeds) if row["family"] in keys), len(current_seeds))
+    seed_rows = [row for row in current_seeds if row["family"] not in keys]
+    seed_additions = []
     for slug, *_ in FAMILIES_TO_ADD:
         family = f"antq_reg_{slug}"
         for location, macro in LOCATIONS:
-            seed_rows.append({"key": f"reg_tenth_{location}_{slug}", "family": family, "location": location, "macro": macro, "source": SOURCE, "confidence": "contested", "note": NOTE})
+            seed_additions.append({"key": f"reg_tenth_{location}_{slug}", "family": family, "location": location, "macro": macro, "source": SOURCE, "confidence": "contested", "note": NOTE})
+    seed_rows[seed_at:seed_at] = seed_additions
     return {FAMILIES: render(FAMILIES, FAMILY_FIELDS, family_rows), SEEDS: render(SEEDS, SEED_FIELDS, seed_rows)}
 
 

@@ -2597,3 +2597,16 @@ The visual review sheet is generated from the checked cross-surface asset
 ledger, using the retained master where available and the direct game DDS
 otherwise. Byte-for-byte freshness makes it a rapid, comprehensive review
 artifact rather than a separately maintained list.
+
+## 2026-07-23 - Separate ultra-far map proxies from retained labels
+
+The `T2U` pass uses only precise Pleiades settlements active in AD 1 at
+12--24px. It is a distinct lowest-confidence runtime layer, excluded from
+Tier 3 and overridden by every closer evidence class.
+
+## 2026-07-23 - Keep eleventh craft pass on reviewed hub anchors
+
+The first 12-city layout exposed Smyrna and Thessaloniki as unreviewed M5
+market/historic nodes. They were removed rather than broadening that gate;
+the 12 productive families use ten already checked hubs and local guild output
+contracts.
