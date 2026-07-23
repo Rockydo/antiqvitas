@@ -497,7 +497,7 @@ antq_drill_routines = {
 
 antq_supply_columns = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_supply_columns
 	depth = 3
 	research_cost = 3.5
 	starting_technology_level = 2
@@ -517,7 +517,7 @@ antq_field_engineering = {
 
 antq_frontier_patrols = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_frontier_patrols
 	depth = 5
 	research_cost = 4.5
 	starting_technology_level = 2
@@ -527,7 +527,7 @@ antq_frontier_patrols = {
 
 antq_river_crossings = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_river_crossings
 	depth = 6
 	research_cost = 5.0
 	starting_technology_level = 3
@@ -995,7 +995,7 @@ antq_merchant_diasporas = {
 
 antq_coin_exchange = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_coin_exchange
 	depth = 7
 	research_cost = 5.5
 	starting_technology_level = 3
