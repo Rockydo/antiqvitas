@@ -1,5 +1,10 @@
 # Progress
 
+## 2026-07-23 - Anatolian period-name pass
+
+- Added five direct Pleiades city forms: Trapezus, Amisus, Attalea, Mazaka,
+  and Amastris; the checked layer has 207 curated names.
+
 ## 2026-07-23 - Levantine period-name pass
 
 - Added seven direct Pleiades city forms: Tyros, Heliopolis, Laodicea, Philadelphia,
