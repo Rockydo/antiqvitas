@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-23 - Upper-Rhine, Norican, and Pannonian period names
+
+- Added six exact Pleiades city-point display forms: Vesontio, Emona, Poetovio,
+  Scarbantia, Savaria, and Vindobona. The generated name layer now covers 61
+  coordinate-verified capitals plus 111 curated direct city anchors, mirrored
+  across all supported localization clients.
+- The batch rejected nearby rather than direct possibilities, including
+  Iuvavum and Veldidena. Its Latin dynamic adapter is only an engine lookup;
+  it asserts no uniform local speech, city polygon, province, citizenship, or
+  population.
+
 ## 2026-07-23 - Argentoratum AD 1 frontier camp
 
 - Added `Castrum Argentoratum` at the direct installed Strasbourg point. The

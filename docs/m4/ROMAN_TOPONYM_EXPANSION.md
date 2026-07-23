@@ -67,3 +67,23 @@ local language, civic rank, population, or ownership follows from this pass.
 The Pleiades IDs resolve through `https://pleiades.stoa.org/places/<id>` and the
 project's cached CC-BY CSV snapshot, described in
 `docs/world_1ad/PLEIADES_PROVENANCE.md`.
+
+## 2026-07-23 - Exact Upper-Rhine, Norican, and Pannonian pass
+
+Six further Roman-controlled installed city keys have Pleiades settlement points
+whose temporal ranges include AD 1 and whose coordinate matches are no farther
+than 0.61 km from the local city anchor. The pass excludes nearby rather than
+direct candidates such as Iuvavum and Veldidena.
+
+| Installed key | AD 1 display form | Pleiades place | Point | Point offset |
+| --- | --- | --- | --- | --- |
+| besancon | Vesontio | 177657 | 47.23724, 6.02792 | 0.29 km |
+| ljubljana | Emona | 197258 | 46.05143, 14.50596 | 0.61 km |
+| ptuj | Poetovio | 197446 | 46.41998, 15.86998 | 0.02 km |
+| sopron | Scarbantia | 197501 | 47.68489, 16.58304 | 0.37 km |
+| szombathely | Savaria | 197498 | 47.23514, 16.62192 | 0.49 km |
+| vienna | Vindobona | 128537 | 48.20741, 16.37387 | 0.09 km |
+
+The Latin dynamic-language adapter is an engine display lookup only. It does
+not assert uniform local speech, settlement extent, provincial boundary,
+citizenship, or urban rank.

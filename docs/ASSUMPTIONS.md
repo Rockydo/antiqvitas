@@ -10,6 +10,16 @@ Rhine limes, later settlement, or local population. Source:
 `UNISTRA-ARGENTORATUM` in `docs/world_1ad/SOURCES.md`. [secure foundation
 date and direct point; contested camp scale and all detailed reconstruction]
 
+## 2026-07-23 - Six Upper-Rhine, Norican, and Pannonian names are point labels
+
+Vesontio, Emona, Poetovio, Scarbantia, Savaria, and Vindobona each uses a
+Pleiades settlement point whose stated chronology includes AD 1 and which falls
+within 0.61 km of the installed city key. The Latin dynamic-language adapter is
+not evidence for uniform language, municipal status, city extent, political
+boundary, or population. Sources: `PLE:177657`, `PLE:197258`, `PLE:197446`,
+`PLE:197501`, `PLE:197498`, `PLE:128537`. [secure direct place-name point;
+contested social and territorial inference]
+
 ## 2026-07-23 - Final advance icon sheets
 
 Generic objects only; no named polity, person, place, text, or symbol.
