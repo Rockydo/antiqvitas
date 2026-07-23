@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-23 - Principate and High Empire commercial advance-icon batch
+
+- Added distinct direct 256px illustrations for Principate Exchange, Imperial
+  Trade, Library Endowments, and Engineering Manuals. Each has a retained source,
+  exact master, BC7 DDS texture, ledger row, tree binding, and reviewed contact
+  sheet.
+- The generic material scenes claim no named market, city, port, route, ruler,
+  empire, merchant, currency, law, warehouse, library, author, religion,
+  engineer, project, person, animal, map, sign, inscription, writing, symbol,
+  flag, or modern object. The direct advance migration now covers 75 of 250
+  advances.
+
+Next: continue dedicated advance art, emphasizing Roman civic buildings, trade
+goods, logistics, and period-appropriate city names alongside the source-led
+Roman building layer.
+
 ## 2026-07-23 - High Empire civic advance-icon batch
 
 - Added distinct direct 256px illustrations for Civic Patronage, Cosmopolitan
