@@ -40,3 +40,10 @@ placements, not named sites or new market-route claims. `make validate` passed
 with 454 M5/M7 placements: 319 productive (70.3%) and 388 scalable (85.5%).
 The subsequent vanilla-control and enabled-ANTIQVITAS menu loads both passed;
 the log diff again found zero new error lines.
+
+## Augsburg frontier follow-up
+
+The direct Augsburg-Oberhausen camp/depot source was added through the same
+low stockade contract and a dedicated BC7 icon. The full validation gate passed
+with 39 named Roman buildings and 455 M5/M7 placements; vanilla and enabled-mod
+menu loads then passed with zero new log lines.
