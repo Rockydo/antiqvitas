@@ -5981,3 +5981,9 @@ separate Han runtime-regency blocker.
 - `make validate` now refuses a stale ledger or a missing listed local asset;
   the existing specialist checks retain ownership of DDS, dimensions, and
   engine-resolver contracts.
+
+## 2026-07-23 - M5 regional building guide reconciliation
+
+- Reconciled the player-facing building guide to its checked ledgers: 130
+  reusable direct-art families and 1,564 AD 1 regional placements, including
+  the full tenth craft pass and its macro-region distribution.
