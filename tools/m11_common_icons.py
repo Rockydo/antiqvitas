@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """Build and validate M11's religion and institution icon contracts.
 
-Religion icons use exact-key DDS aliases of suitable installed vanilla motifs.
-The nine M8 institution keys use ANTIQVITAS-owned generated masters.  Both
-sets are checked against the asset resolver's direct key-to-filename contract.
+Religion icons migrate from exact-key, reviewed vanilla aliases to direct
+ANTIQVITAS-owned assets through a checked ledger. The nine M8 institution keys
+already use ANTIQVITAS-owned generated masters. Both sets are checked against
+the asset resolver's direct key-to-filename contract.
 """
 
 from __future__ import annotations
 
 import argparse
+import csv
 import hashlib
 import json
 import re
@@ -28,6 +30,7 @@ INSTITUTIONS = ROOT / "in_game/common/institution/00_antiquitas_m8_institutions.
 RELIGION_TEXTURES = ROOT / "main_menu/gfx/interface/icons/religion"
 INSTITUTION_TEXTURES = ROOT / "main_menu/gfx/interface/icons/institutions"
 DDS = ROOT / "tools/dds.py"
+DIRECT_RELIGION_LEDGER = ROOT / "docs/m11/direct_religion_icons.csv"
 DIMENSIONS = (128, 128)
 
 
@@ -35,6 +38,13 @@ DIMENSIONS = (128, 128)
 class ReligionIcon:
     key: str
     vanilla_source: str
+
+
+@dataclass(frozen=True)
+class DirectReligionIcon:
+    key: str
+    source: str
+    master: str
 
 
 @dataclass(frozen=True)
@@ -136,6 +146,59 @@ INSTITUTION_ICONS = (
 )
 
 
+def direct_religion_icons() -> tuple[DirectReligionIcon, ...]:
+    if not DIRECT_RELIGION_LEDGER.is_file():
+        return ()
+    required = ("key", "subject", "source", "confidence", "status", "note")
+    with DIRECT_RELIGION_LEDGER.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if tuple(reader.fieldnames or ()) != required:
+            raise ValueError(
+                f"{DIRECT_RELIGION_LEDGER.relative_to(ROOT)} must use header "
+                f"{','.join(required)}"
+            )
+        rows = list(reader)
+    known = {icon.key for icon in RELIGION_ICONS}
+    result: list[DirectReligionIcon] = []
+    seen: set[str] = set()
+    for number, row in enumerate(rows, start=2):
+        if (row.get("status") or "").strip() != "complete":
+            continue
+        key = (row.get("key") or "").strip()
+        if not re.fullmatch(r"antq_[a-z0-9_]+", key) or key in seen:
+            raise ValueError(
+                f"{DIRECT_RELIGION_LEDGER.relative_to(ROOT)}:{number}: "
+                f"invalid or duplicate completed key {key!r}"
+            )
+        if key not in known:
+            raise ValueError(
+                f"{DIRECT_RELIGION_LEDGER.relative_to(ROOT)}:{number}: "
+                f"completed art has unknown religion {key}"
+            )
+        if (row.get("confidence") or "").strip() != "secure":
+            raise ValueError(
+                f"{DIRECT_RELIGION_LEDGER.relative_to(ROOT)}:{number}: "
+                "completed art must use secure confidence"
+            )
+        if not (row.get("subject") or "").strip() or not (row.get("source") or "").strip():
+            raise ValueError(
+                f"{DIRECT_RELIGION_LEDGER.relative_to(ROOT)}:{number}: "
+                "completed art needs subject and source"
+            )
+        slug = key.removeprefix("antq_")
+        result.append(DirectReligionIcon(
+            key,
+            f"assets_queue/generated_sources/antq_religion_{slug}_source.png",
+            f"assets_queue/generated/antq_religion_{slug}_128.png",
+        ))
+        seen.add(key)
+    if len({icon.source for icon in result}) != len(result):
+        raise ValueError("M11 direct religion icons must not share a generated source")
+    if len({icon.master for icon in result}) != len(result):
+        raise ValueError("M11 direct religion icons must not share a generated master")
+    return tuple(result)
+
+
 def game_dir() -> Path:
     return Path(json.loads(CONFIG.read_text(encoding="utf-8"))["game_dir"])
 
@@ -167,12 +230,24 @@ def write() -> None:
     vanilla_dir = game_dir() / "game/main_menu/gfx/interface/icons/religion"
     RELIGION_TEXTURES.mkdir(parents=True, exist_ok=True)
     INSTITUTION_TEXTURES.mkdir(parents=True, exist_ok=True)
+    direct_religions = {icon.key: icon for icon in direct_religion_icons()}
     for icon in RELIGION_ICONS:
+        if icon.key in direct_religions:
+            continue
         source = vanilla_dir / f"{icon.vanilla_source}.dds"
         target = RELIGION_TEXTURES / f"{icon.key}.dds"
         if not source.is_file():
             raise ValueError(f"missing installed M11 religion-icon source: {source}")
         shutil.copy2(source, target)
+    for icon in direct_religions.values():
+        master = ROOT / icon.master
+        if not master.is_file():
+            raise ValueError(f"missing M11 direct religion-icon master: {master}")
+        subprocess.run(
+            [sys.executable, str(DDS), "convert", str(master),
+             str(RELIGION_TEXTURES / f"{icon.key}.dds"), "--compression", "bc7"],
+            check=True,
+        )
     for icon in INSTITUTION_ICONS:
         master = ROOT / icon.master
         if not master.is_file():
@@ -187,6 +262,7 @@ def write() -> None:
 def validate() -> None:
     religion_keys = definition_keys(RELIGIONS)
     institution_keys = definition_keys(INSTITUTIONS)
+    direct_religions = {icon.key: icon for icon in direct_religion_icons()}
     mapped_religions = {icon.key for icon in RELIGION_ICONS}
     mapped_institutions = {icon.key for icon in INSTITUTION_ICONS}
     if religion_keys != mapped_religions:
@@ -207,6 +283,19 @@ def validate() -> None:
         raise ValueError("M11 institution icons must not share a generated master")
     vanilla_dir = game_dir() / "game/main_menu/gfx/interface/icons/religion"
     for icon in RELIGION_ICONS:
+        direct = direct_religions.get(icon.key)
+        if direct is not None:
+            source = ROOT / direct.source
+            master = ROOT / direct.master
+            target = RELIGION_TEXTURES / f"{icon.key}.dds"
+            for path, label in ((source, "source"), (master, "master"), (target, "texture")):
+                if not path.is_file():
+                    raise ValueError(f"missing M11 direct religion {label}: {path}")
+            with Image.open(master) as image:
+                if image.format != "PNG" or image.size != DIMENSIONS:
+                    raise ValueError(f"M11 direct religion master has wrong PNG contract: {master}")
+            check_dds(target, "M11 direct religion texture")
+            continue
         source = vanilla_dir / f"{icon.vanilla_source}.dds"
         target = RELIGION_TEXTURES / f"{icon.key}.dds"
         if icon.vanilla_source == "_default":
@@ -239,7 +328,8 @@ def main() -> int:
         write()
     validate()
     print(
-        f"m11_common_icons: PASS ({len(RELIGION_ICONS)} religion aliases; "
+        f"m11_common_icons: PASS ({len(direct_religion_icons())} direct religion icons; "
+        f"{len(RELIGION_ICONS) - len(direct_religion_icons())} religion aliases; "
         f"{len(INSTITUTION_ICONS)} generated institution icons)"
     )
     return 0
