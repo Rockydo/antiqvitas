@@ -3902,3 +3902,367 @@ antq_reg_pulley_workshop = {
 	custom_tags = { guild }
 	construction_demand = guild_construction
 }
+
+antq_reg_locksmith = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = basic_industry_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_production_efficiency = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_locksmith_maintenance = {
+			copper = 0.475
+			tin = 0.038
+			produced = tools
+			output = 0.6
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_nailery = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = basic_industry_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_production_efficiency = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_nailery_maintenance = {
+			iron = 0.8333
+			produced = tools
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_chainmaker = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = basic_industry_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_production_efficiency = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_chainmaker_maintenance = {
+			iron = 0.8333
+			produced = tools
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_wiredrawer = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_production_efficiency = 0.015
+	}
+	unique_production_methods = {
+		antq_reg_wiredrawer_maintenance = {
+			copper = 0.475
+			tin = 0.038
+			produced = tools
+			output = 0.6
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_shieldmaker = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = weapons_industry_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_garrison_size = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_shieldmaker_maintenance = {
+			lumber = 0.2521
+			coal = 0.3034
+			tools = 0.505
+			produced = weaponry
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_scabbard_maker = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = weapons_industry_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_garrison_size = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_scabbard_maker_maintenance = {
+			livestock = 1.0873
+			sand = 0.4345
+			tar = 0.0819
+			tools = 0.1627
+			produced = leather
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_fishing_tackle = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = naval_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_sailors = 0.008
+	}
+	unique_production_methods = {
+		antq_reg_fishing_tackle_maintenance = {
+			lumber = 0.1963
+			fiber_crops = 0.4906
+			tar = 0.5393
+			cloth = 0.0486
+			produced = naval_supplies
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_feltworks = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_production_efficiency = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_feltworks_maintenance = {
+			wool = 1.0
+			produced = cloth
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_carpet_loom = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_production_efficiency = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_carpet_loom_maintenance = {
+			wool = 1.0
+			produced = cloth
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_cork_workshop = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_merchant_capacity = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_cork_workshop_maintenance = {
+			lumber = 0.9817
+			dyes = 0.1468
+			tools = 0.1468
+			produced = furniture
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_brushmaker = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_merchant_capacity = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_brushmaker_maintenance = {
+			lumber = 0.9817
+			dyes = 0.1468
+			tools = 0.1468
+			produced = furniture
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_tesserae_kiln = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = basic_industry_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_production_efficiency = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_tesserae_kiln_maintenance = {
+			lumber = 0.1933
+			sand = 0.9657
+			tools = 0.3674
+			produced = glass
+			output = 0.75
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}

@@ -42,6 +42,7 @@ OUTPUT = ROOT / "docs/m4/tier2_remote_location_name_overrides.csv"
 MIN_OFFSET_PX = 3.25
 MAX_OFFSET_PX = 6.00
 GRID_SIZE_PX = 10.0
+SEARCH_RADIUS_CELLS = 1
 LABEL = "Remote"
 SOURCE_SUFFIX = "T2R"
 EXTRA_LEDGER_PATHS: tuple[Path, ...] = ()
@@ -92,8 +93,8 @@ def render() -> str:
             cell_x, cell_y = int(x // GRID_SIZE_PX), int(y // GRID_SIZE_PX)
             nearby = [
                 item
-                for grid_x in range(cell_x - 1, cell_x + 2)
-                for grid_y in range(cell_y - 1, cell_y + 2)
+                for grid_x in range(cell_x - SEARCH_RADIUS_CELLS, cell_x + SEARCH_RADIUS_CELLS + 1)
+                for grid_y in range(cell_y - SEARCH_RADIUS_CELLS, cell_y + SEARCH_RADIUS_CELLS + 1)
                 for item in grid.get((grid_x, grid_y), [])
             ]
             if not nearby:

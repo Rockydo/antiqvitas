@@ -40,6 +40,11 @@ always win over it.
 band at 6.00--12.00 pixels. Its rows remain precise AD 1 settlement sources,
 but are expressly far map proxies below all closer evidence.
 
+`tools/generate_m4_tier2_ultra_names.py` adds the final `T2U` coverage band at
+12.00--24.00 pixels. These are intentionally the lowest-confidence Pleiades
+adapters: a precise settlement known active in AD 1, never an assertion that
+the installed field is that same settlement. All closer evidence wins.
+
 `tools/generate_m4_tier3_names.py` is a separate coverage fallback for every
 remaining populated AD 1 map field. It copies the installed label only as an
 explicit, culture-bound placeholder with `tier3` confidence and no historical

@@ -202,6 +202,20 @@ PRODUCTION_RECIPES = {
     "antq_reg_reed_pen_maker": ("books", "0.3", (("dyes", "0.0503"), ("paper", "0.1995"), ("lumber", "0.0998"))),
     "antq_reg_sail_needle_shop": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
     "antq_reg_pulley_workshop": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
+    # Eleventh pass: exact harvested guild outputs keep a dense craft system
+    # productive without creating unsupported price or output coefficients.
+    "antq_reg_locksmith": ("tools", "0.6", (("copper", "0.475"), ("tin", "0.038"))),
+    "antq_reg_nailery": ("tools", "1", (("iron", "0.8333"),)),
+    "antq_reg_chainmaker": ("tools", "1", (("iron", "0.8333"),)),
+    "antq_reg_wiredrawer": ("tools", "0.6", (("copper", "0.475"), ("tin", "0.038"))),
+    "antq_reg_shieldmaker": ("weaponry", "1", (("lumber", "0.2521"), ("coal", "0.3034"), ("tools", "0.505"))),
+    "antq_reg_scabbard_maker": ("leather", "1", (("livestock", "1.0873"), ("sand", "0.4345"), ("tar", "0.0819"), ("tools", "0.1627"))),
+    "antq_reg_fishing_tackle": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
+    "antq_reg_feltworks": ("cloth", "1", (("wool", "1.0"),)),
+    "antq_reg_carpet_loom": ("cloth", "1", (("wool", "1.0"),)),
+    "antq_reg_cork_workshop": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
+    "antq_reg_brushmaker": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
+    "antq_reg_tesserae_kiln": ("glass", "0.75", (("lumber", "0.1933"), ("sand", "0.9657"), ("tools", "0.3674"))),
 }
 
 
