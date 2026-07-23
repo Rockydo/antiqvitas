@@ -173,9 +173,9 @@ of those twenty Roman and North-African market anchors. It creates no additional
 named site, route, market node, or building family: the broad city-point
 economic representation remains explicitly contested.
 
-A production-and-scale audit now counts every 1,513 M5/M7 start placement rather
-than only these regional rows. It locks the actual layout at 75.1% productive
-and 95.4% scalable; see [BUILDING_AUDIT.md](BUILDING_AUDIT.md).
+A production-and-scale audit now counts every 1,634 M5/M7 start placement rather
+than only these regional rows. It locks the actual layout at 76.9% productive
+and 95.7% scalable; see [BUILDING_AUDIT.md](BUILDING_AUDIT.md).
 
 ## Art review
 
@@ -204,3 +204,5 @@ The eighth-pass sheet is
 `assets_queue/generated_sources/antq_reg_eighth_pass_sheet_source.png`.
 The ninth-pass sheet is
 `assets_queue/generated_sources/antq_reg_ninth_pass_sheet_source.png`.
+The tenth-pass sheet is
+`assets_queue/generated_sources/antq_reg_tenth_pass_sheet_source.png`.

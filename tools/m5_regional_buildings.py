@@ -188,6 +188,19 @@ PRODUCTION_RECIPES = {
     "antq_reg_loom_house": ("cloth", "0.8", (("fiber_crops", "1.0"),)),
     "antq_reg_cauldron_smithy": ("tools", "0.6", (("copper", "0.475"), ("tin", "0.038"))),
     "antq_reg_barge_chandlery": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
+    # Tenth pass: all additions use existing harvested guild recipes.
+    "antq_reg_combmaker": ("jewelry", "0.1", (("ivory", "0.1042"),)),
+    "antq_reg_bell_foundry": ("tools", "0.6", (("copper", "0.475"), ("tin", "0.038"))),
+    "antq_reg_oarwright": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
+    "antq_reg_spindlework": ("cloth", "0.8", (("fiber_crops", "1.0"),)),
+    "antq_reg_torchmaker": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
+    "antq_reg_sieve_maker": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
+    "antq_reg_mortar_grinder": ("tools", "1", (("iron", "0.8333"),)),
+    "antq_reg_seal_cutter": ("jewelry", "1", (("goods_gold", "0.5208"),)),
+    "antq_reg_kiln_furniture": ("pottery", "1.0", (("clay", "1.0039"), ("lumber", "0.1201"), ("tools", "0.0504"))),
+    "antq_reg_reed_pen_maker": ("books", "0.3", (("dyes", "0.0503"), ("paper", "0.1995"), ("lumber", "0.0998"))),
+    "antq_reg_sail_needle_shop": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
+    "antq_reg_pulley_workshop": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
 }
 
 
