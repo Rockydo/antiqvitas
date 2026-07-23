@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-23 - Building and commerce advance-icon batch
+
+- Added distinct direct 256px illustrations for Urban Waterworks, Public Baths,
+  Port Customs, and Desert Waystations. Each has a retained source, exact
+  master, BC7 DDS texture, ledger row, tree binding, and reviewed contact sheet.
+- The four generic material scenes do not claim a named aqueduct, bathhouse,
+  port, route, city, ruler, ship, sea, caravan, camel, inn, map, inscription,
+  writing, religious scene, or modern object. The direct advance migration now
+  covers 39 of 250 advances.
+
+Next: continue dedicated advance art, emphasizing buildings, trade goods, and
+period-appropriate city names alongside the source-led Roman building layer.
+
 ## 2026-07-23 - Direct religion-icon migration complete
 
 - Added five distinct direct 128px religion illustrations for North American,
