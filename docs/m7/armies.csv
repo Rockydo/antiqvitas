@@ -3,9 +3,14 @@ roma_field_army,army,ROM,rome,antq_legionaries,0.85,P14;CAH-XI,secure,Technical 
 roma_field_army,army,ROM,rome,antq_legionaries,0.85,P14;CAH-XI,secure,Technical AD 1 field-army seed that demonstrates Roman regular and levy-analog units
 roma_field_army,army,ROM,rome,antq_auxilia,0.80,P14;CAH-XI,secure,Technical AD 1 field-army seed that demonstrates Roman regular and levy-analog units
 roma_field_army,army,ROM,rome,antq_roman_alae,0.60,P14;CAH-XI,secure,Technical AD 1 Roman cavalry-role seed without a reconstructed ala identity or strength
+roma_field_army,army,ROM,rome,antq_roman_marines,0.55,P14;CAH-XI,contested,Technical Roman naval-infantry role seed without a named detachment or order of battle
+roma_field_army,army,ROM,rome,antq_roman_sagittarii,0.60,P14;CAH-XI,contested,Technical Roman auxiliary-archer role seed without a named cohort or posting
+roma_field_army,army,ROM,rome,antq_roman_scouts,0.45,P14;CAH-XI,contested,Technical Roman reconnaissance-cavalry role seed without a named corps or roster
 han_capital_army,army,HAN,jingzhao,antq_han_crossbow_infantry,0.85,P14;BHR,secure,Technical Western Han capital-army seed without a claimed historical order of battle
 han_capital_army,army,HAN,jingzhao,antq_han_crossbow_infantry,0.85,P14;BHR,secure,Technical Western Han capital-army seed without a claimed historical order of battle
 parthian_field_army,army,PAR,baghdad,antq_cataphracts,0.85,P14;CAH-XI,secure,Technical Arsacid field-army seed without a claimed historical order of battle
+parthian_field_army,army,PAR,baghdad,antq_parthian_foot_archers,0.60,P14;CAH-XI,contested,Technical Arsacid infantry-archer role seed without a field-order reconstruction
+parthian_field_army,army,PAR,baghdad,antq_parthian_noble_lancers,0.55,P14;CAH-XI,contested,Technical Arsacid noble-lancer role seed without a house contingent claim
 parthian_field_army,army,PAR,baghdad,antq_parthian_horse_archers,0.75,P14;CAH-XI,secure,Technical Arsacid mounted-archery role seed without a claimed noble-house contingent or field order
 parthian_field_army,army,PAR,baghdad,antq_cataphracts,0.85,P14;CAH-XI,secure,Technical Arsacid field-army seed without a claimed historical order of battle
 xiongnu_field_army,army,XIO,qingzhou_mongol,antq_steppe_horse_archers,0.85,P14;CAH-XI,secure,Technical Xiongnu field-army seed without a claimed historical order of battle
@@ -14,6 +19,8 @@ satavahana_field_army,army,SAT,daulatabad,antq_war_elephants,0.75,P14;CAH-XI,con
 kush_field_army,army,KUS,shendi,antq_nubian_archers,0.80,P14;CAH-XI,contested,Technical Kushite field-army seed without a claimed historical order of battle
 marcomannic_field_army,army,MCM,prague,antq_warbands,0.80,P14;CAH-XI,secure,Technical Marcomannic levy seed without a claimed historical order of battle
 marcomannic_field_army,army,MCM,prague,antq_germanic_horse,0.55,P14;CAH-XI;STR-GER;OCD-GER,contested,Technical light-horse levy seed without a uniform Marcomannic cavalry claim
+marcomannic_field_army,army,MCM,prague,antq_germanic_spearmen,0.70,P14;CAH-XI;STR-GER,contested,Technical Germanic spear-levy seed without a uniform doctrine or equipment ratio
+marcomannic_field_army,army,MCM,prague,antq_germanic_javelins,0.55,P14;CAH-XI;STR-GER,contested,Technical Germanic skirmishing-levy seed without a uniform armament claim
 british_field_army,army,CAT,st_albans,antq_warbands,0.80,P14;CAH-XI,contested,Technical Brittonic levy seed without a claimed historical order of battle
 british_field_army,army,CAT,st_albans,antq_british_chariots,0.70,P14;CAH-XI,contested,Technical Brittonic levy seed without a claimed historical order of battle
 alexandrian_fleet,navy,ROM,alexandria,antq_liburnian,0.80,P14;CAH-XI,secure,Technical Roman Mediterranean fleet seed; it is not an attested ship roster

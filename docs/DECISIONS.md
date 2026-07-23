@@ -2450,3 +2450,11 @@ and scale validators continue to reject missing or unreviewed content. Athens
 was deliberately excluded because its current AD 1 anchor contract does not
 admit it as a market or historic site; the batch therefore retains 168 valid
 placements instead of weakening the validation rule.
+
+## 2026-07-23 - M7 diversity is enforced as a roster floor
+
+The generated M7 gate now requires six Roman, four Parthian, four Marcomannic,
+and twelve mercenary company types. Each role copies a locally harvested
+Age-of-Traditions base unit and uses stock renderer tags, so the expansion
+remains compatible with verified engine contracts and requires no speculative
+3D art or named force reconstruction.

@@ -755,3 +755,270 @@ antq_austronesian_outrigger = {
 	}
 	# P14;CAH-XI; Austronesian small-vessel adapter; no trans-Pacific discovery or oceanic class is implied
 }
+
+antq_roman_marines = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	morale_damage_done = 0.08
+	strength_damage_taken = -0.03
+	combat = { coastal = 0.10 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAA
+		}
+	}
+	gfx_tags = { medium_tag sword_tag }
+	# P14;CAH-XI; Bounded Roman naval-infantry role adapter without a named fleet detachment or roster
+}
+
+antq_roman_sagittarii = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	initiative = 0.20
+	morale_damage_done = 0.08
+	combat = { hills = 0.05 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAA
+		}
+	}
+	gfx_tags = { archer_tag light_tag }
+	# P14;CAH-XI; Bounded Roman auxiliary-archer role adapter without provincial posting or unit identity claims
+}
+
+antq_roman_scouts = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_cavalry
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	movement_speed = 0.22
+	flanking_ability = 0.12
+	combat = { forest = 0.05 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAA
+		}
+	}
+	gfx_tags = { light_tag }
+	# P14;CAH-XI; Bounded Roman reconnaissance-cavalry role adapter without a named explorator corps
+}
+
+antq_parthian_foot_archers = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_1_traditions
+	initiative = 0.18
+	morale_damage_done = 0.06
+	combat = { hills = 0.05 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAH
+			has_or_had_tag = XAK
+		}
+	}
+	gfx_tags = { archer_tag light_tag }
+	# P14;CAH-XI; Bounded Arsacid infantry-archer role adapter without a field-order reconstruction
+}
+
+antq_parthian_noble_lancers = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_cavalry
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	morale_damage_done = 0.12
+	strength_damage_taken = -0.06
+	combat = { grasslands = 0.08 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAH
+			has_or_had_tag = XAK
+		}
+	}
+	gfx_tags = { heavy_tag medium_tag }
+	# P14;CAH-XI; Bounded noble-lancer role distinct from the general cataphract adapter and without a house contingent claim
+}
+
+antq_germanic_spearmen = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_1_traditions
+	morale_damage_done = 0.08
+	strength_damage_taken = -0.02
+	combat = { forest = 0.08 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XBK
+			has_or_had_tag = CRU
+			has_or_had_tag = XBL
+			has_or_had_tag = XBM
+			has_or_had_tag = BTV
+			has_or_had_tag = XBN
+			has_or_had_tag = SEM
+			has_or_had_tag = HER
+			has_or_had_tag = XBO
+			has_or_had_tag = GUT
+			has_or_had_tag = VAN
+			has_or_had_tag = RUG
+			has_or_had_tag = XBP
+			has_or_had_tag = XBQ
+			has_or_had_tag = XBR
+			has_or_had_tag = JUT
+			has_or_had_tag = XDK
+		}
+	}
+	gfx_tags = { medium_tag sword_tag }
+	# P14;CAH-XI;STR-GER; Bounded spear-levy adapter without a uniform Germanic tactical doctrine or equipment ratio
+}
+
+antq_germanic_javelins = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_1_traditions
+	initiative = 0.18
+	movement_speed = 0.08
+	combat = { forest = 0.10 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XBK
+			has_or_had_tag = CRU
+			has_or_had_tag = XBL
+			has_or_had_tag = XBM
+			has_or_had_tag = BTV
+			has_or_had_tag = XBN
+			has_or_had_tag = SEM
+			has_or_had_tag = HER
+			has_or_had_tag = XBO
+			has_or_had_tag = GUT
+			has_or_had_tag = VAN
+			has_or_had_tag = RUG
+			has_or_had_tag = XBP
+			has_or_had_tag = XBQ
+			has_or_had_tag = XBR
+			has_or_had_tag = JUT
+			has_or_had_tag = XDK
+		}
+	}
+	gfx_tags = { light_tag sword_tag }
+	# P14;CAH-XI;STR-GER; Bounded skirmishing-levy adapter without a uniform tribal armament claim
+}
+
+antq_syrian_archers = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	age = age_1_traditions
+	initiative = 0.24
+	morale_damage_done = 0.08
+	combat = { hills = 0.08 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAA
+			has_or_had_tag = XAH
+			has_or_had_tag = JUD
+		}
+	}
+	gfx_tags = { archer_tag light_tag }
+	# P14;CAH-XI; Era archer-company adapter without a named Syrian regiment or client levy claim
+}
+
+antq_iberian_swordsmen = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	age = age_1_traditions
+	morale_damage_done = 0.12
+	strength_damage_taken = -0.03
+	combat = { hills = 0.06 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAA
+			has_or_had_tag = XAG
+		}
+	}
+	gfx_tags = { medium_tag sword_tag }
+	# P14;CAH-XI; Era western-Mediterranean company adapter without a named Iberian contract or troop strength
+}
+
+antq_dacian_falxmen = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	age = age_1_traditions
+	morale_damage_done = 0.14
+	strength_damage_taken = 0.04
+	combat = { hills = 0.12 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = DAC
+			has_or_had_tag = XAA
+			has_or_had_tag = XBK
+		}
+	}
+	gfx_tags = { medium_tag sword_tag }
+	# P14;CAH-XI; Era Dacian weapon-role company adapter without a named royal or tribal contingent
+}
+
+antq_armenian_horse = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_cavalry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	age = age_1_traditions
+	movement_speed = 0.20
+	flanking_ability = 0.12
+	combat = { mountains = 0.08 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAO
+			has_or_had_tag = XAH
+			has_or_had_tag = XAA
+		}
+	}
+	gfx_tags = { light_tag }
+	# P14;CAH-XI; Era Armenian mounted-company adapter without a named nakharar house or deployment claim
+}
+
+antq_cilician_marines = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	age = age_1_traditions
+	movement_speed = 0.10
+	morale_damage_done = 0.06
+	combat = { coastal = 0.12 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAA
+			has_or_had_tag = CLZ
+			has_or_had_tag = XAF
+		}
+	}
+	gfx_tags = { light_tag sword_tag }
+	# P14;CAH-XI; Era coastal marine-company adapter without a pirate fleet or named contract claim
+}

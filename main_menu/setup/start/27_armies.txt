@@ -42,6 +42,8 @@ unit_manager = {
 		sub_units = {
 			antq_warbands = { strength = 0.80 }
 			antq_germanic_horse = { strength = 0.55 }
+			antq_germanic_spearmen = { strength = 0.70 }
+			antq_germanic_javelins = { strength = 0.55 }
 		}
 	}
 
@@ -58,6 +60,8 @@ unit_manager = {
 		location = baghdad
 		sub_units = {
 			antq_cataphracts = { strength = 0.85 }
+			antq_parthian_foot_archers = { strength = 0.60 }
+			antq_parthian_noble_lancers = { strength = 0.55 }
 			antq_parthian_horse_archers = { strength = 0.75 }
 			antq_cataphracts = { strength = 0.85 }
 		}
@@ -71,6 +75,9 @@ unit_manager = {
 			antq_legionaries = { strength = 0.85 }
 			antq_auxilia = { strength = 0.80 }
 			antq_roman_alae = { strength = 0.60 }
+			antq_roman_marines = { strength = 0.55 }
+			antq_roman_sagittarii = { strength = 0.60 }
+			antq_roman_scouts = { strength = 0.45 }
 		}
 	}
 
