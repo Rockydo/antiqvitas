@@ -5796,3 +5796,14 @@ separate Han runtime-regency blocker.
 - `make validate` and `make smoke` passed. The mirror now records 39 named
   Roman buildings and 455 total M5/M7 placements (70.1% productive; 85.3%
   scalable).
+
+## 2026-07-23 - M7 core and mercenary roster expansion
+
+- Added twelve bounded AD 1 role adapters: three Roman, two Parthian, two
+  Germanic, and five mercenary-company types. Rome, Parthia, and the
+  Marcomanni now each expose a broader, mechanically distinct core mix at
+  start without asserting named detachments or orders of battle.
+- The M7 generator now validates six Roman, four Parthian, four Marcomannic,
+  and twelve mercenary role types. `make validate` is green at 44 ancient unit
+  types; the menu/log-diff smoke check follows the project's reduced rapid
+  subsystem test policy.

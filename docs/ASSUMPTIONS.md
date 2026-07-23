@@ -3988,3 +3988,13 @@ The 12 new family types express broad antique productive contexts only. Each
 placement is a contested city-and-hinterland proxy, not a named workshop,
 workforce, output, cargo, arsenal, or public reserve. Sources: P12.1/P12.3;
 MET-ROMAN-TRADE. [secure craft context; contested placement and scale]
+
+## 2026-07-23 - M7 expanded military roles are bounded adapters
+
+The added Roman marines, sagittarii, and exploratores; Parthian foot archers
+and noble lancers; and Germanic spear and javelin levies represent broad
+period military categories, not reconstructed unit establishments. The five
+new mercenary companies similarly describe regional military roles rather than
+named contracts, troop numbers, commanders, or itineraries. Sources:
+P14; CAH-XI; STR-GER for the Germanic categories. [secure broad category;
+contested organization, scale, equipment ratio, and deployment]
