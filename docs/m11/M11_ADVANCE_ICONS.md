@@ -193,6 +193,15 @@ bathhouse, port, route, city, ruler, ship, sea, caravan, camel, inn, map,
 inscription, writing, religious scene, or modern object. The reviewed
 source/master batch is [here](DIRECT_ADVANCE_ICON_BATCH_13.png).
 
+### Batch fourteen review
+
+The exchange-and-infrastructure illustrations distinguish unpatterned silk,
+grain and date baskets, generic commercial measures, a plain survey tripod and
+stakes, and supply crates with grain sacks. They do not identify a named market,
+route, city, ruler, army, legion, camp, fort, road, bridge, ship, caravan,
+campaign, map, inscription, writing, or modern object. The reviewed
+source/master batch is [here](DIRECT_ADVANCE_ICON_BATCH_14.png).
+
 ## Engine and asset verification
 
 The installed build's `main_menu/gfx/interface/advance/` established the
