@@ -6050,3 +6050,13 @@ reviewed 128px BC7 DDS.
 - Added a deterministic asset/declaration validator and contact-sheet review
   artifact. Next: run complete validation and the reduced enabled-mod menu
   smoke, then commit only if both are green.
+
+## 2026-07-24 - M5 bounded acceptance
+
+- Recorded the completed M5 acceptance against the revised rapid-probe bar:
+  source-led Roman buildings and direct art are complete, static economy checks
+  pass, and the short AD 1 live probe demonstrates applied RGO/custom-good and
+  positive trade evidence.
+- The unsupported exact Rome wheat-route claim and long-observer market
+  assertion remain documented limitations, not grounds for inventing a market
+  contract or for requiring a 475-year playthrough.
