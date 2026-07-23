@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-23 - Logistics and exchange advance art stays generic
+
+The fifteenth direct advance-icon batch depicts blank coin and measure
+materials, bulk supply materials, neutral travel equipment, and generic
+river-crossing support materials. It identifies no named mint, ruler, city,
+empire, currency system, army, legion, campaign, camp, road, frontier, border,
+river, bridge, boat, map, inscription, writing, person, animal, weapon, or
+modern object.
+
+Sources: plan section `P15` and asset-pipeline boundary `P20` in
+`ANTIQVITAS_MASTER_PLAN.md`.
+
+[secure broad material and logistics contexts; contested practice,
+distribution, object provenance, and all visual reconstruction]
+
 ## 2026-07-23 - Exchange and infrastructure advance art stays generic
 
 The fourteenth direct advance-icon batch depicts unpatterned silk, grain and
