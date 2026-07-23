@@ -41,7 +41,8 @@ FAMILY_FIELDS = (
 SEED_FIELDS = ("key", "family", "location", "macro", "source", "confidence", "note")
 CATEGORIES = {
     "basic_industry_category", "cultural_category", "government_category",
-    "defense_category", "infrastructure_category", "naval_category", "religious_category", "trade_category",
+    "consumer_goods_category", "defense_category", "infrastructure_category",
+    "naval_category", "religious_category", "trade_category", "weapons_industry_category",
 }
 POP_TYPES = {"burghers", "clergy", "laborers", "nobles", "soldiers"}
 EMPLOYMENT = {
@@ -62,6 +63,8 @@ MACROS = {
     "Europe": {"Rome", "Britain", "Ireland", "Germania", "Balkans", "Danube", "Eastern Europe", "Baltic", "Finland", "Scandinavia", "Pontic"},
     "North Africa": {"Africa"},
     "Middle East": {"Anatolia", "Levant", "Mesopotamia", "Iran", "Arabia", "Caucasus"},
+    "South Asia": {"India"},
+    "East Asia": {"China"},
 }
 # The AD 1 polity ledger uses political/cultural regions, not a geographic
 # continent taxonomy: Roman Alexandria and Carthage are therefore tagged
@@ -85,6 +88,20 @@ PRODUCTION_RECIPES = {
     "antq_reg_dye_workshop": ("dyes", "0.2", (("lumber", "0.4444"),)),
     "antq_reg_metalwork": ("tools", "1", (("iron", "0.8333"),)),
     "antq_reg_shipyard": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
+    # These additions are direct transcriptions of installed Age-of-Traditions
+    # guild contracts (including the event-only silk contract). They create
+    # antique craft texture without inventing an unverified economic formula.
+    "antq_reg_silk_loom": ("silk", "0.6", (("fiber_crops", "1.0"),)),
+    "antq_reg_scriptorium": ("books", "0.3", (("dyes", "0.0503"), ("paper", "0.1995"), ("lumber", "0.0998"))),
+    "antq_reg_jeweler": ("jewelry", "1", (("goods_gold", "0.5208"),)),
+    "antq_reg_weapon_smith": ("weaponry", "1", (("lumber", "0.2521"), ("coal", "0.3034"), ("tools", "0.505"))),
+    "antq_reg_cotton_weavery": ("cloth", "1", (("cotton", "0.8333"),)),
+    "antq_reg_linen_weavery": ("cloth", "0.8", (("fiber_crops", "1.0"),)),
+    "antq_reg_alum_dyehouse": ("dyes", "0.3", (("alum", "0.021"), ("lumber", "0.6247"))),
+    "antq_reg_joinery": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
+    "antq_reg_bronze_foundry": ("tools", "0.6", (("copper", "0.475"), ("tin", "0.038"))),
+    "antq_reg_ivory_carver": ("jewelry", "0.1", (("ivory", "0.1042"),)),
+    "antq_reg_leatherworks": ("leather", "1", (("livestock", "1.0873"), ("sand", "0.4345"), ("tar", "0.0819"), ("tools", "0.1627"))),
 }
 
 

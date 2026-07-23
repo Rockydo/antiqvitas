@@ -3872,3 +3872,16 @@ military-presence proxy only; it makes no annexation, legion, stone-fortress,
 limes, exact-plan, supply-volume, or later-Flavian claim. The icon is a
 generic timber-and-earth enclosure, not an archaeological reconstruction.
 Source weighed: `RU-HUNNERBERG`. [secure broad camp context; contested scale]
+
+## 2026-07-23 - Manufacture families remain city-and-hinterland proxies
+
+The silk, writing, luxury-craft, arms, textile, dye, joinery, bronze, ivory,
+leather, and amphora families record documented antique economic contexts at
+reviewed market anchors. Their imported engine inputs and outputs are technical
+EU5 adapters, not estimates of ancient productivity, wages, commercial volume,
+workforce, workshop ownership, or a particular building inside an engine
+polygon. Han silk is deliberately restricted to Chang'an and Chengdu; cotton
+is limited to Pataliputra and Barygaza; all other individual placements remain
+contested. Sources weighed: plan P12.1/P12.3/P8.3/P8.4, `BHR`, `PER`,
+`MET-ROMAN-TRADE`, `UNESCO-TYRE`, and `CAM-MELOS-ALUM`. [secure broad craft
+contexts; contested individual placement and scale]

@@ -2409,3 +2409,14 @@ The permanent scale audit required two additional scalable placements after
 counting the new named camp. Cologne was already a reviewed regional market
 and production anchor, so bounded dye and river-shipyard families preserve the
 80% floor without creating a new claimed historic site.
+
+## 2026-07-23 - M5 manufacture expansion copies native guild contracts
+
+Twelve direct-art workshop families extend the reusable building ledger across
+Rome, Alexandria, Antioch, the East-Mediterranean, Han China, and South Asia.
+Eleven productive definitions transcribe installed Age-of-Traditions contracts;
+the amphora depot remains a deliberately non-productive trade-service adapter.
+The validator now admits reviewed South- and East-Asian macro scopes, while
+requiring every placement to resolve to the AD 1 ownership ledger. This adds
+craft texture without inventing prices, production coefficients, or named
+workshops.
