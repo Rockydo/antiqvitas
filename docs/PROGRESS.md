@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-23 - Exact Roman-world dynamic-name pass
+
+- Added ten reviewed Pleiades city-point overrides for Corduba, Tarraco,
+  Emerita Augusta, Olisipo, Caesaraugusta, Narbo Martius, Nemausus, Burdigala,
+  Augustodunum, and Arelate. The dynamic layer now has 61 coordinate-verified
+  capital anchors and 61 curated direct names, mirrored for all supported
+  clients.
+- Kept the method conservative: each override is a Latin owner-culture display
+  name for an installed city point, not a claim to a city polygon, province,
+  administrative role, or universal population identity.
+- `gmake validate` passed with the expanded naming layer. The bounded
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: continue source-led period-name coverage and the remaining direct-art
+migrations.
+
 ## 2026-07-23 - Ara Pacis and Mausoleum Roman-building pass
 
 - Added the 33rd and 34th named Roman specials: the securely dated Ara Pacis
