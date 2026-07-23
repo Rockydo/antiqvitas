@@ -471,6 +471,38 @@ antq_castrum_mogontiacum = {
 	}
 }
 
+antq_castrum_novaesium = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = soldiers
+	max_levels = 1
+	category = defense_category
+	employment_size = stockade_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = small_fort_building
+	modifier = {
+		local_garrison_size = 0.04
+		local_unrest = -0.008
+	}
+	unique_production_methods = {
+		antq_castrum_novaesium_maintenance = {
+			lumber = 0.15
+			weaponry = 0.05
+			tools = 0.04
+			tar = 0.03
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+	raw_modifier = {
+		fort_level = 1
+		pure_tooltip_entry = pte_no_propagating_zone_of_control
+	}
+}
+
 antq_castrum_augusta_raurica = {
 	audio_tier = 2
 	is_special = yes

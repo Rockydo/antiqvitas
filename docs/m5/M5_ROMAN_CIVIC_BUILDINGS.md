@@ -128,7 +128,7 @@ the ledger's `icon_subject` column records the subject of each illustration.
 Ara Pacis and Mausoleum source images were reviewed under the same contract;
 they are retained in the same reviewed contact sheet.
 The Amphitheatrum Statilii Tauri and Porticus Liviae sources use the same direct
-source/master/DDS review chain; the refreshed sheet contains all 36 named Roman
+source/master/DDS review chain; the refreshed sheet contains all 37 named Roman
 specials.
 
 ## Ravenna military-port source and boundary
@@ -164,3 +164,22 @@ Mogontiacum exception, with smaller garrison and unrest effects. It is a
 bounded near-site timber-and-earth camp proxy only: the display name is a
 functional identifier rather than a recovered Roman fort title, and it claims
 no legion, stone fortress, limes line, or complete camp plan.
+
+## Novaesium camp source and boundary
+
+`NEU-NOVAESIUM` is the City of Neuss's [Roman-history record](https://www.neuss.de/erleben/geschichte/stadthistorie). It dates a Roman garrison at the Erft mouth to 16 BC and describes the early Augustan sequence as earth-and-timber camps; its later permanent legionary fortress phases are not projected backward.
+
+`Castrum Novaesium` is therefore a direct installed Neuss point using the same
+low `defense_category`/`stockade_employment`/`small_fort_building` contract as
+the other securely eligible camps. Its separate icon is an early timber-and-earth
+enclosure only. It encodes neither a legion total nor a complete camp plan, later
+stone fortification, limes line, campaign route, or civilian settlement extent.
+
+The retained 3x4 source sheet is
+`assets_queue/generated_sources/antq_castrum_novaesium_sheet_source.png`;
+its reviewed first tile was cropped to
+`assets_queue/generated/antq_castrum_novaesium_128.png` and encoded as
+`main_menu/gfx/interface/icons/buildings/antq_castrum_novaesium.dds`.
+The call used the inspected vanilla barracks reference retained at
+`assets_queue/references/vanilla_building_barracks_reference.png`; the contact
+sheet above is the final visual review surface.

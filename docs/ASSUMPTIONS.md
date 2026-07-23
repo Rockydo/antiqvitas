@@ -3744,6 +3744,16 @@ Sources weighed: the locally recorded Pleiades and Barrington references
 the cached Mainz municipal Roman-period reference (`MZ-MOG`) for Mogontiacum.
 [secure toponym; contested linguistic representation]
 
+## 2026-07-23 - Novaesium is an early-camp proxy, not the later fortress
+
+The City of Neuss dates Roman garrison activity at the Erft mouth from 16 BC
+and distinguishes early earth-and-timber camps from the later permanent
+legionary fortress. The AD 1 Novaesium special consequently uses a single
+low-level stockade contract at the direct installed Neuss point. It makes no
+claim about a legion total, fortress plan, Lower Rhine line, civilian vicus,
+or later stone phases. Source weighed: `NEU-NOVAESIUM` in
+`docs/world_1ad/SOURCES.md`. [secure early camp; contested operational scale]
+
 ## 2026-07-22 - Public Granaries advance art is a generic provisioning motif
 
 The accepted Public Granaries icon depicts an uninscribed small grain store,
