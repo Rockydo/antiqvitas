@@ -4214,3 +4214,20 @@ archaeological feature rather than a settlement. The generated Tier-2 layer
 now rejects such feature vocabulary and retains the installed Tier-3 label
 until a proper historical toponym is available. This deliberately prefers an
 explicitly non-assertive fallback over a false ancient place-name claim.
+
+## 2026-07-24 - Loading-screen collection is bounded visual context, not reconstruction
+
+The eight selectable loading panoramas use only broad, source-compatible
+anchors: Ostia at the Tiber mouth (Pleiades, `https://pleiades.stoa.org/`);
+Alexandria's Pharos, commissioned in the early Ptolemaic period
+(`https://egyptianmuseum.org/explore/greco-and-roman-period-lighthouse-alexandria`);
+Kushite Meroë as a Nile/Atbara kingdom with production, trade, and iron-work
+evidence (`https://whc.unesco.org/en/list/1336/`); and Teotihuacan's Pyramid of
+the Sun, completed c. AD 200 rather than represented as complete in the c. AD
+100 scene (`https://www.metmuseum.org/es/essays/teotihuacan-pyramids-of-the-sun-and-the-moon`).
+Chang'an, the lower Rhine, and the two AD 1 Rome scenes likewise depict broad
+administrative, market, water, and settlement contexts rather than specific
+unverified layouts. In particular, the Forum and Campus Martius paintings are
+not architectural reconstructions; they exclude the Colosseum, Hadrianic dome,
+Trajanic forum, and Christian fabric. [secure broad setting; contested visual
+detail intentionally excluded]

@@ -31,6 +31,7 @@ validate:
 	.venv/Scripts/python.exe tools/m10_fourth_century.py --check
 	.venv/Scripts/python.exe tools/m10_final_century.py --check
 	.venv/Scripts/python.exe tools/m11_age_art.py --check
+	.venv/Scripts/python.exe tools/m11_loading_screens.py --check
 	.venv/Scripts/python.exe tools/m11_advance_icons.py --check
 	.venv/Scripts/python.exe tools/m11_flavor_events.py --check
 	.venv/Scripts/python.exe tools/m11_dynamic_coas.py --check
