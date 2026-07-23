@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-23 - High Empire civic advance-icon batch
+
+- Added distinct direct 256px illustrations for Civic Patronage, Cosmopolitan
+  Cities, Urban Professions, and Athletic Festivals. Each has a retained source,
+  exact master, BC7 DDS texture, ledger row, tree binding, and reviewed contact
+  sheet.
+- The generic material scenes claim no named city, building, benefactor, gateway,
+  ruler, empire, market, port, trade, guild, workshop, culture, religion,
+  contest, games, stadium, victory, event, person, animal, map, sign,
+  inscription, writing, symbol, flag, or modern object. The direct advance
+  migration now covers 71 of 250 advances.
+
+Next: continue dedicated advance art, emphasizing Roman civic buildings, trade
+goods, logistics, and period-appropriate city names alongside the source-led
+Roman building layer.
+
 ## 2026-07-23 - High Empire trade-infrastructure advance-icon batch
 
 - Added distinct direct 256px illustrations for Eastern Mediterranean Routes,
