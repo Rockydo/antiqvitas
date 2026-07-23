@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-23 - Dominate civic-economy advance art stays generic
+
+The eighteenth direct advance-icon batch depicts public provisioning materials,
+customs measures, neutral settlement stores, and a generic market building. It
+identifies no named city, ruler, empire, annona policy, market, road, port,
+customs office, merchant, law, tax system, army, foederati group, frontier,
+camp, battle, fort, person, animal, map, sign, standard, weapon, inscription,
+writing, emblem, flag, or modern object.
+
+Sources: plan section `P15` and asset-pipeline boundary `P20` in
+`ANTIQVITAS_MASTER_PLAN.md`.
+
+[secure broad material, provisioning, and storage contexts; contested practice,
+distribution, object provenance, and all visual reconstruction]
+
 ## 2026-07-23 - Crisis civic-economy advance art stays generic
 
 The seventeenth direct advance-icon batch depicts portable trade-support
