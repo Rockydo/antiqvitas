@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import re
 import subprocess
@@ -388,12 +389,18 @@ def dds_ok(path: Path) -> bool:
 
 def validate_art(families: list[dict[str, str]]) -> None:
     failures = []
+    hashes: dict[str, str] = {}
     for row in families:
         icon = ICON_DIR / f"{row['key']}.dds"
         if not icon.is_file():
             failures.append(f"missing direct regional building icon {icon.relative_to(ROOT)}")
         elif not dds_ok(icon):
             failures.append(f"invalid 128px RGBA DDS regional building icon {icon.relative_to(ROOT)}")
+        else:
+            digest = hashlib.sha256(icon.read_bytes()).hexdigest()
+            previous = hashes.setdefault(digest, row["key"])
+            if previous != row["key"]:
+                failures.append(f"regional building icons must be distinct: {previous} and {row['key']}")
     if failures:
         raise ValueError("\n".join(failures))
 

@@ -5995,3 +5995,9 @@ separate Han runtime-regency blocker.
   temple, Regia, and Circus Flaminius.
 - The Roman named-building ledger now contains 54 specials and the M11 asset
   inventory contains 509 checked direct player-facing art chains.
+
+## 2026-07-23 - M5 distinct-building-art guard
+
+- Added a rapid SHA-256 uniqueness guard to both named and regional building
+  validators. All 54 Roman specials and all 130 regional families now require
+  their own direct DDS texture as well as the existing format checks.
