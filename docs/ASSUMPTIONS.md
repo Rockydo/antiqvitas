@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-23 - Principate and High Empire commercial art stays generic
+
+The twenty-second direct advance-icon batch depicts generic exchange materials,
+cargo storage, library support, and engineering tools. It identifies no named
+market, city, port, route, ruler, empire, merchant, currency, law, warehouse,
+library, author, religion, engineer, project, person, animal, map, sign,
+inscription, writing, symbol, flag, or modern object.
+
+Sources: plan sections `P15` and asset-pipeline boundary `P20` in
+`ANTIQVITAS_MASTER_PLAN.md`.
+
+[secure broad exchange, storage, library, and engineering material contexts;
+contested practice, distribution, object provenance, and all visual
+reconstruction]
+
 ## 2026-07-23 - High Empire civic advance art stays generic
 
 The twenty-first direct advance-icon batch depicts generic civic maintenance,
