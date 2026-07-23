@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-23 - Dominate civic-economy advance-icon batch
+
+- Added distinct direct 256px illustrations for State Annona Routes,
+  Bureaucratic Customs, Foederati Provisioning, and Frontier Market Towns. Each
+  has a retained source, exact master, BC7 DDS texture, ledger row, tree binding,
+  and reviewed contact sheet.
+- The generic material scenes claim no named city, ruler, empire, annona policy,
+  market, road, port, customs office, merchant, law, tax system, army, foederati
+  group, frontier, camp, battle, fort, person, animal, map, sign, standard,
+  weapon, inscription, writing, emblem, flag, or modern object. The direct
+  advance migration now covers 59 of 250 advances.
+
+Next: continue dedicated advance art, emphasizing Roman civic buildings, trade
+goods, logistics, and period-appropriate city names alongside the source-led
+Roman building layer.
+
 ## 2026-07-23 - Crisis civic-economy advance-icon batch
 
 - Added distinct direct 256px illustrations for Crisis Trade Routes, Debased
