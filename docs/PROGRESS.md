@@ -1,5 +1,11 @@
 # Progress
 
+## 2026-07-23 - North-African period-name pass
+
+- Added fifteen Pleiades-coordinate Roman-period city labels from Tingi and
+  Lixus to Carthago, Thysdrus, Antipyrgos, and Darnis; 61 capital plus 180
+  curated direct anchors are now mirrored to every client.
+
 ## 2026-07-23 - Greek and Anatolian period-name pass
 
 - Added seventeen Pleiades coordinate-qualified direct settlement labels,
