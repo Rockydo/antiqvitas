@@ -122,6 +122,11 @@ building_manager = {
 	antq_reg_shipyard = { tag = XAA level = 1 location = alexandria } # reg_alexandria_shipyard; MET-ROMAN-TRADE
 	antq_reg_stone_yard = { tag = XAA level = 1 location = alexandria } # reg_alexandria_stone; P12.1
 	antq_reg_wine_press = { tag = XAA level = 1 location = alexandria } # reg_alexandria_wine; MET-ROMAN-TRADE
+	antq_reg_ivory_carver = { tag = XAA level = 1 location = annaba } # reg_annaba_ivory_carver; P12.1;PER
+	antq_reg_jeweler = { tag = XAA level = 1 location = annaba } # reg_annaba_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_leatherworks = { tag = XAA level = 1 location = annaba } # reg_annaba_leatherworks; P12.1;P12.3
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = annaba } # reg_annaba_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = annaba } # reg_annaba_scriptorium; P12.1;P12.3
 	antq_reg_bronze_foundry = { tag = XAH level = 1 location = antioch } # reg_antioch_bronze; P12.1
 	antq_reg_dye_workshop = { tag = XAH level = 1 location = antioch } # reg_antioch_dye; UNESCO-TYRE;POM-FULLONICA
 	antq_reg_fullonica = { tag = XAH level = 1 location = antioch } # reg_antioch_fullery; POM-FULLONICA
@@ -149,6 +154,11 @@ building_manager = {
 	antq_reg_pottery_kiln = { tag = XAA level = 1 location = arles } # reg_arelate_pottery; BM-ARRETINE;BM-MEMPHIS
 	antq_reg_shipyard = { tag = XAA level = 1 location = arles } # reg_arelate_shipyard; MET-ROMAN-TRADE
 	antq_reg_wine_press = { tag = XAA level = 1 location = arles } # reg_arelate_wine; MET-ROMAN-TRADE
+	antq_reg_amphora_depot = { tag = XAA level = 1 location = arles } # reg_arles_amphora_depot; MET-ROMAN-TRADE
+	antq_reg_jeweler = { tag = XAA level = 1 location = arles } # reg_arles_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = arles } # reg_arles_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = arles } # reg_arles_scriptorium; P12.1;P12.3
+	antq_reg_weapon_smith = { tag = XAA level = 1 location = arles } # reg_arles_weapon_smith; P12.1;P12.3
 	antq_reg_fullonica = { tag = XAH level = 1 location = baghdad } # reg_baghdad_fullery; POM-FULLONICA
 	antq_reg_metalwork = { tag = XAH level = 1 location = baghdad } # reg_baghdad_metal; P12.1
 	antq_reg_olive_press = { tag = XAH level = 1 location = baghdad } # reg_baghdad_olive; MET-ROMAN-HOUSING;MET-ROMAN-TRADE
@@ -166,11 +176,31 @@ building_manager = {
 	antq_reg_glassworks = { tag = XAH level = 1 location = beirut } # reg_berytus_glass; MET-ROMAN-GLASS
 	antq_reg_pottery_kiln = { tag = XAH level = 1 location = beirut } # reg_berytus_pottery; BM-ARRETINE;BM-MEMPHIS
 	antq_reg_shipyard = { tag = XAH level = 1 location = beirut } # reg_berytus_shipyard; MET-ROMAN-TRADE
+	antq_reg_ivory_carver = { tag = XAA level = 1 location = bizerte } # reg_bizerte_ivory_carver; P12.1;PER
+	antq_reg_jeweler = { tag = XAA level = 1 location = bizerte } # reg_bizerte_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_leatherworks = { tag = XAA level = 1 location = bizerte } # reg_bizerte_leatherworks; P12.1;P12.3
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = bizerte } # reg_bizerte_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = bizerte } # reg_bizerte_scriptorium; P12.1;P12.3
+	antq_reg_amphora_depot = { tag = XAA level = 1 location = bologna } # reg_bologna_amphora_depot; MET-ROMAN-TRADE
+	antq_reg_jeweler = { tag = XAA level = 1 location = bologna } # reg_bologna_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = bologna } # reg_bologna_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = bologna } # reg_bologna_scriptorium; P12.1;P12.3
+	antq_reg_weapon_smith = { tag = XAA level = 1 location = bologna } # reg_bologna_weapon_smith; P12.1;P12.3
 	antq_reg_fullonica = { tag = XAA level = 1 location = bologna } # reg_bononia_fullery; POM-FULLONICA
 	antq_reg_metalwork = { tag = XAA level = 1 location = bologna } # reg_bononia_metal; P12.1
 	antq_reg_pottery_kiln = { tag = XAA level = 1 location = bologna } # reg_bononia_pottery; BM-ARRETINE;BM-MEMPHIS
 	antq_reg_stone_yard = { tag = XAA level = 1 location = bologna } # reg_bononia_stone; P12.1
 	antq_reg_wine_press = { tag = XAA level = 1 location = bologna } # reg_bononia_wine; MET-ROMAN-TRADE
+	antq_reg_amphora_depot = { tag = XAA level = 1 location = bordeaux } # reg_bordeaux_amphora_depot; MET-ROMAN-TRADE
+	antq_reg_jeweler = { tag = XAA level = 1 location = bordeaux } # reg_bordeaux_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = bordeaux } # reg_bordeaux_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = bordeaux } # reg_bordeaux_scriptorium; P12.1;P12.3
+	antq_reg_weapon_smith = { tag = XAA level = 1 location = bordeaux } # reg_bordeaux_weapon_smith; P12.1;P12.3
+	antq_reg_amphora_depot = { tag = XAA level = 1 location = brindisi } # reg_brindisi_amphora_depot; MET-ROMAN-TRADE
+	antq_reg_jeweler = { tag = XAA level = 1 location = brindisi } # reg_brindisi_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = brindisi } # reg_brindisi_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = brindisi } # reg_brindisi_scriptorium; P12.1;P12.3
+	antq_reg_weapon_smith = { tag = XAA level = 1 location = brindisi } # reg_brindisi_weapon_smith; P12.1;P12.3
 	antq_reg_metalwork = { tag = XAA level = 1 location = brindisi } # reg_brundisium_metal; P12.1
 	antq_reg_olive_press = { tag = XAA level = 1 location = brindisi } # reg_brundisium_olive; MET-ROMAN-HOUSING;MET-ROMAN-TRADE
 	antq_reg_pottery_kiln = { tag = XAA level = 1 location = brindisi } # reg_brundisium_pottery; BM-ARRETINE;BM-MEMPHIS
@@ -208,6 +238,11 @@ building_manager = {
 	antq_reg_amphora_depot = { tag = XAA level = 1 location = tunis } # reg_carthage_amphora; MET-ROMAN-TRADE
 	antq_reg_silk_loom = { tag = XAR level = 1 location = jingzhao } # reg_changan_silk_loom; P12.1;P8.3;BHR
 	antq_reg_silk_loom = { tag = XAR level = 1 location = chengdu } # reg_chengdu_silk_loom; P12.1;P8.3;BHR
+	antq_reg_ivory_carver = { tag = XDR level = 1 location = cherchell } # reg_cherchell_ivory_carver; P12.1;PER
+	antq_reg_jeweler = { tag = XDR level = 1 location = cherchell } # reg_cherchell_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_leatherworks = { tag = XDR level = 1 location = cherchell } # reg_cherchell_leatherworks; P12.1;P12.3
+	antq_reg_linen_weavery = { tag = XDR level = 1 location = cherchell } # reg_cherchell_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XDR level = 1 location = cherchell } # reg_cherchell_scriptorium; P12.1;P12.3
 	antq_reg_dye_workshop = { tag = XDK level = 1 location = cologne } # reg_cologne_dye; UNESCO-TYRE;POM-FULLONICA
 	antq_reg_fullonica = { tag = XDK level = 1 location = cologne } # reg_cologne_fullery; POM-FULLONICA
 	antq_reg_glassworks = { tag = XDK level = 1 location = cologne } # reg_cologne_glass; MET-ROMAN-GLASS
@@ -218,6 +253,11 @@ building_manager = {
 	antq_reg_stone_yard = { tag = XDK level = 1 location = cologne } # reg_cologne_stone; P12.1
 	antq_reg_weapon_smith = { tag = XDK level = 1 location = cologne } # reg_cologne_weapon_smith; P12.1;P8.7
 	antq_reg_wine_press = { tag = XDK level = 1 location = cologne } # reg_cologne_wine; MET-ROMAN-TRADE
+	antq_reg_amphora_depot = { tag = XAA level = 1 location = cordoba } # reg_cordoba_amphora_depot; MET-ROMAN-TRADE
+	antq_reg_jeweler = { tag = XAA level = 1 location = cordoba } # reg_cordoba_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = cordoba } # reg_cordoba_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = cordoba } # reg_cordoba_scriptorium; P12.1;P12.3
+	antq_reg_weapon_smith = { tag = XAA level = 1 location = cordoba } # reg_cordoba_weapon_smith; P12.1;P12.3
 	antq_reg_fullonica = { tag = XAA level = 1 location = cordoba } # reg_corduba_fullery; POM-FULLONICA
 	antq_reg_metalwork = { tag = XAA level = 1 location = cordoba } # reg_corduba_metal; P12.1
 	antq_reg_olive_press = { tag = XAA level = 1 location = cordoba } # reg_corduba_olive; MET-ROMAN-HOUSING;MET-ROMAN-TRADE
@@ -262,6 +302,11 @@ building_manager = {
 	antq_reg_shipyard = { tag = XAA level = 1 location = ayasuluk } # reg_ephesus_shipyard; MET-ROMAN-TRADE
 	antq_reg_stone_yard = { tag = XAA level = 1 location = ayasuluk } # reg_ephesus_stone; P12.1
 	antq_reg_wine_press = { tag = XAA level = 1 location = ayasuluk } # reg_ephesus_wine; MET-ROMAN-TRADE
+	antq_reg_ivory_carver = { tag = XAA level = 1 location = gabes } # reg_gabes_ivory_carver; P12.1;PER
+	antq_reg_jeweler = { tag = XAA level = 1 location = gabes } # reg_gabes_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_leatherworks = { tag = XAA level = 1 location = gabes } # reg_gabes_leatherworks; P12.1;P12.3
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = gabes } # reg_gabes_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = gabes } # reg_gabes_scriptorium; P12.1;P12.3
 	antq_reg_amphora_depot = { tag = XAA level = 1 location = cadiz } # reg_gades_amphora; MET-ROMAN-TRADE
 	antq_reg_olive_press = { tag = XAA level = 1 location = sousse } # reg_hadrumetum_olive; MET-ROMAN-HOUSING;MET-ROMAN-TRADE
 	antq_reg_fish_saltery = { tag = XAA level = 1 location = sousse } # reg_hadrumetum_saltery; BAELO-SALTERY
@@ -281,6 +326,11 @@ building_manager = {
 	antq_reg_pottery_kiln = { tag = XAA level = 1 location = annaba } # reg_hippo_pottery; BM-ARRETINE;BM-MEMPHIS
 	antq_reg_shipyard = { tag = XAA level = 1 location = annaba } # reg_hippo_shipyard; MET-ROMAN-TRADE
 	antq_reg_wine_press = { tag = XAA level = 1 location = annaba } # reg_hippo_wine; MET-ROMAN-TRADE
+	antq_reg_amphora_depot = { tag = XAA level = 1 location = lisbon } # reg_lisbon_amphora_depot; MET-ROMAN-TRADE
+	antq_reg_jeweler = { tag = XAA level = 1 location = lisbon } # reg_lisbon_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = lisbon } # reg_lisbon_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = lisbon } # reg_lisbon_scriptorium; P12.1;P12.3
+	antq_reg_weapon_smith = { tag = XAA level = 1 location = lisbon } # reg_lisbon_weapon_smith; P12.1;P12.3
 	antq_reg_fullonica = { tag = XAA level = 1 location = lyon } # reg_lyon_fullery; POM-FULLONICA
 	antq_reg_metalwork = { tag = XAA level = 1 location = lyon } # reg_lyon_metal; P12.1
 	antq_reg_pottery_kiln = { tag = XAA level = 1 location = lyon } # reg_lyon_pottery; BM-ARRETINE;BM-MEMPHIS
@@ -298,6 +348,21 @@ building_manager = {
 	antq_reg_pottery_kiln = { tag = XAA level = 1 location = milano } # reg_mediolanum_pottery; BM-ARRETINE;BM-MEMPHIS
 	antq_reg_stone_yard = { tag = XAA level = 1 location = milano } # reg_mediolanum_stone; P12.1
 	antq_reg_wine_press = { tag = XAA level = 1 location = milano } # reg_mediolanum_wine; MET-ROMAN-TRADE
+	antq_reg_amphora_depot = { tag = XAA level = 1 location = merida } # reg_merida_amphora_depot; MET-ROMAN-TRADE
+	antq_reg_jeweler = { tag = XAA level = 1 location = merida } # reg_merida_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = merida } # reg_merida_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = merida } # reg_merida_scriptorium; P12.1;P12.3
+	antq_reg_weapon_smith = { tag = XAA level = 1 location = merida } # reg_merida_weapon_smith; P12.1;P12.3
+	antq_reg_amphora_depot = { tag = XAA level = 1 location = milano } # reg_milano_amphora_depot; MET-ROMAN-TRADE
+	antq_reg_jeweler = { tag = XAA level = 1 location = milano } # reg_milano_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = milano } # reg_milano_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = milano } # reg_milano_scriptorium; P12.1;P12.3
+	antq_reg_weapon_smith = { tag = XAA level = 1 location = milano } # reg_milano_weapon_smith; P12.1;P12.3
+	antq_reg_amphora_depot = { tag = XAA level = 1 location = modena } # reg_modena_amphora_depot; MET-ROMAN-TRADE
+	antq_reg_jeweler = { tag = XAA level = 1 location = modena } # reg_modena_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = modena } # reg_modena_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = modena } # reg_modena_scriptorium; P12.1;P12.3
+	antq_reg_weapon_smith = { tag = XAA level = 1 location = modena } # reg_modena_weapon_smith; P12.1;P12.3
 	antq_reg_fullonica = { tag = XAA level = 1 location = modena } # reg_mutina_fullery; POM-FULLONICA
 	antq_reg_metalwork = { tag = XAA level = 1 location = modena } # reg_mutina_metal; P12.1
 	antq_reg_pottery_kiln = { tag = XAA level = 1 location = modena } # reg_mutina_pottery; BM-ARRETINE;BM-MEMPHIS
@@ -308,11 +373,21 @@ building_manager = {
 	antq_reg_pottery_kiln = { tag = XAA level = 1 location = narbonne } # reg_narbo_pottery; BM-ARRETINE;BM-MEMPHIS
 	antq_reg_shipyard = { tag = XAA level = 1 location = narbonne } # reg_narbo_shipyard; MET-ROMAN-TRADE
 	antq_reg_wine_press = { tag = XAA level = 1 location = narbonne } # reg_narbo_wine; MET-ROMAN-TRADE
+	antq_reg_amphora_depot = { tag = XAA level = 1 location = narbonne } # reg_narbonne_amphora_depot; MET-ROMAN-TRADE
+	antq_reg_jeweler = { tag = XAA level = 1 location = narbonne } # reg_narbonne_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = narbonne } # reg_narbonne_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = narbonne } # reg_narbonne_scriptorium; P12.1;P12.3
+	antq_reg_weapon_smith = { tag = XAA level = 1 location = narbonne } # reg_narbonne_weapon_smith; P12.1;P12.3
 	antq_reg_fullonica = { tag = XAA level = 1 location = nimes } # reg_nemausus_fullery; POM-FULLONICA
 	antq_reg_metalwork = { tag = XAA level = 1 location = nimes } # reg_nemausus_metal; P12.1
 	antq_reg_olive_press = { tag = XAA level = 1 location = nimes } # reg_nemausus_olive; MET-ROMAN-HOUSING;MET-ROMAN-TRADE
 	antq_reg_pottery_kiln = { tag = XAA level = 1 location = nimes } # reg_nemausus_pottery; BM-ARRETINE;BM-MEMPHIS
 	antq_reg_wine_press = { tag = XAA level = 1 location = nimes } # reg_nemausus_wine; MET-ROMAN-TRADE
+	antq_reg_amphora_depot = { tag = XAA level = 1 location = nimes } # reg_nimes_amphora_depot; MET-ROMAN-TRADE
+	antq_reg_jeweler = { tag = XAA level = 1 location = nimes } # reg_nimes_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = nimes } # reg_nimes_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = nimes } # reg_nimes_scriptorium; P12.1;P12.3
+	antq_reg_weapon_smith = { tag = XAA level = 1 location = nimes } # reg_nimes_weapon_smith; P12.1;P12.3
 	antq_reg_glassworks = { tag = XAA level = 1 location = lisbon } # reg_olisipo_glass; MET-ROMAN-GLASS
 	antq_reg_metalwork = { tag = XAA level = 1 location = lisbon } # reg_olisipo_metal; P12.1
 	antq_reg_pottery_kiln = { tag = XAA level = 1 location = lisbon } # reg_olisipo_pottery; BM-ARRETINE;BM-MEMPHIS
@@ -329,11 +404,16 @@ building_manager = {
 	antq_reg_pottery_kiln = { tag = NAB level = 1 location = shoubak } # reg_petra_pottery; BM-ARRETINE;BM-MEMPHIS
 	antq_reg_stone_yard = { tag = NAB level = 1 location = shoubak } # reg_petra_stone; P12.1
 	antq_reg_wine_press = { tag = NAB level = 1 location = shoubak } # reg_petra_wine; MET-ROMAN-TRADE
+	antq_reg_amphora_depot = { tag = XAA level = 1 location = ravenna } # reg_ravenna_amphora_depot; MET-ROMAN-TRADE
 	antq_reg_fullonica = { tag = XAA level = 1 location = ravenna } # reg_ravenna_fullery; POM-FULLONICA
+	antq_reg_jeweler = { tag = XAA level = 1 location = ravenna } # reg_ravenna_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = ravenna } # reg_ravenna_linen_weavery; P12.1;P12.3
 	antq_reg_metalwork = { tag = XAA level = 1 location = ravenna } # reg_ravenna_metal; P12.1
 	antq_reg_pottery_kiln = { tag = XAA level = 1 location = ravenna } # reg_ravenna_pottery; BM-ARRETINE;BM-MEMPHIS
+	antq_reg_scriptorium = { tag = XAA level = 1 location = ravenna } # reg_ravenna_scriptorium; P12.1;P12.3
 	antq_reg_shipyard = { tag = XAA level = 1 location = ravenna } # reg_ravenna_shipyard; MET-ROMAN-TRADE
 	antq_reg_stone_yard = { tag = XAA level = 1 location = ravenna } # reg_ravenna_stone; P12.1
+	antq_reg_weapon_smith = { tag = XAA level = 1 location = ravenna } # reg_ravenna_weapon_smith; P12.1;P12.3
 	antq_reg_fullonica = { tag = XAH level = 1 location = rey } # reg_rhagae_fullery; POM-FULLONICA
 	antq_reg_glassworks = { tag = XAH level = 1 location = rey } # reg_rhagae_glass; MET-ROMAN-GLASS
 	antq_reg_metalwork = { tag = XAH level = 1 location = rey } # reg_rhagae_metal; P12.1
@@ -363,6 +443,11 @@ building_manager = {
 	antq_reg_fish_saltery = { tag = XAH level = 1 location = sidon } # reg_sidon_saltery; BAELO-SALTERY
 	antq_reg_shipyard = { tag = XAH level = 1 location = sidon } # reg_sidon_shipyard; MET-ROMAN-TRADE
 	antq_reg_wine_press = { tag = XAH level = 1 location = sidon } # reg_sidon_wine; MET-ROMAN-TRADE
+	antq_reg_ivory_carver = { tag = XAA level = 1 location = sousse } # reg_sousse_ivory_carver; P12.1;PER
+	antq_reg_jeweler = { tag = XAA level = 1 location = sousse } # reg_sousse_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_leatherworks = { tag = XAA level = 1 location = sousse } # reg_sousse_leatherworks; P12.1;P12.3
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = sousse } # reg_sousse_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = sousse } # reg_sousse_scriptorium; P12.1;P12.3
 	antq_reg_fullonica = { tag = XAJ level = 1 location = shush } # reg_susa_fullery; POM-FULLONICA
 	antq_reg_glassworks = { tag = XAJ level = 1 location = shush } # reg_susa_glass; MET-ROMAN-GLASS
 	antq_reg_metalwork = { tag = XAJ level = 1 location = shush } # reg_susa_metal; P12.1
@@ -378,6 +463,11 @@ building_manager = {
 	antq_reg_pottery_kiln = { tag = XAA level = 1 location = gabes } # reg_tacape_pottery; BM-ARRETINE;BM-MEMPHIS
 	antq_reg_fish_saltery = { tag = XAA level = 1 location = gabes } # reg_tacape_saltery; BAELO-SALTERY
 	antq_reg_wine_press = { tag = XAA level = 1 location = gabes } # reg_tacape_wine; MET-ROMAN-TRADE
+	antq_reg_amphora_depot = { tag = XAA level = 1 location = taranto } # reg_taranto_amphora_depot; MET-ROMAN-TRADE
+	antq_reg_jeweler = { tag = XAA level = 1 location = taranto } # reg_taranto_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = taranto } # reg_taranto_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = taranto } # reg_taranto_scriptorium; P12.1;P12.3
+	antq_reg_weapon_smith = { tag = XAA level = 1 location = taranto } # reg_taranto_weapon_smith; P12.1;P12.3
 	antq_reg_fullonica = { tag = XAA level = 1 location = taranto } # reg_tarentum_fullery; POM-FULLONICA
 	antq_reg_olive_press = { tag = XAA level = 1 location = taranto } # reg_tarentum_olive; MET-ROMAN-HOUSING;MET-ROMAN-TRADE
 	antq_reg_pottery_kiln = { tag = XAA level = 1 location = taranto } # reg_tarentum_pottery; BM-ARRETINE;BM-MEMPHIS
@@ -389,6 +479,11 @@ building_manager = {
 	antq_reg_fish_saltery = { tag = XAA level = 1 location = tarragona } # reg_tarraco_saltery; BAELO-SALTERY
 	antq_reg_shipyard = { tag = XAA level = 1 location = tarragona } # reg_tarraco_shipyard; MET-ROMAN-TRADE
 	antq_reg_wine_press = { tag = XAA level = 1 location = tarragona } # reg_tarraco_wine; MET-ROMAN-TRADE
+	antq_reg_amphora_depot = { tag = XAA level = 1 location = tarragona } # reg_tarragona_amphora_depot; MET-ROMAN-TRADE
+	antq_reg_jeweler = { tag = XAA level = 1 location = tarragona } # reg_tarragona_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = tarragona } # reg_tarragona_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = tarragona } # reg_tarragona_scriptorium; P12.1;P12.3
+	antq_reg_weapon_smith = { tag = XAA level = 1 location = tarragona } # reg_tarragona_weapon_smith; P12.1;P12.3
 	antq_reg_dye_workshop = { tag = XAA level = 1 location = tunis } # reg_tunis_dye; UNESCO-TYRE;POM-FULLONICA
 	antq_reg_fullonica = { tag = XAA level = 1 location = tunis } # reg_tunis_fullery; POM-FULLONICA
 	antq_reg_olive_press = { tag = XAA level = 1 location = tunis } # reg_tunis_olive; MET-ROMAN-HOUSING;MET-ROMAN-TRADE
@@ -396,6 +491,11 @@ building_manager = {
 	antq_reg_fish_saltery = { tag = XAA level = 1 location = tunis } # reg_tunis_saltery; BAELO-SALTERY
 	antq_reg_shipyard = { tag = XAA level = 1 location = tunis } # reg_tunis_shipyard; MET-ROMAN-TRADE
 	antq_reg_wine_press = { tag = XAA level = 1 location = tunis } # reg_tunis_wine; MET-ROMAN-TRADE
+	antq_reg_amphora_depot = { tag = XAA level = 1 location = zaragoza } # reg_zaragoza_amphora_depot; MET-ROMAN-TRADE
+	antq_reg_jeweler = { tag = XAA level = 1 location = zaragoza } # reg_zaragoza_jeweler; P12.1;MET-ROMAN-TRADE
+	antq_reg_linen_weavery = { tag = XAA level = 1 location = zaragoza } # reg_zaragoza_linen_weavery; P12.1;P12.3
+	antq_reg_scriptorium = { tag = XAA level = 1 location = zaragoza } # reg_zaragoza_scriptorium; P12.1;P12.3
+	antq_reg_weapon_smith = { tag = XAA level = 1 location = zaragoza } # reg_zaragoza_weapon_smith; P12.1;P12.3
 	antq_amphitheatrum_statilii_tauri = { tag = XAA level = 1 location = rome } # roma_amphitheatrum_statilii_tauri; DAR-AMPHITHEATRUM-TAURUS
 	antq_horrea_publica = { tag = XAA level = 1 location = rome } # roma_annona; OCD-ANNONA;P12.3
 	antq_aqua_alsietina = { tag = XAA level = 1 location = rome } # roma_aqua_alsietina; DAR-AQUA-ALSIETINA
