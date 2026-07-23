@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-23 - Crisis civic-economy advance art stays generic
+
+The seventeenth direct advance-icon batch depicts portable trade-support
+materials, blank mixed exchange media, a neutral provision-market counter, and
+secured masonry storage. It identifies no named route, road, mint, city, polity,
+ruler, merchant, market, army, camp, fortress, port, currency reform, crisis
+event, person, animal, sign, standard, weapon, map, inscription, writing, flag,
+or modern object.
+
+Sources: plan section `P15` and asset-pipeline boundary `P20` in
+`ANTIQVITAS_MASTER_PLAN.md`.
+
+[secure broad material, market, and storage contexts; contested practice,
+distribution, object provenance, and all visual reconstruction]
+
 ## 2026-07-23 - High Empire exchange art stays generic
 
 The sixteenth direct advance-icon batch depicts generic stone storage access,

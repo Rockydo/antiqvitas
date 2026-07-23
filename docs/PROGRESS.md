@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-23 - Crisis civic-economy advance-icon batch
+
+- Added distinct direct 256px illustrations for Crisis Trade Routes, Debased
+  Currency Exchange, Military Supply Markets, and Fortified Warehouses. Each has
+  a retained source, exact master, BC7 DDS texture, ledger row, tree binding,
+  and reviewed contact sheet.
+- The generic material scenes claim no named route, road, mint, city, polity,
+  ruler, merchant, market, army, camp, fortress, port, currency reform, crisis
+  event, person, animal, sign, standard, weapon, map, inscription, writing,
+  flag, or modern object. The direct advance migration now covers 55 of 250
+  advances.
+
+Next: continue dedicated advance art, emphasizing Roman civic buildings, trade
+goods, logistics, and period-appropriate city names alongside the source-led
+Roman building layer.
+
 ## 2026-07-23 - High Empire exchange advance-icon batch
 
 - Added distinct direct 256px illustrations for Silk Road Caravanserais, Long
