@@ -64,6 +64,15 @@ no named community, teacher, deity, symbol, sanctuary, shrine, temple, ruler,
 dynasty, city, empire, rite, person, text, or inscription. The reviewed fifth
 batch is [here](DIRECT_RELIGION_ICON_BATCH_05.png).
 
+## Sixth Nile, Horn, and Arabian batch
+
+The sixth batch distinguishes Nile Valley, middle-Nile, Horn of Africa, and
+Arabian material contexts through uninscribed faience, papyrus, sandstone,
+ceramic, fibre, cloth, resin, leather, dates, plant, and stone objects. It
+identifies no named deity, animal, temple, shrine, altar, ruler, dynasty,
+kingdom, city, pyramid, tomb, stela, Kaaba, rite, person, text, or inscription.
+The reviewed sixth batch is [here](DIRECT_RELIGION_ICON_BATCH_06.png).
+
 Until each remaining row is completed, its reviewed installed motif is a broad
 readable UI cue, not a claim that the contemporary or historical tradition is
 identical to ANTIQVITAS's sourced category.
