@@ -1292,7 +1292,7 @@ antq_late_antique_commerce = {
 
 antq_migration_market_links = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_migration_market_links
 	depth = 0
 	research_cost = 10.0
 	ai_weight = { add = 100 }
@@ -1300,7 +1300,7 @@ antq_migration_market_links = {
 
 antq_gift_exchange = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_gift_exchange
 	depth = 1
 	research_cost = 10.5
 	requires = antq_migration_market_links
@@ -1309,7 +1309,7 @@ antq_gift_exchange = {
 
 antq_kingdom_tolls = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_kingdom_tolls
 	depth = 2
 	research_cost = 11.0
 	requires = antq_gift_exchange
@@ -1318,7 +1318,7 @@ antq_kingdom_tolls = {
 
 antq_riverine_trade = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_riverine_trade
 	depth = 3
 	research_cost = 11.5
 	requires = antq_kingdom_tolls
