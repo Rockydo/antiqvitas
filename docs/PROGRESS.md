@@ -6019,3 +6019,6 @@ separate Han runtime-regency blocker.
 
 - Added 12 source-bounded pre-AD 1 Forum, Palatine, and Campus Martius specials
   with one direct-art sheet. Rome has 66 named specials; UI inventory is 533.
+2026-07-23 - M5 Roman temple/civic-memory pass: added twelve source-bounded
+Republican and Augustan Rome specials with direct art; Rome now has 78 named
+specials and the UI ledger has 545 direct asset chains.

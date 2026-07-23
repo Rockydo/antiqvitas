@@ -1872,3 +1872,314 @@ antq_curiae_veteres = {
 	}
 	construction_demand = town_building_construction
 }
+
+antq_aedes_concordiae_augustae = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = clergy
+	max_levels = 1
+	category = religious_category
+	employment_size = religious_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = religious_building_time
+	modifier = {
+		local_unrest = -0.008
+	}
+	unique_production_methods = {
+		antq_aedes_concordiae_augustae_maintenance = {
+			incense = 0.05
+			wine = 0.03
+			masonry = 0.04
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_aedes_bellonae = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = clergy
+	max_levels = 1
+	category = religious_category
+	employment_size = religious_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = religious_building_time
+	modifier = {
+		local_unrest = -0.006
+	}
+	unique_production_methods = {
+		antq_aedes_bellonae_maintenance = {
+			incense = 0.05
+			wine = 0.03
+			masonry = 0.04
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_aedes_iovis_tonantis = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = clergy
+	max_levels = 1
+	category = religious_category
+	employment_size = religious_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = religious_building_time
+	modifier = {
+		local_unrest = -0.006
+	}
+	unique_production_methods = {
+		antq_aedes_iovis_tonantis_maintenance = {
+			incense = 0.05
+			wine = 0.03
+			masonry = 0.05
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_aedes_magnae_matris = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = clergy
+	max_levels = 1
+	category = religious_category
+	employment_size = religious_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = religious_building_time
+	modifier = {
+		local_unrest = -0.007
+	}
+	unique_production_methods = {
+		antq_aedes_magnae_matris_maintenance = {
+			incense = 0.06
+			wine = 0.04
+			masonry = 0.05
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_forum_iulium = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	category = government_category
+	employment_size = generic_burgher_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = government_build_time
+	modifier = {
+		local_max_control = 0.02
+		local_merchant_capacity = 0.015
+	}
+	unique_production_methods = {
+		antq_forum_iulium_maintenance = {
+			masonry = 0.08
+			marble = 0.03
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_aedes_divi_iulii = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = clergy
+	max_levels = 1
+	category = religious_category
+	employment_size = religious_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = religious_building_time
+	modifier = {
+		local_cultural_tradition = 0.03
+	}
+	unique_production_methods = {
+		antq_aedes_divi_iulii_maintenance = {
+			incense = 0.05
+			wine = 0.03
+			masonry = 0.04
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_aedes_fortunae_primigeniae = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = clergy
+	max_levels = 1
+	category = religious_category
+	employment_size = religious_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = religious_building_time
+	modifier = {
+		local_unrest = -0.004
+	}
+	unique_production_methods = {
+		antq_aedes_fortunae_primigeniae_maintenance = {
+			incense = 0.04
+			wine = 0.02
+			masonry = 0.03
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_puteal_libonis = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	category = government_category
+	employment_size = generic_burgher_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = government_build_time
+	modifier = {
+		local_cultural_tradition = 0.015
+	}
+	unique_production_methods = {
+		antq_puteal_libonis_maintenance = {
+			masonry = 0.03
+			tools = 0.01
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_casa_romuli = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	category = cultural_category
+	employment_size = cultural_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = cultural_building_time
+	modifier = {
+		local_cultural_tradition = 0.025
+	}
+	unique_production_methods = {
+		antq_casa_romuli_maintenance = {
+			lumber = 0.03
+			cloth = 0.01
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_porticus_gai_et_luci = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	category = cultural_category
+	employment_size = cultural_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = cultural_building_time
+	modifier = {
+		local_cultural_tradition = 0.02
+	}
+	unique_production_methods = {
+		antq_porticus_gai_et_luci_maintenance = {
+			masonry = 0.04
+			cloth = 0.02
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_chalcidicum_iulium = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	category = government_category
+	employment_size = generic_burgher_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = government_build_time
+	modifier = {
+		local_max_control = 0.012
+	}
+	unique_production_methods = {
+		antq_chalcidicum_iulium_maintenance = {
+			masonry = 0.04
+			marble = 0.02
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_aedes_victoriae = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = clergy
+	max_levels = 1
+	category = religious_category
+	employment_size = religious_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = religious_building_time
+	modifier = {
+		local_unrest = -0.005
+	}
+	unique_production_methods = {
+		antq_aedes_victoriae_maintenance = {
+			incense = 0.04
+			wine = 0.02
+			masonry = 0.03
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}

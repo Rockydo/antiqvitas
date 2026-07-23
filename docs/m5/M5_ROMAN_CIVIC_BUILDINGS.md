@@ -285,3 +285,16 @@ Curiae Veteres. All but the dated milestone are contested city-point proxies:
 they do not settle exact placement, fabric, cult, staffing, programme, or later
 restoration. The 3×4 source is
 `assets_queue/generated_sources/antq_roman_republican_civic_sheet_source.png`.
+
+## Temple and civic-memory pass
+
+Twelve more Rome-point specials cover Concordia, Bellona, Jupiter Tonans,
+Magna Mater, Forum Iulium, Divus Julius, Fortuna Primigenia, Puteal Libonis,
+Casa Romuli, Porticus Gai et Luci, the Chalcidicum, and Victoria. Digital
+Augustan Rome establishes the secure AD 1 anchors for [Bellona](https://www.digitalaugustanrome.org/records/bellona-aedes/),
+[Jupiter Tonans](https://www.digitalaugustanrome.org/records/iuppiter-tonans-aedes/),
+[Magna Mater](https://www.digitalaugustanrome.org/records/magna-mater-aedes/),
+and [Forum Iulium](https://www.digitalaugustanrome.org/records/forum-iulium/).
+The remaining city-point identifications are explicitly marked contested in
+the ledger; none asserts a settled plan, ritual, staffing, or later rebuilding.
+The committed sheet retains only its intended first twelve tiles.

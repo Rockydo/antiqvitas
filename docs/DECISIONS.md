@@ -2616,3 +2616,6 @@ contracts.
 The new Forum, Palatine, and Campus Martius layer uses low one-level contracts
 and direct icons rather than a fictional detailed city plan. Each remains below
 the scalable regional economy and is explicitly bounded in its ledger.
+2026-07-23 - Keep contested Rome temple and civic-memory anchors as separate,
+low-impact specials. Their art distinguishes use and form without claiming a
+settled reconstruction.
