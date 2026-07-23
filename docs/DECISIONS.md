@@ -2373,3 +2373,8 @@ former has maintenance for water-display infrastructure and the latter uses
 copper solely as the engine proxy for bronze. Neither creates a battle, an
 observer spectacle, a timekeeping effect, exact dimensions, or a reconstructed
 Campus Martius plan.
+
+## 2026-07-23 - M5 reusable families use native guild recipes
+
+Seven families use exact installed guild recipes; all ten use scalable guild
+contracts. This reaches 70% productive-family coverage without price guesses.

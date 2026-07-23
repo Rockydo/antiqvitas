@@ -5038,6 +5038,11 @@ Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster coverage while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-23 - M5 scalable production recovery
+
+- All ten regional families now scale; seven use exact productive guild recipes.
+- `make validate` and smoke are green with zero new errors.
+
 ## 2026-07-22 - M12 first-month market runtime correction
 
 - Isolated the AD 1 `Getting relation with itself` assertion to the installed

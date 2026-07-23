@@ -3,10 +3,11 @@
 
 antq_reg_olive_press = {
 	audio_tier = 2
-	is_special = yes
+	is_special = no
 	is_foreign = no
 	pop_type = burghers
-	max_levels = 1
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
 	category = basic_industry_category
 	employment_size = guild_employment
 	town = yes
@@ -25,15 +26,17 @@ antq_reg_olive_press = {
 			category = building_maintenance
 		}
 	}
-	construction_demand = town_building_construction
+	custom_tags = { guild }
+	construction_demand = guild_construction
 }
 
 antq_reg_wine_press = {
 	audio_tier = 2
-	is_special = yes
+	is_special = no
 	is_foreign = no
 	pop_type = burghers
-	max_levels = 1
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
 	category = basic_industry_category
 	employment_size = guild_employment
 	town = yes
@@ -45,22 +48,26 @@ antq_reg_wine_press = {
 	}
 	unique_production_methods = {
 		antq_reg_wine_press_maintenance = {
-			wine = 0.16
-			pottery = 0.06
-			tools = 0.04
-			lumber = 0.03
-			category = building_maintenance
+			fruit = 1.154
+			lumber = 0.157
+			tools = 0.092
+			produced = wine
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
 		}
 	}
-	construction_demand = town_building_construction
+	custom_tags = { guild }
+	construction_demand = guild_construction
 }
 
 antq_reg_fish_saltery = {
 	audio_tier = 2
-	is_special = yes
+	is_special = no
 	is_foreign = no
 	pop_type = burghers
-	max_levels = 1
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
 	category = basic_industry_category
 	employment_size = guild_employment
 	town = yes
@@ -80,15 +87,17 @@ antq_reg_fish_saltery = {
 			category = building_maintenance
 		}
 	}
-	construction_demand = town_building_construction
+	custom_tags = { guild }
+	construction_demand = guild_construction
 }
 
 antq_reg_pottery_kiln = {
 	audio_tier = 2
-	is_special = yes
+	is_special = no
 	is_foreign = no
 	pop_type = burghers
-	max_levels = 1
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
 	category = basic_industry_category
 	employment_size = guild_employment
 	town = yes
@@ -100,21 +109,26 @@ antq_reg_pottery_kiln = {
 	}
 	unique_production_methods = {
 		antq_reg_pottery_kiln_maintenance = {
-			clay = 0.18
-			lumber = 0.10
-			tools = 0.05
-			category = building_maintenance
+			clay = 1.0039
+			lumber = 0.1201
+			tools = 0.0504
+			produced = pottery
+			output = 1.0
+			debug_max_profit = guild_profit_margin
+			category = guild_input
 		}
 	}
-	construction_demand = town_building_construction
+	custom_tags = { guild }
+	construction_demand = guild_construction
 }
 
 antq_reg_fullonica = {
 	audio_tier = 2
-	is_special = yes
+	is_special = no
 	is_foreign = no
 	pop_type = burghers
-	max_levels = 1
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
 	category = basic_industry_category
 	employment_size = guild_employment
 	town = yes
@@ -126,22 +140,24 @@ antq_reg_fullonica = {
 	}
 	unique_production_methods = {
 		antq_reg_fullonica_maintenance = {
-			wool = 0.10
-			cloth = 0.10
-			dyes = 0.05
-			tools = 0.03
-			category = building_maintenance
+			wool = 1.0
+			produced = cloth
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
 		}
 	}
-	construction_demand = town_building_construction
+	custom_tags = { guild }
+	construction_demand = guild_construction
 }
 
 antq_reg_glassworks = {
 	audio_tier = 2
-	is_special = yes
+	is_special = no
 	is_foreign = no
 	pop_type = burghers
-	max_levels = 1
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
 	category = basic_industry_category
 	employment_size = guild_employment
 	town = yes
@@ -153,22 +169,26 @@ antq_reg_glassworks = {
 	}
 	unique_production_methods = {
 		antq_reg_glassworks_maintenance = {
-			glass = 0.12
-			clay = 0.08
-			lumber = 0.06
-			tools = 0.04
-			category = building_maintenance
+			lumber = 0.1933
+			sand = 0.9657
+			tools = 0.3674
+			produced = glass
+			output = 0.75
+			debug_max_profit = guild_profit_margin
+			category = guild_input
 		}
 	}
-	construction_demand = town_building_construction
+	custom_tags = { guild }
+	construction_demand = guild_construction
 }
 
 antq_reg_dye_workshop = {
 	audio_tier = 2
-	is_special = yes
+	is_special = no
 	is_foreign = no
 	pop_type = burghers
-	max_levels = 1
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
 	category = basic_industry_category
 	employment_size = guild_employment
 	town = yes
@@ -180,22 +200,24 @@ antq_reg_dye_workshop = {
 	}
 	unique_production_methods = {
 		antq_reg_dye_workshop_maintenance = {
-			dyes = 0.12
-			cloth = 0.10
-			fish = 0.04
-			tools = 0.03
-			category = building_maintenance
+			lumber = 0.4444
+			produced = dyes
+			output = 0.2
+			debug_max_profit = guild_profit_margin
+			category = guild_input
 		}
 	}
-	construction_demand = town_building_construction
+	custom_tags = { guild }
+	construction_demand = guild_construction
 }
 
 antq_reg_metalwork = {
 	audio_tier = 2
-	is_special = yes
+	is_special = no
 	is_foreign = no
 	pop_type = burghers
-	max_levels = 1
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
 	category = basic_industry_category
 	employment_size = guild_employment
 	town = yes
@@ -207,22 +229,24 @@ antq_reg_metalwork = {
 	}
 	unique_production_methods = {
 		antq_reg_metalwork_maintenance = {
-			iron = 0.11
-			copper = 0.05
-			coal = 0.05
-			tools = 0.04
-			category = building_maintenance
+			iron = 0.8333
+			produced = tools
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
 		}
 	}
-	construction_demand = town_building_construction
+	custom_tags = { guild }
+	construction_demand = guild_construction
 }
 
 antq_reg_stone_yard = {
 	audio_tier = 2
-	is_special = yes
+	is_special = no
 	is_foreign = no
 	pop_type = laborers
-	max_levels = 1
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
 	category = basic_industry_category
 	employment_size = guild_employment
 	town = yes
@@ -242,15 +266,17 @@ antq_reg_stone_yard = {
 			category = building_maintenance
 		}
 	}
-	construction_demand = town_building_construction
+	custom_tags = { guild }
+	construction_demand = guild_construction
 }
 
 antq_reg_shipyard = {
 	audio_tier = 2
-	is_special = yes
+	is_special = no
 	is_foreign = no
 	pop_type = soldiers
-	max_levels = 1
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
 	category = naval_category
 	employment_size = dock_employment
 	town = yes
@@ -263,13 +289,16 @@ antq_reg_shipyard = {
 	}
 	unique_production_methods = {
 		antq_reg_shipyard_maintenance = {
-			lumber = 0.16
-			naval_supplies = 0.10
-			tar = 0.06
-			cloth = 0.05
-			tools = 0.07
-			category = building_maintenance
+			lumber = 0.1963
+			fiber_crops = 0.4906
+			tar = 0.5393
+			cloth = 0.0486
+			produced = naval_supplies
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
 		}
 	}
-	construction_demand = town_building_construction
+	custom_tags = { guild }
+	construction_demand = guild_construction
 }
