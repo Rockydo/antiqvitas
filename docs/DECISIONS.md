@@ -2583,3 +2583,10 @@ Digital Augustan Rome supplies a direct record. All disputed chronology,
 identification, dimensions, arrangement, traffic, ritual, and personnel remain
 contested or excluded. The new icons show distinct empty architectural
 silhouettes, not reconstructed events or named people.
+
+## 2026-07-23 - Distinct direct DDS is the building-art fallback guard
+
+Use the content-addressed DDS bytes rather than a filename convention to catch
+accidental shared building art. This is intentionally a rapid static guard: it
+complements, rather than substitutes for, the source-led icon review and menu
+smoke gate.

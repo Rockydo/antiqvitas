@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import re
 import subprocess
@@ -194,12 +195,18 @@ def dds_ok(path: Path) -> bool:
 
 def validate_art(items: list[dict[str, str]]) -> None:
     failures = []
+    hashes: dict[str, str] = {}
     for row in items:
         icon = ICON_DIR / f"{row['key']}.dds"
         if not icon.is_file():
             failures.append(f"missing direct Roman building icon {icon.relative_to(ROOT)}")
         elif not dds_ok(icon):
             failures.append(f"invalid 128px RGBA DDS Roman building icon {icon.relative_to(ROOT)}")
+        else:
+            digest = hashlib.sha256(icon.read_bytes()).hexdigest()
+            previous = hashes.setdefault(digest, row["key"])
+            if previous != row["key"]:
+                failures.append(f"Roman building icons must be distinct: {previous} and {row['key']}")
     if failures:
         raise ValueError("\n".join(failures))
 
