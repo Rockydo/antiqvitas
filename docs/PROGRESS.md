@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-23 - Direct African and American religion icons
+
+- Added four distinct direct 128px religion illustrations for West African,
+  Bantu-region, Mesoamerican, and Andean traditions. Each has a retained source,
+  exact master, BC7 DDS texture, ledger row, and reviewed contact sheet.
+- Their material-only studies make no claim to a named deity, ancestor, kingdom,
+  ritual, shrine, altar, temple, pyramid, architecture, mask, weapon, writing,
+  glyph, text, or inscription. The direct religion migration now covers 32 of
+  37 keys.
+
+Next: complete the five remaining direct religion illustrations, then continue
+the advances, Roman buildings, trade-good, and period-name passes.
+
 ## 2026-07-23 - Direct Baltic, Finnic, North African, and Nile-Cushitic icons
 
 - Added four distinct direct 128px religion illustrations for Baltic-Slavic,
