@@ -54,6 +54,16 @@ Heaven, master, school, revelation, kami, shrine, torii, emperor, dynasty,
 clan, city, temple, priest, sacrifice, ritual scene, text, or inscription. The
 reviewed fourth batch is [here](DIRECT_RELIGION_ICON_BATCH_04.png).
 
+## Fifth Iranian, Korean, Inner Asian, and Tibetan batch
+
+The fifth batch distinguishes an Iranian learning-and-travel material setting,
+an early Korean material setting, a broad Inner Asian material setting, and an
+early Tibetan highland material setting. It uses only uninscribed study,
+travelling, household, cloth, vessel, plant, and stone objects. It identifies
+no named community, teacher, deity, symbol, sanctuary, shrine, temple, ruler,
+dynasty, city, empire, rite, person, text, or inscription. The reviewed fifth
+batch is [here](DIRECT_RELIGION_ICON_BATCH_05.png).
+
 Until each remaining row is completed, its reviewed installed motif is a broad
 readable UI cue, not a claim that the contemporary or historical tradition is
 identical to ANTIQVITAS's sourced category.
