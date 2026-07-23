@@ -1,8 +1,8 @@
 # Regional antique production buildings
 
-This M5 layer adds one hundred and eighteen reusable, directly illustrated antique production
-families and **1,444 AD 1 start placements**: 518 in Europe, 350 in North Africa,
-380 in the Middle East, 98 in South Asia, and 98 in East Asia. The
+This M5 layer adds one hundred and thirty reusable, directly illustrated antique production
+families and **1,564 AD 1 start placements**: 530 in Europe, 358 in North Africa,
+432 in the Middle East, 122 in South Asia, and 122 in East Asia. The
 ledger is deliberately a family system rather than fictional unique monuments.
 Each family has a direct PNG source, a
 reviewed BC7 128px DDS icon, localized name/description, a locally verified
@@ -138,6 +138,18 @@ pair, and total at least 100.
 | Loom house | 10 | fiber crops, cloth, tools |
 | Cauldron smithy | 10 | copper, tin, coal, tools |
 | Barge chandlery | 10 | lumber, fiber crops, tar, tools |
+| Combmaker | 10 | ivory, tools |
+| Bell foundry | 10 | copper, tin, coal, tools |
+| Oarwright | 10 | lumber, fiber crops, tar, cloth, tools |
+| Spindlework | 10 | fiber crops |
+| Torchmaker | 10 | lumber, dyes, tools |
+| Sieve maker | 10 | lumber, dyes, tools |
+| Mortar and pestle workshop | 10 | iron |
+| Seal cutter | 10 | gold |
+| Kiln furniture workshop | 10 | clay, lumber, tools |
+| Reed-pen maker | 10 | dyes, paper, lumber |
+| Sail-needle shop | 10 | lumber, fiber crops, tar, cloth |
+| Pulley workshop | 10 | lumber, fiber crops, tar, cloth |
 
 These numbers are gameplay demand weights, not reconstructed ancient output,
 workforce, prices, or cargo quantities. Existing antique RGO and goods work
