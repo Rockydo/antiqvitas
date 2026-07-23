@@ -258,6 +258,16 @@ One reviewed 3x4 source sheet supplies twelve isolated direct icons for the
 Principate/High Empire warfare branch; cropped masters remain text-free and
 non-reconstructive. [Sheet](DIRECT_ADVANCE_ICON_BATCH_23.png).
 
+### Batch twenty-four review
+
+One reviewed source sheet supplies twelve direct learning and civic icons.
+[Sheet](DIRECT_ADVANCE_ICON_BATCH_24.png).
+
+### Batches twenty-five and twenty-six review
+
+Two reviewed source sheets provide 24 civic-society and statecraft icons.
+[Sheets](DIRECT_ADVANCE_ICON_BATCH_25_26.png).
+
 ### Batch twenty-two review
 
 The Principate and High Empire commercial-and-building illustrations distinguish

@@ -115,7 +115,10 @@ def direct_assets() -> list[AdvanceIcon]:
 def validate_tree_mapping(direct: list[AdvanceIcon]) -> None:
     text = ADVANCE_TREE.read_text(encoding="utf-8")
     found = re.findall(r"^\s*icon\s*=\s*([^\s#]+)", text, flags=re.MULTILINE)
-    expected = {asset.icon for asset in ADVANCE_ICONS} | {asset.icon for asset in direct}
+    direct_by_age = {age: sum(asset.age == age for asset in direct) for age in AGE_NAMES}
+    expected = {
+        asset.icon for asset in ADVANCE_ICONS if direct_by_age[asset.age] < 50
+    } | {asset.icon for asset in direct}
     if set(found) != expected:
         raise ValueError(
             "M8 advance icons and the M11 reviewed icon mapping diverge: "

@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-23 - Civic and statecraft sheet art
+
+Generic objects only; no named polity, person, place, text, or symbol.
+Sources: plan `P15`, `P20`.
+
+## 2026-07-23 - Learning and civic sheet art
+
+Generic objects only; no named polity, person, place, text, or symbol.
+Sources: plan `P15`, `P20`.
+
 ## 2026-07-23 - Warfare sheet art
 
 Generic equipment only; no named polity, person, battle, place, text, or symbol.
