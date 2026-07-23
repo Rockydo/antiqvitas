@@ -26,3 +26,12 @@ payment materials, and early Han court administration. They remain uninscribed
 object studies, not depictions of a distribution, tax, unit, battle, emperor,
 palace, official, document, or seal impression. The reviewed portrait contact
 sheet is [here](DIRECT_PRIVILEGE_ICON_BATCH_02.png).
+
+## Third Han, Arsacid, and client-court batch
+
+The next three icons distinguish Han regency materials, an ancient Iranian
+court household, and a Mediterranean client court. They remain uninscribed
+object studies rather than depictions of a Wang person, great house, king,
+emperor, court official, palace, territory, battle, constitutional formula, or
+seal impression. The reviewed portrait contact sheet is
+[here](DIRECT_PRIVILEGE_ICON_BATCH_03.png).
