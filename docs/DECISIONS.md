@@ -2465,3 +2465,11 @@ The next Britannia naming tranche accepts only an AD 1-active Pleiades point
 whose local projection selects the intended installed city key as its nearest
 candidate. This preserves the existing no-invented-toponym rule and leaves
 ambiguous or district-scale vanilla labels for later evidence-led passes.
+
+## 2026-07-23 - M4 uses a queue, never a bulk name import
+
+The Pleiades-to-map projection now creates a 656-row review queue from precise
+AD 1 settlement points near installed keys. Proximity is a candidate signal,
+not proof of identity: the queue is deliberately excluded from runtime
+localization and every accepted name still requires a secure, explicit ledger
+row with its source and adapter.

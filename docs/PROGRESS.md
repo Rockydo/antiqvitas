@@ -5815,3 +5815,10 @@ separate Han runtime-regency blocker.
 - This moves the conservative direct-name layer to 61 capital anchors plus
   181 curated anchors; unresolved locations remain deliberately unrenamed
   until they have equally direct evidence.
+
+## 2026-07-23 - M4 evidence queue for complete period-name coverage
+
+- Added a reproducible Pleiades/map-projection review queue with 656 strictly
+  filtered AD 1 settlement candidates not already covered by a capital or
+  curated name. It is an evidence worklist only; no proximity-only row is
+  allowed into game-visible localization.
