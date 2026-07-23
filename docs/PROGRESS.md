@@ -5098,6 +5098,14 @@ separate Han runtime-regency blocker.
 - Generated the start mirror successfully: 62 M5 market/urban nodes and 277
   M5/M7 building placements. Next: validate and smoke the game-visible batch.
 
+## 2026-07-23 - M5 production and scalability audit
+
+- Added 50 productive, repeatable placements at ten reviewed Near Eastern
+  market anchors, reaching 262 direct-art regional building placements and 72
+  M5 market/urban nodes.
+- Added the permanent building audit: all 327 M5/M7 placements are counted,
+  with 64.2% productive and 80.1% scalable. Next: full validation and smoke.
+
 ## 2026-07-23 - M4 source-keyed city-name expansion
 
 - Added 24 secure, installed-location dynamic-name anchors for Roman Britain,

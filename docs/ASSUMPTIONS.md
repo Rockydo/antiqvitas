@@ -3852,3 +3852,13 @@ contested: no row asserts a named workshop, output quantity, civic rank,
 population, estate, or trade-route edge. Sources weighed: Pleiades and plan
 P8.1, with the production-category source carried by each family row.
 [secure city-name anchor; contested economic scale and placement]
+
+## 2026-07-23 - M5 Near Eastern production pass is market texture, not a workshop atlas
+
+Berytus, Hierosolyma, Damascus, Beroea, Edessa, Susa, Ecbatana, Arbela,
+Rhagae, and Tabriz add only repeatable regional craft-family placements at
+reviewed urban anchors. Their use of wine, pottery, cloth, glass, dyes, tools,
+and naval-supplies recipes represents city-and-hinterland market texture, not
+an excavated workshop, output estimate, ethnic guild, municipal rank, or
+route. Sources weighed: Pleiades and plan P8.1/P8.2/P11, plus each craft
+family's category source. [secure city anchor; contested economic scale]

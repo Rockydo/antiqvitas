@@ -1,9 +1,9 @@
 # Regional antique production buildings
 
 This M5 layer adds ten reusable, directly illustrated antique production
-families and **212 AD 1 start placements**: 132 in Europe, 38 in North Africa,
-and 42 in the Middle East. The ledger is deliberately a family system rather
-than 212 fictional unique monuments. Each family has a direct PNG source, a
+families and **262 AD 1 start placements**: 132 in Europe, 38 in North Africa,
+and 92 in the Middle East. The ledger is deliberately a family system rather
+than 262 fictional unique monuments. Each family has a direct PNG source, a
 reviewed BC7 128px DDS icon, localized name/description, a locally verified
 EU5 building contract, conservative goods upkeep, and a source boundary.
 
@@ -20,15 +20,15 @@ pair, and total at least 100.
 | Family | Placements | Goods represented by upkeep |
 | --- | ---: | --- |
 | Olive press | 22 | olives, pottery, tools, lumber |
-| Wine press | 34 | wine, pottery, tools, lumber |
+| Wine press | 43 | wine, pottery, tools, lumber |
 | Fish saltery | 16 | fish, salt, pottery, lumber, tools |
-| Pottery kiln | 35 | clay, lumber, tools |
-| Fullonica | 30 | wool, cloth, dyes, tools |
-| Glassworks | 12 | glass, clay, lumber, tools |
-| Dye workshop | 4 | dyes, cloth, fish, tools |
-| Metalwork shop | 24 | iron, copper, coal, tools |
+| Pottery kiln | 45 | clay, lumber, tools |
+| Fullonica | 40 | wool, cloth, dyes, tools |
+| Glassworks | 22 | glass, clay, lumber, tools |
+| Dye workshop | 5 | dyes, cloth, fish, tools |
+| Metalwork shop | 33 | iron, copper, coal, tools |
 | Stone yard | 14 | stone, masonry, marble, lumber, tools |
-| Antique shipyard | 21 | lumber, naval supplies, tar, cloth, tools |
+| Antique shipyard | 22 | lumber, naval supplies, tar, cloth, tools |
 
 These numbers are gameplay demand weights, not reconstructed ancient output,
 workforce, prices, or cargo quantities. Existing antique RGO and goods work
@@ -58,6 +58,10 @@ Brundisium, Hippo Regius, Hippo Diarrhytus, Caesarea Mauretaniae, Tacape, and
 Hadrumetum. Their `city`/`town` profiles are engine adapters for a regional
 urban market, not population totals, municipal-rank reconstructions, or proof
 of a named production site.
+
+A production-and-scale audit now counts every 327 M5/M7 start placement rather
+than only these regional rows. It locks the actual layout at 64.2% productive
+and 80.1% scalable; see [BUILDING_AUDIT.md](BUILDING_AUDIT.md).
 
 ## Art review
 

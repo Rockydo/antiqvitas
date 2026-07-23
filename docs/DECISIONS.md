@@ -2387,3 +2387,12 @@ building to be a market node or named historic site, so matching deferred
 market and urban-node ledgers were added. No route edges, new building types,
 or special-site claims were introduced. This keeps the economy scalable and
 auditable while meeting the intended Roman-world density.
+
+## 2026-07-23 - M5 building audit uses all placed M5/M7 entries
+
+The user-facing production and scalability rules are enforced against every
+regional seed, named M5 special, and M7 fort placement, not merely against
+building definitions. Fifty additional productive, scalable Near Eastern
+placements establish a conservative 64.2% productive and 80.1% scalable
+whole-system result. `m5_building_audit.py` now makes these limits a permanent
+`make validate` gate.
