@@ -69,6 +69,8 @@ MACROS = {
 # reviewed city-point overrides keep the placement audit geographical.
 MACRO_LOCATION_OVERRIDES = {
     "alexandria": "North Africa", "tunis": "North Africa",
+    "annaba": "North Africa", "bizerte": "North Africa",
+    "gabes": "North Africa", "sousse": "North Africa",
     "antioch": "Middle East", "baghdad": "Middle East", "ayasuluk": "Middle East",
     "shoubak": "Middle East", "homs": "Middle East", "sidon": "Middle East",
 }

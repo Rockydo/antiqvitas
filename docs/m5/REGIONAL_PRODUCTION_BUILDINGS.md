@@ -1,9 +1,9 @@
 # Regional antique production buildings
 
 This M5 layer adds ten reusable, directly illustrated antique production
-families and **112 AD 1 start placements**: 55 in Europe, 15 in North Africa,
+families and **212 AD 1 start placements**: 132 in Europe, 38 in North Africa,
 and 42 in the Middle East. The ledger is deliberately a family system rather
-than 112 fictional unique monuments. Each family has a direct PNG source, a
+than 212 fictional unique monuments. Each family has a direct PNG source, a
 reviewed BC7 128px DDS icon, localized name/description, a locally verified
 EU5 building contract, conservative goods upkeep, and a source boundary.
 
@@ -19,16 +19,16 @@ pair, and total at least 100.
 
 | Family | Placements | Goods represented by upkeep |
 | --- | ---: | --- |
-| Olive press | 11 | olives, pottery, tools, lumber |
-| Wine press | 16 | wine, pottery, tools, lumber |
-| Fish saltery | 11 | fish, salt, pottery, lumber, tools |
-| Pottery kiln | 16 | clay, lumber, tools |
-| Fullonica | 16 | wool, cloth, dyes, tools |
-| Glassworks | 9 | glass, clay, lumber, tools |
+| Olive press | 22 | olives, pottery, tools, lumber |
+| Wine press | 34 | wine, pottery, tools, lumber |
+| Fish saltery | 16 | fish, salt, pottery, lumber, tools |
+| Pottery kiln | 35 | clay, lumber, tools |
+| Fullonica | 30 | wool, cloth, dyes, tools |
+| Glassworks | 12 | glass, clay, lumber, tools |
 | Dye workshop | 4 | dyes, cloth, fish, tools |
-| Metalwork shop | 11 | iron, copper, coal, tools |
-| Stone yard | 8 | stone, masonry, marble, lumber, tools |
-| Antique shipyard | 10 | lumber, naval supplies, tar, cloth, tools |
+| Metalwork shop | 24 | iron, copper, coal, tools |
+| Stone yard | 14 | stone, masonry, marble, lumber, tools |
+| Antique shipyard | 21 | lumber, naval supplies, tar, cloth, tools |
 
 These numbers are gameplay demand weights, not reconstructed ancient output,
 workforce, prices, or cargo quantities. Existing antique RGO and goods work
@@ -49,6 +49,15 @@ fleet roster, or architectural reconstruction at each city-point seed.
 The only named direct anchors remain in `roman_buildings.csv`. This separates
 source-secure named sites from the broad regional economic texture requested
 for the AD 1 world.
+
+The second expansion deliberately adds 20 reviewed, pre-existing city anchors
+as deferred M5 market nodes and no speculative trade-route edges: Corduba,
+Tarraco, Emerita Augusta, Olisipo, Caesaraugusta, Narbo Martius, Nemausus,
+Burdigala, Arelate, Mediolanum, Bononia, Mutina, Ravenna, Tarentum,
+Brundisium, Hippo Regius, Hippo Diarrhytus, Caesarea Mauretaniae, Tacape, and
+Hadrumetum. Their `city`/`town` profiles are engine adapters for a regional
+urban market, not population totals, municipal-rank reconstructions, or proof
+of a named production site.
 
 ## Art review
 

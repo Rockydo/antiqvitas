@@ -2378,3 +2378,12 @@ Campus Martius plan.
 
 Seven families use exact installed guild recipes; all ten use scalable guild
 contracts. This reaches 70% productive-family coverage without price guesses.
+
+## 2026-07-23 - M5 second pass uses market-node expansion, not unique buildings
+
+The 100 additional M5 placements reuse the ten reviewed direct-art families at
+twenty existing historical city anchors. The start mirror requires every M5
+building to be a market node or named historic site, so matching deferred
+market and urban-node ledgers were added. No route edges, new building types,
+or special-site claims were introduced. This keeps the economy scalable and
+auditable while meeting the intended Roman-world density.
