@@ -1051,7 +1051,7 @@ antq_market_regulation = {
 
 antq_eastern_mediterranean_routes = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_eastern_mediterranean_routes
 	depth = 3
 	research_cost = 5.5
 	requires = antq_market_regulation
@@ -1060,7 +1060,7 @@ antq_eastern_mediterranean_routes = {
 
 antq_indian_ocean_monsoons = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_indian_ocean_monsoons
 	depth = 4
 	research_cost = 6.0
 	requires = antq_eastern_mediterranean_routes
@@ -1069,7 +1069,7 @@ antq_indian_ocean_monsoons = {
 
 antq_border_customs = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_border_customs
 	depth = 5
 	research_cost = 6.5
 	requires = antq_indian_ocean_monsoons
@@ -1078,7 +1078,7 @@ antq_border_customs = {
 
 antq_merchant_associations = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_merchant_associations
 	depth = 6
 	research_cost = 7.0
 	requires = antq_border_customs
