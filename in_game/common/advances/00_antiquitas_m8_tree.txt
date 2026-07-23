@@ -1411,7 +1411,7 @@ antq_library_catalogues = {
 
 antq_han_classics = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_han_classics
 	depth = 3
 	research_cost = 3.5
 	starting_technology_level = 2
@@ -1421,7 +1421,7 @@ antq_han_classics = {
 
 antq_astronomical_tables = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_astronomical_tables
 	depth = 4
 	research_cost = 4.0
 	starting_technology_level = 2
@@ -1431,7 +1431,7 @@ antq_astronomical_tables = {
 
 antq_medical_compendia = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_medical_compendia
 	depth = 5
 	research_cost = 4.5
 	starting_technology_level = 2
@@ -1441,7 +1441,7 @@ antq_medical_compendia = {
 
 antq_legal_commentaries = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_legal_commentaries
 	depth = 6
 	research_cost = 5.0
 	starting_technology_level = 3
@@ -1451,7 +1451,7 @@ antq_legal_commentaries = {
 
 antq_surveying_methods = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_surveying_methods
 	depth = 7
 	research_cost = 5.5
 	starting_technology_level = 3
@@ -1461,7 +1461,7 @@ antq_surveying_methods = {
 
 antq_scholarly_correspondence = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_scholarly_correspondence
 	depth = 8
 	research_cost = 6.0
 	starting_technology_level = 3
@@ -1570,7 +1570,7 @@ antq_high_empire_learning = {
 
 antq_crisis_scholarly_preservation = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_crisis_scholarly_preservation
 	depth = 0
 	research_cost = 6.0
 	ai_weight = { add = 100 }
@@ -1578,7 +1578,7 @@ antq_crisis_scholarly_preservation = {
 
 antq_portable_archives = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_portable_archives
 	depth = 1
 	research_cost = 6.5
 	requires = antq_crisis_scholarly_preservation
@@ -1587,7 +1587,7 @@ antq_portable_archives = {
 
 antq_clerical_literacy = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_clerical_literacy
 	depth = 2
 	research_cost = 7.0
 	requires = antq_portable_archives
@@ -1596,7 +1596,7 @@ antq_clerical_literacy = {
 
 antq_military_manuals = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_military_manuals
 	depth = 3
 	research_cost = 7.5
 	requires = antq_clerical_literacy
@@ -1605,7 +1605,7 @@ antq_military_manuals = {
 
 antq_medical_relief = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_medical_relief
 	depth = 4
 	research_cost = 8.0
 	requires = antq_military_manuals
@@ -1614,7 +1614,7 @@ antq_medical_relief = {
 
 antq_calendar_revision = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_calendar_revision
 	depth = 5
 	research_cost = 8.5
 	requires = antq_medical_relief
@@ -1659,7 +1659,7 @@ antq_survival_of_texts = {
 
 antq_state_church = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_state_church
 	depth = 0
 	research_cost = 8.0
 	ai_weight = { add = 100 }
@@ -1667,7 +1667,7 @@ antq_state_church = {
 
 antq_monastic_scriptoria = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_monastic_scriptoria
 	depth = 1
 	research_cost = 8.5
 	requires = antq_state_church
@@ -1676,7 +1676,7 @@ antq_monastic_scriptoria = {
 
 antq_orthodoxy_debates = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_orthodoxy_debates
 	depth = 2
 	research_cost = 9.0
 	requires = antq_monastic_scriptoria
@@ -1685,7 +1685,7 @@ antq_orthodoxy_debates = {
 
 antq_codex_manuscripts = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_codex_manuscripts
 	depth = 3
 	research_cost = 9.5
 	requires = antq_orthodoxy_debates
@@ -1694,7 +1694,7 @@ antq_codex_manuscripts = {
 
 antq_legal_scholars = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_legal_scholars
 	depth = 4
 	research_cost = 10.0
 	requires = antq_codex_manuscripts
@@ -1703,7 +1703,7 @@ antq_legal_scholars = {
 
 antq_bureaucratic_education = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_bureaucratic_education
 	depth = 5
 	research_cost = 10.5
 	requires = antq_legal_scholars
@@ -1712,7 +1712,7 @@ antq_bureaucratic_education = {
 
 antq_commentary_traditions = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_commentary_traditions
 	depth = 6
 	research_cost = 11.0
 	requires = antq_bureaucratic_education
@@ -1721,7 +1721,7 @@ antq_commentary_traditions = {
 
 antq_late_antique_schools = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_late_antique_schools
 	depth = 7
 	research_cost = 11.5
 	requires = antq_commentary_traditions
@@ -1730,7 +1730,7 @@ antq_late_antique_schools = {
 
 antq_doctrinal_debate = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_doctrinal_debate
 	depth = 8
 	research_cost = 12.0
 	requires = antq_late_antique_schools
@@ -1739,7 +1739,7 @@ antq_doctrinal_debate = {
 
 antq_dominate_learning = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_dominate_learning
 	depth = 9
 	research_cost = 12.5
 	requires = antq_doctrinal_debate
@@ -1748,7 +1748,7 @@ antq_dominate_learning = {
 
 antq_monastic_libraries = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_monastic_libraries
 	depth = 0
 	research_cost = 10.0
 	ai_weight = { add = 100 }
@@ -1756,7 +1756,7 @@ antq_monastic_libraries = {
 
 antq_translation_circles = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_translation_circles
 	depth = 1
 	research_cost = 10.5
 	requires = antq_monastic_libraries
@@ -2026,7 +2026,7 @@ antq_imperial_cultures = {
 
 antq_crisis_communities = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_crisis_communities
 	depth = 0
 	research_cost = 6.0
 	ai_weight = { add = 100 }
@@ -2034,7 +2034,7 @@ antq_crisis_communities = {
 
 antq_refugee_settlement = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_refugee_settlement
 	depth = 1
 	research_cost = 6.5
 	requires = antq_crisis_communities
@@ -2043,7 +2043,7 @@ antq_refugee_settlement = {
 
 antq_plague_relief = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_plague_relief
 	depth = 2
 	research_cost = 7.0
 	requires = antq_refugee_settlement
@@ -2052,7 +2052,7 @@ antq_plague_relief = {
 
 antq_local_patronage = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_local_patronage
 	depth = 3
 	research_cost = 7.5
 	requires = antq_plague_relief
@@ -2061,7 +2061,7 @@ antq_local_patronage = {
 
 antq_religious_consolation = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_religious_consolation
 	depth = 4
 	research_cost = 8.0
 	requires = antq_local_patronage
@@ -2070,7 +2070,7 @@ antq_religious_consolation = {
 
 antq_fortified_towns = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_fortified_towns
 	depth = 5
 	research_cost = 8.5
 	requires = antq_religious_consolation
@@ -2079,7 +2079,7 @@ antq_fortified_towns = {
 
 antq_rural_resilience = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_rural_resilience
 	depth = 6
 	research_cost = 9.0
 	requires = antq_fortified_towns
@@ -2088,7 +2088,7 @@ antq_rural_resilience = {
 
 antq_civic_recovery = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_civic_recovery
 	depth = 7
 	research_cost = 9.5
 	requires = antq_rural_resilience
@@ -2097,7 +2097,7 @@ antq_civic_recovery = {
 
 antq_crisis_society = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_crisis_society
 	depth = 8
 	research_cost = 10.0
 	requires = antq_civic_recovery
@@ -2106,7 +2106,7 @@ antq_crisis_society = {
 
 antq_surviving_cities = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_surviving_cities
 	depth = 9
 	research_cost = 10.5
 	requires = antq_crisis_society
@@ -2115,7 +2115,7 @@ antq_surviving_cities = {
 
 antq_church_endowments = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_church_endowments
 	depth = 0
 	research_cost = 8.0
 	ai_weight = { add = 100 }
@@ -2123,7 +2123,7 @@ antq_church_endowments = {
 
 antq_monastic_communities = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_monastic_communities
 	depth = 1
 	research_cost = 8.5
 	requires = antq_church_endowments

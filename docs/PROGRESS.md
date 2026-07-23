@@ -1,5 +1,9 @@
 # Progress
 
+## 2026-07-23 - Late-antique learning and community icon sheets
+
+- Added 36 direct advance icons; coverage is 195/250.
+
 ## 2026-07-23 - Warfare and exchange icon sheets
 
 - Added 36 direct advance icons; coverage is 159/250.
