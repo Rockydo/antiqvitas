@@ -184,6 +184,15 @@ law, decree, annona policy, granary, recipient, distribution scene, text, or
 inscription. The reviewed source/master batch is
 [here](DIRECT_ADVANCE_ICON_BATCH_12.png).
 
+### Batch thirteen review
+
+The building-and-commerce illustrations distinguish a generic low masonry water
+channel and basin, bathing implements, unmarked commercial measures and
+amphorae, and travel-support materials. They do not identify a named aqueduct,
+bathhouse, port, route, city, ruler, ship, sea, caravan, camel, inn, map,
+inscription, writing, religious scene, or modern object. The reviewed
+source/master batch is [here](DIRECT_ADVANCE_ICON_BATCH_13.png).
+
 ## Engine and asset verification
 
 The installed build's `main_menu/gfx/interface/advance/` established the
