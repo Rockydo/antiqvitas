@@ -259,7 +259,7 @@ antq_grain_annona = {
 
 antq_imperial_dioceses = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_imperial_dioceses
 	depth = 7
 	research_cost = 9.5
 	requires = antq_grain_annona
@@ -268,7 +268,7 @@ antq_imperial_dioceses = {
 
 antq_revenue_recovery = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_revenue_recovery
 	depth = 8
 	research_cost = 10.0
 	requires = antq_imperial_dioceses
@@ -277,7 +277,7 @@ antq_revenue_recovery = {
 
 antq_crisis_statecraft = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_crisis_statecraft
 	depth = 9
 	research_cost = 10.5
 	requires = antq_revenue_recovery
@@ -286,7 +286,7 @@ antq_crisis_statecraft = {
 
 antq_diocesan_administration = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_diocesan_administration
 	depth = 0
 	research_cost = 8.0
 	ai_weight = { add = 100 }
@@ -294,7 +294,7 @@ antq_diocesan_administration = {
 
 antq_codification = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_codification
 	depth = 1
 	research_cost = 8.5
 	requires = antq_diocesan_administration
@@ -303,7 +303,7 @@ antq_codification = {
 
 antq_notarial_offices = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_notarial_offices
 	depth = 2
 	research_cost = 9.0
 	requires = antq_codification
@@ -312,7 +312,7 @@ antq_notarial_offices = {
 
 antq_imperial_chancery = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_imperial_chancery
 	depth = 3
 	research_cost = 9.5
 	requires = antq_notarial_offices
@@ -321,7 +321,7 @@ antq_imperial_chancery = {
 
 antq_provincial_prefects = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_provincial_prefects
 	depth = 4
 	research_cost = 10.0
 	requires = antq_imperial_chancery
@@ -330,7 +330,7 @@ antq_provincial_prefects = {
 
 antq_tax_in_kind = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_tax_in_kind
 	depth = 5
 	research_cost = 10.5
 	requires = antq_provincial_prefects
@@ -339,7 +339,7 @@ antq_tax_in_kind = {
 
 antq_public_post = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_public_post
 	depth = 6
 	research_cost = 11.0
 	requires = antq_tax_in_kind
@@ -348,7 +348,7 @@ antq_public_post = {
 
 antq_legal_compilations = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_legal_compilations
 	depth = 7
 	research_cost = 11.5
 	requires = antq_public_post
@@ -357,7 +357,7 @@ antq_legal_compilations = {
 
 antq_late_roman_bureaucracy = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_late_roman_bureaucracy
 	depth = 8
 	research_cost = 12.0
 	requires = antq_legal_compilations
@@ -1471,7 +1471,7 @@ antq_scholarly_correspondence = {
 
 antq_principate_learning = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_principate_learning
 	depth = 9
 	research_cost = 6.5
 	starting_technology_level = 4
@@ -1481,7 +1481,7 @@ antq_principate_learning = {
 
 antq_juristic_schools = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_juristic_schools
 	depth = 0
 	research_cost = 4.0
 	ai_weight = { add = 100 }
@@ -1489,7 +1489,7 @@ antq_juristic_schools = {
 
 antq_mathematical_handbooks = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_mathematical_handbooks
 	depth = 1
 	research_cost = 4.5
 	requires = antq_juristic_schools
@@ -1498,7 +1498,7 @@ antq_mathematical_handbooks = {
 
 antq_medical_schools = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_medical_schools
 	depth = 2
 	research_cost = 5.0
 	requires = antq_mathematical_handbooks
@@ -1507,7 +1507,7 @@ antq_medical_schools = {
 
 antq_textual_criticism = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_textual_criticism
 	depth = 3
 	research_cost = 5.5
 	requires = antq_medical_schools
@@ -1516,7 +1516,7 @@ antq_textual_criticism = {
 
 antq_observatory_records = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_observatory_records
 	depth = 4
 	research_cost = 6.0
 	requires = antq_textual_criticism
@@ -1534,7 +1534,7 @@ antq_library_endowments = {
 
 antq_philosophical_dialogue = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_philosophical_dialogue
 	depth = 6
 	research_cost = 7.0
 	requires = antq_library_endowments
@@ -1552,7 +1552,7 @@ antq_engineering_manuals = {
 
 antq_scholarly_networks = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_scholarly_networks
 	depth = 8
 	research_cost = 8.0
 	requires = antq_engineering_manuals
@@ -1561,7 +1561,7 @@ antq_scholarly_networks = {
 
 antq_high_empire_learning = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_high_empire_learning
 	depth = 9
 	research_cost = 8.5
 	requires = antq_scholarly_networks
@@ -1837,7 +1837,7 @@ antq_late_antique_letters = {
 
 antq_civic_associations = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_civic_associations
 	depth = 0
 	research_cost = 2.0
 	unlock_law = marriage_law
@@ -1847,7 +1847,7 @@ antq_civic_associations = {
 
 antq_imperial_ceremony = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_imperial_ceremony
 	depth = 1
 	research_cost = 2.5
 	starting_technology_level = 1
@@ -1877,7 +1877,7 @@ antq_public_baths = {
 
 antq_religious_endowments = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_religious_endowments
 	depth = 4
 	research_cost = 4.0
 	starting_technology_level = 2
@@ -1887,7 +1887,7 @@ antq_religious_endowments = {
 
 antq_veteran_settlement = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_veteran_settlement
 	depth = 5
 	research_cost = 4.5
 	starting_technology_level = 2
@@ -1897,7 +1897,7 @@ antq_veteran_settlement = {
 
 antq_provincial_elites = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_provincial_elites
 	depth = 6
 	research_cost = 5.0
 	starting_technology_level = 3
@@ -1907,7 +1907,7 @@ antq_provincial_elites = {
 
 antq_ritual_calendars = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_ritual_calendars
 	depth = 7
 	research_cost = 5.5
 	starting_technology_level = 3
@@ -1917,7 +1917,7 @@ antq_ritual_calendars = {
 
 antq_civic_identity = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_civic_identity
 	depth = 8
 	research_cost = 6.0
 	starting_technology_level = 3
@@ -1927,7 +1927,7 @@ antq_civic_identity = {
 
 antq_principate_society = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_principate_society
 	depth = 9
 	research_cost = 6.5
 	starting_technology_level = 4
@@ -1945,7 +1945,7 @@ antq_cosmopolitan_cities = {
 
 antq_public_philanthropy = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_public_philanthropy
 	depth = 1
 	research_cost = 4.5
 	requires = antq_cosmopolitan_cities
@@ -1954,7 +1954,7 @@ antq_public_philanthropy = {
 
 antq_legal_statuses = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_legal_statuses
 	depth = 2
 	research_cost = 5.0
 	requires = antq_public_philanthropy
@@ -1963,7 +1963,7 @@ antq_legal_statuses = {
 
 antq_religious_plurals = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_religious_plurals
 	depth = 3
 	research_cost = 5.5
 	requires = antq_legal_statuses
@@ -1981,7 +1981,7 @@ antq_urban_professions = {
 
 antq_provincial_citizenship = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_provincial_citizenship
 	depth = 5
 	research_cost = 6.5
 	requires = antq_urban_professions
@@ -1999,7 +1999,7 @@ antq_athletic_festivals = {
 
 antq_scholarly_patronage = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_scholarly_patronage
 	depth = 7
 	research_cost = 7.5
 	requires = antq_athletic_festivals
@@ -2008,7 +2008,7 @@ antq_scholarly_patronage = {
 
 antq_high_empire_society = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_high_empire_society
 	depth = 8
 	research_cost = 8.0
 	requires = antq_scholarly_patronage
@@ -2017,7 +2017,7 @@ antq_high_empire_society = {
 
 antq_imperial_cultures = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_imperial_cultures
 	depth = 9
 	research_cost = 8.5
 	requires = antq_high_empire_society
