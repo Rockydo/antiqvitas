@@ -23,6 +23,7 @@ CURATED = ROOT / "docs/m4/dynamic_location_name_overrides.csv"
 TIER2 = ROOT / "docs/m4/tier2_location_name_overrides.csv"
 TIER2_WIDE = ROOT / "docs/m4/tier2_wide_location_name_overrides.csv"
 TIER2_REMOTE = ROOT / "docs/m4/tier2_remote_location_name_overrides.csv"
+TIER2_FAR = ROOT / "docs/m4/tier2_far_location_name_overrides.csv"
 TIER3 = ROOT / "docs/m4/tier3_location_name_overrides.csv"
 TIER3_MAP = ROOT / "docs/m4/tier3_map_name_fallbacks.csv"
 ENGINE_LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
@@ -165,6 +166,7 @@ def entries() -> list[dict[str, str]]:
     output.extend(ledger_entries(TIER2, "tier2", "tier2", "bounded Tier-2", culture_groups, group_languages, installed_locations, seen_locations))
     output.extend(ledger_entries(TIER2_WIDE, "tier2", "tier2", "wide Tier-2", culture_groups, group_languages, installed_locations, seen_locations))
     output.extend(ledger_entries(TIER2_REMOTE, "tier2", "tier2_remote", "remote Tier-2", culture_groups, group_languages, installed_locations, seen_locations))
+    output.extend(ledger_entries(TIER2_FAR, "tier2", "tier2_far", "far Tier-2", culture_groups, group_languages, installed_locations, seen_locations))
     output.extend(ledger_entries(TIER3, "tier3", "tier3", "retained-label Tier-3", culture_groups, group_languages, installed_locations, seen_locations))
     if not output:
         raise ValueError("no secure dynamic-name anchors were selected")
@@ -252,10 +254,11 @@ def main() -> int:
     selected = entries()
     capitals = sum(entry["anchor_kind"] == "capital" for entry in selected)
     curated = sum(entry["anchor_kind"] == "curated" for entry in selected)
-    tier2 = sum(entry["anchor_kind"] in {"tier2", "tier2_remote"} for entry in selected)
+    tier2 = sum(entry["anchor_kind"] in {"tier2", "tier2_remote", "tier2_far"} for entry in selected)
     remote = sum(entry["anchor_kind"] == "tier2_remote" for entry in selected)
+    far = sum(entry["anchor_kind"] == "tier2_far" for entry in selected)
     tier3 = sum(entry["anchor_kind"] == "tier3" for entry in selected)
-    print(f"dynamic_names: PASS ({capitals} capital + {curated} curated + {tier2} Tier-2 ({remote} remote) + {tier3} Tier-3 anchors; {len(CLIENT_LANGUAGES)} mirrored localizations)")
+    print(f"dynamic_names: PASS ({capitals} capital + {curated} curated + {tier2} Tier-2 ({remote} remote, {far} far) + {tier3} Tier-3 anchors; {len(CLIENT_LANGUAGES)} mirrored localizations)")
     return 0
 
 

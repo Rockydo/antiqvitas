@@ -2561,3 +2561,8 @@ stone plan, or limes claim.
 
 Twelve material-specific craft labels reuse existing harvested guild recipes;
 the ledger's goods describe historical inputs while avoiding invented prices.
+
+## 2026-07-23 - M4 far Pleiades band remains lowest-confidence evidence
+
+The 6--12px `T2F` layer is separate, source-labelled, and excluded wherever a
+capital, direct, bounded, wide, or remote adapter already exists.

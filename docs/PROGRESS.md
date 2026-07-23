@@ -5967,3 +5967,8 @@ separate Han runtime-regency blocker.
   needles, and rope pulleys.
 - Audit: 1,634 placements; 76.9% productive; 95.7% scalable. Validate and
   smoke pass with zero new mod-only lines.
+
+## 2026-07-23 - M4 far Tier-2 coverage
+
+- Added 878 `T2F` Pleiades adapters at 6--12px; retained Tier-3 populated
+  adapters fall to 11,568. Closer evidence retains precedence.

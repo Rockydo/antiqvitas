@@ -42,6 +42,9 @@ OUTPUT = ROOT / "docs/m4/tier2_remote_location_name_overrides.csv"
 MIN_OFFSET_PX = 3.25
 MAX_OFFSET_PX = 6.00
 GRID_SIZE_PX = 10.0
+LABEL = "Remote"
+SOURCE_SUFFIX = "T2R"
+EXTRA_LEDGER_PATHS: tuple[Path, ...] = ()
 
 
 def ledger_locations(path: Path) -> set[str]:
@@ -72,6 +75,8 @@ def render() -> str:
     installed_names = capital_geography.location_names()
     cultures = {row["key"] for row in csv_rows(CULTURES)}
     excluded = capital_locations() | ledger_locations(CURATED) | ledger_locations(TIER2) | ledger_locations(TIER2_WIDE)
+    for path in EXTRA_LEDGER_PATHS:
+        excluded.update(ledger_locations(path))
     population_cultures = pop_cultures()
     projection = capital_geography.projection(locations)
     candidates: dict[str, list[tuple[float, dict[str, str]]]] = defaultdict(list)
@@ -114,17 +119,17 @@ def render() -> str:
                 "location": location,
                 "culture": population_cultures[location],
                 "historical_name": row["title"].strip(),
-                "source": f"PLE:{row['id']};T2R",
+                "source": f"PLE:{row['id']};{SOURCE_SUFFIX}",
                 "confidence": "tier2",
                 "note": (
-                    "Remote Tier-2 AD 1 Pleiades settlement adapter; nearest installed city field "
-                    f"at {distance:.2f}px; remote lower-confidence map proxy."
+                    f"{LABEL} Tier-2 AD 1 Pleiades settlement adapter; nearest installed city field "
+                    f"at {distance:.2f}px; {LABEL.casefold()} lower-confidence map proxy."
                 ),
             }
         )
     output.sort(key=lambda row: row["location"])
     if not output:
-        raise ValueError("remote Tier-2 selector produced no adapters")
+        raise ValueError(f"{LABEL.casefold()} Tier-2 selector produced no adapters")
     stream = StringIO(newline="")
     writer = csv.DictWriter(stream, fieldnames=HEADER, lineterminator="\n")
     writer.writeheader()
@@ -151,7 +156,7 @@ def main() -> int:
     if not OUTPUT.is_file() or OUTPUT.read_text(encoding="utf-8-sig") != expected:
         print(f"m4_tier2_remote_names: FAIL\n  - stale or missing {OUTPUT.relative_to(ROOT)}")
         return 1
-    print(f"m4_tier2_remote_names: PASS ({max(0, len(expected.splitlines()) - 1)} remote lower-confidence adapters)")
+    print(f"m4_tier2_remote_names: PASS ({max(0, len(expected.splitlines()) - 1)} {LABEL.casefold()} lower-confidence adapters)")
     return 0
 
 
