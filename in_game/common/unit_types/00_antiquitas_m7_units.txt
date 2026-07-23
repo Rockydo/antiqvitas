@@ -38,6 +38,24 @@ antq_auxilia = {
 	# P14;CAH-XI; Roman levy-analog with an explicitly non-mechanical citizenship-on-discharge flavor
 }
 
+antq_roman_alae = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_cavalry
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	movement_speed = 0.18
+	flanking_ability = 0.10
+	combat = { grasslands = 0.05 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAA
+		}
+	}
+	gfx_tags = { light_tag }
+	# P14;CAH-XI; Bounded early-imperial auxiliary-cavalry role adapter; it does not reconstruct an ala name strength or provincial posting
+}
+
 antq_thureophoroi = {
 	is_special = yes
 	copy_from = a_age_1_traditions_light_infantry
@@ -247,6 +265,32 @@ antq_cataphracts = {
 	# P14;CAH-XI; Iranian and Sarmatian heavy-lancer adapter; Roman adoption remains a later advance-era outcome
 }
 
+antq_parthian_horse_archers = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_cavalry
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	movement_speed = 0.25
+	flanking_ability = 0.15
+	strength_damage_taken = 0.04
+	combat = { grasslands = 0.12 mountains = -0.08 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAH
+			has_or_had_tag = XAK
+			has_or_had_tag = XAN
+			has_or_had_tag = XAO
+			has_or_had_tag = XCF
+			has_or_had_tag = XCE
+			has_or_had_tag = AOR
+			has_or_had_tag = ROX
+		}
+	}
+	gfx_tags = { archer_tag light_tag }
+	# P14;CAH-XI; Iranian mounted-archery role adapter complementary to cataphracts; it does not fix a noble-house contingent or field-army composition
+}
+
 antq_steppe_horse_archers = {
 	is_special = yes
 	copy_from = a_age_1_traditions_light_cavalry
@@ -343,6 +387,52 @@ antq_british_chariots = {
 	}
 	gfx_tags = { light_tag }
 	# P14;CAH-XI; Obsolescent Brittonic chariot adapter rather than an assertion that every AD 1 community fielded the same force
+}
+
+antq_germanic_horse = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_cavalry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_1_traditions
+	movement_speed = 0.16
+	flanking_ability = 0.08
+	combat = { grasslands = 0.05 forest = 0.03 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XBK
+			has_or_had_tag = CRU
+			has_or_had_tag = XBL
+			has_or_had_tag = XBM
+			has_or_had_tag = BTV
+			has_or_had_tag = XBN
+			has_or_had_tag = SEM
+			has_or_had_tag = HER
+			has_or_had_tag = XBO
+			has_or_had_tag = GUT
+			has_or_had_tag = VAN
+			has_or_had_tag = RUG
+			has_or_had_tag = XBP
+			has_or_had_tag = XBQ
+			has_or_had_tag = XBR
+			has_or_had_tag = JUT
+			has_or_had_tag = XDK
+			has_or_had_tag = XBV
+			has_or_had_tag = XBW
+			has_or_had_tag = XBX
+			has_or_had_tag = XBY
+			has_or_had_tag = XBZ
+			has_or_had_tag = XCA
+			has_or_had_tag = XCB
+			has_or_had_tag = DUM
+			has_or_had_tag = CAL
+			has_or_had_tag = XCC
+			has_or_had_tag = XDJ
+		}
+	}
+	gfx_tags = { light_tag }
+	# P14;CAH-XI;STR-GER;OCD-GER; Bounded Germanic and Celtic light-horse levy adapter; it does not claim a uniform tribal cavalry doctrine equipment ratio or campaign formation
 }
 
 antq_comitatenses = {
@@ -467,6 +557,76 @@ antq_saka_horse = {
 	}
 	gfx_tags = { archer_tag light_tag }
 	# P14;CAH-XI; Era mercenary-company adapter for Saka-style mounted archers
+}
+
+antq_galatian_swordsmen = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	age = age_1_traditions
+	morale_damage_done = 0.10
+	strength_damage_taken = -0.03
+	combat = { hills = 0.05 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAA
+			has_or_had_tag = XAF
+			has_or_had_tag = CLZ
+			has_or_had_tag = CAP
+			has_or_had_tag = XAE
+			has_or_had_tag = XAO
+		}
+	}
+	gfx_tags = { medium_tag sword_tag }
+	# P14;CAH-XI; Era mercenary-company adapter for Hellenistic and Roman military labor markets; it does not create a named Galatian regiment
+}
+
+antq_thracian_peltasts = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	age = age_1_traditions
+	initiative = 0.20
+	morale_damage_done = 0.05
+	combat = { hills = 0.10 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAA
+			has_or_had_tag = XAF
+			has_or_had_tag = CLZ
+			has_or_had_tag = CAP
+			has_or_had_tag = XAE
+			has_or_had_tag = XAO
+		}
+	}
+	gfx_tags = { light_tag sword_tag }
+	# P14;CAH-XI; Era light-infantry company adapter for Balkan and Hellenistic military labor markets without a fixed ethnic order of battle
+}
+
+antq_numidian_horse_company = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_cavalry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	age = age_1_traditions
+	movement_speed = 0.25
+	flanking_ability = 0.15
+	combat = { desert = 0.10 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAA
+			has_or_had_tag = XAG
+			has_or_had_tag = XBF
+			has_or_had_tag = XDR
+		}
+	}
+	gfx_tags = { light_tag }
+	# P14;CAH-XI; Era North African light-horse company adapter distinct from independent-court forces and without a named contract or roster
 }
 
 antq_liburnian = {

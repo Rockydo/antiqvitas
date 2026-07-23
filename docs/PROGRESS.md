@@ -5111,6 +5111,22 @@ then return to the highest-priority unblocked M5/M7 subsystem work.
 Next: continue only exact-source Roman frontier anchors, or take the next
 unblocked M7 diversity audit.
 
+## 2026-07-23 - M7 core and mercenary diversity audit
+
+- Added bounded Roman auxiliary cavalry, Parthian mounted archers, and Germanic
+  light horse, with one technical AD 1 seed for each core force. Rome, Parthia,
+  and the Marcomannic audit tag now each have at least two distinct ancient land
+  roles where applicable.
+- Expanded the era-company roster from four to seven reviewed roles with
+  Galatian swordsmen, Thracian peltasts, and a Numidian light-horse company.
+  The generator now enforces all core-role and company requirements so a later
+  edit cannot silently collapse that diversity.
+- `make validate` and the real-game `make smoke` are green; vanilla and the
+  enabled mod reached the menu with zero new error-log lines.
+
+Next: take the remaining targeted M8 runtime research check or another
+source-led M5/M7 refinement once its narrow engine contract is identified.
+
 ## 2026-07-22 - Named Roman civic-building and direct-art pass
 
 - Replaced the generic Rome building proxies with sixteen named AD 1 special
