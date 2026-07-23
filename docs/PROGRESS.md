@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-23 - Direct religion-icon migration complete
+
+- Added five distinct direct 128px religion illustrations for North American,
+  Siberian, Austronesian-region, Australian, and Caribbean traditions. Each has
+  a retained source, exact master, BC7 DDS texture, ledger row, and reviewed
+  contact sheet.
+- The material-only studies make no claim to a named person, deity, rite,
+  shrine, temple, mound, boat, ocean, island, landscape, rock-art motif, dot
+  painting, architecture, mask, drum, weapon, writing, glyph, text, or
+  inscription. All 37 religion keys now use direct ANTIQVITAS art; zero shared
+  engine-native religion aliases remain.
+
+Next: continue the 250-advance migration, the source-led Roman building layer,
+trade-good illustrations, and period-name coverage.
+
 ## 2026-07-23 - Direct African and American religion icons
 
 - Added four distinct direct 128px religion illustrations for West African,
