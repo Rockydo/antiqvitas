@@ -53,3 +53,12 @@ regional court. They remain uninscribed object studies rather than depictions
 of an elder, druid, king, person, tribe, temple, palace, rite, territory,
 battle, constitutional formula, or seal impression. The reviewed portrait
 contact sheet is [here](DIRECT_PRIVILEGE_ICON_BATCH_05.png).
+
+## Sixth frontier, regional, chiefly, and town-household batch
+
+The next four icons distinguish a frontier court, an otherwise unassigned
+regional court, an early African chiefly household, and a settled town-cluster
+household. They remain uninscribed object studies rather than depictions of a
+court, ruler, chief, person, polity, town, building, map, battle, constitutional
+formula, or seal impression. The reviewed portrait contact sheet is
+[here](DIRECT_PRIVILEGE_ICON_BATCH_06.png).
