@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-23 - Direct Nile, Horn, and Arabian religion icons
+
+- Added four distinct direct 128px religion illustrations for Kemetic Religion,
+  Kushite Amun, Aksumite Paganism, and Arabian Polytheism. Each has a retained
+  source, exact master, BC7 DDS texture, ledger row, and reviewed contact sheet.
+- The images remain non-reconstructive material studies, with no named deity,
+  animal, temple, shrine, ruler, city, pyramid, Kaaba, rite, person, text, or
+  inscription. The direct religion migration now covers twenty of 37 keys.
+
+Next: continue the religion-art migration and the source-led Roman-building,
+trade-good, and period-name passes.
+
 ## 2026-07-23 - Augustan amphitheatre and public-portico building pass
 
 - Added the 35th and 36th named Roman specials: the 29 BC Amphitheatrum

@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-23 - Direct Nile, Horn, and Arabian religion art stays material-only
+
+The sixth direct religion-icon batch distinguishes only broad Nile Valley,
+middle-Nile, Horn of Africa, and Arabian material contexts. Its faience,
+papyrus, sandstone, ceramic, fibre, cloth, resin, leather, dates, plants, and
+stones do not identify a named deity, animal, temple, shrine, altar, ruler,
+dynasty, kingdom, city, pyramid, tomb, stela, Kaaba, rite, person, text, or
+inscription.
+
+Sources: `P11`; `CAH-XI`; `P20`, catalogued in
+`docs/world_1ad/SOURCES.md` and bounded by the M4 religion ledger.
+
+[secure broad material contexts; contested specific tradition, practice,
+distribution, object provenance, and all visual reconstruction]
+
 ## 2026-07-23 - Two Augustan public buildings are bounded Rome-point proxies
 
 The Amphitheatrum Statilii Tauri is secure as Rome's first stone amphitheatre,
