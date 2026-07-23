@@ -5972,3 +5972,12 @@ separate Han runtime-regency blocker.
 
 - Added 878 `T2F` Pleiades adapters at 6--12px; retained Tier-3 populated
   adapters fall to 11,568. Closer evidence retains precedence.
+
+## 2026-07-23 - M11 direct UI asset ledger
+
+- Added one generated inventory covering 497 direct player-facing UI assets:
+  250 advances, 24 privileges, 37 religions, nine institutions, five custom
+  goods, 42 named Roman buildings, and 130 regional building families.
+- `make validate` now refuses a stale ledger or a missing listed local asset;
+  the existing specialist checks retain ownership of DDS, dimensions, and
+  engine-resolver contracts.
