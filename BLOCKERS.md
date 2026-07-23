@@ -46,6 +46,25 @@ and vanilla-plus-mod smoke are green with zero new normalized lines. Do not
 repeat either suppressor or empty-overlay probe without a source-preserving
 guard for every active vanilla culture comparison.
 
+### 2026-07-23 follow-up: guarded Byzantine removal is insufficient
+
+A materially different exact-name probe removed only the three unreferenced
+legacy-culture auto modifiers from `common/auto_modifiers/byzantium.txt` while
+otherwise preserving that installed file. It did remove the earlier Byzantine
+comparison errors, but the ordinary enabled-mod menu smoke then emitted
+hundreds of `Invalid culture key` diagnostics from generic on-actions,
+scripted triggers/effects, event sources, and values. These are compile-time
+references that remain invalid even where their later-era event path is gated.
+
+The source-preserving test overlay and temporary generator mode were removed;
+the 52 exact vanilla culture copies were regenerated. Full static validation
+and a fresh vanilla-plus-mod menu smoke again pass with zero new normalized
+lines. Treat legacy culture definitions as a global installed-script ABI for
+this game build. Further work on this diagnostic needs a locally demonstrated
+engine facility that suppresses the *no-pop* warning while retaining culture
+symbols, or a source-preserving guard for every static reference; do not
+repeat culture omission or narrow auto-modifier quarantines.
+
 ## 2026-07-22 - M5 annona routing lacks a demonstrated startup merchant contract
 
 Status: **deferred after two material local market-route attempts and a

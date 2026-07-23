@@ -5858,3 +5858,16 @@ separate Han runtime-regency blocker.
 - The whole-system audit is 912 placements, 79.7% productive, and 92.5%
   scalable. `make validate` and the reduced vanilla/mod menu smoke gate passed
   with zero new mod log lines.
+
+## 2026-07-23 - M12 culture-definition compatibility boundary
+
+- Tested a source-preserving, exact-name quarantine of the three Byzantine
+  auto modifiers that were first exposed by empty legacy-culture overlays.
+  The menu smoke proved that legacy culture symbols are broader compile-time
+  dependencies of installed generic scripts, not merely a Byzantine feature.
+- Removed the failed probe, regenerated the compatibility files, and restored
+  the smoke-green tree. Full validation and the reduced vanilla/mod menu smoke
+  both pass with zero new normalized error-log lines.
+- Next: continue the independent direct-evidence location-name queue and
+  leave the documented culture no-pop diagnostic compatibility boundary in
+  place until a materially different engine contract is available.
