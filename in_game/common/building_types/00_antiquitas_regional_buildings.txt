@@ -1742,3 +1742,365 @@ antq_reg_textile_dye_finisher = {
 	custom_tags = { guild }
 	construction_demand = guild_construction
 }
+
+antq_reg_monetal_workshop = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_merchant_power = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_monetal_workshop_maintenance = {
+			goods_gold = 0.5208
+			produced = jewelry
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_hide_curing_yard = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = basic_industry_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_production_efficiency = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_hide_curing_yard_maintenance = {
+			livestock = 1.0873
+			sand = 0.4345
+			tar = 0.0819
+			tools = 0.1627
+			produced = leather
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_apothecary = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_merchant_power = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_apothecary_maintenance = {
+			incense = 0.06
+			dyes = 0.03
+			pottery = 0.04
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_bread_oven = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = basic_industry_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_monthly_food_modifier = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_bread_oven_maintenance = {
+			fruit = 1.154
+			lumber = 0.157
+			tools = 0.092
+			produced = wine
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_amphora_warehouse = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = trade_category
+	employment_size = trade_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = market_build_time
+	modifier = {
+		local_merchant_capacity = 0.015
+	}
+	unique_production_methods = {
+		antq_reg_amphora_warehouse_maintenance = {
+			pottery = 0.14
+			lumber = 0.06
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_tegula_kiln = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = basic_industry_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_production_efficiency = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_tegula_kiln_maintenance = {
+			clay = 1.0039
+			lumber = 0.1201
+			tools = 0.0504
+			produced = pottery
+			output = 1.0
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_hypocaust_yard = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = basic_industry_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_monthly_food_modifier = 0.005
+	}
+	unique_production_methods = {
+		antq_reg_hypocaust_yard_maintenance = {
+			coal = 0.08
+			lumber = 0.08
+			clay = 0.06
+			stone = 0.06
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_stationer = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = clergy
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = religious_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_clergy_max_literacy = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_stationer_maintenance = {
+			dyes = 0.0503
+			paper = 0.1995
+			lumber = 0.0998
+			produced = books
+			output = 0.3
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_weightmaker = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = basic_industry_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_merchant_power = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_weightmaker_maintenance = {
+			copper = 0.475
+			tin = 0.038
+			produced = tools
+			output = 0.6
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_chariotwright = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_merchant_capacity = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_chariotwright_maintenance = {
+			lumber = 0.9817
+			dyes = 0.1468
+			tools = 0.1468
+			produced = furniture
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_ferry_quay = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = trade_category
+	employment_size = trade_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = market_build_time
+	modifier = {
+		local_merchant_capacity = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_ferry_quay_maintenance = {
+			lumber = 0.1963
+			fiber_crops = 0.4906
+			tar = 0.5393
+			cloth = 0.0486
+			produced = naval_supplies
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_raised_granary = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = basic_industry_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_monthly_food_modifier = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_raised_granary_maintenance = {
+			wheat = 0.16
+			lumber = 0.08
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}

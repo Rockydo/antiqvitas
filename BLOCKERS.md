@@ -34,6 +34,18 @@ Evidence: smoke sessions started at `2026-07-22T07:24:31Z` and
 `2026-07-22T07:28:57Z` in the configured user log; both reached the rendered
 menu but emitted one runtime parser error per inserted culture token.
 
+### 2026-07-23 follow-up: empty exact-name culture overlays are also unsafe
+
+A fresh AD 1 New Game probe replaced all 52 copied vanilla culture files with
+empty same-name files while retaining the 350 ANTIQVITAS definitions. It
+reached the menu, but generation emitted active `common/auto_modifiers/byzantium.txt`
+invalid-culture comparisons. The engine therefore requires legacy symbols in
+its still-active modifier graph even though those symbols produce no-pop
+diagnostics. The exact byte-compatible files were regenerated; full validation
+and vanilla-plus-mod smoke are green with zero new normalized lines. Do not
+repeat either suppressor or empty-overlay probe without a source-preserving
+guard for every active vanilla culture comparison.
+
 ## 2026-07-22 - M5 annona routing lacks a demonstrated startup merchant contract
 
 Status: **deferred after two material local market-route attempts and a

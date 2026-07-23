@@ -138,6 +138,16 @@ PRODUCTION_RECIPES = {
     "antq_reg_brewhouse": ("wine", "1", (("fruit", "1.154"), ("lumber", "0.157"), ("tools", "0.092"))),
     "antq_reg_quernworks": ("tools", "1", (("iron", "0.8333"),)),
     "antq_reg_textile_dye_finisher": ("dyes", "0.3", (("alum", "0.021"), ("lumber", "0.6247"))),
+    # Fifth pass: every productive output below reuses a locally harvested
+    # guild recipe; the ledger carries the historically specific input story.
+    "antq_reg_monetal_workshop": ("jewelry", "1", (("goods_gold", "0.5208"),)),
+    "antq_reg_hide_curing_yard": ("leather", "1", (("livestock", "1.0873"), ("sand", "0.4345"), ("tar", "0.0819"), ("tools", "0.1627"))),
+    "antq_reg_bread_oven": ("wine", "1", (("fruit", "1.154"), ("lumber", "0.157"), ("tools", "0.092"))),
+    "antq_reg_tegula_kiln": ("pottery", "1.0", (("clay", "1.0039"), ("lumber", "0.1201"), ("tools", "0.0504"))),
+    "antq_reg_stationer": ("books", "0.3", (("dyes", "0.0503"), ("paper", "0.1995"), ("lumber", "0.0998"))),
+    "antq_reg_weightmaker": ("tools", "0.6", (("copper", "0.475"), ("tin", "0.038"))),
+    "antq_reg_chariotwright": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
+    "antq_reg_ferry_quay": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
 }
 
 

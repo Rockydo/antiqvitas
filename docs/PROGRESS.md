@@ -1,5 +1,11 @@
 # Progress
 
+## 2026-07-23 - M5 fifth direct-art production pass
+
+- Added 12 directly illustrated city-market craft and service families with
+  120 contested AD 1 placements. M5/M7 now has 1,032 placements: 78.2%
+  productive and 93.4% scalable.
+
 ## 2026-07-23 - M5 third direct-art production pass
 
 - Added 12 illustrated workshop families and 168 contested AD 1 market-hinterland
