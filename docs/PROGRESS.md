@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-23 - Theatre of Balbus Rome building slice
+
+- Added the securely pre-AD 1 Theatre of Balbus to Rome's named civic-building
+  ledger, with a dedicated 128px icon, bounded cultural-building contract, and
+  modest wine, cloth, and pottery maintenance demand. Rome now has 31 named
+  direct-icon specials.
+- Kept the building a generic theatre proxy: it does not reconstruct the
+  partly recoverable plan, capacity, decoration, Crypta Balbi, event calendar,
+  audience, or performance programme.
+- `gmake validate` passed with 31 named Roman buildings and 171 M5/M7 building
+  and fort seeds. The bounded vanilla/enabled `gmake smoke` pair reached the
+  menu in both runs and found zero new mod-only error-log lines.
+
+Next: continue direct visual migration, then return to source-qualified Roman
+economy and frontier work once its ownership contracts are reviewed.
+
 ## 2026-07-23 - Direct East Asian religion icon batch
 
 - Added dedicated 128px icons for early Han ceremonial material, early Chinese
