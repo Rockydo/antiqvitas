@@ -2396,3 +2396,16 @@ building definitions. Fifty additional productive, scalable Near Eastern
 placements establish a conservative 64.2% productive and 80.1% scalable
 whole-system result. `m5_building_audit.py` now makes these limits a permanent
 `make validate` gate.
+
+## 2026-07-23 - Nijmegen receives a bounded Augustan camp special
+
+The exact installed Nijmegen point and a university archaeology source support
+a low-camp proxy, but not a change to the carefully sourced Batavian client
+border. The new named special therefore uses the already smoke-proven stockade
+contract and a direct 128px icon, while remaining separate from the generic
+M7 fort ledger and later Rhine-limes reconstruction.
+
+The permanent scale audit required two additional scalable placements after
+counting the new named camp. Cologne was already a reviewed regional market
+and production anchor, so bounded dye and river-shipyard families preserve the
+80% floor without creating a new claimed historic site.
