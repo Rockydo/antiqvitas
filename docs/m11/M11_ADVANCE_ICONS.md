@@ -202,6 +202,16 @@ route, city, ruler, army, legion, camp, fort, road, bridge, ship, caravan,
 campaign, map, inscription, writing, or modern object. The reviewed
 source/master batch is [here](DIRECT_ADVANCE_ICON_BATCH_14.png).
 
+### Batch fifteen review
+
+The logistics-and-exchange illustrations distinguish blank coin and measure
+materials, bulk supplies, personal patrol-support equipment, and river-crossing
+support materials. They do not identify a named mint, ruler, city, empire,
+currency system, army, legion, campaign, camp, road, frontier, border, river,
+bridge, boat, map, inscription, writing, person, animal, weapon, or modern
+object. The reviewed source/master batch is
+[here](DIRECT_ADVANCE_ICON_BATCH_15.png).
+
 ## Engine and asset verification
 
 The installed build's `main_menu/gfx/interface/advance/` established the
