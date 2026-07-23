@@ -1,5 +1,10 @@
 # Progress
 
+## 2026-07-23 - Levantine period-name pass
+
+- Added seven direct Pleiades city forms: Tyros, Heliopolis, Laodicea, Philadelphia,
+  Bostra, Ptolemais, and Ioppe; the checked layer has 202 curated names.
+
 ## 2026-07-23 - Danube and Balkan period-name pass
 
 - Added fourteen direct Pleiades city forms, from Scupi and Philippopolis to
