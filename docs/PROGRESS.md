@@ -5127,6 +5127,18 @@ unblocked M7 diversity audit.
 Next: take the remaining targeted M8 runtime research check or another
 source-led M5/M7 refinement once its narrow engine contract is identified.
 
+## 2026-07-23 - M4 African and Levantine city-name pass
+
+- Added eleven secure direct-city labels across Roman North Africa, Cyrenaica,
+  Egypt, and the Levant. The checked dynamic layer now has 61 capital anchors
+  and 96 curated toponyms, mirrored to all eleven client languages.
+- `make validate` is green. The first smoke attempt exposed a transient DX12
+  options assertion before content load; the clean retry reached both menus
+  and passed with zero mod-unique error-log lines.
+
+Next: continue only exact-source location matches, or take an unblocked runtime
+subsystem task.
+
 ## 2026-07-22 - Named Roman civic-building and direct-art pass
 
 - Replaced the generic Rome building proxies with sixteen named AD 1 special
