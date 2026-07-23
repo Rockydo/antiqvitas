@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-23 - Exchange and infrastructure advance-icon batch
+
+- Added distinct direct 256px illustrations for Silk Exchange, Seasonal
+  Markets, Field Engineering, and Legionary Logistics. Each has a retained
+  source, exact master, BC7 DDS texture, ledger row, tree binding, and reviewed
+  contact sheet.
+- The generic material scenes claim no named market, route, city, ruler, army,
+  legion, camp, fort, road, bridge, ship, caravan, campaign, map, inscription,
+  writing, or modern object. The direct advance migration now covers 43 of 250
+  advances.
+
+Next: continue dedicated advance art, emphasizing trade goods, civic buildings,
+and period-appropriate city names alongside the source-led Roman building layer.
+
 ## 2026-07-23 - Building and commerce advance-icon batch
 
 - Added distinct direct 256px illustrations for Urban Waterworks, Public Baths,

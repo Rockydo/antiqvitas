@@ -1,5 +1,19 @@
 # Historical Assumptions
 
+## 2026-07-23 - Exchange and infrastructure advance art stays generic
+
+The fourteenth direct advance-icon batch depicts unpatterned silk, grain and
+date baskets, generic commercial measures, a survey tripod and stakes, and
+supply crates with grain sacks. It identifies no named market, route, city,
+ruler, army, legion, camp, fort, road, bridge, ship, caravan, campaign, map,
+inscription, writing, or modern object.
+
+Sources: plan section `P15` and asset-pipeline boundary `P20` in
+`ANTIQVITAS_MASTER_PLAN.md`.
+
+[secure broad material and engineering contexts; contested practice,
+distribution, object provenance, and all visual reconstruction]
+
 ## 2026-07-23 - Building and commerce advance art stays generic
 
 The thirteenth direct advance-icon batch depicts a generic low water channel
