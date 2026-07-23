@@ -1,5 +1,21 @@
 # Historical Assumptions
 
+## 2026-07-23 - Direct religion illustrations identify material contexts only
+
+The fifth direct religion-icon batch treats Manichaeism as a prospective
+late-antique Iranian learning-and-travel context, Korean Muism as a cautious
+early Korean material context, Tengri as a broad Inner Asian material context,
+and Bon-Zhangzhung as a cautious early Tibetan highland material context. The
+objects are uninscribed and non-narrative; none identifies a named community,
+teacher, shaman, deity, symbol, sanctuary, shrine, temple, ruler, dynasty,
+city, empire, rite, scripture, person, animal, or historical event.
+
+Sources: `P11`; `CAH-XI`; `P20`, catalogued in
+`docs/world_1ad/SOURCES.md` and bounded by the M4 religion ledger.
+
+[secure broad material contexts; contested period form, distribution, named
+tradition, practice, object provenance, and all visual reconstruction]
+
 ## 2026-07-23 - Ten additional Roman-city names use exact Pleiades anchors
 
 Corduba, Tarraco, Emerita Augusta, Olisipo, Caesaraugusta, Narbo Martius,

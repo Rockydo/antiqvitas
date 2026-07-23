@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-23 - Direct Iranian, Korean, Inner Asian, and Tibetan religion icons
+
+- Added four distinct direct 128px religion illustrations for Manichaeism,
+  Korean Muism, Tengri, and Bon-Zhangzhung. Each now has its own generated
+  source, exact master, BC7 DDS texture, ledger row, and reviewed contact sheet.
+- Kept the iconography deliberately non-reconstructive: uninscribed material
+  studies only, with no named community, teacher, deity, symbol, shrine, ruler,
+  city, rite, text, person, animal, or historical event.
+- The direct migration now covers sixteen of 37 religion keys; 21 reviewed
+  engine-native aliases remain while their own source/master/texture chains are
+  prepared.
+
+Next: continue the religion-art migration, with source-led Roman buildings and
+period-name coverage remaining parallel priorities.
+
 ## 2026-07-23 - Exact Roman-world dynamic-name pass
 
 - Added ten reviewed Pleiades city-point overrides for Corduba, Tarraco,
