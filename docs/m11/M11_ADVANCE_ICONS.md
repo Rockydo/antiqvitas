@@ -252,6 +252,16 @@ religion, treasure, coin system, boat, event, map, sign, inscription, writing,
 symbol, emblem, flag, or modern object. The reviewed source/master batch is
 [here](DIRECT_ADVANCE_ICON_BATCH_19.png).
 
+### Batch twenty-one review
+
+The High Empire civic layer distinguishes plain building-repair materials, an
+anonymous urban water-and-goods setting, separate craft tools, and athletic
+equipment. It does not identify a named city, building, benefactor, gateway,
+ruler, empire, market, port, trade, guild, workshop, culture, religion, contest,
+games, stadium, victory, event, person, animal, map, sign, inscription, writing,
+symbol, or modern object. The reviewed source/master batch is
+[here](DIRECT_ADVANCE_ICON_BATCH_21.png).
+
 ### Batch twenty review
 
 The High Empire trade-infrastructure illustrations distinguish mooring and cargo
