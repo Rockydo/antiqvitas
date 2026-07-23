@@ -103,15 +103,20 @@ architecture, mask, weapon, writing, glyph, calendrical mark, text, or
 inscription. The reviewed ninth batch is
 [here](DIRECT_RELIGION_ICON_BATCH_09.png).
 
-Until each remaining row is completed, its reviewed installed motif is a broad
-readable UI cue, not a claim that the contemporary or historical tradition is
-identical to ANTIQVITAS's sourced category.
+## Tenth North American, Siberian, Oceanian, and Caribbean batch
 
-| ANTIQVITAS definition keys | Reviewed local motif |
-|---|---|
-| `antq_north_american`, `antq_caribbean` | `great_plains_shamanism`, `tain_feyentun_religion` respectively |
-| `antq_siberian` | `shamanism` star motif |
-| `antq_austronesian_religion`, `antq_australian_dreaming` | `anitism_religion`, `dreamtime_religion` respectively |
+The tenth batch distinguishes broad North American, Siberian, Austronesian-
+region, Australian, and Caribbean material contexts through uninscribed wood,
+bark, fibre cloth, gourd, coconut shell, grass, rice, squash, cassava, cord,
+shell, lamp, and stone objects. It identifies no named person, deity, rite,
+shrine, altar, temple, mound, boat, ocean, island, landscape, rock-art motif,
+dot painting, architecture, mask, drum, weapon, writing, glyph, text, or
+inscription. The reviewed tenth batch is
+[here](DIRECT_RELIGION_ICON_BATCH_10.png).
+
+All 37 religion-definition keys now have a distinct ANTIQVITAS-owned source,
+128px master, and BC7 DDS texture. The ledger and validator reject a shared
+source or master; no installed religion alias remains in the player-facing UI.
 
 ## Institution art
 
