@@ -11,8 +11,9 @@ surface.
 M11 supplies all 37 M4 religion keys and all nine M8 institution keys as
 128x128, sRGBA, BC7 DDS textures. `tools/m11_common_icons.py --check` locks
 the complete definition-to-texture inventory, verifies the DDS contract, and
-requires every religion texture to remain an exact alias of its reviewed local
-source. Its `--write` path is the reproducible local build step.
+requires every remaining transitional religion texture to remain an exact alias
+of its reviewed local source while checking every direct ledger chain. Its
+`--write` path is the reproducible local build step.
 
 ## Religion migration
 
@@ -24,11 +25,19 @@ reviewed. The validator enforces the direct ledger's definition binding, 128px
 DDS contract, and source/master uniqueness. The required final state is 37
 direct religion illustrations and zero aliases.
 
-The first three direct icons cover Roman civic ritual, Hellenic civic ritual,
-and pre-Nicene community context. They are bounded material still lifes rather
-than depictions of a deity, sanctuary, rite, church, clergy, saint, ruler, or
-historical event. The reviewed three-icon batch is
+The first six direct icons cover Roman and Hellenic civic ritual, pre-Nicene
+community, Second Temple Jewish community, Iranian sacred-fire, and Lankan
+Buddhist material contexts. They are bounded material still lifes rather than
+depictions of a named sanctuary, rite, clergy, saint, ruler, city, empire, or
+historical event. The reviewed first batch is
 [here](DIRECT_RELIGION_ICON_BATCH_01.png).
+
+The second batch uses an uninscribed seven-branched lamp, blank scroll, plain
+fire bowl, water vessel, cloth, stupa, palm-leaf bundle, lamp, and alms bowl.
+It does not identify a named temple, dynasty, monastery, priest, monk, ruler,
+city, group, sect, relic, miracle, scripture, rite, sacrifice, text, or
+inscription. The reviewed second batch is
+[here](DIRECT_RELIGION_ICON_BATCH_02.png).
 
 Until each remaining row is completed, its reviewed installed motif is a broad
 readable UI cue, not a claim that the contemporary or historical tradition is
@@ -36,12 +45,9 @@ identical to ANTIQVITAS's sourced category.
 
 | ANTIQVITAS definition keys | Reviewed local motif |
 |---|---|
-| `antq_religio_romana`, `antq_hellenic`, `antq_kemetic`, `antq_kushite_amun`, `antq_aksumite_paganism`, `antq_arabian_polytheism`, `antq_south_arabian_religion`, `antq_punic` | `hellenism_religion` temple |
-| `antq_early_christianity` | `catholic` Christian UI marker |
-| `antq_judaism` | `judaism` menorah |
-| `antq_arsacid_zoroastrianism` | `zoroastrian` winged motif |
+| `antq_kemetic`, `antq_kushite_amun`, `antq_aksumite_paganism`, `antq_arabian_polytheism`, `antq_south_arabian_religion`, `antq_punic` | `hellenism_religion` temple |
 | `antq_manichaeism` | `manichaeism` wheel |
-| `antq_theravada`, `antq_mahayana` | respective installed Buddhist motifs |
+| `antq_mahayana` | installed Mahayana motif |
 | `antq_brahmanism`, `antq_jainism` | respective installed Indian motifs |
 | `antq_chinese_state_cult`, `antq_daoism` | `sanjiao` balance motif |
 | `antq_kami` | `shinto` gate |

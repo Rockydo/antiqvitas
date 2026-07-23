@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-23 - Direct religion icon batch two
+
+- Added dedicated 128px icons for Second Temple Jewish community, Iranian
+  sacred-fire, and Lankan Buddhist material contexts. The transition now has
+  six direct religion illustrations and thirty-one remaining reviewed aliases.
+- Reviewed the contact sheet and bounded the imagery to material contexts,
+  without a named temple, dynasty, monastery, priest, monk, ruler, city, sect,
+  relic, scripture, rite, sacrifice, text, or inscription.
+- `gmake validate` passed with six direct religion icons. The bounded
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: continue direct religion and privilege art alongside advances.
+
 ## 2026-07-23 - Direct religion icon migration begins
 
 - Added a ledger-driven direct-religion asset contract and the first three
