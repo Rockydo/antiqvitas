@@ -4007,6 +4007,17 @@ only, not a claim about settlement extent, speech community, legal status,
 population, or control. Source: PLE:79651; P8.7. [secure direct toponym;
 contested map-key proxy and all wider social inference]
 
+## 2026-07-23 - Danube and Balkan city labels remain point-name adapters
+
+Scupi, Philippopolis, Odessus, Sopianae, Iader, Mursa, Andautonia, Oescus,
+Durostorum, Viminacium, Apulum, Tomis, Bononia, and Aegyssus use direct
+Pleiades settlement records. Each installed key is only a city-field display
+adapter, not a claim about its exact urban extent, polity, population, or
+cultural uniformity. Sources: PLE:481987; PLE:216927; PLE:216904; PLE:197523;
+PLE:197312; PLE:197389; PLE:197113; PLE:216907; PLE:216800; PLE:207549;
+PLE:206927; PLE:217016; PLE:206975; PLE:216694. [secure direct toponym;
+contested map-key proxy]
+
 ## 2026-07-23 - Fourth M5 craft pass remains regional
 
 The twelve new craft types express broad antique productive or consumer-service

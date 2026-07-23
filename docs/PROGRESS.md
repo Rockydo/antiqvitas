@@ -1,5 +1,11 @@
 # Progress
 
+## 2026-07-23 - Danube and Balkan period-name pass
+
+- Added fourteen direct Pleiades city forms, from Scupi and Philippopolis to
+  Tomis, Sopianae, Viminacium, and Aegyssus; the checked layer now has 195
+  curated names alongside 61 capital anchors.
+
 ## 2026-07-23 - M5 fifth direct-art production pass
 
 - Added 12 directly illustrated city-market craft and service families with
