@@ -3754,6 +3754,17 @@ claim about a legion total, fortress plan, Lower Rhine line, civilian vicus,
 or later stone phases. Source weighed: `NEU-NOVAESIUM` in
 `docs/world_1ad/SOURCES.md`. [secure early camp; contested operational scale]
 
+## 2026-07-23 - M7 force diversity is role-based, not an order of battle
+
+Roman alae and Parthian horse archers distinguish the major cavalry roles
+already required by the plan without assigning named units, provincial postings,
+noble-house contingents, or a campaign-strength census. Germanic light horse,
+and the Galatian, Thracian, and Numidian mercenary companies, are explicitly
+contested availability adapters. They do not imply uniform tribal doctrine,
+ethnic force ratios, or a historical contract at campaign start. Sources
+weighed: P14 and CAH-XI; `STR-GER` and `OCD-GER` constrain the Germanic adapter.
+[secure broad role distinction; contested availability and scale]
+
 ## 2026-07-22 - Public Granaries advance art is a generic provisioning motif
 
 The accepted Public Granaries icon depicts an uninscribed small grain store,

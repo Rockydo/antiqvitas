@@ -41,6 +41,7 @@ unit_manager = {
 		location = prague
 		sub_units = {
 			antq_warbands = { strength = 0.80 }
+			antq_germanic_horse = { strength = 0.55 }
 		}
 	}
 
@@ -57,6 +58,7 @@ unit_manager = {
 		location = baghdad
 		sub_units = {
 			antq_cataphracts = { strength = 0.85 }
+			antq_parthian_horse_archers = { strength = 0.75 }
 			antq_cataphracts = { strength = 0.85 }
 		}
 	}
@@ -68,6 +70,7 @@ unit_manager = {
 			antq_legionaries = { strength = 0.85 }
 			antq_legionaries = { strength = 0.85 }
 			antq_auxilia = { strength = 0.80 }
+			antq_roman_alae = { strength = 0.60 }
 		}
 	}
 

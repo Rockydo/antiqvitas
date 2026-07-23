@@ -167,6 +167,23 @@ def load_units() -> tuple[Unit, ...]:
     required_navy = {"antq_liburnian", "antq_trireme", "antq_quinquereme", "antq_merchant_roundship", "antq_monsoon_dhow", "antq_austronesian_outrigger"}
     if not required_land <= land or not required_navy <= navy:
         raise ValueError("units.csv is missing a plan-required M7 roster entry")
+    core_land = {
+        "ROM": {"antq_legionaries", "antq_auxilia", "antq_roman_alae"},
+        "PAR": {"antq_cataphracts", "antq_parthian_horse_archers"},
+        "MCM": {"antq_warbands", "antq_germanic_horse"},
+    }
+    for tag, expected in core_land.items():
+        available = {unit.key for unit in units if unit.kind == "land" and tag in unit.tags}
+        if not expected <= available:
+            raise ValueError(f"M7 core diversity audit is missing {sorted(expected - available)} for {tag}")
+    mercenaries = {unit.key for unit in units if unit.status == "mercenary"}
+    required_mercenaries = {
+        "antq_balearic_slingers", "antq_cretan_archers", "antq_germanic_bodyguards",
+        "antq_saka_horse", "antq_galatian_swordsmen", "antq_thracian_peltasts",
+        "antq_numidian_horse_company",
+    }
+    if not required_mercenaries <= mercenaries:
+        raise ValueError("M7 mercenary audit is missing a reviewed company role")
     if any(unit.kind == "navy" and dict(unit.modifiers).get("cannons") for unit in units):
         raise ValueError("M7 navy data must never define cannons")
     return tuple(units)
