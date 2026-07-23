@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-23 - Greek and Anatolian period-name pass
+
+- Added seventeen Pleiades coordinate-qualified direct settlement labels,
+  including Neapolis, Nauplia, Kydonia, Ephesus, Pergamum, Nicomedia, Ancyra,
+  and Halicarnassus. The checked layer is now 61 capital plus 165 curated
+  direct anchors in every supported client.
+
 ## 2026-07-23 - Direct Iberian period-name pass
 
 - Added nineteen reviewed direct Roman-period display forms across Hispania,

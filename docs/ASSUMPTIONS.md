@@ -3966,3 +3966,11 @@ city forms from the Pleiades/Barrington gazetteer tradition at the installed
 modern-city points. The Latin dynamic adapter does not assert uniform language,
 territory, civic status, or demographic continuity. [secure direct toponym;
 contested social and territorial inference]
+
+## 2026-07-23 - Greek and Anatolian names remain direct city-point labels
+
+The seventeen new name rows use only Pleiades settlement points whose temporal
+range covers AD 1 and whose supplied coordinates match the installed city key.
+The Greek dynamic adapter is an engine lookup, not evidence of universal local
+language, territory, civic rank, or population. [secure direct toponym;
+contested social and territorial inference]
