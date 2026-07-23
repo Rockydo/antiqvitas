@@ -1,5 +1,11 @@
 # Progress
 
+## 2026-07-23 - M5 third direct-art production pass
+
+- Added 12 illustrated workshop families and 168 contested AD 1 market-hinterland
+  placements across Europe, North Africa, and the Middle East. M5/M7 now has
+  792 placements: 79.2% productive and 91.4% scalable.
+
 ## 2026-07-23 - North-African period-name pass
 
 - Added fifteen Pleiades-coordinate Roman-period city labels from Tingi and

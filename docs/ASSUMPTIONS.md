@@ -3981,3 +3981,10 @@ The new North-African rows are Pleiades settlement/port points spanning AD 1.
 Their Latin adapter is a display lookup only, not evidence for universal
 language, territory, civic rank, or population. [secure direct toponym;
 contested social and territorial inference]
+
+## 2026-07-23 - Third M5 craft pass remains regional
+
+The 12 new family types express broad antique productive contexts only. Each
+placement is a contested city-and-hinterland proxy, not a named workshop,
+workforce, output, cargo, arsenal, or public reserve. Sources: P12.1/P12.3;
+MET-ROMAN-TRADE. [secure craft context; contested placement and scale]
