@@ -5901,3 +5901,10 @@ separate Han runtime-regency blocker.
   olive soap, flax preparation, bone, horn, amber, coral, sponge, reed mats,
   lacquerware, instruments, and terracotta figurines.
 - The M5/M7 audit is 1,272 placements: 80.0% productive and 94.7% scalable.
+
+## 2026-07-23 - M4 full-map Tier-3 name coverage
+
+- Added an explicit fallback ledger for all 28,573 installed map keys and
+  culture-bound adapters for every remaining populated AD 1 field. The runtime
+  name layer is 61 capital, 216 direct, 82 Tier-2, and 13,183 Tier-3 entries;
+  Roma is now a direct secure capital form.

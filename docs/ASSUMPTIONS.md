@@ -4082,3 +4082,12 @@ are broad antique craft categories only. Each city seed is a contested market
 and hinterland proxy, not a named workshop, extraction site, cargo, workforce,
 or household. Sources: P12.1; P12.3; MET-ROMAN-TRADE; BHR. [secure broad craft
 context; contested placement and organization]
+
+## 2026-07-23 - Tier-3 retained map labels are not historical attestations
+
+The Tier-3 layer copies existing installed labels only to prevent unowned
+vanilla fallback and raw map-key display while research proceeds. These labels
+may be modern, district-scale, or otherwise unsuitable for AD 1; each is
+recorded as `tier3` with no claim about ancient identity. The 427 map-only
+key-derived labels are even more provisional. Sources: installed EU5 English
+location localization; engine location symbol inventory. [unverified fallback]

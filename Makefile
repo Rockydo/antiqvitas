@@ -7,6 +7,7 @@ validate:
 	.venv/Scripts/python.exe tools/generate_tag_map.py --check
 	.venv/Scripts/python.exe tools/generate_m4_definitions.py --check
 	.venv/Scripts/python.exe tools/generate_m4_tier2_names.py --check
+	.venv/Scripts/python.exe tools/generate_m4_tier3_names.py --check
 	.venv/Scripts/python.exe tools/generate_dynamic_names.py --check
 	.venv/Scripts/python.exe tools/culture_template_inventory.py --check
 	.venv/Scripts/python.exe tools/generate_ancient_goods.py --check
