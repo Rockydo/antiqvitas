@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-23 - M5 second productive-building pass
+
+- Added twelve directly illustrated antique workshop families—mills, rope,
+  brick, lamp, tile, papyrus, incense, basketry, linen, copper, aromatic, and
+  reed-watercraft craft—and 168 explicitly contested city-and-hinterland
+  placements at 14 already reviewed AD 1 anchors.
+- The direct 3×4 source sheet has been reviewed and converted to unique BC7
+  building DDS assets. The permanent M5/M7 audit now reports 624 placements,
+  473 productive (75.8%) and 556 scalable (89.1%).
+
 ## 2026-07-23 - Exact Adriatic and Pannonian period names
 
 - Added four direct Pleiades city-point forms: Naissus, Siscia, Spalatum, and

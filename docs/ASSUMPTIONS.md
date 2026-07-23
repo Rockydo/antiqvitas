@@ -3946,3 +3946,13 @@ Verona) remain explicit checked period labels rather than unreviewed vanilla
 survivals. Source: `PLE:413014`, `PLE:187311`, `PLE:393397`, `PLE:452308`,
 `PLE:383628`, `PLE:442650`, `PLE:383737`, `PLE:393503`, `PLE:383816`.
 [secure direct place-name points; contested social and territorial inference]
+
+## 2026-07-23 - Second M5 workshop pass remains a regional proxy
+
+The grain, rope, clay, lamp, writing-material, aromatic, basket, linen,
+copper, and reed-watercraft families are broad antique craft categories rather
+than claims for a named establishment, production volume, specialized guild,
+or commodity flow at any listed city. Each new seed is deliberately contested:
+it represents a city market and its hinterland only. Sources weighed: plan
+P12.1/P12.3 and the already reviewed AD 1 anchor ledger. [secure broad craft
+context and anchor; contested individual placement, scale, and organization]

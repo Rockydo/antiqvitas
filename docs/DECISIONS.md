@@ -2439,3 +2439,14 @@ present in the start mirror. This deliberately adds no unique buildings,
 locations, routes, trade goods, or named workshops. It raises the actual
 whole-system layout to 70.3% productive and 85.5% scalable, with the audit
 retaining those bounds as a `make validate` gate.
+
+## 2026-07-23 - Second M5 workshop pass uses local engine contracts
+
+The twelve new family records use the installed game's category, employment,
+build-time, upkeep, and modifier contracts, with eleven calibrated production
+recipes and a bounded grain-service adapter. This keeps the large building
+batch mechanically native while the ledger, start-mirror, asset, production,
+and scale validators continue to reject missing or unreviewed content. Athens
+was deliberately excluded because its current AD 1 anchor contract does not
+admit it as a market or historic site; the batch therefore retains 168 valid
+placements instead of weakening the validation rule.
