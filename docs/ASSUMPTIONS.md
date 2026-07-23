@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-23 - Migrations exchange advance art stays generic
+
+The nineteenth direct advance-icon batch depicts networked goods, reciprocal
+parcels, neutral toll materials, and generic river-commerce materials. It
+identifies no named market, migration, city, kingdom, ruler, polity, road, port,
+route, toll office, law, tax system, person, animal, giver, religion, treasure,
+coin system, boat, event, map, sign, inscription, writing, symbol, emblem, flag,
+or modern object.
+
+Sources: plan section `P15` and asset-pipeline boundary `P20` in
+`ANTIQVITAS_MASTER_PLAN.md`.
+
+[secure broad material, exchange, and river-commerce contexts; contested
+practice, distribution, object provenance, and all visual reconstruction]
+
 ## 2026-07-23 - Dominate civic-economy advance art stays generic
 
 The eighteenth direct advance-icon batch depicts public provisioning materials,
