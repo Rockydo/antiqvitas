@@ -232,3 +232,17 @@ limes. Its source is the visually reviewed 3x4 candidate sheet
 first candidate was cropped to `assets_queue/generated/antq_castrum_aliso.png`
 and converted to the direct BC7 icon
 `main_menu/gfx/interface/icons/buildings/antq_castrum_aliso.dds`.
+
+## Early Bonna camp source, boundary, and art
+
+`LIV-BONNA` is Livius.org's [Bonna record](https://www.livius.org/articles/place/bonna-bonn/), which dates a Roman fort built during Drusus' Rhine offensive between 16/15 and 13 BC and distinguishes the early auxiliary use from the larger legionary base established after AD 9. `LVR-NGL` is the LVR's [Lower German Limes record](https://bodendenkmalpflege.lvr.de/de/projekte/der_niedergermanische_limes/der_rhein_als_grenze.html), which identifies Bonna/Bonn among the major Rhine legionary-camp sites and explicitly places the regional Augustan military deployment from about 19 BC.
+
+`Early Bonna Camp` uses only the locally verified low timber-stockade contract.
+The direct installed `bonn` point is a local display anchor for the early
+auxiliary presence, not a claim that the post-AD 9 permanent legionary fortress
+already existed. It excludes a legion roster, plan, later masonry, enduring
+limes line, or a change to the Germanic owner in the AD 1 political layer.
+Its reviewed generated source is
+`assets_queue/generated_sources/antq_castrum_bonna_source.png`; the centered
+128px crop is retained at `assets_queue/generated/antq_castrum_bonna.png` and
+encoded as `main_menu/gfx/interface/icons/buildings/antq_castrum_bonna.dds`.

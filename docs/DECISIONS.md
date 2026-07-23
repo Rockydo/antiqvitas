@@ -2547,3 +2547,12 @@ per populated installed field, and writes `T2R` plus its measured offset. It
 does not modify the reviewed direct ledger or downgrade retained Tier-3 labels
 silently; generator order makes capital, direct, bounded Tier-2, and wide
 Tier-2 names take precedence over this remote band.
+
+## 2026-07-23 - Bonna is an early camp, not a backdated legionary fortress
+
+The direct Bonn map field receives a named building only for the early
+Augustan auxiliary camp attested during Drusus' Rhine offensive. The install's
+low timber-and-earth stockade contract is the sole engine representation. The
+later permanent fortress is deliberately not backdated to AD 1, and the new
+building does not alter the Germanic ownership or produce a legion roster,
+stone plan, or limes claim.
