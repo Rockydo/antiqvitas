@@ -93,20 +93,24 @@ ruler, tribe, city, pyramid, tomb, forest or desert scene, rite, person, text,
 or inscription. The reviewed eighth batch is
 [here](DIRECT_RELIGION_ICON_BATCH_08.png).
 
+## Ninth African and American material-context batch
+
+The ninth batch distinguishes broad West African, Bantu-region, Mesoamerican,
+and Andean material contexts through uninscribed ceramic, fibre cloth, millet,
+sorghum, maize, quinoa, gourd, cord, wood, and stone objects. It identifies no
+named deity, ancestor, kingdom, ritual, shrine, altar, temple, pyramid, skyline,
+architecture, mask, weapon, writing, glyph, calendrical mark, text, or
+inscription. The reviewed ninth batch is
+[here](DIRECT_RELIGION_ICON_BATCH_09.png).
+
 Until each remaining row is completed, its reviewed installed motif is a broad
 readable UI cue, not a claim that the contemporary or historical tradition is
 identical to ANTIQVITAS's sourced category.
 
 | ANTIQVITAS definition keys | Reviewed local motif |
 |---|---|
-| `antq_kemetic`, `antq_kushite_amun`, `antq_aksumite_paganism`, `antq_arabian_polytheism`, `antq_south_arabian_religion`, `antq_punic` | `hellenism_religion` temple |
-| `antq_manichaeism` | `manichaeism` wheel |
-| `antq_korean_muism`, `antq_siberian` | `shamanism` star motif |
-| `antq_tengri`, `antq_bon` | respective installed steppe/highland motifs |
-| `antq_celtic_religion`, `antq_germanic_religion` | `norse` northern-folk motif |
-| `antq_baltic_slavic`, `antq_finnic` | `romuva`, `muinaisusko` respectively |
-| `antq_berber_religion`, `antq_nile_cushitic`, `antq_west_african`, `antq_bantu_religion` | `guanche_religion`, `ajok_religion`, `songhai_religion`, `bantu_religion` respectively |
-| `antq_mesoamerican`, `antq_andean`, `antq_north_american`, `antq_caribbean` | `mesoamerican`, `inti`, `great_plains_shamanism`, `tain_feyentun_religion` respectively |
+| `antq_north_american`, `antq_caribbean` | `great_plains_shamanism`, `tain_feyentun_religion` respectively |
+| `antq_siberian` | `shamanism` star motif |
 | `antq_austronesian_religion`, `antq_australian_dreaming` | `anitism_religion`, `dreamtime_religion` respectively |
 
 ## Institution art
