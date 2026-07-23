@@ -214,3 +214,21 @@ the independently generated source is retained as
 `assets_queue/generated_sources/antq_castrum_argentoratum_source.png`, cropped
 to `assets_queue/generated/antq_castrum_argentoratum_128.png`, and encoded as
 `main_menu/gfx/interface/icons/buildings/antq_castrum_argentoratum.dds`.
+
+## Aliso/Haltern camp source, boundary, and art
+
+`LWL-ALISO` is the Landschaftsverband Westfalen-Lippe's
+[Roman-camp record](https://www.lwl.org/pressemitteilungen/nr_mitteilung.php?urlID=25644).
+It dates Haltern's fortified main camp to roughly 7/1 BC--AD 9/16 and records
+its timber-and-earth defenses, towers, ditches, and internal timber buildings.
+The direct installed `recklinghausen` map point is a close local proxy for
+Haltern, so `Castrum Aliso (Haltern)` is eligible at the AD 1 start.
+
+The special deliberately uses only the existing low timber-stockade contract.
+It does not decide the debated Aliso identification, reconstruct a legion
+roster, camp plan, campaign route, later stone fortress, or an enduring Rhine
+limes. Its source is the visually reviewed 3x4 candidate sheet
+`assets_queue/generated_sources/antq_castrum_aliso_sheet_source.png`; the
+first candidate was cropped to `assets_queue/generated/antq_castrum_aliso.png`
+and converted to the direct BC7 icon
+`main_menu/gfx/interface/icons/buildings/antq_castrum_aliso.dds`.

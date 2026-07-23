@@ -2523,3 +2523,11 @@ Twelve new families deliberately use maintenance contracts only. This enriches
 water, exchange, transport, and municipal service while moving the full M5/M7
 ledger from its 80% productive ceiling to 73.1%, preserving room for future
 source-led manufacture.
+
+## 2026-07-23 - Require both a dated site and a close installed point for Roman frontier specials
+
+The Aliso/Haltern addition passes the frontier rule because LWL dates the
+fortified camp across AD 1 and `recklinghausen` is a close local installed map
+point. It uses the already validated low stockade contract and a new direct
+art asset. Sites lacking either condition remain outside the named-special
+ledger.

@@ -5921,3 +5921,9 @@ separate Han runtime-regency blocker.
   market measures, roads, caravan and port handling, fuel, pack movement, grain
   handling, and customs.
 - The M5/M7 audit is 1,392 placements: 73.1% productive and 95.1% scalable.
+
+## 2026-07-23 - M5 Aliso/Haltern frontier special
+
+- Added the source-bounded, direct-art Castrum Aliso (Haltern) at the close
+  Recklinghausen map point. It is an AD 1 timber-and-earth camp proxy only;
+  the named source sheet and BC7 DDS are retained with its source boundary.
