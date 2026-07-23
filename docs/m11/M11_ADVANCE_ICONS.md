@@ -305,6 +305,11 @@ source/master batch is [here](DIRECT_ADVANCE_ICON_BATCH_20.png).
 
 ## Engine and asset verification
 
+### Batches thirty through thirty-two review
+
+Three reviewed sheets provide 36 learning and community icons.
+[Contacts](DIRECT_ADVANCE_ICON_BATCH_30.png), [31](DIRECT_ADVANCE_ICON_BATCH_31.png), and [32](DIRECT_ADVANCE_ICON_BATCH_32.png).
+
 The installed build's `main_menu/gfx/interface/advance/` established the
 256x256, sRGBA, mipmapped DDS contract. Its `advances_tooltips.gui` uses
 `GetAdvanceIcon` and applies the native circular icon mask, so the generated
