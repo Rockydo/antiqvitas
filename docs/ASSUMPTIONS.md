@@ -4206,3 +4206,11 @@ P12.3; P14; locally harvested installed productive-method contracts. The steel
 output coefficient is calibrated to the installed guild profit guard rather
 than copied from the later mill tier.
 [secure broad production context; contested placement and organization]
+
+## 2026-07-23 - Feature-labelled Pleiades rows are not map toponyms
+
+Pleiades records may be precise and AD 1-active while their title names an
+archaeological feature rather than a settlement. The generated Tier-2 layer
+now rejects such feature vocabulary and retains the installed Tier-3 label
+until a proper historical toponym is available. This deliberately prefers an
+explicitly non-assertive fallback over a false ancient place-name claim.
