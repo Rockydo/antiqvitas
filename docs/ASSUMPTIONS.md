@@ -4179,3 +4179,12 @@ Locks, nails, chains, wire, shields, scabbards, tackle, felt, carpets, cork,
 brushes, and tesserae are broad antique craft categories, not named workshops,
 owners, output, or routes. Sources: P12.1; P12.3; MET-ROMAN-TRADE.
 [secure broad craft context; contested placement]
+
+## 2026-07-23 - Republican Rome civic pass remains city-point proxy work
+
+Vesta, Saturn, the milestone, Penates, arches, altar, Rostra, Basilica Iulia,
+Pompeian complex, Iuppiter Stator, and Curiae Veteres are present at AD 1 or
+securely pre-date it, but their exact fabric, location, rite, staffing, and
+later restoration are not reconstructed. Source: Digital Augustan Rome records
+listed in `M5_ROMAN_CIVIC_BUILDINGS.md`. [secure existence/date context;
+contested city-point scope]

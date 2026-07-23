@@ -2610,3 +2610,9 @@ The first 12-city layout exposed Smyrna and Thessaloniki as unreviewed M5
 market/historic nodes. They were removed rather than broadening that gate;
 the 12 productive families use ten already checked hubs and local guild output
 contracts.
+
+## 2026-07-23 - Treat Republican civic anchors as separate Rome-point specials
+
+The new Forum, Palatine, and Campus Martius layer uses low one-level contracts
+and direct icons rather than a fictional detailed city plan. Each remains below
+the scalable regional economy and is explicitly bounded in its ledger.
