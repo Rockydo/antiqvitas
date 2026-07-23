@@ -44,3 +44,12 @@ uninscribed object studies rather than depictions of a ruler, person, dynasty,
 palace, territory, battle, mounted force, constitutional formula, or seal
 impression. The reviewed portrait contact sheet is
 [here](DIRECT_PRIVILEGE_ICON_BATCH_04.png).
+
+## Fifth tribal, Brittonic, and regional-Iranian batch
+
+The next three icons distinguish a tribal household, a deliberately non-ritual
+Brittonic religious-specialist material grouping, and an ancient Iranian
+regional court. They remain uninscribed object studies rather than depictions
+of an elder, druid, king, person, tribe, temple, palace, rite, territory,
+battle, constitutional formula, or seal impression. The reviewed portrait
+contact sheet is [here](DIRECT_PRIVILEGE_ICON_BATCH_05.png).

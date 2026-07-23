@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-23 - Direct tribal, Brittonic, and Iranian privilege icons
+
+- Added dedicated 64x90 icons for a tribal elder-council material context, a
+  deliberately non-ritual Brittonic religious-specialist grouping, and an
+  ancient Iranian regional court. The migration now has fifteen direct
+  privilege illustrations and nine remaining contracts.
+- Reviewed the portrait contact sheet and restricted all three to uninscribed,
+  non-narrative materials, without a named elder, druid, king, person, tribe,
+  temple, palace, rite, map, battle, constitutional formula, or seal
+  impression.
+
+- `gmake validate` passed with fifteen direct privilege icons. The bounded
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: continue the privilege and religion migrations.
+
 ## 2026-07-23 - Augusta Raurica frontier-camp building
 
 - Added the 32nd named Roman special: a restrained `basel` near-site proxy for
