@@ -4157,3 +4157,12 @@ output, route, or workforce claim. Sources: P12.1; P12.3; MET-ROMAN-TRADE.
 The 878 `T2F` entries use AD 1-active precise Pleiades settlements at 6--12px;
 they do not assert exact local identity, civic extent, polity, or population.
 [lowest-confidence source proxy]
+
+## 2026-07-23 - Rome civic-fabric entries remain city-point proxies
+
+Pons Fabricius is represented only as an attested pre-AD 1 crossing. Pons
+Aemilius, Fornix Augusti, the portico group, embankment, Aedes Portuni, Regia,
+and Circus Flaminius are not a reconstruction of Rome's street plan, traffic,
+ritual, cult image, market, office, or public programme. Sources: Digital
+Augustan Rome records listed in `M5_ROMAN_CIVIC_BUILDINGS.md`. [secure crossing
+context; contested city-point scope]

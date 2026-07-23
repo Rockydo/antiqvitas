@@ -1205,3 +1205,335 @@ antq_castrum_bonna = {
 		pure_tooltip_entry = pte_no_propagating_zone_of_control
 	}
 }
+
+antq_pons_fabricius = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = laborers
+	max_levels = 1
+	category = infrastructure_category
+	employment_size = generic_peasant_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = infrastructure_build_time
+	modifier = {
+		local_max_control = 0.015
+		local_merchant_capacity = 0.015
+	}
+	unique_production_methods = {
+		antq_pons_fabricius_maintenance = {
+			masonry = 0.06
+			tools = 0.02
+			lumber = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_pons_aemilius = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = laborers
+	max_levels = 1
+	category = infrastructure_category
+	employment_size = generic_peasant_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = infrastructure_build_time
+	modifier = {
+		local_max_control = 0.015
+		local_merchant_capacity = 0.015
+	}
+	unique_production_methods = {
+		antq_pons_aemilius_maintenance = {
+			masonry = 0.07
+			tools = 0.02
+			lumber = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_fornix_augusti = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	category = government_category
+	employment_size = generic_burgher_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = government_build_time
+	modifier = {
+		local_max_control = 0.02
+		local_cultural_tradition = 0.01
+	}
+	unique_production_methods = {
+		antq_fornix_augusti_maintenance = {
+			marble = 0.04
+			masonry = 0.04
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_porticus_ad_nationes = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	category = cultural_category
+	employment_size = cultural_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = cultural_building_time
+	modifier = {
+		local_cultural_tradition = 0.03
+		local_unrest = -0.003
+	}
+	unique_production_methods = {
+		antq_porticus_ad_nationes_maintenance = {
+			masonry = 0.05
+			marble = 0.03
+			lumber = 0.02
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_porticus_octavia = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	category = cultural_category
+	employment_size = cultural_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = cultural_building_time
+	modifier = {
+		local_cultural_tradition = 0.025
+		local_unrest = -0.003
+	}
+	unique_production_methods = {
+		antq_porticus_octavia_maintenance = {
+			masonry = 0.05
+			marble = 0.03
+			lumber = 0.02
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_hecatostylum = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	category = cultural_category
+	employment_size = cultural_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = cultural_building_time
+	modifier = {
+		local_cultural_tradition = 0.025
+		local_unrest = -0.003
+	}
+	unique_production_methods = {
+		antq_hecatostylum_maintenance = {
+			masonry = 0.05
+			marble = 0.03
+			lumber = 0.02
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_tiber_embankment = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = laborers
+	max_levels = 1
+	category = infrastructure_category
+	employment_size = generic_peasant_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = infrastructure_build_time
+	modifier = {
+		local_max_control = 0.01
+		local_merchant_capacity = 0.015
+	}
+	unique_production_methods = {
+		antq_tiber_embankment_maintenance = {
+			masonry = 0.08
+			stone = 0.05
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_porticus_post_navalia = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = soldiers
+	max_levels = 1
+	category = naval_category
+	employment_size = dock_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = medium_port_building_time
+	modifier = {
+		local_sailors = 0.005
+		local_repair_speed = 0.005
+	}
+	unique_production_methods = {
+		antq_porticus_post_navalia_maintenance = {
+			lumber = 0.05
+			naval_supplies = 0.04
+			tar = 0.03
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_porticus_forum_holitorium = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	category = trade_category
+	employment_size = trade_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = market_build_time
+	modifier = {
+		local_merchant_capacity = 0.02
+		local_merchant_power = 0.005
+	}
+	unique_production_methods = {
+		antq_porticus_forum_holitorium_maintenance = {
+			masonry = 0.05
+			pottery = 0.03
+			fruit = 0.04
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_aedes_portuni = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = clergy
+	max_levels = 1
+	category = religious_category
+	employment_size = religious_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = religious_building_time
+	modifier = {
+		local_unrest = -0.003
+		local_cultural_tradition = 0.015
+	}
+	unique_production_methods = {
+		antq_aedes_portuni_maintenance = {
+			masonry = 0.04
+			marble = 0.02
+			incense = 0.02
+			tools = 0.01
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_regia = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = clergy
+	max_levels = 1
+	category = government_category
+	employment_size = religious_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = government_build_time
+	modifier = {
+		local_max_control = 0.015
+		local_clergy_max_literacy = 0.005
+	}
+	unique_production_methods = {
+		antq_regia_maintenance = {
+			masonry = 0.04
+			beeswax = 0.02
+			books = 0.02
+			tools = 0.01
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_circus_flaminius = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	category = cultural_category
+	employment_size = cultural_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = cultural_building_time
+	modifier = {
+		local_cultural_tradition = 0.02
+		local_unrest = -0.004
+	}
+	unique_production_methods = {
+		antq_circus_flaminius_maintenance = {
+			lumber = 0.04
+			masonry = 0.03
+			cloth = 0.02
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}

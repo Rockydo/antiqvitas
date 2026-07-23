@@ -246,3 +246,27 @@ Its reviewed generated source is
 `assets_queue/generated_sources/antq_castrum_bonna_source.png`; the centered
 128px crop is retained at `assets_queue/generated/antq_castrum_bonna.png` and
 encoded as `main_menu/gfx/interface/icons/buildings/antq_castrum_bonna.dds`.
+
+## Rome civic-fabric pass
+
+The twelve city-point additions model bridges, a river embankment, an arch,
+public porticoes, market-edge and shore service, a small riverside temple, the
+Regia, and Circus Flaminius. Their direct sources are Digital Augustan Rome:
+[Pons Fabricius](https://www.digitalaugustanrome.org/records/pons-fabricius/),
+[Pons Aemilius](https://www.digitalaugustanrome.org/records/pons-aemilius/),
+[Fornix Augusti](https://www.digitalaugustanrome.org/records/fornix-augusti/),
+[Porticus ad Nationes](https://www.digitalaugustanrome.org/records/porticus-ad-nationes/),
+[Porticus Octavia](https://www.digitalaugustanrome.org/records/porticus-octavia/),
+[Hecatostylum](https://www.digitalaugustanrome.org/records/hecatostylum/),
+[Tiber embankment](https://www.digitalaugustanrome.org/records/tiberis-grand-embankment/),
+[Porticus post Navalia](https://www.digitalaugustanrome.org/records/porticus-vicus-aesculeti/),
+[Forum Holitorium portico](https://www.digitalaugustanrome.org/records/porticus-forum-holitorium/),
+[Aedes Portuni](https://www.digitalaugustanrome.org/records/portunus-aedes/),
+[Regia](https://www.digitalaugustanrome.org/records/regia/), and
+[Circus Flaminius](https://www.digitalaugustanrome.org/records/circus-flaminius/).
+Only Pons Fabricius is treated as a secure AD 1 crossing; every uncertain
+identification, date, plan, use, traffic, ritual, market, and staffing claim is
+explicitly contested or omitted. The dedicated 3x4 source sheet is
+`assets_queue/generated_sources/antq_roman_civic_fabric_sheet_source.png`; its
+twelve direct 128px BC7 derivatives depict empty architectural silhouettes,
+with no people, inscriptions, flags, or later imperial architecture.
