@@ -43,3 +43,27 @@ The source notation `PLE:<id>` in
 and Regium retain a direct period form under the Latin dynamic-language adapter;
 the adapter is an engine lookup and does not claim a monolingual local speech
 community.
+
+## 2026-07-23 - Exact northern and central Italian pass
+
+Nine further installed city keys have a Pleiades settlement point whose recorded
+life includes AD 1 and whose coordinate falls directly on the modern local-key
+anchor. The conservative display forms are recorded below. They are direct
+toponym replacements only: neither a settlement polygon nor any assertion about
+local language, civic rank, population, or ownership follows from this pass.
+
+| Installed key | AD 1 display form | Pleiades place | Point |
+| --- | --- | --- | --- |
+| ancona | Ancona | 413014 | 43.61899, 13.51607 |
+| belluno | Bellunum | 187311 | 46.14003, 12.21739 |
+| cesena | Caesena | 393397 | 44.13511, 12.24180 |
+| cosenza | Consentia | 452308 | 39.29539, 16.25361 |
+| cremona | Cremona | 383628 | 45.13364, 10.02615 |
+| matera | Matera | 442650 | 40.66889, 16.60628 |
+| parma | Parma | 383737 | 44.80151, 10.32797 |
+| treviso | Tarvisium | 393503 | 45.66625, 12.24206 |
+| verona | Verona | 383816 | 45.44215, 10.99572 |
+
+The Pleiades IDs resolve through `https://pleiades.stoa.org/places/<id>` and the
+project's cached CC-BY CSV snapshot, described in
+`docs/world_1ad/PLEIADES_PROVENANCE.md`.

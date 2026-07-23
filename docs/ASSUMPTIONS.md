@@ -3904,3 +3904,15 @@ law, export cargo, workforce, date of construction, or measured output.
 Sources weighed: the direct Pleiades/plan P8.1 location anchors, plan
 P12.1/P12.3, `PER`, and `MET-ROMAN-TRADE`. [secure anchor context; contested
 economic placement and scale]
+
+## 2026-07-23 - Italian dynamic names remain direct city-point labels
+
+The Ancona, Belluno, Cesena, Cosenza, Cremona, Matera, Parma, Treviso, and
+Verona dynamic-name rows use only exact Pleiades settlement points whose stated
+chronology includes AD 1. Their Latin dynamic-language adapter is an engine
+lookup, not evidence of uniform language, territory, city extent, civic rank,
+or ownership. Unchanged-looking forms (Ancona, Cremona, Matera, Parma, and
+Verona) remain explicit checked period labels rather than unreviewed vanilla
+survivals. Source: `PLE:413014`, `PLE:187311`, `PLE:393397`, `PLE:452308`,
+`PLE:383628`, `PLE:442650`, `PLE:383737`, `PLE:393503`, `PLE:383816`.
+[secure direct place-name points; contested social and territorial inference]

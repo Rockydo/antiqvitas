@@ -285,6 +285,20 @@ period-name coverage remaining parallel priorities.
 Next: continue source-led period-name coverage and the remaining direct-art
 migrations.
 
+## 2026-07-23 - Exact Italian settlement-name pass
+
+- Added nine further direct Pleiades settlement-point name contracts for
+  Ancona, Bellunum, Caesena, Consentia, Cremona, Matera, Parma, Tarvisium, and
+  Verona. The dynamic layer now has 61 coordinate-verified capital anchors and
+  105 curated direct names, mirrored for every supported client language.
+- The five unchanged-looking names are intentionally retained as checked AD 1
+  forms; the four changed forms remove further modern vanilla labels. Every row
+  records a Pleiades point active at AD 1, and the pass makes no polygon,
+  demographic, linguistic, political, or administrative inference.
+- Next: retain this exact-point method for any further location-name work;
+  unverified vanilla keys remain unchanged rather than receiving plausible but
+  unsupported antiquarian replacements.
+
 ## 2026-07-23 - Ara Pacis and Mausoleum Roman-building pass
 
 - Added the 33rd and 34th named Roman specials: the securely dated Ara Pacis
