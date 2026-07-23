@@ -1,5 +1,22 @@
 # Historical Assumptions
 
+## 2026-07-23 - Ten additional Roman-city names use exact Pleiades anchors
+
+Corduba, Tarraco, Emerita Augusta, Olisipo, Caesaraugusta, Narbo Martius,
+Nemausus, Burdigala, Augustodunum, and Arelate are added only where the cached
+official Pleiades record supplies the ancient settlement point and it agrees
+with an installed modern-city location. Each is a Latin owner-culture display
+override, not a claim about a city polygon, an administrative boundary, a
+provincial capital, or the language of every local population.
+
+Sources: `PLE:256128`; `PLE:246349`; `PLE:256155`; `PLE:256338`;
+`PLE:246344`; `PLE:246347`; `PLE:148142`; `PLE:138248`; `PLE:177460`; and
+`PLE:148217`, from the reviewed Pleiades cache described in
+`docs/world_1ad/PLEIADES_PROVENANCE.md`.
+
+[secure names and city-point matches; no claim to exact local-map boundaries,
+city status, administrative role, or universal cultural identity]
+
 ## 2026-07-23 - Ara Pacis and Mausoleum are bounded Augustan city-point proxies
 
 Digital Augustan Rome securely dates the Ara Pacis dedication to 30 January
