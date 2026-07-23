@@ -5947,3 +5947,15 @@ separate Han runtime-regency blocker.
   zero new normalized mod error-log lines.
 - Next: continue with the next source-led Roman economic or frontier-
   infrastructure improvement that has a verified local engine contract.
+
+## 2026-07-23 - M5 Early Bonna Camp
+
+- Added a source-bounded Early Bonna Camp at the direct `bonn` map field: an
+  Augustan auxiliary-camp proxy only, using the already verified low timber
+  stockade contract while retaining the field's Germanic owner.
+- Added a subject-specific, reviewed 128px BC7 icon and retained its generated
+  source illustration. The Roman named-building ledger now contains 42 direct
+  UI-art contracts; the full M5/M7 audit is 1,514 placements, 75.1% productive
+  and 95.4% scalable.
+- `make validate` and the reduced vanilla/mod menu smoke gate pass with zero
+  new normalized mod error-log lines.

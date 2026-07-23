@@ -474,3 +474,6 @@ frames are P8.1-P8.10/CAH-XI historical proxies, marked `contested`, and are
 not assertions of formal state borders. `intentional_empty_areas.csv` records
 the plan-required Iceland, Madagascar, and eastern-Polynesian exceptions; the
 coverage validator permits no other unassigned ownable location.
+
+- `LIV-BONNA`: Livius.org, ["Bonna (Bonn)"](https://www.livius.org/articles/place/bonna-bonn/), records a Roman fort at Bonna built in Drusus' Rhine offensive between 16/15 and 13 BC and distinguishes it from the post-AD 9 larger legionary base. It supports only the early Augustan camp context at the AD 1 boundary.
+- `LVR-NGL`: Landschaftsverband Rheinland, ["Der Niedergermanische Limes -- Der Rhein als eine Grenze des Imperium Romanum"](https://bodendenkmalpflege.lvr.de/de/projekte/der_niedergermanische_limes/der_rhein_als_grenze.html), identifies Bonna/Bonn as a principal Lower Rhine legionary-camp site and dates the broader Augustan military stationing along the Rhine from about 19 BC. It supports regional military context, not an AD 1 fortress plan or troop total.

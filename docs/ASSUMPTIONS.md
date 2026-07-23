@@ -4136,3 +4136,12 @@ place. Every row records its PLE identifier, measured offset, and `T2R` source
 boundary; none claims exact civic extent, polity, culture, or population.
 Source: local pinned Pleiades snapshot and the checked map projection.
 [light-review remote proxy]
+
+## 2026-07-23 - Bonna camp remains an auxiliary-presence proxy
+
+Early Roman military activity at Bonna is represented as a small auxiliary camp
+from Drusus' Rhine offensive, not the larger permanent legionary base associated
+with the post-AD 9 frontier. The direct Bonn field is a display anchor only;
+the placement does not establish Roman sovereignty, a troop count, a precise
+ground plan, later stone construction, or an enduring limes line. Sources:
+LIV-BONNA; LVR-NGL. [secure early-camp context; contested game-field scope]
