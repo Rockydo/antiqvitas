@@ -222,6 +222,16 @@ port, tax system, animal, person, sign, seal imprint, map, inscription, writing,
 flag, or modern object. The reviewed source/master batch is
 [here](DIRECT_ADVANCE_ICON_BATCH_16.png).
 
+### Batch seventeen review
+
+The Crisis civic-economy illustrations distinguish portable route support, mixed
+blank exchange media, a provision-market counter, and a barred masonry storage
+facade. They do not identify a named route, road, mint, city, polity, ruler,
+merchant, market, army, camp, fortress, port, currency reform, crisis event,
+person, animal, sign, standard, weapon, map, inscription, writing, flag, or
+modern object. The reviewed source/master batch is
+[here](DIRECT_ADVANCE_ICON_BATCH_17.png).
+
 ## Engine and asset verification
 
 The installed build's `main_menu/gfx/interface/advance/` established the

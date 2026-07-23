@@ -1114,7 +1114,7 @@ antq_high_empire_exchange = {
 
 antq_crisis_trade_routes = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_crisis_trade_routes
 	depth = 0
 	research_cost = 6.0
 	ai_weight = { add = 100 }
@@ -1122,7 +1122,7 @@ antq_crisis_trade_routes = {
 
 antq_debased_currency_exchange = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_debased_currency_exchange
 	depth = 1
 	research_cost = 6.5
 	requires = antq_crisis_trade_routes
@@ -1131,7 +1131,7 @@ antq_debased_currency_exchange = {
 
 antq_military_supply_markets = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_military_supply_markets
 	depth = 2
 	research_cost = 7.0
 	requires = antq_debased_currency_exchange
@@ -1140,7 +1140,7 @@ antq_military_supply_markets = {
 
 antq_fortified_warehouses = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_fortified_warehouses
 	depth = 3
 	research_cost = 7.5
 	requires = antq_military_supply_markets
