@@ -1,5 +1,19 @@
 # Historical Assumptions
 
+## 2026-07-23 - High Empire civic advance art stays generic
+
+The twenty-first direct advance-icon batch depicts generic civic maintenance,
+urban water and goods, craft materials, and athletic equipment. It identifies no
+named city, building, benefactor, gateway, ruler, empire, market, port, trade,
+guild, workshop, culture, religion, contest, games, stadium, victory, event,
+person, animal, map, sign, inscription, writing, symbol, flag, or modern object.
+
+Sources: plan sections `P15` and asset-pipeline boundary `P20` in
+`ANTIQVITAS_MASTER_PLAN.md`.
+
+[secure broad civic, urban, craft, and athletic material contexts; contested
+practice, distribution, object provenance, and all visual reconstruction]
+
 ## 2026-07-23 - High Empire trade-infrastructure art stays generic
 
 The twentieth direct advance-icon batch depicts generic maritime cargo support,
