@@ -83,6 +83,16 @@ altar, ruler, kingdom, tribe, city, ship, harbour, druid, forest scene, rite,
 person, text, or inscription. The reviewed seventh batch is
 [here](DIRECT_RELIGION_ICON_BATCH_07.png).
 
+## Eighth Baltic, Finnic, North African, and Nile-Cushitic batch
+
+The eighth batch distinguishes broad Baltic/eastern-European, Finnic/northern-
+woodland, North African, and Nile-Cushitic material contexts through
+uninscribed amber, birch bark, ceramic, cloth, fibre, plant, grain, papyrus,
+and stone objects. It identifies no named deity, animal, temple, shrine, altar,
+ruler, tribe, city, pyramid, tomb, forest or desert scene, rite, person, text,
+or inscription. The reviewed eighth batch is
+[here](DIRECT_RELIGION_ICON_BATCH_08.png).
+
 Until each remaining row is completed, its reviewed installed motif is a broad
 readable UI cue, not a claim that the contemporary or historical tradition is
 identical to ANTIQVITAS's sourced category.
