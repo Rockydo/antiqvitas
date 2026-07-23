@@ -252,6 +252,16 @@ religion, treasure, coin system, boat, event, map, sign, inscription, writing,
 symbol, emblem, flag, or modern object. The reviewed source/master batch is
 [here](DIRECT_ADVANCE_ICON_BATCH_19.png).
 
+### Batch twenty-two review
+
+The Principate and High Empire commercial-and-building illustrations distinguish
+a shade counter, a cargo-storage rack, a blank-scroll shelving niche, and
+measurement tools with masonry. They do not identify a named market, city, port,
+route, ruler, empire, merchant, currency, law, warehouse, library, author,
+religion, engineer, project, person, animal, map, sign, inscription, writing,
+symbol, or modern object. The reviewed source/master batch is
+[here](DIRECT_ADVANCE_ICON_BATCH_22.png).
+
 ### Batch twenty-one review
 
 The High Empire civic layer distinguishes plain building-repair materials, an

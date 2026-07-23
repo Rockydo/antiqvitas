@@ -1015,7 +1015,7 @@ antq_seasonal_markets = {
 
 antq_principate_exchange = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_principate_exchange
 	depth = 9
 	research_cost = 6.5
 	starting_technology_level = 4
@@ -1096,7 +1096,7 @@ antq_warehouse_accounts = {
 
 antq_imperial_trade = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_imperial_trade
 	depth = 8
 	research_cost = 8.0
 	requires = antq_warehouse_accounts
@@ -1525,7 +1525,7 @@ antq_observatory_records = {
 
 antq_library_endowments = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_library_endowments
 	depth = 5
 	research_cost = 6.5
 	requires = antq_observatory_records
@@ -1543,7 +1543,7 @@ antq_philosophical_dialogue = {
 
 antq_engineering_manuals = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_engineering_manuals
 	depth = 7
 	research_cost = 7.5
 	requires = antq_philosophical_dialogue
