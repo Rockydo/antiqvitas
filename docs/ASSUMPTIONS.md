@@ -1,5 +1,21 @@
 # Historical Assumptions
 
+## 2026-07-23 - Two Augustan public buildings are bounded Rome-point proxies
+
+The Amphitheatrum Statilii Tauri is secure as Rome's first stone amphitheatre,
+dedicated in 29 BC, but its exact Campus Martius position, scale, construction,
+and use remain unresolved. The Porticus Liviae is secure as a public
+quadriporticus dedicated in 7 BC, but attribution, its central feature, and the
+complete plan remain disputed. Both are therefore contested Rome-point cultural
+proxies with deliberately modest effects and material upkeep, rather than
+reconstructed monuments or quantified economic institutions.
+
+Sources: `DAR-AMPHITHEATRUM-TAURUS`; `DAR-PORTICUS-LIVIAE`, catalogued in
+`docs/world_1ad/SOURCES.md`.
+
+[secure dates and broad building identities; contested location, plan, scale,
+construction, personnel, programme, use, material inventory, and visual detail]
+
 ## 2026-07-23 - Direct religion illustrations identify material contexts only
 
 The fifth direct religion-icon batch treats Manichaeism as a prospective
