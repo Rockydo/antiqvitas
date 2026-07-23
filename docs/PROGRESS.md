@@ -5871,3 +5871,11 @@ separate Han runtime-regency blocker.
 - Next: continue the independent direct-evidence location-name queue and
   leave the documented culture no-pop diagnostic compatibility boundary in
   place until a materially different engine contract is available.
+
+## 2026-07-23 - M4 Lesbos and Paris direct-name pass
+
+- Added Methymna and Lutetia from AD 1-active, direct Pleiades settlement
+  points. The conservative dynamic-name layer now has 61 capital anchors and
+  215 curated city labels across all client localizations.
+- `make validate` and the reduced vanilla/mod menu smoke both passed with zero
+  new normalized error-log lines.

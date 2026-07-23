@@ -4049,3 +4049,11 @@ contexts only. Every placement is a contested city-and-hinterland proxy, not a
 named workshop, output figure, merchant, military contract, or cargo record.
 Sources: P12.1; P12.3; MET-ROMAN-TRADE. [secure broad craft context;
 contested placement, scale, and organization]
+
+## 2026-07-23 - Lesbos and Paris city labels remain direct point adapters
+
+Methymna and Lutetia use Pleiades settlement points whose recorded temporal
+ranges include AD 1 and whose map projections identify the installed city
+fields. Each dynamic label is a city-field display adapter only, not a claim
+about civic extent, culture, polity, or population. Sources: PLE:550738;
+PLE:109126; P8.1; P8.7. [secure direct toponym; contested map-key proxy]
