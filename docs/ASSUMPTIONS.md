@@ -4188,3 +4188,7 @@ securely pre-date it, but their exact fabric, location, rite, staffing, and
 later restoration are not reconstructed. Source: Digital Augustan Rome records
 listed in `M5_ROMAN_CIVIC_BUILDINGS.md`. [secure existence/date context;
 contested city-point scope]
+2026-07-23 - The Temple/civic-memory pass treats only Bellona, Jupiter Tonans,
+Magna Mater, and Forum Iulium as securely dated AD 1 anchors in this set;
+other Digital Augustan Rome records remain city-point proxies with contested
+identification or fabric.
