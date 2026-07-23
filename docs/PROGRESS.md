@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-23 - Logistics and exchange advance-icon batch
+
+- Added distinct direct 256px illustrations for Coin Exchange, Supply Columns,
+  Frontier Patrols, and River Crossings. Each has a retained source, exact
+  master, BC7 DDS texture, ledger row, tree binding, and reviewed contact sheet.
+- The generic material scenes claim no named mint, ruler, city, empire,
+  currency system, army, legion, campaign, camp, road, frontier, border, river,
+  bridge, boat, map, inscription, writing, person, animal, weapon, or modern
+  object. The direct advance migration now covers 47 of 250 advances.
+
+Next: continue dedicated advance art, emphasizing Roman civic buildings, trade
+goods, logistics, and period-appropriate city names alongside the source-led
+Roman building layer.
+
 ## 2026-07-23 - Exchange and infrastructure advance-icon batch
 
 - Added distinct direct 256px illustrations for Silk Exchange, Seasonal
