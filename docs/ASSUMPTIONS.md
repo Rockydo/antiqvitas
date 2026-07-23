@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-23 - Roman privilege illustrations identify material contexts only
+
+The first privilege-art batch treats Senatorial Land Exemption, Equestrian
+Service, and Priestly Colleges as the bounded M6 gameplay adapters already
+recorded in `docs/m6/privileges.csv`. Their imagery uses only uninscribed
+administrative, riding, and public-ritual objects. It does not identify a
+specific Roman family, estate, legal grant, eques, horse, soldier, priest,
+college, deity, temple, sacrifice, office hierarchy, or rite.
+
+Sources: `P8.1`; `P11`; `P13`; `OCD`; `OCD-EQU`; `MET-PRIEST`, catalogued in
+`docs/world_1ad/SOURCES.md` and the M6 privilege ledger.
+
+[secure broad material contexts; no claim to a specific institution, person,
+object provenance, legal formula, or ritual practice]
+
 ## 2026-07-23 - Theatre of Balbus is an AD 1 cultural anchor, not a reconstruction
 
 Digital Augustan Rome records L. Cornelius Balbus's Campus Martius stone

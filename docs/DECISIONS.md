@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-23 - Privilege art uses the native portrait contract
+
+The estate interface resolves `GetEstatePrivilegeIcon` directly and its
+installed asset directory uses 64x90 portrait textures. The new M11 privilege
+ledger therefore keeps each completed key bound to a unique generated source,
+an exact 64x90 PNG master, and an ANTIQVITAS-owned BC7 DDS at the native direct
+path. It reports incomplete migration explicitly; it neither copies a generic
+privilege image nor permits shared source/master assets.
+
 ## 2026-07-23 - Rome expansion remains data-rendered and source-bounded
 
 The Theatre of Balbus is added through the existing named-special ledger,

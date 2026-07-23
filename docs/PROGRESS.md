@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-23 - Direct Roman privilege icon migration begins
+
+- Added a checked direct-icon renderer for the 24 estate privileges using the
+  native 64x90 portrait contract. The first three dedicated illustrations cover
+  Senatorial Land Exemption, Equestrian Service, and Priestly Colleges; 21
+  privilege icons remain to migrate.
+- Reviewed the first portrait contact sheet and restricted it to uninscribed
+  material contexts, with no named person, estate, legal grant, office,
+  temple, ritual, inscription, or seal.
+- `gmake validate` passed with three direct privilege icons, and the bounded
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs with zero
+  new mod-only error-log lines.
+
+Next: continue the privilege and religion migrations.
+
 ## 2026-07-23 - Theatre of Balbus Rome building slice
 
 - Added the securely pre-AD 1 Theatre of Balbus to Rome's named civic-building
