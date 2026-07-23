@@ -4108,3 +4108,13 @@ service categories. Each seed is a contested city-and-hinterland proxy, not a
 named facility, public office, tariff, route schedule, cargo, or municipal
 jurisdiction. Sources: P12.1; P12.3; ORBIS; MET-ROMAN-TRADE; DAR-NAVALIA.
 [secure broad service context; contested placement and organization]
+
+## 2026-07-23 - Aliso is a close-point frontier proxy
+
+The direct installed `recklinghausen` location is used only as a close proxy
+for Haltern's Augustan fortified main camp. The source dates the camp around
+AD 1 and describes timber-and-earth defenses, but does not settle its equation
+with ancient Aliso. The building therefore preserves `Castrum Aliso (Haltern)`
+as a functional label and excludes a legion roster, plan, later stone phase,
+or permanent limes claim. Source: LWL-ALISO. [secure AD 1 camp context;
+contested ancient-name identification]

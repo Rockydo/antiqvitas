@@ -161,9 +161,9 @@ of those twenty Roman and North-African market anchors. It creates no additional
 named site, route, market node, or building family: the broad city-point
 economic representation remains explicitly contested.
 
-A production-and-scale audit now counts every 1,392 M5/M7 start placement rather
-than only these regional rows. It locks the actual layout at 73.1% productive
-and 95.1% scalable; see [BUILDING_AUDIT.md](BUILDING_AUDIT.md).
+A production-and-scale audit now counts every 1,393 M5/M7 start placement rather
+than only these regional rows. It locks the actual layout at 73.0% productive
+and 95.0% scalable; see [BUILDING_AUDIT.md](BUILDING_AUDIT.md).
 
 ## Art review
 
