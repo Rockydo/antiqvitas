@@ -116,6 +116,17 @@ PRODUCTION_RECIPES = {
     "antq_reg_copper_smithy": ("tools", "0.6", (("copper", "0.475"), ("tin", "0.038"))),
     "antq_reg_spice_grinder": ("dyes", "0.2", (("lumber", "0.4444"),)),
     "antq_reg_reed_boatyard": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
+    "antq_reg_oil_bottler": ("wine", "1", (("fruit", "1.154"), ("lumber", "0.157"), ("tools", "0.092"))),
+    "antq_reg_garum_workshop": ("dyes", "0.2", (("lumber", "0.4444"),)),
+    "antq_reg_lime_kiln": ("pottery", "1.0", (("clay", "1.0039"), ("lumber", "0.1201"), ("tools", "0.0504"))),
+    "antq_reg_marble_yard": ("tools", "1", (("iron", "0.8333"),)),
+    "antq_reg_wool_carder": ("cloth", "1", (("wool", "1.0"),)),
+    "antq_reg_mordant_dyehouse": ("dyes", "0.3", (("alum", "0.021"), ("lumber", "0.6247"))),
+    "antq_reg_scale_armoury": ("weaponry", "1", (("lumber", "0.2521"), ("coal", "0.3034"), ("tools", "0.505"))),
+    "antq_reg_wheelwright": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
+    "antq_reg_beadworks": ("jewelry", "0.1", (("ivory", "0.1042"),)),
+    "antq_reg_loomweight_weavery": ("cloth", "0.8", (("fiber_crops", "1.0"),)),
+    "antq_reg_bargeyard": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
 }
 
 
