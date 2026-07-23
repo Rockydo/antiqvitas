@@ -1,7 +1,7 @@
 # M5 economy acceptance report
 
-Date: 2026-07-24  
-Build: EU5 1.3.1.1 / Steam build 24187685  
+Date: 2026-07-24
+Build: EU5 1.3.1.1 / Steam build 24187685
 Scope: bounded M5 node and market verification; no long observer campaign
 
 ## Acceptance evidence
