@@ -3731,6 +3731,19 @@ snapshot provenance in `docs/world_1ad/PLEIADES_PROVENANCE.md`; individual
 `PLE:<id>` rows in `docs/m4/dynamic_location_name_overrides.csv`. [secure
 toponym; contested linguistic representation]
 
+## 2026-07-23 - Expanded Roman-period city labels remain conditional culture layers
+
+The Britain, Aegean, and Rhine additions use only exact installed location keys
+and secure conventional ancient forms: Londinium, Eboracum, Aquae Sulis,
+Athenae, Patrae, Mogontiacum, Colonia Agrippinensis, and related city names.
+They are applied through Brittonic, Koine Greek, or Latin localization adapters,
+so they are conditional display names rather than claims about a whole
+province's everyday speech, civic boundary, legal status, or ethnic makeup.
+Sources weighed: the locally recorded Pleiades and Barrington references
+(`PLE`, `P8.1`, `P8.7`) in `docs/m4/dynamic_location_name_overrides.csv`, plus
+the cached Mainz municipal Roman-period reference (`MZ-MOG`) for Mogontiacum.
+[secure toponym; contested linguistic representation]
+
 ## 2026-07-22 - Public Granaries advance art is a generic provisioning motif
 
 The accepted Public Granaries icon depicts an uninscribed small grain store,

@@ -1,5 +1,13 @@
 # Blockers
 
+## 2026-07-23 - M5 scalable output contract calibration
+
+Two menu-smoke probes accepted native guild production syntax but rejected the
+ten methods' enforced 20% profit margins. The calibrated retry reduced this to
+four 18.03–21.43% deviations. The scalable pass is reverted to the accepted
+smoke-green maintenance contract; retry only with a local profit-calibration
+probe that avoids repeated full launches.
+
 ## 2026-07-22 - M12 fresh AD 1 initialization: installed culture suppressor is not runtime-valid
 
 Status: **deferred after two local engine probes; the working tree is restored
