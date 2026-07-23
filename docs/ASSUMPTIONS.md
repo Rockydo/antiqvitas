@@ -3974,3 +3974,10 @@ range covers AD 1 and whose supplied coordinates match the installed city key.
 The Greek dynamic adapter is an engine lookup, not evidence of universal local
 language, territory, civic rank, or population. [secure direct toponym;
 contested social and territorial inference]
+
+## 2026-07-23 - North-African names remain direct city-point labels
+
+The new North-African rows are Pleiades settlement/port points spanning AD 1.
+Their Latin adapter is a display lookup only, not evidence for universal
+language, territory, civic rank, or population. [secure direct toponym;
+contested social and territorial inference]
