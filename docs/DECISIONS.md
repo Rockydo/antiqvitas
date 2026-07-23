@@ -2629,3 +2629,19 @@ outputs, then keeps
 the regional definitions on the already proven scalable guild contract. The
 120 placements are restricted to ten reviewed Rome/Mediterranean hubs; this
 improves supply-chain texture without claiming individual excavated workshops.
+
+## 2026-07-24 - Redirect known layered loading scenes instead of inventing a selector
+
+Inspection of the installed loading-screen GUI established that normal loading
+art is an `ecs_scene_viewer_widget` supplied by `GetCurrentLoadingScreen`; the
+previous 1920x1080 `startscreen.dds` replacement only covers the separate
+startup splash. The installed `00_loading_screens.txt` declares eleven
+engine-recognised scenes, each binding eight `illustration_image` lists.
+
+The first same-filename scene-script experiment was rejected by menu smoke:
+the game merged its declarations additively, emitting duplicate-key errors.
+`tools/m11_loading_screens.py` consequently VFS-overrides only the exact 88
+inherited DDS texture paths across those eleven known scenes. Each layer gets
+its scene's same 3840x2160 opaque BC1/sRGB panorama. This preserves the known
+scene and camera interfaces without inventing a selector or attempting
+unsupported bespoke 3D parallax, and leaves no selectable vanilla panorama.

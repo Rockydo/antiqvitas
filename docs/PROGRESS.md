@@ -6037,3 +6037,16 @@ reviewed 128px BC7 DDS.
 - Hardened the Tier-2 title filter against archaeological-feature labels and
   regenerated every proximity layer. Ten unsafe proxies now fall back to the
   explicit Tier-3 layer; full validation and smoke remain green.
+
+## 2026-07-24 - M11 selectable loading-screen collection
+
+- Added eight reviewed 3840x2160 historical loading panoramas: Ostia, Augustan
+  Forum, Alexandria, Chang'an, Meroë, lower Rhine, Teotihuacan, and Campus
+  Martius.
+- Used the locally verified layered-scene contract without duplicating its
+  additive scripts: every one of the eleven selectable vanilla scene keys now
+  resolves through its exact VFS-overridden DDS textures to the reviewed
+  collection; the prior 1920x1080 startup splash remains separately intact.
+- Added a deterministic asset/declaration validator and contact-sheet review
+  artifact. Next: run complete validation and the reduced enabled-mod menu
+  smoke, then commit only if both are green.
