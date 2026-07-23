@@ -5987,3 +5987,11 @@ separate Han runtime-regency blocker.
 - Reconciled the player-facing building guide to its checked ledgers: 130
   reusable direct-art families and 1,564 AD 1 regional placements, including
   the full tenth craft pass and its macro-region distribution.
+
+## 2026-07-23 - M5 Rome civic-fabric pass
+
+- Added twelve source-bounded direct-art Rome specials for crossings, river
+  infrastructure, gateway, public porticoes, market edge, shore service,
+  temple, Regia, and Circus Flaminius.
+- The Roman named-building ledger now contains 54 specials and the M11 asset
+  inventory contains 509 checked direct player-facing art chains.

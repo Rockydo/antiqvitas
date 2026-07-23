@@ -2575,3 +2575,11 @@ reviewable document. Earlier building textures that predate per-key source and
 PNG-master retention are explicitly shown with a dash rather than having a
 fictional provenance inferred from a filename; their existing direct DDS
 contracts remain enforced by the M5 and goods validators.
+
+## 2026-07-23 - Rome civic fabric is a bounded city-point layer
+
+The twelve river-and-public-space additions use individual specials only where
+Digital Augustan Rome supplies a direct record. All disputed chronology,
+identification, dimensions, arrangement, traffic, ritual, and personnel remain
+contested or excluded. The new icons show distinct empty architectural
+silhouettes, not reconstructed events or named people.
