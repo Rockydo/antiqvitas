@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-23 - Direct frontier, regional, chiefly, and town privilege icons
+
+- Added dedicated 64x90 icons for a frontier court, regional court, early
+  African chiefly household, and settled town-cluster household. The migration
+  now has nineteen direct privilege illustrations and five remaining contracts.
+- Reviewed the portrait contact sheet and restricted every icon to
+  uninscribed, non-narrative material contexts, without a named court, ruler,
+  chief, person, town, building, map, battle, constitutional formula, or seal
+  impression.
+
+- `gmake validate` passed with nineteen direct privilege icons. The bounded
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: complete the remaining privilege migration.
+
 ## 2026-07-23 - Direct tribal, Brittonic, and Iranian privilege icons
 
 - Added dedicated 64x90 icons for a tribal elder-council material context, a

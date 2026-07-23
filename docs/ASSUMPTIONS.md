@@ -2,23 +2,27 @@
 
 ## 2026-07-23 - Privilege illustrations identify material contexts only
 
-The first five privilege-art batches treat Senatorial Land Exemption,
+The first six privilege-art batches treat Senatorial Land Exemption,
 Equestrian Service, Priestly Colleges, Annona, Praetorian Donatives, the Han
 Palace Bureau, Wang Clan Regency, Great-House Autonomy, Client Royal Autonomy,
 Kushite Royal Court, Steppe Clan Autonomy, and Early Korean Royal Court as the
 bounded M6 gameplay adapters already recorded in
 `docs/m6/privileges.csv`, plus Tribal Elder Council, Brittonic Druidic
-Council, and Parthian Sub-King Autonomy. Their imagery uses only uninscribed
-administrative, riding, public-ritual, provisioning, payment, tribal-household,
-religious-specialist, and regional court-household materials. It does not
-identify a specific Roman family, estate, legal grant, eques, horse, soldier,
-unit, emperor, priest, college, deity, temple, sacrifice, palace, official,
-office hierarchy, named Wang or Iranian house, elder, druid, Brittonic tribe,
-Kushite ruler, steppe clan, Korean dynasty, king, or rite.
+Council, Parthian Sub-King Autonomy, Border-Court Autonomy, Regional Royal
+Court, Chiefly Court, and Town-Cluster Council. Their imagery uses only
+uninscribed administrative, riding, public-ritual, provisioning, payment,
+tribal-household, religious-specialist, frontier- and regional-court,
+chiefly-household, and settled-town household materials. It does not identify
+a specific Roman family, estate, legal grant, eques, horse, soldier, unit,
+emperor, priest, college, deity, temple, sacrifice, palace, official, office
+hierarchy, named Wang or Iranian house, elder, druid, Brittonic tribe, Armenia,
+Osroene, Aksumite ruler, Djenné-Djenno council, Kushite ruler, steppe clan,
+Korean dynasty, king, or rite.
 
 Sources: `P8.1`; `P8.2`; `P8.3`; `P8.5`; `P11`; `P13`; `OCD`; `OCD-EQU`;
 `MET-PRIEST`; `BHR`; `CAH-XI`; `CTP-WM`; `PLE`; `SAM`; `P8.7`; `BM-DRU`,
-catalogued in `docs/world_1ad/SOURCES.md` and the M6 privilege ledger.
+and `PER`, catalogued in `docs/world_1ad/SOURCES.md` and the M6 privilege
+ledger.
 
 [secure broad material contexts; no claim to a specific institution, person,
 object provenance, legal formula, distribution, payment, or ritual practice]
