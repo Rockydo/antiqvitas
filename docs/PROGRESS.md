@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-23 - Direct religion icon migration begins
+
+- Added a ledger-driven direct-religion asset contract and the first three
+  dedicated 128px icons: Roman civic ritual, Hellenic civic ritual, and a
+  pre-Nicene community context. The transition has three direct religion
+  illustrations and thirty-four remaining reviewed aliases.
+- Reviewed the contact sheet and constrained each composition to uninscribed
+  material context, without a named deity, sanctuary, rite, church, clergy,
+  saint, ruler, city, empire, or historical event.
+- `gmake validate` passed with three direct religion icons. The bounded
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: continue direct religion and privilege art alongside advances.
+
 ## 2026-07-23 - Direct institution fallback replacement
 
 - Replaced the last two shared M8 institution visual sources with dedicated
