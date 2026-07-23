@@ -4099,3 +4099,12 @@ in AD 1, but the wider 1.50--3.25-pixel match can represent a nearby site or
 district. Each row records its PLE identifier and measured offset as `tier2`;
 none claims exact civic extent, polity, culture, or population. Source: local
 Pleiades snapshot and checked projection queue. [light-review proxy]
+
+## 2026-07-23 - Eighth M5 civic-service pass remains regional
+
+Water access, market measures, road relays, caravan and port handling, lamp
+oil, bath fuel, pack traffic, grain handling, and customs are broad antique
+service categories. Each seed is a contested city-and-hinterland proxy, not a
+named facility, public office, tariff, route schedule, cargo, or municipal
+jurisdiction. Sources: P12.1; P12.3; ORBIS; MET-ROMAN-TRADE; DAR-NAVALIA.
+[secure broad service context; contested placement and organization]

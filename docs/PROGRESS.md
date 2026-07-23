@@ -5914,3 +5914,10 @@ separate Han runtime-regency blocker.
 - Promoted 216 additional precise AD 1 Pleiades settlement adapters at a
   documented 1.50--3.25-pixel map offset. Obvious modern site forms and
   unchanged labels are rejected; every row remains explicit `tier2`.
+
+## 2026-07-23 - M5 eighth illustrated civic-service pass
+
+- Added twelve direct-art service families and 120 placements: water access,
+  market measures, roads, caravan and port handling, fuel, pack movement, grain
+  handling, and customs.
+- The M5/M7 audit is 1,392 placements: 73.1% productive and 95.1% scalable.
