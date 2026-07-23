@@ -3765,6 +3765,16 @@ ethnic force ratios, or a historical contract at campaign start. Sources
 weighed: P14 and CAH-XI; `STR-GER` and `OCD-GER` constrain the Germanic adapter.
 [secure broad role distinction; contested availability and scale]
 
+## 2026-07-23 - African and Levantine display names are conditional city labels
+
+Hippo Regius, Berenice, Hippo Diarrhytus, Caesarea Mauretaniae, Tacape,
+Hadrumetum, Oea, Berytus, Hierosolyma, and Syene are retained only where the
+ancient place has a direct reviewed installed-city match. Latin and Egyptian
+dynamic layers are display adapters, not claims about daily speech, provincial
+boundaries, civic status, or a uniform culture. Sources weighed: Pleiades and
+the plan's P8.1/P11 references, recorded per row in the naming ledger.
+[secure toponym; contested linguistic representation]
+
 ## 2026-07-22 - Public Granaries advance art is a generic provisioning motif
 
 The accepted Public Granaries icon depicts an uninscribed small grain store,
