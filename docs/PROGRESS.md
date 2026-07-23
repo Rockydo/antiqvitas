@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-23 - Argentoratum AD 1 frontier camp
+
+- Added `Castrum Argentoratum` at the direct installed Strasbourg point. The
+  University of Strasbourg source dates Drusus' legionary-city foundation to
+  12 BC, so the AD 1 implementation is strictly a low timber-and-earth camp
+  proxy, with no legion roster, plan, stone fortress, limes, or later city
+  claim.
+- Generated and visually reviewed a separate direct 128px building icon using
+  the native barracks icon only as a style reference. The asset is source,
+  master, BC7 DDS, ledger, and renderer checked; it does not reuse any other
+  building's texture.
+- The M5/M7 audit now covers 456 placements: 319 productive (70.0%) and 388
+  scalable (85.1%), alongside 40 named Roman building contracts.
+
 ## 2026-07-23 - Complete direct advance art
 
 - Direct coverage reached 250/250; validation pending.

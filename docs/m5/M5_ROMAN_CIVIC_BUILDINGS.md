@@ -197,3 +197,20 @@ cropped to `assets_queue/generated/antq_castrum_hunnerberg_128.png`, and
 encoded as `main_menu/gfx/interface/icons/buildings/antq_castrum_hunnerberg.dds`.
 The source sheet used the inspected vanilla barracks reference named in the
 Novaesium section as a style reference only.
+
+## Argentoratum camp source, boundary, and art
+
+`UNISTRA-ARGENTORATUM` is the University of Strasbourg's 2016 Johannes Dahm
+[doctoral thesis](https://publication-theses.unistra.fr/public/theses_doctorat/2016/Dahm_Johannes_2016_ED520.pdf), whose historical introduction dates the Roman
+legionary-city foundation at Argentoratum to Drusus in 12 BC. The direct
+installed `strasbourg` location consequently receives only the same low
+timber-and-earth stockade contract used by the other securely eligible AD 1
+camps.
+
+`Castrum Argentoratum` encodes neither a legion total, exact ground plan, later
+stone fortress, Rhine limes line, campaign itinerary, nor any later urban
+extent. Its unique icon is a non-reconstructive early-camp material study:
+the independently generated source is retained as
+`assets_queue/generated_sources/antq_castrum_argentoratum_source.png`, cropped
+to `assets_queue/generated/antq_castrum_argentoratum_128.png`, and encoded as
+`main_menu/gfx/interface/icons/buildings/antq_castrum_argentoratum.dds`.

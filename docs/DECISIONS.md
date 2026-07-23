@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-23 - Argentoratum uses the verified low frontier-camp contract
+
+The University of Strasbourg's dated source and the direct installed Strasbourg
+city point satisfy the M5 frontier inclusion threshold. The new special reuses
+only the already engine-validated `defense_category`, `soldiers`,
+`stockade_employment`, and `small_fort_building` contract with the established
+low garrison and unrest values. This adds no speculative unit, owner, road,
+frontier-line, stone-fortress, or demographic mechanics. It receives a new
+direct DDS rather than a shared camp icon.
+
 ## 2026-07-23 - Ara Pacis and Mausoleum reuse established building contracts
 
 The Ara Pacis uses the installed religious-building contract with small
