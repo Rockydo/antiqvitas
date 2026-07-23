@@ -2619,3 +2619,13 @@ the scalable regional economy and is explicitly bounded in its ledger.
 2026-07-23 - Keep contested Rome temple and civic-memory anchors as separate,
 low-impact specials. Their art distinguishes use and form without claiming a
 settled reconstruction.
+
+## 2026-07-23 - Extend M5 through calibrated finished-good production
+
+The twelfth regional batch prioritizes outputs that make the M5 economy visibly
+productive: medicaments, fine cloth, fermented drink, masonry, and steel. It
+uses exact installed production-method inputs and locally margin-calibrated
+outputs, then keeps
+the regional definitions on the already proven scalable guild contract. The
+120 placements are restricted to ten reviewed Rome/Mediterranean hubs; this
+improves supply-chain texture without claiming individual excavated workshops.
