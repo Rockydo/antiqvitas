@@ -2494,3 +2494,10 @@ precise settlement record whose declared range contains AD 1, a nearest-field
 projection of at most 1.50 pixels, and the field's installed pop culture.
 They use a distinct `tier2` confidence and cannot overwrite capitals or the
 secure direct ledger; uncertain or archaeological title forms are rejected.
+
+## 2026-07-23 - M5 seventh craft pass uses the productive ceiling
+
+The twelve new material-craft families all reuse locally harvested guild
+recipes and take the whole M5/M7 placement system to the intentional 80%
+productive upper bound. Further M5 expansion must therefore be maintenance or
+service-led unless it also adds sufficient non-productive infrastructure.
