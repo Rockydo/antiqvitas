@@ -232,6 +232,16 @@ person, animal, sign, standard, weapon, map, inscription, writing, flag, or
 modern object. The reviewed source/master batch is
 [here](DIRECT_ADVANCE_ICON_BATCH_17.png).
 
+### Batch eighteen review
+
+The Dominate civic-economy illustrations distinguish a cart and amphorae,
+customs measures, settlement provisioning materials, and a stone-and-timber
+market gate. They do not identify a named city, ruler, empire, annona policy,
+market, road, port, customs office, merchant, law, tax system, army, foederati
+group, frontier, camp, battle, fort, person, animal, map, sign, standard,
+weapon, inscription, writing, emblem, flag, or modern object. The reviewed
+source/master batch is [here](DIRECT_ADVANCE_ICON_BATCH_18.png).
+
 ## Engine and asset verification
 
 The installed build's `main_menu/gfx/interface/advance/` established the
