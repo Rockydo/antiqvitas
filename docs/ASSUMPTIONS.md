@@ -4151,3 +4151,9 @@ LIV-BONNA; LVR-NGL. [secure early-camp context; contested game-field scope]
 Every new craft is a city-and-hinterland proxy, not a named workshop, owner,
 output, route, or workforce claim. Sources: P12.1; P12.3; MET-ROMAN-TRADE.
 [secure broad craft context; contested placement]
+
+## 2026-07-23 - Far Tier-2 labels remain map proxies
+
+The 878 `T2F` entries use AD 1-active precise Pleiades settlements at 6--12px;
+they do not assert exact local identity, civic extent, polity, or population.
+[lowest-confidence source proxy]
