@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-23 - High Empire trade-infrastructure advance-icon batch
+
+- Added distinct direct 256px illustrations for Eastern Mediterranean Routes,
+  Indian Ocean Monsoons, Border Customs, and Merchant Associations. Each has a
+  retained source, exact master, BC7 DDS texture, ledger row, tree binding, and
+  reviewed contact sheet.
+- The generic material scenes claim no named sea, ocean, monsoon, route, border,
+  city, ruler, empire, port, merchant, customs office, law, tax system, market,
+  currency, event, person, animal, boat, map, sign, inscription, writing,
+  symbol, flag, or modern object. The direct advance migration now covers 67 of
+  250 advances.
+
+Next: continue dedicated advance art, emphasizing Roman civic buildings, trade
+goods, logistics, and period-appropriate city names alongside the source-led
+Roman building layer.
+
 ## 2026-07-23 - Migrations exchange advance-icon batch
 
 - Added distinct direct 256px illustrations for Migration Market Links, Gift
