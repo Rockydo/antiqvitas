@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-23 - Direct Han, Arsacid, and client-court privilege icons
+
+- Added dedicated 64x90 icons for Wang-regency materials, the Arsacid
+  great-house household proxy, and Mediterranean client-court autonomy. The
+  migration now has nine direct privilege illustrations and fifteen remaining
+  contracts.
+- Reviewed the portrait contact sheet and restricted all three to uninscribed
+  material contexts, without an identified person, dynasty, king, emperor,
+  palace, map, battle, constitutional formula, inscription, or seal impression.
+
+- `gmake validate` passed with nine direct privilege icons. The bounded
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: continue the privilege and religion migrations.
+
 ## 2026-07-23 - Direct Roman-and-Han privilege icon batch
 
 - Added dedicated 64x90 icons for public grain provisioning, military-household

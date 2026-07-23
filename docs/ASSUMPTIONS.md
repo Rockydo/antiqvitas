@@ -2,17 +2,20 @@
 
 ## 2026-07-23 - Roman privilege illustrations identify material contexts only
 
-The first two privilege-art batches treat Senatorial Land Exemption,
-Equestrian Service, Priestly Colleges, Annona, Praetorian Donatives, and the
-Han Palace Bureau as the bounded M6 gameplay adapters already recorded in
+The first three privilege-art batches treat Senatorial Land Exemption,
+Equestrian Service, Priestly Colleges, Annona, Praetorian Donatives, the Han
+Palace Bureau, Wang Clan Regency, Great-House Autonomy, and Client Royal
+Autonomy as the bounded M6 gameplay adapters already recorded in
 `docs/m6/privileges.csv`. Their imagery uses only uninscribed administrative,
-riding, public-ritual, provisioning, payment, and court-bureau materials. It
-does not identify a specific Roman family, estate, legal grant, eques, horse,
-soldier, unit, emperor, priest, college, deity, temple, sacrifice, palace,
-official, office hierarchy, or rite.
+riding, public-ritual, provisioning, payment, and court-household materials.
+It does not identify a specific Roman family, estate, legal grant, eques,
+horse, soldier, unit, emperor, priest, college, deity, temple, sacrifice,
+palace, official, office hierarchy, named Wang or Iranian house, king, or
+rite.
 
-Sources: `P8.1`; `P8.3`; `P11`; `P13`; `OCD`; `OCD-EQU`; `MET-PRIEST`; `BHR`,
-catalogued in `docs/world_1ad/SOURCES.md` and the M6 privilege ledger.
+Sources: `P8.1`; `P8.2`; `P8.3`; `P11`; `P13`; `OCD`; `OCD-EQU`; `MET-PRIEST`;
+`BHR`; `CAH-XI`; `CTP-WM`, catalogued in `docs/world_1ad/SOURCES.md` and the
+M6 privilege ledger.
 
 [secure broad material contexts; no claim to a specific institution, person,
 object provenance, legal formula, distribution, payment, or ritual practice]
