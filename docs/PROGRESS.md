@@ -1,5 +1,9 @@
 # Progress
 
+## 2026-07-23 - Complete direct advance art
+
+- Direct coverage reached 250/250; validation pending.
+
 ## 2026-07-23 - Late-antique learning and community icon sheets
 
 - Added 36 direct advance icons; coverage is 195/250.

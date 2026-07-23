@@ -1,5 +1,10 @@
 # Historical Assumptions
 
+## 2026-07-23 - Final advance icon sheets
+
+Generic objects only; no named polity, person, place, text, or symbol.
+Sources: plan `P15`, `P20`.
+
 ## 2026-07-23 - Learning and community sheet art
 
 Generic objects only; no named polity, person, place, text, or symbol.

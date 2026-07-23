@@ -366,7 +366,7 @@ antq_late_roman_bureaucracy = {
 
 antq_dominate_statecraft = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_dominate_statecraft
 	depth = 9
 	research_cost = 12.5
 	requires = antq_late_roman_bureaucracy
@@ -375,7 +375,7 @@ antq_dominate_statecraft = {
 
 antq_kingdom_charters = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_kingdom_charters
 	depth = 0
 	research_cost = 10.0
 	ai_weight = { add = 100 }
@@ -383,7 +383,7 @@ antq_kingdom_charters = {
 
 antq_barbarian_hospitality = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_barbarian_hospitality
 	depth = 1
 	research_cost = 10.5
 	requires = antq_kingdom_charters
@@ -392,7 +392,7 @@ antq_barbarian_hospitality = {
 
 antq_land_assignment = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_land_assignment
 	depth = 2
 	research_cost = 11.0
 	requires = antq_barbarian_hospitality
@@ -401,7 +401,7 @@ antq_land_assignment = {
 
 antq_successor_taxation = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_successor_taxation
 	depth = 3
 	research_cost = 11.5
 	requires = antq_land_assignment
@@ -410,7 +410,7 @@ antq_successor_taxation = {
 
 antq_royal_notaries = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_royal_notaries
 	depth = 4
 	research_cost = 12.0
 	requires = antq_successor_taxation
@@ -419,7 +419,7 @@ antq_royal_notaries = {
 
 antq_regional_law_codes = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_regional_law_codes
 	depth = 5
 	research_cost = 12.5
 	requires = antq_royal_notaries
@@ -428,7 +428,7 @@ antq_regional_law_codes = {
 
 antq_mixed_courts = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_mixed_courts
 	depth = 6
 	research_cost = 13.0
 	requires = antq_regional_law_codes
@@ -437,7 +437,7 @@ antq_mixed_courts = {
 
 antq_settlement_registers = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_settlement_registers
 	depth = 7
 	research_cost = 13.5
 	requires = antq_mixed_courts
@@ -446,7 +446,7 @@ antq_settlement_registers = {
 
 antq_kingdom_building = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_kingdom_building
 	depth = 8
 	research_cost = 14.0
 	requires = antq_settlement_registers
@@ -455,7 +455,7 @@ antq_kingdom_building = {
 
 antq_post_roman_statecraft = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_post_roman_statecraft
 	depth = 9
 	research_cost = 14.5
 	requires = antq_kingdom_building
@@ -860,7 +860,7 @@ antq_warband_integration = {
 
 antq_horse_furniture = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_horse_furniture
 	depth = 3
 	research_cost = 11.5
 	requires = antq_warband_integration
@@ -869,7 +869,7 @@ antq_horse_furniture = {
 
 antq_shield_wall_tactics = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_shield_wall_tactics
 	depth = 4
 	research_cost = 12.0
 	requires = antq_horse_furniture
@@ -878,7 +878,7 @@ antq_shield_wall_tactics = {
 
 antq_regional_militias = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_regional_militias
 	depth = 5
 	research_cost = 12.5
 	requires = antq_shield_wall_tactics
@@ -887,7 +887,7 @@ antq_regional_militias = {
 
 antq_successor_armies = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_successor_armies
 	depth = 6
 	research_cost = 13.0
 	requires = antq_regional_militias
@@ -896,7 +896,7 @@ antq_successor_armies = {
 
 antq_frontier_kingdoms = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_frontier_kingdoms
 	depth = 7
 	research_cost = 13.5
 	requires = antq_successor_armies
@@ -905,7 +905,7 @@ antq_frontier_kingdoms = {
 
 antq_migration_warfare = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_migration_warfare
 	depth = 8
 	research_cost = 14.0
 	requires = antq_frontier_kingdoms
@@ -914,7 +914,7 @@ antq_migration_warfare = {
 
 antq_late_antique_arms = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_late_antique_arms
 	depth = 9
 	research_cost = 14.5
 	requires = antq_migration_warfare
@@ -1283,7 +1283,7 @@ antq_dominate_exchange = {
 
 antq_late_antique_commerce = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_late_antique_commerce
 	depth = 9
 	research_cost = 12.5
 	requires = antq_dominate_exchange
@@ -1327,7 +1327,7 @@ antq_riverine_trade = {
 
 antq_settlement_markets = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_settlement_markets
 	depth = 4
 	research_cost = 12.0
 	requires = antq_riverine_trade
@@ -1336,7 +1336,7 @@ antq_settlement_markets = {
 
 antq_regional_caravans = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_regional_caravans
 	depth = 5
 	research_cost = 12.5
 	requires = antq_settlement_markets
@@ -1345,7 +1345,7 @@ antq_regional_caravans = {
 
 antq_successor_coinage = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_successor_coinage
 	depth = 6
 	research_cost = 13.0
 	requires = antq_regional_caravans
@@ -1354,7 +1354,7 @@ antq_successor_coinage = {
 
 antq_frontier_fairs = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_frontier_fairs
 	depth = 7
 	research_cost = 13.5
 	requires = antq_successor_coinage
@@ -1363,7 +1363,7 @@ antq_frontier_fairs = {
 
 antq_kingdom_exchange = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_kingdom_exchange
 	depth = 8
 	research_cost = 14.0
 	requires = antq_frontier_fairs
@@ -1372,7 +1372,7 @@ antq_kingdom_exchange = {
 
 antq_post_roman_commerce = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_post_roman_commerce
 	depth = 9
 	research_cost = 14.5
 	requires = antq_kingdom_exchange
@@ -1623,7 +1623,7 @@ antq_calendar_revision = {
 
 antq_epistolary_networks = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_epistolary_networks
 	depth = 6
 	research_cost = 9.0
 	requires = antq_calendar_revision
@@ -1632,7 +1632,7 @@ antq_epistolary_networks = {
 
 antq_regional_schools = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_regional_schools
 	depth = 7
 	research_cost = 9.5
 	requires = antq_epistolary_networks
@@ -1641,7 +1641,7 @@ antq_regional_schools = {
 
 antq_crisis_learning = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_crisis_learning
 	depth = 8
 	research_cost = 10.0
 	requires = antq_regional_schools
@@ -1650,7 +1650,7 @@ antq_crisis_learning = {
 
 antq_survival_of_texts = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_survival_of_texts
 	depth = 9
 	research_cost = 10.5
 	requires = antq_crisis_learning
@@ -1765,7 +1765,7 @@ antq_translation_circles = {
 
 antq_kingdom_schools = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_kingdom_schools
 	depth = 2
 	research_cost = 11.0
 	requires = antq_translation_circles
@@ -1774,7 +1774,7 @@ antq_kingdom_schools = {
 
 antq_clerical_recordkeeping = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_clerical_recordkeeping
 	depth = 3
 	research_cost = 11.5
 	requires = antq_kingdom_schools
@@ -1783,7 +1783,7 @@ antq_clerical_recordkeeping = {
 
 antq_lawbook_copying = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_lawbook_copying
 	depth = 4
 	research_cost = 12.0
 	requires = antq_clerical_recordkeeping
@@ -1792,7 +1792,7 @@ antq_lawbook_copying = {
 
 antq_regional_chronicles = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_regional_chronicles
 	depth = 5
 	research_cost = 12.5
 	requires = antq_lawbook_copying
@@ -1801,7 +1801,7 @@ antq_regional_chronicles = {
 
 antq_successor_scholarship = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_successor_scholarship
 	depth = 6
 	research_cost = 13.0
 	requires = antq_regional_chronicles
@@ -1810,7 +1810,7 @@ antq_successor_scholarship = {
 
 antq_pilgrim_learning = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_pilgrim_learning
 	depth = 7
 	research_cost = 13.5
 	requires = antq_successor_scholarship
@@ -1819,7 +1819,7 @@ antq_pilgrim_learning = {
 
 antq_migration_learning = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_migration_learning
 	depth = 8
 	research_cost = 14.0
 	requires = antq_pilgrim_learning
@@ -1828,7 +1828,7 @@ antq_migration_learning = {
 
 antq_late_antique_letters = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_late_antique_letters
 	depth = 9
 	research_cost = 14.5
 	requires = antq_migration_learning
@@ -2132,7 +2132,7 @@ antq_monastic_communities = {
 
 antq_imperial_orthodoxy = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_imperial_orthodoxy
 	depth = 2
 	research_cost = 9.0
 	requires = antq_monastic_communities
@@ -2141,7 +2141,7 @@ antq_imperial_orthodoxy = {
 
 antq_settled_foederati = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_settled_foederati
 	depth = 3
 	research_cost = 9.5
 	requires = antq_imperial_orthodoxy
@@ -2150,7 +2150,7 @@ antq_settled_foederati = {
 
 antq_late_antique_cities = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_late_antique_cities
 	depth = 4
 	research_cost = 10.0
 	requires = antq_settled_foederati
@@ -2159,7 +2159,7 @@ antq_late_antique_cities = {
 
 antq_charitable_hospices = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_charitable_hospices
 	depth = 5
 	research_cost = 10.5
 	requires = antq_late_antique_cities
@@ -2168,7 +2168,7 @@ antq_charitable_hospices = {
 
 antq_regional_elites = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_regional_elites
 	depth = 6
 	research_cost = 11.0
 	requires = antq_charitable_hospices
@@ -2177,7 +2177,7 @@ antq_regional_elites = {
 
 antq_religious_law = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_religious_law
 	depth = 7
 	research_cost = 11.5
 	requires = antq_regional_elites
@@ -2186,7 +2186,7 @@ antq_religious_law = {
 
 antq_dominate_society = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_dominate_society
 	depth = 8
 	research_cost = 12.0
 	requires = antq_religious_law
@@ -2195,7 +2195,7 @@ antq_dominate_society = {
 
 antq_late_antique_communities = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_late_antique_communities
 	depth = 9
 	research_cost = 12.5
 	requires = antq_dominate_society
@@ -2204,7 +2204,7 @@ antq_late_antique_communities = {
 
 antq_hospitality_of_barbarians = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_hospitality_of_barbarians
 	depth = 0
 	research_cost = 10.0
 	ai_weight = { add = 100 }
@@ -2212,7 +2212,7 @@ antq_hospitality_of_barbarians = {
 
 antq_mixed_settlements = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_mixed_settlements
 	depth = 1
 	research_cost = 10.5
 	requires = antq_hospitality_of_barbarians
@@ -2221,7 +2221,7 @@ antq_mixed_settlements = {
 
 antq_kingdom_churches = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_kingdom_churches
 	depth = 2
 	research_cost = 11.0
 	requires = antq_mixed_settlements
@@ -2230,7 +2230,7 @@ antq_kingdom_churches = {
 
 antq_regional_identities = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_regional_identities
 	depth = 3
 	research_cost = 11.5
 	requires = antq_kingdom_churches
@@ -2239,7 +2239,7 @@ antq_regional_identities = {
 
 antq_customary_law = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_customary_law
 	depth = 4
 	research_cost = 12.0
 	requires = antq_regional_identities
@@ -2248,7 +2248,7 @@ antq_customary_law = {
 
 antq_migration_networks = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_migration_networks
 	depth = 5
 	research_cost = 12.5
 	requires = antq_customary_law
@@ -2257,7 +2257,7 @@ antq_migration_networks = {
 
 antq_successor_elites = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_successor_elites
 	depth = 6
 	research_cost = 13.0
 	requires = antq_migration_networks
@@ -2266,7 +2266,7 @@ antq_successor_elites = {
 
 antq_rural_communities = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_rural_communities
 	depth = 7
 	research_cost = 13.5
 	requires = antq_successor_elites
@@ -2275,7 +2275,7 @@ antq_rural_communities = {
 
 antq_migrations_society = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_migrations_society
 	depth = 8
 	research_cost = 14.0
 	requires = antq_rural_communities
@@ -2284,7 +2284,7 @@ antq_migrations_society = {
 
 antq_roman_successor_worlds = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_roman_successor_worlds
 	depth = 9
 	research_cost = 14.5
 	requires = antq_migrations_society
