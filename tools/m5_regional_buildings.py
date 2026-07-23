@@ -216,6 +216,25 @@ PRODUCTION_RECIPES = {
     "antq_reg_cork_workshop": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
     "antq_reg_brushmaker": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
     "antq_reg_tesserae_kiln": ("glass", "0.75", (("lumber", "0.1933"), ("sand", "0.9657"), ("tools", "0.3674"))),
+    # Twelfth pass: these contracts deliberately expose finished goods that
+    # mattered to an AD 1 urban economy (medicaments, fine cloth, fermented
+    # drink, masonry, and crucible steel).  Inputs/output coefficients are
+    # copied from the installed productive methods rather than guessed.
+    "antq_reg_herbal_apothecary": ("medicaments", "0.5", (("wild_game", "0.0461"), ("fiber_crops", "0.1853"))),
+    "antq_reg_wool_drapery": ("fine_cloth", "0.5", (("wool", "1.0"),)),
+    "antq_reg_silk_drapery": ("fine_cloth", "0.7", (("silk", "0.875"),)),
+    "antq_reg_dye_finishing_house": ("fine_cloth", "0.2", (("alum", "0.0522"), ("dyes", "0.2108"))),
+    "antq_reg_wheat_brewery": ("beer", "1", (("wheat", "0.9944"), ("lumber", "0.2484"), ("tools", "0.0999"))),
+    "antq_reg_millet_brewery": ("beer", "1", (("millet", "0.9944"), ("lumber", "0.2484"), ("tools", "0.0999"))),
+    "antq_reg_fruit_brewery": ("beer", "1", (("fruit", "1.0412"), ("lumber", "0.208"), ("tools", "0.1045"))),
+    "antq_reg_rice_brewery": ("beer", "1", (("rice", "0.9944"), ("lumber", "0.2484"), ("tools", "0.0999"))),
+    "antq_reg_stone_masonry_yard": ("masonry", "0.5", (("stone", "0.417"),)),
+    "antq_reg_clay_brickworks": ("masonry", "0.5", (("clay", "0.833"),)),
+    # The installed steel-mill input pair is retained, while the output is
+    # calibrated against the live guild profit guard (20% +/- 1%) rather than
+    # inheriting the later mill's higher margin.
+    "antq_reg_crucible_steel_workshop": ("steel", "3.56", (("iron", "2.963"), ("coal", "2.963"))),
+    "antq_reg_materia_medica": ("medicaments", "0.5", (("mercury", "0.0181"), ("ivory", "0.0906"))),
 }
 
 

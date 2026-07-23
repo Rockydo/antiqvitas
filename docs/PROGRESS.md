@@ -6022,3 +6022,12 @@ separate Han runtime-regency blocker.
 2026-07-23 - M5 Roman temple/civic-memory pass: added twelve source-bounded
 Republican and Augustan Rome specials with direct art; Rome now has 78 named
 specials and the UI ledger has 545 direct asset chains.
+
+## 2026-07-23 - M5 twelfth productive-goods pass
+
+- Added twelve directly illustrated, scalable productive families and 120
+  reviewed Rome/Mediterranean city-hinterland placements: medicine, fine cloth,
+  four fermentation inputs, construction masonry, and high-heat ironworking.
+- The M5/M7 audit is now 1,910 placements: 78.4% productive and 94.5%
+  scalable. The source sheet is retained and each new engine icon is a distinct
+  reviewed 128px BC7 DDS.

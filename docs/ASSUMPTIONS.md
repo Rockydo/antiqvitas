@@ -4192,3 +4192,17 @@ contested city-point scope]
 Magna Mater, and Forum Iulium as securely dated AD 1 anchors in this set;
 other Digital Augustan Rome records remain city-point proxies with contested
 identification or fabric.
+
+## 2026-07-23 - Twelfth M5 productive-goods pass stays a city-hinterland abstraction
+
+The apothecary, fine-textile, fermentation, masonry, and crucible-steel labels
+represent durable ancient production categories, not named premises, output
+totals, recipes, or trade routes at the individual map field. The engine's
+generic `beer` good is intentionally used for wheat, millet, fruit, and rice
+fermented drinks; it is a calibrated economic category, not a claim that these
+were identical beverages. The steel contract similarly represents high-heat
+ironworking without asserting a locally dated wootz workshop. Sources: P12.1;
+P12.3; P14; locally harvested installed productive-method contracts. The steel
+output coefficient is calibrated to the installed guild profit guard rather
+than copied from the later mill tier.
+[secure broad production context; contested placement and organization]
