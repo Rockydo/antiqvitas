@@ -2516,3 +2516,10 @@ The wide Pleiades pass accepts only precise AD 1 settlement records in the
 checked local queue at 1.50--3.25 pixels. It selects one nearest candidate per
 field, rejects obvious modern site labels, and labels every result `tier2`;
 secure direct names remain a separate ledger.
+
+## 2026-07-23 - M5 civic-service pass restores productive headroom
+
+Twelve new families deliberately use maintenance contracts only. This enriches
+water, exchange, transport, and municipal service while moving the full M5/M7
+ledger from its 80% productive ceiling to 73.1%, preserving room for future
+source-led manufacture.
