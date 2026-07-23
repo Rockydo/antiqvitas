@@ -1,7 +1,7 @@
 # Regional antique production buildings
 
 This M5 layer adds twenty-two reusable, directly illustrated antique production
-families and **288 AD 1 start placements**: 143 in Europe, 45 in North Africa,
+families and **388 AD 1 start placements**: 218 in Europe, 70 in North Africa,
 and 96 in the Middle East, plus two in South Asia and two in East Asia. The
 ledger is deliberately a family system rather than fictional unique monuments.
 Each family has a direct PNG source, a
@@ -31,17 +31,17 @@ pair, and total at least 100.
 | Stone yard | 14 | stone, masonry, marble, lumber, tools |
 | Antique shipyard | 23 | lumber, naval supplies, tar, cloth, tools |
 | Silk loom | 2 | fiber crops |
-| Scriptorium | 2 | dyes, paper, lumber |
-| Jewelers' quarter | 2 | gold |
-| Weapon smithy | 2 | lumber, coal, tools |
+| Scriptorium | 22 | dyes, paper, lumber |
+| Jewelers' quarter | 22 | gold |
+| Weapon smithy | 17 | lumber, coal, tools |
 | Cotton weavery | 2 | cotton |
-| Linen weavery | 2 | fiber crops |
+| Linen weavery | 22 | fiber crops |
 | Alum dyehouse | 2 | alum, lumber |
 | Joinery | 2 | lumber, dyes, tools |
 | Bronze foundry | 2 | copper, tin |
-| Ivory carver | 2 | ivory |
-| Leatherworks | 2 | livestock, sand, tar, tools |
-| Amphora depot | 2 | pottery, lumber, tools |
+| Ivory carver | 7 | ivory |
+| Leatherworks | 7 | livestock, sand, tar, tools |
+| Amphora depot | 17 | pottery, lumber, tools |
 
 These numbers are gameplay demand weights, not reconstructed ancient output,
 workforce, prices, or cargo quantities. Existing antique RGO and goods work
@@ -72,9 +72,14 @@ Hadrumetum. Their `city`/`town` profiles are engine adapters for a regional
 urban market, not population totals, municipal-rank reconstructions, or proof
 of a named production site.
 
-A production-and-scale audit now counts every 354 M5/M7 start placement rather
-than only these regional rows. It locks the actual layout at 66.1% productive
-and 81.4% scalable; see [BUILDING_AUDIT.md](BUILDING_AUDIT.md).
+The third placement pass adds five already reviewed manufacture classes to each
+of those twenty Roman and North-African market anchors. It creates no additional
+named site, route, market node, or building family: the broad city-point
+economic representation remains explicitly contested.
+
+A production-and-scale audit now counts every 454 M5/M7 start placement rather
+than only these regional rows. It locks the actual layout at 70.3% productive
+and 85.5% scalable; see [BUILDING_AUDIT.md](BUILDING_AUDIT.md).
 
 ## Art review
 

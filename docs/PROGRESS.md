@@ -5679,3 +5679,14 @@ separate Han runtime-regency blocker.
 
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
+
+## 2026-07-23 - M5 scalable provincial manufacture pass
+
+- Added the requested 100 further reusable building placements at twenty
+  already reviewed Roman and North-African market anchors, without a new
+  unique site, market node, or unsourced trade-route claim.
+- The full M5/M7 audit now records 454 placements: 319 productive (70.3%) and
+  388 scalable (85.5%). `make validate` and the reduced menu/log-diff
+  `make smoke` gate both passed with zero new log lines.
+- Next: continue source-led naming where direct forms exist, while leaving the
+  documented runtime market-relation limitation isolated from this M5 batch.

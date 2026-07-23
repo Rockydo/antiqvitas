@@ -3885,3 +3885,14 @@ is limited to Pataliputra and Barygaza; all other individual placements remain
 contested. Sources weighed: plan P12.1/P12.3/P8.3/P8.4, `BHR`, `PER`,
 `MET-ROMAN-TRADE`, `UNESCO-TYRE`, and `CAM-MELOS-ALUM`. [secure broad craft
 contexts; contested individual placement and scale]
+
+## 2026-07-23 - Provincial manufacture density is not a workshop census
+
+The third M5 pass assigns existing writing, jewelry, weapon-repair, linen,
+amphora, ivory, and leather craft families to twenty already reviewed Roman and
+North-African market anchors. Each is an explicit city-and-hinterland proxy;
+the pass supplies no evidence for an individual workshop, artisan, municipal
+law, export cargo, workforce, date of construction, or measured output.
+Sources weighed: the direct Pleiades/plan P8.1 location anchors, plan
+P12.1/P12.3, `PER`, and `MET-ROMAN-TRADE`. [secure anchor context; contested
+economic placement and scale]

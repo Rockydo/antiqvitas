@@ -2420,3 +2420,12 @@ The validator now admits reviewed South- and East-Asian macro scopes, while
 requiring every placement to resolve to the AD 1 ownership ledger. This adds
 craft texture without inventing prices, production coefficients, or named
 workshops.
+
+## 2026-07-23 - M5 third pass prioritizes scalable provincial craft texture
+
+The requested 100-building second pass reuses direct-art families at the same
+twenty Pleiades/plan-reviewed Roman and North-African market anchors already
+present in the start mirror. This deliberately adds no unique buildings,
+locations, routes, trade goods, or named workshops. It raises the actual
+whole-system layout to 70.3% productive and 85.5% scalable, with the audit
+retaining those bounds as a `make validate` gate.
