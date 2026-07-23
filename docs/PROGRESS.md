@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-23 - Augustan amphitheatre and public-portico building pass
+
+- Added the 35th and 36th named Roman specials: the 29 BC Amphitheatrum
+  Statilii Tauri and the 7 BC Porticus Liviae. Both reuse the verified modest
+  cultural-building contract and use direct 128px illustrations; the Roman
+  contact sheet has been refreshed and reviewed.
+- Kept the historical boundary explicit: no claimed amphitheatre site, plan,
+  capacity, spectacle, or AD 64 fire; no claimed Porticus sponsor, central
+  feature, altar, temple, fountain, shops, houses, or complete courtyard plan.
+  The AD 1 start now contains 176 M5/M7 buildings, including four M7 forts.
+
+Next: continue the direct-art migration, Roman economic-building frontier, and
+source-led period-name coverage.
+
 ## 2026-07-23 - Direct Iranian, Korean, Inner Asian, and Tibetan religion icons
 
 - Added four distinct direct 128px religion illustrations for Manichaeism,
