@@ -72,6 +72,18 @@ MACRO_LOCATION_OVERRIDES = {
     "antioch": "Middle East", "baghdad": "Middle East", "ayasuluk": "Middle East",
     "shoubak": "Middle East", "homs": "Middle East", "sidon": "Middle East",
 }
+# Exact installed Age-of-Traditions guild recipes.  These seven productive
+# families deliberately reuse the local game's proven 20% guild-margin inputs;
+# the remaining three are bounded maintenance-only service/primary proxies.
+PRODUCTION_RECIPES = {
+    "antq_reg_wine_press": ("wine", "1", (("fruit", "1.154"), ("lumber", "0.157"), ("tools", "0.092"))),
+    "antq_reg_pottery_kiln": ("pottery", "1.0", (("clay", "1.0039"), ("lumber", "0.1201"), ("tools", "0.0504"))),
+    "antq_reg_fullonica": ("cloth", "1", (("wool", "1.0"),)),
+    "antq_reg_glassworks": ("glass", "0.75", (("lumber", "0.1933"), ("sand", "0.9657"), ("tools", "0.3674"))),
+    "antq_reg_dye_workshop": ("dyes", "0.2", (("lumber", "0.4444"),)),
+    "antq_reg_metalwork": ("tools", "1", (("iron", "0.8333"),)),
+    "antq_reg_shipyard": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
+}
 
 
 def csv_rows(path: Path, fields: tuple[str, ...]) -> list[dict[str, str]]:
@@ -149,6 +161,11 @@ def load() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         family_keys.add(row["key"])
     if len(family_keys) < 10:
         failures.append("regional building ledger must contain at least ten reusable production families")
+    if len(PRODUCTION_RECIPES) / len(family_keys) < 0.7:
+        failures.append("at least 70% of regional families must use calibrated productive guild recipes")
+    unknown_recipes = set(PRODUCTION_RECIPES) - family_keys
+    if unknown_recipes:
+        failures.append(f"productive recipe map has unknown families {sorted(unknown_recipes)}")
     seen_keys: set[str] = set()
     seen_pairs: set[tuple[str, str]] = set()
     used: set[str] = set()
@@ -201,16 +218,24 @@ def definition(families: list[dict[str, str]]) -> str:
         "",
     ]
     for row in families:
-        lines.extend((f"{row['key']} = {{", "\taudio_tier = 2", "\tis_special = yes", "\tis_foreign = no",
-                      f"\tpop_type = {row['pop_type']}", "\tmax_levels = 1", f"\tcategory = {row['category']}",
+        lines.extend((f"{row['key']} = {{", "\taudio_tier = 2", "\tis_special = no", "\tis_foreign = no",
+                      f"\tpop_type = {row['pop_type']}", "\tmax_levels = guild_max_level", "\tstartup_ramp_target = guild_startup_ramp_target", f"\tcategory = {row['category']}",
                       f"\temployment_size = {row['employment_size']}", "\ttown = yes", "\tcity = yes", "\tmegalopolis = yes",
                       f"\tbuild_time = {row['build_time']}", "\tmodifier = {"))
         for key, amount in pairs(row["modifier"], "modifier"):
             lines.append(f"\t\t{key} = {amount}")
         lines.extend(("\t}", "\tunique_production_methods = {", f"\t\t{row['key']}_maintenance = {{"))
-        for good, amount in pairs(row["maintenance"], "maintenance"):
-            lines.append(f"\t\t\t{good} = {amount}")
-        lines.extend(("\t\t\tcategory = building_maintenance", "\t\t}", "\t}", "\tconstruction_demand = town_building_construction", "}", ""))
+        recipe = PRODUCTION_RECIPES.get(row["key"])
+        if recipe:
+            produced, output, inputs = recipe
+            for good, amount in inputs:
+                lines.append(f"\t\t\t{good} = {amount}")
+            lines.extend((f"\t\t\tproduced = {produced}", f"\t\t\toutput = {output}", "\t\t\tdebug_max_profit = guild_profit_margin", "\t\t\tcategory = guild_input"))
+        else:
+            for good, amount in pairs(row["maintenance"], "maintenance"):
+                lines.append(f"\t\t\t{good} = {amount}")
+            lines.append("\t\t\tcategory = building_maintenance")
+        lines.extend(("\t\t}", "\t}", "\tcustom_tags = { guild }", "\tconstruction_demand = guild_construction", "}", ""))
     return "\n".join(lines)
 
 
@@ -276,7 +301,7 @@ def main() -> int:
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         print(f"m5_regional_buildings: FAIL\n  - {exc}")
         return 1
-    print(f"m5_regional_buildings: PASS ({len(families)} direct-art families; {len(seeds)} regional AD 1 placements)")
+    print(f"m5_regional_buildings: PASS ({len(families)} direct-art families; {len(PRODUCTION_RECIPES)} calibrated productive / {len(families) - len(PRODUCTION_RECIPES)} maintenance families; {len(seeds)} regional AD 1 placements)")
     return 0
 
 

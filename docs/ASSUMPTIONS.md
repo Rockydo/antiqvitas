@@ -3837,3 +3837,8 @@ capacity, exact calendar, full plaza, or inscription. Sources weighed:
 `DAR-NAUMACHIA` and `DAR-HOROLOGIUM` in
 `docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`. [secure broad context; contested
 architectural and operational representation]
+
+## 2026-07-23 - M5 output recipes are engine adapters
+
+Wine, pottery, cloth, glass, dyes, tools, and naval supplies reuse exact native
+guild recipes for documented antique craft classes, not ancient prices or scale.
