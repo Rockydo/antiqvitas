@@ -348,6 +348,23 @@ weighed: `MZ-MOG`; `MZ-DRUSUS` in `docs/m5/M5_ROMAN_CIVIC_BUILDINGS.md`.
 [secure founding chronology and site association; contested installed-location
 representation and quantitative force scale]
 
+## 2026-07-23 - Augusta Raurica military camp is a Basel near-site proxy
+
+Augusta Raurica's own archaeology record says that city construction began
+after its Augustan refoundation in 15 BC and that a wood-built military camp
+stood at Kaiseraugst on the Rhine plain. The installed map has neither Augst
+nor Kaiseraugst, while its nearby `basel` point is Roman-controlled in the
+AD 1 ownership ledger. The project seeds one deliberately small named camp at
+that point as a near-site proxy. It uses a functional display name, not a
+claimed ancient fort title, and does not assert a legion, stone fortification,
+limes system, exact plan, or exact local geography; `basel` also keeps its own
+map name rather than being falsely relabelled Augusta Raurica.
+
+Source: Augusta Raurica, ["Koloniegründung mit Hindernissen"](https://www.augustaraurica.ch/archaeologie/koloniegruendung), and the source-labelled `basel` AD 1 ownership row in `docs/world_1ad/ownership_resolved.csv`.
+
+[secure for the post-15-BC wood-built camp context and Roman control; contested
+for the near-site engine placement and functional building mapping]
+
 ## 2026-07-21 - Vyatka is an early Permic reconstruction, not a modern ethnicity
 
 The thirty-fourth selector batch introduces a Permic proxy for the installed

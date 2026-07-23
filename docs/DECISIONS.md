@@ -2266,6 +2266,21 @@ behavior, then uses substantially smaller garrison/unrest effects. This models
 a timber-and-earth camp without importing later stone fortification, an AD 1
 unit roster, a fixed legion count, or a complete German frontier map.
 
+## 2026-07-23 - Augusta Raurica camp uses a bounded Basel near-site proxy
+
+The official Augusta Raurica record supplies an unusually narrow second
+frontier exception: its post-15-BC Augustan refoundation includes a wood-built
+military camp at Kaiseraugst. The installed map has no Augst or Kaiseraugst
+location, but `basel` is an AD 1 Roman-controlled location. The named-building
+ledger therefore permits that one reviewed near-site, using exactly the same
+low non-propagating stockade contract already proven for Mogontiacum.
+
+The special's display name is deliberately functional rather than an asserted
+recovered Roman fort title. It adds no legion identifier, garrison total, stone
+fortress, limes line, or camp plan. `basel` itself is not dynamically renamed:
+the city-point proxy is sufficient for a bounded building seed but is not a
+license to replace the distinct historical place name with Augusta Raurica.
+
 ## 2026-07-22 - M8 uses a checked per-advance art migration
 
 The former five age-group advance illustrations remain available only as a

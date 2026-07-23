@@ -106,3 +106,20 @@ nearby Classe lagoon, ship total, naval order of battle, or supply volume.
 and modest garrison/unrest modifiers. It is expressly timber-and-earth rather
 than a later stone fortress, and it does not encode a legion count, unit roster,
 frontier line, or stone-wall reconstruction.
+
+## Augusta Raurica camp source and boundary
+
+`AR-COLONIA` is Augusta Raurica's official
+[colony-foundation record](https://www.augustaraurica.ch/archaeologie/koloniegruendung).
+It states that, after a refoundation, construction of Augusta Raurica began
+under Augustus after 15 BC; it also identifies a wood-built military camp on
+the Rhine plain at Kaiseraugst. The installed map contains no Augst or
+Kaiseraugst point, but its `basel` point is securely Roman-controlled in the
+AD 1 ownership ledger.
+
+`Augusta Raurica Camp` therefore uses the same locally verified low
+`defense_category`/`stockade_employment`/`small_fort_building` contract as the
+Mogontiacum exception, with smaller garrison and unrest effects. It is a
+bounded near-site timber-and-earth camp proxy only: the display name is a
+functional identifier rather than a recovered Roman fort title, and it claims
+no legion, stone fortress, limes line, or complete camp plan.

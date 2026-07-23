@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-23 - Augusta Raurica frontier-camp building
+
+- Added the 32nd named Roman special: a restrained `basel` near-site proxy for
+  the wood-built military camp at Kaiseraugst, where the Augusta Raurica
+  refoundation began after 15 BC. It uses the locally proven low,
+  non-propagating timber-camp contract and a direct 128px icon.
+- Kept the evidence boundary explicit: no reconstructed fort title, legion,
+  garrison total, stone fortress, limes line, exact plan, or Basel map-name
+  replacement. The refreshed 32-icon building contact sheet was reviewed.
+- `gmake validate` passed with 32 named Roman specials and 172 M5/M7 start
+  buildings. The bounded vanilla/enabled `gmake smoke` pair reached the menu
+  in both runs and found zero new mod-only error-log lines.
+
+Next: continue the direct-art migration and source-led Roman economic/building
+frontier.
+
 ## 2026-07-23 - Direct Kushite, steppe, and Korean privilege icons
 
 - Added dedicated 64x90 icons for a Kushite court household, early steppe clan
