@@ -2531,3 +2531,9 @@ fortified camp across AD 1 and `recklinghausen` is a close local installed map
 point. It uses the already validated low stockade contract and a new direct
 art asset. Sites lacking either condition remain outside the named-special
 ledger.
+
+## 2026-07-23 - Ninth M5 pass stays productive but bounded
+
+Twelve material-craft families reuse only locally verified guild formulas. The
+full placed system becomes 75.1% productive and 95.4% scalable, inside both
+enforced user ranges.
