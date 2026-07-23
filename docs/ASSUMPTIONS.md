@@ -1,5 +1,19 @@
 # Historical Assumptions
 
+## 2026-07-23 - Baltic, Finnic, North African, and Nile-Cushitic art stays material-only
+
+The eighth direct religion-icon batch distinguishes only broad Baltic/eastern-
+European, Finnic/northern-woodland, North African, and Nile-Cushitic material
+contexts. It identifies no named deity, animal, temple, shrine, altar, ruler,
+tribe, city, pyramid, tomb, forest or desert scene, rite, person, text, or
+inscription.
+
+Sources: `P11`; `CAH-XI`; `P20`, catalogued in
+`docs/world_1ad/SOURCES.md` and bounded by the M4 religion ledger.
+
+[secure broad material contexts; contested specific tradition, practice,
+distribution, object provenance, and all visual reconstruction]
+
 ## 2026-07-23 - South Arabian and European religion art stays material-only
 
 The seventh direct religion-icon batch distinguishes only broad South Arabian,

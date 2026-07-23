@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-23 - Direct Baltic, Finnic, North African, and Nile-Cushitic icons
+
+- Added four distinct direct 128px religion illustrations for Baltic-Slavic,
+  Finnic, Berber, and Nilotic-Cushitic traditions. Each has a retained source,
+  exact master, BC7 DDS texture, ledger row, and reviewed contact sheet.
+- Their material-only studies make no claim to a named deity, temple, shrine,
+  ruler, tribe, city, pyramid, tomb, rite, person, text, or inscription. The
+  direct religion migration now covers 28 of 37 keys.
+
+Next: complete the remaining direct religion art, then continue the advances,
+Roman buildings, trade-good, and period-name passes.
+
 ## 2026-07-23 - Direct South Arabian and European religion icons
 
 - Added four distinct direct 128px religion illustrations for South Arabian,
