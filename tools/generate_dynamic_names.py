@@ -7,6 +7,7 @@ import argparse
 import csv
 import json
 import sys
+from io import StringIO
 from pathlib import Path
 
 from generate_country_definitions import historical_profile_for
@@ -20,6 +21,8 @@ LOC_ROOT = ROOT / "main_menu/localization"
 REPORT = ROOT / "docs/m4/dynamic_location_names.csv"
 CURATED = ROOT / "docs/m4/dynamic_location_name_overrides.csv"
 TIER2 = ROOT / "docs/m4/tier2_location_name_overrides.csv"
+TIER3 = ROOT / "docs/m4/tier3_location_name_overrides.csv"
+TIER3_MAP = ROOT / "docs/m4/tier3_map_name_fallbacks.csv"
 ENGINE_LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
 CLIENT_LANGUAGES = (
     "english",
@@ -158,16 +161,33 @@ def entries() -> list[dict[str, str]]:
         seen_locations.add(location)
     output.extend(ledger_entries(CURATED, "secure", "curated", "reviewed direct", culture_groups, group_languages, installed_locations, seen_locations))
     output.extend(ledger_entries(TIER2, "tier2", "tier2", "bounded Tier-2", culture_groups, group_languages, installed_locations, seen_locations))
+    output.extend(ledger_entries(TIER3, "tier3", "tier3", "retained-label Tier-3", culture_groups, group_languages, installed_locations, seen_locations))
     if not output:
         raise ValueError("no secure dynamic-name anchors were selected")
     return sorted(output, key=lambda entry: (entry["location"], entry["language"]))
 
 
-def localization(entries_: list[dict[str, str]], language: str) -> str:
+def root_entries(entries_: list[dict[str, str]]) -> list[tuple[str, str]]:
+    required = ("location", "historical_name", "source", "confidence", "note")
+    with TIER3_MAP.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if tuple(reader.fieldnames or ()) != required:
+            raise ValueError(f"{TIER3_MAP.relative_to(ROOT)} must use header {','.join(required)}")
+        roots = {row["location"].strip(): row["historical_name"].strip() for row in reader}
+    if not roots or any(not location or not name for location, name in roots.items()):
+        raise ValueError(f"{TIER3_MAP.relative_to(ROOT)} has blank root fallback data")
+    for entry in entries_:
+        roots[entry["location"]] = entry["historical_name"]
+    return sorted(roots.items())
+
+
+def localization(entries_: list[dict[str, str]], roots: list[tuple[str, str]], language: str) -> str:
     lines = [
         f"l_{language}:",
-        " # Generated from M4 capital anchors plus direct and bounded Tier-2 toponym ledgers; English is mirrored by design.",
+        " # Generated from M4 capital anchors plus direct, Tier-2, and explicit Tier-3 toponym ledgers; English is mirrored by design.",
     ]
+    for location, name in roots:
+        lines.append(f" {location}: \"{esc(name)}\"")
     for entry in entries_:
         name = esc(entry["historical_name"])
         # The engine resolves the culture's dialect, while the root entry makes
@@ -178,23 +198,21 @@ def localization(entries_: list[dict[str, str]], language: str) -> str:
 
 
 def report(entries_: list[dict[str, str]]) -> str:
-    lines = ["location,anchor_kind,tag,historical_name,culture,language,dialect,source,confidence,note"]
-    for entry in entries_:
-        lines.append(
-            ",".join(
-                entry[field]
-                for field in ("location", "anchor_kind", "tag", "historical_name", "culture", "language", "dialect", "source", "confidence", "note")
-            )
-        )
-    return "\n".join(lines) + "\n"
+    stream = StringIO(newline="")
+    fields = ("location", "anchor_kind", "tag", "historical_name", "culture", "language", "dialect", "source", "confidence", "note")
+    writer = csv.DictWriter(stream, fieldnames=fields, lineterminator="\n")
+    writer.writeheader()
+    writer.writerows(entries_)
+    return stream.getvalue()
 
 
 def outputs() -> dict[Path, tuple[str, str]]:
     selected = entries()
+    roots = root_entries(selected)
     result: dict[Path, tuple[str, str]] = {REPORT: (report(selected), "utf-8-sig")}
     for language in CLIENT_LANGUAGES:
         result[LOC_ROOT / language / f"antq_m4_location_names_l_{language}.yml"] = (
-            localization(selected, language),
+            localization(selected, roots, language),
             "utf-8-sig",
         )
     return result
@@ -231,7 +249,8 @@ def main() -> int:
     capitals = sum(entry["anchor_kind"] == "capital" for entry in selected)
     curated = sum(entry["anchor_kind"] == "curated" for entry in selected)
     tier2 = sum(entry["anchor_kind"] == "tier2" for entry in selected)
-    print(f"dynamic_names: PASS ({capitals} capital + {curated} curated + {tier2} Tier-2 anchors; {len(CLIENT_LANGUAGES)} mirrored localizations)")
+    tier3 = sum(entry["anchor_kind"] == "tier3" for entry in selected)
+    print(f"dynamic_names: PASS ({capitals} capital + {curated} curated + {tier2} Tier-2 + {tier3} Tier-3 anchors; {len(CLIENT_LANGUAGES)} mirrored localizations)")
     return 0
 
 

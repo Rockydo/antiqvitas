@@ -2501,3 +2501,11 @@ The twelve new material-craft families all reuse locally harvested guild
 recipes and take the whole M5/M7 placement system to the intentional 80%
 productive upper bound. Further M5 expansion must therefore be maintenance or
 service-led unless it also adds sufficient non-productive infrastructure.
+
+## 2026-07-23 - M4 Tier-3 owns every installed map label explicitly
+
+Tier-3 is a coverage and audit mechanism, not a source claim. It preserves an
+installed English label when direct evidence is absent, binds it to the AD 1
+location culture where a pop exists, and writes a root fallback for every map
+key. The 427 otherwise unnamed map-only keys use a separately marked
+key-derived fallback. Secure and Tier-2 ledgers always override Tier-3.

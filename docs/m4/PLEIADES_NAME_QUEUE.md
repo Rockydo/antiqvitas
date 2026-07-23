@@ -24,3 +24,9 @@ runtime source. `tools/generate_m4_tier2_names.py` separately selects a
 bounded subset (nearest AD 1 settlement, no more than 1.50 pixels away), rejects
 uncertain and archaeological title forms, and records its lower-confidence
 proxy status in `tier2_location_name_overrides.csv`. It never edits Tier-1.
+
+`tools/generate_m4_tier3_names.py` is a separate coverage fallback for every
+remaining populated AD 1 map field. It copies the installed label only as an
+explicit, culture-bound placeholder with `tier3` confidence and no historical
+identity claim; its companion root ledger covers all named map fields. Direct
+research always supersedes either fallback.
