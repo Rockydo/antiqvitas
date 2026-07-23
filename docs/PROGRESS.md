@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-23 - Ara Pacis and Mausoleum Roman-building pass
+
+- Added the 33rd and 34th named Roman specials: the securely dated Ara Pacis
+  Augustae and the bounded, contested Mausoleum Augusti cultural-landscape
+  proxy. Both use existing verified one-level building contracts and direct
+  128px art; the refreshed Roman contact sheet was reviewed.
+- Kept the evidence boundaries explicit: no Ara Pacis frieze, procession, rite,
+  or family reconstruction; no Mausoleum plan, occupants, chambers, sculpture,
+  complete landscape, or later ruin state. The AD 1 start now contains 174
+  M5/M7 buildings, including four M7 forts.
+- `gmake validate` passed with 34 named Roman specials. The bounded
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: continue the direct-art migration and source-led Roman economic/building
+frontier.
+
 ## 2026-07-23 - Complete direct M6 privilege-icon coverage
 
 - Added the final five dedicated 64x90 privilege icons for northwestern Indian

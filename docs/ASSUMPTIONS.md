@@ -1,5 +1,24 @@
 # Historical Assumptions
 
+## 2026-07-23 - Ara Pacis and Mausoleum are bounded Augustan city-point proxies
+
+Digital Augustan Rome securely dates the Ara Pacis dedication to 30 January
+9 BC, making its Campus Martius existence at the AD 1 start secure. Its icon
+and gameplay role are limited to an open-air cult-space proxy: neither claims a
+reconstructed frieze, procession, identified family group, rite, or plaza.
+
+The same source documents the pre-AD 1 Mausoleum of Augustus and its public
+groves/walks, but retains uncertainty about the exact construction sequence.
+It therefore receives a contested cultural-landscape proxy only; it does not
+identify a tomb plan, burial occupants, internal chambers, sculptures, complete
+landscape, or later ruin state.
+
+Sources: `DAR-ARA-PACIS`; `DAR-MAUSOLEUM`, catalogued in
+`docs/world_1ad/SOURCES.md`.
+
+[secure Ara Pacis dedication and broad Mausoleum context; contested Mausoleum
+completion sequence and all detailed reconstruction]
+
 ## 2026-07-23 - Privilege illustrations identify material contexts only
 
 The seven privilege-art batches give every one of the 24 M6 privilege adapters
