@@ -252,6 +252,12 @@ religion, treasure, coin system, boat, event, map, sign, inscription, writing,
 symbol, emblem, flag, or modern object. The reviewed source/master batch is
 [here](DIRECT_ADVANCE_ICON_BATCH_19.png).
 
+### Batch twenty-three review
+
+One reviewed 3x4 source sheet supplies twelve isolated direct icons for the
+Principate/High Empire warfare branch; cropped masters remain text-free and
+non-reconstructive. [Sheet](DIRECT_ADVANCE_ICON_BATCH_23.png).
+
 ### Batch twenty-two review
 
 The Principate and High Empire commercial-and-building illustrations distinguish

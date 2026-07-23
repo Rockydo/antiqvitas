@@ -1,5 +1,9 @@
 # Progress
 
+## 2026-07-23 - Warfare icon sheet
+
+- Added 12 direct advance icons from a reviewed generated source sheet; coverage is 87/250.
+
 ## 2026-07-23 - Principate and High Empire commercial advance-icon batch
 
 - Added distinct direct 256px illustrations for Principate Exchange, Imperial
