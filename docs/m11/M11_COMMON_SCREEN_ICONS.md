@@ -73,6 +73,16 @@ identifies no named deity, animal, temple, shrine, altar, ruler, dynasty,
 kingdom, city, pyramid, tomb, stela, Kaaba, rite, person, text, or inscription.
 The reviewed sixth batch is [here](DIRECT_RELIGION_ICON_BATCH_06.png).
 
+## Seventh South Arabian and northwestern European batch
+
+The seventh batch distinguishes South Arabian, western Mediterranean,
+northwestern European, and northern European material contexts through
+uninscribed stone, resin, bronze, dates, cloth, ceramic, shell, cord, wood,
+leaves, and stones. It identifies no named deity, animal, temple, shrine,
+altar, ruler, kingdom, tribe, city, ship, harbour, druid, forest scene, rite,
+person, text, or inscription. The reviewed seventh batch is
+[here](DIRECT_RELIGION_ICON_BATCH_07.png).
+
 Until each remaining row is completed, its reviewed installed motif is a broad
 readable UI cue, not a claim that the contemporary or historical tradition is
 identical to ANTIQVITAS's sourced category.
