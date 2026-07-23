@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-23 - Direct Kushite, steppe, and Korean privilege icons
+
+- Added dedicated 64x90 icons for a Kushite court household, early steppe clan
+  autonomy, and an early Korean court household. The migration now has twelve
+  direct privilege illustrations and twelve remaining contracts.
+- Reviewed the portrait contact sheet and restricted all three to uninscribed
+  material contexts, without a named ruler, person, dynasty, palace, mounted
+  force, map, battle, constitutional formula, inscription, or seal impression.
+
+- `gmake validate` passed with twelve direct privilege icons. The bounded
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: continue the privilege and religion migrations.
+
 ## 2026-07-23 - Direct Han, Arsacid, and client-court privilege icons
 
 - Added dedicated 64x90 icons for Wang-regency materials, the Arsacid
