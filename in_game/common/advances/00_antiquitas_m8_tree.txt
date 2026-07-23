@@ -537,7 +537,7 @@ antq_river_crossings = {
 
 antq_siegecraft_basics = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_siegecraft_basics
 	depth = 7
 	research_cost = 5.5
 	starting_technology_level = 3
@@ -656,7 +656,7 @@ antq_high_empire_warfare = {
 
 antq_mobile_field_armies = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_mobile_field_armies
 	depth = 0
 	research_cost = 6.0
 	ai_weight = { add = 100 }
@@ -664,7 +664,7 @@ antq_mobile_field_armies = {
 
 antq_crisis_fortification = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_crisis_fortification
 	depth = 1
 	research_cost = 6.5
 	requires = antq_mobile_field_armies
@@ -673,7 +673,7 @@ antq_crisis_fortification = {
 
 antq_wall_building = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_wall_building
 	depth = 2
 	research_cost = 7.0
 	requires = antq_crisis_fortification
@@ -682,7 +682,7 @@ antq_wall_building = {
 
 antq_beacon_networks = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_beacon_networks
 	depth = 3
 	research_cost = 7.5
 	requires = antq_wall_building
@@ -691,7 +691,7 @@ antq_beacon_networks = {
 
 antq_regional_reserves = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_regional_reserves
 	depth = 4
 	research_cost = 8.0
 	requires = antq_beacon_networks
@@ -700,7 +700,7 @@ antq_regional_reserves = {
 
 antq_cavalry_screening = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_cavalry_screening
 	depth = 5
 	research_cost = 8.5
 	requires = antq_regional_reserves
@@ -709,7 +709,7 @@ antq_cavalry_screening = {
 
 antq_siege_relief = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_siege_relief
 	depth = 6
 	research_cost = 9.0
 	requires = antq_cavalry_screening
@@ -718,7 +718,7 @@ antq_siege_relief = {
 
 antq_marching_camps = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_marching_camps
 	depth = 7
 	research_cost = 9.5
 	requires = antq_siege_relief
@@ -727,7 +727,7 @@ antq_marching_camps = {
 
 antq_defence_in_depth = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_defence_in_depth
 	depth = 8
 	research_cost = 10.0
 	requires = antq_marching_camps
@@ -736,7 +736,7 @@ antq_defence_in_depth = {
 
 antq_crisis_warfare = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_crisis_warfare
 	depth = 9
 	research_cost = 10.5
 	requires = antq_defence_in_depth
@@ -745,7 +745,7 @@ antq_crisis_warfare = {
 
 antq_comitatenses_doctrine = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_comitatenses_doctrine
 	depth = 0
 	research_cost = 8.0
 	ai_weight = { add = 100 }
@@ -753,7 +753,7 @@ antq_comitatenses_doctrine = {
 
 antq_limitanei_service = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_limitanei_service
 	depth = 1
 	research_cost = 8.5
 	requires = antq_comitatenses_doctrine
@@ -762,7 +762,7 @@ antq_limitanei_service = {
 
 antq_foederati_settlement = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_foederati_settlement
 	depth = 2
 	research_cost = 9.0
 	requires = antq_limitanei_service
@@ -771,7 +771,7 @@ antq_foederati_settlement = {
 
 antq_heavy_lancer_refinement = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_heavy_lancer_refinement
 	depth = 3
 	research_cost = 9.5
 	requires = antq_foederati_settlement
@@ -780,7 +780,7 @@ antq_heavy_lancer_refinement = {
 
 antq_military_bureaux = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_military_bureaux
 	depth = 4
 	research_cost = 10.0
 	requires = antq_heavy_lancer_refinement
@@ -789,7 +789,7 @@ antq_military_bureaux = {
 
 antq_fortified_crossings = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_fortified_crossings
 	depth = 5
 	research_cost = 10.5
 	requires = antq_military_bureaux
@@ -798,7 +798,7 @@ antq_fortified_crossings = {
 
 antq_mobile_reserves = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_mobile_reserves
 	depth = 6
 	research_cost = 11.0
 	requires = antq_fortified_crossings
@@ -807,7 +807,7 @@ antq_mobile_reserves = {
 
 antq_frontier_commands = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_frontier_commands
 	depth = 7
 	research_cost = 11.5
 	requires = antq_mobile_reserves
@@ -816,7 +816,7 @@ antq_frontier_commands = {
 
 antq_late_antique_logistics = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_late_antique_logistics
 	depth = 8
 	research_cost = 12.0
 	requires = antq_frontier_commands
@@ -825,7 +825,7 @@ antq_late_antique_logistics = {
 
 antq_dominate_warfare = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_dominate_warfare
 	depth = 9
 	research_cost = 12.5
 	requires = antq_late_antique_logistics
@@ -834,7 +834,7 @@ antq_dominate_warfare = {
 
 antq_federate_musters = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_federate_musters
 	depth = 0
 	research_cost = 10.0
 	ai_weight = { add = 100 }
@@ -842,7 +842,7 @@ antq_federate_musters = {
 
 antq_settlement_service = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_settlement_service
 	depth = 1
 	research_cost = 10.5
 	requires = antq_federate_musters
@@ -851,7 +851,7 @@ antq_settlement_service = {
 
 antq_warband_integration = {
 	age = age_5_absolutism
-	icon = expansionism
+	icon = antq_advance_warband_integration
 	depth = 2
 	research_cost = 11.0
 	requires = antq_settlement_service
@@ -985,7 +985,7 @@ antq_desert_waystations = {
 
 antq_merchant_diasporas = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_merchant_diasporas
 	depth = 6
 	research_cost = 5.0
 	starting_technology_level = 3
@@ -1149,7 +1149,7 @@ antq_fortified_warehouses = {
 
 antq_caravan_protection = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_caravan_protection
 	depth = 4
 	research_cost = 8.0
 	requires = antq_fortified_warehouses
@@ -1158,7 +1158,7 @@ antq_caravan_protection = {
 
 antq_regional_exchange = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_regional_exchange
 	depth = 5
 	research_cost = 8.5
 	requires = antq_caravan_protection
@@ -1167,7 +1167,7 @@ antq_regional_exchange = {
 
 antq_grain_convoys = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_grain_convoys
 	depth = 6
 	research_cost = 9.0
 	requires = antq_regional_exchange
@@ -1176,7 +1176,7 @@ antq_grain_convoys = {
 
 antq_emergency_tolls = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_emergency_tolls
 	depth = 7
 	research_cost = 9.5
 	requires = antq_grain_convoys
@@ -1185,7 +1185,7 @@ antq_emergency_tolls = {
 
 antq_resilient_markets = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_resilient_markets
 	depth = 8
 	research_cost = 10.0
 	requires = antq_emergency_tolls
@@ -1194,7 +1194,7 @@ antq_resilient_markets = {
 
 antq_crisis_exchange = {
 	age = age_3_discovery
-	icon = road_advance_1
+	icon = antq_advance_crisis_exchange
 	depth = 9
 	research_cost = 10.5
 	requires = antq_resilient_markets
@@ -1238,7 +1238,7 @@ antq_frontier_market_towns = {
 
 antq_church_storehouses = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_church_storehouses
 	depth = 4
 	research_cost = 10.0
 	requires = antq_frontier_market_towns
@@ -1247,7 +1247,7 @@ antq_church_storehouses = {
 
 antq_caravan_tolls = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_caravan_tolls
 	depth = 5
 	research_cost = 10.5
 	requires = antq_church_storehouses
@@ -1256,7 +1256,7 @@ antq_caravan_tolls = {
 
 antq_late_antique_coinage = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_late_antique_coinage
 	depth = 6
 	research_cost = 11.0
 	requires = antq_caravan_tolls
@@ -1265,7 +1265,7 @@ antq_late_antique_coinage = {
 
 antq_regional_fairs = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_regional_fairs
 	depth = 7
 	research_cost = 11.5
 	requires = antq_late_antique_coinage
@@ -1274,7 +1274,7 @@ antq_regional_fairs = {
 
 antq_dominate_exchange = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_dominate_exchange
 	depth = 8
 	research_cost = 12.0
 	requires = antq_regional_fairs
