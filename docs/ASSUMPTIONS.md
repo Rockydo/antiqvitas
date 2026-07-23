@@ -1,5 +1,21 @@
 # Historical Assumptions
 
+## 2026-07-23 - Northern, Oceanian, and Caribbean religion art stays material-only
+
+The tenth direct religion-icon batch distinguishes only broad North American,
+Siberian, Austronesian-region, Australian, and Caribbean material contexts.
+Its uninscribed wood, bark, fibre cloth, gourd, coconut shell, grass, grain,
+cord, shell, lamp, and stone objects identify no named person, deity, rite,
+shrine, altar, temple, mound, boat, ocean, island, landscape, rock-art motif,
+dot painting, architecture, mask, drum, weapon, writing, glyph, text, or
+inscription.
+
+Sources: `P11`; `CAH-XI`; `P20`, catalogued in
+`docs/world_1ad/SOURCES.md` and bounded by the M4 religion ledger.
+
+[secure broad material contexts; contested specific tradition, practice,
+distribution, object provenance, and all visual reconstruction]
+
 ## 2026-07-23 - African and American religion art stays material-only
 
 The ninth direct religion-icon batch distinguishes only broad West African,
