@@ -2537,3 +2537,13 @@ ledger.
 Twelve material-craft families reuse only locally verified guild formulas. The
 full placed system becomes 75.1% productive and 95.4% scalable, inside both
 enforced user ranges.
+
+## 2026-07-23 - M4 remote Tier-2 remains a separate evidence class
+
+The name pipeline now has a third Pleiades proximity band at 3.25--6.00 pixels.
+It reads only precise settlement records declared active in AD 1, rejects
+obvious modern/site labels and unchanged labels, selects the nearest candidate
+per populated installed field, and writes `T2R` plus its measured offset. It
+does not modify the reviewed direct ledger or downgrade retained Tier-3 labels
+silently; generator order makes capital, direct, bounded Tier-2, and wide
+Tier-2 names take precedence over this remote band.

@@ -4126,3 +4126,13 @@ wicker, loom, cauldron, and river-supply crafts are broad antique production
 classes. Each seed is a contested city-and-hinterland proxy, not a named
 workshop, owner, output, arsenal, or route. Sources: P12.1; P12.3;
 MET-ROMAN-TRADE. [secure broad craft context; contested placement]
+
+## 2026-07-23 - Remote Tier-2 labels remain deliberately non-exact proxies
+
+The 521 remote adapters use precise Pleiades settlement records whose declared
+date ranges contain AD 1, but a 3.25--6.00-pixel projection may stand for a
+nearby settlement, district, or city field rather than the identical ancient
+place. Every row records its PLE identifier, measured offset, and `T2R` source
+boundary; none claims exact civic extent, polity, culture, or population.
+Source: local pinned Pleiades snapshot and the checked map projection.
+[light-review remote proxy]

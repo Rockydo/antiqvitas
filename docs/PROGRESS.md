@@ -5933,3 +5933,17 @@ separate Han runtime-regency blocker.
 - Added 12 direct-art productive families and 120 placements: metal, ceramic,
   writing, textile, leather, weapon, wicker, and river-supply crafts.
 - The M5/M7 audit is 1,513 placements: 75.1% productive and 95.4% scalable.
+
+## 2026-07-23 - M4 remote Tier-2 period-name coverage
+
+- Added a reproducible 521-label Pleiades layer from precise settlement points
+  recorded as active in AD 1 and projected 3.25--6.00 pixels from their nearest
+  installed city fields. Each `T2R` row remains an explicit remote map proxy;
+  direct, bounded, and wide naming evidence keeps precedence.
+- The runtime name layer now contains 61 capital anchors, 216 curated direct
+  labels, 819 Tier-2 labels (including 521 remote proxies), and 12,446 retained
+  Tier-3 field adapters across the eleven mirrored client localizations.
+- Full static validation and the reduced vanilla/mod menu smoke gate pass with
+  zero new normalized mod error-log lines.
+- Next: continue with the next source-led Roman economic or frontier-
+  infrastructure improvement that has a verified local engine contract.

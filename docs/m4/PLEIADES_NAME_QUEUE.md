@@ -29,6 +29,13 @@ proxy status in `tier2_location_name_overrides.csv`. It never edits Tier-1.
 from the same queue only at 1.50--3.25 pixels. It rejects obvious site labels,
 uses `tier2` confidence, and remains below all direct entries.
 
+`tools/generate_m4_tier2_remote_names.py` reads the same pinned Pleiades
+snapshot directly and adds a separately labelled remote Tier-2 layer at
+3.25--6.00 pixels. It remains a precise, AD 1-active settlement source, but
+the greater map distance means every row is explicitly a remote proxy (`T2R`),
+never a claim of exact local identity. Direct, bounded, and wide Tier-2 layers
+always win over it.
+
 `tools/generate_m4_tier3_names.py` is a separate coverage fallback for every
 remaining populated AD 1 map field. It copies the installed label only as an
 explicit, culture-bound placeholder with `tier3` confidence and no historical
