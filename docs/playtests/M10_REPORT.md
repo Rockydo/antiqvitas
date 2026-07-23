@@ -23,24 +23,26 @@ no centuries-long observer campaign.
 
 ## Bounded driver probe
 
-On 2026-07-24 the automated driver launched the enabled mod, passed the
-rendered-menu readiness check, and attempted the recorded New Game-to-Observer
-sequence twice.  Both attempts returned to the menu rather than showing the
-live-observer pause banner.  The retained screenshots are
-`../screens/M10_targeted_probe/m10_menu_ready.png`,
-`../screens/M10_targeted_probe/manual_selection_start_attempt1.png`, and
-`../screens/M10_targeted_probe/manual_selection_start_attempt2.png`.
+On 2026-07-24 the first automated invocation attempted Observer before the
+New Game country-selection screen; it consequently returned to the menu.  The
+driver was then run through its required sequence: enabled menu, New Game,
+AD 1 country selection, Observer selection, and the live paused map.  The
+retained evidence is `../screens/M10_targeted_probe_repaired/`, in particular
+`m10_country_selection_wait.png` and `manual_selection_live.png`.
 
-The resulting log tail contains only the pre-existing DX12 feature assertion
-and store-backend DLC messages; smoke's vanilla control confirms that neither
-line type is unique to ANTIQVITAS.  The game was then stopped by the driver.
-This is therefore a documented observer-UI coverage limitation, not evidence
-of an M10 content failure.
+The installed console reference documents `event [eventid] [target]`.  From
+that live Observer session the driver dispatched the generated first-current
+event with its generated Armenian recipient:
+`event antq_m10.1000 XAO`.  It produced no new M10 error-log entry; country
+events addressed to an AI country in Observer mode resolve without a player
+event popup.  `m10_event_targeted_armenian.png` retains the immediately
+following paused-map state.  The error tail contains only the separately
+tracked AD 1 no-pop diagnostics and the pre-dispatch Observer-without-country
+probe; neither names an M10 content identifier.
 
 ## Result
 
-**PASS.** All historical-current contracts validate and the enabled-mod menu
-has no new diagnostics.  In accordance with the reduced test protocol in
-plan section 22, no full AD 1--476 observer run is required.  The driver
-sequence may be revisited after a material UI/renderer change, but it is not a
-ship blocker for M10.
+**PASS.** All historical-current contracts validate, the enabled-mod menu has
+no new diagnostics, and the first generated current accepts its explicit
+country target in a live AD 1 session.  In accordance with the reduced test
+protocol in plan section 22, no full AD 1--476 observer run is required.

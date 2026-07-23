@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-24 - M10 live targeted-event probe repaired
+
+- Corrected the Observer test sequence to enter New Game and country selection
+  before enabling Observer. The driver reached the live AD 1 map and dispatched
+  `antq_m10.1000` to its generated Armenian tag without a new M10 log error.
+  The revised bounded evidence is retained in `docs/playtests/M10_REPORT.md`.
+
 ## 2026-07-24 - Mediterranean market-city name corrections
 
 - Replaced four inaccurate distant Pleiades adapters at visible M5 anchors with
@@ -11,9 +18,9 @@
 
 - Accepted the five source-led historical-current batches after a fresh green
   validation of all 84 contracts and a fresh enabled-mod smoke with zero new
-  log lines. The bounded observer-driver sequence returned to the menu twice;
-  screenshots and the non-mod diagnostic boundary are preserved in
-  `docs/playtests/M10_REPORT.md`.
+  log lines. The subsequently repaired bounded observer-driver sequence also
+  provides a live explicit-target event dispatch; screenshots and the
+  diagnostic boundary are preserved in `docs/playtests/M10_REPORT.md`.
 - The revised plan gate requires static contracts plus prompt targeted evidence
   where the engine/driver can reach it, not a 475-year observer simulation.
 
