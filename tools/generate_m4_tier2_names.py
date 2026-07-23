@@ -34,6 +34,15 @@ ARCHAEOLOGICAL_PREFIXES = (
     "tell ", "tel ", "khirbet ", "hirbet ", "qalat ", "qalaat ", "tumulus ",
 )
 BAD_NAME_CHARACTERS = "?*/[]()0123456789"
+# Pleiades is an archaeological gazetteer as well as a historical one. A row
+# classified as a settlement can nevertheless expose a modern feature label;
+# those are useful research records but never safe player-facing toponyms.
+ARCHAEOLOGICAL_FEATURE_RE = re.compile(
+    r"\b(?:archaeological|bridge|camp|castrum|cemetery|church|excavation|fort(?:ress)?|"
+    r"fortifications?|gate|harbo(?:u)?r|hillfort|mausoleum|medieval|mine|monastery|mosque|"
+    r"prehistoric|quarry|road|roman|temple|theat(?:er|re)|tomb|tower|villa|wall)\b",
+    re.IGNORECASE,
+)
 
 
 def csv_rows(path: Path, *, comments: bool = False) -> list[dict[str, str]]:
@@ -87,6 +96,7 @@ def usable_title(value: str) -> bool:
         and not any(character in title for character in BAD_NAME_CHARACTERS)
         and not folded.startswith(ARCHAEOLOGICAL_PREFIXES)
         and not folded.startswith(("untitled", "unknown"))
+        and not ARCHAEOLOGICAL_FEATURE_RE.search(title)
     )
 
 

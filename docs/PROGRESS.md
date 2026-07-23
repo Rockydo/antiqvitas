@@ -6029,5 +6029,11 @@ specials and the UI ledger has 545 direct asset chains.
   reviewed Rome/Mediterranean city-hinterland placements: medicine, fine cloth,
   four fermentation inputs, construction masonry, and high-heat ironworking.
 - The M5/M7 audit is now 1,910 placements: 78.4% productive and 94.5%
-  scalable. The source sheet is retained and each new engine icon is a distinct
-  reviewed 128px BC7 DDS.
+scalable. The source sheet is retained and each new engine icon is a distinct
+reviewed 128px BC7 DDS.
+
+## 2026-07-23 - M4 Pleiades feature-name quality guard
+
+- Hardened the Tier-2 title filter against archaeological-feature labels and
+  regenerated every proximity layer. Ten unsafe proxies now fall back to the
+  explicit Tier-3 layer; full validation and smoke remain green.
