@@ -1,9 +1,10 @@
 # Regional antique production buildings
 
-This M5 layer adds ten reusable, directly illustrated antique production
-families and **264 AD 1 start placements**: 134 in Europe, 38 in North Africa,
-and 92 in the Middle East. The ledger is deliberately a family system rather
-than 262 fictional unique monuments. Each family has a direct PNG source, a
+This M5 layer adds twenty-two reusable, directly illustrated antique production
+families and **288 AD 1 start placements**: 143 in Europe, 45 in North Africa,
+and 96 in the Middle East, plus two in South Asia and two in East Asia. The
+ledger is deliberately a family system rather than fictional unique monuments.
+Each family has a direct PNG source, a
 reviewed BC7 128px DDS icon, localized name/description, a locally verified
 EU5 building contract, conservative goods upkeep, and a source boundary.
 
@@ -29,6 +30,18 @@ pair, and total at least 100.
 | Metalwork shop | 33 | iron, copper, coal, tools |
 | Stone yard | 14 | stone, masonry, marble, lumber, tools |
 | Antique shipyard | 23 | lumber, naval supplies, tar, cloth, tools |
+| Silk loom | 2 | fiber crops |
+| Scriptorium | 2 | dyes, paper, lumber |
+| Jewelers' quarter | 2 | gold |
+| Weapon smithy | 2 | lumber, coal, tools |
+| Cotton weavery | 2 | cotton |
+| Linen weavery | 2 | fiber crops |
+| Alum dyehouse | 2 | alum, lumber |
+| Joinery | 2 | lumber, dyes, tools |
+| Bronze foundry | 2 | copper, tin |
+| Ivory carver | 2 | ivory |
+| Leatherworks | 2 | livestock, sand, tar, tools |
+| Amphora depot | 2 | pottery, lumber, tools |
 
 These numbers are gameplay demand weights, not reconstructed ancient output,
 workforce, prices, or cargo quantities. Existing antique RGO and goods work
@@ -59,15 +72,16 @@ Hadrumetum. Their `city`/`town` profiles are engine adapters for a regional
 urban market, not population totals, municipal-rank reconstructions, or proof
 of a named production site.
 
-A production-and-scale audit now counts every 330 M5/M7 start placement rather
-than only these regional rows. It locks the actual layout at 64.2% productive
-and 80.0% scalable; see [BUILDING_AUDIT.md](BUILDING_AUDIT.md).
+A production-and-scale audit now counts every 354 M5/M7 start placement rather
+than only these regional rows. It locks the actual layout at 66.1% productive
+and 81.4% scalable; see [BUILDING_AUDIT.md](BUILDING_AUDIT.md).
 
 ## Art review
 
-The ten original source illustrations were reviewed for clear process
+The original ten source illustrations and the twelve-manufacture expansion were reviewed for clear process
 silhouettes, antique material culture, absence of text/insignia/modern
 technology, and distinctness at 128px. They are committed under
 `assets_queue/generated_sources/`; the engine uses their BC7 DDS derivatives
 under `main_menu/gfx/interface/icons/buildings/`. The reviewed set is shown in
-[the regional-building contact sheet](REGIONAL_BUILDING_ICON_CONTACT_SHEET.png).
+[the original regional-building contact sheet](REGIONAL_BUILDING_ICON_CONTACT_SHEET.png)
+and [the manufactures contact sheet](REGIONAL_MANUFACTURES_ICON_CONTACT_SHEET.png).

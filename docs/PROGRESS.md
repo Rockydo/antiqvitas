@@ -5088,6 +5088,25 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-23 - M5 direct manufacture and trade-goods pass
+
+- Added twelve dedicated, source-preserved and visually reviewed workshop icons
+  with checked 128px BC7 DDS derivatives: silk, writing, jewelry, arms, cotton
+  and linen textiles, alum dyeing, joinery, bronze, ivory, leather, and
+  amphora storage.
+- Added twenty-four bounded market-proxy placements and eleven exact local
+  guild output contracts. The building audit is now 234/354 productive (66.1%)
+  and 288/354 scalable (81.4%).
+- `make validate` passed across the full static suite. The start mirror confirms
+  all 354 M5/M7 placements and the anachronism audit was regenerated from the
+  expanded localization surface.
+- The clean `make smoke` retry passed: vanilla control and ANTIQVITAS both
+  reached the menu, with zero new `error.log` lines. A transient vanilla DX12
+  control launch exited before rendering on the first attempt; the retry is the
+  accepted evidence.
+- Next: continue the source-led building/naming queue while retaining the
+  existing market-runtime blocker as a separate engine-contract issue.
+
 ## 2026-07-23 - M5 reusable provincial production expansion
 
 - Expanded the direct-art regional-building network from 112 to 212 AD 1
