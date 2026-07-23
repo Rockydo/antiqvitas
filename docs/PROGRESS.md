@@ -5083,6 +5083,19 @@ separate Han runtime-regency blocker.
 Next: continue direct-evidence Tier-1/2 roster breadth while preserving the
 separate Han runtime-regency blocker.
 
+## 2026-07-23 - M4 source-keyed city-name expansion
+
+- Added 24 secure, installed-location dynamic-name anchors for Roman Britain,
+  the Greek east, and the Roman Rhine frontier. The generated layer now carries
+  61 capital anchors and 85 curated city anchors, with all eleven client
+  localization files mirrored from English.
+- `make validate` and the real-game `make smoke` are green. Vanilla and the
+  mod both reached the menu; the mod added zero error-log line types beyond
+  the accepted baseline.
+
+Next: continue source-keyed city labels where exact installed matches exist,
+then return to the highest-priority unblocked M5/M7 subsystem work.
+
 ## 2026-07-22 - Named Roman civic-building and direct-art pass
 
 - Replaced the generic Rome building proxies with sixteen named AD 1 special
