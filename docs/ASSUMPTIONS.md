@@ -3998,3 +3998,11 @@ new mercenary companies similarly describe regional military roles rather than
 named contracts, troop numbers, commanders, or itineraries. Sources:
 P14; CAH-XI; STR-GER for the Germanic categories. [secure broad category;
 contested organization, scale, equipment ratio, and deployment]
+
+## 2026-07-23 - Britannia city labels remain point-name adapters
+
+Ratae is a direct Pleiades settlement-point label whose recorded range includes
+AD 1. Applying it to the nearest installed Leicester key is a display decision
+only, not a claim about settlement extent, speech community, legal status,
+population, or control. Source: PLE:79651; P8.7. [secure direct toponym;
+contested map-key proxy and all wider social inference]

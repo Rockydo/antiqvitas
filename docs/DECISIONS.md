@@ -2458,3 +2458,10 @@ and twelve mercenary company types. Each role copies a locally harvested
 Age-of-Traditions base unit and uses stock renderer tags, so the expansion
 remains compatible with verified engine contracts and requires no speculative
 3D art or named force reconstruction.
+
+## 2026-07-23 - M4 names retain the direct-point threshold
+
+The next Britannia naming tranche accepts only an AD 1-active Pleiades point
+whose local projection selects the intended installed city key as its nearest
+candidate. This preserves the existing no-invented-toponym rule and leaves
+ambiguous or district-scale vanilla labels for later evidence-led passes.

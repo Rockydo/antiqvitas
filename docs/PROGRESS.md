@@ -5807,3 +5807,11 @@ separate Han runtime-regency blocker.
   and twelve mercenary role types. `make validate` is green at 44 ancient unit
   types; the menu/log-diff smoke check follows the project's reduced rapid
   subsystem test policy.
+
+## 2026-07-23 - M4 Britannia direct-name pass
+
+- Added the checked AD 1 display form Ratae at Leicester. Its AD 1-active
+  Pleiades point selects the installed city key as the nearest local candidate.
+- This moves the conservative direct-name layer to 61 capital anchors plus
+  181 curated anchors; unresolved locations remain deliberately unrenamed
+  until they have equally direct evidence.
