@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-23 - Argentoratum remains an early-camp proxy
+
+University of Strasbourg historical research dates the Roman legionary-city
+foundation at Argentoratum to Drusus in 12 BC. The AD 1 building represents
+only a generic timber-and-earth camp at the direct Strasbourg point. It does
+not reconstruct its precise plan, legion number, standards, stone phases,
+Rhine limes, later settlement, or local population. Source:
+`UNISTRA-ARGENTORATUM` in `docs/world_1ad/SOURCES.md`. [secure foundation
+date and direct point; contested camp scale and all detailed reconstruction]
+
 ## 2026-07-23 - Final advance icon sheets
 
 Generic objects only; no named polity, person, place, text, or symbol.
