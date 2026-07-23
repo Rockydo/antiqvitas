@@ -6014,3 +6014,8 @@ separate Han runtime-regency blocker.
 - Added twelve illustrated productive craft families and 120 reviewed-hub
   placements. The M5/M7 audit is 1,766 placements: 78.0% productive, 95.4%
   scalable; the direct UI inventory is 521 assets.
+
+## 2026-07-23 - M5 Rome Republican civic pass
+
+- Added 12 source-bounded pre-AD 1 Forum, Palatine, and Campus Martius specials
+  with one direct-art sheet. Rome has 66 named specials; UI inventory is 533.

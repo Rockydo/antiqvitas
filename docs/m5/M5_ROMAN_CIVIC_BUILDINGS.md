@@ -270,3 +270,18 @@ explicitly contested or omitted. The dedicated 3x4 source sheet is
 `assets_queue/generated_sources/antq_roman_civic_fabric_sheet_source.png`; its
 twelve direct 128px BC7 derivatives depict empty architectural silhouettes,
 with no people, inscriptions, flags, or later imperial architecture.
+
+## Republican and early-Augustan civic pass
+
+Twelve further Rome-point specials use Digital Augustan Rome records for
+[Vesta](https://www.digitalaugustanrome.org/records/vesta-aedes/),
+[Saturn](https://www.digitalaugustanrome.org/records/saturnus-aedes/),
+[Miliarium Aureum](https://www.digitalaugustanrome.org/records/miliarium-aureum/),
+[Penates](https://www.digitalaugustanrome.org/records/penates-aedes/),
+[Fornix Fabianus](https://www.digitalaugustanrome.org/records/fornix-fabianus/),
+[Ara Saturni](https://www.digitalaugustanrome.org/records/saturnus-ara/),
+Rostra, Basilica Iulia, the Pompeian theatre/portico, Iuppiter Stator, and
+Curiae Veteres. All but the dated milestone are contested city-point proxies:
+they do not settle exact placement, fabric, cult, staffing, programme, or later
+restoration. The 3×4 source is
+`assets_queue/generated_sources/antq_roman_republican_civic_sheet_source.png`.
