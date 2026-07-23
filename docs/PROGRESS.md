@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-23 - Direct East Asian religion icon batch
+
+- Added dedicated 128px icons for early Han ceremonial material, early Chinese
+  Daoist-adjacent material, and early Japanese ritual material. The transition
+  now has twelve direct religion illustrations and twenty-five remaining
+  reviewed aliases.
+- Reviewed the three-image contact sheet and kept its Han bronze and jade,
+  Chinese bamboo and gourd, and Japanese rice-and-evergreen compositions free
+  of a named Heaven, master, school, revelation, kami, shrine, torii, emperor,
+  dynasty, clan, city, temple, priest, sacrifice, ritual scene, text, or
+  inscription.
+- `gmake validate` passed with twelve direct religion icons. The bounded
+  vanilla/enabled `gmake smoke` pair reached the menu in both runs and found
+  zero new mod-only error-log lines.
+
+Next: continue the religion migration and privilege art.
+
 ## 2026-07-23 - Direct Indian religion icon batch
 
 - Added dedicated 128px icons for Buddhist travel-and-learning, early South

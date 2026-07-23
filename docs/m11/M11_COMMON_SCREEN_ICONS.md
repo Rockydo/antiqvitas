@@ -25,12 +25,14 @@ reviewed. The validator enforces the direct ledger's definition binding, 128px
 DDS contract, and source/master uniqueness. The required final state is 37
 direct religion illustrations and zero aliases.
 
-The first nine direct icons cover Roman and Hellenic civic ritual, pre-Nicene
+The first twelve direct icons cover Roman and Hellenic civic ritual, pre-Nicene
 community, Second Temple Jewish community, Iranian sacred-fire, Lankan
 Buddhist material contexts, Buddhist travel-and-learning materials, early
-South Asian ritual materials, and Jain community materials. They are bounded
-material still lifes rather than depictions of a named sanctuary, rite, clergy,
-saint, ruler, city, empire, or historical event. The reviewed first batch is
+South Asian ritual materials, Jain community materials, early Han ceremonial
+materials, early Chinese Daoist-adjacent materials, and early Japanese ritual
+materials. They are bounded material still lifes rather than depictions of a
+named sanctuary, rite, clergy, saint, ruler, city, empire, or historical event.
+The reviewed first batch is
 [here](DIRECT_RELIGION_ICON_BATCH_01.png).
 
 The second batch uses an uninscribed seven-branched lamp, blank scroll, plain
@@ -46,6 +48,12 @@ does not identify a named monastery, deity, teacher, temple, priest, monk,
 ruler, city, caste, community, scripture, ritual scene, text, or inscription.
 The reviewed third batch is [here](DIRECT_RELIGION_ICON_BATCH_03.png).
 
+The fourth batch uses Han bronze, jade, lacquer, bamboo slips, a gourd flask,
+evergreen, rice, and unmarked offering materials. It does not identify a named
+Heaven, master, school, revelation, kami, shrine, torii, emperor, dynasty,
+clan, city, temple, priest, sacrifice, ritual scene, text, or inscription. The
+reviewed fourth batch is [here](DIRECT_RELIGION_ICON_BATCH_04.png).
+
 Until each remaining row is completed, its reviewed installed motif is a broad
 readable UI cue, not a claim that the contemporary or historical tradition is
 identical to ANTIQVITAS's sourced category.
@@ -54,8 +62,6 @@ identical to ANTIQVITAS's sourced category.
 |---|---|
 | `antq_kemetic`, `antq_kushite_amun`, `antq_aksumite_paganism`, `antq_arabian_polytheism`, `antq_south_arabian_religion`, `antq_punic` | `hellenism_religion` temple |
 | `antq_manichaeism` | `manichaeism` wheel |
-| `antq_chinese_state_cult`, `antq_daoism` | `sanjiao` balance motif |
-| `antq_kami` | `shinto` gate |
 | `antq_korean_muism`, `antq_siberian` | `shamanism` star motif |
 | `antq_tengri`, `antq_bon` | respective installed steppe/highland motifs |
 | `antq_celtic_religion`, `antq_germanic_religion` | `norse` northern-folk motif |
