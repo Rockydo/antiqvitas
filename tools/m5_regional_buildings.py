@@ -174,6 +174,20 @@ PRODUCTION_RECIPES = {
     "antq_reg_lacquer_workshop": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
     "antq_reg_instrument_maker": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
     "antq_reg_figurine_kiln": ("pottery", "1.0", (("clay", "1.0039"), ("lumber", "0.1201"), ("tools", "0.0504"))),
+    # Ninth pass: locally harvested guild formulas keep this dense material
+    # expansion productive without inventing a new economic equation.
+    "antq_reg_ironmongery": ("tools", "1", (("iron", "0.8333"),)),
+    "antq_reg_bronze_vessel_shop": ("tools", "0.6", (("copper", "0.475"), ("tin", "0.038"))),
+    "antq_reg_oil_lamp_kiln": ("pottery", "1.0", (("clay", "1.0039"), ("lumber", "0.1201"), ("tools", "0.0504"))),
+    "antq_reg_fineware_kiln": ("pottery", "1.0", (("clay", "1.0039"), ("lumber", "0.1201"), ("tools", "0.0504"))),
+    "antq_reg_scroll_workshop": ("books", "0.3", (("dyes", "0.0503"), ("paper", "0.1995"), ("lumber", "0.0998"))),
+    "antq_reg_silverworkshop": ("jewelry", "1", (("goods_gold", "0.5208"),)),
+    "antq_reg_arrow_fletchery": ("weaponry", "1", (("lumber", "0.2521"), ("coal", "0.3034"), ("tools", "0.505"))),
+    "antq_reg_harness_maker": ("leather", "1", (("livestock", "1.0873"), ("sand", "0.4345"), ("tar", "0.0819"), ("tools", "0.1627"))),
+    "antq_reg_wickerwork": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
+    "antq_reg_loom_house": ("cloth", "0.8", (("fiber_crops", "1.0"),)),
+    "antq_reg_cauldron_smithy": ("tools", "0.6", (("copper", "0.475"), ("tin", "0.038"))),
+    "antq_reg_barge_chandlery": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
 }
 
 

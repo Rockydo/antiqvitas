@@ -4118,3 +4118,11 @@ with ancient Aliso. The building therefore preserves `Castrum Aliso (Haltern)`
 as a functional label and excludes a legion roster, plan, later stone phase,
 or permanent limes claim. Source: LWL-ALISO. [secure AD 1 camp context;
 contested ancient-name identification]
+
+## 2026-07-23 - Ninth M5 craft pass remains regional
+
+Tool, vessel, lighting, fineware, writing-material, silver, arrow, harness,
+wicker, loom, cauldron, and river-supply crafts are broad antique production
+classes. Each seed is a contested city-and-hinterland proxy, not a named
+workshop, owner, output, arsenal, or route. Sources: P12.1; P12.3;
+MET-ROMAN-TRADE. [secure broad craft context; contested placement]

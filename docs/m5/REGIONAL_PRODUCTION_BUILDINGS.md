@@ -1,8 +1,8 @@
 # Regional antique production buildings
 
-This M5 layer adds one hundred and six reusable, directly illustrated antique production
-families and **1,324 AD 1 start placements**: 498 in Europe, 326 in North Africa,
-356 in the Middle East, 72 in South Asia, and 72 in East Asia. The
+This M5 layer adds one hundred and eighteen reusable, directly illustrated antique production
+families and **1,444 AD 1 start placements**: 518 in Europe, 350 in North Africa,
+380 in the Middle East, 98 in South Asia, and 98 in East Asia. The
 ledger is deliberately a family system rather than fictional unique monuments.
 Each family has a direct PNG source, a
 reviewed BC7 128px DDS icon, localized name/description, a locally verified
@@ -126,6 +126,18 @@ pair, and total at least 100.
 | Pack-animal yard | 10 | livestock, leather, wool, lumber |
 | Grain weighhouse | 10 | wheat, pottery, lumber, tools |
 | Customs gate | 10 | lumber, pottery, copper, tools |
+| Ironmongery | 10 | iron, coal, tools |
+| Bronze vessel shop | 10 | copper, tin, coal, tools |
+| Oil-lamp kiln | 10 | clay, olives, lumber, tools |
+| Fineware kiln | 10 | clay, lumber, tools |
+| Scroll workshop | 10 | paper, dyes, lumber, tools |
+| Silverwork shop | 10 | silver, gold, tools |
+| Arrow fletchery | 10 | lumber, iron, tools |
+| Harness maker | 10 | leather, livestock, tools |
+| Wickerwork shed | 10 | fiber crops, lumber, tools |
+| Loom house | 10 | fiber crops, cloth, tools |
+| Cauldron smithy | 10 | copper, tin, coal, tools |
+| Barge chandlery | 10 | lumber, fiber crops, tar, tools |
 
 These numbers are gameplay demand weights, not reconstructed ancient output,
 workforce, prices, or cargo quantities. Existing antique RGO and goods work
@@ -161,9 +173,9 @@ of those twenty Roman and North-African market anchors. It creates no additional
 named site, route, market node, or building family: the broad city-point
 economic representation remains explicitly contested.
 
-A production-and-scale audit now counts every 1,393 M5/M7 start placement rather
-than only these regional rows. It locks the actual layout at 73.0% productive
-and 95.0% scalable; see [BUILDING_AUDIT.md](BUILDING_AUDIT.md).
+A production-and-scale audit now counts every 1,513 M5/M7 start placement rather
+than only these regional rows. It locks the actual layout at 75.1% productive
+and 95.4% scalable; see [BUILDING_AUDIT.md](BUILDING_AUDIT.md).
 
 ## Art review
 
@@ -190,3 +202,5 @@ The seventh-pass sheet is
 `assets_queue/generated_sources/antq_reg_seventh_pass_sheet_source.png`.
 The eighth-pass sheet is
 `assets_queue/generated_sources/antq_reg_eighth_pass_sheet_source.png`.
+The ninth-pass sheet is
+`assets_queue/generated_sources/antq_reg_ninth_pass_sheet_source.png`.

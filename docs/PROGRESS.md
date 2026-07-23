@@ -5927,3 +5927,9 @@ separate Han runtime-regency blocker.
 - Added the source-bounded, direct-art Castrum Aliso (Haltern) at the close
   Recklinghausen map point. It is an AD 1 timber-and-earth camp proxy only;
   the named source sheet and BC7 DDS are retained with its source boundary.
+
+## 2026-07-23 - M5 ninth illustrated production pass
+
+- Added 12 direct-art productive families and 120 placements: metal, ceramic,
+  writing, textile, leather, weapon, wicker, and river-supply crafts.
+- The M5/M7 audit is 1,513 placements: 75.1% productive and 95.4% scalable.
