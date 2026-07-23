@@ -305,6 +305,11 @@ source/master batch is [here](DIRECT_ADVANCE_ICON_BATCH_20.png).
 
 ## Engine and asset verification
 
+### Batches thirty-three through thirty-seven review
+
+Five reviewed sheets complete direct coverage for all 250 advances.
+[Contacts](DIRECT_ADVANCE_ICON_BATCH_33.png), [34](DIRECT_ADVANCE_ICON_BATCH_34.png), [35](DIRECT_ADVANCE_ICON_BATCH_35.png), [36](DIRECT_ADVANCE_ICON_BATCH_36.png), and [37](DIRECT_ADVANCE_ICON_BATCH_37.png).
+
 ### Batches thirty through thirty-two review
 
 Three reviewed sheets provide 36 learning and community icons.
