@@ -2509,3 +2509,10 @@ installed English label when direct evidence is absent, binds it to the AD 1
 location culture where a pop exists, and writes a root fallback for every map
 key. The 427 otherwise unnamed map-only keys use a separately marked
 key-derived fallback. Secure and Tier-2 ledgers always override Tier-3.
+
+## 2026-07-23 - M4 widens Tier-2 without weakening source labels
+
+The wide Pleiades pass accepts only precise AD 1 settlement records in the
+checked local queue at 1.50--3.25 pixels. It selects one nearest candidate per
+field, rejects obvious modern site labels, and labels every result `tier2`;
+secure direct names remain a separate ledger.

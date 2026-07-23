@@ -5908,3 +5908,9 @@ separate Han runtime-regency blocker.
   culture-bound adapters for every remaining populated AD 1 field. The runtime
   name layer is 61 capital, 216 direct, 82 Tier-2, and 13,183 Tier-3 entries;
   Roma is now a direct secure capital form.
+
+## 2026-07-23 - M4 wide Pleiades Tier-2 name pass
+
+- Promoted 216 additional precise AD 1 Pleiades settlement adapters at a
+  documented 1.50--3.25-pixel map offset. Obvious modern site forms and
+  unchanged labels are rejected; every row remains explicit `tier2`.

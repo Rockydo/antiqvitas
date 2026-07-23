@@ -21,6 +21,7 @@ LOC_ROOT = ROOT / "main_menu/localization"
 REPORT = ROOT / "docs/m4/dynamic_location_names.csv"
 CURATED = ROOT / "docs/m4/dynamic_location_name_overrides.csv"
 TIER2 = ROOT / "docs/m4/tier2_location_name_overrides.csv"
+TIER2_WIDE = ROOT / "docs/m4/tier2_wide_location_name_overrides.csv"
 TIER3 = ROOT / "docs/m4/tier3_location_name_overrides.csv"
 TIER3_MAP = ROOT / "docs/m4/tier3_map_name_fallbacks.csv"
 ENGINE_LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
@@ -161,6 +162,7 @@ def entries() -> list[dict[str, str]]:
         seen_locations.add(location)
     output.extend(ledger_entries(CURATED, "secure", "curated", "reviewed direct", culture_groups, group_languages, installed_locations, seen_locations))
     output.extend(ledger_entries(TIER2, "tier2", "tier2", "bounded Tier-2", culture_groups, group_languages, installed_locations, seen_locations))
+    output.extend(ledger_entries(TIER2_WIDE, "tier2", "tier2", "wide Tier-2", culture_groups, group_languages, installed_locations, seen_locations))
     output.extend(ledger_entries(TIER3, "tier3", "tier3", "retained-label Tier-3", culture_groups, group_languages, installed_locations, seen_locations))
     if not output:
         raise ValueError("no secure dynamic-name anchors were selected")

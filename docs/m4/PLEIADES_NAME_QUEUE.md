@@ -25,6 +25,10 @@ bounded subset (nearest AD 1 settlement, no more than 1.50 pixels away), rejects
 uncertain and archaeological title forms, and records its lower-confidence
 proxy status in `tier2_location_name_overrides.csv`. It never edits Tier-1.
 
+`tools/generate_m4_tier2_wide_names.py` promotes a distinct light-review set
+from the same queue only at 1.50--3.25 pixels. It rejects obvious site labels,
+uses `tier2` confidence, and remains below all direct entries.
+
 `tools/generate_m4_tier3_names.py` is a separate coverage fallback for every
 remaining populated AD 1 map field. It copies the installed label only as an
 explicit, culture-bound placeholder with `tier3` confidence and no historical

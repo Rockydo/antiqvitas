@@ -4091,3 +4091,11 @@ may be modern, district-scale, or otherwise unsuitable for AD 1; each is
 recorded as `tier3` with no claim about ancient identity. The 427 map-only
 key-derived labels are even more provisional. Sources: installed EU5 English
 location localization; engine location symbol inventory. [unverified fallback]
+
+## 2026-07-23 - Wide Tier-2 Pleiades labels remain map proxies
+
+The 216 wide adapters use precise Pleiades settlement records declared active
+in AD 1, but the wider 1.50--3.25-pixel match can represent a nearby site or
+district. Each row records its PLE identifier and measured offset as `tier2`;
+none claims exact civic extent, polity, culture, or population. Source: local
+Pleiades snapshot and checked projection queue. [light-review proxy]
