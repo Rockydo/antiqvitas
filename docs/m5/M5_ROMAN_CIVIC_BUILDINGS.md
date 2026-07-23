@@ -22,6 +22,7 @@ quantities.
 - **DAR-MACELLUM** — Digital Augustan Rome, [Macellum (Forum Romanum)](https://www.digitalaugustanrome.org/records/macellum-forum-romanum/).  Places the food market and gives its 179 BC rebuilding date.
 - **DAR-HORREA-GALBANA** — Digital Augustan Rome, [Horrea Galbana](https://www.digitalaugustanrome.org/records/horrea-galbana/).  Identifies the extensive Emporium warehouse complex as securely pre-AD 1.
 - **TR-THEATRE-MARCELLUS** — Turismo Roma, [The Theatre of Marcellus](https://www.turismoroma.it/en/places/theatre-marcellus).  Gives the Caesarian/Augustan construction sequence and 13/11 BC inauguration.
+- **DAR-THEATRUM-BALBUS** — Digital Augustan Rome, [Theatrum Balbus](https://www.digitalaugustanrome.org/records/theatrum-balbus/). Records L. Cornelius Balbus's Campus Martius stone theatre and its dedication in 13 BC.
 - **DAR-TABULARIUM** — Digital Augustan Rome, [Tabularium](https://www.digitalaugustanrome.org/records/tabularium/).  Supports the physical building while requiring a contested confidence for the exact archival interpretation.
 - **DAR-CIRCUS** — Digital Augustan Rome, [Circus Maximus](https://www.digitalaugustanrome.org/records/circus-maximus/).  Records its long-standing public-entertainment functions.
 - **DAR-NAVALIA** — Digital Augustan Rome, [Navalia](https://www.digitalaugustanrome.org/records/navalia/).  Records the Republican-period Tiberine naval arsenal and ship sheds; the precise Augustan configuration remains debated.
@@ -58,6 +59,18 @@ Porticus Aemilia uses a trade contract with a broad but deliberately non-quantif
 
 The Naumachia is only a public aquatic-display proxy with modest cultural and upkeep context. It does not script a battle, capacity, spectator list, or a reconstruction of the basin. The Horologium is only an open solar-calendar-space proxy; copper is the engine-good stand-in for bronze, not a material inventory, and the special does not claim a full clock, calendar marks, or plaza plan.
 
+### Theatre of Balbus addition
+
+`DAR-THEATRUM-BALBUS` records the small Campus Martius stone theatre built by
+L. Cornelius Balbus and dedicated in 13 BC. The special uses the same verified
+cultural-building contract as the Theatre of Marcellus, but its lower modifiers
+and upkeep keep it a distinct modest cultural node. Wine, cloth, and pottery
+are gameplay demand proxies for public performance and maintenance, not a
+recorded stock list, performance calendar, or audience size. Its direct art is
+a generic theatre silhouette because the theatre's plan and decoration remain
+only partly recoverable; it does not portray a crowd, statue, inscription,
+ritual, named patron, or the Crypta Balbi as an asserted reconstruction.
+
 ## Technical mapping
 
 The definitions use only contracts read from the installed build's
@@ -70,7 +83,7 @@ Their start-state presence is rendered through the existing verified
 
 ## Art review
 
-The direct Pantheum Agrippae, Saepta Iulia, Diribitorium, Temple of Apollo, Palatine Library, Curia Iulia, Porticus Octaviae, Emporium warehouse, Aqua Alsietina, Naumachia, and Horologium source images were
+The direct Pantheum Agrippae, Saepta Iulia, Diribitorium, Temple of Apollo, Palatine Library, Curia Iulia, Porticus Octaviae, Emporium warehouse, Aqua Alsietina, Naumachia, Horologium, and Theatre of Balbus source images were
 visually reviewed, cropped to 128px masters, converted to direct BC7 DDS
 files, and added to [the contact sheet](ROMAN_BUILDING_ICON_CONTACT_SHEET.png)
 alongside the existing named-building set.

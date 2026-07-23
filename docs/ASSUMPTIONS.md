@@ -1,5 +1,19 @@
 # Historical Assumptions
 
+## 2026-07-23 - Theatre of Balbus is an AD 1 cultural anchor, not a reconstruction
+
+Digital Augustan Rome records L. Cornelius Balbus's Campus Martius stone
+theatre and its 13 BC dedication. The Theatre of Balbus is therefore secure as
+an AD 1 Rome city-point anchor. The visible building is a generic theatre
+silhouette: it does not determine the partly recoverable plan, cavea capacity,
+decoration, portico arrangement, Crypta Balbi, performances, audience, or
+patronage beyond the source's bounded identification.
+
+Source: `DAR-THEATRUM-BALBUS`, [Digital Augustan Rome: Theatrum Balbus](https://www.digitalaugustanrome.org/records/theatrum-balbus/).
+
+[secure date and cultural-building identity; contested plan, scale, decorative
+programme, and all numerical gameplay effects]
+
 ## 2026-07-22 - Regional production placements represent city markets and hinterlands
 
 The 112 M5 regional-production placements represent the working economic

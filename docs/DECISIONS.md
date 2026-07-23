@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-23 - Rome expansion remains data-rendered and source-bounded
+
+The Theatre of Balbus is added through the existing named-special ledger,
+generated building-definition/localization path, direct 128px DDS contract,
+and start `building_manager`. It uses the locally verified cultural building
+contract and a modest goods-upkeep proxy rather than a custom production chain
+or an unverified building type. This keeps additional Roman depth compatible
+with the existing market-system blocker and preserves reproducibility.
+
 ## 2026-07-23 - Religion art migrates through a checked direct ledger
 
 The existing direct filenames were not enough because most M4 religions still
