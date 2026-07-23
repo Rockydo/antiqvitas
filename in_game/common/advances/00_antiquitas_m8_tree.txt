@@ -1203,7 +1203,7 @@ antq_crisis_exchange = {
 
 antq_state_annona_routes = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_state_annona_routes
 	depth = 0
 	research_cost = 8.0
 	ai_weight = { add = 100 }
@@ -1211,7 +1211,7 @@ antq_state_annona_routes = {
 
 antq_bureaucratic_customs = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_bureaucratic_customs
 	depth = 1
 	research_cost = 8.5
 	requires = antq_state_annona_routes
@@ -1220,7 +1220,7 @@ antq_bureaucratic_customs = {
 
 antq_foederati_provisioning = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_foederati_provisioning
 	depth = 2
 	research_cost = 9.0
 	requires = antq_bureaucratic_customs
@@ -1229,7 +1229,7 @@ antq_foederati_provisioning = {
 
 antq_frontier_market_towns = {
 	age = age_4_reformation
-	icon = crown_power_advance_discovery
+	icon = antq_advance_frontier_market_towns
 	depth = 3
 	research_cost = 9.5
 	requires = antq_foederati_provisioning
