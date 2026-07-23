@@ -1,5 +1,19 @@
 # Historical Assumptions
 
+## 2026-07-23 - South Arabian and European religion art stays material-only
+
+The seventh direct religion-icon batch distinguishes only broad South Arabian,
+western Mediterranean, northwestern European, and northern European material
+contexts. It identifies no named deity, animal, temple, shrine, altar, ruler,
+kingdom, tribe, city, ship, harbour, druid, forest scene, rite, person, text,
+or inscription.
+
+Sources: `P11`; `CAH-XI`; `P20`, catalogued in
+`docs/world_1ad/SOURCES.md` and bounded by the M4 religion ledger.
+
+[secure broad material contexts; contested specific tradition, practice,
+distribution, object provenance, and all visual reconstruction]
+
 ## 2026-07-23 - Direct Nile, Horn, and Arabian religion art stays material-only
 
 The sixth direct religion-icon batch distinguishes only broad Nile Valley,

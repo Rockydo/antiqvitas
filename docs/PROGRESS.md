@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-23 - Direct South Arabian and European religion icons
+
+- Added four distinct direct 128px religion illustrations for South Arabian,
+  Canaanite-Punic, Celtic, and Germanic religion. Each has a retained source,
+  exact master, BC7 DDS texture, ledger row, and reviewed contact sheet.
+- Their material-only studies make no claim to a named deity, temple, shrine,
+  ruler, city, ship, druid, tribe, rite, person, text, or inscription. The
+  direct religion migration now covers 24 of 37 keys.
+
+Next: continue the religion-art migration and source-led Roman buildings,
+trade goods, and period-name coverage.
+
 ## 2026-07-23 - Direct Nile, Horn, and Arabian religion icons
 
 - Added four distinct direct 128px religion illustrations for Kemetic Religion,
