@@ -557,7 +557,7 @@ antq_legionary_logistics = {
 
 antq_principate_warfare = {
 	age = age_1_traditions
-	icon = abacus_advance
+	icon = antq_advance_principate_warfare
 	depth = 9
 	research_cost = 6.5
 	starting_technology_level = 4
@@ -567,7 +567,7 @@ antq_principate_warfare = {
 
 antq_cataphract_adoption = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_cataphract_adoption
 	depth = 0
 	research_cost = 4.0
 	ai_weight = { add = 100 }
@@ -575,7 +575,7 @@ antq_cataphract_adoption = {
 
 antq_composite_bow_tactics = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_composite_bow_tactics
 	depth = 1
 	research_cost = 4.5
 	requires = antq_cataphract_adoption
@@ -584,7 +584,7 @@ antq_composite_bow_tactics = {
 
 antq_camel_screening = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_camel_screening
 	depth = 2
 	research_cost = 5.0
 	requires = antq_composite_bow_tactics
@@ -593,7 +593,7 @@ antq_camel_screening = {
 
 antq_frontier_cavalry = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_frontier_cavalry
 	depth = 3
 	research_cost = 5.5
 	requires = antq_camel_screening
@@ -602,7 +602,7 @@ antq_frontier_cavalry = {
 
 antq_mounted_scouts = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_mounted_scouts
 	depth = 4
 	research_cost = 6.0
 	requires = antq_frontier_cavalry
@@ -611,7 +611,7 @@ antq_mounted_scouts = {
 
 antq_heavy_cavalry_drill = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_heavy_cavalry_drill
 	depth = 5
 	research_cost = 6.5
 	requires = antq_mounted_scouts
@@ -620,7 +620,7 @@ antq_heavy_cavalry_drill = {
 
 antq_campaign_seasons = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_campaign_seasons
 	depth = 6
 	research_cost = 7.0
 	requires = antq_heavy_cavalry_drill
@@ -629,7 +629,7 @@ antq_campaign_seasons = {
 
 antq_deep_defence = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_deep_defence
 	depth = 7
 	research_cost = 7.5
 	requires = antq_campaign_seasons
@@ -638,7 +638,7 @@ antq_deep_defence = {
 
 antq_imperial_field_forces = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_imperial_field_forces
 	depth = 8
 	research_cost = 8.0
 	requires = antq_deep_defence
@@ -647,7 +647,7 @@ antq_imperial_field_forces = {
 
 antq_high_empire_warfare = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_high_empire_warfare
 	depth = 9
 	research_cost = 8.5
 	requires = antq_imperial_field_forces
@@ -1105,7 +1105,7 @@ antq_imperial_trade = {
 
 antq_high_empire_exchange = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_high_empire_exchange
 	depth = 9
 	research_cost = 8.5
 	requires = antq_imperial_trade

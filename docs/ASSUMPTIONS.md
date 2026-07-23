@@ -1,5 +1,10 @@
 # Historical Assumptions
 
+## 2026-07-23 - Warfare sheet art
+
+Generic equipment only; no named polity, person, battle, place, text, or symbol.
+Sources: plan `P15`, `P20`.
+
 ## 2026-07-23 - Principate and High Empire commercial art stays generic
 
 The twenty-second direct advance-icon batch depicts generic exchange materials,
