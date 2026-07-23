@@ -268,6 +268,11 @@ One reviewed source sheet supplies twelve direct learning and civic icons.
 Two reviewed source sheets provide 24 civic-society and statecraft icons.
 [Sheets](DIRECT_ADVANCE_ICON_BATCH_25_26.png).
 
+### Batches twenty-seven through twenty-nine review
+
+Three reviewed sheets provide 36 warfare, logistics, and exchange icons.
+[Contacts](DIRECT_ADVANCE_ICON_BATCH_27.png), [28](DIRECT_ADVANCE_ICON_BATCH_28.png), and [29](DIRECT_ADVANCE_ICON_BATCH_29.png).
+
 ### Batch twenty-two review
 
 The Principate and High Empire commercial-and-building illustrations distinguish

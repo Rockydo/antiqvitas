@@ -1,5 +1,9 @@
 # Progress
 
+## 2026-07-23 - Warfare and exchange icon sheets
+
+- Added 36 direct advance icons; coverage is 159/250.
+
 ## 2026-07-23 - Civic and statecraft icon sheets
 
 - Added 24 direct advance icons; coverage is 123/250.
