@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-24 - M10 historical currents accepted
+
+- Accepted the five source-led historical-current batches after a fresh green
+  validation of all 84 contracts and a fresh enabled-mod smoke with zero new
+  log lines. The bounded observer-driver sequence returned to the menu twice;
+  screenshots and the non-mod diagnostic boundary are preserved in
+  `docs/playtests/M10_REPORT.md`.
+- The revised plan gate requires static contracts plus prompt targeted evidence
+  where the engine/driver can reach it, not a 475-year observer simulation.
+
 ## 2026-07-23 - Nile period-name pass
 
 - Added six direct Pleiades city forms: Memphis, Hermopolis Magna, Panopolis,
