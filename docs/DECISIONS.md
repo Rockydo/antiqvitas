@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-24 - M10 uses bounded contract evidence rather than a long observer
+
+The installed UI driver reached the enabled mod's menu but twice failed to
+transition its recorded New Game-to-Observer sequence into a live observer
+session. The M10 acceptance therefore relies on its five generator contracts,
+fresh enabled-mod log-diff smoke, and retained screenshots, rather than a
+forced long campaign. This follows the plan's revised M10/M12 protocol:
+targeted probes apply where the engine can reach them promptly; a centuries-long
+observer run is not a ship gate. The evidence and diagnostic boundary are in
+`docs/playtests/M10_REPORT.md`.
+
 ## 2026-07-23 - Argentoratum uses the verified low frontier-camp contract
 
 The University of Strasbourg's dated source and the direct installed Strasbourg
