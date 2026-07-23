@@ -25,6 +25,7 @@ validate:
 	.venv/Scripts/python.exe tools/m11_flavor_events.py --check
 	.venv/Scripts/python.exe tools/m11_dynamic_coas.py --check
 	.venv/Scripts/python.exe tools/m11_common_icons.py --check
+	.venv/Scripts/python.exe tools/m11_privilege_icons.py --check
 	.venv/Scripts/python.exe tools/m11_decisions.py --check --scope all
 	.venv/Scripts/python.exe tools/m11_message_overlay.py --check --scope all
 	.venv/Scripts/python.exe tools/m11_localization.py --check
