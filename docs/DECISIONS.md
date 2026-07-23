@@ -1,5 +1,15 @@
 # Technical and Design Decisions
 
+## 2026-07-23 - Religion art migrates through a checked direct ledger
+
+The existing direct filenames were not enough because most M4 religions still
+aliased a small group of installed motifs. M11 now retains those aliases only as
+a staged compatibility layer while `direct_religion_icons.csv` binds completed
+rows to unique ANTIQVITAS source, 128px master, and DDS paths. The common-icon
+validator checks every direct row against the religion definitions and rejects
+shared direct source/master assets. The final contract is 37 direct rows and no
+aliases; its first batch is intentionally non-reconstructive material context.
+
 ## 2026-07-23 - Institution visuals require source and master uniqueness
 
 The M11 direct-key contract is tightened beyond a unique filename: every M8

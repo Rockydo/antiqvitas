@@ -14,11 +14,25 @@ the complete definition-to-texture inventory, verifies the DDS contract, and
 requires every religion texture to remain an exact alias of its reviewed local
 source. Its `--write` path is the reproducible local build step.
 
-## Religion aliases
+## Religion migration
 
-The religion set reuses installed engine-native motifs only. A source name is a
-broad readable UI cue, not a claim that the contemporary or historical
-tradition is identical to ANTIQVITAS's sourced category.
+The religion set moves from installed engine-native aliases to one direct,
+ANTIQVITAS-owned illustration per definition key. The completed rows in
+`direct_religion_icons.csv` override only their matching key; all other aliases
+remain a checked transition while a unique source/master/texture chain is
+reviewed. The validator enforces the direct ledger's definition binding, 128px
+DDS contract, and source/master uniqueness. The required final state is 37
+direct religion illustrations and zero aliases.
+
+The first three direct icons cover Roman civic ritual, Hellenic civic ritual,
+and pre-Nicene community context. They are bounded material still lifes rather
+than depictions of a deity, sanctuary, rite, church, clergy, saint, ruler, or
+historical event. The reviewed three-icon batch is
+[here](DIRECT_RELIGION_ICON_BATCH_01.png).
+
+Until each remaining row is completed, its reviewed installed motif is a broad
+readable UI cue, not a claim that the contemporary or historical tradition is
+identical to ANTIQVITAS's sourced category.
 
 | ANTIQVITAS definition keys | Reviewed local motif |
 |---|---|
