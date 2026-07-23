@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-07-23 - Direct Iberian period-name pass
+
+- Added nineteen reviewed direct Roman-period display forms across Hispania,
+  from Hispalis and Carthago Nova to Bracara Augusta, Lucus Augusti, Ebusus,
+  Ilerda, and Dertosa. The dynamic layer now has 61 coordinate-verified
+  capitals plus 148 curated direct anchors in every supported client.
+- These are city-point labels only: they assert neither provincial borders,
+  language uniformity, civic rank, territorial extent, nor population.
+
 ## 2026-07-23 - M5 second productive-building pass
 
 - Added twelve directly illustrated antique workshop families—mills, rope,
