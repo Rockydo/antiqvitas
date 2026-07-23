@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-23 - High Empire trade-infrastructure art stays generic
+
+The twentieth direct advance-icon batch depicts generic maritime cargo support,
+seasonal navigation materials, customs measures, and merchant-coordination
+goods. It identifies no named sea, ocean, monsoon, route, border, city, ruler,
+empire, port, merchant, customs office, law, tax system, market, currency,
+event, person, animal, boat, map, sign, inscription, writing, symbol, flag, or
+modern object.
+
+Sources: plan sections `P15` and asset-pipeline boundary `P20` in
+`ANTIQVITAS_MASTER_PLAN.md`.
+
+[secure broad material, marine, customs, and trade contexts; contested
+practice, distribution, object provenance, and all visual reconstruction]
+
 ## 2026-07-23 - Migrations exchange advance art stays generic
 
 The nineteenth direct advance-icon batch depicts networked goods, reciprocal
