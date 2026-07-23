@@ -5096,6 +5096,21 @@ separate Han runtime-regency blocker.
 Next: continue source-keyed city labels where exact installed matches exist,
 then return to the highest-priority unblocked M5/M7 subsystem work.
 
+## 2026-07-23 - M5 Novaesium frontier-camp pass
+
+- Added the 16 BC Novaesium timber-and-earth camp at the direct installed
+  Neuss point. It uses the verified one-level stockade contract with bounded
+  garrison/control effects, four period-safe maintenance inputs, a secure
+  municipal archaeology source, and no invented legion roster or stone limes.
+- Produced a dedicated icon from a reviewed 12-tile source sheet, retained the
+  vanilla building-style reference and source/master/DDS chain, and refreshed
+  the 37-building Roman contact sheet.
+- `make validate` and the real-game `make smoke` are green; vanilla and the
+  mod both reached the menu, with zero new mod error-log lines.
+
+Next: continue only exact-source Roman frontier anchors, or take the next
+unblocked M7 diversity audit.
+
 ## 2026-07-22 - Named Roman civic-building and direct-art pass
 
 - Replaced the generic Rome building proxies with sixteen named AD 1 special
