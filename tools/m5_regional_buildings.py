@@ -102,6 +102,20 @@ PRODUCTION_RECIPES = {
     "antq_reg_bronze_foundry": ("tools", "0.6", (("copper", "0.475"), ("tin", "0.038"))),
     "antq_reg_ivory_carver": ("jewelry", "0.1", (("ivory", "0.1042"),)),
     "antq_reg_leatherworks": ("leather", "1", (("livestock", "1.0873"), ("sand", "0.4345"), ("tar", "0.0819"), ("tools", "0.1627"))),
+    # Each second-pass recipe is an exact installed guild-margin contract
+    # selected for its finished good; the family ledger retains the historical
+    # material vocabulary without introducing unsupported price assumptions.
+    "antq_reg_ropewalk": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
+    "antq_reg_brickworks": ("pottery", "1.0", (("clay", "1.0039"), ("lumber", "0.1201"), ("tools", "0.0504"))),
+    "antq_reg_lampworks": ("pottery", "1.0", (("clay", "1.0039"), ("lumber", "0.1201"), ("tools", "0.0504"))),
+    "antq_reg_tile_yard": ("pottery", "1.0", (("clay", "1.0039"), ("lumber", "0.1201"), ("tools", "0.0504"))),
+    "antq_reg_papyrus_workshop": ("books", "0.3", (("dyes", "0.0503"), ("paper", "0.1995"), ("lumber", "0.0998"))),
+    "antq_reg_incense_workshop": ("dyes", "0.2", (("lumber", "0.4444"),)),
+    "antq_reg_basketry": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
+    "antq_reg_linen_bleachery": ("cloth", "0.8", (("fiber_crops", "1.0"),)),
+    "antq_reg_copper_smithy": ("tools", "0.6", (("copper", "0.475"), ("tin", "0.038"))),
+    "antq_reg_spice_grinder": ("dyes", "0.2", (("lumber", "0.4444"),)),
+    "antq_reg_reed_boatyard": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
 }
 
 
