@@ -148,6 +148,17 @@ PRODUCTION_RECIPES = {
     "antq_reg_weightmaker": ("tools", "0.6", (("copper", "0.475"), ("tin", "0.038"))),
     "antq_reg_chariotwright": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
     "antq_reg_ferry_quay": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
+    # Sixth pass: exact local guild recipes remain the economy contract;
+    # historical specificity belongs to the family ledger and art subject.
+    "antq_reg_purple_dyehouse": ("dyes", "0.2", (("lumber", "0.4444"),)),
+    "antq_reg_iron_bloomery": ("tools", "1", (("iron", "0.8333"),)),
+    "antq_reg_tin_smelter": ("tools", "0.6", (("copper", "0.475"), ("tin", "0.038"))),
+    "antq_reg_glass_bead_furnace": ("glass", "0.75", (("lumber", "0.1933"), ("sand", "0.9657"), ("tools", "0.3674"))),
+    "antq_reg_cordwainer": ("leather", "1", (("livestock", "1.0873"), ("sand", "0.4345"), ("tar", "0.0819"), ("tools", "0.1627"))),
+    "antq_reg_netmaker": ("naval_supplies", "1", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
+    "antq_reg_packsaddle_workshop": ("leather", "1", (("livestock", "1.0873"), ("sand", "0.4345"), ("tar", "0.0819"), ("tools", "0.1627"))),
+    "antq_reg_stone_carver": ("tools", "1", (("iron", "0.8333"),)),
+    "antq_reg_cooperage": ("furniture", "1", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
 }
 
 

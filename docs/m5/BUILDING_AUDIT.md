@@ -4,14 +4,14 @@ The permanent audit counts every mod-seeded M5/M7 building placement, including
 named civic sites and M7 frontier-fort proxies. It therefore does not inflate
 the result by counting only the reusable guild family definitions.
 
-For the current ledger, 627 of 792 placements (79.2%) use calibrated productive
-guild recipes. The remaining 165 placements are intentionally bounded civic,
+For the current ledger, 897 of 1,152 placements (77.9%) use calibrated productive
+guild recipes. The remaining 255 placements are intentionally bounded civic,
 religious, infrastructure, service, primary-production, or fort contexts. This
 is within the requested 50-80% productive range.
 
-All 724 regional-family placements render as non-special, repeatable guild
+All 1,084 regional-family placements render as non-special, repeatable guild
 buildings with `guild_max_level`. The 68 named historic/civic or fort proxies
-are the sole one-level exception set, leaving 91.4% of all
+are the sole one-level exception set, leaving 94.1% of all
 placed M5/M7 buildings scalable. `tools/m5_building_audit.py` enforces both
 ratios during `make validate`.
 

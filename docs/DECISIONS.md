@@ -2480,3 +2480,9 @@ The fourth pass uses native guild formulas for ten new families and deliberately
 keeps perfumery and waxwork as service contracts. This holds all M5/M7 placed
 buildings at 79.7% productive—inside the requested 50–80% range—without
 removing their direct art or goods-demand texture.
+
+## 2026-07-23 - Sixth M5 pass keeps engine-native production formulas
+
+Nine productive families reuse harvested guild contracts; saltworks, charcoal,
+and spice handling remain maintenance/service adapters. The full system stays
+within the validator's 50-80% productive range at 77.9%.
