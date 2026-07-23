@@ -1025,7 +1025,7 @@ antq_principate_exchange = {
 
 antq_silk_road_caravanserais = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_silk_road_caravanserais
 	depth = 0
 	research_cost = 4.0
 	ai_weight = { add = 100 }
@@ -1033,7 +1033,7 @@ antq_silk_road_caravanserais = {
 
 antq_long_distance_credit = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_long_distance_credit
 	depth = 1
 	research_cost = 4.5
 	requires = antq_silk_road_caravanserais
@@ -1042,7 +1042,7 @@ antq_long_distance_credit = {
 
 antq_market_regulation = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_market_regulation
 	depth = 2
 	research_cost = 5.0
 	requires = antq_long_distance_credit
@@ -1087,7 +1087,7 @@ antq_merchant_associations = {
 
 antq_warehouse_accounts = {
 	age = age_2_renaissance
-	icon = legalism_advance
+	icon = antq_advance_warehouse_accounts
 	depth = 7
 	research_cost = 7.5
 	requires = antq_merchant_associations

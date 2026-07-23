@@ -212,6 +212,16 @@ bridge, boat, map, inscription, writing, person, animal, weapon, or modern
 object. The reviewed source/master batch is
 [here](DIRECT_ADVANCE_ICON_BATCH_15.png).
 
+### Batch sixteen review
+
+The High Empire exchange illustrations distinguish generic stone storage access,
+blank credit-handling materials, standardized market measures, and a low storage
+shelf with containers and tallies. They do not identify a named road, caravan
+route, city, building, merchant, bank, official, law, polity, currency system,
+port, tax system, animal, person, sign, seal imprint, map, inscription, writing,
+flag, or modern object. The reviewed source/master batch is
+[here](DIRECT_ADVANCE_ICON_BATCH_16.png).
+
 ## Engine and asset verification
 
 The installed build's `main_menu/gfx/interface/advance/` established the
