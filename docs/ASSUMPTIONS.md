@@ -2,7 +2,9 @@
 
 ## 2026-07-23 - Privilege illustrations identify material contexts only
 
-The first six privilege-art batches treat Senatorial Land Exemption,
+The seven privilege-art batches give every one of the 24 M6 privilege adapters
+a direct non-reconstructive material illustration. They treat Senatorial Land
+Exemption,
 Equestrian Service, Priestly Colleges, Annona, Praetorian Donatives, the Han
 Palace Bureau, Wang Clan Regency, Great-House Autonomy, Client Royal Autonomy,
 Kushite Royal Court, Steppe Clan Autonomy, and Early Korean Royal Court as the
@@ -19,10 +21,16 @@ hierarchy, named Wang or Iranian house, elder, druid, Brittonic tribe, Armenia,
 Osroene, Aksumite ruler, Djenné-Djenno council, Kushite ruler, steppe clan,
 Korean dynasty, king, or rite.
 
+The final direct icons for Regional Satraps, Hellenic City Elites, Clan
+Assembly, Monastic Patronage, and the Second Temple Priesthood remain equally
+bounded material contexts. They identify no named satrap, Indo-Greek city,
+ganasangha, clan, monk, Buddhist figure, Lankan monastery, Judean priest,
+Temple furnishing, ritual, constitutional formula, or textual tradition.
+
 Sources: `P8.1`; `P8.2`; `P8.3`; `P8.5`; `P11`; `P13`; `OCD`; `OCD-EQU`;
 `MET-PRIEST`; `BHR`; `CAH-XI`; `CTP-WM`; `PLE`; `SAM`; `P8.7`; `BM-DRU`,
-and `PER`, catalogued in `docs/world_1ad/SOURCES.md` and the M6 privilege
-ledger.
+`PER`; `P8.4`; `IRAN-AZES`; `IRAN-IGR`; and `SRI-BHAT`, catalogued in
+`docs/world_1ad/SOURCES.md` and the M6 privilege ledger.
 
 [secure broad material contexts; no claim to a specific institution, person,
 object provenance, legal formula, distribution, payment, or ritual practice]

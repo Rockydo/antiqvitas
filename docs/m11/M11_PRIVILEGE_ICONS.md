@@ -62,3 +62,15 @@ household. They remain uninscribed object studies rather than depictions of a
 court, ruler, chief, person, polity, town, building, map, battle, constitutional
 formula, or seal impression. The reviewed portrait contact sheet is
 [here](DIRECT_PRIVILEGE_ICON_BATCH_06.png).
+
+## Seventh and final South Asian, Lankan, and Judean batch
+
+The final five icons distinguish northwestern Indian regional and urban
+households, a leading-clan household, a deliberately non-ritual Buddhist
+monastic material grouping, and an ancient Judean priesthood material grouping.
+They remain uninscribed object studies rather than depictions of a satrap,
+Greek city elite, assembly, monk, Buddha, priest, Temple, person, polity,
+building, map, battle, constitutional formula, or seal impression. The reviewed
+portrait contact sheet is [here](DIRECT_PRIVILEGE_ICON_BATCH_07.png). With this
+batch, each of the 24 ANTIQVITAS M6 privilege keys has its own source, PNG
+master, and native-contract DDS; no privilege UI fallback remains.
