@@ -954,3 +954,62 @@ antq_mausoleum_augusti = {
 	}
 	construction_demand = town_building_construction
 }
+
+antq_amphitheatrum_statilii_tauri = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	category = cultural_category
+	employment_size = cultural_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = cultural_building_time
+	modifier = {
+		local_cultural_tradition = 0.07
+		local_unrest = -0.006
+	}
+	unique_production_methods = {
+		antq_amphitheatrum_statilii_tauri_maintenance = {
+			lumber = 0.12
+			masonry = 0.08
+			cloth = 0.05
+			wine = 0.05
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}
+
+antq_porticus_liviae = {
+	audio_tier = 2
+	is_special = yes
+	is_foreign = no
+	pop_type = burghers
+	max_levels = 1
+	category = cultural_category
+	employment_size = cultural_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = cultural_building_time
+	modifier = {
+		local_cultural_tradition = 0.07
+		local_unrest = -0.005
+	}
+	unique_production_methods = {
+		antq_porticus_liviae_maintenance = {
+			masonry = 0.08
+			marble = 0.04
+			lumber = 0.04
+			cloth = 0.03
+			pottery = 0.03
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	construction_demand = town_building_construction
+}

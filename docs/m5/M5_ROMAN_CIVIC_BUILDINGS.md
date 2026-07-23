@@ -89,6 +89,24 @@ it does not determine the tomb's internal plan, occupants, sculpture, complete
 landscaping, or later ruin state. Both direct icons use restrained exterior
 silhouettes rather than invented scenes.
 
+### Amphitheatrum Statilii Tauri and Porticus Liviae additions
+
+`DAR-AMPHITHEATRUM-TAURUS` records T. Statilius Taurus's first stone Roman
+amphitheatre and its 29 BC dedication. Its location in the Campus Martius,
+construction details, and scale remain unresolved. The special therefore uses
+the existing low cultural-building contract at the Rome city point. Its upkeep
+is a modest gameplay demand for timber, masonry, cloth, wine, and tools; it is
+not a reconstruction of seating, a programme, performers, spectators, games,
+or the AD 64 fire.
+
+`DAR-PORTICUS-LIVIAE` records the public recreational quadriporticus dedicated
+in 7 BC on the Oppian. It preserves disagreement over attribution, its central
+feature, and a complete plan. The special is consequently a modest public-space
+proxy: it does not assert an altar, temple, fountain, shops, houses, or a full
+courtyard arrangement. Its service-material upkeep is economic gameplay demand,
+not an ancient budget or inventory. Both direct icons show generic empty
+architectural silhouettes rather than named people or reconstructed sites.
+
 ## Technical mapping
 
 The definitions use only contracts read from the installed build's
@@ -108,7 +126,10 @@ alongside the existing named-building set.
 The generator rejects a missing, wrong-size, or non-RGBA direct building icon;
 the ledger's `icon_subject` column records the subject of each illustration.
 Ara Pacis and Mausoleum source images were reviewed under the same contract;
-the refreshed sheet now contains all 34 named Roman specials.
+they are retained in the same reviewed contact sheet.
+The Amphitheatrum Statilii Tauri and Porticus Liviae sources use the same direct
+source/master/DDS review chain; the refreshed sheet contains all 36 named Roman
+specials.
 
 ## Ravenna military-port source and boundary
 
