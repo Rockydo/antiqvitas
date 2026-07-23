@@ -2590,3 +2590,10 @@ Use the content-addressed DDS bytes rather than a filename convention to catch
 accidental shared building art. This is intentionally a rapid static guard: it
 complements, rather than substitutes for, the source-led icon review and menu
 smoke gate.
+
+## 2026-07-23 - Review direct UI art as one inventory
+
+The visual review sheet is generated from the checked cross-surface asset
+ledger, using the retained master where available and the direct game DDS
+otherwise. Byte-for-byte freshness makes it a rapid, comprehensive review
+artifact rather than a separately maintained list.
