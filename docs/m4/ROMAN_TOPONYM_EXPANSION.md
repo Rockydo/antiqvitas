@@ -115,3 +115,18 @@ The Pleiades source/master records are retained in the documented project
 cache. As with every curated dynamic row, these are display labels alone, not
 claims of a settlement polygon, local demography, language uniformity, civic
 rank, or provincial boundary.
+
+## 2026-07-23 - Exact Adriatic and Pannonian pass
+
+Four Roman-controlled installed city keys have exact Pleiades settlement points
+active at AD 1: Naissus, Siscia, Spalatum, and Sirmium. Their offsets from the
+local-key anchor range from 0.23 km to 0.57 km. The display names are direct
+point labels only and assert no municipal rank, language uniformity, city
+extent, provincial boundary, citizenship, or population.
+
+| Installed key | AD 1 display form | Pleiades place | Point offset |
+| --- | --- | --- | --- |
+| nis | Naissus | 207303 | 0.53 km |
+| sisak | Siscia | 197504 | 0.57 km |
+| split | Spalatum | 197524 | 0.23 km |
+| sremska_mitrovica | Sirmium | 207447 | 0.57 km |

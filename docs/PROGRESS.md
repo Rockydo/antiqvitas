@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-07-23 - Exact Adriatic and Pannonian period names
+
+- Added four direct Pleiades city-point forms: Naissus, Siscia, Spalatum, and
+  Sirmium. The dynamic layer now has 61 coordinate-verified capitals plus 129
+  curated direct labels, mirrored across all supported clients.
+- Every point is Roman-controlled at the AD 1 start and lies within 0.57 km of
+  its installed key; no settlement extent, civic rank, language uniformity, or
+  demographic inference is made.
+
 ## 2026-07-23 - Exact Gallic period-name pass
 
 - Added fourteen direct Pleiades city-point forms across Roman Gaul, from
