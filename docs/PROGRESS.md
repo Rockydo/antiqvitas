@@ -6347,3 +6347,10 @@ reviewed 128px BC7 DDS.
 - A source-bounded Ping birthplace fixture passed validation and smoke, but the
   fresh AD 1 selector ignored both live-start controls under the driver. The
   fixture was fully reverted; canonical validation and smoke remain green.
+
+## 2026-07-24 - M6 live route recovered; Ping birthplace rejected
+
+- The selector's upper activation band reaches the paused player HUD. The
+  direct XAR Government panel still rendered Wang Guangwu; a source-qualified
+  Ping birthplace fixture also rendered Wang Guangwu and was reverted.
+- Fixture and restored canonical builds both passed full validation and smoke.

@@ -1128,3 +1128,20 @@ green. Evidence: `docs/screens/M6_han_ping_birthplace_fixture/`.
 
 Do not retry this screen path unchanged. Resume it only after a locally proven
 live-start input route or an engine patch changes the selector behaviour.
+
+### 2026-07-24 resolution: live-start upper activation band is engine-valid
+
+The selector's visible bottom controls accept the verified upper activation band
+(`y=0.880`), not the old centre target. A fresh disposable player start reached
+the paused live HUD; `tag XAR` then opened Western Han's live Government panel.
+The normal panel still rendered `Wang Guangwu, 35`, so the UI route is no longer
+an M6 blocker but the named-regency engine linkage remains one. Evidence:
+`docs/screens/M6_han_resume_ui/han_government_panel.png`.
+
+### 2026-07-24 follow-up: Emperor Ping birthplace does not bind the regency
+
+A source-qualified Dingzhou/Lunu proxy birth for Emperor Ping passed full
+validation and enabled-mod smoke. In the fresh AD 1 XAR panel it still rendered
+`Regent Wang Guangwu`; the fixture, source note, and generated output were
+restored. Evidence: `docs/screens/M6_han_ping_birth_fixture_live/han_government_panel.png`.
+Do not retry a Ping-birthplace-only variation.
