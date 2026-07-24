@@ -2232,6 +2232,11 @@ P8.10; P12.2; CAH-XI; BHR; *Periplus of the Erythraean Sea*; UNESCO-AB-OC;
 Spencer and Redmond (PNAS-VIR); Gagnon (WIL-GAL). [secure chronological
 exclusions and source contexts; contested proxy-to-map correspondences]
 
+The same rule applies to the remaining prominent market proxies: Mon Coast,
+Luzon Coast, Maya Lowlands, Brantas Coast, Atropatene, and Malay Straits are
+regional AD 1 frames. They deliberately replace later town names where the
+local evidence does not support recovering a precise ancient settlement.
+
 ## 2026-07-20 - Ephesus uses an Ayasuluk near-site market and harbor proxy
 
 UNESCO securely establishes Roman Ephesus as provincial capital and harbour
