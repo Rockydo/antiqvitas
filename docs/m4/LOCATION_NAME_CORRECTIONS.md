@@ -60,3 +60,13 @@ Canterbury's `Durovernum`, Carlisle's `Luguvalium`, Chichester's `Noviomagus`,
 and Leicester's `Ratae` are deliberately not changed in this batch: each may
 preserve an indigenous toponym or an Iron Age settlement horizon despite later
 Roman urban development.
+
+## Syrian multilingual-city batch
+
+The third data batch removes a Persian-only dynamic-name path from Antioch,
+Laodikeia, Beroia, and Damascus. Near-contemporary civic coinage and the Roman
+city record support Greek public forms, while the wider Levant remained
+linguistically plural. Each row therefore emits both Semitic and Hellenic
+adapters. This is a localization-lookup correction, not a claim that every
+inhabitant used one language or that older Semitic place-name traditions
+disappeared.
