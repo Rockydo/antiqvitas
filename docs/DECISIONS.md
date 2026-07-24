@@ -2753,3 +2753,13 @@ curated direct ledger for secure identities, so a readable period name does
 not conceal uncertainty. This replaces Ailou Kome and Kalaikaris at al-Mukha
 and Kodungallur respectively, while `Rhaga` is promoted only because its
 direct Ray identification is secure.
+
+## 2026-07-24 - Correct a market-node identity before preserving a plan label
+
+The original Panticapaeum market identifier targeted the installed Taman
+field, but Panticapaeum is across the Cimmerian Bosporus. The node is renamed
+`phanagoria`, the attested Taman city, while the plan's intended north-Pontic
+market function remains. The two distant Indian proxies retain their intended
+hubs but use the qualified-name layer and explicit caveats. This applies the
+local-map constraint without converting a pragmatic engine anchor into a false
+historical identity.
