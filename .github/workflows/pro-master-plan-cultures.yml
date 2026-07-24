@@ -49,10 +49,21 @@ jobs:
           tar -xzf /tmp/pro-master.tar.gz -C .
 
       - name: Regenerate and verify culture outputs
+        shell: bash
         run: |
-          python tools/generate_pro_culture_expansion.py --write
-          python tools/generate_pro_culture_expansion.py --check
-          git diff --check
+          set -o pipefail
+          python tools/generate_pro_culture_expansion.py --write 2>&1 | tee .pro_payload/validation.log
+          python tools/generate_pro_culture_expansion.py --check 2>&1 | tee -a .pro_payload/validation.log
+          git diff --check 2>&1 | tee -a .pro_payload/validation.log
+
+      - name: Publish validation failure
+        if: failure()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f .pro_payload/validation.log
+          git commit -m "chore: record PRO culture validation failure"
+          git push origin "HEAD:${TARGET_BRANCH}"
 
       - name: Commit implementation
         run: |
