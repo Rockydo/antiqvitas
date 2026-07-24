@@ -375,6 +375,13 @@ Tried:
    regent` for Wang Mang. The fixture therefore rules out a sole direct-parent
    link as the hidden start-loader condition; it was fully reverted rather
    than turning a narrow source record into unused gameplay data.
+4. A 2026-07-24 source-qualified `birth`-anchor fixture supplied Ping's Lunu
+   origin through the installed Dingzhou key and Wang Mang's Yuancheng context
+   through the nearest installed Daming-area key. It passed validation and
+   smoke, but a new enabled-mod start still emitted `Invalid heir` for Ping and
+   `Invalid regent` for Wang Mang and rendered `Wang Guangwu` as regent in the
+   XAR panel. The two fields were reverted: a character `birth` is not the
+   missing loader condition.
 
 Every attempt passed `make validate` and a mod-enabled `make smoke` with zero
 new error-log lines. Evidence is retained in
@@ -387,8 +394,9 @@ parent-link fixture is retained locally in
 
 Recovery: retain the source-led Han roster and the locally evidenced native
 heir/regency shape, but do not serialize the failed Ping current term or repeat
-him as `ruler`. A later isolated start-manager fixture must identify the hidden
-minor/ruler linkage before this profile is accepted. The verified date-less
+him as `ruler`, parent link, or speculative birth anchor. A later isolated
+start-manager fixture must identify the hidden minor/ruler linkage before this
+profile is accepted. The verified date-less
 current-term contract remains in place for the 31 non-regency incumbents. M6
 cannot be tagged while this exact Han condition is unresolved; proceed with the
 next unblocked milestone work.

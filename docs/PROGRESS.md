@@ -6098,3 +6098,13 @@ reviewed 128px BC7 DDS.
 - The unsupported exact Rome wheat-route claim and long-observer market
   assertion remain documented limitations, not grounds for inventing a market
   contract or for requiring a 475-year playthrough.
+
+## 2026-07-24 - M6 Han birth-anchor probe rejected
+
+- Added then removed source-qualified `birth` fields for Emperor Ping and Wang
+  Mang after a fresh enabled-mod AD 1 probe still logged the same invalid
+  heir/regent diagnostics and rendered Wang Guangwu in the Western Han panel.
+- The rejected fixture had passed validation and smoke; its live screenshot and
+  diagnostic result are retained under `docs/screens/M6_han_birth_anchor/`.
+  M6 remains deferred on the independently documented start-loader contract;
+  no historical location claim was retained solely to satisfy that contract.
