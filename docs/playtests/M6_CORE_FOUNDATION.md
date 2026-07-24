@@ -135,3 +135,12 @@ with zero new error-log lines.
 
 The variation was reverted immediately. This exhausts the third material
 engine-shape attempt without claiming a false Han ruler; see `BLOCKERS.md`.
+
+## 2026-07-24 Character-birthplace linkage probe
+
+All installed active-regency characters carry a `birth` location. A fresh
+temporary XAR fixture therefore supplied Wang Mang with the Yuancheng
+Wang-clan locality, passed M6/start-mirror checks and fresh menu smoke, and
+opened the live Government panel. It still rendered `Wang Guangwu, 35`.
+The unsupported individual-birthplace claim and all generated output were
+reverted; evidence is `docs/screens/M6_han_birthplace_fixture/`.
