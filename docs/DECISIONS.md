@@ -2676,3 +2676,12 @@ inherited DDS texture paths across those eleven known scenes. Each layer gets
 its scene's same 3840x2160 opaque BC1/sRGB panorama. This preserves the known
 scene and camera interfaces without inventing a selector or attempting
 unsupported bespoke 3D parallax, and leaves no selectable vanilla panorama.
+
+## 2026-07-24 - Do not retain ineffective Han birth anchors
+
+The installed start loader continued to reject Emperor Ping as heir and Wang
+Mang as regent after both received source-qualified `birth` anchors. Because
+the live XAR panel still resolved a generated ruler, the fields were reverted.
+This preserves the historical-data boundary: birth locations are not retained
+as decorative data or treated as a substitute for a verified minority-regency
+setup contract.
