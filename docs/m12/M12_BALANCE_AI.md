@@ -5,11 +5,12 @@ long observer measurements are optional evidence under the rapid-test policy.
 
 ## Research pacing
 
-`tools/m8_knowledge.py` renders five ages, each with five independent ten-step
-strands (250 advances). Per-entry research cost is generated as
-`2 + age_index * 2 + depth * 0.5`, so each age spans a 4.5-point band and the
-five age totals are 212.5, 312.5, 412.5, 512.5, and 612.5. The complete tree
-therefore totals 2,062.5 nominal research-cost points. Every rendered advance
+`tools/m8_knowledge.py` renders the plan's five conceptual arcs across the six
+mandatory engine slots: four 50-advance ages, then two 25-advance halves
+(250 total). Per-entry research cost is generated as
+`2 + age_index * 2 + depth * 0.5`; age totals are 212.5, 312.5, 412.5, 512.5,
+275, and 325. The complete tree therefore totals 2,050 nominal research-cost
+points. Every rendered advance
 has a local `ai_weight` from 100 at strand roots down to 55 at leaves; there is
 no negative or zero research preference in the tree.
 

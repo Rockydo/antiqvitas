@@ -51,10 +51,16 @@ AGE_ART = (
         "main_menu/gfx/interface/illustrations/advances/age_4_reformation.dds",
     ),
     AgeArt(
-        "age_5_absolutism", "Migrations",
+        "age_5_absolutism", "Federate Age",
+        "assets_queue/generated_sources/antq_age_federates_source.png",
+        "assets_queue/generated/antq_age_federates_1080x440.png",
+        "main_menu/gfx/interface/illustrations/advances/age_5_absolutism.dds",
+    ),
+    AgeArt(
+        "age_6_revolutions", "Migrations",
         "assets_queue/generated_sources/antq_age_migrations_source.png",
         "assets_queue/generated/antq_age_migrations_1080x440.png",
-        "main_menu/gfx/interface/illustrations/advances/age_5_absolutism.dds",
+        "main_menu/gfx/interface/illustrations/advances/age_6_revolutions.dds",
     ),
 )
 
@@ -70,10 +76,10 @@ def validate() -> None:
     if len({asset.key for asset in AGE_ART}) != len(AGE_ART):
         raise ValueError("duplicate M11 age-art key")
     expected = {f"age_{index}_{name}" for index, name in enumerate(
-        ("traditions", "renaissance", "discovery", "reformation", "absolutism"), 1
+        ("traditions", "renaissance", "discovery", "reformation", "absolutism", "revolutions"), 1
     )}
     if {asset.key for asset in AGE_ART} != expected:
-        raise ValueError("M11 age-art mapping no longer covers the five playable age keys")
+        raise ValueError("M11 age-art mapping no longer covers the six playable age keys")
     for asset in AGE_ART:
         source = ROOT / asset.source
         master = ROOT / asset.master

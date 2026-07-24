@@ -116,26 +116,20 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     invalid mountain-wasteland seat was replaced by an ownable inland proxy;
     fresh Rome retained all 11 subjects after the first tick.
 
-- [ ] Quarantine every anachronistic unit and rebuild recruitment availability.
+- [x] Quarantine every anachronistic unit and rebuild recruitment availability.
   - [x] Mirror all 31 installed unit-type sources: 311 legacy definitions are
     hidden/non-buildable, 12 locally required copy-chain adapters are allowlisted,
     and 44 ancient definitions remain active.
-  - Harvest every land/naval unit type from installed base + DLC. The immediate
-    leak is concrete: the mod does not mirror
-    `in_game/common/unit_types/1_uniques_for_age_6_revolutions.txt`, so
-    `a_redcoats`, `a_experimental_riflemen`, and `a_austrian_grenzer` stay loaded
-    even though their advances are marked `always = no`.
-  - Exact-name shadow or disable every non-ANTIQVITAS template, unique, DLC, naval,
-    mercenary, levy, and special-regiment definition. Scan advances, laws,
-    privileges, events, setup armies, AI, and GUI lists for reverse references.
-  - Determine why the UI exposes Age 6 instead of assuming its label is the whole
-    cause. If six engine slots are mandatory, author a genuine late-antique sixth
-    phase bounded by 476; otherwise remove the stray age cleanly.
+  - [x] Exact-name disabled all non-ANTIQVITAS definitions and scanned reverse
+    references. Installed UI/script inspection proved six slots mandatory; the
+    final arc is now Federate Age (376) plus Migrations (395), both bounded by 476.
   - Acceptance: machine-readable active-unit allowlist, zero vanilla unit keys in
     recruitment at every age, and rapid Rome/Germania/Han land/naval captures with
     no missing-definition errors.
+  - Completed: 44 active ancient keys, zero inherited recruitables, and clean
+    Rome/Han/Germania rapid probes plus smoke.
 
-- [ ] Give every active unit a dedicated period-correct icon.
+- [x] Give every active unit a dedicated period-correct icon.
   - Build the ledger from the final active allowlist, not only the current 44 custom
     types. Include land, naval, levy, mercenary, and cultural variants such as Roman
     Marines.
@@ -145,6 +139,8 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
   - Acceptance: format/alpha/resolver validator, no active key resolves to
     `_default` or another unit's art, reviewed regional contact sheets, and the
     targeted recruitment captures above.
+  - Completed: 44 unique direct illustrations and masks from 11 reviewed
+    four-up sheets; exact resolver, contact-sheet, and live recruitment checks pass.
 
 - [ ] Replace leaked vanilla institutions and constrain cultural spread.
   - The mod still defines Feudalism, Legalism, and later vanilla institutions in

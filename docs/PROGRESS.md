@@ -6460,3 +6460,13 @@ reviewed 128px BC7 DDS.
 - Replaced Batanea's invalid mountain-wasteland seat with the `nawa` inland
   proxy. Fresh Rome retained 11 subjects; Rome, Parthia, and Han panels showed
   nonzero loyal starts. Full validation and smoke are green.
+
+## 2026-07-24 - Ancient recruitment art and six-slot ages
+
+- Added unique direct illustrations and masks for all 44 active land/naval unit
+  keys from 11 reviewed four-up sheets; resolver and regional contact-sheet
+  validation prohibit fallbacks and aliases.
+- Replaced the required sixth engine slot with Federate Age (376), followed by
+  Migrations (395); the 250-advance tree now spans six ancient-only slots.
+- Rome, Han, and Marcomanni rapid recruitment probes, 71 checks, and smoke pass
+  with zero new log lines.

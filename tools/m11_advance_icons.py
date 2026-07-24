@@ -116,17 +116,27 @@ def validate_tree_mapping(direct: list[AdvanceIcon]) -> None:
     text = ADVANCE_TREE.read_text(encoding="utf-8")
     found = re.findall(r"^\s*icon\s*=\s*([^\s#]+)", text, flags=re.MULTILINE)
     direct_by_age = {age: sum(asset.age == age for asset in direct) for age in AGE_NAMES}
+    record_by_age = {
+        age: sum(AGE_NAMES[record.age_index] == age for record in advance_records())
+        for age in AGE_NAMES
+    }
+    fallback_by_age = {asset.age: asset.icon for asset in ADVANCE_ICONS}
+    for age in AGE_NAMES:
+        missing = record_by_age[age] - direct_by_age[age]
+        if missing and age not in fallback_by_age:
+            raise ValueError(f"M11 lacks a transitional fallback icon for {missing} {age} advances")
     expected = {
-        asset.icon for asset in ADVANCE_ICONS if direct_by_age[asset.age] < 50
+        fallback_by_age[age]
+        for age in AGE_NAMES
+        if record_by_age[age] > direct_by_age[age]
     } | {asset.icon for asset in direct}
     if set(found) != expected:
         raise ValueError(
             "M8 advance icons and the M11 reviewed icon mapping diverge: "
             f"expected {sorted(expected)}, found {sorted(set(found))}"
         )
-    by_age = {asset.age: asset.icon for asset in ADVANCE_ICONS}
-    for age, icon in by_age.items():
-        expected_count = 50 - sum(asset.age == age for asset in direct)
+    for age, icon in fallback_by_age.items():
+        expected_count = record_by_age[age] - direct_by_age[age]
         if found.count(icon) != expected_count:
             raise ValueError(f"M8 fallback icon {icon} must cover {expected_count} advances, found {found.count(icon)}")
     for asset in direct:

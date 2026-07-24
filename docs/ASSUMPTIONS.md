@@ -4413,3 +4413,10 @@ initialization. `nawa` is the nearest suitable inland field within the broader
 Batanaea/Gaulanitis theatre and is labeled Caesarea Philippi only for the
 Batanean polity. It is a gameplay proxy, not an exact site or boundary claim.
 Sources: P8.1; OCD; PLE; `docs/world_1ad/capital_geo_candidates.csv`.
+
+## 2026-07-24 - The 376 Federate Age is a gameplay boundary
+
+The Gothic Danube crossing and Roman settlement crisis make 376 a useful
+late-antique phase boundary, not a claim that federate practice began uniformly
+then. The label compresses diverse earlier treaties and later arrangements.
+Sources: P15; Ammianus Marcellinus, *Res Gestae* 31.

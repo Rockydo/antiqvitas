@@ -5,7 +5,7 @@ The installed database is deliberately replaced by exact filenames: continuing
 to carry medieval and early-modern advances underneath an ancient tree would
 make anachronisms reachable even when the new advances are sound.  This tool
 keeps the source manifest tied to the locally pinned EU5 installation and
-produces the five, continuous historical trees from the documented M8 design.
+produces the continuous historical trees from the documented M8 design.
 """
 
 from __future__ import annotations
@@ -29,12 +29,12 @@ DIRECT_ADVANCE_ART = ROOT / "docs/m11/direct_advance_icons.csv"
 
 AGE_KEYS = (
     "age_1_traditions", "age_2_renaissance", "age_3_discovery",
-    "age_4_reformation", "age_5_absolutism",
+    "age_4_reformation", "age_5_absolutism", "age_6_revolutions",
 )
-AGE_NAMES = ("Principate", "High Empires", "Crisis", "Dominate", "Migrations")
+AGE_NAMES = ("Principate", "High Empires", "Crisis", "Dominate", "Federate Age", "Migrations")
 ICONS = (
     "abacus_advance", "legalism_advance", "road_advance_1",
-    "crown_power_advance_discovery", "expansionism",
+    "crown_power_advance_discovery", "expansionism", "expansionism",
 )
 FORBIDDEN = (
     "gunpowder", "cannon", "arquebus", "musket", "flintlock", "colonial",
@@ -85,9 +85,10 @@ START_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
 }
 
 
-# Five ten-step strands run continuously through all five ages.  Their names
-# are the source-led historical statements; individual mechanical effects stay
-# bounded to locally verified engine contracts in M9/M10 where needed.
+# Five ten-step strands run through the plan's five conceptual arcs; the
+# mandatory sixth engine slot divides the final arc into two five-step halves.
+# Their names are the source-led historical statements; individual mechanical
+# effects stay bounded to locally verified engine contracts in M9/M10.
 TRACKS: dict[str, tuple[tuple[str, ...], ...]] = {
     "statecraft": (
         ("imperial_cult", "provincial_census", "tax_registers", "road_milestones", "legal_petitions", "municipal_charters", "public_granaries", "frontier_dispatches", "imperial_archives", "standing_administration"),
@@ -158,7 +159,7 @@ INSTITUTION_DATA = (
     Institution("antq_papermaking", "Papermaking", "Paper and its associated craft knowledge spread outward from Luoyang.", "age_2_renaissance", "luoyang", False, "105.1.1", "mid"),
     Institution("antq_christian_monasticism", "Christian Monasticism", "Egyptian ascetic communities establish a second monastic centre of gravity.", "age_3_discovery", "alexandria", False, "270.1.1", "mid"),
     Institution("antq_theological_orthodoxy", "Theological Orthodoxy", "Council-led doctrinal settlement shapes the late Roman religious world.", "age_4_reformation", "iznik", False, "325.1.1", "late"),
-    Institution("antq_foederati_statecraft", "Foederati Statecraft", "Land-for-service settlements become a deliberate frontier and imperial practice.", "age_4_reformation", "edirne", False, "382.1.1", "late"),
+    Institution("antq_foederati_statecraft", "Foederati Statecraft", "Land-for-service settlements become a deliberate frontier and imperial practice.", "age_5_absolutism", "edirne", False, "382.1.1", "late"),
 )
 
 # The institution manager resolves an exact institution_birth static modifier
@@ -186,17 +187,26 @@ def installed_dir(relative: str) -> Path:
 def advance_records() -> tuple[Advance, ...]:
     records: list[Advance] = []
     for track, age_groups in TRACKS.items():
-        for age_index, group in enumerate(age_groups):
+        for conceptual_index, group in enumerate(age_groups):
             # EU5 validates `requires` within one age only.  Each age thus has
-            # five complete ten-step strands; the age transition itself is the
-            # historical gate between their thematic continuations.
-            previous: str | None = None
+            # complete strands; the engine's mandatory sixth slot divides the
+            # final conceptual arc at 376 while preserving all 250 statements.
             if len(group) != 10:
-                raise ValueError(f"{track} {AGE_NAMES[age_index]} must have exactly ten advances")
-            for step, name in enumerate(group):
-                key = f"antq_{name}"
-                records.append(Advance(key, name.replace("_", " ").title(), AGE_KEYS[age_index], age_index, step, previous))
-                previous = key
+                raise ValueError(f"{track} conceptual age {conceptual_index + 1} must have exactly ten advances")
+            segments = (
+                ((4, group[:5]), (5, group[5:]))
+                if conceptual_index == 4
+                else ((conceptual_index, group),)
+            )
+            for age_index, segment in segments:
+                previous: str | None = None
+                for depth, name in enumerate(segment):
+                    key = f"antq_{name}"
+                    records.append(Advance(
+                        key, name.replace("_", " ").title(),
+                        AGE_KEYS[age_index], age_index, depth, previous,
+                    ))
+                    previous = key
     return tuple(records)
 
 
@@ -258,15 +268,18 @@ def validate(records: tuple[Advance, ...]) -> None:
     keys = [record.key for record in records]
     if len(keys) != len(set(keys)):
         failures.append("advance keys are not unique")
+    expected_counts = (50, 50, 50, 50, 25, 25)
     for age_index, age in enumerate(AGE_KEYS):
         age_records = [record for record in records if record.age == age]
-        if len(age_records) != 50:
-            failures.append(f"{age} has {len(age_records)}, not 50 advances")
-        if any(record.depth not in range(10) for record in age_records):
-            failures.append(f"{age} has a depth outside 0..9")
+        expected = expected_counts[age_index]
+        if len(age_records) != expected:
+            failures.append(f"{age} has {len(age_records)}, not {expected} advances")
+        depth_limit = 10 if age_index < 4 else 5
+        if any(record.depth not in range(depth_limit) for record in age_records):
+            failures.append(f"{age} has a depth outside 0..{depth_limit - 1}")
     roots = [record for record in records if record.requires is None]
-    if len(roots) != 25:
-        failures.append("the five strands in each age must have exactly 25 roots")
+    if len(roots) != 30:
+        failures.append("the five strands in six engine ages must have exactly 30 roots")
     key_set = set(keys)
     unknown_unlock_keys = sorted(set(START_UNLOCKS) - key_set)
     if unknown_unlock_keys:
@@ -281,8 +294,8 @@ def validate(records: tuple[Advance, ...]) -> None:
     by_key = {record.key: record for record in records}
     required_by = {record.requires for record in records if record.requires}
     leaves = [record.key for record in records if record.key not in required_by]
-    if len(leaves) != 25:
-        failures.append("the five strands in each age must have exactly 25 terminal advances")
+    if len(leaves) != 30:
+        failures.append("the five strands in six engine ages must have exactly 30 terminal advances")
     for record in records:
         if record.requires and record.requires not in key_set:
             failures.append(f"{record.key} requires an unknown advance")

@@ -879,14 +879,13 @@ that exact name rather than relying on a non-existent fallback. The dedicated
 validator makes the five-to-250 mapping, source/master chain, and texture
 contract explicit.
 
-## 2026-07-20 - M11 replaces the five exact age-illustration filenames
+## 2026-07-20 - M11 replaces the exact age-illustration filenames
 
 The installed advance view obtains its banner through
 `AdvancesLateralView.GetAgeIllustration`, while the installed asset inventory
-contains one 1080x440 illustration for each of the five playable vanilla age
-keys. M11 therefore keeps the compatible keys and overrides only those exact
-filenames with reviewed BC7 panels. The post-end sixth age is intentionally
-untouched. `tools/m11_age_art.py` makes the retained source/master/DDS chain a
+contains one 1080x440 illustration for every engine age key. M11 therefore
+keeps the compatible keys and overrides those exact filenames with reviewed
+panels. `tools/m11_age_art.py` makes the retained source/master/DDS chain a
 validation invariant, and the event contact-sheet filter excludes age masters
 so two visual review surfaces do not drift together.
 
@@ -2885,3 +2884,17 @@ loyalty_to_overlord = ... }`, bounded `strength_vs_overlord = -0.05`, and
 contract-specific maritime tolerance. Every start subject must also have a
 capital proven ownable by the installed start manager; this prevents valid
 dependency syntax from pointing at a country the engine culls.
+
+## 2026-07-24 - Satisfy the mandatory six-age UI contract in period
+
+Installed age scripts and UI require six indexed slots. Preserve the plan's five
+conceptual arcs by dividing its final arc into Federate Age (376) and Migrations
+(395), both ending at 476. Each receives authored advances and direct age art;
+no vanilla Age of Revolutions adapter remains visible.
+
+## 2026-07-24 - Bind unit art by exact installed resolver key
+
+The installed naming contract resolves
+`gfx/interface/illustrations/units/<category>_<unit>.dds` plus a direct mask.
+Every one of the 44 active unit keys therefore owns unique art and a black mask;
+aliases and `_default` fallbacks fail validation.
