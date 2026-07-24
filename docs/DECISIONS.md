@@ -2743,3 +2743,13 @@ the live XAR panel still resolved a generated ruler, the fields were reverted.
 This preserves the historical-data boundary: birth locations are not retained
 as decorative data or treated as a substitute for a verified minority-regency
 setup contract.
+
+## 2026-07-24 - Period-name evidence takes precedence over automated proximity
+
+For high-visibility market and urban nodes, an explicit scholarly direct or
+region-qualified source can supersede an automatically selected Pleiades
+proximity row. The generator keeps qualified cases at Tier 2 and reserves the
+curated direct ledger for secure identities, so a readable period name does
+not conceal uncertainty. This replaces Ailou Kome and Kalaikaris at al-Mukha
+and Kodungallur respectively, while `Rhaga` is promoted only because its
+direct Ray identification is secure.

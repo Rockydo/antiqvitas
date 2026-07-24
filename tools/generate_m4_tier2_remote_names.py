@@ -24,6 +24,7 @@ from pathlib import Path
 import capital_geography
 from generate_m4_tier2_names import (
     CURATED,
+    QUALIFIED,
     CULTURES,
     ENGINE_LOCATIONS,
     HEADER,
@@ -75,7 +76,7 @@ def render() -> str:
     installed = set(json.loads(ENGINE_LOCATIONS.read_text(encoding="utf-8-sig")))
     installed_names = capital_geography.location_names()
     cultures = {row["key"] for row in csv_rows(CULTURES)}
-    excluded = capital_locations() | ledger_locations(CURATED) | ledger_locations(TIER2) | ledger_locations(TIER2_WIDE)
+    excluded = capital_locations() | ledger_locations(CURATED) | ledger_locations(QUALIFIED) | ledger_locations(TIER2) | ledger_locations(TIER2_WIDE)
     for path in EXTRA_LEDGER_PATHS:
         excluded.update(ledger_locations(path))
     population_cultures = pop_cultures()

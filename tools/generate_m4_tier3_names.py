@@ -21,6 +21,7 @@ from generate_m4_tier2_names import capital_locations, pop_cultures
 
 ROOT = Path(__file__).resolve().parents[1]
 CURATED = ROOT / "docs/m4/dynamic_location_name_overrides.csv"
+QUALIFIED = ROOT / "docs/m4/qualified_location_name_overrides.csv"
 TIER2 = ROOT / "docs/m4/tier2_location_name_overrides.csv"
 TIER2_WIDE = ROOT / "docs/m4/tier2_wide_location_name_overrides.csv"
 TIER2_REMOTE = ROOT / "docs/m4/tier2_remote_location_name_overrides.csv"
@@ -63,6 +64,7 @@ def render_population() -> str:
     names = installed_names()
     excluded = capital_locations()
     excluded.update(row["location"].strip() for row in ledger_rows(CURATED))
+    excluded.update(row["location"].strip() for row in ledger_rows(QUALIFIED))
     excluded.update(row["location"].strip() for row in ledger_rows(TIER2))
     excluded.update(row["location"].strip() for row in ledger_rows(TIER2_WIDE))
     excluded.update(row["location"].strip() for row in ledger_rows(TIER2_REMOTE))

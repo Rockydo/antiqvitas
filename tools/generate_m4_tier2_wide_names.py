@@ -19,6 +19,7 @@ from pathlib import Path
 
 from generate_m4_tier2_names import (
     CURATED,
+    QUALIFIED,
     CULTURES,
     ENGINE_LOCATIONS,
     HEADER,
@@ -64,7 +65,7 @@ def render() -> str:
     queue = csv_rows(QUEUE, comments=True)
     cultures = {row["key"] for row in csv_rows(CULTURES)}
     installed = set(json.loads(ENGINE_LOCATIONS.read_text(encoding="utf-8-sig")))
-    excluded = capital_locations() | ledger_locations(CURATED) | ledger_locations(TIER2)
+    excluded = capital_locations() | ledger_locations(CURATED) | ledger_locations(QUALIFIED) | ledger_locations(TIER2)
     population_cultures = pop_cultures()
     candidates: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in queue:

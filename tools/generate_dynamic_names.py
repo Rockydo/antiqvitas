@@ -20,6 +20,7 @@ LANGUAGES = ROOT / "docs/m4/languages.csv"
 LOC_ROOT = ROOT / "main_menu/localization"
 REPORT = ROOT / "docs/m4/dynamic_location_names.csv"
 CURATED = ROOT / "docs/m4/dynamic_location_name_overrides.csv"
+QUALIFIED = ROOT / "docs/m4/qualified_location_name_overrides.csv"
 TIER2 = ROOT / "docs/m4/tier2_location_name_overrides.csv"
 TIER2_WIDE = ROOT / "docs/m4/tier2_wide_location_name_overrides.csv"
 TIER2_REMOTE = ROOT / "docs/m4/tier2_remote_location_name_overrides.csv"
@@ -164,6 +165,7 @@ def entries() -> list[dict[str, str]]:
         )
         seen_locations.add(location)
     output.extend(ledger_entries(CURATED, "secure", "curated", "reviewed direct", culture_groups, group_languages, installed_locations, seen_locations))
+    output.extend(ledger_entries(QUALIFIED, "tier2", "qualified", "reviewed qualified", culture_groups, group_languages, installed_locations, seen_locations))
     output.extend(ledger_entries(TIER2, "tier2", "tier2", "bounded Tier-2", culture_groups, group_languages, installed_locations, seen_locations))
     output.extend(ledger_entries(TIER2_WIDE, "tier2", "tier2", "wide Tier-2", culture_groups, group_languages, installed_locations, seen_locations))
     output.extend(ledger_entries(TIER2_REMOTE, "tier2", "tier2_remote", "remote Tier-2", culture_groups, group_languages, installed_locations, seen_locations))
@@ -256,7 +258,7 @@ def main() -> int:
     selected = entries()
     capitals = sum(entry["anchor_kind"] == "capital" for entry in selected)
     curated = sum(entry["anchor_kind"] == "curated" for entry in selected)
-    tier2 = sum(entry["anchor_kind"] in {"tier2", "tier2_remote", "tier2_far", "tier2_ultra"} for entry in selected)
+    tier2 = sum(entry["anchor_kind"] in {"qualified", "tier2", "tier2_remote", "tier2_far", "tier2_ultra"} for entry in selected)
     remote = sum(entry["anchor_kind"] == "tier2_remote" for entry in selected)
     far = sum(entry["anchor_kind"] == "tier2_far" for entry in selected)
     ultra = sum(entry["anchor_kind"] == "tier2_ultra" for entry in selected)

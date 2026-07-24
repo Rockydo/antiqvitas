@@ -22,6 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 QUEUE = ROOT / "docs/m4/pleiades_name_candidates.csv"
 OUTPUT = ROOT / "docs/m4/tier2_location_name_overrides.csv"
 CURATED = ROOT / "docs/m4/dynamic_location_name_overrides.csv"
+QUALIFIED = ROOT / "docs/m4/qualified_location_name_overrides.csv"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
 COORDINATES = ROOT / "docs/world_1ad/capital_coordinates.csv"
 CULTURES = ROOT / "docs/m4/cultures.csv"
@@ -55,7 +56,15 @@ def direct_locations() -> set[str]:
     rows = csv_rows(CURATED)
     if tuple(rows[0]) != HEADER if rows else True:
         raise ValueError(f"{CURATED.relative_to(ROOT)} must use header {','.join(HEADER)}")
-    return {row["location"].strip() for row in rows if row["location"].strip()}
+    locations = {row["location"].strip() for row in rows if row["location"].strip()}
+    qualified = csv_rows(QUALIFIED)
+    if tuple(qualified[0]) != HEADER if qualified else True:
+        raise ValueError(f"{QUALIFIED.relative_to(ROOT)} must use header {','.join(HEADER)}")
+    for row in qualified:
+        if row["confidence"] != "tier2":
+            raise ValueError(f"{QUALIFIED.relative_to(ROOT)} only permits tier2 rows")
+        locations.add(row["location"].strip())
+    return locations
 
 
 def capital_locations() -> set[str]:

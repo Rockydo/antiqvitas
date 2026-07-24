@@ -6165,3 +6165,11 @@ reviewed 128px BC7 DDS.
   diagnostic result are retained under `docs/screens/M6_han_birth_anchor/`.
   M6 remains deferred on the independently documented start-loader contract;
   no historical location claim was retained solely to satisfy that contract.
+
+## 2026-07-24 - M4 high-visibility market-name correction pass
+
+- Replaced two misleading automated proximity labels with qualified AD 1
+  market-region names: Mouza at al-Mukha and Muziris at Kodungallur.
+- Promoted the securely identified direct Ray label to Rhaga; all generated
+  language-localization outputs were regenerated from their checked ledgers.
+- Next: validate and smoke this small game-visible naming batch before commit.
