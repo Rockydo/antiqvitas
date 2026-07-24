@@ -25,6 +25,13 @@ field takes precedence: Nicaea replaces Cemenelum at Nice and Noviomagus is
 retained at Chichester. The promotions retain the existing culture/dialect
 adapter and deliberately make no city-boundary or political inference.
 
+## 2026-07-24 - Astibo replaces Stobi at the Štip city field
+
+The nearest-site layer supplied Stobi to Štip, but the two are distinct places.
+The municipal Štip history and Tabula Peutingeriana index support Astibo/Astibos
+for Štip's own ancient context, so the direct layer now uses the concise Astibo
+form. It remains a label only, not a reconstruction of the route or city.
+
 ## 2026-07-24 - M8 acceptance uses the live research UI, not AI playback
 
 The revised milestone contract requires a coherent starting research screen,

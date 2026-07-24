@@ -24,6 +24,12 @@
 - The reviewed layer now carries 222 direct AD 1 labels. Full validation and
   enabled-mod smoke are green with zero new error-log lines.
 
+## 2026-07-24 - M4 Štip / Astibo direct-name correction
+
+- Replaced the distinct Stobi proximity proxy at Štip with the source-led local
+  form Astibo. The checked direct-name layer now contains 223 entries.
+- Full validation and enabled-mod smoke are green with zero new error-log lines.
+
 ## 2026-07-24 - M8 knowledge accepted with a rapid research-panel probe
 
 - Opened the live AD 1 Advances UI through the locally verified input binding.

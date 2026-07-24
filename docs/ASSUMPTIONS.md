@@ -4262,3 +4262,12 @@ fallback choices. The display names do not decide civic boundaries, colony or
 tribal status, population, linguistic uniformity, or territorial control.
 Sources: PLE:157894; PLE:79622. [secure direct settlement label; contested
 map-field scope]
+
+## 2026-07-24 - Astibo replaces the distinct Stobi proxy at Štip
+
+Štip's municipal historical account and the Tabula Peutingeriana index support
+the Astibo/Astibos toponym, while Stobi is a separate ancient city. `Astibo`
+therefore labels only the installed Štip city field. No civic boundary, route,
+legal status, population, ethnicity, language, or political conclusion is
+made. Sources: STIP-MUN; TAB-ASTIBO. [secure local toponym; contested
+map-field scope]
