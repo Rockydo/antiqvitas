@@ -1080,3 +1080,18 @@ new lines, then reached the live XAR Government panel. It still rendered
 Evidence: `docs/screens/M6_han_birthplace_fixture/han_birthplace_government_panel.png`.
 Do not repeat a birthplace-only variation; the remaining condition is an
 unknown engine linkage, not a missing documented character field.
+
+### 2026-07-24 follow-up: Emperor Ping's sourced father link is insufficient
+
+All 28 installed regency heirs were then compared field-by-field. The only
+untried, source-backed relationship common to almost every example was a named
+father. A temporary generated fixture therefore added Liu Xing, Prince Xiao of
+Zhongshan, and the direct *Han Shu* father link to Emperor Ping. Generation,
+full validation, and the enabled-mod smoke were green. A fresh AD 1 Observer
+start reached the XAR Government panel but still displayed generated `Liu
+Zhang, 35`, not Ping or Wang Mang. The fixture and generator support were
+removed, and all generated output regenerated.
+
+Evidence: `docs/screens/M6_han_father_fixture/m6_father_government_menu.png`.
+Do not retry a father-only relation. The remaining issue is not resolved by a
+vanilla-style direct parent link.
