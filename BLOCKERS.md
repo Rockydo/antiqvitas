@@ -65,6 +65,17 @@ engine facility that suppresses the *no-pop* warning while retaining culture
 symbols, or a source-preserving guard for every static reference; do not
 repeat culture omission or narrow auto-modifier quarantines.
 
+### 2026-07-24 follow-up: religion-style `enable` is not a culture field
+
+A fourth source-preserving probe applied the terminal campaign-date `enable`
+guard already accepted by religion definitions to each exact vanilla culture
+mirror. Static generation and `make validate` passed, but the live menu smoke
+emitted `Unexpected token: enable` for every culture definition. The generator
+and all 52 culture mirrors were immediately restored to the prior exact-copy
+state; this field must not be tried in culture definitions again for this game
+build. The next eligible solution must retain legacy culture symbols and use a
+different runtime-proven contract.
+
 ## 2026-07-22 - M5 annona routing lacks a demonstrated startup merchant contract
 
 Status: **deferred after two material local market-route attempts and a

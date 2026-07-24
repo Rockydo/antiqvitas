@@ -6297,3 +6297,11 @@ reviewed 128px BC7 DDS.
 - Tested the only newly evidenced regency linkage: a character `birth` field.
   Wang Mang still rendered as generated `Wang Guangwu, 35`; the fixture was
   smoke-green, fully reverted, and recorded as a no-repeat engine limitation.
+
+## 2026-07-24 - M12 legacy-culture availability probe
+
+- Tested the source-preserving terminal-date `enable` guard used successfully
+  by vanilla religion definitions on culture mirrors. The live engine rejected
+  it as an unexpected culture token, so the generator and all mirrors were
+  restored. The failed field is recorded as a no-repeat boundary; the remaining
+  no-pop diagnostic requires a different engine-accepted contract.
