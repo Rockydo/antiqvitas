@@ -62,6 +62,21 @@ M7_ARMIES = ROOT / "docs/m7/armies.csv"
 URBAN_SETUP_OUTPUT = ROOT / "in_game/common/town_setups/00_antiquitas.txt"
 SUBJECT_FIELDS = ("overlord", "subject", "relationship", "source", "confidence", "note")
 
+# Country rank is a game-facing title as well as a balance tier.  The AD 1
+# roster's collective societies use the installed tribal title at county rank;
+# sovereign and client courts use the installed kingdom title; only the three
+# contemporary transregional empires receive the empire rank.  This prevents
+# the engine's implicit county default from labelling every polity a county.
+EMPIRE_RANK_TAGS = frozenset({"ROM", "PAR", "HAN"})
+
+
+def country_rank(row: dict[str, str]) -> str:
+    if row["tag"] in EMPIRE_RANK_TAGS:
+        return "rank_empire"
+    if row["kind"] == "sop":
+        return "rank_county"
+    return "rank_kingdom"
+
 
 def m9_subject_adapter(row: dict[str, str]) -> str:
     """Map the checked AD 1 relationships to M9's ancient mechanics."""
@@ -928,6 +943,7 @@ def country_manager() -> tuple[str, int, int]:
         # Do not include installed vanilla country templates.  Their modern
         # default laws and estate privileges survive alongside the M6 adapter
         # and emit invalid-government diagnostics at every AD 1 startup.
+        lines.append(f"\t\t\tcountry_rank = {country_rank(row)}")
         lines.append(f'\t\t\tstarting_technology_level = {m8_technology_level(row)}')
         lines.append("\t\t\tdiscovered_regions = {")
         lines.extend(f"\t\t\t\t{region}" for region in m9_discovery_regions(row))
