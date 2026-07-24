@@ -24,7 +24,7 @@ jobs:
           show-progress: false
       - name: Download current Pleiades snapshots
         run: |
-          mkdir -p .cache/pleiades
+          mkdir -p .cache/pleiades .audit/roman-names
           curl --fail --location --retry 3 --retry-all-errors --silent --show-error \
             https://atlantides.org/downloads/pleiades/dumps/pleiades-places-latest.csv.gz \
             --output .cache/pleiades/pleiades-places-latest.csv.gz
@@ -32,18 +32,22 @@ jobs:
             https://atlantides.org/downloads/pleiades/dumps/pleiades-names-latest.csv.gz \
             --output .cache/pleiades/pleiades-names-latest.csv.gz
       - name: Regenerate period-valid Pleiades adapters
+        id: regenerate
+        continue-on-error: true
         run: |
-          python -m py_compile \
-            tools/pleiades_names.py \
-            tools/generate_m4_tier2_names.py \
-            tools/generate_m4_tier2_wide_names.py \
-            tools/generate_m4_tier2_remote_names.py
-          python tools/generate_m4_tier2_names.py --write
-          python tools/generate_m4_tier2_wide_names.py --write
-          python tools/generate_m4_tier2_remote_names.py --write
-          python tools/generate_m4_tier2_far_names.py --write
-          python tools/generate_m4_tier2_ultra_names.py --write
-          python - <<'PY'
+          set -o pipefail
+          {
+            python -m py_compile \
+              tools/pleiades_names.py \
+              tools/generate_m4_tier2_names.py \
+              tools/generate_m4_tier2_wide_names.py \
+              tools/generate_m4_tier2_remote_names.py
+            python tools/generate_m4_tier2_names.py --write
+            python tools/generate_m4_tier2_wide_names.py --write
+            python tools/generate_m4_tier2_remote_names.py --write
+            python tools/generate_m4_tier2_far_names.py --write
+            python tools/generate_m4_tier2_ultra_names.py --write
+            python - <<'PY'
           import csv
           from pathlib import Path
 
@@ -56,7 +60,9 @@ jobs:
                   raise SystemExit(f"{path}: rows without Pleiades name resources: {missing[:10]}")
               print(f"{path}: {len(rows)} period-valid adapters")
           PY
+          } 2>&1 | tee .audit/roman-names/regeneration.log
       - name: Assemble review artifact
+        if: always()
         run: |
           mkdir -p .audit/roman-names/generated
           mkdir -p .audit/roman-names/workspace/docs/m4
@@ -78,8 +84,12 @@ jobs:
           cp tools/capital_geography.py .audit/roman-names/workspace/tools/
           cp tools/pleiades_names.py .audit/roman-names/workspace/tools/
       - name: Upload Roman naming inventory
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: roman-location-name-audit
           path: .audit/roman-names
           if-no-files-found: error
+      - name: Fail after preserving regeneration diagnostics
+        if: steps.regenerate.outcome != 'success'
+        run: exit 1
