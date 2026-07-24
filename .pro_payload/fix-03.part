@@ -1,0 +1,7 @@
+, "shiewhibak_area", "antq_oasisamerica", "P8.10;P10;CAH-XI", "contested", "Controlled Basketmaker-Puebloan southwest frame for Oasisamerica exchange networks rather than a single ethnic identity"],
+    ["location", "olentangy", "antq_adena_woodland", "P8.10;P10;CAH-XI", "contested", "Ohio-valley Adena-derived Woodland residual at the AD 1 boundary; the broader interaction sphere is represented separately as Hopewellian"],
+]
+
+
+def patch_remap() -> None:
+    with REMAP.open(encoding="utf-8-sig", newline="") 

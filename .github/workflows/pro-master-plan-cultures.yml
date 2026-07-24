@@ -44,6 +44,8 @@ jobs:
         run: |
           cat .pro_payload/master-*.b64 | base64 -d > /tmp/pro-master.tar.gz
           tar -xzf /tmp/pro-master.tar.gz -C .
+          cat .pro_payload/fix-*.part > /tmp/apply_master_fixes.py
+          python /tmp/apply_master_fixes.py
 
       - name: Regenerate and verify culture outputs
         shell: bash

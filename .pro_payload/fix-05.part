@@ -1,0 +1,7 @@
+r.writerows(body)
+
+
+def patch_generator() -> None:
+    text = GENERATOR.read_text(encoding="utf-8")
+    marker = 'SPECIFICITY = {"region": 0, "area": 1, "province": 2, "location": 3}\n'
+    addition = marker + "# The installed AD 1 setup intentionally leaves the source-appropriate Na-Dene\n# northwest outside all controlled locations. Keep the culture fully defined\n# for scripted settlement and later atlas work rather than falsifying a pop\n# placement in Puebloan, Inuit, or Pacific-coast cells.\nDEFINITIO

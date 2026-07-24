@@ -1,0 +1,13 @@
+as handle:
+        reader = csv.reader(handle)
+        rows = list(reader)
+    header, body = rows[0], rows[1:]
+    body = [row for row in body if row[1] not in REMOVE_SELECTORS]
+    existing = {(row[0], row[1], row[2]) for row in body}
+    for row in ADD_ROWS:
+        if (row[0], row[1], row[2]) not in existing:
+            body.append(row)
+    with REMAP.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.writer(handle, lineterminator="\n")
+        writer.writerow(header)
+        write
