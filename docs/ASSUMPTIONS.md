@@ -4290,3 +4290,17 @@ adapter; every other entry is a city-field label, not a boundary, population,
 status, language, or control claim. Sources: TAB-ANAGNIA; TAB-ABELLINUM;
 ATT-IGUVIUM; BAT-LATIUM; BAT-ITALY; BAT-GAUL; BAT-THRACE; BAT-NORICUM;
 PLE-KALLIPOLIS; PLE-CARNIUM. [secure toponym; contested map-field scope]
+
+## 2026-07-24 - Three AD 1 market-city labels retain their evidentiary boundary
+
+`Rhaga` is a direct ancient label for the installed Ray field. `Mouza` at
+al-Mukha is qualified: the Oxford archaeological synthesis identifies the
+Himyarite outlet in the *Periplus* period but says its location is still
+unidentified and only probably modern Mocha. `Muziris` at Kodungallur is also
+qualified: older scholarship places it in the Kodungallur area, whereas the
+current archaeological investigation includes nearby Pattanam. These labels
+improve visible period naming without asserting exact city limits, excavated
+site identity, population, political control, language uniformity, or a
+specific trade route. Sources: IRAN-RHAGA; OUP-REDSEA; CAM-MUZIRIS;
+KER-MUZIRIS; P8.2; P8.4; P8.6; P12.2. [Rhaga secure direct form; Mouza and
+Muziris contested regional adapters]
