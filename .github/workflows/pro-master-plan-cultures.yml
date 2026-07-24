@@ -4,19 +4,24 @@ on:
   push:
     branches:
       - "agent/pro-master-plan-cultures"
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: write
 
 jobs:
   generate:
+    env:
+      TARGET_BRANCH: ${{ github.head_ref || github.ref_name }}
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Check out focused repository paths
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
+          ref: ${{ env.TARGET_BRANCH }}
           fetch-depth: 1
           sparse-checkout-cone-mode: false
           sparse-checkout: |
@@ -74,4 +79,4 @@ jobs:
             main_menu/setup/start/06_pops.txt \
             tools/generate_pro_culture_expansion.py
           git commit -m "feat: implement master-plan culture completion"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          git push origin "HEAD:${TARGET_BRANCH}"
