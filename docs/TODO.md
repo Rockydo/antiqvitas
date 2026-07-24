@@ -20,7 +20,7 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
 
 ### P0 — Crash and total-conversion leakage barriers
 
-- [ ] Diagnose and fix the Diseases-tab crash before other runtime work.
+- [x] Diagnose and fix the Diseases-tab crash before other runtime work.
   - Preserve the exact evidence bundle at
     `<EU5_USER_DIR>\crashes\Europa Universalis V20260724_145327`
     (manual crash at 16:53 on 2026-07-24). `exception.txt` records an unhandled

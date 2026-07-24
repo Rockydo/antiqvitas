@@ -4384,3 +4384,15 @@ Germanic scope remain constrained by `UNESCO-EPH` and `STR-GER`; other scene
 anchors use the plan's P8/P12 regional syntheses. The sixty display quotations
 are short translations or marked adaptations with their ancient primary source
 named in `tools/m12_loading_tips.py`.
+
+## 2026-07-24 - AD 1 disease state is ecological, not a dated pandemic claim
+
+The start manager uses low Old World exposure/resistance adapters to instantiate
+the installed disease objects and endemic malaria across plausible warm wet
+ecologies. It does not assert that every named later pandemic was active in AD 1,
+nor that resistance was uniform inside an engine region. Roman-Italian malaria
+is anchored in Robert Sallares, *Malaria and Rome* (OUP, 2002); the broader
+urbanization, exchange, and disease-pool interpretation follows Kyle Harper,
+*Plagues upon the Earth* (Princeton, 2021). Exact values are conservative gameplay
+adapters and should be replaced by finer ecological inputs when the disease
+system receives its full content pass.

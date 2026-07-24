@@ -6422,3 +6422,12 @@ reviewed 128px BC7 DDS.
   engine rotation now includes dedicated Roman, Greek, Germanic, and Brittonic
   AD 1 scenes plus India, West Africa, and Oaxaca; all source/master/DDS links
   are checked by the loading-screen validator.
+
+## 2026-07-24 - M12 Diseases crash remediation
+
+- Reproduced the manual native crash twice and isolated it against a passing
+  vanilla-only control.
+- Replaced the empty AD 1 disease manager, mirrored the 20-file installed GUI/art
+  contract, and added a mandatory installed-union/hash validator.
+- Fresh Rome survived four repeated panel cycles; Observer survived one; current
+  `error.log` remained empty.

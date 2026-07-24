@@ -2852,3 +2852,11 @@ The installed loading screen selects exactly `LOADING_TIP_0` through
 effective localization keys resolve from the main-menu layer. The generator
 therefore writes both the module mirror and a late main-menu same-key overlay,
 with byte-identical English fallback mirrors for every installed client.
+
+## 2026-07-24 - Disease panel owns a generated state-and-texture contract
+
+The native panel is unsafe against the former empty AD 1 disease manager. The
+canonical start generator now initializes every installed disease and endemic
+malaria; a validator also harvests and hash-mirrors all dynamic disease icons and
+literal GUI textures. This keeps later base/DLC additions visible to validation
+instead of depending on partial VFS fallback behavior.
