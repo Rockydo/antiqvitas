@@ -4373,3 +4373,14 @@ therefore preserves names and broad relative order but does not claim exact AD
 1 borders, homogeneous populations, uniform language, or continuity with later
 medieval peoples. Sources: `PTO-GEO-II1`, `DARCY-IRE`, `PTO-GEO-II2`, and
 `MANN-BRI`. [secure names and broad ordering; contested spatial realization]
+
+## 2026-07-24 - Loading panoramas are bounded historical atmospheres
+
+The expanded loading collection uses AD 1 Arikamedu, Jenne-jeno, Monte Alban,
+Palmyra, Pompeii, Ephesus, a Lower Rhine Germanic settlement, and Camulodunum
+as period anchors. It depicts trade and daily work, not reconstructed plans,
+populations, named people, borders, or exact architectural phases. Ephesus and
+Germanic scope remain constrained by `UNESCO-EPH` and `STR-GER`; other scene
+anchors use the plan's P8/P12 regional syntheses. The sixty display quotations
+are short translations or marked adaptations with their ancient primary source
+named in `tools/m12_loading_tips.py`.

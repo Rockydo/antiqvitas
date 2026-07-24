@@ -355,6 +355,11 @@ def wait_ready(args: argparse.Namespace) -> int:
         ):
             value["ready_at"] = now()
             save_state(value)
+            if getattr(args, "capture", None):
+                session = getattr(args, "session", None) or datetime.now().strftime("%Y%m%d_%H%M%S")
+                target = ROOT / "docs/screens" / session / f"{args.capture}.png"
+                target.parent.mkdir(parents=True, exist_ok=True)
+                save_window_capture(target)
             print("gamedriver: menu-ready heuristic passed")
             return 0
         time.sleep(4)
@@ -1106,6 +1111,8 @@ def build_parser() -> argparse.ArgumentParser:
     wait_parser.add_argument("--timeout", type=int, default=480)
     wait_parser.add_argument("--minimum", type=int, default=45)
     wait_parser.add_argument("--quiet-seconds", type=int, default=15)
+    wait_parser.add_argument("--capture", help="capture the ready frame before returning")
+    wait_parser.add_argument("--session")
     wait_parser.add_argument(
         "--max-cpu",
         type=float,

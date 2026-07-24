@@ -66,6 +66,8 @@ VALIDATE_COMMANDS = (
     Command("tools/m10_final_century.py", ("--check",)),
     Command("tools/m11_age_art.py", ("--check",)),
     Command("tools/m11_loading_screens.py", ("--check",)),
+    Command("tools/m12_loading_tips.py", ("--check",)),
+    Command("tools/m12_frontend_assets.py"),
     Command("tools/m11_advance_icons.py", ("--check",)),
     Command("tools/m11_flavor_events.py", ("--check",)),
     Command("tools/m11_dynamic_coas.py", ("--check",)),

@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
-"""Render reviewed late-loading corrections for M4 location names.
+"""Render reviewed, exclusively-owned corrections for M4 location names.
 
-The full-map M4 generator intentionally keeps broad automated ledgers stable and
-reproducible. This overlay is the authoritative exception layer for reviewed
-corrections discovered after a bulk pass. Its filename sorts after the base M4
-localization, so duplicate keys here supersede older labels without hand-editing
-the generated 28,573-key files.
+The bulk dynamic-name generator omits these locations so each correction has a
+single engine localization definition; EU5 keeps the first duplicate key.
 """
 from __future__ import annotations
 
