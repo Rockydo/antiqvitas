@@ -2216,6 +2216,22 @@ projected into AD 1. Sources weighed: `UNESCO-AB-OC`; P8.9; P12.2. [secure
 source-attributed early occupation/canal context; contested site mapping and
 engine adapter]
 
+## 2026-07-24 - High-visibility proxy keys receive period-safe labels
+
+Several installed map keys name later settlements but are already used as
+explicit AD 1 proxies: Angkor for the Mekong basin, Massawa for Adulis,
+Azcapotzalco for Cuicuilco, Chan Chan for the Gallinazo Virú-Valley context,
+Thang Long for Han Jiaozhi, and Zaachila for Monte Albán. The dynamic-name
+layer now presents those source-led period or regional adapters as qualified
+labels. This does not move a city, claim an excavated footprint within the
+engine polygon, extend an AD 1 polity, or assert the later name existed.
+
+Angkor Borei remains separately qualified as the existing Oc Eo-region growth
+proxy, with its uncertainty retained. Sources weighed: P8.3; P8.5; P8.9;
+P8.10; P12.2; CAH-XI; BHR; *Periplus of the Erythraean Sea*; UNESCO-AB-OC;
+Spencer and Redmond (PNAS-VIR); Gagnon (WIL-GAL). [secure chronological
+exclusions and source contexts; contested proxy-to-map correspondences]
+
 ## 2026-07-20 - Ephesus uses an Ayasuluk near-site market and harbor proxy
 
 UNESCO securely establishes Roman Ephesus as provincial capital and harbour
