@@ -70,3 +70,13 @@ linguistically plural. Each row therefore emits both Semitic and Hellenic
 adapters. This is a localization-lookup correction, not a claim that every
 inhabitant used one language or that older Semitic place-name traditions
 disappeared.
+
+## Generated British-capital batch
+
+The fourth data batch corrects three names injected by the AD 1 polity roster,
+not by the bulk map ledger. `Venta Icenorum`, `Isurium Brigantum`, and `Venta
+Silurum` were Roman administrative settlements founded decades after the
+campaign start. Their installed fields at Norwich, Ripon, and Monmouth are also
+only approximate map proxies for the archaeological sites. The replacement
+labels therefore name the Iceni, Brigantes, and Silures explicitly instead of
+pretending that later civitas capitals already existed.
