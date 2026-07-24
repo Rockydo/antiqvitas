@@ -20,6 +20,12 @@ No generated full-map file should be edited by hand.
 - `contested`: the existing label is demonstrably too late, while the surviving
   pre-conquest name evidence permits only a cautious reconstruction.
 
+The `culture` column accepts one M4 culture key or a `|`-separated set. Multiple
+adapters are appropriate only where the same reviewed place-name must resolve
+through more than one historically relevant language layer; they do not imply
+a uniform population or erase local multilingualism. Duplicate language groups
+are collapsed deterministically by the generator.
+
 ## Validation
 
 Run:
