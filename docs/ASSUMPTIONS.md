@@ -4304,3 +4304,16 @@ site identity, population, political control, language uniformity, or a
 specific trade route. Sources: IRAN-RHAGA; OUP-REDSEA; CAM-MUZIRIS;
 KER-MUZIRIS; P8.2; P8.4; P8.6; P12.2. [Rhaga secure direct form; Mouza and
 Muziris contested regional adapters]
+
+## 2026-07-24 - Three market proxies do not relocate their ancient cities
+
+Phanagoria, not Panticapaeum, is the ancient city on the Taman peninsula; the
+installed Taman market and location label therefore use `Phanagoria` while the
+Bosporan capital across the Kerch strait is not silently relocated. Barygaza
+is Bharuch near the Narmada mouth, not the installed Khambat field, and Taxila
+is a Gandharan city rather than Attock. The latter two remain explicitly
+qualified region/route proxies because the engine map lacks their exact
+fields. None of the labels determines a city boundary, port layout, polity
+capital, trade volume, or route. Sources: PRINCETON-PHAN; OCD-BARYGAZA;
+IRAN-GANDHARA; P8.1; P8.4; P12.2. [Phanagoria secure peninsula identity;
+Barygaza and Taxila contested proxy scopes]
