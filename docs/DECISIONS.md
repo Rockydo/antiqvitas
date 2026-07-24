@@ -2783,6 +2783,17 @@ per locally reported unused culture in a separate manager, offsets its exact
 total from Aachen, and verifies the ledger, population total, smoke, and fresh
 selection diagnostic independently. This is an engine compatibility artifact,
 not a historical diaspora claim.
+
+## 2026-07-24 - Do not retain an ineffective native Han regency reason
+
+`designated_heir_reason = infant_emperor` is a locally observed native
+imperial-regency contract and is historically appropriate to Emperor Ping's
+minority. However, in a fresh AD 1 Western Han session it was accepted without
+errors while the engine still generated Regent Wang Guangwu instead of binding
+Wang Mang. The field is therefore not retained as decorative data or treated
+as an implicit active-regent linkage. The canonical minimal regency adapter is
+preserved, and the failed result is documented in `BLOCKERS.md`.
+
 # 2026-07-24 — Explicit synthetic Tier-3 location morphology
 
 The map-wide naming completion pass uses deterministic culture-group suffixes

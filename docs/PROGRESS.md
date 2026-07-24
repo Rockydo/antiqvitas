@@ -6354,3 +6354,12 @@ reviewed 128px BC7 DDS.
   direct XAR Government panel still rendered Wang Guangwu; a source-qualified
   Ping birthplace fixture also rendered Wang Guangwu and was reverted.
 - Fixture and restored canonical builds both passed full validation and smoke.
+
+## 2026-07-24 - M6 native infant-emperor reason probe
+
+- Verified the installed `infant_emperor` designated-heir reason on a native
+  imperial regency, then tested it in the source-bounded Emperor Ping/Wang Mang
+  adapter. The live Western Han inspector still rendered generated Regent Wang
+  Guangwu; the accepted-but-ineffective field was fully reverted.
+- The canonical restoration passed `make validate` and the baseline-aware
+  enabled-mod smoke with zero new error-log lines.

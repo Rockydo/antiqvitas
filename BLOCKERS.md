@@ -1145,3 +1145,19 @@ validation and enabled-mod smoke. In the fresh AD 1 XAR panel it still rendered
 `Regent Wang Guangwu`; the fixture, source note, and generated output were
 restored. Evidence: `docs/screens/M6_han_ping_birth_fixture_live/han_government_panel.png`.
 Do not retry a Ping-birthplace-only variation.
+
+### 2026-07-24 follow-up: `infant_emperor` does not bind the Han regent
+
+The installed start data contains a native `designated_heir_reason =
+infant_emperor` on an active imperial regency. Emperor Ping's minority makes
+that exact reason historically and technically applicable, so a narrow fixture
+added it after the local source contract had passed full validation and the
+enabled-mod smoke. A fresh AD 1 XAR live start still displayed `Regent Wang
+Guangwu`; the country inspector retained the same generated officeholder. The
+field was accepted silently but did not bind Wang Mang, so its generator and
+source-column support were removed.
+
+Evidence: `docs/screens/20260724_133849/han_infant_country_header.png`.
+The restored canonical build subsequently passed full validation and a second
+enabled-mod smoke with zero new error-log lines. Do not retry this reason-only
+variation; no locally verified active-regency linkage remains.
