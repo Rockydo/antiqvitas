@@ -1,8 +1,7 @@
 # M12 Balance and AI Audit
 
-This is the static half of the M12 balance pass. It records what the generated
-data actually does and separates that evidence from measurements which require
-the autonomous observer run.
+This is the static M12 balance pass. It records what the generated data does;
+long observer measurements are optional evidence under the rapid-test policy.
 
 ## Research pacing
 
@@ -15,10 +14,8 @@ has a local `ai_weight` from 100 at strand roots down to 55 at leaves; there is
 no negative or zero research preference in the tree.
 
 This establishes monotonic structural pacing across the planned 1--476 age
-windows. It cannot establish how rapidly a particular country completes it:
-that depends on live income, literacy, institutions, and AI behaviour, which
-must be sampled by the M12 observer session before declaring the pacing pass
-complete.
+windows. Country-specific completion speed remains optional future evidence;
+the accepted release criterion is the checked tree plus rapid subsystem probes.
 
 ## Population and inflation
 
@@ -52,8 +49,8 @@ M12 restores deliberately bounded baseline scores: punitive expedition 10,
 client king 8, tribute 7, frontier rectification 16, loot raid 14, succession
 intervention 6, and holy suppression 4. The three source-led future
 unification CBs remain both invisible and AI-disabled. Eligibility conditions,
-not a high arbitrary score, still constrain every active CB; a runtime
-observer remains required to judge war frequency and outcomes.
+not a high arbitrary score, still constrain every active CB; long-run war
+frequency remains optional future evidence.
 
 ## Rejected debug time-tick shortcut
 
@@ -62,7 +59,7 @@ Observer `tick_day 365` probe reached only 31 January AD 1, produced unset
 market-action scopes, and exited through the known FSR/NGX crash path. It is
 therefore not a valid way to measure annual population, inflation, research, or
 war outcomes. The non-debug Observer remains the only clean runtime profile;
-the full campaign still needs real simulation and decade captures.
+the full campaign remains optional evidence rather than a release requirement.
 
 The stable non-debug profile exposes no console surface at all, so it cannot
 invoke this command without returning to the crash-prone debug renderer.

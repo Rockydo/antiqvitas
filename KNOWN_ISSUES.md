@@ -30,9 +30,9 @@ explicit ANTIQVITAS government block, or a minimal locally verified fallback,
 without either template. The fresh paused AD 1 Observer test has zero matches
 for both removal diagnostics; see `docs/playtests/AD1_STARTUP_DEFAULTS_20260721.md`.
 
-## M12 observer and renderer reliability remain release blockers
+## M12 observer and renderer reliability limitation
 
-The final observer-to-476 acceptance run has not been achieved. The observer
+The optional observer-to-476 evidence run has not been achieved. The observer
 country-change default is now enabled by a menu-smoked exact-name overlay, but
 the current game build exits in an FSR renderer access-violation stack during
 sustained high-speed observer playback. The M7 Rome-Parthia controlled AI war
@@ -41,7 +41,8 @@ crash after the live War Viewer had populated. The full 40-action M11 registry, 
 institution-birth contracts, and the 7,440-event quarantine all have successful
 enabled-mod evidence, so this is not evidence of a message-registry or
 event-loader failure. Do not treat this development
-build as release-ready for a long observer campaign; see `BLOCKERS.md` and
+build as suitable for a long observer campaign; it is not a rapid-test release
+gate. See `BLOCKERS.md` and
 `docs/m12/M12_FINALE_VERIFICATION.md`.
 
 ## M7 AI-war observer acceptance is deferred
@@ -60,7 +61,7 @@ a changed game build, SHA-256, or 1,348-entry source inventory. On an EU5
 update, regenerate and menu-smoke this guarded overlay before use; do not copy
 or edit the game installation.
 
-## M10 all-century observer coverage is deferred
+## M10 all-century observer evidence is optional
 
 The AD 1-476 layers have clean enabled-mod menu smoke and no new `error.log`
 lines, including the generated AD 48 Northern-Xiongnu, AD 192 Champa, AD 370
@@ -70,7 +71,8 @@ observer-to-era playback cannot yet be run because the first play action hits
 the documented FSR renderer access violation. The country-change confirmation
 is no longer the blocker: its exact-name rule overlay is menu-smoked. Retry the
 M10 event-window observer route only after a material verified renderer-profile
-or driver change, then capture the resulting situations and events. See
+or driver change, then capture the resulting situations and events as optional
+evidence. See
 `docs/playtests/M10_001_096.md`, `docs/playtests/M10_097_199.md`,
 `docs/playtests/M10_200_299.md`, `docs/playtests/M10_300_399.md`,
 `docs/playtests/M10_400_476.md`, and `BLOCKERS.md`.

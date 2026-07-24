@@ -20,10 +20,10 @@ The release payload contains no audio assets by design.
 
 `metadata.json` currently identifies `antiqvitas`, version `0.1.0`, and EU5
 `1.3.11`. Before any release archive or Workshop submission, run the complete
-M12 gate in a clean enabled-mod session: `make full`, the full observer run to
-AD 476, and screenshot confirmation that `antq_m10_final.5012` fired. Update
-the metadata version only with that tested release commit; do not claim broader
-game-version support.
+M12 gate in a clean enabled-mod session: `make full`, fresh AD 1 startup, and
+the checked rapid high-risk probes. A full observer run to AD 476 and finale
+screenshot are optional evidence. Update the metadata version only with that
+tested release commit; do not claim broader game-version support.
 
 M11's exact-name `main_menu/gui/messagetypes.txt` overlay is intentionally in
 the payload. Its generator pins the installed registry hash; if an EU5 patch
@@ -37,4 +37,3 @@ item, upload the reviewed `thumbnail.png`, use the `Total Conversion` and
 `Historical` tags, and copy the concise scope plus Known Issues into the item
 description. Do not package `config/local_paths.json` or publish local log,
 save, screenshot, cache, or source-research material.
-

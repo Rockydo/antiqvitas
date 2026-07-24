@@ -6284,3 +6284,10 @@ reviewed 128px BC7 DDS.
   the enabled-mod menu smoke also passed with zero new `error.log` lines over
   the vanilla baseline. Committed as `420dddb3`
   (`feat(m4): synthesize tier3 ancient map names`).
+
+## 2026-07-24 - M12 rapid-test release criteria
+
+- Reconciled stale M12 gate, packaging, balance, known-issues, and checklist
+  text with the active rapid-test policy: long observer playback is optional
+  evidence, not a ship blocker. The remaining substantive M12 gap is the
+  legacy culture/religion no-pop diagnostic.
