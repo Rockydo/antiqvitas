@@ -40,7 +40,7 @@ jobs:
 
       - name: Materialize release script
         run: |
-          base64 -d .pro_temp/apply_clean_britain.py.gz.b64 | gzip -d > .pro_temp/apply_clean_britain.py
+          cat .pro_temp/britain-v2-*.part | base64 -d | gzip -d > .pro_temp/apply_clean_britain.py
           python -m py_compile .pro_temp/apply_clean_britain.py
 
       - name: Fold canonical sources and regenerate owned outputs
