@@ -2878,7 +2878,7 @@ parliaments.47 = {
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:printing_press
+		always = no
 		parliament_issue ?= {
 			OR = {
 				estate_type ?= { this = estate_type:burghers_estate }

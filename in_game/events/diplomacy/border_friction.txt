@@ -85,7 +85,7 @@ border_friction.2 = {
 	outcome = neutral
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:enlightenment
+		always = no
 		is_ai = no
 		at_war = no
 		is_subject = no

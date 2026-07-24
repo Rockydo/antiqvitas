@@ -1201,7 +1201,7 @@ flavor_vij.21 = {
 	trigger = {
 		current_date > 476.9.4
 		prestige >= 40
-		has_embraced_institution = institution:renaissance
+		always = no
 		NOT = { has_policy = court_of_culture_policy }
 		capital = {
 			any_work_of_art_in_location = {
@@ -1268,7 +1268,7 @@ flavor_vij.22 = {
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:professional_armies
+		always = no
 		gold >= {
 			value = root.monthly_income_trade_and_tax
 			multiply = 3

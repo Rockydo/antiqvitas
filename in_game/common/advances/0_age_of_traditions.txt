@@ -127,7 +127,7 @@ legalism_advance = {
 	
 	requires = codified_laws
 	
-	allow = { has_embraced_institution = institution:legalism }
+	allow = { always = no }
 	potential = { always = no } # M8 disables vanilla advancement
 }
 
@@ -254,7 +254,7 @@ ranching = {
 	
 	allow = { 
 		OR = {
-			has_embraced_institution = institution:feudalism
+			always = no
 			original_capital ?= { continent = continent:europe }
 			original_capital ?= { continent = continent:asia }
 			original_capital ?= { sub_continent = sub_continent:north_africa }
@@ -303,7 +303,7 @@ feudalism_advance = {
 	military_tactics = 1.0 # WAD, decision by johan
 	ai_weight = { add = 20 }
 
-	allow = { has_embraced_institution = institution:feudalism }
+	allow = { always = no }
 	potential = { always = no } # M8 disables vanilla advancement
 }
 
@@ -379,7 +379,7 @@ iron_working = {
 	starting_technology_level = 1
 	
 	allow = { 
-		has_embraced_institution = institution:feudalism
+		always = no
 	}
 	
 	can_extract_coal = yes
@@ -576,7 +576,7 @@ meritocracy_advance = {
 	depth = 0
 
 
-	allow = { has_embraced_institution = institution:meritocracy }
+	allow = { always = no }
 	potential = { always = no } # M8 disables vanilla advancement
 }
 

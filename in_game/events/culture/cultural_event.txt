@@ -41,7 +41,7 @@ cultural_event.2 = {
 	trigger = {
 		current_date > 476.9.4
 		current_age = age_6_revolutions
-		has_embraced_institution = institution:enlightenment
+		always = no
 		ruler ?= { adm >= 50 }
 		prestige > 40.00
 		NOT = { has_country_modifier = enlightenment_movement }
@@ -126,7 +126,7 @@ cultural_event.5 = {
 		current_date > 476.9.4
 		current_age = age_3_discovery
 		religion.group = religion_group:christian
-		has_embraced_institution = institution:feudalism
+		always = no
 		government_type = government_type:monarchy
 		capital = {
 			continent = continent:europe
@@ -440,7 +440,7 @@ cultural_event.14 = { # Sponsoring University
 	image = "gfx/interface/illustrations/institutions/scientific_revolution.dds"
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:renaissance
+		always = no
 		any_owned_location = {
 			has_building_with_at_least_one_level = university
 		}

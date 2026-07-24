@@ -294,7 +294,7 @@ institute_feudal_levies = {
 	}
 
 	allow = {
-		NOT = { has_embraced_institution = institution:professional_armies }
+		NOT = { always = no }
 	}
 
 	chance = {
@@ -329,7 +329,7 @@ establish_standing_regiments = {
 	}
 
 	allow = {
-		has_embraced_institution = institution:professional_armies
+		always = no
 	}
 
 	chance = {

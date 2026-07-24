@@ -292,7 +292,7 @@ language.20 = {
 	trigger = {
 		current_date > 476.9.4
 		NOT = { has_variable = language_20_flag  }
-		has_embraced_institution = institution:legalism
+		always = no
 		has_policy = language_of_pleading_court
 		any_core_location = {
 			any_pop = {

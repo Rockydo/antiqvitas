@@ -19,7 +19,7 @@ flavor_ham.1 = { # The Berenberg Bank
 	trigger = {
 		current_date > 476.9.4
 		owns = location:hamburg
-		has_embraced_institution = institution:banking
+		always = no
 	}
 
 	illustration_tags = {
@@ -158,7 +158,7 @@ flavor_ham.3 = { # The Hamburger Bank
 	trigger = {
 		current_date > 476.9.4
 		owns = location:hamburg
-		has_embraced_institution = institution:banking
+		always = no
 	}
 
 	illustration_tags = {

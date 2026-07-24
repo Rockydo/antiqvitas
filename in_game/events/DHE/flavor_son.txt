@@ -210,7 +210,7 @@ flavor_son.4 = {
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:professional_armies
+		always = no
 		yearly_gold >= 300
 	}
 
@@ -476,7 +476,7 @@ flavor_son.7 = {
 	trigger = {
 		current_date > 476.9.4
 		religion.group = religion_group:muslim
-		has_embraced_institution = institution:legalism
+		always = no
 		NOT = { has_policy = sharia_law_policy }
 	}
 

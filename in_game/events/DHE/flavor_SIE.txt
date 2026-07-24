@@ -695,7 +695,7 @@ flavor_sie.10 = {
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:renaissance
+		always = no
 
 		owns = location:siena
 	}

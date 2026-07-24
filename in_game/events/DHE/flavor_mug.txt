@@ -402,7 +402,7 @@ flavor_mug.7 = {
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:professional_armies
+		always = no
 		has_law = recruitment_law
 	}
 

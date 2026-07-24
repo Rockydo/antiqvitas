@@ -873,7 +873,7 @@ flavor_eng.8 = {
 
 		OR = {
 			AND = {
-				has_embraced_institution = institution:military_revolution
+				always = no
 				capital = {
 					NOT = { has_building_with_at_least_one_level = admiralty }
 				}
@@ -3322,7 +3322,7 @@ flavor_eng.28 = {
 			owner ?= root
 			is_capital = yes
 		}
-		has_embraced_institution = institution:banking
+		always = no
 		OR = {
 			AND = {
 				at_war = yes
@@ -10272,7 +10272,7 @@ flavor_eng.106 = {
 		any_owned_location = {
 			region = region:great_britain_region
 			any_coast_border_location = {
-				has_institution = institution:printing_press
+				always = no
 			}
 		}
 
@@ -10285,7 +10285,7 @@ flavor_eng.106 = {
 			limit = {
 				region = region:great_britain_region
 				any_coast_border_location = {
-					has_institution = institution:printing_press
+					always = no
 				}
 			}
 			save_scope_as = target_location
@@ -10334,9 +10334,9 @@ flavor_eng.106 = {
 			}
 			if = {
 				limit = {
-					NOT = { has_institution = institution:printing_press }
+					NOT = { always = no }
 				}
-				change_institution_progress = { type = institution:printing_press value = institution_progress_ultimate_bonus }
+				change_institution_progress = { type = institution:antq_hellenism value = institution_progress_ultimate_bonus }
 			}
 		}
 
@@ -22517,7 +22517,7 @@ flavor_eng.220 = {
 					location_rank = location_rank:megalopolis
 				}
 				count >= 3
-				has_institution = institution:industrialization
+				always = no
 				owner = root
 			}
 		}
@@ -24693,7 +24693,7 @@ flavor_eng.238 = {
 							}
 							OR = {
 								has_midgame_manufactory_building = yes
-								has_institution = institution:industrialization
+								always = no
 							}
 							owner ?= root
 						}
@@ -24858,7 +24858,7 @@ flavor_eng.240 = {
 					location_rank ?= location_rank:city
 					location_rank ?= location_rank:megalopolis
 				}
-				has_institution = institution:industrialization
+				always = no
 				owner ?= root
 			}
 		}

@@ -26,7 +26,7 @@ confessionalism_advance = {
 
 	depth = 0
 	
-	allow = { has_embraced_institution = institution:confessionalism }
+	allow = { always = no }
 	potential = { always = no } # M8 disables vanilla advancement
 }
 
@@ -124,7 +124,7 @@ global_trade_advance = {
 		
 	merchant_maintenance_efficiency = 0.20
 	depth = 0
-	allow = { has_embraced_institution = institution:global_trade }
+	allow = { always = no }
 	potential = { always = no } # M8 disables vanilla advancement
 }
 
@@ -282,7 +282,7 @@ artillery_institution_advance = {
 	depth = 0
 	ai_weight = { add = 100 }
 
-	allow = { has_embraced_institution = institution:artillery_institution }
+	allow = { always = no }
 	potential = { always = no } # M8 disables vanilla advancement
 }
 

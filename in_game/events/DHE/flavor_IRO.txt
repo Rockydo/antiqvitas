@@ -851,7 +851,7 @@ flavor_iro.41 = { # Trading in Firearms
 		any_neighbor_country = {
 			has_colonial_charters = yes
 			religion.group = religion_group:christian	
-			has_embraced_institution = institution:new_world
+			always = no
 			opinion = { target = root value > 33 }
 		}			
 	}
@@ -864,7 +864,7 @@ flavor_iro.41 = { # Trading in Firearms
 			limit = {
 				has_colonial_charters = yes
 				religion.group = religion_group:christian	
-				has_embraced_institution = institution:new_world
+				always = no
 				opinion = { target = root value > 33 }
 			}
 			save_scope_as = neighbor_country
@@ -909,7 +909,7 @@ flavor_iro.42 = { # Colonists Impressed with <culture_name> Unity
 		any_neighbor_country = {
 			has_colonial_charters = yes
 			religion.group = religion_group:christian	
-			has_embraced_institution = institution:new_world
+			always = no
 			opinion = { target = root value >= 100 }
 		}			
 	}
@@ -923,7 +923,7 @@ flavor_iro.42 = { # Colonists Impressed with <culture_name> Unity
 			limit = {
 				has_colonial_charters = yes
 				religion.group = religion_group:christian	
-				has_embraced_institution = institution:new_world
+				always = no
 				opinion = { target = root value >= 100 }
 			}
 			save_scope_as = neighbor_country
@@ -1220,7 +1220,7 @@ flavor_iro.50 = { # Exchange of Fur
 		any_neighbor_country = {
 			has_colonial_charters = yes
 			religion.group = religion_group:christian	
-			has_embraced_institution = institution:new_world
+			always = no
 			opinion = { target = root value >= 25 }
 		}			
 	}
@@ -1233,7 +1233,7 @@ flavor_iro.50 = { # Exchange of Fur
 			limit = {
 				has_colonial_charters = yes
 				religion.group = religion_group:christian	
-				has_embraced_institution = institution:new_world
+				always = no
 				opinion = { target = root value >= 25 }
 			}
 			save_scope_as = neighbor_country
@@ -1293,7 +1293,7 @@ flavor_iro.51 = { # Beaver Wars
 		any_neighbor_country = {
 			has_colonial_charters = yes
 			religion.group = religion_group:christian	
-			has_embraced_institution = institution:new_world
+			always = no
 		}				
 	}
 	
@@ -1305,7 +1305,7 @@ flavor_iro.51 = { # Beaver Wars
 			limit = {
 				has_colonial_charters = yes
 				religion.group = religion_group:christian	
-				has_embraced_institution = institution:new_world
+				always = no
 			}
 			save_scope_as = neighbor_colonial
 		}			
@@ -1371,7 +1371,7 @@ flavor_iro.52 = { # Depletion of the beaver population
 			limit = {
 				has_colonial_charters = yes
 				religion.group = religion_group:christian	
-				has_embraced_institution = institution:new_world
+				always = no
 			}
 			save_scope_as = neighbor_colonial
 		}		
@@ -1469,7 +1469,7 @@ flavor_iro.61 = { # Council of the Fifty Intervenes in Colonial Diplomacy
 		any_neighbor_country = {
 			has_colonial_charters = yes
 			religion.group = religion_group:christian
-			has_embraced_institution = institution:new_world
+			always = no
 		}	
 	}
 	
@@ -1479,7 +1479,7 @@ flavor_iro.61 = { # Council of the Fifty Intervenes in Colonial Diplomacy
 			limit = {
 				has_colonial_charters = yes
 				religion.group = religion_group:christian	
-				has_embraced_institution = institution:new_world
+				always = no
 			}
 			save_scope_as = neighbor_country
 		}	

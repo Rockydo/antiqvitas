@@ -2168,7 +2168,7 @@ culture_greek.21 = {
 		current_date > 476.9.4
 		culture = { has_culture_group = culture_group:greek_group }
 
-		has_embraced_institution = institution:new_world
+		always = no
 
 		any_owned_non_rural_location = {
 			sea_zone ?= {

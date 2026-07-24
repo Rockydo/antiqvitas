@@ -293,7 +293,6 @@ johan.1 = {
 
 		random_unit = {
 			random_sub_unit = {
-				damage_regiment = yes
 			}
 			remove_unit_modifier = better_morale
 		}
@@ -719,7 +718,7 @@ johan.8 = {
 	trigger = {
 		current_date > 476.9.4
 		capital = {
-			institution_progress:feudalism > 32
+			always = no
 		}
 		government_type = government_type:monarchy
 		NOT = { government_type = c:ENG.government_type }
@@ -746,7 +745,7 @@ johan.8 = {
 		name = johan.1.b
 		capital = {
 			change_institution_progress = {
-				type = institution:feudalism
+				type = institution:antq_hellenism
 				value = 0.2
 			}
 		}
@@ -1763,70 +1762,6 @@ johan.21 = {
 				type = special_status:senior_partner
 				country = root
 			}
-		}
-		show_all_event_targets = {
-			advance_type = confessionalism_advance
-			artist_type = scientist
-			work_of_art_type = work_of_art_type:icon
-			avatar = matsya_avatar
-			building_type = royal_court
-			cabinet_action = study_institutions
-			casus_belli = cb_take_shogunate
-			character_interaction = assume_fort_command
-			child_education = expensive_in_depth_education
-			country_interaction = nusta_marriage
-			country_rank = rank_empire
-			culture_group = andean_group
-			culture = armenian_culture
-			disaster_type = crisis_of_the_sayfawa_dynasty
-			disease = bubonic_plague
-			estate_privilege = trade_monopolies
-			estate_type = nobles_estate
-			formable_country = SCA_f
-			generic_action = hide_from_black_death
-			god = ganesha_god
-			goods = silver
-			demand = colonial_charter_maintenance
-			government_reform = full_college
-			government_type = monarchy
-			hegemony = naval_hegemon
-			heir_selection = cognatic_primogeniture
-			holy_site_definition = the_vatican
-			holy_site_type = orthodox_church_holy_site
-			institution = new_world
-			international_organization = hre
-			language_family = germanic_language_family
-			language = french_language
-			law = republican_foundation_law
-			policy = authoritarianism_policy
-			levy_setup = levy_a_late_longbowmen
-			location_rank = town
-			mission = development_of_infrastructure
-			mission_task = a_great_capital
-			parliament_agenda = pa_push_towards_decentralized_nobles
-			parliament_issue = establish_the_signoria_of_venice
-			peace_treaty = disband_kontor
-			pop_type = burghers
-			production_method = madrasa_maintenance
-			recruitment_method = elite_training
-			regency_type = nobles_estate_regency
-			religion_group = buddhist
-			religion = anglican
-			religious_aspect = arminianism
-			religious_faction = imperial_court
-			religious_focus = adopt_ometeotl
-			religious_school = ismaili_school
-			resolution = call_crusade
-			relation_type = deny_market_access
-			societal_value_type = sinicized_vs_unsinicized
-			subject_type = dominion
-			trait = ruthless_blockader
-			unit_ability = execute_prisoners
-			sub_unit_category = army_artillery
-			unit_type = a_cawa
-			climate = tropical
-			vegetation = grasslands
-			topography = flatland
 		}
 	}
 }

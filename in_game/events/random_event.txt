@@ -170,7 +170,7 @@ random_event.4 = {
 	trigger = {
 		current_date > 476.9.4
 		has_ruler = yes
-		NOT = { has_embraced_institution = institution:enlightenment }
+		NOT = { always = no }
 	}
 
 
@@ -4162,7 +4162,7 @@ random_event.77 = {
 	
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:printing_press
+		always = no
 	}
 
 	immediate = {

@@ -3397,7 +3397,7 @@ flavor_mos.34 = {
 		}
 
 		location:bologna = {
-			has_institution = institution:renaissance
+			always = no
 			owner = {
 				religion.group = religion_group:christian
 			}
@@ -3442,9 +3442,9 @@ flavor_mos.34 = {
 			custom_tooltip = flavor_mos.34.tt1
 			if = {
 				limit = {
-					NOT = { has_institution = institution:renaissance }
+					NOT = { always = no }
 				}
-				change_institution_progress = { type = institution:renaissance value = institution_progress_ultimate_bonus }
+				change_institution_progress = { type = institution:antq_hellenism value = institution_progress_ultimate_bonus }
 				custom_tooltip = flavor_mos.34.tt2
 			}
 			if = {
@@ -3531,13 +3531,13 @@ flavor_mos.35 = {
 		OR = {
 			any_owned_location = {
 				region = region:russian_region
-				has_institution = institution:renaissance
+				always = no
 			}
 			societal_value:outward_vs_inward <= 10
 		}
 
 		location:milano = {
-			has_institution = institution:renaissance
+			always = no
 			owner = {
 				religion.group = religion_group:christian
 			}
@@ -3621,16 +3621,16 @@ flavor_mos.35 = {
 		trigger = {
 			any_owned_location = {
 				region = region:russian_region
-				NOT = { has_institution = institution:renaissance }
+				NOT = { always = no }
 			}
 		}
 
 		random_owned_location = {
 			limit = {
 				region = region:russian_region
-				NOT = { has_institution = institution:renaissance }
+				NOT = { always = no }
 			}
-			change_institution_progress = { type = institution:renaissance value = institution_progress_ultimate_bonus }
+			change_institution_progress = { type = institution:antq_hellenism value = institution_progress_ultimate_bonus }
 		}
 
 		hidden_effect = { kill_character_silently = scope:marco_ruffo }
@@ -4982,7 +4982,7 @@ flavor_mos.45 = {
 
 		NOT = {
 			any_owned_location = {
-				institution:printing_press = {
+				institution:antq_hellenism = {
 					origin ?= prev
 				}
 			}
@@ -4990,7 +4990,7 @@ flavor_mos.45 = {
 
 		any_owned_location = {
 			any_neighbor_location = {
-				has_institution = institution:printing_press
+				always = no
 			}
 		}
 
@@ -7417,7 +7417,7 @@ flavor_mos.64 = {
 			owner = root
 			controller = root
 			is_capital = yes
-			has_institution = institution:artillery_institution
+			always = no
 		}
 
 		at_war = yes
@@ -10241,17 +10241,17 @@ flavor_mos.90 = {
 
 		weighted_calc_true_if = {
 			amount < 2
-			1 = { has_embraced_institution = institution:manufactories }
-			1 = { has_embraced_institution = institution:scientific_revolution }
-			1 = { has_embraced_institution = institution:military_revolution }
+			1 = { always = no }
+			1 = { always = no }
+			1 = { always = no }
 		}
 
 		any_known_country = {
 			weighted_calc_true_if = {
 				amount >= 2
-				1 = { has_embraced_institution = institution:manufactories }
-				1 = { has_embraced_institution = institution:scientific_revolution }
-				1 = { has_embraced_institution = institution:military_revolution }
+				1 = { always = no }
+				1 = { always = no }
+				1 = { always = no }
 			}
 		}
 
@@ -10665,7 +10665,7 @@ flavor_mos.93 = {
 				societal_value:outward_vs_inward > 20
 				sub_continent:western_europe = {
 					any_location_in_sub_continent = {
-						has_institution = institution:enlightenment
+						always = no
 					}
 				}
 			}

@@ -11,7 +11,7 @@ renaissance_advance = {
 
 	depth = 0
 	
-	allow = { has_embraced_institution = institution:renaissance }
+	allow = { always = no }
 
 	potential = { always = no } # M8 disables vanilla advancement
 }
@@ -133,7 +133,7 @@ banking_advance = {
 
 	depth = 0
 
-	allow = { has_embraced_institution = institution:banking }
+	allow = { always = no }
 	potential = { always = no } # M8 disables vanilla advancement
 }
 
@@ -284,7 +284,7 @@ professional_armies_advance = {
 	depth = 0
 	ai_weight = { add = 100 }
 
-	allow = { has_embraced_institution = institution:professional_armies }
+	allow = { always = no }
 	potential = { always = no } # M8 disables vanilla advancement
 }
 

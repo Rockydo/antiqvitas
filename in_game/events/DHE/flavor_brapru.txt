@@ -329,7 +329,7 @@ flavor_brapru.7 = { #The Canton System Second Chance
 	trigger = {
 		current_date > 476.9.4
 		government_type = government_type:monarchy
-		has_embraced_institution = institution:enlightenment
+		always = no
 		custom_tooltip = {
 			text = canton_reform_done_tt
 			NOT = { has_variable = canton_reform_done }
@@ -1273,7 +1273,7 @@ flavor_brapru.20 = { #Johann Gottlieb Fichte
 	trigger = {
 		current_date > 476.9.4
 		owns = location:berlin
-		has_embraced_institution = institution:enlightenment
+		always = no
 	}
 
 	option = {
@@ -3428,7 +3428,7 @@ flavor_brapru.1400 = { #Construction of Sanssouci
 		current_date > 476.9.4
 		owns = location:potsdam
 		has_ruler = yes
-		has_embraced_institution = institution:enlightenment
+		always = no
 	}
 
 	option = {

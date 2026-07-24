@@ -17,6 +17,7 @@ import re
 from pathlib import Path
 
 from dates import AntqDate, END, START
+from legacy_institutions import neutralize_references
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,6 +28,18 @@ EVENT_HEADER = re.compile(r"^([A-Za-z][A-Za-z0-9_]*\.[0-9]+)\s*=\s*\{")
 TRIGGER_BLOCK = re.compile(r"^(\s*)trigger\s*=\s*\{")
 INLINE_TRIGGER = re.compile(r"^(\s*)trigger\s*=\s*\{\s*(.*?)\s*\}\s*(?:#.*)?$")
 DATE = re.compile(r"(?<![0-9])-?[0-9]{1,4}\.[0-9]{1,2}\.[0-9]{1,2}(?![0-9])")
+DAMAGE_REGIMENT = re.compile(
+    r"^[ \t]*damage_regiment\s*=\s*yes[ \t]*(?:#.*)?\r?\n?",
+    re.MULTILINE,
+)
+BLOCK_HEADER = {
+    "center_of_renaissance_variable": re.compile(r"^\s*set_variable\s*=\s*\{"),
+    "show_all_event_targets": re.compile(r"^\s*show_all_event_targets\s*=\s*\{"),
+}
+TARGETED_SANITIZATIONS = {
+    "in_game/events/DHE/flavor_BYZ.txt": ("center_of_renaissance_variable",),
+    "in_game/events/debug/000_johan_debug.txt": ("show_all_event_targets",),
+}
 
 
 def game_root() -> Path:
@@ -111,8 +124,47 @@ def sanitized_date(match: re.Match[str]) -> str:
     return value
 
 
+def remove_blocks_containing(text: str, needle: str) -> tuple[str, int]:
+    """Remove exact obsolete effect blocks while preserving all other source."""
+    header = BLOCK_HEADER[needle]
+    lines = text.splitlines(keepends=True)
+    rendered: list[str] = []
+    index = 0
+    removed = 0
+    while index < len(lines):
+        if not header.match(lines[index]):
+            rendered.append(lines[index])
+            index += 1
+            continue
+        block: list[str] = []
+        depth = 0
+        while index < len(lines):
+            line = lines[index]
+            block.append(line)
+            depth += brace_delta(line)
+            index += 1
+            if depth == 0:
+                break
+            if depth < 0:
+                raise ValueError(f"{needle}: candidate block brace depth became negative")
+        block_text = "".join(block)
+        if needle in block_text:
+            removed += 1
+        else:
+            rendered.extend(block)
+    return "".join(rendered), removed
+
+
 def render(relative: str) -> bytes:
     text, bom = source_text(relative)
+    for needle in TARGETED_SANITIZATIONS.get(relative, ()):
+        text, count = remove_blocks_containing(text, needle)
+        if count != 1:
+            raise ValueError(f"{relative}: expected one obsolete {needle} block, found {count}")
+    if relative == "in_game/events/debug/000_johan_debug.txt":
+        text, count = DAMAGE_REGIMENT.subn("", text)
+        if count != 1:
+            raise ValueError(f"{relative}: expected one obsolete damage_regiment effect, found {count}")
     lines = text.splitlines(keepends=True)
     rendered: list[str] = []
     depth = 0
@@ -196,6 +248,7 @@ def render(relative: str) -> bytes:
             f"changed {inerted_events}"
         )
     result = DATE.sub(sanitized_date, "".join(rendered))
+    result = neutralize_references(result, remap_effects=True)
     return (b"\xef\xbb\xbf" if bom else b"") + result.encode("utf-8")
 
 

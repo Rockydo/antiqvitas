@@ -1434,7 +1434,7 @@ personality_events.32 = {
 		current_date > 476.9.4
 		has_ruler = yes
 		ruler = { has_trait = architectural_visionary }
-		has_embraced_institution = institution:feudalism
+		always = no
 
 		capital ?= {
 			NOT = { has_location_modifier = monumental_architecture }

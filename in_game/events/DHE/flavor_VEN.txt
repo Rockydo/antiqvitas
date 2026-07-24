@@ -1617,7 +1617,7 @@ flavor_ven.31 = { # Tiziano Vecelli
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:renaissance
+		always = no
 	}
 
 	immediate = {
@@ -1672,7 +1672,7 @@ flavor_ven.32 = { # Venice During the Renaissance
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:renaissance
+		always = no
 		any_owned_location = {
 			count >= 10
 			has_building = building_type:library
@@ -3850,7 +3850,7 @@ flavor_ven.73 = { # The Banco del Giro
 	trigger = {
 		current_date > 476.9.4
 		owns = location:venice
-		has_embraced_institution = institution:banking
+		always = no
 	}
 
 	illustration_tags = {
@@ -4717,7 +4717,7 @@ flavor_ven.86 = { #Greek Printing of Venice
 	trigger = {
 		current_date > 476.9.4
 		owns = location:venice
-		has_embraced_institution = institution:printing_press
+		always = no
 		"culture_percentage_in_country(culture:greek_culture)" > 0
 		location:venice = {
 			any_pop = { culture = culture:greek_culture }

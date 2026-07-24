@@ -324,7 +324,7 @@ flavor_flo.8 = { #The Medici Oriental Press
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:printing_press
+		always = no
 	}
 
 	option = {
@@ -1703,7 +1703,7 @@ flavor_flo.45 = { #Leonardo da Vinci Paints the Mona Lisa
 			is_alive = yes
 			owner = ROOT
 		}
-		has_embraced_institution = institution:renaissance
+		always = no
 	}
 
 	immediate = {

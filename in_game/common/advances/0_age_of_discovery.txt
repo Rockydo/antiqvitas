@@ -23,7 +23,7 @@ new_world_advance = {
 
 	depth = 0
 	
-	allow = { has_embraced_institution = institution:new_world }
+	allow = { always = no }
 
 	exploration_preparation_time_modifier = -0.05
 	colonial_range = 600
@@ -271,7 +271,7 @@ printing_press_advance = {
 	global_max_literacy = 10
 
 	depth = 0
-	allow = { has_embraced_institution = institution:printing_press }
+	allow = { always = no }
 	potential = { always = no } # M8 disables vanilla advancement
 }
 
@@ -467,7 +467,7 @@ pike_and_shot_advance = {
 	depth = 0
 	ai_weight = { add = 100 }
 
-	allow = { has_embraced_institution = institution:pike_and_shot }
+	allow = { always = no }
 	potential = { always = no } # M8 disables vanilla advancement
 }
 

@@ -9625,7 +9625,7 @@ flavor_fra.301 = { # [ROOT.GetRuler.GetName] and the Renaissance
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:renaissance
+		always = no
 		stability > 25
 		at_war = no
 		has_ruler = yes
@@ -9710,7 +9710,7 @@ flavor_fra.302 = { # Da Vinci and the Mona Lisa
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:renaissance
+		always = no
 		custom_tooltip = {
 			text = variable_tt_fra_may_gain_da_vinci
 			has_variable = fra_may_gain_da_vinci

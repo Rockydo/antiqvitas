@@ -332,7 +332,7 @@ flavor_plc.5 = {
 		current_date > 476.9.4
 		has_ruler = yes
 		societal_value:traditionalist_vs_innovative > 0
-		has_embraced_institution = institution:enlightenment
+		always = no
 	}
 
 	immediate = {
@@ -495,7 +495,7 @@ flavor_plc.8 = {
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:enlightenment
+		always = no
 		total_effective_building_levels:local_schools >= 25
 	}
 

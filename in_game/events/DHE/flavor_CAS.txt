@@ -2515,7 +2515,7 @@ flavor_cas.40 = { #Garcilaso de la Vega
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:renaissance
+		always = no
 	}
 
 	option = {
@@ -2716,7 +2716,7 @@ flavor_cas.43 = { #Pedro Berruguete
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:renaissance
+		always = no
 	}
 
 	option = {
@@ -3930,7 +3930,7 @@ flavor_cas.63 = { #Artillery Academy of Segovia
 		current_date > 476.9.4
 		owns = location:segovia
 		has_advance = artillery_institution_advance
-		has_embraced_institution = institution:artillery_institution
+		always = no
 	}
 
 	option = {
@@ -4671,7 +4671,7 @@ flavor_cas.74 = { #Alejandro Malaspina
 		current_date > 476.9.4
 		has_presence_in = continent:america
 		has_presence_in = continent:asia
-		has_embraced_institution = institution:enlightenment
+		always = no
 	}
 
 	immediate = {
@@ -4886,7 +4886,7 @@ flavor_cas.77 = { #The Breakthrough of the Elhuyar Brothers
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:enlightenment
+		always = no
 	}
 
 	immediate = {
@@ -4967,7 +4967,7 @@ flavor_cas.78 = { #The Balmis Expedition
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:enlightenment
+		always = no
 		has_presence_in = continent:america
 		has_presence_in = continent:asia
 	}
@@ -5047,8 +5047,8 @@ flavor_cas.79 = { #Industrial Reforms of Pedro Rodriguez
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:enlightenment
-		has_embraced_institution = institution:industrialization
+		always = no
+		always = no
 	}
 
 	immediate = {
@@ -5122,7 +5122,7 @@ flavor_cas.80 = { #Gaspar Melchor de Jovellanos
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:enlightenment
+		always = no
 	}
 
 	immediate = {
@@ -7275,7 +7275,7 @@ flavor_cas.114 = { #Royal Factories
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:manufactories
+		always = no
 	}
 
 	immediate = {
@@ -7381,7 +7381,7 @@ flavor_cas.116 = { #The Casticismo
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:enlightenment
+		always = no
 	}
 
 	immediate = {
@@ -8000,7 +8000,7 @@ flavor_cas.127 = { #Josefa Amar y Borbón
 	trigger = {
 		current_date > 476.9.4
 		owns = location:zaragoza
-		has_embraced_institution = institution:enlightenment
+		always = no
 	}
 
 	immediate = {
@@ -10179,8 +10179,8 @@ flavor_cas.1203 = { #Abolish the Mesta
 			text = variable_tt_mesta_confirmed
 			has_variable = mesta_confirmed
 		}
-		has_embraced_institution = institution:enlightenment
-		has_embraced_institution = institution:industrialization
+		always = no
+		always = no
 		has_ruler = yes
 	}
 

@@ -2449,7 +2449,7 @@ flavor_bav.1401 = {
 		}
 		has_ruler = yes
         ruler = { adm >= 50 }
-		has_embraced_institution = institution:renaissance
+		always = no
     }
 
 	immediate = {
@@ -2500,7 +2500,7 @@ flavor_bav.1402 = {
 		}
 		has_ruler = yes
         ruler = { adm >= 50 }
-		has_embraced_institution = institution:enlightenment
+		always = no
     }
 
 	immediate = {

@@ -242,9 +242,9 @@ flavor_zan.4 = {
 		trigger = {
 			capital = {
 				OR = {
-					NOT = { has_institution = institution:renaissance }
-					NOT = { has_institution = institution:banking }
-					NOT = { has_institution = institution:professional_armies }
+					NOT = { always = no }
+					NOT = { always = no }
+					NOT = { always = no }
 				}
 			}
 		}
@@ -254,21 +254,21 @@ flavor_zan.4 = {
 		scope:target_location = {
 			if = {
 				limit = {
-					NOT = { has_institution = institution:renaissance }
+					NOT = { always = no }
 				}
-				change_institution_progress = { type = institution:renaissance value = institution_progress_mild_bonus }
+				change_institution_progress = { type = institution:antq_hellenism value = institution_progress_mild_bonus }
 			}
 			if = {
 				limit = {
-					NOT = { has_institution = institution:banking }
+					NOT = { always = no }
 				}
-				change_institution_progress = { type = institution:banking value = institution_progress_mild_bonus }
+				change_institution_progress = { type = institution:antq_hellenism value = institution_progress_mild_bonus }
 			}
 			if = {
 				limit = {
-					NOT = { has_institution = institution:professional_armies }
+					NOT = { always = no }
 				}
-				change_institution_progress = { type = institution:professional_armies value = institution_progress_mild_bonus }
+				change_institution_progress = { type = institution:antq_hellenism value = institution_progress_mild_bonus }
 			}
 		}
 		

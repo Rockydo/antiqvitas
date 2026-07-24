@@ -6470,3 +6470,12 @@ reviewed 128px BC7 DDS.
   Migrations (395); the 250-advance tree now spans six ancient-only slots.
 - Rome, Han, and Marcomanni rapid recruitment probes, 71 checks, and smoke pass
   with zero new log lines.
+
+## 2026-07-25 - Ancient institution registry and spread
+
+- Removed all 18 installed institutions and neutralized their references across
+  92 installed files; nine ancient institutions remain.
+- Added profile gates to all spawn and spread channels. Han statecraft cannot
+  trade-spread and is restricted to East Asian administrative contexts.
+- Rome, Han, and Arsacid six-age panels contain no vanilla institutions.
+  Validation passes 72/72; paired smoke has zero mod-only lines.

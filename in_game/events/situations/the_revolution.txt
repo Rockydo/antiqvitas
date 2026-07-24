@@ -655,7 +655,7 @@ the_revolution.6 = {
 			societal_value:absolutism_vs_liberalism < 0
 		}
 		NOT = { has_blocked_disaster_trigger = { type = revolution_disaster } }
-		has_embraced_institution = institution:enlightenment
+		always = no
 		country_has_estate = estate_type:burghers_estate
 		country_has_estate = estate_type:peasants_estate
 		is_revolution_target = no

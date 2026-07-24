@@ -142,7 +142,7 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
   - Completed: 44 unique direct illustrations and masks from 11 reviewed
     four-up sheets; exact resolver, contact-sheet, and live recruitment checks pass.
 
-- [ ] Replace leaked vanilla institutions and constrain cultural spread.
+- [x] Replace leaked vanilla institutions and constrain cultural spread.
   - The mod still defines Feudalism, Legalism, and later vanilla institutions in
     exact-name files with `can_spawn = { always = no }`; that stops spawning but
     does not remove them from the UI. Make legacy keys invisible while satisfying
@@ -157,6 +157,11 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
   - Acceptance: Rome, Han, and Arsacid panels at every available age show only
     period institutions; Feudalism/Legalism/later vanilla entries are absent; Han
     statecraft cannot reach Rome by ordinary trade; no missing-key errors.
+  - Completed: 18 installed institutions are removed from the registry; all 92
+    installed reference files are covered by exact overlays. Nine ancient
+    institutions gate every birth/spread channel by cultural-region profile;
+    Han statecraft has no ordinary trade spread. Rome/Han/Arsacid six-age probes,
+    72 checks, and paired smoke pass.
 
 - [ ] Rebuild advances as a deep, branching, culture-aware ancient DAG.
   - Create a design ledger for every node: key, age, branch, prerequisites, layout,

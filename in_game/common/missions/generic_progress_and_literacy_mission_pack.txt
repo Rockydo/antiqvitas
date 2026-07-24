@@ -160,7 +160,7 @@
 		}
 		random_list = {
 			1 = {
-				trigger = { has_embraced_institution = institution:renaissance }
+				trigger = { always = no }
 				set_variable = build_theatres_variable
 			}
 			1 = {

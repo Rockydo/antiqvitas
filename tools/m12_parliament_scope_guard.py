@@ -18,6 +18,7 @@ import re
 from collections import Counter
 from pathlib import Path
 
+from legacy_institutions import neutralize_references
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config/local_paths.json"
@@ -73,7 +74,7 @@ def render(relative: Path, targets: frozenset[int], expected_inventory: Counter[
             f"parliament comparison inventory drift: expected={dict(expected_inventory)} "
             f"found={dict(guarded)}"
         )
-    result = "".join(rendered).encode("utf-8")
+    result = neutralize_references("".join(rendered), remap_effects=False).encode("utf-8")
     return (b"\xef\xbb\xbf" if has_bom else b"") + result
 
 

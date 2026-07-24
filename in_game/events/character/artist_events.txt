@@ -1388,10 +1388,10 @@ artist_events.23 = { #The Blooming of Renaissance Arts
 				}
 				has_advance = arts_academy_advance
 			}
-			NOT = { has_embraced_institution = institution:renaissance }
+			NOT = { always = no }
 		}
 		any_artist = { artist_type = architect }
-		knows_about_institution = institution:renaissance
+		always = no
 	}
 
 	immediate = {
@@ -1416,13 +1416,13 @@ artist_events.23 = { #The Blooming of Renaissance Arts
 		}
 		else_if = {
 			limit = {
-				NOT = { has_embraced_institution = institution:renaissance }
+				NOT = { always = no }
 				capital ?= {
-					NOT = { has_institution = institution:renaissance }
+					NOT = { always = no }
 				}
 			}
 			capital ?= { 
-				change_institution_progress = { type = institution:renaissance value = institution_progress_mild_bonus }
+				change_institution_progress = { type = institution:antq_hellenism value = institution_progress_mild_bonus }
 			}
 		}
 		else_if = {

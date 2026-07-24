@@ -15,6 +15,7 @@ import json
 import re
 from pathlib import Path
 
+from legacy_institutions import neutralize_references
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config/local_paths.json"
@@ -74,7 +75,7 @@ def render(source: Path) -> bytes:
         raise ValueError(f"{source.name}: brace depth ends at {depth}")
     if gates != 1:
         raise ValueError(f"{source.name}: expected one top-level visible gate, found {gates}")
-    result = "".join(rendered).encode("utf-8")
+    result = neutralize_references("".join(rendered), remap_effects=True).encode("utf-8")
     return (b"\xef\xbb\xbf" if has_bom else b"") + result
 
 

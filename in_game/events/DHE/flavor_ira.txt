@@ -1217,7 +1217,7 @@ flavor_ira.19 = {
 	}
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:artillery_institution
+		always = no
 		has_advance = ira_the_tofangchi
 		any_country_sub_unit = {
 			sub_unit_type = unit_type:a_tofangchi

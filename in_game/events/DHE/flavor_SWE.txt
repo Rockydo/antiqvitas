@@ -2221,7 +2221,7 @@ flavor_swe.43 = {
 	trigger = {
 		current_date > 476.9.4
 		has_or_had_tag = SWE
-		has_embraced_institution = institution:printing_press
+		always = no
 		religion.group = religion_group:christian
 	}
 

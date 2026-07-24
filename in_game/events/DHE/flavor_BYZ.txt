@@ -2081,7 +2081,7 @@ flavor_byz.27 = { #https://en.wikipedia.org/wiki/Palaeologan_Renaissance
 		trigger = {
 			capital = location:constantinople
 			has_dlc = "d008_fate_of_the_phoenix"
-			NOT = { knows_about_institution = institution:renaissance }
+			NOT = { always = no }
 			NOT = { has_game_rule = institution_spawn_fixed_historical }
 		}
 
@@ -2099,17 +2099,13 @@ flavor_byz.27 = { #https://en.wikipedia.org/wiki/Palaeologan_Renaissance
 
 		if = {
 			limit = {
-				institution:renaissance = {
+				institution:antq_hellenism = {
 					has_spawned = no
 				}
 			}
 			custom_tooltip = {
 				text = constantinople_to_spawn_renaissance_tt
 				scope:target_location = {
-					set_variable = {
-						name = center_of_renaissance_variable
-						years = 20
-					}
 				}
 			}
 		}
@@ -2443,7 +2439,7 @@ flavor_byz.31 = { #Alt-history. Byzantium never really reformed their army since
 	trigger = {
 		current_date > 476.9.4
 		has_or_had_tag = BYZ
-		has_embraced_institution = institution:professional_armies
+		always = no
 		has_reform = government_reform:theme_system
 		regular_army_size >= 10
 		has_ruler = yes

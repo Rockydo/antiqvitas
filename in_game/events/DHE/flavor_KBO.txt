@@ -378,7 +378,7 @@ flavor_kbo.10 = { #Legalism and Islam in [ROOT.GetCountry.GetName]
 		current_date > 476.9.4
 		religion.group = religion_group:muslim
 		has_any_active_disaster = no
-		NOT = { has_embraced_institution = institution:legalism }
+		NOT = { always = no }
 		at_war = no
 	}
 
@@ -397,10 +397,10 @@ flavor_kbo.10 = { #Legalism and Islam in [ROOT.GetCountry.GetName]
 		capital = {
 			if = {
 				limit = {
-					NOT = { has_institution = institution:legalism }
+					NOT = { always = no }
 				}
 				change_institution_progress = { 
-					type = institution:legalism
+					type = institution:antq_hellenism
 					value = institution_progress_ultimate_bonus
 				}
 			}

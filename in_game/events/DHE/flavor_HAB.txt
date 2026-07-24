@@ -9480,7 +9480,7 @@ flavor_hab.2000 = { #Wenzel Anton Kaunitz - Diplomatic Revolution
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:enlightenment
+		always = no
 		any_rival = {
 			is_great_power = yes
 			has_presence_in = continent:europe
@@ -9579,7 +9579,7 @@ flavor_hab.2100 = { #Reforms of Maria Theresia and Joseph II
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:enlightenment
+		always = no
 		ruler ?= { total_abilities >= 170 }
 	}
 
@@ -10026,12 +10026,12 @@ flavor_hab.2202 = { #Military Academy of Maria Theresia
 	trigger = {
 		current_date > 476.9.4
 		NOT = {
-			has_embraced_institution = institution:levee_en_masse
+			always = no
 		}
 		at_war = yes
 		any_current_war = {
 			any_war_participant = {
-				has_embraced_institution = institution:levee_en_masse
+				always = no
 			}
 		}
 		owns = location:wiener_neustadt
@@ -10051,7 +10051,7 @@ flavor_hab.2202 = { #Military Academy of Maria Theresia
 
 		change_gold_effect = { scale = -12 }
 		scope:target_location = {
-			change_institution_progress = { type = institution:levee_en_masse value = institution_progress_ultimate_bonus }
+			change_institution_progress = { type = institution:antq_hellenism value = institution_progress_ultimate_bonus }
 		}
 		add_army_tradition = army_tradition_mild_bonus
 	}

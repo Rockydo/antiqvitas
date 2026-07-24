@@ -25,7 +25,7 @@ manufactories_advance = {
 	global_max_rgo_size_modifier = 0.10
 	depth = 0
 	
-	allow = { has_embraced_institution = institution:manufactories }
+	allow = { always = no }
 	potential = { always = no } # M8 disables vanilla advancement
 }
 
@@ -36,7 +36,7 @@ central_bank_advance = {
 	max_bonds = 5
 
 	allow = {
-		has_embraced_institution = institution:banking
+		always = no
 	}
 
 	requires = manufactories_advance
@@ -155,7 +155,7 @@ scientific_revolution_advance = {
 		
 	global_max_literacy = 10
 	depth = 0
-	allow = { has_embraced_institution = institution:scientific_revolution }
+	allow = { always = no }
 	potential = { always = no } # M8 disables vanilla advancement
 }
 
@@ -352,7 +352,7 @@ military_revolution_advance = {
 	depth = 0
 	ai_weight = { add = 100 }
 
-	allow = { has_embraced_institution = institution:military_revolution }
+	allow = { always = no }
 	potential = { always = no } # M8 disables vanilla advancement
 }
 

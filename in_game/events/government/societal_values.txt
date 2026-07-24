@@ -9032,7 +9032,7 @@ societal_values.2037 = { # Cuius Regio, eius religio
 	trigger = {
 		current_date > 476.9.4
 		societal_value:spiritualist_vs_humanist > 75
-		any_owned_location = { has_institution = institution:confessionalism }
+		any_owned_location = { always = no }
 	}
 
 	illustration_tags = {
@@ -10247,7 +10247,7 @@ societal_values.2206 = {
 	trigger = {
 		current_date > 476.9.4
 		current_age = age_6_revolutions
-		has_embraced_institution = institution:enlightenment
+		always = no
 		societal_value:absolutism_vs_liberalism > 25
 	}
 

@@ -14,7 +14,7 @@
 		exists = capital.market
 		has_ports = yes
 		num_of_non_rural > 0
-		has_embraced_institution = institution:banking
+		always = no
 	}
 
 	chance = 3600

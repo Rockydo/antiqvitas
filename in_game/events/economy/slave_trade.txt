@@ -8,8 +8,8 @@ slave_trade.1 = {
 	trigger = {
 		current_date > 476.9.4
 
-		knows_about_institution = institution:new_world
-		NOT = { has_embraced_institution = institution:new_world }
+		always = no
+		NOT = { always = no }
 	
 		OR = {
 			current_age = age_4_reformation

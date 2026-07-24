@@ -2025,7 +2025,7 @@ flavor_maj.29 = {
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:renaissance
+		always = no
 		NOT = { has_any_active_disaster = yes }
 		num_artists >= 3
 	}

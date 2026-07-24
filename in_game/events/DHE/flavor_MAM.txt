@@ -2978,8 +2978,8 @@ flavor_mam.48 = { #Printing Press
 
 	trigger = {
 		current_date > 476.9.4
-		knows_about_institution = institution:printing_press
-		NOT = {	has_embraced_institution = institution:printing_press }
+		always = no
+		NOT = {	always = no }
 		owns = location:cairo
 	}
 
@@ -2989,7 +2989,7 @@ flavor_mam.48 = { #Printing Press
 			move_country = root
 		}
 		location:cairo = {
-			change_institution_progress = { type = institution:printing_press value = institution_progress_mild_bonus }
+			change_institution_progress = { type = institution:antq_hellenism value = institution_progress_mild_bonus }
 		}
 	}
 
@@ -3000,7 +3000,7 @@ flavor_mam.48 = { #Printing Press
 			move_country = root
 		}
 		location:cairo = {
-			change_institution_progress = { type = institution:printing_press value = institution_progress_ultimate_bonus }
+			change_institution_progress = { type = institution:antq_hellenism value = institution_progress_ultimate_bonus }
 		}
 	}
 

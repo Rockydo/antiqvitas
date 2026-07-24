@@ -4420,3 +4420,11 @@ The Gothic Danube crossing and Roman settlement crisis make 376 a useful
 late-antique phase boundary, not a claim that federate practice began uniformly
 then. The label compresses diverse earlier treaties and later arrangements.
 Sources: P15; Ammianus Marcellinus, *Res Gestae* 31.
+
+## 2026-07-25 - Ancient institutions are bounded knowledge networks
+
+The nine institutions model transmissible practices, not universal civilizational
+stages. Han bureaucratic statecraft therefore remains within East Asian
+administrative contexts unless a later authored adoption path is added; paper
+and Buddhist networks may cross wider routes. Sources: Bielenstein; CAH XI-XII;
+master plan sections 8 and 15. [bounded gameplay abstraction]

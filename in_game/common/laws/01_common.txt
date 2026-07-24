@@ -366,7 +366,7 @@ education_masses_law = {
 	secular_education = {
 		potential = {
 			NOT = { government_type = government_type:theocracy }
-			has_embraced_institution = institution:enlightenment
+			always = no
 		}
 		country_modifier = {
 			clergy_estate_target_satisfaction = big_permanent_target_satisfaction_penalty

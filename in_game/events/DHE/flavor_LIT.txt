@@ -2864,7 +2864,7 @@ flavor_lit.35 = {
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:printing_press
+		always = no
 		court_dialect = dialect:lithuanian_dialect
 	}
 
@@ -3020,7 +3020,7 @@ flavor_lit.37 = {
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:renaissance
+		always = no
 		prestige >= 40
 	}
 

@@ -1023,7 +1023,7 @@ flavor_bng.1000 = { #China relations event chain
 		show_as_tooltip = {
 			capital ?= {
 				change_institution_progress = {
-					type = institution:meritocracy
+					type = institution:antq_hellenism
 					value = institution_progress_severe_bonus
 				}
 			}
@@ -1090,7 +1090,7 @@ flavor_bng.1001 = {
 		scope:target_country2 = {
 			capital ?= {
 				change_institution_progress = {
-					type = institution:meritocracy
+					type = institution:antq_hellenism
 					value = institution_progress_severe_bonus
 				}
 			}

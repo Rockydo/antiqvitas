@@ -5452,17 +5452,14 @@ on_cabinet_removed = {
 #root = country, scope:target = institution
 on_institution_embraced = {
 	effect = {
+		# ANTIQVITAS: retain unreachable registry anchors for two installed events.
 		if = {
-			limit = { scope:target = institution:scientific_revolution }
+			limit = { always = no }
 			root = { trigger_event_non_silently = institution_events.139 }
 		}
 		if = {
-			limit = { scope:target = institution:artillery_institution }
+			limit = { always = no }
 			root = { trigger_event_non_silently = institution_events.115 }
-		}
-		if = {
-			limit = { scope:target = institution:printing_press }
-			root = { add_country_modifier = { modifier = printing_press_books years = -1 } }
 		}
 	}
 }

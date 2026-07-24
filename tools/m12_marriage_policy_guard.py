@@ -16,6 +16,7 @@ import hashlib
 import json
 from pathlib import Path
 
+from legacy_institutions import neutralize_references
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config/local_paths.json"
@@ -55,7 +56,7 @@ def render() -> bytes:
         f"# Installed 01_common.txt SHA256: {digest}\n"
         "# Extends availability only for native AD 1 Buddhist/Dharmic/Iranian mechanics groups.\n"
     )
-    return (header + patched).encode("utf-8-sig")
+    return neutralize_references(header + patched, remap_effects=False).encode("utf-8-sig")
 
 
 def main() -> int:

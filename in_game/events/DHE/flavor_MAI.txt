@@ -15,7 +15,7 @@ flavor_mai.1 = {
 	
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:printing_press
+		always = no
 		owns = location:mainz
 	}
 

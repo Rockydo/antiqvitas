@@ -60,6 +60,7 @@ VALIDATE_COMMANDS = (
     Command("tools/m12_unit_quarantine.py", ("--check",)),
     Command("tools/m12_unit_art.py", ("--check",)),
     Command("tools/m8_knowledge.py", ("--check",)),
+    Command("tools/m8_legacy_institution_purge.py", ("--check",)),
     Command("tools/m9_diplomacy.py", ("--check",)),
     Command("tools/m10_history.py", ("--check",)),
     Command("tools/m10_second_century.py", ("--check",)),

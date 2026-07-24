@@ -270,7 +270,7 @@ mercantilism_events.6 = {
 	outcome = neutral
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:banking
+		always = no
 		current_age_or_later = { age = age_4_reformation }
 		societal_value:mercantilism_vs_free_trade > -40
 		societal_value:mercantilism_vs_free_trade < 40

@@ -2898,3 +2898,11 @@ The installed naming contract resolves
 `gfx/interface/illustrations/units/<category>_<unit>.dds` plus a direct mask.
 Every one of the 44 active unit keys therefore owns unique art and a black mask;
 aliases and `_default` fallbacks fail validation.
+
+## 2026-07-25 - Remove legacy institutions at the registry boundary
+
+Exact-name institution files are empty overrides, not disabled definitions.
+Installed predicates become false; unreachable effect/scope references bind to
+`antq_hellenism`. Two impossible event anchors retain registry integrity.
+Eligibility profiles gate all ten propagation channels, including market and
+trade spread.

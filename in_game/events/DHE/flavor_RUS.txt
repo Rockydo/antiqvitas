@@ -2941,7 +2941,7 @@ flavor_rus.32 = {
 
 		OR = {
 			location:moscow = {
-				has_institution = institution:enlightenment
+				always = no
 			}
 			societal_value:traditionalist_vs_innovative > 0
 		}
@@ -3046,7 +3046,7 @@ flavor_rus.33 = {
 		OR = {
 			any_owned_location = {
 				region = region:russian_region
-				has_institution = institution:enlightenment
+				always = no
 			}
 			has_reform = government_reform:autocracy
 		}
@@ -4434,7 +4434,7 @@ flavor_rus.47 = {
 
 		any_owned_location = {
 			has_building = building_type:university
-			has_institution = institution:enlightenment
+			always = no
 		}
 	}
 
@@ -4461,7 +4461,7 @@ flavor_rus.47 = {
 		random_owned_location = {
 			limit = {
 				has_building = building_type:university
-				has_institution = institution:enlightenment
+				always = no
 			}
 			save_scope_as = university_location
 		}
@@ -4996,7 +4996,7 @@ flavor_rus.51 = {
 				location_rank = location_rank:city
 				location_rank = location_rank:megalopolis
 			}
-			has_institution = institution:enlightenment
+			always = no
 		}
 
 	}
@@ -5639,10 +5639,10 @@ flavor_rus.55 = {
 					location_rank = location_rank:city
 					location_rank = location_rank:megalopolis
 				}
-				has_institution = institution:enlightenment
+				always = no
 			}
 			capital = {
-				has_institution = institution:enlightenment
+				always = no
 				controller = root
 			}
 		}
@@ -5675,7 +5675,7 @@ flavor_rus.55 = {
 					location_rank = location_rank:city
 					location_rank = location_rank:megalopolis
 				}
-				has_institution = institution:enlightenment
+				always = no
 			}
 		}
 		historical_option = yes
@@ -5709,7 +5709,7 @@ flavor_rus.55 = {
 		trigger = {
 			capital = {
 				NOT = { this = location:neva }
-				has_institution = institution:enlightenment
+				always = no
 				controller = root
 			}
 		}
@@ -6174,14 +6174,14 @@ flavor_rus.59 = {
 		OR = {
 			has_advance = humanism
 			capital = {
-				has_institution = institution:enlightenment
+				always = no
 			}
 		}
 
 		sub_continent:western_europe = {
 			any_location_in_sub_continent = {
 				count > 10
-				has_institution = institution:enlightenment
+				always = no
 			}
 		}
 	}
@@ -6578,7 +6578,7 @@ flavor_rus.61 = {
 
 		OR = {
 			location:moscow = {
-				has_institution = institution:enlightenment
+				always = no
 			}
 			societal_value:outward_vs_inward < -10
 		}
@@ -7937,7 +7937,7 @@ flavor_rus.73 = {
 			is_alive = yes
 			owner = {
 				any_owned_non_rural_location = {
-					has_institution = institution:enlightenment
+					always = no
 				}
 			}
 		}
@@ -7951,7 +7951,7 @@ flavor_rus.73 = {
 		}
 
 		any_owned_non_rural_location = {
-			has_institution = institution:enlightenment
+			always = no
 		}
 	}
 
@@ -8035,7 +8035,7 @@ flavor_rus.74 = {
 				}
 			}
 			capital = {
-				has_institution = institution:enlightenment
+				always = no
 			}
 		}
 

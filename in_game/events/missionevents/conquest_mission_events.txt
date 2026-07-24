@@ -443,14 +443,14 @@ conquest_mission_events.6 = {
 
 		if = {
 			limit = {
-				NOT = { has_embraced_institution = institution:professional_armies }
+				NOT = { always = no }
 				any_owned_location = {
-					NOT = { has_institution = institution:professional_armies }
+					NOT = { always = no }
 				}
 			}
 			ordered_owned_location = {
 				limit = {
-					NOT = { has_institution = institution:professional_armies }
+					NOT = { always = no }
 				}
 				order_by = {
 					value = {
@@ -469,7 +469,7 @@ conquest_mission_events.6 = {
 				check_range_bounds = no
 				province = {
 					every_location_in_province = {
-						change_institution_progress = { type = institution:professional_armies value = institution_progress_mild_bonus } 
+						change_institution_progress = { type = institution:antq_hellenism value = institution_progress_mild_bonus } 
 					}
 				}
 			}

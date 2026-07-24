@@ -211,7 +211,7 @@ unlock_traditional_galley_advance = {
 	requires = ship_building_advance
 
 	allow = { 
-		has_embraced_institution = institution:feudalism
+		always = no
 	}
 
 

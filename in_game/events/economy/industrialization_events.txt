@@ -8,8 +8,8 @@ industrialization_events.1 = { #The Atmospheric Engine
 
 	trigger = {
 		current_date > 476.9.4
-		knows_about_institution = institution:industrialization
-		NOT = { has_embraced_institution = institution:industrialization }
+		always = no
+		NOT = { always = no }
 		NOT = {
 			has_variable = atmospheric_engine_flag
 		}
@@ -68,9 +68,9 @@ industrialization_events.1 = { #The Atmospheric Engine
 			add_location_modifier = { modifier = introduction_of_newcommen_engine years = 10 mode = add_and_extend }  
 			if = {
 				limit = {
-					institution_progress:industrialization < 99
+					always = no
 				}
-				change_institution_progress = { type = institution:industrialization value = institution_progress_mild_bonus }
+				change_institution_progress = { type = institution:antq_hellenism value = institution_progress_mild_bonus }
 			}
 		}
 	}
@@ -86,7 +86,7 @@ industrialization_events.2 = { #Steam Powered Blast
 		current_date > 476.9.4
 		has_advance = coke_blast_furnace
 		NOT = { has_advance = hot_blast_furnace }
-		has_embraced_institution = institution:industrialization
+		always = no
 		has_variable = atmospheric_engine_flag
 		capital ?= {
 			area = {
@@ -163,8 +163,8 @@ industrialization_events.3 = { #Improved Steam Engine
 	trigger = {
 		current_date > 476.9.4
 		has_variable = atmospheric_engine_flag
-		knows_about_institution = institution:industrialization
-		NOT = { has_embraced_institution = institution:industrialization }
+		always = no
+		NOT = { always = no }
 		NOT = {
 			has_variable = watt_steam_engine_flag
 		}
@@ -223,9 +223,9 @@ industrialization_events.3 = { #Improved Steam Engine
 			add_location_modifier = { modifier = introduction_of_watt_engine years = 10 mode = add_and_extend }  
 			if = {
 				limit = {
-					institution_progress:industrialization < 99
+					always = no
 				}
-				change_institution_progress = { type = institution:industrialization value = institution_progress_mild_bonus }
+				change_institution_progress = { type = institution:antq_hellenism value = institution_progress_mild_bonus }
 			}
 		}
 	}
@@ -298,8 +298,8 @@ industrialization_events.5 = { #The Flying Shuttle
 
 	trigger = {
 		current_date > 476.9.4
-		knows_about_institution = institution:industrialization
-		NOT = { has_embraced_institution = institution:industrialization }
+		always = no
+		NOT = { always = no }
 		NOT = {
 			has_variable = flying_shuttle_flag
 		}
@@ -356,9 +356,9 @@ industrialization_events.5 = { #The Flying Shuttle
 			add_location_modifier = { modifier = introduction_of_flying_shuttle years = 10 mode = add_and_extend }  
 			if = {
 				limit = {
-					institution_progress:industrialization < 99
+					always = no
 				}
-				change_institution_progress = { type = institution:industrialization value = institution_progress_mild_bonus }
+				change_institution_progress = { type = institution:antq_hellenism value = institution_progress_mild_bonus }
 			}
 		}
 	}
@@ -429,9 +429,9 @@ industrialization_events.6 = { #Spinning Jenny
 			add_location_modifier = { modifier = introduction_of_spinning_jenny years = 10 mode = add_and_extend }  
 			if = {
 				limit = {
-					institution_progress:industrialization < 99
+					always = no
 				}
-				change_institution_progress = { type = institution:industrialization value = institution_progress_mild_bonus }
+				change_institution_progress = { type = institution:antq_hellenism value = institution_progress_mild_bonus }
 			}
 		}
 	}
@@ -445,7 +445,7 @@ industrialization_events.7 = { #The Flow of Goods
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:industrialization
+		always = no
 		OR = {
 			has_variable = flying_shuttle_flag
 			has_variable = atmospheric_engine_flag
@@ -574,7 +574,7 @@ industrialization_events.8 = { #The Seeds of Greatness
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:industrialization
+		always = no
 		capital ?= {
 			region = {
 				any_location_in_region = {
@@ -639,7 +639,7 @@ industrialization_events.9 = { #Economic Development
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:industrialization
+		always = no
 		OR = {
 			has_variable = flying_shuttle_flag
 			has_variable = atmospheric_engine_flag
@@ -876,7 +876,7 @@ industrialization_events.11 = { #Growth of the [ShowGoodsNameWithNoTooltip('pape
 	
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:industrialization
+		always = no
 		capital ?= {
 			region = {
 				any_location_in_region = {
@@ -939,7 +939,7 @@ industrialization_events.12 = { #Growth of the [ShowGoodsNameWithNoTooltip('glas
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:industrialization
+		always = no
 		capital ?= {
 			region = {
 				any_location_in_region = {
@@ -998,7 +998,7 @@ industrialization_events.13 = { #Industrial Urbanization
 
 	trigger = {		
 		current_date > 476.9.4
-		has_embraced_institution = institution:industrialization
+		always = no
 		num_provinces > 1
 		capital ?= {
 			market ?= { is_produced_in_market = goods:coal }
@@ -1187,7 +1187,7 @@ industrialization_events.15 = { #Textile Mills of [textile_province.GetNameWithN
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:industrialization
+		always = no
 		num_provinces > 1
 		capital ?= {
 			market ?= {
@@ -1273,7 +1273,7 @@ industrialization_events.16 = { #Shipyards of [ship_province.GetNameWithNoToolti
 	
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:industrialization
+		always = no
 		capital ?= {
 			market ?= { is_produced_in_market = goods:coal }
 			region = {
@@ -1348,7 +1348,7 @@ industrialization_events.17 = { #Hostility to New Production Techniques
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:industrialization
+		always = no
 		capital ?= {
 			region = {
 				any_location_in_region = {
@@ -1417,7 +1417,7 @@ industrialization_events.18 = { #Impoverished Artisans
 
 	trigger = {		
 		current_date > 476.9.4
-		has_embraced_institution = institution:industrialization
+		always = no
 		OR = {
 			has_variable = flying_shuttle_flag
 			has_variable = atmospheric_engine_flag
@@ -1487,7 +1487,7 @@ industrialization_events.19 = { #Spread of Disease in [disease_province.GetNameW
 	
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:industrialization
+		always = no
 		OR = {
 			has_variable = flying_shuttle_flag
 			has_variable = atmospheric_engine_flag
@@ -1560,7 +1560,7 @@ industrialization_events.20 = { #Mining Accident in [mining_province.GetNameWith
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:industrialization
+		always = no
 		OR = {
 			has_variable = flying_shuttle_flag
 			has_variable = atmospheric_engine_flag
@@ -1633,7 +1633,7 @@ industrialization_events.21 = { #Fire of [fire_province.GetNameWithNoTooltip]
 	
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:industrialization
+		always = no
 		OR = {
 			has_variable = flying_shuttle_flag
 			has_variable = atmospheric_engine_flag
@@ -1722,7 +1722,7 @@ industrialization_events.22 = { #Local Production Crushed
 
 	trigger = {		
 		current_date > 476.9.4
-		has_embraced_institution = institution:industrialization
+		always = no
 		OR = {
 			has_variable = flying_shuttle_flag
 			has_variable = atmospheric_engine_flag

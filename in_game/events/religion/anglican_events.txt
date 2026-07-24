@@ -198,7 +198,7 @@ anglican_events.5 = {
 	trigger = {
 		current_date > 476.9.4
 		religion = religion:anglican
-		has_embraced_institution = institution:printing_press
+		always = no
 	}
 
 	illustration_tags = {

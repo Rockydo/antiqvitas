@@ -455,7 +455,7 @@ church_aspects.12 = {
 	trigger = {
 		current_date > 476.9.4
 		has_religious_aspect = religious_aspect:sola_scriptura
-		has_embraced_institution = institution:printing_press
+		always = no
 		average_country_literacy > 30
 	}
 

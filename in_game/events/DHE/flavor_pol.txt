@@ -1611,7 +1611,7 @@ flavor_pol.21 = {
 		has_estate_privilege = estate_privilege:liberum_veto
 		has_estate_privilege = estate_privilege:nieszawa_privileges
 		has_ruler = yes
-		knows_about_institution = institution:enlightenment
+		always = no
 	}
 
 	illustration_tags = {
@@ -4266,7 +4266,7 @@ flavor_pol.58 = {
 
 	trigger = {
 		current_date > 476.9.4
-		knows_about_institution = institution:renaissance
+		always = no
 		has_ruler = yes
 		ruler = {
 			is_married = yes
@@ -4309,15 +4309,15 @@ flavor_pol.58 = {
 		change_gold_effect = { scale = -6 }
 		if = {
 			limit = {
-				NOT = { has_embraced_institution = institution:renaissance }
+				NOT = { always = no }
 				NOT = {
 					capital = {
-						has_institution = institution:renaissance
+						always = no
 					}
 				}
 			}
 			capital = {
-				change_institution_progress = { type = institution:renaissance value = 50 }
+				change_institution_progress = { type = institution:antq_hellenism value = 50 }
 			}
 		}
 
@@ -4673,13 +4673,13 @@ flavor_pol.1102 = {#https://en.wikipedia.org/wiki/Zamoyski_Academy
 			if = {
 				limit = {
 					ROOT = {
-						knows_about_institution = institution:renaissance
+						always = no
 					}
 					NOT = {
-						has_institution = institution:renaissance
+						always = no
 					}
 				}
-				change_institution_progress = { type = institution:renaissance value = institution_progress_extreme_bonus }
+				change_institution_progress = { type = institution:antq_hellenism value = institution_progress_extreme_bonus }
 			}
 		}
 
@@ -4876,7 +4876,7 @@ flavor_pol.1300 = {#https://en.wikipedia.org/wiki/Jan_Kochanowski
 	trigger = {
 		current_date > 476.9.4
 		owns = location:radom
-		has_embraced_institution = institution:renaissance
+		always = no
 		has_ruler = yes
 	}
 

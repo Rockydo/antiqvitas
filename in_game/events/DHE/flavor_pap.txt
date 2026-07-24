@@ -1233,7 +1233,7 @@ flavor_pap.19 = {
 	
 	trigger = {
 		current_date > 476.9.4
-		knows_about_institution = institution:confessionalism
+		always = no
 	}
 	
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -1962,7 +1962,7 @@ flavor_pap.31 = { #Raffaello Sanzio da Urbino
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:renaissance
+		always = no
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"

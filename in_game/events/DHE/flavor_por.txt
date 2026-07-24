@@ -3520,7 +3520,7 @@ flavor_por.46 = { # Ordenações Manuelinas
 	trigger = {
 		current_date > 476.9.4
 		has_reform = government_reform:por_ordinances
-		has_embraced_institution = institution:printing_press
+		always = no
 	}
 
 	image = "gfx/interface/illustrations/institutions/printing_press.dds"

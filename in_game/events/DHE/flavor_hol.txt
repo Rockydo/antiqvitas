@@ -382,7 +382,7 @@ flavor_hol.7 = {
 	trigger = {
 		current_date > 476.9.4
 		owns = location:amsterdam
-		has_embraced_institution = institution:printing_press
+		always = no
 	}
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
 	immediate = {
@@ -1465,7 +1465,7 @@ flavor_hol.28 = {
 	fire_only_once = yes
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:banking
+		always = no
 		location:amsterdam = {
 			owner ?= root
 			is_capital = yes
@@ -1526,7 +1526,7 @@ flavor_hol.29 = {
 			limit = { this = c:HOL }
 			NOT = { country_exists = c:NED }
 		}
-		has_embraced_institution = institution:renaissance
+		always = no
 	}
 
 	illustration_tags = {

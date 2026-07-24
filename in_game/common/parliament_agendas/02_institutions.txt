@@ -1,0 +1,700 @@
+﻿#Agendas interacting with Institutions
+pa_resist_feudalism = {
+	estate = burghers_estate
+	estate = peasants_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}
+
+pa_resist_legalism = {
+	estate = nobles_estate
+	estate = peasants_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			check_range_bounds = no
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}
+
+pa_resist_meritocracy = {
+	estate = nobles_estate
+	estate = clergy_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			check_range_bounds = no
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}
+
+pa_resist_renaissance = {
+	estate = peasants_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			check_range_bounds = no
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}
+
+pa_resist_banking = {
+	estate = nobles_estate
+	estate = clergy_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			check_range_bounds = no
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}
+
+pa_resist_professional_armies = {
+	estate = nobles_estate
+	estate = burghers_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			check_range_bounds = no
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}
+
+pa_resist_new_world = {
+	estate = nobles_estate
+	estate = peasants_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			check_range_bounds = no
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}
+
+pa_resist_printing_press = {
+	estate = nobles_estate
+	estate = clergy_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			check_range_bounds = no
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}
+
+pa_resist_pike_and_shot = {
+	estate = clergy_estate
+	estate = burghers_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			check_range_bounds = no
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}
+
+pa_resist_confessionalism = {
+	estate = nobles_estate
+	estate = peasants_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			check_range_bounds = no
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}
+
+pa_resist_global_trade = {
+	estate = clergy_estate
+	estate = peasants_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			check_range_bounds = no
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}
+
+pa_resist_artillery_institution = {
+	estate = burghers_estate
+	estate = peasants_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			check_range_bounds = no
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}
+
+pa_resist_manufactories = {
+	estate = nobles_estate
+	estate = clergy_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			check_range_bounds = no
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}
+
+pa_resist_scientific_revolution = {
+	estate = peasants_estate
+	estate = clergy_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			check_range_bounds = no
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}
+
+pa_resist_military_revolution = {
+	estate = peasants_estate
+	estate = nobles_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			check_range_bounds = no
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}
+
+pa_resist_enlightenment = {
+	estate = clergy_estate
+	estate = peasants_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			check_range_bounds = no
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}
+
+pa_resist_industrialization = {
+	estate = nobles_estate
+	estate = peasants_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			check_range_bounds = no
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}
+
+pa_resist_levee_en_masse = {
+	estate = clergy_estate
+	estate = peasants_estate
+
+	potential = {
+		always = no
+		NOT = {
+			always = no
+		}
+		any_owned_location = {
+			always = no
+			always = no
+		}
+	}
+
+	on_accept = {
+		ordered_owned_location = {
+			limit = {
+				always = no
+				always = no
+			}
+			order_by = population
+			max = {
+				value = 1
+				add = {
+					value = num_provinces
+					divide = 20
+				}
+			}
+			check_range_bounds = no
+			change_institution_progress = {
+				type = institution:antq_hellenism
+				value = institution_progress_mild_penalty
+			}
+		}
+	}
+	chance = 10
+}

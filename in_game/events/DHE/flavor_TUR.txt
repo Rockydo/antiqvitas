@@ -10580,7 +10580,7 @@ flavor_tur.130 = { #The Doctrine of Reason
 				}
 				owner ?= {
 					is_ai = yes
-					has_embraced_institution = institution:renaissance
+					always = no
 				}
 			}
 		}
@@ -10602,7 +10602,7 @@ flavor_tur.130 = { #The Doctrine of Reason
 					}
 					owner ?= {
 						is_ai = yes
-						has_embraced_institution = institution:renaissance
+						always = no
 					}
 				}
 				save_scope_as = scholars_location

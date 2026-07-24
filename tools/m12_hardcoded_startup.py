@@ -20,6 +20,7 @@ from pathlib import Path
 from dates import AntqDate, END
 from generate_rgo_remap import rendered as rendered_rgo_remap
 from generate_rgo_remap import runtime_worker_seeds
+from legacy_institutions import neutralize_references
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -57,6 +58,37 @@ EXPECTED_CUSTOM_RGO_GOODS = frozenset({
     "antq_silphium",
 })
 EXPECTED_ANNONA_SEED_LOCATIONS = frozenset({"cagliari", "faiyum", "sousse", "syracuse"})
+LEGACY_INSTITUTION_CALLBACK = """#root = country, scope:target = institution
+on_institution_embraced = {
+	effect = {
+		if = {
+			limit = { scope:target = institution:scientific_revolution }
+			root = { trigger_event_non_silently = institution_events.139 }
+		}
+		if = {
+			limit = { scope:target = institution:artillery_institution }
+			root = { trigger_event_non_silently = institution_events.115 }
+		}
+		if = {
+			limit = { scope:target = institution:printing_press }
+			root = { add_country_modifier = { modifier = printing_press_books years = -1 } }
+		}
+	}
+}"""
+ANTIQUE_INSTITUTION_CALLBACK = """#root = country, scope:target = institution
+on_institution_embraced = {
+	effect = {
+		# ANTIQVITAS: retain unreachable registry anchors for two installed events.
+		if = {
+			limit = { always = no }
+			root = { trigger_event_non_silently = institution_events.139 }
+		}
+		if = {
+			limit = { always = no }
+			root = { trigger_event_non_silently = institution_events.115 }
+		}
+	}
+}"""
 
 
 def source_path() -> Path:
@@ -236,7 +268,14 @@ def render() -> bytes:
             f"startup IO scope inventory drift: expected={dict(EXPECTED_SAFE_SCOPES)} "
             f"found={dict(safe_scopes)}"
         )
-    result = "".join(rendered).encode("utf-8")
+    text = "".join(rendered)
+    newline = "\r\n" if "\r\n" in text else "\n"
+    legacy_callback = LEGACY_INSTITUTION_CALLBACK.replace("\n", newline)
+    antique_callback = ANTIQUE_INSTITUTION_CALLBACK.replace("\n", newline)
+    if text.count(legacy_callback) != 1:
+        raise ValueError("installed post-antique institution callback inventory drift")
+    text = text.replace(legacy_callback, antique_callback)
+    result = neutralize_references(text, remap_effects=False).encode("utf-8")
     return (b"\xef\xbb\xbf" if has_bom else b"") + result
 
 

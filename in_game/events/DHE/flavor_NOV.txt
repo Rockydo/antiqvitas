@@ -1362,7 +1362,7 @@ flavor_nov.20 = {
 
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:renaissance
+		always = no
 		has_advance = northern_center_of_arts
 		religion = religion:orthodox
 		num_artists < 5
@@ -2109,7 +2109,7 @@ flavor_nov.36 = {
 	image = "gfx/interface/illustrations/institutions/legalism.dds"
 	trigger = {
 		current_date > 476.9.4
-		has_embraced_institution = institution:legalism
+		always = no
 		NOT = { has_unlocked_policy_trigger = { type = novgorod_judicial_charter_policy } }
 	}
 	immediate = {

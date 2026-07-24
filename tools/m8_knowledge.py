@@ -18,14 +18,19 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from dates import AntqDate, M2_MIRROR_LANGUAGES
+from legacy_institutions import legacy_references, neutralize_references
 
 ROOT = Path(__file__).resolve().parents[1]
 ADVANCES = ROOT / "in_game/common/advances"
 INSTITUTIONS = ROOT / "in_game/common/institution"
+SCRIPTED_TRIGGERS = ROOT / "in_game/common/scripted_triggers"
 STATIC_MODIFIERS = ROOT / "main_menu/common/static_modifiers"
 LOC_ROOT = ROOT / "main_menu/localization"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
 DIRECT_ADVANCE_ART = ROOT / "docs/m11/direct_advance_icons.csv"
+INSTITUTION_LEDGER = ROOT / "docs/m8/institutions.csv"
+INSTALLED_INSTITUTION_LEDGER = ROOT / "docs/m8/installed_institution_inventory.csv"
+VANILLA_INSTITUTION_SYMBOLS = ROOT / "docs/vanilla_symbols/institution.json"
 
 AGE_KEYS = (
     "age_1_traditions", "age_2_renaissance", "age_3_discovery",
@@ -148,18 +153,196 @@ class Institution:
     start_active: bool
     earliest: str
     spread_band: str
+    profile: str
+    trade_spread: bool
+    source: str
+
+
+@dataclass(frozen=True)
+class InstitutionProfile:
+    key: str
+    summary: str
+    script: tuple[str, ...]
+
+
+INSTITUTION_PROFILES = {
+    profile.key: profile
+    for profile in (
+        InstitutionProfile(
+            "mediterranean_letters",
+            "Mediterranean civic and learned networks",
+            (
+                "OR = {",
+                "\tregion = region:italy_region",
+                "\tregion = region:balkan_region",
+                "\tregion = region:anatolia_region",
+                "\tregion = region:egypt_region",
+                "\tregion = region:crescent_region",
+                "}",
+            ),
+        ),
+        InstitutionProfile(
+            "roman_imperial_practice",
+            "Roman and provincial societies inside the historical imperial sphere",
+            (
+                "AND = {",
+                "\tOR = {",
+                "\t\tregion = region:italy_region",
+                "\t\tregion = region:iberia_region",
+                "\t\tregion = region:france_region",
+                "\t\tregion = region:great_britain_region",
+                "\t\tregion = region:north_german_region",
+                "\t\tregion = region:south_german_region",
+                "\t\tregion = region:balkan_region",
+                "\t\tregion = region:anatolia_region",
+                "\t\tregion = region:crescent_region",
+                "\t\tregion = region:egypt_region",
+                "\t\tregion = region:maghreb_region",
+                "\t}",
+                "\tOR = {",
+                "\t\tdominant_culture = { has_culture_group = culture_group:antq_italic_group }",
+                "\t\tdominant_culture = { has_culture_group = culture_group:antq_hellenic_group }",
+                "\t\tdominant_culture = { has_culture_group = culture_group:antq_celtic_group }",
+                "\t\tdominant_culture = { has_culture_group = culture_group:antq_iberian_group }",
+                "\t\tdominant_culture = { has_culture_group = culture_group:antq_anatolian_group }",
+                "\t\tdominant_culture = { has_culture_group = culture_group:antq_semitic_group }",
+                "\t\tdominant_culture = { has_culture_group = culture_group:antq_berber_group }",
+                "\t}",
+                "}",
+            ),
+        ),
+        InstitutionProfile(
+            "east_asian_administration",
+            "Sinitic, Korean, and adjacent East Asian administrative contexts",
+            (
+                "AND = {",
+                "\tOR = {",
+                "\t\tregion = region:east_china_region",
+                "\t\tregion = region:north_china_region",
+                "\t\tregion = region:south_china_region",
+                "\t\tregion = region:west_china_region",
+                "\t\tregion = region:korea_region",
+                "\t\tregion = region:manchuria_region",
+                "\t\tregion = region:indochina_region",
+                "\t}",
+                "\tOR = {",
+                "\t\tdominant_culture = { has_culture_group = culture_group:antq_sinitic_group }",
+                "\t\tdominant_culture = { has_culture_group = culture_group:antq_korean_group }",
+                "\t\tdominant_culture = { has_culture_group = culture_group:antq_southeast_asian_group }",
+                "\t}",
+                "}",
+            ),
+        ),
+        InstitutionProfile(
+            "buddhist_networks",
+            "Buddhist communities across South, Central, and East Asian corridors",
+            (
+                "OR = {",
+                "\tdominant_religion = { group = religion_group:antq_buddhist_group }",
+                "\tregion = region:bengal_region",
+                "\tregion = region:central_india_region",
+                "\tregion = region:deccan_region",
+                "\tregion = region:hindustan_region",
+                "\tregion = region:western_india_region",
+                "\tregion = region:xinjiang_region",
+                "\tregion = region:tibet_region",
+                "\tregion = region:east_china_region",
+                "\tregion = region:north_china_region",
+                "\tregion = region:south_china_region",
+                "\tregion = region:west_china_region",
+                "\tregion = region:korea_region",
+                "\tregion = region:indochina_region",
+                "}",
+            ),
+        ),
+        InstitutionProfile(
+            "iranian_steppe_cavalry",
+            "Iranian, steppe, Caucasian, and eastern Roman military corridors",
+            (
+                "OR = {",
+                "\tregion = region:persia_region",
+                "\tregion = region:khorasan_region",
+                "\tregion = region:steppes_region",
+                "\tregion = region:caucasus_region",
+                "\tregion = region:xinjiang_region",
+                "\tregion = region:anatolia_region",
+                "\tregion = region:crescent_region",
+                "\tregion = region:balkan_region",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_iranian_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_steppe_group }",
+                "}",
+            ),
+        ),
+        InstitutionProfile(
+            "east_central_asian_paper",
+            "East and Central Asian craft-transfer corridors",
+            (
+                "OR = {",
+                "\tregion = region:east_china_region",
+                "\tregion = region:north_china_region",
+                "\tregion = region:south_china_region",
+                "\tregion = region:west_china_region",
+                "\tregion = region:korea_region",
+                "\tregion = region:manchuria_region",
+                "\tregion = region:xinjiang_region",
+                "\tregion = region:indochina_region",
+                "}",
+            ),
+        ),
+        InstitutionProfile(
+            "christian_monastic",
+            "Locations whose dominant faith belongs to the Christian family",
+            (
+                "dominant_religion = { group = religion_group:antq_christian_group }",
+            ),
+        ),
+        InstitutionProfile(
+            "christian_councils",
+            "Christian communities participating in conciliar networks",
+            (
+                "dominant_religion = { group = religion_group:antq_christian_group }",
+            ),
+        ),
+        InstitutionProfile(
+            "late_roman_frontier",
+            "Late Roman and neighboring federate settlement zones",
+            (
+                "AND = {",
+                "\tOR = {",
+                "\t\tregion = region:balkan_region",
+                "\t\tregion = region:carpathia_region",
+                "\t\tregion = region:north_german_region",
+                "\t\tregion = region:south_german_region",
+                "\t\tregion = region:france_region",
+                "\t\tregion = region:italy_region",
+                "\t\tregion = region:great_britain_region",
+                "\t\tregion = region:anatolia_region",
+                "\t\tregion = region:steppes_region",
+                "\t}",
+                "\tOR = {",
+                "\t\tdominant_culture = { has_culture_group = culture_group:antq_italic_group }",
+                "\t\tdominant_culture = { has_culture_group = culture_group:antq_hellenic_group }",
+                "\t\tdominant_culture = { has_culture_group = culture_group:antq_germanic_group }",
+                "\t\tdominant_culture = { has_culture_group = culture_group:antq_celtic_group }",
+                "\t\tdominant_culture = { has_culture_group = culture_group:antq_steppe_group }",
+                "\t}",
+                "}",
+            ),
+        ),
+    )
+}
 
 
 INSTITUTION_DATA = (
-    Institution("antq_hellenism", "Hellenism", "A living network of Greek civic, literary, and sacred institutions.", "age_1_traditions", "athens", True, "1.1.1", "early"),
-    Institution("antq_roman_law_engineering", "Roman Law and Engineering", "Roman legal practice and public engineering circulate through imperial networks.", "age_1_traditions", "rome", True, "1.1.1", "early"),
-    Institution("antq_han_bureaucratic_statecraft", "Han Bureaucratic Statecraft", "Written administration, registers, and examination-minded statecraft radiate from Han China.", "age_1_traditions", "jingzhao", True, "1.1.1", "early"),
-    Institution("antq_buddhist_monasticism", "Buddhist Monasticism", "Buddhist monastic communities preserve learning and create durable religious networks.", "age_1_traditions", "anuradhapura", True, "1.1.1", "early"),
-    Institution("antq_cataphract_warfare", "Cataphract Warfare", "Heavy armoured cavalry methods circulate from the Iranian and steppe worlds.", "age_2_renaissance", "merv", False, "96.1.1", "early"),
-    Institution("antq_papermaking", "Papermaking", "Paper and its associated craft knowledge spread outward from Luoyang.", "age_2_renaissance", "luoyang", False, "105.1.1", "mid"),
-    Institution("antq_christian_monasticism", "Christian Monasticism", "Egyptian ascetic communities establish a second monastic centre of gravity.", "age_3_discovery", "alexandria", False, "270.1.1", "mid"),
-    Institution("antq_theological_orthodoxy", "Theological Orthodoxy", "Council-led doctrinal settlement shapes the late Roman religious world.", "age_4_reformation", "iznik", False, "325.1.1", "late"),
-    Institution("antq_foederati_statecraft", "Foederati Statecraft", "Land-for-service settlements become a deliberate frontier and imperial practice.", "age_5_absolutism", "edirne", False, "382.1.1", "late"),
+    Institution("antq_hellenism", "Hellenism", "A living network of Greek civic, literary, and sacred institutions.", "age_1_traditions", "athens", True, "1.1.1", "early", "mediterranean_letters", True, "P14.3;CAH-XI"),
+    Institution("antq_roman_law_engineering", "Roman Law and Engineering", "Roman legal practice and public engineering circulate through imperial networks.", "age_1_traditions", "rome", True, "1.1.1", "early", "roman_imperial_practice", True, "P14.3;OCD;CAH-XI"),
+    Institution("antq_han_bureaucratic_statecraft", "Han Bureaucratic Statecraft", "Written administration, registers, and examination-minded statecraft radiate from Han China.", "age_1_traditions", "jingzhao", True, "1.1.1", "early", "east_asian_administration", False, "P14.3;BHR;Bielenstein"),
+    Institution("antq_buddhist_monasticism", "Buddhist Monasticism", "Buddhist monastic communities preserve learning and create durable religious networks.", "age_1_traditions", "anuradhapura", True, "1.1.1", "early", "buddhist_networks", True, "P14.3;CAH-XI"),
+    Institution("antq_cataphract_warfare", "Cataphract Warfare", "Heavy armoured cavalry methods circulate from the Iranian and steppe worlds.", "age_2_renaissance", "merv", False, "96.1.1", "early", "iranian_steppe_cavalry", False, "P14.3;CAH-XI"),
+    Institution("antq_papermaking", "Papermaking", "Paper and its associated craft knowledge spread outward from Luoyang.", "age_2_renaissance", "luoyang", False, "105.1.1", "mid", "east_central_asian_paper", True, "P14.3;BHR"),
+    Institution("antq_christian_monasticism", "Christian Monasticism", "Egyptian ascetic communities establish a second monastic centre of gravity.", "age_3_discovery", "alexandria", False, "270.1.1", "mid", "christian_monastic", True, "P14.3;CAH-XII"),
+    Institution("antq_theological_orthodoxy", "Theological Orthodoxy", "Council-led doctrinal settlement shapes the late Roman religious world.", "age_4_reformation", "iznik", False, "325.1.1", "late", "christian_councils", False, "P14.3;CAH-XII"),
+    Institution("antq_foederati_statecraft", "Foederati Statecraft", "Land-for-service settlements become a deliberate frontier and imperial practice.", "age_5_absolutism", "edirne", False, "382.1.1", "late", "late_roman_frontier", False, "P14.3;AMM-31"),
 )
 
 # The institution manager resolves an exact institution_birth static modifier
@@ -318,8 +501,19 @@ def validate(records: tuple[Advance, ...]) -> None:
             failures.append(f"{item.key} has invalid date: {exc}")
         if item.spread_band not in {"early", "mid", "late"}:
             failures.append(f"{item.key} uses invalid spread band")
+        if item.profile not in INSTITUTION_PROFILES:
+            failures.append(f"{item.key} uses unknown eligibility profile")
+        if not item.source:
+            failures.append(f"{item.key} has no historical source")
     if sum(item.start_active for item in INSTITUTION_DATA) != 4:
         failures.append("M8 requires four active AD 1 institution origins")
+    han = next(item for item in INSTITUTION_DATA if item.key == "antq_han_bureaucratic_statecraft")
+    han_profile = "\n".join(INSTITUTION_PROFILES[han.profile].script)
+    if han.trade_spread or any(
+        token in han_profile
+        for token in ("europe", "italy_region", "france_region", "roman_imperial")
+    ):
+        failures.append("Han statecraft must not have ordinary trade or European eligibility")
     if set(INSTITUTION_BIRTH_EFFECTS) != set(institution_keys):
         failures.append("institution birth modifiers do not exactly cover the M8 institutions")
     technology_tier_summary()
@@ -413,12 +607,39 @@ def disabled_content(path: Path, field: re.Pattern[str], field_name: str, kind: 
 
 def disabled_advance_content(path: Path) -> str:
     """Keep every vanilla advance key valid but make it permanently unavailable."""
-    return disabled_content(path, POTENTIAL, "potential", "advancement", True)
+    return neutralize_references(
+        disabled_content(path, POTENTIAL, "potential", "advancement", True),
+        remap_effects=True,
+    )
 
 
 def disabled_institution_content(path: Path) -> str:
     """Keep vanilla institution IDs for event links while preventing spawns."""
     return disabled_content(path, CAN_SPAWN, "can_spawn", "institution", False)
+
+
+def installed_institution_keys(path: Path) -> tuple[str, ...]:
+    """Read only top-level institution IDs from one installed age file."""
+    result: list[str] = []
+    depth = 0
+    for line in path.read_text(encoding="utf-8-sig", errors="strict").splitlines():
+        code = line.split("#", 1)[0]
+        if depth == 0 and TOP_LEVEL.match(code):
+            result.append(code.split("=", 1)[0].strip())
+        depth += brace_delta(line)
+    if depth != 0 or not result:
+        raise ValueError(f"unable to inventory installed institutions in {path.name}")
+    return tuple(result)
+
+
+def legacy_institution_stubs(path: Path) -> str:
+    """Remove installed IDs entirely; nullable-age records crash the Advances UI."""
+    keys = installed_institution_keys(path)
+    return (
+        "# Generated by tools/m8_knowledge.py --write.\n"
+        f"# Removed {len(keys)} post-antique institutions from {path.name}; "
+        "all installed references are neutralized by generated exact-name overlays.\n"
+    )
 
 
 def empty_overrides(relative: str, destination: Path, label: str) -> dict[Path, str]:
@@ -432,20 +653,123 @@ def empty_overrides(relative: str, destination: Path, label: str) -> dict[Path, 
         if label == "advance":
             outputs[destination / path.name] = disabled_advance_content(path)
         else:
-            outputs[destination / path.name] = disabled_institution_content(path)
+            outputs[destination / path.name] = legacy_institution_stubs(path)
     if not outputs:
         raise ValueError(f"installed {label} manifest is empty")
     return outputs
 
 
+def institution_eligibility_script() -> str:
+    lines = [
+        "# Generated by tools/m8_knowledge.py --write.",
+        "# Root scope: receiving location. These gates constrain every spread channel.",
+    ]
+    for profile in INSTITUTION_PROFILES.values():
+        lines.append(f"antq_institution_eligible_{profile.key} = {{")
+        lines.extend(f"\t{line}" for line in profile.script)
+        lines.extend(("}", ""))
+    return "\n".join(lines)
+
+
+def gated_value(field: str, base: str, profile: str) -> list[str]:
+    return [
+        f"\t{field} = {{",
+        "\t\tvalue = 0",
+        "\t\tif = {",
+        f"\t\t\tlimit = {{ antq_institution_eligible_{profile} = yes }}",
+        f"\t\t\tadd = {base}",
+        "\t\t}",
+        "\t}",
+    ]
+
+
 def institution_script() -> str:
     lines = [
         "# Generated by tools/m8_knowledge.py --write; M8 ancient institutions.",
-        "# Timed spawn thresholds are rendered only from AntqDate-validated values.",
+        "# All dates are AntqDate-validated; every propagation channel is profile-gated.",
     ]
     for item in INSTITUTION_DATA:
-        lines.extend((f"{item.key} = {{", f"\tage = {item.age}", f"\tlocation = {item.location}", "\tcan_spawn = {", f"\t\tcurrent_date >= {AntqDate.parse(item.earliest).engine()}", f"\t\tthis = location:{item.location}", "\t}", "\tpromote_chance = { add = 100 }", f"\tspread_from_friendly_coast_border_location = institution_base_spread_from_friendly_neighbor_with_{item.spread_band}", f"\tspread_from_any_coast_border_location = institution_base_spread_from_neighbor_with_{item.spread_band}", f"\tspread_from_any_import = institution_trade_spread_value_{item.spread_band}", f"\tspread_from_any_export = institution_trade_spread_value_{item.spread_band}", f"\tspread_embraced_to_capital = institution_total_embraced_to_capital_{item.spread_band}", "\tspread_scale_on_control_if_owner_embraced = 2", "\tspread_to_market_member = institution_spread_to_market_member_early", "\tspread_to_market_center = institution_spread_to_market_center", "}", ""))
+        lines.extend((
+            f"{item.key} = {{",
+            f"\tage = {item.age}",
+            f"\tlocation = {item.location}",
+            "\tcan_spawn = {",
+            f"\t\tcurrent_date >= {AntqDate.parse(item.earliest).engine()}",
+            f"\t\tthis = location:{item.location}",
+            f"\t\tantq_institution_eligible_{item.profile} = yes",
+            "\t}",
+        ))
+        lines.extend(gated_value("promote_chance", "100", item.profile))
+        lines.extend(gated_value(
+            "spread_from_friendly_coast_border_location",
+            f"institution_base_spread_from_friendly_neighbor_with_{item.spread_band}",
+            item.profile,
+        ))
+        lines.extend(gated_value(
+            "spread_from_any_coast_border_location",
+            f"institution_base_spread_from_neighbor_with_{item.spread_band}",
+            item.profile,
+        ))
+        for field in ("spread_from_any_import", "spread_from_any_export"):
+            base = (
+                f"institution_trade_spread_value_{item.spread_band}"
+                if item.trade_spread else "0"
+            )
+            lines.extend(gated_value(field, base, item.profile))
+        lines.extend(gated_value(
+            "spread_embraced_to_capital",
+            f"institution_total_embraced_to_capital_{item.spread_band}",
+            item.profile,
+        ))
+        lines.extend(gated_value(
+            "spread_scale_on_control_if_owner_embraced", "2", item.profile,
+        ))
+        lines.extend(gated_value(
+            "spread_to_market_member",
+            f"institution_spread_to_market_member_{item.spread_band}",
+            item.profile,
+        ))
+        lines.extend(gated_value(
+            "spread_to_market_center", "institution_spread_to_market_center", item.profile,
+        ))
+        lines.extend(("}", ""))
     return "\n".join(lines)
+
+
+def institution_ledger() -> str:
+    fields = (
+        "key", "name", "age", "earliest", "birthplace", "start_active",
+        "eligibility_profile", "eligibility_summary", "ordinary_trade_spread", "source",
+    )
+    rows = [",".join(fields)]
+    for item in INSTITUTION_DATA:
+        profile = INSTITUTION_PROFILES[item.profile]
+        values = (
+            item.key, item.name, item.age, AntqDate.parse(item.earliest).engine(),
+            item.location, "yes" if item.start_active else "no", item.profile,
+            profile.summary, "yes" if item.trade_spread else "no", item.source,
+        )
+        rows.append(",".join(f'"{value.replace(chr(34), chr(34) * 2)}"' for value in values))
+    return "\n".join(rows) + "\n"
+
+
+def installed_institution_ledger() -> str:
+    source = installed_dir("in_game/common/institution")
+    symbol_keys = set(json.loads(VANILLA_INSTITUTION_SYMBOLS.read_text(encoding="utf-8-sig")))
+    rows: list[tuple[str, str, str]] = []
+    for path in sorted(source.glob("age_*.txt")):
+        for key in installed_institution_keys(path):
+            rows.append((key, path.name, "removed_from_database"))
+    installed_keys = {key for key, _path, _status in rows}
+    if installed_keys != symbol_keys:
+        raise ValueError(
+            "installed institution inventory differs from harvested symbols: "
+            f"missing={sorted(symbol_keys - installed_keys)}, "
+            f"extra={sorted(installed_keys - symbol_keys)}"
+        )
+    lines = ["key,installed_file,mod_status"]
+    lines.extend(",".join(row) for row in rows)
+    return "\n".join(lines) + "\n"
 
 
 def institution_birth_modifiers() -> str:
@@ -465,6 +789,13 @@ def institution_birth_modifiers() -> str:
             "",
         ))
     return "\n".join(lines)
+
+
+def removed_institution_birth_modifiers() -> str:
+    return (
+        "# Generated by tools/m8_knowledge.py --write.\n"
+        "# Exact-name override: birth modifiers for the 18 removed post-antique institutions.\n"
+    )
 
 
 def localization(records: tuple[Advance, ...], language: str) -> str:
@@ -492,7 +823,11 @@ def outputs(records: tuple[Advance, ...]) -> dict[Path, str]:
         ADVANCES / "00_antiquitas_m8_tree.txt": advance_script(records),
         **empty_overrides("in_game/common/institution", INSTITUTIONS, "institution"),
         INSTITUTIONS / "00_antiquitas_m8_institutions.txt": institution_script(),
+        SCRIPTED_TRIGGERS / "00_antiquitas_m8_institution_spread.txt": institution_eligibility_script(),
+        STATIC_MODIFIERS / "institutions.txt": removed_institution_birth_modifiers(),
         STATIC_MODIFIERS / "antq_m8_institution_birth.txt": institution_birth_modifiers(),
+        INSTITUTION_LEDGER: institution_ledger(),
+        INSTALLED_INSTITUTION_LEDGER: installed_institution_ledger(),
     }
     for language in ("english", *M2_MIRROR_LANGUAGES):
         rendered[LOC_ROOT / language / f"antq_m8_knowledge_l_{language}.yml"] = localization(records, language)
@@ -500,7 +835,15 @@ def outputs(records: tuple[Advance, ...]) -> dict[Path, str]:
 
 
 def expected_inventory(relative: str, destination: Path, custom: str) -> set[Path]:
-    return {*empty_overrides(relative, destination, relative).keys(), destination / custom}
+    source = installed_dir(relative)
+    installed = {
+        destination / path.name
+        for path in source.glob("*.txt")
+        if path.name != "readme.txt"
+    }
+    if not installed:
+        raise ValueError(f"installed inventory is empty: {relative}")
+    return { *installed, destination / custom }
 
 
 def write(records: tuple[Advance, ...]) -> None:
@@ -533,8 +876,20 @@ def check(records: tuple[Advance, ...]) -> bool:
             failures.append(f"unit or levy unlock survived in {path.relative_to(ROOT)}")
     for path in institution_inventory:
         text = path.read_text(encoding="utf-8-sig") if path.is_file() else ""
-        if "00_antiquitas_m8" not in path.name and "M8 disables vanilla institution" not in text:
-            failures.append(f"vanilla institution remains spawnable in {path.relative_to(ROOT)}")
+        if "00_antiquitas_m8" not in path.name:
+            if "post-antique institutions" not in text:
+                failures.append(f"vanilla institution file is not an explicit empty override in {path.relative_to(ROOT)}")
+            if any(TOP_LEVEL.match(line) for line in text.splitlines()):
+                failures.append(f"legacy institution definition survives in {path.relative_to(ROOT)}")
+            if legacy_references(text):
+                failures.append(f"legacy institution reference survives in {path.relative_to(ROOT)}")
+    custom_institutions = INSTITUTIONS / "00_antiquitas_m8_institutions.txt"
+    if custom_institutions.is_file():
+        text = custom_institutions.read_text(encoding="utf-8-sig")
+        for item in INSTITUTION_DATA:
+            marker = f"antq_institution_eligible_{item.profile}"
+            if text.count(marker) != 10:
+                failures.append(f"{item.key} does not gate all ten spawn/spread channels")
     custom_tree = ADVANCES / "00_antiquitas_m8_tree.txt"
     if custom_tree.is_file() and any(token in custom_tree.read_text(encoding="utf-8-sig").lower() for token in FORBIDDEN):
         failures.append("anachronistic token survived in the M8 tree")
@@ -543,7 +898,11 @@ def check(records: tuple[Advance, ...]) -> bool:
         print("\n".join(f"  - {failure}" for failure in failures))
         return False
     tiers = technology_tier_summary()
-    print(f"m8_knowledge: PASS (250 advances; 9 institutions; starting tiers 1/2/3/4 = {'/'.join(map(str, tiers))}; no vanilla unlocks)")
+    print(
+        "m8_knowledge: PASS "
+        f"(250 advances; 9 ancient institutions; 18 legacy institutions removed; "
+        f"starting tiers 1/2/3/4 = {'/'.join(map(str, tiers))}; no vanilla unlocks)"
+    )
     return True
 
 
