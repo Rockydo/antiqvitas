@@ -25,11 +25,24 @@ the worldwide political surface is visible in
 This follows the clean menu launch in
 [`m8_menu_ready.png`](../screens/M8_knowledge_probe/m8_menu_ready.png).
 
-The historical confirmation finding is now superseded. The exact-name
-country-change overlay enters Observer Mode, and the 2026-07-22 M7 replay
-reached maximum speed in a live AI-war session. That material retest then hit
-the existing `ffxFsr2ResourceIsNull` / `NVSDK_NGX_D3D12_Shutdown1` renderer
-crash before a periodic capture. AI research behavior therefore still cannot
-be observed; the M8 milestone gate remains open. The static research-graph and
-anachronism checks, together with the clean real-game menu load, remain green.
-See `docs/playtests/M7_WAR.md` and `BLOCKERS.md` for the current retry boundary.
+On 2026-07-24 a bounded player-session probe replaced the obsolete AI-playback
+gate. The driver entered a live AD 1 session, used the generated engine tag
+map to inspect Rome and the Iceni, then opened the installed Advances panel
+through its verified `top_left_8` input contract. Rome rendered the complete
+high-tier Age of Principate counter (`50/50 Advances`). Iceni rendered a
+coherent lower starting surface (`45/50 Advances`, empty research queue) with
+the visible source-led strands **Standing Administration**, **Principate
+Warfare**, **Principate Exchange**, and **Principate Learning**. Evidence is
+retained in `../screens/M8_research_probe_repaired/m8_advances_panel_repaired.png`
+and `m8_iceni_starting_tree.png`.
+
+The previous FSR observer crash is irrelevant to this prompt screen and is
+still documented for M7/M12; it is not a reason to require an AI research
+campaign. The live interaction emitted no M8 advance, institution, or asset
+identifier in `error.log`.
+
+## Result
+
+**PASS.** The static tree/institution contracts and the bounded research-panel
+probe meet the reduced M8 acceptance criterion. No long AI research campaign
+is required.

@@ -1,5 +1,16 @@
 # Technical and Design Decisions
 
+## 2026-07-24 - M8 acceptance uses the live research UI, not AI playback
+
+The revised milestone contract requires a coherent starting research screen,
+not an AI research campaign. A fresh player session reached the installed
+Advances panel through the locally verified `top_left_8` binding and rendered
+both Rome's complete high-tier start and Iceni's partially complete 45/50 Age
+of Principate strands. This directly tests the player-facing M8 object while
+avoiding the already documented FSR crash that occurs only during sustained
+observer playback. Static graph, date, icon, and institution checks continue
+to carry global coverage; retained evidence is in `docs/playtests/M8_KNOWLEDGE.md`.
+
 ## 2026-07-24 - M10 uses bounded contract evidence rather than a long observer
 
 The initial Observer invocation preceded country selection and returned to the
