@@ -15,6 +15,7 @@ import csv
 import json
 import sys
 from pathlib import Path
+from typing import TypeAlias
 
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER = ROOT / "docs/m4/location_name_corrections.csv"
@@ -38,6 +39,8 @@ CLIENT_LANGUAGES = (
 FIELDS = ("location", "culture", "historical_name", "source", "confidence", "note")
 ALLOWED_CONFIDENCE = frozenset(("secure", "tier2", "contested"))
 OUTPUT_PREFIX = "antq_zz_m4_location_name_corrections_l_"
+Adapter: TypeAlias = tuple[str, str]
+CorrectionEntry: TypeAlias = dict[str, str | tuple[Adapter, ...]]
 
 
 def table(path: Path) -> list[dict[str, str]]:
@@ -49,7 +52,7 @@ def esc(value: str) -> str:
     return value.replace('"', "'")
 
 
-def correction_entries() -> list[dict[str, str]]:
+def correction_entries() -> list[CorrectionEntry]:
     with LEDGER.open(encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
         if tuple(reader.fieldnames or ()) != FIELDS:
@@ -62,7 +65,7 @@ def correction_entries() -> list[dict[str, str]]:
     group_languages = {row["group"].strip(): row["key"].strip() for row in table(LANGUAGES)}
     installed_locations = set(json.loads(ENGINE_LOCATIONS.read_text(encoding="utf-8-sig")))
 
-    entries: list[dict[str, str]] = []
+    entries: list[CorrectionEntry] = []
     seen_locations: set[str] = set()
     failures: list[str] = []
     for number, row in enumerate(rows, start=2):
@@ -71,7 +74,13 @@ def correction_entries() -> list[dict[str, str]]:
             failures.append(f"{LEDGER.relative_to(ROOT)}:{number}: blank required field")
             continue
         location = value["location"]
-        culture = value["culture"]
+        cultures = [culture.strip() for culture in value["culture"].split("|")]
+        if any(not culture for culture in cultures):
+            failures.append(f"{LEDGER.relative_to(ROOT)}:{number}: blank culture adapter")
+            continue
+        if len(cultures) != len(set(cultures)):
+            failures.append(f"{LEDGER.relative_to(ROOT)}:{number}: duplicate culture adapter")
+            continue
         if location in seen_locations:
             failures.append(f"{LEDGER.relative_to(ROOT)}:{number}: duplicate location {location}")
             continue
@@ -79,13 +88,23 @@ def correction_entries() -> list[dict[str, str]]:
         if location not in installed_locations:
             failures.append(f"{LEDGER.relative_to(ROOT)}:{number}: unknown installed location {location}")
             continue
-        group = culture_groups.get(culture)
-        if not group:
-            failures.append(f"{LEDGER.relative_to(ROOT)}:{number}: unknown M4 culture {culture}")
-            continue
-        language = group_languages.get(group)
-        if not language or not language.endswith("_language"):
-            failures.append(f"{LEDGER.relative_to(ROOT)}:{number}: culture {culture} has no valid language")
+        adapters: list[Adapter] = []
+        invalid_adapter = False
+        for culture in cultures:
+            group = culture_groups.get(culture)
+            if not group:
+                failures.append(f"{LEDGER.relative_to(ROOT)}:{number}: unknown M4 culture {culture}")
+                invalid_adapter = True
+                continue
+            language = group_languages.get(group)
+            if not language or not language.endswith("_language"):
+                failures.append(f"{LEDGER.relative_to(ROOT)}:{number}: culture {culture} has no valid language")
+                invalid_adapter = True
+                continue
+            adapter = (language.removesuffix("_language") + "_dialect", language)
+            if adapter not in adapters:
+                adapters.append(adapter)
+        if invalid_adapter:
             continue
         if value["confidence"] not in ALLOWED_CONFIDENCE:
             failures.append(
@@ -96,8 +115,8 @@ def correction_entries() -> list[dict[str, str]]:
         entries.append(
             {
                 **value,
-                "language": language,
-                "dialect": language.removesuffix("_language") + "_dialect",
+                "culture": "|".join(cultures),
+                "adapters": tuple(adapters),
             }
         )
     if failures:
@@ -105,7 +124,7 @@ def correction_entries() -> list[dict[str, str]]:
     return sorted(entries, key=lambda entry: entry["location"])
 
 
-def localization(entries: list[dict[str, str]], client_language: str) -> str:
+def localization(entries: list[CorrectionEntry], client_language: str) -> str:
     lines = [
         f"l_{client_language}:",
         " # Generated authoritative corrections loaded after the bulk M4 location-name layer; English is mirrored by design.",
@@ -114,8 +133,9 @@ def localization(entries: list[dict[str, str]], client_language: str) -> str:
         location = entry["location"]
         name = esc(entry["historical_name"])
         lines.append(f' {location}: "{name}"')
-        lines.append(f' {location}.{entry["dialect"]}: "{name}"')
-        lines.append(f' {location}.{entry["language"]}: "{name}"')
+        for dialect, language in entry["adapters"]:
+            lines.append(f' {location}.{dialect}: "{name}"')
+            lines.append(f' {location}.{language}: "{name}"')
     return "\n".join(lines) + "\n"
 
 
