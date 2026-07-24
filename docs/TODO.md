@@ -112,6 +112,9 @@ after `make full` and its autonomous driver report are green.
 - [x] Pass the final culture/religion atlas checks and complete the current `make full` gate with zero new smoke lines.
 - [x] Run milestone gate and tag `M4-done`.
 
+- [x] Canonicalize the master-plan culture completion: fold all 23 promised definitions and assignments into the primary M4 ledgers; remove the temporary secondary generator and staging ledgers.
+- [x] Finalize Britain and Ireland in detail: 34 British and 16 Hibernian culture definitions, complete controlled-province coverage, narrow frontier overrides, matching polity profiles, and canonical generated outputs.
+
 ## M5 — Economy
 
 - [x] Replace generic Roman civic/economic proxies with a source-led named building pass: 28 direct-icon specials now cover water, public grain storage, Forum Romanum/Augusti, Basilica Aemilia, macellum, Horrea Galbana, baths, Theatre of Marcellus, Mars Ultor cult, Tabularium, Circus, mint, workshops, mill/bakery, Villa Liviae, the Pantheum, Saepta, Diribitorium, the Palatine Temple of Apollo and library, Curia Iulia, Porticus Octaviae, Tiber Emporium, Aqua Alsietina, the naval bases at Rome and Ravenna, and the Mogontiacum frontier camp. See `docs/m5/roman_buildings.csv` and `M5_ROMAN_CIVIC_BUILDINGS.md`.

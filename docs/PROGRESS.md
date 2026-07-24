@@ -6354,3 +6354,16 @@ reviewed 128px BC7 DDS.
   direct XAR Government panel still rendered Wang Guangwu; a source-qualified
   Ping birthplace fixture also rendered Wang Guangwu and was reverted.
 - Fixture and restored canonical builds both passed full validation and smoke.
+
+## 2026-07-24 - Canonical Britain and Ireland culture completion
+
+- Folded the 23 master-plan culture additions into the canonical M4 sources and
+  removed the temporary secondary generator and staging ledgers.
+- Added 50 detailed Britain/Ireland cultures and complete controlled-province
+  coverage with contested source boundaries; the catalogue now has
+  423 definitions.
+- Regenerated canonical culture, color, localization, symbol, country, and AD 1
+  population outputs and refreshed the authored-text audit.
+
+- Separated the Finnic culture key from the existing Finnic religion namespace
+  and derived all custom initializer presences from canonical symbols and pops.

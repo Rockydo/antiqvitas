@@ -4364,3 +4364,12 @@ unrelated ultra-far Chaurana proximity output. This does not infer a wider
 language map, political boundary, population, ethnicity, or later oasis
 history. Sources: IRAN-KAS; IRAN-KHO; IRAN-KUC; CAM-LOU; IRAN-CT; P8.3.
 [secure direct oasis-name forms]
+
+## 2026-07-24 - Ptolemaic Britain and Ireland are regional proxies
+
+Ptolemy's British and Hibernian people lists are later, indirect compilations
+with distorted coordinates and disputed identifications. The detailed atlas
+therefore preserves names and broad relative order but does not claim exact AD
+1 borders, homogeneous populations, uniform language, or continuity with later
+medieval peoples. Sources: `PTO-GEO-II1`, `DARCY-IRE`, `PTO-GEO-II2`, and
+`MANN-BRI`. [secure names and broad ordering; contested spatial realization]

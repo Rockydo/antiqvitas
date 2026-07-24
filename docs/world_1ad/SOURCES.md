@@ -494,3 +494,29 @@ coverage validator permits no other unassigned ownable location.
 
 - `LIV-BONNA`: Livius.org, ["Bonna (Bonn)"](https://www.livius.org/articles/place/bonna-bonn/), records a Roman fort at Bonna built in Drusus' Rhine offensive between 16/15 and 13 BC and distinguishes it from the post-AD 9 larger legionary base. It supports only the early Augustan camp context at the AD 1 boundary.
 - `LVR-NGL`: Landschaftsverband Rheinland, ["Der Niedergermanische Limes -- Der Rhein als eine Grenze des Imperium Romanum"](https://bodendenkmalpflege.lvr.de/de/projekte/der_niedergermanische_limes/der_rhein_als_grenze.html), identifies Bonna/Bonn as a principal Lower Rhine legionary-camp site and dates the broader Augustan military stationing along the Rhine from about 19 BC. It supports regional military context, not an AD 1 fortress plan or troop total.
+
+## Britain and Ireland culture-source contracts
+
+These contracts support the detailed culture atlas. They authorize contested
+campaign frames, not exact ethnic polygons or a claim that Ptolemy describes a
+single AD 1 census.
+
+- `PTO-GEO-II1`: Claudius Ptolemy, *Geography* 2.1, Hibernia, in Edward
+  Luther Stevenson's public-domain translation as transcribed by LacusCurtius
+  (`https://penelope.uchicago.edu/Thayer/E/Gazetteer/Periods/Roman/_Texts/Ptolemy/2/1*.html`).
+  It gives sixteen Hibernian peoples in relative coastal order; it does not
+  establish modern county boundaries, uniform populations, or exact dates.
+- `DARCY-IRE`: Robert Darcy and William Flynn, “Ptolemy's map of Ireland: a
+  modern decoding,” *Irish Geography* 41.1 (2008), 49–69,
+  `https://doi.org/10.1080/00750770801909375`. The study stresses disputed
+  identifications, indirect reports, and non-random coordinate error.
+- `PTO-GEO-II2`: Claudius Ptolemy, *Geography* 2.2, Albion, in the same
+  Stevenson/LacusCurtius edition
+  (`https://penelope.uchicago.edu/Thayer/E/Gazetteer/Periods/Roman/_Texts/Ptolemy/2/2*.html`).
+  It supports names and broad relative positions, not fixed AD 1 frontiers;
+  northern geometry is visibly distorted.
+- `MANN-BRI`: John C. Mann and David J. Breeze, “Ptolemy, Tacitus and the
+  tribes of north Britain,” *Proceedings of the Society of Antiquaries of
+  Scotland* 117 (1988), 85–91, `https://doi.org/10.9750/PSAS.117.85.91`.
+  The authors warn that northern place lists can mix native sites and Roman
+  forts, requiring explicitly contested regional interpretation.
