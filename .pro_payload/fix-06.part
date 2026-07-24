@@ -1,9 +1,0 @@
-N_ONLY_CULTURES = {\"antq_na_dene\"}\n"
-    if "DEFINITION_ONLY_CULTURES" not in text:
-        text = text.replace(marker, addition, 1)
-    old = "    absent = sorted(batch_keys - start_cultures)\n"
-    new = (
-        "    unknown_definition_only = sorted(DEFINITION_ONLY_CULTURES - set(culture_keys))\n"
-        "    if unknown_definition_only:\n"
-        "        raise ValueError(f\"unknown definition-only PRO cultures: {', '.join(unknown_definition_only)}\")\n"
-        "    absent = sorted((batch_keys - D

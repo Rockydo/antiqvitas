@@ -1,8 +1,0 @@
-          raise RuntimeError(f"expected documentation text not found: {old[:80]}")
-        text = text.replace(old, new, 1)
-    DOC.write_text(text, encoding="utf-8", newline="\n")
-
-
-patch_remap()
-patch_generator()
-patch_doc()
