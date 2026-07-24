@@ -7,12 +7,12 @@ Scope: bounded M5 node and market verification; no long observer campaign
 ## Acceptance evidence
 
 - Static M5 checks pass in the current full validation: five custom ancient
-  goods, 328 runtime RGO corrections, 79 named Roman buildings with direct
-  icon contracts, 154 direct-art regional families, and 1,911 total M5/M7
+  goods, 328 runtime RGO corrections, 80 named Roman buildings with direct
+  icon contracts, 154 direct-art regional families, and 1,912 total M5/M7
   placements (1,497 productive; 1,804 scalable).
 - The M11 direct-art ledger confirms the player-facing M5 surfaces have their
-  own checked DDS chains: all 79 named Roman buildings and all 154 regional
-  families; the project-wide UI inventory is 558 direct chains.
+  own checked DDS chains: all 80 named Roman buildings and all 154 regional
+  families; the project-wide UI inventory is 559 direct chains.
 - The enabled-mod menu smoke on 2026-07-24 reached menu-ready state and
   reported zero new `error.log` lines versus the accepted baseline.
 - The short live AD 1 observer probe recorded in `M5_TRADE_FLOW.md` reached
