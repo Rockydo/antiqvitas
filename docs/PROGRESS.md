@@ -6220,3 +6220,15 @@ reviewed 128px BC7 DDS.
 - The vanilla control and enabled ANTIQVITAS menu launches both reached the
   driver-ready heuristic. The normalized error-log comparison found zero new
   mod line types and no accepted baseline type missing.
+
+## 2026-07-24 - M6 Han officeholder-proxy evidence
+
+- Tested a third, materially distinct Han presentation shape: source-led Wang
+  Mang as technical current officeholder while Emperor Ping remained heir.
+  The live AD 1 Western Han Government panel still rendered generated `Han
+  Guangwu, 35`, so the shape was reverted rather than presenting an invented
+  ruler as history.
+- The pre-probe full validation and enabled-mod smoke both passed; the
+  restored build also passed both with zero new error-log lines. Evidence and
+  the no-repeat boundary are committed in `0768ca5` (`docs(m6): record Han
+  officeholder probe`).
