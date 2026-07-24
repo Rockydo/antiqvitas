@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-07-24 - M4 Roman-world direct-name correction batch
+
+- Replaced twelve borrowed proximity labels with reviewed ancient forms at the
+  installed city fields: Anagnia, Abellinum, Iguvium, Tibur, Velitrae,
+  Faventia, Dertona, Horta, Augustobona, Turnacum, Kallipolis, and Carnium.
+- The curated dynamic-name layer now contains 235 direct labels. Full
+  validation and bounded enabled-mod smoke are green with zero new error-log
+  lines.
+
 ## 2026-07-24 - M12 verification protocol aligned with the rapid-test gate
 
 - Updated the finale record to make the full 475-year observer run optional

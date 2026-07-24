@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-24 - Reviewed city fields override borrowed proximity names
+
+The broad proximity layers remain useful for low-risk coverage, but a reviewed
+direct ancient name for an installed city field takes precedence over a nearby,
+distinct settlement. This batch promotes twelve such labels across Italy,
+Gaul, Thrace, and Noricum without inferring municipal boundaries, political
+control, or population.
+
 ## 2026-07-24 - M12 does not require a terminal observer campaign
 
 The plan's reduced ship gate requires static finale validation, clean AD 1
