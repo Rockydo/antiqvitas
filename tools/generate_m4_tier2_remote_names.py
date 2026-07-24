@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
 """Generate the remote, explicitly provisional Pleiades naming layer.
 
-This is deliberately broader than the normal Tier-2 pass, not stronger
-evidence: a precise, AD 1 Pleiades settlement can label a nearby installed
-city field when its projected point is 3.25--6.00 pixels away.  Every output
-row records that it is a remote map proxy, and direct, bounded Tier-2, and
-wide Tier-2 ledgers all retain precedence.
+A precise, AD 1-active Pleiades settlement may label a nearby installed field,
+but only when the same place has a separate Pleiades name resource attested at
+the campaign start. Place-resource titles never become player-facing names.
 """
-
 from __future__ import annotations
 
 import argparse
@@ -15,8 +12,6 @@ import csv
 import gzip
 import json
 import math
-import re
-import sys
 from collections import defaultdict
 from io import StringIO
 from pathlib import Path
@@ -30,9 +25,11 @@ from generate_m4_tier2_names import (
     HEADER,
     capital_locations,
     csv_rows,
+    culture_languages,
     pop_cultures,
 )
-from generate_m4_tier2_wide_names import normalized, wide_title
+from generate_m4_tier2_wide_names import ledger_locations
+from pleiades_names import HistoricalName, PleiadesNameIndex
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / ".cache/pleiades/pleiades-places-latest.csv.gz"
@@ -47,13 +44,6 @@ SEARCH_RADIUS_CELLS = 1
 LABEL = "Remote"
 SOURCE_SUFFIX = "T2R"
 EXTRA_LEDGER_PATHS: tuple[Path, ...] = ()
-
-
-def ledger_locations(path: Path) -> set[str]:
-    rows = csv_rows(path)
-    if not rows or tuple(rows[0]) != HEADER:
-        raise ValueError(f"{path.relative_to(ROOT)} must use header {','.join(HEADER)}")
-    return {row["location"].strip() for row in rows}
 
 
 def ad_one(row: dict[str, str]) -> bool:
@@ -74,19 +64,32 @@ def render() -> str:
         x, y = float(value["x"]), float(value["y"])
         grid[(int(x // GRID_SIZE_PX), int(y // GRID_SIZE_PX))].append((key, x, y))
     installed = set(json.loads(ENGINE_LOCATIONS.read_text(encoding="utf-8-sig")))
-    installed_names = capital_geography.location_names()
-    cultures = {row["key"] for row in csv_rows(CULTURES)}
-    excluded = capital_locations() | ledger_locations(CURATED) | ledger_locations(QUALIFIED) | ledger_locations(TIER2) | ledger_locations(TIER2_WIDE)
+    preferences = culture_languages()
+    excluded = (
+        capital_locations()
+        | ledger_locations(CURATED)
+        | ledger_locations(QUALIFIED)
+        | ledger_locations(TIER2)
+        | ledger_locations(TIER2_WIDE)
+    )
     for path in EXTRA_LEDGER_PATHS:
         excluded.update(ledger_locations(path))
     population_cultures = pop_cultures()
     projection = capital_geography.projection(locations)
-    candidates: dict[str, list[tuple[float, dict[str, str]]]] = defaultdict(list)
+    name_index = PleiadesNameIndex.load()
+    candidates: dict[
+        str,
+        list[tuple[float, dict[str, str], HistoricalName]],
+    ] = defaultdict(list)
     with gzip.open(SOURCE, "rt", encoding="utf-8", newline="") as handle:
         for row in csv.DictReader(handle):
-            if row.get("locationPrecision") != "precise" or "settlement" not in row.get("featureTypes", "") or not ad_one(row):
-                continue
-            if not row.get("reprLat") or not row.get("reprLong") or not wide_title(row.get("title", "")):
+            if (
+                row.get("locationPrecision") != "precise"
+                or "settlement" not in row.get("featureTypes", "")
+                or not ad_one(row)
+                or not row.get("reprLat")
+                or not row.get("reprLong")
+            ):
                 continue
             latitude, longitude = float(row["reprLat"]), float(row["reprLong"])
             x, y = capital_geography.project(latitude, longitude, *projection[:6])
@@ -94,38 +97,52 @@ def render() -> str:
             cell_x, cell_y = int(x // GRID_SIZE_PX), int(y // GRID_SIZE_PX)
             nearby = [
                 item
-                for grid_x in range(cell_x - SEARCH_RADIUS_CELLS, cell_x + SEARCH_RADIUS_CELLS + 1)
-                for grid_y in range(cell_y - SEARCH_RADIUS_CELLS, cell_y + SEARCH_RADIUS_CELLS + 1)
+                for grid_x in range(
+                    cell_x - SEARCH_RADIUS_CELLS,
+                    cell_x + SEARCH_RADIUS_CELLS + 1,
+                )
+                for grid_y in range(
+                    cell_y - SEARCH_RADIUS_CELLS,
+                    cell_y + SEARCH_RADIUS_CELLS + 1,
+                )
                 for item in grid.get((grid_x, grid_y), [])
             ]
             if not nearby:
                 continue
-            location, local_x, local_y = min(nearby, key=lambda item: (item[1] - x) ** 2 + (item[2] - y) ** 2)
+            location, local_x, local_y = min(
+                nearby,
+                key=lambda item: (item[1] - x) ** 2 + (item[2] - y) ** 2,
+            )
             distance = math.hypot(local_x - x, local_y - y)
             culture = population_cultures.get(location)
-            title = row["title"].strip()
             if (
                 location not in installed
                 or location in excluded
                 or not MIN_OFFSET_PX < distance <= MAX_OFFSET_PX
-                or not culture or culture not in cultures
-                or normalized(title) == normalized(installed_names.get(location, location))
+                or not culture
+                or culture not in preferences
             ):
                 continue
-            candidates[location].append((distance, row))
+            name = name_index.best(row["id"], row.get("title", ""), preferences[culture])
+            if name is not None:
+                candidates[location].append((distance, row, name))
     output: list[dict[str, str]] = []
-    for location, rows in candidates.items():
-        distance, row = min(rows, key=lambda item: (item[0], item[1]["id"]))
+    for location, values in candidates.items():
+        distance, row, name = min(
+            values,
+            key=lambda item: (item[0], item[1]["id"], item[2].name_id),
+        )
         output.append(
             {
                 "location": location,
                 "culture": population_cultures[location],
-                "historical_name": row["title"].strip(),
-                "source": f"PLE:{row['id']};{SOURCE_SUFFIX}",
+                "historical_name": name.form,
+                "source": f"PLE:{row['id']};PLN:{name.source_id};{SOURCE_SUFFIX}",
                 "confidence": "tier2",
                 "note": (
-                    f"{LABEL} Tier-2 AD 1 Pleiades settlement adapter; nearest installed city field "
-                    f"at {distance:.2f}px; {LABEL.casefold()} lower-confidence map proxy."
+                    f"{LABEL} Tier-2 AD 1 Pleiades settlement adapter; period-valid name "
+                    f"resource {name.source_id}; nearest installed city field at "
+                    f"{distance:.2f}px; {LABEL.casefold()} lower-confidence map proxy."
                 ),
             }
         )
@@ -148,7 +165,7 @@ def main() -> int:
         parser.error("provide exactly one of --write or --check")
     try:
         expected = render()
-    except (OSError, ValueError, json.JSONDecodeError) as exc:
+    except (OSError, ValueError, csv.Error, json.JSONDecodeError) as exc:
         print(f"m4_tier2_remote_names: FAIL\n  - {exc}")
         return 1
     if args.write:
@@ -158,7 +175,10 @@ def main() -> int:
     if not OUTPUT.is_file() or OUTPUT.read_text(encoding="utf-8-sig") != expected:
         print(f"m4_tier2_remote_names: FAIL\n  - stale or missing {OUTPUT.relative_to(ROOT)}")
         return 1
-    print(f"m4_tier2_remote_names: PASS ({max(0, len(expected.splitlines()) - 1)} {LABEL.casefold()} lower-confidence adapters)")
+    print(
+        f"m4_tier2_remote_names: PASS "
+        f"({max(0, len(expected.splitlines()) - 1)} {LABEL.casefold()} lower-confidence adapters)"
+    )
     return 0
 
 
