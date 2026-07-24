@@ -1104,3 +1104,14 @@ removed, and all generated output regenerated.
 Evidence: `docs/screens/M6_han_father_fixture/m6_father_government_menu.png`.
 Do not retry a father-only relation. The remaining issue is not resolved by a
 vanilla-style direct parent link.
+
+### 2026-07-24 follow-up: a pre-AD 1 regency date is outside the campaign contract
+
+Installed vanilla regencies can begin before their own scenario date, so an
+isolated Han fixture tested the historically defensible `-1.1.1` regency start
+for Wang Mang's AD 1 position. The project date parser and start-mirror
+generator correctly reject it: ANTIQVITAS deliberately permits only
+`1.1.1`--`476.9.4` scripted dates. It was restored before launch; the normal
+AD 1 adapter and generated output remain green. Do not weaken the timeline
+contract or retry a pre-start-date variation merely to mirror an installed
+later-start scenario.

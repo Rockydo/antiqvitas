@@ -6326,3 +6326,18 @@ reviewed 128px BC7 DDS.
 
 - README, packaging, finale, and surface-audit text now match the `M12-done`
   rapid-test gate. External Workshop upload remains intentionally out of scope.
+
+## 2026-07-24 - M5/M6 contract boundary review
+
+- Re-read the installed `create_market` action and its scripted callers: market
+  creation is a runtime construction operation, not a supported pre-game
+  `market_manager` seed. The known self-relation assertion therefore remains a
+  documented M5 engine limitation rather than a reason to add another unsafe
+  start fixture.
+- Confirmed the 80 named Roman building contracts (234 direct building icons
+  including regional families) in the reviewed Roman contact sheet. The art is
+  dedicated, period-appropriate, and distinct by building family; the existing
+  ledger remains the source of truth.
+- A pre-AD 1 Wang Mang regency start was rejected by the intentionally strict
+  campaign date parser before launch. It was restored immediately; full
+  validation is green and the no-repeat boundary is recorded in `BLOCKERS.md`.
