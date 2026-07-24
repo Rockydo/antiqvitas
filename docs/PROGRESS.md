@@ -6186,3 +6186,11 @@ reviewed 128px BC7 DDS.
   committed as `18d1dd2` (`fix(m5): correct ancient market anchors`).
 - `docs/TODO.md` remains intentionally unstaged because it contained
   pre-existing user edits; the completed work is instead recorded here.
+
+## 2026-07-24 - M4 exact Tarim oasis-name pass
+
+- Promoted Kashgar, Khotan, Kucha, Loulan, and Turpan from retained or remote
+  labels to five direct source-backed AD 1 oasis names; the unrelated Khotan
+  proxy was removed.
+- Full validation and enabled-mod smoke passed with zero new error-log lines;
+  committed as `10dc4c6` (`fix(m4): source Tarim oasis labels`).
