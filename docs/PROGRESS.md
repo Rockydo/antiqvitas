@@ -7,6 +7,15 @@
   subsystem probes; its remaining concrete gap is the documented legacy
   culture/religion no-pop diagnostics.
 
+## 2026-07-24 - M5 Vetera frontier-building pass
+
+- Added the AD 1-active Augustan `Castra Vetera` at the reviewed Wesel near-site
+  anchor, with a bounded low timber-camp contract, direct source ledger, and a
+  newly generated, reviewed, unique 128px BC7 illustration.
+- The building ledger is now 79 named Roman specials; the complete direct UI
+  inventory is 558 chains. Full validation and enabled-mod smoke are green with
+  zero new error-log lines.
+
 ## 2026-07-24 - M8 knowledge accepted with a rapid research-panel probe
 
 - Opened the live AD 1 Advances UI through the locally verified input binding.

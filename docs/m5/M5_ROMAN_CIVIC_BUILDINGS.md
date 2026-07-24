@@ -298,3 +298,17 @@ and [Forum Iulium](https://www.digitalaugustanrome.org/records/forum-iulium/).
 The remaining city-point identifications are explicitly marked contested in
 the ledger; none asserts a settled plan, ritual, staffing, or later rebuilding.
 The committed sheet retains only its intended first twelve tiles.
+
+## Vetera camp source, boundary, and art
+
+`LVR-VETERA` is the LVR Office for the Preservation of Archaeological
+Monuments' [Vetera I excavation record](https://bodendenkmalpflege.lvr.de/de/aktuelles/fund_des_monats/2019/April.html), which dates the camp south of modern Xanten to 13/12 BC and its destruction to AD 69/70. The installed map has no Xanten key; its `wesel` point is therefore only a reviewed near-site display anchor.
+
+`Castra Vetera` uses the existing low timber-and-earth stockade contract. It
+does not assert Roman ownership of the Cheruscan map field, a legion count,
+camp plan, later stone work, a limes line, or the later Colonia Ulpia Traiana.
+Its dedicated source is retained at
+`assets_queue/generated_sources/antq_castra_vetera_source.png`; its reviewed
+128px derivative is `assets_queue/generated/antq_castra_vetera.png` and the
+engine asset is
+`main_menu/gfx/interface/icons/buildings/antq_castra_vetera.dds`.

@@ -4243,3 +4243,13 @@ uniformity, or a precise correspondence between any M5 economic proxy and the
 ancient urban fabric. Sources: PLE:658409; PLE:678106; PLE:393480;
 PLE:678393; P8.1; P8.2; CAH-XI; MIC-CLASSE. [secure direct toponym; contested
 map-field and economic-proxy scope]
+
+## 2026-07-24 - Castra Vetera remains a bounded near-site frontier proxy
+
+LVR dates Vetera I at Xanten to 13/12 BC and its destruction to AD 69/70, so
+the timber-and-earth camp is secure at the AD 1 boundary. The installed map
+does not offer Xanten; `wesel` is consequently a close display anchor only.
+The special neither transfers the Cheruscan field to Rome nor reconstructs a
+garrison, plan, masonry phase, limes line, route, or the later colonia.
+Source: LVR, [Vetera I excavation record](https://bodendenkmalpflege.lvr.de/de/aktuelles/fund_des_monats/2019/April.html).
+[secure camp chronology; contested near-site scope]
