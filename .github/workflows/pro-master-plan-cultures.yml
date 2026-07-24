@@ -1,0 +1,77 @@
+name: PRO master-plan culture bootstrap
+
+on:
+  push:
+    branches:
+      - "agent/pro-master-plan-cultures"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out focused repository paths
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            .pro_payload
+            .github/workflows/pro-master-plan-cultures.yml
+            Makefile
+            README.md
+            config
+            docs
+            tools
+            in_game/common/cultures
+            in_game/setup/countries
+            main_menu/common/named_colors
+            main_menu/localization
+            main_menu/setup/start/06_pops.txt
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Materialize source-led implementation
+        run: |
+          cat .pro_payload/master-*.b64 | base64 -d > /tmp/pro-master.tar.gz
+          tar -xzf /tmp/pro-master.tar.gz -C .
+
+      - name: Regenerate and verify culture outputs
+        run: |
+          python tools/generate_pro_culture_expansion.py --write
+          python tools/generate_pro_culture_expansion.py --check
+          git diff --check
+
+      - name: Commit implementation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            Makefile \
+            README.md \
+            docs/cultures.md \
+            docs/culture_remap.csv \
+            docs/m4/PRO_MASTER_PLAN_CULTURE_COMPLETION.md \
+            docs/m4/cultures.csv \
+            docs/m4/definition_symbols.json \
+            docs/m4/pro_master_plan_cultures.csv \
+            docs/m4/pro_master_plan_remap.csv \
+            docs/m4/pro_master_plan_tag_profiles.csv \
+            docs/m4/pro_master_plan_regional_profiles.csv \
+            docs/m4/tag_profiles.csv \
+            docs/m4/regional_profiles.csv \
+            in_game/common/cultures/antq_m4_cultures.txt \
+            in_game/setup/countries/antq_00_world.txt \
+            main_menu/common/named_colors/antq_m4_colors.txt \
+            main_menu/localization \
+            main_menu/setup/start/06_pops.txt \
+            tools/generate_pro_culture_expansion.py
+          git commit -m "feat: implement master-plan culture completion"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
