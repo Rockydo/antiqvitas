@@ -6194,3 +6194,14 @@ reviewed 128px BC7 DDS.
   proxy was removed.
 - Full validation and enabled-mod smoke passed with zero new error-log lines;
   committed as `10dc4c6` (`fix(m4): source Tarim oasis labels`).
+
+## 2026-07-24 - M7 deployable force-diversity acceptance
+
+- Added a generated M7 evidence audit and strengthened the static gate: all
+  six Roman, four Arsacid, and four Marcomannic required roles must now be
+  both country-available and present in their AD 1 force seeds.
+- The mercenary audit separately requires twelve reviewed companies across
+  skirmisher, heavy-foot, and mounted profiles. `make validate` passed with
+  44 ancient unit types and 12 reviewed companies; no game-visible unit output
+  changed, so the reduced subsystem policy did not require another smoke run.
+- Committed as `73685ad` (`test(m7): enforce deployable force diversity`).

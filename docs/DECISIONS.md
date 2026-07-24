@@ -2763,3 +2763,14 @@ market function remains. The two distant Indian proxies retain their intended
 hubs but use the qualified-name layer and explicit caveats. This applies the
 local-map constraint without converting a pragmatic engine anchor into a false
 historical identity.
+
+## 2026-07-24 - Treat a M7 role as accepted only when it deploys at AD 1
+
+The M7 catalogue check previously proved that the Roman, Arsacid, and
+Marcomannic role floors had bounded country availability, but it did not prove
+that every such type reached the generated AD 1 start manager. The acceptance
+gate now requires both. This preserves the force ledgers as technical,
+non-reconstructed role adapters while making a removed seed an immediate
+validation failure. The mercenary floor is also grouped into skirmisher,
+heavy-foot, and mounted profiles; these groups describe gameplay roles rather
+than named contracts, ethnic force ratios, or historical orders of battle.
