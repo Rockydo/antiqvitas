@@ -78,7 +78,7 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     ANTIQVITAS text, and two rapid loading captures under the reduced QA policy
     show distinct ancient quotes with no vanilla text.
 
-- [ ] Replace the vanilla bookmark/country-history agenda for every playable start.
+- [x] Replace the vanilla bookmark/country-history agenda for every playable start.
   - The Rome report is exactly vanilla
     `main_menu/localization/english/country_history_l_english.yml` key
     `country_history_europe` ("As the Renaissance dawns..."); the mod has no
@@ -92,6 +92,10 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
   - Acceptance: all roster tags resolve to nonempty ANTIQVITAS text; screenshots
     for Rome, Han, Arsacid Iran, one Germanic, one Gallic, one African, and one
     American/Oceanian SoP; prohibited-era text count zero.
+  - Completed with 157 exact engine-tag branches, 11 client mirrors, and runtime
+    captures for Rome, Han, Parthia, Marcomanni, Atrebates, Kush, and
+    Teotihuacan. AD 1 has no independent Gallic roster tag because Gaul is Roman;
+    Atrebates is the closest valid Belgic/Celtic playable probe.
 
 - [ ] Fix 0% loyalty for Roman subjects and audit all 25 start dependencies.
   - Do not treat 0% as intended. Generated `antq_client_kingdom`, `antq_satrapy`,

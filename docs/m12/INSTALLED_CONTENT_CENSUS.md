@@ -10,6 +10,6 @@
 - Uncovered sources: 0
 - Player-visible prohibited-token hits: 0
 - Loading tips: 64/64 exact keys
-- Country-history agenda: known_visible_country_history_debt (tracked P1 debt until its dedicated replacement batch)
+- Country-history agenda: complete_157_tag_exact_override (157 roster tags; 11 clients)
 
 Every installed source hash and key union is pinned in `installed_content_leakage.json`; a base-game or DLC change makes `make validate` fail until `--write` explicitly accepts a reviewed classification.

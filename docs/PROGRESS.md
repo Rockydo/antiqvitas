@@ -6443,3 +6443,12 @@ reviewed 128px BC7 DDS.
   regular builder exposes no legacy units. Unit-error scan and smoke are clean.
 - Covered all 64 base+DLC loading-tip keys in 11 clients. Two rapid loads showed
   distinct ANTIQVITAS quotations and ancient panoramas.
+
+## 2026-07-24 - AD 1 country-history agendas
+
+- Exact-replaced the installed selector and localization with 157 roster-tagged
+  AD 1 contexts in all 11 clients; zero prohibited-era terms remain.
+- Added the coverage/source ledger and made 157-tag completeness a mandatory
+  installed-content census contract.
+- Rapid dynamic Agenda probes passed for Rome, Han, Parthia, Marcomanni,
+  Atrebates, Kush, and Teotihuacan; validation and clean smoke are green.

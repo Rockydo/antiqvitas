@@ -2868,3 +2868,11 @@ their original fields. They remain allowlisted technical ancestors and are not
 player-buildable additions. The other 311 installed unit definitions are
 exact-name mirrored with authoritative `hide = yes` and `buildable = no`; all
 upgrade links are removed so no disabled legacy target produces runtime errors.
+
+## 2026-07-24 - Resolve start agendas by exact engine tag
+
+The installed `country_history` customizable-localization block is exact-name
+replaced with one branch per 157-tag AD 1 roster entry and an ancient fallback.
+The generated installed-filename localization mirror owns every client, so no
+regional vanilla history key can win by load order. The census independently
+requires exact roster, selector, key, and 11-client coverage.

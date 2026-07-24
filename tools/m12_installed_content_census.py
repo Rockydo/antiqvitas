@@ -10,6 +10,7 @@ normal validation loop until it is deliberately classified.
 from __future__ import annotations
 
 import argparse
+import csv
 import hashlib
 import json
 import re
@@ -75,6 +76,23 @@ TEXTURE = re.compile(r"gfx/[A-Za-z0-9_./-]+\.dds")
 ICON = re.compile(r"(?m)^\s*icon\s*=\s*\"?([A-Za-z0-9_./-]+)")
 LOC = re.compile(r"(?m)^\s*([A-Za-z0-9_.-]+)\s*:")
 TIP = re.compile(r"(?m)^\s*(LOADING_TIP_[A-Za-z0-9_]+)\s*:")
+HISTORY_TRIGGER = re.compile(
+    r"localization_key\s*=\s*(antq_country_history_[A-Za-z0-9_]+)"
+    r"\s+trigger\s*=\s*\{\s*tag\s*=\s*([A-Za-z0-9_]+)\s*\}"
+)
+CLIENT_LANGUAGES = (
+    "english",
+    "french",
+    "german",
+    "spanish",
+    "polish",
+    "russian",
+    "braz_por",
+    "simp_chinese",
+    "japanese",
+    "korean",
+    "turkish",
+)
 
 
 def sha256(data: bytes) -> str:
@@ -184,6 +202,56 @@ def localization_contract() -> dict[str, object]:
         if history_target.is_file()
         else []
     )
+    history_selector = (
+        ROOT / "in_game/common/customizable_localization/country_history.txt"
+    )
+    history_triggers = (
+        sorted(
+            (tag, key)
+            for key, tag in HISTORY_TRIGGER.findall(
+                history_selector.read_text(encoding="utf-8-sig")
+            )
+        )
+        if history_selector.is_file()
+        else []
+    )
+    history_ledger = ROOT / "docs/m12/country_history_agendas.csv"
+    history_rows: list[dict[str, str]] = []
+    if history_ledger.is_file():
+        with history_ledger.open(encoding="utf-8-sig", newline="") as handle:
+            history_rows = list(csv.DictReader(handle))
+    expected_history = sorted(
+        (row.get("engine_tag", ""), row.get("localization_key", ""))
+        for row in history_rows
+    )
+    expected_keys = {key for _, key in expected_history}
+    client_coverage: dict[str, int] = {}
+    clients_complete = True
+    for language in CLIENT_LANGUAGES:
+        target = (
+            ROOT
+            / "main_menu"
+            / "localization"
+            / language
+            / f"country_history_l_{language}.yml"
+        )
+        keys = (
+            set(LOC.findall(target.read_text(encoding="utf-8-sig")))
+            if target.is_file()
+            else set()
+        )
+        client_coverage[language] = len(expected_keys & keys)
+        clients_complete &= expected_keys <= keys
+    history_complete = (
+        history_target.is_file()
+        and history_selector.is_file()
+        and len(history_rows) == 157
+        and len(expected_keys) == 157
+        and len({tag for tag, _ in expected_history}) == 157
+        and history_triggers == expected_history
+        and expected_keys <= set(history_override_keys)
+        and clients_complete
+    )
     return {
         "loading_tip_installed_keys": sorted(tips),
         "loading_tip_override_keys": sorted(overridden),
@@ -192,10 +260,14 @@ def localization_contract() -> dict[str, object]:
         "country_history_keys": history_keys,
         "country_history_exact_override": history_target.is_file(),
         "country_history_override_keys": history_override_keys,
+        "country_history_roster_count": len(history_rows),
+        "country_history_trigger_count": len(history_triggers),
+        "country_history_client_coverage": client_coverage,
+        "country_history_complete": history_complete,
         "country_history_status": (
-            "exact_override"
-            if history_target.is_file()
-            else "known_visible_country_history_debt"
+            "complete_157_tag_exact_override"
+            if history_complete
+            else "uncovered"
         ),
     }
 
@@ -268,6 +340,8 @@ def inventory() -> dict[str, object]:
     localization = localization_contract()
     if not bool(localization["loading_tip_complete"]):
         uncovered.append("localization:loading_tips")
+    if not bool(localization["country_history_complete"]):
+        uncovered.append("localization:country_history")
     disease_manifest = ROOT / "docs/m12/disease_dependency_manifest.json"
     disease = (
         json.loads(disease_manifest.read_text(encoding="utf-8"))
@@ -327,7 +401,8 @@ def summary_bytes(value: dict[str, object]) -> bytes:
         (
             "- Country-history agenda: "
             f"{loc['country_history_status']} "
-            "(tracked P1 debt until its dedicated replacement batch)"
+            f"({loc['country_history_roster_count']} roster tags; "
+            f"{len(loc['country_history_client_coverage'])} clients)"
         ),
         "",
         "Every installed source hash and key union is pinned in "

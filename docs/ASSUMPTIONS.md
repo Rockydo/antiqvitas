@@ -4396,3 +4396,11 @@ urbanization, exchange, and disease-pool interpretation follows Kyle Harper,
 *Plagues upon the Earth* (Princeton, 2021). Exact values are conservative gameplay
 adapters and should be replaced by finer ecological inputs when the disease
 system receives its full content pass.
+
+## 2026-07-24 - Minor-polity agendas describe bounded regional pressures
+
+For starts without securely attested AD 1 court narratives, the agenda names
+the reviewed polity and capital from `docs/world_1ad/polities.csv`, then states
+regional ecological, exchange, and political pressures without asserting a
+uniform state, later borders, or foreknowledge. The roster row's source and
+confidence are preserved in `docs/m12/country_history_agendas.csv`.
