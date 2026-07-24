@@ -5,9 +5,11 @@ on:
     types: [opened, synchronize, reopened]
     paths:
       - ".github/workflows/pro-roman-location-name-audit.yml"
-      - "tools/m4_roman_location_name_audit.py"
+      - "tools/**"
       - "docs/m4/**"
-      - "docs/world_1ad/ownership_resolved.csv"
+      - "docs/vanilla_symbols/**"
+      - "docs/world_1ad/**"
+      - "main_menu/setup/start/06_pops.txt"
 
 permissions:
   contents: read
@@ -17,25 +19,63 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Resolve Roman naming inventory
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Download current Pleiades snapshots
         run: |
-          python tools/m4_roman_location_name_audit.py --output-dir .audit/roman-names
+          mkdir -p .cache/pleiades
+          curl --fail --location --retry 3 --retry-all-errors \
+            https://atlantides.org/downloads/pleiades/dumps/pleiades-places-latest.csv.gz \
+            --output .cache/pleiades/pleiades-places-latest.csv.gz
+          curl --fail --location --retry 3 --retry-all-errors \
+            https://atlantides.org/downloads/pleiades/dumps/pleiades-names-latest.csv.gz \
+            --output .cache/pleiades/pleiades-names-latest.csv.gz
+      - name: Regenerate period-valid Pleiades adapters
+        run: |
+          python -m py_compile \
+            tools/pleiades_names.py \
+            tools/generate_m4_tier2_names.py \
+            tools/generate_m4_tier2_wide_names.py \
+            tools/generate_m4_tier2_remote_names.py
+          python tools/generate_m4_tier2_names.py --write
+          python tools/generate_m4_tier2_wide_names.py --write
+          python tools/generate_m4_tier2_remote_names.py --write
+          python tools/generate_m4_tier2_far_names.py --write
+          python tools/generate_m4_tier2_ultra_names.py --write
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+
+          paths = sorted(Path("docs/m4").glob("tier2*_location_name_overrides.csv"))
+          for path in paths:
+              with path.open(encoding="utf-8-sig", newline="") as handle:
+                  rows = list(csv.DictReader(handle))
+              missing = [row["location"] for row in rows if "PLN:" not in row["source"]]
+              if missing:
+                  raise SystemExit(f"{path}: rows without Pleiades name resources: {missing[:10]}")
+              print(f"{path}: {len(rows)} period-valid adapters")
+          PY
+      - name: Assemble review artifact
+        run: |
+          mkdir -p .audit/roman-names/generated
           mkdir -p .audit/roman-names/workspace/docs/m4
           mkdir -p .audit/roman-names/workspace/docs/vanilla_symbols
           mkdir -p .audit/roman-names/workspace/docs/world_1ad
           mkdir -p .audit/roman-names/workspace/main_menu/setup/start
           mkdir -p .audit/roman-names/workspace/tools
+          cp docs/m4/tier2*_location_name_overrides.csv .audit/roman-names/generated/
           cp docs/m4/pleiades_name_candidates.csv .audit/roman-names/workspace/docs/m4/
           cp docs/m4/cultures.csv .audit/roman-names/workspace/docs/m4/
           cp docs/m4/dynamic_location_name_overrides.csv .audit/roman-names/workspace/docs/m4/
           cp docs/m4/qualified_location_name_overrides.csv .audit/roman-names/workspace/docs/m4/
-          cp docs/m4/tier2_*_location_name_overrides.csv .audit/roman-names/workspace/docs/m4/
+          cp docs/m4/tier2*_location_name_overrides.csv .audit/roman-names/workspace/docs/m4/
           cp docs/m4/tier3_location_name_overrides.csv .audit/roman-names/workspace/docs/m4/
           cp docs/vanilla_symbols/location_coordinates.json .audit/roman-names/workspace/docs/vanilla_symbols/
           cp docs/vanilla_symbols/locations.json .audit/roman-names/workspace/docs/vanilla_symbols/
           cp docs/world_1ad/ownership_resolved.csv .audit/roman-names/workspace/docs/world_1ad/
           cp main_menu/setup/start/06_pops.txt .audit/roman-names/workspace/main_menu/setup/start/
           cp tools/capital_geography.py .audit/roman-names/workspace/tools/
+          cp tools/pleiades_names.py .audit/roman-names/workspace/tools/
       - name: Upload Roman naming inventory
         uses: actions/upload-artifact@v4
         with:
