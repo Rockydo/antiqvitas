@@ -362,6 +362,8 @@
 			change_raw_material = goods:wheat
 			change_max_raw_material_workers = 4
 		}
+		# ANTIQVITAS M6: source-led Wang Mang regency at the AD 1 bookmark.
+		c:XAR = { set_regent = character:antq_wang_mang }
 		#catholics
 		if = {
 			limit = { NOT = { has_global_variable_list = pope_countries } }

@@ -2822,3 +2822,10 @@ keys. `T3M` marks every such label as a synthetic display proxy, never an
 attested ancient toponym. Direct, qualified, and Pleiades-derived names retain
 precedence. This implements the plan's permitted Tier-3 shortcut without
 silently presenting a vanilla modern label as AD 1 evidence.
+
+## 2026-07-24 - Bind the Han regency at start time
+
+The installed `set_regent` effect is used in the existing generated
+`on_game_start` hook after bookmark managers exist. It preserves the sourced
+Ping/Wang start data and the AD 1 date boundary while replacing the loader's
+generated regent with Wang Mang.

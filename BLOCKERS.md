@@ -1161,3 +1161,11 @@ Evidence: `docs/screens/20260724_133849/han_infant_country_header.png`.
 The restored canonical build subsequently passed full validation and a second
 enabled-mod smoke with zero new error-log lines. Do not retry this reason-only
 variation; no locally verified active-regency linkage remains.
+
+### 2026-07-24 resolution: runtime regent binding
+
+Status: **resolved.** The installed `set_regent` effect, applied to `XAR` in
+the existing generated `on_game_start` hook, binds Wang Mang without adding a
+pre-AD-1 term. Fresh AD 1 selector and player-start captures show Wang Mang;
+validation and baseline-aware smoke are green. Evidence:
+`docs/screens/M6_han_runtime_regent/tagged_han.png` and `han_live.png`.

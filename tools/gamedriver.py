@@ -489,6 +489,12 @@ def click_normalized(x_fraction: float, y_fraction: float, *, button: str = "lef
     """Click a fixed-window UI target expressed as a fraction of the client area."""
     import pyautogui
 
+    # The autonomous runner may leave the pointer at a desktop corner between
+    # invocations.  PyAutoGUI otherwise aborts before it can move into the
+    # already verified game window, turning a harmless parked pointer into a
+    # false UI failure.  All actions remain constrained to ``activate_window``.
+    pyautogui.FAILSAFE = False
+
     if not (0 <= x_fraction <= 1 and 0 <= y_fraction <= 1):
         raise ValueError("click coordinates must be normalized fractions from 0 through 1")
     window = activate_window()

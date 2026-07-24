@@ -6393,3 +6393,10 @@ reviewed 128px BC7 DDS.
   with no existing ANTIQVITAS overlay contract. It is intentionally left intact
   rather than risk a broad skin replacement; rank titles, CoAs, and direct
   content art supply the safe period-facing treatment.
+
+## 2026-07-24 - M6 Han regency binding
+
+- Applied the installed `set_regent` effect at the proven AD 1 start hook; the
+  fresh Western Han selector and player start now retain Wang Mang.
+- Full validation and baseline-aware smoke pass; M6 is accepted under the
+  rapid-probe policy.
