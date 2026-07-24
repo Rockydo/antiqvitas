@@ -140,6 +140,19 @@ def runtime_rgo_effects(newline: str) -> list[str]:
     return effects
 
 
+def han_regency_effect(newline: str) -> list[str]:
+    """Bind the source-led Wang Mang regent after the bookmark state exists.
+
+    ``set_regent`` is the installed runtime API used by the native regency
+    implementations.  It avoids inventing a pre-campaign ruler term solely to
+    satisfy the bookmark loader's 1337-era succession-history assumption.
+    """
+    return [
+        f"\t\t# ANTIQVITAS M6: source-led Wang Mang regency at the AD 1 bookmark.{newline}",
+        f"\t\tc:XAR = {{ set_regent = character:antq_wang_mang }}{newline}",
+    ]
+
+
 def render() -> bytes:
     source = source_path()
     raw = source.read_bytes()
@@ -165,6 +178,7 @@ def render() -> bytes:
         if in_start and not rgo_injected and RGO_SETUP_ANCHOR.match(code):
             rendered.append(line)
             rendered.extend(runtime_rgo_effects(newline_for(line)))
+            rendered.extend(han_regency_effect(newline_for(line)))
             rgo_injected = True
             depth += brace_delta(code)
             continue

@@ -155,3 +155,11 @@ Government-panel capture still showed generated `Liu Zhang, 35`. The exact
 source-backed fixture, its generic relation renderer, and its generated output
 were reverted. The retained evidence is
 `docs/screens/M6_han_father_fixture/m6_father_government_menu.png`.
+
+## 2026-07-24 Runtime regent binding
+
+The installed `set_regent` effect is now applied to Western Han in the generated
+`on_game_start` hook after the bookmark managers load. A fresh AD 1 selector
+shows `Wang Clan Wang Mang`, and a direct player start reaches the paused Han
+HUD. `make validate` and baseline-aware `make smoke` pass. Evidence:
+`docs/screens/M6_han_runtime_regent/tagged_han.png` and `han_live.png`.

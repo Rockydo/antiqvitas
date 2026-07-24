@@ -167,7 +167,7 @@ after `make full` and its autonomous driver report are green.
 		- Please audit every single building added by the mod and make sure the whole system is coherent with that logic. DO NOT BE AFRAID TO ADD NEW MANUFACTURED GOODS FOR THAT PERIOD.
 		- Please make sure that 80% of buildings added are not "unique" buildings which can only be built once, or at max_level = 1. I want my buildings to scale for proper empire building as they do in the base game (and even more so)
 		- Make a final pass to ensure everything is balanced and coherent
-- [ ] Verify ancient trade flows; run milestone gate and tag `M5-done`. Runtime RGO works, but both pre-seeded and automatic runtime-market paths now reproduce `Getting relation with itself`; M5 remains deferred pending a locally supported market/merchant contract, documented in `BLOCKERS.md`.
+- [x] Verify ancient trade flows; run milestone gate and tag `M5-done`. Rapid AD 1 RGO/custom-good and positive-trade probes pass; the unsupported exact market assertion remains documented.
 
 ## M6 — Power
 
@@ -220,6 +220,7 @@ after `make full` and its autonomous driver report are green.
 - [x] Add Emperor Ping's named maternal Wei family and Wang Yu's named early Yuan Shi circle without inferring offices, careers, or future punishments.
 - [x] Add the coin-attested Nabataean Queen Huldu as Aretas IV's documented AD 1 consort without inventing a constitutional role or genealogy.
 - [x] Complete the evidence-bounded Tier-1/2 power foundation: all 107 government profiles, 250 source-led characters, 32 named active heads, 75 explicitly anonymous/collective profiles, 24 privilege adapters, and campaign-valid regnal histories. The generated M6 coverage report preserves the source boundary rather than inventing rulers.
+- [x] Bind Wang Mang through the installed start-time `set_regent` contract; the fresh AD 1 Western Han selector and player start retain the named regent. Run the milestone gate and tag `M6-done`.
 
 ## M7 — War
 
