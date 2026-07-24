@@ -80,3 +80,13 @@ campaign start. Their installed fields at Norwich, Ripon, and Monmouth are also
 only approximate map proxies for the archaeological sites. The replacement
 labels therefore name the Iceni, Brigantes, and Silures explicitly instead of
 pretending that later civitas capitals already existed.
+
+## Southern-Levant adapter batch
+
+The fifth data batch removes three geographically impossible Iranian lookup
+paths at Philadelphia, Bostra, and Ptolemais and restores the missing Hellenic
+path at Heliopolis. The names themselves are period forms; the defect was the
+linguistic adapter. Amman and Acre receive paired local-Semitic and Hellenic
+paths, Bosra receives a Nabataean path, and Baalbek retains both its Phoenician
+cultic context and its Hellenistic public name. These adapters describe usable
+name traditions, not uniform ethnic populations.
