@@ -2237,6 +2237,15 @@ Luzon Coast, Maya Lowlands, Brantas Coast, Atropatene, and Malay Straits are
 regional AD 1 frames. They deliberately replace later town names where the
 local evidence does not support recovering a precise ancient settlement.
 
+High-visibility political anchors receive the same treatment when their
+installed local key is a later town: Charax Spasinu, Corduene, Sakastan,
+Aksum, Beja Highlands, Djenné-Djenno, Middle Niger, East African Coast,
+Somali Coast, Qaryat al-Faw, Suiones, Venedia, Finnic Coast, Caledonia, Ulaid,
+Bastarnae, Germania, and Inner Asian Oases are qualified period frames. They
+are not a reconstruction of capital locations or borders. Sources weighed:
+P8.2; P8.5--P8.8; OCD; Pleiades; CAH-XI; CHGIS. [secure broad chronology and
+political contexts; contested local-key correspondences]
+
 ## 2026-07-20 - Ephesus uses an Ayasuluk near-site market and harbor proxy
 
 UNESCO securely establishes Roman Ephesus as provincial capital and harbour
