@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-24 - M8 knowledge accepted with a rapid research-panel probe
+
+- Opened the live AD 1 Advances UI through the locally verified input binding.
+  The Roman high tier and Iceni 45/50 starting tree rendered coherently with
+  the generated ancient strands; M8 no longer depends on renderer-limited AI
+  playback. Evidence is in `docs/playtests/M8_KNOWLEDGE.md`.
+
 ## 2026-07-24 - M10 live targeted-event probe repaired
 
 - Corrected the Observer test sequence to enter New Game and country selection
