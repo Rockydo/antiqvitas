@@ -62,7 +62,14 @@ def rows(path: Path) -> list[dict[str, str]]:
         reader = csv.DictReader(handle)
         if tuple(reader.fieldnames or ()) != FIELDS:
             raise ValueError(f"{path.relative_to(ROOT)} must use header {','.join(FIELDS)}")
-        return [{field: (row.get(field) or "").strip() for field in FIELDS} for row in reader]
+        result: list[dict[str, str]] = []
+        for number, row in enumerate(reader, start=2):
+            if row.get(None):
+                raise ValueError(
+                    f"{path.relative_to(ROOT)}:{number}: excess CSV columns; quote comma-containing fields"
+                )
+            result.append({field: (row.get(field) or "").strip() for field in FIELDS})
+        return result
 
 
 def pairs(value: str, label: str) -> list[tuple[str, str]]:

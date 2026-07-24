@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-24 - Roman-building ledger integrity pass
+
+- Repaired all ten comma-split scope-note/art-brief rows in the named Roman
+  building ledger and added a fail-closed malformed-row check.
+- Full validation is green; gameplay definitions and localized player text are
+  unchanged, so no smoke launch was needed.
+
 ## 2026-07-24 - Complete building-art retention and visual review
 
 - Added master-image coverage to the direct UI ledger for all 79 named Roman
