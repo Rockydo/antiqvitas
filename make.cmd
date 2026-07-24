@@ -18,6 +18,7 @@ exit /b 2
 "%PYTHON%" tools\generate_tag_map.py --check || exit /b 1
 "%PYTHON%" tools\generate_m4_definitions.py --check || exit /b 1
 "%PYTHON%" tools\generate_dynamic_names.py --check || exit /b 1
+"%PYTHON%" tools\generate_m4_location_name_corrections.py --check || exit /b 1
 "%PYTHON%" tools\culture_template_inventory.py --check || exit /b 1
 "%PYTHON%" tools\generate_ancient_goods.py --check || exit /b 1
 "%PYTHON%" tools\generate_rgo_remap.py --check || exit /b 1
@@ -70,5 +71,5 @@ call "%~f0" smoke || exit /b 1
 exit /b 0
 
 :art_review
-"%PYTHON%" tools\m11_contact_sheet.py || exit /b 1
+"%PYTHON%" tools\m11_contact_sheet.py
 exit /b 0
