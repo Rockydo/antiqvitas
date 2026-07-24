@@ -22,15 +22,17 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           show-progress: false
-      - name: Download current Pleiades snapshots
+      - name: Prepare projection dependency and Pleiades snapshots
         run: |
-          mkdir -p .cache/pleiades .audit/roman-names
+          python -m pip install --disable-pip-version-check --quiet numpy
+          mkdir -p .cache/pleiades .audit/roman-names/source
           curl --fail --location --retry 3 --retry-all-errors --silent --show-error \
             https://atlantides.org/downloads/pleiades/dumps/pleiades-places-latest.csv.gz \
             --output .cache/pleiades/pleiades-places-latest.csv.gz
           curl --fail --location --retry 3 --retry-all-errors --silent --show-error \
             https://atlantides.org/downloads/pleiades/dumps/pleiades-names-latest.csv.gz \
             --output .cache/pleiades/pleiades-names-latest.csv.gz
+          cp .cache/pleiades/*.csv.gz .audit/roman-names/source/
       - name: Regenerate period-valid Pleiades adapters
         id: regenerate
         continue-on-error: true
