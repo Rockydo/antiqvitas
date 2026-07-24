@@ -20,8 +20,28 @@ NAMES_SOURCE = ROOT / ".cache/pleiades/pleiades-names-latest.csv.gz"
 
 MODERN_LANGUAGES = frozenset(
     {
-        "ar", "arb", "bg", "ca", "de", "el", "en", "es", "fa", "fr", "he",
-        "hr", "it", "ku", "ota", "pl", "pt", "ro", "ru", "sr", "tr", "uk",
+        "ar",
+        "arb",
+        "bg",
+        "ca",
+        "de",
+        "el",
+        "en",
+        "es",
+        "fa",
+        "fr",
+        "he",
+        "hr",
+        "it",
+        "ku",
+        "ota",
+        "pl",
+        "pt",
+        "ro",
+        "ru",
+        "sr",
+        "tr",
+        "uk",
     }
 )
 BAD_CHARACTERS = frozenset("?*[]()0123456789")
@@ -35,6 +55,17 @@ MODERN_NAME_TYPE_RE = re.compile(r"(?:associated[-_ ]modern|modern)", re.IGNOREC
 UNCERTAIN_RE = re.compile(r"(?:uncertain|less[-_ ]certain)", re.IGNORECASE)
 FRAGMENTARY_RE = re.compile(r"(?:fragment|incomplete)", re.IGNORECASE)
 
+# Pleiades primarily uses BCP-47/ISO language tags. The legacy dump often
+# leaves the field blank, so these preferences are bonuses rather than gates.
+M4_LANGUAGE_PREFERENCES: dict[str, tuple[str, ...]] = {
+    "latin_language": ("la",),
+    "greek_language": ("grc", "grc-latn"),
+    "aramaic_language": ("arc", "syc", "phn", "hbo"),
+    "coptic_language": ("egy", "cop"),
+    "nubian_language": ("xmr",),
+    "persian_language": ("peo", "pal", "xpr"),
+}
+
 
 @dataclass(frozen=True)
 class HistoricalName:
@@ -45,11 +76,19 @@ class HistoricalName:
     min_date: float
     max_date: float
 
+    @property
+    def source_id(self) -> str:
+        return f"{self.place_id}/{self.name_id}"
+
 
 def normalized(value: str) -> str:
     decomposed = unicodedata.normalize("NFKD", value)
     asciiish = "".join(char for char in decomposed if not unicodedata.combining(char))
     return re.sub(r"[^a-z0-9]", "", asciiish.casefold())
+
+
+def preferred_languages(m4_language: str) -> tuple[str, ...]:
+    return M4_LANGUAGE_PREFERENCES.get(m4_language.strip(), ())
 
 
 def _open(path: Path) -> TextIO:
@@ -84,11 +123,19 @@ def _place_id(row: dict[str, str]) -> str:
     return pid.rstrip("/").split("/")[-1] if pid else ""
 
 
+def _name_id(row: dict[str, str]) -> str:
+    # The legacy CSV exposes a stable name-resource slug as ``id`` and a UUID as
+    # ``uid``. The GIS export may expose the full resource id. Keep a short,
+    # source-readable final path component in either case.
+    raw = _first(row, "id", "uid")
+    return raw.rstrip("/").split("/")[-1] if raw else ""
+
+
 def _safe_row(row: dict[str, str]) -> HistoricalName | None:
     place_id = _place_id(row)
-    name_id = _first(row, "id", "uid")
+    name_id = _name_id(row)
     form = _first(row, "title", "romanized_form_1", "nameTransliterated")
-    language = _first(row, "language_tag", "nameLanguage")
+    language = _first(row, "language_tag", "nameLanguage").casefold()
     min_date = _date(row, "year_after_which", "minDate")
     max_date = _date(row, "year_before_which", "maxDate")
     if not place_id or not name_id or min_date is None or max_date is None:
@@ -101,7 +148,7 @@ def _safe_row(row: dict[str, str]) -> HistoricalName | None:
         return None
     if MODERN_SITE_RE.search(form):
         return None
-    if language.casefold() in MODERN_LANGUAGES:
+    if language in MODERN_LANGUAGES:
         return None
     if MODERN_NAME_TYPE_RE.search(_first(row, "name_type")):
         return None
@@ -111,7 +158,7 @@ def _safe_row(row: dict[str, str]) -> HistoricalName | None:
         return None
     period_keys = {
         token.strip().casefold()
-        for token in _first(row, "timePeriodsKeys").split(",")
+        for token in _first(row, "timePeriodsKeys", "time_period_keys").split(",")
         if token.strip()
     }
     if period_keys and period_keys <= {"modern"}:
@@ -126,9 +173,11 @@ class PleiadesNameIndex:
     @classmethod
     def load(cls, path: Path = NAMES_SOURCE) -> "PleiadesNameIndex":
         if not path.is_file():
-            raise FileNotFoundError(
-                f"missing cached Pleiades names snapshot: {path.relative_to(ROOT)}"
-            )
+            try:
+                display = path.relative_to(ROOT)
+            except ValueError:
+                display = path
+            raise FileNotFoundError(f"missing cached Pleiades names snapshot: {display}")
         grouped: dict[str, list[HistoricalName]] = {}
         with _open(path) as handle:
             for row in csv.DictReader(handle):
@@ -136,28 +185,42 @@ class PleiadesNameIndex:
                 if entry is not None:
                     grouped.setdefault(entry.place_id, []).append(entry)
         if not grouped:
-            raise ValueError(f"{path.relative_to(ROOT)} contains no usable AD 1 name records")
+            try:
+                display = path.relative_to(ROOT)
+            except ValueError:
+                display = path
+            raise ValueError(f"{display} contains no usable AD 1 name records")
         return cls(
             {
-                place_id: tuple(sorted(values, key=lambda value: (value.form, value.name_id)))
+                place_id: tuple(
+                    sorted(values, key=lambda value: (value.form.casefold(), value.name_id))
+                )
                 for place_id, values in grouped.items()
             }
         )
 
-    def best(self, place_id: str, place_title: str = "") -> HistoricalName | None:
+    def best(
+        self,
+        place_id: str,
+        place_title: str = "",
+        preferred: tuple[str, ...] = (),
+    ) -> HistoricalName | None:
         entries = self._entries.get(str(place_id).strip(), ())
         if not entries:
             return None
         title = normalized(place_title)
+        preferred_order = {language.casefold(): index for index, language in enumerate(preferred)}
 
-        def score(entry: HistoricalName) -> tuple[int, int, int, int, str, str]:
+        def score(entry: HistoricalName) -> tuple[int, int, int, int, int, str, str]:
             language = entry.language.casefold()
+            preferred_rank = preferred_order.get(language)
             return (
                 int(bool(title) and normalized(entry.form) == title),
-                int(language == "la"),
-                int(language in {"grc", "grc-latn"}),
+                int(preferred_rank is not None),
+                -(preferred_rank if preferred_rank is not None else len(preferred_order)),
+                int(not language),
                 -len(entry.form),
-                entry.form,
+                entry.form.casefold(),
                 entry.name_id,
             )
 
