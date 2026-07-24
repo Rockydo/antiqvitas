@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-07-24 - M5 Siscia frontier-garrison pass
+
+- Added `Castra Siscia` at the direct Sisak field as a deliberately contested,
+  source-bounded low Augustan garrison proxy, with a unique reviewed 128px
+  illustration and no claim about the debated legionary station.
+- The named Roman-special ledger now has 80 entries and the direct UI-art
+  ledger 559 chains. Full validation and enabled-mod smoke are green with zero
+  new error-log lines.
+
 ## 2026-07-24 - Roman-building ledger integrity pass
 
 - Repaired all ten comma-split scope-note/art-brief rows in the named Roman

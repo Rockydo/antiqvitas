@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-24 - Siscia uses a contested low Augustan-garrison contract
+
+The Oxford reference securely records Octavian's 35 BC Siscia garrison, but
+treats a Legio IX Hispana station in the early first century as possible. The
+direct Sisak city field therefore receives only the established low timber
+stockade contract and a unique river-confluence illustration. It does not fix
+a legion, camp plan, later colony, mint, canal, fleet station, customs post,
+stone fortress, or limes.
+
 ## 2026-07-24 - Roman building ledgers fail closed on malformed CSV rows
 
 Ten early Roman special rows had comma-containing scope notes that CSV parsing
