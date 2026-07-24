@@ -4404,3 +4404,12 @@ the reviewed polity and capital from `docs/world_1ad/polities.csv`, then states
 regional ecological, exchange, and political pressures without asserting a
 uniform state, later borders, or foreknowledge. The roster row's source and
 confidence are preserved in `docs/m12/country_history_agendas.csv`.
+
+## 2026-07-24 - Nawa is a playable inland proxy for Philip's tetrarchy
+
+The installed map has no ownable Caesarea Philippi field; the former
+`antilebanon_mountains1` anchor is mountain wasteland and erased Batanea at
+initialization. `nawa` is the nearest suitable inland field within the broader
+Batanaea/Gaulanitis theatre and is labeled Caesarea Philippi only for the
+Batanean polity. It is a gameplay proxy, not an exact site or boundary claim.
+Sources: P8.1; OCD; PLE; `docs/world_1ad/capital_geo_candidates.csv`.

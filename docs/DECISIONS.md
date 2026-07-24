@@ -2876,3 +2876,12 @@ replaced with one branch per 157-tag AD 1 roster entry and an ancient fallback.
 The generated installed-filename localization mirror owns every client, so no
 regional vanilla history key can win by load order. The census independently
 requires exact roster, selector, key, and 11-client coverage.
+
+## 2026-07-24 - Calibrate direct subject loyalty and require viable seats
+
+The displayed percentage is direct `subject_loyalty`, not inverse liberty
+desire. Custom contracts therefore use installed `subject_modifier = {
+loyalty_to_overlord = ... }`, bounded `strength_vs_overlord = -0.05`, and
+contract-specific maritime tolerance. Every start subject must also have a
+capital proven ownable by the installed start manager; this prevents valid
+dependency syntax from pointing at a country the engine culls.

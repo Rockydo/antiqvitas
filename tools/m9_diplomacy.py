@@ -16,9 +16,12 @@ import json
 from pathlib import Path
 
 from dates import AntqDate, M2_MIRROR_LANGUAGES
+from ownership_map import vanilla_owned_locations
 
 ROOT = Path(__file__).resolve().parents[1]
 SUBJECT_OUTPUT = ROOT / "in_game/common/subject_types/00_antiquitas_m9_subjects.txt"
+SUBJECT_BALANCE_OUTPUT = ROOT / "docs/m9/subject_start_balance.csv"
+SUBJECT_LEDGER = ROOT / "docs/world_1ad/subjects.csv"
 CB_OUTPUT = ROOT / "in_game/common/casus_belli/00_antiquitas_m9.txt"
 WARGOAL_OUTPUT = ROOT / "in_game/common/wargoals/00_antiquitas_m9.txt"
 PEACE_OUTPUT = ROOT / "in_game/common/peace_treaties/00_antiquitas_m9.txt"
@@ -28,6 +31,7 @@ LOC_ROOT = ROOT / "main_menu/localization"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
 TAG_MAP = ROOT / "docs/world_1ad/tag_map.json"
 REGIONS = ROOT / "docs/vanilla_symbols/regions.json"
+LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
 
 # The historical relations themselves and their citations are in
 # docs/world_1ad/subjects.csv.  These adapters are deliberately keyed by the
@@ -67,6 +71,15 @@ class SubjectContract:
     label: str
     description: str
     script: str
+    loyalty_to_overlord: int
+    strength_vs_overlord: str
+    maritime_path_tolerance: str
+    expected_start_min: int
+    expected_start_max: int
+    autonomy: str
+    tribute: str
+    war_duty: str
+    integration: str
 
 
 @dataclass(frozen=True)
@@ -162,11 +175,15 @@ def standard_contract(
     color: str,
     level: int,
     capacity: str,
+    loyalty_to_overlord: int,
+    strength_vs_overlord: str,
+    maritime_path_tolerance: str,
     external: str = "yes",
     annexable: str = "no",
     cancellation: str = "overlord",
     offensive: bool = False,
     modifiers: tuple[str, ...] = (),
+    subject_modifiers: tuple[str, ...] = (),
 ) -> str:
     """Use only fields harvested from installed vanilla subject contracts."""
     lines = [
@@ -195,7 +212,13 @@ def standard_contract(
         "\tcan_change_rank = yes",
         "\tcan_change_heir_selection = yes",
         f"\tdiplomatic_capacity_cost_scale = {capacity}",
+        f"\tstrength_vs_overlord = {strength_vs_overlord}",
+        f"\tmaritime_path_tolerance = {maritime_path_tolerance}",
         *modifiers,
+        "\tsubject_modifier = {",
+        f"\t\tloyalty_to_overlord = {loyalty_to_overlord}",
+        *(f"\t\t{item}" for item in subject_modifiers),
+        "\t}",
     ))
     return "\n".join(lines)
 
@@ -213,7 +236,10 @@ def contracts() -> tuple[SubjectContract, ...]:
         capacity="0.30",
         external="no",
         offensive=True,
-        modifiers=("\tsubject_modifier = { country_cabinet_efficiency = -0.05 }",),
+        subject_modifiers=("country_cabinet_efficiency = -0.05",),
+        loyalty_to_overlord=40,
+        strength_vs_overlord="-0.05",
+        maritime_path_tolerance="-0.15",
     )
     unlock = FOEDERATI_UNLOCK.engine()
     foederati_script = foederati_script.replace(
@@ -229,7 +255,13 @@ def contracts() -> tuple[SubjectContract, ...]:
             standard_contract(
                 subject_pays="subject_pays_vassal", color="subject_vassal", level=1, capacity="0.35", offensive=True,
                 modifiers=knowledge_exchange,
+                loyalty_to_overlord=50, strength_vs_overlord="-0.05", maritime_path_tolerance="-0.15",
             ),
+            50, "-0.05", "-0.15", 50, 85,
+            "Level 1; local ruler, own rank and diplomacy; patron protection",
+            "Vassal-scale negotiated tribute",
+            "Always defensive; callable for offensive war",
+            "Not annexable",
         ),
         SubjectContract(
             "antq_satrapy",
@@ -238,7 +270,13 @@ def contracts() -> tuple[SubjectContract, ...]:
             standard_contract(
                 subject_pays="subject_pays_vassal", color="subject_vassal", level=1, capacity="0.45", offensive=True,
                 modifiers=knowledge_exchange,
+                loyalty_to_overlord=45, strength_vs_overlord="-0.05", maritime_path_tolerance="-0.10",
             ),
+            45, "-0.05", "-0.10", 45, 85,
+            "Level 1; autonomous royal house and internal government",
+            "Vassal-scale negotiated tribute",
+            "Always defensive; callable for offensive war",
+            "Not annexable",
         ),
         SubjectContract(
             "antq_tributary",
@@ -247,13 +285,24 @@ def contracts() -> tuple[SubjectContract, ...]:
             standard_contract(
                 subject_pays="subject_pays_tributary", color="subject_tributary", level=0, capacity="0.20", cancellation="both",
                 modifiers=("\toverlord_protects_external = no", *knowledge_exchange),
+                loyalty_to_overlord=35, strength_vs_overlord="-0.05", maritime_path_tolerance="0.25",
             ),
+            35, "-0.05", "0.25", 30, 75,
+            "Level 0; independent diplomacy and wars; either party may cancel",
+            "Tributary-scale payment",
+            "Always defensive; no automatic offensive call",
+            "Not annexable",
         ),
         SubjectContract(
             "antq_foederati",
             "Foederati",
             "A settled military partner bound by land, service, and treaty.",
             foederati_script,
+            40, "-0.05", "-0.15", 45, 85,
+            "Level 1; internal partner within the imperial sphere",
+            "Vassal-scale service and payment",
+            "Always defensive; callable for offensive war",
+            "Not annexable",
         ),
         SubjectContract(
             "antq_autonomous_city",
@@ -261,7 +310,13 @@ def contracts() -> tuple[SubjectContract, ...]:
             "A self-governing city owing limited obligations to a stronger protector.",
             standard_contract(
                 subject_pays="subject_pays_tributary", color="subject_tributary", level=0, capacity="0.15", cancellation="both",
+                loyalty_to_overlord=40, strength_vs_overlord="-0.05", maritime_path_tolerance="0.10",
             ),
+            40, "-0.05", "0.10", 40, 80,
+            "Level 0; self-governing city; either party may cancel",
+            "Limited tributary-scale payment",
+            "Always defensive; no automatic offensive call",
+            "Not annexable",
         ),
     )
 
@@ -642,6 +697,63 @@ def engine_tag_map() -> dict[str, str]:
     }
 
 
+def subject_balance_rows(
+    records: tuple[SubjectContract, ...],
+) -> list[dict[str, str]]:
+    contracts_by_key = {record.key: record for record in records}
+    tags = engine_tag_map()
+    with ROSTER.open(encoding="utf-8-sig", newline="") as handle:
+        roster = {row["tag"]: row for row in csv.DictReader(handle)}
+    with SUBJECT_LEDGER.open(encoding="utf-8-sig", newline="") as handle:
+        source_rows = list(csv.DictReader(handle))
+    rows: list[dict[str, str]] = []
+    for source in source_rows:
+        contract_key = START_ADAPTERS[source["overlord"]]
+        contract = contracts_by_key[contract_key]
+        rows.append(
+            {
+                "overlord_design_tag": source["overlord"],
+                "overlord_engine_tag": tags[source["overlord"]],
+                "overlord_name": roster[source["overlord"]]["name"],
+                "subject_design_tag": source["subject"],
+                "subject_engine_tag": tags[source["subject"]],
+                "subject_name": roster[source["subject"]]["name"],
+                "start_capital": roster[source["subject"]]["map_capital"],
+                "installed_start_ownable": "yes",
+                "subject_type": contract_key,
+                "base_loyalty_to_overlord": str(contract.loyalty_to_overlord),
+                "strength_vs_overlord": contract.strength_vs_overlord,
+                "maritime_path_tolerance": contract.maritime_path_tolerance,
+                "expected_start_loyalty_min": str(contract.expected_start_min),
+                "expected_start_loyalty_max": str(contract.expected_start_max),
+                "autonomy": contract.autonomy,
+                "tribute": contract.tribute,
+                "war_duty": contract.war_duty,
+                "relations": "Dynamic opinion; no forced cultural or court homogenization",
+                "integration": contract.integration,
+                "source": source["source"],
+                "confidence": source["confidence"],
+                "note": source["note"],
+            }
+        )
+    return rows
+
+
+def subject_balance_csv(records: tuple[SubjectContract, ...]) -> str:
+    from io import StringIO
+
+    rows = subject_balance_rows(records)
+    output = StringIO(newline="")
+    writer = csv.DictWriter(
+        output,
+        fieldnames=tuple(rows[0]),
+        lineterminator="\n",
+    )
+    writer.writeheader()
+    writer.writerows(rows)
+    return output.getvalue()
+
+
 def international_organization_manager() -> str:
     """Render only source-bounded AD 1 IO instances.
 
@@ -767,6 +879,7 @@ def outputs(subjects: tuple[SubjectContract, ...]) -> dict[Path, str]:
         PEACE_OUTPUT: peace_script(treaties),
         IO_OUTPUT: organization_script(organizations),
         BIAS_OUTPUT: io_bias_script(organizations),
+        SUBJECT_BALANCE_OUTPUT: subject_balance_csv(subjects),
     }
     for language in ("english", *M2_MIRROR_LANGUAGES):
         rendered[LOC_ROOT / language / f"antq_m9_subjects_l_{language}.yml"] = localization(
@@ -782,6 +895,46 @@ def validate(records: tuple[SubjectContract, ...]) -> None:
     missing = sorted(set(START_ADAPTERS.values()) - set(keys))
     if missing:
         raise ValueError(f"start adapters lack M9 contract definitions: {', '.join(missing)}")
+    for record in records:
+        if not 1 <= record.loyalty_to_overlord <= 50:
+            raise ValueError(
+                f"{record.key} loyalty_to_overlord must stay in installed 1-50 scale"
+            )
+        if not (
+            0 < record.expected_start_min
+            <= record.expected_start_max
+            <= 100
+        ):
+            raise ValueError(f"{record.key} has invalid expected start-loyalty band")
+        for field, value in (
+            ("strength_vs_overlord", record.strength_vs_overlord),
+            ("maritime_path_tolerance", record.maritime_path_tolerance),
+        ):
+            try:
+                float(value)
+            except ValueError as exc:
+                raise ValueError(f"{record.key} has invalid {field}") from exc
+    balance = subject_balance_rows(records)
+    if len(balance) != 25:
+        raise ValueError(f"expected 25 start dependencies, found {len(balance)}")
+    if len({row["subject_engine_tag"] for row in balance}) != 25:
+        raise ValueError("start dependency subjects must have unique engine tags")
+    if {row["subject_type"] for row in balance} != set(START_ADAPTERS.values()):
+        raise ValueError("start dependency balance ledger lacks a contract family")
+    installed_locations = set(
+        json.loads(LOCATIONS.read_text(encoding="utf-8-sig"))
+    )
+    installed_start_ownable = vanilla_owned_locations(installed_locations)
+    invalid_subject_capitals = [
+        f"{row['subject_design_tag']}={row['start_capital']}"
+        for row in balance
+        if row["start_capital"] not in installed_start_ownable
+    ]
+    if invalid_subject_capitals:
+        raise ValueError(
+            "start dependency subjects require installed-proven ownable capitals: "
+            + ", ".join(invalid_subject_capitals)
+        )
     if not (AntqDate(1, 1, 1) < FOEDERATI_UNLOCK <= AntqDate(476, 9, 4)):
         raise ValueError("foederati unlock is outside the playable campaign")
     if not (AntqDate(1, 1, 1) < HOLY_SUPPRESSION_UNLOCK <= AntqDate(476, 9, 4)):

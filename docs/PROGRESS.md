@@ -6452,3 +6452,11 @@ reviewed 128px BC7 DDS.
   installed-content census contract.
 - Rapid dynamic Agenda probes passed for Rome, Han, Parthia, Marcomanni,
   Atrebates, Kush, and Teotihuacan; validation and clean smoke are green.
+
+## 2026-07-24 - AD 1 subject loyalty
+
+- Added installed-scale loyalty, strength, and maritime coefficients plus a
+  sourced 25-dependency balance ledger and ownable-capital gate.
+- Replaced Batanea's invalid mountain-wasteland seat with the `nawa` inland
+  proxy. Fresh Rome retained 11 subjects; Rome, Parthia, and Han panels showed
+  nonzero loyal starts. Full validation and smoke are green.

@@ -20,9 +20,14 @@ antq_client_kingdom = {
 	can_change_rank = yes
 	can_change_heir_selection = yes
 	diplomatic_capacity_cost_scale = 0.35
+	strength_vs_overlord = -0.05
+	maritime_path_tolerance = -0.15
 	institution_spread_to_overlord = monthly_institution_spread_weak
 	institution_spread_to_subject = monthly_institution_spread_weak
 	overlord_modifier = { monthly_prestige = 0.01 }
+	subject_modifier = {
+		loyalty_to_overlord = 50
+	}
 }
 
 antq_satrapy = {
@@ -43,9 +48,14 @@ antq_satrapy = {
 	can_change_rank = yes
 	can_change_heir_selection = yes
 	diplomatic_capacity_cost_scale = 0.45
+	strength_vs_overlord = -0.05
+	maritime_path_tolerance = -0.10
 	institution_spread_to_overlord = monthly_institution_spread_weak
 	institution_spread_to_subject = monthly_institution_spread_weak
 	overlord_modifier = { monthly_prestige = 0.01 }
+	subject_modifier = {
+		loyalty_to_overlord = 45
+	}
 }
 
 antq_tributary = {
@@ -66,10 +76,15 @@ antq_tributary = {
 	can_change_rank = yes
 	can_change_heir_selection = yes
 	diplomatic_capacity_cost_scale = 0.20
+	strength_vs_overlord = -0.05
+	maritime_path_tolerance = 0.25
 	overlord_protects_external = no
 	institution_spread_to_overlord = monthly_institution_spread_weak
 	institution_spread_to_subject = monthly_institution_spread_weak
 	overlord_modifier = { monthly_prestige = 0.01 }
+	subject_modifier = {
+		loyalty_to_overlord = 35
+	}
 }
 
 antq_foederati = {
@@ -90,7 +105,12 @@ antq_foederati = {
 	can_change_rank = yes
 	can_change_heir_selection = yes
 	diplomatic_capacity_cost_scale = 0.30
-	subject_modifier = { country_cabinet_efficiency = -0.05 }
+	strength_vs_overlord = -0.05
+	maritime_path_tolerance = -0.15
+	subject_modifier = {
+		loyalty_to_overlord = 40
+		country_cabinet_efficiency = -0.05
+	}
 }
 
 antq_autonomous_city = {
@@ -111,4 +131,9 @@ antq_autonomous_city = {
 	can_change_rank = yes
 	can_change_heir_selection = yes
 	diplomatic_capacity_cost_scale = 0.15
+	strength_vs_overlord = -0.05
+	maritime_path_tolerance = 0.10
+	subject_modifier = {
+		loyalty_to_overlord = 40
+	}
 }

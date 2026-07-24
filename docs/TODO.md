@@ -97,7 +97,7 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     Teotihuacan. AD 1 has no independent Gallic roster tag because Gaul is Roman;
     Atrebates is the closest valid Belgic/Celtic playable probe.
 
-- [ ] Fix 0% loyalty for Roman subjects and audit all 25 start dependencies.
+- [x] Fix 0% loyalty for Roman subjects and audit all 25 start dependencies.
   - Do not treat 0% as intended. Generated `antq_client_kingdom`, `antq_satrapy`,
     and `antq_tributary` omit a starting `loyalty_to_overlord` modifier, while
     locally inspected vanilla contracts use that field.
@@ -107,10 +107,14 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
   - Add a sourced balance ledger with expected start range, autonomy, tribute, war
     duties, relations, and integration rules for Roman clients, Arsacid sub-kings,
     and Han Western Regions tributaries. Preserve meaningful variation.
-  - Update `tools/m9_diplomacy.py`; add bounds validation and one-month runtime
-    probes for each contract family.
+  - Update `tools/m9_diplomacy.py`; add bounds validation and short tick probes
+    for each contract family.
   - Acceptance: no unexplained 0%, all 25 dependencies are within documented
     bands, and Rome/Arsacid/Han subject panels remain stable after a tick.
+  - Completed with a 25-row balance ledger, installed-ownable capital gate,
+    direct loyalty modifiers, and Rome/Arsacid/Han runtime captures. Batanea's
+    invalid mountain-wasteland seat was replaced by an ownable inland proxy;
+    fresh Rome retained all 11 subjects after the first tick.
 
 - [ ] Quarantine every anachronistic unit and rebuild recruitment availability.
   - [x] Mirror all 31 installed unit-type sources: 311 legacy definitions are
