@@ -2774,3 +2774,11 @@ non-reconstructed role adapters while making a removed seed an immediate
 validation failure. The mercenary floor is also grouped into skirmisher,
 heavy-foot, and mounted profiles; these groups describe gameplay roles rather
 than named contracts, ethnic force ratios, or historical orders of battle.
+# 2026-07-24 — Explicit synthetic Tier-3 location morphology
+
+The map-wide naming completion pass uses deterministic culture-group suffixes
+for unsourced Tier-3 populated fields and a neutral suffix for unpopulated map
+keys. `T3M` marks every such label as a synthetic display proxy, never an
+attested ancient toponym. Direct, qualified, and Pleiades-derived names retain
+precedence. This implements the plan's permitted Tier-3 shortcut without
+silently presenting a vanilla modern label as AD 1 evidence.
