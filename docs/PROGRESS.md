@@ -6413,3 +6413,12 @@ reviewed 128px BC7 DDS.
 
 - Separated the Finnic culture key from the existing Finnic religion namespace
   and derived all custom initializer presences from canonical symbols and pops.
+
+## 2026-07-24 - M12 ancient loading rotation and tips
+
+- Replaced all 60 inherited post-antique loading quotations with source-named
+  ancient translations/adaptations across 11 client mirrors.
+- Expanded the reviewed panorama collection from eight to sixteen. The active
+  engine rotation now includes dedicated Roman, Greek, Germanic, and Brittonic
+  AD 1 scenes plus India, West Africa, and Oaxaca; all source/master/DDS links
+  are checked by the loading-screen validator.

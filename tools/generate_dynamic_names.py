@@ -28,6 +28,7 @@ TIER2_FAR = ROOT / "docs/m4/tier2_far_location_name_overrides.csv"
 TIER2_ULTRA = ROOT / "docs/m4/tier2_ultra_location_name_overrides.csv"
 TIER3 = ROOT / "docs/m4/tier3_location_name_overrides.csv"
 TIER3_MAP = ROOT / "docs/m4/tier3_map_name_fallbacks.csv"
+CORRECTIONS = ROOT / "docs/m4/location_name_corrections.csv"
 ENGINE_LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
 CLIENT_LANGUAGES = (
     "english",
@@ -51,6 +52,27 @@ def rows(path: Path) -> list[dict[str, str]]:
 
 def esc(value: str) -> str:
     return value.replace('"', "'")
+
+
+def correction_locations() -> set[str]:
+    """Locations owned exclusively by the reviewed late correction layer.
+
+    EU5 reports duplicate localization keys and keeps the first definition, so
+    an alphabetical overlay cannot safely supersede the bulk dynamic layer.
+    Excluding these roots and culture adapters here gives the correction file
+    sole ownership of its reviewed names.
+    """
+    required = ("location", "culture", "historical_name", "source", "confidence", "note")
+    with CORRECTIONS.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if tuple(reader.fieldnames or ()) != required:
+            raise ValueError(f"{CORRECTIONS.relative_to(ROOT)} must use header {','.join(required)}")
+        locations = [str(row.get("location") or "").strip() for row in reader]
+    if not locations or any(not location for location in locations):
+        raise ValueError(f"{CORRECTIONS.relative_to(ROOT)} has blank correction locations")
+    if len(locations) != len(set(locations)):
+        raise ValueError(f"{CORRECTIONS.relative_to(ROOT)} has duplicate correction locations")
+    return set(locations)
 
 
 def ledger_entries(
@@ -172,6 +194,8 @@ def entries() -> list[dict[str, str]]:
     output.extend(ledger_entries(TIER2_FAR, "tier2", "tier2_far", "far Tier-2", culture_groups, group_languages, installed_locations, seen_locations))
     output.extend(ledger_entries(TIER2_ULTRA, "tier2", "tier2_ultra", "ultra-far Tier-2", culture_groups, group_languages, installed_locations, seen_locations))
     output.extend(ledger_entries(TIER3, "tier3", "tier3", "retained-label Tier-3", culture_groups, group_languages, installed_locations, seen_locations))
+    corrections = correction_locations()
+    output = [entry for entry in output if entry["location"] not in corrections]
     if not output:
         raise ValueError("no secure dynamic-name anchors were selected")
     return sorted(output, key=lambda entry: (entry["location"], entry["language"]))
@@ -183,7 +207,12 @@ def root_entries(entries_: list[dict[str, str]]) -> list[tuple[str, str]]:
         reader = csv.DictReader(handle)
         if tuple(reader.fieldnames or ()) != required:
             raise ValueError(f"{TIER3_MAP.relative_to(ROOT)} must use header {','.join(required)}")
-        roots = {row["location"].strip(): row["historical_name"].strip() for row in reader}
+        corrections = correction_locations()
+        roots = {
+            row["location"].strip(): row["historical_name"].strip()
+            for row in reader
+            if row["location"].strip() not in corrections
+        }
     if not roots or any(not location or not name for location, name in roots.items()):
         raise ValueError(f"{TIER3_MAP.relative_to(ROOT)} has blank root fallback data")
     for entry in entries_:

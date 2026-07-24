@@ -17,8 +17,8 @@ scene can appear.
 
 `tools/m11_loading_screens.py` owns the VFS texture links, validates all
 masters and DDS contracts, and renders the review sheet
-`docs/m11/loading_screens_contact_sheet.png`. Its eight source PNGs and exact
-3840x2160 review masters are retained under `assets_queue/`; its eight
+`docs/m11/loading_screens_contact_sheet.png`. Its sixteen source PNGs and exact
+3840x2160 review masters are retained under `assets_queue/`; its sixteen
 game-facing DDS files use the inspected vanilla 3840x2160 BC1/sRGB class with
 mipmaps.
 
@@ -34,6 +34,19 @@ mipmaps.
 | Lower Rhine | AD 1 Germanic riverside settlement and Roman-border exchange; no Viking imagery. |
 | Teotihuacan | c. AD 100 urban construction and obsidian work; no Aztec or contact-period elements. |
 | Campus Martius | Rome AD 1 civic water infrastructure and Agrippan public-building setting; no Hadrianic Pantheon dome. |
+| Arikamedu | Coromandel Coast AD 1 port exchange; no medieval temple or colonial ship. |
+| Jenne-jeno | Inland Niger Delta AD 1 settlement, river work, and ceramics; no mosque or trans-Saharan caravan. |
+| Monte Alban | Oaxaca AD 1 Zapotec civic and market scene; no Aztec, Maya, or contact-period imagery. |
+| Palmyra | Syrian oasis trade AD 1; no later monumental colonnade or Islamic fabric. |
+| Pompeii | Campanian street market AD 1 with intact Vesuvius; no eruption, Colosseum, or Christian fabric. |
+| Ephesus | Roman Asia AD 1 harbour-market setting; no Byzantine or Ottoman fabric. |
+| Germanic Lower Rhine | AD 1 riverside farming and craft settlement; no Viking vessel, horned helmet, or medieval building. |
+| Camulodunum | Brittonic oppidum AD 1; no legionary, Roman villa, Viking, or medieval castle. |
+
+The eleven engine-owned selectable scenes each resolve to a distinct reviewed
+panorama. The active rotation includes Pompeii, Ephesus, Germanic Lower Rhine,
+and Camulodunum alongside the global collection; retained alternates remain
+available for a later verified engine-scene expansion.
 
 The unreleased Ctesiphon and Petra drafts remain only as untracked source
 experiments. They are deliberately absent from every declaration, derivative,
@@ -57,7 +70,7 @@ The local game contract was inspected before implementation:
 - `game/loading_screen/gfx/images/*.txt` supplies eight texture layers per
   definition.
 
-`tools/m11_loading_screens.py --check` verifies eight reviewed 3840x2160 PNG
-masters, eight canonical 3840x2160 DDS textures, the 88 inherited VFS texture
+`tools/m11_loading_screens.py --check` verifies sixteen reviewed 3840x2160 PNG
+masters, sixteen canonical 3840x2160 DDS textures, the 88 inherited VFS texture
 overrides, and assignments for all eleven installed selectable scenes. It is part of
 `make validate`; menu smoke remains the runtime check.

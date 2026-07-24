@@ -2844,3 +2844,11 @@ are used only where a province-wide assignment would be less defensible.
 The Finnic culture uses `antq_finnic_culture`; the established Finnic religion
 retains `antq_finnic`. Culture and religion localization namespaces must remain
 disjoint so the canonical M4 generator can validate and regenerate both.
+
+## 2026-07-24 - Override all inherited loading-tip keys
+
+The installed loading screen selects exactly `LOADING_TIP_0` through
+`LOADING_TIP_59`. The loading-screen module texture VFS is direct, but its
+effective localization keys resolve from the main-menu layer. The generator
+therefore writes both the module mirror and a late main-menu same-key overlay,
+with byte-identical English fallback mirrors for every installed client.

@@ -8,6 +8,311 @@ after `make full` and its autonomous driver report are green.
 - [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review. (Validated by the 559-chain direct UI ledger and reviewed contact sheet; zero religion or privilege aliases remain.)
   - [x] Start and smoke-check the direct M8 migration: a ledger-driven, one-icon-at-a-time renderer path is live; reviewed Imperial Cult and Public Granaries icons are the first two of 250 direct advance illustrations.
 
+## Manual playtest remediation — 2026-07-24 (resume here)
+
+This section reopens systems that passed earlier file-level gates but failed the
+first manual playtest. Take these tasks top-to-bottom before returning to the
+milestones below. A parent closes only after its inventory, generator fix,
+validator, and short runtime probe pass. "No similar issue" means checking the
+complete installed base-game + DLC key union, not only the example observed.
+Keep the reduced QA policy: `make validate`, `make smoke`, and small deterministic
+subsystem probes; do not substitute multi-year or exhaustive observer runs.
+
+### P0 — Crash and total-conversion leakage barriers
+
+- [ ] Diagnose and fix the Diseases-tab crash before other runtime work.
+  - Preserve the exact evidence bundle at
+    `<EU5_USER_DIR>\crashes\Europa Universalis V20260724_145327`
+    (manual crash at 16:53 on 2026-07-24). `exception.txt` records an unhandled
+    `C0000005 EXCEPTION_ACCESS_VIOLATION` with ANTIQVITAS active; this proves a
+    native crash but does not identify the bad disease object or GUI binding.
+  - Reproduce from a fresh Rome start with one short driver sequence: open
+    Diseases, close it, and open it again. Run one vanilla-only control.
+  - Compare the mounted `in_game/common/diseases/*`,
+    `in_game/gui/diseases_lateralview.gui`,
+    `in_game/gui/shared/diseases_tooltips.gui`, localization, icons, and
+    `main_menu/setup/start/19_diseases.txt` against installed 1.3.11.
+  - Investigate the strongest concrete lead first: crash `debug.log` says the
+    default disease icon could not be found; vanilla has
+    `main_menu/gfx/interface/icons/disease/_default.dds`, while the mod does not.
+    Determine whether the partial mod asset directory shadows vanilla and mirror
+    every required disease icon if so.
+  - Fix the missing valid file-magic warning for generated
+    `setup/start/19_diseases.txt` per the encoding matrix. The empty manager is
+    structurally similar to vanilla and must not be blamed without a control.
+  - Do not attribute the earlier market `GoodsMarketEntry` errors or late ambience
+    warnings to this crash without a reproducible link.
+  - Acceptance: three consecutive open/close cycles in Rome and one in Observer,
+    no crash, no new disease/icon/GUI errors, and a normal vanilla control. Archive
+    screenshots and delta logs in a focused report.
+
+- [ ] Add an installed-content leakage census and mandatory validator.
+  - Harvest definitions, unlock references, localization, exact-name source files,
+    and art across installed base + all DLC for ages, institutions, advances,
+    units, buildings, governments/ranks, pop types, country-history/start text,
+    loading tips, and disease UI dependencies.
+  - Maintain an allowlist of intentional engine adapters. Every other medieval or
+    early-modern definition must be replaced, unreachable, or explicitly disabled
+    at both definition and unlock layers. Disabling an advance is insufficient
+    when its unit type remains directly recruitable.
+  - Scan visible text/references for Renaissance, Feudalism, Redcoats, riflemen,
+    grenzer, gunpowder, colonial, absolutism, revolution, enlightenment, and
+    post-476 dates. Retain technical identifiers only when locally proven required
+    and ensure they never surface to players.
+  - Acceptance: compare the current installed union to a generated
+    replacement/allowlist union and fail on any uncovered key, including keys added
+    by a later DLC or game patch. Store a machine-readable report.
+
+### P1 — Start experience, subjects, recruitment, institutions, and advances
+
+- [ ] Remove every vanilla loading quote, including DLC additions.
+  - The installed English union has 64 keys: `LOADING_TIP_0` through
+    `LOADING_TIP_59` plus `LOADING_TIP_d008_0` through
+    `LOADING_TIP_d008_3`; the current generator covers only the 60 numeric keys.
+    Harvest the equivalent union for every supported client and exact-name overlay
+    every mounted loading-tip source.
+  - Update `tools/m12_loading_tips.py` from that ledger. Do not rely on a later
+    duplicate localization file; localization mount/first-key precedence is unsafe.
+  - Preserve good ancient quotes and record sources/attributions where known.
+  - Acceptance: 100% installed-union coverage, every `LOADING_TIP_*` resolves to
+    ANTIQVITAS text, and 8-12 rapid loading captures show no vanilla quote.
+
+- [ ] Replace the vanilla bookmark/country-history agenda for every playable start.
+  - The Rome report is exactly vanilla
+    `main_menu/localization/english/country_history_l_english.yml` key
+    `country_history_europe` ("As the Renaissance dawns..."); the mod has no
+    exact-name override for that file.
+  - Trace which key each of the 157 start countries resolves. Write bespoke,
+    sourced AD 1 situations for Tier-1 powers and historically bounded regional
+    templates for the rest: immediate conditions, pressures, and plausible period
+    goals, without later hindsight stated as contemporary knowledge.
+  - Mirror the canonical file in all clients and scan every start/bookmark/
+    country-selection localization source for post-476 language.
+  - Acceptance: all roster tags resolve to nonempty ANTIQVITAS text; screenshots
+    for Rome, Han, Arsacid Iran, one Germanic, one Gallic, one African, and one
+    American/Oceanian SoP; prohibited-era text count zero.
+
+- [ ] Fix 0% loyalty for Roman subjects and audit all 25 start dependencies.
+  - Do not treat 0% as intended. Generated `antq_client_kingdom`, `antq_satrapy`,
+    and `antq_tributary` omit a starting `loyalty_to_overlord` modifier, while
+    locally inspected vanilla contracts use that field.
+  - Verify the exact loyalty/satisfaction calculation and valid fields from local
+    subject types and script docs. Record whether the UI value is loyalty, liberty
+    desire, or an inverse before selecting numbers.
+  - Add a sourced balance ledger with expected start range, autonomy, tribute, war
+    duties, relations, and integration rules for Roman clients, Arsacid sub-kings,
+    and Han Western Regions tributaries. Preserve meaningful variation.
+  - Update `tools/m9_diplomacy.py`; add bounds validation and one-month runtime
+    probes for each contract family.
+  - Acceptance: no unexplained 0%, all 25 dependencies are within documented
+    bands, and Rome/Arsacid/Han subject panels remain stable after a tick.
+
+- [ ] Quarantine every anachronistic unit and rebuild recruitment availability.
+  - Harvest every land/naval unit type from installed base + DLC. The immediate
+    leak is concrete: the mod does not mirror
+    `in_game/common/unit_types/1_uniques_for_age_6_revolutions.txt`, so
+    `a_redcoats`, `a_experimental_riflemen`, and `a_austrian_grenzer` stay loaded
+    even though their advances are marked `always = no`.
+  - Exact-name shadow or disable every non-ANTIQVITAS template, unique, DLC, naval,
+    mercenary, levy, and special-regiment definition. Scan advances, laws,
+    privileges, events, setup armies, AI, and GUI lists for reverse references.
+  - Determine why the UI exposes Age 6 instead of assuming its label is the whole
+    cause. If six engine slots are mandatory, author a genuine late-antique sixth
+    phase bounded by 476; otherwise remove the stray age cleanly.
+  - Acceptance: machine-readable active-unit allowlist, zero vanilla unit keys in
+    recruitment at every age, and rapid Rome/Germania/Han land/naval captures with
+    no missing-definition errors.
+
+- [ ] Give every active unit a dedicated period-correct icon.
+  - Build the ledger from the final active allowlist, not only the current 44 custom
+    types. Include land, naval, levy, mercenary, and cultural variants such as Roman
+    Marines.
+  - Trace vanilla path/dimensions/alpha/mask/fallback behavior. Generate one direct
+    icon per key from real archaeological or material references via §20; no
+    aliases, default art, medieval kit, or firearms.
+  - Acceptance: format/alpha/resolver validator, no active key resolves to
+    `_default` or another unit's art, reviewed regional contact sheets, and the
+    targeted recruitment captures above.
+
+- [ ] Replace leaked vanilla institutions and constrain cultural spread.
+  - The mod still defines Feudalism, Legalism, and later vanilla institutions in
+    exact-name files with `can_spawn = { always = no }`; that stops spawning but
+    does not remove them from the UI. Make legacy keys invisible while satisfying
+    any locally proven hard references.
+  - Inventory base + DLC institution keys across all six engine age slots. Fail if
+    the visible set differs from the approved ANTIQVITAS ledger.
+  - Redesign every custom institution's birth, eligibility, propagation, and
+    embrace rules. `antq_han_bureaucratic_statecraft` currently has generic
+    neighbour/trade/market spread, so Rome can acquire it automatically. Keep it in
+    appropriate East Asian administrative contexts unless a deliberately authored,
+    prerequisite-gated cross-cultural adoption path exists.
+  - Acceptance: Rome, Han, and Arsacid panels at every available age show only
+    period institutions; Feudalism/Legalism/later vanilla entries are absent; Han
+    statecraft cannot reach Rome by ordinary trade; no missing-key errors.
+
+- [ ] Rebuild advances as a deep, branching, culture-aware ancient DAG.
+  - Create a design ledger for every node: key, age, branch, prerequisites, layout,
+    shared/regional eligibility, description, sources, effects, unlocks, AI weight,
+    and icon. Preserve the existing advance art that meets the visual bar.
+  - Replace straight vertical chains with branching and convergence. Provide shared
+    foundations plus substantial Roman/Italic, Hellenic, Celtic, Germanic,
+    Iranian/steppe, Indic, Han/East Asian, Near Eastern, African, American, and
+    Oceanian paths. Use adoption prerequisites where transfer is plausible rather
+    than simplistic culture locks.
+  - Every visible node needs a period description and at least one consequential,
+    valid modifier or unlock. Tie buildings, units, laws, privileges, reforms,
+    diplomacy, economy, events, and institutions into coherent packages.
+  - Remove all links to vanilla advances and reverse links from other systems.
+    Resolve the sixth slot only after checking the installed age/index contract.
+  - Validate acyclicity, reachability, age order, branch/depth targets, active
+    unlock targets, complete localization/effects/direct art, and zero post-476
+    tokens.
+  - Acceptance: focused early/mid/late tree captures for Rome, a Germanic/Celtic
+    polity, Han, an Iranian polity, and a non-Eurasian SoP; paths visibly differ
+    and offer real choices. No long playthrough required.
+
+### P2 — Population, peoples, polities, and period terminology
+
+- [ ] Rebuild population calibration for Italy and major ancient cities.
+  - The report is confirmed: generated Rome has one 60.901k Latin peasant pop, an
+    artifact of generic density weighting and not an acceptable Augustan metropolis.
+  - Create a sourced target/uncertainty ledger distinguishing game location, city
+    proper, agglomeration, and hinterland. At minimum audit Rome, Alexandria,
+    Antioch, Carthage, Ephesus, Pergamon, Capua, Puteoli, Mediolanum, Athens,
+    Corinth, Jerusalem, Seleucia-Ctesiphon, Babylon, Merv, Taxila, Pataliputra,
+    Chang'an, Luoyang, and the remaining top locations surfaced by `popcheck`.
+  - Add an Italy subregional ledger and rebalance urban/rural shares within the
+    existing Roman-world macro target before changing the 47.5m empire total.
+    Compare geography and culture separately: Latin is not synonymous with Italy
+    or the Roman Empire, so decompose the reported 2m Latin vs 5m Gaul comparison.
+  - Expand `docs/m4/population_location_overrides.csv` (currently four unrelated
+    Southeast Asian rows) or add a sourced city input; never hand-edit `06_pops.txt`.
+  - Acceptance: city min/max checks, Italy/region/culture cross-tables, documented
+    macro-total preservation, and top-20 city panel/map captures.
+
+- [ ] Expand political granularity where residual SoPs create giant blobs.
+  - This requires new tags/contracts/capitals/CoAs/ownership, not just detailed
+    culture selectors. Reopen the 157-polity roster in priority order:
+    (1) Germania and Venedi-facing lands, (2) Gaul/Rome's northern frontier,
+    (3) Finnic/Siberian frames, (4) Yayoi Japan, (5) West Africa.
+  - Deepen Germania from dated source ledgers: audit Cherusci, Chatti,
+    Marcomanni, Quadi, Hermunduri, Semnones, Langobardi, Chauci, Frisii, Batavi,
+    and other attested peoples without turning uncertain ethnonyms into fixed
+    modern borders or centralized states.
+  - Split the gigantic Venedi residual into bounded, source-labeled peoples,
+    confederations, or archaeological SoPs. Reassess Venedi, Lugian, Bastarnian,
+    Sarmatian, and neighbouring frames; a culture selector is not proof of a state.
+  - Use conservative archaeological/cultural SoPs in Finnic/Siberian and West
+    African regions where states are unattested. Split unified Japan into multiple
+    bounded AD 1 Wa/Yayoi regional or kin-group frames; do not backdate
+    third-century Yamatai or a unified Japanese state.
+  - Every addition needs the full M3 contract: sources/confidence, government,
+    rank display, culture/faith, capital, ownership, ruler if justified, diplomacy,
+    CoA, localization, AI, and setup validation.
+  - Acceptance: no residual tag controls an implausibly huge multicultural
+    macro-region solely for coverage; before/after political captures and
+    size/location counts for all five target regions.
+
+- [ ] Make Gallic culture/pop assignment genuinely granular.
+  - Audit actual culture on every Gallic pop/location, not only definitions and
+    selector rows. Broad `antq_gallic` still appears in generated pops (for example
+    Romorantin) despite the claimed detailed selector pass.
+  - Assign bounded Arvernian, Aeduan, Sequanian, Remian, Belgic, Aquitanian, and
+    other supported frames. Distinguish ethnopolitical labels, language continua,
+    and Roman administrative geography.
+  - Forbid generic `antq_gallic` inside a reviewed specific selector unless the
+    fallback is documented. Cross-check primary culture, pop culture, dynamic
+    names, and political ownership without assuming all four must be identical.
+  - Acceptance: location-level Gaul ledger, aggregate totals, and culture-map
+    captures with no unexplained broad blocks.
+
+- [ ] Verify and complete Galatian representation in AD 1 Anatolia.
+  - Existing data has Tectosagian pops and Tolistobogii/Trocmi definitions; do not
+    invent an independent unified Galatia merely for visibility. Research status
+    after Roman annexation in 25 BC, continued identity, and settlement geography
+    through the plan bibliography, Strabo XII, epigraphic/numismatic evidence,
+    CAH/OCD, and modern Anatolian synthesis.
+  - Audit all three communities' location assignments and whether Roman ownership,
+    administration, or religion erases culture. Remove the stray 0.001 generic
+    `antq_galatian` fallback if it is only a compatibility artifact.
+  - Acceptance: sourced culture-location ledger, Roman ownership unless a dated
+    exception is supported, all justified communities visible, and an Anatolia
+    culture-map capture.
+
+- [ ] Replace medieval pop-class presentation with ancient terminology and art.
+  - Inventory all eight engine keys (`nobles`, `clergy`, `burghers`, `laborers`,
+    `soldiers`, `peasants`, `tribesmen`, `slaves`) and every hardcoded script,
+    estate, economy, GUI, localization, portrait, and icon dependency.
+  - Test whether new pop keys are safely extensible. If not, retain technical keys
+    but relocalize to broad ancient semantics: landed elites, priesthoods, urban
+    citizens, laborers/artisans, military households, cultivators, tribal
+    communities, and enslaved people. Add Roman/Hellenic/Han/etc. scoped names only
+    if local customizable localization supports them; do not impose Roman classes
+    worldwide.
+  - Replace all pop icons/portraits with dedicated ancient imagery and trace every
+    fallback. Represent slavery precisely and soberly.
+  - Acceptance: no medieval Burgher/Noble presentation in Roman, Germanic, Gallic,
+    Han, or West African samples; eight distinct period assets; stable economy and
+    save/reload.
+
+- [ ] Replace "County" and other medieval rank presentation for tribes/SoPs.
+  - The generator assigns `rank_county` to SoPs and vanilla's default localization
+    is "County". Vanilla has contextual `rank_county_tribe`, but the current custom
+    government/reform context is not selecting it.
+  - Trace the installed rank/customizable-localization resolver. Preserve numeric
+    rank if required while displaying a roster-led period term: tribe, people,
+    confederation, league, city-state, kingdom, chiefdom, or archaeological SoP.
+    Do not globally rename every county to Tribe.
+  - Audit ruler titles and rank-up actions/tooltips so Count, Duke, Duchy, and
+    medieval elevation language do not leak from adjacent UI.
+  - Acceptance: every current and newly added tag resolves to a documented period
+    label in selection, diplomacy, map tooltips, and rank panel; no tribal/SoP
+    sample shows County.
+
+### P3 — Cohesive ancient interface art
+
+- [ ] Re-art the complete active building-icon set in one circle-safe style.
+  - Freeze the final active building ledger, including Roman named, regional,
+    economic-family, and advance-unlocked content.
+  - Inspect vanilla dimensions, alpha, circle mask, compression, and in-widget crop.
+    Canonical spec: deep desaturated dark-blue background, circle-safe composition,
+    consistent value/contrast/scale, no square card edge, no generic yellow filter,
+    and no medieval architecture.
+  - Record a real reconstruction, surviving structure, plan, coin, relief, or
+    materially comparable dated reference and visual rationale before generating
+    each icon. Use §20 contact sheets, then export one direct asset per active key.
+  - Validate dimensions/format, aliases/fallbacks, transparent corners, circular
+    safe-zone occupancy, background range, and perceptual duplicates. Review
+    circular-mask previews, not only square sources.
+  - Acceptance: reviewed complete contact sheets and building-grid captures for
+    Rome, Germania/Gaul, Han, India, and one African polity; no square edge, clipped
+    subject, style outlier, alias, or fallback.
+
+- [ ] Replace medieval character/court backgrounds across graphical cultures.
+  - Trace the exact live texture from screenshots rather than assuming it is the 3D
+    portrait. Inventory country-selection, character, ruler, event-portrait, and
+    court-scene fallbacks across base + DLC graphical-culture paths.
+  - Create cohesive 2D ancient backdrops for Roman/Italic, Hellenistic, Celtic,
+    Germanic, Iranian/steppe, Indic, Han/East Asian, Near Eastern, African,
+    American, and Oceanian contexts using real material/architectural references.
+    Do not touch audio or add unsupported 3D models.
+  - Acceptance: resolver ledger has no medieval/default fallback and at least eight
+    graphical-culture captures show correct ancient settings on every live surface.
+
+### P4 — Focused regression closeout
+
+- [ ] Add one rapid regression route for this remediation section.
+  - Script a deterministic 10-15 minute route: loading screen -> Rome description
+    -> start -> subjects -> city/pop -> buildings -> recruitment -> institutions
+    -> advances -> Diseases open/close -> save/reload.
+  - Repeat only culture-variable subsystem screens for one Germanic/Gallic country
+    and Han; use static setup/resolver validation for the rest.
+  - Require `make validate`, `make smoke`, zero new `error.log` lines against the
+    accepted baseline, no crash, and a small screenshot manifest. Do not run an
+    extreme 1-476 campaign or multi-century observer soak.
+  - Before closing, rerun the installed-content leakage census and ensure every
+    manual symptom above has a specific passing assertion.
+
 ## M0 — Discovery & tooling
 
 - [x] Discover Steam libraries, game/user paths, disk space, and write `config/local_paths.json`.
@@ -395,7 +700,9 @@ after `make full` and its autonomous driver report are green.
 
 - [x] Recheck player-facing tooltips/tutorials: all four installed tutorials are non-automatic, 33 dated/dynastic hints remain disabled through exact-name guards, and the authored-text audit has zero prohibited post-476 terms across every mirrored client.
 - [x] Audit safe period-facing UI surfaces: retain the validated direct ancient art on 559 content-facing chains (advances, buildings, privileges, faiths, institutions, CoAs, ages, and events); do not replace the shared core window-frame templates without a locally verified skin contract.
-- [x] Replace the universal county fallback with checked country ranks: Rome, Han, and Parthia render as empires; sovereign/client courts as kingdoms; collective societies as tribes; and the republican examples retain republic titles.
+- [X] Replace the universal county fallback with checked country ranks: Rome, Han, and Parthia render as empires; sovereign/client courts as kingdoms; collective societies as tribes; and the republican examples retain republic titles.
+- [x] Make sure all loading screens and loading screen quotes are period appropriate, add some diversity
+- [x] Rebuild the direct main-menu background and title surfaces as ANTIQVITAS art while retaining the verified shared frame contract.
 
 ## M13 — Ship
 
