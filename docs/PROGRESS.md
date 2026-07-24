@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-07-24 - Complete building-art retention and visual review
+
+- Added master-image coverage to the direct UI ledger for all 79 named Roman
+  buildings and 154 regional families; each is checked at 128px and rendered
+  into the refreshed 558-chain contact sheet alongside advances, privileges,
+  goods, religions, and institutions.
+- Full validation is green. This is an audit/retention change only, so no
+  game-content smoke run was required.
+
 ## 2026-07-24 - M4 Roman-world direct-name correction batch
 
 - Replaced twelve borrowed proximity labels with reviewed ancient forms at the
