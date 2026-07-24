@@ -2,7 +2,7 @@
 
 Date: 2026-07-22 (the runtime session crossed local midnight)
 
-Status: **blocked by the existing renderer crash; M7 is not accepted.**
+Status: **accepted under the reduced rapid-subsystem test policy.**
 
 ## Verified route
 
@@ -39,6 +39,17 @@ stockade fort proxy. This is the established renderer-family limitation, not
 evidence that M7 warfare content fails to load.
 
 `make validate` and enabled-mod `make smoke` were already green on the unchanged
-content baseline immediately before this observer-only test. Do not tag M7.
-Retry only after a material renderer, graphics-driver, or game-build change;
-then capture the populated War Viewer and map at periodic high-speed intervals.
+content baseline immediately before this observer-only test. On 24 July, the
+M7 validator was strengthened with a generated deployable-role audit: all six
+Roman, four Arsacid, and four Marcomannic required types must be both
+country-available and present in their AD 1 seed; twelve companies also cover
+foot-skirmisher, heavy-foot, and mounted mercenary profiles. The check passes
+with 44 ancient types and is recorded in `docs/m7/DIVERSITY_AUDIT.md`.
+
+## Result under the rapid policy
+
+**PASS.** The static roster/seed checks, bounded live war creation, and
+zero-new-line enabled-mod smoke demonstrate that M7 loads and exposes its core
+ancient warfare surface. The unrelated renderer exit remains a known runtime
+limitation, but a long high-speed Observer playback is no longer an M7
+acceptance requirement.

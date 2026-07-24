@@ -6205,3 +6205,12 @@ reviewed 128px BC7 DDS.
   44 ancient unit types and 12 reviewed companies; no game-visible unit output
   changed, so the reduced subsystem policy did not require another smoke run.
 - Committed as `73685ad` (`test(m7): enforce deployable force diversity`).
+
+## 2026-07-24 - M7 rapid-subsystem acceptance
+
+- Replaced the obsolete long Observer playback gate with the user's reduced
+  rapid-test policy: the prior live Rome--Parthia war setup and zero-new-line
+  smoke remain evidence, while the new deployable-role audit proves the roster
+  cannot regress to a catalogue-only surface.
+- M7 is accepted and tagged `M7-done`. The renderer exit remains recorded as a
+  general long-observer limitation, not a failed M7 content load.
