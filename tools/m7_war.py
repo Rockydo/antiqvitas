@@ -23,6 +23,7 @@ DATA = ROOT / "docs/m7"
 UNITS = DATA / "units.csv"
 ARMIES = DATA / "armies.csv"
 FORTS = DATA / "forts.csv"
+DIVERSITY_REPORT = DATA / "DIVERSITY_AUDIT.md"
 UNIT_OUTPUT = ROOT / "in_game/common/unit_types/00_antiquitas_m7_units.txt"
 ADVANCE_OUTPUT = ROOT / "in_game/common/advances"
 M8_TREE = ADVANCE_OUTPUT / "00_antiquitas_m8_tree.txt"
@@ -59,6 +60,35 @@ STAT_KEYS = frozenset((
     "crew_size", "blockade_capacity", "hull_size",
 ))
 TERRAIN = frozenset(("grasslands", "hills", "forest", "desert", "jungle", "coastal", "river", "mountains"))
+
+# These are role floors, not reconstructed orders of battle.  They keep the
+# source-bounded M7 catalogue from regressing into a single generic troop type
+# for its three most visible starting polities.
+CORE_LAND = {
+    "ROM": {
+        "antq_legionaries", "antq_auxilia", "antq_roman_alae",
+        "antq_roman_marines", "antq_roman_sagittarii", "antq_roman_scouts",
+    },
+    "PAR": {
+        "antq_cataphracts", "antq_parthian_horse_archers",
+        "antq_parthian_foot_archers", "antq_parthian_noble_lancers",
+    },
+    "MCM": {
+        "antq_warbands", "antq_germanic_horse", "antq_germanic_spearmen",
+        "antq_germanic_javelins",
+    },
+}
+REQUIRED_MERCENARIES = {
+    "antq_balearic_slingers", "antq_cretan_archers", "antq_germanic_bodyguards",
+    "antq_saka_horse", "antq_galatian_swordsmen", "antq_thracian_peltasts",
+    "antq_numidian_horse_company", "antq_syrian_archers", "antq_iberian_swordsmen",
+    "antq_dacian_falxmen", "antq_armenian_horse", "antq_cilician_marines",
+}
+MERCENARY_PROFILES = {
+    "foot skirmishers": {"antq_balearic_slingers", "antq_cretan_archers", "antq_syrian_archers", "antq_thracian_peltasts", "antq_cilician_marines"},
+    "heavy foot": {"antq_germanic_bodyguards", "antq_galatian_swordsmen", "antq_iberian_swordsmen", "antq_dacian_falxmen"},
+    "mounted companies": {"antq_saka_horse", "antq_numidian_horse_company", "antq_armenian_horse"},
+}
 
 
 @dataclass(frozen=True)
@@ -167,24 +197,15 @@ def load_units() -> tuple[Unit, ...]:
     required_navy = {"antq_liburnian", "antq_trireme", "antq_quinquereme", "antq_merchant_roundship", "antq_monsoon_dhow", "antq_austronesian_outrigger"}
     if not required_land <= land or not required_navy <= navy:
         raise ValueError("units.csv is missing a plan-required M7 roster entry")
-    core_land = {
-        "ROM": {"antq_legionaries", "antq_auxilia", "antq_roman_alae", "antq_roman_marines", "antq_roman_sagittarii", "antq_roman_scouts"},
-        "PAR": {"antq_cataphracts", "antq_parthian_horse_archers", "antq_parthian_foot_archers", "antq_parthian_noble_lancers"},
-        "MCM": {"antq_warbands", "antq_germanic_horse", "antq_germanic_spearmen", "antq_germanic_javelins"},
-    }
-    for tag, expected in core_land.items():
+    for tag, expected in CORE_LAND.items():
         available = {unit.key for unit in units if unit.kind == "land" and tag in unit.tags}
         if not expected <= available:
             raise ValueError(f"M7 core diversity audit is missing {sorted(expected - available)} for {tag}")
     mercenaries = {unit.key for unit in units if unit.status == "mercenary"}
-    required_mercenaries = {
-        "antq_balearic_slingers", "antq_cretan_archers", "antq_germanic_bodyguards",
-        "antq_saka_horse", "antq_galatian_swordsmen", "antq_thracian_peltasts",
-        "antq_numidian_horse_company", "antq_syrian_archers", "antq_iberian_swordsmen",
-        "antq_dacian_falxmen", "antq_armenian_horse", "antq_cilician_marines",
-    }
-    if not required_mercenaries <= mercenaries:
+    if not REQUIRED_MERCENARIES <= mercenaries:
         raise ValueError("M7 mercenary audit is missing a reviewed company role")
+    if any(not profile <= mercenaries for profile in MERCENARY_PROFILES.values()):
+        raise ValueError("M7 mercenary audit is missing a reviewed tactical profile")
     if any(unit.kind == "navy" and dict(unit.modifiers).get("cannons") for unit in units):
         raise ValueError("M7 navy data must never define cannons")
     return tuple(units)
@@ -196,7 +217,8 @@ def validate_start_ledgers(units: tuple[Unit, ...]) -> None:
     installed_locations = locations()
     failures: list[str] = []
     groups: dict[str, tuple[str, str, str]] = {}
-    for row in read_rows(ARMIES, ARMY_FIELDS):
+    army_rows = read_rows(ARMIES, ARMY_FIELDS)
+    for row in army_rows:
         key = row["key"]
         try:
             if any(not row[field] for field in ARMY_FIELDS):
@@ -252,6 +274,15 @@ def validate_start_ledgers(units: tuple[Unit, ...]) -> None:
             failures.append(f"forts.csv {key or '<blank>'}: {exc}")
     if not forts:
         failures.append("forts.csv has no M7 fort entries")
+    # A type that is merely listed but never appears in its core country's
+    # validated start manager is not a meaningful AD 1 diversity guarantee.
+    seeded = {
+        tag: {row["unit_type"] for row in army_rows if row["country"] == tag and row["kind"] == "army"}
+        for tag in CORE_LAND
+    }
+    for tag, expected in CORE_LAND.items():
+        if missing := sorted(expected - seeded[tag]):
+            failures.append(f"{tag} core diversity types are absent from its AD 1 seed: {missing}")
     if failures:
         raise ValueError("\n".join(failures))
 
@@ -293,6 +324,48 @@ def localization(units: tuple[Unit, ...], language: str) -> str:
     return "\n".join(lines) + "\n"
 
 
+def diversity_report(units: tuple[Unit, ...]) -> str:
+    """Render the short evidence-facing M7 acceptance surface from the ledgers."""
+    unit_map = {unit.key: unit for unit in units}
+    lines = [
+        "# M7 force-diversity acceptance audit",
+        "",
+        "Generated by `tools/m7_war.py --write`; do not edit by hand.",
+        "",
+        "This check records bounded tactical roles, not named detachments, troop",
+        "totals, ethnic force ratios, or reconstructed orders of battle. Every type",
+        "below copies a locally harvested Age-of-Traditions base and is checked against",
+        "the AD 1 unit-manager ledger.",
+        "",
+        "## Core AD 1 forces",
+        "",
+        "| Polity | Required and seeded roles | Base families |",
+        "| --- | --- | --- |",
+    ]
+    names = {"ROM": "Rome", "PAR": "Parthia", "MCM": "Marcomanni"}
+    for tag, expected in CORE_LAND.items():
+        ordered = sorted(expected, key=lambda key: unit_map[key].name)
+        role_names = ", ".join(unit_map[key].name for key in ordered)
+        bases = ", ".join(sorted({unit_map[key].copy_from.removeprefix("a_age_1_traditions_").replace("_", " ") for key in ordered}))
+        lines.append(f"| {names[tag]} | {role_names} | {bases} |")
+    lines.extend((
+        "",
+        "## Mercenary companies",
+        "",
+        "| Profile | Reviewed companies |",
+        "| --- | --- |",
+    ))
+    for profile, keys in MERCENARY_PROFILES.items():
+        companies = ", ".join(unit_map[key].name for key in sorted(keys, key=lambda key: unit_map[key].name))
+        lines.append(f"| {profile.title()} | {companies} |")
+    lines.extend((
+        "",
+        f"The roster contains **{len(units)}** ancient unit types, including **{len(REQUIRED_MERCENARIES)}** reviewed mercenary companies. The M7 validator fails if a listed core type loses its bounded country availability, a required company or tactical profile disappears, or a core AD 1 seed no longer contains every required role.",
+        "",
+    ))
+    return "\n".join(lines)
+
+
 def advance_overrides() -> dict[Path, str]:
     # M8 owns the complete exact-name advance replacement.  Retaining this
     # interim M7 layer after it is active would overwrite M8's clean blanks.
@@ -322,7 +395,7 @@ def advance_overrides() -> dict[Path, str]:
 
 
 def outputs(units: tuple[Unit, ...]) -> dict[Path, str]:
-    rendered = {UNIT_OUTPUT: unit_script(units), **advance_overrides()}
+    rendered = {UNIT_OUTPUT: unit_script(units), DIVERSITY_REPORT: diversity_report(units), **advance_overrides()}
     for language in ("english", *M2_MIRROR_LANGUAGES):
         rendered[LOC_ROOT / language / f"antq_m7_war_l_{language}.yml"] = localization(units, language)
     return rendered
