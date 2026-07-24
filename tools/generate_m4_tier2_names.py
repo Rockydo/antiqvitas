@@ -1,22 +1,22 @@
 #!/usr/bin/env python3
 """Generate bounded, explicitly lower-confidence AD 1 Pleiades name adapters.
 
-Tier 2 is intentionally separate from the reviewed direct-name ledger.  It
-uses only precise, AD 1-active settlement records already present in the local
-Pleiades queue, accepts a much shorter map-projection radius, and records both
-the source ID and the proxy caveat on every generated row.
+Tier 2 is intentionally separate from the reviewed direct-name ledger. It uses
+only precise, AD 1-active settlement records already present in the local
+Pleiades queue, accepts a much shorter map-projection radius, and requires a
+separate Pleiades name resource attested across the campaign start.
 """
-
 from __future__ import annotations
 
 import argparse
 import csv
 import json
 import re
-import sys
 from collections import defaultdict
 from io import StringIO
 from pathlib import Path
+
+from pleiades_names import HistoricalName, PleiadesNameIndex, preferred_languages
 
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE = ROOT / "docs/m4/pleiades_name_candidates.csv"
@@ -32,12 +32,15 @@ ENGINE_LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
 MAX_OFFSET_PX = 1.50
 HEADER = ("location", "culture", "historical_name", "source", "confidence", "note")
 ARCHAEOLOGICAL_PREFIXES = (
-    "tell ", "tel ", "khirbet ", "hirbet ", "qalat ", "qalaat ", "tumulus ",
+    "tell ",
+    "tel ",
+    "khirbet ",
+    "hirbet ",
+    "qalat ",
+    "qalaat ",
+    "tumulus ",
 )
 BAD_NAME_CHARACTERS = "?*/[]()0123456789"
-# Pleiades is an archaeological gazetteer as well as a historical one. A row
-# classified as a settlement can nevertheless expose a modern feature label;
-# those are useful research records but never safe player-facing toponyms.
 ARCHAEOLOGICAL_FEATURE_RE = re.compile(
     r"\b(?:archaeological|bridge|camp|castrum|cemetery|church|excavation|fort(?:ress)?|"
     r"fortifications?|gate|harbo(?:u)?r|hillfort|mausoleum|medieval|mine|monastery|mosque|"
@@ -98,6 +101,7 @@ def pop_cultures() -> dict[str, str]:
 
 
 def usable_title(value: str) -> bool:
+    """Retained for callers that need a conservative free-text title gate."""
     title = value.strip()
     folded = title.casefold()
     return (
@@ -109,45 +113,64 @@ def usable_title(value: str) -> bool:
     )
 
 
+def culture_languages() -> dict[str, tuple[str, ...]]:
+    result: dict[str, tuple[str, ...]] = {}
+    for row in csv_rows(CULTURES):
+        key = row.get("key", "").strip()
+        language = row.get("language", "").strip()
+        if key:
+            result[key] = preferred_languages(language)
+    return result
+
+
 def render() -> str:
     queue = csv_rows(QUEUE, comments=True)
-    cultures = {row["key"] for row in csv_rows(CULTURES)}
+    preferences = culture_languages()
     installed = set(json.loads(ENGINE_LOCATIONS.read_text(encoding="utf-8-sig")))
     excluded = direct_locations() | capital_locations()
     population_cultures = pop_cultures()
-    candidates: dict[str, list[dict[str, str]]] = defaultdict(list)
+    name_index = PleiadesNameIndex.load()
+    candidates: dict[str, list[tuple[dict[str, str], HistoricalName]]] = defaultdict(list)
     for row in queue:
         location = row["location"].strip()
-        title = row["pleiades_title"].strip()
         try:
             offset = float(row["offset_px"])
         except ValueError as exc:
             raise ValueError(f"invalid Pleiades offset for {location}: {row['offset_px']}") from exc
-        if (
-            location not in installed
-            or location in excluded
-            or offset > MAX_OFFSET_PX
-            or not usable_title(title)
-        ):
+        if location not in installed or location in excluded or offset > MAX_OFFSET_PX:
             continue
         culture = population_cultures.get(location)
-        if not culture or culture not in cultures:
+        if not culture or culture not in preferences:
             continue
-        candidates[location].append(row)
+        name = name_index.best(
+            row["pleiades_id"],
+            row["pleiades_title"],
+            preferences[culture],
+        )
+        if name is not None:
+            candidates[location].append((row, name))
 
     output: list[dict[str, str]] = []
-    for location, rows in candidates.items():
-        row = min(rows, key=lambda item: (float(item["offset_px"]), item["pleiades_id"]))
+    for location, values in candidates.items():
+        row, name = min(
+            values,
+            key=lambda item: (
+                float(item[0]["offset_px"]),
+                item[0]["pleiades_id"],
+                item[1].name_id,
+            ),
+        )
         output.append(
             {
                 "location": location,
                 "culture": population_cultures[location],
-                "historical_name": row["pleiades_title"].strip(),
-                "source": f"PLE:{row['pleiades_id']};T2",
+                "historical_name": name.form,
+                "source": f"PLE:{row['pleiades_id']};PLN:{name.source_id};T2",
                 "confidence": "tier2",
                 "note": (
-                    "Tier-2 AD 1 Pleiades settlement adapter; nearest installed city field "
-                    f"at {float(row['offset_px']):.2f}px; lower-confidence map proxy."
+                    "Tier-2 AD 1 Pleiades settlement adapter; period-valid name resource "
+                    f"{name.source_id}; nearest installed city field at "
+                    f"{float(row['offset_px']):.2f}px; lower-confidence map proxy."
                 ),
             }
         )
@@ -168,7 +191,7 @@ def main() -> int:
         parser.error("provide exactly one of --write or --check")
     try:
         expected = render()
-    except (OSError, ValueError, json.JSONDecodeError) as exc:
+    except (OSError, ValueError, csv.Error, json.JSONDecodeError) as exc:
         print(f"m4_tier2_names: FAIL\n  - {exc}")
         return 1
     if args.write:
