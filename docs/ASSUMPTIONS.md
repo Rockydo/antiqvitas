@@ -4253,3 +4253,12 @@ The special neither transfers the Cheruscan field to Rome nor reconstructs a
 garrison, plan, masonry phase, limes line, route, or the later colonia.
 Source: LVR, [Vetera I excavation record](https://bodendenkmalpflege.lvr.de/de/aktuelles/fund_des_monats/2019/April.html).
 [secure camp chronology; contested near-site scope]
+
+## 2026-07-24 - Nicaea and Noviomagus replace misleading proximity names
+
+The direct Pleiades settlement records for Nicaea at Nice and Noviomagus at
+Chichester supersede the automatic Cemenelum and lower-confidence generic
+fallback choices. The display names do not decide civic boundaries, colony or
+tribal status, population, linguistic uniformity, or territorial control.
+Sources: PLE:157894; PLE:79622. [secure direct settlement label; contested
+map-field scope]

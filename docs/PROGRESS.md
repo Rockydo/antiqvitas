@@ -16,6 +16,14 @@
   inventory is 558 chains. Full validation and enabled-mod smoke are green with
   zero new error-log lines.
 
+## 2026-07-24 - M4 Nice and Chichester direct-name corrections
+
+- Promoted direct Pleiades records for coastal Nicaea at Nice and Noviomagus at
+  Chichester, replacing the misleading nearby Cemenelum layer and an
+  unreviewed fallback respectively.
+- The reviewed layer now carries 222 direct AD 1 labels. Full validation and
+  enabled-mod smoke are green with zero new error-log lines.
+
 ## 2026-07-24 - M8 knowledge accepted with a rapid research-panel probe
 
 - Opened the live AD 1 Advances UI through the locally verified input binding.
