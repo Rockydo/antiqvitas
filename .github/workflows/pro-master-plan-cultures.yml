@@ -53,69 +53,23 @@ jobs:
           python tools/generate_pro_culture_expansion.py --check 2>&1 | tee -a .pro_payload/validation.log
           git diff --check 2>&1 | tee -a .pro_payload/validation.log
 
-      - name: Diagnose empty geographic selectors
-        if: failure()
-        shell: bash
-        run: |
-          python - <<'PY' >> .pro_payload/validation.log
-          import json
-          import re
-          from collections import defaultdict
-          from pathlib import Path
-
-          hierarchy = json.loads(Path("docs/vanilla_symbols/geography_hierarchy.json").read_text(encoding="utf-8-sig"))
-          pops = Path("main_menu/setup/start/06_pops.txt").read_text(encoding="utf-8")
-          controlled = set(re.findall(r"(?m)^\t([A-Za-z0-9_]+)\s*=\s*\{\s*$", pops))
-          parents = defaultdict(list)
-          for parent, children in hierarchy.items():
-              for child in children:
-                  if child != parent:
-                      parents[child].append(parent)
-
-          def leaves(selector, trail=()):
-              if selector in trail:
-                  return set()
-              children = hierarchy.get(selector)
-              if not children:
-                  return {selector}
-              result = set()
-              for child in children:
-                  if child == selector:
-                      result.add(child)
-                  else:
-                      result.update(leaves(child, (*trail, selector)))
-              return result
-
-          bad = [
-              "equatoria_area", "goringhaikona_area", "kalahari_area", "karoo_area", "namib_area",
-              "east_stanovoi_area", "kola_area", "mangazeya_area", "culiacan_area", "natahende_area",
-              "columbia_interior_area", "eastern_ontario_area", "indiana_area", "kentucky_area",
-              "pennsylvania_area", "west_virginia_area",
-          ]
-          print("\nCONTROLLED SELECTOR DIAGNOSTICS")
-          for selector in bad:
-              print(f"\n[{selector}]")
-              frontier = [(selector, 0)]
-              seen = {selector}
-              while frontier:
-                  node, depth = frontier.pop(0)
-                  if depth >= 3:
-                      continue
-                  for parent in parents.get(node, []):
-                      if parent in seen:
-                          continue
-                      seen.add(parent)
-                      candidates = []
-                      for child in hierarchy.get(parent, []):
-                          hits = sorted(leaves(child) & controlled)
-                          if hits:
-                              candidates.append((child, len(hits), hits[:8]))
-                      if candidates:
-                          print(f"  parent {parent}:")
-                          for child, count, sample in candidates[:24]:
-                              print(f"    {child}: {count} controlled; {', '.join(sample)}")
-                      frontier.append((parent, depth + 1))
-          PY
+      - name: Upload culture diagnostic data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pro-culture-diagnostics-${{ github.run_number }}
+          if-no-files-found: error
+          retention-days: 1
+          path: |
+            .pro_payload/validation.log
+            docs/culture_remap.csv
+            docs/vanilla_symbols/geography_hierarchy.json
+            docs/vanilla_symbols/areas.json
+            docs/vanilla_symbols/provinces.json
+            docs/vanilla_symbols/locations.json
+            docs/vanilla_symbols/regions.json
+            docs/world_1ad/ownership_resolved.csv
+            main_menu/setup/start/06_pops.txt
 
       - name: Publish validation failure
         if: failure()
