@@ -1039,3 +1039,22 @@ Do not accept the current drafts. Resume this icon only with a non-hinged
 object composition (for example separate tablets with a wax seal and survey
 cord) after an art workflow can reliably omit modern binder hardware. Continue
 the independent direct-icon queue in the meantime.
+
+## 2026-07-24 - Han minority-regency renderer ignores supplied officeholder
+
+Status: **blocked after three materially distinct start-data shapes; retained
+regency adapter is the least misleading available state.** The first two
+verified shapes were Emperor Ping as direct ruler/current term and Ping as
+minor ruler/heir; both rendered the generated `Wang Guangwu`/`Han Guangwu`
+fallback. The third used the documented regent Wang Mang as the normal current
+officeholder with Ping retained as heir, explicitly without asserting an
+imperial accession. It still rendered `Han Guangwu, 35` in the live Western
+Han Government panel.
+
+The evidence is
+`docs/screens/M6_han_officeholder_proxy/han_proxy_government.png`; source
+validation and the bounded enabled-mod smoke check were green before the
+probe. The failed third shape was reverted. Do not repeat ruler, heir,
+regency, or current-term permutations unchanged. Resume only after a locally
+verified engine contract can bind a named minor sovereign or regent without
+producing an invented fallback ruler.

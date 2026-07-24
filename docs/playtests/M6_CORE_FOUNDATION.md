@@ -116,3 +116,22 @@ did encounter the already-deferred global AD 1 runtime error surface; a scan
 found no Roman M6 profile, privilege, reform, or character identifier in its
 `error.log`. This is a Roman runtime pass only. The Han minority-regency
 fallback and broader M6 scope still preclude an M6 acceptance result.
+
+## 2026-07-24 Wang Mang officeholder-proxy retest
+
+The final materially distinct Han variation made the documented regent Wang
+Mang the generated current officeholder with Emperor Ping retained as heir. It
+was deliberately described in the source ledger as a technical presentation
+adapter, not an imperial accession or a pre-scripted AD 9 usurpation.
+
+The enabled-mod AD 1 probe selected a disposable country, used the installed
+debug `tag XAR` command, and opened Western Han's Government panel. It again
+rendered the generated `Han Guangwu, 35` rather than Wang Mang. The panel is
+retained at `docs/screens/M6_han_officeholder_proxy/han_proxy_government.png`;
+the exact command-state capture is
+`docs/screens/M6_han_officeholder_proxy/han_proxy_tag_xar.png`. Static
+validation and the short enabled-mod smoke check both passed before the probe,
+with zero new error-log lines.
+
+The variation was reverted immediately. This exhausts the third material
+engine-shape attempt without claiming a false Han ruler; see `BLOCKERS.md`.
