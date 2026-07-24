@@ -18,7 +18,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Resolve Roman naming inventory
-        run: python tools/m4_roman_location_name_audit.py --output-dir .audit/roman-names
+        run: |
+          python tools/m4_roman_location_name_audit.py --output-dir .audit/roman-names
+          mkdir -p .audit/roman-names/workspace/docs/m4
+          mkdir -p .audit/roman-names/workspace/docs/vanilla_symbols
+          mkdir -p .audit/roman-names/workspace/docs/world_1ad
+          mkdir -p .audit/roman-names/workspace/main_menu/setup/start
+          mkdir -p .audit/roman-names/workspace/tools
+          cp docs/m4/pleiades_name_candidates.csv .audit/roman-names/workspace/docs/m4/
+          cp docs/m4/cultures.csv .audit/roman-names/workspace/docs/m4/
+          cp docs/m4/dynamic_location_name_overrides.csv .audit/roman-names/workspace/docs/m4/
+          cp docs/m4/qualified_location_name_overrides.csv .audit/roman-names/workspace/docs/m4/
+          cp docs/m4/tier2_*_location_name_overrides.csv .audit/roman-names/workspace/docs/m4/
+          cp docs/m4/tier3_location_name_overrides.csv .audit/roman-names/workspace/docs/m4/
+          cp docs/vanilla_symbols/location_coordinates.json .audit/roman-names/workspace/docs/vanilla_symbols/
+          cp docs/vanilla_symbols/locations.json .audit/roman-names/workspace/docs/vanilla_symbols/
+          cp docs/world_1ad/ownership_resolved.csv .audit/roman-names/workspace/docs/world_1ad/
+          cp main_menu/setup/start/06_pops.txt .audit/roman-names/workspace/main_menu/setup/start/
+          cp tools/capital_geography.py .audit/roman-names/workspace/tools/
       - name: Upload Roman naming inventory
         uses: actions/upload-artifact@v4
         with:
