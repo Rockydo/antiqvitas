@@ -85,7 +85,9 @@ jobs:
           cp main_menu/setup/start/06_pops.txt .audit/roman-names/workspace/main_menu/setup/start/
           cp tools/capital_geography.py .audit/roman-names/workspace/tools/
           cp tools/pleiades_names.py .audit/roman-names/workspace/tools/
-          git archive --format=zip --output=.audit/roman-names/repository.zip HEAD
+          git archive --format=zip --output=.audit/roman-names/repository.zip HEAD \
+            Makefile tools docs/m4 docs/world_1ad docs/vanilla_symbols \
+            main_menu/localization main_menu/setup/start/06_pops.txt
       - name: Upload Roman naming inventory
         if: always()
         uses: actions/upload-artifact@v4
