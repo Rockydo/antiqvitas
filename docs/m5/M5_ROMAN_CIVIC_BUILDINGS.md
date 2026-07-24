@@ -312,3 +312,20 @@ Its dedicated source is retained at
 128px derivative is `assets_queue/generated/antq_castra_vetera.png` and the
 engine asset is
 `main_menu/gfx/interface/icons/buildings/antq_castra_vetera.dds`.
+
+## Siscia garrison source, boundary, and art
+
+`OCD-SISCIA` is John Wilkes's *Oxford Classical Dictionary* entry
+[Siscia](https://academic.oup.com/edited-volume/61673/chapter-abstract/550566328).
+It records Octavian's 35 BC capture and garrison, while treating a Legio IX
+Hispana station in the early first century CE as possible rather than settled.
+The direct installed `sisak` city field is therefore eligible only for a
+contested, low timber-garrison proxy at the AD 1 boundary.
+
+`Castra Siscia` uses the established non-propagating timber-stockade contract.
+It does not decide the legionary question, reconstruct a fort plan or roster,
+or import the later colony, mint, canal, fleet, customs, masonry, or limes.
+Its direct generated source is
+`assets_queue/generated_sources/antq_castra_siscia_source.png`; its reviewed
+128px derivative is `assets_queue/generated/antq_castra_siscia.png`, encoded
+as `main_menu/gfx/interface/icons/buildings/antq_castra_siscia.dds`.

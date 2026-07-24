@@ -53,8 +53,8 @@ MODIFIERS = {
     "local_merchant_power", "local_monthly_food_modifier", "local_population_capacity",
     "local_production_efficiency", "local_repair_speed", "local_sailors", "local_unrest",
 }
-ROMAN_SPECIAL_LOCATIONS = {"augsburg", "basel", "bonn", "mainz", "neuss", "nijmegen", "ravenna", "recklinghausen", "rome", "strasbourg", "wesel"}
-START_KEY_PREFIX = {"augsburg": "augsburg", "basel": "basel", "bonn": "bonn", "mainz": "mainz", "neuss": "neuss", "nijmegen": "nijmegen", "ravenna": "ravenna", "recklinghausen": "recklinghausen", "rome": "roma", "strasbourg": "strasbourg", "wesel": "wesel"}
+ROMAN_SPECIAL_LOCATIONS = {"augsburg", "basel", "bonn", "mainz", "neuss", "nijmegen", "ravenna", "recklinghausen", "rome", "sisak", "strasbourg", "wesel"}
+START_KEY_PREFIX = {"augsburg": "augsburg", "basel": "basel", "bonn": "bonn", "mainz": "mainz", "neuss": "neuss", "nijmegen": "nijmegen", "ravenna": "ravenna", "recklinghausen": "recklinghausen", "rome": "roma", "sisak": "sisak", "strasbourg": "strasbourg", "wesel": "wesel"}
 
 
 def rows(path: Path) -> list[dict[str, str]]:

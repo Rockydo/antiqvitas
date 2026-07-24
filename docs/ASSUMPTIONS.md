@@ -1,5 +1,15 @@
 # Historical Assumptions
 
+## 2026-07-24 - Siscia is a bounded Augustan garrison proxy
+
+The *Oxford Classical Dictionary* records Octavian's 35 BC capture of Siscia
+and establishment of a garrison, but treats a Legio IX Hispana station in the
+early first century CE as possible. The direct Sisak field consequently receives
+only a contested low timber-and-earth garrison: no legion identity, camp plan,
+later colony, mint, canal, fleet, customs post, stone fortress, or limes is
+inferred. Source: `OCD-SISCIA` in `docs/world_1ad/SOURCES.md`. [secure 35 BC
+garrison; contested AD 1 station and all physical reconstruction]
+
 ## 2026-07-23 - Argentoratum remains an early-camp proxy
 
 University of Strasbourg historical research dates the Roman legionary-city
