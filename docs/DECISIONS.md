@@ -2860,3 +2860,11 @@ canonical start generator now initializes every installed disease and endemic
 malaria; a validator also harvests and hash-mirrors all dynamic disease icons and
 literal GUI textures. This keeps later base/DLC additions visible to validation
 instead of depending on partial VFS fallback behavior.
+
+## 2026-07-24 - Keep only proven unit copy-chain adapters
+
+EU5 custom unit inheritance requires 12 installed template definitions to retain
+their original fields. They remain allowlisted technical ancestors and are not
+player-buildable additions. The other 311 installed unit definitions are
+exact-name mirrored with authoritative `hide = yes` and `buildable = no`; all
+upgrade links are removed so no disabled legacy target produces runtime errors.

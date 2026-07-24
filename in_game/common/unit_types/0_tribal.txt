@@ -1,0 +1,122 @@
+﻿a_moa_hunters = {
+	# ANTIQVITAS installed-unit quarantine.
+	hide = yes
+	buildable = no
+	copy_from = a_age_1_traditions_light_infantry
+	is_special = yes
+
+	construction_demand = a_tribesmen_construction
+	maintenance_demand =  a_tribesmen_maintenance
+	
+
+	levy = yes
+	
+	location_potential = {
+		OR = {
+			has_owner = no
+			owner = {
+				government_type = government_type:tribe
+			}
+		}
+	}
+
+	combat = {
+		hills = 0.1
+		forest = 0.1
+	}
+
+	gfx_tags = { light_tag }
+}
+
+a_tribesmen = {
+	# ANTIQVITAS installed-unit quarantine.
+	hide = yes
+	buildable = no
+	copy_from = a_age_1_traditions_light_infantry
+
+	construction_demand = a_tribesmen_construction
+	maintenance_demand =  a_tribesmen_maintenance
+	
+	levy = yes
+
+	gfx_tags = { light_tag }
+}
+
+a_warriors = {
+	# ANTIQVITAS installed-unit quarantine.
+	hide = yes
+	buildable = no
+	copy_from = a_age_1_traditions_heavy_infantry
+	
+	construction_demand = a_warriors_construction
+	maintenance_demand =  a_warriors_maintenance
+	
+	levy = yes
+
+	location_potential = {
+		OR = {
+			has_owner = no
+			owner = {
+				government_type = government_type:tribe
+			}
+		}
+	}
+
+	#root = location. Checks location_potential first so don't need that scripting in
+	mercenaries_per_location = {
+		pop_type = peasants
+		multiply = 0.01
+	}
+
+	gfx_tags = { medium_tag }
+}
+
+a_champions = {
+	# ANTIQVITAS installed-unit quarantine.
+	hide = yes
+	buildable = no
+	copy_from = a_age_1_traditions_heavy_infantry
+	
+	construction_demand = a_champions_construction
+	maintenance_demand =  a_champions_maintenance
+
+	country_potential = {
+		OR = {
+			country_type = pop
+			government_type ?= government_type:tribe
+		}
+	}
+
+	#root = location. Checks location_potential first so don't need that scripting in
+	mercenaries_per_location = {
+		pop_type = burghers
+		multiply = 0.01
+	}
+	
+	
+
+	gfx_tags = { heavy_tag }
+}
+
+a_chieftains = {
+	# ANTIQVITAS installed-unit quarantine.
+	hide = yes
+	buildable = no
+	copy_from = a_age_1_traditions_heavy_infantry
+	
+	construction_demand = a_chieftains_construction
+	maintenance_demand =  a_chieftains_maintenance
+	
+	levy = yes
+
+	location_potential = {
+		OR = {
+			has_owner = no
+			owner = {
+				government_type = government_type:tribe
+			}
+		}
+	}
+
+	gfx_tags = { heavy_tag }
+}

@@ -46,7 +46,7 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     no crash, no new disease/icon/GUI errors, and a normal vanilla control. Archive
     screenshots and delta logs in a focused report.
 
-- [ ] Add an installed-content leakage census and mandatory validator.
+- [x] Add an installed-content leakage census and mandatory validator.
   - Harvest definitions, unlock references, localization, exact-name source files,
     and art across installed base + all DLC for ages, institutions, advances,
     units, buildings, governments/ranks, pop types, country-history/start text,
@@ -65,7 +65,7 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
 
 ### P1 — Start experience, subjects, recruitment, institutions, and advances
 
-- [ ] Remove every vanilla loading quote, including DLC additions.
+- [x] Remove every vanilla loading quote, including DLC additions.
   - The installed English union has 64 keys: `LOADING_TIP_0` through
     `LOADING_TIP_59` plus `LOADING_TIP_d008_0` through
     `LOADING_TIP_d008_3`; the current generator covers only the 60 numeric keys.
@@ -75,7 +75,8 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     duplicate localization file; localization mount/first-key precedence is unsafe.
   - Preserve good ancient quotes and record sources/attributions where known.
   - Acceptance: 100% installed-union coverage, every `LOADING_TIP_*` resolves to
-    ANTIQVITAS text, and 8-12 rapid loading captures show no vanilla quote.
+    ANTIQVITAS text, and two rapid loading captures under the reduced QA policy
+    show distinct ancient quotes with no vanilla text.
 
 - [ ] Replace the vanilla bookmark/country-history agenda for every playable start.
   - The Rome report is exactly vanilla
@@ -108,6 +109,9 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     bands, and Rome/Arsacid/Han subject panels remain stable after a tick.
 
 - [ ] Quarantine every anachronistic unit and rebuild recruitment availability.
+  - [x] Mirror all 31 installed unit-type sources: 311 legacy definitions are
+    hidden/non-buildable, 12 locally required copy-chain adapters are allowlisted,
+    and 44 ancient definitions remain active.
   - Harvest every land/naval unit type from installed base + DLC. The immediate
     leak is concrete: the mod does not mirror
     `in_game/common/unit_types/1_uniques_for_age_6_revolutions.txt`, so

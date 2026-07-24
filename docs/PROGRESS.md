@@ -6431,3 +6431,15 @@ reviewed 128px BC7 DDS.
   contract, and added a mandatory installed-union/hash validator.
 - Fresh Rome survived four repeated panel cycles; Observer survived one; current
   `error.log` remained empty.
+
+## 2026-07-24 - Installed-content census and unit quarantine
+
+- Pinned 3,992 installed definitions, 6,891 references, and 1,116 art links
+  across nine total-conversion surfaces; zero installed sources are uncovered.
+- Exact-name mirrored all 31 installed unit files: 311 legacy units are
+  hidden/non-buildable, 12 copy-chain adapters remain technical-only, and 44
+  ancient units are active.
+- Rome and Han land/naval builders expose only ancient units; the Marcomannic
+  regular builder exposes no legacy units. Unit-error scan and smoke are clean.
+- Covered all 64 base+DLC loading-tip keys in 11 clients. Two rapid loads showed
+  distinct ANTIQVITAS quotations and ancient panoramas.

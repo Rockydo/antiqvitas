@@ -1,0 +1,72 @@
+﻿n_canoe = {
+	# ANTIQVITAS installed-unit quarantine.
+	hide = yes
+	buildable = no
+	category = navy_galley
+	use_ship_names = yes
+
+	age = "age_1_traditions"
+	
+	maritime_presence = ship_neglible_maritime
+	
+	movement_speed = 2
+	
+	hull_size = 1
+	cannons = 1
+	
+	crew_size = 0.01
+	
+	
+	maintenance_demand =  canoe_maintenance
+	construction_demand = canoe_construction
+
+	gfx_tags = { canoe_tag }
+	
+}
+
+n_traditional_galley = {
+	# ANTIQVITAS installed-unit quarantine.
+	hide = yes
+	buildable = no
+	category = navy_galley
+	copy_from = n_age_1_traditions_galley
+	age = "age_1_traditions"
+	
+}
+
+n_mediterrannean_galley = {
+	# ANTIQVITAS installed-unit quarantine.
+	hide = yes
+	buildable = no
+	category = navy_galley
+	copy_from = n_age_2_renaissance_galley
+	age = "age_2_renaissance"
+}
+
+n_war_galley = {
+	# ANTIQVITAS installed-unit quarantine.
+	hide = yes
+	buildable = no
+	category = navy_galley
+	copy_from = n_age_3_discovery_galley
+	age = "age_3_discovery"
+}
+
+n_galleass = {
+	# ANTIQVITAS installed-unit quarantine.
+	hide = yes
+	buildable = no
+	category = navy_galley
+	copy_from = n_age_4_reformation_galley
+	age = "age_4_reformation"
+}
+
+n_xebec = {
+	# ANTIQVITAS installed-unit quarantine.
+	hide = yes
+	buildable = no
+	category = navy_galley
+	copy_from = n_age_5_absolutism_galley
+	age = "age_5_absolutism"
+}
+

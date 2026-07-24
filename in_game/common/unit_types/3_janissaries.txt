@@ -1,0 +1,86 @@
+﻿a_renaissance_janissaries = {
+	# ANTIQVITAS installed-unit quarantine.
+	hide = yes
+	buildable = no
+	copy_from = a_age_2_renaissance_heavy_infantry
+	is_special = yes
+	
+
+	strength_damage_taken = -0.10
+	morale_damage_taken = -0.10
+
+	limit = janissary_unit_limit
+	
+
+	gfx_tags = { medium_tag }
+}
+
+a_discovery_janissaries = {
+	# ANTIQVITAS installed-unit quarantine.
+	hide = yes
+	buildable = no
+	copy_from = a_age_3_discovery_heavy_infantry
+	is_special = yes
+
+
+	strength_damage_taken = -0.10
+	morale_damage_taken = -0.10
+
+	limit = janissary_unit_limit
+
+	
+	gfx_tags = { medium_tag musket_tag }
+}
+
+a_reformation_janissaries = {
+	# ANTIQVITAS installed-unit quarantine.
+	hide = yes
+	buildable = no
+	copy_from = a_age_4_reformation_heavy_infantry
+	is_special = yes
+
+
+	strength_damage_taken = -0.10
+	morale_damage_taken = -0.10
+
+	limit = janissary_unit_limit
+	
+
+	
+	gfx_tags = { medium_tag musket_tag }
+}
+
+a_absolutism_janissaries = {
+	# ANTIQVITAS installed-unit quarantine.
+	hide = yes
+	buildable = no
+	copy_from = a_age_5_absolutism_heavy_infantry
+	is_special = yes
+
+
+	strength_damage_taken = -0.10
+	morale_damage_taken = -0.10
+
+	limit = janissary_unit_limit
+	
+
+	
+	gfx_tags = { medium_tag musket_tag }
+}
+
+a_revolutions_janissaries = {
+	# ANTIQVITAS installed-unit quarantine.
+	hide = yes
+	buildable = no
+	copy_from = a_age_6_revolutions_heavy_infantry
+	is_special = yes
+
+	strength_damage_taken = -0.10
+	morale_damage_taken = -0.10
+
+	limit = janissary_unit_limit
+	
+
+	
+	gfx_tags = { medium_tag musket_tag }
+}

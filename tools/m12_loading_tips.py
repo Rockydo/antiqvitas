@@ -4,10 +4,13 @@
 from __future__ import annotations
 
 import argparse
+import json
+import re
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+CONFIG = ROOT / "config/local_paths.json"
 LANGUAGES = (
     "braz_por", "english", "french", "german", "japanese", "korean",
     "polish", "russian", "simp_chinese", "spanish", "turkish",
@@ -76,7 +79,34 @@ TIPS = (
     ("Custom is the king of all.", "Pindar; traditional rendering"),
     ("No great thing is created suddenly.", "Epictetus, Discourses; adapted"),
     ("The measure of prosperity is peace within the household.", "Columella, On Agriculture; adapted"),
+    ("The courage of citizens is a city's strongest wall.", "Thucydides; adapted"),
+    ("The whole inhabited world is one community.", "Stoic tradition; adapted"),
+    ("The sea is a road between peoples.", "Strabo, Geography; adapted"),
+    ("A harbor is a city's gate to distant lands.", "Strabo, Geography; adapted"),
 )
+
+TIP_KEYS = tuple(f"LOADING_TIP_{index}" for index in range(60)) + tuple(
+    f"LOADING_TIP_d008_{index}" for index in range(4)
+)
+TIP_KEY_PATTERN = re.compile(r"(?m)^\s*(LOADING_TIP_[A-Za-z0-9_]+)\s*:")
+
+
+def installed_tip_keys() -> tuple[str, ...]:
+    config = json.loads(CONFIG.read_text(encoding="utf-8-sig"))
+    game = Path(config["game_dir"]) / "game"
+    roots = [game / "loading_screen/localization/english"]
+    roots.extend(
+        package / "loading_screen/localization/english"
+        for package in sorted((game / "dlc").glob("*"))
+        if package.is_dir()
+    )
+    keys: set[str] = set()
+    for root in roots:
+        if not root.is_dir():
+            continue
+        for path in sorted(root.rglob("*.yml")):
+            keys.update(TIP_KEY_PATTERN.findall(path.read_text(encoding="utf-8-sig")))
+    return tuple(sorted(keys))
 
 
 def targets(language: str) -> tuple[Path, Path]:
@@ -94,10 +124,10 @@ def targets(language: str) -> tuple[Path, Path]:
 
 def rendered(language: str) -> str:
     lines = [f"l_{language}:"]
-    for index, (quote, source) in enumerate(TIPS):
+    for key, (quote, source) in zip(TIP_KEYS, TIPS, strict=True):
         escaped_quote = quote.replace('"', r'\"')
         lines.append(
-            f' LOADING_TIP_{index}: " #T \\"{escaped_quote}\\"#! \\n #tooltip_subheading — {source}#!"'
+            f' {key}: " #T \\"{escaped_quote}\\"#! \\n #tooltip_subheading — {source}#!"'
         )
     return "\ufeff" + "\n".join(lines) + "\n"
 
@@ -119,8 +149,19 @@ def write() -> None:
 
 
 def validate() -> None:
-    if len(TIPS) != 60:
-        raise ValueError(f"expected 60 installed LOADING_TIP keys, found {len(TIPS)}")
+    installed = installed_tip_keys()
+    if installed != tuple(sorted(TIP_KEYS)):
+        missing = sorted(set(installed) - set(TIP_KEYS))
+        stale = sorted(set(TIP_KEYS) - set(installed))
+        raise ValueError(
+            f"installed loading-tip union changed; missing overrides={missing}, "
+            f"stale overrides={stale}"
+        )
+    if len(TIPS) != len(TIP_KEYS):
+        raise ValueError(
+            f"expected {len(TIP_KEYS)} installed LOADING_TIP keys, "
+            f"found {len(TIPS)} texts"
+        )
     for language in LANGUAGES:
         content = rendered(language)
         for path in targets(language):
@@ -139,7 +180,10 @@ def main() -> int:
         write()
     if args.check or not args.write:
         validate()
-    print(f"m12_loading_tips: PASS ({len(TIPS)} ancient tips; {len(LANGUAGES)} client mirrors; 2 key overlays)")
+    print(
+        f"m12_loading_tips: PASS ({len(TIPS)} ancient tips; "
+        f"{len(LANGUAGES)} client mirrors; 2 exact-name overlays)"
+    )
     return 0
 
 
