@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-24 - Roman building ledgers fail closed on malformed CSV rows
+
+Ten early Roman special rows had comma-containing scope notes that CSV parsing
+silently split, truncating the retained caveat and illustration brief while
+leaving the engine contract intact. Those fields are now quoted, and the
+Roman-building generator rejects excess CSV columns. Data-led historical
+qualifiers must fail visibly rather than degrade silently.
+
 ## 2026-07-24 - Building art requires retained 128px review masters
 
 The building validators already reject missing, malformed, or byte-identical
