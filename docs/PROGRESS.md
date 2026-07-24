@@ -6252,3 +6252,13 @@ reviewed 128px BC7 DDS.
   inventing exact early settlements.
 - Full validation and enabled-mod smoke passed with zero new error-log lines;
   committed as `05cd59a` (`fix(m4): qualify regional market proxy names`).
+
+## 2026-07-24 - M4 capital-proxy name qualification
+
+- Replaced eighteen prominent later-name capital anchors in Europe, Africa,
+  Iran, Arabia, and Inner Asia with source-qualified AD 1 polity or regional
+  frames, including Charax Spasinu, Corduene, Sakastan, Aksum, Qaryat al-Faw,
+  Suiones, Caledonia, Ulaid, and Germania.
+- The generator now reports 1,998 qualified Tier 2 adapters. Full validation
+  and enabled-mod smoke passed with zero new error-log lines; committed as
+  `acdf220` (`fix(m4): qualify capital proxy names`).
