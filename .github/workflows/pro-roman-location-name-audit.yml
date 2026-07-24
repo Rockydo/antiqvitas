@@ -67,6 +67,7 @@ jobs:
         if: always()
         run: |
           mkdir -p .audit/roman-names/generated
+          mkdir -p .audit/roman-names/base-tools
           mkdir -p .audit/roman-names/workspace/docs/m4
           mkdir -p .audit/roman-names/workspace/docs/vanilla_symbols
           mkdir -p .audit/roman-names/workspace/docs/world_1ad
@@ -88,6 +89,14 @@ jobs:
           git archive --format=zip --output=.audit/roman-names/repository.zip HEAD \
             Makefile tools docs/m4 docs/world_1ad docs/vanilla_symbols \
             main_menu/localization main_menu/setup/start/06_pops.txt
+          git fetch --no-tags --depth=1 origin main:refs/remotes/origin/main
+          for path in \
+            tools/generate_m4_tier2_names.py \
+            tools/generate_m4_tier2_wide_names.py \
+            tools/generate_m4_tier2_remote_names.py
+          do
+            git show "origin/main:${path}" > ".audit/roman-names/base-tools/${path##*/}"
+          done
       - name: Upload Roman naming inventory
         if: always()
         uses: actions/upload-artifact@v4
