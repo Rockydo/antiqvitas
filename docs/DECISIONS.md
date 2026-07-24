@@ -17,6 +17,14 @@ therefore reuses the proven low stockade contract and receives a unique direct
 DDS; it does not transfer Cheruscan ownership, create a legion, or model a
 later stone fortress or limes line.
 
+## 2026-07-24 - Direct ancient labels outrank nearest-site adapters
+
+The automatic proximity tier correctly supplies broad coverage but may select a
+nearby, distinct settlement. A direct AD 1 Pleiades record at the installed
+field takes precedence: Nicaea replaces Cemenelum at Nice and Noviomagus is
+retained at Chichester. The promotions retain the existing culture/dialect
+adapter and deliberately make no city-boundary or political inference.
+
 ## 2026-07-24 - M8 acceptance uses the live research UI, not AI playback
 
 The revised milestone contract requires a coherent starting research screen,
