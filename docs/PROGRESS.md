@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-07-24 - M12 verification protocol aligned with the rapid-test gate
+
+- Updated the finale record to make the full 475-year observer run optional
+  evidence. M12 still requires a clean fresh AD 1 start and rapid high-risk
+  subsystem probes; its remaining concrete gap is the documented legacy
+  culture/religion no-pop diagnostics.
+
 ## 2026-07-24 - M8 knowledge accepted with a rapid research-panel probe
 
 - Opened the live AD 1 Advances UI through the locally verified input binding.
