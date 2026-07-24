@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
 """Generate wider, explicitly non-secure Pleiades AD 1 name adapters.
 
-This is the fast coverage tier between direct research and retained-label Tier
-3.  It never changes the direct ledger, uses only the already checked precise
-AD 1 settlement queue, and records the wider projection caveat on every row.
+This is the coverage tier between direct research and retained-label Tier 3. It
+uses the checked precise AD 1 settlement queue, but exposes only separate
+Pleiades name resources attested across the campaign start.
 """
-
 from __future__ import annotations
 
 import argparse
 import csv
 import json
 import re
-import sys
 from collections import defaultdict
 from io import StringIO
 from pathlib import Path
@@ -26,9 +24,11 @@ from generate_m4_tier2_names import (
     QUEUE,
     capital_locations,
     csv_rows,
+    culture_languages,
     pop_cultures,
     usable_title,
 )
+from pleiades_names import HistoricalName, PleiadesNameIndex, normalized
 
 ROOT = Path(__file__).resolve().parents[1]
 TIER2 = ROOT / "docs/m4/tier2_location_name_overrides.csv"
@@ -45,31 +45,50 @@ def ledger_locations(path: Path) -> set[str]:
 
 
 def wide_title(value: str) -> bool:
-    """Reject obvious modern archaeological/site labels from a light pass."""
+    """Retained for non-name-resource callers that need a light title gate."""
     if not usable_title(value):
         return False
     folded = value.casefold()
     modern_terms = (
-        "casa ", "castello", "château", "church", "fort ", "henchir", "monte ",
-        "oued ", "santa ", "saint ", "sidi ", "site ", "tepe", "terra", "villa ",
+        "casa ",
+        "castello",
+        "château",
+        "church",
+        "fort ",
+        "henchir",
+        "monte ",
+        "oued ",
+        "santa ",
+        "saint ",
+        "sidi ",
+        "site ",
+        "tepe",
+        "terra",
+        "villa ",
     )
     modern_joiners = r"\b(?:de|del|des|di|do|du|el|la|le|les|saint|santa|sidi)\b"
-    return "-" not in value and not any(term in folded for term in modern_terms) and not re.search(modern_joiners, folded)
-
-
-def normalized(value: str) -> str:
-    return re.sub(r"[^a-z0-9]", "", value.casefold())
+    return (
+        "-" not in value
+        and not any(term in folded for term in modern_terms)
+        and not re.search(modern_joiners, folded)
+    )
 
 
 def render() -> str:
     queue = csv_rows(QUEUE, comments=True)
-    cultures = {row["key"] for row in csv_rows(CULTURES)}
+    preferences = culture_languages()
     installed = set(json.loads(ENGINE_LOCATIONS.read_text(encoding="utf-8-sig")))
-    excluded = capital_locations() | ledger_locations(CURATED) | ledger_locations(QUALIFIED) | ledger_locations(TIER2)
+    excluded = (
+        capital_locations()
+        | ledger_locations(CURATED)
+        | ledger_locations(QUALIFIED)
+        | ledger_locations(TIER2)
+    )
     population_cultures = pop_cultures()
-    candidates: dict[str, list[dict[str, str]]] = defaultdict(list)
+    name_index = PleiadesNameIndex.load()
+    candidates: dict[str, list[tuple[dict[str, str], HistoricalName]]] = defaultdict(list)
     for row in queue:
-        location, title = row["location"].strip(), row["pleiades_title"].strip()
+        location = row["location"].strip()
         try:
             offset = float(row["offset_px"])
         except ValueError as exc:
@@ -78,27 +97,41 @@ def render() -> str:
             location not in installed
             or location in excluded
             or not MIN_OFFSET_PX < offset <= MAX_OFFSET_PX
-            or not wide_title(title)
-            or normalized(title) == normalized(row["vanilla_name"])
         ):
             continue
         culture = population_cultures.get(location)
-        if culture in cultures:
-            candidates[location].append(row)
+        if not culture or culture not in preferences:
+            continue
+        name = name_index.best(
+            row["pleiades_id"],
+            row["pleiades_title"],
+            preferences[culture],
+        )
+        if name is None or normalized(name.form) == normalized(row["vanilla_name"]):
+            continue
+        candidates[location].append((row, name))
 
-    output = []
-    for location, rows in candidates.items():
-        row = min(rows, key=lambda item: (float(item["offset_px"]), item["pleiades_id"]))
+    output: list[dict[str, str]] = []
+    for location, values in candidates.items():
+        row, name = min(
+            values,
+            key=lambda item: (
+                float(item[0]["offset_px"]),
+                item[0]["pleiades_id"],
+                item[1].name_id,
+            ),
+        )
         output.append(
             {
                 "location": location,
                 "culture": population_cultures[location],
-                "historical_name": row["pleiades_title"].strip(),
-                "source": f"PLE:{row['pleiades_id']};T2W",
+                "historical_name": name.form,
+                "source": f"PLE:{row['pleiades_id']};PLN:{name.source_id};T2W",
                 "confidence": "tier2",
                 "note": (
-                    "Wide Tier-2 AD 1 Pleiades settlement adapter; nearest installed city field "
-                    f"at {float(row['offset_px']):.2f}px; lower-confidence map proxy."
+                    "Wide Tier-2 AD 1 Pleiades settlement adapter; period-valid name resource "
+                    f"{name.source_id}; nearest installed city field at "
+                    f"{float(row['offset_px']):.2f}px; lower-confidence map proxy."
                 ),
             }
         )
@@ -121,7 +154,7 @@ def main() -> int:
         parser.error("provide exactly one of --write or --check")
     try:
         expected = render()
-    except (OSError, ValueError, json.JSONDecodeError) as exc:
+    except (OSError, ValueError, csv.Error, json.JSONDecodeError) as exc:
         print(f"m4_tier2_wide_names: FAIL\n  - {exc}")
         return 1
     if args.write:
@@ -131,7 +164,10 @@ def main() -> int:
     if not OUTPUT.is_file() or OUTPUT.read_text(encoding="utf-8-sig") != expected:
         print(f"m4_tier2_wide_names: FAIL\n  - stale or missing {OUTPUT.relative_to(ROOT)}")
         return 1
-    print(f"m4_tier2_wide_names: PASS ({max(0, len(expected.splitlines()) - 1)} wide lower-confidence adapters)")
+    print(
+        f"m4_tier2_wide_names: PASS "
+        f"({max(0, len(expected.splitlines()) - 1)} wide lower-confidence adapters)"
+    )
     return 0
 
 
