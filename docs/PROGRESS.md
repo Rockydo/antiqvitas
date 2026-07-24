@@ -6372,3 +6372,14 @@ reviewed 128px BC7 DDS.
 - Fresh selector captures confirm Roman Empire, Great Western Han, Parthian
   Empire, Minor Tribe of Suiones, and Grand Republic of Yaudheya. Static
   validation and the enabled-mod smoke remain green with zero new log lines.
+
+## 2026-07-24 - M12 tooltip and tutorial recheck
+
+- Re-ran the authored-text, historical-hint, and exact-localization guards.
+  They cover 61,687 player-facing entries across 19 English files and all ten
+  mirrors, retain no localization stubs, and report zero prohibited post-476
+  terms.
+- Re-read the installed tutorial lessons: all four are non-automatic. The
+  exact-name overlay still disables only 33 dated/dynastic hints while retaining
+  generic economy, food, stability, warfare, estates, slavery, and research
+  guidance.
