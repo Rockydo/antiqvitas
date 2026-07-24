@@ -6341,3 +6341,9 @@ reviewed 128px BC7 DDS.
 - A pre-AD 1 Wang Mang regency start was rejected by the intentionally strict
   campaign date parser before launch. It was restored immediately; full
   validation is green and the no-repeat boundary is recorded in `BLOCKERS.md`.
+
+## 2026-07-24 - M6 live-panel route boundary
+
+- A source-bounded Ping birthplace fixture passed validation and smoke, but the
+  fresh AD 1 selector ignored both live-start controls under the driver. The
+  fixture was fully reverted; canonical validation and smoke remain green.
