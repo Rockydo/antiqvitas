@@ -23,17 +23,14 @@ It again reached the settled enabled-mod menu with zero new normalized
 driver remains 591.86, matching the renderer-blocker environment; therefore no
 additional high-speed observer retry was performed.
 
-## Release gate not accepted
+## Remaining release gate
 
-M12 is not tagged. The plan requires observer-based pacing measurements and an
-autonomous AD 1-to-476 run with decade screenshots and finale evidence. The
-country-change overlay now enters Observer, and the M7 controlled AI-war replay
-also reaches maximum speed, but sustained play again reproduces the FSR renderer
-failure. A fresh observer initialization and clean menu smoke cannot substitute
-for a completed timeline run.
+The revised plan accepts `make full`, a fresh AD 1 start, static finale
+validation, and rapid high-risk subsystem probes. The AD 1-to-476 observer
+run and finale screenshot are optional evidence, not a release gate. M12 is
+therefore open only for the retained legacy culture/religion no-pop diagnostic
+and the final all-milestone acceptance audit.
 
-Evidence and recovery conditions are in
+The observer renderer failure remains documented optional evidence in
 `docs/playtests/M12_OBSERVER_RETRY_20260721.md`,
-`docs/playtests/M12_RENDER_SCALE70_20260721.md`,
-`docs/playtests/M7_WAR.md`, and `BLOCKERS.md`. Resume this gate only after a
-material renderer, driver, or installed-game change.
+`docs/playtests/M12_RENDER_SCALE70_20260721.md`, and `BLOCKERS.md`.
