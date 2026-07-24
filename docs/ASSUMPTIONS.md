@@ -4271,3 +4271,12 @@ therefore labels only the installed Štip city field. No civic boundary, route,
 legal status, population, ethnicity, language, or political conclusion is
 made. Sources: STIP-MUN; TAB-ASTIBO. [secure local toponym; contested
 map-field scope]
+
+## 2026-07-24 - Roman-world direct toponyms supersede borrowed nearby sites
+
+The direct-label pass replaces proximity names belonging to other sites with
+reviewed city forms only. Abellinum remains an explicit Avellino near-site
+adapter; every other entry is a city-field label, not a boundary, population,
+status, language, or control claim. Sources: TAB-ANAGNIA; TAB-ABELLINUM;
+ATT-IGUVIUM; BAT-LATIUM; BAT-ITALY; BAT-GAUL; BAT-THRACE; BAT-NORICUM;
+PLE-KALLIPOLIS; PLE-CARNIUM. [secure toponym; contested map-field scope]
