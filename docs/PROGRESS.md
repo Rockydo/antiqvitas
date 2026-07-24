@@ -6271,3 +6271,16 @@ reviewed 128px BC7 DDS.
 - Dynamic coverage is now 61 capital, 241 curated, 2,041 Tier-2, and 11,199
   Tier-3 anchors. Validation and smoke passed with zero new error-log lines;
   committed as `008c8a58`.
+
+## 2026-07-24 - M4 map-wide Tier-3 naming completion
+
+- Replaced every remaining direct vanilla map-label fallback in one generated
+  batch. The visible map now has 28,573 explicit names: 2,343 higher-evidence
+  capital, curated, and Tier-2 forms plus 26,230 deterministic synthetic Tier-3
+  forms. Tier-3 morphology is culture-group-bound for populated fields and
+  neutral for empty fields; all are visibly ledgered as `T3M`, never as
+  attested toponyms.
+- `make validate` passed the complete generated-name and localization contracts;
+  the enabled-mod menu smoke also passed with zero new `error.log` lines over
+  the vanilla baseline. Committed as `420dddb3`
+  (`feat(m4): synthesize tier3 ancient map names`).
