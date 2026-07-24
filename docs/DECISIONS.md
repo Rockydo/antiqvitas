@@ -2774,6 +2774,15 @@ non-reconstructed role adapters while making a removed seed an immediate
 validation failure. The mercenary floor is also grouped into skirmisher,
 heavy-foot, and mounted profiles; these groups describe gameplay roles rather
 than named contracts, ethnic force ratios, or historical orders of battle.
+
+## 2026-07-24 - Preserve legacy culture ABI with offset initializer presences
+
+The installed initializer accepts a positive additive `define_pop` but rejects
+zero size and culture `enable`. The M12 ledger therefore supplies one person
+per locally reported unused culture in a separate manager, offsets its exact
+total from Aachen, and verifies the ledger, population total, smoke, and fresh
+selection diagnostic independently. This is an engine compatibility artifact,
+not a historical diaspora claim.
 # 2026-07-24 — Explicit synthetic Tier-3 location morphology
 
 The map-wide naming completion pass uses deterministic culture-group suffixes

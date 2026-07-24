@@ -13,6 +13,10 @@ from pathlib import Path
 from extract_vanilla import tokenize
 from generate_country_definitions import historical_profile_for
 from generate_start_mirror import (
+    COMPATIBILITY_LOCATION,
+    COMPATIBILITY_POP_SIZE,
+    COMPATIBILITY_RELIGION,
+    culture_presence_cultures,
     load_population_plan,
     population_culture_remaps,
     population_location_overrides,
@@ -20,6 +24,7 @@ from generate_start_mirror import (
 
 ROOT = Path(__file__).resolve().parents[1]
 POP_FILE = ROOT / "main_menu/setup/start/06_pops.txt"
+COMPATIBILITY_POP_FILE = ROOT / "main_menu/setup/start/21_locations.txt"
 OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
 M4_SYMBOLS = ROOT / "docs/m4/definition_symbols.json"
@@ -141,6 +146,38 @@ def main() -> int:
         region_totals[region] += size
         macro_totals[allocations[region].macro] += size
         total += size
+    compatibility = parse_records(COMPATIBILITY_POP_FILE)
+    expected_cultures = culture_presence_cultures()
+    if len(compatibility) != len(expected_cultures):
+        failures.append(
+            f"compatibility manager has {len(compatibility)} records, expected {len(expected_cultures)}"
+        )
+    seen_compatibility: set[str] = set()
+    for record in compatibility:
+        culture = record.get("culture", "")
+        seen_compatibility.add(culture)
+        if record.get("location") != COMPATIBILITY_LOCATION:
+            failures.append(f"compatibility pop is not at {COMPATIBILITY_LOCATION}")
+        if record.get("type") != "peasants" or record.get("religion") != COMPATIBILITY_RELIGION:
+            failures.append(f"{culture}: invalid compatibility population contract")
+        if culture not in valid_cultures and culture not in set(json.loads((ROOT / "docs/vanilla_symbols/culture.json").read_text(encoding="utf-8-sig"))):
+            failures.append(f"{culture}: invalid compatibility culture")
+        try:
+            size = Decimal(record.get("size", ""))
+        except Exception:
+            failures.append(f"{culture}: invalid compatibility size")
+            continue
+        if size != COMPATIBILITY_POP_SIZE:
+            failures.append(f"{culture}: compatibility size {size} is not {COMPATIBILITY_POP_SIZE}")
+            continue
+        region = overrides.get(COMPATIBILITY_LOCATION, {}).get(
+            "region", roster[owners[COMPATIBILITY_LOCATION]]["region"]
+        )
+        region_totals[region] += size
+        macro_totals[allocations[region].macro] += size
+        total += size
+    if seen_compatibility != set(expected_cultures):
+        failures.append("compatibility culture ledger and generated manager differ")
     for location in sorted(owners):
         count = len(records_by_location[location])
         if count != 1:

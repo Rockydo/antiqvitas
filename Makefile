@@ -53,6 +53,7 @@ validate:
 	.venv/Scripts/python.exe tools/m12_anachronism_audit.py --check
 	.venv/Scripts/python.exe tools/m12_disable_historical_hints.py --check
 	.venv/Scripts/python.exe tools/m12_event_quarantine.py --check
+	.venv/Scripts/python.exe tools/m12_culture_presence.py --check
 	.venv/Scripts/python.exe tools/generate_country_definitions.py --check
 	.venv/Scripts/python.exe tools/capital_mapper.py --check
 	.venv/Scripts/python.exe tools/extract_map_coordinates.py --check

@@ -6313,3 +6313,11 @@ reviewed 128px BC7 DDS.
   fresh XAR Government panel still rendered generated Liu Zhang. The temporary
   relation renderer and source fixture were reverted and recorded as a
   no-repeat engine limitation.
+
+## 2026-07-24 - M12 no-pop initializer repair
+
+- An engine-proven additive manager supplies 714 ledgered one-person culture
+  presences, offset exactly from Aachen's base allocation. Future M4 religions
+  use the accepted terminal-date `enable` guard.
+- `make validate`, final vanilla-control smoke, and a fresh AD 1 selection
+  probe all pass; the focused culture/religion no-pop scan is zero.
