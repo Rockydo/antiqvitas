@@ -6172,4 +6172,17 @@ reviewed 128px BC7 DDS.
   market-region names: Mouza at al-Mukha and Muziris at Kodungallur.
 - Promoted the securely identified direct Ray label to Rhaga; all generated
   language-localization outputs were regenerated from their checked ledgers.
-- Next: validate and smoke this small game-visible naming batch before commit.
+- Full validation and enabled-mod smoke passed with zero new error-log lines;
+  committed as `25a28d8` (`fix(m4): correct key ancient market names`).
+
+## 2026-07-24 - M4/M5 market-anchor identity correction
+
+- Corrected the Taman market and display label from the geographically wrong
+  Panticapaeum proxy to Phanagoria, the ancient Taman city.
+- Promoted Barygaza and Taxila to explicit qualified proxy labels with their
+  exact non-coincidence recorded; regenerated start-market comments and all
+  name-localization outputs.
+- Full validation and enabled-mod smoke passed with zero new error-log lines;
+  committed as `18d1dd2` (`fix(m5): correct ancient market anchors`).
+- `docs/TODO.md` remains intentionally unstaged because it contained
+  pre-existing user edits; the completed work is instead recorded here.
