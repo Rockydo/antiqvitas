@@ -2829,3 +2829,18 @@ The installed `set_regent` effect is used in the existing generated
 `on_game_start` hook after bookmark managers exist. It preserves the sourced
 Ping/Wang start data and the AD 1 date boundary while replacing the loader's
 generated regent with Wang Mang.
+
+## 2026-07-24 - Generated culture files retain one owner
+
+`generate_m4_definitions.py`, `generate_country_definitions.py`, and
+`generate_start_mirror.py` remain the sole owners of their generated outputs.
+Task-specific culture batches are folded into canonical CSV ledgers and then
+removed; no persistent auxiliary generator may write those files.
+
+Ptolemaic Britain and Ireland are represented as contested regional frames.
+Province geometry supplies playable coverage, while narrow location overrides
+are used only where a province-wide assignment would be less defensible.
+
+The Finnic culture uses `antq_finnic_culture`; the established Finnic religion
+retains `antq_finnic`. Culture and religion localization namespaces must remain
+disjoint so the canonical M4 generator can validate and regenerate both.

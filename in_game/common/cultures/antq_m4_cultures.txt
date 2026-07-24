@@ -3232,9 +3232,9 @@ antq_yilou = { # P8.3;P10;CAH-XI; Lower-Amur and Ussuri Yilou regional frame wit
 	}
 }
 
-antq_finnic = { # P8.7;P10;CAH-XI; Finnic regional frame distinct from broader Uralic and Sami-adapter categories
+antq_finnic_culture = { # P8.7;P10;CAH-XI; Finnic regional frame distinct from broader Uralic and Sami-adapter categories
 	language = antq_uralic_dialect
-	color = antq_culture_color_antq_finnic
+	color = antq_culture_color_antq_finnic_culture
 	tags = { european_gfx }
 	culture_groups = {
 		antq_uralic_group
@@ -3355,5 +3355,455 @@ antq_quechua_zone = { # P8.10;P10;CAH-XI; Central Andean Quechua-zone regional f
 	tags = { european_gfx }
 	culture_groups = {
 		antq_andean_group
+	}
+}
+
+antq_catuvellaunian = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Catuvellauni campaign-boundary culture centered on Verlamion; not an exact frontier; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_catuvellaunian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_trinovantian = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Trinovantes campaign-boundary culture centered on Camulodunum; not an exact frontier; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_trinovantian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_icenian = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Iceni campaign-boundary culture in East Anglia; not an exact frontier; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_icenian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_brigantian = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Brigantes campaign-boundary culture across northern Britain; not a unitary polity polygon; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_brigantian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_british_atrebatic = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Atrebatic campaign-boundary culture around Calleva; distinct from the continental Atrebates adapter; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_british_atrebatic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_silurian = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Silures campaign-boundary culture in southeastern Wales; not an exact frontier; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_silurian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_ordovician = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Ordovices campaign-boundary culture in north and central Wales; not an exact frontier; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_ordovician
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_dumnonian = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Dumnonii campaign-boundary culture in the southwest; not an exact frontier; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_dumnonian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_cantiacian = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Cantiaci campaign-boundary culture in Kent; not an exact frontier; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_cantiacian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_regnian = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Regni/Regnenses campaign-boundary culture on the south coast; not an exact frontier; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_regnian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_british_belgic = { # P8.7;P10;CAH-XI;PTO-GEO-II2; British Belgae campaign-boundary culture in the central south and Somerset frontier; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_british_belgic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_durotrigian = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Durotriges campaign-boundary culture in Dorset; not an exact frontier; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_durotrigian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_dobunnic = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Dobunni campaign-boundary culture in the Severn-Cotswold and upper-Thames zone; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_dobunnic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_corieltauvian = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Corieltauvi campaign-boundary culture in the east Midlands; not an exact frontier; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_corieltauvian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_british_cornovian = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Cornovii campaign-boundary culture in the west Midlands; distinct from northern Cornavii; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_british_cornovian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_british_parisian = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Parisii campaign-boundary culture in the East Riding; distinct from the Gallic Parisii; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_british_parisian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_carvetian = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Carvetii campaign-boundary culture in the Cumbrian northwest; not an exact frontier; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_carvetian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_demetian = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Demetae campaign-boundary culture in southwestern Wales; not an exact frontier; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_demetian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_deceanglian = { # P8.7;P10;CAH-XI;PTO-GEO-II2; Deceangli campaign-boundary culture in northeastern Wales; represented by a narrow anchor; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_deceanglian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_votadinian = { # P8.7;P10;PTO-GEO-II2;MANN-BRI; Votadini/Otalini campaign-boundary culture in southeast Scotland and Northumberland; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_votadinian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_selgovaean = { # P8.7;P10;PTO-GEO-II2;MANN-BRI; Selgovae campaign-boundary culture in the central Southern Uplands; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_selgovaean
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_novantaean = { # P8.7;P10;PTO-GEO-II2;MANN-BRI; Novantae campaign-boundary culture in Galloway; not an exact frontier; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_novantaean
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_damnonian = { # P8.7;P10;PTO-GEO-II2;MANN-BRI; Damnoni campaign-boundary culture in the Clyde basin; distinct from southwestern Dumnonii; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_damnonian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_veniconian = { # P8.7;P10;PTO-GEO-II2;MANN-BRI; Venicones campaign-boundary culture in eastern Scotland; not an exact frontier; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_veniconian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_taexalian = { # P8.7;P10;PTO-GEO-II2;MANN-BRI; Taexali campaign-boundary culture in northeastern Scotland; not an exact frontier; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_taexalian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_epidian = { # P8.7;P10;PTO-GEO-II2;MANN-BRI; Epidii campaign-boundary culture in Argyll and the Inner Hebrides; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_epidian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_vacomagian = { # P8.7;P10;PTO-GEO-II2;MANN-BRI; Vacomagi campaign-boundary culture around Moray; Ptolemaic placement is contested; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_vacomagian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_decantian = { # P8.7;P10;PTO-GEO-II2;MANN-BRI; Decantae campaign-boundary culture in Ross; represented as a regional proxy; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_decantian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_caerenian = { # P8.7;P10;PTO-GEO-II2;MANN-BRI; Caereni campaign-boundary culture in Sutherland; represented as a regional proxy; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_caerenian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_creonian = { # P8.7;P10;PTO-GEO-II2;MANN-BRI; Creones campaign-boundary culture on the western Highland-Hebridean interface; narrow anchor; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_creonian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_carnonacan = { # P8.7;P10;PTO-GEO-II2;MANN-BRI; Carnonacae campaign-boundary culture on the western Ross coast; narrow anchor; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_carnonacan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_british_lugian = { # P8.7;P10;PTO-GEO-II2;MANN-BRI; Lugi campaign-boundary culture in northern Scotland; distinct from the continental Lugii; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_british_lugian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_smertian = { # P8.7;P10;PTO-GEO-II2;MANN-BRI; Smertae campaign-boundary culture in the far north; narrow anchor; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_smertian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_northern_cornavian = { # P8.7;P10;PTO-GEO-II2;MANN-BRI; Northern Cornavii campaign-boundary culture in Caithness; distinct from Midlands Cornovii; Gaelic is a technical engine language adapter
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_northern_cornavian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_vennicnian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Vennicnii campaign proxy on the northwestern coast of Hibernia; Ptolemy's relative order does not establish exact AD 1 boundaries
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_vennicnian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_rhobogdian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Rhobogdii campaign proxy on the northeastern coast of Hibernia; Ptolemy's relative order does not establish exact AD 1 boundaries
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_rhobogdian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_erdinian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Erdini campaign proxy near the northwestern interior and Donegal Bay approaches; Ptolemy's relative order does not establish exact AD 1 boundaries
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_erdinian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_nagnatan = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Nagnatae/Magnatae campaign proxy around Mayo-Sligo; Ptolemy's relative order does not establish exact AD 1 boundaries
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_nagnatan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_autinian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Autini campaign proxy in western Hibernia between Galway and the Shannon; Ptolemy's relative order does not establish exact AD 1 boundaries
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_autinian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_ganganian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Gangani campaign proxy in west-central Hibernia; not an exact ethnic boundary; Ptolemy's relative order does not establish exact AD 1 boundaries
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_ganganian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_velabrian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Velabri/Wellaboroi campaign proxy in far southwestern Hibernia; Ptolemy's relative order does not establish exact AD 1 boundaries
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_velabrian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_ivernian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Iverni campaign proxy in southwestern Hibernia; not a language or island-wide identity claim; Ptolemy's relative order does not establish exact AD 1 boundaries
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_ivernian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_usdiaean = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Usdiae campaign proxy along the south-central Hibernian corridor; Ptolemy's relative order does not establish exact AD 1 boundaries
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_usdiaean
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_irish_brigantian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Irish Brigantes campaign proxy on the southeastern coast; distinct from British Brigantes; Ptolemy's relative order does not establish exact AD 1 boundaries
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_irish_brigantian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_coriondian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Coriondi campaign proxy inland from the southeastern coast; Ptolemy's relative order does not establish exact AD 1 boundaries
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_coriondian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_manapian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Manapii campaign proxy in southeastern Hibernia; Ptolemy's relative order does not establish exact AD 1 boundaries
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_manapian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_caucian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Cauci campaign proxy around the Dublin-Wicklow coast; Ptolemy's relative order does not establish exact AD 1 boundaries
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_caucian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_eblanian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Eblani campaign proxy in eastern and northeastern Leinster; Ptolemy's relative order does not establish exact AD 1 boundaries
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_eblanian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_voluntian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Voluntii campaign proxy in northeastern Hibernia; used cautiously with the Ulaid tag; Ptolemy's relative order does not establish exact AD 1 boundaries
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_voluntian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_darinian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Darini campaign proxy on the northeast coast below the Rhobogdii; Ptolemy's relative order does not establish exact AD 1 boundaries
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_darinian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
 	}
 }
