@@ -6305,3 +6305,11 @@ reviewed 128px BC7 DDS.
   it as an unexpected culture token, so the generator and all mirrors were
   restored. The failed field is recorded as a no-repeat boundary; the remaining
   no-pop diagnostic requires a different engine-accepted contract.
+
+## 2026-07-24 - M6 Han father-link probe
+
+- A source-backed Liu Xing father link was the final untried relationship common
+  to the local regency examples. It passed static validation and smoke, but a
+  fresh XAR Government panel still rendered generated Liu Zhang. The temporary
+  relation renderer and source fixture were reverted and recorded as a
+  no-repeat engine limitation.

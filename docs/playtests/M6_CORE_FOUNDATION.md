@@ -144,3 +144,14 @@ Wang-clan locality, passed M6/start-mirror checks and fresh menu smoke, and
 opened the live Government panel. It still rendered `Wang Guangwu, 35`.
 The unsupported individual-birthplace claim and all generated output were
 reverted; evidence is `docs/screens/M6_han_birthplace_fixture/`.
+
+## 2026-07-24 Emperor Ping father-link probe
+
+The local 28-regency comparison identified one untried common condition: a
+named father on nearly every vanilla heir. The source-backed Liu Xing--Emperor
+Ping link was rendered through a temporary generated fixture, then passed full
+validation and the enabled-mod smoke. A fresh AD 1 Observer start and XAR
+Government-panel capture still showed generated `Liu Zhang, 35`. The exact
+source-backed fixture, its generic relation renderer, and its generated output
+were reverted. The retained evidence is
+`docs/screens/M6_han_father_fixture/m6_father_government_menu.png`.
