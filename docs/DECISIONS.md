@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-24 - M12 does not require a terminal observer campaign
+
+The plan's reduced ship gate requires static finale validation, clean AD 1
+initialization, and rapid high-risk subsystem probes. The 475-year observer
+campaign is optional evidence only. The current renderer crash therefore does
+not by itself keep M12 open; the substantive open M12 work is the fresh-start
+legacy culture/religion no-pop diagnostic recorded in `BLOCKERS.md`.
+
 ## 2026-07-24 - M8 acceptance uses the live research UI, not AI playback
 
 The revised milestone contract requires a coherent starting research screen,

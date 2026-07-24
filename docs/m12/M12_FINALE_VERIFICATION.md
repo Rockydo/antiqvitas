@@ -15,21 +15,24 @@ recipient map, generated event, localization, and final-century image mapping
 as part of `make validate`. Menu smoke has loaded this contract with zero new
 script-error lines.
 
-## Runtime evidence still required
+## Runtime evidence and remaining release work
 
-The acceptance criterion is stricter: a driver-run observer campaign must
-reach the terminal date and provide a screenshot that visibly shows the finale
-firing. Observer entry is no longer blocked: the exact country-change overlay
-and the 2026-07-22 M7 Rome-Parthia AI-war replay both entered a live observer
-session and reached maximum speed. Sustained play nevertheless still exits in
-the documented `ffxFsr2ResourceIsNull` / `NVSDK_NGX_D3D12_Shutdown1` renderer
-path. The 22 July non-debug run reached 11:00 on 18 March AD 1 with four
-periodic captures before this failure; see
-`docs/playtests/M12_NONDEBUG_PACING_20260722.md`. This file must be updated
-with a terminal-date session path, finale screenshot, and log-diff result
-before M12 can close.
+The revised acceptance criterion requires static finale validation, a clean
+fresh AD 1 start, and rapid probes for high-risk systems. It does **not**
+require an AD 1-to-476 observer campaign or a screenshot of the finale firing.
+The terminal event remains fully date/symbol/localization/image checked by
+`tools/m10_final_century.py --check`.
 
-The native DX12 fallback reached a live 14:00, 3 March AD 1 checkpoint, but
-then exited with the same FSR/NGX C0000005 family. Its evidence is
-`docs/playtests/M12_DX12_RENDERER_20260722.md`; the alternate backend therefore
-does not currently supply the missing terminal verification.
+Observer entry works, but sustained play exits in the documented
+`ffxFsr2ResourceIsNull` / `NVSDK_NGX_D3D12_Shutdown1` renderer path. The 22
+July non-debug run reached 11:00 on 18 March AD 1; the native DX12 fallback
+reached 14:00 on 3 March. Their evidence remains useful optional context in
+`docs/playtests/M12_NONDEBUG_PACING_20260722.md` and
+`docs/playtests/M12_DX12_RENDERER_20260722.md`, but neither is a ship gate.
+
+M12 remains open for the substantive fresh-start diagnostic gap: retained
+legacy culture and religion definitions emit no-pop warnings at AD 1. The
+source-preserving suppression and definition-removal paths each failed local
+engine probes and are recorded in `BLOCKERS.md`. Future M12 work must find an
+engine-accepted authored-population or definition contract without weakening
+the accepted baseline.
