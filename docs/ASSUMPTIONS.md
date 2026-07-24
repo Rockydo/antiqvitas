@@ -4317,3 +4317,13 @@ fields. None of the labels determines a city boundary, port layout, polity
 capital, trade volume, or route. Sources: PRINCETON-PHAN; OCD-BARYGAZA;
 IRAN-GANDHARA; P8.1; P8.4; P12.2. [Phanagoria secure peninsula identity;
 Barygaza and Taxila contested proxy scopes]
+
+## 2026-07-24 - Exact Tarim oasis labels replace a remote proxy and retained names
+
+Kashgar, Khotan, Kucha, Loulan, and Turpan are direct installed oasis fields
+and secure AD 1 roster anchors. Their conventional period names are retained
+as direct source-backed labels, with `Khotan` specifically replacing the
+unrelated ultra-far Chaurana proximity output. This does not infer a wider
+language map, political boundary, population, ethnicity, or later oasis
+history. Sources: IRAN-KAS; IRAN-KHO; IRAN-KUC; CAM-LOU; IRAN-CT; P8.3.
+[secure direct oasis-name forms]
