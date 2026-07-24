@@ -14,6 +14,8 @@ import csv
 from dataclasses import dataclass
 from pathlib import Path
 
+from PIL import Image
+
 import m11_advance_icons
 import m11_common_icons
 import m11_privilege_icons
@@ -24,6 +26,7 @@ import m5_roman_buildings
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "docs/m11/UI_ASSET_LEDGER.md"
 GOODS = ROOT / "docs/m5/custom_goods.csv"
+BUILDING_MASTERS = ROOT / "assets_queue/generated"
 
 
 @dataclass(frozen=True)
@@ -38,6 +41,20 @@ class Asset:
 def local(path: str | Path) -> Path:
     value = Path(path)
     return value if value.is_absolute() else ROOT / value
+
+
+def building_master(key: str) -> Path:
+    """Return the retained reviewed master for one direct building icon.
+
+    Earlier M5 batches retained their finished 128px master with the explicit
+    ``_128`` suffix; the later Roman civic and regional batches use the key
+    itself.  Both are source masters, never a shared fallback texture.
+    """
+    for suffix in ("_128.png", ".png"):
+        candidate = BUILDING_MASTERS / f"{key}{suffix}"
+        if candidate.is_file():
+            return candidate
+    raise ValueError(f"missing retained 128px building master for {key}")
 
 
 def assets() -> list[Asset]:
@@ -55,12 +72,12 @@ def assets() -> list[Asset]:
                             m11_common_icons.INSTITUTION_TEXTURES / f"{item.key}.dds"))
     for item in m5_roman_buildings.load():
         key = item["key"]
-        result.append(Asset("Named Roman building", key, None, None,
+        result.append(Asset("Named Roman building", key, None, building_master(key),
                             m5_roman_buildings.ICON_DIR / f"{key}.dds"))
     families, _seeds = m5_regional_buildings.load()
     for item in families:
         key = item["key"]
-        result.append(Asset("Regional building family", key, None, None,
+        result.append(Asset("Regional building family", key, None, building_master(key),
                             m5_regional_buildings.ICON_DIR / f"{key}.dds"))
     with GOODS.open(encoding="utf-8-sig", newline="") as handle:
         for row in csv.DictReader(handle):
@@ -114,6 +131,16 @@ def validate(items: list[Asset]) -> None:
                 continue
             if not path.is_file():
                 failures.append(f"missing {label} for {item.surface} {item.key}: {relative(path)}")
+        if item.surface in {"Named Roman building", "Regional building family"} and item.master:
+            try:
+                with Image.open(item.master) as image:
+                    if image.size != (128, 128):
+                        failures.append(
+                            f"building master for {item.key} must be 128x128: "
+                            f"{relative(item.master)} is {image.size[0]}x{image.size[1]}"
+                        )
+            except OSError as exc:
+                failures.append(f"unreadable building master for {item.key}: {relative(item.master)} ({exc})")
     if failures:
         raise ValueError("\n".join(failures))
 

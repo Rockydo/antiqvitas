@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-24 - Building art requires retained 128px review masters
+
+The building validators already reject missing, malformed, or byte-identical
+DDS textures. The cross-surface M11 ledger now also resolves every one of the
+79 named Roman and 154 regional building icons to its retained 128px master,
+handling both early `_128` and later key-named pipeline outputs. This makes
+the player-facing illustration audit visual and reproducible without changing
+any historical building contract.
+
 ## 2026-07-24 - Reviewed city fields override borrowed proximity names
 
 The broad proximity layers remain useful for low-risk coverage, but a reviewed
