@@ -1,0 +1,73 @@
+name: PRO canonical Britain and Ireland completion
+
+on:
+  push:
+    branches:
+      - agent/pro-britain-ireland-cultures
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out focused repository paths
+        uses: actions/checkout@v4
+        with:
+          ref: agent/pro-britain-ireland-cultures
+          fetch-depth: 2
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            .github/workflows/pro-clean-britain.yml
+            .pro_temp
+            Makefile
+            README.md
+            config
+            docs
+            tools
+            in_game/common
+            in_game/setup/countries
+            main_menu/common/named_colors
+            main_menu/localization
+            main_menu/setup/start/06_pops.txt
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Materialize release script
+        run: |
+          base64 -d .pro_temp/apply_clean_britain.py.gz.b64 | gzip -d > /tmp/apply_clean_britain.py
+          python -m py_compile /tmp/apply_clean_britain.py
+
+      - name: Fold sources and regenerate canonical outputs
+        run: python /tmp/apply_clean_britain.py --write
+
+      - name: Verify focused culture contracts
+        run: |
+          python /tmp/apply_clean_britain.py --check
+          python tools/m11_localization.py --check
+          python tools/m12_anachronism_audit.py --check
+          python tools/m12_culture_presence.py --check
+          git diff --check
+
+      - name: Remove temporary release tooling
+        run: |
+          rm -rf .pro_temp
+          rm -f .github/workflows/pro-clean-britain.yml
+          if git grep -n -E 'generate_pro_culture_expansion.py|pro_master_plan_(cultures|remap|tag_profiles|regional_profiles)\.csv' -- . ':!docs/PROGRESS.md'; then
+            echo 'obsolete generator reference remains' >&2
+            exit 1
+          fi
+
+      - name: Commit clean implementation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --check
+          git commit -m "[PRO] Finalize Britain and Ireland culture atlas"
+          git push origin HEAD:agent/pro-britain-ireland-cultures
