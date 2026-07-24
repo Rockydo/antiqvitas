@@ -6363,3 +6363,12 @@ reviewed 128px BC7 DDS.
   Guangwu; the accepted-but-ineffective field was fully reverted.
 - The canonical restoration passed `make validate` and the baseline-aware
   enabled-mod smoke with zero new error-log lines.
+
+## 2026-07-24 - M12 political-title baseline
+
+- Added all 157 explicit start-country ranks through the installed
+  `country_rank` contract: three empire ranks, 93 kingdom ranks, and 61
+  county-rank collective societies that use the engine's tribal title.
+- Fresh selector captures confirm Roman Empire, Great Western Han, Parthian
+  Empire, Minor Tribe of Suiones, and Grand Republic of Yaudheya. Static
+  validation and the enabled-mod smoke remain green with zero new log lines.

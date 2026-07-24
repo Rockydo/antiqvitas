@@ -2794,6 +2794,16 @@ Wang Mang. The field is therefore not retained as decorative data or treated
 as an implicit active-regent linkage. The canonical minimal regency adapter is
 preserved, and the failed result is documented in `BLOCKERS.md`.
 
+## 2026-07-24 - Use native country ranks for AD 1 political titles
+
+The start manager must state `country_rank` explicitly; otherwise the engine
+silently renders every AD 1 polity as a county. ANTIQVITAS assigns empire rank
+only to Rome, Western Han, and Parthia; kingdom rank to all sovereign and
+client courts; and county rank to bounded collective societies, whose tribe
+government selects the installed tribal title. This is a presentation and
+engine-scale classification, not a claim that every non-collective polity used
+the European legal title “kingdom.”
+
 # 2026-07-24 — Explicit synthetic Tier-3 location morphology
 
 The map-wide naming completion pass uses deterministic culture-group suffixes
