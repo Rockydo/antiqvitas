@@ -1,0 +1,54 @@
+name: PRO export culture source snapshot
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/pro-britain-ireland-final
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            .github/workflows/pro-export-snapshot.yml
+            AGENTS.md
+            Makefile
+            make.cmd
+            README.md
+            BLOCKERS.md
+            KNOWN_ISSUES.md
+            config
+            docs
+            tools
+            in_game/common/cultures
+            in_game/common/culture_groups
+            in_game/common/religions
+            in_game/common/religion_groups
+            in_game/common/languages
+            in_game/setup/countries
+            main_menu/common/named_colors
+            main_menu/localization
+            main_menu/setup/start
+      - name: Package source snapshot
+        run: |
+          tar -czf /tmp/antiqvitas-culture-snapshot.tar.gz \
+            AGENTS.md Makefile make.cmd README.md BLOCKERS.md KNOWN_ISSUES.md \
+            config docs tools \
+            in_game/common/cultures in_game/common/culture_groups \
+            in_game/common/religions in_game/common/religion_groups \
+            in_game/common/languages in_game/setup/countries \
+            main_menu/common/named_colors main_menu/localization main_menu/setup/start
+      - uses: actions/upload-artifact@v4
+        with:
+          name: antiqvitas-culture-snapshot
+          path: /tmp/antiqvitas-culture-snapshot.tar.gz
+          retention-days: 1
+          compression-level: 0
