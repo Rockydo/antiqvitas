@@ -23,13 +23,15 @@ It again reached the settled enabled-mod menu with zero new normalized
 driver remains 591.86, matching the renderer-blocker environment; therefore no
 additional high-speed observer retry was performed.
 
-## Remaining release gate
+## Tagged release gate
 
 The revised plan accepts `make full`, a fresh AD 1 start, static finale
 validation, and rapid high-risk subsystem probes. The AD 1-to-476 observer
-run and finale screenshot are optional evidence, not a release gate. M12 is
-therefore open only for the retained legacy culture/religion no-pop diagnostic
-and the final all-milestone acceptance audit.
+run and finale screenshot are optional evidence, not a release gate. The
+24 July additive-presence repair removed every fresh culture/religion no-pop
+diagnostic while preserving the exact 230,000.000-thousand target; the final
+smoke and fresh-selection probe are recorded in
+`docs/playtests/M12_CULTURE_PRESENCE_20260724.md`. M12 is tagged `M12-done`.
 
 The observer renderer failure remains documented optional evidence in
 `docs/playtests/M12_OBSERVER_RETRY_20260721.md`,

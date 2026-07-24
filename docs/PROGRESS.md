@@ -6321,3 +6321,8 @@ reviewed 128px BC7 DDS.
   use the accepted terminal-date `enable` guard.
 - `make validate`, final vanilla-control smoke, and a fresh AD 1 selection
   probe all pass; the focused culture/religion no-pop scan is zero.
+
+## 2026-07-24 - M12 handoff audit
+
+- README, packaging, finale, and surface-audit text now match the `M12-done`
+  rapid-test gate. External Workshop upload remains intentionally out of scope.

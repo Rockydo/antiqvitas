@@ -31,8 +31,7 @@ has passed the observer gate.
 | Map geometry, terrain, 3D models | deferred | Explicit v1 non-goal: vanilla map and nearest-period 3D assets remain. |
 | Audio and music | deferred | Explicit v1 non-goal: no custom audio is shipped. |
 | Achievements | deferred | Explicit v1 non-goal; no achievement support is claimed. |
-| Packaging and Workshop metadata | open | Release notes are present in `docs/m12/PACKAGING.md`; no external upload before M12 observer/finale acceptance. |
+| Packaging and Workshop metadata | done | Release payload and local handoff are recorded in `docs/m12/PACKAGING.md`; external upload remains deliberately out of scope. |
 
-The remaining `open` packaging gate and all observer-dependent rows are tracked
-in `docs/TODO.md`, `KNOWN_ISSUES.md`, and `BLOCKERS.md`. No row is silently
-treated as a release pass.
+Observer-dependent rows remain documented in `KNOWN_ISSUES.md` and
+`BLOCKERS.md`. No row is silently treated as a release pass.

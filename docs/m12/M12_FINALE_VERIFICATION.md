@@ -30,9 +30,7 @@ reached 14:00 on 3 March. Their evidence remains useful optional context in
 `docs/playtests/M12_NONDEBUG_PACING_20260722.md` and
 `docs/playtests/M12_DX12_RENDERER_20260722.md`, but neither is a ship gate.
 
-M12 remains open for the substantive fresh-start diagnostic gap: retained
-legacy culture and religion definitions emit no-pop warnings at AD 1. The
-source-preserving suppression and definition-removal paths each failed local
-engine probes and are recorded in `BLOCKERS.md`. Future M12 work must find an
-engine-accepted authored-population or definition contract without weakening
-the accepted baseline.
+The former fresh-start culture/religion diagnostic is resolved. An additive,
+population-offset presence ledger preserves legacy symbols and passes the
+fresh-selection zero-diagnostic probe recorded in
+`docs/playtests/M12_CULTURE_PRESENCE_20260724.md`.
