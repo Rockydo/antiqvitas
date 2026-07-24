@@ -21,28 +21,35 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-      - name: Download current Pleiades snapshots
+          show-progress: false
+      - name: Prepare projection dependency and Pleiades snapshots
         run: |
-          mkdir -p .cache/pleiades
-          curl --fail --location --retry 3 --retry-all-errors \
+          python -m pip install --disable-pip-version-check --quiet numpy
+          mkdir -p .cache/pleiades .audit/roman-names/source
+          curl --fail --location --retry 3 --retry-all-errors --silent --show-error \
             https://atlantides.org/downloads/pleiades/dumps/pleiades-places-latest.csv.gz \
             --output .cache/pleiades/pleiades-places-latest.csv.gz
-          curl --fail --location --retry 3 --retry-all-errors \
+          curl --fail --location --retry 3 --retry-all-errors --silent --show-error \
             https://atlantides.org/downloads/pleiades/dumps/pleiades-names-latest.csv.gz \
             --output .cache/pleiades/pleiades-names-latest.csv.gz
+          cp .cache/pleiades/*.csv.gz .audit/roman-names/source/
       - name: Regenerate period-valid Pleiades adapters
+        id: regenerate
+        continue-on-error: true
         run: |
-          python -m py_compile \
-            tools/pleiades_names.py \
-            tools/generate_m4_tier2_names.py \
-            tools/generate_m4_tier2_wide_names.py \
-            tools/generate_m4_tier2_remote_names.py
-          python tools/generate_m4_tier2_names.py --write
-          python tools/generate_m4_tier2_wide_names.py --write
-          python tools/generate_m4_tier2_remote_names.py --write
-          python tools/generate_m4_tier2_far_names.py --write
-          python tools/generate_m4_tier2_ultra_names.py --write
-          python - <<'PY'
+          set -o pipefail
+          {
+            python -m py_compile \
+              tools/pleiades_names.py \
+              tools/generate_m4_tier2_names.py \
+              tools/generate_m4_tier2_wide_names.py \
+              tools/generate_m4_tier2_remote_names.py
+            python tools/generate_m4_tier2_names.py --write
+            python tools/generate_m4_tier2_wide_names.py --write
+            python tools/generate_m4_tier2_remote_names.py --write
+            python tools/generate_m4_tier2_far_names.py --write
+            python tools/generate_m4_tier2_ultra_names.py --write
+            python - <<'PY'
           import csv
           from pathlib import Path
 
@@ -55,9 +62,12 @@ jobs:
                   raise SystemExit(f"{path}: rows without Pleiades name resources: {missing[:10]}")
               print(f"{path}: {len(rows)} period-valid adapters")
           PY
+          } 2>&1 | tee .audit/roman-names/regeneration.log
       - name: Assemble review artifact
+        if: always()
         run: |
           mkdir -p .audit/roman-names/generated
+          mkdir -p .audit/roman-names/base-tools
           mkdir -p .audit/roman-names/workspace/docs/m4
           mkdir -p .audit/roman-names/workspace/docs/vanilla_symbols
           mkdir -p .audit/roman-names/workspace/docs/world_1ad
@@ -76,9 +86,24 @@ jobs:
           cp main_menu/setup/start/06_pops.txt .audit/roman-names/workspace/main_menu/setup/start/
           cp tools/capital_geography.py .audit/roman-names/workspace/tools/
           cp tools/pleiades_names.py .audit/roman-names/workspace/tools/
+          git archive --format=zip --output=.audit/roman-names/repository.zip HEAD \
+            Makefile tools docs/m4 docs/world_1ad docs/vanilla_symbols \
+            main_menu/localization main_menu/setup/start/06_pops.txt
+          git fetch --no-tags --depth=1 origin main:refs/remotes/origin/main
+          for path in \
+            tools/generate_m4_tier2_names.py \
+            tools/generate_m4_tier2_wide_names.py \
+            tools/generate_m4_tier2_remote_names.py
+          do
+            git show "origin/main:${path}" > ".audit/roman-names/base-tools/${path##*/}"
+          done
       - name: Upload Roman naming inventory
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: roman-location-name-audit
           path: .audit/roman-names
           if-no-files-found: error
+      - name: Fail after preserving regeneration diagnostics
+        if: steps.regenerate.outcome != 'success'
+        run: exit 1
