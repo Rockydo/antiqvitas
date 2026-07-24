@@ -2804,6 +2804,16 @@ government selects the installed tribal title. This is a presentation and
 engine-scale classification, not a claim that every non-collective polity used
 the European legal title “kingdom.”
 
+## 2026-07-24 - Preserve the verified core frame system
+
+The installed GUI uses shared window templates and texture grids. ANTIQVITAS
+has no local overlay contract for those roots, whereas its content-facing
+surfaces already have 559 checked direct ancient-art chains. The project will
+not replace common frame textures or GUI templates merely for a visual theme:
+that would create a broad unsupported override surface without improving a
+historically attributable mechanic. Period presentation remains concentrated in
+safe titles, CoAs, advances, buildings, privileges, faiths, ages, and events.
+
 # 2026-07-24 — Explicit synthetic Tier-3 location morphology
 
 The map-wide naming completion pass uses deterministic culture-group suffixes
