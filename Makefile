@@ -6,6 +6,7 @@ validate:
 	.venv/Scripts/python.exe tools/world_roster.py
 	.venv/Scripts/python.exe tools/generate_tag_map.py --check
 	.venv/Scripts/python.exe tools/generate_m4_definitions.py --check
+	.venv/Scripts/python.exe tools/generate_pro_culture_expansion.py --check
 	.venv/Scripts/python.exe tools/generate_m4_tier2_names.py --check
 	.venv/Scripts/python.exe tools/generate_m4_tier2_wide_names.py --check
 	.venv/Scripts/python.exe tools/generate_m4_tier2_remote_names.py --check

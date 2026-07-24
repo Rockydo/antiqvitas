@@ -3150,3 +3150,210 @@ antq_quadi = { # P8.7;P10;OCD-QUA; Moravian Quadi regional proxy without extendi
 		antq_germanic_group
 	}
 }
+
+antq_colchian = { # P10;CAH-XI;PLE; Eastern Black Sea Colchian regional frame distinct from the inland Kartvelian atlas
+	language = antq_caucasian_dialect
+	color = antq_culture_color_antq_colchian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_caucasian_group
+	}
+}
+
+antq_syriac = { # P10;CAH-XI;PLE; Edessan and upper Mesopotamian Aramaic regional frame before later Syriac confessional consolidation
+	language = antq_semitic_dialect
+	color = antq_culture_color_antq_syriac
+	tags = { european_gfx }
+	culture_groups = {
+		antq_semitic_group
+	}
+}
+
+antq_nilotic = { # P8.5;P10;CAH-XI; Upper Nile regional population frame; technical Nubian adapter is not a uniform language claim
+	language = antq_nile_dialect
+	color = antq_culture_color_antq_nilotic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_nile_group
+	}
+}
+
+antq_khoisan = { # P8.5;P10;CAH-XI; Southern African non-Bantu regional frame; technical Mande adapter is not a language claim
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_khoisan
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_qiang = { # P8.3;P10;BHR;CAH-XI; Amdo and western-Sichuan Qiang frontier frame without fixing a single language or tribal polygon
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_qiang
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_zhangzhung = { # P8.3;P10;CAH-XI; Western and northern Tibetan plateau Zhangzhung regional frame; technical adapter is not a language claim
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_zhangzhung
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_tai = { # P8.9;P10;CAH-XI; Northern mainland Tai highland frame before later state and standard-language identities
+	language = antq_southeast_asian_dialect
+	color = antq_culture_color_antq_tai
+	tags = { european_gfx }
+	culture_groups = {
+		antq_southeast_asian_group
+	}
+}
+
+antq_cham = { # P8.9;P10;CAH-XI;CAM-SAH; Central Vietnamese Austronesian regional frame alongside the narrower Sa Huynh archaeological horizon
+	language = antq_austronesian_dialect
+	color = antq_culture_color_antq_cham
+	tags = { european_gfx }
+	culture_groups = {
+		antq_austronesian_group
+	}
+}
+
+antq_yilou = { # P8.3;P10;CAH-XI; Lower-Amur and Ussuri Yilou regional frame without projecting a later Jurchen identity
+	language = antq_steppe_dialect
+	color = antq_culture_color_antq_yilou
+	tags = { european_gfx }
+	culture_groups = {
+		antq_steppe_group
+	}
+}
+
+antq_finnic = { # P8.7;P10;CAH-XI; Finnic regional frame distinct from broader Uralic and Sami-adapter categories
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_finnic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
+antq_ugric = { # P8.7;P10;CAH-XI; Western Siberian Ugric regional frame; technical Sami adapter is not a language claim
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_ugric
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
+antq_samoyedic = { # P8.7;P10;CAH-XI; Northern West Siberian Samoyedic regional frame; technical Sami adapter is not a language claim
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_samoyedic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
+antq_totonac = { # P8.10;P10;CAH-XI; Gulf lowland Totonac regional frame without projecting later political borders
+	language = antq_mesoamerican_dialect
+	color = antq_culture_color_antq_totonac
+	tags = { european_gfx }
+	culture_groups = {
+		antq_mesoamerican_group
+	}
+}
+
+antq_na_dene = { # P8.10;P10;CAH-XI; Northwestern interior Na-Dene macro-regional frame; technical Inuit adapter is not a language claim
+	language = antq_american_dialect
+	color = antq_culture_color_antq_na_dene
+	tags = { european_gfx }
+	culture_groups = {
+		antq_american_group
+	}
+}
+
+antq_iroquoian = { # P8.10;P10;CAH-XI; Eastern Great Lakes Iroquoian regional frame before later confederacy boundaries
+	language = antq_american_dialect
+	color = antq_culture_color_antq_iroquoian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_american_group
+	}
+}
+
+antq_mixe_zoquean = { # P8.10;P10;CAH-XI; Isthmian and Gulf Mixe-Zoquean regional frame distinct from the narrower Epi-Olmec horizon
+	language = antq_mesoamerican_dialect
+	color = antq_culture_color_antq_mixe_zoquean
+	tags = { european_gfx }
+	culture_groups = {
+		antq_mesoamerican_group
+	}
+}
+
+antq_purepecha_precursor = { # P8.10;P10;CAH-XI; Michoacan precursor regional frame without projecting the later Tarascan state
+	language = antq_mesoamerican_dialect
+	color = antq_culture_color_antq_purepecha_precursor
+	tags = { european_gfx }
+	culture_groups = {
+		antq_mesoamerican_group
+	}
+}
+
+antq_oasisamerica = { # P8.10;P10;CAH-XI; Northern Mesoamerican and southwestern exchange-zone frame rather than a single identity
+	language = antq_mesoamerican_dialect
+	color = antq_culture_color_antq_oasisamerica
+	tags = { european_gfx }
+	culture_groups = {
+		antq_mesoamerican_group
+	}
+}
+
+antq_hopewellian = { # P8.10;P10;CAH-XI; Hopewell interaction-sphere archaeological frame rather than a homogeneous people
+	language = antq_american_dialect
+	color = antq_culture_color_antq_hopewellian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_american_group
+	}
+}
+
+antq_adena_woodland = { # P8.10;P10;CAH-XI; Eastern Woodland Adena-derived archaeological frame rather than a homogeneous people
+	language = antq_american_dialect
+	color = antq_culture_color_antq_adena_woodland
+	tags = { european_gfx }
+	culture_groups = {
+		antq_american_group
+	}
+}
+
+antq_aymara = { # P8.10;P10;CAH-XI; Altiplano Aymara regional frame; technical Quechuan adapter is not a language claim
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_aymara
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_puquina = { # P8.10;P10;CAH-XI; South-central Andean Puquina regional frame; technical Quechuan adapter is not a language claim
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_puquina
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_quechua_zone = { # P8.10;P10;CAH-XI; Central Andean Quechua-zone regional frame without projecting the later Inca polity or a uniform dialect
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_quechua_zone
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
