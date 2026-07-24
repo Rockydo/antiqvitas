@@ -6383,3 +6383,13 @@ reviewed 128px BC7 DDS.
   exact-name overlay still disables only 33 dated/dynastic hints while retaining
   generic economy, food, stability, warfare, estates, slavery, and research
   guidance.
+
+## 2026-07-24 - M12 safe UI-surface review
+
+- Confirmed the direct ancient-art ledger covers 559 player-facing chains:
+  250 advances, 234 building icons, 24 privileges, 37 religions, nine
+  institutions, five custom goods, and five age/event surfaces.
+- The installed core frame system is a shared GUI-template/texture-grid surface
+  with no existing ANTIQVITAS overlay contract. It is intentionally left intact
+  rather than risk a broad skin replacement; rank titles, CoAs, and direct
+  content art supply the safe period-facing treatment.

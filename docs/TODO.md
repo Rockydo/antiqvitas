@@ -390,7 +390,7 @@ after `make full` and its autonomous driver report are green.
 ## M12 — Aesthetic and flavor polish
 
 - [x] Recheck player-facing tooltips/tutorials: all four installed tutorials are non-automatic, 33 dated/dynastic hints remain disabled through exact-name guards, and the authored-text audit has zero prohibited post-476 terms across every mirrored client.
-- [ ] See if it's possible to modify the UI to look more period appropriate
+- [x] Audit safe period-facing UI surfaces: retain the validated direct ancient art on 559 content-facing chains (advances, buildings, privileges, faiths, institutions, CoAs, ages, and events); do not replace the shared core window-frame templates without a locally verified skin contract.
 - [x] Replace the universal county fallback with checked country ranks: Rome, Han, and Parthia render as empires; sovereign/client courts as kingdoms; collective societies as tribes; and the republican examples retain republic titles.
 
 ## M13 — Ship
