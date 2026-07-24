@@ -98,6 +98,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          exec > >(tee /tmp/canonical-validation.log) 2>&1
           python tools/m11_localization.py --check
           python tools/m12_anachronism_audit.py --check
           python tools/m12_culture_presence.py --check
@@ -184,6 +185,14 @@ jobs:
           print('canonical culture contracts: PASS')
           PY
           git diff --check
+
+      - name: Upload canonical validation log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: canonical-culture-validation-${{ github.run_number }}
+          path: /tmp/canonical-validation.log
+          retention-days: 1
 
       - name: Commit clean implementation
         shell: bash
