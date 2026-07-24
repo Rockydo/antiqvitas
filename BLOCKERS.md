@@ -1058,3 +1058,14 @@ probe. The failed third shape was reverted. Do not repeat ruler, heir,
 regency, or current-term permutations unchanged. Resume only after a locally
 verified engine contract can bind a named minor sovereign or regent without
 producing an invented fallback ruler.
+
+### 2026-07-24 follow-up: character birthplace does not bind the regency
+
+All 28 installed active-regency examples carry a character `birth` location.
+An isolated Wang Mang fixture therefore added the Han Shu Yuancheng Wang-clan
+locality, passed M6/start-mirror checks and a fresh enabled-mod smoke with zero
+new lines, then reached the live XAR Government panel. It still rendered
+`Wang Guangwu, 35`. The fixture and all generated output were restored.
+Evidence: `docs/screens/M6_han_birthplace_fixture/han_birthplace_government_panel.png`.
+Do not repeat a birthplace-only variation; the remaining condition is an
+unknown engine linkage, not a missing documented character field.

@@ -6291,3 +6291,9 @@ reviewed 128px BC7 DDS.
   text with the active rapid-test policy: long observer playback is optional
   evidence, not a ship blocker. The remaining substantive M12 gap is the
   legacy culture/religion no-pop diagnostic.
+
+## 2026-07-24 - M6 Han birthplace-linkage probe
+
+- Tested the only newly evidenced regency linkage: a character `birth` field.
+  Wang Mang still rendered as generated `Wang Guangwu, 35`; the fixture was
+  smoke-green, fully reverted, and recorded as a no-repeat engine limitation.
