@@ -2,8 +2,7 @@ name: PRO apply canonical culture completion
 
 on:
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 permissions:
   contents: write
@@ -13,8 +12,7 @@ jobs:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
-      - name: Check out culture source surface
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: agent/pro-britain-ireland-final
           fetch-depth: 2
@@ -44,12 +42,11 @@ jobs:
             main_menu/localization
             main_menu/setup/start
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Reconstruct and authenticate canonical patch
+      - name: Authenticate and apply canonical patch
         shell: bash
         run: |
           set -euo pipefail
@@ -65,19 +62,15 @@ jobs:
             .pro_patch5b/part-04 \
             .pro_patch5b/part-05 \
             .pro_patch5b/part-06 \
-            > /tmp/antiqvitas-final.patch.gz.b64
-          printf '%s  %s\n' \
-            '3b319f56973007eb7ca357d9aa4dfdedce3927673979d7f7bade1f9b2972313b' \
-            '/tmp/antiqvitas-final.patch.gz.b64' | sha256sum -c -
-          base64 -d /tmp/antiqvitas-final.patch.gz.b64 > /tmp/antiqvitas-final.patch.gz
-          printf '%s  %s\n' \
-            '94d592b648180665745f002bb0ed81d7538b65cfeb49c870850b1b338ca10d29' \
-            '/tmp/antiqvitas-final.patch.gz' | sha256sum -c -
-          gzip -dc /tmp/antiqvitas-final.patch.gz > /tmp/antiqvitas-final.patch
-          git apply --check /tmp/antiqvitas-final.patch
-          git apply /tmp/antiqvitas-final.patch
+            > /tmp/final.patch.gz.b64
+          echo '3b319f56973007eb7ca357d9aa4dfdedce3927673979d7f7bade1f9b2972313b  /tmp/final.patch.gz.b64' | sha256sum -c -
+          base64 -d /tmp/final.patch.gz.b64 > /tmp/final.patch.gz
+          echo '94d592b648180665745f002bb0ed81d7538b65cfeb49c870850b1b338ca10d29  /tmp/final.patch.gz' | sha256sum -c -
+          gzip -dc /tmp/final.patch.gz > /tmp/final.patch
+          git apply --check /tmp/final.patch
+          git apply /tmp/final.patch
 
-      - name: Remove transport and obsolete generation paths
+      - name: Remove transport and obsolete generator paths
         shell: bash
         run: |
           set -euo pipefail
@@ -89,25 +82,19 @@ jobs:
           test ! -e docs/m4/pro_master_plan_remap.csv
           test ! -e docs/m4/pro_master_plan_tag_profiles.csv
           test ! -e docs/m4/pro_master_plan_regional_profiles.csv
-          if git grep -n -E 'generate_pro_culture_expansion.py|pro_master_plan_(cultures|remap|tag_profiles|regional_profiles)\.csv'; then
-            echo 'obsolete secondary-generator reference remains' >&2
-            exit 1
-          fi
+          ! git grep -n -E 'generate_pro_culture_expansion.py|pro_master_plan_(cultures|remap|tag_profiles|regional_profiles)\.csv'
 
-      - name: Verify canonical culture contracts
+      - name: Verify canonical project contracts
         shell: bash
         run: |
           set -euo pipefail
-          exec > >(tee /tmp/canonical-validation.log) 2>&1
           python tools/m11_localization.py --check
           python tools/m12_anachronism_audit.py --check
           python tools/m12_culture_presence.py --check
           python tools/popcheck.py
           python tools/run_checks.py validate --dry-run
           python - <<'PY'
-          import csv
-          import json
-          import re
+          import csv, json, re
           from pathlib import Path
 
           def rows(path):
@@ -117,12 +104,21 @@ jobs:
           cultures = rows('docs/m4/cultures.csv')
           religions = rows('docs/m4/religions.csv')
           culture_keys = [row['key'] for row in cultures]
-          religion_keys = {row['key'] for row in religions}
-          assert len(culture_keys) == 423, len(culture_keys)
+          assert len(culture_keys) == 423
           assert len(culture_keys) == len(set(culture_keys))
-          assert not (set(culture_keys) & religion_keys)
+          assert not (set(culture_keys) & {row['key'] for row in religions})
           assert 'antq_finnic_culture' in culture_keys
-          assert 'antq_finnic' in religion_keys
+          assert 'antq_finnic' in {row['key'] for row in religions}
+
+          profiles = {row['tag']: row['culture'] for row in rows('docs/m4/tag_profiles.csv')}
+          expected = {
+              'CAT': 'antq_catuvellaunian', 'TRI': 'antq_trinovantian',
+              'ICE': 'antq_icenian', 'BRI': 'antq_brigantian',
+              'ATB': 'antq_british_atrebatic', 'SIL': 'antq_silurian',
+              'ORD': 'antq_ordovician', 'DUM': 'antq_dumnonian',
+              'CAL': 'antq_caledonian', 'ULA': 'antq_ulaid',
+          }
+          assert all(profiles[tag] == culture for tag, culture in expected.items())
 
           culture_text = Path('in_game/common/cultures/antq_m4_cultures.txt').read_text(encoding='utf-8-sig')
           country_text = Path('in_game/setup/countries/antq_00_world.txt').read_text(encoding='utf-8-sig')
@@ -130,22 +126,6 @@ jobs:
           assert culture_text.startswith('# Generated by generate_m4_definitions.py --write.')
           assert country_text.startswith('# Generated by tools/generate_country_definitions.py --write.')
           assert pop_text.startswith('# Generated by tools/generate_start_mirror.py --write.')
-
-          profiles = {row['tag']: row['culture'] for row in rows('docs/m4/tag_profiles.csv')}
-          expected = {
-              'CAT': 'antq_catuvellaunian',
-              'TRI': 'antq_trinovantian',
-              'ICE': 'antq_icenian',
-              'BRI': 'antq_brigantian',
-              'ATB': 'antq_british_atrebatian',
-              'SIL': 'antq_silurian',
-              'ORD': 'antq_ordovician',
-              'DUM': 'antq_dumnonian',
-              'CAL': 'antq_caledonian',
-              'ULA': 'antq_ulaid',
-          }
-          for tag, culture in expected.items():
-              assert profiles[tag] == culture, (tag, profiles.get(tag), culture)
 
           hierarchy = json.loads(Path('docs/vanilla_symbols/geography_hierarchy.json').read_text(encoding='utf-8-sig'))
           def leaves(key, trail=()):
@@ -156,10 +136,7 @@ jobs:
                   return {key}
               result = set()
               for child in children:
-                  if child == key:
-                      result.add(child)
-                  else:
-                      result |= leaves(child, (*trail, key))
+                  result |= {child} if child == key else leaves(child, (*trail, key))
               return result
 
           pop_cultures = {}
@@ -168,31 +145,21 @@ jobs:
               match = re.match(r'^\t([A-Za-z0-9_]+)\s*=\s*\{\s*$', line)
               if match:
                   current = match.group(1)
-                  continue
-              if current and 'define_pop' in line:
-                  culture = re.search(r'\bculture\s*=\s*([A-Za-z0-9_]+)', line)
-                  if culture:
-                      pop_cultures[current] = culture.group(1)
+              elif current and 'define_pop' in line:
+                  match = re.search(r'\bculture\s*=\s*([A-Za-z0-9_]+)', line)
+                  if match:
+                      pop_cultures[current] = match.group(1)
                       current = None
 
           britain = leaves('great_britain_region') & set(pop_cultures)
           ireland = leaves('ireland_region') & set(pop_cultures)
-          assert len(britain) == 234, len(britain)
-          assert len(ireland) == 95, len(ireland)
+          assert len(britain) == 234 and len(ireland) == 95
           assert all(pop_cultures[loc] != 'antq_brittonic' for loc in britain)
           assert all(pop_cultures[loc] != 'antq_gaelic' for loc in ireland)
           assert sum(pop_cultures[loc] == 'antq_caledonian' for loc in britain) == 9
           print('canonical culture contracts: PASS')
           PY
           git diff --check
-
-      - name: Upload canonical validation log
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: canonical-culture-validation-${{ github.run_number }}
-          path: /tmp/canonical-validation.log
-          retention-days: 1
 
       - name: Commit clean implementation
         shell: bash
