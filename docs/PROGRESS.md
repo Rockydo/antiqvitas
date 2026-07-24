@@ -6232,3 +6232,13 @@ reviewed 128px BC7 DDS.
   restored build also passed both with zero new error-log lines. Evidence and
   the no-repeat boundary are committed in `0768ca5` (`docs(m6): record Han
   officeholder probe`).
+
+## 2026-07-24 - M4 period-safe proxy-name correction
+
+- Replaced seven high-visibility anachronistic map labels with explicit
+  source-led adapters already used by the project: Mekong Basin, Angkor Borei,
+  Cuicuilco, Virú, Adulis, Jiaozhi, and Monte Albán. Each remains Tier 2 and
+  states its map-proxy limitation rather than claiming an exact site.
+- Regenerated all eleven localization mirrors. Full validation and enabled-mod
+  smoke passed with zero new error-log lines; committed as `b91c3c1`
+  (`fix(m4): replace anachronistic proxy labels`).
