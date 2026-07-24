@@ -6242,3 +6242,13 @@ reviewed 128px BC7 DDS.
 - Regenerated all eleven localization mirrors. Full validation and enabled-mod
   smoke passed with zero new error-log lines; committed as `b91c3c1`
   (`fix(m4): replace anachronistic proxy labels`).
+
+## 2026-07-24 - M4 regional market-name qualification
+
+- Replaced the remaining visible later-name market proxies—Temasek, Surabaya,
+  Martaban, Maynila, Noj Petén, and Tabriz—with bounded AD 1 regional frames:
+  Malay Straits, Brantas Coast, Mon Coast, Luzon Coast, Maya Lowlands, and
+  Atropatene. These labels preserve the existing market anchors without
+  inventing exact early settlements.
+- Full validation and enabled-mod smoke passed with zero new error-log lines;
+  committed as `05cd59a` (`fix(m4): qualify regional market proxy names`).
