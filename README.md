@@ -8,10 +8,9 @@ historical currents.
 
 ## Current build
 
-The repository targets EU5 `1.3.11` (local build `24187685`). M11 is complete;
-M12 remains in progress for observer-based pacing, full-timeline, and finale
-verification. The current full static and enabled-mod menu gate is green, but
-the long observer run remains blocked by the documented renderer fault. See
+The repository targets EU5 `1.3.11` (local build `24187685`). M12 is tagged
+after green static/menu gates and fresh AD 1 rapid probes. The long observer
+run remains optional evidence because of the documented renderer fault; see
 [Known Issues](KNOWN_ISSUES.md) before using this development build for a long
 campaign.
 
@@ -54,6 +53,6 @@ machine-specific and are not release metadata.
 - [Credits](CREDITS.md), [surface audit](docs/SURFACE_AREA.md), and
   [packaging notes](docs/m12/PACKAGING.md) describe release obligations.
 - [Finale verification](docs/m12/M12_FINALE_VERIFICATION.md) distinguishes
-  the checked terminal contract from the still-required observer evidence.
-- [M12 final-gate status](docs/m12/M12_FINAL_GATE.md) records the current
-  full-gate result and the remaining release blocker.
+  the checked terminal contract from optional observer evidence.
+- [M12 final-gate status](docs/m12/M12_FINAL_GATE.md) records the tagged
+  rapid-test release gate.
