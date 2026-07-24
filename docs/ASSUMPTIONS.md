@@ -2246,6 +2246,13 @@ are not a reconstruction of capital locations or borders. Sources weighed:
 P8.2; P8.5--P8.8; OCD; Pleiades; CAH-XI; CHGIS. [secure broad chronology and
 political contexts; contested local-key correspondences]
 
+The remaining Tier-3 capital anchors use the same qualified rule: where an
+attested period form is available it is used (for example Ma'rib, Šabwa,
+Sagala, Cahuachi, and Tiwanaku); otherwise the map displays the source-led
+polity or regional frame. This is deliberately more honest than inventing
+capital sites for societies of peoples. Sources weighed: P8.3--P8.10; SAM;
+CAH-XI; CHGIS. [secure broad frames; contested proxy placements]
+
 ## 2026-07-20 - Ephesus uses an Ayasuluk near-site market and harbor proxy
 
 UNESCO securely establishes Roman Ephesus as provincial capital and harbour
