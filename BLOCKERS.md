@@ -76,6 +76,15 @@ state; this field must not be tried in culture definitions again for this game
 build. The next eligible solution must retain legacy culture symbols and use a
 different runtime-proven contract.
 
+### Resolved 2026-07-24: additive positive-presence contract
+
+An additive `locations` manager accepts a positive `define_pop` and suppresses
+the initializer warning while preserving every legacy definition. M12 now
+generates the 714 locally observed culture presences from a checked ledger,
+offsets their 0.714 thousand exactly from Aachen, and terminal-date gates the
+11 future M4 religions. Full validation, final smoke, and a fresh selection
+probe report zero culture/religion no-pop diagnostics.
+
 ## 2026-07-22 - M5 annona routing lacks a demonstrated startup merchant contract
 
 Status: **deferred after two material local market-route attempts and a

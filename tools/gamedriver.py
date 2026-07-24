@@ -15,8 +15,10 @@ from pathlib import Path
 
 import psutil
 
+from runtime_state import directory as runtime_state_directory
+
 ROOT = Path(__file__).resolve().parents[1]
-STATE = ROOT / "baselines/runtime/gamedriver_session.json"
+STATE = runtime_state_directory(ROOT) / "gamedriver_session.json"
 # The installed build explicitly recognizes this display mode in its own UI
 # layout scripts.  960x540 was rejected as an enum value and silently fell
 # back to the 2560x1440 desktop mode before observer playback.

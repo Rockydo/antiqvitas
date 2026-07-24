@@ -12,6 +12,8 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+from runtime_state import directory as runtime_state_directory
+
 ROOT = Path(__file__).resolve().parents[1]
 PYTHON = ROOT / ".venv/Scripts/python.exe"
 TIMESTAMP = re.compile(r"^\[\d\d:\d\d:\d\d\]")
@@ -170,7 +172,7 @@ def main() -> int:
         "reference_unique_lines": len(reference),
         "unmodded_unique_lines": len(vanilla_actual),
     }
-    target = ROOT / "baselines/runtime/last_smoke.json"
+    target = runtime_state_directory(ROOT) / "last_smoke.json"
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     if new:

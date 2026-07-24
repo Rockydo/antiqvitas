@@ -12,6 +12,8 @@ import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
+from runtime_state import directory as runtime_state_directory
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -22,7 +24,7 @@ def load_config() -> dict[str, object]:
 def backup(path: Path) -> Path | None:
     if not path.exists():
         return None
-    directory = ROOT / "baselines/runtime/launcher_backups"
+    directory = runtime_state_directory(ROOT) / "launcher_backups"
     directory.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     target = directory / f"{path.name}.{stamp}.bak"
