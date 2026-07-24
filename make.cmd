@@ -1,8 +1,9 @@
 @echo off
 setlocal
+set "ROOT=%~dp0"
 set "PYTHON=python"
-if exist "%~dp0.venv\Scripts\python.exe" set "PYTHON=%~dp0.venv\Scripts\python.exe"
+if exist "%ROOT%.venv\Scripts\python.exe" set "PYTHON=%ROOT%.venv\Scripts\python.exe"
 set "TARGET=%~1"
 if "%TARGET%"=="" set "TARGET=validate"
-"%PYTHON%" tools\run_checks.py "%TARGET%"
+"%PYTHON%" "%ROOT%tools\run_checks.py" "%TARGET%"
 exit /b %errorlevel%
