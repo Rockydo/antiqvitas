@@ -1,8 +1,8 @@
 ﻿vanilla_culture,controlled_locations,m4_profile_candidates,regions,sample_locations
 farsi_culture,215,antq_parthian:148|antq_persian:60|antq_saka:7,Iran:215,abadeh;abadeh_tashk;abarkuh;abiz;agh_qala;aligurdaz;anar;anarak
 greek_culture,195,antq_aramaic:11|antq_greek_koine:22|antq_latin:162,Anatolia:11|Balkans:22|Rome:162,adranos;ahtopol;akcasehir;akhisar;alaiye;alasehir;amorgos;anamur
-muscovite,183,antq_uralic:7|antq_venedi:176,Eastern Europe:176|Finland:7,alexandrovskaya_sloboda;alikovo;arkhangelskoye_vologda;beloe;bogorodskoye_pereyaslavl;bolshaya_yakshanga;bolshoye_murashkino;bolshoye_selo
-novgorodian,176,antq_uralic:6|antq_venedi:170,Eastern Europe:170|Finland:6,alferovskaya;andomsky_pogost;ashevo;babayevo;badozhsky;beloozero;belye_kresty;bereznik
+muscovite,183,antq_finnic_culture:7|antq_venedi:176,Eastern Europe:176|Finland:7,alexandrovskaya_sloboda;alikovo;arkhangelskoye_vologda;beloe;bogorodskoye_pereyaslavl;bolshaya_yakshanga;bolshoye_murashkino;bolshoye_selo
+novgorodian,176,antq_finnic_culture:6|antq_venedi:170,Eastern Europe:170|Finland:6,alferovskaya;andomsky_pogost;ashevo;babayevo;badozhsky;beloozero;belye_kresty;bereznik
 mongolian_culture,170,antq_han:16|antq_xiongnu:154,China:16|Steppe:154,altan_gadas;altayn_ovor_gobi;alyanbulag;amarbayas_galang;anaa;avga;avnagar;avraga
 castilian,168,antq_latin:168,Rome:168,adrada;agreda;aguilar_de_campoo;alarcon;alba_de_tormes;albacete;alcala_de_henares;alcaraz
 zhongyuan_culture,157,antq_han:157,China:157,baima_daming;baofeng;biyang;changge;changshe;changtan;changyuan;chaocheng
@@ -13,20 +13,20 @@ danube_bavarian,136,antq_germanic:48|antq_latin:88,Germania:48|Rome:88,amberg;am
 korean_culture,134,antq_korean:134,Korea:134,aju;anak;andong;baekcheon;bonghwa;bongju;boryeong;boseong
 turkish_culture,132,antq_aramaic:2|antq_greek_koine:34|antq_latin:96,Anatolia:36|Rome:96,akdagmadeni;aksehir;akyazi;altinekin;altintas;amasya;ankara;arac
 saigoku_culture,129,antq_wa:129,Japan:129,abu;agawa;aimi;aita;aka;akashi;aki;aki_shikoku
-english,120,antq_brittonic:120,Britain:120,abingdon;amesbury;aylesbury;bampton;banbury;barking;barnstaple;basingstoke
-norwegian,120,antq_brittonic:4|antq_germanic:116,Britain:4|Scandinavia:116,alstahaug;alta;alvdal;amli;amot;aurland;bardodalen;berg
+english,120,antq_brigantian:11|antq_british_atrebatic:1|antq_brittonic:82|antq_catuvellaunian:1|antq_dumnonian:23|antq_icenian:1|antq_trinovantian:1,Britain:120,abingdon;amesbury;aylesbury;bampton;banbury;barking;barnstaple;basingstoke
+norwegian,120,antq_caledonian:4|antq_germanic:116,Britain:4|Scandinavia:116,alstahaug;alta;alvdal;amli;amot;aurland;bardodalen;berg
 armenian_culture,118,antq_aramaic:22|antq_armenian:67|antq_caucasian_albanian:4|antq_greek_koine:13|antq_median:5|antq_parthian:7,Anatolia:34|Caucasus:71|Iran:12|Mesopotamia:1,adakli;adana;afsin;ahlat;akhalkalaki;amberd;anavarza;ani
 najdi_culture,117,antq_arab:117,Arabia:117,aba_al_qur;abu_qasr;ad_dawasir;ad_dilam;afif;al_aflaj;al_ajfar;al_aythamah
 jilu_culture,111,antq_han:111,China:111,ande;anping;ansu;anxi_dingzhou;beihai;bohai;boxing;boye
 ruthenian,110,antq_sarmatian:44|antq_venedi:66,Eastern Europe:66|Pontic:44,adalaga;ananiv;aqmecit_prybuzhzhya;argamakli_sarai;bakota;balikley;balta;barvinkove
 qin_culture,108,antq_han:108,China:108,anhua;baimachen;baimaguan;baishui;baoji;chengcheng;chengzhou;chongxin
 uzbek_culture,108,antq_sogdian:85|antq_xiongnu:23,Central Asia:85|Steppe:23,aitbulat;akkesene;akkol;aksumbe;alashakhan;arkat;arykbalyk;asanas
-swedish,107,antq_germanic:95|antq_uralic:12,Finland:12|Scandinavia:95,abo;albo;alfta;allingsas;alvastra;amal;anundsjo;arboga
+swedish,107,antq_finnic_culture:12|antq_germanic:95,Finland:12|Scandinavia:95,abo;albo;alfta;allingsas;alvastra;amal;anundsjo;arboga
 hungarian,95,antq_dacian:80|antq_germanic:15,Danube:80|Germania:15,abrahamtelke;adony;alba_iulia;arad;bacs;baja_hungary;balassagyarmat;bekes
 yemeni_culture,95,antq_arab:91|antq_south_arabian:4,Arabia:95,abha;abil;abu_rakah;ad_dughmiyah;adan;adham;ahwar;al_abala
 tougoku_culture,91,antq_wa:91,Japan:91,abe;adachi_kanto;agatsuma;aichi;aikou;ashigara;ashikaga_loc;awa
-irish,90,antq_gaelic:90,Ireland:90,adare;ardagh;armagh;athenry;athlone;athy;ballaghaderreen;ballycastle
-kazani,88,antq_sarmatian:9|antq_uralic:24|antq_venedi:54|antq_xiongnu:1,Eastern Europe:54|Finland:24|Pontic:9|Steppe:1,alatyr;almetyevsk;ardatov;arkadak;arzamas;atishchevo;atkarsk;atrat
+irish,90,antq_voluntian:90,Ireland:90,adare;ardagh;armagh;athenry;athlone;athy;ballaghaderreen;ballycastle
+kazani,88,antq_finnic_culture:24|antq_sarmatian:9|antq_venedi:54|antq_xiongnu:1,Eastern Europe:54|Finland:24|Pontic:9|Steppe:1,alatyr;almetyevsk;ardatov;arkadak;arzamas;atishchevo;atkarsk;atrat
 mishar,87,antq_sarmatian:54|antq_venedi:33,Eastern Europe:33|Pontic:54,alexeyevka;alexeyevskaya;anna_russia;azeevo;bannoye;belaya_kalitva;bielska_sloboda;bilovodsk
 bulgarian,86,antq_greek_koine:23|antq_latin:63,Balkans:23|Rome:63,archar;aytos;bansko;beden;bitola;boruy;bozhenitsa;burgas
 gan_culture,86,antq_han:86,China:86,anfu_jian;anren;anren_raozhou;anyi;baling;chaling;changshou_pingjiang;chongren
@@ -79,7 +79,7 @@ moldovan,51,antq_dacian:50|antq_venedi:1,Danube:50|Eastern Europe:1,adjud;bacau;
 silesian,51,antq_baltic:49|antq_venedi:2,Baltic:49|Eastern Europe:2,bielsko;boleslawiec;brzeg;bytom;fryvaldov;glogow;glubczyce;gora
 wallachian,51,antq_dacian:44|antq_latin:7,Danube:44|Rome:7,arges;babadag;braila;bucharest;bukov;buzau;calafat;campulung_muscel
 zenati,51,antq_berber:31|antq_latin:8|antq_nubian:12,Africa:43|Rome:8,adrar;afso;ain_salah;ain_sefra;al_mazamma;asuf;badis;baghai
-udmurt,50,antq_uralic:50,Finland:50,afanasyevo;aspa;beryozovka;chastye;chyormoz;debyosy;dobryanka;dondykar
+udmurt,50,antq_finnic_culture:50,Finland:50,afanasyevo;aspa;beryozovka;chastye;chyormoz;debyosy;dobryanka;dondykar
 catalan,49,antq_latin:49,Rome:49,agramunt;alcoy;alicante;andorra_la_vella;ares_del_maestre;ayora;balaguer;barcelona
 hijazi_culture,48,antq_arab:48,Arabia:48,al_abwa;al_ahmar;al_ais;al_ayn_khaybar;al_furaish;al_hadhah;al_hawra;al_hegrieah
 oirat_culture,48,antq_sogdian:37|antq_xiongnu:11,Central Asia:37|Steppe:11,achit_nuur;airag_nuur;almaliq;atanuul;ayagoz;bodonch;bortala;bulgan
@@ -110,7 +110,7 @@ sindhi,38,antq_saka:38,India:38,agham_kot;ahmad_khan;aror;bab_kot;chor;dubbi;gho
 volhynian_culture,38,antq_venedi:38,Eastern Europe:38,belz;brody;busk;chelm;chortoryisk;dubno;grabowiec;iziaslav
 aukstaitian,37,antq_venedi:37,Eastern Europe:37,anyksciai;ashmyany;astrina;bershty;birzai;braslaw;drysvyaty;dzyatlava
 burmese_culture,36,antq_mon:36,Southeast Asia:36,amyint;butalin;dhipaesyin;kanna;kyaukse;lewe;magway;mindon
-georgian_culture,36,antq_armenian:32|antq_kartvelian:2|antq_sarmatian:2,Caucasus:34|Pontic:2,akhaltsikhe;alaverdi;ardahan;artanuji;balakan;batumi;bodbe;dusheti
+georgian_culture,36,antq_armenian:32|antq_colchian:1|antq_kartvelian:1|antq_sarmatian:2,Caucasus:34|Pontic:2,akhaltsikhe;alaverdi;ardahan;artanuji;balakan;batumi;bodbe;dusheti
 bedouin_culture,35,antq_arab:21|antq_latin:12|antq_parthian:2,Arabia:21|Iran:2|Rome:12,ad_disah;al_azlam;al_bad;al_bleiteh;al_farah_ula;al_khanbarah;al_muazzam;al_muwaylih
 gujarati,35,antq_indo_aryan:35,India:35,amreli;ashaval;baroda;bhanvad;broach;champaner;chhaya;daman
 halychian_culture,35,antq_germanic:6|antq_venedi:29,Eastern Europe:29|Germania:6,beregovo;bereschany;bohorodchany;bolekhiv;buchach;dolyna;drohobych;halych
@@ -138,16 +138,16 @@ khanty_culture,30,antq_xiongnu:30,Steppe:30,bolshoy_balyk;bolshoy_yugan;cherlak;
 khorasani_culture,30,antq_parthian:30,Iran:30,aliabad_katul;azadvar;azghand;bakharz;bam_esfarayen;bojnord;esfarayen;fadisheh
 rhine_franconian,30,antq_germanic:30,Germania:30,alsfeld;attendorn;berleburg;brilon;budingen;buren;dillenburg;eschwege
 wu_culture,30,antq_han:30,China:30,anji;changshu;changxing;chongde;chongming;deqing;haining;haiyan
-bashkir,29,antq_sogdian:12|antq_uralic:11|antq_xiongnu:6,Central Asia:12|Finland:11|Steppe:6,atach;belekes;beloretsk;bolshoy_ik;chebarkul;gebergeyel;ishimbay;ishkul
-scottish,29,antq_brittonic:29,Britain:29,aberdeen;arbroath;banff;berwick;buchan;clackmannan;cupar;dumbarton
+bashkir,29,antq_finnic_culture:11|antq_sogdian:12|antq_xiongnu:6,Central Asia:12|Finland:11|Steppe:6,atach;belekes;beloretsk;bolshoy_ik;chebarkul;gebergeyel;ishimbay;ishkul
+scottish,29,antq_caledonian:29,Britain:29,aberdeen;arbroath;banff;berwick;buchan;clackmannan;cupar;dumbarton
 uyghur_culture,29,antq_bactrian:3|antq_sogdian:24|antq_xiongnu:2,Central Asia:24|Steppe:2|Tarim:3,bailongdui;barkul;beshbalik;bosten;bugur;charklik;dashahai;dunla
 javanese_culture,28,antq_mon:28,Southeast Asia:28,bagaluhan;bajrajinaparamitapura;balambangan;borobudur;daha;demak;dieng;gresik
-komi,28,antq_uralic:28,Finland:28,belozerye;cherdyn;chernaya;kholunitsky;kirs;kobra;kortkeros;koygorodok
+komi,28,antq_finnic_culture:28,Finland:28,belozerye;cherdyn;chernaya;kholunitsky;kirs;kobra;kortkeros;koygorodok
 norman,28,antq_latin:28,Rome:28,alencon;argentan;arques;aumale;avranches;bayeux;bernay;caen
 kaliji_culture,27,antq_arab:27,Arabia:27,abu_dhabi;al_ahsa;al_ayn;al_bidda;al_huwaila;al_jubayl;al_mashqar;al_qatif
 libyan_arabic_culture,27,antq_latin:27,Rome:27,ajdabiya;al_bayda;al_kadwa;al_khuimat;al_khums;bani_walid;barca;benghazi
 purepecha_culture,27,antq_teotihuacano:27,Mesoamerica:27,aguacana;angamacutiro;apatzingan;caracuaro;churumekua;cuitzeo;erongaricuaro;guayangareo
-syriac_culture,27,antq_aramaic:1|antq_parthian:26,Iran:26|Mesopotamia:1,aleppo;ayntab;balad;baniyas;bara_iraq;barqaid;beirut;birecik
+syriac_culture,27,antq_parthian:26|antq_syriac:1,Iran:26|Mesopotamia:1,aleppo;ayntab;balad;baniyas;bara_iraq;barqaid;beirut;birecik
 yoruba,27,antq_mande:27,West Africa:27,ado_ekiti;agbonle;akure;ede;eko;epe;ife;igboho
 awadhi,26,antq_indo_aryan:26,India:26,asni;awadh;bahraich;balrampur;bhadohi;bhurwara;bilgram;biswan
 circassian_culture,26,antq_sarmatian:26,Pontic:26,adyukh;alexandrovskoye;armavir;arzgir;belorechensk;blagodarnoye;chatyun;grigoropolisskaya
@@ -155,18 +155,18 @@ emilian,26,antq_latin:26,Rome:26,argenta;bardi;berceto;bobbio;bologna;canossa;co
 hurga_culture,26,antq_korean:5|antq_xiongnu:21,Korea:5|Steppe:21,achan;arkhara;bidzhan;bira;boli;chalin;futi;hulin
 lorrain,26,antq_latin:26,Rome:26,arches;bar_le_duc;bar_sur_aube;chaumont;clermont_en_argonne;darney;epinal;etain
 mossi,26,antq_mande:26,West Africa:26,bankuy;barsalogho;bawku;boala;boromo;boussouma;djibo;doubare
-northumbrian,26,antq_brittonic:26,Britain:26,alnwick;appleby;bedale;billingham;bridlington;carlisle;cockermouth;darlington
+northumbrian,26,antq_brigantian:26,Britain:26,alnwick;appleby;bedale;billingham;bridlington;carlisle;cockermouth;darlington
 turkmen_culture,26,antq_parthian:23|antq_sogdian:3,Central Asia:3|Iran:23,abiward;anew;dargaz;dehistan;durun;etrek;faraveh;ganlygala
 dehlavi,25,antq_indo_aryan:25,India:25,baran;bareilly;budaun;chandpur_uttar_pradesh;delhi;gangadvara;gunnaur;gurgaon
 eastern_amazigh,25,antq_berber:11|antq_latin:14,Africa:11|Rome:14,ajim;awjila;brak;chenini;ghadames;ghariyan;jadu;maradah
-mari_culture,25,antq_uralic:24|antq_venedi:1,Eastern Europe:1|Finland:24,askino;aznakayevo;baltas;bavly;bugulma;burayevo;chalninsky_pochinok;chekmagush
+mari_culture,25,antq_finnic_culture:24|antq_venedi:1,Eastern Europe:1|Finland:24,askino;aznakayevo;baltas;bavly;bugulma;burayevo;chalninsky_pochinok;chekmagush
 walloon,25,antq_germanic:1|antq_latin:24,Germania:1|Rome:24,arlon;ath;bastogne;bouillon;chimay;dinant;enghien;la_roche
-welsh,25,antq_brittonic:25,Britain:25,aberystwyth;anglesey;brecknock;builth;caerphilly;cardiff;cardigan;carmarthen
+welsh,25,antq_brittonic:23|antq_ordovician:1|antq_silurian:1,Britain:25,aberystwyth;anglesey;brecknock;builth;caerphilly;cardiff;cardigan;carmarthen
 yucatec_culture,25,antq_teotihuacano:25,Mesoamerica:25,calkini;chacchoben;chakan_yucatan;chichen_itza;coba;dzibilnocac;dzilam;ekab
 yuehai_culture,25,antq_han:25,China:25,baoan_dongguan;conghua;dongguan;duanxi;ducheng;gaoming;gaoyao;guanfu
 aimara_culture,24,antq_nazca:3|antq_tiwanaku:21,Andes:24,achacachi;axawiri;ayaviri;ayopaya;calamarca;chucuito;chuqiyapu;contornasa
 bosnian,24,antq_latin:24,Rome:24,borac;doboj;drijeva;gacko;glamoc;glaz;jajce;kljuc
-karelian,24,antq_uralic:19|antq_venedi:5,Eastern Europe:5|Finland:19,beryozovskoye;karhumagi;kizhi;kondpoga;konevets;korela;kurkijoki;kyyrola
+karelian,24,antq_finnic_culture:19|antq_venedi:5,Eastern Europe:5|Finland:19,beryozovskoye;karhumagi;kizhi;kondpoga;konevets;korela;kurkijoki;kyyrola
 soninke,24,antq_mande:24,West Africa:24,bafoulabe;bakel;balle;ballou;diakha;diamou;diangounte_camara;diara
 tujia_culture,24,antq_han:24,China:24,badong;baojing;changyang;cili;datian_shizhou;dayong;dejiang;lichuan
 tumed_culture,24,antq_han:15|antq_xiongnu:9,China:15|Steppe:9,aerzhai;alxa;bagh;bayankhot;bayannur;bayannurhong;dongsheng;fengzhou
@@ -224,7 +224,7 @@ transylvanian,17,antq_dacian:15|antq_germanic:2,Danube:15|Germania:2,aiud;baia_c
 udege_culture,17,antq_xiongnu:17,Steppe:17,alchan;anchun;anju_nurgan;bikinka;imanka;katen;kema;koppi
 yue_wu_culture,17,antq_han:17,China:17,changguo;cixi;dinghai;fenghua;fuyang_hangzhou;linan;ninghai;shangyu
 bru_culture,16,antq_mon:16,Southeast Asia:16,ban_phone;bolikham;keutkeut;khamkeut;mahaxay;muang_mang;muang_phalan;muang_phin
-highland,16,antq_brittonic:16,Britain:16,aberfeldy;ardtornish;badenoch;cowal;dingwall;dornoch;durness;gairloch
+highland,16,antq_caledonian:16,Britain:16,aberfeldy;ardtornish;badenoch;cowal;dingwall;dornoch;durness;gairloch
 huaihai_culture,16,antq_han:16,China:16,dangshan;fengxian;ganyu;gaoqiao;peixian;qushan;shagou;suining_pizhou
 kangri,16,antq_saka:16,India:16,bajaura;barmaur;chamba_india;kahlur;keylong;koksar;kutlehar;mandi
 minnan_culture,16,antq_han:16,China:16,anxi;changtai;dehua;huafeng;huian;jinjiang;longxi;longyan
@@ -247,7 +247,7 @@ cahokia_culture,14,antq_algonquian:14,North America:14,amonokoa;cahokia;chariton
 gallo,14,antq_latin:14,Rome:14,blain;chateaubriant;dol;fougeres;guerande;josselin;monfort_sur_meu;nantes
 harla_culture,14,antq_nubian:14,Africa:14,arabi;awbare;bale;barara;dakkar;dire_dawa;gendebelo;harar
 hazara_culture,14,antq_saka:3|antq_sogdian:11,Central Asia:11|Iran:3,awbeh;baghran;bamyan;chishti_sarif;deh_kundi;firozkoh;jawand;kahmard
-norse_gael,14,antq_brittonic:14,Britain:14,arran;ayr;harris;irvine;islay;kenmure;kintyre;kirkcudbright
+norse_gael,14,antq_caledonian:14,Britain:14,arran;ayr;harris;irvine;islay;kenmure;kintyre;kirkcudbright
 pomor,14,antq_venedi:14,Eastern Europe:14,arkhangelsk;brin_navolok;kholmogory;luda;malye_oserki;nyonoksa;pomorye;priluky
 samogitian,14,antq_baltic:4|antq_venedi:10,Baltic:4|Eastern Europe:10,jurbarkas;kraziai;linkava;medininkai;memel;papile;pasvalys;ragnit
 sanhaja,14,antq_berber:14,Africa:14,ameskour;azilal;azrou;baht;boumalne_dades;er_rich;khenifra;ksar_es_souk
@@ -307,8 +307,8 @@ xinxiang_culture,10,antq_han:10,China:10,anhua_anhua;changsha;lukou;ningxiang;qi
 akan,9,antq_mande:9,West Africa:9,begho;bondoukou;bono_manso;dormaa;fomena;goaso;kumasi;sampa
 bai_culture,9,antq_han:9,China:9,heqing;jianchuan;jujin;langqiong;lanzhou_lanzhou;linxi;taihe_dali;wujing
 bariba,9,antq_mande:9,West Africa:9,babana;banikoara;bussa;kaiama;kandi;kouande;nikki;segbana
-erzya_culture,9,antq_uralic:4|antq_venedi:5,Eastern Europe:5|Finland:4,abdulino;altyshevo;bizhbulyak;krasnoslobodsk;lukoyanov;ruzayevka;sadak;saransk
-finnish,9,antq_uralic:9,Finland:9,birkala;hvittis;kymi_fi;porvoo;poytis;sastamala;veckelax;vederlax
+erzya_culture,9,antq_finnic_culture:4|antq_venedi:5,Eastern Europe:5|Finland:4,abdulino;altyshevo;bizhbulyak;krasnoslobodsk;lukoyanov;ruzayevka;sadak;saransk
+finnish,9,antq_finnic_culture:9,Finland:9,birkala;hvittis;kymi_fi;porvoo;poytis;sastamala;veckelax;vederlax
 garhwali,9,antq_indo_aryan:9,India:9,almora;badrinath;chandpur_garhi;devprayag;dwarahat;kashipur;srinagar_garhwal;thalisain
 guangxin_culture,9,antq_han:9,China:9,cangwu;cenxi;dongan;fengchuan;guangning_zhaoqing;rongcheng;sihui;tanjin
 haryanvi_culture,9,antq_indo_aryan:5|antq_saka:4,India:9,dadri;hansi;hisar;jind;kaithal;karnal;sadhaura;sarsuti
@@ -360,7 +360,7 @@ ripuarian_franconian,7,antq_latin:7,Rome:7,bitche;saarwerden;saint_avold;sarrebo
 romansh,7,antq_latin:7,Rome:7,chur;davos;disentis;ilanz;silandro;tarasp;zuoz
 shina_culture,7,antq_saka:7,India:7,astore;bunji;gilgit;ishkoman;phander;punial;yasin
 sudanese_arab,7,antq_nubian:7,Africa:7,abu_hamed;al_jeblien;atbara;berber;kassala;shemkhiya;wadi_el_melik
-tavastian,7,antq_uralic:7,Finland:7,forssa;hollola;jamsa;janakkala;liljendal;lohja;tavastehus
+tavastian,7,antq_finnic_culture:7,Finland:7,forssa;hollola;jamsa;janakkala;liljendal;lohja;tavastehus
 telengit_culture,7,antq_xiongnu:7,Steppe:7,altayskoye;mayma;onguday;shemonayevskoye;ust_kalmanka;ust_koksa;zmeinogorsk
 teleut_culture,7,antq_xiongnu:7,Steppe:7,berdsk;chesnokovka;dovolnoye;kamen;kolchugino;krivoshchekovo;suzun
 tunxi_culture,7,antq_han:7,China:7,chunan;jiande;jingde;jixi_huizhou;tunxi;xiuning;yixian
@@ -387,7 +387,7 @@ wuzhou_culture,6,antq_han:6,China:6,dongyang;jinhua;jinyun;lanxi;wuyi_jinhua;yon
 xllang_culture,6,antq_andean_regional:5|antq_recuay:1,Andes:6,apurlec;farfan;pakatnamu;sana;tantaricuy;xllang
 yulin_culture,6,antq_han:6,China:6,beiliu;bobai;luchuan_rongzhou;nanliu;puning_rongzhou;shahe_bobai
 abkhazian_culture,5,antq_armenian:5,Caucasus:5,anacopia;bedia;lata_georgia;pitsunda;sukhumi
-anglo_irish,5,antq_gaelic:5,Ireland:5,cork;dublin;new_ross;waterford;wexford
+anglo_irish,5,antq_voluntian:5,Ireland:5,cork;dublin;new_ross;waterford;wexford
 bazombo,5,antq_nubian:5,Africa:5,ambuila;cuilo;damba;nkunga;wembo
 bicolano_culture,5,antq_mon:5,Southeast Asia:5,daet;ibalong;naga_bikol;sawangan;vidak
 charka_culture,5,antq_nazca:3|antq_tiwanaku:2,Andes:5,arque;charka;colquechaca;sachchaa_mukku;sarkajpa
@@ -482,7 +482,7 @@ caxcan_culture,3,antq_teotihuacano:3,Mesoamerica:3,nochistlan;teulinchan;xochipi
 cebuano_culture,3,antq_mon:3,Southeast Asia:3,kangdaya;singhapala;tanjay
 chincha_culture,3,antq_andean_regional:3,Andes:3,chinchay;ica;puka_tampu
 chorti_culture,3,antq_teotihuacano:3,Mesoamerica:3,chiquimula;ocotepec;opoa
-cornish,3,antq_brittonic:3,Britain:3,bodmin;launceston;truro
+cornish,3,antq_dumnonian:3,Britain:3,bodmin;launceston;truro
 dehwar_culture,3,antq_parthian:3,Iran:3,kharan;khuzdar;mastung
 dhofari_culture,3,antq_arab:3,Arabia:3,dhufar;mirbat;raysut
 dimasa_culture,3,antq_indo_aryan:3,India:3,dhansiri;dimapur;lanka
@@ -525,7 +525,7 @@ pamona_culture,3,antq_mon:3,Southeast Asia:3,poso;tojo;una_una
 qiong_culture,3,antq_han:3,China:3,lehui;qiongshan;wanan_wananjun
 ryukyu_culture,3,antq_wa:3,Japan:3,nakijin;oozato;urasoe
 saluan_culture,3,antq_mon:3,Southeast Asia:3,bulakan;gori_gori;lingketeng
-sapmi,3,antq_germanic:2|antq_uralic:1,Finland:1|Scandinavia:2,deatnu;nadvoitsy;raisa
+sapmi,3,antq_finnic_culture:1|antq_germanic:2,Finland:1|Scandinavia:2,deatnu;nadvoitsy;raisa
 sedang_culture,3,antq_mon:3,Southeast Asia:3,kon_klor;kon_tum;samxay
 shekhawati,3,antq_indo_aryan:3,India:3,jhunjhunu;manoharpur;sikar
 shihhi_culture,3,antq_arab:3,Arabia:3,al_dhaid;julfar;khor_fakkan
