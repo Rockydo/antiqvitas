@@ -1,0 +1,27 @@
+name: PRO Roman location-name audit
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - ".github/workflows/pro-roman-location-name-audit.yml"
+      - "tools/m4_roman_location_name_audit.py"
+      - "docs/m4/**"
+      - "docs/world_1ad/ownership_resolved.csv"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Resolve Roman naming inventory
+        run: python tools/m4_roman_location_name_audit.py --output-dir .audit/roman-names
+      - name: Upload Roman naming inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: roman-location-name-audit
+          path: .audit/roman-names
+          if-no-files-found: error
