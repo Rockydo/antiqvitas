@@ -6262,3 +6262,12 @@ reviewed 128px BC7 DDS.
 - The generator now reports 1,998 qualified Tier 2 adapters. Full validation
   and enabled-mod smoke passed with zero new error-log lines; committed as
   `acdf220` (`fix(m4): qualify capital proxy names`).
+
+## 2026-07-24 - M4 complete capital-anchor name pass
+
+- Converted the remaining 43 Tier-3 polity-capital anchors in one source-led
+  batch. Attested forms are used where available; all other labels are
+  explicitly qualified regional or society frames, never invented capitals.
+- Dynamic coverage is now 61 capital, 241 curated, 2,041 Tier-2, and 11,199
+  Tier-3 anchors. Validation and smoke passed with zero new error-log lines;
+  committed as `008c8a58`.
