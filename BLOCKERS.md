@@ -1115,3 +1115,16 @@ generator correctly reject it: ANTIQVITAS deliberately permits only
 AD 1 adapter and generated output remain green. Do not weaken the timeline
 contract or retry a pre-start-date variation merely to mirror an installed
 later-start scenario.
+
+### 2026-07-24 follow-up: live AD 1 start controls ignore bounded driver input
+
+A source-qualified Emperor Ping birthplace fixture passed full validation and
+enabled-mod smoke, but could not be judged because the fresh AD 1 selector
+ignored both the visible `Start Observing the game` and `Play as ...` controls.
+The selector and a random-country choice rendered normally; mouse, Enter, and
+one bounded double-click returned to or remained at the selector. The fixture,
+sources, and generator output were restored; full validation and smoke are
+green. Evidence: `docs/screens/M6_han_ping_birthplace_fixture/`.
+
+Do not retry this screen path unchanged. Resume it only after a locally proven
+live-start input route or an engine patch changes the selector behaviour.
