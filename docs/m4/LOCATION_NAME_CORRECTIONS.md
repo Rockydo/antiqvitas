@@ -41,3 +41,16 @@ The initial batch removes five labels whose current full Roman titles postdate
 colonia, and Londinium. Where no secure settlement name survives, the ledger
 uses a clearly marked Tier-2 or contested inherited hydronym/toponym proxy
 rather than inventing a false city.
+
+## British foundation-chronology batch
+
+The second batch removes four Roman urban labels that did not yet exist on
+1 January AD 1: Durnovaria, Isca Dumnoniorum, Glevum, and Eboracum. `Isca`
+retains only an inherited British river-name. Dorchester, Gloucester, and York
+use plainly documented tribal-area proxies because replacing a late city with
+an invented pre-conquest city would merely exchange one error for another.
+
+Canterbury's `Durovernum`, Carlisle's `Luguvalium`, Chichester's `Noviomagus`,
+and Leicester's `Ratae` are deliberately not changed in this batch: each may
+preserve an indigenous toponym or an Iron Age settlement horizon despite later
+Roman urban development.
