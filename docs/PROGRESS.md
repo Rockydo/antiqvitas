@@ -6214,3 +6214,9 @@ reviewed 128px BC7 DDS.
   cannot regress to a catalogue-only surface.
 - M7 is accepted and tagged `M7-done`. The renderer exit remains recorded as a
   general long-observer limitation, not a failed M7 content load.
+
+## 2026-07-24 - Fresh rapid smoke after M7 acceptance
+
+- The vanilla control and enabled ANTIQVITAS menu launches both reached the
+  driver-ready heuristic. The normalized error-log comparison found zero new
+  mod line types and no accepted baseline type missing.
