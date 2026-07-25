@@ -418,6 +418,8 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
       sheets. The checked circle preview is 71/265 compliant with zero aliases.
   - [x] Complete the 80-icon named Roman cohort from 20 reviewed four-up
       sheets; all 80 pass the circle/navy contract and the full gate is 111/265.
+  - [x] Re-art 48 high-visibility regional production families from 12 reviewed
+      EU5-referenced sheets; the complete visual gate is 159/265.
 
 - [ ] Replace medieval character/court backgrounds across graphical cultures.
   - Trace the exact live texture from screenshots rather than assuming it is the 3D

@@ -6582,3 +6582,11 @@ reviewed 128px BC7 DDS.
 - All 80 named Roman icons pass the circle/navy gate; the full set is 111/265
   with zero exact or near aliases.
 - Validation passes 78/78; paired vanilla/mod smoke has zero mod-only lines.
+
+## 2026-07-25 - Regional production building art, tranche one
+
+- Corrected 12 placeholder visual subjects and replaced 48 core production
+  icons from 12 reviewed EU5-referenced four-up sheets.
+- All 48 pass the circle/navy gate; the complete set is 159/265 with zero
+  exact or near aliases.
+- Validation passes 78/78; paired vanilla/mod smoke has zero mod-only lines.

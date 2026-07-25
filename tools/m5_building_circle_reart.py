@@ -13,6 +13,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter, ImageOps
 
 import m5_roman_buildings
+import m5_regional_buildings
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -76,7 +77,10 @@ def master_path(key: str) -> Path:
 
 def validate_manifest(entries: list[dict[str, str]]) -> None:
     failures: list[str] = []
-    active_named = {row["key"] for row in m5_roman_buildings.load()}
+    active_by_cohort = {
+        "named_roman": {row["key"] for row in m5_roman_buildings.load()},
+        "regional_family": {row["key"] for row in m5_regional_buildings.load()[0]},
+    }
     seen_keys: set[str] = set()
     seen_slots: set[tuple[str, str]] = set()
     for row in entries:
@@ -86,8 +90,10 @@ def validate_manifest(entries: list[dict[str, str]]) -> None:
             failures.append(f"blank manifest field in row for {key or '<blank>'}")
         if row["quadrant"] not in QUADRANTS:
             failures.append(f"invalid quadrant for {key}: {row['quadrant']}")
-        if key not in active_named:
-            failures.append(f"manifest key is not an active named Roman building: {key}")
+        if row["cohort"] not in active_by_cohort:
+            failures.append(f"invalid re-art cohort for {key}: {row['cohort']}")
+        elif key not in active_by_cohort[row["cohort"]]:
+            failures.append(f"manifest key is not active in {row['cohort']}: {key}")
         if key in seen_keys:
             failures.append(f"duplicate manifest key: {key}")
         if slot in seen_slots:
