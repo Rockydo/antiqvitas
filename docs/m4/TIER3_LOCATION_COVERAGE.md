@@ -1,5 +1,4 @@
 # Tier-3 location-name coverage
-
 `tools/generate_m4_tier3_names.py` makes every installed map key explicit in
 mod localization. It emits 28,573 synthetic root fallbacks and 11,199
 culture-bound populated-field adapters after higher-confidence names are
@@ -16,3 +15,13 @@ local identity.
 The map-only keys without an installed English label receive the same neutral
 synthetic treatment. This prevents raw keys and unqualified modern labels
 while making the absence of historical evidence auditable through `T3M`.
+
+## Roman audit boundary
+
+The generated Tier-3 source ledgers remain global because their generator needs
+the installed EU5 localization corpus. They are not, however, a runtime source
+inside the AD 1 Roman realm. `tools/generate_dynamic_names.py` excludes all
+2,012 Roman-owned locations from both generic Tier-2 proxy layers and Tier-3
+root or culture adapters. Only reviewed direct and identity-backed Roman names
+are emitted; every unsupported Roman field falls through to EU5 vanilla
+localization. `tools/m4_roman_location_name_audit.py` enforces that boundary.

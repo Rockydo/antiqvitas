@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Inventory every displayed location name inside the generated AD 1 Roman realm.
+"""Generate the exhaustive AD 1 Roman-realm location-name audit.
 
-The audit is intentionally read-only. It resolves the same source precedence as
-``generate_dynamic_names.py`` and emits a compact Roman-only table that can be
-reviewed without loading the 13,000-row ownership file through GitHub's UI.
+Every field owned by Rome is classified as either a reviewed override or an
+intentional vanilla pass-through.  Generic proximity adapters and synthetic
+Tier-3 labels are forbidden in the Roman audit boundary.
 """
 from __future__ import annotations
 
@@ -12,14 +12,47 @@ import csv
 import json
 import re
 from collections import Counter
+from io import StringIO
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
 DYNAMIC = ROOT / "docs/m4/dynamic_location_names.csv"
-CORRECTIONS = ROOT / "docs/m4/location_name_corrections.csv"
-ROOT_FALLBACKS = ROOT / "docs/m4/tier3_map_name_fallbacks.csv"
+ROMAN_OVERRIDES = ROOT / "docs/m4/roman_location_name_overrides.csv"
+EXCLUSIONS = ROOT / "docs/m4/roman_location_name_exclusions.csv"
+OUTPUT = ROOT / "docs/m4/roman_location_name_audit.csv"
+SUMMARY = ROOT / "docs/m4/roman_location_name_audit_summary.json"
 
+OWNERSHIP_FIELDS = (
+    "tag",
+    "engine_tag",
+    "location",
+    "tenure",
+    "source",
+    "confidence",
+    "note",
+)
+DYNAMIC_FIELDS = (
+    "location",
+    "anchor_kind",
+    "tag",
+    "historical_name",
+    "culture",
+    "language",
+    "dialect",
+    "source",
+    "confidence",
+    "note",
+)
+ROMAN_OVERRIDE_FIELDS = (
+    "location",
+    "culture",
+    "historical_name",
+    "source",
+    "confidence",
+    "note",
+)
+EXCLUSION_FIELDS = ("location", "pleiades_id", "candidate_name", "reason")
 OUTPUT_FIELDS = (
     "location",
     "historical_name",
@@ -28,198 +61,285 @@ OUTPUT_FIELDS = (
     "culture",
     "source",
     "confidence",
-    "review_status",
+    "decision",
     "audit_flags",
     "note",
 )
-
-# These terms are not an automatic rejection. They identify entries whose
-# Pleiades resource title is likely a modern excavation/site label rather than
-# an ancient name resource and therefore require name-level verification.
-MODERN_SITE_RE = re.compile(
-    r"(?:\b(?:caer|castle|chateau|château|church|fort|henchir|kodra|monte|mont|"
-    r"nossa|qal(?:a|at)|san|santa|santo|sidi|steinheim|tell|tel|tulul|umm)\b|"
-    r"\b(?:di|della|des|les|sur|veche)\b|(?:abad|abad$)|(?:grad|gorod)$|"
-    r"(?:\bS\.|\bSt\.)\s)",
-    re.IGNORECASE,
-)
-ARCHAEOLOGY_RE = re.compile(
-    r"\b(?:archaeological|excavation|necropolis|tomb|temple|villa|site|ruins?)\b",
-    re.IGNORECASE,
-)
+ALLOWED_ROMAN_ANCHORS = {"capital", "curated", "roman_identity"}
+ROMAN_SOURCE_RE = re.compile(r"PLE:(\d+);PLN:\1/[^;]+;R2")
 
 
-def rows(path: Path, *, comments: bool = False) -> list[dict[str, str]]:
+def rows(
+    path: Path,
+    expected_fields: tuple[str, ...],
+    *,
+    comments: bool = False,
+) -> list[dict[str, str]]:
     with path.open(encoding="utf-8-sig", newline="") as handle:
         lines = (line for line in handle if not comments or not line.startswith("#"))
-        return list(csv.DictReader(lines))
+        reader = csv.DictReader(lines)
+        if tuple(reader.fieldnames or ()) != expected_fields:
+            raise ValueError(
+                f"{path.relative_to(ROOT)} must use header {','.join(expected_fields)}"
+            )
+        return [
+            {field: str(row.get(field) or "").strip() for field in expected_fields}
+            for row in reader
+        ]
+
+
+def unique_rows(
+    path: Path,
+    expected_fields: tuple[str, ...],
+    *,
+    comments: bool = False,
+) -> dict[str, dict[str, str]]:
+    result: dict[str, dict[str, str]] = {}
+    failures: list[str] = []
+    for number, row in enumerate(
+        rows(path, expected_fields, comments=comments),
+        start=2,
+    ):
+        location = row["location"]
+        if not location:
+            failures.append(f"{path.relative_to(ROOT)}:{number}: blank location")
+        elif location in result:
+            failures.append(
+                f"{path.relative_to(ROOT)}:{number}: duplicate location {location}"
+            )
+        else:
+            result[location] = row
+    if failures:
+        raise ValueError("\n".join(failures))
+    return result
 
 
 def roman_locations() -> list[str]:
-    result = sorted(
-        row["location"].strip()
-        for row in rows(OWNERSHIP, comments=True)
-        if row.get("tag", "").strip() == "ROM" and row.get("location", "").strip()
+    ownership = rows(OWNERSHIP, OWNERSHIP_FIELDS, comments=True)
+    locations = [row["location"] for row in ownership if row["tag"] == "ROM"]
+    if not locations or any(not location for location in locations):
+        raise ValueError("ownership_resolved.csv contains invalid Roman ownership rows")
+    duplicates = sorted(
+        location for location, count in Counter(locations).items() if count > 1
     )
-    if not result:
-        raise ValueError("ownership_resolved.csv contains no ROM locations")
-    duplicates = [key for key, count in Counter(result).items() if count > 1]
     if duplicates:
-        raise ValueError("duplicate ROM ownership rows: " + ", ".join(duplicates))
-    return result
+        raise ValueError("duplicate Roman ownership rows: " + ", ".join(duplicates))
+    return sorted(locations)
 
 
-def unique_by_location(path: Path) -> dict[str, dict[str, str]]:
-    result: dict[str, dict[str, str]] = {}
-    for number, row in enumerate(rows(path), start=2):
-        location = row.get("location", "").strip()
-        if not location:
-            raise ValueError(f"{path.relative_to(ROOT)}:{number}: blank location")
-        if location in result:
-            raise ValueError(f"{path.relative_to(ROOT)}:{number}: duplicate {location}")
-        result[location] = {key: (value or "").strip() for key, value in row.items()}
-    return result
-
-
-def layer_for(entry: dict[str, str]) -> str:
-    kind = entry.get("anchor_kind", "")
-    source = entry.get("source", "")
-    if kind == "tier2":
-        if ";T2W" in source:
-            return "tier2_wide"
-        return "tier2_bounded"
-    return {
-        "capital": "capital",
-        "curated": "curated",
-        "qualified": "qualified",
-        "tier2_remote": "tier2_remote",
-        "tier2_far": "tier2_far",
-        "tier2_ultra": "tier2_ultra",
-        "tier3": "tier3_population",
-    }.get(kind, kind or "unknown")
-
-
-def flags_for(name: str, layer: str, source: str, confidence: str) -> tuple[str, ...]:
-    flags: list[str] = []
-    if confidence == "tier3" or layer.startswith("tier3"):
-        flags.append("synthetic")
-    if layer in {"tier2_far", "tier2_ultra"}:
-        flags.append("unsafe_distance")
-    elif layer == "tier2_remote":
-        flags.append("remote_proxy")
-    if layer.startswith("tier2") and MODERN_SITE_RE.search(name):
-        flags.append("possible_modern_site_title")
-    if ARCHAEOLOGY_RE.search(name):
-        flags.append("archaeology_descriptor")
-    if source.startswith("T3M:"):
-        flags.append("installed_label_derivative")
-    return tuple(dict.fromkeys(flags))
-
-
-def status_for(layer: str, confidence: str, flags: tuple[str, ...]) -> str:
-    severe = {"unsafe_distance", "possible_modern_site_title", "archaeology_descriptor"}
-    if severe.intersection(flags):
-        return "replace"
-    if confidence == "tier3" or layer.startswith("tier3"):
-        return "review"
-    if layer.startswith("tier2"):
-        return "verify"
-    return "retain"
-
-
-def audit_rows() -> list[dict[str, str]]:
-    corrections = unique_by_location(CORRECTIONS)
-    dynamic = unique_by_location(DYNAMIC)
-    roots = unique_by_location(ROOT_FALLBACKS)
-    output: list[dict[str, str]] = []
-    missing: list[str] = []
-    for location in roman_locations():
-        if location in corrections:
-            entry = corrections[location]
-            layer = "correction"
-            anchor_kind = "correction"
-            culture = entry.get("culture", "")
-        elif location in dynamic:
-            entry = dynamic[location]
-            layer = layer_for(entry)
-            anchor_kind = entry.get("anchor_kind", "")
-            culture = entry.get("culture", "")
-        elif location in roots:
-            entry = roots[location]
-            layer = "tier3_root"
-            anchor_kind = "root"
-            culture = ""
-        else:
-            missing.append(location)
+def validate_identity_sources(
+    overrides: dict[str, dict[str, str]],
+) -> tuple[set[str], list[str]]:
+    place_ids: set[str] = set()
+    violations: list[str] = []
+    for location, row in sorted(overrides.items()):
+        match = ROMAN_SOURCE_RE.fullmatch(row["source"])
+        if not match:
+            violations.append(
+                f"{location}: malformed Roman identity source {row['source']!r}"
+            )
             continue
-        name = entry.get("historical_name", "").strip()
-        source = entry.get("source", "").strip()
-        confidence = entry.get("confidence", "").strip()
-        if not name:
-            raise ValueError(f"blank effective name for Roman location {location}")
-        flags = flags_for(name, layer, source, confidence)
+        place_id = match.group(1)
+        if place_id in place_ids:
+            violations.append(f"{location}: reused Roman Pleiades place {place_id}")
+        place_ids.add(place_id)
+        if row["confidence"] != "tier2":
+            violations.append(
+                f"{location}: Roman identity confidence must be tier2"
+            )
+    return place_ids, violations
+
+
+def build() -> tuple[list[dict[str, str]], dict[str, object]]:
+    roman = roman_locations()
+    roman_set = set(roman)
+    dynamic = unique_rows(DYNAMIC, DYNAMIC_FIELDS)
+    overrides = unique_rows(ROMAN_OVERRIDES, ROMAN_OVERRIDE_FIELDS)
+    exclusions = unique_rows(EXCLUSIONS, EXCLUSION_FIELDS)
+
+    violations: list[str] = []
+    place_ids, source_violations = validate_identity_sources(overrides)
+    violations.extend(source_violations)
+    if not set(overrides).issubset(roman_set):
+        violations.append(
+            "Roman identity ledger contains non-Roman locations: "
+            + ", ".join(sorted(set(overrides) - roman_set))
+        )
+    if not set(exclusions).issubset(roman_set):
+        violations.append(
+            "Roman exclusion ledger contains non-Roman locations: "
+            + ", ".join(sorted(set(exclusions) - roman_set))
+        )
+    excluded_place_ids = {row["pleiades_id"] for row in exclusions.values()}
+    selected_excluded = sorted(place_ids & excluded_place_ids)
+    if selected_excluded:
+        violations.append(
+            "excluded Pleiades places selected at runtime: "
+            + ", ".join(selected_excluded)
+        )
+
+    output: list[dict[str, str]] = []
+    for location in roman:
+        entry = dynamic.get(location)
+        if entry is None:
+            output.append(
+                {
+                    "location": location,
+                    "historical_name": "",
+                    "layer": "vanilla_passthrough",
+                    "anchor_kind": "",
+                    "culture": "",
+                    "source": "",
+                    "confidence": "",
+                    "decision": "vanilla_passthrough",
+                    "audit_flags": "insufficient_secure_identity",
+                    "note": (
+                        "No sufficiently secure AD 1 identity; EU5 vanilla "
+                        "localization retained."
+                    ),
+                }
+            )
+            continue
+
+        anchor = entry["anchor_kind"]
+        if anchor not in ALLOWED_ROMAN_ANCHORS:
+            violations.append(
+                f"{location}: forbidden Roman runtime layer {anchor or '<blank>'}"
+            )
+        if anchor == "roman_identity":
+            layer = "reviewed_identity"
+            if location not in overrides:
+                violations.append(
+                    f"{location}: runtime Roman identity missing from source ledger"
+                )
+        elif anchor == "curated":
+            layer = "reviewed_direct"
+        else:
+            layer = "reviewed_capital"
         output.append(
             {
                 "location": location,
-                "historical_name": name,
+                "historical_name": entry["historical_name"],
                 "layer": layer,
-                "anchor_kind": anchor_kind,
-                "culture": culture,
-                "source": source,
-                "confidence": confidence,
-                "review_status": status_for(layer, confidence, flags),
-                "audit_flags": ";".join(flags),
-                "note": entry.get("note", "").strip(),
+                "anchor_kind": anchor,
+                "culture": entry["culture"],
+                "source": entry["source"],
+                "confidence": entry["confidence"],
+                "decision": "reviewed_override",
+                "audit_flags": "",
+                "note": entry["note"],
             }
         )
-    if missing:
-        raise ValueError("Roman locations without an effective name: " + ", ".join(missing))
-    return output
 
-
-def write_csv(path: Path, values: list[dict[str, str]]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8-sig", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=OUTPUT_FIELDS, lineterminator="\n")
-        writer.writeheader()
-        writer.writerows(values)
-
-
-def summary(values: list[dict[str, str]]) -> dict[str, object]:
-    return {
-        "roman_locations": len(values),
-        "layers": dict(sorted(Counter(row["layer"] for row in values).items())),
-        "confidence": dict(sorted(Counter(row["confidence"] for row in values).items())),
-        "review_status": dict(sorted(Counter(row["review_status"] for row in values).items())),
-        "flags": dict(
-            sorted(
-                Counter(
-                    flag
-                    for row in values
-                    for flag in row["audit_flags"].split(";")
-                    if flag
-                ).items()
-            )
-        ),
+    runtime_identities = {
+        row["location"] for row in output if row["anchor_kind"] == "roman_identity"
     }
+    missing_runtime_identities = sorted(set(overrides) - runtime_identities)
+    if missing_runtime_identities:
+        violations.append(
+            "reviewed Roman identities absent from runtime output: "
+            + ", ".join(missing_runtime_identities)
+        )
+
+    excluded_overridden = sorted(
+        location
+        for location in exclusions
+        if next(row for row in output if row["location"] == location)["decision"]
+        != "vanilla_passthrough"
+    )
+    if excluded_overridden:
+        violations.append(
+            "excluded Roman locations still overridden: "
+            + ", ".join(excluded_overridden)
+        )
+
+    decisions = Counter(row["decision"] for row in output)
+    layers = Counter(row["layer"] for row in output)
+    confidence = Counter(row["confidence"] for row in output if row["confidence"])
+    summary: dict[str, object] = {
+        "roman_locations": len(output),
+        "reviewed_overrides": decisions["reviewed_override"],
+        "vanilla_passthrough": decisions["vanilla_passthrough"],
+        "layers": dict(sorted(layers.items())),
+        "confidence": dict(sorted(confidence.items())),
+        "decisions": dict(sorted(decisions.items())),
+        "exclusion_rules": len(exclusions),
+        "excluded_passthrough": len(exclusions) - len(excluded_overridden),
+        "violations": sorted(set(violations)),
+    }
+    if len(output) != len(roman_set):
+        summary["violations"].append(
+            f"audit row count {len(output)} does not match Roman ownership {len(roman_set)}"
+        )
+    return output, summary
+
+
+def render_csv(values: list[dict[str, str]]) -> str:
+    stream = StringIO(newline="")
+    writer = csv.DictWriter(stream, fieldnames=OUTPUT_FIELDS, lineterminator="\n")
+    writer.writeheader()
+    writer.writerows(values)
+    return stream.getvalue()
+
+
+def outputs() -> tuple[str, str, dict[str, object]]:
+    values, summary = build()
+    audit_csv = render_csv(values)
+    summary_json = json.dumps(
+        summary,
+        ensure_ascii=False,
+        indent=2,
+        sort_keys=True,
+    ) + "\n"
+    return audit_csv, summary_json, summary
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--output-dir", type=Path, required=True)
+    parser.add_argument("--write", action="store_true")
+    parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
+    if args.write == args.check:
+        parser.error("provide exactly one of --write or --check")
     try:
-        values = audit_rows()
-        output_dir = args.output_dir.resolve()
-        write_csv(output_dir / "roman_location_name_audit.csv", values)
-        (output_dir / "roman_location_name_audit_summary.json").write_text(
-            json.dumps(summary(values), ensure_ascii=False, indent=2, sort_keys=True) + "\n",
-            encoding="utf-8",
-        )
+        audit_csv, summary_json, summary = outputs()
     except (OSError, ValueError, csv.Error, json.JSONDecodeError) as exc:
         print(f"m4_roman_location_name_audit: FAIL\n  - {exc}")
         return 1
-    print(f"m4_roman_location_name_audit: PASS ({len(values)} Roman locations)")
+
+    violations = list(summary["violations"])
+    if violations:
+        print("m4_roman_location_name_audit: FAIL")
+        for violation in violations:
+            print(f"  - {violation}")
+        return 1
+
+    if args.write:
+        OUTPUT.write_text(audit_csv, encoding="utf-8-sig", newline="")
+        SUMMARY.write_text(summary_json, encoding="utf-8", newline="")
+        print(
+            "m4_roman_location_name_audit: wrote "
+            f"{OUTPUT.relative_to(ROOT)} and {SUMMARY.relative_to(ROOT)}"
+        )
+        return 0
+
+    failures: list[str] = []
+    if not OUTPUT.is_file() or OUTPUT.read_text(encoding="utf-8-sig") != audit_csv:
+        failures.append(f"stale or missing {OUTPUT.relative_to(ROOT)}")
+    if not SUMMARY.is_file() or SUMMARY.read_text(encoding="utf-8") != summary_json:
+        failures.append(f"stale or missing {SUMMARY.relative_to(ROOT)}")
+    if failures:
+        print("m4_roman_location_name_audit: FAIL")
+        for failure in failures:
+            print(f"  - {failure}")
+        return 1
+
+    print(
+        "m4_roman_location_name_audit: PASS "
+        f"({summary['reviewed_overrides']} reviewed overrides + "
+        f"{summary['vanilla_passthrough']} vanilla pass-throughs = "
+        f"{summary['roman_locations']} Roman locations)"
+    )
     return 0
 
 

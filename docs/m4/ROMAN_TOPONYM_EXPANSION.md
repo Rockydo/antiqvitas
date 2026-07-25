@@ -1,5 +1,37 @@
 # Roman-world dynamic-name expansion
 
+## 2026-07-25 - Exhaustive Roman-realm audit
+
+The runtime audit now covers all 2,012 locations owned by Rome in the generated
+AD 1 setup. It retains 169 directly reviewed names and 220 additional
+identity-backed Pleiades names. The remaining 1,623 fields deliberately keep
+their EU5 vanilla localization because no sufficiently secure AD 1 identity was
+established.
+
+Roman-owned locations are excluded from every generic proximity-based Tier-2
+layer and from synthetic Tier-3 localization. A Roman override is now accepted
+only from the direct reviewed ledger or from
+`roman_location_name_selections.csv`, where one installed field is bound to one
+Pleiades place and one name resource attested across AD 1. Explicitly rejected
+late, reconstructed, uncertain, or geographically mismatched candidates are
+recorded in `roman_location_name_exclusions.csv`.
+
+The source and generated files are:
+
+- `dynamic_location_name_overrides.csv`: 169 direct Roman names.
+- `roman_location_name_selections.csv`: 220 reviewed identity decisions.
+- `roman_location_name_overrides.csv`: generated runtime adapters.
+- `roman_location_name_exclusions.csv`: 30 documented rejection rules.
+- `roman_location_name_audit.csv`: all 2,012 Roman fields, including intentional
+  vanilla pass-throughs.
+
+The audit also corrected several previously overconfident rows: Portuguese
+`beja` no longer receives North African Vaga, Tunisian `beja_TUN` does;
+Gibraltar uses Calpe; Kos retains Kos; Split uses Aspalathos; and Matera,
+Nauplia, Emona, Vindobona, Mursa, Andautonia, Durostorum, Viminacium, Bononia,
+and other late or uncertain candidates are no longer forced into the AD 1
+localization layer.
+
 This 22 July 2026 batch extends the curated M4 name ledger with twenty-eight
 Italian and Sicilian AD 1 forms. The Pleiades CSV snapshot in the project
 cache supplies each direct ancient point, historical title, date range, and
@@ -46,7 +78,7 @@ community.
 
 ## 2026-07-23 - Exact northern and central Italian pass
 
-Nine further installed city keys have a Pleiades settlement point whose recorded
+Eight further installed city keys have a Pleiades settlement point whose recorded
 life includes AD 1 and whose coordinate falls directly on the modern local-key
 anchor. The conservative display forms are recorded below. They are direct
 toponym replacements only: neither a settlement polygon nor any assertion about
@@ -70,19 +102,19 @@ project's cached CC-BY CSV snapshot, described in
 
 ## 2026-07-23 - Exact Upper-Rhine, Norican, and Pannonian pass
 
-Six further Roman-controlled installed city keys have Pleiades settlement points
+Four further Roman-controlled installed city keys have Pleiades settlement points
 whose temporal ranges include AD 1 and whose coordinate matches are no farther
-than 0.61 km from the local city anchor. The pass excludes nearby rather than
-direct candidates such as Iuvavum and Veldidena.
+than 0.49 km from the local city anchor. The exhaustive audit removed Emona and
+Vindobona because their relevant Roman urban or military forms postdate the
+campaign start; it also excludes nearby rather than direct candidates such as
+Iuvavum and Veldidena.
 
 | Installed key | AD 1 display form | Pleiades place | Point | Point offset |
 | --- | --- | --- | --- | --- |
 | besancon | Vesontio | 177657 | 47.23724, 6.02792 | 0.29 km |
-| ljubljana | Emona | 197258 | 46.05143, 14.50596 | 0.61 km |
 | ptuj | Poetovio | 197446 | 46.41998, 15.86998 | 0.02 km |
 | sopron | Scarbantia | 197501 | 47.68489, 16.58304 | 0.37 km |
 | szombathely | Savaria | 197498 | 47.23514, 16.62192 | 0.49 km |
-| vienna | Vindobona | 128537 | 48.20741, 16.37387 | 0.09 km |
 
 The Latin dynamic-language adapter is an engine display lookup only. It does
 not assert uniform local speech, settlement extent, provincial boundary,
@@ -119,7 +151,7 @@ rank, or provincial boundary.
 ## 2026-07-23 - Exact Adriatic and Pannonian pass
 
 Four Roman-controlled installed city keys have exact Pleiades settlement points
-active at AD 1: Naissus, Siscia, Spalatum, and Sirmium. Their offsets from the
+active at AD 1: Naissus, Siscia, Aspalathos, and Sirmium. Their offsets from the
 local-key anchor range from 0.23 km to 0.57 km. The display names are direct
 point labels only and assert no municipal rank, language uniformity, city
 extent, provincial boundary, citizenship, or population.
@@ -128,5 +160,5 @@ extent, provincial boundary, citizenship, or population.
 | --- | --- | --- | --- |
 | nis | Naissus | 207303 | 0.53 km |
 | sisak | Siscia | 197504 | 0.57 km |
-| split | Spalatum | 197524 | 0.23 km |
+| split | Aspalathos | 197524 | 0.23 km |
 | sremska_mitrovica | Sirmium | 207447 | 0.57 km |

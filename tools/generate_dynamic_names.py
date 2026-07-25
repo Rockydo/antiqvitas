@@ -29,6 +29,8 @@ TIER2_ULTRA = ROOT / "docs/m4/tier2_ultra_location_name_overrides.csv"
 TIER3 = ROOT / "docs/m4/tier3_location_name_overrides.csv"
 TIER3_MAP = ROOT / "docs/m4/tier3_map_name_fallbacks.csv"
 CORRECTIONS = ROOT / "docs/m4/location_name_corrections.csv"
+ROMAN = ROOT / "docs/m4/roman_location_name_overrides.csv"
+OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
 ENGINE_LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
 CLIENT_LANGUAGES = (
     "english",
@@ -75,6 +77,23 @@ def correction_locations() -> set[str]:
     return set(locations)
 
 
+def roman_locations() -> set[str]:
+    """Return every field owned by Rome in the generated AD 1 setup."""
+    required = ("tag", "engine_tag", "location", "tenure", "source", "confidence", "note")
+    with OWNERSHIP.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(line for line in handle if not line.startswith("#"))
+        if tuple(reader.fieldnames or ()) != required:
+            raise ValueError(f"{OWNERSHIP.relative_to(ROOT)} has an unexpected header")
+        result = {
+            str(row.get("location") or "").strip()
+            for row in reader
+            if str(row.get("tag") or "").strip() == "ROM"
+        }
+    if not result or "" in result:
+        raise ValueError(f"{OWNERSHIP.relative_to(ROOT)} has invalid Roman ownership rows")
+    return result
+
+
 def ledger_entries(
     path: Path,
     allowed_confidence: str,
@@ -84,6 +103,7 @@ def ledger_entries(
     group_languages: dict[str, str],
     installed_locations: set[str],
     seen_locations: set[str],
+    excluded_locations: set[str] | None = None,
 ) -> list[dict[str, str]]:
     """Load an explicitly bounded non-capital toponym ledger."""
     required = ("location", "culture", "historical_name", "source", "confidence", "note")
@@ -103,6 +123,8 @@ def ledger_entries(
             continue
         location = value["location"]
         culture = value["culture"]
+        if excluded_locations and location in excluded_locations:
+            continue
         if location not in installed_locations:
             failures.append(f"{path.relative_to(ROOT)}:{number}: unknown installed location {location}")
             continue
@@ -186,14 +208,16 @@ def entries() -> list[dict[str, str]]:
             }
         )
         seen_locations.add(location)
+    roman = roman_locations()
     output.extend(ledger_entries(CURATED, "secure", "curated", "reviewed direct", culture_groups, group_languages, installed_locations, seen_locations))
-    output.extend(ledger_entries(QUALIFIED, "tier2", "qualified", "reviewed qualified", culture_groups, group_languages, installed_locations, seen_locations))
-    output.extend(ledger_entries(TIER2, "tier2", "tier2", "bounded Tier-2", culture_groups, group_languages, installed_locations, seen_locations))
-    output.extend(ledger_entries(TIER2_WIDE, "tier2", "tier2", "wide Tier-2", culture_groups, group_languages, installed_locations, seen_locations))
-    output.extend(ledger_entries(TIER2_REMOTE, "tier2", "tier2_remote", "remote Tier-2", culture_groups, group_languages, installed_locations, seen_locations))
-    output.extend(ledger_entries(TIER2_FAR, "tier2", "tier2_far", "far Tier-2", culture_groups, group_languages, installed_locations, seen_locations))
-    output.extend(ledger_entries(TIER2_ULTRA, "tier2", "tier2_ultra", "ultra-far Tier-2", culture_groups, group_languages, installed_locations, seen_locations))
-    output.extend(ledger_entries(TIER3, "tier3", "tier3", "retained-label Tier-3", culture_groups, group_languages, installed_locations, seen_locations))
+    output.extend(ledger_entries(ROMAN, "tier2", "roman_identity", "reviewed Roman identity", culture_groups, group_languages, installed_locations, seen_locations))
+    output.extend(ledger_entries(QUALIFIED, "tier2", "qualified", "reviewed qualified", culture_groups, group_languages, installed_locations, seen_locations, roman))
+    output.extend(ledger_entries(TIER2, "tier2", "tier2", "bounded Tier-2", culture_groups, group_languages, installed_locations, seen_locations, roman))
+    output.extend(ledger_entries(TIER2_WIDE, "tier2", "tier2", "wide Tier-2", culture_groups, group_languages, installed_locations, seen_locations, roman))
+    output.extend(ledger_entries(TIER2_REMOTE, "tier2", "tier2_remote", "remote Tier-2", culture_groups, group_languages, installed_locations, seen_locations, roman))
+    output.extend(ledger_entries(TIER2_FAR, "tier2", "tier2_far", "far Tier-2", culture_groups, group_languages, installed_locations, seen_locations, roman))
+    output.extend(ledger_entries(TIER2_ULTRA, "tier2", "tier2_ultra", "ultra-far Tier-2", culture_groups, group_languages, installed_locations, seen_locations, roman))
+    output.extend(ledger_entries(TIER3, "tier3", "tier3", "retained-label Tier-3", culture_groups, group_languages, installed_locations, seen_locations, roman))
     corrections = correction_locations()
     output = [entry for entry in output if entry["location"] not in corrections]
     if not output:
@@ -208,10 +232,12 @@ def root_entries(entries_: list[dict[str, str]]) -> list[tuple[str, str]]:
         if tuple(reader.fieldnames or ()) != required:
             raise ValueError(f"{TIER3_MAP.relative_to(ROOT)} must use header {','.join(required)}")
         corrections = correction_locations()
+        roman = roman_locations()
         roots = {
             row["location"].strip(): row["historical_name"].strip()
             for row in reader
             if row["location"].strip() not in corrections
+            and row["location"].strip() not in roman
         }
     if not roots or any(not location or not name for location, name in roots.items()):
         raise ValueError(f"{TIER3_MAP.relative_to(ROOT)} has blank root fallback data")
@@ -223,7 +249,7 @@ def root_entries(entries_: list[dict[str, str]]) -> list[tuple[str, str]]:
 def localization(entries_: list[dict[str, str]], roots: list[tuple[str, str]], language: str) -> str:
     lines = [
         f"l_{language}:",
-        " # Generated from M4 capital anchors plus direct, Tier-2, and explicit Tier-3 toponym ledgers; English is mirrored by design.",
+        " # Generated from reviewed direct and identity ledgers plus non-Roman fallback tiers; unsupported Roman fields retain vanilla localization.",
     ]
     for location, name in roots:
         lines.append(f" {location}: \"{esc(name)}\"")
@@ -287,12 +313,13 @@ def main() -> int:
     selected = entries()
     capitals = sum(entry["anchor_kind"] == "capital" for entry in selected)
     curated = sum(entry["anchor_kind"] == "curated" for entry in selected)
+    roman_identity = sum(entry["anchor_kind"] == "roman_identity" for entry in selected)
     tier2 = sum(entry["anchor_kind"] in {"qualified", "tier2", "tier2_remote", "tier2_far", "tier2_ultra"} for entry in selected)
     remote = sum(entry["anchor_kind"] == "tier2_remote" for entry in selected)
     far = sum(entry["anchor_kind"] == "tier2_far" for entry in selected)
     ultra = sum(entry["anchor_kind"] == "tier2_ultra" for entry in selected)
     tier3 = sum(entry["anchor_kind"] == "tier3" for entry in selected)
-    print(f"dynamic_names: PASS ({capitals} capital + {curated} curated + {tier2} Tier-2 ({remote} remote, {far} far, {ultra} ultra-far) + {tier3} Tier-3 anchors; {len(CLIENT_LANGUAGES)} mirrored localizations)")
+    print(f"dynamic_names: PASS ({capitals} capital + {curated} curated + {roman_identity} Roman identity + {tier2} non-Roman Tier-2 ({remote} remote, {far} far, {ultra} ultra-far) + {tier3} non-Roman Tier-3 anchors; {len(CLIENT_LANGUAGES)} mirrored localizations)")
     return 0
 
 

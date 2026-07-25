@@ -1,5 +1,4 @@
 # Pleiades AD 1 name-review queue
-
 `tools/pleiades_name_candidates.py` turns the checked local Pleiades snapshot
 and the installed map projection into a conservative review queue. Its 656
 rows are not a renaming import: map locations can represent a district, while
@@ -50,3 +49,18 @@ remaining populated AD 1 map field. It copies the installed label only as an
 explicit, culture-bound placeholder with `tier3` confidence and no historical
 identity claim; its companion root ledger covers all named map fields. Direct
 research always supersedes either fallback.
+
+## Roman identity review
+
+The Roman-realm pass does not promote queue rows by distance.
+`roman_location_name_selections.csv` is a separate reviewed ledger that requires
+an exact or explicitly documented modern identity, one unique Pleiades place,
+and one Pleiades name resource whose date range includes AD 1. Place-resource
+titles, nearest-point inference, duplicate use of one ancient settlement, and
+late or uncertain forms are rejected. Rejections are retained in
+`roman_location_name_exclusions.csv` rather than silently replaced.
+
+`tools/generate_m4_roman_names.py` validates and renders the reviewed ledger.
+`tools/generate_dynamic_names.py` then suppresses all generic proxy and
+synthetic layers for Roman-owned fields, leaving unsupported locations on EU5
+vanilla localization.
