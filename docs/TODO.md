@@ -245,7 +245,7 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     the older Indo-Greek `sagala`/West-African map-key collision is also repaired.
     Full validation passes 74/74 and paired smoke has zero mod-only lines.
 
-- [ ] Make Gallic culture/pop assignment genuinely granular.
+- [x] Make Gallic culture/pop assignment genuinely granular.
   - Audit actual culture on every Gallic pop/location, not only definitions and
     selector rows. Broad `antq_gallic` still appears in generated pops (for example
     Romorantin) despite the claimed detailed selector pass.
@@ -257,6 +257,12 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     names, and political ownership without assuming all four must be identical.
   - Acceptance: location-level Gaul ledger, aggregate totals, and culture-map
     captures with no unexplained broad blocks.
+  - Completed: the generated atlas now assigns 503 reviewed locations across 63
+    specific cultures and 15.512m people. All 175 generic base-pop assignments,
+    the obsolete `antq_gallic` definition, and its 0.001 compatibility pop are
+    gone. Twelve additional peoples and 35 province selectors close the remaining
+    broad blocks; the exact atlas validator, 75 checks, paired smoke, and fresh
+    culture-map/New Game probes pass with no culture diagnostics.
 
 - [ ] Verify and complete Galatian representation in AD 1 Anatolia.
   - Existing data has Tectosagian pops and Tolistobogii/Trocmi definitions; do not

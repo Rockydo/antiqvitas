@@ -39,7 +39,7 @@ def required_custom_presences() -> set[str]:
     return m4_cultures() - historical
 
 
-def existing_rows() -> list[str]:
+def existing_rows(*, allow_unknown: bool = False) -> list[str]:
     """Read the ledger without requiring its derived custom slice to be current."""
     with OUTPUT.open(encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(line for line in handle if not line.startswith("#"))
@@ -49,7 +49,7 @@ def existing_rows() -> list[str]:
     if not rows or any(not row for row in rows) or rows != sorted(set(rows)):
         raise ValueError(f"{OUTPUT.relative_to(ROOT)} must be non-empty, sorted, and unique")
     unknown = sorted(set(rows) - known_cultures())
-    if unknown:
+    if unknown and not allow_unknown:
         raise ValueError(f"{OUTPUT.relative_to(ROOT)} has unknown culture(s): {unknown[:8]}")
     return rows
 
@@ -71,7 +71,11 @@ def read() -> list[str]:
 def write() -> int:
     config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
     log = Path(str(config["user_dir"])) / "logs/error.log"
-    existing = set(existing_rows()) if OUTPUT.is_file() else set()
+    existing = (
+        set(existing_rows(allow_unknown=True)) & known_cultures()
+        if OUTPUT.is_file()
+        else set()
+    )
     live = (
         set(WARNING.findall(log.read_text(encoding="utf-8-sig", errors="replace")))
         if log.is_file()

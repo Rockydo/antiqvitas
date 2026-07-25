@@ -55,15 +55,6 @@ antq_macedonian = { # P10;CAH-XI; Hellenized Macedonian regional identity
 	}
 }
 
-antq_gallic = { # P10;CAH-XI; Transalpine Celtic continuum
-	language = antq_celtic_dialect
-	color = antq_culture_color_antq_gallic
-	tags = { european_gfx }
-	culture_groups = {
-		antq_celtic_group
-	}
-}
-
 antq_belgic = { # P10;CAH-XI; Northern Gallic-Belgic continuum
 	language = antq_celtic_dialect
 	color = antq_culture_color_antq_belgic
@@ -1678,6 +1669,114 @@ antq_cavaric = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Lower-Rhone Cavares regional
 antq_helvian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Rhone-side Helvii regional frame
 	language = antq_celtic_dialect
 	color = antq_culture_color_antq_helvian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_lemovician = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Lemovices regional frame around Limoges and the central-western uplands
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_lemovician
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_consorannian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Consoranni regional frame in the central Pyrenean foothills
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_consorannian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_gabalian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Gabali regional frame in the Gevaudan uplands
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_gabalian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_elisycean = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Elisyces regional frame around Narbo and the western Mediterranean littoral
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_elisycean
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_segusiavian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Segusiavi regional frame west and north of Lugdunum
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_segusiavian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_ambarrian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Ambarri regional frame between the Saone and upper Rhone
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_ambarrian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_turonian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Turones regional frame around the middle Loire
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_turonian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_atrebatian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Atrebates regional frame in inland Artois
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_atrebatian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_morinian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Morini regional frame on the Channel coast
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_morinian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_nervian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Nervii regional frame in the Sambre and Scheldt hinterland
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_nervian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_viromanduian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Viromandui regional frame around the upper Somme
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_viromanduian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_celtic_group
+	}
+}
+
+antq_ceutronian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Ceutrones regional frame in the Tarentaise and high Savoy valleys
+	language = antq_celtic_dialect
+	color = antq_culture_color_antq_ceutronian
 	tags = { european_gfx }
 	culture_groups = {
 		antq_celtic_group

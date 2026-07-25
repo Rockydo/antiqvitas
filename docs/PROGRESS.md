@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-25 - Granular AD 1 Gallic culture atlas
+
+- Replaced all 175 generated generic-Gallic base assignments with a 503-location,
+  63-culture atlas covering 15.512m people. Added twelve bounded peoples and 35
+  detailed province selectors; removed the obsolete generic definition and its
+  0.001 compatibility pop.
+- Added exact generated-pop/selector audits and a mandatory regression check.
+  Validation passes 75/75, paired smoke has zero mod-only lines, and the fresh
+  selector/culture-map probes have zero missing-pop or primary-culture errors.
+
 ## 2026-07-25 - AD 1 political-granularity expansion
 
 - Expanded the roster from 157 to 229 with 72 bounded Tier-3 frames across

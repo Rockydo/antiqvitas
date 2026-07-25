@@ -1,5 +1,14 @@
 # Historical Assumptions
 
+## 2026-07-25 - Gallic people labels are bounded campaign proxies
+
+The 63-culture atlas distinguishes attested peoples and defensible regional
+frames without treating ethnonyms as surveyed frontiers, homogeneous languages,
+or sovereign AD 1 states. Roman provincial ownership is not overwritten by the
+culture layer; area fallbacks are conservative only where evidence does not
+support a narrower selector. Sources: `STR-GAL`, `PLN-GAL`, `OCD-GAL`, `PLE`,
+`P10`, and `CAH-XI`. [contested boundaries and field shares]
+
 ## 2026-07-25 - Political-granularity frames do not imply later states
 
 Przeworsk and Zarubintsy are represented as archaeological horizons, not ethnic

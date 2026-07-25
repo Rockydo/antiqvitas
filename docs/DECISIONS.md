@@ -1,5 +1,14 @@
 # Technical and Design Decisions
 
+## 2026-07-25 - Gallic culture, ownership, and demography remain separate
+
+Political ownership, pop culture, and dynamic display names are independently
+generated ledgers. Specific province selectors override broad area fallbacks,
+while Roman ownership remains where historically required. The obsolete generic
+Gallic definition was removed rather than retained through an artificial 0.001
+pop. A France-plus-Belgic exact-output audit now rejects missing ancestry,
+unknown selectors, generic use, and aggregate drift.
+
 ## 2026-07-25 - Archaeological frames are Tier-3 starts, not invented states
 
 Where AD 1 evidence supports a material horizon or settlement network but no

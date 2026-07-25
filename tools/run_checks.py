@@ -108,6 +108,7 @@ VALIDATE_COMMANDS = (
     Command("tools/dates.py", ("--check-m2",)),
     Command("tools/popcheck.py"),
     Command("tools/population_audit.py", ("--check",)),
+    Command("tools/m4_gallic_atlas.py", ("--check",)),
 )
 
 SMOKE_COMMANDS = (Command("tools/smoketest.py"),)
