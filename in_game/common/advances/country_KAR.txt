@@ -24,7 +24,7 @@ mehmed_beys_firman = {
 
 	icon = islamic_calligraphy
 
-	allow = { court_language ?= language:turkish_language }
+	allow = { court_language ?= language:turkish_language  always = no} # M8 disables vanilla
 	requires = cultural_traditions_law_advance
 
 	cultural_influence_modifier = 0.1

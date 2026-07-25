@@ -217,6 +217,7 @@ pis_marble_tradition = {
 	}
 
 	allow = {
+		always = no # M8 disables vanilla advancement
 		OR = {
 			custom_tooltip = {
 				text = unlocked_advance_marble_tradition_tt

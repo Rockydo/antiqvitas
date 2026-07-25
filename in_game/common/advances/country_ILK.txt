@@ -41,6 +41,7 @@ ilk_new_roots = {	#They move away from being horde-like to a more reformed state
 	age = age_4_reformation
 	potential = { has_or_had_tag = ILK always = no} # M8 disables vanilla
 	allow = {
+		always = no # M8 disables vanilla advancement
 		NOT = { country_type = army }
 	}
 	requires = early_modern_administation

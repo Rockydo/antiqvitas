@@ -38,6 +38,7 @@ independence_from_mali = {
 		has_or_had_tag = SON
 	}
 	allow = {
+		always = no # M8 disables vanilla advancement
 		is_subject = no
 	}
 	global_defensive = 0.2

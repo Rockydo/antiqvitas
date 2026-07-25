@@ -142,6 +142,7 @@ kor_geobukseon = {
 		has_or_had_tag = KOR
 	}
 	allow = {
+		always = no # M8 disables vanilla advancement
 		has_advance = kor_early_turtle_ship_advance
 	}
 	naval_damage_taken = -0.10

@@ -70,6 +70,7 @@ bank_of_saint_george = {
 	}
 
 	allow = {
+		always = no # M8 disables vanilla advancement
 		OR = {
 			custom_tooltip = {
 				text = unlocked_advance_bank_of_saint_george_tt

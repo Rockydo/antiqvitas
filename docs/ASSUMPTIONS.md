@@ -4519,3 +4519,14 @@ no historical-name claim. They record a source gap and the deliberate decision
 to retain the installed field label until a secure AD 1 identity is established.
 Sources: Pleiades review ledgers and
 `docs/m4/roman_location_name_audit.csv`. [unresolved identity]
+
+## 2026-07-25 - Roman economy profiles are market-hinterland abstractions
+
+The 15 profiles model contrasting urban and provincial development choices, not
+complete inventories of excavated structures or quantified output at every map
+field. Rome receives the full portfolio as an exceptional fiscal-consumption and
+redistribution centre; thinner frontier profiles deliberately omit metropolitan
+layers. Individual placements and confidence remain row-sourced in
+`docs/m5/roman_economy_profiles.csv`. Sources: P12.1; P12.3; CAH-XI;
+MET-ROMAN-TRADE; regional Strabo/Pliny and archaeology references in that ledger.
+[bounded gameplay abstraction]

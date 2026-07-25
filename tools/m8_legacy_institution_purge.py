@@ -56,6 +56,7 @@ NAHUATL_GUARD = re.compile(
     re.MULTILINE,
 )
 DATE = re.compile(r"(?<![0-9])-?[0-9]{1,4}\.[0-9]{1,2}\.[0-9]{1,2}(?![0-9])")
+INSTITUTION_MARKET = re.compile(r"(?m)^(?P<indent>[ \t]+)market\s*=\s*\{")
 
 
 def sanitize_date(match: re.Match[str]) -> str:
@@ -101,6 +102,15 @@ def render(relative: str) -> bytes:
                 raise ValueError(f"{relative}: expected one Nahuatl Legalism effect guard, found {count}")
         text = neutralize_references(text, remap_effects=True)
         text = DATE.sub(sanitize_date, text)
+        if relative.endswith("/scripted_triggers/institution_triggers.txt"):
+            text, count = INSTITUTION_MARKET.subn(
+                r"\g<indent>market ?= {",
+                text,
+            )
+            if count != 1:
+                raise ValueError(
+                    f"{relative}: expected one optional market guard, found {count}"
+                )
     encoded = text.encode("utf-8")
     return (b"\xef\xbb\xbf" if bom else b"") + encoded
 

@@ -70,7 +70,7 @@ hurricane_hardy = {
 			has_or_had_tag = RUS
 		}
 	}
-	allow = { has_unlocked_advance_trigger = { type = hurricane_hardy } }
+	allow = { has_unlocked_advance_trigger = { type = hurricane_hardy }  always = no} # M8 disables vanilla
 	allow_children = no
 	naval_unit_attrition = -0.05
 }
@@ -84,7 +84,7 @@ preobrazhensky_semyonovsky_imperial_guard = {
 			has_or_had_tag = RUS
 		}
 	}
-	allow = { has_unlocked_advance_trigger = { type = preobrazhensky_semyonovsky_imperial_guard } }
+	allow = { has_unlocked_advance_trigger = { type = preobrazhensky_semyonovsky_imperial_guard }  always = no} # M8 disables vanilla
 	allow_children = no
 	global_crown_estate_power = 0.1
 	military_tactics = 0.1
@@ -107,7 +107,7 @@ imperatorskiy_moskovskiy_universitet = {
 		has_or_had_tag = RUS
 	}
 
-	allow = { has_unlocked_advance_trigger = { type = imperatorskiy_moskovskiy_universitet } }
+	allow = { has_unlocked_advance_trigger = { type = imperatorskiy_moskovskiy_universitet }  always = no} # M8 disables vanilla
 	allow_children = no
 	cultural_tradition_modifier = 0.1
 	global_max_literacy  = 5

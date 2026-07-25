@@ -1,0 +1,591 @@
+﻿irrigation_systems = {
+	audio_tier = 1
+	is_foreign = no
+	max_levels = irrigant_cap
+	pop_type = peasants
+
+	category = infrastructure_category
+	employment_size = generic_peasant_building_employment
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	forbidden_for_estates = yes
+
+	location_potential = {
+		OR = {
+			has_river = yes
+			is_adjacent_to_lake = yes
+		}
+	}
+
+	build_time = infrastructure_build_time
+
+	unique_production_methods = {
+		irrigation_maintenance = {
+			tools = 0.1
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = village_construction
+
+	modifier = {
+		local_population_capacity = 1.0
+		local_monthly_food_modifier = 0.05
+	}
+}
+
+bridge_infrastructure = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
+	audio_tier = 1
+	is_foreign = no
+	pop_type = laborers
+	max_levels = 1
+	forbidden_for_estates = yes
+
+	employment_size = generic_peasant_building_employment
+
+	category = infrastructure_category
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	build_time = infrastructure_build_time
+
+
+	modifier = {
+		local_distance_from_capital_speed_propagation = 0.1
+		movement_cost = -0.1
+	}
+
+	possible_production_methods = {
+		bridge_maintenance
+	}
+
+	construction_demand = bridge_construction
+}
+
+pound_lock_canal_infrastructure = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
+	audio_tier = 2
+	is_foreign = no
+	pop_type = laborers
+	max_levels = 1
+	forbidden_for_estates = yes
+
+	employment_size = generic_peasant_building_employment
+
+	category = infrastructure_category
+
+	city = yes
+	megalopolis = yes
+
+	build_time = infrastructure_build_time
+
+
+	modifier = {
+		local_distance_from_capital_speed_propagation = 0.1
+		local_monthly_food_modifier = 0.05
+	}
+
+	possible_production_methods = {
+		pound_lock_canal_infrastructure_maintenance
+	}
+
+	construction_demand = pound_lock_canal_infrastructure_construction
+}
+
+mason = {
+	audio_tier = 1
+	is_foreign = no
+	max_levels = guild_max_level
+	startup_ramp_target = rural_startup_ramp_target
+	pop_type = laborers
+
+
+	category = basic_industry_category
+	employment_size = advanced_peasant_building_employment
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	build_time = guild_build_time
+
+	unique_production_methods = {
+		stone_bricks = {
+			stone = 0.417
+			produced = masonry
+			output = 0.5
+			debug_max_profit = rural_profit_margin
+			category = guild_input
+		}
+		clay_bricks = {
+			clay = 0.833
+			produced = masonry
+			output = 0.5
+			debug_max_profit = rural_profit_margin
+			category = guild_input
+		}
+
+	}
+
+	construction_demand = basic_construction_needs
+}
+
+mercury_patio = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
+	audio_tier = 3
+	is_foreign = no
+	max_levels = mercury_patio_max_level
+	pop_type = laborers
+
+	category = rgo_building_category
+	employment_size = advanced_peasant_building_employment
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+
+	build_time = guild_build_time
+
+	unique_production_methods = {
+		mercury_patio_maintenance = {
+			mercury = 1.0
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = mercury_patio_construction
+
+	modifier = {
+		local_goods_gold_output_modifier = 1.0
+		local_silver_output_modifier = 1.0
+	}
+}
+
+tar_kiln = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
+	audio_tier = 1
+	is_foreign = no
+	pop_type = laborers
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+
+	employment_size = tiny_rural_peasant_produce_employment
+
+	category = basic_industry_category
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+
+	unique_production_methods = {
+		tar_kiln_maintenance = {
+			produced = tar
+			output = 1.0
+			lumber = 1.1111
+			category = guild_input
+
+			debug_max_profit = rural_profit_margin
+		}
+	}
+
+	build_time = rural_build_time
+
+	construction_demand = guild_construction
+}
+
+horse_breeders = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
+	audio_tier = 1
+	is_foreign = no
+	pop_type = laborers
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+
+	employment_size = rural_peasant_produce_employment
+
+	category = rgo_building_category
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+
+
+	unique_production_methods = {
+
+		horse_breeders_maintenance = {
+			produced = horses
+			output = 1
+			wheat = 1.563
+			horses = 0.313
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+
+	build_time = rural_build_time
+
+	construction_demand = horse_breeders_construction
+}
+
+stone_quarry = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
+	audio_tier = 1
+	is_foreign = no
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+	pop_type = laborers
+
+	employment_size = rural_peasant_produce_employment
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+
+	category = rgo_building_category
+
+	unique_production_methods = {
+
+		stone_quarry_maintenance = {
+			tools = 0.107
+			lumber = 0.127
+			leather = 0.107
+
+			produced = stone
+			output = 1
+
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+
+		crude_quarry_maintenance = {
+			lumber = 0.278
+
+			produced = stone
+			output = 0.5
+
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+
+	build_time = rural_build_time
+
+	construction_demand = basic_construction_needs
+}
+
+lumber_mill = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
+	audio_tier = 1
+	is_foreign = no
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+	pop_type = laborers
+
+	employment_size = rural_peasant_produce_employment
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+
+
+	category = rgo_building_category
+
+	build_time = rural_build_time
+
+	unique_production_methods = {
+		lumber_mill_maintenance = {
+			produced = lumber
+			output = 1
+
+			tools = 0.417
+
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = basic_construction_needs
+}
+
+fiber_crops_farm = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
+	audio_tier = 1
+	is_foreign = no
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+	pop_type = laborers
+
+	employment_size = rural_peasant_produce_employment
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+
+	category = rgo_building_category
+
+	build_time = rural_build_time
+
+	unique_production_methods = {
+		fiber_crops_farm_maintenance = {
+			livestock = 0.494
+			lumber = 0.198
+			tools = 0.099
+			category = building_maintenance
+
+			produced = fiber_crops
+			output = 0.8
+
+			debug_max_profit = rural_profit_margin
+		}
+	}
+
+	construction_demand = farm_constructions
+}
+
+sand_pit = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
+	audio_tier = 1
+	is_foreign = no
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+	pop_type = laborers
+
+	employment_size = rural_peasant_produce_employment
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+
+	category = rgo_building_category
+
+	build_time = rural_build_time
+
+	unique_production_methods = {
+		sand_pit_maintenance = {
+			tools = 0.058
+			lumber = 0.161
+			category = building_maintenance
+
+			produced = sand
+			output = 1
+
+			debug_max_profit = rural_profit_margin
+		}
+	}
+
+	construction_demand = basic_construction_needs
+}
+
+bog_iron_smelter = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
+	audio_tier = 1
+	is_foreign = no
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+	pop_type = laborers
+
+	employment_size = rural_peasant_produce_employment
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+
+
+	category = rgo_building_category
+
+	unique_production_methods = {
+		bog_iron_maintenance = {
+			produced = iron
+			output = 0.3
+			coal = 0.375
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+
+	build_time = rural_build_time
+	construction_demand = basic_construction_needs
+}
+
+clay_pit = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
+	audio_tier = 1
+	is_foreign = no
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+	pop_type = laborers
+
+	employment_size = rural_peasant_produce_employment
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+
+	category = rgo_building_category
+
+	unique_production_methods = {
+		clay_pit_maintenance = {
+			produced = clay
+			output = 1
+			lumber = 0.2778
+			category = building_maintenance
+			debug_max_profit = rural_profit_margin
+		}
+	}
+
+	build_time = rural_build_time
+	construction_demand = basic_construction_needs
+
+}
+
+salt_collector = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
+	audio_tier = 1
+	is_foreign = no
+	pop_type = laborers
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+
+	employment_size = rural_peasant_produce_employment
+
+	category = rgo_building_category
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+
+	unique_production_methods = {
+
+		salt_collector_maintenance = {
+			produced = salt
+			output = 0.3
+
+			clay = 2.0
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+
+	modifier = {
+	}
+
+	build_time = rural_build_time
+
+	construction_demand = farm_constructions
+}
+
+fruit_orchard = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
+	audio_tier = 1
+	is_foreign = no
+	pop_type = laborers
+	max_levels = rural_building_cap
+	startup_ramp_target = rural_startup_ramp_target
+
+	employment_size = rural_peasant_produce_employment
+
+	category = rgo_building_category
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+
+	unique_production_methods = {
+
+		fruit_orchard_maintenance = {
+			produced = fruit
+			output = 0.3
+
+			lumber = 0.167
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+
+	build_time = rural_build_time
+
+	construction_demand = farm_constructions
+}

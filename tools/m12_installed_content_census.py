@@ -42,15 +42,14 @@ POLICY = {
     "institutions": "exact_disabled_legacy",
     "advances": "exact_disabled_legacy",
     "units": "exact_hidden_legacy",
-    "buildings": "known_visible_building_debt",
+    "buildings": "exact_hidden_legacy",
     "government_types": "engine_adapter_pending_presentation",
     "country_ranks": "engine_adapter_period_presentation_complete",
     "location_ranks": "engine_adapter_pending_presentation",
     "pop_types": "engine_adapter_ancient_presentation_complete",
 }
-EXACT_REQUIRED = {"ages", "institutions", "advances", "units"}
+EXACT_REQUIRED = {"ages", "institutions", "advances", "units", "buildings"}
 VISIBLE_DEBT = {
-    "buildings",
     "government_types",
     "location_ranks",
 }
@@ -149,6 +148,20 @@ def source_record(surface: str, relative: str, source: Path) -> dict[str, object
         expected_markers = len(set(definitions) - adapters)
         if (
             mounted_text.count("ANTIQVITAS installed-unit quarantine")
+            != expected_markers
+        ):
+            status = "uncovered"
+    if surface == "buildings" and mirrored and definitions:
+        mounted_text = mod.read_text(encoding="utf-8-sig")
+        building_manifest = json.loads(
+            (ROOT / "docs/m5/building_quarantine_manifest.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        adapters = set(building_manifest["engine_adapter_definitions"])
+        expected_markers = len(set(definitions) - adapters)
+        if (
+            mounted_text.count("ANTIQVITAS installed-building quarantine")
             != expected_markers
         ):
             status = "uncovered"

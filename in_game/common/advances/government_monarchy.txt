@@ -68,6 +68,7 @@ aristocracy = {
 
 	
 	allow = {
+		always = no # M8 disables vanilla advancement
 		any_market_present_in_country = { 
 			OR = {
 				is_produced_in_market = goods:tools 

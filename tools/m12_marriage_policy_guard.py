@@ -14,6 +14,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 
 from legacy_institutions import neutralize_references
@@ -33,6 +34,7 @@ PATCH_TO = """\t\t\t\tis_country_religion_pagan = yes
 \t\t\t\treligion.group = religion_group:zoroastrian_group
 \t\t\t\treligion.group = religion_group:manichaean_group
 """
+UNSAFE_MARKET = re.compile(r"(?m)(\bcapital\.market)\s*=\s*\{")
 
 
 def source_path() -> Path:
@@ -56,7 +58,14 @@ def render() -> bytes:
         f"# Installed 01_common.txt SHA256: {digest}\n"
         "# Extends availability only for native AD 1 Buddhist/Dharmic/Iranian mechanics groups.\n"
     )
-    return neutralize_references(header + patched, remap_effects=False).encode("utf-8-sig")
+    patched = neutralize_references(header + patched, remap_effects=False)
+    patched, market_count = UNSAFE_MARKET.subn(r"\1 ?= {", patched)
+    if market_count != 6:
+        raise ValueError(
+            "installed 01_common.txt market-link drift: "
+            f"expected six capital guards, found {market_count}"
+        )
+    return patched.encode("utf-8-sig")
 
 
 def main() -> int:

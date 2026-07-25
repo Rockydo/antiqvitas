@@ -3,7 +3,7 @@
 sakya_hegemony = {
 	age = age_1_traditions
 	potential = { has_or_had_tag = TIB  always = no} # M8 disables vanilla
-	allow = { religion = religion:tibetan_buddhism }
+	allow = { religion = religion:tibetan_buddhism  always = no} # M8 disables vanilla
 	requires = codified_laws
 
 	icon = buddhist_meditation

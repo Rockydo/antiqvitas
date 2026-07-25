@@ -19,11 +19,14 @@ antq_reg_olive_press = {
 	}
 	unique_production_methods = {
 		antq_reg_olive_press_maintenance = {
-			olives = 0.16
-			pottery = 0.05
-			tools = 0.04
-			lumber = 0.03
-			category = building_maintenance
+			olives = 1.20
+			pottery = 0.12
+			tools = 0.05
+			lumber = 0.08
+			produced = antq_olive_oil
+			output = 0.76
+			debug_max_profit = guild_profit_margin
+			category = guild_input
 		}
 	}
 	custom_tags = { guild }
@@ -79,12 +82,14 @@ antq_reg_fish_saltery = {
 	}
 	unique_production_methods = {
 		antq_reg_fish_saltery_maintenance = {
-			fish = 0.18
-			salt = 0.16
-			pottery = 0.06
-			lumber = 0.03
-			tools = 0.03
-			category = building_maintenance
+			fish = 1.20
+			salt = 0.12
+			pottery = 0.10
+			tools = 0.05
+			produced = antq_preserved_fish
+			output = 0.77
+			debug_max_profit = guild_profit_margin
+			category = guild_input
 		}
 	}
 	custom_tags = { guild }
@@ -200,9 +205,11 @@ antq_reg_dye_workshop = {
 	}
 	unique_production_methods = {
 		antq_reg_dye_workshop_maintenance = {
-			lumber = 0.4444
-			produced = dyes
-			output = 0.2
+			cloth = 0.50
+			dyes = 0.20
+			tools = 0.05
+			produced = fine_cloth
+			output = 0.49
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -283,6 +290,12 @@ antq_reg_shipyard = {
 	city = yes
 	megalopolis = yes
 	build_time = medium_port_building_time
+	location_potential = {
+		OR = {
+			is_coastal = yes
+			has_river = yes
+		}
+	}
 	modifier = {
 		local_sailors = 0.008
 		local_repair_speed = 0.008
@@ -321,9 +334,9 @@ antq_reg_silk_loom = {
 	}
 	unique_production_methods = {
 		antq_reg_silk_loom_maintenance = {
-			fiber_crops = 1.0
-			produced = silk
-			output = 0.6
+			silk = 0.875
+			produced = fine_cloth
+			output = 0.70
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -350,11 +363,11 @@ antq_reg_scriptorium = {
 	}
 	unique_production_methods = {
 		antq_reg_scriptorium_maintenance = {
-			dyes = 0.0503
-			paper = 0.1995
-			lumber = 0.0998
+			antq_papyrus = 0.40
+			dyes = 0.05
+			lumber = 0.10
 			produced = books
-			output = 0.3
+			output = 0.78
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -410,11 +423,12 @@ antq_reg_weapon_smith = {
 	}
 	unique_production_methods = {
 		antq_reg_weapon_smith_maintenance = {
-			lumber = 0.2521
-			coal = 0.3034
-			tools = 0.505
+			iron = 0.60
+			lumber = 0.20
+			coal = 0.20
+			tools = 0.05
 			produced = weaponry
-			output = 1
+			output = 1.06
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -499,10 +513,11 @@ antq_reg_alum_dyehouse = {
 	}
 	unique_production_methods = {
 		antq_reg_alum_dyehouse_maintenance = {
-			alum = 0.021
-			lumber = 0.6247
-			produced = dyes
-			output = 0.3
+			cloth = 0.50
+			dyes = 0.20
+			tools = 0.05
+			produced = fine_cloth
+			output = 0.49
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -560,10 +575,12 @@ antq_reg_bronze_foundry = {
 	}
 	unique_production_methods = {
 		antq_reg_bronze_foundry_maintenance = {
-			copper = 0.475
-			tin = 0.038
-			produced = tools
-			output = 0.6
+			copper = 0.70
+			tin = 0.15
+			coal = 0.15
+			tools = 0.05
+			produced = antq_bronze_wares
+			output = 0.86
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -679,9 +696,13 @@ antq_reg_grain_mill = {
 	}
 	unique_production_methods = {
 		antq_reg_grain_mill_maintenance = {
-			wheat = 0.14
-			tools = 0.03
-			category = building_maintenance
+			wheat = 1.00
+			lumber = 0.15
+			tools = 0.05
+			produced = antq_grain_products
+			output = 1.10
+			debug_max_profit = guild_profit_margin
+			category = guild_input
 		}
 	}
 	custom_tags = { guild }
@@ -738,11 +759,9 @@ antq_reg_brickworks = {
 	}
 	unique_production_methods = {
 		antq_reg_brickworks_maintenance = {
-			clay = 1.0039
-			lumber = 0.1201
-			tools = 0.0504
-			produced = pottery
-			output = 1.0
+			clay = 1.60
+			produced = masonry
+			output = 0.96
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -831,11 +850,11 @@ antq_reg_papyrus_workshop = {
 	}
 	unique_production_methods = {
 		antq_reg_papyrus_workshop_maintenance = {
-			dyes = 0.0503
-			paper = 0.1995
-			lumber = 0.0998
+			antq_papyrus = 0.40
+			dyes = 0.05
+			lumber = 0.10
 			produced = books
-			output = 0.3
+			output = 0.78
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -862,9 +881,12 @@ antq_reg_incense_workshop = {
 	}
 	unique_production_methods = {
 		antq_reg_incense_workshop_maintenance = {
-			lumber = 0.4444
-			produced = dyes
-			output = 0.2
+			incense = 0.80
+			olives = 0.20
+			pottery = 0.10
+			tools = 0.10
+			produced = antq_perfumes
+			output = 0.52
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -951,10 +973,12 @@ antq_reg_copper_smithy = {
 	}
 	unique_production_methods = {
 		antq_reg_copper_smithy_maintenance = {
-			copper = 0.475
-			tin = 0.038
-			produced = tools
-			output = 0.6
+			copper = 0.70
+			tin = 0.15
+			coal = 0.15
+			tools = 0.05
+			produced = antq_bronze_wares
+			output = 0.86
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -1005,6 +1029,12 @@ antq_reg_reed_boatyard = {
 	city = yes
 	megalopolis = yes
 	build_time = medium_port_building_time
+	location_potential = {
+		OR = {
+			is_coastal = yes
+			has_river = yes
+		}
+	}
 	modifier = {
 		local_sailors = 0.005
 		local_repair_speed = 0.005
@@ -1043,11 +1073,12 @@ antq_reg_oil_bottler = {
 	}
 	unique_production_methods = {
 		antq_reg_oil_bottler_maintenance = {
-			fruit = 1.154
-			lumber = 0.157
-			tools = 0.092
-			produced = wine
-			output = 1
+			olives = 1.20
+			pottery = 0.12
+			tools = 0.05
+			lumber = 0.08
+			produced = antq_olive_oil
+			output = 0.76
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -1074,9 +1105,12 @@ antq_reg_garum_workshop = {
 	}
 	unique_production_methods = {
 		antq_reg_garum_workshop_maintenance = {
-			lumber = 0.4444
-			produced = dyes
-			output = 0.2
+			fish = 1.20
+			salt = 0.12
+			pottery = 0.10
+			tools = 0.05
+			produced = antq_preserved_fish
+			output = 0.77
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -1103,11 +1137,11 @@ antq_reg_lime_kiln = {
 	}
 	unique_production_methods = {
 		antq_reg_lime_kiln_maintenance = {
-			clay = 1.0039
-			lumber = 0.1201
-			tools = 0.0504
-			produced = pottery
-			output = 1.0
+			stone = 0.70
+			lumber = 0.20
+			tools = 0.05
+			produced = masonry
+			output = 1.38
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -1134,9 +1168,11 @@ antq_reg_marble_yard = {
 	}
 	unique_production_methods = {
 		antq_reg_marble_yard_maintenance = {
-			iron = 0.8333
-			produced = tools
-			output = 1
+			marble = 0.80
+			stone = 0.50
+			tools = 0.15
+			produced = masonry
+			output = 5.94
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -1192,10 +1228,11 @@ antq_reg_mordant_dyehouse = {
 	}
 	unique_production_methods = {
 		antq_reg_mordant_dyehouse_maintenance = {
-			alum = 0.021
-			lumber = 0.6247
-			produced = dyes
-			output = 0.3
+			cloth = 0.50
+			dyes = 0.20
+			tools = 0.05
+			produced = fine_cloth
+			output = 0.49
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -1222,11 +1259,12 @@ antq_reg_scale_armoury = {
 	}
 	unique_production_methods = {
 		antq_reg_scale_armoury_maintenance = {
-			lumber = 0.2521
-			coal = 0.3034
-			tools = 0.505
+			iron = 0.50
+			copper = 0.15
+			leather = 0.20
+			tools = 0.05
 			produced = weaponry
-			output = 1
+			output = 1.08
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -1311,9 +1349,11 @@ antq_reg_beadworks = {
 	}
 	unique_production_methods = {
 		antq_reg_beadworks_maintenance = {
-			ivory = 0.1042
+			glass = 0.80
+			dyes = 0.30
+			tools = 0.30
 			produced = jewelry
-			output = 0.1
+			output = 1.08
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -1364,6 +1404,12 @@ antq_reg_bargeyard = {
 	city = yes
 	megalopolis = yes
 	build_time = medium_port_building_time
+	location_potential = {
+		OR = {
+			is_coastal = yes
+			has_river = yes
+		}
+	}
 	modifier = {
 		local_sailors = 0.005
 		local_repair_speed = 0.005
@@ -1465,9 +1511,11 @@ antq_reg_mosaic_workshop = {
 	}
 	unique_production_methods = {
 		antq_reg_mosaic_workshop_maintenance = {
-			iron = 0.8333
-			produced = tools
-			output = 1
+			stone = 0.80
+			glass = 0.50
+			tools = 0.20
+			produced = masonry
+			output = 3.48
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -1494,11 +1542,12 @@ antq_reg_stuccoworks = {
 	}
 	unique_production_methods = {
 		antq_reg_stuccoworks_maintenance = {
-			clay = 1.0039
-			lumber = 0.1201
-			tools = 0.0504
-			produced = pottery
-			output = 1.0
+			stone = 0.60
+			clay = 0.60
+			lumber = 0.20
+			tools = 0.10
+			produced = masonry
+			output = 1.80
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -1525,9 +1574,11 @@ antq_reg_lead_foundry = {
 	}
 	unique_production_methods = {
 		antq_reg_lead_foundry_maintenance = {
-			iron = 0.8333
-			produced = tools
-			output = 1
+			lead = 0.80
+			coal = 0.15
+			tools = 0.10
+			produced = antq_lead_wares
+			output = 0.88
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -1583,10 +1634,14 @@ antq_reg_perfumery = {
 	}
 	unique_production_methods = {
 		antq_reg_perfumery_maintenance = {
-			incense = 0.08
-			olives = 0.05
-			pottery = 0.04
-			category = building_maintenance
+			incense = 0.80
+			olives = 0.20
+			pottery = 0.10
+			tools = 0.10
+			produced = antq_perfumes
+			output = 0.52
+			debug_max_profit = guild_profit_margin
+			category = guild_input
 		}
 	}
 	custom_tags = { guild }
@@ -1611,10 +1666,14 @@ antq_reg_wax_workshop = {
 	}
 	unique_production_methods = {
 		antq_reg_wax_workshop_maintenance = {
-			beeswax = 0.10
-			pottery = 0.05
-			fiber_crops = 0.03
-			category = building_maintenance
+			beeswax = 0.80
+			fiber_crops = 0.20
+			pottery = 0.10
+			tools = 0.10
+			produced = antq_wax_goods
+			output = 0.82
+			debug_max_profit = guild_profit_margin
+			category = guild_input
 		}
 	}
 	custom_tags = { guild }
@@ -1634,6 +1693,12 @@ antq_reg_sailmaker = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	location_potential = {
+		OR = {
+			is_coastal = yes
+			has_river = yes
+		}
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -1671,11 +1736,11 @@ antq_reg_brewhouse = {
 	}
 	unique_production_methods = {
 		antq_reg_brewhouse_maintenance = {
-			fruit = 1.154
-			lumber = 0.157
-			tools = 0.092
-			produced = wine
-			output = 1
+			wheat = 0.9944
+			lumber = 0.2484
+			tools = 0.0999
+			produced = beer
+			output = 1.00
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -1702,9 +1767,11 @@ antq_reg_quernworks = {
 	}
 	unique_production_methods = {
 		antq_reg_quernworks_maintenance = {
-			iron = 0.8333
-			produced = tools
-			output = 1
+			stone = 1.20
+			iron = 0.05
+			tools = 0.05
+			produced = masonry
+			output = 1.80
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -1731,10 +1798,11 @@ antq_reg_textile_dye_finisher = {
 	}
 	unique_production_methods = {
 		antq_reg_textile_dye_finisher_maintenance = {
-			alum = 0.021
-			lumber = 0.6247
-			produced = dyes
-			output = 0.3
+			cloth = 0.50
+			dyes = 0.20
+			tools = 0.05
+			produced = fine_cloth
+			output = 0.49
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -1851,11 +1919,11 @@ antq_reg_bread_oven = {
 	}
 	unique_production_methods = {
 		antq_reg_bread_oven_maintenance = {
-			fruit = 1.154
-			lumber = 0.157
-			tools = 0.092
-			produced = wine
-			output = 1
+			wheat = 1.00
+			lumber = 0.15
+			tools = 0.05
+			produced = antq_grain_products
+			output = 1.10
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -1971,11 +2039,11 @@ antq_reg_stationer = {
 	}
 	unique_production_methods = {
 		antq_reg_stationer_maintenance = {
-			dyes = 0.0503
-			paper = 0.1995
-			lumber = 0.0998
+			antq_papyrus = 0.40
+			dyes = 0.05
+			lumber = 0.10
 			produced = books
-			output = 0.3
+			output = 0.78
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -2002,10 +2070,12 @@ antq_reg_weightmaker = {
 	}
 	unique_production_methods = {
 		antq_reg_weightmaker_maintenance = {
-			copper = 0.475
-			tin = 0.038
-			produced = tools
-			output = 0.6
+			copper = 0.70
+			tin = 0.15
+			coal = 0.15
+			tools = 0.05
+			produced = antq_bronze_wares
+			output = 0.86
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -2058,6 +2128,12 @@ antq_reg_ferry_quay = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	location_potential = {
+		OR = {
+			is_coastal = yes
+			has_river = yes
+		}
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -2152,9 +2228,11 @@ antq_reg_purple_dyehouse = {
 	}
 	unique_production_methods = {
 		antq_reg_purple_dyehouse_maintenance = {
-			lumber = 0.4444
-			produced = dyes
-			output = 0.2
+			cloth = 0.50
+			dyes = 0.20
+			tools = 0.05
+			produced = fine_cloth
+			output = 0.49
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -2210,10 +2288,12 @@ antq_reg_tin_smelter = {
 	}
 	unique_production_methods = {
 		antq_reg_tin_smelter_maintenance = {
-			copper = 0.475
-			tin = 0.038
-			produced = tools
-			output = 0.6
+			copper = 0.70
+			tin = 0.15
+			coal = 0.15
+			tools = 0.05
+			produced = antq_bronze_wares
+			output = 0.86
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -2240,9 +2320,12 @@ antq_reg_charcoal_hearth = {
 	}
 	unique_production_methods = {
 		antq_reg_charcoal_hearth_maintenance = {
-			lumber = 0.18
-			tools = 0.03
-			category = building_maintenance
+			lumber = 0.90
+			tools = 0.10
+			produced = coal
+			output = 0.99
+			debug_max_profit = guild_profit_margin
+			category = guild_input
 		}
 	}
 	custom_tags = { guild }
@@ -2394,9 +2477,11 @@ antq_reg_stone_carver = {
 	}
 	unique_production_methods = {
 		antq_reg_stone_carver_maintenance = {
-			iron = 0.8333
-			produced = tools
-			output = 1
+			stone = 1.20
+			marble = 0.10
+			tools = 0.10
+			produced = masonry
+			output = 2.40
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -2483,11 +2568,11 @@ antq_reg_honey_house = {
 	}
 	unique_production_methods = {
 		antq_reg_honey_house_maintenance = {
-			fruit = 1.154
-			lumber = 0.157
-			tools = 0.092
-			produced = wine
-			output = 1
+			fruit = 1.0412
+			lumber = 0.208
+			tools = 0.1045
+			produced = beer
+			output = 1.00
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -2514,9 +2599,12 @@ antq_reg_soapworks = {
 	}
 	unique_production_methods = {
 		antq_reg_soapworks_maintenance = {
-			lumber = 0.4444
-			produced = dyes
-			output = 0.2
+			olives = 0.70
+			lumber = 0.25
+			pottery = 0.10
+			tools = 0.05
+			produced = antq_soap
+			output = 0.80
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -2572,9 +2660,10 @@ antq_reg_bone_carver = {
 	}
 	unique_production_methods = {
 		antq_reg_bone_carver_maintenance = {
-			ivory = 0.1042
+			livestock = 0.80
+			tools = 0.15
 			produced = jewelry
-			output = 0.1
+			output = 0.396
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -2601,9 +2690,10 @@ antq_reg_hornworker = {
 	}
 	unique_production_methods = {
 		antq_reg_hornworker_maintenance = {
-			ivory = 0.1042
+			livestock = 0.80
+			tools = 0.15
 			produced = jewelry
-			output = 0.1
+			output = 0.396
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -2688,14 +2778,11 @@ antq_reg_sponge_drying_yard = {
 	}
 	unique_production_methods = {
 		antq_reg_sponge_drying_yard_maintenance = {
-			lumber = 0.1963
-			fiber_crops = 0.4906
-			tar = 0.5393
-			cloth = 0.0486
-			produced = naval_supplies
-			output = 1
-			debug_max_profit = guild_profit_margin
-			category = guild_input
+			fish = 0.06
+			fiber_crops = 0.06
+			lumber = 0.04
+			tools = 0.02
+			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
@@ -3010,6 +3097,12 @@ antq_reg_wharf_crane = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	location_potential = {
+		OR = {
+			is_coastal = yes
+			has_river = yes
+		}
+	}
 	modifier = {
 		local_merchant_capacity = 0.015
 	}
@@ -3218,10 +3311,12 @@ antq_reg_bronze_vessel_shop = {
 	}
 	unique_production_methods = {
 		antq_reg_bronze_vessel_shop_maintenance = {
-			copper = 0.475
-			tin = 0.038
-			produced = tools
-			output = 0.6
+			copper = 0.70
+			tin = 0.15
+			coal = 0.15
+			tools = 0.05
+			produced = antq_bronze_wares
+			output = 0.86
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -3310,11 +3405,11 @@ antq_reg_scroll_workshop = {
 	}
 	unique_production_methods = {
 		antq_reg_scroll_workshop_maintenance = {
-			dyes = 0.0503
-			paper = 0.1995
-			lumber = 0.0998
+			antq_papyrus = 0.40
+			dyes = 0.05
+			lumber = 0.10
 			produced = books
-			output = 0.3
+			output = 0.78
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -3370,11 +3465,11 @@ antq_reg_arrow_fletchery = {
 	}
 	unique_production_methods = {
 		antq_reg_arrow_fletchery_maintenance = {
-			lumber = 0.2521
-			coal = 0.3034
-			tools = 0.505
+			lumber = 0.60
+			iron = 0.35
+			tools = 0.35
 			produced = weaponry
-			output = 1
+			output = 1.20
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -3493,10 +3588,12 @@ antq_reg_cauldron_smithy = {
 	}
 	unique_production_methods = {
 		antq_reg_cauldron_smithy_maintenance = {
-			copper = 0.475
-			tin = 0.038
-			produced = tools
-			output = 0.6
+			copper = 0.70
+			tin = 0.15
+			coal = 0.15
+			tools = 0.05
+			produced = antq_bronze_wares
+			output = 0.86
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -3518,6 +3615,12 @@ antq_reg_barge_chandlery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	location_potential = {
+		OR = {
+			is_coastal = yes
+			has_river = yes
+		}
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -3584,10 +3687,12 @@ antq_reg_bell_foundry = {
 	}
 	unique_production_methods = {
 		antq_reg_bell_foundry_maintenance = {
-			copper = 0.475
-			tin = 0.038
-			produced = tools
-			output = 0.6
+			copper = 0.70
+			tin = 0.15
+			coal = 0.15
+			tools = 0.05
+			produced = antq_bronze_wares
+			output = 0.86
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -3609,6 +3714,12 @@ antq_reg_oarwright = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	location_potential = {
+		OR = {
+			is_coastal = yes
+			has_river = yes
+		}
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -3675,11 +3786,12 @@ antq_reg_torchmaker = {
 	}
 	unique_production_methods = {
 		antq_reg_torchmaker_maintenance = {
-			lumber = 0.9817
-			dyes = 0.1468
-			tools = 0.1468
-			produced = furniture
-			output = 1
+			beeswax = 0.80
+			fiber_crops = 0.20
+			pottery = 0.10
+			tools = 0.10
+			produced = antq_wax_goods
+			output = 0.82
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -3737,9 +3849,11 @@ antq_reg_mortar_grinder = {
 	}
 	unique_production_methods = {
 		antq_reg_mortar_grinder_maintenance = {
-			iron = 0.8333
-			produced = tools
-			output = 1
+			stone = 1.20
+			iron = 0.05
+			tools = 0.05
+			produced = masonry
+			output = 1.80
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -3826,11 +3940,11 @@ antq_reg_reed_pen_maker = {
 	}
 	unique_production_methods = {
 		antq_reg_reed_pen_maker_maintenance = {
-			dyes = 0.0503
-			paper = 0.1995
-			lumber = 0.0998
+			antq_papyrus = 0.40
+			dyes = 0.05
+			lumber = 0.10
 			produced = books
-			output = 0.3
+			output = 0.78
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -3852,6 +3966,12 @@ antq_reg_sail_needle_shop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	location_potential = {
+		OR = {
+			is_coastal = yes
+			has_river = yes
+		}
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -3884,6 +4004,12 @@ antq_reg_pulley_workshop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	location_potential = {
+		OR = {
+			is_coastal = yes
+			has_river = yes
+		}
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -4039,11 +4165,12 @@ antq_reg_shieldmaker = {
 	}
 	unique_production_methods = {
 		antq_reg_shieldmaker_maintenance = {
-			lumber = 0.2521
-			coal = 0.3034
-			tools = 0.505
+			lumber = 0.50
+			leather = 0.35
+			iron = 0.20
+			tools = 0.20
 			produced = weaponry
-			output = 1
+			output = 1.20
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -4259,6 +4386,938 @@ antq_reg_tesserae_kiln = {
 			tools = 0.3674
 			produced = glass
 			output = 0.75
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_villa_rustica = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = laborers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = basic_industry_category
+	employment_size = generic_peasant_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	modifier = {
+		local_monthly_food_modifier = 0.01
+		local_population_capacity = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_villa_rustica_maintenance = {
+			wheat = 1.00
+			lumber = 0.15
+			tools = 0.05
+			produced = antq_grain_products
+			output = 1.10
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_tabernae_row = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = trade_category
+	employment_size = trade_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = market_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	modifier = {
+		local_merchant_capacity = 0.015
+		local_merchant_power = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_tabernae_row_maintenance = {
+			pottery = 0.05
+			lumber = 0.05
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_forum_basilica = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = government_category
+	employment_size = trade_employment
+	city = yes
+	megalopolis = yes
+	build_time = government_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	location_potential = {
+		OR = {
+			location_rank = location_rank:city
+			location_rank = location_rank:megalopolis
+		}
+	}
+	modifier = {
+		local_max_control = 0.01
+		local_merchant_power = 0.015
+	}
+	unique_production_methods = {
+		antq_reg_forum_basilica_maintenance = {
+			stone = 0.10
+			marble = 0.04
+			lumber = 0.05
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_horrea_complex = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = laborers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = infrastructure_category
+	employment_size = trade_employment
+	city = yes
+	megalopolis = yes
+	build_time = infrastructure_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	location_potential = {
+		OR = {
+			location_rank = location_rank:city
+			location_rank = location_rank:megalopolis
+		}
+	}
+	modifier = {
+		local_monthly_food_modifier = 0.02
+		local_merchant_capacity = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_horrea_complex_maintenance = {
+			lumber = 0.08
+			stone = 0.06
+			pottery = 0.06
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_annona_bakery = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	modifier = {
+		local_monthly_food_modifier = 0.02
+		local_production_efficiency = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_annona_bakery_maintenance = {
+			wheat = 1.00
+			lumber = 0.15
+			tools = 0.05
+			produced = antq_grain_products
+			output = 1.10
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_aqueduct_distribution = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = laborers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = infrastructure_category
+	employment_size = generic_peasant_building_employment
+	city = yes
+	megalopolis = yes
+	build_time = infrastructure_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	location_potential = {
+		OR = {
+			location_rank = location_rank:city
+			location_rank = location_rank:megalopolis
+		}
+	}
+	modifier = {
+		local_disease_resistance = 0.01
+		local_population_capacity = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_aqueduct_distribution_maintenance = {
+			stone = 0.12
+			lead = 0.05
+			clay = 0.05
+			tools = 0.04
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_thermae_complex = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = cultural_category
+	employment_size = cultural_employment
+	city = yes
+	megalopolis = yes
+	build_time = cultural_building_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	location_potential = {
+		OR = {
+			location_rank = location_rank:city
+			location_rank = location_rank:megalopolis
+		}
+	}
+	modifier = {
+		local_disease_resistance = 0.01
+		local_life_expectancy = 0.005
+	}
+	unique_production_methods = {
+		antq_reg_thermae_complex_maintenance = {
+			stone = 0.10
+			marble = 0.04
+			coal = 0.06
+			lumber = 0.06
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_cursus_mansio = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = government_category
+	employment_size = trade_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = infrastructure_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	modifier = {
+		local_max_control = 0.015
+		local_merchant_capacity = 0.005
+	}
+	unique_production_methods = {
+		antq_reg_cursus_mansio_maintenance = {
+			lumber = 0.08
+			livestock = 0.06
+			leather = 0.03
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_river_port = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = soldiers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = trade_category
+	employment_size = dock_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = medium_port_building_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	location_potential = {
+		OR = {
+			is_coastal = yes
+			has_river = yes
+		}
+	}
+	modifier = {
+		local_merchant_capacity = 0.015
+		local_sailors = 0.008
+	}
+	unique_production_methods = {
+		antq_reg_river_port_maintenance = {
+			lumber = 0.12
+			naval_supplies = 0.06
+			fiber_crops = 0.04
+			tools = 0.04
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_colonia_forum = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = government_category
+	employment_size = trade_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = government_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	modifier = {
+		local_max_control = 0.015
+		local_cultural_tradition = 0.005
+	}
+	unique_production_methods = {
+		antq_reg_colonia_forum_maintenance = {
+			stone = 0.10
+			marble = 0.03
+			lumber = 0.05
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_castra_fabrica = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = weapons_industry_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	modifier = {
+		local_garrison_size = 0.015
+		local_repair_speed = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_castra_fabrica_maintenance = {
+			iron = 0.60
+			lumber = 0.20
+			coal = 0.20
+			tools = 0.05
+			produced = weaponry
+			output = 1.06
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_frontier_magazine = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = soldiers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = defense_category
+	employment_size = stockade_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = small_fort_building
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	modifier = {
+		local_garrison_size = 0.02
+		local_repair_speed = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_frontier_magazine_maintenance = {
+			wheat = 0.10
+			lumber = 0.08
+			leather = 0.03
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_quarry_contractors = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = laborers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = basic_industry_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	modifier = {
+		local_production_efficiency = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_quarry_contractors_maintenance = {
+			stone = 1.20
+			lumber = 0.20
+			tools = 0.10
+			produced = masonry
+			output = 2.16
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_olive_estate = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = laborers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = basic_industry_category
+	employment_size = generic_peasant_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	modifier = {
+		local_production_efficiency = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_olive_estate_maintenance = {
+			olives = 1.20
+			pottery = 0.12
+			tools = 0.05
+			lumber = 0.08
+			produced = antq_olive_oil
+			output = 0.76
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_vineyard_estate = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = laborers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = basic_industry_category
+	employment_size = generic_peasant_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	modifier = {
+		local_production_efficiency = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_vineyard_estate_maintenance = {
+			fruit = 1.154
+			lumber = 0.157
+			tools = 0.092
+			produced = wine
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_textile_quarter = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	modifier = {
+		local_production_efficiency = 0.025
+	}
+	unique_production_methods = {
+		antq_reg_textile_quarter_maintenance = {
+			wool = 1.0
+			produced = cloth
+			output = 1
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_ceramic_quarter = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = basic_industry_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	modifier = {
+		local_production_efficiency = 0.025
+	}
+	unique_production_methods = {
+		antq_reg_ceramic_quarter_maintenance = {
+			clay = 1.0039
+			lumber = 0.1201
+			tools = 0.0504
+			produced = pottery
+			output = 1.0
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_insulae_quarter = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = laborers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = infrastructure_category
+	employment_size = generic_peasant_building_employment
+	city = yes
+	megalopolis = yes
+	build_time = infrastructure_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	location_potential = {
+		OR = {
+			location_rank = location_rank:city
+			location_rank = location_rank:megalopolis
+		}
+	}
+	modifier = {
+		local_population_capacity = 0.025
+		local_merchant_capacity = 0.005
+	}
+	unique_production_methods = {
+		antq_reg_insulae_quarter_maintenance = {
+			stone = 0.08
+			lumber = 0.08
+			clay = 0.08
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_temple_precinct = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = clergy
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = religious_category
+	employment_size = religious_building_employment
+	city = yes
+	megalopolis = yes
+	build_time = religious_building_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	location_potential = {
+		OR = {
+			location_rank = location_rank:city
+			location_rank = location_rank:megalopolis
+		}
+	}
+	modifier = {
+		local_cultural_tradition = 0.01
+		local_clergy_max_literacy = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_temple_precinct_maintenance = {
+			stone = 0.08
+			marble = 0.04
+			incense = 0.03
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_collegia_hall = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = cultural_category
+	employment_size = cultural_employment
+	city = yes
+	megalopolis = yes
+	build_time = cultural_building_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	location_potential = {
+		OR = {
+			location_rank = location_rank:city
+			location_rank = location_rank:megalopolis
+		}
+	}
+	modifier = {
+		local_cultural_tradition = 0.008
+		local_unrest = -0.005
+	}
+	unique_production_methods = {
+		antq_reg_collegia_hall_maintenance = {
+			stone = 0.06
+			lumber = 0.06
+			pottery = 0.04
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_bronze_workers_collegium = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = basic_industry_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	modifier = {
+		local_production_efficiency = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_bronze_workers_collegium_maintenance = {
+			copper = 0.70
+			tin = 0.15
+			coal = 0.15
+			tools = 0.05
+			produced = antq_bronze_wares
+			output = 0.86
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_lead_pipeworks = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = basic_industry_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	modifier = {
+		local_production_efficiency = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_lead_pipeworks_maintenance = {
+			lead = 0.80
+			coal = 0.15
+			tools = 0.10
+			produced = antq_lead_wares
+			output = 0.88
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_unguentarium = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	modifier = {
+		local_merchant_power = 0.01
+		local_production_efficiency = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_unguentarium_maintenance = {
+			incense = 0.80
+			olives = 0.20
+			pottery = 0.10
+			tools = 0.10
+			produced = antq_perfumes
+			output = 0.52
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}

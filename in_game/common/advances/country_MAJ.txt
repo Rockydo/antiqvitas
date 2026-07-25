@@ -124,7 +124,7 @@ maj_the_ghali = {
 		has_or_had_tag = MAJ
 	}
 
-	allow = { has_advance = maj_the_magic_arrow }
+	allow = { has_advance = maj_the_magic_arrow  always = no} # M8 disables vanilla
 
 	requires = pharmacology_advance
 

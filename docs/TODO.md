@@ -371,6 +371,13 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     effects or production roles and sensible AI access; trade-good map and market
     captures show plausible regional specialization; static economic assertions,
     a short construction/market tick probe, validation, and smoke pass.
+  - [x] First economy tranche: 23 Roman families, 509 placements across 15
+    profiles, eight processed goods, 31 direct assets, and exact quarantine of
+    450 legacy buildings. All 75 checks and paired smoke pass; a fresh Rome run
+    reached 31 January without building/market-scope errors.
+  - [ ] Finish acceptance with an established-market production/export capture,
+    construction-choice probe, active-goods freeze, and replacement of the 15
+    temporary installed building adapters before freezing the complete art set.
 
 - [ ] Re-art the complete active building-icon set in one circle-safe style.
   - Freeze the final active building ledger, including Roman named, regional,

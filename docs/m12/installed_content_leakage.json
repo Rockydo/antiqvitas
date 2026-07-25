@@ -542,7 +542,7 @@
   "policy": {
     "advances": "exact_disabled_legacy",
     "ages": "engine_slot_adapter",
-    "buildings": "known_visible_building_debt",
+    "buildings": "exact_hidden_legacy",
     "country_ranks": "engine_adapter_period_presentation_complete",
     "government_types": "engine_adapter_pending_presentation",
     "institutions": "exact_disabled_legacy",
@@ -556,9 +556,8 @@
     "engine_adapter_period_presentation_complete": 1,
     "engine_slot_adapter": 1,
     "exact_disabled_legacy": 216,
-    "exact_hidden_legacy": 30,
-    "installed_reference_document": 9,
-    "known_visible_building_debt": 44
+    "exact_hidden_legacy": 74,
+    "installed_reference_document": 9
   },
   "surface_count": 9,
   "surfaces": {
@@ -3787,7 +3786,7 @@
             "war_score_absolutism_advance"
           ],
           "mod_mirror": "in_game/common/advances/0_age_of_absolutism.txt",
-          "mod_sha256": "938f0826faf0b97b02dad642dd09c7f5c79f3158d3ed4bf77a814af26fdc0763",
+          "mod_sha256": "496e44b775db2a47b224117a86f25de321dd08224d636960a2b207b3a0efa4f1",
           "reference_count": 107,
           "references_sha256": "66f725d267d680f2fd647e8cde57a844577f47485eefd1c772f9e78f5f2e1681",
           "relative": "0_age_of_absolutism.txt",
@@ -3864,7 +3863,7 @@
             "trade_through_owned_disc_advance"
           ],
           "mod_mirror": "in_game/common/advances/0_age_of_discovery.txt",
-          "mod_sha256": "7188e9ff9f8ea7a7f95c40ae484074c3bf7a02f2ea98efffbeded137a780f539",
+          "mod_sha256": "5e715cc8ce330b98afdb6f79f8d020b9457864c9a80d839c2bb1cbdff8385d22",
           "reference_count": 135,
           "references_sha256": "1dc79b97f52319420be6c4646ca204ccdba589e8c07af8e08b27e45a40f66430",
           "relative": "0_age_of_discovery.txt",
@@ -3933,7 +3932,7 @@
             "war_score_reformations_advance"
           ],
           "mod_mirror": "in_game/common/advances/0_age_of_reformation.txt",
-          "mod_sha256": "debb0d1cf9e7e878f42d9bd543d91f57ce9dcf511353ef891cd43f8cd19500ff",
+          "mod_sha256": "f5d45f412c4ca59e1ea9c8d407284b1b4e8929b5d3c6dffc5d6f82d348cc213c",
           "reference_count": 112,
           "references_sha256": "13119423f024f487910afcaa0e2484769df35f58f56d0dc00ed0ad052a271e3a",
           "relative": "0_age_of_reformation.txt",
@@ -4005,7 +4004,7 @@
             "war_no_cb_cost_modifier_renaissance_advance"
           ],
           "mod_mirror": "in_game/common/advances/0_age_of_renaissance.txt",
-          "mod_sha256": "4a8a21085c290b41c967d816821495476ae601868eaa9a1258d093c480cdbdad",
+          "mod_sha256": "646a4980cb4104535e2a37cabe386dd9abdbcfd60c9817a2787993fdd5a2c292",
           "reference_count": 113,
           "references_sha256": "e60307a353f2bcc7226a5c50218d6e4540c8bb7b2ef4df3ce7a50636050a7c5b",
           "relative": "0_age_of_renaissance.txt",
@@ -4074,7 +4073,7 @@
             "war_score_revolutions_advance"
           ],
           "mod_mirror": "in_game/common/advances/0_age_of_revolutions.txt",
-          "mod_sha256": "d5e4c28ffe8ef5342eb9099aa891f614db6e4dfee7fa78954240354e93911a11",
+          "mod_sha256": "82ed3ffed81def0426bbaaf1b8a93955ace2cf9a26c3bef2030787f146117b34",
           "reference_count": 106,
           "references_sha256": "91b6654ae0eaa2c852643a170128f5c0d598bb8ce699c9fd582f79c230023c3c",
           "relative": "0_age_of_revolutions.txt",
@@ -4149,7 +4148,7 @@
             "written_alphabet"
           ],
           "mod_mirror": "in_game/common/advances/0_age_of_traditions.txt",
-          "mod_sha256": "f789d7e1a0d375adc275665d1bd99fc78c5651a8863a335b3fe213d317937d9b",
+          "mod_sha256": "3f780286c279a0fbfcdeb548907ce71d18a26e7c6ecb4124db8453165ca31ae5",
           "reference_count": 135,
           "references_sha256": "15e028fee6dd3c48119aeedc6d5b3d4e8b1b987888a9fbd4cf4c9bcae50b5c73",
           "relative": "0_age_of_traditions.txt",
@@ -4342,7 +4341,7 @@
             "unlock_wagon_train"
           ],
           "mod_mirror": "in_game/common/advances/2_army_unlocks.txt",
-          "mod_sha256": "05f49fab055e9aea5d0f5800a289291b3ba6cbf076ca19c7ece1eee9a84d1c95",
+          "mod_sha256": "3c68255c4807b493aa0c79a92610da83a9098a445c516ba419908d0f8abe827e",
           "reference_count": 126,
           "references_sha256": "0a738dcc763037fc89d11f9fb9cdb2cd8f15999533cca5ea6571ec2d6125b0b1",
           "relative": "2_army_unlocks.txt",
@@ -4391,7 +4390,7 @@
             "unlock_xebec_advance"
           ],
           "mod_mirror": "in_game/common/advances/2_ship_unlocks.txt",
-          "mod_sha256": "c0bbffc9945c177f68da8697bfbd3a91024c83ab0b1c6560c2445429d2e2c694",
+          "mod_sha256": "c45c7560f3edbd37aad91e000c1a1e4f59b59cd931ef97d02da0a6c4fd1a9576",
           "reference_count": 82,
           "references_sha256": "c463c5d1f0020939ba327abf23287c195f9aa0113e62c9b3be71a5499f3628f3",
           "relative": "2_ship_unlocks.txt",
@@ -5045,7 +5044,7 @@
             "my_son_sanctuary"
           ],
           "mod_mirror": "in_game/common/advances/country_CHA.txt",
-          "mod_sha256": "c3ea80c5fed0f3fdf0257099857b33ada82d1d339f551aa196ddcef7f7473b52",
+          "mod_sha256": "1aafb04a17cc734505de69ff7570952a5273cdf3e12be53a24a89048ca3dc111",
           "reference_count": 4,
           "references_sha256": "7b9e265b55de6170f376aae55fdab3a4e8c6aa883292f97bcaa3787b7ebcbeb2",
           "relative": "country_CHA.txt",
@@ -5244,7 +5243,7 @@
             "water_frame"
           ],
           "mod_mirror": "in_game/common/advances/country_ENG.txt",
-          "mod_sha256": "a33bedf351a0d0ec5d555e05b1d924c086252ce2ddaeca88d24f4ea88790db32",
+          "mod_sha256": "5c448dd0c0e2c060e567797cd6b04320df5137f099a5c77176330764d5e8c46e",
           "reference_count": 34,
           "references_sha256": "90de0c829830b938479f02125650744b736046f58cf9c0349f12b4ab5a36d83c",
           "relative": "country_ENG.txt",
@@ -5464,7 +5463,7 @@
             "ilk_restore_yam"
           ],
           "mod_mirror": "in_game/common/advances/country_ILK.txt",
-          "mod_sha256": "2d9478885e9b24656a110d88fd2d0b4ca9cd7c15759fc7778b2c022909679885",
+          "mod_sha256": "bc7c50ad69b5944c2f588f61671ecead65801b5ee0170b421cbda76a5d9d3e95",
           "reference_count": 10,
           "references_sha256": "48bf93c2ea9590279d2179a828d4a221990192f08d02ff58c965890abd52e039",
           "relative": "country_ILK.txt",
@@ -5567,7 +5566,7 @@
             "sons_of_the_salur_tribe"
           ],
           "mod_mirror": "in_game/common/advances/country_KAR.txt",
-          "mod_sha256": "9c7be18f57d217d4e6c6542ce87119a1dbee693df8f6f9859566d1c2ca3770e1",
+          "mod_sha256": "df820affd37f2e1b602475b42699a9b24da02316623cf82d84d6b39a395a5d32",
           "reference_count": 8,
           "references_sha256": "a6c5a974e95240f0eaaf0f6994d7dc271294e5516ff5b3f8612b554311fd74e5",
           "relative": "country_KAR.txt",
@@ -5655,7 +5654,7 @@
             "kon_transatlantic_slave_trade"
           ],
           "mod_mirror": "in_game/common/advances/country_KON.txt",
-          "mod_sha256": "d86f0f5250ff6a59ec0c590eb8ccb00241a77fc1406efc5fce12b0abc3d6d5e0",
+          "mod_sha256": "c34641a8eae569c9a776f415fdffd46065c7f45fa1aa1fad27ce8b4f6f3efc52",
           "reference_count": 12,
           "references_sha256": "d1651f3cbb2ae206ca5ca45ce35686df0cb3e7936e6d69c68dc536ad4edfde03",
           "relative": "country_KON.txt",
@@ -5688,7 +5687,7 @@
             "kor_panokseon_advance"
           ],
           "mod_mirror": "in_game/common/advances/country_KOR.txt",
-          "mod_sha256": "1e321e42787b84e69619b53e45b0fb59efa85c80391f3b828a86088987bcddb4",
+          "mod_sha256": "9a8a549ea38532362c531491a1562b422f08ec57fdea5b694ba126c445c6aed4",
           "reference_count": 43,
           "references_sha256": "233301d4583321214062fc4f9a2842eed41bd804558a796dd6cefa2b5c680ceb",
           "relative": "country_KOR.txt",
@@ -5757,7 +5756,7 @@
             "maj_the_magic_arrow"
           ],
           "mod_mirror": "in_game/common/advances/country_MAJ.txt",
-          "mod_sha256": "24e767a4eb71d3f5dfc841f95a33de8241fc7a0ffb8beda90319591c5eb09ec6",
+          "mod_sha256": "75258cd65d6d93c251c2538cabd846dfea3322083d2c575efad892ab45b074bc",
           "reference_count": 33,
           "references_sha256": "4ee5d70a3bc485a82c7e50a0512fbc329c3d3961eb4d6a1bd8c6128f0612b1cf",
           "relative": "country_MAJ.txt",
@@ -5851,7 +5850,7 @@
             "shahbandar"
           ],
           "mod_mirror": "in_game/common/advances/country_MLC.txt",
-          "mod_sha256": "dae796b4d159652f1c0de3418f60046731955e246849d658c8c898764ce03284",
+          "mod_sha256": "09d4a6e6fdd59dc3083ac83a09c0a638e093ad45a57a5900d162aac4ab211c70",
           "reference_count": 13,
           "references_sha256": "513d557bf254a76e50a755396ce4af15930ffad5e0e98a536efb1b0c13d69f19",
           "relative": "country_MLC.txt",
@@ -5876,7 +5875,7 @@
             "zasechnaya_cherta"
           ],
           "mod_mirror": "in_game/common/advances/country_MOS.txt",
-          "mod_sha256": "741f4fa91754f41d60b8ebfb6963f61cb46dbda2186f54bcaf6bb00f888ea6bc",
+          "mod_sha256": "3184f89a7f5b9f40697a1654af1eebfd077b428b95fa46b4966ec17c2c62d22f",
           "reference_count": 14,
           "references_sha256": "8260dc67abdb126480db6d749cc6e52fed05a401004cb952b11f71b206b6c473",
           "relative": "country_MOS.txt",
@@ -6049,7 +6048,7 @@
             "ushkuiniks"
           ],
           "mod_mirror": "in_game/common/advances/country_NOV.txt",
-          "mod_sha256": "fc5c416a191ce72a587a0df337b34b6121b02e6f34f9a09b94878185d1c6ecd5",
+          "mod_sha256": "4a5f53b241ad00dd16437461b539ccbdf5bf3f872e0ce16d3057709dcfb8731d",
           "reference_count": 20,
           "references_sha256": "966a94830ce89dc0bf836a03b213dba21cd406eb6912fff722500e3016da87fe",
           "relative": "country_NOV.txt",
@@ -6244,7 +6243,7 @@
             "swedish_roots"
           ],
           "mod_mirror": "in_game/common/advances/country_SCA.txt",
-          "mod_sha256": "d5e11177b7beab9cfcb0260f6da7f707ad5f1c018b8ca6d9bf82af39933a87ae",
+          "mod_sha256": "33a28d043b86d52bfd46c1b1c1458e0520b1106ef5e563bd0f93a9042eaca8a1",
           "reference_count": 14,
           "references_sha256": "55c9cc2d6cc8333ea41b7fdf1d951a45e4dec02527db089d6528da59a1e845fa",
           "relative": "country_SCA.txt",
@@ -6279,7 +6278,7 @@
             "unlock_reformed_gallowglass_advance"
           ],
           "mod_mirror": "in_game/common/advances/country_SCO.txt",
-          "mod_sha256": "452b3b7237fa715b1136201ed67dc4e3aae78e903a305e22bf630233fa63da55",
+          "mod_sha256": "5dc8c2246570055705c3374d17c4159b5f30e5d53ec01c56999d350e8274613e",
           "reference_count": 48,
           "references_sha256": "6523eeae9e045fc5bb4d4f0727828d2231cb48f13adab7430943f2f9b3d8cdff",
           "relative": "country_SCO.txt",
@@ -6396,7 +6395,7 @@
             "trans_sahara_trade"
           ],
           "mod_mirror": "in_game/common/advances/country_SON.txt",
-          "mod_sha256": "dc13f9d52bd6317bc9c48e92027659265bc7485bddef901bd7098c23391bf187",
+          "mod_sha256": "7b1785de0c07fab10358170234583f5b418464fe2f8eca8a07f4337aebf93bba",
           "reference_count": 12,
           "references_sha256": "ed656ec742fd84e4ac38852bcb327e46d4619b751125d0fa9dcde716175cb90e",
           "relative": "country_SON.txt",
@@ -6511,7 +6510,7 @@
             "tibetan_monastic_education"
           ],
           "mod_mirror": "in_game/common/advances/country_TIB.txt",
-          "mod_sha256": "60accdc11ee94408e56f616004901d615748c6b883c32eaa76a262287a02b678",
+          "mod_sha256": "57f83f2738c436a20f83ddcc12aa0f8dcccaeaa6b036d717f4af69974d6ff6d5",
           "reference_count": 14,
           "references_sha256": "0d9be70f5369de626e6086101f8a789f1fa231b0d5e6d934f60acc4cc28c0b1b",
           "relative": "country_TIB.txt",
@@ -6763,7 +6762,7 @@
             "zaydi_scholarly_traditions"
           ],
           "mod_mirror": "in_game/common/advances/country_YEM.txt",
-          "mod_sha256": "9b06ddfd1803407d21456d48ec5f677849072ae206da3ca67e7a095b52eaf670",
+          "mod_sha256": "2dcee6236fdf1b084329c0496013335a21a263ba5f4a3fc2ff06cdaad65d36f6",
           "reference_count": 14,
           "references_sha256": "aefaad82f2d26cb37a20afd8cd534628762b362e828c17a611c2ce17d3aa09fb",
           "relative": "country_YEM.txt",
@@ -6812,7 +6811,7 @@
             "ayu_white_elephant"
           ],
           "mod_mirror": "in_game/common/advances/country_ayu.txt",
-          "mod_sha256": "df5826cd6d9677fd2d7d7b7cb9298e86ec254bb169ffa26498f13f9e41b25c6e",
+          "mod_sha256": "0401a508c090ea9dab3517f9efd5932eb71551036393cd447866968db8aa9f67",
           "reference_count": 16,
           "references_sha256": "92473d1d77616e901ca8b891643d19ab5c0e2c961daca2a667c80db0b41e2bf2",
           "relative": "country_ayu.txt",
@@ -7428,7 +7427,7 @@
             "suk_wat_si_sawai"
           ],
           "mod_mirror": "in_game/common/advances/country_suk.txt",
-          "mod_sha256": "9e7fba64572bc05b0efe634da221d4e1b7e8adba007b8fb9a16f6b7c49234c51",
+          "mod_sha256": "6bcf0f0058c7fa73e48416d184fdea0d88b2e6afee7e47d8148db15992d7e0b6",
           "reference_count": 16,
           "references_sha256": "26922d754d9a037c3ab301486e482fe0d29815c86afeb762a23733d8fa58ce48",
           "relative": "country_suk.txt",
@@ -8400,7 +8399,7 @@
             "the_age_of_the_genoese"
           ],
           "mod_mirror": "in_game/common/advances/culture_ligurian.txt",
-          "mod_sha256": "43401206d0e5c933743e25034068e92c26a548eea916c1afc51c12459f012a8b",
+          "mod_sha256": "3446f0457e8fee11f97bf7cb7a3a1b74e98f3e0988bde884e65ba0f0447527ce",
           "reference_count": 26,
           "references_sha256": "20aa99c212a2d66a8ee7e074e928e2b91909304ed5191dd4fba05b0a0ef08c5d",
           "relative": "culture_ligurian.txt",
@@ -8931,7 +8930,7 @@
             "trading_links"
           ],
           "mod_mirror": "in_game/common/advances/culture_thai.txt",
-          "mod_sha256": "7524be121d6492e6c8bb239b23cc1c9bb89ec95ab4dc9e764b19f5512202134b",
+          "mod_sha256": "d481d01e3588190db0a2096974fe83cc2a167019abe72f479962644b4660a854",
           "reference_count": 25,
           "references_sha256": "7e4abc1f5826e70b5fba4c72daaf7c4ca750f9273ed7fe173b40b2a6c0d9d125",
           "relative": "culture_thai.txt",
@@ -8976,7 +8975,7 @@
             "tuscan_the_mezzadria"
           ],
           "mod_mirror": "in_game/common/advances/culture_tuscan.txt",
-          "mod_sha256": "46a9ce8134865fbc5762b0d668995ccb3ecfe79479e12503fe117c3cf67a34c0",
+          "mod_sha256": "1e5882ec73c62e486300ec12ca0e6db7d59189447f7b55fcbe0faa81775b5ddc",
           "reference_count": 61,
           "references_sha256": "276391e76dd9b65699523f8d29b50195dc8ac8000ffa1ada316856be47d45803",
           "relative": "culture_tuscan.txt",
@@ -9255,7 +9254,7 @@
             "serfdom"
           ],
           "mod_mirror": "in_game/common/advances/government_monarchy.txt",
-          "mod_sha256": "d2c778a906febceefce05a0259e307988f2c75bb86ff136d821a14c6833d6008",
+          "mod_sha256": "d323e176728f1420b0c4a5ecf714a90a710fed4377637af5795edb58ae2529fe",
           "reference_count": 30,
           "references_sha256": "952cb00656b081598f62a3141469f7e88e834af27ce452a6a3b6517d9fdb6fa1",
           "relative": "government_monarchy.txt",
@@ -9462,7 +9461,7 @@
             "ymn_mediate_succession_disputes"
           ],
           "mod_mirror": "in_game/common/advances/japanese_unique.txt",
-          "mod_sha256": "b02ecf96f6142b10e75feb94d30aaa4ddd384c7e4815992cd4d76fbe2f92798b",
+          "mod_sha256": "89ae153933e0fbfd44098a01354f4d85479b6330c4b601179aa62bfd1e9f4b4b",
           "reference_count": 210,
           "references_sha256": "c2ef55f373946258f4acabe569d623b101f61a90dad5bc60561f6729156c4040",
           "relative": "japanese_unique.txt",
@@ -9634,7 +9633,7 @@
             "tercio"
           ],
           "mod_mirror": "in_game/common/advances/region_iberia.txt",
-          "mod_sha256": "d92693f47b83027ec76cc4a2c3766defcc3e3ad9158bc32912fdf714bed242ef",
+          "mod_sha256": "00535f8989e4a5d2d468797d7b8055fa9887a93fe61dec216c103dcd19839c9e",
           "reference_count": 35,
           "references_sha256": "08ea85ad1099502f832bcf17e1f8f71611135e98f3b99ee49e91e4cbda8c71e1",
           "relative": "region_iberia.txt",
@@ -9730,7 +9729,7 @@
             "whale_hunters"
           ],
           "mod_mirror": "in_game/common/advances/region_north_america.txt",
-          "mod_sha256": "3170d43159f01b2921b75180ab46ef926d5522f95f6c8da1c1154044b16922a1",
+          "mod_sha256": "504f201b35f4b571b6502fb95aba4732f56f9a12da3a18d3c6457fddf084e1c2",
           "reference_count": 86,
           "references_sha256": "ad5e16fdf9cb0f16e209b4b2606af896040b2b13dc4798d83034dcd7e70104d0",
           "relative": "region_north_america.txt",
@@ -10627,14 +10626,14 @@
             "provincial_garrison",
             "sofa_stockade"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/00_unique_buildings_to_make_obsolete.txt",
+          "mod_sha256": "f0f4371ecf850883eaae58e4937feb8951fdeac516feb57c742278de43cf1f2f",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "00_unique_buildings_to_make_obsolete.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\00_unique_buildings_to_make_obsolete.txt",
           "source_sha256": "39617f59b117ec93c85e395a91417136e2fe1fea497be9f05918a59e51eec1dd",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -10657,14 +10656,14 @@
             "tax_assessor",
             "war_college"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/capital_buildings.txt",
+          "mod_sha256": "8c376ce78636e539b78462a00a56c56b64ad285f02d7f1e1888275a12f59b001",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "capital_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\capital_buildings.txt",
           "source_sha256": "e7696209f23b1605bd7720ee81070e32cf887aaa9da18520d74e06aefdbe36be",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -10674,14 +10673,14 @@
             "coastal_fort",
             "naval_battery"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/coastal_forts.txt",
+          "mod_sha256": "288d10cd2a17172a2fa1be3c58cb06a2a6ecc5e8041b8730bf683bacbe9f709e",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "coastal_forts.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\coastal_forts.txt",
           "source_sha256": "36b8e0b9bce504cb87091f813087567e766d0f2730c08b922679b7be54c0422b",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -10704,14 +10703,14 @@
             "stone_quarry",
             "tar_kiln"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/common_buildings.txt",
+          "mod_sha256": "ceac39cbe672e7998739b7ae6f5487ce5e9e597278ac38c76197b46579bc37c6",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "common_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\common_buildings.txt",
           "source_sha256": "70f0112ad50e6363f2f59fe84a933d00821f74d686263cc4a9bf3553972ab536",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -10722,14 +10721,14 @@
             "early_council_hall",
             "modern_council_hall"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/council_hall.txt",
+          "mod_sha256": "b091a851e4d634c31a68def3a8409e5fed85ff3c7ecf6f98b95a250fb170b187",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "council_hall.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\council_hall.txt",
           "source_sha256": "1c52da42e8b231063dbae458fddda6656547010e38d0bbb409eddd6bce56c090",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -10746,14 +10745,14 @@
             "theater",
             "university"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/culture_buildings.txt",
+          "mod_sha256": "d74387fd6ca7481f7c283eeae0d459f562af70ce1d8e8a02d7028dd12f8a5ea4",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "culture_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\culture_buildings.txt",
           "source_sha256": "42f05a1c121141ae96a6cdb1c2fcbb72e4d7e461136201e3c979ed74df7b60c6",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -10790,14 +10789,14 @@
             "toll_castle",
             "warrior_monks_training_grounds"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/estate_buildings.txt",
+          "mod_sha256": "c41f2c997027ad275757e9ff946dfd12ef0500423d44620cd9c2e5eaa17e3b1e",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "estate_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\estate_buildings.txt",
           "source_sha256": "8abc3c21e21a9af60eab9c99b728dd678d1f55e62d0c5773d2ebe244ef703504",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -10909,14 +10908,14 @@
             "zeeland_admiralty",
             "zwinger"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/event_only_buildings.txt",
+          "mod_sha256": "2663b7795f43c8e4f9c50c3fa3405aad17a90054052c9c745d5385db8fa3ac67",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "event_only_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\event_only_buildings.txt",
           "source_sha256": "9f5f8c55f3dda0d3e8d0240670fd3e32859ebc6c168b5a98d88685cf7f185867",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -10932,14 +10931,14 @@
             "trade_office",
             "viceroyalty"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/foreign_buildings.txt",
+          "mod_sha256": "25e14eb80c6340333b4a024f9cd852bb0cd8e2b59dc4ab3ae6bd368e17046502",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "foreign_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\foreign_buildings.txt",
           "source_sha256": "4f779b8a1e7ccd07af2b754e939fb2d3a08aefc9ecea6bbb703316a3cde2d76b",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -10953,14 +10952,14 @@
             "star_fort",
             "stockade"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/forts.txt",
+          "mod_sha256": "5e69b0650d6c6b5cf42278eb512619c912c8c86f56b78f1b260b14d3fe4197ff",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "forts.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\forts.txt",
           "source_sha256": "bf60eecea325141561fb30763321f33efc0e7cee3ae0e1e6b2eb2849083a56d4",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -10970,14 +10969,14 @@
             "hre_imperial_armory_foreign",
             "hre_imperial_armory_own"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/hre_buildings.txt",
+          "mod_sha256": "4ec4a7c52f2ad1ef24a26deaf52a4c8b776b5fbc09d086f9e1dbdafece88484b",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "hre_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\hre_buildings.txt",
           "source_sha256": "e22df2deebb45e6df10ddcbd7d9162ee879c2e3c921c4a18efa5ae85334c49fa",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -10995,14 +10994,14 @@
             "training_fields",
             "warrior_temple"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/manpower_buildings.txt",
+          "mod_sha256": "a6d704e2aacefbf30a150a5594073f0fcfc32865d61a3ea400d3703c8ac85f95",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "manpower_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\manpower_buildings.txt",
           "source_sha256": "5130be1e5ef95b014fc0ec6e9f57ba8b129d82b83a5361ed2aaf4b34761db888",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11017,14 +11016,14 @@
             "stock_exchange",
             "trading_hub"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/market_buildings.txt",
+          "mod_sha256": "e6c9e519e85c50ea290a903d9e55b0f203c2b34aeab7e89d1bfe9f56555a1100",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "market_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\market_buildings.txt",
           "source_sha256": "a36ee8a99a89140065a36a7f244cdf169d0f04d683e41f4ccd83f6bcea0c8dc2",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11036,14 +11035,14 @@
             "pirate_tavern",
             "smuggler_cove"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/pirate_buildings.txt",
+          "mod_sha256": "9c5ed13e047ddaadc6e9ad66565a6488b3dfbeff2243bcf649dbd1076fa15d71",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "pirate_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\pirate_buildings.txt",
           "source_sha256": "4ac0c894993453c6cd04b4c646ce3fe54a4aecfbdfe9500786e80ff8312446a5",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11054,14 +11053,14 @@
             "sugar_plantation",
             "tobacco_plantation"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/plantation_buildings.txt",
+          "mod_sha256": "f9e446dd8b71dafe5849bb5ad78afefdd78a23e361eb5de5ecf588f20c994491",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "plantation_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\plantation_buildings.txt",
           "source_sha256": "201d70fe0e5ce3b80a1f63a547ba83be692b5789a194ffe75ba50a897f9a7f7d",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11075,14 +11074,14 @@
             "protected_harbor",
             "shipyard"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/port_buildings.txt",
+          "mod_sha256": "e1dcd6e5e1132328879651f671cde3e714e34fafdd35e6ef1d7ef06f53879a73",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "port_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\port_buildings.txt",
           "source_sha256": "9dfa8e370916179ec9ee506938b6049a5ca1522ff7b3d9954b5840ca4ee7563c",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11094,14 +11093,14 @@
             "brewery_manufactory",
             "brewery_mill"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_beer.txt",
+          "mod_sha256": "06ef6b6996c6e5f0476145096a8edd9ae90e907e3789cb379b9d6d890aa132a7",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_beer.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_beer.txt",
           "source_sha256": "ae5e3cf1f603172155882462a8905872ac46ab3c53174dfb0c65d43627081a81",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11113,14 +11112,14 @@
             "printing_press_shop",
             "scriptorium"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_books.txt",
+          "mod_sha256": "888fc0faae6e718b0ff92e286cbd2882e968d1364dacebf9bb112cdec55b6b50",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_books.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_books.txt",
           "source_sha256": "cf613d42eb267ec8100511d06d5451608c056090a88f4a9bdb6dbaf9858709c3",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11132,14 +11131,14 @@
             "cannon_workshop",
             "cannons_factory"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_cannons.txt",
+          "mod_sha256": "1952b7d4f1de857f2cc184d11a002b00df27a219d917fa9db453c109323e0ba4",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_cannons.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_cannons.txt",
           "source_sha256": "078ea1068f7332ea6fbf1789d3179432ebd36a8053c66ea72f191db2143e8e14",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11151,14 +11150,14 @@
             "cloth_workshop",
             "textile_mill"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_cloth.txt",
+          "mod_sha256": "1c76e84e0be2e3e227ed9937cda16065bbb6f14f9a31d05d107549b5247ec943",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_cloth.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_cloth.txt",
           "source_sha256": "7bbbf43054d7581bea9e00bc37d87ec5b61b7d012e038e378576fceb46d749c5",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11170,14 +11169,14 @@
             "dyes_workshop",
             "dyesworks"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_dyes.txt",
+          "mod_sha256": "80d686688c163322c2be33ccff15b9df02d7d960a1ee72ea61d4e348634358b9",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_dyes.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_dyes.txt",
           "source_sha256": "f3568245cd1f63b4a922d2f3d8c4c674502edee9b09fd5f01a22c633a978b990",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11189,14 +11188,14 @@
             "fine_cloth_mill",
             "fine_cloth_workshop"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_fine_cloth.txt",
+          "mod_sha256": "fbb3d5469de6549ff42159d64cd8e9386ad65cf988f03213b1ef8bcd8b60e528",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_fine_cloth.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_fine_cloth.txt",
           "source_sha256": "5005669adb9163fbb37adfc8fb7c89ed0523105382245dfbdac80b598518bcef",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11209,14 +11208,14 @@
             "guns_workshop",
             "hand_cannon_guild"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_firearms.txt",
+          "mod_sha256": "f9fb97d1b4577e33eb21634a6e1b563295f82c2d2c262c37f089cbca3f055f0e",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_firearms.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_firearms.txt",
           "source_sha256": "dce6b25cf3acadf5d6691e416703fca9b98554cd9973a752f15b760b02ca7db3",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11228,14 +11227,14 @@
             "furniture_mill",
             "furniture_workshop"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_furniture.txt",
+          "mod_sha256": "f7bf7c5df9d484ce9cd98dca6adc690a4b0cfc7d5086dfb406add5f5b3c025ae",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_furniture.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_furniture.txt",
           "source_sha256": "7361df6e0a1d97f8e7ab9d591764bbc7b5ceb5dd3abcc6a04c9b589025d7d2ac",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11247,14 +11246,14 @@
             "glass_workshop",
             "glassworks"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_glass.txt",
+          "mod_sha256": "2070eba60edefc240da527eb3605eea011de8a5e5c81008468457a4e562b4d6e",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_glass.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_glass.txt",
           "source_sha256": "fe43347ba4a50a0fad3c63bd7840880e3eab1c03ffa1f976ce02b030c5b0b72f",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11264,14 +11263,14 @@
             "lacquerware_guild",
             "lacquerware_manufactory"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_lacquerware.txt",
+          "mod_sha256": "4053e411d9c794e5c59915ee6369027fe7cac89b28350ddc8f444804bb1135f2",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_lacquerware.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_lacquerware.txt",
           "source_sha256": "ce2f4a10613f7da5c057725bd56faa74916d35f1e63467500d283d945f6a11e6",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11283,14 +11282,14 @@
             "tannery_mill",
             "tanning_workshop"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_leather.txt",
+          "mod_sha256": "8752e9c956fd56cb0c136aad4460606f0722b248ccdbe36047644fd8f8cfc2a7",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_leather.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_leather.txt",
           "source_sha256": "dc204d5d3a932b34f0db85b852e1629566d0389e5d74663c95ca304e410ad097",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11302,14 +11301,14 @@
             "distillers_guild",
             "distillers_workshop"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_liquor.txt",
+          "mod_sha256": "2340109babfd25e55f8cbafe086c20bbe6d5d212d9c800a178128e530f793f7f",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_liquor.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_liquor.txt",
           "source_sha256": "c7e3b2b8ef6599c0d8ca021cbf8ae3d006ffa7b7a70e5acc3410f61573a244fb",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11321,14 +11320,14 @@
             "naval_supplies_mill",
             "naval_supplies_workshop"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_naval_supplies.txt",
+          "mod_sha256": "506102283c90c281b3d0504d6acfdce38b7789f21a1ff58fa69ba4cf028093e8",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_naval_supplies.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_naval_supplies.txt",
           "source_sha256": "92273cbcc904354761c35c564bc80aac3adc53b8ea0da9935122ee665fa2439e",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11340,14 +11339,14 @@
             "paper_mill",
             "paper_workshop"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_paper.txt",
+          "mod_sha256": "9e6e8d87a042b2cbf24c1b0d6f6d7eb45f98e7b97c98179300c0699f1138214c",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_paper.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_paper.txt",
           "source_sha256": "e2690285d72a6388df281f88eff6884b95e0326325c9e3982ee3adc9b30b5c76",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11357,14 +11356,14 @@
             "porcelain_guild",
             "porcelain_manufactory"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_porcelain.txt",
+          "mod_sha256": "5f2198aff297c33f354bea98770d9e748f14e5291536199fb7b20eee8188edbb",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_porcelain.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_porcelain.txt",
           "source_sha256": "26d5feee7ec036f8ea06ed1a05100017110c7118ca18fd232601467fdb8c6536",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11376,14 +11375,14 @@
             "pottery_mill",
             "pottery_workshop"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_pottery.txt",
+          "mod_sha256": "45e35325ad32d7507ece2d4c983ac177c4072860b09e7117faf9834bd587e73e",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_pottery.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_pottery.txt",
           "source_sha256": "2368389cdf1e86bf20fc5acd6a911051b8f0011814d7a714fff141119944d002",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11395,14 +11394,14 @@
             "saltpeter_guild",
             "saltpeter_workshop"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_saltpeter.txt",
+          "mod_sha256": "07df281e277c289d6ec1b54265a3aadfbf00a378903bffd0df7b85d333627097",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_saltpeter.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_saltpeter.txt",
           "source_sha256": "eb056a4362b46c8c0139b6d355954fc5ef91c77be325c7bfc5e49154e8501e12",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11414,14 +11413,14 @@
             "tools_guild",
             "tools_workshop"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_tools.txt",
+          "mod_sha256": "bd2db00e2a82eb3b3313f36da630a046b25fa4f9153881d352b637a4f6e93f06",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_tools.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_tools.txt",
           "source_sha256": "876a873a5b9b15157106b19fc23d8b2e452b93b53b47f8769d83f17774cfd819",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11433,14 +11432,14 @@
             "weapon_manufactory",
             "weapon_workshop"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_weapons.txt",
+          "mod_sha256": "3287bec1bcad6e8f0eaf426970ed18cae5367fda41660e43b2c5b583375ff9bf",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_weapons.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_weapons.txt",
           "source_sha256": "61a5465805982cb70d8bb650b324b67dba975461c5e50a48769975b014b35667",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11450,14 +11449,14 @@
             "winery",
             "winery_manufactory"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/production_wine.txt",
+          "mod_sha256": "ea76c9a0c0a9ccaac2dbaf644f7689b23ff8c495f7314fb8e8081a1b226e9798",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "production_wine.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_wine.txt",
           "source_sha256": "6dfc89b5a6018b12eadeaecb86fb5d41cccbcaa02d3a27ee8eb8fb8fc37b7cfe",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11469,22 +11468,22 @@
             "perfumery",
             "steel_mill"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/pure_one_level_productions.txt",
+          "mod_sha256": "9aa8ccec53e071906b54b707cecbe9810c63161013c874d8793052076bf8f0f6",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "pure_one_level_productions.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\pure_one_level_productions.txt",
           "source_sha256": "f3e50d2f1205a91fdc22daf9440d4c2baf4486fd99e7cbe8c61ea7a984128157",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
           "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "definition_count": 0,
           "definitions": [],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/readme.txt",
+          "mod_sha256": "14ce46183c15a303dc6f37dad4434c992e5e0fc99a1739c4c8e63e22ad090c77",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "readme.txt",
@@ -11504,14 +11503,14 @@
             "orthodox_monastery",
             "sufi_lodge"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/religion_buildings.txt",
+          "mod_sha256": "5c0ae7d7007df79ecc70e6c4484050a3128cdcbc0d2188d758dd52db4ff674b0",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "religion_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\religion_buildings.txt",
           "source_sha256": "6e5b4534b5a10d51e95669ec5e2a83d69778018eb83ecd653b08c9ef0537ab77",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11535,14 +11534,14 @@
             "sheep_farms",
             "windmill"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/rural_buildings.txt",
+          "mod_sha256": "3cee2629b624f518ad80d4998b31c5328277823d9bc09ce091490c9a745e7f40",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "rural_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\rural_buildings.txt",
           "source_sha256": "6e21a38fcae792ae9bad54e6e52c905d71de05baa073f36ffff04c272e2244ac",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11552,14 +11551,14 @@
             "calvinist_preachers",
             "lutheran_preachers"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/situation_buildings.txt",
+          "mod_sha256": "4a674cab57bf2858d31b7351dcb30315f3e20ac2eb251af392e143b0e54a707b",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "situation_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\situation_buildings.txt",
           "source_sha256": "bf140e09369b334514552b58072329663e3bb80538f148191d3afc324b816ce3",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11582,14 +11581,14 @@
             "temple",
             "wharf"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/town_buildings.txt",
+          "mod_sha256": "230b8abf1ffd83cfa6068873fc035bbcbdbccbd7177f285c25faecd6d691b595",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "town_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\town_buildings.txt",
           "source_sha256": "5dda1ef6774690d837dbc9204fec418673895397b3603a0267a98fcae8087681",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11602,14 +11601,14 @@
             "merchants_quarters",
             "port_authority"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/trade_buildings.txt",
+          "mod_sha256": "9082dfc366fbf4070ba8e3a098fa92f613019df4ac541f00c2f9aa4a02afbe2c",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "trade_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\trade_buildings.txt",
           "source_sha256": "05ca22186f1d139c801344bf980a9dbc0ba29141426e1afec0a12b99fba0ee55",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11623,14 +11622,14 @@
             "trade_company_headquarters",
             "trade_company_local_venture"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/trade_company_buildings.txt",
+          "mod_sha256": "3237d37d2d5927a525300689f552ac958b67627f54dea1316c9fb9ce8a19a8de",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "trade_company_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\trade_company_buildings.txt",
           "source_sha256": "fadafecdae3c24140b80161860f1d8786bdc3f33f07495f5a6c3f92a6f88867e",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         },
         {
           "art_reference_count": 0,
@@ -11748,18 +11747,18 @@
             "zazzau_walls",
             "zhixian"
           ],
-          "mod_mirror": null,
-          "mod_sha256": null,
+          "mod_mirror": "in_game/common/building_types/unique_buildings.txt",
+          "mod_sha256": "712b073e930d461a9b8a2cccb86a343ea27e60647372a7366181e330e2b9ebf8",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "unique_buildings.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\unique_buildings.txt",
           "source_sha256": "b7853a50eda5edd9dbc291d962096ce73296b1b3e78412e28e333c3c7836080e",
-          "status": "known_visible_building_debt"
+          "status": "exact_hidden_legacy"
         }
       ],
-      "known_visible_debt": true,
-      "policy": "known_visible_building_debt"
+      "known_visible_debt": false,
+      "policy": "exact_hidden_legacy"
     },
     "country_ranks": {
       "definition_count": 4,

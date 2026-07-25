@@ -127,7 +127,7 @@ legalism_advance = {
 	
 	requires = codified_laws
 	
-	allow = { always = no }
+	allow = { always = no  always = no} # M8 disables vanilla
 	potential = { always = no } # M8 disables vanilla advancement
 }
 
@@ -253,6 +253,7 @@ ranching = {
 	requires = windmills_advance
 	
 	allow = { 
+		always = no # M8 disables vanilla advancement
 		OR = {
 			always = no
 			original_capital ?= { continent = continent:europe }
@@ -303,7 +304,7 @@ feudalism_advance = {
 	military_tactics = 1.0 # WAD, decision by johan
 	ai_weight = { add = 20 }
 
-	allow = { always = no }
+	allow = { always = no  always = no} # M8 disables vanilla
 	potential = { always = no } # M8 disables vanilla advancement
 }
 
@@ -379,6 +380,7 @@ iron_working = {
 	starting_technology_level = 1
 	
 	allow = { 
+		always = no # M8 disables vanilla advancement
 		always = no
 	}
 	
@@ -576,7 +578,7 @@ meritocracy_advance = {
 	depth = 0
 
 
-	allow = { always = no }
+	allow = { always = no  always = no} # M8 disables vanilla
 	potential = { always = no } # M8 disables vanilla advancement
 }
 

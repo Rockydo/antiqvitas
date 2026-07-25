@@ -2995,3 +2995,22 @@ audit cannot securely identify a Roman-owned engine field, vanilla localization
 passes through; the wider priority generator must not replace it with a
 territorial proxy. The priority audit records these unresolved cases explicitly,
 while the runtime layer remains synthetic-name free.
+
+## 2026-07-25 - Quarantine legacy buildings at the registry boundary
+
+Exact-name mirrors permanently false-gate 450 installed building definitions;
+only 15 start- or town-setup adapters remain active until custom replacements
+exist. Inert `has_variable` readers are retained inside false country potentials
+because Jomini audits loaded event-variable contracts. Legacy advance `allow`
+readers are likewise false-gated, with market links changed to locally verified
+optional scope syntax. This prevents UI leakage and missing-market errors without
+silencing valid installed event setters.
+
+## 2026-07-25 - Use engine-native construction and recipe contracts
+
+Custom families use `unlock_building` from the ancient DAG; custom definitions
+do not call the installed variable-backed `has_unlocked_building_trigger`.
+Productive recipes target the installed 19-21% default-price guild margin, while
+civic and military families carry explicit maintenance/service effects. The
+temporary Charcoal Hearth adapter remains only because its installed production
+chain is still active.

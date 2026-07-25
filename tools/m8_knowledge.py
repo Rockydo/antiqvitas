@@ -34,6 +34,7 @@ INSTITUTION_LEDGER = ROOT / "docs/m8/institutions.csv"
 INSTALLED_INSTITUTION_LEDGER = ROOT / "docs/m8/installed_institution_inventory.csv"
 VANILLA_INSTITUTION_SYMBOLS = ROOT / "docs/vanilla_symbols/institution.json"
 REGIONAL_BUILDINGS = ROOT / "in_game/common/building_types/00_antiquitas_regional_buildings.txt"
+REGIONAL_BUILDING_LEDGER = ROOT / "docs/m5/regional_building_families.csv"
 ANCIENT_UNITS = ROOT / "in_game/common/unit_types/00_antiquitas_m7_units.txt"
 ANCIENT_REFORMS = ROOT / "in_game/common/government_reforms/00_antiquitas_m6_core.txt"
 ANCIENT_PRIVILEGES = ROOT / "in_game/common/estate_privileges/00_antiquitas_m6_core.txt"
@@ -57,6 +58,7 @@ UNLOCK = re.compile(r"^\s*unlock_(?:unit|levy)\s*=", re.IGNORECASE)
 TOP_LEVEL = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*\s*=\s*\{")
 POTENTIAL = re.compile(r"^\s*potential\s*=")
 CAN_SPAWN = re.compile(r"^\s*can_spawn\s*=")
+ALLOW = re.compile(r"^\s*allow\s*=")
 CORE_TAGS = frozenset(("ROM", "HAN", "PAR"))
 # The AD 1 setup retains a small, engine-native law/policy surface for
 # administrative continuity.  M8 replaces the vanilla advances that formerly
@@ -808,6 +810,35 @@ BUILDING_TRACK_HINTS: dict[str, tuple[str, ...]] = {
     ),
 }
 
+ROMAN_ECONOMY_UNLOCKS: dict[str, tuple[str, ...]] = {
+    "antq_tax_registers": (
+        "antq_reg_villa_rustica", "antq_reg_tabernae_row", "antq_reg_forum_basilica",
+        "antq_reg_insulae_quarter", "antq_reg_temple_precinct", "antq_reg_collegia_hall",
+    ),
+    "antq_road_milestones": (
+        "antq_reg_aqueduct_distribution", "antq_reg_thermae_complex",
+        "antq_reg_cursus_mansio", "antq_reg_river_port", "antq_reg_colonia_forum",
+    ),
+    "antq_public_granaries": (
+        "antq_reg_horrea_complex", "antq_reg_annona_bakery",
+        "antq_reg_quarry_contractors", "antq_reg_olive_estate",
+        "antq_reg_vineyard_estate", "antq_reg_textile_quarter",
+        "antq_reg_ceramic_quarter", "antq_reg_bronze_workers_collegium",
+        "antq_reg_lead_pipeworks", "antq_reg_unguentarium",
+    ),
+    "antq_supply_columns": (
+        "antq_reg_castra_fabrica", "antq_reg_frontier_magazine",
+    ),
+}
+
+
+def regional_building_keys() -> tuple[str, ...]:
+    with REGIONAL_BUILDING_LEDGER.open(encoding="utf-8-sig", newline="") as handle:
+        keys = tuple((row.get("key") or "").strip() for row in csv.DictReader(handle))
+    if not keys or any(not key.startswith("antq_reg_") for key in keys) or len(keys) != len(set(keys)):
+        raise ValueError("regional building ledger has missing, invalid, or duplicate keys")
+    return keys
+
 
 def building_track(key: str) -> str:
     for track, hints in BUILDING_TRACK_HINTS.items():
@@ -829,8 +860,15 @@ def content_unlocks(records: tuple[Advance, ...]) -> dict[str, tuple[tuple[str, 
         result[key].extend(entries)
     for key, entries in CONTENT_UNLOCKS.items():
         result[key].extend(entries)
+    managed_roman_buildings: set[str] = set()
+    for advance, buildings in ROMAN_ECONOMY_UNLOCKS.items():
+        result[advance].extend(("unlock_building", building) for building in buildings)
+        managed_roman_buildings.update(buildings)
 
-    buildings = ordered_top_level_keys(REGIONAL_BUILDINGS, "antq_reg_")
+    buildings = tuple(
+        building for building in regional_building_keys()
+        if building not in managed_roman_buildings
+    )
     grouped: dict[str, list[str]] = {track: [] for track in TRACKS}
     for building in buildings:
         grouped[building_track(building)].append(building)
@@ -952,7 +990,11 @@ def validate(records: tuple[Advance, ...]) -> None:
         "unlock_subject_type": (ANCIENT_SUBJECT_TYPES, "antq_"),
     }
     for field, (path, prefix) in target_sources.items():
-        expected_targets = set(ordered_top_level_keys(path, prefix))
+        expected_targets = (
+            set(regional_building_keys())
+            if field == "unlock_building"
+            else set(ordered_top_level_keys(path, prefix))
+        )
         actual_targets = [
             target
             for entries in unlocks.values()
@@ -1113,6 +1155,14 @@ def inject_inline_false(line: str) -> str:
     return code[:closing] + " always = no" + code[closing:] + " # M8 disables vanilla" + suffix
 
 
+def optionalize_market_links(line: str) -> str:
+    """Keep compatibility readers while making absent AD 1 market links safe."""
+    code, marker, comment = line.partition("#")
+    code = re.sub(r"(?<!\?)\bmarket\s*=\s*\{", "market ?= {", code)
+    suffix = marker + comment if marker else ""
+    return code + suffix
+
+
 def disabled_content(path: Path, field: re.Pattern[str], field_name: str, kind: str, strip_unlocks: bool) -> str:
     """Add a false condition without deleting references inside the source block."""
     raw = path.read_text(encoding="utf-8-sig", errors="strict")
@@ -1123,14 +1173,35 @@ def disabled_content(path: Path, field: re.Pattern[str], field_name: str, kind: 
     depth = 0
     root_has_gate = False
     root_open = False
+    legacy_allow_depth: int | None = None
     for line in raw.splitlines():
         code = line.split("#", 1)[0]
         delta = brace_delta(line)
+        if legacy_allow_depth is not None:
+            rendered.append(optionalize_market_links(line))
+            depth += delta
+            if depth == legacy_allow_depth:
+                legacy_allow_depth = None
+            continue
         if depth == 0 and TOP_LEVEL.match(code):
             root_open = delta > 0
             root_has_gate = False
             rendered.append(line)
             depth += delta
+            continue
+        if root_open and depth == 1 and kind == "advancement" and ALLOW.match(code):
+            # EU5 evaluates `allow` even when `potential` is false. Preserve
+            # harmless variable readers needed by the engine's load-time
+            # contract audit, but false-gate the block and optionalize market
+            # links so countries without an established AD 1 market are safe.
+            if delta == 0:
+                rendered.append(optionalize_market_links(inject_inline_false(line)))
+            else:
+                rendered.append(optionalize_market_links(line))
+                indent = code[: len(code) - len(code.lstrip())]
+                rendered.append(f"{indent}\talways = no # M8 disables vanilla advancement")
+                legacy_allow_depth = depth
+                depth += delta
             continue
         if root_open and depth == 1 and field.match(code):
             if delta == 0:
@@ -1429,6 +1500,45 @@ def expected_inventory(relative: str, destination: Path, custom: str) -> set[Pat
     return { *installed, destination / custom }
 
 
+def unsafe_disabled_allows(text: str) -> list[str]:
+    """Return reasons any retained top-level legacy allow is not inert/safe."""
+    failures: list[str] = []
+    lines = text.splitlines()
+    depth = 0
+    root_open = False
+    index = 0
+    while index < len(lines):
+        line = lines[index]
+        code = line.split("#", 1)[0]
+        delta = brace_delta(line)
+        if depth == 0 and TOP_LEVEL.match(code):
+            root_open = delta > 0
+            depth += delta
+            index += 1
+            continue
+        if root_open and depth == 1 and ALLOW.match(code):
+            block = [line]
+            target_depth = depth
+            depth += delta
+            index += 1
+            while delta > 0 and index < len(lines) and depth != target_depth:
+                child = lines[index]
+                block.append(child)
+                depth += brace_delta(child)
+                index += 1
+            rendered = "\n".join(block)
+            if "always = no" not in rendered:
+                failures.append("top-level allow lacks permanent false gate")
+            if re.search(r"(?<!\?)\bmarket\s*=\s*\{", rendered):
+                failures.append("top-level allow retains a mandatory market link")
+            continue
+        depth += delta
+        index += 1
+        if root_open and depth == 0:
+            root_open = False
+    return failures
+
+
 def write(records: tuple[Advance, ...]) -> None:
     for path, content in outputs(records).items():
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -1457,6 +1567,8 @@ def check(records: tuple[Advance, ...]) -> bool:
         text = path.read_text(encoding="utf-8-sig") if path.is_file() else ""
         if UNLOCK.search(text):
             failures.append(f"unit or levy unlock survived in {path.relative_to(ROOT)}")
+        for reason in unsafe_disabled_allows(text):
+            failures.append(f"{reason} in {path.relative_to(ROOT)}")
     for path in institution_inventory:
         text = path.read_text(encoding="utf-8-sig") if path.is_file() else ""
         if "00_antiquitas_m8" not in path.name:

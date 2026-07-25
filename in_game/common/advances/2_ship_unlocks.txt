@@ -211,6 +211,7 @@ unlock_traditional_galley_advance = {
 	requires = ship_building_advance
 
 	allow = { 
+		always = no # M8 disables vanilla advancement
 		always = no
 	}
 

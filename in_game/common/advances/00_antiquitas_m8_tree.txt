@@ -59,6 +59,12 @@ antq_tax_registers = {
 	unlock_law = distribution_of_power_law
 	unlock_subject_type = antq_client_kingdom
 	unlock_casus_belli = antq_impose_client_king
+	unlock_building = antq_reg_villa_rustica
+	unlock_building = antq_reg_tabernae_row
+	unlock_building = antq_reg_forum_basilica
+	unlock_building = antq_reg_insulae_quarter
+	unlock_building = antq_reg_temple_precinct
+	unlock_building = antq_reg_collegia_hall
 	starting_technology_level = 2
 	requires = antq_imperial_cult
 	ai_weight = { add = 90 }
@@ -80,6 +86,11 @@ antq_road_milestones = {
 	stability_cost_efficiency = 0.02
 	unlock_law = royal_court_customs_law
 	unlock_casus_belli = antq_frontier_rectification
+	unlock_building = antq_reg_aqueduct_distribution
+	unlock_building = antq_reg_thermae_complex
+	unlock_building = antq_reg_cursus_mansio
+	unlock_building = antq_reg_river_port
+	unlock_building = antq_reg_colonia_forum
 	starting_technology_level = 2
 	requires = antq_imperial_cult
 	ai_weight = { add = 90 }
@@ -143,6 +154,16 @@ antq_public_granaries = {
 		}
 	}
 	country_cabinet_efficiency = 0.015
+	unlock_building = antq_reg_horrea_complex
+	unlock_building = antq_reg_annona_bakery
+	unlock_building = antq_reg_quarry_contractors
+	unlock_building = antq_reg_olive_estate
+	unlock_building = antq_reg_vineyard_estate
+	unlock_building = antq_reg_textile_quarter
+	unlock_building = antq_reg_ceramic_quarter
+	unlock_building = antq_reg_bronze_workers_collegium
+	unlock_building = antq_reg_lead_pipeworks
+	unlock_building = antq_reg_unguentarium
 	starting_technology_level = 3
 	requires = antq_tax_registers
 	requires = antq_road_milestones
@@ -937,6 +958,8 @@ antq_supply_columns = {
 		}
 	}
 	army_maintenance_efficiency = 0.01
+	unlock_building = antq_reg_castra_fabrica
+	unlock_building = antq_reg_frontier_magazine
 	starting_technology_level = 2
 	requires = antq_professional_standing_armies
 	ai_weight = { add = 90 }

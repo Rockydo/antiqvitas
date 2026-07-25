@@ -72,6 +72,7 @@ square_rigged_caravel = {
 	}
 
 	allow = {
+		always = no # M8 disables vanilla advancement
 		OR = {
 			has_advance = iberian_caravel
 			has_advance = unlock_caravel_advance

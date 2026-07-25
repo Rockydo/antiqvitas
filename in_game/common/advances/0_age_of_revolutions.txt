@@ -25,7 +25,7 @@ enlightenment_advance = {
 	tolerance_heathen = 1
 	depth = 0
 	
-	allow = { always = no }
+	allow = { always = no  always = no} # M8 disables vanilla
 	potential = { always = no } # M8 disables vanilla advancement
 }
 
@@ -140,7 +140,7 @@ industrialization_advance = {
 	global_production_efficiency = large_production_efficiency_bonus
 	global_mills_build_buildings_efficiency = 0.5
 	depth = 0
-	allow = { always = no }
+	allow = { always = no  always = no} # M8 disables vanilla
 	potential = { always = no } # M8 disables vanilla advancement
 }
 
@@ -281,7 +281,7 @@ levee_en_masse_advance = {
 	depth = 0
 	ai_weight = { add = 100 }
 
-	allow = { always = no }
+	allow = { always = no  always = no} # M8 disables vanilla
 	potential = { always = no } # M8 disables vanilla advancement
 }
 

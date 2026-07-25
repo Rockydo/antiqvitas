@@ -1259,6 +1259,7 @@ smz_tanegashima = {
 	}
 
 	allow = {
+		always = no # M8 disables vanilla advancement
 		OR = {
 			NOT = { exists = international_organization:japanese_shogunate }
 			international_organization:japanese_shogunate ?= { has_variable = firearms_production }

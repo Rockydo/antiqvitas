@@ -361,7 +361,7 @@ shared_brotherhood = {
 			original_capital.region = region:canada_region
 		}
 	}
-	allow = { has_unlocked_advance_trigger = { type = inigo_architecture } }
+	allow = { has_unlocked_advance_trigger = { type = inigo_architecture }  always = no} # M8 disables vanilla
 	global_pop_assimilation_speed_modifier = 0.1
 	stability_investment = small_stability_investment
 }

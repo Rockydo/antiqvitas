@@ -165,7 +165,7 @@ inigo_architecture = {
 			has_or_had_tag = GBR
 		}
 	}
-	allow = { has_unlocked_advance_trigger = { type = inigo_architecture } }
+	allow = { has_unlocked_advance_trigger = { type = inigo_architecture }  always = no} # M8 disables vanilla
 	allow_children = no
 	
 	cultural_tradition_modifier = 0.2
@@ -180,7 +180,7 @@ sailing_and_fighting_instructions = {
 			has_or_had_tag = GBR
 		}
 	}
-	allow = { has_unlocked_advance_trigger = { type = sailing_and_fighting_instructions } }
+	allow = { has_unlocked_advance_trigger = { type = sailing_and_fighting_instructions }  always = no} # M8 disables vanilla
 	
 	allow_children = no
 
@@ -199,6 +199,7 @@ coke_smelting = {
 		}
 	}
 	allow = {
+		always = no # M8 disables vanilla advancement
 		custom_tooltip = {
 				text = unlocked_advance_coke_smelting_tt
 				has_variable = unlocked_advance_coke_smelting
@@ -256,7 +257,7 @@ water_frame = {
 			has_or_had_tag = GBR
 		}
 	}
-	allow = { has_unlocked_advance_trigger = { type = water_frame } }
+	allow = { has_unlocked_advance_trigger = { type = water_frame }  always = no} # M8 disables vanilla
 
 	allow_children = no
 	

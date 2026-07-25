@@ -64,7 +64,7 @@ control_the_malacca_strait = {
 		has_or_had_tag = MLC
 	}
 
-	allow = { owns = location:malacca }
+	allow = { owns = location:malacca  always = no} # M8 disables vanilla
 
 	icon = bng_bengali_trade_fleet
 

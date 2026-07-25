@@ -26,7 +26,7 @@ sca_sound_toll = {
 
 	potential = { has_or_had_tag = SCA  always = no} # M8 disables vanilla
 
-	allow = { own_entire_province = province_definition:zealand_province }
+	allow = { own_entire_province = province_definition:zealand_province  always = no} # M8 disables vanilla
 
 	requires = merchant_power_from_maritime_discovery_advance
 	

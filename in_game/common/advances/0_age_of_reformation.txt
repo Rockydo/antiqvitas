@@ -26,7 +26,7 @@ confessionalism_advance = {
 
 	depth = 0
 	
-	allow = { always = no }
+	allow = { always = no  always = no} # M8 disables vanilla
 	potential = { always = no } # M8 disables vanilla advancement
 }
 
@@ -124,7 +124,7 @@ global_trade_advance = {
 		
 	merchant_maintenance_efficiency = 0.20
 	depth = 0
-	allow = { always = no }
+	allow = { always = no  always = no} # M8 disables vanilla
 	potential = { always = no } # M8 disables vanilla advancement
 }
 
@@ -282,7 +282,7 @@ artillery_institution_advance = {
 	depth = 0
 	ai_weight = { add = 100 }
 
-	allow = { always = no }
+	allow = { always = no  always = no} # M8 disables vanilla
 	potential = { always = no } # M8 disables vanilla advancement
 }
 

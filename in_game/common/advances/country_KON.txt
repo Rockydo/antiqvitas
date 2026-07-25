@@ -61,6 +61,7 @@ kon_transatlantic_slave_trade = {
 	age = age_4_reformation
 	potential = { has_or_had_tag = KON  always = no} # M8 disables vanilla
 	allow = { 
+		always = no # M8 disables vanilla advancement
 		current_age_or_later = { age = age_5_absolutism } 
 		modifier:slavery_blocked = no
 	}

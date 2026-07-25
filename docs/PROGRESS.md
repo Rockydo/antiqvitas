@@ -6544,3 +6544,14 @@ reviewed 128px BC7 DDS.
 - Exact 11-client localization, prohibited-era, and localization checks pass;
   the reconciled 69-check suite and paired vanilla/mod smoke both pass with zero
   mod-only `error.log` lines.
+
+## 2026-07-25 - Roman provincial economy tranche
+
+- Added 23 layered Roman families, 509 profile placements across Italy and 14
+  provincial theatres, eight processed goods, and 31 direct circle-safe assets.
+- The active registry now has 177 regional families, 143 productive families,
+  2,421 placements, and 13 custom goods. Exact quarantine hides 450 installed
+  buildings while retaining 15 setup-proven adapters.
+- A fresh Rome run reached 31 January without building, market-scope, or unused
+  variable errors. Validation passes 75/75 and paired smoke has zero mod-only
+  lines. Established-market production evidence remains the next P3 gate.

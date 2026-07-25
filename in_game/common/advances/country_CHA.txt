@@ -22,7 +22,7 @@ my_son_sanctuary = {	#Mỹ Sơn Sanctuary
 
 	icon = hindu_architecture
 
-	allow = { religion = religion:hindu }
+	allow = { religion = religion:hindu  always = no} # M8 disables vanilla
 
 	monthly_self_control = 0.01
 	tolerance_own = 1

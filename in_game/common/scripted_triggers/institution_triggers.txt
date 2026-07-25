@@ -150,7 +150,7 @@ global_trade_plausible_location = {
 		location_rank = location_rank:city
 		location_rank = location_rank:megalopolis
 	}
-	market = {
+	market ?= {
 		total_goods_value_traded > 500
 	}
 }

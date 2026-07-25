@@ -58,6 +58,7 @@ scottish_morale = {
 		}
 	}
 	allow = {
+		always = no # M8 disables vanilla advancement
 		NOT = { is_subject_of = c:ENG } #to make it not available for Balliol when they are a subject of England after Civil War
 		NOT = { has_or_had_tag = SBL }
 	}
@@ -74,6 +75,7 @@ scottish_longbowmen = {
 		culture = { has_culture_group = culture_group:scottish_group }
 	}
 	allow = {
+		always = no # M8 disables vanilla advancement
 		OR = {
 			is_subject_of = c:ENG #replacement for scottish_morale if Scotland submits to England
 			has_or_had_tag = SBL
@@ -117,6 +119,7 @@ scottish_tenacity = {
 		culture = { has_culture_group = culture_group:scottish_group }
 	}
 	allow = {
+		always = no # M8 disables vanilla advancement
 		NOT = { is_subject_of = c:ENG } #to make it not available for Balliol when they are a subject of England after Civil War
 		NOT = { has_or_had_tag = SBL }
 	}
@@ -131,6 +134,7 @@ influx_of_english_nobles = {
 		culture = { has_culture_group = culture_group:scottish_group }
 	}
 	allow = {
+		always = no # M8 disables vanilla advancement
 		is_subject_of = c:ENG #replacement for scottish_tenacity if Scotland submits to England
 	}
 	global_monthly_control = 0.002

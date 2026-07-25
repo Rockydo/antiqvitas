@@ -18,6 +18,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from extract_vanilla import tokenize
+
 
 ROOT = Path(__file__).resolve().parents[1]
 FAMILIES = ROOT / "docs/m5/regional_building_families.csv"
@@ -25,11 +27,14 @@ SEEDS = ROOT / "docs/m5/regional_building_seeds.csv"
 OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
 GOODS = ROOT / "docs/vanilla_symbols/good.json"
+CUSTOM_GOODS = ROOT / "docs/m5/custom_goods.csv"
+ADVANCES = ROOT / "docs/m8/advances.csv"
 LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
 ICON_DIR = ROOT / "main_menu/gfx/interface/icons/buildings"
 OUTPUT = ROOT / "in_game/common/building_types/00_antiquitas_regional_buildings.txt"
 LOC_ROOT = ROOT / "main_menu/localization"
 DDS = ROOT / "tools/dds.py"
+LOCAL_PATHS = ROOT / "config/local_paths.json"
 LANGUAGES = (
     "english", "french", "german", "spanish", "polish", "russian", "braz_por",
     "simp_chinese", "japanese", "korean", "turkish",
@@ -237,6 +242,100 @@ PRODUCTION_RECIPES = {
     "antq_reg_materia_medica": ("medicaments", "0.5", (("mercury", "0.0181"), ("ivory", "0.0906"))),
 }
 
+# The older expansion passes deliberately copied exact installed guild
+# equations even when their output had little to do with the workshop name.
+# These source-led overrides make the economic identity real.  Coefficients
+# preserve the locally verified 20% guild margin at default prices.
+COHERENT_RECIPE_OVERRIDES = {
+    "antq_reg_olive_press": ("antq_olive_oil", "0.76", (("olives", "1.20"), ("pottery", "0.12"), ("tools", "0.05"), ("lumber", "0.08"))),
+    "antq_reg_fish_saltery": ("antq_preserved_fish", "0.77", (("fish", "1.20"), ("salt", "0.12"), ("pottery", "0.10"), ("tools", "0.05"))),
+    "antq_reg_grain_mill": ("antq_grain_products", "1.10", (("wheat", "1.00"), ("lumber", "0.15"), ("tools", "0.05"))),
+    "antq_reg_bread_oven": ("antq_grain_products", "1.10", (("wheat", "1.00"), ("lumber", "0.15"), ("tools", "0.05"))),
+    "antq_reg_oil_bottler": ("antq_olive_oil", "0.76", (("olives", "1.20"), ("pottery", "0.12"), ("tools", "0.05"), ("lumber", "0.08"))),
+    "antq_reg_garum_workshop": ("antq_preserved_fish", "0.77", (("fish", "1.20"), ("salt", "0.12"), ("pottery", "0.10"), ("tools", "0.05"))),
+    "antq_reg_incense_workshop": ("antq_perfumes", "0.52", (("incense", "0.80"), ("olives", "0.20"), ("pottery", "0.10"), ("tools", "0.10"))),
+    "antq_reg_perfumery": ("antq_perfumes", "0.52", (("incense", "0.80"), ("olives", "0.20"), ("pottery", "0.10"), ("tools", "0.10"))),
+    "antq_reg_wax_workshop": ("antq_wax_goods", "0.82", (("beeswax", "0.80"), ("fiber_crops", "0.20"), ("pottery", "0.10"), ("tools", "0.10"))),
+    "antq_reg_torchmaker": ("antq_wax_goods", "0.82", (("beeswax", "0.80"), ("fiber_crops", "0.20"), ("pottery", "0.10"), ("tools", "0.10"))),
+    "antq_reg_soapworks": ("antq_soap", "0.80", (("olives", "0.70"), ("lumber", "0.25"), ("pottery", "0.10"), ("tools", "0.05"))),
+    "antq_reg_bronze_foundry": ("antq_bronze_wares", "0.86", (("copper", "0.70"), ("tin", "0.15"), ("coal", "0.15"), ("tools", "0.05"))),
+    "antq_reg_copper_smithy": ("antq_bronze_wares", "0.86", (("copper", "0.70"), ("tin", "0.15"), ("coal", "0.15"), ("tools", "0.05"))),
+    "antq_reg_tin_smelter": ("antq_bronze_wares", "0.86", (("copper", "0.70"), ("tin", "0.15"), ("coal", "0.15"), ("tools", "0.05"))),
+    "antq_reg_weightmaker": ("antq_bronze_wares", "0.86", (("copper", "0.70"), ("tin", "0.15"), ("coal", "0.15"), ("tools", "0.05"))),
+    "antq_reg_bronze_vessel_shop": ("antq_bronze_wares", "0.86", (("copper", "0.70"), ("tin", "0.15"), ("coal", "0.15"), ("tools", "0.05"))),
+    "antq_reg_cauldron_smithy": ("antq_bronze_wares", "0.86", (("copper", "0.70"), ("tin", "0.15"), ("coal", "0.15"), ("tools", "0.05"))),
+    "antq_reg_bell_foundry": ("antq_bronze_wares", "0.86", (("copper", "0.70"), ("tin", "0.15"), ("coal", "0.15"), ("tools", "0.05"))),
+    "antq_reg_lead_foundry": ("antq_lead_wares", "0.88", (("lead", "0.80"), ("coal", "0.15"), ("tools", "0.10"))),
+    "antq_reg_dye_workshop": ("fine_cloth", "0.49", (("cloth", "0.50"), ("dyes", "0.20"), ("tools", "0.05"))),
+    "antq_reg_alum_dyehouse": ("fine_cloth", "0.49", (("cloth", "0.50"), ("dyes", "0.20"), ("tools", "0.05"))),
+    "antq_reg_mordant_dyehouse": ("fine_cloth", "0.49", (("cloth", "0.50"), ("dyes", "0.20"), ("tools", "0.05"))),
+    "antq_reg_purple_dyehouse": ("fine_cloth", "0.49", (("cloth", "0.50"), ("dyes", "0.20"), ("tools", "0.05"))),
+    "antq_reg_textile_dye_finisher": ("fine_cloth", "0.49", (("cloth", "0.50"), ("dyes", "0.20"), ("tools", "0.05"))),
+    "antq_reg_silk_loom": ("fine_cloth", "0.70", (("silk", "0.875"),)),
+    "antq_reg_scriptorium": ("books", "0.78", (("antq_papyrus", "0.40"), ("dyes", "0.05"), ("lumber", "0.10"))),
+    "antq_reg_papyrus_workshop": ("books", "0.78", (("antq_papyrus", "0.40"), ("dyes", "0.05"), ("lumber", "0.10"))),
+    "antq_reg_scroll_workshop": ("books", "0.78", (("antq_papyrus", "0.40"), ("dyes", "0.05"), ("lumber", "0.10"))),
+    "antq_reg_stationer": ("books", "0.78", (("antq_papyrus", "0.40"), ("dyes", "0.05"), ("lumber", "0.10"))),
+    "antq_reg_reed_pen_maker": ("books", "0.78", (("antq_papyrus", "0.40"), ("dyes", "0.05"), ("lumber", "0.10"))),
+    "antq_reg_weapon_smith": ("weaponry", "1.06", (("iron", "0.60"), ("lumber", "0.20"), ("coal", "0.20"), ("tools", "0.05"))),
+    "antq_reg_scale_armoury": ("weaponry", "1.08", (("iron", "0.50"), ("copper", "0.15"), ("leather", "0.20"), ("tools", "0.05"))),
+    "antq_reg_arrow_fletchery": ("weaponry", "1.20", (("lumber", "0.60"), ("iron", "0.35"), ("tools", "0.35"))),
+    "antq_reg_shieldmaker": ("weaponry", "1.20", (("lumber", "0.50"), ("leather", "0.35"), ("iron", "0.20"), ("tools", "0.20"))),
+    "antq_reg_brickworks": ("masonry", "0.96", (("clay", "1.60"),)),
+    "antq_reg_lime_kiln": ("masonry", "1.38", (("stone", "0.70"), ("lumber", "0.20"), ("tools", "0.05"))),
+    "antq_reg_marble_yard": ("masonry", "5.94", (("marble", "0.80"), ("stone", "0.50"), ("tools", "0.15"))),
+    "antq_reg_mosaic_workshop": ("masonry", "3.48", (("stone", "0.80"), ("glass", "0.50"), ("tools", "0.20"))),
+    "antq_reg_stuccoworks": ("masonry", "1.80", (("stone", "0.60"), ("clay", "0.60"), ("lumber", "0.20"), ("tools", "0.10"))),
+    "antq_reg_quernworks": ("masonry", "1.80", (("stone", "1.20"), ("iron", "0.05"), ("tools", "0.05"))),
+    "antq_reg_stone_carver": ("masonry", "2.40", (("stone", "1.20"), ("marble", "0.10"), ("tools", "0.10"))),
+    "antq_reg_mortar_grinder": ("masonry", "1.80", (("stone", "1.20"), ("iron", "0.05"), ("tools", "0.05"))),
+    "antq_reg_brewhouse": ("beer", "1.00", (("wheat", "0.9944"), ("lumber", "0.2484"), ("tools", "0.0999"))),
+    "antq_reg_honey_house": ("beer", "1.00", (("fruit", "1.0412"), ("lumber", "0.208"), ("tools", "0.1045"))),
+    "antq_reg_bone_carver": ("jewelry", "0.396", (("livestock", "0.80"), ("tools", "0.15"))),
+    "antq_reg_hornworker": ("jewelry", "0.396", (("livestock", "0.80"), ("tools", "0.15"))),
+    "antq_reg_beadworks": ("jewelry", "1.08", (("glass", "0.80"), ("dyes", "0.30"), ("tools", "0.30"))),
+    "antq_reg_charcoal_hearth": ("coal", "0.99", (("lumber", "0.90"), ("tools", "0.10"))),
+    "antq_reg_villa_rustica": ("antq_grain_products", "1.10", (("wheat", "1.00"), ("lumber", "0.15"), ("tools", "0.05"))),
+    "antq_reg_annona_bakery": ("antq_grain_products", "1.10", (("wheat", "1.00"), ("lumber", "0.15"), ("tools", "0.05"))),
+    "antq_reg_quarry_contractors": ("masonry", "2.16", (("stone", "1.20"), ("lumber", "0.20"), ("tools", "0.10"))),
+    "antq_reg_olive_estate": ("antq_olive_oil", "0.76", (("olives", "1.20"), ("pottery", "0.12"), ("tools", "0.05"), ("lumber", "0.08"))),
+    "antq_reg_vineyard_estate": ("wine", "1", (("fruit", "1.154"), ("lumber", "0.157"), ("tools", "0.092"))),
+    "antq_reg_textile_quarter": ("cloth", "1", (("wool", "1.0"),)),
+    "antq_reg_ceramic_quarter": ("pottery", "1.0", (("clay", "1.0039"), ("lumber", "0.1201"), ("tools", "0.0504"))),
+    "antq_reg_castra_fabrica": ("weaponry", "1.06", (("iron", "0.60"), ("lumber", "0.20"), ("coal", "0.20"), ("tools", "0.05"))),
+    "antq_reg_bronze_workers_collegium": ("antq_bronze_wares", "0.86", (("copper", "0.70"), ("tin", "0.15"), ("coal", "0.15"), ("tools", "0.05"))),
+    "antq_reg_lead_pipeworks": ("antq_lead_wares", "0.88", (("lead", "0.80"), ("coal", "0.15"), ("tools", "0.10"))),
+    "antq_reg_unguentarium": ("antq_perfumes", "0.52", (("incense", "0.80"), ("olives", "0.20"), ("pottery", "0.10"), ("tools", "0.10"))),
+}
+PRODUCTION_RECIPES.update(COHERENT_RECIPE_OVERRIDES)
+
+# These handling/service buildings are intentionally non-productive: forcing a
+# fake export good would again make their labels cosmetic.
+for _service_key in ("antq_reg_sponge_drying_yard",):
+    PRODUCTION_RECIPES.pop(_service_key, None)
+
+WATER_OR_PORT_FAMILIES = {
+    "antq_reg_shipyard", "antq_reg_reed_boatyard", "antq_reg_bargeyard",
+    "antq_reg_ferry_quay", "antq_reg_wharf_crane", "antq_reg_barge_chandlery",
+    "antq_reg_oarwright", "antq_reg_sailmaker", "antq_reg_sail_needle_shop",
+    "antq_reg_pulley_workshop", "antq_reg_river_port",
+}
+ROMAN_ECONOMY_FAMILIES = {
+    "antq_reg_villa_rustica", "antq_reg_tabernae_row", "antq_reg_forum_basilica",
+    "antq_reg_horrea_complex", "antq_reg_annona_bakery", "antq_reg_aqueduct_distribution",
+    "antq_reg_thermae_complex", "antq_reg_cursus_mansio", "antq_reg_river_port",
+    "antq_reg_colonia_forum", "antq_reg_castra_fabrica", "antq_reg_frontier_magazine",
+    "antq_reg_quarry_contractors", "antq_reg_olive_estate", "antq_reg_vineyard_estate",
+    "antq_reg_textile_quarter", "antq_reg_ceramic_quarter", "antq_reg_insulae_quarter",
+    "antq_reg_temple_precinct", "antq_reg_collegia_hall", "antq_reg_bronze_workers_collegium",
+    "antq_reg_lead_pipeworks", "antq_reg_unguentarium",
+}
+CITY_ONLY_FAMILIES = {
+    "antq_reg_forum_basilica", "antq_reg_horrea_complex", "antq_reg_aqueduct_distribution",
+    "antq_reg_thermae_complex", "antq_reg_insulae_quarter", "antq_reg_temple_precinct",
+    "antq_reg_collegia_hall",
+}
+
 
 def csv_rows(path: Path, fields: tuple[str, ...]) -> list[dict[str, str]]:
     with path.open(encoding="utf-8-sig", newline="") as handle:
@@ -273,10 +372,49 @@ def owner_regions() -> dict[str, str]:
     return result
 
 
+def good_prices() -> dict[str, float]:
+    """Read default prices from the pinned local engine and custom-goods ledger."""
+    config = json.loads(LOCAL_PATHS.read_text(encoding="utf-8-sig"))
+    directory = Path(str(config["game_dir"])) / "game/in_game/common/goods"
+    if not directory.is_dir():
+        raise ValueError(f"installed goods directory is missing: {directory}")
+    result: dict[str, float] = {}
+    for path in directory.glob("*.txt"):
+        tokens = list(tokenize(path.read_text(encoding="utf-8-sig", errors="strict")))
+        depth = 0
+        current = ""
+        index = 0
+        while index < len(tokens):
+            value = tokens[index].value
+            if depth == 0 and index + 2 < len(tokens) and tokens[index + 1].value == "=" and tokens[index + 2].value == "{":
+                current = value
+            if value == "{":
+                depth += 1
+            elif value == "}":
+                depth -= 1
+                if depth == 0:
+                    current = ""
+            elif (
+                depth == 1 and current and value == "default_market_price"
+                and index + 2 < len(tokens) and tokens[index + 1].value == "="
+            ):
+                try:
+                    result[current] = float(tokens[index + 2].value)
+                except ValueError as exc:
+                    raise ValueError(f"{path.name}: nonnumeric default price for {current}") from exc
+            index += 1
+    with CUSTOM_GOODS.open(encoding="utf-8-sig", newline="") as handle:
+        for row in csv.DictReader(handle):
+            result[(row.get("key") or "").strip()] = float((row.get("price") or "").strip())
+    return result
+
+
 def load() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     families = csv_rows(FAMILIES, FAMILY_FIELDS)
     seeds = csv_rows(SEEDS, SEED_FIELDS)
     goods = set(json.loads(GOODS.read_text(encoding="utf-8-sig")))
+    with CUSTOM_GOODS.open(encoding="utf-8-sig", newline="") as handle:
+        goods.update((row.get("key") or "").strip() for row in csv.DictReader(handle))
     locations = set(json.loads(LOCATIONS.read_text(encoding="utf-8-sig")))
     regions = owner_regions()
     failures: list[str] = []
@@ -318,6 +456,36 @@ def load() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     unknown_recipes = set(PRODUCTION_RECIPES) - family_keys
     if unknown_recipes:
         failures.append(f"productive recipe map has unknown families {sorted(unknown_recipes)}")
+    for key, (produced, _output, inputs) in PRODUCTION_RECIPES.items():
+        unknown_goods = {produced, *(good for good, _amount in inputs)} - goods
+        if unknown_goods:
+            failures.append(f"{key}: productive recipe uses unknown goods {sorted(unknown_goods)}")
+    prices = good_prices()
+    for key, (produced, output, inputs) in PRODUCTION_RECIPES.items():
+        missing_prices = {produced, *(good for good, _amount in inputs)} - prices.keys()
+        if missing_prices:
+            failures.append(f"{key}: missing local default prices {sorted(missing_prices)}")
+            continue
+        input_value = sum(prices[good] * float(amount) for good, amount in inputs)
+        output_value = prices[produced] * float(output)
+        margin = output_value / input_value - 1 if input_value else -1
+        if not 0.19 <= margin <= 0.21:
+            failures.append(
+                f"{key}: default-price guild margin {margin:.1%} must remain within 19%-21%"
+            )
+    with ADVANCES.open(encoding="utf-8-sig", newline="") as handle:
+        unlock_counts = {key: 0 for key in family_keys}
+        for advance in csv.DictReader(handle):
+            for token in (advance.get("unlocks") or "").split(";"):
+                kind, separator, target = token.strip().partition("=")
+                if separator and kind == "unlock_building" and target in unlock_counts:
+                    unlock_counts[target] += 1
+    missing_unlocks = sorted(key for key, count in unlock_counts.items() if not count)
+    duplicate_unlocks = sorted(key for key, count in unlock_counts.items() if count > 1)
+    if missing_unlocks:
+        failures.append(f"regional families lack an advance unlock: {missing_unlocks}")
+    if duplicate_unlocks:
+        failures.append(f"regional families have duplicate advance unlocks: {duplicate_unlocks}")
     seen_keys: set[str] = set()
     seen_pairs: set[tuple[str, str]] = set()
     used: set[str] = set()
@@ -372,8 +540,34 @@ def definition(families: list[dict[str, str]]) -> str:
     for row in families:
         lines.extend((f"{row['key']} = {{", "\taudio_tier = 2", "\tis_special = no", "\tis_foreign = no",
                       f"\tpop_type = {row['pop_type']}", "\tmax_levels = guild_max_level", "\tstartup_ramp_target = guild_startup_ramp_target", f"\tcategory = {row['category']}",
-                      f"\temployment_size = {row['employment_size']}", "\ttown = yes", "\tcity = yes", "\tmegalopolis = yes",
-                      f"\tbuild_time = {row['build_time']}", "\tmodifier = {"))
+                      f"\temployment_size = {row['employment_size']}"))
+        if row["key"] not in CITY_ONLY_FAMILIES:
+            lines.append("\ttown = yes")
+        lines.extend(("\tcity = yes", "\tmegalopolis = yes", f"\tbuild_time = {row['build_time']}"))
+        if row["key"] in ROMAN_ECONOMY_FAMILIES:
+            lines.extend((
+                "\tcountry_potential = {",
+                "\t\tOR = {",
+                "\t\t\tculture = { has_culture_group = culture_group:antq_italic_group }",
+                "\t\t\tculture = { has_culture_group = culture_group:antq_iberian_group }",
+                "\t\t\tculture = { has_culture_group = culture_group:antq_balkan_group }",
+                "\t\t\thas_embraced_institution = institution:antq_roman_law_engineering",
+                "\t\t}",
+                "\t}",
+            ))
+        if row["key"] in WATER_OR_PORT_FAMILIES | CITY_ONLY_FAMILIES:
+            lines.append("\tlocation_potential = {")
+            if row["key"] in WATER_OR_PORT_FAMILIES:
+                lines.extend(("\t\tOR = {", "\t\t\tis_coastal = yes", "\t\t\thas_river = yes", "\t\t}"))
+            if row["key"] in CITY_ONLY_FAMILIES:
+                lines.extend((
+                    "\t\tOR = {",
+                    "\t\t\tlocation_rank = location_rank:city",
+                    "\t\t\tlocation_rank = location_rank:megalopolis",
+                    "\t\t}",
+                ))
+            lines.append("\t}")
+        lines.append("\tmodifier = {")
         for key, amount in pairs(row["modifier"], "modifier"):
             lines.append(f"\t\t{key} = {amount}")
         lines.extend(("\t}", "\tunique_production_methods = {", f"\t\t{row['key']}_maintenance = {{"))
