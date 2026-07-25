@@ -18,7 +18,7 @@ jobs:
           ref: agent/roman-location-name-audit
           fetch-depth: 0
           show-progress: false
-      - name: Finalize completed Roman audit
+      - name: Build clean Roman audit branch from current main
         run: |
           set -euo pipefail
           if [[ ! -f .github/roman-final-payload/READY ]]; then
@@ -26,20 +26,32 @@ jobs:
             exit 0
           fi
 
-          cat .github/roman-final-payload/part* | base64 --decode > /tmp/roman-source.tar.gz
+          rm -rf /tmp/roman-final-payload
+          cp -a .github/roman-final-payload /tmp/roman-final-payload
+          cat /tmp/roman-final-payload/part* | base64 --decode > /tmp/roman-source.tar.gz
           echo "732833a4c36e23444120a94c6a79e1e56e5fe8267797e036a9f73b068995b104  /tmp/roman-source.tar.gz" | sha256sum --check
-          tar --extract --gzip --file /tmp/roman-source.tar.gz
 
           git fetch --no-tags origin main
-          git checkout origin/main -- \
-            tools/generate_m4_tier2_names.py \
-            tools/generate_m4_tier2_wide_names.py \
+          git checkout -B agent/roman-location-name-audit-clean origin/main
+          tar --extract --gzip --file /tmp/roman-source.tar.gz
+          cp /tmp/roman-final-payload/base-generate_m4_tier2_names.py \
+            tools/generate_m4_tier2_names.py
+          cp /tmp/roman-final-payload/base-generate_m4_tier2_wide_names.py \
+            tools/generate_m4_tier2_wide_names.py
+          cp /tmp/roman-final-payload/base-generate_m4_tier2_remote_names.py \
             tools/generate_m4_tier2_remote_names.py
+          echo "47a916f4c7947399b950f33e43c6edb1ccd9fbfdf55561e390930e26931fbc58  tools/generate_m4_tier2_names.py" | sha256sum --check
+          echo "742372a18aebb943edee117bf90ee85eb4bbe3766d0efa57a64a1cc09d4e586b  tools/generate_m4_tier2_wide_names.py" | sha256sum --check
+          echo "ec051a44765daf091b2b0da6c8bfffd4042e01dd0ed55e1b24fcf8f3b4e16c1b  tools/generate_m4_tier2_remote_names.py" | sha256sum --check
+
+          git checkout 2fe5e0da308d0d7eb275cdb9a2165c1ad0c20ae5 -- \
+            docs/m4/tier2_location_name_overrides.csv \
+            docs/m4/tier2_wide_location_name_overrides.csv \
+            docs/m4/tier2_remote_location_name_overrides.csv \
+            docs/m4/tier2_far_location_name_overrides.csv \
+            docs/m4/tier2_ultra_location_name_overrides.csv \
+            docs/m4/tier3_location_name_overrides.csv
           rm -f tools/pleiades_names.py
-          git diff --exit-code origin/main -- \
-            tools/generate_m4_tier2_names.py \
-            tools/generate_m4_tier2_wide_names.py \
-            tools/generate_m4_tier2_remote_names.py
 
           mkdir -p .cache/pleiades
           curl --fail --location --retry 3 --retry-all-errors --silent --show-error \
@@ -78,14 +90,14 @@ jobs:
                   )
                   if row["tag"] == "ROM"
               }
-          assert len(roman) == 2012
+          assert len(roman) == 2012, len(roman)
 
           with (root / "docs/m4/dynamic_location_names.csv").open(
               encoding="utf-8-sig", newline=""
           ) as handle:
               dynamic = {row["location"]: row for row in csv.DictReader(handle)}
           effective = roman.intersection(dynamic)
-          assert len(effective) == 389
+          assert len(effective) == 389, len(effective)
           assert all(
               dynamic[location]["anchor_kind"] in {"curated", "roman_identity"}
               for location in effective
@@ -128,4 +140,5 @@ jobs:
           git config user.email "openai-pro@users.noreply.github.com"
           git add -A
           git commit -m "[PRO] complete Roman location-name audit"
-          git push origin HEAD:agent/roman-location-name-audit
+          git push --force-with-lease origin \
+            HEAD:agent/roman-location-name-audit-clean
