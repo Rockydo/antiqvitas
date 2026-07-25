@@ -3036,3 +3036,9 @@ The active 265-icon ledger is frozen independently of source-sheet history.
 Acceptance requires the 128px master to have transparent corners, bounded circle
 occupancy, a visible dark-navy safe-zone ring, and no exact or near visual alias.
 The pass floor rises with each reviewed tranche until the final 265/265 gate.
+
+## 2026-07-25 - Permit reviewed partial final art sheets
+
+The splitter validates unique accepted quadrants rather than requiring dummy
+manifest rows. This preserves the four-up generation workflow when a cohort ends
+with fewer than four active keys.

@@ -6598,3 +6598,11 @@ reviewed 128px BC7 DDS.
 - All 48 pass the circle/navy gate; the complete set is 207/265 with zero
   exact or near aliases.
 - Validation passes 78/78; paired vanilla/mod smoke has zero mod-only lines.
+
+## 2026-07-25 - Complete active building art
+
+- Replaced the final 58 regional icons from 15 reviewed EU5-referenced sheets;
+  later bell, key, and carpet forms were rejected and regenerated.
+- All 265 active building icons pass the circle/navy gate with zero exact or
+  near aliases. Regional in-game grid captures remain the final visual proof.
+- Validation passes 78/78; paired vanilla/mod smoke has zero mod-only lines.

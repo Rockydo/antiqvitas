@@ -104,8 +104,6 @@ def validate_manifest(entries: list[dict[str, str]]) -> None:
             failures.append(f"missing installed-EU5 style provenance: {key}")
         seen_keys.add(key)
         seen_slots.add(slot)
-    if len(entries) % 4:
-        failures.append("manifest row count must be divisible by four")
     if failures:
         raise ValueError("\n".join(failures))
 
@@ -172,7 +170,8 @@ def main() -> int:
     except (OSError, ValueError, csv.Error, subprocess.CalledProcessError) as exc:
         print(f"m5_building_circle_reart: FAIL\n  - {exc}")
         return 1
-    print(f"m5_building_circle_reart: PASS ({len(entries)} direct icons from {len(entries) // 4} reviewed sheets)")
+    sheet_count = len({row["sheet"] for row in entries})
+    print(f"m5_building_circle_reart: PASS ({len(entries)} direct icons from {sheet_count} reviewed sheets)")
     return 0
 
 
