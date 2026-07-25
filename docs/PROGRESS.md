@@ -6566,3 +6566,11 @@ reviewed 128px BC7 DDS.
 - Suppressed the independent random installed-concept panel on New Game loads.
   Two captures show distinct ancient quotes with no vanilla mechanical text.
 - Validation passes 76/76; paired vanilla/mod smoke has zero mod-only lines.
+
+## 2026-07-25 - Building icon visual freeze, tranche one
+
+- Added a 265-icon audit with circle, navy-field, hash, and in-widget preview
+  checks; 194 remaining failures are explicit.
+- Replaced 40 named Roman icons from ten reviewed four-up sheets using installed
+  EU5 references. The visual gate improved from 13/265 to 71/265.
+- Validation passes 78/78; paired vanilla/mod smoke has zero mod-only lines.

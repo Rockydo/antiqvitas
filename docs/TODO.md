@@ -399,7 +399,7 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
 
 - [ ] Re-art the complete active building-icon set in one circle-safe style.
   - Freeze the final active building ledger, including Roman named, regional,
-    economic-family, and advance-unlocked content.
+      economic-family, and advance-unlocked content.
   - Inspect vanilla dimensions, alpha, circle mask, compression, and in-widget crop.
     Canonical spec: deep desaturated dark-blue background, circle-safe composition,
     consistent value/contrast/scale, no square card edge, no generic yellow filter,
@@ -411,8 +411,11 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     safe-zone occupancy, background range, and perceptual duplicates. Review
     circular-mask previews, not only square sources.
   - Acceptance: reviewed complete contact sheets and building-grid captures for
-    Rome, Germania/Gaul, Han, India, and one African polity; no square edge, clipped
-    subject, style outlier, alias, or fallback.
+      Rome, Germania/Gaul, Han, India, and one African polity; no square edge, clipped
+      subject, style outlier, alias, or fallback.
+  - [x] First visual-freeze tranche: inventory all 265 active icons and replace
+      40 high-visibility named Roman icons from ten EU5-referenced four-up
+      sheets. The checked circle preview is 71/265 compliant with zero aliases.
 
 - [ ] Replace medieval character/court backgrounds across graphical cultures.
   - Trace the exact live texture from screenshots rather than assuming it is the 3D

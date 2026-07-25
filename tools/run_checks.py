@@ -52,6 +52,8 @@ VALIDATE_COMMANDS = (
     Command("tools/m4_roman_location_name_audit.py", ("--check",)),
     Command("tools/culture_template_inventory.py", ("--check",)),
     Command("tools/m5_roman_economy_art.py", ("--check",)),
+    Command("tools/m5_building_circle_reart.py", ("--check",)),
+    Command("tools/m5_building_icon_audit.py", ("--check",)),
     Command("tools/generate_ancient_goods.py", ("--check",)),
     Command("tools/generate_rgo_remap.py", ("--check",)),
     Command("tools/m5_roman_buildings.py", ("--check",)),

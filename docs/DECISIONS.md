@@ -3029,3 +3029,10 @@ direct art. No installed building remains active merely for setup compatibility.
 unavailable post-antique mechanics. The exact custom-loading GUI suppresses that
 independent panel instead of rewriting thousands of valid in-game concepts.
 ANTIQVITAS quotes, progress, cancel behavior, and loading art remain unchanged.
+
+## 2026-07-25 - Measure building art in the rendered circle
+
+The active 265-icon ledger is frozen independently of source-sheet history.
+Acceptance requires the 128px master to have transparent corners, bounded circle
+occupancy, a visible dark-navy safe-zone ring, and no exact or near visual alias.
+The pass floor rises with each reviewed tranche until the final 265/265 gate.
