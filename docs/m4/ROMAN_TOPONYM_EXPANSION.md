@@ -2,17 +2,18 @@
 
 ## 2026-07-25 - Exhaustive Roman-realm audit
 
-The runtime audit now covers all 2,012 locations owned by Rome in the generated
-AD 1 setup. It retains 169 directly reviewed names and 220 additional
-identity-backed Pleiades names. The remaining 1,623 fields deliberately keep
-their EU5 vanilla localization because no sufficiently secure AD 1 identity was
-established.
+The runtime audit now covers all 2,019 locations owned by Rome in the generated
+AD 1 setup. It retains 169 directly reviewed names and 222 additional
+identity-backed or explicitly qualified Pleiades names. The remaining 1,628
+fields deliberately keep their EU5 vanilla localization because no sufficiently
+secure AD 1 identity was established.
 
 Roman-owned locations are excluded from every generic proximity-based Tier-2
 layer and from synthetic Tier-3 localization. A Roman override is now accepted
-only from the direct reviewed ledger or from
-`roman_location_name_selections.csv`, where one installed field is bound to one
-Pleiades place and one name resource attested across AD 1. Explicitly rejected
+only from the direct reviewed ledger, `roman_location_name_selections.csv`, or
+the narrow `roman_location_name_qualified.csv` proxy ledger. Each binds one
+installed field to one Pleiades place and one name resource attested across AD 1.
+Explicitly rejected
 late, reconstructed, uncertain, or geographically mismatched candidates are
 recorded in `roman_location_name_exclusions.csv`.
 
@@ -20,9 +21,10 @@ The source and generated files are:
 
 - `dynamic_location_name_overrides.csv`: 169 direct Roman names.
 - `roman_location_name_selections.csv`: 220 reviewed identity decisions.
+- `roman_location_name_qualified.csv`: 2 bounded Galatian centre proxies.
 - `roman_location_name_overrides.csv`: generated runtime adapters.
 - `roman_location_name_exclusions.csv`: 30 documented rejection rules.
-- `roman_location_name_audit.csv`: all 2,012 Roman fields, including intentional
+- `roman_location_name_audit.csv`: all 2,019 Roman fields, including intentional
   vanilla pass-throughs.
 
 The audit also corrected several previously overconfident rows: Portuguese

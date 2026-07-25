@@ -438,17 +438,18 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
 
 ### P4 — Focused regression closeout
 
-- [ ] Add one rapid regression route for this remediation section.
-  - Script a deterministic 10-15 minute route: loading screen -> Rome description
-    -> start -> subjects -> city/pop -> buildings -> recruitment -> institutions
-    -> advances -> Diseases open/close -> save/reload.
-  - Repeat only culture-variable subsystem screens for one Germanic/Gallic country
-    and Han; use static setup/resolver validation for the rest.
-  - Require `make validate`, `make smoke`, zero new `error.log` lines against the
-    accepted baseline, no crash, and a small screenshot manifest. Do not run an
-    extreme 1-476 campaign or multi-century observer soak.
-  - Before closing, rerun the installed-content leakage census and ensure every
-    manual symptom above has a specific passing assertion.
+- [x] Add one rapid regression route for this remediation section.
+  - Frozen as a 12-stage route and eight-record visual manifest. The route reuses
+    bounded runtime evidence and relies on exact setup/resolver checks elsewhere;
+    no AD 1-476 campaign or multi-century soak.
+  - All 20 manual symptom classes map to 26 mandatory validators. Ten previously
+    omitted remediation validators are now part of `make validate`; the renewed
+    census has zero uncovered or forbidden visible leakage.
+  - Regression review restored runtime Pessinous and Tavium through the reviewed
+    Roman-name ledger rather than allowing documented Galatian centres to pass
+    through with modern installed labels.
+  - Acceptance passed: 90/90 validation plus paired smoke with zero mod-only
+    error lines.
 
 ## M0 — Discovery & tooling
 

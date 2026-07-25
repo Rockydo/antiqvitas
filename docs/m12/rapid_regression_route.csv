@@ -1,0 +1,13 @@
+order,stage,mode,assertion,evidence
+1,loading,paired_smoke,Custom loading art and quotations load without mod-only errors,docs/m12/INSTALLED_CONTENT_CENSUS.md
+2,rome_selector,static_plus_runtime,Rome has an AD 1 agenda and the ancient selector renders,docs/m12/country_history_agendas.csv
+3,subjects,static,Rome's 25 starting dependencies have positive loyalty floors,docs/m9/subject_start_balance.csv
+4,city_and_pops,static,Roma is one million and the calibrated major-city ledger remains complete,docs/m4/population_city_targets.csv
+5,buildings_and_goods,static,Rome's economy profiles use active ancient buildings and appropriate goods,docs/m5/roman_economy_profiles.csv
+6,recruitment,three_culture_probe,Rome Han and Marcomanni expose only ancient unit registries with direct art,docs/playtests/M12_INSTALLED_CONTENT_CENSUS_20260724.md
+7,institutions,static_plus_runtime,Only the nine ancient institutions remain visible,docs/playtests/M12_INSTITUTIONS_20260725.md
+8,advances,static_plus_runtime,The 250-node ancient DAG remains described branched and functional,docs/playtests/M8_ADVANCE_DAG_20260725.md
+9,diseases,bounded_runtime,The Diseases panel opens and closes without the reproduced native crash,docs/playtests/M12_DISEASE_PANEL_20260724.md
+10,save_reload,bounded_runtime,A short non-debug campaign writes and reloads its checkpoint,docs/playtests/M5_ROMAN_ECONOMY_20260725.md
+11,culture_variants,static_plus_runtime,Gallic Germanic and Han presentation use bounded culture-specific setup and resolvers,docs/m12/culture_presence.csv
+12,leakage,static,The installed-content census reports zero uncovered or forbidden visible leakage,docs/m12/installed_content_leakage.json

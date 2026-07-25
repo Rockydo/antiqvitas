@@ -18,6 +18,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SELECTIONS = ROOT / "docs/m4/roman_location_name_selections.csv"
+QUALIFIED = ROOT / "docs/m4/roman_location_name_qualified.csv"
 EXCLUSIONS = ROOT / "docs/m4/roman_location_name_exclusions.csv"
 OUTPUT = ROOT / "docs/m4/roman_location_name_overrides.csv"
 OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
@@ -116,6 +117,7 @@ def verify_name_resources(selected: list[dict[str, str]]) -> None:
 
 def render() -> str:
     selected = rows(SELECTIONS, SELECTION_FIELDS)
+    qualified = rows(QUALIFIED, OUTPUT_FIELDS)
     if not selected:
         raise ValueError(f"{SELECTIONS.relative_to(ROOT)} has no reviewed selections")
 
@@ -180,9 +182,45 @@ def render() -> str:
                 "note": row["note"],
             }
         )
+    qualified_resources: list[dict[str, str]] = []
+    for number, row in enumerate(qualified, start=2):
+        if any(not row[field] for field in OUTPUT_FIELDS):
+            failures.append(f"{QUALIFIED.relative_to(ROOT)}:{number}: blank required field")
+            continue
+        location = row["location"]
+        source_parts = row["source"].split(";")
+        place_parts = [part[4:] for part in source_parts if part.startswith("PLE:")]
+        name_parts = [part[4:] for part in source_parts if part.startswith("PLN:")]
+        if len(place_parts) != 1 or len(name_parts) != 1 or "/" not in name_parts[0]:
+            failures.append(f"{QUALIFIED.relative_to(ROOT)}:{number}: malformed PLE/PLN source")
+            continue
+        place_id = place_parts[0]
+        name_place, name_id = name_parts[0].split("/", 1)
+        if name_place != place_id:
+            failures.append(f"{QUALIFIED.relative_to(ROOT)}:{number}: mismatched PLE/PLN place")
+        if location in locations:
+            failures.append(f"{QUALIFIED.relative_to(ROOT)}:{number}: duplicate location {location}")
+        if place_id in place_ids:
+            failures.append(f"{QUALIFIED.relative_to(ROOT)}:{number}: reused Pleiades place {place_id}")
+        locations.add(location)
+        place_ids.add(place_id)
+        if location not in roman:
+            failures.append(f"{QUALIFIED.relative_to(ROOT)}:{number}: {location} is not Roman-owned at AD 1")
+        if location not in installed:
+            failures.append(f"{QUALIFIED.relative_to(ROOT)}:{number}: unknown installed location {location}")
+        if location in curated or location in corrections:
+            failures.append(f"{QUALIFIED.relative_to(ROOT)}:{number}: {location} collides with a higher layer")
+        if location in excluded_locations or place_id in excluded_place_ids:
+            failures.append(f"{QUALIFIED.relative_to(ROOT)}:{number}: selected excluded candidate {location}/{place_id}")
+        if row["culture"] not in cultures:
+            failures.append(f"{QUALIFIED.relative_to(ROOT)}:{number}: unknown M4 culture {row['culture']}")
+        if row["confidence"] != "tier2" or "proxy" not in row["note"].lower():
+            failures.append(f"{QUALIFIED.relative_to(ROOT)}:{number}: qualified row must declare a tier2 proxy")
+        output.append(row)
+        qualified_resources.append({"pleiades_id": place_id, "name_id": name_id})
     if failures:
         raise ValueError("\n".join(sorted(set(failures))))
-    verify_name_resources(selected)
+    verify_name_resources([*selected, *qualified_resources])
     output.sort(key=lambda row: row["location"])
     stream = StringIO(newline="")
     writer = csv.DictWriter(stream, fieldnames=OUTPUT_FIELDS, lineterminator="\n")

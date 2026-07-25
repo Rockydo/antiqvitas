@@ -1,0 +1,21 @@
+id,symptom,validators,evidence,status
+loading_quotes,Vanilla loading quotations and concepts leak,m12_loading_tips;m12_installed_content_census,docs/m12/INSTALLED_CONTENT_CENSUS.md,pass
+subject_loyalty,Roman subjects begin at zero loyalty,m9_diplomacy,docs/m9/subject_start_balance.csv,pass
+world_granularity,Venedi Germanic Finnic Japanese and West African blobs lack granularity,world_roster,docs/world_1ad/polities.csv,pass
+rank_language,Tribal polities present medieval county rank language,m12_rank_presentation,docs/m12/rank_presentation.csv,pass
+pop_classes,Population tiers and icons remain medieval,m12_pop_presentation,docs/m12/pop_presentation_contact_sheet.png,pass
+italy_population,Italy Roma and major ancient cities are underpopulated,popcheck,docs/m4/population_city_targets.csv,pass
+gallic_cultures,Gallic culture is a single generic block,m4_gallic_atlas,docs/m4/gallic_culture_totals.csv,pass
+galatian_presence,Galatian communities and centres are absent,m4_galatian_atlas,docs/m4/galatian_location_audit.csv,pass
+character_scenes,Character and court backgrounds remain medieval,m11_court_backgrounds,docs/m11/M11_COURT_BACKGROUNDS.md,pass
+unit_registry,Firearm and early-modern units remain recruitable,m12_unit_quarantine;m7_war,docs/m12/unit_quarantine_manifest.json,pass
+unit_art,Active ancient units use missing or shared icons,m12_unit_art,docs/m12/unit_art_contact_sheet.png,pass
+country_agenda,Country-selection agendas retain Renaissance text,m12_country_history;m12_anachronism_audit,docs/m12/country_history_agendas.csv,pass
+building_art,Building icons violate the circular navy-field style,m5_building_icon_audit,docs/m11/UI_ASSET_CONTACT_SHEET.png,pass
+institutions,Feudal or globally spreading Han institutions remain visible,m8_legacy_institution_purge;m8_knowledge,docs/m8/institutions.csv,pass
+advance_tree,Advances are shallow linear undescribed and inert,m8_knowledge;m11_advance_icons,docs/m8/advances.csv,pass
+disease_panel,Diseases panel crashes or lacks dependencies,m12_disease_safety,docs/m12/DISEASE_CRASH_FIX.md,pass
+location_names,Priority and Roman fields retain unsuitable modern labels,m4_priority_location_names;m4_roman_location_name_audit,docs/m4/priority_location_name_audit.csv,pass
+rome_economy,Rome lacks dense buildings and appropriate goods,m5_roman_economy_audit;m5_building_audit,docs/m5/roman_economy_profiles.csv,pass
+frontend,Main menu and loading presentation remain vanilla,m12_frontend_assets;m11_loading_screens,docs/m12/M12_FRONTEND_ART.md,pass
+installed_leakage,Similar installed or DLC content can bypass individual fixes,m12_installed_content_census,docs/m12/installed_content_leakage.json,pass

@@ -3058,3 +3058,15 @@ Eleven graphical-culture families use priorities 300-400 and an unconditional
 ancient fallback uses 100, above the installed base/DLC maximum of 52. This
 preserves the engine resolver contract while preventing government, profession,
 religion, and DLC rules from exposing medieval or early-modern rooms.
+
+## 2026-07-25 - Close manual feedback with focused assertions
+
+The first-playtest regression gate maps each reported symptom to a named
+validator and committed evidence. A fixed twelve-stage route reuses bounded live
+probes for crash-prone or culture-variable UI and uses deterministic content,
+setup, resolver, and leakage checks for the rest. Paired smoke remains required;
+multi-century observer tests are outside this gate.
+
+The Galatian audit is mandatory. Its Ancyra, Pessinous, and Tavium assertions
+must test runtime dynamic names, not merely the source atlas, so Roman-owned
+passthrough cannot silently hide a reviewed ancient centre.

@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-07-25 - First-playtest remediation regression closeout
+
+- Froze a 20-symptom/26-validator closure matrix, a 12-stage rapid route, and an
+  eight-record visual manifest; long campaign testing is explicitly excluded.
+- Promoted ten orphaned remediation audits into the mandatory validation gate.
+  Their first combined run caught and repaired missing runtime names for the
+  Galatian centres Pessinous and Tavium.
+- Validation passes 90/90; paired smoke has zero mod-only error lines.
+
 ## 2026-07-25 - Durable economy checkpoint and observer recovery
 
 - Calibrated the branded-menu Continue route and selector Observer start.
