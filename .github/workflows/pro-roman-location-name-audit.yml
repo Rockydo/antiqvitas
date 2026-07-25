@@ -10,12 +10,12 @@ permissions:
 
 jobs:
   finalize:
-    if: github.head_ref == 'agent/roman-location-name-audit'
+    if: github.head_ref == 'agent/roman-location-name-audit-builder'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/roman-location-name-audit
+          ref: agent/roman-location-name-audit-builder
           fetch-depth: 0
           show-progress: false
       - name: Build clean Roman audit branch from current main
