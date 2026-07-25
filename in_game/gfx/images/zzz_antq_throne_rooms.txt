@@ -1,0 +1,347 @@
+﻿# ANTIQVITAS ancient character-scene resolver.
+# Priorities exceed the installed vanilla/DLC throne_room maximum (52).
+antq_throne_room_overrides = {
+	tag = "throne_room"
+
+	# Roman and Italic
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/antq_throne_room_roman.dds"
+		priority = 400
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer ?= {
+				OR = {
+					gfx_culture_applicable = roman_gfx
+					gfx_culture_applicable = north_italian_gfx
+					gfx_culture_applicable = south_italian_gfx
+					gfx_culture_applicable = west_mediterranean_gfx
+					gfx_culture_applicable = mediterranean_gfx
+				}
+			}
+		}
+	}
+
+	# Hellenistic
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/antq_throne_room_hellenistic.dds"
+		priority = 390
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer ?= {
+				OR = {
+					gfx_culture_applicable = greek_gfx
+					gfx_culture_applicable = east_mediterranean_gfx
+				}
+			}
+		}
+	}
+
+	# Celtic and Brittonic
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/antq_throne_room_celtic.dds"
+		priority = 380
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer ?= {
+				OR = {
+					gfx_culture_applicable = celtic_gfx
+					gfx_culture_applicable = gaelic_gfx
+					gfx_culture_applicable = irish_gfx
+					gfx_culture_applicable = welsh_gfx
+					gfx_culture_applicable = breton_gfx
+					gfx_culture_applicable = british_gfx
+					gfx_culture_applicable = north_british_gfx
+					gfx_culture_applicable = cornish_gfx
+					gfx_culture_applicable = scottish_gfx
+					gfx_culture_applicable = scottish_highland_gfx
+					gfx_culture_applicable = scottish_lowland_gfx
+				}
+			}
+		}
+	}
+
+	# Germanic
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/antq_throne_room_germanic.dds"
+		priority = 370
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer ?= {
+				OR = {
+					gfx_culture_applicable = gothic_gfx
+					gfx_culture_applicable = german_gfx
+					gfx_culture_applicable = north_german_gfx
+					gfx_culture_applicable = south_german_gfx
+					gfx_culture_applicable = english_gfx
+					gfx_culture_applicable = frisian_gfx
+					gfx_culture_applicable = danish_gfx
+					gfx_culture_applicable = norwegian_gfx
+					gfx_culture_applicable = swedish_gfx
+					gfx_culture_applicable = icelandic_gfx
+				}
+			}
+		}
+	}
+
+	# Iranian and Steppe
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/antq_throne_room_iranian_steppe.dds"
+		priority = 360
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer ?= {
+				OR = {
+					gfx_culture_applicable = persian_gfx
+					gfx_culture_applicable = persianate_gfx
+					gfx_culture_applicable = central_asian_gfx
+					gfx_culture_applicable = turkic_gfx
+					gfx_culture_applicable = mongol_gfx
+				}
+			}
+		}
+	}
+
+	# Indic
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/antq_throne_room_indic.dds"
+		priority = 350
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer ?= {
+				OR = {
+					gfx_culture_applicable = indian_gfx
+					gfx_culture_applicable = dravidian_gfx
+					gfx_culture_applicable = tibetan_gfx
+					gfx_culture_applicable = indochina_gfx
+				}
+			}
+		}
+	}
+
+	# Han and East Asian
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/antq_throne_room_han_east_asian.dds"
+		priority = 340
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer ?= {
+				OR = {
+					gfx_culture_applicable = east_asian_gfx
+					gfx_culture_applicable = japanese_gfx
+					gfx_culture_applicable = korean_gfx
+					gfx_culture_applicable = ainu_gfx
+				}
+			}
+		}
+	}
+
+	# Near Eastern
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/antq_throne_room_near_eastern.dds"
+		priority = 330
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer ?= {
+				OR = {
+					gfx_culture_applicable = middle_east_gfx
+					gfx_culture_applicable = levantine_gfx
+					gfx_culture_applicable = arabian_gfx
+					gfx_culture_applicable = egyptian_gfx
+					gfx_culture_applicable = caucasian_gfx
+					gfx_culture_applicable = israelite_gfx
+					gfx_culture_applicable = andalusi_gfx
+					gfx_culture_applicable = maghrebi_gfx
+				}
+			}
+		}
+	}
+
+	# African
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/antq_throne_room_african.dds"
+		priority = 320
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer ?= {
+				OR = {
+					gfx_culture_applicable = african_gfx
+					gfx_culture_applicable = east_african_gfx
+					gfx_culture_applicable = bantu_gfx
+					gfx_culture_applicable = nubian_gfx
+					gfx_culture_applicable = mande_gfx
+					gfx_culture_applicable = saharan_gfx
+					gfx_culture_applicable = amazigh_gfx
+					gfx_culture_applicable = malagasy_gfx
+				}
+			}
+		}
+	}
+
+	# American
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/antq_throne_room_american.dds"
+		priority = 310
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer ?= {
+				OR = {
+					gfx_culture_applicable = american_gfx
+					gfx_culture_applicable = north_american_gfx
+					gfx_culture_applicable = south_american_gfx
+					gfx_culture_applicable = amazonian_gfx
+					gfx_culture_applicable = iroquois_gfx
+					gfx_culture_applicable = aztec_gfx
+				}
+			}
+		}
+	}
+
+	# Oceanian
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/antq_throne_room_oceanian.dds"
+		priority = 300
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer ?= {
+				OR = {
+					gfx_culture_applicable = austronesian_gfx
+					gfx_culture_applicable = polynesian_gfx
+					gfx_culture_applicable = papuan_gfx
+					gfx_culture_applicable = aboriginal_gfx
+					gfx_culture_applicable = negrito_gfx
+				}
+			}
+		}
+	}
+
+	# Neutral Ancient Fallback
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/antq_throne_room_neutral.dds"
+		priority = 100
+		scope = character
+		trigger = {
+			always = yes
+		}
+	}
+}

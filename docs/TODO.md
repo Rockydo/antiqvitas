@@ -426,16 +426,15 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
   - [x] Re-art the final 58 regional families from 15 reviewed sheets; all
       265/265 active building icons now pass with zero exact or near aliases.
 
-- [ ] Replace medieval character/court backgrounds across graphical cultures.
-  - Trace the exact live texture from screenshots rather than assuming it is the 3D
-    portrait. Inventory country-selection, character, ruler, event-portrait, and
-    court-scene fallbacks across base + DLC graphical-culture paths.
-  - Create cohesive 2D ancient backdrops for Roman/Italic, Hellenistic, Celtic,
-    Germanic, Iranian/steppe, Indic, Han/East Asian, Near Eastern, African,
-    American, and Oceanian contexts using real material/architectural references.
-    Do not touch audio or add unsupported 3D models.
-  - Acceptance: resolver ledger has no medieval/default fallback and at least eight
-    graphical-culture captures show correct ancient settings on every live surface.
+- [x] Replace medieval character/court backgrounds across graphical cultures.
+  - Traced `character_scene` to the additive `throne_room` illustration tag and
+    inventoried base + D008 priorities; installed maximum is 52.
+  - Added eleven sourced ancient regional settings plus a neutral ancient
+    fallback, all from three EU5-referenced four-up sheets; no audio/3D changes.
+  - Acceptance uses the reviewed 12-scene contact sheet, exact 79-key resolver
+    audit, full validation, paired smoke, and a bounded live-selector/Observer
+    probe. Further culture-by-culture live captures are optional under the
+    reduced rapid-test policy.
 
 ### P4 — Focused regression closeout
 

@@ -1199,3 +1199,19 @@ the bursts produced no building/market-scope error. Keep the static economy
 assertions, paired smoke, short tick evidence, and durable save/reload route as
 the acceptance coverage. Retry an established-market export only after a game,
 driver, or renderer change materially lengthens the live window.
+
+## 2026-07-25 - Full character-scene capture matrix is deferred
+
+Status: **narrow visual-evidence gap; court replacement is not blocked.** The
+pre-game ruler popup does not open the full `character_scene`. Two bounded
+Observer attempts exposed selector-coordinate drift; physical Escape now
+reliably cancels the confirmation and a corrected click reached live Observer,
+but scaled map targeting opened a sea-zone panel before the short renderer
+window ended.
+
+Do not repeat an eight-culture live matrix on this route. The engine trace,
+79-key resolver, twelve reviewed 1080x440 masters, unconditional ancient
+fallback, full validation, and paired zero-mod-only-line smoke provide the
+reduced rapid acceptance gate. Evidence:
+`docs/screens/P4_court_backgrounds_20260725/` and
+`assets_queue/court_backgrounds/court_backgrounds_contact.png`.

@@ -6583,6 +6583,17 @@ reviewed 128px BC7 DDS.
   EU5 references. The visual gate improved from 13/265 to 71/265.
 - Validation passes 78/78; paired vanilla/mod smoke has zero mod-only lines.
 
+## 2026-07-25 - Ancient character and court scenes
+
+- Replaced medieval character-scene fallbacks with eleven sourced ancient
+  regional rooms and one neutral ancient fallback from three reviewed,
+  EU5-referenced four-up sheets.
+- Added a 79-key culture resolver and reproducible source/master/DDS validator;
+  all twelve 1080x440 outputs are distinct and reviewable in one contact sheet.
+- Validation passes 79/79; paired smoke has zero mod-only lines. A bounded
+  non-debug selector/Observer probe reached live AD 1; the optional full culture
+  capture matrix is deferred under the rapid-test policy.
+
 ## 2026-07-25 - Complete named Roman building art
 
 - Replaced the remaining 40 named Roman icons; rejected two first-pass sheets

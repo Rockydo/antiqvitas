@@ -4540,3 +4540,16 @@ beacons retain separate placement notes. The named Taixue, Alexandrian library,
 Pharos, Second Temple, and Anuradhapura vihara remain distinct. Sources:
 UNESCO-DJJ; UNESCO-ANU; UNESCO-FAY; PER; BHR; CAH XI; OCD-JER; row sources in
 `docs/m5/ancient_building_replacements.csv`. [bounded gameplay abstraction]
+
+## 2026-07-25 - Court backgrounds are material-culture composites
+
+The eleven regional scenes are plausible audience or assembly settings, not
+literal reconstructions of one ruler's room or uniform architecture for every
+mapped culture. Roman, Pergamene, Parthian, Sanchi, Western Han, Near Eastern,
+and Meroitic forms follow the source ledger in `docs/art/court_backgrounds.csv`.
+
+The American scene is a generalized pre-Columbian council setting with a
+Teotihuacan material palette, not a universal American reconstruction. The
+Oceanian scene is a bounded Lapita/Austronesian timber-and-thatch synthesis:
+perishable AD 1 halls do not survive broadly enough for a universal form.
+[bounded visual abstraction]

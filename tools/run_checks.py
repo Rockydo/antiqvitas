@@ -77,6 +77,7 @@ VALIDATE_COMMANDS = (
     Command("tools/m10_fourth_century.py", ("--check",)),
     Command("tools/m10_final_century.py", ("--check",)),
     Command("tools/m11_age_art.py", ("--check",)),
+    Command("tools/m11_court_backgrounds.py", ("--check",)),
     Command("tools/m11_loading_screens.py", ("--check",)),
     Command("tools/m12_loading_tips.py", ("--check",)),
     Command("tools/m12_frontend_assets.py"),

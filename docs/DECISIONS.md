@@ -3050,3 +3050,11 @@ The pass floor rises with each reviewed tranche until the final 265/265 gate.
 The splitter validates unique accepted quadrants rather than requiring dummy
 manifest rows. This preserves the four-up generation workflow when a cohort ends
 with fewer than four active keys.
+
+## 2026-07-25 - Resolve every character scene through ancient art
+
+The live `character_scene` calls the additive `throne_room` illustration tag.
+Eleven graphical-culture families use priorities 300-400 and an unconditional
+ancient fallback uses 100, above the installed base/DLC maximum of 52. This
+preserves the engine resolver contract while preventing government, profession,
+religion, and DLC rules from exposing medieval or early-modern rooms.

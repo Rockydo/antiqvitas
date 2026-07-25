@@ -127,3 +127,12 @@ IO, government, HRE-status, and capital references safely false for inactive
 legacy tags. A fresh AD 1 observer initialization reports zero script-system
 errors. M3 remains untagged because M5, M6, and M9 still need their separate
 runtime acceptance work; the exact recovery plan is in `BLOCKERS.md`.
+
+## Character-scene live capture is partial
+
+All installed `character_scene` calls resolve through twelve ancient
+backgrounds, with an unconditional custom fallback above every installed
+base/DLC priority. The pre-game character popup cannot open the full scene, and
+the current scaled-map Observer route did not yield a stable culture matrix.
+Static contact review plus paired smoke is the accepted rapid gate; see
+`BLOCKERS.md`.

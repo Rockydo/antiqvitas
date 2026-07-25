@@ -628,15 +628,15 @@ def enter_live_observer(args: argparse.Namespace, target_dir: Path, prefix: str)
     click_normalized(0.23, 0.047)
     time.sleep(args.ui_settle)
     save_window_capture(target_dir / f"{prefix}_observer_enabled.png")
-    # Toggling Observer leaves its dropdown above the map.  Physical Escape
-    # opens the selector's "go back to main menu" confirmation; cancelling that
-    # confirmation dismisses the dropdown while preserving Observer.  An
-    # ordinary outside click instead disables Observer.  A selected-country
-    # panel can also cover the centre of the start control, so use its exposed
-    # upper-left band at the fixed 1920x1080 layout.
+    # Toggling Observer leaves its dropdown above the map. Physical Escape
+    # opens the selector's "go back to main menu" confirmation; a second
+    # physical Escape cancels it and dismisses the dropdown while preserving
+    # Observer. This is invariant across Windows DPI scaling, unlike the
+    # confirmation button coordinates. An ordinary outside click instead
+    # disables Observer.
     press_scan_code(0x01)
     time.sleep(args.ui_settle)
-    click_normalized(0.42, 0.580)
+    press_scan_code(0x01)
     time.sleep(args.ui_settle)
     save_window_capture(target_dir / f"{prefix}_observer_popup_dismissed.png")
     # The map is visible as soon as cached data finishes, but the observer
@@ -644,7 +644,7 @@ def enter_live_observer(args: argparse.Namespace, target_dir: Path, prefix: str)
     # This value was calibrated against the local save-load sequence.
     for start_attempt in range(1, 3):
         time.sleep(args.observer_enable_settle if start_attempt == 1 else args.ui_settle)
-        click_normalized(0.44, 0.840)
+        click_normalized(0.50, 0.860)
         time.sleep(args.ui_settle)
         save_window_capture(target_dir / f"{prefix}_start_attempt{start_attempt}.png")
         if wait_for_observer_pause(max(15, args.live_timeout // 2)):
