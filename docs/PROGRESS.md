@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-25 - AD 1 political-granularity expansion
+
+- Expanded the roster from 157 to 229 with 72 bounded Tier-3 frames across
+  Germania/Scandinavia, Venedi-facing eastern Europe, Finnic/Uralic Siberia,
+  Yayoi Japan/Ryukyu, and West Africa. The five giant residuals fell from
+  639/997/337/342/367 locations to 72/56/36/9/24.
+- Generated the full country contract for all 229 starts: owned capitals,
+  culture/faith profiles, governments and AI, diplomacy, regional CoAs,
+  localization, agendas, and start managers. The roster-dependent history and
+  census generators now derive their expected count instead of hard-coding 157.
+- A targeted initializer audit repaired 37 country/population alignments and an
+  older `sagala` key collision by mapping Indo-Greek Sagala to the installed
+  Sialkot field. Fresh New Game diagnostics report zero absent-primary-culture
+  and zero discriminated-estate lines. Validation passes 74/74; paired smoke has
+  zero mod-only lines.
+
 ## 2026-07-25 - Italy and ancient-metropolis population calibration
 
 - Replaced polity-bin density allocation with exact macro/geographic partitions,

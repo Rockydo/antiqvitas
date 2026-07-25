@@ -1,5 +1,30 @@
 # Historical Assumptions
 
+## 2026-07-25 - Political-granularity frames do not imply later states
+
+Przeworsk and Zarubintsy are represented as archaeological horizons, not ethnic
+states. The Ilmen, upper-Dnieper, Volga, Ural, Sargat, Kulay, and related forest
+frames are campaign geography for communities attested only indirectly; their
+names do not project later Russian, Belarusian, Finnic-national, or Siberian
+boundaries into AD 1. Sources: `UW-PRZ`, `RAS-ZAR`, `RAS-SAR`, `HUM-SAR`,
+`TOM-KUL`, `PAR-PER`, `CAH-XI`, and plan sections 8.7-8.8. [contested]
+
+Yayoi Japan is divided into regional Wa community frames without backdating
+third-century Yamatai or a unified Japanese monarchy. Ryukyu remains a separate
+shell-midden frame. West African additions represent Late Nok, Middle Niger,
+Lake Chad, Sahelian, savanna, forest, and river-basin settlement networks rather
+than later Ghana, Mali, Kanem-Bornu, Benin, Mossi, Akan, or Jolof states.
+Sources: `JAA-YAY`, `ISIJ-YAY`, `RYU-ARC`, `JAA-NOK`, `OUP-NOK`, `OUP-CHAD`,
+`CAM-DAI`, `CAM-MLR`, `MET-IND`, and `MET-IRON`. [contested]
+
+## 2026-07-25 - Sagala uses the Sialkot map field
+
+The historical Indo-Greek Sagala is represented by the installed Sialkot field.
+The installed key literally named `sagala` is geographically in the western
+Sahel and must remain in the West African ownership/culture atlas. This is a
+map-field proxy, not a claim that every reconstruction locates the ancient city
+at the modern urban centre. Sources: `P8.4`, `CAH-XI`. [contested]
+
 ## 2026-07-25 - Ancient city values are bounded gameplay fields
 
 City estimates are contested and often mix city proper, suburban agglomeration,

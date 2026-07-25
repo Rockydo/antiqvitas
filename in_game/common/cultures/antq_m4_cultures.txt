@@ -3709,6 +3709,87 @@ antq_autinian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Autini campaign proxy in wes
 	}
 }
 
+antq_ryukyu_shell_midden = { # RYU-ARC;P8.3;P10; Central Ryukyu archaeological community frame at AD 1; the Korean adapter is technical and does not assert language
+	language = antq_japonic_dialect
+	color = antq_culture_color_antq_ryukyu_shell_midden
+	tags = { european_gfx }
+	culture_groups = {
+		antq_japonic_group
+	}
+}
+
+antq_middle_niger = { # CAM-MLR;MET-IND;P8.5;P10; Middle Niger settlement-network proxy rather than a single ethnicity or state
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_middle_niger
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_western_sahel = { # CAM-MLR;P8.5;P10; Western Sahel settlement proxy before later imperial identities
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_western_sahel
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_volta_basin = { # MET-IRON;P8.5;P10; Volta basin iron-age regional proxy; the Mande adapter is technical
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_volta_basin
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_senegambian = { # CAM-MLR;MET-IRON;P8.5;P10; Senegambian iron-age regional proxy before later states and ethnonyms
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_senegambian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_akan_forest = { # MET-IRON;P8.5;P10; Forest-zone regional proxy without backdating later Akan state formations
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_akan_forest
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_lower_niger = { # MET-IRON;P8.5;P10; Lower Niger iron-age regional proxy before later Benin and Yoruba polities
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_lower_niger
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_gur = { # MET-IRON;P8.5;P10; Gur savanna regional proxy; the Mande adapter is technical
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_gur
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_air_massif = { # CAM-DAI;P8.5;P10; Air massif community proxy without projecting later Tuareg confederations
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_air_massif
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
 antq_ganganian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Gangani campaign proxy in west-central Hibernia; not an exact ethnic boundary; Ptolemy's relative order does not establish exact AD 1 boundaries
 	language = antq_celtic_dialect
 	color = antq_culture_color_antq_ganganian

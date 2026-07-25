@@ -1,5 +1,33 @@
 # Technical and Design Decisions
 
+## 2026-07-25 - Archaeological frames are Tier-3 starts, not invented states
+
+Where AD 1 evidence supports a material horizon or settlement network but no
+centralized polity, the political layer uses a Tier-3 SoP with an anonymous
+engine-generated technical government. It does not invent a king, dynasty, or
+fixed ethnic border. Directly attested Germanic peoples use the same bounded
+campaign geometry contract where exact frontiers are unknown.
+
+Residual ownership is ordered after reviewed country and capital anchors. This
+lets broad coverage fill only unclaimed locations and prevents a regional SoP
+from swallowing a direct historical seat. The 229-country history and installed
+content checks derive roster size from the canonical CSV; no generator may
+retain a 157-country constant.
+
+## 2026-07-25 - Country primary culture must match its initialized population
+
+The country profile and location-population atlas are separate historical
+ledgers, but their engine result cannot leave a start with no primary-culture
+population or a dominant estate whose culture is discriminated. Runtime-flagged
+regional scaffolds therefore receive explicit tag profiles aligned to their
+bounded population atlas. The political-granularity validator now rejects every
+new frame whose primary culture is absent from its owned populations.
+
+The installed key `sagala` belongs to West Africa, despite the ancient Indian
+name collision. Indo-Greek Sagala consequently uses `sialkot` as its contested
+map-field proxy; Punjab is residual Indo-Scythian ownership after that reviewed
+anchor.
+
 ## 2026-07-25 - Population allocation separates totals, cities, and residuals
 
 Macro targets remain exact. Italy receives explicit geographic partitions;

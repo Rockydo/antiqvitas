@@ -101,6 +101,7 @@ VALIDATE_COMMANDS = (
     Command("tools/extract_map_coordinates.py", ("--check",)),
     Command("tools/capital_geography.py", ("--check",)),
     Command("tools/ownership_map.py", ("--check",)),
+    Command("tools/political_granularity.py", ("--check",)),
     Command("tools/territory_coverage.py"),
     Command("tools/generate_start_mirror.py", ("--check",)),
     Command("tools/m3_political_map.py"),

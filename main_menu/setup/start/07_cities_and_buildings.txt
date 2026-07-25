@@ -84,10 +84,10 @@ building_manager = {
 	lighthouse_of_alexandria = { tag = XAA level = 1 location = alexandria } # alexandria_pharos; P12.3;P8.1
 	irrigation_systems = { tag = XBD level = 1 location = anuradhapura } # anuradhapura_irrigation; P12.3;UNESCO-ANU
 	monastery = { tag = XBD level = 1 location = anuradhapura } # anuradhapura_mahavihara; P11;P12.3;UNESCO-ANU-MON
-	antq_castrum_augusta_vindelicum = { tag = XDK level = 1 location = augsburg } # augsburg_castrum_augusta_vindelicum; AUG-ROMERLAGER
+	antq_castrum_augusta_vindelicum = { tag = XDZ level = 1 location = augsburg } # augsburg_castrum_augusta_vindelicum; AUG-ROMERLAGER
 	protected_harbor = { tag = RJS level = 1 location = khambat } # barygaza_harbor; P12.2;P8.4;PER
 	antq_castrum_augusta_raurica = { tag = XAA level = 1 location = basel } # basel_castrum_augusta_raurica; AR-COLONIA
-	antq_castrum_bonna = { tag = XDK level = 1 location = bonn } # bonn_early_bonna_camp; LIV-BONNA;LVR-NGL
+	antq_castrum_bonna = { tag = XDW level = 1 location = bonn } # bonn_early_bonna_camp; LIV-BONNA;LVR-NGL
 	protected_harbor = { tag = XAA level = 1 location = tunis } # carthago_harbor; P12.2;P8.1;UNESCO-CAR-HAR
 	stockade = { tag = XAA level = 1 location = aquileia } # castra_aquileia; P14;CAH-XI
 	stockade = { tag = XAA level = 1 location = sisak } # castra_siscia; P14;CAH-XI
@@ -95,7 +95,7 @@ building_manager = {
 	confucian_academy = { tag = XAR level = 1 location = jingzhao } # changan_taixue; P12.3;CHI-TAIXUE
 	irrigation_systems = { tag = XAR level = 1 location = chengdu } # chengdu_irrigation; P12.3;UNESCO-DJJ
 	lacquerware_guild = { tag = XAR level = 1 location = chengdu } # chengdu_lacquerware; P12.1;P8.3;BHR
-	glass_guild = { tag = XDK level = 1 location = cologne } # cologne_glass; P12.1;P8.7
+	glass_guild = { tag = XDW level = 1 location = cologne } # cologne_glass; P12.1;P8.7
 	protected_harbor = { tag = XAA level = 1 location = ayasuluk } # ephesus_harbor; P12.2;P8.1;UNESCO-EPH
 	irrigation_systems = { tag = XAA level = 1 location = faiyum } # faiyum_irrigation; P12.3;UNESCO-FAY
 	protected_harbor = { tag = XAA level = 1 location = cadiz } # gades_harbor; P12.2;P8.1
@@ -106,11 +106,11 @@ building_manager = {
 	protected_harbor = { tag = XAA level = 1 location = marseille } # massilia_harbor; P12.2;P8.1
 	market_warehouse = { tag = BED level = 1 location = al_mukha } # muza_warehouse; P12.2;P8.6;CAS-PER
 	protected_harbor = { tag = XBB level = 1 location = kodungallur } # muziris_harbor; P12.2;P8.4;PER
-	antq_castrum_novaesium = { tag = XDK level = 1 location = neuss } # neuss_castrum; NEU-NOVAESIUM
+	antq_castrum_novaesium = { tag = XDW level = 1 location = neuss } # neuss_castrum; NEU-NOVAESIUM
 	antq_castrum_hunnerberg = { tag = BTV level = 1 location = nijmegen } # nijmegen_castrum_hunnerberg; RU-HUNNERBERG
 	protected_harbor = { tag = XAR level = 1 location = panyu } # panyu_harbor; P12.2;P8.3;BHR
 	antq_classis_ravennatis = { tag = XAA level = 1 location = ravenna } # ravenna_classis; MIC-CLASSE;RA-CLASSE
-	antq_castrum_aliso = { tag = CRU level = 1 location = recklinghausen } # recklinghausen_aliso; LWL-ALISO
+	antq_castrum_aliso = { tag = SGM level = 1 location = recklinghausen } # recklinghausen_aliso; LWL-ALISO
 	antq_reg_ivory_carver = { tag = AKS level = 1 location = massawa } # reg_adulis_ivory; P12.1;P8.5;PER
 	antq_reg_fullonica = { tag = XAA level = 1 location = alexandria } # reg_alexandria_fullery; POM-FULLONICA
 	antq_reg_glassworks = { tag = XAA level = 1 location = alexandria } # reg_alexandria_glass; MET-ROMAN-GLASS
@@ -246,16 +246,16 @@ building_manager = {
 	antq_reg_leatherworks = { tag = XDR level = 1 location = cherchell } # reg_cherchell_leatherworks; P12.1;P12.3
 	antq_reg_linen_weavery = { tag = XDR level = 1 location = cherchell } # reg_cherchell_linen_weavery; P12.1;P12.3
 	antq_reg_scriptorium = { tag = XDR level = 1 location = cherchell } # reg_cherchell_scriptorium; P12.1;P12.3
-	antq_reg_dye_workshop = { tag = XDK level = 1 location = cologne } # reg_cologne_dye; UNESCO-TYRE;POM-FULLONICA
-	antq_reg_fullonica = { tag = XDK level = 1 location = cologne } # reg_cologne_fullery; POM-FULLONICA
-	antq_reg_glassworks = { tag = XDK level = 1 location = cologne } # reg_cologne_glass; MET-ROMAN-GLASS
-	antq_reg_metalwork = { tag = XDK level = 1 location = cologne } # reg_cologne_metal; P12.1
-	antq_reg_pottery_kiln = { tag = XDK level = 1 location = cologne } # reg_cologne_pottery; BM-ARRETINE;BM-MEMPHIS
-	antq_reg_fish_saltery = { tag = XDK level = 1 location = cologne } # reg_cologne_saltery; BAELO-SALTERY
-	antq_reg_shipyard = { tag = XDK level = 1 location = cologne } # reg_cologne_shipyard; MET-ROMAN-TRADE
-	antq_reg_stone_yard = { tag = XDK level = 1 location = cologne } # reg_cologne_stone; P12.1
-	antq_reg_weapon_smith = { tag = XDK level = 1 location = cologne } # reg_cologne_weapon_smith; P12.1;P8.7
-	antq_reg_wine_press = { tag = XDK level = 1 location = cologne } # reg_cologne_wine; MET-ROMAN-TRADE
+	antq_reg_dye_workshop = { tag = XDW level = 1 location = cologne } # reg_cologne_dye; UNESCO-TYRE;POM-FULLONICA
+	antq_reg_fullonica = { tag = XDW level = 1 location = cologne } # reg_cologne_fullery; POM-FULLONICA
+	antq_reg_glassworks = { tag = XDW level = 1 location = cologne } # reg_cologne_glass; MET-ROMAN-GLASS
+	antq_reg_metalwork = { tag = XDW level = 1 location = cologne } # reg_cologne_metal; P12.1
+	antq_reg_pottery_kiln = { tag = XDW level = 1 location = cologne } # reg_cologne_pottery; BM-ARRETINE;BM-MEMPHIS
+	antq_reg_fish_saltery = { tag = XDW level = 1 location = cologne } # reg_cologne_saltery; BAELO-SALTERY
+	antq_reg_shipyard = { tag = XDW level = 1 location = cologne } # reg_cologne_shipyard; MET-ROMAN-TRADE
+	antq_reg_stone_yard = { tag = XDW level = 1 location = cologne } # reg_cologne_stone; P12.1
+	antq_reg_weapon_smith = { tag = XDW level = 1 location = cologne } # reg_cologne_weapon_smith; P12.1;P8.7
+	antq_reg_wine_press = { tag = XDW level = 1 location = cologne } # reg_cologne_wine; MET-ROMAN-TRADE
 	antq_reg_amphora_depot = { tag = XAA level = 1 location = cordoba } # reg_cordoba_amphora_depot; MET-ROMAN-TRADE
 	antq_reg_jeweler = { tag = XAA level = 1 location = cordoba } # reg_cordoba_jeweler; P12.1;MET-ROMAN-TRADE
 	antq_reg_linen_weavery = { tag = XAA level = 1 location = cordoba } # reg_cordoba_linen_weavery; P12.1;P12.3
@@ -1988,5 +1988,5 @@ building_manager = {
 	glass_guild = { tag = XAH level = 1 location = sidon } # sidon_glass; P12.1;P8.2;CAH-XI
 	antq_castra_siscia = { tag = XAA level = 1 location = sisak } # sisak_castra_siscia; OCD-SISCIA
 	antq_castrum_argentoratum = { tag = XDK level = 1 location = strasbourg } # strasbourg_castrum_argentoratum; UNISTRA-ARGENTORATUM
-	antq_castra_vetera = { tag = CRU level = 1 location = wesel } # wesel_castra_vetera; LVR-VETERA
+	antq_castra_vetera = { tag = SGM level = 1 location = wesel } # wesel_castra_vetera; LVR-VETERA
 }

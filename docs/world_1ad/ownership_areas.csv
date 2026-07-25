@@ -43,7 +43,6 @@ HAN,south_china_region,own_control_core,P8.3;BHR,secure,Western Han commandery f
 HAN,west_china_region,own_control_core,P8.3;BHR,secure,Western Han commandery frame
 ISK,upper_indus_area,own_control_core,P8.4;CAH-XI,contested,Indo-Scythian northwestern frontier frame
 ISK,sindh_area,own_control_core,P8.4;CAH-XI,contested,Indo-Scythian Sindh frame
-ISK,punjab_area,own_control_core,P8.4;CAH-XI,contested,Indo-Scythian Gandhara and Punjab frame
 YUE,badakhshan_area,own_control_core,P8.4;CAH-XI,contested,Yuezhi Bactrian mountain and Oxus approach frame
 KUN,nepal_area,own_control_core,P8.4;CAH-XI,contested,Kuninda Himalayan foothill frame
 KAL,orissa_area,own_control_core,P8.4;CAH-XI,contested,Kalinga coastal and interior frame
@@ -79,20 +78,12 @@ BRI,northumbria_area,own_control_core,P8.7;CAH-XI,contested,Brigantian northern 
 DUM,west_country_area,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
 FRI,friesland_area,own_control_core,P8.7;CAH-XI,contested,Frisian coastal frame
 BTV,holland_area,own_control_core,P8.7;CAH-XI,contested,Batavian lower Rhine frame
-CRU,westphalia_area,own_control_core,P8.7;CAH-XI,contested,Cheruscan lower Weser frame
 CHT,hesse_area,own_control_core,P8.7;CAH-XI,contested,Chattian Hessian frame
 HER,upper_saxony_area,own_control_core,P8.7;CAH-XI,contested,Hermundurian Thuringian and upper Elbe frame
 MCM,bohemia_area,own_control_core,P8.7;CAH-XI,secure,Marcomannic Bohemian kingdom frame
 THR,thrace_area,own_control_core,P8.1;CAH-XI,contested,Odrysian Thracian client frame
-SUI,svealand_area,own_control_core,P8.7;CAH-XI,contested,Suionic Uppland frame
-SUI,gotaland_area,own_control_core,P8.7;CAH-XI,contested,Scandinavian SoP Gotaland frame
 FIN,finland_area,own_control_core,P8.7;CAH-XI,contested,Finnic coastal and inland SoP frame
-FIN,karelia_area,own_control_core,P8.7;CAH-XI,contested,Finnic Karelia SoP frame
 VEN,central_poland_area,own_control_core,P8.7;CAH-XI,contested,Venedi western-Slavic SoP frame
-VEN,greater_poland_area,own_control_core,P8.7;CAH-XI,contested,Venedi western-Slavic SoP frame
-VEN,lesser_poland_area,own_control_core,P8.7;CAH-XI,contested,Venedi western-Slavic SoP frame
-VEN,lithuania_area,own_control_core,P8.7;CAH-XI,contested,Venedi and Baltic frontier SoP frame
-VEN,samogitia_area,own_control_core,P8.7;CAH-XI,contested,Venedi and Baltic frontier SoP frame
 IAZ,north_alfold_area,own_control_core,P8.7;CAH-XI,contested,Iazyges Tisza-plain frame
 IAZ,south_alfold_area,own_control_core,P8.7;CAH-XI,contested,Iazyges Tisza-plain frame
 DAC,transylvania_area,own_control_core,P8.7;CAH-XI,contested,Dacian mountain-kingdom frame
@@ -141,7 +132,6 @@ BLM,nubia_proper_area,own_control_core,P8.5;CAH-XI,contested,Blemmyan Lower Nubi
 AKS,northern_ethiopia_area,own_control_core,P8.5;PER,contested,Emerging Aksumite northern highland frame
 AKS,central_ethiopia_area,own_control_core,P8.5;PER,contested,Emerging Aksumite central highland frame
 AKS,southern_ethiopia_area,own_control_core,P8.5;PER,contested,Emerging Aksumite southern highland frame
-WAF,guinea_region,own_control_core,P8.5;CAH-XI,contested,West African iron-age SoP frame
 BNT,central_africa_region,own_control_core,P8.5;CAH-XI,contested,Bantu-expansion central African SoP frame
 BNT,kongo_region,own_control_core,P8.5;CAH-XI,contested,Bantu-expansion Kongo SoP frame
 BNT,great_lakes_region,own_control_core,P8.5;CAH-XI,contested,Bantu-expansion Great Lakes SoP frame
@@ -166,3 +156,76 @@ CHI,quitu_area,own_control_core,P8.10;CAH-XI,contested,Chibchan northern-Andean 
 CHI,colombia_region,own_control_core,P8.10;CAH-XI,contested,Chibchan northern-Andean SoP frame
 PLA,great_plains_region,own_control_core,P8.10;CAH-XI,contested,Plains and coastal SoP frame
 PLA,east_coast_region,own_control_core,P8.10;CAH-XI,contested,Plains and coastal SoP frame
+BTV,brabant_area,own_control_core,P8.7;CAH-XI;TAC-BAT,contested,Batavian lower-Rhine campaign frame
+GMB,emsland_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Gamabrivii campaign proxy
+CRU,lippe_province,own_control_core,P8.7;CAH-XI;OCD-CHER,contested,Cheruscan campaign proxy
+CRU,middle_weser_province,own_control_core,P8.7;CAH-XI;OCD-CHER,contested,Cheruscan campaign proxy
+CRU,ostwestphalia_province,own_control_core,P8.7;CAH-XI;OCD-CHER,contested,Cheruscan campaign proxy
+BRC,munsterland_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Bructeri campaign proxy
+SGM,ruhr_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Sugambri campaign proxy
+SGM,sauerland_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Sugambri campaign proxy
+CTU,wesermarch_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Chattuarii campaign proxy
+LAN,altmark_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Langobardic lower-Elbe campaign proxy
+SEM,flaming_province,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Semnonic Elbe-Havel campaign proxy
+SEM,mittelmark_province,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Semnonic Elbe-Havel campaign proxy
+SEM,niederlausitz_province,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Semnonic Elbe-Havel campaign proxy
+SEM,prignitz_province,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Semnonic Elbe-Havel campaign proxy
+SEM,uckermark_province,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Semnonic Elbe-Havel campaign proxy
+VAN,neumark_province,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Vandilic Oder campaign proxy
+CLC,holstein_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Caulci campaign proxy
+CPS,lubeck_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Campsiani campaign proxy
+CHC,aller_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Chauci campaign proxy
+HER,brunswick_province,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Hermundurian campaign proxy
+HER,harz_province,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Hermundurian campaign proxy
+HER,magdeburger_borde_province,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Hermundurian campaign proxy
+LAN,elbmarch_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Langobardic lower-Elbe campaign proxy
+GER,hanover_province,own_control_core,P8.7;CAH-XI,contested,Unresolved middle-Germanic campaign frame
+CRU,leine_province,own_control_core,P8.7;CAH-XI;OCD-CHER,contested,Cheruscan campaign proxy
+VRN,schwerin_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Varini campaign proxy
+VRN,seenplatte_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Varini campaign proxy
+RUG,vorpommern_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Rugian Baltic campaign proxy
+BRG,pyritz_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Burgundion-Lemovian campaign proxy
+GUT,stettin_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Gutonic Baltic campaign proxy
+SBN,stolp_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Sibini campaign proxy
+SGM,bergisches_land_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Sugambri campaign proxy
+CTU,eifel_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Lower-Rhine community proxy
+CTU,hunsruck_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Lower-Rhine community proxy
+BRC,julich_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Bructeri campaign proxy
+BRC,koln_bucht_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Bructeri campaign proxy
+SGM,niederrhein_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Sugambri campaign proxy
+SGM,westerwald,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Sugambri campaign proxy
+NAR,bavaria_area,own_control_core,P8.7;CAH-XI;TAC-GER,contested,Naristi upper-Danube campaign frame
+NAR,franconia_area,own_control_core,P8.7;CAH-XI;TAC-GER,contested,Naristi-Hermundurian campaign frame
+QUA,moravia_area,own_control_core,P8.7;CAH-XI;OCD-QUA,contested,Quadian Moravian campaign frame
+SUE,swabia_area,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Suebian campaign coalition frame
+SUE,upper_rhine_area,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Suebian campaign coalition frame
+NHR,glogow_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Naharvali campaign proxy
+MIM,legnica_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Manimi campaign proxy
+ZUM,olesnica_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Zumi campaign proxy
+HLS,opavsko_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Helisii campaign proxy
+LUG,opole_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Lugii campaign proxy
+HLV,swidnica_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Helveconae campaign proxy
+BUU,tesin_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Buri campaign proxy
+MSI,wroclaw_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Marsigni campaign proxy
+HRI,zagan_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Harii campaign proxy
+CMB,norrejylland_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Cimbri campaign proxy
+CMB,vendsyssel_thy_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Cimbri campaign proxy
+RDN,sonderjylland_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Reudigni campaign proxy
+ANG,slesvig_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Anglian campaign proxy
+SRD,funen_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Suardones campaign proxy
+AVN,zealand_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Aviones campaign proxy
+EUD,western_jutland_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Eudoses campaign proxy
+JUT,eastern_jutland_province,own_control_core,P8.7;CAH-XI,contested,Jutish campaign proxy
+SUI,gastrikland_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Suiones campaign proxy
+SUI,nerike_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Suiones campaign proxy
+SUI,sodermanland_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Suiones campaign proxy
+SUI,uppland_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Suiones campaign proxy
+SUI,varmland_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Suiones campaign proxy
+SUI,vastmanland_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Suiones campaign proxy
+SIT,dalarna_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Sitones campaign proxy
+PRZ,greater_poland_area,own_control_core,UW-PRZ;P8.7;CAH-XI,contested,Przeworsk archaeological campaign frame
+PRZ,lesser_poland_area,own_control_core,UW-PRZ;P8.7;CAH-XI,contested,Przeworsk archaeological campaign frame
+VEN,mazovia_area,own_control_core,P8.7;CAH-XI,contested,Vistula Venedi campaign frame
+AES,lithuania_area,own_control_core,P8.7;CAH-XI,contested,Eastern Baltic campaign frame
+AES,samogitia_area,own_control_core,P8.7;CAH-XI,contested,Eastern Baltic campaign frame
+KRL,karelia_area,own_control_core,P8.7;CAH-XI,contested,Ladoga-Karelian community frame

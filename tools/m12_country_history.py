@@ -245,8 +245,11 @@ SPECIAL: dict[str, str] = {
 def read_rows() -> list[dict[str, str]]:
     with POLITIES.open(encoding="utf-8-sig", newline="") as handle:
         rows = list(csv.DictReader(handle))
-    if len(rows) != 157:
-        raise ValueError(f"expected 157 polity rows, found {len(rows)}")
+    if not rows:
+        raise ValueError("polity roster is empty")
+    tags = [row["tag"] for row in rows]
+    if len(tags) != len(set(tags)):
+        raise ValueError("polity roster contains duplicate design tags")
     return rows
 
 

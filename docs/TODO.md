@@ -213,7 +213,7 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     Antioch 220k; Ephesus 180k. Antioch is now Roman and Hellenophone. Generated
     cross-tables, 73 checks, paired smoke, and a rapid seven-city map probe pass.
 
-- [ ] Expand political granularity where residual SoPs create giant blobs.
+- [x] Expand political granularity where residual SoPs create giant blobs.
   - This requires new tags/contracts/capitals/CoAs/ownership, not just detailed
     culture selectors. Reopen the 157-polity roster in priority order:
     (1) Germania and Venedi-facing lands, (2) Gaul/Rome's northern frontier,
@@ -235,6 +235,15 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
   - Acceptance: no residual tag controls an implausibly huge multicultural
     macro-region solely for coverage; before/after political captures and
     size/location counts for all five target regions.
+  - Completed: added 72 sourced Tier-3 peoples, archaeological horizons, and
+    community frames, taking the roster from 157 to 229. Germania/Scandinavia,
+    Venedi, Finnic/Siberian, Wa Japan, and West African residuals fell from
+    639/997/337/342/367 locations to 72/56/36/9/24. Every addition has an owned
+    capital, explicit culture/faith profile, government/rank/AI start, diplomacy,
+    regional CoA, localization, agenda, and validation coverage. A fresh AD 1
+    selector probe has zero primary-culture or discriminated-estate diagnostics;
+    the older Indo-Greek `sagala`/West-African map-key collision is also repaired.
+    Full validation passes 74/74 and paired smoke has zero mod-only lines.
 
 - [ ] Make Gallic culture/pop assignment genuinely granular.
   - Audit actual culture on every Gallic pop/location, not only definitions and

@@ -24,6 +24,7 @@ CONFIG = ROOT / "config/local_paths.json"
 METADATA = ROOT / ".metadata/metadata.json"
 REPORT = ROOT / "docs/m12/installed_content_leakage.json"
 SUMMARY = ROOT / "docs/m12/INSTALLED_CONTENT_CENSUS.md"
+POLITIES = ROOT / "docs/world_1ad/polities.csv"
 
 SURFACES = {
     "ages": "in_game/common/age",
@@ -224,6 +225,8 @@ def localization_contract() -> dict[str, object]:
         (row.get("engine_tag", ""), row.get("localization_key", ""))
         for row in history_rows
     )
+    with POLITIES.open(encoding="utf-8-sig", newline="") as handle:
+        roster_count = sum(1 for _ in csv.DictReader(handle))
     expected_keys = {key for _, key in expected_history}
     client_coverage: dict[str, int] = {}
     clients_complete = True
@@ -245,9 +248,9 @@ def localization_contract() -> dict[str, object]:
     history_complete = (
         history_target.is_file()
         and history_selector.is_file()
-        and len(history_rows) == 157
-        and len(expected_keys) == 157
-        and len({tag for tag, _ in expected_history}) == 157
+        and len(history_rows) == roster_count
+        and len(expected_keys) == roster_count
+        and len({tag for tag, _ in expected_history}) == roster_count
         and history_triggers == expected_history
         and expected_keys <= set(history_override_keys)
         and clients_complete
@@ -265,7 +268,7 @@ def localization_contract() -> dict[str, object]:
         "country_history_client_coverage": client_coverage,
         "country_history_complete": history_complete,
         "country_history_status": (
-            "complete_157_tag_exact_override"
+            f"complete_{roster_count}_tag_exact_override"
             if history_complete
             else "uncovered"
         ),

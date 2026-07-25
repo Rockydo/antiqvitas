@@ -311,7 +311,7 @@ XAW = { # Mahan; P8.3;SAM
 	color = rgb { 50 93 166 }
 	color2 = rgb { 205 162 89 }
 
-	culture_definition = antq_korean
+	culture_definition = antq_samhan
 	religion_definition = antq_korean_muism
 	is_historic = yes
 }
@@ -320,7 +320,7 @@ JIN = { # Jinhan; P8.3;SAM
 	color = rgb { 45 91 158 }
 	color2 = rgb { 210 164 97 }
 
-	culture_definition = antq_korean
+	culture_definition = antq_samhan
 	religion_definition = antq_korean_muism
 	is_historic = yes
 }
@@ -329,7 +329,7 @@ BYE = { # Byeonhan; P8.3;SAM
 	color = rgb { 40 97 145 }
 	color2 = rgb { 215 158 110 }
 
-	culture_definition = antq_korean
+	culture_definition = antq_samhan
 	religion_definition = antq_korean_muism
 	is_historic = yes
 }
@@ -482,7 +482,7 @@ XBG = { # Blemmyes; P8.5;CAH-XI;PLE
 	color = rgb { 115 111 57 }
 	color2 = rgb { 140 144 198 }
 
-	culture_definition = antq_nubian
+	culture_definition = antq_blemmyan
 	religion_definition = antq_nile_cushitic
 	is_historic = yes
 }
@@ -500,7 +500,7 @@ DJN = { # Djenne-Djenno; P8.5;CAH-XI
 	color = rgb { 122 110 36 }
 	color2 = rgb { 133 145 219 }
 
-	culture_definition = antq_mande
+	culture_definition = antq_middle_niger
 	religion_definition = antq_west_african
 	is_historic = yes
 }
@@ -518,7 +518,7 @@ XDE = { # Bantu Societies; P8.5;CAH-XI
 	color = rgb { 134 100 68 }
 	color2 = rgb { 121 155 187 }
 
-	culture_definition = antq_nubian
+	culture_definition = antq_eastern_bantu
 	religion_definition = antq_kushite_amun
 	is_historic = yes
 }
@@ -527,7 +527,7 @@ XDF = { # Barbaria Societies; P8.5;CAH-XI
 	color = rgb { 127 104 57 }
 	color2 = rgb { 128 151 198 }
 
-	culture_definition = antq_nubian
+	culture_definition = antq_cushitic
 	religion_definition = antq_kushite_amun
 	is_historic = yes
 }
@@ -725,7 +725,7 @@ XBS = { # Suiones; P8.7;CAH-XI
 	color = rgb { 56 104 163 }
 	color2 = rgb { 199 151 92 }
 
-	culture_definition = antq_germanic
+	culture_definition = antq_suionian
 	religion_definition = antq_germanic_religion
 	is_historic = yes
 }
@@ -860,7 +860,7 @@ GET = { # Getae; P8.7;CAH-XI
 	color = rgb { 101 134 70 }
 	color2 = rgb { 154 121 185 }
 
-	culture_definition = antq_dacian
+	culture_definition = antq_getic
 	religion_definition = antq_baltic_slavic
 	is_historic = yes
 }
@@ -986,7 +986,7 @@ XCJ = { # Dingling; P8.8;CAH-XI
 	color = rgb { 109 124 115 }
 	color2 = rgb { 146 131 140 }
 
-	culture_definition = antq_xiongnu
+	culture_definition = antq_dingling
 	religion_definition = antq_tengri
 	is_historic = yes
 }
@@ -995,7 +995,7 @@ PYU = { # Pyu Cities; P8.9;CAH-XI
 	color = rgb { 64 125 76 }
 	color2 = rgb { 191 130 179 }
 
-	culture_definition = antq_mon
+	culture_definition = antq_pyu
 	religion_definition = antq_mahayana
 	is_historic = yes
 }
@@ -1013,7 +1013,7 @@ XCL = { # Proto-Khmer; P8.9;CAH-XI
 	color = rgb { 76 128 103 }
 	color2 = rgb { 179 127 152 }
 
-	culture_definition = antq_mon
+	culture_definition = antq_khmer
 	religion_definition = antq_mahayana
 	is_historic = yes
 }
@@ -1022,7 +1022,7 @@ XCM = { # Malay Polities; P8.9;CAH-XI
 	color = rgb { 62 125 93 }
 	color2 = rgb { 193 130 162 }
 
-	culture_definition = antq_mon
+	culture_definition = antq_malay
 	religion_definition = antq_mahayana
 	is_historic = yes
 }
@@ -1031,7 +1031,7 @@ JAV = { # Javanese Polities; P8.9;CAH-XI
 	color = rgb { 62 114 97 }
 	color2 = rgb { 193 141 158 }
 
-	culture_definition = antq_mon
+	culture_definition = antq_javanese
 	religion_definition = antq_mahayana
 	is_historic = yes
 }
@@ -1040,7 +1040,7 @@ PHL = { # Philippine Societies; P8.9;CAH-XI
 	color = rgb { 76 132 94 }
 	color2 = rgb { 179 123 161 }
 
-	culture_definition = antq_mon
+	culture_definition = antq_philippine
 	religion_definition = antq_mahayana
 	is_historic = yes
 }
@@ -1049,7 +1049,7 @@ XCN = { # Bornean Societies; P8.9;CAH-XI
 	color = rgb { 56 133 89 }
 	color2 = rgb { 199 122 166 }
 
-	culture_definition = antq_mon
+	culture_definition = antq_bornean
 	religion_definition = antq_mahayana
 	is_historic = yes
 }
@@ -1058,7 +1058,7 @@ XCO = { # Tonga-Samoa-Fiji; P8.9;CAH-XI
 	color = rgb { 48 115 155 }
 	color2 = rgb { 207 140 100 }
 
-	culture_definition = antq_austronesian
+	culture_definition = antq_tongan
 	religion_definition = antq_austronesian_religion
 	is_historic = yes
 }
@@ -1103,7 +1103,7 @@ XCV = { # Epi-Olmec; P8.10;CAH-XI
 	color = rgb { 45 121 86 }
 	color2 = rgb { 210 134 169 }
 
-	culture_definition = antq_teotihuacano
+	culture_definition = antq_mixe_zoquean
 	religion_definition = antq_mesoamerican
 	is_historic = yes
 }
@@ -1112,7 +1112,7 @@ WMS = { # West Mexican Societies; P8.10;CAH-XI
 	color = rgb { 30 127 84 }
 	color2 = rgb { 225 128 171 }
 
-	culture_definition = antq_teotihuacano
+	culture_definition = antq_purepecha_precursor
 	religion_definition = antq_mesoamerican
 	is_historic = yes
 }
@@ -1175,7 +1175,7 @@ XCY = { # Hopewell Sphere; P8.10;CAH-XI
 	color = rgb { 75 113 131 }
 	color2 = rgb { 180 142 124 }
 
-	culture_definition = antq_algonquian
+	culture_definition = antq_adena_woodland
 	religion_definition = antq_north_american
 	is_historic = yes
 }
@@ -1202,7 +1202,7 @@ XDG = { # Plains and Coastal Societies; P8.10;CAH-XI
 	color = rgb { 51 115 139 }
 	color2 = rgb { 204 140 116 }
 
-	culture_definition = antq_algonquian
+	culture_definition = antq_hopewellian
 	religion_definition = antq_north_american
 	is_historic = yes
 }
@@ -1220,7 +1220,7 @@ XDB = { # Arawak Societies; P8.10;CAH-XI
 	color = rgb { 34 144 155 }
 	color2 = rgb { 221 111 100 }
 
-	culture_definition = antq_arawak
+	culture_definition = antq_chibchan
 	religion_definition = antq_caribbean
 	is_historic = yes
 }
@@ -1247,7 +1247,7 @@ XDI = { # Caucasian Highland Societies; P8.2;CAH-XI
 	color = rgb { 142 101 71 }
 	color2 = rgb { 113 154 184 }
 
-	culture_definition = antq_armenian
+	culture_definition = antq_kartvelian
 	religion_definition = antq_arsacid_zoroastrianism
 	is_historic = yes
 }
@@ -1256,7 +1256,7 @@ XDJ = { # Brittonic Societies; P8.7;CAH-XI
 	color = rgb { 55 105 72 }
 	color2 = rgb { 200 150 183 }
 
-	culture_definition = antq_brittonic
+	culture_definition = antq_icenian
 	religion_definition = antq_celtic_religion
 	is_historic = yes
 }
@@ -1292,7 +1292,7 @@ XDM = { # Manchurian Societies; P8.3;CAH-XI
 	color = rgb { 110 98 105 }
 	color2 = rgb { 145 157 150 }
 
-	culture_definition = antq_xiongnu
+	culture_definition = antq_yilou
 	religion_definition = antq_tengri
 	is_historic = yes
 }
@@ -1301,7 +1301,7 @@ XDN = { # Tibetan Societies; P8.8;CAH-XI
 	color = rgb { 124 87 60 }
 	color2 = rgb { 131 168 195 }
 
-	culture_definition = antq_sogdian
+	culture_definition = antq_tibeto_burman
 	religion_definition = antq_arsacid_zoroastrianism
 	is_historic = yes
 }
@@ -1364,7 +1364,7 @@ INS = { # Island Southeast Asian Societies; P8.9;CAH-XI
 	color = rgb { 69 115 90 }
 	color2 = rgb { 186 140 165 }
 
-	culture_definition = antq_mon
+	culture_definition = antq_austronesian
 	religion_definition = antq_mahayana
 	is_historic = yes
 }
@@ -1400,7 +1400,7 @@ MEL = { # Melanesian Societies; P8.9;CAH-XI
 	color = rgb { 42 124 131 }
 	color2 = rgb { 213 131 124 }
 
-	culture_definition = antq_austronesian
+	culture_definition = antq_new_guinean
 	religion_definition = antq_austronesian_religion
 	is_historic = yes
 }
@@ -1409,7 +1409,655 @@ XDS = { # Micronesian Societies; P8.9;CAH-XI
 	color = rgb { 37 117 133 }
 	color2 = rgb { 218 138 122 }
 
-	culture_definition = antq_austronesian
+	culture_definition = antq_micronesian
 	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+XDT = { # Chauci; P8.7;STR-GER;TAC-GER;OCD-GER;PLE
+	color = rgb { 81 97 68 }
+	color2 = rgb { 174 158 187 }
+
+	culture_definition = antq_chaucian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+XDU = { # Caulci; P8.7;STR-GER;TAC-GER;OCD-GER;PLE
+	color = rgb { 71 89 58 }
+	color2 = rgb { 184 166 197 }
+
+	culture_definition = antq_caulcian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+CPS = { # Campsiani; P8.7;STR-GER;TAC-GER;OCD-GER;PLE
+	color = rgb { 74 109 75 }
+	color2 = rgb { 181 146 180 }
+
+	culture_definition = antq_campsian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+VRN = { # Varini; P8.7;TAC-GER;OCD-GER;PLE
+	color = rgb { 77 114 63 }
+	color2 = rgb { 178 141 192 }
+
+	culture_definition = antq_varinian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+XDV = { # Mugilones; P8.7;STR-GER;TAC-GER;OCD-GER;PLE
+	color = rgb { 79 91 61 }
+	color2 = rgb { 176 164 194 }
+
+	culture_definition = antq_mugilonian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+SBN = { # Sibini; P8.7;STR-GER;TAC-GER;OCD-GER;PLE
+	color = rgb { 94 105 69 }
+	color2 = rgb { 161 150 186 }
+
+	culture_definition = antq_sibinian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+XDW = { # Bructeri; P8.7;STR-GER;TAC-GER;OCD-GER;PLE
+	color = rgb { 69 98 76 }
+	color2 = rgb { 186 157 179 }
+
+	culture_definition = antq_bructerian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+SGM = { # Sugambri; P8.7;STR-GER;TAC-GER;OCD-GER;PLE
+	color = rgb { 86 88 79 }
+	color2 = rgb { 169 167 176 }
+
+	culture_definition = antq_sugambrian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+CTU = { # Chattuarii; P8.7;STR-GER;TAC-GER;OCD-GER;PLE
+	color = rgb { 91 88 77 }
+	color2 = rgb { 164 167 178 }
+
+	culture_definition = antq_chattuarian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+GMB = { # Gamabrivii; P8.7;STR-GER;TAC-GER;OCD-GER;PLE
+	color = rgb { 80 91 71 }
+	color2 = rgb { 175 164 184 }
+
+	culture_definition = antq_gamabrivian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+CMB = { # Cimbri; P8.7;STR-GER;TAC-GER;OCD-GER;PLE
+	color = rgb { 86 96 62 }
+	color2 = rgb { 169 159 193 }
+
+	culture_definition = antq_cimbric
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+RDN = { # Reudigni; P8.7;TAC-GER;OCD-GER;PLE
+	color = rgb { 76 99 57 }
+	color2 = rgb { 179 156 198 }
+
+	culture_definition = antq_reudignian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+AVN = { # Aviones; P8.7;TAC-GER;OCD-GER;PLE
+	color = rgb { 81 106 69 }
+	color2 = rgb { 174 149 186 }
+
+	culture_definition = antq_avionian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+SRD = { # Suardones; P8.7;TAC-GER;OCD-GER;PLE
+	color = rgb { 69 103 65 }
+	color2 = rgb { 186 152 190 }
+
+	culture_definition = antq_suardonian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+XDX = { # Eudoses; P8.7;TAC-GER;OCD-GER;PLE
+	color = rgb { 73 114 66 }
+	color2 = rgb { 182 141 189 }
+
+	culture_definition = antq_eudusian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+XDY = { # Sitones; P8.7;TAC-GER;OCD-GER;PLE
+	color = rgb { 85 91 55 }
+	color2 = rgb { 170 164 200 }
+
+	culture_definition = antq_sitonian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+XDZ = { # Suebian Communities; P8.7;CAH-XI;CAM-GERM
+	color = rgb { 92 106 59 }
+	color2 = rgb { 163 149 196 }
+
+	culture_definition = antq_suebian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+NAR = { # Naristi; P8.7;CAH-XI;TAC-GER
+	color = rgb { 88 96 71 }
+	color2 = rgb { 167 159 184 }
+
+	culture_definition = antq_suebian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+LUG = { # Lugii; P8.7;STR-GER;TAC-GER;OCD-GER;PLE
+	color = rgb { 67 87 56 }
+	color2 = rgb { 188 168 199 }
+
+	culture_definition = antq_lugian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+NHR = { # Naharvali; P8.7;TAC-GER;OCD-GER;PLE
+	color = rgb { 88 108 67 }
+	color2 = rgb { 167 147 188 }
+
+	culture_definition = antq_naharvalian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+XEA = { # Marsigni; P8.7;TAC-GER;OCD-GER;PLE
+	color = rgb { 83 111 78 }
+	color2 = rgb { 172 144 177 }
+
+	culture_definition = antq_marsignian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+XEB = { # Buri; P8.7;TAC-GER;OCD-GER;PLE
+	color = rgb { 85 103 82 }
+	color2 = rgb { 170 152 173 }
+
+	culture_definition = antq_burian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+MIM = { # Manimi; P8.7;TAC-GER;OCD-GER;PLE
+	color = rgb { 92 95 55 }
+	color2 = rgb { 163 160 200 }
+
+	culture_definition = antq_manimian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+HLV = { # Helveconae; P8.7;TAC-GER;OCD-GER;PLE
+	color = rgb { 66 89 70 }
+	color2 = rgb { 189 166 185 }
+
+	culture_definition = antq_helveconan
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+HRI = { # Harii; P8.7;TAC-GER;OCD-GER;PLE
+	color = rgb { 76 94 65 }
+	color2 = rgb { 179 161 190 }
+
+	culture_definition = antq_harian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+HLS = { # Helisii; P8.7;TAC-GER;OCD-GER;PLE
+	color = rgb { 87 112 59 }
+	color2 = rgb { 168 143 196 }
+
+	culture_definition = antq_helisian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+ZUM = { # Zumi; P8.7;STR-GER;TAC-GER;OCD-GER;PLE
+	color = rgb { 85 101 70 }
+	color2 = rgb { 170 154 185 }
+
+	culture_definition = antq_zumian
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+XEC = { # Przeworsk Horizon Communities; UW-PRZ;P8.7;CAH-XI
+	color = rgb { 88 110 143 }
+	color2 = rgb { 167 145 112 }
+
+	culture_definition = antq_venedi
+	religion_definition = antq_baltic_slavic
+	is_historic = yes
+}
+
+ILM = { # Ilmen Forest Communities; P8.7;CAH-XI
+	color = rgb { 99 98 142 }
+	color2 = rgb { 156 157 113 }
+
+	culture_definition = antq_northeast_venedi
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+BLF = { # Beloe Lake Communities; P8.7;CAH-XI
+	color = rgb { 70 126 120 }
+	color2 = rgb { 185 129 135 }
+
+	culture_definition = antq_northeast_venedi
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+MOK = { # Moskva-Oka Communities; P8.7;CAH-XI
+	color = rgb { 56 112 139 }
+	color2 = rgb { 199 143 116 }
+
+	culture_definition = antq_northeast_venedi
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+UVF = { # Upper Volga Communities; P8.7;CAH-XI
+	color = rgb { 63 117 131 }
+	color2 = rgb { 192 138 124 }
+
+	culture_definition = antq_northeast_venedi
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+WHT = { # White Sea Forest Communities; P8.7;CAH-XI
+	color = rgb { 47 107 119 }
+	color2 = rgb { 208 148 136 }
+
+	culture_definition = antq_northeast_venedi
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+XED = { # Middle Volga Communities; P8.7;CAH-XI
+	color = rgb { 52 124 125 }
+	color2 = rgb { 203 131 130 }
+
+	culture_definition = antq_northeast_venedi
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+XEE = { # Smolensk-Dvina Communities; P8.7;CAH-XI
+	color = rgb { 93 107 136 }
+	color2 = rgb { 162 148 119 }
+
+	culture_definition = antq_northeast_venedi
+	religion_definition = antq_baltic_slavic
+	is_historic = yes
+}
+
+RZM = { # Ryazan-Moksha Communities; P8.7;CAH-XI
+	color = rgb { 61 113 136 }
+	color2 = rgb { 194 142 119 }
+
+	culture_definition = antq_northeast_venedi
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+BLR = { # Upper Dnieper Forest Communities; P8.7;CAH-XI
+	color = rgb { 93 109 139 }
+	color2 = rgb { 162 146 116 }
+
+	culture_definition = antq_dnieper_venedi
+	religion_definition = antq_baltic_slavic
+	is_historic = yes
+}
+
+ZRB = { # Zarubintsy Horizon; RAS-ZAR;P8.7;CAH-XI
+	color = rgb { 74 88 125 }
+	color2 = rgb { 181 167 130 }
+
+	culture_definition = antq_dnieper_venedi
+	religion_definition = antq_baltic_slavic
+	is_historic = yes
+}
+
+PDL = { # Upper Dniester Communities; P8.7;CAH-XI
+	color = rgb { 93 85 122 }
+	color2 = rgb { 162 170 133 }
+
+	culture_definition = antq_dnieper_venedi
+	religion_definition = antq_baltic_slavic
+	is_historic = yes
+}
+
+DNP = { # Dnieper Communities; RAS-ZAR;P8.7;CAH-XI
+	color = rgb { 99 88 127 }
+	color2 = rgb { 156 167 128 }
+
+	culture_definition = antq_dnieper_venedi
+	religion_definition = antq_baltic_slavic
+	is_historic = yes
+}
+
+XEF = { # Karelian Forest Communities; P8.7;CAH-XI
+	color = rgb { 62 106 120 }
+	color2 = rgb { 193 149 135 }
+
+	culture_definition = antq_finnic_culture
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+XEG = { # Permic Kama Communities; PAR-PER;P8.7;CAH-XI
+	color = rgb { 60 131 134 }
+	color2 = rgb { 195 124 121 }
+
+	culture_definition = antq_permic
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+VLF = { # Volga Finnic Communities; P8.7;CAH-XI
+	color = rgb { 61 105 142 }
+	color2 = rgb { 194 150 113 }
+
+	culture_definition = antq_finnic_culture
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+SUG = { # Southern Ural Communities; P8.7;CAH-XI
+	color = rgb { 60 106 119 }
+	color2 = rgb { 195 149 136 }
+
+	culture_definition = antq_uralic
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+SMY = { # Northern Samoyedic Communities; P8.7;CAH-XI
+	color = rgb { 48 124 140 }
+	color2 = rgb { 207 131 115 }
+
+	culture_definition = antq_samoyedic
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+XEH = { # Sargat Horizon; RAS-SAR;HUM-SAR;P8.8
+	color = rgb { 118 105 105 }
+	color2 = rgb { 137 150 150 }
+
+	culture_definition = antq_sargat
+	religion_definition = antq_tengri
+	is_historic = yes
+}
+
+KUL = { # Kulay Horizon; TOM-KUL;P8.8
+	color = rgb { 97 99 129 }
+	color2 = rgb { 158 156 126 }
+
+	culture_definition = antq_kulay
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+UGR = { # Western Ugric Communities; P8.7;CAH-XI
+	color = rgb { 73 130 138 }
+	color2 = rgb { 182 125 117 }
+
+	culture_definition = antq_ugric
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+HOK = { # Hokuriku Wa Communities; JAA-YAY;ISIJ-YAY;P8.3
+	color = rgb { 176 64 68 }
+	color2 = rgb { 79 191 187 }
+
+	culture_definition = antq_wa
+	religion_definition = antq_kami
+	is_historic = yes
+}
+
+XEI = { # Shikoku Wa Communities; JAA-YAY;ISIJ-YAY;P8.3
+	color = rgb { 174 75 73 }
+	color2 = rgb { 81 180 182 }
+
+	culture_definition = antq_wa
+	religion_definition = antq_kami
+	is_historic = yes
+}
+
+OHW = { # Northern Honshu Communities; JAA-YAY;P8.3
+	color = rgb { 180 61 87 }
+	color2 = rgb { 75 194 168 }
+
+	culture_definition = antq_wa
+	religion_definition = antq_kami
+	is_historic = yes
+}
+
+RYS = { # Ryukyu Shell-Midden Communities; RYU-ARC;P8.3
+	color = rgb { 177 51 83 }
+	color2 = rgb { 78 204 172 }
+
+	culture_definition = antq_ryukyu_shell_midden
+	religion_definition = antq_kami
+	is_historic = yes
+}
+
+KYU = { # Northern Kyushu Wa Communities; JAA-YAY;ISIJ-YAY;P8.3
+	color = rgb { 188 73 74 }
+	color2 = rgb { 67 182 181 }
+
+	culture_definition = antq_wa
+	religion_definition = antq_kami
+	is_historic = yes
+}
+
+IZM = { # Izumo Wa Communities; JAA-YAY;ISIJ-YAY;P8.3
+	color = rgb { 198 65 62 }
+	color2 = rgb { 57 190 193 }
+
+	culture_definition = antq_wa
+	religion_definition = antq_kami
+	is_historic = yes
+}
+
+KBI = { # Kibi Wa Communities; JAA-YAY;ISIJ-YAY;P8.3
+	color = rgb { 176 68 65 }
+	color2 = rgb { 79 187 190 }
+
+	culture_definition = antq_wa
+	religion_definition = antq_kami
+	is_historic = yes
+}
+
+TKW = { # Tokai Wa Communities; JAA-YAY;P8.3
+	color = rgb { 183 52 69 }
+	color2 = rgb { 72 203 186 }
+
+	culture_definition = antq_wa
+	religion_definition = antq_kami
+	is_historic = yes
+}
+
+EHW = { # Eastern Honshu Communities; JAA-YAY;P8.3
+	color = rgb { 173 60 68 }
+	color2 = rgb { 82 195 187 }
+
+	culture_definition = antq_wa
+	religion_definition = antq_kami
+	is_historic = yes
+}
+
+NOK = { # Late Nok Horizon; JAA-NOK;OUP-NOK;P8.5
+	color = rgb { 123 85 30 }
+	color2 = rgb { 132 170 225 }
+
+	culture_definition = antq_nok
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+LCH = { # Lake Chad Basin Communities; CAM-DAI;OUP-CHAD;P8.5
+	color = rgb { 127 94 46 }
+	color2 = rgb { 128 161 209 }
+
+	culture_definition = antq_chadic
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+XEJ = { # Middle Niger Communities; CAM-MLR;MET-IND;P8.5
+	color = rgb { 125 88 43 }
+	color2 = rgb { 130 167 212 }
+
+	culture_definition = antq_middle_niger
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+WGD = { # Western Sahel Communities; CAM-MLR;P8.5
+	color = rgb { 137 98 35 }
+	color2 = rgb { 118 157 220 }
+
+	culture_definition = antq_western_sahel
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+XEK = { # Volta Basin Communities; MET-IRON;P8.5
+	color = rgb { 146 109 44 }
+	color2 = rgb { 109 146 211 }
+
+	culture_definition = antq_volta_basin
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+XEL = { # Senegambian Communities; CAM-MLR;MET-IRON;P8.5
+	color = rgb { 126 101 36 }
+	color2 = rgb { 129 154 219 }
+
+	culture_definition = antq_senegambian
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+AKF = { # Akan Forest Communities; MET-IRON;P8.5
+	color = rgb { 123 110 50 }
+	color2 = rgb { 132 145 205 }
+
+	culture_definition = antq_akan_forest
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+XEM = { # Lower Niger Communities; MET-IRON;P8.5
+	color = rgb { 129 102 37 }
+	color2 = rgb { 126 153 218 }
+
+	culture_definition = antq_lower_niger
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+XEN = { # Gur Iron-Age Communities; MET-IRON;P8.5
+	color = rgb { 140 100 46 }
+	color2 = rgb { 115 155 209 }
+
+	culture_definition = antq_gur
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+MUP = { # Mande Upland Communities; CAM-MLR;MET-IRON;P8.5
+	color = rgb { 139 93 53 }
+	color2 = rgb { 116 162 202 }
+
+	culture_definition = antq_mande
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+XEO = { # Air Massif Communities; CAM-DAI;P8.5
+	color = rgb { 134 95 35 }
+	color2 = rgb { 121 160 220 }
+
+	culture_definition = antq_air_massif
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+GTL = { # Gotaland Communities; P8.7;CAH-XI
+	color = rgb { 67 92 78 }
+	color2 = rgb { 188 163 177 }
+
+	culture_definition = antq_germanic
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+XEP = { # Scania Communities; P8.7;CAH-XI
+	color = rgb { 90 112 78 }
+	color2 = rgb { 165 143 177 }
+
+	culture_definition = antq_germanic
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+SNR = { # Southern Norwegian Communities; P8.7;CAH-XI
+	color = rgb { 88 101 55 }
+	color2 = rgb { 167 154 200 }
+
+	culture_definition = antq_germanic
+	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+NNR = { # Northern Nordic Communities; P8.7;CAH-XI
+	color = rgb { 75 109 80 }
+	color2 = rgb { 180 146 175 }
+
+	culture_definition = antq_germanic
+	religion_definition = antq_germanic_religion
 	is_historic = yes
 }
