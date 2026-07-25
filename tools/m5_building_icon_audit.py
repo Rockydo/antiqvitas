@@ -24,7 +24,7 @@ CONTACT = ROOT / "docs/m5/BUILDING_ICON_CIRCLE_AUDIT.png"
 EXPECTED_TOTAL = 265
 # Raise this after each reviewed re-art batch. It prevents regressions while the
 # open P3 task advances toward the final 265/265 gate.
-MIN_STYLE_PASS = 159
+MIN_STYLE_PASS = 207
 NAVY = (16, 25, 43, 255)
 
 

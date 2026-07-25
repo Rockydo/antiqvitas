@@ -420,6 +420,8 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
       sheets; all 80 pass the circle/navy contract and the full gate is 111/265.
   - [x] Re-art 48 high-visibility regional production families from 12 reviewed
       EU5-referenced sheets; the complete visual gate is 159/265.
+  - [x] Re-art a second 48 regional production families from 12 reviewed
+      EU5-referenced sheets; the complete visual gate is 207/265.
 
 - [ ] Replace medieval character/court backgrounds across graphical cultures.
   - Trace the exact live texture from screenshots rather than assuming it is the 3D

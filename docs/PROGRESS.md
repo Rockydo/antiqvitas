@@ -6590,3 +6590,11 @@ reviewed 128px BC7 DDS.
 - All 48 pass the circle/navy gate; the complete set is 159/265 with zero
   exact or near aliases.
 - Validation passes 78/78; paired vanilla/mod smoke has zero mod-only lines.
+
+## 2026-07-25 - Regional production building art, tranche two
+
+- Replaced 48 further regional icons from 12 reviewed EU5-referenced sheets;
+  one clipped first pass was rejected and regenerated.
+- All 48 pass the circle/navy gate; the complete set is 207/265 with zero
+  exact or near aliases.
+- Validation passes 78/78; paired vanilla/mod smoke has zero mod-only lines.
