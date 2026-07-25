@@ -264,7 +264,7 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     broad blocks; the exact atlas validator, 75 checks, paired smoke, and fresh
     culture-map/New Game probes pass with no culture diagnostics.
 
-- [ ] Verify and complete Galatian representation in AD 1 Anatolia.
+- [x] Verify and complete Galatian representation in AD 1 Anatolia.
   - Existing data has Tectosagian pops and Tolistobogii/Trocmi definitions; do not
     invent an independent unified Galatia merely for visibility. Research status
     after Roman annexation in 25 BC, continued identity, and settlement geography
@@ -276,8 +276,12 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
   - Acceptance: sourced culture-location ledger, Roman ownership unless a dated
     exception is supported, all justified communities visible, and an Anatolia
     culture-map capture.
+  - Completed: the Roman-owned Ancyra/Tectosages, Pessinus/Tolistobogii, and
+    Tavium/Trocmi proxies total 269.842k across 19 reviewed locations. The generic
+    Galatian fallback is gone; generated ledgers, validation, smoke, and the AD 1
+    selector pass. See `docs/playtests/M4_GALATIAN_ATLAS_20260725.md`.
 
-- [ ] Replace medieval pop-class presentation with ancient terminology and art.
+- [x] Replace medieval pop-class presentation with ancient terminology and art.
   - Inventory all eight engine keys (`nobles`, `clergy`, `burghers`, `laborers`,
     `soldiers`, `peasants`, `tribesmen`, `slaves`) and every hardcoded script,
     estate, economy, GUI, localization, portrait, and icon dependency.
@@ -292,8 +296,12 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
   - Acceptance: no medieval Burgher/Noble presentation in Roman, Germanic, Gallic,
     Han, or West African samples; eight distinct period assets; stable economy and
     save/reload.
+  - Completed: all eight hardwired engine keys retain compatibility but resolve
+    to ancient terms and 56 direct, region-aware DDS targets derived from 48
+    reviewed masters. Exact resolver checks, contact-sheet review, validation,
+    paired smoke, and focused UI checks pass.
 
-- [ ] Replace "County" and other medieval rank presentation for tribes/SoPs.
+- [x] Replace "County" and other medieval rank presentation for tribes/SoPs.
   - The generator assigns `rank_county` to SoPs and vanilla's default localization
     is "County". Vanilla has contextual `rank_county_tribe`, but the current custom
     government/reform context is not selecting it.
@@ -306,6 +314,10 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
   - Acceptance: every current and newly added tag resolves to a documented period
     label in selection, diplomacy, map tooltips, and rank panel; no tribal/SoP
     sample shows County.
+  - Completed: all 229 design/engine tags resolve through 12 documented ancient
+    presentation classes while retaining required technical ranks. Raw fallbacks,
+    ruler labels, and elevation actions are neutralized in all 11 clients; the
+    New Game probe shows `People of Venedi`, `Leader`, and `Realm of Roxolani`.
 
 - [ ] Reopen player-facing location-name accuracy beyond mere key coverage.
   - The existing validator proves that all 28,573 map keys have a display label,

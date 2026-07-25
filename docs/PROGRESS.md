@@ -6523,3 +6523,12 @@ reviewed 128px BC7 DDS.
   currents to advance packages; no vanilla advance links remain.
 - Rome, Marcomanni, Han, Parthia, and Teotihuacan probes differ visibly.
   Validation passes 72/72; paired smoke has zero mod-only lines.
+
+## 2026-07-25 - Galatia and ancient social presentation
+
+- Rebuilt Roman Galatia as 19 sourced locations for the Tectosages,
+  Tolistobogii, and Trocmi; removed the generic fallback.
+- Replaced medieval pop labels/art across eight engine classes with 48 ancient
+  regional masters and 56 direct UI targets.
+- Added 12 contextual rank classes covering all 229 tags; fresh UI probes show
+  People/Leader/Realm and imperial labels. Validation and paired smoke pass.

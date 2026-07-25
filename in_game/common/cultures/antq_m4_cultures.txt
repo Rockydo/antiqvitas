@@ -100,15 +100,6 @@ antq_celtiberian = { # P10;CAH-XI; Iberian Celtic communities
 	}
 }
 
-antq_galatian = { # P10;CAH-XI; Anatolian Celtic communities
-	language = antq_celtic_dialect
-	color = antq_culture_color_antq_galatian
-	tags = { european_gfx }
-	culture_groups = {
-		antq_celtic_group
-	}
-}
-
 antq_germanic = { # P10;CAH-XI; Germanic regional base
 	language = antq_germanic_dialect
 	color = antq_culture_color_antq_germanic
@@ -2008,9 +1999,9 @@ antq_tolistobogian = { # P10;STR-ANA;MIT-ANA;PLE; Galatian Tolistobogii regional
 	}
 }
 
-antq_trocman = { # P10;STR-ANA;MIT-ANA;PLE; Galatian Trocmi regional frame
+antq_trocmian = { # P10;STR-ANA;MIT-ANA;OCD-GALATIA;PLE:619267; Galatian Trocmi regional frame east of Ancyra around Tavium
 	language = antq_celtic_dialect
-	color = antq_culture_color_antq_trocman
+	color = antq_culture_color_antq_trocmian
 	tags = { european_gfx }
 	culture_groups = {
 		antq_celtic_group

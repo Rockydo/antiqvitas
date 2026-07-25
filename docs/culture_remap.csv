@@ -164,9 +164,11 @@ province,lower_macedonia_province,antq_lyncestian,P10;STR-BAL;CAH-XI;PLE,contest
 province,albania_province,antq_taulantian,P10;STR-BAL;CAH-XI;PLE,contested,Taulantii campaign-boundary proxy on the Adriatic; not an exact tribal polygon
 province,illyria_province,antq_parthinian,P10;STR-BAL;CAH-XI;PLE,contested,Parthini campaign-boundary proxy in central Albania; not an exact tribal polygon
 province,north_epirus_province,antq_enchelean,P10;STR-BAL;CAH-XI;PLE,contested,Enchelei campaign-boundary proxy by the lake-border zone; not an exact tribal polygon
-province,ankara_province,antq_galatian_tectosagian,P10;STR-ANA;MIT-ANA;PLE,contested,Tectosages campaign-boundary proxy in Galatia; not an exact tribal polygon
-province,sivrihisar_province,antq_tolistobogian,P10;STR-ANA;MIT-ANA;PLE,contested,Tolistobogii campaign-boundary proxy in Galatia; not an exact tribal polygon
-province,cankiri_province,antq_trocman,P10;STR-ANA;MIT-ANA;PLE,contested,Trocmi campaign-boundary proxy in Galatia; not an exact tribal polygon
+province,ankara_province,antq_galatian_tectosagian,P10;STR-ANA;MIT-ANA;OCD-GALATIA;PLE:619103,contested,Tectosages campaign-boundary proxy around Ancyra; not an exact tribal polygon
+province,sivrihisar_province,antq_tolistobogian,P10;STR-ANA;MIT-ANA;OCD-GALATIA;PLE:609500,contested,Tolistobogii campaign-boundary proxy around Pessinus; not an exact tribal polygon
+province,bozok_province,antq_trocmian,P10;STR-ANA;MIT-ANA;OCD-GALATIA;PLE:619267,contested,Trocmi campaign-boundary proxy east of Ancyra around Tavium; not an exact tribal polygon
+location,huseyinabad,antq_trocmian,P10;STR-ANA;MIT-ANA;OCD-GALATIA;PLE:619267,contested,Nearest installed field to Tavium and an eastern Trocmi anchor; not a surveyed tribal boundary
+province,cankiri_province,antq_paphlagonian,P10;STR-ANA;MIT-ANA;OCD-GALATIA;PLE,contested,Gangra-facing Paphlagonian proxy north of Galatia; replaces an overextended Trocmi block
 province,konya_province,antq_lycaonian,P10;STR-ANA;MIT-ANA;PLE,contested,Lycaonians campaign-boundary proxy in central Anatolia; not an exact tribal polygon
 province,karahisar_province,antq_pisidian,P10;STR-ANA;MIT-ANA;PLE,contested,Pisidians campaign-boundary proxy in southwestern Anatolia; not an exact tribal polygon
 province,beysehir_province,antq_homonadean,P10;STR-ANA;MIT-ANA;PLE,contested,Homonadeis campaign-boundary proxy in the Taurus; not an exact tribal polygon

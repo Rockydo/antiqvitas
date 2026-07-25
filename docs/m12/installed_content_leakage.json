@@ -543,15 +543,17 @@
     "advances": "exact_disabled_legacy",
     "ages": "engine_slot_adapter",
     "buildings": "known_visible_building_debt",
-    "country_ranks": "engine_adapter_pending_presentation",
+    "country_ranks": "engine_adapter_period_presentation_complete",
     "government_types": "engine_adapter_pending_presentation",
     "institutions": "exact_disabled_legacy",
     "location_ranks": "engine_adapter_pending_presentation",
-    "pop_types": "engine_adapter_pending_presentation",
+    "pop_types": "engine_adapter_ancient_presentation_complete",
     "units": "exact_hidden_legacy"
   },
   "status_counts": {
-    "engine_adapter_pending_presentation": 4,
+    "engine_adapter_ancient_presentation_complete": 1,
+    "engine_adapter_pending_presentation": 2,
+    "engine_adapter_period_presentation_complete": 1,
     "engine_slot_adapter": 1,
     "exact_disabled_legacy": 216,
     "exact_hidden_legacy": 30,
@@ -11786,7 +11788,7 @@
           "relative": "00_default.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\country_ranks\\00_default.txt",
           "source_sha256": "d02acd658d4cc89f41911bd9b124cb06280a3451970052898a6f8871df70cf27",
-          "status": "engine_adapter_pending_presentation"
+          "status": "engine_adapter_period_presentation_complete"
         },
         {
           "art_reference_count": 0,
@@ -11803,8 +11805,8 @@
           "status": "installed_reference_document"
         }
       ],
-      "known_visible_debt": true,
-      "policy": "engine_adapter_pending_presentation"
+      "known_visible_debt": false,
+      "policy": "engine_adapter_period_presentation_complete"
     },
     "government_types": {
       "definition_count": 5,
@@ -12059,11 +12061,11 @@
           "relative": "00_default.txt",
           "source": "<GAME_DIR>\\game\\in_game\\common\\pop_types\\00_default.txt",
           "source_sha256": "f0949f409bb3a81b5c2f567c893c707249d95f3beb6a64378cb291c3cd215b8b",
-          "status": "engine_adapter_pending_presentation"
+          "status": "engine_adapter_ancient_presentation_complete"
         }
       ],
-      "known_visible_debt": true,
-      "policy": "engine_adapter_pending_presentation"
+      "known_visible_debt": false,
+      "policy": "engine_adapter_ancient_presentation_complete"
     },
     "units": {
       "definition_count": 323,

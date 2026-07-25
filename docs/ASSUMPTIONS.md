@@ -4488,3 +4488,19 @@ scholarly, and social networks. Shared roots represent transferable practice;
 regional forks represent concentration, not civilizational exclusivity. Sources:
 CAH X-XIV; Needham; Bielenstein; master plan sections 8 and 15.
 [bounded gameplay abstraction]
+
+## 2026-07-25 - Galatian communities use bounded settlement proxies
+
+Roman ownership follows the provincial settlement after the 25 BC annexation;
+culture persists as Tectosagian, Tolistobogian, and Trocmian identity. Ancyra,
+Pessinus, and Tavium anchor the three distributions, but the 19 engine locations
+do not assert exact ancient borders. Bozok carries the Tavium display proxy while
+Huseyinabad remains Corniaspa but shares the Trocmian assignment. Sources:
+Strabo XII; Oxford Classical Dictionary, “Galatia”; Stephen Mitchell,
+*Anatolia: Land, Men, and Gods in Asia Minor*; Pleiades. [contested boundaries]
+
+## 2026-07-25 - Pop portraits are regional social abstractions
+
+The ancient pop art distinguishes broad Mediterranean, northern European,
+Near Eastern, East Asian, American, and African material settings. It does not
+claim uniform costume, phenotype, status practice, or identity within a region.

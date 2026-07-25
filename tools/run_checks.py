@@ -59,6 +59,8 @@ VALIDATE_COMMANDS = (
     Command("tools/m7_war.py", ("--check",)),
     Command("tools/m12_unit_quarantine.py", ("--check",)),
     Command("tools/m12_unit_art.py", ("--check",)),
+    Command("tools/m12_pop_presentation.py", ("--check",)),
+    Command("tools/m12_rank_presentation.py", ("--check",)),
     Command("tools/m8_knowledge.py", ("--check",)),
     Command("tools/m8_legacy_institution_purge.py", ("--check",)),
     Command("tools/m9_diplomacy.py", ("--check",)),
@@ -109,6 +111,7 @@ VALIDATE_COMMANDS = (
     Command("tools/popcheck.py"),
     Command("tools/population_audit.py", ("--check",)),
     Command("tools/m4_gallic_atlas.py", ("--check",)),
+    Command("tools/m4_galatian_atlas.py", ("--check",)),
 )
 
 SMOKE_COMMANDS = (Command("tools/smoketest.py"),)

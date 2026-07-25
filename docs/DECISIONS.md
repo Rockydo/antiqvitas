@@ -2964,3 +2964,16 @@ with later convergence or terminal specialization. Unlock ownership is exact and
 unique: common content sits on shared nodes; regional content follows the closest
 period practice. Historical events receive optional preparedness bonuses and are
 never gated by research.
+
+## 2026-07-25 - Preserve technical pop keys behind ancient presentation
+
+The eight installed pop keys are hardwired through economy, GUI, estates, and
+map modes. Keep them as engine adapters, but exact-replace their visible names,
+descriptions, and generic/regional icon chains with ancient content.
+
+## 2026-07-25 - Separate technical rank from displayed polity form
+
+Numeric ranks remain for engine balance. An exact roster-led resolver supplies
+12 ancient display classes, while raw rank/ruler/elevation fallbacks are neutral.
+Compatibility predicates retained by the installed resolver remain inert so
+Jomini does not report unused variables.

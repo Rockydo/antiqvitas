@@ -44,17 +44,15 @@ POLICY = {
     "units": "exact_hidden_legacy",
     "buildings": "known_visible_building_debt",
     "government_types": "engine_adapter_pending_presentation",
-    "country_ranks": "engine_adapter_pending_presentation",
+    "country_ranks": "engine_adapter_period_presentation_complete",
     "location_ranks": "engine_adapter_pending_presentation",
-    "pop_types": "engine_adapter_pending_presentation",
+    "pop_types": "engine_adapter_ancient_presentation_complete",
 }
 EXACT_REQUIRED = {"ages", "institutions", "advances", "units"}
 VISIBLE_DEBT = {
     "buildings",
     "government_types",
-    "country_ranks",
     "location_ranks",
-    "pop_types",
 }
 FORBIDDEN = (
     "renaissance",
