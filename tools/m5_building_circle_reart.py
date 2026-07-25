@@ -68,6 +68,12 @@ def convert(source: Path, target: Path) -> None:
     )
 
 
+def master_path(key: str) -> Path:
+    suffixed = MASTER_DIR / f"{key}_128.png"
+    plain = MASTER_DIR / f"{key}.png"
+    return suffixed if suffixed.is_file() or not plain.is_file() else plain
+
+
 def validate_manifest(entries: list[dict[str, str]]) -> None:
     failures: list[str] = []
     active_named = {row["key"] for row in m5_roman_buildings.load()}
@@ -111,7 +117,7 @@ def write(entries: list[dict[str, str]]) -> None:
                     raise ValueError(f"missing reviewed source sheet {path.relative_to(ROOT)}")
                 opened[sheet] = Image.open(path).convert("RGBA")
             image = master(opened[sheet], row["quadrant"])
-            target = MASTER_DIR / f"{row['key']}_128.png"
+            target = master_path(row["key"])
             image.save(target)
             convert(target, ICON_DIR / f"{row['key']}.dds")
     finally:
@@ -124,14 +130,14 @@ def check(entries: list[dict[str, str]]) -> None:
     hashes: dict[str, str] = {}
     for row in entries:
         sheet = SHEET_DIR / row["sheet"]
-        master_path = MASTER_DIR / f"{row['key']}_128.png"
+        master_file = master_path(row["key"])
         texture = ICON_DIR / f"{row['key']}.dds"
-        for path, label in ((sheet, "sheet"), (master_path, "master"), (texture, "texture")):
+        for path, label in ((sheet, "sheet"), (master_file, "master"), (texture, "texture")):
             if not path.is_file():
                 failures.append(f"missing {label} for {row['key']}: {path.relative_to(ROOT)}")
-        if not master_path.is_file():
+        if not master_file.is_file():
             continue
-        with Image.open(master_path) as image:
+        with Image.open(master_file) as image:
             if image.mode != "RGBA" or image.size != (128, 128):
                 failures.append(f"invalid master format for {row['key']}")
             elif max(image.getpixel(point)[3] for point in ((0, 0), (127, 0), (0, 127), (127, 127))) > 15:

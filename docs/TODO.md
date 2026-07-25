@@ -416,6 +416,8 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
   - [x] First visual-freeze tranche: inventory all 265 active icons and replace
       40 high-visibility named Roman icons from ten EU5-referenced four-up
       sheets. The checked circle preview is 71/265 compliant with zero aliases.
+  - [x] Complete the 80-icon named Roman cohort from 20 reviewed four-up
+      sheets; all 80 pass the circle/navy contract and the full gate is 111/265.
 
 - [ ] Replace medieval character/court backgrounds across graphical cultures.
   - Trace the exact live texture from screenshots rather than assuming it is the 3D

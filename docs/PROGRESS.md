@@ -6574,3 +6574,11 @@ reviewed 128px BC7 DDS.
 - Replaced 40 named Roman icons from ten reviewed four-up sheets using installed
   EU5 references. The visual gate improved from 13/265 to 71/265.
 - Validation passes 78/78; paired vanilla/mod smoke has zero mod-only lines.
+
+## 2026-07-25 - Complete named Roman building art
+
+- Replaced the remaining 40 named Roman icons; rejected two first-pass sheets
+  for invented architecture and retained corrected EU5-referenced versions.
+- All 80 named Roman icons pass the circle/navy gate; the full set is 111/265
+  with zero exact or near aliases.
+- Validation passes 78/78; paired vanilla/mod smoke has zero mod-only lines.
