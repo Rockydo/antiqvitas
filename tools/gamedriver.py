@@ -628,12 +628,23 @@ def enter_live_observer(args: argparse.Namespace, target_dir: Path, prefix: str)
     click_normalized(0.23, 0.047)
     time.sleep(args.ui_settle)
     save_window_capture(target_dir / f"{prefix}_observer_enabled.png")
+    # Toggling Observer leaves its dropdown above the map.  Physical Escape
+    # opens the selector's "go back to main menu" confirmation; cancelling that
+    # confirmation dismisses the dropdown while preserving Observer.  An
+    # ordinary outside click instead disables Observer.  A selected-country
+    # panel can also cover the centre of the start control, so use its exposed
+    # upper-left band at the fixed 1920x1080 layout.
+    press_scan_code(0x01)
+    time.sleep(args.ui_settle)
+    click_normalized(0.42, 0.580)
+    time.sleep(args.ui_settle)
+    save_window_capture(target_dir / f"{prefix}_observer_popup_dismissed.png")
     # The map is visible as soon as cached data finishes, but the observer
     # start button is not reliably interactive until its following UI frame.
     # This value was calibrated against the local save-load sequence.
     for start_attempt in range(1, 3):
         time.sleep(args.observer_enable_settle if start_attempt == 1 else args.ui_settle)
-        click_normalized(0.50, 0.88)
+        click_normalized(0.44, 0.840)
         time.sleep(args.ui_settle)
         save_window_capture(target_dir / f"{prefix}_start_attempt{start_attempt}.png")
         if wait_for_observer_pause(max(15, args.live_timeout // 2)):
@@ -710,7 +721,9 @@ def resume_observer_from_autosave(args: argparse.Namespace, cycle: int) -> bool:
         save_window_capture(target_dir / f"{prefix}_menu_attempt{ui_attempt}.png")
         debug = user_dir / "logs" / "debug.log"
         debug_offset = debug.stat().st_size if debug.exists() else 0
-        click_normalized(0.13, 0.325)
+        # The branded total-conversion menu places Continue lower than the
+        # vanilla-layout coordinate used by the first recovery prototype.
+        click_normalized(0.14, 0.360)
         time.sleep(args.ui_settle)
         save_window_capture(target_dir / f"{prefix}_continue_attempt{ui_attempt}.png")
         # The dialog advertises Enter as the Ok binding.  It is more reliable

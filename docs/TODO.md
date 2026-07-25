@@ -393,9 +393,10 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     installed adapters. All 465 installed building definitions are quarantined;
     eight namespaced replacements have direct checked art and the start now has
     2,415 non-duplicate placements.
-  - [ ] Finish acceptance with an established-market production/export capture
-    and construction-choice probe. The repeated debug-renderer limit is recorded
-    in `BLOCKERS.md`; resume only through a durable non-debug/current-save route.
+  - [x] Complete the reduced rapid runtime gate: fresh and recovered non-debug
+    Observer bursts reached 27 March without building/market-scope errors, and a
+    4.0 MB manual save reloaded at its exact date. The optional post-May export
+    capture remains deferred at the renderer boundary in `BLOCKERS.md`.
 
 - [ ] Re-art the complete active building-icon set in one circle-safe style.
   - Freeze the final active building ledger, including Roman named, regional,

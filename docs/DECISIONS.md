@@ -1,5 +1,13 @@
 # Technical and Design Decisions
 
+## 2026-07-25 - Economy runtime acceptance stays short and checkpointed
+
+The user reduced exhaustive playthrough requirements in favor of smoke and
+focused subsystem checks. P3 therefore accepts static economy assertions,
+paired smoke, short non-debug market ticks, and a proven save/reload checkpoint.
+The renderer-limited post-May export screenshot is optional evidence, not a
+reason to repeat cold loads every few simulated days.
+
 ## 2026-07-25 - Gallic culture, ownership, and demography remain separate
 
 Political ownership, pop culture, and dynamic display names are independently

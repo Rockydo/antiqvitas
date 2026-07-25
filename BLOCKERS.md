@@ -1184,3 +1184,18 @@ Do not repeat the same short-lived debug-session path. Resume this acceptance
 capture only with a non-debug export route or a durable current autosave/recovery
 path. The active-building freeze, static economy assertions, validation, smoke,
 and focused construction probes remain unblocked.
+
+### 2026-07-25 non-debug checkpoint follow-up
+
+Status: **durable recovery proven; established-market capture remains deferred.**
+The calibrated non-debug selector reached live Observer, advanced to 17 March,
+and wrote a 4.0 MB manual save. Continue-as-Observer reloaded that exact date,
+but the renderer again exited after one 45-second burst at 27 March. A second
+fresh non-debug campaign showed the same short window. Reaching May would now
+require repeated cold loads and manual saves every few simulated days.
+
+This exceeds the reduced rapid-test requirement and adds no new content signal:
+the bursts produced no building/market-scope error. Keep the static economy
+assertions, paired smoke, short tick evidence, and durable save/reload route as
+the acceptance coverage. Retry an established-market export only after a game,
+driver, or renderer change materially lengthens the live window.

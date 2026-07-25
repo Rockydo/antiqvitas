@@ -1,5 +1,13 @@
 # Progress
 
+## 2026-07-25 - Durable economy checkpoint and observer recovery
+
+- Calibrated the branded-menu Continue route and selector Observer start.
+- Advanced a non-debug campaign to 17 March, wrote/reloaded a 4.0 MB save, and
+  reached 27 March with no building/market-scope error.
+- Deferred the optional post-May export capture at the repeated renderer exit;
+  next priority is ancient character/court backgrounds.
+
 ## 2026-07-25 - Granular AD 1 Gallic culture atlas
 
 - Replaced all 175 generated generic-Gallic base assignments with a 503-location,
