@@ -3070,3 +3070,12 @@ multi-century observer tests are outside this gate.
 The Galatian audit is mandatory. Its Ancyra, Pessinous, and Tavium assertions
 must test runtime dynamic names, not merely the source atlas, so Roman-owned
 passthrough cannot silently hide a reviewed ancient centre.
+
+## 2026-07-25 - Freeze the active ancient goods union
+
+The economic gate follows goods actually consumed, produced, or anchored by
+the 265 active building contracts, plus all custom raw goods. Installed keys
+such as `paper`, `coal`, `beer`, and `steel` remain only where the mounted text
+and recipe mean writing materials, charcoal/fuel, fermented drink, or bounded
+crucible steel. The audit rejects colonial crops, firearms, cannon, and other
+post-antique goods before they can enter an active recipe.

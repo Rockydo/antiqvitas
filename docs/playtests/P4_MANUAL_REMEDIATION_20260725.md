@@ -6,7 +6,7 @@
   Marcomanni recruitment, institutions, advances, Diseases open/close, and the
   short non-debug save/reload. The current batch separately reached the AD 1
   selector and paused live Observer.
-- `tools/p4_manual_regression.py` maps all 20 reported symptom classes to 26
+- `tools/p4_manual_regression.py` maps all 20 reported symptom classes to 27
   mandatory validators and exact evidence. It also asserts roster granularity,
   loyalty, population, Gallic/Galatian setup, unit art, ancient institutions,
   advance density, disease dependencies, court scenes, and leakage coverage.

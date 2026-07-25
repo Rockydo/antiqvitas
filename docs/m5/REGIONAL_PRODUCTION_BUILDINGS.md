@@ -1,8 +1,8 @@
 # Regional antique production buildings
 
-This M5 layer adds one hundred and fifty-four reusable, directly illustrated antique production
-families and **1,804 AD 1 start placements**: 638 in Europe, 406 in North Africa,
-516 in the Middle East, 122 in South Asia, and 122 in East Asia. The
+This M5 layer adds 177 reusable, directly illustrated antique production
+families and **2,313 AD 1 start placements**: 1,010 in Europe, 503 in North
+Africa, 556 in the Middle East, 122 in South Asia, and 122 in East Asia. The
 ledger is deliberately a family system rather than fictional unique monuments.
 Each family has a direct PNG source, a
 reviewed BC7 128px DDS icon, localized name/description, a locally verified

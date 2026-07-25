@@ -361,7 +361,7 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
 
 ### P3 — Roman economy and cohesive ancient interface art
 
-- [ ] Deepen and audit the Roman building/trade-good system before freezing art.
+- [x] Deepen and audit the Roman building/trade-good system before freezing art.
   - Treat the existing 154 active building families and 1,804 placements as a
     starting inventory, not proof of engaging gameplay. Trace actual availability,
     costs, inputs, outputs, staffing, profitability, infrastructure, urban-rank,
@@ -397,8 +397,11 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     Observer bursts reached 27 March without building/market-scope errors, and a
     4.0 MB manual save reloaded at its exact date. The optional post-May export
     capture remains deferred at the renderer boundary in `BLOCKERS.md`.
+  - [x] Freeze the complete economic union: 65 reviewed active goods, 265 active
+    buildings, 143 productive families, 23 Roman-profile families, zero
+    post-antique goods, and exact RGO/building/recipe/source coverage.
 
-- [ ] Re-art the complete active building-icon set in one circle-safe style.
+- [x] Re-art the complete active building-icon set in one circle-safe style.
   - Freeze the final active building ledger, including Roman named, regional,
       economic-family, and advance-unlocked content.
   - Inspect vanilla dimensions, alpha, circle mask, compression, and in-widget crop.
@@ -425,6 +428,9 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
       EU5-referenced sheets; the complete visual gate is 207/265.
   - [x] Re-art the final 58 regional families from 15 reviewed sheets; all
       265/265 active building icons now pass with zero exact or near aliases.
+  - [x] Final parent acceptance: the frozen 265-key active registry and reviewed
+      circle-mask contact sheet have zero missing, fallback, square-edge, or
+      perceptual-alias failures.
 
 - [x] Replace medieval character/court backgrounds across graphical cultures.
   - Traced `character_scene` to the additive `throne_room` illustration tag and
@@ -442,7 +448,7 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
   - Frozen as a 12-stage route and eight-record visual manifest. The route reuses
     bounded runtime evidence and relies on exact setup/resolver checks elsewhere;
     no AD 1-476 campaign or multi-century soak.
-  - All 20 manual symptom classes map to 26 mandatory validators. Ten previously
+  - All 20 manual symptom classes map to 27 mandatory validators. Ten previously
     omitted remediation validators are now part of `make validate`; the renewed
     census has zero uncovered or forbidden visible leakage.
   - Regression review restored runtime Pessinous and Tavium through the reviewed

@@ -1,8 +1,18 @@
 # Progress
 
+## 2026-07-25 - Roman economy and building-art parents closed
+
+- Added an exact 65-good active-economy audit spanning all 265 ancient
+  buildings, 143 productive families, Roman profile use, source class, RGO
+  anchors, and explicit post-antique exclusions.
+- Refreshed the final building metrics: 2,415 placements, 74.9% productive and
+  95.8% scalable. The separate 265/265 circle-safe art gate remains exact.
+- The focused manual-remediation matrix now requires the goods audit as its
+  27th validator.
+
 ## 2026-07-25 - First-playtest remediation regression closeout
 
-- Froze a 20-symptom/26-validator closure matrix, a 12-stage rapid route, and an
+- Froze a 20-symptom/27-validator closure matrix, a 12-stage rapid route, and an
   eight-record visual manifest; long campaign testing is explicitly excluded.
 - Promoted ten orphaned remediation audits into the mandatory validation gate.
   Their first combined run caught and repaired missing runtime names for the
