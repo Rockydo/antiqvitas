@@ -106,6 +106,7 @@ VALIDATE_COMMANDS = (
     Command("tools/m3_political_map.py"),
     Command("tools/dates.py", ("--check-m2",)),
     Command("tools/popcheck.py"),
+    Command("tools/population_audit.py", ("--check",)),
 )
 
 SMOKE_COMMANDS = (Command("tools/smoketest.py"),)

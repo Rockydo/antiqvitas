@@ -1,5 +1,18 @@
 # Technical and Design Decisions
 
+## 2026-07-25 - Population allocation separates totals, cities, and residuals
+
+Macro targets remain exact. Italy receives explicit geographic partitions;
+audited city fields are fixed inside uncertainty bands; the remaining population
+uses capped vanilla geography only as a relative residual weight. Polity roster
+labels may weight residual allocation but never define demographic geography.
+
+## 2026-07-25 - Post-period reform references use invisible adapters
+
+Installed events still reference `legacy_of_genghis`, but exposing the reform or
+resolving its absent Borjigin dynasty is invalid in AD 1–476. Its exact-name
+replacement retains the technical key while making it permanently unavailable.
+
 ## 2026-07-24 - Siscia uses a contested low Augustan-garrison contract
 
 The Oxford reference securely records Octavian's 35 BC Siscia garrison, but

@@ -1,5 +1,26 @@
 # AD 1 World Roster Sources
 
+- `H-O-2017` / `HANSON-ORTMAN`: J. W. Hanson and S. G. Ortman,
+  ["A systematic method for estimating the populations of Greek and Roman
+  settlements"](https://doi.org/10.1017/S1047759400074134), *Journal of Roman
+  Archaeology* 30 (2017), pp. 301-324. Used for broad urban ranges and the
+  explicit warning that settlement-population estimates remain uncertain.
+- `CEHGRW`: Walter Scheidel, Ian Morris, and Richard Saller (eds.),
+  *The Cambridge Economic History of the Greco-Roman World* (Cambridge, 2007),
+  especially the early-imperial demographic synthesis: Rome c. 750,000-1m and
+  provincial metropoleis in the hundreds of thousands.
+- `FRIER-DEM`: Bruce W. Frier, Roman demographic synthesis in *The Cambridge
+  Ancient History* XI. Used with plan §12.4 for the 7-8m Italy envelope rather
+  than as location-level census evidence.
+- `SCHEIDEL-ITALY`: Walter Scheidel,
+  ["The demography of Roman state formation and culture change in
+  Italy"](https://web.stanford.edu/~scheidel/Dresden.pdf). Used to constrain
+  Italian-scale allocation and uncertainty rather than to infer local density.
+- `WILEY-CHANGAN`: Charles Sanft,
+  ["Chang'an"](https://doi.org/10.1002/9781119399919.eahaa00645), *The
+  Encyclopedia of Ancient History* (2022). The AD 2 register's nearly 700,000
+  metropolitan residents is kept distinct from the city proper.
+
 - `IRAN-RHAGA`: Rüdiger Schmitt, ["Isfahan iv. Pre-Islamic Period"](https://www.iranicaonline.org/articles/isfahan-iv-pre-islamic-period/), *Encyclopaedia Iranica*, records the ancient city form Rhaga/Rhagae in the Ray region. It supports the direct period label `Rhaga` at the installed Ray city field, not a civic boundary, language, population, or political-status claim.
 - `OUP-REDSEA`: Lucy Blue and collaborators, ["The Archaeological Record of Indian Ocean Engagements in the Red Sea"](https://academic.oup.com/edited-volume/43506/chapter/364132532), *Oxford Handbook of Topics in Archaeology*, identifies Mouza as the Himyarite Red Sea outlet in the *Periplus* period but says it is unidentified and only probably at modern Mocha. It supports a qualified port-name label at al-Mukha, not an excavated site identity, city plan, population, or route claim.
 - `CAM-MUZIRIS`: Rajan Gurukkal and Dick Whittaker, ["In Search of Muziris"](https://www.cambridge.org/core/journals/journal-of-roman-archaeology/article/abs/in-search-of-muziris/EA19B86B91664256F7D97E65B3074AFD), *Journal of Roman Archaeology* 14 (2001), records the earlier scholarly placement of Muziris in the Kodungallur area while stressing that its exact location is unresolved. It supports only a contested region-level name adapter.

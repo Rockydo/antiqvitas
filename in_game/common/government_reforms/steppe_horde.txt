@@ -1,0 +1,25 @@
+﻿# ANTIQVITAS exact-name replacement.
+# Genghis Khan and the Borjigin reform are post-476.  The key remains as a
+# technical adapter for installed event references, but can never enter the
+# ancient reform pool and does not resolve the absent medieval dynasty.
+legacy_of_genghis = {
+	major = yes
+	government = steppe_horde
+
+	potential = {
+		always = no
+	}
+
+	allow = {
+		always = no
+	}
+
+	locked = {
+		always = yes
+	}
+
+	country_modifier = {
+	}
+
+	years = 2
+}

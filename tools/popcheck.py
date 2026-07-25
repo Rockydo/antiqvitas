@@ -16,9 +16,12 @@ from generate_start_mirror import (
     COMPATIBILITY_LOCATION,
     COMPATIBILITY_POP_SIZE,
     COMPATIBILITY_RELIGION,
+    MAX_UNTARGETED_LOCATION_POPULATION,
     culture_presence_cultures,
     load_population_plan,
+    population_city_targets,
     population_culture_remaps,
+    population_geographic_allocations,
     population_location_overrides,
 )
 
@@ -101,11 +104,18 @@ def main() -> int:
     valid_types = set(json.loads(POP_TYPES.read_text(encoding="utf-8-sig")))
     macros, allocations = load_population_plan()
     overrides = population_location_overrides(owners, allocations)
+    geographic_allocations, geographic_location_groups = population_geographic_allocations(
+        owners, roster, allocations, overrides
+    )
+    city_rows, city_targets = population_city_targets(owners)
     culture_remaps = population_culture_remaps(owners)
     failures: list[str] = []
     records_by_location: defaultdict[str, list[dict[str, str]]] = defaultdict(list)
     region_totals: defaultdict[str, Decimal] = defaultdict(Decimal)
     macro_totals: defaultdict[str, Decimal] = defaultdict(Decimal)
+    geographic_totals: defaultdict[str, Decimal] = defaultdict(Decimal)
+    italy_cultures: defaultdict[str, Decimal] = defaultdict(Decimal)
+    location_sizes: dict[str, Decimal] = {}
     total = Decimal()
     for record in records:
         location = record.get("location", "")
@@ -132,6 +142,22 @@ def main() -> int:
         if size <= 0:
             failures.append(f"{location}: non-positive size {size}")
             continue
+        location_sizes[location] = size
+        if location in city_targets:
+            city = city_targets[location]
+            if size != city.game_target:
+                failures.append(
+                    f"{location}: city target is {size}, expected exact {city.game_target}"
+                )
+            if not (city.game_minimum <= size <= city.game_maximum):
+                failures.append(
+                    f"{location}: city target {size} outside {city.game_minimum}-{city.game_maximum}"
+                )
+        elif size > MAX_UNTARGETED_LOCATION_POPULATION:
+            failures.append(
+                f"{location}: untargeted population {size} exceeds "
+                f"{MAX_UNTARGETED_LOCATION_POPULATION}"
+            )
         tag = owners[location]
         profile = historical_profile_for(roster[tag])
         override = overrides.get(location, {})
@@ -145,6 +171,10 @@ def main() -> int:
         region = override.get("region", roster[tag]["region"])
         region_totals[region] += size
         macro_totals[allocations[region].macro] += size
+        if location in geographic_location_groups:
+            group = geographic_location_groups[location]
+            geographic_totals[group] += size
+            italy_cultures[record["culture"]] += size
         total += size
     compatibility = parse_records(COMPATIBILITY_POP_FILE)
     expected_cultures = culture_presence_cultures()
@@ -182,10 +212,10 @@ def main() -> int:
         count = len(records_by_location[location])
         if count != 1:
             failures.append(f"{location}: expected exactly one generated base pop, found {count}")
-    for region, allocation in allocations.items():
-        actual = region_totals[region]
+    for group, allocation in geographic_allocations.items():
+        actual = geographic_totals[group]
         if abs(actual - allocation.target) > EPSILON:
-            failures.append(f"{region}: {actual} thousand, expected {allocation.target}")
+            failures.append(f"{group}: {actual} thousand, expected {allocation.target}")
     for macro, target in macros.items():
         actual = total if macro == "world" else macro_totals[macro]
         if abs(actual - target.target) > EPSILON:
@@ -198,13 +228,36 @@ def main() -> int:
         if len(failures) > 80:
             print(f"  - ... {len(failures) - 80} more")
         return 1
+    mapped_cities = [row for row in city_rows if row.game_target is not None]
+    top_cities = sorted(
+        mapped_cities,
+        key=lambda row: (location_sizes[row.location], row.place),
+        reverse=True,
+    )[:20]
+    city_summary = ", ".join(
+        f"{row.place}={location_sizes[row.location]:,.0f}" for row in top_cities
+    )
+    italy_summary = ", ".join(
+        f"{group}={geographic_totals[group]:,.0f}"
+        for group in sorted(geographic_allocations)
+    )
+    italy_culture_summary = ", ".join(
+        f"{culture}={size:,.0f}"
+        for culture, size in sorted(
+            italy_cultures.items(), key=lambda item: (item[1], item[0]), reverse=True
+        )[:8]
+    )
     macro_summary = ", ".join(
         f"{macro}={macro_totals[macro]:,.3f}" for macro in sorted(macro_totals)
     )
     print(
         f"popcheck: PASS ({total:,.3f} thousand people; {len(records)} base pops; "
-        f"{len(records_by_location)} populated locations; {macro_summary})"
+        f"{len(records_by_location)} populated locations; {len(mapped_cities)} fixed cities; "
+        f"{macro_summary})"
     )
+    print(f"  Italy geography: {italy_summary}")
+    print(f"  Italy cultures: {italy_culture_summary}")
+    print(f"  Top mapped cities: {city_summary}")
     return 0
 
 

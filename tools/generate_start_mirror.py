@@ -40,6 +40,8 @@ SUBJECT_TYPES = ROOT / "docs/vanilla_symbols/subject_type.json"
 POPULATION_TARGETS = ROOT / "docs/m4/population_targets.csv"
 POPULATION_ALLOCATIONS = ROOT / "docs/m4/population_region_allocations.csv"
 POPULATION_LOCATION_OVERRIDES = ROOT / "docs/m4/population_location_overrides.csv"
+POPULATION_GEOGRAPHIC_ALLOCATIONS = ROOT / "docs/m4/population_geographic_allocations.csv"
+POPULATION_CITY_TARGETS = ROOT / "docs/m4/population_city_targets.csv"
 CULTURE_REMAP = ROOT / "docs/culture_remap.csv"
 M4_SYMBOLS = ROOT / "docs/m4/definition_symbols.json"
 CULTURE_PRESENCE = ROOT / "docs/m12/culture_presence.csv"
@@ -82,6 +84,8 @@ def m9_subject_adapter(row: dict[str, str]) -> str:
     """Map the checked AD 1 relationships to M9's ancient mechanics."""
     return START_ADAPTERS.get(row["overlord"], row["relationship"])
 THOUSANDTH = Decimal("0.001")
+MIN_LOCATION_POPULATION = Decimal("0.001")
+MAX_UNTARGETED_LOCATION_POPULATION = Decimal("75.000")
 COMPATIBILITY_LOCATION = "aachen"
 COMPATIBILITY_POP_SIZE = Decimal("0.001")
 COMPATIBILITY_RELIGION = "antq_germanic_religion"
@@ -250,9 +254,61 @@ class RegionalAllocation:
     note: str
 
 
+@dataclass(frozen=True)
+class GeographicAllocation:
+    parent_region: str
+    target: Decimal
+    locations: frozenset[str]
+    source: str
+    confidence: str
+    note: str
+
+
+@dataclass(frozen=True)
+class CityPopulationTarget:
+    place: str
+    location: str
+    mode: str
+    city_proper_minimum: Decimal
+    city_proper_maximum: Decimal
+    agglomeration_minimum: Decimal
+    agglomeration_maximum: Decimal
+    game_target: Decimal | None
+    game_minimum: Decimal | None
+    game_maximum: Decimal | None
+    hinterland_scope: str
+    source: str
+    confidence: str
+    note: str
+
+
 def csv_rows(path: Path) -> list[dict[str, str]]:
     with path.open(encoding="utf-8-sig", newline="") as handle:
         return list(csv.DictReader(handle))
+
+
+def geography_leaves(selector: str, trail: tuple[str, ...] = ()) -> set[str]:
+    """Expand a harvested region/area/province selector to installed locations."""
+    hierarchy = json.loads(GEOGRAPHY_HIERARCHY.read_text(encoding="utf-8-sig"))
+
+    def expand(key: str, path: tuple[str, ...]) -> set[str]:
+        if key in path:
+            raise ValueError(
+                f"{GEOGRAPHY_HIERARCHY.relative_to(ROOT)} has cyclic selector "
+                f"{' -> '.join((*path, key))}"
+            )
+        children = hierarchy.get(key)
+        if not children:
+            return {key}
+        leaves: set[str] = set()
+        for child in children:
+            if child == key:
+                leaves.add(child)
+            else:
+                leaves.update(expand(child, (*path, key)))
+        return leaves
+
+    return expand(selector, trail)
 
 
 def market_manager() -> tuple[str, int]:
@@ -713,6 +769,253 @@ def population_location_overrides(
     return overrides
 
 
+def population_geographic_allocations(
+    owners: dict[str, str],
+    roster: dict[str, dict[str, str]],
+    allocations: dict[str, RegionalAllocation],
+    overrides: dict[str, dict[str, str]],
+) -> tuple[dict[str, GeographicAllocation], dict[str, str]]:
+    """Load source-led geographic partitions within political roster regions."""
+    required = (
+        "group",
+        "parent_region",
+        "selector_type",
+        "selectors",
+        "target_thousands",
+        "source",
+        "confidence",
+        "note",
+    )
+    rows = csv_rows(POPULATION_GEOGRAPHIC_ALLOCATIONS)
+    groups: dict[str, GeographicAllocation] = {}
+    location_groups: dict[str, str] = {}
+    parent_totals: defaultdict[str, Decimal] = defaultdict(Decimal)
+    failures: list[str] = []
+    valid_selectors = {
+        "area": set(json.loads(VANILLA_AREAS.read_text(encoding="utf-8-sig"))),
+        "province": set(json.loads(VANILLA_PROVINCES.read_text(encoding="utf-8-sig"))),
+        "region": set(json.loads(VANILLA_REGIONS.read_text(encoding="utf-8-sig"))),
+    }
+    for number, row in enumerate(rows, start=2):
+        if tuple(row) != required:
+            raise ValueError(
+                f"{POPULATION_GEOGRAPHIC_ALLOCATIONS.relative_to(ROOT)} must use header "
+                f"{','.join(required)}"
+            )
+        group = row["group"].strip()
+        parent = row["parent_region"].strip()
+        selector_type = row["selector_type"].strip()
+        selectors = [item.strip() for item in row["selectors"].split(";") if item.strip()]
+        if not group or group in groups:
+            failures.append(f"{POPULATION_GEOGRAPHIC_ALLOCATIONS.relative_to(ROOT)}:{number}: invalid group")
+            continue
+        if parent not in allocations:
+            failures.append(
+                f"{POPULATION_GEOGRAPHIC_ALLOCATIONS.relative_to(ROOT)}:{number}: unknown parent {parent}"
+            )
+            continue
+        if selector_type not in valid_selectors or not selectors:
+            failures.append(
+                f"{POPULATION_GEOGRAPHIC_ALLOCATIONS.relative_to(ROOT)}:{number}: invalid selectors"
+            )
+            continue
+        unknown = sorted(set(selectors) - valid_selectors[selector_type])
+        if unknown:
+            failures.append(
+                f"{POPULATION_GEOGRAPHIC_ALLOCATIONS.relative_to(ROOT)}:{number}: "
+                f"unknown {selector_type} selectors {unknown}"
+            )
+            continue
+        if row["confidence"].strip() not in {"secure", "contested"}:
+            failures.append(
+                f"{POPULATION_GEOGRAPHIC_ALLOCATIONS.relative_to(ROOT)}:{number}: invalid confidence"
+            )
+            continue
+        if not row["source"].strip() or not row["note"].strip():
+            failures.append(
+                f"{POPULATION_GEOGRAPHIC_ALLOCATIONS.relative_to(ROOT)}:{number}: blank source/note"
+            )
+            continue
+        locations = set().union(*(geography_leaves(selector) for selector in selectors))
+        locations.intersection_update(owners)
+        if not locations:
+            failures.append(
+                f"{POPULATION_GEOGRAPHIC_ALLOCATIONS.relative_to(ROOT)}:{number}: no controlled locations"
+            )
+            continue
+        wrong_parent = sorted(
+            location
+            for location in locations
+            if overrides.get(location, {}).get("region", roster[owners[location]]["region"]) != parent
+        )
+        overlaps = sorted(location for location in locations if location in location_groups)
+        if wrong_parent:
+            failures.append(
+                f"{POPULATION_GEOGRAPHIC_ALLOCATIONS.relative_to(ROOT)}:{number}: "
+                f"{len(wrong_parent)} location(s) outside {parent}: {wrong_parent[:5]}"
+            )
+            continue
+        if overlaps:
+            failures.append(
+                f"{POPULATION_GEOGRAPHIC_ALLOCATIONS.relative_to(ROOT)}:{number}: "
+                f"overlaps {overlaps[:5]}"
+            )
+            continue
+        target = decimal_field(row, "target_thousands", POPULATION_GEOGRAPHIC_ALLOCATIONS)
+        groups[group] = GeographicAllocation(
+            parent,
+            target,
+            frozenset(locations),
+            row["source"].strip(),
+            row["confidence"].strip(),
+            row["note"].strip(),
+        )
+        parent_totals[parent] += target
+        location_groups.update({location: group for location in locations})
+    for parent, target in parent_totals.items():
+        if target >= allocations[parent].target:
+            failures.append(
+                f"{POPULATION_GEOGRAPHIC_ALLOCATIONS.relative_to(ROOT)}: "
+                f"{parent} partitions {target} leave no residual population"
+            )
+    if failures:
+        raise ValueError("\n".join(sorted(set(failures))))
+    return groups, location_groups
+
+
+def population_city_targets(
+    owners: dict[str, str],
+) -> tuple[list[CityPopulationTarget], dict[str, CityPopulationTarget]]:
+    """Load uncertain historical-city ranges and exact game-location adapters."""
+    required = (
+        "place",
+        "location",
+        "mode",
+        "city_proper_min_thousands",
+        "city_proper_max_thousands",
+        "agglomeration_min_thousands",
+        "agglomeration_max_thousands",
+        "game_location_target_thousands",
+        "game_location_min_thousands",
+        "game_location_max_thousands",
+        "hinterland_scope",
+        "source",
+        "confidence",
+        "note",
+    )
+    rows = csv_rows(POPULATION_CITY_TARGETS)
+    targets: list[CityPopulationTarget] = []
+    fixed: dict[str, CityPopulationTarget] = {}
+    seen_places: set[str] = set()
+    failures: list[str] = []
+    for number, row in enumerate(rows, start=2):
+        if tuple(row) != required:
+            raise ValueError(
+                f"{POPULATION_CITY_TARGETS.relative_to(ROOT)} must use header {','.join(required)}"
+            )
+        place = row["place"].strip()
+        location = row["location"].strip()
+        mode = row["mode"].strip()
+        if not place or place in seen_places:
+            failures.append(f"{POPULATION_CITY_TARGETS.relative_to(ROOT)}:{number}: invalid place")
+            continue
+        seen_places.add(place)
+        if location not in owners:
+            failures.append(
+                f"{POPULATION_CITY_TARGETS.relative_to(ROOT)}:{number}: uncontrolled location {location}"
+            )
+            continue
+        if mode not in {"primary", "proxy", "subsumed"}:
+            failures.append(f"{POPULATION_CITY_TARGETS.relative_to(ROOT)}:{number}: invalid mode {mode}")
+            continue
+        if row["confidence"].strip() not in {"secure", "contested"}:
+            failures.append(
+                f"{POPULATION_CITY_TARGETS.relative_to(ROOT)}:{number}: invalid confidence"
+            )
+            continue
+        if not row["hinterland_scope"].strip() or not row["source"].strip() or not row["note"].strip():
+            failures.append(
+                f"{POPULATION_CITY_TARGETS.relative_to(ROOT)}:{number}: blank scope/source/note"
+            )
+            continue
+        try:
+            proper_minimum = Decimal(row["city_proper_min_thousands"])
+            proper_maximum = Decimal(row["city_proper_max_thousands"])
+            agglomeration_minimum = Decimal(row["agglomeration_min_thousands"])
+            agglomeration_maximum = Decimal(row["agglomeration_max_thousands"])
+        except Exception:
+            failures.append(
+                f"{POPULATION_CITY_TARGETS.relative_to(ROOT)}:{number}: invalid historical range"
+            )
+            continue
+        if not (
+            Decimal() < proper_minimum <= proper_maximum
+            and Decimal() < agglomeration_minimum <= agglomeration_maximum
+            and proper_minimum <= agglomeration_maximum
+        ):
+            failures.append(
+                f"{POPULATION_CITY_TARGETS.relative_to(ROOT)}:{number}: incoherent historical range"
+            )
+            continue
+        game_fields = (
+            row["game_location_target_thousands"].strip(),
+            row["game_location_min_thousands"].strip(),
+            row["game_location_max_thousands"].strip(),
+        )
+        if mode == "subsumed":
+            if any(game_fields):
+                failures.append(
+                    f"{POPULATION_CITY_TARGETS.relative_to(ROOT)}:{number}: subsumed row has a game target"
+                )
+                continue
+            game_target = game_minimum = game_maximum = None
+        else:
+            if not all(game_fields):
+                failures.append(
+                    f"{POPULATION_CITY_TARGETS.relative_to(ROOT)}:{number}: mapped row lacks game bounds"
+                )
+                continue
+            game_target, game_minimum, game_maximum = map(Decimal, game_fields)
+            if not (Decimal() < game_minimum <= game_target <= game_maximum):
+                failures.append(
+                    f"{POPULATION_CITY_TARGETS.relative_to(ROOT)}:{number}: invalid game bounds"
+                )
+                continue
+            if location in fixed:
+                failures.append(
+                    f"{POPULATION_CITY_TARGETS.relative_to(ROOT)}:{number}: duplicate fixed location {location}"
+                )
+                continue
+        target = CityPopulationTarget(
+            place,
+            location,
+            mode,
+            proper_minimum,
+            proper_maximum,
+            agglomeration_minimum,
+            agglomeration_maximum,
+            game_target,
+            game_minimum,
+            game_maximum,
+            row["hinterland_scope"].strip(),
+            row["source"].strip(),
+            row["confidence"].strip(),
+            row["note"].strip(),
+        )
+        targets.append(target)
+        if game_target is not None:
+            fixed[location] = target
+    for target in targets:
+        if target.mode == "subsumed" and target.location not in fixed:
+            failures.append(
+                f"{POPULATION_CITY_TARGETS.relative_to(ROOT)}: {target.place} is subsumed "
+                f"into {target.location} without a primary target"
+            )
+    if failures:
+        raise ValueError("\n".join(sorted(set(failures))))
+    return targets, fixed
+
+
 def population_culture_remaps(owners: dict[str, str]) -> dict[str, dict[str, str]]:
     """Resolve the source-labelled M4 culture atlas to exact owned locations.
 
@@ -907,6 +1210,92 @@ def compatibility_presence_manager(cultures: list[str]) -> str:
     return "\n".join(lines)
 
 
+def allocate_population_group(
+    locations: list[str],
+    target: Decimal,
+    weights: dict[str, Decimal],
+    fixed_targets: dict[str, Decimal],
+) -> dict[str, Decimal]:
+    """Allocate one exact group total with positive floors and a rural cap."""
+    ordered = sorted(locations)
+    unknown_fixed = sorted(set(fixed_targets) - set(ordered))
+    if unknown_fixed:
+        raise ValueError(f"population group has fixed targets outside it: {unknown_fixed}")
+    free = [location for location in ordered if location not in fixed_targets]
+    fixed_total = sum(fixed_targets.values(), Decimal())
+    floor_total = MIN_LOCATION_POPULATION * len(free)
+    remaining = target - fixed_total - floor_total
+    if remaining < 0:
+        raise ValueError(
+            f"population fixed targets {fixed_total} plus floors {floor_total} exceed group target {target}"
+        )
+    headroom = MAX_UNTARGETED_LOCATION_POPULATION - MIN_LOCATION_POPULATION
+    if remaining > headroom * len(free):
+        raise ValueError(
+            f"population group target {target} cannot fit {len(free)} untargeted locations "
+            f"under the {MAX_UNTARGETED_LOCATION_POPULATION} cap"
+        )
+    assigned = dict(fixed_targets)
+    for location in free:
+        assigned[location] = MIN_LOCATION_POPULATION
+    active = set(free)
+    extra: dict[str, Decimal] = {location: Decimal() for location in free}
+    while active and remaining > 0:
+        total_weight = sum(
+            (max(weights.get(location, Decimal()), Decimal("0.050")) for location in active),
+            Decimal(),
+        )
+        if not total_weight:
+            raise ValueError("population group has no usable geographic weight")
+        saturated = {
+            location
+            for location in active
+            if max(weights.get(location, Decimal()), Decimal("0.050"))
+            * remaining
+            / total_weight
+            >= headroom
+        }
+        if not saturated:
+            for location in active:
+                extra[location] = (
+                    max(weights.get(location, Decimal()), Decimal("0.050"))
+                    * remaining
+                    / total_weight
+                )
+            remaining = Decimal()
+            break
+        for location in saturated:
+            extra[location] = headroom
+            remaining -= headroom
+        active.difference_update(saturated)
+    for location in free:
+        assigned[location] = (
+            MIN_LOCATION_POPULATION + extra[location]
+        ).quantize(THOUSANDTH, rounding=ROUND_HALF_UP)
+    correction = target - sum(assigned.values(), Decimal())
+    if correction:
+        candidates = sorted(
+            free,
+            key=lambda location: (
+                MAX_UNTARGETED_LOCATION_POPULATION - assigned[location],
+                max(weights.get(location, Decimal()), Decimal("0.050")),
+                location,
+            ),
+            reverse=True,
+        )
+        for location in candidates:
+            revised = assigned[location] + correction
+            if MIN_LOCATION_POPULATION <= revised <= MAX_UNTARGETED_LOCATION_POPULATION:
+                assigned[location] = revised
+                correction = Decimal()
+                break
+    if correction:
+        raise ValueError(f"population rounding correction {correction} cannot fit group bounds")
+    if sum(assigned.values(), Decimal()) != target:
+        raise ValueError("population group allocation did not preserve its exact target")
+    return assigned
+
+
 def population_manager(compatibility_cultures: list[str]) -> tuple[str, int, Decimal]:
     """Render all controlled AD 1 locations against section 12.4 target totals."""
     roster_rows = csv_rows(ROSTER)
@@ -931,41 +1320,71 @@ def population_manager(compatibility_cultures: list[str]) -> tuple[str, int, Dec
     culture_remaps = population_culture_remaps(owners)
     if COMPATIBILITY_LOCATION not in owners:
         raise ValueError(f"compatibility location {COMPATIBILITY_LOCATION} is not controlled")
-    compatibility_region = overrides.get(COMPATIBILITY_LOCATION, {}).get(
-        "region", roster[owners[COMPATIBILITY_LOCATION]]["region"]
+    geographic_allocations, geographic_location_groups = population_geographic_allocations(
+        owners, roster, allocations, overrides
     )
+    _, city_targets = population_city_targets(owners)
     compatibility_total = COMPATIBILITY_POP_SIZE * len(compatibility_cultures)
     weights = vanilla_pop_weights()
-    by_region: defaultdict[str, list[str]] = defaultdict(list)
+    effective_regions = {
+        location: overrides.get(location, {}).get("region", roster[tag]["region"])
+        for location, tag in owners.items()
+    }
+    locations_by_region: defaultdict[str, list[str]] = defaultdict(list)
+    for location, region in effective_regions.items():
+        locations_by_region[region].append(location)
+    normalized_weights: dict[str, Decimal] = {}
+    for region, locations in locations_by_region.items():
+        regional_weights = {
+            location: max(weights.get(location, Decimal()), Decimal("0.050"))
+            for location in locations
+        }
+        regional_total = sum(regional_weights.values(), Decimal())
+        if not regional_total:
+            raise ValueError(f"population region {region} has no usable geographic weight")
+        for location, weight in regional_weights.items():
+            normalized_weights[location] = weight * allocations[region].target / regional_total
+    group_targets = {
+        macro: target.target for macro, target in macros.items() if macro != "world"
+    }
+    for group, allocation in geographic_allocations.items():
+        parent_macro = allocations[allocation.parent_region].macro
+        group_targets[parent_macro] -= allocation.target
+        group_targets[group] = allocation.target
+    by_group: defaultdict[str, list[str]] = defaultdict(list)
+    location_group: dict[str, str] = {}
     for location, tag in owners.items():
-        by_region[overrides.get(location, {}).get("region", roster[tag]["region"])].append(location)
-    floor = Decimal("0.050")
+        region = effective_regions[location]
+        group = geographic_location_groups.get(location, allocations[region].macro)
+        location_group[location] = group
+        by_group[group].append(location)
+    compatibility_group = location_group[COMPATIBILITY_LOCATION]
     sizes: dict[str, Decimal] = {}
-    for region, locations in by_region.items():
-        target = allocations[region].target - (compatibility_total if region == compatibility_region else Decimal())
+    for group, locations in by_group.items():
+        target = group_targets[group] - (
+            compatibility_total if group == compatibility_group else Decimal()
+        )
         if target <= 0:
             raise ValueError("compatibility presence exceeds its regional population target")
-        ordered = sorted(locations)
-        regional_weights = {location: max(weights.get(location, Decimal()), floor) for location in ordered}
-        total_weight = sum(regional_weights.values(), Decimal())
-        if not total_weight:
-            raise ValueError(f"population region {region} has no usable geographic weight")
-        scaled = {
-            location: (regional_weights[location] * target / total_weight).quantize(
-                THOUSANDTH, rounding=ROUND_HALF_UP
-            )
-            for location in ordered
+        fixed = {
+            location: city_targets[location].game_target
+            for location in locations
+            if location in city_targets
         }
-        correction = target - sum(scaled.values(), Decimal())
-        largest = max(ordered, key=lambda location: (regional_weights[location], location))
-        scaled[largest] += correction
-        if scaled[largest] <= 0:
-            raise ValueError(f"population rounding made {largest} non-positive")
-        sizes.update(scaled)
+        sizes.update(
+            allocate_population_group(
+                locations,
+                target,
+                normalized_weights,
+                {location: value for location, value in fixed.items() if value is not None},
+            )
+        )
     lines = [
         "# Generated by tools/generate_start_mirror.py --write.",
-        "# M4 AD 1 population totals: plan section 12.4; regional allocation is source-labelled in docs/m4/.",
-        "# Installed vanilla density is a geographic weighting template only, never a historical population source.",
+        "# M4 AD 1 population totals: plan section 12.4; allocation inputs are source-labelled in docs/m4/.",
+        "# Ancient city and Italy targets are fixed first; residual geography uses capped vanilla weights.",
+        "# Roster regions weight macro allocation but do not become political-tag population bins.",
+        "# Installed vanilla density is a residual geographic weighting template only and never historical evidence.",
         "locations = {",
     ]
     for location in sorted(owners):

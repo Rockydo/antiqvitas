@@ -873,6 +873,35 @@ def move(args: argparse.Namespace) -> int:
     return 0
 
 
+def scroll(args: argparse.Namespace) -> int:
+    """Turn the mouse wheel at a normalized in-window point for map zoom probes."""
+    import pyautogui
+
+    window = activate_window()
+    if not (0 <= args.x <= 1 and 0 <= args.y <= 1):
+        raise ValueError("scroll coordinates must be normalized fractions from 0 through 1")
+    x = window.left + round(window.width * args.x)
+    y = window.top + round(window.height * args.y)
+    pyautogui.FAILSAFE = False
+    pyautogui.moveTo(x, y, duration=args.duration)
+    pyautogui.scroll(args.clicks)
+    time.sleep(args.settle)
+    print(
+        f"scrolled {args.clicks:+d} detents at normalized "
+        f"({args.x:.3f}, {args.y:.3f})"
+    )
+    if args.capture:
+        session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
+        target = ROOT / "docs/screens" / session / f"{args.capture}.png"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        image = pyautogui.screenshot(
+            region=(window.left, window.top, window.width, window.height)
+        )
+        image.save(target)
+        print(target)
+    return 0
+
+
 def hotkey(args: argparse.Namespace) -> int:
     import pyautogui
 
@@ -1153,6 +1182,17 @@ def build_parser() -> argparse.ArgumentParser:
     move_parser.add_argument("--capture", help="capture this name after waiting")
     move_parser.add_argument("--session")
     move_parser.set_defaults(func=move)
+    scroll_parser = sub.add_parser("scroll")
+    scroll_parser.add_argument(
+        "clicks", type=int, help="mouse-wheel detents; positive zooms in"
+    )
+    scroll_parser.add_argument("--x", type=float, default=0.5)
+    scroll_parser.add_argument("--y", type=float, default=0.5)
+    scroll_parser.add_argument("--duration", type=float, default=0.2)
+    scroll_parser.add_argument("--settle", type=float, default=2)
+    scroll_parser.add_argument("--capture", help="capture this name after scrolling")
+    scroll_parser.add_argument("--session")
+    scroll_parser.set_defaults(func=scroll)
     hotkey_parser = sub.add_parser("hotkey")
     hotkey_parser.add_argument("keys", help="keys separated by '+', e.g. ctrl+s")
     hotkey_parser.add_argument("--settle", type=float, default=2)

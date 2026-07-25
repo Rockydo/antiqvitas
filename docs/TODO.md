@@ -190,7 +190,7 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
 
 ### P2 — Population, peoples, polities, and period terminology
 
-- [ ] Rebuild population calibration for Italy and major ancient cities.
+- [x] Rebuild population calibration for Italy and major ancient cities.
   - The report is confirmed: generated Rome has one 60.901k Latin peasant pop, an
     artifact of generic density weighting and not an acceptable Augustan metropolis.
   - Create a sourced target/uncertainty ledger distinguishing game location, city
@@ -206,6 +206,12 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     Southeast Asian rows) or add a sourced city input; never hand-edit `06_pops.txt`.
   - Acceptance: city min/max checks, Italy/region/culture cross-tables, documented
     macro-total preservation, and top-20 city panel/map captures.
+  - Completed: 47 audited city rows provide 45 fixed map targets; seven Italy
+    subregions total 7.5m within an unchanged 47.5m Roman Empire and 230m world.
+    The capped residual prevents untargeted locations exceeding 75k. Rome is
+    1.0m; Alexandria 500k; Jingzhao 650k; Ctesiphon 350k; Pataliputra 300k;
+    Antioch 220k; Ephesus 180k. Antioch is now Roman and Hellenophone. Generated
+    cross-tables, 73 checks, paired smoke, and a rapid seven-city map probe pass.
 
 - [ ] Expand political granularity where residual SoPs create giant blobs.
   - This requires new tags/contracts/capitals/CoAs/ownership, not just detailed
@@ -286,7 +292,51 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     label in selection, diplomacy, map tooltips, and rank panel; no tribal/SoP
     sample shows County.
 
-### P3 — Cohesive ancient interface art
+- [ ] Reopen player-facing location-name accuracy beyond mere key coverage.
+  - The existing validator proves that all 28,573 map keys have a display label,
+    but 26,230 are synthetic Tier-3 forms. Coverage alone does not prove that a
+    visible name is correct for AD 1.
+  - Prioritize every capital, the calibrated top cities, Italy and the Roman
+    provinces, Germania/Venedi-facing lands, Gaul, Anatolia, Han cores, India,
+    Japan, and West Africa. Classify names as attested, securely reconstructed,
+    conservative regional proxy, or engine-only fallback; never present a
+    synthetic Latin-looking form as sourced.
+  - Audit direct and dynamic names together, including diacritics, duplicate
+    settlements, renamed proxy locations, map labels, country-selection views,
+    and culture/language fallbacks. Reject medieval, modern-national, colonial,
+    or post-476 names unless the physical feature genuinely retained the same
+    ancient name and the ledger records it.
+  - Acceptance: source/confidence coverage for every high-visibility location,
+    prohibited-era and unexplained-modern-name count zero in the priority
+    regions, and rapid regional map captures rather than a 22,000-location manual
+    sweep.
+
+### P3 — Roman economy and cohesive ancient interface art
+
+- [ ] Deepen and audit the Roman building/trade-good system before freezing art.
+  - Treat the existing 154 active building families and 1,804 placements as a
+    starting inventory, not proof of engaging gameplay. Trace actual availability,
+    costs, inputs, outputs, staffing, profitability, infrastructure, urban-rank,
+    advance, privilege, law, and AI conditions from the local engine files.
+  - Build layered Roman/Italic development around households and estates,
+    workshops, markets and fora, ports and river trade, roads and cursus publicus,
+    warehouses and the annona, baths and water supply, temples and civic display,
+    mines/quarries, ceramics, glass, metalwork, textiles, wine/oil, military
+    supply, castra, coloniae, and frontier logistics. Give provincial economies
+    distinct strengths without turning every historical structure into a unique
+    building.
+  - Audit every active raw and processed good against AD 1 production geography
+    and trade use. Reuse valid engine goods; add a new good only when it supports
+    a real production/trade decision and can receive complete RGO, building,
+    market, localization, AI, and art contracts. Check especially grain/annona,
+    wine, olive oil, fish products, salt, timber, iron/copper/lead, marble and
+    other stone, ceramics, linen/wool/silk, papyrus, glass, incense, horses,
+    camels, slaves, and luxury imports.
+  - Acceptance: Rome/Italy and at least ten contrasting Roman provinces offer
+    multiple viable, period-specific development paths; all buildings have useful
+    effects or production roles and sensible AI access; trade-good map and market
+    captures show plausible regional specialization; static economic assertions,
+    a short construction/market tick probe, validation, and smoke pass.
 
 - [ ] Re-art the complete active building-icon set in one circle-safe style.
   - Freeze the final active building ledger, including Roman named, regional,

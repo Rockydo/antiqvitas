@@ -1,5 +1,23 @@
 # Historical Assumptions
 
+## 2026-07-25 - Ancient city values are bounded gameplay fields
+
+City estimates are contested and often mix city proper, suburban agglomeration,
+and supporting hinterland. The fixed targets therefore apply to EU5 location
+fields, not archaeological municipal boundaries. Rome is set to 1.0m, Alexandria
+0.5m, and the other audited cities within the explicit bands in
+`docs/m4/population_city_targets.csv`. Italy totals 7.5m without equating Latin
+culture with Italian geography. Sources: `HANSON-ORTMAN`, `CEHGRW`, `FRIER-DEM`,
+`SCHEIDEL-ITALY`, `WILEY-CHANGAN`, and plan §12.4. [contested]
+
+## 2026-07-25 - Antioch is Roman and Hellenophone in AD 1
+
+The installed Antioch field represents the provincial metropolis inside the
+Roman sphere after 64 BC; its previous Arsacid ownership was a residual roster-bin
+artifact. It is assigned Roman ownership, Greek Koine culture, and Hellenic
+religion without implying cultural uniformity in the Orontes hinterland. Sources:
+`CAH-XI`, `HANSON-ORTMAN`, `CEHGRW`. [secure Roman rule; contested field shares]
+
 ## 2026-07-24 - Siscia is a bounded Augustan garrison proxy
 
 The *Oxford Classical Dictionary* records Octavian's 35 BC capture of Siscia

@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-07-25 - Italy and ancient-metropolis population calibration
+
+- Replaced polity-bin density allocation with exact macro/geographic partitions,
+  fixed uncertain city targets, and a capped residual allocator. The world remains
+  230m; Rome is 1.0m; Italy is 7.5m; Antioch is Roman and Hellenophone.
+- Added generated city/Italy/culture/top-location audit tables and an invisible
+  Borjigin-era reform adapter found by the rapid live route. All 73 checks and
+  paired normal/`-leavepops` smoke pass with zero mod-unique lines.
+
 ## 2026-07-24 - M5 Siscia frontier-garrison pass
 
 - Added `Castra Siscia` at the direct Sisak field as a deliberately contested,

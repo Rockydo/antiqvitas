@@ -1,0 +1,48 @@
+place,location,mode,city_proper_min_thousands,city_proper_max_thousands,agglomeration_min_thousands,agglomeration_max_thousands,game_location_target_thousands,game_location_min_thousands,game_location_max_thousands,hinterland_scope,source,confidence,note
+Roma,rome,primary,750,1000,850,1200,1000,800,1200,city plus immediate annona-facing suburban field,HANSON-ORTMAN;CEHGRW;CAH-XI,contested,Augustan metropolis target replaces the inherited medieval density weight
+Alexandria,alexandria,primary,350,500,450,650,500,400,700,city plus Mareotic and delta-facing support field,HANSON-ORTMAN;CEHGRW;CAH-XI,contested,Egyptian metropolis target
+Antiochia,antioch,primary,150,250,180,320,220,160,340,city plus lower Orontes support field,HANSON-ORTMAN;CEHGRW;CAH-XI,contested,Syrian metropolis target
+Carthago,tunis,proxy,100,200,140,260,180,120,280,Tunis field as Carthage and immediate hinterland proxy,HANSON-ORTMAN;CEHGRW;PLE,contested,Reviewed geographic proxy rather than a claim about the modern city
+Ephesus,ayasuluk,proxy,100,200,120,250,180,100,270,Ayasuluk field as lower Cayster urban proxy,HANSON-ORTMAN;CAH-XI;UNESCO-EPH,contested,Provincial metropolis and port target
+Pergamum,bergama,primary,60,120,80,160,100,60,180,city and lower Caicus support field,HANSON-ORTMAN;CAH-XI;PLE:550812,contested,Major Attalid and Roman civic centre
+Capua,caserta,proxy,50,100,60,130,80,50,140,Caserta field as Capuan plain proxy,CAH-XI;PLE;P12.4,contested,Installed map lacks a Capua key so the nearest controlled field carries the demographic allocation only
+Neapolis,naples,primary,50,100,130,230,160,120,250,shared Bay of Naples field including Puteoli,CAH-XI;PLE;P12.4,contested,Game field aggregates two distinct Campanian cities and their coastal hinterlands
+Puteoli,naples,subsumed,40,80,50,110,,,,shared Bay of Naples field,CAH-XI;PLE;P12.4,contested,Audited separately but subsumed into the Neapolis game-location target
+Mediolanum,milano,primary,30,70,40,100,70,35,110,city plus central Po plain field,CAH-XI;PLE:383706;P12.4,contested,Important Cisalpine centre below its later imperial peak
+Athenae,athens,primary,30,60,40,90,60,30,100,city plus Attic support field,CAH-XI;PLE;P12.4,contested,Classical centre at a reduced early-imperial scale
+Corinthus,corinth,primary,40,80,50,110,70,40,120,city and isthmian support field,CAH-XI;PLE;P12.4,contested,Roman colony and isthmian exchange centre
+Hierosolyma,jerusalem,primary,50,100,70,140,100,60,150,city plus Judaean pilgrimage support field,CAH-XI;OCD;PLE,contested,Second Temple metropolis target
+Seleucia_Ctesiphon,baghdad,proxy,150,300,250,500,350,220,520,paired Tigris cities and immediate canal hinterland,CAH-XI;OCD;PLE,contested,Baghdad field represents the Seleucia Ctesiphon urban complex
+Babylon,hillah,proxy,20,50,25,70,40,20,80,Hillah field and immediate Euphrates settlement zone,CAH-XI;OCD;PLE,contested,Reduced but inhabited Babylonian centre
+Merv,merv,primary,40,100,50,140,80,40,150,oasis city plus irrigated support field,CAH-XI;CHG;PLE,contested,Margian oasis centre
+Taxila,attock,proxy,40,90,50,130,80,40,140,Attock field as Taxila valley proxy,IRAN-GANDHARA;CAH-XI;PLE,contested,Distant installed proxy is retained explicitly
+Pataliputra,patna,primary,150,300,200,420,300,180,450,city plus middle Gangetic support field,CAH-XI;P8.4;PLE,contested,Major Gangetic metropolis
+Changan,jingzhao,primary,200,300,500,750,650,500,800,capital city plus Jingzhao metropolitan registration field,BHR;WILEY-CHANGAN;CHG,contested,Game target distinguishes the city from the wider registered metropolitan territory
+Luoyang,luoyang,primary,100,220,250,500,350,220,550,city plus Henan metropolitan support field,BHR;CAH-XI;CHG,contested,Major Western Han secondary centre below its later Eastern Han peak
+Memphis,cairo,proxy,60,120,90,180,130,70,200,Cairo field as lower Nile Memphis support proxy,CAH-XI;OCD;PLE,contested,Ancient Memphis allocation does not identify modern Cairo with the city
+Edessa,urfa,primary,30,70,40,100,70,30,110,city plus upper Mesopotamian support field,CAH-XI;OCD;PLE,contested,Cap prevents the inherited medieval field from dominating the region
+Emesa,homs,primary,25,60,35,90,60,25,100,shared Orontes field including Palmyrene route support,CAH-XI;OCD;PLE,contested,Game field target is broader than Emesa proper
+Palmyra,homs,subsumed,20,50,30,80,,,,shared Orontes route-support field,CAH-XI;OCD;PLE,contested,Audited separately but subsumed into the Homs game-location target
+Byzantium,constantinople,primary,20,50,25,70,45,20,80,city plus Bosporus support field,CAH-XI;OCD;PLE,contested,AD 1 scale remains far below Constantinople
+Lugdunum,lyon,primary,30,70,40,100,70,30,110,city plus Rhone Saone support field,CAH-XI;OCD;PLE,contested,Gallic administrative and exchange centre
+Tarraco,tarragona,primary,25,60,35,90,60,25,100,city plus coastal conventus support field,CAH-XI;OCD;PLE,contested,Hispanic provincial centre
+Corduba,cordoba,primary,25,60,35,90,60,25,100,city plus Baetis agricultural support field,CAH-XI;OCD;PLE,contested,Baetican provincial centre
+Emerita_Augusta,merida,primary,20,50,30,80,50,20,90,city plus Guadiana colonial support field,CAH-XI;OCD;PLE,contested,Lusitanian provincial centre
+Gades,cadiz,primary,20,50,30,80,50,20,90,port city plus island and estuary support field,CAH-XI;OCD;PLE,contested,Atlantic Mediterranean exchange centre
+Aquileia,aquileia,primary,25,60,35,90,60,25,100,city plus upper Adriatic support field,CAH-XI;OCD;PLE,contested,Northeastern Italian port and military centre
+Chengdu,chengdu,primary,120,240,180,400,300,180,450,city plus commandery-facing basin field,BHR;CAH-XI;CHG,contested,Major Sichuan metropolitan allocation
+Panyu,panyu,primary,40,100,60,150,100,50,170,city plus Pearl River estuary field,BHR;CAH-XI;CHG,contested,Southern Han port allocation
+Marakanda,samarkand,primary,30,80,45,120,80,35,130,oasis city plus irrigated support field,CAH-XI;CHG;PLE,contested,Sogdian oasis centre
+Kashgar,kashgar,primary,20,50,30,80,50,20,90,oasis city plus irrigated support field,IRAN-KAS;CAH-XI;CHG,contested,Western Tarim oasis centre
+Kucha,kucha,primary,15,40,25,70,40,15,80,oasis city plus irrigated support field,IRAN-KUC;CAH-XI;CHG,contested,Northern Tarim oasis centre
+Anuradhapura,anuradhapura,primary,50,120,70,180,120,60,200,city plus dry-zone irrigation support field,CAH-XI;P8.4;PLE,contested,Lankan capital and hydraulic centre
+Barygaza,khambat,proxy,25,60,35,90,60,25,100,Gulf of Khambhat field as Bharuch port proxy,OCD-BARYGAZA;PER;PLE,contested,Port estimate is deliberately broad
+Muziris,kodungallur,proxy,15,40,25,70,40,15,80,Kodungallur field as unresolved Muziris-region proxy,CAM-MUZIRIS;KER-MUZIRIS;PER,contested,Exact port location remains unresolved
+Meroe,shendi,proxy,20,50,30,80,50,20,90,Shendi field as Meroitic capital-region proxy,CAH-XI;P8.5;PLE,contested,Nile capital and ironworking region
+Adulis,massawa,proxy,10,30,20,50,30,10,60,Massawa field as Adulis coast proxy,PER;CAH-XI;PLE,contested,Red Sea port allocation
+Teotihuacan,azcapotzalco,proxy,20,60,30,90,60,20,100,Basin of Mexico field as early Teotihuacan proxy,INAH-TEO;UNESCO-TEO;P8.10,contested,AD 1 target represents the early urban phase rather than the later peak
+Monte_Alban,zaachila,proxy,20,60,30,90,60,20,100,Zaachila field as Monte Alban valley proxy,CAH-XI;P8.10,contested,Zapotec hill-city and valley support allocation
+Tikal,noh_peten,proxy,10,35,20,60,35,10,70,Noh Peten field as Maya lowland proxy,CAH-XI;P8.10,contested,Preclassic urban centre target
+Susa,shush,primary,25,70,40,110,70,30,120,city plus Susiana support field,CAH-XI;OCD;PLE,contested,Arsacid-period regional centre
+Ecbatana,hamadan,primary,25,70,40,110,70,30,120,city plus Median highland support field,CAH-XI;OCD;PLE,contested,Arsacid-period regional centre
+Petra,shoubak,proxy,15,40,25,70,40,15,80,Shoubak field as Petra highland proxy,CAH-XI;OCD;PLE,contested,Nabataean capital and caravan centre
