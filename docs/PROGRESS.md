@@ -6532,3 +6532,15 @@ reviewed 128px BC7 DDS.
   regional masters and 56 direct UI targets.
 - Added 12 contextual rank classes covering all 229 tags; fresh UI probes show
   People/Leader/Realm and imperial labels. Validation and paired smoke pass.
+
+## 2026-07-25 - High-visibility AD 1 toponymy
+
+- Added a 1,932-field source/classification ledger covering every capital,
+  calibrated city, urban node, and stratified priority-region samples.
+- Replaced 1,010 non-Roman fabricated Tier-3 forms with attested ancient labels
+  or explicit centroid/territorial proxies. The merged Roman identity audit
+  keeps 202 unresolved priority fields on deliberate vanilla pass-through
+  instead of presenting lower-confidence territorial prose as ancient names.
+- Exact 11-client localization, prohibited-era, and localization checks pass;
+  the reconciled 69-check suite and paired vanilla/mod smoke both pass with zero
+  mod-only `error.log` lines.

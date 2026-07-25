@@ -4504,3 +4504,18 @@ Strabo XII; Oxford Classical Dictionary, “Galatia”; Stephen Mitchell,
 The ancient pop art distinguishes broad Mediterranean, northern European,
 Near Eastern, East Asian, American, and African material settings. It does not
 claim uniform costume, phenotype, status practice, or identity within a region.
+
+## 2026-07-25 - Priority territorial names are map-field descriptions
+
+Labels such as “Inner Northeast Qi-Lu Han Lands” or “Environs of Bactra” describe
+an engine field relative to a separately sourced cultural distribution, polity
+frame, or ancient anchor. They do not assert an otherwise unattested settlement,
+administrative district, fixed border, or uniform population. Repeated regional
+labels may span adjacent fields deliberately. Sources: the row-level sources in
+`docs/m4/priority_location_name_audit.csv`; `GEO-PROXY`. [explicit gameplay proxy]
+
+Roman-owned priority fields classified as `unresolved_vanilla_passthrough` make
+no historical-name claim. They record a source gap and the deliberate decision
+to retain the installed field label until a secure AD 1 identity is established.
+Sources: Pleiades review ledgers and
+`docs/m4/roman_location_name_audit.csv`. [unresolved identity]

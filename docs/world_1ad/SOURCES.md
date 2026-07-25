@@ -1,5 +1,10 @@
 # AD 1 World Roster Sources
 
+- `GEO-PROXY`: deterministic relationship between installed location centroids
+  and a separately sourced ancient anchor. It supports only labels such as
+  “North of X” or “Environs of X”; it is not evidence for a settlement name,
+  ancient boundary, or uniform population.
+
 - `H-O-2017` / `HANSON-ORTMAN`: J. W. Hanson and S. G. Ortman,
   ["A systematic method for estimating the populations of Greek and Roman
   settlements"](https://doi.org/10.1017/S1047759400074134), *Journal of Roman

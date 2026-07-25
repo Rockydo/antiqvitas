@@ -46,6 +46,7 @@ VALIDATE_COMMANDS = (
     Command("tools/generate_m4_tier2_ultra_names.py", ("--check",)),
     Command("tools/generate_m4_tier3_names.py", ("--check",)),
     Command("tools/generate_m4_roman_names.py", ("--check",)),
+    Command("tools/m4_priority_location_names.py", ("--check",)),
     Command("tools/generate_dynamic_names.py", ("--check",)),
     Command("tools/generate_m4_location_name_corrections.py", ("--check",)),
     Command("tools/m4_roman_location_name_audit.py", ("--check",)),

@@ -319,7 +319,7 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     ruler labels, and elevation actions are neutralized in all 11 clients; the
     New Game probe shows `People of Venedi`, `Leader`, and `Realm of Roxolani`.
 
-- [ ] Reopen player-facing location-name accuracy beyond mere key coverage.
+- [x] Reopen player-facing location-name accuracy beyond mere key coverage.
   - The existing validator proves that all 28,573 map keys have a display label,
     but 26,230 are synthetic Tier-3 forms. Coverage alone does not prove that a
     visible name is correct for AD 1.
@@ -337,6 +337,13 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     prohibited-era and unexplained-modern-name count zero in the priority
     regions, and rapid regional map captures rather than a 22,000-location manual
     sweep.
+  - Completed: a generated 1,932-field priority ledger covers all 229 capitals,
+    all 45 calibrated cities, all 72 urban nodes, Italy, Roman provincial
+    theatres, Germania, Gaul, Anatolia, Han macro-regions, India, Japan, Sahel,
+    and Guinea. It replaces 1,010 non-Roman synthetic forms with attested names
+    or explicit geographic/territorial proxies, while 202 unresolved Roman
+    fields deliberately retain the stricter Roman audit's vanilla pass-through;
+    priority Tier-3 runtime count is zero.
 
 ### P3 — Roman economy and cohesive ancient interface art
 

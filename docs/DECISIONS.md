@@ -2977,3 +2977,21 @@ Numeric ranks remain for engine balance. An exact roster-led resolver supplies
 12 ancient display classes, while raw rank/ruler/elevation fallbacks are neutral.
 Compatibility predicates retained by the installed resolver remain inert so
 Jomini does not report unused variables.
+Collective country names already containing “Communities,” “Societies,” or
+“Polities” use the rank word “Lands” to avoid doubled map-title grammar.
+
+## 2026-07-25 - Qualify unknown fields instead of inventing ancient towns
+
+High-visibility fields retain reviewed ancient names where available. A field
+without an attested name receives a sourced culture/polity territory label or a
+centroid relationship to a reviewed anchor. These are classified as conservative
+proxies; pseudo-Latin, pseudo-Chinese, and similar synthetic town forms are
+forbidden from the priority ledger.
+
+## 2026-07-25 - Roman identity review outranks generic priority proxies
+
+The Roman audit accepts only reviewed direct or exact-identity names. When that
+audit cannot securely identify a Roman-owned engine field, vanilla localization
+passes through; the wider priority generator must not replace it with a
+territorial proxy. The priority audit records these unresolved cases explicitly,
+while the runtime layer remains synthetic-name free.

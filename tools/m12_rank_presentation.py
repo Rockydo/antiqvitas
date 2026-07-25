@@ -78,10 +78,10 @@ STYLES = {
     ),
     "people": RankStyle("people", "People", "communal", "Leader", "Leader"),
     "communities": RankStyle(
-        "communities", "Communities", "communal", "Spokesperson", "Spokesperson",
+        "communities", "Lands", "communal", "Spokesperson", "Spokesperson",
     ),
     "polities": RankStyle(
-        "polities", "Polities", "regional", "Leading House", "Leading House",
+        "polities", "Lands", "regional", "Leading House", "Leading House",
     ),
     "empire": RankStyle("empire", "Empire", "imperial", "Emperor", "Empress"),
     "great_realm": RankStyle(
