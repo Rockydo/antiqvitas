@@ -606,8 +606,8 @@ antq_m10.1023 = {
 		historical_option = yes
 		location:jerusalem = {
 			if = {
-				limit = { has_building_with_at_least_one_level = temple }
-				destroy_building = "building(building_type:temple|owner)"
+				limit = { has_building_with_at_least_one_level = antq_second_temple_jerusalem }
+				destroy_building = "building(building_type:antq_second_temple_jerusalem|owner)"
 			}
 		}
 		add_stability = stability_mild_penalty

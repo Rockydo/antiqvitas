@@ -22,6 +22,7 @@ separately proves the other supported language folders exactly mirror English.
 - `main_menu/localization/english/antq_m3_countries_l_english.yml`
 - `main_menu/localization/english/antq_m4_location_names_l_english.yml`
 - `main_menu/localization/english/antq_m4_people_l_english.yml`
+- `main_menu/localization/english/antq_m5_ancient_building_replacements_l_english.yml`
 - `main_menu/localization/english/antq_m5_goods_l_english.yml`
 - `main_menu/localization/english/antq_m5_regional_buildings_l_english.yml`
 - `main_menu/localization/english/antq_m5_roman_buildings_l_english.yml`
@@ -40,6 +41,6 @@ the audit.
 
 ## Result
 
-20 English files and 57273 quoted player-facing entries contain
+21 English files and 57297 quoted player-facing entries contain
 zero prohibited terms. The check is pinned in `make validate`; a newly authored
 anachronism fails before it can reach a smoke run.

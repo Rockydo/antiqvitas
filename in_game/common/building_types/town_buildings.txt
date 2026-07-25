@@ -1,4 +1,9 @@
 ﻿temple = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
 	audio_tier = 1
 	is_foreign = no
 	max_levels = 1
@@ -162,6 +167,11 @@ minting_office = {
 }
 
 granary = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
 	audio_tier = 2
 	is_foreign = no
 	max_levels = guild_max_level

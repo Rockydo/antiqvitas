@@ -3014,3 +3014,18 @@ Productive recipes target the installed 19-21% default-price guild margin, while
 civic and military families carry explicit maintenance/service effects. The
 temporary Charcoal Hearth adapter remains only because its installed production
 chain is still active.
+
+## 2026-07-25 - Freeze buildings without installed adapters
+
+All 465 installed building definitions are false-gated. Town profiles, M7 forts,
+named sites, and the AD 70 Temple effect use namespaced ancient keys. Existing
+art-complete families absorb true semantic matches; eight distinct hydraulic,
+harbor, fort, vihara, Han, Alexandrian, Pharos, and Jerusalem contracts own
+direct art. No installed building remains active merely for setup compatibility.
+
+## 2026-07-25 - Remove the random loading concept panel
+
+`GetLoadingScreenConcept` selects from the installed concept registry, including
+unavailable post-antique mechanics. The exact custom-loading GUI suppresses that
+independent panel instead of rewriting thousands of valid in-game concepts.
+ANTIQVITAS quotes, progress, cancel behavior, and loading art remain unchanged.

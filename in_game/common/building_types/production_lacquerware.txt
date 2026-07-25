@@ -1,4 +1,9 @@
 ﻿lacquerware_guild = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
 	is_foreign = no
 	pop_type = burghers
 	max_levels = guild_max_level

@@ -35,6 +35,8 @@ SHEETS: tuple[tuple[str, tuple[tuple[str, str], ...]], ...] = (
     ("buildings_06.png", (("building", "antq_reg_bronze_workers_collegium"), ("building", "antq_reg_lead_pipeworks"), ("building", "antq_reg_unguentarium"), ("building", "antq_reg_collegia_hall"))),
     ("goods_01.png", (("good", "antq_olive_oil"), ("good", "antq_preserved_fish"), ("good", "antq_grain_products"), ("good", "antq_perfumes"))),
     ("goods_02.png", (("good", "antq_wax_goods"), ("good", "antq_soap"), ("good", "antq_bronze_wares"), ("good", "antq_lead_wares"))),
+    ("adapter_replacements_01.png", (("building", "antq_irrigation_network"), ("building", "antq_maritime_harbor"), ("building", "antq_earthwork_stockade"), ("building", "antq_buddhist_vihara"))),
+    ("adapter_replacements_02.png", (("building", "antq_taixue_changan"), ("building", "antq_library_alexandria"), ("building", "antq_pharos_alexandria"), ("building", "antq_second_temple_jerusalem"))),
 )
 
 

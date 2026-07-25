@@ -17,6 +17,7 @@ RELATIVE = Path("in_game/common/building_types")
 TARGET = ROOT / RELATIVE
 MANIFEST = ROOT / "docs/m5/building_quarantine_manifest.json"
 CUSTOM_SOURCES = {
+    "00_antiquitas_adapter_replacements.txt",
     "00_antiquitas_regional_buildings.txt",
     "00_antiquitas_roman_buildings.txt",
 }
@@ -108,8 +109,6 @@ def active_adapters(installed: set[str]) -> set[str]:
     missing = sorted(used - installed - custom_keys())
     if missing:
         raise ValueError(f"active setup/unlock building keys are undefined: {missing}")
-    if not adapters:
-        raise ValueError("active installed building adapter set is empty")
     return adapters
 
 

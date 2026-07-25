@@ -6555,3 +6555,14 @@ reviewed 128px BC7 DDS.
 - A fresh Rome run reached 31 January without building, market-scope, or unused
   variable errors. Validation passes 75/75 and paired smoke has zero mod-only
   lines. Established-market production evidence remains the next P3 gate.
+
+## 2026-07-25 - Building registry freeze and clean loading guidance
+
+- Replaced all 15 installed building adapters with namespaced ancient content;
+  465/465 installed definitions are quarantined and 2,415 start placements are
+  non-duplicate.
+- Added eight direct circle-safe building icons from two EU5-referenced four-up
+  sheets; the complete direct UI ledger now has 598 chains.
+- Suppressed the independent random installed-concept panel on New Game loads.
+  Two captures show distinct ancient quotes with no vanilla mechanical text.
+- Validation passes 76/76; paired vanilla/mod smoke has zero mod-only lines.

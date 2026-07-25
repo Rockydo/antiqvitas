@@ -1,4 +1,9 @@
 ﻿irrigation_systems = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
 	audio_tier = 1
 	is_foreign = no
 	max_levels = irrigant_cap
@@ -14,12 +19,6 @@
 
 	forbidden_for_estates = yes
 
-	location_potential = {
-		OR = {
-			has_river = yes
-			is_adjacent_to_lake = yes
-		}
-	}
 
 	build_time = infrastructure_build_time
 
@@ -109,6 +108,11 @@ pound_lock_canal_infrastructure = {
 }
 
 mason = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
 	audio_tier = 1
 	is_foreign = no
 	max_levels = guild_max_level

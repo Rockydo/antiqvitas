@@ -261,6 +261,11 @@ naval_base = {
 }
 
 protected_harbor = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
 	audio_tier = 1
 	is_foreign = no
 	max_levels = 1
@@ -275,9 +280,6 @@ protected_harbor = {
 	city = yes
 	megalopolis = yes
 
-	location_potential = {
-		is_port = yes
-	}
 
 	build_time = medium_port_building_time
 

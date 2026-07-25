@@ -4530,3 +4530,13 @@ layers. Individual placements and confidence remain row-sourced in
 `docs/m5/roman_economy_profiles.csv`. Sources: P12.1; P12.3; CAH-XI;
 MET-ROMAN-TRADE; regional Strabo/Pliny and archaeology references in that ledger.
 [bounded gameplay abstraction]
+
+## 2026-07-25 - Shared ancient infrastructure families are bounded abstractions
+
+The irrigation, maritime-harbor, and earthwork-stockade keys represent comparable
+functions across unlike regional traditions, not uniform plans. Dujiangyan,
+Abhaya Wewa, Faiyum, Mediterranean/Indian Ocean ports, Roman camps, and Han
+beacons retain separate placement notes. The named Taixue, Alexandrian library,
+Pharos, Second Temple, and Anuradhapura vihara remain distinct. Sources:
+UNESCO-DJJ; UNESCO-ANU; UNESCO-FAY; PER; BHR; CAH XI; OCD-JER; row sources in
+`docs/m5/ancient_building_replacements.csv`. [bounded gameplay abstraction]

@@ -2765,6 +2765,11 @@ debere_meshwae = {
 }
 
 lighthouse_of_alexandria = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
 	audio_tier = 6
 	is_special = yes
 	is_foreign = no
@@ -2778,8 +2783,6 @@ lighthouse_of_alexandria = {
 	megalopolis = yes
 	build_time = small_fort_building
 	expensive = yes
-    country_potential = { always = no }
-    allow = { always = no }
 
 	unique_production_methods = {
 		lighthouse_of_alexandria_maintenance = {

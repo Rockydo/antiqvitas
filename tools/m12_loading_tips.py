@@ -89,11 +89,22 @@ TIP_KEYS = tuple(f"LOADING_TIP_{index}" for index in range(60)) + tuple(
     f"LOADING_TIP_d008_{index}" for index in range(4)
 )
 TIP_KEY_PATTERN = re.compile(r"(?m)^\s*(LOADING_TIP_[A-Za-z0-9_]+)\s*:")
+CONCEPT_VISIBLE_PATTERN = re.compile(
+    r'(?m)^(\s*)visible = "\[Not\(StringIsEmpty\(GetLoadingScreenConcept\)\)\]"\s*$'
+)
+CONCEPT_TEXT_PATTERN = re.compile(
+    r'(?m)^(\s*)raw_text = "#t \[GetLoadingScreenConceptName\]: #! '
+    r'\[GetLoadingScreenConcept\|w\]"\s*$'
+)
+
+
+def game_root() -> Path:
+    config = json.loads(CONFIG.read_text(encoding="utf-8-sig"))
+    return Path(config["game_dir"]) / "game"
 
 
 def installed_tip_keys() -> tuple[str, ...]:
-    config = json.loads(CONFIG.read_text(encoding="utf-8-sig"))
-    game = Path(config["game_dir"]) / "game"
+    game = game_root()
     roots = [game / "loading_screen/localization/english"]
     roots.extend(
         package / "loading_screen/localization/english"
@@ -107,6 +118,44 @@ def installed_tip_keys() -> tuple[str, ...]:
         for path in sorted(root.rglob("*.yml")):
             keys.update(TIP_KEY_PATTERN.findall(path.read_text(encoding="utf-8-sig")))
     return tuple(sorted(keys))
+
+
+def installed_custom_loading_screen() -> Path:
+    game = game_root()
+    relative = Path("loading_screen/gui/custom_loading_screen.gui")
+    candidates = [game / relative]
+    candidates.extend(
+        package / relative
+        for package in sorted((game / "dlc").glob("*"))
+        if package.is_dir()
+    )
+    mounted = [path for path in candidates if path.is_file()]
+    if not mounted:
+        raise ValueError("installed custom loading-screen GUI is missing")
+    return mounted[-1]
+
+
+def custom_loading_target() -> Path:
+    return ROOT / "loading_screen/gui/custom_loading_screen.gui"
+
+
+def rendered_custom_loading_screen() -> str:
+    source = installed_custom_loading_screen().read_text(encoding="utf-8")
+    rendered, visible_count = CONCEPT_VISIBLE_PATTERN.subn(
+        r"\1visible = no # ANTIQVITAS: suppress random installed concept leakage",
+        source,
+    )
+    rendered, text_count = CONCEPT_TEXT_PATTERN.subn(r'\1raw_text = ""', rendered)
+    if visible_count != 1 or text_count != 1:
+        raise ValueError(
+            "installed custom loading-screen concept contract changed: "
+            f"visible={visible_count}, text={text_count}"
+        )
+    if "GetLoadingScreenConcept" in rendered:
+        raise ValueError("random installed loading concept remains reachable")
+    # Preserve script tokens while keeping the generated exact-name copy clean
+    # enough for the repository's mandatory diff gate.
+    return "\n".join(line.rstrip(" \t") for line in rendered.splitlines()) + "\n"
 
 
 def targets(language: str) -> tuple[Path, Path]:
@@ -146,6 +195,9 @@ def write() -> None:
         for path in targets(language):
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(content, encoding="utf-8")
+    gui = custom_loading_target()
+    gui.parent.mkdir(parents=True, exist_ok=True)
+    gui.write_bytes(rendered_custom_loading_screen().encode("utf-8"))
 
 
 def validate() -> None:
@@ -167,6 +219,10 @@ def validate() -> None:
         for path in targets(language):
             if not path.is_file() or path.read_text(encoding="utf-8") != content:
                 raise ValueError(f"stale or missing loading-tip mirror: {path}")
+    gui = custom_loading_target()
+    expected_gui = rendered_custom_loading_screen().encode("utf-8")
+    if not gui.is_file() or gui.read_bytes() != expected_gui:
+        raise ValueError(f"stale or missing loading-screen GUI overlay: {gui}")
     if any("AD " in quote or "CE" in quote for quote, _ in TIPS):
         raise ValueError("loading tips must not contain era-marker abbreviations")
 
@@ -182,7 +238,8 @@ def main() -> int:
         validate()
     print(
         f"m12_loading_tips: PASS ({len(TIPS)} ancient tips; "
-        f"{len(LANGUAGES)} client mirrors; 2 exact-name overlays)"
+        f"{len(LANGUAGES)} client mirrors; 2 localization overlays; "
+        "1 random-concept GUI quarantine)"
     )
     return 0
 

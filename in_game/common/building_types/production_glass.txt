@@ -1,6 +1,11 @@
 ﻿# Age of Traditions
 
 glass_guild = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
 	audio_tier = 1
 	is_foreign = no
 	pop_type = burghers
@@ -18,9 +23,6 @@ glass_guild = {
 
 
 
-	location_potential = {
-		is_produced_in_location_market = goods:sand
-	}
 
 
 	build_time = guild_build_time

@@ -20,6 +20,20 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
 
 ### P0 — Crash and total-conversion leakage barriers
 
+- [x] Replace every vanilla loading-screen mechanical hint, including DLC additions.
+  - Fresh AD 1 loads showed ANTIQVITAS quotes above vanilla `Bombard` and
+    `Province Capital` explanatory text. These are separate from the completed
+    `LOADING_TIP_*` quote union.
+  - Harvest the mounted base + DLC hint-key and localization-source union, identify
+    the actual load-screen resolver, and exact-name overlay it with concise
+    ancient-system guidance. Reject post-476 units, mechanics, ranks, institutions,
+    and terminology in every supported client.
+  - Acceptance: generated union coverage and anachronism checks are complete; two
+    rapid load captures show only ANTIQVITAS quotes and period-appropriate hints.
+  - Completed: the exact custom-loading GUI now suppresses the engine's random
+    installed-concept panel while preserving the 64 ancient quotes. Two fresh
+    non-debug loads showed distinct quotes and no concept text.
+
 - [x] Diagnose and fix the Diseases-tab crash before other runtime work.
   - Preserve the exact evidence bundle at
     `<EU5_USER_DIR>\crashes\Europa Universalis V20260724_145327`
@@ -375,9 +389,13 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     profiles, eight processed goods, 31 direct assets, and exact quarantine of
     450 legacy buildings. All 75 checks and paired smoke pass; a fresh Rome run
     reached 31 January without building/market-scope errors.
-  - [ ] Finish acceptance with an established-market production/export capture,
-    construction-choice probe, active-goods freeze, and replacement of the 15
-    temporary installed building adapters before freezing the complete art set.
+  - [x] Freeze the active goods/building registry and replace all 15 temporary
+    installed adapters. All 465 installed building definitions are quarantined;
+    eight namespaced replacements have direct checked art and the start now has
+    2,415 non-duplicate placements.
+  - [ ] Finish acceptance with an established-market production/export capture
+    and construction-choice probe. The repeated debug-renderer limit is recorded
+    in `BLOCKERS.md`; resume only through a durable non-debug/current-save route.
 
 - [ ] Re-art the complete active building-icon set in one circle-safe style.
   - Freeze the final active building ledger, including Roman named, regional,

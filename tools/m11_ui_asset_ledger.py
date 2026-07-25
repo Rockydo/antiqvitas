@@ -19,6 +19,7 @@ from PIL import Image
 import m11_advance_icons
 import m11_common_icons
 import m11_privilege_icons
+import m5_ancient_building_replacements
 import m5_regional_buildings
 import m5_roman_buildings
 
@@ -74,6 +75,10 @@ def assets() -> list[Asset]:
         key = item["key"]
         result.append(Asset("Named Roman building", key, None, building_master(key),
                             m5_roman_buildings.ICON_DIR / f"{key}.dds"))
+    for item in m5_ancient_building_replacements.load():
+        key = item["key"]
+        result.append(Asset("Ancient building replacement", key, None, building_master(key),
+                            m5_ancient_building_replacements.ICON_DIR / f"{key}.dds"))
     families, _seeds = m5_regional_buildings.load()
     for item in families:
         key = item["key"]
@@ -131,7 +136,10 @@ def validate(items: list[Asset]) -> None:
                 continue
             if not path.is_file():
                 failures.append(f"missing {label} for {item.surface} {item.key}: {relative(path)}")
-        if item.surface in {"Named Roman building", "Regional building family"} and item.master:
+        if item.surface in {
+            "Named Roman building", "Regional building family",
+            "Ancient building replacement",
+        } and item.master:
             try:
                 with Image.open(item.master) as image:
                     if image.size != (128, 128):

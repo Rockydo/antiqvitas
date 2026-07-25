@@ -1,5 +1,5 @@
 {
-  "active_custom_definition_count": 257,
+  "active_custom_definition_count": 265,
   "active_custom_definitions": [
     "antq_aedes_bellonae",
     "antq_aedes_concordiae_augustae",
@@ -21,6 +21,7 @@
     "antq_basilica_aemilia",
     "antq_basilica_iulia",
     "antq_bibliotheca_latina_graecaque",
+    "antq_buddhist_vihara",
     "antq_casa_romuli",
     "antq_castra_siscia",
     "antq_castra_vetera",
@@ -39,6 +40,7 @@
     "antq_curia_iulia",
     "antq_curiae_veteres",
     "antq_diribitorium",
+    "antq_earthwork_stockade",
     "antq_fornix_augusti",
     "antq_fornix_fabianus",
     "antq_forum_augusti",
@@ -48,7 +50,10 @@
     "antq_horologium_augusti",
     "antq_horrea_galbana",
     "antq_horrea_publica",
+    "antq_irrigation_network",
+    "antq_library_alexandria",
     "antq_macellum_romanum",
+    "antq_maritime_harbor",
     "antq_mausoleum_augusti",
     "antq_miliarium_aureum",
     "antq_monetarium_roma",
@@ -56,6 +61,7 @@
     "antq_navalia_romae",
     "antq_officinae_urbanae",
     "antq_pantheum_agrippae",
+    "antq_pharos_alexandria",
     "antq_pistrina_urbana",
     "antq_pons_aemilius",
     "antq_pons_fabricius",
@@ -249,7 +255,9 @@
     "antq_regia",
     "antq_rostra_augusti",
     "antq_saepta_iulia",
+    "antq_second_temple_jerusalem",
     "antq_tabularium",
+    "antq_taixue_changan",
     "antq_templum_apollinis_palatini",
     "antq_templum_martis_ultoris",
     "antq_theatrum_balbi",
@@ -259,24 +267,8 @@
     "antq_tiber_embankment",
     "antq_villa_liviae"
   ],
-  "engine_adapter_definition_count": 15,
-  "engine_adapter_definitions": [
-    "confucian_academy",
-    "entrepot",
-    "glass_guild",
-    "granary",
-    "irrigation_systems",
-    "lacquerware_guild",
-    "library",
-    "lighthouse_of_alexandria",
-    "market_warehouse",
-    "marketplace",
-    "mason",
-    "monastery",
-    "protected_harbor",
-    "stockade",
-    "temple"
-  ],
+  "engine_adapter_definition_count": 0,
+  "engine_adapter_definitions": [],
   "files": [
     {
       "definitions": [
@@ -344,7 +336,7 @@
         "fruit_orchard"
       ],
       "relative": "common_buildings.txt",
-      "rendered_sha256": "672d04d33b6fb814ea4aecfd823c23068e8387fd89d6683a91e2c322ef2eeb1a",
+      "rendered_sha256": "fc0c4247a3b50c5a812313a49e0a8e0e464ef9d250bdc903fad4f18e2574ac53",
       "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\common_buildings.txt",
       "source_sha256": "70f0112ad50e6363f2f59fe84a933d00821f74d686263cc4a9bf3553972ab536",
       "target": "in_game/common/building_types/common_buildings.txt"
@@ -374,7 +366,7 @@
         "arts_academy"
       ],
       "relative": "culture_buildings.txt",
-      "rendered_sha256": "99b313b1e2a3998e9d8cea4f94b7ab769be4815cd4cf950153b6c280426c9980",
+      "rendered_sha256": "2b267123a9a7eee74f5d1cab96a761609bd36b9015aed28f7234d7561307e284",
       "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\culture_buildings.txt",
       "source_sha256": "42f05a1c121141ae96a6cdb1c2fcbb72e4d7e461136201e3c979ed74df7b60c6",
       "target": "in_game/common/building_types/culture_buildings.txt"
@@ -525,7 +517,7 @@
         "sie_sienese_port"
       ],
       "relative": "event_only_buildings.txt",
-      "rendered_sha256": "2d494d8c28ca4b98b3483d853db27a80730858440f7bb73445d26655d7064bef",
+      "rendered_sha256": "837ae57235b0393fdf7c8126df28c2db3ec1180dcf70ad7e60b8ee86fa5f105e",
       "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\event_only_buildings.txt",
       "source_sha256": "9f5f8c55f3dda0d3e8d0240670fd3e32859ebc6c168b5a98d88685cf7f185867",
       "target": "in_game/common/building_types/event_only_buildings.txt"
@@ -557,7 +549,7 @@
         "city_walls"
       ],
       "relative": "forts.txt",
-      "rendered_sha256": "d0561336c5d1185c69d8cb3cd961b0b01604069973d8448aed076d6a41327de7",
+      "rendered_sha256": "c87651fccf275ea693bc54bbd17e0555597b641e9850b0ecf4651b3de69f4847",
       "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\forts.txt",
       "source_sha256": "bf60eecea325141561fb30763321f33efc0e7cee3ae0e1e6b2eb2849083a56d4",
       "target": "in_game/common/building_types/forts.txt"
@@ -603,7 +595,7 @@
         "funduq"
       ],
       "relative": "market_buildings.txt",
-      "rendered_sha256": "244b9576e117f87ab0f3472d464d322a767e4d039cc432258e9b6dd73c84b129",
+      "rendered_sha256": "e25d8d84b28cff96b0e918bc31f4dc033698f2c4f73a7575bb590b6f093d5312",
       "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\market_buildings.txt",
       "source_sha256": "a36ee8a99a89140065a36a7f244cdf169d0f04d683e41f4ccd83f6bcea0c8dc2",
       "target": "in_game/common/building_types/market_buildings.txt"
@@ -643,7 +635,7 @@
         "protected_harbor"
       ],
       "relative": "port_buildings.txt",
-      "rendered_sha256": "e200180899fab3232bd569e63598c2f4944939f2c4a3277fee1a02f2ab93a932",
+      "rendered_sha256": "dbcfd50ec204769c942296b370a5a617367a008189fd54edb23d061dbd82d5fc",
       "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\port_buildings.txt",
       "source_sha256": "9dfa8e370916179ec9ee506938b6049a5ca1522ff7b3d9954b5840ca4ee7563c",
       "target": "in_game/common/building_types/port_buildings.txt"
@@ -761,7 +753,7 @@
         "glass_mill"
       ],
       "relative": "production_glass.txt",
-      "rendered_sha256": "9a734df3fb310dce26be86e26ddb5e5228e3ffaac1b10b428d923ef7b385817b",
+      "rendered_sha256": "6f1c27a66d68794475e74f227f004e020f569222c2185667af1f4872aafd5ba9",
       "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_glass.txt",
       "source_sha256": "fe43347ba4a50a0fad3c63bd7840880e3eab1c03ffa1f976ce02b030c5b0b72f",
       "target": "in_game/common/building_types/production_glass.txt"
@@ -772,7 +764,7 @@
         "lacquerware_manufactory"
       ],
       "relative": "production_lacquerware.txt",
-      "rendered_sha256": "ea50045a749f349044ffd665f559bd82c588ecb90d53590ccffa5c60fb373ef4",
+      "rendered_sha256": "d5aeb8e1c98fab0a86a50ce13239e23880aef6aad34452262a116acaca2392e4",
       "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\production_lacquerware.txt",
       "source_sha256": "ce2f4a10613f7da5c057725bd56faa74916d35f1e63467500d283d945f6a11e6",
       "target": "in_game/common/building_types/production_lacquerware.txt"
@@ -934,7 +926,7 @@
         "miaphysite_monastery"
       ],
       "relative": "religion_buildings.txt",
-      "rendered_sha256": "a3fe33a463cb7f78e877e166159a180b50a4795ba7b7c5a2ae2508f7c211cacc",
+      "rendered_sha256": "9c7a057084fefb041fe8a11aab961c472a7efb37206c9d6407bb0a182e0da8d8",
       "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\religion_buildings.txt",
       "source_sha256": "6e5b4534b5a10d51e95669ec5e2a83d69778018eb83ecd653b08c9ef0537ab77",
       "target": "in_game/common/building_types/religion_buildings.txt"
@@ -994,7 +986,7 @@
         "provincial_chancery"
       ],
       "relative": "town_buildings.txt",
-      "rendered_sha256": "d3cd5856e828ec8307bb4720e42ee563570223bb693c6d12a2796eb25b6f1ea4",
+      "rendered_sha256": "eabce5104c0e01593a676e90fbc339faab38b8f7ab8549c49626aa563a7dd073",
       "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\town_buildings.txt",
       "source_sha256": "5dda1ef6774690d837dbc9204fec418673895397b3603a0267a98fcae8087681",
       "target": "in_game/common/building_types/town_buildings.txt"
@@ -1008,7 +1000,7 @@
         "port_authority"
       ],
       "relative": "trade_buildings.txt",
-      "rendered_sha256": "11101cfb5227f85a40d77ebb63006ad53803a1bd9075ee1d7356cc12e2d1df50",
+      "rendered_sha256": "ec7154e68b0e01cf4dafb1c49c4e1b931d3f75f343ba1170de17b4546047662b",
       "source": "<GAME_DIR>\\game\\in_game\\common\\building_types\\trade_buildings.txt",
       "source_sha256": "05ca22186f1d139c801344bf980a9dbc0ba29141426e1afec0a12b99fba0ee55",
       "target": "in_game/common/building_types/trade_buildings.txt"
@@ -1151,5 +1143,5 @@
   "game_version": "1.3.11",
   "installed_definition_count": 465,
   "installed_file_count": 45,
-  "quarantined_definition_count": 450
+  "quarantined_definition_count": 465
 }

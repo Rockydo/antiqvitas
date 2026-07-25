@@ -77,38 +77,33 @@ locations = {
 
 # M5 specialist/regional-production buildings plus M7 castra/limes proxies; source rationale: docs/m5/ and docs/m7/.
 building_manager = {
-	protected_harbor = { tag = AKS level = 1 location = massawa } # adulis_harbor; P12.2;P8.5;PER
-	glass_guild = { tag = XAA level = 1 location = alexandria } # alexandria_glass; P12.1;P12.3
-	protected_harbor = { tag = XAA level = 1 location = alexandria } # alexandria_harbor; P12.2;CAM-ALEX
-	library = { tag = XAA level = 1 location = alexandria } # alexandria_library; P12.3;P8.1
-	lighthouse_of_alexandria = { tag = XAA level = 1 location = alexandria } # alexandria_pharos; P12.3;P8.1
-	irrigation_systems = { tag = XBD level = 1 location = anuradhapura } # anuradhapura_irrigation; P12.3;UNESCO-ANU
-	monastery = { tag = XBD level = 1 location = anuradhapura } # anuradhapura_mahavihara; P11;P12.3;UNESCO-ANU-MON
+	antq_maritime_harbor = { tag = AKS level = 1 location = massawa } # adulis_harbor; P12.2;P8.5;PER
+	antq_maritime_harbor = { tag = XAA level = 1 location = alexandria } # alexandria_harbor; P12.2;CAM-ALEX
+	antq_library_alexandria = { tag = XAA level = 1 location = alexandria } # alexandria_library; P12.3;P8.1
+	antq_pharos_alexandria = { tag = XAA level = 1 location = alexandria } # alexandria_pharos; P12.3;P8.1
+	antq_irrigation_network = { tag = XBD level = 1 location = anuradhapura } # anuradhapura_irrigation; P12.3;UNESCO-ANU
+	antq_buddhist_vihara = { tag = XBD level = 1 location = anuradhapura } # anuradhapura_mahavihara; P11;P12.3;UNESCO-ANU-MON
 	antq_castrum_augusta_vindelicum = { tag = XDZ level = 1 location = augsburg } # augsburg_castrum_augusta_vindelicum; AUG-ROMERLAGER
-	protected_harbor = { tag = RJS level = 1 location = khambat } # barygaza_harbor; P12.2;P8.4;PER
+	antq_maritime_harbor = { tag = RJS level = 1 location = khambat } # barygaza_harbor; P12.2;P8.4;PER
 	antq_castrum_augusta_raurica = { tag = XAA level = 1 location = basel } # basel_castrum_augusta_raurica; AR-COLONIA
 	antq_castrum_bonna = { tag = XDW level = 1 location = bonn } # bonn_early_bonna_camp; LIV-BONNA;LVR-NGL
-	protected_harbor = { tag = XAA level = 1 location = tunis } # carthago_harbor; P12.2;P8.1;UNESCO-CAR-HAR
-	stockade = { tag = XAA level = 1 location = aquileia } # castra_aquileia; P14;CAH-XI
-	stockade = { tag = XAA level = 1 location = sisak } # castra_siscia; P14;CAH-XI
-	lacquerware_guild = { tag = XAR level = 1 location = jingzhao } # changan_lacquerware; P12.1;P8.3;BHR
-	confucian_academy = { tag = XAR level = 1 location = jingzhao } # changan_taixue; P12.3;CHI-TAIXUE
-	irrigation_systems = { tag = XAR level = 1 location = chengdu } # chengdu_irrigation; P12.3;UNESCO-DJJ
-	lacquerware_guild = { tag = XAR level = 1 location = chengdu } # chengdu_lacquerware; P12.1;P8.3;BHR
-	glass_guild = { tag = XDW level = 1 location = cologne } # cologne_glass; P12.1;P8.7
-	protected_harbor = { tag = XAA level = 1 location = ayasuluk } # ephesus_harbor; P12.2;P8.1;UNESCO-EPH
-	irrigation_systems = { tag = XAA level = 1 location = faiyum } # faiyum_irrigation; P12.3;UNESCO-FAY
-	protected_harbor = { tag = XAA level = 1 location = cadiz } # gades_harbor; P12.2;P8.1
-	stockade = { tag = XAR level = 1 location = jiayu } # han_jiayu_beacon; P14;BHR
-	stockade = { tag = XAR level = 1 location = wuwei } # han_wuwei_beacon; P14;BHR
-	lacquerware_guild = { tag = XAR level = 1 location = luoyang } # luoyang_lacquerware; P12.1;P8.3;BHR
+	antq_maritime_harbor = { tag = XAA level = 1 location = tunis } # carthago_harbor; P12.2;P8.1;UNESCO-CAR-HAR
+	antq_earthwork_stockade = { tag = XAA level = 1 location = aquileia } # castra_aquileia; P14;CAH-XI
+	antq_earthwork_stockade = { tag = XAA level = 1 location = sisak } # castra_siscia; P14;CAH-XI
+	antq_taixue_changan = { tag = XAR level = 1 location = jingzhao } # changan_taixue; P12.3;CHI-TAIXUE
+	antq_irrigation_network = { tag = XAR level = 1 location = chengdu } # chengdu_irrigation; P12.3;UNESCO-DJJ
+	antq_maritime_harbor = { tag = XAA level = 1 location = ayasuluk } # ephesus_harbor; P12.2;P8.1;UNESCO-EPH
+	antq_irrigation_network = { tag = XAA level = 1 location = faiyum } # faiyum_irrigation; P12.3;UNESCO-FAY
+	antq_maritime_harbor = { tag = XAA level = 1 location = cadiz } # gades_harbor; P12.2;P8.1
+	antq_earthwork_stockade = { tag = XAR level = 1 location = jiayu } # han_jiayu_beacon; P14;BHR
+	antq_earthwork_stockade = { tag = XAR level = 1 location = wuwei } # han_wuwei_beacon; P14;BHR
 	antq_castrum_mogontiacum = { tag = XBL level = 1 location = mainz } # mainz_castrum; MZ-MOG;MZ-DRUSUS
-	protected_harbor = { tag = XAA level = 1 location = marseille } # massilia_harbor; P12.2;P8.1
-	market_warehouse = { tag = BED level = 1 location = al_mukha } # muza_warehouse; P12.2;P8.6;CAS-PER
-	protected_harbor = { tag = XBB level = 1 location = kodungallur } # muziris_harbor; P12.2;P8.4;PER
+	antq_maritime_harbor = { tag = XAA level = 1 location = marseille } # massilia_harbor; P12.2;P8.1
+	antq_reg_amphora_warehouse = { tag = BED level = 1 location = al_mukha } # muza_warehouse; P12.2;P8.6;CAS-PER
+	antq_maritime_harbor = { tag = XBB level = 1 location = kodungallur } # muziris_harbor; P12.2;P8.4;PER
 	antq_castrum_novaesium = { tag = XDW level = 1 location = neuss } # neuss_castrum; NEU-NOVAESIUM
 	antq_castrum_hunnerberg = { tag = BTV level = 1 location = nijmegen } # nijmegen_castrum_hunnerberg; RU-HUNNERBERG
-	protected_harbor = { tag = XAR level = 1 location = panyu } # panyu_harbor; P12.2;P8.3;BHR
+	antq_maritime_harbor = { tag = XAR level = 1 location = panyu } # panyu_harbor; P12.2;P8.3;BHR
 	antq_classis_ravennatis = { tag = XAA level = 1 location = ravenna } # ravenna_classis; MIC-CLASSE;RA-CLASSE
 	antq_castrum_aliso = { tag = SGM level = 1 location = recklinghausen } # recklinghausen_aliso; LWL-ALISO
 	antq_reg_ivory_carver = { tag = AKS level = 1 location = massawa } # reg_adulis_ivory; P12.1;P8.5;PER
@@ -2493,8 +2488,7 @@ building_manager = {
 	antq_theatrum_pompei = { tag = XAA level = 1 location = rome } # roma_theatrum_pompei; DAR-THEATRUM-POMPEI
 	antq_thermae_agrippae = { tag = XAA level = 1 location = rome } # roma_thermae_agrippae; TR-BATHS-AGRIPPA;SOV-AQUA-VIRGO
 	antq_tiber_embankment = { tag = XAA level = 1 location = rome } # roma_tiber_embankment; DAR-TIBER-EMBANKMENT
-	temple = { tag = JUD level = 1 location = jerusalem } # second_temple; P11;OCD-JER
-	glass_guild = { tag = XAH level = 1 location = sidon } # sidon_glass; P12.1;P8.2;CAH-XI
+	antq_second_temple_jerusalem = { tag = JUD level = 1 location = jerusalem } # second_temple; P11;OCD-JER
 	antq_castra_siscia = { tag = XAA level = 1 location = sisak } # sisak_castra_siscia; OCD-SISCIA
 	antq_castrum_argentoratum = { tag = XDK level = 1 location = strasbourg } # strasbourg_castrum_argentoratum; UNISTRA-ARGENTORATUM
 	antq_castra_vetera = { tag = SGM level = 1 location = wesel } # wesel_castra_vetera; LVR-VETERA

@@ -1,4 +1,9 @@
 ﻿marketplace = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
 	audio_tier = 1
 	is_foreign = no
 	max_levels = marketplace_max_level

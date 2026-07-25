@@ -51,6 +51,11 @@
 }
 
 library = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
 	audio_tier = 2
 	is_foreign = no
 	pop_type = burghers
@@ -140,6 +145,11 @@ confucian_school = {
 #Seowon https://en.wikipedia.org/wiki/Seowon
 #Shuyuan https://en.wikipedia.org/wiki/Academies_of_Classical_Learning
 confucian_academy = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
 	audio_tier = 2
 	is_special = yes
 	is_foreign = no
@@ -159,9 +169,6 @@ confucian_academy = {
 
 	build_time = cultural_building_time
 
-	allow = {
-		is_core_of = owner
-	}
 
 	modifier = {
 		local_burghers_max_literacy = 10

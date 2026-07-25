@@ -1,4 +1,9 @@
 ﻿entrepot = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
 	audio_tier = 2
 	is_foreign = no
 	pop_type = burghers
@@ -15,9 +20,6 @@
 	expensive = yes
 	build_time = market_build_time
 
-	location_potential = {
-		is_market_center = yes
-	}
 
 	remove_if = {
 		location = { is_market_center = no }
@@ -210,6 +212,11 @@ clearing_house = {
 }
 
 market_warehouse = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
 	audio_tier = 2
 	is_foreign = no
 	pop_type = burghers
@@ -226,9 +233,6 @@ market_warehouse = {
 	expensive = yes
 	build_time = market_build_time
 
-	location_potential = {
-		is_market_center = yes
-	}
 
 	remove_if = {
 		location = { is_market_center = no }

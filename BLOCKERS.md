@@ -1169,3 +1169,18 @@ the existing generated `on_game_start` hook, binds Wang Mang without adding a
 pre-AD-1 term. Fresh AD 1 selector and player-start captures show Wang Mang;
 validation and baseline-aware smoke are green. Evidence:
 `docs/screens/M6_han_runtime_regent/tagged_han.png` and `han_live.png`.
+
+## 2026-07-25 - Established-market export exceeds the debug renderer window
+
+Status: **narrow runtime-evidence gap after two fresh-session attempts; economy
+work continues.** A fresh Rome Observer session reached 2 April AD 1, and a
+second verified the console accelerator (`tick_day 360` advances 30 days), but
+the debug renderer exited after roughly three to four minutes in both runs,
+before the deferred markets were established in May. Neither run produced a
+building- or market-scope error; unrelated installed HRE/formable-country
+diagnostics appeared in the first run.
+
+Do not repeat the same short-lived debug-session path. Resume this acceptance
+capture only with a non-debug export route or a durable current autosave/recovery
+path. The active-building freeze, static economy assertions, validation, smoke,
+and focused construction probes remain unblocked.

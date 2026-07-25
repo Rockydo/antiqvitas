@@ -24,15 +24,9 @@ roma_forum,rome,antq_forum_romanum,1,PARC-FORUM;P12.3,secure,Named Forum Romanum
 roma_officinae,rome,antq_officinae_urbanae,1,P12.1;P12.3,contested,Named urban workshops represent a cautious aggregate craft-production layer
 roma_pistrina,rome,antq_pistrina_urbana,1,MET-ROMAN;P12.3,contested,Named urban mill-and-bakery layer models bread supply without a single-site claim
 roma_prima_porta_villa,rome,antq_villa_liviae,1,ITA-LIVIA;P12.3,contested,Named Villa Liviae remains a conservative Rome-region productive-estate proxy
-alexandria_library,alexandria,library,1,P12.3;P8.1,secure,The library slot represents the Alexandrian scholarly complex specified by the design bible
-alexandria_pharos,alexandria,lighthouse_of_alexandria,1,P12.3;P8.1,secure,The event-only special building is seeded through the verified start building manager for the standing Pharos
-alexandria_glass,alexandria,glass_guild,1,P12.1;P12.3,secure,The installed glass guild represents the plan's Alexandrian glassware industry
-sidon_glass,sidon,glass_guild,1,P12.1;P8.2;CAH-XI,contested,Sidon is the reviewed Levantine glassware and purple-dye proxy
-cologne_glass,cologne,glass_guild,1,P12.1;P8.7,contested,Cologne is the plan-listed northern glassware production anchor
-changan_lacquerware,jingzhao,lacquerware_guild,1,P12.1;P8.3;BHR,secure,Jingzhao is the reviewed Chang'an anchor for Han lacquerware export
-changan_taixue,jingzhao,confucian_academy,1,P12.3;CHI-TAIXUE,secure,The installed Confucian academy is the technical proxy for the Han imperial Taixue at the capital
-luoyang_lacquerware,luoyang,lacquerware_guild,1,P12.1;P8.3;BHR,secure,Luoyang is a source-labelled Han metropolitan lacquerware anchor
-chengdu_lacquerware,chengdu,lacquerware_guild,1,P12.1;P8.3;BHR,secure,Chengdu is the reviewed Sichuan Han-production anchor
+alexandria_library,alexandria,antq_library_alexandria,1,P12.3;P8.1,secure,The direct namespaced building represents the Alexandrian scholarly complex specified by the design bible
+alexandria_pharos,alexandria,antq_pharos_alexandria,1,P12.3;P8.1,secure,The direct namespaced special is seeded through the verified start building manager for the standing Pharos
+changan_taixue,jingzhao,antq_taixue_changan,1,P12.3;CHI-TAIXUE,secure,The direct namespaced building represents the Western Han imperial Taixue at the capital
 roma_circus,rome,antq_circus_maximus,1,DAR-CIRCUS,secure,Named Circus Maximus replaces the generic hippodrome proxy
 roma_forum_augusti,rome,antq_forum_augusti,1,DAR-FORUM-AUG,secure,Forum and Temple of Mars Ultor dedicated in 2 BC
 roma_basilica_aemilia,rome,antq_basilica_aemilia,1,PARCO-AEMILIA,secure,Augustan rebuilt civic basilica in the Forum
@@ -60,21 +54,21 @@ roma_amphitheatrum_statilii_tauri,rome,antq_amphitheatrum_statilii_tauri,1,DAR-A
 roma_porticus_liviae,rome,antq_porticus_liviae,1,DAR-PORTICUS-LIVIAE,contested,7 BC public Oppian quadriporticus; sponsor central feature and detailed layout remain unresolved
 augsburg_castrum_augusta_vindelicum,augsburg,antq_castrum_augusta_vindelicum,1,AUG-ROMERLAGER,secure,Turn-of-era Augsburg-Oberhausen military depot and camp; low timber-and-earth fort proxy with no order of battle or later stone-fort claim
 strasbourg_castrum_argentoratum,strasbourg,antq_castrum_argentoratum,1,UNISTRA-ARGENTORATUM,secure,Named 12 BC Argentoratum camp; low timber-and-earth fort proxy with no order of battle later stone fort or limes-line claim
-alexandria_harbor,alexandria,protected_harbor,1,P12.2;CAM-ALEX,secure,The protected-harbor slot represents Alexandria as the Roman maritime emporium
-carthago_harbor,tunis,protected_harbor,1,P12.2;P8.1;UNESCO-CAR-HAR,contested,The protected-harbor slot is a Tunis-location proxy for Roman Carthage's inherited antique port complex and Mediterranean exchange role
-chengdu_irrigation,chengdu,irrigation_systems,1,P12.3;UNESCO-DJJ,secure,The irrigation slot represents the pre-AD 1 Dujiangyan system serving the Chengdu plain
-anuradhapura_irrigation,anuradhapura,irrigation_systems,1,P12.3;UNESCO-ANU,secure,The irrigation slot represents the pre-AD 1 Abhayawewa reservoir complex
-anuradhapura_mahavihara,anuradhapura,monastery,1,P11;P12.3;UNESCO-ANU-MON,secure,The generic monastery is a technical proxy for Anuradhapura's pre-AD 1 Buddhist monastic complexes
-gades_harbor,cadiz,protected_harbor,1,P12.2;P8.1,secure,The protected-harbor slot represents the established Atlantic-Mediterranean emporium of Gades
-massilia_harbor,marseille,protected_harbor,1,P12.2;P8.1,secure,The protected-harbor slot represents Massilia's established western-Mediterranean port infrastructure
-ephesus_harbor,ayasuluk,protected_harbor,1,P12.2;P8.1;UNESCO-EPH,contested,The protected-harbor slot is an Ayasuluk near-site proxy for Roman Ephesus as a major provincial port
-faiyum_irrigation,faiyum,irrigation_systems,1,P12.3;UNESCO-FAY,secure,The generic irrigation slot represents the continuing Roman-period reclamation and canal-fed cultivation of the Faiyum
-panyu_harbor,panyu,protected_harbor,1,P12.2;P8.3;BHR,secure,The protected-harbor slot represents Panyu as the southern Han maritime market anchor
-barygaza_harbor,khambat,protected_harbor,1,P12.2;P8.4;PER,contested,Khambat is the reviewed Barygaza proxy for a western Indian monsoon-port harbor tier
-muziris_harbor,kodungallur,protected_harbor,1,P12.2;P8.4;PER,contested,Kodungallur is the reviewed Muziris proxy for a Malabar monsoon-port harbor tier
-adulis_harbor,massawa,protected_harbor,1,P12.2;P8.5;PER,contested,Massawa is the reviewed Adulis proxy for a Red Sea port harbor tier
-muza_warehouse,al_mukha,market_warehouse,1,P12.2;P8.6;CAS-PER,contested,The market warehouse is an engine proxy for Muza's active commercial roadstead; the primary source explicitly says it lacked a harbor
-second_temple,jerusalem,temple,1,P11;OCD-JER,secure,The installed temple is the technical building proxy for the Second Temple at Jerusalem before the AD 70 destruction current
+alexandria_harbor,alexandria,antq_maritime_harbor,1,P12.2;CAM-ALEX,secure,The namespaced ancient harbor represents Alexandria as the Roman maritime emporium
+carthago_harbor,tunis,antq_maritime_harbor,1,P12.2;P8.1;UNESCO-CAR-HAR,contested,The namespaced ancient harbor is a Tunis-location proxy for Roman Carthage's inherited antique port complex and Mediterranean exchange role
+chengdu_irrigation,chengdu,antq_irrigation_network,1,P12.3;UNESCO-DJJ,secure,The namespaced hydraulic family represents the pre-AD 1 Dujiangyan system serving the Chengdu plain
+anuradhapura_irrigation,anuradhapura,antq_irrigation_network,1,P12.3;UNESCO-ANU,secure,The namespaced hydraulic family represents the pre-AD 1 Abhayawewa reservoir complex
+anuradhapura_mahavihara,anuradhapura,antq_buddhist_vihara,1,P11;P12.3;UNESCO-ANU-MON,secure,The namespaced vihara represents Anuradhapura's pre-AD 1 Buddhist monastic complexes
+gades_harbor,cadiz,antq_maritime_harbor,1,P12.2;P8.1,secure,The namespaced ancient harbor represents the established Atlantic-Mediterranean emporium of Gades
+massilia_harbor,marseille,antq_maritime_harbor,1,P12.2;P8.1,secure,The namespaced ancient harbor represents Massilia's established western-Mediterranean port infrastructure
+ephesus_harbor,ayasuluk,antq_maritime_harbor,1,P12.2;P8.1;UNESCO-EPH,contested,The namespaced ancient harbor is an Ayasuluk near-site proxy for Roman Ephesus as a major provincial port
+faiyum_irrigation,faiyum,antq_irrigation_network,1,P12.3;UNESCO-FAY,secure,The namespaced hydraulic family represents the continuing Roman-period reclamation and canal-fed cultivation of the Faiyum
+panyu_harbor,panyu,antq_maritime_harbor,1,P12.2;P8.3;BHR,secure,The namespaced ancient harbor represents Panyu as the southern Han maritime market anchor
+barygaza_harbor,khambat,antq_maritime_harbor,1,P12.2;P8.4;PER,contested,Khambat is the reviewed Barygaza proxy for a western Indian monsoon-port harbor tier
+muziris_harbor,kodungallur,antq_maritime_harbor,1,P12.2;P8.4;PER,contested,Kodungallur is the reviewed Muziris proxy for a Malabar monsoon-port harbor tier
+adulis_harbor,massawa,antq_maritime_harbor,1,P12.2;P8.5;PER,contested,Massawa is the reviewed Adulis proxy for a Red Sea port harbor tier
+muza_warehouse,al_mukha,antq_reg_amphora_warehouse,1,P12.2;P8.6;CAS-PER,contested,The ancient amphora warehouse is an engine proxy for Muza's active commercial roadstead; the primary source explicitly says it lacked a harbor
+second_temple,jerusalem,antq_second_temple_jerusalem,1,P11;OCD-JER,secure,The direct namespaced sanctuary represents the Second Temple at Jerusalem before the AD 70 destruction current
 recklinghausen_aliso,recklinghausen,antq_castrum_aliso,1,LWL-ALISO,secure,The direct Recklinghausen point is a bounded proxy for the fortified Augustan Haltern main camp active around AD 1
 bonn_early_bonna_camp,bonn,antq_castrum_bonna,1,LIV-BONNA;LVR-NGL,secure,The direct Bonn point represents an early Augustan auxiliary camp only and does not backdate the later permanent legionary fortress
 roma_pons_fabricius,rome,antq_pons_fabricius,1,DAR-PONS-FABRICIUS,secure,62 BC stone island bridge and 21 BC partial restoration; bounded crossing proxy only

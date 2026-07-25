@@ -284,8 +284,8 @@ def impact_lines(record: Current) -> tuple[str, ...]:
         return (
             "\t\tlocation:jerusalem = {",
             "\t\t\tif = {",
-            "\t\t\t\tlimit = { has_building_with_at_least_one_level = temple }",
-            '\t\t\t\tdestroy_building = "building(building_type:temple|owner)"',
+            "\t\t\t\tlimit = { has_building_with_at_least_one_level = antq_second_temple_jerusalem }",
+            '\t\t\t\tdestroy_building = "building(building_type:antq_second_temple_jerusalem|owner)"',
             "\t\t\t}",
             "\t\t}",
             "\t\tadd_stability = stability_mild_penalty",

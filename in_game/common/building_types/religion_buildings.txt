@@ -1,4 +1,9 @@
 ﻿monastery = {
+	# ANTIQVITAS installed-building quarantine: definition retained only for engine/script references.
+	country_potential = {
+		always = no
+	}
+	allow = { always = no }
 	audio_tier = 1
 	is_foreign = no
 	max_levels = 1
@@ -17,9 +22,6 @@
 	graphical_tags = { medium_religious }
 
 
-	country_potential = {
-		modifier:can_have_monasteries = yes
-	}
 
 	possible_production_methods = {
 		monastery_maintenance

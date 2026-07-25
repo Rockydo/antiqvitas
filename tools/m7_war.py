@@ -253,18 +253,24 @@ def validate_start_ledgers(units: tuple[Unit, ...]) -> None:
             if row["location"]
         }
     buildings = set(json.loads((ROOT / "docs/vanilla_symbols/building.json").read_text(encoding="utf-8-sig")))
+    with (ROOT / "docs/m5/ancient_building_replacements.csv").open(
+        encoding="utf-8-sig", newline=""
+    ) as handle:
+        buildings.update(
+            (row.get("key") or "").strip() for row in csv.DictReader(handle)
+        )
     seen_forts: set[tuple[str, str]] = set()
     for row in forts:
         key = row["key"]
         try:
             if any(not row[field] for field in FORT_FIELDS):
                 raise ValueError("blank required field")
-            if not TOKEN.fullmatch(key) or row["building"] != "stockade":
-                raise ValueError("M7 forts must use a namespaced key and the verified stockade proxy")
+            if not TOKEN.fullmatch(key) or row["building"] != "antq_earthwork_stockade":
+                raise ValueError("M7 forts must use a namespaced key and namespaced ancient stockade")
             if row["location"] not in installed_locations or row["location"] not in owners:
                 raise ValueError("fort location is not controlled in the AD 1 start")
             if row["building"] not in buildings or int(row["level"]) != 1:
-                raise ValueError("fort must use installed level-one stockade")
+                raise ValueError("fort must use the level-one namespaced ancient stockade")
             if (row["location"], row["building"]) in seen_forts:
                 raise ValueError("duplicate fort building location")
             if row["confidence"] not in {"secure", "contested"}:

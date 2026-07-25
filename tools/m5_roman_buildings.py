@@ -133,11 +133,19 @@ def load() -> list[dict[str, str]]:
     special_rows: list[dict[str, str]]
     with SPECIALS.open(encoding="utf-8-sig", newline="") as handle:
         special_rows = list(csv.DictReader(handle))
-    special = {row["building"].strip(): row for row in special_rows if row["building"].strip().startswith("antq_")}
+    # Other namespaced ancient buildings have their own replacement ledger;
+    # this validator owns only keys declared by the Roman named ledger.
+    special = {
+        row["building"].strip(): row
+        for row in special_rows
+        if row["building"].strip() in seen
+    }
     missing = seen - set(special)
-    extra = set(special) - seen
-    if missing or extra:
-        raise ValueError(f"Roman custom building ledger/start ledger divergence: missing={sorted(missing)} extra={sorted(extra)}")
+    if missing:
+        raise ValueError(
+            f"Roman custom building ledger/start ledger divergence: "
+            f"missing={sorted(missing)}"
+        )
     for key, row in special.items():
         expected = next(item for item in items if item["key"] == key)
         prefix = START_KEY_PREFIX[expected["location"]] + "_"
