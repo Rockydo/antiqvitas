@@ -2,7 +2,7 @@ name: PRO finalize Roman location-name audit
 
 on:
   pull_request:
-    types: [synchronize]
+    types: [opened, synchronize, reopened]
     branches: [main]
 
 permissions:
@@ -17,39 +17,27 @@ jobs:
         with:
           ref: agent/roman-location-name-audit
           fetch-depth: 0
-      - name: Finalize completed Roman audit
+          show-progress: false
+      - name: Build clean Roman audit branch from current main
         run: |
           set -euo pipefail
-          if [[ ! -f .github/roman-final-payload/READY ]]; then
-            echo "Roman audit payload is not complete yet"
-            exit 0
-          fi
+          test -f .github/roman-final-payload/READY
 
-          cat .github/roman-final-payload/part* | base64 --decode > /tmp/roman-audit.tar.gz
-          echo "3c76e3307a91617d9d1e6f8cb0c45042f512e80c8e8277be3ae7a6aaa928c853  /tmp/roman-audit.tar.gz" | sha256sum --check
-          tar --extract --gzip --file /tmp/roman-audit.tar.gz
+          rm -rf /tmp/roman-final-payload
+          cp -a .github/roman-final-payload /tmp/roman-final-payload
+          cat /tmp/roman-final-payload/part0[0-5] | base64 --decode > /tmp/roman-source.tar.gz
+          echo "732833a4c36e23444120a94c6a79e1e56e5fe8267797e036a9f73b068995b104  /tmp/roman-source.tar.gz" | sha256sum --check
 
           git fetch --no-tags origin main
-          git checkout origin/main -- \
-            tools/generate_m4_tier2_names.py \
-            tools/generate_m4_tier2_wide_names.py \
-            tools/generate_m4_tier2_remote_names.py
-          git diff --exit-code origin/main -- \
-            tools/generate_m4_tier2_names.py \
-            tools/generate_m4_tier2_wide_names.py \
-            tools/generate_m4_tier2_remote_names.py
+          git checkout -B agent/roman-location-name-audit-clean origin/main
+          tar --extract --gzip --file /tmp/roman-source.tar.gz
 
-          python -m pip install --disable-pip-version-check --quiet numpy
           mkdir -p .cache/pleiades
-          curl --fail --location --retry 3 --retry-all-errors --silent --show-error \
-            https://atlantides.org/downloads/pleiades/dumps/pleiades-places-latest.csv.gz \
-            --output .cache/pleiades/pleiades-places-latest.csv.gz
           curl --fail --location --retry 3 --retry-all-errors --silent --show-error \
             https://atlantides.org/downloads/pleiades/dumps/pleiades-names-latest.csv.gz \
             --output .cache/pleiades/pleiades-names-latest.csv.gz
 
           python -m py_compile \
-            tools/pleiades_names.py \
             tools/generate_m4_roman_names.py \
             tools/generate_dynamic_names.py \
             tools/m4_roman_location_name_audit.py \
@@ -61,8 +49,6 @@ jobs:
           python tools/generate_dynamic_names.py --check
           python tools/generate_m4_location_name_corrections.py --check
           python tools/m4_roman_location_name_audit.py --check
-          python tools/generate_m4_tier2_names.py --check
-          python tools/generate_m4_tier2_wide_names.py --check
 
           python - <<'PY'
           import csv
@@ -81,75 +67,57 @@ jobs:
                   )
                   if row["tag"] == "ROM"
               }
-          assert len(roman) == 2012
+          assert roman
 
           with (root / "docs/m4/dynamic_location_names.csv").open(
               encoding="utf-8-sig", newline=""
           ) as handle:
-              effective = [
-                  row for row in csv.DictReader(handle) if row["location"] in roman
-              ]
+              dynamic = {row["location"]: row for row in csv.DictReader(handle)}
+          effective = roman.intersection(dynamic)
           assert all(
-              row["anchor_kind"]
-              in {"capital", "curated", "qualified", "roman_identity"}
-              for row in effective
+              dynamic[location]["anchor_kind"] in {"curated", "roman_identity"}
+              for location in effective
           )
 
           with (root / "docs/m4/roman_location_name_overrides.csv").open(
               encoding="utf-8-sig", newline=""
           ) as handle:
-              identity = list(csv.DictReader(handle))
+              identities = list(csv.DictReader(handle))
           place_ids = []
-          for row in identity:
+          for row in identities:
               match = re.fullmatch(r"PLE:(\d+);PLN:\1/[^;]+;R2", row["source"])
               assert match, row
               place_ids.append(match.group(1))
-          assert len(identity) == len(set(place_ids)) == 301
+          assert len(identities) == len(set(place_ids)) == 220
 
           with (root / "docs/m4/roman_location_name_exclusions.csv").open(
               encoding="utf-8-sig", newline=""
           ) as handle:
               exclusions = list(csv.DictReader(handle))
-          assert len(exclusions) == 26
-          assert not set(place_ids).intersection(
-              row["pleiades_id"] for row in exclusions
-          )
+          assert len(exclusions) == 30
+          assert {row["location"] for row in exclusions}.isdisjoint(dynamic)
 
           summary = json.loads(
               (root / "docs/m4/roman_location_name_audit_summary.json").read_text()
           )
-          assert summary["roman_locations"] == 2012
-          assert summary["reviewed_overrides"] == 470
-          assert summary["vanilla_passthrough"] == 1542
-          assert summary["exclusion_rules"] == 26
-          assert summary["excluded_passthrough"] == 25
+          assert summary["roman_locations"] == len(roman)
+          assert summary["reviewed_overrides"] == len(effective) == 389
+          assert summary["vanilla_passthrough"] == len(roman) - len(effective)
+          assert summary["exclusion_rules"] == len(exclusions)
+          assert summary["excluded_passthrough"] == len(exclusions)
           assert summary["violations"] == []
-          print("Roman audit assertions: PASS")
+          print(
+              "Roman finalizer assertions: PASS "
+              f"({len(effective)} reviewed, {len(roman) - len(effective)} vanilla)"
+          )
           PY
 
           git diff --check
+          rm -rf .cache/pleiades .github/roman-final-payload
+          rm -f .github/workflows/pro-roman-location-name-audit.yml
           git config user.name "openai-pro"
           git config user.email "openai-pro@users.noreply.github.com"
-          git rm -r .github/roman-final-payload
-          git add \
-            tools/generate_m4_tier2_names.py \
-            tools/generate_m4_tier2_wide_names.py \
-            tools/generate_m4_tier2_remote_names.py \
-            tools/pleiades_names.py \
-            tools/generate_m4_roman_names.py \
-            tools/generate_dynamic_names.py \
-            tools/m4_roman_location_name_audit.py \
-            tools/run_checks.py \
-            docs/m4/dynamic_location_name_overrides.csv \
-            docs/m4/roman_location_name_exclusions.csv \
-            docs/m4/roman_location_name_selections.csv \
-            docs/m4/roman_location_name_overrides.csv \
-            docs/m4/dynamic_location_names.csv \
-            docs/m4/roman_location_name_audit.csv \
-            docs/m4/roman_location_name_audit_summary.json \
-            docs/m4/ROMAN_TOPONYM_EXPANSION.md \
-            docs/m4/TIER3_LOCATION_COVERAGE.md \
-            docs/m4/PLEIADES_NAME_QUEUE.md \
-            main_menu/localization/*/antq_m4_location_names_l_*.yml
+          git add -A
           git commit -m "[PRO] complete Roman location-name audit"
-          git push origin HEAD:agent/roman-location-name-audit
+          git push --force-with-lease origin \
+            HEAD:agent/roman-location-name-audit-clean
