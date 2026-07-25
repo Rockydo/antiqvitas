@@ -1,14 +1,27 @@
 # M8 Knowledge Design
 
-`tools/m8_knowledge.py` is the sole renderer for this milestone. It creates
-five research strands (statecraft, warfare, exchange, learning, and society)
-within each of the five campaign ages: exactly 50 advances per age and 250 in
-total. EU5 permits advance requirements only within their own age, so each age
-has five complete ten-step strands and the age transition is the historical
-gate between thematic continuations. Every non-root node requires its immediate
-predecessor; the renderer checks that there are 25 terminal nodes, no dangling
-or cross-age requirements, and no post-antique military or colonial unlock
-token.
+`tools/m8_knowledge.py` renders 250 advances across the engine's six age slots:
+five statecraft, warfare, exchange, learning, and society DAGs per age. The
+first four ages contain ten-node trees with two shared roots, two regional
+branches, one convergence route, and alternative terminal choices; the final
+two contain five-node forked trees. Requirements remain inside one age because
+that is the installed engine contract. Validation proves 50 roots, 50 branch
+points, 20 convergence nodes, 80 terminal choices, acyclicity, direct art,
+complete descriptions/effects, and no post-antique token.
+
+Eleven regional paths cover Roman/Italic, Hellenic, Celtic, Germanic,
+Iranian/steppe, Indic, Han/East Asian, Near Eastern, African, American, and
+Oceanian practice. Culture groups grant the native path; historically plausible
+institutions provide explicit adoption routes. Regional names are visible in
+the tree while the reviewed 250-icon corpus and stable script keys remain
+unchanged.
+
+The DAG directly packages all 154 regional workshops, 44 ancient units, 19
+government reforms, 24 privileges, ten casus belli, five subject types, and the
+required start laws/policies. Workshop tiers represent capacity to reproduce a
+practice at scale, not invented dates. `tools/advance_event_packages.py` adds
+age/track preparedness bonuses to all 84 M10 historical currents without
+gating their occurrence. Institutions also act as cross-cultural prerequisites.
 
 The installed age contract exposes one `victory_card` per age, so those five
 cards are the engine-visible objectives. The locally verified `unique` block

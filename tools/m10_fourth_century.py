@@ -20,6 +20,7 @@ import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 
+from advance_event_packages import knowledge_response_lines
 from dates import AntqDate, M2_MIRROR_LANGUAGES, indexed_timeline, load_timeline
 from m10_history import engine_tags, start_country_locations
 
@@ -405,6 +406,10 @@ def event_script(records: tuple[Current, ...], eastern_locations: tuple[tuple[st
             f"\t\tname = {record.event_key}.a",
             "\t\thistorical_option = yes",
             *impact_lines(record, eastern_locations),
+            *knowledge_response_lines(
+                record.kind,
+                5 if start.year >= 395 else 4 if start.year >= 376 else 3,
+            ),
             "\t}",
             "}",
             "",

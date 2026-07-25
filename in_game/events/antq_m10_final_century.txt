@@ -13,6 +13,11 @@ antq_m10_final.5000 = {
 		name = antq_m10_final.5000.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_regional_militias }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -28,6 +33,11 @@ antq_m10_final.5001 = {
 		name = antq_m10_final.5001.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_regional_militias }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -49,6 +59,11 @@ antq_m10_final.5002 = {
 		name = antq_m10_final.5002.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_migration_networks }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -101,6 +116,11 @@ antq_m10_final.5003 = {
 			add_core = c:VSG
 		}
 		add_stability = stability_mild_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_migration_networks }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -145,6 +165,11 @@ antq_m10_final.5004 = {
 			add_core = c:VND
 		}
 		add_stability = stability_mild_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_regional_militias }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -160,6 +185,11 @@ antq_m10_final.5005 = {
 		name = antq_m10_final.5005.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_regional_militias }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -175,6 +205,11 @@ antq_m10_final.5006 = {
 		name = antq_m10_final.5006.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_regional_militias }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -191,6 +226,11 @@ antq_m10_final.5007 = {
 		historical_option = yes
 		add_stability = stability_mild_penalty
 		add_prestige = prestige_mild_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_regional_militias }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -206,6 +246,11 @@ antq_m10_final.5008 = {
 		name = antq_m10_final.5008.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_regional_militias }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -227,6 +272,11 @@ antq_m10_final.5009 = {
 		name = antq_m10_final.5009.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_migration_networks }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -248,6 +298,11 @@ antq_m10_final.5010 = {
 		name = antq_m10_final.5010.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_migration_networks }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -264,6 +319,11 @@ antq_m10_final.5011 = {
 		historical_option = yes
 		add_stability = stability_mild_penalty
 		add_prestige = prestige_mild_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_regional_militias }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -287,5 +347,10 @@ antq_m10_final.5012 = {
 		# OUP-ODO: terminal Western-Roman identity adapter; campaign end remains 476.9.4.
 		change_tag_cosmetic = { tag = ODO }
 		add_prestige = prestige_mild_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_migration_networks }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }

@@ -20,6 +20,11 @@ antq_m10_second.2000 = {
 		name = antq_m10_second.2000.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_cosmopolitan_cities }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -57,6 +62,11 @@ antq_m10_second.2001 = {
 			add_core = c:MOC
 		}
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_jurists_law }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -72,6 +82,11 @@ antq_m10_second.2002 = {
 		name = antq_m10_second.2002.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_cataphract_adoption }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -93,6 +108,11 @@ antq_m10_second.2003 = {
 		name = antq_m10_second.2003.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_cosmopolitan_cities }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -108,6 +128,11 @@ antq_m10_second.2004 = {
 		name = antq_m10_second.2004.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_cataphract_adoption }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -124,6 +149,11 @@ antq_m10_second.2005 = {
 		historical_option = yes
 		add_stability = stability_mild_penalty
 		add_prestige = prestige_mild_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_cataphract_adoption }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -145,6 +175,11 @@ antq_m10_second.2006 = {
 		name = antq_m10_second.2006.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_cosmopolitan_cities }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -160,6 +195,11 @@ antq_m10_second.2007 = {
 		name = antq_m10_second.2007.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_cataphract_adoption }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -175,6 +215,11 @@ antq_m10_second.2008 = {
 		name = antq_m10_second.2008.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_cataphract_adoption }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -196,6 +241,11 @@ antq_m10_second.2009 = {
 		name = antq_m10_second.2009.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_cosmopolitan_cities }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -217,6 +267,11 @@ antq_m10_second.2010 = {
 		name = antq_m10_second.2010.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_cosmopolitan_cities }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -232,6 +287,11 @@ antq_m10_second.2011 = {
 		name = antq_m10_second.2011.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_cataphract_adoption }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -247,6 +307,11 @@ antq_m10_second.2012 = {
 		name = antq_m10_second.2012.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_cataphract_adoption }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -266,6 +331,11 @@ antq_m10_second.2013 = {
 		c:XAR = {
 			add_stability = stability_weak_penalty
 			add_prestige = prestige_weak_penalty
+		}
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_cataphract_adoption }
+			add_stability = stability_weak_bonus
 		}
 	}
 }
@@ -288,6 +358,11 @@ antq_m10_second.2014 = {
 		name = antq_m10_second.2014.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_cosmopolitan_cities }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -303,6 +378,11 @@ antq_m10_second.2015 = {
 		name = antq_m10_second.2015.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_cataphract_adoption }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -318,6 +398,11 @@ antq_m10_second.2016 = {
 		name = antq_m10_second.2016.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_cataphract_adoption }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -366,6 +451,11 @@ antq_m10_second.2017 = {
 			add_core = c:CPC
 		}
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_jurists_law }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -381,5 +471,10 @@ antq_m10_second.2018 = {
 		name = antq_m10_second.2018.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_cataphract_adoption }
+			add_stability = stability_weak_bonus
+		}
 	}
 }

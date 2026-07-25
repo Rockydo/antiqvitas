@@ -22,6 +22,11 @@ antq_m10_fourth.4000 = {
 		# IRAN-ARMCONV: 301 is the plan's traditional-current anchor; chronology is contested.
 		change_religion = religion:antq_early_christianity
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_church_endowments }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -37,6 +42,11 @@ antq_m10_fourth.4001 = {
 		name = antq_m10_fourth.4001.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_comitatenses_doctrine }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -58,6 +68,11 @@ antq_m10_fourth.4002 = {
 		name = antq_m10_fourth.4002.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_church_endowments }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -73,6 +88,11 @@ antq_m10_fourth.4003 = {
 		name = antq_m10_fourth.4003.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_comitatenses_doctrine }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -88,6 +108,11 @@ antq_m10_fourth.4004 = {
 		name = antq_m10_fourth.4004.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_comitatenses_doctrine }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -104,6 +129,11 @@ antq_m10_fourth.4005 = {
 		historical_option = yes
 		add_stability = stability_mild_penalty
 		add_prestige = prestige_mild_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_comitatenses_doctrine }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -145,6 +175,11 @@ antq_m10_fourth.4006 = {
 			add_prestige = prestige_mild_penalty
 		}
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_diocesan_administration }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -160,6 +195,11 @@ antq_m10_fourth.4007 = {
 		name = antq_m10_fourth.4007.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_federate_musters }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -182,6 +222,11 @@ antq_m10_fourth.4008 = {
 		historical_option = yes
 		change_religion = religion:antq_early_christianity
 		add_legitimacy = legitimacy_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_hospitality_of_barbarians }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -197,6 +242,11 @@ antq_m10_fourth.4009 = {
 		name = antq_m10_fourth.4009.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_federate_musters }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -212,6 +262,11 @@ antq_m10_fourth.4010 = {
 		name = antq_m10_fourth.4010.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_federate_musters }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -234,6 +289,11 @@ antq_m10_fourth.4011 = {
 		historical_option = yes
 		destroy_international_organization = { target = international_organization:antq_panhellenic_games }
 		add_legitimacy = legitimacy_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_hospitality_of_barbarians }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -770,6 +830,11 @@ antq_m10_fourth.4012 = {
 			add_core = c:ERO
 		}
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_regional_law_codes }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -785,5 +850,10 @@ antq_m10_fourth.4013 = {
 		name = antq_m10_fourth.4013.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_regional_militias }
+			add_stability = stability_weak_bonus
+		}
 	}
 }

@@ -14,6 +14,7 @@ import argparse
 import csv
 import json
 import re
+from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -28,9 +29,16 @@ STATIC_MODIFIERS = ROOT / "main_menu/common/static_modifiers"
 LOC_ROOT = ROOT / "main_menu/localization"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
 DIRECT_ADVANCE_ART = ROOT / "docs/m11/direct_advance_icons.csv"
+ADVANCE_LEDGER = ROOT / "docs/m8/advances.csv"
 INSTITUTION_LEDGER = ROOT / "docs/m8/institutions.csv"
 INSTALLED_INSTITUTION_LEDGER = ROOT / "docs/m8/installed_institution_inventory.csv"
 VANILLA_INSTITUTION_SYMBOLS = ROOT / "docs/vanilla_symbols/institution.json"
+REGIONAL_BUILDINGS = ROOT / "in_game/common/building_types/00_antiquitas_regional_buildings.txt"
+ANCIENT_UNITS = ROOT / "in_game/common/unit_types/00_antiquitas_m7_units.txt"
+ANCIENT_REFORMS = ROOT / "in_game/common/government_reforms/00_antiquitas_m6_core.txt"
+ANCIENT_PRIVILEGES = ROOT / "in_game/common/estate_privileges/00_antiquitas_m6_core.txt"
+ANCIENT_CASUS_BELLI = ROOT / "in_game/common/casus_belli/00_antiquitas_m9.txt"
+ANCIENT_SUBJECT_TYPES = ROOT / "in_game/common/subject_types/00_antiquitas_m9_subjects.txt"
 
 AGE_KEYS = (
     "age_1_traditions", "age_2_renaissance", "age_3_discovery",
@@ -43,7 +51,7 @@ ICONS = (
 )
 FORBIDDEN = (
     "gunpowder", "cannon", "arquebus", "musket", "flintlock", "colonial",
-    "oceanic", "ocean_crossing", "steam", "printing_press",
+    "ocean_crossing", "steam", "printing_press",
 )
 UNLOCK = re.compile(r"^\s*unlock_(?:unit|levy)\s*=", re.IGNORECASE)
 TOP_LEVEL = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*\s*=\s*\{")
@@ -87,6 +95,145 @@ START_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
     # Polygyny is a policy inside the religious marriage_law category; it is
     # not itself granted by a vanilla advance.  Unlock its parent category.
     "antq_civic_associations": (("unlock_law", "marriage_law"),),
+}
+
+# Direct ancient-system bridges.  Start reforms and privileges sit on universal
+# depth-zero foundations so setup assignments remain valid.  Later political
+# forms, diplomacy and every active unit are attached to historically coherent
+# branches.  The regional production system is distributed separately below.
+CONTENT_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
+    "antq_imperial_cult": (
+        ("unlock_government_reform", "antq_principate"),
+        ("unlock_government_reform", "antq_han_imperial_bureaucracy"),
+        ("unlock_government_reform", "antq_lankan_kingdom"),
+        ("unlock_government_reform", "antq_indian_ganasangha"),
+        ("unlock_government_reform", "antq_indo_scythian_kingship"),
+        ("unlock_government_reform", "antq_indo_greek_kingship"),
+        ("unlock_government_reform", "antq_parthian_king_of_kings"),
+        ("unlock_government_reform", "antq_client_monarchy"),
+        ("unlock_government_reform", "antq_parthian_subkingdom"),
+    ),
+    "antq_provincial_census": (
+        ("unlock_government_reform", "antq_buffer_kingdom"),
+        ("unlock_government_reform", "antq_kushite_dual_kingship"),
+        ("unlock_government_reform", "antq_steppe_confederation"),
+        ("unlock_government_reform", "antq_early_korean_kingdom"),
+        ("unlock_government_reform", "antq_regional_kingship"),
+        ("unlock_government_reform", "antq_advanced_chiefdom"),
+        ("unlock_government_reform", "antq_settled_town_cluster"),
+        ("unlock_government_reform", "antq_tribal_kingdom"),
+    ),
+    "antq_imperial_chancery": (
+        ("unlock_government_reform", "antq_dominate"),
+    ),
+    "antq_regional_commands": (
+        ("unlock_government_reform", "antq_sassanid_centralized_monarchy"),
+    ),
+    "antq_civic_associations": (
+        ("unlock_estate_privilege", "antq_indo_scythian_satraps"),
+        ("unlock_estate_privilege", "antq_indo_greek_city_elites"),
+        ("unlock_estate_privilege", "antq_ganasangha_council"),
+        ("unlock_estate_privilege", "antq_lankan_monastic_patronage"),
+        ("unlock_estate_privilege", "antq_senatorial_land_exemption"),
+        ("unlock_estate_privilege", "antq_equestrian_service"),
+        ("unlock_estate_privilege", "antq_roman_priestly_colleges"),
+        ("unlock_estate_privilege", "antq_annona_privilege"),
+        ("unlock_estate_privilege", "antq_praetorian_donatives"),
+        ("unlock_estate_privilege", "antq_han_palace_bureau"),
+        ("unlock_estate_privilege", "antq_wang_clan_regency"),
+        ("unlock_estate_privilege", "antq_parthian_great_house_autonomy"),
+    ),
+    "antq_imperial_ceremony": (
+        ("unlock_estate_privilege", "antq_client_royal_autonomy"),
+        ("unlock_estate_privilege", "antq_kushite_royal_court"),
+        ("unlock_estate_privilege", "antq_steppe_clan_autonomy"),
+        ("unlock_estate_privilege", "antq_korean_royal_court"),
+        ("unlock_estate_privilege", "antq_tribal_elder_council"),
+        ("unlock_estate_privilege", "antq_brittonic_druidic_council"),
+        ("unlock_estate_privilege", "antq_parthian_subking_autonomy"),
+        ("unlock_estate_privilege", "antq_border_court_autonomy"),
+        ("unlock_estate_privilege", "antq_second_temple_priesthood"),
+        ("unlock_estate_privilege", "antq_regional_royal_court"),
+        ("unlock_estate_privilege", "antq_chiefly_court"),
+        ("unlock_estate_privilege", "antq_town_cluster_council"),
+    ),
+    "antq_professional_standing_armies": (
+        ("unlock_casus_belli", "antq_punitive_expedition"),
+        ("unlock_unit", "antq_thureophoroi"),
+        ("unlock_unit", "antq_hellenistic_phalanx"),
+        ("unlock_unit", "antq_han_crossbow_infantry"),
+        ("unlock_unit", "antq_indian_longbowmen"),
+        ("unlock_unit", "antq_war_elephants"),
+        ("unlock_unit", "antq_nubian_archers"),
+        ("unlock_unit", "antq_cataphracts"),
+        ("unlock_unit", "antq_parthian_horse_archers"),
+        ("unlock_unit", "antq_steppe_horse_archers"),
+        ("unlock_unit", "antq_numidian_light_horse"),
+        ("unlock_unit", "antq_camelry"),
+        ("unlock_unit", "antq_british_chariots"),
+        ("unlock_unit", "antq_cretan_archers"),
+        ("unlock_unit", "antq_saka_horse"),
+        ("unlock_unit", "antq_galatian_swordsmen"),
+        ("unlock_unit", "antq_thracian_peltasts"),
+        ("unlock_unit", "antq_numidian_horse_company"),
+        ("unlock_unit", "antq_parthian_foot_archers"),
+        ("unlock_unit", "antq_parthian_noble_lancers"),
+        ("unlock_unit", "antq_syrian_archers"),
+        ("unlock_unit", "antq_iberian_swordsmen"),
+        ("unlock_unit", "antq_dacian_falxmen"),
+        ("unlock_unit", "antq_armenian_horse"),
+    ),
+    "antq_auxiliary_service": (
+        ("unlock_unit", "antq_trireme"),
+        ("unlock_unit", "antq_merchant_roundship"),
+        ("unlock_unit", "antq_monsoon_dhow"),
+        ("unlock_unit", "antq_austronesian_outrigger"),
+        ("unlock_unit", "antq_cilician_marines"),
+    ),
+    "antq_drill_routines": (
+        ("unlock_unit", "antq_legionaries"),
+        ("unlock_unit", "antq_auxilia"),
+        ("unlock_unit", "antq_roman_alae"),
+        ("unlock_unit", "antq_roman_marines"),
+        ("unlock_unit", "antq_roman_sagittarii"),
+        ("unlock_unit", "antq_roman_scouts"),
+        ("unlock_unit", "antq_balearic_slingers"),
+    ),
+    "antq_river_crossings": (
+        ("unlock_unit", "antq_liburnian"),
+        ("unlock_unit", "antq_quinquereme"),
+    ),
+    "antq_frontier_patrols": (
+        ("unlock_unit", "antq_germanic_horse"),
+        ("unlock_unit", "antq_germanic_bodyguards"),
+    ),
+    "antq_comitatenses_doctrine": (("unlock_unit", "antq_comitatenses"),),
+    "antq_limitanei_service": (("unlock_unit", "antq_limitanei"),),
+    "antq_tax_registers": (
+        ("unlock_subject_type", "antq_client_kingdom"),
+        ("unlock_casus_belli", "antq_impose_client_king"),
+    ),
+    "antq_library_catalogues": (
+        ("unlock_subject_type", "antq_satrapy"),
+        ("unlock_casus_belli", "antq_sasanid_unification"),
+    ),
+    "antq_legal_petitions": (
+        ("unlock_subject_type", "antq_tributary"),
+        ("unlock_casus_belli", "antq_chinese_warlord_unification"),
+    ),
+    "antq_municipal_charters": (("unlock_subject_type", "antq_autonomous_city"),),
+    "antq_monsoon_navigation": (("unlock_casus_belli", "antq_demand_tribute"),),
+    "antq_road_milestones": (("unlock_casus_belli", "antq_frontier_rectification"),),
+    "antq_field_engineering": (
+        ("unlock_unit", "antq_warbands"),
+        ("unlock_unit", "antq_germanic_spearmen"),
+        ("unlock_unit", "antq_germanic_javelins"),
+        ("unlock_casus_belli", "antq_loot_raid"),
+    ),
+    "antq_port_customs": (("unlock_casus_belli", "antq_succession_intervention"),),
+    "antq_orthodoxy_debates": (("unlock_casus_belli", "antq_holy_suppression"),),
+    "antq_federate_musters": (("unlock_subject_type", "antq_foederati"),),
+    "antq_seasonal_markets": (("unlock_casus_belli", "antq_gupta_digvijaya"),),
 }
 
 
@@ -140,7 +287,12 @@ class Advance:
     age: str
     age_index: int
     depth: int
-    requires: str | None
+    track: str
+    profile: str
+    requires: tuple[str, ...]
+    effects: tuple[tuple[str, str], ...]
+    description: str
+    source: str
 
 
 @dataclass(frozen=True)
@@ -163,6 +315,182 @@ class InstitutionProfile:
     key: str
     summary: str
     script: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class AdvanceProfile:
+    key: str
+    name: str
+    summary: str
+    culture_groups: tuple[str, ...]
+    adoption_institutions: tuple[str, ...]
+    source: str
+
+
+ADVANCE_PROFILES = {
+    profile.key: profile
+    for profile in (
+        AdvanceProfile(
+            "shared", "Shared Foundations",
+            "Practices transferable across several ancient political and cultural settings.",
+            (), (), "P15;CAH-XI;CAH-XII",
+        ),
+        AdvanceProfile(
+            "roman_italic", "Roman and Italic",
+            "Roman and Italic civic, legal, logistical, and imperial practice.",
+            ("antq_italic_group", "antq_iberian_group", "antq_balkan_group"),
+            ("antq_roman_law_engineering",), "P8.1;P15;CAH-XI;OCD",
+        ),
+        AdvanceProfile(
+            "hellenic", "Hellenic",
+            "Hellenic civic, scholarly, military, and eastern Mediterranean practice.",
+            ("antq_hellenic_group", "antq_anatolian_group"),
+            ("antq_hellenism",), "P8.1;P15;CAH-XI;OCD",
+        ),
+        AdvanceProfile(
+            "celtic", "Celtic and Brittonic",
+            "Celtic and Brittonic political, martial, exchange, and community practice.",
+            ("antq_celtic_group",),
+            ("antq_foederati_statecraft",), "P8.7;P15;CAH-XI",
+        ),
+        AdvanceProfile(
+            "germanic", "Germanic",
+            "Germanic assembly, warband, settlement, exchange, and confederation practice.",
+            ("antq_germanic_group",),
+            ("antq_foederati_statecraft",), "P8.7;P15;CAH-XI;STR-GER",
+        ),
+        AdvanceProfile(
+            "iranian_steppe", "Iranian and Steppe",
+            "Iranian court, cavalry, caravan, and steppe-confederation practice.",
+            ("antq_iranian_group", "antq_steppe_group"),
+            ("antq_cataphract_warfare",), "P8.2;P8.8;P15;CAH-XI",
+        ),
+        AdvanceProfile(
+            "indic", "Indic",
+            "Indic court, monastic, agrarian, military, and Indian Ocean practice.",
+            ("antq_indian_group", "antq_tibetan_group"),
+            ("antq_buddhist_monasticism",), "P8.4;P15;CAH-XI",
+        ),
+        AdvanceProfile(
+            "han_east_asian", "Han and East Asian",
+            "Han and neighbouring East Asian administrative, textual, military, and agrarian practice.",
+            ("antq_sinitic_group", "antq_korean_group", "antq_japonic_group"),
+            ("antq_han_bureaucratic_statecraft", "antq_papermaking"),
+            "P8.3;P15;BHR;Bielenstein",
+        ),
+        AdvanceProfile(
+            "near_eastern", "Near Eastern",
+            "Levantine, Anatolian, Mesopotamian, and Caucasian urban and caravan practice.",
+            ("antq_semitic_group", "antq_anatolian_group", "antq_caucasian_group"),
+            ("antq_theological_orthodoxy",), "P8.1;P8.2;P15;CAH-XI",
+        ),
+        AdvanceProfile(
+            "african", "African",
+            "Nile, Maghrebi, Red Sea, and sub-Saharan political and exchange practice.",
+            ("antq_nile_group", "antq_berber_group", "antq_subsaharan_group"),
+            ("antq_christian_monasticism",), "P8.5;P15;CAH-XI",
+        ),
+        AdvanceProfile(
+            "american", "American",
+            "Regionally bounded American urban, agrarian, exchange, and political practice.",
+            ("antq_american_group", "antq_mesoamerican_group", "antq_andean_group"),
+            (), "P8.10;P15",
+        ),
+        AdvanceProfile(
+            "oceanian", "Austronesian and Oceanian",
+            "Austronesian, Southeast Asian, and Oceanian maritime and community practice.",
+            ("antq_austronesian_group", "antq_oceanic_group", "antq_southeast_asian_group"),
+            (), "P8.9;P15",
+        ),
+    )
+}
+
+# Each engine age contains five compact trees. The first four ages use two
+# shared roots and two culturally bounded branches with internal convergence;
+# the two five-node late ages use one shared root and two bounded branches.
+BRANCH_PROFILES: dict[str, tuple[tuple[str, str], ...]] = {
+    "statecraft": (
+        ("roman_italic", "han_east_asian"),
+        ("hellenic", "iranian_steppe"),
+        ("near_eastern", "indic"),
+        ("roman_italic", "african"),
+        ("germanic", "celtic"),
+        ("american", "oceanian"),
+    ),
+    "warfare": (
+        ("roman_italic", "germanic"),
+        ("american", "celtic"),
+        ("han_east_asian", "african"),
+        ("indic", "near_eastern"),
+        ("germanic", "roman_italic"),
+        ("roman_italic", "germanic"),
+    ),
+    "exchange": (
+        ("indic", "near_eastern"),
+        ("han_east_asian", "african"),
+        ("roman_italic", "iranian_steppe"),
+        ("celtic", "germanic"),
+        ("american", "oceanian"),
+        ("hellenic", "near_eastern"),
+    ),
+    "learning": (
+        ("iranian_steppe", "hellenic"),
+        ("indic", "roman_italic"),
+        ("hellenic", "germanic"),
+        ("hellenic", "iranian_steppe"),
+        ("han_east_asian", "indic"),
+        ("iranian_steppe", "han_east_asian"),
+    ),
+    "society": (
+        ("american", "oceanian"),
+        ("oceanian", "near_eastern"),
+        ("african", "american"),
+        ("indic", "han_east_asian"),
+        ("germanic", "iranian_steppe"),
+        ("oceanian", "celtic"),
+    ),
+}
+
+TRACK_EFFECTS: dict[str, tuple[tuple[str, str], ...]] = {
+    "statecraft": (
+        ("country_cabinet_efficiency", "0.01"),
+        ("stability_cost_efficiency", "0.02"),
+        ("country_cabinet_efficiency", "0.015"),
+        ("stability_cost_efficiency", "0.03"),
+    ),
+    "warfare": (
+        ("levy_recovery_modifier", "0.01"),
+        ("army_maintenance_efficiency", "0.01"),
+        ("land_morale_modifier", "0.01"),
+        ("discipline", "0.005"),
+    ),
+    "exchange": (
+        ("trade_range_modifier", "0.02"),
+        ("merchant_maintenance_efficiency", "0.01"),
+        ("ship_build_speed", "0.01"),
+        ("diplomatic_range_modifier", "0.02"),
+    ),
+    "learning": (
+        ("research_speed_modifier", "0.01"),
+        ("cultural_influence_modifier", "0.01"),
+        ("research_speed_modifier", "0.015"),
+        ("cultural_influence_modifier", "0.02"),
+    ),
+    "society": (
+        ("stability_cost_efficiency", "0.02"),
+        ("global_disease_resistance", "0.005"),
+        ("cultural_influence_modifier", "0.015"),
+        ("global_disease_resistance", "0.01"),
+    ),
+}
+
+TRACK_DESCRIPTIONS = {
+    "statecraft": "recordkeeping, adjudication, revenue, and political coordination",
+    "warfare": "recruitment, command, logistics, fortification, and battlefield practice",
+    "exchange": "market, caravan, maritime, monetary, and provisioning networks",
+    "learning": "textual, scientific, legal, medical, and educational traditions",
+    "society": "civic, religious, household, settlement, and welfare institutions",
+}
 
 
 INSTITUTION_PROFILES = {
@@ -367,13 +695,39 @@ def installed_dir(relative: str) -> Path:
     return Path(config["game_dir"]) / "game" / relative
 
 
+def advance_description(name: str, track: str, profile: str, age_index: int) -> str:
+    context = ADVANCE_PROFILES[profile]
+    return (
+        f"{name} represents {TRACK_DESCRIPTIONS[track]} within "
+        f"{context.name.lower()} contexts during the {AGE_NAMES[age_index]}."
+    )
+
+
+def advance_display_name(name: str, profile: str) -> str:
+    """Expose the regional path in the UI without discarding reviewed icon keys."""
+    display = name.replace("_", " ").title()
+    if profile == "shared":
+        return display
+    # A handful of preserved art keys contain a culture-specific noun even
+    # when the new DAG assigns that visual concept to a transferable branch.
+    # Neutralise those nouns before prefixing the actual path identity.
+    replacements = {
+        "Han ": "Court ",
+        "Roman ": "Imperial ",
+        "Barbarian ": "Frontier ",
+    }
+    for old, new in replacements.items():
+        display = display.replace(old, new)
+    return f"{ADVANCE_PROFILES[profile].name}: {display}"
+
+
 def advance_records() -> tuple[Advance, ...]:
     records: list[Advance] = []
     for track, age_groups in TRACKS.items():
         for conceptual_index, group in enumerate(age_groups):
-            # EU5 validates `requires` within one age only.  Each age thus has
-            # complete strands; the engine's mandatory sixth slot divides the
-            # final conceptual arc at 376 while preserving all 250 statements.
+            # EU5 validates `requires` within one age only. Each age therefore
+            # contains complete branching trees; the mandatory sixth slot
+            # divides the final conceptual arc at 376.
             if len(group) != 10:
                 raise ValueError(f"{track} conceptual age {conceptual_index + 1} must have exactly ten advances")
             segments = (
@@ -382,15 +736,118 @@ def advance_records() -> tuple[Advance, ...]:
                 else ((conceptual_index, group),)
             )
             for age_index, segment in segments:
-                previous: str | None = None
-                for depth, name in enumerate(segment):
+                profile_a, profile_b = BRANCH_PROFILES[track][age_index]
+                if len(segment) == 10:
+                    depths = (0, 0, 1, 1, 1, 1, 2, 2, 3, 2)
+                    profiles = (
+                        "shared", "shared", profile_a, profile_a, profile_b,
+                        profile_b, profile_a, profile_b, profile_a, profile_b,
+                    )
+                    parents = (
+                        (), (), (0,), (0,), (1,), (1,), (2, 3), (4,),
+                        (6,), (5,),
+                    )
+                elif len(segment) == 5:
+                    depths = (0, 1, 1, 2, 2)
+                    profiles = ("shared", profile_a, profile_b, profile_a, profile_b)
+                    parents = ((), (0,), (0,), (1,), (2,))
+                else:
+                    raise ValueError(f"{track} {AGE_KEYS[age_index]} has unsupported segment size")
+                segment_keys = tuple(f"antq_{name}" for name in segment)
+                for index, name in enumerate(segment):
                     key = f"antq_{name}"
+                    profile = profiles[index]
+                    depth = depths[index]
+                    display_name = advance_display_name(name, profile)
                     records.append(Advance(
-                        key, name.replace("_", " ").title(),
-                        AGE_KEYS[age_index], age_index, depth, previous,
+                        key, display_name, AGE_KEYS[age_index], age_index, depth,
+                        track, profile,
+                        tuple(segment_keys[parent] for parent in parents[index]),
+                        (TRACK_EFFECTS[track][depth],),
+                        advance_description(display_name, track, profile, age_index),
+                        ADVANCE_PROFILES[profile].source,
                     ))
-                    previous = key
     return tuple(records)
+
+
+def ordered_top_level_keys(path: Path, prefix: str = "antq_") -> tuple[str, ...]:
+    """Inventory generated subsystem definitions without matching nested blocks."""
+    keys: list[str] = []
+    depth = 0
+    for line in path.read_text(encoding="utf-8-sig", errors="strict").splitlines():
+        code = line.split("#", 1)[0]
+        if depth == 0 and TOP_LEVEL.match(code):
+            key = code.split("=", 1)[0].strip()
+            if key.startswith(prefix):
+                keys.append(key)
+        depth += brace_delta(line)
+        if depth < 0:
+            raise ValueError(f"negative brace depth while reading {path}")
+    if depth != 0 or not keys:
+        raise ValueError(f"unable to inventory top-level keys in {path}")
+    return tuple(keys)
+
+
+BUILDING_TRACK_HINTS: dict[str, tuple[str, ...]] = {
+    "statecraft": (
+        "monetal", "weightmaker", "mensores", "customs_gate", "seal_cutter",
+    ),
+    "warfare": (
+        "weapon", "armour", "arrow", "harness", "chariot", "ironmongery",
+        "shield", "scabbard", "chainmaker", "nailery", "locksmith",
+        "wiredrawer", "crucible_steel",
+    ),
+    "learning": (
+        "scriptorium", "papyrus", "parchment", "stationer", "scroll",
+        "reed_pen", "instrument", "apothecary", "materia_medica", "herbal",
+    ),
+    "society": (
+        "granary", "cistern", "fountain", "bath", "bread", "brewery",
+        "brewhouse", "honey", "soap", "lamp", "figurine", "mosaic",
+        "macellum",
+    ),
+}
+
+
+def building_track(key: str) -> str:
+    for track, hints in BUILDING_TRACK_HINTS.items():
+        if any(hint in key for hint in hints):
+            return track
+    return "exchange"
+
+
+def content_unlocks(records: tuple[Advance, ...]) -> dict[str, tuple[tuple[str, str], ...]]:
+    """Compose explicit cross-system packages for the ancient advance DAG.
+
+    Regional workshops are ancient practices rather than literal inventions.
+    Their tiers represent the administrative ability to reproduce them at
+    scale.  Shared foundations keep every culture eligible, while source order
+    moves from common production toward increasingly specialised workshops.
+    """
+    result: dict[str, list[tuple[str, str]]] = defaultdict(list)
+    for key, entries in START_UNLOCKS.items():
+        result[key].extend(entries)
+    for key, entries in CONTENT_UNLOCKS.items():
+        result[key].extend(entries)
+
+    buildings = ordered_top_level_keys(REGIONAL_BUILDINGS, "antq_reg_")
+    grouped: dict[str, list[str]] = {track: [] for track in TRACKS}
+    for building in buildings:
+        grouped[building_track(building)].append(building)
+    for track, keys in grouped.items():
+        candidates = sorted(
+            (
+                record for record in records
+                if record.track == track and record.profile == "shared"
+            ),
+            key=lambda record: (record.age_index, record.depth, record.key),
+        )
+        if not candidates:
+            raise ValueError(f"no shared {track} advances available for building packages")
+        for index, building in enumerate(keys):
+            slot = min(len(candidates) - 1, index * len(candidates) // len(keys))
+            result[candidates[slot].key].append(("unlock_building", building))
+    return {key: tuple(entries) for key, entries in result.items()}
 
 
 def direct_advance_icons(records: tuple[Advance, ...]) -> dict[str, str]:
@@ -446,6 +903,7 @@ def institution_manager() -> str:
 
 def validate(records: tuple[Advance, ...]) -> None:
     failures: list[str] = []
+    unlocks = content_unlocks(records)
     if len(records) != 250:
         failures.append(f"expected 250 advances, got {len(records)}")
     keys = [record.key for record in records]
@@ -457,33 +915,104 @@ def validate(records: tuple[Advance, ...]) -> None:
         expected = expected_counts[age_index]
         if len(age_records) != expected:
             failures.append(f"{age} has {len(age_records)}, not {expected} advances")
-        depth_limit = 10 if age_index < 4 else 5
+        depth_limit = 4 if age_index < 4 else 3
         if any(record.depth not in range(depth_limit) for record in age_records):
             failures.append(f"{age} has a depth outside 0..{depth_limit - 1}")
-    roots = [record for record in records if record.requires is None]
-    if len(roots) != 30:
-        failures.append("the five strands in six engine ages must have exactly 30 roots")
+        regional_profiles = {record.profile for record in age_records} - {"shared"}
+        if len(regional_profiles) < 8:
+            failures.append(f"{age} exposes only {len(regional_profiles)} regional profiles")
+    roots = [record for record in records if not record.requires]
+    if len(roots) != 50:
+        failures.append("the 30 branching trees must have exactly 50 shared roots")
     key_set = set(keys)
-    unknown_unlock_keys = sorted(set(START_UNLOCKS) - key_set)
+    unknown_unlock_keys = sorted(set(unlocks) - key_set)
     if unknown_unlock_keys:
         failures.append(
-            "M8 start-unlock mapping has unknown advances: " + ", ".join(unknown_unlock_keys)
+            "M8 unlock mapping has unknown advances: " + ", ".join(unknown_unlock_keys)
         )
-    unlock_targets = [target for unlocks in START_UNLOCKS.values() for _field, target in unlocks]
-    if len(unlock_targets) != len(set(unlock_targets)):
-        failures.append("M8 start-unlock mapping repeats a law or policy category")
-    if {field for unlocks in START_UNLOCKS.values() for field, _target in unlocks} - {"unlock_law", "unlock_policy"}:
-        failures.append("M8 start-unlock mapping uses an unsupported unlock field")
+    unlock_fields = {
+        field for entries in unlocks.values() for field, _target in entries
+    }
+    supported_unlock_fields = {
+        "unlock_building", "unlock_unit", "unlock_law", "unlock_policy",
+        "unlock_estate_privilege", "unlock_government_reform",
+        "unlock_casus_belli", "unlock_subject_type",
+    }
+    if unlock_fields - supported_unlock_fields:
+        failures.append(
+            "M8 unlock mapping uses unsupported fields: "
+            + ", ".join(sorted(unlock_fields - supported_unlock_fields))
+        )
+    target_sources = {
+        "unlock_building": (REGIONAL_BUILDINGS, "antq_reg_"),
+        "unlock_unit": (ANCIENT_UNITS, "antq_"),
+        "unlock_estate_privilege": (ANCIENT_PRIVILEGES, "antq_"),
+        "unlock_government_reform": (ANCIENT_REFORMS, "antq_"),
+        "unlock_casus_belli": (ANCIENT_CASUS_BELLI, "antq_"),
+        "unlock_subject_type": (ANCIENT_SUBJECT_TYPES, "antq_"),
+    }
+    for field, (path, prefix) in target_sources.items():
+        expected_targets = set(ordered_top_level_keys(path, prefix))
+        actual_targets = [
+            target
+            for entries in unlocks.values()
+            for unlock_field, target in entries
+            if unlock_field == field
+        ]
+        actual_set = set(actual_targets)
+        if actual_set != expected_targets:
+            failures.append(
+                f"{field} coverage mismatch: "
+                f"missing={sorted(expected_targets - actual_set)}, "
+                f"extra={sorted(actual_set - expected_targets)}"
+            )
+        if len(actual_targets) != len(actual_set):
+            failures.append(f"{field} repeats one or more unlock targets")
     by_key = {record.key: record for record in records}
-    required_by = {record.requires for record in records if record.requires}
+    required_by = {required for record in records for required in record.requires}
     leaves = [record.key for record in records if record.key not in required_by]
-    if len(leaves) != 30:
-        failures.append("the five strands in six engine ages must have exactly 30 terminal advances")
+    if len(leaves) != 80:
+        failures.append("the 30 branching trees must have exactly 80 terminal choices")
+    child_counts = {key: 0 for key in keys}
     for record in records:
-        if record.requires and record.requires not in key_set:
-            failures.append(f"{record.key} requires an unknown advance")
-        elif record.requires and by_key[record.requires].age != record.age:
-            failures.append(f"{record.key} has a cross-age requirement")
+        for required in record.requires:
+            child_counts[required] += 1
+    if sum(count >= 2 for count in child_counts.values()) != 50:
+        failures.append("the advance DAG must contain exactly 50 branch points")
+    if sum(len(record.requires) >= 2 for record in records) != 20:
+        failures.append("the advance DAG must contain exactly 20 convergence nodes")
+    for profile in set(ADVANCE_PROFILES) - {"shared"}:
+        profile_leaves = [key for key in leaves if by_key[key].profile == profile]
+        if len(profile_leaves) < 3:
+            failures.append(f"advance profile {profile} offers only {len(profile_leaves)} terminal choices")
+    profile_counts = {
+        profile: sum(record.profile == profile for record in records)
+        for profile in ADVANCE_PROFILES
+    }
+    for profile, count in profile_counts.items():
+        minimum = 50 if profile == "shared" else 10
+        if count < minimum:
+            failures.append(f"advance profile {profile} has only {count} nodes")
+    for record in records:
+        if record.profile not in ADVANCE_PROFILES:
+            failures.append(f"{record.key} uses an unknown advance profile")
+        if not record.effects:
+            failures.append(f"{record.key} has no consequential effect")
+        if not record.description or "knowledge:" in record.description.lower():
+            failures.append(f"{record.key} has a placeholder description")
+        if not record.source:
+            failures.append(f"{record.key} has no source")
+        for required in record.requires:
+            if required not in key_set:
+                failures.append(f"{record.key} requires an unknown advance")
+                continue
+            parent = by_key[required]
+            if parent.age != record.age:
+                failures.append(f"{record.key} has a cross-age requirement")
+            if parent.depth >= record.depth:
+                failures.append(f"{record.key} does not descend from {required}")
+            if parent.profile not in {"shared", record.profile}:
+                failures.append(f"{record.key} converges across incompatible profiles")
         if any(token in record.key for token in FORBIDDEN):
             failures.append(f"anachronistic token in {record.key}")
     names = " ".join(keys)
@@ -521,22 +1050,43 @@ def validate(records: tuple[Advance, ...]) -> None:
         raise ValueError("\n".join(failures))
 
 
+def advance_potential(record: Advance) -> list[str]:
+    profile = ADVANCE_PROFILES[record.profile]
+    if record.profile == "shared":
+        return []
+    lines = ["\tpotential = {", "\t\tOR = {"]
+    for group in profile.culture_groups:
+        lines.append(
+            f"\t\t\tculture = {{ has_culture_group = culture_group:{group} }}"
+        )
+    for institution in profile.adoption_institutions:
+        lines.append(
+            f"\t\t\thas_embraced_institution = institution:{institution}"
+        )
+    lines.extend(("\t\t}", "\t}"))
+    return lines
+
+
 def advance_script(records: tuple[Advance, ...]) -> str:
     lines = [
         "# Generated by tools/m8_knowledge.py --write; complete ANTIQVITAS ancient knowledge trees.",
-        "# Five continuous ten-step strands per age; vanilla advances are exact-name blanked beside this file.",
+        "# Five branching trees per age; cultural paths support explicit institution-led adoption.",
     ]
     direct = direct_advance_icons(records)
+    unlocks = content_unlocks(records)
     for record in records:
         icon = direct.get(record.key, ICONS[record.age_index])
         lines.extend((f"{record.key} = {{", f"\tage = {record.age}", f"\ticon = {icon}", f"\tdepth = {record.depth}", f"\tresearch_cost = {2 + record.age_index * 2 + record.depth * 0.5:.1f}"))
-        for field, target in START_UNLOCKS.get(record.key, ()):
+        lines.extend(advance_potential(record))
+        for field, value in record.effects:
+            lines.append(f"\t{field} = {value}")
+        for field, target in unlocks.get(record.key, ()):
             lines.append(f"\t{field} = {target}")
         if record.age_index == 0:
-            lines.append(f"\tstarting_technology_level = {min(4, 1 + record.depth // 3)}")
-        if record.requires:
-            lines.append(f"\trequires = {record.requires}")
-        lines.extend((f"\tai_weight = {{ add = {100 - record.depth * 5} }}", "}", ""))
+            lines.append(f"\tstarting_technology_level = {min(4, record.depth + 1)}")
+        for required in record.requires:
+            lines.append(f"\trequires = {required}")
+        lines.extend((f"\tai_weight = {{ add = {100 - record.depth * 10} }}", "}", ""))
     return "\n".join(lines)
 
 
@@ -736,6 +1286,38 @@ def institution_script() -> str:
     return "\n".join(lines)
 
 
+def advance_ledger(records: tuple[Advance, ...]) -> str:
+    fields = (
+        "key", "name", "age", "track", "branch", "depth", "requires",
+        "eligibility", "description", "effects", "unlocks", "ai_weight",
+        "icon", "source",
+    )
+    icons = direct_advance_icons(records)
+    unlock_map = content_unlocks(records)
+    rows = [",".join(fields)]
+    for record in records:
+        profile = ADVANCE_PROFILES[record.profile]
+        unlocks = unlock_map.get(record.key, ())
+        values = (
+            record.key,
+            record.name,
+            record.age,
+            record.track,
+            profile.name,
+            str(record.depth),
+            ";".join(record.requires),
+            profile.summary,
+            record.description,
+            ";".join(f"{field}={value}" for field, value in record.effects),
+            ";".join(f"{field}={target}" for field, target in unlocks),
+            str(100 - record.depth * 10),
+            icons.get(record.key, ICONS[record.age_index]),
+            record.source,
+        )
+        rows.append(",".join(f'"{value.replace(chr(34), chr(34) * 2)}"' for value in values))
+    return "\n".join(rows) + "\n"
+
+
 def institution_ledger() -> str:
     fields = (
         "key", "name", "age", "earliest", "birthplace", "start_active",
@@ -802,7 +1384,7 @@ def localization(records: tuple[Advance, ...], language: str) -> str:
     lines = [f"l_{language}:"]
     for record in records:
         lines.append(f' {record.key}: "{record.name}"')
-        lines.append(f' {record.key}_desc: "{AGE_NAMES[record.age_index]} knowledge: {record.name}."')
+        lines.append(f' {record.key}_desc: "{record.description}"')
     for item in INSTITUTION_DATA:
         lines.append(f' {item.key}: "{item.name}"')
         lines.append(f' {item.key}_desc: "{item.description}"')
@@ -826,6 +1408,7 @@ def outputs(records: tuple[Advance, ...]) -> dict[Path, str]:
         SCRIPTED_TRIGGERS / "00_antiquitas_m8_institution_spread.txt": institution_eligibility_script(),
         STATIC_MODIFIERS / "institutions.txt": removed_institution_birth_modifiers(),
         STATIC_MODIFIERS / "antq_m8_institution_birth.txt": institution_birth_modifiers(),
+        ADVANCE_LEDGER: advance_ledger(records),
         INSTITUTION_LEDGER: institution_ledger(),
         INSTALLED_INSTITUTION_LEDGER: installed_institution_ledger(),
     }
@@ -898,9 +1481,12 @@ def check(records: tuple[Advance, ...]) -> bool:
         print("\n".join(f"  - {failure}" for failure in failures))
         return False
     tiers = technology_tier_summary()
+    unlock_map = content_unlocks(records)
+    unlock_count = sum(len(entries) for entries in unlock_map.values())
     print(
         "m8_knowledge: PASS "
         f"(250 advances; 9 ancient institutions; 18 legacy institutions removed; "
+        f"{unlock_count} ancient-system unlocks; "
         f"starting tiers 1/2/3/4 = {'/'.join(map(str, tiers))}; no vanilla unlocks)"
     )
     return True

@@ -8,6 +8,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
+from advance_event_packages import knowledge_response_lines
 from dates import AntqDate, M2_MIRROR_LANGUAGES, indexed_timeline, load_timeline
 from m10_fourth_century import script_token
 from m10_history import engine_tags, start_country_locations
@@ -224,7 +225,7 @@ def event_script(records: tuple[Current, ...]) -> str:
             lines.append(f'\timage = "{image}"')
         if record.kind not in {"situation", "disaster"}:
             lines.extend(("\tdynamic_historical_event = {", f"\t\ttag = {record.engine_tag}", f"\t\tfrom = {start.engine()}", f"\t\tto = {end.engine()}", "\t\tmonthly_chance = 100", "\t}"))
-        lines.extend(("\toption = {", f"\t\tname = {record.event_key}.a", "\t\thistorical_option = yes", *impact(record), "\t}", "}", ""))
+        lines.extend(("\toption = {", f"\t\tname = {record.event_key}.a", "\t\thistorical_option = yes", *impact(record), *knowledge_response_lines(record.kind, 5), "\t}", "}", ""))
     return "\n".join(lines)
 
 

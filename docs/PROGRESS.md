@@ -6479,3 +6479,12 @@ reviewed 128px BC7 DDS.
   trade-spread and is restricted to East Asian administrative contexts.
 - Rome, Han, and Arsacid six-age panels contain no vanilla institutions.
   Validation passes 72/72; paired smoke has zero mod-only lines.
+
+## 2026-07-25 - Culture-aware ancient advances
+
+- Rebuilt 250 advances into a six-age DAG with shared foundations, 11 regional
+  profiles, 50 branch points, 20 convergences, and 80 terminal choices.
+- Bound 256 active content definitions plus laws/policies and all 84 historical
+  currents to advance packages; no vanilla advance links remain.
+- Rome, Marcomanni, Han, Parthia, and Teotihuacan probes differ visibly.
+  Validation passes 72/72; paired smoke has zero mod-only lines.

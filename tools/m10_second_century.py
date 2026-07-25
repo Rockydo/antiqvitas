@@ -13,6 +13,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
+from advance_event_packages import knowledge_response_lines
 from dates import AntqDate, M2_MIRROR_LANGUAGES, load_timeline
 from m10_history import engine_tags, start_country_locations
 
@@ -311,6 +312,7 @@ def event_script(records: tuple[Current, ...]) -> str:
             f"\t\tname = {record.event_key}.a",
             "\t\thistorical_option = yes",
             *impact_lines(record),
+            *knowledge_response_lines(record.kind, 1),
             "\t}",
             "}",
             "",

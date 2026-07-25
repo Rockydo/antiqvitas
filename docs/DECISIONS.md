@@ -2906,3 +2906,11 @@ Installed predicates become false; unreachable effect/scope references bind to
 `antq_hellenism`. Two impossible event anchors retain registry integrity.
 Eligibility profiles gate all ten propagation channels, including market and
 trade spread.
+
+## 2026-07-25 - Build knowledge as shared roots plus regional choices
+
+Each age/track starts with shared foundations, then forks into two profile nodes
+with later convergence or terminal specialization. Unlock ownership is exact and
+unique: common content sits on shared nodes; regional content follows the closest
+period practice. Historical events receive optional preparedness bonuses and are
+never gated by research.

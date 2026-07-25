@@ -163,7 +163,7 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
     Han statecraft has no ordinary trade spread. Rome/Han/Arsacid six-age probes,
     72 checks, and paired smoke pass.
 
-- [ ] Rebuild advances as a deep, branching, culture-aware ancient DAG.
+- [x] Rebuild advances as a deep, branching, culture-aware ancient DAG.
   - Create a design ledger for every node: key, age, branch, prerequisites, layout,
     shared/regional eligibility, description, sources, effects, unlocks, AI weight,
     and icon. Preserve the existing advance art that meets the visual bar.
@@ -183,6 +183,10 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
   - Acceptance: focused early/mid/late tree captures for Rome, a Germanic/Celtic
     polity, Han, an Iranian polity, and a non-Eurasian SoP; paths visibly differ
     and offer real choices. No long playthrough required.
+  - Completed: 250 nodes form a six-age DAG with 50 roots, 50 branch points,
+    20 convergences, and 80 terminal choices across 11 profiles. Exact unlocks
+    cover 154 buildings, 44 units, 19 reforms, 24 privileges, 10 CBs, and five
+    subject types. Five-profile probes, 72 checks, and paired smoke pass.
 
 ### P2 — Population, peoples, polities, and period terminology
 

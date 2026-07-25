@@ -20,6 +20,11 @@ antq_m10_third.3000 = {
 		name = antq_m10_third.3000.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_crisis_communities }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -43,6 +48,11 @@ antq_m10_third.3001 = {
 		remove_policy = policy:antq_peregrini_status
 		add_policy = policy:antq_universal_citizenship
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_crisis_communities }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -66,6 +76,11 @@ antq_m10_third.3002 = {
 		change_tag_cosmetic = { tag = ALM }
 		add_prestige = prestige_mild_bonus
 		add_legitimacy = legitimacy_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_crisis_coinage }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -81,6 +96,11 @@ antq_m10_third.3003 = {
 		name = antq_m10_third.3003.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_mobile_field_armies }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -106,6 +126,11 @@ antq_m10_third.3004 = {
 		add_reform = government_reform:antq_sassanid_centralized_monarchy
 		add_prestige = prestige_mild_bonus
 		add_legitimacy = legitimacy_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_crisis_coinage }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -122,6 +147,11 @@ antq_m10_third.3005 = {
 		historical_option = yes
 		add_stability = stability_mild_penalty
 		add_prestige = prestige_mild_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_mobile_field_armies }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -143,6 +173,11 @@ antq_m10_third.3006 = {
 		name = antq_m10_third.3006.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_crisis_communities }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -166,6 +201,11 @@ antq_m10_third.3007 = {
 		change_tag_cosmetic = { tag = FRK }
 		add_prestige = prestige_mild_bonus
 		add_legitimacy = legitimacy_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_crisis_coinage }
+			add_prestige = prestige_weak_bonus
+		}
 	}
 }
 
@@ -183,6 +223,11 @@ antq_m10_third.3008 = {
 		remove_reform = government_reform:antq_principate
 		add_reform = government_reform:antq_dominate
 		add_stability = stability_mild_bonus
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_mobile_field_armies }
+			add_stability = stability_weak_bonus
+		}
 	}
 }
 
@@ -198,5 +243,10 @@ antq_m10_third.3009 = {
 		name = antq_m10_third.3009.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_mobile_field_armies }
+			add_stability = stability_weak_bonus
+		}
 	}
 }

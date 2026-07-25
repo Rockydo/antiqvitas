@@ -4428,3 +4428,11 @@ stages. Han bureaucratic statecraft therefore remains within East Asian
 administrative contexts unless a later authored adoption path is added; paper
 and Buddhist networks may cross wider routes. Sources: Bielenstein; CAH XI-XII;
 master plan sections 8 and 15. [bounded gameplay abstraction]
+
+## 2026-07-25 - Knowledge profiles model networks, not fixed peoples
+
+The 11 advance profiles compress overlapping administrative, military, exchange,
+scholarly, and social networks. Shared roots represent transferable practice;
+regional forks represent concentration, not civilizational exclusivity. Sources:
+CAH X-XIV; Needham; Bielenstein; master plan sections 8 and 15.
+[bounded gameplay abstraction]
