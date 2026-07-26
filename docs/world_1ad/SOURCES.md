@@ -615,3 +615,16 @@ single AD 1 census.
   Scotland* 117 (1988), 85–91, `https://doi.org/10.9750/PSAS.117.85.91`.
   The authors warn that northern place lists can mix native sites and Roman
   forts, requiring explicitly contested regional interpretation.
+- `HE-HILLFORT`: Historic England, [*Introductions to Heritage Assets:
+  Hillforts*](https://historicengland.org.uk/images-books/publications/iha-hillforts/)
+  (2018). It defines hillforts as defended places with banks and ditches,
+  emphasizes their immense variation in size, form, defensive strength, and
+  occupation, and gives a broad 900–100 BC construction chronology. It supports
+  a variable defended-gathering-place mechanic, not universal AD 1 garrisons or
+  one political institution.
+- `NMI-IRON-AGE`: National Museum of Ireland,
+  [“Iron Age” collections overview](https://www.museum.ie/en-IE/Collections-Research/Irish-Antiquities-Division-Collections/Collections-List-%281%29/Iron-Age).
+  Its archaeological collection provides the material horizon for Irish
+  metalwork, personal objects, subsistence, and ritual deposition. It supports
+  conservative material-culture and votive gameplay adapters, not later written
+  Irish law, a uniform druidic hierarchy, or exact AD 1 institutions.

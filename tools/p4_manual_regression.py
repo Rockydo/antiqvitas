@@ -145,9 +145,22 @@ def build_report() -> dict[str, object]:
     )
 
     unit_art = rows(ROOT / "docs/m12/unit_art_ledger.csv")
-    require(len(unit_art) == 44, f"unit-art ledger has {len(unit_art)} rows", failures)
-    require(len({row["texture"] for row in unit_art}) == 44, "unit textures are aliased", failures)
-    require(len({row["mask"] for row in unit_art}) == 44, "unit masks are aliased", failures)
+    unit_count = len(rows(ROOT / "docs/m7/units.csv"))
+    require(
+        len(unit_art) == unit_count,
+        f"unit-art ledger has {len(unit_art)} rows for {unit_count} units",
+        failures,
+    )
+    require(
+        len({row["texture"] for row in unit_art}) == unit_count,
+        "unit textures are aliased",
+        failures,
+    )
+    require(
+        len({row["mask"] for row in unit_art}) == unit_count,
+        "unit masks are aliased",
+        failures,
+    )
 
     institutions = rows(ROOT / "docs/m8/institutions.csv")
     advances = rows(ROOT / "docs/m8/advances.csv")

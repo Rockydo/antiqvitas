@@ -16,6 +16,7 @@ SEED_FIELDS = ("key", "family", "location", "macro", "source", "confidence", "no
 SOURCE = "P12.1;P12.3;MET-ROMAN-TRADE"
 NOTE = "Regional city-and-hinterland productive-craft proxy rather than a named workshop owner output total or route."
 LOCATIONS = (("rome", "Europe"), ("lyon", "Europe"), ("alexandria", "North Africa"), ("tunis", "North Africa"), ("antioch", "Middle East"), ("damascus", "Middle East"), ("patna", "South Asia"), ("khambat", "South Asia"), ("chengdu", "East Asia"), ("jingzhao", "East Asia"))
+WATER_FAMILIES = {"oarwright", "sail_needle_shop", "pulley_workshop"}
 FAMILIES_TO_ADD = (
     ("combmaker", "Combmaker", "A reusable ivory and bone comb-cutting bench for ordinary grooming and small luxury goods.", "consumer_goods_category", "local_production_efficiency=0.015", "ivory=0.06;tools=0.03", "ivory;tools", "Ancient combmaker with carved ivory and bone combs fine saw and small workbench"),
     ("bell_foundry", "Bell Foundry", "A reusable bronze bell and small-casting workshop for civic ritual, animals, and market fittings.", "basic_industry_category", "local_production_efficiency=0.02", "copper=0.10;tin=0.03;coal=0.04;tools=0.03", "copper;tin;coal;tools", "Ancient bronze bell foundry with clay molds small bells crucible and charcoal hearth"),
@@ -66,6 +67,8 @@ def outputs() -> dict[Path, str]:
     for slug, *_ in FAMILIES_TO_ADD:
         family = f"antq_reg_{slug}"
         for location, macro in LOCATIONS:
+            if location == "damascus" and slug in WATER_FAMILIES:
+                continue
             seed_additions.append({"key": f"reg_tenth_{location}_{slug}", "family": family, "location": location, "macro": macro, "source": SOURCE, "confidence": "contested", "note": NOTE})
     seed_rows[seed_at:seed_at] = seed_additions
     return {FAMILIES: render(FAMILIES, FAMILY_FIELDS, family_rows), SEEDS: render(SEEDS, SEED_FIELDS, seed_rows)}
@@ -78,10 +81,10 @@ def main() -> int:
     except (OSError, ValueError) as exc: print(f"m5_tenth_buildings: FAIL\n  - {exc}"); return 1
     if args.write:
         for path, content in expected.items(): path.write_text(content, encoding="utf-8-sig", newline="")
-        print("m5_tenth_buildings: wrote 12 families and 120 placements"); return 0
+        print("m5_tenth_buildings: wrote 12 families and 117 runtime-valid placements"); return 0
     stale = [path.relative_to(ROOT) for path, content in expected.items() if path.read_text(encoding="utf-8-sig") != content]
     if stale: print(f"m5_tenth_buildings: FAIL\n  - stale or missing {stale}"); return 1
-    print("m5_tenth_buildings: PASS (12 families; 120 placements)"); return 0
+    print("m5_tenth_buildings: PASS (12 families; 117 runtime-valid placements)"); return 0
 
 
 if __name__ == "__main__": raise SystemExit(main())

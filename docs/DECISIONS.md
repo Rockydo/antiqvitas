@@ -3228,3 +3228,26 @@ only as a campaign-management proxy, not an ethnic reconstruction.
 The validator caps an island polity at 25 locations and requires all 51 culture,
 government, standard, agenda, capital, and localization contracts. This is an
 anti-regression rule for the game map, not a historical size measurement.
+
+## 2026-07-26 - Regional mechanics use additive reviewed overlays
+
+Britain and Hibernia do not receive 51 copied government definitions. A compact
+regional-overlay ledger adds only the privileges and laws supported by each
+reviewed layer to the existing polity government rows: the full island frame,
+southern/eastern oppida, Channel exchange, and Hibernian households. The M6
+generator validates every referenced tag and key before merging the overlays.
+This keeps shared mechanics auditable while allowing later polity-specific
+exceptions without hiding them in generated script.
+
+Capital economy seeds use the same pattern: one reviewed row per capital names
+exactly two families, then a shared expander feeds the building validator, start
+manager, and scale audit. Downstream tools may not read the older flat seed CSV
+directly. This decision fixed a gap where a new bundle passed its own validator
+but was absent from the emitted bookmark.
+
+Fresh-bookmark behavior is part of the building contract. Town setups cannot
+contain `CITY_ONLY_FAMILIES`, opening setup levels remain at the locally
+observed Age-1 cap of one, and runtime-rejected water/port locations are pinned
+against later bulk seeding. An explicitly sourced reservoir site may receive an
+exact location exception when inherited EU5 river/lake geometry cannot express
+the ancient hydraulic landscape.

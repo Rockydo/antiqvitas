@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 FAMILIES = ROOT / "docs/m5/regional_building_families.csv"
 SEEDS = ROOT / "docs/m5/regional_building_seeds.csv"
 PROFILES = ROOT / "docs/m5/roman_economy_profiles.csv"
+URBAN_NODES = ROOT / "docs/m5/urban_nodes.csv"
 FAMILY_FIELDS = (
     "key", "name", "description", "category", "pop_type", "employment_size",
     "build_time", "modifier", "maintenance", "goods", "source", "confidence",
@@ -24,6 +25,7 @@ FAMILY_FIELDS = (
 )
 SEED_FIELDS = ("key", "family", "location", "macro", "source", "confidence", "note")
 PROFILE_FIELDS = ("profile", "name", "locations", "families", "source", "confidence", "note")
+URBAN_FIELDS = ("key", "location", "profile", "source", "confidence", "note")
 SOURCE = "P12.1;P12.3;CAH-XI;MET-ROMAN-HOUSING;MET-ROMAN-TRADE"
 NOTE = "Roman provincial market-scale portfolio proxy; not a named workshop, owner, quantified output, or excavated plan."
 
@@ -92,6 +94,13 @@ def outputs() -> dict[Path, str]:
     family_rows[family_at:family_at] = additions
 
     profiles = read(PROFILES, PROFILE_FIELDS)
+    town_locations = {
+        row["location"] for row in read(URBAN_NODES, URBAN_FIELDS) if row["profile"] == "town"
+    }
+    city_only_slugs = {
+        "forum_basilica", "horrea_complex", "aqueduct_distribution",
+        "thermae_complex", "insulae_quarter", "temple_precinct", "collegia_hall",
+    }
     slugs = {row[0] for row in FAMILIES_TO_ADD}
     seed_rows = [row for row in read(SEEDS, SEED_FIELDS) if not row["key"].startswith("reg_roman_economy_")]
     seed_at = next(
@@ -110,6 +119,8 @@ def outputs() -> dict[Path, str]:
                 "Middle East" if location in {"antioch", "ayasuluk"} else "Europe"
             )
             for slug in sorted(selected):
+                if location in town_locations and slug in city_only_slugs:
+                    continue
                 seed_additions.append(
                     {
                         "key": f"reg_roman_economy_{profile['profile']}_{location}_{slug}",

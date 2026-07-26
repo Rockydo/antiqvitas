@@ -12,11 +12,10 @@ from __future__ import annotations
 import csv
 from pathlib import Path
 
-from m5_regional_buildings import PRODUCTION_RECIPES
+from m5_regional_buildings import PRODUCTION_RECIPES, expanded_seed_rows
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SEEDS = ROOT / "docs/m5/regional_building_seeds.csv"
 SPECIALS = ROOT / "docs/m5/special_buildings.csv"
 FORTS = ROOT / "docs/m7/forts.csv"
 
@@ -27,7 +26,7 @@ def rows(path: Path) -> list[dict[str, str]]:
 
 
 def main() -> int:
-	seeds, specials, forts = rows(SEEDS), rows(SPECIALS), rows(FORTS)
+	seeds, specials, forts = expanded_seed_rows(), rows(SPECIALS), rows(FORTS)
 	productive = sum(row.get("family") in PRODUCTION_RECIPES for row in seeds)
 	scalable = len(seeds)  # Regional definitions are is_special=no with guild_max_level.
 	total = len(seeds) + len(specials) + len(forts)

@@ -24,6 +24,8 @@ from extract_vanilla import tokenize
 ROOT = Path(__file__).resolve().parents[1]
 FAMILIES = ROOT / "docs/m5/regional_building_families.csv"
 SEEDS = ROOT / "docs/m5/regional_building_seeds.csv"
+REGIONAL_SEED_BUNDLES = ROOT / "docs/m5/s2_britain_ireland_building_seeds.csv"
+URBAN_NODES = ROOT / "docs/m5/urban_nodes.csv"
 OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
 GOODS = ROOT / "docs/vanilla_symbols/good.json"
@@ -45,6 +47,7 @@ FAMILY_FIELDS = (
     "note", "icon_subject",
 )
 SEED_FIELDS = ("key", "family", "location", "macro", "source", "confidence", "note")
+BUNDLE_FIELDS = ("key", "families", "location", "macro", "source", "confidence", "note")
 CATEGORIES = {
     "basic_industry_category", "cultural_category", "government_category",
     "consumer_goods_category", "defense_category", "infrastructure_category",
@@ -320,6 +323,10 @@ WATER_OR_PORT_FAMILIES = {
     "antq_reg_oarwright", "antq_reg_sailmaker", "antq_reg_sail_needle_shop",
     "antq_reg_pulley_workshop", "antq_reg_river_port",
 }
+# Fresh-bookmark probes on installed build 24187685 reject these engine-map
+# points for coastal/river-only potential. Keep the observed contract here so
+# later bulk seed passes cannot silently restore invalid maritime placements.
+RUNTIME_NON_WATER_LOCATIONS = {"damascus", "jerusalem", "milano"}
 ROMAN_ECONOMY_FAMILIES = {
     "antq_reg_villa_rustica", "antq_reg_tabernae_row", "antq_reg_forum_basilica",
     "antq_reg_horrea_complex", "antq_reg_annona_bakery", "antq_reg_aqueduct_distribution",
@@ -409,9 +416,32 @@ def good_prices() -> dict[str, float]:
     return result
 
 
+def expanded_seed_rows() -> list[dict[str, str]]:
+    """Return every regional seed, including compact reviewed regional bundles."""
+    seeds = csv_rows(SEEDS, SEED_FIELDS)
+    for bundle in csv_rows(REGIONAL_SEED_BUNDLES, BUNDLE_FIELDS):
+        bundled_families = tuple(part.strip() for part in bundle["families"].split("|"))
+        if len(bundled_families) != 2 or any(not family for family in bundled_families):
+            raise ValueError(
+                f"{REGIONAL_SEED_BUNDLES.relative_to(ROOT)} bundle {bundle['key']} "
+                "must contain exactly two families"
+            )
+        for index, family in enumerate(bundled_families, start=1):
+            seeds.append({
+                "key": f"reg_{bundle['key']}_{index}",
+                "family": family,
+                "location": bundle["location"],
+                "macro": bundle["macro"],
+                "source": bundle["source"],
+                "confidence": bundle["confidence"],
+                "note": bundle["note"],
+            })
+    return seeds
+
+
 def load() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     families = csv_rows(FAMILIES, FAMILY_FIELDS)
-    seeds = csv_rows(SEEDS, SEED_FIELDS)
+    seeds = expanded_seed_rows()
     goods = set(json.loads(GOODS.read_text(encoding="utf-8-sig")))
     with CUSTOM_GOODS.open(encoding="utf-8-sig", newline="") as handle:
         goods.update((row.get("key") or "").strip() for row in csv.DictReader(handle))
@@ -490,6 +520,13 @@ def load() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     seen_pairs: set[tuple[str, str]] = set()
     used: set[str] = set()
     macro_counts = {macro: 0 for macro in MACROS}
+    urban_profiles = {
+        row["location"]: row["profile"]
+        for row in csv_rows(
+            URBAN_NODES,
+            ("key", "location", "profile", "source", "confidence", "note"),
+        )
+    }
     for number, row in enumerate(seeds, start=2):
         prefix = f"{SEEDS.relative_to(ROOT)}:{number}"
         if any(not row[field] for field in SEED_FIELDS):
@@ -503,6 +540,13 @@ def load() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
             failures.append(f"{prefix}: duplicate family/location placement {pair}")
         if row["family"] not in family_keys:
             failures.append(f"{prefix}: unknown family {row['family']}")
+        if row["family"] in CITY_ONLY_FAMILIES and urban_profiles.get(row["location"]) == "town":
+            failures.append(f"{prefix}: city-only family is seeded at a town-profile location")
+        if (
+            row["family"] in WATER_OR_PORT_FAMILIES
+            and row["location"] in RUNTIME_NON_WATER_LOCATIONS
+        ):
+            failures.append(f"{prefix}: water/port family is invalid at this runtime-checked location")
         if row["location"] not in locations or row["location"] not in regions:
             failures.append(f"{prefix}: location is unknown or uncontrolled at AD 1")
         if row["macro"] not in MACROS:

@@ -24,6 +24,13 @@ HIERARCHY = ROOT / "docs/vanilla_symbols/geography_hierarchy.json"
 LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
 TAG_PROFILES = ROOT / "docs/m4/tag_profiles.csv"
 GOVERNMENTS = ROOT / "docs/m6/governments.csv"
+GOVERNMENT_OVERLAYS = ROOT / "docs/m6/regional_government_overlays.csv"
+PRIVILEGES = ROOT / "docs/m6/privileges.csv"
+LAWS = ROOT / "docs/m6/laws.csv"
+PRIVILEGE_ICONS = ROOT / "docs/m11/direct_privilege_icons.csv"
+BUILDING_BUNDLES = ROOT / "docs/m5/s2_britain_ireland_building_seeds.csv"
+UNITS = ROOT / "docs/m7/units.csv"
+UNIT_ART = ROOT / "docs/m12/unit_art_ledger.csv"
 COAS = ROOT / "docs/m11/core_coas.csv"
 HISTORIES = ROOT / "docs/m12/country_history_agendas.csv"
 LEDGER = ROOT / "docs/m12/britain_ireland_granularity.csv"
@@ -42,6 +49,20 @@ IRELAND = (
     "VEL", "IVN", "USD", "IBG", "CND", "MNP", "CCI", "EBL",
 )
 REQUIRED = BRITAIN + IRELAND
+REQUIRED_PRIVILEGES = {
+    "antq_oppidum_councils", "antq_hillfort_retinues",
+    "antq_channel_exchange_compacts", "antq_hibernian_cattle_compacts",
+    "antq_hibernian_maritime_followings", "antq_hibernian_ritual_specialists",
+}
+REQUIRED_LAWS = {
+    "antq_british_landholding_law", "antq_british_muster_law",
+    "antq_british_ritual_law", "antq_hibernian_cattle_law",
+    "antq_hibernian_seaway_law", "antq_hibernian_ritual_law",
+}
+REQUIRED_UNITS = {
+    "antq_british_hillfort_spearmen", "antq_northern_british_skirmishers",
+    "antq_hibernian_javelin_bands", "antq_hibernian_coastal_warbands",
+}
 FORBIDDEN_NAME = re.compile(
     r"\b(?:societies|brittonic societies|caledonian societies|ulaid|land of)\b",
     re.IGNORECASE,
@@ -195,6 +216,51 @@ def expected_rows() -> tuple[list[dict[str, str]], list[str]]:
             "confidence": row["confidence"],
         })
 
+    overlay_rows = keyed(GOVERNMENT_OVERLAYS, "key")
+    expected_overlays = {
+        "antq_britain_hillfort_layer", "antq_southern_britain_oppida",
+        "antq_british_channel_exchange", "antq_hibernian_household_layer",
+    }
+    if set(overlay_rows) != expected_overlays:
+        failures.append("regional government overlay set is incomplete")
+    overlay_tags = set()
+    for row in overlay_rows.values():
+        overlay_tags.update(row["tags"].split("|"))
+    if overlay_tags != set(REQUIRED):
+        failures.append("regional government overlays do not cover exactly all 51 frames")
+    privilege_rows = keyed(PRIVILEGES, "key")
+    law_rows = keyed(LAWS, "law")
+    icon_rows = keyed(PRIVILEGE_ICONS, "key")
+    if not REQUIRED_PRIVILEGES <= set(privilege_rows):
+        failures.append("Britain/Ireland privilege definitions are incomplete")
+    if not REQUIRED_PRIVILEGES <= set(icon_rows):
+        failures.append("Britain/Ireland direct privilege icons are incomplete")
+    if not REQUIRED_LAWS <= set(law_rows):
+        failures.append("Britain/Ireland law definitions are incomplete")
+
+    building_rows = keyed(BUILDING_BUNDLES, "key")
+    building_capitals = {row["location"] for row in building_rows.values()}
+    expected_capitals = {roster[tag]["map_capital"] for tag in REQUIRED}
+    if building_capitals != expected_capitals or len(building_rows) != len(REQUIRED):
+        failures.append("every island opening capital must have one two-family building bundle")
+    for row in building_rows.values():
+        if len(row["families"].split("|")) != 2:
+            failures.append(f"{row['key']} does not provide exactly two building seeds")
+
+    unit_rows = keyed(UNITS, "key")
+    unit_art_rows = keyed(UNIT_ART, "key")
+    if not REQUIRED_UNITS <= set(unit_rows):
+        failures.append("Britain/Ireland regional unit definitions are incomplete")
+    if not REQUIRED_UNITS <= set(unit_art_rows):
+        failures.append("Britain/Ireland direct recruitment art is incomplete")
+    if not set(BRITAIN) <= set(unit_rows.get(
+        "antq_british_hillfort_spearmen", {}
+    ).get("tags", "").split("|")):
+        failures.append("British hillfort spearmen do not cover all British frames")
+    for key in ("antq_hibernian_javelin_bands", "antq_hibernian_coastal_warbands"):
+        if not set(IRELAND) <= set(unit_rows.get(key, {}).get("tags", "").split("|")):
+            failures.append(f"{key} does not cover all Hibernian frames")
+
     for language in LANGUAGES:
         path = (
             ROOT
@@ -251,6 +317,7 @@ def main() -> int:
             "s2_britain_ireland_granularity: PASS "
             f"({len(BRITAIN)} British + {len(IRELAND)} Hibernian frames; "
             f"{sum(counts)} owned entries; largest {max(counts)}; "
+            "6 privileges; 6 laws; 102 capital seeds; 4 direct-art units; "
             "11-client localization)"
         )
         return 0

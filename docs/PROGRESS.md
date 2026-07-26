@@ -6806,5 +6806,18 @@ reviewed 128px BC7 DDS.
   audit. The complete 95-check validation suite passes after regenerating the
   dependent start manager, location-name layers, rank presentation, content
   census, and regression reports.
-- Regional privileges, laws, settlement seeds, and differentiated units remain
-  the active follow-on before the Britain/Ireland parent task closes.
+- Closed the regional follow-on with six direct-art privileges, six regional
+  laws, four direct-art unit types, and two productive/craft seeds at every one
+  of the 51 opening capitals. Compact source ledgers expand deterministically
+  into the government and start-manager files.
+- The first fresh bookmark caught city-only town-template entries, fifteen
+  inland maritime placements, one town-profile horrea, one over-cap opening
+  guild level, and three excessive sailor-efficiency modifiers that menu smoke
+  could not exercise. Generator guards now pin all four engine contracts; the
+  repeated bookmark reports zero building-placement, cap, or efficiency errors.
+- Focused selector evidence resolved Velabri, Novantae, and Epidii with distinct
+  standards and profiles. The final full 95-check suite passes, and paired
+  vanilla/mod smoke reports zero mod-only error lines.
+- The same bookmark isolated its remaining script-system diagnostics to two
+  vanilla parliament files. Their exact 2,499/356 split is now an explicit
+  S2-P4 acceptance target; Germania/Baltic is the next regional task.

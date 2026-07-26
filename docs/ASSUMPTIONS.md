@@ -4631,3 +4631,30 @@ proxies for Ptolemaic towns or central places, not asserted royal seats.
 
 Sources: `PTO-GEO-II1`; `PTO-GEO-II2`; `DARCY-IRE`; `MANN-BRI`; row-level
 contracts in `docs/world_1ad/SOURCES.md`. [contested political geography]
+
+## 2026-07-26 - Island mechanical layers are bounded material proxies
+
+British hillfort and oppidum mechanics represent overlapping settlement,
+storage, assembly, exchange, and retinue practices; they do not imply one
+island-wide constitutional ladder or a permanent garrison in every enclosed
+site. Historic England's hillfort overview emphasizes variation and a long
+chronology, so the southern oppidum layer is narrower than the shared hillfort
+layer. The Channel compact is limited to reviewed southern/eastern frames and
+does not turn every British polity into a client of Rome. Sources:
+`HE-HILLFORT`; `PTO-GEO-II2`; `MANN-BRI`; row contracts in
+`docs/m6/regional_government_overlays.csv`. [bounded gameplay abstraction]
+
+Hibernian cattle, seaway, maritime-following, and ritual-specialist mechanics
+are cautious pastoral/exchange/ritual abstractions from the Iron Age material
+record and later geographic testimony. They are not a back-projection of a
+codified medieval Irish law system, a universal druid hierarchy, named
+kingdoms, or permanent raiding institutions into AD 1. Sources:
+`NMI-IRON-AGE`; `PTO-GEO-II1`; `DARCY-IRE`; row contracts in
+`docs/m6/privileges.csv` and `docs/m6/laws.csv`. [contested social abstraction]
+
+The two opening buildings at each island capital model the wider central-place
+and hinterland economy, not excavated structures at the exact EU5 location
+point or quantified output. Every placement is therefore `contested` even when
+the family itself is archaeologically secure. Sources: `HE-HILLFORT`;
+`NMI-IRON-AGE`; `P12.1`; `P12.3`; rows in
+`docs/m5/s2_britain_ireland_building_seeds.csv`. [bounded economy abstraction]

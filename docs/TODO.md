@@ -107,6 +107,13 @@ and focused runtime probe all pass.
     Existing namespaced ancient content remains active (24 privileges, 23 laws,
     19 reforms), but cabinet and parliament replacements belong to the deep
     S2-P4 rebuild and must be present before the UI acceptance probe.
+  - [ ] Eliminate the fresh-bookmark parliament compiler failures before the
+    replacement UI probe. The 2026-07-26 Britain/Hibernia bookmark isolated all
+    2,855 `Script system error!` entries to
+    `06_peasants_estate_parliament_issues.txt` (2,499) and
+    `07_expansion_parliament_issues.txt` (356): optionalize/remove the invalid
+    `government_type` links through an exact checked overlay, then require zero
+    script-system errors on a fresh selector initialization.
   - Acceptance: installed-union report has zero unapproved visible vanilla keys;
     Rome and six regional probes show only ancient systems.
 
@@ -193,17 +200,27 @@ and focused runtime probe all pass.
   - Acceptance: no single residual Arabian polity spans the peninsula; each new
     frame has sourced ownership and content; Arabia runtime map/content probe passes.
 
-- [ ] Rebuild Britain and Ireland at tribal and cultural resolution.
+- [x] Rebuild Britain and Ireland at tribal and cultural resolution.
   - [x] Replace the two island macro-polities with 35 British and 16
     Hibernian people-polity frames. All 329 ownable island locations are
     assigned, the largest frame has 22 locations, and every frame has a
     distinct culture, owned capital, government package, period-inspired
     standard, opening agenda, and eleven-client localization. A permanent
     `s2_britain_ireland_granularity.py` gate pins the complete contract.
-  - [ ] Add the regional mechanical layer: oppidum and client-politics
-    privileges, hillfort/assembly and landholding laws, Hibernian
-    trade/raiding/ritual adaptations, differentiated regional units, and
-    productive settlement seeds at every opening capital.
+  - [x] Add the regional mechanical layer. Six direct-art privileges now
+    distinguish oppidum councils, hillfort retinues, Channel exchange,
+    Hibernian cattle compacts, maritime followings, and ritual specialists;
+    six laws cover British landholding/muster/ritual and Hibernian
+    cattle/seaway/ritual practice. Four regional unit types have unique
+    recruitment art, and all 51 opening capitals receive two bounded
+    production/storage/craft seeds (102 placements).
+  - [x] Close the four rapid regional surfaces: the fresh selector resolved
+    Velabri, Novantae, and Epidii with distinct names, standards, capitals,
+    cultures, and rulers; the government-overlay validator covers all 51
+    frames; the start manager mounts all 102 capital seeds; and the unit/asset
+    validators mount all four direct-art regional unit contracts. The repeated
+    fresh bookmark reports zero invalid building, over-cap, or efficiency
+    diagnostics.
   - Replace Brittonic and Caledonian macro-polities with attested or carefully
     bounded tribal frames; expand Hibernian peoples and cultures. Treat Ptolemy
     and later Roman testimony as dated evidence with explicit uncertainty.
@@ -340,6 +357,8 @@ and focused runtime probe all pass.
     assemblies, clans and retinues; and equivalent regional structures.
   - Parliament/council issues, agendas, seats, debates, cabinet offices/actions,
     appointments, costs, and outcomes must be ancient and profile-aware.
+  - First repair the exact two mounted vanilla parliament files identified by
+    the fresh-bookmark compiler census; menu smoke alone does not exercise them.
   - Acceptance: deep distinct panels for every major profile and coherent regional
     fallback packages; zero vanilla object or text leakage.
 

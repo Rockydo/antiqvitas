@@ -8,11 +8,12 @@ import csv
 from io import StringIO
 from pathlib import Path
 
-from m5_regional_buildings import PRODUCTION_RECIPES
+from m5_regional_buildings import CITY_ONLY_FAMILIES, PRODUCTION_RECIPES
 
 
 ROOT = Path(__file__).resolve().parents[1]
 PROFILES = ROOT / "docs/m5/roman_economy_profiles.csv"
+URBAN_NODES = ROOT / "docs/m5/urban_nodes.csv"
 FAMILIES = ROOT / "docs/m5/regional_building_families.csv"
 SEEDS = ROOT / "docs/m5/regional_building_seeds.csv"
 GOODS = ROOT / "docs/m5/custom_goods.csv"
@@ -76,6 +77,9 @@ def rows(path: Path) -> list[dict[str, str]]:
 def expected() -> tuple[str, str]:
     failures: list[str] = []
     profiles = rows(PROFILES)
+    town_locations = {
+        row["location"] for row in rows(URBAN_NODES) if row["profile"] == "town"
+    }
     families = {row["key"]: row for row in rows(FAMILIES)}
     owners = {row["location"]: row["tag"] for row in rows(OWNERSHIP)}
     seeds = [row for row in rows(SEEDS) if row["key"].startswith("reg_roman_economy_")]
@@ -128,7 +132,12 @@ def expected() -> tuple[str, str]:
                 f"{profile['profile']}: insufficient role/input diversity "
                 f"({len(categories)} categories, {len(inputs)} inputs)"
             )
-        expected_pairs = {(location, key) for location in locations for key in keys}
+        expected_pairs = {
+            (location, key)
+            for location in locations
+            for key in keys
+            if not (location in town_locations and key in CITY_ONLY_FAMILIES)
+        }
         actual_pairs = {
             (row["location"], row["family"])
             for row in seeds

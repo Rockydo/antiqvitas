@@ -18,6 +18,7 @@ antq_irrigation_network = {
 		OR = {
 			has_river = yes
 			is_adjacent_to_lake = yes
+			this = location:anuradhapura
 		}
 	}
 	modifier = {
@@ -51,7 +52,7 @@ antq_maritime_harbor = {
 	}
 	modifier = {
 		local_repair_speed = 0.025
-		local_sailors = 0.015
+		local_sailors = 0.012
 		local_merchant_capacity = 0.02
 	}
 	unique_production_methods = {

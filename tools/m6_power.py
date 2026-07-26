@@ -34,6 +34,9 @@ GOV_FIELDS = (
     "regency", "start_regency_date", "end_regency_date", "reform", "privileges", "laws", "societal_values",
     "source", "confidence", "note",
 )
+REGIONAL_GOV_FIELDS = (
+    "key", "tags", "privileges", "laws", "source", "confidence", "note",
+)
 PRIV_FIELDS = ("key", "estate", "name", "description", "modifiers", "source", "confidence", "note")
 LAW_FIELDS = (
     "law", "law_category", "law_gov_group", "name", "description", "option", "option_name",
@@ -131,6 +134,9 @@ def load_power_data() -> PowerData:
     dynasties = read_rows(DATA / "dynasties.csv", DYN_FIELDS)
     characters = read_rows(DATA / "characters.csv", CHAR_FIELDS)
     governments_rows = read_rows(DATA / "governments.csv", GOV_FIELDS)
+    regional_government_rows = read_rows(
+        DATA / "regional_government_overlays.csv", REGIONAL_GOV_FIELDS
+    )
     ruler_terms = read_rows(DATA / "ruler_terms.csv", TERM_FIELDS)
     regnal_histories = read_rows(DATA / "regnal_histories.csv", REGNAL_HISTORY_FIELDS)
     privileges = read_rows(DATA / "privileges.csv", PRIV_FIELDS)
@@ -250,6 +256,76 @@ def load_power_data() -> PowerData:
                 failures.append(f"law {row['law']} uses unharvested modifier {key}")
         if row["confidence"] not in {"secure", "contested"}:
             failures.append(f"law {row['law']} has invalid confidence {row['confidence']}")
+
+    government_rows_by_tag = {row["design_tag"]: row.copy() for row in governments_rows}
+    if len(government_rows_by_tag) != len(governments_rows):
+        failures.append("governments.csv contains duplicate design tags")
+    overlay_keys: set[str] = set()
+    for row in regional_government_rows:
+        if any(not row[field] for field in REGIONAL_GOV_FIELDS):
+            failures.append("regional_government_overlays.csv contains a blank required field")
+            continue
+        try:
+            require_token(row["key"], "regional government overlay key")
+            overlay_tags = pipe_values(row["tags"], f"regional overlay {row['key']} tags")
+            overlay_privileges = pipe_values(
+                row["privileges"], f"regional overlay {row['key']} privileges"
+            )
+            overlay_laws = assignments(row["laws"], f"regional overlay {row['key']} laws")
+        except ValueError as exc:
+            failures.append(str(exc))
+            continue
+        if row["key"] in overlay_keys:
+            failures.append(f"duplicate regional government overlay: {row['key']}")
+        overlay_keys.add(row["key"])
+        if row["confidence"] not in {"secure", "contested"}:
+            failures.append(
+                f"regional government overlay {row['key']} has invalid confidence "
+                f"{row['confidence']}"
+            )
+        for privilege in overlay_privileges:
+            if privilege not in privilege_keys:
+                failures.append(
+                    f"regional government overlay {row['key']} references unknown privilege "
+                    f"{privilege}"
+                )
+        for law, option in overlay_laws:
+            if (law, option) not in law_options:
+                failures.append(
+                    f"regional government overlay {row['key']} references unknown law option "
+                    f"{law}={option}"
+                )
+        for design_tag in overlay_tags:
+            if design_tag not in government_rows_by_tag:
+                failures.append(
+                    f"regional government overlay {row['key']} references unknown profile "
+                    f"{design_tag}"
+                )
+                continue
+            government = government_rows_by_tag[design_tag]
+            existing_privileges = list(pipe_values(
+                government["privileges"], f"government {design_tag} privileges"
+            ))
+            for privilege in overlay_privileges:
+                if privilege not in existing_privileges:
+                    existing_privileges.append(privilege)
+            existing_laws = dict(assignments(
+                government["laws"], f"government {design_tag} laws"
+            ))
+            for law, option in overlay_laws:
+                if law in existing_laws and existing_laws[law] != option:
+                    failures.append(
+                        f"regional government overlay {row['key']} conflicts on {design_tag} "
+                        f"law {law}"
+                    )
+                existing_laws[law] = option
+            government["privileges"] = "|".join(existing_privileges)
+            government["laws"] = "|".join(
+                f"{law}={option}" for law, option in existing_laws.items()
+            )
+            government["source"] = f"{government['source']};{row['source']}"
+            government["note"] = f"{government['note']} Regional layer: {row['note']}"
+    governments_rows = list(government_rows_by_tag.values())
 
     governments: dict[str, dict[str, str]] = {}
     for row in governments_rows:

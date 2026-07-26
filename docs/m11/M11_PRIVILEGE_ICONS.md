@@ -63,14 +63,24 @@ court, ruler, chief, person, polity, town, building, map, battle, constitutional
 formula, or seal impression. The reviewed portrait contact sheet is
 [here](DIRECT_PRIVILEGE_ICON_BATCH_06.png).
 
-## Seventh and final South Asian, Lankan, and Judean batch
+## Seventh South Asian, Lankan, and Judean batch
 
-The final five icons distinguish northwestern Indian regional and urban
+These five icons distinguish northwestern Indian regional and urban
 households, a leading-clan household, a deliberately non-ritual Buddhist
 monastic material grouping, and an ancient Judean priesthood material grouping.
 They remain uninscribed object studies rather than depictions of a satrap,
 Greek city elite, assembly, monk, Buddha, priest, Temple, person, polity,
 building, map, battle, constitutional formula, or seal impression. The reviewed
-portrait contact sheet is [here](DIRECT_PRIVILEGE_ICON_BATCH_07.png). With this
-batch, each of the 24 ANTIQVITAS M6 privilege keys has its own source, PNG
-master, and native-contract DDS; no privilege UI fallback remains.
+portrait contact sheet is [here](DIRECT_PRIVILEGE_ICON_BATCH_07.png). This batch
+closed the original 24-key M6 roster with one source, PNG master, and
+native-contract DDS per privilege.
+
+## Eighth Britain and Hibernia batch
+
+Six new direct icons distinguish southern oppidum coordination, hillfort
+retinues, cross-Channel exchange, Hibernian pastoral compacts, maritime
+followings, and ritual specialists. The archaeological still lifes remain
+non-reconstructive: they depict no people, named polity, constitution, map,
+ritual performance, raid, or later Irish legal institution. Their reviewed
+portrait contact sheet is [here](DIRECT_PRIVILEGE_ICON_BATCH_08.png). All 30
+current privilege keys now have direct art; no privilege UI fallback remains.

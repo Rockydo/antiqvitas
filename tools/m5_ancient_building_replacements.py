@@ -137,6 +137,7 @@ def definition(rows: list[dict[str, str]]) -> str:
             lines.extend((
                 "\tlocation_potential = {", "\t\tOR = {",
                 "\t\t\thas_river = yes", "\t\t\tis_adjacent_to_lake = yes",
+                "\t\t\tthis = location:anuradhapura",
                 "\t\t}", "\t}",
             ))
         elif potential == "port":
