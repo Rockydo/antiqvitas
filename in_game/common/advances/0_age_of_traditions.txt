@@ -92,16 +92,15 @@ subjects_advance = {
 
 taxation_advance = {
 	age = age_1_traditions
-	icon = genoese_banking_traditions
-	research_cost = 2.5
+	icon = antq_advance_provincial_census
+	depth = 0
+	research_cost = 2.0
 	enable_taxation = yes
 	has_stability_investment = yes
-	
-	unlock_law = coin_laws
-	
-	requires = codified_laws
-	potential = { always = no } # M8 disables vanilla advancement
-}
+	starting_technology_level = 1
+	potential = { always = yes }
+	ai_weight = { add = 0 }
+} # ANTIQVITAS engine adapter: ancient tribute and census capability
 
 state_administration_advance = {
 	age = age_1_traditions

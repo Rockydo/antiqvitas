@@ -25,6 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ADVANCES = ROOT / "in_game/common/advances"
 INSTITUTIONS = ROOT / "in_game/common/institution"
 SCRIPTED_TRIGGERS = ROOT / "in_game/common/scripted_triggers"
+AUTO_MODIFIERS = ROOT / "in_game/common/auto_modifiers"
 STATIC_MODIFIERS = ROOT / "main_menu/common/static_modifiers"
 LOC_ROOT = ROOT / "main_menu/localization"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
@@ -97,6 +98,18 @@ START_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
     # Polygyny is a policy inside the religious marriage_law category; it is
     # not itself granted by a vanilla advance.  Unlock its parent category.
     "antq_civic_associations": (("unlock_law", "marriage_law"),),
+}
+
+# Engine capabilities that the disabled vanilla traditions tree used to grant.
+# These must live on a universally owned Age-I root or every AD 1 state has zero
+# tax base and the economy panel immediately declares it bankrupt.  Provincial
+# Census is the historical surface; `enable_taxation` and
+# `has_stability_investment` are locally verified engine switches.
+START_CAPABILITIES: dict[str, tuple[tuple[str, str], ...]] = {
+    "antq_provincial_census": (
+        ("enable_taxation", "yes"),
+        ("has_stability_investment", "yes"),
+    ),
 }
 
 # Direct ancient-system bridges.  Start reforms and privileges sit on universal
@@ -911,7 +924,11 @@ def direct_advance_icons(records: tuple[Advance, ...]) -> dict[str, str]:
 def technology_level(row: dict[str, str]) -> int:
     """Tune the plan's three starting tiers from the checked M3 polity ledger."""
     if row["tag"] in CORE_TAGS:
-        return 4
+        # Level 4 owns every Age-I node because the generated tree caps
+        # `starting_technology_level` at four.  That left Rome, Han, and Arsacid
+        # Iran with nothing researchable until the next dated age.  Level 3 keeps
+        # their advanced baseline while leaving the final Age-I branches open.
+        return 3
     if row["kind"] in {"country", "subject"} and row["tier"] in {"1", "2"}:
         return 3
     if row["kind"] == "sop":
@@ -925,7 +942,7 @@ def technology_tier_summary() -> tuple[int, int, int, int]:
     counts = {level: 0 for level in range(1, 5)}
     for row in rows:
         counts[technology_level(row)] += 1
-    if counts[4] != 3 or not all(counts[level] for level in (1, 2, 3)):
+    if counts[4] != 0 or not all(counts[level] for level in (1, 2, 3)):
         raise ValueError("M8 starting-technology policy no longer partitions the M3 roster")
     return tuple(counts[level] for level in range(1, 5))
 
@@ -968,6 +985,17 @@ def validate(records: tuple[Advance, ...]) -> None:
         failures.append(
             "M8 unlock mapping has unknown advances: " + ", ".join(unknown_unlock_keys)
         )
+    unknown_capability_keys = sorted(set(START_CAPABILITIES) - key_set)
+    if unknown_capability_keys:
+        failures.append(
+            "M8 start-capability mapping has unknown advances: "
+            + ", ".join(unknown_capability_keys)
+        )
+    if START_CAPABILITIES.get("antq_provincial_census") != (
+        ("enable_taxation", "yes"),
+        ("has_stability_investment", "yes"),
+    ):
+        failures.append("the universally held Provincial Census lost its economy capabilities")
     unlock_fields = {
         field for entries in unlocks.values() for field, _target in entries
     }
@@ -1122,6 +1150,8 @@ def advance_script(records: tuple[Advance, ...]) -> str:
         lines.extend(advance_potential(record))
         for field, value in record.effects:
             lines.append(f"\t{field} = {value}")
+        for field, value in START_CAPABILITIES.get(record.key, ()):
+            lines.append(f"\t{field} = {value}")
         for field, target in unlocks.get(record.key, ()):
             lines.append(f"\t{field} = {target}")
         if record.age_index == 0:
@@ -1226,12 +1256,91 @@ def disabled_content(path: Path, field: re.Pattern[str], field_name: str, kind: 
     return "\n".join(rendered) + "\n"
 
 
+def replace_top_level_definition(text: str, key: str, replacement: str) -> str:
+    """Replace one preserved registry definition without regexing nested script."""
+    lines = text.splitlines()
+    rendered: list[str] = []
+    depth = 0
+    replacing = False
+    found = False
+    for line in lines:
+        code = line.split("#", 1)[0]
+        delta = brace_delta(line)
+        if not replacing and depth == 0 and TOP_LEVEL.match(code):
+            current = code.split("=", 1)[0].strip()
+            if current == key:
+                rendered.extend(replacement.rstrip().splitlines())
+                replacing = True
+                found = True
+                depth += delta
+                if depth == 0:
+                    replacing = False
+                continue
+        if replacing:
+            depth += delta
+            if depth == 0:
+                replacing = False
+            continue
+        rendered.append(line)
+        depth += delta
+    if depth != 0 or replacing:
+        raise ValueError(f"unable to replace top-level definition {key}")
+    if not found:
+        raise ValueError(f"installed registry lost required compatibility key {key}")
+    return "\n".join(rendered) + "\n"
+
+
 def disabled_advance_content(path: Path) -> str:
     """Keep every vanilla advance key valid but make it permanently unavailable."""
-    return neutralize_references(
+    rendered = neutralize_references(
         disabled_content(path, POTENTIAL, "potential", "advancement", True),
         remap_effects=True,
     )
+    if path.name == "0_age_of_traditions.txt":
+        # Preserve the installed modifier-bearing compatibility key alongside
+        # the custom census root. The opening economy has no functioning market
+        # yet, so day-one tax values cannot independently prove which key the
+        # 1.3.11 initialization path consumes. Keeping both anciently presented
+        # shapes is safer than silently removing a hardcoded economy contract.
+        rendered = replace_top_level_definition(
+            rendered,
+            "taxation_advance",
+            """taxation_advance = {
+\tage = age_1_traditions
+\ticon = antq_advance_provincial_census
+\tdepth = 0
+\tresearch_cost = 2.0
+\tenable_taxation = yes
+\thas_stability_investment = yes
+\tstarting_technology_level = 1
+\tpotential = { always = yes }
+\tai_weight = { add = 0 }
+} # ANTIQVITAS engine adapter: ancient tribute and census capability""",
+        )
+    return rendered
+
+
+def pre_market_revenue_script() -> str:
+    """Bridge the engine's unsafe no-market startup interval without seeding markets."""
+    return """# Generated by tools/m8_knowledge.py --write.
+# EU5 1.3.11 crashes when AD 1 markets are created instantly or pre-seeded.
+# Automatic market construction is retained; this in-kind revenue ends as soon
+# as a country's capital gains market access.
+antq_pre_market_in_kind_revenue = {
+\tpotential_trigger = {
+\t\tcapital ?= {
+\t\t\tmarket_access <= 0
+\t\t}
+\t}
+\tscales_with = {
+\t\tvalue = country_economical_base
+\t\tdivide = 4
+\t\tmin = 5
+\t\tmax = 200
+\t}
+\tmonthly_gold_income = 1
+}
+"""
 
 
 def disabled_institution_content(path: Path) -> str:
@@ -1379,7 +1488,13 @@ def advance_ledger(records: tuple[Advance, ...]) -> str:
             ";".join(record.requires),
             profile.summary,
             record.description,
-            ";".join(f"{field}={value}" for field, value in record.effects),
+            ";".join(
+                f"{field}={value}"
+                for field, value in (
+                    *record.effects,
+                    *START_CAPABILITIES.get(record.key, ()),
+                )
+            ),
             ";".join(f"{field}={target}" for field, target in unlocks),
             str(100 - record.depth * 10),
             icons.get(record.key, ICONS[record.age_index]),
@@ -1453,6 +1568,15 @@ def removed_institution_birth_modifiers() -> str:
 
 def localization(records: tuple[Advance, ...], language: str) -> str:
     lines = [f"l_{language}:"]
+    lines.extend(
+        (
+            ' taxation_advance: "Tribute and Census Administration"',
+            ' taxation_advance_desc: "Registers, assessed communities, and in-kind levies sustain the state before coin and market exchange reach every province."',
+            ' AUTO_MODIFIER_NAME_antq_pre_market_in_kind_revenue: "In-Kind Provincial Revenue"',
+            ' AUTO_MODIFIER_DESC_antq_pre_market_in_kind_revenue: "Produce, tribute, and requisitioned supplies support the state while its capital market is being organized."',
+            ' IN_BANKRUPTCY: "Treasury Under Emergency Administration"',
+        )
+    )
     for record in records:
         lines.append(f' {record.key}: "{record.name}"')
         lines.append(f' {record.key}_desc: "{record.description}"')
@@ -1477,6 +1601,7 @@ def outputs(records: tuple[Advance, ...]) -> dict[Path, str]:
         **empty_overrides("in_game/common/institution", INSTITUTIONS, "institution"),
         INSTITUTIONS / "00_antiquitas_m8_institutions.txt": institution_script(),
         SCRIPTED_TRIGGERS / "00_antiquitas_m8_institution_spread.txt": institution_eligibility_script(),
+        AUTO_MODIFIERS / "00_antiquitas_pre_market_revenue.txt": pre_market_revenue_script(),
         STATIC_MODIFIERS / "institutions.txt": removed_institution_birth_modifiers(),
         STATIC_MODIFIERS / "antq_m8_institution_birth.txt": institution_birth_modifiers(),
         ADVANCE_LEDGER: advance_ledger(records),

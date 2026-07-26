@@ -54,6 +54,14 @@ and focused runtime probe all pass.
 ### S2-P0 — Opening-state correctness and vanilla-system quarantine
 
 - [ ] Fix Rome's opening bankruptcy and prove the intended Augustan budget.
+  - [x] Diagnose the day-one state: all explicit market seeds were previously
+    deferred after an engine crash, leaving Rome at 712.44 economic base but
+    zero wealth/tax base for roughly its first 90 days.
+  - [x] Add a generated, globally scaled in-kind revenue bridge that applies
+    only while the capital has zero market access. Fresh Rome runtime evidence
+    now shows +178.11 revenue, +15.46 monthly balance, and a 9.60K reserve.
+    Replace the misleading vanilla no-market bankruptcy banner with
+    "Treasury Under Emergency Administration."
   - Capture a fresh, unpaused Rome economy breakdown and quantify taxes, trade,
     subject income, army/navy, court, government, institution, and building costs.
   - Correct generator inputs rather than adding an arbitrary rescue event.
@@ -64,6 +72,14 @@ and focused runtime probe all pass.
     remains non-bankrupt in a focused 12-month smoke probe.
 
 - [ ] Make research available to Rome and every playable opening profile.
+  - [x] Lower Rome, Han, and Arsacid Iran from opening technology level 4 to 3;
+    the locally documented engine rule otherwise pre-completes every Age-I node.
+    A fresh Rome panel now reports 17/19 researched, leaving two eligible
+    choices rather than zero.
+  - [ ] Expand the Age-I profiles before closing this task: the current static
+    reachability audit still finds 96 profiles with zero eligible choices and
+    Rome has two rather than the required three. This belongs to the planned
+    750+ node tree, not a fake one-off eligibility exception.
   - Audit `starting_technology_level`, node age, eligibility, prerequisites,
     already-owned advances, institution requirements, and engine selection rules.
   - Rome must have at least three meaningful eligible choices on day one; every

@@ -6662,3 +6662,22 @@ reviewed 128px BC7 DDS.
 - All 265 active building icons pass the circle/navy gate with zero exact or
   near aliases. Regional in-game grid captures remain the final visual proof.
 - Validation passes 78/78; paired vanilla/mod smoke has zero mod-only lines.
+
+## 2026-07-26 - Repair Rome's no-market opening economy
+
+- Reproduced the reported opening state in a fresh automated Rome session:
+  712.44 economic base, zero wealth and tax base, +3.39 income against 166.04
+  expenses, and the bankruptcy presentation despite 9.42K in the treasury.
+- Confirmed the underlying setup constraint: all source-led market seeds were
+  deferred after prior runtime assertions, while both an instant runtime market
+  effect and the earlier pre-game seed path crash EU5 1.3.11. Automatic market
+  construction therefore remains the only safe market initializer.
+- Added a generated in-kind provincial revenue auto modifier while a capital
+  has zero market access. It scales at one quarter of economic base, with a
+  5-200 cap, and automatically ends when the capital market connects. Fresh
+  Rome evidence is +178.11 direct revenue and +15.46 monthly balance.
+- Lowered the three level-4 imperial starts to level 3. Rome now has two
+  researchable Age-I choices (17/19 owned) instead of none. The broader
+  all-profile reachability gap remains open for the 750+ advance rebuild.
+- `make validate` passes all 91 checks; paired enabled-mod smoke passes with
+  zero new error lines against the accepted baseline.

@@ -3103,3 +3103,21 @@ Every changed subsystem receives deterministic source/setup/resolver validation,
 paired smoke for new log lines, and a short targeted runtime interaction or
 screenshot. A bounded 12-month economy probe is permitted where tick behavior is
 the subject of the test; it is not a general campaign endurance gate.
+
+## 2026-07-26 - Bridge the unsafe no-market interval with in-kind revenue
+
+EU5 1.3.11 cannot safely instantiate the AD 1 source-led markets during
+pre-game setup. A fresh console probe using the locally documented
+`create_market` effect, a valid `c:XAA` builder, Rome, and `instant = yes`
+also terminates the process. Explicit market creation is therefore not an
+acceptable opening-economy fix.
+
+Countries instead receive `monthly_gold_income` scaled to one quarter of their
+current `country_economical_base` while their capital has zero market access,
+bounded to 5-200 per month. This models produce, tribute, and requisitioned
+supplies before the market ledger becomes operational, scales across large and
+small states, and vanishes automatically when normal exchange begins. It is
+preferable to arbitrary country-specific gold grants or permanent cost
+discounts. The installed taxation capability key is retained as an anciently
+localized engine adapter alongside the custom Provincial Census root until a
+post-market focused probe can distinguish their initialization behavior.
