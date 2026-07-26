@@ -111,11 +111,16 @@ and focused runtime probe all pass.
     Rome and six regional probes show only ancient systems.
 
 - [ ] Add Religio Romana doctrines and ancient doctrine coverage.
-  - The religion currently declares no `religious_aspects` capacity and supplies
-    no Roman aspects. Verify the engine schema from local files, then build a
-    meaningful Roman set around civic cult, priestly colleges, auspices, household
-    cult, imperial cult, local syncretism, vows/festivals, and prodigy response.
-  - Give other major religious families comparable, historically bounded choices
+  - [x] Verify the installed schema and give Religio Romana two aspect slots,
+    religious influence, three omens, and eight day-one choices: Sacra Publica,
+    Priestly Colleges, Public Auspices, Household Cults, Cult of Augustus,
+    Interpretatio Romana, Vows and Public Games, and Expiation of Prodigies.
+  - [x] Supply eight distinct direct 128px icons, sourced effects, complete
+    eleven-client localization, and a contact-sheet/alpha/hash validator.
+  - [x] Exact-mirror all 177 installed religious aspects—including the malformed
+    indented DLC definition—and false-gate them through the locally verified
+    `visible` contract so no post-476 choice remains mounted.
+  - [ ] Give other major religious families comparable, historically bounded choices
     rather than inheriting medieval doctrines.
   - Acceptance: Rome has multiple viable doctrine configurations on day one;
     each major religion profile has choices, complete art/localization/effects,

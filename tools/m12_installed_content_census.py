@@ -42,6 +42,7 @@ SURFACES = {
     "parliament_agendas": "in_game/common/parliament_agendas",
     "laws": "in_game/common/laws",
     "government_reforms": "in_game/common/government_reforms",
+    "religious_aspects": "in_game/common/religious_aspects",
 }
 POLICY = {
     "ages": "engine_slot_adapter",
@@ -59,6 +60,7 @@ POLICY = {
     "parliament_agendas": "exact_disabled_legacy",
     "laws": "exact_disabled_legacy",
     "government_reforms": "exact_disabled_legacy",
+    "religious_aspects": "exact_disabled_legacy",
 }
 EXACT_REQUIRED = {
     "ages",
@@ -72,6 +74,7 @@ EXACT_REQUIRED = {
     "parliament_agendas",
     "laws",
     "government_reforms",
+    "religious_aspects",
 }
 VISIBLE_DEBT = {
     "government_types",
@@ -90,6 +93,9 @@ FORBIDDEN = (
     "enlightenment",
 )
 DEFINITION = re.compile(r"(?m)^([A-Za-z][A-Za-z0-9_]*)\s*=\s*\{")
+INDENTED_DEFINITION = re.compile(
+    r"(?m)^([ \t]+)([A-Za-z][A-Za-z0-9_]*)\s*=\s*\{"
+)
 REFERENCE = re.compile(
     r"(?m)^\s*(unlock_[a-z_]+|requires|age|copy_from|building|unit_type)"
     r"\s*=\s*\"?([A-Za-z0-9_:.|-]+)"
@@ -152,6 +158,20 @@ def source_record(surface: str, relative: str, source: Path) -> dict[str, object
     raw = source.read_bytes()
     text = raw.decode("utf-8-sig")
     definitions = sorted(set(DEFINITION.findall(text)))
+    # One installed religious-aspect source currently indents its sole
+    # top-level definition.  Recognize the shallowest indentation only, so
+    # nested blocks are not promoted to definitions on every audited surface.
+    if surface == "religious_aspects" and not definitions:
+        indented = INDENTED_DEFINITION.findall(text)
+        if indented:
+            shallowest = min(len(indent.expandtabs(4)) for indent, _ in indented)
+            definitions = sorted(
+                {
+                    key
+                    for indent, key in indented
+                    if len(indent.expandtabs(4)) == shallowest
+                }
+            )
     references = sorted(f"{kind}={value}" for kind, value in REFERENCE.findall(text))
     art = sorted(set(TEXTURE.findall(text)).union(ICON.findall(text)))
     mod = ROOT / SURFACES[surface] / relative

@@ -5,8 +5,14 @@
 antq_religio_romana = { # P11;CAH-XI; Roman civic polytheism
 	color = antq_religion_color_antq_religio_romana
 	group = folk_european_group
+	religious_aspects = 2
+	has_religious_influence = yes
+	has_omens = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		omens_offered = 3
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}

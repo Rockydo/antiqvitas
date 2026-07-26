@@ -1,5 +1,23 @@
 # Progress
 
+## 2026-07-26 - Religio Romana doctrine foundation
+
+- Added eight useful Roman religious-aspect choices across civic cult, priestly
+  colleges, public auspices, household cult, imperial cult, interpretatio,
+  public vows/games, and prodigy expiation. Religio Romana now exposes two
+  aspect slots, religious influence, and three omens instead of an empty panel.
+- Added eight distinct direct UI icons: six exact subject-matched installed
+  classical assets plus new reviewed augury and haruspicy illustrations. The
+  generator pins every source hash, DXT5/alpha contract, localization client,
+  modifier, and the 4x2 contact sheet.
+- Expanded the installed-union quarantine and census to religious aspects.
+  All 177 base/DLC definitions are now exact-mirrored and false-gated through
+  their native `visible` field; the census covers 5,315 definitions across 16
+  surfaces with zero uncovered source.
+- Full validation passes 91/91. The paired vanilla/mod launch smoke reaches the
+  menu in both modes with zero mod-only `error.log` lines. Major-family doctrine
+  coverage remains open before the parent task closes.
+
 ## 2026-07-26 - Second manual playtest reopens depth work
 
 - Reclassified the previous green build as a stable v0.1 foundation rather than a

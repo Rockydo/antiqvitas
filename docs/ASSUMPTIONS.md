@@ -1,5 +1,18 @@
 # Historical Assumptions
 
+## 2026-07-26 - Roman doctrine choices model institutions and practices, not creeds
+
+The eight Religio Romana choices are gameplay groupings of public and domestic
+practice: state sacrifice, priestly colleges, auspicy, household cult, ruler
+cult, interpretatio, vows/games, and prodigy expiation. They do not imply an
+exclusive creed, a single empire-wide liturgy, or doctrinal uniformity among
+Roman communities. Cult of Augustus represents the established Augustan ruler
+cult and its provincial variation without backdating later compulsory formulas;
+Interpretatio represents a Roman mode of identifying and accommodating local
+gods, not modern toleration or a universal syncretic policy. Sources: `OCD`,
+`CAH-X`, and plan sections 9 and 16. [secure practice categories; locally
+variable implementation]
+
 ## 2026-07-25 - Gallic people labels are bounded campaign proxies
 
 The 63-culture atlas distinguishes attested peoples and defensible regional

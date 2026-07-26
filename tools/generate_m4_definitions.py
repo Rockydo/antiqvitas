@@ -75,6 +75,24 @@ NATIVE_RELIGION_GROUP_OVERRIDES = {
     "antq_caribbean": "folk_caribbean_group",
     "antq_australian_dreaming": "folk_australian_group",
 }
+RELIGIOUS_ASPECT_SLOTS = {
+    # S2 doctrine conversion begins with the reported empty Roman surface.
+    # Further major-family coverage is added in sourced tranches.
+    "antq_religio_romana": 2,
+}
+RELIGIOUS_ASPECT_FEATURES = {
+    "antq_religio_romana": (
+        ("has_religious_influence", "yes"),
+        ("has_omens", "yes"),
+    ),
+}
+RELIGIOUS_ASPECT_DEFINITION_MODIFIERS = {
+    "antq_religio_romana": (
+        ("omens_offered", "3"),
+        ("monthly_religious_influence", "0.10"),
+        ("maximum_religious_influence", "400"),
+    ),
+}
 
 
 @dataclass(frozen=True)
@@ -374,12 +392,25 @@ def render_religions(rows: list[Definition]) -> str:
                 f"\tcolor = antq_religion_color_{row.key}",
                 f"\tgroup = {native_religion_group(row)}",
                 *(
+                    (f"\treligious_aspects = {RELIGIOUS_ASPECT_SLOTS[row.key]}",)
+                    if row.key in RELIGIOUS_ASPECT_SLOTS
+                    else ()
+                ),
+                *(
+                    f"\t{field} = {value}"
+                    for field, value in RELIGIOUS_ASPECT_FEATURES.get(row.key, ())
+                ),
+                *(
                     (f"\tenable = {terminal_date} # unavailable before ANTIQVITAS campaign end",)
                     if row.key in absent_from_start
                     else ()
                 ),
                 "\tdefinition_modifier = {",
                 "\t\ttolerance_own = 0.01",
+                *(
+                    f"\t\t{field} = {value}"
+                    for field, value in RELIGIOUS_ASPECT_DEFINITION_MODIFIERS.get(row.key, ())
+                ),
                 "\t}",
                 "\topinions = {",
                 "\t}",

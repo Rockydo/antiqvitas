@@ -29,17 +29,18 @@ CONFIG = ROOT / "config/local_paths.json"
 MANIFEST = ROOT / "docs/m12/system_quarantine_manifest.json"
 
 SURFACES = {
-    "estate_privileges": "in_game/common/estate_privileges",
-    "cabinet_actions": "in_game/common/cabinet_actions",
-    "parliament_issues": "in_game/common/parliament_issues",
-    "parliament_agendas": "in_game/common/parliament_agendas",
-    "laws": "in_game/common/laws",
-    "government_reforms": "in_game/common/government_reforms",
+    "estate_privileges": ("in_game/common/estate_privileges", "potential"),
+    "cabinet_actions": ("in_game/common/cabinet_actions", "potential"),
+    "parliament_issues": ("in_game/common/parliament_issues", "potential"),
+    "parliament_agendas": ("in_game/common/parliament_agendas", "potential"),
+    "laws": ("in_game/common/laws", "potential"),
+    "government_reforms": ("in_game/common/government_reforms", "potential"),
+    # Religious aspects use `visible`, not `potential`, as their registry gate.
+    "religious_aspects": ("in_game/common/religious_aspects", "visible"),
 }
 HRE_INTERACTIONS = "in_game/common/country_interactions/hre.txt"
 YEARLY_ON_ACTION = "in_game/common/on_action/country_yearly.txt"
-TOP_LEVEL = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*\s*=\s*\{")
-POTENTIAL = re.compile(r"^\s*potential\s*=\s*\{")
+TOP_LEVEL = re.compile(r"^\s*[A-Za-z_][A-Za-z0-9_]*\s*=\s*\{")
 HRE_YEARLY_LINK = "\t\tinternational_organization:hre = { circles_are_active = yes }"
 HRE_YEARLY_GUARD = "\t\tinternational_organization:hre ?= { circles_are_active = yes }"
 MARKER = "ANTIQVITAS mounted-system quarantine"
@@ -133,7 +134,11 @@ def inject_inline_false(line: str) -> str:
     )
 
 
-def render_quarantine(source: Path, surface: str) -> tuple[bytes, int]:
+def render_quarantine(
+    source: Path,
+    surface: str,
+    gate_name: str = "potential",
+) -> tuple[bytes, int]:
     """False-gate every top-level definition while preserving its body."""
     raw = source.read_bytes()
     has_bom = raw.startswith(b"\xef\xbb\xbf")
@@ -147,6 +152,7 @@ def render_quarantine(source: Path, surface: str) -> tuple[bytes, int]:
     root_open = False
     root_has_gate = False
     definitions = 0
+    gate = re.compile(rf"^\s*{re.escape(gate_name)}\s*=\s*\{{")
 
     for line in text.splitlines():
         code = structural_code(line)
@@ -162,7 +168,7 @@ def render_quarantine(source: Path, surface: str) -> tuple[bytes, int]:
             rendered.append(line.rstrip())
             depth += delta
             continue
-        if root_open and depth == 1 and POTENTIAL.match(code):
+        if root_open and depth == 1 and gate.match(code):
             if delta == 0:
                 rendered.append(inject_inline_false(line.rstrip()))
             else:
@@ -178,7 +184,7 @@ def render_quarantine(source: Path, surface: str) -> tuple[bytes, int]:
             depth += delta
             continue
         if root_open and depth == 1 and delta < 0 and not root_has_gate:
-            rendered.append(f"\tpotential = {{ always = no }} # {MARKER}")
+            rendered.append(f"\t{gate_name} = {{ always = no }} # {MARKER}")
             root_has_gate = True
         rendered.append(line.rstrip())
         depth += delta
@@ -227,7 +233,7 @@ def expected_outputs() -> tuple[dict[Path, bytes], dict[str, object]]:
     records: list[dict[str, object]] = []
     totals: dict[str, int] = {}
 
-    for surface, relative in SURFACES.items():
+    for surface, (relative, gate_name) in SURFACES.items():
         sources = mounted_files(relative)
         definitions = 0
         for name, source in sorted(sources.items()):
@@ -235,7 +241,7 @@ def expected_outputs() -> tuple[dict[Path, bytes], dict[str, object]]:
             if name.casefold() == "readme.txt":
                 continue
             output = ROOT / relative / name
-            payload, count = render_quarantine(source, surface)
+            payload, count = render_quarantine(source, surface, gate_name)
             outputs[output] = payload
             definitions += count
             records.append(

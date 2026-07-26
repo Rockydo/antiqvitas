@@ -1,5 +1,20 @@
 # Technical and Design Decisions
 
+## 2026-07-26 - Religious aspects use their native visibility gate and direct art
+
+Installed religious aspects expose `visible`, not the `potential` field used by
+several other political registries. Exact-name quarantine therefore preserves
+each installed definition while forcing its native `visible` gate false. This
+keeps typed references resolvable without allowing a medieval or post-476 aspect
+to enter the player-facing union.
+
+Roman doctrine art follows the same direct-asset rule as advances and buildings.
+An installed classical icon is reused only when its subject directly matches
+the Roman practice; public auspices and prodigy expiation receive new reviewed
+illustrations because no installed source faithfully depicts them. Every active
+aspect has a distinct namespaced key, pinned source hash, and direct 128px DXT5
+asset rather than a shared fallback.
+
 ## 2026-07-25 - Economy runtime acceptance stays short and checkpointed
 
 The user reduced exhaustive playthrough requirements in favor of smoke and
