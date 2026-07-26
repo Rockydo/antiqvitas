@@ -3121,3 +3121,21 @@ preferable to arbitrary country-specific gold grants or permanent cost
 discounts. The installed taxation capability key is retained as an anciently
 localized engine adapter alongside the custom Provincial Census root until a
 post-market focused probe can distinguish their initialization behavior.
+
+## 2026-07-26 - Preserve keys but false-gate the complete political registry union
+
+EU5 merges privileges, cabinet actions, parliament content, laws, and reforms
+by source filename, and it resolves typed references inside definitions even
+when their `potential` is false. ANTIQVITAS therefore exact-mirrors every
+mounted base/DLC file, preserves each installed key, adds a native false
+`potential` gate, and neutralizes references to all removed institution keys
+inside the unreachable body. Empty files or deletion would break dependent
+installed scripts; localization-only replacement would leave the mechanics
+available.
+
+The HRE receives the same treatment at the country-interaction registry, while
+the annual country pulse keeps its installed behavior but uses an optional
+organization scope. This is narrower and safer than suppressing the complete
+yearly on-action file. The quarantine is a foundation, not the ancient system
+overhaul: cabinets and parliaments must receive namespaced replacements before
+their focused UI acceptance test.

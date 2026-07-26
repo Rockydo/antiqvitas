@@ -6681,3 +6681,22 @@ reviewed 128px BC7 DDS.
   all-profile reachability gap remains open for the 750+ advance rebuild.
 - `make validate` passes all 91 checks; paired enabled-mod smoke passes with
   zero new error lines against the accepted baseline.
+
+## 2026-07-26 - Quarantine mounted post-antique political systems
+
+- Added a deterministic installed base+DLC union generator for every estate
+  privilege, cabinet action, parliament issue, parliament agenda, law, and
+  government reform source. It writes 130 exact mirrors and false-gates 1,170
+  post-antique definitions while preserving their keys for reference resolution.
+- Extended the installed-content census from nine to fifteen registries. Its
+  accepted snapshot now accounts for 5,138 definitions, 7,082 typed references,
+  and 1,128 art links with zero uncovered files.
+- Quarantined all HRE country interactions and guarded the annual HRE-circle
+  scope that had evaluated an absent organization during accelerated AD 1 probes.
+- The first smoke honestly rejected unresolved institution links in unreachable
+  vanilla bodies. The generator now neutralizes all 18 removed institution keys;
+  the repeated 90-check validation and paired vanilla/mod smoke pass with zero
+  new error lines.
+- Namespaced ANTIQVITAS privileges, laws, and reforms remain active. Ancient
+  cabinet and parliament replacements plus seven regional UI probes remain open
+  under S2-P4 before the parent quarantine task can close.

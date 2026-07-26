@@ -89,13 +89,24 @@ and focused runtime probe all pass.
     focused Rome, Han, Arsacid, Germanic, Brittonic, African, and American panels.
 
 - [ ] Quarantine the complete vanilla estate/parliament/cabinet/law/privilege union.
-  - Harvest every base-game and DLC source and exact key. The current mod mirrors
+  - [x] Harvest every base-game and DLC source and exact key. The previous mod mirrored
     only 2 of 8 estate-privilege files, 3 of 10 parliament-issue files, 1 of 7
     parliament-agenda files, 0 of 72 cabinet-action files, 5 of 30 law files, and
-    3 of 7 reform files.
-  - Disable or replace every medieval/early-modern object at both definition and
+    3 of 7 reform files. The installed-union census now covers all six registries.
+  - [x] Disable every mounted medieval/early-modern definition at the registry
+    layer: 261 privileges, 73 cabinet actions, 160 parliament issues, 128
+    agendas, 196 laws, and 328 reforms are false-gated in exact-name mirrors.
+    Removed institution links are neutralized even inside unreachable bodies,
+    so typed references do not emit load errors.
+  - [x] Quarantine the complete HRE country-interaction registry and optionalize
+    the annual HRE-circle scope that previously emitted invalid-object errors in
+    AD 1.
+  - [ ] Replace required gameplay breadth at both definition and
     unlock/reference layers. Preserve only locally proven engine adapters, and
     guarantee that their names, descriptions, icons, and effects cannot surface.
+    Existing namespaced ancient content remains active (24 privileges, 23 laws,
+    19 reforms), but cabinet and parliament replacements belong to the deep
+    S2-P4 rebuild and must be present before the UI acceptance probe.
   - Acceptance: installed-union report has zero unapproved visible vanilla keys;
     Rome and six regional probes show only ancient systems.
 

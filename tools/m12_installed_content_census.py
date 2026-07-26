@@ -36,6 +36,12 @@ SURFACES = {
     "country_ranks": "in_game/common/country_ranks",
     "location_ranks": "in_game/common/location_ranks",
     "pop_types": "in_game/common/pop_types",
+    "estate_privileges": "in_game/common/estate_privileges",
+    "cabinet_actions": "in_game/common/cabinet_actions",
+    "parliament_issues": "in_game/common/parliament_issues",
+    "parliament_agendas": "in_game/common/parliament_agendas",
+    "laws": "in_game/common/laws",
+    "government_reforms": "in_game/common/government_reforms",
 }
 POLICY = {
     "ages": "engine_slot_adapter",
@@ -47,8 +53,26 @@ POLICY = {
     "country_ranks": "engine_adapter_period_presentation_complete",
     "location_ranks": "engine_adapter_pending_presentation",
     "pop_types": "engine_adapter_ancient_presentation_complete",
+    "estate_privileges": "exact_disabled_legacy",
+    "cabinet_actions": "exact_disabled_legacy",
+    "parliament_issues": "exact_disabled_legacy",
+    "parliament_agendas": "exact_disabled_legacy",
+    "laws": "exact_disabled_legacy",
+    "government_reforms": "exact_disabled_legacy",
 }
-EXACT_REQUIRED = {"ages", "institutions", "advances", "units", "buildings"}
+EXACT_REQUIRED = {
+    "ages",
+    "institutions",
+    "advances",
+    "units",
+    "buildings",
+    "estate_privileges",
+    "cabinet_actions",
+    "parliament_issues",
+    "parliament_agendas",
+    "laws",
+    "government_reforms",
+}
 VISIBLE_DEBT = {
     "government_types",
     "location_ranks",

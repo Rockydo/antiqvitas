@@ -3,10 +3,10 @@
 # Installed-content leakage census
 
 - Game/build: 1.3.11 / 24187685
-- Surfaces: 9
-- Installed definitions: 3992
-- Installed unlock/reference records: 6891
-- Installed art references: 1116
+- Surfaces: 15
+- Installed definitions: 5138
+- Installed unlock/reference records: 7082
+- Installed art references: 1128
 - Uncovered sources: 0
 - Player-visible prohibited-token hits: 0
 - Loading tips: 64/64 exact keys
