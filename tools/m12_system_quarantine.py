@@ -9,8 +9,11 @@ resolution, but makes each installed definition permanently unavailable
 through its native ``potential`` gate.  ANTIQVITAS definitions live in
 separate namespaced files and remain available.
 
-The same pass disables the HRE interaction registry and guards the one annual
-HRE pulse which EU5 1.3.11 evaluates even though the AD 1 setup has no HRE.
+The same pass disables installed country interactions, generic actions, and
+disasters whose availability predicates dereference medieval organizations,
+characters, or dynasties even when their visible content is otherwise hidden.
+The one annual HRE pulse is guarded because EU5 1.3.11 evaluates it even though
+the AD 1 setup has no HRE.
 """
 
 from __future__ import annotations
@@ -35,10 +38,22 @@ SURFACES = {
     "parliament_agendas": ("in_game/common/parliament_agendas", "potential"),
     "laws": ("in_game/common/laws", "potential"),
     "government_reforms": ("in_game/common/government_reforms", "potential"),
+    "country_interactions": ("in_game/common/country_interactions", "potential"),
+    "disasters": ("in_game/common/disasters", "can_start"),
     # Religious aspects use `visible`, not `potential`, as their registry gate.
     "religious_aspects": ("in_game/common/religious_aspects", "visible"),
 }
-HRE_INTERACTIONS = "in_game/common/country_interactions/hre.txt"
+TARGETED_QUARANTINES = {
+    "hre_generic_actions": (
+        "in_game/common/generic_actions/hre_circle_actions.txt",
+        "potential",
+    ),
+}
+EXCLUDED_BY_SURFACE = {
+    # This exact file is jointly neutralized for legacy institution references
+    # by m8_legacy_institution_purge.py.
+    "disasters": {"revolution_disaster.txt"},
+}
 YEARLY_ON_ACTION = "in_game/common/on_action/country_yearly.txt"
 TOP_LEVEL = re.compile(r"^\s*[A-Za-z_][A-Za-z0-9_]*\s*=\s*\{")
 HRE_YEARLY_LINK = "\t\tinternational_organization:hre = { circles_are_active = yes }"
@@ -134,6 +149,53 @@ def inject_inline_false(line: str) -> str:
     )
 
 
+def guard_absent_legacy_objects(text: str, gate_name: str) -> str:
+    """Make missing installed database objects optional inside retained bodies."""
+    guarded: list[str] = []
+    optional_scope = re.compile(
+        r"(?P<link>(?:international_organization|character|dynasty):"
+        r"[A-Za-z0-9_]+)\s*=\s*\{"
+    )
+    rhs_object = re.compile(
+        r"(?:!=|\?=|(?<![?!<>])=)\s*(?:character|dynasty):[A-Za-z0-9_]+"
+    )
+    gate = re.compile(rf"^\s*{re.escape(gate_name)}\s*=\s*\{{")
+    depth = 0
+    trigger_depth: int | None = None
+    for line in text.splitlines():
+        code = structural_code(line)
+        delta = brace_delta(line)
+        updated = optional_scope.sub(r"\g<link> ?= {", line)
+        updated = re.sub(
+            r"\bcapital\.market\s*=\s*\{",
+            "capital.market ?= {",
+            updated,
+        )
+        if trigger_depth is not None and rhs_object.search(structural_code(updated)):
+            if brace_delta(updated) != 0:
+                raise ValueError(
+                    f"unsupported multiline legacy-object comparison: {line!r}"
+                )
+            indent = updated[: len(updated) - len(updated.lstrip())]
+            updated = (
+                f"{indent}always = no "
+                "# ANTIQVITAS absent legacy object comparison"
+            )
+        guarded.append(updated)
+        previous_depth = depth
+        depth += delta
+        if (
+            trigger_depth is None
+            and previous_depth == 1
+            and gate.match(code)
+            and delta > 0
+        ):
+            trigger_depth = 1
+        elif trigger_depth is not None and depth == trigger_depth:
+            trigger_depth = None
+    return "\n".join(guarded) + "\n"
+
+
 def render_quarantine(
     source: Path,
     surface: str,
@@ -195,8 +257,12 @@ def render_quarantine(
         raise ValueError(f"{source.name}: unbalanced source while quarantining")
     if definitions == 0:
         raise ValueError(f"{source.name}: no top-level definitions")
-    quarantined = neutralize_references(
+    quarantined = guard_absent_legacy_objects(
         "\n".join(rendered) + "\n",
+        gate_name,
+    )
+    quarantined = neutralize_references(
+        quarantined,
         remap_effects=True,
     )
     quarantined = normalize_generated_script(quarantined)
@@ -240,6 +306,14 @@ def expected_outputs() -> tuple[dict[Path, bytes], dict[str, object]]:
             # Registry readmes contain examples, not mounted definitions.
             if name.casefold() == "readme.txt":
                 continue
+            if name in EXCLUDED_BY_SURFACE.get(surface, set()):
+                continue
+            source_text = source.read_text(encoding="utf-8-sig")
+            if not any(
+                TOP_LEVEL.match(structural_code(line))
+                for line in source_text.splitlines()
+            ):
+                continue
             output = ROOT / relative / name
             payload, count = render_quarantine(source, surface, gate_name)
             outputs[output] = payload
@@ -257,22 +331,23 @@ def expected_outputs() -> tuple[dict[Path, bytes], dict[str, object]]:
             )
         totals[surface] = definitions
 
-    hre_source = game_root() / HRE_INTERACTIONS
-    hre_output = ROOT / HRE_INTERACTIONS
-    hre_payload, hre_count = render_quarantine(hre_source, "hre_interactions")
-    outputs[hre_output] = hre_payload
-    records.append(
-        {
-            "surface": "hre_interactions",
-            "relative": "hre.txt",
-            "source": str(hre_source),
-            "source_sha256": sha256(hre_source.read_bytes()),
-            "definition_count": hre_count,
-            "output": hre_output.relative_to(ROOT).as_posix(),
-            "output_sha256": sha256(hre_payload),
-        }
-    )
-    totals["hre_interactions"] = hre_count
+    for surface, (relative, gate_name) in TARGETED_QUARANTINES.items():
+        source = game_root() / relative
+        output = ROOT / relative
+        payload, count = render_quarantine(source, surface, gate_name)
+        outputs[output] = payload
+        records.append(
+            {
+                "surface": surface,
+                "relative": Path(relative).name,
+                "source": str(source),
+                "source_sha256": sha256(source.read_bytes()),
+                "definition_count": count,
+                "output": output.relative_to(ROOT).as_posix(),
+                "output_sha256": sha256(payload),
+            }
+        )
+        totals[surface] = count
 
     yearly_source = game_root() / YEARLY_ON_ACTION
     yearly_output = ROOT / YEARLY_ON_ACTION
@@ -295,7 +370,7 @@ def expected_outputs() -> tuple[dict[Path, bytes], dict[str, object]]:
         "schema": 1,
         "policy": (
             "Preserve installed keys for reference resolution; false-gate every "
-            "mounted post-antique definition and the HRE interaction surface."
+            "mounted post-antique definition and guard the HRE yearly pulse."
         ),
         "totals": totals,
         "files": records,

@@ -530,6 +530,66 @@ coverage validator permits no other unassigned ownable location.
 - `LIV-BONNA`: Livius.org, ["Bonna (Bonn)"](https://www.livius.org/articles/place/bonna-bonn/), records a Roman fort at Bonna built in Drusus' Rhine offensive between 16/15 and 13 BC and distinguishes it from the post-AD 9 larger legionary base. It supports only the early Augustan camp context at the AD 1 boundary.
 - `LVR-NGL`: Landschaftsverband Rheinland, ["Der Niedergermanische Limes -- Der Rhein als eine Grenze des Imperium Romanum"](https://bodendenkmalpflege.lvr.de/de/projekte/der_niedergermanische_limes/der_rhein_als_grenze.html), identifies Bonna/Bonn as a principal Lower Rhine legionary-camp site and dates the broader Augustan military stationing along the Rhine from about 19 BC. It supports regional military context, not an AD 1 fortress plan or troop total.
 
+## Arabian political-geography contracts
+
+These sources support named campaign frames and relative regional placement.
+They do not supply surveyable AD 1 borders. Classical ethnonyms are not treated
+as centralized nation-states and later Islamic-period tribal geography is not
+projected backward.
+
+- `STR-ARAB`: Strabo, *Geography* 16.4, public-domain text at
+  [LacusCurtius](https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Strabo/16D%2A.html).
+  Strabo distinguishes Nabataeans, Chaulotaeans, and Agraeans in northern and
+  desert Arabia. It supports separate named frames and relative route geography
+  only; it does not establish their exact AD 1 limits or political centralization.
+- `PLN-ARAB`: Pliny the Elder, *Natural History* 6.32, public-domain text at
+  [Perseus](https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0137%3Abook%3D6%3Achapter%3D32).
+  The itinerary names Domata, Hegra, the Tamudaei, Omana, and numerous southern
+  Arabian peoples and towns. Its compressed and sometimes contradictory
+  geography licenses conservative regional anchors rather than exact borders.
+- `PTO-ARAB`: Claudius Ptolemy, *Geography* book 6 Arabian material, used only
+  as a later comparative witness for Catara and Gulf-coast relative placement.
+  Because Ptolemy is a second-century source it is marked contested at AD 1.
+- `THAMUD-EPIG`: M. C. A. Macdonald, ["Thamudic"](https://books.openedition.org/momeditions/16411?lang=en),
+  in *The Ancient Languages of Arabia*. It is used for the essential warning
+  that modern “Thamudic” script categories cannot be mapped wholesale onto the
+  ancient people called Thamud. The campaign frame therefore uses the attested
+  people-name without claiming every inscription or rock-art site as its state.
+- `OCD-GERRHA`: D. T. Potts, ["Gerrha"](https://academic.oup.com/edited-volume/61673/chapter-abstract/548938838),
+  *Oxford Classical Dictionary*. It places Gerrha in northeastern Arabia while
+  noting disputed identifications including Thaj and the Hofuf/al-Ahsa region.
+  The mod's al-Ahsa capital is explicitly a proxy.
+- `THAJ-ARCH`: Daniel T. Potts and Jérémie Schiettecatte, archaeological
+  synthesis of eastern Arabia at
+  [Arabian Humanities](https://journals.openedition.org/arabianhumanities/13397?lang=en).
+  Thaj is a major pre-Islamic eastern-Arabian site with renewed occupation after
+  about 300 BC. It supports a Gerrha-region trade polity but not a proven
+  one-to-one identification of Thaj with Gerrha.
+- `NABATAEA-MAP`: Christian Augé and Jean-Marie Dentzer, Nabataean historical
+  geography and map in *Le royaume nabatéen* at
+  [Presses de l’Ifpo](https://books.openedition.org/ifpo/24004). It supports
+  Nabataean expansion to Hegra and the northwestern Hijaz by the first century
+  BC; the southern frontier remains contested in the gameplay frame.
+- `UNESCO-SABA`: UNESCO World Heritage Centre,
+  ["Landmarks of the Ancient Kingdom of Saba, Marib"](https://whc.unesco.org/en/list/1700/).
+  It supports Marib as the Sabaean heartland and the long-lived irrigation and
+  temple landscape. It does not define an AD 1 state polygon.
+- `UNESCO-QATABAN`: UNESCO World Heritage Centre,
+  ["The Ancient City of Timna"](https://whc.unesco.org/en/tentativelists/6856/).
+  It supports Timna in the Bayhan valley as Qataban's capital and incense-route
+  centre. The installed Bayhan/Sayhad frame is a map proxy.
+- `UNESCO-INCENSE`: UNESCO World Heritage Centre,
+  ["The Ancient Caravan Cities in Yemen"](https://whc.unesco.org/en/tentativelists/6862/)
+  and its [comparative analysis](https://whc.unesco.org/document/191751).
+  These identify Shabwa with Hadramawt, Timna with Qataban, Marib with Saba, and
+  Zafar with Himyar while providing broad occupation ranges. They support
+  separate AD 1 south-Arabian kingdoms and caravan routes rather than precise
+  borders.
+- `HIMYAR-HIST`: Christian Julien Robin, ["Himyar"](https://books.openedition.org/obp/29697),
+  in *The Ancient South Arabian Kingdoms*. Himyar emerged in the first century
+  BC and absorbed Qataban, Saba, and Hadramawt only in later centuries. It
+  supports a separate and still regionally bounded Himyar in AD 1.
+
 ## Britain and Ireland culture-source contracts
 
 These contracts support the detailed culture atlas. They authorize contested

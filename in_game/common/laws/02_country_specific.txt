@@ -896,7 +896,7 @@ kor_currency = {
 	}
 	kor_jeohwa = {
 		allow = {
-			capital.market = {
+			capital.market ?= {
 				"stockpile_in_market(goods:paper)" > 20
 			}
 		}
@@ -918,7 +918,7 @@ kor_currency = {
 		}
 
 		on_activate = {
-			capital.market = {
+			capital.market ?= {
 				add_goods_supply = {
 					amount = -20
 					goods = goods:paper

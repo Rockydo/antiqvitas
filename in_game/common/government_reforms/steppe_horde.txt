@@ -12,7 +12,7 @@ legacy_of_genghis = {
 			culture = culture:mongolian_culture
 			ruler ?= {
 				has_dynasty = yes
-				dynasty ?= dynasty:borjigin_dynasty
+				always = no # ANTIQVITAS absent legacy object comparison
 			}
 		}
 		country_type = army

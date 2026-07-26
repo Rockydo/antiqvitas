@@ -2206,7 +2206,41 @@ countries = {
 
 		NAB = { # Nabataea; P8.1;OCD;PLE
 			own_control_core = {
+				ad_disah
+				al_ais
+				al_azlam
+				al_bad
+				al_bleiteh
+				al_farah_ula
+				al_furaish
+				al_hawra
+				al_hegrieah
+				al_khanbarah
+				al_manjur
+				al_maramiyah
+				al_marwa
+				al_muazzam
+				al_muwaylih
+				al_ukhaydir
+				al_ula
+				al_wajh
+				as_suwaydirah
+				aynuna
+				az_zubayir
+				bada_yaqub
+				bajdah
+				bir_al_qurr
+				bir_ibn_hermas
+				dhat_al_hajj
+				duba
+				haql
+				khalis_medina
+				makna
+				medina
+				mughayra
 				shoubak
+				tabuk_arabia
+				umluj
 			}
 
 			country_rank = rank_kingdom
@@ -8285,7 +8319,31 @@ countries = {
 
 		XBI = { # Saba; P8.6;CAH-XI
 			own_control_core = {
+				al_hirda
+				al_husayniyah
+				al_luhayyah
+				al_mahjal
+				as_salif
+				baraqish
+				dhahran
+				dhamar
+				hajjah
+				harad_asir
+				harib
+				hudaida
+				hutayb
+				huth
+				kawkaban
+				khamir
+				main
 				marib
+				najran
+				radaa
+				sadah
+				sana_yemen
+				shaharah
+				suq_al_ghinan
+				thula
 			}
 
 			country_rank = rank_kingdom
@@ -8319,7 +8377,41 @@ countries = {
 
 		HIM = { # Himyar; P8.6;CAH-XI;PLE
 			own_control_core = {
+				adan
+				adham
+				al_arah
+				al_ghulayfiqah
+				al_haqu
+				al_khosuf
+				al_mafalis
+				al_mandab
+				al_mukha
+				al_qunfudhah
+				al_shuqayq
+				al_sirrayn
+				as_salafiyah
+				bariq
 				dhafar
+				dhi_ain
+				farasan
+				hali
+				hays
+				ibb
+				jazan
+				juban
+				lahj
+				mawza
+				mikhlaf_al_hubishiyah
+				mudhaykirah
+				muhayil
+				musaymir
+				rijal_almaa
+				sabt_bani_bishr
+				sabya
+				taizz
+				yahr
+				zabid
+				zinjibar
 			}
 
 			country_rank = rank_kingdom
@@ -8353,7 +8445,15 @@ countries = {
 
 		QAT = { # Qataban; P8.6;CAH-XI
 			own_control_core = {
+				ahwar
+				al_bayda_yemen
+				al_qara
 				bayhan
+				jurrah
+				lawdar
+				markha
+				nisab
+				shuqra
 			}
 
 			country_rank = rank_kingdom
@@ -8387,7 +8487,30 @@ countries = {
 
 		XBJ = { # Hadramawt; P8.6;CAH-XI
 			own_control_core = {
+				al_khuraybah
+				al_mukalla
+				al_shihr
+				arrayda
+				azzan
+				balhaf
+				birali
+				dha_sohis
+				dhufar
+				habban
+				hadibu
+				hajar
+				huraydah
+				khalfut
+				khayrij
+				mirbat
+				qishn
+				qulensya
+				rakhyah
+				raysut
+				sayun
 				shabwa
+				shibam
+				tarim
 			}
 
 			country_rank = rank_kingdom
@@ -8421,7 +8544,50 @@ countries = {
 
 		KIN = { # Kindah; P8.6;CAH-XI;PLE
 			own_control_core = {
+				abha
+				abil
+				abu_rakah
+				ad_dawasir
+				ad_dilam
+				ad_dughmiyah
+				al_abala
+				al_aflaj
+				al_amlah
+				al_amwah
+				al_haddar
+				al_hajr
+				al_harjah
+				al_maddah
+				al_majazah
+				al_mardamah
+				al_maslum
+				al_quway
+				al_yamamah
 				aqiq_banu_uqayi
+				ar_rayn
+				ash_shaqiqah
+				barahrah
+				diriyah
+				habiyah
+				halaban
+				khaybar_janoub
+				laila
+				malham
+				muzahmiyah
+				naam
+				qalat_bishah
+				qasr_himam
+				raghdan
+				ranyah
+				rawdat_al_ard
+				samakh
+				tabalah
+				tamrah
+				tanomah
+				tathlith
+				thadiq
+				turbah
+				yadamah
 			}
 
 			country_rank = rank_county
@@ -8451,6 +8617,295 @@ countries = {
 				capital_economy_vs_traditional_economy = 60
 			}
 			capital = aqiq_banu_uqayi
+		}
+
+		XEQ = { # Thamud; PLN-ARAB;STR-ARAB;THAMUD-EPIG
+			own_control_core = {
+				al_abwa
+				al_ahmar
+				al_ayn_khaybar
+				al_hadhah
+				al_hinakiyah
+				al_hufayrah
+				al_jar
+				al_juhfah
+				al_jumum
+				al_kharabah
+				al_lith
+				al_mahani
+				al_mundassah
+				al_muthainiyah
+				al_thamad
+				an_nakhil
+				ar_rabadha
+				ar_rayyan
+				ar_ruwailiyyah
+				as_suwayriqiyah
+				asfan
+				ash_shibahah
+				badr_hunayn
+				bani_saad
+				buwat
+				dhalam
+				dhat_irq
+				ghumayqah
+				jeddah
+				khaybar
+				khulays
+				madin_bani_sulaym
+				mecca
+				murayghan
+				muwayh
+				qasr_al_qaba
+				qudayd
+				shajwa
+				sufaynah
+				taif
+				umm_ad_dawm
+				umm_al_ghiran
+				yalamlam
+				yanbu
+				yanbu_an_nakhil
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -45
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = khaybar
+		}
+
+		AGR = { # Agraeans; STR-ARAB;PLN-ARAB
+			own_control_core = {
+				aba_al_qur
+				abu_qasr
+				al_hamad
+				al_harrah
+				al_labbah
+				al_suman
+				al_thulayma
+				al_uyayna
+				al_waqbi
+				an_nasifah
+				ar_rukai
+				arar
+				ash_shuaybah
+				basithah
+				bir_fajr
+				dumat_al_jandal
+				hafar_al_batin
+				jannah
+				jarrarah
+				kaf
+				kazimah
+				linah
+				lowqah
+				mashdhubah
+				nita_arabia
+				qaryat_ulya
+				qurain
+				qurayyat_al_milh
+				sakaka
+				zubala
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -35
+				traditionalist_vs_innovative = -35
+				aristocracy_vs_plutocracy = -40
+				capital_economy_vs_traditional_economy = 55
+			}
+			capital = dumat_al_jandal
+		}
+
+		GRH = { # Gerrha; OCD-GERRHA;THAJ-ARCH;PLN-ARAB
+			own_control_core = {
+				al_ahsa
+				al_hunayy
+				al_jubayl
+				al_qatif
+				al_uqayr
+				baqqa
+				harad_al_ahsa
+				khurays
+				manama
+				rumah
+				sayhat
+				urayrah
+				yabrin
+			}
+
+			country_rank = rank_kingdom
+			starting_technology_level = 3
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				indian_ocean_region
+			}
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_regional_kingship
+				}
+				privilege = {
+					antq_regional_royal_court
+				}
+				laws = {
+					antq_regional_kingship_law = antq_royal_court_governance
+				}
+				centralization_vs_decentralization = 15
+				traditionalist_vs_innovative = -5
+				aristocracy_vs_plutocracy = 10
+				capital_economy_vs_traditional_economy = 10
+			}
+			capital = al_ahsa
+		}
+
+		XER = { # Cataraei; PLN-ARAB;PTO-ARAB
+			own_control_core = {
+				abu_dhabi
+				al_ayn
+				al_bidda
+				al_dhaid
+				al_huwaila
+				al_mashqar
+				al_udayd
+				dubai
+				eglat_faisal
+				julfar
+				liwa
+				marawah
+				sharjah
+				sir_bani_yas
+				zubarah
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -30
+				traditionalist_vs_innovative = -30
+				aristocracy_vs_plutocracy = -35
+				capital_economy_vs_traditional_economy = 35
+			}
+			capital = al_bidda
+		}
+
+		OMN = { # Omanitae; PLN-ARAB;PLE
+			own_control_core = {
+				al_kamil_wal_wafi
+				al_khaburah
+				as_sib
+				bahla
+				ibra
+				ibri
+				izki
+				jalan_buani_buali
+				khor_fakkan
+				masirah
+				masqat
+				nakhal
+				nizwa
+				qalhat
+				rustaq
+				saham
+				shinas
+				sinaw
+				suhar
+				sur
+				yanqul
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -35
+				traditionalist_vs_innovative = -30
+				aristocracy_vs_plutocracy = -40
+				capital_economy_vs_traditional_economy = 45
+			}
+			capital = suhar
 		}
 
 		XBK = { # Marcomanni; P8.7;CAH-XI
@@ -14141,354 +14596,64 @@ countries = {
 			capital = lhasa
 		}
 
-		BED = { # Interior Bedouin Societies; P8.6;CAH-XI
+		BED = { # Chaulotaeans; STR-ARAB;P8.6
 			own_control_core = {
-				aba_al_qur
-				abha
-				abil
-				abu_dhabi
-				abu_qasr
-				abu_rakah
-				ad_dawasir
-				ad_dilam
-				ad_disah
-				ad_dughmiyah
-				adan
-				adham
 				afif
-				ahwar
-				al_abala
-				al_abwa
-				al_aflaj
-				al_ahmar
-				al_ahsa
-				al_ais
 				al_ajfar
-				al_amlah
-				al_amwah
-				al_arah
-				al_ayn
-				al_ayn_khaybar
 				al_aythamah
-				al_azlam
-				al_bad
 				al_baharah
-				al_bayda_yemen
-				al_bidda
 				al_bijadiyah
-				al_bleiteh
 				al_burud
-				al_dhaid
-				al_farah_ula
 				al_fuqarah
-				al_furaish
 				al_ghat
 				al_ghazalah
 				al_ghrabah
-				al_ghulayfiqah
-				al_haddar
-				al_hadhah
-				al_hajr
-				al_hamad
-				al_haqu
-				al_harjah
-				al_harrah
-				al_hawra
-				al_hegrieah
-				al_hinakiyah
-				al_hirda
 				al_hisu
 				al_hufayr
-				al_hufayrah
-				al_hunayy
-				al_husayniyah
-				al_huwaila
 				al_huwayyit
-				al_jar
-				al_jubayl
-				al_juhfah
-				al_jumum
-				al_kamil_wal_wafi
-				al_khaburah
-				al_khanbarah
-				al_kharabah
-				al_khosuf
-				al_khuraybah
-				al_labbah
 				al_laghfiyyah
-				al_lith
-				al_luhayyah
-				al_maddah
-				al_mafalis
 				al_maghib
-				al_mahani
-				al_mahjal
-				al_majazah
 				al_majmaah
-				al_mandab
-				al_manjur
-				al_maramiyah
-				al_mardamah
-				al_marwa
-				al_mashqar
-				al_maslum
 				al_mithnab
-				al_muazzam
-				al_mukalla
-				al_mukha
-				al_mundassah
-				al_muthainiyah
-				al_muwaylih
 				al_qaiyah
-				al_qara
-				al_qatif
-				al_qunfudhah
-				al_quway
-				al_shihr
-				al_shuqayq
-				al_sirrayn
-				al_suman
-				al_thamad
-				al_thulayma
-				al_udayd
 				al_udhaim
-				al_ukhaydir
-				al_ula
-				al_uqayr
-				al_uyayna
-				al_wajh
-				al_waqbi
-				al_yamamah
 				an_nabhaniyah
-				an_nakhil
-				an_nasifah
 				an_nibaj
 				an_nuhaytiyyah
 				an_nuqrah
-				ar_rabadha
 				ar_rass
 				ar_rawdah
-				ar_rayn
-				ar_rayyan
-				ar_rukai
-				ar_ruwailiyyah
-				arar
-				arrayda
-				as_salafiyah
-				as_salif
-				as_sib
 				as_sulaymi
-				as_suwaydirah
-				as_suwayriqiyah
-				asfan
 				ash_shamli
-				ash_shaqiqah
-				ash_shibahah
 				ash_shuara
-				ash_shuaybah
 				ash_shuaybah_hail
 				asila_arabia
 				at_tarfawi
-				aynuna
 				az_zilfi
-				az_zubayir
-				azzan
-				bada_yaqub
-				badr_hunayn
-				bahla
-				bajdah
-				balhaf
-				bani_saad
 				baqa
-				baqqa
-				barahrah
-				baraqish
-				bariq
-				basithah
 				bilghah
-				bir_al_qurr
-				bir_fajr
-				bir_ibn_hermas
-				birali
 				buraydah
-				buwat
 				darghat
 				dawbah
-				dha_sohis
-				dhahran
-				dhalam
-				dhamar
-				dhat_al_hajj
-				dhat_irq
-				dhi_ain
-				dhufar
 				dhurma
-				diriyah
-				duba
-				dubai
-				dumat_al_jandal
-				eglat_faisal
 				fadak
-				farasan
 				fayd
-				ghumayqah
-				habban
-				habiyah
-				hadibu
-				hafar_al_batin
 				hail
-				hajar
-				hajjah
-				halaban
-				hali
-				haql
-				harad_al_ahsa
-				harad_asir
-				harib
-				hays
-				hudaida
-				huraydah
-				hutayb
-				huth
-				ibb
-				ibra
-				ibri
-				izki
-				jalan_buani_buali
-				jannah
-				jarrarah
-				jazan
-				jeddah
-				juban
 				jubbah
-				julfar
-				jurrah
-				kaf
-				kawkaban
-				kazimah
-				khalfut
-				khalis_medina
-				khamir
-				khaybar
-				khaybar_janoub
-				khayrij
-				khor_fakkan
-				khulays
-				khurays
-				lahj
-				laila
-				lawdar
-				linah
-				liwa
-				lowqah
-				madin_bani_sulaym
-				main
-				makna
-				malham
-				manama
-				marawah
-				markha
-				mashdhubah
-				masirah
-				masqat
 				mawqaq
-				mawza
-				mecca
-				medina
-				mikhlaf_al_hubishiyah
-				mirbat
 				miskah
-				mudhaykirah
-				mughayra
-				muhayil
-				murayghan
-				musaymir
-				muwayh
-				muzahmiyah
-				naam
-				najran
-				nakhal
 				nifi
-				nisab
-				nita_arabia
-				nizwa
-				qalat_bishah
-				qalhat
-				qaryat_ulya
-				qasr_al_qaba
-				qasr_himam
-				qishn
-				qudayd
-				qulensya
-				qurain
-				qurayyat_al_milh
-				radaa
-				raghdan
-				rakhyah
 				ramah
-				ranyah
-				rawdat_al_ard
-				raysut
-				rijal_almaa
-				rumah
-				rustaq
-				sabt_bani_bishr
-				sabya
-				sadah
-				saham
-				sakaka
-				samakh
 				samira
-				sana_yemen
 				saqra
 				sara
-				sayhat
-				sayun
-				shaharah
-				shajwa
-				sharjah
-				shibam
-				shinas
-				shuqra
-				sinaw
-				sir_bani_yas
-				sufaynah
-				suhar
-				suq_al_ghinan
-				sur
-				tabalah
-				tabuk_arabia
-				taif
-				taizz
-				tamrah
-				tanomah
 				tanumah
-				tarim
-				tathlith
 				tayma
 				thadij
-				thadiq
-				thula
-				turbah
 				udakh
-				umluj
-				umm_ad_dawm
-				umm_al_ghiran
 				umm_al_qulban
 				unaizah
-				urayrah
 				uyun_al_jiwa
-				yabrin
-				yadamah
-				yahr
-				yalamlam
-				yanbu
-				yanbu_an_nakhil
-				yanqul
-				zabid
-				zinjibar
-				zubala
-				zubarah
 			}
 
 			country_rank = rank_county
@@ -14503,8 +14668,21 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -45
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 70
 			}
-			capital = mecca
+			capital = fayd
 		}
 
 		XDO = { # Siberian Societies; P8.8;CAH-XI

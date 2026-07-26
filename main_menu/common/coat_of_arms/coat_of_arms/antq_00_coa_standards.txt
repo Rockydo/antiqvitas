@@ -57,17 +57,17 @@ XAC = { # Herodian Batanea; P8.1;P20
 	}
 }
 
-NAB = { # Nabataea; P8.6;P20
+NAB = { # Nabataea; NABATAEA-MAP;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
+	color1 = "purple"
 	color2 = "yellow"
-	color3 = "white"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_star_08.dds"
+		texture = "ce_eagle.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.78 0.78 } }
+		color3 = color1
+		instance = { position = { 0.5 0.47 } scale = { 0.70 0.76 } }
 	}
 }
 
@@ -827,73 +827,143 @@ XDF = { # Barbaria Societies; P8.5;P20
 	}
 }
 
-XBI = { # Saba; P8.6;P20
+XBI = { # Saba; UNESCO-SABA;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
-	color2 = "yellow"
+	color1 = "yellow"
+	color2 = "black"
 	color3 = "white"
 	colored_emblem = {
-		texture = "ce_star_08.dds"
+		texture = "ce_ibex_goat_passant.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.78 0.78 } }
+		color3 = color1
+		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
 	}
 }
 
-HIM = { # Himyar; P8.6;P20
+HIM = { # Himyar; HIMYAR-HIST;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
+	color1 = "red"
 	color2 = "yellow"
-	color3 = "white"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_star_08.dds"
+		texture = "ce_bull_head.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.78 0.78 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
 	}
 }
 
-QAT = { # Qataban; P8.6;P20
+QAT = { # Qataban; UNESCO-QATABAN;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
-	color2 = "yellow"
-	color3 = "white"
+	color1 = "orange"
+	color2 = "black"
+	color3 = "yellow"
 	colored_emblem = {
-		texture = "ce_star_08.dds"
+		texture = "ce_ibex_ram_horn_shield.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.78 0.78 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.82 } }
 	}
 }
 
-XBJ = { # Hadramawt; P8.6;P20
+XBJ = { # Hadramawt; UNESCO-INCENSE;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
+	color1 = "blue"
 	color2 = "yellow"
-	color3 = "white"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_star_08.dds"
+		texture = "ce_crescent_moon.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.78 0.78 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
 	}
 }
 
-KIN = { # Kindah; P8.6;P20
+KIN = { # Kindah; P8.6;PLE;P20
 	pattern = "pattern_solid.dds"
 	color1 = "green"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_horse_salient.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.84 0.84 } }
+	}
+}
+
+XEQ = { # Thamud; PLN-ARAB;THAMUD-EPIG;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_ibex_segreant.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+AGR = { # Agraeans; STR-ARAB;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_bow_arrows_03.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+GRH = { # Gerrha; OCD-GERRHA;THAJ-ARCH;P20
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "black"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_bull_head_ringed.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+XER = { # Cataraei; PLN-ARAB;PTO-ARAB;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
 	color2 = "yellow"
 	color3 = "white"
 	colored_emblem = {
 		texture = "ce_star_08.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.78 0.78 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+OMN = { # Omanitae; PLN-ARAB;PLE;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_african_ram_horns.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
 	}
 }
 
@@ -2031,17 +2101,17 @@ XDN = { # Tibetan Societies; P8.8;P20
 	}
 }
 
-BED = { # Interior Bedouin Societies; P8.6;P20
+BED = { # Chaulotaeans; STR-ARAB;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
+	color1 = "black"
 	color2 = "yellow"
-	color3 = "white"
+	color3 = "red"
 	colored_emblem = {
-		texture = "ce_star_08.dds"
+		texture = "ce_bow_arrow.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.78 0.78 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.82 } }
 	}
 }
 

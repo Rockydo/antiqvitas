@@ -19,17 +19,17 @@
   "installed_reference_count": 7082,
   "localization": {
     "country_history_client_coverage": {
-      "braz_por": 229,
-      "english": 229,
-      "french": 229,
-      "german": 229,
-      "japanese": 229,
-      "korean": 229,
-      "polish": 229,
-      "russian": 229,
-      "simp_chinese": 229,
-      "spanish": 229,
-      "turkish": 229
+      "braz_por": 234,
+      "english": 234,
+      "french": 234,
+      "german": 234,
+      "japanese": 234,
+      "korean": 234,
+      "polish": 234,
+      "russian": 234,
+      "simp_chinese": 234,
+      "spanish": 234,
+      "turkish": 234
     },
     "country_history_complete": true,
     "country_history_exact_override": true,
@@ -171,6 +171,7 @@
     "country_history_override_keys": [
       "antq_country_history_ADI",
       "antq_country_history_AES",
+      "antq_country_history_AGR",
       "antq_country_history_AKF",
       "antq_country_history_AKS",
       "antq_country_history_AND",
@@ -201,6 +202,7 @@
       "antq_country_history_GET",
       "antq_country_history_GMB",
       "antq_country_history_GOG",
+      "antq_country_history_GRH",
       "antq_country_history_GTL",
       "antq_country_history_GUT",
       "antq_country_history_HER",
@@ -241,6 +243,7 @@
       "antq_country_history_NOK",
       "antq_country_history_OAS",
       "antq_country_history_OHW",
+      "antq_country_history_OMN",
       "antq_country_history_OSR",
       "antq_country_history_PDL",
       "antq_country_history_PHL",
@@ -392,6 +395,8 @@
       "antq_country_history_XEN",
       "antq_country_history_XEO",
       "antq_country_history_XEP",
+      "antq_country_history_XEQ",
+      "antq_country_history_XER",
       "antq_country_history_XIA",
       "antq_country_history_XIO",
       "antq_country_history_YDH",
@@ -401,10 +406,10 @@
       "antq_country_history_fallback",
       "l_english"
     ],
-    "country_history_roster_count": 229,
+    "country_history_roster_count": 234,
     "country_history_source": "<GAME_DIR>\\game\\main_menu\\localization\\english\\country_history_l_english.yml",
-    "country_history_status": "complete_229_tag_exact_override",
-    "country_history_trigger_count": 229,
+    "country_history_status": "complete_234_tag_exact_override",
+    "country_history_trigger_count": 234,
     "loading_tip_complete": true,
     "loading_tip_installed_keys": [
       "LOADING_TIP_0",
@@ -12176,7 +12181,7 @@
             "gaituguiliu_policy"
           ],
           "mod_mirror": "in_game/common/cabinet_actions/gaituguiliu_policy.txt",
-          "mod_sha256": "797e2f01b5e58ebed73adccef57d3d5d633ca7b0ef99467293cc7778f189686d",
+          "mod_sha256": "7c3486386a708e01a28a88287754331649ae681097e0bb300c84a5aac95856b0",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "gaituguiliu_policy.txt",
@@ -14437,7 +14442,7 @@
             "legacy_of_genghis"
           ],
           "mod_mirror": "in_game/common/government_reforms/steppe_horde.txt",
-          "mod_sha256": "a35232102b8454ffb48f4dafaa58b6aa4c28fcf68726faed14e9a4fcf41decd8",
+          "mod_sha256": "de56c66abe3ccacf8e4ba79180057967bd9e22196b77db84c1a7a463380ef6c5",
           "reference_count": 1,
           "references_sha256": "3690d7a0b0ee504b312e346fae1f3e57e210dc93adaec009c212795acba5350a",
           "relative": "steppe_horde.txt",
@@ -14985,7 +14990,7 @@
             "slavery_laws"
           ],
           "mod_mirror": "in_game/common/laws/01_common.txt",
-          "mod_sha256": "12f09bbe41f651493d36020d82a0254059b7fa748fe0791cdc38c137a8998a4a",
+          "mod_sha256": "6049209dab06db343538af8f4a1b77ea4d0f7cb892fcc883373b679fadee9427",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "01_common.txt",
@@ -15079,7 +15084,7 @@
             "teu_amber_monopoly_law"
           ],
           "mod_mirror": "in_game/common/laws/02_country_specific.txt",
-          "mod_sha256": "a58501578593000dd55f743efc44c0a05a8a2c595d29fc074277453c28300471",
+          "mod_sha256": "fa3a9f69ee52f21a192317efac442c18e432adf302ecf2616db9f714196767f9",
           "reference_count": 2,
           "references_sha256": "3a5287d56a531d8fd4f56ad34077bec481cc6f75fbee08d262e5f1c49f9ac560",
           "relative": "02_country_specific.txt",
@@ -15191,7 +15196,7 @@
             "secularized_electors_law"
           ],
           "mod_mirror": "in_game/common/laws/20_hre.txt",
-          "mod_sha256": "4072f1d05344bc1ddf1335e3dc9a15c9479ef1a0710ac7a95550531f60947eb9",
+          "mod_sha256": "fe545cc69d94a61734be65fc083dc5c5456c77b49df12f55e094b0c997b04488",
           "reference_count": 2,
           "references_sha256": "3908fa4eafa54d7063b524b4ea7dc84fa64f19f2917944e79d1ed448f4233df3",
           "relative": "20_hre.txt",
@@ -15216,7 +15221,7 @@
             "tianxia"
           ],
           "mod_mirror": "in_game/common/laws/20_middle_kingdom.txt",
-          "mod_sha256": "a18dfdb61e7254b296a2dccfc4ed4ecce971d6d302f8df6523df6018ce7546c8",
+          "mod_sha256": "0ab89caddf50b2603ef6ae5cb1061b434f007137fb87cb1053661ff912283a86",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "20_middle_kingdom.txt",
@@ -15285,7 +15290,7 @@
             "sc_war_politics"
           ],
           "mod_mirror": "in_game/common/laws/22_swiss_confederation.txt",
-          "mod_sha256": "eb46bd1238dc4b51b2c8038498492497e5486e1106a35f96b9ffd00a4f9487f3",
+          "mod_sha256": "dc55a32159b79adec233df3a5d29b935cdfd705520079121e4ec6e9710e0a36c",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "22_swiss_confederation.txt",
@@ -15494,7 +15499,7 @@
             "khalsa_law"
           ],
           "mod_mirror": "in_game/common/laws/sikhism.txt",
-          "mod_sha256": "219dae9d5cc0fb30fa2cf7eebc0130ddd8d27eb0dfdef075a44a048263641651",
+          "mod_sha256": "2109c51558e1aab3343f7792c4d67aa219cc07b75c9a11e53c578ace0b3078fc",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "sikhism.txt",
@@ -16346,7 +16351,7 @@
             "hre_roman_month"
           ],
           "mod_mirror": "in_game/common/parliament_issues/10_hre_issues.txt",
-          "mod_sha256": "82bbd486e41603ea681a62a7f87d0f94e1aca78c88ec18b3ecfccddffd41aeef",
+          "mod_sha256": "4efb00b52bb9f677c2ee3b1f67ac10cb11b7e7dc47646ce145c5b5ad4580bd55",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "10_hre_issues.txt",

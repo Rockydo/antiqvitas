@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "policy": "Preserve installed keys for reference resolution; false-gate every mounted post-antique definition and the HRE interaction surface.",
+  "policy": "Preserve installed keys for reference resolution; false-gate every mounted post-antique definition and guard the HRE yearly pulse.",
   "totals": {
     "estate_privileges": 261,
     "cabinet_actions": 73,
@@ -8,8 +8,10 @@
     "parliament_agendas": 128,
     "laws": 196,
     "government_reforms": 328,
+    "country_interactions": 138,
+    "disasters": 35,
     "religious_aspects": 177,
-    "hre_interactions": 24,
+    "hre_generic_actions": 8,
     "hre_yearly_scope_guard": 1
   },
   "files": [
@@ -263,7 +265,7 @@
       "source_sha256": "12524e056dfb9b1208b80f6386d2438932bbb70faf883234d88eefc65eae14c5",
       "definition_count": 1,
       "output": "in_game/common/cabinet_actions/gaituguiliu_policy.txt",
-      "output_sha256": "797e2f01b5e58ebed73adccef57d3d5d633ca7b0ef99467293cc7778f189686d"
+      "output_sha256": "7c3486386a708e01a28a88287754331649ae681097e0bb300c84a5aac95856b0"
     },
     {
       "surface": "cabinet_actions",
@@ -785,7 +787,7 @@
       "source_sha256": "a550b3cc15d43978d6fe8d48b778f7af4a4c1124e6a04666141764def5d53ba7",
       "definition_count": 8,
       "output": "in_game/common/parliament_issues/10_hre_issues.txt",
-      "output_sha256": "82bbd486e41603ea681a62a7f87d0f94e1aca78c88ec18b3ecfccddffd41aeef"
+      "output_sha256": "4efb00b52bb9f677c2ee3b1f67ac10cb11b7e7dc47646ce145c5b5ad4580bd55"
     },
     {
       "surface": "parliament_issues",
@@ -902,7 +904,7 @@
       "source_sha256": "eff197f5fc6c2c3c22d3663d492af29adec79ad4e0f76146aef42909ced368a9",
       "definition_count": 20,
       "output": "in_game/common/laws/01_common.txt",
-      "output_sha256": "12f09bbe41f651493d36020d82a0254059b7fa748fe0791cdc38c137a8998a4a"
+      "output_sha256": "6049209dab06db343538af8f4a1b77ea4d0f7cb892fcc883373b679fadee9427"
     },
     {
       "surface": "laws",
@@ -938,7 +940,7 @@
       "source_sha256": "fdaaa1853928e2fedb0cd65e17878d846a5844cb8f066fdb38934296cb8c4dca",
       "definition_count": 22,
       "output": "in_game/common/laws/02_country_specific.txt",
-      "output_sha256": "a58501578593000dd55f743efc44c0a05a8a2c595d29fc074277453c28300471"
+      "output_sha256": "fa3a9f69ee52f21a192317efac442c18e432adf302ecf2616db9f714196767f9"
     },
     {
       "surface": "laws",
@@ -983,7 +985,7 @@
       "source_sha256": "db1d5805d9f12b975e5e7e4cc9c1b725565634fefa7f0fde3ac4ec9f63710e45",
       "definition_count": 16,
       "output": "in_game/common/laws/20_hre.txt",
-      "output_sha256": "4072f1d05344bc1ddf1335e3dc9a15c9479ef1a0710ac7a95550531f60947eb9"
+      "output_sha256": "fe545cc69d94a61734be65fc083dc5c5456c77b49df12f55e094b0c997b04488"
     },
     {
       "surface": "laws",
@@ -992,7 +994,7 @@
       "source_sha256": "42a2799793ff42e7ec46ebb9aa3bf8a6132bfd3e8b9bb11b4a433908cf81b4a4",
       "definition_count": 10,
       "output": "in_game/common/laws/20_middle_kingdom.txt",
-      "output_sha256": "a18dfdb61e7254b296a2dccfc4ed4ecce971d6d302f8df6523df6018ce7546c8"
+      "output_sha256": "0ab89caddf50b2603ef6ae5cb1061b434f007137fb87cb1053661ff912283a86"
     },
     {
       "surface": "laws",
@@ -1019,7 +1021,7 @@
       "source_sha256": "1c2a64200872447b7933946caa576213b1cab9af885c59d99da62a0a591f5f50",
       "definition_count": 12,
       "output": "in_game/common/laws/22_swiss_confederation.txt",
-      "output_sha256": "eb46bd1238dc4b51b2c8038498492497e5486e1106a35f96b9ffd00a4f9487f3"
+      "output_sha256": "dc55a32159b79adec233df3a5d29b935cdfd705520079121e4ec6e9710e0a36c"
     },
     {
       "surface": "laws",
@@ -1109,7 +1111,7 @@
       "source_sha256": "ac6ec5d06f36d7be73c292be02227cb7068761d75fa3a6a87af1dacef57b5122",
       "definition_count": 12,
       "output": "in_game/common/laws/sikhism.txt",
-      "output_sha256": "219dae9d5cc0fb30fa2cf7eebc0130ddd8d27eb0dfdef075a44a048263641651"
+      "output_sha256": "2109c51558e1aab3343f7792c4d67aa219cc07b75c9a11e53c578ace0b3078fc"
     },
     {
       "surface": "government_reforms",
@@ -1154,7 +1156,7 @@
       "source_sha256": "ef083997faa0a6e60e6123c9c71b1efd57b6189fa7fd1f5db0124b08bbaa45a3",
       "definition_count": 1,
       "output": "in_game/common/government_reforms/steppe_horde.txt",
-      "output_sha256": "a35232102b8454ffb48f4dafaa58b6aa4c28fcf68726faed14e9a4fcf41decd8"
+      "output_sha256": "de56c66abe3ccacf8e4ba79180057967bd9e22196b77db84c1a7a463380ef6c5"
     },
     {
       "surface": "government_reforms",
@@ -1164,6 +1166,1113 @@
       "definition_count": 6,
       "output": "in_game/common/government_reforms/theocracy.txt",
       "output_sha256": "438d85e5c0198a0e387aa023c3c70514c43e5b6aa755032248492908e2484633"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "annul_casus_belli.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\annul_casus_belli.txt",
+      "source_sha256": "51ff6818d2e06416cc818d55de1558059872e43ca659e66f073fe66b25ebe9a2",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/annul_casus_belli.txt",
+      "output_sha256": "1f7caa7e6df1f50c47d5bad1b47928d732f2a30ba1f2e889158705e7425379cb"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "appanage_call_to_war.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\appanage_call_to_war.txt",
+      "source_sha256": "10ef5111eedca854481dc2c2cd227a53e07d659c7e527480e58331c47d300ce0",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/appanage_call_to_war.txt",
+      "output_sha256": "20002a56051b83da9161efa3dbf2358b59d1aac28b482544ea30467ed768579c"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "appanage_request_levies.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\appanage_request_levies.txt",
+      "source_sha256": "f4e6cc09cc90b5d5e2fbb3620ea0517e09c3deaf6e90670f868ea85d3232136f",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/appanage_request_levies.txt",
+      "output_sha256": "9a3212b6d2c12abef784efae87dbc99a8d085a928e66a793a175544327de6aab"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "appanage_seize_court_resources.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\appanage_seize_court_resources.txt",
+      "source_sha256": "1883404cdb64e9e88a4daf36dfdee3eea285661996c39763aaf1eafc0bf1b89e",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/appanage_seize_court_resources.txt",
+      "output_sha256": "990feae7c4064bce6c78a3ff69cd67887cc0964e805ac2b1a22f404659214102"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "ask_for_access_for_war_side.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\ask_for_access_for_war_side.txt",
+      "source_sha256": "ba282636a0cceb3595a8d23a41909abce58f3c0baf26df6fa7d4bdd381b4e793",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/ask_for_access_for_war_side.txt",
+      "output_sha256": "2016f5175c79a51b072090e0bbdfdfc6cafc3edde5c1d11f0a478d22996897e7"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "ask_for_money.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\ask_for_money.txt",
+      "source_sha256": "1f0c8b77c1967c515ca551ba54dc4c9fd178862f2da8045a2c78357e7b0412a0",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/ask_for_money.txt",
+      "output_sha256": "cde379a16f5a7f0598b2b7c9e21669d6bb0226b23484aa91d78da30074a1b23a"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "ask_join_war_for_favors.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\ask_join_war_for_favors.txt",
+      "source_sha256": "72382c93e55496bb22f1c919b96fe27b21c5292c92e2487af68e3cd6565439fa",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/ask_join_war_for_favors.txt",
+      "output_sha256": "ee99680b39b2364654b75c5c580a851488400133461798a6599474b95bd36ace"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "ask_reject_curia_proposal.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\ask_reject_curia_proposal.txt",
+      "source_sha256": "20cf0130ae5c0d0c57c56cee85337ca5671bdd7e730cd0c1e8f0fb5f33d35656",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/ask_reject_curia_proposal.txt",
+      "output_sha256": "ce96ac9afc46cb65fa7ebbda6b6549684f75c087b0b4f19c0f353565ebfb8c24"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "ask_support_curia_proposal.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\ask_support_curia_proposal.txt",
+      "source_sha256": "e0590ef74837e321c4d1007af671305bab59e487c14f107a93e61b5331fa4b15",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/ask_support_curia_proposal.txt",
+      "output_sha256": "754e239295b32b674bbdeae14a383575affdbc6da03e692d47598b9e453ed2f3"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "assassinate_character.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\assassinate_character.txt",
+      "source_sha256": "7bf068a52ad200b0d06261060b57bbaf184e685b35ad3e44a5626e73c27dcfba",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/assassinate_character.txt",
+      "output_sha256": "8b5fbbd3175a498e69a5ede02576c77d6122217484c515be4e6281b95ffe172b"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "break_others_alliance.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\break_others_alliance.txt",
+      "source_sha256": "014ae5568766b5a99ebc181f4ac95f8565ff4fa0a3947c15273b21387663ef38",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/break_others_alliance.txt",
+      "output_sha256": "3f8dee5c7222b6e9d8323d78cddd7c657d6884b28796edbe75f514aa98c1c197"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "break_union.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\break_union.txt",
+      "source_sha256": "32de1069a8fee509821f0aeb12d19a26b8b060ebf24fed67db03407f8495c847",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/break_union.txt",
+      "output_sha256": "cd0f17fbe19aa838ae690dd7762dd947d7eb98b2e4bf8b0202e2d3401f0107e6"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "bribe_vote.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\bribe_vote.txt",
+      "source_sha256": "c35329aa6fa076b391e1283a9065fd7a4485b88a10f42f3e0281e68b228c6e92",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/bribe_vote.txt",
+      "output_sha256": "874e177f4d1c13398b327a7096cb12b69545b926a516566f2bdfce550a190488"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "catholic_interactions.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\catholic_interactions.txt",
+      "source_sha256": "ae785c1ddbd6bfea39e9d9f44d90ee3247d912c5304fd094f01da57e65b0ec23",
+      "definition_count": 7,
+      "output": "in_game/common/country_interactions/catholic_interactions.txt",
+      "output_sha256": "a23cf272c053b4d791f28bd74a49d36274d7c5a9d4015880b00b119c0036db64"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "change_ruler.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\change_ruler.txt",
+      "source_sha256": "cbf58168d53455a4532e2a4c1646bccdfdaf91e96617de378d97691d69b9f9fa",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/change_ruler.txt",
+      "output_sha256": "451880f5472be51c2f36a23fd7ea16ed5dbab859f215dbf7e20b9bbb4d6874c0"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "change_subject_court_language.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\change_subject_court_language.txt",
+      "source_sha256": "0f96520301cf631747ac4ee2fe1da9d1158776130fdf8e33dae0cc072f185983",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/change_subject_court_language.txt",
+      "output_sha256": "c21416dd1f0c49a8c607f0f066d7eb9a24d7eb475c151dc4a0949d8c8dcf86ec"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "change_subject_policy.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\change_subject_policy.txt",
+      "source_sha256": "ea06feaa93af2e43fe8dbccc188956c83a526df9059926c424ce9e153f05fa30",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/change_subject_policy.txt",
+      "output_sha256": "a838935529206fc0c5f128632595d70176eedfca88ba291850175451e84fc947"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "demand_additional_tribute.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\demand_additional_tribute.txt",
+      "source_sha256": "43b6e152e0131f108c6963d99fe424fa14c802cfdd8abc961699ac52b93e3acb",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/demand_additional_tribute.txt",
+      "output_sha256": "3777efa7fd43a1eaf36b9ea3c919a08e7be2ce7ca52a000ef2fd2753b8e58bc6"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "demand_conversion_to_islam.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\demand_conversion_to_islam.txt",
+      "source_sha256": "5508336e278ce4de2ab4457cd08a8a2b5654f3454577a9769f7281ce592d0e13",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/demand_conversion_to_islam.txt",
+      "output_sha256": "42c0643b159e8bbb1805915f16c0f6e9b4eab9bdf4c01dad568b218f871821d0"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "demand_silver_tribute.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\demand_silver_tribute.txt",
+      "source_sha256": "8b8d5c83b698474949d7f61943a5393fcf8e9e75ef003c7fdc38eea1171b96d7",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/demand_silver_tribute.txt",
+      "output_sha256": "6e91441202fea445e74e042de5cbbfc22ce306adf89418a1188e973dc1c9925a"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "demote_celestial_governor_to_vassal.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\demote_celestial_governor_to_vassal.txt",
+      "source_sha256": "4968cf42f4d231fb1c4fd09301a4d052f95e2a5d7bbe2327b705dc159e97aed9",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/demote_celestial_governor_to_vassal.txt",
+      "output_sha256": "d4555a130fafec28c7dca7912802e9363927136dbd61f1bd6eb80649b107b988"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "enforce_culture.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\enforce_culture.txt",
+      "source_sha256": "a21243d7ba98733733709f4b709c6198e0b8731efc6e59587b592d6fbce73bcd",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/enforce_culture.txt",
+      "output_sha256": "953b3a95866ad6af2ad23d2917e67b9540e12e383da673fa1d714bcbdc4ca400"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "enforce_religion.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\enforce_religion.txt",
+      "source_sha256": "8ec5ea93da452c31f034fcc3a25c4f5aa1b590f453f7b72605cd1a0154dc0359",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/enforce_religion.txt",
+      "output_sha256": "1dd5b8dd42f6babe3e3580d5b33d3359352fc2fa47156724874a746635779462"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "force_change_court_language.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\force_change_court_language.txt",
+      "source_sha256": "1255f3eae5470c7b0b83f9c1aa1dd88a8635f931fa841d7af62d78bddf5b9688",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/force_change_court_language.txt",
+      "output_sha256": "411bdc4002fa22935817b674bf19f5ab194527c5aa459090d368a446de80d51a"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "force_embargo.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\force_embargo.txt",
+      "source_sha256": "4d79cd952ad0ff60dba0de0a56adf49dfd467d588e19c186e50829e385b1f763",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/force_embargo.txt",
+      "output_sha256": "05d0e7b0c06ad729c3ebac3a33bd3878e11d9dc2944232b10258b6398b8120b8"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "form_closer_bond_iroquois.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\form_closer_bond_iroquois.txt",
+      "source_sha256": "61b201bcca871e2a3e99dd2d3276fad815c96858f98b8ab4ddb17d367e8d679b",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/form_closer_bond_iroquois.txt",
+      "output_sha256": "635f2521c408c0dcd18ccb9319a80be9e5a3becf74ae0f8ddb565fa6ed8c1d3b"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "formalize_italian_state_relations.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\formalize_italian_state_relations.txt",
+      "source_sha256": "a1702b71fd7c9cf4a014971d3311539a9e21e5374d027ac6adbdd851b0854c19",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/formalize_italian_state_relations.txt",
+      "output_sha256": "106db03f3f4c6f21b936946f04c7fa0521606d904be36833e24cff48047874b6"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "give_location_to_subject.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\give_location_to_subject.txt",
+      "source_sha256": "82f5bdf0c0c85637e7e1d81c9722d09083e7672fa08cfc8d9f91c6f9f6a489f3",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/give_location_to_subject.txt",
+      "output_sha256": "e8c660cfdbacff4169d83b926a3d479d7a5de0dcd3caa1ed2b001a2f79cf3850"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "give_province_to_subject.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\give_province_to_subject.txt",
+      "source_sha256": "9322c96431873e8cfe9d37a2c284c0dc7fc22c7f92b509c32b88882ab30d7185",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/give_province_to_subject.txt",
+      "output_sha256": "5afb441d5dccc9500253fcd8c2103e3205ee220d4684abdb183a56c7cba9efc7"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "give_subject_location_to_other_subject.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\give_subject_location_to_other_subject.txt",
+      "source_sha256": "58e84f71ad9219b2d1d81530d1b648d86b310b91fcda3c179d04e13e8022ee6e",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/give_subject_location_to_other_subject.txt",
+      "output_sha256": "38d63be1f65d166778fbfc2dc94fac179bb0dad83a272d9c6df084032d1ff0c7"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "hre.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\hre.txt",
+      "source_sha256": "f59ee72dc29362535c5d113f7c1f2ade65d69d501c06b081d7dbc9c79624712b",
+      "definition_count": 24,
+      "output": "in_game/common/country_interactions/hre.txt",
+      "output_sha256": "4ab2a5a53f5b767a0ecffe32f630791ac17ec96cf70f2111318b01727c56a4c7"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "imperial_circles.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\imperial_circles.txt",
+      "source_sha256": "24dd8fb0ed48236c2fe36b974c308ed9c6b7b580bb47c2c4c9f87de60f8cae94",
+      "definition_count": 9,
+      "output": "in_game/common/country_interactions/imperial_circles.txt",
+      "output_sha256": "a6fd8780e43924a83f2d4fb31f3d75a408eb8cc0b50afac6646e457eaefcdbbd"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "improve_cultural_view.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\improve_cultural_view.txt",
+      "source_sha256": "766e16bdc70f1f50e441187c59e29056dffd317b7f31825ee8f020f4052f7ee3",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/improve_cultural_view.txt",
+      "output_sha256": "645f92350284b55c01b34ee5d299e23faf4bcdc1aa24eb4f8393b6951b309d51"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "improve_cultural_view_subject.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\improve_cultural_view_subject.txt",
+      "source_sha256": "b147822cee38463fd11833a31cd976a58e52963a44bf60229be3c45e5f594323",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/improve_cultural_view_subject.txt",
+      "output_sha256": "1d7aef120a6caf24fdab98ec162f2343687626fc8f7d612f2aad745320c24e5f"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "influence_nation.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\influence_nation.txt",
+      "source_sha256": "adcc03391d730e1c3e13d6f0aa1455e2ad66ce0b0da230bb626391416c43fcfa",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/influence_nation.txt",
+      "output_sha256": "c5daaac353322eddace61a1e9c796807d4b5dc005294f015060b8634d8c5c958"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "intervene_in_subject_civil_war.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\intervene_in_subject_civil_war.txt",
+      "source_sha256": "9991440c7fe7cc476979949f6adc829165aaa7c024877dfc52e4e95f8270f1dd",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/intervene_in_subject_civil_war.txt",
+      "output_sha256": "5c6cc4cbcd57e0200c770636de4ea3f7c355acacc986aa8e5c682c63f39f5efe"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "intervene_in_subject_war.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\intervene_in_subject_war.txt",
+      "source_sha256": "c5e5e65cb44f7828eae013704acacb79204b839a52f9818cc58193a14b6bb029",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/intervene_in_subject_war.txt",
+      "output_sha256": "eed3a77c112fc49cc9baf1baa229590f5ee13dc812c05b694e35b44b6ae86f39"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "intervene_in_union_civil_war.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\intervene_in_union_civil_war.txt",
+      "source_sha256": "2e89cf7d567178dbbe0ae60f0b83b88565b4d3d7eb9dd9eb58898deb4bd3d23d",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/intervene_in_union_civil_war.txt",
+      "output_sha256": "623f5b7e34eb419d3d8ac31f6595483bad740a79519380897ec5f70d544e9409"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "invite_artist.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\invite_artist.txt",
+      "source_sha256": "e7a031b6b9949ff6fe8daf01657b0cf185a3548d4221959939d2e8a60c9855d7",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/invite_artist.txt",
+      "output_sha256": "0fd4978a0b88a302654f7502e9fc5641d2c4537ef139caf1dbcc1b967174e228"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "invite_prince.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\invite_prince.txt",
+      "source_sha256": "d5cd89e362bc3e2d59e9d84d93c0f56efc6181de6cb5828b4869a64c589105c8",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/invite_prince.txt",
+      "output_sha256": "ba17b0820a9c77c18f1b5e2f96e0b2aca2b34944e46e6df651668d8b25d82a61"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "invite_royal_family.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\invite_royal_family.txt",
+      "source_sha256": "e9f53fcbd0c6c1bffc1644630b04df918491d817da5b50a51e843321b57afdd9",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/invite_royal_family.txt",
+      "output_sha256": "51b9e27b0a2fea23298368a0c3d42a13cd1abb6c403e0a797228fd0edaaa3065"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "invite_settlers.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\invite_settlers.txt",
+      "source_sha256": "7bcef4124cdf0329e1d83042f1fe9cc4583b450986a65611877547b525d1ca97",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/invite_settlers.txt",
+      "output_sha256": "f730a42736733927c29b4a7e909637504e764655c5fd8c875faba33774849dec"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "italian_league_sponsor_interactions.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\italian_league_sponsor_interactions.txt",
+      "source_sha256": "c82c8e0ae41d637892e9fa2854d589c0ff5be8a0b6078e9bf0000ce5a80a51fd",
+      "definition_count": 3,
+      "output": "in_game/common/country_interactions/italian_league_sponsor_interactions.txt",
+      "output_sha256": "8337ec30e0b04bbdb975571f8c601e86c5665b8d5740ca040df614040f6d396e"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "italian_wars_country_interactions.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\italian_wars_country_interactions.txt",
+      "source_sha256": "ec323fab4cfabaabe3246eeba944ad1985ac2e913550ad42366c7517fe5c0e4c",
+      "definition_count": 2,
+      "output": "in_game/common/country_interactions/italian_wars_country_interactions.txt",
+      "output_sha256": "eac9d4a06b1f06d98eb9b0542a950b35316590c65406788276740007c6e51518"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "japanese_clans_covert_actions.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\japanese_clans_covert_actions.txt",
+      "source_sha256": "633916cd27b64fdf28e52491f510dc49e4fff797b7d35a06742ec05afc35a4cc",
+      "definition_count": 2,
+      "output": "in_game/common/country_interactions/japanese_clans_covert_actions.txt",
+      "output_sha256": "93cc2bfe3a7827f8ef75812214ee74bd605a0f6f537fcc0960ae2a51ae36cb02"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "lend_unit_to_ally.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\lend_unit_to_ally.txt",
+      "source_sha256": "27c0ea2d86dd4aad3efc28d9951f4faa67ab63cc2d4736e5fc40ed2da36a6e39",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/lend_unit_to_ally.txt",
+      "output_sha256": "9e797ca7d87e99578fd9fe75fa4ecf1d104f27aff54c26cb73169cf811638580"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "lordship_of_ireland.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\lordship_of_ireland.txt",
+      "source_sha256": "fd838dd17b4d150c7cf7ab2e668ccefef54538ef131f1cd8627c4977dfcf3252",
+      "definition_count": 5,
+      "output": "in_game/common/country_interactions/lordship_of_ireland.txt",
+      "output_sha256": "066dc90f166bdfae49b2ba288f8440598bcd645f48735b10e18294da399e2ca0"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "merge_colonies.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\merge_colonies.txt",
+      "source_sha256": "0aa4d7b3704c1f3c26ec2259bcdb08561acd7993aab925c12c1a2f32a1ffac2a",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/merge_colonies.txt",
+      "output_sha256": "b017360d2f9024023fdfec0fac4a664dd1f770a557a726dea6a4f7e88afbee2f"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "merge_tribe_iroquois.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\merge_tribe_iroquois.txt",
+      "source_sha256": "9971e9fd733c27e6959c9d1b6f28002dc546d8405107488b2bf9ef23b6fa4a5b",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/merge_tribe_iroquois.txt",
+      "output_sha256": "1072c1cc9066ce41bd28e21f5ea1d0457673243391697207e075fa95a78680bf"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "mfa_join_against_byz.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\mfa_join_against_byz.txt",
+      "source_sha256": "7f71b92b2fdbfdbc44a889940d00b2b2bae71b8a29057687fc3fddbe5e253dcd",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/mfa_join_against_byz.txt",
+      "output_sha256": "068fe2dcaf25f903c1ed813a5b58abd66ace9ec1c7085f06a0b1ff8f60dfcc2d"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "military_order_relationship.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\military_order_relationship.txt",
+      "source_sha256": "980573509632f3d2407873076c594fbd941b8a6036254c633fceda6bfd1e7af4",
+      "definition_count": 3,
+      "output": "in_game/common/country_interactions/military_order_relationship.txt",
+      "output_sha256": "822549a53dbde2173f75667888b693285922c16b433316c14a2d8a930869cf27"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "move_subject_capital.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\move_subject_capital.txt",
+      "source_sha256": "7c103ee37ff67c8fc6118ea44144d3e7c42ba8c6fd1a4e266f043cb67808e6f0",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/move_subject_capital.txt",
+      "output_sha256": "e13e3e7e35a1d482c5be769758bf0d55b1570400a3782c73a3690e9d525bd47e"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "negotiate_succession_law.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\negotiate_succession_law.txt",
+      "source_sha256": "80467a5a28ff78235172b4e233ee2150b9132eb90df93ca2a2bb55cca5ca04ee",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/negotiate_succession_law.txt",
+      "output_sha256": "73ee16f280e6f5b84fc1e33b944506d79c4387998a86504f1bed24f71f45dda6"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "nusta_marriage.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\nusta_marriage.txt",
+      "source_sha256": "8c381e096e7b4c31c9940c692e5738d28e339e3120ef1a16c3bdc7ffddb4ca4a",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/nusta_marriage.txt",
+      "output_sha256": "0daafc13c91ad9719563ce0c1230f66a97524cebe7f2eabcf969e447e29b3702"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "pay_off_debt.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\pay_off_debt.txt",
+      "source_sha256": "3788581371a3b8f404d9763631e429d1349554488991ff2b5c898f0dbd9804c8",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/pay_off_debt.txt",
+      "output_sha256": "2fe6a92c8086dccfe55424e8509165cf5e94fdad339f51cb96f47b2d418531fe"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "place_relative_on_throne.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\place_relative_on_throne.txt",
+      "source_sha256": "33b5b47f18ea06f1ee0af75d5ff8e4f105e996fa6128686e05d729b15926019e",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/place_relative_on_throne.txt",
+      "output_sha256": "1e3fbddfe64a80a9417c290acaf9b3cb735c06445bdf5151e8e1f78ce97e5bdf"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "press_sailors.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\press_sailors.txt",
+      "source_sha256": "94e00f39f88fbb670e7867a5e411e9a747097db6fc68e96875d574ecda9b6f50",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/press_sailors.txt",
+      "output_sha256": "bc3c5b9a88d13192e8abac5dab1a3f46464162b814901a529b2dabb2416ad38a"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "promote_chinese_vassal_to_celestial_governor.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\promote_chinese_vassal_to_celestial_governor.txt",
+      "source_sha256": "7804ca2d87020e7de0d69fb9685b986d60d09b958eb1220ceaa2e747e4f916ad",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/promote_chinese_vassal_to_celestial_governor.txt",
+      "output_sha256": "4bb5cae4732b8cf7a57679a37b205185bd5c06bea772d791e3f8038d18b1ccd0"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "propose_ruler.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\propose_ruler.txt",
+      "source_sha256": "a71bba94ffeccf762f23358174ed3551e2d8e2e6cf8de74b30b70f91ab8b55d1",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/propose_ruler.txt",
+      "output_sha256": "c24459dff24dfd5d9ae9a342459bb175ce9526d072c0104e0eb177396f4d9798"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "prussian_crusade.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\prussian_crusade.txt",
+      "source_sha256": "e78d88e6bccaac777dd1e2b40ca386dcc72749d535a0039b02efce7361e41c49",
+      "definition_count": 2,
+      "output": "in_game/common/country_interactions/prussian_crusade.txt",
+      "output_sha256": "57e3d574016378b156df2b2dce39bb0fa1d7a18230cfcdfe4e32a2f67b3535c4"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "renegotiate_loan.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\renegotiate_loan.txt",
+      "source_sha256": "526815b296bad3920997e9dddf77e2cbead5f35d652a8e6c2baf39759c19f2af",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/renegotiate_loan.txt",
+      "output_sha256": "5ed06ea9f2e7e5b6ac9c5a441e13e94cd2c0ee2b51e675ccd20e4946fa715952"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "request_crown_character.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\request_crown_character.txt",
+      "source_sha256": "8e4f231c04d5013fd970954a2a24039a9a1bbe06bf74a079ab6c167f2827f134",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/request_crown_character.txt",
+      "output_sha256": "9a507f2cf8137d1801d8713fae16badb7f85d6c1e129c86bbdd82851bfed65a0"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "request_loan.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\request_loan.txt",
+      "source_sha256": "c0ba5dfd8614eb2a306dd36887bba075d8fb79f5223ef493738ea87422ae9a68",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/request_loan.txt",
+      "output_sha256": "0667655a389d6ce4a437ef255ec4a2aed5085ab395f3ef46dde227a99f4154d7"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "request_work_of_art_purchase.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\request_work_of_art_purchase.txt",
+      "source_sha256": "7d7d3465373a5351507924ec046af5976ff93ad52082b6f31dfe0f9c189bc8a6",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/request_work_of_art_purchase.txt",
+      "output_sha256": "48fa26de82b725829a6d16b044ce048e96b2eed63cb6410e1fdcda79f3650663"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "rtr_demand_annexation.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\rtr_demand_annexation.txt",
+      "source_sha256": "4cf44b2c2359960b80090217a658cfb9cea94e95d48cbcc1cb16476f19924f72",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/rtr_demand_annexation.txt",
+      "output_sha256": "ec04d65598f17f66d76f00104946bea460df437042195b8dc59ef692f100f7a2"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "sabotage_reputation.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\sabotage_reputation.txt",
+      "source_sha256": "760ea22f9cd6adca5109004ab94b4587734b14ad8ed07ab3334f38a1e6bfd608",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/sabotage_reputation.txt",
+      "output_sha256": "e15031d967adbb17f7e388239a466b8ab66787110a29c87b11c82e08227ed7db"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "samanta_upgrades.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\samanta_upgrades.txt",
+      "source_sha256": "382f27f0672ddc89263b34374d0c509679c55d5a121f110702f5179037358020",
+      "definition_count": 2,
+      "output": "in_game/common/country_interactions/samanta_upgrades.txt",
+      "output_sha256": "e5c3beef1592bfcc94e9942ccbc851f399434ce890ada7b8ea4d64ad033b3245"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "seize_location_from_subject.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\seize_location_from_subject.txt",
+      "source_sha256": "bc4a90fba8917cc75a102348f7654e68618c23cf352eb4c407aa4241327ae3e0",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/seize_location_from_subject.txt",
+      "output_sha256": "0ffb42aaf53b06ca4916694d79ea17039dd85e750ab886f56c3e9142a6add9d7"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "sell_corsica.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\sell_corsica.txt",
+      "source_sha256": "8e5a3cedc5984cd52ee668c39d2a0c1b096bf26770b94994d59b6ee95c25c0e4",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/sell_corsica.txt",
+      "output_sha256": "848bde0d1dce167afb7c9aaab1eb582ca6d595ca0f139c0bb52252a5d189dc3f"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "sell_icon.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\sell_icon.txt",
+      "source_sha256": "d691b121a48a7587c8ac56bb61266ec6ea9b6ecf57fdc46759837396394a8692",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/sell_icon.txt",
+      "output_sha256": "6cfe5d853c82d017993b98790ef68a8fee9b6ab483e86ab23dcc889fdb0352e8"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "sell_work_of_art.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\sell_work_of_art.txt",
+      "source_sha256": "054a60489623a33cfc23549b7199e4c2e49acbb1179d63f002b18d39dde5f03f",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/sell_work_of_art.txt",
+      "output_sha256": "1f3935c7d3ade35c51b468685a63fef2a8b1bde5668a5da95198abf3208d96b5"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "share_maps.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\share_maps.txt",
+      "source_sha256": "cf59442f88d5f221b1208049df6a2d3611d66f9ec22d9ac4f9f0ee2b78a8e89c",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/share_maps.txt",
+      "output_sha256": "044de98931750dcb2f6efa2ad1c8e1fb3c7fc79b07be70da0677b30e97e4ff2a"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "siphon_income.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\siphon_income.txt",
+      "source_sha256": "c4f82519bf3ce25849275d6b8a656824149b07570e044f2b7e0db937e2811dd9",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/siphon_income.txt",
+      "output_sha256": "0ead0ac6b44a4b0ec04d7dea951bd30707d00fd9801d55399f982c05fff56252"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "start_war_in_colony.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\start_war_in_colony.txt",
+      "source_sha256": "9a0fca5777975e4a0f6a790fee0169153e6476b7ce41094cfa16835ed807ef5c",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/start_war_in_colony.txt",
+      "output_sha256": "74dc39a9b528680d10cb9c59225088abd6817955b581368eeaa74d7a26797cad"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "steal_maps.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\steal_maps.txt",
+      "source_sha256": "c464a18c727e2a35057f7413f4c1f349ed1a3c6ebbf84f5dd0480879446f02ab",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/steal_maps.txt",
+      "output_sha256": "e89409abf5925864df8539f7a61fd6b9d9ac074c204dc890db18e717651e9ccb"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "steal_technology.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\steal_technology.txt",
+      "source_sha256": "138bf14feb02fa61b57d878601d87fe27e4c5e63b069f5f6730b8383d542dc07",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/steal_technology.txt",
+      "output_sha256": "ed928c6f98ac97f08ee480c11de2e16933a24fce9cb728bcdadaaa0dd204d31f"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "subject_embargo.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\subject_embargo.txt",
+      "source_sha256": "7e57d71678df0d992e8e02d78e12f6b36f201f0ce62ee7f65e3450355f89d316",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/subject_embargo.txt",
+      "output_sha256": "1c94eedceebf570205023eca07fee691e1510ecd369dd1cc60d552b68fc05a42"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "subject_enforce_peace.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\subject_enforce_peace.txt",
+      "source_sha256": "b73d97d313fbb8f5fc812e8dce5be8488a0c8ba1063792ef8f874be175cec93b",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/subject_enforce_peace.txt",
+      "output_sha256": "db1e9be41f7e9ab64f7a0ff8520cfaec74fbf1195979081be35bdccc6f67444d"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "subject_return_land.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\subject_return_land.txt",
+      "source_sha256": "adfbaa42a6cd97a2345172403ed964e061acf3676f7400b3be30a5969e3d3d61",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/subject_return_land.txt",
+      "output_sha256": "5f87a34329c22e6b3a6efbad30d179ca8ad540c323d7688012a4fa0b12cbd984"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "surrender_civil_war.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\surrender_civil_war.txt",
+      "source_sha256": "30d0b0f17ac1abc5f7654756bb19650e005cd697df6ca72c50a4d68f75e5f9e9",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/surrender_civil_war.txt",
+      "output_sha256": "f746c0057c85d07b56a70ecd0e1b2216269dbe6f93b76f6d1559077e22ac28ff"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "take_colony_for_debt.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\take_colony_for_debt.txt",
+      "source_sha256": "fa47933115fd18b8cedcbcf85ef7313d9b887feb2b650ca2889a339beec01085",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/take_colony_for_debt.txt",
+      "output_sha256": "895c1e38d4ca7e720e15b3d881ffa604bdc684d24bfb4dbb3c977a03de659216"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "take_over_loan.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\take_over_loan.txt",
+      "source_sha256": "dc042e8d77aac29012f119f827b27c44d702163ff649cc107fc4a3948359a070",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/take_over_loan.txt",
+      "output_sha256": "3b935ca1c14495f8edcf51d55faa45fdd04c066e7d45457ed5f21058440d9fdd"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "take_over_seniority.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\take_over_seniority.txt",
+      "source_sha256": "cb51c40c772706d68c4d822991d77799c0dea7e5c1c6d66b4d16eabb44ee0a3d",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/take_over_seniority.txt",
+      "output_sha256": "ad5f3864f89960113003a10ac2c26ca02f5007ec513d57a1aeb552bab554125e"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "transfer_occupation.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\transfer_occupation.txt",
+      "source_sha256": "89902de54d185299913a35cb17c9db1fab1dda464bb1cf1961409cc54c961d8e",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/transfer_occupation.txt",
+      "output_sha256": "75dafdf7417c438e3683c60fee8a60afe2bb5d0ef2d65ae3dd1aed509d7a9586"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "transfer_subject.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\transfer_subject.txt",
+      "source_sha256": "18590ca38b681055621bc0402a200fe8832ad18745f71e18714e3fdb8c8b58ed",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/transfer_subject.txt",
+      "output_sha256": "b07b08f197733f42e6a16ae086aac5e1f949f3b07f134214486ee81f8fa1aeda"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "union_enforce_peace.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\union_enforce_peace.txt",
+      "source_sha256": "d96d7e6e864598c30792ff5134c3d6c1978994cb0c8d2fa4d410d1344add0178",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/union_enforce_peace.txt",
+      "output_sha256": "55e97ebeffb554e585d99b05f1778f39b020f5f7f23fa514d2a0bc1343266ab8"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "union_enforcements.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\union_enforcements.txt",
+      "source_sha256": "32b59a1da11c85bd1acfca3f736367eaf4aab466e0e732cf6ccf7fb49e6a1766",
+      "definition_count": 2,
+      "output": "in_game/common/country_interactions/union_enforcements.txt",
+      "output_sha256": "7a7ced1a5587e86f81012f9041232d42a3e56e82068f6acc52c1760a48c5b170"
+    },
+    {
+      "surface": "country_interactions",
+      "relative": "violate_sovereignty.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\violate_sovereignty.txt",
+      "source_sha256": "e67a8b2851351658f23a7f1a37d8d7bf234960a9996179562c27d1f564448e22",
+      "definition_count": 1,
+      "output": "in_game/common/country_interactions/violate_sovereignty.txt",
+      "output_sha256": "d2141747981212fa2028a662f1d0907b33d5393bce4586593a6672ca9d5fd1f9"
+    },
+    {
+      "surface": "disasters",
+      "relative": "D008_fate_of_the_phoenix.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\D008_fate_of_the_phoenix.txt",
+      "source_sha256": "e066a532160b27584d19e42a7fd3963576d2635b3c7b52cad26b292acb19817f",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/D008_fate_of_the_phoenix.txt",
+      "output_sha256": "3d506ae93f085f9c1d173567300743eae51f4eda7e3ef749db88184bedc5b814"
+    },
+    {
+      "surface": "disasters",
+      "relative": "ambrosian_republic.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\ambrosian_republic.txt",
+      "source_sha256": "b6b6a044bed0b9748be3ab0dfb7bfa16f7e9f303b7089435a0b520c8fe432400",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/ambrosian_republic.txt",
+      "output_sha256": "8676c6883df4eab2b8c847dc90333e991d1c1ab2444e7ad2f4e2f9d3f814deec"
+    },
+    {
+      "surface": "disasters",
+      "relative": "aspiration_for_liberty.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\aspiration_for_liberty.txt",
+      "source_sha256": "7b9c4bcb49b8732351176c7b4f40b560fce2ac581da310496633ea6e36d75b69",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/aspiration_for_liberty.txt",
+      "output_sha256": "5135f6bc59cb37c3e3cdb57906d4ba932eb30d0f2ac4c20d09f6cebf495446e3"
+    },
+    {
+      "surface": "disasters",
+      "relative": "byzantine_succession_crisis.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\byzantine_succession_crisis.txt",
+      "source_sha256": "bded944ac242d43fb4f5af248299b8db97b04486190cf0c0b58a4f2385abae64",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/byzantine_succession_crisis.txt",
+      "output_sha256": "0c44887325730c791b9dd3df6ff1b2be4530a15ecaea6e6dd14fb26b22145a4b"
+    },
+    {
+      "surface": "disasters",
+      "relative": "castilian_civil_war.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\castilian_civil_war.txt",
+      "source_sha256": "3b209554557e4f1bfb1b31e37a337a9523612065eb4eb0548beab368d5a5cceb",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/castilian_civil_war.txt",
+      "output_sha256": "32b860c765024f7658c4112d047e7522275a230f1a18d69e684270d6e5205c44"
+    },
+    {
+      "surface": "disasters",
+      "relative": "ciompi_revolt.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\ciompi_revolt.txt",
+      "source_sha256": "17e51273ca6f0e113b256c743a74b43614772097f71003210940a610db296980",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/ciompi_revolt.txt",
+      "output_sha256": "af85841f5bdce966dd8ab65f3efb4e2584c438060ee2cf986b6aa8f882441437"
+    },
+    {
+      "surface": "disasters",
+      "relative": "coup_attempt.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\coup_attempt.txt",
+      "source_sha256": "6f309500e0612e969b3882c7cc33b111311248a394127a6ccaa6a47e6e02a3b4",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/coup_attempt.txt",
+      "output_sha256": "38288d0251a12a6da9e4d8b8c9113b1f825870084bf9a3b33f4b3af4e90a95f1"
+    },
+    {
+      "surface": "disasters",
+      "relative": "court_and_country.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\court_and_country.txt",
+      "source_sha256": "08cd72ca18bb6f3b94b928eeffe1daae0d41d245281551364d67638c3e1b056f",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/court_and_country.txt",
+      "output_sha256": "426ef65417502fd1b1b7ec99286dc0e5be3e739ddbc729f4030d41447cdcc314"
+    },
+    {
+      "surface": "disasters",
+      "relative": "crisis_of_the_chinese_dynasty.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\crisis_of_the_chinese_dynasty.txt",
+      "source_sha256": "2d386931434de0c2211b6b9763099e15234285b2f95c7bb0d42af3154ae77d00",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/crisis_of_the_chinese_dynasty.txt",
+      "output_sha256": "356cb84498534481bf1aaec9fa99f63253eb7307abf00190863a54ffb5f32769"
+    },
+    {
+      "surface": "disasters",
+      "relative": "crisis_of_the_sayfawa_dynasty.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\crisis_of_the_sayfawa_dynasty.txt",
+      "source_sha256": "0221365f54f96a616d3a93dd021653891e201842aa7e7de8a93ff56c72201bc6",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/crisis_of_the_sayfawa_dynasty.txt",
+      "output_sha256": "423a41cfc25901a90e077a699f315d97c0c410e88c4a483b33fa73c3ed675975"
+    },
+    {
+      "surface": "disasters",
+      "relative": "curse_of_stefan_uros_iii.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\curse_of_stefan_uros_iii.txt",
+      "source_sha256": "d305d234e4fb076bdbdcf02518cf3ac50c93e69dc0de610785871446ff2f9a0a",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/curse_of_stefan_uros_iii.txt",
+      "output_sha256": "ea18d3e8de08356390a839848693cb37dc3d30c766b851fedd47475d1dd4e654"
+    },
+    {
+      "surface": "disasters",
+      "relative": "death_of_hayan_wuruk.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\death_of_hayan_wuruk.txt",
+      "source_sha256": "dfb7bd18118206cd3153f756492178329961cf4f7ac969fc9b10b72037329d22",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/death_of_hayan_wuruk.txt",
+      "output_sha256": "06a2f2e157b085fb24b6a9dd21cb33997ca0131bc52bf1f6342a0c08e8734ea6"
+    },
+    {
+      "surface": "disasters",
+      "relative": "decline_of_empire.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\decline_of_empire.txt",
+      "source_sha256": "8c089d65cf068b2a22adfc293069cc93fe590fb0608ad05503ab68a80918a5b8",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/decline_of_empire.txt",
+      "output_sha256": "7b849e930ac57c84ae887f12225a760c1aaa5774c5fb1d2571f2e8d9e98e6280"
+    },
+    {
+      "surface": "disasters",
+      "relative": "decline_of_majapahit.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\decline_of_majapahit.txt",
+      "source_sha256": "cf72ce5d617594b4c00b52042946e93d0261a481ffd0f0a1275ddc5767f116a9",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/decline_of_majapahit.txt",
+      "output_sha256": "c07e0048279e6b98215307731a05169eb1f10017d4d5f74f688a84b5ef7dc22c"
+    },
+    {
+      "surface": "disasters",
+      "relative": "decline_of_mali.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\decline_of_mali.txt",
+      "source_sha256": "278612c42bc34c23fa40711a62915ffbed4c865e74273fd98fcfe22d63e9882a",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/decline_of_mali.txt",
+      "output_sha256": "9b56ad5ab93447b09cec7256b6c11242293d637dcf08f9ca6380fc70052b5ad0"
+    },
+    {
+      "surface": "disasters",
+      "relative": "dissolution_of_delhi.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\dissolution_of_delhi.txt",
+      "source_sha256": "97315eb94598cfbb7aa49d19015835f7401bbdea4d987b644276ea9129b60717",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/dissolution_of_delhi.txt",
+      "output_sha256": "f4fc515aea432a3a6c096dd7e4c5645e65a32197be05ce758461ebc7c9f720d2"
+    },
+    {
+      "surface": "disasters",
+      "relative": "english_civil_war.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\english_civil_war.txt",
+      "source_sha256": "fc4543fb100450442ddaa274c703e2def7b7ed701c8a41c9400b0819272a083b",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/english_civil_war.txt",
+      "output_sha256": "a37b7fa5866232c93820ff14c345ce912a8d86fbcc8f30154a3389e3bb99a20e"
+    },
+    {
+      "surface": "disasters",
+      "relative": "french_wars_religion.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\french_wars_religion.txt",
+      "source_sha256": "2f32100d551928cd0c37319138aa755e1cb5d9b69a08e47ef236bd021c85b1d6",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/french_wars_religion.txt",
+      "output_sha256": "5e185194e4269f5cddfe7930e8e148c0726fceec45af49340447f621a6b7dfe0"
+    },
+    {
+      "surface": "disasters",
+      "relative": "hook_and_cod_wars.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\hook_and_cod_wars.txt",
+      "source_sha256": "6be60fcb3074bcbb019ec7e94f65ff135e5d15483e8189c9b8ff863a1c1e68e3",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/hook_and_cod_wars.txt",
+      "output_sha256": "aa0ff5d2ca2b94c0985e8aed66967c50ba49a398c040112e0d4f637d7974de94"
+    },
+    {
+      "surface": "disasters",
+      "relative": "horde_civil_war.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\horde_civil_war.txt",
+      "source_sha256": "7516aa3a29bbbe8bbf7d80707328a79524ef0ec7f397ca0f505abe6d31a67ed0",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/horde_civil_war.txt",
+      "output_sha256": "d3c71bd4523b544709f377df62a95d8d4290b192bcac7aea61f7188322769201"
+    },
+    {
+      "surface": "disasters",
+      "relative": "muscovite_succession_war.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\muscovite_succession_war.txt",
+      "source_sha256": "bf91b0dbadfbf493b15bec6c48b0d6de75ce7f1f6557ec854fa70c56939a52d1",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/muscovite_succession_war.txt",
+      "output_sha256": "6236d6d3f7f51263b77c7a960b52934799ebb873877b48772536540f92e57f22"
+    },
+    {
+      "surface": "disasters",
+      "relative": "peasants_war.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\peasants_war.txt",
+      "source_sha256": "b1936a5f1654835545cc632786e6c41015f7b3c4fc546222c2037a2310b1ea75",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/peasants_war.txt",
+      "output_sha256": "0cc7e27c6edac3958a47bcd358df21e73697e7d992261d885892f721b2b6b909"
+    },
+    {
+      "surface": "disasters",
+      "relative": "reform_society.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\reform_society.txt",
+      "source_sha256": "347d7bcbc417d7bf3c3227b6e5ae36ddd6d94b12f9a83c1e70887a01bafe9cf9",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/reform_society.txt",
+      "output_sha256": "889c8fb234e20e3dda2870951a23910b7b223cb5e389e62039a396b5b6831efd"
+    },
+    {
+      "surface": "disasters",
+      "relative": "religious_turmoil.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\religious_turmoil.txt",
+      "source_sha256": "d7791026abdc7cb6b3a7a9466e385c75106dfc05696353a23c1d36e28ce5ee16",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/religious_turmoil.txt",
+      "output_sha256": "55b3de4f1196e71ef8bdff4f401635e719e0fe2f0f8f5aff578a8a0b57393857"
+    },
+    {
+      "surface": "disasters",
+      "relative": "revolutionary_chaos.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\revolutionary_chaos.txt",
+      "source_sha256": "abf1af3d71aadbe9fc5bdfad6603b6a697c6b657994019fd2a4a368b91160fe5",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/revolutionary_chaos.txt",
+      "output_sha256": "7afb3db30f3564d4330fa7fa22a9f4ddfa78ae84073c41fd05f2bc3a20103178"
+    },
+    {
+      "surface": "disasters",
+      "relative": "rise_of_the_szlachta.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\rise_of_the_szlachta.txt",
+      "source_sha256": "2768cd0fab9ae5e8e20ec13a8094872b9f5b582a6ad2388ad001712081d2baf1",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/rise_of_the_szlachta.txt",
+      "output_sha256": "34f4c42732d47469ff6ea6a3c06d2e037eac7cc1582adc88d646a43969d7b69b"
+    },
+    {
+      "surface": "disasters",
+      "relative": "savonarola.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\savonarola.txt",
+      "source_sha256": "cd776f5e38bc708381a4a2451a5893376e0a30c00e890df060b1f2bbc65a4700",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/savonarola.txt",
+      "output_sha256": "c8f6931739a78f5bcb87fe3574df617021947c653845b0d8b6e142f01ee6e761"
+    },
+    {
+      "surface": "disasters",
+      "relative": "sinicization_disaster.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\sinicization_disaster.txt",
+      "source_sha256": "ec7f1c2186ec64ee179c54ec1bb657cf13916c34da969587e41eb29b83145cb0",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/sinicization_disaster.txt",
+      "output_sha256": "85b2fab80ca7f1b9cd4eecf9dbe476459b261a8709f2b7789db3cc1e86e51aa3"
+    },
+    {
+      "surface": "disasters",
+      "relative": "struggle_for_royal_power.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\struggle_for_royal_power.txt",
+      "source_sha256": "1183a74446f3917b4ae5b404a15bd27d80df2fe04ae085fe8abf0f915b0538f2",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/struggle_for_royal_power.txt",
+      "output_sha256": "3da66fa58bf212c3d2d9af5d86ab2ad8cccf0593b4bdf94b59b58018069858ab"
+    },
+    {
+      "surface": "disasters",
+      "relative": "succession_crisis.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\succession_crisis.txt",
+      "source_sha256": "1d0c9666165d9ce0fa76e9659b49641fe8fd302431442d9ad9e9b3a1d828ac1b",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/succession_crisis.txt",
+      "output_sha256": "31610a3bae69e5bdcf1b2cb339c4594b939de57d4a2a22af5b7f65b69acdf0a1"
+    },
+    {
+      "surface": "disasters",
+      "relative": "time_of_troubles.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\time_of_troubles.txt",
+      "source_sha256": "453b7b425680906bcfd40cb77719395705c6ff7bebcd43bbf3783011f877fa26",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/time_of_troubles.txt",
+      "output_sha256": "ad28670792392e83473a5fde8b38a04aef09096cd703d3ca39579b21a7fcc0cc"
+    },
+    {
+      "surface": "disasters",
+      "relative": "turmoil_in_brandenburg.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\turmoil_in_brandenburg.txt",
+      "source_sha256": "b60084966213e6d7e2bb14cb58655a01c7d9b8086dce98d83db700b586c78369",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/turmoil_in_brandenburg.txt",
+      "output_sha256": "f92e48f720d01b63ec1d9a42a1483eace370506381a62c3dcd0bbf929b57ee1a"
+    },
+    {
+      "surface": "disasters",
+      "relative": "twilight_of_the_tsardom.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\twilight_of_the_tsardom.txt",
+      "source_sha256": "48587ab85b3a17a8e4f1bcf4f390584ec6c493234da01fa60e51310c9d4c068e",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/twilight_of_the_tsardom.txt",
+      "output_sha256": "03444557fdef4c7c89d0f2e53279edda450bfdad06215ec9db56ae4162fa4334"
+    },
+    {
+      "surface": "disasters",
+      "relative": "war_of_the_aragonese_union.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\war_of_the_aragonese_union.txt",
+      "source_sha256": "0c8177b0bc76d12a2812d868d0bb591214a4ffa53f642225b4b22fbe7c85a582",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/war_of_the_aragonese_union.txt",
+      "output_sha256": "63eea1ce243c6e52256148ab014c0edfa25228b4edbc97937ff2b5c31f179bef"
+    },
+    {
+      "surface": "disasters",
+      "relative": "war_of_the_roses.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\disasters\\war_of_the_roses.txt",
+      "source_sha256": "557132bba77d00dde7797286439c2d2e8b52ef493e0ba545179a7900fa4b9e39",
+      "definition_count": 1,
+      "output": "in_game/common/disasters/war_of_the_roses.txt",
+      "output_sha256": "58bb0423d16c0454a21e053ddd339abb8fa95fbcfd5579feabe3a4bdfa0bc069"
     },
     {
       "surface": "religious_aspects",
@@ -1328,13 +2437,13 @@
       "output_sha256": "6eccef3354a4aae4a89956c6865560a5ffca75929e5cf100193b9aabda66d8d1"
     },
     {
-      "surface": "hre_interactions",
-      "relative": "hre.txt",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\country_interactions\\hre.txt",
-      "source_sha256": "f59ee72dc29362535c5d113f7c1f2ade65d69d501c06b081d7dbc9c79624712b",
-      "definition_count": 24,
-      "output": "in_game/common/country_interactions/hre.txt",
-      "output_sha256": "a07c785f6707317cd51445cdc2743251f497b8bd2dacfb013c3966045a566be8"
+      "surface": "hre_generic_actions",
+      "relative": "hre_circle_actions.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\generic_actions\\hre_circle_actions.txt",
+      "source_sha256": "7799afff9f75a8596d2768464ffcc91c259e27d9f48621fb3a6c392550a4588a",
+      "definition_count": 8,
+      "output": "in_game/common/generic_actions/hre_circle_actions.txt",
+      "output_sha256": "2157aed3c9480ff4aef7ceff83c5d6c310ad35c4709b0b9ac5a1d5e98693b71f"
     },
     {
       "surface": "hre_yearly_scope_guard",

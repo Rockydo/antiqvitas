@@ -426,7 +426,10 @@ def write() -> None:
     CUSTOM.parent.mkdir(parents=True, exist_ok=True)
     CUSTOM.write_text(render_custom(rows), encoding="utf-8-sig", newline="\n")
     write_localization()
-    print("m12_rank_presentation: wrote 229 polity classifications, exact resolver, and 22 client mirrors")
+    print(
+        f"m12_rank_presentation: wrote {len(rows)} polity classifications, "
+        "exact resolver, and 22 client mirrors"
+    )
 
 
 def start_country_blocks() -> dict[str, str]:
@@ -443,15 +446,16 @@ def validate() -> bool:
     failures: list[str] = []
     try:
         rows = load_rows()
-        if len(rows) != 229 or len({row["engine_tag"] for row in rows}) != 229:
-            failures.append("rank ledger must cover exactly 229 unique engine tags")
-        expected_counts = {"rank_county": 133, "rank_kingdom": 93, "rank_empire": 3}
-        counts = {
-            rank: sum(row["technical_rank"] == rank for row in rows)
-            for rank in expected_counts
-        }
-        if counts != expected_counts:
-            failures.append(f"technical rank distribution changed: {counts}")
+        with ROSTER.open(encoding="utf-8-sig", newline="") as handle:
+            roster_count = sum(1 for _ in csv.DictReader(handle))
+        if len(rows) != roster_count:
+            failures.append(
+                f"rank ledger covers {len(rows)} of {roster_count} roster tags"
+            )
+        if len({row["engine_tag"] for row in rows}) != roster_count:
+            failures.append("rank ledger engine tags are not unique")
+        if sum(row["technical_rank"] == "rank_empire" for row in rows) != len(EMPIRES):
+            failures.append("technical empire rank must remain limited to Rome Parthia and Han")
         expected_ledger = rows
         if not LEDGER.is_file():
             failures.append(f"missing {LEDGER.relative_to(ROOT)}")
@@ -523,7 +527,8 @@ def validate() -> bool:
     classes = len({row["presentation_class"] for row in load_rows()})
     print(
         "m12_rank_presentation: PASS "
-        f"(229 tags; {classes} period classes; no raw County/Count/Duchy/Duke)"
+        f"({len(load_rows())} tags; {classes} period classes; "
+        "no raw County/Count/Duchy/Duke)"
     )
     return True
 

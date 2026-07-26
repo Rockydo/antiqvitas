@@ -577,6 +577,51 @@ KIN = { # Kindah; P8.6;CAH-XI;PLE
 	is_historic = yes
 }
 
+XEQ = { # Thamud; PLN-ARAB;STR-ARAB;THAMUD-EPIG
+	color = rgb { 86 117 88 }
+	color2 = rgb { 169 138 167 }
+
+	culture_definition = antq_arab
+	religion_definition = antq_arabian_polytheism
+	is_historic = yes
+}
+
+AGR = { # Agraeans; STR-ARAB;PLN-ARAB
+	color = rgb { 74 120 60 }
+	color2 = rgb { 181 135 195 }
+
+	culture_definition = antq_arab
+	religion_definition = antq_arabian_polytheism
+	is_historic = yes
+}
+
+GRH = { # Gerrha; OCD-GERRHA;THAJ-ARCH;PLN-ARAB
+	color = rgb { 92 129 74 }
+	color2 = rgb { 163 126 181 }
+
+	culture_definition = antq_arab
+	religion_definition = antq_arabian_polytheism
+	is_historic = yes
+}
+
+XER = { # Cataraei; PLN-ARAB;PTO-ARAB
+	color = rgb { 69 129 69 }
+	color2 = rgb { 186 126 186 }
+
+	culture_definition = antq_arab
+	religion_definition = antq_arabian_polytheism
+	is_historic = yes
+}
+
+OMN = { # Omanitae; PLN-ARAB;PLE
+	color = rgb { 87 134 62 }
+	color2 = rgb { 168 121 193 }
+
+	culture_definition = antq_arab
+	religion_definition = antq_arabian_polytheism
+	is_historic = yes
+}
+
 XBK = { # Marcomanni; P8.7;CAH-XI
 	color = rgb { 82 88 78 }
 	color2 = rgb { 173 167 177 }
@@ -1306,7 +1351,7 @@ XDN = { # Tibetan Societies; P8.8;CAH-XI
 	is_historic = yes
 }
 
-BED = { # Interior Bedouin Societies; P8.6;CAH-XI
+BED = { # Chaulotaeans; STR-ARAB;P8.6
 	color = rgb { 88 133 75 }
 	color2 = rgb { 167 122 180 }
 

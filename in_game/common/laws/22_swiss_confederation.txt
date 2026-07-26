@@ -1052,7 +1052,7 @@ sc_relations_with_hre = {
 				text = sc_every_member_leaves_hre_tt
 				every_international_organization_member = {
 					limit = { is_member_of_international_organization = international_organization:hre }
-					international_organization:hre = { remove_country_from_international_organization = prev }
+					international_organization:hre ?= { remove_country_from_international_organization = prev }
 					every_owned_location = {
 						limit = { is_owned_by_international_organization = international_organization:hre }
 						remove_from_international_organization = international_organization:hre
@@ -1060,8 +1060,8 @@ sc_relations_with_hre = {
 				}
 			}
 			if = {
-				limit = { international_organization:hre = { international_organization_has_leader = yes } }
-				international_organization:hre = {
+				limit = { international_organization:hre ?= { international_organization_has_leader = yes } }
+				international_organization:hre ?= {
 					leader_country = { trigger_event_non_silently = flavor_swi.121 }
 				}
 			}

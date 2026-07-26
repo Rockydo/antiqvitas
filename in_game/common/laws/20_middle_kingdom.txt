@@ -38,7 +38,7 @@ civil_registration = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -68,7 +68,7 @@ civil_registration = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -81,7 +81,7 @@ civil_registration = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -121,7 +121,7 @@ civil_registration = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -151,7 +151,7 @@ civil_registration = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -164,7 +164,7 @@ civil_registration = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -242,7 +242,7 @@ tax_base_system = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -272,7 +272,7 @@ tax_base_system = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -285,7 +285,7 @@ tax_base_system = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -324,7 +324,7 @@ tax_base_system = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -355,7 +355,7 @@ tax_base_system = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -368,7 +368,7 @@ tax_base_system = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -441,7 +441,7 @@ provincial_governorship = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -472,7 +472,7 @@ provincial_governorship = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -484,7 +484,7 @@ provincial_governorship = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -522,7 +522,7 @@ provincial_governorship = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -552,7 +552,7 @@ provincial_governorship = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -565,7 +565,7 @@ provincial_governorship = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -604,7 +604,7 @@ provincial_governorship = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -643,7 +643,7 @@ provincial_governorship = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -656,7 +656,7 @@ provincial_governorship = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -695,7 +695,7 @@ provincial_governorship = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -717,7 +717,7 @@ provincial_governorship = {
 			}
 		}
 		on_activate = {
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					custom_tooltip = unlock_gaituguiliu_tt
 				}
@@ -726,7 +726,7 @@ provincial_governorship = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -739,7 +739,7 @@ provincial_governorship = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -778,7 +778,7 @@ provincial_governorship = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -799,7 +799,7 @@ provincial_governorship = {
 			}
 		}
 		potential = {
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					culture = { has_culture_group = culture_group:jurchen_group }
 				}
@@ -816,7 +816,7 @@ provincial_governorship = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -830,7 +830,7 @@ provincial_governorship = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -883,7 +883,7 @@ cefeng_tizhi = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -913,7 +913,7 @@ cefeng_tizhi = {
 		country_modifier = {
 			#Celestial Governor Benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -925,7 +925,7 @@ cefeng_tizhi = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -963,7 +963,7 @@ cefeng_tizhi = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -994,7 +994,7 @@ cefeng_tizhi = {
 		country_modifier = {
 			#Celestial Governor Benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -1007,7 +1007,7 @@ cefeng_tizhi = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -1080,7 +1080,7 @@ keju_examination = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -1101,14 +1101,14 @@ keju_examination = {
 			}
 		}
 		on_activate = {
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				custom_tooltip = new_keju_formats_policy.tt
 			}
 		}
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -1121,7 +1121,7 @@ keju_examination = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -1160,7 +1160,7 @@ keju_examination = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -1190,7 +1190,7 @@ keju_examination = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -1202,7 +1202,7 @@ keju_examination = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -1240,7 +1240,7 @@ keju_examination = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -1274,7 +1274,7 @@ keju_examination = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -1286,7 +1286,7 @@ keju_examination = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -1324,7 +1324,7 @@ keju_examination = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -1361,7 +1361,7 @@ keju_examination = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -1373,7 +1373,7 @@ keju_examination = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -1445,7 +1445,7 @@ outwards_view = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -1476,7 +1476,7 @@ outwards_view = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -1488,7 +1488,7 @@ outwards_view = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -1526,7 +1526,7 @@ outwards_view = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -1560,7 +1560,7 @@ outwards_view = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -1573,7 +1573,7 @@ outwards_view = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -1644,7 +1644,7 @@ tianxia = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -1665,7 +1665,7 @@ tianxia = {
 			}
 		}
 		on_activate = {
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				custom_tooltip = {
 					text = chi_have_extra_celestial_governor_tt
 				}
@@ -1676,7 +1676,7 @@ tianxia = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -1689,7 +1689,7 @@ tianxia = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -1728,7 +1728,7 @@ tianxia = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -1758,7 +1758,7 @@ tianxia = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -1770,7 +1770,7 @@ tianxia = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -1849,7 +1849,7 @@ jakun_gusa = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -1879,7 +1879,7 @@ jakun_gusa = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -1891,7 +1891,7 @@ jakun_gusa = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor
@@ -1929,7 +1929,7 @@ jakun_gusa = {
 		years = 2
 		on_pay_price = {
 			change_celestial_authority = { value = celestial_authority_very_strong_penalty }
-			international_organization:middle_kingdom = {
+			international_organization:middle_kingdom ?= {
 				leader_country ?= {
 					add_government_power = government_power_ultimate_penalty
 					add_gold = {
@@ -1960,7 +1960,7 @@ jakun_gusa = {
 		country_modifier = {
 			#Celestial Governor benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					country_has_special_status = {
 						type = special_status:celestial_governor
 						country = root
@@ -1972,7 +1972,7 @@ jakun_gusa = {
 		country_modifier = {
 			#Tributary benefits
 			potential_trigger = {
-				international_organization:middle_kingdom = {
+				international_organization:middle_kingdom ?= {
 					NOT = {
 						country_has_special_status = {
 							type = special_status:celestial_governor

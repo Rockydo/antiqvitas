@@ -29,7 +29,7 @@ and focused runtime probe all pass.
   Brittonic Societies 105, Caledonian Societies 63, Berber and Gaetulian
   Societies 56, and Germanic Societies 24. These are country-scale aggregations,
   not merely descriptive localization.
-- The current world has 13,552 assigned land locations, but the RGO correction
+- The current world has 13,551 assigned land locations, but the RGO correction
   ledger changes only 328. The remaining visible resource geography is largely
   inherited from the 1337 setup.
 - 265 ancient building definitions exist, but roughly 2,400 starting placements
@@ -168,6 +168,21 @@ and focused runtime probe all pass.
     exceeds its sourced frame; all roster tags are fully wired.
 
 - [ ] Deepen interior Arabia before the wider generic-polity pass.
+  - [x] Replace the peninsula-wide political residual. Arabia now has twelve
+    sourced frames: Nabataea, Saba, Himyar, Qataban, Hadramawt, Kindah, Thamud,
+    Agraeans, Gerrha, Cataraei, Omanitae, and Chaulotaeans. All 351 ownable
+    peninsula locations are covered; the largest frame owns 56 locations rather
+    than 346. Capitals, profiles, governments, reforms, direct differentiated
+    standards, agendas, eleven localization clients, and a permanent
+    `s2_arabia_granularity.py` regression gate are wired.
+  - [x] Remove the new-game script errors exposed by the deeper map probe.
+    Retain false-gated political bodies for reference accounting while guarding
+    absent HRE/curia/Chinese-IO, market, character, and dynasty scopes. A repeated
+    country-selection probe now has zero script-system errors.
+  - [ ] Add the regional incident and mechanical layer: caravan/oasis privileges,
+    irrigation and incense buildings, Arabian cult choices, bounded camel and
+    raiding units, interstate route diplomacy, and distinct north/east/Omani
+    cultural profiles where the population atlas can support them.
   - Replace the 346-location Interior Bedouin macro-polity with documented tribal,
     oasis, and south/east Arabian groupings appropriate to the turn of the era.
     Distinguish Nabataean/client/frontier control, caravan oases, northern tribal

@@ -4598,3 +4598,22 @@ The global population-summary group is likewise a resolver-neutral symbol for
 people in aggregate. Social status and regional material culture remain expressed
 by the 48 distinct graphical-culture pop portraits; the summary does not assert
 uniform dress, phenotype, or household structure across the world.
+
+## 2026-07-26 - Arabian AD 1 frames are relative and deliberately contested
+
+Strabo supports distinct Nabataean, Chaulotaean, and Agraean names in northern
+and desert Arabia; Pliny supports Thamud/Tamudaei, Domata, Hegra, Omana, and the
+separate southern Arabian landscape. Neither author supplies surveyable borders.
+The Oxford Classical Dictionary and eastern-Arabian archaeology leave Gerrha's
+site disputed, so al-Ahsa is only a playable proxy. Catara's testimony is later
+than AD 1 and its Qatar frame therefore remains especially tentative. Ancient
+Omana is likewise not asserted to be Suhar.
+
+Modern “Thamudic” is an epigraphic classification and is not treated as proof
+that every such inscription belonged to the people Thamud. Himyar is kept
+separate and regionally bounded because its absorption of Qataban, Saba, and
+Hadramawt belongs to later centuries. Kindah is restricted to a Qaryat al-Faw
+route frame rather than receiving its later kingdom. Sources: `STR-ARAB`;
+`PLN-ARAB`; `THAMUD-EPIG`; `OCD-GERRHA`; `THAJ-ARCH`; `NABATAEA-MAP`;
+`UNESCO-SABA`; `UNESCO-QATABAN`; `UNESCO-INCENSE`; `HIMYAR-HIST`; row-level
+contracts in `docs/world_1ad/SOURCES.md`. [contested political geography]

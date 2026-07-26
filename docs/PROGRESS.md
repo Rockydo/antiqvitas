@@ -6757,3 +6757,33 @@ reviewed 128px BC7 DDS.
   displayed the ancient population-growth summary and regional class portraits.
   `make validate` passes all 93 checks; paired vanilla/mod smoke passes with zero
   mod-only error lines.
+
+## 2026-07-26 - Replace the Arabian macro-polity
+
+- Replaced the 346-location Interior Bedouin Societies residual with a complete
+  twelve-frame peninsula: Nabataea, Saba, Himyar, Qataban, Hadramawt, Kindah,
+  Thamud, Agraeans, Gerrha, Cataraei, Omanitae, and Chaulotaeans.
+- Assigned all 351 ownable Arabian locations through disjoint reviewed province
+  frames. The largest new frame has 56 locations; no peninsula-wide residual
+  remains. Later Islamic tribal geographies were deliberately excluded.
+- Added five roster tags and renamed the retained BED design tag without
+  destabilizing existing engine-tag allocations. All twelve frames have owned
+  capitals, culture/religion profiles, government and reform packages, direct
+  differentiated UI standards, specific opening agendas, and eleven-client
+  localization.
+- Added `tools/s2_arabia_granularity.py` and
+  `docs/m12/arabia_granularity.csv`. The check pins the twelve-member roster,
+  351-location installed surface, a 60-location maximum, capital ownership,
+  source/confidence metadata, profiles, governments, standards, and all
+  localization clients.
+- Removed hard-coded 229-tag assumptions from rank, priority-name, and manual
+  regression checks so future regional splits expand the roster safely.
+- A focused country-selection screenshot at Mecca visibly resolves the new map.
+  Its first initialization exposed 43 unique invalid legacy-scope errors. The
+  quarantine now preserves dormant bodies for reference/use accounting while
+  guarding absent international organizations, markets, characters, and
+  dynasties. The repeated probe has zero script-system errors.
+- `make validate` passes all 94 checks and paired vanilla/mod smoke passes with
+  zero mod-only error lines. The hardcoded engine emits absent-HRE notices during
+  country selection because ANTIQVITAS intentionally has no medieval HRE; this
+  is isolated in `BLOCKERS.md` and is not a script-system failure.

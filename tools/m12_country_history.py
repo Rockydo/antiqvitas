@@ -214,6 +214,66 @@ SPECIAL: dict[str, str] = {
         "Temple authority, local law, dynastic legitimacy, taxation, and relations among towns and rural districts make rule exceptionally sensitive.\n\n"
         "Preserve order without severing local legitimacy, meet imperial obligations without ruinous extraction, and keep factional disputes from inviting direct intervention."
     ),
+    "NAB": (
+        "On 1 January AD 1, Aretas IV rules Nabataea from Petra, linking the settled core to Hegra, northwestern Arabian routes, and Red Sea exchange while accommodating Roman power in the Levant. "
+        "Caravan tolls, irrigated settlements, pastoral partners, and a multilingual court sustain the kingdom; the southern edge represented on the campaign map remains deliberately uncertain.\n\n"
+        "Protect Petra and Hegra, keep the caravan and water systems productive, and preserve useful autonomy without allowing Roman patronage or rival Arabian routes to dictate Nabataean policy."
+    ),
+    "SAB": (
+        "On 1 January AD 1, Saba remains rooted in Marib's irrigated landscape, temples, and caravan connections. "
+        "Its anonymous campaign court faces neighbouring Qataban and the rising Himyarite polity; the map does not project Saba's earlier maximum extent into the present.\n\n"
+        "Maintain the Marib waterworks and highland communities, secure incense exchange, and balance dynastic competition without treating every neighbouring settlement as a permanent province."
+    ),
+    "HIM": (
+        "On 1 January AD 1, Himyar is an emerging southwestern Arabian kingdom centred on Zafar. "
+        "It is represented separately from Saba, Qataban, and Hadramawt because the conquests that later united much of South Arabia have not yet occurred.\n\n"
+        "Strengthen the Zafar court, connect highland agriculture to Red Sea and incense traffic, and compete for alliances without receiving the later Himyarite empire in advance."
+    ),
+    "QAT": (
+        "On 1 January AD 1, Qataban is centred on Timna in the Bayhan valley and participates directly in the South Arabian incense routes. "
+        "Its court, temples, irrigated agriculture, and position between stronger neighbours make route access more important than broad territorial uniformity.\n\n"
+        "Protect Timna and its caravan corridor, maintain local water and cult institutions, and keep Sabaean or Himyarite pressure from turning Qataban into a mere transit district."
+    ),
+    "HAD": (
+        "On 1 January AD 1, Hadramawt is centred on Shabwa and commands an eastern branch of the incense-producing and caravan landscape. "
+        "The kingdom's long valleys, ports, and desert approaches demand negotiated control rather than effortless rule across empty space.\n\n"
+        "Keep Shabwa linked to incense country and maritime outlets, secure wells and caravan stages, and prevent rivals from isolating the Hadrami court from either coast or interior."
+    ),
+    "KIN": (
+        "On 1 January AD 1, the Kindah campaign frame is anchored at Qaryat al-Faw on the south-central Arabian caravan crossroads. "
+        "It represents a bounded network around the oasis and routes rather than the much later Kindite kingdom or a unified dominion over Najd.\n\n"
+        "Sustain the oasis, bargain with mobile kin groups and South Arabian courts, and turn caravan access into durable influence without imposing a premature royal bureaucracy."
+    ),
+    "THM": (
+        "On 1 January AD 1, Thamud is represented across a bounded northwestern Arabian range-and-oasis frame attested by classical ethnography. "
+        "The people-name is not applied to every inscription modern scholars classify as Thamudic, and Khaybar is only a practical campaign anchor.\n\n"
+        "Coordinate wells, grazing, and caravan passage through assemblies and local leaders while resisting Nabataean expansion and avoiding claims to a centralized territorial state unsupported by the evidence."
+    ),
+    "AGR": (
+        "On 1 January AD 1, the Agraeans occupy a northern Arabian oasis-route frame anchored at Dumat al-Jandal. "
+        "Strabo's ethnography supports a distinct people, but neither fixed borders nor a named campaign-boundary monarch survive.\n\n"
+        "Keep the northern wells and caravan passages open, balance neighbouring peoples and Nabataean interests, and build authority through route protection and consent rather than invented royal administration."
+    ),
+    "GRH": (
+        "On 1 January AD 1, Gerrha is a wealthy eastern Arabian trade polity connected to Gulf shipping and overland exchange. "
+        "Its exact archaeological identification remains disputed, so al-Ahsa is an explicit gameplay proxy rather than a claim that the ancient city has been located there with certainty.\n\n"
+        "Protect oasis agriculture and Gulf access, mediate caravan and maritime commerce, and preserve local autonomy between Arabian interiors and the powers of Mesopotamia."
+    ),
+    "QTR": (
+        "On 1 January AD 1, the Cataraei are represented along a narrow Gulf-coast frame around the Qatar peninsula. "
+        "The principal geographic witness is later than the campaign start, so Catara and the al-Bidda anchor remain cautious proxies rather than a reconstructed centralized state.\n\n"
+        "Sustain coastal exchange, fishing, and caravan links while keeping local leaders aligned and avoiding unsupported expansion across the Gulf littoral."
+    ),
+    "OMN": (
+        "On 1 January AD 1, the Omanitae campaign frame joins selected northern Omani coast and interior routes. "
+        "Classical Omana is not securely identified with Suhar, which serves only as a conservative playable anchor for a region linked to Gulf and Indian Ocean exchange.\n\n"
+        "Coordinate coast, oasis, and mountain communities, protect maritime exchange, and keep authority flexible where the evidence supports a people and trading region more clearly than a single court."
+    ),
+    "BED": (
+        "On 1 January AD 1, the Chaulotaeans occupy a bounded north-central Arabian caravan-country frame known from Strabo. "
+        "Fayd is a route anchor rather than an attested capital, and the polity does not stand for every mobile or oasis community of interior Arabia.\n\n"
+        "Secure seasonal pasture, wells, and passage agreements, maintain cohesion among local leaders, and compete for caravan influence without becoming another peninsula-wide aggregation."
+    ),
     "GOG": (
         "On 1 January AD 1, Goguryeo is an emerging northern kingdom centred on Gungnae. "
         "Mountain strongholds, river valleys, neighbouring peoples, and the nearby Han commanderies define its opportunities and dangers.\n\n"

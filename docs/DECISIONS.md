@@ -3186,3 +3186,30 @@ declares that one texture as owned by the period-art resolver while retaining
 exact installed mirrors for the other 19 dependencies. This keeps the reproduced
 crash fix and the total-conversion presentation contract compatible instead of
 letting either generator overwrite the other.
+
+## 2026-07-26 - Split Arabia with bounded source frames rather than later tribes
+
+The installed `arabia_region` is divided through reviewed province frames rather
+than a single residual or a projection of Ghassanid, Tanukhid, Tayy, or other
+later tribal geography. Classical ethnonyms and archaeological trade polities
+are used only where the source set supports relative placement: Thamud and the
+Agraeans in the northwestern/northern routes, Chaulotaeans in a north-central
+caravan frame, Gerrha in an explicitly disputed al-Ahsa proxy, Cataraei on a
+cautious Gulf-coast frame, and Omanitae in a disputed Omana-region proxy. South
+Arabian kingdoms remain separate because their later Himyarite consolidation had
+not occurred in AD 1. All uncertain borders stay `contested`.
+
+The validator caps any Arabian frame at 60 locations. This is a gameplay outlier
+guard rather than a historical measurement: it prevents another peninsula-wide
+aggregation while allowing differences imposed by EU5's province geometry.
+
+## 2026-07-26 - Preserve dormant predicates but make missing objects optional
+
+False-gating a legacy definition does not make Jomini short-circuit its entire
+availability predicate, and replacing the predicate body wholesale creates
+hundreds of unused-variable compiler warnings because installed scripts still
+set variables referenced there. The political-system quarantine therefore keeps
+the installed body for typed-reference and variable-use accounting, injects its
+native false gate, and converts only absent legacy database scopes to optional
+lookups. Missing international organizations, capital markets, characters, and
+dynasties now fail quietly while namespaced ANTIQVITAS systems remain active.

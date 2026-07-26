@@ -576,8 +576,16 @@ def render() -> dict[Path, tuple[str, str]]:
         for row in audit
         if "capital" in row["categories"].split("|")
     }
-    if len(capitals) != 229:
-        raise ValueError(f"priority audit covers {len(capitals)} of 229 capitals")
+    expected_capitals = {
+        row["map_capital"] for row in rows(POLITIES) if row["map_capital"] != "TBD"
+    }
+    if capitals != expected_capitals:
+        missing = sorted(expected_capitals - capitals)
+        extra = sorted(capitals - expected_capitals)
+        raise ValueError(
+            "priority capital audit mismatch "
+            f"(missing={','.join(missing)} extra={','.join(extra)})"
+        )
     forbidden = [
         row["location"]
         for row in audit

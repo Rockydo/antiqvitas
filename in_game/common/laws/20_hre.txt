@@ -98,7 +98,7 @@ golden_bull = {
 		#country_modifier = {
 		#	#emperor benefits
 		#	potential_trigger = {
-		#		international_organization:hre = {
+		#		international_organization:hre ?= {
 		#			leader_country = root
 		#		}
 		#	}
@@ -106,7 +106,7 @@ golden_bull = {
 		#country_modifier = {
 		#	#elector benefits
 		#	potential_trigger = {
-		#		international_organization:hre = {
+		#		international_organization:hre ?= {
 		#			country_has_special_status = {
 		#				type = special_status:elector
 		#				country = root
@@ -705,7 +705,7 @@ imperial_religion = {
 			hre_on_reform_level_passed_effect = { law_imperial_authority_cost = imperial_authority_standard_law }
 			hre_lock_law = { law = imperial_religion }
 			hre_set_imperial_religion = { type = religion_group value = christian }
-			international_organization:hre = {
+			international_organization:hre ?= {
 				remove_variable = hre_imperial_religion
 			}
 			hre_bind_voting_to_religion_group = yes
@@ -903,7 +903,7 @@ imperial_voting_law = {
 				custom_tooltip = {
 					text = DIPLOREASON_IS_EMPEROR
 					trigger_if = {
-						limit = { international_organization:hre = { international_organization_has_leader = yes } }
+						limit = { international_organization:hre ?= { international_organization_has_leader = yes } }
 						is_leader_of_international_organization = root
 					}
 					trigger_else = {
@@ -1021,7 +1021,7 @@ imperial_voting_law = {
 				custom_tooltip = {
 					text = same_dynasty_as_emperor_tt
 					trigger_if = {
-						limit = { international_organization:hre = { international_organization_has_leader = yes } }
+						limit = { international_organization:hre ?= { international_organization_has_leader = yes } }
 						same_dynasty_as = { target = international_organization:hre.leader_country }
 					}
 					trigger_else = {
@@ -1088,7 +1088,7 @@ imperial_voting_law = {
 				custom_tooltip = {
 					text = DIPLOREASON_IS_EMPEROR
 					trigger_if = {
-						limit = { international_organization:hre = { international_organization_has_leader = yes } }
+						limit = { international_organization:hre ?= { international_organization_has_leader = yes } }
 						is_leader_of_international_organization = international_organization:hre
 					}
 					trigger_else = {
@@ -1103,7 +1103,7 @@ imperial_voting_law = {
 		wants_propose_policy = {
 			if = {
 				limit = {
-					international_organization:hre = {
+					international_organization:hre ?= {
 						NOT = { international_organization_has_policy = policy:erbkaisertum_policy }
 					}
 				}
@@ -1654,7 +1654,7 @@ secularized_electors_law = {
 			potential_trigger = {
 				# Emperor Modifier
 				is_leader_of_international_organization = scope:recipient
-				international_organization:hre = {
+				international_organization:hre ?= {
 					international_organization_has_policy = policy:hre_religion_catholic
 				}
 			}
@@ -1666,7 +1666,7 @@ secularized_electors_law = {
 				# Emperor Modifier
 				is_leader_of_international_organization = scope:recipient
 				NOT = {
-					international_organization:hre = {
+					international_organization:hre ?= {
 						international_organization_has_policy = policy:hre_religion_catholic
 					}
 				}
@@ -1843,7 +1843,7 @@ free_city_law = {
 			potential_trigger = {
 				custom_tooltip = {
 					text = hre_free_city_bonus_tt
-					international_organization:hre = {
+					international_organization:hre ?= {
 						country_has_special_status = {
 							type = special_status:free_city
 							country = root

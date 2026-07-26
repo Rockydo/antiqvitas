@@ -107,7 +107,12 @@ def build_report() -> dict[str, object]:
 
     polities = rows(ROOT / "docs/world_1ad/polities.csv")
     regions = Counter(row["region"] for row in polities)
-    require(len(polities) == 229, f"expected 229 polities, got {len(polities)}", failures)
+    require(len(polities) >= 229, f"polity roster regressed to {len(polities)}", failures)
+    require(
+        len({row["tag"] for row in polities}) == len(polities),
+        "polity roster contains duplicate design tags",
+        failures,
+    )
     for region, minimum in {"Germania": 48, "Finland": 13, "Japan": 10, "West Africa": 13}.items():
         require(regions[region] >= minimum, f"{region} granularity regressed to {regions[region]}", failures)
 
@@ -133,7 +138,7 @@ def build_report() -> dict[str, object]:
     ranks = rows(ROOT / "docs/m12/rank_presentation.csv")
     medieval_rank_words = {"County", "Count", "Duchy", "Duke"}
     require(
-        len(ranks) == 229
+        len(ranks) == len(polities)
         and not any(row["display_rank"] in medieval_rank_words or row["ruler_title"] in medieval_rank_words for row in ranks),
         "rank presentation exposes medieval language",
         failures,

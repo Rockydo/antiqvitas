@@ -451,7 +451,7 @@ hre_circle_levy_request = {
 	special_status = emperor
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		international_organization:hre = { circles_are_active = yes }
+		international_organization:hre ?= { circles_are_active = yes }
 	}
 	allow = {
 		NOT = { has_cooldown = hre_circle_levy_request }
@@ -470,7 +470,7 @@ hre_circle_levy_request = {
 		leader_country ?= {
 			save_scope_as = hre_emperor_scope
 		}
-		international_organization:hre = {
+		international_organization:hre ?= {
 			every_imperial_circle = {
 				limit = { NOT = { is_dormant_imperial_circle = yes } }
 				every_circle_member = {
@@ -510,7 +510,7 @@ hre_enforce_circle_landfriede = {
 	special_status = emperor
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		international_organization:hre = {
+		international_organization:hre ?= {
 			circles_are_active = yes
 			international_organization_has_policy = policy:landfriede_policy
 		}
@@ -529,7 +529,7 @@ hre_enforce_circle_landfriede = {
 				years = 5
 			}
 		}
-		international_organization:hre = {
+		international_organization:hre ?= {
 			every_imperial_circle = {
 				limit = {
 					NOT = { is_dormant_imperial_circle = yes }
