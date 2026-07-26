@@ -1,5 +1,24 @@
 # Progress
 
+## 2026-07-26 - Complete ancient doctrine catalog
+
+- Expanded the Roman foundation into a complete 37-religion contract. Religio
+  Romana retains eight choices; each of the other 36 opening or later-spawn
+  faiths receives four sourced choices. The active union now has 152 ancient
+  aspects, two slots per faith, and religious influence throughout; omens remain
+  a specifically Roman interface.
+- Added 144 non-Roman direct 128px icons and eleven-client localization. Each
+  final texture uses a unique reviewed advance illustration plus the religion's
+  own direct emblem; the generator rejects repeated motif sources, repeated
+  final textures, missing alpha-safe corners, source drift, roster gaps, and
+  stale contact-sheet or manifest output.
+- The contact-sheet review covers Chinese, Iranian, Indian, Germanic, Baltic,
+  steppe, Buddhist, Finnic, African, Arabian, Japanese, American, Celtic,
+  Kushite, Korean, Hellenic, Oceanic, Jewish, Christian, Manichaean, Daoist,
+  Bon, Kemetic, Punic, Siberian, and Australian practice sets.
+- Validation passes 92/92. Paired vanilla/mod smoke reaches a responsive menu
+  with zero mod-only `error.log` lines after loading all 152 definitions.
+
 ## 2026-07-26 - Religio Romana doctrine foundation
 
 - Added eight useful Roman religious-aspect choices across civic cult, priestly

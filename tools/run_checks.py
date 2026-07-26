@@ -97,6 +97,7 @@ VALIDATE_COMMANDS = (
     Command("tools/m11_dynamic_coas.py", ("--check",)),
     Command("tools/m11_common_icons.py", ("--check",)),
     Command("tools/m12_religious_doctrines.py", ("--check",)),
+    Command("tools/m12_religious_family_doctrines.py", ("--check",)),
     Command("tools/m11_privilege_icons.py", ("--check",)),
     Command("tools/m11_ui_asset_ledger.py", ("--check",)),
     Command("tools/m11_ui_asset_contact_sheet.py", ("--check",)),

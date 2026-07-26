@@ -1,5 +1,20 @@
 # Technical and Design Decisions
 
+## 2026-07-26 - Doctrine breadth is catalog-complete and mechanically uniform
+
+Every custom religion receives two aspect slots and religious influence so a
+later conversion never reveals an empty or mechanically inferior panel. Rome
+alone retains omens because its current content explicitly models public
+auspices and prodigy response; omens are not projected onto unrelated religious
+systems merely for symmetry.
+
+The 144 non-Roman icons use unique already-reviewed advance illustrations as
+their subject layer and the corresponding direct religion emblem as a small
+identity seal. No motif source repeats inside the doctrine catalog and every
+final DDS is byte-distinct. This provides dedicated player-facing assets at
+the requested scale while keeping icon language consistent with the conversion;
+the source/output manifest makes later bespoke replacements safe and reviewable.
+
 ## 2026-07-26 - Religious aspects use their native visibility gate and direct art
 
 Installed religious aspects expose `visible`, not the `potential` field used by

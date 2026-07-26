@@ -110,7 +110,7 @@ and focused runtime probe all pass.
   - Acceptance: installed-union report has zero unapproved visible vanilla keys;
     Rome and six regional probes show only ancient systems.
 
-- [ ] Add Religio Romana doctrines and ancient doctrine coverage.
+- [x] Add Religio Romana doctrines and ancient doctrine coverage.
   - [x] Verify the installed schema and give Religio Romana two aspect slots,
     religious influence, three omens, and eight day-one choices: Sacra Publica,
     Priestly Colleges, Public Auspices, Household Cults, Cult of Augustus,
@@ -120,8 +120,14 @@ and focused runtime probe all pass.
   - [x] Exact-mirror all 177 installed religious aspects—including the malformed
     indented DLC definition—and false-gate them through the locally verified
     `visible` contract so no post-476 choice remains mounted.
-  - [ ] Give other major religious families comparable, historically bounded choices
-    rather than inheriting medieval doctrines.
+  - [x] Give every other ANTIQVITAS religion four historically bounded choices
+    rather than inheriting medieval doctrines: all 25 other opening faiths and
+    all 11 later-spawn faiths are covered, for 152 total aspects across the
+    37-faith catalog.
+  - [x] Give all 37 religions two slots and religious influence; retain Roman
+    omens only for Religio Romana. Pin 144 non-Roman art compositions to unique
+    reviewed advance illustrations plus each faith's direct emblem, with no
+    duplicate final texture and a complete contact-sheet atlas.
   - Acceptance: Rome has multiple viable doctrine configurations on day one;
     each major religion profile has choices, complete art/localization/effects,
     and no post-476 inherited aspect.

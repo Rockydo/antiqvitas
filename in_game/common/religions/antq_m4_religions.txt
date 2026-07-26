@@ -10,9 +10,9 @@ antq_religio_romana = { # P11;CAH-XI; Roman civic polytheism
 	has_omens = yes
 	definition_modifier = {
 		tolerance_own = 0.01
-		omens_offered = 3
 		monthly_religious_influence = 0.10
 		maximum_religious_influence = 400
+		omens_offered = 3
 	}
 	opinions = {
 	}
@@ -21,8 +21,12 @@ antq_religio_romana = { # P11;CAH-XI; Roman civic polytheism
 antq_hellenic = { # P11;CAH-XI; Greek civic polytheism
 	color = antq_religion_color_antq_hellenic
 	group = folk_european_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -31,9 +35,13 @@ antq_hellenic = { # P11;CAH-XI; Greek civic polytheism
 antq_early_christianity = { # P11;CAH-XI; Pre-Nicene Christian communities
 	color = antq_religion_color_antq_early_christianity
 	group = christian
+	religious_aspects = 2
+	has_religious_influence = yes
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -42,8 +50,12 @@ antq_early_christianity = { # P11;CAH-XI; Pre-Nicene Christian communities
 antq_judaism = { # P11;OCD; Second Temple Judaism and diaspora
 	color = antq_religion_color_antq_judaism
 	group = israelite_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -52,8 +64,12 @@ antq_judaism = { # P11;OCD; Second Temple Judaism and diaspora
 antq_arsacid_zoroastrianism = { # P11;CAH-XI; Arsacid syncretic Zoroastrianism
 	color = antq_religion_color_antq_arsacid_zoroastrianism
 	group = zoroastrian_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -62,9 +78,13 @@ antq_arsacid_zoroastrianism = { # P11;CAH-XI; Arsacid syncretic Zoroastrianism
 antq_manichaeism = { # P11;CAH-XI; Manichaean future faith scaffold
 	color = antq_religion_color_antq_manichaeism
 	group = manichaean_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -73,8 +93,12 @@ antq_manichaeism = { # P11;CAH-XI; Manichaean future faith scaffold
 antq_theravada = { # P11;CAH-XI; Lankan Buddhist tradition
 	color = antq_religion_color_antq_theravada
 	group = buddhist
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -83,8 +107,12 @@ antq_theravada = { # P11;CAH-XI; Lankan Buddhist tradition
 antq_mahayana = { # P11;CAH-XI; Mahayana and Silk Road tradition
 	color = antq_religion_color_antq_mahayana
 	group = buddhist
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -93,8 +121,12 @@ antq_mahayana = { # P11;CAH-XI; Mahayana and Silk Road tradition
 antq_brahmanism = { # P11;CAH-XI; Pre-Puranic Hindu tradition
 	color = antq_religion_color_antq_brahmanism
 	group = dharmic
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -103,9 +135,13 @@ antq_brahmanism = { # P11;CAH-XI; Pre-Puranic Hindu tradition
 antq_jainism = { # P11;CAH-XI; Jain communities
 	color = antq_religion_color_antq_jainism
 	group = dharmic
+	religious_aspects = 2
+	has_religious_influence = yes
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -114,8 +150,12 @@ antq_jainism = { # P11;CAH-XI; Jain communities
 antq_chinese_state_cult = { # P11;BHR; Confucian rites and folk cults
 	color = antq_religion_color_antq_chinese_state_cult
 	group = folk_asian_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -124,9 +164,13 @@ antq_chinese_state_cult = { # P11;BHR; Confucian rites and folk cults
 antq_daoism = { # P11;CAH-XI; Daoist future organization scaffold
 	color = antq_religion_color_antq_daoism
 	group = folk_asian_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -135,8 +179,12 @@ antq_daoism = { # P11;CAH-XI; Daoist future organization scaffold
 antq_kami = { # P11;CAH-XI; Early Japanese ritual communities
 	color = antq_religion_color_antq_kami
 	group = folk_asian_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -145,8 +193,12 @@ antq_kami = { # P11;CAH-XI; Early Japanese ritual communities
 antq_korean_muism = { # P11;CAH-XI; Korean ritual communities
 	color = antq_religion_color_antq_korean_muism
 	group = folk_asian_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -155,8 +207,12 @@ antq_korean_muism = { # P11;CAH-XI; Korean ritual communities
 antq_tengri = { # P11;CAH-XI; Steppe sky cults
 	color = antq_religion_color_antq_tengri
 	group = folk_asian_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -165,9 +221,13 @@ antq_tengri = { # P11;CAH-XI; Steppe sky cults
 antq_bon = { # P11;CAH-XI; Tibetan highland traditions
 	color = antq_religion_color_antq_bon
 	group = folk_asian_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -176,9 +236,13 @@ antq_bon = { # P11;CAH-XI; Tibetan highland traditions
 antq_kemetic = { # P11;CAH-XI; Egyptian temple religion
 	color = antq_religion_color_antq_kemetic
 	group = folk_african_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -187,8 +251,12 @@ antq_kemetic = { # P11;CAH-XI; Egyptian temple religion
 antq_kushite_amun = { # P11;CAH-XI; Meroitic Kushite state cult
 	color = antq_religion_color_antq_kushite_amun
 	group = folk_african_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -197,9 +265,13 @@ antq_kushite_amun = { # P11;CAH-XI; Meroitic Kushite state cult
 antq_aksumite_paganism = { # P11;CAH-XI; Pre-conversion Aksumite religion
 	color = antq_religion_color_antq_aksumite_paganism
 	group = folk_african_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -208,8 +280,12 @@ antq_aksumite_paganism = { # P11;CAH-XI; Pre-conversion Aksumite religion
 antq_arabian_polytheism = { # P11;CAH-XI; Arabian cults and Kaaba tradition
 	color = antq_religion_color_antq_arabian_polytheism
 	group = folk_asian_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -218,8 +294,12 @@ antq_arabian_polytheism = { # P11;CAH-XI; Arabian cults and Kaaba tradition
 antq_south_arabian_religion = { # P11;CAH-XI; Sabaean and Himyarite cults
 	color = antq_religion_color_antq_south_arabian_religion
 	group = folk_asian_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -228,9 +308,13 @@ antq_south_arabian_religion = { # P11;CAH-XI; Sabaean and Himyarite cults
 antq_punic = { # P11;CAH-XI; Punic residual communities
 	color = antq_religion_color_antq_punic
 	group = folk_european_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -239,8 +323,12 @@ antq_punic = { # P11;CAH-XI; Punic residual communities
 antq_celtic_religion = { # P11;CAH-XI; Druidic and Celtic cults
 	color = antq_religion_color_antq_celtic_religion
 	group = folk_european_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -249,8 +337,12 @@ antq_celtic_religion = { # P11;CAH-XI; Druidic and Celtic cults
 antq_germanic_religion = { # P11;CAH-XI; Germanic cults
 	color = antq_religion_color_antq_germanic_religion
 	group = folk_european_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -259,8 +351,12 @@ antq_germanic_religion = { # P11;CAH-XI; Germanic cults
 antq_baltic_slavic = { # P11;CAH-XI; Baltic and Venedi cults
 	color = antq_religion_color_antq_baltic_slavic
 	group = folk_european_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -269,8 +365,12 @@ antq_baltic_slavic = { # P11;CAH-XI; Baltic and Venedi cults
 antq_finnic = { # P11;CAH-XI; Finnic and Uralic cults
 	color = antq_religion_color_antq_finnic
 	group = folk_european_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -279,8 +379,12 @@ antq_finnic = { # P11;CAH-XI; Finnic and Uralic cults
 antq_berber_religion = { # P11;CAH-XI; Berber ritual traditions
 	color = antq_religion_color_antq_berber_religion
 	group = folk_african_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -289,8 +393,12 @@ antq_berber_religion = { # P11;CAH-XI; Berber ritual traditions
 antq_nile_cushitic = { # P11;CAH-XI; Nilotic and Cushitic traditions
 	color = antq_religion_color_antq_nile_cushitic
 	group = folk_african_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -299,8 +407,12 @@ antq_nile_cushitic = { # P11;CAH-XI; Nilotic and Cushitic traditions
 antq_west_african = { # P11;CAH-XI; West African religious traditions
 	color = antq_religion_color_antq_west_african
 	group = folk_african_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -309,9 +421,13 @@ antq_west_african = { # P11;CAH-XI; West African religious traditions
 antq_bantu_religion = { # P11;CAH-XI; Bantu religious traditions
 	color = antq_religion_color_antq_bantu_religion
 	group = folk_african_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -320,8 +436,12 @@ antq_bantu_religion = { # P11;CAH-XI; Bantu religious traditions
 antq_mesoamerican = { # P11;CAH-XI; Mesoamerican ritual traditions
 	color = antq_religion_color_antq_mesoamerican
 	group = tonal_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -330,8 +450,12 @@ antq_mesoamerican = { # P11;CAH-XI; Mesoamerican ritual traditions
 antq_andean = { # P11;CAH-XI; Andean ritual traditions
 	color = antq_religion_color_antq_andean
 	group = folk_peruvian_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -340,8 +464,12 @@ antq_andean = { # P11;CAH-XI; Andean ritual traditions
 antq_north_american = { # P11;CAH-XI; North American ritual traditions
 	color = antq_religion_color_antq_north_american
 	group = folk_north_american_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -350,9 +478,13 @@ antq_north_american = { # P11;CAH-XI; North American ritual traditions
 antq_siberian = { # P11;CAH-XI; Siberian ritual traditions
 	color = antq_religion_color_antq_siberian
 	group = folk_asian_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -361,8 +493,12 @@ antq_siberian = { # P11;CAH-XI; Siberian ritual traditions
 antq_austronesian_religion = { # P11;CAH-XI; Austronesian and Polynesian traditions
 	color = antq_religion_color_antq_austronesian_religion
 	group = folk_polynesian_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -371,9 +507,13 @@ antq_austronesian_religion = { # P11;CAH-XI; Austronesian and Polynesian traditi
 antq_australian_dreaming = { # P11;CAH-XI; Australian traditions
 	color = antq_religion_color_antq_australian_dreaming
 	group = folk_australian_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}
@@ -382,8 +522,12 @@ antq_australian_dreaming = { # P11;CAH-XI; Australian traditions
 antq_caribbean = { # P11;CAH-XI; Caribbean ritual traditions
 	color = antq_religion_color_antq_caribbean
 	group = folk_caribbean_group
+	religious_aspects = 2
+	has_religious_influence = yes
 	definition_modifier = {
 		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
 	}
 	opinions = {
 	}

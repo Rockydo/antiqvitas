@@ -1,5 +1,21 @@
 # Historical Assumptions
 
+## 2026-07-26 - Non-Roman doctrine sets are bounded gameplay taxonomies
+
+The four-choice sets summarize practices at the scale of each broad religion
+definition; they are not claims that every community shared one theology or
+institution. Securely documented named structures are used where the plan and
+catalog support them—Second Temple service, Han court rites, Buddhist sangha,
+Kushite Amun, South Arabian sanctuaries, and early Christian assemblies.
+For Baltic-Slavic, Finnic, Berber, Nilotic-Cushitic, West African, Bantu,
+Siberian, Austronesian, Caribbean, North American, Korean, Bon, and Australian
+categories, choices remain deliberately functional and regional: ancestors,
+seasonality, specialists, sacred landscapes, initiation, exchange, or public
+rites. They do not back-project later pantheons, ethnic borders, scriptures, or
+central priesthoods into AD 1. Sources and confidence inherit the canonical
+religion catalog: `P11`, `BHR`, `OCD`, `CAH-XI`, and plan section 11. [secure
+where named; contested at broad regional scale]
+
 ## 2026-07-26 - Roman doctrine choices model institutions and practices, not creeds
 
 The eight Religio Romana choices are gameplay groupings of public and domestic
