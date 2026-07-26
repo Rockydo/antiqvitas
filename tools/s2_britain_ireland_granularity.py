@@ -221,11 +221,12 @@ def expected_rows() -> tuple[list[dict[str, str]], list[str]]:
         "antq_britain_hillfort_layer", "antq_southern_britain_oppida",
         "antq_british_channel_exchange", "antq_hibernian_household_layer",
     }
-    if set(overlay_rows) != expected_overlays:
+    if not expected_overlays <= set(overlay_rows):
         failures.append("regional government overlay set is incomplete")
     overlay_tags = set()
-    for row in overlay_rows.values():
-        overlay_tags.update(row["tags"].split("|"))
+    for key in expected_overlays:
+        if key in overlay_rows:
+            overlay_tags.update(overlay_rows[key]["tags"].split("|"))
     if overlay_tags != set(REQUIRED):
         failures.append("regional government overlays do not cover exactly all 51 frames")
     privilege_rows = keyed(PRIVILEGES, "key")

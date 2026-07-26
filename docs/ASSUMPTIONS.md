@@ -4658,3 +4658,37 @@ point or quantified output. Every placement is therefore `contested` even when
 the family itself is archaeologically secure. Sources: `HE-HILLFORT`;
 `NMI-IRON-AGE`; `P12.1`; `P12.3`; rows in
 `docs/m5/s2_britain_ireland_building_seeds.csv`. [bounded economy abstraction]
+
+## 2026-07-26 - The Angrivarian frame is a late-text boundary adapter
+
+Tacitus's account of the AD 16 campaign places the Angrivarii between the lower
+Weser and Elbe operational theatres, but it neither surveys their AD 1 frontier
+nor identifies an opening ruler. The 13-location Hanover–Lüneburg frame is
+therefore a contiguous campaign adapter, not a reconstructed border. Roman
+Alsace is excluded because it belongs to the imperial Rhine system rather than
+to that narrative. Sources: `TAC-ANN-II`; `TAC-GER`;
+`UNISTRA-ARGENTORATUM`; row contracts in
+`docs/world_1ad/ownership_locations.csv`. [contested political geography]
+
+## 2026-07-26 - Baltic archaeology is not converted into ethnic states
+
+The West Balt Barrow, Brushed Pottery, West Lithuanian stone-circle, and early
+tarand-grave distributions are used because the engine requires complete
+ownership and because they preserve materially meaningful regional difference.
+Their borders, rulers, cultures, and standards are explicit gameplay frames:
+they do not establish common self-names, centralized governments, or exclusive
+ethnicity. Aestii is retained narrowly on the amber coast from later textual
+testimony, while the Lower-Vistula Gutones expansion remains bounded and
+contested. Sources: `PAN-WBB`; `VU-BRUSH`; `LIT-WLSC`; `UT-TARAND`; `TAC-GER`.
+[archaeological gameplay abstraction]
+
+## 2026-07-26 - Northern names and mechanics use dated testimony cautiously
+
+Gutae, Chaedini, and Dauciones are later Ptolemaic regional adapters, while
+Hilleviones comes from Pliny's geographically vague report. They replace
+immersion-breaking generic labels without claiming exact AD 1 states.
+Likewise, Tacitus's later assembly, retinue, grove, and amber descriptions
+support differentiated mechanics but not one pan-Germanic constitution or
+uniform Baltic institution. Sources: `PTO-GEO-II11`; `PLN-NH-IV96`; `TAC-GER`;
+mechanical contracts in `docs/m6/regional_government_overlays.csv`. [contested
+name and social abstraction]

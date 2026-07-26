@@ -122,7 +122,7 @@ SRD,antq_suardonian,antq_germanic_religion,P8.7;P10;TAC-GER;OCD-GER;PLE,conteste
 EUD,antq_eudusian,antq_germanic_religion,P8.7;P10;TAC-GER;OCD-GER;PLE,contested,Eudoses campaign frame without an exact tribal frontier
 SUI,antq_suionian,antq_germanic_religion,P8.7;P10;TAC-GER;OCD-GER;PLE,contested,Suiones campaign frame without an exact tribal frontier
 SIT,antq_sitonian,antq_germanic_religion,P8.7;P10;TAC-GER;OCD-GER;PLE,contested,Sitones campaign frame without an exact tribal frontier
-SUE,antq_suebian,antq_germanic_religion,P8.7;P10;CAH-XI;CAM-GERM,contested,Broad Suebian campaign coalition rather than a centralized state
+SUE,antq_suebian,antq_germanic_religion,P8.7;P10;STR-GER;TAC-GER;OCD-GER,contested,Broad Suebian campaign coalition rather than a centralized state
 NAR,antq_suebian,antq_germanic_religion,P8.7;P10;CAH-XI;TAC-GER,contested,Naristi campaign frame aligned to its Suebian population without an exact ethnic polygon
 LUG,antq_lugian,antq_germanic_religion,P8.7;P10;STR-GER;TAC-GER;OCD-GER;PLE,contested,Lugii campaign frame without an exact tribal frontier
 NHR,antq_naharvalian,antq_germanic_religion,P8.7;P10;TAC-GER;OCD-GER;PLE,contested,Naharvali campaign frame without an exact tribal frontier
@@ -174,10 +174,10 @@ LNC,antq_lower_niger,antq_west_african,MET-IRON;P8.5;P10;P11,contested,Lower Nig
 GUR,antq_gur,antq_west_african,MET-IRON;P8.5;P10;P11,contested,Gur savanna community frame rather than a single people
 MUP,antq_mande,antq_west_african,CAM-MLR;MET-IRON;P8.5;P10;P11,contested,Mande-area upland community frame rather than a state
 AIR,antq_air_massif,antq_west_african,CAM-DAI;P8.5;P10;P11,contested,Air massif community frame without projecting later confederations
-GTL,antq_germanic,antq_germanic_religion,P8.7;P10;P11;CAH-XI,contested,Gotaland community frame without projecting a later Geat polity
-SKN,antq_germanic,antq_germanic_religion,P8.7;P10;P11;CAH-XI,contested,Scania community frame without projecting a later kingdom
-SNR,antq_germanic,antq_germanic_religion,P8.7;P10;P11;CAH-XI,contested,Southern Norwegian community frame without projecting a later kingdom
-NNR,antq_germanic,antq_germanic_religion,P8.7;P10;P11;CAH-XI,contested,Northern coastal frame with unresolved Germanic-Sami diversity
+GTL,antq_germanic,antq_germanic_religion,P8.7;P10;P11;PTO-GEO-II11;OCD-GER,contested,Gutae is a later Ptolemaic display adapter over the southern Scandinavian archaeological frame
+SKN,antq_germanic,antq_germanic_religion,P8.7;P10;P11;PTO-GEO-II11;OCD-GER,contested,Chaedini is a later Ptolemaic display adapter over Scania and Halland
+SNR,antq_germanic,antq_germanic_religion,P8.7;P10;P11;PTO-GEO-II11;OCD-GER,contested,Dauciones is a later Ptolemaic display adapter over the southern Norwegian coastal frame
+NNR,antq_germanic,antq_germanic_religion,P8.7;P10;P11;PLN-NH-IV96;OCD-GER,contested,Hilleviones is a geographically vague first-century display adapter; northern Germanic-Sami diversity remains unresolved
 BYE,antq_samhan,antq_korean_muism,P8.3;P10;P11;SAM,contested,Byeonhan is aligned to the southern Korean Samhan population atlas
 DJN,antq_middle_niger,antq_west_african,CAM-MLR;MET-IND;P8.5;P10;P11,contested,Djenne-Djenno is aligned to its Middle Niger settlement-network population
 GET,antq_getic,antq_baltic_slavic,P8.7;P10;P11;CAH-XI,contested,Getic polity profile aligned to the lower-Danube Getic population atlas
@@ -204,3 +204,10 @@ CAU,antq_kartvelian,antq_arsacid_zoroastrianism,P8.2;P10;P11;CAH-XI,contested,Ca
 MNC,antq_yilou,antq_tengri,P8.3;P10;P11;CAH-XI,contested,Manchurian community frame aligned to its Yilou population atlas
 TIB,antq_tibeto_burman,antq_arsacid_zoroastrianism,P8.8;P10;P11;CAH-XI,contested,Tibetan community frame aligned to its Tibeto-Burman population atlas
 MIC,antq_micronesian,antq_austronesian_religion,P8.9;P10;P11;CAH-XI,contested,Micronesian community frame aligned to its island population atlas
+GER,antq_angrivarian,antq_germanic_religion,P8.7;P10;TAC-ANN-II;TAC-GER;OCD-GER,contested,Angrivarian Weser-Elbe people-polity adapter; no homogeneous state or exact frontier is inferred
+AES,antq_aestian,antq_baltic_slavic,P8.7;P10;TAC-GER;OCD-GER,contested,Sambian amber-coast Aestii frame; Tacitus's plural ethnonym does not establish a centralized state
+WBB,antq_west_balt_barrows,antq_baltic_slavic,P8.7;P10;PAN-WBB,contested,West Balt Barrow archaeological frame at its AD 1 terminal horizon; not an ethnic polity
+BPC,antq_brushed_pottery_baltic,antq_baltic_slavic,P8.7;P10;VU-BRUSH,contested,Brushed Pottery hillfort-settlement archaeological frame; not an ethnic polity
+WSC,antq_west_lithuanian_circle,antq_baltic_slavic,P8.7;P10;LIT-WLSC,contested,West Lithuanian stone-circle archaeological frame; not an ethnic polity
+ETG,antq_early_tarand,antq_baltic_slavic,P8.7;P10;UT-TARAND,contested,Early tarand-grave archaeological horizon; technical religious and culture grouping does not settle ethnicity
+FIN,antq_finnic_culture,antq_finnic,P8.7;P10;TAC-GER;OCD-GER,contested,Fenni is a later classical display adapter over the Finnish campaign frame; no state or exact tribal boundary is inferred

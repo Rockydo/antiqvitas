@@ -59,7 +59,10 @@ STAT_KEYS = frozenset((
     "flanking_ability", "secure_flanks_defense", "transport_capacity", "maritime_presence",
     "crew_size", "blockade_capacity", "hull_size",
 ))
-TERRAIN = frozenset(("grasslands", "hills", "forest", "desert", "jungle", "coastal", "river", "mountains"))
+TERRAIN = frozenset((
+    "grasslands", "hills", "forest", "desert", "jungle", "coastal", "river",
+    "mountains", "wetlands",
+))
 
 # These are role floors, not reconstructed orders of battle.  They keep the
 # source-bounded M7 catalogue from regressing into a single generic troop type

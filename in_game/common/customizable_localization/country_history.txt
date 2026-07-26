@@ -15,6 +15,7 @@
 	text = { localization_key = antq_country_history_BED trigger = { tag = BED } } # BED - Chaulotaeans
 	text = { localization_key = antq_country_history_BLF trigger = { tag = BLF } } # BLF - Beloe Lake Communities
 	text = { localization_key = antq_country_history_BLR trigger = { tag = BLR } } # BLR - Upper Dnieper Forest Communities
+	text = { localization_key = antq_country_history_BPC trigger = { tag = BPC } } # BPC - Brushed Pottery Culture
 	text = { localization_key = antq_country_history_BTV trigger = { tag = BTV } } # BTV - Batavi
 	text = { localization_key = antq_country_history_BUY trigger = { tag = BUY } } # BUY - Buyeo
 	text = { localization_key = antq_country_history_BYE trigger = { tag = BYE } } # BYE - Byeonhan
@@ -42,12 +43,13 @@
 	text = { localization_key = antq_country_history_EME trigger = { tag = EME } } # EME - Emesa
 	text = { localization_key = antq_country_history_EPD trigger = { tag = EPD } } # EPD - Epidii
 	text = { localization_key = antq_country_history_ERD trigger = { tag = ERD } } # ERD - Erdini
+	text = { localization_key = antq_country_history_ETG trigger = { tag = ETG } } # ETG - Early Tarand-Grave Horizon
 	text = { localization_key = antq_country_history_GAN trigger = { tag = GAN } } # GAN - Gangani
 	text = { localization_key = antq_country_history_GET trigger = { tag = GET } } # GET - Getae
 	text = { localization_key = antq_country_history_GMB trigger = { tag = GMB } } # GMB - Gamabrivii
 	text = { localization_key = antq_country_history_GOG trigger = { tag = GOG } } # GOG - Goguryeo
 	text = { localization_key = antq_country_history_GRH trigger = { tag = GRH } } # GRH - Gerrha
-	text = { localization_key = antq_country_history_GTL trigger = { tag = GTL } } # GTL - Gotaland Communities
+	text = { localization_key = antq_country_history_GTL trigger = { tag = GTL } } # GTL - Gutae
 	text = { localization_key = antq_country_history_GUT trigger = { tag = GUT } } # GUT - Gutones
 	text = { localization_key = antq_country_history_HER trigger = { tag = HER } } # HER - Hermunduri
 	text = { localization_key = antq_country_history_HIM trigger = { tag = HIM } } # HIM - Himyar
@@ -87,7 +89,7 @@
 	text = { localization_key = antq_country_history_NAZ trigger = { tag = NAZ } } # NAZ - Nazca
 	text = { localization_key = antq_country_history_NCR trigger = { tag = NCR } } # NCR - Cornavii
 	text = { localization_key = antq_country_history_NHR trigger = { tag = NHR } } # NHR - Naharvali
-	text = { localization_key = antq_country_history_NNR trigger = { tag = NNR } } # NNR - Northern Nordic Communities
+	text = { localization_key = antq_country_history_NNR trigger = { tag = NNR } } # NNR - Hilleviones
 	text = { localization_key = antq_country_history_NOK trigger = { tag = NOK } } # NOK - Late Nok Horizon
 	text = { localization_key = antq_country_history_OAS trigger = { tag = OAS } } # OAS - Inner Asian Oasis Societies
 	text = { localization_key = antq_country_history_OHW trigger = { tag = OHW } } # OHW - Northern Honshu Communities
@@ -115,7 +117,7 @@
 	text = { localization_key = antq_country_history_SEM trigger = { tag = SEM } } # SEM - Semnones
 	text = { localization_key = antq_country_history_SGM trigger = { tag = SGM } } # SGM - Sugambri
 	text = { localization_key = antq_country_history_SMY trigger = { tag = SMY } } # SMY - Northern Samoyedic Communities
-	text = { localization_key = antq_country_history_SNR trigger = { tag = SNR } } # SNR - Southern Norwegian Communities
+	text = { localization_key = antq_country_history_SNR trigger = { tag = SNR } } # SNR - Dauciones
 	text = { localization_key = antq_country_history_SOG trigger = { tag = SOG } } # SOG - Sogdian Cities
 	text = { localization_key = antq_country_history_SRD trigger = { tag = SRD } } # SRD - Suardones
 	text = { localization_key = antq_country_history_SUG trigger = { tag = SUG } } # SUG - Southern Ural Communities
@@ -135,10 +137,12 @@
 	text = { localization_key = antq_country_history_VRN trigger = { tag = VRN } } # VRN - Varini
 	text = { localization_key = antq_country_history_WAA trigger = { tag = WAA } } # WAA - Wa Polities
 	text = { localization_key = antq_country_history_WAF trigger = { tag = WAF } } # WAF - West African Iron-Age Societies
+	text = { localization_key = antq_country_history_WBB trigger = { tag = WBB } } # WBB - West Balt Barrow Culture
 	text = { localization_key = antq_country_history_WGD trigger = { tag = WGD } } # WGD - Western Sahel Communities
 	text = { localization_key = antq_country_history_WHT trigger = { tag = WHT } } # WHT - White Sea Forest Communities
 	text = { localization_key = antq_country_history_WHU trigger = { tag = WHU } } # WHU - Wuhuan
 	text = { localization_key = antq_country_history_WMS trigger = { tag = WMS } } # WMS - West Mexican Societies
+	text = { localization_key = antq_country_history_WSC trigger = { tag = WSC } } # WSC - West Lithuanian Stone-Circle Culture
 	text = { localization_key = antq_country_history_WSN trigger = { tag = WSN } } # WSN - Wusun
 	text = { localization_key = antq_country_history_XAA trigger = { tag = XAA } } # ROM - Roman Empire
 	text = { localization_key = antq_country_history_XAB trigger = { tag = XAB } } # GAL - Herodian Galilee-Peraea
@@ -182,7 +186,7 @@
 	text = { localization_key = antq_country_history_XBR trigger = { tag = XBR } } # SAX - Saxons
 	text = { localization_key = antq_country_history_XBS trigger = { tag = XBS } } # SUI - Suiones
 	text = { localization_key = antq_country_history_XBT trigger = { tag = XBT } } # VEN - Venedi
-	text = { localization_key = antq_country_history_XBU trigger = { tag = XBU } } # FIN - Finnic Societies
+	text = { localization_key = antq_country_history_XBU trigger = { tag = XBU } } # FIN - Fenni
 	text = { localization_key = antq_country_history_XBV trigger = { tag = XBV } } # CAT - Catuvellauni
 	text = { localization_key = antq_country_history_XBW trigger = { tag = XBW } } # TRI - Trinovantes
 	text = { localization_key = antq_country_history_XBX trigger = { tag = XBX } } # ICE - Iceni
@@ -219,7 +223,7 @@
 	text = { localization_key = antq_country_history_XDH trigger = { tag = XDH } } # PAC - Pacific Coast Societies
 	text = { localization_key = antq_country_history_XDI trigger = { tag = XDI } } # CAU - Caucasian Highland Societies
 	text = { localization_key = antq_country_history_XDJ trigger = { tag = XDJ } } # BRT - Cantiaci
-	text = { localization_key = antq_country_history_XDK trigger = { tag = XDK } } # GER - Germanic Societies
+	text = { localization_key = antq_country_history_XDK trigger = { tag = XDK } } # GER - Angrivarii
 	text = { localization_key = antq_country_history_XDL trigger = { tag = XDL } } # KRS - Korean Peninsula Societies
 	text = { localization_key = antq_country_history_XDM trigger = { tag = XDM } } # MNC - Manchurian Societies
 	text = { localization_key = antq_country_history_XDN trigger = { tag = XDN } } # TIB - Tibetan Societies
@@ -234,7 +238,7 @@
 	text = { localization_key = antq_country_history_XDW trigger = { tag = XDW } } # BRC - Bructeri
 	text = { localization_key = antq_country_history_XDX trigger = { tag = XDX } } # EUD - Eudoses
 	text = { localization_key = antq_country_history_XDY trigger = { tag = XDY } } # SIT - Sitones
-	text = { localization_key = antq_country_history_XDZ trigger = { tag = XDZ } } # SUE - Suebian Communities
+	text = { localization_key = antq_country_history_XDZ trigger = { tag = XDZ } } # SUE - Suebi
 	text = { localization_key = antq_country_history_XEA trigger = { tag = XEA } } # MSI - Marsigni
 	text = { localization_key = antq_country_history_XEB trigger = { tag = XEB } } # BUU - Buri
 	text = { localization_key = antq_country_history_XEC trigger = { tag = XEC } } # PRZ - Przeworsk Horizon Communities
@@ -250,7 +254,7 @@
 	text = { localization_key = antq_country_history_XEM trigger = { tag = XEM } } # LNC - Lower Niger Communities
 	text = { localization_key = antq_country_history_XEN trigger = { tag = XEN } } # GUR - Gur Iron-Age Communities
 	text = { localization_key = antq_country_history_XEO trigger = { tag = XEO } } # AIR - Air Massif Communities
-	text = { localization_key = antq_country_history_XEP trigger = { tag = XEP } } # SKN - Scania Communities
+	text = { localization_key = antq_country_history_XEP trigger = { tag = XEP } } # SKN - Chaedini
 	text = { localization_key = antq_country_history_XEQ trigger = { tag = XEQ } } # THM - Thamud
 	text = { localization_key = antq_country_history_XER trigger = { tag = XER } } # QTR - Cataraei
 	text = { localization_key = antq_country_history_XES trigger = { tag = XES } } # REG - Regni

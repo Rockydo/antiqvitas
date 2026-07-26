@@ -775,11 +775,47 @@ XBS = { # Suiones; P8.7;CAH-XI
 	is_historic = yes
 }
 
-AES = { # Aestii; P8.7;CAH-XI
+AES = { # Aestii; P8.7;TAC-GER;OCD-GER
 	color = rgb { 64 102 111 }
 	color2 = rgb { 191 153 144 }
 
-	culture_definition = antq_baltic
+	culture_definition = antq_aestian
+	religion_definition = antq_baltic_slavic
+	is_historic = yes
+}
+
+WBB = { # West Balt Barrow Culture; PAN-WBB
+	color = rgb { 52 105 123 }
+	color2 = rgb { 203 150 132 }
+
+	culture_definition = antq_west_balt_barrows
+	religion_definition = antq_baltic_slavic
+	is_historic = yes
+}
+
+BPC = { # Brushed Pottery Culture; VU-BRUSH
+	color = rgb { 53 110 111 }
+	color2 = rgb { 202 145 144 }
+
+	culture_definition = antq_brushed_pottery_baltic
+	religion_definition = antq_baltic_slavic
+	is_historic = yes
+}
+
+WSC = { # West Lithuanian Stone-Circle Culture; LIT-WLSC
+	color = rgb { 43 115 120 }
+	color2 = rgb { 212 140 135 }
+
+	culture_definition = antq_west_lithuanian_circle
+	religion_definition = antq_baltic_slavic
+	is_historic = yes
+}
+
+ETG = { # Early Tarand-Grave Horizon; UT-TARAND
+	color = rgb { 39 120 109 }
+	color2 = rgb { 216 135 146 }
+
+	culture_definition = antq_early_tarand
 	religion_definition = antq_baltic_slavic
 	is_historic = yes
 }
@@ -793,7 +829,7 @@ XBT = { # Venedi; P8.7;CAH-XI
 	is_historic = yes
 }
 
-XBU = { # Finnic Societies; P8.7;CAH-XI
+XBU = { # Fenni; P8.7;TAC-GER;OCD-GER
 	color = rgb { 51 111 132 }
 	color2 = rgb { 204 144 123 }
 
@@ -1666,11 +1702,11 @@ XDI = { # Caucasian Highland Societies; P8.2;CAH-XI
 	is_historic = yes
 }
 
-XDK = { # Germanic Societies; P8.7;CAH-XI
+XDK = { # Angrivarii; TAC-ANN-II;TAC-GER;OCD-GER
 	color = rgb { 67 98 56 }
 	color2 = rgb { 188 157 199 }
 
-	culture_definition = antq_germanic
+	culture_definition = antq_angrivarian
 	religion_definition = antq_germanic_religion
 	is_historic = yes
 }
@@ -1963,7 +1999,7 @@ XDY = { # Sitones; P8.7;TAC-GER;OCD-GER;PLE
 	is_historic = yes
 }
 
-XDZ = { # Suebian Communities; P8.7;CAH-XI;CAM-GERM
+XDZ = { # Suebi; P8.7;STR-GER;TAC-GER;OCD-GER
 	color = rgb { 92 106 59 }
 	color2 = rgb { 163 149 196 }
 
@@ -2431,7 +2467,7 @@ XEO = { # Air Massif Communities; CAM-DAI;P8.5
 	is_historic = yes
 }
 
-GTL = { # Gotaland Communities; P8.7;CAH-XI
+GTL = { # Gutae; PTO-GEO-II11;OCD-GER
 	color = rgb { 67 92 78 }
 	color2 = rgb { 188 163 177 }
 
@@ -2440,7 +2476,7 @@ GTL = { # Gotaland Communities; P8.7;CAH-XI
 	is_historic = yes
 }
 
-XEP = { # Scania Communities; P8.7;CAH-XI
+XEP = { # Chaedini; PTO-GEO-II11;OCD-GER
 	color = rgb { 90 112 78 }
 	color2 = rgb { 165 143 177 }
 
@@ -2449,7 +2485,7 @@ XEP = { # Scania Communities; P8.7;CAH-XI
 	is_historic = yes
 }
 
-SNR = { # Southern Norwegian Communities; P8.7;CAH-XI
+SNR = { # Dauciones; PTO-GEO-II11;OCD-GER
 	color = rgb { 88 101 55 }
 	color2 = rgb { 167 154 200 }
 
@@ -2458,7 +2494,7 @@ SNR = { # Southern Norwegian Communities; P8.7;CAH-XI
 	is_historic = yes
 }
 
-NNR = { # Northern Nordic Communities; P8.7;CAH-XI
+NNR = { # Hilleviones; PLN-NH-IV96;OCD-GER
 	color = rgb { 75 109 80 }
 	color2 = rgb { 180 146 175 }
 

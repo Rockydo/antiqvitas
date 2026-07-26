@@ -235,9 +235,44 @@ and focused runtime probe all pass.
   - Replace “Germanic Societies” with real bounded peoples. Split the oversized
     152-location Aestii frame wherever archaeological/textual evidence permits;
     distinguish archaeological cultures from claimed ethnic states.
-  - Add major rival/confederation dynamics, migrations, sacred landscapes,
+  - [x] Repair the ownership defects found in the 2026-07-26 census: the current
+    GER frame is a disconnected 24-location catch-all joining Hanover/Luneburg
+    to Roman Alsace. Return the two Alsace provinces to Rome, remove the broad
+    north/south-German residuals, and bound the remaining Weser-Elbe locations
+    to the Angrivarii with an explicit late-source caveat.
+  - [x] Replace the Baltic residual superstate with a reviewed province ledger:
+    keep Aestii on the southeastern amber coast; distinguish the West Balt
+    Barrow, Brushed Pottery, western-Lithuanian stone-circle, and early
+    tarand-grave archaeological frames; and extend the Lower-Vistula Gutones
+    only where the installed geography and source record support it. No
+    archaeological frame may be described as a centralized ethnic state.
+  - [x] Replace the Suebian, Götaland, Scanian, southern-Norwegian,
+    northern-Nordic, and primary Finnic generic labels with Suebi, Gutae,
+    Chaedini, Dauciones, Hilleviones, and Fenni. Their later classical evidence
+    is visibly qualified in the research ledger.
+  - [ ] Replace the remaining Finland/Volga/Ural/Siberian catch-alls (`BLF`,
+    `MOK`, `UVF`, `WHT`, `MRV`, `RZM`, `KRL`, `PRM`, `VLF`, `SUG`, `SMY`,
+    `UGR`) and re-audit the Upper-Dnieper/Venedi-facing generic frames exposed
+    by the fresh selector. Prefer named archaeological horizons and bounded
+    peoples; do not invent kingdoms.
+  - [x] Give every added/reframed polity an owned capital, matching start-pop
+    culture, religion, tribal government/reform, direct period-inspired
+    standard, non-medieval rank text, agenda, and a collision-safe engine tag.
+  - [ ] Add major rival/confederation dynamics, migrations, sacred landscapes,
     assembly/retinue systems, trade, units, government content, and Roman-frontier
-    diplomacy. Recheck Finnic and Siberian macro-polities in the same pass.
+    diplomacy beyond the completed law/privilege/unit layer.
+  - [x] Add at minimum separate Germanic assembly/sacred-grove/retinue and
+    Baltic amber/hillfort/burial-community law-and-privilege layers, plus
+    useful regional units with direct ancient art. Mechanics must not imply
+    one constitution across Germania or one Aestian kingdom.
+  - [x] Add a machine-readable northern-granularity report that fails on a
+    generic display name, disconnected GER ownership, an Aestii residual over
+    `baltic_region`, a reviewed frame above 60 locations, absent profile
+    wiring, or missing 11-client localization.
+  - [x] Run full validation, paired menu smoke, and rapid fresh-bookmark probes
+    for Angrivarii, Aestii, one inland Baltic archaeological frame, one
+    Estonian/Latvian frame, one Scandinavian frame, and Fenni. Compare only
+    targeted startup/map/UI diagnostics; no long observer campaign.
   - Acceptance: no generic Germanic country; Aestii no longer functions as a
     Baltic superstate; Germania is one of the deepest non-Roman theaters.
 

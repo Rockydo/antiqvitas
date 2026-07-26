@@ -3251,3 +3251,29 @@ observed Age-1 cap of one, and runtime-rejected water/port locations are pinned
 against later bulk seeding. An explicitly sourced reservoir site may receive an
 exact location exception when inherited EU5 river/lake geometry cannot express
 the ancient hydraulic landscape.
+
+## 2026-07-26 - Northern ownership uses disjoint exact ledgers
+
+The GER and AES macro-residuals are removed rather than patched with later
+overrides. Rome directly receives Alsace; Angrivarii receive one explicit
+Hanover–Lüneburg frame; five Baltic archaeological/textual frames and the
+Lower-Vistula Gutones receive disjoint selectors. The generated
+`northern_granularity.csv` pins counts, capitals, cultures, government profiles,
+standards, and localization so a later residual cannot silently reunify them.
+
+## 2026-07-26 - Shared northern mechanics are additive and evidence-bounded
+
+Tier-2 Germanic profiles receive one reviewed assembly/retinue/grove overlay.
+The Baltic coast, hillfort zone, and tarand zone receive separate overlays so
+amber exchange, defended settlements, and mortuary practice are not collapsed
+into one constitution. Six privileges and four regional units use unique direct
+art; every active unit remains inside the all-direct recruitment-art contract.
+Smaller Tier-3 Germanic frames retain the common ancient tribal baseline until
+their own sourced profile is promoted.
+
+## 2026-07-26 - Regional runtime acceptance is selector-based
+
+The reduced QA policy for this batch is full static validation, paired menu
+smoke, and six fresh-selector captures. It deliberately omits a long observer
+campaign. The hardcoded absent-HRE notice is compared against its pinned
+blocker; every content-specific error remains a failure.

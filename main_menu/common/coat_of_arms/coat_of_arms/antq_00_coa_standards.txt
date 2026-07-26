@@ -1205,17 +1205,73 @@ XBS = { # Suiones; P8.7;P20
 	}
 }
 
-AES = { # Aestii; P8.7;P20
+AES = { # Aestii; TAC-GER;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
-	color2 = "white"
-	color3 = "yellow"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_baltic_rosette_06.dds"
+		texture = "ce_spiral_star_06.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+WBB = { # West Balt Barrow Culture; PAN-WBB;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_crescent_moon_02.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+BPC = { # Brushed Pottery Culture; VU-BRUSH;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+WSC = { # West Lithuanian Stone-Circle Culture; LIT-WLSC;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+ETG = { # Early Tarand-Grave Horizon; UT-TARAND;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_star_08.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
 	}
 }
 
@@ -1233,17 +1289,17 @@ XBT = { # Venedi; P8.7;P20
 	}
 }
 
-XBU = { # Finnic Societies; P8.7;P20
+XBU = { # Fenni; TAC-GER;P20
 	pattern = "pattern_solid.dds"
-	color1 = "blue"
+	color1 = "green"
 	color2 = "white"
-	color3 = "yellow"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_bear_passant.dds"
+		texture = "ce_deer_kneeling.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
 	}
 }
 
@@ -2591,17 +2647,17 @@ XDI = { # Caucasian Highland Societies; P8.2;P20
 	}
 }
 
-XDK = { # Germanic Societies; P8.7;P20
+XDK = { # Angrivarii; TAC-ANN-II;TAC-GER;P20
 	pattern = "pattern_solid.dds"
 	color1 = "green"
-	color2 = "yellow"
-	color3 = "white"
+	color2 = "white"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_boar_passant.dds"
+		texture = "ce_spear_head_random_small.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.82 } }
 	}
 }
 
@@ -3053,17 +3109,17 @@ XDY = { # Sitones; P8.7;P20
 	}
 }
 
-XDZ = { # Suebian Communities; P8.7;P20
+XDZ = { # Suebi; STR-GER;TAC-GER;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
-	color2 = "yellow"
-	color3 = "white"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_boar_passant.dds"
+		texture = "ce_spear_head_random_small.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.82 } }
 	}
 }
 
@@ -3781,58 +3837,58 @@ XEO = { # Air Massif Communities; P8.5;P20
 	}
 }
 
-GTL = { # Gotaland Communities; P8.7;P20
+GTL = { # Gutae; PTO-GEO-II11;P20
 	pattern = "pattern_solid.dds"
 	color1 = "green"
 	color2 = "yellow"
-	color3 = "white"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_boar_passant.dds"
+		texture = "ce_boar_passant_mane.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.78 } }
 	}
 }
 
-XEP = { # Scania Communities; P8.7;P20
+XEP = { # Chaedini; PTO-GEO-II11;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
-	color2 = "yellow"
-	color3 = "white"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "red"
 	colored_emblem = {
-		texture = "ce_boar_passant.dds"
+		texture = "ce_horse_heads_addorsed.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.82 } }
 	}
 }
 
-SNR = { # Southern Norwegian Communities; P8.7;P20
+SNR = { # Dauciones; PTO-GEO-II11;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
-	color2 = "yellow"
-	color3 = "white"
+	color1 = "purple"
+	color2 = "white"
+	color3 = "blue"
 	colored_emblem = {
-		texture = "ce_boar_passant.dds"
+		texture = "ce_fish_okeane.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.72 } }
 	}
 }
 
-NNR = { # Northern Nordic Communities; P8.7;P20
+NNR = { # Hilleviones; PLN-NH-IV96;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
-	color2 = "yellow"
-	color3 = "white"
+	color1 = "black"
+	color2 = "white"
+	color3 = "green"
 	colored_emblem = {
-		texture = "ce_boar_passant.dds"
+		texture = "ce_stag_head_shield.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
 	}
 }

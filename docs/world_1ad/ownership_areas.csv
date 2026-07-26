@@ -2,6 +2,7 @@ tag,geography,tenure,source,confidence,note
 ROM,italy_region,own_control_core,P8.1;CAH-XI,secure,Italia with Sicily Sardinia and Corsica
 ROM,iberia_region,own_control_core,P8.1;CAH-XI,secure,Hispaniae
 ROM,france_region,own_control_core,P8.1;CAH-XI,secure,The four Gauls within the vanilla France geographic frame
+ROM,alsace_area,own_control_core,P8.1;CAH-XI;UNISTRA-ARGENTORATUM,secure,Tribocian and Raurican Alsace belonged to the Roman Rhine provincial frame; the installed area is a gameplay proxy
 ROM,wallonia_area,own_control_core,P8.1;CAH-XI,secure,Gallia Belgica core
 ROM,flanders_area,own_control_core,P8.1;CAH-XI,secure,Gallia Belgica northwestern frame
 ROM,albania_area,own_control_core,P8.1;CAH-XI,secure,Illyricum and Epirus
@@ -307,7 +308,7 @@ HER,brunswick_province,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Hermundur
 HER,harz_province,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Hermundurian campaign proxy
 HER,magdeburger_borde_province,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Hermundurian campaign proxy
 LAN,elbmarch_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Langobardic lower-Elbe campaign proxy
-GER,hanover_province,own_control_core,P8.7;CAH-XI,contested,Unresolved middle-Germanic campaign frame
+GER,hanover_province,own_control_core,TAC-ANN-II;TAC-GER;OCD-GER,contested,Angrivarian middle-Weser proxy fifteen years before the first direct boundary narrative
 CRU,leine_province,own_control_core,P8.7;CAH-XI;OCD-CHER,contested,Cheruscan campaign proxy
 VRN,schwerin_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Varini campaign proxy
 VRN,seenplatte_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Varini campaign proxy
@@ -354,6 +355,35 @@ SIT,dalarna_province,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Sitones
 PRZ,greater_poland_area,own_control_core,UW-PRZ;P8.7;CAH-XI,contested,Przeworsk archaeological campaign frame
 PRZ,lesser_poland_area,own_control_core,UW-PRZ;P8.7;CAH-XI,contested,Przeworsk archaeological campaign frame
 VEN,mazovia_area,own_control_core,P8.7;CAH-XI,contested,Vistula Venedi campaign frame
-AES,lithuania_area,own_control_core,P8.7;CAH-XI,contested,Eastern Baltic campaign frame
-AES,samogitia_area,own_control_core,P8.7;CAH-XI,contested,Eastern Baltic campaign frame
+GUT,danzig_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER,contested,Lower-Vistula Gutones proxy; the installed province is not a surveyed ethnic frontier
+GUT,tuchola_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER,contested,Lower-Vistula Gutones hinterland proxy; no unitary state or exact border is inferred
+GUT,chelmno_province,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER,contested,Lower-Vistula Gutones hinterland proxy; no unitary state or exact border is inferred
+AES,lower_prussia_province,own_control_core,P8.7;TAC-GER;OCD-GER,contested,Sambian amber-coast Aestii proxy; Tacitus writes of plural Aestian peoples rather than a centralized kingdom
+AES,lithuania_minor_province,own_control_core,P8.7;TAC-GER;OCD-GER,contested,Sambian and lower-Nemunas Aestian proxy; the installed province is not an exact ethnic border
+AES,warmia_province,own_control_core,P8.7;TAC-GER;OCD-GER,contested,Southeastern Baltic amber-coast Aestian proxy; no uniform polity is inferred
+WBB,masuria_province,own_control_core,PAN-WBB,contested,Masurian West Balt Barrow Culture archaeological frame at the AD 1 terminal horizon
+WBB,upper_prussia_province,own_control_core,PAN-WBB,contested,Western Masurian West Balt Barrow Culture archaeological frame at the AD 1 terminal horizon
+WBB,suwalki_province,own_control_core,PAN-WBB,contested,Northeastern West Balt Barrow archaeological boundary proxy; not an ethnic state
+BPC,ashmyany_province,own_control_core,VU-BRUSH,contested,Eastern Baltic Brushed Pottery hillfort-settlement frame; not a political frontier
+BPC,breslauja_province,own_control_core,VU-BRUSH,contested,Eastern Baltic Brushed Pottery hillfort-settlement frame; not a political frontier
+BPC,lida_province,own_control_core,VU-BRUSH,contested,Eastern Baltic Brushed Pottery hillfort-settlement frame; not a political frontier
+BPC,svir_province,own_control_core,VU-BRUSH,contested,Eastern Baltic Brushed Pottery hillfort-settlement frame; not a political frontier
+BPC,trakai_province,own_control_core,VU-BRUSH,contested,Eastern Baltic Brushed Pottery hillfort-settlement frame; not a political frontier
+BPC,vilkmerge_province,own_control_core,VU-BRUSH,contested,Eastern Baltic Brushed Pottery hillfort-settlement frame; not a political frontier
+BPC,vilnius_province,own_control_core,VU-BRUSH,contested,Kernave-Vilnius Brushed Pottery hillfort-settlement frame; not a centralized polity
+BPC,latgalia_province,own_control_core,VU-BRUSH,contested,Southeastern Latvian Brushed Pottery boundary proxy; not a uniform culture-state
+BPC,selonia_province,own_control_core,VU-BRUSH,contested,Daugava-side Brushed Pottery boundary proxy; not a uniform culture-state
+BPC,semigalia_province,own_control_core,VU-BRUSH,contested,Daugava-side Brushed Pottery boundary proxy; not a uniform culture-state
+BPC,south_livonia_province,own_control_core,VU-BRUSH,contested,Daugava-side Brushed Pottery boundary proxy; not a uniform culture-state
+WSC,courland_province,own_control_core,LIT-WLSC,contested,Western Baltic coastal stone-circle archaeological proxy; southern Courland is a cautious extension from western Lithuania
+WSC,kaunas_province,own_control_core,LIT-WLSC,contested,Western Lithuanian Roman-Iron-Age archaeological proxy; not a state boundary
+WSC,upyte_province,own_control_core,LIT-WLSC,contested,Western Lithuanian Roman-Iron-Age archaeological proxy; not a state boundary
+WSC,medininkai_province,own_control_core,LIT-WLSC,contested,Western Lithuanian coastal stone-circle archaeological proxy; only installed ownable locations are emitted
+WSC,raseiniai_province,own_control_core,LIT-WLSC,contested,Western Lithuanian Roman-Iron-Age archaeological proxy; not a state boundary
+WSC,siauliai_province,own_control_core,LIT-WLSC,contested,Western Lithuanian Roman-Iron-Age archaeological proxy; not a state boundary
+ETG,estonia_province,own_control_core,UT-TARAND,contested,North-Estonian early tarand-grave archaeological horizon; no ethnic state is inferred
+ETG,inner_livonia_province,own_control_core,UT-TARAND,contested,Estonian-Latvian early tarand-grave boundary proxy; the later typical assemblage is not backdated
+ETG,north_livonia_province,own_control_core,UT-TARAND,contested,Estonian-Latvian early tarand-grave boundary proxy; the later typical assemblage is not backdated
+ETG,rotalia_province,own_control_core,UT-TARAND,contested,West-Estonian early tarand-grave archaeological horizon; no ethnic state is inferred
+ETG,tartu_province,own_control_core,UT-TARAND,contested,South-Estonian early tarand-grave archaeological horizon; no ethnic state is inferred
 KRL,karelia_area,own_control_core,P8.7;CAH-XI,contested,Ladoga-Karelian community frame

@@ -441,6 +441,58 @@ a row reaches `implemented` status.
 - `CAM-GERM`: H. Munro Chadwick, ["The Classification of the Ancient Germani"](https://www.cambridge.org/core/books/abs/origin-of-the-english-nation/classification-of-the-ancient-germani/F6FDA766B4048353D20DA5C23EF88101), *The Origin of the English Nation*, chapter IX, used with the plan and CAH-XI for the ancient Germanic group labels that include Vandili, Istvaeones, and Hermiones. It does not establish period-exact tribal borders.
 - `STR-GER`: Strabo, [*Geography* 7.1](https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0198%3Abook%3D7%3Achapter%3D1), written across the campaign boundary, names the Suebi, Lugii, Semnones, Langobardi, and other peoples within an explicitly mobile Germanic world. It supports only cautious regional frames and does not provide a complete tribal map, a language census, or stable borders.
 - `TAC-GER`: Cornelius Tacitus, [*Germania*](https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0083), composed about AD 98, names the Anglii, Varini, Reudigni, Aviones, Suardones, Nuithones, Eudoses, Lemovii, Rugii, Aestii, Naharvali, Marsigni, Buri, Manimi, Helveconae, Harii, Helisii, Suiones, Sitones, and Fenni. Its later date makes it a cross-check only: it supports no unqualified AD 1 placement, language, or territorial boundary.
+- `TAC-ANN-II`: Cornelius Tacitus, [*Annals*
+  2.19-22](https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Tacitus/Annals/2A%2A.html),
+  places an Angrivarian boundary work between the Angrivarii and Cherusci during
+  Germanicus's AD 16 campaign and records the Angrivarii as a distinct people.
+  The evidence is fifteen years after the campaign boundary and supports only a
+  contested middle-Weser/lower-Elbe people-polity adapter, not Hanover as an
+  ancient capital or a surveyed tribal frontier.
+- `PAN-WBB`: Miroslaw J. Hoffmann and Aleksandra
+  Rzeszotarska-Nowakiewicz, “The Societies of West Balt Barrow Culture,
+  500 BC-1 AD,” in *The Past Societies 4: 500 BC-500 AD* (Institute of
+  Archaeology and Ethnology, Polish Academy of Sciences, 2016), pp. 49-70;
+  the volume and chapter scope are independently catalogued by the
+  [Polish Academy of Sciences repository](https://rcin.org.pl/iae/Content/67496/PDF/WA308_87797_P244_Towards-a-new-synthe_I.pdf).
+  It supports a bounded Masurian/northeastern-Polish archaeological frame at
+  the campaign boundary, not a named tribe, language, state, or exact border.
+- `VU-BRUSH`: Andra Simniskyte-Strimaitiene et al.,
+  [“Tracing Archaeology through Geochemistry: an Example of a Disturbed
+  Prehistoric Hilltop Settlement Site in South-Eastern
+  Lithuania”](https://iansa.eu/papers/IANSA-2017-01-simniskyte.pdf),
+  *Interdisciplinaria Archaeologica* 8.1 (2017), pp. 17-33, describes the
+  Brushed Pottery Culture's hilltop-settlement tradition from the late second
+  millennium BC into the early first millennium AD. It supports an eastern
+  Lithuanian/southeastern Latvian material-culture frame, not a uniform people,
+  language, polity, or hillfort system.
+- `LIT-WLSC`: Rasa Banyte-Rowell,
+  [“A Roman Iron Age Warrior from Western Lithuanian Cemetery Baitai Grave
+  23”](https://www.lituanistika.lt/content/13638), *Archaeologia Baltica* 8
+  (2007), pp. 183-194, assigns the Baitai cemetery to the West Lithuanian
+  Stone Circle Graves Culture of the first six centuries AD. It supports a
+  bounded western-Lithuanian/coastal archaeological adapter, not an ethnic
+  state, a single military organization, or exact territorial limits.
+- `UT-TARAND`: Maarja Olli,
+  [*From Individuality to Regionality in the Distribution Area of Tarand
+  Cemeteries in the Roman Iron Age*](https://dspace.ut.ee/items/d3d22e59-613c-401f-bc03-3301ffc8ebdf)
+  (University of Tartu, 2019), treats monumental communal tarand cemeteries in
+  Estonia and Latvia across approximately the first four centuries AD and
+  emphasizes meaningful regional differences. Earlier tarand forms predate
+  AD 1; the familiar Roman-Iron-Age assemblage develops after the campaign
+  boundary. It therefore supports only an explicitly early/contested
+  north-Estonian/Latvian archaeological horizon, not one ethnicity or state.
+- `PTO-GEO-II11`: Claudius Ptolemy, *Geography* 2.11, composed in the
+  mid-second century AD, supplies the later Scandinavian labels Gutae,
+  Chaedini, and Dauciones. These names are used only as contested regional
+  display adapters where a generic placeholder would otherwise remain; they
+  do not prove that the same names, political units, or boundaries existed in
+  AD 1.
+- `PLN-NH-IV96`: Pliny the Elder, [*Natural History*
+  4.96](https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0137%3Abook%3D4&force=y),
+  completed in the first century AD, reports the Hilleviones in the only part
+  of “Scatinavia” known to his source. The passage is geographically vague and
+  supports only a contested northern-Scandinavian display adapter, not its
+  enormous village total, an exact seat, or a unitary polity.
 - `OCD-GER`: Peter S. Wells, ["Germani"](https://academic.oup.com/edited-volume/61673/chapter-abstract/548938158), *Oxford Classical Dictionary* (2016), treats ancient Germanic identities as diverse and historically contingent rather than a uniform nation. It is used to constrain the implementation to expressly contested, campaign-boundary regional frames rather than an ethnographic atlas.
 - `OCD-CHER`: Oxford Classical Dictionary, ["Cherusci"](https://academic.oup.com/edited-volume/61673/chapter-abstract/548753947), used for the middle-Weser Cheruscan context in the first century CE. It does not supply a complete local-map boundary or prove a uniform culture for every selected location.
 - `PER-DAC`: Andrei Pogăciaş, ["The Dacian Society – Fierce Warriors and Their Women: Sources and Representations"](https://www.persee.fr/doc/hiper_2284-5666_2017_num_4_1_923), *Hiperboreea* 4.1 (2017), records the debated Dacian-Getae relationship while distinguishing an intra-Carpathian Dacian context from Getae in the south-eastern/Lower-Danube plain. It supports cautious regional labels, not a decisive ethnolinguistic or political boundary.

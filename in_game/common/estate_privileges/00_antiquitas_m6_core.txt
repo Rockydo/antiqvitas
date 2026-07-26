@@ -53,6 +53,60 @@ antq_hibernian_ritual_specialists = {
 	}
 }
 
+antq_germanic_assembly_acclamation = {
+	estate = tribes_estate
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		tribes_estate_target_satisfaction = small_privilege_target_satisfaction
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+	}
+}
+
+antq_germanic_household_retainers = {
+	estate = nobles_estate
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		nobles_estate_target_satisfaction = small_privilege_target_satisfaction
+		land_morale_modifier = 0.025
+	}
+}
+
+antq_germanic_sacred_grove_custodians = {
+	estate = clergy_estate
+	country_modifier = {
+		global_clergy_estate_power = 0.10
+		clergy_estate_target_satisfaction = small_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.025
+	}
+}
+
+antq_baltic_amber_route_brokers = {
+	estate = burghers_estate
+	country_modifier = {
+		global_burghers_estate_power = 0.10
+		burghers_estate_target_satisfaction = small_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.025
+	}
+}
+
+antq_baltic_hillfort_households = {
+	estate = tribes_estate
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		tribes_estate_target_satisfaction = small_privilege_target_satisfaction
+		global_levy_size_modifier = 0.05
+	}
+}
+
+antq_baltic_burial_custodians = {
+	estate = clergy_estate
+	country_modifier = {
+		global_clergy_estate_power = 0.10
+		clergy_estate_target_satisfaction = small_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.025
+	}
+}
+
 antq_indo_scythian_satraps = {
 	estate = nobles_estate
 	country_modifier = {

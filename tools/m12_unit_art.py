@@ -76,6 +76,10 @@ SHEETS = (
         "antq_british_hillfort_spearmen", "antq_northern_british_skirmishers",
         "antq_hibernian_javelin_bands", "antq_hibernian_coastal_warbands",
     )),
+    Sheet("unit_sheet_13_germania_baltic.png", (
+        "antq_angrivarian_spear_following", "antq_suebian_household_retinue",
+        "antq_baltic_hillfort_spearmen", "antq_baltic_forest_skirmishers",
+    )),
 )
 
 CATEGORY_SUFFIXES = (
@@ -282,8 +286,8 @@ def validate() -> bool:
             failures.append("M7 art roster differs from active unit-quarantine definitions")
         if set(index) != active:
             failures.append("four-up unit-art mapping does not exactly cover active ancient units")
-        if len(SHEETS) != 12 or sum(len(sheet.keys) for sheet in SHEETS) != 48:
-            failures.append("unit-art source contract is not 12 sheets / 48 icons")
+        if len(SHEETS) != 13 or sum(len(sheet.keys) for sheet in SHEETS) != 52:
+            failures.append("unit-art source contract is not 13 sheets / 52 icons")
         for sheet in SHEETS:
             path = SOURCE_DIR / sheet.filename
             if not path.is_file():
@@ -344,7 +348,10 @@ def validate() -> bool:
         for failure in failures:
             print(f"  - {failure}")
         return False
-    print("m12_unit_art: PASS (48 unique direct recruitment illustrations; 48 direct masks; zero fallbacks)")
+    print(
+        f"m12_unit_art: PASS ({len(rows)} unique direct recruitment illustrations; "
+        f"{len(rows)} direct masks; zero fallbacks)"
+    )
     return True
 
 

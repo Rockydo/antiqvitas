@@ -6821,3 +6821,24 @@ reviewed 128px BC7 DDS.
 - The same bookmark isolated its remaining script-system diagnostics to two
   vanilla parliament files. Their exact 2,499/356 split is now an explicit
   S2-P4 acceptance target; Germania/Baltic is the next regional task.
+
+## 2026-07-26 - Rebuilt Germania and the Baltic macro-frame
+
+- Repaired the disconnected GER ownership defect: Rome now holds Alsace and the
+  Angrivarii form one 13-location Hanover–Lüneburg polity.
+- Split the 152-location Aestii residual into five bounded Baltic
+  textual/archaeological frames and a separate Lower-Vistula Gutones expansion.
+  The largest reviewed Baltic frame is 50 locations.
+- Replaced six generic northern display labels with Suebi, Gutae, Chaedini,
+  Dauciones, Hilleviones, and Fenni; wired every reviewed frame through culture,
+  government, rank, agenda, direct standard, start population, and eleven
+  localization clients.
+- Added six direct-art privileges, six laws, four additive government overlays,
+  and four unique direct-art units covering assembly, retinue, grove, amber,
+  hillfort, and mortuary systems.
+- Added `tools/s2_northern_granularity.py`; its report pins 12 reviewed frames
+  and fails on residual superstates, disconnected ownership, generic names,
+  missing mechanics/art, or localization drift.
+- `make validate` passes all 96 checks. Paired-control `make smoke` has zero
+  mod-only lines. Six fresh-selector probes pass; the only appended diagnostic
+  is the already-pinned hardcoded absent-HRE notice.

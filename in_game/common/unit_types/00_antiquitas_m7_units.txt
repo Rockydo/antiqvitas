@@ -157,6 +157,92 @@ antq_hibernian_coastal_warbands = {
 	# P8.7;P14;PTO-GEO-II1;DARCY-IRE;NMI-IRON-AGE; Coastal fighting-following adapter combining local retainers and seaway mobility without implying a standing navy named raid or Viking-era institution.
 }
 
+antq_angrivarian_spear_following = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_1_traditions
+	morale_damage_taken = -0.04
+	movement_speed = -0.03
+	combat = { forest = 0.10 river = 0.08 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XDK
+		}
+	}
+	gfx_tags = { medium_tag heavy_tag }
+	# P8.7;P14;TAC-ANN-II;TAC-GER; Lower Weser and Elbe spear-following adapter for the bounded Angrivarian frame; it does not reconstruct a standardized formation equipment issue or permanent army.
+}
+
+antq_suebian_household_retinue = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_1_traditions
+	morale_damage_done = 0.08
+	strength_damage_taken = -0.03
+	combat = { forest = 0.08 hills = 0.08 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XDZ
+			has_or_had_tag = XBK
+			has_or_had_tag = SEM
+			has_or_had_tag = HER
+			has_or_had_tag = XBO
+			has_or_had_tag = NAR
+		}
+	}
+	gfx_tags = { medium_tag sword_tag }
+	# P8.7;P14;STR-GER;TAC-GER;OCD-GER; Prestige-bound fighting-following gameplay role for several Suebian-associated frames without asserting one federation doctrine uniform or permanent comitatus.
+}
+
+antq_baltic_hillfort_spearmen = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_1_traditions
+	morale_damage_taken = -0.04
+	movement_speed = -0.03
+	combat = { forest = 0.10 hills = 0.08 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = BPC
+			has_or_had_tag = WSC
+		}
+	}
+	gfx_tags = { medium_tag heavy_tag }
+	# P8.7;P14;VU-BRUSH;LIT-WLSC; Household spear levy tied to defended settlement systems; archaeological distributions do not establish one Baltic army ethnic doctrine or permanent hillfort garrison.
+}
+
+antq_baltic_forest_skirmishers = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_1_traditions
+	initiative = 0.18
+	movement_speed = 0.10
+	combat = { forest = 0.14 wetlands = 0.10 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = AES
+			has_or_had_tag = WBB
+			has_or_had_tag = BPC
+			has_or_had_tag = WSC
+			has_or_had_tag = ETG
+		}
+	}
+	gfx_tags = { archer_tag light_tag }
+	# P8.7;P14;PAN-WBB;VU-BRUSH;LIT-WLSC;UT-TARAND; Light-infantry terrain-role adapter across several distinct archaeological frames; it does not imply one Baltic identity formation or shared command.
+}
+
 antq_legionaries = {
 	is_special = yes
 	copy_from = a_age_1_traditions_heavy_infantry

@@ -2431,12 +2431,57 @@ antq_rugian = { # P10;TAC-GER;OCD-GER;PLE; Baltic Rugii regional frame
 	}
 }
 
-antq_aestian = { # P10;TAC-GER;OCD-GER;PLE; Baltic Aestii regional frame
+antq_aestian = { # P10;TAC-GER;OCD-GER; Sambian amber-coast Aestii frame; Tacitus's plural ethnonym does not define a state or exact language boundary
 	language = antq_baltic_dialect
 	color = antq_culture_color_antq_aestian
 	tags = { european_gfx }
 	culture_groups = {
 		antq_baltic_group
+	}
+}
+
+antq_west_balt_barrows = { # P10;PAN-WBB; Masurian archaeological culture at its AD 1 terminal horizon; material culture is not equated with one ethnicity
+	language = antq_baltic_dialect
+	color = antq_culture_color_antq_west_balt_barrows
+	tags = { european_gfx }
+	culture_groups = {
+		antq_baltic_group
+	}
+}
+
+antq_brushed_pottery_baltic = { # P10;VU-BRUSH; Eastern Lithuanian and southeastern Latvian hillfort-settlement archaeological frame; language remains a broad technical proxy
+	language = antq_baltic_dialect
+	color = antq_culture_color_antq_brushed_pottery_baltic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_baltic_group
+	}
+}
+
+antq_west_lithuanian_circle = { # P10;LIT-WLSC; Western Lithuanian and adjacent coastal archaeological frame; no uniform political identity is inferred
+	language = antq_baltic_dialect
+	color = antq_culture_color_antq_west_lithuanian_circle
+	tags = { european_gfx }
+	culture_groups = {
+		antq_baltic_group
+	}
+}
+
+antq_early_tarand = { # P10;UT-TARAND; North-Estonian and Latvian archaeological horizon; the technical Baltic grouping does not settle language or ethnicity
+	language = antq_baltic_dialect
+	color = antq_culture_color_antq_early_tarand
+	tags = { european_gfx }
+	culture_groups = {
+		antq_baltic_group
+	}
+}
+
+antq_angrivarian = { # P10;TAC-ANN-II;TAC-GER;OCD-GER; Middle-Weser and lower-Elbe people-polity culture adapter; no homogeneous state or exact frontier is inferred
+	language = antq_germanic_dialect
+	color = antq_culture_color_antq_angrivarian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_germanic_group
 	}
 }
 

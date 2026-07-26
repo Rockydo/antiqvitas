@@ -109,6 +109,118 @@ antq_hibernian_ritual_law = {
 	}
 }
 
+antq_germanic_assembly_law = {
+	law_category = administrative
+	law_gov_group = tribe
+	potential = {
+		government_type = government_type:tribe
+	}
+	antq_germanic_public_acclamation = {
+		country_modifier = {
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+			country_cabinet_efficiency = 0.025
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+		}
+	}
+}
+
+antq_germanic_retinue_law = {
+	law_category = military
+	law_gov_group = tribe
+	potential = {
+		government_type = government_type:tribe
+	}
+	antq_germanic_gift_bound_followings = {
+		country_modifier = {
+			land_morale_modifier = 0.025
+			global_levy_size_modifier = 0.05
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			tribes_estate
+		}
+	}
+}
+
+antq_germanic_grove_law = {
+	law_category = religious
+	law_gov_group = tribe
+	potential = {
+		government_type = government_type:tribe
+	}
+	antq_germanic_local_grove_custody = {
+		country_modifier = {
+			global_clergy_estate_power = 0.05
+			country_cabinet_efficiency = 0.025
+		}
+		years = 2
+		estate_preferences = {
+			clergy_estate
+			tribes_estate
+		}
+	}
+}
+
+antq_baltic_amber_law = {
+	law_category = socioeconomic
+	law_gov_group = tribe
+	potential = {
+		government_type = government_type:tribe
+	}
+	antq_baltic_household_amber_exchange = {
+		country_modifier = {
+			country_cabinet_efficiency = 0.025
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			tribes_estate
+		}
+	}
+}
+
+antq_baltic_hillfort_law = {
+	law_category = military
+	law_gov_group = tribe
+	potential = {
+		government_type = government_type:tribe
+	}
+	antq_baltic_seasonal_hillfort_muster = {
+		country_modifier = {
+			global_levy_size_modifier = 0.05
+			land_morale_modifier = 0.01
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+		}
+	}
+}
+
+antq_baltic_mortuary_law = {
+	law_category = religious
+	law_gov_group = tribe
+	potential = {
+		government_type = government_type:tribe
+	}
+	antq_baltic_local_cemetery_custody = {
+		country_modifier = {
+			global_clergy_estate_power = 0.05
+			country_cabinet_efficiency = 0.025
+		}
+		years = 2
+		estate_preferences = {
+			clergy_estate
+			tribes_estate
+		}
+	}
+}
+
 antq_indo_scythian_law = {
 	law_category = administrative
 	law_gov_group = monarchy
