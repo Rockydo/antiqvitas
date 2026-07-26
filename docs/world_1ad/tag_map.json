@@ -1,8 +1,8 @@
 {
   "game_build": "24187685",
-  "entry_count": 234,
-  "collision_count": 102,
-  "localization_collision_count": 113,
+  "entry_count": 274,
+  "collision_count": 117,
+  "localization_collision_count": 130,
   "reserved_hash_collision_tags": [
     "XAD"
   ],
@@ -687,18 +687,305 @@
       "name": "Dumnonii"
     },
     {
+      "design_tag": "BRT",
+      "engine_tag": "XDJ",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Cantiaci"
+    },
+    {
+      "design_tag": "REG",
+      "engine_tag": "XES",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Regni"
+    },
+    {
+      "design_tag": "BLG",
+      "engine_tag": "XET",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Belgae"
+    },
+    {
+      "design_tag": "DUR",
+      "engine_tag": "XEU",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Durotriges"
+    },
+    {
+      "design_tag": "DOB",
+      "engine_tag": "DOB",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Dobunni"
+    },
+    {
+      "design_tag": "COR",
+      "engine_tag": "XEV",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Corieltauvi"
+    },
+    {
+      "design_tag": "CNV",
+      "engine_tag": "XEW",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Cornovii"
+    },
+    {
+      "design_tag": "PBI",
+      "engine_tag": "PBI",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Parisii"
+    },
+    {
+      "design_tag": "CRV",
+      "engine_tag": "CRV",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Carvetii"
+    },
+    {
+      "design_tag": "DEM",
+      "engine_tag": "XEX",
+      "vanilla_collision": false,
+      "localization_collision": true,
+      "name": "Demetae"
+    },
+    {
+      "design_tag": "DEC",
+      "engine_tag": "XEY",
+      "vanilla_collision": false,
+      "localization_collision": true,
+      "name": "Deceangli"
+    },
+    {
+      "design_tag": "VOT",
+      "engine_tag": "VOT",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Votadini"
+    },
+    {
+      "design_tag": "SEL",
+      "engine_tag": "SEL",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Selgovae"
+    },
+    {
+      "design_tag": "NOV",
+      "engine_tag": "XEZ",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Novantae"
+    },
+    {
+      "design_tag": "DAM",
+      "engine_tag": "XFA",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Damnonii"
+    },
+    {
+      "design_tag": "VCN",
+      "engine_tag": "VCN",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Venicones"
+    },
+    {
+      "design_tag": "TAE",
+      "engine_tag": "XFB",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Taexali"
+    },
+    {
+      "design_tag": "EPD",
+      "engine_tag": "EPD",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Epidii"
+    },
+    {
+      "design_tag": "VAC",
+      "engine_tag": "VAC",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Vacomagi"
+    },
+    {
+      "design_tag": "DCT",
+      "engine_tag": "DCT",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Decantae"
+    },
+    {
+      "design_tag": "CAE",
+      "engine_tag": "XFC",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Caereni"
+    },
+    {
+      "design_tag": "CRE",
+      "engine_tag": "CRE",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Creones"
+    },
+    {
+      "design_tag": "CNA",
+      "engine_tag": "XFD",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Carnonacae"
+    },
+    {
+      "design_tag": "LGB",
+      "engine_tag": "LGB",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Lugi"
+    },
+    {
+      "design_tag": "SME",
+      "engine_tag": "XFE",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Smertae"
+    },
+    {
+      "design_tag": "NCR",
+      "engine_tag": "NCR",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Cornavii"
+    },
+    {
       "design_tag": "CAL",
       "engine_tag": "CAL",
       "vanilla_collision": false,
       "localization_collision": false,
-      "name": "Caledonian Societies"
+      "name": "Caledoni"
+    },
+    {
+      "design_tag": "VNI",
+      "engine_tag": "VNI",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Vennicnii"
+    },
+    {
+      "design_tag": "RHB",
+      "engine_tag": "RHB",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Rhobogdii"
+    },
+    {
+      "design_tag": "DAR",
+      "engine_tag": "DAR",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Darini"
+    },
+    {
+      "design_tag": "ERD",
+      "engine_tag": "ERD",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Erdini"
     },
     {
       "design_tag": "ULA",
       "engine_tag": "XCC",
       "vanilla_collision": true,
       "localization_collision": true,
-      "name": "Ulaid"
+      "name": "Voluntii"
+    },
+    {
+      "design_tag": "NAG",
+      "engine_tag": "XFF",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Nagnatae"
+    },
+    {
+      "design_tag": "AUT",
+      "engine_tag": "AUT",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Autini"
+    },
+    {
+      "design_tag": "GAN",
+      "engine_tag": "GAN",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Gangani"
+    },
+    {
+      "design_tag": "VEL",
+      "engine_tag": "XFG",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Velabri"
+    },
+    {
+      "design_tag": "IVN",
+      "engine_tag": "IVN",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Iverni"
+    },
+    {
+      "design_tag": "USD",
+      "engine_tag": "USD",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Usdiae"
+    },
+    {
+      "design_tag": "IBG",
+      "engine_tag": "IBG",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Hibernian Brigantes"
+    },
+    {
+      "design_tag": "CND",
+      "engine_tag": "XFH",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Coriondi"
+    },
+    {
+      "design_tag": "MNP",
+      "engine_tag": "XFI",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Manapii"
+    },
+    {
+      "design_tag": "CCI",
+      "engine_tag": "CCI",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Cauci"
+    },
+    {
+      "design_tag": "EBL",
+      "engine_tag": "EBL",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Eblani"
     },
     {
       "design_tag": "DAC",
@@ -1014,13 +1301,6 @@
       "vanilla_collision": true,
       "localization_collision": true,
       "name": "Caucasian Highland Societies"
-    },
-    {
-      "design_tag": "BRT",
-      "engine_tag": "XDJ",
-      "vanilla_collision": true,
-      "localization_collision": true,
-      "name": "Brittonic Societies"
     },
     {
       "design_tag": "GER",

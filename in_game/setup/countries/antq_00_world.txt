@@ -802,7 +802,7 @@ XBU = { # Finnic Societies; P8.7;CAH-XI
 	is_historic = yes
 }
 
-XBV = { # Catuvellauni; P8.7;CAH-XI
+XBV = { # Catuvellauni; P8.7;CAH-XI;PTO-GEO-II2
 	color = rgb { 58 112 62 }
 	color2 = rgb { 197 143 193 }
 
@@ -811,7 +811,7 @@ XBV = { # Catuvellauni; P8.7;CAH-XI
 	is_historic = yes
 }
 
-XBW = { # Trinovantes; P8.7;CAH-XI;PLE
+XBW = { # Trinovantes; P8.7;CAH-XI;PLE;PTO-GEO-II2
 	color = rgb { 58 113 71 }
 	color2 = rgb { 197 142 184 }
 
@@ -820,7 +820,7 @@ XBW = { # Trinovantes; P8.7;CAH-XI;PLE
 	is_historic = yes
 }
 
-XBX = { # Iceni; P8.7;CAH-XI;PLE
+XBX = { # Iceni; P8.7;CAH-XI;PLE;PTO-GEO-II2
 	color = rgb { 52 121 73 }
 	color2 = rgb { 203 134 182 }
 
@@ -829,7 +829,7 @@ XBX = { # Iceni; P8.7;CAH-XI;PLE
 	is_historic = yes
 }
 
-XBY = { # Brigantes; P8.7;CAH-XI;PLE
+XBY = { # Brigantes; P8.7;CAH-XI;PLE;PTO-GEO-II2
 	color = rgb { 45 108 61 }
 	color2 = rgb { 210 147 194 }
 
@@ -838,7 +838,7 @@ XBY = { # Brigantes; P8.7;CAH-XI;PLE
 	is_historic = yes
 }
 
-XBZ = { # Atrebates; P8.7;CAH-XI;PLE
+XBZ = { # Atrebates; P8.7;CAH-XI;PLE;PTO-GEO-II2
 	color = rgb { 38 115 73 }
 	color2 = rgb { 217 140 182 }
 
@@ -847,7 +847,7 @@ XBZ = { # Atrebates; P8.7;CAH-XI;PLE
 	is_historic = yes
 }
 
-XCA = { # Silures; P8.7;CAH-XI;PLE
+XCA = { # Silures; P8.7;CAH-XI;PLE;PTO-GEO-II2
 	color = rgb { 56 103 56 }
 	color2 = rgb { 199 152 199 }
 
@@ -856,7 +856,7 @@ XCA = { # Silures; P8.7;CAH-XI;PLE
 	is_historic = yes
 }
 
-XCB = { # Ordovices; P8.7;CAH-XI
+XCB = { # Ordovices; P8.7;CAH-XI;PTO-GEO-II2
 	color = rgb { 55 122 63 }
 	color2 = rgb { 200 133 192 }
 
@@ -865,7 +865,7 @@ XCB = { # Ordovices; P8.7;CAH-XI
 	is_historic = yes
 }
 
-DUM = { # Dumnonii; P8.7;CAH-XI
+DUM = { # Dumnonii; P8.7;CAH-XI;PTO-GEO-II2
 	color = rgb { 64 116 77 }
 	color2 = rgb { 191 139 178 }
 
@@ -874,7 +874,241 @@ DUM = { # Dumnonii; P8.7;CAH-XI
 	is_historic = yes
 }
 
-CAL = { # Caledonian Societies; P8.7;CAH-XI
+XDJ = { # Cantiaci; P8.7;PTO-GEO-II2
+	color = rgb { 55 105 72 }
+	color2 = rgb { 200 150 183 }
+
+	culture_definition = antq_cantiacian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XES = { # Regni; P8.7;PTO-GEO-II2
+	color = rgb { 45 104 59 }
+	color2 = rgb { 210 151 196 }
+
+	culture_definition = antq_regnian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XET = { # Belgae; P8.7;PTO-GEO-II2
+	color = rgb { 38 109 66 }
+	color2 = rgb { 217 146 189 }
+
+	culture_definition = antq_british_belgic
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XEU = { # Durotriges; P8.7;PTO-GEO-II2
+	color = rgb { 39 110 58 }
+	color2 = rgb { 216 145 197 }
+
+	culture_definition = antq_durotrigian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+DOB = { # Dobunni; P8.7;PTO-GEO-II2
+	color = rgb { 46 103 73 }
+	color2 = rgb { 209 152 182 }
+
+	culture_definition = antq_dobunnic
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XEV = { # Corieltauvi; P8.7;PTO-GEO-II2
+	color = rgb { 39 103 73 }
+	color2 = rgb { 216 152 182 }
+
+	culture_definition = antq_corieltauvian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XEW = { # Cornovii; P8.7;PTO-GEO-II2
+	color = rgb { 58 123 71 }
+	color2 = rgb { 197 132 184 }
+
+	culture_definition = antq_british_cornovian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+PBI = { # Parisii; P8.7;PTO-GEO-II2
+	color = rgb { 44 111 73 }
+	color2 = rgb { 211 144 182 }
+
+	culture_definition = antq_british_parisian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+CRV = { # Carvetii; P8.7;PTO-GEO-II2
+	color = rgb { 38 109 71 }
+	color2 = rgb { 217 146 184 }
+
+	culture_definition = antq_carvetian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XEX = { # Demetae; P8.7;PTO-GEO-II2
+	color = rgb { 65 120 79 }
+	color2 = rgb { 190 135 176 }
+
+	culture_definition = antq_demetian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XEY = { # Deceangli; P8.7;PTO-GEO-II2
+	color = rgb { 52 123 74 }
+	color2 = rgb { 203 132 181 }
+
+	culture_definition = antq_deceanglian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+VOT = { # Votadini; P8.7;PTO-GEO-II2;MANN-BRI
+	color = rgb { 50 107 58 }
+	color2 = rgb { 205 148 197 }
+
+	culture_definition = antq_votadinian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+SEL = { # Selgovae; P8.7;PTO-GEO-II2;MANN-BRI
+	color = rgb { 43 107 81 }
+	color2 = rgb { 212 148 174 }
+
+	culture_definition = antq_selgovaean
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XEZ = { # Novantae; P8.7;PTO-GEO-II2;MANN-BRI
+	color = rgb { 55 130 60 }
+	color2 = rgb { 200 125 195 }
+
+	culture_definition = antq_novantaean
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XFA = { # Damnonii; P8.7;PTO-GEO-II2;MANN-BRI
+	color = rgb { 63 104 55 }
+	color2 = rgb { 192 151 200 }
+
+	culture_definition = antq_damnonian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+VCN = { # Venicones; P8.7;PTO-GEO-II2;MANN-BRI
+	color = rgb { 49 119 65 }
+	color2 = rgb { 206 136 190 }
+
+	culture_definition = antq_veniconian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XFB = { # Taexali; P8.7;PTO-GEO-II2;MANN-BRI
+	color = rgb { 56 120 65 }
+	color2 = rgb { 199 135 190 }
+
+	culture_definition = antq_taexalian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+EPD = { # Epidii; P8.7;PTO-GEO-II2;MANN-BRI
+	color = rgb { 53 108 75 }
+	color2 = rgb { 202 147 180 }
+
+	culture_definition = antq_epidian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+VAC = { # Vacomagi; P8.7;PTO-GEO-II2;MANN-BRI
+	color = rgb { 48 125 61 }
+	color2 = rgb { 207 130 194 }
+
+	culture_definition = antq_vacomagian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+DCT = { # Decantae; P8.7;PTO-GEO-II2;MANN-BRI
+	color = rgb { 56 120 75 }
+	color2 = rgb { 199 135 180 }
+
+	culture_definition = antq_decantian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XFC = { # Caereni; P8.7;PTO-GEO-II2;MANN-BRI
+	color = rgb { 40 117 69 }
+	color2 = rgb { 215 138 186 }
+
+	culture_definition = antq_caerenian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+CRE = { # Creones; P8.7;PTO-GEO-II2;MANN-BRI
+	color = rgb { 65 126 61 }
+	color2 = rgb { 190 129 194 }
+
+	culture_definition = antq_creonian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XFD = { # Carnonacae; P8.7;PTO-GEO-II2;MANN-BRI
+	color = rgb { 42 112 57 }
+	color2 = rgb { 213 143 198 }
+
+	culture_definition = antq_carnonacan
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+LGB = { # Lugi; P8.7;PTO-GEO-II2;MANN-BRI
+	color = rgb { 56 114 61 }
+	color2 = rgb { 199 141 194 }
+
+	culture_definition = antq_british_lugian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XFE = { # Smertae; P8.7;PTO-GEO-II2;MANN-BRI
+	color = rgb { 51 112 58 }
+	color2 = rgb { 204 143 197 }
+
+	culture_definition = antq_smertian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+NCR = { # Cornavii; P8.7;PTO-GEO-II2;MANN-BRI
+	color = rgb { 48 116 67 }
+	color2 = rgb { 207 139 188 }
+
+	culture_definition = antq_northern_cornavian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+CAL = { # Caledoni; P8.7;PTO-GEO-II2;MANN-BRI
 	color = rgb { 40 110 70 }
 	color2 = rgb { 215 145 185 }
 
@@ -883,11 +1117,146 @@ CAL = { # Caledonian Societies; P8.7;CAH-XI
 	is_historic = yes
 }
 
-XCC = { # Ulaid; P8.7;CAH-XI
+VNI = { # Vennicnii; P8.7;PTO-GEO-II1;DARCY-IRE
+	color = rgb { 48 121 84 }
+	color2 = rgb { 207 134 171 }
+
+	culture_definition = antq_vennicnian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+RHB = { # Rhobogdii; P8.7;PTO-GEO-II1;DARCY-IRE
+	color = rgb { 64 121 73 }
+	color2 = rgb { 191 134 182 }
+
+	culture_definition = antq_rhobogdian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+DAR = { # Darini; P8.7;PTO-GEO-II1;DARCY-IRE
+	color = rgb { 53 124 66 }
+	color2 = rgb { 202 131 189 }
+
+	culture_definition = antq_darinian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+ERD = { # Erdini; P8.7;PTO-GEO-II1;DARCY-IRE
+	color = rgb { 49 121 68 }
+	color2 = rgb { 206 134 187 }
+
+	culture_definition = antq_erdinian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XCC = { # Voluntii; P8.7;PTO-GEO-II1;DARCY-IRE
 	color = rgb { 40 137 75 }
 	color2 = rgb { 215 118 180 }
 
 	culture_definition = antq_voluntian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XFF = { # Nagnatae; P8.7;PTO-GEO-II1;DARCY-IRE
+	color = rgb { 55 121 87 }
+	color2 = rgb { 200 134 168 }
+
+	culture_definition = antq_nagnatan
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+AUT = { # Autini; P8.7;PTO-GEO-II1;DARCY-IRE
+	color = rgb { 51 138 73 }
+	color2 = rgb { 204 117 182 }
+
+	culture_definition = antq_autinian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+GAN = { # Gangani; P8.7;PTO-GEO-II1;DARCY-IRE
+	color = rgb { 56 132 71 }
+	color2 = rgb { 199 123 184 }
+
+	culture_definition = antq_ganganian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XFG = { # Velabri; P8.7;PTO-GEO-II1;DARCY-IRE
+	color = rgb { 53 122 65 }
+	color2 = rgb { 202 133 190 }
+
+	culture_definition = antq_velabrian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+IVN = { # Iverni; P8.7;PTO-GEO-II1;DARCY-IRE
+	color = rgb { 50 127 73 }
+	color2 = rgb { 205 128 182 }
+
+	culture_definition = antq_ivernian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+USD = { # Usdiae; P8.7;PTO-GEO-II1;DARCY-IRE
+	color = rgb { 55 132 84 }
+	color2 = rgb { 200 123 171 }
+
+	culture_definition = antq_usdiaean
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+IBG = { # Hibernian Brigantes; P8.7;PTO-GEO-II1;DARCY-IRE
+	color = rgb { 41 114 83 }
+	color2 = rgb { 214 141 172 }
+
+	culture_definition = antq_irish_brigantian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XFH = { # Coriondi; P8.7;PTO-GEO-II1;DARCY-IRE
+	color = rgb { 46 117 79 }
+	color2 = rgb { 209 138 176 }
+
+	culture_definition = antq_coriondian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+XFI = { # Manapii; P8.7;PTO-GEO-II1;DARCY-IRE
+	color = rgb { 52 116 92 }
+	color2 = rgb { 203 139 163 }
+
+	culture_definition = antq_manapian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+CCI = { # Cauci; P8.7;PTO-GEO-II1;DARCY-IRE
+	color = rgb { 47 121 68 }
+	color2 = rgb { 208 134 187 }
+
+	culture_definition = antq_caucian
+	religion_definition = antq_celtic_religion
+	is_historic = yes
+}
+
+EBL = { # Eblani; P8.7;PTO-GEO-II1;DARCY-IRE
+	color = rgb { 54 124 80 }
+	color2 = rgb { 201 131 175 }
+
+	culture_definition = antq_eblanian
 	religion_definition = antq_celtic_religion
 	is_historic = yes
 }
@@ -1294,15 +1663,6 @@ XDI = { # Caucasian Highland Societies; P8.2;CAH-XI
 
 	culture_definition = antq_kartvelian
 	religion_definition = antq_arsacid_zoroastrianism
-	is_historic = yes
-}
-
-XDJ = { # Brittonic Societies; P8.7;CAH-XI
-	color = rgb { 55 105 72 }
-	color2 = rgb { 200 150 183 }
-
-	culture_definition = antq_icenian
-	religion_definition = antq_celtic_religion
 	is_historic = yes
 }
 

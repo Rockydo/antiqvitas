@@ -301,6 +301,97 @@ SPECIAL: dict[str, str] = {
     ),
 }
 
+BRITAIN_IRELAND_FOCUS: dict[str, str] = {
+    "CAT": "Verlamion and the middle Thames oppida connect coin-using elites to neighbouring southeastern courts",
+    "TRI": "Camulodunum and the Thames estuary support exchange while overlapping coin evidence makes the western frontier uncertain",
+    "ICE": "the East Anglian lowlands support farming, metal exchange, and dispersed local authority around Venta",
+    "BRI": "a large northern network spans Pennine routes and both coasts without implying effortless centralized control",
+    "ATB": "Calleva's coin-using court and Channel contacts create both wealth and exposure to continental and Roman influence",
+    "SIL": "the southeastern Welsh uplands and Severn approaches reward mobile defence and control of difficult routes",
+    "ORD": "the northern Welsh uplands, western coast, and Mona-facing routes favour dispersed strongholds and local assemblies",
+    "DUM": "the southwestern peninsula joins tin-bearing landscapes, Atlantic routes, and the Tamar-Isca corridor",
+    "BRT": "the Kentish approaches command the shortest Channel crossings and a dense zone of exchange with northern Gaul",
+    "REG": "the central south coast links sheltered harbours, farming districts, and neighbouring Atrebatic communities",
+    "BLG": "the installed Wessex frame represents a western Belgic network rather than a fixed border around later Venta",
+    "DUR": "the Dorset hillfort landscape and Channel coast support agriculture, craft production, and maritime exchange",
+    "DOB": "the Severn-Cotswold zone links fertile valleys, Corinium, western routes, and coin-using elites",
+    "COR": "the east Midlands and Lincolnshire routes connect mixed farming, river corridors, and Humber exchange",
+    "CNV": "the Severn-Deva approaches join fortified uplands, salt and metal routes, and the western Midlands",
+    "PBI": "the Humber estuary and Petuaria-facing coast favour maritime exchange while separating local interests from the wider Brigantian frame",
+    "CRV": "the Cumbrian valleys and western Pennine approaches sustain a distinct regional network known more securely after the campaign date",
+    "DEM": "the southwest Welsh coast and Maridunum-facing valleys connect pasture, metal routes, and Irish Sea exchange",
+    "DEC": "the northeast Welsh coast and Canovium-facing corridor form a narrow contested frame between Ordovician and Cornovian neighbours",
+    "VOT": "the Forth and eastern border country connect Traprain Law, coastal exchange, and routes toward the Tyne",
+    "SEL": "the southern uplands around the Trimontium proxy divide Solway, Tweed, and Forth-facing routes",
+    "NOV": "the southwestern peninsula around the Rerigonium proxy looks toward both the Irish Sea and Clyde",
+    "DAM": "the Clyde valley and western lowlands connect coastal inlets, pasture, and inland movement",
+    "VCN": "the Tay-Fife corridor around the Orrea proxy combines fertile lowlands, river movement, and eastern sea access",
+    "TAE": "the northeastern coast around the Devana proxy links farming districts, fisheries, and difficult inland routes",
+    "EPD": "the Epidium-facing peninsulas and inner islands depend on seaborne links more than continuous territorial administration",
+    "VAC": "the Moray basin and the disputed Tuesis proxy connect fertile lowlands to Highland passages",
+    "DCT": "the Ross and Varar-facing frame joins eastern firths to western mountain routes",
+    "CAE": "the northwestern mainland frame is sparse and highly uncertain, with authority rooted in local communities",
+    "CRE": "the western-island proxy reflects Ptolemy's relative ordering rather than a secure ethnic boundary on Skye",
+    "CNA": "the northwestern coastal proxy reflects a named people but no recoverable campaign-boundary court",
+    "LGB": "the eastern Sutherland proxy distinguishes Ptolemy's Lugi from similarly named continental peoples",
+    "SME": "the far-northern mainland proxy preserves Ptolemy's ordering without inventing a centralized kingdom",
+    "NCR": "the Caithness and northern-island frame is a gameplay attachment around Ptolemy's Cornavii, not a claim of uniform island identity",
+    "CAL": "the reduced Caledonian forest-core preserves only geography that cannot be assigned more narrowly with confidence",
+    "VNI": "the northwestern coast follows Ptolemy's relative order and Atlantic access rather than later political boundaries",
+    "RHB": "the Rhobogdium-facing north coast supports maritime contact but no recoverable unitary court",
+    "DAR": "the northern coastal proxy distinguishes the Darini from neighbouring Voluntii and Rhobogdii",
+    "ERD": "the northwestern interior frame connects lakes, rivers, and Atlantic-facing routes across an uncertain boundary",
+    "ULA": "the Voluntian northeastern frame replaces the later blanket Ulaid label and faces the North Channel and Irish Sea",
+    "NAG": "the Magnata-facing western frame links Atlantic inlets to inland movement without asserting a modern county boundary",
+    "AUT": "the western Hibernian frame follows Ptolemy's coastal ordering across a landscape of dispersed communities",
+    "GAN": "the west-central frame links the Shannon system and Atlantic approaches, with Sligo excluded for the Nagnatae",
+    "VEL": "the southwestern peninsula depends on Atlantic routes, pasture, and local strongholds",
+    "IVN": "the Iernis-facing southwest combines sheltered waters, farming districts, and maritime exchange",
+    "USD": "the south-central frame follows Ptolemy's ordering across the Shannon and Suir-facing interior",
+    "IBG": "the southeastern coastal proxy preserves Ptolemy's Irish Brigantes without merging them with the British people",
+    "CND": "the southeastern interior proxy is deliberately small because Ptolemy places the Coriondi above the Brigantes",
+    "MNP": "the Manapia-facing southeast commands Irish Sea crossings and coastal exchange",
+    "CCI": "the eastern coastal frame follows Ptolemy's order between the Manapii and Eblani",
+    "EBL": "the Eblana-facing eastern interior links the Boyne-Liffey zone while keeping the Cauci distinct",
+}
+
+SOUTHERN_BRITISH_TAGS = frozenset(
+    {
+        "CAT", "TRI", "ICE", "BRI", "ATB", "SIL", "ORD", "DUM", "BRT",
+        "REG", "BLG", "DUR", "DOB", "COR", "CNV", "PBI", "CRV", "DEM", "DEC",
+    }
+)
+
+
+def britain_ireland_text(row: dict[str, str]) -> str:
+    design = row["tag"]
+    focus = BRITAIN_IRELAND_FOCUS[design]
+    if design in SOUTHERN_BRITISH_TAGS:
+        task = (
+            "Strengthen assemblies, productive settlements, hillfort or oppidum "
+            "networks, and exchange while deciding how to answer neighbouring "
+            "rivals and growing Roman attention."
+        )
+    elif row["region"] == "Britain":
+        task = (
+            "Keep local assemblies and route communities aligned, use pasture "
+            "and seaborne exchange well, and resist both external pressure and "
+            "the fiction of a permanent all-northern confederation."
+        )
+    else:
+        task = (
+            "Develop farming, cattle, craft, river, and maritime exchange; "
+            "manage raiding and reciprocal obligations through local assemblies "
+            "without importing later Irish kingdoms into AD 1."
+        )
+    return (
+        f"On 1 January AD 1, {row['name']} is represented by a bounded campaign "
+        f"frame anchored at {row['historical_capital']}; {focus}. Ptolemy's later "
+        "and indirect geography does not establish an exact AD 1 frontier or a "
+        "single centralized state.\n\n"
+        f"{task}"
+    )
+
 
 def read_rows() -> list[dict[str, str]]:
     with POLITIES.open(encoding="utf-8-sig", newline="") as handle:
@@ -357,7 +448,10 @@ def entries() -> list[dict[str, str]]:
         engine = tags.get(design)
         if not engine:
             raise ValueError(f"missing engine tag for {design}")
-        text = SPECIAL.get(design, generic_text(row))
+        if design in BRITAIN_IRELAND_FOCUS:
+            text = britain_ireland_text(row)
+        else:
+            text = SPECIAL.get(design, generic_text(row))
         output.append(
             {
                 "design_tag": design,

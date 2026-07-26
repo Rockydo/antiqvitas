@@ -10195,9 +10195,20 @@ countries = {
 			capital = helsinge
 		}
 
-		XBV = { # Catuvellauni; P8.7;CAH-XI
+		XBV = { # Catuvellauni; P8.7;CAH-XI;PTO-GEO-II2
 			own_control_core = {
+				aylesbury
+				bedford
+				buckingham
+				daventry
+				dunstable
+				harrow
+				hertford
+				kingston
+				london
+				northampton
 				st_albans
+				wycombe
 			}
 
 			country_rank = rank_kingdom
@@ -10232,9 +10243,14 @@ countries = {
 			capital = st_albans
 		}
 
-		XBW = { # Trinovantes; P8.7;CAH-XI;PLE
+		XBW = { # Trinovantes; P8.7;CAH-XI;PLE;PTO-GEO-II2
 			own_control_core = {
+				barking
+				chelmsford
 				colchester
+				hedingham
+				prittlewell
+				walden
 			}
 
 			country_rank = rank_kingdom
@@ -10268,9 +10284,21 @@ countries = {
 			capital = colchester
 		}
 
-		XBX = { # Iceni; P8.7;CAH-XI;PLE
+		XBX = { # Iceni; P8.7;CAH-XI;PLE;PTO-GEO-II2
 			own_control_core = {
+				bury
+				cambridge
+				ely
+				fakenham
+				huntingdon
+				ipswich
+				lavenham
+				lowestoft
+				lynn
 				norwich
+				royston
+				thetford
+				yarmouth
 			}
 
 			country_rank = rank_kingdom
@@ -10301,40 +10329,25 @@ countries = {
 			capital = norwich
 		}
 
-		XBY = { # Brigantes; P8.7;CAH-XI;PLE
+		XBY = { # Brigantes; P8.7;CAH-XI;PLE;PTO-GEO-II2
 			own_control_core = {
-				alnwick
-				appleby
 				bedale
-				billingham
 				blackburn
-				bridlington
-				carlisle
-				chester
-				cockermouth
+				chesterfield
 				darlington
+				derby
 				doncaster
 				durham
-				egremont
-				hexham
-				hull
-				kendal
+				glossop
 				lancaster
 				leeds
 				liverpool
-				macclesfield
 				manchester
-				morpeth
-				nantwich
-				newcastle
-				norton
-				penrith
 				pontefract
 				preston
 				richmond
 				ripon
 				scarborough
-				selby
 				skipton
 				stockton
 				wakefield
@@ -10370,9 +10383,18 @@ countries = {
 			capital = ripon
 		}
 
-		XBZ = { # Atrebates; P8.7;CAH-XI;PLE
+		XBZ = { # Atrebates; P8.7;CAH-XI;PLE;PTO-GEO-II2
 			own_control_core = {
+				abingdon
 				basingstoke
+				henley
+				lymington
+				portsmouth
+				reading
+				southampton
+				wight
+				winchester
+				windsor
 			}
 
 			country_rank = rank_kingdom
@@ -10406,9 +10428,17 @@ countries = {
 			capital = basingstoke
 		}
 
-		XCA = { # Silures; P8.7;CAH-XI;PLE
+		XCA = { # Silures; P8.7;CAH-XI;PLE;PTO-GEO-II2
 			own_control_core = {
+				brecknock
+				builth
+				caerphilly
+				cardiff
 				monmouth
+				neath
+				newport
+				radnor
+				swansea
 			}
 
 			country_rank = rank_kingdom
@@ -10439,9 +10469,17 @@ countries = {
 			capital = monmouth
 		}
 
-		XCB = { # Ordovices; P8.7;CAH-XI
+		XCB = { # Ordovices; P8.7;CAH-XI;PTO-GEO-II2
 			own_control_core = {
+				anglesey
 				carnarvon
+				conwy
+				flint
+				harlech
+				llangollen
+				machynlleth
+				montgomery
+				penllyn
 			}
 
 			country_rank = rank_kingdom
@@ -10472,34 +10510,19 @@ countries = {
 			capital = carnarvon
 		}
 
-		DUM = { # Dumnonii; P8.7;CAH-XI
+		DUM = { # Dumnonii; P8.7;CAH-XI;PTO-GEO-II2
 			own_control_core = {
-				amesbury
 				bampton
 				barnstaple
-				bath
 				bideford
 				bodmin
-				bristol
-				cheltenham
-				chippenham
-				cirencester
-				dorchester
 				exeter
-				gloucester
 				launceston
 				minehead
 				okehampton
 				plymouth
-				poole
-				portishead
-				salisbury
-				shaftesbury
 				taunton
-				trowbridge
 				truro
-				wells
-				weymouth
 			}
 
 			country_rank = rank_kingdom
@@ -10530,71 +10553,968 @@ countries = {
 			capital = exeter
 		}
 
-		CAL = { # Caledonian Societies; P8.7;CAH-XI
+		XDJ = { # Cantiaci; P8.7;PTO-GEO-II2
 			own_control_core = {
-				aberdeen
-				aberfeldy
-				arbroath
-				ardtornish
-				arran
-				ayr
-				badenoch
-				banff
-				berwick
-				buchan
-				clackmannan
-				cowal
-				cupar
-				dingwall
-				dornoch
-				dumbarton
-				dumfries
+				canterbury
+				dover
+				hythe
+				rochester
+				tonbridge
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_brittonic_druidic_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -30
+				traditionalist_vs_innovative = -35
+				aristocracy_vs_plutocracy = -35
+				capital_economy_vs_traditional_economy = 50
+			}
+			capital = canterbury
+		}
+
+		XES = { # Regni; P8.7;PTO-GEO-II2
+			own_control_core = {
+				chichester
+				guildford
+				hastings
+				lewes
+				reigate
+				shoreham
+				woking
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_brittonic_druidic_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -30
+				traditionalist_vs_innovative = -35
+				aristocracy_vs_plutocracy = -35
+				capital_economy_vs_traditional_economy = 50
+			}
+			capital = chichester
+		}
+
+		XET = { # Belgae; P8.7;PTO-GEO-II2
+			own_control_core = {
+				amesbury
+				chippenham
+				portishead
+				salisbury
+				trowbridge
+				wells
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_brittonic_druidic_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -25
+				traditionalist_vs_innovative = -30
+				aristocracy_vs_plutocracy = -30
+				capital_economy_vs_traditional_economy = 45
+			}
+			capital = salisbury
+		}
+
+		XEU = { # Durotriges; P8.7;PTO-GEO-II2
+			own_control_core = {
+				dorchester
+				poole
+				shaftesbury
+				weymouth
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_brittonic_druidic_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -35
+				traditionalist_vs_innovative = -35
+				aristocracy_vs_plutocracy = -40
+				capital_economy_vs_traditional_economy = 55
+			}
+			capital = dorchester
+		}
+
+		DOB = { # Dobunni; P8.7;PTO-GEO-II2
+			own_control_core = {
+				banbury
+				bath
+				birmingham
+				bristol
+				cheltenham
+				cirencester
+				coventry
+				ewyas
+				gloucester
+				hereford
+				kidderminster
+				oxford
+				stratford
+				wigmore
+				worcester
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_brittonic_druidic_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -25
+				traditionalist_vs_innovative = -30
+				aristocracy_vs_plutocracy = -30
+				capital_economy_vs_traditional_economy = 45
+			}
+			capital = cirencester
+		}
+
+		XEV = { # Corieltauvi; P8.7;PTO-GEO-II2
+			own_control_core = {
+				boston
+				bosworth
+				grantham
+				grimsby
+				kettering
+				leicester
+				lincoln
+				loughborough
+				louth
+				newark
+				nottingham
+				retford
+				rutland
+				spalding
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_brittonic_druidic_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -30
+				traditionalist_vs_innovative = -35
+				aristocracy_vs_plutocracy = -35
+				capital_economy_vs_traditional_economy = 50
+			}
+			capital = leicester
+		}
+
+		XEW = { # Cornovii; P8.7;PTO-GEO-II2
+			own_control_core = {
+				chester
+				ludlow
+				macclesfield
+				nantwich
+				oswestry
+				shrewsbury
+				stafford
+				stoke
+				tamworth
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_brittonic_druidic_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -35
+				traditionalist_vs_innovative = -40
+				aristocracy_vs_plutocracy = -40
+				capital_economy_vs_traditional_economy = 55
+			}
+			capital = shrewsbury
+		}
+
+		PBI = { # Parisii; P8.7;PTO-GEO-II2
+			own_control_core = {
+				bridlington
+				hull
+				norton
+				selby
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_brittonic_druidic_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -35
+				traditionalist_vs_innovative = -35
+				aristocracy_vs_plutocracy = -40
+				capital_economy_vs_traditional_economy = 50
+			}
+			capital = hull
+		}
+
+		CRV = { # Carvetii; P8.7;PTO-GEO-II2
+			own_control_core = {
+				appleby
+				carlisle
+				cockermouth
+				egremont
+				kendal
+				penrith
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -40
+				traditionalist_vs_innovative = -40
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 60
+			}
+			capital = carlisle
+		}
+
+		XEX = { # Demetae; P8.7;PTO-GEO-II2
+			own_control_core = {
+				aberystwyth
+				cardigan
+				carmarthen
+				fishguard
+				kidwelly
+				pembroke
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_brittonic_druidic_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -40
+				traditionalist_vs_innovative = -40
+				aristocracy_vs_plutocracy = -40
+				capital_economy_vs_traditional_economy = 60
+			}
+			capital = carmarthen
+		}
+
+		XEY = { # Deceangli; P8.7;PTO-GEO-II2
+			own_control_core = {
+				denbigh
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_brittonic_druidic_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -45
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 65
+			}
+			capital = denbigh
+		}
+
+		VOT = { # Votadini; P8.7;PTO-GEO-II2;MANN-BRI
+			own_control_core = {
+				alnwick
+				billingham
 				dunbar
+				edinburgh
+				hexham
+				linlithgow
+				morpeth
+				newcastle
+				stirling
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -40
+				traditionalist_vs_innovative = -40
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 60
+			}
+			capital = dunbar
+		}
+
+		SEL = { # Selgovae; P8.7;PTO-GEO-II2;MANN-BRI
+			own_control_core = {
+				berwick
+				duns
+				roxburgh
+				selkirk
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -45
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 65
+			}
+			capital = selkirk
+		}
+
+		XEZ = { # Novantae; P8.7;PTO-GEO-II2;MANN-BRI
+			own_control_core = {
+				ayr
+				dumfries
+				irvine
+				kenmure
+				kirkcudbright
+				stranraer
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -45
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 65
+			}
+			capital = stranraer
+		}
+
+		XFA = { # Damnonii; P8.7;PTO-GEO-II2;MANN-BRI
+			own_control_core = {
+				dumbarton
+				glasgow
+				lanark
+				paisley
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -40
+				traditionalist_vs_innovative = -40
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 60
+			}
+			capital = dumbarton
+		}
+
+		VCN = { # Venicones; P8.7;PTO-GEO-II2;MANN-BRI
+			own_control_core = {
+				arbroath
+				cupar
 				dundee
 				dunfermline
-				duns
-				durness
-				edinburgh
-				elgin
 				forfar
-				gairloch
-				glasgow
-				harris
-				inverary
-				inverness
+				st_andrews
+				stonehaven
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -40
+				traditionalist_vs_innovative = -40
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 60
+			}
+			capital = dundee
+		}
+
+		XFB = { # Taexali; P8.7;PTO-GEO-II2;MANN-BRI
+			own_control_core = {
+				aberdeen
+				banff
+				buchan
 				inverurie
-				irvine
+				mar
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -45
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 65
+			}
+			capital = aberdeen
+		}
+
+		EPD = { # Epidii; P8.7;PTO-GEO-II2;MANN-BRI
+			own_control_core = {
+				ardtornish
+				arran
+				cowal
+				inverary
 				islay
-				kenmure
 				kintyre
-				kirkcudbright
-				lanark
-				lewis
-				linlithgow
 				lochaber
 				mann
-				mar
 				mull
 				oban
-				orkney
-				paisley
-				perth
-				roxburgh
-				scone
-				selkirk
-				shetland
-				skye
-				st_andrews
-				stirling
-				stonehaven
-				stranraer
-				strathearn
-				thurso
-				tongue
-				torshavn
-				uist
-				ullapool
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = inverary
+		}
+
+		VAC = { # Vacomagi; P8.7;PTO-GEO-II2;MANN-BRI
+			own_control_core = {
+				badenoch
+				elgin
 				urquhart
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -45
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 65
+			}
+			capital = elgin
+		}
+
+		DCT = { # Decantae; P8.7;PTO-GEO-II2;MANN-BRI
+			own_control_core = {
+				dingwall
+				gairloch
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = dingwall
+		}
+
+		XFC = { # Caereni; P8.7;PTO-GEO-II2;MANN-BRI
+			own_control_core = {
+				durness
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -50
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 75
+			}
+			capital = durness
+		}
+
+		CRE = { # Creones; P8.7;PTO-GEO-II2;MANN-BRI
+			own_control_core = {
+				skye
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -50
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 75
+			}
+			capital = skye
+		}
+
+		XFD = { # Carnonacae; P8.7;PTO-GEO-II2;MANN-BRI
+			own_control_core = {
+				ullapool
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -50
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 75
+			}
+			capital = ullapool
+		}
+
+		LGB = { # Lugi; P8.7;PTO-GEO-II2;MANN-BRI
+			own_control_core = {
+				dornoch
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -50
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 75
+			}
+			capital = dornoch
+		}
+
+		XFE = { # Smertae; P8.7;PTO-GEO-II2;MANN-BRI
+			own_control_core = {
+				tongue
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -50
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 75
+			}
+			capital = tongue
+		}
+
+		NCR = { # Cornavii; P8.7;PTO-GEO-II2;MANN-BRI
+			own_control_core = {
+				orkney
+				shetland
+				thurso
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				great_britain_region
+				ireland_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -50
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 75
+			}
+			capital = thurso
+		}
+
+		CAL = { # Caledoni; P8.7;PTO-GEO-II2;MANN-BRI
+			own_control_core = {
+				aberfeldy
+				clackmannan
+				harris
+				inverness
+				lewis
+				perth
+				scone
+				strathearn
+				uist
 			}
 
 			country_rank = rank_county
@@ -10624,103 +11544,163 @@ countries = {
 			capital = inverness
 		}
 
-		XCC = { # Ulaid; P8.7;CAH-XI
+		VNI = { # Vennicnii; P8.7;PTO-GEO-II1;DARCY-IRE
 			own_control_core = {
-				adare
-				ardagh
-				armagh
-				athenry
-				athlone
-				athy
-				ballaghaderreen
+				donegal
+				inishowen
+				kilmacrennan
+				raphoe
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ireland_region
+				great_britain_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = donegal
+		}
+
+		RHB = { # Rhobogdii; P8.7;PTO-GEO-II1;DARCY-IRE
+			own_control_core = {
+				coleraine
+				derry
+				magherafelt
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ireland_region
+				great_britain_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = derry
+		}
+
+		DAR = { # Darini; P8.7;PTO-GEO-II1;DARCY-IRE
+			own_control_core = {
 				ballycastle
 				ballymena
-				ballymore
-				belcoo
 				belfast
-				bunratty
-				burrishoole
-				carbery
-				carlow
-				carrickbeg
 				carrickfergus
-				carrickmacross
-				cashel
-				castlebar
-				castleconnell
-				castlereagh
+				dunluce
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ireland_region
+				great_britain_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = dunluce
+		}
+
+		ERD = { # Erdini; P8.7;PTO-GEO-II1;DARCY-IRE
+			own_control_core = {
+				belcoo
 				cavan
-				clifden
 				clogher
-				clonmel
-				coleraine
-				cork
-				cullahill
-				daingean
-				derry
-				dingle
-				donegal
+				dromahair
+				dungannon
+				enniskillen
+				killeshandra
+				killycolly
+				leitrim
+				strabane
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ireland_region
+				great_britain_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = enniskillen
+		}
+
+		XCC = { # Voluntii; P8.7;PTO-GEO-II1;DARCY-IRE
+			own_control_core = {
+				armagh
+				carrickmacross
 				downpatrick
 				drogheda
-				dromahair
-				dublin
-				dunamase
 				dundalk
-				dungannon
-				dungarvan
-				dunhallow
-				dunluce
-				ennis
-				enniskillen
-				erris
-				fermoy
-				ferns
-				fingal
-				galway
-				glendalough
-				inishowen
 				iveagh
-				kells
-				kilbrittain
-				kilconnell
-				kildare
-				kilkenny
-				killarney
-				killeshandra
-				killmallock
-				killycolly
-				kilmacrennan
-				kinsale
-				leitrim
-				limerick
-				longford
-				magherafelt
 				monaghan
-				moyarta
-				moycarn
-				mullingar
-				muskerry
-				naas
-				navan
-				nenagh
-				new_ross
 				newtownards
 				oriel
-				raphoe
-				roscommon
-				roscrea
-				skreen
-				sligo
-				strabane
-				tipperary
-				tralee
-				trim
-				tuam
-				tullamore
-				waterford
-				wexford
-				wicklow
-				youghal
 			}
 
 			country_rank = rank_county
@@ -10748,6 +11728,411 @@ countries = {
 				capital_economy_vs_traditional_economy = 70
 			}
 			capital = armagh
+		}
+
+		XFF = { # Nagnatae; P8.7;PTO-GEO-II1;DARCY-IRE
+			own_control_core = {
+				ballaghaderreen
+				burrishoole
+				castlebar
+				erris
+				sligo
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ireland_region
+				great_britain_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = castlebar
+		}
+
+		AUT = { # Autini; P8.7;PTO-GEO-II1;DARCY-IRE
+			own_control_core = {
+				athenry
+				clifden
+				galway
+				kilconnell
+				tuam
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ireland_region
+				great_britain_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = galway
+		}
+
+		GAN = { # Gangani; P8.7;PTO-GEO-II1;DARCY-IRE
+			own_control_core = {
+				athlone
+				bunratty
+				castlereagh
+				ennis
+				moyarta
+				roscommon
+				skreen
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ireland_region
+				great_britain_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = ennis
+		}
+
+		XFG = { # Velabri; P8.7;PTO-GEO-II1;DARCY-IRE
+			own_control_core = {
+				carbery
+				dunhallow
+				kilbrittain
+				killarney
+				muskerry
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ireland_region
+				great_britain_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = killarney
+		}
+
+		IVN = { # Iverni; P8.7;PTO-GEO-II1;DARCY-IRE
+			own_control_core = {
+				cork
+				fermoy
+				kinsale
+				youghal
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ireland_region
+				great_britain_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = cork
+		}
+
+		USD = { # Usdiae; P8.7;PTO-GEO-II1;DARCY-IRE
+			own_control_core = {
+				adare
+				cashel
+				castleconnell
+				clonmel
+				dingle
+				killmallock
+				limerick
+				moycarn
+				nenagh
+				roscrea
+				tipperary
+				tralee
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ireland_region
+				great_britain_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = limerick
+		}
+
+		IBG = { # Hibernian Brigantes; P8.7;PTO-GEO-II1;DARCY-IRE
+			own_control_core = {
+				carrickbeg
+				dungarvan
+				waterford
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ireland_region
+				great_britain_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = waterford
+		}
+
+		XFH = { # Coriondi; P8.7;PTO-GEO-II1;DARCY-IRE
+			own_control_core = {
+				cullahill
+				kilkenny
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ireland_region
+				great_britain_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = kilkenny
+		}
+
+		XFI = { # Manapii; P8.7;PTO-GEO-II1;DARCY-IRE
+			own_control_core = {
+				carlow
+				ferns
+				new_ross
+				wexford
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ireland_region
+				great_britain_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = wexford
+		}
+
+		CCI = { # Cauci; P8.7;PTO-GEO-II1;DARCY-IRE
+			own_control_core = {
+				dublin
+				fingal
+				glendalough
+				wicklow
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ireland_region
+				great_britain_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = dublin
+		}
+
+		EBL = { # Eblani; P8.7;PTO-GEO-II1;DARCY-IRE
+			own_control_core = {
+				ardagh
+				athy
+				ballymore
+				daingean
+				dunamase
+				kells
+				kildare
+				longford
+				mullingar
+				naas
+				navan
+				trim
+				tullamore
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ireland_region
+				great_britain_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = navan
 		}
 
 		DAC = { # Dacian Kingdoms; P8.7;CAH-XI;PLE
@@ -13672,129 +15057,6 @@ countries = {
 				ruler = random
 			}
 			capital = tbilisi
-		}
-
-		XDJ = { # Brittonic Societies; P8.7;CAH-XI
-			own_control_core = {
-				aberystwyth
-				abingdon
-				anglesey
-				aylesbury
-				banbury
-				barking
-				bedford
-				birmingham
-				boston
-				bosworth
-				brecknock
-				buckingham
-				builth
-				bury
-				caerphilly
-				cambridge
-				canterbury
-				cardiff
-				cardigan
-				carmarthen
-				chelmsford
-				chesterfield
-				chichester
-				conwy
-				coventry
-				daventry
-				denbigh
-				derby
-				dover
-				dunstable
-				ely
-				ewyas
-				fakenham
-				fishguard
-				flint
-				glossop
-				grantham
-				grimsby
-				guildford
-				harlech
-				harrow
-				hastings
-				hedingham
-				henley
-				hereford
-				hertford
-				huntingdon
-				hythe
-				ipswich
-				kettering
-				kidderminster
-				kidwelly
-				kingston
-				lavenham
-				leicester
-				lewes
-				lincoln
-				llangollen
-				london
-				loughborough
-				louth
-				lowestoft
-				ludlow
-				lymington
-				lynn
-				machynlleth
-				montgomery
-				neath
-				newark
-				newport
-				northampton
-				nottingham
-				oswestry
-				oxford
-				pembroke
-				penllyn
-				portsmouth
-				prittlewell
-				radnor
-				reading
-				reigate
-				retford
-				rochester
-				royston
-				rutland
-				shoreham
-				shrewsbury
-				southampton
-				spalding
-				stafford
-				stoke
-				stratford
-				swansea
-				tamworth
-				thetford
-				tonbridge
-				walden
-				wight
-				wigmore
-				winchester
-				windsor
-				woking
-				worcester
-				wycombe
-				yarmouth
-			}
-
-			country_rank = rank_county
-			starting_technology_level = 1
-			discovered_regions = {
-				great_britain_region
-				ireland_region
-			}
-			government = {
-				type = tribe
-				heir_selection = tribal_oldest_male
-				ruler = random
-			}
-			capital = london
 		}
 
 		XDK = { # Germanic Societies; P8.7;CAH-XI

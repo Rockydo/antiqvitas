@@ -194,6 +194,16 @@ and focused runtime probe all pass.
     frame has sourced ownership and content; Arabia runtime map/content probe passes.
 
 - [ ] Rebuild Britain and Ireland at tribal and cultural resolution.
+  - [x] Replace the two island macro-polities with 35 British and 16
+    Hibernian people-polity frames. All 329 ownable island locations are
+    assigned, the largest frame has 22 locations, and every frame has a
+    distinct culture, owned capital, government package, period-inspired
+    standard, opening agenda, and eleven-client localization. A permanent
+    `s2_britain_ireland_granularity.py` gate pins the complete contract.
+  - [ ] Add the regional mechanical layer: oppidum and client-politics
+    privileges, hillfort/assembly and landholding laws, Hibernian
+    trade/raiding/ritual adaptations, differentiated regional units, and
+    productive settlement seeds at every opening capital.
   - Replace Brittonic and Caledonian macro-polities with attested or carefully
     bounded tribal frames; expand Hibernian peoples and cultures. Treat Ptolemy
     and later Roman testimony as dated evidence with explicit uncertainty.

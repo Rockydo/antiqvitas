@@ -6787,3 +6787,24 @@ reviewed 128px BC7 DDS.
   zero mod-only error lines. The hardcoded engine emits absent-HRE notices during
   country selection because ANTIQVITAS intentionally has no medieval HRE; this
   is isolated in `BLOCKERS.md` and is not a script-system failure.
+
+## 2026-07-26 - Split Britain and Ireland at people-polity resolution
+
+- Replaced the Brittonic and Caledonian macro-polities with 35 geographically
+  bounded British frames and expanded Ireland to 16 Hibernian frames. The
+  political map now follows the already detailed 51-culture island atlas rather
+  than collapsing it behind three country labels.
+- Assigned all 234 Great Britain and 95 Ireland ownable locations through
+  disjoint province and boundary-location contracts. Torshavn remains explicitly
+  uninhabited; the largest island polity has 22 locations.
+- Added distinct capitals, cultures, tribal government profiles,
+  period-inspired non-reconstructive standards, opening agendas, and complete
+  eleven-client localization for every frame. Ptolemy's second-century evidence
+  is consistently labelled later and indirect rather than presented as exact AD
+  1 state borders.
+- Added `tools/s2_britain_ireland_granularity.py` and its generated 51-frame
+  audit. The complete 95-check validation suite passes after regenerating the
+  dependent start manager, location-name layers, rank presentation, content
+  census, and regression reports.
+- Regional privileges, laws, settlement seeds, and differentiated units remain
+  the active follow-on before the Britain/Ireland parent task closes.

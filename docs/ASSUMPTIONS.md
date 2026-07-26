@@ -4617,3 +4617,17 @@ route frame rather than receiving its later kingdom. Sources: `STR-ARAB`;
 `PLN-ARAB`; `THAMUD-EPIG`; `OCD-GERRHA`; `THAJ-ARCH`; `NABATAEA-MAP`;
 `UNESCO-SABA`; `UNESCO-QATABAN`; `UNESCO-INCENSE`; `HIMYAR-HIST`; row-level
 contracts in `docs/world_1ad/SOURCES.md`. [contested political geography]
+
+## 2026-07-26 - British and Hibernian people frames are later-source proxies
+
+Ptolemy's *Geography* 2.2 and 2.1 supplies the most systematic island lists and
+relative placements, but it postdates the AD 1 start and cannot prove exact
+frontiers, capitals, or political unity at that date. Tacitus and Caesar improve
+specific southern-British context but do not fill the island map. Ireland is
+especially uncertain: the engine's required ownership is represented by small
+people-polity frames, not reconstructed kingdoms. All anonymous governments and
+most capitals are consequently `contested`; mapped capitals are geographic
+proxies for Ptolemaic towns or central places, not asserted royal seats.
+
+Sources: `PTO-GEO-II1`; `PTO-GEO-II2`; `DARCY-IRE`; `MANN-BRI`; row-level
+contracts in `docs/world_1ad/SOURCES.md`. [contested political geography]

@@ -549,7 +549,16 @@ ARM,XAO,van,own_control_core,P8.2;CAH-XI,contested,Armenian highland frame
 ARM,XAO,varto,own_control_core,P8.2;CAH-XI,contested,Armenian highland frame
 ARM,XAO,yerevan,own_control_core,P8.2;CAH-XI,contested,Armenian contested kingdom frame
 ARM,XAO,zakho,own_control_core,P8.2;CAH-XI,contested,Armenian highland frame
-ATB,XBZ,basingstoke,own_control_core,P8.7;CAH-XI;PLE,secure,Atrebatan capital proxy
+ATB,XBZ,abingdon,own_control_core,P8.7;PTO-GEO-II2,contested,Atrebatic campaign frame; installed province geometry is not an exact ancient frontier
+ATB,XBZ,basingstoke,own_control_core,P8.7;PTO-GEO-II2;CAH-XI;PLE,contested,Atrebatic campaign frame; installed province geometry is not an exact ancient frontier
+ATB,XBZ,henley,own_control_core,P8.7;PTO-GEO-II2,contested,Atrebatic boundary exception inside the installed Oxfordshire geometry
+ATB,XBZ,lymington,own_control_core,P8.7;PTO-GEO-II2,contested,Atrebatic campaign frame; installed province geometry is not an exact ancient frontier
+ATB,XBZ,portsmouth,own_control_core,P8.7;PTO-GEO-II2,contested,Atrebatic campaign frame; installed province geometry is not an exact ancient frontier
+ATB,XBZ,reading,own_control_core,P8.7;PTO-GEO-II2,contested,Atrebatic campaign frame; installed province geometry is not an exact ancient frontier
+ATB,XBZ,southampton,own_control_core,P8.7;PTO-GEO-II2,contested,Atrebatic campaign frame; installed province geometry is not an exact ancient frontier
+ATB,XBZ,wight,own_control_core,P8.7;PTO-GEO-II2,contested,Atrebatic campaign frame; installed province geometry is not an exact ancient frontier
+ATB,XBZ,winchester,own_control_core,P8.7;PTO-GEO-II2,contested,Atrebatic campaign frame; installed province geometry is not an exact ancient frontier
+ATB,XBZ,windsor,own_control_core,P8.7;PTO-GEO-II2,contested,Atrebatic campaign frame; installed province geometry is not an exact ancient frontier
 ATR,XAK,aghkand,own_control_core,P8.2;CAH-XI,contested,Media Atropatene frame
 ATR,XAK,ahar,own_control_core,P8.2;CAH-XI,contested,Media Atropatene frame
 ATR,XAK,ardabil,own_control_core,P8.2;CAH-XI,contested,Media Atropatene frame
@@ -589,6 +598,11 @@ ATR,XAK,takht_e_soleyman,own_control_core,P8.2;CAH-XI,contested,Media Atropatene
 ATR,XAK,tufarqan,own_control_core,P8.2;CAH-XI,contested,Media Atropatene frame
 ATR,XAK,ujan,own_control_core,P8.2;CAH-XI,contested,Media Atropatene frame
 ATR,XAK,urmia,own_control_core,P8.2;CAH-XI,contested,Media Atropatene frame
+AUT,AUT,athenry,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Autinian relative-order proxy; no modern county boundary is asserted
+AUT,AUT,clifden,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Autinian relative-order proxy; no modern county boundary is asserted
+AUT,AUT,galway,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Autinian relative-order proxy; no modern county boundary is asserted
+AUT,AUT,kilconnell,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Autinian relative-order proxy; no modern county boundary is asserted
+AUT,AUT,tuam,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Autinian relative-order proxy; no modern county boundary is asserted
 AVN,AVN,hammershus,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Aviones campaign proxy
 AVN,AVN,helsingor,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Aviones campaign proxy
 AVN,AVN,kalundborg,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Aviones campaign proxy
@@ -915,6 +929,12 @@ BLF,BLF,vognema,own_control_core,P8.7;CAH-XI,contested,Beloe lake forest-communi
 BLF,BLF,vologda,own_control_core,P8.7;CAH-XI,contested,Beloe lake forest-community campaign frame
 BLF,BLF,vozhega,own_control_core,P8.7;CAH-XI,contested,Beloe lake forest-community campaign frame
 BLF,BLF,yorga,own_control_core,P8.7;CAH-XI,contested,Beloe lake forest-community campaign frame
+BLG,XET,amesbury,own_control_core,P8.7;PTO-GEO-II2,contested,British Belgic campaign frame toward Venta Belgarum
+BLG,XET,chippenham,own_control_core,P8.7;PTO-GEO-II2,contested,British Belgic campaign frame toward Venta Belgarum
+BLG,XET,portishead,own_control_core,P8.7;PTO-GEO-II2,contested,British Belgic remainder of the disjoint installed Somerset campaign frame
+BLG,XET,salisbury,own_control_core,P8.7;PTO-GEO-II2,contested,British Belgic campaign frame toward Venta Belgarum
+BLG,XET,trowbridge,own_control_core,P8.7;PTO-GEO-II2,contested,British Belgic campaign frame toward Venta Belgarum
+BLG,XET,wells,own_control_core,P8.7;PTO-GEO-II2,contested,British Belgic remainder of the disjoint installed Somerset campaign frame
 BLM,XBG,abu_hamed,own_control_core,P8.5;CAH-XI,contested,Blemmyan Lower Nubian SoP frame
 BLM,XBG,al_jeblien,own_control_core,P8.5;CAH-XI,contested,Blemmyan Lower Nubian SoP frame
 BLM,XBG,aydhab,own_control_core,P8.5;CAH-XI,contested,Blemmyan Lower Nubian SoP frame
@@ -1267,148 +1287,33 @@ BRG,XBP,drawsko,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Burgundion-L
 BRG,XBP,gryfow,own_control_core,P8.7;TAC-GER;OCD-GER;PLE;CAH-XI,contested,Burgundion-Lemovian campaign proxy
 BRG,XBP,pyrzyce,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Burgundion-Lemovian campaign proxy
 BRG,XBP,szadzko,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Burgundion-Lemovian campaign proxy
-BRI,XBY,alnwick,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,appleby,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,bedale,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,billingham,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,blackburn,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,bridlington,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,carlisle,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,chester,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,cockermouth,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,darlington,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,doncaster,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,durham,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,egremont,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,hexham,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,hull,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,kendal,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,lancaster,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,leeds,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,liverpool,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,macclesfield,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,manchester,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,morpeth,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,nantwich,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,newcastle,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,norton,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,penrith,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,pontefract,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,preston,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,richmond,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,ripon,own_control_core,P8.7;CAH-XI;PLE,contested,Brigantian northern British frame
-BRI,XBY,scarborough,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,selby,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,skipton,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,stockton,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,wakefield,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,whitby,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRI,XBY,york,own_control_core,P8.7;CAH-XI,contested,Brigantian northern British frame
-BRT,XDJ,aberystwyth,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,abingdon,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,anglesey,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,aylesbury,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,banbury,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,barking,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,bedford,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,birmingham,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,boston,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,bosworth,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,brecknock,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,buckingham,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,builth,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,bury,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,caerphilly,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,cambridge,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,canterbury,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,cardiff,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,cardigan,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,carmarthen,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,chelmsford,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,chesterfield,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,chichester,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,conwy,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,coventry,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,daventry,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,denbigh,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,derby,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,dover,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,dunstable,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,ely,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,ewyas,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,fakenham,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,fishguard,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,flint,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,glossop,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,grantham,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,grimsby,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,guildford,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,harlech,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,harrow,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,hastings,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,hedingham,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,henley,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,hereford,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,hertford,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,huntingdon,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,hythe,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,ipswich,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,kettering,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,kidderminster,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,kidwelly,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,kingston,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,lavenham,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,leicester,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,lewes,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,lincoln,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,llangollen,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,london,own_control_core,P8.7;CAH-XI,contested,Brittonic SoP geographic anchor
-BRT,XDJ,loughborough,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,louth,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,lowestoft,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,ludlow,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,lymington,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,lynn,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,machynlleth,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,montgomery,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,neath,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,newark,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,newport,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,northampton,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,nottingham,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,oswestry,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,oxford,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,pembroke,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,penllyn,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,portsmouth,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,prittlewell,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,radnor,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,reading,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,reigate,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,retford,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,rochester,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,royston,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,rutland,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,shoreham,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,shrewsbury,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,southampton,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,spalding,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,stafford,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,stoke,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,stratford,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,swansea,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,tamworth,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,thetford,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,tonbridge,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,walden,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,wight,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,wigmore,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,winchester,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,windsor,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,woking,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,worcester,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,wycombe,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
-BRT,XDJ,yarmouth,own_control_core,P8.7;CAH-XI,contested,Residual Brittonic SoP frame after named British polities
+BRI,XBY,bedale,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame around Isurium and Eboracum
+BRI,XBY,blackburn,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame; installed province geometry is not an exact ancient frontier
+BRI,XBY,chesterfield,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame; southern reach is an explicitly contested proxy
+BRI,XBY,darlington,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame; installed province geometry is not an exact ancient frontier
+BRI,XBY,derby,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame; southern reach is an explicitly contested proxy
+BRI,XBY,doncaster,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame; installed province geometry is not an exact ancient frontier
+BRI,XBY,durham,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame; installed province geometry is not an exact ancient frontier
+BRI,XBY,glossop,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame; southern reach is an explicitly contested proxy
+BRI,XBY,lancaster,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame; installed province geometry is not an exact ancient frontier
+BRI,XBY,leeds,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame; installed province geometry is not an exact ancient frontier
+BRI,XBY,liverpool,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame; installed province geometry is not an exact ancient frontier
+BRI,XBY,manchester,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame; installed province geometry is not an exact ancient frontier
+BRI,XBY,pontefract,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame; installed province geometry is not an exact ancient frontier
+BRI,XBY,preston,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame; installed province geometry is not an exact ancient frontier
+BRI,XBY,richmond,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame around Isurium and Eboracum
+BRI,XBY,ripon,own_control_core,P8.7;PTO-GEO-II2;CAH-XI;PLE,contested,Brigantian campaign frame; installed province geometry is not an exact ancient frontier
+BRI,XBY,scarborough,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame around Isurium and Eboracum
+BRI,XBY,skipton,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame; installed province geometry is not an exact ancient frontier
+BRI,XBY,stockton,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame; installed province geometry is not an exact ancient frontier
+BRI,XBY,wakefield,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame; installed province geometry is not an exact ancient frontier
+BRI,XBY,whitby,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame around Isurium and Eboracum
+BRI,XBY,york,own_control_core,P8.7;PTO-GEO-II2,contested,Brigantian campaign frame around Isurium and Eboracum
+BRT,XDJ,canterbury,own_control_core,P8.7;PTO-GEO-II2,contested,Cantiacian campaign frame; installed province geometry is not an exact ancient frontier
+BRT,XDJ,dover,own_control_core,P8.7;PTO-GEO-II2,contested,Cantiacian campaign frame; installed province geometry is not an exact ancient frontier
+BRT,XDJ,hythe,own_control_core,P8.7;PTO-GEO-II2,contested,Cantiacian campaign frame; installed province geometry is not an exact ancient frontier
+BRT,XDJ,rochester,own_control_core,P8.7;PTO-GEO-II2,contested,Cantiacian campaign frame; installed province geometry is not an exact ancient frontier
+BRT,XDJ,tonbridge,own_control_core,P8.7;PTO-GEO-II2,contested,Cantiacian campaign frame; installed province geometry is not an exact ancient frontier
 BSK,XCZ,moanunts,own_control_core,P8.10;CAH-XI,secure,Four Corners anchor
 BTV,BTV,alkmaar,own_control_core,P8.7;CAH-XI,contested,Batavian lower Rhine frame
 BTV,BTV,amersfoort,own_control_core,P8.7;CAH-XI,contested,Batavian lower Rhine frame
@@ -1504,69 +1409,16 @@ BYE,BYE,seosan,own_control_core,P8.3;SAM,contested,Byeonhan and southern Korean 
 BYE,BYE,uian,own_control_core,P8.3;SAM,contested,Byeonhan confederacy anchor
 BYE,BYE,yeongdong,own_control_core,P8.3;SAM,contested,Byeonhan and southern Korean SoP frame
 BYE,BYE,yeonsan,own_control_core,P8.3;SAM,contested,Byeonhan and southern Korean SoP frame
-CAL,CAL,aberdeen,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,aberfeldy,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,arbroath,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,ardtornish,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Highland frame
-CAL,CAL,arran,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP island frame
-CAL,CAL,ayr,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,badenoch,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Highland frame
-CAL,CAL,banff,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,berwick,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,buchan,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,clackmannan,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,cowal,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Highland frame
-CAL,CAL,cupar,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,dingwall,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Highland frame
-CAL,CAL,dornoch,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Highland frame
-CAL,CAL,dumbarton,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,dumfries,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,dunbar,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,dundee,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,dunfermline,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,duns,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,durness,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Highland frame
-CAL,CAL,edinburgh,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,elgin,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Highland frame
-CAL,CAL,forfar,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,gairloch,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Highland frame
-CAL,CAL,glasgow,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,harris,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP island frame
-CAL,CAL,inverary,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Highland frame
-CAL,CAL,inverness,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Highland frame
-CAL,CAL,inverurie,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,irvine,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,islay,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP island frame
-CAL,CAL,kenmure,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,kintyre,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Highland frame
-CAL,CAL,kirkcudbright,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,lanark,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,lewis,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP island frame
-CAL,CAL,linlithgow,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,lochaber,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Highland frame
-CAL,CAL,mann,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP island frame
-CAL,CAL,mar,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,mull,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP island frame
-CAL,CAL,oban,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Highland frame
-CAL,CAL,orkney,own_control_core,P8.7;CAH-XI,contested,Caledonian northern-isles SoP frame
-CAL,CAL,paisley,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,perth,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,roxburgh,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,scone,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,selkirk,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,shetland,own_control_core,P8.7;CAH-XI,contested,Caledonian northern-isles SoP frame
-CAL,CAL,skye,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP island frame
-CAL,CAL,st_andrews,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,stirling,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,stonehaven,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,stranraer,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,strathearn,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Lowland frame
-CAL,CAL,thurso,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Highland frame
-CAL,CAL,tongue,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Highland frame
-CAL,CAL,torshavn,own_control_core,P8.7;CAH-XI,contested,Caledonian northern-isles SoP frame
-CAL,CAL,uist,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP island frame
-CAL,CAL,ullapool,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Highland frame
-CAL,CAL,urquhart,own_control_core,P8.7;CAH-XI,contested,Caledonian SoP Highland frame
+CAE,XFC,durness,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Northwestern campaign anchor for the Caereni frame
+CAL,CAL,aberfeldy,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Caledonian forest-core proxy; Ptolemy does not establish an AD 1 unitary state
+CAL,CAL,clackmannan,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Caledonian forest-core proxy; Ptolemy does not establish an AD 1 unitary state
+CAL,CAL,harris,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Unresolved Caledonian remainder of the disjoint outer-island campaign frame
+CAL,CAL,inverness,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Caledoni campaign anchor inside the disputed Moray geometry
+CAL,CAL,lewis,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Unresolved Caledonian remainder of the disjoint outer-island campaign frame
+CAL,CAL,perth,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Caledonian forest-core proxy; Ptolemy does not establish an AD 1 unitary state
+CAL,CAL,scone,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Caledonian forest-core proxy; Ptolemy does not establish an AD 1 unitary state
+CAL,CAL,strathearn,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Caledonian forest-core proxy; Ptolemy does not establish an AD 1 unitary state
+CAL,CAL,uist,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Unresolved Caledonian remainder of the disjoint outer-island campaign frame
 CAP,CAP,akdagmadeni,own_control_core,P8.1;CAH-XI,contested,Cappadocian Roman-client northern frame
 CAP,CAP,amasya,own_control_core,P8.1;CAH-XI,contested,Cappadocian Roman-client northern frame
 CAP,CAP,arapgir,own_control_core,P8.1;CAH-XI,contested,Cappadocian Roman-client eastern frame
@@ -1610,7 +1462,18 @@ CAP,CAP,yahyali,own_control_core,P8.1;CAH-XI,contested,Cappadocian Roman-client 
 CAP,CAP,zara,own_control_core,P8.1;CAH-XI,contested,Cappadocian Roman-client eastern frame
 CAP,CAP,zile,own_control_core,P8.1;CAH-XI,contested,Cappadocian Roman-client northern frame
 CAR,XDD,carucairi,own_control_core,P8.10;CAH-XI,secure,Lesser Antilles anchor
-CAT,XBV,st_albans,own_control_core,P8.7;CAH-XI,secure,Verlamion proxy
+CAT,XBV,aylesbury,own_control_core,P8.7;PTO-GEO-II2,contested,Catuvellaunian campaign frame; installed province geometry is not an exact ancient frontier
+CAT,XBV,bedford,own_control_core,P8.7;PTO-GEO-II2,contested,Catuvellaunian campaign frame; installed province geometry is not an exact ancient frontier
+CAT,XBV,buckingham,own_control_core,P8.7;PTO-GEO-II2,contested,Catuvellaunian campaign frame; installed province geometry is not an exact ancient frontier
+CAT,XBV,daventry,own_control_core,P8.7;PTO-GEO-II2,contested,Catuvellaunian remainder of the disjoint installed Northamptonshire campaign frame
+CAT,XBV,dunstable,own_control_core,P8.7;PTO-GEO-II2,contested,Catuvellaunian campaign frame; installed province geometry is not an exact ancient frontier
+CAT,XBV,harrow,own_control_core,P8.7;PTO-GEO-II2,contested,Catuvellaunian campaign frame; Londinium is not projected backward as an AD 1 Roman city
+CAT,XBV,hertford,own_control_core,P8.7;PTO-GEO-II2,contested,Catuvellaunian campaign frame; installed province geometry is not an exact ancient frontier
+CAT,XBV,kingston,own_control_core,P8.7;PTO-GEO-II2,contested,Catuvellaunian campaign frame; Londinium is not projected backward as an AD 1 Roman city
+CAT,XBV,london,own_control_core,P8.7;PTO-GEO-II2,contested,Catuvellaunian campaign frame; Londinium is not projected backward as an AD 1 Roman city
+CAT,XBV,northampton,own_control_core,P8.7;PTO-GEO-II2,contested,Catuvellaunian remainder of the disjoint installed Northamptonshire campaign frame
+CAT,XBV,st_albans,own_control_core,P8.7;PTO-GEO-II2;CAH-XI,contested,Catuvellaunian campaign frame; installed province geometry is not an exact ancient frontier
+CAT,XBV,wycombe,own_control_core,P8.7;PTO-GEO-II2,contested,Catuvellaunian campaign frame; installed province geometry is not an exact ancient frontier
 CAU,XDI,akhalkalaki,own_control_core,P8.2;CAH-XI,contested,Residual Caucasian highland SoP frame
 CAU,XDI,akhaltsikhe,own_control_core,P8.2;CAH-XI,contested,Residual Caucasian highland SoP frame
 CAU,XDI,alaverdi,own_control_core,P8.2;CAH-XI,contested,Residual Caucasian highland SoP frame
@@ -1658,6 +1521,10 @@ CAU,XDI,tsalenjikha,own_control_core,P8.2;CAH-XI,contested,Residual Caucasian hi
 CAU,XDI,tsesi,own_control_core,P8.2;CAH-XI,contested,Residual Caucasian highland SoP frame
 CAU,XDI,ushguli,own_control_core,P8.2;CAH-XI,contested,Residual Caucasian highland SoP frame
 CAU,XDI,vartsikhe,own_control_core,P8.2;CAH-XI,contested,Residual Caucasian highland SoP frame
+CCI,CCI,dublin,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Caucian relative-order proxy; Eblana is not placed in the Caucian frame
+CCI,CCI,fingal,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Caucian relative-order proxy; Eblana is not placed in the Caucian frame
+CCI,CCI,glendalough,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Caucian relative-order proxy; Eblana is not placed in the Caucian frame
+CCI,CCI,wicklow,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Caucian relative-order proxy; Eblana is not placed in the Caucian frame
 CHA,XAI,muhammerah,own_control_core,P8.2;OCD;PLE,contested,Charax Spasinu proxy at the head of the Gulf
 CHC,XDT,achim,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Chauci campaign proxy
 CHC,XDT,celle,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Chauci campaign proxy
@@ -1924,6 +1791,18 @@ CMB,CMB,randers,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Cimb
 CMB,CMB,skagen,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Cimbri campaign proxy
 CMB,CMB,thisted,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Cimbri campaign proxy
 CMB,CMB,viborg,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Cimbri campaign proxy
+CNA,XFD,ullapool,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Northwestern campaign proxy for the Carnonacae frame
+CND,XFH,cullahill,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Coriondian remainder of the installed two-location Kilkenny campaign frame
+CND,XFH,kilkenny,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Coriondian relative-order proxy on the installed two-location province
+CNV,XEW,chester,own_control_core,P8.7;PTO-GEO-II2,contested,Midland Cornovian campaign frame around Deva; the later Roman town is not backdated
+CNV,XEW,ludlow,own_control_core,P8.7;PTO-GEO-II2,contested,Midland Cornovian campaign frame; installed province geometry is not an exact ancient frontier
+CNV,XEW,macclesfield,own_control_core,P8.7;PTO-GEO-II2,contested,Midland Cornovian campaign frame around Deva; the later Roman town is not backdated
+CNV,XEW,nantwich,own_control_core,P8.7;PTO-GEO-II2,contested,Midland Cornovian campaign frame around Deva; the later Roman town is not backdated
+CNV,XEW,oswestry,own_control_core,P8.7;PTO-GEO-II2,contested,Midland Cornovian campaign frame; installed province geometry is not an exact ancient frontier
+CNV,XEW,shrewsbury,own_control_core,P8.7;PTO-GEO-II2,contested,Midland Cornovian campaign frame; installed province geometry is not an exact ancient frontier
+CNV,XEW,stafford,own_control_core,P8.7;PTO-GEO-II2,contested,Midland Cornovian campaign frame; installed province geometry is not an exact ancient frontier
+CNV,XEW,stoke,own_control_core,P8.7;PTO-GEO-II2,contested,Midland Cornovian campaign frame; installed province geometry is not an exact ancient frontier
+CNV,XEW,tamworth,own_control_core,P8.7;PTO-GEO-II2,contested,Midland Cornovian campaign frame; installed province geometry is not an exact ancient frontier
 COM,XAE,adana,own_control_core,P8.1;CAH-XI,contested,Commagene and minor Cilician client frame
 COM,XAE,afsin,own_control_core,P8.1;CAH-XI,contested,Commagene and minor Cilician client frame
 COM,XAE,anamur,own_control_core,P8.1;CAH-XI,contested,Commagene and minor Cilician client frame
@@ -1961,11 +1840,26 @@ COM,XAE,silifke,own_control_core,P8.1;CAH-XI,contested,Commagene and minor Cilic
 COM,XAE,sis,own_control_core,P8.1;CAH-XI,contested,Commagene and minor Cilician client frame
 COM,XAE,tarsus,own_control_core,P8.1;CAH-XI,contested,Commagene and minor Cilician client frame
 COM,XAE,ulnia,own_control_core,P8.1;CAH-XI,contested,Commagene and minor Cilician client frame
+COR,XEV,boston,own_control_core,P8.7;PTO-GEO-II2,contested,Corieltauvian campaign frame; installed province geometry is not an exact ancient frontier
+COR,XEV,bosworth,own_control_core,P8.7;PTO-GEO-II2,contested,Corieltauvian campaign frame; installed province geometry is not an exact ancient frontier
+COR,XEV,grantham,own_control_core,P8.7;PTO-GEO-II2,contested,Corieltauvian campaign frame; installed province geometry is not an exact ancient frontier
+COR,XEV,grimsby,own_control_core,P8.7;PTO-GEO-II2,contested,Corieltauvian campaign frame; installed province geometry is not an exact ancient frontier
+COR,XEV,kettering,own_control_core,P8.7;PTO-GEO-II2,contested,Corieltauvian boundary exception inside the installed Northamptonshire geometry
+COR,XEV,leicester,own_control_core,P8.7;PTO-GEO-II2,contested,Corieltauvian campaign frame; installed province geometry is not an exact ancient frontier
+COR,XEV,lincoln,own_control_core,P8.7;PTO-GEO-II2,contested,Corieltauvian campaign frame; installed province geometry is not an exact ancient frontier
+COR,XEV,loughborough,own_control_core,P8.7;PTO-GEO-II2,contested,Corieltauvian campaign frame; installed province geometry is not an exact ancient frontier
+COR,XEV,louth,own_control_core,P8.7;PTO-GEO-II2,contested,Corieltauvian campaign frame; installed province geometry is not an exact ancient frontier
+COR,XEV,newark,own_control_core,P8.7;PTO-GEO-II2,contested,Corieltauvian campaign frame; installed province geometry is not an exact ancient frontier
+COR,XEV,nottingham,own_control_core,P8.7;PTO-GEO-II2,contested,Corieltauvian campaign frame; installed province geometry is not an exact ancient frontier
+COR,XEV,retford,own_control_core,P8.7;PTO-GEO-II2,contested,Corieltauvian campaign frame; installed province geometry is not an exact ancient frontier
+COR,XEV,rutland,own_control_core,P8.7;PTO-GEO-II2,contested,Corieltauvian campaign frame; installed province geometry is not an exact ancient frontier
+COR,XEV,spalding,own_control_core,P8.7;PTO-GEO-II2,contested,Corieltauvian campaign frame; installed province geometry is not an exact ancient frontier
 CPS,CPS,eutin,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Campsiani campaign proxy
 CPS,CPS,heiligenhafen,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Campsiani campaign proxy
 CPS,CPS,lauenburg,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Campsiani campaign proxy
 CPS,CPS,lubeck,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Campsiani campaign proxy
 CPS,CPS,ratzeburg,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Campsiani campaign proxy
+CRE,CRE,skye,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Western campaign proxy for the Creones frame
 CRU,CRU,bielefeld,own_control_core,P8.7;CAH-XI;OCD-CHER,contested,Cheruscan campaign proxy
 CRU,CRU,buren,own_control_core,P8.7;CAH-XI;OCD-CHER,contested,Cheruscan campaign proxy
 CRU,CRU,detmold,own_control_core,P8.7;CAH-XI;OCD-CHER,contested,Cheruscan campaign proxy
@@ -1987,6 +1881,12 @@ CRU,CRU,rietberg,own_control_core,P8.7;CAH-XI;OCD-CHER,contested,Cheruscan campa
 CRU,CRU,soest,own_control_core,P8.7;CAH-XI;OCD-CHER,contested,Cheruscan campaign proxy
 CRU,CRU,vechta,own_control_core,P8.7;CAH-XI;OCD-CHER,contested,Cheruscan campaign proxy
 CRU,CRU,warburg,own_control_core,P8.7;CAH-XI;OCD-CHER,contested,Cheruscan campaign proxy
+CRV,CRV,appleby,own_control_core,P8.7;PTO-GEO-II2,contested,Carvetian campaign frame; the people-name is epigraphic and the geography is a later proxy
+CRV,CRV,carlisle,own_control_core,P8.7;PTO-GEO-II2,contested,Carvetian campaign frame; the people-name is epigraphic and the geography is a later proxy
+CRV,CRV,cockermouth,own_control_core,P8.7;PTO-GEO-II2,contested,Carvetian campaign frame; the people-name is epigraphic and the geography is a later proxy
+CRV,CRV,egremont,own_control_core,P8.7;PTO-GEO-II2,contested,Carvetian campaign frame; the people-name is epigraphic and the geography is a later proxy
+CRV,CRV,kendal,own_control_core,P8.7;PTO-GEO-II2,contested,Carvetian campaign frame; the people-name is epigraphic and the geography is a later proxy
+CRV,CRV,penrith,own_control_core,P8.7;PTO-GEO-II2,contested,Carvetian campaign frame; the people-name is epigraphic and the geography is a later proxy
 CTU,CTU,ahrweiler,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Lower-Rhine community proxy
 CTU,CTU,birkenfeld,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Lower-Rhine community proxy
 CTU,CTU,bitburg,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Lower-Rhine community proxy
@@ -2077,7 +1977,25 @@ DAC,DAC,vasvar,own_control_core,P8.7;CAH-XI,contested,Residual Dacian and Carpat
 DAC,DAC,veszprem,own_control_core,P8.7;CAH-XI,contested,Residual Dacian and Carpathian frame after named groups
 DAC,DAC,zalaegerszeg,own_control_core,P8.7;CAH-XI,contested,Residual Dacian and Carpathian frame after named groups
 DAC,DAC,zalavar,own_control_core,P8.7;CAH-XI,contested,Residual Dacian and Carpathian frame after named groups
+DAM,XFA,dumbarton,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Damnonian campaign frame around the Clyde
+DAM,XFA,glasgow,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Damnonian campaign frame around the Clyde
+DAM,XFA,lanark,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Damnonian campaign frame around the Clyde
+DAM,XFA,paisley,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Damnonian campaign frame around the Clyde
+DAR,DAR,ballycastle,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Darinian relative-order proxy; no modern county boundary is asserted
+DAR,DAR,ballymena,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Darinian relative-order proxy; no modern county boundary is asserted
+DAR,DAR,belfast,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Darinian relative-order proxy; no modern county boundary is asserted
+DAR,DAR,carrickfergus,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Darinian relative-order proxy; no modern county boundary is asserted
+DAR,DAR,dunluce,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Darinian relative-order proxy; no modern county boundary is asserted
 DAY,DAY,fergana,own_control_core,P8.8;CHG,secure,Dayuan capital control
+DCT,DCT,dingwall,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Varar-region proxy for the Decantae frame
+DCT,DCT,gairloch,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Decantian remainder of the disjoint installed Ross campaign frame
+DEC,XEY,denbigh,own_control_core,P8.7;PTO-GEO-II2,contested,Canovium-region proxy for the Deceangli frame
+DEM,XEX,aberystwyth,own_control_core,P8.7;PTO-GEO-II2,contested,Demetian campaign frame around Maridunum
+DEM,XEX,cardigan,own_control_core,P8.7;PTO-GEO-II2,contested,Demetian campaign frame around Maridunum
+DEM,XEX,carmarthen,own_control_core,P8.7;PTO-GEO-II2,contested,Demetian campaign frame around Maridunum
+DEM,XEX,fishguard,own_control_core,P8.7;PTO-GEO-II2,contested,Demetian campaign frame around Maridunum
+DEM,XEX,kidwelly,own_control_core,P8.7;PTO-GEO-II2,contested,Demetian campaign frame around Maridunum
+DEM,XEX,pembroke,own_control_core,P8.7;PTO-GEO-II2,contested,Demetian campaign frame around Maridunum
 DJN,DJN,djenne,own_control_core,P8.5;CAH-XI,contested,Djenne-Djenno capital control
 DNG,XCJ,aga,own_control_core,P8.8;CAH-XI,contested,Dingling Upper Yenisei frame
 DNG,XCJ,baldan_bereeven,own_control_core,P8.8;CAH-XI,contested,Dingling Upper Yenisei frame
@@ -2216,6 +2134,21 @@ DNP,DNP,zhytomyr,own_control_core,RAS-ZAR;P8.7;CAH-XI,contested,Middle Dnieper c
 DNP,DNP,znobov,own_control_core,RAS-ZAR;P8.7;CAH-XI,contested,Middle Dnieper community campaign frame
 DNP,DNP,zolotonosha,own_control_core,RAS-ZAR;P8.7;CAH-XI,contested,Middle Dnieper community campaign frame
 DNP,DNP,zvenyhorodka,own_control_core,RAS-ZAR;P8.7;CAH-XI,contested,Middle Dnieper community campaign frame
+DOB,DOB,banbury,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic remainder of the disjoint installed Oxfordshire campaign frame
+DOB,DOB,bath,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic boundary exception inside the installed Somerset geometry
+DOB,DOB,birmingham,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic campaign frame; installed province geometry is not an exact ancient frontier
+DOB,DOB,bristol,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic campaign frame around Corinium
+DOB,DOB,cheltenham,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic campaign frame around Corinium
+DOB,DOB,cirencester,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic campaign frame around Corinium
+DOB,DOB,coventry,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic campaign frame; installed province geometry is not an exact ancient frontier
+DOB,DOB,ewyas,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic campaign frame; installed province geometry is not an exact ancient frontier
+DOB,DOB,gloucester,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic campaign frame around Corinium
+DOB,DOB,hereford,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic campaign frame; installed province geometry is not an exact ancient frontier
+DOB,DOB,kidderminster,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic campaign frame; installed province geometry is not an exact ancient frontier
+DOB,DOB,oxford,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic remainder of the disjoint installed Oxfordshire campaign frame
+DOB,DOB,stratford,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic campaign frame; installed province geometry is not an exact ancient frontier
+DOB,DOB,wigmore,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic campaign frame; installed province geometry is not an exact ancient frontier
+DOB,DOB,worcester,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic campaign frame; installed province geometry is not an exact ancient frontier
 DOR,DOR,altafjord,own_control_core,P8.10;CAH-XI,contested,Dorset Arctic SoP Greenland frame
 DOR,DOR,brattahlid,own_control_core,P8.10;CAH-XI,contested,Dorset Arctic SoP Greenland frame
 DOR,DOR,dyrnes,own_control_core,P8.10;CAH-XI,contested,Dorset Arctic SoP Greenland frame
@@ -2229,32 +2162,34 @@ DOR,DOR,lundey,own_control_core,P8.10;CAH-XI,contested,Dorset Arctic SoP Greenla
 DOR,DOR,petursvik,own_control_core,P8.10;CAH-XI,contested,Dorset Arctic SoP Greenland frame
 DOR,DOR,siglufjord,own_control_core,P8.10;CAH-XI,contested,Dorset Arctic SoP Greenland frame
 DOR,DOR,vatnahverfi,own_control_core,P8.10;CAH-XI,contested,Dorset Arctic SoP Greenland frame
-DUM,DUM,amesbury,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,bampton,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,barnstaple,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,bath,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,bideford,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,bodmin,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,bristol,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,cheltenham,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,chippenham,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,cirencester,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,dorchester,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,exeter,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,gloucester,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,launceston,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,minehead,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,okehampton,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,plymouth,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,poole,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,portishead,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,salisbury,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,shaftesbury,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,taunton,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,trowbridge,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,truro,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,wells,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
-DUM,DUM,weymouth,own_control_core,P8.7;CAH-XI,contested,Dumnonian southwestern British frame
+DUM,DUM,bampton,own_control_core,P8.7;PTO-GEO-II2,contested,Dumnonian campaign frame around Isca
+DUM,DUM,barnstaple,own_control_core,P8.7;PTO-GEO-II2,contested,Dumnonian campaign frame around Isca
+DUM,DUM,bideford,own_control_core,P8.7;PTO-GEO-II2,contested,Dumnonian campaign frame around Isca
+DUM,DUM,bodmin,own_control_core,P8.7;PTO-GEO-II2,contested,Dumnonian campaign frame around the Ocrium and Tamar approaches
+DUM,DUM,exeter,own_control_core,P8.7;PTO-GEO-II2;CAH-XI,contested,Dumnonian campaign frame around Isca
+DUM,DUM,launceston,own_control_core,P8.7;PTO-GEO-II2,contested,Dumnonian campaign frame around the Ocrium and Tamar approaches
+DUM,DUM,minehead,own_control_core,P8.7;PTO-GEO-II2,contested,Dumnonian boundary exception inside the installed Somerset geometry
+DUM,DUM,okehampton,own_control_core,P8.7;PTO-GEO-II2,contested,Dumnonian campaign frame around Isca
+DUM,DUM,plymouth,own_control_core,P8.7;PTO-GEO-II2,contested,Dumnonian campaign frame around Isca
+DUM,DUM,taunton,own_control_core,P8.7;PTO-GEO-II2,contested,Dumnonian boundary exception inside the installed Somerset geometry
+DUM,DUM,truro,own_control_core,P8.7;PTO-GEO-II2,contested,Dumnonian campaign frame around the Ocrium and Tamar approaches
+DUR,XEU,dorchester,own_control_core,P8.7;PTO-GEO-II2,contested,Durotrigian campaign frame around Dunium
+DUR,XEU,poole,own_control_core,P8.7;PTO-GEO-II2,contested,Durotrigian campaign frame around Dunium
+DUR,XEU,shaftesbury,own_control_core,P8.7;PTO-GEO-II2,contested,Durotrigian campaign frame around Dunium
+DUR,XEU,weymouth,own_control_core,P8.7;PTO-GEO-II2,contested,Durotrigian campaign frame around Dunium
+EBL,EBL,ardagh,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Eblanian relative-order proxy; no modern county boundary is asserted
+EBL,EBL,athy,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Eblanian relative-order proxy; no modern county boundary is asserted
+EBL,EBL,ballymore,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Eblanian relative-order proxy; no modern county boundary is asserted
+EBL,EBL,daingean,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Eblanian relative-order proxy; no modern county boundary is asserted
+EBL,EBL,dunamase,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Eblanian relative-order proxy; no modern county boundary is asserted
+EBL,EBL,kells,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Eblanian relative-order proxy; no modern county boundary is asserted
+EBL,EBL,kildare,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Eblanian relative-order proxy; no modern county boundary is asserted
+EBL,EBL,longford,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Eblanian relative-order proxy; no modern county boundary is asserted
+EBL,EBL,mullingar,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Eblanian relative-order proxy; no modern county boundary is asserted
+EBL,EBL,naas,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Eblanian relative-order proxy; no modern county boundary is asserted
+EBL,EBL,navan,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Eblanian relative-order proxy; no modern county boundary is asserted
+EBL,EBL,trim,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Eblanian relative-order proxy; no modern county boundary is asserted
+EBL,EBL,tullamore,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Eblanian relative-order proxy; no modern county boundary is asserted
 EHW,EHW,agatsuma,own_control_core,JAA-YAY;P8.3,contested,Eastern Honshu Yayoi-Jomon frontier frame
 EHW,EHW,ashikaga_loc,own_control_core,JAA-YAY;P8.3,contested,Eastern Honshu Yayoi-Jomon frontier frame
 EHW,EHW,azai,own_control_core,JAA-YAY;P8.3,contested,Eastern Honshu Yayoi-Jomon frontier frame
@@ -2298,6 +2233,16 @@ EHW,EHW,usui,own_control_core,JAA-YAY;P8.3,contested,Eastern Honshu Yayoi-Jomon 
 EHW,EHW,yoshiki,own_control_core,JAA-YAY;P8.3,contested,Eastern Honshu Yayoi-Jomon frontier frame
 ELY,XAJ,shush,own_control_core,P8.2;OCD;PLE,secure,Elymaean Susa proxy
 EME,EME,homs,own_control_core,P8.1;OCD;PLE,secure,Emesan capital proxy
+EPD,EPD,ardtornish,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Epidian campaign frame around the Epidium promontory
+EPD,EPD,arran,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Epidian island-and-peninsula proxy; not a claim of uniform island rule
+EPD,EPD,cowal,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Epidian campaign frame around the Epidium promontory
+EPD,EPD,inverary,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Epidian campaign frame around the Epidium promontory
+EPD,EPD,islay,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Epidian island-and-peninsula proxy; not a claim of uniform island rule
+EPD,EPD,kintyre,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Epidian campaign frame around the Epidium promontory
+EPD,EPD,lochaber,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Epidian campaign frame around the Epidium promontory
+EPD,EPD,mann,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Epidian island-and-peninsula proxy; not a claim of uniform island rule
+EPD,EPD,mull,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Epidian island-and-peninsula proxy; not a claim of uniform island rule
+EPD,EPD,oban,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Epidian campaign frame around the Epidium promontory
 EPI,XCV,acayucan,own_control_core,P8.10;CAH-XI,contested,Epi-Olmec Veracruz frame
 EPI,XCV,ahuilizapan,own_control_core,P8.10;CAH-XI,contested,Epi-Olmec Veracruz frame
 EPI,XCV,atepec,own_control_core,P8.10;CAH-XI,contested,Epi-Olmec Veracruz frame
@@ -2338,6 +2283,16 @@ EPI,XCV,xicaltepec,own_control_core,P8.10;CAH-XI,contested,Epi-Olmec Veracruz fr
 EPI,XCV,xicochimalco,own_control_core,P8.10;CAH-XI,contested,Epi-Olmec Veracruz frame
 EPI,XCV,xochiapa,own_control_core,P8.10;CAH-XI,contested,Epi-Olmec Veracruz frame
 EPI,XCV,zongolica,own_control_core,P8.10;CAH-XI,contested,Epi-Olmec Veracruz frame
+ERD,ERD,belcoo,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Erdinian relative-order proxy; no modern county boundary is asserted
+ERD,ERD,cavan,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Erdinian interior proxy; no modern county boundary is asserted
+ERD,ERD,clogher,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Erdinian relative-order proxy; no modern county boundary is asserted
+ERD,ERD,dromahair,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Erdinian interior proxy; no modern county boundary is asserted
+ERD,ERD,dungannon,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Erdinian relative-order proxy; no modern county boundary is asserted
+ERD,ERD,enniskillen,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Erdinian relative-order proxy; no modern county boundary is asserted
+ERD,ERD,killeshandra,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Erdinian interior proxy; no modern county boundary is asserted
+ERD,ERD,killycolly,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Erdinian interior proxy; no modern county boundary is asserted
+ERD,ERD,leitrim,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Erdinian interior proxy; no modern county boundary is asserted
+ERD,ERD,strabane,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Erdinian relative-order proxy; no modern county boundary is asserted
 EUD,XDX,bolling,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Eudoses campaign proxy
 EUD,XDX,holstebro_lundenes,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Eudoses campaign proxy
 EUD,XDX,ringkobing,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Eudoses campaign proxy
@@ -2394,6 +2349,13 @@ FRI,XBM,wedde,own_control_core,P8.7;CAH-XI,contested,Frisian coastal frame
 FRI,XBM,wolvega,own_control_core,P8.7;CAH-XI,contested,Frisian coastal frame
 FRI,XBM,zwolle,own_control_core,P8.7;CAH-XI,contested,Frisian coastal frame
 GAL,XAB,safed,own_control_core,P8.1;OCD;PLE,secure,Herodian Galilee-Peraea capital-control seed
+GAN,GAN,athlone,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Ganganian remainder of the disjoint installed Roscommon campaign frame
+GAN,GAN,bunratty,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Ganganian relative-order proxy; no modern county boundary is asserted
+GAN,GAN,castlereagh,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Ganganian remainder of the disjoint installed Roscommon campaign frame
+GAN,GAN,ennis,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Ganganian relative-order proxy; no modern county boundary is asserted
+GAN,GAN,moyarta,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Ganganian relative-order proxy; no modern county boundary is asserted
+GAN,GAN,roscommon,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Ganganian remainder of the disjoint installed Roscommon campaign frame
+GAN,GAN,skreen,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Ganganian remainder of the disjoint installed Roscommon campaign frame
 GAR,XBF,adrar,own_control_core,P8.5;CAH-XI,contested,Garamantian Fezzan and Saharan trade frame
 GAR,XBF,ain_salah,own_control_core,P8.5;CAH-XI,contested,Garamantian Fezzan and Saharan trade frame
 GAR,XBF,al_jawf,own_control_core,P8.5;CAH-XI,contested,Garamantian Fezzan and Saharan trade frame
@@ -5144,8 +5106,23 @@ IAZ,IAZ,veliky_beckerek,own_control_core,P8.7;CAH-XI,contested,Iazyges Tisza-pla
 IAZ,IAZ,zalau,own_control_core,P8.7;CAH-XI,contested,Iazyges Tisza-plain frame
 IAZ,IAZ,zarand,own_control_core,P8.7;CAH-XI,contested,Iazyges Tisza-plain frame
 IAZ,IAZ,zenta,own_control_core,P8.7;CAH-XI,contested,Iazyges Tisza-plain frame
+IBG,IBG,carrickbeg,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Irish Brigantian relative-order proxy; no connection to a unitary British state is inferred
+IBG,IBG,dungarvan,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Irish Brigantian relative-order proxy; no connection to a unitary British state is inferred
+IBG,IBG,waterford,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Irish Brigantian relative-order proxy; no connection to a unitary British state is inferred
 IBR,IBR,mtskheta,own_control_core,P8.2;OCD,secure,Caucasian Iberian capital control
-ICE,XBX,norwich,own_control_core,P8.7;CAH-XI;PLE,secure,Icenian capital proxy
+ICE,XBX,bury,own_control_core,P8.7;PTO-GEO-II2,contested,Icenian campaign frame; installed province geometry is not an exact ancient frontier
+ICE,XBX,cambridge,own_control_core,P8.7;PTO-GEO-II2,contested,Icenian campaign frame; installed province geometry is not an exact ancient frontier
+ICE,XBX,ely,own_control_core,P8.7;PTO-GEO-II2,contested,Icenian campaign frame; installed province geometry is not an exact ancient frontier
+ICE,XBX,fakenham,own_control_core,P8.7;PTO-GEO-II2,contested,Icenian campaign frame; installed province geometry is not an exact ancient frontier
+ICE,XBX,huntingdon,own_control_core,P8.7;PTO-GEO-II2,contested,Icenian campaign frame; installed province geometry is not an exact ancient frontier
+ICE,XBX,ipswich,own_control_core,P8.7;PTO-GEO-II2,contested,Icenian campaign frame; installed province geometry is not an exact ancient frontier
+ICE,XBX,lavenham,own_control_core,P8.7;PTO-GEO-II2,contested,Icenian campaign frame; installed province geometry is not an exact ancient frontier
+ICE,XBX,lowestoft,own_control_core,P8.7;PTO-GEO-II2,contested,Icenian campaign frame; installed province geometry is not an exact ancient frontier
+ICE,XBX,lynn,own_control_core,P8.7;PTO-GEO-II2,contested,Icenian campaign frame; installed province geometry is not an exact ancient frontier
+ICE,XBX,norwich,own_control_core,P8.7;PTO-GEO-II2;CAH-XI;PLE,contested,Icenian campaign frame; installed province geometry is not an exact ancient frontier
+ICE,XBX,royston,own_control_core,P8.7;PTO-GEO-II2,contested,Icenian campaign frame; installed province geometry is not an exact ancient frontier
+ICE,XBX,thetford,own_control_core,P8.7;PTO-GEO-II2,contested,Icenian campaign frame; installed province geometry is not an exact ancient frontier
+ICE,XBX,yarmouth,own_control_core,P8.7;PTO-GEO-II2,contested,Icenian campaign frame; installed province geometry is not an exact ancient frontier
 IGR,XAY,sialkot,own_control_core,P8.4;CAH-XI,contested,Installed Sialkot field is the campaign proxy for the Indo-Greek capital at Sagala
 ILM,ILM,ashevo,own_control_core,P8.7;CAH-XI,contested,Ilmen forest-community campaign frame
 ILM,ILM,babayevo,own_control_core,P8.7;CAH-XI,contested,Ilmen forest-community campaign frame
@@ -5404,6 +5381,10 @@ ISK,XAX,vingur,own_control_core,P8.4;CAH-XI,contested,Indo-Scythian Sindh frame
 ISK,XAX,wanga_bazar,own_control_core,P8.4;CAH-XI,contested,Indo-Scythian Sindh frame
 ISK,XAX,yarkhun,own_control_core,P8.4;CAH-XI,contested,Indo-Scythian northwestern frontier frame
 ISK,XAX,yasin,own_control_core,P8.4;CAH-XI,contested,Indo-Scythian northwestern frontier frame
+IVN,IVN,cork,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Ivernian relative-order proxy around Iernis; no modern county boundary is asserted
+IVN,IVN,fermoy,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Ivernian relative-order proxy around Iernis; no modern county boundary is asserted
+IVN,IVN,kinsale,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Ivernian relative-order proxy around Iernis; no modern county boundary is asserted
+IVN,IVN,youghal,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Ivernian relative-order proxy around Iernis; no modern county boundary is asserted
 IZM,IZM,aimi,own_control_core,JAA-YAY;ISIJ-YAY;P8.3,contested,Sanin regional Yayoi community frame
 IZM,IZM,funai,own_control_core,JAA-YAY;ISIJ-YAY;P8.3,contested,Sanin regional Yayoi community frame
 IZM,IZM,futakata,own_control_core,JAA-YAY;ISIJ-YAY;P8.3,contested,Sanin regional Yayoi community frame
@@ -6057,6 +6038,7 @@ LCH,LCH,njimi,own_control_core,CAM-DAI;OUP-CHAD;P8.5,contested,Lake Chad settlem
 LCH,LCH,qatrun,own_control_core,CAM-DAI;OUP-CHAD;P8.5,contested,Lake Chad settlement-community frame
 LCH,LCH,seguedine,own_control_core,CAM-DAI;OUP-CHAD;P8.5,contested,Lake Chad settlement-community frame
 LCH,LCH,yo,own_control_core,CAM-DAI;OUP-CHAD;P8.5,contested,Lake Chad settlement-community frame
+LGB,LGB,dornoch,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Eastern Sutherland proxy for the British Lugi frame
 LIM,XCW,rimaq,own_control_core,P8.10;CAH-XI,secure,Lima culture anchor
 LNC,XEM,ado_ekiti,own_control_core,MET-IRON;P8.5,contested,Lower Niger iron-age community frame
 LNC,XEM,akure,own_control_core,MET-IRON;P8.5,contested,Lower Niger iron-age community frame
@@ -6722,6 +6704,10 @@ MNG,XEJ,tessit,own_control_core,CAM-MLR;MET-IND;P8.5,contested,Middle Niger sett
 MNG,XEJ,timbuktu,own_control_core,CAM-MLR;MET-IND;P8.5,contested,Middle Niger settlement-network frame
 MNG,XEJ,tindirma,own_control_core,CAM-MLR;MET-IND;P8.5,contested,Middle Niger settlement-network frame
 MNG,XEJ,tondibi,own_control_core,CAM-MLR;MET-IND;P8.5,contested,Middle Niger settlement-network frame
+MNP,XFI,carlow,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Manapian relative-order proxy toward Manapia
+MNP,XFI,ferns,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Manapian relative-order proxy toward Manapia
+MNP,XFI,new_ross,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Manapian relative-order proxy toward Manapia
+MNP,XFI,wexford,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Manapian relative-order proxy toward Manapia
 MOK,MOK,arkhangelskoye,own_control_core,P8.7;CAH-XI,contested,Moskva-Oka forest-community campaign frame
 MOK,MOK,belyov,own_control_core,P8.7;CAH-XI,contested,Moskva-Oka forest-community campaign frame
 MOK,MOK,bogoroditsk,own_control_core,P8.7;CAH-XI,contested,Moskva-Oka forest-community campaign frame
@@ -7061,6 +7047,11 @@ NAB,NAB,mughayra,own_control_core,OCD;NABATAEA-MAP;PLE,contested,Nabataean north
 NAB,NAB,shoubak,own_control_core,P8.1;OCD;PLE,secure,Nabataean capital proxy
 NAB,NAB,tabuk_arabia,own_control_core,OCD;NABATAEA-MAP;PLE,contested,Nabataean northwestern Hijaz caravan and Hegra approach frame
 NAB,NAB,umluj,own_control_core,OCD;NABATAEA-MAP;PLE,contested,Nabataean northwestern Hijaz caravan and Hegra approach frame
+NAG,XFF,ballaghaderreen,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Nagnatan relative-order proxy around Magnata; no modern county boundary is asserted
+NAG,XFF,burrishoole,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Nagnatan relative-order proxy around Magnata; no modern county boundary is asserted
+NAG,XFF,castlebar,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Nagnatan relative-order proxy around Magnata; no modern county boundary is asserted
+NAG,XFF,erris,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Nagnatan relative-order proxy around Magnata; no modern county boundary is asserted
+NAG,XFF,sligo,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Nagnatan boundary exception inside the installed Roscommon geometry
 NAR,NAR,amberg,own_control_core,P8.7;CAH-XI;TAC-GER,contested,Naristi upper-Danube campaign frame
 NAR,NAR,andechs,own_control_core,P8.7;CAH-XI;TAC-GER,contested,Naristi upper-Danube campaign frame
 NAR,NAR,ansbach,own_control_core,P8.7;CAH-XI;TAC-GER,contested,Naristi-Hermundurian campaign frame
@@ -7154,6 +7145,9 @@ NAZ,NAZ,urupampa,own_control_core,P8.10;CAH-XI,contested,Nazca southern-coast fr
 NAZ,NAZ,waqrapukara,own_control_core,P8.10;CAH-XI,contested,Nazca southern-coast frame
 NAZ,NAZ,willka_pampa,own_control_core,P8.10;CAH-XI,contested,Nazca southern-coast frame
 NAZ,NAZ,yanatile,own_control_core,P8.10;CAH-XI,contested,Nazca southern-coast frame
+NCR,NCR,orkney,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Orcadian island communities are attached to the adjacent Cornavii campaign frame without asserting ethnic identity or unitary rule
+NCR,NCR,shetland,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Shetland island communities are attached to the northern campaign frame without asserting ethnic identity or unitary rule
+NCR,NCR,thurso,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Caithness campaign proxy for the northern Cornavii frame
 NHR,NHR,glogow,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Naharvali campaign proxy
 NHR,NHR,gora,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Naharvali campaign proxy
 NHR,NHR,kozuchow,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Naharvali campaign proxy
@@ -7234,6 +7228,12 @@ NOK,NOK,turunku,own_control_core,JAA-NOK;OUP-NOK;P8.5,contested,Late Nok archaeo
 NOK,NOK,yauri,own_control_core,JAA-NOK;OUP-NOK;P8.5,contested,Late Nok archaeological campaign frame
 NOK,NOK,zazzau,own_control_core,JAA-NOK;OUP-NOK;P8.5,contested,Late Nok archaeological campaign frame
 NOK,NOK,zuru,own_control_core,JAA-NOK;OUP-NOK;P8.5,contested,Late Nok archaeological campaign frame
+NOV,XEZ,ayr,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Novantaean campaign frame around the southwestern peninsula
+NOV,XEZ,dumfries,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Novantaean campaign frame around the southwestern peninsula
+NOV,XEZ,irvine,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Novantaean campaign frame around the southwestern peninsula
+NOV,XEZ,kenmure,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Novantaean campaign frame around the southwestern peninsula
+NOV,XEZ,kirkcudbright,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Novantaean campaign frame around the southwestern peninsula
+NOV,XEZ,stranraer,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Novantaean campaign frame around the southwestern peninsula
 OAS,OAS,aitbulat,own_control_core,P8.8;CAH-XI;CHG,contested,Residual Inner Asian oasis and steppe interface frame
 OAS,OAS,akhsikath,own_control_core,P8.8;CAH-XI;CHG,contested,Residual Inner Asian oasis and steppe interface frame
 OAS,OAS,akhsisek,own_control_core,P8.8;CAH-XI;CHG,contested,Residual Inner Asian oasis and steppe interface frame
@@ -7618,7 +7618,15 @@ OMN,OMN,sinaw,own_control_core,PLN-ARAB;PLE,contested,Omanitae interior Oman cam
 OMN,OMN,suhar,own_control_core,PLN-ARAB;PLE,contested,Omanitae northern Oman coast campaign frame
 OMN,OMN,sur,own_control_core,PLN-ARAB;PLE,contested,Omanitae Oman coast campaign frame
 OMN,OMN,yanqul,own_control_core,PLN-ARAB;PLE,contested,Omanitae interior Oman campaign frame
+ORD,XCB,anglesey,own_control_core,P8.7;PTO-GEO-II2,contested,Ordovician remainder of the disjoint installed Gwynedd campaign frame
 ORD,XCB,carnarvon,own_control_core,P8.7;CAH-XI,secure,North Wales anchor
+ORD,XCB,conwy,own_control_core,P8.7;PTO-GEO-II2,contested,Ordovician remainder of the disjoint installed Gwynedd campaign frame
+ORD,XCB,flint,own_control_core,P8.7;PTO-GEO-II2,contested,Ordovician remainder of the disjoint installed Gwynedd campaign frame
+ORD,XCB,harlech,own_control_core,P8.7;PTO-GEO-II2,contested,Ordovician remainder of the disjoint installed Gwynedd campaign frame
+ORD,XCB,llangollen,own_control_core,P8.7;PTO-GEO-II2,contested,Ordovician campaign frame; installed province geometry is not an exact ancient frontier
+ORD,XCB,machynlleth,own_control_core,P8.7;PTO-GEO-II2,contested,Ordovician campaign frame; installed province geometry is not an exact ancient frontier
+ORD,XCB,montgomery,own_control_core,P8.7;PTO-GEO-II2,contested,Ordovician campaign frame; installed province geometry is not an exact ancient frontier
+ORD,XCB,penllyn,own_control_core,P8.7;PTO-GEO-II2,contested,Ordovician remainder of the disjoint installed Gwynedd campaign frame
 OSR,OSR,urfa,own_control_core,P8.2;OCD;PLE,secure,Osroene Edessa proxy
 PAC,XDH,monterey_coast,own_control_core,P8.10;CAH-XI,contested,Pacific coastal SoP geographic anchor
 PAR,XAH,abadan,own_control_core,P8.2;CAH-XI,contested,Residual Arsacid and sub-king framework
@@ -8140,6 +8148,10 @@ PAR,XAH,zik,own_control_core,P8.2;CAH-XI,secure,Arsacid eastern Iranian core
 PAR,XAH,zohan,own_control_core,P8.2;CAH-XI,secure,Arsacid eastern Iranian core
 PAR,XAH,zozan,own_control_core,P8.2;CAH-XI,secure,Arsacid eastern Iranian core
 PAR,XAH,zuwayr,own_control_core,P8.2;CAH-XI,contested,Residual Arsacid and sub-king framework
+PBI,PBI,bridlington,own_control_core,P8.7;PTO-GEO-II2,contested,British Parisian campaign frame around Petuaria
+PBI,PBI,hull,own_control_core,P8.7;PTO-GEO-II2,contested,British Parisian campaign frame around Petuaria
+PBI,PBI,norton,own_control_core,P8.7;PTO-GEO-II2,contested,British Parisian campaign frame around Petuaria
+PBI,PBI,selby,own_control_core,P8.7;PTO-GEO-II2,contested,British Parisian campaign frame around Petuaria
 PDL,PDL,bakota,own_control_core,P8.7;CAH-XI,contested,Upper Dniester community campaign frame
 PDL,PDL,balta,own_control_core,P8.7;CAH-XI,contested,Upper Dniester community campaign frame
 PDL,PDL,belz,own_control_core,P8.7;CAH-XI,contested,Upper Dniester community campaign frame
@@ -8715,6 +8727,16 @@ REC,REC,markahuamachuco,own_control_core,P8.10;CAH-XI,contested,Recuay highland 
 REC,REC,olan,own_control_core,P8.10;CAH-XI,contested,Recuay highland frame
 REC,REC,tantaricuy,own_control_core,P8.10;CAH-XI,contested,Recuay highland frame
 REC,REC,waricoto,own_control_core,P8.10;CAH-XI,secure,Callejon de Huaylas anchor
+REG,XES,chichester,own_control_core,P8.7;PTO-GEO-II2,contested,Regnian campaign frame; installed province geometry is not an exact ancient frontier
+REG,XES,guildford,own_control_core,P8.7;PTO-GEO-II2,contested,Regnian campaign frame; installed province geometry is not an exact ancient frontier
+REG,XES,hastings,own_control_core,P8.7;PTO-GEO-II2,contested,Regnian campaign frame; installed province geometry is not an exact ancient frontier
+REG,XES,lewes,own_control_core,P8.7;PTO-GEO-II2,contested,Regnian campaign frame; installed province geometry is not an exact ancient frontier
+REG,XES,reigate,own_control_core,P8.7;PTO-GEO-II2,contested,Regnian campaign frame; installed province geometry is not an exact ancient frontier
+REG,XES,shoreham,own_control_core,P8.7;PTO-GEO-II2,contested,Regnian campaign frame; installed province geometry is not an exact ancient frontier
+REG,XES,woking,own_control_core,P8.7;PTO-GEO-II2,contested,Regnian campaign frame; installed province geometry is not an exact ancient frontier
+RHB,RHB,coleraine,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Rhobogdian relative-order proxy; no modern county boundary is asserted
+RHB,RHB,derry,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Rhobogdian relative-order proxy; no modern county boundary is asserted
+RHB,RHB,magherafelt,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Rhobogdian relative-order proxy; no modern county boundary is asserted
 RJS,RJS,ajmer,own_control_core,P8.4;CAH-XI,contested,Rajasthan-Gujarat SoP geographic anchor
 RJS,RJS,aklera,own_control_core,P8.4;CAH-XI,contested,Residual Rajasthan-Gujarat SoP frame
 RJS,RJS,amber_loc,own_control_core,P8.4;CAH-XI,contested,Residual Rajasthan-Gujarat SoP frame
@@ -11526,6 +11548,10 @@ SEA,SEA,wiang_fang,own_control_core,P8.9;CAH-XI,contested,Residual mainland Sout
 SEA,SEA,wuntho,own_control_core,P8.9;CAH-XI,contested,Residual mainland Southeast Asian SoP frame after named city networks
 SEA,SEA,xam_neua,own_control_core,P8.9;CAH-XI,contested,Residual mainland Southeast Asian SoP frame after named city networks
 SEA,SEA,zalon_taung,own_control_core,P8.9;CAH-XI,contested,Residual mainland Southeast Asian SoP frame after named city networks
+SEL,SEL,berwick,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Selgovaean campaign frame; Roman fort evidence is not treated as a native capital list
+SEL,SEL,duns,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Selgovaean campaign frame; Roman fort evidence is not treated as a native capital list
+SEL,SEL,roxburgh,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Selgovaean campaign frame; Roman fort evidence is not treated as a native capital list
+SEL,SEL,selkirk,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Selgovaean campaign frame; Roman fort evidence is not treated as a native capital list
 SEM,SEM,angermunde,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Semnonic Elbe-Havel campaign proxy
 SEM,SEM,beeskow,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Semnonic Elbe-Havel campaign proxy
 SEM,SEM,belzig,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Semnonic Elbe-Havel campaign proxy
@@ -11614,7 +11640,15 @@ SIB,XDO,abakasnk,own_control_core,P8.8;CAH-XI,contested,Residual western Siberia
 SIB,XDO,beya,own_control_core,P8.8;CAH-XI,contested,Residual western Siberian community frame
 SIB,XDO,kazan,own_control_core,P8.8;CAH-XI,contested,Siberian SoP geographic anchor
 SIB,XDO,shushenskoye,own_control_core,P8.8;CAH-XI,contested,Residual western Siberian community frame
-SIL,XCA,monmouth,own_control_core,P8.7;CAH-XI;PLE,secure,Silurian capital proxy
+SIL,XCA,brecknock,own_control_core,P8.7;PTO-GEO-II2,contested,Silurian campaign frame; installed province geometry is not an exact ancient frontier
+SIL,XCA,builth,own_control_core,P8.7;PTO-GEO-II2,contested,Silurian campaign frame; installed province geometry is not an exact ancient frontier
+SIL,XCA,caerphilly,own_control_core,P8.7;PTO-GEO-II2,contested,Silurian campaign frame; installed province geometry is not an exact ancient frontier
+SIL,XCA,cardiff,own_control_core,P8.7;PTO-GEO-II2,contested,Silurian campaign frame; installed province geometry is not an exact ancient frontier
+SIL,XCA,monmouth,own_control_core,P8.7;PTO-GEO-II2;CAH-XI;PLE,contested,Silurian campaign frame; installed province geometry is not an exact ancient frontier
+SIL,XCA,neath,own_control_core,P8.7;PTO-GEO-II2,contested,Silurian campaign frame; installed province geometry is not an exact ancient frontier
+SIL,XCA,newport,own_control_core,P8.7;PTO-GEO-II2,contested,Silurian campaign frame; installed province geometry is not an exact ancient frontier
+SIL,XCA,radnor,own_control_core,P8.7;PTO-GEO-II2,contested,Silurian campaign frame; installed province geometry is not an exact ancient frontier
+SIL,XCA,swansea,own_control_core,P8.7;PTO-GEO-II2,contested,Silurian campaign frame; installed province geometry is not an exact ancient frontier
 SIR,XCE,armavir,own_control_core,P8.7;CAH-XI;PLE,secure,Kuban basin anchor
 SIT,XDY,avesta,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Sitones campaign proxy
 SIT,XDY,falun,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Sitones campaign proxy
@@ -11741,6 +11775,7 @@ SMD,XEE,yotkino,own_control_core,P8.7;CAH-XI,contested,Upper Dnieper-Dvina commu
 SMD,XEE,zaroy,own_control_core,P8.7;CAH-XI,contested,Upper Dnieper-Dvina community campaign frame
 SMD,XEE,zhizhets,own_control_core,P8.7;CAH-XI,contested,Upper Dnieper-Dvina community campaign frame
 SMD,XEE,zhulino,own_control_core,P8.7;CAH-XI,contested,Upper Dnieper-Dvina community campaign frame
+SME,XFE,tongue,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Northern campaign proxy for the Smertae frame
 SMY,SMY,troitsko_pechorsk,own_control_core,P8.7;CAH-XI,contested,Northern Ural Samoyedic community frame
 SMY,SMY,ukhta,own_control_core,P8.7;CAH-XI,contested,Northern Ural Samoyedic community frame
 SMY,SMY,vukyl,own_control_core,P8.7;CAH-XI,contested,Northern Ural Samoyedic community frame
@@ -12102,6 +12137,11 @@ SUI,XBS,umea,own_control_core,P8.7;CAH-XI,contested,Residual Suionic Scandinavia
 SUI,XBS,uppsala,own_control_core,P8.7;TAC-GER;OCD-GER;PLE;CAH-XI,contested,Suiones campaign proxy
 SUI,XBS,varnum,own_control_core,P8.7;TAC-GER;OCD-GER;PLE;CAH-XI,contested,Suiones campaign proxy
 SUI,XBS,vasteras,own_control_core,P8.7;TAC-GER;OCD-GER;PLE;CAH-XI,contested,Suiones campaign proxy
+TAE,XFB,aberdeen,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Taexalian campaign frame; northern geometry and town evidence are disputed
+TAE,XFB,banff,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Taexalian campaign frame; northern geometry and town evidence are disputed
+TAE,XFB,buchan,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Taexalian campaign frame; northern geometry and town evidence are disputed
+TAE,XFB,inverurie,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Taexalian campaign frame; northern geometry and town evidence are disputed
+TAE,XFB,mar,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Taexalian campaign frame; northern geometry and town evidence are disputed
 TEO,XCQ,tehotihuacan,own_control_core,P8.10;CAH-XI,secure,Teotihuacan capital control
 THM,XEQ,al_abwa,own_control_core,PLN-ARAB;STR-ARAB;THAMUD-EPIG,contested,Northwestern Thamud range-and-oasis campaign frame
 THM,XEQ,al_ahmar,own_control_core,PLN-ARAB;STR-ARAB;THAMUD-EPIG,contested,Northwestern Thamud range-and-oasis campaign frame
@@ -12494,7 +12534,12 @@ TON,XCO,tongatapu,own_control_core,P8.9;CAH-XI,contested,Western Polynesian Tong
 TON,XCO,tutuila,own_control_core,P8.9;CAH-XI,contested,Western Polynesian Samoa frame
 TON,XCO,upolu,own_control_core,P8.9;CAH-XI,contested,Western Polynesian Samoa frame
 TON,XCO,vauvau,own_control_core,P8.9;CAH-XI,contested,Western Polynesian Tonga frame
-TRI,XBW,colchester,own_control_core,P8.7;CAH-XI;PLE,secure,Camulodunum proxy
+TRI,XBW,barking,own_control_core,P8.7;PTO-GEO-II2,contested,Trinovantian campaign frame; installed province geometry is not an exact ancient frontier
+TRI,XBW,chelmsford,own_control_core,P8.7;PTO-GEO-II2,contested,Trinovantian campaign frame; installed province geometry is not an exact ancient frontier
+TRI,XBW,colchester,own_control_core,P8.7;PTO-GEO-II2;CAH-XI;PLE,contested,Trinovantian campaign frame; installed province geometry is not an exact ancient frontier
+TRI,XBW,hedingham,own_control_core,P8.7;PTO-GEO-II2,contested,Trinovantian campaign frame; installed province geometry is not an exact ancient frontier
+TRI,XBW,prittlewell,own_control_core,P8.7;PTO-GEO-II2,contested,Trinovantian campaign frame; installed province geometry is not an exact ancient frontier
+TRI,XBW,walden,own_control_core,P8.7;PTO-GEO-II2,contested,Trinovantian campaign frame; installed province geometry is not an exact ancient frontier
 TUP,XDC,manaos,own_control_core,P8.10;CAH-XI,secure,Amazon basin anchor
 TUR,XAV,turpan,own_control_core,P8.3;CHG,secure,Tarim city-state capital control
 UGR,UGR,almenevo,own_control_core,P8.7;CAH-XI,contested,Western Ugric community campaign frame
@@ -12521,101 +12566,27 @@ UGR,UGR,yalutorovsk,own_control_core,P8.7;CAH-XI,contested,Western Ugric communi
 UGR,UGR,yetkul,own_control_core,P8.7;CAH-XI,contested,Western Ugric community campaign frame
 UGR,UGR,yukonda,own_control_core,P8.7;CAH-XI,contested,Western Ugric community campaign frame
 UGR,UGR,yurginskoye,own_control_core,P8.7;CAH-XI,contested,Western Ugric community campaign frame
-ULA,XCC,adare,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,ardagh,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,armagh,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,athenry,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,athlone,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,athy,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,ballaghaderreen,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,ballycastle,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,ballymena,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,ballymore,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,belcoo,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,belfast,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,bunratty,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,burrishoole,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,carbery,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,carlow,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,carrickbeg,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,carrickfergus,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,carrickmacross,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,cashel,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,castlebar,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,castleconnell,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,castlereagh,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,cavan,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,clifden,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,clogher,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,clonmel,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,coleraine,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,cork,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,cullahill,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,daingean,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,derry,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,dingle,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,donegal,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,downpatrick,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,drogheda,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,dromahair,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,dublin,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,dunamase,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,dundalk,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,dungannon,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,dungarvan,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,dunhallow,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,dunluce,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,ennis,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,enniskillen,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,erris,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,fermoy,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,ferns,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,fingal,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,galway,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,glendalough,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,inishowen,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,iveagh,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,kells,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,kilbrittain,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,kilconnell,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,kildare,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,kilkenny,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,killarney,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,killeshandra,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,killmallock,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,killycolly,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,kilmacrennan,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,kinsale,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,leitrim,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,limerick,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,longford,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,magherafelt,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,monaghan,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,moyarta,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,moycarn,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,mullingar,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,muskerry,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,naas,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,navan,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,nenagh,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,new_ross,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,newtownards,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,oriel,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,raphoe,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,roscommon,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,roscrea,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,skreen,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,sligo,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,strabane,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,tipperary,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,tralee,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,trim,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,tuam,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,tullamore,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,waterford,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,wexford,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,wicklow,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
-ULA,XCC,youghal,own_control_core,P8.7;CAH-XI,contested,Hibernian tuath SoP frame anchored by Ulaid
+ULA,XCC,armagh,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Voluntian relative-order proxy; it is not equated with the whole later Ulaid
+ULA,XCC,carrickmacross,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Voluntian relative-order proxy; it is not equated with the whole later Ulaid
+ULA,XCC,downpatrick,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Voluntian relative-order proxy; it is not equated with the whole later Ulaid
+ULA,XCC,drogheda,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Voluntian relative-order proxy; it is not equated with the whole later Ulaid
+ULA,XCC,dundalk,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Voluntian relative-order proxy; it is not equated with the whole later Ulaid
+ULA,XCC,iveagh,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Voluntian relative-order proxy; it is not equated with the whole later Ulaid
+ULA,XCC,monaghan,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Voluntian relative-order proxy; it is not equated with the whole later Ulaid
+ULA,XCC,newtownards,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Voluntian relative-order proxy; it is not equated with the whole later Ulaid
+ULA,XCC,oriel,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Voluntian relative-order proxy; it is not equated with the whole later Ulaid
+USD,USD,adare,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Usdiaean relative-order proxy; no modern county boundary is asserted
+USD,USD,cashel,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Usdiaean interior proxy; no modern county boundary is asserted
+USD,USD,castleconnell,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Usdiaean relative-order proxy; no modern county boundary is asserted
+USD,USD,clonmel,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Usdiaean interior proxy; no modern county boundary is asserted
+USD,USD,dingle,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Usdiaean relative-order proxy; no modern county boundary is asserted
+USD,USD,killmallock,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Usdiaean relative-order proxy; no modern county boundary is asserted
+USD,USD,limerick,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Usdiaean relative-order proxy; no modern county boundary is asserted
+USD,USD,moycarn,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Usdiaean interior proxy; no modern county boundary is asserted
+USD,USD,nenagh,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Usdiaean interior proxy; no modern county boundary is asserted
+USD,USD,roscrea,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Usdiaean interior proxy; no modern county boundary is asserted
+USD,USD,tipperary,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Usdiaean interior proxy; no modern county boundary is asserted
+USD,USD,tralee,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Usdiaean relative-order proxy; no modern county boundary is asserted
 UVF,UVF,alexandrovskaya_sloboda,own_control_core,P8.7;CAH-XI,contested,Upper Volga forest-community campaign frame
 UVF,UVF,bernovo,own_control_core,P8.7;CAH-XI,contested,Upper Volga forest-community campaign frame
 UVF,UVF,bogorodskoye_pereyaslavl,own_control_core,P8.7;CAH-XI,contested,Upper Volga forest-community campaign frame
@@ -12725,11 +12696,26 @@ UVF,UVF,yuryev_polsky,own_control_core,P8.7;CAH-XI,contested,Upper Volga forest-
 UVF,UVF,yuryev_povolzhsk,own_control_core,P8.7;CAH-XI,contested,Upper Volga forest-community campaign frame
 UVF,UVF,zolotkovo,own_control_core,P8.7;CAH-XI,contested,Upper Volga forest-community campaign frame
 UVF,UVF,zubtsov,own_control_core,P8.7;CAH-XI,contested,Upper Volga forest-community campaign frame
+VAC,VAC,badenoch,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Vacomagian remainder of the disjoint installed Moray campaign frame
+VAC,VAC,elgin,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Tuesis-region proxy for the Vacomagi frame
+VAC,VAC,urquhart,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Vacomagian remainder of the disjoint installed Moray campaign frame
 VAN,VAN,chojna,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Vandilic Oder campaign proxy
 VAN,VAN,gorzow,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Vandilic Oder campaign proxy
 VAN,VAN,santok,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Vandilic Oder campaign proxy
 VAN,VAN,soltyn,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Vandilic Oder campaign proxy
 VAN,VAN,torzym,own_control_core,P8.7;CAH-XI;CAM-GERM,contested,Vandilic Oder campaign proxy
+VCN,VCN,arbroath,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Veniconian campaign frame; northern geometry and town evidence are disputed
+VCN,VCN,cupar,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Veniconian campaign frame around the Orrea proxy
+VCN,VCN,dundee,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Veniconian campaign frame; northern geometry and town evidence are disputed
+VCN,VCN,dunfermline,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Veniconian campaign frame around the Orrea proxy
+VCN,VCN,forfar,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Veniconian campaign frame; northern geometry and town evidence are disputed
+VCN,VCN,st_andrews,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Veniconian campaign frame around the Orrea proxy
+VCN,VCN,stonehaven,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Veniconian campaign frame; northern geometry and town evidence are disputed
+VEL,XFG,carbery,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Velabrian relative-order proxy; no modern county boundary is asserted
+VEL,XFG,dunhallow,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Velabrian relative-order proxy; no modern county boundary is asserted
+VEL,XFG,kilbrittain,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Velabrian relative-order proxy; no modern county boundary is asserted
+VEL,XFG,killarney,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Velabrian relative-order proxy; no modern county boundary is asserted
+VEL,XFG,muskerry,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Velabrian relative-order proxy; no modern county boundary is asserted
 VEN,XBT,biala_rawska,own_control_core,P8.7;CAH-XI,contested,Vistula Venedi campaign frame
 VEN,XBT,bielsk_podlaski,own_control_core,P8.7;CAH-XI,contested,Vistula Venedi campaign frame
 VEN,XBT,brzeznica,own_control_core,P8.7;CAH-XI,contested,Venedi western-Slavic SoP frame
@@ -12879,6 +12865,19 @@ VLT,XEK,wa,own_control_core,MET-IRON;P8.5,contested,Volta basin iron-age communi
 VLT,XEK,yatenga,own_control_core,MET-IRON;P8.5,contested,Volta basin iron-age community frame
 VLT,XEK,zondoma,own_control_core,MET-IRON;P8.5,contested,Volta basin iron-age community frame
 VLT,XEK,zorgho,own_control_core,MET-IRON;P8.5,contested,Volta basin iron-age community frame
+VNI,VNI,donegal,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Vennicnian relative-order proxy; no modern county boundary is asserted
+VNI,VNI,inishowen,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Vennicnian relative-order proxy; no modern county boundary is asserted
+VNI,VNI,kilmacrennan,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Vennicnian relative-order proxy; no modern county boundary is asserted
+VNI,VNI,raphoe,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Vennicnian relative-order proxy; no modern county boundary is asserted
+VOT,VOT,alnwick,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Votadinian campaign frame south of the Forth; Roman fort evidence is not treated as a native capital list
+VOT,VOT,billingham,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Votadinian campaign frame south of the Forth; Roman fort evidence is not treated as a native capital list
+VOT,VOT,dunbar,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Votadinian campaign frame around the Forth
+VOT,VOT,edinburgh,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Votadinian campaign frame around the Forth
+VOT,VOT,hexham,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Votadinian campaign frame south of the Forth; Roman fort evidence is not treated as a native capital list
+VOT,VOT,linlithgow,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Votadinian campaign frame around the Forth
+VOT,VOT,morpeth,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Votadinian campaign frame south of the Forth; Roman fort evidence is not treated as a native capital list
+VOT,VOT,newcastle,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Votadinian campaign frame south of the Forth; Roman fort evidence is not treated as a native capital list
+VOT,VOT,stirling,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Votadinian campaign frame around the Forth
 VRN,VRN,butzow,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Varini campaign proxy
 VRN,VRN,doberan,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Varini campaign proxy
 VRN,VRN,grabow,own_control_core,P8.7;TAC-GER;OCD-GER;PLE,contested,Varini campaign proxy

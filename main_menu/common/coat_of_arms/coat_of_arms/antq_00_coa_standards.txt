@@ -1247,143 +1247,717 @@ XBU = { # Finnic Societies; P8.7;P20
 	}
 }
 
-XBV = { # Catuvellauni; P8.7;P20
+XBV = { # Catuvellauni; CCI-ADD;PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_horse_salient.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.82 } }
+	}
+}
+
+XBW = { # Trinovantes; CCI-DUB;PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_horse_head.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.82 } }
+	}
+}
+
+XBX = { # Iceni; PTO-GEO-II2;P20
 	pattern = "pattern_solid.dds"
 	color1 = "green"
-	color2 = "white"
-	color3 = "yellow"
+	color2 = "yellow"
+	color3 = "black"
 	colored_emblem = {
 		texture = "ce_boar_passant.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.78 } }
 	}
 }
 
-XBW = { # Trinovantes; P8.7;P20
+XBY = { # Brigantes; PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+XBZ = { # Atrebates; CCI-TIN;PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_horse_courant.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.84 0.76 } }
+	}
+}
+
+XCA = { # Silures; PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_spear_head_byzantine.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XCB = { # Ordovices; PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_stag_head_antlers_embowed.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+DUM = { # Dumnonii; PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XDJ = { # Cantiaci; PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_boar_head.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XES = { # Regni; PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_deer_kneeling.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XET = { # Belgae; PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "black"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_horse_heads_addorsed.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.82 } }
+	}
+}
+
+XEU = { # Durotriges; PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_bull_head.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+DOB = { # Dobunni; PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_horse_trippant.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.78 } }
+	}
+}
+
+XEV = { # Corieltauvi; PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_spiral_star_06.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XEW = { # Cornovii; PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_boar_passant_mane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.78 } }
+	}
+}
+
+PBI = { # Parisii; PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_fish_naiant.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.72 } }
+	}
+}
+
+CRV = { # Carvetii; PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_stag_salient.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XEX = { # Demetae; PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "white"
+	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_crescent_moon.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XEY = { # Deceangli; PTO-GEO-II2;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_bow_arrow.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.82 } }
+	}
+}
+
+VOT = { # Votadini; PTO-GEO-II2;MANN-BRI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_horse_salient_variant.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.82 } }
+	}
+}
+
+SEL = { # Selgovae; PTO-GEO-II2;MANN-BRI;P20
 	pattern = "pattern_solid.dds"
 	color1 = "green"
 	color2 = "white"
 	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_bow_arrows_03.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.82 } }
+	}
+}
+
+XEZ = { # Novantae; PTO-GEO-II2;MANN-BRI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_fish_okeane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.72 } }
+	}
+}
+
+XFA = { # Damnonii; PTO-GEO-II2;MANN-BRI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_bull_head_ringed.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+VCN = { # Venicones; PTO-GEO-II2;MANN-BRI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "black"
+	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+XFB = { # Taexali; PTO-GEO-II2;MANN-BRI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_eagle_rising.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+EPD = { # Epidii; PTO-GEO-II2;MANN-BRI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_crescent_moon_02.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+VAC = { # Vacomagi; PTO-GEO-II2;MANN-BRI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_stag.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+DCT = { # Decantae; PTO-GEO-II2;MANN-BRI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XFC = { # Caereni; PTO-GEO-II2;MANN-BRI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_deer_kneeling.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+CRE = { # Creones; PTO-GEO-II2;MANN-BRI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_fish_naiant.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.72 } }
+	}
+}
+
+XFD = { # Carnonacae; PTO-GEO-II2;MANN-BRI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_boar_head.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+LGB = { # Lugi; PTO-GEO-II2;MANN-BRI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_horse_head.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.82 } }
+	}
+}
+
+XFE = { # Smertae; PTO-GEO-II2;MANN-BRI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_spear_head_random_small.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+NCR = { # Cornavii; PTO-GEO-II2;MANN-BRI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_star_08.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+CAL = { # Caledoni; PTO-GEO-II2;MANN-BRI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_stag_head_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+VNI = { # Vennicnii; PTO-GEO-II1;DARCY-IRE;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+RHB = { # Rhobogdii; PTO-GEO-II1;DARCY-IRE;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
 	colored_emblem = {
 		texture = "ce_boar_passant.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.78 } }
 	}
 }
 
-XBX = { # Iceni; P8.7;P20
+DAR = { # Darini; PTO-GEO-II1;DARCY-IRE;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_horse_courant.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.84 0.76 } }
+	}
+}
+
+ERD = { # Erdini; PTO-GEO-II1;DARCY-IRE;P20
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_stag_salient.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XCC = { # Voluntii; PTO-GEO-II1;DARCY-IRE;P20
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "black"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_bull_head.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XFF = { # Nagnatae; PTO-GEO-II1;DARCY-IRE;P20
 	pattern = "pattern_solid.dds"
 	color1 = "green"
 	color2 = "white"
 	color3 = "yellow"
 	colored_emblem = {
-		texture = "ce_boar_passant.dds"
+		texture = "ce_cartwheel.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
 	}
 }
 
-XBY = { # Brigantes; P8.7;P20
+AUT = { # Autini; PTO-GEO-II1;DARCY-IRE;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
+	color1 = "blue"
 	color2 = "white"
-	color3 = "yellow"
+	color3 = "red"
 	colored_emblem = {
-		texture = "ce_boar_passant.dds"
+		texture = "ce_deer_kneeling.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
 	}
 }
 
-XBZ = { # Atrebates; P8.7;P20
+GAN = { # Gangani; PTO-GEO-II1;DARCY-IRE;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
-	color2 = "white"
-	color3 = "yellow"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_boar_passant.dds"
+		texture = "ce_fish_naiant.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.72 } }
 	}
 }
 
-XCA = { # Silures; P8.7;P20
+XFG = { # Velabri; PTO-GEO-II1;DARCY-IRE;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
-	color2 = "white"
-	color3 = "yellow"
+	color1 = "purple"
+	color2 = "yellow"
+	color3 = "white"
 	colored_emblem = {
-		texture = "ce_boar_passant.dds"
+		texture = "ce_crescent_moon.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
 	}
 }
 
-XCB = { # Ordovices; P8.7;P20
+IVN = { # Iverni; PTO-GEO-II1;DARCY-IRE;P20
 	pattern = "pattern_solid.dds"
 	color1 = "green"
 	color2 = "white"
-	color3 = "yellow"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_boar_passant.dds"
+		texture = "ce_boar_head.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
 	}
 }
 
-DUM = { # Dumnonii; P8.7;P20
+USD = { # Usdiae; PTO-GEO-II1;DARCY-IRE;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
+	color1 = "orange"
 	color2 = "white"
-	color3 = "yellow"
+	color3 = "blue"
 	colored_emblem = {
-		texture = "ce_boar_passant.dds"
+		texture = "ce_horse_head.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.82 } }
 	}
 }
 
-CAL = { # Caledonian Societies; P8.7;P20
+IBG = { # Hibernian Brigantes; PTO-GEO-II1;DARCY-IRE;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
+	color1 = "blue"
 	color2 = "white"
 	color3 = "yellow"
 	colored_emblem = {
-		texture = "ce_boar_passant.dds"
+		texture = "ce_bull_head_ringed.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
 	}
 }
 
-XCC = { # Ulaid; P8.7;P20
+XFH = { # Coriondi; PTO-GEO-II1;DARCY-IRE;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_spiral_star_06.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XFI = { # Manapii; PTO-GEO-II1;DARCY-IRE;P20
 	pattern = "pattern_solid.dds"
 	color1 = "green"
+	color2 = "yellow"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_fish_okeane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.72 } }
+	}
+}
+
+CCI = { # Cauci; PTO-GEO-II1;DARCY-IRE;P20
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
 	color2 = "white"
 	color3 = "yellow"
 	colored_emblem = {
-		texture = "ce_annulet.dds"
+		texture = "ce_eagle_rising.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.84 0.84 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+EBL = { # Eblani; PTO-GEO-II1;DARCY-IRE;P20
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "black"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_star_08.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
 	}
 }
 
@@ -2014,20 +2588,6 @@ XDI = { # Caucasian Highland Societies; P8.2;P20
 		color2 = color2
 		color3 = color3
 		instance = { position = { 0.5 0.5 } scale = { 0.83 0.83 } }
-	}
-}
-
-XDJ = { # Brittonic Societies; P8.7;P20
-	pattern = "pattern_solid.dds"
-	color1 = "green"
-	color2 = "white"
-	color3 = "yellow"
-	colored_emblem = {
-		texture = "ce_boar_passant.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
 	}
 }
 

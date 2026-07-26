@@ -3213,3 +3213,18 @@ the installed body for typed-reference and variable-use accounting, injects its
 native false gate, and converts only absent legacy database scopes to optional
 lookups. Missing international organizations, capital markets, characters, and
 dynasties now fail quietly while namespaced ANTIQVITAS systems remain active.
+
+## 2026-07-26 - Britain and Ireland use the culture atlas as the political ceiling
+
+Ptolemy's named peoples are later testimony and do not establish surveyed AD 1
+borders or 51 centralized states. The political layer therefore reuses the
+existing location-level culture atlas as a maximum-resolution gameplay frame:
+each people receives a small disjoint polity where EU5 requires an owner, while
+its notes and agendas explicitly deny exact frontiers and unitary constitutions.
+Tiny attested northern frames are retained instead of being hidden inside a new
+Caledonian residual. Orkney and Shetland are attached to the northern Cornavii
+only as a campaign-management proxy, not an ethnic reconstruction.
+
+The validator caps an island polity at 25 locations and requires all 51 culture,
+government, standard, agenda, capital, and localization contracts. This is an
+anti-regression rule for the game map, not a historical size measurement.

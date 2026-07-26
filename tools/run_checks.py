@@ -39,6 +39,7 @@ VALIDATE_COMMANDS = (
     Command("tools/world_roster.py"),
     Command("tools/generate_tag_map.py", ("--check",)),
     Command("tools/s2_arabia_granularity.py", ("--check",)),
+    Command("tools/s2_britain_ireland_granularity.py", ("--check",)),
     Command("tools/generate_m4_definitions.py", ("--check",)),
     Command("tools/generate_m4_tier2_names.py", ("--check",)),
     Command("tools/generate_m4_tier2_wide_names.py", ("--check",)),

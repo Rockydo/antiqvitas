@@ -74,8 +74,8 @@ WAA,nara,own_control_core,P8.3;CAH-XI,secure,Yayoi polities anchor
 CAT,st_albans,own_control_core,P8.7;CAH-XI,secure,Verlamion proxy
 TRI,colchester,own_control_core,P8.7;CAH-XI;PLE,secure,Camulodunum proxy
 ORD,carnarvon,own_control_core,P8.7;CAH-XI,secure,North Wales anchor
-CAL,inverness,own_control_core,P8.7;CAH-XI,secure,Caledonian societies anchor
-ULA,armagh,own_control_core,P8.7;CAH-XI,secure,Ulaid anchor
+CAL,inverness,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Caledoni campaign anchor inside the disputed Moray geometry
+ULA,armagh,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Voluntian northeastern campaign anchor; it is not equated with the whole later Ulaid
 DAC,sebes,own_control_core,P8.7;CAH-XI;PLE,secure,Sarmizegetusa proxy
 IAZ,heves,own_control_core,P8.7;CAH-XI,secure,Tisza plain anchor
 ROX,tana,own_control_core,P8.7;CAH-XI,secure,Lower Don anchor
@@ -145,7 +145,77 @@ ARA,guamontey,own_control_core,P8.10;CAH-XI,secure,Orinoco anchor
 TUP,manaos,own_control_core,P8.10;CAH-XI,secure,Amazon basin anchor
 CAR,carucairi,own_control_core,P8.10;CAH-XI,secure,Lesser Antilles anchor
 CAU,tbilisi,own_control_core,P8.2;CAH-XI,contested,Caucasian highland SoP geographic anchor
-BRT,london,own_control_core,P8.7;CAH-XI,contested,Brittonic SoP geographic anchor
+BRT,canterbury,own_control_core,P8.7;PTO-GEO-II2,contested,Durovernum proxy for the Cantiaci frame
+REG,chichester,own_control_core,P8.7;PTO-GEO-II2,contested,Noviomagus proxy for the Regni frame
+BLG,salisbury,own_control_core,P8.7;PTO-GEO-II2,contested,Western Wessex campaign proxy for the British Belgae frame; it is not an exact identification of Venta Belgarum
+DUR,dorchester,own_control_core,P8.7;PTO-GEO-II2,contested,Dunium proxy for the Durotriges frame
+DOB,cirencester,own_control_core,P8.7;PTO-GEO-II2,contested,Corinium proxy for the Dobunni frame
+COR,leicester,own_control_core,P8.7;PTO-GEO-II2,contested,Ratae proxy for the Corieltauvi frame
+CNV,shrewsbury,own_control_core,P8.7;PTO-GEO-II2,contested,Viroconium-region proxy for the Midland Cornovii frame
+PBI,hull,own_control_core,P8.7;PTO-GEO-II2,contested,Petuaria-region proxy for the British Parisii frame
+CRV,carlisle,own_control_core,P8.7;PTO-GEO-II2,contested,Carvetian Cumbrian campaign anchor; not an asserted pre-Roman capital
+DEM,carmarthen,own_control_core,P8.7;PTO-GEO-II2,contested,Maridunum proxy for the Demetae frame
+DEC,denbigh,own_control_core,P8.7;PTO-GEO-II2,contested,Canovium-region proxy for the Deceangli frame
+VOT,dunbar,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Traprain-Law regional proxy for the Votadini frame
+SEL,selkirk,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Trimontium-region proxy for the Selgovae frame
+NOV,stranraer,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Rerigonium-region proxy for the Novantae frame
+DAM,dumbarton,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Clyde-region proxy for the Damnonii frame
+VCN,dundee,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Tay-region campaign proxy for the Venicones frame; it is not an exact identification of Orrea
+TAE,aberdeen,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Devana-region proxy for the Taexali frame
+EPD,inverary,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Epidium-region proxy for the Epidii frame
+VAC,elgin,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Tuesis-region proxy for the Vacomagi frame
+DCT,dingwall,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Varar-region proxy for the Decantae frame
+CAE,durness,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Northwestern campaign anchor for the Caereni frame
+CRE,skye,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Western campaign proxy for the Creones frame
+CNA,ullapool,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Northwestern campaign proxy for the Carnonacae frame
+LGB,dornoch,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Eastern Sutherland proxy for the British Lugi frame
+SME,tongue,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Northern campaign proxy for the Smertae frame
+NCR,thurso,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Caithness campaign proxy for the northern Cornavii frame
+NCR,orkney,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Orcadian island communities are attached to the adjacent Cornavii campaign frame without asserting ethnic identity or unitary rule
+NCR,shetland,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Shetland island communities are attached to the northern campaign frame without asserting ethnic identity or unitary rule
+VNI,donegal,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Northwestern relative-order proxy for the Vennicnii frame
+RHB,derry,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Rhobogdium-facing relative-order proxy for the Rhobogdii frame
+DAR,dunluce,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Northern relative-order proxy for the Darini frame
+ERD,enniskillen,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Northwestern interior proxy for the Erdini frame
+NAG,castlebar,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Magnata-region proxy for the Nagnatae frame
+AUT,galway,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Western relative-order proxy for the Autini frame
+GAN,ennis,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Western relative-order proxy for the Gangani frame
+VEL,killarney,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Southwestern relative-order proxy for the Velabri frame
+IVN,cork,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Iernis-region proxy for the Iverni frame
+USD,limerick,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,South-central relative-order proxy for the Usdiae frame
+IBG,waterford,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Southeastern relative-order proxy for the Irish Brigantes frame
+CND,kilkenny,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Southeastern interior proxy for the Coriondi frame
+CND,cullahill,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Coriondian remainder of the installed two-location Kilkenny campaign frame
+MNP,wexford,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Manapia-region proxy for the Manapii frame
+CCI,dublin,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Eastern relative-order proxy for the Cauci frame
+EBL,navan,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Eblana-region proxy for the Eblani frame
+ATB,henley,own_control_core,P8.7;PTO-GEO-II2,contested,Atrebatic boundary exception inside the installed Oxfordshire geometry
+COR,kettering,own_control_core,P8.7;PTO-GEO-II2,contested,Corieltauvian boundary exception inside the installed Northamptonshire geometry
+DOB,bath,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic boundary exception inside the installed Somerset geometry
+DUM,minehead,own_control_core,P8.7;PTO-GEO-II2,contested,Dumnonian boundary exception inside the installed Somerset geometry
+DUM,taunton,own_control_core,P8.7;PTO-GEO-II2,contested,Dumnonian boundary exception inside the installed Somerset geometry
+NAG,sligo,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Nagnatan boundary exception inside the installed Roscommon geometry
+DOB,banbury,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic remainder of the disjoint installed Oxfordshire campaign frame
+DOB,oxford,own_control_core,P8.7;PTO-GEO-II2,contested,Dobunnic remainder of the disjoint installed Oxfordshire campaign frame
+CAT,daventry,own_control_core,P8.7;PTO-GEO-II2,contested,Catuvellaunian remainder of the disjoint installed Northamptonshire campaign frame
+CAT,northampton,own_control_core,P8.7;PTO-GEO-II2,contested,Catuvellaunian remainder of the disjoint installed Northamptonshire campaign frame
+BLG,portishead,own_control_core,P8.7;PTO-GEO-II2,contested,British Belgic remainder of the disjoint installed Somerset campaign frame
+BLG,wells,own_control_core,P8.7;PTO-GEO-II2,contested,British Belgic remainder of the disjoint installed Somerset campaign frame
+ORD,anglesey,own_control_core,P8.7;PTO-GEO-II2,contested,Ordovician remainder of the disjoint installed Gwynedd campaign frame
+ORD,conwy,own_control_core,P8.7;PTO-GEO-II2,contested,Ordovician remainder of the disjoint installed Gwynedd campaign frame
+ORD,flint,own_control_core,P8.7;PTO-GEO-II2,contested,Ordovician remainder of the disjoint installed Gwynedd campaign frame
+ORD,harlech,own_control_core,P8.7;PTO-GEO-II2,contested,Ordovician remainder of the disjoint installed Gwynedd campaign frame
+ORD,penllyn,own_control_core,P8.7;PTO-GEO-II2,contested,Ordovician remainder of the disjoint installed Gwynedd campaign frame
+VAC,badenoch,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Vacomagian remainder of the disjoint installed Moray campaign frame
+VAC,urquhart,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Vacomagian remainder of the disjoint installed Moray campaign frame
+CAL,harris,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Unresolved Caledonian remainder of the disjoint outer-island campaign frame
+CAL,lewis,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Unresolved Caledonian remainder of the disjoint outer-island campaign frame
+CAL,uist,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Unresolved Caledonian remainder of the disjoint outer-island campaign frame
+DCT,gairloch,own_control_core,P8.7;PTO-GEO-II2;MANN-BRI,contested,Decantian remainder of the disjoint installed Ross campaign frame
+GAN,athlone,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Ganganian remainder of the disjoint installed Roscommon campaign frame
+GAN,castlereagh,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Ganganian remainder of the disjoint installed Roscommon campaign frame
+GAN,roscommon,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Ganganian remainder of the disjoint installed Roscommon campaign frame
+GAN,skreen,own_control_core,P8.7;PTO-GEO-II1;DARCY-IRE,contested,Ganganian remainder of the disjoint installed Roscommon campaign frame
 GER,hanover,own_control_core,P8.7;CAH-XI,contested,Germanic SoP geographic anchor
 OAS,urumqi,own_control_core,P8.8;CAH-XI;CHG,contested,Inner Asian oasis SoP geographic anchor
 KRS,suwon,own_control_core,P8.3;SAM,contested,Korean peninsula SoP geographic anchor

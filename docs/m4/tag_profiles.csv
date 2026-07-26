@@ -54,16 +54,57 @@ DOR,antq_inuit_dorset,antq_north_american,P8.10;CAH-XI;P10;P11,contested,Dorset 
 TUP,antq_tupi,antq_caribbean,P8.10;CAH-XI;P10;P11,contested,Tupi profile
 CAR,antq_carib,antq_caribbean,P8.10;CAH-XI;P10;P11,contested,Carib profile
 OSR,antq_syriac,antq_arsacid_zoroastrianism,P8.2;OCD;P10;P11,contested,Edessan Syriac-Aramaic profile before later Christian confessional consolidation
-CAT,antq_catuvellaunian,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,secure,Catuvellauni polity uses its matching campaign culture rather than the broad Brittonic fallback
-TRI,antq_trinovantian,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,secure,Trinovantes polity uses its matching campaign culture rather than the broad Brittonic fallback
-ICE,antq_icenian,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,secure,Iceni polity uses its matching campaign culture rather than the broad Brittonic fallback
-BRI,antq_brigantian,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,secure,Brigantes polity uses its matching campaign culture rather than the broad Brittonic fallback
-ATB,antq_british_atrebatic,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,secure,British Atrebates polity uses a distinct insular Atrebatic campaign culture
-SIL,antq_silurian,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,secure,Silures polity uses its matching campaign culture rather than the broad Brittonic fallback
-ORD,antq_ordovician,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,secure,Ordovices polity uses its matching campaign culture rather than the broad Brittonic fallback
-DUM,antq_dumnonian,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,secure,Dumnonii polity uses its matching southwestern campaign culture
-CAL,antq_caledonian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2;MANN-BRI,contested,Caledonian SoP retains the broad Caledonian profile while detailed northern cultures resolve local pops
-ULA,antq_voluntian,antq_celtic_religion,P8.7;P10;PTO-GEO-II1;DARCY-IRE,contested,Armagh-centered Ulaid SoP uses the local Voluntian campaign proxy without equating Ptolemy's name to every later Ulaid group
+CAT,antq_catuvellaunian,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,secure,Catuvellauni use their matching campaign culture
+TRI,antq_trinovantian,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,secure,Trinovantes use their matching campaign culture
+ICE,antq_icenian,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,secure,Iceni use their matching campaign culture
+BRI,antq_brigantian,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,secure,Brigantes use their matching campaign culture
+ATB,antq_british_atrebatic,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,secure,British Atrebates use their distinct insular campaign culture
+SIL,antq_silurian,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,contested,Silures use their matching Ptolemaic campaign culture
+ORD,antq_ordovician,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,contested,Ordovices use their matching Ptolemaic campaign culture
+DUM,antq_dumnonian,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,contested,Dumnonii use their matching southwestern campaign culture
+BRT,antq_cantiacian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2,contested,Cantiaci replace the former Brittonic residual with their matching Kentish frame
+REG,antq_regnian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2,contested,Regni use their matching south-coast campaign culture
+BLG,antq_british_belgic,antq_celtic_religion,P8.7;P10;PTO-GEO-II2,contested,British Belgae use a distinct insular Belgic campaign culture
+DUR,antq_durotrigian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2,contested,Durotriges use their matching Dorset campaign culture
+DOB,antq_dobunnic,antq_celtic_religion,P8.7;P10;PTO-GEO-II2,contested,Dobunni use their matching Severn-Cotswold campaign culture
+COR,antq_corieltauvian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2,contested,Corieltauvi use their matching east-Midland campaign culture
+CNV,antq_british_cornovian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2,contested,Midland Cornovii use a distinct campaign culture
+PBI,antq_british_parisian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2,contested,British Parisii use a distinct Humber campaign culture
+CRV,antq_carvetian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2,contested,Carvetii use their matching Cumbrian campaign culture
+DEM,antq_demetian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2,contested,Demetae use their matching southwestern Welsh campaign culture
+DEC,antq_deceanglian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2,contested,Deceangli use their matching northeastern Welsh campaign culture
+VOT,antq_votadinian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2;MANN-BRI,contested,Votadini use their matching Forth-border campaign culture
+SEL,antq_selgovaean,antq_celtic_religion,P8.7;P10;PTO-GEO-II2;MANN-BRI,contested,Selgovae use their matching southern-upland campaign culture
+NOV,antq_novantaean,antq_celtic_religion,P8.7;P10;PTO-GEO-II2;MANN-BRI,contested,Novantae use their matching southwestern campaign culture
+DAM,antq_damnonian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2;MANN-BRI,contested,Damnonii use their matching Clyde campaign culture
+VCN,antq_veniconian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2;MANN-BRI,contested,Venicones use their matching Tay-Fife campaign culture
+TAE,antq_taexalian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2;MANN-BRI,contested,Taexali use their matching northeastern campaign culture
+EPD,antq_epidian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2;MANN-BRI,contested,Epidii use their matching Argyll-Hebridean campaign culture
+VAC,antq_vacomagian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2;MANN-BRI,contested,Vacomagi use their matching Moray campaign culture
+DCT,antq_decantian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2;MANN-BRI,contested,Decantae use their matching Ross campaign culture
+CAE,antq_caerenian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2;MANN-BRI,contested,Caereni use their matching northwestern campaign culture
+CRE,antq_creonian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2;MANN-BRI,contested,Creones use their matching western campaign culture
+CNA,antq_carnonacan,antq_celtic_religion,P8.7;P10;PTO-GEO-II2;MANN-BRI,contested,Carnonacae use their matching northwestern campaign culture
+LGB,antq_british_lugian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2;MANN-BRI,contested,British Lugi use a distinct northern campaign culture
+SME,antq_smertian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2;MANN-BRI,contested,Smertae use their matching northern campaign culture
+NCR,antq_northern_cornavian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2;MANN-BRI,contested,Northern Cornavii use a distinct Caithness campaign culture
+CAL,antq_caledonian,antq_celtic_religion,P8.7;P10;PTO-GEO-II2;MANN-BRI,contested,Caledoni retain only the unresolved forest-core and outer-island campaign frame
+VNI,antq_vennicnian,antq_celtic_religion,P8.7;P10;PTO-GEO-II1;DARCY-IRE,contested,Vennicnii use their matching northwestern Hibernian proxy culture
+RHB,antq_rhobogdian,antq_celtic_religion,P8.7;P10;PTO-GEO-II1;DARCY-IRE,contested,Rhobogdii use their matching northern Hibernian proxy culture
+DAR,antq_darinian,antq_celtic_religion,P8.7;P10;PTO-GEO-II1;DARCY-IRE,contested,Darini use their matching northern Hibernian proxy culture
+ERD,antq_erdinian,antq_celtic_religion,P8.7;P10;PTO-GEO-II1;DARCY-IRE,contested,Erdini use their matching northwestern Hibernian proxy culture
+ULA,antq_voluntian,antq_celtic_religion,P8.7;P10;PTO-GEO-II1;DARCY-IRE,contested,Voluntii replace the later Ulaid label and use their matching northeastern proxy culture
+NAG,antq_nagnatan,antq_celtic_religion,P8.7;P10;PTO-GEO-II1;DARCY-IRE,contested,Nagnatae use their matching western Hibernian proxy culture
+AUT,antq_autinian,antq_celtic_religion,P8.7;P10;PTO-GEO-II1;DARCY-IRE,contested,Autini use their matching western Hibernian proxy culture
+GAN,antq_ganganian,antq_celtic_religion,P8.7;P10;PTO-GEO-II1;DARCY-IRE,contested,Gangani use their matching western Hibernian proxy culture
+VEL,antq_velabrian,antq_celtic_religion,P8.7;P10;PTO-GEO-II1;DARCY-IRE,contested,Velabri use their matching southwestern Hibernian proxy culture
+IVN,antq_ivernian,antq_celtic_religion,P8.7;P10;PTO-GEO-II1;DARCY-IRE,contested,Iverni use their matching southwestern Hibernian proxy culture
+USD,antq_usdiaean,antq_celtic_religion,P8.7;P10;PTO-GEO-II1;DARCY-IRE,contested,Usdiae use their matching south-central Hibernian proxy culture
+IBG,antq_irish_brigantian,antq_celtic_religion,P8.7;P10;PTO-GEO-II1;DARCY-IRE,contested,Irish Brigantes use a distinct southeastern Hibernian proxy culture
+CND,antq_coriondian,antq_celtic_religion,P8.7;P10;PTO-GEO-II1;DARCY-IRE,contested,Coriondi use their matching southeastern interior proxy culture
+MNP,antq_manapian,antq_celtic_religion,P8.7;P10;PTO-GEO-II1;DARCY-IRE,contested,Manapii use their matching southeastern Hibernian proxy culture
+CCI,antq_caucian,antq_celtic_religion,P8.7;P10;PTO-GEO-II1;DARCY-IRE,contested,Cauci use their matching eastern Hibernian proxy culture
+EBL,antq_eblanian,antq_celtic_religion,P8.7;P10;PTO-GEO-II1;DARCY-IRE,contested,Eblani use their matching eastern-interior Hibernian proxy culture
 CHC,antq_chaucian,antq_germanic_religion,P8.7;P10;STR-GER;TAC-GER;OCD-GER;PLE,contested,Chauci campaign frame without an exact tribal frontier
 CLC,antq_caulcian,antq_germanic_religion,P8.7;P10;STR-GER;TAC-GER;OCD-GER;PLE,contested,Caulci campaign frame without an exact tribal frontier
 CPS,antq_campsian,antq_germanic_religion,P8.7;P10;STR-GER;TAC-GER;OCD-GER;PLE,contested,Campsiani campaign frame without an exact tribal frontier
@@ -160,7 +201,6 @@ BNT,antq_eastern_bantu,antq_kushite_amun,P8.5;P10;P11;CAH-XI,contested,Bantu com
 BAR,antq_cushitic,antq_kushite_amun,P8.5;P10;P11;CAH-XI,contested,Barbaria community frame aligned to its Cushitic population atlas
 PLA,antq_hopewellian,antq_north_american,P8.10;P10;P11;CAH-XI,contested,Plains and coastal residual frame aligned to its Hopewellian population plurality
 CAU,antq_kartvelian,antq_arsacid_zoroastrianism,P8.2;P10;P11;CAH-XI,contested,Caucasian highland residual frame aligned to its Kartvelian population plurality
-BRT,antq_icenian,antq_celtic_religion,P8.7;P10;P11;CAH-XI,contested,Brittonic residual frame aligned to its Icenian population plurality
 MNC,antq_yilou,antq_tengri,P8.3;P10;P11;CAH-XI,contested,Manchurian community frame aligned to its Yilou population atlas
 TIB,antq_tibeto_burman,antq_arsacid_zoroastrianism,P8.8;P10;P11;CAH-XI,contested,Tibetan community frame aligned to its Tibeto-Burman population atlas
 MIC,antq_micronesian,antq_austronesian_religion,P8.9;P10;P11;CAH-XI,contested,Micronesian community frame aligned to its island population atlas
