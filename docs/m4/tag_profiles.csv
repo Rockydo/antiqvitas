@@ -133,27 +133,42 @@ HLV,antq_helveconan,antq_germanic_religion,P8.7;P10;TAC-GER;OCD-GER;PLE,conteste
 HRI,antq_harian,antq_germanic_religion,P8.7;P10;TAC-GER;OCD-GER;PLE,contested,Harii campaign frame without an exact tribal frontier
 HLS,antq_helisian,antq_germanic_religion,P8.7;P10;TAC-GER;OCD-GER;PLE,contested,Helisii campaign frame without an exact tribal frontier
 ZUM,antq_zumian,antq_germanic_religion,P8.7;P10;STR-GER;TAC-GER;OCD-GER;PLE,contested,Zumi campaign frame without an exact tribal frontier
-PRZ,antq_venedi,antq_baltic_slavic,UW-PRZ;P8.7;P10;P11,contested,Przeworsk is an archaeological SoP and does not assert Venedi ethnicity
-ILM,antq_northeast_venedi,antq_finnic,P8.7;P10;P11;CAH-XI,contested,Ilmen forest community frame aligned to the broad northeastern forest population atlas without a later Rus identity
-BLF,antq_northeast_venedi,antq_finnic,P8.7;P10;P11;CAH-XI,contested,Beloe forest community frame aligned to the broad northeastern forest population atlas without a later national identity
-MOK,antq_northeast_venedi,antq_finnic,P8.7;P10;P11;CAH-XI,contested,Moskva-Oka forest community frame aligned to the broad northeastern forest population atlas without a later national identity
-UVF,antq_northeast_venedi,antq_finnic,P8.7;P10;P11;CAH-XI,contested,Upper Volga forest community frame aligned to the broad northeastern forest population atlas without a later national identity
-WHT,antq_northeast_venedi,antq_finnic,P8.7;P10;P11;CAH-XI,contested,White Sea forest community frame aligned to the broad northeastern forest population atlas without a later national identity
-MRV,antq_northeast_venedi,antq_finnic,P8.7;P10;P11;CAH-XI,contested,Middle Volga forest-steppe frame aligned to the broad northeastern forest population atlas without a later national identity
-SMD,antq_northeast_venedi,antq_baltic_slavic,P8.7;P10;P11;CAH-XI,contested,Upper Dnieper-Dvina frame aligned to the broad northeastern forest population atlas without a later Rus identity
-RZM,antq_northeast_venedi,antq_finnic,P8.7;P10;P11;CAH-XI,contested,Oka-Moksha frame aligned to the broad northeastern forest population atlas without projecting later Mordvin identities
-BLR,antq_dnieper_venedi,antq_baltic_slavic,P8.7;P10;P11;CAH-XI,contested,Upper Dnieper forest frame without a later Belarusian identity
+PRZ,antq_przeworsk,antq_baltic_slavic,UW-PRZEWORSK;P8.7;P10;P11,contested,Greater-Poland Przeworsk archaeological frame without an ethnic-state claim
+LPR,antq_przeworsk,antq_baltic_slavic,UW-PRZEWORSK;PAN-LPR;P8.7;P10;P11,contested,Lesser-Poland Przeworsk archaeological frame without an ethnic-state claim
+ILM,antq_late_dyakovo_north,antq_finnic,RA-DYAKOVO-UPPER;GERMANIA-NEVA;P10;P11,contested,Msta-Ilmen late-Dyakovo gameplay frame without a people-state claim
+PLH,antq_striated_pottery_north,antq_finnic,GERMANIA-NEVA;P10;P11,contested,Pskov-Luga striated-pottery gameplay frame without a people-state claim
+BLF,antq_late_dyakovo_north,antq_finnic,RA-DYAKOVO-UPPER;P10;P11,contested,Beloe-Mologa late-Dyakovo gameplay frame without a later national identity
+MOK,antq_late_dyakovo,antq_finnic,RAS-DYAKOVO;RA-DYAKOVO-UPPER;P10;P11,contested,Moskva-Oka late-Dyakovo gameplay frame without an ethnic-state claim
+UVF,antq_gorodets,antq_finnic,BSE-GORODETS;P10;P11,contested,Nizhny-Novgorod Gorodets gameplay frame without an ethnic-state claim
+UVD,antq_late_dyakovo,antq_finnic,RA-DYAKOVO-UPPER;P10;P11,contested,Upper-Volga late-Dyakovo gameplay frame without an ethnic-state claim
+KLY,antq_late_dyakovo,antq_finnic,RA-DYAKOVO-UPPER;P10;P11,contested,Klyazma late-Dyakovo gameplay frame without an ethnic-state claim
+WHT,antq_late_kargopol,antq_finnic,ENC-NEEU;P10;P11,contested,Late Kargopol gameplay frame for mobile northern collectives without a state claim
+MZN,antq_late_belomorye,antq_finnic,ENC-NEEU;P10;P11,contested,Late Belomorye gameplay frame for mobile northern collectives without a state claim
+VYG,antq_pidzh,antq_finnic,ENC-NEEU;P10;P11,contested,Pidzh gameplay frame without a later ethnic or state identity
+MRV,antq_gorodets,antq_finnic,BSE-GORODETS;P10;P11,contested,Sura-Volga Gorodets gameplay frame without an ethnic-state claim
+TGD,antq_gorodets,antq_finnic,BSE-GORODETS;P10;P11,contested,Tsna-Upper-Don Gorodets gameplay frame without an ethnic-state claim
+SMD,antq_dnieper_dvina,antq_baltic_slavic,AWE-DNIEPER-DVINA;P10;P11,contested,Smolensk Dnieper-Dvina gameplay frame without a later Rus identity
+RZM,antq_gorodets,antq_finnic,BSE-GORODETS;P10;P11,contested,Oka-Moksha Gorodets gameplay frame without projecting later Mordvin identities
+BLR,antq_dnieper_dvina,antq_baltic_slavic,AWE-DNIEPER-DVINA;P10;P11,contested,Upper Dnieper-Dvina gameplay frame without a later Belarusian identity
+NEM,antq_striated_pottery_neman,antq_baltic_slavic,LIT-NEMAN-STRIATED;P10;P11,contested,Upper Neman striated-pottery gameplay frame without an ethnic-state claim
 ZRB,antq_dnieper_venedi,antq_baltic_slavic,RAS-ZAR;P8.7;P10;P11,contested,Zarubintsy is an archaeological horizon rather than an ethnic state
-PDL,antq_dnieper_venedi,antq_baltic_slavic,P8.7;P10;P11;CAH-XI,contested,Upper Dniester community frame without a later Ruthenian identity
-DNP,antq_dnieper_venedi,antq_baltic_slavic,RAS-ZAR;P8.7;P10;P11,contested,Middle Dnieper community frame without an ethnic-state claim
-KRL,antq_finnic_culture,antq_finnic,P8.7;P10;P11;CAH-XI,contested,Karelian forest frame without a medieval polity claim
-PRM,antq_permic,antq_finnic,PAR-PER;P8.7;P10;P11,contested,Early Permic archaeological-linguistic frame rather than a state
-VLF,antq_finnic_culture,antq_finnic,P8.7;P10;P11;CAH-XI,contested,Middle Volga Finnic community frame without later ethnonyms
-SUG,antq_uralic,antq_finnic,P8.7;P10;P11;CAH-XI,contested,Southern Ural community frame rather than a state
-SMY,antq_samoyedic,antq_finnic,P8.7;P10;P11;CAH-XI,contested,Northern Ural community frame without a modern-language boundary
-SRG,antq_sargat,antq_tengri,RAS-SAR;HUM-SAR;P8.8;P10;P11,contested,Sargat archaeological horizon rather than an ethnicity or state
+PDL,antq_lipita,antq_baltic_slavic,AAC-LIPITA;P8.7;P10;P11,contested,Podolian Lipita gameplay frame without equating material culture and one ethnic polity
+RLG,antq_lipita,antq_baltic_slavic,AAC-LIPITA;P8.7;P10;P11,contested,Red-Ruthenian Lipita gameplay frame without equating material culture and one ethnic polity
+DNP,antq_zarubintsy,antq_baltic_slavic,RAS-ZAR;P8.7;P10;P11,contested,Desna-Severia Zarubintsy gameplay frame without an ethnic-state claim
+RBD,antq_zarubintsy,antq_baltic_slavic,RAS-ZAR;P8.7;P10;P11,contested,Right-Bank Dnieper Zarubintsy gameplay frame without an ethnic-state claim
+LBD,antq_zarubintsy,antq_baltic_slavic,RAS-ZAR;P8.7;P10;P11,contested,Left-Bank Dnieper Zarubintsy gameplay frame without an ethnic-state claim
+KRL,antq_ladoga_iron_age,antq_finnic,GERMANIA-NEVA;P10;P11,contested,Ladoga early-Iron-Age gameplay frame without a medieval Karelian polity claim
+PRM,antq_glyadenovo,antq_finnic,BSE-GLYADENOVO;PAR-PER;P10;P11,contested,Middle Kama and Vychegda Glyadenovo archaeological frame rather than a state
+VYP,antq_pyanobor,antq_finnic,ENC-NEEU;PAR-PER;P10;P11,contested,Vyatka Pyanobor archaeological frame rather than a state
+VLF,antq_pyanobor,antq_finnic,ENC-NEEU;PAR-PER;P10;P11,contested,Lower Kama Pyanobor archaeological frame rather than a state
+SUG,antq_kara_abyz,antq_finnic,AES-SOUTH-URAL;P10;P11,contested,Southern Cis-Ural Kara-Abyz archaeological frame rather than a state
+SMY,antq_dzhudzhydyag,antq_finnic,ENC-NEEU;P10;P11,contested,Pechora-Timan Dzhudzhydyag archaeological frame without a modern-language boundary
+SRG,antq_sargat,antq_tengri,RAS-SAR;RAS-SARGAT-CHRON;P8.8;P10;P11,contested,Omsk-Ishim Sargat archaeological frame rather than an ethnicity or state
+AKL,antq_altai_kulay,antq_finnic,ASU-ALTAI-KULAY;P10;P11,contested,Forest-steppe Altai Kulay archaeological frame rather than an ethnicity or state
+ALT,antq_altai_xiongnu_contact,antq_tengri,ACSS-ALTAI-XIONGNU;P10;P11,contested,Altai contact-horizon frame without asserting Xiongnu political occupation
 KUL,antq_kulay,antq_finnic,TOM-KUL;P8.8;P10;P11,contested,Kulay archaeological horizon rather than an ethnicity or state
-UGR,antq_ugric,antq_finnic,P8.7;P10;P11;CAH-XI,contested,Western Ugric regional frame without a modern-language boundary
+UGR,antq_kulay,antq_finnic,TOM-KUL;BSE-UST-POLUY;P10;P11,contested,Lower-Irtysh Kulay archaeological frame without a modern-language boundary
+SIB,antq_tes_tashtyk,antq_tengri,FU-TASHTYK;P8.8;P10;P11,contested,Minusinsk Tes-Tashtyk transition frame rather than a unitary state
 HOK,antq_wa,antq_kami,JAA-YAY;ISIJ-YAY;P8.3;P10;P11,contested,Hokuriku regional Wa community frame
 SHK,antq_wa,antq_kami,JAA-YAY;ISIJ-YAY;P8.3;P10;P11,contested,Shikoku regional Wa community frame
 OHW,antq_wa,antq_kami,JAA-YAY;P8.3;P10;P11,contested,Northern Honshu Yayoi-Jomon frontier frame

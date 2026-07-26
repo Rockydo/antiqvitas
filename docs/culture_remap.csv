@@ -237,14 +237,14 @@ area,svealand_area,antq_germanic,P8.7;P10;CAH-XI,contested,Central Swedish Germa
 area,syd_norge_area,antq_germanic,P8.7;P10;CAH-XI,contested,Southern Norwegian Germanic regional proxy
 area,nord_norge_area,antq_germanic,P8.7;P10;CAH-XI,contested,Northern Norwegian Germanic regional proxy; Sami diversity remains unresolved
 area,finland_area,antq_finnic_culture,P8.7;P10;CAH-XI,contested,Finnic regional frame without projecting medieval or modern national boundaries
-area,karelia_area,antq_finnic_culture,P8.7;P10;CAH-XI,contested,Karelian-Finnic regional frame without projecting medieval or modern national boundaries
+area,karelia_area,antq_ladoga_iron_age,GERMANIA-NEVA;P10,contested,Ladoga early-Iron-Age material frame without backdating a medieval Karelian identity
 area,baltic_area,antq_baltic,P8.7;P10;CAH-XI,contested,Baltic regional proxy
 area,lithuania_area,antq_baltic,P8.7;P10;CAH-XI,contested,Baltic regional proxy
 area,prussia_area,antq_baltic,P8.7;P10;CAH-XI,contested,Baltic regional proxy
 area,samogitia_area,antq_baltic,P8.7;P10;CAH-XI,contested,Baltic regional proxy
 area,central_poland_area,antq_venedi,P8.7;P10;CAH-XI,contested,Venedi regional proxy without settling Proto-Slavic ethnogenesis
-area,greater_poland_area,antq_venedi,P8.7;P10;CAH-XI,contested,Venedi regional proxy without settling Proto-Slavic ethnogenesis
-area,lesser_poland_area,antq_venedi,P8.7;P10;CAH-XI,contested,Venedi regional proxy without settling Proto-Slavic ethnogenesis
+area,greater_poland_area,antq_przeworsk,UW-PRZEWORSK;P8.7;P10,contested,Greater-Poland Przeworsk material frame without settling ethnicity
+area,lesser_poland_area,antq_przeworsk,UW-PRZEWORSK;PAN-LPR;P8.7;P10,contested,Lesser-Poland Przeworsk material frame without settling ethnicity
 area,mazovia_area,antq_venedi,P8.7;P10;CAH-XI,contested,Venedi regional proxy without settling Proto-Slavic ethnogenesis
 area,silesia_area,antq_venedi,P8.7;P10;CAH-XI,contested,Venedi regional proxy without settling Proto-Slavic ethnogenesis
 area,brabant_area,antq_belgic,P8.7;P10;CAH-XI,contested,Belgic regional proxy under Roman frontier influence
@@ -337,7 +337,6 @@ area,argun_area,antq_xianbei,P8.8;P10;CAH-XI,contested,Xianbei eastern-steppe re
 area,eastern_gobi_area,antq_xianbei,P8.8;P10;CAH-XI,contested,Xianbei eastern-Gobi regional proxy
 area,tuva_area,antq_dingling,P8.8;P10;CAH-XI,contested,Dingling Upper-Yenisei and Tuva regional proxy
 area,shilkari_area,antq_dingling,P8.8;P10;CAH-XI,contested,Dingling Upper-Yenisei regional proxy
-area,omsk_area,antq_sargat,P8.8;P10;RAS-SAR;HUM-SAR,contested,Omsk-Irtysh Sargat archaeological proxy; not a uniform Ugric or steppe identity
 area,morocco_area,antq_berber,P8.5;P10;CAH-XI,contested,Mauretanian Atlantic and Rif Berber regional proxy
 area,sus_area,antq_gaetulian,P8.5;P10;CAH-XI,contested,Southwestern Maghrebi Gaetulian regional proxy
 area,desert_area,antq_garamantian,P8.5;P10;CAH-XI,contested,Garamantian Fezzan and Saharan-trade regional proxy
@@ -492,8 +491,8 @@ area,atlas_high_plateau,antq_gaetulian,P8.5;P10;CAH-XI;TRE-GAE,contested,Gaetuli
 area,transdanubia_area,antq_pannonian,P8.7;P10;OCD-PAN,contested,Transdanubian Pannonian regional proxy before the later Roman provincial institution and without a uniform Romanization claim
 area,upper_selenga_area,antq_xiongnu,P8.8;P10;OUP-XIO,contested,Upper Selenga Orkhon-Tuul Xiongnu core regional proxy without a homogeneous culture or linguistic claim
 location,khotan,antq_khotan_oasis,P8.8;P10;IRAN-KHO;IRAN-CT,contested,Exact Khotan oasis proxy without projecting later Khotanese-Saka language evidence across the southern Tarim
-area,vyatka_area,antq_permic,P8.7;P10;PAR-PER,contested,Early Permic Vyatka-Kama regional proxy without projecting later Komi or Udmurt identities or a fixed language boundary
-area,perm_area,antq_permic,P8.7;P10;PAR-PER,contested,Early Permic Kama-Belaya regional proxy without projecting later Komi or Udmurt identities or a fixed language boundary
+area,vyatka_area,antq_pyanobor,ENC-NEEU;PAR-PER;P10,contested,Vyatka Pyanobor material frame without projecting later Komi Udmurt or Mari identities
+area,perm_area,antq_glyadenovo,BSE-GLYADENOVO;PAR-PER;P10,contested,Middle-Kama Glyadenovo material frame without projecting later Komi or Udmurt identities
 province,nizwa_province,antq_samad,P8.6;P10;IRAQ-SAM;OUP-GUL,contested,Late pre-Islamic central-Oman archaeological proxy without assigning a tribe language or state to the full peninsula
 province,surgut_province,antq_kulay,P8.8;P10;TOM-KUL,contested,Surgut-Narym Ob Kulay archaeological proxy without asserting an ethnic or linguistic identity
 province,kargasok_province,antq_kulay,P8.8;P10;TOM-KUL,contested,Surgut-Narym Ob Kulay archaeological proxy without asserting an ethnic or linguistic identity
@@ -505,6 +504,45 @@ location,aksu,antq_aksu_oasis,P8.3;P10;IRAN-AKS,contested,Exact Aksu oasis proxy
 location,kashgar,antq_kashgar_oasis,P8.3;P10;IRAN-KAS,contested,Exact Kashgar oasis proxy without assigning an ethnicity language or wider western-Tarim boundary
 location,hami,antq_hami_oasis,P8.3;P10;IRAN-CT,contested,Exact Hami oasis proxy without assigning an ethnicity language or wider eastern-Tarim boundary
 location,turpan,antq_turpan_oasis,P8.3;P10;IRAN-CT,contested,Exact Turpan oasis proxy without assigning an ethnicity language or wider eastern-Tarim boundary
+area,east_novgorod_area,antq_late_dyakovo_north,RA-DYAKOVO-UPPER;GERMANIA-NEVA;P10,contested,Msta-Ilmen late-Dyakovo material frame without a later Rus identity
+area,west_novgorod_area,antq_striated_pottery_north,GERMANIA-NEVA;P10,contested,Pskov-Luga striated-pottery material frame without a later Rus identity
+area,beloozero_area,antq_late_dyakovo_north,RA-DYAKOVO-UPPER;P10,contested,Beloe-Mologa late-Dyakovo material frame without a later national identity
+area,moscow_area,antq_late_dyakovo,RAS-DYAKOVO;RA-DYAKOVO-UPPER;P10,contested,Moskva-basin late-Dyakovo material frame without an ethnic-state claim
+area,oka_area,antq_late_dyakovo,RAS-DYAKOVO;RA-DYAKOVO-UPPER;P10,contested,Upper-Oka late-Dyakovo material frame without an ethnic-state claim
+area,nizhny_novgorod_area,antq_gorodets,BSE-GORODETS;P10,contested,Nizhny-Novgorod Gorodets material frame without an ethnic-state claim
+area,suzdal_area,antq_late_dyakovo,RA-DYAKOVO-UPPER;P10,contested,Klyazma late-Dyakovo material frame without an ethnic-state claim
+area,tver_area,antq_late_dyakovo,RA-DYAKOVO-UPPER;P10,contested,Upper-Volga late-Dyakovo material frame without an ethnic-state claim
+area,vladimir_area,antq_late_dyakovo,RA-DYAKOVO-UPPER;P10,contested,Klyazma late-Dyakovo material frame without an ethnic-state claim
+area,yaroslavl_area,antq_late_dyakovo,RA-DYAKOVO-UPPER;P10,contested,Upper-Volga late-Dyakovo material frame without an ethnic-state claim
+area,arkhangelsk_area,antq_late_belomorye,ENC-NEEU;P10,contested,Mezen-White-Sea late-Belomorye material frame for mobile northern collectives
+area,pomorye_area,antq_late_kargopol,ENC-NEEU;P10,contested,Onega-Kargopol material frame for mobile northern collectives
+area,totma_area,antq_pidzh,ENC-NEEU;P10,contested,Sukhona-Vychegda Pidzh material frame without a later ethnic identity
+area,samara_area,antq_gorodets,BSE-GORODETS;P10,contested,Sura-Middle-Volga Gorodets material frame without an ethnic-state claim
+area,tambov_area,antq_gorodets,BSE-GORODETS;P10,contested,Tsna-Upper-Don Gorodets material frame without an ethnic-state claim
+area,smolensk_area,antq_dnieper_dvina,AWE-DNIEPER-DVINA;P10,contested,Smolensk Dnieper-Dvina material frame without a later Rus identity
+area,ryazan_area,antq_gorodets,BSE-GORODETS;P10,contested,Oka-Moksha Gorodets material frame without projecting later Mordvin identities
+area,black_ruthenia_area,antq_striated_pottery_neman,LIT-NEMAN-STRIATED;P10,contested,Upper-Neman striated-pottery material frame without a later Belarusian identity
+area,white_ruthenia_area,antq_dnieper_dvina,AWE-DNIEPER-DVINA;P10,contested,Upper-Dnieper-Dvina material frame without a later Belarusian identity
+area,podolia_area,antq_lipita,AAC-LIPITA;P8.7;P10,contested,Podolian Lipita material frame without equating pottery and one ethnic polity
+area,red_ruthenia_area,antq_lipita,AAC-LIPITA;P8.7;P10,contested,Red-Ruthenian Lipita material frame without equating pottery and one ethnic polity
+area,left_bank_ukraine_area,antq_zarubintsy,RAS-ZAR;P8.7;P10,contested,Left-Bank Dnieper Zarubintsy material frame without an ethnic-state claim
+area,right_bank_ukraine_area,antq_zarubintsy,RAS-ZAR;P8.7;P10,contested,Right-Bank Dnieper Zarubintsy material frame without an ethnic-state claim
+area,severia_area,antq_zarubintsy,RAS-ZAR;P8.7;P10,contested,Desna-Severia Zarubintsy material frame without an ethnic-state claim
+area,karagay_area,antq_pyanobor,ENC-NEEU;PAR-PER;P10,contested,Western-Kama Pyanobor material frame without a later ethnic identity
+area,ust_sysola_area,antq_glyadenovo,BSE-GLYADENOVO;PAR-PER;P10,contested,Vychegda Glyadenovo material frame without a later ethnic identity
+area,bolghar_area,antq_pyanobor,ENC-NEEU;PAR-PER;P10,contested,Lower-Kama Pyanobor material frame without projecting medieval Bolghar identity
+area,kazan_area,antq_pyanobor,ENC-NEEU;PAR-PER;P10,contested,Lower-Kama Pyanobor material frame without projecting medieval Kazan identity
+area,bashkiria_area,antq_kara_abyz,AES-SOUTH-URAL;P10,contested,Southern-Cis-Ural Kara-Abyz material frame without projecting later Bashkir identity
+area,vorkuta_area,antq_dzhudzhydyag,ENC-NEEU;P10,contested,Pechora-Timan Dzhudzhydyag material frame without a later language boundary
+area,bursol_area,antq_altai_xiongnu_contact,ACSS-ALTAI-XIONGNU;P10,contested,Altai and East-Kazakhstan Xiongnu-contact material frame without a political-occupation claim
+area,kulykol_area,antq_sargat,RAS-SAR;RAS-SARGAT-CHRON;P8.8;P10,contested,Ishim Sargat material frame without an ethnic-state claim
+area,omsk_area,antq_sargat,RAS-SAR;RAS-SARGAT-CHRON;P8.8;P10,contested,Omsk-Irtysh Sargat material frame without an ethnic-state claim
+area,suzun_area,antq_altai_kulay,ASU-ALTAI-KULAY;P10,contested,Forest-steppe Altai Kulay material frame without an ethnic-state claim
+area,chimgi_tura_area,antq_kulay,TOM-KUL;BSE-UST-POLUY;P10,contested,Lower-Irtysh Kulay material frame without a modern-language boundary
+area,qashliq_area,antq_kulay,TOM-KUL;BSE-UST-POLUY;P10,contested,Lower-Irtysh Kulay material frame without a modern-language boundary
+location,abakasnk,antq_tes_tashtyk,FU-TASHTYK;P10,contested,Minusinsk Tes-Tashtyk transition proxy at the campaign boundary
+location,beya,antq_tes_tashtyk,FU-TASHTYK;P10,contested,Minusinsk Tes-Tashtyk transition proxy at the campaign boundary
+location,shushenskoye,antq_tes_tashtyk,FU-TASHTYK;P10,contested,Minusinsk Tes-Tashtyk transition proxy at the campaign boundary
 province,opole_province,antq_lugian,P10;STR-GER;TAC-GER;OCD-GER;PLE,contested,Oder-side Lugii campaign-boundary proxy; not an exact tribal polygon
 province,olesnica_province,antq_zumian,P10;STR-GER;TAC-GER;OCD-GER;PLE,contested,Maroboduus-era Zumi campaign-boundary proxy; not an exact tribal polygon
 province,stettin_province,antq_gutonian,P10;STR-GER;TAC-GER;OCD-GER;PLE,contested,Baltic-side Gutones campaign-boundary proxy; not an exact tribal polygon
@@ -554,9 +592,6 @@ area,changtang_area,antq_zhangzhung,P8.3;P10;CAH-XI,contested,Northern plateau Z
 area,northern_tai_highland_area,antq_tai,P8.9;P10;CAH-XI,contested,Northern mainland Tai highland regional proxy before later state identities
 area,shan_highland_area,antq_tai,P8.9;P10;CAH-XI,contested,Shan highland Tai regional proxy before later state identities
 province,vijaya_province,antq_sa_huynh,P8.9;P10;CAM-SAH;VASS-SAH,contested,Narrow central-coast Sa Huynh archaeological frame preserved inside the broader Proto-Cham region
-area,chimgi_tura_area,antq_ugric,P8.7;P10;CAH-XI,contested,Western Siberian Ugric regional frame; archaeological subframes retain higher specificity
-area,qashliq_area,antq_ugric,P8.7;P10;CAH-XI,contested,Lower-Irtysh Ugric regional frame; archaeological subframes retain higher specificity
-area,vorkuta_area,antq_samoyedic,P8.7;P10;CAH-XI,contested,Northeastern European Samoyedic regional frame without a modern-language boundary
 province,tlatlauquitepec_province,antq_totonac,P8.10;P10;CAH-XI,contested,Gulf-slope Totonac campaign frame without projecting later political borders
 province,tuxpan_province,antq_totonac,P8.10;P10;CAH-XI,contested,Northern Gulf Totonac campaign frame without projecting later political borders
 province,coatzacoalco_province,antq_epi_olmec,P8.10;P10;CAH-XI,contested,Narrow Coatzacoalcos Epi-Olmec archaeological frame retained inside the broader Mixe-Zoquean region

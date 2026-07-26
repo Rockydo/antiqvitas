@@ -1756,11 +1756,11 @@ BED = { # Chaulotaeans; STR-ARAB;P8.6
 	is_historic = yes
 }
 
-XDO = { # Siberian Societies; P8.8;CAH-XI
+XDO = { # Tes-Tashtyk Transition; FU-TASHTYK;P8.8
 	color = rgb { 119 107 123 }
 	color2 = rgb { 136 148 132 }
 
-	culture_definition = antq_xiongnu
+	culture_definition = antq_tes_tashtyk
 	religion_definition = antq_tengri
 	is_historic = yes
 }
@@ -2098,92 +2098,164 @@ ZUM = { # Zumi; P8.7;STR-GER;TAC-GER;OCD-GER;PLE
 	is_historic = yes
 }
 
-XEC = { # Przeworsk Horizon Communities; UW-PRZ;P8.7;CAH-XI
+XEC = { # Greater-Poland Przeworsk Group; UW-PRZEWORSK;P8.7
 	color = rgb { 88 110 143 }
 	color2 = rgb { 167 145 112 }
 
-	culture_definition = antq_venedi
+	culture_definition = antq_przeworsk
 	religion_definition = antq_baltic_slavic
 	is_historic = yes
 }
 
-ILM = { # Ilmen Forest Communities; P8.7;CAH-XI
+LPR = { # Lesser-Poland Przeworsk Group; UW-PRZEWORSK;PAN-LPR;P8.7
+	color = rgb { 96 90 120 }
+	color2 = rgb { 159 165 135 }
+
+	culture_definition = antq_przeworsk
+	religion_definition = antq_baltic_slavic
+	is_historic = yes
+}
+
+ILM = { # Msta-Ilmen Late Dyakovo Horizon; RA-DYAKOVO-UPPER;GERMANIA-NEVA
 	color = rgb { 99 98 142 }
 	color2 = rgb { 156 157 113 }
 
-	culture_definition = antq_northeast_venedi
+	culture_definition = antq_late_dyakovo_north
 	religion_definition = antq_finnic
 	is_historic = yes
 }
 
-BLF = { # Beloe Lake Communities; P8.7;CAH-XI
+PLH = { # Pskov-Luga Striated Pottery Group; GERMANIA-NEVA
+	color = rgb { 100 86 132 }
+	color2 = rgb { 155 169 123 }
+
+	culture_definition = antq_striated_pottery_north
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+BLF = { # Beloe-Mologa Late Dyakovo Horizon; RA-DYAKOVO-UPPER
 	color = rgb { 70 126 120 }
 	color2 = rgb { 185 129 135 }
 
-	culture_definition = antq_northeast_venedi
+	culture_definition = antq_late_dyakovo_north
 	religion_definition = antq_finnic
 	is_historic = yes
 }
 
-MOK = { # Moskva-Oka Communities; P8.7;CAH-XI
+MOK = { # Moskva-Oka Late Dyakovo Culture; RAS-DYAKOVO;RA-DYAKOVO-UPPER
 	color = rgb { 56 112 139 }
 	color2 = rgb { 199 143 116 }
 
-	culture_definition = antq_northeast_venedi
+	culture_definition = antq_late_dyakovo
 	religion_definition = antq_finnic
 	is_historic = yes
 }
 
-UVF = { # Upper Volga Communities; P8.7;CAH-XI
+UVF = { # Nizhny-Novgorod Gorodets Group; BSE-GORODETS
 	color = rgb { 63 117 131 }
 	color2 = rgb { 192 138 124 }
 
-	culture_definition = antq_northeast_venedi
+	culture_definition = antq_gorodets
 	religion_definition = antq_finnic
 	is_historic = yes
 }
 
-WHT = { # White Sea Forest Communities; P8.7;CAH-XI
+UVD = { # Upper Volga Late Dyakovo Horizon; RA-DYAKOVO-UPPER
+	color = rgb { 59 129 136 }
+	color2 = rgb { 196 126 119 }
+
+	culture_definition = antq_late_dyakovo
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+KLY = { # Klyazma Late Dyakovo Horizon; RA-DYAKOVO-UPPER
+	color = rgb { 66 113 138 }
+	color2 = rgb { 189 142 117 }
+
+	culture_definition = antq_late_dyakovo
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+WHT = { # Late Kargopol Culture; ENC-NEEU
 	color = rgb { 47 107 119 }
 	color2 = rgb { 208 148 136 }
 
-	culture_definition = antq_northeast_venedi
+	culture_definition = antq_late_kargopol
 	religion_definition = antq_finnic
 	is_historic = yes
 }
 
-XED = { # Middle Volga Communities; P8.7;CAH-XI
+XFJ = { # Late Belomorye Culture; ENC-NEEU
+	color = rgb { 66 121 128 }
+	color2 = rgb { 189 134 127 }
+
+	culture_definition = antq_late_belomorye
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+VYG = { # Pidzh Culture; ENC-NEEU
+	color = rgb { 71 123 134 }
+	color2 = rgb { 184 132 121 }
+
+	culture_definition = antq_pidzh
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+XED = { # Sura-Volga Gorodets Culture; BSE-GORODETS
 	color = rgb { 52 124 125 }
 	color2 = rgb { 203 131 130 }
 
-	culture_definition = antq_northeast_venedi
+	culture_definition = antq_gorodets
 	religion_definition = antq_finnic
 	is_historic = yes
 }
 
-XEE = { # Smolensk-Dvina Communities; P8.7;CAH-XI
+TGD = { # Tsna-Upper Don Gorodets Horizon; BSE-GORODETS
+	color = rgb { 49 120 119 }
+	color2 = rgb { 206 135 136 }
+
+	culture_definition = antq_gorodets
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+XEE = { # Smolensk Dnieper-Dvina Group; AWE-DNIEPER-DVINA
 	color = rgb { 93 107 136 }
 	color2 = rgb { 162 148 119 }
 
-	culture_definition = antq_northeast_venedi
+	culture_definition = antq_dnieper_dvina
 	religion_definition = antq_baltic_slavic
 	is_historic = yes
 }
 
-RZM = { # Ryazan-Moksha Communities; P8.7;CAH-XI
+RZM = { # Oka-Moksha Gorodets Culture; BSE-GORODETS
 	color = rgb { 61 113 136 }
 	color2 = rgb { 194 142 119 }
 
-	culture_definition = antq_northeast_venedi
+	culture_definition = antq_gorodets
 	religion_definition = antq_finnic
 	is_historic = yes
 }
 
-BLR = { # Upper Dnieper Forest Communities; P8.7;CAH-XI
+BLR = { # Upper Dnieper-Dvina Culture; AWE-DNIEPER-DVINA
 	color = rgb { 93 109 139 }
 	color2 = rgb { 162 146 116 }
 
-	culture_definition = antq_dnieper_venedi
+	culture_definition = antq_dnieper_dvina
+	religion_definition = antq_baltic_slavic
+	is_historic = yes
+}
+
+XFK = { # Upper Neman Striated Pottery Group; LIT-NEMAN-STRIATED
+	color = rgb { 75 94 131 }
+	color2 = rgb { 180 161 124 }
+
+	culture_definition = antq_striated_pottery_neman
 	religion_definition = antq_baltic_slavic
 	is_historic = yes
 }
@@ -2197,74 +2269,128 @@ ZRB = { # Zarubintsy Horizon; RAS-ZAR;P8.7;CAH-XI
 	is_historic = yes
 }
 
-PDL = { # Upper Dniester Communities; P8.7;CAH-XI
+PDL = { # Podolian Lipița Group; AAC-LIPITA;P8.7
 	color = rgb { 93 85 122 }
 	color2 = rgb { 162 170 133 }
 
-	culture_definition = antq_dnieper_venedi
+	culture_definition = antq_lipita
 	religion_definition = antq_baltic_slavic
 	is_historic = yes
 }
 
-DNP = { # Dnieper Communities; RAS-ZAR;P8.7;CAH-XI
+RLG = { # Red-Ruthenian Lipița Group; AAC-LIPITA;P8.7
+	color = rgb { 95 87 125 }
+	color2 = rgb { 160 168 130 }
+
+	culture_definition = antq_lipita
+	religion_definition = antq_baltic_slavic
+	is_historic = yes
+}
+
+DNP = { # Desna Zarubintsy Group; RAS-ZAR;P8.7
 	color = rgb { 99 88 127 }
 	color2 = rgb { 156 167 128 }
 
-	culture_definition = antq_dnieper_venedi
+	culture_definition = antq_zarubintsy
 	religion_definition = antq_baltic_slavic
 	is_historic = yes
 }
 
-XEF = { # Karelian Forest Communities; P8.7;CAH-XI
+RBD = { # Right-Bank Zarubintsy Group; RAS-ZAR;P8.7
+	color = rgb { 95 97 137 }
+	color2 = rgb { 160 158 118 }
+
+	culture_definition = antq_zarubintsy
+	religion_definition = antq_baltic_slavic
+	is_historic = yes
+}
+
+LBD = { # Left-Bank Zarubintsy Group; RAS-ZAR;P8.7
+	color = rgb { 95 98 134 }
+	color2 = rgb { 160 157 121 }
+
+	culture_definition = antq_zarubintsy
+	religion_definition = antq_baltic_slavic
+	is_historic = yes
+}
+
+XEF = { # Ladoga Early Iron-Age Horizon; GERMANIA-NEVA
 	color = rgb { 62 106 120 }
 	color2 = rgb { 193 149 135 }
 
-	culture_definition = antq_finnic_culture
+	culture_definition = antq_ladoga_iron_age
 	religion_definition = antq_finnic
 	is_historic = yes
 }
 
-XEG = { # Permic Kama Communities; PAR-PER;P8.7;CAH-XI
+XEG = { # Middle Kama Glyadenovo Culture; BSE-GLYADENOVO;PAR-PER
 	color = rgb { 60 131 134 }
 	color2 = rgb { 195 124 121 }
 
-	culture_definition = antq_permic
+	culture_definition = antq_glyadenovo
 	religion_definition = antq_finnic
 	is_historic = yes
 }
 
-VLF = { # Volga Finnic Communities; P8.7;CAH-XI
+VYP = { # Vyatka Pyanobor Horizon; ENC-NEEU;PAR-PER
+	color = rgb { 58 116 119 }
+	color2 = rgb { 197 139 136 }
+
+	culture_definition = antq_pyanobor
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+VLF = { # Lower Kama Pyanobor Culture; ENC-NEEU;PAR-PER
 	color = rgb { 61 105 142 }
 	color2 = rgb { 194 150 113 }
 
-	culture_definition = antq_finnic_culture
+	culture_definition = antq_pyanobor
 	religion_definition = antq_finnic
 	is_historic = yes
 }
 
-SUG = { # Southern Ural Communities; P8.7;CAH-XI
+SUG = { # Kara-Abyz Culture; AES-SOUTH-URAL
 	color = rgb { 60 106 119 }
 	color2 = rgb { 195 149 136 }
 
-	culture_definition = antq_uralic
+	culture_definition = antq_kara_abyz
 	religion_definition = antq_finnic
 	is_historic = yes
 }
 
-SMY = { # Northern Samoyedic Communities; P8.7;CAH-XI
+SMY = { # Dzhudzhydyag Culture; ENC-NEEU
 	color = rgb { 48 124 140 }
 	color2 = rgb { 207 131 115 }
 
-	culture_definition = antq_samoyedic
+	culture_definition = antq_dzhudzhydyag
 	religion_definition = antq_finnic
 	is_historic = yes
 }
 
-XEH = { # Sargat Horizon; RAS-SAR;HUM-SAR;P8.8
+XEH = { # Omsk-Ishim Sargat Culture; RAS-SAR;RAS-SARGAT-CHRON;P8.8
 	color = rgb { 118 105 105 }
 	color2 = rgb { 137 150 150 }
 
 	culture_definition = antq_sargat
+	religion_definition = antq_tengri
+	is_historic = yes
+}
+
+AKL = { # Forest-Steppe Altai Kulay Group; ASU-ALTAI-KULAY
+	color = rgb { 111 105 125 }
+	color2 = rgb { 144 150 130 }
+
+	culture_definition = antq_altai_kulay
+	religion_definition = antq_finnic
+	is_historic = yes
+}
+
+XFL = { # Altai Xiongnu-Contact Horizon; ACSS-ALTAI-XIONGNU
+	color = rgb { 117 102 110 }
+	color2 = rgb { 138 153 145 }
+
+	culture_definition = antq_altai_xiongnu_contact
 	religion_definition = antq_tengri
 	is_historic = yes
 }
@@ -2278,11 +2404,11 @@ KUL = { # Kulay Horizon; TOM-KUL;P8.8
 	is_historic = yes
 }
 
-UGR = { # Western Ugric Communities; P8.7;CAH-XI
+UGR = { # Lower Irtysh Kulay Horizon; TOM-KUL;BSE-UST-POLUY
 	color = rgb { 73 130 138 }
 	color2 = rgb { 182 125 117 }
 
-	culture_definition = antq_ugric
+	culture_definition = antq_kulay
 	religion_definition = antq_finnic
 	is_historic = yes
 }

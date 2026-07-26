@@ -1,5 +1,34 @@
 # Technical and Design Decisions
 
+## 2026-07-26 - Explicit Tier-3 governments are permitted without widening the mandatory roster
+
+M6 still requires complete government coverage for every Tier-1/2 polity, but
+its ledger may now carry additional sourced Tier-3 profiles. This lets the 35
+reviewed Finland-to-Altai frames receive explicit tribal government, reform,
+privilege, law, and societal-value packages instead of falling back to an
+unreviewed generic start. It does not require invented named rulers: every new
+profile uses an evidence-bounded anonymous head where the sources do not
+identify an AD 1 individual.
+
+## 2026-07-26 - Kazan belongs to the Lower-Kama Pyanobor frame
+
+The earlier direct `SIB,kazan` anchor was a geography bug: it let a broad
+Siberian placeholder steal a Lower-Kama location. Kazan now belongs to `VLF`,
+the Lower Kama Pyanobor Culture, while `SIB` is reduced to the three reviewed
+Minusinsk Tes-Tashtyk transition locations. The fourth-century Hunnic-arrival
+event continues to use Kazan as a bounded Volga proxy, but its AD 1 recipient is
+therefore `VLF`, not `SIB`.
+
+## 2026-07-26 - Eastern mechanics use material practices, not invented constitutions
+
+Ten regional overlays model production, defended-settlement labor, seasonal
+resource rounds, river exchange, offering custody, mortuary obligations,
+retinues, contact exchange, and casting. They are assigned only to their
+reviewed opening frames. Their shared Age-I unlock registration satisfies the
+engine's complete-unlock contract; the opening packages remain differentiated
+by explicit tag overlays and do not assert a single ethnicity, state, guild,
+priesthood, or written code.
+
 ## 2026-07-26 - Doctrine breadth is catalog-complete and mechanically uniform
 
 Every custom religion receives two aspect slots and religious influence so a

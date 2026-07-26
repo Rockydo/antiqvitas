@@ -8,6 +8,96 @@ antq_oppidum_councils = {
 	}
 }
 
+antq_przeworsk_smithing_households = {
+	estate = burghers_estate
+	country_modifier = {
+		global_burghers_estate_power = 0.10
+		burghers_estate_target_satisfaction = small_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.025
+	}
+}
+
+antq_dyakovo_hillfort_households = {
+	estate = tribes_estate
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		tribes_estate_target_satisfaction = small_privilege_target_satisfaction
+		global_levy_size_modifier = 0.05
+	}
+}
+
+antq_gorodets_rampart_custodians = {
+	estate = tribes_estate
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		tribes_estate_target_satisfaction = small_privilege_target_satisfaction
+		global_levy_size_modifier = 0.05
+	}
+}
+
+antq_northern_seasonal_rounds = {
+	estate = tribes_estate
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		tribes_estate_target_satisfaction = small_privilege_target_satisfaction
+		global_pop_food_consumption = -0.01
+	}
+}
+
+antq_dnieper_river_brokers = {
+	estate = burghers_estate
+	country_modifier = {
+		global_burghers_estate_power = 0.10
+		burghers_estate_target_satisfaction = small_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.025
+	}
+}
+
+antq_kama_sanctuary_custodians = {
+	estate = clergy_estate
+	country_modifier = {
+		global_clergy_estate_power = 0.10
+		clergy_estate_target_satisfaction = small_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.025
+	}
+}
+
+antq_pyanobor_mortuary_households = {
+	estate = tribes_estate
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		tribes_estate_target_satisfaction = small_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.025
+	}
+}
+
+antq_sargat_kurgan_retinues = {
+	estate = tribes_estate
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		tribes_estate_target_satisfaction = small_privilege_target_satisfaction
+		land_morale_modifier = 0.01
+	}
+}
+
+antq_altai_contact_caravans = {
+	estate = burghers_estate
+	country_modifier = {
+		global_burghers_estate_power = 0.10
+		burghers_estate_target_satisfaction = small_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.025
+	}
+}
+
+antq_kulay_casting_households = {
+	estate = burghers_estate
+	country_modifier = {
+		global_burghers_estate_power = 0.10
+		burghers_estate_target_satisfaction = small_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.025
+	}
+}
+
 antq_hillfort_retinues = {
 	estate = tribes_estate
 	country_modifier = {

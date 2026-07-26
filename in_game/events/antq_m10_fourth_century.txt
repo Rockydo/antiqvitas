@@ -137,7 +137,7 @@ antq_m10_fourth.4005 = {
 	}
 }
 
-# Hunnic Arrival; ANTIQVITAS master plan §9; recipient=SIB
+# Hunnic Arrival; ANTIQVITAS master plan §9; recipient=VLF
 antq_m10_fourth.4006 = {
 	type = country_event
 	title = antq_m10_fourth.4006.title
@@ -146,7 +146,7 @@ antq_m10_fourth.4006 = {
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_huns_arrive.dds"
 	dynamic_historical_event = {
-		tag = XDO
+		tag = VLF
 		from = 370.1.1
 		to = 371.1.1
 		monthly_chance = 100

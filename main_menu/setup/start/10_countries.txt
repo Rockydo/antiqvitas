@@ -16455,11 +16455,10 @@ countries = {
 			capital = fayd
 		}
 
-		XDO = { # Siberian Societies; P8.8;CAH-XI
+		XDO = { # Tes-Tashtyk Transition; FU-TASHTYK;P8.8
 			own_control_core = {
 				abakasnk
 				beya
-				kazan
 				shushenskoye
 			}
 
@@ -16476,8 +16475,23 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_kulay_casting_households
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_kulay_casting_law = antq_kulay_household_casting
+				}
+				centralization_vs_decentralization = -45
+				traditionalist_vs_innovative = -35
+				aristocracy_vs_plutocracy = -40
+				capital_economy_vs_traditional_economy = 60
 			}
-			capital = kazan
+			capital = abakasnk
 		}
 
 		XDP = { # Gangetic Societies; P8.4;CAH-XI
@@ -18667,81 +18681,114 @@ countries = {
 			capital = olesnica
 		}
 
-		XEC = { # Przeworsk Horizon Communities; UW-PRZ;P8.7;CAH-XI
+		XEC = { # Greater-Poland Przeworsk Group; UW-PRZEWORSK;P8.7
 			own_control_core = {
 				babimost
-				biecz
 				buk
-				busko_zdroj
 				chodziez
-				chrzanow
 				czaplinek
 				czarnkow
-				czchow
-				czestochowa
 				czlopa
-				debica
 				gniezno
 				grodzisk_wielkopolski
-				ilza
-				janow_lubelski
-				jaslo
 				kalisz
-				kazimierz
-				kielce
 				kolo
 				konin
 				koscian
 				kozmin
+				lad_konin
+				miedzyrzecz
+				mogilno
+				naklo
+				oborniki
+				ostrow_wielkopolski
+				pleszew
+				poznan
+				pyzdry
+				rawicz
+				skwierzyna
+				srem
+				sroda_wielkopolska
+				szamotuly
+				szubin
+				trzemeszno
+				walcz
+				wielen
+				wschowa
+				wyrzysk
+				zlotow
+				znin
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ruthenia_region
+				russian_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_przeworsk_smithing_households
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_przeworsk_production_law = antq_przeworsk_distributed_workshops
+				}
+				centralization_vs_decentralization = -45
+				traditionalist_vs_innovative = -35
+				aristocracy_vs_plutocracy = -40
+				capital_economy_vs_traditional_economy = 55
+			}
+			capital = gniezno
+		}
+
+		LPR = { # Lesser-Poland Przeworsk Group; UW-PRZEWORSK;PAN-LPR;P8.7
+			own_control_core = {
+				biecz
+				busko_zdroj
+				chrzanow
+				czchow
+				czestochowa
+				debica
+				ilza
+				janow_lubelski
+				jaslo
+				kazimierz
+				kielce
 				krakow
 				ksiaz_wielki
 				kunow
-				lad_konin
 				lelow
 				lubartow
 				lublin
 				lukow
-				miedzyrzecz
-				mogilno
 				mstow
 				myslenice
-				naklo
 				nowy_sacz
 				nowy_targ
-				oborniki
 				opatow
 				opoczno
-				ostrow_wielkopolski
 				oswiecim
 				pilzno
-				pleszew
-				poznan
 				proszowice
 				przedborz
-				pyzdry
 				radom
-				rawicz
 				rudnik_poland
 				sandomierz
-				skwierzyna
-				srem
-				sroda_wielkopolska
 				stezyca
-				szamotuly
-				szubin
 				szydlowiec
 				tarnow
-				trzemeszno
 				urzedow
-				walcz
-				wielen
 				wieliczka
 				wislica
-				wschowa
-				wyrzysk
 				zarnow
-				zlotow
-				znin
 				zwolen
 				zywiec
 			}
@@ -18756,111 +18803,75 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_przeworsk_smithing_households
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_przeworsk_production_law = antq_przeworsk_distributed_workshops
+				}
+				centralization_vs_decentralization = -45
+				traditionalist_vs_innovative = -35
+				aristocracy_vs_plutocracy = -40
+				capital_economy_vs_traditional_economy = 55
 			}
-			capital = gniezno
+			capital = krakow
 		}
 
-		ILM = { # Ilmen Forest Communities; P8.7;CAH-XI
+		ILM = { # Msta-Ilmen Late Dyakovo Horizon; RA-DYAKOVO-UPPER;GERMANIA-NEVA
 			own_control_core = {
-				ashevo
 				babayevo
 				belye_kresty
 				berezovets
-				bezhanitsy
 				bologoye
 				borovichi
 				bronnitsa
 				burga
-				chudovo
 				demon
-				dolchinyo
-				dubronjo
-				gdov
-				golino
-				gorodets_luga
 				gruzino
-				ivangorod
 				izboishchi
-				izborsk
-				izori
-				kholm
-				khotchino
 				khotsy
-				kobyle
-				koporye
-				kosichkoj
 				kresttsy
 				kulotino
-				kuretsk
 				lipno_nov
-				lisino
 				lodenoye_pole
-				lyady
 				lyakhovichy
-				lyuban
 				lyubno
 				lyubytino
 				maksatikha
-				markovo
-				martyshkino
 				maryovo
 				maselga
 				megra
 				megrino
-				meletovo
 				mezhutka
 				mikshino
-				moloskovitsa
 				moshenskoye
 				nalyuchi
 				nebolchi
-				neva
 				novgorod
 				okhona
-				opochka
-				oreshek
-				ostrov
 				ozerevo
 				pashozero
 				pikalyovo
-				plyussa
-				podberezye
-				porkhov
-				pribuzh
-				prudy
-				pskov
 				rakitnya
-				rzheva_pustaya
-				sebech
-				slavkovitchi
 				smerdyn
-				soikino
-				soltsy
 				soltsy_kirishi
 				spirkovo
 				staraya_ladoga
-				staraya_russa
-				staropolye
-				svinort
 				tervenichi
-				tesov
 				tikhvin
-				toksovo
 				troshovo
 				udomlya
 				valday
-				velikiye_luki
 				veliky_porog
 				vinnitsy
-				visokoye
-				vlitsy
-				volodimerets
-				voronich
 				voznesenye
 				vyshny_volochyok
-				yama
 				yazhelbitsy
-				zaplyusye
 				zhabny
 			}
 
@@ -18874,11 +18885,110 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_dyakovo_hillfort_households
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_dyakovo_settlement_law = antq_dyakovo_shared_rampart_labor
+				}
+				centralization_vs_decentralization = -60
+				traditionalist_vs_innovative = -55
+				aristocracy_vs_plutocracy = -55
+				capital_economy_vs_traditional_economy = 75
 			}
 			capital = borovichi
 		}
 
-		BLF = { # Beloe Lake Communities; P8.7;CAH-XI
+		PLH = { # Pskov-Luga Striated Pottery Group; GERMANIA-NEVA
+			own_control_core = {
+				ashevo
+				bezhanitsy
+				chudovo
+				dolchinyo
+				dubronjo
+				gdov
+				golino
+				gorodets_luga
+				ivangorod
+				izborsk
+				izori
+				kholm
+				khotchino
+				kobyle
+				koporye
+				kosichkoj
+				kuretsk
+				lisino
+				lyady
+				lyuban
+				markovo
+				martyshkino
+				meletovo
+				moloskovitsa
+				neva
+				opochka
+				oreshek
+				ostrov
+				plyussa
+				podberezye
+				porkhov
+				pribuzh
+				prudy
+				pskov
+				rzheva_pustaya
+				sebech
+				slavkovitchi
+				soikino
+				soltsy
+				staraya_russa
+				staropolye
+				svinort
+				tesov
+				toksovo
+				velikiye_luki
+				visokoye
+				vlitsy
+				volodimerets
+				voronich
+				yama
+				zaplyusye
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ruthenia_region
+				russian_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_dyakovo_hillfort_households
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_dyakovo_settlement_law = antq_dyakovo_shared_rampart_labor
+				}
+				centralization_vs_decentralization = -60
+				traditionalist_vs_innovative = -55
+				aristocracy_vs_plutocracy = -55
+				capital_economy_vs_traditional_economy = 75
+			}
+			capital = pskov
+		}
+
+		BLF = { # Beloe-Mologa Late Dyakovo Horizon; RA-DYAKOVO-UPPER
 			own_control_core = {
 				arkhangelskoye_vologda
 				badozhsky
@@ -18924,11 +19034,26 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_dyakovo_hillfort_households
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_dyakovo_settlement_law = antq_dyakovo_shared_rampart_labor
+				}
+				centralization_vs_decentralization = -60
+				traditionalist_vs_innovative = -55
+				aristocracy_vs_plutocracy = -55
+				capital_economy_vs_traditional_economy = 75
 			}
 			capital = beloozero
 		}
 
-		MOK = { # Moskva-Oka Communities; P8.7;CAH-XI
+		MOK = { # Moskva-Oka Late Dyakovo Culture; RAS-DYAKOVO;RA-DYAKOVO-UPPER
 			own_control_core = {
 				arkhangelskoye
 				belyov
@@ -19000,120 +19125,136 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_dyakovo_hillfort_households
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_dyakovo_settlement_law = antq_dyakovo_shared_rampart_labor
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -50
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 65
 			}
 			capital = kaluga
 		}
 
-		UVF = { # Upper Volga Communities; P8.7;CAH-XI
+		UVF = { # Nizhny-Novgorod Gorodets Group; BSE-GORODETS
 			own_control_core = {
-				alexandrovskaya_sloboda
-				bernovo
-				bogorodskoye_pereyaslavl
-				bolshoye_selo
-				bor_volgo
-				borisogleb
-				brody_tver
-				buy
 				chukhloma
 				dalneye_konstantinovo
+				galich
+				gorodets
+				gorokhovets
+				kadyy
+				kologriv
+				korenevo
+				kovernino
+				krasnye_baki
+				kuzhbal
+				lukh
+				manturovo
+				meshchersk
+				nikolo_dor
+				nizhny_novgorod
+				parfenyevo
+				pestyaki
+				pyshchug
+				rastyapino
+				semyonov
+				sharanga
+				sol_galichskaya
+				sudai
+				tonshayevo
+				unzha
+				uren
+				varnavino
+				vasilyeva_sloboda
+				vetluga
+				yuryev_povolzhsk
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				scandinavian_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_gorodets_rampart_custodians
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_gorodets_fortification_law = antq_gorodets_seasonal_watch
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -50
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 65
+			}
+			capital = gorodets
+		}
+
+		UVD = { # Upper Volga Late Dyakovo Horizon; RA-DYAKOVO-UPPER
+			own_control_core = {
+				bernovo
+				bolshoye_selo
+				bor_volgo
+				brody_tver
+				buy
 				danilov
 				demyanovo
 				dubna
-				galich
-				gavrilovskoye
-				gorodets
 				gorodetsk
 				gorodok
-				gorokhovets
 				gryazovets
 				ilovna
-				ilyinskoye_khovanskoye
-				ivanovo
-				kadyy
 				kalyazin
 				kashin
 				kesova_gora
 				kholm_tver
 				khotoshino
 				kimra
-				kirzhach
 				klin
-				koi
-				kologriv
-				korenevo
 				kostroma
-				kovernino
-				krasnye_baki
 				kurba
 				kuvshinovo
-				kuzhbal
-				lezhnevo
 				lotoshino
-				lukh
 				lyubim
-				manturovo
 				mednoye
-				meshchersk
 				mikulino_tver
 				molodoi_tud
 				mologa
-				moshok
-				muromtsevo_murom
 				nerekhta
-				nikolo_dor
-				nizhny_novgorod
-				osovets
 				ostashkov
 				ostrovskoye
-				palekh
-				parfenyevo
-				pereyaslavl
-				pestyaki
-				petrovsk_rostov
-				poreevo
 				prozorovo
-				pyshchug
 				ramenki
-				rastyapino
 				romanov
-				rostov
-				rozhalovo
-				rozhdestveno
 				rzhev
-				semyonov
-				sharanga
-				shuya
-				sol_galichskaya
 				sol_velikaya
 				spas_na_kholmu
-				starodub_on_the_klyazma
-				sudai
 				sudislavl
-				sudogda
-				suzdal
-				tonshayevo
 				torzhok
 				tver
-				uglich
-				unzha
-				uren
 				ust_sheksna
-				varnavino
-				vasilyeva_sloboda
 				vertyazin
 				ves_yogonskaya
-				vetluga
-				vichuga
-				vladimir
-				vlasovo
 				yakovlevskoye_bolshoye
-				yanovo
-				yaropolch
 				yaroslavl
 				yezsk
-				yuryev_polsky
-				yuryev_povolzhsk
-				zolotkovo
 				zubtsov
 			}
 
@@ -19126,74 +19267,216 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_dyakovo_hillfort_households
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_dyakovo_settlement_law = antq_dyakovo_shared_rampart_labor
+				}
+				centralization_vs_decentralization = -55
+				traditionalist_vs_innovative = -50
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
 			}
-			capital = gorodets
+			capital = tver
 		}
 
-		WHT = { # White Sea Forest Communities; P8.7;CAH-XI
+		KLY = { # Klyazma Late Dyakovo Horizon; RA-DYAKOVO-UPPER
+			own_control_core = {
+				alexandrovskaya_sloboda
+				bogorodskoye_pereyaslavl
+				borisogleb
+				gavrilovskoye
+				ilyinskoye_khovanskoye
+				ivanovo
+				kirzhach
+				koi
+				lezhnevo
+				moshok
+				muromtsevo_murom
+				osovets
+				palekh
+				pereyaslavl
+				petrovsk_rostov
+				poreevo
+				rostov
+				rozhalovo
+				rozhdestveno
+				shuya
+				starodub_on_the_klyazma
+				sudogda
+				suzdal
+				uglich
+				vichuga
+				vladimir
+				vlasovo
+				yanovo
+				yaropolch
+				yuryev_polsky
+				zolotkovo
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				scandinavian_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_dyakovo_hillfort_households
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_dyakovo_settlement_law = antq_dyakovo_shared_rampart_labor
+				}
+				centralization_vs_decentralization = -55
+				traditionalist_vs_innovative = -50
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = vladimir
+		}
+
+		WHT = { # Late Kargopol Culture; ENC-NEEU
+			own_control_core = {
+				andomsky_pogost
+				bereznik
+				chelmuzhi
+				iksa
+				kargopol
+				konyovo
+				luda
+				maloshuyka
+				malye_oserki
+				navolok
+				nyonoksa
+				priluky
+				pudoga
+				rovdino
+				shalakusha
+				shalskii
+				sheleksa
+				sogra
+				sumsky_posad
+				unezhma
+				ust_vayenga
+				vaga
+				vershinino
+				village_onega
+				vodlozero
+				volosovskaya
+				vygozero
+				vytegra
+				yemetsk
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				scandinavian_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_northern_seasonal_rounds
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_northern_round_law = antq_northern_reciprocal_access
+				}
+				centralization_vs_decentralization = -70
+				traditionalist_vs_innovative = -60
+				aristocracy_vs_plutocracy = -60
+				capital_economy_vs_traditional_economy = 85
+			}
+			capital = kargopol
+		}
+
+		XFJ = { # Late Belomorye Culture; ENC-NEEU
+			own_control_core = {
+				arkhangelsk
+				brin_navolok
+				kholmogory
+				pomorye
+				siya
+				ust_pinega
+				vaymuga
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				scandinavian_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_northern_seasonal_rounds
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_northern_round_law = antq_northern_reciprocal_access
+				}
+				centralization_vs_decentralization = -75
+				traditionalist_vs_innovative = -60
+				aristocracy_vs_plutocracy = -60
+				capital_economy_vs_traditional_economy = 85
+			}
+			capital = arkhangelsk
+		}
+
+		VYG = { # Pidzh Culture; ENC-NEEU
 			own_control_core = {
 				alferovskaya
-				andomsky_pogost
-				arkhangelsk
-				bereznik
-				brin_navolok
-				chelmuzhi
 				gorodishna
-				iksa
 				ileza
 				ilyinsko_podomskoye
-				kargopol
-				kholmogory
 				kichmengsky_gorodok
-				konyovo
 				koryazhma
 				krasavino
 				krasny_bor
 				kunozh
 				ledengskoye
-				luda
-				maloshuyka
-				malye_oserki
-				navolok
 				nikolsk
 				nizhnyaya_toyma
-				nyonoksa
 				nyuksenitsa
-				pomorye
 				porog
-				priluky
-				pudoga
 				pyras
-				rovdino
-				shalakusha
-				shalskii
 				shangaly
-				sheleksa
 				shenga_kurya
-				siya
-				sogra
-				sumsky_posad
 				tarnogsky_gorodok
 				totma
 				uftyuga
-				unezhma
 				ust_kuloy
-				ust_pinega
-				ust_vayenga
-				vaga
-				vaymuga
 				vekshenga
 				veliky_ustyug
 				verkhnyaya_toyma
-				vershinino
-				village_onega
-				vodlozero
-				volosovskaya
 				voznesenskoye
-				vygozero
-				vytegra
 				yarensk
-				yemetsk
 				zaostrovskoye
 			}
 
@@ -19206,94 +19489,141 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_northern_seasonal_rounds
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_northern_round_law = antq_northern_reciprocal_access
+				}
+				centralization_vs_decentralization = -70
+				traditionalist_vs_innovative = -60
+				aristocracy_vs_plutocracy = -60
+				capital_economy_vs_traditional_economy = 85
 			}
-			capital = kargopol
+			capital = yarensk
 		}
 
-		XED = { # Middle Volga Communities; P8.7;CAH-XI
+		XED = { # Sura-Volga Gorodets Culture; BSE-GORODETS
 			own_control_core = {
 				alatyr
 				alikovo
 				altyshevo
-				arkadak
 				atishchevo
-				atkarsk
 				atrat
-				balanda
-				balashov
 				batyrevo
 				bazarny_syzgan
 				bolshoye_murashkino
-				bondari
 				chamzinka
 				cheboksary
-				chembar
 				cherdakly
-				donkov
-				gorodishche
-				izberdey
 				karsun
 				khakhaly
 				khvorostyanka
-				kirsanov
 				kondurcha
-				kozlov
 				kozmodemyansk
 				kurmysh
+				lyskovo
+				melekess
+				morkvash
+				perevoz
+				pestravka
+				poganovka
+				pokrovskoye
+				promsa
+				raznezhye
+				samara
+				saransk
+				sechenovo
+				sergach
+				shigony
+				simbirsk
+				solovtsovo
+				spasskoye_lyskovo
+				staraya_kulatka
+				staraya_mayna
+				stavropol_na_volge
+				sviyazhsk
+				tetyushi
+				troitskoye_kuroedovo
+				tsivilsk
+				vasilsursk
+				voskresenskoye
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				scandinavian_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_gorodets_rampart_custodians
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_gorodets_fortification_law = antq_gorodets_seasonal_watch
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 65
+			}
+			capital = alatyr
+		}
+
+		TGD = { # Tsna-Upper Don Gorodets Horizon; BSE-GORODETS
+			own_control_core = {
+				arkadak
+				atkarsk
+				balanda
+				balashov
+				bondari
+				chembar
+				donkov
+				gorodishche
+				izberdey
+				kirsanov
+				kozlov
 				lipetsk
 				lunino
-				lyskovo
 				lysye_gory
 				malaya_serdoba
 				malykovka
-				melekess
 				mokshan
 				mordovo
-				morkvash
 				morsha
 				nikolskoye
 				novye_burasy
 				penza
-				perevoz
-				pestravka
 				petrovsk
-				poganovka
-				pokrovskoye
-				promsa
 				rasskazovo
-				raznezhye
 				rtishchevo
 				russky_kameshkir
-				samara
-				saransk
 				sasovo
-				sechenovo
 				serdobinskaya
-				sergach
 				shemysheyka
-				shigony
-				simbirsk
-				solovtsovo
 				sosnovy_ostrov
-				spasskoye_lyskovo
-				staraya_kulatka
-				staraya_mayna
 				staroyuryevo
-				stavropol_na_volge
-				sviyazhsk
 				tambov
 				tereshka
 				teshevka
-				tetyushi
-				troitskoye_kuroedovo
-				tsivilsk
 				turki
 				ukek
 				usman
 				ust_stanovykh_ryas
 				uvarovo
-				vasilsursk
-				voskresenskoye
 				yekaterinovka
 				zherdevka
 			}
@@ -19307,11 +19637,26 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_gorodets_rampart_custodians
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_gorodets_fortification_law = antq_gorodets_seasonal_watch
+				}
+				centralization_vs_decentralization = -55
+				traditionalist_vs_innovative = -50
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
 			}
-			capital = alatyr
+			capital = tambov
 		}
 
-		XEE = { # Smolensk-Dvina Communities; P8.7;CAH-XI
+		XEE = { # Smolensk Dnieper-Dvina Group; AWE-DNIEPER-DVINA
 			own_control_core = {
 				andreapol
 				belik
@@ -19371,11 +19716,26 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_dnieper_river_brokers
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_dnieper_exchange_law = antq_dnieper_household_brokerage
+				}
+				centralization_vs_decentralization = -60
+				traditionalist_vs_innovative = -50
+				aristocracy_vs_plutocracy = -55
+				capital_economy_vs_traditional_economy = 75
 			}
 			capital = smolensk
 		}
 
-		RZM = { # Ryazan-Moksha Communities; P8.7;CAH-XI
+		RZM = { # Oka-Moksha Gorodets Culture; BSE-GORODETS
 			own_control_core = {
 				ardatov
 				arzamas
@@ -19433,40 +19793,44 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_gorodets_rampart_custodians
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_gorodets_fortification_law = antq_gorodets_seasonal_watch
+				}
+				centralization_vs_decentralization = -55
+				traditionalist_vs_innovative = -50
+				aristocracy_vs_plutocracy = -55
+				capital_economy_vs_traditional_economy = 70
 			}
 			capital = ardatov
 		}
 
-		BLR = { # Upper Dnieper Forest Communities; P8.7;CAH-XI
+		BLR = { # Upper Dnieper-Dvina Culture; AWE-DNIEPER-DVINA
 			own_control_core = {
 				asvieja
-				babruysk
 				barysaw
 				begoml
-				bershty
 				bobr
 				bocheikovo
-				bolshie_krugovichi
-				buinovichi
 				byerazino
 				bykhaw
 				chavusy
 				chervyen
 				drutsk
 				dzisna
-				dzyatlava
-				grodek
-				grodno
 				haradok
-				hlusk
 				horki
 				ilya
 				jeziarysca
-				kalinkavichy
-				kapyl
 				kastsyukovichy
 				khotsimsk
-				kletsk
 				klichaw
 				koidanova
 				kopys
@@ -19474,18 +19838,10 @@ countries = {
 				krupki
 				krychaw
 				lahoysk
-				lakhva
-				lelchytsy
-				luchin
 				lukolm
-				luninets
-				lyakhavichy
 				lyepyel
 				lyubashany
-				lyubcha
 				marjina_horka
-				masty
-				mazyr
 				mikulino
 				minsk
 				mogilev
@@ -19493,45 +19849,97 @@ countries = {
 				mstsislaw
 				nekloch
 				nevel
-				novogrudok
 				novy_bykhaw
-				nyasvizh
 				orsha
-				pietrykaw
 				polotsk
-				porazava
-				rahachow
 				rakau
 				rasony
-				rechytsa
 				rudnya
-				rudobelka
 				shumyachi
 				slawharad
-				slonim
-				slutsk
 				smalyavichy
-				sokolka
-				starobin
-				staryya_darohi
 				stowbtsy
-				streshyn
-				svietlahorsk
 				svislach
 				syanno
-				turets
 				tyatseryn
 				ulla
 				ushachy
 				usvyaty
-				vawkavysk
 				velizh
 				vitebsk
-				vowpa
-				vyada
 				vydreya
 				vydritsa
 				zabore
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ruthenia_region
+				russian_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_dnieper_river_brokers
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_dnieper_exchange_law = antq_dnieper_household_brokerage
+				}
+				centralization_vs_decentralization = -60
+				traditionalist_vs_innovative = -50
+				aristocracy_vs_plutocracy = -55
+				capital_economy_vs_traditional_economy = 75
+			}
+			capital = minsk
+		}
+
+		XFK = { # Upper Neman Striated Pottery Group; LIT-NEMAN-STRIATED
+			own_control_core = {
+				babruysk
+				bershty
+				bolshie_krugovichi
+				buinovichi
+				dzyatlava
+				grodek
+				grodno
+				hlusk
+				kalinkavichy
+				kapyl
+				kletsk
+				lakhva
+				lelchytsy
+				luchin
+				luninets
+				lyakhavichy
+				lyubcha
+				masty
+				mazyr
+				novogrudok
+				nyasvizh
+				pietrykaw
+				porazava
+				rahachow
+				rechytsa
+				rudobelka
+				slonim
+				slutsk
+				sokolka
+				starobin
+				staryya_darohi
+				streshyn
+				svietlahorsk
+				turets
+				vawkavysk
+				vowpa
+				vyada
 				zdzitov
 				zhytkavichy
 			}
@@ -19546,8 +19954,23 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_dnieper_river_brokers
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_dnieper_exchange_law = antq_dnieper_household_brokerage
+				}
+				centralization_vs_decentralization = -60
+				traditionalist_vs_innovative = -50
+				aristocracy_vs_plutocracy = -55
+				capital_economy_vs_traditional_economy = 75
 			}
-			capital = babruysk
+			capital = grodno
 		}
 
 		ZRB = { # Zarubintsy Horizon; RAS-ZAR;P8.7;CAH-XI
@@ -19617,66 +20040,99 @@ countries = {
 			capital = brest_litowsk
 		}
 
-		PDL = { # Upper Dniester Communities; P8.7;CAH-XI
+		PDL = { # Podolian Lipița Group; AAC-LIPITA;P8.7
 			own_control_core = {
 				bakota
 				balta
-				belz
-				bereschany
 				bershad
-				bohorodchany
-				bolekhiv
 				bratslav
-				brody
-				buchach
-				busk
 				buzhskyi
-				dolyna
 				drahushiv
-				drohobych
-				grabowiec
-				halych
 				horodok
 				kamianets_podilskyi
 				karabul
 				khmilnyk
+				letychiv
+				mezhybozhe
+				mohyliv_podilskyi
+				pohrebyshche
+				rov
+				savran
+				sokilets
+				teplyk
+				torhovytsia
+				tsybuliv
+				uman
+				ushytsia
+				vinnytsia
+				zalishchyky
+				zavallia
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ruthenia_region
+				russian_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_dnieper_river_brokers
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_dnieper_exchange_law = antq_dnieper_household_brokerage
+				}
+				centralization_vs_decentralization = -45
+				traditionalist_vs_innovative = -35
+				aristocracy_vs_plutocracy = -40
+				capital_economy_vs_traditional_economy = 55
+			}
+			capital = kamianets_podilskyi
+		}
+
+		RLG = { # Red-Ruthenian Lipița Group; AAC-LIPITA;P8.7
+			own_control_core = {
+				belz
+				bereschany
+				bohorodchany
+				bolekhiv
+				brody
+				buchach
+				busk
+				dolyna
+				drohobych
+				grabowiec
+				halych
 				khorostkiv
 				kolomyia
 				kosiv
 				krosno
 				lesko
-				letychiv
 				lubaczow
 				lviv
-				mezhybozhe
-				mohyliv_podilskyi
 				piskorowice
-				pohrebyshche
 				przemysl
 				rohatyn
-				rov
 				rzeszow
 				sambir
 				sanok
-				savran
 				sniatyn
 				sokal
-				sokilets
 				stryi
-				teplyk
 				terebovlia
 				ternopil
-				torhovytsia
-				tsybuliv
 				turka
 				tysmenytsia
-				uman
-				ushytsia
-				vinnytsia
 				yaroslav_poland
 				yavoriv
-				zalishchyky
-				zavallia
 				zhovkva
 				zhydachiv
 				zvenyhorod
@@ -19692,112 +20148,137 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_dnieper_river_brokers
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_dnieper_exchange_law = antq_dnieper_household_brokerage
+				}
+				centralization_vs_decentralization = -45
+				traditionalist_vs_innovative = -35
+				aristocracy_vs_plutocracy = -40
+				capital_economy_vs_traditional_economy = 55
 			}
-			capital = kamianets_podilskyi
+			capital = lviv
 		}
 
-		DNP = { # Dnieper Communities; RAS-ZAR;P8.7;CAH-XI
+		DNP = { # Desna Zarubintsy Group; RAS-ZAR;P8.7
 			own_control_core = {
 				bakhmach
+				boldyzh
+				bryansk
+				buryn
+				chachersk
+				chernihiv
+				dmitriyev
+				dobrush
+				drokov
+				foshnya
+				gomel
+				hlukhiv
+				horodnia
+				klintsy
+				knyazhichi
+				liubech
+				lutava
+				melnya
+				mglin
+				nizhyn
+				novhorod_siverskyi
+				pochep
+				popowa_gora
+				putyvl
+				radogosch
+				revny
+				ropsk
+				rylsk
+				sevsk
+				snovsk
+				sosnytsia
+				starodub_siverskyi
+				tereshkovichy
+				trubchevsk
+				verba
+				volosovichy
+				voronizh_chernihiv
+				vshchizh
+				znobov
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ruthenia_region
+				russian_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_dnieper_river_brokers
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_dnieper_exchange_law = antq_dnieper_household_brokerage
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -40
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 60
+			}
+			capital = chernihiv
+		}
+
+		RBD = { # Right-Bank Zarubintsy Group; RAS-ZAR;P8.7
+			own_control_core = {
 				belaya_soroka
 				berdychiv
 				bila_tserkva
 				bilokorovychi
 				bohuslav
-				boldyzh
-				boryspil
 				brahin
-				bryansk
-				buryn
-				chachersk
 				cherkasy
-				chernihiv
 				chornobyl
-				chornukhy
 				chortolisy
 				chudniv
 				chyhyryn
 				desnyanskyi_horodok
-				dmitriyev
-				dobrush
-				drokov
 				dymer
 				fastiv
-				foshnya
-				gomel
-				hadiach
-				hlukhiv
-				horodnia
-				horodyshche
-				horoshino
-				hovtva
-				ichnia
 				kaharlyk
 				kaniv
 				khoiniki
 				kholmyech
-				klintsy
-				knyazhichi
 				kopyshche
 				korosten
 				korostyshiv
 				korsun
-				kozelets
-				kremenchuk
 				kyiv
 				lebedyn
-				liubech
-				lubny
-				lutava
-				lypova_dolyna
 				malyn
-				melnya
-				mglin
 				mychesk
-				myrhorod
 				narodychi
-				nizhyn
-				novhorod_siverskyi
 				olevsk
-				opishnya
-				oster
 				ovruch
-				pereiaslav
-				pochep
-				poltava
-				popowa_gora
-				pryluky
-				putyvl
-				pyriatyn
-				radogosch
-				revny
-				romen
-				ropsk
 				rozkishna
-				rylsk
-				sevsk
 				sherbiv
 				skvyra
 				smila
-				snovsk
-				sosnytsia
-				starodub_siverskyi
 				stodolichi
-				tereshkovichy
-				trubchevsk
-				velyki_sorochyntsi
-				verba
 				viry
-				volosovichy
-				voronizh_chernihiv
-				vshchizh
-				yahotyn
-				yaroslavka
 				yemilchyne
 				zdvizhen
 				zhytomyr
-				znobov
-				zolotonosha
 				zvenyhorodka
 			}
 
@@ -19811,11 +20292,82 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_dnieper_river_brokers
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_dnieper_exchange_law = antq_dnieper_household_brokerage
+				}
+				centralization_vs_decentralization = -45
+				traditionalist_vs_innovative = -35
+				aristocracy_vs_plutocracy = -40
+				capital_economy_vs_traditional_economy = 55
 			}
-			capital = chernihiv
+			capital = kyiv
 		}
 
-		XEF = { # Karelian Forest Communities; P8.7;CAH-XI
+		LBD = { # Left-Bank Zarubintsy Group; RAS-ZAR;P8.7
+			own_control_core = {
+				boryspil
+				chornukhy
+				hadiach
+				horodyshche
+				horoshino
+				hovtva
+				ichnia
+				kozelets
+				kremenchuk
+				lubny
+				lypova_dolyna
+				myrhorod
+				opishnya
+				oster
+				pereiaslav
+				poltava
+				pryluky
+				pyriatyn
+				romen
+				velyki_sorochyntsi
+				yahotyn
+				yaroslavka
+				zolotonosha
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				ruthenia_region
+				russian_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_dnieper_river_brokers
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_dnieper_exchange_law = antq_dnieper_household_brokerage
+				}
+				centralization_vs_decentralization = -55
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 65
+			}
+			capital = pereiaslav
+		}
+
+		XEF = { # Ladoga Early Iron-Age Horizon; GERMANIA-NEVA
 			own_control_core = {
 				karhumagi
 				kinerma
@@ -19850,80 +20402,62 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_northern_seasonal_rounds
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_northern_round_law = antq_northern_reciprocal_access
+				}
+				centralization_vs_decentralization = -65
+				traditionalist_vs_innovative = -55
+				aristocracy_vs_plutocracy = -60
+				capital_economy_vs_traditional_economy = 80
 			}
 			capital = kizhi
 		}
 
-		XEG = { # Permic Kama Communities; PAR-PER;P8.7;CAH-XI
+		XEG = { # Middle Kama Glyadenovo Culture; BSE-GLYADENOVO;PAR-PER
 			own_control_core = {
-				afanasyevo
 				askino
 				aspa
 				baltas
-				belozerye
 				beryozovka
-				bolshaya_yakshanga
 				burayevo
-				chastye
 				cherdyn
 				chernaya
-				chyormoz
-				debyosy
 				dobryanka
-				gayny
 				gubakha
-				karagay
 				kasevo
-				kelich
-				kholunitsky
-				kirs
 				kizel
-				kobra
-				koksharov
 				kortkeros
-				kosa_perm
 				koygorodok
-				kudymkar
 				kungur
 				lalsk
 				lupya
 				lysva
-				nagorsk
-				nikolsky
 				nyrob
-				nytva
 				obyachevo
-				ochyor
-				okhannoye
-				omutninsk
-				oparino
 				orda
-				orlov
 				osa
 				perm
 				podosinovets
 				saygatsky
-				siva
-				slobodskoy
 				solikamsk
-				stepanenki
 				suksun
-				suna
 				tatyshly
 				ufa
-				usolye
-				ust_cheptsa
 				ust_kishert
 				ust_kulom
 				ust_sysola
 				ust_vym
-				verkhoshizhemye
 				vizinga
-				vokhma
-				vyatka
 				yanaul
 				yelovo
-				yusva
 				zheshart
 			}
 
@@ -19936,11 +20470,91 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_kama_sanctuary_custodians
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_kama_ritual_law = antq_kama_local_sanctuary_custody
+				}
+				centralization_vs_decentralization = -55
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
 			}
 			capital = perm
 		}
 
-		VLF = { # Volga Finnic Communities; P8.7;CAH-XI
+		VYP = { # Vyatka Pyanobor Horizon; ENC-NEEU;PAR-PER
+			own_control_core = {
+				afanasyevo
+				belozerye
+				bolshaya_yakshanga
+				chastye
+				chyormoz
+				debyosy
+				gayny
+				karagay
+				kelich
+				kholunitsky
+				kirs
+				kobra
+				koksharov
+				kosa_perm
+				kudymkar
+				nagorsk
+				nikolsky
+				nytva
+				ochyor
+				okhannoye
+				omutninsk
+				oparino
+				orlov
+				siva
+				slobodskoy
+				stepanenki
+				suna
+				usolye
+				ust_cheptsa
+				verkhoshizhemye
+				vokhma
+				vyatka
+				yusva
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				scandinavian_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_pyanobor_mortuary_households
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_pyanobor_mortuary_law = antq_pyanobor_kin_cemetery_custody
+				}
+				centralization_vs_decentralization = -55
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = vyatka
+		}
+
+		VLF = { # Lower Kama Pyanobor Culture; ENC-NEEU;PAR-PER
 			own_control_core = {
 				abdulino
 				almetyevsk
@@ -19963,6 +20577,7 @@ countries = {
 				izhevsk
 				kabachischi
 				kamyshla
+				kazan
 				kiknur
 				kilmez
 				koshki
@@ -20003,11 +20618,26 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_pyanobor_mortuary_households
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_pyanobor_mortuary_law = antq_pyanobor_kin_cemetery_custody
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -40
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 65
 			}
 			capital = bolghar
 		}
 
-		SUG = { # Southern Ural Communities; P8.7;CAH-XI
+		SUG = { # Kara-Abyz Culture; AES-SOUTH-URAL
 			own_control_core = {
 				belekes
 				beloretsk
@@ -20046,11 +20676,26 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_pyanobor_mortuary_households
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_pyanobor_mortuary_law = antq_pyanobor_kin_cemetery_custody
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -40
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 65
 			}
 			capital = beloretsk
 		}
 
-		SMY = { # Northern Samoyedic Communities; P8.7;CAH-XI
+		SMY = { # Dzhudzhydyag Culture; ENC-NEEU
 			own_control_core = {
 				troitsko_pechorsk
 				ukhta
@@ -20066,98 +20711,185 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_northern_seasonal_rounds
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_northern_round_law = antq_northern_reciprocal_access
+				}
+				centralization_vs_decentralization = -75
+				traditionalist_vs_innovative = -60
+				aristocracy_vs_plutocracy = -65
+				capital_economy_vs_traditional_economy = 90
 			}
 			capital = ukhta
 		}
 
-		XEH = { # Sargat Horizon; RAS-SAR;HUM-SAR;P8.8
+		XEH = { # Omsk-Ishim Sargat Culture; RAS-SAR;RAS-SARGAT-CHRON;P8.8
 			own_control_core = {
 				akkol
 				alakol
-				altayskoye
-				arkat
 				armizonskoye
 				arykbalyk
-				askiz
 				atbasar
-				balyktykol
-				barnaul
 				bayanaul
-				berdsk
 				berdyuzhye
-				biysk
-				bolotnye
 				bozok_astana
-				bursol
-				butyrskoe
 				chastoozerye
 				cherlak
-				chesnokovka
-				dovolnoye
 				gorkovskoye
-				imakia
 				kainsky_pas
 				kak
-				kalmanka
-				kamen
 				kamyshnoye
-				kandysu
-				karasor
 				kargat
-				karkaraly
 				kartaly
-				kaynar_atbai
-				kokpekty
 				kokshetau
 				kolosovka
 				konildi
 				korkina_sloboda
-				kozhevnikovo
-				krivoshchekovo
-				kuchukskoye
 				kulykol
-				kurchum
-				kuznetsk
 				kyshtovka
-				kytmanovo
 				kyzylzhar
-				lebyazhye
-				mayma
 				okoneshnikovo
 				omsk
-				onguday
-				oskemen
 				polovinnoye
 				presnowka
-				salair
 				sartlan
-				sarybulak
 				sasykkol
-				shar
-				shemonayevskoye
 				shoindykol
 				shoptikol
 				shybyndy
 				siberia_tenteksor
 				siletiteniz
-				smolenskoye
 				stanitsa_kokchetavskaya
 				staroye
-				suzun
-				takhir
 				tarankol
 				taskayevo
-				tuzdysor
 				tyukalinsk
-				ust_kabyrza
-				ust_kalmanka
-				ust_koksa
-				volchikha
 				zhalauly
-				zhanaarka
 				zharkol
-				zhelezin
 				zhetykol
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				steppes_region
+				mongolia_region
+				xinjiang_region
+				north_china_region
+				manchuria_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_sargat_kurgan_retinues
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_sargat_retinue_law = antq_sargat_gift_bound_retinues
+				}
+				centralization_vs_decentralization = -35
+				traditionalist_vs_innovative = -30
+				aristocracy_vs_plutocracy = -35
+				capital_economy_vs_traditional_economy = 55
+			}
+			capital = omsk
+		}
+
+		AKL = { # Forest-Steppe Altai Kulay Group; ASU-ALTAI-KULAY
+			own_control_core = {
+				altayskoye
+				askiz
+				barnaul
+				berdsk
+				biysk
+				bolotnye
+				chesnokovka
+				dovolnoye
+				kalmanka
+				kamen
+				kozhevnikovo
+				krivoshchekovo
+				kuznetsk
+				kytmanovo
+				mayma
+				onguday
+				salair
+				smolenskoye
+				suzun
+				ust_kabyrza
+				ust_koksa
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				steppes_region
+				mongolia_region
+				xinjiang_region
+				north_china_region
+				manchuria_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_altai_contact_caravans
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_altai_contact_law = antq_altai_negotiated_passage
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -40
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 65
+			}
+			capital = barnaul
+		}
+
+		XFL = { # Altai Xiongnu-Contact Horizon; ACSS-ALTAI-XIONGNU
+			own_control_core = {
+				arkat
+				balyktykol
+				bursol
+				butyrskoe
+				imakia
+				kandysu
+				karasor
+				karkaraly
+				kaynar_atbai
+				kokpekty
+				kuchukskoye
+				kurchum
+				lebyazhye
+				oskemen
+				sarybulak
+				shar
+				shemonayevskoye
+				takhir
+				tuzdysor
+				ust_kalmanka
+				volchikha
+				zhanaarka
+				zhelezin
 				zmeinogorsk
 				zyryan
 			}
@@ -20175,8 +20907,23 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_altai_contact_caravans
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_altai_contact_law = antq_altai_negotiated_passage
+				}
+				centralization_vs_decentralization = -40
+				traditionalist_vs_innovative = -30
+				aristocracy_vs_plutocracy = -35
+				capital_economy_vs_traditional_economy = 55
 			}
-			capital = omsk
+			capital = oskemen
 		}
 
 		KUL = { # Kulay Horizon; TOM-KUL;P8.8
@@ -20215,11 +20962,26 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_kulay_casting_households
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_kulay_casting_law = antq_kulay_household_casting
+				}
+				centralization_vs_decentralization = -60
+				traditionalist_vs_innovative = -50
+				aristocracy_vs_plutocracy = -55
+				capital_economy_vs_traditional_economy = 75
 			}
 			capital = tomsk
 		}
 
-		UGR = { # Western Ugric Communities; P8.7;CAH-XI
+		UGR = { # Lower Irtysh Kulay Horizon; TOM-KUL;BSE-UST-POLUY
 			own_control_core = {
 				almenevo
 				chebarkul
@@ -20256,6 +21018,21 @@ countries = {
 				type = tribe
 				heir_selection = tribal_oldest_male
 				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+					antq_kulay_casting_households
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_kulay_casting_law = antq_kulay_household_casting
+				}
+				centralization_vs_decentralization = -65
+				traditionalist_vs_innovative = -55
+				aristocracy_vs_plutocracy = -60
+				capital_economy_vs_traditional_economy = 80
 			}
 			capital = qashliq
 		}

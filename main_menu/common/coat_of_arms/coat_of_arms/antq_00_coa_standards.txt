@@ -2731,17 +2731,17 @@ BED = { # Chaulotaeans; STR-ARAB;P20
 	}
 }
 
-XDO = { # Siberian Societies; P8.8;P20
+XDO = { # Tes-Tashtyk Transition; FU-TASHTYK;P20
 	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "yellow"
-	color3 = "white"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_horse_salient.dds"
+		texture = "ce_spiral.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.83 0.83 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
 	}
 }
 
@@ -3263,143 +3263,255 @@ ZUM = { # Zumi; P8.7;P20
 	}
 }
 
-XEC = { # Przeworsk Horizon Communities; P8.7;P20
+XEC = { # Greater-Poland Przeworsk Group; UW-PRZEWORSK;P20
 	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
+	color1 = "black"
+	color2 = "red"
+	color3 = "white"
 	colored_emblem = {
-		texture = "ce_boar_passant.dds"
+		texture = "ce_spear_head_random_small.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.82 } }
 	}
 }
 
-ILM = { # Ilmen Forest Communities; P8.7;P20
+LPR = { # Lesser-Poland Przeworsk Group; PAN-LPR;P20
 	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
+	color1 = "red"
+	color2 = "black"
+	color3 = "white"
 	colored_emblem = {
-		texture = "ce_boar_passant.dds"
+		texture = "ce_horse_heads_addorsed.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
 	}
 }
 
-BLF = { # Beloe Lake Communities; P8.7;P20
+ILM = { # Msta-Ilmen Late Dyakovo Horizon; RA-DYAKOVO-UPPER;P20
 	pattern = "pattern_solid.dds"
-	color1 = "blue"
+	color1 = "green"
 	color2 = "white"
-	color3 = "yellow"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_bear_passant.dds"
+		texture = "ce_deer_kneeling.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
 	}
 }
 
-MOK = { # Moskva-Oka Communities; P8.7;P20
+PLH = { # Pskov-Luga Striated Pottery Group; GERMANIA-NEVA;P20
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
 	color2 = "white"
-	color3 = "yellow"
+	color3 = "green"
 	colored_emblem = {
-		texture = "ce_bear_passant.dds"
+		texture = "ce_spiral.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
 	}
 }
 
-UVF = { # Upper Volga Communities; P8.7;P20
+BLF = { # Beloe-Mologa Late Dyakovo Horizon; RA-DYAKOVO-UPPER;P20
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
 	color2 = "white"
-	color3 = "yellow"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_bear_passant.dds"
+		texture = "ce_fish_okeane.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.72 } }
 	}
 }
 
-WHT = { # White Sea Forest Communities; P8.7;P20
+MOK = { # Moskva-Oka Late Dyakovo Culture; RAS-DYAKOVO;P20
 	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_bear_passant.dds"
+		texture = "ce_stag_head_shield.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
 	}
 }
 
-XED = { # Middle Volga Communities; P8.7;P20
+UVF = { # Nizhny-Novgorod Gorodets Group; BSE-GORODETS;P20
 	pattern = "pattern_solid.dds"
-	color1 = "blue"
+	color1 = "green"
 	color2 = "white"
-	color3 = "yellow"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_bear_passant.dds"
+		texture = "ce_boar_passant_mane.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.78 } }
 	}
 }
 
-XEE = { # Smolensk-Dvina Communities; P8.7;P20
+UVD = { # Upper Volga Late Dyakovo Horizon; RA-DYAKOVO-UPPER;P20
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
+	color2 = "yellow"
+	color3 = "green"
 	colored_emblem = {
-		texture = "ce_boar_passant.dds"
+		texture = "ce_spiral_star_06.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
 	}
 }
 
-RZM = { # Ryazan-Moksha Communities; P8.7;P20
+KLY = { # Klyazma Late Dyakovo Horizon; RA-DYAKOVO-UPPER;P20
 	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "red"
 	colored_emblem = {
-		texture = "ce_bear_passant.dds"
+		texture = "ce_cartwheel.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
 	}
 }
 
-BLR = { # Upper Dnieper Forest Communities; P8.7;P20
+WHT = { # Late Kargopol Culture; ENC-NEEU;P20
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_fish_okeane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.72 } }
+	}
+}
+
+XFJ = { # Late Belomorye Culture; ENC-NEEU;P20
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
 	color2 = "white"
-	color3 = "yellow"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_boar_passant.dds"
+		texture = "ce_crescent_moon_02.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+VYG = { # Pidzh Culture; ENC-NEEU;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+XED = { # Sura-Volga Gorodets Culture; BSE-GORODETS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_boar_passant_mane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.78 } }
+	}
+}
+
+TGD = { # Tsna-Upper Don Gorodets Horizon; BSE-GORODETS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "red"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_spear_head_random_small.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.82 } }
+	}
+}
+
+XEE = { # Smolensk Dnieper-Dvina Group; AWE-DNIEPER-DVINA;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_spiral_star_06.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+RZM = { # Oka-Moksha Gorodets Culture; BSE-GORODETS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_stag_head_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+BLR = { # Upper Dnieper-Dvina Culture; AWE-DNIEPER-DVINA;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+XFK = { # Upper Neman Striated Pottery Group; LIT-NEMAN-STRIATED;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
 	}
 }
 
@@ -3417,143 +3529,227 @@ ZRB = { # Zarubintsy Horizon; P8.7;P20
 	}
 }
 
-PDL = { # Upper Dniester Communities; P8.7;P20
+PDL = { # Podolian Lipița Group; AAC-LIPITA;P20
 	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
-	colored_emblem = {
-		texture = "ce_boar_passant.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
-	}
-}
-
-DNP = { # Dnieper Communities; P8.7;P20
-	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
-	colored_emblem = {
-		texture = "ce_boar_passant.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
-	}
-}
-
-XEF = { # Karelian Forest Communities; P8.7;P20
-	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
-	colored_emblem = {
-		texture = "ce_bear_passant.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
-	}
-}
-
-XEG = { # Permic Kama Communities; P8.7;P20
-	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
-	colored_emblem = {
-		texture = "ce_bear_passant.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
-	}
-}
-
-VLF = { # Volga Finnic Communities; P8.7;P20
-	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
-	colored_emblem = {
-		texture = "ce_bear_passant.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
-	}
-}
-
-SUG = { # Southern Ural Communities; P8.7;P20
-	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
-	colored_emblem = {
-		texture = "ce_bear_passant.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
-	}
-}
-
-SMY = { # Northern Samoyedic Communities; P8.7;P20
-	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
-	colored_emblem = {
-		texture = "ce_bear_passant.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
-	}
-}
-
-XEH = { # Sargat Horizon; P8.8;P20
-	pattern = "pattern_solid.dds"
-	color1 = "blue"
+	color1 = "red"
 	color2 = "yellow"
-	color3 = "white"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_horse_salient.dds"
+		texture = "ce_horse_heads_addorsed.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.83 0.83 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
 	}
 }
 
-KUL = { # Kulay Horizon; P8.8;P20
+RLG = { # Red-Ruthenian Lipița Group; AAC-LIPITA;P20
 	pattern = "pattern_solid.dds"
-	color1 = "blue"
+	color1 = "purple"
 	color2 = "yellow"
-	color3 = "white"
+	color3 = "red"
 	colored_emblem = {
-		texture = "ce_horse_salient.dds"
+		texture = "ce_spiral_star_06.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.83 0.83 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
 	}
 }
 
-UGR = { # Western Ugric Communities; P8.7;P20
+DNP = { # Desna Zarubintsy Group; RAS-ZAR;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_spear_head_random_small.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.82 } }
+	}
+}
+
+RBD = { # Right-Bank Zarubintsy Group; RAS-ZAR;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+LBD = { # Left-Bank Zarubintsy Group; RAS-ZAR;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "red"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_boar_passant_mane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.78 } }
+	}
+}
+
+XEF = { # Ladoga Early Iron-Age Horizon; GERMANIA-NEVA;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_fish_okeane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.72 } }
+	}
+}
+
+XEG = { # Middle Kama Glyadenovo Culture; BSE-GLYADENOVO;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_spiral_star_06.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+VYP = { # Vyatka Pyanobor Horizon; ENC-NEEU;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_deer_kneeling.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+VLF = { # Lower Kama Pyanobor Culture; ENC-NEEU;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+SUG = { # Kara-Abyz Culture; AES-SOUTH-URAL;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_horse_heads_addorsed.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+SMY = { # Dzhudzhydyag Culture; ENC-NEEU;P20
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_crescent_moon_02.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+XEH = { # Omsk-Ishim Sargat Culture; RAS-SARGAT-CHRON;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_horse_heads_addorsed.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.82 } }
+	}
+}
+
+AKL = { # Forest-Steppe Altai Kulay Group; ASU-ALTAI-KULAY;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_deer_kneeling.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XFL = { # Altai Xiongnu-Contact Horizon; ACSS-ALTAI-XIONGNU;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_horse_heads_addorsed.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.82 } }
+	}
+}
+
+KUL = { # Kulay Horizon; TOM-KUL;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_spiral_star_06.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+UGR = { # Lower Irtysh Kulay Horizon; BSE-UST-POLUY;P20
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
 	color2 = "white"
-	color3 = "yellow"
+	color3 = "green"
 	colored_emblem = {
-		texture = "ce_bear_passant.dds"
+		texture = "ce_stag_head_shield.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
 	}
 }
 

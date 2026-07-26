@@ -1,5 +1,30 @@
 # Historical Assumptions
 
+## 2026-07-26 - Finland-to-Altai political frames follow archaeological resolution
+
+Where AD 1 political names and borders are not recoverable, the campaign now
+uses bounded material horizons rather than broad “societies.” Late Dyakovo,
+Gorodets, Dnieper-Dvina, striated-pottery, Lipița, Zarubintsy, Glyadenovo,
+Pyanobor, Kara-Abyz, Dzhudzhydyag, Sargat, Kulay, Altai contact, and the
+Tes-Tashtyk transition are gameplay ownership frames, not claims that pottery
+distributions were ethnic states. The split is supported by
+`RAS-DYAKOVO`, `RA-DYAKOVO-UPPER`, `GERMANIA-NEVA`,
+`AWE-DNIEPER-DVINA`, `LIT-NEMAN-STRIATED`, `ENC-NEEU`,
+`BSE-GLYADENOVO`, `BSE-GORODETS`, `AES-SOUTH-URAL`,
+`BSE-UST-POLUY`, `FU-TASHTYK`, `UW-PRZEWORSK`, `PAN-LPR`,
+`AAC-LIPITA`, `ASU-ALTAI-KULAY`, `ACSS-ALTAI-XIONGNU`, and
+`RAS-SARGAT-CHRON`. [contested archaeological gameplay abstraction]
+
+## 2026-07-26 - Regional mechanics are conservative functional adapters
+
+Fortification remains variable across Dyakovo and Gorodets sites; northern
+seasonal rounds do not imply one subsistence system; Glyadenovo offering
+complexes do not establish a regional clergy; cemetery wealth does not prove a
+hereditary Sargat aristocracy; and Xiongnu-contact objects do not prove Altai
+occupation. The privilege and law layers translate these evidenced practices
+into useful gameplay while keeping those limitations in every ledger note.
+[contested social and economic abstraction]
+
 ## 2026-07-26 - Non-Roman doctrine sets are bounded gameplay taxonomies
 
 The four-choice sets summarize practices at the scale of each broad religion

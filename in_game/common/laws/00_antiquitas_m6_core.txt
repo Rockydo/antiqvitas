@@ -17,6 +17,186 @@ antq_british_landholding_law = {
 	}
 }
 
+antq_przeworsk_production_law = {
+	law_category = socioeconomic
+	law_gov_group = tribe
+	potential = {
+		government_type = government_type:tribe
+	}
+	antq_przeworsk_distributed_workshops = {
+		country_modifier = {
+			global_burghers_estate_power = 0.05
+			country_cabinet_efficiency = 0.025
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+		}
+	}
+}
+
+antq_dyakovo_settlement_law = {
+	law_category = administrative
+	law_gov_group = tribe
+	potential = {
+		government_type = government_type:tribe
+	}
+	antq_dyakovo_shared_rampart_labor = {
+		country_modifier = {
+			global_tribes_estate_power = 0.05
+			global_levy_size_modifier = 0.05
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+		}
+	}
+}
+
+antq_gorodets_fortification_law = {
+	law_category = military
+	law_gov_group = tribe
+	potential = {
+		government_type = government_type:tribe
+	}
+	antq_gorodets_seasonal_watch = {
+		country_modifier = {
+			global_levy_size_modifier = 0.05
+			land_morale_modifier = 0.01
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+		}
+	}
+}
+
+antq_northern_round_law = {
+	law_category = socioeconomic
+	law_gov_group = tribe
+	potential = {
+		government_type = government_type:tribe
+	}
+	antq_northern_reciprocal_access = {
+		country_modifier = {
+			global_pop_food_consumption = -0.01
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+		}
+	}
+}
+
+antq_dnieper_exchange_law = {
+	law_category = socioeconomic
+	law_gov_group = tribe
+	potential = {
+		government_type = government_type:tribe
+	}
+	antq_dnieper_household_brokerage = {
+		country_modifier = {
+			global_burghers_estate_power = 0.05
+			country_cabinet_efficiency = 0.025
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+		}
+	}
+}
+
+antq_kama_ritual_law = {
+	law_category = religious
+	law_gov_group = tribe
+	potential = {
+		government_type = government_type:tribe
+	}
+	antq_kama_local_sanctuary_custody = {
+		country_modifier = {
+			global_clergy_estate_power = 0.05
+			country_cabinet_efficiency = 0.025
+		}
+		years = 2
+		estate_preferences = {
+			clergy_estate
+		}
+	}
+}
+
+antq_pyanobor_mortuary_law = {
+	law_category = religious
+	law_gov_group = tribe
+	potential = {
+		government_type = government_type:tribe
+	}
+	antq_pyanobor_kin_cemetery_custody = {
+		country_modifier = {
+			global_tribes_estate_power = 0.05
+			country_cabinet_efficiency = 0.025
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+		}
+	}
+}
+
+antq_sargat_retinue_law = {
+	law_category = military
+	law_gov_group = tribe
+	potential = {
+		government_type = government_type:tribe
+	}
+	antq_sargat_gift_bound_retinues = {
+		country_modifier = {
+			global_levy_size_modifier = 0.05
+			land_morale_modifier = 0.01
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+		}
+	}
+}
+
+antq_altai_contact_law = {
+	law_category = socioeconomic
+	law_gov_group = tribe
+	potential = {
+		government_type = government_type:tribe
+	}
+	antq_altai_negotiated_passage = {
+		country_modifier = {
+			global_burghers_estate_power = 0.05
+			country_cabinet_efficiency = 0.025
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+		}
+	}
+}
+
+antq_kulay_casting_law = {
+	law_category = socioeconomic
+	law_gov_group = tribe
+	potential = {
+		government_type = government_type:tribe
+	}
+	antq_kulay_household_casting = {
+		country_modifier = {
+			global_burghers_estate_power = 0.05
+			country_cabinet_efficiency = 0.025
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+		}
+	}
+}
+
 antq_british_muster_law = {
 	law_category = military
 	law_gov_group = tribe

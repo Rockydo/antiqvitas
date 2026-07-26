@@ -1,5 +1,31 @@
 # Progress
 
+## 2026-07-26 - Finland-to-Altai and Upper-Dnieper granularity pass
+
+- Replaced or split 18 broad placeholders into 35 sourced, disjoint AD 1
+  archaeological frames. The largest reviewed frame is 59 locations; Kazan is
+  correctly Lower-Kama Pyanobor and the Tes-Tashtyk transition is confined to
+  three Minusinsk locations.
+- Added 20 culture definitions/remaps, explicit culture/religion profiles,
+  35 anonymous government packages, 35 period-inspired UI standards, current
+  agendas and rank presentation, verified owned capitals, and all 11
+  localization mirrors.
+- Added ten regional privilege/law packages and ten unique generated
+  period-material privilege icons. The project now reports 46/46 privileges
+  with direct art and 620 direct UI asset chains.
+- Added `s2_eastern_granularity.py` and
+  `docs/m12/eastern_granularity.csv` to pin exact names, ownership counts,
+  capitals, cultures, governments, standards, agendas, mechanics, art, and
+  localization. Updated the fourth-century Hunnic Volga proxy to its corrected
+  Lower-Kama owner.
+- Full validation passes all 97 commands. Paired vanilla/mod menu smoke passes
+  with zero new mod-unique error lines. The optional live-selector probe failed
+  to leave the main menu after two bounded attempts and is documented in
+  `BLOCKERS.md`, consistent with the reduced smoke-focused QA policy.
+
+Next: continue the open S2 work on remaining Maghreb/Sahara/West-Africa/Japan
+macro frames and the global RGO/geography/government/advance depth passes.
+
 ## 2026-07-26 - Complete ancient doctrine catalog
 
 - Expanded the Roman foundation into a complete 37-religion contract. Religio

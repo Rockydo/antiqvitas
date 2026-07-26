@@ -250,11 +250,16 @@ and focused runtime probe all pass.
     northern-Nordic, and primary Finnic generic labels with Suebi, Gutae,
     Chaedini, Dauciones, Hilleviones, and Fenni. Their later classical evidence
     is visibly qualified in the research ledger.
-  - [ ] Replace the remaining Finland/Volga/Ural/Siberian catch-alls (`BLF`,
+  - [x] Replace the remaining Finland/Volga/Ural/Siberian catch-alls (`BLF`,
     `MOK`, `UVF`, `WHT`, `MRV`, `RZM`, `KRL`, `PRM`, `VLF`, `SUG`, `SMY`,
     `UGR`) and re-audit the Upper-Dnieper/Venedi-facing generic frames exposed
     by the fresh selector. Prefer named archaeological horizons and bounded
     peoples; do not invent kingdoms.
+    Completed as 35 disjoint Przeworsk, late-Dyakovo, striated-pottery,
+    Gorodets, Kargopol, Belomorye, Pidzh, Dnieper-Dvina, Lipița, Zarubintsy,
+    Ladoga, Glyadenovo, Pyanobor, Kara-Abyz, Dzhudzhydyag, Sargat, Kulay,
+    Altai-contact, and Tes-Tashtyk frames; every reviewed frame is at or below
+    59 locations.
   - [x] Give every added/reframed polity an owned capital, matching start-pop
     culture, religion, tribal government/reform, direct period-inspired
     standard, non-medieval rank text, agenda, and a collision-safe engine tag.
@@ -265,6 +270,11 @@ and focused runtime probe all pass.
     Baltic amber/hillfort/burial-community law-and-privilege layers, plus
     useful regional units with direct ancient art. Mechanics must not imply
     one constitution across Germania or one Aestian kingdom.
+  - [x] Add ten sourced Finland-to-Altai privilege/law layers for Przeworsk
+    production, Dyakovo and Gorodets defended settlements, northern seasonal
+    rounds, Dnieper exchange, Kama offering custody, Pyanobor mortuary
+    households, Sargat retinues, Altai contact exchange, and Kulay casting.
+    Every privilege has a unique direct 64x90/BC7 icon.
   - [x] Add a machine-readable northern-granularity report that fails on a
     generic display name, disconnected GER ownership, an Aestii residual over
     `baltic_region`, a reviewed frame above 60 locations, absent profile
@@ -273,6 +283,12 @@ and focused runtime probe all pass.
     for Angrivarii, Aestii, one inland Baltic archaeological frame, one
     Estonian/Latvian frame, one Scandinavian frame, and Fenni. Compare only
     targeted startup/map/UI diagnostics; no long observer campaign.
+  - [x] Add `s2_eastern_granularity.py` and a generated 35-frame ledger pinning
+    exact names, counts, capitals, cultures, governments, standards, agendas,
+    mechanics, direct art, Kazan ownership, and all 11 localization clients.
+    Full 97-check validation and paired menu smoke are green. The optional live
+    selector probe exhausted two start attempts and is recorded in
+    `BLOCKERS.md`; no long observer run is required by the reduced QA policy.
   - Acceptance: no generic Germanic country; Aestii no longer functions as a
     Baltic superstate; Germania is one of the deepest non-Roman theaters.
 

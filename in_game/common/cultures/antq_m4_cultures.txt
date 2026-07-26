@@ -4023,3 +4023,183 @@ antq_darinian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Darini campaign proxy on the
 		antq_celtic_group
 	}
 }
+
+antq_przeworsk = { # UW-PRZEWORSK;PAN-LPR;P10; Greater- and Lesser-Poland archaeological proxy; technical Germanic grouping does not settle the multiethnic Przeworsk identity debate
+	language = antq_germanic_dialect
+	color = antq_culture_color_antq_przeworsk
+	tags = { european_gfx }
+	culture_groups = {
+		antq_germanic_group
+	}
+}
+
+antq_late_dyakovo_north = { # RA-DYAKOVO-UPPER;GERMANIA-NEVA;P10; Upper Volga Msta and Volga-Baltic late-Dyakovo material proxy; technical Uralic grouping is not an ethnic or language claim
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_late_dyakovo_north
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
+antq_striated_pottery_north = { # GERMANIA-NEVA;P10; Pskov-Luga and western-Priilmenye material proxy; technical Uralic grouping does not establish ethnicity
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_striated_pottery_north
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
+antq_late_dyakovo = { # RAS-DYAKOVO;RA-DYAKOVO-UPPER;P10; Moskva Oka Klyazma and Upper Volga late-Dyakovo material proxy; no single people or language is inferred
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_late_dyakovo
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
+antq_gorodets = { # BSE-GORODETS;P10; Oka Sura middle-Volga and Upper-Don material proxy; technical Uralic grouping does not establish ethnicity
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_gorodets
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
+antq_late_kargopol = { # ENC-NEEU;P10; Onega-Kargopol archaeological proxy for mobile northern collectives; no later ethnicity or polity is projected
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_late_kargopol
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
+antq_late_belomorye = { # ENC-NEEU;P10; Mezen-White-Sea archaeological proxy for mobile northern collectives; no later ethnicity or polity is projected
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_late_belomorye
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
+antq_pidzh = { # ENC-NEEU;P10; Sukhona-Vychegda archaeological proxy around AD 1; technical Uralic grouping does not establish a language boundary
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_pidzh
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
+antq_dnieper_dvina = { # AWE-DNIEPER-DVINA;P10; Upper Dnieper and Western Dvina material proxy; technical Slavic grouping does not settle Baltic versus Slavic ethnicity
+	language = antq_slavic_dialect
+	color = antq_culture_color_antq_dnieper_dvina
+	tags = { european_gfx }
+	culture_groups = {
+		antq_slavic_group
+	}
+}
+
+antq_striated_pottery_neman = { # LIT-NEMAN-STRIATED;P10; Upper Neman material proxy; technical Slavic grouping does not settle the documented mixed Baltic-facing context
+	language = antq_slavic_dialect
+	color = antq_culture_color_antq_striated_pottery_neman
+	tags = { european_gfx }
+	culture_groups = {
+		antq_slavic_group
+	}
+}
+
+antq_lipita = { # AAC-LIPITA;P10; Upper-Dniester Roman-period material proxy; technical Balkan grouping and Greek fallback do not equate pots with the Costoboci or establish language
+	language = antq_balkan_dialect
+	color = antq_culture_color_antq_lipita
+	tags = { european_gfx }
+	culture_groups = {
+		antq_balkan_group
+	}
+}
+
+antq_zarubintsy = { # RAS-ZAR;P10; Pripyat Upper and Middle-Dnieper material proxy; technical Slavic grouping does not settle ethnogenesis or political unity
+	language = antq_slavic_dialect
+	color = antq_culture_color_antq_zarubintsy
+	tags = { european_gfx }
+	culture_groups = {
+		antq_slavic_group
+	}
+}
+
+antq_ladoga_iron_age = { # GERMANIA-NEVA;P10; Ladoga archaeological proxy beginning in the mid-first century BCE; no medieval Karelian identity is backdated
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_ladoga_iron_age
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
+antq_glyadenovo = { # BSE-GLYADENOVO;PAR-PER;P10; Kama Vychegda Mezen and Pechora archaeological proxy; technical Uralic grouping does not define one language or state
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_glyadenovo
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
+antq_pyanobor = { # ENC-NEEU;PAR-PER;P10; Lower-Kama and Vyatka archaeological proxy at AD 1; technical Uralic grouping does not define one language or state
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_pyanobor
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
+antq_kara_abyz = { # AES-SOUTH-URAL;P10; Southern Cis-Ural forest-steppe material proxy; technical Uralic grouping does not deny steppe contacts or assert ethnicity
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_kara_abyz
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
+antq_dzhudzhydyag = { # ENC-NEEU;P10; Pechora-Timan archaeological proxy at AD 1; no later Samoyedic language boundary or polity is projected
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_dzhudzhydyag
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
+antq_altai_kulay = { # ASU-ALTAI-KULAY;P10; Forest-steppe Altai Kulay material proxy; technical Uralic grouping does not settle ethnicity or language
+	language = antq_uralic_dialect
+	color = antq_culture_color_antq_altai_kulay
+	tags = { european_gfx }
+	culture_groups = {
+		antq_uralic_group
+	}
+}
+
+antq_altai_xiongnu_contact = { # ACSS-ALTAI-XIONGNU;P10; Altai and East-Kazakhstan contact-horizon proxy; technical steppe grouping does not assert Xiongnu occupation or linguistic identity
+	language = antq_steppe_dialect
+	color = antq_culture_color_antq_altai_xiongnu_contact
+	tags = { european_gfx }
+	culture_groups = {
+		antq_steppe_group
+	}
+}
+
+antq_tes_tashtyk = { # FU-TASHTYK;P10; Minusinsk transition proxy at the campaign boundary; technical steppe grouping does not create a unitary Tashtyk state
+	language = antq_steppe_dialect
+	color = antq_culture_color_antq_tes_tashtyk
+	tags = { european_gfx }
+	culture_groups = {
+		antq_steppe_group
+	}
+}

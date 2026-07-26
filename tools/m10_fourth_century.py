@@ -42,7 +42,7 @@ HUNNIC_TAG = "HNS"
 EASTERN_ROMAN_TAG = "ERO"
 
 # The recipients are current anchors, not a claim of exclusive ownership for a
-# broad historical process.  SIB and GUT are the closest reviewed AD 1 anchors
+# broad historical process.  VLF and GUT are the closest reviewed AD 1 anchors
 # for the Volga and Gothic refugee currents.
 TARGETS = {
     "armenia_conversion": "ARM",
@@ -51,7 +51,7 @@ TARGETS = {
     "shapur_julian": "PAR",
     "aksum_meroë": "AKS",
     "crete_earthquake": "ROM",
-    "huns_arrive": "SIB",
+    "huns_arrive": "VLF",
     "gothic_refugees": "GUT",
     "thessalonica": "ROM",
     "fei_river": "HAN",
@@ -222,7 +222,7 @@ def hunnic_ledger() -> str:
     stream = io.StringIO(newline="")
     writer = csv.writer(stream, lineterminator="\n")
     writer.writerow(("location", "role", "source", "note"))
-    writer.writerow((HUNNIC_ENTRY_LOCATION, "Volga entry proxy", "CAM-HUN;CAM-ATT", "Reviewed M3 Siberian-Societies location; not a claim of an exact Hunnic ethnogenesis site."))
+    writer.writerow((HUNNIC_ENTRY_LOCATION, "Volga entry proxy", "CAM-HUN;CAM-ATT", "Reviewed Lower-Kama Pyanobor location; not a claim of an exact Hunnic ethnogenesis site."))
     return stream.getvalue()
 
 
@@ -250,8 +250,8 @@ def validate(records: tuple[Current, ...]) -> None:
     collisions = sorted((COSMETIC_TAGS | DYNAMIC_TAGS) & set(mapped_tags.values()))
     if collisions:
         raise ValueError(f"M10 fourth-century generated tag collides with AD 1 runtime tag(s): {collisions}")
-    if HUNNIC_ENTRY_LOCATION not in start_country_locations(mapped_tags["SIB"]):
-        raise ValueError("Hunnic Volga proxy is not owned by the reviewed AD 1 Siberian anchor")
+    if HUNNIC_ENTRY_LOCATION not in start_country_locations(mapped_tags["VLF"]):
+        raise ValueError("Hunnic Volga proxy is not owned by the reviewed AD 1 Lower-Kama anchor")
     eastern_locations = eastern_roman_locations()
     if len(eastern_locations) < 100:
         raise ValueError("Eastern Roman transfer envelope is unexpectedly small")

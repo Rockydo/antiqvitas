@@ -1,8 +1,8 @@
 {
   "game_build": "24187685",
-  "entry_count": 278,
-  "collision_count": 117,
-  "localization_collision_count": 130,
+  "entry_count": 292,
+  "collision_count": 120,
+  "localization_collision_count": 133,
   "reserved_hash_collision_tags": [
     "XAD"
   ],
@@ -1377,7 +1377,7 @@
       "engine_tag": "XDO",
       "vanilla_collision": true,
       "localization_collision": true,
-      "name": "Siberian Societies"
+      "name": "Tes-Tashtyk Transition"
     },
     {
       "design_tag": "GNG",
@@ -1643,70 +1643,126 @@
       "engine_tag": "XEC",
       "vanilla_collision": true,
       "localization_collision": true,
-      "name": "Przeworsk Horizon Communities"
+      "name": "Greater-Poland Przeworsk Group"
+    },
+    {
+      "design_tag": "LPR",
+      "engine_tag": "LPR",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Lesser-Poland Przeworsk Group"
     },
     {
       "design_tag": "ILM",
       "engine_tag": "ILM",
       "vanilla_collision": false,
       "localization_collision": false,
-      "name": "Ilmen Forest Communities"
+      "name": "Msta-Ilmen Late Dyakovo Horizon"
+    },
+    {
+      "design_tag": "PLH",
+      "engine_tag": "PLH",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Pskov-Luga Striated Pottery Group"
     },
     {
       "design_tag": "BLF",
       "engine_tag": "BLF",
       "vanilla_collision": false,
       "localization_collision": false,
-      "name": "Beloe Lake Communities"
+      "name": "Beloe-Mologa Late Dyakovo Horizon"
     },
     {
       "design_tag": "MOK",
       "engine_tag": "MOK",
       "vanilla_collision": false,
       "localization_collision": false,
-      "name": "Moskva-Oka Communities"
+      "name": "Moskva-Oka Late Dyakovo Culture"
     },
     {
       "design_tag": "UVF",
       "engine_tag": "UVF",
       "vanilla_collision": false,
       "localization_collision": false,
-      "name": "Upper Volga Communities"
+      "name": "Nizhny-Novgorod Gorodets Group"
+    },
+    {
+      "design_tag": "UVD",
+      "engine_tag": "UVD",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Upper Volga Late Dyakovo Horizon"
+    },
+    {
+      "design_tag": "KLY",
+      "engine_tag": "KLY",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Klyazma Late Dyakovo Horizon"
     },
     {
       "design_tag": "WHT",
       "engine_tag": "WHT",
       "vanilla_collision": false,
       "localization_collision": false,
-      "name": "White Sea Forest Communities"
+      "name": "Late Kargopol Culture"
+    },
+    {
+      "design_tag": "MZN",
+      "engine_tag": "XFJ",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Late Belomorye Culture"
+    },
+    {
+      "design_tag": "VYG",
+      "engine_tag": "VYG",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Pidzh Culture"
     },
     {
       "design_tag": "MRV",
       "engine_tag": "XED",
       "vanilla_collision": true,
       "localization_collision": true,
-      "name": "Middle Volga Communities"
+      "name": "Sura-Volga Gorodets Culture"
+    },
+    {
+      "design_tag": "TGD",
+      "engine_tag": "TGD",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Tsna-Upper Don Gorodets Horizon"
     },
     {
       "design_tag": "SMD",
       "engine_tag": "XEE",
       "vanilla_collision": true,
       "localization_collision": true,
-      "name": "Smolensk-Dvina Communities"
+      "name": "Smolensk Dnieper-Dvina Group"
     },
     {
       "design_tag": "RZM",
       "engine_tag": "RZM",
       "vanilla_collision": false,
       "localization_collision": false,
-      "name": "Ryazan-Moksha Communities"
+      "name": "Oka-Moksha Gorodets Culture"
     },
     {
       "design_tag": "BLR",
       "engine_tag": "BLR",
       "vanilla_collision": false,
       "localization_collision": false,
-      "name": "Upper Dnieper Forest Communities"
+      "name": "Upper Dnieper-Dvina Culture"
+    },
+    {
+      "design_tag": "NEM",
+      "engine_tag": "XFK",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Upper Neman Striated Pottery Group"
     },
     {
       "design_tag": "ZRB",
@@ -1720,56 +1776,98 @@
       "engine_tag": "PDL",
       "vanilla_collision": false,
       "localization_collision": false,
-      "name": "Upper Dniester Communities"
+      "name": "Podolian Lipi\u021ba Group"
+    },
+    {
+      "design_tag": "RLG",
+      "engine_tag": "RLG",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Red-Ruthenian Lipi\u021ba Group"
     },
     {
       "design_tag": "DNP",
       "engine_tag": "DNP",
       "vanilla_collision": false,
       "localization_collision": false,
-      "name": "Dnieper Communities"
+      "name": "Desna Zarubintsy Group"
+    },
+    {
+      "design_tag": "RBD",
+      "engine_tag": "RBD",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Right-Bank Zarubintsy Group"
+    },
+    {
+      "design_tag": "LBD",
+      "engine_tag": "LBD",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Left-Bank Zarubintsy Group"
     },
     {
       "design_tag": "KRL",
       "engine_tag": "XEF",
       "vanilla_collision": true,
       "localization_collision": true,
-      "name": "Karelian Forest Communities"
+      "name": "Ladoga Early Iron-Age Horizon"
     },
     {
       "design_tag": "PRM",
       "engine_tag": "XEG",
       "vanilla_collision": true,
       "localization_collision": true,
-      "name": "Permic Kama Communities"
+      "name": "Middle Kama Glyadenovo Culture"
+    },
+    {
+      "design_tag": "VYP",
+      "engine_tag": "VYP",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Vyatka Pyanobor Horizon"
     },
     {
       "design_tag": "VLF",
       "engine_tag": "VLF",
       "vanilla_collision": false,
       "localization_collision": false,
-      "name": "Volga Finnic Communities"
+      "name": "Lower Kama Pyanobor Culture"
     },
     {
       "design_tag": "SUG",
       "engine_tag": "SUG",
       "vanilla_collision": false,
       "localization_collision": false,
-      "name": "Southern Ural Communities"
+      "name": "Kara-Abyz Culture"
     },
     {
       "design_tag": "SMY",
       "engine_tag": "SMY",
       "vanilla_collision": false,
       "localization_collision": false,
-      "name": "Northern Samoyedic Communities"
+      "name": "Dzhudzhydyag Culture"
     },
     {
       "design_tag": "SRG",
       "engine_tag": "XEH",
       "vanilla_collision": true,
       "localization_collision": true,
-      "name": "Sargat Horizon"
+      "name": "Omsk-Ishim Sargat Culture"
+    },
+    {
+      "design_tag": "AKL",
+      "engine_tag": "AKL",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Forest-Steppe Altai Kulay Group"
+    },
+    {
+      "design_tag": "ALT",
+      "engine_tag": "XFL",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Altai Xiongnu-Contact Horizon"
     },
     {
       "design_tag": "KUL",
@@ -1783,7 +1881,7 @@
       "engine_tag": "UGR",
       "vanilla_collision": false,
       "localization_collision": false,
-      "name": "Western Ugric Communities"
+      "name": "Lower Irtysh Kulay Horizon"
     },
     {
       "design_tag": "HOK",
