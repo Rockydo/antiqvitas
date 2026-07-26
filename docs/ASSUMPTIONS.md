@@ -4582,3 +4582,19 @@ Teotihuacan material palette, not a universal American reconstruction. The
 Oceanian scene is a bounded Lapita/Austronesian timber-and-thatch synthesis:
 perishable AD 1 halls do not survive broadly enough for a universal form.
 [bounded visual abstraction]
+
+## 2026-07-26 - Artillery category art is a torsion-engine proxy
+
+The shared engine key `army_artillery` is retained as a technical UI category,
+but ANTIQVITAS currently exposes no recruitable active unit in that category.
+Its fallback image uses a Roman-style two-armed torsion stone-thrower to represent
+ancient mechanical siege artillery across the AD 1-476 interface. It does not
+claim that every polity used one standardized Roman machine, or that torsion
+engines filled the battlefield role of early-modern cannon. Sources: Vitruvius,
+*De architectura* 10.10-12; E. W. Marsden, *Greek and Roman Artillery:
+Historical Development* (1969). [bounded visual abstraction]
+
+The global population-summary group is likewise a resolver-neutral symbol for
+people in aggregate. Social status and regional material culture remain expressed
+by the 48 distinct graphical-culture pop portraits; the summary does not assert
+uniform dress, phenotype, or household structure across the world.

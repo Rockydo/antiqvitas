@@ -132,16 +132,25 @@ and focused runtime probe all pass.
     each major religion profile has choices, complete art/localization/effects,
     and no post-476 inherited aspect.
 
-- [ ] Replace artillery and remaining population-summary UI fallbacks.
-  - Trace the actual category resolvers used by army composition, recruitment,
+- [x] Replace artillery and remaining population-summary UI fallbacks.
+  - [x] Trace the actual category resolvers used by army composition, recruitment,
     military overview, levy, mercenary, and tooltip views. Replace the cannon
     silhouette with an ancient torsion/siege-engine presentation and scan all
-    military-category imagery for firearms or medieval equipment.
-  - Trace the distinct location-overview pop icon resolver; previous pop-type
+    military-category imagery for firearms or medieval equipment. The installed-
+    union contract exact-mirrors all 30 artillery-named UI textures, including
+    category, text, battle, siege, modifier, button, advance, building,
+    institution, reform, and wide-illustration paths.
+  - [x] Trace the distinct location-overview pop icon resolver; previous pop-type
     definition art did not replace this path. Replace every tier/summary state,
-    mask, and fallback with period art.
-  - Acceptance: no cannon/firearm/medieval pop icon in Rome, Germanic, Han, and
-    settlement-overview captures; resolver validator covers every active path.
+    mask, and fallback with period art. All 19 installed population-named
+    summary, growth, decline, alert, modifier, sort, resource, map-mode, button,
+    and quarantined fallback textures are now state-aware ancient mirrors.
+  - [x] Acceptance: the 49-path ledger/hash/format/alpha validator and reviewed
+    contact sheet contain no cannon, firearm, Renaissance clothing, or clipped
+    siege engine. A live AD 1 Roma Society/People capture proves the mounted
+    settlement resolver; Germanic and Han use the same global summary paths while
+    retaining their already validated regional class portraits. All 93 checks and
+    paired smoke pass with zero mod-only error lines.
 
 ### S2-P1 — Replace macro-societies with historical peoples
 

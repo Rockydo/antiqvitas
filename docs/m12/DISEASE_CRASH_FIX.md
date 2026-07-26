@@ -14,7 +14,11 @@ reported by debug logs.
 The checked installed 1.3.11 union contains 7
 disease definitions: `bubonic_plague`, `great_pestilence`, `influenza`, `malaria`, `measles`, `smallpox`, `typhus`. The generated manifest mirrors 20 exact
 engine textures, including every dynamic disease icon, `_default.dds`, and every
-literal DDS dependency requested by the installed disease panel/tooltips. The
+literal DDS dependency requested by the installed disease panel/tooltips.
+The shared population-summary dependency is intentionally owned by
+`tools/m12_ui_resolver_art.py`, so the crash contract retains a complete texture
+while displaying the ancient-period population group rather than vanilla
+Renaissance figures. The
 generated start manager is UTF-8 without BOM, initializes every installed disease
 object, and seeds endemic malaria.
 

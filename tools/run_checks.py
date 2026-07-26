@@ -87,6 +87,7 @@ VALIDATE_COMMANDS = (
     Command("tools/m12_frontend_assets.py"),
     Command("tools/m12_country_history.py", ("--check",)),
     Command("tools/m12_pop_presentation.py", ("--check",)),
+    Command("tools/m12_ui_resolver_art.py", ("--check",)),
     Command("tools/m12_rank_presentation.py", ("--check",)),
     Command("tools/m12_unit_quarantine.py", ("--check",)),
     Command("tools/m12_unit_art.py", ("--check",)),

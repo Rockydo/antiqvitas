@@ -32,6 +32,10 @@ GUI_FILES = (
 )
 TEXTURE = re.compile(r'gfx/[A-Za-z0-9_./-]+\.dds')
 DEFINITION = re.compile(r"(?m)^([a-z][a-z0-9_]*)\s*=\s*\{")
+PERIOD_ART_DEPENDENCIES = {
+    "gfx/interface/icons/location_icons/new/population.dds":
+        "tools/m12_ui_resolver_art.py",
+}
 
 
 def game_root() -> Path:
@@ -119,7 +123,18 @@ def inventory() -> dict[str, object]:
 
     assets: list[dict[str, object]] = []
     for relative in sorted(requested):
-        module, source, candidates = resolve_source(roots, relative)
+        if relative in PERIOD_ART_DEPENDENCIES:
+            module = "main_menu"
+            source = ROOT / module / relative
+            if not source.is_file():
+                raise ValueError(
+                    f"period-art disease dependency is missing: {relative}"
+                )
+            candidates = (str(source),)
+            owner = PERIOD_ART_DEPENDENCIES[relative]
+        else:
+            module, source, candidates = resolve_source(roots, relative)
+            owner = "installed exact mirror"
         target = ROOT / module / relative
         assets.append(
             {
@@ -130,6 +145,7 @@ def inventory() -> dict[str, object]:
                 "target": target.relative_to(ROOT).as_posix(),
                 "sha256": sha256(source),
                 "bytes": source.stat().st_size,
+                "owner": owner,
             }
         )
     return {
@@ -166,7 +182,11 @@ reported by debug logs.
 The checked installed 1.3.11 union contains {len(value["installed_diseases"])}
 disease definitions: {diseases}. The generated manifest mirrors {assets} exact
 engine textures, including every dynamic disease icon, `_default.dds`, and every
-literal DDS dependency requested by the installed disease panel/tooltips. The
+literal DDS dependency requested by the installed disease panel/tooltips.
+The shared population-summary dependency is intentionally owned by
+`tools/m12_ui_resolver_art.py`, so the crash contract retains a complete texture
+while displaying the ancient-period population group rather than vanilla
+Renaissance figures. The
 generated start manager is UTF-8 without BOM, initializes every installed disease
 object, and seeds endemic malaria.
 
@@ -181,7 +201,8 @@ def write() -> None:
         source = Path(str(asset["source"]))
         target = ROOT / str(asset["target"])
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(source, target)
+        if source.resolve() != target.resolve():
+            shutil.copy2(source, target)
     MANIFEST.parent.mkdir(parents=True, exist_ok=True)
     MANIFEST.write_bytes(canonical_json(value))
     REPORT.write_bytes(report_bytes(value))

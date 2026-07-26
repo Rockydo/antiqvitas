@@ -6737,3 +6737,23 @@ reviewed 128px BC7 DDS.
 - Namespaced ANTIQVITAS privileges, laws, and reforms remain active. Ancient
   cabinet and parliament replacements plus seven regional UI probes remain open
   under S2-P4 before the parent quarantine task can close.
+
+## 2026-07-26 - Replace population-summary and artillery fallback art
+
+- Traced the separate population-summary resolver family that bypassed the
+  existing 56 regional pop-class portrait paths. Exact-mirrored all 19 installed
+  population-named UI textures with one reviewed ancient household group and
+  distinct growth, decline, warning, capacity, unrest, and crowding states.
+- Replaced all 30 installed artillery-named UI textures across category, text,
+  battle, siege, modifier, button, advance, building, institution, reform, and
+  1080x440 illustration surfaces with a reviewed two-armed torsion ballista.
+- Added `tools/m12_ui_resolver_art.py`, a generated 49-row ledger, source pins,
+  format/alpha/hash checks, a reviewed contact sheet, and an installed-union
+  floor that fails when a game patch adds an unreviewed matching path.
+- Reconciled the disease-panel texture contract so its shared population icon is
+  owned by the ancient resolver generator while the other 19 crash dependencies
+  remain exact installed mirrors.
+- A live non-debug AD 1 Observer probe opened Roma's Society/People panel and
+  displayed the ancient population-growth summary and regional class portraits.
+  `make validate` passes all 93 checks; paired vanilla/mod smoke passes with zero
+  mod-only error lines.

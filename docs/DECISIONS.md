@@ -3169,3 +3169,20 @@ organization scope. This is narrower and safer than suppressing the complete
 yearly on-action file. The quarantine is a foundation, not the ancient system
 overhaul: cabinets and parliaments must receive namespaced replacements before
 their focused UI acceptance test.
+
+## 2026-07-26 - Audit visual fallbacks as installed filename families
+
+Population summaries and artillery are not resolved through one definition or
+one icon. EU5 1.3.11 repeats them across independent GUI, concept, font, alert,
+sort, modifier, button, and illustration paths. ANTIQVITAS therefore discovers
+every installed DDS whose filename contains `population`, `pops_wanting`, or
+`artillery`, exact-mirrors the resulting 49-path union, and pins that union in
+validation. A later game patch adding another matching resolver fails the check
+until its composition is reviewed and generated.
+
+The Diseases panel legitimately depends on
+`gfx/interface/icons/location_icons/new/population.dds`. Its safety manifest now
+declares that one texture as owned by the period-art resolver while retaining
+exact installed mirrors for the other 19 dependencies. This keeps the reproduced
+crash fix and the total-conversion presentation contract compatible instead of
+letting either generator overwrite the other.
