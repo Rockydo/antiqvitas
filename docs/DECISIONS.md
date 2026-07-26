@@ -3079,3 +3079,27 @@ such as `paper`, `coal`, `beer`, and `steel` remain only where the mounted text
 and recipe mean writing materials, charcoal/fuel, fermented drink, or bounded
 crucible steel. The audit rejects colonial crops, firearms, cannon, and other
 post-antique goods before they can enter an active recipe.
+
+## 2026-07-26 - Treat the existing build as a v0.1 foundation
+
+Earlier milestone and first-playtest gates established that the mod loads,
+survives focused probes, and can quarantine several large vanilla registries.
+They did not establish the density, regional specificity, or end-to-end visual
+replacement now required by the second manual playtest. “Complete” therefore
+means completion of the new second-playtest section in `TODO.md`, not merely
+preservation of the earlier green validator count.
+
+All future content gates must measure mechanical diversity and real runtime
+availability, not raw object counts alone. Advances require distinct useful
+effects or unlocks and reachable users; polities require defensible bounded
+frames; buildings require plausible global placement; and a system is not
+converted until its full installed base+DLC union and UI fallback paths are
+accounted for.
+
+## 2026-07-26 - Keep final validation focused and subsystem-specific
+
+The revised closeout does not require extreme or multi-century playthroughs.
+Every changed subsystem receives deterministic source/setup/resolver validation,
+paired smoke for new log lines, and a short targeted runtime interaction or
+screenshot. A bounded 12-month economy probe is permitted where tick behavior is
+the subject of the test; it is not a general campaign endurance gate.

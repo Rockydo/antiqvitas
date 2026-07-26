@@ -1,5 +1,23 @@
 # Progress
 
+## 2026-07-26 - Second manual playtest reopens depth work
+
+- Reclassified the previous green build as a stable v0.1 foundation rather than a
+  content-complete total conversion. The second manual playtest exposed systemic
+  depth and mounted-content gaps that earlier quantity and syntax gates missed.
+- Audited all reported areas and added a new top-priority remediation programme to
+  `TODO.md`: opening economy/research; full vanilla-system quarantine; Religio
+  Romana doctrines; granular peoples; global RGO/settlement/terrain work; at least
+  750 substantive advances; vanilla-scale institutions and government systems;
+  and exhaustive presentation art.
+- Confirmed measurable starting gaps: 31 “Societies” macro-polities, including a
+  346-location interior Arabian tag; only 328 RGO corrections across 13,552
+  assigned locations; roughly 2,400 buildings concentrated in about 50–60
+  locations; 250 advances with only 19 unique effect strings; nine institutions;
+  and large unmirrored vanilla cabinet/parliament/law/privilege unions.
+- Kept the user-requested reduced QA contract: deterministic validators, paired
+  smoke, and focused subsystem screenshots replace long observer campaigns.
+
 ## 2026-07-25 - Roman economy and building-art parents closed
 
 - Added an exact 65-good active-economy audit spanning all 265 ancient

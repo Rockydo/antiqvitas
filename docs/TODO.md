@@ -8,7 +8,315 @@ after `make full` and its autonomous driver report are green.
 - [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review. (Validated by the 559-chain direct UI ledger and reviewed contact sheet; zero religion or privilege aliases remain.)
   - [x] Start and smoke-check the direct M8 migration: a ledger-driven, one-icon-at-a-time renderer path is live; reviewed Imperial Cult and Public Granaries icons are the first two of 250 direct advance illustrations.
 
-## Manual playtest remediation — 2026-07-24 (resume here)
+## Second manual playtest remediation — 2026-07-26 (resume here)
+
+This section supersedes earlier completion claims wherever the second manual
+playtest exposed shallow coverage or visible vanilla inheritance. The existing
+v0.1 work is a technical foundation, not the requested content-complete total
+conversion. Take these tasks top-to-bottom, keeping the master plan as the design
+authority.
+
+QA remains intentionally short: use `make validate`, paired smoke, deterministic
+console/setup probes, and focused screenshots of the subsystem being changed.
+Do not spend time on extreme or multi-century observer campaigns. A parent task
+closes only when its generator/ledger, complete installed-union census, validator,
+and focused runtime probe all pass.
+
+### Audit baseline
+
+- 229 playable tags remain, including 31 player-facing macro-polities named
+  “Societies”. Interior Bedouin Societies owns 346 locations, Aestii 152,
+  Brittonic Societies 105, Caledonian Societies 63, Berber and Gaetulian
+  Societies 56, and Germanic Societies 24. These are country-scale aggregations,
+  not merely descriptive localization.
+- The current world has 13,552 assigned land locations, but the RGO correction
+  ledger changes only 328. The remaining visible resource geography is largely
+  inherited from the 1337 setup.
+- 265 ancient building definitions exist, but roughly 2,400 starting placements
+  are concentrated in only about 50–60 locations. Rome alone receives more than
+  200 while almost every settlement worldwide begins empty.
+- The advance DAG has 250 nodes but only 19 unique effect strings; 187 nodes
+  unlock nothing. It has 50 roots, 180 one-parent nodes, and only 20
+  convergences. Passing quantity/acyclicity gates did not create enough mechanical
+  choice.
+- Only nine ancient institutions cover six ages. Government depth is similarly
+  thin: 17 reforms, 24 privileges, and 23 laws serve 229 countries.
+- Exact-name mirrors still leave most installed estates, privileges, parliament
+  material, cabinet actions, laws, religious aspects, and artillery-facing UI in
+  the mounted union. Rome starts at technology level 4 and has no explicit
+  starting treasury, while its exceptionally dense capital/building seed creates
+  a credible bankruptcy cause.
+- Existing building and advance art is generally strong, but centering, circular
+  safe-area compliance, and outlier quality were not validated in the actual UI.
+  Villa Liviae and Regional Law Codes are confirmed review targets. Location pop
+  summaries and the artillery category still resolve vanilla imagery.
+
+### S2-P0 — Opening-state correctness and vanilla-system quarantine
+
+- [ ] Fix Rome's opening bankruptcy and prove the intended Augustan budget.
+  - Capture a fresh, unpaused Rome economy breakdown and quantify taxes, trade,
+    subject income, army/navy, court, government, institution, and building costs.
+  - Correct generator inputs rather than adding an arbitrary rescue event.
+    Redistribute the implausibly concentrated building seed first; then set a
+    documented starting treasury only if the engine's normal default is inadequate.
+  - Acceptance: Rome starts solvent, can sustain its historical peacetime forces
+    and administration at neutral spending, has at least a 12-month reserve, and
+    remains non-bankrupt in a focused 12-month smoke probe.
+
+- [ ] Make research available to Rome and every playable opening profile.
+  - Audit `starting_technology_level`, node age, eligibility, prerequisites,
+    already-owned advances, institution requirements, and engine selection rules.
+  - Rome must have at least three meaningful eligible choices on day one; every
+    playable profile must have at least two. A higher technology level must not
+    silently pre-complete or strand its opening tree.
+  - Acceptance: machine-readable reachability/choice report for all 229 tags plus
+    focused Rome, Han, Arsacid, Germanic, Brittonic, African, and American panels.
+
+- [ ] Quarantine the complete vanilla estate/parliament/cabinet/law/privilege union.
+  - Harvest every base-game and DLC source and exact key. The current mod mirrors
+    only 2 of 8 estate-privilege files, 3 of 10 parliament-issue files, 1 of 7
+    parliament-agenda files, 0 of 72 cabinet-action files, 5 of 30 law files, and
+    3 of 7 reform files.
+  - Disable or replace every medieval/early-modern object at both definition and
+    unlock/reference layers. Preserve only locally proven engine adapters, and
+    guarantee that their names, descriptions, icons, and effects cannot surface.
+  - Acceptance: installed-union report has zero unapproved visible vanilla keys;
+    Rome and six regional probes show only ancient systems.
+
+- [ ] Add Religio Romana doctrines and ancient doctrine coverage.
+  - The religion currently declares no `religious_aspects` capacity and supplies
+    no Roman aspects. Verify the engine schema from local files, then build a
+    meaningful Roman set around civic cult, priestly colleges, auspices, household
+    cult, imperial cult, local syncretism, vows/festivals, and prodigy response.
+  - Give other major religious families comparable, historically bounded choices
+    rather than inheriting medieval doctrines.
+  - Acceptance: Rome has multiple viable doctrine configurations on day one;
+    each major religion profile has choices, complete art/localization/effects,
+    and no post-476 inherited aspect.
+
+- [ ] Replace artillery and remaining population-summary UI fallbacks.
+  - Trace the actual category resolvers used by army composition, recruitment,
+    military overview, levy, mercenary, and tooltip views. Replace the cannon
+    silhouette with an ancient torsion/siege-engine presentation and scan all
+    military-category imagery for firearms or medieval equipment.
+  - Trace the distinct location-overview pop icon resolver; previous pop-type
+    definition art did not replace this path. Replace every tier/summary state,
+    mask, and fallback with period art.
+  - Acceptance: no cannon/firearm/medieval pop icon in Rome, Germanic, Han, and
+    settlement-overview captures; resolver validator covers every active path.
+
+### S2-P1 — Replace macro-societies with historical peoples
+
+- [ ] Eliminate all player-facing generic “Societies”, “Land of”, macro-region,
+  and placeholder country names across the whole roster.
+  - Start from a generated census of country names, adjectives, map labels,
+    government names, history text, and localization in every supported language.
+  - Split broad ownership into geographically bounded peoples, confederations,
+    city polities, kingdoms, or explicitly unorganized/unowned space where evidence
+    cannot support a state. Do not invent false AD 1 borders merely to fill the map.
+  - Every replacement requires a source, confidence level, defensible geographic
+    frame, culture/religion/government package, ruler policy, capital rationale,
+    flag, agenda, and setup validation.
+  - Acceptance: zero player-facing generic society placeholders; no replacement
+    exceeds its sourced frame; all roster tags are fully wired.
+
+- [ ] Deepen interior Arabia before the wider generic-polity pass.
+  - Replace the 346-location Interior Bedouin macro-polity with documented tribal,
+    oasis, and south/east Arabian groupings appropriate to the turn of the era.
+    Distinguish Nabataean/client/frontier control, caravan oases, northern tribal
+    frames, central Arabian groups, Gerrha/eastern routes, and Yemeni kingdoms.
+  - Add regional incidents, caravan/oasis economy, cults, privileges, buildings,
+    units, and diplomacy without projecting later Islamic-era tribal geography
+    backward.
+  - Acceptance: no single residual Arabian polity spans the peninsula; each new
+    frame has sourced ownership and content; Arabia runtime map/content probe passes.
+
+- [ ] Rebuild Britain and Ireland at tribal and cultural resolution.
+  - Replace Brittonic and Caledonian macro-polities with attested or carefully
+    bounded tribal frames; expand Hibernian peoples and cultures. Treat Ptolemy
+    and later Roman testimony as dated evidence with explicit uncertainty.
+  - Model southern client dynamics, oppida, northern confederation uncertainty,
+    Irish regional peoples, trade, raiding, druidic/religious structures, units,
+    laws, privileges, buildings, agendas, and flags.
+  - Acceptance: no broad Brittonic/Caledonian catch-all, materially more than the
+    current 105+63 two-polity split, and visual/mechanical differentiation in four
+    focused regional probes.
+
+- [ ] Rebuild Germania, the Baltic/Aestii frame, and northern Europe.
+  - Replace “Germanic Societies” with real bounded peoples. Split the oversized
+    152-location Aestii frame wherever archaeological/textual evidence permits;
+    distinguish archaeological cultures from claimed ethnic states.
+  - Add major rival/confederation dynamics, migrations, sacred landscapes,
+    assembly/retinue systems, trade, units, government content, and Roman-frontier
+    diplomacy. Recheck Finnic and Siberian macro-polities in the same pass.
+  - Acceptance: no generic Germanic country; Aestii no longer functions as a
+    Baltic superstate; Germania is one of the deepest non-Roman theaters.
+
+- [ ] Rebuild Maghreb, Sahara, West Africa, Japan, and every remaining macro frame.
+  - Split Berber/Gaetulian, West African, Bantu, and other generic society tags
+    using evidence-appropriate political/archaeological frames. Recheck Japan,
+    Korea, Manchuria, Siberia, India, Southeast Asia, Oceania, and the Americas.
+  - Prefer honest decentralized peoples and unowned space over fictitious unified
+    states. Uncertainty labels stay in documentation, not immersion-breaking names.
+  - Acceptance: complete global placeholder census is zero and regional size/
+    identity outliers are justified in `ASSUMPTIONS.md`.
+
+- [ ] Rebuild cultural affinity and multiethnic-rule behavior.
+  - Audit culture groups, languages, dialects, religion, accepted-status rules,
+    distance/similarity, assimilation, promotion, estate membership, subject
+    relations, and revolt pressure against local engine behavior.
+  - Give Rome, Han, Arsacid Iran, Kushan/steppe, and other plural empires distinct
+    integration paths; avoid both universal hostility and frictionless sameness.
+  - Acceptance: controlled paired tests for close, related, distant, and hostile
+    cultures produce documented and historically plausible differences.
+
+### S2-P2 — AD 1 economy, settlements, and historical landscape
+
+- [ ] Replace the inherited 1337 RGO geography with a global AD 1 resource pass.
+  - Build a full 13,552-location ledger, not a small correction list. Classify
+    every owned/populated location by environmental capacity, attested extraction/
+    cultivation, trade access, and confidence.
+  - Review every active good and remove post-antique production assumptions.
+    Prioritize Mediterranean grain/wine/olive zones, mining, papyrus, incense,
+    silk routes, Indian Ocean products, pastoral frontiers, forest products, salt,
+    fisheries, and regional staples.
+  - Acceptance: every assigned location is audited; regional distribution and
+    outlier reports pass; no vanilla-only or post-476 RGO remains visible.
+
+- [ ] Seed a believable global settlement and building network.
+  - Replace the current capital/megacity-only concentration with sourced city,
+    town, village, fort, port, road, sanctuary, market, mine, estate, workshop,
+    irrigation, and frontier distributions across all settled regions.
+  - Use population, control, urbanization, terrain, river/coast, RGO, rank, and
+    documented site importance. Reserve named unique buildings for secure sites.
+  - Ensure maintenance and construction inputs do not bankrupt large states or
+    make empty provinces mechanically dominant.
+  - Acceptance: all major cities and a broad rural sample have plausible starts;
+    every country has an economy appropriate to its scale; concentration and
+    maintenance outlier gates pass.
+
+- [ ] Correct AD 1 terrain, vegetation, wetlands, and land-use presentation.
+  - Preserve map geometry, but audit mutable topography/climate/vegetation fields
+    and visual overlays against historical landscape evidence. Prioritize a much
+    more forested Germania, British/Irish woodland and wetlands, Mediterranean
+    cultivation, Mesopotamian marsh/irrigation, North African aridity gradients,
+    steppe/forest-steppe, South/East Asian river systems, and changed coast/wetland
+    contexts that the engine can represent without geometry edits.
+  - Acceptance: sourced change ledger, before/after regional distributions, map
+    captures for priority regions, and no navigation/pathfinding regression.
+
+- [ ] Expand trade goods, recipes, and production chains to support the new depth.
+  - Audit the present 143 productive families/55 recipe signatures for meaningful
+    regional differences. Add historically appropriate raw, processed, prestige,
+    military, food, construction, and caravan/maritime goods as needed.
+  - Tie RGOs, workshops, estates, urban demand, trade routes, military supply,
+    laws, privileges, advances, and events into coherent chains.
+  - Acceptance: every active good has real producers/consumers and UI art; no
+    dead-end recipe or globally interchangeable regional economy.
+
+### S2-P3 — Triple and deepen the advance/institution arc
+
+- [ ] Expand from 250 to at least 750 substantive advances.
+  - Preserve good existing art and historically sound nodes, but replace repeated
+    filler effects. Most new nodes must be culture, region, polity, religion, or
+    adoption-path specific; shared nodes require genuinely widespread practice.
+  - Build real branching, convergence, optional specializations, prerequisite
+    chains, cross-cultural transfer, and mutually meaningful choices. Every node
+    needs a sourced description, unique useful effect and/or valid unlock, AI
+    logic, direct art, and reachable eligible users.
+  - Use the expansion to unlock substantial new buildings, production chains,
+    laws, privileges, reforms, units, institutions, diplomacy, and events.
+  - Acceptance: at least 750 nodes; no effect/localization/art aliases; materially
+    higher branch/convergence/unlock diversity; all nodes reachable by an intended
+    profile; focused early/mid/late captures for 11 world profiles.
+
+- [ ] Bring each age's institutions to comparable vanilla-scale choice density.
+  - Replace the current nine total with multiple regional and transregional
+    institutions per age, each with historically bounded origin, eligibility,
+    spread, embrace cost, benefits, and cross-cultural adoption rules.
+  - Avoid deterministic global diffusion: Han Bureaucratic Statecraft, Roman
+    civic engineering, Buddhist networks, cavalry systems, writing/material
+    technologies, and late-antique religious/state transformations need distinct
+    pathways.
+  - Acceptance: every age and major profile has several relevant institutions;
+    unrelated institutions remain unavailable; panel density and spread probes pass.
+
+- [ ] Perform an art-quality pass while expanding the tree.
+  - Review all advance icons in circular UI context. Re-render composition,
+    lighting, framing, or historical object choice for outliers such as Regional
+    Law Codes while preserving the successful visual language.
+  - Acceptance: direct-art uniqueness, alpha/format/safe-area validators and
+    reviewed contact sheets; no square crop, text artifact, modern object, or
+    obvious quality outlier.
+
+### S2-P4 — Ancient government as a first-class game
+
+- [ ] Greatly expand reforms and government identities.
+  - Replace the current 17-reform layer with deep Roman, Hellenistic/client,
+    Iranian, Indic, Han/East Asian, steppe, Celtic, Germanic, Arabian, African,
+    American, and Oceanian paths. Government rank/localization must use period
+    terms rather than county/duchy/kingdom where inappropriate.
+  - Give major countries bespoke structures and smaller peoples coherent regional
+    systems; avoid one generic tribal kingdom serving most of the map.
+  - Acceptance: every tag has an appropriate package, every major profile has
+    multiple reform paths, and no visible medieval rank/government text remains.
+
+- [ ] Overhaul estates, councils/parliaments, and cabinet actions.
+  - Redesign estate identities and political weights by polity: Roman Senate,
+    equestrians, civic elites, priesthoods, army and people; Han court/
+    bureaucracy; Iranian nobility and temple networks; Hellenic councils; tribal
+    assemblies, clans and retinues; and equivalent regional structures.
+  - Parliament/council issues, agendas, seats, debates, cabinet offices/actions,
+    appointments, costs, and outcomes must be ancient and profile-aware.
+  - Acceptance: deep distinct panels for every major profile and coherent regional
+    fallback packages; zero vanilla object or text leakage.
+
+- [ ] Greatly expand ancient laws and privileges.
+  - Remove all remaining vanilla privileges from availability. Add country,
+    government, culture, religion, estate, region, and reform-specific privileges
+    with real tradeoffs, AI rules, prerequisites, revocation behavior, and art.
+  - Expand law groups across citizenship/status, slavery/manumission, taxation,
+    land tenure, army recruitment, provincial administration, cult, family/
+    inheritance, commerce, coinage, courts, offices, migration, and diplomacy.
+  - Acceptance: all 229 tags have useful legal/political choices; major countries
+    have bespoke depth; no duplicate filler effect or post-476 inheritance.
+
+### S2-P5 — Visual identity and exhaustive presentation audit
+
+- [ ] Audit and correct all 265 building icons in their real circular UI frame.
+  - Start with Villa Liviae's off-center composition. Measure nontransparent
+    bounds, subject centroid, safe-area occupancy, edge clipping, alpha/mask, and
+    downsample legibility; then visually review contact sheets by building family.
+  - Re-render only weak/outlier assets using real archaeological/architectural
+    references and the established dark-blue rounded visual language.
+  - Acceptance: automated centering/safe-area gate, no duplicate direct art, and
+    reviewed in-game samples at small/large sizes.
+
+- [ ] Replace generic or low-confidence flags with sourced political symbols.
+  - Audit every tag's emblem, palette, composition, uniqueness, anachronism, and
+    evidence class. Use documented coinage, standards, seals, material motifs, or
+    explicitly marked regional reconstructions; never modern national flags.
+  - Acceptance: all tags have unique direct art and documented rationale; reviewed
+    regional contact sheets and map/diplomacy captures pass.
+
+- [ ] Run a final presentation leakage census.
+  - Cover country/subject rank, pop tiers, buildings, RGOs/goods, institutions,
+    advances, units/categories, estates, council/parliament, cabinet, laws,
+    privileges, reforms, religion/doctrines, flags, map labels, agendas, tooltips,
+    loading/front-end, and all fallback art/localization resolvers.
+  - Acceptance: zero unapproved vanilla visible key, string, or image across the
+    installed base+DLC union and rapid screenshots for all major profiles.
+
+### S2-P6 — Closeout gates
+
+- [ ] Run the reduced final suite: `make validate`, paired `make smoke`, and one
+  focused rapid probe for each changed subsystem. There is no multi-century or
+  extreme observer-playthrough requirement.
+- [ ] Reconcile `PROGRESS.md`, `DECISIONS.md`, `ASSUMPTIONS.md`, `BLOCKERS.md`,
+  sources, ledgers, generated artifacts, and TODO state; then commit only green
+  batches with conventional messages.
+
+## Manual playtest remediation — 2026-07-24
 
 This section reopens systems that passed earlier file-level gates but failed the
 first manual playtest. Take these tasks top-to-bottom before returning to the
