@@ -20,6 +20,10 @@ antq_roman_senate = {
 		nobles_estate_can_participate_in_parliament = yes
 		burghers_estate_can_participate_in_parliament = yes
 		clergy_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.10
+		nobles_estate_agenda_impact = 0.25
+		burghers_estate_agenda_impact = 0.15
+		clergy_estate_agenda_impact = 0.05
 	}
 }
 
@@ -40,6 +44,10 @@ antq_han_court_conference = {
 		nobles_estate_can_participate_in_parliament = yes
 		burghers_estate_can_participate_in_parliament = yes
 		peasants_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.15
+		nobles_estate_agenda_impact = 0.10
+		burghers_estate_agenda_impact = 0.20
+		peasants_estate_agenda_impact = -0.10
 	}
 }
 
@@ -66,6 +74,10 @@ antq_iranian_great_council = {
 		nobles_estate_can_participate_in_parliament = yes
 		clergy_estate_can_participate_in_parliament = yes
 		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.05
+		nobles_estate_agenda_impact = 0.30
+		clergy_estate_agenda_impact = 0.10
+		burghers_estate_agenda_impact = -0.05
 	}
 }
 
@@ -88,6 +100,10 @@ antq_civic_assembly = {
 		burghers_estate_can_participate_in_parliament = yes
 		nobles_estate_can_participate_in_parliament = yes
 		peasants_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.10
+		burghers_estate_agenda_impact = 0.25
+		nobles_estate_agenda_impact = 0.10
+		peasants_estate_agenda_impact = 0.15
 	}
 }
 
@@ -108,6 +124,10 @@ antq_gana_assembly = {
 		nobles_estate_can_participate_in_parliament = yes
 		peasants_estate_can_participate_in_parliament = yes
 		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.15
+		nobles_estate_agenda_impact = 0.20
+		peasants_estate_agenda_impact = 0.20
+		burghers_estate_agenda_impact = 0.05
 	}
 }
 
@@ -128,6 +148,10 @@ antq_confederation_council = {
 		tribes_estate_can_participate_in_parliament = yes
 		nobles_estate_can_participate_in_parliament = yes
 		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.05
+		tribes_estate_agenda_impact = 0.35
+		nobles_estate_agenda_impact = 0.15
+		burghers_estate_agenda_impact = -0.10
 	}
 }
 
@@ -150,6 +174,10 @@ antq_tribal_assembly = {
 		tribes_estate_can_participate_in_parliament = yes
 		clergy_estate_can_participate_in_parliament = yes
 		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.05
+		tribes_estate_agenda_impact = 0.30
+		clergy_estate_agenda_impact = 0.15
+		burghers_estate_agenda_impact = -0.10
 	}
 }
 
@@ -172,6 +200,10 @@ antq_sacral_court = {
 		clergy_estate_can_participate_in_parliament = yes
 		nobles_estate_can_participate_in_parliament = yes
 		peasants_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.10
+		clergy_estate_agenda_impact = 0.30
+		nobles_estate_agenda_impact = 0.10
+		peasants_estate_agenda_impact = 0.05
 	}
 }
 
@@ -198,5 +230,9 @@ antq_royal_council = {
 		nobles_estate_can_participate_in_parliament = yes
 		burghers_estate_can_participate_in_parliament = yes
 		clergy_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.10
+		nobles_estate_agenda_impact = 0.20
+		burghers_estate_agenda_impact = 0.05
+		clergy_estate_agenda_impact = 0.05
 	}
 }

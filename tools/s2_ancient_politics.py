@@ -277,6 +277,45 @@ PROFILES = (
     ),
 )
 
+COUNCIL_DYNAMICS: dict[str, tuple[str, tuple[tuple[str, str], ...]]] = {
+    "roman": (
+        "0.10",
+        (("nobles_estate", "0.25"), ("burghers_estate", "0.15"), ("clergy_estate", "0.05")),
+    ),
+    "han": (
+        "0.15",
+        (("nobles_estate", "0.10"), ("burghers_estate", "0.20"), ("peasants_estate", "-0.10")),
+    ),
+    "iranian": (
+        "0.05",
+        (("nobles_estate", "0.30"), ("clergy_estate", "0.10"), ("burghers_estate", "-0.05")),
+    ),
+    "civic": (
+        "0.10",
+        (("burghers_estate", "0.25"), ("nobles_estate", "0.10"), ("peasants_estate", "0.15")),
+    ),
+    "gana": (
+        "0.15",
+        (("nobles_estate", "0.20"), ("peasants_estate", "0.20"), ("burghers_estate", "0.05")),
+    ),
+    "steppe": (
+        "0.05",
+        (("tribes_estate", "0.35"), ("nobles_estate", "0.15"), ("burghers_estate", "-0.10")),
+    ),
+    "tribal": (
+        "0.05",
+        (("tribes_estate", "0.30"), ("clergy_estate", "0.15"), ("burghers_estate", "-0.10")),
+    ),
+    "sacral": (
+        "0.10",
+        (("clergy_estate", "0.30"), ("nobles_estate", "0.10"), ("peasants_estate", "0.05")),
+    ),
+    "royal": (
+        "0.10",
+        (("nobles_estate", "0.20"), ("burghers_estate", "0.05"), ("clergy_estate", "0.05")),
+    ),
+}
+
 
 def q(value: str) -> str:
     return value.replace("\\", "\\\\").replace('"', '\\"')
@@ -302,6 +341,12 @@ def parliament_types() -> str:
         lines.extend(reform_trigger(profile.reforms))
         lines.extend(("\t}", "\tmodifier = {", "\t\thas_a_parliamentary_system = yes"))
         lines.extend(f"\t\t{estate}_can_participate_in_parliament = yes" for estate in profile.estates)
+        base_support, agenda_impacts = COUNCIL_DYNAMICS[profile.slug]
+        lines.append(f"\t\tparliament_base_support = {base_support}")
+        lines.extend(
+            f"\t\t{estate}_agenda_impact = {impact}"
+            for estate, impact in agenda_impacts
+        )
         lines.extend(("\t}", "}"))
     return "\n".join(lines) + "\n"
 
@@ -562,7 +607,20 @@ def validate() -> list[str]:
         failures.append("duplicate ancient-politics content key")
     if any(len(row["description"]) < 55 for row in rows):
         failures.append("an ancient-politics description is too shallow")
+    if set(COUNCIL_DYNAMICS) != {profile.slug for profile in PROFILES}:
+        failures.append("council political dynamics do not cover exactly the nine profiles")
+    if len(set(COUNCIL_DYNAMICS.values())) != len(PROFILES):
+        failures.append("council political dynamics must be distinct by profile")
     for profile in PROFILES:
+        base_support, agenda_impacts = COUNCIL_DYNAMICS[profile.slug]
+        if not 0 <= float(base_support) <= 0.25:
+            failures.append(f"unsafe base support for council profile {profile.slug}")
+        if {estate for estate, _impact in agenda_impacts} != set(profile.estates):
+            failures.append(
+                f"agenda-impact participants differ from council participants for {profile.slug}"
+            )
+        if any(not -0.25 <= float(impact) <= 0.40 for _estate, impact in agenda_impacts):
+            failures.append(f"unsafe agenda impact for council profile {profile.slug}")
         source = SOURCES / profile.source_file
         if not source.is_file():
             failures.append(f"missing source atlas: {source.relative_to(ROOT)}")

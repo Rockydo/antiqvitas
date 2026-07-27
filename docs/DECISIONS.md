@@ -1,5 +1,20 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - Council delegates use participation and agenda impact
+
+The installed `parliament_types/readme.txt` permits a country modifier block,
+and the installed council implementations use estate participation plus
+estate-specific agenda impact. It does not expose a separate programmable
+delegate or seat-count field. ANTIQVITAS therefore models who can deliberate
+and how much their petitions shape a session with the verified
+`*_can_participate_in_parliament`, `*_agenda_impact`, and
+`parliament_base_support` modifiers.
+
+Core government reforms separately govern the standing political balance:
+order power, power gained through officeholding, and appointment/replacement
+cost. This keeps permanent constitutional weight distinct from the dynamics of
+a particular council session and avoids unsupported script syntax.
+
 ## 2026-07-27 - Stable engine estates carry dynamic ancient social-order identities
 
 EU5's six core estate keys are deeply connected to pop classes, characters,

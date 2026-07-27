@@ -1,5 +1,27 @@
 # Historical Assumptions
 
+## 2026-07-27 - Political weights express relative leverage, not recovered constitutions
+
+The political-weight and appointment modifiers rank broad relationships
+supported by the source set: senatorial and equestrian access under the
+Principate, throne and court-lineage tension under Han, great-house leverage
+under the Arsacids, civic magistracies, gana lineage delegation, steppe and
+tribal kindred leadership, sacral patronage, and regional court brokerage.
+They do not claim recoverable percentages of representation, formal seat
+apportionment, universal appointment procedure, or identical institutions
+within a profile family.
+
+Negative agenda impact denotes a constituency that is harder to translate into
+a unified council demand, not political absence or social insignificance. All
+numbers remain gameplay abstractions bounded to the installed modifier scale.
+
+Sources: `P8.1`; `P8.2`; `P8.3`; `P8.4`; `P8.5`; `P8.7`; `P11`; `P13`;
+`OCD`; `CAH-XI`; `BHR`; `CTP-WM`; and `SAM`, routed by reform in
+`docs/m6/political_profile_contracts.csv`.
+
+[secure broad institutional relationships; contested numerical weights,
+appointment costs, and within-profile uniformity]
+
 ## 2026-07-27 - Social-order names describe political constituencies, not legal corporations
 
 “Senatorial Order,” “Court and Great Families,” “Temple Networks,” “Clan

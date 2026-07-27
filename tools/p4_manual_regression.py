@@ -193,6 +193,23 @@ def build_report() -> dict[str, object]:
         "ancient estate-order effect diversity regressed",
         failures,
     )
+    political_contracts = rows(ROOT / "docs/m6/political_profile_contracts.csv")
+    require(
+        len(political_contracts) == 19
+        and len({row["reform"] for row in political_contracts}) == 19
+        and len({row["modifiers"] for row in political_contracts}) >= 15,
+        "ancient appointment and political-weight contracts regressed",
+        failures,
+    )
+    councils = (
+        ROOT / "in_game/common/parliament_types/00_antiquitas_s2.txt"
+    ).read_text(encoding="utf-8-sig")
+    require(
+        councils.count("parliament_base_support =") == 9
+        and councils.count("_agenda_impact =") == 27,
+        "ancient council participation weights regressed",
+        failures,
+    )
 
     disease = json.loads((ROOT / "docs/m12/disease_dependency_manifest.json").read_text(encoding="utf-8"))
     require(len(disease["installed_diseases"]) == 7, "disease definition union changed", failures)
@@ -223,6 +240,7 @@ def build_report() -> dict[str, object]:
             "advances": len(advances),
             "ancient_political_entries": len(politics),
             "profile_locked_estate_privileges": len(estate_orders),
+            "political_profile_contracts": len(political_contracts),
             "diseases": len(disease["installed_diseases"]),
             "court_backgrounds": len(list(court_dir.glob("antq_throne_room_*.dds"))),
         },

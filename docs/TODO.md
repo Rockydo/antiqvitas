@@ -159,10 +159,9 @@ and focused runtime probe all pass.
       historical-material illustrations. The project now has 100/100
       directly illustrated ancient privileges.
     - [ ] Complete the remaining S2-P4 replacement breadth: profile-specific
-      base political weights, seat/delegate rules, office appointments, costs,
-      debate consequences, reform paths, and laws for every opening profile.
-      The nine current profiles are an engine-valid regional floor, not the
-      final political depth target.
+      major-country subdivisions, additional reform paths, and law groups for
+      every opening profile. The nine current profiles are an engine-valid
+      regional floor, not the final political depth target.
   - [x] Eliminate the fresh-bookmark parliament compiler failures before the
     replacement UI probe. The 2026-07-26 Britain/Hibernia bookmark isolated all
     2,855 `Script system error!` entries to
@@ -488,11 +487,17 @@ and focused runtime probe all pass.
     Han, Iranian, civic, gana, steppe, tribal, sacral, and royal sets cover the
     remaining custom reforms. Add 54 reform-gated privileges with real
     alternatives and 54 direct icons; validate 100/100 total privilege art.
-  - [ ] Deepen the remaining base political weights, delegates/seats,
-    appointment logic, costs, AI choices, and consequences. Expand major
-    profiles beyond the nine-family regional floor and test focused Roman,
-    Han, Iranian, civic, and assembly panels without requiring long
-    playthroughs.
+  - [x] Give every core reform a distinct political-weight and appointment
+    economy contract. Nineteen reform packages now vary order power,
+    office-derived influence, and appointment/replacement cost; nine council
+    profiles independently tune all 27 participating-order agenda weights and
+    opening support. The locally documented parliament-type surface exposes
+    participation and agenda impact rather than a programmable seat count, so
+    those are the checked delegate mechanics.
+  - [ ] Expand major profiles beyond the nine-family regional floor and test
+    focused Roman, Han, Iranian, civic, and assembly panels without requiring
+    long playthroughs. Add further country-specific appointment logic only
+    where the local engine exposes a verified contract.
   - Acceptance: deep distinct panels for every major profile and coherent regional
     fallback packages; zero vanilla object or text leakage.
 

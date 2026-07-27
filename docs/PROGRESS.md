@@ -1,5 +1,29 @@
 # Progress
 
+## 2026-07-27 - Political weights and appointment economies
+
+- Added 19 audited reform contracts covering all core ancient governments and
+  the dated Dominate and Sasanian successors. Each contract combines
+  polity-appropriate social-order power with office-derived influence and
+  appointment or replacement cost; 15 distinct packages prevent a generic
+  political economy from serving the whole map.
+- Gave all nine council profiles explicit opening support and differentiated
+  agenda weight for each participating order: 27 checked participant weights
+  across Roman, Han, Iranian, civic, gana, steppe, tribal, sacral, and royal
+  systems.
+- Verified the implementation against the installed parliament-type readme,
+  government-reform examples, and modifier registry. The engine surface
+  provides order participation and agenda impact but no separate scripted seat
+  count, so delegate influence is represented through those supported
+  mechanics rather than an invented field.
+- Extended the manual-symptom regression to require all 19 appointment
+  contracts, at least 15 distinct packages, nine council support values, and
+  all 27 agenda-impact entries.
+- Full validation passes 100/100. Paired vanilla/mod menu smoke reaches a
+  responsive rendered menu and reports zero mod-unique new `error.log` lines;
+  focused evidence is recorded in
+  `docs/playtests/S2_POLITICAL_WEIGHTS_20260727.md`.
+
 ## 2026-07-27 - Polity-aware social orders and 54 profile-locked grants
 
 - Exact-mirrored the engine's estate custom-localization registry and placed

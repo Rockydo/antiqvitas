@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import io
 import json
 import re
 from dataclasses import dataclass
@@ -21,6 +22,7 @@ LOC_ROOT = ROOT / "main_menu/localization"
 REFORM_OUTPUT = ROOT / "in_game/common/government_reforms/00_antiquitas_m6_core.txt"
 PRIVILEGE_OUTPUT = ROOT / "in_game/common/estate_privileges/00_antiquitas_m6_core.txt"
 LAW_OUTPUT = ROOT / "in_game/common/laws/00_antiquitas_m6_core.txt"
+POLITICAL_CONTRACT_OUTPUT = ROOT / "docs/m6/political_profile_contracts.csv"
 TOKEN_RE = re.compile(r"^[a-z][a-z0-9_]*$")
 VALUE_RE = re.compile(r"^(?:-?(?:\d+(?:\.\d+)?|\.\d+)|[a-z][a-z0-9_]*)$")
 DYN_FIELDS = ("key", "name", "home", "source", "confidence", "note")
@@ -79,7 +81,128 @@ MODIFIER_KEYS = frozenset((
     "global_monthly_control", "global_trade_through_owned_territory_efficiency",
     "global_production_efficiency", "research_speed_modifier", "stability_cost_efficiency",
     "monthly_towards_free_subjects",
+    "crown_estate_power_from_cabinet", "nobles_estate_power_from_cabinet",
+    "clergy_estate_power_from_cabinet", "burghers_estate_power_from_cabinet",
+    "tribes_estate_power_from_cabinet", "estate_power_from_cabinet",
+    "set_cabinet_member_cost_modifier", "replace_cabinet_member_cost_modifier",
 ))
+
+POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
+    "antq_principate": (
+        "global_nobles_estate_power=0.10|global_burghers_estate_power=0.05|"
+        "nobles_estate_power_from_cabinet=0.15|replace_cabinet_member_cost_modifier=0.10",
+        "P8.1;P11;P13;OCD", "secure",
+        "Senatorial and equestrian access matters, but replacement carries patronage friction.",
+    ),
+    "antq_dominate": (
+        "global_nobles_estate_power=-0.05|crown_estate_power_from_cabinet=0.25|"
+        "set_cabinet_member_cost_modifier=-0.10",
+        "P8.1;P11;P13;OCD", "secure",
+        "Palatine appointment strengthens the court at the expense of autonomous aristocratic weight.",
+    ),
+    "antq_han_imperial_bureaucracy": (
+        "global_crown_estate_power=0.15|global_nobles_estate_power=0.05|"
+        "crown_estate_power_from_cabinet=0.25|set_cabinet_member_cost_modifier=-0.10",
+        "P8.3;P13;BHR;CTP-WM", "secure",
+        "Imperial offices strengthen the throne while court lineages remain politically consequential.",
+    ),
+    "antq_lankan_kingdom": (
+        "global_clergy_estate_power=0.10|global_peasants_estate_power=0.05|"
+        "clergy_estate_power_from_cabinet=0.15|replace_cabinet_member_cost_modifier=0.05",
+        "P8.4;P11;P13;CAH-XI", "contested",
+        "Monastic patronage and irrigation households shape the sacral court.",
+    ),
+    "antq_indian_ganasangha": (
+        "global_peasants_estate_power=0.10|global_burghers_estate_power=0.05|"
+        "estate_power_from_cabinet=0.20|replace_cabinet_member_cost_modifier=-0.10",
+        "P8.4;P13;CAH-XI", "contested",
+        "Rotating lineage delegates make offices accessible but politically embedded.",
+    ),
+    "antq_indo_scythian_kingship": (
+        "global_tribes_estate_power=0.05|nobles_estate_power_from_cabinet=0.20|"
+        "replace_cabinet_member_cost_modifier=0.10",
+        "P8.4;P13;CAH-XI", "contested",
+        "Mounted households and regional dynasts constrain appointments.",
+    ),
+    "antq_indo_greek_kingship": (
+        "global_nobles_estate_power=0.05|burghers_estate_power_from_cabinet=0.20|"
+        "set_cabinet_member_cost_modifier=-0.05",
+        "P8.4;P13;CAH-XI;OCD", "contested",
+        "Royal office works through established civic elites and magistracies.",
+    ),
+    "antq_parthian_king_of_kings": (
+        "global_tribes_estate_power=0.05|nobles_estate_power_from_cabinet=0.30|"
+        "replace_cabinet_member_cost_modifier=0.15",
+        "P8.2;P13;CAH-XI;OCD", "secure",
+        "Great-house participation is powerful and costly to rearrange.",
+    ),
+    "antq_sassanid_centralized_monarchy": (
+        "global_clergy_estate_power=0.10|crown_estate_power_from_cabinet=0.25|"
+        "set_cabinet_member_cost_modifier=-0.10",
+        "P8.2;P13;CAH-XI", "secure",
+        "A stronger royal and religious administrative compact distinguishes the later monarchy.",
+    ),
+    "antq_client_monarchy": (
+        "global_nobles_estate_power=0.05|estate_power_from_cabinet=0.10|"
+        "replace_cabinet_member_cost_modifier=0.05",
+        "P8.1;P13;OCD", "secure",
+        "Local court houses retain leverage inside a patron-constrained monarchy.",
+    ),
+    "antq_parthian_subkingdom": (
+        "global_tribes_estate_power=0.05|nobles_estate_power_from_cabinet=0.20|"
+        "replace_cabinet_member_cost_modifier=0.10",
+        "P8.2;P13;OCD", "contested",
+        "Regional dynastic office remains negotiated with the great-house order.",
+    ),
+    "antq_buffer_kingdom": (
+        "global_burghers_estate_power=0.05|estate_power_from_cabinet=0.10|"
+        "replace_cabinet_member_cost_modifier=0.05",
+        "P8.2;P13;OCD", "contested",
+        "Court, route, and urban interests compete under frontier diplomatic pressure.",
+    ),
+    "antq_kushite_dual_kingship": (
+        "global_clergy_estate_power=0.10|global_peasants_estate_power=0.05|"
+        "clergy_estate_power_from_cabinet=0.20|set_cabinet_member_cost_modifier=-0.05",
+        "P8.5;P13;CAH-XI", "secure",
+        "Sacral legitimacy and cultivating communities structure royal appointments.",
+    ),
+    "antq_steppe_confederation": (
+        "global_nobles_estate_power=0.10|tribes_estate_power_from_cabinet=0.30|"
+        "replace_cabinet_member_cost_modifier=0.10",
+        "P8.3;P13;CAH-XI", "secure",
+        "Lineage leaders gain weight from office and resist rapid replacement.",
+    ),
+    "antq_early_korean_kingdom": (
+        "global_crown_estate_power=0.10|nobles_estate_power_from_cabinet=0.15|"
+        "set_cabinet_member_cost_modifier=-0.05",
+        "P8.3;P13;SAM", "secure",
+        "Royal consolidation coexists with leading regional houses.",
+    ),
+    "antq_regional_kingship": (
+        "global_nobles_estate_power=0.05|estate_power_from_cabinet=0.10|"
+        "replace_cabinet_member_cost_modifier=0.05",
+        "P8;P13", "contested",
+        "A conservative regional floor gives court elites limited appointment leverage.",
+    ),
+    "antq_advanced_chiefdom": (
+        "global_clergy_estate_power=0.05|tribes_estate_power_from_cabinet=0.20|"
+        "replace_cabinet_member_cost_modifier=-0.05",
+        "P8.7;P13;CAH-XI", "contested",
+        "Recognized kindreds and ritual custodians share a comparatively accessible council.",
+    ),
+    "antq_settled_town_cluster": (
+        "global_peasants_estate_power=0.05|burghers_estate_power_from_cabinet=0.20|"
+        "set_cabinet_member_cost_modifier=-0.10",
+        "P8;P13;OCD", "contested",
+        "Civic and exchange households dominate an inexpensive magistracy.",
+    ),
+    "antq_tribal_kingdom": (
+        "global_nobles_estate_power=0.10|tribes_estate_power_from_cabinet=0.25|"
+        "replace_cabinet_member_cost_modifier=0.05",
+        "P8.7;P13;CAH-XI", "secure",
+        "A leading house rules through powerful kindreds and office-bearing retainers.",
+    ),
+}
 
 
 @dataclass(frozen=True)
@@ -127,6 +250,15 @@ def assignments(value: str, label: str) -> tuple[tuple[str, str], ...]:
     if len({key for key, _ in parsed}) != len(parsed):
         raise ValueError(f"{label} contains a duplicate key")
     return tuple(parsed)
+
+
+def political_contract_ledger() -> str:
+    output = io.StringIO(newline="")
+    writer = csv.writer(output, lineterminator="\n")
+    writer.writerow(("reform", "modifiers", "source", "confidence", "note"))
+    for reform, (modifiers, source, confidence, note) in POLITICAL_CONTRACTS.items():
+        writer.writerow((reform, modifiers, source, confidence, note))
+    return output.getvalue()
 
 
 def has_named_active_head(government: dict[str, str]) -> bool:
@@ -526,6 +658,27 @@ def load_power_data() -> PowerData:
         elif sequence != list(range(1, len(sequence) + 1)):
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
+    used_reforms = {government["reform"] for government in governments.values()}
+    if len(POLITICAL_CONTRACTS) != 19 or not used_reforms.issubset(POLITICAL_CONTRACTS):
+        failures.append(
+            "political appointment contracts must cover all active M6 reforms and both dated successors"
+        )
+    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 15:
+        failures.append("political appointment contracts are insufficiently differentiated")
+    for reform, (modifier_text, _source, confidence, note) in POLITICAL_CONTRACTS.items():
+        try:
+            parsed = assignments(modifier_text, f"political contract {reform}")
+        except ValueError as exc:
+            failures.append(str(exc))
+            parsed = ()
+        for key, _value in parsed:
+            if key not in MODIFIER_KEYS:
+                failures.append(
+                    f"political contract {reform} uses unharvested modifier {key}"
+                )
+        if confidence not in {"secure", "contested"} or len(note) < 55:
+            failures.append(f"political contract {reform} lacks a bounded evidence note")
+
     if failures:
         raise ValueError("\n".join(sorted(set(failures))))
     return PowerData(
@@ -882,6 +1035,18 @@ antq_tribal_kingdom = {
         start = rendered.index(f"{reform} = {{")
         end = rendered.index("\n}\n", start)
         block = rendered[start:end]
+        modifier_anchor = "\tcountry_modifier = {\n"
+        if modifier_anchor not in block:
+            raise ValueError(f"government reform {reform} lost its modifier anchor")
+        contract_lines = "".join(
+            f"\t\t{key} = {value}\n"
+            for key, value in assignments(
+                POLITICAL_CONTRACTS[reform][0], f"political contract {reform}"
+            )
+        )
+        block = block.replace(
+            modifier_anchor, f"{modifier_anchor}{contract_lines}", 1
+        )
         anchor = "\n\tyears = 2"
         if anchor not in block:
             raise ValueError(f"government reform {reform} lost its years anchor")
@@ -1014,7 +1179,12 @@ def localization(data: PowerData, language: str) -> str:
 
 
 def outputs(data: PowerData) -> dict[Path, str]:
-    result = {REFORM_OUTPUT: reforms(), PRIVILEGE_OUTPUT: estate_privileges(data), LAW_OUTPUT: law_definitions(data)}
+    result = {
+        REFORM_OUTPUT: reforms(),
+        PRIVILEGE_OUTPUT: estate_privileges(data),
+        LAW_OUTPUT: law_definitions(data),
+        POLITICAL_CONTRACT_OUTPUT: political_contract_ledger(),
+    }
     for language in ("english", *M2_MIRROR_LANGUAGES):
         result[LOC_ROOT / language / f"antq_m6_power_l_{language}.yml"] = localization(data, language)
     return result
