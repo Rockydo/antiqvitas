@@ -4717,3 +4717,24 @@ support differentiated mechanics but not one pan-Germanic constitution or
 uniform Baltic institution. Sources: `PTO-GEO-II11`; `PLN-NH-IV96`; `TAC-GER`;
 mechanical contracts in `docs/m6/regional_government_overlays.csv`. [contested
 name and social abstraction]
+
+## 2026-07-27 - Regional advance paths describe practices, not uniform states
+
+The Baltic, Vistula-Dnieper, Volga-Kama, northern-forest, Celtic, Germanic,
+Iranian-steppe, Indic, Han, African, Near Eastern, American, and Oceanian
+advance branches collect materially or textually supportable practices into
+gameplay progressions. They do not assert that every community in a culture
+group used the same institution, terminology, chronology, or political
+organization. Archaeological labels remain archaeological frames; later
+ethnonyms and later textual testimony do not become exact AD 1 borders.
+Sources: `P8.7`; `P8.8`; `P8.10`; `P15`; `TAC-GER`;
+`AWE-DNIEPER-DVINA`; `ENC-NEEU`; `BSE-GORODETS`;
+`BSE-GLYADENOVO`; `BSE-UST-POLUY`; per-node source fields in
+`docs/m8/advances.csv`. [bounded research abstraction]
+
+The American branch deliberately uses generic Formative-period material and
+community practices rather than projecting later Maya, Aztec, Inca, or modern
+ethnic systems backward. The Oceanian branch similarly represents
+Austronesian navigation, stilt settlement, shell valuables, and feast
+redistribution as broad regional affordances, not one pan-Oceanian polity.
+Sources: `P8.9`; `P8.10`; `P15`. [contested regional abstraction]

@@ -165,7 +165,7 @@ def build_report() -> dict[str, object]:
     institutions = rows(ROOT / "docs/m8/institutions.csv")
     advances = rows(ROOT / "docs/m8/advances.csv")
     require(len(institutions) == 9, f"ancient institution set has {len(institutions)} entries", failures)
-    require(len(advances) == 250, f"advance tree has {len(advances)} entries", failures)
+    require(len(advances) >= 360, f"advance tree has only {len(advances)} entries", failures)
     require(all(row["description"].strip() for row in advances), "an advance lacks a description", failures)
     require(sum(bool(row["requires"].strip()) for row in advances) >= 200, "advance tree branching regressed", failures)
     require(sum(bool(row["unlocks"].strip()) for row in advances) >= 60, "advance unlock density regressed", failures)

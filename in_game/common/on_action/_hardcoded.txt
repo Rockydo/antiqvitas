@@ -1522,6 +1522,12 @@ on_loan_renewed = {
 #root = country
 on_bankruptcy = {
 	effect = {
+		# ANTIQVITAS: distinguish a real default from the year-one epoch ghost.
+		set_variable = { name = antq_genuine_bankruptcy value = yes years = 5 }
+		if = {
+			limit = { has_variable = antq_genuine_bankruptcy }
+			add_country_modifier = { modifier = antq_genuine_bankruptcy years = 5 }
+		}
 		set_variable = { name = ach_has_been_bankrupt value = yes }
 		if = {
 			limit = {

@@ -21,6 +21,16 @@ EXPECTED = {
     "in_game/common/scripted_triggers/situation_triggers.txt": 2,
 }
 UNSAFE = re.compile(r"(?m)^(?P<indent>[ \t]+)market\s*=\s*\{")
+MARKET_CENTER_TEST = "\t\t\tnot = { this = market.location }"
+MARKET_TREATY_TEST = (
+    "\t\t\tnot = {\n"
+    "\t\t\t\tmarket ?= {\n"
+    "\t\t\t\t\towner = {\n"
+    "\t\t\t\t\t\thas_trade_treaty_with = scope:actor\n"
+    "\t\t\t\t\t}\n"
+    "\t\t\t\t}\n"
+    "\t\t\t}"
+)
 
 
 def clean_text(text: str) -> str:
@@ -41,6 +51,38 @@ def render(relative: str, expected_count: int) -> bytes:
     if count != expected_count:
         raise ValueError(
             f"{relative}: expected {expected_count} unsafe market links, found {count}"
+        )
+    if relative == "in_game/common/generic_actions/markets.txt":
+        if text.count(MARKET_CENTER_TEST) != 1:
+            raise ValueError(
+                f"{relative}: installed create-market center-test contract changed"
+            )
+        if text.count(MARKET_TREATY_TEST) != 1:
+            raise ValueError(
+                f"{relative}: installed create-market treaty-test contract changed"
+            )
+        text = text.replace(
+            MARKET_CENTER_TEST,
+            "\t\t\tNOT = { market ?= { location = prev } }",
+            1,
+        )
+        text = text.replace(
+            MARKET_TREATY_TEST,
+            # Asking the existing market owner whether it has a treaty with
+            # the actor asserts when both scopes are the same country. The
+            # actual invalid target is already covered by direct ownership.
+            "\t\t\tNOT = { market ?= { owner = { this = scope:actor } } }",
+            1,
+        )
+        marker = "\ncreate_market = {"
+        if text.count(marker) != 1:
+            raise ValueError(f"{relative}: create_market action inventory changed")
+        text = text.replace(
+            marker,
+            "\n# ANTIQVITAS: safe center, owner, and optional-market tests for seeded AD 1 markets.\n"
+            "# These prevent unset location lookups and country self-relations.\n"
+            + marker,
+            1,
         )
     text = clean_text(text)
     encoded = text.encode("utf-8")

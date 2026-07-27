@@ -3306,3 +3306,58 @@ The reduced QA policy for this batch is full static validation, paired menu
 smoke, and six fresh-selector captures. It deliberately omits a long observer
 campaign. The hardcoded absent-HRE notice is compared against its pinned
 blocker; every content-specific error remains a failure.
+
+## 2026-07-27 - Opening research is proven from generated setup contracts
+
+Research availability is no longer inferred from node counts. The M8 generator
+computes each roster entry's actual opening technology tier, primary culture
+using the country generator's tag-override/region-fallback rule, owned Age-I
+nodes, satisfied prerequisites, and culture potential. A build fails below two
+eligible candidates for any polity or below four for Rome. Institution-based
+cross-adoption is excluded from this minimum proof so it cannot hide an
+unreachable primary-culture tree.
+
+Age-I expansion paths reuse an existing shared root and follow a
+root–stem–two-choice–convergence–capstone shape. This adds depth without
+inflating the root row or producing straight-line regional ladders. The opening
+technology field remains capped at the locally observed engine maximum of four;
+level-three major states therefore own depths zero through two and can choose
+between the two depth-three nodes before reaching the capstone.
+
+## 2026-07-27 - Every new advance receives direct reviewed art
+
+The 110-node expansion may not consume the age-level transitional icon. Seven
+generated 4x4 source sheets are retained on the work drive; a checked splitter
+maps row-major cells to advance keys, removes gutters, writes individual source
+and 256px masters, converts full-mip BC7 sRGB textures, rejects hash aliases,
+and emits a contact sheet. The visual language remains centered archaeological
+objects on charcoal with no text, flags, people, or post-antique equipment.
+
+## 2026-07-27 - Adapt the AD 1 bankruptcy epoch without changing the visible calendar
+
+Fresh player starts proved that the bankruptcy warning was not caused by Rome's
+budget: every generated country received the same five-year presentation despite
+having no loans and a positive balance. Neither a direct startup
+`set_bankruptcy = no` effect nor a one-day delayed cleanup event changed the
+state. Changing the date beyond the engine's minimum epoch and then using the
+native `remove_bankruptcy` command did clear it. A saved AD 1 game contained no
+real bankruptcy variable or serialized bankruptcy record. Together these checks
+identify the engine's low-year timestamp interpretation, not authored economic
+state, as the cause.
+
+A full AUC date shift was rejected for this defect because it would rewrite more
+than fifteen thousand date occurrences, obscure the requested AD-facing
+calendar, and create unrelated history risk. Instead, the exact installed
+`is_bankrupt` static modifier is neutralized only as the false startup carrier.
+The installed `on_bankruptcy` callback now creates a five-year
+`antq_genuine_bankruptcy` state variable, consumes it in the active callback,
+and applies a same-duration modifier containing every native penalty. Exact
+economy and credit GUI mirrors display the warning from the variable and the
+penalty tooltip from the modifier. A modifier-only GUI test was rejected because
+EU5's `Player.HasModifier()` does not recognize this timed static-country
+modifier class even while its effects are active.
+
+The forced `bankrupt XAA` control is mandatory for this adapter: it proves that
+real bankruptcies still show the banner and suppress research. Source basis is
+the locally installed 1.3.11 static modifier, on-action, GUI, console behavior,
+and save format; no engine behavior was inferred from memory.

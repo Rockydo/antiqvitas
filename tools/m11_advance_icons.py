@@ -174,7 +174,11 @@ def main() -> int:
     parser.parse_args()
     validate()
     direct = direct_assets()
-    print(f"m11_advance_icons: PASS ({len(direct)} direct icons + {len(ADVANCE_ICONS)} reviewed transitional group icons for 250 advances)")
+    print(
+        "m11_advance_icons: PASS "
+        f"({len(direct)} direct icons + {len(ADVANCE_ICONS)} reviewed "
+        f"transitional group icons for {len(advance_records())} advances)"
+    )
     return 0
 
 

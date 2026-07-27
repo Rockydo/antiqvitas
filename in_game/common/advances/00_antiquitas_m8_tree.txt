@@ -155,7 +155,7 @@ antq_public_granaries = {
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
 	}
-	country_cabinet_efficiency = 0.015
+	global_monthly_control = 0.001
 	unlock_building = antq_reg_horrea_complex
 	unlock_building = antq_reg_annona_bakery
 	unlock_building = antq_reg_quarry_contractors
@@ -186,7 +186,7 @@ antq_frontier_dispatches = {
 			has_embraced_institution = institution:antq_papermaking
 		}
 	}
-	country_cabinet_efficiency = 0.015
+	global_monthly_control = 0.001
 	starting_technology_level = 3
 	requires = antq_legal_petitions
 	ai_weight = { add = 80 }
@@ -205,7 +205,7 @@ antq_imperial_archives = {
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
 	}
-	stability_cost_efficiency = 0.03
+	tax_income_efficiency = small_tax_income_efficiency_bonus
 	starting_technology_level = 4
 	requires = antq_public_granaries
 	ai_weight = { add = 70 }
@@ -225,7 +225,7 @@ antq_standing_administration = {
 			has_embraced_institution = institution:antq_papermaking
 		}
 	}
-	country_cabinet_efficiency = 0.015
+	global_monthly_control = 0.001
 	starting_technology_level = 3
 	requires = antq_municipal_charters
 	ai_weight = { add = 80 }
@@ -330,7 +330,7 @@ antq_imperial_rescripts = {
 			has_embraced_institution = institution:antq_hellenism
 		}
 	}
-	country_cabinet_efficiency = 0.015
+	global_monthly_control = 0.001
 	requires = antq_provincial_assizes
 	requires = antq_civic_patronage
 	ai_weight = { add = 80 }
@@ -348,7 +348,7 @@ antq_law_of_persons = {
 			has_embraced_institution = institution:antq_cataphract_warfare
 		}
 	}
-	country_cabinet_efficiency = 0.015
+	global_monthly_control = 0.001
 	requires = antq_municipal_accounting
 	ai_weight = { add = 80 }
 }
@@ -365,7 +365,7 @@ antq_provincial_governance = {
 			has_embraced_institution = institution:antq_hellenism
 		}
 	}
-	stability_cost_efficiency = 0.03
+	tax_income_efficiency = small_tax_income_efficiency_bonus
 	requires = antq_imperial_rescripts
 	ai_weight = { add = 70 }
 }
@@ -382,7 +382,7 @@ antq_high_empire_administration = {
 			has_embraced_institution = institution:antq_cataphract_warfare
 		}
 	}
-	country_cabinet_efficiency = 0.015
+	global_monthly_control = 0.001
 	requires = antq_estate_registries
 	ai_weight = { add = 80 }
 }
@@ -490,7 +490,7 @@ antq_grain_annona = {
 			has_embraced_institution = institution:antq_theological_orthodoxy
 		}
 	}
-	country_cabinet_efficiency = 0.015
+	global_monthly_control = 0.001
 	requires = antq_fiscal_reassessment
 	requires = antq_mint_accounting
 	ai_weight = { add = 80 }
@@ -508,7 +508,7 @@ antq_imperial_dioceses = {
 			has_embraced_institution = institution:antq_buddhist_monasticism
 		}
 	}
-	country_cabinet_efficiency = 0.015
+	global_monthly_control = 0.001
 	requires = antq_regional_commands
 	ai_weight = { add = 80 }
 }
@@ -526,7 +526,7 @@ antq_revenue_recovery = {
 			has_embraced_institution = institution:antq_theological_orthodoxy
 		}
 	}
-	stability_cost_efficiency = 0.03
+	tax_income_efficiency = small_tax_income_efficiency_bonus
 	requires = antq_grain_annona
 	ai_weight = { add = 70 }
 }
@@ -543,7 +543,7 @@ antq_crisis_statecraft = {
 			has_embraced_institution = institution:antq_buddhist_monasticism
 		}
 	}
-	country_cabinet_efficiency = 0.015
+	global_monthly_control = 0.001
 	requires = antq_emergency_rescripts
 	ai_weight = { add = 80 }
 }
@@ -653,7 +653,7 @@ antq_public_post = {
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
 	}
-	country_cabinet_efficiency = 0.015
+	global_monthly_control = 0.001
 	requires = antq_notarial_offices
 	requires = antq_imperial_chancery
 	ai_weight = { add = 80 }
@@ -672,7 +672,7 @@ antq_legal_compilations = {
 			has_embraced_institution = institution:antq_christian_monasticism
 		}
 	}
-	country_cabinet_efficiency = 0.015
+	global_monthly_control = 0.001
 	requires = antq_provincial_prefects
 	ai_weight = { add = 80 }
 }
@@ -690,7 +690,7 @@ antq_late_roman_bureaucracy = {
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
 	}
-	stability_cost_efficiency = 0.03
+	tax_income_efficiency = small_tax_income_efficiency_bonus
 	requires = antq_public_post
 	ai_weight = { add = 70 }
 }
@@ -708,7 +708,7 @@ antq_dominate_statecraft = {
 			has_embraced_institution = institution:antq_christian_monasticism
 		}
 	}
-	country_cabinet_efficiency = 0.015
+	global_monthly_control = 0.001
 	requires = antq_tax_in_kind
 	ai_weight = { add = 80 }
 }
@@ -766,7 +766,7 @@ antq_successor_taxation = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	country_cabinet_efficiency = 0.015
+	global_monthly_control = 0.001
 	requires = antq_barbarian_hospitality
 	ai_weight = { add = 80 }
 }
@@ -782,7 +782,7 @@ antq_royal_notaries = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	country_cabinet_efficiency = 0.015
+	global_monthly_control = 0.001
 	requires = antq_land_assignment
 	ai_weight = { add = 80 }
 }
@@ -842,7 +842,7 @@ antq_kingdom_building = {
 			culture = { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
-	country_cabinet_efficiency = 0.015
+	global_monthly_control = 0.001
 	requires = antq_mixed_courts
 	ai_weight = { add = 80 }
 }
@@ -859,9 +859,353 @@ antq_post_roman_statecraft = {
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
 		}
 	}
-	country_cabinet_efficiency = 0.015
+	global_monthly_control = 0.001
 	requires = antq_settlement_registers
 	ai_weight = { add = 80 }
+}
+
+antq_oppidum_council_summons = {
+	age = age_1_traditions
+	icon = antq_advance_oppidum_council_summons
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_celtic_group }
+			has_embraced_institution = institution:antq_foederati_statecraft
+		}
+	}
+	stability_cost_efficiency = 0.02
+	starting_technology_level = 2
+	requires = antq_imperial_cult
+	ai_weight = { add = 90 }
+}
+
+antq_guest_friends_arbitration = {
+	age = age_1_traditions
+	icon = antq_advance_guest_friends_arbitration
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_celtic_group }
+			has_embraced_institution = institution:antq_foederati_statecraft
+		}
+	}
+	global_monthly_control = 0.001
+	starting_technology_level = 3
+	requires = antq_oppidum_council_summons
+	ai_weight = { add = 80 }
+}
+
+antq_tribute_feast_tallies = {
+	age = age_1_traditions
+	icon = antq_advance_tribute_feast_tallies
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_celtic_group }
+			has_embraced_institution = institution:antq_foederati_statecraft
+		}
+	}
+	tax_income_efficiency = small_tax_income_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_guest_friends_arbitration
+	ai_weight = { add = 70 }
+}
+
+antq_clientage_oath_networks = {
+	age = age_1_traditions
+	icon = antq_advance_clientage_oath_networks
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_celtic_group }
+			has_embraced_institution = institution:antq_foederati_statecraft
+		}
+	}
+	tax_income_efficiency = small_tax_income_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_guest_friends_arbitration
+	ai_weight = { add = 70 }
+}
+
+antq_confederated_council_customs = {
+	age = age_1_traditions
+	icon = antq_advance_confederated_council_customs
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_celtic_group }
+			has_embraced_institution = institution:antq_foederati_statecraft
+		}
+	}
+	legislative_efficiency = 0.05
+	starting_technology_level = 4
+	requires = antq_tribute_feast_tallies
+	requires = antq_clientage_oath_networks
+	ai_weight = { add = 60 }
+}
+
+antq_meroitic_temple_stewardship = {
+	age = age_1_traditions
+	icon = antq_advance_meroitic_temple_stewardship
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_nile_group }
+			culture = { has_culture_group = culture_group:antq_berber_group }
+			culture = { has_culture_group = culture_group:antq_subsaharan_group }
+			has_embraced_institution = institution:antq_christian_monasticism
+		}
+	}
+	stability_cost_efficiency = 0.02
+	starting_technology_level = 2
+	requires = antq_imperial_cult
+	ai_weight = { add = 90 }
+}
+
+antq_kandake_court_delegates = {
+	age = age_1_traditions
+	icon = antq_advance_kandake_court_delegates
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_nile_group }
+			culture = { has_culture_group = culture_group:antq_berber_group }
+			culture = { has_culture_group = culture_group:antq_subsaharan_group }
+			has_embraced_institution = institution:antq_christian_monasticism
+		}
+	}
+	global_monthly_control = 0.001
+	starting_technology_level = 3
+	requires = antq_meroitic_temple_stewardship
+	ai_weight = { add = 80 }
+}
+
+antq_oasis_tribute_stations = {
+	age = age_1_traditions
+	icon = antq_advance_oasis_tribute_stations
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_nile_group }
+			culture = { has_culture_group = culture_group:antq_berber_group }
+			culture = { has_culture_group = culture_group:antq_subsaharan_group }
+			has_embraced_institution = institution:antq_christian_monasticism
+		}
+	}
+	tax_income_efficiency = small_tax_income_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_kandake_court_delegates
+	ai_weight = { add = 70 }
+}
+
+antq_nile_caravan_adjudication = {
+	age = age_1_traditions
+	icon = antq_advance_nile_caravan_adjudication
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_nile_group }
+			culture = { has_culture_group = culture_group:antq_berber_group }
+			culture = { has_culture_group = culture_group:antq_subsaharan_group }
+			has_embraced_institution = institution:antq_christian_monasticism
+		}
+	}
+	tax_income_efficiency = small_tax_income_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_kandake_court_delegates
+	ai_weight = { add = 70 }
+}
+
+antq_royal_storehouse_seals = {
+	age = age_1_traditions
+	icon = antq_advance_royal_storehouse_seals
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_nile_group }
+			culture = { has_culture_group = culture_group:antq_berber_group }
+			culture = { has_culture_group = culture_group:antq_subsaharan_group }
+			has_embraced_institution = institution:antq_christian_monasticism
+		}
+	}
+	legislative_efficiency = 0.05
+	starting_technology_level = 4
+	requires = antq_oasis_tribute_stations
+	requires = antq_nile_caravan_adjudication
+	ai_weight = { add = 60 }
+}
+
+antq_amber_coast_assemblies = {
+	age = age_1_traditions
+	icon = antq_advance_amber_coast_assemblies
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_baltic_group }
+		}
+	}
+	stability_cost_efficiency = 0.02
+	starting_technology_level = 2
+	requires = antq_imperial_cult
+	ai_weight = { add = 90 }
+}
+
+antq_hillfort_household_speakers = {
+	age = age_1_traditions
+	icon = antq_advance_hillfort_household_speakers
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_baltic_group }
+		}
+	}
+	global_monthly_control = 0.001
+	starting_technology_level = 3
+	requires = antq_amber_coast_assemblies
+	ai_weight = { add = 80 }
+}
+
+antq_burial_community_custodians = {
+	age = age_1_traditions
+	icon = antq_advance_burial_community_custodians
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_baltic_group }
+		}
+	}
+	tax_income_efficiency = small_tax_income_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_hillfort_household_speakers
+	ai_weight = { add = 70 }
+}
+
+antq_coastal_route_arbitration = {
+	age = age_1_traditions
+	icon = antq_advance_coastal_route_arbitration
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_baltic_group }
+		}
+	}
+	tax_income_efficiency = small_tax_income_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_hillfort_household_speakers
+	ai_weight = { add = 70 }
+}
+
+antq_intercommunity_oath_circles = {
+	age = age_1_traditions
+	icon = antq_advance_intercommunity_oath_circles
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_baltic_group }
+		}
+	}
+	legislative_efficiency = 0.05
+	starting_technology_level = 4
+	requires = antq_burial_community_custodians
+	requires = antq_coastal_route_arbitration
+	ai_weight = { add = 60 }
+}
+
+antq_seasonal_round_councils = {
+	age = age_1_traditions
+	icon = antq_advance_seasonal_round_councils
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_uralic_group }
+		}
+	}
+	stability_cost_efficiency = 0.02
+	starting_technology_level = 2
+	requires = antq_imperial_cult
+	ai_weight = { add = 90 }
+}
+
+antq_river_portage_stewards = {
+	age = age_1_traditions
+	icon = antq_advance_river_portage_stewards
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_uralic_group }
+		}
+	}
+	global_monthly_control = 0.001
+	starting_technology_level = 3
+	requires = antq_seasonal_round_councils
+	ai_weight = { add = 80 }
+}
+
+antq_sanctuary_offering_custody = {
+	age = age_1_traditions
+	icon = antq_advance_sanctuary_offering_custody
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_uralic_group }
+		}
+	}
+	tax_income_efficiency = small_tax_income_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_river_portage_stewards
+	ai_weight = { add = 70 }
+}
+
+antq_forest_steppe_envoys = {
+	age = age_1_traditions
+	icon = antq_advance_forest_steppe_envoys
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_uralic_group }
+		}
+	}
+	tax_income_efficiency = small_tax_income_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_river_portage_stewards
+	ai_weight = { add = 70 }
+}
+
+antq_dispersed_household_compacts = {
+	age = age_1_traditions
+	icon = antq_advance_dispersed_household_compacts
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_uralic_group }
+		}
+	}
+	legislative_efficiency = 0.05
+	starting_technology_level = 4
+	requires = antq_sanctuary_offering_custody
+	requires = antq_forest_steppe_envoys
+	ai_weight = { add = 60 }
 }
 
 antq_professional_standing_armies = {
@@ -940,7 +1284,7 @@ antq_drill_routines = {
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	unlock_law = tribal_organization_law
 	unlock_unit = antq_legionaries
 	unlock_unit = antq_auxilia
@@ -967,7 +1311,7 @@ antq_supply_columns = {
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	unlock_building = antq_reg_castra_fabrica
 	unlock_building = antq_reg_frontier_magazine
 	starting_technology_level = 2
@@ -986,7 +1330,7 @@ antq_field_engineering = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	unlock_unit = antq_warbands
 	unlock_unit = antq_germanic_spearmen
 	unlock_unit = antq_germanic_javelins
@@ -1007,7 +1351,7 @@ antq_frontier_patrols = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	unlock_unit = antq_germanic_horse
 	unlock_unit = antq_germanic_bodyguards
 	starting_technology_level = 2
@@ -1028,7 +1372,7 @@ antq_river_crossings = {
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
 	}
-	land_morale_modifier = 0.01
+	army_maintenance_efficiency = 0.01
 	unlock_unit = antq_liburnian
 	unlock_unit = antq_quinquereme
 	starting_technology_level = 3
@@ -1048,7 +1392,7 @@ antq_siegecraft_basics = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	land_morale_modifier = 0.01
+	army_maintenance_efficiency = 0.01
 	starting_technology_level = 3
 	requires = antq_field_engineering
 	ai_weight = { add = 80 }
@@ -1067,7 +1411,7 @@ antq_legionary_logistics = {
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
 	}
-	discipline = 0.005
+	land_morale_modifier = 0.01
 	starting_technology_level = 4
 	requires = antq_river_crossings
 	ai_weight = { add = 70 }
@@ -1084,7 +1428,7 @@ antq_principate_warfare = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	land_morale_modifier = 0.01
+	army_maintenance_efficiency = 0.01
 	starting_technology_level = 3
 	requires = antq_frontier_patrols
 	ai_weight = { add = 80 }
@@ -1123,7 +1467,7 @@ antq_camel_screening = {
 			culture = { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	requires = antq_cataphract_adoption
 	ai_weight = { add = 90 }
 }
@@ -1140,7 +1484,7 @@ antq_frontier_cavalry = {
 			culture = { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	requires = antq_cataphract_adoption
 	ai_weight = { add = 90 }
 }
@@ -1156,7 +1500,7 @@ antq_mounted_scouts = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	requires = antq_composite_bow_tactics
 	ai_weight = { add = 90 }
 }
@@ -1172,7 +1516,7 @@ antq_heavy_cavalry_drill = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	requires = antq_composite_bow_tactics
 	ai_weight = { add = 90 }
 }
@@ -1189,7 +1533,7 @@ antq_campaign_seasons = {
 			culture = { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
-	land_morale_modifier = 0.01
+	army_maintenance_efficiency = 0.01
 	requires = antq_camel_screening
 	requires = antq_frontier_cavalry
 	ai_weight = { add = 80 }
@@ -1206,7 +1550,7 @@ antq_deep_defence = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	land_morale_modifier = 0.01
+	army_maintenance_efficiency = 0.01
 	requires = antq_mounted_scouts
 	ai_weight = { add = 80 }
 }
@@ -1223,7 +1567,7 @@ antq_imperial_field_forces = {
 			culture = { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
-	discipline = 0.005
+	land_morale_modifier = 0.01
 	requires = antq_campaign_seasons
 	ai_weight = { add = 70 }
 }
@@ -1239,7 +1583,7 @@ antq_high_empire_warfare = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	land_morale_modifier = 0.01
+	army_maintenance_efficiency = 0.01
 	requires = antq_heavy_cavalry_drill
 	ai_weight = { add = 80 }
 }
@@ -1278,7 +1622,7 @@ antq_wall_building = {
 			has_embraced_institution = institution:antq_papermaking
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	requires = antq_mobile_field_armies
 	ai_weight = { add = 90 }
 }
@@ -1297,7 +1641,7 @@ antq_beacon_networks = {
 			has_embraced_institution = institution:antq_papermaking
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	requires = antq_mobile_field_armies
 	ai_weight = { add = 90 }
 }
@@ -1315,7 +1659,7 @@ antq_regional_reserves = {
 			has_embraced_institution = institution:antq_christian_monasticism
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	requires = antq_crisis_fortification
 	ai_weight = { add = 90 }
 }
@@ -1333,7 +1677,7 @@ antq_cavalry_screening = {
 			has_embraced_institution = institution:antq_christian_monasticism
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	requires = antq_crisis_fortification
 	ai_weight = { add = 90 }
 }
@@ -1352,7 +1696,7 @@ antq_siege_relief = {
 			has_embraced_institution = institution:antq_papermaking
 		}
 	}
-	land_morale_modifier = 0.01
+	army_maintenance_efficiency = 0.01
 	requires = antq_wall_building
 	requires = antq_beacon_networks
 	ai_weight = { add = 80 }
@@ -1371,7 +1715,7 @@ antq_marching_camps = {
 			has_embraced_institution = institution:antq_christian_monasticism
 		}
 	}
-	land_morale_modifier = 0.01
+	army_maintenance_efficiency = 0.01
 	requires = antq_regional_reserves
 	ai_weight = { add = 80 }
 }
@@ -1390,7 +1734,7 @@ antq_defence_in_depth = {
 			has_embraced_institution = institution:antq_papermaking
 		}
 	}
-	discipline = 0.005
+	land_morale_modifier = 0.01
 	requires = antq_siege_relief
 	ai_weight = { add = 70 }
 }
@@ -1408,7 +1752,7 @@ antq_crisis_warfare = {
 			has_embraced_institution = institution:antq_christian_monasticism
 		}
 	}
-	land_morale_modifier = 0.01
+	army_maintenance_efficiency = 0.01
 	requires = antq_cavalry_screening
 	ai_weight = { add = 80 }
 }
@@ -1448,7 +1792,7 @@ antq_foederati_settlement = {
 			has_embraced_institution = institution:antq_buddhist_monasticism
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	requires = antq_comitatenses_doctrine
 	ai_weight = { add = 90 }
 }
@@ -1465,7 +1809,7 @@ antq_heavy_lancer_refinement = {
 			has_embraced_institution = institution:antq_buddhist_monasticism
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	requires = antq_comitatenses_doctrine
 	ai_weight = { add = 90 }
 }
@@ -1483,7 +1827,7 @@ antq_military_bureaux = {
 			has_embraced_institution = institution:antq_theological_orthodoxy
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	requires = antq_limitanei_service
 	ai_weight = { add = 90 }
 }
@@ -1501,7 +1845,7 @@ antq_fortified_crossings = {
 			has_embraced_institution = institution:antq_theological_orthodoxy
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	requires = antq_limitanei_service
 	ai_weight = { add = 90 }
 }
@@ -1518,7 +1862,7 @@ antq_mobile_reserves = {
 			has_embraced_institution = institution:antq_buddhist_monasticism
 		}
 	}
-	land_morale_modifier = 0.01
+	army_maintenance_efficiency = 0.01
 	requires = antq_foederati_settlement
 	requires = antq_heavy_lancer_refinement
 	ai_weight = { add = 80 }
@@ -1537,7 +1881,7 @@ antq_frontier_commands = {
 			has_embraced_institution = institution:antq_theological_orthodoxy
 		}
 	}
-	land_morale_modifier = 0.01
+	army_maintenance_efficiency = 0.01
 	requires = antq_military_bureaux
 	ai_weight = { add = 80 }
 }
@@ -1554,7 +1898,7 @@ antq_late_antique_logistics = {
 			has_embraced_institution = institution:antq_buddhist_monasticism
 		}
 	}
-	discipline = 0.005
+	land_morale_modifier = 0.01
 	requires = antq_mobile_reserves
 	ai_weight = { add = 70 }
 }
@@ -1572,7 +1916,7 @@ antq_dominate_warfare = {
 			has_embraced_institution = institution:antq_theological_orthodoxy
 		}
 	}
-	land_morale_modifier = 0.01
+	army_maintenance_efficiency = 0.01
 	requires = antq_fortified_crossings
 	ai_weight = { add = 80 }
 }
@@ -1599,7 +1943,7 @@ antq_settlement_service = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	requires = antq_federate_musters
 	ai_weight = { add = 90 }
 }
@@ -1617,7 +1961,7 @@ antq_warband_integration = {
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	requires = antq_federate_musters
 	ai_weight = { add = 90 }
 }
@@ -1633,7 +1977,7 @@ antq_horse_furniture = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	land_morale_modifier = 0.01
+	army_maintenance_efficiency = 0.01
 	requires = antq_settlement_service
 	ai_weight = { add = 80 }
 }
@@ -1651,7 +1995,7 @@ antq_shield_wall_tactics = {
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
 	}
-	land_morale_modifier = 0.01
+	army_maintenance_efficiency = 0.01
 	requires = antq_warband_integration
 	ai_weight = { add = 80 }
 }
@@ -1679,7 +2023,7 @@ antq_successor_armies = {
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	requires = antq_regional_militias
 	ai_weight = { add = 90 }
 }
@@ -1695,7 +2039,7 @@ antq_frontier_kingdoms = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	army_maintenance_efficiency = 0.01
+	army_logistics_distance_modifier = 0.10
 	requires = antq_regional_militias
 	ai_weight = { add = 90 }
 }
@@ -1713,7 +2057,7 @@ antq_migration_warfare = {
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
 	}
-	land_morale_modifier = 0.01
+	army_maintenance_efficiency = 0.01
 	requires = antq_successor_armies
 	ai_weight = { add = 80 }
 }
@@ -1729,9 +2073,358 @@ antq_late_antique_arms = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	land_morale_modifier = 0.01
+	army_maintenance_efficiency = 0.01
 	requires = antq_frontier_kingdoms
 	ai_weight = { add = 80 }
+}
+
+antq_remount_pasture_registers = {
+	age = age_1_traditions
+	icon = antq_advance_remount_pasture_registers
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_iranian_group }
+			culture = { has_culture_group = culture_group:antq_steppe_group }
+			has_embraced_institution = institution:antq_cataphract_warfare
+		}
+	}
+	army_logistics_distance_modifier = 0.10
+	starting_technology_level = 2
+	requires = antq_professional_standing_armies
+	ai_weight = { add = 90 }
+}
+
+antq_horse_archer_screening = {
+	age = age_1_traditions
+	icon = antq_advance_horse_archer_screening
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_iranian_group }
+			culture = { has_culture_group = culture_group:antq_steppe_group }
+			has_embraced_institution = institution:antq_cataphract_warfare
+		}
+	}
+	army_maintenance_efficiency = 0.01
+	starting_technology_level = 3
+	requires = antq_remount_pasture_registers
+	ai_weight = { add = 80 }
+}
+
+antq_scale_armour_workshops = {
+	age = age_1_traditions
+	icon = antq_advance_scale_armour_workshops
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_iranian_group }
+			culture = { has_culture_group = culture_group:antq_steppe_group }
+			has_embraced_institution = institution:antq_cataphract_warfare
+		}
+	}
+	land_morale_modifier = 0.01
+	starting_technology_level = 4
+	requires = antq_horse_archer_screening
+	ai_weight = { add = 70 }
+}
+
+antq_armoured_retinue_drill = {
+	age = age_1_traditions
+	icon = antq_advance_armoured_retinue_drill
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_iranian_group }
+			culture = { has_culture_group = culture_group:antq_steppe_group }
+			has_embraced_institution = institution:antq_cataphract_warfare
+		}
+	}
+	land_morale_modifier = 0.01
+	starting_technology_level = 4
+	requires = antq_horse_archer_screening
+	ai_weight = { add = 70 }
+}
+
+antq_cataphract_reserve_system = {
+	age = age_1_traditions
+	icon = antq_advance_cataphract_reserve_system
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_iranian_group }
+			culture = { has_culture_group = culture_group:antq_steppe_group }
+			has_embraced_institution = institution:antq_cataphract_warfare
+		}
+	}
+	discipline = 0.005
+	starting_technology_level = 4
+	requires = antq_scale_armour_workshops
+	requires = antq_armoured_retinue_drill
+	ai_weight = { add = 60 }
+}
+
+antq_elephant_corps_stables = {
+	age = age_1_traditions
+	icon = antq_advance_elephant_corps_stables
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_indian_group }
+			culture = { has_culture_group = culture_group:antq_tibetan_group }
+			has_embraced_institution = institution:antq_buddhist_monasticism
+		}
+	}
+	army_logistics_distance_modifier = 0.10
+	starting_technology_level = 2
+	requires = antq_professional_standing_armies
+	ai_weight = { add = 90 }
+}
+
+antq_longbow_guild_levies = {
+	age = age_1_traditions
+	icon = antq_advance_longbow_guild_levies
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_indian_group }
+			culture = { has_culture_group = culture_group:antq_tibetan_group }
+			has_embraced_institution = institution:antq_buddhist_monasticism
+		}
+	}
+	army_maintenance_efficiency = 0.01
+	starting_technology_level = 3
+	requires = antq_elephant_corps_stables
+	ai_weight = { add = 80 }
+}
+
+antq_fortified_river_camps = {
+	age = age_1_traditions
+	icon = antq_advance_fortified_river_camps
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_indian_group }
+			culture = { has_culture_group = culture_group:antq_tibetan_group }
+			has_embraced_institution = institution:antq_buddhist_monasticism
+		}
+	}
+	land_morale_modifier = 0.01
+	starting_technology_level = 4
+	requires = antq_longbow_guild_levies
+	ai_weight = { add = 70 }
+}
+
+antq_monsoon_campaign_stores = {
+	age = age_1_traditions
+	icon = antq_advance_monsoon_campaign_stores
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_indian_group }
+			culture = { has_culture_group = culture_group:antq_tibetan_group }
+			has_embraced_institution = institution:antq_buddhist_monasticism
+		}
+	}
+	land_morale_modifier = 0.01
+	starting_technology_level = 4
+	requires = antq_longbow_guild_levies
+	ai_weight = { add = 70 }
+}
+
+antq_frontier_gana_musters = {
+	age = age_1_traditions
+	icon = antq_advance_frontier_gana_musters
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_indian_group }
+			culture = { has_culture_group = culture_group:antq_tibetan_group }
+			has_embraced_institution = institution:antq_buddhist_monasticism
+		}
+	}
+	discipline = 0.005
+	starting_technology_level = 4
+	requires = antq_fortified_river_camps
+	requires = antq_monsoon_campaign_stores
+	ai_weight = { add = 60 }
+}
+
+antq_hillfort_muster_beacons = {
+	age = age_1_traditions
+	icon = antq_advance_hillfort_muster_beacons
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_celtic_group }
+			has_embraced_institution = institution:antq_foederati_statecraft
+		}
+	}
+	army_logistics_distance_modifier = 0.10
+	starting_technology_level = 2
+	requires = antq_professional_standing_armies
+	ai_weight = { add = 90 }
+}
+
+antq_chariot_screening = {
+	age = age_1_traditions
+	icon = antq_advance_chariot_screening
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_celtic_group }
+			has_embraced_institution = institution:antq_foederati_statecraft
+		}
+	}
+	army_maintenance_efficiency = 0.01
+	starting_technology_level = 3
+	requires = antq_hillfort_muster_beacons
+	ai_weight = { add = 80 }
+}
+
+antq_champion_retinues = {
+	age = age_1_traditions
+	icon = antq_advance_champion_retinues
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_celtic_group }
+			has_embraced_institution = institution:antq_foederati_statecraft
+		}
+	}
+	land_morale_modifier = 0.01
+	starting_technology_level = 4
+	requires = antq_chariot_screening
+	ai_weight = { add = 70 }
+}
+
+antq_oppidum_supply_caches = {
+	age = age_1_traditions
+	icon = antq_advance_oppidum_supply_caches
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_celtic_group }
+			has_embraced_institution = institution:antq_foederati_statecraft
+		}
+	}
+	land_morale_modifier = 0.01
+	starting_technology_level = 4
+	requires = antq_chariot_screening
+	ai_weight = { add = 70 }
+}
+
+antq_confederate_war_councils = {
+	age = age_1_traditions
+	icon = antq_advance_confederate_war_councils
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_celtic_group }
+			has_embraced_institution = institution:antq_foederati_statecraft
+		}
+	}
+	discipline = 0.005
+	starting_technology_level = 4
+	requires = antq_champion_retinues
+	requires = antq_oppidum_supply_caches
+	ai_weight = { add = 60 }
+}
+
+antq_forest_ambush_routes = {
+	age = age_1_traditions
+	icon = antq_advance_forest_ambush_routes
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_slavic_group }
+		}
+	}
+	army_logistics_distance_modifier = 0.10
+	starting_technology_level = 2
+	requires = antq_professional_standing_armies
+	ai_weight = { add = 90 }
+}
+
+antq_riverine_spear_musters = {
+	age = age_1_traditions
+	icon = antq_advance_riverine_spear_musters
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_slavic_group }
+		}
+	}
+	army_maintenance_efficiency = 0.01
+	starting_technology_level = 3
+	requires = antq_forest_ambush_routes
+	ai_weight = { add = 80 }
+}
+
+antq_dugout_crossing_craft = {
+	age = age_1_traditions
+	icon = antq_advance_dugout_crossing_craft
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_slavic_group }
+		}
+	}
+	land_morale_modifier = 0.01
+	starting_technology_level = 4
+	requires = antq_riverine_spear_musters
+	ai_weight = { add = 70 }
+}
+
+antq_fortified_refuge_settlements = {
+	age = age_1_traditions
+	icon = antq_advance_fortified_refuge_settlements
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_slavic_group }
+		}
+	}
+	land_morale_modifier = 0.01
+	starting_technology_level = 4
+	requires = antq_riverine_spear_musters
+	ai_weight = { add = 70 }
+}
+
+antq_seasonal_warband_leadership = {
+	age = age_1_traditions
+	icon = antq_advance_seasonal_warband_leadership
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_slavic_group }
+		}
+	}
+	discipline = 0.005
+	starting_technology_level = 4
+	requires = antq_dugout_crossing_craft
+	requires = antq_fortified_refuge_settlements
+	ai_weight = { add = 60 }
 }
 
 antq_monsoon_navigation = {
@@ -1867,7 +2560,7 @@ antq_merchant_diasporas = {
 			has_embraced_institution = institution:antq_buddhist_monasticism
 		}
 	}
-	ship_build_speed = 0.01
+	global_trade_through_owned_territory_efficiency = 0.05
 	starting_technology_level = 3
 	requires = antq_caravan_accounting
 	requires = antq_silk_exchange
@@ -1887,7 +2580,7 @@ antq_coin_exchange = {
 			has_embraced_institution = institution:antq_theological_orthodoxy
 		}
 	}
-	ship_build_speed = 0.01
+	global_trade_through_owned_territory_efficiency = 0.05
 	starting_technology_level = 3
 	requires = antq_port_customs
 	ai_weight = { add = 80 }
@@ -1905,7 +2598,7 @@ antq_seasonal_markets = {
 			has_embraced_institution = institution:antq_buddhist_monasticism
 		}
 	}
-	diplomatic_range_modifier = 0.02
+	import_efficiency = tiny_trade_efficiency_bonus
 	unlock_casus_belli = antq_gupta_digvijaya
 	starting_technology_level = 4
 	requires = antq_merchant_diasporas
@@ -1925,7 +2618,7 @@ antq_principate_exchange = {
 			has_embraced_institution = institution:antq_theological_orthodoxy
 		}
 	}
-	ship_build_speed = 0.01
+	global_trade_through_owned_territory_efficiency = 0.05
 	starting_technology_level = 3
 	requires = antq_desert_waystations
 	ai_weight = { add = 80 }
@@ -2058,7 +2751,7 @@ antq_merchant_associations = {
 			has_embraced_institution = institution:antq_papermaking
 		}
 	}
-	ship_build_speed = 0.01
+	global_trade_through_owned_territory_efficiency = 0.05
 	requires = antq_market_regulation
 	requires = antq_eastern_mediterranean_routes
 	ai_weight = { add = 80 }
@@ -2077,7 +2770,7 @@ antq_warehouse_accounts = {
 			has_embraced_institution = institution:antq_christian_monasticism
 		}
 	}
-	ship_build_speed = 0.01
+	global_trade_through_owned_territory_efficiency = 0.05
 	requires = antq_indian_ocean_monsoons
 	ai_weight = { add = 80 }
 }
@@ -2096,7 +2789,7 @@ antq_imperial_trade = {
 			has_embraced_institution = institution:antq_papermaking
 		}
 	}
-	diplomatic_range_modifier = 0.02
+	import_efficiency = tiny_trade_efficiency_bonus
 	requires = antq_merchant_associations
 	ai_weight = { add = 70 }
 }
@@ -2114,7 +2807,7 @@ antq_high_empire_exchange = {
 			has_embraced_institution = institution:antq_christian_monasticism
 		}
 	}
-	ship_build_speed = 0.01
+	global_trade_through_owned_territory_efficiency = 0.05
 	requires = antq_border_customs
 	ai_weight = { add = 80 }
 }
@@ -2242,7 +2935,7 @@ antq_grain_convoys = {
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
 	}
-	ship_build_speed = 0.01
+	global_trade_through_owned_territory_efficiency = 0.05
 	requires = antq_military_supply_markets
 	requires = antq_fortified_warehouses
 	ai_weight = { add = 80 }
@@ -2260,7 +2953,7 @@ antq_emergency_tolls = {
 			has_embraced_institution = institution:antq_cataphract_warfare
 		}
 	}
-	ship_build_speed = 0.01
+	global_trade_through_owned_territory_efficiency = 0.05
 	requires = antq_caravan_protection
 	ai_weight = { add = 80 }
 }
@@ -2278,7 +2971,7 @@ antq_resilient_markets = {
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
 	}
-	diplomatic_range_modifier = 0.02
+	import_efficiency = tiny_trade_efficiency_bonus
 	requires = antq_grain_convoys
 	ai_weight = { add = 70 }
 }
@@ -2295,7 +2988,7 @@ antq_crisis_exchange = {
 			has_embraced_institution = institution:antq_cataphract_warfare
 		}
 	}
-	ship_build_speed = 0.01
+	global_trade_through_owned_territory_efficiency = 0.05
 	requires = antq_regional_exchange
 	ai_weight = { add = 80 }
 }
@@ -2414,7 +3107,7 @@ antq_late_antique_coinage = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	ship_build_speed = 0.01
+	global_trade_through_owned_territory_efficiency = 0.05
 	requires = antq_foederati_provisioning
 	requires = antq_frontier_market_towns
 	ai_weight = { add = 80 }
@@ -2431,7 +3124,7 @@ antq_regional_fairs = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	ship_build_speed = 0.01
+	global_trade_through_owned_territory_efficiency = 0.05
 	requires = antq_church_storehouses
 	ai_weight = { add = 80 }
 }
@@ -2447,7 +3140,7 @@ antq_dominate_exchange = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	diplomatic_range_modifier = 0.02
+	import_efficiency = tiny_trade_efficiency_bonus
 	requires = antq_late_antique_coinage
 	ai_weight = { add = 70 }
 }
@@ -2463,7 +3156,7 @@ antq_late_antique_commerce = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	ship_build_speed = 0.01
+	global_trade_through_owned_territory_efficiency = 0.05
 	requires = antq_caravan_tolls
 	ai_weight = { add = 80 }
 }
@@ -2534,7 +3227,7 @@ antq_riverine_trade = {
 			culture = { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
-	ship_build_speed = 0.01
+	global_trade_through_owned_territory_efficiency = 0.05
 	requires = antq_gift_exchange
 	ai_weight = { add = 80 }
 }
@@ -2551,7 +3244,7 @@ antq_settlement_markets = {
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
 		}
 	}
-	ship_build_speed = 0.01
+	global_trade_through_owned_territory_efficiency = 0.05
 	requires = antq_kingdom_tolls
 	ai_weight = { add = 80 }
 }
@@ -2622,7 +3315,7 @@ antq_kingdom_exchange = {
 			has_embraced_institution = institution:antq_hellenism
 		}
 	}
-	ship_build_speed = 0.01
+	global_trade_through_owned_territory_efficiency = 0.05
 	requires = antq_successor_coinage
 	ai_weight = { add = 80 }
 }
@@ -2640,9 +3333,383 @@ antq_post_roman_commerce = {
 			has_embraced_institution = institution:antq_theological_orthodoxy
 		}
 	}
-	ship_build_speed = 0.01
+	global_trade_through_owned_territory_efficiency = 0.05
 	requires = antq_frontier_fairs
 	ai_weight = { add = 80 }
+}
+
+antq_amphora_capacity_standards = {
+	age = age_1_traditions
+	icon = antq_advance_amphora_capacity_standards
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	merchant_maintenance_efficiency = 0.01
+	starting_technology_level = 2
+	requires = antq_monsoon_navigation
+	ai_weight = { add = 90 }
+}
+
+antq_publicani_freight_contracts = {
+	age = age_1_traditions
+	icon = antq_advance_publicani_freight_contracts
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	global_trade_through_owned_territory_efficiency = 0.05
+	starting_technology_level = 3
+	requires = antq_amphora_capacity_standards
+	ai_weight = { add = 80 }
+}
+
+antq_river_port_dues = {
+	age = age_1_traditions
+	icon = antq_advance_river_port_dues
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	import_efficiency = tiny_trade_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_publicani_freight_contracts
+	ai_weight = { add = 70 }
+}
+
+antq_collegia_distribution_halls = {
+	age = age_1_traditions
+	icon = antq_advance_collegia_distribution_halls
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	import_efficiency = tiny_trade_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_publicani_freight_contracts
+	ai_weight = { add = 70 }
+}
+
+antq_annona_coastal_convoys = {
+	age = age_1_traditions
+	icon = antq_advance_annona_coastal_convoys
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	export_efficiency = small_trade_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_river_port_dues
+	requires = antq_collegia_distribution_halls
+	ai_weight = { add = 60 }
+}
+
+antq_bronze_cash_strings = {
+	age = age_1_traditions
+	icon = antq_advance_bronze_cash_strings
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_sinitic_group }
+			culture = { has_culture_group = culture_group:antq_korean_group }
+			culture = { has_culture_group = culture_group:antq_japonic_group }
+			has_embraced_institution = institution:antq_han_bureaucratic_statecraft
+			has_embraced_institution = institution:antq_papermaking
+		}
+	}
+	merchant_maintenance_efficiency = 0.01
+	starting_technology_level = 2
+	requires = antq_monsoon_navigation
+	ai_weight = { add = 90 }
+}
+
+antq_state_granary_carriage = {
+	age = age_1_traditions
+	icon = antq_advance_state_granary_carriage
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_sinitic_group }
+			culture = { has_culture_group = culture_group:antq_korean_group }
+			culture = { has_culture_group = culture_group:antq_japonic_group }
+			has_embraced_institution = institution:antq_han_bureaucratic_statecraft
+			has_embraced_institution = institution:antq_papermaking
+		}
+	}
+	global_trade_through_owned_territory_efficiency = 0.05
+	starting_technology_level = 3
+	requires = antq_bronze_cash_strings
+	ai_weight = { add = 80 }
+}
+
+antq_relay_market_stations = {
+	age = age_1_traditions
+	icon = antq_advance_relay_market_stations
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_sinitic_group }
+			culture = { has_culture_group = culture_group:antq_korean_group }
+			culture = { has_culture_group = culture_group:antq_japonic_group }
+			has_embraced_institution = institution:antq_han_bureaucratic_statecraft
+			has_embraced_institution = institution:antq_papermaking
+		}
+	}
+	import_efficiency = tiny_trade_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_state_granary_carriage
+	ai_weight = { add = 70 }
+}
+
+antq_salt_iron_bureau_exchange = {
+	age = age_1_traditions
+	icon = antq_advance_salt_iron_bureau_exchange
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_sinitic_group }
+			culture = { has_culture_group = culture_group:antq_korean_group }
+			culture = { has_culture_group = culture_group:antq_japonic_group }
+			has_embraced_institution = institution:antq_han_bureaucratic_statecraft
+			has_embraced_institution = institution:antq_papermaking
+		}
+	}
+	import_efficiency = tiny_trade_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_state_granary_carriage
+	ai_weight = { add = 70 }
+}
+
+antq_western_regions_caravan_seals = {
+	age = age_1_traditions
+	icon = antq_advance_western_regions_caravan_seals
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_sinitic_group }
+			culture = { has_culture_group = culture_group:antq_korean_group }
+			culture = { has_culture_group = culture_group:antq_japonic_group }
+			has_embraced_institution = institution:antq_han_bureaucratic_statecraft
+			has_embraced_institution = institution:antq_papermaking
+		}
+	}
+	export_efficiency = small_trade_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_relay_market_stations
+	requires = antq_salt_iron_bureau_exchange
+	ai_weight = { add = 60 }
+}
+
+antq_garamantian_oasis_stages = {
+	age = age_1_traditions
+	icon = antq_advance_garamantian_oasis_stages
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_nile_group }
+			culture = { has_culture_group = culture_group:antq_berber_group }
+			culture = { has_culture_group = culture_group:antq_subsaharan_group }
+			has_embraced_institution = institution:antq_christian_monasticism
+		}
+	}
+	merchant_maintenance_efficiency = 0.01
+	starting_technology_level = 2
+	requires = antq_monsoon_navigation
+	ai_weight = { add = 90 }
+}
+
+antq_meroe_nile_caravans = {
+	age = age_1_traditions
+	icon = antq_advance_meroe_nile_caravans
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_nile_group }
+			culture = { has_culture_group = culture_group:antq_berber_group }
+			culture = { has_culture_group = culture_group:antq_subsaharan_group }
+			has_embraced_institution = institution:antq_christian_monasticism
+		}
+	}
+	global_trade_through_owned_territory_efficiency = 0.05
+	starting_technology_level = 3
+	requires = antq_garamantian_oasis_stages
+	ai_weight = { add = 80 }
+}
+
+antq_red_sea_entrepots = {
+	age = age_1_traditions
+	icon = antq_advance_red_sea_entrepots
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_nile_group }
+			culture = { has_culture_group = culture_group:antq_berber_group }
+			culture = { has_culture_group = culture_group:antq_subsaharan_group }
+			has_embraced_institution = institution:antq_christian_monasticism
+		}
+	}
+	import_efficiency = tiny_trade_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_meroe_nile_caravans
+	ai_weight = { add = 70 }
+}
+
+antq_sahel_iron_exchange = {
+	age = age_1_traditions
+	icon = antq_advance_sahel_iron_exchange
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_nile_group }
+			culture = { has_culture_group = culture_group:antq_berber_group }
+			culture = { has_culture_group = culture_group:antq_subsaharan_group }
+			has_embraced_institution = institution:antq_christian_monasticism
+		}
+	}
+	import_efficiency = tiny_trade_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_meroe_nile_caravans
+	ai_weight = { add = 70 }
+}
+
+antq_ivory_route_brokers = {
+	age = age_1_traditions
+	icon = antq_advance_ivory_route_brokers
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_nile_group }
+			culture = { has_culture_group = culture_group:antq_berber_group }
+			culture = { has_culture_group = culture_group:antq_subsaharan_group }
+			has_embraced_institution = institution:antq_christian_monasticism
+		}
+	}
+	export_efficiency = small_trade_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_red_sea_entrepots
+	requires = antq_sahel_iron_exchange
+	ai_weight = { add = 60 }
+}
+
+antq_amber_route_waystations = {
+	age = age_1_traditions
+	icon = antq_advance_amber_route_waystations
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_baltic_group }
+		}
+	}
+	merchant_maintenance_efficiency = 0.01
+	starting_technology_level = 2
+	requires = antq_monsoon_navigation
+	ai_weight = { add = 90 }
+}
+
+antq_coastal_hide_fairs = {
+	age = age_1_traditions
+	icon = antq_advance_coastal_hide_fairs
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_baltic_group }
+		}
+	}
+	global_trade_through_owned_territory_efficiency = 0.05
+	starting_technology_level = 3
+	requires = antq_amber_route_waystations
+	ai_weight = { add = 80 }
+}
+
+antq_river_portage_exchange = {
+	age = age_1_traditions
+	icon = antq_advance_river_portage_exchange
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_baltic_group }
+		}
+	}
+	import_efficiency = tiny_trade_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_coastal_hide_fairs
+	ai_weight = { add = 70 }
+}
+
+antq_bloomery_iron_barter = {
+	age = age_1_traditions
+	icon = antq_advance_bloomery_iron_barter
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_baltic_group }
+		}
+	}
+	import_efficiency = tiny_trade_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_coastal_hide_fairs
+	ai_weight = { add = 70 }
+}
+
+antq_seasonal_market_circuits = {
+	age = age_1_traditions
+	icon = antq_advance_seasonal_market_circuits
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_baltic_group }
+		}
+	}
+	export_efficiency = small_trade_efficiency_bonus
+	starting_technology_level = 4
+	requires = antq_river_portage_exchange
+	requires = antq_bloomery_iron_barter
+	ai_weight = { add = 60 }
 }
 
 antq_paper_precursors = {
@@ -2754,7 +3821,7 @@ antq_legal_commentaries = {
 			has_embraced_institution = institution:antq_cataphract_warfare
 		}
 	}
-	research_speed_modifier = 0.015
+	global_monthly_literacy = 0.005
 	starting_technology_level = 3
 	requires = antq_library_catalogues
 	requires = antq_han_classics
@@ -2773,7 +3840,7 @@ antq_surveying_methods = {
 			has_embraced_institution = institution:antq_hellenism
 		}
 	}
-	research_speed_modifier = 0.015
+	global_monthly_literacy = 0.005
 	starting_technology_level = 3
 	requires = antq_astronomical_tables
 	ai_weight = { add = 80 }
@@ -2791,7 +3858,7 @@ antq_scholarly_correspondence = {
 			has_embraced_institution = institution:antq_cataphract_warfare
 		}
 	}
-	cultural_influence_modifier = 0.02
+	global_institution_growth_modifier = 0.10
 	starting_technology_level = 4
 	requires = antq_legal_commentaries
 	ai_weight = { add = 70 }
@@ -2809,7 +3876,7 @@ antq_principate_learning = {
 			has_embraced_institution = institution:antq_hellenism
 		}
 	}
-	research_speed_modifier = 0.015
+	global_monthly_literacy = 0.005
 	starting_technology_level = 3
 	requires = antq_medical_compendia
 	ai_weight = { add = 80 }
@@ -2917,7 +3984,7 @@ antq_philosophical_dialogue = {
 			has_embraced_institution = institution:antq_buddhist_monasticism
 		}
 	}
-	research_speed_modifier = 0.015
+	global_monthly_literacy = 0.005
 	requires = antq_medical_schools
 	requires = antq_textual_criticism
 	ai_weight = { add = 80 }
@@ -2936,7 +4003,7 @@ antq_engineering_manuals = {
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
 	}
-	research_speed_modifier = 0.015
+	global_monthly_literacy = 0.005
 	requires = antq_observatory_records
 	ai_weight = { add = 80 }
 }
@@ -2953,7 +4020,7 @@ antq_scholarly_networks = {
 			has_embraced_institution = institution:antq_buddhist_monasticism
 		}
 	}
-	cultural_influence_modifier = 0.02
+	global_institution_growth_modifier = 0.10
 	requires = antq_philosophical_dialogue
 	ai_weight = { add = 70 }
 }
@@ -2971,7 +4038,7 @@ antq_high_empire_learning = {
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
 	}
-	research_speed_modifier = 0.015
+	global_monthly_literacy = 0.005
 	requires = antq_library_endowments
 	ai_weight = { add = 80 }
 }
@@ -3074,7 +4141,7 @@ antq_epistolary_networks = {
 			has_embraced_institution = institution:antq_hellenism
 		}
 	}
-	research_speed_modifier = 0.015
+	global_monthly_literacy = 0.005
 	requires = antq_clerical_literacy
 	requires = antq_military_manuals
 	ai_weight = { add = 80 }
@@ -3091,7 +4158,7 @@ antq_regional_schools = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	research_speed_modifier = 0.015
+	global_monthly_literacy = 0.005
 	requires = antq_medical_relief
 	ai_weight = { add = 80 }
 }
@@ -3108,7 +4175,7 @@ antq_crisis_learning = {
 			has_embraced_institution = institution:antq_hellenism
 		}
 	}
-	cultural_influence_modifier = 0.02
+	global_institution_growth_modifier = 0.10
 	requires = antq_epistolary_networks
 	ai_weight = { add = 70 }
 }
@@ -3124,7 +4191,7 @@ antq_survival_of_texts = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	research_speed_modifier = 0.015
+	global_monthly_literacy = 0.005
 	requires = antq_calendar_revision
 	ai_weight = { add = 80 }
 }
@@ -3230,7 +4297,7 @@ antq_commentary_traditions = {
 			has_embraced_institution = institution:antq_hellenism
 		}
 	}
-	research_speed_modifier = 0.015
+	global_monthly_literacy = 0.005
 	requires = antq_orthodoxy_debates
 	requires = antq_codex_manuscripts
 	ai_weight = { add = 80 }
@@ -3248,7 +4315,7 @@ antq_late_antique_schools = {
 			has_embraced_institution = institution:antq_cataphract_warfare
 		}
 	}
-	research_speed_modifier = 0.015
+	global_monthly_literacy = 0.005
 	requires = antq_legal_scholars
 	ai_weight = { add = 80 }
 }
@@ -3265,7 +4332,7 @@ antq_doctrinal_debate = {
 			has_embraced_institution = institution:antq_hellenism
 		}
 	}
-	cultural_influence_modifier = 0.02
+	global_institution_growth_modifier = 0.10
 	requires = antq_commentary_traditions
 	ai_weight = { add = 70 }
 }
@@ -3282,7 +4349,7 @@ antq_dominate_learning = {
 			has_embraced_institution = institution:antq_cataphract_warfare
 		}
 	}
-	research_speed_modifier = 0.015
+	global_monthly_literacy = 0.005
 	requires = antq_bureaucratic_education
 	ai_weight = { add = 80 }
 }
@@ -3347,7 +4414,7 @@ antq_clerical_recordkeeping = {
 			has_embraced_institution = institution:antq_papermaking
 		}
 	}
-	research_speed_modifier = 0.015
+	global_monthly_literacy = 0.005
 	requires = antq_translation_circles
 	ai_weight = { add = 80 }
 }
@@ -3364,7 +4431,7 @@ antq_lawbook_copying = {
 			has_embraced_institution = institution:antq_buddhist_monasticism
 		}
 	}
-	research_speed_modifier = 0.015
+	global_monthly_literacy = 0.005
 	requires = antq_kingdom_schools
 	ai_weight = { add = 80 }
 }
@@ -3427,7 +4494,7 @@ antq_migration_learning = {
 			has_embraced_institution = institution:antq_cataphract_warfare
 		}
 	}
-	research_speed_modifier = 0.015
+	global_monthly_literacy = 0.005
 	requires = antq_successor_scholarship
 	ai_weight = { add = 80 }
 }
@@ -3446,9 +4513,469 @@ antq_late_antique_letters = {
 			has_embraced_institution = institution:antq_papermaking
 		}
 	}
-	research_speed_modifier = 0.015
+	global_monthly_literacy = 0.005
 	requires = antq_pilgrim_learning
 	ai_weight = { add = 80 }
+}
+
+antq_polis_archive_stewards = {
+	age = age_1_traditions
+	icon = antq_advance_polis_archive_stewards
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_hellenic_group }
+			culture = { has_culture_group = culture_group:antq_anatolian_group }
+			has_embraced_institution = institution:antq_hellenism
+		}
+	}
+	cultural_influence_modifier = 0.01
+	starting_technology_level = 2
+	requires = antq_paper_precursors
+	ai_weight = { add = 90 }
+}
+
+antq_peripatetic_teaching_circles = {
+	age = age_1_traditions
+	icon = antq_advance_peripatetic_teaching_circles
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_hellenic_group }
+			culture = { has_culture_group = culture_group:antq_anatolian_group }
+			has_embraced_institution = institution:antq_hellenism
+		}
+	}
+	global_monthly_literacy = 0.005
+	starting_technology_level = 3
+	requires = antq_polis_archive_stewards
+	ai_weight = { add = 80 }
+}
+
+antq_geometric_commentary_schools = {
+	age = age_1_traditions
+	icon = antq_advance_geometric_commentary_schools
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_hellenic_group }
+			culture = { has_culture_group = culture_group:antq_anatolian_group }
+			has_embraced_institution = institution:antq_hellenism
+		}
+	}
+	global_institution_growth_modifier = 0.10
+	starting_technology_level = 4
+	requires = antq_peripatetic_teaching_circles
+	ai_weight = { add = 70 }
+}
+
+antq_medical_case_histories = {
+	age = age_1_traditions
+	icon = antq_advance_medical_case_histories
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_hellenic_group }
+			culture = { has_culture_group = culture_group:antq_anatolian_group }
+			has_embraced_institution = institution:antq_hellenism
+		}
+	}
+	global_institution_growth_modifier = 0.10
+	starting_technology_level = 4
+	requires = antq_peripatetic_teaching_circles
+	ai_weight = { add = 70 }
+}
+
+antq_interpolis_scholarly_correspondence = {
+	age = age_1_traditions
+	icon = antq_advance_interpolis_scholarly_correspondence
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_hellenic_group }
+			culture = { has_culture_group = culture_group:antq_anatolian_group }
+			has_embraced_institution = institution:antq_hellenism
+		}
+	}
+	research_speed_modifier = 0.015
+	starting_technology_level = 4
+	requires = antq_geometric_commentary_schools
+	requires = antq_medical_case_histories
+	ai_weight = { add = 60 }
+}
+
+antq_agrimensor_field_books = {
+	age = age_1_traditions
+	icon = antq_advance_agrimensor_field_books
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	cultural_influence_modifier = 0.01
+	starting_technology_level = 2
+	requires = antq_paper_precursors
+	ai_weight = { add = 90 }
+}
+
+antq_augural_calendar_tables = {
+	age = age_1_traditions
+	icon = antq_advance_augural_calendar_tables
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	global_monthly_literacy = 0.005
+	starting_technology_level = 3
+	requires = antq_agrimensor_field_books
+	ai_weight = { add = 80 }
+}
+
+antq_juristic_responsa = {
+	age = age_1_traditions
+	icon = antq_advance_juristic_responsa
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	global_institution_growth_modifier = 0.10
+	starting_technology_level = 4
+	requires = antq_augural_calendar_tables
+	ai_weight = { add = 70 }
+}
+
+antq_legionary_commentarii = {
+	age = age_1_traditions
+	icon = antq_advance_legionary_commentarii
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	global_institution_growth_modifier = 0.10
+	starting_technology_level = 4
+	requires = antq_augural_calendar_tables
+	ai_weight = { add = 70 }
+}
+
+antq_provincial_archive_copying = {
+	age = age_1_traditions
+	icon = antq_advance_provincial_archive_copying
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_italic_group }
+			culture = { has_culture_group = culture_group:antq_iberian_group }
+			culture = { has_culture_group = culture_group:antq_balkan_group }
+			has_embraced_institution = institution:antq_roman_law_engineering
+		}
+	}
+	research_speed_modifier = 0.015
+	starting_technology_level = 4
+	requires = antq_juristic_responsa
+	requires = antq_legionary_commentarii
+	ai_weight = { add = 60 }
+}
+
+antq_bamboo_slip_collation = {
+	age = age_1_traditions
+	icon = antq_advance_bamboo_slip_collation
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_sinitic_group }
+			culture = { has_culture_group = culture_group:antq_korean_group }
+			culture = { has_culture_group = culture_group:antq_japonic_group }
+			has_embraced_institution = institution:antq_han_bureaucratic_statecraft
+			has_embraced_institution = institution:antq_papermaking
+		}
+	}
+	cultural_influence_modifier = 0.01
+	starting_technology_level = 2
+	requires = antq_paper_precursors
+	ai_weight = { add = 90 }
+}
+
+antq_clerical_script_examinations = {
+	age = age_1_traditions
+	icon = antq_advance_clerical_script_examinations
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_sinitic_group }
+			culture = { has_culture_group = culture_group:antq_korean_group }
+			culture = { has_culture_group = culture_group:antq_japonic_group }
+			has_embraced_institution = institution:antq_han_bureaucratic_statecraft
+			has_embraced_institution = institution:antq_papermaking
+		}
+	}
+	global_monthly_literacy = 0.005
+	starting_technology_level = 3
+	requires = antq_bamboo_slip_collation
+	ai_weight = { add = 80 }
+}
+
+antq_calendrical_offices = {
+	age = age_1_traditions
+	icon = antq_advance_calendrical_offices
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_sinitic_group }
+			culture = { has_culture_group = culture_group:antq_korean_group }
+			culture = { has_culture_group = culture_group:antq_japonic_group }
+			has_embraced_institution = institution:antq_han_bureaucratic_statecraft
+			has_embraced_institution = institution:antq_papermaking
+		}
+	}
+	global_institution_growth_modifier = 0.10
+	starting_technology_level = 4
+	requires = antq_clerical_script_examinations
+	ai_weight = { add = 70 }
+}
+
+antq_hydraulic_administration_manuals = {
+	age = age_1_traditions
+	icon = antq_advance_hydraulic_administration_manuals
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_sinitic_group }
+			culture = { has_culture_group = culture_group:antq_korean_group }
+			culture = { has_culture_group = culture_group:antq_japonic_group }
+			has_embraced_institution = institution:antq_han_bureaucratic_statecraft
+			has_embraced_institution = institution:antq_papermaking
+		}
+	}
+	global_institution_growth_modifier = 0.10
+	starting_technology_level = 4
+	requires = antq_clerical_script_examinations
+	ai_weight = { add = 70 }
+}
+
+antq_court_classics_recensions = {
+	age = age_1_traditions
+	icon = antq_advance_court_classics_recensions
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_sinitic_group }
+			culture = { has_culture_group = culture_group:antq_korean_group }
+			culture = { has_culture_group = culture_group:antq_japonic_group }
+			has_embraced_institution = institution:antq_han_bureaucratic_statecraft
+			has_embraced_institution = institution:antq_papermaking
+		}
+	}
+	research_speed_modifier = 0.015
+	starting_technology_level = 4
+	requires = antq_calendrical_offices
+	requires = antq_hydraulic_administration_manuals
+	ai_weight = { add = 60 }
+}
+
+antq_brahmi_scribal_schools = {
+	age = age_1_traditions
+	icon = antq_advance_brahmi_scribal_schools
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_indian_group }
+			culture = { has_culture_group = culture_group:antq_tibetan_group }
+			has_embraced_institution = institution:antq_buddhist_monasticism
+		}
+	}
+	cultural_influence_modifier = 0.01
+	starting_technology_level = 2
+	requires = antq_paper_precursors
+	ai_weight = { add = 90 }
+}
+
+antq_recitation_lineages = {
+	age = age_1_traditions
+	icon = antq_advance_recitation_lineages
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_indian_group }
+			culture = { has_culture_group = culture_group:antq_tibetan_group }
+			has_embraced_institution = institution:antq_buddhist_monasticism
+		}
+	}
+	global_monthly_literacy = 0.005
+	starting_technology_level = 3
+	requires = antq_brahmi_scribal_schools
+	ai_weight = { add = 80 }
+}
+
+antq_ayurvedic_compendia = {
+	age = age_1_traditions
+	icon = antq_advance_ayurvedic_compendia
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_indian_group }
+			culture = { has_culture_group = culture_group:antq_tibetan_group }
+			has_embraced_institution = institution:antq_buddhist_monasticism
+		}
+	}
+	global_institution_growth_modifier = 0.10
+	starting_technology_level = 4
+	requires = antq_recitation_lineages
+	ai_weight = { add = 70 }
+}
+
+antq_astronomical_reckoning = {
+	age = age_1_traditions
+	icon = antq_advance_astronomical_reckoning
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_indian_group }
+			culture = { has_culture_group = culture_group:antq_tibetan_group }
+			has_embraced_institution = institution:antq_buddhist_monasticism
+		}
+	}
+	global_institution_growth_modifier = 0.10
+	starting_technology_level = 4
+	requires = antq_recitation_lineages
+	ai_weight = { add = 70 }
+}
+
+antq_monastic_text_collections = {
+	age = age_1_traditions
+	icon = antq_advance_monastic_text_collections
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_indian_group }
+			culture = { has_culture_group = culture_group:antq_tibetan_group }
+			has_embraced_institution = institution:antq_buddhist_monasticism
+		}
+	}
+	research_speed_modifier = 0.015
+	starting_technology_level = 4
+	requires = antq_ayurvedic_compendia
+	requires = antq_astronomical_reckoning
+	ai_weight = { add = 60 }
+}
+
+antq_route_memory_specialists = {
+	age = age_1_traditions
+	icon = antq_advance_route_memory_specialists
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_uralic_group }
+		}
+	}
+	cultural_influence_modifier = 0.01
+	starting_technology_level = 2
+	requires = antq_paper_precursors
+	ai_weight = { add = 90 }
+}
+
+antq_seasonal_ecological_calendars = {
+	age = age_1_traditions
+	icon = antq_advance_seasonal_ecological_calendars
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_uralic_group }
+		}
+	}
+	global_monthly_literacy = 0.005
+	starting_technology_level = 3
+	requires = antq_route_memory_specialists
+	ai_weight = { add = 80 }
+}
+
+antq_metalworking_apprenticeships = {
+	age = age_1_traditions
+	icon = antq_advance_metalworking_apprenticeships
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_uralic_group }
+		}
+	}
+	global_institution_growth_modifier = 0.10
+	starting_technology_level = 4
+	requires = antq_seasonal_ecological_calendars
+	ai_weight = { add = 70 }
+}
+
+antq_ritual_poetry_lineages = {
+	age = age_1_traditions
+	icon = antq_advance_ritual_poetry_lineages
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_uralic_group }
+		}
+	}
+	global_institution_growth_modifier = 0.10
+	starting_technology_level = 4
+	requires = antq_seasonal_ecological_calendars
+	ai_weight = { add = 70 }
+}
+
+antq_interregional_oral_exchanges = {
+	age = age_1_traditions
+	icon = antq_advance_interregional_oral_exchanges
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_uralic_group }
+		}
+	}
+	research_speed_modifier = 0.015
+	starting_technology_level = 4
+	requires = antq_metalworking_apprenticeships
+	requires = antq_ritual_poetry_lineages
+	ai_weight = { add = 60 }
 }
 
 antq_civic_associations = {
@@ -3456,7 +4983,7 @@ antq_civic_associations = {
 	icon = antq_advance_civic_associations
 	depth = 0
 	research_cost = 2.0
-	stability_cost_efficiency = 0.02
+	global_disease_resistance = 0.005
 	unlock_law = marriage_law
 	unlock_estate_privilege = antq_indo_scythian_satraps
 	unlock_estate_privilege = antq_indo_greek_city_elites
@@ -3481,7 +5008,7 @@ antq_imperial_ceremony = {
 	icon = antq_advance_imperial_ceremony
 	depth = 0
 	research_cost = 2.0
-	stability_cost_efficiency = 0.02
+	global_disease_resistance = 0.005
 	unlock_estate_privilege = antq_client_royal_autonomy
 	unlock_estate_privilege = antq_kushite_royal_court
 	unlock_estate_privilege = antq_steppe_clan_autonomy
@@ -3534,7 +5061,7 @@ antq_urban_waterworks = {
 			culture = { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	starting_technology_level = 2
 	requires = antq_civic_associations
 	ai_weight = { add = 90 }
@@ -3552,7 +5079,7 @@ antq_public_baths = {
 			culture = { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	starting_technology_level = 2
 	requires = antq_civic_associations
 	ai_weight = { add = 90 }
@@ -3570,7 +5097,7 @@ antq_religious_endowments = {
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	starting_technology_level = 2
 	requires = antq_imperial_ceremony
 	ai_weight = { add = 90 }
@@ -3588,7 +5115,7 @@ antq_veteran_settlement = {
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	starting_technology_level = 2
 	requires = antq_imperial_ceremony
 	ai_weight = { add = 90 }
@@ -3606,7 +5133,7 @@ antq_provincial_elites = {
 			culture = { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
-	cultural_influence_modifier = 0.015
+	global_pop_promotion_speed_modifier = 0.025
 	starting_technology_level = 3
 	requires = antq_urban_waterworks
 	requires = antq_public_baths
@@ -3625,7 +5152,7 @@ antq_ritual_calendars = {
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
 		}
 	}
-	cultural_influence_modifier = 0.015
+	global_pop_promotion_speed_modifier = 0.025
 	starting_technology_level = 3
 	requires = antq_religious_endowments
 	ai_weight = { add = 80 }
@@ -3643,7 +5170,7 @@ antq_civic_identity = {
 			culture = { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
-	global_disease_resistance = 0.01
+	global_pop_assimilation_speed_modifier = 0.025
 	starting_technology_level = 4
 	requires = antq_provincial_elites
 	ai_weight = { add = 70 }
@@ -3661,7 +5188,7 @@ antq_principate_society = {
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
 		}
 	}
-	cultural_influence_modifier = 0.015
+	global_pop_promotion_speed_modifier = 0.025
 	starting_technology_level = 3
 	requires = antq_veteran_settlement
 	ai_weight = { add = 80 }
@@ -3672,7 +5199,7 @@ antq_cosmopolitan_cities = {
 	icon = antq_advance_cosmopolitan_cities
 	depth = 0
 	research_cost = 4.0
-	stability_cost_efficiency = 0.02
+	global_disease_resistance = 0.005
 	unlock_building = antq_reg_bread_oven
 	unlock_building = antq_reg_raised_granary
 	ai_weight = { add = 100 }
@@ -3683,7 +5210,7 @@ antq_public_philanthropy = {
 	icon = antq_advance_public_philanthropy
 	depth = 0
 	research_cost = 4.0
-	stability_cost_efficiency = 0.02
+	global_disease_resistance = 0.005
 	unlock_building = antq_reg_honey_house
 	unlock_building = antq_reg_soapworks
 	ai_weight = { add = 100 }
@@ -3701,7 +5228,7 @@ antq_legal_statuses = {
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	requires = antq_cosmopolitan_cities
 	ai_weight = { add = 90 }
 }
@@ -3718,7 +5245,7 @@ antq_religious_plurals = {
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	requires = antq_cosmopolitan_cities
 	ai_weight = { add = 90 }
 }
@@ -3736,7 +5263,7 @@ antq_urban_professions = {
 			has_embraced_institution = institution:antq_theological_orthodoxy
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	requires = antq_public_philanthropy
 	ai_weight = { add = 90 }
 }
@@ -3754,7 +5281,7 @@ antq_provincial_citizenship = {
 			has_embraced_institution = institution:antq_theological_orthodoxy
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	requires = antq_public_philanthropy
 	ai_weight = { add = 90 }
 }
@@ -3771,7 +5298,7 @@ antq_athletic_festivals = {
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
 		}
 	}
-	cultural_influence_modifier = 0.015
+	global_pop_promotion_speed_modifier = 0.025
 	requires = antq_legal_statuses
 	requires = antq_religious_plurals
 	ai_weight = { add = 80 }
@@ -3790,7 +5317,7 @@ antq_scholarly_patronage = {
 			has_embraced_institution = institution:antq_theological_orthodoxy
 		}
 	}
-	cultural_influence_modifier = 0.015
+	global_pop_promotion_speed_modifier = 0.025
 	requires = antq_urban_professions
 	ai_weight = { add = 80 }
 }
@@ -3807,7 +5334,7 @@ antq_high_empire_society = {
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
 		}
 	}
-	global_disease_resistance = 0.01
+	global_pop_assimilation_speed_modifier = 0.025
 	requires = antq_athletic_festivals
 	ai_weight = { add = 70 }
 }
@@ -3825,7 +5352,7 @@ antq_imperial_cultures = {
 			has_embraced_institution = institution:antq_theological_orthodoxy
 		}
 	}
-	cultural_influence_modifier = 0.015
+	global_pop_promotion_speed_modifier = 0.025
 	requires = antq_provincial_citizenship
 	ai_weight = { add = 80 }
 }
@@ -3835,7 +5362,7 @@ antq_crisis_communities = {
 	icon = antq_advance_crisis_communities
 	depth = 0
 	research_cost = 6.0
-	stability_cost_efficiency = 0.02
+	global_disease_resistance = 0.005
 	unlock_building = antq_reg_figurine_kiln
 	unlock_building = antq_reg_public_cistern
 	ai_weight = { add = 100 }
@@ -3846,7 +5373,7 @@ antq_refugee_settlement = {
 	icon = antq_advance_refugee_settlement
 	depth = 0
 	research_cost = 6.0
-	stability_cost_efficiency = 0.02
+	global_disease_resistance = 0.005
 	unlock_building = antq_reg_fountain_house
 	unlock_building = antq_reg_macellum_stalls
 	ai_weight = { add = 100 }
@@ -3865,7 +5392,7 @@ antq_plague_relief = {
 			has_embraced_institution = institution:antq_christian_monasticism
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	requires = antq_crisis_communities
 	ai_weight = { add = 90 }
 }
@@ -3883,7 +5410,7 @@ antq_local_patronage = {
 			has_embraced_institution = institution:antq_christian_monasticism
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	requires = antq_crisis_communities
 	ai_weight = { add = 90 }
 }
@@ -3900,7 +5427,7 @@ antq_religious_consolation = {
 			culture = { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	requires = antq_refugee_settlement
 	ai_weight = { add = 90 }
 }
@@ -3917,7 +5444,7 @@ antq_fortified_towns = {
 			culture = { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	requires = antq_refugee_settlement
 	ai_weight = { add = 90 }
 }
@@ -3935,7 +5462,7 @@ antq_rural_resilience = {
 			has_embraced_institution = institution:antq_christian_monasticism
 		}
 	}
-	cultural_influence_modifier = 0.015
+	global_pop_promotion_speed_modifier = 0.025
 	requires = antq_plague_relief
 	requires = antq_local_patronage
 	ai_weight = { add = 80 }
@@ -3953,7 +5480,7 @@ antq_civic_recovery = {
 			culture = { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
-	cultural_influence_modifier = 0.015
+	global_pop_promotion_speed_modifier = 0.025
 	requires = antq_religious_consolation
 	ai_weight = { add = 80 }
 }
@@ -3971,7 +5498,7 @@ antq_crisis_society = {
 			has_embraced_institution = institution:antq_christian_monasticism
 		}
 	}
-	global_disease_resistance = 0.01
+	global_pop_assimilation_speed_modifier = 0.025
 	requires = antq_rural_resilience
 	ai_weight = { add = 70 }
 }
@@ -3988,7 +5515,7 @@ antq_surviving_cities = {
 			culture = { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
-	cultural_influence_modifier = 0.015
+	global_pop_promotion_speed_modifier = 0.025
 	requires = antq_fortified_towns
 	ai_weight = { add = 80 }
 }
@@ -3998,7 +5525,7 @@ antq_church_endowments = {
 	icon = antq_advance_church_endowments
 	depth = 0
 	research_cost = 8.0
-	stability_cost_efficiency = 0.02
+	global_disease_resistance = 0.005
 	unlock_building = antq_reg_lamp_oil_depot
 	unlock_building = antq_reg_bath_fuel_depot
 	ai_weight = { add = 100 }
@@ -4009,7 +5536,7 @@ antq_monastic_communities = {
 	icon = antq_advance_monastic_communities
 	depth = 0
 	research_cost = 8.0
-	stability_cost_efficiency = 0.02
+	global_disease_resistance = 0.005
 	unlock_building = antq_reg_oil_lamp_kiln
 	unlock_building = antq_reg_wheat_brewery
 	ai_weight = { add = 100 }
@@ -4027,7 +5554,7 @@ antq_imperial_orthodoxy = {
 			has_embraced_institution = institution:antq_buddhist_monasticism
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	requires = antq_church_endowments
 	ai_weight = { add = 90 }
 }
@@ -4044,7 +5571,7 @@ antq_settled_foederati = {
 			has_embraced_institution = institution:antq_buddhist_monasticism
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	requires = antq_church_endowments
 	ai_weight = { add = 90 }
 }
@@ -4063,7 +5590,7 @@ antq_late_antique_cities = {
 			has_embraced_institution = institution:antq_papermaking
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	requires = antq_monastic_communities
 	ai_weight = { add = 90 }
 }
@@ -4082,7 +5609,7 @@ antq_charitable_hospices = {
 			has_embraced_institution = institution:antq_papermaking
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	requires = antq_monastic_communities
 	ai_weight = { add = 90 }
 }
@@ -4099,7 +5626,7 @@ antq_regional_elites = {
 			has_embraced_institution = institution:antq_buddhist_monasticism
 		}
 	}
-	cultural_influence_modifier = 0.015
+	global_pop_promotion_speed_modifier = 0.025
 	requires = antq_imperial_orthodoxy
 	requires = antq_settled_foederati
 	ai_weight = { add = 80 }
@@ -4119,7 +5646,7 @@ antq_religious_law = {
 			has_embraced_institution = institution:antq_papermaking
 		}
 	}
-	cultural_influence_modifier = 0.015
+	global_pop_promotion_speed_modifier = 0.025
 	requires = antq_late_antique_cities
 	ai_weight = { add = 80 }
 }
@@ -4136,7 +5663,7 @@ antq_dominate_society = {
 			has_embraced_institution = institution:antq_buddhist_monasticism
 		}
 	}
-	global_disease_resistance = 0.01
+	global_pop_assimilation_speed_modifier = 0.025
 	requires = antq_regional_elites
 	ai_weight = { add = 70 }
 }
@@ -4155,7 +5682,7 @@ antq_late_antique_communities = {
 			has_embraced_institution = institution:antq_papermaking
 		}
 	}
-	cultural_influence_modifier = 0.015
+	global_pop_promotion_speed_modifier = 0.025
 	requires = antq_charitable_hospices
 	ai_weight = { add = 80 }
 }
@@ -4165,7 +5692,7 @@ antq_hospitality_of_barbarians = {
 	icon = antq_advance_hospitality_of_barbarians
 	depth = 0
 	research_cost = 10.0
-	stability_cost_efficiency = 0.02
+	global_disease_resistance = 0.005
 	unlock_building = antq_reg_millet_brewery
 	unlock_building = antq_reg_fruit_brewery
 	ai_weight = { add = 100 }
@@ -4182,7 +5709,7 @@ antq_mixed_settlements = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	requires = antq_hospitality_of_barbarians
 	ai_weight = { add = 90 }
 }
@@ -4199,7 +5726,7 @@ antq_kingdom_churches = {
 			has_embraced_institution = institution:antq_cataphract_warfare
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	requires = antq_hospitality_of_barbarians
 	ai_weight = { add = 90 }
 }
@@ -4215,7 +5742,7 @@ antq_regional_identities = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	cultural_influence_modifier = 0.015
+	global_pop_promotion_speed_modifier = 0.025
 	requires = antq_mixed_settlements
 	ai_weight = { add = 80 }
 }
@@ -4232,7 +5759,7 @@ antq_customary_law = {
 			has_embraced_institution = institution:antq_cataphract_warfare
 		}
 	}
-	cultural_influence_modifier = 0.015
+	global_pop_promotion_speed_modifier = 0.025
 	requires = antq_kingdom_churches
 	ai_weight = { add = 80 }
 }
@@ -4242,7 +5769,7 @@ antq_migration_networks = {
 	icon = antq_advance_migration_networks
 	depth = 0
 	research_cost = 12.0
-	stability_cost_efficiency = 0.02
+	global_disease_resistance = 0.005
 	unlock_building = antq_reg_rice_brewery
 	ai_weight = { add = 100 }
 }
@@ -4259,7 +5786,7 @@ antq_successor_elites = {
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	requires = antq_migration_networks
 	ai_weight = { add = 90 }
 }
@@ -4275,7 +5802,7 @@ antq_rural_communities = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	global_disease_resistance = 0.005
+	global_population_capacity_modifier = 0.02
 	requires = antq_migration_networks
 	ai_weight = { add = 90 }
 }
@@ -4292,7 +5819,7 @@ antq_migrations_society = {
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
 		}
 	}
-	cultural_influence_modifier = 0.015
+	global_pop_promotion_speed_modifier = 0.025
 	requires = antq_successor_elites
 	ai_weight = { add = 80 }
 }
@@ -4308,7 +5835,452 @@ antq_roman_successor_worlds = {
 			has_embraced_institution = institution:antq_foederati_statecraft
 		}
 	}
-	cultural_influence_modifier = 0.015
+	global_pop_promotion_speed_modifier = 0.025
 	requires = antq_rural_communities
 	ai_weight = { add = 80 }
+}
+
+antq_monumental_precinct_stewardship = {
+	age = age_1_traditions
+	icon = antq_advance_monumental_precinct_stewardship
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_american_group }
+			culture = { has_culture_group = culture_group:antq_mesoamerican_group }
+			culture = { has_culture_group = culture_group:antq_andean_group }
+		}
+	}
+	global_population_capacity_modifier = 0.02
+	starting_technology_level = 2
+	requires = antq_civic_associations
+	ai_weight = { add = 90 }
+}
+
+antq_communal_field_schedules = {
+	age = age_1_traditions
+	icon = antq_advance_communal_field_schedules
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_american_group }
+			culture = { has_culture_group = culture_group:antq_mesoamerican_group }
+			culture = { has_culture_group = culture_group:antq_andean_group }
+		}
+	}
+	global_pop_promotion_speed_modifier = 0.025
+	starting_technology_level = 3
+	requires = antq_monumental_precinct_stewardship
+	ai_weight = { add = 80 }
+}
+
+antq_lineage_feast_obligations = {
+	age = age_1_traditions
+	icon = antq_advance_lineage_feast_obligations
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_american_group }
+			culture = { has_culture_group = culture_group:antq_mesoamerican_group }
+			culture = { has_culture_group = culture_group:antq_andean_group }
+		}
+	}
+	global_pop_assimilation_speed_modifier = 0.025
+	starting_technology_level = 4
+	requires = antq_communal_field_schedules
+	ai_weight = { add = 70 }
+}
+
+antq_ritual_exchange_journeys = {
+	age = age_1_traditions
+	icon = antq_advance_ritual_exchange_journeys
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_american_group }
+			culture = { has_culture_group = culture_group:antq_mesoamerican_group }
+			culture = { has_culture_group = culture_group:antq_andean_group }
+		}
+	}
+	global_pop_assimilation_speed_modifier = 0.025
+	starting_technology_level = 4
+	requires = antq_communal_field_schedules
+	ai_weight = { add = 70 }
+}
+
+antq_seasonal_ceremonial_calendars = {
+	age = age_1_traditions
+	icon = antq_advance_seasonal_ceremonial_calendars
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_american_group }
+			culture = { has_culture_group = culture_group:antq_mesoamerican_group }
+			culture = { has_culture_group = culture_group:antq_andean_group }
+		}
+	}
+	stability_cost_efficiency = 0.02
+	starting_technology_level = 4
+	requires = antq_lineage_feast_obligations
+	requires = antq_ritual_exchange_journeys
+	ai_weight = { add = 60 }
+}
+
+antq_temple_city_almonries = {
+	age = age_1_traditions
+	icon = antq_advance_temple_city_almonries
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_semitic_group }
+			culture = { has_culture_group = culture_group:antq_anatolian_group }
+			culture = { has_culture_group = culture_group:antq_caucasian_group }
+			has_embraced_institution = institution:antq_theological_orthodoxy
+		}
+	}
+	global_population_capacity_modifier = 0.02
+	starting_technology_level = 2
+	requires = antq_civic_associations
+	ai_weight = { add = 90 }
+}
+
+antq_synagogue_councils = {
+	age = age_1_traditions
+	icon = antq_advance_synagogue_councils
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_semitic_group }
+			culture = { has_culture_group = culture_group:antq_anatolian_group }
+			culture = { has_culture_group = culture_group:antq_caucasian_group }
+			has_embraced_institution = institution:antq_theological_orthodoxy
+		}
+	}
+	global_pop_promotion_speed_modifier = 0.025
+	starting_technology_level = 3
+	requires = antq_temple_city_almonries
+	ai_weight = { add = 80 }
+}
+
+antq_caravan_diaspora_quarters = {
+	age = age_1_traditions
+	icon = antq_advance_caravan_diaspora_quarters
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_semitic_group }
+			culture = { has_culture_group = culture_group:antq_anatolian_group }
+			culture = { has_culture_group = culture_group:antq_caucasian_group }
+			has_embraced_institution = institution:antq_theological_orthodoxy
+		}
+	}
+	global_pop_assimilation_speed_modifier = 0.025
+	starting_technology_level = 4
+	requires = antq_synagogue_councils
+	ai_weight = { add = 70 }
+}
+
+antq_civic_cult_associations = {
+	age = age_1_traditions
+	icon = antq_advance_civic_cult_associations
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_semitic_group }
+			culture = { has_culture_group = culture_group:antq_anatolian_group }
+			culture = { has_culture_group = culture_group:antq_caucasian_group }
+			has_embraced_institution = institution:antq_theological_orthodoxy
+		}
+	}
+	global_pop_assimilation_speed_modifier = 0.025
+	starting_technology_level = 4
+	requires = antq_synagogue_councils
+	ai_weight = { add = 70 }
+}
+
+antq_village_elder_compacts = {
+	age = age_1_traditions
+	icon = antq_advance_village_elder_compacts
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_semitic_group }
+			culture = { has_culture_group = culture_group:antq_anatolian_group }
+			culture = { has_culture_group = culture_group:antq_caucasian_group }
+			has_embraced_institution = institution:antq_theological_orthodoxy
+		}
+	}
+	stability_cost_efficiency = 0.02
+	starting_technology_level = 4
+	requires = antq_caravan_diaspora_quarters
+	requires = antq_civic_cult_associations
+	ai_weight = { add = 60 }
+}
+
+antq_household_retinue_feasts = {
+	age = age_1_traditions
+	icon = antq_advance_household_retinue_feasts
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_germanic_group }
+			has_embraced_institution = institution:antq_foederati_statecraft
+		}
+	}
+	global_population_capacity_modifier = 0.02
+	starting_technology_level = 2
+	requires = antq_civic_associations
+	ai_weight = { add = 90 }
+}
+
+antq_sacred_grove_custody = {
+	age = age_1_traditions
+	icon = antq_advance_sacred_grove_custody
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_germanic_group }
+			has_embraced_institution = institution:antq_foederati_statecraft
+		}
+	}
+	global_pop_promotion_speed_modifier = 0.025
+	starting_technology_level = 3
+	requires = antq_household_retinue_feasts
+	ai_weight = { add = 80 }
+}
+
+antq_wergild_arbitration = {
+	age = age_1_traditions
+	icon = antq_advance_wergild_arbitration
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_germanic_group }
+			has_embraced_institution = institution:antq_foederati_statecraft
+		}
+	}
+	global_pop_assimilation_speed_modifier = 0.025
+	starting_technology_level = 4
+	requires = antq_sacred_grove_custody
+	ai_weight = { add = 70 }
+}
+
+antq_fosterage_and_hostages = {
+	age = age_1_traditions
+	icon = antq_advance_fosterage_and_hostages
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_germanic_group }
+			has_embraced_institution = institution:antq_foederati_statecraft
+		}
+	}
+	global_pop_assimilation_speed_modifier = 0.025
+	starting_technology_level = 4
+	requires = antq_sacred_grove_custody
+	ai_weight = { add = 70 }
+}
+
+antq_assembly_acclamation_customs = {
+	age = age_1_traditions
+	icon = antq_advance_assembly_acclamation_customs
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_germanic_group }
+			has_embraced_institution = institution:antq_foederati_statecraft
+		}
+	}
+	stability_cost_efficiency = 0.02
+	starting_technology_level = 4
+	requires = antq_wergild_arbitration
+	requires = antq_fosterage_and_hostages
+	ai_weight = { add = 60 }
+}
+
+antq_riverside_hamlet_cooperation = {
+	age = age_1_traditions
+	icon = antq_advance_riverside_hamlet_cooperation
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_slavic_group }
+		}
+	}
+	global_population_capacity_modifier = 0.02
+	starting_technology_level = 2
+	requires = antq_civic_associations
+	ai_weight = { add = 90 }
+}
+
+antq_household_oven_clusters = {
+	age = age_1_traditions
+	icon = antq_advance_household_oven_clusters
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_slavic_group }
+		}
+	}
+	global_pop_promotion_speed_modifier = 0.025
+	starting_technology_level = 3
+	requires = antq_riverside_hamlet_cooperation
+	ai_weight = { add = 80 }
+}
+
+antq_seasonal_forest_clearings = {
+	age = age_1_traditions
+	icon = antq_advance_seasonal_forest_clearings
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_slavic_group }
+		}
+	}
+	global_pop_assimilation_speed_modifier = 0.025
+	starting_technology_level = 4
+	requires = antq_household_oven_clusters
+	ai_weight = { add = 70 }
+}
+
+antq_mortuary_community_feasts = {
+	age = age_1_traditions
+	icon = antq_advance_mortuary_community_feasts
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_slavic_group }
+		}
+	}
+	global_pop_assimilation_speed_modifier = 0.025
+	starting_technology_level = 4
+	requires = antq_household_oven_clusters
+	ai_weight = { add = 70 }
+}
+
+antq_intersettlement_marriage_networks = {
+	age = age_1_traditions
+	icon = antq_advance_intersettlement_marriage_networks
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_slavic_group }
+		}
+	}
+	stability_cost_efficiency = 0.02
+	starting_technology_level = 4
+	requires = antq_seasonal_forest_clearings
+	requires = antq_mortuary_community_feasts
+	ai_weight = { add = 60 }
+}
+
+antq_outrigger_kin_voyages = {
+	age = age_1_traditions
+	icon = antq_advance_outrigger_kin_voyages
+	depth = 1
+	research_cost = 2.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_austronesian_group }
+			culture = { has_culture_group = culture_group:antq_oceanic_group }
+			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+		}
+	}
+	global_population_capacity_modifier = 0.02
+	starting_technology_level = 2
+	requires = antq_civic_associations
+	ai_weight = { add = 90 }
+}
+
+antq_shell_valuables_exchange = {
+	age = age_1_traditions
+	icon = antq_advance_shell_valuables_exchange
+	depth = 2
+	research_cost = 3.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_austronesian_group }
+			culture = { has_culture_group = culture_group:antq_oceanic_group }
+			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+		}
+	}
+	global_pop_promotion_speed_modifier = 0.025
+	starting_technology_level = 3
+	requires = antq_outrigger_kin_voyages
+	ai_weight = { add = 80 }
+}
+
+antq_navigational_star_lore = {
+	age = age_1_traditions
+	icon = antq_advance_navigational_star_lore
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_austronesian_group }
+			culture = { has_culture_group = culture_group:antq_oceanic_group }
+			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+		}
+	}
+	global_pop_assimilation_speed_modifier = 0.025
+	starting_technology_level = 4
+	requires = antq_shell_valuables_exchange
+	ai_weight = { add = 70 }
+}
+
+antq_stilt_settlement_compacts = {
+	age = age_1_traditions
+	icon = antq_advance_stilt_settlement_compacts
+	depth = 3
+	research_cost = 3.5
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_austronesian_group }
+			culture = { has_culture_group = culture_group:antq_oceanic_group }
+			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+		}
+	}
+	global_pop_assimilation_speed_modifier = 0.025
+	starting_technology_level = 4
+	requires = antq_shell_valuables_exchange
+	ai_weight = { add = 70 }
+}
+
+antq_island_feast_redistribution = {
+	age = age_1_traditions
+	icon = antq_advance_island_feast_redistribution
+	depth = 4
+	research_cost = 4.0
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_austronesian_group }
+			culture = { has_culture_group = culture_group:antq_oceanic_group }
+			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+		}
+	}
+	stability_cost_efficiency = 0.02
+	starting_technology_level = 4
+	requires = antq_navigational_star_lore
+	requires = antq_stilt_settlement_compacts
+	ai_weight = { add = 60 }
 }

@@ -77,6 +77,7 @@ VALIDATE_COMMANDS = (
     Command("tools/m7_war.py", ("--check",)),
     Command("tools/m7_levy_scope_guard.py", ("--check",)),
     Command("tools/m8_knowledge.py", ("--check",)),
+    Command("tools/m8_age1_expansion_art.py", ("--check",)),
     Command("tools/m8_legacy_institution_purge.py", ("--check",)),
     Command("tools/m9_diplomacy.py", ("--check",)),
     Command("tools/m10_history.py", ("--check",)),

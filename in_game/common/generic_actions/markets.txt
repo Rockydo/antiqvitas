@@ -167,6 +167,9 @@ destroy_market = {
 	}
 }
 
+# ANTIQVITAS: safe center, owner, and optional-market tests for seeded AD 1 markets.
+# These prevent unset location lookups and country self-relations.
+
 create_market = {
 	type = owncountry
 
@@ -219,7 +222,7 @@ create_market = {
 			data = left_click_and_confirm_cost
 		}
 		visible = {
-			not = { this = market.location }
+			NOT = { market ?= { location = prev } }
 			is_ownable = yes
 			OR = {
 				is_city = yes
@@ -240,13 +243,7 @@ create_market = {
 				}
 			}
 			has_market_construction = no
-			not = {
-				market ?= {
-					owner = {
-						has_trade_treaty_with = scope:actor
-					}
-				}
-			}
+			NOT = { market ?= { owner = { this = scope:actor } } }
 		}
 	}
 

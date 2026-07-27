@@ -27,6 +27,27 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config/local_paths.json"
 SOURCE_RELATIVE = Path("game/in_game/common/on_action/_hardcoded.txt")
 OUTPUT = ROOT / "in_game/common/on_action/_hardcoded.txt"
+COUNTRY_STATIC_RELATIVE = Path("game/main_menu/common/static_modifiers/country.txt")
+COUNTRY_STATIC_OUTPUT = ROOT / "main_menu/common/static_modifiers/country.txt"
+BANKRUPTCY_STATIC_OUTPUT = ROOT / "main_menu/common/static_modifiers/antq_bankruptcy.txt"
+ECONOMY_GUI_RELATIVE = Path("game/in_game/gui/economy_lateralview.gui")
+ECONOMY_GUI_OUTPUT = ROOT / "in_game/gui/economy_lateralview.gui"
+CREDIT_GUI_RELATIVE = Path("game/in_game/gui/credit.gui")
+CREDIT_GUI_OUTPUT = ROOT / "in_game/gui/credit.gui"
+LOC_ROOT = ROOT / "main_menu/localization"
+MIRROR_LANGUAGES = (
+    "english",
+    "french",
+    "german",
+    "spanish",
+    "polish",
+    "russian",
+    "braz_por",
+    "simp_chinese",
+    "japanese",
+    "korean",
+    "turkish",
+)
 START_HEADER = re.compile(r"^\s*on_game_start\s*=\s*\{\s*(?:#.*)?$")
 COUNTRY_HEADER = re.compile(r"^(?P<indent>\s*)c:(?P<tag>[A-Z]{3})\s*=\s*\{\s*(?:#.*)?$")
 SAFE_SCOPE = re.compile(
@@ -99,6 +120,17 @@ def source_path() -> Path:
         raise ValueError(f"cannot resolve installed hardcoded startup handler: {exc}") from exc
     if not source.is_file():
         raise ValueError(f"installed hardcoded startup handler is missing: {source}")
+    return source
+
+
+def installed_path(relative: Path) -> Path:
+    try:
+        config = json.loads(CONFIG.read_text(encoding="utf-8-sig"))
+        source = Path(str(config["game_dir"])) / relative
+    except (OSError, KeyError, json.JSONDecodeError) as exc:
+        raise ValueError(f"cannot resolve installed source {relative}: {exc}") from exc
+    if not source.is_file():
+        raise ValueError(f"installed source is missing: {source}")
     return source
 
 
@@ -183,6 +215,107 @@ def han_regency_effect(newline: str) -> list[str]:
         f"\t\t# ANTIQVITAS M6: source-led Wang Mang regency at the AD 1 bookmark.{newline}",
         f"\t\tc:XAR = {{ set_regent = character:antq_wang_mang }}{newline}",
     ]
+
+
+def replace_top_level_block(text: str, key: str, replacement: str) -> str:
+    """Replace one top-level Clausewitz block while preserving surrounding text."""
+    header = re.compile(rf"(?m)^{re.escape(key)}\s*=\s*\{{\s*(?:#.*)?$")
+    matches = list(header.finditer(text))
+    if len(matches) != 1:
+        raise ValueError(f"expected one top-level {key} block, found {len(matches)}")
+    start = matches[0].start()
+    depth = 0
+    end: int | None = None
+    for match in re.finditer(r"[{}]", text[matches[0].start():]):
+        depth += 1 if match.group() == "{" else -1
+        if depth == 0:
+            end = matches[0].start() + match.end()
+            break
+    if end is None:
+        raise ValueError(f"top-level {key} block does not close")
+    return text[:start] + replacement + text[end:]
+
+
+def neutral_country_static() -> bytes:
+    """Neutralize the engine's year-one epoch bankruptcy pseudo-modifier."""
+    source = installed_path(COUNTRY_STATIC_RELATIVE)
+    raw = source.read_bytes()
+    bom = raw.startswith(b"\xef\xbb\xbf")
+    text = raw.decode("utf-8-sig")
+    newline = "\r\n" if "\r\n" in text else "\n"
+    replacement = newline.join(
+        (
+            "is_bankrupt = {",
+            "\tgame_data = {",
+            "\t\tcategory = country",
+            "\t}",
+            "",
+            "\t# ANTIQVITAS: EU5 treats its minimum date as a recent-bankruptcy",
+            "\t# timestamp. Genuine bankruptcies receive the complete effects",
+            "\t# through antq_genuine_bankruptcy in on_bankruptcy instead.",
+            "}",
+        )
+    )
+    result = replace_top_level_block(text, "is_bankrupt", replacement)
+    return (b"\xef\xbb\xbf" if bom else b"") + result.encode("utf-8")
+
+
+def genuine_bankruptcy_static() -> bytes:
+    """Reproduce the installed bankruptcy consequences under a safe custom key."""
+    text = """antq_genuine_bankruptcy = {
+	game_data = {
+		category = country
+	}
+
+	total_loan_capacity_modifier = -0.5
+	global_estate_target_satisfaction = small_permanent_target_satisfaction_penalty
+	global_crown_estate_power = -0.9
+	global_pop_promotion_speed = -0.05
+	global_pop_demotion_speed = 0.20
+	land_morale_modifier = -0.9
+	naval_morale_modifier = -0.9
+	research_speed_modifier = -0.9
+	global_construction_speed = -0.9
+	monthly_towards_traditional_economy = societal_value_huge_monthly_move
+}
+"""
+    return b"\xef\xbb\xbf" + text.encode("utf-8")
+
+
+def bankruptcy_gui(relative: Path) -> bytes:
+    """Show the native bankruptcy banner only for a real bankruptcy callback."""
+    source = installed_path(relative)
+    raw = source.read_bytes()
+    bom = raw.startswith(b"\xef\xbb\xbf")
+    text = raw.decode("utf-8-sig")
+    native_visibility = 'visible = "[GetPlayer.GetEconomy.IsDuringBankruptcy]"'
+    custom_visibility = (
+        "visible = "
+        '"[GetPlayer.MakeScope.GetVariable(\'antq_genuine_bankruptcy\').IsSet]"'
+    )
+    if text.count(native_visibility) != 1:
+        raise ValueError(
+            f"{relative}: expected one native bankruptcy-banner visibility"
+        )
+    if text.count("ShowModifierEffect('is_bankrupt')") != 1:
+        raise ValueError(f"{relative}: expected one native bankruptcy tooltip")
+    text = text.replace(native_visibility, custom_visibility, 1)
+    text = text.replace(
+        "ShowModifierEffect('is_bankrupt')",
+        "ShowModifierEffect('antq_genuine_bankruptcy')",
+        1,
+    )
+    return (b"\xef\xbb\xbf" if bom else b"") + text.encode("utf-8")
+
+
+def bankruptcy_localization(language: str) -> bytes:
+    text = (
+        f"l_{language}:\n"
+        ' STATIC_MODIFIER_NAME_antq_genuine_bankruptcy: "Bankruptcy"\n'
+        ' STATIC_MODIFIER_DESC_antq_genuine_bankruptcy: "A genuine state default '
+        'has disrupted credit, administration, morale, and construction."\n'
+    )
+    return b"\xef\xbb\xbf" + text.encode("utf-8")
 
 
 def render() -> bytes:
@@ -275,14 +408,42 @@ def render() -> bytes:
     if text.count(legacy_callback) != 1:
         raise ValueError("installed post-antique institution callback inventory drift")
     text = text.replace(legacy_callback, antique_callback)
+    bankruptcy_anchor = (
+        f"on_bankruptcy = {{{newline}"
+        f"\teffect = {{{newline}"
+    )
+    if text.count(bankruptcy_anchor) != 1:
+        raise ValueError("installed on_bankruptcy callback inventory drift")
+    bankruptcy_adapter = (
+        bankruptcy_anchor
+        + f"\t\t# ANTIQVITAS: distinguish a real default from the year-one epoch ghost.{newline}"
+        f"\t\tset_variable = {{ name = antq_genuine_bankruptcy value = yes years = 5 }}{newline}"
+        f"\t\tif = {{{newline}"
+        f"\t\t\tlimit = {{ has_variable = antq_genuine_bankruptcy }}{newline}"
+        f"\t\t\tadd_country_modifier = {{ modifier = antq_genuine_bankruptcy years = 5 }}{newline}"
+        f"\t\t}}{newline}"
+    )
+    text = text.replace(bankruptcy_anchor, bankruptcy_adapter, 1)
     result = neutralize_references(text, remap_effects=False).encode("utf-8")
     return (b"\xef\xbb\xbf" if has_bom else b"") + result
 
 
 def write() -> None:
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_bytes(render())
-    print(f"m12_hardcoded_startup: wrote {OUTPUT.relative_to(ROOT)}")
+    outputs = {
+        OUTPUT: render(),
+        COUNTRY_STATIC_OUTPUT: neutral_country_static(),
+        BANKRUPTCY_STATIC_OUTPUT: genuine_bankruptcy_static(),
+        ECONOMY_GUI_OUTPUT: bankruptcy_gui(ECONOMY_GUI_RELATIVE),
+        CREDIT_GUI_OUTPUT: bankruptcy_gui(CREDIT_GUI_RELATIVE),
+    }
+    for language in MIRROR_LANGUAGES:
+        outputs[
+            LOC_ROOT / language / f"antq_m12_bankruptcy_l_{language}.yml"
+        ] = bankruptcy_localization(language)
+    for path, content in outputs.items():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(content)
+        print(f"m12_hardcoded_startup: wrote {path.relative_to(ROOT)}")
 
 
 def check() -> bool:
@@ -291,12 +452,33 @@ def check() -> bool:
     except (OSError, ValueError) as exc:
         print(f"m12_hardcoded_startup: FAIL\n  - {exc}")
         return False
-    if not OUTPUT.is_file() or OUTPUT.read_bytes() != expected:
-        print(f"m12_hardcoded_startup: FAIL\n  - stale or missing {OUTPUT.relative_to(ROOT)}")
+    expected_outputs = {
+        OUTPUT: expected,
+        COUNTRY_STATIC_OUTPUT: neutral_country_static(),
+        BANKRUPTCY_STATIC_OUTPUT: genuine_bankruptcy_static(),
+        ECONOMY_GUI_OUTPUT: bankruptcy_gui(ECONOMY_GUI_RELATIVE),
+        CREDIT_GUI_OUTPUT: bankruptcy_gui(CREDIT_GUI_RELATIVE),
+    }
+    for language in MIRROR_LANGUAGES:
+        expected_outputs[
+            LOC_ROOT / language / f"antq_m12_bankruptcy_l_{language}.yml"
+        ] = bankruptcy_localization(language)
+    stale = [
+        path.relative_to(ROOT)
+        for path, content in expected_outputs.items()
+        if not path.is_file() or path.read_bytes() != content
+    ]
+    if stale:
+        print(
+            "m12_hardcoded_startup: FAIL\n"
+            "  - stale or missing " + ", ".join(map(str, stale))
+        )
         return False
     print(
         "m12_hardcoded_startup: PASS "
-        f"(5 safe absent-IO scopes; 8 dated country-startup gates; {EXPECTED_RGO_CHANGE_COUNT} runtime RGO corrections)"
+        f"(5 safe absent-IO scopes; 8 dated country-startup gates; "
+        f"{EXPECTED_RGO_CHANGE_COUNT} runtime RGO corrections; "
+        "1 low-year bankruptcy epoch adapter)"
     )
     return True
 

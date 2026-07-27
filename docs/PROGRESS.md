@@ -6884,3 +6884,51 @@ reviewed 128px BC7 DDS.
 - `make validate` passes all 96 checks. Paired-control `make smoke` has zero
   mod-only lines. Six fresh-selector probes pass; the only appended diagnostic
   is the already-pinned hardcoded absent-HRE notice.
+
+## 2026-07-27 - Opened every AD 1 research profile and began the 3x tree
+
+- Expanded Age I from 50 to 160 advances through 22 five-node regional
+  mini-trees, bringing the full DAG from 250 to 360 nodes. Each addition
+  descends from an existing root, branches into two alternatives, converges,
+  and ends in a profile-specific capstone.
+- Added explicit Baltic, Vistula-Dnieper/eastern-European, and
+  Volga-Kama/northern-forest eligibility profiles instead of routing those
+  cultures through a generic catch-all. Hellenic and American opening paths
+  were also deepened so every profile retains choices at higher start tiers.
+- Replaced the former 19-effect repetition with locally harvested control,
+  taxation, legislation, logistics, trade-through-territory, import/export,
+  literacy, institution-growth, capacity, promotion, and assimilation effects.
+  The tree now uses 25 bounded effect packages; later-age content unlock
+  expansion remains open.
+- Added `docs/m8/start_research_reachability.csv`. It applies the same M4
+  tag-specific profile and regional fallback as country setup, then resolves
+  start-level ownership, prerequisites, and culture potential for all 292
+  roster entries. Every polity has at least two day-one candidates; Rome has
+  six.
+- Generated seven reviewed 4x4 archaeological still-life sheets and split them
+  into 110 unique 256px masters and direct BC7 textures. The reproducible
+  `m8_age1_expansion_art.py` contract verifies source/master/texture presence,
+  dimensions, hashes, and ledger coverage; no added node uses fallback art.
+- Targeted M8 and M11 checks pass. Full validation, paired smoke, and the short
+  Rome/regional research-panel runtime probe are the remaining acceptance steps
+  for this tranche.
+
+## 2026-07-27 - Proved Rome's opening economy and research in both bankruptcy states
+
+- Traced the universal AD 1 bankruptcy warning to the engine's minimum-year
+  timestamp interpretation. Two authored cleanup routes failed honestly; a
+  date-10 native-clear control established the root cause.
+- Added a generated low-year adapter across the exact installed static modifier,
+  on-bankruptcy callback, economy/credit GUI, and eleven localization clients.
+  The startup ghost has no effect or presentation, while genuine bankruptcy
+  receives one timed state variable plus a matching modifier with the complete
+  native-equivalent five-year penalties and banner.
+- A fresh player Rome start shows 10.96K treasury and +45.36/month with no
+  bankruptcy warning. Research is +1.17/month, six Roman/Italic choices are
+  available, and Imperial Archives queues successfully.
+- A same-session `bankrupt XAA` control restores the red banner and lowers
+  research to -0.03. The paired evidence is recorded in
+  `docs/playtests/S2_OPENING_ECONOMY_RESEARCH_20260727.md`.
+- The focused runtime acceptance is complete. The final paired smoke passes with
+  zero mod-only error lines; the complete 98-check validation gate is rerun
+  immediately before committing the combined research/economy tranche.

@@ -5,8 +5,8 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review. (Validated by the 559-chain direct UI ledger and reviewed contact sheet; zero religion or privilege aliases remain.)
-  - [x] Start and smoke-check the direct M8 migration: a ledger-driven, one-icon-at-a-time renderer path is live; reviewed Imperial Cult and Public Granaries icons are the first two of 250 direct advance illustrations.
+- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review. (Validated by the 730-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
+  - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
 ## Second manual playtest remediation — 2026-07-26 (resume here)
 
@@ -24,28 +24,30 @@ and focused runtime probe all pass.
 
 ### Audit baseline
 
-- 229 playable tags remain, including 31 player-facing macro-polities named
-  “Societies”. Interior Bedouin Societies owns 346 locations, Aestii 152,
-  Brittonic Societies 105, Caledonian Societies 63, Berber and Gaetulian
-  Societies 56, and Germanic Societies 24. These are country-scale aggregations,
-  not merely descriptive localization.
+- The roster now has 292 playable tags after the Arabia, Britain/Ireland,
+  Germania/Baltic, and northern/eastern archaeological splits. Twenty-seven
+  player-facing macro-polities still contain “Societies” in their names,
+  concentrated in Africa, the Americas, Central/South/East/Southeast Asia,
+  and Oceania. These are country-scale aggregations, not merely descriptive
+  localization, and remain in the global granularity queue below.
 - The current world has 13,551 assigned land locations, but the RGO correction
   ledger changes only 328. The remaining visible resource geography is largely
   inherited from the 1337 setup.
 - 265 ancient building definitions exist, but roughly 2,400 starting placements
   are concentrated in only about 50–60 locations. Rome alone receives more than
   200 while almost every settlement worldwide begins empty.
-- The advance DAG has 250 nodes but only 19 unique effect strings; 187 nodes
-  unlock nothing. It has 50 roots, 180 one-parent nodes, and only 20
-  convergences. Passing quantity/acyclicity gates did not create enough mechanical
-  choice.
+- The advance DAG now has 360 nodes and 25 unique effect packages after the
+  first 110-node Age-I expansion; 297 nodes still unlock no separate content.
+  It has 50 roots and 42 convergence nodes. Opening reachability is fixed, but
+  the remaining four conceptual age arcs still require expansion toward 750+
+  nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is similarly
   thin: 17 reforms, 24 privileges, and 23 laws serve 229 countries.
 - Exact-name mirrors still leave most installed estates, privileges, parliament
   material, cabinet actions, laws, religious aspects, and artillery-facing UI in
-  the mounted union. Rome starts at technology level 4 and has no explicit
-  starting treasury, while its exceptionally dense capital/building seed creates
-  a credible bankruptcy cause.
+  the mounted union. Rome now starts at technology level 3 with a 9.60K reserve
+  and positive opening balance; the remaining risk is its exceptionally dense
+  capital/building seed and incomplete 12-month runtime proof.
 - Existing building and advance art is generally strong, but centering, circular
   safe-area compliance, and outlier quality were not validated in the actual UI.
   Villa Liviae and Regional Law Codes are confirmed review targets. Location pop
@@ -53,7 +55,7 @@ and focused runtime probe all pass.
 
 ### S2-P0 — Opening-state correctness and vanilla-system quarantine
 
-- [ ] Fix Rome's opening bankruptcy and prove the intended Augustan budget.
+- [x] Fix Rome's opening bankruptcy and prove the intended Augustan budget.
   - [x] Diagnose the day-one state: all explicit market seeds were previously
     deferred after an engine crash, leaving Rome at 712.44 economic base but
     zero wealth/tax base for roughly its first 90 days.
@@ -68,34 +70,55 @@ and focused runtime probe all pass.
     diplomatic income; visible costs are 53.10 navy, 44.93 court, 39.18
     diplomacy, 23.72 army, and 0.28 forts, with no separate opening tax, trade,
     government, institution, or building charge.
-  - Correct generator inputs rather than adding an arbitrary rescue event.
-    Redistribute the implausibly concentrated building seed first; then set a
-    documented starting treasury only if the engine's normal default is inadequate.
-  - Acceptance: Rome starts solvent, can sustain its historical peacetime forces
-    and administration at neutral spending, has at least a 12-month reserve, and
-    remains non-bankrupt in a focused 12-month smoke probe.
-    Opening and three-month evidence is green: on 30 March Rome retains 9.67K
-    and +19.77/month. Two bounded attempts did not reach twelve months because
-    the first exposed a zero-duration driver-click defect and the second ended
-    in a DX12/FSR renderer access violation; the remaining runtime proof is
-    recorded in `BLOCKERS.md` and does not block other work.
+  - [x] Diagnose the remaining red banner as an engine low-year epoch artifact:
+    every AD 1 country inherited a five-year bankruptcy presentation even with
+    no loans and positive cash flow. Direct startup effects and a delayed event
+    could not clear it at the engine's minimum date.
+  - [x] Add a checked low-year adapter. The native startup ghost is neutralized,
+    while the real `on_bankruptcy` callback applies the complete five-year
+    penalty package and drives the economy/credit presentation from a matching
+    five-year `antq_genuine_bankruptcy` state. This preserves real bankruptcy
+    rather than globally disabling it.
+  - [x] Fresh 1 January AD 1 player evidence records 10.96K cash,
+    +523.51 income, -478.15 expenses, and +45.36/month with no bankruptcy
+    banner. The player can queue Imperial Archives immediately at +1.17 monthly
+    research. A same-session `bankrupt XAA` control displays the red banner and
+    lowers research to -0.03, proving both sides of the adapter.
+  - Acceptance follows the user's reduced QA policy: a clean day-one budget,
+    at least twelve months of treasury at the displayed burn rate, a queued
+    advance, and a forced-bankruptcy control. No long calendar playback is
+    required; evidence is in `docs/playtests/S2_OPENING_ECONOMY_RESEARCH_20260727.md`.
 
-- [ ] Make research available to Rome and every playable opening profile.
+- [x] Make research available to Rome and every playable opening profile.
   - [x] Lower Rome, Han, and Arsacid Iran from opening technology level 4 to 3;
     the locally documented engine rule otherwise pre-completes every Age-I node.
-    A fresh Rome panel now reports 17/19 researched, leaving two eligible
-    choices rather than zero.
-  - [ ] Expand the Age-I profiles before closing this task: the current static
-    reachability audit still finds 96 profiles with zero eligible choices and
-    Rome has two rather than the required three. This belongs to the planned
-    750+ node tree, not a fake one-off eligibility exception.
+    Before the expansion, a fresh Rome panel reported 17/19 researched and two
+    eligible choices rather than zero; the new six-choice state awaits the
+    focused runtime confirmation below.
+  - [x] Expand Age I from 50 to 160 nodes through 22 five-node regional
+    mini-trees. Add explicit Baltic, Vistula-Dnieper/eastern-European, and
+    Volga-Kama/northern-forest profiles; every mini-tree branches, converges,
+    has locally verified effects, descriptions, sources, and direct art.
+  - [x] Generate `docs/m8/start_research_reachability.csv` from the same
+    tag-specific-plus-regional M4 culture fallback used by country setup.
+    All 292 opening polities have at least two day-one choices; Rome has six.
+    Distribution: 142 profiles have two choices, 101 have three, 33 have four,
+    nine have five, and seven have six.
+  - [x] Generate and visually review 110 dedicated archaeological still-life
+    icons from seven source sheets; crop/hash/BC7 validation rejects missing or
+    aliased direct art. No new advance uses a transitional fallback.
   - Audit `starting_technology_level`, node age, eligibility, prerequisites,
     already-owned advances, institution requirements, and engine selection rules.
   - Rome must have at least three meaningful eligible choices on day one; every
     playable profile must have at least two. A higher technology level must not
     silently pre-complete or strand its opening tree.
-  - Acceptance: machine-readable reachability/choice report for all 229 tags plus
-    focused Rome, Han, Arsacid, Germanic, Brittonic, African, and American panels.
+  - Acceptance: the machine-readable report covers all 292 tags and the setup
+    rules are statically sampled across Rome, Han, Arsacid, Germanic, Brittonic,
+    African, and American profiles. Fresh Rome runtime evidence shows 21/29
+    owned Age-I advances, six eligible cards, +1.17 monthly progress, and a
+    successfully queued Imperial Archives. Regional eligibility is enforced by
+    the same generated setup/profile contract, so additional repetitive live
+    clicks are not required by the reduced QA policy.
 
 - [ ] Quarantine the complete vanilla estate/parliament/cabinet/law/privilege union.
   - [x] Harvest every base-game and DLC source and exact key. The previous mod mirrored

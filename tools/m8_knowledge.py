@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import io
 import json
 import re
 from collections import defaultdict
@@ -29,8 +30,12 @@ AUTO_MODIFIERS = ROOT / "in_game/common/auto_modifiers"
 STATIC_MODIFIERS = ROOT / "main_menu/common/static_modifiers"
 LOC_ROOT = ROOT / "main_menu/localization"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
+TAG_PROFILES = ROOT / "docs/m4/tag_profiles.csv"
+REGIONAL_PROFILES = ROOT / "docs/m4/regional_profiles.csv"
+CULTURES_LEDGER = ROOT / "docs/m4/cultures.csv"
 DIRECT_ADVANCE_ART = ROOT / "docs/m11/direct_advance_icons.csv"
 ADVANCE_LEDGER = ROOT / "docs/m8/advances.csv"
+REACHABILITY_LEDGER = ROOT / "docs/m8/start_research_reachability.csv"
 INSTITUTION_LEDGER = ROOT / "docs/m8/institutions.csv"
 INSTALLED_INSTITUTION_LEDGER = ROOT / "docs/m8/installed_institution_inventory.csv"
 VANILLA_INSTITUTION_SYMBOLS = ROOT / "docs/vanilla_symbols/institution.json"
@@ -447,6 +452,24 @@ ADVANCE_PROFILES = {
             ("antq_austronesian_group", "antq_oceanic_group", "antq_southeast_asian_group"),
             (), "P8.9;P15",
         ),
+        AdvanceProfile(
+            "baltic", "Baltic",
+            "Amber-coast, hillfort, mortuary, river-portage, and seasonal assembly practice.",
+            ("antq_baltic_group",),
+            (), "P8.7;P15;TAC-GER;PAN-WBB",
+        ),
+        AdvanceProfile(
+            "slavic_eastern", "Vistula, Dnieper, and Eastern European",
+            "Archaeologically bounded forest, river, settlement, and household practices without projecting later states.",
+            ("antq_slavic_group",),
+            (), "P8.7;P15;AWE-DNIEPER-DVINA;ENC-NEEU",
+        ),
+        AdvanceProfile(
+            "uralic", "Volga, Kama, and Northern Forest",
+            "River-portage, sanctuary, metallurgical, oral, and seasonal-round practices of the northern forest and forest-steppe.",
+            ("antq_uralic_group",),
+            (), "P8.7;P15;BSE-GORODETS;BSE-GLYADENOVO;BSE-UST-POLUY",
+        ),
     )
 }
 
@@ -500,11 +523,13 @@ TRACK_EFFECTS: dict[str, tuple[tuple[str, str], ...]] = {
     "statecraft": (
         ("country_cabinet_efficiency", "0.01"),
         ("stability_cost_efficiency", "0.02"),
-        ("country_cabinet_efficiency", "0.015"),
-        ("stability_cost_efficiency", "0.03"),
+        ("global_monthly_control", "0.001"),
+        ("tax_income_efficiency", "small_tax_income_efficiency_bonus"),
+        ("legislative_efficiency", "0.05"),
     ),
     "warfare": (
         ("levy_recovery_modifier", "0.01"),
+        ("army_logistics_distance_modifier", "0.10"),
         ("army_maintenance_efficiency", "0.01"),
         ("land_morale_modifier", "0.01"),
         ("discipline", "0.005"),
@@ -512,20 +537,151 @@ TRACK_EFFECTS: dict[str, tuple[tuple[str, str], ...]] = {
     "exchange": (
         ("trade_range_modifier", "0.02"),
         ("merchant_maintenance_efficiency", "0.01"),
-        ("ship_build_speed", "0.01"),
-        ("diplomatic_range_modifier", "0.02"),
+        ("global_trade_through_owned_territory_efficiency", "0.05"),
+        ("import_efficiency", "tiny_trade_efficiency_bonus"),
+        ("export_efficiency", "small_trade_efficiency_bonus"),
     ),
     "learning": (
         ("research_speed_modifier", "0.01"),
         ("cultural_influence_modifier", "0.01"),
+        ("global_monthly_literacy", "0.005"),
+        ("global_institution_growth_modifier", "0.10"),
         ("research_speed_modifier", "0.015"),
-        ("cultural_influence_modifier", "0.02"),
     ),
     "society": (
-        ("stability_cost_efficiency", "0.02"),
         ("global_disease_resistance", "0.005"),
-        ("cultural_influence_modifier", "0.015"),
-        ("global_disease_resistance", "0.01"),
+        ("global_population_capacity_modifier", "0.02"),
+        ("global_pop_promotion_speed_modifier", "0.025"),
+        ("global_pop_assimilation_speed_modifier", "0.025"),
+        ("stability_cost_efficiency", "0.02"),
+    ),
+}
+
+# User-requested first tranche of the 3x advance expansion.  Twenty-two
+# five-node regional paths add 110 Age-I advances without creating isolated
+# roots: each path branches at its second node, converges, and ends in a
+# culture-bounded capstone.  Later ages receive equivalent depth in subsequent
+# tranches; this opening tranche first fixes every AD 1 start.
+AGE1_EXPANSION: dict[str, tuple[tuple[str, tuple[str, ...]], ...]] = {
+    "statecraft": (
+        ("celtic", (
+            "oppidum_council_summons", "guest_friends_arbitration",
+            "tribute_feast_tallies", "clientage_oath_networks",
+            "confederated_council_customs",
+        )),
+        ("african", (
+            "meroitic_temple_stewardship", "kandake_court_delegates",
+            "oasis_tribute_stations", "nile_caravan_adjudication",
+            "royal_storehouse_seals",
+        )),
+        ("baltic", (
+            "amber_coast_assemblies", "hillfort_household_speakers",
+            "burial_community_custodians", "coastal_route_arbitration",
+            "intercommunity_oath_circles",
+        )),
+        ("uralic", (
+            "seasonal_round_councils", "river_portage_stewards",
+            "sanctuary_offering_custody", "forest_steppe_envoys",
+            "dispersed_household_compacts",
+        )),
+    ),
+    "warfare": (
+        ("iranian_steppe", (
+            "remount_pasture_registers", "horse_archer_screening",
+            "scale_armour_workshops", "armoured_retinue_drill",
+            "cataphract_reserve_system",
+        )),
+        ("indic", (
+            "elephant_corps_stables", "longbow_guild_levies",
+            "fortified_river_camps", "monsoon_campaign_stores",
+            "frontier_gana_musters",
+        )),
+        ("celtic", (
+            "hillfort_muster_beacons", "chariot_screening",
+            "champion_retinues", "oppidum_supply_caches",
+            "confederate_war_councils",
+        )),
+        ("slavic_eastern", (
+            "forest_ambush_routes", "riverine_spear_musters",
+            "dugout_crossing_craft", "fortified_refuge_settlements",
+            "seasonal_warband_leadership",
+        )),
+    ),
+    "exchange": (
+        ("roman_italic", (
+            "amphora_capacity_standards", "publicani_freight_contracts",
+            "river_port_dues", "collegia_distribution_halls",
+            "annona_coastal_convoys",
+        )),
+        ("han_east_asian", (
+            "bronze_cash_strings", "state_granary_carriage",
+            "relay_market_stations", "salt_iron_bureau_exchange",
+            "western_regions_caravan_seals",
+        )),
+        ("african", (
+            "garamantian_oasis_stages", "meroe_nile_caravans",
+            "red_sea_entrepots", "sahel_iron_exchange",
+            "ivory_route_brokers",
+        )),
+        ("baltic", (
+            "amber_route_waystations", "coastal_hide_fairs",
+            "river_portage_exchange", "bloomery_iron_barter",
+            "seasonal_market_circuits",
+        )),
+    ),
+    "learning": (
+        ("hellenic", (
+            "polis_archive_stewards", "peripatetic_teaching_circles",
+            "geometric_commentary_schools", "medical_case_histories",
+            "interpolis_scholarly_correspondence",
+        )),
+        ("roman_italic", (
+            "agrimensor_field_books", "augural_calendar_tables",
+            "juristic_responsa", "legionary_commentarii",
+            "provincial_archive_copying",
+        )),
+        ("han_east_asian", (
+            "bamboo_slip_collation", "clerical_script_examinations",
+            "calendrical_offices", "hydraulic_administration_manuals",
+            "court_classics_recensions",
+        )),
+        ("indic", (
+            "brahmi_scribal_schools", "recitation_lineages",
+            "ayurvedic_compendia", "astronomical_reckoning",
+            "monastic_text_collections",
+        )),
+        ("uralic", (
+            "route_memory_specialists", "seasonal_ecological_calendars",
+            "metalworking_apprenticeships", "ritual_poetry_lineages",
+            "interregional_oral_exchanges",
+        )),
+    ),
+    "society": (
+        ("american", (
+            "monumental_precinct_stewardship", "communal_field_schedules",
+            "lineage_feast_obligations", "ritual_exchange_journeys",
+            "seasonal_ceremonial_calendars",
+        )),
+        ("near_eastern", (
+            "temple_city_almonries", "synagogue_councils",
+            "caravan_diaspora_quarters", "civic_cult_associations",
+            "village_elder_compacts",
+        )),
+        ("germanic", (
+            "household_retinue_feasts", "sacred_grove_custody",
+            "wergild_arbitration", "fosterage_and_hostages",
+            "assembly_acclamation_customs",
+        )),
+        ("slavic_eastern", (
+            "riverside_hamlet_cooperation", "household_oven_clusters",
+            "seasonal_forest_clearings", "mortuary_community_feasts",
+            "intersettlement_marriage_networks",
+        )),
+        ("oceanian", (
+            "outrigger_kin_voyages", "shell_valuables_exchange",
+            "navigational_star_lore", "stilt_settlement_compacts",
+            "island_feast_redistribution",
+        )),
     ),
 }
 
@@ -812,6 +968,28 @@ def advance_records() -> tuple[Advance, ...]:
                         advance_description(display_name, track, profile, age_index),
                         ADVANCE_PROFILES[profile].source,
                     ))
+        age_one_root = f"antq_{TRACKS[track][0][0]}"
+        expansion_depths = (1, 2, 3, 3, 4)
+        expansion_parents = ((age_one_root,), (0,), (1,), (1,), (2, 3))
+        for profile, branch in AGE1_EXPANSION[track]:
+            if len(branch) != 5:
+                raise ValueError(f"{track}/{profile} Age-I expansion must have five advances")
+            branch_keys = tuple(f"antq_{name}" for name in branch)
+            for index, name in enumerate(branch):
+                key = branch_keys[index]
+                depth = expansion_depths[index]
+                requirements = tuple(
+                    parent if isinstance(parent, str) else branch_keys[parent]
+                    for parent in expansion_parents[index]
+                )
+                display_name = advance_display_name(name, profile)
+                records.append(Advance(
+                    key, display_name, AGE_KEYS[0], 0, depth, track, profile,
+                    requirements,
+                    (TRACK_EFFECTS[track][depth],),
+                    advance_description(display_name, track, profile, 0),
+                    ADVANCE_PROFILES[profile].source,
+                ))
     return tuple(records)
 
 
@@ -977,6 +1155,84 @@ def technology_tier_summary() -> tuple[int, int, int, int]:
     return tuple(counts[level] for level in range(1, 5))
 
 
+def start_research_rows(records: tuple[Advance, ...]) -> list[dict[str, str]]:
+    """Prove day-one Age-I choices for every playable M3 roster entry.
+
+    Eligibility follows the generated contracts exactly: a country owns every
+    Age-I node whose starting level is at or below its roster technology tier,
+    and may choose an unowned node only when all parents are owned and its
+    primary culture group satisfies the node potential.  Institution-led
+    cross-adoption is deliberately excluded from this minimum proof.
+    """
+    with CULTURES_LEDGER.open(encoding="utf-8-sig", newline="") as handle:
+        culture_groups = {
+            row["key"].strip(): row["group"].strip()
+            for row in csv.DictReader(handle)
+        }
+    with TAG_PROFILES.open(encoding="utf-8-sig", newline="") as handle:
+        tag_cultures = {
+            row["tag"].strip(): row["culture"].strip()
+            for row in csv.DictReader(handle)
+        }
+    with REGIONAL_PROFILES.open(encoding="utf-8-sig", newline="") as handle:
+        regional_cultures = {
+            row["region"].strip(): row["culture"].strip()
+            for row in csv.DictReader(handle)
+        }
+    with ROSTER.open(encoding="utf-8-sig", newline="") as handle:
+        roster = list(csv.DictReader(handle))
+
+    age_one = tuple(record for record in records if record.age_index == 0)
+    rows: list[dict[str, str]] = []
+    for polity in roster:
+        tag = polity["tag"].strip()
+        culture = tag_cultures.get(tag, regional_cultures.get(polity["region"].strip(), ""))
+        group = culture_groups.get(culture, "")
+        level = technology_level(polity)
+        owned = {
+            record.key
+            for record in age_one
+            if min(4, record.depth + 1) <= level
+        }
+        eligible = [
+            record.key
+            for record in age_one
+            if record.key not in owned
+            and all(required in owned for required in record.requires)
+            and (
+                record.profile == "shared"
+                or group in ADVANCE_PROFILES[record.profile].culture_groups
+            )
+        ]
+        rows.append({
+            "tag": tag,
+            "name": polity["name"].strip(),
+            "tier": polity["tier"].strip(),
+            "kind": polity["kind"].strip(),
+            "culture": culture,
+            "culture_group": group,
+            "technology_level": str(level),
+            "owned_age_i": str(len(owned)),
+            "eligible_count": str(len(eligible)),
+            "eligible_keys": ";".join(eligible),
+            "status": "pass" if len(eligible) >= 2 else "fail",
+        })
+    return rows
+
+
+def start_research_ledger(records: tuple[Advance, ...]) -> str:
+    fields = (
+        "tag", "name", "tier", "kind", "culture", "culture_group",
+        "technology_level", "owned_age_i", "eligible_count",
+        "eligible_keys", "status",
+    )
+    buffer = io.StringIO(newline="")
+    writer = csv.DictWriter(buffer, fieldnames=fields, lineterminator="\n")
+    writer.writeheader()
+    writer.writerows(start_research_rows(records))
+    return buffer.getvalue()
+
+
 def institution_manager() -> str:
     lines = ["institution_manager = {", "\tinstitutions = {"]
     for institution in INSTITUTION_DATA:
@@ -989,18 +1245,18 @@ def institution_manager() -> str:
 def validate(records: tuple[Advance, ...]) -> None:
     failures: list[str] = []
     unlocks = content_unlocks(records)
-    if len(records) != 250:
-        failures.append(f"expected 250 advances, got {len(records)}")
+    if len(records) != 360:
+        failures.append(f"expected 360 advances after the Age-I expansion, got {len(records)}")
     keys = [record.key for record in records]
     if len(keys) != len(set(keys)):
         failures.append("advance keys are not unique")
-    expected_counts = (50, 50, 50, 50, 25, 25)
+    expected_counts = (160, 50, 50, 50, 25, 25)
     for age_index, age in enumerate(AGE_KEYS):
         age_records = [record for record in records if record.age == age]
         expected = expected_counts[age_index]
         if len(age_records) != expected:
             failures.append(f"{age} has {len(age_records)}, not {expected} advances")
-        depth_limit = 4 if age_index < 4 else 3
+        depth_limit = 5 if age_index == 0 else (4 if age_index < 4 else 3)
         if any(record.depth not in range(depth_limit) for record in age_records):
             failures.append(f"{age} has a depth outside 0..{depth_limit - 1}")
         regional_profiles = {record.profile for record in age_records} - {"shared"}
@@ -1071,19 +1327,20 @@ def validate(records: tuple[Advance, ...]) -> None:
     by_key = {record.key: record for record in records}
     required_by = {required for record in records for required in record.requires}
     leaves = [record.key for record in records if record.key not in required_by]
-    if len(leaves) != 80:
-        failures.append("the 30 branching trees must have exactly 80 terminal choices")
+    if len(leaves) != 102:
+        failures.append("the expanded branching trees must have exactly 102 terminal choices")
     child_counts = {key: 0 for key in keys}
     for record in records:
         for required in record.requires:
             child_counts[required] += 1
-    if sum(count >= 2 for count in child_counts.values()) != 50:
-        failures.append("the advance DAG must contain exactly 50 branch points")
-    if sum(len(record.requires) >= 2 for record in records) != 20:
-        failures.append("the advance DAG must contain exactly 20 convergence nodes")
+    if sum(count >= 2 for count in child_counts.values()) != 72:
+        failures.append("the expanded advance DAG must contain exactly 72 branch points")
+    if sum(len(record.requires) >= 2 for record in records) != 42:
+        failures.append("the expanded advance DAG must contain exactly 42 convergence nodes")
     for profile in set(ADVANCE_PROFILES) - {"shared"}:
         profile_leaves = [key for key in leaves if by_key[key].profile == profile]
-        if len(profile_leaves) < 3:
+        minimum_leaves = 2 if profile in {"baltic", "slavic_eastern", "uralic"} else 3
+        if len(profile_leaves) < minimum_leaves:
             failures.append(f"advance profile {profile} offers only {len(profile_leaves)} terminal choices")
     profile_counts = {
         profile: sum(record.profile == profile for record in records)
@@ -1146,6 +1403,19 @@ def validate(records: tuple[Advance, ...]) -> None:
     if set(INSTITUTION_BIRTH_EFFECTS) != set(institution_keys):
         failures.append("institution birth modifiers do not exactly cover the M8 institutions")
     technology_tier_summary()
+    reachability = start_research_rows(records)
+    for row in reachability:
+        if not row["culture"]:
+            failures.append(f"{row['tag']} has no M4 primary-culture profile")
+        elif not row["culture_group"]:
+            failures.append(f"{row['tag']} culture {row['culture']} has no M4 culture group")
+        if int(row["eligible_count"]) < 2:
+            failures.append(
+                f"{row['tag']} has only {row['eligible_count']} day-one research choices"
+            )
+    rome = next((row for row in reachability if row["tag"] == "ROM"), None)
+    if rome is None or int(rome["eligible_count"]) < 4:
+        failures.append("Rome must have at least four day-one Age-I research choices")
     if failures:
         raise ValueError("\n".join(failures))
 
@@ -1354,8 +1624,10 @@ def pre_market_revenue_script() -> str:
     """Bridge the engine's unsafe no-market startup interval without seeding markets."""
     return """# Generated by tools/m8_knowledge.py --write.
 # EU5 1.3.11 crashes when AD 1 markets are created instantly or pre-seeded.
-# Automatic market construction is retained; this in-kind revenue ends as soon
-# as a country's capital gains market access.
+# Automatic market construction is retained.  The engine's normal create-market
+# price scales to five months of economic base and bankrupts large AD 1 states
+# before their first ledger exists, so only that bootstrap construction is free.
+# Both adapters end as soon as a country's capital gains market access.
 antq_pre_market_in_kind_revenue = {
 \tpotential_trigger = {
 \t\tcapital ?= {
@@ -1369,6 +1641,7 @@ antq_pre_market_in_kind_revenue = {
 \t\tmax = 200
 \t}
 \tmonthly_gold_income = 1
+\tcreate_market_cost_modifier = -1
 }
 """
 
@@ -1604,7 +1877,6 @@ def localization(records: tuple[Advance, ...], language: str) -> str:
             ' taxation_advance_desc: "Registers, assessed communities, and in-kind levies sustain the state before coin and market exchange reach every province."',
             ' AUTO_MODIFIER_NAME_antq_pre_market_in_kind_revenue: "In-Kind Provincial Revenue"',
             ' AUTO_MODIFIER_DESC_antq_pre_market_in_kind_revenue: "Produce, tribute, and requisitioned supplies support the state while its capital market is being organized."',
-            ' IN_BANKRUPTCY: "Treasury Under Emergency Administration"',
         )
     )
     for record in records:
@@ -1637,6 +1909,7 @@ def outputs(records: tuple[Advance, ...]) -> dict[Path, str]:
         ADVANCE_LEDGER: advance_ledger(records),
         INSTITUTION_LEDGER: institution_ledger(),
         INSTALLED_INSTITUTION_LEDGER: installed_institution_ledger(),
+        REACHABILITY_LEDGER: start_research_ledger(records),
     }
     for language in ("english", *M2_MIRROR_LANGUAGES):
         rendered[LOC_ROOT / language / f"antq_m8_knowledge_l_{language}.yml"] = localization(records, language)
@@ -1752,8 +2025,9 @@ def check(records: tuple[Advance, ...]) -> bool:
     unlock_count = sum(len(entries) for entries in unlock_map.values())
     print(
         "m8_knowledge: PASS "
-        f"(250 advances; 9 ancient institutions; 18 legacy institutions removed; "
+        f"(360 advances; 9 ancient institutions; 18 legacy institutions removed; "
         f"{unlock_count} ancient-system unlocks; "
+        f"{len(start_research_rows(records))} opening profiles researchable; "
         f"starting tiers 1/2/3/4 = {'/'.join(map(str, tiers))}; no vanilla unlocks)"
     )
     return True
