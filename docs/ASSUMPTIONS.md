@@ -1,5 +1,26 @@
 # Historical Assumptions
 
+## 2026-07-27 - Retained RGO staples are capacity proxies, not site attestations
+
+Wheat, millet, legumes, livestock, fish, lumber, clay, stone, salt, and other
+broadly period-valid resources may remain after the first global screen where
+the installed region, climate, and terrain do not contradict them. Such a
+retention represents plausible productive capacity at the game's location
+scale, not proof that the named location specialized in that good in AD 1.
+
+The 652 changed locations have stronger negative or positive grounds:
+post-contact range, Old World source restriction, climate envelope, or one of
+the reviewed direct anchors. Fine producer density and extraction capacity
+remain later passes and must not infer output quantities from the present
+single-good assignment.
+
+Sources and confidence are routed per row in
+`docs/m5/global_rgo_audit.csv`, using `P12.1`, `PER`, and the direct-anchor
+source set.
+
+[secure broad anachronism/range exclusions and direct anchors; contested
+retained local specialization, capacity, and most subregional distributions]
+
 ## 2026-07-27 - Legal profiles are bounded comparative frames, not recovered codes
 
 The thirteen legal profiles group polities that share enough political and

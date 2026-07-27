@@ -5,7 +5,7 @@ machine-readable active economy union.
 
 - 65 reviewed active goods: 5 custom raw, 8 custom processed.
 - 265 active ancient buildings; 143 productive families.
-- 23 Roman-profile families and 17 RGO-anchored active goods.
+- 23 Roman-profile families and 20 RGO-anchored active goods.
 - Zero active cannon, firearm, colonial-crop, coffee, tea, tobacco, or
   other prohibited post-antique goods.
 - `paper`, `coal`, `beer`, and `steel` remain engine keys only; mounted

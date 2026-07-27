@@ -1,5 +1,20 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - Global RGO audit separates exclusion from positive attestation
+
+Every controlled location must now appear in `global_rgo_audit.csv`, but a
+retained resource is not automatically promoted to a historical fact. Direct
+anchors retain their specific source and confidence. Regional or climate
+corrections inherit the rule that caused the change. All other period-valid
+goods are marked contested with an explicit statement that local extraction
+is not attested.
+
+This lets the project remove impossible post-contact or environmentally
+misplaced goods globally without replacing one inherited fiction with
+thousands of falsely precise assignments. The map template and the startup
+effect are generated from the same 652-change set, preventing selector/runtime
+RGO drift.
+
 ## 2026-07-27 - Legal identity is tag-profiled independently of government type
 
 The installed law schema permits country-scope `potential` triggers and does

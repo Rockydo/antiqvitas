@@ -30,9 +30,10 @@ and focused runtime probe all pass.
   concentrated in Africa, the Americas, Central/South/East/Southeast Asia,
   and Oceania. These are country-scale aggregations, not merely descriptive
   localization, and remain in the global granularity queue below.
-- The current world has 13,551 assigned land locations, but the RGO correction
-  ledger changes only 328. The remaining visible resource geography is largely
-  inherited from the 1337 setup.
+- The global RGO audit now covers all 13,550 controlled templates and applies
+  652 regional, environmental, and direct-anchor corrections. Most retained
+  staples remain inherited but are explicitly marked as contested where local
+  extraction is not attested; deeper regional specialty work remains open.
 - 265 ancient building definitions exist, but roughly 2,400 starting placements
   are concentrated in only about 50–60 locations. Rome alone receives more than
   200 while almost every settlement worldwide begins empty.
@@ -383,6 +384,19 @@ and focused runtime probe all pass.
     Prioritize Mediterranean grain/wine/olive zones, mining, papyrus, incense,
     silk routes, Indian Ocean products, pastoral frontiers, forest products, salt,
     fisheries, and regional staples.
+  - [x] Complete the first whole-map period/environment screen. All 13,550
+    controlled templates now have an auditable row with owner region,
+    topography, vegetation, climate, installed and AD 1 goods, decision class,
+    source, confidence, and note. Expanded regional and climate rules apply
+    652 corrections (539 regional, 98 environmental, 15 direct anchors),
+    including global exclusions for misplaced cotton, silk, sugar, wine,
+    coal, pepper, incense, saltpeter, olives, tea, rice, saffron, coffee, and
+    elephants. Two controlled water/wasteland templates remain honestly
+    nonproductive rather than receiving fictitious RGOs.
+  - [ ] Continue from the complete ledger with finer subregional specialty,
+    extraction-capacity, and producer/consumer passes; replace contested
+    retained defaults where site-level or environmental evidence supports a
+    better choice.
   - Acceptance: every assigned location is audited; regional distribution and
     outlier reports pass; no vanilla-only or post-476 RGO remains visible.
 

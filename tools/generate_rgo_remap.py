@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import io
 import json
 import re
 from collections import Counter
@@ -19,7 +20,49 @@ CUSTOM_GOODS = ROOT / "docs/m5/custom_goods.csv"
 ANNONA_GRAIN_ANCHORS = ROOT / "docs/m5/annona_grain_anchors.csv"
 OUTPUT = ROOT / "in_game/map_data/location_templates.txt"
 REPORT = ROOT / "docs/m5/rgo_remap_report.csv"
+GLOBAL_AUDIT = ROOT / "docs/m5/global_rgo_audit.csv"
 LINE = re.compile(r"^(?P<location>[A-Za-z0-9_]+)\s*=\s*\{(?P<body>.*?\braw_material\s*=\s*)(?P<good>[A-Za-z0-9_]+)(?P<tail>.*)$", re.MULTILINE)
+ENTRY_LINE = re.compile(
+    r"^(?P<location>[A-Za-z0-9_]+)\s*=\s*\{(?P<body>[^\r\n]*)\}\s*$",
+    re.MULTILINE,
+)
+FIELD = re.compile(r"\b([A-Za-z_][A-Za-z0-9_]*)\s*=\s*([A-Za-z0-9_.-]+)")
+ENVIRONMENT_RULES = {
+    "olives": (
+        {"mediterranean", "subtropical", "arid"}, "fruit", "P12.1;PER", "secure",
+        "Olive cultivation is removed from climates outside its Mediterranean and adjacent dryland envelope.",
+    ),
+    "wine": (
+        {"mediterranean", "subtropical", "continental", "oceanic", "arid"},
+        "fruit", "P12.1;PER", "contested",
+        "Grape-wine cultivation is removed from arctic, cold-arid, and tropical templates.",
+    ),
+    "sugar": (
+        {"tropical", "subtropical"}, "fiber_crops", "P12.1;PER", "secure",
+        "Ancient sugar cultivation is retained only in warm cultivation templates.",
+    ),
+    "pepper": (
+        {"tropical", "subtropical"}, "medicaments", "P12.1;PER", "secure",
+        "Pepper production is retained only in tropical and subtropical templates.",
+    ),
+    "cloves": (
+        {"tropical"}, "medicaments", "P12.1;PER", "secure",
+        "Clove production is retained only in tropical source-island templates.",
+    ),
+    "cocoa": (
+        {"tropical", "subtropical"}, "fruit", "P12.1;PER", "secure",
+        "Cacao cultivation is retained only in warm American templates.",
+    ),
+    "cotton": (
+        {"tropical", "subtropical", "arid", "mediterranean", "continental"},
+        "fiber_crops", "P12.1;PER", "contested",
+        "Cotton is removed from arctic, cold-arid, and cool-oceanic templates.",
+    ),
+    "tea": (
+        {"tropical", "subtropical", "continental"}, "medicaments", "P12.1;PER", "contested",
+        "Minor Han-era tea production is retained only in plausible Chinese cultivation climates.",
+    ),
+}
 
 
 def rows(path: Path, comments: bool = False) -> list[dict[str, str]]:
@@ -129,14 +172,25 @@ def rendered() -> tuple[str, str, tuple[tuple[str, str, str, str, str], ...]]:
                 return match.group(0)
             changes.append((location, region, "anchor", good, replacement))
             return f"{location} = {{{match['body']}{replacement}{match['tail']}"
+        replacement = good
+        operation = ""
         rule = rules.get(good)
-        if not rule or not region:
+        if rule and region:
+            allowed = {item for item in rule.get("allowed_regions", "").split("|") if item}
+            if not allowed or region not in allowed:
+                replacement = rule["replacement_good"]
+                operation = "regional_rule"
+        environment = ENVIRONMENT_RULES.get(replacement)
+        if environment and region:
+            fields = dict(FIELD.findall(match.group(0)))
+            climate = fields.get("climate", "")
+            allowed_climates, environment_replacement, *_boundary = environment
+            if climate and climate not in allowed_climates:
+                replacement = environment_replacement
+                operation = "environment_rule"
+        if replacement == good:
             return match.group(0)
-        allowed = {item for item in rule.get("allowed_regions", "").split("|") if item}
-        if allowed and region in allowed:
-            return match.group(0)
-        replacement = rule["replacement_good"]
-        changes.append((location, region, "regional_rule", good, replacement))
+        changes.append((location, region, operation, good, replacement))
         return f"{location} = {{{match['body']}{replacement}{match['tail']}"
     content = LINE.sub(replace, source.read_text(encoding="utf-8"))
     if not changes:
@@ -154,6 +208,98 @@ def rendered() -> tuple[str, str, tuple[tuple[str, str, str, str, str], ...]]:
     return content, "\n".join(report) + "\n", tuple(changes)
 
 
+def global_audit(
+    content: str, changes: tuple[tuple[str, str, str, str, str], ...]
+) -> str:
+    """Return one transparent AD 1 audit row for every controlled location."""
+    config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
+    source = Path(config["game_dir"]) / "game/in_game/map_data/location_templates.txt"
+    original_entries = {
+        match.group("location"): dict(FIELD.findall(match.group("body")))
+        for match in ENTRY_LINE.finditer(source.read_text(encoding="utf-8"))
+    }
+    current_entries = {
+        match.group("location"): dict(FIELD.findall(match.group("body")))
+        for match in ENTRY_LINE.finditer(content)
+    }
+    roster = {row["tag"]: row for row in rows(ROSTER)}
+    ownership = rows(OWNERSHIP, comments=True)
+    change_by_location = {
+        location: (operation, old, new)
+        for location, _region, operation, old, new in changes
+    }
+    rules = {row["source_good"]: row for row in rows(RULES)}
+    anchors = {row["location"]: row for row in rows(ANCHORS)}
+    output = io.StringIO(newline="")
+    writer = csv.writer(output, lineterminator="\n")
+    writer.writerow((
+        "location", "tag", "region", "topography", "vegetation", "climate",
+        "natural_harbor_suitability", "installed_good", "ad1_good", "decision",
+        "source", "confidence", "note",
+    ))
+    seen: set[str] = set()
+    for row in sorted(ownership, key=lambda item: item["location"]):
+        location = row["location"]
+        if location in seen:
+            raise ValueError(f"global RGO audit repeats controlled location {location}")
+        seen.add(location)
+        if location not in original_entries or location not in current_entries:
+            raise ValueError(f"controlled location {location} has no RGO template")
+        original = original_entries[location]
+        current = current_entries[location]
+        anchor = anchors.get(location)
+        changed = change_by_location.get(location)
+        if not current.get("raw_material"):
+            decision = "nonproductive_water_or_wasteland_template"
+            source_key = "EU5-LOCAL-MAP;P12.1"
+            confidence = "secure"
+            note = (
+                "The controlled template has no raw-material field and remains "
+                "nonproductive; it is audited but not assigned a fictitious RGO."
+            )
+        elif anchor:
+            decision = "direct_anchor" if not changed else "direct_anchor_correction"
+            source_key = anchor["source"]
+            confidence = anchor["confidence"]
+            note = anchor["note"]
+        elif changed:
+            operation, old, new = changed
+            if operation == "environment_rule":
+                _allowed, _replacement, source_key, confidence, note = ENVIRONMENT_RULES[old]
+            else:
+                rule = rules[old]
+                source_key = rule["source"]
+                confidence = rule["confidence"]
+                note = rule["note"]
+            decision = operation
+        else:
+            decision = "retained_after_period_environment_screen"
+            source_key = "P12.1;PER"
+            confidence = "contested"
+            note = (
+                "Period-valid broad resource retained after regional and environmental "
+                "screen; this is not a claim of location-specific attested extraction."
+            )
+        writer.writerow((
+            location,
+            row["tag"],
+            roster[row["tag"]]["region"],
+            current.get("topography", ""),
+            current.get("vegetation", ""),
+            current.get("climate", ""),
+            current.get("natural_harbor_suitability", ""),
+            original.get("raw_material", ""),
+            current.get("raw_material", ""),
+            decision,
+            source_key,
+            confidence,
+            note,
+        ))
+    if len(seen) != 13550:
+        raise ValueError(f"global RGO audit must cover 13550 controlled locations; found {len(seen)}")
+    return output.getvalue()
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--write", action="store_true")
@@ -163,6 +309,7 @@ def main() -> int:
         parser.error("provide exactly one of --write or --check")
     try:
         content, report, changes = rendered()
+        audit = global_audit(content, changes)
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         print(f"rgo_remap: FAIL\n  - {exc}")
         return 1
@@ -170,16 +317,24 @@ def main() -> int:
         OUTPUT.parent.mkdir(parents=True, exist_ok=True)
         OUTPUT.write_text(content, encoding="utf-8", newline="\n")
         REPORT.write_text(report, encoding="utf-8-sig", newline="\n")
-        print(f"rgo_remap: wrote {OUTPUT.relative_to(ROOT)} ({len(changes)} corrections)")
+        GLOBAL_AUDIT.write_text(audit, encoding="utf-8-sig", newline="\n")
+        print(
+            f"rgo_remap: wrote {OUTPUT.relative_to(ROOT)} "
+            f"({len(changes)} corrections; 13550 audited locations)"
+        )
         return 0
     failures = []
-    for path, expected, encoding in ((OUTPUT, content, "utf-8"), (REPORT, report, "utf-8-sig")):
+    for path, expected, encoding in (
+        (OUTPUT, content, "utf-8"),
+        (REPORT, report, "utf-8-sig"),
+        (GLOBAL_AUDIT, audit, "utf-8-sig"),
+    ):
         if not path.is_file() or path.read_text(encoding=encoding) != expected:
             failures.append(f"stale or missing {path.relative_to(ROOT)}")
     if failures:
         print("rgo_remap: FAIL\n  - " + "\n  - ".join(failures))
         return 1
-    print(f"rgo_remap: PASS ({len(changes)} corrections)")
+    print(f"rgo_remap: PASS ({len(changes)} corrections; 13550 audited locations)")
     return 0
 
 

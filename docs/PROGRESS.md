@@ -1,5 +1,26 @@
 # Progress
 
+## 2026-07-27 - First global AD 1 RGO screen
+
+- Expanded the RGO remap from 328 to 652 actual location corrections and added
+  a generated 13,550-row audit covering every controlled template.
+- The ledger records owner/region, topography, vegetation, climate, harbor
+  suitability, installed and AD 1 goods, decision type, source, confidence,
+  and an explicit evidence note. Two controlled water/wasteland templates
+  remain nonproductive instead of receiving invented resources.
+- Added regional exclusions for chili, cloves, coal, saffron, olives, wine,
+  rice, and cotton, and climate screens for olives, wine, sugar, pepper,
+  cloves, cacao, cotton, and tea. These extend the prior coffee, tea, sugar,
+  tobacco, cacao, maize, potato, saltpeter, silk, incense, pepper, and elephant
+  controls.
+- Generated decision totals are 539 regional corrections, 98 environmental
+  corrections, 15 corrected anchors, two already-correct anchors, and 12,894
+  period-valid but locally contested retentions.
+- The startup adapter now applies the same 652 corrections at runtime. All 101
+  validation commands and paired vanilla/mod smoke are green with zero
+  mod-unique errors; focused evidence is in
+  `docs/playtests/S2_GLOBAL_RGO_20260727.md`.
+
 ## 2026-07-27 - Thirteen deep ancient legal profiles
 
 - Added 182 profile-gated law groups and 546 mutually exclusive policies,
