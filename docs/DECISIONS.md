@@ -1,5 +1,31 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - Han political depth separates the Western court from the Eastern Secretariat
+
+The AD 1 Western Han Court Conference remains centered on the Chancellor-era
+high offices, Nine Ministers, memorials, commandery/kingdom returns, registers,
+ritual consultation, and Wang-clan regency. Reforms from the Guangwu
+restoration onward instead activate `antq_eastern_han_imperial_secretariat`.
+This exposes the documented growth of the palace Secretariat without deleting
+the formal Three Excellencies or pretending that one institutional diagram
+remained unchanged from AD 25 to 220.
+
+Xin, Eastern Han, late provincial commands, the Three Kingdoms, and Western Jin
+are implemented as age-routed reform choices, not automatic tag changes. This
+keeps the sandbox playable if Han survives while still making later research
+politically distinct. `tools/s2_han_politics_depth.py` permanently verifies
+council activation, age-correct unique unlocks, exact-Han privilege gates,
+pairwise exclusion, content breadth, and direct art.
+
+## 2026-07-27 - Han policy choices expose centralization tradeoffs
+
+The three new exact-Han pairs make recurring institutional tensions playable:
+formal high-office nomination versus palace Secretariat coordination; rotating
+inspector circuits versus commandery continuity; and direct salt/iron
+participation versus locally administered workshop and market quotas. These are
+bounded alternatives with symmetric exclusion, not claims that historical Han
+policy always presented clean binary choices.
+
 ## 2026-07-27 - Roman political depth is split at the Principate-Dominate boundary
 
 The Augustan Senate cannot serve as a credible universal council for AD

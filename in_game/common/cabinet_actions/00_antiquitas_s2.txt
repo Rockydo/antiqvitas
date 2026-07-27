@@ -302,6 +302,7 @@ antq_han_commandery_reports = {
 			has_reform = government_reform:antq_han_imperial_bureaucracy
 			has_reform = government_reform:antq_memorialist_han_court
 			has_reform = government_reform:antq_commandery_supervision
+			has_reform = government_reform:antq_xin_state_reorganization
 		}
 	}
 	allow_multiple = no
@@ -318,6 +319,7 @@ antq_han_imperial_secretariat = {
 			has_reform = government_reform:antq_han_imperial_bureaucracy
 			has_reform = government_reform:antq_memorialist_han_court
 			has_reform = government_reform:antq_commandery_supervision
+			has_reform = government_reform:antq_xin_state_reorganization
 		}
 	}
 	allow_multiple = no
@@ -334,6 +336,7 @@ antq_han_granary_registers = {
 			has_reform = government_reform:antq_han_imperial_bureaucracy
 			has_reform = government_reform:antq_memorialist_han_court
 			has_reform = government_reform:antq_commandery_supervision
+			has_reform = government_reform:antq_xin_state_reorganization
 		}
 	}
 	allow_multiple = no
@@ -350,6 +353,7 @@ antq_han_courier_relays = {
 			has_reform = government_reform:antq_han_imperial_bureaucracy
 			has_reform = government_reform:antq_memorialist_han_court
 			has_reform = government_reform:antq_commandery_supervision
+			has_reform = government_reform:antq_xin_state_reorganization
 		}
 	}
 	allow_multiple = no
@@ -366,6 +370,204 @@ antq_han_frontier_command = {
 			has_reform = government_reform:antq_han_imperial_bureaucracy
 			has_reform = government_reform:antq_memorialist_han_court
 			has_reform = government_reform:antq_commandery_supervision
+			has_reform = government_reform:antq_xin_state_reorganization
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.01
+	}
+}
+
+antq_han_three_excellencies_reviews = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_han_imperial_bureaucracy
+			has_reform = government_reform:antq_memorialist_han_court
+			has_reform = government_reform:antq_commandery_supervision
+			has_reform = government_reform:antq_xin_state_reorganization
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		country_cabinet_efficiency = 0.025
+		global_monthly_control = 0.0025
+	}
+}
+
+antq_han_nine_ministers_dockets = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_han_imperial_bureaucracy
+			has_reform = government_reform:antq_memorialist_han_court
+			has_reform = government_reform:antq_commandery_supervision
+			has_reform = government_reform:antq_xin_state_reorganization
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_towards_centralization = societal_value_minor_monthly_move
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_han_regional_inspector_reports = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_han_imperial_bureaucracy
+			has_reform = government_reform:antq_memorialist_han_court
+			has_reform = government_reform:antq_commandery_supervision
+			has_reform = government_reform:antq_xin_state_reorganization
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		stability_cost_efficiency = -0.03
+		global_monthly_control = 0.002
+	}
+}
+
+antq_han_household_registration_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_han_imperial_bureaucracy
+			has_reform = government_reform:antq_memorialist_han_court
+			has_reform = government_reform:antq_commandery_supervision
+			has_reform = government_reform:antq_xin_state_reorganization
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_pop_food_consumption = -0.01
+		global_production_efficiency = 0.025
+	}
+}
+
+antq_han_salt_iron_accounts = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_han_imperial_bureaucracy
+			has_reform = government_reform:antq_memorialist_han_court
+			has_reform = government_reform:antq_commandery_supervision
+			has_reform = government_reform:antq_xin_state_reorganization
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		country_cabinet_efficiency = 0.02
+		global_trade_through_owned_territory_efficiency = 0.03
+	}
+}
+
+antq_han_grand_herald_guest_registers = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_han_imperial_bureaucracy
+			has_reform = government_reform:antq_memorialist_han_court
+			has_reform = government_reform:antq_commandery_supervision
+			has_reform = government_reform:antq_xin_state_reorganization
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_prestige = 0.05
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_late_han_secretariat_memorials = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_guangwu_restoration_court
+			has_reform = government_reform:antq_eastern_han_secretariat
+			has_reform = government_reform:antq_affinal_regency_court
+			has_reform = government_reform:antq_provincial_inspectorate_commands
+			has_reform = government_reform:antq_three_kingdoms_chancellery
+			has_reform = government_reform:antq_jin_reunification_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		country_cabinet_efficiency = 0.025
+		global_monthly_control = 0.0025
+	}
+}
+
+antq_late_han_three_excellencies_evaluations = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_guangwu_restoration_court
+			has_reform = government_reform:antq_eastern_han_secretariat
+			has_reform = government_reform:antq_affinal_regency_court
+			has_reform = government_reform:antq_provincial_inspectorate_commands
+			has_reform = government_reform:antq_three_kingdoms_chancellery
+			has_reform = government_reform:antq_jin_reunification_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		stability_cost_efficiency = -0.03
+		global_monthly_control = 0.002
+	}
+}
+
+antq_late_han_provincial_inspector_returns = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_guangwu_restoration_court
+			has_reform = government_reform:antq_eastern_han_secretariat
+			has_reform = government_reform:antq_affinal_regency_court
+			has_reform = government_reform:antq_provincial_inspectorate_commands
+			has_reform = government_reform:antq_three_kingdoms_chancellery
+			has_reform = government_reform:antq_jin_reunification_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_towards_centralization = societal_value_minor_monthly_move
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_late_han_palace_affinal_dockets = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_guangwu_restoration_court
+			has_reform = government_reform:antq_eastern_han_secretariat
+			has_reform = government_reform:antq_affinal_regency_court
+			has_reform = government_reform:antq_provincial_inspectorate_commands
+			has_reform = government_reform:antq_three_kingdoms_chancellery
+			has_reform = government_reform:antq_jin_reunification_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_prestige = 0.05
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_late_han_military_command_registers = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_guangwu_restoration_court
+			has_reform = government_reform:antq_eastern_han_secretariat
+			has_reform = government_reform:antq_affinal_regency_court
+			has_reform = government_reform:antq_provincial_inspectorate_commands
+			has_reform = government_reform:antq_three_kingdoms_chancellery
+			has_reform = government_reform:antq_jin_reunification_court
 		}
 	}
 	allow_multiple = no

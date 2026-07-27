@@ -196,6 +196,123 @@ antq_agenda_han_frontier_dispatch = {
 	chance = 10
 }
 
+antq_agenda_han_official_recommendations = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_han_court_conference
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_han_official_recommendations_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_han_justice_docket = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_han_court_conference
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_han_justice_docket_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_han_household_register_revision = {
+	type = country
+	estate = peasants_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_han_court_conference
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_han_household_register_revision_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_han_salt_iron_supply = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_han_court_conference
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_han_salt_iron_supply_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_han_western_regions_audience = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_han_court_conference
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_han_western_regions_audience_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_han_ritual_calendar = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_han_court_conference
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_han_ritual_calendar_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_late_han_secretariat_authority = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_late_han_secretariat_authority_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_late_han_provincial_emergency_command = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_late_han_provincial_emergency_command_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_late_han_classics_recommendation = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_late_han_classics_recommendation_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
 antq_agenda_iranian_host_contribution = {
 	type = country
 	estate = nobles_estate

@@ -72,6 +72,7 @@ antq_han_court_conference = {
 			has_reform = government_reform:antq_han_imperial_bureaucracy
 			has_reform = government_reform:antq_memorialist_han_court
 			has_reform = government_reform:antq_commandery_supervision
+			has_reform = government_reform:antq_xin_state_reorganization
 		}
 	}
 	allow = {
@@ -79,6 +80,7 @@ antq_han_court_conference = {
 			has_reform = government_reform:antq_han_imperial_bureaucracy
 			has_reform = government_reform:antq_memorialist_han_court
 			has_reform = government_reform:antq_commandery_supervision
+			has_reform = government_reform:antq_xin_state_reorganization
 		}
 	}
 	modifier = {
@@ -90,6 +92,40 @@ antq_han_court_conference = {
 		nobles_estate_agenda_impact = 0.10
 		burghers_estate_agenda_impact = 0.20
 		peasants_estate_agenda_impact = -0.10
+	}
+}
+
+antq_eastern_han_imperial_secretariat = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_guangwu_restoration_court
+			has_reform = government_reform:antq_eastern_han_secretariat
+			has_reform = government_reform:antq_affinal_regency_court
+			has_reform = government_reform:antq_provincial_inspectorate_commands
+			has_reform = government_reform:antq_three_kingdoms_chancellery
+			has_reform = government_reform:antq_jin_reunification_court
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_guangwu_restoration_court
+			has_reform = government_reform:antq_eastern_han_secretariat
+			has_reform = government_reform:antq_affinal_regency_court
+			has_reform = government_reform:antq_provincial_inspectorate_commands
+			has_reform = government_reform:antq_three_kingdoms_chancellery
+			has_reform = government_reform:antq_jin_reunification_court
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		clergy_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.08
+		nobles_estate_agenda_impact = 0.18
+		burghers_estate_agenda_impact = 0.12
+		clergy_estate_agenda_impact = 0.16
 	}
 }
 

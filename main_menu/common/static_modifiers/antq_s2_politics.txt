@@ -150,6 +150,96 @@ antq_agenda_han_frontier_dispatch_concession = {
 	global_levy_size_modifier = 0.03
 }
 
+antq_issue_han_official_recommendations_outcome = {
+	country_cabinet_efficiency = 0.025
+	global_monthly_control = 0.0025
+}
+
+antq_agenda_han_official_recommendations_concession = {
+	global_nobles_estate_power = 0.025
+	land_morale_modifier = 0.01
+}
+
+antq_issue_han_justice_docket_outcome = {
+	stability_cost_efficiency = -0.03
+	global_monthly_control = 0.002
+}
+
+antq_agenda_han_justice_docket_concession = {
+	country_cabinet_efficiency = 0.025
+	global_monthly_control = 0.0025
+}
+
+antq_issue_han_household_register_revision_outcome = {
+	monthly_towards_centralization = societal_value_minor_monthly_move
+	country_cabinet_efficiency = 0.02
+}
+
+antq_agenda_han_household_register_revision_concession = {
+	global_pop_food_consumption = -0.01
+	global_levy_size_modifier = 0.03
+}
+
+antq_issue_han_salt_iron_supply_outcome = {
+	country_cabinet_efficiency = 0.02
+	global_trade_through_owned_territory_efficiency = 0.03
+}
+
+antq_agenda_han_salt_iron_supply_concession = {
+	global_trade_through_owned_territory_efficiency = 0.05
+	global_burghers_estate_power = 0.025
+}
+
+antq_issue_han_western_regions_audience_outcome = {
+	monthly_prestige = 0.05
+	country_cabinet_efficiency = 0.02
+}
+
+antq_agenda_han_western_regions_audience_concession = {
+	global_nobles_estate_power = 0.025
+	land_morale_modifier = 0.01
+}
+
+antq_issue_han_ritual_calendar_outcome = {
+	research_speed_modifier = 0.015
+	stability_cost_efficiency = -0.025
+}
+
+antq_agenda_han_ritual_calendar_concession = {
+	country_cabinet_efficiency = 0.025
+	global_monthly_control = 0.0025
+}
+
+antq_issue_late_han_secretariat_authority_outcome = {
+	country_cabinet_efficiency = 0.025
+	global_monthly_control = 0.0025
+}
+
+antq_agenda_late_han_secretariat_authority_concession = {
+	global_nobles_estate_power = 0.025
+	land_morale_modifier = 0.01
+}
+
+antq_issue_late_han_provincial_emergency_command_outcome = {
+	global_levy_size_modifier = 0.05
+	land_morale_modifier = 0.01
+}
+
+antq_agenda_late_han_provincial_emergency_command_concession = {
+	global_trade_through_owned_territory_efficiency = 0.05
+	global_burghers_estate_power = 0.025
+}
+
+antq_issue_late_han_classics_recommendation_outcome = {
+	research_speed_modifier = 0.015
+	stability_cost_efficiency = -0.025
+}
+
+antq_agenda_late_han_classics_recommendation_concession = {
+	global_clergy_estate_power = 0.025
+	country_cabinet_efficiency = 0.02
+}
+
 antq_issue_iranian_host_contribution_outcome = {
 	global_levy_size_modifier = 0.05
 	land_morale_modifier = 0.01

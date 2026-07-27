@@ -226,6 +226,141 @@ antq_issue_han_frontier_dispatch = {
 	on_debate_failed = { parliament_debate_failed_effect = yes }
 }
 
+antq_issue_han_official_recommendations = {
+	estate = nobles_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_han_court_conference
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_han_official_recommendations_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_han_justice_docket = {
+	estate = burghers_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_han_court_conference
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_han_justice_docket_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_han_household_register_revision = {
+	estate = peasants_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_han_court_conference
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_han_household_register_revision_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_han_salt_iron_supply = {
+	estate = burghers_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_han_court_conference
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_han_salt_iron_supply_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_han_western_regions_audience = {
+	estate = nobles_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_han_court_conference
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_han_western_regions_audience_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_han_ritual_calendar = {
+	estate = nobles_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_han_court_conference
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_han_ritual_calendar_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_late_han_secretariat_authority = {
+	estate = nobles_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_late_han_secretariat_authority_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_late_han_provincial_emergency_command = {
+	estate = burghers_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_late_han_provincial_emergency_command_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_late_han_classics_recommendation = {
+	estate = clergy_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_late_han_classics_recommendation_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
 antq_issue_iranian_host_contribution = {
 	estate = nobles_estate
 	modifier_when_in_debate = {

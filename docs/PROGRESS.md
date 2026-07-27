@@ -1,5 +1,32 @@
 # Progress
 
+## 2026-07-27 - Han receives distinct Western, Eastern, and successor political games
+
+- Expanded the Western Han Court Conference from five to eleven state-office
+  programmes and from three to nine issue/agenda pairs. The new surfaces cover
+  the Three Excellencies, Nine Ministers, inspector circuits, household
+  registration, salt and iron accounts, diplomatic audiences, justice,
+  recommendations, and ritual consultation.
+- Added a separate Eastern Han Imperial Secretariat with five programmes,
+  three debates/agendas, six social-order identities, and six profile
+  privileges. Seven age-routed reforms now span Xin reorganization, Guangwu's
+  restoration, the Eastern Han Secretariat, affinal regency, provincial
+  emergency commands, Three Kingdoms chancellery, and Jin reunification.
+- Added six exact-Han privileges as three exclusive choices: high-office
+  review versus Secretariat appointment, rotating inspectors versus local
+  administrator tenure, and state salt/iron workshops versus delegated
+  market-workshop compacts.
+- Generated and reviewed four 3x2 archaeological atlases. Twelve privilege
+  icons and twelve political icons have direct BC7 chains; the global
+  nine-surface ledger now audits 1,162 direct assets.
+- Installed breadth is now 31 councils, 167 programmes, 105 issues, 105
+  agendas, 106 political contracts, 268 privileges, and 816 ancient-system
+  unlocks. The focused Han and Roman depth regressions pass, and all 292
+  opening profiles remain researchable.
+- `make validate` passes 105/105 commands. Paired vanilla/mod smoke reaches
+  responsive rendered menus with zero new or mod-unique `error.log` lines.
+  Evidence: `docs/playtests/S2_HAN_POLITICAL_DEPTH_20260727.md`.
+
 ## 2026-07-27 - Rome receives distinct early and late imperial political games
 
 - Expanded the Roman Senate from five to eleven state-office programmes and

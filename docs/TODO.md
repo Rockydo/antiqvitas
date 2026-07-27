@@ -44,7 +44,7 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 99 reforms and 256 privileges
+  thin outside the first replacement tranches: 106 reforms and 268 privileges
   serve 292 opening polities. The legal layer now has 227 ancient groups,
   including 182 profile laws with 584 total options, a 26-option dated
   development layer, and 12 country-specific exceptions.
@@ -239,6 +239,20 @@ and focused runtime probe all pass.
         privileges, and 797 ancient-system unlocks. The global direct-art
         ledger now includes councils and state offices and contains 1,138
         chains; paired smoke adds zero mod-unique lines.
+      - [x] Deepen Han beyond the regional political floor. Western Han now
+        has eleven state-office programmes and nine court-conference
+        issue/agenda pairs; restored and later Han reforms activate a separate
+        Imperial Secretariat with five programmes, three issue/agenda pairs,
+        distinct social orders, and six profile privileges. Seven age-correct
+        successors cover Xin reorganization, the Guangwu restoration, the
+        Eastern Han Secretariat, affinal regency, late provincial commands,
+        Three Kingdoms chancellery, and Jin reunification. Six further
+        exact-Han privileges form three exclusive institutional pairs.
+        Installed breadth is now 31 councils, 167 programmes, 105 issues, 105
+        agendas, 106 political contracts, 268 privileges, and 816
+        ancient-system unlocks. The nine-surface global art ledger now
+        contains 1,162 direct chains; all 292 opening profiles remain
+        researchable.
       - [x] Add the first dated legal-development layer: two options for every
         one of the 13 legal profiles, 26 total, spanning AD 25-382. All gates
         use `AntqDate`, each option has a distinct three-effect package and an

@@ -1,5 +1,35 @@
 # Historical Assumptions
 
+## 2026-07-27 - Han successor paths are bounded institutional models
+
+The Western Han high offices, Nine Ministers, commandery and kingdom
+administration, memorial practice, inspector circuits, household registration,
+state granaries, salt and iron administration, and diplomatic guest management
+are securely attested at the level represented here. The Eastern Han
+Secretariat's increasing executive importance, repeated minority/affinal
+regencies, late provincial military commands, the post-220 imperial successor
+states, and Western Jin reunification are also secure broad developments.
+
+The reforms do not claim seven discrete written constitutions, unchanged office
+competences, a modern separation of powers, a meritocratic examination system,
+or one uniform provincial administration. Three Kingdoms and Jin are compressed
+successor choices for a surviving Han-tag sandbox; they do not erase the
+distinct institutions of Wei, Shu, Wu, or later regional regimes. Likewise,
+the exclusive privilege pairs convert overlapping historical tensions into
+gameplay choices rather than asserting real universal exclusivity.
+
+Sources and narrower claim boundaries are retained per row in
+`docs/m6/alternative_reform_paths.csv`,
+`docs/m6/ancient_politics_content.csv`, and
+`docs/m6/estate_order_privileges.csv`. Principal routes: plan sections 8.3, 9,
+11, 13, and 15; `BHR`; `CTP-WM`; `CAH-X`; `CAH-XII`; Rafe de Crespigny's
+*An Outline of the Administration of the Later Han Empire*; the
+[Early China study of Western Han scholarly networks and high offices](https://www.cambridge.org/core/journals/early-china/article/ru-scholars-social-networks-and-bureaucracy-donghai-men-and-models-for-success-in-western-han-china-206-bce9-ce/914C2482D9735A0AF09A32F569357957);
+and the [study of the Han Imperial Secretariat's formation](https://cir.nii.ac.jp/crid/1390290699810891776).
+
+[secure broad chronology and institutional families; contested formal choice
+boundaries, uniformity, and numerical effects]
+
 ## 2026-07-27 - Roman successor paths are bounded constitutional models
 
 The Flavian, Antonine, Severan, Tetrarchic, Constantinian, and post-395 paths

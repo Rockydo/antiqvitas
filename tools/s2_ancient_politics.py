@@ -162,22 +162,63 @@ PROFILES = (
     ),
     Profile(
         "han", "antq_han_court_conference", "Han Court Conference",
-        "Imperial conferences reconcile memorials, commandery returns, fiscal registers, and the competing claims of palace, affinal, and scholarly officeholders.",
-        ("antq_han_imperial_bureaucracy", "antq_memorialist_han_court", "antq_commandery_supervision"), ("nobles_estate", "burghers_estate", "peasants_estate"),
+        "Western Han court conferences reconcile memorials, the Three Excellencies and Nine Ministers, commandery returns, fiscal registers, ritual consultation, and the competing claims of palace, affinal, and scholarly officeholders.",
+        (
+            "antq_han_imperial_bureaucracy", "antq_memorialist_han_court",
+            "antq_commandery_supervision", "antq_xin_state_reorganization",
+        ),
+        ("nobles_estate", "burghers_estate", "peasants_estate"),
         "han_court_atlas.png", "7d57f4dcc204afa0670c412fe1a649b257c6dcacd80dcf04d16216b6dede3380",
         "P8.3;P13;BHR;CTP-WM", "secure",
-        "The three participating estates are technical proxies for court lineages, salaried administrators and registered cultivator households.",
+        "The three participating estates are technical proxies for court lineages, salaried administrators, registered cultivator households, and affected workshop or market interests; this is not a later examination ministry system.",
         (
             a("commandery_reports", "Commandery Reports", "Collate population, justice, harvest, and revenue returns from commanderies and kingdoms.", "adm", ADMIN),
             a("imperial_secretariat", "Imperial Secretariat", "Order memorials, draft replies, authenticate tallies, and prevent contradictory palace instructions.", "dip", CONTROL),
             a("granary_registers", "Granary Registers", "Compare receipts, spoilage, release orders, and local price pressures across official stores.", "adm", FOOD),
             a("courier_relays", "Courier Relays", "Maintain tallies, relay horses, sealed document tubes, and the roads between reporting stations.", "dip", LOGISTICS),
             a("frontier_command", "Frontier Command Returns", "Synchronize beacon reports, garrison strength, remount needs, and crossbow stores.", "mil", MIL),
+            a("three_excellencies_reviews", "Three Excellencies Reviews", "Coordinate high-level civil, military, and supervisory recommendations without presenting the offices as a modern separation of powers.", "adm", ADMIN),
+            a("nine_ministers_dockets", "Nine Ministers Dockets", "Order ritual, household, guard, horse, justice, diplomatic, clan, revenue, and palace-service business for conference and decision.", "adm", CONTROL),
+            a("regional_inspector_reports", "Regional Inspector Reports", "Collate rotating inspectors' reports on commandery officials, powerful households, justice, revenue, roads, and public order.", "dip", ASSIZE),
+            a("household_registration_returns", "Household Registration Returns", "Reconcile registered households, land, age and service categories, grain obligations, migration, and local discrepancies.", "adm", FOOD),
+            a("salt_iron_accounts", "Salt and Iron Accounts", "Review salt production, iron tools and castings, workshop deliveries, prices, transport, and contested state participation.", "adm", MINT),
+            a("grand_herald_guest_registers", "Grand Herald Guest Registers", "Maintain audiences, interpreters, gifts, seals, hostages, and ranked obligations for kings, tributaries, and foreign envoys.", "dip", PRESTIGE),
         ),
         (
             m("commandery_audit", "Commandery Audit Cycle", "Dispatch a bounded audit of household registers, judgments, and remittances.", "Court Lineage Appointment Memorial", "Powerful court lineages press for candidates whose obligations and competence the throne can verify.", "nobles_estate", ADMIN, NOBLES),
             m("granary_allocation", "Granary Allocation Conference", "Balance local reserves against transport loss, relief, and frontier demand.", "Clerks' Register Petition", "Administrative households request stable appointments and adequate staff for the expanding register burden.", "burghers_estate", FOOD, ADMIN),
             m("frontier_dispatch", "Frontier Garrison Dispatch", "Set remount, beacon, and stores priorities for the northern commands.", "Cultivator Corvée Relief", "Registered households petition for predictable labor rotations during the agricultural season.", "peasants_estate", MIL, PEASANTS),
+            m("official_recommendations", "Official Recommendation Review", "Compare service records, local recommendations, court memorials, and conflicts of interest before senior appointments.", "Great-Family Nomination Memorial", "Court and provincial families seek recognized recommendation channels while accepting review of kinship and prior service.", "nobles_estate", ADMIN, NOBLES),
+            m("justice_docket", "Commandant of Justice Docket", "Review selected capital cases, conflicting judgments, amnesties, and remands without replacing local adjudication.", "Clerks' Procedural Petition", "Administrative households request authenticated forms and protection from contradictory retrospective orders.", "burghers_estate", ASSIZE, ADMIN),
+            m("household_register_revision", "Household Register Revision", "Set a bounded cycle for correcting household, land, labor, and service records after migration, death, or crop failure.", "Registered Household Hearing", "Cultivating households petition for witnessed corrections before extraordinary labor or grain demands.", "peasants_estate", CONTROL, PEASANTS),
+            m("salt_iron_supply", "Salt and Iron Supply Conference", "Balance state revenue, tool supply, workshop capacity, transport loss, and local prices without assuming one unchanging monopoly.", "Workshop Quota Petition", "Workshop and market households request stable inputs, inspected measures, and bounded delivery liability.", "burghers_estate", MINT, TRADE),
+            m("western_regions_audience", "Western Regions Audience", "Set gifts, hostages, ranks, escort, relay, and frontier-market terms for a bounded diplomatic audience.", "Court Precedence Memorial", "Great families request witnessed order and accountability in the distribution of honors and diplomatic gifts.", "nobles_estate", PRESTIGE, NOBLES),
+            m("ritual_calendar", "Ritual and Calendar Consultation", "Review court rites, ancestral observance, calendrical coordination, and the language of public measures.", "Scholarly Remonstrance", "Ritual and scholarly officials seek a protected memorial channel without claiming a later examination establishment.", "nobles_estate", RITUAL, ADMIN),
+        ),
+    ),
+    Profile(
+        "late_han", "antq_eastern_han_imperial_secretariat", "Eastern Han Imperial Secretariat",
+        "The restored and later Han court increasingly coordinates memorials, appointments, imperial decisions, provincial reports, military commands, and ritual scholarship through the palace Secretariat while the Three Excellencies retain formal standing.",
+        (
+            "antq_guangwu_restoration_court", "antq_eastern_han_secretariat",
+            "antq_affinal_regency_court", "antq_provincial_inspectorate_commands",
+            "antq_three_kingdoms_chancellery", "antq_jin_reunification_court",
+        ),
+        ("nobles_estate", "burghers_estate", "clergy_estate"),
+        "late_han_secretariat_atlas.png", "9bff557047681d86fe076b3272b199a26677568f00f6b2d557c0bc3d6b6ea7f0",
+        "P8.3;P9;P13;BHR;CAH-X;CAH-XII", "secure",
+        "The profile models the documented rise of the Imperial Secretariat and late-Han court/provincial tensions while keeping Eastern Han, Three Kingdoms, and Jin successor paths separate reforms rather than one static bureaucracy.",
+        (
+            a("secretariat_memorials", "Secretariat Memorials", "Register, classify, draft, authenticate, and circulate imperial decisions and memorial replies through the palace Secretariat.", "adm", ADMIN),
+            a("three_excellencies_evaluations", "Three Excellencies Evaluations", "Review senior officials, provincial reports, ceremonial standing, and administrative failures through the formal high offices.", "adm", ASSIZE),
+            a("provincial_inspector_returns", "Provincial Inspector Returns", "Compare circuit reports on administrators, powerful households, justice, revenue, roads, and armed disorder.", "dip", CONTROL),
+            a("palace_affinal_dockets", "Palace and Affinal Dockets", "Track regency authority, imperial kin, empress families, household appointments, seals, and conflicts of interest.", "dip", PRESTIGE),
+            a("military_command_registers", "Military Command Registers", "Coordinate generalships, garrisons, volunteers, crossbow stores, remounts, grain, and emergency regional commands.", "mil", MIL),
+        ),
+        (
+            m("secretariat_authority", "Secretariat Authority Review", "Define which memorials, appointments, edicts, and reports pass through the palace Secretariat and how they are authenticated.", "Formal Office Remonstrance", "Senior officials demand recorded review before palace instructions displace the outer court.", "nobles_estate", ADMIN, NOBLES),
+            m("provincial_emergency_command", "Provincial Emergency Command", "Assign bounded military, supply, and reporting authority against rebellion or frontier crisis without normalizing permanent warlord government.", "Commandery Supply Petition", "Administrative and market households seek measured requisitions and delivery credits under emergency command.", "burghers_estate", MIL, TRADE),
+            m("classics_recommendation", "Classics and Recommendation Conference", "Coordinate Taixue learning, local recommendation, court scholarship, and official evaluation without projecting the later examination system backward.", "Scholarly Office Petition", "Classical and ritual officials request protected teaching resources and a hearing on appointments and court rites.", "clergy_estate", RITUAL, CLERGY),
         ),
     ),
     Profile(
@@ -753,6 +794,10 @@ COUNCIL_DYNAMICS: dict[str, tuple[str, tuple[tuple[str, str], ...]]] = {
         "0.15",
         (("nobles_estate", "0.10"), ("burghers_estate", "0.20"), ("peasants_estate", "-0.10")),
     ),
+    "late_han": (
+        "0.08",
+        (("nobles_estate", "0.18"), ("burghers_estate", "0.12"), ("clergy_estate", "0.16")),
+    ),
     "iranian": (
         "0.05",
         (("nobles_estate", "0.30"), ("clergy_estate", "0.10"), ("burghers_estate", "-0.05")),
@@ -1099,6 +1144,21 @@ ART_SOURCE_OVERRIDES: dict[str, tuple[str, str, int]] = {
         "fleet_supply_returns",
     ))
 }
+ART_SOURCE_OVERRIDES.update({
+    f"antq_han_{slug}": (
+        "han_state_offices_ii_atlas.png",
+        "b74874ce120568b763746a7c0ae809318885e4ee9ff918e5c524237e9d376e95",
+        cell,
+    )
+    for cell, slug in enumerate((
+        "three_excellencies_reviews",
+        "nine_ministers_dockets",
+        "regional_inspector_reports",
+        "household_registration_returns",
+        "salt_iron_accounts",
+        "grand_herald_guest_registers",
+    ))
+})
 
 
 def art_source_contract(

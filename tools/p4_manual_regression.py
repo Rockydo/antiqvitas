@@ -174,17 +174,17 @@ def build_report() -> dict[str, object]:
     politics_counts = Counter(row["category"] for row in politics)
     require(
         politics_counts == {
-            "parliament_type": 30,
-            "cabinet_action": 156,
-            "parliament_issue": 96,
-            "parliament_agenda": 96,
+            "parliament_type": 31,
+            "cabinet_action": 167,
+            "parliament_issue": 105,
+            "parliament_agenda": 105,
         },
         f"ancient political-system breadth regressed: {dict(politics_counts)}",
         failures,
     )
     estate_orders = rows(ROOT / "docs/m6/estate_order_privileges.csv")
     require(
-        len(estate_orders) == 210 and len({row["key"] for row in estate_orders}) == 210,
+        len(estate_orders) == 222 and len({row["key"] for row in estate_orders}) == 222,
         "ancient estate-order privilege breadth regressed",
         failures,
     )
@@ -195,20 +195,22 @@ def build_report() -> dict[str, object]:
     )
     political_contracts = rows(ROOT / "docs/m6/political_profile_contracts.csv")
     require(
-        len(political_contracts) == 99
-        and len({row["reform"] for row in political_contracts}) == 99
-        and len({row["modifiers"] for row in political_contracts}) >= 86,
+        len(political_contracts) == 106
+        and len({row["reform"] for row in political_contracts}) == 106
+        and len({row["modifiers"] for row in political_contracts}) >= 102,
         "ancient appointment and political-weight contracts regressed",
         failures,
     )
     alternative_reforms = rows(ROOT / "docs/m6/alternative_reform_paths.csv")
     alternative_profiles = Counter(row["profile"] for row in alternative_reforms)
     require(
-        len(alternative_reforms) == 64
+        len(alternative_reforms) == 71
         and alternative_profiles["roman"] == 5
         and alternative_profiles["late_roman"] == 3
-        and sum(count == 2 for count in alternative_profiles.values()) == 28
-        and len(alternative_profiles) == 30,
+        and alternative_profiles["han"] == 3
+        and alternative_profiles["late_han"] == 6
+        and sum(count == 2 for count in alternative_profiles.values()) == 27
+        and len(alternative_profiles) == 31,
         "ancient alternative reform paths regressed",
         failures,
     )
@@ -246,8 +248,8 @@ def build_report() -> dict[str, object]:
         ROOT / "in_game/common/parliament_types/00_antiquitas_s2.txt"
     ).read_text(encoding="utf-8-sig")
     require(
-        councils.count("parliament_base_support =") == 30
-        and councils.count("_agenda_impact =") == 90,
+        councils.count("parliament_base_support =") == 31
+        and councils.count("_agenda_impact =") == 93,
         "ancient council participation weights regressed",
         failures,
     )

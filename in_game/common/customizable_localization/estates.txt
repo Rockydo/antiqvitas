@@ -23,6 +23,7 @@
 				has_reform = government_reform:antq_han_imperial_bureaucracy
 				has_reform = government_reform:antq_memorialist_han_court
 				has_reform = government_reform:antq_commandery_supervision
+				has_reform = government_reform:antq_xin_state_reorganization
 			}
 		}
 	}
@@ -334,6 +335,20 @@
 	}
 
 	text = {
+		localization_key = antq_estate_late_han_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_guangwu_restoration_court
+				has_reform = government_reform:antq_eastern_han_secretariat
+				has_reform = government_reform:antq_affinal_regency_court
+				has_reform = government_reform:antq_provincial_inspectorate_commands
+				has_reform = government_reform:antq_three_kingdoms_chancellery
+				has_reform = government_reform:antq_jin_reunification_court
+			}
+		}
+	}
+
+	text = {
 		localization_key = crown_estate_holy_order
 		trigger = {
 			has_reform = government_reform:military_order_reform
@@ -436,6 +451,7 @@ nobles_estate = {
 				has_reform = government_reform:antq_han_imperial_bureaucracy
 				has_reform = government_reform:antq_memorialist_han_court
 				has_reform = government_reform:antq_commandery_supervision
+				has_reform = government_reform:antq_xin_state_reorganization
 			}
 		}
 	}
@@ -742,6 +758,20 @@ nobles_estate = {
 				has_reform = government_reform:antq_tetrarchic_collegium
 				has_reform = government_reform:antq_constantinian_consistory
 				has_reform = government_reform:antq_late_imperial_twin_courts
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_late_han_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_guangwu_restoration_court
+				has_reform = government_reform:antq_eastern_han_secretariat
+				has_reform = government_reform:antq_affinal_regency_court
+				has_reform = government_reform:antq_provincial_inspectorate_commands
+				has_reform = government_reform:antq_three_kingdoms_chancellery
+				has_reform = government_reform:antq_jin_reunification_court
 			}
 		}
 	}
@@ -1094,6 +1124,7 @@ burghers_estate = {
 				has_reform = government_reform:antq_han_imperial_bureaucracy
 				has_reform = government_reform:antq_memorialist_han_court
 				has_reform = government_reform:antq_commandery_supervision
+				has_reform = government_reform:antq_xin_state_reorganization
 			}
 		}
 	}
@@ -1405,6 +1436,20 @@ burghers_estate = {
 	}
 
 	text = {
+		localization_key = antq_estate_late_han_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_guangwu_restoration_court
+				has_reform = government_reform:antq_eastern_han_secretariat
+				has_reform = government_reform:antq_affinal_regency_court
+				has_reform = government_reform:antq_provincial_inspectorate_commands
+				has_reform = government_reform:antq_three_kingdoms_chancellery
+				has_reform = government_reform:antq_jin_reunification_court
+			}
+		}
+	}
+
+	text = {
 		localization_key = burghers_estate_greek
 		trigger = {
 			OR = {
@@ -1642,6 +1687,7 @@ clergy_estate = {
 				has_reform = government_reform:antq_han_imperial_bureaucracy
 				has_reform = government_reform:antq_memorialist_han_court
 				has_reform = government_reform:antq_commandery_supervision
+				has_reform = government_reform:antq_xin_state_reorganization
 			}
 		}
 	}
@@ -1953,6 +1999,20 @@ clergy_estate = {
 	}
 
 	text = {
+		localization_key = antq_estate_late_han_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_guangwu_restoration_court
+				has_reform = government_reform:antq_eastern_han_secretariat
+				has_reform = government_reform:antq_affinal_regency_court
+				has_reform = government_reform:antq_provincial_inspectorate_commands
+				has_reform = government_reform:antq_three_kingdoms_chancellery
+				has_reform = government_reform:antq_jin_reunification_court
+			}
+		}
+	}
+
+	text = {
 		localization_key = clergy_estate_greek
 		trigger = {
 			OR = {
@@ -2199,6 +2259,7 @@ peasants_estate = {
 				has_reform = government_reform:antq_han_imperial_bureaucracy
 				has_reform = government_reform:antq_memorialist_han_court
 				has_reform = government_reform:antq_commandery_supervision
+				has_reform = government_reform:antq_xin_state_reorganization
 			}
 		}
 	}
@@ -2510,6 +2571,20 @@ peasants_estate = {
 	}
 
 	text = {
+		localization_key = antq_estate_late_han_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_guangwu_restoration_court
+				has_reform = government_reform:antq_eastern_han_secretariat
+				has_reform = government_reform:antq_affinal_regency_court
+				has_reform = government_reform:antq_provincial_inspectorate_commands
+				has_reform = government_reform:antq_three_kingdoms_chancellery
+				has_reform = government_reform:antq_jin_reunification_court
+			}
+		}
+	}
+
+	text = {
 		localization_key = peasants_estate_greek
 		trigger = {
 			OR = {
@@ -2768,6 +2843,7 @@ tribes_estate = {
 				has_reform = government_reform:antq_han_imperial_bureaucracy
 				has_reform = government_reform:antq_memorialist_han_court
 				has_reform = government_reform:antq_commandery_supervision
+				has_reform = government_reform:antq_xin_state_reorganization
 			}
 		}
 	}
@@ -3074,6 +3150,20 @@ tribes_estate = {
 				has_reform = government_reform:antq_tetrarchic_collegium
 				has_reform = government_reform:antq_constantinian_consistory
 				has_reform = government_reform:antq_late_imperial_twin_courts
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_late_han_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_guangwu_restoration_court
+				has_reform = government_reform:antq_eastern_han_secretariat
+				has_reform = government_reform:antq_affinal_regency_court
+				has_reform = government_reform:antq_provincial_inspectorate_commands
+				has_reform = government_reform:antq_three_kingdoms_chancellery
+				has_reform = government_reform:antq_jin_reunification_court
 			}
 		}
 	}

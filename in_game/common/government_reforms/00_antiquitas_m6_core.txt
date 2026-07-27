@@ -684,6 +684,7 @@ antq_memorialist_han_court = {
 			has_reform = government_reform:antq_han_imperial_bureaucracy
 			has_reform = government_reform:antq_memorialist_han_court
 			has_reform = government_reform:antq_commandery_supervision
+			has_reform = government_reform:antq_xin_state_reorganization
 		}
 	}
 	country_modifier = {
@@ -706,6 +707,7 @@ antq_commandery_supervision = {
 			has_reform = government_reform:antq_han_imperial_bureaucracy
 			has_reform = government_reform:antq_memorialist_han_court
 			has_reform = government_reform:antq_commandery_supervision
+			has_reform = government_reform:antq_xin_state_reorganization
 		}
 	}
 	country_modifier = {
@@ -2060,6 +2062,180 @@ antq_late_imperial_twin_courts = {
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_imperial_consistory
+	}
+	years = 2
+}
+
+antq_xin_state_reorganization = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_han_imperial_bureaucracy
+			has_reform = government_reform:antq_memorialist_han_court
+			has_reform = government_reform:antq_commandery_supervision
+			has_reform = government_reform:antq_xin_state_reorganization
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.18
+		global_nobles_estate_power = -0.04
+		crown_estate_power_from_cabinet = 0.28
+		replace_cabinet_member_cost_modifier = 0.12
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_han_court_conference
+	}
+	years = 2
+}
+
+antq_guangwu_restoration_court = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_guangwu_restoration_court
+			has_reform = government_reform:antq_eastern_han_secretariat
+			has_reform = government_reform:antq_affinal_regency_court
+			has_reform = government_reform:antq_provincial_inspectorate_commands
+			has_reform = government_reform:antq_three_kingdoms_chancellery
+			has_reform = government_reform:antq_jin_reunification_court
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.14
+		global_nobles_estate_power = 0.08
+		estate_power_from_cabinet = 0.20
+		set_cabinet_member_cost_modifier = -0.06
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
+	}
+	years = 2
+}
+
+antq_eastern_han_secretariat = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_guangwu_restoration_court
+			has_reform = government_reform:antq_eastern_han_secretariat
+			has_reform = government_reform:antq_affinal_regency_court
+			has_reform = government_reform:antq_provincial_inspectorate_commands
+			has_reform = government_reform:antq_three_kingdoms_chancellery
+			has_reform = government_reform:antq_jin_reunification_court
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.16
+		global_nobles_estate_power = 0.06
+		crown_estate_power_from_cabinet = 0.30
+		set_cabinet_member_cost_modifier = -0.08
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
+	}
+	years = 2
+}
+
+antq_affinal_regency_court = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_guangwu_restoration_court
+			has_reform = government_reform:antq_eastern_han_secretariat
+			has_reform = government_reform:antq_affinal_regency_court
+			has_reform = government_reform:antq_provincial_inspectorate_commands
+			has_reform = government_reform:antq_three_kingdoms_chancellery
+			has_reform = government_reform:antq_jin_reunification_court
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.15
+		global_crown_estate_power = 0.08
+		nobles_estate_power_from_cabinet = 0.28
+		replace_cabinet_member_cost_modifier = 0.14
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
+	}
+	years = 2
+}
+
+antq_provincial_inspectorate_commands = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_guangwu_restoration_court
+			has_reform = government_reform:antq_eastern_han_secretariat
+			has_reform = government_reform:antq_affinal_regency_court
+			has_reform = government_reform:antq_provincial_inspectorate_commands
+			has_reform = government_reform:antq_three_kingdoms_chancellery
+			has_reform = government_reform:antq_jin_reunification_court
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.14
+		global_tribes_estate_power = 0.05
+		nobles_estate_power_from_cabinet = 0.24
+		global_monthly_control = -0.0005
+		replace_cabinet_member_cost_modifier = 0.12
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
+	}
+	years = 2
+}
+
+antq_three_kingdoms_chancellery = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_guangwu_restoration_court
+			has_reform = government_reform:antq_eastern_han_secretariat
+			has_reform = government_reform:antq_affinal_regency_court
+			has_reform = government_reform:antq_provincial_inspectorate_commands
+			has_reform = government_reform:antq_three_kingdoms_chancellery
+			has_reform = government_reform:antq_jin_reunification_court
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.12
+		global_nobles_estate_power = 0.12
+		estate_power_from_cabinet = 0.26
+		replace_cabinet_member_cost_modifier = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
+	}
+	years = 2
+}
+
+antq_jin_reunification_court = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_guangwu_restoration_court
+			has_reform = government_reform:antq_eastern_han_secretariat
+			has_reform = government_reform:antq_affinal_regency_court
+			has_reform = government_reform:antq_provincial_inspectorate_commands
+			has_reform = government_reform:antq_three_kingdoms_chancellery
+			has_reform = government_reform:antq_jin_reunification_court
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.13
+		global_nobles_estate_power = 0.13
+		nobles_estate_power_from_cabinet = 0.22
+		set_cabinet_member_cost_modifier = -0.04
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
 	}
 	years = 2
 }

@@ -601,6 +601,69 @@ SUCCESSOR_REFORMS: tuple[
         "Separate eastern and western courts are secure after AD 395; the shared path abstracts coordination and rivalry without claiming legal partition.",
         "4",
     ),
+    (
+        "antq_xin_state_reorganization", "han", "monarchy",
+        "Xin State Reorganization",
+        "Attempt a dynastic and fiscal refoundation through renamed offices, revised ranks, currency experiments, land claims, and more directive central policy.",
+        "global_crown_estate_power=0.18|global_nobles_estate_power=-0.04|crown_estate_power_from_cabinet=0.28|replace_cabinet_member_cost_modifier=0.12",
+        "P8.3;P9;P13;BHR;CTP-WM;CAH-X", "secure",
+        "Wang Mang's AD 9 usurpation and extensive reform programme are secure; the path abstracts contested implementation and does not present Xin policy as successful or internally uniform.",
+        "0",
+    ),
+    (
+        "antq_guangwu_restoration_court", "late_han", "monarchy",
+        "Guangwu Restoration Court",
+        "Rebuild imperial authority from Luoyang through selective restoration, military demobilization, commandery appointments, tax restraint, and negotiated elite support.",
+        "global_crown_estate_power=0.14|global_nobles_estate_power=0.08|estate_power_from_cabinet=0.20|set_cabinet_member_cost_modifier=-0.06",
+        "P8.3;P9;P13;BHR;CAH-X", "secure",
+        "The Eastern Han restoration from AD 25 is secure; this reform models its political settlement rather than treating every Guangwu measure as permanent.",
+        "0",
+    ),
+    (
+        "antq_eastern_han_secretariat", "late_han", "monarchy",
+        "Eastern Han Imperial Secretariat",
+        "Coordinate memorials, edicts, appointments, and provincial reports through the palace Secretariat while retaining the formal Three Excellencies and Nine Ministers.",
+        "global_crown_estate_power=0.16|global_nobles_estate_power=0.06|crown_estate_power_from_cabinet=0.30|set_cabinet_member_cost_modifier=-0.08",
+        "P8.3;P9;P13;BHR;CAH-X", "secure",
+        "The Secretariat's growing executive importance is secure, but exact competence and its balance with formal high offices changed across Eastern Han.",
+        "1",
+    ),
+    (
+        "antq_affinal_regency_court", "late_han", "monarchy",
+        "Affinal Regency Court",
+        "Govern for a minor emperor through a dowager court, empress kin, senior generals, formal ministers, memorial channels, and contested palace access.",
+        "global_nobles_estate_power=0.15|global_crown_estate_power=0.08|nobles_estate_power_from_cabinet=0.28|replace_cabinet_member_cost_modifier=0.14",
+        "P8.3;P9;P13;BHR;CAH-X", "secure",
+        "Repeated Eastern Han minority regencies and affinal-general dominance are secure; no single factional cycle is treated as constitutionally inevitable.",
+        "1",
+    ),
+    (
+        "antq_provincial_inspectorate_commands", "late_han", "monarchy",
+        "Provincial Inspectorate Commands",
+        "Entrust broader fiscal, judicial, supply, and military coordination to regional inspectors and governors during sustained internal or frontier emergency.",
+        "global_nobles_estate_power=0.14|global_tribes_estate_power=0.05|nobles_estate_power_from_cabinet=0.24|global_monthly_control=-0.0005|replace_cabinet_member_cost_modifier=0.12",
+        "P8.3;P9;P13;BHR;CAH-XII", "secure",
+        "Late Han provincial commands and their role in fragmentation are secure; this path does not project permanent independent warlord states onto earlier inspector circuits.",
+        "2",
+    ),
+    (
+        "antq_three_kingdoms_chancellery", "late_han", "monarchy",
+        "Three Kingdoms Chancellery",
+        "Concentrate mobilization, appointments, registers, granaries, diplomatic claims, and restoration ideology in a wartime imperial chancellery.",
+        "global_crown_estate_power=0.12|global_nobles_estate_power=0.12|estate_power_from_cabinet=0.26|replace_cabinet_member_cost_modifier=0.10",
+        "P8.3;P9;P13;CAH-XII", "secure",
+        "Competing imperial chancellery states after 220 are secure; the singular gameplay path does not erase the distinct institutions of Wei, Shu, and Wu.",
+        "2",
+    ),
+    (
+        "antq_jin_reunification_court", "late_han", "monarchy",
+        "Jin Reunification Court",
+        "Reconcile a reunified imperial court, titled houses, command appointments, land and household registers, legal compilation, and provincial defense.",
+        "global_crown_estate_power=0.13|global_nobles_estate_power=0.13|nobles_estate_power_from_cabinet=0.22|set_cabinet_member_cost_modifier=-0.04",
+        "P8.3;P9;P13;CAH-XII", "secure",
+        "Western Jin reunification in 280 is secure; the reform is a bounded successor path and does not imply lasting stability or project later northern and southern institutions backward.",
+        "3",
+    ),
 )
 
 
@@ -620,6 +683,7 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
     "roman": ("antq_principate",),
     "late_roman": ("antq_dominate",),
     "han": ("antq_han_imperial_bureaucracy",),
+    "late_han": (),
     "iranian": (
         "antq_parthian_king_of_kings", "antq_parthian_subkingdom",
         "antq_indo_scythian_kingship", "antq_sassanid_centralized_monarchy",
@@ -657,6 +721,7 @@ PROFILE_PARLIAMENTS = {
     "roman": "antq_roman_senate",
     "late_roman": "antq_imperial_consistory",
     "han": "antq_han_court_conference",
+    "late_han": "antq_eastern_han_imperial_secretariat",
     "iranian": "antq_iranian_great_council",
     "civic": "antq_civic_assembly",
     "gana": "antq_gana_assembly",
@@ -1180,9 +1245,13 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    if len(POLITICAL_CONTRACTS) != 99 or not used_reforms.issubset(POLITICAL_CONTRACTS):
+    expected_contract_count = 35 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    if (
+        len(POLITICAL_CONTRACTS) != expected_contract_count
+        or not used_reforms.issubset(POLITICAL_CONTRACTS)
+    ):
         failures.append(
-            "political appointment contracts must cover 35 core, 58 regional alternatives, and 6 Roman successor reforms"
+            "political appointment contracts must cover every core, regional, and successor reform"
         )
     if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 86:
         failures.append("political appointment contracts are insufficiently differentiated")
@@ -1195,15 +1264,17 @@ def load_power_data() -> PowerData:
             "catuvellaunian", "marcomannic", "sabaean", "mauretanian",
             "judean", "cappadocian", "thracian", "bosporan",
             "galilean", "batanean", "commagenean", "emesan",
-    } - {"roman"}
+    } - {"roman", "han"}
     if (
-        len(path_rows) != 64
+        len(path_rows) != len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
         or alternative_profiles.count("roman") != 5
         or alternative_profiles.count("late_roman") != 3
+        or alternative_profiles.count("han") != 3
+        or alternative_profiles.count("late_han") != 6
         or any(alternative_profiles.count(profile) != 2 for profile in two_path_profiles)
     ):
         failures.append(
-            "reform paths must provide two regional alternatives plus deeper Roman successor arcs"
+            "reform paths must provide two regional alternatives plus deeper Roman and Han successor arcs"
         )
     for reform, (modifier_text, _source, confidence, note) in POLITICAL_CONTRACTS.items():
         try:
