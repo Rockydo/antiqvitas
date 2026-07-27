@@ -22,7 +22,7 @@ tribal_legal_basis_law = {
 		years = 2
     }
     yassa_decree_policy = {
-        potential = { government_type = government_type:steppe_horde }
+        potential = { government_type ?= government_type:steppe_horde }
         country_modifier = {
             monthly_towards_decentralization = societal_value_monthly_move
             global_distance_from_capital_speed_propagation = 0.05
@@ -91,7 +91,7 @@ tribal_organization_law = {
 		years = 2
     }
     steppe_warbands_policy = {
-        potential = { government_type = government_type:steppe_horde }
+        potential = { government_type ?= government_type:steppe_horde }
         country_modifier = {
             monthly_towards_serfdom = societal_value_monthly_move
             global_manpower_modifier = 0.1

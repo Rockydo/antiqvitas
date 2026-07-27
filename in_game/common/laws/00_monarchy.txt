@@ -8,7 +8,7 @@ feudal_de_jure_law = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 	}
 
 	by_tradition = {
@@ -44,7 +44,7 @@ medieval_levy_law = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 	}
 
 
@@ -193,7 +193,7 @@ royal_court_customs_law = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 	}
 	aristocratic_court_policy = {
 		country_modifier = {

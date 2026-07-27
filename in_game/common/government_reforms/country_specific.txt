@@ -260,7 +260,7 @@ irish_earldom_reform = {
 	}
 	allow = {
 		culture.language = language:english_language
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 	}
 	country_modifier = {
 		fort_maintenance_efficiency = 0.50
@@ -852,7 +852,7 @@ ambrosian_republic_reform = {
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		has_variable = mlo_ambrosian_path
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 	}
 	locked = {
 		is_locked_mechanic = {
@@ -921,7 +921,7 @@ scottish_shires_reform = { # Shires of Scotland
 				has_or_had_tag = GBR
 			}
 		}
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 	}
 	allow = {
 		NOT = { num_locations >= 125 }
@@ -969,7 +969,7 @@ french_feudal_nobility = { # French Feudalism
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		has_or_had_tag = FRA
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 		NOT = { has_reform = government_reform:feudal_nobility }
 		NOT = { has_reform = government_reform:french_centralized_monarchy }
 		NOT = { has_variable = enable_centralized_fra_reform }
@@ -1006,7 +1006,7 @@ french_centralized_monarchy = { # Centralized French Monarchy
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		has_or_had_tag = FRA
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 		NOT = { has_reform = government_reform:french_feudal_nobility }
 		has_variable = enable_centralized_fra_reform
 	}
@@ -1073,7 +1073,7 @@ french_ducal_vassal_reform = { # Unique Gov Reform for French vassals subjects
 				has_reform = government_reform:french_ducal_vassal_reform
 			}
 		}
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 		NOT = { has_reform = government_reform:french_feudal_nobility }
 		NOT = { has_reform = government_reform:french_appanage_reform }
 		NOT = { has_or_had_tag = FRA }
@@ -1114,7 +1114,7 @@ member_of_league_of_public_weal = {
 				capital = { region = region:france_region }
 				NOT = { is_subject_type = vassal }
 				overlord ?= { has_reform = government_reform:french_feudal_nobility }
-				government_type = government_type:monarchy
+				government_type ?= government_type:monarchy
 				NOT = { has_reform = government_reform:french_ducal_vassal_reform }
 			}
 			has_reform = government_reform:member_of_league_of_public_weal
@@ -1202,7 +1202,7 @@ ottoman_imperial_harem = {
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		has_or_had_tag = TUR
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 		has_variable = ottoman_imperial_harem
 	}
 	country_modifier = {
@@ -3143,7 +3143,7 @@ dutch_republic_reform = {
 	}
 	allow = {
 		always = no
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 	}
 	country_modifier = {
 		export_efficiency = small_trade_efficiency_bonus
@@ -4397,7 +4397,7 @@ lit_grand_duchy_of_lithuania_reform = {
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		country_rank_level = 2
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 		has_unlocked_government_reform_trigger = {
 			type = lit_grand_duchy_of_lithuania_reform
 		}

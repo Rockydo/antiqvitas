@@ -35,7 +35,7 @@ english_civil_war = {
 			tag = GBR
 		}
 		current_age_or_later = { age = age_5_absolutism }
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 		has_any_active_disaster = no
 		OR = {
 			"estate_power(estate_type:crown_estate)" > 0.4

@@ -21,7 +21,7 @@ struggle_for_royal_power = {
 		in_civil_war = no
 		at_war = no
 		has_ruler = yes
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 		NOT = { has_estate_privilege = estate_privilege:liberum_veto }
 		"estate_power(estate_type:crown_estate)" < 0.5
 	}

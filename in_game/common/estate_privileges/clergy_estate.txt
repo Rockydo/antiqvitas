@@ -305,7 +305,7 @@ maintain_clerical_proceedings = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 	}
 
 
@@ -322,7 +322,7 @@ state_official_oaths = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 	}
 
 
@@ -342,7 +342,7 @@ mandatory_clerical_donations = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 	}
 
 
@@ -365,7 +365,7 @@ sponsor_printing_of_religious_texts = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:theocracy
+		government_type ?= government_type:theocracy
 		has_advance = printing_of_religious_texts
 	}
 
@@ -383,7 +383,7 @@ liturgical_mural_art = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:theocracy
+		government_type ?= government_type:theocracy
 	}
 
 	allow = { num_artists > 0 }

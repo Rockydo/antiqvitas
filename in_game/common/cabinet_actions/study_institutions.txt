@@ -10,7 +10,7 @@ study_institutions = {
 	}
 
 	allow = {
-		NOT = { government_type = government_type:tribe }
+		NOT = { government_type ?= government_type:tribe }
 	}
 
 	select_trigger = {

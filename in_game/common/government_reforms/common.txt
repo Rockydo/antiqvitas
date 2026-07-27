@@ -102,8 +102,8 @@ admiralty_regime_reform = {
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		num_of_ports > 0
-		NOT = { government_type = government_type:steppe_horde }
-		NOT = { government_type = government_type:tribe }
+		NOT = { government_type ?= government_type:steppe_horde }
+		NOT = { government_type ?= government_type:tribe }
 		NOT = { tag = PAP }
 	}
 
@@ -144,8 +144,8 @@ military_regime_reform = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		NOT = { government_type = government_type:steppe_horde }
-		NOT = { government_type = government_type:tribe }
+		NOT = { government_type ?= government_type:steppe_horde }
+		NOT = { government_type ?= government_type:tribe }
 		NOT = { tag = PAP }
 	}
 

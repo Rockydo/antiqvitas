@@ -3361,3 +3361,20 @@ The forced `bankrupt XAA` control is mandatory for this adapter: it proves that
 real bankruptcies still show the banner and suppress research. Source basis is
 the locally installed 1.3.11 static modifier, on-action, GUI, console behavior,
 and save format; no engine behavior was inferred from memory.
+
+## 2026-07-27 - Nullable-link safety applies throughout quarantined definitions
+
+EU5 type-checks disabled definition bodies and can evaluate nested policy or
+`allow` predicates even when an outer `potential` or `can_start` contains
+`always = no`. Therefore a single false gate is not a sufficient total-conversion
+quarantine. The exact-name generator now makes government-type comparisons and
+ruler/heir/regent scopes optional throughout every disabled definition, and
+neutralizes unsafe character/dynasty right-hand comparisons inside nested
+availability predicates.
+
+This rule is applied to the complete mounted privilege, cabinet, parliament,
+law, reform, interaction, disaster, religious-aspect, and formable-country
+unions. It preserves keys for reference resolution while preventing absent
+medieval objects from being dereferenced. A fresh selector and actual-player
+start, rather than menu smoke alone, is the acceptance test because those are
+the first surfaces that evaluate the nested bodies.

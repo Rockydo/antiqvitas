@@ -498,7 +498,7 @@ battle_leadership_law = {
 		country_modifier = {
 			potential_trigger = {
 				has_ruler = yes
-				ruler = {
+				ruler ?= {
 					is_female = yes
 				}
 			}

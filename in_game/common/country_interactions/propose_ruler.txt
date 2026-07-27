@@ -10,7 +10,7 @@ propose_ruler = {
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		scope:actor = {
-			government_type = government_type:monarchy
+			government_type ?= government_type:monarchy
 		}
 	}
 
@@ -30,7 +30,7 @@ propose_ruler = {
 			scope:actor = {
 				every_country_in_diplomatic_range = {
 					limit = {
-						government_type = government_type:monarchy
+						government_type ?= government_type:monarchy
 						not = { is_subject_of = scope:actor }
 						not = { in_union_with = scope:actor }
 						has_regent = yes
@@ -51,7 +51,7 @@ propose_ruler = {
 			data = name
 		}
 		visible = {
-			government_type = government_type:monarchy
+			government_type ?= government_type:monarchy
 			not = { is_subject_of = scope:actor }
 			not = { in_union_with = scope:actor }
 		}

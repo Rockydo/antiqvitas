@@ -14,7 +14,7 @@ negotiate_succession_law = {
 		scope:actor = {
 			exists = succession_law
 			exists = union
-			government_type = government_type:monarchy
+			government_type ?= government_type:monarchy
             union ?= {
 				has_variable = union_senior_partner
 				international_organization_has_policy = policy:union_establish_seniority_policy
@@ -168,14 +168,14 @@ negotiate_succession_law = {
 			}
 		}
 		if = {
-			limit = { scope:recipient = { government_type = government_type:theocracy } }
+			limit = { scope:recipient = { government_type ?= government_type:theocracy } }
 			subtract = {
 				desc = "is_theocracy"
 				value = 100
 			}
 		}
 		if = {
-			limit = { scope:recipient = { government_type = government_type:republic } }
+			limit = { scope:recipient = { government_type ?= government_type:republic } }
 			subtract = {
 				desc = "is_republic"
 				value = 50

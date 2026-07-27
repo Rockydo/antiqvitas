@@ -12,7 +12,7 @@ ambrosian_republic_disaster = {
 	can_start = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		tag = MLO
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 
 		OR = {
 			has_regent = yes

@@ -20,7 +20,7 @@ bolster_the_monarchy = {
 			parliament_type = parliament_type:constitutional_parliament
 		}
 		"estate_power(estate_type:crown_estate)" < 0.5
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 		NOT = {
 			has_country_modifier = bolstered_crown_authority_modifier
 		}
@@ -81,7 +81,7 @@ bolster_the_republic = {
 			parliament_type = parliament_type:autocratic_parliament
 			parliament_type = parliament_type:constitutional_parliament
 		}
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 		NOT = {
 			has_country_modifier = bolstered_state_authority
 		}
@@ -141,7 +141,7 @@ bolster_the_divine_mandate = {
 			parliament_type = parliament_type:autocratic_parliament
 			parliament_type = parliament_type:constitutional_parliament
 		}
-		government_type = government_type:theocracy
+		government_type ?= government_type:theocracy
 		NOT = {
 			has_country_modifier = bolstered_divine_authority
 		}
@@ -200,7 +200,7 @@ bolster_the_tribal_leader = {
 			parliament_type = parliament_type:dutch_parliament
 			parliament_type = parliament_type:plc_parliament
 		}
-		government_type = government_type:tribe
+		government_type ?= government_type:tribe
 		NOT = {
 			has_country_modifier = bolstered_tribal_authority
 		}
@@ -254,7 +254,7 @@ bolster_the_khan = {
 			parliament_type = parliament_type:assembly
 		}
 		"estate_power(estate_type:crown_estate)" < 0.5
-		government_type = government_type:steppe_horde
+		government_type ?= government_type:steppe_horde
 		NOT = {
 			has_country_modifier = bolstered_khan_authority
 		}
@@ -400,7 +400,7 @@ support_ruler = {
 			limit = {
 				has_ruler = yes
 			}
-			ruler = {
+			ruler ?= {
 				add_adm = 3
 				add_dip = 3
 				add_mil = 3

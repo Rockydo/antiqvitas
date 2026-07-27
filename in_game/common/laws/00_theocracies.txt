@@ -8,7 +8,7 @@ theocratic_leadership = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:theocracy
+		government_type ?= government_type:theocracy
 	}
 	locked = {
 		OR = {
@@ -95,7 +95,7 @@ holy_mission_law = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:theocracy
+		government_type ?= government_type:theocracy
 	}
 	internal_mission_policy = {
 		country_modifier = {
@@ -176,7 +176,7 @@ nature_of_our_faith_law = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:theocracy
+		government_type ?= government_type:theocracy
 	}
 	faith_and_power_policy = {
 		country_modifier = {
@@ -245,7 +245,7 @@ divine_cause_law = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:theocracy
+		government_type ?= government_type:theocracy
 	}
 	safeguard_holy_sites_policy = {
 		country_modifier = {

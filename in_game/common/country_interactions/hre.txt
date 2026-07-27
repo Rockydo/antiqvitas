@@ -214,8 +214,8 @@ request_elector_status = {
 			is_member_of_international_organization = international_organization:hre
 			modifier:is_excluded_from_electorship = no
 			OR = {
-				government_type = government_type:monarchy
-				government_type = government_type:theocracy
+				government_type ?= government_type:monarchy
+				government_type ?= government_type:theocracy
 			}
 			international_organization:hre ?= {
 				OR = {
@@ -329,7 +329,7 @@ request_elector_status = {
 			}
 		}
 		if = {
-			limit = { scope:actor = { government_type = government_type:monarchy } }
+			limit = { scope:actor = { government_type ?= government_type:monarchy } }
 			if = {
 				limit = {
 					scope:actor = { total_population_in_international_organization = { international_organization = international_organization:hre value < 100 } }
@@ -588,7 +588,7 @@ bestow_free_city_status = {
 			limit = {
 				not = {
 					scope:recipient = {
-						government_type = government_type:republic
+						government_type ?= government_type:republic
 					}
 				}
 			}
@@ -614,14 +614,14 @@ bestow_free_city_status = {
 		if = {
 			limit = { exists = scope:recipient }
 			if = {
-				limit = { scope:recipient = { government_type = government_type:theocracy } }
+				limit = { scope:recipient = { government_type ?= government_type:theocracy } }
 				subtract = {
 					desc = "game_concept_government_type"
 					value = 100
 				}
 			}
 			if = {
-				limit = { scope:recipient = { government_type = government_type:monarchy } }
+				limit = { scope:recipient = { government_type ?= government_type:monarchy } }
 				subtract = {
 					desc = "game_concept_government_type"
 					value = 50
@@ -826,7 +826,7 @@ request_free_city_status = {
 			limit = {
 				not = {
 					scope:recipient = {
-						government_type = government_type:republic
+						government_type ?= government_type:republic
 					}
 				}
 			}
@@ -877,7 +877,7 @@ bestow_kingdom_title = {
 		visible = {
 			is_member_of_international_organization = international_organization:hre
 			country_rank_level = 2
-			government_type = government_type:monarchy
+			government_type ?= government_type:monarchy
 			is_subject = no
 			OR = {
 				NOT = { has_global_variable_map = hre_kingdoms_map }
@@ -940,7 +940,7 @@ request_kingdom_title = {
 		scope:actor = {
 			is_member_of_international_organization = international_organization:hre
 			country_rank_level = 2
-			government_type = government_type:monarchy
+			government_type ?= government_type:monarchy
 			is_subject = no
 			OR = {
 				NOT = { has_global_variable_map = hre_kingdoms_map }
@@ -1287,7 +1287,7 @@ request_county_privileges = {
 		scope:actor = {
 			NOT = { has_reform = government_reform:margraviate }
 			NOT = { has_reform = government_reform:landgraviate }
-			government_type = government_type:monarchy
+			government_type ?= government_type:monarchy
 			num_open_reform_slots > 0
 		}
 	}
@@ -1476,7 +1476,7 @@ grant_county_privileges = {
 			is_member_of_international_organization = international_organization:hre
 			NOT = { has_reform = government_reform:margraviate }
 			NOT = { has_reform = government_reform:landgraviate }
-			government_type = government_type:monarchy
+			government_type ?= government_type:monarchy
 			num_open_reform_slots > 0
 		}
         enabled = {
@@ -3071,14 +3071,14 @@ bestow_legatus_natus_status = {
 		if = {
 			limit = { exists = scope:recipient }
 			if = {
-				limit = { scope:recipient = { government_type = government_type:republic } }
+				limit = { scope:recipient = { government_type ?= government_type:republic } }
 				subtract = {
 					desc = "game_concept_government_type"
 					value = 100
 				}
 			}
 			if = {
-				limit = { scope:recipient = { government_type = government_type:monarchy } }
+				limit = { scope:recipient = { government_type ?= government_type:monarchy } }
 				subtract = {
 					desc = "game_concept_government_type"
 					value = 50
@@ -3186,7 +3186,7 @@ request_legatus_natus_status = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		scope:actor = {
 			is_member_of_international_organization = international_organization:hre
-			government_type = government_type:theocracy
+			government_type ?= government_type:theocracy
 			modifier:is_pope = no
 		}
 		international_organization:hre ?= {
@@ -3294,7 +3294,7 @@ request_legatus_natus_status = {
 			limit = {
 				not = {
 					scope:recipient = {
-						government_type = government_type:theocracy
+						government_type ?= government_type:theocracy
 					}
 				}
 			}
@@ -3511,7 +3511,7 @@ request_primas_germaniae_status = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		scope:actor = {
 			is_member_of_international_organization = international_organization:hre
-			government_type = government_type:theocracy
+			government_type ?= government_type:theocracy
 			modifier:is_pope = no
 		}
 
@@ -3614,7 +3614,7 @@ request_primas_germaniae_status = {
 			limit = {
 				not = {
 					scope:recipient = {
-						government_type = government_type:republic
+						government_type ?= government_type:republic
 					}
 				}
 			}

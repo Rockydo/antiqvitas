@@ -11,7 +11,7 @@ hook_and_cod_wars = {
 		has_any_active_disaster = no
 		tag = HOL
         has_enabled_disaster_trigger = { type = hook_and_cod_wars }
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
         at_war = no
         hidden_trigger = {
             has_variable = hacw_contender_variable_1

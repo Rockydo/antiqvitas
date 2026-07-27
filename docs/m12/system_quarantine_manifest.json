@@ -10,6 +10,7 @@
     "government_reforms": 328,
     "country_interactions": 138,
     "disasters": 35,
+    "formable_countries": 151,
     "religious_aspects": 177,
     "hre_generic_actions": 8,
     "hre_yearly_scope_guard": 1
@@ -22,7 +23,7 @@
       "source_sha256": "6aad35bdc792de57ecc34b6cc6a457d8a24e9628ca1c9759252ef17d4599b1ee",
       "definition_count": 56,
       "output": "in_game/common/estate_privileges/burghers_estate.txt",
-      "output_sha256": "752bb391588b9056f3c049bd4e7dcba46ef1308b71b5221a61b05bcd76709357"
+      "output_sha256": "07fa2fefc3bd86fdae855d99d79b69a46f66c3d9c5ac34a3db80d28618c61264"
     },
     {
       "surface": "estate_privileges",
@@ -31,7 +32,7 @@
       "source_sha256": "9587098d841732dcfb4d39297342747214a7c93718a506677b5cd35cc4e36d0c",
       "definition_count": 42,
       "output": "in_game/common/estate_privileges/clergy_estate.txt",
-      "output_sha256": "f55fb79bbd09e50566cea528df838965d2f87c3053779a52f1028da4c753c387"
+      "output_sha256": "a98436c90d28a8b97913f9dd5da612cc52fbad859f84a6480682187d7a8be583"
     },
     {
       "surface": "estate_privileges",
@@ -58,7 +59,7 @@
       "source_sha256": "33fc6caf54328a40b94fdac285fec86ca1e59ac69f022c5ac1a816d9945dee95",
       "definition_count": 89,
       "output": "in_game/common/estate_privileges/nobles_estate.txt",
-      "output_sha256": "ebb0bbfe01cbb7782d627e0a9358e9056347d293ccc980387a4160e8746f0d8c"
+      "output_sha256": "f5573ebc8bd749206fc7af78abc71564b8116470e3b994de7c8c03235e6e6245"
     },
     {
       "surface": "estate_privileges",
@@ -679,7 +680,7 @@
       "source_sha256": "ddc49b6170d6d2fcd731ea07673a551330f9445a7934f299910acca478afbef7",
       "definition_count": 1,
       "output": "in_game/common/cabinet_actions/study_institutions.txt",
-      "output_sha256": "f6c4d73608b239f539d03125da72b46a8d0c712a8315c4674f607226976f85e3"
+      "output_sha256": "88cc245c7ee64ff93039c42f5741de17b30dfc65fd2b6a83f70e440900618c25"
     },
     {
       "surface": "cabinet_actions",
@@ -733,7 +734,7 @@
       "source_sha256": "b06aeedcdb76f257fa16b1793aa39ffcc31546a8e50e7bc7689971f45effa8e4",
       "definition_count": 10,
       "output": "in_game/common/parliament_issues/02_crown_estate_parliament_issues.txt",
-      "output_sha256": "7bce8983a4f4de09491d8d0a5cc4e97e6d5ee517caf74e807b6ac81e3276da9b"
+      "output_sha256": "939b48e57faa813af6d59e715b4f03d59d27803377e93ae27b1addb8c3b6b282"
     },
     {
       "surface": "parliament_issues",
@@ -751,7 +752,7 @@
       "source_sha256": "0c5305b6bae4ff30f1a9adcf709afd4bb7e4280c6d8dea2ce281f9451641777c",
       "definition_count": 10,
       "output": "in_game/common/parliament_issues/04_clergy_estate_parliament_issues.txt",
-      "output_sha256": "c9a4c162b00d70e96bae1d2dc329d7591dd6a4f769cab2d12053006c79f5018f"
+      "output_sha256": "76d1c5bcc6cfc8ccbb10cb8a075f81b0bd6ec16e2e66ce7cc86455c0e1672dca"
     },
     {
       "surface": "parliament_issues",
@@ -769,7 +770,7 @@
       "source_sha256": "2215200599a53db4d9c0c29bbe53103806a95c477c9a3f97832e8c17d8402a62",
       "definition_count": 12,
       "output": "in_game/common/parliament_issues/06_peasants_estate_parliament_issues.txt",
-      "output_sha256": "33dee8fe7710683081bfc51a2ae7e499ded32a65f924afe1caaaeac1b2d30eed"
+      "output_sha256": "f6d293c2beabd97503c991a6fcef1669759b863eda6176c416881e1512065168"
     },
     {
       "surface": "parliament_issues",
@@ -778,7 +779,7 @@
       "source_sha256": "ec1b298ecbbf2398685c0a7ad4fb276f3ce25fd7641ce61a663b0f98110d3327",
       "definition_count": 62,
       "output": "in_game/common/parliament_issues/07_expansion_parliament_issues.txt",
-      "output_sha256": "f5b912943a1582dae1dee75ef803b1047dcb5ce5dd686ca1ce8a029a9c61bab7"
+      "output_sha256": "59ba3518383ba8759e1c91707f2339f76528fc3c6a46ab3872dfb152b3f65bcf"
     },
     {
       "surface": "parliament_issues",
@@ -859,7 +860,7 @@
       "source_sha256": "bf6a201f8eb0bdb9855a324b80228cd6eef620c6e3bbcb1ec665bbe28db74d38",
       "definition_count": 5,
       "output": "in_game/common/laws/00_monarchy.txt",
-      "output_sha256": "133938e8284ef72947363d80a34dc0a59cb1d020a8dfc74e27fbb3b6b23bcea9"
+      "output_sha256": "ab995e3bda801b597cc9db2b8cc4d2a7a68b0e805779d543b92023f5b98fd6d3"
     },
     {
       "surface": "laws",
@@ -877,7 +878,7 @@
       "source_sha256": "1cccbc3f697c2c3f0c30287b1b5c6d5f5520fc2877ce3a160207c1cc6f467c80",
       "definition_count": 5,
       "output": "in_game/common/laws/00_republic.txt",
-      "output_sha256": "74b26ab0ec3018fd6283f0150eb73ba1863009cc07a9ae1937e2a1142307d35f"
+      "output_sha256": "0c004481e18b9723e432a1a1668531d06e6f6d1a7d4ac083674dd97cd795a38f"
     },
     {
       "surface": "laws",
@@ -886,7 +887,7 @@
       "source_sha256": "9d6d3f35ae2362fb1d6700e07b16170b079aaf55390fcca8d93ee6c0ba7da7a1",
       "definition_count": 4,
       "output": "in_game/common/laws/00_theocracies.txt",
-      "output_sha256": "50f0bd256679dc0d0a037fd158eed3a70c9ed6db5db0911c98e91700788e81be"
+      "output_sha256": "a891bf2eda83f66e5c763403fe24cdcfa74b2c36788b58005d9b480d5fc047fe"
     },
     {
       "surface": "laws",
@@ -895,7 +896,7 @@
       "source_sha256": "dd84eeccdb003d2a535def265e0511a7d3d19768f7b871e6a93550142fded408",
       "definition_count": 6,
       "output": "in_game/common/laws/00_tribes.txt",
-      "output_sha256": "12cd6c678f9f2ea50febfe6cde44e86d957c739a0a54c9e60be04ce128abdaf4"
+      "output_sha256": "2df1c7b904413e3ee22fb56eead61b81ec1586956421dc2efcf82e9f19718fb5"
     },
     {
       "surface": "laws",
@@ -904,7 +905,7 @@
       "source_sha256": "eff197f5fc6c2c3c22d3663d492af29adec79ad4e0f76146aef42909ced368a9",
       "definition_count": 20,
       "output": "in_game/common/laws/01_common.txt",
-      "output_sha256": "6049209dab06db343538af8f4a1b77ea4d0f7cb892fcc883373b679fadee9427"
+      "output_sha256": "71581bcfe63d70ebb8f81ec99a990f9bd0330fcb4a66a909a724312af828bc0a"
     },
     {
       "surface": "laws",
@@ -913,7 +914,7 @@
       "source_sha256": "5a8c0cb71e5c29b1fe19c24700bb8f598f1e7723d39f7c333a81717a024b2e33",
       "definition_count": 3,
       "output": "in_game/common/laws/01_legal_system.txt",
-      "output_sha256": "5ab7fe2f1af7b944a38b0288d330f22a4356ae87602732e6e8b94a0da494bfe0"
+      "output_sha256": "66f683e9d801e58eeb2157a4e249403daf42a58b320b54bf003adf6675d4f79c"
     },
     {
       "surface": "laws",
@@ -922,7 +923,7 @@
       "source_sha256": "ea38f10f9cf7132dcf88b72ad26d97a3cef8a981834b73ff9fce9d66044a85fd",
       "definition_count": 6,
       "output": "in_game/common/laws/01_military_laws.txt",
-      "output_sha256": "b03b11fd6fe83da41c3e9280c842f30d9482f081eafcc5c5039bd4fdfa7a5e4d"
+      "output_sha256": "361b87ab2570af268eb3b09c1f181759270e124764d0b8408fda1bfdd925c6bb"
     },
     {
       "surface": "laws",
@@ -940,7 +941,7 @@
       "source_sha256": "fdaaa1853928e2fedb0cd65e17878d846a5844cb8f066fdb38934296cb8c4dca",
       "definition_count": 22,
       "output": "in_game/common/laws/02_country_specific.txt",
-      "output_sha256": "fa3a9f69ee52f21a192317efac442c18e432adf302ecf2616db9f714196767f9"
+      "output_sha256": "e242bd79f533a00f033b24647d9112165bbb4e05991b3969b0aeddea0733c36d"
     },
     {
       "surface": "laws",
@@ -958,7 +959,7 @@
       "source_sha256": "f72a35384bf2663d14d0129efd5d04a851b36116a50f43436b2c6609ffc41371",
       "definition_count": 5,
       "output": "in_game/common/laws/03_estate_laws.txt",
-      "output_sha256": "3fdaa901d8c3d4966e7cb5b4a78b2db08fa9497fb26bd77e6d331ba2a8ac07f3"
+      "output_sha256": "1d612be9a28f9b086d127539fb7224ceb8814d2075313d0c5af9e0c1ae06fbae"
     },
     {
       "surface": "laws",
@@ -1120,7 +1121,7 @@
       "source_sha256": "7460507b827d457c1e8719a886171d379c221e168c55d6aedaae5ac713cc360b",
       "definition_count": 88,
       "output": "in_game/common/government_reforms/common.txt",
-      "output_sha256": "0cebe3439a559edb9171d83273c666f647283d9754f173d97271021e5d96d188"
+      "output_sha256": "e3eb8cd4d801197dd881708e35a8873d69fa3e301ac1a2bf53b427b9287c078f"
     },
     {
       "surface": "government_reforms",
@@ -1129,7 +1130,7 @@
       "source_sha256": "9484687b5fa15bf665b1af9cd703141a025329f94db27cade0edd14395d8ab53",
       "definition_count": 210,
       "output": "in_game/common/government_reforms/country_specific.txt",
-      "output_sha256": "2c22cdbebc3d98f8f2904e4d52034f6cf52f0a971a0d37f412fe244115c15474"
+      "output_sha256": "66daa8a34ae4ae55cd84e1f3fff40ed948fbe7874841dff8dc69699984e1b0f3"
     },
     {
       "surface": "government_reforms",
@@ -1165,7 +1166,7 @@
       "source_sha256": "63349e7dd097c85093e9e8f9d983636feb06e19027738d895ffc63442f35b53c",
       "definition_count": 6,
       "output": "in_game/common/government_reforms/theocracy.txt",
-      "output_sha256": "438d85e5c0198a0e387aa023c3c70514c43e5b6aa755032248492908e2484633"
+      "output_sha256": "a1fdedd59a389fd85bc03940c581e6910c22a35c8b1dca1fa0c2a912468007e7"
     },
     {
       "surface": "country_interactions",
@@ -1291,7 +1292,7 @@
       "source_sha256": "ae785c1ddbd6bfea39e9d9f44d90ee3247d912c5304fd094f01da57e65b0ec23",
       "definition_count": 7,
       "output": "in_game/common/country_interactions/catholic_interactions.txt",
-      "output_sha256": "a23cf272c053b4d791f28bd74a49d36274d7c5a9d4015880b00b119c0036db64"
+      "output_sha256": "5649e307c94b01773a094921dcc84259632f1d5a890b9de40149526aa9c513f7"
     },
     {
       "surface": "country_interactions",
@@ -1300,7 +1301,7 @@
       "source_sha256": "cbf58168d53455a4532e2a4c1646bccdfdaf91e96617de378d97691d69b9f9fa",
       "definition_count": 1,
       "output": "in_game/common/country_interactions/change_ruler.txt",
-      "output_sha256": "451880f5472be51c2f36a23fd7ea16ed5dbab859f215dbf7e20b9bbb4d6874c0"
+      "output_sha256": "2f698faeaf4c83e817af4ca0a9f12446c3429058a50034f3dc3700d337be67a8"
     },
     {
       "surface": "country_interactions",
@@ -1444,7 +1445,7 @@
       "source_sha256": "f59ee72dc29362535c5d113f7c1f2ade65d69d501c06b081d7dbc9c79624712b",
       "definition_count": 24,
       "output": "in_game/common/country_interactions/hre.txt",
-      "output_sha256": "4ab2a5a53f5b767a0ecffe32f630791ac17ec96cf70f2111318b01727c56a4c7"
+      "output_sha256": "aba9a245235d731a5eababb21cd7006e8f6f658edf737adf30ad5dc65b28cc74"
     },
     {
       "surface": "country_interactions",
@@ -1525,7 +1526,7 @@
       "source_sha256": "d5cd89e362bc3e2d59e9d84d93c0f56efc6181de6cb5828b4869a64c589105c8",
       "definition_count": 1,
       "output": "in_game/common/country_interactions/invite_prince.txt",
-      "output_sha256": "ba17b0820a9c77c18f1b5e2f96e0b2aca2b34944e46e6df651668d8b25d82a61"
+      "output_sha256": "9cb5d69ddbb6039231c8c9077920c7e415877bdf90036d902b430e68a0ef47af"
     },
     {
       "surface": "country_interactions",
@@ -1588,7 +1589,7 @@
       "source_sha256": "fd838dd17b4d150c7cf7ab2e668ccefef54538ef131f1cd8627c4977dfcf3252",
       "definition_count": 5,
       "output": "in_game/common/country_interactions/lordship_of_ireland.txt",
-      "output_sha256": "066dc90f166bdfae49b2ba288f8440598bcd645f48735b10e18294da399e2ca0"
+      "output_sha256": "6560ad0b356d210a6b9314131b6947dc3034e3825986072d5db100229cc7f1a7"
     },
     {
       "surface": "country_interactions",
@@ -1642,7 +1643,7 @@
       "source_sha256": "80467a5a28ff78235172b4e233ee2150b9132eb90df93ca2a2bb55cca5ca04ee",
       "definition_count": 1,
       "output": "in_game/common/country_interactions/negotiate_succession_law.txt",
-      "output_sha256": "73ee16f280e6f5b84fc1e33b944506d79c4387998a86504f1bed24f71f45dda6"
+      "output_sha256": "637aa5565b736e3d4d44093f25db1cbcee117272a9b5d93f9c9247df7c9fd764"
     },
     {
       "surface": "country_interactions",
@@ -1651,7 +1652,7 @@
       "source_sha256": "8c381e096e7b4c31c9940c692e5738d28e339e3120ef1a16c3bdc7ffddb4ca4a",
       "definition_count": 1,
       "output": "in_game/common/country_interactions/nusta_marriage.txt",
-      "output_sha256": "0daafc13c91ad9719563ce0c1230f66a97524cebe7f2eabcf969e447e29b3702"
+      "output_sha256": "97fe41fe8dce6764663af5a0bd72ca0348ff8707f8546cc8fd8a8cd5793e47fc"
     },
     {
       "surface": "country_interactions",
@@ -1696,7 +1697,7 @@
       "source_sha256": "a71bba94ffeccf762f23358174ed3551e2d8e2e6cf8de74b30b70f91ab8b55d1",
       "definition_count": 1,
       "output": "in_game/common/country_interactions/propose_ruler.txt",
-      "output_sha256": "c24459dff24dfd5d9ae9a342459bb175ce9526d072c0104e0eb177396f4d9798"
+      "output_sha256": "9cb48e3cd7894109b05d7e89e4c2b154696809228ecec777a3efba98466401b4"
     },
     {
       "surface": "country_interactions",
@@ -1705,7 +1706,7 @@
       "source_sha256": "e78d88e6bccaac777dd1e2b40ca386dcc72749d535a0039b02efce7361e41c49",
       "definition_count": 2,
       "output": "in_game/common/country_interactions/prussian_crusade.txt",
-      "output_sha256": "57e3d574016378b156df2b2dce39bb0fa1d7a18230cfcdfe4e32a2f67b3535c4"
+      "output_sha256": "25821e288e9c43814ec6e73b2c2e4c12d8eaca1fcb72c4c06f82e21785d52cd8"
     },
     {
       "surface": "country_interactions",
@@ -1975,7 +1976,7 @@
       "source_sha256": "b6b6a044bed0b9748be3ab0dfb7bfa16f7e9f303b7089435a0b520c8fe432400",
       "definition_count": 1,
       "output": "in_game/common/disasters/ambrosian_republic.txt",
-      "output_sha256": "8676c6883df4eab2b8c847dc90333e991d1c1ab2444e7ad2f4e2f9d3f814deec"
+      "output_sha256": "be5b3c64928b88ad74a640a69740f890115617b7350dd2962874fe8381b8dddd"
     },
     {
       "surface": "disasters",
@@ -1993,7 +1994,7 @@
       "source_sha256": "bded944ac242d43fb4f5af248299b8db97b04486190cf0c0b58a4f2385abae64",
       "definition_count": 1,
       "output": "in_game/common/disasters/byzantine_succession_crisis.txt",
-      "output_sha256": "0c44887325730c791b9dd3df6ff1b2be4530a15ecaea6e6dd14fb26b22145a4b"
+      "output_sha256": "c6fea79dc4629b2c509aab22ce04498d02d071cb9360794b82e4e1b499e7d503"
     },
     {
       "surface": "disasters",
@@ -2002,7 +2003,7 @@
       "source_sha256": "3b209554557e4f1bfb1b31e37a337a9523612065eb4eb0548beab368d5a5cceb",
       "definition_count": 1,
       "output": "in_game/common/disasters/castilian_civil_war.txt",
-      "output_sha256": "32b860c765024f7658c4112d047e7522275a230f1a18d69e684270d6e5205c44"
+      "output_sha256": "8697121cad4e2642f42be4af94d1b9060f2d8ade02c80ab506a46318d22e1ce3"
     },
     {
       "surface": "disasters",
@@ -2020,7 +2021,7 @@
       "source_sha256": "6f309500e0612e969b3882c7cc33b111311248a394127a6ccaa6a47e6e02a3b4",
       "definition_count": 1,
       "output": "in_game/common/disasters/coup_attempt.txt",
-      "output_sha256": "38288d0251a12a6da9e4d8b8c9113b1f825870084bf9a3b33f4b3af4e90a95f1"
+      "output_sha256": "40456a9067426747b7ff11578227e0e4b8ffbf67d7e25d77d1435f0a1f17e844"
     },
     {
       "surface": "disasters",
@@ -2110,7 +2111,7 @@
       "source_sha256": "fc4543fb100450442ddaa274c703e2def7b7ed701c8a41c9400b0819272a083b",
       "definition_count": 1,
       "output": "in_game/common/disasters/english_civil_war.txt",
-      "output_sha256": "a37b7fa5866232c93820ff14c345ce912a8d86fbcc8f30154a3389e3bb99a20e"
+      "output_sha256": "a5e5ae675ef1ba3ab1b8f004826fbfa1c93e80abd5122784b33384eb1e678cb0"
     },
     {
       "surface": "disasters",
@@ -2128,7 +2129,7 @@
       "source_sha256": "6be60fcb3074bcbb019ec7e94f65ff135e5d15483e8189c9b8ff863a1c1e68e3",
       "definition_count": 1,
       "output": "in_game/common/disasters/hook_and_cod_wars.txt",
-      "output_sha256": "aa0ff5d2ca2b94c0985e8aed66967c50ba49a398c040112e0d4f637d7974de94"
+      "output_sha256": "fe2f396bb00ff87fd17cddc87303d9abfa78901ec20115fc71bbfda7283423ff"
     },
     {
       "surface": "disasters",
@@ -2137,7 +2138,7 @@
       "source_sha256": "7516aa3a29bbbe8bbf7d80707328a79524ef0ec7f397ca0f505abe6d31a67ed0",
       "definition_count": 1,
       "output": "in_game/common/disasters/horde_civil_war.txt",
-      "output_sha256": "d3c71bd4523b544709f377df62a95d8d4290b192bcac7aea61f7188322769201"
+      "output_sha256": "291d943fe62f5fa0cb6e28492b78a8554d761288eb4e23df91ab494fbe2b8b2e"
     },
     {
       "surface": "disasters",
@@ -2146,7 +2147,7 @@
       "source_sha256": "bf91b0dbadfbf493b15bec6c48b0d6de75ce7f1f6557ec854fa70c56939a52d1",
       "definition_count": 1,
       "output": "in_game/common/disasters/muscovite_succession_war.txt",
-      "output_sha256": "6236d6d3f7f51263b77c7a960b52934799ebb873877b48772536540f92e57f22"
+      "output_sha256": "a343b03c4618ff7e895311cb5ed644f731167908588d6c9802c1f46b33cea437"
     },
     {
       "surface": "disasters",
@@ -2155,7 +2156,7 @@
       "source_sha256": "b1936a5f1654835545cc632786e6c41015f7b3c4fc546222c2037a2310b1ea75",
       "definition_count": 1,
       "output": "in_game/common/disasters/peasants_war.txt",
-      "output_sha256": "0cc7e27c6edac3958a47bcd358df21e73697e7d992261d885892f721b2b6b909"
+      "output_sha256": "1f8cdb231823d1f9cd39ae253706c0d713b0f82727ef661c1165b133b3a209ce"
     },
     {
       "surface": "disasters",
@@ -2182,7 +2183,7 @@
       "source_sha256": "abf1af3d71aadbe9fc5bdfad6603b6a697c6b657994019fd2a4a368b91160fe5",
       "definition_count": 1,
       "output": "in_game/common/disasters/revolutionary_chaos.txt",
-      "output_sha256": "7afb3db30f3564d4330fa7fa22a9f4ddfa78ae84073c41fd05f2bc3a20103178"
+      "output_sha256": "003beb1cb975e7f8a49f9b55ffa9ab1376c3e9e8e046ac563d736564df8e1239"
     },
     {
       "surface": "disasters",
@@ -2200,7 +2201,7 @@
       "source_sha256": "cd776f5e38bc708381a4a2451a5893376e0a30c00e890df060b1f2bbc65a4700",
       "definition_count": 1,
       "output": "in_game/common/disasters/savonarola.txt",
-      "output_sha256": "c8f6931739a78f5bcb87fe3574df617021947c653845b0d8b6e142f01ee6e761"
+      "output_sha256": "f53ddae2a25bf5ecb8a3b4e5fd6b7243ac1e44b195d479f04ef68c4a71aca773"
     },
     {
       "surface": "disasters",
@@ -2218,7 +2219,7 @@
       "source_sha256": "1183a74446f3917b4ae5b404a15bd27d80df2fe04ae085fe8abf0f915b0538f2",
       "definition_count": 1,
       "output": "in_game/common/disasters/struggle_for_royal_power.txt",
-      "output_sha256": "3da66fa58bf212c3d2d9af5d86ab2ad8cccf0593b4bdf94b59b58018069858ab"
+      "output_sha256": "25b24f5e8ce8ddc2a5a2c32d4823a370491a21d570f712fea48585d0ac5c109d"
     },
     {
       "surface": "disasters",
@@ -2227,7 +2228,7 @@
       "source_sha256": "1d0c9666165d9ce0fa76e9659b49641fe8fd302431442d9ad9e9b3a1d828ac1b",
       "definition_count": 1,
       "output": "in_game/common/disasters/succession_crisis.txt",
-      "output_sha256": "31610a3bae69e5bdcf1b2cb339c4594b939de57d4a2a22af5b7f65b69acdf0a1"
+      "output_sha256": "63836518e344fa9f45073242b4af8ae39eca6faec46c2216d2b35adaf93c9995"
     },
     {
       "surface": "disasters",
@@ -2236,7 +2237,7 @@
       "source_sha256": "453b7b425680906bcfd40cb77719395705c6ff7bebcd43bbf3783011f877fa26",
       "definition_count": 1,
       "output": "in_game/common/disasters/time_of_troubles.txt",
-      "output_sha256": "ad28670792392e83473a5fde8b38a04aef09096cd703d3ca39579b21a7fcc0cc"
+      "output_sha256": "cbc1f3599eb5a139d87b90d822e88b03ce20fd511c634d5111fcb9b7f8e83456"
     },
     {
       "surface": "disasters",
@@ -2245,7 +2246,7 @@
       "source_sha256": "b60084966213e6d7e2bb14cb58655a01c7d9b8086dce98d83db700b586c78369",
       "definition_count": 1,
       "output": "in_game/common/disasters/turmoil_in_brandenburg.txt",
-      "output_sha256": "f92e48f720d01b63ec1d9a42a1483eace370506381a62c3dcd0bbf929b57ee1a"
+      "output_sha256": "c3e3a2f6f35fbc685fb90a468d53162cde56ad7c19a3534e5b8619fbc2ae6736"
     },
     {
       "surface": "disasters",
@@ -2273,6 +2274,15 @@
       "definition_count": 1,
       "output": "in_game/common/disasters/war_of_the_roses.txt",
       "output_sha256": "58bb0423d16c0454a21e053ddd339abb8fa95fbcfd5579feabe3a4bdfa0bc069"
+    },
+    {
+      "surface": "formable_countries",
+      "relative": "00_formable_countries.txt",
+      "source": "<GAME_DIR>\\game\\in_game\\common\\formable_countries\\00_formable_countries.txt",
+      "source_sha256": "6b8ede50cee881b5e8facee269930a1da8ae4385812aaa63fe85982a92a36eb0",
+      "definition_count": 151,
+      "output": "in_game/common/formable_countries/00_formable_countries.txt",
+      "output_sha256": "7fcf7aa6329ca7f45de7480d00a151504bdae75c7320791c081efe041b6d008e"
     },
     {
       "surface": "religious_aspects",

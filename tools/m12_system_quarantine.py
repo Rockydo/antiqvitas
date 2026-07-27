@@ -40,6 +40,7 @@ SURFACES = {
     "government_reforms": ("in_game/common/government_reforms", "potential"),
     "country_interactions": ("in_game/common/country_interactions", "potential"),
     "disasters": ("in_game/common/disasters", "can_start"),
+    "formable_countries": ("in_game/common/formable_countries", "potential"),
     # Religious aspects use `visible`, not `potential`, as their registry gate.
     "religious_aspects": ("in_game/common/religious_aspects", "visible"),
 }
@@ -159,6 +160,20 @@ def guard_absent_legacy_objects(text: str, gate_name: str) -> str:
     rhs_object = re.compile(
         r"(?:!=|\?=|(?<![?!<>])=)\s*(?:character|dynasty):[A-Za-z0-9_]+"
     )
+    unsafe_dynamic_rhs = re.compile(
+        r"(?:!=|\?=|(?<![?!<>])=)\s*"
+        r"(?:root\.)?(?:ruler|heir|ruler_or_heir_if_regent)"
+        r"(?:\.[A-Za-z_][A-Za-z0-9_]*)+"
+    )
+    optional_runtime_scope = re.compile(
+        r"(?<![?.A-Za-z0-9_])"
+        r"(?P<link>ruler|heir|ruler_or_heir_if_regent)"
+        r"\s*=\s*\{"
+    )
+    optional_runtime_comparison = re.compile(
+        r"(?<![?.A-Za-z0-9_])"
+        r"(?P<link>government_type)\s*=\s*"
+    )
     gate = re.compile(rf"^\s*{re.escape(gate_name)}\s*=\s*\{{")
     depth = 0
     trigger_depth: int | None = None
@@ -171,7 +186,19 @@ def guard_absent_legacy_objects(text: str, gate_name: str) -> str:
             "capital.market ?= {",
             updated,
         )
-        if trigger_depth is not None and rhs_object.search(structural_code(updated)):
+        # Disabled registry bodies are still type-checked and some nested
+        # policy/allow predicates are evaluated by the UI. Make nullable
+        # runtime links safe throughout the quarantined definition, not only
+        # in its outer availability gate.
+        updated = optional_runtime_scope.sub(r"\g<link> ?= {", updated)
+        updated = optional_runtime_comparison.sub(
+            r"\g<link> ?= ",
+            updated,
+        )
+        if trigger_depth is not None and (
+            rhs_object.search(structural_code(updated))
+            or unsafe_dynamic_rhs.search(structural_code(updated))
+        ):
             if brace_delta(updated) != 0:
                 raise ValueError(
                     f"unsupported multiline legacy-object comparison: {line!r}"
@@ -186,11 +213,10 @@ def guard_absent_legacy_objects(text: str, gate_name: str) -> str:
         depth += delta
         if (
             trigger_depth is None
-            and previous_depth == 1
             and gate.match(code)
             and delta > 0
         ):
-            trigger_depth = 1
+            trigger_depth = previous_depth
         elif trigger_depth is not None and depth == trigger_depth:
             trigger_depth = None
     return "\n".join(guarded) + "\n"

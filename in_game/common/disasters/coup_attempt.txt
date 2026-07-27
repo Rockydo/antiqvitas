@@ -10,7 +10,7 @@ coup_attempt = {
 	can_start = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		NOT = { current_age = age_1_traditions }
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 		government_power < 30
 		any_estate = {
 			estate_type != estate_type:crown_estate
@@ -37,7 +37,7 @@ coup_attempt = {
 	}
 	on_end = {
 		if = {
-			limit = { government_type = government_type:monarchy }
+			limit = { government_type ?= government_type:monarchy }
 			if = {
 				limit = {
 					OR = {

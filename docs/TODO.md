@@ -139,13 +139,19 @@ and focused runtime probe all pass.
     Existing namespaced ancient content remains active (24 privileges, 23 laws,
     19 reforms), but cabinet and parliament replacements belong to the deep
     S2-P4 rebuild and must be present before the UI acceptance probe.
-  - [ ] Eliminate the fresh-bookmark parliament compiler failures before the
+  - [x] Eliminate the fresh-bookmark parliament compiler failures before the
     replacement UI probe. The 2026-07-26 Britain/Hibernia bookmark isolated all
     2,855 `Script system error!` entries to
     `06_peasants_estate_parliament_issues.txt` (2,499) and
     `07_expansion_parliament_issues.txt` (356): optionalize/remove the invalid
     `government_type` links through an exact checked overlay, then require zero
-    script-system errors on a fresh selector initialization.
+    script-system errors on a fresh selector initialization. The union-level
+    guard now optionalizes nullable government, ruler, heir, and regent links
+    throughout disabled definitions and neutralizes unsafe dynasty comparisons
+    inside nested availability gates. A fresh selector plus actual-player start
+    emits zero script-system errors. The same probe exposed and then removed the
+    last three instances from the installed formable-country union, which is now
+    exact-mirrored and quarantined as well.
   - Acceptance: installed-union report has zero unapproved visible vanilla keys;
     Rome and six regional probes show only ancient systems.
 

@@ -628,7 +628,7 @@ support_religious_education = {
 			parliament_type = parliament_type:plc_parliament
 			parliament_type = parliament_type:autocratic_parliament
 		}
-		government_type = government_type:theocracy
+		government_type ?= government_type:theocracy
 	}
 
 	chance = {

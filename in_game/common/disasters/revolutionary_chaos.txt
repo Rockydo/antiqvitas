@@ -13,7 +13,7 @@ revolutionary_chaos = {
 		is_revolutionary = yes
 		in_civil_war = no
 		NOT = { had_disaster_trigger = { type = revolutionary_chaos } }
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 		OR = {
 			stability < 50
 			republican_tradition < 50

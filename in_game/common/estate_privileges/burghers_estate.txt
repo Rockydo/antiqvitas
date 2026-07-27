@@ -424,7 +424,7 @@ toll_and_tariff_exemptions = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 	}
 
 
@@ -442,7 +442,7 @@ dedicated_merchant_courts = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 	}
 
 
@@ -459,7 +459,7 @@ noble_patronage = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 	}
 
 
@@ -694,7 +694,7 @@ cardinal_lead_guilds = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:theocracy
+		government_type ?= government_type:theocracy
 		religion = religion:catholic
 	}
 

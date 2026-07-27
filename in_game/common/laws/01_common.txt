@@ -43,7 +43,7 @@ education_elites_law = {
 	}
 
 	clerical_institutions = {
-		potential = { NOT = { government_type = government_type:theocracy } }
+		potential = { NOT = { government_type ?= government_type:theocracy } }
 		country_modifier = {
 			clergy_estate_target_satisfaction = medium_permanent_target_satisfaction
 			monthly_towards_spiritualist = societal_value_tiny_monthly_move
@@ -56,7 +56,7 @@ education_elites_law = {
 	}
 
 	education_of_the_missionaries = {
-		potential = { government_type = government_type:theocracy }
+		potential = { government_type ?= government_type:theocracy }
 		country_modifier = {
 			global_pop_conversion_speed = 0.05
 			clergy_estate_target_satisfaction = medium_permanent_target_satisfaction
@@ -70,7 +70,7 @@ education_elites_law = {
 	}
 
 	education_of_the_theocrat = {
-		potential = { government_type = government_type:theocracy }
+		potential = { government_type ?= government_type:theocracy }
 		country_modifier = {
 			global_crown_estate_power = 0.1
 		}
@@ -194,7 +194,7 @@ education_masses_law = {
 	theocratic_education = {
 		potential = {
 			OR = {
-				government_type = government_type:theocracy
+				government_type ?= government_type:theocracy
 				modifier:allow_theocratic_education = yes
 			}
 		}
@@ -235,8 +235,8 @@ education_masses_law = {
 		potential = {
 			OR = {
 				NOT = { has_advance = written_alphabet }
-				government_type = government_type:steppe_horde
-				government_type = government_type:tribe
+				government_type ?= government_type:steppe_horde
+				government_type ?= government_type:tribe
 			}
 		}
 		country_modifier = {
@@ -318,8 +318,8 @@ education_masses_law = {
 							has_estate_privilege = estate_privilege:embellish_great_works_of_faith
 						}
 					}
-					government_type = government_type:tribe
-					government_type = government_type:steppe_horde
+					government_type ?= government_type:tribe
+					government_type ?= government_type:steppe_horde
 				}
 				religion = { has_sects = yes }
 			}
@@ -347,8 +347,8 @@ education_masses_law = {
 							has_estate_privilege = estate_privilege:embellish_great_works_of_faith
 						}
 					}
-					government_type = government_type:tribe
-					government_type = government_type:steppe_horde
+					government_type ?= government_type:tribe
+					government_type ?= government_type:steppe_horde
 				}
 				religion = { has_sects = no }
 			}
@@ -366,7 +366,7 @@ education_masses_law = {
 	# ILLUSTRATION (Enlightment) UNLOCKS
 	secular_education = {
 		potential = {
-			NOT = { government_type = government_type:theocracy }
+			NOT = { government_type ?= government_type:theocracy }
 			always = no
 		}
 		country_modifier = {
@@ -1738,7 +1738,7 @@ marriage_law = {
 	}
 	celibacy = {
 		potential = {
-			government_type = government_type:theocracy
+			government_type ?= government_type:theocracy
 		}
 		country_modifier = {
 			female_spouses = 0
@@ -1793,7 +1793,7 @@ heir_religion_law = {
 			or = {
 				not = { country_exists = this } #if the country doesn't exist they can do what they like
 				not = { exists = ruler_or_heir_if_regent }
-				ruler_or_heir_if_regent = {
+				ruler_or_heir_if_regent ?= {
 					religion = root.religion
 				}
 				exists = union
@@ -1818,7 +1818,7 @@ heir_religion_law = {
 			or = {
 				not = { country_exists = this } #if the country doesn't exist they can do what they like
 				not = { exists = ruler_or_heir_if_regent }
-				ruler_or_heir_if_regent = {
+				ruler_or_heir_if_regent ?= {
 					religion.group = root.religion.group
 				}
 			}

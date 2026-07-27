@@ -17,7 +17,7 @@ time_of_troubles = {
 			tag = MOS
 		}
 		has_any_active_disaster = no
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 		OR = {
 			government_power < 60
 			stability < 25

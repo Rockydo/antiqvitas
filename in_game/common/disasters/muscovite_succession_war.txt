@@ -10,9 +10,9 @@ muscovite_succession_war = {
 	can_start = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		tag = MOS
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 		has_ruler = yes
-		ruler = { has_dynasty = yes }
+		ruler ?= { has_dynasty = yes }
 		any_rebel = {
 			rebel_name_key = war_of_succession_pretender
 			rebel_progress >= 0.25
@@ -24,7 +24,7 @@ muscovite_succession_war = {
 			is_ruler = no
 			has_dynasty = yes
 			root = { ruler ?= { has_dynasty = yes } }
-			dynasty ?= root.ruler.dynasty
+			always = no # ANTIQVITAS absent legacy object comparison
 		}
 
 		legitimacy < 75

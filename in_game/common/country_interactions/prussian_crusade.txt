@@ -7,7 +7,7 @@ send_to_prussian_crusade =  {
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		scope:actor = {
-			government_type = government_type:monarchy
+			government_type ?= government_type:monarchy
 			religion = religion:catholic
 		}
 		OR = {
@@ -148,7 +148,7 @@ invite_to_prussian_crusade =  {
 		}
 		visible = {
 			religion = religion:catholic
-			government_type = government_type:monarchy
+			government_type ?= government_type:monarchy
 		}
         enabled = {
 			not = { is_at_war_with = scope:actor }

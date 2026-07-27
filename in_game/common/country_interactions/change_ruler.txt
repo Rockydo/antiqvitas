@@ -9,7 +9,7 @@ change_ruler = {
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		scope:actor = {
-			government_type = government_type:monarchy
+			government_type ?= government_type:monarchy
 		}
 	}
 
@@ -41,8 +41,8 @@ change_ruler = {
 		}
 		visible = {
 			OR = {
-				government_type = government_type:monarchy
-				government_type = government_type:steppe_horde
+				government_type ?= government_type:monarchy
+				government_type ?= government_type:steppe_horde
 			}
 			NOT = { is_subject_type = appanage }
 		}
@@ -59,7 +59,7 @@ change_ruler = {
 		source = actor
 		interaction_source_list = {
 			scope:actor = {
-				ruler_or_heir_if_regent = {
+				ruler_or_heir_if_regent ?= {
 					dynasty = {
 						every_character_in_dynasty = {
 							limit = {

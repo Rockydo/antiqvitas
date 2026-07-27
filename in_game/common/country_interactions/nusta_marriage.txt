@@ -24,7 +24,7 @@ nusta_marriage =  {
 		}
 		visible = {
 			is_subject = no
-			government_type = government_type:monarchy
+			government_type ?= government_type:monarchy
 		}
         enabled = {
 			has_ruler = yes

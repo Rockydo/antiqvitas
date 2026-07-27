@@ -185,10 +185,10 @@ lordship_of_ireland_assert_regency = {
 	allow = {
 		scope:actor = {
 			has_ruler = yes
-			ruler = {
+			ruler ?= {
 				can_become_a_regent = yes
 			}
-			government_type = government_type:monarchy
+			government_type ?= government_type:monarchy
 			at_war = no
 		}
 	}
@@ -210,7 +210,7 @@ lordship_of_ireland_assert_regency = {
 				is_subject = no
 				is_subject_of = scope:actor
 			}
-			government_type = government_type:monarchy
+			government_type ?= government_type:monarchy
 			at_war = no
 		}
 	}
@@ -245,7 +245,7 @@ lordship_of_ireland_enfeoff_regency = {
 	allow = {
 		scope:actor = {
 			has_ruler = yes
-			government_type = government_type:monarchy
+			government_type ?= government_type:monarchy
 			at_war = no
 		}
 	}
@@ -267,7 +267,7 @@ lordship_of_ireland_enfeoff_regency = {
 				is_subject_of = scope:actor
 			}
 			regent ?= scope:actor.ruler
-			government_type = government_type:monarchy
+			government_type ?= government_type:monarchy
 			at_war = no
 			has_heir = no
 		}
@@ -326,8 +326,8 @@ lordship_of_ireland_surrender_and_regrant = {
 			has_ruler = yes
 			is_subject = no
 			OR = {
-				government_type = government_type:monarchy
-				government_type = government_type:tribe
+				government_type ?= government_type:monarchy
+				government_type ?= government_type:tribe
 			}
 			religion.group = scope:actor.religion.group
 			at_war = no
@@ -378,7 +378,7 @@ lordship_of_ireland_surrender_and_regrant = {
 			}
 			if = {
 				limit = {
-					government_type = government_type:tribe
+					government_type ?= government_type:tribe
 				}
 				change_government_type = government_type:monarchy
 			}
@@ -440,7 +440,7 @@ lordship_of_ireland_surrender_and_regrant = {
 				if = {
 					limit = {
 						scope:recipient = {
-							government_type = government_type:tribe
+							government_type ?= government_type:tribe
 						}
 					}
 					add = -10

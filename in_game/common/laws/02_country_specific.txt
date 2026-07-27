@@ -46,7 +46,7 @@ eng_order_of_the_garter_law = {
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		has_unlocked_law_trigger = { type = eng_order_of_the_garter_law }
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 	}
 
 	eng_order_of_the_garter_nobility_policy = {

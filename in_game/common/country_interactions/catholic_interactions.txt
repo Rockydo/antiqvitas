@@ -59,7 +59,7 @@ request_divorce =  {
 	}
 
 	effect = {
-		scope:actor = { ruler = { divorce_character = first_spouse } }
+		scope:actor = { ruler ?= { divorce_character = first_spouse } }
 	}
 	ai_will_do = {
 		# Base score folds in the +100 non-catholic-spouse bonus that the ai_prerequisite gate
@@ -69,7 +69,7 @@ request_divorce =  {
 			if = {
 				limit = {
 					scope:actor = {
-						ruler = {
+						ruler ?= {
 							first_spouse = {
 								NOT = { religion.group = religion_group:christian }
 							}
@@ -96,7 +96,7 @@ request_divorce =  {
 			if = {
 				limit = {
 					scope:actor = {
-						ruler = {
+						ruler ?= {
 							first_spouse = { is_pregnant = yes }
 						}
 					}
@@ -109,7 +109,7 @@ request_divorce =  {
 			if = {
 				limit = {
 					scope:actor = {
-						ruler = { age_in_years > 55 }
+						ruler ?= { age_in_years > 55 }
 					}
 				}
 				value = -150
@@ -120,7 +120,7 @@ request_divorce =  {
 		if = {
 			limit = {
 				scope:actor = {
-					ruler = {
+					ruler ?= {
 						first_spouse = {
 							NOT = { religion = religion:catholic }
 							religion.group = religion_group:christian
@@ -136,7 +136,7 @@ request_divorce =  {
 		if = {
 			limit = {
 				scope:actor = {
-					ruler = {
+					ruler ?= {
 						first_spouse = {
 							NOT = { religion = religion:catholic }
 							NOT = { religion.group = religion_group:christian }

@@ -43,7 +43,7 @@ nobles_rights_laws = {
 	}
 	nobles_electorate_policy = {
 		potential = {
-			government_type = government_type:monarchy
+			government_type ?= government_type:monarchy
 		}
 		country_modifier = {
 			nobles_estate_target_satisfaction = medium_permanent_target_satisfaction
@@ -232,7 +232,7 @@ clergy_rights_laws = {
 	}
 	separate_clergy_from_state_policy = {
 		potential = {
-			NOT = { government_type = government_type:theocracy }
+			NOT = { government_type ?= government_type:theocracy }
 		}
 		country_modifier = {
 			clergy_estate_target_satisfaction = clergy_removed_from_state_policy
@@ -250,7 +250,7 @@ clergy_rights_laws = {
 	sheikh_ul_islam_policy = {
 		potential = {
 			religion.group = religion_group:muslim
-			NOT = { government_type = government_type:theocracy }
+			NOT = { government_type ?= government_type:theocracy }
 		}
 		country_modifier = {
 			global_clergy_estate_power = 0.1

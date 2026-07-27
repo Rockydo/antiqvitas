@@ -807,7 +807,7 @@ promote_religious_tolerance = {
 
 	allow = {
 		religious_unity < 1.0
-		NOT = { government_type = government_type:theocracy }
+		NOT = { government_type ?= government_type:theocracy }
 		OR = {
 			current_age = age_4_reformation
 			current_age = age_5_absolutism

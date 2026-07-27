@@ -8,7 +8,7 @@ republican_foundation_law = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 	}
 
 	republicanism_policy = {
@@ -83,7 +83,7 @@ republican_election_law = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 	}
 	allow = { has_regular_elections = yes }
 	consolidated_power = {
@@ -114,7 +114,7 @@ republican_power_law = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 	}
 
 	broad_executive_power_policy = {
@@ -167,7 +167,7 @@ principle_of_administration_law = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 	}
 
 	political_principle = {
@@ -244,7 +244,7 @@ republican_electorate_law = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 	}
 
 	landholders = {

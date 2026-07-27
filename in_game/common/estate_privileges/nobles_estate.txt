@@ -41,7 +41,7 @@ auxilium_et_consilium = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 	}
 	allow = {
 		has_advance = noble_knights
@@ -117,8 +117,8 @@ noble_marriage_rights = {
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		OR = {
-			government_type = government_type:monarchy
-			government_type = government_type:tribe
+			government_type ?= government_type:monarchy
+			government_type ?= government_type:tribe
 		}
 	}
 	allow = {
@@ -189,8 +189,8 @@ elaborate_court_ceremonies = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		NOT = { government_type = government_type:tribe }
-		NOT = { government_type = government_type:steppe_horde }
+		NOT = { government_type ?= government_type:tribe }
+		NOT = { government_type ?= government_type:steppe_horde }
 	}
 	allow = {
 
@@ -242,7 +242,7 @@ manorial_courts = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 	}
 
 
@@ -260,7 +260,7 @@ increased_civic_engagement = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 	}
 
 
@@ -277,7 +277,7 @@ inherited_offices = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 	}
 
 
@@ -294,7 +294,7 @@ recognized_communes = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 	}
 
 
@@ -312,7 +312,7 @@ appoint_ecclesiastical_offices = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:theocracy
+		government_type ?= government_type:theocracy
 	}
 
 
@@ -329,7 +329,7 @@ control_of_the_borderlands = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:theocracy
+		government_type ?= government_type:theocracy
 	}
 
 
@@ -940,7 +940,7 @@ autonomous_local_commanders = {
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		has_or_had_tag = KNI
-		government_type = government_type:theocracy
+		government_type ?= government_type:theocracy
 	}
 
 	country_modifier = {

@@ -114,7 +114,7 @@ prince_bishopric_reform = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:theocracy
+		government_type ?= government_type:theocracy
 		OR = {
 			religion = religion:catholic
 			religion = religion:lutheran
@@ -142,7 +142,7 @@ guru_leadership_reform = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		government_type = government_type:theocracy
+		government_type ?= government_type:theocracy
 		religion.group = religion_group:dharmic
 	}
 

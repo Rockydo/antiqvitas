@@ -17,7 +17,7 @@ byzantine_succession_crisis = {
 			has_any_active_disaster = no
 			any_active_disaster = { disaster_type = disaster_type:fate_of_the_phoenix }
 		}
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 		trigger_if = {
 			limit = {
 				tag = BYZ

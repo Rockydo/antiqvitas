@@ -10,7 +10,7 @@ savonarola_disaster = {
 	can_start = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		tag = FLO
-		government_type = government_type:republic
+		government_type ?= government_type:republic
 		religion = religion:catholic
 		current_year > 1470
 		current_year < 1530

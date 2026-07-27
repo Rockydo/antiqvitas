@@ -6932,3 +6932,17 @@ reviewed 128px BC7 DDS.
 - The focused runtime acceptance is complete. The final paired smoke passes with
   zero mod-only error lines; the complete 98-check validation gate is rerun
   immediately before committing the combined research/economy tranche.
+
+## 2026-07-27 - Removed the remaining fresh-start political compiler failures
+
+- Extended the mounted-system quarantine from outer false gates to nullable-link
+  safety throughout nested policy and `allow` bodies. This covers government
+  type, ruler, heir, regent, character, and dynasty references across the full
+  installed union.
+- The first fresh selector fell from the previously recorded 2,855 parliament
+  failures to zero. Its actual-player start exposed three Borjigin comparisons
+  in the vanilla formable registry; exact-mirroring all 151 installed formables
+  removed both the error and the post-antique country-formation leakage.
+- The repeated fresh selector and actual-player start emit zero
+  `Script system error!` entries, with no market self-relation or market-action
+  scope diagnostics. Full validation and paired smoke are the commit gates.

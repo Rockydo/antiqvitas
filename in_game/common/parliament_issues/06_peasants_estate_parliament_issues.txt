@@ -578,8 +578,8 @@ curb_central_authority = {
 
 	allow = {
 		OR = {
-			government_type = government_type:monarchy
-			government_type = government_type:republic
+			government_type ?= government_type:monarchy
+			government_type ?= government_type:republic
 		}
 		any_active_disaster = { disaster_type = disaster_type:revolution_disaster }
 	}
@@ -633,8 +633,8 @@ revoke_privilege_of_the_nobles = {
 
 	allow = {
 		OR = {
-			government_type = government_type:monarchy
-			government_type = government_type:republic
+			government_type ?= government_type:monarchy
+			government_type ?= government_type:republic
 		}
 		any_active_disaster = { disaster_type = disaster_type:revolution_disaster }
 		"estate(estate_type:nobles_estate)" = { num_privileges > 3 }
@@ -700,8 +700,8 @@ reduce_peasant_taxation = {
 
 	allow = {
 		OR = {
-			government_type = government_type:monarchy
-			government_type = government_type:republic
+			government_type ?= government_type:monarchy
+			government_type ?= government_type:republic
 		}
 		any_active_disaster = { disaster_type = disaster_type:revolution_disaster }
 		estate_tax_percentage:peasants_estate > 0.1
@@ -764,7 +764,7 @@ establish_a_constitution = {
 	}
 
 	allow = {
-		government_type = government_type:monarchy
+		government_type ?= government_type:monarchy
 		any_active_disaster = { disaster_type = disaster_type:revolution_disaster }
 		OR = {
 			"estate_power(estate_type:crown_estate)" < 0.2

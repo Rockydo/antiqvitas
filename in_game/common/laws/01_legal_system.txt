@@ -320,7 +320,7 @@ legal_code_law = {
 
 	ordinances_of_justice = {
 		potential = {
-			government_type = government_type:republic
+			government_type ?= government_type:republic
 			OR = {
 				"estate_power(estate_type:burghers_estate)" >= 0.5
 				capital.continent = continent:europe
@@ -345,7 +345,7 @@ legal_code_law = {
 	consiglio_maggiore = {
 		unique = yes
 		potential = {
-			government_type = government_type:republic
+			government_type ?= government_type:republic
 			culture = { has_culture_group = culture_group:italian_group }
 		}
 		allow = {
