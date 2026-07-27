@@ -1,5 +1,28 @@
 # Historical Assumptions
 
+## 2026-07-27 - Legal profiles are bounded comparative frames, not recovered codes
+
+The thirteen legal profiles group polities that share enough political and
+material context to support distinct gameplay terminology. They do not claim
+that Germanic peoples, Brittonic and Hibernian peoples, Iranian dynasties,
+African communities, eastern maritime societies, or American and Oceanian
+communities possessed a single written code or identical institutions.
+
+Each of the fourteen questions is a comparative gameplay problem. The three
+options are historically plausible emphases—central registration, mediated
+council or lineage practice, and local or household custody—not documented
+legislative programmes universally available in AD 1. Roman and Western Han
+profiles have the strongest institutional evidence; remote and archaeological
+profiles deliberately carry contested confidence and explicit non-state,
+non-code boundaries.
+
+Sources, profile membership, confidence, and boundaries are recorded per tag
+in `docs/m6/ancient_law_profiles.csv`; every option is routed in
+`docs/m6/ancient_law_options.csv`.
+
+[secure Roman and broad Western Han structures; contested option choice,
+numerical effects, within-profile uniformity, and most remote legal detail]
+
 ## 2026-07-27 - Alternative reforms are counterfactual institutional emphases
 
 Augustan Dyarchy, Memorialist Han Court, Great-House Compact, Boule and

@@ -475,6 +475,7 @@ ADVANCE_PROFILES = {
 
 S2_ESTATE_PRIVILEGES = ROOT / "docs/m6/estate_order_privileges.csv"
 S2_ALTERNATIVE_REFORMS = ROOT / "docs/m6/alternative_reform_paths.csv"
+S2_ANCIENT_LAWS = ROOT / "docs/m6/ancient_law_options.csv"
 S2_ESTATE_ADVANCE_PROFILES: dict[str, tuple[str, ...]] = {
     "roman": ("roman_italic",),
     "han": ("han_east_asian",),
@@ -1151,6 +1152,26 @@ def content_unlocks(records: tuple[Advance, ...]) -> dict[str, tuple[tuple[str, 
             result[candidates[index * len(candidates) // len(reform_keys)].key].append(
                 ("unlock_government_reform", reform)
             )
+    with S2_ANCIENT_LAWS.open(encoding="utf-8-sig", newline="") as handle:
+        law_rows = list(csv.DictReader(handle))
+    profile_laws = tuple(dict.fromkeys(
+        (row.get("law") or "").strip() for row in law_rows
+    ))
+    if len(profile_laws) != 182 or any(not law.startswith("antq_s2_") for law in profile_laws):
+        raise ValueError("S2 legal registry must expose 182 unique profile law groups")
+    universal_roots = sorted(
+        (
+            record for record in records
+            if record.age_index == 0 and record.depth == 0 and record.profile == "shared"
+        ),
+        key=lambda record: (record.track, record.key),
+    )
+    if len(universal_roots) != 10:
+        raise ValueError("S2 legal unlocks require the ten universally held Age-I roots")
+    for index, law in enumerate(profile_laws):
+        result[universal_roots[index % len(universal_roots)].key].append(
+            ("unlock_law", law)
+        )
     managed_roman_buildings: set[str] = set()
     for advance, buildings in ROMAN_ECONOMY_UNLOCKS.items():
         result[advance].extend(("unlock_building", building) for building in buildings)
@@ -1394,6 +1415,24 @@ def validate(records: tuple[Advance, ...]) -> None:
             )
         if len(actual_targets) != len(actual_set):
             failures.append(f"{field} repeats one or more unlock targets")
+    with S2_ANCIENT_LAWS.open(encoding="utf-8-sig", newline="") as handle:
+        expected_profile_laws = {
+            (row.get("law") or "").strip() for row in csv.DictReader(handle)
+        }
+    actual_profile_laws = [
+        target
+        for entries in unlocks.values()
+        for unlock_field, target in entries
+        if unlock_field == "unlock_law" and target.startswith("antq_s2_")
+    ]
+    if set(actual_profile_laws) != expected_profile_laws:
+        failures.append(
+            "S2 profile-law unlock coverage mismatch: "
+            f"missing={sorted(expected_profile_laws - set(actual_profile_laws))}, "
+            f"extra={sorted(set(actual_profile_laws) - expected_profile_laws)}"
+        )
+    if len(actual_profile_laws) != len(set(actual_profile_laws)):
+        failures.append("S2 profile-law unlocks repeat one or more targets")
     by_key = {record.key: record for record in records}
     required_by = {required for record in records for required in record.requires}
     leaves = [record.key for record in records if record.key not in required_by]

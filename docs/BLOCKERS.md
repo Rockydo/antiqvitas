@@ -1,5 +1,25 @@
 # ANTIQVITAS BLOCKERS
 
+## 2026-07-27 - Focused S2 law-panel start did not leave the main menu
+
+Status: bounded driver-evidence limitation; does not block continued work.
+
+After the 101-command validation and paired vanilla/mod smoke passed, the
+driver rendered the ANTIQVITAS menu and attempted its Observer selection/start
+sequence twice. Both captured "start" frames remained on the main menu, so the
+driver could not produce a reliable live law-panel screenshot. The second
+capture is
+`docs/screens/20260727_105024/manual_selection_start_attempt2.png`.
+
+The failed transition emitted no new `error.log` content: the file remained
+exactly 1,211 bytes, with no removed-law, invalid-policy, trigger, or
+script-system diagnostic. Static startup serialization independently verifies
+fourteen selected profile laws on every one of the 199 authored governments;
+all 292 tags are covered by exact profile triggers and universally held law
+unlocks. Per the two-attempt and reduced-QA rules, further campaign-start
+retries are deferred to driver work rather than used to delay the legal
+content tranche.
+
 ## 2026-07-27 - Rome twelve-month budget capture interrupted by renderer exit
 
 Status: bounded runtime-evidence limitation; does not block continued work.

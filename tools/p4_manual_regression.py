@@ -210,6 +210,29 @@ def build_report() -> dict[str, object]:
         "ancient alternative reform paths regressed",
         failures,
     )
+    law_profiles = rows(ROOT / "docs/m6/ancient_law_profiles.csv")
+    law_options = rows(ROOT / "docs/m6/ancient_law_options.csv")
+    law_groups = {(row["profile"], row["law"]) for row in law_options}
+    require(
+        len(law_profiles) == 292
+        and len({row["tag"] for row in law_profiles}) == 292
+        and len({row["profile"] for row in law_profiles}) == 13,
+        "ancient legal-profile coverage regressed",
+        failures,
+    )
+    require(
+        len(law_groups) == 182
+        and len(law_options) == 546
+        and all(
+            sum(
+                row["profile"] == profile and row["law"] == law
+                for row in law_options
+            ) == 3
+            for profile, law in law_groups
+        ),
+        "ancient multi-option legal breadth regressed",
+        failures,
+    )
     councils = (
         ROOT / "in_game/common/parliament_types/00_antiquitas_s2.txt"
     ).read_text(encoding="utf-8-sig")
@@ -251,6 +274,9 @@ def build_report() -> dict[str, object]:
             "profile_locked_estate_privileges": len(estate_orders),
             "political_profile_contracts": len(political_contracts),
             "alternative_reform_paths": len(alternative_reforms),
+            "ancient_law_profiles": len(law_profiles),
+            "ancient_law_groups": len(law_groups),
+            "ancient_law_options": len(law_options),
             "diseases": len(disease["installed_diseases"]),
             "court_backgrounds": len(list(court_dir.glob("antq_throne_room_*.dds"))),
         },

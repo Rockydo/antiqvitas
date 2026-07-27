@@ -42,8 +42,9 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 37 reforms, 100 privileges, and
-  45 laws serve 292 opening polities.
+  thin outside the first replacement tranches: 37 reforms and 100 privileges
+  serve 292 opening polities. The legal layer now has 227 ancient groups,
+  including 182 three-option profile laws, but needs later-century additions.
 - Exact-name mirrors still leave most installed estates, privileges, parliament
   material, cabinet actions, laws, religious aspects, and artillery-facing UI in
   the mounted union. Rome now starts at technology level 3 with a 9.60K reserve
@@ -137,7 +138,7 @@ and focused runtime probe all pass.
   - [ ] Replace required gameplay breadth at both definition and
     unlock/reference layers. Preserve only locally proven engine adapters, and
     guarantee that their names, descriptions, icons, and effects cannot surface.
-    Existing namespaced ancient content remains active (100 privileges, 45 laws,
+    Existing namespaced ancient content remains active (100 privileges, 227 laws,
     37 reforms).
     - [x] Supply the first deep council/state-office replacement tranche:
       nine reform-driven council profiles, 45 profile-locked administrative
@@ -159,9 +160,10 @@ and focused runtime probe all pass.
       historical-material illustrations. The project now has 100/100
       directly illustrated ancient privileges.
     - [ ] Complete the remaining S2-P4 replacement breadth: profile-specific
-      major-country subdivisions, additional reform paths, and law groups for
-      every opening profile. The nine current profiles are an engine-valid
-      regional floor, not the final political depth target.
+      major-country subdivisions, additional reform paths, and later-century
+      legal development. The council/reform profiles remain an engine-valid
+      regional floor rather than the final political depth target; all opening
+      tags now have a separate 13-profile legal package.
   - [x] Eliminate the fresh-bookmark parliament compiler failures before the
     replacement UI probe. The 2026-07-26 Britain/Hibernia bookmark isolated all
     2,855 `Script system error!` entries to
@@ -517,6 +519,17 @@ and focused runtime probe all pass.
   - Expand law groups across citizenship/status, slavery/manumission, taxation,
     land tenure, army recruitment, provincial administration, cult, family/
     inheritance, commerce, coinage, courts, offices, migration, and diplomacy.
+  - [x] Replace the one-option legal floor with 13 sourced profiles covering
+    all 292 opening tags. Each profile now has 14 law groups across every
+    required theme and three mutually exclusive policies per group: 182 new
+    groups, 546 options, 42 distinct effect packages per profile, generated
+    starting selections, advance unlocks, estate preferences, descriptions,
+    and eleven-client localization. Rome, Han, Arsacid-Iranian, eastern
+    Mediterranean, Indic, steppe, Germanic, Brittonic-Hibernian, Arabian,
+    northern forest/river, African, eastern maritime, and
+    American/Oceanian systems no longer share one generic legal menu.
+  - [ ] Add country-specific exceptional laws and dated later-century options;
+    continue expanding profile-specific privileges beyond the current 100.
   - Acceptance: all 229 tags have useful legal/political choices; major countries
     have bespoke depth; no duplicate filler effect or post-476 inheritance.
 

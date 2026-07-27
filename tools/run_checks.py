@@ -35,6 +35,7 @@ class Command:
 
 VALIDATE_COMMANDS = (
     Command("tools/s2_estate_orders.py", ("--check",)),
+    Command("tools/s2_ancient_laws.py", ("--check",)),
     Command("tools/pdxlint.py"),
     Command("tools/m6_power.py", ("--check",)),
     Command("tools/s2_ancient_politics.py", ("--check",)),

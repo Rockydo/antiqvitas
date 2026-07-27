@@ -1,5 +1,29 @@
 # Progress
 
+## 2026-07-27 - Thirteen deep ancient legal profiles
+
+- Added 182 profile-gated law groups and 546 mutually exclusive policies,
+  raising active ancient law breadth from 45 to 227 groups. Every profile has
+  fourteen questions covering status, dependent labor, revenue, land,
+  recruitment, local rule, cult, household, commerce, coinage, courts,
+  appointments, migration, and external compacts.
+- Assigned every one of the 292 opening tags exactly once across Roman, Han,
+  Arsacid-Iranian, eastern Mediterranean civic-royal, Indic, Inner Asian,
+  Germanic, Brittonic-Hibernian, Arabian, northern forest/river, African,
+  eastern maritime, and American/Oceanian profiles.
+- Every law has three substantive tradeoff options, profile-aware terminology,
+  estate preferences, at least three verified effects, a source route,
+  confidence boundary, and complete eleven-client localization. The validator
+  requires all 42 effect packages within each profile to remain distinct.
+- Generated fourteen opening selections for every authored government and
+  attached all 182 groups once to the ten universally held Age-I foundations.
+  The knowledge tree now carries 579 ancient-system unlocks.
+- Added permanent breadth/profile/uniqueness checks to validation and the
+  manual-symptom regression. All 101 validation commands and paired smoke are
+  green with zero mod-unique errors. The bounded live panel attempt remained
+  at the main menu twice but emitted no law or script diagnostics; evidence is
+  in `docs/playtests/S2_ANCIENT_LAWS_20260727.md`.
+
 ## 2026-07-27 - First branching ancient reform expansion
 
 - Added 18 profile-locked government reforms—two each for Roman, Han, Iranian,

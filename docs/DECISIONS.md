@@ -1,5 +1,21 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - Legal identity is tag-profiled independently of government type
+
+The installed law schema permits country-scope `potential` triggers and does
+not require a `law_gov_group`. ANTIQVITAS uses thirteen generated country
+profile triggers rather than making every monarchy, republic, tribe, or steppe
+government inherit the same law menu. Collision-safe engine tags are kept in
+one trigger registry, while the design-tag ledger remains readable and
+source-auditable.
+
+All 182 groups are unlocked exactly once on the ten universally held Age-I
+roots. Their profile triggers reduce the visible day-one menu to the fourteen
+questions appropriate to that polity, while generated opening governments
+receive the profile's mediated starting option. This separates mechanical
+unlock reachability from historical availability and survives later tag
+changes through the locally verified `has_or_had_tag` trigger.
+
 ## 2026-07-27 - Reform branches inherit a political profile
 
 Alternative government reforms are members of one of nine political profile

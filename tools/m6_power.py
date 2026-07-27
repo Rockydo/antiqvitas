@@ -12,6 +12,11 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from dates import AntqDate, BiographyDate, M2_MIRROR_LANGUAGES
+from s2_ancient_laws import (
+    all_law_options as s2_all_law_options,
+    profile_law_pairs as s2_profile_law_pairs,
+    starting_laws_by_tag as s2_starting_laws_by_tag,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "docs/m6"
@@ -533,6 +538,7 @@ def load_power_data() -> PowerData:
                 failures.append(f"law {row['law']} uses unharvested modifier {key}")
         if row["confidence"] not in {"secure", "contested"}:
             failures.append(f"law {row['law']} has invalid confidence {row['confidence']}")
+    law_options.update(s2_all_law_options())
 
     government_rows_by_tag = {row["design_tag"]: row.copy() for row in governments_rows}
     if len(government_rows_by_tag) != len(governments_rows):
@@ -602,6 +608,26 @@ def load_power_data() -> PowerData:
             )
             government["source"] = f"{government['source']};{row['source']}"
             government["note"] = f"{government['note']} Regional layer: {row['note']}"
+    profile_laws = s2_starting_laws_by_tag()
+    for design_tag, government in government_rows_by_tag.items():
+        if design_tag not in profile_laws:
+            failures.append(f"government {design_tag} has no S2 legal profile")
+            continue
+        existing_laws = dict(assignments(
+            government["laws"], f"government {design_tag} laws before S2 profile"
+        ))
+        for law, option in profile_laws[design_tag]:
+            if law in existing_laws and existing_laws[law] != option:
+                failures.append(f"S2 legal profile conflicts on {design_tag} law {law}")
+            existing_laws[law] = option
+        government["laws"] = "|".join(
+            f"{law}={option}" for law, option in existing_laws.items()
+        )
+        government["source"] = f"{government['source']};S2-LAWS"
+        government["note"] = (
+            f"{government['note']} Legal profile: fourteen mutually exclusive "
+            "AD 1 policy questions from the generated S2 law registry."
+        )
     governments_rows = list(government_rows_by_tag.values())
 
     governments: dict[str, dict[str, str]] = {}
@@ -1414,7 +1440,8 @@ def check(data: PowerData) -> bool:
     print(
         f"m6_power: PASS ({len(data.dynasties)} dynasties, {len(data.characters)} characters, "
         f"{len(data.governments)} governments, {len(data.ruler_terms)} ruler terms, "
-        f"{len(data.regnal_histories)} regnal-history rows, {len(data.privileges)} privileges, {len(data.laws)} laws; "
+        f"{len(data.regnal_histories)} regnal-history rows, {len(data.privileges)} privileges, "
+        f"{len(data.laws) + len(s2_profile_law_pairs())} laws; "
         f"{sum(1 for government in data.governments.values() if has_named_active_head(government))} named / "
         f"{sum(1 for government in data.governments.values() if government['ruler'] == 'random')} anonymous profiles)"
     )
