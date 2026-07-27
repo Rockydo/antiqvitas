@@ -1,5 +1,29 @@
 # Progress
 
+## 2026-07-27 - Four major Britain/Ireland starts receive distinct political games
+
+- Replaced the generic tribal-kingdom floor for Trinovantes, Brigantes,
+  Durotriges, and Iverni. Each now has a separate opening reform, council, five
+  programmes, three issue/agenda pairs, six social-order identities, and six
+  profile privileges.
+- Added eight Age-I alternatives: Trinovantian oppidum/channel, Brigantian
+  kindred/hillfort, Durotrigian coin-weight/settlement, and Ivernian
+  seaway/cattle-gift paths. All twelve reforms activate their correct councils
+  and have unique research unlocks.
+- Generated and reviewed eight new archaeological 3x2 atlases. I rejected and
+  regenerated the first Brigantian political sheet because it contained living
+  animals; the accepted art is strictly object/landscape based. Forty-eight new
+  direct BC7 chains bring the nine-surface ledger to 1,306 assets.
+- Installed breadth is now 41 councils, 229 programmes, 147 issues, 147
+  agendas, 149 political contracts, 340 privileges, 227 laws, and 931
+  ancient-system unlocks. All 292 opening profiles remain researchable.
+- `tools/s2_british_politics_depth.py` permanently verifies the four opening
+  setups, profile breadth, council activation, Age-I routing, privilege gates,
+  and complete direct art. Full validation passes 109/109 commands; paired
+  vanilla/mod smoke reaches responsive rendered menus with zero new or
+  mod-unique error-log lines. Evidence is recorded in
+  `docs/playtests/S2_BRITISH_POLITICAL_DEPTH_20260727.md`.
+
 ## 2026-07-27 - Cherusci, Chatti, Batavi, and Semnones receive distinct political games
 
 - Replaced the shared tribal-kingdom and elder-council shell for four

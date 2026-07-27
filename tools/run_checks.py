@@ -44,6 +44,7 @@ VALIDATE_COMMANDS = (
     Command("tools/s2_iranian_politics_depth.py"),
     Command("tools/s2_steppe_politics_depth.py"),
     Command("tools/s2_germanic_politics_depth.py"),
+    Command("tools/s2_british_politics_depth.py"),
     Command("tools/world_roster.py"),
     Command("tools/generate_tag_map.py", ("--check",)),
     Command("tools/s2_arabia_granularity.py", ("--check",)),

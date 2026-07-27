@@ -73,7 +73,7 @@ An anonymous/collective profile is not an omitted polity. It is the deliberate `
 | BLR | `antq_tribal_kingdom` | AWE-DNIEPER-DVINA;P13;AWE-DNIEPER-DVINA;LIT-NEMAN-STRIATED;RAS-ZAR;AAC-LIPITA;P13;S2-LAWS |
 | BPC | `antq_tribal_kingdom` | P8.7;P13;VU-BRUSH;P8.7;P11;P13;VU-BRUSH;LIT-WLSC;S2-LAWS |
 | BRG | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;P8.7;P11;P13;TAC-GER;S2-LAWS |
-| BRI | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;BM-DRU;P8.7;P11;P13;HE-HILLFORT;BM-DRU;S2-LAWS |
+| BRI | `antq_brigantian_hillfort_confederacy` | P8.7;P11;P13;CAH-XI;PLE;PTO-GEO-II2;BRIGANTIA-STANWICK;P8.7;P11;P13;HE-HILLFORT;BM-DRU;S2-LAWS |
 | BRT | `antq_tribal_kingdom` | P8.7;P13;PTO-GEO-II2;BM-DRU;P8.7;P11;P13;HE-HILLFORT;BM-DRU;P8.7;P13;PTO-GEO-II2;CCI-DUB;CCI-EPP;P8.7;P13;CAH-XI;CCI-EPP;S2-LAWS |
 | BTV | `antq_batavian_rhine_compact` | P8.1;P8.7;P11;P13;CAH-XI;TAC-GER;P8.7;P11;P13;TAC-GER;S2-LAWS |
 | BYE | `antq_tribal_kingdom` | P8.3;P13;SAM;S2-LAWS |
@@ -102,7 +102,7 @@ An anonymous/collective profile is not an omitted polity. It is the deliberate `
 | DNP | `antq_tribal_kingdom` | RAS-ZAR;P13;AWE-DNIEPER-DVINA;LIT-NEMAN-STRIATED;RAS-ZAR;AAC-LIPITA;P13;S2-LAWS |
 | DOB | `antq_tribal_kingdom` | P8.7;P13;PTO-GEO-II2;BM-DRU;P8.7;P11;P13;HE-HILLFORT;BM-DRU;P8.7;P13;PTO-GEO-II2;CCI-DUB;CCI-EPP;P8.7;P13;CAH-XI;CCI-EPP;S2-LAWS |
 | DUM | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;BM-DRU;P8.7;P11;P13;HE-HILLFORT;BM-DRU;S2-LAWS |
-| DUR | `antq_tribal_kingdom` | P8.7;P13;PTO-GEO-II2;BM-DRU;P8.7;P11;P13;HE-HILLFORT;BM-DRU;P8.7;P13;PTO-GEO-II2;CCI-DUB;CCI-EPP;P8.7;P13;CAH-XI;CCI-EPP;S2-LAWS |
+| DUR | `antq_durotrigian_hillfort_coin_order` | P8.7;P11;P13;CAH-XI;PTO-GEO-II2;DUROTRIGES-PROJECT;P8.7;P11;P13;HE-HILLFORT;BM-DRU;P8.7;P13;PTO-GEO-II2;CCI-DUB;CCI-EPP;P8.7;P13;CAH-XI;CCI-EPP;S2-LAWS |
 | EBL | `antq_tribal_kingdom` | P8.7;P13;PTO-GEO-II1;DARCY-IRE;P8.7;P11;P13;PTO-GEO-II1;DARCY-IRE;NMI-IRON-AGE;S2-LAWS |
 | ELY | `antq_parthian_subkingdom` | P8.2;P13;OCD;PLE;S2-LAWS |
 | EPD | `antq_tribal_kingdom` | P8.7;P13;PTO-GEO-II2;MANN-BRI;P8.7;P11;P13;HE-HILLFORT;BM-DRU;S2-LAWS |
@@ -125,7 +125,7 @@ An anonymous/collective profile is not an omitted polity. It is the deliberate `
 | IBG | `antq_tribal_kingdom` | P8.7;P13;PTO-GEO-II1;DARCY-IRE;P8.7;P11;P13;PTO-GEO-II1;DARCY-IRE;NMI-IRON-AGE;S2-LAWS |
 | ICE | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;BM-DRU;P8.7;P11;P13;HE-HILLFORT;BM-DRU;P8.7;P13;PTO-GEO-II2;CCI-DUB;CCI-EPP;S2-LAWS |
 | ILM | `antq_tribal_kingdom` | RA-DYAKOVO-UPPER;GERMANIA-NEVA;P13;RAS-DYAKOVO;RA-DYAKOVO-UPPER;GERMANIA-NEVA;P13;S2-LAWS |
-| IVN | `antq_tribal_kingdom` | P8.7;P13;PTO-GEO-II1;DARCY-IRE;P8.7;P11;P13;PTO-GEO-II1;DARCY-IRE;NMI-IRON-AGE;S2-LAWS |
+| IVN | `antq_ivernian_regional_assembly` | P8.7;P11;P13;PTO-GEO-II1;DARCY-IRE;IRON-AGE-IRELAND;P8.7;P11;P13;PTO-GEO-II1;DARCY-IRE;NMI-IRON-AGE;S2-LAWS |
 | JIN | `antq_tribal_kingdom` | P8.3;P13;SAM;S2-LAWS |
 | JUT | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;P8.7;P11;P13;TAC-GER;S2-LAWS |
 | KAL | `antq_regional_kingship` | P8.4;P13;CAH-XI;S2-LAWS |

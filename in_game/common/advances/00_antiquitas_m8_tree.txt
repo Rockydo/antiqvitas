@@ -64,6 +64,10 @@ antq_provincial_census = {
 	unlock_government_reform = antq_himyarite_terrace_kingship
 	unlock_government_reform = antq_satavahana_deccan_kingship
 	unlock_government_reform = antq_catuvellaunian_oppidum_kingship
+	unlock_government_reform = antq_trinovantian_coin_kingship
+	unlock_government_reform = antq_brigantian_hillfort_confederacy
+	unlock_government_reform = antq_durotrigian_hillfort_coin_order
+	unlock_government_reform = antq_ivernian_regional_assembly
 	unlock_government_reform = antq_marcomannic_bohemian_kingship
 	unlock_government_reform = antq_cheruscan_kindred_assembly
 	unlock_government_reform = antq_chattian_host_order
@@ -953,6 +957,10 @@ antq_oppidum_council_summons = {
 	}
 	stability_cost_efficiency = 0.02
 	unlock_estate_privilege = antq_catuvellaunian_royal_seal_custody
+	unlock_estate_privilege = antq_trinovantian_coin_house_hearings
+	unlock_estate_privilege = antq_brigantian_leading_kindred_hearings
+	unlock_estate_privilege = antq_durotrigian_enclosure_house_hearings
+	unlock_estate_privilege = antq_ivernian_kin_group_hearings
 	starting_technology_level = 2
 	requires = antq_imperial_cult
 	ai_weight = { add = 90 }
@@ -972,6 +980,10 @@ antq_guest_friends_arbitration = {
 	global_monthly_control = 0.001
 	unlock_estate_privilege = antq_tribal_grove_custodianship
 	unlock_government_reform = antq_catuvellaunian_dynastic_mint_court
+	unlock_government_reform = antq_trinovantian_oppidum_court
+	unlock_government_reform = antq_brigantian_kindred_compact
+	unlock_government_reform = antq_durotrigian_coin_weight_council
+	unlock_government_reform = antq_ivernian_seaway_compact
 	starting_technology_level = 3
 	requires = antq_oppidum_council_summons
 	ai_weight = { add = 80 }
@@ -990,6 +1002,10 @@ antq_tribute_feast_tallies = {
 	}
 	tax_income_efficiency = small_tax_income_efficiency_bonus
 	unlock_estate_privilege = antq_catuvellaunian_oppidum_craft_market_measures
+	unlock_estate_privilege = antq_trinovantian_channel_exchange_safe_conducts
+	unlock_estate_privilege = antq_brigantian_pennine_passage_safe_conducts
+	unlock_estate_privilege = antq_durotrigian_pottery_coin_measures
+	unlock_estate_privilege = antq_ivernian_exchange_smithing_safe_conducts
 	starting_technology_level = 4
 	requires = antq_guest_friends_arbitration
 	ai_weight = { add = 70 }
@@ -1027,6 +1043,10 @@ antq_confederated_council_customs = {
 	}
 	legislative_efficiency = 0.05
 	unlock_estate_privilege = antq_catuvellaunian_channel_frontier_watch_rotations
+	unlock_estate_privilege = antq_trinovantian_woodland_pasture_compacts
+	unlock_estate_privilege = antq_brigantian_upland_community_guarantees
+	unlock_estate_privilege = antq_durotrigian_coastal_rural_guarantees
+	unlock_estate_privilege = antq_ivernian_regional_community_guarantees
 	starting_technology_level = 4
 	requires = antq_tribute_feast_tallies
 	requires = antq_clientage_oath_networks
@@ -2464,6 +2484,10 @@ antq_hillfort_muster_beacons = {
 	}
 	army_logistics_distance_modifier = 0.10
 	unlock_estate_privilege = antq_catuvellaunian_dynastic_retinue_service_terms
+	unlock_estate_privilege = antq_trinovantian_chariot_retinue_terms
+	unlock_estate_privilege = antq_brigantian_mounted_chariot_service_terms
+	unlock_estate_privilege = antq_durotrigian_retinue_chariot_terms
+	unlock_estate_privilege = antq_ivernian_seaway_following_terms
 	starting_technology_level = 2
 	requires = antq_professional_standing_armies
 	ai_weight = { add = 90 }
@@ -2482,6 +2506,10 @@ antq_chariot_screening = {
 	}
 	army_maintenance_efficiency = 0.01
 	unlock_estate_privilege = antq_catuvellaunian_sacred_place_offering_inventories
+	unlock_estate_privilege = antq_trinovantian_sacred_place_custody
+	unlock_estate_privilege = antq_brigantian_ritual_oath_custody
+	unlock_estate_privilege = antq_durotrigian_burial_sacred_custody
+	unlock_estate_privilege = antq_ivernian_wetland_offering_custody
 	starting_technology_level = 3
 	requires = antq_hillfort_muster_beacons
 	ai_weight = { add = 80 }
@@ -2500,7 +2528,15 @@ antq_champion_retinues = {
 	}
 	land_morale_modifier = 0.01
 	unlock_estate_privilege = antq_catuvellaunian_cultivator_store_compacts
+	unlock_estate_privilege = antq_trinovantian_oppidum_store_guarantees
+	unlock_estate_privilege = antq_brigantian_cattle_grain_rotations
+	unlock_estate_privilege = antq_durotrigian_field_grain_compacts
+	unlock_estate_privilege = antq_ivernian_cattle_cultivator_compacts
 	unlock_government_reform = antq_catuvellaunian_oppida_compact
+	unlock_government_reform = antq_trinovantian_channel_compact
+	unlock_government_reform = antq_brigantian_hillfort_court
+	unlock_government_reform = antq_durotrigian_settlement_compact
+	unlock_government_reform = antq_ivernian_cattle_gift_court
 	starting_technology_level = 4
 	requires = antq_chariot_screening
 	ai_weight = { add = 70 }

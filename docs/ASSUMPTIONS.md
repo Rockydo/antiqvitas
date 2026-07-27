@@ -1,5 +1,36 @@
 # Historical Assumptions
 
+## 2026-07-27 - Four Britain/Ireland political profiles use uneven evidence conservatively
+
+Dubnovellaunos is the strongest AD 1 anchor in this tranche: Oxford's Celtic
+Coin Index dates a coin naming him and the Trinovantes to 20 BCE-AD 10. Coin
+custody, oppidum stores, Channel exchange, and retinue display are defensible
+political mechanics, but they do not recover a Camulodunon cabinet or prove the
+court's exact territorial reach.
+
+The Brigantes are securely a major later northern people, but their degree of
+unity in AD 1 and Stanwick's early political role remain contested.
+Cartimandua's client-era court is reserved for later history. The Durotriges
+have an unusually distinct archaeological package of pottery, coinage,
+settlement, burial, and defended enclosures; this supports local mechanics but
+not the claim that every hillfort was occupied or subordinated to one capital.
+
+Ptolemy's Iverni are later evidence, while Iron Age Ireland has a famously
+sparse and regionally uneven settlement record. The Ivernian assembly and its
+two concentration paths are therefore explicit gameplay adapters. They do not
+project medieval *tuath* offices, ogham administration, a royal-site
+constitution, or dense fixed settlement into AD 1.
+
+Sources weighed: plan sections 8.7, 11, and 13; `CAH-XI`; `PTO-GEO-II1-2`;
+`DARCY-IRE`; [Oxford Celtic Coin Index CCI 89.0006](https://cci.arch.ox.ac.uk/id/CCI-89.0006?lang=en);
+[English Heritage, Stanwick Iron Age Fortifications](https://www.english-heritage.org.uk/visit/places/stanwick-iron-age-fortifications/history/);
+[Bournemouth University, Durotriges Project](https://www.bournemouth.ac.uk/research/projects/durotriges-project);
+and [Katharina Becker, “Iron Age Ireland: Continuity, Change, and Identity”](https://academic.oup.com/book/7223/chapter-abstract/151903839).
+
+[secure Trinovantian coin horizon and distinct Durotrigian material package;
+contested AD 1 Brigantian/Ivernian political form, territorial reach, formal
+procedure, and numerical effects]
+
 ## 2026-07-27 - Tacitus differentiates four Germanic profiles but is not an AD 1 constitution
 
 Tacitus's *Germania* was written around AD 98 and is a literary, moralizing

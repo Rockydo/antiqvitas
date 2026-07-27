@@ -211,6 +211,50 @@
 	}
 
 	text = {
+		localization_key = antq_estate_trinovantian_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_trinovantian_coin_kingship
+				has_reform = government_reform:antq_trinovantian_oppidum_court
+				has_reform = government_reform:antq_trinovantian_channel_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_brigantian_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_brigantian_hillfort_confederacy
+				has_reform = government_reform:antq_brigantian_kindred_compact
+				has_reform = government_reform:antq_brigantian_hillfort_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_durotrigian_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_durotrigian_hillfort_coin_order
+				has_reform = government_reform:antq_durotrigian_coin_weight_council
+				has_reform = government_reform:antq_durotrigian_settlement_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_ivernian_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_ivernian_regional_assembly
+				has_reform = government_reform:antq_ivernian_seaway_compact
+				has_reform = government_reform:antq_ivernian_cattle_gift_court
+			}
+		}
+	}
+
+	text = {
 		localization_key = antq_estate_marcomannic_crown_estate
 		trigger = {
 			OR = {
@@ -715,6 +759,50 @@ nobles_estate = {
 				has_reform = government_reform:antq_catuvellaunian_oppidum_kingship
 				has_reform = government_reform:antq_catuvellaunian_dynastic_mint_court
 				has_reform = government_reform:antq_catuvellaunian_oppida_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_trinovantian_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_trinovantian_coin_kingship
+				has_reform = government_reform:antq_trinovantian_oppidum_court
+				has_reform = government_reform:antq_trinovantian_channel_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_brigantian_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_brigantian_hillfort_confederacy
+				has_reform = government_reform:antq_brigantian_kindred_compact
+				has_reform = government_reform:antq_brigantian_hillfort_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_durotrigian_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_durotrigian_hillfort_coin_order
+				has_reform = government_reform:antq_durotrigian_coin_weight_council
+				has_reform = government_reform:antq_durotrigian_settlement_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_ivernian_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_ivernian_regional_assembly
+				has_reform = government_reform:antq_ivernian_seaway_compact
+				has_reform = government_reform:antq_ivernian_cattle_gift_court
 			}
 		}
 	}
@@ -1474,6 +1562,50 @@ burghers_estate = {
 	}
 
 	text = {
+		localization_key = antq_estate_trinovantian_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_trinovantian_coin_kingship
+				has_reform = government_reform:antq_trinovantian_oppidum_court
+				has_reform = government_reform:antq_trinovantian_channel_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_brigantian_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_brigantian_hillfort_confederacy
+				has_reform = government_reform:antq_brigantian_kindred_compact
+				has_reform = government_reform:antq_brigantian_hillfort_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_durotrigian_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_durotrigian_hillfort_coin_order
+				has_reform = government_reform:antq_durotrigian_coin_weight_council
+				has_reform = government_reform:antq_durotrigian_settlement_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_ivernian_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_ivernian_regional_assembly
+				has_reform = government_reform:antq_ivernian_seaway_compact
+				has_reform = government_reform:antq_ivernian_cattle_gift_court
+			}
+		}
+	}
+
+	text = {
 		localization_key = antq_estate_marcomannic_burghers_estate
 		trigger = {
 			OR = {
@@ -2113,6 +2245,50 @@ clergy_estate = {
 				has_reform = government_reform:antq_catuvellaunian_oppidum_kingship
 				has_reform = government_reform:antq_catuvellaunian_dynastic_mint_court
 				has_reform = government_reform:antq_catuvellaunian_oppida_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_trinovantian_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_trinovantian_coin_kingship
+				has_reform = government_reform:antq_trinovantian_oppidum_court
+				has_reform = government_reform:antq_trinovantian_channel_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_brigantian_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_brigantian_hillfort_confederacy
+				has_reform = government_reform:antq_brigantian_kindred_compact
+				has_reform = government_reform:antq_brigantian_hillfort_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_durotrigian_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_durotrigian_hillfort_coin_order
+				has_reform = government_reform:antq_durotrigian_coin_weight_council
+				has_reform = government_reform:antq_durotrigian_settlement_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_ivernian_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_ivernian_regional_assembly
+				has_reform = government_reform:antq_ivernian_seaway_compact
+				has_reform = government_reform:antq_ivernian_cattle_gift_court
 			}
 		}
 	}
@@ -2766,6 +2942,50 @@ peasants_estate = {
 				has_reform = government_reform:antq_catuvellaunian_oppidum_kingship
 				has_reform = government_reform:antq_catuvellaunian_dynastic_mint_court
 				has_reform = government_reform:antq_catuvellaunian_oppida_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_trinovantian_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_trinovantian_coin_kingship
+				has_reform = government_reform:antq_trinovantian_oppidum_court
+				has_reform = government_reform:antq_trinovantian_channel_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_brigantian_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_brigantian_hillfort_confederacy
+				has_reform = government_reform:antq_brigantian_kindred_compact
+				has_reform = government_reform:antq_brigantian_hillfort_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_durotrigian_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_durotrigian_hillfort_coin_order
+				has_reform = government_reform:antq_durotrigian_coin_weight_council
+				has_reform = government_reform:antq_durotrigian_settlement_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_ivernian_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_ivernian_regional_assembly
+				has_reform = government_reform:antq_ivernian_seaway_compact
+				has_reform = government_reform:antq_ivernian_cattle_gift_court
 			}
 		}
 	}
@@ -3431,6 +3651,50 @@ tribes_estate = {
 				has_reform = government_reform:antq_catuvellaunian_oppidum_kingship
 				has_reform = government_reform:antq_catuvellaunian_dynastic_mint_court
 				has_reform = government_reform:antq_catuvellaunian_oppida_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_trinovantian_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_trinovantian_coin_kingship
+				has_reform = government_reform:antq_trinovantian_oppidum_court
+				has_reform = government_reform:antq_trinovantian_channel_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_brigantian_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_brigantian_hillfort_confederacy
+				has_reform = government_reform:antq_brigantian_kindred_compact
+				has_reform = government_reform:antq_brigantian_hillfort_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_durotrigian_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_durotrigian_hillfort_coin_order
+				has_reform = government_reform:antq_durotrigian_coin_weight_council
+				has_reform = government_reform:antq_durotrigian_settlement_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_ivernian_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_ivernian_regional_assembly
+				has_reform = government_reform:antq_ivernian_seaway_compact
+				has_reform = government_reform:antq_ivernian_cattle_gift_court
 			}
 		}
 	}

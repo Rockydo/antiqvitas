@@ -148,6 +148,30 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "P8.7;P11;P13;CAH-XI;BM-DRU", "contested",
         "Tasciovanian kingship coordinates dynastic mints, oppida, retinues, sacred places, and exchange without claiming a recovered British constitution.",
     ),
+    "antq_trinovantian_coin_kingship": (
+        "global_nobles_estate_power=0.11|global_burghers_estate_power=0.09|"
+        "nobles_estate_power_from_cabinet=0.23|country_cabinet_efficiency=0.025",
+        "P8.7;P11;P13;CAH-XI;CCI-DUB;BM-DRU", "contested",
+        "Dubnovellaunos's coin horizon supports a distinct Trinovantian court while exact Camulodunon procedure and dynastic reach remain unrecoverable.",
+    ),
+    "antq_brigantian_hillfort_confederacy": (
+        "global_tribes_estate_power=0.13|global_nobles_estate_power=0.08|"
+        "tribes_estate_power_from_cabinet=0.24|replace_cabinet_member_cost_modifier=0.08",
+        "P8.7;P11;P13;CAH-XI;PLE;PTO-GEO-II2;BRIGANTIA-STANWICK", "contested",
+        "A large but internally varied northern frame coordinates kindreds, routes, stores, and musters without projecting Cartimandua's later client court back to AD 1.",
+    ),
+    "antq_durotrigian_hillfort_coin_order": (
+        "global_nobles_estate_power=0.08|global_burghers_estate_power=0.11|"
+        "estate_power_from_cabinet=0.23|replace_cabinet_member_cost_modifier=0.07",
+        "P8.7;P11;P13;CAH-XI;PTO-GEO-II2;DUROTRIGES-PROJECT", "contested",
+        "Distinctive coinage, pottery, burial, settlement, and enclosure evidence supports a local order without proving one centralized Durotrigian state.",
+    ),
+    "antq_ivernian_regional_assembly": (
+        "global_tribes_estate_power=0.15|global_nobles_estate_power=0.06|"
+        "tribes_estate_power_from_cabinet=0.25|replace_cabinet_member_cost_modifier=0.06",
+        "P8.7;P11;P13;PTO-GEO-II1;DARCY-IRE;IRON-AGE-IRELAND", "contested",
+        "A deliberately low-centralization Ivernian adapter represents seasonal coordination without back-projecting medieval Gaelic offices or false settlement density.",
+    ),
     "antq_marcomannic_bohemian_kingship": (
         "global_tribes_estate_power=0.12|global_nobles_estate_power=0.10|"
         "tribes_estate_power_from_cabinet=0.20|nobles_estate_power_from_cabinet=0.16|"
@@ -604,6 +628,38 @@ ALTERNATIVE_REFORMS: tuple[tuple[str, str, str, str, str, str, str, str, str], .
      "Distribute seasonal host, provision, amber-route, and affiliate guarantees among recognized districts and kindreds.",
      "global_tribes_estate_power=0.18|global_nobles_estate_power=0.08|tribes_estate_power_from_cabinet=0.31|global_levy_size_modifier=0.03|replace_cabinet_member_cost_modifier=0.08",
      "P8.7;P11;P13;CAH-XI;TAC-GER", "contested", "The district branch uses Tacitus's confederate scale without literalizing his rhetorical hundred-canton claim or inventing fixed quotas."),
+    ("antq_trinovantian_oppidum_court", "trinovantian", "tribe", "Trinovantian Oppidum Court",
+     "Concentrate coin custody, stores, craft measures, petitions, and succession display around the principal oppidum court.",
+     "global_crown_estate_power=0.10|global_nobles_estate_power=0.11|global_burghers_estate_power=0.09|country_cabinet_efficiency=0.03|set_cabinet_member_cost_modifier=-0.04",
+     "P8.7;P11;P13;CAH-XI;CCI-DUB;BM-DRU", "contested", "The branch uses coin and oppidum evidence without inventing a centralized Trinovantian mint bureaucracy, fixed capital administration, or uniform urban polity."),
+    ("antq_trinovantian_channel_compact", "trinovantian", "tribe", "Trinovantian Channel Compact",
+     "Entrust landing security, weights, imported vessels, escorts, restitution, and gifts to protected exchange households.",
+     "global_burghers_estate_power=0.18|global_nobles_estate_power=0.07|burghers_estate_power_from_cabinet=0.30|global_trade_through_owned_territory_efficiency=0.035|replace_cabinet_member_cost_modifier=0.07",
+     "P8.7;P11;P13;CAH-XI;CCI-DUB;BM-DRU", "contested", "Cross-Channel exchange is securely relevant, but no surviving compact, customs schedule, or permanent merchant council is claimed."),
+    ("antq_brigantian_kindred_compact", "brigantian", "tribe", "Brigantian Kindred Compact",
+     "Bind participating northern communities through witnessed passage, pasture, compensation, refuge, gift, and muster agreements.",
+     "global_tribes_estate_power=0.19|global_nobles_estate_power=0.07|tribes_estate_power_from_cabinet=0.31|replace_cabinet_member_cost_modifier=0.09|stability_cost_efficiency=-0.02",
+     "P8.7;P11;P13;CAH-XI;PLE;PTO-GEO-II2", "contested", "The branch exposes confederate bargaining without asserting that the later Brigantian name denoted one permanent AD 1 federation or equal member peoples."),
+    ("antq_brigantian_hillfort_court", "brigantian", "tribe", "Brigantian Hillfort Court",
+     "Build a more concentrated northern court around selected stores, route intelligence, retinue gifts, hostages, and repeated musters.",
+     "global_nobles_estate_power=0.17|global_tribes_estate_power=0.10|nobles_estate_power_from_cabinet=0.29|global_levy_size_modifier=0.03|replace_cabinet_member_cost_modifier=0.13",
+     "P8.7;P11;P13;CAH-XI;BRIGANTIA-STANWICK", "contested", "Stanwick and later royal politics justify a possible concentration path, but neither is treated as proof of an AD 1 capital or Cartimanduan constitution."),
+    ("antq_durotrigian_coin_weight_council", "durotrigian", "tribe", "Durotrigian Coin-Weight Council",
+     "Give coin, pottery, metalworking, landing, and measured-exchange households greater authority over shared standards.",
+     "global_burghers_estate_power=0.19|global_nobles_estate_power=0.06|burghers_estate_power_from_cabinet=0.31|global_production_efficiency=0.025|set_cabinet_member_cost_modifier=-0.04",
+     "P8.7;P11;P13;CAH-XI;DUROTRIGES-PROJECT", "contested", "Distinctive material production supports the branch, but it does not claim a recovered coin council, central mint, or modern market economy."),
+    ("antq_durotrigian_settlement_compact", "durotrigian", "tribe", "Durotrigian Settlement Compact",
+     "Coordinate selected enclosures, rural stores, refuge, pottery, cattle, coastal watch, and compensation through local communities.",
+     "global_tribes_estate_power=0.15|global_peasants_estate_power=0.11|tribes_estate_power_from_cabinet=0.27|global_monthly_control=0.0005|replace_cabinet_member_cost_modifier=0.06",
+     "P8.7;P11;P13;CAH-XI;DUROTRIGES-PROJECT", "contested", "The path preserves distributed settlement evidence and explicitly avoids treating every hillfort as an occupied fortress or member of a formal league."),
+    ("antq_ivernian_seaway_compact", "ivernian", "tribe", "Ivernian Seaway Compact",
+     "Coordinate landing places, hide boats, escorts, beads, ceramics, iron, compensation, and hospitality along regional routes.",
+     "global_burghers_estate_power=0.13|global_tribes_estate_power=0.12|estate_power_from_cabinet=0.25|global_trade_through_owned_territory_efficiency=0.03|replace_cabinet_member_cost_modifier=0.05",
+     "P8.7;P11;P13;PTO-GEO-II1;DARCY-IRE;IRON-AGE-IRELAND", "contested", "The branch represents defensible exchange relationships without inventing a port bureaucracy, written compact, or dense settlement hierarchy."),
+    ("antq_ivernian_cattle_gift_court", "ivernian", "tribe", "Ivernian Cattle-Gift Court",
+     "Concentrate hospitality, cattle gifts, sureties, martial followings, ritual custody, and compensation around a prestigious household.",
+     "global_nobles_estate_power=0.14|global_tribes_estate_power=0.13|nobles_estate_power_from_cabinet=0.25|global_levy_size_modifier=0.025|replace_cabinet_member_cost_modifier=0.10",
+     "P8.7;P11;P13;PTO-GEO-II1;DARCY-IRE;IRON-AGE-IRELAND", "contested", "This is a playable concentration path, not a claim for an AD 1 Ivernian king, medieval Gaelic court, codified clientship, or island-wide political order."),
 )
 
 SUCCESSOR_REFORMS: tuple[
@@ -931,6 +987,10 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
     "himyarite": ("antq_himyarite_terrace_kingship",),
     "satavahana": ("antq_satavahana_deccan_kingship",),
     "catuvellaunian": ("antq_catuvellaunian_oppidum_kingship",),
+    "trinovantian": ("antq_trinovantian_coin_kingship",),
+    "brigantian": ("antq_brigantian_hillfort_confederacy",),
+    "durotrigian": ("antq_durotrigian_hillfort_coin_order",),
+    "ivernian": ("antq_ivernian_regional_assembly",),
     "marcomannic": ("antq_marcomannic_bohemian_kingship",),
     "cheruscan": ("antq_cheruscan_kindred_assembly",),
     "chattian": ("antq_chattian_host_order",),
@@ -970,6 +1030,10 @@ PROFILE_PARLIAMENTS = {
     "himyarite": "antq_himyarite_royal_council",
     "satavahana": "antq_satavahana_royal_council",
     "catuvellaunian": "antq_catuvellaunian_royal_council",
+    "trinovantian": "antq_trinovantian_camulodunon_council",
+    "brigantian": "antq_brigantian_northern_council",
+    "durotrigian": "antq_durotrigian_hillfort_assembly",
+    "ivernian": "antq_ivernian_regional_gathering",
     "marcomannic": "antq_marcomannic_royal_council",
     "cheruscan": "antq_cheruscan_coalition_assembly",
     "chattian": "antq_chattian_host_council",
@@ -1481,7 +1545,7 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    expected_contract_count = 40 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    expected_contract_count = 44 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -1501,6 +1565,7 @@ def load_power_data() -> PowerData:
             "judean", "cappadocian", "thracian", "bosporan",
             "galilean", "batanean", "commagenean", "emesan",
             "cheruscan", "chattian", "batavian", "semnonian",
+            "trinovantian", "brigantian", "durotrigian", "ivernian",
     } - {"roman", "han"}
     if (
         len(path_rows) != len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
@@ -1928,6 +1993,50 @@ antq_catuvellaunian_oppidum_kingship = {
 	years = 2
 }
 
+antq_trinovantian_coin_kingship = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_nobles_estate_power = 0.07
+		global_burghers_estate_power = 0.05
+		research_speed = 0.08
+	}
+	years = 2
+}
+
+antq_brigantian_hillfort_confederacy = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		global_levy_size_modifier = 0.025
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_durotrigian_hillfort_coin_order = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_burghers_estate_power = 0.07
+		global_production_efficiency = 0.025
+		research_speed = 0.08
+	}
+	years = 2
+}
+
+antq_ivernian_regional_assembly = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.09
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		research_speed = 0.07
+	}
+	years = 2
+}
+
 antq_marcomannic_bohemian_kingship = {
 	major = yes
 	government = tribe
@@ -2242,6 +2351,14 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_satavahana_deccan_kingship_desc", "A conservative Deccan court adapter balancing titled houses, religious gifts, guild exchange, cultivation, waterworks, and routes."),
         ("antq_catuvellaunian_oppidum_kingship", "Catuvellaunian Oppidum Kingship"),
         ("antq_catuvellaunian_oppidum_kingship_desc", "Tasciovanus's kingship coordinating dynastic mints, oppida, retinues, sacred places, cultivation, and Channel exchange."),
+        ("antq_trinovantian_coin_kingship", "Trinovantian Coin Kingship"),
+        ("antq_trinovantian_coin_kingship_desc", "Dubnovellaunos's bounded court coordinating coin custody, Camulodunon stores, Channel landings, retinues, and sacred-place hearings."),
+        ("antq_brigantian_hillfort_confederacy", "Brigantian Hillfort Confederacy"),
+        ("antq_brigantian_hillfort_confederacy_desc", "A large but internally varied northern order coordinating kindreds, selected hillfort stores, Pennine routes, herds, and musters."),
+        ("antq_durotrigian_hillfort_coin_order", "Durotrigian Hillfort and Coin Order"),
+        ("antq_durotrigian_hillfort_coin_order_desc", "A distributed political order grounded in distinctive coinage, pottery, burial, settlement, coastal, and enclosure traditions."),
+        ("antq_ivernian_regional_assembly", "Ivernian Regional Assembly"),
+        ("antq_ivernian_regional_assembly_desc", "A low-centralization southwest-Irish gathering coordinating cattle gifts, seaway exchange, smithing, offerings, hospitality, and sureties."),
         ("antq_marcomannic_bohemian_kingship", "Marcomannic Bohemian Kingship"),
         ("antq_marcomannic_bohemian_kingship_desc", "Maroboduus's organized kingdom balancing the royal retinue, allied kindreds, settlement stores, exchange, and Roman-frontier diplomacy."),
         ("antq_cheruscan_kindred_assembly", "Cheruscan Kindred Assembly"),

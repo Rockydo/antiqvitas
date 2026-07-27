@@ -1171,6 +1171,162 @@ antq_agenda_catuvellaunian_channel_measures = {
 	chance = 10
 }
 
+antq_agenda_trinovantian_coin_issue = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_trinovantian_camulodunon_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_trinovantian_coin_issue_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_trinovantian_oppidum_contributions = {
+	type = country
+	estate = peasants_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_trinovantian_camulodunon_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_trinovantian_oppidum_contributions_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_trinovantian_channel_exchange = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_trinovantian_camulodunon_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_trinovantian_channel_exchange_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_brigantian_northern_muster = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_brigantian_northern_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_brigantian_northern_muster_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_brigantian_pasture_peace = {
+	type = country
+	estate = tribes_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_brigantian_northern_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_brigantian_pasture_peace_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_brigantian_hillfort_stores = {
+	type = country
+	estate = peasants_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_brigantian_northern_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_brigantian_hillfort_stores_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_durotrigian_coin_standard = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_durotrigian_hillfort_assembly
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_durotrigian_coin_standard_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_durotrigian_hillfort_contributions = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_durotrigian_hillfort_assembly
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_durotrigian_hillfort_contributions_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_durotrigian_field_settlement = {
+	type = country
+	estate = peasants_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_durotrigian_hillfort_assembly
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_durotrigian_field_settlement_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_ivernian_cattle_gifts = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_ivernian_regional_gathering
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_ivernian_cattle_gifts_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_ivernian_seaway_passage = {
+	type = country
+	estate = tribes_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_ivernian_regional_gathering
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_ivernian_seaway_passage_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_ivernian_offering_custody = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_ivernian_regional_gathering
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_ivernian_offering_custody_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
 antq_agenda_marcomannic_retinue_service = {
 	type = country
 	estate = nobles_estate

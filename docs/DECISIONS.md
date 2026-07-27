@@ -1,5 +1,28 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - British and Irish map granularity now drives political differentiation
+
+The existing 35 British and 16 Hibernian polity split solved ownership and
+name granularity, but major starts still shared `antq_tribal_kingdom`.
+Trinovantes, Brigantes, Durotriges, and Iverni now receive four separate
+political profiles selected for distinct evidence problems rather than
+geographic size alone.
+
+Trinovantian play centers on a named coin-bearing court, oppida, and Channel
+exchange. Brigantian play exposes a large internally varied northern frame,
+route/pasture bargaining, and a possible hillfort concentration path.
+Durotrigian play is built from the unusually distinctive coin, pottery,
+burial, coastal, settlement, and enclosure package. Ivernian play remains
+deliberately low-centralization and emphasizes cattle gifts, seaway exchange,
+smithing, offerings, hospitality, and sureties.
+
+The system does not convert archaeology directly into modern state offices.
+Every profile has explicit uncertainty in its source ledger, and later
+Cartimanduan, Ptolemaic, or medieval Gaelic evidence is not silently treated as
+an AD 1 constitutional description. `tools/s2_british_politics_depth.py`
+permanently guards the exact starts, reforms, councils, privileges, research
+routing, and direct art.
+
 ## 2026-07-27 - Named Germanic political profiles replace the generic tribal floor in bounded tranches
 
 Cherusci, Chatti, Batavi, and Semnones no longer inherit
