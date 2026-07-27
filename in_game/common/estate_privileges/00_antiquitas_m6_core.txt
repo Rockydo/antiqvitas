@@ -412,3 +412,1041 @@ antq_town_cluster_council = {
 		country_cabinet_efficiency = 0.025
 	}
 }
+
+antq_roman_senatorial_commissions = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_reform = government_reform:antq_dominate
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_roman_provincial_land_surveys }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.08
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.02
+		monthly_towards_centralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.03
+	}
+}
+
+antq_roman_provincial_land_surveys = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_reform = government_reform:antq_dominate
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_roman_senatorial_commissions }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.08
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.035
+		land_morale_modifier = 0.01
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.04
+	}
+}
+
+antq_roman_collegial_cult_stipends = {
+	estate = clergy_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_reform = government_reform:antq_dominate
+		}
+	}
+	country_modifier = {
+		global_clergy_estate_power = 0.08
+		clergy_estate_target_satisfaction = medium_privilege_target_satisfaction
+		research_speed_modifier = 0.015
+		stability_cost_efficiency = -0.05
+		clergy_estate_max_tax = -0.05
+	}
+}
+
+antq_roman_equestrian_public_contracts = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_reform = government_reform:antq_dominate
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_roman_recognized_collegia }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.08
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.04
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.03
+	}
+}
+
+antq_roman_recognized_collegia = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_reform = government_reform:antq_dominate
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_roman_equestrian_public_contracts }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.08
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_production_efficiency = 0.02
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.04
+	}
+}
+
+antq_roman_petition_and_census_guarantees = {
+	estate = peasants_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_reform = government_reform:antq_dominate
+		}
+	}
+	country_modifier = {
+		global_peasants_estate_power = 0.08
+		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_pop_food_consumption = -0.006
+		global_levy_size_modifier = 0.02
+		monthly_towards_free_subjects = societal_value_minor_monthly_move
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_han_palace_memorial_access = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_han_imperial_bureaucracy
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_han_registered_estate_returns }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.09
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.0225
+		monthly_towards_centralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.03
+	}
+}
+
+antq_han_registered_estate_returns = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_han_imperial_bureaucracy
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_han_palace_memorial_access }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.09
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.04
+		land_morale_modifier = 0.0125
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.04
+	}
+}
+
+antq_han_calendar_and_ritual_consultation = {
+	estate = clergy_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_han_imperial_bureaucracy
+		}
+	}
+	country_modifier = {
+		global_clergy_estate_power = 0.09
+		clergy_estate_target_satisfaction = medium_privilege_target_satisfaction
+		research_speed_modifier = 0.0175
+		stability_cost_efficiency = -0.05
+		clergy_estate_max_tax = -0.05
+	}
+}
+
+antq_han_commandery_workshop_quotas = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_han_imperial_bureaucracy
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_han_licensed_long_distance_trade }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.09
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.045
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.03
+	}
+}
+
+antq_han_licensed_long_distance_trade = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_han_imperial_bureaucracy
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_han_commandery_workshop_quotas }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.09
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_production_efficiency = 0.0225
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.04
+	}
+}
+
+antq_han_predictable_corvee_rotations = {
+	estate = peasants_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_han_imperial_bureaucracy
+		}
+	}
+	country_modifier = {
+		global_peasants_estate_power = 0.09
+		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_pop_food_consumption = -0.007
+		global_levy_size_modifier = 0.025
+		monthly_towards_free_subjects = societal_value_minor_monthly_move
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_iranian_great_house_counsel = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_iranian_mounted_host_compacts }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.025
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.03
+	}
+}
+
+antq_iranian_mounted_host_compacts = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_iranian_great_house_counsel }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.045
+		land_morale_modifier = 0.015
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.04
+	}
+}
+
+antq_iranian_temple_endowment_registers = {
+	estate = clergy_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+		}
+	}
+	country_modifier = {
+		global_clergy_estate_power = 0.10
+		clergy_estate_target_satisfaction = medium_privilege_target_satisfaction
+		research_speed_modifier = 0.02
+		stability_cost_efficiency = -0.05
+		clergy_estate_max_tax = -0.05
+	}
+}
+
+antq_iranian_caravan_toll_compacts = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_iranian_safe_conduct_guarantees }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.10
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.05
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.03
+	}
+}
+
+antq_iranian_safe_conduct_guarantees = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_iranian_caravan_toll_compacts }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.10
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_production_efficiency = 0.025
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.04
+	}
+}
+
+antq_iranian_irrigation_labor_compacts = {
+	estate = peasants_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+		}
+	}
+	country_modifier = {
+		global_peasants_estate_power = 0.10
+		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_pop_food_consumption = -0.008
+		global_levy_size_modifier = 0.03
+		monthly_towards_free_subjects = societal_value_minor_monthly_move
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_civic_magistrate_accountability = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indo_greek_kingship
+			has_reform = government_reform:antq_settled_town_cluster
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_civic_euergetic_public_works }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.08
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.0275
+		monthly_towards_centralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.03
+	}
+}
+
+antq_civic_euergetic_public_works = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indo_greek_kingship
+			has_reform = government_reform:antq_settled_town_cluster
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_civic_magistrate_accountability }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.08
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.01
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.04
+	}
+}
+
+antq_civic_sanctuary_inventory_rights = {
+	estate = clergy_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indo_greek_kingship
+			has_reform = government_reform:antq_settled_town_cluster
+		}
+	}
+	country_modifier = {
+		global_clergy_estate_power = 0.08
+		clergy_estate_target_satisfaction = medium_privilege_target_satisfaction
+		research_speed_modifier = 0.0225
+		stability_cost_efficiency = -0.05
+		clergy_estate_max_tax = -0.05
+	}
+}
+
+antq_civic_harbor_dues_farming = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indo_greek_kingship
+			has_reform = government_reform:antq_settled_town_cluster
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_civic_recognized_craft_associations }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.08
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.04
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.03
+	}
+}
+
+antq_civic_recognized_craft_associations = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indo_greek_kingship
+			has_reform = government_reform:antq_settled_town_cluster
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_civic_harbor_dues_farming }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.08
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_production_efficiency = 0.0275
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.04
+	}
+}
+
+antq_civic_grain_and_water_guarantees = {
+	estate = peasants_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indo_greek_kingship
+			has_reform = government_reform:antq_settled_town_cluster
+		}
+	}
+	country_modifier = {
+		global_peasants_estate_power = 0.08
+		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_pop_food_consumption = -0.009
+		global_levy_size_modifier = 0.02
+		monthly_towards_free_subjects = societal_value_minor_monthly_move
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_gana_clan_delegate_rotation = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indian_ganasangha
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_gana_warrior_household_service }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.09
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.03
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.03
+	}
+}
+
+antq_gana_warrior_household_service = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indian_ganasangha
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_gana_clan_delegate_rotation }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.09
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.035
+		land_morale_modifier = 0.0125
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.04
+	}
+}
+
+antq_gana_shrine_hospitality_endowments = {
+	estate = clergy_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indian_ganasangha
+		}
+	}
+	country_modifier = {
+		global_clergy_estate_power = 0.09
+		clergy_estate_target_satisfaction = medium_privilege_target_satisfaction
+		research_speed_modifier = 0.015
+		stability_cost_efficiency = -0.05
+		clergy_estate_max_tax = -0.05
+	}
+}
+
+antq_gana_road_hospitality_compacts = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indian_ganasangha
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_gana_guild_arbitration_rights }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.09
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.045
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.03
+	}
+}
+
+antq_gana_guild_arbitration_rights = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indian_ganasangha
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_gana_road_hospitality_compacts }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.09
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_production_efficiency = 0.02
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.04
+	}
+}
+
+antq_gana_communal_granary_shares = {
+	estate = peasants_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indian_ganasangha
+		}
+	}
+	country_modifier = {
+		global_peasants_estate_power = 0.09
+		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_pop_food_consumption = -0.006
+		global_levy_size_modifier = 0.025
+		monthly_towards_free_subjects = societal_value_minor_monthly_move
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_steppe_wing_council_precedence = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.0325
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.03
+	}
+}
+
+antq_steppe_mounted_retinue_quotas = {
+	estate = tribes_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		tribes_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.04
+		land_morale_modifier = 0.015
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_steppe_cauldron_and_rite_custody = {
+	estate = clergy_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+		}
+	}
+	country_modifier = {
+		global_clergy_estate_power = 0.10
+		clergy_estate_target_satisfaction = medium_privilege_target_satisfaction
+		research_speed_modifier = 0.0175
+		stability_cost_efficiency = -0.05
+		clergy_estate_max_tax = -0.05
+	}
+}
+
+antq_steppe_seasonal_pasture_circuits = {
+	estate = tribes_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		tribes_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.05
+		country_cabinet_efficiency = 0.015
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_steppe_gift_circulation_obligations = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+		}
+	}
+	country_modifier = {
+		global_burghers_estate_power = 0.10
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_production_efficiency = 0.0225
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.04
+	}
+}
+
+antq_steppe_herding_household_remounts = {
+	estate = peasants_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+		}
+	}
+	country_modifier = {
+		global_peasants_estate_power = 0.10
+		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_pop_food_consumption = -0.007
+		global_levy_size_modifier = 0.03
+		monthly_towards_free_subjects = societal_value_minor_monthly_move
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_tribal_elder_assembly_hearing = {
+	estate = tribes_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_advanced_chiefdom
+			has_reform = government_reform:antq_tribal_kingdom
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		tribes_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.035
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_tribal_household_retinue_gifts = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_advanced_chiefdom
+			has_reform = government_reform:antq_tribal_kingdom
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.08
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.045
+		land_morale_modifier = 0.01
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.04
+	}
+}
+
+antq_tribal_grove_custodianship = {
+	estate = clergy_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_advanced_chiefdom
+			has_reform = government_reform:antq_tribal_kingdom
+		}
+	}
+	country_modifier = {
+		global_clergy_estate_power = 0.08
+		clergy_estate_target_satisfaction = medium_privilege_target_satisfaction
+		research_speed_modifier = 0.02
+		stability_cost_efficiency = -0.05
+		clergy_estate_max_tax = -0.05
+	}
+}
+
+antq_tribal_seasonal_cattle_compacts = {
+	estate = tribes_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_advanced_chiefdom
+			has_reform = government_reform:antq_tribal_kingdom
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		tribes_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.04
+		country_cabinet_efficiency = 0.015
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_tribal_river_exchange_protection = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_advanced_chiefdom
+			has_reform = government_reform:antq_tribal_kingdom
+		}
+	}
+	country_modifier = {
+		global_burghers_estate_power = 0.08
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_production_efficiency = 0.025
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.04
+	}
+}
+
+antq_tribal_free_household_muster = {
+	estate = peasants_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_advanced_chiefdom
+			has_reform = government_reform:antq_tribal_kingdom
+		}
+	}
+	country_modifier = {
+		global_peasants_estate_power = 0.08
+		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_pop_food_consumption = -0.008
+		global_levy_size_modifier = 0.02
+		monthly_towards_free_subjects = societal_value_minor_monthly_move
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_sacral_treasury_seal_custody = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_lankan_kingdom
+			has_reform = government_reform:antq_kushite_dual_kingship
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.09
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.0375
+		monthly_towards_centralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.03
+	}
+}
+
+antq_sacral_granary_endowments = {
+	estate = clergy_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_lankan_kingdom
+			has_reform = government_reform:antq_kushite_dual_kingship
+		}
+	}
+	country_modifier = {
+		global_clergy_estate_power = 0.09
+		clergy_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.0125
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		clergy_estate_max_tax = -0.04
+	}
+}
+
+antq_sacral_reservoir_labor_rotations = {
+	estate = peasants_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_lankan_kingdom
+			has_reform = government_reform:antq_kushite_dual_kingship
+		}
+	}
+	country_modifier = {
+		global_peasants_estate_power = 0.09
+		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
+		research_speed_modifier = 0.0225
+		stability_cost_efficiency = -0.05
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_sacral_processional_provisioning = {
+	estate = clergy_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_lankan_kingdom
+			has_reform = government_reform:antq_kushite_dual_kingship
+		}
+	}
+	country_modifier = {
+		global_clergy_estate_power = 0.09
+		clergy_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.045
+		country_cabinet_efficiency = 0.015
+		clergy_estate_max_tax = -0.03
+	}
+}
+
+antq_sacral_scribal_register_custody = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_lankan_kingdom
+			has_reform = government_reform:antq_kushite_dual_kingship
+		}
+	}
+	country_modifier = {
+		global_burghers_estate_power = 0.09
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_production_efficiency = 0.0275
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.04
+	}
+}
+
+antq_sacral_frontier_hospitality_endowments = {
+	estate = tribes_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_lankan_kingdom
+			has_reform = government_reform:antq_kushite_dual_kingship
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.09
+		tribes_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_pop_food_consumption = -0.009
+		global_levy_size_modifier = 0.025
+		monthly_towards_free_subjects = societal_value_minor_monthly_move
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_royal_palace_petition_days = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_client_monarchy
+			has_reform = government_reform:antq_buffer_kingdom
+			has_reform = government_reform:antq_early_korean_kingdom
+			has_reform = government_reform:antq_regional_kingship
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_royal_dynastic_hostage_compacts }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.04
+		monthly_towards_centralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.03
+	}
+}
+
+antq_royal_dynastic_hostage_compacts = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_client_monarchy
+			has_reform = government_reform:antq_buffer_kingdom
+			has_reform = government_reform:antq_early_korean_kingdom
+			has_reform = government_reform:antq_regional_kingship
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_royal_palace_petition_days }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.035
+		land_morale_modifier = 0.015
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.04
+	}
+}
+
+antq_royal_sanctuary_patronage = {
+	estate = clergy_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_client_monarchy
+			has_reform = government_reform:antq_buffer_kingdom
+			has_reform = government_reform:antq_early_korean_kingdom
+			has_reform = government_reform:antq_regional_kingship
+		}
+	}
+	country_modifier = {
+		global_clergy_estate_power = 0.10
+		clergy_estate_target_satisfaction = medium_privilege_target_satisfaction
+		research_speed_modifier = 0.015
+		stability_cost_efficiency = -0.05
+		clergy_estate_max_tax = -0.05
+	}
+}
+
+antq_royal_tribute_assessment_registers = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_client_monarchy
+			has_reform = government_reform:antq_buffer_kingdom
+			has_reform = government_reform:antq_early_korean_kingdom
+			has_reform = government_reform:antq_regional_kingship
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_royal_caravan_protection_guarantees }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.10
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.05
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.03
+	}
+}
+
+antq_royal_caravan_protection_guarantees = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_client_monarchy
+			has_reform = government_reform:antq_buffer_kingdom
+			has_reform = government_reform:antq_early_korean_kingdom
+			has_reform = government_reform:antq_regional_kingship
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_royal_tribute_assessment_registers }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.10
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_production_efficiency = 0.02
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.04
+	}
+}
+
+antq_royal_fortress_grain_and_muster = {
+	estate = peasants_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_client_monarchy
+			has_reform = government_reform:antq_buffer_kingdom
+			has_reform = government_reform:antq_early_korean_kingdom
+			has_reform = government_reform:antq_regional_kingship
+		}
+	}
+	country_modifier = {
+		global_peasants_estate_power = 0.10
+		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_pop_food_consumption = -0.006
+		global_levy_size_modifier = 0.03
+		monthly_towards_free_subjects = societal_value_minor_monthly_move
+		global_monthly_control = -0.0005
+	}
+}

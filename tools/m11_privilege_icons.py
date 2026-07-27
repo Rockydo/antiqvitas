@@ -21,6 +21,8 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 PRIVILEGES = ROOT / "docs/m6/privileges.csv"
+S2_PRIVILEGES = ROOT / "docs/m6/estate_order_privileges.csv"
+S2_ART = ROOT / "docs/m6/estate_order_art.csv"
 LEDGER = ROOT / "docs/m11/direct_privilege_icons.csv"
 ICON_DIR = ROOT / "main_menu/gfx/interface/icons/privileges"
 DDS = ROOT / "tools/dds.py"
@@ -36,11 +38,13 @@ class DirectIcon:
 
 
 def privilege_keys() -> set[str]:
-    with PRIVILEGES.open(encoding="utf-8-sig", newline="") as handle:
-        reader = csv.DictReader(handle)
-        if tuple(reader.fieldnames or ())[:2] != ("key", "estate"):
-            raise ValueError(f"unexpected privilege ledger header: {PRIVILEGES}")
-        keys = {(row.get("key") or "").strip() for row in reader}
+    keys: set[str] = set()
+    for path in (PRIVILEGES, S2_PRIVILEGES):
+        with path.open(encoding="utf-8-sig", newline="") as handle:
+            reader = csv.DictReader(handle)
+            if tuple(reader.fieldnames or ())[:2] != ("key", "estate"):
+                raise ValueError(f"unexpected privilege ledger header: {path}")
+            keys.update((row.get("key") or "").strip() for row in reader)
     if not keys or any(not key.startswith("antq_") for key in keys):
         raise ValueError("M6 privilege ledger has invalid ANTIQVITAS keys")
     return keys
@@ -72,6 +76,27 @@ def direct_icons() -> tuple[DirectIcon, ...]:
             ROOT / "assets_queue/generated" / f"antq_privilege_{slug}_64x90.png",
         ))
         seen.add(key)
+    with S2_ART.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        required = {"key", "source_crop", "master", "confidence"}
+        if not required.issubset(reader.fieldnames or ()):
+            raise ValueError(f"{S2_ART.relative_to(ROOT)} lacks {sorted(required)}")
+        for number, row in enumerate(reader, start=2):
+            key = (row.get("key") or "").strip()
+            if key not in known or key in seen:
+                raise ValueError(
+                    f"{S2_ART.relative_to(ROOT)}:{number}: unknown or duplicate completed key {key!r}"
+                )
+            if (row.get("confidence") or "").strip() != "secure":
+                raise ValueError(
+                    f"{S2_ART.relative_to(ROOT)}:{number}: completed icon must use secure confidence"
+                )
+            result.append(DirectIcon(
+                key,
+                ROOT / (row.get("source_crop") or "").strip(),
+                ROOT / (row.get("master") or "").strip(),
+            ))
+            seen.add(key)
     if len({icon.source for icon in result}) != len(result):
         raise ValueError("direct privilege icons may not share a generated source")
     if len({icon.master for icon in result}) != len(result):

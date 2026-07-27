@@ -1,5 +1,33 @@
 # Progress
 
+## 2026-07-27 - Polity-aware social orders and 54 profile-locked grants
+
+- Exact-mirrored the engine's estate custom-localization registry and placed
+  nine reform-driven ancient identity sets ahead of every medieval fallback.
+  Each profile supplies specific names for the ruler, elite, ritual, exchange,
+  household, and clan/community slots without changing the stable engine
+  estate keys used by pops, characters, and councils.
+- Added 54 new profile-gated privileges: six each for Roman, Han, Iranian,
+  civic, gana-sangha, steppe, tribal, sacral-court, and regional-royal
+  governments. Paired grants within the same order are mutually exclusive
+  where the designs represent competing bargains.
+- Every grant combines a useful administrative, military, ritual, trade,
+  production, food, or household effect with order power/satisfaction and a
+  tax-cap, control, decentralization, or mobilization tradeoff. The ledger has
+  more than 30 distinct effect packages rather than one repeated filler bonus.
+- Generated nine new six-cell material-culture atlases and retained their
+  hashes, source crops, masters, BC7 textures, and source/evidence boundaries.
+  The direct privilege pipeline now validates 100/100 unique illustrations;
+  the full UI ledger has 784 direct asset chains.
+- Registered every new grant on an appropriate regional Age-I research branch;
+  all 292 opening profiles remain researchable and no grant is globally
+  orphaned. The full 100-command validator passes.
+- Paired menu smoke reaches a responsive rendered menu for both the vanilla
+  control and ANTIQVITAS. After removing duplicate localization ownership at
+  the generator boundary, the final comparison reports zero mod-unique new
+  `error.log` lines. Evidence is in
+  `docs/playtests/S2_ESTATE_ORDERS_20260727.md`.
+
 ## 2026-07-27 - Ancient councils and state offices replace the generic political shell
 
 - Added nine reform-driven political profiles: Roman Senate, Han Court

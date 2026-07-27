@@ -1,5 +1,32 @@
 # Historical Assumptions
 
+## 2026-07-27 - Social-order names describe political constituencies, not legal corporations
+
+“Senatorial Order,” “Court and Great Families,” “Temple Networks,” “Clan
+Delegates,” “Confederated Clans,” and the other profile labels identify
+interests that the game must scope through its fixed estate system. They do
+not claim that each interest was a legally incorporated estate, represented a
+fixed share of society, or participated through a uniform chamber. Roman
+citizens and provincials were not one constitutional body; Han registered
+households were not a European peasant estate; Arsacid great houses and temple
+networks did not follow one recoverable written constitution; and the gana,
+steppe, tribal, sacral, and regional-royal families retain substantial internal
+variation.
+
+The 54 privileges translate evidenced practices—petitions, registers, cult
+endowments, land and labor obligations, musters, route protection, weighing,
+granaries, waterworks, gift circulation, and assembly consultation—into
+reversible gameplay bargains. Their exact availability, exclusivity, magnitude,
+and political effect are design abstractions rather than reconstructed legal
+instruments.
+
+Sources: `P8.1`; `P8.2`; `P8.3`; `P8.4`; `P8.5`; `P8.6`; `P8.7`; `P11`;
+`P13`; `OCD`; `CAH-XI`; `BHR`; and `CTP-WM`, routed per entry in
+`docs/m6/estate_order_privileges.csv`.
+
+[secure broad practices and institutional contexts; contested constituency
+boundaries, formal procedure, distribution, and all numerical effects]
+
 ## 2026-07-27 - Council profiles are bounded gameplay adapters, not constitutional equivalences
 
 The Roman Senate profile models elite deliberation, honors, provincial

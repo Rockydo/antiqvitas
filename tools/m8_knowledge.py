@@ -473,6 +473,19 @@ ADVANCE_PROFILES = {
     )
 }
 
+S2_ESTATE_PRIVILEGES = ROOT / "docs/m6/estate_order_privileges.csv"
+S2_ESTATE_ADVANCE_PROFILES: dict[str, tuple[str, ...]] = {
+    "roman": ("roman_italic",),
+    "han": ("han_east_asian",),
+    "iranian": ("iranian_steppe",),
+    "civic": ("hellenic",),
+    "gana": ("indic",),
+    "steppe": ("iranian_steppe",),
+    "tribal": ("celtic", "germanic"),
+    "sacral": ("african", "indic"),
+    "royal": ("near_eastern", "han_east_asian", "african"),
+}
+
 # Each engine age contains five compact trees. The first four ages use two
 # shared roots and two culturally bounded branches with internal convergence;
 # the two five-node late ages use one shared root and two bounded branches.
@@ -1081,6 +1094,37 @@ def content_unlocks(records: tuple[Advance, ...]) -> dict[str, tuple[tuple[str, 
         result[key].extend(entries)
     for key, entries in CONTENT_UNLOCKS.items():
         result[key].extend(entries)
+    with S2_ESTATE_PRIVILEGES.open(encoding="utf-8-sig", newline="") as handle:
+        estate_rows = list(csv.DictReader(handle))
+    by_profile: dict[str, list[str]] = defaultdict(list)
+    for row in estate_rows:
+        key = (row.get("key") or "").strip()
+        matched = next(
+            (
+                profile for profile in S2_ESTATE_ADVANCE_PROFILES
+                if key.startswith(f"antq_{profile}_")
+            ),
+            None,
+        )
+        if matched is None:
+            raise ValueError(f"S2 estate privilege has no research profile: {key}")
+        by_profile[matched].append(key)
+    for profile, privilege_keys in by_profile.items():
+        candidates = sorted(
+            (
+                record for record in records
+                if record.age_index == 0
+                and record.profile in S2_ESTATE_ADVANCE_PROFILES[profile]
+                and record.depth >= 1
+            ),
+            key=lambda record: (record.depth, record.track, record.key),
+        )
+        if not candidates:
+            raise ValueError(f"no Age-I research candidates for S2 estate profile {profile}")
+        for index, privilege in enumerate(privilege_keys):
+            result[candidates[index * len(candidates) // len(privilege_keys)].key].append(
+                ("unlock_estate_privilege", privilege)
+            )
     managed_roman_buildings: set[str] = set()
     for advance, buildings in ROMAN_ECONOMY_UNLOCKS.items():
         result[advance].extend(("unlock_building", building) for building in buildings)

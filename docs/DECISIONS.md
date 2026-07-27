@@ -1,5 +1,23 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - Stable engine estates carry dynamic ancient social-order identities
+
+EU5's six core estate keys are deeply connected to pop classes, characters,
+parliament participation, modifiers, and scripted scopes. Replacing those keys
+with 54 bespoke estate types would widen the risk across several registries
+without adding visible historical fidelity. ANTIQVITAS therefore keeps the
+locally verified technical keys and exact-mirrors the engine's customizable
+estate-name resolver. Reform-gated entries now take precedence over every
+installed medieval fallback and give each of nine ancient political profiles
+six distinct visible identities.
+
+The same profile mapping gates 54 new privileges. Two grants for the same
+order are mutually exclusive when they model competing bargains; every grant
+uses an explicit benefit and counterweight. This preserves pop/council engine
+contracts while making the player-facing political structure and choices
+ancient. The nine profiles remain a floor to be subdivided for additional
+major-polity depth, not a claim that their institutions were interchangeable.
+
 ## 2026-07-27 - Reform-driven council profiles replace one generic parliament surface
 
 EU5 exposes a single parliament/cabinet framework, but ANTIQVITAS now treats it

@@ -42,7 +42,7 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 19 reforms, 46 privileges, and
+  thin outside the first replacement tranches: 19 reforms, 100 privileges, and
   45 laws serve 292 opening polities.
 - Exact-name mirrors still leave most installed estates, privileges, parliament
   material, cabinet actions, laws, religious aspects, and artillery-facing UI in
@@ -137,7 +137,7 @@ and focused runtime probe all pass.
   - [ ] Replace required gameplay breadth at both definition and
     unlock/reference layers. Preserve only locally proven engine adapters, and
     guarantee that their names, descriptions, icons, and effects cannot surface.
-    Existing namespaced ancient content remains active (46 privileges, 45 laws,
+    Existing namespaced ancient content remains active (100 privileges, 45 laws,
     19 reforms).
     - [x] Supply the first deep council/state-office replacement tranche:
       nine reform-driven council profiles, 45 profile-locked administrative
@@ -151,11 +151,18 @@ and focused runtime probe all pass.
       contributions, expanded musters, and council sanction. Specific active
       type names remain polity-aware rather than being flattened into one
       generic label.
-    - [ ] Complete the remaining S2-P4 replacement breadth: polity-specific
-      estate identities and weights, seat/delegate rules, office appointments,
-      costs, debate consequences, reform paths, laws, and privileges for every
-      opening profile. The nine current profiles are an engine-valid regional
-      floor, not the final political depth target.
+    - [x] Replace generic estate labels and shallow privilege breadth with nine
+      reform-driven order identities and 54 additional profile-gated grants.
+      All six engine order slots now render polity-aware names; the 54 grants
+      use 30+ effect packages, mutually exclusive alternatives where
+      appropriate, explicit power/tax/control tradeoffs, and 54 unique direct
+      historical-material illustrations. The project now has 100/100
+      directly illustrated ancient privileges.
+    - [ ] Complete the remaining S2-P4 replacement breadth: profile-specific
+      base political weights, seat/delegate rules, office appointments, costs,
+      debate consequences, reform paths, and laws for every opening profile.
+      The nine current profiles are an engine-valid regional floor, not the
+      final political depth target.
   - [x] Eliminate the fresh-bookmark parliament compiler failures before the
     replacement UI probe. The 2026-07-26 Britain/Hibernia bookmark isolated all
     2,855 `Script system error!` entries to
@@ -474,11 +481,18 @@ and focused runtime probe all pass.
     all eleven localization mirrors. A live Roman programme selector exposes
     Census Rolls, Provincial Dispatches, Aerarium Accounts, Annona Contracts,
     and Legionary Rosters with no vanilla action.
-  - [ ] Replace the remaining broad estate adapters with deeper polity-specific
-    identities, political weights, delegates/seats, appointment logic, costs,
-    AI choices, and consequences. Expand major profiles beyond the nine-family
-    regional floor and test focused Roman, Han, Iranian, civic, and assembly
-    panels without requiring long playthroughs.
+  - [x] Replace the visible generic estate shell with polity-aware ancient
+    social orders. Roman government now resolves Imperial Household,
+    Senatorial Order, Public Priesthoods, Equestrians and Civic Elites,
+    Citizens and Provincials, and Allied Communities; eight equivalent
+    Han, Iranian, civic, gana, steppe, tribal, sacral, and royal sets cover the
+    remaining custom reforms. Add 54 reform-gated privileges with real
+    alternatives and 54 direct icons; validate 100/100 total privilege art.
+  - [ ] Deepen the remaining base political weights, delegates/seats,
+    appointment logic, costs, AI choices, and consequences. Expand major
+    profiles beyond the nine-family regional floor and test focused Roman,
+    Han, Iranian, civic, and assembly panels without requiring long
+    playthroughs.
   - Acceptance: deep distinct panels for every major profile and coherent regional
     fallback packages; zero vanilla object or text leakage.
 

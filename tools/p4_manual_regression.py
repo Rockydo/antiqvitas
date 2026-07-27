@@ -182,6 +182,17 @@ def build_report() -> dict[str, object]:
         f"ancient political-system breadth regressed: {dict(politics_counts)}",
         failures,
     )
+    estate_orders = rows(ROOT / "docs/m6/estate_order_privileges.csv")
+    require(
+        len(estate_orders) == 54 and len({row["key"] for row in estate_orders}) == 54,
+        "ancient estate-order privilege breadth regressed",
+        failures,
+    )
+    require(
+        len({row["modifiers"] for row in estate_orders}) >= 30,
+        "ancient estate-order effect diversity regressed",
+        failures,
+    )
 
     disease = json.loads((ROOT / "docs/m12/disease_dependency_manifest.json").read_text(encoding="utf-8"))
     require(len(disease["installed_diseases"]) == 7, "disease definition union changed", failures)
@@ -211,6 +222,7 @@ def build_report() -> dict[str, object]:
             "institutions": len(institutions),
             "advances": len(advances),
             "ancient_political_entries": len(politics),
+            "profile_locked_estate_privileges": len(estate_orders),
             "diseases": len(disease["installed_diseases"]),
             "court_backgrounds": len(list(court_dir.glob("antq_throne_room_*.dds"))),
         },
