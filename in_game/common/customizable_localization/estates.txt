@@ -144,6 +144,50 @@
 	}
 
 	text = {
+		localization_key = antq_estate_armenian_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_artaxiad_highland_kingship
+				has_reform = government_reform:antq_armenian_dynast_compact
+				has_reform = government_reform:antq_armenian_royal_domain_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_nabataean_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_nabataean_caravan_kingship
+				has_reform = government_reform:antq_nabataean_water_stewardship
+				has_reform = government_reform:antq_nabataean_customs_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_himyarite_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_himyarite_terrace_kingship
+				has_reform = government_reform:antq_himyarite_irrigation_court
+				has_reform = government_reform:antq_himyarite_incense_route_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_satavahana_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_satavahana_deccan_kingship
+				has_reform = government_reform:antq_satavahana_guild_court
+				has_reform = government_reform:antq_satavahana_maharathi_compact
+			}
+		}
+	}
+
+	text = {
 		localization_key = crown_estate_holy_order
 		trigger = {
 			has_reform = government_reform:military_order_reform
@@ -362,6 +406,50 @@ nobles_estate = {
 		trigger = {
 			OR = {
 				has_reform = government_reform:antq_lankan_kingdom
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_armenian_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_artaxiad_highland_kingship
+				has_reform = government_reform:antq_armenian_dynast_compact
+				has_reform = government_reform:antq_armenian_royal_domain_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_nabataean_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_nabataean_caravan_kingship
+				has_reform = government_reform:antq_nabataean_water_stewardship
+				has_reform = government_reform:antq_nabataean_customs_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_himyarite_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_himyarite_terrace_kingship
+				has_reform = government_reform:antq_himyarite_irrigation_court
+				has_reform = government_reform:antq_himyarite_incense_route_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_satavahana_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_satavahana_deccan_kingship
+				has_reform = government_reform:antq_satavahana_guild_court
+				has_reform = government_reform:antq_satavahana_maharathi_compact
 			}
 		}
 	}
@@ -835,6 +923,50 @@ burghers_estate = {
 	}
 
 	text = {
+		localization_key = antq_estate_armenian_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_artaxiad_highland_kingship
+				has_reform = government_reform:antq_armenian_dynast_compact
+				has_reform = government_reform:antq_armenian_royal_domain_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_nabataean_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_nabataean_caravan_kingship
+				has_reform = government_reform:antq_nabataean_water_stewardship
+				has_reform = government_reform:antq_nabataean_customs_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_himyarite_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_himyarite_terrace_kingship
+				has_reform = government_reform:antq_himyarite_irrigation_court
+				has_reform = government_reform:antq_himyarite_incense_route_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_satavahana_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_satavahana_deccan_kingship
+				has_reform = government_reform:antq_satavahana_guild_court
+				has_reform = government_reform:antq_satavahana_maharathi_compact
+			}
+		}
+	}
+
+	text = {
 		localization_key = burghers_estate_greek
 		trigger = {
 			OR = {
@@ -1188,6 +1320,50 @@ clergy_estate = {
 		trigger = {
 			OR = {
 				has_reform = government_reform:antq_lankan_kingdom
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_armenian_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_artaxiad_highland_kingship
+				has_reform = government_reform:antq_armenian_dynast_compact
+				has_reform = government_reform:antq_armenian_royal_domain_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_nabataean_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_nabataean_caravan_kingship
+				has_reform = government_reform:antq_nabataean_water_stewardship
+				has_reform = government_reform:antq_nabataean_customs_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_himyarite_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_himyarite_terrace_kingship
+				has_reform = government_reform:antq_himyarite_irrigation_court
+				has_reform = government_reform:antq_himyarite_incense_route_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_satavahana_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_satavahana_deccan_kingship
+				has_reform = government_reform:antq_satavahana_guild_court
+				has_reform = government_reform:antq_satavahana_maharathi_compact
 			}
 		}
 	}
@@ -1555,6 +1731,50 @@ peasants_estate = {
 		trigger = {
 			OR = {
 				has_reform = government_reform:antq_lankan_kingdom
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_armenian_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_artaxiad_highland_kingship
+				has_reform = government_reform:antq_armenian_dynast_compact
+				has_reform = government_reform:antq_armenian_royal_domain_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_nabataean_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_nabataean_caravan_kingship
+				has_reform = government_reform:antq_nabataean_water_stewardship
+				has_reform = government_reform:antq_nabataean_customs_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_himyarite_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_himyarite_terrace_kingship
+				has_reform = government_reform:antq_himyarite_irrigation_court
+				has_reform = government_reform:antq_himyarite_incense_route_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_satavahana_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_satavahana_deccan_kingship
+				has_reform = government_reform:antq_satavahana_guild_court
+				has_reform = government_reform:antq_satavahana_maharathi_compact
 			}
 		}
 	}
@@ -1934,6 +2154,50 @@ tribes_estate = {
 		trigger = {
 			OR = {
 				has_reform = government_reform:antq_lankan_kingdom
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_armenian_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_artaxiad_highland_kingship
+				has_reform = government_reform:antq_armenian_dynast_compact
+				has_reform = government_reform:antq_armenian_royal_domain_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_nabataean_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_nabataean_caravan_kingship
+				has_reform = government_reform:antq_nabataean_water_stewardship
+				has_reform = government_reform:antq_nabataean_customs_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_himyarite_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_himyarite_terrace_kingship
+				has_reform = government_reform:antq_himyarite_irrigation_court
+				has_reform = government_reform:antq_himyarite_incense_route_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_satavahana_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_satavahana_deccan_kingship
+				has_reform = government_reform:antq_satavahana_guild_court
+				has_reform = government_reform:antq_satavahana_maharathi_compact
 			}
 		}
 	}

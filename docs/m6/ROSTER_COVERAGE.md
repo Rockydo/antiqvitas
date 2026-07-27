@@ -120,7 +120,7 @@ An anonymous/collective profile is not an omitted polity. It is the deliberate `
 | GUT | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;P8.7;P11;P13;TAC-GER;S2-LAWS |
 | HAD | `antq_regional_kingship` | P8.6;P13;CAH-XI;S2-LAWS |
 | HER | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;P8.7;P11;P13;TAC-GER;S2-LAWS |
-| HIM | `antq_regional_kingship` | P8.6;P13;CAH-XI;PLE;S2-LAWS |
+| HIM | `antq_himyarite_terrace_kingship` | P8.5;P8.6;P11;P13;CAH-XI;OCD-HIM;HIMYAR-HIST;OUP-REDSEA;S2-LAWS |
 | IAZ | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;S2-LAWS |
 | IBG | `antq_tribal_kingdom` | P8.7;P13;PTO-GEO-II1;DARCY-IRE;P8.7;P11;P13;PTO-GEO-II1;DARCY-IRE;NMI-IRON-AGE;S2-LAWS |
 | ICE | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;BM-DRU;P8.7;P11;P13;HE-HILLFORT;BM-DRU;P8.7;P13;PTO-GEO-II2;CCI-DUB;CCI-EPP;S2-LAWS |
@@ -174,7 +174,7 @@ An anonymous/collective profile is not an omitted polity. It is the deliberate `
 | RUG | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;P8.7;P11;P13;TAC-GER;S2-LAWS |
 | RZM | `antq_tribal_kingdom` | BSE-GORODETS;P13;BSE-GORODETS;P13;S2-LAWS |
 | SAB | `antq_regional_kingship` | P8.6;P13;CAH-XI;S2-LAWS |
-| SAT | `antq_regional_kingship` | P8.4;P13;CAH-XI;S2-LAWS |
+| SAT | `antq_satavahana_deccan_kingship` | P8.4;P11;P13;CAH-XI;S2-LAWS |
 | SAX | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;P8.7;P11;P13;TAC-GER;S2-LAWS |
 | SEL | `antq_tribal_kingdom` | P8.7;P13;PTO-GEO-II2;MANN-BRI;P8.7;P11;P13;HE-HILLFORT;BM-DRU;S2-LAWS |
 | SEM | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;P8.7;P11;P13;TAC-GER;S2-LAWS |

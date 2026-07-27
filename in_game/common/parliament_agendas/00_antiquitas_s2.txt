@@ -507,3 +507,159 @@ antq_agenda_lankan_regional_hearing = {
 	}
 	chance = 10
 }
+
+antq_agenda_armenian_fortress_service = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_armenian_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_armenian_fortress_service_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_armenian_sanctuary_review = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_armenian_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_armenian_sanctuary_review_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_armenian_pass_guarantees = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_armenian_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_armenian_pass_guarantees_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_nabataean_water_rotation = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_nabataean_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_nabataean_water_rotation_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_nabataean_sanctuary_inventory = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_nabataean_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_nabataean_sanctuary_inventory_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_nabataean_customs_revision = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_nabataean_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_nabataean_customs_revision_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_himyarite_terrace_repairs = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_himyarite_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_himyarite_terrace_repairs_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_himyarite_sanctuary_stores = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_himyarite_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_himyarite_sanctuary_stores_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_himyarite_incense_passage = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_himyarite_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_himyarite_incense_passage_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_satavahana_regional_service = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_satavahana_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_satavahana_regional_service_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_satavahana_donation_inventory = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_satavahana_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_satavahana_donation_inventory_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_satavahana_guild_passage = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_satavahana_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_satavahana_guild_passage_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}

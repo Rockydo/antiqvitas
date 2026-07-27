@@ -58,6 +58,10 @@ antq_provincial_census = {
 	unlock_government_reform = antq_advanced_chiefdom
 	unlock_government_reform = antq_settled_town_cluster
 	unlock_government_reform = antq_tribal_kingdom
+	unlock_government_reform = antq_artaxiad_highland_kingship
+	unlock_government_reform = antq_nabataean_caravan_kingship
+	unlock_government_reform = antq_himyarite_terrace_kingship
+	unlock_government_reform = antq_satavahana_deccan_kingship
 	unlock_law = antq_s2_roman_household_law
 	unlock_law = antq_s2_han_land_law
 	unlock_law = antq_s2_han_external_law
@@ -2188,6 +2192,7 @@ antq_remount_pasture_registers = {
 	army_logistics_distance_modifier = 0.10
 	unlock_estate_privilege = antq_iranian_temple_endowment_registers
 	unlock_estate_privilege = antq_xiongnu_cauldron_and_oath_custody
+	unlock_estate_privilege = antq_armenian_sanctuary_offering_inventories
 	starting_technology_level = 2
 	requires = antq_professional_standing_armies
 	ai_weight = { add = 90 }
@@ -2209,7 +2214,7 @@ antq_horse_archer_screening = {
 	unlock_estate_privilege = antq_iranian_safe_conduct_guarantees
 	unlock_estate_privilege = antq_steppe_seasonal_pasture_circuits
 	unlock_estate_privilege = antq_xiongnu_seasonal_pasture_compacts
-	unlock_estate_privilege = antq_armenian_artaxata_court_arbitration
+	unlock_estate_privilege = antq_armenian_vineyard_grain_labor_compacts
 	starting_technology_level = 3
 	requires = antq_remount_pasture_registers
 	ai_weight = { add = 80 }
@@ -2231,6 +2236,7 @@ antq_scale_armour_workshops = {
 	unlock_estate_privilege = antq_iranian_great_house_levy_exemptions
 	unlock_estate_privilege = antq_steppe_herding_household_remounts
 	unlock_estate_privilege = antq_xiongnu_pasture_circuit_autonomy
+	unlock_estate_privilege = antq_armenian_artaxata_court_arbitration
 	starting_technology_level = 4
 	requires = antq_horse_archer_screening
 	ai_weight = { add = 70 }
@@ -2252,9 +2258,11 @@ antq_armoured_retinue_drill = {
 	unlock_estate_privilege = antq_iranian_royal_domain_review
 	unlock_estate_privilege = antq_steppe_gift_circulation_obligations
 	unlock_estate_privilege = antq_xiongnu_wing_gift_precedence
+	unlock_estate_privilege = antq_armenian_fortress_dynast_service
 	unlock_government_reform = antq_iranian_royal_domain
 	unlock_government_reform = antq_steppe_gift_court
 	unlock_government_reform = antq_xiongnu_gift_circuit
+	unlock_government_reform = antq_armenian_royal_domain_court
 	starting_technology_level = 4
 	requires = antq_horse_archer_screening
 	ai_weight = { add = 70 }
@@ -2293,6 +2301,7 @@ antq_elephant_corps_stables = {
 	}
 	army_logistics_distance_modifier = 0.10
 	unlock_estate_privilege = antq_lankan_monastic_endowment_registers
+	unlock_estate_privilege = antq_satavahana_monastic_sanctuary_inventories
 	starting_technology_level = 2
 	requires = antq_professional_standing_armies
 	ai_weight = { add = 90 }
@@ -2330,6 +2339,7 @@ antq_fortified_river_camps = {
 	}
 	land_morale_modifier = 0.01
 	unlock_estate_privilege = antq_lankan_reservoir_audit_grants
+	unlock_estate_privilege = antq_satavahana_guild_charter_arbitration
 	starting_technology_level = 4
 	requires = antq_longbow_guild_levies
 	ai_weight = { add = 70 }
@@ -2641,7 +2651,7 @@ antq_caravan_accounting = {
 	unlock_estate_privilege = antq_gana_clan_delegate_rotation
 	unlock_estate_privilege = antq_sacral_treasury_seal_custody
 	unlock_estate_privilege = antq_lankan_regional_lineage_petitions
-	unlock_estate_privilege = antq_satavahana_guild_charter_arbitration
+	unlock_estate_privilege = antq_satavahana_royal_seal_custody
 	starting_technology_level = 2
 	requires = antq_monsoon_navigation
 	ai_weight = { add = 90 }
@@ -2661,6 +2671,7 @@ antq_silk_exchange = {
 	}
 	merchant_maintenance_efficiency = 0.01
 	unlock_estate_privilege = antq_lankan_reservoir_supervision_terms
+	unlock_estate_privilege = antq_satavahana_maharathi_mahabhoja_service_terms
 	starting_technology_level = 2
 	requires = antq_monsoon_navigation
 	ai_weight = { add = 90 }
@@ -2681,6 +2692,8 @@ antq_port_customs = {
 	}
 	merchant_maintenance_efficiency = 0.01
 	unlock_casus_belli = antq_succession_intervention
+	unlock_estate_privilege = antq_nabataean_caravan_route_obligations
+	unlock_estate_privilege = antq_himyarite_highland_lineage_terrace_service
 	starting_technology_level = 2
 	requires = antq_red_sea_piloting
 	ai_weight = { add = 90 }
@@ -2700,8 +2713,8 @@ antq_desert_waystations = {
 		}
 	}
 	merchant_maintenance_efficiency = 0.01
-	unlock_estate_privilege = antq_nabataean_caravan_water_guarantees
-	unlock_estate_privilege = antq_himyarite_terrace_water_compacts
+	unlock_estate_privilege = antq_nabataean_royal_seal_custody
+	unlock_estate_privilege = antq_himyarite_royal_seal_custody
 	starting_technology_level = 2
 	requires = antq_red_sea_piloting
 	ai_weight = { add = 90 }
@@ -2724,6 +2737,7 @@ antq_merchant_diasporas = {
 	unlock_government_reform = antq_lineage_rotation
 	unlock_government_reform = antq_temple_endowment_court
 	unlock_government_reform = antq_lankan_reservoir_kingship
+	unlock_government_reform = antq_satavahana_guild_court
 	starting_technology_level = 3
 	requires = antq_caravan_accounting
 	requires = antq_silk_exchange
@@ -2744,7 +2758,11 @@ antq_coin_exchange = {
 		}
 	}
 	global_trade_through_owned_territory_efficiency = 0.05
+	unlock_estate_privilege = antq_nabataean_merchant_artisan_safe_conducts
+	unlock_estate_privilege = antq_himyarite_incense_port_safe_conducts
 	unlock_government_reform = antq_petition_court
+	unlock_government_reform = antq_nabataean_water_stewardship
+	unlock_government_reform = antq_himyarite_irrigation_court
 	starting_technology_level = 3
 	requires = antq_port_customs
 	ai_weight = { add = 80 }
@@ -2766,7 +2784,7 @@ antq_seasonal_markets = {
 	unlock_casus_belli = antq_gupta_digvijaya
 	unlock_estate_privilege = antq_gana_road_hospitality_compacts
 	unlock_estate_privilege = antq_lankan_tank_labor_rotations
-	unlock_estate_privilege = antq_satavahana_maharathi_muster_precedence
+	unlock_estate_privilege = antq_satavahana_cultivator_tank_compacts
 	starting_technology_level = 4
 	requires = antq_merchant_diasporas
 	ai_weight = { add = 70 }
@@ -2787,8 +2805,8 @@ antq_principate_exchange = {
 	}
 	global_trade_through_owned_territory_efficiency = 0.05
 	unlock_estate_privilege = antq_royal_sanctuary_patronage
-	unlock_estate_privilege = antq_nabataean_royal_customs_inspection
-	unlock_estate_privilege = antq_himyarite_incense_route_toll_farm
+	unlock_estate_privilege = antq_nabataean_oasis_vineyard_water_compacts
+	unlock_estate_privilege = antq_himyarite_terrace_cultivator_water_compacts
 	starting_technology_level = 3
 	requires = antq_desert_waystations
 	ai_weight = { add = 80 }
@@ -3982,6 +4000,7 @@ antq_library_catalogues = {
 	unlock_estate_privilege = antq_iranian_mounted_host_compacts
 	unlock_estate_privilege = antq_steppe_mounted_retinue_quotas
 	unlock_estate_privilege = antq_xiongnu_lineage_surety_exchange
+	unlock_estate_privilege = antq_armenian_fortress_dynast_service_terms
 	starting_technology_level = 2
 	requires = antq_paper_precursors
 	ai_weight = { add = 90 }
@@ -4003,7 +4022,7 @@ antq_han_classics = {
 	unlock_estate_privilege = antq_iranian_great_house_counsel
 	unlock_estate_privilege = antq_steppe_wing_council_precedence
 	unlock_estate_privilege = antq_xiongnu_wing_command_precedence
-	unlock_estate_privilege = antq_armenian_fortress_dynast_service
+	unlock_estate_privilege = antq_armenian_royal_seal_custody
 	starting_technology_level = 2
 	requires = antq_paper_precursors
 	ai_weight = { add = 90 }
@@ -4063,9 +4082,11 @@ antq_legal_commentaries = {
 	unlock_estate_privilege = antq_iranian_caravan_toll_compacts
 	unlock_estate_privilege = antq_steppe_cauldron_and_rite_custody
 	unlock_estate_privilege = antq_xiongnu_frontier_market_tallies
+	unlock_estate_privilege = antq_armenian_caravan_artisan_safe_conducts
 	unlock_government_reform = antq_iranian_great_house_reform
 	unlock_government_reform = antq_steppe_wing_confederacy
 	unlock_government_reform = antq_xiongnu_dual_wing_command
+	unlock_government_reform = antq_armenian_dynast_compact
 	starting_technology_level = 3
 	requires = antq_library_catalogues
 	requires = antq_han_classics
@@ -4105,6 +4126,7 @@ antq_scholarly_correspondence = {
 	global_institution_growth_modifier = 0.10
 	unlock_estate_privilege = antq_iranian_irrigation_labor_compacts
 	unlock_estate_privilege = antq_xiongnu_remount_quota_compacts
+	unlock_estate_privilege = antq_armenian_fortress_pass_watch_rotations
 	starting_technology_level = 4
 	requires = antq_legal_commentaries
 	ai_weight = { add = 70 }
@@ -5101,6 +5123,7 @@ antq_recitation_lineages = {
 	global_monthly_literacy = 0.005
 	unlock_estate_privilege = antq_sacral_reservoir_labor_rotations
 	unlock_estate_privilege = antq_lankan_port_and_market_measures
+	unlock_estate_privilege = antq_satavahana_guild_caravan_safe_conducts
 	starting_technology_level = 3
 	requires = antq_brahmi_scribal_schools
 	ai_weight = { add = 80 }
@@ -5123,6 +5146,7 @@ antq_ayurvedic_compendia = {
 	unlock_government_reform = antq_gana_muster_confederacy
 	unlock_government_reform = antq_irrigation_palace
 	unlock_government_reform = antq_lankan_sangha_endowments
+	unlock_government_reform = antq_satavahana_maharathi_compact
 	starting_technology_level = 4
 	requires = antq_recitation_lineages
 	ai_weight = { add = 70 }
@@ -5142,6 +5166,7 @@ antq_astronomical_reckoning = {
 	}
 	global_institution_growth_modifier = 0.10
 	unlock_estate_privilege = antq_lankan_forest_route_compacts
+	unlock_estate_privilege = antq_satavahana_frontier_forest_watch_rotations
 	starting_technology_level = 4
 	requires = antq_recitation_lineages
 	ai_weight = { add = 70 }
@@ -5161,6 +5186,7 @@ antq_monastic_text_collections = {
 	}
 	research_speed_modifier = 0.015
 	unlock_estate_privilege = antq_lankan_monastic_endowment_immunity
+	unlock_estate_privilege = antq_satavahana_maharathi_muster_precedence
 	starting_technology_level = 4
 	requires = antq_ayurvedic_compendia
 	requires = antq_astronomical_reckoning
@@ -6252,6 +6278,8 @@ antq_temple_city_almonries = {
 	}
 	global_population_capacity_modifier = 0.02
 	unlock_estate_privilege = antq_royal_dynastic_hostage_compacts
+	unlock_estate_privilege = antq_nabataean_sanctuary_offering_inventories
+	unlock_estate_privilege = antq_himyarite_sanctuary_offering_inventories
 	starting_technology_level = 2
 	requires = antq_civic_associations
 	ai_weight = { add = 90 }
@@ -6271,6 +6299,8 @@ antq_synagogue_councils = {
 		}
 	}
 	global_pop_promotion_speed_modifier = 0.025
+	unlock_estate_privilege = antq_nabataean_route_oasis_watch_rotations
+	unlock_estate_privilege = antq_himyarite_route_tribal_watch_rotations
 	starting_technology_level = 3
 	requires = antq_temple_city_almonries
 	ai_weight = { add = 80 }
@@ -6290,6 +6320,10 @@ antq_caravan_diaspora_quarters = {
 		}
 	}
 	global_pop_assimilation_speed_modifier = 0.025
+	unlock_estate_privilege = antq_nabataean_caravan_water_guarantees
+	unlock_estate_privilege = antq_himyarite_terrace_water_compacts
+	unlock_government_reform = antq_nabataean_customs_court
+	unlock_government_reform = antq_himyarite_incense_route_court
 	starting_technology_level = 4
 	requires = antq_synagogue_councils
 	ai_weight = { add = 70 }
@@ -6309,6 +6343,8 @@ antq_civic_cult_associations = {
 		}
 	}
 	global_pop_assimilation_speed_modifier = 0.025
+	unlock_estate_privilege = antq_nabataean_royal_customs_inspection
+	unlock_estate_privilege = antq_himyarite_incense_route_toll_farm
 	starting_technology_level = 4
 	requires = antq_synagogue_councils
 	ai_weight = { add = 70 }

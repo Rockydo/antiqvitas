@@ -3578,3 +3578,30 @@ unions. It preserves keys for reference resolution while preventing absent
 medieval objects from being dereferenced. A fresh selector and actual-player
 start, rather than menu smoke alone, is the acceptance test because those are
 the first surfaces that evaluate the nested bodies.
+
+## 2026-07-27 - A dedicated state profile is one generated cross-system contract
+
+Armenia, Nabataea, Himyar, and Satavahana no longer receive political depth as
+independent hand-authored fragments. Each profile owns one base reform, two
+mutually exclusive research branches, one council, five programmes, three
+issue/agenda pairs, six social-order labels, six privileges, and two reviewed
+3x2 art atlases. The same reform tuple drives availability, council activation,
+estate localization, privilege gates, setup assignment, research unlocks, and
+the evidence ledgers.
+
+This makes profile drift a validation error rather than a visual inconsistency:
+the generators require exactly two alternatives per profile, a unique council
+participation contract, six direct privilege icons, six direct political icons,
+complete localization, and reachability through the installed Age-I DAG.
+Country-specific privileges remain a separate exact-tag layer so a state can
+combine its constitutional family with narrower choices without duplicating
+keys or effects.
+
+## 2026-07-27 - Project-interpreter raster output is the reproducible authority
+
+All generated raster masters must be rendered with
+`.venv/Scripts/python.exe`, the interpreter used by `make validate`. A
+pre-existing West African doctrine master exposed a one-image LANCZOS resample
+difference between the system Pillow build and the pinned project build. The
+project-interpreter output and manifest are authoritative; source motifs,
+historical design, DDS contract, and presentation remain unchanged.

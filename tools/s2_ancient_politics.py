@@ -355,6 +355,90 @@ PROFILES = (
             m("regional_hearing", "Regional Service Hearing", "Reconcile lineage, elephant, road, and reservoir obligations.", "Regional-Lineage Access Claim", "Leading houses request witnessed access to royal judgment.", "nobles_estate", ADMIN, NOBLES),
         ),
     ),
+    Profile(
+        "armenian", "antq_armenian_royal_council", "Artaxata Royal Council",
+        "The contested Artaxiad court coordinates highland dynasts, fortress service, sanctuary interests, royal domains, caravan passes, and diplomacy between Roman and Arsacid powers.",
+        ("antq_artaxiad_highland_kingship", "antq_armenian_dynast_compact", "antq_armenian_royal_domain_court"),
+        ("nobles_estate", "clergy_estate", "burghers_estate"),
+        "armenian_court_atlas.png", "b5fefe53b833b4ba751561ddb0519e403a89a61bc3f949a56485ff5c5a89f928",
+        "P8.2;P11;P13;CAH-XI;IRAN-ARM", "contested",
+        "Tigranes IV and Erato are retained, but the council is an evidence-bounded interface rather than a recovered Artaxiad constitution or office list.",
+        (
+            a("highland_fortress_musters", "Highland Fortress Musters", "Reconcile dynastic mounted followings, garrison stores, and bounded service at the highland strongholds.", "mil", MIL),
+            a("pass_courier_relays", "Pass Courier Relays", "Maintain horses, bells, sealed dispatches, and safe stages across exposed mountain routes.", "dip", LOGISTICS),
+            a("dynastic_arbitration", "Dynastic Arbitration", "Use witnessed oaths, precedence, sureties, and compensation to contain disputes among leading houses.", "dip", PRESTIGE),
+            a("royal_domain_accounts", "Royal Domain Accounts", "Review grain, wine, livestock, and retained domain obligations without inventing a uniform cadastre.", "adm", ADMIN),
+            a("frontier_embassies", "Roman-Arsacid Embassy Reception", "Coordinate gifts, interpreters, guarantees, and precedence under pressure from both imperial frontiers.", "dip", CONTROL),
+        ),
+        (
+            m("fortress_service", "Fortress Service Assessment", "Set bounded garrison, mounted, and provisioning duties among highland dynasts.", "Highland Dynast Command Claim", "Leading houses demand witnessed command shares and limits on extraordinary service.", "nobles_estate", MIL, NOBLES),
+            m("sanctuary_review", "Sanctuary Endowment Review", "Inventory vessels, offerings, stores, and protected gifts without centralizing local cults.", "Sanctuary Custodian Petition", "Cult custodians seek secure stores and recognition of locally witnessed obligations.", "clergy_estate", CLERGY, CLERGY),
+            m("pass_guarantees", "Caravan Pass Guarantees", "Coordinate escort, compensation, and water obligations on highland exchange routes.", "Caravan and Artisan Safe-Conduct", "Exchange households request predictable passage, measures, and restitution after route losses.", "burghers_estate", LOGISTICS, TRADE),
+        ),
+    ),
+    Profile(
+        "nabataean", "antq_nabataean_royal_council", "Petra Royal Council",
+        "The court of Aretas IV and Huldu coordinates caravan houses, cisterns and channels, sanctuary stores, customs measures, oasis cultivation, and relations with Rome.",
+        ("antq_nabataean_caravan_kingship", "antq_nabataean_water_stewardship", "antq_nabataean_customs_court"),
+        ("nobles_estate", "clergy_estate", "burghers_estate"),
+        "nabataean_court_atlas.png", "fd2933034aee392cd322bf41a750171f7f34b9c41f731da5ffb6201e274e032a",
+        "P8.1;P8.5;P11;P13;OCD;PLE;NABATAEA-MAP", "secure",
+        "The named court and importance of exchange and water management are secure; exact council membership and one kingdom-wide administrative code are not claimed.",
+        (
+            a("cistern_channel_returns", "Cistern and Channel Returns", "Review storage, channel clearing, water release, and measured labor across royal and community works.", "adm", FOOD),
+            a("caravan_safe_conducts", "Caravan Safe-Conducts", "Coordinate escorts, watering places, compensation rules, and protected movement between route communities.", "dip", LOGISTICS),
+            a("customs_measures", "Customs Measures", "Maintain weights, containers, assessed dues, and exemptions at connected exchange points.", "adm", TRADE),
+            a("sanctuary_store_inventories", "Sanctuary and Store Inventories", "Witness offerings, lamps, vessels, and hospitality stores without absorbing sanctuaries into the palace.", "adm", CLERGY),
+            a("client_embassies", "Client Embassy Reception", "Manage gifts, interpreters, dynastic standing, and guarantees within the kingdom's Roman relationship.", "dip", PRESTIGE),
+        ),
+        (
+            m("water_rotation", "Cistern Maintenance Rotation", "Set bounded clearing, repair, and distribution duties for a waterwork.", "Oasis Cultivator Water Claim", "Cultivating households request predictable access and seasonal maintenance terms.", "nobles_estate", FOOD, NOBLES),
+            m("sanctuary_inventory", "Sanctuary Store Inventory", "Review protected offerings, lamps, incense, and hospitality supplies.", "Sanctuary Custodian Petition", "Cult custodians seek witnessed protection for bounded stores and gifts.", "clergy_estate", CLERGY, CLERGY),
+            m("customs_revision", "Caravan Customs Revision", "Balance route security, stable measures, exemptions, and royal receipts.", "Merchant and Artisan Safe-Conduct", "Exchange households request enforceable passage and predictable customs measures.", "burghers_estate", TRADE, TRADE),
+        ),
+    ),
+    Profile(
+        "himyarite", "antq_himyarite_royal_council", "Himyarite Highland Council",
+        "The highland court coordinates lineage authority, terraces and dams, sanctuary stores, incense routes, Red Sea exchanges, cultivating communities, and bounded levy service.",
+        ("antq_himyarite_terrace_kingship", "antq_himyarite_irrigation_court", "antq_himyarite_incense_route_court"),
+        ("nobles_estate", "clergy_estate", "burghers_estate"),
+        "himyarite_court_atlas.png", "5854e1bf928bae15eca406cc4bddb87a2d513887daadce45fc8f2dab750394aa",
+        "P8.5;P8.6;P11;P13;CAH-XI;OCD-HIM;HIMYAR-HIST;OUP-REDSEA", "contested",
+        "The anonymous opening ruler and incomplete AD 1 office evidence remain explicit; mechanics use securely important highland, water, incense, port, and lineage contexts.",
+        (
+            a("terrace_dam_works", "Terrace and Dam Works", "Coordinate fitted masonry, water release, repair labor, and storage around highland cultivation.", "adm", FOOD),
+            a("incense_assessments", "Incense Route Assessments", "Review weights, protected routes, pack service, and assessed shares in aromatics exchange.", "dip", TRADE),
+            a("red_sea_dispatches", "Red Sea Port Dispatches", "Coordinate amphorae, rope, pilots, cargo measures, and inland movement from western ports.", "dip", LOGISTICS),
+            a("sanctuary_inventories", "Sanctuary Store Inventories", "Witness incense, lamps, vessels, and bounded stores without inventing a centralized priesthood.", "adm", CLERGY),
+            a("lineage_levy_returns", "Lineage Levy Returns", "Set shields, spears, provisions, and seasons of service among highland lineages.", "mil", MIL),
+        ),
+        (
+            m("terrace_repairs", "Terrace Repair Rotation", "Set bounded masonry, clearing, and water obligations for highland communities.", "Highland Lineage Water Claim", "Leading houses request witnessed shares in water and repair supervision.", "nobles_estate", FOOD, NOBLES),
+            m("sanctuary_stores", "Sanctuary Store Review", "Inventory incense, vessels, lamps, and protected hospitality stores.", "Sanctuary Offering Petition", "Cult custodians seek recognized supplies and limits on extraordinary requisition.", "clergy_estate", CLERGY, CLERGY),
+            m("incense_passage", "Incense Passage Measure", "Balance assessed dues, escorts, port movement, and compensation on protected routes.", "Incense and Port Safe-Conduct", "Exchange houses ask for stable measures and enforceable protection between highland and coast.", "burghers_estate", TRADE, TRADE),
+        ),
+    ),
+    Profile(
+        "satavahana", "antq_satavahana_royal_council", "Deccan Royal Council",
+        "The contested Satavahana court coordinates titled regional houses, religious gifts, guild and caravan exchange, inland routes, cultivating communities, waterworks, and elephant service.",
+        ("antq_satavahana_deccan_kingship", "antq_satavahana_guild_court", "antq_satavahana_maharathi_compact"),
+        ("nobles_estate", "clergy_estate", "burghers_estate"),
+        "satavahana_court_atlas.png", "0598aefe1a9e6781a35a836c35cc87a87578082803099c43a39489ef2bb263eb",
+        "P8.4;P11;P13;CAH-XI", "contested",
+        "Maharathi and mahabhoja titles, donations, routes, and exchange inform a conservative interface; no named AD 1 ruler or uniform Deccan bureaucracy is invented.",
+        (
+            a("deccan_route_returns", "Deccan Route Returns", "Coordinate water, pack service, beads, textiles, and safe passage between inland exchange centers.", "dip", LOGISTICS),
+            a("guild_donation_records", "Guild and Donation Records", "Witness weights, gifts, craft obligations, and hospitality without projecting medieval guild constitutions.", "adm", TRADE),
+            a("market_measures", "Market Weights and Measures", "Maintain balanced weights, containers, and inspected measures across connected markets.", "adm", ADMIN),
+            a("elephant_mounted_musters", "Elephant and Mounted Musters", "Register handlers, harness, fodder, mounted followings, and bounded seasons of service.", "mil", MIL),
+            a("tank_irrigation_accounts", "Tank and Irrigation Accounts", "Review water release, silt clearing, repair labor, seed needs, and community shares.", "adm", FOOD),
+        ),
+        (
+            m("regional_service", "Regional Service Assessment", "Set bounded mounted, elephant, route, and provisioning duties for titled houses.", "Maharathi and Mahabhoja Claim", "Regional houses request witnessed precedence and limits on extraordinary service.", "nobles_estate", MIL, NOBLES),
+            m("donation_inventory", "Donation and Store Inventory", "Review bounded gifts, vessels, lamps, and hospitality resources of religious communities.", "Monastic and Sanctuary Petition", "Religious communities seek protected gifts without becoming organs of the royal court.", "clergy_estate", CLERGY, CLERGY),
+            m("guild_passage", "Guild and Caravan Passage", "Set weights, route protection, compensation, and water obligations for exchange households.", "Guild Safe-Conduct Petition", "Guild and caravan houses request predictable measures and enforceable passage.", "burghers_estate", TRADE, TRADE),
+        ),
+    ),
 )
 
 COUNCIL_DYNAMICS: dict[str, tuple[str, tuple[tuple[str, str], ...]]] = {
@@ -409,6 +493,22 @@ COUNCIL_DYNAMICS: dict[str, tuple[str, tuple[tuple[str, str], ...]]] = {
     "lankan": (
         "0.10",
         (("nobles_estate", "0.15"), ("clergy_estate", "0.20"), ("peasants_estate", "0.10")),
+    ),
+    "armenian": (
+        "0.05",
+        (("nobles_estate", "0.25"), ("clergy_estate", "0.05"), ("burghers_estate", "0.10")),
+    ),
+    "nabataean": (
+        "0.15",
+        (("nobles_estate", "0.10"), ("clergy_estate", "0.05"), ("burghers_estate", "0.25")),
+    ),
+    "himyarite": (
+        "0.05",
+        (("nobles_estate", "0.20"), ("clergy_estate", "0.10"), ("burghers_estate", "0.15")),
+    ),
+    "satavahana": (
+        "0.10",
+        (("nobles_estate", "0.20"), ("clergy_estate", "0.10"), ("burghers_estate", "0.15")),
     ),
 }
 

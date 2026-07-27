@@ -7230,3 +7230,30 @@ reviewed 128px BC7 DDS.
 - The repeated fresh selector and actual-player start emit zero
   `Script system error!` entries, with no market self-relation or market-action
   scope diagnostics. Full validation and paired smoke are the commit gates.
+
+## 2026-07-27 - Replaced four more royal fallbacks with complete state profiles
+
+- Armenia, Nabataea, Himyar, and Satavahana now start on dedicated Artaxiad
+  highland, Nabataean caravan, Himyarite terrace, and Satavahana Deccan reforms.
+  Each reform selects its own council in the generated AD 1 setup rather than
+  inheriting the broad regional royal council.
+- Added four councils, twenty state-office programmes, twelve issues, twelve
+  agendas, twenty-four polity-aware social-order names, and twenty-four
+  profile-gated privileges. Eight reviewed 3x2 archaeological atlases supply
+  forty-eight new direct icons with no text, figures, heraldry, or post-antique
+  objects.
+- Added two research-gated alternatives per state: Armenian dynast compact or
+  royal domain, Nabataean water stewardship or customs court, Himyarite
+  irrigation or incense-route court, and Satavahana guild court or titled-house
+  compact. Himyar and Satavahana retain anonymous opening rulers because the
+  evidence boundary does not support invented names.
+- Installed breadth is now 17 councils, 85 programmes, 51 issues, 51 agendas,
+  57 political contracts, 172 privileges, 671 ancient-system unlocks, and 856
+  direct UI asset chains. All 292 opening profiles remain researchable.
+- Regenerated one pre-existing West African doctrine master with the pinned
+  project interpreter after its system-Pillow resample differed from the
+  virtual-environment validator; the source motif and doctrine design did not
+  change.
+- Full validation passes all 102 checks. Normal and `-leavepops` paired-control
+  smoke launches both reached a rendered menu and reported zero mod-unique
+  `error.log` lines.

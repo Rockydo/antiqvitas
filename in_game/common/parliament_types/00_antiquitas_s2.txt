@@ -360,3 +360,115 @@ antq_anuradhapura_royal_council = {
 		peasants_estate_agenda_impact = 0.10
 	}
 }
+
+antq_armenian_royal_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_artaxiad_highland_kingship
+			has_reform = government_reform:antq_armenian_dynast_compact
+			has_reform = government_reform:antq_armenian_royal_domain_court
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_artaxiad_highland_kingship
+			has_reform = government_reform:antq_armenian_dynast_compact
+			has_reform = government_reform:antq_armenian_royal_domain_court
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		clergy_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.05
+		nobles_estate_agenda_impact = 0.25
+		clergy_estate_agenda_impact = 0.05
+		burghers_estate_agenda_impact = 0.10
+	}
+}
+
+antq_nabataean_royal_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_nabataean_caravan_kingship
+			has_reform = government_reform:antq_nabataean_water_stewardship
+			has_reform = government_reform:antq_nabataean_customs_court
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_nabataean_caravan_kingship
+			has_reform = government_reform:antq_nabataean_water_stewardship
+			has_reform = government_reform:antq_nabataean_customs_court
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		clergy_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.15
+		nobles_estate_agenda_impact = 0.10
+		clergy_estate_agenda_impact = 0.05
+		burghers_estate_agenda_impact = 0.25
+	}
+}
+
+antq_himyarite_royal_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_himyarite_terrace_kingship
+			has_reform = government_reform:antq_himyarite_irrigation_court
+			has_reform = government_reform:antq_himyarite_incense_route_court
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_himyarite_terrace_kingship
+			has_reform = government_reform:antq_himyarite_irrigation_court
+			has_reform = government_reform:antq_himyarite_incense_route_court
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		clergy_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.05
+		nobles_estate_agenda_impact = 0.20
+		clergy_estate_agenda_impact = 0.10
+		burghers_estate_agenda_impact = 0.15
+	}
+}
+
+antq_satavahana_royal_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_satavahana_deccan_kingship
+			has_reform = government_reform:antq_satavahana_guild_court
+			has_reform = government_reform:antq_satavahana_maharathi_compact
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_satavahana_deccan_kingship
+			has_reform = government_reform:antq_satavahana_guild_court
+			has_reform = government_reform:antq_satavahana_maharathi_compact
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		clergy_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.10
+		nobles_estate_agenda_impact = 0.20
+		clergy_estate_agenda_impact = 0.10
+		burghers_estate_agenda_impact = 0.15
+	}
+}

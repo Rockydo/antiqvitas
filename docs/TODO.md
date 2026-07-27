@@ -5,7 +5,7 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review. (Validated by the 832-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
+- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review. (Validated by the 856-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
   - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
 ## Second manual playtest remediation — 2026-07-26 (resume here)
@@ -44,7 +44,7 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 45 reforms and 148 privileges
+  thin outside the first replacement tranches: 57 reforms and 172 privileges
   serve 292 opening polities. The legal layer now has 227 ancient groups,
   including 182 profile laws with 584 total options, a 26-option dated
   development layer, and 12 country-specific exceptions.
@@ -141,8 +141,8 @@ and focused runtime probe all pass.
   - [ ] Replace required gameplay breadth at both definition and
     unlock/reference layers. Preserve only locally proven engine adapters, and
     guarantee that their names, descriptions, icons, and effects cannot surface.
-    Existing namespaced ancient content remains active (148 privileges, 227 laws,
-    37 reforms).
+    Existing namespaced ancient content remains active (172 privileges, 227 laws,
+    57 reforms).
     - [x] Supply the first deep council/state-office replacement tranche:
       nine reform-driven council profiles, 45 profile-locked administrative
       programmes, 27 issues, 27 agendas, 54 outcome/concession modifiers, and
@@ -156,12 +156,12 @@ and focused runtime probe all pass.
       type names remain polity-aware rather than being flattened into one
       generic label.
     - [x] Replace generic estate labels and shallow privilege breadth with
-      thirteen reform-driven order identities and 78 additional profile-gated
+      seventeen reform-driven order identities and 102 additional profile-gated
       grants.
-      All six engine order slots now render polity-aware names; the 78 grants
+      All six engine order slots now render polity-aware names; the 102 grants
       use 30+ effect packages, mutually exclusive alternatives where
-      appropriate, explicit power/tax/control tradeoffs, and 78 unique direct
-      historical-material illustrations. The project now has 148/148
+      appropriate, explicit power/tax/control tradeoffs, and 102 unique direct
+      historical-material illustrations. The project now has 172/172
       directly illustrated ancient privileges.
     - [ ] Complete the remaining S2-P4 replacement breadth: profile-specific
       major-country subdivisions, additional reform paths, and later-century
@@ -182,6 +182,20 @@ and focused runtime probe all pass.
         contract now covers 45 reforms and the knowledge tree carries 635
         ancient-system unlocks. Keep the parent open for other major-state
         subdivisions and dated successor forms.
+      - [x] Give Armenia, Nabataea, Himyar, and Satavahana the same complete
+        dedicated treatment instead of the broad royal fallback: four base
+        reforms, four councils, 24 social-order names, 24 privileges, 20
+        state-office programmes, 12 issues, 12 agendas, and 48 direct icons.
+        Armenia and Nabataea retain their sourced opening courts; Himyar and
+        Satavahana remain explicitly anonymous rather than receiving invented
+        AD 1 rulers. Installed breadth is now 17 councils, 85 programmes, 51
+        issues, 51 agendas, 126 profile grants, and 172 total privileges.
+      - [x] Add two research-gated constitutional branches to each of those
+        four profiles: Armenian dynast/royal-domain, Nabataean water/customs,
+        Himyarite irrigation/incense-route, and Satavahana guild/titled-house
+        paths. The political contract now covers 57 reforms and the knowledge
+        tree carries 671 ancient-system unlocks; every opening country remains
+        researchable.
       - [x] Add the first dated legal-development layer: two options for every
         one of the 13 legal profiles, 26 total, spanning AD 25-382. All gates
         use `AntqDate`, each option has a distinct three-effect package and an
@@ -524,6 +538,11 @@ and focused runtime probe all pass.
     profiles. Xiongnu, Goguryeo, Meroitic Kush, and Anuradhapura Lanka each
     retain their dedicated council and social-order package across two
     historically bounded alternatives. Total reform breadth is now 45.
+  - [x] Extend dedicated base-and-two-branch reform depth to Armenia,
+    Nabataea, Himyar, and Satavahana. Their highland, caravan/water,
+    terrace/incense, and Deccan guild/titled-house alternatives raise reform
+    breadth to 57 while retaining anonymous ruler boundaries where evidence is
+    insufficient.
   - [ ] Subdivide the nine-family floor further for major countries and
     high-priority regional constitutions; connect later-century successor paths
     to their dated historical transitions.
@@ -562,6 +581,12 @@ and focused runtime probe all pass.
     opening support. The locally documented parliament-type surface exposes
     participation and agenda impact rather than a programmable seat count, so
     those are the checked delegate mechanics.
+  - [x] Replace the royal fallback for Armenia, Nabataea, Himyar, and
+    Satavahana with dedicated councils, order identities, six privileges, five
+    programmes, three issues, and three agendas per state. The generated layer
+    now contains 17 councils, 85 programmes, 51 issues, 51 agendas, 126
+    profile grants, 102 direct political icons, and 126 direct profile-grant
+    icons.
   - [ ] Expand major profiles beyond the nine-family regional floor and test
     focused Roman, Han, Iranian, civic, and assembly panels without requiring
     long playthroughs. Add further country-specific appointment logic only
@@ -608,7 +633,7 @@ and focused runtime probe all pass.
     tradeoffs, mutual exclusion, revocation, source boundary, localization,
     and direct-art requirements.
   - [ ] Continue expanding country/culture/religion-specific privileges beyond
-    the current 148, prioritizing additional major states and culturally
+    the current 172, prioritizing additional major states and culturally
     bounded regional alternatives rather than generic filler.
   - Acceptance: all 229 tags have useful legal/political choices; major countries
     have bespoke depth; no duplicate filler effect or post-476 inheritance.

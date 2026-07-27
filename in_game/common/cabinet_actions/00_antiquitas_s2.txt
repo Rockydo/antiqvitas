@@ -1030,3 +1030,323 @@ antq_lankan_elephant_service = {
 		global_road_building_time = -0.05
 	}
 }
+
+antq_armenian_highland_fortress_musters = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_artaxiad_highland_kingship
+			has_reform = government_reform:antq_armenian_dynast_compact
+			has_reform = government_reform:antq_armenian_royal_domain_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.01
+	}
+}
+
+antq_armenian_pass_courier_relays = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_artaxiad_highland_kingship
+			has_reform = government_reform:antq_armenian_dynast_compact
+			has_reform = government_reform:antq_armenian_royal_domain_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_supply_limit_modifier = 0.05
+		global_road_building_time = -0.05
+	}
+}
+
+antq_armenian_dynastic_arbitration = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_artaxiad_highland_kingship
+			has_reform = government_reform:antq_armenian_dynast_compact
+			has_reform = government_reform:antq_armenian_royal_domain_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_prestige = 0.05
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_armenian_royal_domain_accounts = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_artaxiad_highland_kingship
+			has_reform = government_reform:antq_armenian_dynast_compact
+			has_reform = government_reform:antq_armenian_royal_domain_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		country_cabinet_efficiency = 0.025
+		global_monthly_control = 0.0025
+	}
+}
+
+antq_armenian_frontier_embassies = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_artaxiad_highland_kingship
+			has_reform = government_reform:antq_armenian_dynast_compact
+			has_reform = government_reform:antq_armenian_royal_domain_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_towards_centralization = societal_value_minor_monthly_move
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_nabataean_cistern_channel_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_nabataean_caravan_kingship
+			has_reform = government_reform:antq_nabataean_water_stewardship
+			has_reform = government_reform:antq_nabataean_customs_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_pop_food_consumption = -0.01
+		global_production_efficiency = 0.025
+	}
+}
+
+antq_nabataean_caravan_safe_conducts = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_nabataean_caravan_kingship
+			has_reform = government_reform:antq_nabataean_water_stewardship
+			has_reform = government_reform:antq_nabataean_customs_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_supply_limit_modifier = 0.05
+		global_road_building_time = -0.05
+	}
+}
+
+antq_nabataean_customs_measures = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_nabataean_caravan_kingship
+			has_reform = government_reform:antq_nabataean_water_stewardship
+			has_reform = government_reform:antq_nabataean_customs_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_trade_through_owned_territory_efficiency = 0.05
+		global_burghers_estate_power = 0.025
+	}
+}
+
+antq_nabataean_sanctuary_store_inventories = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_nabataean_caravan_kingship
+			has_reform = government_reform:antq_nabataean_water_stewardship
+			has_reform = government_reform:antq_nabataean_customs_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_clergy_estate_power = 0.025
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_nabataean_client_embassies = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_nabataean_caravan_kingship
+			has_reform = government_reform:antq_nabataean_water_stewardship
+			has_reform = government_reform:antq_nabataean_customs_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_prestige = 0.05
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_himyarite_terrace_dam_works = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_himyarite_terrace_kingship
+			has_reform = government_reform:antq_himyarite_irrigation_court
+			has_reform = government_reform:antq_himyarite_incense_route_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_pop_food_consumption = -0.01
+		global_production_efficiency = 0.025
+	}
+}
+
+antq_himyarite_incense_assessments = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_himyarite_terrace_kingship
+			has_reform = government_reform:antq_himyarite_irrigation_court
+			has_reform = government_reform:antq_himyarite_incense_route_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_trade_through_owned_territory_efficiency = 0.05
+		global_burghers_estate_power = 0.025
+	}
+}
+
+antq_himyarite_red_sea_dispatches = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_himyarite_terrace_kingship
+			has_reform = government_reform:antq_himyarite_irrigation_court
+			has_reform = government_reform:antq_himyarite_incense_route_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_supply_limit_modifier = 0.05
+		global_road_building_time = -0.05
+	}
+}
+
+antq_himyarite_sanctuary_inventories = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_himyarite_terrace_kingship
+			has_reform = government_reform:antq_himyarite_irrigation_court
+			has_reform = government_reform:antq_himyarite_incense_route_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_clergy_estate_power = 0.025
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_himyarite_lineage_levy_returns = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_himyarite_terrace_kingship
+			has_reform = government_reform:antq_himyarite_irrigation_court
+			has_reform = government_reform:antq_himyarite_incense_route_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.01
+	}
+}
+
+antq_satavahana_deccan_route_returns = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_satavahana_deccan_kingship
+			has_reform = government_reform:antq_satavahana_guild_court
+			has_reform = government_reform:antq_satavahana_maharathi_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_supply_limit_modifier = 0.05
+		global_road_building_time = -0.05
+	}
+}
+
+antq_satavahana_guild_donation_records = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_satavahana_deccan_kingship
+			has_reform = government_reform:antq_satavahana_guild_court
+			has_reform = government_reform:antq_satavahana_maharathi_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_trade_through_owned_territory_efficiency = 0.05
+		global_burghers_estate_power = 0.025
+	}
+}
+
+antq_satavahana_market_measures = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_satavahana_deccan_kingship
+			has_reform = government_reform:antq_satavahana_guild_court
+			has_reform = government_reform:antq_satavahana_maharathi_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		country_cabinet_efficiency = 0.025
+		global_monthly_control = 0.0025
+	}
+}
+
+antq_satavahana_elephant_mounted_musters = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_satavahana_deccan_kingship
+			has_reform = government_reform:antq_satavahana_guild_court
+			has_reform = government_reform:antq_satavahana_maharathi_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.01
+	}
+}
+
+antq_satavahana_tank_irrigation_accounts = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_satavahana_deccan_kingship
+			has_reform = government_reform:antq_satavahana_guild_court
+			has_reform = government_reform:antq_satavahana_maharathi_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_pop_food_consumption = -0.01
+		global_production_efficiency = 0.025
+	}
+}

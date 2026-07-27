@@ -5021,3 +5021,34 @@ ethnic systems backward. The Oceanian branch similarly represents
 Austronesian navigation, stilt settlement, shell valuables, and feast
 redistribution as broad regional affordances, not one pan-Oceanian polity.
 Sources: `P8.9`; `P8.10`; `P15`. [contested regional abstraction]
+
+## 2026-07-27 - Four dedicated royal profiles preserve different evidence limits
+
+The Armenian profile retains Tigranes IV and Erato but treats its highland
+dynasts, fortress service, royal domains, sanctuaries, pass couriers, and
+Roman-Arsacid embassies as bounded political interfaces. The dynast compact and
+royal-domain branches do not claim a recovered Artaxiad constitution, uniform
+cadastre, or complete office list. Sources: `P8.2`; `P11`; `P13`; `CAH-XI`;
+`IRAN-ARM`. [contested constitutional abstraction]
+
+The Nabataean profile is more secure at the level of the named Aretas IV-Huldu
+court and the importance of Petra/Hegra exchange, water storage, sanctuaries,
+oasis cultivation, and relations with Rome. Its cistern-stewardship and customs
+branches do not turn these functions into one kingdom-wide hydraulic
+bureaucracy or a modern commercial state. Sources: `P8.1`; `P8.5`; `P11`;
+`P13`; `OCD`; `PLE`; `NABATAEA-MAP`; `BM-HULD`. [secure court, bounded
+institutional reconstruction]
+
+The Himyarite opening ruler remains anonymous. Terrace agriculture, waterworks,
+highland lineages, sanctuaries, incense movement, and Red Sea exchange justify
+distinct mechanics, but no named AD 1 ruler, fixed levy code, or complete court
+hierarchy is invented. Sources: `P8.5`; `P8.6`; `P11`; `P13`; `CAH-XI`;
+`OCD-HIM`; `HIMYAR-HIST`; `OUP-REDSEA`. [contested political reconstruction]
+
+The Satavahana opening ruler also remains anonymous because the AD 1 succession
+is not secure enough for a fabricated individual. Maharathi and mahabhoja
+titles, religious gifts, guild and caravan exchange, inland routes, waterworks,
+cultivation, and elephant service support the Deccan profile and its two
+branches, but their precise competence and hierarchy are not projected
+uniformly across the realm. Sources: `P8.4`; `P11`; `P13`; `CAH-XI`.
+[contested political reconstruction]

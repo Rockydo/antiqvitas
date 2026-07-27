@@ -117,6 +117,31 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "P8.4;P11;P13;CAH-XI", "contested",
         "Monastic patronage and irrigation households shape the sacral court.",
     ),
+    "antq_artaxiad_highland_kingship": (
+        "global_nobles_estate_power=0.12|global_clergy_estate_power=0.04|"
+        "nobles_estate_power_from_cabinet=0.25|replace_cabinet_member_cost_modifier=0.10",
+        "P8.2;P11;P13;CAH-XI;IRAN-ARM", "contested",
+        "The contested Artaxiad court negotiates authority with highland dynasts and sanctuaries under Roman-Arsacid frontier pressure.",
+    ),
+    "antq_nabataean_caravan_kingship": (
+        "global_nobles_estate_power=0.08|global_burghers_estate_power=0.12|"
+        "burghers_estate_power_from_cabinet=0.25|replace_cabinet_member_cost_modifier=0.05",
+        "P8.1;P8.5;P11;P13;OCD;PLE;NABATAEA-MAP", "secure",
+        "The named Aretas-Huldu court rests on caravan, water, sanctuary, and oasis interests without a claimed uniform bureaucracy.",
+    ),
+    "antq_himyarite_terrace_kingship": (
+        "global_nobles_estate_power=0.10|global_peasants_estate_power=0.08|"
+        "estate_power_from_cabinet=0.22|replace_cabinet_member_cost_modifier=0.08",
+        "P8.5;P8.6;P11;P13;CAH-XI;OCD-HIM;HIMYAR-HIST;OUP-REDSEA", "contested",
+        "Highland lineages and terrace communities structure an anonymous AD 1 royal adapter without inventing a recovered Himyarite office hierarchy.",
+    ),
+    "antq_satavahana_deccan_kingship": (
+        "global_nobles_estate_power=0.10|global_burghers_estate_power=0.08|"
+        "nobles_estate_power_from_cabinet=0.18|burghers_estate_power_from_cabinet=0.12|"
+        "replace_cabinet_member_cost_modifier=0.06",
+        "P8.4;P11;P13;CAH-XI", "contested",
+        "A conservative Deccan court adapter balances titled regional houses, guild exchange, gifts, waterworks, and cultivation during a ruler gap.",
+    ),
     "antq_indian_ganasangha": (
         "global_peasants_estate_power=0.10|global_burghers_estate_power=0.05|"
         "estate_power_from_cabinet=0.20|replace_cabinet_member_cost_modifier=-0.10",
@@ -315,6 +340,38 @@ ALTERNATIVE_REFORMS: tuple[tuple[str, str, str, str, str, str, str, str, str], .
      "Balance royal patronage, monastic endowments, port measures, and regional lineages through recorded grants.",
      "global_clergy_estate_power=0.20|global_burghers_estate_power=0.10|clergy_estate_power_from_cabinet=0.25|replace_cabinet_member_cost_modifier=0.05",
      "P8.4;P11;P13;BHR", "secure", "Represents early Buddhist patronage and donation practice without importing later monastic landholding arrangements wholesale."),
+    ("antq_armenian_dynast_compact", "armenian", "monarchy", "Highland Dynast Compact",
+     "Entrust fortress commands, mounted service, pass security, and arbitration to leading highland houses under royal precedence.",
+     "global_nobles_estate_power=0.20|global_tribes_estate_power=0.05|nobles_estate_power_from_cabinet=0.35|replace_cabinet_member_cost_modifier=0.18",
+     "P8.2;P11;P13;CAH-XI;IRAN-ARM", "contested", "Dynastic and fortress bargaining is evidence-bounded; no single written Artaxiad compact or fixed rank order is claimed."),
+    ("antq_armenian_royal_domain_court", "armenian", "monarchy", "Artaxata Royal-Domain Court",
+     "Strengthen royal domains, sealed accounts, pass couriers, and embassy coordination without erasing highland dynasts.",
+     "global_crown_estate_power=0.18|global_burghers_estate_power=0.07|crown_estate_power_from_cabinet=0.28|set_cabinet_member_cost_modifier=-0.07",
+     "P8.2;P11;P13;CAH-XI;IRAN-ARM", "contested", "A centralizing gameplay branch grounded in royal-domain and route functions, not a recovered Artaxiad chancery."),
+    ("antq_nabataean_water_stewardship", "nabataean", "monarchy", "Cistern Stewardship Court",
+     "Ground royal legitimacy in cisterns, channels, oasis labor, sanctuary stores, and predictable water compacts.",
+     "global_peasants_estate_power=0.15|global_crown_estate_power=0.10|crown_estate_power_from_cabinet=0.22|set_cabinet_member_cost_modifier=-0.08",
+     "P8.1;P8.5;P11;P13;OCD;PLE;NABATAEA-MAP", "secure", "Water management is securely important, while this branch avoids claiming one centralized kingdom-wide hydraulic administration."),
+    ("antq_nabataean_customs_court", "nabataean", "monarchy", "Caravan Customs Court",
+     "Empower caravan, merchant, and artisan houses through protected routes, stable measures, and reviewed customs schedules.",
+     "global_burghers_estate_power=0.20|global_nobles_estate_power=0.05|burghers_estate_power_from_cabinet=0.32|replace_cabinet_member_cost_modifier=0.10",
+     "P8.1;P8.5;P11;P13;OCD;PLE;NABATAEA-MAP", "secure", "The branch represents caravan and customs leverage without reducing the Nabataean kingdom to a modern commercial state."),
+    ("antq_himyarite_irrigation_court", "himyarite", "monarchy", "Highland Irrigation Court",
+     "Coordinate terrace walls, dams, water release, storage, and seasonal repair through protected cultivating communities.",
+     "global_peasants_estate_power=0.18|global_crown_estate_power=0.10|crown_estate_power_from_cabinet=0.24|set_cabinet_member_cost_modifier=-0.08",
+     "P8.5;P8.6;P11;P13;CAH-XI;OCD-HIM;HIMYAR-HIST", "contested", "A highland waterwork branch grounded in material context, not a claim for a uniform Himyarite hydraulic bureaucracy."),
+    ("antq_himyarite_incense_route_court", "himyarite", "monarchy", "Incense-Route Court",
+     "Center royal coordination on incense assessment, protected inland routes, Red Sea dispatches, and port measures.",
+     "global_burghers_estate_power=0.18|global_nobles_estate_power=0.07|burghers_estate_power_from_cabinet=0.28|replace_cabinet_member_cost_modifier=0.08",
+     "P8.5;P8.6;P11;P13;CAH-XI;OUP-REDSEA", "contested", "Incense and maritime exchange are securely relevant, while exact court offices and assessed shares remain unrecoverable."),
+    ("antq_satavahana_guild_court", "satavahana", "monarchy", "Guild and Caravan Court",
+     "Regularize guild gifts, caravan passage, inspected measures, water access, and royal hospitality across Deccan routes.",
+     "global_burghers_estate_power=0.20|global_clergy_estate_power=0.05|burghers_estate_power_from_cabinet=0.30|set_cabinet_member_cost_modifier=-0.05",
+     "P8.4;P11;P13;CAH-XI", "contested", "Uses attested exchange and donation contexts without projecting later guild constitutions uniformly into AD 1."),
+    ("antq_satavahana_maharathi_compact", "satavahana", "monarchy", "Maharathi and Mahabhoja Compact",
+     "Entrust regional service, elephant and mounted musters, route protection, and local arbitration to titled houses.",
+     "global_nobles_estate_power=0.20|global_tribes_estate_power=0.06|nobles_estate_power_from_cabinet=0.34|replace_cabinet_member_cost_modifier=0.16",
+     "P8.4;P11;P13;CAH-XI", "contested", "Attested titles support a regional-house branch, but their precise AD 1 competence and hierarchy are not reconstructed."),
 )
 
 for (
@@ -342,6 +399,10 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
     "goguryeo": ("antq_early_korean_kingdom",),
     "kushite": ("antq_kushite_dual_kingship",),
     "lankan": ("antq_lankan_kingdom",),
+    "armenian": ("antq_artaxiad_highland_kingship",),
+    "nabataean": ("antq_nabataean_caravan_kingship",),
+    "himyarite": ("antq_himyarite_terrace_kingship",),
+    "satavahana": ("antq_satavahana_deccan_kingship",),
 }
 PROFILE_PARLIAMENTS = {
     "roman": "antq_roman_senate",
@@ -357,6 +418,10 @@ PROFILE_PARLIAMENTS = {
     "goguryeo": "antq_goguryeo_royal_council",
     "kushite": "antq_meroitic_royal_council",
     "lankan": "antq_anuradhapura_royal_council",
+    "armenian": "antq_armenian_royal_council",
+    "nabataean": "antq_nabataean_royal_council",
+    "himyarite": "antq_himyarite_royal_council",
+    "satavahana": "antq_satavahana_royal_council",
 }
 
 
@@ -853,18 +918,19 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    if len(POLITICAL_CONTRACTS) != 45 or not used_reforms.issubset(POLITICAL_CONTRACTS):
+    if len(POLITICAL_CONTRACTS) != 57 or not used_reforms.issubset(POLITICAL_CONTRACTS):
         failures.append(
-            "political appointment contracts must cover 19 core and 26 alternative reforms"
+            "political appointment contracts must cover 23 core and 34 alternative reforms"
         )
-    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 30:
+    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 38:
         failures.append("political appointment contracts are insufficiently differentiated")
     alternative_profiles = [row[1] for row in ALTERNATIVE_REFORMS]
-    if len(ALTERNATIVE_REFORMS) != 26 or any(
+    if len(ALTERNATIVE_REFORMS) != 34 or any(
         alternative_profiles.count(profile) != 2
         for profile in {
             "roman", "han", "iranian", "civic", "gana", "steppe", "tribal",
             "sacral", "royal", "xiongnu", "goguryeo", "kushite", "lankan",
+            "armenian", "nabataean", "himyarite", "satavahana",
         }
     ):
         failures.append("alternative reforms must provide two paths for every political profile")
@@ -1212,6 +1278,50 @@ antq_tribal_kingdom = {
 	}
 	years = 2
 }
+
+antq_artaxiad_highland_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.08
+		country_cabinet_efficiency = 0.025
+		research_speed = 0.10
+	}
+	years = 2
+}
+
+antq_nabataean_caravan_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_burghers_estate_power = 0.08
+		global_trade_through_owned_territory_efficiency = 0.04
+		research_speed = 0.10
+	}
+	years = 2
+}
+
+antq_himyarite_terrace_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_peasants_estate_power = 0.08
+		global_pop_food_consumption = -0.01
+		research_speed = 0.10
+	}
+	years = 2
+}
+
+antq_satavahana_deccan_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.05
+		global_burghers_estate_power = 0.05
+		research_speed = 0.10
+	}
+	years = 2
+}
 """
     parliament_by_reform = {
         reform: PROFILE_PARLIAMENTS[profile]
@@ -1351,6 +1461,14 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_han_imperial_bureaucracy_desc", "A palace-centred bureaucracy whose Mandate of Heaven is represented through legitimacy and effective rule."),
         ("antq_lankan_kingdom", "Anuradhapura Kingship"),
         ("antq_lankan_kingdom_desc", "A Lankan royal court whose monastic and irrigation patronage is a central source of authority."),
+        ("antq_artaxiad_highland_kingship", "Artaxiad Highland Kingship"),
+        ("antq_artaxiad_highland_kingship_desc", "A contested Artaxiad court balancing highland dynasts, fortresses, sanctuaries, routes, and Roman-Arsacid frontier pressure."),
+        ("antq_nabataean_caravan_kingship", "Nabataean Caravan Kingship"),
+        ("antq_nabataean_caravan_kingship_desc", "The court of Aretas IV and Huldu coordinating caravan houses, waterworks, sanctuaries, oasis cultivation, and Roman relations."),
+        ("antq_himyarite_terrace_kingship", "Himyarite Terrace Kingship"),
+        ("antq_himyarite_terrace_kingship_desc", "An evidence-bounded highland court balancing lineages, terraces, sanctuaries, incense routes, ports, and cultivating communities."),
+        ("antq_satavahana_deccan_kingship", "Satavahana Deccan Kingship"),
+        ("antq_satavahana_deccan_kingship_desc", "A conservative Deccan court adapter balancing titled houses, religious gifts, guild exchange, cultivation, waterworks, and routes."),
         ("antq_indian_ganasangha", "Indian Ganasangha"),
         ("antq_indian_ganasangha_desc", "A clan-based republican council represented through the installed republic government type."),
         ("antq_indo_scythian_kingship", "Indo-Scythian Kingship"),
