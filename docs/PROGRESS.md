@@ -7257,3 +7257,33 @@ reviewed 128px BC7 DDS.
 - Full validation passes all 102 checks. Normal and `-leavepops` paired-control
   smoke launches both reached a rendered menu and reported zero mod-unique
   `error.log` lines.
+
+## 2026-07-27 - Deepened four user-priority regional royal profiles
+
+- Catuvellauni, Marcomanni, Saba, and Mauretania now start on dedicated
+  oppidum, Bohemian-retinue, Ma'rib-waterwork, and client-court reforms instead
+  of the broad tribal or regional-royal fallback.
+- Added four councils, twenty state-office programmes, twelve issues, twelve
+  agendas, twenty-four polity-aware social-order names, and twenty-four
+  profile privileges. Eight reviewed 3x2 archaeological atlases supply
+  forty-eight new direct political and privilege icons.
+- Added two research-gated alternatives per state: Catuvellaunian
+  dynastic-mint or oppida compacts, Marcomannic retinue or allied-host
+  government, Sabaean irrigation or sanctuary-route courts, and Mauretanian
+  urban or mounted-frontier government.
+- The Sabaean opening ruler remains anonymous. Tasciovanus and Cunobelinus,
+  Maroboduus, and Juba II with Cleopatra Selene retain their sourced opening
+  profiles; no reconstructed office list is presented as certain.
+- Installed breadth is now 21 councils, 105 programmes, 63 issues, 63 agendas,
+  69 political contracts, 196 privileges, 707 ancient-system unlocks, and 880
+  direct UI asset chains. All 292 opening countries remain researchable.
+- The first full validator pass caught and rejected a shared Sabaean
+  localization key between a programme and privilege. Renaming the programme
+  to Incense Caravan Dispatches restored global key uniqueness; the complete
+  rerun passes all 102 checks.
+- Full regeneration under the pinned project interpreter also normalized
+  eighteen pre-existing PNG payloads whose decoded pixels are exactly
+  unchanged; this is compression/metadata drift only, not an art revision.
+- Normal and `-leavepops` paired-control smoke launches both reached a rendered
+  menu and reported zero mod-unique `error.log` lines. Evidence is recorded in
+  `docs/playtests/S2_FOUR_REGIONAL_POLITICAL_PROFILES_20260727.md`.

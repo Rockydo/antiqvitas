@@ -765,3 +765,183 @@ antq_issue_satavahana_guild_passage = {
 	}
 	on_debate_failed = { parliament_debate_failed_effect = yes }
 }
+
+antq_issue_catuvellaunian_oppidum_contributions = {
+	estate = nobles_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_catuvellaunian_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_catuvellaunian_oppidum_contributions_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_catuvellaunian_sacred_place_review = {
+	estate = clergy_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_catuvellaunian_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_catuvellaunian_sacred_place_review_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_catuvellaunian_channel_measures = {
+	estate = burghers_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_catuvellaunian_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_catuvellaunian_channel_measures_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_marcomannic_retinue_service = {
+	estate = nobles_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_marcomannic_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_marcomannic_retinue_service_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_marcomannic_allied_host_terms = {
+	estate = tribes_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_marcomannic_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_marcomannic_allied_host_terms_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_marcomannic_sacred_oath_review = {
+	estate = clergy_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_marcomannic_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_marcomannic_sacred_oath_review_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_sabaean_waterwork_rotation = {
+	estate = peasants_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_sabaean_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_sabaean_waterwork_rotation_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_sabaean_sanctuary_stores = {
+	estate = clergy_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_sabaean_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_sabaean_sanctuary_stores_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_sabaean_incense_routes = {
+	estate = burghers_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_sabaean_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_sabaean_incense_routes_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_mauretanian_royal_domain_review = {
+	estate = nobles_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_mauretanian_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_mauretanian_royal_domain_review_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_mauretanian_port_craft_measures = {
+	estate = burghers_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_mauretanian_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_mauretanian_port_craft_measures_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_mauretanian_frontier_watch_terms = {
+	estate = tribes_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_mauretanian_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_mauretanian_frontier_watch_terms_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}

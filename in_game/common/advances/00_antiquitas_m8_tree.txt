@@ -62,6 +62,10 @@ antq_provincial_census = {
 	unlock_government_reform = antq_nabataean_caravan_kingship
 	unlock_government_reform = antq_himyarite_terrace_kingship
 	unlock_government_reform = antq_satavahana_deccan_kingship
+	unlock_government_reform = antq_catuvellaunian_oppidum_kingship
+	unlock_government_reform = antq_marcomannic_bohemian_kingship
+	unlock_government_reform = antq_sabaean_marib_kingship
+	unlock_government_reform = antq_mauretanian_client_kingship
 	unlock_law = antq_s2_roman_household_law
 	unlock_law = antq_s2_han_land_law
 	unlock_law = antq_s2_han_external_law
@@ -921,6 +925,7 @@ antq_oppidum_council_summons = {
 		}
 	}
 	stability_cost_efficiency = 0.02
+	unlock_estate_privilege = antq_catuvellaunian_royal_seal_custody
 	starting_technology_level = 2
 	requires = antq_imperial_cult
 	ai_weight = { add = 90 }
@@ -939,6 +944,7 @@ antq_guest_friends_arbitration = {
 	}
 	global_monthly_control = 0.001
 	unlock_estate_privilege = antq_tribal_grove_custodianship
+	unlock_government_reform = antq_catuvellaunian_dynastic_mint_court
 	starting_technology_level = 3
 	requires = antq_oppidum_council_summons
 	ai_weight = { add = 80 }
@@ -956,6 +962,7 @@ antq_tribute_feast_tallies = {
 		}
 	}
 	tax_income_efficiency = small_tax_income_efficiency_bonus
+	unlock_estate_privilege = antq_catuvellaunian_oppidum_craft_market_measures
 	starting_technology_level = 4
 	requires = antq_guest_friends_arbitration
 	ai_weight = { add = 70 }
@@ -992,6 +999,7 @@ antq_confederated_council_customs = {
 		}
 	}
 	legislative_efficiency = 0.05
+	unlock_estate_privilege = antq_catuvellaunian_channel_frontier_watch_rotations
 	starting_technology_level = 4
 	requires = antq_tribute_feast_tallies
 	requires = antq_clientage_oath_networks
@@ -1014,6 +1022,7 @@ antq_meroitic_temple_stewardship = {
 	stability_cost_efficiency = 0.02
 	unlock_estate_privilege = antq_sacral_granary_endowments
 	unlock_estate_privilege = antq_kushite_provincial_tribute_bowls
+	unlock_estate_privilege = antq_mauretanian_court_regional_house_service
 	starting_technology_level = 2
 	requires = antq_imperial_cult
 	ai_weight = { add = 90 }
@@ -1035,6 +1044,7 @@ antq_kandake_court_delegates = {
 	global_monthly_control = 0.001
 	unlock_estate_privilege = antq_royal_tribute_assessment_registers
 	unlock_estate_privilege = antq_kushite_iron_and_gold_workshop_terms
+	unlock_estate_privilege = antq_mauretanian_sanctuary_offering_inventories
 	starting_technology_level = 3
 	requires = antq_meroitic_temple_stewardship
 	ai_weight = { add = 80 }
@@ -1077,7 +1087,9 @@ antq_nile_caravan_adjudication = {
 	tax_income_efficiency = small_tax_income_efficiency_bonus
 	unlock_estate_privilege = antq_sacral_scribal_register_custody
 	unlock_estate_privilege = antq_kushite_desert_route_hospitality
+	unlock_estate_privilege = antq_mauretanian_olive_grain_labor_compacts
 	unlock_government_reform = antq_kushite_temple_domain
+	unlock_government_reform = antq_mauretanian_frontier_compact
 	starting_technology_level = 4
 	requires = antq_kandake_court_delegates
 	ai_weight = { add = 70 }
@@ -1429,6 +1441,7 @@ antq_field_engineering = {
 	unlock_unit = antq_germanic_spearmen
 	unlock_unit = antq_germanic_javelins
 	unlock_casus_belli = antq_loot_raid
+	unlock_estate_privilege = antq_marcomannic_retinue_command_terms
 	starting_technology_level = 2
 	requires = antq_auxiliary_service
 	ai_weight = { add = 90 }
@@ -1527,6 +1540,7 @@ antq_principate_warfare = {
 		}
 	}
 	army_maintenance_efficiency = 0.01
+	unlock_estate_privilege = antq_marcomannic_iron_amber_safe_conducts
 	unlock_estate_privilege = antq_cheruscan_retinue_gift_precedence
 	starting_technology_level = 3
 	requires = antq_frontier_patrols
@@ -2395,6 +2409,7 @@ antq_hillfort_muster_beacons = {
 		}
 	}
 	army_logistics_distance_modifier = 0.10
+	unlock_estate_privilege = antq_catuvellaunian_dynastic_retinue_service_terms
 	starting_technology_level = 2
 	requires = antq_professional_standing_armies
 	ai_weight = { add = 90 }
@@ -2412,6 +2427,7 @@ antq_chariot_screening = {
 		}
 	}
 	army_maintenance_efficiency = 0.01
+	unlock_estate_privilege = antq_catuvellaunian_sacred_place_offering_inventories
 	starting_technology_level = 3
 	requires = antq_hillfort_muster_beacons
 	ai_weight = { add = 80 }
@@ -2429,6 +2445,8 @@ antq_champion_retinues = {
 		}
 	}
 	land_morale_modifier = 0.01
+	unlock_estate_privilege = antq_catuvellaunian_cultivator_store_compacts
+	unlock_government_reform = antq_catuvellaunian_oppida_compact
 	starting_technology_level = 4
 	requires = antq_chariot_screening
 	ai_weight = { add = 70 }
@@ -2694,6 +2712,7 @@ antq_port_customs = {
 	unlock_casus_belli = antq_succession_intervention
 	unlock_estate_privilege = antq_nabataean_caravan_route_obligations
 	unlock_estate_privilege = antq_himyarite_highland_lineage_terrace_service
+	unlock_estate_privilege = antq_sabaean_lineage_dam_service_terms
 	starting_technology_level = 2
 	requires = antq_red_sea_piloting
 	ai_weight = { add = 90 }
@@ -2715,6 +2734,7 @@ antq_desert_waystations = {
 	merchant_maintenance_efficiency = 0.01
 	unlock_estate_privilege = antq_nabataean_royal_seal_custody
 	unlock_estate_privilege = antq_himyarite_royal_seal_custody
+	unlock_estate_privilege = antq_sabaean_royal_seal_custody
 	starting_technology_level = 2
 	requires = antq_red_sea_piloting
 	ai_weight = { add = 90 }
@@ -2760,9 +2780,11 @@ antq_coin_exchange = {
 	global_trade_through_owned_territory_efficiency = 0.05
 	unlock_estate_privilege = antq_nabataean_merchant_artisan_safe_conducts
 	unlock_estate_privilege = antq_himyarite_incense_port_safe_conducts
+	unlock_estate_privilege = antq_sabaean_sanctuary_offering_inventories
 	unlock_government_reform = antq_petition_court
 	unlock_government_reform = antq_nabataean_water_stewardship
 	unlock_government_reform = antq_himyarite_irrigation_court
+	unlock_government_reform = antq_sabaean_irrigation_court
 	starting_technology_level = 3
 	requires = antq_port_customs
 	ai_weight = { add = 80 }
@@ -2807,6 +2829,7 @@ antq_principate_exchange = {
 	unlock_estate_privilege = antq_royal_sanctuary_patronage
 	unlock_estate_privilege = antq_nabataean_oasis_vineyard_water_compacts
 	unlock_estate_privilege = antq_himyarite_terrace_cultivator_water_compacts
+	unlock_estate_privilege = antq_sabaean_incense_caravan_safe_conducts
 	starting_technology_level = 3
 	requires = antq_desert_waystations
 	ai_weight = { add = 80 }
@@ -3754,6 +3777,7 @@ antq_garamantian_oasis_stages = {
 	}
 	merchant_maintenance_efficiency = 0.01
 	unlock_estate_privilege = antq_kushite_dual_court_seal_custody
+	unlock_estate_privilege = antq_mauretanian_royal_seal_custody
 	starting_technology_level = 2
 	requires = antq_monsoon_navigation
 	ai_weight = { add = 90 }
@@ -3775,6 +3799,7 @@ antq_meroe_nile_caravans = {
 	global_trade_through_owned_territory_efficiency = 0.05
 	unlock_estate_privilege = antq_kushite_temple_storehouse_inventories
 	unlock_government_reform = antq_kushite_dual_household
+	unlock_government_reform = antq_mauretanian_urban_court
 	starting_technology_level = 3
 	requires = antq_garamantian_oasis_stages
 	ai_weight = { add = 80 }
@@ -3815,6 +3840,7 @@ antq_sahel_iron_exchange = {
 	import_efficiency = tiny_trade_efficiency_bonus
 	unlock_estate_privilege = antq_sacral_processional_provisioning
 	unlock_estate_privilege = antq_kushite_nile_cultivator_rotations
+	unlock_estate_privilege = antq_mauretanian_port_craft_measures
 	starting_technology_level = 4
 	requires = antq_meroe_nile_caravans
 	ai_weight = { add = 70 }
@@ -3836,6 +3862,7 @@ antq_ivory_route_brokers = {
 	export_efficiency = small_trade_efficiency_bonus
 	unlock_estate_privilege = antq_sacral_frontier_hospitality_endowments
 	unlock_estate_privilege = antq_kushite_temple_storehouse_immunity
+	unlock_estate_privilege = antq_mauretanian_frontier_watch_rotations
 	starting_technology_level = 4
 	requires = antq_red_sea_entrepots
 	requires = antq_sahel_iron_exchange
@@ -6322,8 +6349,10 @@ antq_caravan_diaspora_quarters = {
 	global_pop_assimilation_speed_modifier = 0.025
 	unlock_estate_privilege = antq_nabataean_caravan_water_guarantees
 	unlock_estate_privilege = antq_himyarite_terrace_water_compacts
+	unlock_estate_privilege = antq_sabaean_dam_canal_water_compacts
 	unlock_government_reform = antq_nabataean_customs_court
 	unlock_government_reform = antq_himyarite_incense_route_court
+	unlock_government_reform = antq_sabaean_sanctuary_route_court
 	starting_technology_level = 4
 	requires = antq_synagogue_councils
 	ai_weight = { add = 70 }
@@ -6345,6 +6374,7 @@ antq_civic_cult_associations = {
 	global_pop_assimilation_speed_modifier = 0.025
 	unlock_estate_privilege = antq_nabataean_royal_customs_inspection
 	unlock_estate_privilege = antq_himyarite_incense_route_toll_farm
+	unlock_estate_privilege = antq_sabaean_highland_route_watch_rotations
 	starting_technology_level = 4
 	requires = antq_synagogue_councils
 	ai_weight = { add = 70 }
@@ -6383,6 +6413,7 @@ antq_household_retinue_feasts = {
 	}
 	global_population_capacity_modifier = 0.02
 	unlock_estate_privilege = antq_tribal_elder_assembly_hearing
+	unlock_estate_privilege = antq_marcomannic_royal_gift_custody
 	unlock_estate_privilege = antq_cheruscan_coalition_assembly_hearing
 	starting_technology_level = 2
 	requires = antq_civic_associations
@@ -6401,7 +6432,9 @@ antq_sacred_grove_custody = {
 		}
 	}
 	global_pop_promotion_speed_modifier = 0.025
+	unlock_estate_privilege = antq_marcomannic_sacred_oath_stores
 	unlock_government_reform = antq_elder_moot_kingship
+	unlock_government_reform = antq_marcomannic_retinue_court
 	starting_technology_level = 3
 	requires = antq_household_retinue_feasts
 	ai_weight = { add = 80 }
@@ -6419,6 +6452,7 @@ antq_wergild_arbitration = {
 		}
 	}
 	global_pop_assimilation_speed_modifier = 0.025
+	unlock_estate_privilege = antq_marcomannic_allied_kindred_muster_terms
 	starting_technology_level = 4
 	requires = antq_sacred_grove_custody
 	ai_weight = { add = 70 }
@@ -6436,6 +6470,8 @@ antq_fosterage_and_hostages = {
 		}
 	}
 	global_pop_assimilation_speed_modifier = 0.025
+	unlock_estate_privilege = antq_marcomannic_settlement_provision_compacts
+	unlock_government_reform = antq_marcomannic_allied_host_compact
 	starting_technology_level = 4
 	requires = antq_sacred_grove_custody
 	ai_weight = { add = 70 }

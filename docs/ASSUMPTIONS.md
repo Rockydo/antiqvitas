@@ -5052,3 +5052,37 @@ cultivation, and elephant service support the Deccan profile and its two
 branches, but their precise competence and hierarchy are not projected
 uniformly across the realm. Sources: `P8.4`; `P11`; `P13`; `CAH-XI`.
 [contested political reconstruction]
+
+## 2026-07-27 - Four regional royal profiles retain separate evidence limits
+
+The Catuvellaunian profile uses Tasciovanus and Cunobelinus as its secure
+dynastic anchor, while oppida, coinage, retinue, sacred-place, cultivation, and
+Channel-exchange functions are conservative political interfaces. The
+dynastic-mint and oppida branches do not claim a centralized monetary
+bureaucracy, equal federation, fixed franchise, or recovered constitution.
+Sources: `P8.7`; `P11`; `P13`; `CAH-XI`; `BM-DRU`. [contested constitutional
+abstraction]
+
+Maroboduus's organized Marcomannic kingdom is securely distinguished from a
+generic Germanic society, but the detailed balance among royal retinue, allied
+kindreds, settlement stores, sacred custody, iron/amber exchange, and Roman
+frontier diplomacy is not recoverable as a written office hierarchy. The
+retinue and allied-host branches therefore model political emphasis, not
+medieval vassalage or a permanent federal constitution. Sources: `P8.7`;
+`P11`; `P13`; `CAH-XI`; `TAC-GER`. [secure polity, bounded institutional
+reconstruction]
+
+Saba's opening ruler remains anonymous. Ma'rib waterworks, sanctuary contexts,
+incense movement, highland cultivation, and Red Sea connections support a
+dedicated profile, but no named AD 1 ruler, centralized priesthood, kingdom-wide
+hydraulic bureaucracy, or exact assessed shares are invented. Sources:
+`P8.5`; `P8.6`; `P11`; `P13`; `CAH-XI`; `UNESCO-SABA`;
+`UNESCO-INCENSE`. [contested political reconstruction]
+
+The Mauretanian profile retains Juba II and Cleopatra Selene II and the secure
+Roman client relationship while preserving local royal agency. Royal domains,
+cities and ports, craft/coin measures, Mediterranean diplomacy, and mounted
+frontier service justify distinct mechanics, but the kingdom is not flattened
+into a uniform "Romanized" administration or a single tribal frontier system.
+Sources: `P8.1`; `P8.5`; `P11`; `P13`; `CAH-XI`; `OCD`; `OCD-PTO`.
+[secure court, bounded institutional reconstruction]

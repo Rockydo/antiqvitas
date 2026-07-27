@@ -5,7 +5,7 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review. (Validated by the 856-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
+- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review. (Validated by the 880-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
   - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
 ## Second manual playtest remediation — 2026-07-26 (resume here)
@@ -156,12 +156,13 @@ and focused runtime probe all pass.
       type names remain polity-aware rather than being flattened into one
       generic label.
     - [x] Replace generic estate labels and shallow privilege breadth with
-      seventeen reform-driven order identities and 102 additional profile-gated
-      grants.
-      All six engine order slots now render polity-aware names; the 102 grants
+      twenty-one reform-driven order identities and 126 additional
+      profile-gated grants.
+      All six engine order slots now render polity-aware names; the 126 grants
       use 30+ effect packages, mutually exclusive alternatives where
-      appropriate, explicit power/tax/control tradeoffs, and 102 unique direct
-      historical-material illustrations. The project now has 172/172
+      appropriate, explicit power/tax/control tradeoffs, and 126 unique direct
+      historical-material illustrations. Together with 24 exact-country
+      grants, the project now has 196/196
       directly illustrated ancient privileges.
     - [ ] Complete the remaining S2-P4 replacement breadth: profile-specific
       major-country subdivisions, additional reform paths, and later-century
@@ -196,6 +197,19 @@ and focused runtime probe all pass.
         paths. The political contract now covers 57 reforms and the knowledge
         tree carries 671 ancient-system unlocks; every opening country remains
         researchable.
+      - [x] Replace the broad fallback for Catuvellauni, Marcomanni, Saba, and
+        Mauretania with four dedicated base reforms, councils, 24 social-order
+        names, 24 privileges, 20 state-office programmes, 12 issues, 12
+        agendas, and 48 direct icons. Tasciovanus/Cunobelinus, Maroboduus, and
+        Juba II/Cleopatra Selene remain sourced opening courts; Saba remains
+        explicitly anonymous.
+      - [x] Add two research-gated constitutional branches to each of those
+        four profiles: Catuvellaunian dynastic-mint/oppida, Marcomannic
+        retinue/allied-host, Sabaean irrigation/sanctuary-route, and
+        Mauretanian urban/frontier paths. Installed breadth is now 21 councils,
+        105 programmes, 63 issues, 63 agendas, 69 political contracts, 196
+        privileges, 707 ancient-system unlocks, and 880 direct UI asset
+        chains; all 292 opening countries remain researchable.
       - [x] Add the first dated legal-development layer: two options for every
         one of the 13 legal profiles, 26 total, spanning AD 25-382. All gates
         use `AntqDate`, each option has a distinct three-effect package and an
@@ -587,6 +601,12 @@ and focused runtime probe all pass.
     now contains 17 councils, 85 programmes, 51 issues, 51 agendas, 126
     profile grants, 102 direct political icons, and 126 direct profile-grant
     icons.
+  - [x] Replace generic fallbacks for Catuvellauni, Marcomanni, Saba, and
+    Mauretania with dedicated councils, order identities, six privileges, five
+    programmes, three issues, and three agendas per state. The generated layer
+    now contains 21 councils, 105 programmes, 63 issues, 63 agendas, 126
+    profile grants, 126 direct political icons, and 150 direct
+    profile-plus-country privilege icons.
   - [ ] Expand major profiles beyond the nine-family regional floor and test
     focused Roman, Han, Iranian, civic, and assembly panels without requiring
     long playthroughs. Add further country-specific appointment logic only

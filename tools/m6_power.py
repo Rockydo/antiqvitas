@@ -142,6 +142,32 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "P8.4;P11;P13;CAH-XI", "contested",
         "A conservative Deccan court adapter balances titled regional houses, guild exchange, gifts, waterworks, and cultivation during a ruler gap.",
     ),
+    "antq_catuvellaunian_oppidum_kingship": (
+        "global_nobles_estate_power=0.11|global_burghers_estate_power=0.06|"
+        "nobles_estate_power_from_cabinet=0.22|replace_cabinet_member_cost_modifier=0.07",
+        "P8.7;P11;P13;CAH-XI;BM-DRU", "contested",
+        "Tasciovanian kingship coordinates dynastic mints, oppida, retinues, sacred places, and exchange without claiming a recovered British constitution.",
+    ),
+    "antq_marcomannic_bohemian_kingship": (
+        "global_tribes_estate_power=0.12|global_nobles_estate_power=0.10|"
+        "tribes_estate_power_from_cabinet=0.20|nobles_estate_power_from_cabinet=0.16|"
+        "replace_cabinet_member_cost_modifier=0.09",
+        "P8.7;P11;P13;CAH-XI;TAC-GER", "secure",
+        "Maroboduus's organized kingdom rests on a royal retinue and negotiated allied kindreds without importing later Germanic institutions.",
+    ),
+    "antq_sabaean_marib_kingship": (
+        "global_peasants_estate_power=0.10|global_burghers_estate_power=0.08|"
+        "estate_power_from_cabinet=0.23|replace_cabinet_member_cost_modifier=0.07",
+        "P8.5;P8.6;P11;P13;CAH-XI;UNESCO-SABA;UNESCO-INCENSE", "contested",
+        "An anonymous Sabaean court coordinates Ma'rib waterworks, sanctuaries, incense exchange, and highland lineages without inventing a named ruler or office hierarchy.",
+    ),
+    "antq_mauretanian_client_kingship": (
+        "global_nobles_estate_power=0.08|global_burghers_estate_power=0.08|"
+        "nobles_estate_power_from_cabinet=0.16|burghers_estate_power_from_cabinet=0.14|"
+        "replace_cabinet_member_cost_modifier=0.06",
+        "P8.1;P8.5;P11;P13;CAH-XI;OCD;OCD-PTO", "secure",
+        "Juba II and Cleopatra Selene's client court balances regional houses, royal domains, cities, ports, and frontier service without becoming a uniform Roman administration.",
+    ),
     "antq_indian_ganasangha": (
         "global_peasants_estate_power=0.10|global_burghers_estate_power=0.05|"
         "estate_power_from_cabinet=0.20|replace_cabinet_member_cost_modifier=-0.10",
@@ -372,6 +398,38 @@ ALTERNATIVE_REFORMS: tuple[tuple[str, str, str, str, str, str, str, str, str], .
      "Entrust regional service, elephant and mounted musters, route protection, and local arbitration to titled houses.",
      "global_nobles_estate_power=0.20|global_tribes_estate_power=0.06|nobles_estate_power_from_cabinet=0.34|replace_cabinet_member_cost_modifier=0.16",
      "P8.4;P11;P13;CAH-XI", "contested", "Attested titles support a regional-house branch, but their precise AD 1 competence and hierarchy are not reconstructed."),
+    ("antq_catuvellaunian_dynastic_mint_court", "catuvellaunian", "tribe", "Dynastic Mint Court",
+     "Center royal authority on witnessed weights, dies, prestige exchange, retinue gifts, and succession display at the oppida.",
+     "global_burghers_estate_power=0.15|global_nobles_estate_power=0.10|burghers_estate_power_from_cabinet=0.28|set_cabinet_member_cost_modifier=-0.05",
+     "P8.7;P11;P13;CAH-XI;BM-DRU", "contested", "Coinage and dynastic display are securely relevant, while the branch avoids inventing a centralized mint bureaucracy or monetary economy."),
+    ("antq_catuvellaunian_oppida_compact", "catuvellaunian", "tribe", "Oppida Compact",
+     "Coordinate stores, craft measures, sanctuary hearings, cultivating households, and Channel exchange among fortified settlement centers.",
+     "global_peasants_estate_power=0.10|global_tribes_estate_power=0.08|estate_power_from_cabinet=0.25|replace_cabinet_member_cost_modifier=0.08",
+     "P8.7;P11;P13;CAH-XI;BM-DRU", "contested", "Oppida provide a defensible settlement framework, not proof of an equal federation, fixed franchise, or uniform administration."),
+    ("antq_marcomannic_retinue_court", "marcomannic", "tribe", "Maroboduus's Retinue Court",
+     "Concentrate gifts, arms, intelligence, frontier envoys, and repeated campaign service around the royal following.",
+     "global_nobles_estate_power=0.20|global_tribes_estate_power=0.08|nobles_estate_power_from_cabinet=0.35|replace_cabinet_member_cost_modifier=0.18",
+     "P8.7;P11;P13;CAH-XI;TAC-GER", "secure", "The ruler's organized following is securely important; this path does not turn personal bonds into medieval vassalage or salaried office."),
+    ("antq_marcomannic_allied_host_compact", "marcomannic", "tribe", "Allied Host Compact",
+     "Distribute settlement, wagon, warrior, provisioning, and frontier-watch obligations among negotiated allied kindreds.",
+     "global_tribes_estate_power=0.20|global_peasants_estate_power=0.06|tribes_estate_power_from_cabinet=0.32|replace_cabinet_member_cost_modifier=0.10",
+     "P8.7;P11;P13;CAH-XI;TAC-GER", "contested", "The branch models negotiated host contributions without claiming a permanent federation, equal member peoples, or fixed territorial levies."),
+    ("antq_sabaean_irrigation_court", "sabaean", "monarchy", "Ma'rib Irrigation Court",
+     "Ground royal legitimacy in dam masonry, canal clearing, measured releases, cultivation, and bounded seasonal labor.",
+     "global_peasants_estate_power=0.18|global_crown_estate_power=0.10|crown_estate_power_from_cabinet=0.24|set_cabinet_member_cost_modifier=-0.08",
+     "P8.5;P8.6;P11;P13;CAH-XI;UNESCO-SABA", "secure", "The Ma'rib water system is secure, while the branch avoids hydraulic-despotism claims or a uniform kingdom-wide water bureaucracy."),
+    ("antq_sabaean_sanctuary_route_court", "sabaean", "monarchy", "Sanctuary and Incense-Route Court",
+     "Balance sanctuary inventories, incense assessments, caravan water, protected passage, and Red Sea forwarding.",
+     "global_clergy_estate_power=0.14|global_burghers_estate_power=0.14|burghers_estate_power_from_cabinet=0.25|replace_cabinet_member_cost_modifier=0.06",
+     "P8.5;P8.6;P11;P13;CAH-XI;UNESCO-INCENSE", "contested", "Sanctuary and incense-route contexts are securely important, while exact AD 1 court competences and assessed shares remain uncertain."),
+    ("antq_mauretanian_urban_court", "mauretanian", "monarchy", "Caesarea Urban Court",
+     "Strengthen civic petitions, port returns, inspected craft measures, dynastic diplomacy, and accountable royal workshops.",
+     "global_burghers_estate_power=0.18|global_crown_estate_power=0.08|burghers_estate_power_from_cabinet=0.28|set_cabinet_member_cost_modifier=-0.06",
+     "P8.1;P8.5;P11;P13;CAH-XI;OCD;OCD-PTO", "secure", "Juba's court and urban patronage support the branch without implying that every community shared a Roman civic constitution."),
+    ("antq_mauretanian_frontier_compact", "mauretanian", "monarchy", "Mounted Frontier Compact",
+     "Entrust mounted watch, guides, water access, regional musters, and border intelligence to negotiated frontier communities.",
+     "global_tribes_estate_power=0.16|global_nobles_estate_power=0.10|nobles_estate_power_from_cabinet=0.28|replace_cabinet_member_cost_modifier=0.12",
+     "P8.1;P8.5;P11;P13;CAH-XI", "contested", "Mounted frontier service is modeled conservatively without flattening diverse Mauretanian communities into a single tribal institution."),
 )
 
 for (
@@ -403,6 +461,10 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
     "nabataean": ("antq_nabataean_caravan_kingship",),
     "himyarite": ("antq_himyarite_terrace_kingship",),
     "satavahana": ("antq_satavahana_deccan_kingship",),
+    "catuvellaunian": ("antq_catuvellaunian_oppidum_kingship",),
+    "marcomannic": ("antq_marcomannic_bohemian_kingship",),
+    "sabaean": ("antq_sabaean_marib_kingship",),
+    "mauretanian": ("antq_mauretanian_client_kingship",),
 }
 PROFILE_PARLIAMENTS = {
     "roman": "antq_roman_senate",
@@ -422,6 +484,10 @@ PROFILE_PARLIAMENTS = {
     "nabataean": "antq_nabataean_royal_council",
     "himyarite": "antq_himyarite_royal_council",
     "satavahana": "antq_satavahana_royal_council",
+    "catuvellaunian": "antq_catuvellaunian_royal_council",
+    "marcomannic": "antq_marcomannic_royal_council",
+    "sabaean": "antq_sabaean_royal_council",
+    "mauretanian": "antq_mauretanian_royal_council",
 }
 
 
@@ -918,19 +984,20 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    if len(POLITICAL_CONTRACTS) != 57 or not used_reforms.issubset(POLITICAL_CONTRACTS):
+    if len(POLITICAL_CONTRACTS) != 69 or not used_reforms.issubset(POLITICAL_CONTRACTS):
         failures.append(
-            "political appointment contracts must cover 23 core and 34 alternative reforms"
+            "political appointment contracts must cover 27 core and 42 alternative reforms"
         )
-    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 38:
+    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 60:
         failures.append("political appointment contracts are insufficiently differentiated")
     alternative_profiles = [row[1] for row in ALTERNATIVE_REFORMS]
-    if len(ALTERNATIVE_REFORMS) != 34 or any(
+    if len(ALTERNATIVE_REFORMS) != 42 or any(
         alternative_profiles.count(profile) != 2
         for profile in {
             "roman", "han", "iranian", "civic", "gana", "steppe", "tribal",
             "sacral", "royal", "xiongnu", "goguryeo", "kushite", "lankan",
             "armenian", "nabataean", "himyarite", "satavahana",
+            "catuvellaunian", "marcomannic", "sabaean", "mauretanian",
         }
     ):
         failures.append("alternative reforms must provide two paths for every political profile")
@@ -1322,6 +1389,50 @@ antq_satavahana_deccan_kingship = {
 	}
 	years = 2
 }
+
+antq_catuvellaunian_oppidum_kingship = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_nobles_estate_power = 0.08
+		global_burghers_estate_power = 0.04
+		research_speed = 0.08
+	}
+	years = 2
+}
+
+antq_marcomannic_bohemian_kingship = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		global_nobles_estate_power = 0.06
+		research_speed = 0.08
+	}
+	years = 2
+}
+
+antq_sabaean_marib_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_peasants_estate_power = 0.08
+		global_pop_food_consumption = -0.01
+		research_speed = 0.10
+	}
+	years = 2
+}
+
+antq_mauretanian_client_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.05
+		global_burghers_estate_power = 0.05
+		research_speed = 0.10
+	}
+	years = 2
+}
 """
     parliament_by_reform = {
         reform: PROFILE_PARLIAMENTS[profile]
@@ -1469,6 +1580,14 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_himyarite_terrace_kingship_desc", "An evidence-bounded highland court balancing lineages, terraces, sanctuaries, incense routes, ports, and cultivating communities."),
         ("antq_satavahana_deccan_kingship", "Satavahana Deccan Kingship"),
         ("antq_satavahana_deccan_kingship_desc", "A conservative Deccan court adapter balancing titled houses, religious gifts, guild exchange, cultivation, waterworks, and routes."),
+        ("antq_catuvellaunian_oppidum_kingship", "Catuvellaunian Oppidum Kingship"),
+        ("antq_catuvellaunian_oppidum_kingship_desc", "Tasciovanus's kingship coordinating dynastic mints, oppida, retinues, sacred places, cultivation, and Channel exchange."),
+        ("antq_marcomannic_bohemian_kingship", "Marcomannic Bohemian Kingship"),
+        ("antq_marcomannic_bohemian_kingship_desc", "Maroboduus's organized kingdom balancing the royal retinue, allied kindreds, settlement stores, exchange, and Roman-frontier diplomacy."),
+        ("antq_sabaean_marib_kingship", "Sabaean Ma'rib Kingship"),
+        ("antq_sabaean_marib_kingship_desc", "An anonymous Sabaean court grounded in Ma'rib waterworks, sanctuaries, incense routes, highland cultivation, and regional service."),
+        ("antq_mauretanian_client_kingship", "Mauretanian Client Kingship"),
+        ("antq_mauretanian_client_kingship_desc", "The court of Juba II and Cleopatra Selene balancing royal domains, cities, ports, frontier communities, and Roman patronage."),
         ("antq_indian_ganasangha", "Indian Ganasangha"),
         ("antq_indian_ganasangha_desc", "A clan-based republican council represented through the installed republic government type."),
         ("antq_indo_scythian_kingship", "Indo-Scythian Kingship"),

@@ -663,3 +663,159 @@ antq_agenda_satavahana_guild_passage = {
 	}
 	chance = 10
 }
+
+antq_agenda_catuvellaunian_oppidum_contributions = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_catuvellaunian_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_catuvellaunian_oppidum_contributions_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_catuvellaunian_sacred_place_review = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_catuvellaunian_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_catuvellaunian_sacred_place_review_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_catuvellaunian_channel_measures = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_catuvellaunian_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_catuvellaunian_channel_measures_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_marcomannic_retinue_service = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_marcomannic_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_marcomannic_retinue_service_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_marcomannic_allied_host_terms = {
+	type = country
+	estate = tribes_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_marcomannic_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_marcomannic_allied_host_terms_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_marcomannic_sacred_oath_review = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_marcomannic_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_marcomannic_sacred_oath_review_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_sabaean_waterwork_rotation = {
+	type = country
+	estate = peasants_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_sabaean_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_sabaean_waterwork_rotation_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_sabaean_sanctuary_stores = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_sabaean_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_sabaean_sanctuary_stores_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_sabaean_incense_routes = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_sabaean_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_sabaean_incense_routes_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_mauretanian_royal_domain_review = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_mauretanian_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_mauretanian_royal_domain_review_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_mauretanian_port_craft_measures = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_mauretanian_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_mauretanian_port_craft_measures_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_mauretanian_frontier_watch_terms = {
+	type = country
+	estate = tribes_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_mauretanian_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_mauretanian_frontier_watch_terms_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}

@@ -472,3 +472,115 @@ antq_satavahana_royal_council = {
 		burghers_estate_agenda_impact = 0.15
 	}
 }
+
+antq_catuvellaunian_royal_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_catuvellaunian_oppidum_kingship
+			has_reform = government_reform:antq_catuvellaunian_dynastic_mint_court
+			has_reform = government_reform:antq_catuvellaunian_oppida_compact
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_catuvellaunian_oppidum_kingship
+			has_reform = government_reform:antq_catuvellaunian_dynastic_mint_court
+			has_reform = government_reform:antq_catuvellaunian_oppida_compact
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		clergy_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.10
+		nobles_estate_agenda_impact = 0.22
+		clergy_estate_agenda_impact = 0.08
+		burghers_estate_agenda_impact = 0.12
+	}
+}
+
+antq_marcomannic_royal_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_marcomannic_bohemian_kingship
+			has_reform = government_reform:antq_marcomannic_retinue_court
+			has_reform = government_reform:antq_marcomannic_allied_host_compact
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_marcomannic_bohemian_kingship
+			has_reform = government_reform:antq_marcomannic_retinue_court
+			has_reform = government_reform:antq_marcomannic_allied_host_compact
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		tribes_estate_can_participate_in_parliament = yes
+		clergy_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.05
+		nobles_estate_agenda_impact = 0.22
+		tribes_estate_agenda_impact = 0.28
+		clergy_estate_agenda_impact = 0.03
+	}
+}
+
+antq_sabaean_royal_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sabaean_marib_kingship
+			has_reform = government_reform:antq_sabaean_irrigation_court
+			has_reform = government_reform:antq_sabaean_sanctuary_route_court
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_sabaean_marib_kingship
+			has_reform = government_reform:antq_sabaean_irrigation_court
+			has_reform = government_reform:antq_sabaean_sanctuary_route_court
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		peasants_estate_can_participate_in_parliament = yes
+		clergy_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.10
+		peasants_estate_agenda_impact = 0.18
+		clergy_estate_agenda_impact = 0.12
+		burghers_estate_agenda_impact = 0.20
+	}
+}
+
+antq_mauretanian_royal_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_mauretanian_client_kingship
+			has_reform = government_reform:antq_mauretanian_urban_court
+			has_reform = government_reform:antq_mauretanian_frontier_compact
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_mauretanian_client_kingship
+			has_reform = government_reform:antq_mauretanian_urban_court
+			has_reform = government_reform:antq_mauretanian_frontier_compact
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		tribes_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.15
+		nobles_estate_agenda_impact = 0.16
+		burghers_estate_agenda_impact = 0.14
+		tribes_estate_agenda_impact = 0.06
+	}
+}

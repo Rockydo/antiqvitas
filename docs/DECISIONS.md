@@ -3605,3 +3605,27 @@ pre-existing West African doctrine master exposed a one-image LANCZOS resample
 difference between the system Pillow build and the pinned project build. The
 project-interpreter output and manifest are authoritative; source motifs,
 historical design, DDS contract, and presentation remain unchanged.
+
+## 2026-07-27 - Promote user-priority regional powers as full political profiles
+
+Catuvellauni, Marcomanni, Saba, and Mauretania are promoted from the generic
+tribal/royal political floor to the same generated cross-system contract used
+for other major opening states. Each owns a base reform, two research-gated
+alternatives, one council, five programmes, three issue/agenda pairs, six order
+names, six privileges, and two reviewed art atlases. This directly deepens the
+British, Germanic, Arabian, and North African regions without assigning the
+same constitution to every neighboring polity.
+
+Profile boundaries follow the strongest available political anchor: the
+Tasciovanian court and oppida/coinage setting, Maroboduus's organized Bohemian
+kingdom, Ma'rib waterworks and incense exchange under an anonymous Sabaean
+court, and Juba II/Cleopatra Selene's Mauretanian client kingdom. Alternative
+paths vary the balance among court, settlement, waterwork, exchange, retinue,
+and frontier interests; they are gameplay trajectories rather than claims that
+three codified constitutions coexisted in AD 1.
+
+The complete localization namespace remains global across content surfaces.
+When validation found that a Sabaean programme and privilege both resolved to
+`antq_sabaean_incense_caravan_safe_conducts`, the programme was renamed
+`antq_sabaean_incense_caravan_dispatches`; semantic similarity is allowed, key
+aliasing is not.

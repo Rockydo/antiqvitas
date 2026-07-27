@@ -188,6 +188,50 @@
 	}
 
 	text = {
+		localization_key = antq_estate_catuvellaunian_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_catuvellaunian_oppidum_kingship
+				has_reform = government_reform:antq_catuvellaunian_dynastic_mint_court
+				has_reform = government_reform:antq_catuvellaunian_oppida_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_marcomannic_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_marcomannic_bohemian_kingship
+				has_reform = government_reform:antq_marcomannic_retinue_court
+				has_reform = government_reform:antq_marcomannic_allied_host_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_sabaean_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_sabaean_marib_kingship
+				has_reform = government_reform:antq_sabaean_irrigation_court
+				has_reform = government_reform:antq_sabaean_sanctuary_route_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_mauretanian_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_mauretanian_client_kingship
+				has_reform = government_reform:antq_mauretanian_urban_court
+				has_reform = government_reform:antq_mauretanian_frontier_compact
+			}
+		}
+	}
+
+	text = {
 		localization_key = crown_estate_holy_order
 		trigger = {
 			has_reform = government_reform:military_order_reform
@@ -450,6 +494,50 @@ nobles_estate = {
 				has_reform = government_reform:antq_satavahana_deccan_kingship
 				has_reform = government_reform:antq_satavahana_guild_court
 				has_reform = government_reform:antq_satavahana_maharathi_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_catuvellaunian_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_catuvellaunian_oppidum_kingship
+				has_reform = government_reform:antq_catuvellaunian_dynastic_mint_court
+				has_reform = government_reform:antq_catuvellaunian_oppida_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_marcomannic_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_marcomannic_bohemian_kingship
+				has_reform = government_reform:antq_marcomannic_retinue_court
+				has_reform = government_reform:antq_marcomannic_allied_host_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_sabaean_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_sabaean_marib_kingship
+				has_reform = government_reform:antq_sabaean_irrigation_court
+				has_reform = government_reform:antq_sabaean_sanctuary_route_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_mauretanian_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_mauretanian_client_kingship
+				has_reform = government_reform:antq_mauretanian_urban_court
+				has_reform = government_reform:antq_mauretanian_frontier_compact
 			}
 		}
 	}
@@ -967,6 +1055,50 @@ burghers_estate = {
 	}
 
 	text = {
+		localization_key = antq_estate_catuvellaunian_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_catuvellaunian_oppidum_kingship
+				has_reform = government_reform:antq_catuvellaunian_dynastic_mint_court
+				has_reform = government_reform:antq_catuvellaunian_oppida_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_marcomannic_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_marcomannic_bohemian_kingship
+				has_reform = government_reform:antq_marcomannic_retinue_court
+				has_reform = government_reform:antq_marcomannic_allied_host_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_sabaean_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_sabaean_marib_kingship
+				has_reform = government_reform:antq_sabaean_irrigation_court
+				has_reform = government_reform:antq_sabaean_sanctuary_route_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_mauretanian_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_mauretanian_client_kingship
+				has_reform = government_reform:antq_mauretanian_urban_court
+				has_reform = government_reform:antq_mauretanian_frontier_compact
+			}
+		}
+	}
+
+	text = {
 		localization_key = burghers_estate_greek
 		trigger = {
 			OR = {
@@ -1364,6 +1496,50 @@ clergy_estate = {
 				has_reform = government_reform:antq_satavahana_deccan_kingship
 				has_reform = government_reform:antq_satavahana_guild_court
 				has_reform = government_reform:antq_satavahana_maharathi_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_catuvellaunian_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_catuvellaunian_oppidum_kingship
+				has_reform = government_reform:antq_catuvellaunian_dynastic_mint_court
+				has_reform = government_reform:antq_catuvellaunian_oppida_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_marcomannic_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_marcomannic_bohemian_kingship
+				has_reform = government_reform:antq_marcomannic_retinue_court
+				has_reform = government_reform:antq_marcomannic_allied_host_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_sabaean_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_sabaean_marib_kingship
+				has_reform = government_reform:antq_sabaean_irrigation_court
+				has_reform = government_reform:antq_sabaean_sanctuary_route_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_mauretanian_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_mauretanian_client_kingship
+				has_reform = government_reform:antq_mauretanian_urban_court
+				has_reform = government_reform:antq_mauretanian_frontier_compact
 			}
 		}
 	}
@@ -1775,6 +1951,50 @@ peasants_estate = {
 				has_reform = government_reform:antq_satavahana_deccan_kingship
 				has_reform = government_reform:antq_satavahana_guild_court
 				has_reform = government_reform:antq_satavahana_maharathi_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_catuvellaunian_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_catuvellaunian_oppidum_kingship
+				has_reform = government_reform:antq_catuvellaunian_dynastic_mint_court
+				has_reform = government_reform:antq_catuvellaunian_oppida_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_marcomannic_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_marcomannic_bohemian_kingship
+				has_reform = government_reform:antq_marcomannic_retinue_court
+				has_reform = government_reform:antq_marcomannic_allied_host_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_sabaean_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_sabaean_marib_kingship
+				has_reform = government_reform:antq_sabaean_irrigation_court
+				has_reform = government_reform:antq_sabaean_sanctuary_route_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_mauretanian_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_mauretanian_client_kingship
+				has_reform = government_reform:antq_mauretanian_urban_court
+				has_reform = government_reform:antq_mauretanian_frontier_compact
 			}
 		}
 	}
@@ -2198,6 +2418,50 @@ tribes_estate = {
 				has_reform = government_reform:antq_satavahana_deccan_kingship
 				has_reform = government_reform:antq_satavahana_guild_court
 				has_reform = government_reform:antq_satavahana_maharathi_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_catuvellaunian_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_catuvellaunian_oppidum_kingship
+				has_reform = government_reform:antq_catuvellaunian_dynastic_mint_court
+				has_reform = government_reform:antq_catuvellaunian_oppida_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_marcomannic_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_marcomannic_bohemian_kingship
+				has_reform = government_reform:antq_marcomannic_retinue_court
+				has_reform = government_reform:antq_marcomannic_allied_host_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_sabaean_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_sabaean_marib_kingship
+				has_reform = government_reform:antq_sabaean_irrigation_court
+				has_reform = government_reform:antq_sabaean_sanctuary_route_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_mauretanian_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_mauretanian_client_kingship
+				has_reform = government_reform:antq_mauretanian_urban_court
+				has_reform = government_reform:antq_mauretanian_frontier_compact
 			}
 		}
 	}

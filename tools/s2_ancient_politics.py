@@ -439,6 +439,90 @@ PROFILES = (
             m("guild_passage", "Guild and Caravan Passage", "Set weights, route protection, compensation, and water obligations for exchange households.", "Guild Safe-Conduct Petition", "Guild and caravan houses request predictable measures and enforceable passage.", "burghers_estate", TRADE, TRADE),
         ),
     ),
+    Profile(
+        "catuvellaunian", "antq_catuvellaunian_royal_council", "Verlamion Royal Council",
+        "The court of Tasciovanus coordinates dynastic mints, oppidum stores, retinues, sacred places, cultivating communities, Channel exchange, and relations among neighboring British peoples.",
+        ("antq_catuvellaunian_oppidum_kingship", "antq_catuvellaunian_dynastic_mint_court", "antq_catuvellaunian_oppida_compact"),
+        ("nobles_estate", "clergy_estate", "burghers_estate"),
+        "catuvellaunian_court_atlas.png", "c494a8e3f8d4d91c3b5ba896b6087d9bc3c94ee56db4ee002fc3e3e3c854c770",
+        "P8.7;P11;P13;CAH-XI;BM-DRU", "contested",
+        "Tasciovanus and Cunobelinus anchor the opening dynasty, while coinage, oppida, exchange, and retinue mechanics remain bounded interpretations rather than a recovered constitution.",
+        (
+            a("oppidum_store_returns", "Oppidum Store Returns", "Review grain, livestock, craft stock, and hospitality obligations at fortified settlement centers.", "adm", FOOD),
+            a("weight_die_oversight", "Weight and Die Oversight", "Maintain witnessed weights, blank flans, dies, and accountable distribution without treating coinage as modern fiscal bureaucracy.", "adm", ADMIN),
+            a("chariot_retinue_muster", "Chariot and Retinue Muster", "Register vehicles, harness, spears, provisions, and bounded seasons of service among leading households.", "mil", MIL),
+            a("channel_exchange_guarantees", "Channel Exchange Guarantees", "Coordinate landing places, measures, escorts, and restitution for cross-Channel and regional exchange.", "dip", TRADE),
+            a("sanctuary_assembly_hearing", "Sanctuary Assembly Hearing", "Hear witnessed oaths, offerings, succession claims, and inter-community petitions at recognized gathering places.", "dip", PRESTIGE),
+        ),
+        (
+            m("oppidum_contributions", "Oppidum Contribution Compact", "Set bounded grain, craft, transport, and watch obligations among settlement communities.", "Dynastic and Retinue Precedence", "Leading houses request recognized command shares and limits on extraordinary demands.", "nobles_estate", CONTROL, NOBLES),
+            m("sacred_place_review", "Sacred-Place Offering Review", "Inventory bounded vessels, offerings, and hospitality stores without inventing a centralized priesthood.", "Sacred-Place Custodian Petition", "Ritual custodians seek protected stores and witnessed access to royal judgment.", "clergy_estate", CLERGY, CLERGY),
+            m("channel_measures", "Channel Exchange Measure", "Balance landing security, weights, restitution, and royal receipts among exchange households.", "Oppidum Craft and Market Claim", "Craft and exchange houses request predictable measures and protected routes.", "burghers_estate", TRADE, TRADE),
+        ),
+    ),
+    Profile(
+        "marcomannic", "antq_marcomannic_royal_council", "Marcomannic Royal Council",
+        "Maroboduus's Bohemian kingdom coordinates the royal retinue, allied kindreds, settlement stores, iron and amber exchange, sacred custodians, and diplomacy along the Roman frontier.",
+        ("antq_marcomannic_bohemian_kingship", "antq_marcomannic_retinue_court", "antq_marcomannic_allied_host_compact"),
+        ("nobles_estate", "tribes_estate", "clergy_estate"),
+        "marcomannic_court_atlas.png", "c705d1ec9155ea51d91ceb511d517dc379503093254b842a424a09cc695568a4",
+        "P8.7;P11;P13;CAH-XI;TAC-GER", "secure",
+        "Maroboduus and the organized Marcomannic kingdom are secure; the council models retinue, allied-host, settlement, exchange, and frontier functions without inventing fixed offices.",
+        (
+            a("bohemian_settlement_returns", "Bohemian Settlement Returns", "Review grain, livestock, ironwork, storage, and hospitality among the kingdom's settlement communities.", "adm", CONTROL),
+            a("retinue_gift_muster", "Retinue Gift Muster", "Coordinate arms, fittings, provisions, prestige goods, and service among the king's close followers.", "mil", MIL),
+            a("allied_host_contributions", "Allied Host Contributions", "Set bounded warrior, remount, wagon, and supply duties among allied kindreds.", "mil", LOGISTICS),
+            a("iron_amber_exchange", "Iron and Amber Exchange", "Protect river and overland exchange while maintaining witnessed weights and compensation customs.", "dip", TRADE),
+            a("roman_frontier_envoys", "Roman Frontier Envoys", "Receive interpreters, gifts, guarantees, hostages, and intelligence without reducing the kingdom to Roman dependency.", "dip", PRESTIGE),
+        ),
+        (
+            m("retinue_service", "Royal Retinue Service", "Set arms, gift, hospitality, and campaign expectations for the royal following.", "Retinue Command Claim", "Leading companions request precedence, shares, and limits on extraordinary service.", "nobles_estate", MIL, NOBLES),
+            m("allied_host_terms", "Allied Host Compact", "Reconcile settlement, wagon, warrior, and provisioning obligations among allied kindreds.", "Kindred Muster Petition", "Confederated communities seek witnessed quotas and restitution rules.", "tribes_estate", LOGISTICS, PEASANTS),
+            m("sacred_oath_review", "Sacred Oath and Store Review", "Protect bounded rite objects, oath gifts, and hospitality stores without inventing a uniform clergy.", "Sacred Custodian Petition", "Ritual custodians request recognized stores and a place in major oath settlements.", "clergy_estate", CLERGY, CLERGY),
+        ),
+    ),
+    Profile(
+        "sabaean", "antq_sabaean_royal_council", "Ma'rib Royal Council",
+        "The anonymous Sabaean court coordinates the Ma'rib dam and canals, sanctuary stores, incense caravans, highland cultivation, levy service, and exchanges linking the interior and Red Sea.",
+        ("antq_sabaean_marib_kingship", "antq_sabaean_irrigation_court", "antq_sabaean_sanctuary_route_court"),
+        ("peasants_estate", "clergy_estate", "burghers_estate"),
+        "sabaean_court_atlas.png", "9684aed9c1c4e0fe6b8be86d9450aef656828d9ec0496d2e3877009e4e7e0e3f",
+        "P8.5;P8.6;P11;P13;CAH-XI;UNESCO-SABA;UNESCO-INCENSE", "contested",
+        "The opening ruler remains explicitly anonymous; securely important Ma'rib waterworks, sanctuaries, highland cultivation, and incense exchange ground a conservative council adapter.",
+        (
+            a("marib_dam_canal_returns", "Ma'rib Dam and Canal Returns", "Review masonry, silt clearing, water release, storage, and bounded community labor around the oasis system.", "adm", FOOD),
+            a("incense_caravan_dispatches", "Incense Caravan Dispatches", "Coordinate pack service, water, escorts, assessed shares, and compensation across inland routes.", "dip", TRADE),
+            a("sanctuary_inventory_returns", "Sanctuary Inventory Returns", "Witness incense, vessels, lamps, gifts, and hospitality stores without inventing a centralized priesthood.", "adm", CLERGY),
+            a("highland_levy_returns", "Highland Levy Returns", "Set shields, spears, provisions, signals, and bounded service among regional lineages.", "mil", MIL),
+            a("red_sea_embassy_measures", "Red Sea Embassy Measures", "Coordinate port gifts, interpreters, amphorae, rope, and inland forwarding for diplomatic and commercial visitors.", "dip", LOGISTICS),
+        ),
+        (
+            m("waterwork_rotation", "Ma'rib Waterwork Rotation", "Set bounded masonry, clearing, water-allocation, and labor duties around dam and canal communities.", "Cultivator Water Calendar", "Cultivating communities request predictable releases and seasonal repair obligations.", "peasants_estate", FOOD, PEASANTS),
+            m("sanctuary_stores", "Sanctuary Offering Inventory", "Review protected incense, vessels, lamps, gifts, and hospitality stores.", "Sanctuary Custodian Petition", "Cult custodians seek recognized supplies and limits on extraordinary requisition.", "clergy_estate", CLERGY, CLERGY),
+            m("incense_routes", "Incense Route Measure", "Balance weights, escorts, water, assessed shares, and compensation along protected routes.", "Caravan Safe-Conduct Petition", "Caravan and craft households request stable measures and enforceable passage.", "burghers_estate", TRADE, TRADE),
+        ),
+    ),
+    Profile(
+        "mauretanian", "antq_mauretanian_royal_council", "Caesarea Royal Council",
+        "The court of Juba II and Cleopatra Selene coordinates royal estates, civic and port returns, Mediterranean diplomacy, craft and coin measures, mounted frontier service, and regional communities.",
+        ("antq_mauretanian_client_kingship", "antq_mauretanian_urban_court", "antq_mauretanian_frontier_compact"),
+        ("nobles_estate", "burghers_estate", "tribes_estate"),
+        "mauretanian_court_atlas.png", "c3069e9e2dd659e71981eb1d66e29f740b30761d67d63bd16bacfd95b323e976",
+        "P8.1;P8.5;P11;P13;CAH-XI;OCD;OCD-PTO", "secure",
+        "The named royal couple and client relationship are secure; this profile avoids both a uniform 'Romanized' state and a recovered Mauretanian constitutional office list.",
+        (
+            a("civic_port_returns", "Civic and Port Returns", "Review cargo measures, landing obligations, workshops, storage, and civic petitions at connected royal centers.", "adm", TRADE),
+            a("royal_estate_accounts", "Royal Estate Accounts", "Review grain, olives, vines, livestock, and retained-domain service without inventing a uniform cadastre.", "adm", FOOD),
+            a("mounted_frontier_muster", "Mounted Frontier Muster", "Register horses, tack, spears, rations, guides, and bounded seasons of regional service.", "mil", MIL),
+            a("mediterranean_embassies", "Mediterranean Embassy Reception", "Coordinate interpreters, gifts, dynastic standing, and Roman guarantees while preserving local royal agency.", "dip", PRESTIGE),
+            a("craft_coin_measures", "Craft and Coin Measures", "Maintain balances, weights, blank flans, dies, ceramic measures, and accountable workshops.", "adm", ADMIN),
+        ),
+        (
+            m("royal_domain_review", "Royal-Domain Review", "Set bounded estate, contribution, and service terms among court and regional houses.", "Court and Regional House Claim", "Leading houses request witnessed precedence and limits on extraordinary royal demands.", "nobles_estate", ADMIN, NOBLES),
+            m("port_craft_measures", "Port and Craft Measure", "Balance landing security, stable weights, workshop duties, and royal receipts.", "Port and Craft Petition", "Exchange and specialist households seek predictable measures and protected movement.", "burghers_estate", TRADE, TRADE),
+            m("frontier_watch_terms", "Frontier Watch Rotation", "Set bounded mounted, guide, signal, and provisioning duties among frontier communities.", "Frontier Community Compact", "Regional communities request recognized rotations, water access, and restitution.", "tribes_estate", LOGISTICS, PEASANTS),
+        ),
+    ),
 )
 
 COUNCIL_DYNAMICS: dict[str, tuple[str, tuple[tuple[str, str], ...]]] = {
@@ -509,6 +593,22 @@ COUNCIL_DYNAMICS: dict[str, tuple[str, tuple[tuple[str, str], ...]]] = {
     "satavahana": (
         "0.10",
         (("nobles_estate", "0.20"), ("clergy_estate", "0.10"), ("burghers_estate", "0.15")),
+    ),
+    "catuvellaunian": (
+        "0.10",
+        (("nobles_estate", "0.22"), ("clergy_estate", "0.08"), ("burghers_estate", "0.12")),
+    ),
+    "marcomannic": (
+        "0.05",
+        (("nobles_estate", "0.22"), ("tribes_estate", "0.28"), ("clergy_estate", "0.03")),
+    ),
+    "sabaean": (
+        "0.10",
+        (("peasants_estate", "0.18"), ("clergy_estate", "0.12"), ("burghers_estate", "0.20")),
+    ),
+    "mauretanian": (
+        "0.15",
+        (("nobles_estate", "0.16"), ("burghers_estate", "0.14"), ("tribes_estate", "0.06")),
     ),
 }
 

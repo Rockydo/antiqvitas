@@ -173,7 +173,7 @@ An anonymous/collective profile is not an omitted polity. It is the deliberate `
 | ROX | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;S2-LAWS |
 | RUG | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;P8.7;P11;P13;TAC-GER;S2-LAWS |
 | RZM | `antq_tribal_kingdom` | BSE-GORODETS;P13;BSE-GORODETS;P13;S2-LAWS |
-| SAB | `antq_regional_kingship` | P8.6;P13;CAH-XI;S2-LAWS |
+| SAB | `antq_sabaean_marib_kingship` | P8.5;P8.6;P11;P13;CAH-XI;UNESCO-SABA;UNESCO-INCENSE;S2-LAWS |
 | SAT | `antq_satavahana_deccan_kingship` | P8.4;P11;P13;CAH-XI;S2-LAWS |
 | SAX | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;P8.7;P11;P13;TAC-GER;S2-LAWS |
 | SEL | `antq_tribal_kingdom` | P8.7;P13;PTO-GEO-II2;MANN-BRI;P8.7;P11;P13;HE-HILLFORT;BM-DRU;S2-LAWS |
