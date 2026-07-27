@@ -128,6 +128,22 @@ lankan|tank_labor_rotations|peasants_estate|Reservoir Labor Rotations|Cultivatin
 lankan|forest_route_compacts|tribes_estate|Forest Route Compacts|Regional communities maintain paths, honey, elephant service, and hospitality under bounded obligations.
 """.strip()
 
+# design tag|profile|slug|estate|name|description|modifiers|source|confidence|note|atlas|hash|cell|exclusive slug
+COUNTRY_PRIVILEGE_DATA = r"""
+ROM|roman|senatorial_fiscal_review|nobles_estate|Senatorial Fiscal Review|Senatorial commissions receive audited provincial accounts and a protected hearing before extraordinary assessments, increasing scrutiny while strengthening elite leverage.|global_nobles_estate_power=0.12|nobles_estate_target_satisfaction=medium_privilege_target_satisfaction|country_cabinet_efficiency=0.04|research_speed_modifier=0.02|nobles_estate_max_tax=-0.06|P8.1;P11;P13;OCD|secure|A bounded Augustan commission privilege; it does not make the Senate sovereign over imperial finance.|major_privileges_west_atlas.png|82822073adad217060082ead7964cfa35ed9ac785cdddb2032f02009f3ea906f|0|equestrian_collection_concessions
+ROM|roman|equestrian_collection_concessions|burghers_estate|Equestrian Collection Concessions|Equestrian contractors receive stable transport, supply, and collection terms in return for inspected measures and public-service guarantees.|global_burghers_estate_power=0.12|burghers_estate_target_satisfaction=medium_privilege_target_satisfaction|global_trade_through_owned_territory_efficiency=0.06|global_production_efficiency=0.03|burghers_estate_max_tax=-0.05|P8.1;P11;P13;OCD|secure|Models bounded public contracting rather than a permanent tax-farming monopoly over every Roman province.|major_privileges_west_atlas.png|82822073adad217060082ead7964cfa35ed9ac785cdddb2032f02009f3ea906f|1|senatorial_fiscal_review
+HAN|han|court_remonstrance_access|nobles_estate|Court Remonstrance Access|Authenticated memorials and remonstrance receive a protected route to the throne, improving review while empowering court and scholarly families.|global_nobles_estate_power=0.11|nobles_estate_target_satisfaction=medium_privilege_target_satisfaction|research_speed_modifier=0.025|country_cabinet_efficiency=0.035|nobles_estate_max_tax=-0.05|P8.3;P11;P13;BHR|secure|The memorial channel is secure; this privilege does not project later examination recruitment into Western Han.|major_privileges_west_atlas.png|82822073adad217060082ead7964cfa35ed9ac785cdddb2032f02009f3ea906f|2|commandery_fiscal_discretion
+HAN|han|commandery_fiscal_discretion|burghers_estate|Commandery Fiscal Discretion|Commandery officers and registered workshops may meet assessed quotas through locally balanced grain, craft, and transport returns.|global_burghers_estate_power=0.11|burghers_estate_target_satisfaction=medium_privilege_target_satisfaction|global_production_efficiency=0.035|global_monthly_control=-0.0005|burghers_estate_max_tax=-0.05|P8.3;P11;P13;BHR|contested|A decentralized Han alternative grounded in commandery administration, not a recovered empire-wide concession.|major_privileges_west_atlas.png|82822073adad217060082ead7964cfa35ed9ac785cdddb2032f02009f3ea906f|3|court_remonstrance_access
+PAR|iranian|royal_domain_review|nobles_estate|Royal-Domain Review|Royal stewards inspect selected domains, tribute vessels, and route obligations before confirming great-house possession.|global_nobles_estate_power=0.10|nobles_estate_target_satisfaction=medium_privilege_target_satisfaction|country_cabinet_efficiency=0.045|global_monthly_control=0.0005|nobles_estate_max_tax=-0.04|P8.2;P11;P13;CAH-XI|contested|A centralizing Arsacid counterweight; no complete royal-domain survey or uniform procedure is claimed.|major_privileges_west_atlas.png|82822073adad217060082ead7964cfa35ed9ac785cdddb2032f02009f3ea906f|4|great_house_levy_exemptions
+PAR|iranian|great_house_levy_exemptions|nobles_estate|Great-House Levy Exemptions|Leading houses retain broader fiscal exemptions in exchange for specified mounted contingents, remounts, and seasonal command.|global_nobles_estate_power=0.14|nobles_estate_target_satisfaction=medium_privilege_target_satisfaction|global_levy_size_modifier=0.06|land_morale_modifier=0.02|nobles_estate_max_tax=-0.08|P8.2;P11;P13;CAH-XI|secure|Great-house mounted service is secure, while exact exemption levels and a single written compact remain unrecoverable.|major_privileges_west_atlas.png|82822073adad217060082ead7964cfa35ed9ac785cdddb2032f02009f3ea906f|5|royal_domain_review
+XIO|xiongnu|wing_gift_precedence|nobles_estate|Wing Gift Precedence|Eastern and western commanders receive witnessed precedence in prestige gifts and campaign distributions while accepting explicit muster duties.|global_nobles_estate_power=0.13|nobles_estate_target_satisfaction=medium_privilege_target_satisfaction|land_morale_modifier=0.025|global_levy_size_modifier=0.05|nobles_estate_max_tax=-0.05|P8.3;P11;P13;BHR|secure|The wing hierarchy and gift politics are secure; exact shares and rank order are gameplay abstractions.|major_privileges_east_atlas.png|ec3f9e9429eb216c3c36bfe2dd958025e55f246449df4b672117475af6d499fd|0|pasture_circuit_autonomy
+XIO|xiongnu|pasture_circuit_autonomy|tribes_estate|Pasture-Circuit Autonomy|Confederated lineages retain recognized grazing and watering circuits in return for remount, hospitality, and frontier-watch quotas.|global_tribes_estate_power=0.13|tribes_estate_target_satisfaction=medium_privilege_target_satisfaction|global_pop_food_consumption=-0.01|global_levy_size_modifier=0.03|global_monthly_control=-0.001|P8.3;P11;P13;BHR|contested|A bounded pasture compact without claims for cadastral boundaries or one uniform confederation-wide rule.|major_privileges_east_atlas.png|ec3f9e9429eb216c3c36bfe2dd958025e55f246449df4b672117475af6d499fd|1|wing_gift_precedence
+KUS|kushite|royal_seal_inspection|nobles_estate|Royal Seal Inspection|Royal agents and provincial lineages jointly witness selected tribute seals and metal measures before redistribution.|global_nobles_estate_power=0.11|nobles_estate_target_satisfaction=medium_privilege_target_satisfaction|country_cabinet_efficiency=0.04|global_production_efficiency=0.025|nobles_estate_max_tax=-0.04|P8.5;P11;P13;CAH-XI|contested|Uses attested Meroitic seals and tribute contexts without inventing a complete chancery procedure.|major_privileges_east_atlas.png|ec3f9e9429eb216c3c36bfe2dd958025e55f246449df4b672117475af6d499fd|2|temple_storehouse_immunity
+KUS|kushite|temple_storehouse_immunity|clergy_estate|Temple Storehouse Immunity|Protected cult storehouses retain bounded offerings and grain reserves under inventory, hospitality, and public-rite obligations.|global_clergy_estate_power=0.13|clergy_estate_target_satisfaction=medium_privilege_target_satisfaction|global_monthly_food_modifier=0.03|stability_cost_efficiency=-0.04|clergy_estate_max_tax=-0.07|P8.5;P11;P13;CAH-XI|contested|Cult storage is secure in context; uniform immunity across all Meroitic temples is not claimed.|major_privileges_east_atlas.png|ec3f9e9429eb216c3c36bfe2dd958025e55f246449df4b672117475af6d499fd|3|royal_seal_inspection
+ANU|lankan|reservoir_audit_grants|peasants_estate|Reservoir Audit Grants|Reservoir communities gain witnessed water schedules and remissions when their measured repair and field obligations are met.|global_peasants_estate_power=0.11|peasants_estate_target_satisfaction=medium_privilege_target_satisfaction|global_monthly_food_modifier=0.035|global_production_efficiency=0.025|global_monthly_control=-0.0005|P8.4;P11;P13|secure|Irrigation patronage and labor are secure; the audit grant is a bounded administrative reconstruction.|major_privileges_east_atlas.png|ec3f9e9429eb216c3c36bfe2dd958025e55f246449df4b672117475af6d499fd|4|monastic_endowment_immunity
+ANU|lankan|monastic_endowment_immunity|clergy_estate|Monastic Endowment Immunity|Recorded monastic gifts and stores receive bounded fiscal protection in return for hospitality, teaching, and inventory duties.|global_clergy_estate_power=0.13|clergy_estate_target_satisfaction=medium_privilege_target_satisfaction|research_speed_modifier=0.02|stability_cost_efficiency=-0.05|clergy_estate_max_tax=-0.07|P8.4;P11;P13;BHR|secure|Early Buddhist endowments are secure; the exact immunity and obligations are gameplay abstractions.|major_privileges_east_atlas.png|ec3f9e9429eb216c3c36bfe2dd958025e55f246449df4b672117475af6d499fd|5|reservoir_audit_grants
+""".strip()
+
 
 def profiles() -> list[dict[str, object]]:
     result = []
@@ -151,6 +167,31 @@ def privileges_by_profile() -> dict[str, list[dict[str, str]]]:
     return result
 
 
+def country_privileges() -> list[dict[str, str]]:
+    tags = {
+        row["design_tag"]: row["engine_tag"]
+        for row in json.loads((ROOT / "docs/world_1ad/tag_map.json").read_text(encoding="utf-8"))["entries"]
+    }
+    result = []
+    for line in COUNTRY_PRIVILEGE_DATA.splitlines():
+        parts = line.split("|")
+        if len(parts) != 18:
+            raise ValueError(f"country privilege row has {len(parts)} fields instead of 18")
+        (
+            design_tag, profile, slug, estate, name, description,
+            source, confidence, note, atlas, digest, cell, exclusive_slug,
+        ) = (*parts[:6], *parts[11:])
+        modifier_text = "|".join(parts[6:11])
+        result.append({
+            "design_tag": design_tag, "engine_tag": tags[design_tag], "profile": profile,
+            "slug": slug, "estate": estate, "name": name, "description": description,
+            "modifiers": modifier_text, "source": source, "confidence": confidence,
+            "note": note, "atlas": atlas, "hash": digest, "cell": cell,
+            "exclusive_slug": exclusive_slug,
+        })
+    return result
+
+
 POWER = {
     "nobles_estate": "global_nobles_estate_power",
     "clergy_estate": "global_clergy_estate_power",
@@ -167,6 +208,10 @@ MAX_TAX = {
 
 def item_key(profile: dict[str, object], privilege: dict[str, str]) -> str:
     return f"antq_{profile['slug']}_{privilege['slug']}"
+
+
+def country_item_key(privilege: dict[str, str]) -> str:
+    return f"antq_{privilege['profile']}_{privilege['slug']}"
 
 
 def modifiers(profile_index: int, cell: int, estate: str) -> tuple[tuple[str, str], ...]:
@@ -243,10 +288,21 @@ def content_ledger() -> str:
             rows.append((
                 item_key(profile, privilege), privilege["estate"], privilege["name"],
                 privilege["description"], mods, str(profile["source"]), str(profile["confidence"]),
-                str(profile["note"]), "|".join(profile["reforms"]), exclusive_key(profile, entries, cell),
+                str(profile["note"]), "|".join(profile["reforms"]), "",
+                exclusive_key(profile, entries, cell),
             ))
+    for privilege in country_privileges():
+        rows.append((
+            country_item_key(privilege), privilege["estate"], privilege["name"],
+            privilege["description"], privilege["modifiers"], privilege["source"],
+            privilege["confidence"], privilege["note"], "", privilege["engine_tag"],
+            f"antq_{privilege['profile']}_{privilege['exclusive_slug']}",
+        ))
     return csv_text(
-        ("key", "estate", "name", "description", "modifiers", "source", "confidence", "note", "potential_reforms", "exclusive_with"),
+        (
+            "key", "estate", "name", "description", "modifiers", "source",
+            "confidence", "note", "potential_reforms", "potential_tags", "exclusive_with",
+        ),
         rows,
     )
 
@@ -277,6 +333,18 @@ def art_ledger() -> str:
                 master_path(key).relative_to(ROOT).as_posix(),
                 texture_path(key).relative_to(ROOT).as_posix(),
             ))
+    for privilege in country_privileges():
+        key = country_item_key(privilege)
+        rows.append((
+            key, privilege["profile"], privilege["name"], privilege["source"],
+            "secure",
+            "Country-specific material-context illustration; exact tag gate, no person, writing, emblem, or reconstructed ceremony.",
+            f"assets_queue/estate_orders/sources/{privilege['atlas']}",
+            privilege["hash"], privilege["cell"],
+            source_crop_path(key).relative_to(ROOT).as_posix(),
+            master_path(key).relative_to(ROOT).as_posix(),
+            texture_path(key).relative_to(ROOT).as_posix(),
+        ))
     return csv_text(
         ("key", "profile", "subject", "source", "confidence", "note", "source_atlas", "source_sha256", "cell", "source_crop", "master", "texture"),
         rows,
@@ -364,12 +432,52 @@ def build_art() -> None:
                     [sys.executable, str(DDS_TOOL), "convert", str(master_path(key)), str(texture_path(key)), "--compression", "bc7"],
                     check=True,
                 )
+    by_atlas: dict[str, list[dict[str, str]]] = {}
+    for privilege in country_privileges():
+        by_atlas.setdefault(privilege["atlas"], []).append(privilege)
+    for atlas_name, entries in by_atlas.items():
+        atlas = SOURCES / atlas_name
+        if hashlib.sha256(atlas.read_bytes()).hexdigest() != entries[0]["hash"]:
+            raise ValueError(f"source atlas hash drift: {atlas.relative_to(ROOT)}")
+        with Image.open(atlas) as image:
+            width, height = image.size
+            if width % 3 or height % 2 or width < 1200 or height < 1000:
+                raise ValueError(f"{atlas.relative_to(ROOT)} is not a usable 3x2 atlas")
+            cell_width, cell_height = width // 3, height // 2
+            rgb = image.convert("RGB")
+            for privilege in entries:
+                key = country_item_key(privilege)
+                cell = int(privilege["cell"])
+                x, y = (cell % 3) * cell_width, (cell // 3) * cell_height
+                available_width, available_height = cell_width - 16, cell_height - 16
+                target_aspect = 64 / 90
+                if available_width / available_height > target_aspect:
+                    crop_height = available_height
+                    crop_width = round(crop_height * target_aspect)
+                else:
+                    crop_width = available_width
+                    crop_height = round(crop_width / target_aspect)
+                left = x + (cell_width - crop_width) // 2
+                top = y + (cell_height - crop_height) // 2
+                crop = rgb.crop((left, top, left + crop_width, top + crop_height))
+                crop.save(source_crop_path(key), format="PNG", optimize=True)
+                crop.resize((64, 90), Image.Resampling.LANCZOS).save(
+                    master_path(key), format="PNG", optimize=True
+                )
+                texture_path(key).parent.mkdir(parents=True, exist_ok=True)
+                subprocess.run(
+                    [
+                        sys.executable, str(DDS_TOOL), "convert", str(master_path(key)),
+                        str(texture_path(key)), "--compression", "bc7",
+                    ],
+                    check=True,
+                )
 
 
 def validate() -> list[str]:
     failures = []
     rows = list(csv.DictReader(io.StringIO(content_ledger())))
-    expected_count = len(profiles()) * 6
+    expected_count = len(profiles()) * 6 + len(country_privileges())
     if len(rows) != expected_count or len({row["key"] for row in rows}) != expected_count:
         failures.append(
             f"estate-order ledger must contain {expected_count} unique privileges"
@@ -382,6 +490,12 @@ def validate() -> list[str]:
         atlas = SOURCES / str(profile["atlas"])
         if not atlas.is_file() or hashlib.sha256(atlas.read_bytes()).hexdigest() != profile["hash"]:
             failures.append(f"missing or drifted source atlas: {atlas.relative_to(ROOT)}")
+    for privilege in country_privileges():
+        atlas = SOURCES / privilege["atlas"]
+        if not atlas.is_file() or hashlib.sha256(atlas.read_bytes()).hexdigest() != privilege["hash"]:
+            failures.append(f"missing or drifted source atlas: {atlas.relative_to(ROOT)}")
+        if not privilege["engine_tag"]:
+            failures.append(f"country privilege lacks exact tag gate: {privilege['slug']}")
     for path, expected in expected_files().items():
         if not path.is_file():
             failures.append(f"missing generated file: {path.relative_to(ROOT)}")
@@ -431,9 +545,10 @@ def main() -> int:
             print(f"  - {failure}")
         return 1
     count = len(profiles())
+    privilege_count = count * 6 + len(country_privileges())
     print(
-        f"s2_estate_orders: PASS ({count} profiles; {count * 6} privileges; "
-        f"{count * 6} direct icons; {count * 6} polity-aware order names)"
+        f"s2_estate_orders: PASS ({count} profiles; {privilege_count} privileges; "
+        f"{privilege_count} direct icons; {count * 6} polity-aware order names)"
     )
     return 0
 

@@ -1,5 +1,27 @@
 # Progress
 
+## 2026-07-27 - First country-specific privilege pairs
+
+- Added twelve exact-country privileges for Rome, Han, Parthia, Xiongnu,
+  Meroitic Kush, and Anuradhapura, organized as six mutually exclusive policy
+  pairs. Each grant has a distinct five-effect tradeoff package, source and
+  confidence boundary, exact collision-safe tag availability, ordinary
+  revocation behavior, and eleven-client localization.
+- Generated and reviewed two 3x2 archaeological still-life atlases, then
+  produced twelve unique portrait masters and direct BC7 textures. Total
+  privilege coverage is now 136/136 direct icons; the UI asset ledger contains
+  820 direct chains.
+- Routed the twelve grants through the advance generator, raising verified
+  ancient-system unlocks from 611 to 623 while retaining research choices for
+  all 292 opening profiles.
+- Made the building icon audit compatible with the installed Pillow release and
+  refreshed one deterministic West African doctrine derivative found stale by
+  the full gate.
+- Full validation passes 102/102 checks. Paired vanilla/mod smoke reaches
+  responsive rendered menus and reports zero mod-unique `error.log` lines.
+  Evidence is in
+  `docs/playtests/S2_COUNTRY_PRIVILEGES_20260727.md`.
+
 ## 2026-07-27 - Twelve country-specific legal exceptions
 
 - Added unique law options for Rome, Han, Parthia, Armenia, Xiongnu, Goguryeo,

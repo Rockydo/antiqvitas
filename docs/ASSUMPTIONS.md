@@ -1,5 +1,28 @@
 # Historical Assumptions
 
+## 2026-07-27 - Country privilege pairs are bounded institutional tradeoffs
+
+The six pairs translate evidenced relationships into meaningful alternatives:
+Roman senatorial review and equestrian public contracting; Han memorial access
+and commandery administration; Arsacid royal domains and great-house mounted
+service; Xiongnu wing hierarchy, gifts, and pasture negotiation; Meroitic royal
+seals, tribute, and cult storage; Lankan irrigation labor and Buddhist
+endowments.
+
+They are not claims that each polity debated two formally named constitutional
+programmes, that the paired choices were legally incompatible everywhere, or
+that their numerical effects can be recovered. “Immunity,” “review,”
+“discretion,” and “audit” are concise gameplay labels for bounded practices,
+not translations of uniform surviving statutes. The exact historical boundary
+and confidence of every grant is retained in
+`docs/m6/estate_order_privileges.csv`.
+
+Principal sources weighed: `P8.1`-`P8.5`; `P11`; `P13`; `OCD`; `BHR`;
+`CAH-XI`.
+
+[secure broad institutional and material relationships; contested formal
+pairing, uniformity, terminology, and all mechanical values]
+
 ## 2026-07-27 - Country exceptions represent distinctive practice, not exhaustive codes
 
 The twelve exceptional options identify a practice unusually important and

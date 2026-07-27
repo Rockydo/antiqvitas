@@ -65,7 +65,7 @@ def items() -> list[Item]:
 def difference_hash(image: Image.Image) -> int:
     """Return a compact visual hash used to expose near-aliases for review."""
     sample = image.convert("RGB").resize((9, 8), Image.Resampling.LANCZOS).convert("L")
-    pixels = list(sample.get_flattened_data())
+    pixels = list(sample.getdata())
     result = 0
     for y in range(8):
         for x in range(8):
@@ -78,7 +78,7 @@ def audit(item: Item) -> Audit:
         image = opened.convert("RGBA")
     if image.size != (128, 128):
         raise ValueError(f"{item.key} master is {image.size}, expected 128x128")
-    alpha = list(image.getchannel("A").get_flattened_data())
+    alpha = list(image.getchannel("A").getdata())
     opaque = sum(value >= 240 for value in alpha)
     transparent = sum(value <= 15 for value in alpha)
     corners = tuple(image.getpixel(point)[3] for point in ((0, 0), (127, 0), (0, 127), (127, 127)))

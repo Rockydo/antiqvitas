@@ -1958,3 +1958,243 @@ antq_lankan_forest_route_compacts = {
 		global_monthly_control = -0.0005
 	}
 }
+
+antq_roman_senatorial_fiscal_review = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAA
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_roman_equestrian_collection_concessions }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.12
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.04
+		research_speed_modifier = 0.02
+		nobles_estate_max_tax = -0.06
+	}
+}
+
+antq_roman_equestrian_collection_concessions = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAA
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_roman_senatorial_fiscal_review }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.12
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.06
+		global_production_efficiency = 0.03
+		burghers_estate_max_tax = -0.05
+	}
+}
+
+antq_han_court_remonstrance_access = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAR
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_han_commandery_fiscal_discretion }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.11
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		research_speed_modifier = 0.025
+		country_cabinet_efficiency = 0.035
+		nobles_estate_max_tax = -0.05
+	}
+}
+
+antq_han_commandery_fiscal_discretion = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAR
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_han_court_remonstrance_access }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.11
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_production_efficiency = 0.035
+		global_monthly_control = -0.0005
+		burghers_estate_max_tax = -0.05
+	}
+}
+
+antq_iranian_royal_domain_review = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAH
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_iranian_great_house_levy_exemptions }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.045
+		global_monthly_control = 0.0005
+		nobles_estate_max_tax = -0.04
+	}
+}
+
+antq_iranian_great_house_levy_exemptions = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAH
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_iranian_royal_domain_review }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.14
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.06
+		land_morale_modifier = 0.02
+		nobles_estate_max_tax = -0.08
+	}
+}
+
+antq_xiongnu_wing_gift_precedence = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XIO
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_xiongnu_pasture_circuit_autonomy }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.13
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		land_morale_modifier = 0.025
+		global_levy_size_modifier = 0.05
+		nobles_estate_max_tax = -0.05
+	}
+}
+
+antq_xiongnu_pasture_circuit_autonomy = {
+	estate = tribes_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XIO
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_xiongnu_wing_gift_precedence }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_tribes_estate_power = 0.13
+		tribes_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_pop_food_consumption = -0.01
+		global_levy_size_modifier = 0.03
+		global_monthly_control = -0.001
+	}
+}
+
+antq_kushite_royal_seal_inspection = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XBE
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_kushite_temple_storehouse_immunity }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.11
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.04
+		global_production_efficiency = 0.025
+		nobles_estate_max_tax = -0.04
+	}
+}
+
+antq_kushite_temple_storehouse_immunity = {
+	estate = clergy_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XBE
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_kushite_royal_seal_inspection }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_clergy_estate_power = 0.13
+		clergy_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_monthly_food_modifier = 0.03
+		stability_cost_efficiency = -0.04
+		clergy_estate_max_tax = -0.07
+	}
+}
+
+antq_lankan_reservoir_audit_grants = {
+	estate = peasants_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XBD
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_lankan_monastic_endowment_immunity }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_peasants_estate_power = 0.11
+		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_monthly_food_modifier = 0.035
+		global_production_efficiency = 0.025
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_lankan_monastic_endowment_immunity = {
+	estate = clergy_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XBD
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_lankan_reservoir_audit_grants }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_clergy_estate_power = 0.13
+		clergy_estate_target_satisfaction = medium_privilege_target_satisfaction
+		research_speed_modifier = 0.02
+		stability_cost_efficiency = -0.05
+		clergy_estate_max_tax = -0.07
+	}
+}

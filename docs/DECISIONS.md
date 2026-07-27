@@ -1,5 +1,28 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - Country privileges use exact tag gates and pairwise exclusion
+
+The locally installed privilege contract exposes `potential`, `allow`,
+`can_revoke`, country modifiers, and estate assignment, but no separate
+country-owner field. Country-specific grants therefore use a collision-safe
+engine tag from `tag_map.json` inside `has_or_had_tag`. This preserves a
+state's institutional inheritance after a legitimate tag transition without
+leaking the grant to other members of its regional profile.
+
+Each first-tranche privilege has one named alternative. The generator renders
+the partner as an `allow`-level `NOT has_estate_privilege` condition and retains
+the installed empty `can_revoke` contract. This provides visible prerequisites,
+mutual exclusion, and reversible choice on verified surfaces rather than
+inventing an unsupported revocation field. Exact tags, partner symmetry,
+modifier vocabulary, direct art, and advance unlocks are permanent validator
+contracts.
+
+The two source atlases use the established direct-art grammar: 3x2
+archaeological still lifes on a charcoal-navy field, centered for 64x90
+portrait crops, with no people, text, pseudo-writing, emblems, or medieval
+objects. Their immutable hashes and cell assignments are stored beside every
+art ledger row.
+
 ## 2026-07-27 - Country laws use collision-safe has-or-had-tag gates
 
 Country-specific legal options remain inside the polity's regional profile law

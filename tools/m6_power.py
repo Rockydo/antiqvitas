@@ -45,7 +45,7 @@ REGIONAL_GOV_FIELDS = (
     "key", "tags", "privileges", "laws", "source", "confidence", "note",
 )
 PRIV_FIELDS = ("key", "estate", "name", "description", "modifiers", "source", "confidence", "note")
-S2_PRIV_FIELDS = PRIV_FIELDS + ("potential_reforms", "exclusive_with")
+S2_PRIV_FIELDS = PRIV_FIELDS + ("potential_reforms", "potential_tags", "exclusive_with")
 LAW_FIELDS = (
     "law", "law_category", "law_gov_group", "name", "description", "option", "option_name",
     "option_description", "modifiers", "estate_preferences", "source", "confidence", "note",
@@ -74,7 +74,7 @@ MODIFIER_KEYS = frozenset((
 	"copper_impacts_inflation", "copper_used_for_minting", "goods_gold_impacts_inflation",
 	"goods_gold_used_for_minting",
     "global_levy_size_modifier", "global_nobles_estate_power", "global_pop_assimilation_speed_modifier",
-    "global_pop_food_consumption", "global_tribes_estate_power",
+    "global_pop_food_consumption", "global_monthly_food_modifier", "global_tribes_estate_power",
     "burghers_estate_target_satisfaction", "land_morale_modifier", "monthly_towards_aristocracy",
 	"minting_income_factor", "minting_inflation_threshold", "monthly_towards_centralization",
 	"monthly_towards_decentralization", "nobles_estate_target_satisfaction", "silver_impacts_inflation",
@@ -446,6 +446,7 @@ def load_power_data() -> PowerData:
     privileges = read_rows(DATA / "privileges.csv", PRIV_FIELDS)
     for row in privileges:
         row["potential_reforms"] = ""
+        row["potential_tags"] = ""
         row["exclusive_with"] = ""
     privileges.extend(read_rows(DATA / "estate_order_privileges.csv", S2_PRIV_FIELDS))
     laws = read_rows(DATA / "laws.csv", LAW_FIELDS)
@@ -540,6 +541,12 @@ def load_power_data() -> PowerData:
                     require_token(reform, f"privilege {row['key']} reform")
             except ValueError as exc:
                 failures.append(str(exc))
+        if row["potential_tags"]:
+            for tag in pipe_values(
+                row["potential_tags"], f"privilege {row['key']} tags"
+            ):
+                if tag not in set(tags.values()):
+                    failures.append(f"privilege {row['key']} uses unknown engine tag {tag}")
     for row in privileges:
         if row["exclusive_with"] and row["exclusive_with"] not in privilege_keys:
             failures.append(
@@ -1269,14 +1276,20 @@ def estate_privileges(data: PowerData) -> str:
             f"{row['key']} = {{",
             f"\testate = {row['estate']}",
         ))
-        if row["potential_reforms"]:
-            reforms = pipe_values(
-                row["potential_reforms"], f"privilege {row['key']} potential reforms"
-            )
+        if row["potential_reforms"] or row["potential_tags"]:
             lines.extend(("\tpotential = {", "\t\tOR = {"))
-            lines.extend(
-                f"\t\t\thas_reform = government_reform:{reform}" for reform in reforms
-            )
+            if row["potential_reforms"]:
+                reforms = pipe_values(
+                    row["potential_reforms"], f"privilege {row['key']} potential reforms"
+                )
+                lines.extend(
+                    f"\t\t\thas_reform = government_reform:{reform}" for reform in reforms
+                )
+            if row["potential_tags"]:
+                tags = pipe_values(
+                    row["potential_tags"], f"privilege {row['key']} potential tags"
+                )
+                lines.extend(f"\t\t\thas_or_had_tag = {tag}" for tag in tags)
             lines.extend(("\t\t}", "\t}"))
         if row["exclusive_with"]:
             lines.extend((
