@@ -45,6 +45,21 @@ antq_s2_roman_status_law = {
 			burghers_estate
 		}
 	}
+	antq_s2_roman_status_antonine_grant = {
+		potential = {
+			current_date >= 212.1.1
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.08
+			global_pop_assimilation_speed_modifier = 0.02
+			global_crown_estate_power = 0.05
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			burghers_estate
+		}
+	}
 }
 
 antq_s2_roman_dependent_labor_law = {
@@ -273,6 +288,21 @@ antq_s2_roman_local_rule_law = {
 			peasants_estate
 			tribes_estate
 			burghers_estate
+		}
+	}
+	antq_s2_roman_local_rule_diocesan_provinces = {
+		potential = {
+			current_date >= 293.1.1
+		}
+		country_modifier = {
+			country_cabinet_efficiency = 0.06
+			global_monthly_control = 0.02
+			global_crown_estate_power = 0.055
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			nobles_estate
 		}
 	}
 }
@@ -869,6 +899,21 @@ antq_s2_han_muster_law = {
 			tribes_estate
 		}
 	}
+	antq_s2_han_muster_provincial_commands = {
+		potential = {
+			current_date >= 188.1.1
+		}
+		country_modifier = {
+			global_levy_recruitment_speed_modifier = 0.12
+			land_morale_modifier = 0.025
+			global_nobles_estate_power = 0.055
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			crown_estate
+		}
+	}
 }
 
 antq_s2_han_local_rule_law = {
@@ -1185,6 +1230,21 @@ antq_s2_han_offices_law = {
 			peasants_estate
 		}
 	}
+	antq_s2_han_offices_restored_secretariat = {
+		potential = {
+			current_date >= 25.8.5
+		}
+		country_modifier = {
+			country_cabinet_efficiency = 0.055
+			set_cabinet_member_cost_modifier = -0.12
+			global_crown_estate_power = 0.045
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			nobles_estate
+		}
+	}
 }
 
 antq_s2_han_migration_law = {
@@ -1458,6 +1518,21 @@ antq_s2_iranian_land_law = {
 			tribes_estate
 		}
 	}
+	antq_s2_iranian_land_sasanian_domain = {
+		potential = {
+			current_date >= 224.4.28
+		}
+		country_modifier = {
+			global_max_rural_control = 0.04
+			global_monthly_control = 0.018
+			global_crown_estate_power = 0.06
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			clergy_estate
+		}
+	}
 }
 
 antq_s2_iranian_muster_law = {
@@ -1591,6 +1666,21 @@ antq_s2_iranian_cult_law = {
 		estate_preferences = {
 			tribes_estate
 			peasants_estate
+		}
+	}
+	antq_s2_iranian_cult_court_fire_patronage = {
+		potential = {
+			current_date >= 240.1.1
+		}
+		country_modifier = {
+			global_pop_conversion_speed_modifier = 0.07
+			clergy_estate_target_satisfaction = small_permanent_target_satisfaction
+			global_clergy_estate_power = 0.055
+		}
+		years = 2
+		estate_preferences = {
+			clergy_estate
+			crown_estate
 		}
 	}
 }
@@ -2325,6 +2415,21 @@ antq_s2_hellenistic_commerce_law = {
 			nobles_estate
 		}
 	}
+	antq_s2_hellenistic_commerce_benefaction_registers = {
+		potential = {
+			current_date >= 100.1.1
+		}
+		country_modifier = {
+			global_production_efficiency = 0.035
+			global_trade_through_owned_territory_efficiency = 0.055
+			global_burghers_estate_power = 0.045
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			nobles_estate
+		}
+	}
 }
 
 antq_s2_hellenistic_coinage_law = {
@@ -2554,6 +2659,21 @@ antq_s2_hellenistic_external_law = {
 			nobles_estate
 		}
 	}
+	antq_s2_hellenistic_external_league_contributions = {
+		potential = {
+			current_date >= 200.1.1
+		}
+		country_modifier = {
+			diplomatic_capacity_modifier = 0.055
+			subject_loyalty = 6
+			global_burghers_estate_power = 0.035
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			nobles_estate
+		}
+	}
 }
 
 antq_s2_indic_status_law = {
@@ -2734,6 +2854,21 @@ antq_s2_indic_land_law = {
 		estate_preferences = {
 			peasants_estate
 			tribes_estate
+		}
+	}
+	antq_s2_indic_land_inscribed_grants = {
+		potential = {
+			current_date >= 250.1.1
+		}
+		country_modifier = {
+			global_max_rural_control = 0.025
+			clergy_estate_target_satisfaction = tiny_permanent_target_satisfaction
+			global_clergy_estate_power = 0.045
+		}
+		years = 2
+		estate_preferences = {
+			clergy_estate
+			crown_estate
 		}
 	}
 }
@@ -3048,6 +3183,21 @@ antq_s2_indic_courts_law = {
 		estate_preferences = {
 			peasants_estate
 			tribes_estate
+		}
+	}
+	antq_s2_indic_courts_guild_monastic_arbitration = {
+		potential = {
+			current_date >= 320.1.1
+		}
+		country_modifier = {
+			legislative_efficiency = 0.05
+			stability_cost_efficiency = 0.03
+			global_burghers_estate_power = 0.045
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			clergy_estate
 		}
 	}
 }
@@ -3776,6 +3926,21 @@ antq_s2_steppe_migration_law = {
 			tribes_estate
 		}
 	}
+	antq_s2_steppe_migration_federate_pastures = {
+		potential = {
+			current_date >= 375.1.1
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.035
+			wrong_culture_levy_size = 0.08
+			global_tribes_estate_power = 0.06
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+			crown_estate
+		}
+	}
 }
 
 antq_s2_steppe_external_law = {
@@ -3819,6 +3984,21 @@ antq_s2_steppe_external_law = {
 		estate_preferences = {
 			burghers_estate
 			tribes_estate
+		}
+	}
+	antq_s2_steppe_external_xianbei_circuit = {
+		potential = {
+			current_date >= 156.1.1
+		}
+		country_modifier = {
+			diplomatic_reputation = 1
+			diplomatic_capacity_modifier = 0.06
+			global_tribes_estate_power = 0.055
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+			nobles_estate
 		}
 	}
 }
@@ -4052,6 +4232,21 @@ antq_s2_germanic_muster_law = {
 		years = 2
 		estate_preferences = {
 			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s2_germanic_muster_confederated_warleader = {
+		potential = {
+			current_date >= 250.1.1
+		}
+		country_modifier = {
+			land_morale_modifier = 0.03
+			global_levy_size_modifier = 0.06
+			global_nobles_estate_power = 0.055
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
 			tribes_estate
 		}
 	}
@@ -4426,6 +4621,21 @@ antq_s2_germanic_migration_law = {
 			tribes_estate
 		}
 	}
+	antq_s2_germanic_migration_federate_terms = {
+		potential = {
+			current_date >= 382.10.3
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.04
+			wrong_culture_levy_size = 0.10
+			subject_loyalty = 7
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+			crown_estate
+		}
+	}
 }
 
 antq_s2_germanic_external_law = {
@@ -4757,6 +4967,21 @@ antq_s2_celtic_local_rule_law = {
 			peasants_estate
 			tribes_estate
 			clergy_estate
+		}
+	}
+	antq_s2_celtic_local_rule_confederated_hillforts = {
+		potential = {
+			current_date >= 200.1.1
+		}
+		country_modifier = {
+			legislative_efficiency = 0.045
+			global_max_rural_control = 0.02
+			global_tribes_estate_power = 0.05
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+			nobles_estate
 		}
 	}
 }
@@ -5136,6 +5361,21 @@ antq_s2_celtic_external_law = {
 			clergy_estate
 		}
 	}
+	antq_s2_celtic_external_coastal_refuge = {
+		potential = {
+			current_date >= 350.1.1
+		}
+		country_modifier = {
+			diplomatic_capacity_modifier = 0.045
+			global_trade_through_owned_territory_efficiency = 0.04
+			global_tribes_estate_power = 0.045
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+			burghers_estate
+		}
+	}
 }
 
 antq_s2_arabian_status_law = {
@@ -5407,6 +5647,21 @@ antq_s2_arabian_local_rule_law = {
 			tribes_estate
 		}
 	}
+	antq_s2_arabian_local_rule_himyarite_unification = {
+		potential = {
+			current_date >= 275.1.1
+		}
+		country_modifier = {
+			global_monthly_control = 0.022
+			country_cabinet_efficiency = 0.045
+			global_crown_estate_power = 0.06
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			nobles_estate
+		}
+	}
 }
 
 antq_s2_arabian_cult_law = {
@@ -5542,6 +5797,21 @@ antq_s2_arabian_commerce_law = {
 		estate_preferences = {
 			peasants_estate
 			tribes_estate
+		}
+	}
+	antq_s2_arabian_commerce_red_sea_compacts = {
+		potential = {
+			current_date >= 200.1.1
+		}
+		country_modifier = {
+			global_trade_through_owned_territory_efficiency = 0.07
+			global_production_efficiency = 0.025
+			global_burghers_estate_power = 0.05
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			crown_estate
 		}
 	}
 }
@@ -6362,6 +6632,21 @@ antq_s2_northern_migration_law = {
 			tribes_estate
 		}
 	}
+	antq_s2_northern_migration_host_settlement = {
+		potential = {
+			current_date >= 375.1.1
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.03
+			wrong_culture_levy_size = 0.07
+			tribes_estate_target_satisfaction = tiny_permanent_target_satisfaction
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+			peasants_estate
+		}
+	}
 }
 
 antq_s2_northern_external_law = {
@@ -6406,6 +6691,21 @@ antq_s2_northern_external_law = {
 			burghers_estate
 			tribes_estate
 			peasants_estate
+		}
+	}
+	antq_s2_northern_external_river_fort_circuit = {
+		potential = {
+			current_date >= 250.1.1
+		}
+		country_modifier = {
+			diplomatic_capacity_modifier = 0.04
+			global_monthly_control = 0.012
+			global_tribes_estate_power = 0.048
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+			burghers_estate
 		}
 	}
 }
@@ -6816,6 +7116,21 @@ antq_s2_african_commerce_law = {
 			tribes_estate
 		}
 	}
+	antq_s2_african_commerce_sanctuary_markets = {
+		potential = {
+			current_date >= 300.1.1
+		}
+		country_modifier = {
+			global_trade_through_owned_territory_efficiency = 0.05
+			stability_cost_efficiency = 0.028
+			global_burghers_estate_power = 0.048
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			clergy_estate
+		}
+	}
 }
 
 antq_s2_african_coinage_law = {
@@ -6858,6 +7173,21 @@ antq_s2_african_coinage_law = {
 		estate_preferences = {
 			tribes_estate
 			peasants_estate
+		}
+	}
+	antq_s2_african_coinage_aksumite_standard = {
+		potential = {
+			current_date >= 270.1.1
+		}
+		country_modifier = {
+			minting_income_factor = 0.12
+			minting_inflation_threshold = -0.012
+			global_crown_estate_power = 0.055
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			burghers_estate
 		}
 	}
 }
@@ -7318,6 +7648,21 @@ antq_s2_eastern_local_rule_law = {
 			burghers_estate
 		}
 	}
+	antq_s2_eastern_local_rule_fortress_granaries = {
+		potential = {
+			current_date >= 300.1.1
+		}
+		country_modifier = {
+			global_monthly_food_modifier = 0.03
+			country_cabinet_efficiency = 0.04
+			global_crown_estate_power = 0.052
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			peasants_estate
+		}
+	}
 }
 
 antq_s2_eastern_cult_law = {
@@ -7686,6 +8031,21 @@ antq_s2_eastern_external_law = {
 			tribes_estate
 		}
 	}
+	antq_s2_eastern_external_envoy_queenship = {
+		potential = {
+			current_date >= 238.1.1
+		}
+		country_modifier = {
+			diplomatic_reputation = 1
+			diplomatic_capacity_modifier = 0.05
+			global_nobles_estate_power = 0.05
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			clergy_estate
+		}
+	}
 }
 
 antq_s2_transoceanic_status_law = {
@@ -8015,6 +8375,21 @@ antq_s2_transoceanic_cult_law = {
 			peasants_estate
 		}
 	}
+	antq_s2_transoceanic_cult_regional_centers = {
+		potential = {
+			current_date >= 200.1.1
+		}
+		country_modifier = {
+			stability_cost_efficiency = 0.032
+			global_monthly_control = 0.013
+			global_clergy_estate_power = 0.047
+		}
+		years = 2
+		estate_preferences = {
+			clergy_estate
+			tribes_estate
+		}
+	}
 }
 
 antq_s2_transoceanic_household_law = {
@@ -8103,6 +8478,21 @@ antq_s2_transoceanic_commerce_law = {
 		years = 2
 		estate_preferences = {
 			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s2_transoceanic_commerce_exchange_custody = {
+		potential = {
+			current_date >= 350.1.1
+		}
+		country_modifier = {
+			global_trade_through_owned_territory_efficiency = 0.045
+			global_production_efficiency = 0.032
+			global_burghers_estate_power = 0.043
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
 			tribes_estate
 		}
 	}

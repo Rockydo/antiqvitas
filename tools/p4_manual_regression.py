@@ -222,14 +222,21 @@ def build_report() -> dict[str, object]:
     )
     require(
         len(law_groups) == 182
-        and len(law_options) == 546
-        and all(
+        and len(law_options) == 572
+        and sum(
+            sum(
+                row["profile"] == profile and row["law"] == law
+                for row in law_options
+            ) == 4
+            for profile, law in law_groups
+        ) == 26
+        and sum(
             sum(
                 row["profile"] == profile and row["law"] == law
                 for row in law_options
             ) == 3
             for profile, law in law_groups
-        ),
+        ) == 156,
         "ancient multi-option legal breadth regressed",
         failures,
     )

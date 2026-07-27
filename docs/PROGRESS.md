@@ -1,5 +1,25 @@
 # Progress
 
+## 2026-07-27 - First dated legal-development layer
+
+- Added 26 later legal options, exactly two for every one of the 13 legal
+  profiles. The 182 profile law groups now contain 572 options: 546 opening
+  choices plus 26 developments gated between AD 25 and 382.
+- Secure anchors include Eastern Han restoration, the Antonine citizenship
+  grant, the Sasanian transition, Xianbei confederation, Himiko's Wei embassy,
+  Aksumite coinage, South Arabian consolidation, and the Gothic settlement of
+  AD 382. Lower-resolution profiles use explicitly contested regional
+  analogues rather than invented written codes.
+- Verified the option-level `potential` contract and `current_date` comparator
+  against the installed law/event scripts. Every generated date is an
+  `AntqDate`; every option carries at least three verified effects, estate
+  preferences, a source route, and a historical boundary.
+- The regression contract now requires exactly 26 four-option groups and 156
+  three-option groups. Full validation passes 102/102 checks; paired
+  vanilla/mod smoke reaches responsive rendered menus with zero mod-unique
+  `error.log` lines. Evidence is in
+  `docs/playtests/S2_DATED_LEGAL_OPTIONS_20260727.md`.
+
 ## 2026-07-27 - Bespoke constitutional branches for four major states
 
 - Added two research-gated reforms apiece for Xiongnu, Goguryeo, Meroitic

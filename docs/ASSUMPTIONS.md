@@ -1,5 +1,27 @@
 # Historical Assumptions
 
+## 2026-07-27 - Dated legal options mix event anchors with bounded diffusion windows
+
+Dates tied to Eastern Han restoration, the Antonine citizenship grant, the
+Sasanian transition, Himiko's embassy, and the Gothic settlement use a secure
+historical anchor. They still function as availability thresholds, not claims
+that a realm-wide legal system changed completely on one day.
+
+Other thresholds mark broad development windows: civic benefaction, corporate
+arbitration, land grants, confederative war leadership, Red Sea port
+coordination, Aksumite coinage, fortified storehouse networks, regional
+ceremonial centers, and long-distance exchange. Northern, Celtic, African, and
+transoceanic options are deliberately phrased as material or negotiated
+practices rather than recovered codes.
+
+Sources and individual confidence boundaries are recorded in
+`docs/m6/ancient_law_options.csv`. Principal routes: `P8.1`-`P8.9`; `P11`;
+`P13`; `P15`; `BHR`; `CAH-XI`; `OCD`; `TAC-GER`; `HE-HILLFORT`;
+`NMI-IRON-AGE`; `ENC-NEEU`; `PLE`.
+
+[secure named event anchors and broad practice families; contested diffusion
+dates, transregional availability, formal policy labels, and numerical effects]
+
 ## 2026-07-27 - Major-state reform branches are counterfactual emphases
 
 The Left and Right Wing Command, Chanyu Gift Circuit, Fortress-Lineage

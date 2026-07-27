@@ -17,7 +17,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
-from dates import M2_MIRROR_LANGUAGES
+from dates import AntqDate, M2_MIRROR_LANGUAGES
 
 ROOT = Path(__file__).resolve().parents[1]
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
@@ -264,6 +264,21 @@ class Theme:
     preferences: tuple[tuple[str, ...], ...]
 
 
+@dataclass(frozen=True)
+class LateOption:
+    profile: str
+    theme: str
+    key: str
+    name: str
+    description: str
+    available: AntqDate
+    effects: tuple[tuple[str, str], ...]
+    preferences: tuple[str, ...]
+    source: str
+    confidence: str
+    boundary: str
+
+
 THEMES = (
     Theme(
         "status", "Status and Incorporation", "socioeconomic",
@@ -493,6 +508,243 @@ THEMES = (
 
 STANCE_KEYS = ("central", "mediated", "local")
 
+LATE_OPTIONS = (
+    LateOption(
+        "roman", "status", "antq_s2_roman_status_antonine_grant",
+        "Antonine Citizenship Grant",
+        "Extend Roman citizenship across the free imperial population, widening incorporation while concentrating legal definition at the center.",
+        AntqDate(212, 1, 1),
+        (("global_integration_speed_modifier", "0.08"), ("global_pop_assimilation_speed_modifier", "0.02"), ("global_crown_estate_power", "0.05")),
+        ("crown_estate", "burghers_estate"), "P8.1;P11;P13;OCD", "secure",
+        "The AD 212 grant is secure; its exact game effects and applicability after a divergent imperial history are counterfactual.",
+    ),
+    LateOption(
+        "roman", "local_rule", "antq_s2_roman_local_rule_diocesan_provinces",
+        "Diocesan Provincial Coordination",
+        "Group smaller provinces beneath coordinated fiscal and judicial supervision suited to the later imperial court.",
+        AntqDate(293, 1, 1),
+        (("country_cabinet_efficiency", "0.06"), ("global_monthly_control", "0.02"), ("global_crown_estate_power", "0.055")),
+        ("crown_estate", "nobles_estate"), "P8.1;P11;P13;OCD", "secure",
+        "Represents the late-third-century provincial hierarchy without claiming one instantaneous or uniform reform date.",
+    ),
+    LateOption(
+        "han", "offices", "antq_s2_han_offices_restored_secretariat",
+        "Restored Imperial Secretariat",
+        "Reconstitute the imperial secretariat, reviewed appointments, and commandery reporting after dynastic restoration.",
+        AntqDate(25, 8, 5),
+        (("country_cabinet_efficiency", "0.055"), ("set_cabinet_member_cost_modifier", "-0.12"), ("global_crown_estate_power", "0.045")),
+        ("crown_estate", "nobles_estate"), "P8.3;P11;P13;BHR", "secure",
+        "The restoration is securely dated; the policy packages compress a gradual rebuilding of Eastern Han government.",
+    ),
+    LateOption(
+        "han", "muster", "antq_s2_han_muster_provincial_commands",
+        "Provincial Governor Commands",
+        "Entrust emergency military authority and supply coordination to enlarged provincial commands as court control fragments.",
+        AntqDate(188, 1, 1),
+        (("global_levy_recruitment_speed_modifier", "0.12"), ("land_morale_modifier", "0.025"), ("global_nobles_estate_power", "0.055")),
+        ("nobles_estate", "crown_estate"), "P8.3;P11;P13;BHR", "secure",
+        "Reflects the late Han elevation of provincial governors while leaving its consequences and player timing open.",
+    ),
+    LateOption(
+        "iranian", "land", "antq_s2_iranian_land_sasanian_domain",
+        "Sasanian Royal Domain Survey",
+        "Reassert royal-domain claims, assessed estates, and provincial obligations under the new Iranian dynasty.",
+        AntqDate(224, 4, 28),
+        (("global_max_rural_control", "0.04"), ("global_monthly_control", "0.018"), ("global_crown_estate_power", "0.06")),
+        ("crown_estate", "clergy_estate"), "P8.2;P11;P13;CAH-XI", "secure",
+        "The dynastic transition is secure; the survey is a bounded adapter for gradual Sasanian fiscal centralization.",
+    ),
+    LateOption(
+        "iranian", "cult", "antq_s2_iranian_cult_court_fire_patronage",
+        "Court Fire Patronage",
+        "Bind royal ceremony, protected fire sanctuaries, and clerical counsel more closely to the court.",
+        AntqDate(240, 1, 1),
+        (("global_pop_conversion_speed_modifier", "0.07"), ("clergy_estate_target_satisfaction", "small_permanent_target_satisfaction"), ("global_clergy_estate_power", "0.055")),
+        ("clergy_estate", "crown_estate"), "P8.2;P11;P13;CAH-XI", "contested",
+        "Models growing Sasanian royal and Zoroastrian patronage without imposing a uniform orthodoxy in one year.",
+    ),
+    LateOption(
+        "hellenistic", "commerce", "antq_s2_hellenistic_commerce_benefaction_registers",
+        "Civic Benefaction Registers",
+        "Record elite gifts, market works, and public distributions as enforceable obligations of civic prestige.",
+        AntqDate(100, 1, 1),
+        (("global_production_efficiency", "0.035"), ("global_trade_through_owned_territory_efficiency", "0.055"), ("global_burghers_estate_power", "0.045")),
+        ("burghers_estate", "nobles_estate"), "P8.4;P11;P13;OCD", "secure",
+        "Euergetic practice is secure, while its conversion into a selectable uniform register is a gameplay abstraction.",
+    ),
+    LateOption(
+        "hellenistic", "external", "antq_s2_hellenistic_external_league_contributions",
+        "League Defense Contributions",
+        "Coordinate sanctuary diplomacy, member levies, and assessed contributions through a renewed federal compact.",
+        AntqDate(200, 1, 1),
+        (("diplomatic_capacity_modifier", "0.055"), ("subject_loyalty", "6"), ("global_burghers_estate_power", "0.035")),
+        ("burghers_estate", "nobles_estate"), "P8.4;P11;P13;CAH-XI", "contested",
+        "Uses attested league practices as a counterfactual later path rather than asserting a common federal constitution.",
+    ),
+    LateOption(
+        "indic", "land", "antq_s2_indic_land_inscribed_grants",
+        "Inscribed Land-Grant Charters",
+        "Record protected grants, revenues, and service rights for religious and learned beneficiaries.",
+        AntqDate(250, 1, 1),
+        (("global_max_rural_control", "0.025"), ("clergy_estate_target_satisfaction", "tiny_permanent_target_satisfaction"), ("global_clergy_estate_power", "0.045")),
+        ("clergy_estate", "crown_estate"), "P8.4;P11;P13;CAH-XI", "secure",
+        "Later-antique grant practice is secure; its uniform reach and exact onset vary widely across South Asia.",
+    ),
+    LateOption(
+        "indic", "courts", "antq_s2_indic_courts_guild_monastic_arbitration",
+        "Guild and Monastic Arbitration",
+        "Recognize corporate and monastic forums for commerce, endowments, testimony, and local composition.",
+        AntqDate(320, 1, 1),
+        (("legislative_efficiency", "0.05"), ("stability_cost_efficiency", "0.03"), ("global_burghers_estate_power", "0.045")),
+        ("burghers_estate", "clergy_estate"), "P8.4;P11;P13;CAH-XI", "contested",
+        "Corporate arbitration is well grounded, but the combined realm-wide policy is a bounded gameplay construction.",
+    ),
+    LateOption(
+        "steppe", "external", "antq_s2_steppe_external_xianbei_circuit",
+        "Xianbei Assembly Circuit",
+        "Unify dispersed leaders through an itinerant assembly, envoy relays, gifts, and witnessed military obligations.",
+        AntqDate(156, 1, 1),
+        (("diplomatic_reputation", "1"), ("diplomatic_capacity_modifier", "0.06"), ("global_tribes_estate_power", "0.055")),
+        ("tribes_estate", "nobles_estate"), "P8.3;P11;P13;BHR", "contested",
+        "Tanshihuai's confederation is historical; the precise assembly circuit and its availability elsewhere are inferred.",
+    ),
+    LateOption(
+        "steppe", "migration", "antq_s2_steppe_migration_federate_pastures",
+        "Federate Pasture Settlement",
+        "Settle mobile hosts on negotiated pasture and frontier service terms while preserving internal leadership.",
+        AntqDate(375, 1, 1),
+        (("global_integration_speed_modifier", "0.035"), ("wrong_culture_levy_size", "0.08"), ("global_tribes_estate_power", "0.06")),
+        ("tribes_estate", "crown_estate"), "P8.3;P11;P13;CAH-XI", "secure",
+        "Late-antique negotiated settlement is secure, but the term covers diverse compacts rather than one code.",
+    ),
+    LateOption(
+        "germanic", "muster", "antq_s2_germanic_muster_confederated_warleader",
+        "Confederated War-Leader Compact",
+        "Bind several peoples to a recognized war leader through gifts, hostages, and shared campaign obligations.",
+        AntqDate(250, 1, 1),
+        (("land_morale_modifier", "0.03"), ("global_levy_size_modifier", "0.06"), ("global_nobles_estate_power", "0.055")),
+        ("nobles_estate", "tribes_estate"), "P8.7;P11;P13;TAC-GER", "contested",
+        "Represents later confederative consolidation without treating Alamanni, Franks, Goths, and others as one polity.",
+    ),
+    LateOption(
+        "germanic", "migration", "antq_s2_germanic_migration_federate_terms",
+        "Federate Settlement Terms",
+        "Exchange bounded settlement, internal leadership, and land use for collective frontier service.",
+        AntqDate(382, 10, 3),
+        (("global_integration_speed_modifier", "0.04"), ("wrong_culture_levy_size", "0.10"), ("subject_loyalty", "7")),
+        ("tribes_estate", "crown_estate"), "P8.7;P11;P13;CAH-XI", "secure",
+        "The Gothic settlement of AD 382 anchors the date; its exact terms and transferability remain debated.",
+    ),
+    LateOption(
+        "celtic", "local_rule", "antq_s2_celtic_local_rule_confederated_hillforts",
+        "Confederated Hillfort Council",
+        "Coordinate tribute, refuge, road duties, and arbitration among several fortified kin communities.",
+        AntqDate(200, 1, 1),
+        (("legislative_efficiency", "0.045"), ("global_max_rural_control", "0.02"), ("global_tribes_estate_power", "0.05")),
+        ("tribes_estate", "nobles_estate"), "P8.7;P11;P13;HE-HILLFORT", "contested",
+        "A bounded insular counterfactual based on settlement and kin coordination, not a recovered federal charter.",
+    ),
+    LateOption(
+        "celtic", "external", "antq_s2_celtic_external_coastal_refuge",
+        "Coastal Refuge and Tribute Compact",
+        "Pool harbor watch, refuge sites, tribute, and seaborne envoys under negotiated regional custody.",
+        AntqDate(350, 1, 1),
+        (("diplomatic_capacity_modifier", "0.045"), ("global_trade_through_owned_territory_efficiency", "0.04"), ("global_tribes_estate_power", "0.045")),
+        ("tribes_estate", "burghers_estate"), "P8.7;P11;P13;NMI-IRON-AGE", "contested",
+        "Combines archaeologically plausible functions without claiming a documented pan-insular maritime league.",
+    ),
+    LateOption(
+        "arabian", "commerce", "antq_s2_arabian_commerce_red_sea_compacts",
+        "Red Sea Port Compacts",
+        "Coordinate harbor dues, caravan protection, pilotage, and sanctuary guarantees across linked ports.",
+        AntqDate(200, 1, 1),
+        (("global_trade_through_owned_territory_efficiency", "0.07"), ("global_production_efficiency", "0.025"), ("global_burghers_estate_power", "0.05")),
+        ("burghers_estate", "crown_estate"), "P8.5;P11;P13;PLE", "secure",
+        "Red Sea exchange is secure; the cross-port compact is a playable synthesis rather than a single surviving treaty.",
+    ),
+    LateOption(
+        "arabian", "local_rule", "antq_s2_arabian_local_rule_himyarite_unification",
+        "South Arabian Royal Unification",
+        "Consolidate highland levies, irrigation obligations, inscriptions, and caravan routes beneath a royal household.",
+        AntqDate(275, 1, 1),
+        (("global_monthly_control", "0.022"), ("country_cabinet_efficiency", "0.045"), ("global_crown_estate_power", "0.06")),
+        ("crown_estate", "nobles_estate"), "P8.5;P11;P13;CAH-XI", "secure",
+        "Himyarite consolidation is historical; its availability to every Arabian polity is explicitly counterfactual.",
+    ),
+    LateOption(
+        "northern", "external", "antq_s2_northern_external_river_fort_circuit",
+        "River-Fort Assembly Circuit",
+        "Link seasonal assemblies, fortified river crossings, tribute routes, and diplomatic gift exchange.",
+        AntqDate(250, 1, 1),
+        (("diplomatic_capacity_modifier", "0.04"), ("global_monthly_control", "0.012"), ("global_tribes_estate_power", "0.048")),
+        ("tribes_estate", "burghers_estate"), "P8.7;P11;P13;ENC-NEEU", "contested",
+        "An archaeological regional path that avoids projecting later ethnic polities or written law into the period.",
+    ),
+    LateOption(
+        "northern", "migration", "antq_s2_northern_migration_host_settlement",
+        "Migrant Host Settlement",
+        "Admit mobile households under witnessed service, winter provisioning, and local arbitration terms.",
+        AntqDate(375, 1, 1),
+        (("global_integration_speed_modifier", "0.03"), ("wrong_culture_levy_size", "0.07"), ("tribes_estate_target_satisfaction", "tiny_permanent_target_satisfaction")),
+        ("tribes_estate", "peasants_estate"), "P8.7;P11;P13;CAH-XI", "contested",
+        "Models late-antique mobility as negotiated settlement, not as a single migration event or ethnic replacement.",
+    ),
+    LateOption(
+        "african", "coinage", "antq_s2_african_coinage_aksumite_standard",
+        "Aksumite Royal Coin Standard",
+        "Issue a royal gold, silver, and copper standard to serve Red Sea exchange and court distributions.",
+        AntqDate(270, 1, 1),
+        (("minting_income_factor", "0.12"), ("minting_inflation_threshold", "-0.012"), ("global_crown_estate_power", "0.055")),
+        ("crown_estate", "burghers_estate"), "P8.5;P11;P13;CAH-XI", "secure",
+        "Aksumite coinage is securely attested; its exact first issue and applicability to other African states vary.",
+    ),
+    LateOption(
+        "african", "commerce", "antq_s2_african_commerce_sanctuary_markets",
+        "Sanctuary-Market Confederation",
+        "Protect market days, caravan hospitality, sanctuary custody, and intercommunity arbitration.",
+        AntqDate(300, 1, 1),
+        (("global_trade_through_owned_territory_efficiency", "0.05"), ("stability_cost_efficiency", "0.028"), ("global_burghers_estate_power", "0.048")),
+        ("burghers_estate", "clergy_estate"), "P8.5;P11;P13", "contested",
+        "A bounded comparative model for diverse African exchange communities, not a claim for one continent-wide institution.",
+    ),
+    LateOption(
+        "eastern", "external", "antq_s2_eastern_external_envoy_queenship",
+        "Envoy-Queenship Register",
+        "Use overseas embassies, prestige gifts, divinatory authority, and lineage brokers to stabilize a royal center.",
+        AntqDate(238, 1, 1),
+        (("diplomatic_reputation", "1"), ("diplomatic_capacity_modifier", "0.05"), ("global_nobles_estate_power", "0.05")),
+        ("nobles_estate", "clergy_estate"), "P8.3;P8.4;P11;BHR", "secure",
+        "Himiko's Wei embassy anchors the date; the combined policy remains specific in origin and counterfactual elsewhere.",
+    ),
+    LateOption(
+        "eastern", "local_rule", "antq_s2_eastern_local_rule_fortress_granaries",
+        "Fortress-Granary Circuit",
+        "Coordinate fortified settlements, grain stores, beacon routes, and rotating regional officers.",
+        AntqDate(300, 1, 1),
+        (("global_monthly_food_modifier", "0.03"), ("country_cabinet_efficiency", "0.04"), ("global_crown_estate_power", "0.052")),
+        ("crown_estate", "peasants_estate"), "P8.3;P8.4;P11;P13", "contested",
+        "A cross-regional later path bounded to attested material practices rather than a shared East Asian bureaucracy.",
+    ),
+    LateOption(
+        "transoceanic", "cult", "antq_s2_transoceanic_cult_regional_centers",
+        "Regional Ceremonial Stewardship",
+        "Coordinate public works, gathering cycles, offerings, and regional authority through a durable ceremonial center.",
+        AntqDate(200, 1, 1),
+        (("stability_cost_efficiency", "0.032"), ("global_monthly_control", "0.013"), ("global_clergy_estate_power", "0.047")),
+        ("clergy_estate", "tribes_estate"), "P8.8;P8.9;P11;P15", "contested",
+        "A bounded archaeological model that does not equate distinct American and Oceanian ceremonial traditions.",
+    ),
+    LateOption(
+        "transoceanic", "commerce", "antq_s2_transoceanic_commerce_exchange_custody",
+        "Long-Distance Exchange Custody",
+        "Protect relay exchange, specialist production, harbor or trail hospitality, and witnessed measures.",
+        AntqDate(350, 1, 1),
+        (("global_trade_through_owned_territory_efficiency", "0.045"), ("global_production_efficiency", "0.032"), ("global_burghers_estate_power", "0.043")),
+        ("burghers_estate", "tribes_estate"), "P8.8;P8.9;P11;P15", "contested",
+        "Represents regional exchange capacity without asserting common currencies, merchant estates, or state markets.",
+    ),
+)
+
 
 def read_roster() -> list[dict[str, str]]:
     with ROSTER.open(encoding="utf-8-sig", newline="") as handle:
@@ -552,11 +804,15 @@ def profile_law_pairs() -> tuple[tuple[str, str, str], ...]:
 
 
 def all_law_options() -> set[tuple[str, str]]:
-    return {
+    base = {
         (law_key(profile.key, theme.key), option_key(profile.key, theme.key, stance))
         for profile in PROFILES
         for theme in THEMES
         for stance in STANCE_KEYS
+    }
+    return base | {
+        (law_key(option.profile, option.theme), option.key)
+        for option in LATE_OPTIONS
     }
 
 
@@ -606,6 +862,25 @@ def render_laws() -> str:
                 ))
                 lines.extend(f"\t\t\t{estate}" for estate in preferences)
                 lines.extend(("\t\t}", "\t}"))
+            for option in (
+                candidate
+                for candidate in LATE_OPTIONS
+                if candidate.profile == profile.key and candidate.theme == theme.key
+            ):
+                lines.extend((
+                    f"\t{option.key} = {{",
+                    "\t\tpotential = {",
+                    f"\t\t\tcurrent_date >= {option.available.engine()}",
+                    "\t\t}",
+                    "\t\tcountry_modifier = {",
+                ))
+                lines.extend(
+                    f"\t\t\t{modifier} = {value}"
+                    for modifier, value in option.effects
+                )
+                lines.extend(("\t\t}", "\t\tyears = 2", "\t\testate_preferences = {"))
+                lines.extend(f"\t\t\t{estate}" for estate in option.preferences)
+                lines.extend(("\t\t}", "\t}"))
             lines.append("}")
     return "\n".join(lines) + "\n"
 
@@ -652,7 +927,7 @@ def option_ledger() -> str:
     writer.writerow((
         "profile", "law", "theme", "category", "law_name", "law_description",
         "option", "stance", "option_name", "option_description", "modifiers",
-        "estate_preferences", "starting", "source", "confidence", "boundary",
+        "estate_preferences", "starting", "available_date", "source", "confidence", "boundary",
     ))
     for profile in PROFILES:
         for theme in THEMES:
@@ -676,10 +951,33 @@ def option_ledger() -> str:
                     )),
                     "|".join(preferences),
                     "yes" if stance == profile.starting_stance else "no",
+                    "",
                     profile.source,
                     profile.confidence,
                     profile.boundary,
                 ))
+    for option in LATE_OPTIONS:
+        profile = profile_by_key()[option.profile]
+        theme = next(candidate for candidate in THEMES if candidate.key == option.theme)
+        writer.writerow((
+            option.profile,
+            law_key(option.profile, option.theme),
+            option.theme,
+            theme.category,
+            f"{profile.name} {theme.title}",
+            f"Defines {theme.question} within the {profile.name} political sphere.",
+            option.key,
+            "dated",
+            option.name,
+            option.description,
+            "|".join(f"{key}={value}" for key, value in option.effects),
+            "|".join(option.preferences),
+            "no",
+            option.available.engine(),
+            option.source,
+            option.confidence,
+            option.boundary,
+        ))
     return output.getvalue()
 
 
@@ -698,6 +996,14 @@ def localization(language: str) -> str:
                     (option, f"{getattr(profile, stance)} {theme.labels[stance_index]}"),
                     (f"{option}_desc", theme.descriptions[stance_index]),
                 ))
+    rows.extend(
+        pair
+        for option in LATE_OPTIONS
+        for pair in (
+            (option.key, option.name),
+            (f"{option.key}_desc", option.description),
+        )
+    )
     lines = [f"l_{language}:"]
     lines.extend(f' {key}: "{value}"' for key, value in rows)
     return "\n".join(lines) + "\n"
@@ -722,8 +1028,8 @@ def validate_content() -> None:
         failures.append("legal layer must contain 13 profiles and 14 themes")
     if len(assignments) != 292:
         failures.append(f"legal profiles must cover 292 tags; found {len(assignments)}")
-    if len(profile_law_pairs()) != 182 or len(all_law_options()) != 546:
-        failures.append("legal breadth must be 182 groups and 546 options")
+    if len(profile_law_pairs()) != 182 or len(all_law_options()) != 572:
+        failures.append("legal breadth must be 182 groups and 572 options")
     if {theme.category for theme in THEMES} - LAW_CATEGORIES:
         failures.append("unsupported legal category")
     for profile in PROFILES:
@@ -749,6 +1055,31 @@ def validate_content() -> None:
                     failures.append(f"{profile.key}/{theme.key} uses unknown estate")
         if len(packages) != 42:
             failures.append(f"profile {profile.key} contains duplicate policy effect packages")
+    profile_keys = {profile.key for profile in PROFILES}
+    theme_keys = {theme.key for theme in THEMES}
+    late_keys: set[str] = set()
+    late_packages: set[tuple[tuple[str, str], ...]] = set()
+    late_counts: dict[str, int] = {}
+    for option in LATE_OPTIONS:
+        option.available.validate()
+        late_counts[option.profile] = late_counts.get(option.profile, 0) + 1
+        if option.profile not in profile_keys or option.theme not in theme_keys:
+            failures.append(f"dated law option {option.key} has an unknown profile/theme")
+        if option.key in late_keys:
+            failures.append(f"duplicate dated law option {option.key}")
+        late_keys.add(option.key)
+        if len(option.effects) < 3 or option.effects in late_packages:
+            failures.append(f"dated law option {option.key} lacks a distinct three-effect package")
+        late_packages.add(option.effects)
+        for modifier, _value in option.effects:
+            if modifier not in ALLOWED_MODIFIERS:
+                failures.append(f"dated law option {option.key} uses unverified modifier {modifier}")
+        if set(option.preferences) - ESTATES:
+            failures.append(f"dated law option {option.key} uses unknown estate")
+        if option.confidence not in {"secure", "contested"} or len(option.boundary) < 55:
+            failures.append(f"dated law option {option.key} lacks a bounded evidence note")
+    if len(LATE_OPTIONS) != 26 or any(late_counts.get(key) != 2 for key in profile_keys):
+        failures.append("dated legal development must provide two options for every profile")
     text = render_laws().lower()
     for word in FORBIDDEN:
         if f" {word}" in text:
@@ -773,7 +1104,7 @@ def validate_content() -> None:
         "s2_ancient_laws: PASS "
         f"({len(PROFILES)} profiles; {len(assignments)} tags; "
         f"{len(profile_law_pairs())} law groups; {len(all_law_options())} options; "
-        f"42 distinct packages/profile; distribution "
+        f"{len(LATE_OPTIONS)} dated options; 42 distinct opening packages/profile; distribution "
         + ", ".join(f"{key}={counts[key]}" for key in sorted(counts))
         + ")"
     )

@@ -46,7 +46,8 @@ and focused runtime probe all pass.
 - Only nine ancient institutions cover six ages. Government depth is still
   thin outside the first replacement tranches: 45 reforms and 124 privileges
   serve 292 opening polities. The legal layer now has 227 ancient groups,
-  including 182 three-option profile laws, but needs later-century additions.
+  including 182 profile laws with 572 total options and a first 26-option
+  dated development layer; country-specific exceptions remain open.
 - Exact-name mirrors still leave most installed estates, privileges, parliament
   material, cabinet actions, laws, religious aspects, and artillery-facing UI in
   the mounted union. Rome now starts at technology level 3 with a 9.60K reserve
@@ -181,6 +182,11 @@ and focused runtime probe all pass.
         contract now covers 45 reforms and the knowledge tree carries 611
         ancient-system unlocks. Keep the parent open for other major-state
         subdivisions and dated successor forms.
+      - [x] Add the first dated legal-development layer: two options for every
+        one of the 13 legal profiles, 26 total, spanning AD 25-382. All gates
+        use `AntqDate`, each option has a distinct three-effect package and an
+        evidence boundary, and the permanent regression now requires 572
+        options across the 182 groups.
   - [x] Eliminate the fresh-bookmark parliament compiler failures before the
     replacement UI probe. The 2026-07-26 Britain/Hibernia bookmark isolated all
     2,855 `Script system error!` entries to
@@ -567,15 +573,21 @@ and focused runtime probe all pass.
     inheritance, commerce, coinage, courts, offices, migration, and diplomacy.
   - [x] Replace the one-option legal floor with 13 sourced profiles covering
     all 292 opening tags. Each profile now has 14 law groups across every
-    required theme and three mutually exclusive policies per group: 182 new
-    groups, 546 options, 42 distinct effect packages per profile, generated
+    required theme and three mutually exclusive opening policies per group:
+    182 new groups, 546 opening options, 42 distinct effect packages per
+    profile, generated
     starting selections, advance unlocks, estate preferences, descriptions,
     and eleven-client localization. Rome, Han, Arsacid-Iranian, eastern
     Mediterranean, Indic, steppe, Germanic, Brittonic-Hibernian, Arabian,
     northern forest/river, African, eastern maritime, and
     American/Oceanian systems no longer share one generic legal menu.
+  - [x] Add 26 date-gated later developments, exactly two per profile, raising
+    the profile-law layer to 572 options. These include the Antonine grant,
+    restored Han administration, Sasanian court/domain changes, Xianbei
+    confederation, federate settlements, Aksumite coinage, Himiko's embassy,
+    South Arabian consolidation, and carefully bounded regional analogues.
   - [ ] Add country-specific exceptional laws and dated later-century options;
-    continue expanding profile-specific privileges beyond the current 100.
+    continue expanding profile-specific privileges beyond the current 124.
   - Acceptance: all 229 tags have useful legal/political choices; major countries
     have bespoke depth; no duplicate filler effect or post-476 inheritance.
 

@@ -1,5 +1,19 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - Later legal developments are option-level date gates
+
+The installed `01_legal_system.txt` proves that a policy can carry its own
+`potential` block and that `current_date` comparisons are valid there.
+ANTIQVITAS therefore adds later developments as fourth options inside existing
+profile law groups, rather than creating parallel law groups that would clutter
+the panel or require a second starting selection.
+
+All dates are constructed and validated as `AntqDate` values before their
+engine strings are rendered. The parent law retains the profile gate; the
+option adds only its campaign-date gate. This keeps later choices unavailable
+at the AD 1 bookmark while allowing a polity that survives or diverges to adopt
+an appropriate development without needing a long scripted event chain.
+
 ## 2026-07-27 - Bespoke reform paths inherit the entire state profile
 
 The four new major-state reform families use the same mechanism as the nine
