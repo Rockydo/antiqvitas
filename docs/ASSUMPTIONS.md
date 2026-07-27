@@ -1,5 +1,32 @@
 # Historical Assumptions
 
+## 2026-07-27 - Roman successor paths are bounded constitutional models
+
+The Flavian, Antonine, Severan, Tetrarchic, Constantinian, and post-395 paths
+represent well-evidenced shifts in court, army, provincial, fiscal, religious,
+and collegial government. They are not claims that Rome enacted six discrete
+written constitutions, that change occurred on one day, or that each
+institution remained uniform across every province.
+
+The Imperial Consistory profile deliberately compresses changing palatine,
+prefectural, diocesan, military-supply, and rescript offices from Diocletian to
+476. The post-395 “Twin Courts” path represents durable eastern and western
+court separation and interaction, not a clean legal partition or guaranteed
+cooperation. The three new Roman privilege pairs likewise turn senatorial
+review versus imperial inspection, equestrian careers versus municipal
+liability, and veteran grants versus provincial petition channels into
+gameplay tradeoffs; historical practice did not make these universally
+exclusive.
+
+Sources and limits are retained per row in
+`docs/m6/alternative_reform_paths.csv`,
+`docs/m6/ancient_politics_content.csv`, and
+`docs/m6/estate_order_privileges.csv`. Principal routes: plan sections 8.1, 9,
+11, 13, and 15; `CAH-XI`; `CAH-XII`; `OCD`; and `ND`.
+
+[secure broad chronology and institutional change; contested formal choice
+boundaries, uniformity, and numerical effects]
+
 ## 2026-07-27 - Second privilege pairs remain institutional abstractions
 
 The Armenian, Nabataean, Himyarite, Satavahana, Goguryeo, and Cheruscan pairs

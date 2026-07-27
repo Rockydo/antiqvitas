@@ -494,6 +494,7 @@ S2_ALTERNATIVE_REFORMS = ROOT / "docs/m6/alternative_reform_paths.csv"
 S2_ANCIENT_LAWS = ROOT / "docs/m6/ancient_law_options.csv"
 S2_ESTATE_ADVANCE_PROFILES: dict[str, tuple[str, ...]] = {
     "roman": ("roman_italic",),
+    "late_roman": ("roman_italic",),
     "han": ("han_east_asian",),
     "iranian": ("iranian_steppe",),
     "civic": ("hellenic",),
@@ -1170,21 +1171,36 @@ def content_unlocks(records: tuple[Advance, ...]) -> dict[str, tuple[tuple[str, 
     for row in reform_rows:
         profile = (row.get("profile") or "").strip()
         reform = (row.get("reform") or "").strip()
+        age_index_text = (row.get("age_index") or "0").strip()
         if profile not in S2_ESTATE_ADVANCE_PROFILES or not reform.startswith("antq_"):
             raise ValueError(f"invalid alternative reform research profile: {profile}/{reform}")
-        reforms_by_profile[profile].append(reform)
-    for profile, reform_keys in reforms_by_profile.items():
+        try:
+            age_index = int(age_index_text)
+        except ValueError as exc:
+            raise ValueError(
+                f"invalid reform age index: {profile}/{reform}/{age_index_text}"
+            ) from exc
+        if not 0 <= age_index < len(AGE_KEYS):
+            raise ValueError(
+                f"out-of-range reform age index: {profile}/{reform}/{age_index}"
+            )
+        reforms_by_profile[f"{profile}|{age_index}"].append(reform)
+    for profile_age, reform_keys in reforms_by_profile.items():
+        profile, age_index_text = profile_age.split("|", 1)
+        age_index = int(age_index_text)
         candidates = sorted(
             (
                 record for record in records
-                if record.age_index == 0
+                if record.age_index == age_index
                 and record.profile in S2_ESTATE_ADVANCE_PROFILES[profile]
                 and record.depth >= 2
             ),
             key=lambda record: (record.depth, record.track, record.key),
         )
         if not candidates:
-            raise ValueError(f"no deeper Age-I research candidates for reform profile {profile}")
+            raise ValueError(
+                f"no deeper age-{age_index + 1} research candidates for reform profile {profile}"
+            )
         for index, reform in enumerate(reform_keys):
             result[candidates[index * len(candidates) // len(reform_keys)].key].append(
                 ("unlock_government_reform", reform)

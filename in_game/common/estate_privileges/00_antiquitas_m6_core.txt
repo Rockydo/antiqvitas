@@ -418,9 +418,11 @@ antq_roman_senatorial_commissions = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_principate
-			has_reform = government_reform:antq_dominate
 			has_reform = government_reform:antq_augustan_dyarchy
 			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
 		}
 	}
 	allow = {
@@ -441,9 +443,11 @@ antq_roman_provincial_land_surveys = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_principate
-			has_reform = government_reform:antq_dominate
 			has_reform = government_reform:antq_augustan_dyarchy
 			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
 		}
 	}
 	allow = {
@@ -465,9 +469,11 @@ antq_roman_collegial_cult_stipends = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_principate
-			has_reform = government_reform:antq_dominate
 			has_reform = government_reform:antq_augustan_dyarchy
 			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
 		}
 	}
 	country_modifier = {
@@ -484,9 +490,11 @@ antq_roman_equestrian_public_contracts = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_principate
-			has_reform = government_reform:antq_dominate
 			has_reform = government_reform:antq_augustan_dyarchy
 			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
 		}
 	}
 	allow = {
@@ -507,9 +515,11 @@ antq_roman_recognized_collegia = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_principate
-			has_reform = government_reform:antq_dominate
 			has_reform = government_reform:antq_augustan_dyarchy
 			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
 		}
 	}
 	allow = {
@@ -530,9 +540,11 @@ antq_roman_petition_and_census_guarantees = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_principate
-			has_reform = government_reform:antq_dominate
 			has_reform = government_reform:antq_augustan_dyarchy
 			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
 		}
 	}
 	country_modifier = {
@@ -3847,6 +3859,130 @@ antq_emesan_mounted_frontier_terms = {
 	}
 }
 
+antq_late_roman_palatine_office_access = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_tetrarchic_collegium
+			has_reform = government_reform:antq_constantinian_consistory
+			has_reform = government_reform:antq_late_imperial_twin_courts
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_late_roman_senatorial_provincial_hearings }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.0925
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.03
+	}
+}
+
+antq_late_roman_senatorial_provincial_hearings = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_tetrarchic_collegium
+			has_reform = government_reform:antq_constantinian_consistory
+			has_reform = government_reform:antq_late_imperial_twin_courts
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_late_roman_palatine_office_access }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.04
+		land_morale_modifier = 0.015
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.04
+	}
+}
+
+antq_late_roman_religious_intercession_channels = {
+	estate = clergy_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_tetrarchic_collegium
+			has_reform = government_reform:antq_constantinian_consistory
+			has_reform = government_reform:antq_late_imperial_twin_courts
+		}
+	}
+	country_modifier = {
+		global_clergy_estate_power = 0.10
+		clergy_estate_target_satisfaction = medium_privilege_target_satisfaction
+		research_speed_modifier = 0.0175
+		stability_cost_efficiency = -0.05
+		clergy_estate_max_tax = -0.05
+	}
+}
+
+antq_late_roman_curial_delivery_credits = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_tetrarchic_collegium
+			has_reform = government_reform:antq_constantinian_consistory
+			has_reform = government_reform:antq_late_imperial_twin_courts
+		}
+	}
+	country_modifier = {
+		global_burghers_estate_power = 0.10
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.05
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.03
+	}
+}
+
+antq_late_roman_registered_cultivator_remissions = {
+	estate = peasants_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_tetrarchic_collegium
+			has_reform = government_reform:antq_constantinian_consistory
+			has_reform = government_reform:antq_late_imperial_twin_courts
+		}
+	}
+	country_modifier = {
+		global_peasants_estate_power = 0.10
+		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_production_efficiency = 0.0225
+		country_cabinet_efficiency = 0.015
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_late_roman_frontier_service_settlements = {
+	estate = tribes_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_tetrarchic_collegium
+			has_reform = government_reform:antq_constantinian_consistory
+			has_reform = government_reform:antq_late_imperial_twin_courts
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		tribes_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_pop_food_consumption = -0.007
+		global_levy_size_modifier = 0.03
+		monthly_towards_free_subjects = societal_value_minor_monthly_move
+		global_monthly_control = -0.0005
+	}
+}
+
 antq_roman_senatorial_fiscal_review = {
 	estate = nobles_estate
 	potential = {
@@ -3884,6 +4020,126 @@ antq_roman_equestrian_collection_concessions = {
 		global_trade_through_owned_territory_efficiency = 0.06
 		global_production_efficiency = 0.03
 		burghers_estate_max_tax = -0.05
+	}
+}
+
+antq_roman_senatorial_provincial_commissions = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAA
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_roman_imperial_legatine_inspections }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.13
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.045
+		research_speed_modifier = 0.02
+		nobles_estate_max_tax = -0.06
+	}
+}
+
+antq_roman_imperial_legatine_inspections = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAA
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_roman_senatorial_provincial_commissions }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.09
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_monthly_control = 0.001
+		country_cabinet_efficiency = 0.055
+		nobles_estate_max_tax = -0.03
+	}
+}
+
+antq_roman_equestrian_procuratorial_careers = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAA
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_roman_municipal_decurion_obligations }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.13
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.05
+		global_trade_through_owned_territory_efficiency = 0.045
+		burghers_estate_max_tax = -0.055
+	}
+}
+
+antq_roman_municipal_decurion_obligations = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAA
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_roman_equestrian_procuratorial_careers }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.11
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_production_efficiency = 0.035
+		global_monthly_control = 0.0005
+		burghers_estate_max_tax = -0.04
+	}
+}
+
+antq_roman_veteran_allotment_guarantees = {
+	estate = peasants_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAA
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_roman_provincial_petition_safeguards }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_peasants_estate_power = 0.10
+		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.02
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_roman_provincial_petition_safeguards = {
+	estate = peasants_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAA
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_roman_veteran_allotment_guarantees }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_peasants_estate_power = 0.11
+		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
+		stability_cost_efficiency = -0.04
+		country_cabinet_efficiency = 0.025
+		global_monthly_control = -0.001
 	}
 }
 

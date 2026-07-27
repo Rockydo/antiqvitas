@@ -27,6 +27,7 @@ import m5_roman_buildings
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "docs/m11/UI_ASSET_LEDGER.md"
 GOODS = ROOT / "docs/m5/custom_goods.csv"
+POLITICS_ART = ROOT / "docs/m6/ancient_politics_art.csv"
 BUILDING_MASTERS = ROOT / "assets_queue/generated"
 
 
@@ -65,6 +66,18 @@ def assets() -> list[Asset]:
     for item in m11_privilege_icons.direct_icons():
         result.append(Asset("Privilege", item.key, item.source, item.master,
                             m11_privilege_icons.ICON_DIR / f"{item.key}.dds"))
+    with POLITICS_ART.open(encoding="utf-8-sig", newline="") as handle:
+        for row in csv.DictReader(handle):
+            key = (row.get("key") or "").strip()
+            if not key:
+                raise ValueError("ancient politics art ledger contains a blank key")
+            result.append(Asset(
+                "Council and state office",
+                key,
+                local(row["source"]),
+                local(row["master"]),
+                local(row["texture"]),
+            ))
     for item in m11_common_icons.direct_religion_icons():
         result.append(Asset("Religion", item.key, local(item.source), local(item.master),
                             m11_common_icons.RELIGION_TEXTURES / f"{item.key}.dds"))

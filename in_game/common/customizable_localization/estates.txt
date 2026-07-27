@@ -7,9 +7,11 @@
 		trigger = {
 			OR = {
 				has_reform = government_reform:antq_principate
-				has_reform = government_reform:antq_dominate
 				has_reform = government_reform:antq_augustan_dyarchy
 				has_reform = government_reform:antq_provincial_principate
+				has_reform = government_reform:antq_flavian_imperial_settlement
+				has_reform = government_reform:antq_antonine_provincial_principate
+				has_reform = government_reform:antq_severan_military_principate
 			}
 		}
 	}
@@ -320,6 +322,18 @@
 	}
 
 	text = {
+		localization_key = antq_estate_late_roman_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_dominate
+				has_reform = government_reform:antq_tetrarchic_collegium
+				has_reform = government_reform:antq_constantinian_consistory
+				has_reform = government_reform:antq_late_imperial_twin_courts
+			}
+		}
+	}
+
+	text = {
 		localization_key = crown_estate_holy_order
 		trigger = {
 			has_reform = government_reform:military_order_reform
@@ -406,9 +420,11 @@ nobles_estate = {
 		trigger = {
 			OR = {
 				has_reform = government_reform:antq_principate
-				has_reform = government_reform:antq_dominate
 				has_reform = government_reform:antq_augustan_dyarchy
 				has_reform = government_reform:antq_provincial_principate
+				has_reform = government_reform:antq_flavian_imperial_settlement
+				has_reform = government_reform:antq_antonine_provincial_principate
+				has_reform = government_reform:antq_severan_military_principate
 			}
 		}
 	}
@@ -714,6 +730,18 @@ nobles_estate = {
 				has_reform = government_reform:antq_emesan_client_dynasty
 				has_reform = government_reform:antq_emesan_sanctuary_court
 				has_reform = government_reform:antq_emesan_caravan_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_late_roman_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_dominate
+				has_reform = government_reform:antq_tetrarchic_collegium
+				has_reform = government_reform:antq_constantinian_consistory
+				has_reform = government_reform:antq_late_imperial_twin_courts
 			}
 		}
 	}
@@ -1050,9 +1078,11 @@ burghers_estate = {
 		trigger = {
 			OR = {
 				has_reform = government_reform:antq_principate
-				has_reform = government_reform:antq_dominate
 				has_reform = government_reform:antq_augustan_dyarchy
 				has_reform = government_reform:antq_provincial_principate
+				has_reform = government_reform:antq_flavian_imperial_settlement
+				has_reform = government_reform:antq_antonine_provincial_principate
+				has_reform = government_reform:antq_severan_military_principate
 			}
 		}
 	}
@@ -1363,6 +1393,18 @@ burghers_estate = {
 	}
 
 	text = {
+		localization_key = antq_estate_late_roman_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_dominate
+				has_reform = government_reform:antq_tetrarchic_collegium
+				has_reform = government_reform:antq_constantinian_consistory
+				has_reform = government_reform:antq_late_imperial_twin_courts
+			}
+		}
+	}
+
+	text = {
 		localization_key = burghers_estate_greek
 		trigger = {
 			OR = {
@@ -1584,9 +1626,11 @@ clergy_estate = {
 		trigger = {
 			OR = {
 				has_reform = government_reform:antq_principate
-				has_reform = government_reform:antq_dominate
 				has_reform = government_reform:antq_augustan_dyarchy
 				has_reform = government_reform:antq_provincial_principate
+				has_reform = government_reform:antq_flavian_imperial_settlement
+				has_reform = government_reform:antq_antonine_provincial_principate
+				has_reform = government_reform:antq_severan_military_principate
 			}
 		}
 	}
@@ -1897,6 +1941,18 @@ clergy_estate = {
 	}
 
 	text = {
+		localization_key = antq_estate_late_roman_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_dominate
+				has_reform = government_reform:antq_tetrarchic_collegium
+				has_reform = government_reform:antq_constantinian_consistory
+				has_reform = government_reform:antq_late_imperial_twin_courts
+			}
+		}
+	}
+
+	text = {
 		localization_key = clergy_estate_greek
 		trigger = {
 			OR = {
@@ -2127,9 +2183,11 @@ peasants_estate = {
 		trigger = {
 			OR = {
 				has_reform = government_reform:antq_principate
-				has_reform = government_reform:antq_dominate
 				has_reform = government_reform:antq_augustan_dyarchy
 				has_reform = government_reform:antq_provincial_principate
+				has_reform = government_reform:antq_flavian_imperial_settlement
+				has_reform = government_reform:antq_antonine_provincial_principate
+				has_reform = government_reform:antq_severan_military_principate
 			}
 		}
 	}
@@ -2440,6 +2498,18 @@ peasants_estate = {
 	}
 
 	text = {
+		localization_key = antq_estate_late_roman_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_dominate
+				has_reform = government_reform:antq_tetrarchic_collegium
+				has_reform = government_reform:antq_constantinian_consistory
+				has_reform = government_reform:antq_late_imperial_twin_courts
+			}
+		}
+	}
+
+	text = {
 		localization_key = peasants_estate_greek
 		trigger = {
 			OR = {
@@ -2682,9 +2752,11 @@ tribes_estate = {
 		trigger = {
 			OR = {
 				has_reform = government_reform:antq_principate
-				has_reform = government_reform:antq_dominate
 				has_reform = government_reform:antq_augustan_dyarchy
 				has_reform = government_reform:antq_provincial_principate
+				has_reform = government_reform:antq_flavian_imperial_settlement
+				has_reform = government_reform:antq_antonine_provincial_principate
+				has_reform = government_reform:antq_severan_military_principate
 			}
 		}
 	}
@@ -2990,6 +3062,18 @@ tribes_estate = {
 				has_reform = government_reform:antq_emesan_client_dynasty
 				has_reform = government_reform:antq_emesan_sanctuary_court
 				has_reform = government_reform:antq_emesan_caravan_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_late_roman_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_dominate
+				has_reform = government_reform:antq_tetrarchic_collegium
+				has_reform = government_reform:antq_constantinian_consistory
+				has_reform = government_reform:antq_late_imperial_twin_courts
 			}
 		}
 	}

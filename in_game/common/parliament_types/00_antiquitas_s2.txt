@@ -6,17 +6,21 @@ antq_roman_senate = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_principate
-			has_reform = government_reform:antq_dominate
 			has_reform = government_reform:antq_augustan_dyarchy
 			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
 		}
 	}
 	allow = {
 		OR = {
 			has_reform = government_reform:antq_principate
-			has_reform = government_reform:antq_dominate
 			has_reform = government_reform:antq_augustan_dyarchy
 			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
 		}
 	}
 	modifier = {
@@ -28,6 +32,36 @@ antq_roman_senate = {
 		nobles_estate_agenda_impact = 0.25
 		burghers_estate_agenda_impact = 0.15
 		clergy_estate_agenda_impact = 0.05
+	}
+}
+
+antq_imperial_consistory = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_tetrarchic_collegium
+			has_reform = government_reform:antq_constantinian_consistory
+			has_reform = government_reform:antq_late_imperial_twin_courts
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_tetrarchic_collegium
+			has_reform = government_reform:antq_constantinian_consistory
+			has_reform = government_reform:antq_late_imperial_twin_courts
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		clergy_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.08
+		nobles_estate_agenda_impact = 0.18
+		clergy_estate_agenda_impact = 0.16
+		burghers_estate_agenda_impact = 0.12
 	}
 }
 

@@ -1,5 +1,33 @@
 # Progress
 
+## 2026-07-27 - Rome receives distinct early and late imperial political games
+
+- Expanded the Roman Senate from five to eleven state-office programmes and
+  from three to nine issue/agenda pairs. New surfaces cover imperial
+  correspondence, provincial assizes, public works, mint assay, client-king
+  records, fleet supply, appeals, contracts, and ritual-calendar review.
+- Separated the later empire from the Augustan shell. `antq_dominate` and its
+  successors now activate a distinct Imperial Consistory with late Roman
+  social orders, five programmes, three debates/agendas, and six profile
+  privileges.
+- Added six age-correct Roman successor reforms: Flavian reconstruction,
+  Antonine provincial integration, Severan military monarchy, the Tetrarchy,
+  the Constantinian consistory, and the post-395 twin courts. Added six exact-
+  Rome privileges as three exclusive institutional choices.
+- Generated and reviewed four 3x2 archaeological atlases. Twelve new
+  privilege icons and twelve political icons have direct BC7 chains. Extended
+  the global contact-sheet ledger to include councils and state offices; it now
+  audits 1,138 assets across nine surfaces.
+- Installed breadth is now 30 councils, 156 programmes, 96 issues, 96 agendas,
+  99 political contracts, 256 privileges, and 797 ancient-system unlocks. The
+  focused Roman depth validator passes; all 292 opening profiles remain
+  researchable.
+- `make validate` passed 103/103 commands before the new focused check was
+  registered; paired vanilla/mod smoke reached responsive rendered menus with
+  zero new or mod-unique `error.log` lines. Final validation now includes 104
+  commands. Evidence:
+  `docs/playtests/S2_ROMAN_POLITICAL_DEPTH_20260727.md`.
+
 ## 2026-07-27 - Remaining named Tier-1 client courts receive full profiles
 
 - Replaced `antq_client_monarchy` for Herod Antipas's Galilee-Peraea, Philip's

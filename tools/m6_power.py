@@ -544,14 +544,81 @@ ALTERNATIVE_REFORMS: tuple[tuple[str, str, str, str, str, str, str, str, str], .
      "P8.1;P11;P13;OCD;PLE;LBD-EME", "contested", "Caravan and urban exchange support the branch without implying a surviving uniform customs code or permanent merchant constitution."),
 )
 
+SUCCESSOR_REFORMS: tuple[
+    tuple[str, str, str, str, str, str, str, str, str, str], ...
+] = (
+    (
+        "antq_flavian_imperial_settlement", "roman", "monarchy",
+        "Flavian Imperial Settlement",
+        "Rebuild imperial credit, army discipline, public works, and senatorial cooperation after a contested succession and civil war.",
+        "global_crown_estate_power=0.12|global_nobles_estate_power=0.08|estate_power_from_cabinet=0.22|replace_cabinet_member_cost_modifier=0.08",
+        "P8.1;P9;P13;P15;CAH-XI;OCD", "secure",
+        "The AD 69-79 reconstruction is secure; the path models a durable political settlement rather than a single formal Flavian constitution.",
+        "0",
+    ),
+    (
+        "antq_antonine_provincial_principate", "roman", "monarchy",
+        "Antonine Provincial Principate",
+        "Integrate provincial aristocracies, juristic petition, civic benefaction, and frontier command into a mature imperial court.",
+        "global_nobles_estate_power=0.10|global_burghers_estate_power=0.10|nobles_estate_power_from_cabinet=0.18|burghers_estate_power_from_cabinet=0.16|set_cabinet_member_cost_modifier=-0.04",
+        "P8.1;P9;P13;P15;CAH-XI;OCD", "secure",
+        "Provincial elite integration and expanded imperial adjudication are secure trends; one fixed Antonine constitution is not asserted.",
+        "1",
+    ),
+    (
+        "antq_severan_military_principate", "roman", "monarchy",
+        "Severan Military Principate",
+        "Concentrate succession, donatives, juristic administration, and frontier command around a court sustained by the professional armies.",
+        "global_crown_estate_power=0.16|global_nobles_estate_power=0.06|crown_estate_power_from_cabinet=0.28|replace_cabinet_member_cost_modifier=0.14",
+        "P8.1;P9;P13;P15;CAH-XII;OCD", "secure",
+        "The Severan military and juristic court is secure; the gameplay path does not reduce all civilian government to army patronage.",
+        "2",
+    ),
+    (
+        "antq_tetrarchic_collegium", "late_roman", "monarchy",
+        "Tetrarchic Collegium",
+        "Distribute imperial presence, field command, taxation, and regional supervision among a formally ranked college of rulers.",
+        "global_crown_estate_power=0.18|estate_power_from_cabinet=0.20|crown_estate_power_from_cabinet=0.30|set_cabinet_member_cost_modifier=-0.08",
+        "P8.1;P9;P13;P15;CAH-XII;OCD;ND", "secure",
+        "Diocletian's collegiate rule is secure, while its exact succession logic remains a political project rather than a stable written constitution.",
+        "3",
+    ),
+    (
+        "antq_constantinian_consistory", "late_roman", "monarchy",
+        "Constantinian Consistory",
+        "Center rescripts, palace offices, imperial religion, mobile armies, and prefectural government on the victorious dynastic court.",
+        "global_crown_estate_power=0.20|global_clergy_estate_power=0.10|crown_estate_power_from_cabinet=0.34|set_cabinet_member_cost_modifier=-0.12",
+        "P8.1;P9;P11;P13;P15;CAH-XII;OCD;ND", "secure",
+        "The Constantinian palace and religious settlement is secure; later fourth-century elaboration is not projected unchanged onto AD 324.",
+        "3",
+    ),
+    (
+        "antq_late_imperial_twin_courts", "late_roman", "monarchy",
+        "Late Imperial Twin Courts",
+        "Coordinate western and eastern courts, military masters, prefectures, federate settlements, and dynastic legitimacy across a divided empire.",
+        "global_crown_estate_power=0.14|global_nobles_estate_power=0.10|global_clergy_estate_power=0.08|estate_power_from_cabinet=0.26|replace_cabinet_member_cost_modifier=0.10",
+        "P8.1;P9;P11;P13;P15;CAH-XII;OCD;ND", "contested",
+        "Separate eastern and western courts are secure after AD 395; the shared path abstracts coordination and rivalry without claiming legal partition.",
+        "4",
+    ),
+)
+
+
+def reform_path_rows() -> tuple[
+    tuple[str, str, str, str, str, str, str, str, str, str], ...
+]:
+    return tuple((*row, "0") for row in ALTERNATIVE_REFORMS) + SUCCESSOR_REFORMS
+
+
 for (
     _key, _profile, _government, _name, _description, _modifiers,
-    _source, _confidence, _note,
-) in ALTERNATIVE_REFORMS:
+    _source, _confidence, _note, _age_index,
+) in reform_path_rows():
     POLITICAL_CONTRACTS[_key] = (_modifiers, _source, _confidence, _note)
 
 PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
-    "roman": ("antq_principate", "antq_dominate"),
+    "roman": ("antq_principate",),
+    "late_roman": ("antq_dominate",),
     "han": ("antq_han_imperial_bureaucracy",),
     "iranian": (
         "antq_parthian_king_of_kings", "antq_parthian_subkingdom",
@@ -588,6 +655,7 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
 }
 PROFILE_PARLIAMENTS = {
     "roman": "antq_roman_senate",
+    "late_roman": "antq_imperial_consistory",
     "han": "antq_han_court_conference",
     "iranian": "antq_iranian_great_council",
     "civic": "antq_civic_assembly",
@@ -680,9 +748,9 @@ def alternative_reform_ledger() -> str:
     writer = csv.writer(output, lineterminator="\n")
     writer.writerow((
         "reform", "profile", "government", "name", "description", "modifiers",
-        "source", "confidence", "note",
+        "source", "confidence", "note", "age_index",
     ))
-    writer.writerows(ALTERNATIVE_REFORMS)
+    writer.writerows(reform_path_rows())
     return output.getvalue()
 
 
@@ -1112,25 +1180,31 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    if len(POLITICAL_CONTRACTS) != 93 or not used_reforms.issubset(POLITICAL_CONTRACTS):
+    if len(POLITICAL_CONTRACTS) != 99 or not used_reforms.issubset(POLITICAL_CONTRACTS):
         failures.append(
-            "political appointment contracts must cover 35 core and 58 alternative reforms"
+            "political appointment contracts must cover 35 core, 58 regional alternatives, and 6 Roman successor reforms"
         )
-    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 80:
+    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 86:
         failures.append("political appointment contracts are insufficiently differentiated")
-    alternative_profiles = [row[1] for row in ALTERNATIVE_REFORMS]
-    if len(ALTERNATIVE_REFORMS) != 58 or any(
-        alternative_profiles.count(profile) != 2
-        for profile in {
+    path_rows = reform_path_rows()
+    alternative_profiles = [row[1] for row in path_rows]
+    two_path_profiles = {
             "roman", "han", "iranian", "civic", "gana", "steppe", "tribal",
             "sacral", "royal", "xiongnu", "goguryeo", "kushite", "lankan",
             "armenian", "nabataean", "himyarite", "satavahana",
             "catuvellaunian", "marcomannic", "sabaean", "mauretanian",
             "judean", "cappadocian", "thracian", "bosporan",
             "galilean", "batanean", "commagenean", "emesan",
-        }
+    } - {"roman"}
+    if (
+        len(path_rows) != 64
+        or alternative_profiles.count("roman") != 5
+        or alternative_profiles.count("late_roman") != 3
+        or any(alternative_profiles.count(profile) != 2 for profile in two_path_profiles)
     ):
-        failures.append("alternative reforms must provide two paths for every political profile")
+        failures.append(
+            "reform paths must provide two regional alternatives plus deeper Roman successor arcs"
+        )
     for reform, (modifier_text, _source, confidence, note) in POLITICAL_CONTRACTS.items():
         try:
             parsed = assignments(modifier_text, f"political contract {reform}")
@@ -1682,15 +1756,16 @@ antq_emesan_client_dynasty = {
             1,
         )
         rendered = rendered[:start] + block + rendered[end:]
+    path_rows = reform_path_rows()
     alternatives_by_profile = {
-        profile: tuple(row[0] for row in ALTERNATIVE_REFORMS if row[1] == profile)
+        profile: tuple(row[0] for row in path_rows if row[1] == profile)
         for profile in PROFILE_BASE_REFORMS
     }
     lines = [rendered.rstrip(), "", "# Profile-locked alternative ancient reform paths."]
     for (
         key, profile, government, _name, _description, modifier_text,
-        _source, _confidence, _note,
-    ) in ALTERNATIVE_REFORMS:
+        _source, _confidence, _note, _age_index,
+    ) in path_rows:
         family = PROFILE_BASE_REFORMS[profile] + alternatives_by_profile[profile]
         lines.extend((
             f"{key} = {{", "\tmajor = yes", f"\tgovernment = {government}",
@@ -1853,7 +1928,7 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_tribal_kingdom", "Tribal Kingdom"),
         ("antq_tribal_kingdom_desc", "A kingship sustained and constrained by leading kin groups."),
     ))
-    for key, _profile, _government, name, description, *_rest in ALTERNATIVE_REFORMS:
+    for key, _profile, _government, name, description, *_rest in reform_path_rows():
         entries.extend(((key, name), (f"{key}_desc", description)))
     for row in data.privileges:
         entries.extend(((row["key"], row["name"]), (f"{row['key']}_desc", row["description"])))

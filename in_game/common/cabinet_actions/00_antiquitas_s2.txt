@@ -6,9 +6,11 @@ antq_roman_census_rolls = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_principate
-			has_reform = government_reform:antq_dominate
 			has_reform = government_reform:antq_augustan_dyarchy
 			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
 		}
 	}
 	allow_multiple = no
@@ -23,9 +25,11 @@ antq_roman_provincial_dispatches = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_principate
-			has_reform = government_reform:antq_dominate
 			has_reform = government_reform:antq_augustan_dyarchy
 			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
 		}
 	}
 	allow_multiple = no
@@ -40,9 +44,11 @@ antq_roman_aerarium_accounts = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_principate
-			has_reform = government_reform:antq_dominate
 			has_reform = government_reform:antq_augustan_dyarchy
 			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
 		}
 	}
 	allow_multiple = no
@@ -57,9 +63,11 @@ antq_roman_grain_contracts = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_principate
-			has_reform = government_reform:antq_dominate
 			has_reform = government_reform:antq_augustan_dyarchy
 			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
 		}
 	}
 	allow_multiple = no
@@ -74,15 +82,216 @@ antq_roman_legionary_rosters = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_principate
-			has_reform = government_reform:antq_dominate
 			has_reform = government_reform:antq_augustan_dyarchy
 			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
 		}
 	}
 	allow_multiple = no
 	country_modifier = {
 		global_levy_size_modifier = 0.05
 		land_morale_modifier = 0.01
+	}
+}
+
+antq_roman_imperial_correspondence = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_reform = government_reform:antq_augustan_dyarchy
+			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		country_cabinet_efficiency = 0.025
+		global_monthly_control = 0.0025
+	}
+}
+
+antq_roman_provincial_assize_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_reform = government_reform:antq_augustan_dyarchy
+			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		stability_cost_efficiency = -0.03
+		global_monthly_control = 0.002
+	}
+}
+
+antq_roman_public_works_curators = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_reform = government_reform:antq_augustan_dyarchy
+			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_road_building_time = -0.05
+		global_production_efficiency = 0.02
+	}
+}
+
+antq_roman_mint_assay_accounts = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_reform = government_reform:antq_augustan_dyarchy
+			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		country_cabinet_efficiency = 0.02
+		global_trade_through_owned_territory_efficiency = 0.03
+	}
+}
+
+antq_roman_client_king_dossiers = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_reform = government_reform:antq_augustan_dyarchy
+			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		subject_loyalty = 5
+		monthly_prestige = 0.04
+	}
+}
+
+antq_roman_fleet_supply_returns = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_reform = government_reform:antq_augustan_dyarchy
+			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_sailors_modifier = 0.04
+		navy_maintenance_efficiency = -0.03
+	}
+}
+
+antq_late_roman_imperial_rescripts = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_tetrarchic_collegium
+			has_reform = government_reform:antq_constantinian_consistory
+			has_reform = government_reform:antq_late_imperial_twin_courts
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		country_cabinet_efficiency = 0.025
+		global_monthly_control = 0.0025
+	}
+}
+
+antq_late_roman_praetorian_prefecture_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_tetrarchic_collegium
+			has_reform = government_reform:antq_constantinian_consistory
+			has_reform = government_reform:antq_late_imperial_twin_courts
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_towards_centralization = societal_value_minor_monthly_move
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_late_roman_diocesan_dispatches = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_tetrarchic_collegium
+			has_reform = government_reform:antq_constantinian_consistory
+			has_reform = government_reform:antq_late_imperial_twin_courts
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_supply_limit_modifier = 0.05
+		global_road_building_time = -0.05
+	}
+}
+
+antq_late_roman_field_army_registers = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_tetrarchic_collegium
+			has_reform = government_reform:antq_constantinian_consistory
+			has_reform = government_reform:antq_late_imperial_twin_courts
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.01
+	}
+}
+
+antq_late_roman_annona_militaris_accounts = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_tetrarchic_collegium
+			has_reform = government_reform:antq_constantinian_consistory
+			has_reform = government_reform:antq_late_imperial_twin_courts
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_pop_food_consumption = -0.01
+		global_production_efficiency = 0.025
 	}
 }
 

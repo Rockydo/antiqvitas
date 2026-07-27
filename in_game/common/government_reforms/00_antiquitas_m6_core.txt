@@ -34,7 +34,7 @@ antq_dominate = {
 		research_speed = 0.15
 	}
 	on_activate = {
-		set_parliament_type = parliament_type:antq_roman_senate
+		set_parliament_type = parliament_type:antq_imperial_consistory
 	}
 	years = 2
 }
@@ -632,9 +632,11 @@ antq_augustan_dyarchy = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_principate
-			has_reform = government_reform:antq_dominate
 			has_reform = government_reform:antq_augustan_dyarchy
 			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
 		}
 	}
 	country_modifier = {
@@ -655,9 +657,11 @@ antq_provincial_principate = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_principate
-			has_reform = government_reform:antq_dominate
 			has_reform = government_reform:antq_augustan_dyarchy
 			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
 		}
 	}
 	country_modifier = {
@@ -1910,6 +1914,152 @@ antq_emesan_caravan_compact = {
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_emesan_dynastic_council
+	}
+	years = 2
+}
+
+antq_flavian_imperial_settlement = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_reform = government_reform:antq_augustan_dyarchy
+			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.12
+		global_nobles_estate_power = 0.08
+		estate_power_from_cabinet = 0.22
+		replace_cabinet_member_cost_modifier = 0.08
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_roman_senate
+	}
+	years = 2
+}
+
+antq_antonine_provincial_principate = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_reform = government_reform:antq_augustan_dyarchy
+			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		global_burghers_estate_power = 0.10
+		nobles_estate_power_from_cabinet = 0.18
+		burghers_estate_power_from_cabinet = 0.16
+		set_cabinet_member_cost_modifier = -0.04
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_roman_senate
+	}
+	years = 2
+}
+
+antq_severan_military_principate = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_reform = government_reform:antq_augustan_dyarchy
+			has_reform = government_reform:antq_provincial_principate
+			has_reform = government_reform:antq_flavian_imperial_settlement
+			has_reform = government_reform:antq_antonine_provincial_principate
+			has_reform = government_reform:antq_severan_military_principate
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.16
+		global_nobles_estate_power = 0.06
+		crown_estate_power_from_cabinet = 0.28
+		replace_cabinet_member_cost_modifier = 0.14
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_roman_senate
+	}
+	years = 2
+}
+
+antq_tetrarchic_collegium = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_tetrarchic_collegium
+			has_reform = government_reform:antq_constantinian_consistory
+			has_reform = government_reform:antq_late_imperial_twin_courts
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.18
+		estate_power_from_cabinet = 0.20
+		crown_estate_power_from_cabinet = 0.30
+		set_cabinet_member_cost_modifier = -0.08
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_imperial_consistory
+	}
+	years = 2
+}
+
+antq_constantinian_consistory = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_tetrarchic_collegium
+			has_reform = government_reform:antq_constantinian_consistory
+			has_reform = government_reform:antq_late_imperial_twin_courts
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.20
+		global_clergy_estate_power = 0.10
+		crown_estate_power_from_cabinet = 0.34
+		set_cabinet_member_cost_modifier = -0.12
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_imperial_consistory
+	}
+	years = 2
+}
+
+antq_late_imperial_twin_courts = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_tetrarchic_collegium
+			has_reform = government_reform:antq_constantinian_consistory
+			has_reform = government_reform:antq_late_imperial_twin_courts
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.14
+		global_nobles_estate_power = 0.10
+		global_clergy_estate_power = 0.08
+		estate_power_from_cabinet = 0.26
+		replace_cabinet_member_cost_modifier = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_imperial_consistory
 	}
 	years = 2
 }

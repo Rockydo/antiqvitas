@@ -40,6 +40,123 @@ antq_agenda_roman_legionary_settlement = {
 	chance = 10
 }
 
+antq_agenda_roman_provincial_appeals = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_roman_senate
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_roman_provincial_appeals_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_roman_public_works_appropriation = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_roman_senate
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_roman_public_works_appropriation_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_roman_mint_standard = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_roman_senate
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_roman_mint_standard_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_roman_client_king_settlement = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_roman_senate
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_roman_client_king_settlement_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_roman_fleet_supply_contract = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_roman_senate
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_roman_fleet_supply_contract_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_roman_pontifical_calendar_review = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_roman_senate
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_roman_pontifical_calendar_review_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_late_roman_prefectural_assessment = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_imperial_consistory
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_late_roman_prefectural_assessment_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_late_roman_imperial_appeals = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_imperial_consistory
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_late_roman_imperial_appeals_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_late_roman_military_supply_allocation = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_imperial_consistory
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_late_roman_military_supply_allocation_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
 antq_agenda_han_commandery_audit = {
 	type = country
 	estate = nobles_estate

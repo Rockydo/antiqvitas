@@ -79,6 +79,12 @@ NOBLES = (("global_nobles_estate_power", "0.025"), ("land_morale_modifier", "0.0
 CLERGY = (("global_clergy_estate_power", "0.025"), ("country_cabinet_efficiency", "0.02"))
 TRIBES = (("global_tribes_estate_power", "0.025"), ("global_levy_size_modifier", "0.04"))
 PEASANTS = (("global_pop_food_consumption", "-0.01"), ("global_levy_size_modifier", "0.03"))
+ASSIZE = (("stability_cost_efficiency", "-0.03"), ("global_monthly_control", "0.002"))
+PUBLIC_WORKS = (("global_road_building_time", "-0.05"), ("global_production_efficiency", "0.02"))
+MINT = (("country_cabinet_efficiency", "0.02"), ("global_trade_through_owned_territory_efficiency", "0.03"))
+SUBJECTS = (("subject_loyalty", "5"), ("monthly_prestige", "0.04"))
+NAVY = (("global_sailors_modifier", "0.04"), ("navy_maintenance_efficiency", "-0.03"))
+RITUAL = (("research_speed_modifier", "0.015"), ("stability_cost_efficiency", "-0.025"))
 
 
 def a(slug: str, name: str, desc: str, ability: str, mods: tuple[tuple[str, str], ...]) -> Action:
@@ -96,7 +102,12 @@ PROFILES = (
     Profile(
         "roman", "antq_roman_senate", "Roman Senate",
         "The Senate remains the Principate's principal arena for elite deliberation, provincial scrutiny, honors, finance, and the public language of the res publica.",
-        ("antq_principate", "antq_dominate", "antq_augustan_dyarchy", "antq_provincial_principate"), ("nobles_estate", "burghers_estate", "clergy_estate"),
+        (
+            "antq_principate", "antq_augustan_dyarchy",
+            "antq_provincial_principate", "antq_flavian_imperial_settlement",
+            "antq_antonine_provincial_principate", "antq_severan_military_principate",
+        ),
+        ("nobles_estate", "burghers_estate", "clergy_estate"),
         "roman_principate_atlas.png", "1e990edda4ce5fbba251e79738731b1141090ab6d69111895354474c00497f36",
         "P8.1;P11;P13;OCD", "secure",
         "Engine estates represent senators, equestrian contractors, and public priestly colleges; this does not turn the Augustan Senate into a sovereign legislature.",
@@ -106,11 +117,47 @@ PROFILES = (
             a("aerarium_accounts", "Aerarium Accounts", "Reconcile public receipts, contracts, and coin reserves without pretending that imperial and senatorial finances were one office.", "adm", TRADE),
             a("grain_contracts", "Annona Contracts", "Supervise measures, shippers, storage obligations, and the politically vital grain supply.", "dip", FOOD),
             a("legionary_rosters", "Legionary Rosters", "Maintain discharge, donative, veteran, and replacement records for the standing legions.", "mil", MIL),
+            a("imperial_correspondence", "Imperial Correspondence", "Sort authenticated petitions, provincial dispatches, draft replies, and sealed instructions moving through the princeps' household.", "dip", ADMIN),
+            a("provincial_assize_returns", "Provincial Assize Returns", "Collate governors' assize itineraries, civic appeals, boundary disputes, and judgments without imposing one uniform provincial procedure.", "adm", ASSIZE),
+            a("public_works_curators", "Public-Works Curators", "Coordinate road, bridge, aqueduct, riverbank, and public-building commissions through bounded curatorships and local contracts.", "adm", PUBLIC_WORKS),
+            a("mint_assay_accounts", "Mint and Assay Accounts", "Inspect bullion, dies, weights, fineness, and delivery accounts while preserving the varied organization of imperial mints.", "adm", MINT),
+            a("client_king_dossiers", "Client-King Dossiers", "Maintain dynastic, treaty, hostage, gift, petition, and succession records for the empire's negotiated ring of client courts.", "dip", SUBJECTS),
+            a("fleet_supply_returns", "Fleet Supply Returns", "Review crews, hull fittings, cordage, amphorae, harbor stores, and grain-escort obligations for the imperial fleets.", "mil", NAVY),
         ),
         (
             m("census_review", "Provincial Census Review", "Debate a coordinated review of provincial declarations, civic status, and assessed obligations.", "Senatorial Provincial Scrutiny", "Senatorial houses demand a formal commission before provincial assessments are revised.", "nobles_estate", ADMIN, NOBLES),
             m("annona_commission", "Annona Contract Commission", "Authorize scrutiny of grain measures, storage losses, and shipping contracts.", "Equestrian Contract Petition", "Equestrian contractors seek predictable terms and protected performance of public supply contracts.", "burghers_estate", FOOD, TRADE),
             m("legionary_settlement", "Legionary Settlement Act", "Settle discharge grants and veteran obligations without stripping frontier commands of replacements.", "Priestly Calendar Petition", "The public colleges ask that musters, vows, and games respect the authorized civic calendar.", "clergy_estate", MIL, CLERGY),
+            m("provincial_appeals", "Provincial Appeals Docket", "Authorize a bounded hearing of civic petitions, governors' judgments, and disputed public obligations.", "Senatorial Assize Commission", "Senatorial houses request a witnessed role in reviewing provincial judgments and elite liabilities.", "nobles_estate", ASSIZE, NOBLES),
+            m("public_works_appropriation", "Public-Works Appropriation", "Set priorities for roads, aqueducts, bridges, embankments, and civic repairs without promising a universal building programme.", "Contractors' Maintenance Terms", "Equestrian and civic contractors seek predictable inspection, payment, and material-delivery terms.", "burghers_estate", PUBLIC_WORKS, TRADE),
+            m("mint_standard", "Mint Standard Review", "Review bullion receipts, weight standards, die custody, and coin deliveries across the active imperial mints.", "Moneyers' Assay Petition", "Mint and exchange households request stable assays and protection from retrospective liability.", "burghers_estate", MINT, TRADE),
+            m("client_king_settlement", "Client-King Settlement", "Recognize a succession, guarantee, hostage return, or revised obligation at one of Rome's dependent courts.", "Dynastic Embassy Hearing", "Senatorial houses seek a formal hearing before a major client succession or guarantee is settled.", "nobles_estate", SUBJECTS, PRESTIGE),
+            m("fleet_supply_contract", "Fleet Supply Contract", "Set bounded terms for crews, grain escort, harbor stores, timber fittings, sailcloth, and cordage.", "Navicular Contract Petition", "Shipping and harbor households request compensation rules and inspected measures for public carriage.", "burghers_estate", NAVY, TRADE),
+            m("pontifical_calendar_review", "Pontifical Calendar Review", "Coordinate vows, public rites, games, prodigy reports, and magistrates' calendars without turning priestly colleges into a church.", "Priestly College Consultation", "Public priestly colleges request secure consultation before the civic ritual calendar is altered.", "clergy_estate", RITUAL, CLERGY),
+        ),
+    ),
+    Profile(
+        "late_roman", "antq_imperial_consistory", "Imperial Consistory",
+        "The late imperial consistory and palatine offices coordinate rescripts, prefectural returns, provincial dispatches, military supply, and court deliberation around the emperor.",
+        (
+            "antq_dominate", "antq_tetrarchic_collegium",
+            "antq_constantinian_consistory", "antq_late_imperial_twin_courts",
+        ),
+        ("nobles_estate", "clergy_estate", "burghers_estate"),
+        "late_roman_consistory_atlas.png", "f0cdfa119856f3cc36736a23966bc19b20d2b7a2b8d39d31a4d2bf3948c65329",
+        "P8.1;P9;P11;P13;P15;CAH-XII;OCD;ND", "secure",
+        "The profile separates later palatine and prefectural government from the Augustan Senate while compressing offices whose exact hierarchy changed repeatedly between Diocletian and 476.",
+        (
+            a("imperial_rescripts", "Imperial Rescript Bureau", "Order petitions, legal consultations, draft constitutions, authenticated replies, and archive copies through the late imperial court.", "adm", ADMIN),
+            a("praetorian_prefecture_returns", "Praetorian Prefecture Returns", "Reconcile taxation, appeals, transport, supply, and provincial reports at the empire's senior regional prefectures.", "adm", CONTROL),
+            a("diocesan_dispatches", "Diocesan Dispatches", "Coordinate vicars, governors, relays, reports, and appeals without presenting every late province as administratively identical.", "dip", LOGISTICS),
+            a("field_army_registers", "Field-Army Registers", "Track comitatenses, frontier detachments, remounts, arms, pay, and replacements across mobile and regional commands.", "mil", MIL),
+            a("annona_militaris_accounts", "Annona Militaris Accounts", "Assess and route grain, fodder, clothing, animals, transport, and other supplies required by the late imperial armies.", "adm", FOOD),
+        ),
+        (
+            m("prefectural_assessment", "Prefectural Assessment Cycle", "Review apportioned taxes, transport obligations, remissions, arrears, and provincial capacity across a bounded prefectural circuit.", "Provincial Magnates' Assessment Petition", "Senatorial and provincial houses request predictable liabilities and a hearing before extraordinary reassessment.", "nobles_estate", ADMIN, NOBLES),
+            m("imperial_appeals", "Imperial Appeals Session", "Resolve selected provincial appeals and rescripts while preserving lower jurisdictions and the court's limited attention.", "Ecclesiastical Intercession Petition", "Recognized religious authorities request a bounded hearing for communities, prisoners, or disputed endowments.", "clergy_estate", ASSIZE, CLERGY),
+            m("military_supply_allocation", "Military Supply Allocation", "Balance field-army, frontier, transport, grain, clothing, and remount demands across the active commands.", "State Contractors' Delivery Terms", "Curial, transport, workshop, and merchant households seek measured requisitions and reliable delivery credits.", "burghers_estate", LOGISTICS, TRADE),
         ),
     ),
     Profile(
@@ -698,6 +745,10 @@ COUNCIL_DYNAMICS: dict[str, tuple[str, tuple[tuple[str, str], ...]]] = {
         "0.10",
         (("nobles_estate", "0.25"), ("burghers_estate", "0.15"), ("clergy_estate", "0.05")),
     ),
+    "late_roman": (
+        "0.08",
+        (("nobles_estate", "0.18"), ("clergy_estate", "0.16"), ("burghers_estate", "0.12")),
+    ),
     "han": (
         "0.15",
         (("nobles_estate", "0.10"), ("burghers_estate", "0.20"), ("peasants_estate", "-0.10")),
@@ -1033,6 +1084,31 @@ def art_records() -> list[tuple[str, str, Profile, int]]:
     return records
 
 
+ART_SOURCE_OVERRIDES: dict[str, tuple[str, str, int]] = {
+    f"antq_roman_{slug}": (
+        "roman_state_offices_ii_atlas.png",
+        "44cd5ed49cdf7b2c31f7f8744db2424335f0d80e531b624dec9d1c606b822a6a",
+        cell,
+    )
+    for cell, slug in enumerate((
+        "imperial_correspondence",
+        "provincial_assize_returns",
+        "public_works_curators",
+        "mint_assay_accounts",
+        "client_king_dossiers",
+        "fleet_supply_returns",
+    ))
+}
+
+
+def art_source_contract(
+    key: str, profile: Profile, default_cell: int,
+) -> tuple[str, str, int]:
+    return ART_SOURCE_OVERRIDES.get(
+        key, (profile.source_file, profile.source_hash, default_cell)
+    )
+
+
 def master_path(key: str) -> Path:
     return MASTERS / f"{key}_128.png"
 
@@ -1045,9 +1121,10 @@ def texture_path(category: str, key: str) -> Path:
 def art_ledger() -> str:
     rows = []
     for category, key, profile, cell in art_records():
+        source_file, source_hash, source_cell = art_source_contract(key, profile, cell)
         rows.append((
-            category, key, profile.slug, f"assets_queue/politics/sources/{profile.source_file}",
-            profile.source_hash, str(cell), master_path(key).relative_to(ROOT).as_posix(),
+            category, key, profile.slug, f"assets_queue/politics/sources/{source_file}",
+            source_hash, str(source_cell), master_path(key).relative_to(ROOT).as_posix(),
             texture_path(category, key).relative_to(ROOT).as_posix(), "128x128 BC7 sRGBA + full mip chain",
         ))
     return csv_text(("category", "key", "profile", "source", "source_sha256", "cell", "master", "texture", "contract"), rows)
@@ -1072,13 +1149,14 @@ def expected_files() -> dict[Path, str]:
 def build_art() -> None:
     MASTERS.mkdir(parents=True, exist_ok=True)
     for category, key, profile, cell in art_records():
-        source = SOURCES / profile.source_file
-        if hashlib.sha256(source.read_bytes()).hexdigest() != profile.source_hash:
+        source_file, source_hash, source_cell = art_source_contract(key, profile, cell)
+        source = SOURCES / source_file
+        if hashlib.sha256(source.read_bytes()).hexdigest() != source_hash:
             raise ValueError(f"source hash drift: {source.relative_to(ROOT)}")
         with Image.open(source) as image:
             if image.size != (1536, 1024):
                 raise ValueError(f"{source.relative_to(ROOT)} must be 1536x1024")
-            x, y = (cell % 3) * 512, (cell // 3) * 512
+            x, y = (source_cell % 3) * 512, (source_cell // 3) * 512
             rendered = image.convert("RGB").crop((x + 8, y + 8, x + 504, y + 504)).resize((128, 128), Image.Resampling.LANCZOS)
             master = master_path(key)
             master.parent.mkdir(parents=True, exist_ok=True)
@@ -1096,12 +1174,11 @@ def validate() -> list[str]:
     content = content_ledger()
     rows = list(csv.DictReader(io.StringIO(content)))
     counts = {category: sum(row["category"] == category for row in rows) for category in {row["category"] for row in rows}}
-    profile_count = len(PROFILES)
     expected_counts = {
-        "parliament_type": profile_count,
-        "cabinet_action": profile_count * 5,
-        "parliament_issue": profile_count * 3,
-        "parliament_agenda": profile_count * 3,
+        "parliament_type": len(PROFILES),
+        "cabinet_action": sum(len(profile.actions) for profile in PROFILES),
+        "parliament_issue": sum(len(profile.motions) for profile in PROFILES),
+        "parliament_agenda": sum(len(profile.motions) for profile in PROFILES),
     }
     if counts != expected_counts:
         failures.append(f"content counts differ: {counts}")
@@ -1127,6 +1204,12 @@ def validate() -> list[str]:
         if not source.is_file():
             failures.append(f"missing source atlas: {source.relative_to(ROOT)}")
         elif hashlib.sha256(source.read_bytes()).hexdigest() != profile.source_hash:
+            failures.append(f"source atlas hash drift: {source.relative_to(ROOT)}")
+    for source_file, source_hash, _cell in ART_SOURCE_OVERRIDES.values():
+        source = SOURCES / source_file
+        if not source.is_file():
+            failures.append(f"missing source atlas: {source.relative_to(ROOT)}")
+        elif hashlib.sha256(source.read_bytes()).hexdigest() != source_hash:
             failures.append(f"source atlas hash drift: {source.relative_to(ROOT)}")
     for path, expected in expected_files().items():
         if not path.is_file():
@@ -1175,9 +1258,12 @@ def main() -> int:
             print(f"  - {failure}")
         return 1
     count = len(PROFILES)
+    action_count = sum(len(profile.actions) for profile in PROFILES)
+    motion_count = sum(len(profile.motions) for profile in PROFILES)
+    art_count = len(art_records())
     print(
-        f"s2_ancient_politics: PASS ({count} councils; {count * 5} cabinet actions; "
-        f"{count * 3} issues; {count * 3} agendas; {count * 6} direct icons)"
+        f"s2_ancient_politics: PASS ({count} councils; {action_count} cabinet actions; "
+        f"{motion_count} issues; {motion_count} agendas; {art_count} direct icons)"
     )
     return 0
 

@@ -1,5 +1,24 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - Roman political depth is split at the Principate-Dominate boundary
+
+The Augustan Senate cannot serve as a credible universal council for AD
+1-476. Early Roman reforms therefore retain `antq_roman_senate`, while
+`antq_dominate`, the Tetrarchy, the Constantinian court, and the post-395
+imperial courts activate `antq_imperial_consistory`. The two profiles have
+separate participants, order names, programmes, debates, agendas, modifiers,
+localization, and direct art.
+
+The reform-path ledger now carries an explicit `age_index`. Regional
+alternatives retain Age-I behavior, while six Roman successor reforms are
+distributed to the historically corresponding age by the same M8 generator.
+`tools/s2_roman_politics_depth.py` permanently verifies unique age-correct
+unlocks and the correct council activation in every generated reform block.
+
+The global UI ledger previously omitted politics even though its specialist
+generator validated those files. Councils and state offices are now a ninth
+first-class visual surface in the global ledger and contact sheet.
+
 ## 2026-07-27 - Country privileges use exact tag gates and pairwise exclusion
 
 The locally installed privilege contract exposes `potential`, `allow`,

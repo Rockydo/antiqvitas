@@ -5,7 +5,7 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review. (Validated by the 940-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
+- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,138-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
   - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
 ## Second manual playtest remediation — 2026-07-26 (resume here)
@@ -44,7 +44,7 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 93 reforms and 244 privileges
+  thin outside the first replacement tranches: 99 reforms and 256 privileges
   serve 292 opening polities. The legal layer now has 227 ancient groups,
   including 182 profile laws with 584 total options, a 26-option dated
   development layer, and 12 country-specific exceptions.
@@ -141,8 +141,8 @@ and focused runtime probe all pass.
   - [ ] Replace required gameplay breadth at both definition and
     unlock/reference layers. Preserve only locally proven engine adapters, and
     guarantee that their names, descriptions, icons, and effects cannot surface.
-    Existing namespaced ancient content remains active (244 privileges, 227 laws,
-    93 reforms).
+    Existing namespaced ancient content remains active (256 privileges, 227 laws,
+    99 reforms).
     - [x] Supply the first deep council/state-office replacement tranche:
       nine reform-driven council profiles, 45 profile-locked administrative
       programmes, 27 issues, 27 agendas, 54 outcome/concession modifiers, and
@@ -226,6 +226,19 @@ and focused runtime probe all pass.
         issues, 87 agendas, 93 political contracts, 244 privileges, 779
         ancient-system unlocks, and 940 direct UI chains. All 292 opening
         countries remain researchable; paired smoke adds zero mod-unique lines.
+      - [x] Deepen Rome beyond the regional political floor. The early
+        Principate now has eleven state-office programmes and nine Senate
+        issue/agenda pairs; the later empire switches to a separate Imperial
+        Consistory with five programmes, three issue/agenda pairs, distinct
+        social orders, and six profile privileges. Six age-correct successor
+        reforms cover Flavian reconstruction, Antonine provincial integration,
+        Severan military monarchy, the Tetrarchy, the Constantinian consistory,
+        and the post-395 twin courts. Six further exact-Rome privileges form
+        three meaningful exclusive pairs. Installed breadth is now 30 councils,
+        156 programmes, 96 issues, 96 agendas, 99 political contracts, 256
+        privileges, and 797 ancient-system unlocks. The global direct-art
+        ledger now includes councils and state offices and contains 1,138
+        chains; paired smoke adds zero mod-unique lines.
       - [x] Add the first dated legal-development layer: two options for every
         one of the 13 legal profiles, 26 total, spanning AD 25-382. All gates
         use `AntqDate`, each option has a distinct three-effect package and an
@@ -584,6 +597,10 @@ and focused runtime probe all pass.
     terrace/incense, and Deccan guild/titled-house alternatives raise reform
     breadth to 57 while retaining anonymous ruler boundaries where evidence is
     insufficient.
+  - [x] Add a full Roman successor arc rather than treating Principate and
+    Dominate as two static endpoints: Flavian, Antonine, Severan, Tetrarchic,
+    Constantinian, and post-395 court paths unlock in their appropriate age and
+    route to either the Roman Senate or Imperial Consistory as appropriate.
   - [ ] Subdivide the nine-family floor further for major countries and
     high-priority regional constitutions; connect later-century successor paths
     to their dated historical transitions.
@@ -643,6 +660,11 @@ and focused runtime probe all pass.
     Galilee-Peraea, Batanea, Commagene, and Emesa. The generated layer now has
     29 councils, 145 programmes, 87 issues, 87 agendas, 174 direct political
     icons, and 198 direct profile-plus-country privilege icons.
+  - [x] Deepen Rome's own panels. Early Rome now exposes eleven programmes and
+    nine debates/agendas; late Roman governments activate a separate Imperial
+    Consistory with five programmes and three debates/agendas. The permanent
+    focused validator checks council switching, successor-age unlocks,
+    exact-tag privilege choice pairs, and all direct art.
   - [ ] Expand major profiles beyond the nine-family regional floor and test
     focused Roman, Han, Iranian, civic, and assembly panels without requiring
     long playthroughs. Add further country-specific appointment logic only
@@ -689,7 +711,7 @@ and focused runtime probe all pass.
     tradeoffs, mutual exclusion, revocation, source boundary, localization,
     and direct-art requirements.
   - [ ] Continue expanding country/culture/religion-specific privileges beyond
-    the current 172, prioritizing additional major states and culturally
+    the current 256 installed ancient grants, prioritizing additional major states and culturally
     bounded regional alternatives rather than generic filler.
   - Acceptance: all 229 tags have useful legal/political choices; major countries
     have bespoke depth; no duplicate filler effect or post-476 inheritance.
