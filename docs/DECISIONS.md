@@ -3629,3 +3629,23 @@ When validation found that a Sabaean programme and privilege both resolved to
 `antq_sabaean_incense_caravan_safe_conducts`, the programme was renamed
 `antq_sabaean_incense_caravan_dispatches`; semantic similarity is allowed, key
 aliasing is not.
+
+## 2026-07-27 - Finished workshop identity belongs in the goods graph
+
+A historically specific productive building must expose a correspondingly
+specific finished good when that distinction creates meaningful producers,
+demand, or downstream inputs. It may not remain a renamed alias for generic
+pottery, jewelry, furniture, cloth, tools, leather, or naval supplies merely
+because an installed guild equation is convenient.
+
+The first application adds twelve processed crafts and rebinds twenty-seven
+existing families. Custom prices are gameplay abstractions, but output
+coefficients are not freehand balance guesses: the generator reads the pinned
+engine's default prices and rejects any recipe outside a 19–21% gross guild
+margin. Cordage and sailcloth are also consumed by shipyards so at least the
+maritime chain has a true intermediate stage rather than ending at pop demand.
+
+Direct goods art follows a pinned source chain: reviewed exact-size six-up
+atlas, circle-safe RGBA master, 128px DXT5 icon, and 1080×440 DXT5 illustration.
+Source hashes and cell positions are code contracts. This permits more goods
+without returning to generic resolver art or unreviewable hand-cropped assets.

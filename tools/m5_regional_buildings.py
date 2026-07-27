@@ -314,6 +314,36 @@ COHERENT_RECIPE_OVERRIDES = {
     "antq_reg_bronze_workers_collegium": ("antq_bronze_wares", "0.86", (("copper", "0.70"), ("tin", "0.15"), ("coal", "0.15"), ("tools", "0.05"))),
     "antq_reg_lead_pipeworks": ("antq_lead_wares", "0.88", (("lead", "0.80"), ("coal", "0.15"), ("tools", "0.10"))),
     "antq_reg_unguentarium": ("antq_perfumes", "0.52", (("incense", "0.80"), ("olives", "0.20"), ("pottery", "0.10"), ("tools", "0.10"))),
+    # Thirteenth pass: historically specific processed goods replace the last
+    # conspicuous generic output aliases. Each coefficient preserves the
+    # locally checked 20% default-price guild margin.
+    "antq_reg_fineware_kiln": ("antq_fine_ceramics", "0.249", (("clay", "1.0039"), ("lumber", "0.1201"), ("tools", "0.0504"))),
+    "antq_reg_oil_lamp_kiln": ("antq_fine_ceramics", "0.249", (("clay", "1.0039"), ("lumber", "0.1201"), ("tools", "0.0504"))),
+    "antq_reg_ceramic_quarter": ("antq_fine_ceramics", "0.249", (("clay", "1.0039"), ("lumber", "0.1201"), ("tools", "0.0504"))),
+    "antq_reg_glassworks": ("antq_glasswares", "0.450", (("lumber", "0.1933"), ("sand", "0.9657"), ("tools", "0.3674"))),
+    "antq_reg_ironmongery": ("antq_iron_hardware", "1.000", (("iron", "0.8333"),)),
+    "antq_reg_nailery": ("antq_iron_hardware", "1.000", (("iron", "0.8333"),)),
+    "antq_reg_chainmaker": ("antq_iron_hardware", "1.000", (("iron", "0.8333"),)),
+    "antq_reg_locksmith": ("antq_iron_hardware", "1.000", (("iron", "0.8333"),)),
+    "antq_reg_wiredrawer": ("antq_iron_hardware", "0.600", (("copper", "0.475"), ("tin", "0.038"))),
+    "antq_reg_leatherworks": ("antq_leather_goods", "1.000", (("livestock", "1.0873"), ("sand", "0.4345"), ("tar", "0.0819"), ("tools", "0.1627"))),
+    "antq_reg_cordwainer": ("antq_leather_goods", "1.000", (("livestock", "1.0873"), ("sand", "0.4345"), ("tar", "0.0819"), ("tools", "0.1627"))),
+    "antq_reg_saddlery": ("antq_leather_goods", "1.000", (("livestock", "1.0873"), ("sand", "0.4345"), ("tar", "0.0819"), ("tools", "0.1627"))),
+    "antq_reg_harness_maker": ("antq_leather_goods", "1.000", (("livestock", "1.0873"), ("sand", "0.4345"), ("tar", "0.0819"), ("tools", "0.1627"))),
+    "antq_reg_packsaddle_workshop": ("antq_leather_goods", "1.000", (("livestock", "1.0873"), ("sand", "0.4345"), ("tar", "0.0819"), ("tools", "0.1627"))),
+    "antq_reg_scabbard_maker": ("antq_leather_goods", "1.000", (("livestock", "1.0873"), ("sand", "0.4345"), ("tar", "0.0819"), ("tools", "0.1627"))),
+    "antq_reg_ropewalk": ("antq_cordage", "1.200", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
+    "antq_reg_netmaker": ("antq_cordage", "1.200", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
+    "antq_reg_fishing_tackle": ("antq_cordage", "1.200", (("lumber", "0.1963"), ("fiber_crops", "0.4906"), ("tar", "0.5393"), ("cloth", "0.0486"))),
+    "antq_reg_parchmentery": ("antq_parchment", "0.773", (("leather", "0.80"), ("dyes", "0.05"), ("tools", "0.10"))),
+    "antq_reg_lacquer_workshop": ("antq_lacquerware", "0.500", (("lumber", "0.9817"), ("dyes", "0.1468"), ("tools", "0.1468"))),
+    "antq_reg_amber_carver": ("antq_amber_ornaments", "0.874", (("amber", "0.80"), ("goods_gold", "0.20"), ("tools", "0.10"))),
+    "antq_reg_beadworks": ("antq_glass_beads", "1.350", (("glass", "0.80"), ("dyes", "0.30"), ("tools", "0.30"))),
+    "antq_reg_glass_bead_furnace": ("antq_glass_beads", "1.350", (("glass", "0.80"), ("dyes", "0.30"), ("tools", "0.30"))),
+    "antq_reg_carpet_loom": ("antq_carpets", "0.948", (("wool", "1.00"), ("dyes", "0.25"), ("tools", "0.15"))),
+    "antq_reg_feltworks": ("antq_felt_goods", "1.200", (("wool", "1.00"),)),
+    "antq_reg_sailmaker": ("antq_sailcloth", "0.960", (("fiber_crops", "0.60"), ("cloth", "0.30"), ("tools", "0.10"))),
+    "antq_reg_shipyard": ("naval_supplies", "1.140", (("lumber", "0.30"), ("antq_cordage", "0.30"), ("antq_sailcloth", "0.25"), ("tar", "0.30"), ("iron", "0.10"))),
 }
 PRODUCTION_RECIPES.update(COHERENT_RECIPE_OVERRIDES)
 

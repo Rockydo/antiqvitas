@@ -55,7 +55,11 @@ PERIOD_ROLE_GROUPS = {
         "jewelry", "leather", "masonry", "medicaments", "naval_supplies",
         "paper", "pottery", "steel", "tools", "weaponry",
         "antq_bronze_wares", "antq_lead_wares", "antq_perfumes",
-        "antq_soap", "antq_wax_goods",
+        "antq_soap", "antq_wax_goods", "antq_fine_ceramics",
+        "antq_glasswares", "antq_iron_hardware", "antq_leather_goods",
+        "antq_cordage", "antq_parchment", "antq_lacquerware",
+        "antq_amber_ornaments", "antq_glass_beads", "antq_carpets",
+        "antq_felt_goods", "antq_sailcloth",
     },
 }
 FORBIDDEN_POST_ANTIQUE = {

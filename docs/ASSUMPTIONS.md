@@ -5086,3 +5086,22 @@ frontier service justify distinct mechanics, but the kingdom is not flattened
 into a uniform "Romanized" administration or a single tribal frontier system.
 Sources: `P8.1`; `P8.5`; `P11`; `P13`; `CAH-XI`; `OCD`; `OCD-PTO`.
 [secure court, bounded institutional reconstruction]
+
+## 2026-07-27 - Processed craft goods are market classes, not uniform industries
+
+Fine ceramics, glasswares, iron hardware, leather goods, cordage, parchment,
+lacquerware, amber ornaments, glass beads, carpets, felt goods, and sailcloth
+are broad game-market classes. Their inclusion asserts that the underlying
+materials and finished objects were significant to ancient production and
+exchange; it does not assert a universal recipe, standardized grade, identical
+workshop organization, or equal availability in every market. Sources:
+`P12.1`; `P12.3`; `MET-ROMAN-TRADE`; `MET-ROMAN-GLASS`;
+`BM-ARRETINE`; `BM-MEMPHIS`; `BHR`; `TAC-GER`. [secure material classes;
+contested aggregation and quantities]
+
+Lacquerware remains principally an East Asian finished craft, while worked
+amber is tied to northern raw amber and long-distance exchange. Carpet is a
+deliberately broad label for antique patterned woven coverings and must not be
+read as projecting any later named regional carpet tradition backward.
+Parchment coexists with geographically bounded papyrus rather than replacing
+all ancient writing materials. [bounded regional and technological abstraction]

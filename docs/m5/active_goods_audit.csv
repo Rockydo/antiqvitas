@@ -1,64 +1,76 @@
 ﻿good,display,origin,period_role,rgo_locations,building_families,productive_inputs,productive_outputs,roman_profile_families,source,status
 alum,Alum,installed_ancient_adapter,mineral_or_quarried_raw,0,4,1,0,0,P12.1;P12.3,active_reviewed
-amber,Amber,installed_ancient_adapter,organic_raw_or_exchange,0,1,0,0,0,P12.1;P12.3,active_reviewed
+amber,Amber,installed_ancient_adapter,organic_raw_or_exchange,0,1,1,0,0,P12.1;P12.3,active_reviewed
+antq_amber_ornaments,Amber Ornaments,produced,processed_craft_or_service,0,0,0,1,0,P12.1;MET-ROMAN-TRADE;TAC-GER,active_reviewed
 antq_bronze_wares,Bronze Wares,produced,processed_craft_or_service,0,0,0,8,1,P12.1;P12.3,active_reviewed
 antq_camels,Camels,raw_material,organic_raw_or_exchange,1,0,0,0,0,P12.1;SRS-CAM,active_reviewed
+antq_carpets,Woven Carpets,produced,processed_craft_or_service,0,0,0,1,0,P12.1;P12.3;MET-ROMAN-TRADE,active_reviewed
+antq_cordage,Cordage,produced,processed_craft_or_service,0,0,1,3,0,P12.1;MET-ROMAN-TRADE,active_reviewed
+antq_felt_goods,Felt Goods,produced,processed_craft_or_service,0,0,0,1,0,P12.1;P12.3,active_reviewed
+antq_fine_ceramics,Fine Ceramics,produced,processed_craft_or_service,0,0,0,3,1,BM-ARRETINE;BM-MEMPHIS;P12.1,active_reviewed
+antq_glass_beads,Glass Beads,produced,processed_craft_or_service,0,0,0,2,0,P12.1;MET-ROMAN-TRADE,active_reviewed
+antq_glasswares,Glasswares,produced,processed_craft_or_service,0,0,0,1,0,MET-ROMAN-GLASS;P12.1,active_reviewed
 antq_grain_products,Flour and Bread,produced,processed_food_or_drink,0,0,0,4,2,P12.1;P12.3;CAH-XI,active_reviewed
+antq_iron_hardware,Iron Hardware,produced,processed_craft_or_service,0,0,0,5,0,P12.1;P12.3,active_reviewed
 antq_jade,Jade,raw_material,mineral_or_quarried_raw,1,0,0,0,0,P12.1;WSH-KHT,active_reviewed
+antq_lacquerware,Lacquerware,produced,processed_craft_or_service,0,0,0,1,0,P12.1;BHR,active_reviewed
 antq_lead_wares,Lead Wares,produced,processed_craft_or_service,0,0,0,2,1,P12.1;P12.3,active_reviewed
+antq_leather_goods,Leather Goods,produced,processed_craft_or_service,0,0,0,6,0,P12.1;P12.3,active_reviewed
 antq_naphtha,Naphtha and Bitumen,raw_material,mineral_or_quarried_raw,1,0,0,0,0,P12.1;OIP-147,active_reviewed
 antq_olive_oil,Olive Oil,produced,processed_food_or_drink,0,0,0,3,1,MET-ROMAN-HOUSING;MET-ROMAN-TRADE,active_reviewed
 antq_papyrus,Papyrus,raw_material,organic_raw_or_exchange,1,0,5,0,0,P12.1,active_reviewed
+antq_parchment,Parchment,produced,processed_craft_or_service,0,0,0,1,0,P12.1;P12.3,active_reviewed
 antq_perfumes,Perfumes and Unguents,produced,processed_craft_or_service,0,0,0,3,1,P12.1;MET-ROMAN-TRADE,active_reviewed
 antq_preserved_fish,Salted Fish and Garum,produced,processed_food_or_drink,0,0,0,2,0,BAELO-SALTERY;MET-ROMAN-TRADE,active_reviewed
+antq_sailcloth,Sailcloth,produced,processed_craft_or_service,0,0,1,1,0,P12.1;MET-ROMAN-TRADE,active_reviewed
 antq_silphium,Silphium,raw_material,organic_raw_or_exchange,1,0,0,0,0,P12.1;CAM-SIL,active_reviewed
 antq_soap,Soap and Cleansing Paste,produced,processed_craft_or_service,0,0,0,1,0,P12.1;MET-ROMAN-HOUSING,active_reviewed
 antq_wax_goods,Wax Goods,produced,processed_craft_or_service,0,0,0,2,0,P12.1;P12.3,active_reviewed
 beer,Beer,installed_ancient_adapter,processed_food_or_drink,0,0,0,6,0,P12.1;P12.3,active_reviewed
 beeswax,Beeswax,installed_ancient_adapter,organic_raw_or_exchange,0,10,2,0,0,P12.1;P12.3,active_reviewed
-books,Books,installed_ancient_adapter,processed_craft_or_service,0,8,0,6,0,P12.1;P12.3,active_reviewed
+books,Books,installed_ancient_adapter,processed_craft_or_service,0,8,0,5,0,P12.1;P12.3,active_reviewed
 clay,Clay,installed_ancient_adapter,mineral_or_quarried_raw,0,22,12,0,3,P12.1;P12.3,active_reviewed
-cloth,Cloth,installed_ancient_adapter,processed_craft_or_service,0,31,17,12,1,P12.1;P12.3,active_reviewed
+cloth,Cloth,installed_ancient_adapter,processed_craft_or_service,0,31,16,10,1,P12.1;P12.3,active_reviewed
 coal,Coal,installed_ancient_adapter,mineral_or_quarried_raw,0,19,13,1,4,P12.1;P12.3,active_reviewed
-copper,Copper,installed_ancient_adapter,mineral_or_quarried_raw,0,19,11,0,1,P12.1;P12.3,active_reviewed
+copper,Copper,installed_ancient_adapter,mineral_or_quarried_raw,0,19,10,0,1,P12.1;P12.3,active_reviewed
 cotton,Cotton,installed_ancient_adapter,organic_raw_or_exchange,0,1,1,0,0,P12.1;P12.3,active_reviewed
-dyes,Dyes,installed_ancient_adapter,processed_craft_or_service,1,25,25,1,1,P12.1;P12.3,active_reviewed
-fiber_crops,Fiber Crops,installed_ancient_adapter,organic_raw_or_exchange,313,33,21,0,2,P12.1;P12.3,active_reviewed
+dyes,Dyes,installed_ancient_adapter,processed_craft_or_service,1,25,27,1,1,P12.1;P12.3,active_reviewed
+fiber_crops,Fiber Crops,installed_ancient_adapter,organic_raw_or_exchange,313,33,20,0,2,P12.1;P12.3,active_reviewed
 fine_cloth,Fine Cloth,installed_ancient_adapter,processed_craft_or_service,0,0,0,9,0,P12.1;P12.3,active_reviewed
 fish,Fish,installed_ancient_adapter,food_crop_or_animal,0,10,2,0,0,P12.1;P12.3,active_reviewed
 fruit,Fruit,installed_ancient_adapter,food_crop_or_animal,101,6,4,0,1,P12.1;P12.3,active_reviewed
-furniture,Furniture,installed_ancient_adapter,processed_craft_or_service,0,0,0,12,0,P12.1;P12.3,active_reviewed
+furniture,Furniture,installed_ancient_adapter,processed_craft_or_service,0,0,0,11,0,P12.1;P12.3,active_reviewed
 gems,Gems,installed_ancient_adapter,mineral_or_quarried_raw,0,1,0,0,0,P12.1;P12.3,active_reviewed
-glass,Glass,installed_ancient_adapter,processed_craft_or_service,0,5,2,3,0,P12.1;P12.3,active_reviewed
+glass,Glass,installed_ancient_adapter,processed_craft_or_service,0,5,3,1,0,P12.1;P12.3,active_reviewed
 goods_gold,Gold,installed_ancient_adapter,mineral_or_quarried_raw,1,8,7,0,0,P12.1;P12.3,active_reviewed
 incense,Incense,installed_ancient_adapter,organic_raw_or_exchange,2,25,3,0,2,P12.1;P12.3,active_reviewed
-iron,Iron,installed_ancient_adapter,mineral_or_quarried_raw,1,19,13,0,1,P12.1;P12.3,active_reviewed
+iron,Iron,installed_ancient_adapter,mineral_or_quarried_raw,1,19,15,0,1,P12.1;P12.3,active_reviewed
 ivory,Ivory,installed_ancient_adapter,organic_raw_or_exchange,0,3,3,0,0,P12.1;P12.3,active_reviewed
-jewelry,Jewelry,installed_ancient_adapter,processed_craft_or_service,0,0,0,12,0,P12.1;P12.3,active_reviewed
+jewelry,Jewelry,installed_ancient_adapter,processed_craft_or_service,0,0,0,10,0,P12.1;P12.3,active_reviewed
 lead,Lead,installed_ancient_adapter,mineral_or_quarried_raw,0,6,2,0,2,P12.1;P12.3,active_reviewed
-leather,Leather,installed_ancient_adapter,processed_craft_or_service,0,13,2,7,3,P12.1;P12.3,active_reviewed
+leather,Leather,installed_ancient_adapter,processed_craft_or_service,0,13,3,1,3,P12.1;P12.3,active_reviewed
 livestock,Livestock,installed_ancient_adapter,food_crop_or_animal,2,9,9,0,1,P12.1;P12.3,active_reviewed
-lumber,Lumber,installed_ancient_adapter,organic_raw_or_exchange,49,127,67,0,17,P12.1;P12.3,active_reviewed
+lumber,Lumber,installed_ancient_adapter,organic_raw_or_exchange,49,127,64,0,17,P12.1;P12.3,active_reviewed
 marble,Marble,installed_ancient_adapter,mineral_or_quarried_raw,0,33,2,0,4,P12.1;P12.3,active_reviewed
 masonry,Masonry,installed_ancient_adapter,processed_craft_or_service,0,49,0,11,1,P12.1;P12.3,active_reviewed
 medicaments,Medicaments,installed_ancient_adapter,processed_craft_or_service,120,0,0,2,0,P12.1;P12.3,active_reviewed
 mercury,Mercury,installed_ancient_adapter,mineral_or_quarried_raw,0,1,1,0,0,P12.1;P12.3,active_reviewed
 millet,Millet,installed_ancient_adapter,food_crop_or_animal,20,1,1,0,0,P12.1;P12.3,active_reviewed
-naval_supplies,Naval Supplies,installed_ancient_adapter,processed_craft_or_service,0,8,0,12,1,P12.1;P12.3,active_reviewed
+naval_supplies,Naval Supplies,installed_ancient_adapter,processed_craft_or_service,0,8,0,8,1,P12.1;P12.3,active_reviewed
 olives,Olives,installed_ancient_adapter,food_crop_or_animal,0,13,7,0,2,P12.1;P12.3,active_reviewed
-paper,Paper,installed_ancient_adapter,processed_craft_or_service,0,9,1,0,0,P12.1;P12.3,active_reviewed
+paper,Paper,installed_ancient_adapter,processed_craft_or_service,0,9,0,0,0,P12.1;P12.3,active_reviewed
 pepper,Pepper,installed_ancient_adapter,organic_raw_or_exchange,1,1,0,0,0,P12.1;P12.3,active_reviewed
-pottery,Pottery,installed_ancient_adapter,processed_craft_or_service,0,42,11,9,7,P12.1;P12.3,active_reviewed
+pottery,Pottery,installed_ancient_adapter,processed_craft_or_service,0,42,11,6,6,P12.1;P12.3,active_reviewed
 rice,Rice,installed_ancient_adapter,food_crop_or_animal,0,2,1,0,0,P12.1;P12.3,active_reviewed
 salt,Salt,installed_ancient_adapter,mineral_or_quarried_raw,32,6,2,0,0,P12.1;P12.3,active_reviewed
-sand,Sand,installed_ancient_adapter,mineral_or_quarried_raw,0,3,10,0,0,P12.1;P12.3,active_reviewed
+sand,Sand,installed_ancient_adapter,mineral_or_quarried_raw,0,3,9,0,0,P12.1;P12.3,active_reviewed
 silk,Silk,installed_ancient_adapter,organic_raw_or_exchange,2,1,2,0,0,P12.1;P12.3,active_reviewed
 silver,Silver,installed_ancient_adapter,mineral_or_quarried_raw,1,3,0,0,0,P12.1;P12.3,active_reviewed
 steel,Steel,installed_ancient_adapter,processed_craft_or_service,0,0,0,1,0,P12.1;P12.3,active_reviewed
 stone,Stone,installed_ancient_adapter,mineral_or_quarried_raw,0,28,9,0,10,P12.1;P12.3,active_reviewed
-tar,Tar,installed_ancient_adapter,organic_raw_or_exchange,0,27,19,0,0,P12.1;P12.3,active_reviewed
-tin,Tin,installed_ancient_adapter,mineral_or_quarried_raw,1,8,10,0,1,P12.1;P12.3,active_reviewed
-tools,Tools,installed_ancient_adapter,processed_craft_or_service,0,222,86,7,23,P12.1;P12.3,active_reviewed
+tar,Tar,installed_ancient_adapter,organic_raw_or_exchange,0,27,18,0,0,P12.1;P12.3,active_reviewed
+tin,Tin,installed_ancient_adapter,mineral_or_quarried_raw,1,8,9,0,1,P12.1;P12.3,active_reviewed
+tools,Tools,installed_ancient_adapter,processed_craft_or_service,0,222,90,2,23,P12.1;P12.3,active_reviewed
 weaponry,Weaponry,installed_ancient_adapter,processed_craft_or_service,0,11,0,5,1,P12.1;P12.3,active_reviewed
 wheat,Wheat,installed_ancient_adapter,food_crop_or_animal,0,15,6,0,3,P12.1;P12.3,active_reviewed
 wild_game,Wild Game,installed_ancient_adapter,food_crop_or_animal,0,1,1,0,0,P12.1;P12.3,active_reviewed

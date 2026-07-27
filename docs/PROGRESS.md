@@ -7287,3 +7287,28 @@ reviewed 128px BC7 DDS.
 - Normal and `-leavepops` paired-control smoke launches both reached a rendered
   menu and reported zero mod-unique `error.log` lines. Evidence is recorded in
   `docs/playtests/S2_FOUR_REGIONAL_POLITICAL_PROFILES_20260727.md`.
+
+## 2026-07-27 - Differentiated twelve ancient craft goods
+
+- Added fine ceramics, glasswares, iron hardware, leather goods, cordage,
+  parchment, lacquerware, amber ornaments, glass beads, woven carpets, felt
+  goods, and sailcloth as complete processed-good contracts.
+- Rebound twenty-seven named workshop families away from cosmetic generic
+  outputs. Fineware and lamp kilns now produce fine ceramics; glassworks produce
+  glasswares; ironmongers and fitting shops produce iron hardware; six
+  leatherworking families produce finished leather goods; rope and net shops
+  produce cordage; parchment, lacquer, amber, bead, carpet, felt, and sail
+  workshops expose their named wares directly.
+- Made cordage and sailcloth genuine intermediate goods by requiring both in
+  the shipyard recipe. All recipes retain the checked 19–21% default-price
+  guild margin.
+- Generated two reviewed six-up source atlases and twelve unique circle-safe
+  masters, trade-good icons, and wide illustrations. The new checked splitter
+  pins the atlas hashes and geometry; the complete direct UI ledger now has 892
+  chains.
+- The active economy now has 77 reviewed goods, 265 buildings, 143 productive
+  families, and 66 distinct recipe signatures. Every custom processed good has
+  producers and demand.
+- `make validate` passes all 103 checks. Paired vanilla/mod smoke reaches the
+  rendered menu with zero mod-unique `error.log` lines. Evidence is in
+  `docs/playtests/S2_ANCIENT_CRAFT_GOODS_20260727.md`.

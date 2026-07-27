@@ -5,7 +5,7 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review. (Validated by the 880-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
+- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review. (Validated by the 892-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
   - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
 ## Second manual playtest remediation — 2026-07-26 (resume here)
@@ -490,9 +490,20 @@ and focused runtime probe all pass.
     captures for priority regions, and no navigation/pathfinding regression.
 
 - [ ] Expand trade goods, recipes, and production chains to support the new depth.
-  - Audit the present 143 productive families/55 recipe signatures for meaningful
+  - Audit the present 143 productive families/66 recipe signatures for meaningful
     regional differences. Add historically appropriate raw, processed, prestige,
     military, food, construction, and caravan/maritime goods as needed.
+  - [x] Complete the first processed-craft differentiation tranche. Add fine
+    ceramics, glasswares, iron hardware, leather goods, cordage, parchment,
+    lacquerware, amber ornaments, glass beads, carpets, felt goods, and
+    sailcloth with complete producer, demand, localization, modifier, and direct
+    art contracts. Rebind 27 named workshop families away from generic output
+    aliases; shipyards now consume cordage and sailcloth. The active union is
+    77 goods, 143 productive families, and 66 recipe signatures, all within the
+    checked 19–21% default-price guild margin.
+  - [ ] Continue with regionally bounded raw-material and processed-food chains,
+    then connect appropriate goods to advances, laws, privileges, military
+    supply, events, and historically supportable trade-route decisions.
   - Tie RGOs, workshops, estates, urban demand, trade routes, military supply,
     laws, privileges, advances, and events into coherent chains.
   - Acceptance: every active good has real producers/consumers and UI art; no
