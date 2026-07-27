@@ -72,6 +72,7 @@ VALIDATE_COMMANDS = (
     Command("tools/m5_eleventh_buildings.py", ("--check",)),
     Command("tools/m5_twelfth_buildings.py", ("--check",)),
     Command("tools/m5_roman_economy.py", ("--check",)),
+    Command("tools/s2_global_settlements.py", ("--check",)),
     Command("tools/m5_regional_buildings.py", ("--check",)),
     Command("tools/m5_building_quarantine.py", ("--check",)),
     Command("tools/m5_market_scope_guard.py", ("--check",)),

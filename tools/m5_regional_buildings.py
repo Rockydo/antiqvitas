@@ -72,8 +72,13 @@ MACROS = {
     "Europe": {"Rome", "Britain", "Ireland", "Germania", "Balkans", "Danube", "Eastern Europe", "Baltic", "Finland", "Scandinavia", "Pontic"},
     "North Africa": {"Africa"},
     "Middle East": {"Anatolia", "Levant", "Mesopotamia", "Iran", "Arabia", "Caucasus"},
-    "South Asia": {"India"},
-    "East Asia": {"China"},
+    "Central Asia": {"Steppe", "Central Asia", "Tarim"},
+    "South Asia": {"India", "Lanka"},
+    "Southeast Asia": {"Southeast Asia"},
+    "East Asia": {"China", "Korea", "Japan"},
+    "West Africa": {"West Africa"},
+    "Americas": {"Andes", "Northern Andes", "Mesoamerica", "North America", "Caribbean-Amazon"},
+    "Oceania": {"Oceania"},
 }
 # The AD 1 polity ledger uses political/cultural regions, not a geographic
 # continent taxonomy: Roman Alexandria and Carthage are therefore tagged

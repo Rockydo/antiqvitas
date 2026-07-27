@@ -1,5 +1,29 @@
 # Progress
 
+## 2026-07-27 - Distributed the opening economy across the world
+
+- Replaced the misleading 2,297-row/51-location building seed with one generated
+  worldwide settlement system. It now renders 2,688 scalable regional placements
+  across 1,432 locations in all 292 starting polities.
+- Promoted every sampled location to an opening town, while preserving the 72
+  reviewed major market nodes as the only locations receiving the richer
+  town/city setup packages.
+- Every polity has at least one productive opening building. Material selection
+  uses the audited AD 1 RGO, generated population, ownership region, settlement
+  profile, climate, and harbor suitability; maritime, city-only, and Roman-only
+  runtime potentials remain enforced.
+- Preserved fifteen source-reviewed Roman provincial packages as explicit
+  metropolitan exceptions. Ordinary settlements are capped at six buildings;
+  reviewed Roman nodes at 32. The top ten locations now hold 7.2% rather than
+  dominating the opening economy.
+- Added `global_settlement_audit.csv`, a deterministic generator, and permanent
+  gates for all-polity productive coverage, 1,200-location minimum reach,
+  concentration, productive/service balance, scalability, and profile drift.
+- Full validation passes 102/102 commands. Paired vanilla/mod smoke reaches
+  responsive rendered menus with zero new or mod-unique `error.log` lines.
+  Focused evidence is in
+  `docs/playtests/S2_GLOBAL_SETTLEMENTS_20260727.md`.
+
 ## 2026-07-27 - First global AD 1 RGO screen
 
 - Expanded the RGO remap from 328 to 652 actual location corrections and added

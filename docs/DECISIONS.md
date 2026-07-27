@@ -1,5 +1,25 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - One generator owns opening building placement
+
+The historical family-pass generators continue to own their family definitions,
+but `s2_global_settlements.py` is now the sole owner of ordinary opening
+placement. This prevents a later family regeneration from silently restoring
+the former Rome/ten-city concentration.
+
+Selection is polity-balanced rather than globally population-ranked. Every
+polity receives its capital and a square-root-bounded sample of materially
+diverse secondary locations; large empires therefore gain more settlements
+without consuming the world budget. Productive families are selected against
+the audited AD 1 RGO, climate, harbor, rank, and cultural potential. Civic and
+service families are then added to a 75% regional productive target.
+
+The six-building ordinary cap has one explicit exception: the fifteen existing
+source-reviewed Roman provincial profiles. They remain differentiated and may
+reach 32 at a metropolitan node. The top-ten concentration gate is 10%, and the
+current result is 7.2%. Named monuments remain outside this allocation in the
+special-building ledger.
+
 ## 2026-07-27 - Global RGO audit separates exclusion from positive attestation
 
 Every controlled location must now appear in `global_rgo_audit.csv`, but a

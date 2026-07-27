@@ -131,10 +131,9 @@ def outputs() -> dict[Path, str]:
                 )
     seed_rows[seed_at:seed_at] = seed_additions
 
-    return {
-        FAMILIES: render(FAMILY_FIELDS, family_rows),
-        SEEDS: render(SEED_FIELDS, seed_rows),
-    }
+    # s2_global_settlements.py owns all opening placement, including these
+    # Roman families. Keeping one placement owner prevents capital clustering.
+    return {FAMILIES: render(FAMILY_FIELDS, family_rows)}
 
 
 def main() -> int:
@@ -153,8 +152,8 @@ def main() -> int:
         for path, content in expected.items():
             path.write_text(content, encoding="utf-8-sig", newline="")
         print(
-            f"m5_roman_economy: wrote {len(FAMILIES_TO_ADD)} families, "
-            f"{sum(1 for row in read(SEEDS, SEED_FIELDS) if row['key'].startswith('reg_roman_economy_'))} placements"
+            f"m5_roman_economy: wrote {len(FAMILIES_TO_ADD)} families; "
+            "global placement delegated"
         )
         return 0
     stale = [

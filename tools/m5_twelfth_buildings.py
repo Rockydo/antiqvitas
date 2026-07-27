@@ -70,7 +70,8 @@ def outputs() -> dict[Path, str]:
         family = f"antq_reg_{slug}"
         for location, macro in LOCATIONS:
             seed_rows.append({"key": f"reg_twelfth_{location}_{slug}", "family": family, "location": location, "macro": macro, "source": SOURCE, "confidence": "contested", "note": NOTE})
-    return {FAMILIES: render(FAMILY_FIELDS, family_rows), SEEDS: render(SEED_FIELDS, seed_rows)}
+    # s2_global_settlements.py is the single owner of opening placement.
+    return {FAMILIES: render(FAMILY_FIELDS, family_rows)}
 
 
 def main() -> int:
@@ -88,13 +89,13 @@ def main() -> int:
     if args.write:
         for path, content in expected.items():
             path.write_text(content, encoding="utf-8-sig", newline="")
-        print("m5_twelfth_buildings: wrote 12 families and 120 placements")
+        print("m5_twelfth_buildings: wrote 12 families; global placement delegated")
         return 0
     stale = [path.relative_to(ROOT) for path, content in expected.items() if not path.is_file() or path.read_text(encoding="utf-8-sig") != content]
     if stale:
         print(f"m5_twelfth_buildings: FAIL\n  - stale or missing {stale}")
         return 1
-    print("m5_twelfth_buildings: PASS (12 families; 120 placements)")
+    print("m5_twelfth_buildings: PASS (12 families; global placement delegated)")
     return 0
 
 

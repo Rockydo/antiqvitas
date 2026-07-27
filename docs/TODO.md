@@ -34,9 +34,10 @@ and focused runtime probe all pass.
   652 regional, environmental, and direct-anchor corrections. Most retained
   staples remain inherited but are explicitly marked as contested where local
   extraction is not attested; deeper regional specialty work remains open.
-- 265 ancient building definitions exist, but roughly 2,400 starting placements
-  are concentrated in only about 50–60 locations. Rome alone receives more than
-  200 while almost every settlement worldwide begins empty.
+- The 265 ancient building definitions now seed 2,688 scalable regional
+  placements across 1,432 settlement-ranked locations and all 292 starting
+  polities. The top ten hold 7.2% because reviewed Roman metropolitan packages
+  remain deliberately deep; ordinary locations are capped at six.
 - The advance DAG now has 360 nodes and 25 unique effect packages after the
   first 110-node Age-I expansion; 297 nodes still unlock no separate content.
   It has 50 roots and 42 convergence nodes. Opening reachability is fixed, but
@@ -49,8 +50,8 @@ and focused runtime probe all pass.
 - Exact-name mirrors still leave most installed estates, privileges, parliament
   material, cabinet actions, laws, religious aspects, and artillery-facing UI in
   the mounted union. Rome now starts at technology level 3 with a 9.60K reserve
-  and positive opening balance; the remaining risk is its exceptionally dense
-  capital/building seed and incomplete 12-month runtime proof.
+  and positive opening balance; the remaining risk is incomplete 12-month
+  runtime proof.
 - Existing building and advance art is generally strong, but centering, circular
   safe-area compliance, and outlier quality were not validated in the actual UI.
   Villa Liviae and Regional Law Codes are confirmed review targets. Location pop
@@ -400,7 +401,7 @@ and focused runtime probe all pass.
   - Acceptance: every assigned location is audited; regional distribution and
     outlier reports pass; no vanilla-only or post-476 RGO remains visible.
 
-- [ ] Seed a believable global settlement and building network.
+- [x] Seed a believable global settlement and building network.
   - Replace the current capital/megacity-only concentration with sourced city,
     town, village, fort, port, road, sanctuary, market, mine, estate, workshop,
     irrigation, and frontier distributions across all settled regions.
@@ -408,9 +409,21 @@ and focused runtime probe all pass.
     documented site importance. Reserve named unique buildings for secure sites.
   - Ensure maintenance and construction inputs do not bankrupt large states or
     make empty provinces mechanically dominant.
+  - [x] Generate a population/RGO/ownership/rank/harbor-aware worldwide sample:
+    2,688 regional placements now reach 1,432 settlements in all 292 polities.
+    Every polity has productive opening capacity; ordinary locations are capped
+    at six, while fifteen sourced Roman provincial profiles are explicit
+    metropolitan exceptions capped at 32.
+  - [x] Promote the sampled locations to actual opening towns so direct building
+    rows are game-visible outside the 72 major market nodes. Preserve named
+    unique sites in their separate secure/contested ledgers.
+  - [x] Add a generated 292-row polity audit and permanent gates for distinct
+    reach, productive coverage, ordinary/metropolitan caps, top-ten
+    concentration, scalability, and productive/service balance.
   - Acceptance: all major cities and a broad rural sample have plausible starts;
     every country has an economy appropriate to its scale; concentration and
-    maintenance outlier gates pass.
+    maintenance outlier gates pass. (Complete: 1,432 locations; top-ten 7.2%;
+    72.3% productive; 96.3% scalable; 102/102 validation and paired smoke green.)
 
 - [ ] Correct AD 1 terrain, vegetation, wetlands, and land-use presentation.
   - Preserve map geometry, but audit mutable topography/climate/vegetation fields

@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-27 - Ordinary settlement buildings represent regional capacity
+
+The 1,432 opening settlement points are not 1,432 claims for excavated named
+workshops or securely attested urban status in AD 1. Outside the reviewed urban
+and historic-site ledgers, a town rank and ordinary building indicate that the
+engine polygon contains enough population and controlled hinterland to support
+a modest exchange, storage, craft, transport, or public-service node.
+
+Family choice follows the complete RGO screen, population allocation, terrain/
+climate, harbor suitability, and broad regional practice. This is more
+historically bounded than inheriting a 1337 building map, but remains contested
+where site-level evidence is absent. Named unique buildings are never inferred
+by this process. Sources: `P12.1`; `P12.3`; `P13`; `PER`; per-profile sources in
+`docs/m5/roman_economy_profiles.csv`. [bounded settlement-capacity abstraction]
+
 ## 2026-07-27 - Retained RGO staples are capacity proxies, not site attestations
 
 Wheat, millet, legumes, livestock, fish, lumber, clay, stone, salt, and other
