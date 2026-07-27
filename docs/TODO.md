@@ -44,7 +44,7 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 37 reforms and 124 privileges
+  thin outside the first replacement tranches: 45 reforms and 124 privileges
   serve 292 opening polities. The legal layer now has 227 ancient groups,
   including 182 three-option profile laws, but needs later-century additions.
 - Exact-name mirrors still leave most installed estates, privileges, parliament
@@ -174,6 +174,13 @@ and focused runtime probe all pass.
         programmes, 39 issues, 39 agendas, 78 profile grants, and 124 total
         ancient privileges, all with direct art. Keep the parent open for
         deeper reform branches and dated legal development.
+      - [x] Give those four state profiles two research-gated constitutional
+        branches apiece: Xiongnu wing/gift circuits, Goguryeo
+        fortress-lineage/granary courts, Meroitic royal-household/temple-domain
+        stewardship, and Lankan reservoir/Sangha patronage. The political
+        contract now covers 45 reforms and the knowledge tree carries 611
+        ancient-system unlocks. Keep the parent open for other major-state
+        subdivisions and dated successor forms.
   - [x] Eliminate the fresh-bookmark parliament compiler failures before the
     replacement UI probe. The 2026-07-26 Britain/Hibernia bookmark isolated all
     2,855 `Script system error!` entries to
@@ -502,6 +509,10 @@ and focused runtime probe all pass.
     inherited council/social-order identity, full descriptions, and source
     boundaries. Core breadth rises from 19 to 37 reforms and all 18 new paths
     are placed on deeper regional Age-I branches.
+  - [x] Extend the same branch depth to the four first bespoke major-state
+    profiles. Xiongnu, Goguryeo, Meroitic Kush, and Anuradhapura Lanka each
+    retain their dedicated council and social-order package across two
+    historically bounded alternatives. Total reform breadth is now 45.
   - [ ] Subdivide the nine-family floor further for major countries and
     high-priority regional constitutions; connect later-century successor paths
     to their dated historical transitions.

@@ -283,6 +283,38 @@ ALTERNATIVE_REFORMS: tuple[tuple[str, str, str, str, str, str, str, str, str], .
      "Organize royal authority around fortress stores, retainer service, and route protection.",
      "global_nobles_estate_power=0.15|global_tribes_estate_power=0.05|nobles_estate_power_from_cabinet=0.25|replace_cabinet_member_cost_modifier=0.10",
      "P8;P13;CAH-XI", "contested", "A bounded frontier adapter rather than a claim of one transregional military monarchy."),
+    ("antq_xiongnu_dual_wing_command", "xiongnu", "steppe_horde", "Left and Right Wing Command",
+     "Balance the chanyu's household with eastern and western command networks, lineage musters, and pasture arbitration.",
+     "global_tribes_estate_power=0.20|global_nobles_estate_power=0.10|tribes_estate_power_from_cabinet=0.40|replace_cabinet_member_cost_modifier=0.15",
+     "P8.3;P13;BHR;CAH-XI", "secure", "Models the securely reported wing structure without importing later decimal ranks or a fixed territorial bureaucracy."),
+    ("antq_xiongnu_gift_circuit", "xiongnu", "steppe_horde", "Chanyu Gift Circuit",
+     "Concentrate envoys, hostages, prestige gifts, and frontier exchange around the chanyu's itinerant court.",
+     "global_crown_estate_power=0.15|global_burghers_estate_power=0.10|estate_power_from_cabinet=0.25|set_cabinet_member_cost_modifier=-0.05",
+     "P8.3;P13;BHR;SAM", "contested", "Treats recorded gift and diplomatic exchange as political infrastructure, not a salaried central chancery."),
+    ("antq_goguryeo_fortress_lineages", "goguryeo", "monarchy", "Fortress-Lineage Kingship",
+     "Broker royal commands through fortress communities, leading lineages, beacon obligations, and witnessed musters.",
+     "global_nobles_estate_power=0.15|global_tribes_estate_power=0.10|nobles_estate_power_from_cabinet=0.30|replace_cabinet_member_cost_modifier=0.10",
+     "P8.3;P13;CAH-XI", "contested", "Represents an early fortress and lineage polity without projecting the mature Three Kingdoms office hierarchy backward."),
+    ("antq_goguryeo_granary_court", "goguryeo", "monarchy", "Royal Granary Court",
+     "Strengthen the royal household through millet stores, artisan obligations, route signals, and rotating fortress officers.",
+     "global_crown_estate_power=0.15|global_peasants_estate_power=0.10|crown_estate_power_from_cabinet=0.30|set_cabinet_member_cost_modifier=-0.10",
+     "P8.3;P13;CAH-XI", "contested", "A bounded centralizing path grounded in subsistence and fortified settlement rather than a recovered administrative code."),
+    ("antq_kushite_dual_household", "kushite", "monarchy", "Dual Royal Household",
+     "Coordinate royal households, sealed tribute, provincial brokers, and desert-route dispatches around Meroe.",
+     "global_crown_estate_power=0.15|global_nobles_estate_power=0.10|estate_power_from_cabinet=0.30|replace_cabinet_member_cost_modifier=0.05",
+     "P8.5;P11;P13;CAH-XI", "contested", "Uses the attested prominence of royal women and rulers without claiming two equal sovereign offices in every reign."),
+    ("antq_kushite_temple_domain", "kushite", "monarchy", "Temple-Domain Stewardship",
+     "Entrust cult storehouses, Nile contributions, metalwork returns, and provincial hospitality to protected stewards.",
+     "global_clergy_estate_power=0.20|global_burghers_estate_power=0.05|clergy_estate_power_from_cabinet=0.30|set_cabinet_member_cost_modifier=-0.05",
+     "P8.5;P11;P13;CAH-XI", "contested", "Combines attested cult and material contexts without inventing a uniform Meroitic temple bureaucracy."),
+    ("antq_lankan_reservoir_kingship", "lankan", "monarchy", "Reservoir Stewardship Kingship",
+     "Ground royal legitimacy in reservoir accounts, labor rotations, elephant service, and regional petition circuits.",
+     "global_crown_estate_power=0.15|global_peasants_estate_power=0.15|crown_estate_power_from_cabinet=0.25|set_cabinet_member_cost_modifier=-0.10",
+     "P8.4;P11;P13", "secure", "Models securely important irrigation patronage while avoiding the claim of one centralized hydraulic administration."),
+    ("antq_lankan_sangha_endowments", "lankan", "monarchy", "Sangha Endowment Court",
+     "Balance royal patronage, monastic endowments, port measures, and regional lineages through recorded grants.",
+     "global_clergy_estate_power=0.20|global_burghers_estate_power=0.10|clergy_estate_power_from_cabinet=0.25|replace_cabinet_member_cost_modifier=0.05",
+     "P8.4;P11;P13;BHR", "secure", "Represents early Buddhist patronage and donation practice without importing later monastic landholding arrangements wholesale."),
 )
 
 for (
@@ -814,16 +846,19 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    if len(POLITICAL_CONTRACTS) != 37 or not used_reforms.issubset(POLITICAL_CONTRACTS):
+    if len(POLITICAL_CONTRACTS) != 45 or not used_reforms.issubset(POLITICAL_CONTRACTS):
         failures.append(
-            "political appointment contracts must cover 19 core and 18 alternative reforms"
+            "political appointment contracts must cover 19 core and 26 alternative reforms"
         )
     if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 30:
         failures.append("political appointment contracts are insufficiently differentiated")
     alternative_profiles = [row[1] for row in ALTERNATIVE_REFORMS]
-    if len(ALTERNATIVE_REFORMS) != 18 or any(
+    if len(ALTERNATIVE_REFORMS) != 26 or any(
         alternative_profiles.count(profile) != 2
-        for profile in {"roman", "han", "iranian", "civic", "gana", "steppe", "tribal", "sacral", "royal"}
+        for profile in {
+            "roman", "han", "iranian", "civic", "gana", "steppe", "tribal",
+            "sacral", "royal", "xiongnu", "goguryeo", "kushite", "lankan",
+        }
     ):
         failures.append("alternative reforms must provide two paths for every political profile")
     for reform, (modifier_text, _source, confidence, note) in POLITICAL_CONTRACTS.items():

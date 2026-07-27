@@ -1072,6 +1072,7 @@ antq_nile_caravan_adjudication = {
 	tax_income_efficiency = small_tax_income_efficiency_bonus
 	unlock_estate_privilege = antq_sacral_scribal_register_custody
 	unlock_estate_privilege = antq_kushite_nile_cultivator_rotations
+	unlock_government_reform = antq_kushite_temple_domain
 	starting_technology_level = 4
 	requires = antq_kandake_court_delegates
 	ai_weight = { add = 70 }
@@ -2247,6 +2248,7 @@ antq_armoured_retinue_drill = {
 	unlock_estate_privilege = antq_xiongnu_seasonal_pasture_compacts
 	unlock_government_reform = antq_iranian_royal_domain
 	unlock_government_reform = antq_steppe_gift_court
+	unlock_government_reform = antq_xiongnu_gift_circuit
 	starting_technology_level = 4
 	requires = antq_horse_archer_screening
 	ai_weight = { add = 70 }
@@ -2711,6 +2713,7 @@ antq_merchant_diasporas = {
 	unlock_estate_privilege = antq_lankan_monastic_endowment_registers
 	unlock_government_reform = antq_lineage_rotation
 	unlock_government_reform = antq_temple_endowment_court
+	unlock_government_reform = antq_lankan_reservoir_kingship
 	starting_technology_level = 3
 	requires = antq_caravan_accounting
 	requires = antq_silk_exchange
@@ -3632,6 +3635,7 @@ antq_state_granary_carriage = {
 	unlock_estate_privilege = antq_han_calendar_and_ritual_consultation
 	unlock_estate_privilege = antq_goguryeo_ancestral_rite_stores
 	unlock_government_reform = antq_memorialist_han_court
+	unlock_government_reform = antq_goguryeo_fortress_lineages
 	starting_technology_level = 3
 	requires = antq_bronze_cash_strings
 	ai_weight = { add = 80 }
@@ -3676,6 +3680,7 @@ antq_salt_iron_bureau_exchange = {
 	unlock_estate_privilege = antq_goguryeo_millet_store_guarantees
 	unlock_government_reform = antq_commandery_supervision
 	unlock_government_reform = antq_frontier_muster_monarchy
+	unlock_government_reform = antq_goguryeo_granary_court
 	starting_technology_level = 4
 	requires = antq_state_granary_carriage
 	ai_weight = { add = 70 }
@@ -3736,6 +3741,7 @@ antq_meroe_nile_caravans = {
 		}
 	}
 	global_trade_through_owned_territory_efficiency = 0.05
+	unlock_government_reform = antq_kushite_dual_household
 	starting_technology_level = 3
 	requires = antq_garamantian_oasis_stages
 	ai_weight = { add = 80 }
@@ -4043,6 +4049,7 @@ antq_legal_commentaries = {
 	unlock_estate_privilege = antq_xiongnu_cauldron_and_oath_custody
 	unlock_government_reform = antq_iranian_great_house_reform
 	unlock_government_reform = antq_steppe_wing_confederacy
+	unlock_government_reform = antq_xiongnu_dual_wing_command
 	starting_technology_level = 3
 	requires = antq_library_catalogues
 	requires = antq_han_classics
@@ -5094,6 +5101,7 @@ antq_ayurvedic_compendia = {
 	unlock_estate_privilege = antq_lankan_tank_labor_rotations
 	unlock_government_reform = antq_gana_muster_confederacy
 	unlock_government_reform = antq_irrigation_palace
+	unlock_government_reform = antq_lankan_sangha_endowments
 	starting_technology_level = 4
 	requires = antq_recitation_lineages
 	ai_weight = { add = 70 }

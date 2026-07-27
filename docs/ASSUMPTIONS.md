@@ -1,5 +1,26 @@
 # Historical Assumptions
 
+## 2026-07-27 - Major-state reform branches are counterfactual emphases
+
+The Left and Right Wing Command, Chanyu Gift Circuit, Fortress-Lineage
+Kingship, Royal Granary Court, Dual Royal Household, Temple-Domain
+Stewardship, Reservoir Stewardship Kingship, and Sangha Endowment Court are
+player-facing institutional emphases. They are not claims that first-century
+actors proposed eight named constitutional programmes.
+
+Their components are constrained to practices already evidenced for the four
+profiles: Xiongnu wings, gifts, hostages, lineages, and pasture arbitration;
+early Goguryeo fortresses, grain stores, signals, and lineage brokerage;
+Meroitic royal women and rulers, seals, cult domains, tribute, and material
+production; Lankan irrigation patronage, donations, ports, elephant service,
+and Buddhist institutions. Exact office balance, reform timing, and numerical
+effects remain counterfactual gameplay.
+
+Sources: `P8.3`; `SAM`; `P8.5`; `P8.4`; `P11`; `P13`; `BHR`; `CAH-XI`.
+
+[secure component practices; contested programme labels, formal alternatives,
+uniformity, and all mechanical values]
+
 ## 2026-07-27 - Four major-state political profiles are bounded institutional models
 
 The Xiongnu wing commands, pasture returns, gift exchange, remount obligations,

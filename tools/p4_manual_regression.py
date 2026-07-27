@@ -195,18 +195,18 @@ def build_report() -> dict[str, object]:
     )
     political_contracts = rows(ROOT / "docs/m6/political_profile_contracts.csv")
     require(
-        len(political_contracts) == 37
-        and len({row["reform"] for row in political_contracts}) == 37
-        and len({row["modifiers"] for row in political_contracts}) >= 30,
+        len(political_contracts) == 45
+        and len({row["reform"] for row in political_contracts}) == 45
+        and len({row["modifiers"] for row in political_contracts}) >= 34,
         "ancient appointment and political-weight contracts regressed",
         failures,
     )
     alternative_reforms = rows(ROOT / "docs/m6/alternative_reform_paths.csv")
     alternative_profiles = Counter(row["profile"] for row in alternative_reforms)
     require(
-        len(alternative_reforms) == 18
+        len(alternative_reforms) == 26
         and set(alternative_profiles.values()) == {2}
-        and len(alternative_profiles) == 9,
+        and len(alternative_profiles) == 13,
         "ancient alternative reform paths regressed",
         failures,
     )

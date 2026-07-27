@@ -1,5 +1,20 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - Bespoke reform paths inherit the entire state profile
+
+The four new major-state reform families use the same mechanism as the nine
+regional families: every alternative's potential accepts its opening reform
+and sibling alternatives, activation restores the profile's dedicated council,
+and research routing follows the profile's bounded regional branch. Changing
+reform therefore changes political emphasis without changing the polity into a
+generic steppe, royal, or sacral state.
+
+No separate reform icon was added because the locally installed government
+reform schema exposes no per-reform direct illustration contract. Introducing
+an unverified art field would create silent UI risk. The visible reform name,
+description, effects, council, orders, privileges, and unlock placement carry
+the distinction on verified engine surfaces.
+
 ## 2026-07-27 - Historically distinctive major states bypass broad political fallbacks
 
 Xiongnu, Goguryeo, Meroitic Kush, and Anuradhapura Lanka now enter through

@@ -1,5 +1,25 @@
 # Progress
 
+## 2026-07-27 - Bespoke constitutional branches for four major states
+
+- Added two research-gated reforms apiece for Xiongnu, Goguryeo, Meroitic
+  Kush, and Anuradhapura Lanka, raising the active government layer from 37 to
+  45 reforms.
+- The paths distinguish wing command from gift-circuit politics; fortress
+  lineages from a granary-centered court; dual royal households from
+  temple-domain stewardship; and reservoir kingship from Sangha endowment
+  patronage.
+- Every path has a distinct political and appointment contract, bounded
+  evidence note, complete localization, profile-gated potential, matching
+  council activation, and a deeper regional Age-I research unlock. The
+  knowledge audit now reports 611 ancient-system unlocks.
+- Raised the manual regression floor to require 45 political contracts, 26
+  alternative reforms, and exactly two branches in all 13 profiles.
+- Full validation passes 102/102 checks. Paired vanilla/mod smoke reaches
+  responsive rendered menus with zero mod-unique `error.log` lines; focused
+  evidence is in
+  `docs/playtests/S2_MAJOR_REFORM_BRANCHES_20260727.md`.
+
 ## 2026-07-27 - Four major-state political profiles
 
 - Replaced the broad political fallbacks for Xiongnu, Goguryeo, Meroitic Kush,
