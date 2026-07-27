@@ -5134,3 +5134,25 @@ Greek poleis, grain ports, strait defense, mounted households, and
 steppe-frontier negotiation justify the two branches, but no single ethnic
 bloc or fixed compact is reconstructed. Sources: `P8.1`; `P11`; `P13`; `OCD`;
 `PLE`; `ZAV-ASP`. [contested succession and institutional reconstruction]
+
+## 2026-07-27 - Four additional client courts use bounded regional functions
+
+Antipas and Philip are secure Herodian tetrarchs, but the Galilean lake court,
+Galilean-Peraean compact, Batanean highland court, and Batanean frontier
+compact are gameplay paths rather than recovered constitutions. Fisheries,
+markets, domains, ritual stores, basalt settlements, cisterns, routes, and
+highland service are represented conservatively. Sources: `P8.1`; `P11`;
+`P13`; `OCD`; `JOS-SAL`. [secure rulers; contested institutional detail]
+
+Antiochus III securely anchors Commagene. Dynastic-sanctuary display, Euphrates
+passage, orchards, highland cavalry, and Roman-Arsacid diplomacy support its
+profile without implying a complete sanctuary bureaucracy or ferry code.
+Sources: `P8.1`; `P11`; `P13`; `OCD`; `BM-COM`. [secure court; bounded
+institutional reconstruction]
+
+Iamblichus II securely anchors Emesa in AD 1, while the later Sampsigeramid
+descent remains contested. Sanctuary custody, Orontes caravan movement,
+textiles, mounted service, cultivation, and Roman patronage justify distinct
+mechanics without reconstructing exact offices or a uniform customs code.
+Sources: `P8.1`; `P11`; `P13`; `OCD`; `PLE`; `LBD-EME`. [secure opening
+court; contested descent and institutional detail]

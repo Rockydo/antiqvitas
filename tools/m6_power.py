@@ -192,6 +192,30 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "P8.1;P11;P13;OCD;PLE;ZAV-ASP", "contested",
         "The deliberately contested Bosporan succession balances royal claimants, Greek poleis, grain ports, mounted households, and steppe-frontier compacts.",
     ),
+    "antq_herodian_galilean_tetrarchy": (
+        "global_burghers_estate_power=0.10|global_nobles_estate_power=0.07|"
+        "burghers_estate_power_from_cabinet=0.18|replace_cabinet_member_cost_modifier=0.06",
+        "P8.1;P11;P13;OCD;JOS-SAL", "secure",
+        "Antipas's tetrarchy balances Herodian domains, fisheries, regional houses, ritual stores, markets, Peraean routes, and Roman confirmation.",
+    ),
+    "antq_herodian_batanean_tetrarchy": (
+        "global_tribes_estate_power=0.10|global_nobles_estate_power=0.08|"
+        "tribes_estate_power_from_cabinet=0.20|replace_cabinet_member_cost_modifier=0.07",
+        "P8.1;P11;P13;OCD", "secure",
+        "Philip's northern tetrarchy negotiates highland houses, sanctuaries, basalt settlements, cisterns, routes, horse service, and Roman patronage.",
+    ),
+    "antq_commagenean_client_kingship": (
+        "global_nobles_estate_power=0.11|global_clergy_estate_power=0.07|"
+        "nobles_estate_power_from_cabinet=0.20|replace_cabinet_member_cost_modifier=0.08",
+        "P8.1;P11;P13;OCD;BM-COM", "secure",
+        "Antiochus III's court balances dynastic houses, sanctuaries, Euphrates passage, highland cavalry, cultivation, and Roman-Arsacid diplomacy.",
+    ),
+    "antq_emesan_client_dynasty": (
+        "global_clergy_estate_power=0.10|global_burghers_estate_power=0.08|"
+        "clergy_estate_power_from_cabinet=0.18|replace_cabinet_member_cost_modifier=0.07",
+        "P8.1;P11;P13;OCD;PLE;LBD-EME", "contested",
+        "Iamblichus II's Sampsigeramid court balances dynastic houses, sanctuary custody, caravan and textile exchange, mounted service, and Roman patronage.",
+    ),
     "antq_indian_ganasangha": (
         "global_peasants_estate_power=0.10|global_burghers_estate_power=0.05|"
         "estate_power_from_cabinet=0.20|replace_cabinet_member_cost_modifier=-0.10",
@@ -486,6 +510,38 @@ ALTERNATIVE_REFORMS: tuple[tuple[str, str, str, str, str, str, str, str, str], .
      "Broker mounted service, pasture access, frontier intelligence, claimant support, and strait defense with regional households.",
      "global_tribes_estate_power=0.18|global_nobles_estate_power=0.10|tribes_estate_power_from_cabinet=0.30|replace_cabinet_member_cost_modifier=0.12",
      "P8.1;P11;P13;OCD;PLE;ZAV-ASP", "contested", "Mounted and steppe-frontier interests are defensible, but this path avoids inventing one ethnic bloc, fixed treaty, or recovered council."),
+    ("antq_galilean_lake_court", "galilean", "monarchy", "Galilean Lake Court",
+     "Center tetrarchic administration on fisheries, landing places, market measures, storage, and road peace around the lake settlements.",
+     "global_burghers_estate_power=0.18|global_peasants_estate_power=0.08|burghers_estate_power_from_cabinet=0.30|set_cabinet_member_cost_modifier=-0.05",
+     "P8.1;P11;P13;OCD;JOS-SAL", "contested", "Fisheries and market exchange are defensible functions, while one centralized lake administration or royal monopoly is not claimed."),
+    ("antq_galilean_peraean_compact", "galilean", "monarchy", "Galilean-Peraean Compact",
+     "Work through regional houses, pastoral communities, water access, road service, and witnessed local assessment across the divided tetrarchy.",
+     "global_nobles_estate_power=0.14|global_tribes_estate_power=0.12|estate_power_from_cabinet=0.26|replace_cabinet_member_cost_modifier=0.08",
+     "P8.1;P11;P13;OCD;JOS-SAL", "contested", "The geographical division and route obligations are secure contexts, but no representative compact or uniform Peraean institution is reconstructed."),
+    ("antq_batanean_highland_court", "batanean", "monarchy", "Batanean Highland Court",
+     "Concentrate sealed grants, basalt settlement works, cistern returns, sanctuary inventories, and appointed route custodians around Philip's household.",
+     "global_crown_estate_power=0.16|global_clergy_estate_power=0.08|crown_estate_power_from_cabinet=0.26|set_cabinet_member_cost_modifier=-0.06",
+     "P8.1;P11;P13;OCD", "contested", "Settlement, water, and sanctuary functions are grounded, while their concentration in a uniform tetrarchic administration remains a gameplay path."),
+    ("antq_batanean_frontier_compact", "batanean", "monarchy", "Batanean Frontier Compact",
+     "Entrust highland watch, guides, horse service, pasture and water access, and restitution to negotiated northern communities.",
+     "global_tribes_estate_power=0.20|global_nobles_estate_power=0.08|tribes_estate_power_from_cabinet=0.32|replace_cabinet_member_cost_modifier=0.11",
+     "P8.1;P11;P13;OCD", "contested", "The branch models highland and frontier service without inventing one Batanean ethnic bloc, fixed treaty, or permanent host."),
+    ("antq_commagenean_sanctuary_court", "commagenean", "monarchy", "Commagenean Sanctuary Court",
+     "Give sanctuary inventories, dynastic display, hospitality, orchard gifts, and ritual custody greater weight in royal government.",
+     "global_clergy_estate_power=0.18|global_nobles_estate_power=0.10|clergy_estate_power_from_cabinet=0.30|replace_cabinet_member_cost_modifier=0.10",
+     "P8.1;P11;P13;OCD;BM-COM", "secure", "Commagene's dynastic-sanctuary setting is secure, while this branch does not reconstruct a kingdom-wide priestly bureaucracy."),
+    ("antq_commagenean_euphrates_compact", "commagenean", "monarchy", "Euphrates Passage Compact",
+     "Entrust ferry safety, stable weights, caravan passage, landing stores, and compensation to negotiated river and merchant houses.",
+     "global_burghers_estate_power=0.18|global_nobles_estate_power=0.08|burghers_estate_power_from_cabinet=0.28|set_cabinet_member_cost_modifier=-0.04",
+     "P8.1;P11;P13;OCD;BM-COM", "contested", "Euphrates passage and exchange are secure contexts, but no complete Commagenean ferry code or merchant council is recovered."),
+    ("antq_emesan_sanctuary_court", "emesan", "monarchy", "Emesan Sanctuary Court",
+     "Center dynastic legitimacy on sanctuary stores, ritual hospitality, offerings, lamps, textiles, and protected custodianship.",
+     "global_clergy_estate_power=0.20|global_crown_estate_power=0.06|clergy_estate_power_from_cabinet=0.32|replace_cabinet_member_cost_modifier=0.11",
+     "P8.1;P11;P13;OCD;PLE;LBD-EME", "contested", "Emesa's sanctuary importance is defensible, while exact AD 1 priestly offices and their relationship to Iamblichus II remain unrecoverable."),
+    ("antq_emesan_caravan_compact", "emesan", "monarchy", "Orontes Caravan Compact",
+     "Entrust route security, pack service, textile measures, water, escorts, and compensation to caravan and city houses.",
+     "global_burghers_estate_power=0.20|global_nobles_estate_power=0.07|burghers_estate_power_from_cabinet=0.30|set_cabinet_member_cost_modifier=-0.05",
+     "P8.1;P11;P13;OCD;PLE;LBD-EME", "contested", "Caravan and urban exchange support the branch without implying a surviving uniform customs code or permanent merchant constitution."),
 )
 
 for (
@@ -525,6 +581,10 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
     "cappadocian": ("antq_cappadocian_client_kingship",),
     "thracian": ("antq_odrysian_client_kingship",),
     "bosporan": ("antq_bosporan_client_kingship",),
+    "galilean": ("antq_herodian_galilean_tetrarchy",),
+    "batanean": ("antq_herodian_batanean_tetrarchy",),
+    "commagenean": ("antq_commagenean_client_kingship",),
+    "emesan": ("antq_emesan_client_dynasty",),
 }
 PROFILE_PARLIAMENTS = {
     "roman": "antq_roman_senate",
@@ -552,6 +612,10 @@ PROFILE_PARLIAMENTS = {
     "cappadocian": "antq_cappadocian_royal_council",
     "thracian": "antq_thracian_royal_council",
     "bosporan": "antq_bosporan_royal_council",
+    "galilean": "antq_galilean_tetrarchic_council",
+    "batanean": "antq_batanean_tetrarchic_council",
+    "commagenean": "antq_commagenean_royal_council",
+    "emesan": "antq_emesan_dynastic_council",
 }
 
 
@@ -1048,14 +1112,14 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    if len(POLITICAL_CONTRACTS) != 81 or not used_reforms.issubset(POLITICAL_CONTRACTS):
+    if len(POLITICAL_CONTRACTS) != 93 or not used_reforms.issubset(POLITICAL_CONTRACTS):
         failures.append(
-            "political appointment contracts must cover 31 core and 50 alternative reforms"
+            "political appointment contracts must cover 35 core and 58 alternative reforms"
         )
-    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 70:
+    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 80:
         failures.append("political appointment contracts are insufficiently differentiated")
     alternative_profiles = [row[1] for row in ALTERNATIVE_REFORMS]
-    if len(ALTERNATIVE_REFORMS) != 50 or any(
+    if len(ALTERNATIVE_REFORMS) != 58 or any(
         alternative_profiles.count(profile) != 2
         for profile in {
             "roman", "han", "iranian", "civic", "gana", "steppe", "tribal",
@@ -1063,6 +1127,7 @@ def load_power_data() -> PowerData:
             "armenian", "nabataean", "himyarite", "satavahana",
             "catuvellaunian", "marcomannic", "sabaean", "mauretanian",
             "judean", "cappadocian", "thracian", "bosporan",
+            "galilean", "batanean", "commagenean", "emesan",
         }
     ):
         failures.append("alternative reforms must provide two paths for every political profile")
@@ -1542,6 +1607,50 @@ antq_bosporan_client_kingship = {
 	}
 	years = 2
 }
+
+antq_herodian_galilean_tetrarchy = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_burghers_estate_power = 0.07
+		global_nobles_estate_power = 0.04
+		research_speed = 0.10
+	}
+	years = 2
+}
+
+antq_herodian_batanean_tetrarchy = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_tribes_estate_power = 0.07
+		global_nobles_estate_power = 0.05
+		research_speed = 0.10
+	}
+	years = 2
+}
+
+antq_commagenean_client_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.07
+		global_clergy_estate_power = 0.05
+		research_speed = 0.10
+	}
+	years = 2
+}
+
+antq_emesan_client_dynasty = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_clergy_estate_power = 0.07
+		global_burghers_estate_power = 0.05
+		research_speed = 0.10
+	}
+	years = 2
+}
 """
     parliament_by_reform = {
         reform: PROFILE_PARLIAMENTS[profile]
@@ -1705,6 +1814,14 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_odrysian_client_kingship_desc", "Rhoemetalces's court balancing dynastic claimants, mounted retainers, mountain communities, Aegean cities, and Roman intervention."),
         ("antq_bosporan_client_kingship", "Bosporan Client Kingship"),
         ("antq_bosporan_client_kingship_desc", "A contested Bosporan succession balancing royal claimants, Greek poleis, grain ports, mounted households, and steppe-frontier compacts."),
+        ("antq_herodian_galilean_tetrarchy", "Herodian Galilean Tetrarchy"),
+        ("antq_herodian_galilean_tetrarchy_desc", "Antipas's tetrarchy balancing Herodian domains, lake fisheries, Galilean and Peraean routes, ritual stores, markets, and Roman confirmation."),
+        ("antq_herodian_batanean_tetrarchy", "Herodian Batanean Tetrarchy"),
+        ("antq_herodian_batanean_tetrarchy_desc", "Philip's northern tetrarchy balancing highland houses, sanctuaries, basalt settlements, cisterns, routes, horse service, and Roman patronage."),
+        ("antq_commagenean_client_kingship", "Commagenean Client Kingship"),
+        ("antq_commagenean_client_kingship_desc", "Antiochus III's court balancing dynastic houses, sanctuaries, Euphrates passage, highland cavalry, cultivation, and Roman-Arsacid diplomacy."),
+        ("antq_emesan_client_dynasty", "Emesan Client Dynasty"),
+        ("antq_emesan_client_dynasty_desc", "Iamblichus II's Sampsigeramid court balancing dynastic houses, sanctuary custody, caravan and textile exchange, mounted service, and Roman patronage."),
         ("antq_indian_ganasangha", "Indian Ganasangha"),
         ("antq_indian_ganasangha_desc", "A clan-based republican council represented through the installed republic government type."),
         ("antq_indo_scythian_kingship", "Indo-Scythian Kingship"),

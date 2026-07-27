@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-27 - Remaining named Tier-1 client courts receive full profiles
+
+- Replaced `antq_client_monarchy` for Herod Antipas's Galilee-Peraea, Philip's
+  Batanea, Antiochus III's Commagene, and Iamblichus II's Emesa.
+- Added four base reforms, eight research alternatives, four councils, twenty
+  programmes, twelve issue/agenda pairs, twenty-four order names, and
+  twenty-four privileges. Eight reviewed 3x2 atlases provide forty-eight new
+  direct political and privilege assets with blank, uninscribed objects.
+- Installed breadth is now 29 councils, 145 programmes, 87 issues, 87 agendas,
+  93 political contracts, 244 privileges, 779 ancient-system unlocks, and 940
+  direct UI chains. All 292 opening profiles remain researchable.
+- `make validate` passes 103/103 commands. Paired vanilla/mod smoke reaches
+  responsive rendered menus and reports zero new or mod-unique `error.log`
+  lines. Evidence: `docs/playtests/S2_NAMED_CLIENT_COURTS_II_20260727.md`.
+
 ## 2026-07-27 - Four Roman client courts receive complete political profiles
 
 - Replaced the shared client-monarchy fallback for Herodian Judea, Cappadocia,

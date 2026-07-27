@@ -1990,3 +1990,323 @@ antq_bosporan_steppe_frontier_compacts = {
 		land_morale_modifier = 0.01
 	}
 }
+
+antq_galilean_lake_fishery_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_galilean_tetrarchy
+			has_reform = government_reform:antq_galilean_lake_court
+			has_reform = government_reform:antq_galilean_peraean_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_pop_food_consumption = -0.01
+		global_production_efficiency = 0.025
+	}
+}
+
+antq_galilean_peraean_road_dispatches = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_galilean_tetrarchy
+			has_reform = government_reform:antq_galilean_lake_court
+			has_reform = government_reform:antq_galilean_peraean_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_supply_limit_modifier = 0.05
+		global_road_building_time = -0.05
+	}
+}
+
+antq_galilean_market_measure_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_galilean_tetrarchy
+			has_reform = government_reform:antq_galilean_lake_court
+			has_reform = government_reform:antq_galilean_peraean_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_trade_through_owned_territory_efficiency = 0.05
+		global_burghers_estate_power = 0.025
+	}
+}
+
+antq_galilean_domain_olive_grain_accounts = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_galilean_tetrarchy
+			has_reform = government_reform:antq_galilean_lake_court
+			has_reform = government_reform:antq_galilean_peraean_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		country_cabinet_efficiency = 0.025
+		global_monthly_control = 0.0025
+	}
+}
+
+antq_galilean_roman_patron_petitions = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_galilean_tetrarchy
+			has_reform = government_reform:antq_galilean_lake_court
+			has_reform = government_reform:antq_galilean_peraean_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_prestige = 0.05
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_batanean_basalt_cistern_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_batanean_tetrarchy
+			has_reform = government_reform:antq_batanean_highland_court
+			has_reform = government_reform:antq_batanean_frontier_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_pop_food_consumption = -0.01
+		global_production_efficiency = 0.025
+	}
+}
+
+antq_batanean_highland_route_watch = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_batanean_tetrarchy
+			has_reform = government_reform:antq_batanean_highland_court
+			has_reform = government_reform:antq_batanean_frontier_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_supply_limit_modifier = 0.05
+		global_road_building_time = -0.05
+	}
+}
+
+antq_batanean_sanctuary_store_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_batanean_tetrarchy
+			has_reform = government_reform:antq_batanean_highland_court
+			has_reform = government_reform:antq_batanean_frontier_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_clergy_estate_power = 0.025
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_batanean_horse_frontier_muster = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_batanean_tetrarchy
+			has_reform = government_reform:antq_batanean_highland_court
+			has_reform = government_reform:antq_batanean_frontier_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.01
+	}
+}
+
+antq_batanean_roman_client_embassies = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_batanean_tetrarchy
+			has_reform = government_reform:antq_batanean_highland_court
+			has_reform = government_reform:antq_batanean_frontier_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_prestige = 0.05
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_commagenean_royal_domain_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_commagenean_client_kingship
+			has_reform = government_reform:antq_commagenean_sanctuary_court
+			has_reform = government_reform:antq_commagenean_euphrates_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_pop_food_consumption = -0.01
+		global_production_efficiency = 0.025
+	}
+}
+
+antq_commagenean_euphrates_ferry_measures = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_commagenean_client_kingship
+			has_reform = government_reform:antq_commagenean_sanctuary_court
+			has_reform = government_reform:antq_commagenean_euphrates_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_trade_through_owned_territory_efficiency = 0.05
+		global_burghers_estate_power = 0.025
+	}
+}
+
+antq_commagenean_sanctuary_inventory_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_commagenean_client_kingship
+			has_reform = government_reform:antq_commagenean_sanctuary_court
+			has_reform = government_reform:antq_commagenean_euphrates_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_clergy_estate_power = 0.025
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_commagenean_highland_cavalry_muster = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_commagenean_client_kingship
+			has_reform = government_reform:antq_commagenean_sanctuary_court
+			has_reform = government_reform:antq_commagenean_euphrates_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.01
+	}
+}
+
+antq_commagenean_roman_arsacid_embassies = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_commagenean_client_kingship
+			has_reform = government_reform:antq_commagenean_sanctuary_court
+			has_reform = government_reform:antq_commagenean_euphrates_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_prestige = 0.05
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_emesan_sanctuary_store_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_emesan_client_dynasty
+			has_reform = government_reform:antq_emesan_sanctuary_court
+			has_reform = government_reform:antq_emesan_caravan_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_clergy_estate_power = 0.025
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_emesan_orontes_caravan_dispatches = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_emesan_client_dynasty
+			has_reform = government_reform:antq_emesan_sanctuary_court
+			has_reform = government_reform:antq_emesan_caravan_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_supply_limit_modifier = 0.05
+		global_road_building_time = -0.05
+	}
+}
+
+antq_emesan_mounted_retinue_muster = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_emesan_client_dynasty
+			has_reform = government_reform:antq_emesan_sanctuary_court
+			has_reform = government_reform:antq_emesan_caravan_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.01
+	}
+}
+
+antq_emesan_city_textile_measures = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_emesan_client_dynasty
+			has_reform = government_reform:antq_emesan_sanctuary_court
+			has_reform = government_reform:antq_emesan_caravan_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_trade_through_owned_territory_efficiency = 0.05
+		global_burghers_estate_power = 0.025
+	}
+}
+
+antq_emesan_roman_patron_embassies = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_emesan_client_dynasty
+			has_reform = government_reform:antq_emesan_sanctuary_court
+			has_reform = government_reform:antq_emesan_caravan_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_prestige = 0.05
+		country_cabinet_efficiency = 0.02
+	}
+}

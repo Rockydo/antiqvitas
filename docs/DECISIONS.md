@@ -3670,3 +3670,17 @@ government row.
 Art uses archaeological still lifes without people, writing, heraldry, or
 post-antique material. Generated pseudo-writing is an automatic rejection:
 three seal motifs were regenerated before their hashes were accepted.
+
+## 2026-07-27 - Named Tier-1 clients take priority over anonymous political floors
+
+After Judea, Cappadocia, Thrace, and Bosporus, the next political-depth tranche
+targets Galilee-Peraea, Batanea, Commagene, and Emesa. All four are Tier-1
+opening states with named source-supported rulers and were still using the
+shared client-monarchy profile. Promoting them before anonymous Tarim kingdoms
+or broad tribal families maximizes visible historical specificity without
+inventing rulers or institutions.
+
+The profile contract remains atomic: opening reform, two research alternatives,
+council, programmes, issues/agendas, order labels, privileges, localization,
+and two pinned atlases move together. Shared Roman patronage remains a
+diplomatic constraint; it is not a shared constitution.

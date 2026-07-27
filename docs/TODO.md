@@ -5,7 +5,7 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review. (Validated by the 916-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
+- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review. (Validated by the 940-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
   - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
 ## Second manual playtest remediation — 2026-07-26 (resume here)
@@ -44,7 +44,7 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 81 reforms and 220 privileges
+  thin outside the first replacement tranches: 93 reforms and 244 privileges
   serve 292 opening polities. The legal layer now has 227 ancient groups,
   including 182 profile laws with 584 total options, a 26-option dated
   development layer, and 12 country-specific exceptions.
@@ -141,8 +141,8 @@ and focused runtime probe all pass.
   - [ ] Replace required gameplay breadth at both definition and
     unlock/reference layers. Preserve only locally proven engine adapters, and
     guarantee that their names, descriptions, icons, and effects cannot surface.
-    Existing namespaced ancient content remains active (220 privileges, 227 laws,
-    81 reforms).
+    Existing namespaced ancient content remains active (244 privileges, 227 laws,
+    93 reforms).
     - [x] Supply the first deep council/state-office replacement tranche:
       nine reform-driven council profiles, 45 profile-locked administrative
       programmes, 27 issues, 27 agendas, 54 outcome/concession modifiers, and
@@ -219,6 +219,13 @@ and focused runtime probe all pass.
         privileges, 743 ancient-system unlocks, and 916 direct UI asset chains.
         All 292 opening countries remain researchable; paired smoke adds zero
         mod-unique error lines.
+      - [x] Replace the remaining four named Tier-1 client-monarchy fallbacks
+        for Herodian Galilee-Peraea, Herodian Batanea, Commagene, and Emesa.
+        Each receives the full three-reform profile contract and 12 direct art
+        chains. Installed breadth is now 29 councils, 145 programmes, 87
+        issues, 87 agendas, 93 political contracts, 244 privileges, 779
+        ancient-system unlocks, and 940 direct UI chains. All 292 opening
+        countries remain researchable; paired smoke adds zero mod-unique lines.
       - [x] Add the first dated legal-development layer: two options for every
         one of the 13 legal profiles, 26 total, spanning AD 25-382. All gates
         use `AntqDate`, each option has a distinct three-effect package and an
@@ -632,6 +639,10 @@ and focused runtime probe all pass.
     profile contracts. The generated layer now contains 25 councils, 125
     programmes, 75 issues, 75 agendas, 150 profile grants, 150 direct political
     icons, and 174 direct profile-plus-country privilege icons.
+  - [x] Replace the remaining named Tier-1 client-monarchy fallbacks for
+    Galilee-Peraea, Batanea, Commagene, and Emesa. The generated layer now has
+    29 councils, 145 programmes, 87 issues, 87 agendas, 174 direct political
+    icons, and 198 direct profile-plus-country privilege icons.
   - [ ] Expand major profiles beyond the nine-family regional floor and test
     focused Roman, Han, Iranian, civic, and assembly panels without requiring
     long playthroughs. Add further country-specific appointment logic only

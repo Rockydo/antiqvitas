@@ -154,6 +154,10 @@ CONTENT_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
         ("unlock_government_reform", "antq_cappadocian_client_kingship"),
         ("unlock_government_reform", "antq_odrysian_client_kingship"),
         ("unlock_government_reform", "antq_bosporan_client_kingship"),
+        ("unlock_government_reform", "antq_herodian_galilean_tetrarchy"),
+        ("unlock_government_reform", "antq_herodian_batanean_tetrarchy"),
+        ("unlock_government_reform", "antq_commagenean_client_kingship"),
+        ("unlock_government_reform", "antq_emesan_client_dynasty"),
     ),
     "antq_imperial_chancery": (
         ("unlock_government_reform", "antq_dominate"),
@@ -515,6 +519,10 @@ S2_ESTATE_ADVANCE_PROFILES: dict[str, tuple[str, ...]] = {
     "cappadocian": ("hellenic",),
     "thracian": ("hellenic",),
     "bosporan": ("hellenic", "iranian_steppe"),
+    "galilean": ("near_eastern",),
+    "batanean": ("near_eastern",),
+    "commagenean": ("near_eastern", "hellenic"),
+    "emesan": ("near_eastern",),
 }
 
 # Each engine age contains five compact trees. The first four ages use two

@@ -276,6 +276,50 @@
 	}
 
 	text = {
+		localization_key = antq_estate_galilean_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_galilean_tetrarchy
+				has_reform = government_reform:antq_galilean_lake_court
+				has_reform = government_reform:antq_galilean_peraean_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_batanean_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_batanean_tetrarchy
+				has_reform = government_reform:antq_batanean_highland_court
+				has_reform = government_reform:antq_batanean_frontier_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_commagenean_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_commagenean_client_kingship
+				has_reform = government_reform:antq_commagenean_sanctuary_court
+				has_reform = government_reform:antq_commagenean_euphrates_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_emesan_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_emesan_client_dynasty
+				has_reform = government_reform:antq_emesan_sanctuary_court
+				has_reform = government_reform:antq_emesan_caravan_compact
+			}
+		}
+	}
+
+	text = {
 		localization_key = crown_estate_holy_order
 		trigger = {
 			has_reform = government_reform:military_order_reform
@@ -626,6 +670,50 @@ nobles_estate = {
 				has_reform = government_reform:antq_bosporan_client_kingship
 				has_reform = government_reform:antq_bosporan_polis_court
 				has_reform = government_reform:antq_bosporan_steppe_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_galilean_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_galilean_tetrarchy
+				has_reform = government_reform:antq_galilean_lake_court
+				has_reform = government_reform:antq_galilean_peraean_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_batanean_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_batanean_tetrarchy
+				has_reform = government_reform:antq_batanean_highland_court
+				has_reform = government_reform:antq_batanean_frontier_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_commagenean_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_commagenean_client_kingship
+				has_reform = government_reform:antq_commagenean_sanctuary_court
+				has_reform = government_reform:antq_commagenean_euphrates_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_emesan_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_emesan_client_dynasty
+				has_reform = government_reform:antq_emesan_sanctuary_court
+				has_reform = government_reform:antq_emesan_caravan_compact
 			}
 		}
 	}
@@ -1231,6 +1319,50 @@ burghers_estate = {
 	}
 
 	text = {
+		localization_key = antq_estate_galilean_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_galilean_tetrarchy
+				has_reform = government_reform:antq_galilean_lake_court
+				has_reform = government_reform:antq_galilean_peraean_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_batanean_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_batanean_tetrarchy
+				has_reform = government_reform:antq_batanean_highland_court
+				has_reform = government_reform:antq_batanean_frontier_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_commagenean_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_commagenean_client_kingship
+				has_reform = government_reform:antq_commagenean_sanctuary_court
+				has_reform = government_reform:antq_commagenean_euphrates_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_emesan_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_emesan_client_dynasty
+				has_reform = government_reform:antq_emesan_sanctuary_court
+				has_reform = government_reform:antq_emesan_caravan_compact
+			}
+		}
+	}
+
+	text = {
 		localization_key = burghers_estate_greek
 		trigger = {
 			OR = {
@@ -1716,6 +1848,50 @@ clergy_estate = {
 				has_reform = government_reform:antq_bosporan_client_kingship
 				has_reform = government_reform:antq_bosporan_polis_court
 				has_reform = government_reform:antq_bosporan_steppe_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_galilean_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_galilean_tetrarchy
+				has_reform = government_reform:antq_galilean_lake_court
+				has_reform = government_reform:antq_galilean_peraean_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_batanean_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_batanean_tetrarchy
+				has_reform = government_reform:antq_batanean_highland_court
+				has_reform = government_reform:antq_batanean_frontier_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_commagenean_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_commagenean_client_kingship
+				has_reform = government_reform:antq_commagenean_sanctuary_court
+				has_reform = government_reform:antq_commagenean_euphrates_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_emesan_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_emesan_client_dynasty
+				has_reform = government_reform:antq_emesan_sanctuary_court
+				has_reform = government_reform:antq_emesan_caravan_compact
 			}
 		}
 	}
@@ -2215,6 +2391,50 @@ peasants_estate = {
 				has_reform = government_reform:antq_bosporan_client_kingship
 				has_reform = government_reform:antq_bosporan_polis_court
 				has_reform = government_reform:antq_bosporan_steppe_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_galilean_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_galilean_tetrarchy
+				has_reform = government_reform:antq_galilean_lake_court
+				has_reform = government_reform:antq_galilean_peraean_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_batanean_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_batanean_tetrarchy
+				has_reform = government_reform:antq_batanean_highland_court
+				has_reform = government_reform:antq_batanean_frontier_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_commagenean_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_commagenean_client_kingship
+				has_reform = government_reform:antq_commagenean_sanctuary_court
+				has_reform = government_reform:antq_commagenean_euphrates_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_emesan_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_emesan_client_dynasty
+				has_reform = government_reform:antq_emesan_sanctuary_court
+				has_reform = government_reform:antq_emesan_caravan_compact
 			}
 		}
 	}
@@ -2726,6 +2946,50 @@ tribes_estate = {
 				has_reform = government_reform:antq_bosporan_client_kingship
 				has_reform = government_reform:antq_bosporan_polis_court
 				has_reform = government_reform:antq_bosporan_steppe_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_galilean_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_galilean_tetrarchy
+				has_reform = government_reform:antq_galilean_lake_court
+				has_reform = government_reform:antq_galilean_peraean_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_batanean_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_batanean_tetrarchy
+				has_reform = government_reform:antq_batanean_highland_court
+				has_reform = government_reform:antq_batanean_frontier_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_commagenean_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_commagenean_client_kingship
+				has_reform = government_reform:antq_commagenean_sanctuary_court
+				has_reform = government_reform:antq_commagenean_euphrates_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_emesan_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_emesan_client_dynasty
+				has_reform = government_reform:antq_emesan_sanctuary_court
+				has_reform = government_reform:antq_emesan_caravan_compact
 			}
 		}
 	}

@@ -607,6 +607,90 @@ PROFILES = (
             m("steppe_frontier_terms", "Steppe Frontier Terms", "Set bounded mounted, escort, gift, and pasture obligations.", "Frontier Community Compact", "Mounted and pastoral communities request recognized access and restitution.", "tribes_estate", MIL, TRIBES),
         ),
     ),
+    Profile(
+        "galilean", "antq_galilean_tetrarchic_council", "Sepphoris Tetrarchic Council",
+        "Herod Antipas's court coordinates Herodian domains, lake fisheries, Galilean and Peraean roads, market measures, ritual stores, cultivation, and obligations under Roman patronage.",
+        ("antq_herodian_galilean_tetrarchy", "antq_galilean_lake_court", "antq_galilean_peraean_compact"),
+        ("nobles_estate", "clergy_estate", "burghers_estate"),
+        "galilean_court_atlas.png", "36c8991e57906b049c5a1fe67b6c475dbae2045405e018d8f3e2ea977e0dca4d",
+        "P8.1;P11;P13;OCD;JOS-SAL", "secure",
+        "Antipas's tetrarchy is secure; fishery, market, domain, ritual, and road interfaces are bounded gameplay functions rather than a reconstructed Galilean constitution.",
+        (
+            a("lake_fishery_returns", "Lake Fishery Returns", "Review boats, nets, landing places, preserved fish, measured shares, and restitution without inventing one royal fishing monopoly.", "adm", FOOD),
+            a("peraean_road_dispatches", "Peraean Road Dispatches", "Coordinate guides, lamps, water, repairs, pack service, and compensation across the Jordanian routes.", "dip", LOGISTICS),
+            a("market_measure_returns", "Market Measure Returns", "Inspect balances, jars, baskets, fish measures, and bounded dues at connected settlements.", "adm", TRADE),
+            a("domain_olive_grain_accounts", "Domain Olive and Grain Accounts", "Review Herodian estates, olives, grain, storage, and cultivating obligations under witnessed measures.", "adm", ADMIN),
+            a("roman_patron_petitions", "Roman Patron Petitions", "Prepare interpreters, gifts, guarantees, fiscal petitions, and dynastic standing for the patron court.", "dip", PRESTIGE),
+        ),
+        (
+            m("domain_assessment", "Herodian Domain Assessment", "Set bounded estate, cultivation, transport, and market obligations.", "Regional-House Hearing", "Herodian and regional houses request witnessed possession and limits on extraordinary demands.", "nobles_estate", ADMIN, NOBLES),
+            m("ritual_store_review", "Ritual Store Review", "Witness protected lamps, vessels, oil, grain, and hospitality stores.", "Ritual Custodian Petition", "Religious custodians request predictable inventories and requisition limits.", "clergy_estate", CLERGY, CLERGY),
+            m("lake_market_measure", "Lake and Market Measure", "Balance fishery access, safe landing, stable measures, and court receipts.", "Fisher and Market Petition", "Fishery, craft, and exchange households seek predictable dues and restitution.", "burghers_estate", TRADE, TRADE),
+        ),
+    ),
+    Profile(
+        "batanean", "antq_batanean_tetrarchic_council", "Panias Tetrarchic Council",
+        "Philip's northern Herodian court coordinates basalt settlements, cisterns, highland routes, sanctuary stores, cultivation, pastoral service, and frontier obligations under Roman patronage.",
+        ("antq_herodian_batanean_tetrarchy", "antq_batanean_highland_court", "antq_batanean_frontier_compact"),
+        ("nobles_estate", "clergy_estate", "tribes_estate"),
+        "batanean_court_atlas.png", "e167dc00c22889c9d35ddfc344b4d9c9276bfb8afcdec63028b9ed62f5120f56",
+        "P8.1;P11;P13;OCD", "secure",
+        "Philip's tetrarchy is secure; basalt, cistern, sanctuary, highland, and frontier interfaces remain conservative adapters rather than a recovered Batanean office hierarchy.",
+        (
+            a("basalt_cistern_returns", "Basalt and Cistern Returns", "Coordinate masonry, jars, cistern clearing, measured water access, and bounded settlement labor.", "adm", FOOD),
+            a("highland_route_watch", "Highland Route Watch", "Maintain guides, cairns, signals, lamps, road repairs, and restitution across northern routes.", "dip", LOGISTICS),
+            a("sanctuary_store_returns", "Sanctuary Store Returns", "Witness lamps, offerings, vessels, textiles, and protected hospitality without centralizing every cult.", "adm", CLERGY),
+            a("horse_frontier_muster", "Horse and Frontier Muster", "Register mounts, tack, spear fittings, feed, guides, and bounded seasons of service.", "mil", MIL),
+            a("roman_client_embassies", "Roman Client Embassies", "Coordinate interpreters, guarantees, petitions, gifts, and tetrarchic standing with the patron court.", "dip", PRESTIGE),
+        ),
+        (
+            m("highland_house_service", "Highland-House Service", "Set witnessed possession, hospitality, horse, and route duties among leading houses.", "Highland-House Petition", "Leading households seek recognized precedence and bounded service terms.", "nobles_estate", ADMIN, NOBLES),
+            m("sanctuary_inventory", "Northern Sanctuary Inventory", "Review protected vessels, lamps, offerings, textiles, and guest supplies.", "Sanctuary Custodian Petition", "Cult custodians request stable stores and limits on extraordinary requisition.", "clergy_estate", CLERGY, CLERGY),
+            m("frontier_rotation", "Mountain Frontier Rotation", "Set bounded guide, signal, water, horse, and watch obligations.", "Frontier Community Compact", "Highland communities seek recognized rotations, water access, and restitution.", "tribes_estate", LOGISTICS, TRIBES),
+        ),
+    ),
+    Profile(
+        "commagenean", "antq_commagenean_royal_council", "Samosata Royal Council",
+        "Antiochus III's court coordinates royal and dynastic houses, Euphrates crossings, sanctuaries, highland cavalry, orchards, cultivation, and diplomacy between Rome and Arsacid Iran.",
+        ("antq_commagenean_client_kingship", "antq_commagenean_sanctuary_court", "antq_commagenean_euphrates_compact"),
+        ("nobles_estate", "clergy_estate", "burghers_estate"),
+        "commagenean_court_atlas.png", "6c266ebc2c50dd94e1f52a1a5d2bfd406c2cf138af4a5d64924d9359c6bf2122",
+        "P8.1;P11;P13;OCD;BM-COM", "secure",
+        "Antiochus III and Commagene's client setting are secure; the exact court, sanctuary, ferry, and highland competences remain bounded reconstructions.",
+        (
+            a("royal_domain_returns", "Commagenean Domain Returns", "Review orchards, grain, vines, storage, and bounded cultivating obligations without inventing a uniform cadastre.", "adm", FOOD),
+            a("euphrates_ferry_measures", "Euphrates Ferry Measures", "Coordinate ropes, boats, pilots, weights, landing stores, assessed passage, and restitution.", "dip", TRADE),
+            a("sanctuary_inventory_returns", "Sanctuary Inventory Returns", "Witness offerings, incense, lamps, vessels, and hospitality without projecting one centralized priesthood.", "adm", CLERGY),
+            a("highland_cavalry_muster", "Commagenean Cavalry Muster", "Register horses, tack, scale fittings, spears, feed, and bounded seasonal service.", "mil", MIL),
+            a("roman_arsacid_embassies", "Roman and Arsacid Embassies", "Coordinate interpreters, gifts, guarantees, hostages, and dynastic standing between neighboring powers.", "dip", PRESTIGE),
+        ),
+        (
+            m("dynastic_domain_hearing", "Dynastic Domain Hearing", "Set witnessed possession, contribution, and mounted-service terms among royal and highland houses.", "Highland Dynast Petition", "Leading houses request recognized precedence and bounded royal demands.", "nobles_estate", ADMIN, NOBLES),
+            m("sanctuary_inventory", "Commagenean Sanctuary Inventory", "Review protected offerings, vessels, lamps, incense, and guest stores.", "Sanctuary Custodian Petition", "Cult custodians seek stable inventories and requisition limits.", "clergy_estate", CLERGY, CLERGY),
+            m("euphrates_passage", "Euphrates Passage Measure", "Balance ferry safety, stable weights, landing obligations, and court receipts.", "Ferry and Merchant Petition", "River and exchange households seek predictable dues and enforceable restitution.", "burghers_estate", TRADE, TRADE),
+        ),
+    ),
+    Profile(
+        "emesan", "antq_emesan_dynastic_council", "Emesan Dynastic Council",
+        "Iamblichus II's Sampsigeramid court coordinates dynastic households, sanctuary stores, Orontes routes, caravan and textile exchange, mounted service, cultivation, and Roman patronage.",
+        ("antq_emesan_client_dynasty", "antq_emesan_sanctuary_court", "antq_emesan_caravan_compact"),
+        ("nobles_estate", "clergy_estate", "burghers_estate"),
+        "emesan_court_atlas.png", "4853471711798ca4eb0a2422e81435e4b66a7b8cc58f2b47037a5105f63dc21b",
+        "P8.1;P11;P13;OCD;PLE;LBD-EME", "contested",
+        "Iamblichus II's AD 1 court is secure, while the later descent line and exact sanctuary, caravan, military, and urban office hierarchy remain explicitly contested.",
+        (
+            a("sanctuary_store_returns", "Emesan Sanctuary Returns", "Witness lamps, incense, vessels, textiles, offerings, and hospitality without inventing a complete priestly administration.", "adm", CLERGY),
+            a("orontes_caravan_dispatches", "Orontes Caravan Dispatches", "Coordinate pack service, amphorae, rope, water, escorts, weights, and compensation along connected routes.", "dip", LOGISTICS),
+            a("mounted_retinue_muster", "Mounted Retinue Muster", "Register horses, tack, arrows, spear fittings, feed, gifts, and bounded seasons of service.", "mil", MIL),
+            a("city_textile_measures", "City and Textile Measures", "Inspect dyed wool, balances, jars, workshop obligations, storage, and bounded market dues.", "adm", TRADE),
+            a("roman_patron_embassies", "Roman Patron Embassies", "Prepare interpreters, gifts, guarantees, petitions, and dynastic standing for Roman-facing diplomacy.", "dip", PRESTIGE),
+        ),
+        (
+            m("dynastic_house_hearing", "Sampsigeramid House Hearing", "Set witnessed access, possession, hospitality, and mounted-service terms among court houses.", "Dynastic-House Petition", "Royal and regional houses request precedence and limits on extraordinary service.", "nobles_estate", PRESTIGE, NOBLES),
+            m("sanctuary_stores", "Emesan Sanctuary Stores", "Review protected lamps, incense, offerings, vessels, textiles, and guest supplies.", "Sanctuary Custodian Petition", "Cult custodians request recognized stores and predictable requisition limits.", "clergy_estate", CLERGY, CLERGY),
+            m("caravan_city_measures", "Caravan and City Measures", "Balance route security, workshop measures, market dues, and court receipts.", "Caravan and Artisan Petition", "Exchange and specialist households seek secure passage and stable measures.", "burghers_estate", TRADE, TRADE),
+        ),
+    ),
 )
 
 COUNCIL_DYNAMICS: dict[str, tuple[str, tuple[tuple[str, str], ...]]] = {
@@ -709,6 +793,22 @@ COUNCIL_DYNAMICS: dict[str, tuple[str, tuple[tuple[str, str], ...]]] = {
     "bosporan": (
         "0.10",
         (("nobles_estate", "0.16"), ("burghers_estate", "0.20"), ("tribes_estate", "0.12")),
+    ),
+    "galilean": (
+        "0.10",
+        (("nobles_estate", "0.14"), ("clergy_estate", "0.12"), ("burghers_estate", "0.18")),
+    ),
+    "batanean": (
+        "0.10",
+        (("nobles_estate", "0.16"), ("clergy_estate", "0.10"), ("tribes_estate", "0.18")),
+    ),
+    "commagenean": (
+        "0.10",
+        (("nobles_estate", "0.20"), ("clergy_estate", "0.12"), ("burghers_estate", "0.12")),
+    ),
+    "emesan": (
+        "0.10",
+        (("nobles_estate", "0.18"), ("clergy_estate", "0.16"), ("burghers_estate", "0.14")),
     ),
 }
 

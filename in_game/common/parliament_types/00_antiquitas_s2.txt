@@ -696,3 +696,115 @@ antq_bosporan_royal_council = {
 		tribes_estate_agenda_impact = 0.12
 	}
 }
+
+antq_galilean_tetrarchic_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_galilean_tetrarchy
+			has_reform = government_reform:antq_galilean_lake_court
+			has_reform = government_reform:antq_galilean_peraean_compact
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_herodian_galilean_tetrarchy
+			has_reform = government_reform:antq_galilean_lake_court
+			has_reform = government_reform:antq_galilean_peraean_compact
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		clergy_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.10
+		nobles_estate_agenda_impact = 0.14
+		clergy_estate_agenda_impact = 0.12
+		burghers_estate_agenda_impact = 0.18
+	}
+}
+
+antq_batanean_tetrarchic_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_batanean_tetrarchy
+			has_reform = government_reform:antq_batanean_highland_court
+			has_reform = government_reform:antq_batanean_frontier_compact
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_herodian_batanean_tetrarchy
+			has_reform = government_reform:antq_batanean_highland_court
+			has_reform = government_reform:antq_batanean_frontier_compact
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		clergy_estate_can_participate_in_parliament = yes
+		tribes_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.10
+		nobles_estate_agenda_impact = 0.16
+		clergy_estate_agenda_impact = 0.10
+		tribes_estate_agenda_impact = 0.18
+	}
+}
+
+antq_commagenean_royal_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_commagenean_client_kingship
+			has_reform = government_reform:antq_commagenean_sanctuary_court
+			has_reform = government_reform:antq_commagenean_euphrates_compact
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_commagenean_client_kingship
+			has_reform = government_reform:antq_commagenean_sanctuary_court
+			has_reform = government_reform:antq_commagenean_euphrates_compact
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		clergy_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.10
+		nobles_estate_agenda_impact = 0.20
+		clergy_estate_agenda_impact = 0.12
+		burghers_estate_agenda_impact = 0.12
+	}
+}
+
+antq_emesan_dynastic_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_emesan_client_dynasty
+			has_reform = government_reform:antq_emesan_sanctuary_court
+			has_reform = government_reform:antq_emesan_caravan_compact
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_emesan_client_dynasty
+			has_reform = government_reform:antq_emesan_sanctuary_court
+			has_reform = government_reform:antq_emesan_caravan_compact
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		clergy_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.10
+		nobles_estate_agenda_impact = 0.18
+		clergy_estate_agenda_impact = 0.16
+		burghers_estate_agenda_impact = 0.14
+	}
+}

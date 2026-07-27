@@ -975,3 +975,159 @@ antq_agenda_bosporan_steppe_frontier_terms = {
 	}
 	chance = 10
 }
+
+antq_agenda_galilean_domain_assessment = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_galilean_tetrarchic_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_galilean_domain_assessment_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_galilean_ritual_store_review = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_galilean_tetrarchic_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_galilean_ritual_store_review_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_galilean_lake_market_measure = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_galilean_tetrarchic_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_galilean_lake_market_measure_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_batanean_highland_house_service = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_batanean_tetrarchic_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_batanean_highland_house_service_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_batanean_sanctuary_inventory = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_batanean_tetrarchic_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_batanean_sanctuary_inventory_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_batanean_frontier_rotation = {
+	type = country
+	estate = tribes_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_batanean_tetrarchic_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_batanean_frontier_rotation_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_commagenean_dynastic_domain_hearing = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_commagenean_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_commagenean_dynastic_domain_hearing_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_commagenean_sanctuary_inventory = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_commagenean_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_commagenean_sanctuary_inventory_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_commagenean_euphrates_passage = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_commagenean_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_commagenean_euphrates_passage_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_emesan_dynastic_house_hearing = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_emesan_dynastic_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_emesan_dynastic_house_hearing_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_emesan_sanctuary_stores = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_emesan_dynastic_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_emesan_sanctuary_stores_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_emesan_caravan_city_measures = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_emesan_dynastic_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_emesan_caravan_city_measures_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
