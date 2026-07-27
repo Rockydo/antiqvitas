@@ -364,6 +364,91 @@
 		}
 		# ANTIQVITAS M6: source-led Wang Mang regency at the AD 1 bookmark.
 		c:XAR = { set_regent = character:antq_wang_mang }
+		# ANTIQVITAS S2: establish each reform's source-bounded ancient council.
+		every_country = {
+			if = {
+				limit = {
+					OR = {
+						has_reform = government_reform:antq_principate
+						has_reform = government_reform:antq_dominate
+					}
+				}
+				set_parliament_type = parliament_type:antq_roman_senate
+			}
+			if = {
+				limit = {
+					OR = {
+						has_reform = government_reform:antq_han_imperial_bureaucracy
+					}
+				}
+				set_parliament_type = parliament_type:antq_han_court_conference
+			}
+			if = {
+				limit = {
+					OR = {
+						has_reform = government_reform:antq_parthian_king_of_kings
+						has_reform = government_reform:antq_parthian_subkingdom
+						has_reform = government_reform:antq_indo_scythian_kingship
+						has_reform = government_reform:antq_sassanid_centralized_monarchy
+					}
+				}
+				set_parliament_type = parliament_type:antq_iranian_great_council
+			}
+			if = {
+				limit = {
+					OR = {
+						has_reform = government_reform:antq_indo_greek_kingship
+						has_reform = government_reform:antq_settled_town_cluster
+					}
+				}
+				set_parliament_type = parliament_type:antq_civic_assembly
+			}
+			if = {
+				limit = {
+					OR = {
+						has_reform = government_reform:antq_indian_ganasangha
+					}
+				}
+				set_parliament_type = parliament_type:antq_gana_assembly
+			}
+			if = {
+				limit = {
+					OR = {
+						has_reform = government_reform:antq_steppe_confederation
+					}
+				}
+				set_parliament_type = parliament_type:antq_confederation_council
+			}
+			if = {
+				limit = {
+					OR = {
+						has_reform = government_reform:antq_advanced_chiefdom
+						has_reform = government_reform:antq_tribal_kingdom
+					}
+				}
+				set_parliament_type = parliament_type:antq_tribal_assembly
+			}
+			if = {
+				limit = {
+					OR = {
+						has_reform = government_reform:antq_lankan_kingdom
+						has_reform = government_reform:antq_kushite_dual_kingship
+					}
+				}
+				set_parliament_type = parliament_type:antq_sacral_court
+			}
+			if = {
+				limit = {
+					OR = {
+						has_reform = government_reform:antq_client_monarchy
+						has_reform = government_reform:antq_buffer_kingdom
+						has_reform = government_reform:antq_regional_kingship
+						has_reform = government_reform:antq_early_korean_kingdom
+					}
+				}
+				set_parliament_type = parliament_type:antq_royal_council
+			}
+		}
 		#catholics
 		if = {
 			limit = { NOT = { has_global_variable_list = pope_countries } }

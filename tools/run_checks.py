@@ -36,6 +36,7 @@ class Command:
 VALIDATE_COMMANDS = (
     Command("tools/pdxlint.py"),
     Command("tools/m6_power.py", ("--check",)),
+    Command("tools/s2_ancient_politics.py", ("--check",)),
     Command("tools/world_roster.py"),
     Command("tools/generate_tag_map.py", ("--check",)),
     Command("tools/s2_arabia_granularity.py", ("--check",)),

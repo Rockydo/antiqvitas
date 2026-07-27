@@ -1,5 +1,33 @@
 # Historical Assumptions
 
+## 2026-07-27 - Council profiles are bounded gameplay adapters, not constitutional equivalences
+
+The Roman Senate profile models elite deliberation, honors, provincial
+scrutiny, public finance, and the surviving language of the *res publica*
+under the Principate; it does not make the Augustan Senate sovereign over the
+princeps. The Han Court Conference profile compresses memorials, palace
+deliberation, commandery reporting, granaries, and courier administration into
+the engine's council/office loop; its estate scopes are technical proxies, not
+European social orders. The Iranian Great Council profile models the political
+weight of royal kin, great houses, subordinate dynasts, temples, routes, and
+musters without asserting one formal Arsacid constitution.
+
+The civic, gana, steppe, tribal, sacral, and regional royal profiles likewise
+translate differently evidenced practices into a shared game contract.
+Assemblies do not imply universal participation; “tribal” does not imply one
+ethnicity or institutional form; sacral court does not equate temple, crown,
+and administration; and the royal fallback does not erase local titulature.
+These nine families are the first regional floor and must be subdivided where
+the evidence and gameplay warrant deeper major-polity treatment.
+
+Sources: `P8.1`; `P8.2`; `P8.3`; `P8.4`; `P8.5`; `P8.7`; `P11`; `P13`;
+`OCD`; `CAH-XI`; `BHR`; `CTP-WM`; and `PLE`, catalogued in
+`docs/world_1ad/SOURCES.md` and routed per entry in
+`docs/m6/ancient_politics_content.csv`.
+
+[secure broad institutional contexts; contested composition, formal procedure,
+regional reach, and all numerical gameplay effects]
+
 ## 2026-07-26 - Finland-to-Altai political frames follow archaeological resolution
 
 Where AD 1 political names and borders are not recoverable, the campaign now

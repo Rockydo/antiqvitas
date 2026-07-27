@@ -1,5 +1,30 @@
 # Progress
 
+## 2026-07-27 - Ancient councils and state offices replace the generic political shell
+
+- Added nine reform-driven political profiles: Roman Senate, Han Court
+  Conference, Iranian Great Council, civic assembly, gana assembly, steppe
+  confederation council, tribal assembly, sacral court, and regional royal
+  council.
+- Added 45 profile-locked administrative programmes, 27 council issues, 27
+  agendas, and 54 explicit outcome/concession modifiers. Every entry has a
+  description, effect, source route, eligibility gate, AI weighting, and all
+  eleven localization mirrors.
+- Generated 54 unique direct BC7 interface icons from nine pinned historical
+  material atlases. Source images, cropped masters, hashes, and content/art
+  ledgers are retained under `assets_queue/politics/` and `docs/m6/`.
+- Connected all 19 custom reforms to their intended council type at reform
+  activation and through the checked AD 1 startup adapter, preventing an
+  opening country from inheriting a vanilla parliament.
+- Replaced fixed shared “Parliament”/“Cabinet” chrome with Council, State
+  Offices, and Administrative Programme language while preserving specific
+  polity-facing type names.
+- Paired smoke is clean. A focused live Rome probe exposed only Census Rolls,
+  Provincial Dispatches, Aerarium Accounts, Annona Contracts, and Legionary
+  Rosters, with distinct direct art and no vanilla action. Its evidence and the
+  known post-capture renderer boundary are recorded in
+  `docs/playtests/S2_ANCIENT_POLITICS_20260727.md`.
+
 ## 2026-07-27 - Fresh Rome opening-budget evidence and driver repair
 
 - Entered a newly generated AD 1 bookmark as Rome and captured the complete

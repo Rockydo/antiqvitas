@@ -41,8 +41,9 @@ and focused runtime probe all pass.
   It has 50 roots and 42 convergence nodes. Opening reachability is fixed, but
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
-- Only nine ancient institutions cover six ages. Government depth is similarly
-  thin: 17 reforms, 24 privileges, and 23 laws serve 229 countries.
+- Only nine ancient institutions cover six ages. Government depth is still
+  thin outside the first replacement tranches: 19 reforms, 46 privileges, and
+  45 laws serve 292 opening polities.
 - Exact-name mirrors still leave most installed estates, privileges, parliament
   material, cabinet actions, laws, religious aspects, and artillery-facing UI in
   the mounted union. Rome now starts at technology level 3 with a 9.60K reserve
@@ -136,9 +137,25 @@ and focused runtime probe all pass.
   - [ ] Replace required gameplay breadth at both definition and
     unlock/reference layers. Preserve only locally proven engine adapters, and
     guarantee that their names, descriptions, icons, and effects cannot surface.
-    Existing namespaced ancient content remains active (24 privileges, 23 laws,
-    19 reforms), but cabinet and parliament replacements belong to the deep
-    S2-P4 rebuild and must be present before the UI acceptance probe.
+    Existing namespaced ancient content remains active (46 privileges, 45 laws,
+    19 reforms).
+    - [x] Supply the first deep council/state-office replacement tranche:
+      nine reform-driven council profiles, 45 profile-locked administrative
+      programmes, 27 issues, 27 agendas, 54 outcome/concession modifiers, and
+      54 unique direct icons. Assign every custom government reform to an
+      ancient council at activation and again through the checked AD 1 startup
+      adapter. A live Rome selector shows only Roman programmes; paired smoke
+      reports zero new log lines.
+    - [x] Replace fixed neutral interface chrome with ancient terminology:
+      Council, State Offices, Administrative Programme, emergency
+      contributions, expanded musters, and council sanction. Specific active
+      type names remain polity-aware rather than being flattened into one
+      generic label.
+    - [ ] Complete the remaining S2-P4 replacement breadth: polity-specific
+      estate identities and weights, seat/delegate rules, office appointments,
+      costs, debate consequences, reform paths, laws, and privileges for every
+      opening profile. The nine current profiles are an engine-valid regional
+      floor, not the final political depth target.
   - [x] Eliminate the fresh-bookmark parliament compiler failures before the
     replacement UI probe. The 2026-07-26 Britain/Hibernia bookmark isolated all
     2,855 `Script system error!` entries to
@@ -448,6 +465,20 @@ and focused runtime probe all pass.
     appointments, costs, and outcomes must be ancient and profile-aware.
   - First repair the exact two mounted vanilla parliament files identified by
     the fresh-bookmark compiler census; menu smoke alone does not exercise them.
+  - [x] Build the first deep council/state-office tranche. Nine distinct
+    reform-driven profiles now cover the Roman Senate, Han Court Conference,
+    Iranian Great Council, civic assembly, gana assembly, steppe confederation
+    council, tribal assembly, sacral court, and regional royal council. They
+    provide 45 profile-locked administrative programmes, 27 issues, 27 agendas,
+    54 explicit consequences, 54 unique BC7 icons, descriptions, sources, and
+    all eleven localization mirrors. A live Roman programme selector exposes
+    Census Rolls, Provincial Dispatches, Aerarium Accounts, Annona Contracts,
+    and Legionary Rosters with no vanilla action.
+  - [ ] Replace the remaining broad estate adapters with deeper polity-specific
+    identities, political weights, delegates/seats, appointment logic, costs,
+    AI choices, and consequences. Expand major profiles beyond the nine-family
+    regional floor and test focused Roman, Han, Iranian, civic, and assembly
+    panels without requiring long playthroughs.
   - Acceptance: deep distinct panels for every major profile and coherent regional
     fallback packages; zero vanilla object or text leakage.
 

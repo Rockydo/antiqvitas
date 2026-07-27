@@ -217,6 +217,50 @@ def han_regency_effect(newline: str) -> list[str]:
     ]
 
 
+def ancient_parliament_effect(newline: str) -> list[str]:
+    """Assign the deliberative institution paired with each active M6 reform.
+
+    History setup adds reforms directly and does not reliably fire their
+    ``on_activate`` effect.  The installed ``on_game_start`` callback is the
+    earliest locally proven country-effect surface after governments exist.
+    """
+    parliament_by_reforms = (
+        ("antq_roman_senate", ("antq_principate", "antq_dominate")),
+        ("antq_han_court_conference", ("antq_han_imperial_bureaucracy",)),
+        ("antq_iranian_great_council", (
+            "antq_parthian_king_of_kings", "antq_parthian_subkingdom",
+            "antq_indo_scythian_kingship", "antq_sassanid_centralized_monarchy",
+        )),
+        ("antq_civic_assembly", ("antq_indo_greek_kingship", "antq_settled_town_cluster")),
+        ("antq_gana_assembly", ("antq_indian_ganasangha",)),
+        ("antq_confederation_council", ("antq_steppe_confederation",)),
+        ("antq_tribal_assembly", ("antq_advanced_chiefdom", "antq_tribal_kingdom")),
+        ("antq_sacral_court", ("antq_lankan_kingdom", "antq_kushite_dual_kingship")),
+        ("antq_royal_council", (
+            "antq_client_monarchy", "antq_buffer_kingdom",
+            "antq_regional_kingship", "antq_early_korean_kingdom",
+        )),
+    )
+    lines = [
+        f"\t\t# ANTIQVITAS S2: establish each reform's source-bounded ancient council.{newline}",
+        f"\t\tevery_country = {{{newline}",
+    ]
+    for parliament, reforms in parliament_by_reforms:
+        lines.extend((f"\t\t\tif = {{{newline}", f"\t\t\t\tlimit = {{{newline}", f"\t\t\t\t\tOR = {{{newline}"))
+        lines.extend(
+            f"\t\t\t\t\t\thas_reform = government_reform:{reform}{newline}"
+            for reform in reforms
+        )
+        lines.extend((
+            f"\t\t\t\t\t}}{newline}",
+            f"\t\t\t\t}}{newline}",
+            f"\t\t\t\tset_parliament_type = parliament_type:{parliament}{newline}",
+            f"\t\t\t}}{newline}",
+        ))
+    lines.append(f"\t\t}}{newline}")
+    return lines
+
+
 def replace_top_level_block(text: str, key: str, replacement: str) -> str:
     """Replace one top-level Clausewitz block while preserving surrounding text."""
     header = re.compile(rf"(?m)^{re.escape(key)}\s*=\s*\{{\s*(?:#.*)?$")
@@ -344,6 +388,7 @@ def render() -> bytes:
             rendered.append(line)
             rendered.extend(runtime_rgo_effects(newline_for(line)))
             rendered.extend(han_regency_effect(newline_for(line)))
+            rendered.extend(ancient_parliament_effect(newline_for(line)))
             rgo_injected = True
             depth += brace_delta(code)
             continue

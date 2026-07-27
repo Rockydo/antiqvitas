@@ -1,5 +1,24 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - Reform-driven council profiles replace one generic parliament surface
+
+EU5 exposes a single parliament/cabinet framework, but ANTIQVITAS now treats it
+as a technical host for nine distinct ancient political profiles. Each custom
+government reform sets its own council type on activation; the exact AD 1
+startup action repeats the assignment because history setup does not reliably
+fire reform activation callbacks. Cabinet actions, issues, agendas, art, text,
+and availability are keyed to the active profile, so Roman, Han, Iranian,
+civic, gana, steppe, tribal, sacral, and royal systems do not share visible
+content.
+
+Some tab headers and stock interaction labels are global localization keys and
+cannot vary by active council through a locally verified contract. Those fixed
+surfaces therefore use neutral ancient terms—Council, State Offices, and
+Administrative Programme—while the active type retains its historically
+bounded specific name. This is an interface adapter, not a claim that the
+Roman Senate, a Han court conference, a gana assembly, and a steppe council
+were equivalent legislatures.
+
 ## 2026-07-26 - Explicit Tier-3 governments are permitted without widening the mandatory roster
 
 M6 still requires complete government coverage for every Tier-1/2 polity, but

@@ -170,6 +170,19 @@ def build_report() -> dict[str, object]:
     require(sum(bool(row["requires"].strip()) for row in advances) >= 200, "advance tree branching regressed", failures)
     require(sum(bool(row["unlocks"].strip()) for row in advances) >= 60, "advance unlock density regressed", failures)
 
+    politics = rows(ROOT / "docs/m6/ancient_politics_content.csv")
+    politics_counts = Counter(row["category"] for row in politics)
+    require(
+        politics_counts == {
+            "parliament_type": 9,
+            "cabinet_action": 45,
+            "parliament_issue": 27,
+            "parliament_agenda": 27,
+        },
+        f"ancient political-system breadth regressed: {dict(politics_counts)}",
+        failures,
+    )
+
     disease = json.loads((ROOT / "docs/m12/disease_dependency_manifest.json").read_text(encoding="utf-8"))
     require(len(disease["installed_diseases"]) == 7, "disease definition union changed", failures)
     require(disease["asset_count"] >= 20, "disease UI dependency mirror is incomplete", failures)
@@ -197,6 +210,7 @@ def build_report() -> dict[str, object]:
             "unit_art": len(unit_art),
             "institutions": len(institutions),
             "advances": len(advances),
+            "ancient_political_entries": len(politics),
             "diseases": len(disease["installed_diseases"]),
             "court_backgrounds": len(list(court_dir.glob("antq_throne_room_*.dds"))),
         },

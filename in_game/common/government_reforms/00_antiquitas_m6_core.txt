@@ -11,6 +11,9 @@ antq_principate = {
 		monthly_gold_income = 500
 		research_speed = 0.15
 	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_roman_senate
+	}
 	years = 2
 }
 
@@ -22,6 +25,9 @@ antq_dominate = {
 		monthly_towards_centralization = societal_value_monthly_move
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.15
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_roman_senate
 	}
 	years = 2
 }
@@ -35,6 +41,9 @@ antq_han_imperial_bureaucracy = {
 		monthly_towards_innovative = societal_value_monthly_move
 		research_speed = 0.15
 	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_han_court_conference
+	}
 	years = 2
 }
 
@@ -45,6 +54,9 @@ antq_lankan_kingdom = {
 		global_crown_estate_power = 0.05
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_sacral_court
 	}
 	years = 2
 }
@@ -57,6 +69,9 @@ antq_indian_ganasangha = {
 		global_nobles_estate_power = 0.05
 		research_speed = 0.10
 	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_gana_assembly
+	}
 	years = 2
 }
 
@@ -67,6 +82,9 @@ antq_indo_scythian_kingship = {
 		global_nobles_estate_power = 0.05
 		land_morale_modifier = 0.025
 		research_speed = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_iranian_great_council
 	}
 	years = 2
 }
@@ -79,6 +97,9 @@ antq_indo_greek_kingship = {
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.10
 	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_civic_assembly
+	}
 	years = 2
 }
 
@@ -89,6 +110,9 @@ antq_parthian_king_of_kings = {
 		global_nobles_estate_power = 0.15
 		monthly_towards_decentralization = societal_value_monthly_move
 		research_speed = 0.15
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_iranian_great_council
 	}
 	years = 2
 }
@@ -102,6 +126,9 @@ antq_sassanid_centralized_monarchy = {
 		land_morale_modifier = 0.025
 		research_speed = 0.15
 	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_iranian_great_council
+	}
 	years = 2
 }
 
@@ -112,6 +139,9 @@ antq_client_monarchy = {
 		global_crown_estate_power = 0.05
 		monthly_towards_centralization = societal_value_minor_monthly_move
 		research_speed = 0.08
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_royal_council
 	}
 	years = 2
 }
@@ -124,6 +154,9 @@ antq_parthian_subkingdom = {
 		monthly_towards_decentralization = societal_value_minor_monthly_move
 		research_speed = 0.08
 	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_iranian_great_council
+	}
 	years = 2
 }
 
@@ -134,6 +167,9 @@ antq_buffer_kingdom = {
 		global_nobles_estate_power = 0.05
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.08
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_royal_council
 	}
 	years = 2
 }
@@ -146,6 +182,9 @@ antq_kushite_dual_kingship = {
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.10
 	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_sacral_court
+	}
 	years = 2
 }
 
@@ -156,6 +195,9 @@ antq_steppe_confederation = {
 		global_tribes_estate_power = 0.10
 		monthly_towards_decentralization = societal_value_monthly_move
 		research_speed = 0.06
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_confederation_council
 	}
 	years = 2
 }
@@ -168,6 +210,9 @@ antq_early_korean_kingdom = {
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.10
 	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_royal_council
+	}
 	years = 2
 }
 
@@ -178,6 +223,9 @@ antq_regional_kingship = {
 		global_crown_estate_power = 0.05
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_royal_council
 	}
 	years = 2
 }
@@ -190,6 +238,9 @@ antq_advanced_chiefdom = {
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.06
 	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
 	years = 2
 }
 
@@ -201,6 +252,9 @@ antq_settled_town_cluster = {
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.10
 	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_civic_assembly
+	}
 	years = 2
 }
 
@@ -211,6 +265,9 @@ antq_tribal_kingdom = {
 		global_tribes_estate_power = 0.10
 		monthly_towards_decentralization = societal_value_minor_monthly_move
 		research_speed = 0.06
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }

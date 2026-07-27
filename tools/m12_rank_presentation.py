@@ -321,6 +321,8 @@ def rank_localization_entries() -> list[str]:
 
 
 RAW_REPLACEMENTS = {
+    "country_flavor_parliament": "Council",
+    "country_flavor_cabinet": "State Offices",
     "rank_county": "Local Polity",
     "rank_county_ADJ": "local",
     "rank_county_ruler_male": "Leader",
