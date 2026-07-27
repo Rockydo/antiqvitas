@@ -66,7 +66,6 @@
 		localization_key = antq_estate_steppe_crown_estate
 		trigger = {
 			OR = {
-				has_reform = government_reform:antq_steppe_confederation
 				has_reform = government_reform:antq_steppe_wing_confederacy
 				has_reform = government_reform:antq_steppe_gift_court
 			}
@@ -89,8 +88,6 @@
 		localization_key = antq_estate_sacral_crown_estate
 		trigger = {
 			OR = {
-				has_reform = government_reform:antq_lankan_kingdom
-				has_reform = government_reform:antq_kushite_dual_kingship
 				has_reform = government_reform:antq_temple_endowment_court
 				has_reform = government_reform:antq_irrigation_palace
 			}
@@ -103,10 +100,45 @@
 			OR = {
 				has_reform = government_reform:antq_client_monarchy
 				has_reform = government_reform:antq_buffer_kingdom
-				has_reform = government_reform:antq_early_korean_kingdom
 				has_reform = government_reform:antq_regional_kingship
 				has_reform = government_reform:antq_petition_court
 				has_reform = government_reform:antq_frontier_muster_monarchy
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_xiongnu_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_steppe_confederation
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_goguryeo_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_early_korean_kingdom
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_kushite_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_kushite_dual_kingship
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_lankan_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_lankan_kingdom
 			}
 		}
 	}
@@ -257,7 +289,6 @@ nobles_estate = {
 		localization_key = antq_estate_steppe_nobles_estate
 		trigger = {
 			OR = {
-				has_reform = government_reform:antq_steppe_confederation
 				has_reform = government_reform:antq_steppe_wing_confederacy
 				has_reform = government_reform:antq_steppe_gift_court
 			}
@@ -280,8 +311,6 @@ nobles_estate = {
 		localization_key = antq_estate_sacral_nobles_estate
 		trigger = {
 			OR = {
-				has_reform = government_reform:antq_lankan_kingdom
-				has_reform = government_reform:antq_kushite_dual_kingship
 				has_reform = government_reform:antq_temple_endowment_court
 				has_reform = government_reform:antq_irrigation_palace
 			}
@@ -294,10 +323,45 @@ nobles_estate = {
 			OR = {
 				has_reform = government_reform:antq_client_monarchy
 				has_reform = government_reform:antq_buffer_kingdom
-				has_reform = government_reform:antq_early_korean_kingdom
 				has_reform = government_reform:antq_regional_kingship
 				has_reform = government_reform:antq_petition_court
 				has_reform = government_reform:antq_frontier_muster_monarchy
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_xiongnu_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_steppe_confederation
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_goguryeo_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_early_korean_kingdom
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_kushite_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_kushite_dual_kingship
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_lankan_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_lankan_kingdom
 			}
 		}
 	}
@@ -693,7 +757,6 @@ burghers_estate = {
 		localization_key = antq_estate_steppe_burghers_estate
 		trigger = {
 			OR = {
-				has_reform = government_reform:antq_steppe_confederation
 				has_reform = government_reform:antq_steppe_wing_confederacy
 				has_reform = government_reform:antq_steppe_gift_court
 			}
@@ -716,8 +779,6 @@ burghers_estate = {
 		localization_key = antq_estate_sacral_burghers_estate
 		trigger = {
 			OR = {
-				has_reform = government_reform:antq_lankan_kingdom
-				has_reform = government_reform:antq_kushite_dual_kingship
 				has_reform = government_reform:antq_temple_endowment_court
 				has_reform = government_reform:antq_irrigation_palace
 			}
@@ -730,10 +791,45 @@ burghers_estate = {
 			OR = {
 				has_reform = government_reform:antq_client_monarchy
 				has_reform = government_reform:antq_buffer_kingdom
-				has_reform = government_reform:antq_early_korean_kingdom
 				has_reform = government_reform:antq_regional_kingship
 				has_reform = government_reform:antq_petition_court
 				has_reform = government_reform:antq_frontier_muster_monarchy
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_xiongnu_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_steppe_confederation
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_goguryeo_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_early_korean_kingdom
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_kushite_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_kushite_dual_kingship
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_lankan_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_lankan_kingdom
 			}
 		}
 	}
@@ -1019,7 +1115,6 @@ clergy_estate = {
 		localization_key = antq_estate_steppe_clergy_estate
 		trigger = {
 			OR = {
-				has_reform = government_reform:antq_steppe_confederation
 				has_reform = government_reform:antq_steppe_wing_confederacy
 				has_reform = government_reform:antq_steppe_gift_court
 			}
@@ -1042,8 +1137,6 @@ clergy_estate = {
 		localization_key = antq_estate_sacral_clergy_estate
 		trigger = {
 			OR = {
-				has_reform = government_reform:antq_lankan_kingdom
-				has_reform = government_reform:antq_kushite_dual_kingship
 				has_reform = government_reform:antq_temple_endowment_court
 				has_reform = government_reform:antq_irrigation_palace
 			}
@@ -1056,10 +1149,45 @@ clergy_estate = {
 			OR = {
 				has_reform = government_reform:antq_client_monarchy
 				has_reform = government_reform:antq_buffer_kingdom
-				has_reform = government_reform:antq_early_korean_kingdom
 				has_reform = government_reform:antq_regional_kingship
 				has_reform = government_reform:antq_petition_court
 				has_reform = government_reform:antq_frontier_muster_monarchy
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_xiongnu_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_steppe_confederation
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_goguryeo_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_early_korean_kingdom
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_kushite_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_kushite_dual_kingship
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_lankan_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_lankan_kingdom
 			}
 		}
 	}
@@ -1354,7 +1482,6 @@ peasants_estate = {
 		localization_key = antq_estate_steppe_peasants_estate
 		trigger = {
 			OR = {
-				has_reform = government_reform:antq_steppe_confederation
 				has_reform = government_reform:antq_steppe_wing_confederacy
 				has_reform = government_reform:antq_steppe_gift_court
 			}
@@ -1377,8 +1504,6 @@ peasants_estate = {
 		localization_key = antq_estate_sacral_peasants_estate
 		trigger = {
 			OR = {
-				has_reform = government_reform:antq_lankan_kingdom
-				has_reform = government_reform:antq_kushite_dual_kingship
 				has_reform = government_reform:antq_temple_endowment_court
 				has_reform = government_reform:antq_irrigation_palace
 			}
@@ -1391,10 +1516,45 @@ peasants_estate = {
 			OR = {
 				has_reform = government_reform:antq_client_monarchy
 				has_reform = government_reform:antq_buffer_kingdom
-				has_reform = government_reform:antq_early_korean_kingdom
 				has_reform = government_reform:antq_regional_kingship
 				has_reform = government_reform:antq_petition_court
 				has_reform = government_reform:antq_frontier_muster_monarchy
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_xiongnu_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_steppe_confederation
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_goguryeo_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_early_korean_kingdom
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_kushite_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_kushite_dual_kingship
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_lankan_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_lankan_kingdom
 			}
 		}
 	}
@@ -1701,7 +1861,6 @@ tribes_estate = {
 		localization_key = antq_estate_steppe_tribes_estate
 		trigger = {
 			OR = {
-				has_reform = government_reform:antq_steppe_confederation
 				has_reform = government_reform:antq_steppe_wing_confederacy
 				has_reform = government_reform:antq_steppe_gift_court
 			}
@@ -1724,8 +1883,6 @@ tribes_estate = {
 		localization_key = antq_estate_sacral_tribes_estate
 		trigger = {
 			OR = {
-				has_reform = government_reform:antq_lankan_kingdom
-				has_reform = government_reform:antq_kushite_dual_kingship
 				has_reform = government_reform:antq_temple_endowment_court
 				has_reform = government_reform:antq_irrigation_palace
 			}
@@ -1738,10 +1895,45 @@ tribes_estate = {
 			OR = {
 				has_reform = government_reform:antq_client_monarchy
 				has_reform = government_reform:antq_buffer_kingdom
-				has_reform = government_reform:antq_early_korean_kingdom
 				has_reform = government_reform:antq_regional_kingship
 				has_reform = government_reform:antq_petition_court
 				has_reform = government_reform:antq_frontier_muster_monarchy
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_xiongnu_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_steppe_confederation
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_goguryeo_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_early_korean_kingdom
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_kushite_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_kushite_dual_kingship
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_lankan_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_lankan_kingdom
 			}
 		}
 	}

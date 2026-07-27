@@ -5,7 +5,7 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review. (Validated by the 730-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
+- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review. (Validated by the 808-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
   - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
 ## Second manual playtest remediation — 2026-07-26 (resume here)
@@ -44,7 +44,7 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 37 reforms and 100 privileges
+  thin outside the first replacement tranches: 37 reforms and 124 privileges
   serve 292 opening polities. The legal layer now has 227 ancient groups,
   including 182 three-option profile laws, but needs later-century additions.
 - Exact-name mirrors still leave most installed estates, privileges, parliament
@@ -140,7 +140,7 @@ and focused runtime probe all pass.
   - [ ] Replace required gameplay breadth at both definition and
     unlock/reference layers. Preserve only locally proven engine adapters, and
     guarantee that their names, descriptions, icons, and effects cannot surface.
-    Existing namespaced ancient content remains active (100 privileges, 227 laws,
+    Existing namespaced ancient content remains active (124 privileges, 227 laws,
     37 reforms).
     - [x] Supply the first deep council/state-office replacement tranche:
       nine reform-driven council profiles, 45 profile-locked administrative
@@ -154,18 +154,26 @@ and focused runtime probe all pass.
       contributions, expanded musters, and council sanction. Specific active
       type names remain polity-aware rather than being flattened into one
       generic label.
-    - [x] Replace generic estate labels and shallow privilege breadth with nine
-      reform-driven order identities and 54 additional profile-gated grants.
-      All six engine order slots now render polity-aware names; the 54 grants
+    - [x] Replace generic estate labels and shallow privilege breadth with
+      thirteen reform-driven order identities and 78 additional profile-gated
+      grants.
+      All six engine order slots now render polity-aware names; the 78 grants
       use 30+ effect packages, mutually exclusive alternatives where
-      appropriate, explicit power/tax/control tradeoffs, and 54 unique direct
-      historical-material illustrations. The project now has 100/100
+      appropriate, explicit power/tax/control tradeoffs, and 78 unique direct
+      historical-material illustrations. The project now has 124/124
       directly illustrated ancient privileges.
     - [ ] Complete the remaining S2-P4 replacement breadth: profile-specific
       major-country subdivisions, additional reform paths, and later-century
       legal development. The council/reform profiles remain an engine-valid
       regional floor rather than the final political depth target; all opening
       tags now have a separate 13-profile legal package.
+      - [x] Give Xiongnu, Goguryeo, Meroitic Kush, and Anuradhapura Lanka
+        dedicated base reforms, councils, six social-order names, six
+        privileges, five state-office programmes, three issues, and three
+        agendas apiece. The installed system now contains 13 councils, 65
+        programmes, 39 issues, 39 agendas, 78 profile grants, and 124 total
+        ancient privileges, all with direct art. Keep the parent open for
+        deeper reform branches and dated legal development.
   - [x] Eliminate the fresh-bookmark parliament compiler failures before the
     replacement UI probe. The 2026-07-26 Britain/Hibernia bookmark isolated all
     2,855 `Script system error!` entries to

@@ -174,17 +174,17 @@ def build_report() -> dict[str, object]:
     politics_counts = Counter(row["category"] for row in politics)
     require(
         politics_counts == {
-            "parliament_type": 9,
-            "cabinet_action": 45,
-            "parliament_issue": 27,
-            "parliament_agenda": 27,
+            "parliament_type": 13,
+            "cabinet_action": 65,
+            "parliament_issue": 39,
+            "parliament_agenda": 39,
         },
         f"ancient political-system breadth regressed: {dict(politics_counts)}",
         failures,
     )
     estate_orders = rows(ROOT / "docs/m6/estate_order_privileges.csv")
     require(
-        len(estate_orders) == 54 and len({row["key"] for row in estate_orders}) == 54,
+        len(estate_orders) == 78 and len({row["key"] for row in estate_orders}) == 78,
         "ancient estate-order privilege breadth regressed",
         failures,
     )
@@ -237,8 +237,8 @@ def build_report() -> dict[str, object]:
         ROOT / "in_game/common/parliament_types/00_antiquitas_s2.txt"
     ).read_text(encoding="utf-8-sig")
     require(
-        councils.count("parliament_base_support =") == 9
-        and councils.count("_agenda_impact =") == 27,
+        councils.count("parliament_base_support =") == 13
+        and councils.count("_agenda_impact =") == 39,
         "ancient council participation weights regressed",
         failures,
     )

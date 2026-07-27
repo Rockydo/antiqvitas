@@ -430,7 +430,6 @@ antq_steppe_pasture_circuits = {
 	ability = adm
 	potential = {
 		OR = {
-			has_reform = government_reform:antq_steppe_confederation
 			has_reform = government_reform:antq_steppe_wing_confederacy
 			has_reform = government_reform:antq_steppe_gift_court
 		}
@@ -446,7 +445,6 @@ antq_steppe_wing_musters = {
 	ability = mil
 	potential = {
 		OR = {
-			has_reform = government_reform:antq_steppe_confederation
 			has_reform = government_reform:antq_steppe_wing_confederacy
 			has_reform = government_reform:antq_steppe_gift_court
 		}
@@ -462,7 +460,6 @@ antq_steppe_gift_circulation = {
 	ability = dip
 	potential = {
 		OR = {
-			has_reform = government_reform:antq_steppe_confederation
 			has_reform = government_reform:antq_steppe_wing_confederacy
 			has_reform = government_reform:antq_steppe_gift_court
 		}
@@ -478,7 +475,6 @@ antq_steppe_envoy_circuits = {
 	ability = dip
 	potential = {
 		OR = {
-			has_reform = government_reform:antq_steppe_confederation
 			has_reform = government_reform:antq_steppe_wing_confederacy
 			has_reform = government_reform:antq_steppe_gift_court
 		}
@@ -494,7 +490,6 @@ antq_steppe_remount_herds = {
 	ability = mil
 	potential = {
 		OR = {
-			has_reform = government_reform:antq_steppe_confederation
 			has_reform = government_reform:antq_steppe_wing_confederacy
 			has_reform = government_reform:antq_steppe_gift_court
 		}
@@ -595,8 +590,6 @@ antq_sacral_temple_storehouses = {
 	ability = adm
 	potential = {
 		OR = {
-			has_reform = government_reform:antq_lankan_kingdom
-			has_reform = government_reform:antq_kushite_dual_kingship
 			has_reform = government_reform:antq_temple_endowment_court
 			has_reform = government_reform:antq_irrigation_palace
 		}
@@ -612,8 +605,6 @@ antq_sacral_royal_waterworks = {
 	ability = adm
 	potential = {
 		OR = {
-			has_reform = government_reform:antq_lankan_kingdom
-			has_reform = government_reform:antq_kushite_dual_kingship
 			has_reform = government_reform:antq_temple_endowment_court
 			has_reform = government_reform:antq_irrigation_palace
 		}
@@ -629,8 +620,6 @@ antq_sacral_cult_processions = {
 	ability = dip
 	potential = {
 		OR = {
-			has_reform = government_reform:antq_lankan_kingdom
-			has_reform = government_reform:antq_kushite_dual_kingship
 			has_reform = government_reform:antq_temple_endowment_court
 			has_reform = government_reform:antq_irrigation_palace
 		}
@@ -646,8 +635,6 @@ antq_sacral_scribal_accounts = {
 	ability = adm
 	potential = {
 		OR = {
-			has_reform = government_reform:antq_lankan_kingdom
-			has_reform = government_reform:antq_kushite_dual_kingship
 			has_reform = government_reform:antq_temple_endowment_court
 			has_reform = government_reform:antq_irrigation_palace
 		}
@@ -663,8 +650,6 @@ antq_sacral_frontier_offerings = {
 	ability = dip
 	potential = {
 		OR = {
-			has_reform = government_reform:antq_lankan_kingdom
-			has_reform = government_reform:antq_kushite_dual_kingship
 			has_reform = government_reform:antq_temple_endowment_court
 			has_reform = government_reform:antq_irrigation_palace
 		}
@@ -683,7 +668,6 @@ antq_royal_palace_petitions = {
 			has_reform = government_reform:antq_client_monarchy
 			has_reform = government_reform:antq_buffer_kingdom
 			has_reform = government_reform:antq_regional_kingship
-			has_reform = government_reform:antq_early_korean_kingdom
 			has_reform = government_reform:antq_petition_court
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
@@ -702,7 +686,6 @@ antq_royal_tribute_registers = {
 			has_reform = government_reform:antq_client_monarchy
 			has_reform = government_reform:antq_buffer_kingdom
 			has_reform = government_reform:antq_regional_kingship
-			has_reform = government_reform:antq_early_korean_kingdom
 			has_reform = government_reform:antq_petition_court
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
@@ -721,7 +704,6 @@ antq_royal_court_embassies = {
 			has_reform = government_reform:antq_client_monarchy
 			has_reform = government_reform:antq_buffer_kingdom
 			has_reform = government_reform:antq_regional_kingship
-			has_reform = government_reform:antq_early_korean_kingdom
 			has_reform = government_reform:antq_petition_court
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
@@ -740,7 +722,6 @@ antq_royal_dynastic_compacts = {
 			has_reform = government_reform:antq_client_monarchy
 			has_reform = government_reform:antq_buffer_kingdom
 			has_reform = government_reform:antq_regional_kingship
-			has_reform = government_reform:antq_early_korean_kingdom
 			has_reform = government_reform:antq_petition_court
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
@@ -759,9 +740,288 @@ antq_royal_fortress_provisioning = {
 			has_reform = government_reform:antq_client_monarchy
 			has_reform = government_reform:antq_buffer_kingdom
 			has_reform = government_reform:antq_regional_kingship
-			has_reform = government_reform:antq_early_korean_kingdom
 			has_reform = government_reform:antq_petition_court
 			has_reform = government_reform:antq_frontier_muster_monarchy
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_supply_limit_modifier = 0.05
+		global_road_building_time = -0.05
+	}
+}
+
+antq_xiongnu_pasture_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_pop_food_consumption = -0.01
+		global_production_efficiency = 0.025
+	}
+}
+
+antq_xiongnu_wing_muster = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.01
+	}
+}
+
+antq_xiongnu_silk_gift_register = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_prestige = 0.05
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_xiongnu_envoy_relays = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_supply_limit_modifier = 0.05
+		global_road_building_time = -0.05
+	}
+}
+
+antq_xiongnu_lineage_sureties = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_towards_centralization = societal_value_minor_monthly_move
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_goguryeo_fortress_households = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_early_korean_kingdom
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		country_cabinet_efficiency = 0.025
+		global_monthly_control = 0.0025
+	}
+}
+
+antq_goguryeo_millet_stores = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_early_korean_kingdom
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_pop_food_consumption = -0.01
+		global_production_efficiency = 0.025
+	}
+}
+
+antq_goguryeo_beacon_dispatches = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_early_korean_kingdom
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_supply_limit_modifier = 0.05
+		global_road_building_time = -0.05
+	}
+}
+
+antq_goguryeo_lineage_petitions = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_early_korean_kingdom
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_towards_centralization = societal_value_minor_monthly_move
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_goguryeo_artisan_obligations = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_early_korean_kingdom
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_trade_through_owned_territory_efficiency = 0.05
+		global_burghers_estate_power = 0.025
+	}
+}
+
+antq_kushite_royal_seals = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_kushite_dual_kingship
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_towards_centralization = societal_value_minor_monthly_move
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_kushite_nile_contributions = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_kushite_dual_kingship
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_pop_food_consumption = -0.01
+		global_production_efficiency = 0.025
+	}
+}
+
+antq_kushite_temple_stores = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_kushite_dual_kingship
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_clergy_estate_power = 0.025
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_kushite_metalwork_returns = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_kushite_dual_kingship
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_trade_through_owned_territory_efficiency = 0.05
+		global_burghers_estate_power = 0.025
+	}
+}
+
+antq_kushite_desert_dispatches = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_kushite_dual_kingship
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_supply_limit_modifier = 0.05
+		global_road_building_time = -0.05
+	}
+}
+
+antq_lankan_reservoir_accounts = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_lankan_kingdom
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_towards_centralization = societal_value_minor_monthly_move
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_lankan_endowment_stores = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_lankan_kingdom
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_clergy_estate_power = 0.025
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_lankan_port_measures = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_lankan_kingdom
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_trade_through_owned_territory_efficiency = 0.05
+		global_burghers_estate_power = 0.025
+	}
+}
+
+antq_lankan_regional_petitions = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_lankan_kingdom
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_prestige = 0.05
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_lankan_elephant_service = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_lankan_kingdom
 		}
 	}
 	allow_multiple = no

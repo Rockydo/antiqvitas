@@ -1,5 +1,26 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - Historically distinctive major states bypass broad political fallbacks
+
+Xiongnu, Goguryeo, Meroitic Kush, and Anuradhapura Lanka now enter through
+dedicated base reforms rather than the generic steppe, royal, or sacral
+profiles. Reform activation owns the council assignment, while the generated
+opening adapter reapplies it at the AD 1 bookmark. Alternative constitutional
+paths can still inherit a broader family where that is useful, but the visible
+opening identity may not collapse these major states into one regional label.
+
+The same profile identifier routes social-order names, privileges, councils,
+administrative programmes, and research unlocks. This makes the state package
+auditable as one contract and prevents a partial regeneration from pairing,
+for example, a Xiongnu council with generic steppe orders or an Anuradhapura
+court with a Meroitic privilege menu.
+
+The eight new source atlases use one controlled visual grammar: 3x2
+archaeological still lifes, dark charcoal-blue ground, centered isolated
+objects, no people, text, heraldry, medieval equipment, or modern display
+furniture. The Kushite court atlas was specifically regenerated after visual
+review found invented letter-like marks.
+
 ## 2026-07-27 - One generator owns opening building placement
 
 The historical family-pass generators continue to own their family definitions,

@@ -197,7 +197,7 @@ PROFILES = (
     Profile(
         "steppe", "antq_confederation_council", "Confederation Council",
         "Lineage leaders coordinate pasture circuits, left-right wings, gifts, envoys, and remounts around the chanyu's court.",
-        ("antq_steppe_confederation", "antq_steppe_wing_confederacy", "antq_steppe_gift_court"), ("tribes_estate", "nobles_estate", "burghers_estate"),
+        ("antq_steppe_wing_confederacy", "antq_steppe_gift_court"), ("tribes_estate", "nobles_estate", "burghers_estate"),
         "steppe_council_atlas.png", "e191587a1bf4a4fd5bdb77f2a2f0b9ef350d46fb709b20ac1e8a71c22ddb9a7b",
         "P8.3;P13;CAH-XI", "secure",
         "Terminology avoids projecting the later Mongol quriltai and decimal institutions onto AD 1 confederations.",
@@ -237,7 +237,7 @@ PROFILES = (
     Profile(
         "sacral", "antq_sacral_court", "Sacral Court Council",
         "Royal, temple, scribal, and cultivating interests meet around stores, waterworks, ceremonial obligations, and frontier cult.",
-        ("antq_lankan_kingdom", "antq_kushite_dual_kingship", "antq_temple_endowment_court", "antq_irrigation_palace"), ("clergy_estate", "nobles_estate", "peasants_estate"),
+        ("antq_temple_endowment_court", "antq_irrigation_palace"), ("clergy_estate", "nobles_estate", "peasants_estate"),
         "sacral_court_atlas.png", "e3f2c652277ae4a140c20c8fe64f6381efae9c53e54fae6e89271f12d2cff1fb",
         "P8.4;P8.5;P11;P13;CAH-XI;PLE", "contested",
         "The shared interface models administrative conjunction, not a claim that Kushite and Lankan sacred kingship were institutionally identical.",
@@ -257,7 +257,7 @@ PROFILES = (
     Profile(
         "royal", "antq_royal_council", "Royal Council",
         "A client or regional court coordinates petitions, tribute, embassies, dynastic guarantees, and fortress supply.",
-        ("antq_client_monarchy", "antq_buffer_kingdom", "antq_regional_kingship", "antq_early_korean_kingdom", "antq_petition_court", "antq_frontier_muster_monarchy"),
+        ("antq_client_monarchy", "antq_buffer_kingdom", "antq_regional_kingship", "antq_petition_court", "antq_frontier_muster_monarchy"),
         ("nobles_estate", "burghers_estate", "clergy_estate"),
         "royal_council_atlas.png", "fe3e1232bff8a306800f20c5151590d4df405dabfe36e14a7ea87a9d450324a3",
         "P8.1;P8.2;P8.3;P13;OCD;PLE", "contested",
@@ -273,6 +273,86 @@ PROFILES = (
             m("tribute_review", "Tribute Register Review", "Reconcile local obligations, court needs, and remittances owed beyond the kingdom.", "Retainer Garrison Petition", "Landed retainers seek clear service and provisioning obligations.", "nobles_estate", ADMIN, NOBLES),
             m("embassy_fund", "Embassy Reception Fund", "Authorize gifts and hospitality without exhausting the court treasury.", "Caravan Security Petition", "Merchant households ask the court to protect approaches, markets, and compensation claims.", "burghers_estate", PRESTIGE, TRADE),
             m("fortress_stores", "Fortress Provisioning Measure", "Set grain, water, missile, and labor reserves for exposed strongholds.", "Sanctuary Endowment Petition", "Cult custodians request protected stores and land for public rites and travelers.", "clergy_estate", LOGISTICS, CLERGY),
+        ),
+    ),
+    Profile(
+        "xiongnu", "antq_xiongnu_wing_council", "Xiongnu Wing Council",
+        "The chanyu's court coordinates left and right wings, lineage sureties, pasture circuits, envoys, remounts, and prestige-gift distribution.",
+        ("antq_steppe_confederation",), ("tribes_estate", "nobles_estate", "burghers_estate"),
+        "xiongnu_chanyu_atlas.png", "f458ad1af8ad185d10fb6eaf9c649231a5c9b69a6310752a7e63c7d4b5258ec9",
+        "P8.3;P13;CAH-XI", "secure",
+        "The wing council is a bounded Xiongnu adapter; it does not import later Mongol titles, decimal ranks, or a permanent representative assembly.",
+        (
+            a("pasture_returns", "Pasture Circuit Returns", "Reconcile lineage access to seasonal grazing and water before scarcity breaks confederate obligations.", "adm", FOOD),
+            a("wing_muster", "Wing Muster Tallies", "Count mounted followings, bows, remounts, and rendezvous points for the left and right wings.", "mil", MIL),
+            a("silk_gift_register", "Silk-Gift Register", "Track prestige silk, plaques, vessels, and livestock through the chanyu's negotiated gift hierarchy.", "dip", PRESTIGE),
+            a("envoy_relays", "Envoy Relay Circuit", "Coordinate interpreters, escort guarantees, relay mounts, and tallies across distant lineages.", "dip", LOGISTICS),
+            a("lineage_sureties", "Lineage Sureties", "Record wards, oath gifts, and witnessed guarantees without treating mobile lineages as salaried offices.", "adm", CONTROL),
+        ),
+        (
+            m("wing_contribution", "Left-Right Wing Contribution", "Set a bounded mounted contribution and rendezvous for each wing.", "Wing Command Precedence", "Leading commanders demand rank and gift shares proportionate to service.", "nobles_estate", MIL, NOBLES),
+            m("pasture_compact", "Seasonal Pasture Compact", "Mediate water and grazing circuits among confederated lineages.", "Herding-Household Water Claim", "Mobile households seek protected seasonal access under prior compact.", "tribes_estate", FOOD, TRIBES),
+            m("frontier_exchange", "Frontier Exchange Peace", "Guarantee a supervised meeting place for silk, livestock, and metal exchange.", "Caravan Broker Safe-Conduct", "Long-distance brokers seek escorts and compensation for losses.", "burghers_estate", TRADE, TRADE),
+        ),
+    ),
+    Profile(
+        "goguryeo", "antq_goguryeo_royal_council", "Goguryeo Royal Council",
+        "The early royal court coordinates senior lineages, walled settlements, grain stores, beacon frontiers, craft obligations, and river-valley labor.",
+        ("antq_early_korean_kingdom",), ("nobles_estate", "peasants_estate", "burghers_estate"),
+        "goguryeo_court_atlas.png", "4481a1b0e96e1279652ceeb8c59805357479b0ca4de2913deddc812638343973",
+        "P8.3;P13;SAM", "secure",
+        "The interface is specific to the opening Goguryeo frame but does not project the mature later Three Kingdoms bureaucracy into AD 1.",
+        (
+            a("fortress_households", "Fortress Household Returns", "Count households, stores, and bounded service around walled river-valley settlements.", "adm", ADMIN),
+            a("millet_stores", "Millet Store Accounts", "Review receipts, seed reserves, spoilage, and emergency releases at defended centers.", "adm", FOOD),
+            a("beacon_dispatches", "Beacon Frontier Dispatches", "Coordinate watch rotations, signal fuel, arrows, and relief from one fortified node to the next.", "mil", LOGISTICS),
+            a("lineage_petitions", "Senior-Lineage Petitions", "Hear witnessed claims over commands, land, compensation, and court precedence.", "dip", CONTROL),
+            a("artisan_obligations", "Fortress Artisan Obligations", "Measure iron, tile, pottery, and repair duties without converting specialists into medieval guilds.", "adm", TRADE),
+        ),
+        (
+            m("fortress_rotation", "Fortress Command Rotation", "Set bounded command and provisioning turns among senior houses.", "Senior-Lineage Command Claim", "Leading houses demand a witnessed share of fortress authority.", "nobles_estate", CONTROL, NOBLES),
+            m("grain_reserve", "Millet Reserve Measure", "Protect seed and emergency grain before extraordinary requisition.", "Cultivator Labor Calendar", "Farming households seek service rotations that respect the crop cycle.", "peasants_estate", FOOD, PEASANTS),
+            m("craft_supply", "Fortress Craft Supply", "Set iron, tile, vessel, and repair obligations for defended centers.", "Artisan Working-Space Petition", "Specialist households seek protected materials and predictable service.", "burghers_estate", TRADE, TRADE),
+        ),
+    ),
+    Profile(
+        "kushite", "antq_meroitic_royal_council", "Meroitic Royal Council",
+        "The Meroitic court coordinates royal and provincial lineages, temple stores, Nile contributions, iron and gold workshops, caravans, and desert frontiers.",
+        ("antq_kushite_dual_kingship",), ("nobles_estate", "clergy_estate", "burghers_estate"),
+        "kushite_court_atlas.png", "a81b2482701dc32fb86f60996c31c7ee3ab27c613dc19c51a271595a0c0ce4e9",
+        "P8.5;P11;P13;CAH-XI", "secure",
+        "Dual royal authority and administrative categories remain gameplay abstractions; the surviving evidence does not yield a complete formal constitution.",
+        (
+            a("royal_seals", "Royal Seal Witnesses", "Coordinate witnessed orders and contributions across the royal household and provincial authorities.", "adm", CONTROL),
+            a("nile_contributions", "Nile Contribution Measures", "Reconcile grain, livestock, craft, and retained provincial shares without inventing a uniform tax code.", "adm", FOOD),
+            a("temple_stores", "Temple Storehouse Audit", "Review endowed stores, offering vessels, and hospitality obligations under royal protection.", "adm", CLERGY),
+            a("metalwork_returns", "Iron and Gold Workshop Returns", "Measure charcoal, blooms, tools, ornaments, and exchange obligations around royal centers.", "dip", TRADE),
+            a("desert_dispatches", "Desert Route Dispatches", "Maintain guides, wells, bows, and hospitality across exposed northern and eastern routes.", "mil", LOGISTICS),
+        ),
+        (
+            m("provincial_measure", "Provincial Contribution Measure", "Set witnessed regional contributions and retained shares.", "Court-Lineage Precedence Claim", "Royal and provincial houses seek a legible place in contribution and command.", "nobles_estate", ADMIN, NOBLES),
+            m("temple_inventory", "Temple Storehouse Inventory", "Review offerings, endowed stores, and public hospitality obligations.", "Temple Endowment Petition", "Cult custodians seek protected resources for rites and maintenance.", "clergy_estate", FOOD, CLERGY),
+            m("workshop_terms", "Royal Workshop Terms", "Set material, market, and inspection rules for metal and caravan houses.", "Caravan and Smithing Petition", "Specialist houses seek safe routes and predictable measures.", "burghers_estate", TRADE, TRADE),
+        ),
+    ),
+    Profile(
+        "lankan", "antq_anuradhapura_royal_council", "Anuradhapura Royal Council",
+        "The Anuradhapura court coordinates regional lineages, monastic endowments, reservoirs, cultivating households, ports, craft exchange, and elephant service.",
+        ("antq_lankan_kingdom",), ("nobles_estate", "clergy_estate", "peasants_estate"),
+        "lankan_court_atlas.png", "1068194d5ad9aed5375674fa4bd78ef888cc4ec14f7f1f26fbf1addbf4ba946e",
+        "P8.4;P11;P13;BHR", "secure",
+        "The council models coordination around the opening kingdom; it does not impose later administrative terminology or a uniform island constitution.",
+        (
+            a("reservoir_accounts", "Reservoir and Sluice Accounts", "Coordinate surveys, water release, silt clearing, and bounded repair labor around tanks.", "adm", CONTROL),
+            a("endowment_stores", "Monastic Endowment Stores", "Review donated land receipts, grain, lamps, vessels, and hospitality without making monasteries state offices.", "adm", CLERGY),
+            a("port_measures", "Port and Market Measures", "Maintain weights, beads, coins, vessels, and dues at connected exchange points.", "dip", TRADE),
+            a("regional_petitions", "Regional Lineage Petitions", "Hear witnessed claims over service, land, water, and royal access.", "dip", PRESTIGE),
+            a("elephant_service", "Elephant and Frontier Service", "Register handlers, fodder, ropes, forest routes, and bounded royal service.", "mil", LOGISTICS),
+        ),
+        (
+            m("tank_repairs", "Reservoir Repair Rotation", "Set survey, clearing, sluice, and labor obligations for a bounded waterwork.", "Cultivator Water Calendar", "Farming households seek predictable releases and seasonal labor.", "peasants_estate", CONTROL, PEASANTS),
+            m("endowment_review", "Monastic Endowment Review", "Inventory protected gifts and hospitality stores without absorbing them into the palace.", "Monastic Store Petition", "Religious communities request secure vessels, grain, and lamp supplies.", "clergy_estate", CLERGY, CLERGY),
+            m("regional_hearing", "Regional Service Hearing", "Reconcile lineage, elephant, road, and reservoir obligations.", "Regional-Lineage Access Claim", "Leading houses request witnessed access to royal judgment.", "nobles_estate", ADMIN, NOBLES),
         ),
     ),
 )
@@ -313,6 +393,22 @@ COUNCIL_DYNAMICS: dict[str, tuple[str, tuple[tuple[str, str], ...]]] = {
     "royal": (
         "0.10",
         (("nobles_estate", "0.20"), ("burghers_estate", "0.05"), ("clergy_estate", "0.05")),
+    ),
+    "xiongnu": (
+        "0.05",
+        (("tribes_estate", "0.35"), ("nobles_estate", "0.20"), ("burghers_estate", "-0.05")),
+    ),
+    "goguryeo": (
+        "0.10",
+        (("nobles_estate", "0.25"), ("peasants_estate", "0.10"), ("burghers_estate", "0.05")),
+    ),
+    "kushite": (
+        "0.10",
+        (("nobles_estate", "0.15"), ("clergy_estate", "0.25"), ("burghers_estate", "0.05")),
+    ),
+    "lankan": (
+        "0.10",
+        (("nobles_estate", "0.15"), ("clergy_estate", "0.20"), ("peasants_estate", "0.10")),
     ),
 }
 
@@ -600,7 +696,13 @@ def validate() -> list[str]:
     content = content_ledger()
     rows = list(csv.DictReader(io.StringIO(content)))
     counts = {category: sum(row["category"] == category for row in rows) for category in {row["category"] for row in rows}}
-    expected_counts = {"parliament_type": 9, "cabinet_action": 45, "parliament_issue": 27, "parliament_agenda": 27}
+    profile_count = len(PROFILES)
+    expected_counts = {
+        "parliament_type": profile_count,
+        "cabinet_action": profile_count * 5,
+        "parliament_issue": profile_count * 3,
+        "parliament_agenda": profile_count * 3,
+    }
     if counts != expected_counts:
         failures.append(f"content counts differ: {counts}")
     if len({row["key"] for row in rows}) != len(rows):
@@ -672,7 +774,11 @@ def main() -> int:
         for failure in failures:
             print(f"  - {failure}")
         return 1
-    print("s2_ancient_politics: PASS (9 councils; 45 cabinet actions; 27 issues; 27 agendas; 54 direct icons)")
+    count = len(PROFILES)
+    print(
+        f"s2_ancient_politics: PASS ({count} councils; {count * 5} cabinet actions; "
+        f"{count * 3} issues; {count * 3} agendas; {count * 6} direct icons)"
+    )
     return 0
 
 

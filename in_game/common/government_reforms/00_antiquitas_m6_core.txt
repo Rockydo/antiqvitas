@@ -71,7 +71,7 @@ antq_lankan_kingdom = {
 		research_speed = 0.10
 	}
 	on_activate = {
-		set_parliament_type = parliament_type:antq_sacral_court
+		set_parliament_type = parliament_type:antq_anuradhapura_royal_council
 	}
 	years = 2
 }
@@ -227,7 +227,7 @@ antq_kushite_dual_kingship = {
 		research_speed = 0.10
 	}
 	on_activate = {
-		set_parliament_type = parliament_type:antq_sacral_court
+		set_parliament_type = parliament_type:antq_meroitic_royal_council
 	}
 	years = 2
 }
@@ -244,7 +244,7 @@ antq_steppe_confederation = {
 		research_speed = 0.06
 	}
 	on_activate = {
-		set_parliament_type = parliament_type:antq_confederation_council
+		set_parliament_type = parliament_type:antq_xiongnu_wing_council
 	}
 	years = 2
 }
@@ -261,7 +261,7 @@ antq_early_korean_kingdom = {
 		research_speed = 0.10
 	}
 	on_activate = {
-		set_parliament_type = parliament_type:antq_royal_council
+		set_parliament_type = parliament_type:antq_goguryeo_royal_council
 	}
 	years = 2
 }
@@ -570,7 +570,6 @@ antq_steppe_wing_confederacy = {
 	government = steppe_horde
 	potential = {
 		OR = {
-			has_reform = government_reform:antq_steppe_confederation
 			has_reform = government_reform:antq_steppe_wing_confederacy
 			has_reform = government_reform:antq_steppe_gift_court
 		}
@@ -592,7 +591,6 @@ antq_steppe_gift_court = {
 	government = steppe_horde
 	potential = {
 		OR = {
-			has_reform = government_reform:antq_steppe_confederation
 			has_reform = government_reform:antq_steppe_wing_confederacy
 			has_reform = government_reform:antq_steppe_gift_court
 		}
@@ -660,8 +658,6 @@ antq_temple_endowment_court = {
 	government = monarchy
 	potential = {
 		OR = {
-			has_reform = government_reform:antq_lankan_kingdom
-			has_reform = government_reform:antq_kushite_dual_kingship
 			has_reform = government_reform:antq_temple_endowment_court
 			has_reform = government_reform:antq_irrigation_palace
 		}
@@ -683,8 +679,6 @@ antq_irrigation_palace = {
 	government = monarchy
 	potential = {
 		OR = {
-			has_reform = government_reform:antq_lankan_kingdom
-			has_reform = government_reform:antq_kushite_dual_kingship
 			has_reform = government_reform:antq_temple_endowment_court
 			has_reform = government_reform:antq_irrigation_palace
 		}
@@ -709,7 +703,6 @@ antq_petition_court = {
 			has_reform = government_reform:antq_client_monarchy
 			has_reform = government_reform:antq_buffer_kingdom
 			has_reform = government_reform:antq_regional_kingship
-			has_reform = government_reform:antq_early_korean_kingdom
 			has_reform = government_reform:antq_petition_court
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
@@ -734,7 +727,6 @@ antq_frontier_muster_monarchy = {
 			has_reform = government_reform:antq_client_monarchy
 			has_reform = government_reform:antq_buffer_kingdom
 			has_reform = government_reform:antq_regional_kingship
-			has_reform = government_reform:antq_early_korean_kingdom
 			has_reform = government_reform:antq_petition_court
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}

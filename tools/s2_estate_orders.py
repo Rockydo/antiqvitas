@@ -36,10 +36,14 @@ han|antq_han_imperial_bureaucracy~antq_memorialist_han_court~antq_commandery_sup
 iranian|antq_parthian_king_of_kings~antq_parthian_subkingdom~antq_indo_scythian_kingship~antq_sassanid_centralized_monarchy~antq_iranian_great_house_reform~antq_iranian_royal_domain|iranian_orders_atlas.png|8a7927087431399bc0144d1b7e80cfa7b47dfca58e314f0dd539e15a3fa10afd|P8.2;P13;CAH-XI;OCD|secure|The profile models negotiated royal, great-house, cult, caravan, and cultivating interests without asserting one written Arsacid constitution.|Royal House~Great Houses~Temple Networks~Caravan and Urban Houses~Cultivating Communities~Mounted Clans
 civic|antq_indo_greek_kingship~antq_settled_town_cluster~antq_boule_magistracy~antq_federal_synedrion|civic_orders_atlas.png|351cbbb537ff56a943566973db2f9edc1cc33628a932b71fc84b6738ec882275|P8.2;P8.5;P11;P13;OCD|secure|The civic profile covers related council, sanctuary, harbor, guild, and household functions without claiming identical constitutions or citizen bodies.|Civic Magistracies~Leading Houses~Sanctuary Custodians~Guilds and Traders~Citizen and Rural Households~Dependent Communities
 gana|antq_indian_ganasangha~antq_lineage_rotation~antq_gana_muster_confederacy|gana_orders_atlas.png|512fa08d4a70e66a54c56216f7b1e996579f6862f6a9a684a10ed1afc8279d8c|P8.5;P11;P13;CAH-XI|contested|Clan delegates and assembly offices are bounded gameplay categories; participation, hierarchy, and procedure varied and are incompletely recoverable.|Assembly Magistrates~Clan Delegates~Shrines and Renunciant Houses~Guilds and Caravans~Cultivating Households~Confederated Clans
-steppe|antq_steppe_confederation~antq_steppe_wing_confederacy~antq_steppe_gift_court|steppe_orders_atlas.png|173a0512bfd691e9acd21d61c7b9798f343b72e227bea272ad3cf2aaf66cb7c2|P8.6;P8.7;P13;CAH-XI|contested|The engine orders proxy ruling lineages, retinues, ritual custodians, brokers, and herding households without treating all Inner Asian societies as one polity.|Ruling Lineage~Leading Retinues~Ritual Custodians~Caravan Brokers~Herding Households~Confederated Clans
+steppe|antq_steppe_wing_confederacy~antq_steppe_gift_court|steppe_orders_atlas.png|173a0512bfd691e9acd21d61c7b9798f343b72e227bea272ad3cf2aaf66cb7c2|P8.6;P8.7;P13;CAH-XI|contested|The engine orders proxy ruling lineages, retinues, ritual custodians, brokers, and herding households without treating all Inner Asian societies as one polity.|Ruling Lineage~Leading Retinues~Ritual Custodians~Caravan Brokers~Herding Households~Confederated Clans
 tribal|antq_advanced_chiefdom~antq_tribal_kingdom~antq_elder_moot_kingship~antq_warband_retinue_kingship|tribal_orders_atlas.png|9aa72377a282f3652e13b9fd7ee5bf6b9558256b149172dffcc37e6fc0206a8c|P8.7;P11;P13;CAH-XI|contested|This broad fallback exposes differentiated assembly, retinue, ritual, exchange, and household interests while retaining the need for later regional subdivision.|Leading House~Household Retinues~Sacred Custodians~Exchange Households~Free Cultivators~Kindreds and Clans
-sacral|antq_lankan_kingdom~antq_kushite_dual_kingship~antq_temple_endowment_court~antq_irrigation_palace|sacral_orders_atlas.png|60c182e94e8f921acf2f533baafd8f25ebb89a31f80a7e1d8f013c12fb7c063d|P8.4;P8.5;P11;P13;BHR|contested|The profile translates different Lankan and northeast-African court-temple relationships into one engine floor without claiming shared theology or administration.|Consecrated Royal House~Court Lineages~Temple and Monastic Networks~Market and Artisan Houses~Irrigation and Cultivating Households~Frontier Communities
-royal|antq_client_monarchy~antq_buffer_kingdom~antq_early_korean_kingdom~antq_regional_kingship~antq_petition_court~antq_frontier_muster_monarchy|royal_orders_atlas.png|03c5d29d261c2c10792377defa0d4ba5840e6f0427daeaa29f2c0b29a11852cd|P8.2;P8.3;P8.4;P8.5;P11;P13;CAH-XI|contested|The royal profile is a regional floor for incomplete evidence; it does not assert common titulature, succession, court offices, or tribute systems.|Royal Household~Dynastic and Regional Elites~Cult and Sanctuary Networks~Town and Caravan Houses~Rural Households~Frontier and Clan Communities
+sacral|antq_temple_endowment_court~antq_irrigation_palace|sacral_orders_atlas.png|60c182e94e8f921acf2f533baafd8f25ebb89a31f80a7e1d8f013c12fb7c063d|P8.4;P8.5;P11;P13;BHR|contested|The profile translates different court-temple relationships into one engine floor without claiming shared theology or administration.|Consecrated Royal House~Court Lineages~Temple Networks~Market and Artisan Houses~Irrigation and Cultivating Households~Frontier Communities
+royal|antq_client_monarchy~antq_buffer_kingdom~antq_regional_kingship~antq_petition_court~antq_frontier_muster_monarchy|royal_orders_atlas.png|03c5d29d261c2c10792377defa0d4ba5840e6f0427daeaa29f2c0b29a11852cd|P8.2;P8.3;P8.4;P8.5;P11;P13;CAH-XI|contested|The royal profile is a regional floor for incomplete evidence; it does not assert common titulature, succession, court offices, or tribute systems.|Royal Household~Dynastic and Regional Elites~Cult and Sanctuary Networks~Town and Caravan Houses~Rural Households~Frontier and Clan Communities
+xiongnu|antq_steppe_confederation|xiongnu_orders_atlas.png|3e603f13b81f1de516bba7f31d1bd0050ea604b30b2a33fd783dc9446fc92208|P8.3;P13;CAH-XI|secure|These orders model the chanyu household, wing commanders, brokers, ritual custody, herding households, and negotiated lineages without importing later Mongol ranks.|Chanyu Household~Wing Commanders~Rite and Oath Custodians~Frontier Caravan Brokers~Herding Households~Confederated Lineages
+goguryeo|antq_early_korean_kingdom|goguryeo_orders_atlas.png|0890f5d7dcb24f4859e4d6991948c8ad919d6af346382a29f332d1cdaf38c00c|P8.3;P13;SAM|secure|The categories translate an early Goguryeo court and fortified communities into engine orders without projecting later Three Kingdoms institutions backward.|Royal House~Senior Lineages~Ancestral Rite Custodians~Walled-Settlement Artisans~Cultivating Households~Frontier Fort Communities
+kushite|antq_kushite_dual_kingship|kushite_orders_atlas.png|b93ff9b6915c7260613769a2b6d27d3ffd37d4dd216486347afacb2fa122bd56|P8.5;P11;P13;CAH-XI|secure|Royal, temple, craft, Nile, and frontier categories are Meroitic gameplay interfaces, not a claim for a recoverable formal constitution.|Meroitic Royal House~Court and Provincial Lineages~Temple Networks~Iron, Gold, and Caravan Houses~Nile Cultivating Households~Desert and Southern Communities
+lankan|antq_lankan_kingdom|lankan_orders_atlas.png|ee79f5c0a1fb5bc3415130a271fdcade8eec87daffc21b14c5093f2cf0ea1dfa|P8.4;P11;P13;BHR|secure|These categories separate the Anuradhapura court, monastic endowments, market craft, reservoir cultivation, and regional communities without inventing a single codified estate system.|Anuradhapura Royal House~Court and Regional Lineages~Monastic and Sanctuary Communities~Market and Artisan Houses~Reservoir Cultivating Households~Regional and Forest Communities
 """.strip()
 
 # profile|slug|estate|display name|description
@@ -98,6 +102,30 @@ royal|sanctuary_patronage|clergy_estate|Sanctuary Patronage|Cult and sanctuary n
 royal|tribute_assessment_registers|burghers_estate|Tribute Assessment Registers|Town and caravan houses keep witnessed measures and schedules, reducing arbitrary dues at the cost of immediate revenue.
 royal|caravan_protection_guarantees|burghers_estate|Caravan Protection Guarantees|Merchants gain escorts and compensation rules while recognized brokers acquire a stronger voice in royal policy.
 royal|fortress_grain_and_muster|peasants_estate|Fortress Grain and Muster|Rural households provide measured grain and bounded muster service in return for predictable demands and local defense.
+xiongnu|wing_command_precedence|nobles_estate|Wing-Command Precedence|Left and right wing commanders receive witnessed precedence and campaign directions while accepting bounded obligations to the chanyu.
+xiongnu|lineage_surety_exchange|nobles_estate|Lineage Surety Exchange|Leading lineages exchange wards, oath gifts, and witnessed guarantees that reduce defection while preserving their leverage.
+xiongnu|cauldron_and_oath_custody|clergy_estate|Cauldron and Oath Custody|Ritual custodians protect vessels and oath rites without implying a centralized or uniform priesthood.
+xiongnu|frontier_market_tallies|burghers_estate|Frontier Market Tallies|Brokers receive protected exchange places and measured tallies for silk, livestock, and metal goods under close supervision.
+xiongnu|seasonal_pasture_compacts|peasants_estate|Seasonal Pasture Compacts|Herding households receive recognized grazing circuits and water access in return for predictable movement and supply duties.
+xiongnu|remount_quota_compacts|tribes_estate|Remount Quota Compacts|Confederated lineages provide measured remounts and horse gear rather than open-ended requisition.
+goguryeo|lineage_council_hearing|nobles_estate|Senior-Lineage Hearing|Senior lineages receive a witnessed hearing on appointments, fortress commands, and disputed local obligations.
+goguryeo|fortress_command_rotations|nobles_estate|Fortress Command Rotations|Leading houses rotate bounded fortress duties, reducing private capture while slowing concentrated command.
+goguryeo|ancestral_rite_stores|clergy_estate|Ancestral Rite Stores|Rite custodians receive protected vessels and stores under royal inventory without becoming a centralized clergy.
+goguryeo|walled_artisan_obligations|burghers_estate|Walled Artisan Obligations|Iron, tile, and pottery specialists gain protected working space while accepting measured fortress-supply duties.
+goguryeo|millet_store_guarantees|peasants_estate|Millet Store Guarantees|Cultivating households contribute measured grain shares and retain bounded emergency-release claims.
+goguryeo|beacon_and_palisade_service|tribes_estate|Beacon and Palisade Service|Frontier communities maintain beacon, timber, and watch obligations under a predictable seasonal rotation.
+kushite|dual_court_seal_custody|nobles_estate|Dual Court Seal Custody|Royal and provincial lineages witness selected seals and tribute measures without implying equal constitutional authority.
+kushite|provincial_tribute_bowls|nobles_estate|Provincial Tribute Measures|Regional elites receive stable contribution measures while acknowledging royal review of retained shares.
+kushite|temple_storehouse_inventories|clergy_estate|Temple Storehouse Inventories|Temple networks retain endowed stores and offerings under witnessed inventories and royal protection.
+kushite|iron_and_gold_workshop_terms|burghers_estate|Iron and Gold Workshop Terms|Metalworking and caravan houses receive stable material and market terms while accepting inspected measures.
+kushite|nile_cultivator_rotations|peasants_estate|Nile Cultivator Rotations|Riverine households receive bounded labor and water schedules instead of unrestricted demands.
+kushite|desert_route_hospitality|tribes_estate|Desert Route Hospitality|Frontier communities maintain water, guides, and safe lodging in return for protected exchange and local influence.
+lankan|regional_lineage_petitions|nobles_estate|Regional Lineage Petitions|Court and regional lineages receive witnessed hearings on land, service, and reservoir obligations.
+lankan|reservoir_supervision_terms|nobles_estate|Reservoir Supervision Terms|Leading households accept audited waterwork duties in return for predictable access and honors.
+lankan|monastic_endowment_registers|clergy_estate|Monastic Endowment Registers|Monastic and sanctuary communities retain bounded gifts and stores under witnessed inventories.
+lankan|port_and_market_measures|burghers_estate|Port and Market Measures|Market and artisan houses gain protected weights and dues while accepting inspection of exchange.
+lankan|tank_labor_rotations|peasants_estate|Reservoir Labor Rotations|Cultivating households receive scheduled repair and water-allocation duties around local tanks.
+lankan|forest_route_compacts|tribes_estate|Forest Route Compacts|Regional communities maintain paths, honey, elephant service, and hospitality under bounded obligations.
 """.strip()
 
 
@@ -341,8 +369,11 @@ def build_art() -> None:
 def validate() -> list[str]:
     failures = []
     rows = list(csv.DictReader(io.StringIO(content_ledger())))
-    if len(rows) != 54 or len({row["key"] for row in rows}) != 54:
-        failures.append("estate-order ledger must contain 54 unique privileges")
+    expected_count = len(profiles()) * 6
+    if len(rows) != expected_count or len({row["key"] for row in rows}) != expected_count:
+        failures.append(
+            f"estate-order ledger must contain {expected_count} unique privileges"
+        )
     if any(len(row["description"]) < 75 for row in rows):
         failures.append("estate-order privilege description is too shallow")
     if len({row["modifiers"] for row in rows}) < 30:
@@ -399,7 +430,11 @@ def main() -> int:
         for failure in failures:
             print(f"  - {failure}")
         return 1
-    print("s2_estate_orders: PASS (9 profiles; 54 privileges; 54 direct icons; 54 polity-aware order names)")
+    count = len(profiles())
+    print(
+        f"s2_estate_orders: PASS ({count} profiles; {count * 6} privileges; "
+        f"{count * 6} direct icons; {count * 6} polity-aware order names)"
+    )
     return 0
 
 

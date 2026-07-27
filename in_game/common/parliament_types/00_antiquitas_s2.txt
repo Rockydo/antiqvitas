@@ -155,14 +155,12 @@ antq_confederation_council = {
 	type = country
 	potential = {
 		OR = {
-			has_reform = government_reform:antq_steppe_confederation
 			has_reform = government_reform:antq_steppe_wing_confederacy
 			has_reform = government_reform:antq_steppe_gift_court
 		}
 	}
 	allow = {
 		OR = {
-			has_reform = government_reform:antq_steppe_confederation
 			has_reform = government_reform:antq_steppe_wing_confederacy
 			has_reform = government_reform:antq_steppe_gift_court
 		}
@@ -213,16 +211,12 @@ antq_sacral_court = {
 	type = country
 	potential = {
 		OR = {
-			has_reform = government_reform:antq_lankan_kingdom
-			has_reform = government_reform:antq_kushite_dual_kingship
 			has_reform = government_reform:antq_temple_endowment_court
 			has_reform = government_reform:antq_irrigation_palace
 		}
 	}
 	allow = {
 		OR = {
-			has_reform = government_reform:antq_lankan_kingdom
-			has_reform = government_reform:antq_kushite_dual_kingship
 			has_reform = government_reform:antq_temple_endowment_court
 			has_reform = government_reform:antq_irrigation_palace
 		}
@@ -246,7 +240,6 @@ antq_royal_council = {
 			has_reform = government_reform:antq_client_monarchy
 			has_reform = government_reform:antq_buffer_kingdom
 			has_reform = government_reform:antq_regional_kingship
-			has_reform = government_reform:antq_early_korean_kingdom
 			has_reform = government_reform:antq_petition_court
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
@@ -256,7 +249,6 @@ antq_royal_council = {
 			has_reform = government_reform:antq_client_monarchy
 			has_reform = government_reform:antq_buffer_kingdom
 			has_reform = government_reform:antq_regional_kingship
-			has_reform = government_reform:antq_early_korean_kingdom
 			has_reform = government_reform:antq_petition_court
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
@@ -270,5 +262,101 @@ antq_royal_council = {
 		nobles_estate_agenda_impact = 0.20
 		burghers_estate_agenda_impact = 0.05
 		clergy_estate_agenda_impact = 0.05
+	}
+}
+
+antq_xiongnu_wing_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		tribes_estate_can_participate_in_parliament = yes
+		nobles_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.05
+		tribes_estate_agenda_impact = 0.35
+		nobles_estate_agenda_impact = 0.20
+		burghers_estate_agenda_impact = -0.05
+	}
+}
+
+antq_goguryeo_royal_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_early_korean_kingdom
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_early_korean_kingdom
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		peasants_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.10
+		nobles_estate_agenda_impact = 0.25
+		peasants_estate_agenda_impact = 0.10
+		burghers_estate_agenda_impact = 0.05
+	}
+}
+
+antq_meroitic_royal_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_kushite_dual_kingship
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_kushite_dual_kingship
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		clergy_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.10
+		nobles_estate_agenda_impact = 0.15
+		clergy_estate_agenda_impact = 0.25
+		burghers_estate_agenda_impact = 0.05
+	}
+}
+
+antq_anuradhapura_royal_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_lankan_kingdom
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_lankan_kingdom
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		clergy_estate_can_participate_in_parliament = yes
+		peasants_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.10
+		nobles_estate_agenda_impact = 0.15
+		clergy_estate_agenda_impact = 0.20
+		peasants_estate_agenda_impact = 0.10
 	}
 }

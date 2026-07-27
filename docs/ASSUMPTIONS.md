@@ -1,5 +1,27 @@
 # Historical Assumptions
 
+## 2026-07-27 - Four major-state political profiles are bounded institutional models
+
+The Xiongnu wing commands, pasture returns, gift exchange, remount obligations,
+and lineage sureties model confederative relationships described by Han-era
+sources; they do not imply a recoverable written Xiongnu constitution.
+Goguryeo fortress households, lineage petitions, millet stores, beacon duties,
+and ancestral rites represent an early polity still forming before the mature
+Three Kingdoms institutions.
+
+For Meroitic Kush, royal seals, temple stores, Nile contributions, metalwork,
+and desert dispatches combine securely attested court, cult, riverine, and
+material contexts without claiming that their exact offices survive in a
+complete administrative manual. For Anuradhapura Lanka, reservoir accounts,
+regional petitions, port measures, elephant service, and monastic endowments
+compress dated evidence on irrigation, kingship, exchange, and religious
+patronage into playable council programmes.
+
+Sources: `P8.3`; `SAM`; `P8.5`; `P8.4`; `P11`; `P13`; `BHR`; `CAH-XI`.
+
+[secure broad institutions and material practices; contested office titles,
+formal council membership, numerical effects, and universal availability]
+
 ## 2026-07-27 - Ordinary settlement buildings represent regional capacity
 
 The 1,432 opening settlement points are not 1,432 claims for excavated named

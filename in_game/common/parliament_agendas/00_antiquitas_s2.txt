@@ -351,3 +351,159 @@ antq_agenda_royal_fortress_stores = {
 	}
 	chance = 10
 }
+
+antq_agenda_xiongnu_wing_contribution = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_xiongnu_wing_contribution_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_xiongnu_pasture_compact = {
+	type = country
+	estate = tribes_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_xiongnu_pasture_compact_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_xiongnu_frontier_exchange = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_xiongnu_frontier_exchange_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_goguryeo_fortress_rotation = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_goguryeo_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_goguryeo_fortress_rotation_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_goguryeo_grain_reserve = {
+	type = country
+	estate = peasants_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_goguryeo_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_goguryeo_grain_reserve_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_goguryeo_craft_supply = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_goguryeo_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_goguryeo_craft_supply_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_kushite_provincial_measure = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_meroitic_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_kushite_provincial_measure_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_kushite_temple_inventory = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_meroitic_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_kushite_temple_inventory_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_kushite_workshop_terms = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_meroitic_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_kushite_workshop_terms_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_lankan_tank_repairs = {
+	type = country
+	estate = peasants_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_anuradhapura_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_lankan_tank_repairs_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_lankan_endowment_review = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_anuradhapura_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_lankan_endowment_review_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_lankan_regional_hearing = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_anuradhapura_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_lankan_regional_hearing_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}

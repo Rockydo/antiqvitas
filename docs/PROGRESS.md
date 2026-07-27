@@ -1,5 +1,26 @@
 # Progress
 
+## 2026-07-27 - Four major-state political profiles
+
+- Replaced the broad political fallbacks for Xiongnu, Goguryeo, Meroitic Kush,
+  and Anuradhapura Lanka with dedicated base reforms and councils.
+- Each state now receives six polity-aware social-order identities, six
+  exclusive privileges, five state-office programmes, three council issues,
+  and three agendas. The active political union now contains 13 councils, 65
+  cabinet actions, 39 issues, 39 agendas, 78 profile grants, 124 total ancient
+  privileges, and 227 ancient law groups.
+- Added 48 direct UI illustrations from eight purpose-built archaeological
+  still-life atlases. The asset ledger now verifies 808 direct chains; the
+  Kushite source atlas was regenerated to remove pseudo-inscription artifacts.
+- Routed each new profile through its appropriate research family. The advance
+  audit now reports 603 ancient-system unlocks and confirms that all 292
+  opening profiles remain researchable.
+- Updated the permanent regression contract from the old nine-profile floor to
+  the exact 13-profile/78-grant system. Full validation passes 102/102 checks;
+  paired vanilla/mod smoke reaches a responsive rendered menu with zero
+  mod-unique `error.log` lines. Focused evidence is in
+  `docs/playtests/S2_MAJOR_POLITICAL_PROFILES_20260727.md`.
+
 ## 2026-07-27 - Distributed the opening economy across the world
 
 - Replaced the misleading 2,297-row/51-location building seed with one generated

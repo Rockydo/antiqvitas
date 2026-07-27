@@ -300,13 +300,16 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
     ),
     "civic": ("antq_indo_greek_kingship", "antq_settled_town_cluster"),
     "gana": ("antq_indian_ganasangha",),
-    "steppe": ("antq_steppe_confederation",),
+    "steppe": (),
     "tribal": ("antq_advanced_chiefdom", "antq_tribal_kingdom"),
-    "sacral": ("antq_lankan_kingdom", "antq_kushite_dual_kingship"),
+    "sacral": (),
     "royal": (
         "antq_client_monarchy", "antq_buffer_kingdom", "antq_regional_kingship",
-        "antq_early_korean_kingdom",
     ),
+    "xiongnu": ("antq_steppe_confederation",),
+    "goguryeo": ("antq_early_korean_kingdom",),
+    "kushite": ("antq_kushite_dual_kingship",),
+    "lankan": ("antq_lankan_kingdom",),
 }
 PROFILE_PARLIAMENTS = {
     "roman": "antq_roman_senate",
@@ -318,6 +321,10 @@ PROFILE_PARLIAMENTS = {
     "tribal": "antq_tribal_assembly",
     "sacral": "antq_sacral_court",
     "royal": "antq_royal_council",
+    "xiongnu": "antq_xiongnu_wing_council",
+    "goguryeo": "antq_goguryeo_royal_council",
+    "kushite": "antq_meroitic_royal_council",
+    "lankan": "antq_anuradhapura_royal_council",
 }
 
 
