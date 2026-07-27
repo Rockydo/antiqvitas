@@ -1,5 +1,21 @@
 # Historical Assumptions
 
+## 2026-07-27 - Second privilege pairs remain institutional abstractions
+
+The Armenian, Nabataean, Himyarite, Satavahana, Goguryeo, and Cheruscan pairs
+are grounded in securely broad relationships—fortress dynasts, caravan water,
+South Arabian irrigation and aromatics, Deccan corporate exchange and military
+titles, Korean fortified settlements and grain storage, and Germanic assembly
+and retinue exchange. Pairwise exclusivity, formal grant names, administrative
+uniformity, and all numerical effects are gameplay constructions.
+
+Sources and the narrower claim boundary are retained per row in
+`docs/m6/estate_order_privileges.csv`. Principal routes: `P8.1`-`P8.7`;
+`P11`; `P13`; `CAH-XI`; `OCD`; `PLE`; `SAM`; `TAC-GER`; `IRAN-ARM`.
+
+[secure practice families; contested formal alternatives, uniformity, and
+mechanical values]
+
 ## 2026-07-27 - Country privilege pairs are bounded institutional tradeoffs
 
 The six pairs translate evidenced relationships into meaningful alternatives:

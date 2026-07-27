@@ -152,7 +152,6 @@ antq_legal_petitions = {
 	stability_cost_efficiency = 0.02
 	unlock_subject_type = antq_tributary
 	unlock_casus_belli = antq_chinese_warlord_unification
-	unlock_estate_privilege = antq_goguryeo_fortress_command_rotations
 	starting_technology_level = 2
 	requires = antq_provincial_census
 	ai_weight = { add = 90 }
@@ -176,6 +175,7 @@ antq_municipal_charters = {
 	unlock_law = feudal_de_jure_law
 	unlock_subject_type = antq_autonomous_city
 	unlock_estate_privilege = antq_han_calendar_and_ritual_consultation
+	unlock_estate_privilege = antq_goguryeo_ancestral_rite_stores
 	starting_technology_level = 2
 	requires = antq_provincial_census
 	ai_weight = { add = 90 }
@@ -266,7 +266,7 @@ antq_standing_administration = {
 	}
 	global_monthly_control = 0.001
 	unlock_estate_privilege = antq_han_licensed_long_distance_trade
-	unlock_estate_privilege = antq_goguryeo_walled_artisan_obligations
+	unlock_estate_privilege = antq_goguryeo_millet_store_guarantees
 	starting_technology_level = 3
 	requires = antq_municipal_charters
 	ai_weight = { add = 80 }
@@ -1523,6 +1523,7 @@ antq_principate_warfare = {
 		}
 	}
 	army_maintenance_efficiency = 0.01
+	unlock_estate_privilege = antq_cheruscan_retinue_gift_precedence
 	starting_technology_level = 3
 	requires = antq_frontier_patrols
 	ai_weight = { add = 80 }
@@ -2208,6 +2209,7 @@ antq_horse_archer_screening = {
 	unlock_estate_privilege = antq_iranian_safe_conduct_guarantees
 	unlock_estate_privilege = antq_steppe_seasonal_pasture_circuits
 	unlock_estate_privilege = antq_xiongnu_seasonal_pasture_compacts
+	unlock_estate_privilege = antq_armenian_artaxata_court_arbitration
 	starting_technology_level = 3
 	requires = antq_remount_pasture_registers
 	ai_weight = { add = 80 }
@@ -2639,6 +2641,7 @@ antq_caravan_accounting = {
 	unlock_estate_privilege = antq_gana_clan_delegate_rotation
 	unlock_estate_privilege = antq_sacral_treasury_seal_custody
 	unlock_estate_privilege = antq_lankan_regional_lineage_petitions
+	unlock_estate_privilege = antq_satavahana_guild_charter_arbitration
 	starting_technology_level = 2
 	requires = antq_monsoon_navigation
 	ai_weight = { add = 90 }
@@ -2697,6 +2700,8 @@ antq_desert_waystations = {
 		}
 	}
 	merchant_maintenance_efficiency = 0.01
+	unlock_estate_privilege = antq_nabataean_caravan_water_guarantees
+	unlock_estate_privilege = antq_himyarite_terrace_water_compacts
 	starting_technology_level = 2
 	requires = antq_red_sea_piloting
 	ai_weight = { add = 90 }
@@ -2761,6 +2766,7 @@ antq_seasonal_markets = {
 	unlock_casus_belli = antq_gupta_digvijaya
 	unlock_estate_privilege = antq_gana_road_hospitality_compacts
 	unlock_estate_privilege = antq_lankan_tank_labor_rotations
+	unlock_estate_privilege = antq_satavahana_maharathi_muster_precedence
 	starting_technology_level = 4
 	requires = antq_merchant_diasporas
 	ai_weight = { add = 70 }
@@ -2781,6 +2787,8 @@ antq_principate_exchange = {
 	}
 	global_trade_through_owned_territory_efficiency = 0.05
 	unlock_estate_privilege = antq_royal_sanctuary_patronage
+	unlock_estate_privilege = antq_nabataean_royal_customs_inspection
+	unlock_estate_privilege = antq_himyarite_incense_route_toll_farm
 	starting_technology_level = 3
 	requires = antq_desert_waystations
 	ai_weight = { add = 80 }
@@ -3638,7 +3646,6 @@ antq_state_granary_carriage = {
 		}
 	}
 	global_trade_through_owned_territory_efficiency = 0.05
-	unlock_estate_privilege = antq_goguryeo_ancestral_rite_stores
 	unlock_government_reform = antq_memorialist_han_court
 	unlock_government_reform = antq_goguryeo_fortress_lineages
 	starting_technology_level = 3
@@ -3662,6 +3669,7 @@ antq_relay_market_stations = {
 	}
 	import_efficiency = tiny_trade_efficiency_bonus
 	unlock_estate_privilege = antq_han_predictable_corvee_rotations
+	unlock_estate_privilege = antq_goguryeo_beacon_and_palisade_service
 	starting_technology_level = 4
 	requires = antq_state_granary_carriage
 	ai_weight = { add = 70 }
@@ -3682,7 +3690,6 @@ antq_salt_iron_bureau_exchange = {
 		}
 	}
 	import_efficiency = tiny_trade_efficiency_bonus
-	unlock_estate_privilege = antq_goguryeo_millet_store_guarantees
 	unlock_government_reform = antq_commandery_supervision
 	unlock_government_reform = antq_frontier_muster_monarchy
 	unlock_government_reform = antq_goguryeo_granary_court
@@ -3707,6 +3714,7 @@ antq_western_regions_caravan_seals = {
 	}
 	export_efficiency = small_trade_efficiency_bonus
 	unlock_estate_privilege = antq_han_commandery_fiscal_discretion
+	unlock_estate_privilege = antq_goguryeo_royal_granary_inspection
 	starting_technology_level = 4
 	requires = antq_relay_market_stations
 	requires = antq_salt_iron_bureau_exchange
@@ -3995,6 +4003,7 @@ antq_han_classics = {
 	unlock_estate_privilege = antq_iranian_great_house_counsel
 	unlock_estate_privilege = antq_steppe_wing_council_precedence
 	unlock_estate_privilege = antq_xiongnu_wing_command_precedence
+	unlock_estate_privilege = antq_armenian_fortress_dynast_service
 	starting_technology_level = 2
 	requires = antq_paper_precursors
 	ai_weight = { add = 90 }
@@ -4966,6 +4975,7 @@ antq_bamboo_slip_collation = {
 	}
 	cultural_influence_modifier = 0.01
 	unlock_estate_privilege = antq_han_registered_estate_returns
+	unlock_estate_privilege = antq_goguryeo_fortress_command_rotations
 	starting_technology_level = 2
 	requires = antq_paper_precursors
 	ai_weight = { add = 90 }
@@ -4987,6 +4997,7 @@ antq_clerical_script_examinations = {
 	}
 	global_monthly_literacy = 0.005
 	unlock_estate_privilege = antq_han_commandery_workshop_quotas
+	unlock_estate_privilege = antq_goguryeo_walled_artisan_obligations
 	starting_technology_level = 3
 	requires = antq_bamboo_slip_collation
 	ai_weight = { add = 80 }
@@ -5009,6 +5020,7 @@ antq_calendrical_offices = {
 	global_institution_growth_modifier = 0.10
 	unlock_estate_privilege = antq_han_court_remonstrance_access
 	unlock_estate_privilege = antq_royal_caravan_protection_guarantees
+	unlock_estate_privilege = antq_goguryeo_fortress_lineage_command
 	starting_technology_level = 4
 	requires = antq_clerical_script_examinations
 	ai_weight = { add = 70 }
@@ -5029,7 +5041,6 @@ antq_hydraulic_administration_manuals = {
 		}
 	}
 	global_institution_growth_modifier = 0.10
-	unlock_estate_privilege = antq_goguryeo_beacon_and_palisade_service
 	starting_technology_level = 4
 	requires = antq_clerical_script_examinations
 	ai_weight = { add = 70 }
@@ -6336,6 +6347,7 @@ antq_household_retinue_feasts = {
 	}
 	global_population_capacity_modifier = 0.02
 	unlock_estate_privilege = antq_tribal_elder_assembly_hearing
+	unlock_estate_privilege = antq_cheruscan_coalition_assembly_hearing
 	starting_technology_level = 2
 	requires = antq_civic_associations
 	ai_weight = { add = 90 }

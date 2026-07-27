@@ -5,7 +5,7 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review. (Validated by the 820-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
+- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, and institution; retain a checked asset ledger and contact-sheet review. (Validated by the 832-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
   - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
 ## Second manual playtest remediation — 2026-07-26 (resume here)
@@ -44,7 +44,7 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 45 reforms and 136 privileges
+  thin outside the first replacement tranches: 45 reforms and 148 privileges
   serve 292 opening polities. The legal layer now has 227 ancient groups,
   including 182 profile laws with 584 total options, a 26-option dated
   development layer, and 12 country-specific exceptions.
@@ -141,7 +141,7 @@ and focused runtime probe all pass.
   - [ ] Replace required gameplay breadth at both definition and
     unlock/reference layers. Preserve only locally proven engine adapters, and
     guarantee that their names, descriptions, icons, and effects cannot surface.
-    Existing namespaced ancient content remains active (136 privileges, 227 laws,
+    Existing namespaced ancient content remains active (148 privileges, 227 laws,
     37 reforms).
     - [x] Supply the first deep council/state-office replacement tranche:
       nine reform-driven council profiles, 45 profile-locked administrative
@@ -161,7 +161,7 @@ and focused runtime probe all pass.
       All six engine order slots now render polity-aware names; the 78 grants
       use 30+ effect packages, mutually exclusive alternatives where
       appropriate, explicit power/tax/control tradeoffs, and 78 unique direct
-      historical-material illustrations. The project now has 136/136
+      historical-material illustrations. The project now has 148/148
       directly illustrated ancient privileges.
     - [ ] Complete the remaining S2-P4 replacement breadth: profile-specific
       major-country subdivisions, additional reform paths, and later-century
@@ -172,14 +172,14 @@ and focused runtime probe all pass.
         dedicated base reforms, councils, six social-order names, six
         privileges, five state-office programmes, three issues, and three
         agendas apiece. The installed system now contains 13 councils, 65
-        programmes, 39 issues, 39 agendas, 78 profile grants, and 136 total
+        programmes, 39 issues, 39 agendas, 78 profile grants, and 148 total
         ancient privileges, all with direct art. Keep the parent open for
         deeper reform branches and dated legal development.
       - [x] Give those four state profiles two research-gated constitutional
         branches apiece: Xiongnu wing/gift circuits, Goguryeo
         fortress-lineage/granary courts, Meroitic royal-household/temple-domain
         stewardship, and Lankan reservoir/Sangha patronage. The political
-        contract now covers 45 reforms and the knowledge tree carries 623
+        contract now covers 45 reforms and the knowledge tree carries 635
         ancient-system unlocks. Keep the parent open for other major-state
         subdivisions and dated successor forms.
       - [x] Add the first dated legal-development layer: two options for every
@@ -600,10 +600,15 @@ and focused runtime probe all pass.
     Xiongnu, Meroitic Kush, and Anuradhapura. Every grant has five useful
     tradeoff effects, explicit availability and revocation behavior, a
     source-qualified boundary, eleven-client localization, and unique direct
-    art. Total ancient privilege breadth is now 136 and the knowledge tree
-    carries 623 ancient-system unlocks.
+    art. Total ancient privilege breadth is now 148 and the knowledge tree
+    carries 635 ancient-system unlocks.
+  - [x] Add the second country-specific privilege tranche: twelve more grants
+    arranged as six exact-tag pairs for Armenia, Nabataea, Himyar,
+    Satavahana, Goguryeo, and the Cherusci. Preserve the same five-effect
+    tradeoffs, mutual exclusion, revocation, source boundary, localization,
+    and direct-art requirements.
   - [ ] Continue expanding country/culture/religion-specific privileges beyond
-    the current 136, prioritizing additional major states and culturally
+    the current 148, prioritizing additional major states and culturally
     bounded regional alternatives rather than generic filler.
   - Acceptance: all 229 tags have useful legal/political choices; major countries
     have bespoke depth; no duplicate filler effect or post-476 inheritance.

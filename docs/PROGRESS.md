@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-27 - Second country-specific privilege tranche
+
+- Added twelve mutually exclusive exact-country grants for Armenia, Nabataea,
+  Himyar, Satavahana, Goguryeo, and the Cherusci. The new choices cover
+  fortress dynasts and court arbitration, caravan water and customs, terrace
+  labor and incense tolls, guild arbitration and military-house service,
+  fortress lineages and granaries, and coalition hearings and retinue gifts.
+- Generated two reviewed archaeological source atlases. Rejected the first
+  Satavahana coin composition as portrait-like and regenerated it with
+  unmarked weights, beads, cloth, and measures before integration.
+- Privilege coverage is now 148/148 direct icons, with 635 ancient-system
+  unlocks and 832 direct UI chains. All 292 opening profiles remain
+  researchable.
+- Full validation passes 102/102 checks; paired smoke reaches responsive
+  vanilla and mod menus with zero mod-unique log lines. Evidence:
+  `docs/playtests/S2_COUNTRY_PRIVILEGES_II_20260727.md`.
+
 ## 2026-07-27 - First country-specific privilege pairs
 
 - Added twelve exact-country privileges for Rome, Han, Parthia, Xiongnu,

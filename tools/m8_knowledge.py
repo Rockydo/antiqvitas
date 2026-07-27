@@ -490,6 +490,11 @@ S2_ESTATE_ADVANCE_PROFILES: dict[str, tuple[str, ...]] = {
     "goguryeo": ("han_east_asian",),
     "kushite": ("african",),
     "lankan": ("indic",),
+    "armenian": ("iranian_steppe",),
+    "nabataean": ("near_eastern",),
+    "himyarite": ("near_eastern",),
+    "satavahana": ("indic",),
+    "cheruscan": ("germanic",),
 }
 
 # Each engine age contains five compact trees. The first four ages use two
