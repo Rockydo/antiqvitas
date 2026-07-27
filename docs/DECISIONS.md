@@ -3649,3 +3649,24 @@ Direct goods art follows a pinned source chain: reviewed exact-size six-up
 atlas, circle-safe RGBA master, 128px DXT5 icon, and 1080×440 DXT5 illustration.
 Source hashes and cell positions are code contracts. This permits more goods
 without returning to generic resolver art or unreviewable hand-cropped assets.
+
+## 2026-07-27 - Named Roman client courts do not share a political fallback
+
+Herodian Judea, Cappadocia, Odrysian Thrace, and the Bosporan Kingdom are
+promoted from `antq_client_monarchy` to complete generated political profiles.
+Their common dependence on Roman confirmation is represented in diplomacy and
+selected court programmes; it is not treated as proof that their temple,
+toparchy, royal-domain, highland, polis, grain-port, dynastic, and
+steppe-frontier institutions were interchangeable.
+
+Each profile therefore owns one opening reform, two research-gated
+alternatives, one council, five programmes, three issue/agenda pairs, six
+polity-aware order labels, six privileges, and two reviewed art atlases. The
+same reform tuple drives setup, potential gates, council activation,
+localization, privilege availability, and research unlocks. Broad royal
+privileges remain compatible only where intentionally retained by the source
+government row.
+
+Art uses archaeological still lifes without people, writing, heraldry, or
+post-antique material. Generated pseudo-writing is an automatic rejection:
+three seal motifs were regenerated before their hashes were accepted.

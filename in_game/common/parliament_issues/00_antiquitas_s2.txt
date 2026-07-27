@@ -945,3 +945,183 @@ antq_issue_mauretanian_frontier_watch_terms = {
 	}
 	on_debate_failed = { parliament_debate_failed_effect = yes }
 }
+
+antq_issue_judean_temple_store_review = {
+	estate = clergy_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_judean_ethnarchic_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_judean_temple_store_review_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_judean_toparchy_assessment = {
+	estate = nobles_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_judean_ethnarchic_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_judean_toparchy_assessment_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_judean_pilgrim_market_order = {
+	estate = burghers_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_judean_ethnarchic_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_judean_pilgrim_market_order_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_cappadocian_domain_assessment = {
+	estate = nobles_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_cappadocian_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_cappadocian_domain_assessment_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_cappadocian_sanctuary_inventory = {
+	estate = clergy_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_cappadocian_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_cappadocian_sanctuary_inventory_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_cappadocian_pass_safe_conduct = {
+	estate = burghers_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_cappadocian_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_cappadocian_pass_safe_conduct_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_thracian_dynastic_hearing = {
+	estate = nobles_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_thracian_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_thracian_dynastic_hearing_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_thracian_city_measure_review = {
+	estate = burghers_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_thracian_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_thracian_city_measure_review_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_thracian_mountain_watch_rotation = {
+	estate = tribes_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_thracian_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_thracian_mountain_watch_rotation_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_bosporan_royal_seal_hearing = {
+	estate = nobles_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_bosporan_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_bosporan_royal_seal_hearing_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_bosporan_grain_harbor_measure = {
+	estate = burghers_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_bosporan_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_bosporan_grain_harbor_measure_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_bosporan_steppe_frontier_terms = {
+	estate = tribes_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_bosporan_royal_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_bosporan_steppe_frontier_terms_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}

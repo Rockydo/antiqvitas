@@ -168,6 +168,30 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "P8.1;P8.5;P11;P13;CAH-XI;OCD;OCD-PTO", "secure",
         "Juba II and Cleopatra Selene's client court balances regional houses, royal domains, cities, ports, and frontier service without becoming a uniform Roman administration.",
     ),
+    "antq_herodian_judean_ethnarchy": (
+        "global_clergy_estate_power=0.10|global_nobles_estate_power=0.08|"
+        "clergy_estate_power_from_cabinet=0.20|replace_cabinet_member_cost_modifier=0.06",
+        "P8.1;P11;P13;OCD;JOS-SAL", "secure",
+        "Archelaus's ethnarchy balances Herodian dynastic authority, the Jerusalem temple establishment, toparchic assessment, pilgrimage, and Roman confirmation.",
+    ),
+    "antq_cappadocian_client_kingship": (
+        "global_nobles_estate_power=0.10|global_burghers_estate_power=0.06|"
+        "nobles_estate_power_from_cabinet=0.20|replace_cabinet_member_cost_modifier=0.07",
+        "P8.1;P11;P13;OCD;PLE", "secure",
+        "Archelaus's long client kingship negotiates royal domains, sanctuary property, highland routes, cavalry households, and Roman patronage.",
+    ),
+    "antq_odrysian_client_kingship": (
+        "global_nobles_estate_power=0.11|global_tribes_estate_power=0.08|"
+        "nobles_estate_power_from_cabinet=0.22|replace_cabinet_member_cost_modifier=0.09",
+        "P8.1;P11;P13;OCD;TAC-THR;MGL-THR", "contested",
+        "Rhoemetalces's Odrysian court balances dynastic claimants, mounted retainers, mountain communities, Aegean cities, and Roman intervention.",
+    ),
+    "antq_bosporan_client_kingship": (
+        "global_burghers_estate_power=0.10|global_nobles_estate_power=0.08|"
+        "burghers_estate_power_from_cabinet=0.20|replace_cabinet_member_cost_modifier=0.08",
+        "P8.1;P11;P13;OCD;PLE;ZAV-ASP", "contested",
+        "The deliberately contested Bosporan succession balances royal claimants, Greek poleis, grain ports, mounted households, and steppe-frontier compacts.",
+    ),
     "antq_indian_ganasangha": (
         "global_peasants_estate_power=0.10|global_burghers_estate_power=0.05|"
         "estate_power_from_cabinet=0.20|replace_cabinet_member_cost_modifier=-0.10",
@@ -430,6 +454,38 @@ ALTERNATIVE_REFORMS: tuple[tuple[str, str, str, str, str, str, str, str, str], .
      "Entrust mounted watch, guides, water access, regional musters, and border intelligence to negotiated frontier communities.",
      "global_tribes_estate_power=0.16|global_nobles_estate_power=0.10|nobles_estate_power_from_cabinet=0.28|replace_cabinet_member_cost_modifier=0.12",
      "P8.1;P8.5;P11;P13;CAH-XI", "contested", "Mounted frontier service is modeled conservatively without flattening diverse Mauretanian communities into a single tribal institution."),
+    ("antq_judean_temple_court", "judean", "monarchy", "Jerusalem Temple Court",
+     "Give temple stores, priestly hearings, pilgrimage order, and sanctuary provisioning a larger place in ethnarchic government.",
+     "global_clergy_estate_power=0.18|global_burghers_estate_power=0.06|clergy_estate_power_from_cabinet=0.30|replace_cabinet_member_cost_modifier=0.10",
+     "P8.1;P11;P13;OCD;JOS-SAL", "secure", "The Jerusalem temple establishment is securely central, while this branch does not treat priestly authority as a uniform civil bureaucracy."),
+    ("antq_judean_toparchy_compact", "judean", "monarchy", "Judean Toparchy Compact",
+     "Work through regional assessment districts, cultivating communities, cistern upkeep, market peace, and witnessed local petitions.",
+     "global_peasants_estate_power=0.12|global_nobles_estate_power=0.08|estate_power_from_cabinet=0.25|set_cabinet_member_cost_modifier=-0.05",
+     "P8.1;P11;P13;OCD;JOS-SAL", "contested", "Toparchic districts and local assessment are defensible, but their precise AD 1 competences and representative character remain uncertain."),
+    ("antq_cappadocian_domain_court", "cappadocian", "monarchy", "Cappadocian Domain Court",
+     "Concentrate sealed accounts, royal estates, sanctuary inventories, and appointed custodians around Archelaus's household.",
+     "global_crown_estate_power=0.18|global_peasants_estate_power=0.08|crown_estate_power_from_cabinet=0.28|set_cabinet_member_cost_modifier=-0.07",
+     "P8.1;P11;P13;OCD;PLE", "contested", "Royal-domain and sanctuary interests are historically grounded, while the exact reach of a centralized domain administration is not reconstructed."),
+    ("antq_cappadocian_pass_compact", "cappadocian", "monarchy", "Cappadocian Pass Compact",
+     "Entrust caravan passage, highland watch, cavalry musters, and market safe-conducts to negotiated regional houses and towns.",
+     "global_burghers_estate_power=0.14|global_nobles_estate_power=0.10|burghers_estate_power_from_cabinet=0.25|replace_cabinet_member_cost_modifier=0.08",
+     "P8.1;P11;P13;OCD;PLE", "contested", "Cappadocia's routes and mounted households support this branch without implying a recovered fixed council or uniform pass law."),
+    ("antq_thracian_dynastic_court", "thracian", "monarchy", "Odrysian Dynastic Court",
+     "Concentrate royal seals, succession hearings, retinue gifts, city diplomacy, and Roman embassies around the ruling house.",
+     "global_nobles_estate_power=0.20|global_burghers_estate_power=0.05|nobles_estate_power_from_cabinet=0.34|replace_cabinet_member_cost_modifier=0.16",
+     "P8.1;P11;P13;OCD;TAC-THR;MGL-THR", "contested", "Dynastic fragmentation and Roman intervention are secure contexts, but the precise AD 1 court hierarchy and Pythodoris's role remain contested."),
+    ("antq_thracian_mountain_host", "thracian", "monarchy", "Thracian Mountain Host",
+     "Distribute pass watch, horse service, timber and grain provisioning, sanctuary oaths, and frontier warning among regional communities.",
+     "global_tribes_estate_power=0.18|global_peasants_estate_power=0.08|tribes_estate_power_from_cabinet=0.30|replace_cabinet_member_cost_modifier=0.10",
+     "P8.1;P11;P13;OCD;TAC-THR;MGL-THR", "contested", "The branch models negotiated regional service without flattening Thracian peoples into a single tribe or inventing a permanent federal host."),
+    ("antq_bosporan_polis_court", "bosporan", "monarchy", "Bosporan Polis Court",
+     "Give grain measures, harbor petitions, sanctuary inventories, and civic mediation greater weight in royal government.",
+     "global_burghers_estate_power=0.20|global_clergy_estate_power=0.05|burghers_estate_power_from_cabinet=0.30|set_cabinet_member_cost_modifier=-0.05",
+     "P8.1;P11;P13;OCD;PLE;ZAV-ASP", "secure", "Greek poleis and grain ports securely structured Bosporan power, while their local constitutions and leverage varied."),
+    ("antq_bosporan_steppe_compact", "bosporan", "monarchy", "Bosporan Steppe Compact",
+     "Broker mounted service, pasture access, frontier intelligence, claimant support, and strait defense with regional households.",
+     "global_tribes_estate_power=0.18|global_nobles_estate_power=0.10|tribes_estate_power_from_cabinet=0.30|replace_cabinet_member_cost_modifier=0.12",
+     "P8.1;P11;P13;OCD;PLE;ZAV-ASP", "contested", "Mounted and steppe-frontier interests are defensible, but this path avoids inventing one ethnic bloc, fixed treaty, or recovered council."),
 )
 
 for (
@@ -465,6 +521,10 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
     "marcomannic": ("antq_marcomannic_bohemian_kingship",),
     "sabaean": ("antq_sabaean_marib_kingship",),
     "mauretanian": ("antq_mauretanian_client_kingship",),
+    "judean": ("antq_herodian_judean_ethnarchy",),
+    "cappadocian": ("antq_cappadocian_client_kingship",),
+    "thracian": ("antq_odrysian_client_kingship",),
+    "bosporan": ("antq_bosporan_client_kingship",),
 }
 PROFILE_PARLIAMENTS = {
     "roman": "antq_roman_senate",
@@ -488,6 +548,10 @@ PROFILE_PARLIAMENTS = {
     "marcomannic": "antq_marcomannic_royal_council",
     "sabaean": "antq_sabaean_royal_council",
     "mauretanian": "antq_mauretanian_royal_council",
+    "judean": "antq_judean_ethnarchic_council",
+    "cappadocian": "antq_cappadocian_royal_council",
+    "thracian": "antq_thracian_royal_council",
+    "bosporan": "antq_bosporan_royal_council",
 }
 
 
@@ -984,20 +1048,21 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    if len(POLITICAL_CONTRACTS) != 69 or not used_reforms.issubset(POLITICAL_CONTRACTS):
+    if len(POLITICAL_CONTRACTS) != 81 or not used_reforms.issubset(POLITICAL_CONTRACTS):
         failures.append(
-            "political appointment contracts must cover 27 core and 42 alternative reforms"
+            "political appointment contracts must cover 31 core and 50 alternative reforms"
         )
-    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 60:
+    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 70:
         failures.append("political appointment contracts are insufficiently differentiated")
     alternative_profiles = [row[1] for row in ALTERNATIVE_REFORMS]
-    if len(ALTERNATIVE_REFORMS) != 42 or any(
+    if len(ALTERNATIVE_REFORMS) != 50 or any(
         alternative_profiles.count(profile) != 2
         for profile in {
             "roman", "han", "iranian", "civic", "gana", "steppe", "tribal",
             "sacral", "royal", "xiongnu", "goguryeo", "kushite", "lankan",
             "armenian", "nabataean", "himyarite", "satavahana",
             "catuvellaunian", "marcomannic", "sabaean", "mauretanian",
+            "judean", "cappadocian", "thracian", "bosporan",
         }
     ):
         failures.append("alternative reforms must provide two paths for every political profile")
@@ -1433,6 +1498,50 @@ antq_mauretanian_client_kingship = {
 	}
 	years = 2
 }
+
+antq_herodian_judean_ethnarchy = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_clergy_estate_power = 0.08
+		global_nobles_estate_power = 0.05
+		research_speed = 0.10
+	}
+	years = 2
+}
+
+antq_cappadocian_client_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.06
+		global_burghers_estate_power = 0.04
+		research_speed = 0.10
+	}
+	years = 2
+}
+
+antq_odrysian_client_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.07
+		global_tribes_estate_power = 0.06
+		research_speed = 0.10
+	}
+	years = 2
+}
+
+antq_bosporan_client_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_burghers_estate_power = 0.07
+		global_nobles_estate_power = 0.05
+		research_speed = 0.10
+	}
+	years = 2
+}
 """
     parliament_by_reform = {
         reform: PROFILE_PARLIAMENTS[profile]
@@ -1588,6 +1697,14 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_sabaean_marib_kingship_desc", "An anonymous Sabaean court grounded in Ma'rib waterworks, sanctuaries, incense routes, highland cultivation, and regional service."),
         ("antq_mauretanian_client_kingship", "Mauretanian Client Kingship"),
         ("antq_mauretanian_client_kingship_desc", "The court of Juba II and Cleopatra Selene balancing royal domains, cities, ports, frontier communities, and Roman patronage."),
+        ("antq_herodian_judean_ethnarchy", "Herodian Judean Ethnarchy"),
+        ("antq_herodian_judean_ethnarchy_desc", "Archelaus's ethnarchy balancing Herodian dynastic authority, the Jerusalem temple establishment, toparchic assessment, pilgrimage, and Roman confirmation."),
+        ("antq_cappadocian_client_kingship", "Cappadocian Client Kingship"),
+        ("antq_cappadocian_client_kingship_desc", "Archelaus's client court balancing royal domains, sanctuary property, highland routes, cavalry households, and Roman patronage."),
+        ("antq_odrysian_client_kingship", "Odrysian Client Kingship"),
+        ("antq_odrysian_client_kingship_desc", "Rhoemetalces's court balancing dynastic claimants, mounted retainers, mountain communities, Aegean cities, and Roman intervention."),
+        ("antq_bosporan_client_kingship", "Bosporan Client Kingship"),
+        ("antq_bosporan_client_kingship_desc", "A contested Bosporan succession balancing royal claimants, Greek poleis, grain ports, mounted households, and steppe-frontier compacts."),
         ("antq_indian_ganasangha", "Indian Ganasangha"),
         ("antq_indian_ganasangha_desc", "A clan-based republican council represented through the installed republic government type."),
         ("antq_indo_scythian_kingship", "Indo-Scythian Kingship"),

@@ -481,6 +481,78 @@ antq_mauretanian_client_kingship = {
 	years = 2
 }
 
+antq_herodian_judean_ethnarchy = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_clergy_estate_power = 0.10
+		global_nobles_estate_power = 0.08
+		clergy_estate_power_from_cabinet = 0.20
+		replace_cabinet_member_cost_modifier = 0.06
+		global_clergy_estate_power = 0.08
+		global_nobles_estate_power = 0.05
+		research_speed = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_judean_ethnarchic_council
+	}
+	years = 2
+}
+
+antq_cappadocian_client_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		global_burghers_estate_power = 0.06
+		nobles_estate_power_from_cabinet = 0.20
+		replace_cabinet_member_cost_modifier = 0.07
+		global_nobles_estate_power = 0.06
+		global_burghers_estate_power = 0.04
+		research_speed = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_cappadocian_royal_council
+	}
+	years = 2
+}
+
+antq_odrysian_client_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.11
+		global_tribes_estate_power = 0.08
+		nobles_estate_power_from_cabinet = 0.22
+		replace_cabinet_member_cost_modifier = 0.09
+		global_nobles_estate_power = 0.07
+		global_tribes_estate_power = 0.06
+		research_speed = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_thracian_royal_council
+	}
+	years = 2
+}
+
+antq_bosporan_client_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_burghers_estate_power = 0.10
+		global_nobles_estate_power = 0.08
+		burghers_estate_power_from_cabinet = 0.20
+		replace_cabinet_member_cost_modifier = 0.08
+		global_burghers_estate_power = 0.07
+		global_nobles_estate_power = 0.05
+		research_speed = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_bosporan_royal_council
+	}
+	years = 2
+}
+
 # Profile-locked alternative ancient reform paths.
 antq_augustan_dyarchy = {
 	major = yes
@@ -1414,6 +1486,182 @@ antq_mauretanian_frontier_compact = {
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_mauretanian_royal_council
+	}
+	years = 2
+}
+
+antq_judean_temple_court = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_judean_ethnarchy
+			has_reform = government_reform:antq_judean_temple_court
+			has_reform = government_reform:antq_judean_toparchy_compact
+		}
+	}
+	country_modifier = {
+		global_clergy_estate_power = 0.18
+		global_burghers_estate_power = 0.06
+		clergy_estate_power_from_cabinet = 0.30
+		replace_cabinet_member_cost_modifier = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_judean_ethnarchic_council
+	}
+	years = 2
+}
+
+antq_judean_toparchy_compact = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_judean_ethnarchy
+			has_reform = government_reform:antq_judean_temple_court
+			has_reform = government_reform:antq_judean_toparchy_compact
+		}
+	}
+	country_modifier = {
+		global_peasants_estate_power = 0.12
+		global_nobles_estate_power = 0.08
+		estate_power_from_cabinet = 0.25
+		set_cabinet_member_cost_modifier = -0.05
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_judean_ethnarchic_council
+	}
+	years = 2
+}
+
+antq_cappadocian_domain_court = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_cappadocian_client_kingship
+			has_reform = government_reform:antq_cappadocian_domain_court
+			has_reform = government_reform:antq_cappadocian_pass_compact
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.18
+		global_peasants_estate_power = 0.08
+		crown_estate_power_from_cabinet = 0.28
+		set_cabinet_member_cost_modifier = -0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_cappadocian_royal_council
+	}
+	years = 2
+}
+
+antq_cappadocian_pass_compact = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_cappadocian_client_kingship
+			has_reform = government_reform:antq_cappadocian_domain_court
+			has_reform = government_reform:antq_cappadocian_pass_compact
+		}
+	}
+	country_modifier = {
+		global_burghers_estate_power = 0.14
+		global_nobles_estate_power = 0.10
+		burghers_estate_power_from_cabinet = 0.25
+		replace_cabinet_member_cost_modifier = 0.08
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_cappadocian_royal_council
+	}
+	years = 2
+}
+
+antq_thracian_dynastic_court = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_odrysian_client_kingship
+			has_reform = government_reform:antq_thracian_dynastic_court
+			has_reform = government_reform:antq_thracian_mountain_host
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.20
+		global_burghers_estate_power = 0.05
+		nobles_estate_power_from_cabinet = 0.34
+		replace_cabinet_member_cost_modifier = 0.16
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_thracian_royal_council
+	}
+	years = 2
+}
+
+antq_thracian_mountain_host = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_odrysian_client_kingship
+			has_reform = government_reform:antq_thracian_dynastic_court
+			has_reform = government_reform:antq_thracian_mountain_host
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.18
+		global_peasants_estate_power = 0.08
+		tribes_estate_power_from_cabinet = 0.30
+		replace_cabinet_member_cost_modifier = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_thracian_royal_council
+	}
+	years = 2
+}
+
+antq_bosporan_polis_court = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_bosporan_client_kingship
+			has_reform = government_reform:antq_bosporan_polis_court
+			has_reform = government_reform:antq_bosporan_steppe_compact
+		}
+	}
+	country_modifier = {
+		global_burghers_estate_power = 0.20
+		global_clergy_estate_power = 0.05
+		burghers_estate_power_from_cabinet = 0.30
+		set_cabinet_member_cost_modifier = -0.05
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_bosporan_royal_council
+	}
+	years = 2
+}
+
+antq_bosporan_steppe_compact = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_bosporan_client_kingship
+			has_reform = government_reform:antq_bosporan_polis_court
+			has_reform = government_reform:antq_bosporan_steppe_compact
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.18
+		global_nobles_estate_power = 0.10
+		tribes_estate_power_from_cabinet = 0.30
+		replace_cabinet_member_cost_modifier = 0.12
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_bosporan_royal_council
 	}
 	years = 2
 }

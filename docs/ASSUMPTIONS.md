@@ -5105,3 +5105,32 @@ deliberately broad label for antique patterned woven coverings and must not be
 read as projecting any later named regional carpet tradition backward.
 Parchment coexists with geographically bounded papyrus rather than replacing
 all ancient writing materials. [bounded regional and technological abstraction]
+
+## 2026-07-27 - Four client-court profiles preserve unequal evidence limits
+
+Herodian Judea uses Archelaus as a secure dynastic anchor and the Jerusalem
+temple establishment, toparchic assessment, pilgrimage, cistern upkeep, and
+Roman confirmation as bounded political functions. The temple-court and
+toparchy branches do not assert either a priestly state or a representative
+district constitution. Sources: `P8.1`; `P11`; `P13`; `OCD`; `JOS-SAL`.
+[secure court; bounded institutional reconstruction]
+
+Cappadocia uses King Archelaus securely, while royal domains, sanctuary
+property, highland routes, cavalry households, and Roman patronage justify the
+domain-court and pass-compact alternatives. No complete cadastre, uniform
+sanctuary administration, or recovered pass law is claimed. Sources: `P8.1`;
+`P11`; `P13`; `OCD`; `PLE`. [secure ruler; contested institutional detail]
+
+Odrysian Thrace uses Rhoemetalces I securely but retains Pythodoris's opening
+role as contested. Dynastic claims, mounted retainers, Aegean-facing cities,
+mountain communities, provisioning, and Roman intervention support distinct
+court and host paths without implying a written constitution or one uniform
+Thracian people. Sources: `P8.1`; `P11`; `P13`; `OCD`; `TAC-THR`;
+`MGL-THR`. [secure ruler; contested court and regional reconstruction]
+
+The Bosporan opening succession remains deliberately contested around Dynamis,
+with Aspurgus retained as a claimant rather than silently substituted as king.
+Greek poleis, grain ports, strait defense, mounted households, and
+steppe-frontier negotiation justify the two branches, but no single ethnic
+bloc or fixed compact is reconstructed. Sources: `P8.1`; `P11`; `P13`; `OCD`;
+`PLE`; `ZAV-ASP`. [contested succession and institutional reconstruction]

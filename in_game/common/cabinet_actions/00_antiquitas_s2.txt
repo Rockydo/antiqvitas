@@ -1670,3 +1670,323 @@ antq_mauretanian_craft_coin_measures = {
 		global_monthly_control = 0.0025
 	}
 }
+
+antq_judean_temple_store_accounts = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_judean_ethnarchy
+			has_reform = government_reform:antq_judean_temple_court
+			has_reform = government_reform:antq_judean_toparchy_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_clergy_estate_power = 0.025
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_judean_toparchy_assessments = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_judean_ethnarchy
+			has_reform = government_reform:antq_judean_temple_court
+			has_reform = government_reform:antq_judean_toparchy_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		country_cabinet_efficiency = 0.025
+		global_monthly_control = 0.0025
+	}
+}
+
+antq_judean_cistern_waterwork_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_judean_ethnarchy
+			has_reform = government_reform:antq_judean_temple_court
+			has_reform = government_reform:antq_judean_toparchy_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_pop_food_consumption = -0.01
+		global_production_efficiency = 0.025
+	}
+}
+
+antq_judean_pilgrim_market_peace = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_judean_ethnarchy
+			has_reform = government_reform:antq_judean_temple_court
+			has_reform = government_reform:antq_judean_toparchy_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_trade_through_owned_territory_efficiency = 0.05
+		global_burghers_estate_power = 0.025
+	}
+}
+
+antq_judean_roman_embassy_returns = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_judean_ethnarchy
+			has_reform = government_reform:antq_judean_temple_court
+			has_reform = government_reform:antq_judean_toparchy_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_prestige = 0.05
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_cappadocian_royal_domain_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_cappadocian_client_kingship
+			has_reform = government_reform:antq_cappadocian_domain_court
+			has_reform = government_reform:antq_cappadocian_pass_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_pop_food_consumption = -0.01
+		global_production_efficiency = 0.025
+	}
+}
+
+antq_cappadocian_mountain_pass_couriers = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_cappadocian_client_kingship
+			has_reform = government_reform:antq_cappadocian_domain_court
+			has_reform = government_reform:antq_cappadocian_pass_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_supply_limit_modifier = 0.05
+		global_road_building_time = -0.05
+	}
+}
+
+antq_cappadocian_sanctuary_store_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_cappadocian_client_kingship
+			has_reform = government_reform:antq_cappadocian_domain_court
+			has_reform = government_reform:antq_cappadocian_pass_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_clergy_estate_power = 0.025
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_cappadocian_highland_cavalry_muster = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_cappadocian_client_kingship
+			has_reform = government_reform:antq_cappadocian_domain_court
+			has_reform = government_reform:antq_cappadocian_pass_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.01
+	}
+}
+
+antq_cappadocian_roman_client_embassies = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_cappadocian_client_kingship
+			has_reform = government_reform:antq_cappadocian_domain_court
+			has_reform = government_reform:antq_cappadocian_pass_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_prestige = 0.05
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_thracian_dynastic_claim_hearings = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_odrysian_client_kingship
+			has_reform = government_reform:antq_thracian_dynastic_court
+			has_reform = government_reform:antq_thracian_mountain_host
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_prestige = 0.05
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_thracian_mountain_pass_watch = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_odrysian_client_kingship
+			has_reform = government_reform:antq_thracian_dynastic_court
+			has_reform = government_reform:antq_thracian_mountain_host
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_supply_limit_modifier = 0.05
+		global_road_building_time = -0.05
+	}
+}
+
+antq_thracian_horse_retinue_musters = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_odrysian_client_kingship
+			has_reform = government_reform:antq_thracian_dynastic_court
+			has_reform = government_reform:antq_thracian_mountain_host
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.01
+	}
+}
+
+antq_thracian_grain_timber_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_odrysian_client_kingship
+			has_reform = government_reform:antq_thracian_dynastic_court
+			has_reform = government_reform:antq_thracian_mountain_host
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_pop_food_consumption = -0.01
+		global_production_efficiency = 0.025
+	}
+}
+
+antq_thracian_aegean_pontic_petitions = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_odrysian_client_kingship
+			has_reform = government_reform:antq_thracian_dynastic_court
+			has_reform = government_reform:antq_thracian_mountain_host
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_trade_through_owned_territory_efficiency = 0.05
+		global_burghers_estate_power = 0.025
+	}
+}
+
+antq_bosporan_succession_seal_custody = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_bosporan_client_kingship
+			has_reform = government_reform:antq_bosporan_polis_court
+			has_reform = government_reform:antq_bosporan_steppe_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_prestige = 0.05
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_bosporan_grain_export_measures = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_bosporan_client_kingship
+			has_reform = government_reform:antq_bosporan_polis_court
+			has_reform = government_reform:antq_bosporan_steppe_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_pop_food_consumption = -0.01
+		global_production_efficiency = 0.025
+	}
+}
+
+antq_bosporan_strait_harbor_watch = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_bosporan_client_kingship
+			has_reform = government_reform:antq_bosporan_polis_court
+			has_reform = government_reform:antq_bosporan_steppe_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_supply_limit_modifier = 0.05
+		global_road_building_time = -0.05
+	}
+}
+
+antq_bosporan_polis_market_petitions = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_bosporan_client_kingship
+			has_reform = government_reform:antq_bosporan_polis_court
+			has_reform = government_reform:antq_bosporan_steppe_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_trade_through_owned_territory_efficiency = 0.05
+		global_burghers_estate_power = 0.025
+	}
+}
+
+antq_bosporan_steppe_frontier_compacts = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_bosporan_client_kingship
+			has_reform = government_reform:antq_bosporan_polis_court
+			has_reform = government_reform:antq_bosporan_steppe_compact
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.01
+	}
+}

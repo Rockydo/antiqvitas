@@ -1,5 +1,27 @@
 # Progress
 
+## 2026-07-27 - Four Roman client courts receive complete political profiles
+
+- Replaced the shared client-monarchy fallback for Herodian Judea, Cappadocia,
+  Odrysian Thrace, and the Bosporan Kingdom with four dedicated base reforms
+  and councils.
+- Added twenty state-office programmes, twelve issues, twelve agendas,
+  twenty-four polity-aware social-order names, and twenty-four profile
+  privileges. Eight reviewed 3x2 archaeological atlases provide forty-eight
+  new direct political and privilege assets; three initially generated
+  pseudo-inscribed seals were rejected and regenerated as unmarked objects.
+- Added two research-gated alternatives per court: Jerusalem temple or
+  toparchy government, Cappadocian royal-domain or pass compacts, Odrysian
+  dynastic-court or mountain-host government, and Bosporan polis or
+  steppe-frontier compacts.
+- Installed breadth is now 25 councils, 125 programmes, 75 issues, 75 agendas,
+  81 political contracts, 220 privileges, 743 ancient-system unlocks, and 916
+  direct UI asset chains. All 292 opening profiles remain researchable.
+- `make validate` passes all 103 checks. Paired vanilla/mod smoke reaches
+  responsive rendered menus and reports zero new or mod-unique `error.log`
+  lines. Evidence:
+  `docs/playtests/S2_FOUR_CLIENT_COURTS_20260727.md`.
+
 ## 2026-07-27 - Second country-specific privilege tranche
 
 - Added twelve mutually exclusive exact-country grants for Armenia, Nabataea,

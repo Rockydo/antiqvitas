@@ -232,6 +232,50 @@
 	}
 
 	text = {
+		localization_key = antq_estate_judean_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_judean_ethnarchy
+				has_reform = government_reform:antq_judean_temple_court
+				has_reform = government_reform:antq_judean_toparchy_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_cappadocian_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_cappadocian_client_kingship
+				has_reform = government_reform:antq_cappadocian_domain_court
+				has_reform = government_reform:antq_cappadocian_pass_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_thracian_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_odrysian_client_kingship
+				has_reform = government_reform:antq_thracian_dynastic_court
+				has_reform = government_reform:antq_thracian_mountain_host
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_bosporan_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_bosporan_client_kingship
+				has_reform = government_reform:antq_bosporan_polis_court
+				has_reform = government_reform:antq_bosporan_steppe_compact
+			}
+		}
+	}
+
+	text = {
 		localization_key = crown_estate_holy_order
 		trigger = {
 			has_reform = government_reform:military_order_reform
@@ -538,6 +582,50 @@ nobles_estate = {
 				has_reform = government_reform:antq_mauretanian_client_kingship
 				has_reform = government_reform:antq_mauretanian_urban_court
 				has_reform = government_reform:antq_mauretanian_frontier_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_judean_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_judean_ethnarchy
+				has_reform = government_reform:antq_judean_temple_court
+				has_reform = government_reform:antq_judean_toparchy_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_cappadocian_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_cappadocian_client_kingship
+				has_reform = government_reform:antq_cappadocian_domain_court
+				has_reform = government_reform:antq_cappadocian_pass_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_thracian_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_odrysian_client_kingship
+				has_reform = government_reform:antq_thracian_dynastic_court
+				has_reform = government_reform:antq_thracian_mountain_host
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_bosporan_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_bosporan_client_kingship
+				has_reform = government_reform:antq_bosporan_polis_court
+				has_reform = government_reform:antq_bosporan_steppe_compact
 			}
 		}
 	}
@@ -1099,6 +1187,50 @@ burghers_estate = {
 	}
 
 	text = {
+		localization_key = antq_estate_judean_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_judean_ethnarchy
+				has_reform = government_reform:antq_judean_temple_court
+				has_reform = government_reform:antq_judean_toparchy_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_cappadocian_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_cappadocian_client_kingship
+				has_reform = government_reform:antq_cappadocian_domain_court
+				has_reform = government_reform:antq_cappadocian_pass_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_thracian_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_odrysian_client_kingship
+				has_reform = government_reform:antq_thracian_dynastic_court
+				has_reform = government_reform:antq_thracian_mountain_host
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_bosporan_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_bosporan_client_kingship
+				has_reform = government_reform:antq_bosporan_polis_court
+				has_reform = government_reform:antq_bosporan_steppe_compact
+			}
+		}
+	}
+
+	text = {
 		localization_key = burghers_estate_greek
 		trigger = {
 			OR = {
@@ -1540,6 +1672,50 @@ clergy_estate = {
 				has_reform = government_reform:antq_mauretanian_client_kingship
 				has_reform = government_reform:antq_mauretanian_urban_court
 				has_reform = government_reform:antq_mauretanian_frontier_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_judean_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_judean_ethnarchy
+				has_reform = government_reform:antq_judean_temple_court
+				has_reform = government_reform:antq_judean_toparchy_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_cappadocian_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_cappadocian_client_kingship
+				has_reform = government_reform:antq_cappadocian_domain_court
+				has_reform = government_reform:antq_cappadocian_pass_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_thracian_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_odrysian_client_kingship
+				has_reform = government_reform:antq_thracian_dynastic_court
+				has_reform = government_reform:antq_thracian_mountain_host
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_bosporan_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_bosporan_client_kingship
+				has_reform = government_reform:antq_bosporan_polis_court
+				has_reform = government_reform:antq_bosporan_steppe_compact
 			}
 		}
 	}
@@ -1995,6 +2171,50 @@ peasants_estate = {
 				has_reform = government_reform:antq_mauretanian_client_kingship
 				has_reform = government_reform:antq_mauretanian_urban_court
 				has_reform = government_reform:antq_mauretanian_frontier_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_judean_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_judean_ethnarchy
+				has_reform = government_reform:antq_judean_temple_court
+				has_reform = government_reform:antq_judean_toparchy_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_cappadocian_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_cappadocian_client_kingship
+				has_reform = government_reform:antq_cappadocian_domain_court
+				has_reform = government_reform:antq_cappadocian_pass_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_thracian_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_odrysian_client_kingship
+				has_reform = government_reform:antq_thracian_dynastic_court
+				has_reform = government_reform:antq_thracian_mountain_host
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_bosporan_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_bosporan_client_kingship
+				has_reform = government_reform:antq_bosporan_polis_court
+				has_reform = government_reform:antq_bosporan_steppe_compact
 			}
 		}
 	}
@@ -2462,6 +2682,50 @@ tribes_estate = {
 				has_reform = government_reform:antq_mauretanian_client_kingship
 				has_reform = government_reform:antq_mauretanian_urban_court
 				has_reform = government_reform:antq_mauretanian_frontier_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_judean_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_herodian_judean_ethnarchy
+				has_reform = government_reform:antq_judean_temple_court
+				has_reform = government_reform:antq_judean_toparchy_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_cappadocian_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_cappadocian_client_kingship
+				has_reform = government_reform:antq_cappadocian_domain_court
+				has_reform = government_reform:antq_cappadocian_pass_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_thracian_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_odrysian_client_kingship
+				has_reform = government_reform:antq_thracian_dynastic_court
+				has_reform = government_reform:antq_thracian_mountain_host
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_bosporan_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_bosporan_client_kingship
+				has_reform = government_reform:antq_bosporan_polis_court
+				has_reform = government_reform:antq_bosporan_steppe_compact
 			}
 		}
 	}

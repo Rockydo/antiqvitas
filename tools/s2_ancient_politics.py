@@ -523,6 +523,90 @@ PROFILES = (
             m("frontier_watch_terms", "Frontier Watch Rotation", "Set bounded mounted, guide, signal, and provisioning duties among frontier communities.", "Frontier Community Compact", "Regional communities request recognized rotations, water access, and restitution.", "tribes_estate", LOGISTICS, PEASANTS),
         ),
     ),
+    Profile(
+        "judean", "antq_judean_ethnarchic_council", "Jerusalem Ethnarchic Council",
+        "Herod Archelaus's court coordinates Herodian domains, Second Temple stores, local assessments, waterworks, roads, markets, and obligations under Roman patronage.",
+        ("antq_herodian_judean_ethnarchy", "antq_judean_temple_court", "antq_judean_toparchy_compact"),
+        ("nobles_estate", "clergy_estate", "burghers_estate"),
+        "judean_court_atlas.png", "f2a277b1544b0bf1a6a189bb40e43b06eacfc8cfa39544cff05160a23d347b92",
+        "P8.1;P11;P13;OCD;JOS-SAL", "secure",
+        "The named ethnarch and Temple's importance are secure; council, assessment, and waterwork interfaces remain bounded gameplay abstractions rather than a reconstructed Judean constitution.",
+        (
+            a("temple_store_accounts", "Second Temple Store Accounts", "Witness offering vessels, grain, oil, incense, and protected stores without turning the priesthood into a royal department.", "adm", CLERGY),
+            a("toparchy_assessments", "Toparchy and Land Assessments", "Reconcile local measures, cultivating households, Herodian domains, and bounded contributions.", "adm", ADMIN),
+            a("cistern_waterwork_returns", "Cistern and Waterwork Returns", "Coordinate channels, cisterns, masonry, and seasonal repair without claiming one centralized hydraulic office.", "adm", FOOD),
+            a("pilgrim_market_peace", "Pilgrim Road and Market Peace", "Protect roads, guest traffic, measures, and restitution around Jerusalem and regional markets.", "dip", TRADE),
+            a("roman_embassy_returns", "Roman Embassy Returns", "Prepare interpreters, guarantees, gifts, petitions, and assessed obligations for the patron court.", "dip", PRESTIGE),
+        ),
+        (
+            m("temple_store_review", "Second Temple Store Review", "Inventory protected offerings, supplies, and hospitality stores without absorbing them into the royal household.", "Priestly Custodian Petition", "Temple custodians request stable inventories and limits on extraordinary requisition.", "clergy_estate", CLERGY, CLERGY),
+            m("toparchy_assessment", "Toparchy Assessment", "Set bounded local, domain, market, and road obligations under witnessed measures.", "Regional-House Hearing", "Herodian and regional houses request a hearing before assessments and service terms change.", "nobles_estate", ADMIN, NOBLES),
+            m("pilgrim_market_order", "Pilgrim and Market Order", "Coordinate safe passage, measures, water access, and compensation during major traffic.", "Merchant and Artisan Petition", "Exchange households seek predictable measures and enforceable road peace.", "burghers_estate", TRADE, TRADE),
+        ),
+    ),
+    Profile(
+        "cappadocian", "antq_cappadocian_royal_council", "Tyana Royal Council",
+        "King Archelaus's court coordinates royal domains, sanctuaries, mountain passes, caravan movement, highland cavalry, cultivation, and relations with Rome.",
+        ("antq_cappadocian_client_kingship", "antq_cappadocian_domain_court", "antq_cappadocian_pass_compact"),
+        ("nobles_estate", "clergy_estate", "burghers_estate"),
+        "cappadocian_court_atlas.png", "48e4d137998b4e8be8a64f8c3bd345953a92202e89601af694319d15a87e3ce9",
+        "P8.1;P11;P13;OCD;PLE", "secure",
+        "Archelaus's client kingship is secure; the profile does not claim a recovered Cappadocian cadastre, office hierarchy, or uniform sanctuary administration.",
+        (
+            a("royal_domain_returns", "Royal Domain Returns", "Review grain, vines, wool, livestock, and retained obligations without inventing a uniform survey.", "adm", FOOD),
+            a("mountain_pass_couriers", "Mountain-Pass Couriers", "Maintain relay animals, sealed dispatches, lamps, guides, and road restitution across highland routes.", "dip", LOGISTICS),
+            a("sanctuary_store_returns", "Sanctuary Store Returns", "Witness offerings, lamps, grain, textiles, and protected hospitality without centralizing every cult.", "adm", CLERGY),
+            a("highland_cavalry_muster", "Highland Cavalry Muster", "Register horses, tack, shields, spear fittings, feed, and bounded seasons of service.", "mil", MIL),
+            a("roman_client_embassies", "Roman Client Embassies", "Coordinate interpreters, gifts, guarantees, petitions, and dynastic standing with the patron court.", "dip", PRESTIGE),
+        ),
+        (
+            m("domain_assessment", "Royal-Domain Assessment", "Set bounded domain receipts, transport, and cultivating obligations.", "Dynastic and Estate-House Claim", "Leading houses request witnessed possession and limits on extraordinary service.", "nobles_estate", ADMIN, NOBLES),
+            m("sanctuary_inventory", "Sanctuary Inventory", "Review protected offerings, grain, oil, and hospitality stores.", "Sanctuary Custodian Petition", "Cult custodians seek recognized stores and predictable requisition limits.", "clergy_estate", CLERGY, CLERGY),
+            m("pass_safe_conduct", "Mountain-Pass Safe-Conduct", "Set relay, escort, guide, and compensation terms across highland routes.", "Caravan and Craft Petition", "Caravan and artisan households seek secure stages and stable measures.", "burghers_estate", LOGISTICS, TRADE),
+        ),
+    ),
+    Profile(
+        "thracian", "antq_thracian_royal_council", "Sapaean Royal Council",
+        "Rhoemetalces's client court coordinates dynastic claims, retinue and horse service, mountain passes, grain and timber contributions, sanctuaries, and Greek city petitions.",
+        ("antq_odrysian_client_kingship", "antq_thracian_dynastic_court", "antq_thracian_mountain_host"),
+        ("nobles_estate", "burghers_estate", "tribes_estate"),
+        "thracian_court_atlas.png", "38574bde669d8fa3a3c38d674a1a39060f6e76241abd315d333711619203273a",
+        "P8.1;P11;P13;OCD;TAC-THR;MGL-THR", "contested",
+        "The named Sapaean court and later succession actors are secure, while Pythodoris's start role and any unified administrative hierarchy remain explicitly contested.",
+        (
+            a("dynastic_claim_hearings", "Dynastic Claim Hearings", "Witness precedence, oaths, seals, and compensation without pre-scripting the later partition.", "adm", PRESTIGE),
+            a("mountain_pass_watch", "Mountain-Pass Watch", "Coordinate guides, signals, water, road repair, and bounded watch rotations.", "dip", LOGISTICS),
+            a("horse_retinue_musters", "Horse and Retinue Musters", "Register mounts, tack, shields, spear fittings, feed, and seasonal service.", "mil", MIL),
+            a("grain_timber_returns", "Grain, Timber, and Pastoral Returns", "Review grain, wool, timber, livestock, and wagon obligations through measured contributions.", "adm", FOOD),
+            a("aegean_pontic_petitions", "Aegean and Pontic City Petitions", "Hear market, harbor, measure, sanctuary, and road claims from connected cities.", "dip", TRADE),
+        ),
+        (
+            m("dynastic_hearing", "Sapaean Dynastic Hearing", "Set witnessed precedence and bounded service without deciding the later succession in advance.", "Royal and Retinue House Claim", "Leading houses request recognized access and compensation for service.", "nobles_estate", PRESTIGE, NOBLES),
+            m("city_measure_review", "City and Harbor Measure Review", "Balance stable measures, route security, and royal receipts.", "Aegean and Pontic City Petition", "Urban and exchange households seek predictable dues and protected movement.", "burghers_estate", TRADE, TRADE),
+            m("mountain_watch_rotation", "Mountain Watch Rotation", "Set bounded guide, signal, horse, and provisioning duties among regional communities.", "Mountain Community Compact", "Regional communities request recognized rotations, water access, and restitution.", "tribes_estate", LOGISTICS, TRIBES),
+        ),
+    ),
+    Profile(
+        "bosporan", "antq_bosporan_royal_council", "Bosporan Royal Council",
+        "The contested Bosporan court coordinates royal seals, grain exports, polis petitions, strait security, sanctuaries, and mounted frontier relationships across the Cimmerian Bosporus.",
+        ("antq_bosporan_client_kingship", "antq_bosporan_polis_court", "antq_bosporan_steppe_compact"),
+        ("nobles_estate", "burghers_estate", "tribes_estate"),
+        "bosporan_court_atlas.png", "c443b4ed68a09e3ddcdf05754e8625c7b3a00819a253c32dd8f3d3b35c3c65d3",
+        "P8.1;P11;P13;OCD;PLE;ZAV-ASP", "contested",
+        "Dynamis remains the plan's contested start anchor and Aspurgus a living claimant; none of the council mechanics settles the disputed accession or invents a complete Bosporan constitution.",
+        (
+            a("succession_seal_custody", "Succession and Seal Custody", "Witness seals, keys, petitions, and royal grants without resolving the disputed accession through mechanics.", "adm", PRESTIGE),
+            a("grain_export_measures", "Grain Export Measures", "Review measures, amphorae, storage, transport loss, and protected export obligations.", "adm", FOOD),
+            a("strait_harbor_watch", "Strait and Harbor Watch", "Coordinate ropes, lamps, harbor gear, pilots, and bounded patrol or repair obligations.", "mil", LOGISTICS),
+            a("polis_market_petitions", "Polis and Market Petitions", "Hear claims over weights, storage, sanctuary property, roads, and local magistracies.", "dip", TRADE),
+            a("steppe_frontier_compacts", "Steppe Frontier Compacts", "Coordinate mounted service, gifts, pasture access, escorts, and restitution with frontier groups.", "dip", MIL),
+        ),
+        (
+            m("royal_seal_hearing", "Royal Seal Hearing", "Set witnessed custody for grants and petitions without deciding the contested succession.", "Royal and Claimant-House Petition", "Court houses demand recognized access, guarantees, and service terms.", "nobles_estate", PRESTIGE, NOBLES),
+            m("grain_harbor_measure", "Grain and Harbor Measure", "Balance storage, export, strait security, and royal receipts.", "Polis and Harbor Petition", "Urban and exchange houses seek stable measures and protected shipping.", "burghers_estate", TRADE, TRADE),
+            m("steppe_frontier_terms", "Steppe Frontier Terms", "Set bounded mounted, escort, gift, and pasture obligations.", "Frontier Community Compact", "Mounted and pastoral communities request recognized access and restitution.", "tribes_estate", MIL, TRIBES),
+        ),
+    ),
 )
 
 COUNCIL_DYNAMICS: dict[str, tuple[str, tuple[tuple[str, str], ...]]] = {
@@ -609,6 +693,22 @@ COUNCIL_DYNAMICS: dict[str, tuple[str, tuple[tuple[str, str], ...]]] = {
     "mauretanian": (
         "0.15",
         (("nobles_estate", "0.16"), ("burghers_estate", "0.14"), ("tribes_estate", "0.06")),
+    ),
+    "judean": (
+        "0.10",
+        (("nobles_estate", "0.14"), ("clergy_estate", "0.22"), ("burghers_estate", "0.10")),
+    ),
+    "cappadocian": (
+        "0.10",
+        (("nobles_estate", "0.20"), ("clergy_estate", "0.08"), ("burghers_estate", "0.12")),
+    ),
+    "thracian": (
+        "0.05",
+        (("nobles_estate", "0.22"), ("burghers_estate", "0.10"), ("tribes_estate", "0.16")),
+    ),
+    "bosporan": (
+        "0.10",
+        (("nobles_estate", "0.16"), ("burghers_estate", "0.20"), ("tribes_estate", "0.12")),
     ),
 }
 
