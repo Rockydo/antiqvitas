@@ -42,7 +42,7 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 19 reforms, 100 privileges, and
+  thin outside the first replacement tranches: 37 reforms, 100 privileges, and
   45 laws serve 292 opening polities.
 - Exact-name mirrors still leave most installed estates, privileges, parliament
   material, cabinet actions, laws, religious aspects, and artillery-facing UI in
@@ -138,7 +138,7 @@ and focused runtime probe all pass.
     unlock/reference layers. Preserve only locally proven engine adapters, and
     guarantee that their names, descriptions, icons, and effects cannot surface.
     Existing namespaced ancient content remains active (100 privileges, 45 laws,
-    19 reforms).
+    37 reforms).
     - [x] Supply the first deep council/state-office replacement tranche:
       nine reform-driven council profiles, 45 profile-locked administrative
       programmes, 27 issues, 27 agendas, 54 outcome/concession modifiers, and
@@ -459,6 +459,15 @@ and focused runtime probe all pass.
     terms rather than county/duchy/kingdom where inappropriate.
   - Give major countries bespoke structures and smaller peoples coherent regional
     systems; avoid one generic tribal kingdom serving most of the map.
+  - [x] Add the first branching reform expansion. Every one of the nine
+    political profiles now has two research-unlocked alternatives with
+    profile-gated potential, distinct power and appointment economics,
+    inherited council/social-order identity, full descriptions, and source
+    boundaries. Core breadth rises from 19 to 37 reforms and all 18 new paths
+    are placed on deeper regional Age-I branches.
+  - [ ] Subdivide the nine-family floor further for major countries and
+    high-priority regional constitutions; connect later-century successor paths
+    to their dated historical transitions.
   - Acceptance: every tag has an appropriate package, every major profile has
     multiple reform paths, and no visible medieval rank/government text remains.
 

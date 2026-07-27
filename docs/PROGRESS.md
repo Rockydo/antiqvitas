@@ -1,8 +1,27 @@
 # Progress
 
+## 2026-07-27 - First branching ancient reform expansion
+
+- Added 18 profile-locked government reforms—two each for Roman, Han, Iranian,
+  civic, gana, steppe, tribal, sacral, and royal systems—raising the core
+  government layer from 19 to 37 reforms.
+- Every alternative has a substantive description, distinct political and
+  appointment effects, source route, confidence boundary, reform-family
+  potential, and the correct council/social-order inheritance. Political
+  contracts now provide at least 30 distinct packages across all 37 reforms.
+- Registered all 18 paths on deeper region-appropriate Age-I research nodes.
+  The knowledge validator reports 397 ancient-system unlocks, all 292 opening
+  profiles researchable, and no vanilla unlocks.
+- Extended the manual-symptom regression to require exactly two alternatives
+  for every one of the nine profile families.
+- Added a global localization-key uniqueness guard after paired smoke exposed
+  and prompted correction of one reform/law key collision. Full validation and
+  paired smoke are clean; evidence is in
+  `docs/playtests/S2_REFORM_PATHS_20260727.md`.
+
 ## 2026-07-27 - Political weights and appointment economies
 
-- Added 19 audited reform contracts covering all core ancient governments and
+- Added the initial 19 audited reform contracts covering all core ancient governments and
   the dated Dominate and Sasanian successors. Each contract combines
   polity-appropriate social-order power with office-derived influence and
   appointment or replacement cost; 15 distinct packages prevent a generic

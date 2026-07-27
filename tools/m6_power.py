@@ -204,6 +204,117 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
     ),
 }
 
+ALTERNATIVE_REFORM_OUTPUT = ROOT / "docs/m6/alternative_reform_paths.csv"
+ALTERNATIVE_REFORMS: tuple[tuple[str, str, str, str, str, str, str, str, str], ...] = (
+    ("antq_augustan_dyarchy", "roman", "monarchy", "Augustan Dyarchy",
+     "Balance the princeps' household administration with senatorial commissions and equestrian execution.",
+     "global_crown_estate_power=0.10|global_nobles_estate_power=0.10|nobles_estate_power_from_cabinet=0.20|replace_cabinet_member_cost_modifier=0.10",
+     "P8.1;P11;P13;OCD", "secure", "A gameplay path for the republic-facade settlement, not two legally equal sovereign powers."),
+    ("antq_provincial_principate", "roman", "monarchy", "Provincial Principate",
+     "Broaden provincial petitions, civic mediation, and equestrian administration within imperial rule.",
+     "global_burghers_estate_power=0.10|global_peasants_estate_power=0.05|burghers_estate_power_from_cabinet=0.20|set_cabinet_member_cost_modifier=-0.05",
+     "P8.1;P11;P13;OCD", "contested", "Abstracts greater provincial consultation without inventing representative government."),
+    ("antq_memorialist_han_court", "han", "monarchy", "Memorialist Han Court",
+     "Give formal memorials, remonstrance, and reviewed appointments greater weight at the imperial court.",
+     "global_nobles_estate_power=0.10|global_burghers_estate_power=0.10|estate_power_from_cabinet=0.20|replace_cabinet_member_cost_modifier=0.05",
+     "P8.3;P13;BHR;CTP-WM", "secure", "Models documented memorial practice without projecting later examination institutions."),
+    ("antq_commandery_supervision", "han", "monarchy", "Commandery Supervision",
+     "Strengthen audited commandery returns, rotating inspectors, and direct imperial appointment.",
+     "global_crown_estate_power=0.20|global_peasants_estate_power=0.05|crown_estate_power_from_cabinet=0.30|set_cabinet_member_cost_modifier=-0.10",
+     "P8.3;P13;BHR", "secure", "Represents stronger oversight while preserving local variation and court politics."),
+    ("antq_iranian_great_house_reform", "iranian", "monarchy", "Great-House Compact",
+     "Entrust mounted service and regional judgment to leading houses under negotiated royal precedence.",
+     "global_nobles_estate_power=0.20|global_tribes_estate_power=0.10|nobles_estate_power_from_cabinet=0.35|replace_cabinet_member_cost_modifier=0.20",
+     "P8.2;P13;CAH-XI;OCD", "secure", "A high-autonomy Arsacid path; exact constitutional procedure remains unrecoverable."),
+    ("antq_iranian_royal_domain", "iranian", "monarchy", "Iranian Royal Domain",
+     "Expand royal estates, sealed accounts, and court-appointed officers without erasing great houses.",
+     "global_crown_estate_power=0.20|global_clergy_estate_power=0.05|crown_estate_power_from_cabinet=0.25|set_cabinet_member_cost_modifier=-0.05",
+     "P8.2;P13;CAH-XI", "contested", "Combines attested royal-domain tendencies across a broad Iranian profile."),
+    ("antq_boule_magistracy", "civic", "republic", "Boule and Magistracies",
+     "Center civic administration on audited magistracies, council rotations, and public benefaction.",
+     "global_burghers_estate_power=0.15|global_nobles_estate_power=0.05|burghers_estate_power_from_cabinet=0.25|set_cabinet_member_cost_modifier=-0.10",
+     "P8.4;P13;OCD", "secure", "A civic constitutional path whose franchise remains locally variable."),
+    ("antq_federal_synedrion", "civic", "republic", "Federal Synedrion",
+     "Coordinate member communities through shared delegates, sanctuary diplomacy, and bounded contributions.",
+     "global_peasants_estate_power=0.10|global_burghers_estate_power=0.10|estate_power_from_cabinet=0.25|replace_cabinet_member_cost_modifier=0.05",
+     "P8.4;P13;CAH-XI;OCD", "contested", "Uses a conservative federal-council adapter rather than one universal league constitution."),
+    ("antq_lineage_rotation", "gana", "republic", "Lineage Rotation",
+     "Rotate recognized lineage delegates and offices to preserve collective legitimacy.",
+     "global_nobles_estate_power=0.10|global_peasants_estate_power=0.10|estate_power_from_cabinet=0.25|replace_cabinet_member_cost_modifier=-0.15",
+     "P8.4;P13;CAH-XI", "contested", "A gameplay abstraction for oligarchic collective office, not a fixed franchise."),
+    ("antq_gana_muster_confederacy", "gana", "republic", "Muster Confederacy",
+     "Bind assembly rights to witnessed military, road, and granary contributions.",
+     "global_nobles_estate_power=0.15|global_burghers_estate_power=0.05|nobles_estate_power_from_cabinet=0.20|replace_cabinet_member_cost_modifier=0.05",
+     "P8.4;P13;CAH-XI", "contested", "Connects collective defense to assembly bargaining without inventing a standing federation."),
+    ("antq_steppe_wing_confederacy", "steppe", "steppe_horde", "Wing Confederacy",
+     "Formalize left-right command, lineage musters, and negotiated pasture circuits.",
+     "global_tribes_estate_power=0.20|global_nobles_estate_power=0.15|tribes_estate_power_from_cabinet=0.35|replace_cabinet_member_cost_modifier=0.15",
+     "P8.3;P13;CAH-XI", "secure", "Avoids projecting later decimal ranks onto first-century confederations."),
+    ("antq_steppe_gift_court", "steppe", "steppe_horde", "Prestige-Gift Court",
+     "Concentrate envoys, tribute gifts, and brokered appointments around the ruling lineage.",
+     "global_crown_estate_power=0.10|global_burghers_estate_power=0.05|estate_power_from_cabinet=0.20|set_cabinet_member_cost_modifier=-0.05",
+     "P8.3;P13;CAH-XI", "contested", "Models gift circulation as political infrastructure, not a salaried bureaucracy."),
+    ("antq_elder_moot_kingship", "tribal", "tribe", "Elder-Moot Kingship",
+     "Require leading-kindred and ritual assent for musters, settlements, and succession bargains.",
+     "global_tribes_estate_power=0.20|global_clergy_estate_power=0.10|tribes_estate_power_from_cabinet=0.25|replace_cabinet_member_cost_modifier=0.10",
+     "P8.7;P13;CAH-XI", "contested", "A regional floor for varied assemblies, not a single Germanic or Celtic constitution."),
+    ("antq_warband_retinue_kingship", "tribal", "tribe", "Warband-Retinue Kingship",
+     "Shift authority toward gift-bound retainers and a ruler able to sustain repeated campaigns.",
+     "global_nobles_estate_power=0.15|global_tribes_estate_power=0.10|nobles_estate_power_from_cabinet=0.30|replace_cabinet_member_cost_modifier=0.15",
+     "P8.7;P13;CAH-XI", "secure", "Represents retinue consolidation without assuming later feudal vassalage."),
+    ("antq_temple_endowment_court", "sacral", "monarchy", "Temple-Endowment Court",
+     "Govern through protected cult endowments, scribal custody, and ritual provisioning.",
+     "global_clergy_estate_power=0.20|global_crown_estate_power=0.05|clergy_estate_power_from_cabinet=0.30|replace_cabinet_member_cost_modifier=0.10",
+     "P8.4;P8.5;P11;P13", "contested", "A cross-regional sacral path whose local temple and monastic forms remain distinct."),
+    ("antq_irrigation_palace", "sacral", "monarchy", "Irrigation Palace",
+     "Tie royal legitimacy to reservoirs, canal labor, granaries, and audited distributions.",
+     "global_peasants_estate_power=0.15|global_crown_estate_power=0.10|crown_estate_power_from_cabinet=0.20|set_cabinet_member_cost_modifier=-0.10",
+     "P8.4;P8.5;P13;CAH-XI", "contested", "A gameplay adapter for court-waterwork relationships, not universal hydraulic despotism."),
+    ("antq_petition_court", "royal", "monarchy", "Petition Court",
+     "Regularize witnessed petitions, sealed replies, and arbitration among court and urban houses.",
+     "global_burghers_estate_power=0.10|global_nobles_estate_power=0.05|estate_power_from_cabinet=0.20|set_cabinet_member_cost_modifier=-0.05",
+     "P8;P13;OCD", "contested", "A conservative royal-court path for regions lacking a narrower attested constitution."),
+    ("antq_frontier_muster_monarchy", "royal", "monarchy", "Frontier-Muster Monarchy",
+     "Organize royal authority around fortress stores, retainer service, and route protection.",
+     "global_nobles_estate_power=0.15|global_tribes_estate_power=0.05|nobles_estate_power_from_cabinet=0.25|replace_cabinet_member_cost_modifier=0.10",
+     "P8;P13;CAH-XI", "contested", "A bounded frontier adapter rather than a claim of one transregional military monarchy."),
+)
+
+for (
+    _key, _profile, _government, _name, _description, _modifiers,
+    _source, _confidence, _note,
+) in ALTERNATIVE_REFORMS:
+    POLITICAL_CONTRACTS[_key] = (_modifiers, _source, _confidence, _note)
+
+PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
+    "roman": ("antq_principate", "antq_dominate"),
+    "han": ("antq_han_imperial_bureaucracy",),
+    "iranian": (
+        "antq_parthian_king_of_kings", "antq_parthian_subkingdom",
+        "antq_indo_scythian_kingship", "antq_sassanid_centralized_monarchy",
+    ),
+    "civic": ("antq_indo_greek_kingship", "antq_settled_town_cluster"),
+    "gana": ("antq_indian_ganasangha",),
+    "steppe": ("antq_steppe_confederation",),
+    "tribal": ("antq_advanced_chiefdom", "antq_tribal_kingdom"),
+    "sacral": ("antq_lankan_kingdom", "antq_kushite_dual_kingship"),
+    "royal": (
+        "antq_client_monarchy", "antq_buffer_kingdom", "antq_regional_kingship",
+        "antq_early_korean_kingdom",
+    ),
+}
+PROFILE_PARLIAMENTS = {
+    "roman": "antq_roman_senate",
+    "han": "antq_han_court_conference",
+    "iranian": "antq_iranian_great_council",
+    "civic": "antq_civic_assembly",
+    "gana": "antq_gana_assembly",
+    "steppe": "antq_confederation_council",
+    "tribal": "antq_tribal_assembly",
+    "sacral": "antq_sacral_court",
+    "royal": "antq_royal_council",
+}
+
 
 @dataclass(frozen=True)
 class PowerData:
@@ -258,6 +369,17 @@ def political_contract_ledger() -> str:
     writer.writerow(("reform", "modifiers", "source", "confidence", "note"))
     for reform, (modifiers, source, confidence, note) in POLITICAL_CONTRACTS.items():
         writer.writerow((reform, modifiers, source, confidence, note))
+    return output.getvalue()
+
+
+def alternative_reform_ledger() -> str:
+    output = io.StringIO(newline="")
+    writer = csv.writer(output, lineterminator="\n")
+    writer.writerow((
+        "reform", "profile", "government", "name", "description", "modifiers",
+        "source", "confidence", "note",
+    ))
+    writer.writerows(ALTERNATIVE_REFORMS)
     return output.getvalue()
 
 
@@ -659,12 +781,18 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    if len(POLITICAL_CONTRACTS) != 19 or not used_reforms.issubset(POLITICAL_CONTRACTS):
+    if len(POLITICAL_CONTRACTS) != 37 or not used_reforms.issubset(POLITICAL_CONTRACTS):
         failures.append(
-            "political appointment contracts must cover all active M6 reforms and both dated successors"
+            "political appointment contracts must cover 19 core and 18 alternative reforms"
         )
-    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 15:
+    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 30:
         failures.append("political appointment contracts are insufficiently differentiated")
+    alternative_profiles = [row[1] for row in ALTERNATIVE_REFORMS]
+    if len(ALTERNATIVE_REFORMS) != 18 or any(
+        alternative_profiles.count(profile) != 2
+        for profile in {"roman", "han", "iranian", "civic", "gana", "steppe", "tribal", "sacral", "royal"}
+    ):
+        failures.append("alternative reforms must provide two paths for every political profile")
     for reform, (modifier_text, _source, confidence, note) in POLITICAL_CONTRACTS.items():
         try:
             parsed = assignments(modifier_text, f"political contract {reform}")
@@ -1011,25 +1139,9 @@ antq_tribal_kingdom = {
 }
 """
     parliament_by_reform = {
-        "antq_principate": "antq_roman_senate",
-        "antq_dominate": "antq_roman_senate",
-        "antq_han_imperial_bureaucracy": "antq_han_court_conference",
-        "antq_lankan_kingdom": "antq_sacral_court",
-        "antq_indian_ganasangha": "antq_gana_assembly",
-        "antq_indo_scythian_kingship": "antq_iranian_great_council",
-        "antq_indo_greek_kingship": "antq_civic_assembly",
-        "antq_parthian_king_of_kings": "antq_iranian_great_council",
-        "antq_sassanid_centralized_monarchy": "antq_iranian_great_council",
-        "antq_client_monarchy": "antq_royal_council",
-        "antq_parthian_subkingdom": "antq_iranian_great_council",
-        "antq_buffer_kingdom": "antq_royal_council",
-        "antq_kushite_dual_kingship": "antq_sacral_court",
-        "antq_steppe_confederation": "antq_confederation_council",
-        "antq_early_korean_kingdom": "antq_royal_council",
-        "antq_regional_kingship": "antq_royal_council",
-        "antq_advanced_chiefdom": "antq_tribal_assembly",
-        "antq_settled_town_cluster": "antq_civic_assembly",
-        "antq_tribal_kingdom": "antq_tribal_assembly",
+        reform: PROFILE_PARLIAMENTS[profile]
+        for profile, reforms_for_profile in PROFILE_BASE_REFORMS.items()
+        for reform in reforms_for_profile
     }
     for reform, parliament in parliament_by_reform.items():
         start = rendered.index(f"{reform} = {{")
@@ -1056,6 +1168,29 @@ antq_tribal_kingdom = {
             1,
         )
         rendered = rendered[:start] + block + rendered[end:]
+    alternatives_by_profile = {
+        profile: tuple(row[0] for row in ALTERNATIVE_REFORMS if row[1] == profile)
+        for profile in PROFILE_BASE_REFORMS
+    }
+    lines = [rendered.rstrip(), "", "# Profile-locked alternative ancient reform paths."]
+    for (
+        key, profile, government, _name, _description, modifier_text,
+        _source, _confidence, _note,
+    ) in ALTERNATIVE_REFORMS:
+        family = PROFILE_BASE_REFORMS[profile] + alternatives_by_profile[profile]
+        lines.extend((
+            f"{key} = {{", "\tmajor = yes", f"\tgovernment = {government}",
+            "\tpotential = {", "\t\tOR = {",
+            *(f"\t\t\thas_reform = government_reform:{reform}" for reform in family),
+            "\t\t}", "\t}", "\tcountry_modifier = {",
+            *(f"\t\t{modifier} = {value}" for modifier, value in assignments(
+                modifier_text, f"alternative reform {key}"
+            )),
+            "\t}", "\ton_activate = {",
+            f"\t\tset_parliament_type = parliament_type:{PROFILE_PARLIAMENTS[profile]}",
+            "\t}", "\tyears = 2", "}", "",
+        ))
+    rendered = "\n".join(lines)
     return rendered
 
 
@@ -1166,6 +1301,8 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_tribal_kingdom", "Tribal Kingdom"),
         ("antq_tribal_kingdom_desc", "A kingship sustained and constrained by leading kin groups."),
     ))
+    for key, _profile, _government, name, description, *_rest in ALTERNATIVE_REFORMS:
+        entries.extend(((key, name), (f"{key}_desc", description)))
     for row in data.privileges:
         entries.extend(((row["key"], row["name"]), (f"{row['key']}_desc", row["description"])))
     for row in data.laws:
@@ -1184,6 +1321,7 @@ def outputs(data: PowerData) -> dict[Path, str]:
         PRIVILEGE_OUTPUT: estate_privileges(data),
         LAW_OUTPUT: law_definitions(data),
         POLITICAL_CONTRACT_OUTPUT: political_contract_ledger(),
+        ALTERNATIVE_REFORM_OUTPUT: alternative_reform_ledger(),
     }
     for language in ("english", *M2_MIRROR_LANGUAGES):
         result[LOC_ROOT / language / f"antq_m6_power_l_{language}.yml"] = localization(data, language)

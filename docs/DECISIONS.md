@@ -1,5 +1,17 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - Reform branches inherit a political profile
+
+Alternative government reforms are members of one of nine political profile
+families. Their `potential` requires an existing member of that family, while
+research unlocks are placed only on matching regional branches. On activation
+they retain the family's council and dynamic social-order terminology but
+replace its permanent order-power and appointment contract.
+
+This creates meaningful constitutional paths without duplicating council,
+privilege, and localization registries or allowing a Roman polity to adopt a
+Han, steppe, or gana reform merely because it researched a shared advance.
+
 ## 2026-07-27 - Council delegates use participation and agenda impact
 
 The installed `parliament_types/readme.txt` permits a country modifier block,

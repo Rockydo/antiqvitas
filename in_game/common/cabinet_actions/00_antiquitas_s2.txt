@@ -7,6 +7,8 @@ antq_roman_census_rolls = {
 		OR = {
 			has_reform = government_reform:antq_principate
 			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_augustan_dyarchy
+			has_reform = government_reform:antq_provincial_principate
 		}
 	}
 	allow_multiple = no
@@ -22,6 +24,8 @@ antq_roman_provincial_dispatches = {
 		OR = {
 			has_reform = government_reform:antq_principate
 			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_augustan_dyarchy
+			has_reform = government_reform:antq_provincial_principate
 		}
 	}
 	allow_multiple = no
@@ -37,6 +41,8 @@ antq_roman_aerarium_accounts = {
 		OR = {
 			has_reform = government_reform:antq_principate
 			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_augustan_dyarchy
+			has_reform = government_reform:antq_provincial_principate
 		}
 	}
 	allow_multiple = no
@@ -52,6 +58,8 @@ antq_roman_grain_contracts = {
 		OR = {
 			has_reform = government_reform:antq_principate
 			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_augustan_dyarchy
+			has_reform = government_reform:antq_provincial_principate
 		}
 	}
 	allow_multiple = no
@@ -67,6 +75,8 @@ antq_roman_legionary_rosters = {
 		OR = {
 			has_reform = government_reform:antq_principate
 			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_augustan_dyarchy
+			has_reform = government_reform:antq_provincial_principate
 		}
 	}
 	allow_multiple = no
@@ -81,6 +91,8 @@ antq_han_commandery_reports = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_han_imperial_bureaucracy
+			has_reform = government_reform:antq_memorialist_han_court
+			has_reform = government_reform:antq_commandery_supervision
 		}
 	}
 	allow_multiple = no
@@ -95,6 +107,8 @@ antq_han_imperial_secretariat = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_han_imperial_bureaucracy
+			has_reform = government_reform:antq_memorialist_han_court
+			has_reform = government_reform:antq_commandery_supervision
 		}
 	}
 	allow_multiple = no
@@ -109,6 +123,8 @@ antq_han_granary_registers = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_han_imperial_bureaucracy
+			has_reform = government_reform:antq_memorialist_han_court
+			has_reform = government_reform:antq_commandery_supervision
 		}
 	}
 	allow_multiple = no
@@ -123,6 +139,8 @@ antq_han_courier_relays = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_han_imperial_bureaucracy
+			has_reform = government_reform:antq_memorialist_han_court
+			has_reform = government_reform:antq_commandery_supervision
 		}
 	}
 	allow_multiple = no
@@ -137,6 +155,8 @@ antq_han_frontier_command = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_han_imperial_bureaucracy
+			has_reform = government_reform:antq_memorialist_han_court
+			has_reform = government_reform:antq_commandery_supervision
 		}
 	}
 	allow_multiple = no
@@ -154,6 +174,8 @@ antq_iranian_noble_host_musters = {
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
 			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_iranian_great_house_reform
+			has_reform = government_reform:antq_iranian_royal_domain
 		}
 	}
 	allow_multiple = no
@@ -171,6 +193,8 @@ antq_iranian_royal_road_couriers = {
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
 			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_iranian_great_house_reform
+			has_reform = government_reform:antq_iranian_royal_domain
 		}
 	}
 	allow_multiple = no
@@ -188,6 +212,8 @@ antq_iranian_satrapal_accounts = {
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
 			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_iranian_great_house_reform
+			has_reform = government_reform:antq_iranian_royal_domain
 		}
 	}
 	allow_multiple = no
@@ -205,6 +231,8 @@ antq_iranian_caravan_protection = {
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
 			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_iranian_great_house_reform
+			has_reform = government_reform:antq_iranian_royal_domain
 		}
 	}
 	allow_multiple = no
@@ -222,6 +250,8 @@ antq_iranian_dynastic_arbitration = {
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
 			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_iranian_great_house_reform
+			has_reform = government_reform:antq_iranian_royal_domain
 		}
 	}
 	allow_multiple = no
@@ -237,6 +267,8 @@ antq_civic_civic_accounts = {
 		OR = {
 			has_reform = government_reform:antq_indo_greek_kingship
 			has_reform = government_reform:antq_settled_town_cluster
+			has_reform = government_reform:antq_boule_magistracy
+			has_reform = government_reform:antq_federal_synedrion
 		}
 	}
 	allow_multiple = no
@@ -252,6 +284,8 @@ antq_civic_harbor_dues = {
 		OR = {
 			has_reform = government_reform:antq_indo_greek_kingship
 			has_reform = government_reform:antq_settled_town_cluster
+			has_reform = government_reform:antq_boule_magistracy
+			has_reform = government_reform:antq_federal_synedrion
 		}
 	}
 	allow_multiple = no
@@ -267,6 +301,8 @@ antq_civic_citizen_muster = {
 		OR = {
 			has_reform = government_reform:antq_indo_greek_kingship
 			has_reform = government_reform:antq_settled_town_cluster
+			has_reform = government_reform:antq_boule_magistracy
+			has_reform = government_reform:antq_federal_synedrion
 		}
 	}
 	allow_multiple = no
@@ -282,6 +318,8 @@ antq_civic_magistrate_rotations = {
 		OR = {
 			has_reform = government_reform:antq_indo_greek_kingship
 			has_reform = government_reform:antq_settled_town_cluster
+			has_reform = government_reform:antq_boule_magistracy
+			has_reform = government_reform:antq_federal_synedrion
 		}
 	}
 	allow_multiple = no
@@ -297,6 +335,8 @@ antq_civic_sanctuary_embassies = {
 		OR = {
 			has_reform = government_reform:antq_indo_greek_kingship
 			has_reform = government_reform:antq_settled_town_cluster
+			has_reform = government_reform:antq_boule_magistracy
+			has_reform = government_reform:antq_federal_synedrion
 		}
 	}
 	allow_multiple = no
@@ -311,6 +351,8 @@ antq_gana_clan_delegates = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_indian_ganasangha
+			has_reform = government_reform:antq_lineage_rotation
+			has_reform = government_reform:antq_gana_muster_confederacy
 		}
 	}
 	allow_multiple = no
@@ -325,6 +367,8 @@ antq_gana_assembly_arbitration = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_indian_ganasangha
+			has_reform = government_reform:antq_lineage_rotation
+			has_reform = government_reform:antq_gana_muster_confederacy
 		}
 	}
 	allow_multiple = no
@@ -339,6 +383,8 @@ antq_gana_confederate_muster = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_indian_ganasangha
+			has_reform = government_reform:antq_lineage_rotation
+			has_reform = government_reform:antq_gana_muster_confederacy
 		}
 	}
 	allow_multiple = no
@@ -353,6 +399,8 @@ antq_gana_road_hospitality = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_indian_ganasangha
+			has_reform = government_reform:antq_lineage_rotation
+			has_reform = government_reform:antq_gana_muster_confederacy
 		}
 	}
 	allow_multiple = no
@@ -367,6 +415,8 @@ antq_gana_communal_granaries = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_indian_ganasangha
+			has_reform = government_reform:antq_lineage_rotation
+			has_reform = government_reform:antq_gana_muster_confederacy
 		}
 	}
 	allow_multiple = no
@@ -381,6 +431,8 @@ antq_steppe_pasture_circuits = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_steppe_wing_confederacy
+			has_reform = government_reform:antq_steppe_gift_court
 		}
 	}
 	allow_multiple = no
@@ -395,6 +447,8 @@ antq_steppe_wing_musters = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_steppe_wing_confederacy
+			has_reform = government_reform:antq_steppe_gift_court
 		}
 	}
 	allow_multiple = no
@@ -409,6 +463,8 @@ antq_steppe_gift_circulation = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_steppe_wing_confederacy
+			has_reform = government_reform:antq_steppe_gift_court
 		}
 	}
 	allow_multiple = no
@@ -423,6 +479,8 @@ antq_steppe_envoy_circuits = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_steppe_wing_confederacy
+			has_reform = government_reform:antq_steppe_gift_court
 		}
 	}
 	allow_multiple = no
@@ -437,6 +495,8 @@ antq_steppe_remount_herds = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_steppe_wing_confederacy
+			has_reform = government_reform:antq_steppe_gift_court
 		}
 	}
 	allow_multiple = no
@@ -452,6 +512,8 @@ antq_tribal_elder_moot = {
 		OR = {
 			has_reform = government_reform:antq_advanced_chiefdom
 			has_reform = government_reform:antq_tribal_kingdom
+			has_reform = government_reform:antq_elder_moot_kingship
+			has_reform = government_reform:antq_warband_retinue_kingship
 		}
 	}
 	allow_multiple = no
@@ -467,6 +529,8 @@ antq_tribal_warband_gifts = {
 		OR = {
 			has_reform = government_reform:antq_advanced_chiefdom
 			has_reform = government_reform:antq_tribal_kingdom
+			has_reform = government_reform:antq_elder_moot_kingship
+			has_reform = government_reform:antq_warband_retinue_kingship
 		}
 	}
 	allow_multiple = no
@@ -482,6 +546,8 @@ antq_tribal_grove_custody = {
 		OR = {
 			has_reform = government_reform:antq_advanced_chiefdom
 			has_reform = government_reform:antq_tribal_kingdom
+			has_reform = government_reform:antq_elder_moot_kingship
+			has_reform = government_reform:antq_warband_retinue_kingship
 		}
 	}
 	allow_multiple = no
@@ -497,6 +563,8 @@ antq_tribal_seasonal_muster = {
 		OR = {
 			has_reform = government_reform:antq_advanced_chiefdom
 			has_reform = government_reform:antq_tribal_kingdom
+			has_reform = government_reform:antq_elder_moot_kingship
+			has_reform = government_reform:antq_warband_retinue_kingship
 		}
 	}
 	allow_multiple = no
@@ -512,6 +580,8 @@ antq_tribal_river_exchange = {
 		OR = {
 			has_reform = government_reform:antq_advanced_chiefdom
 			has_reform = government_reform:antq_tribal_kingdom
+			has_reform = government_reform:antq_elder_moot_kingship
+			has_reform = government_reform:antq_warband_retinue_kingship
 		}
 	}
 	allow_multiple = no
@@ -527,6 +597,8 @@ antq_sacral_temple_storehouses = {
 		OR = {
 			has_reform = government_reform:antq_lankan_kingdom
 			has_reform = government_reform:antq_kushite_dual_kingship
+			has_reform = government_reform:antq_temple_endowment_court
+			has_reform = government_reform:antq_irrigation_palace
 		}
 	}
 	allow_multiple = no
@@ -542,6 +614,8 @@ antq_sacral_royal_waterworks = {
 		OR = {
 			has_reform = government_reform:antq_lankan_kingdom
 			has_reform = government_reform:antq_kushite_dual_kingship
+			has_reform = government_reform:antq_temple_endowment_court
+			has_reform = government_reform:antq_irrigation_palace
 		}
 	}
 	allow_multiple = no
@@ -557,6 +631,8 @@ antq_sacral_cult_processions = {
 		OR = {
 			has_reform = government_reform:antq_lankan_kingdom
 			has_reform = government_reform:antq_kushite_dual_kingship
+			has_reform = government_reform:antq_temple_endowment_court
+			has_reform = government_reform:antq_irrigation_palace
 		}
 	}
 	allow_multiple = no
@@ -572,6 +648,8 @@ antq_sacral_scribal_accounts = {
 		OR = {
 			has_reform = government_reform:antq_lankan_kingdom
 			has_reform = government_reform:antq_kushite_dual_kingship
+			has_reform = government_reform:antq_temple_endowment_court
+			has_reform = government_reform:antq_irrigation_palace
 		}
 	}
 	allow_multiple = no
@@ -587,6 +665,8 @@ antq_sacral_frontier_offerings = {
 		OR = {
 			has_reform = government_reform:antq_lankan_kingdom
 			has_reform = government_reform:antq_kushite_dual_kingship
+			has_reform = government_reform:antq_temple_endowment_court
+			has_reform = government_reform:antq_irrigation_palace
 		}
 	}
 	allow_multiple = no
@@ -604,6 +684,8 @@ antq_royal_palace_petitions = {
 			has_reform = government_reform:antq_buffer_kingdom
 			has_reform = government_reform:antq_regional_kingship
 			has_reform = government_reform:antq_early_korean_kingdom
+			has_reform = government_reform:antq_petition_court
+			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 	}
 	allow_multiple = no
@@ -621,6 +703,8 @@ antq_royal_tribute_registers = {
 			has_reform = government_reform:antq_buffer_kingdom
 			has_reform = government_reform:antq_regional_kingship
 			has_reform = government_reform:antq_early_korean_kingdom
+			has_reform = government_reform:antq_petition_court
+			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 	}
 	allow_multiple = no
@@ -638,6 +722,8 @@ antq_royal_court_embassies = {
 			has_reform = government_reform:antq_buffer_kingdom
 			has_reform = government_reform:antq_regional_kingship
 			has_reform = government_reform:antq_early_korean_kingdom
+			has_reform = government_reform:antq_petition_court
+			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 	}
 	allow_multiple = no
@@ -655,6 +741,8 @@ antq_royal_dynastic_compacts = {
 			has_reform = government_reform:antq_buffer_kingdom
 			has_reform = government_reform:antq_regional_kingship
 			has_reform = government_reform:antq_early_korean_kingdom
+			has_reform = government_reform:antq_petition_court
+			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 	}
 	allow_multiple = no
@@ -672,6 +760,8 @@ antq_royal_fortress_provisioning = {
 			has_reform = government_reform:antq_buffer_kingdom
 			has_reform = government_reform:antq_regional_kingship
 			has_reform = government_reform:antq_early_korean_kingdom
+			has_reform = government_reform:antq_petition_court
+			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 	}
 	allow_multiple = no

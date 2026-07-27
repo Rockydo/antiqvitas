@@ -1,5 +1,26 @@
 # Historical Assumptions
 
+## 2026-07-27 - Alternative reforms are counterfactual institutional emphases
+
+Augustan Dyarchy, Memorialist Han Court, Great-House Compact, Boule and
+Magistracies, Lineage Rotation, Wing Confederacy, Elder-Moot Kingship,
+Temple-Endowment Court, and the other reform branches name historically
+grounded institutional emphases available to a player. They are not claims
+that every opening polity debated a codified binary reform programme or that
+each label denoted a contemporary constitutional title.
+
+The alternatives stay within their political family and use attested practices
+such as commissions, memorials, commandery review, great-house negotiation,
+civic magistracies, lineage delegation, wing musters, gift circulation,
+endowments, irrigation labor, petitions, and fortress provisioning. Exact
+numerical consequences and the player's timing are counterfactual gameplay.
+
+Sources and confidence limits are recorded per reform in
+`docs/m6/alternative_reform_paths.csv`.
+
+[secure practice families; contested formal branching, titles, uniformity, and
+all numerical effects]
+
 ## 2026-07-27 - Political weights express relative leverage, not recovered constitutions
 
 The political-weight and appointment modifiers rank broad relationships

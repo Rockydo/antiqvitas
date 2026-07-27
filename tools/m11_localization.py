@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 LOCALIZATION = ROOT / "main_menu/localization"
 FORBIDDEN = re.compile(r"\b(?:todo|tbd|placeholder|lorem ipsum)\b", re.IGNORECASE)
 ENTRY = re.compile(r"(?m)^\s+[^\s:#][^:]*:\s*\"")
+KEY_ENTRY = re.compile(r"(?m)^\s+([^\s:#][^:]*):\s*\"")
 
 
 def read_checked(path: Path, language: str) -> str:
@@ -50,6 +51,15 @@ def validate() -> None:
     entries = sum(len(ENTRY.findall(text)) for text in english.values())
     if entries == 0:
         raise ValueError("English localization contains no quoted entries")
+    owners: dict[str, str] = {}
+    for name, text in english.items():
+        for key in KEY_ENTRY.findall(text):
+            if key in owners:
+                raise ValueError(
+                    f"duplicate English localization key {key!r}: "
+                    f"{owners[key]} and {name}"
+                )
+            owners[key] = name
     for language in M2_MIRROR_LANGUAGES:
         directory = LOCALIZATION / language
         actual = {path.name for path in directory.glob("*.yml")}
@@ -66,7 +76,7 @@ def validate() -> None:
                 raise ValueError(f"{language} localization content diverges from English: {mirror}")
     print(
         f"m11_localization: PASS ({len(english)} English files; "
-        f"{len(M2_MIRROR_LANGUAGES)} exact mirrors; {entries} quoted entries; zero stubs)"
+        f"{len(M2_MIRROR_LANGUAGES)} exact mirrors; {entries} unique quoted entries; zero stubs)"
     )
 
 

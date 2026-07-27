@@ -474,6 +474,7 @@ ADVANCE_PROFILES = {
 }
 
 S2_ESTATE_PRIVILEGES = ROOT / "docs/m6/estate_order_privileges.csv"
+S2_ALTERNATIVE_REFORMS = ROOT / "docs/m6/alternative_reform_paths.csv"
 S2_ESTATE_ADVANCE_PROFILES: dict[str, tuple[str, ...]] = {
     "roman": ("roman_italic",),
     "han": ("han_east_asian",),
@@ -1124,6 +1125,31 @@ def content_unlocks(records: tuple[Advance, ...]) -> dict[str, tuple[tuple[str, 
         for index, privilege in enumerate(privilege_keys):
             result[candidates[index * len(candidates) // len(privilege_keys)].key].append(
                 ("unlock_estate_privilege", privilege)
+            )
+    with S2_ALTERNATIVE_REFORMS.open(encoding="utf-8-sig", newline="") as handle:
+        reform_rows = list(csv.DictReader(handle))
+    reforms_by_profile: dict[str, list[str]] = defaultdict(list)
+    for row in reform_rows:
+        profile = (row.get("profile") or "").strip()
+        reform = (row.get("reform") or "").strip()
+        if profile not in S2_ESTATE_ADVANCE_PROFILES or not reform.startswith("antq_"):
+            raise ValueError(f"invalid alternative reform research profile: {profile}/{reform}")
+        reforms_by_profile[profile].append(reform)
+    for profile, reform_keys in reforms_by_profile.items():
+        candidates = sorted(
+            (
+                record for record in records
+                if record.age_index == 0
+                and record.profile in S2_ESTATE_ADVANCE_PROFILES[profile]
+                and record.depth >= 2
+            ),
+            key=lambda record: (record.depth, record.track, record.key),
+        )
+        if not candidates:
+            raise ValueError(f"no deeper Age-I research candidates for reform profile {profile}")
+        for index, reform in enumerate(reform_keys):
+            result[candidates[index * len(candidates) // len(reform_keys)].key].append(
+                ("unlock_government_reform", reform)
             )
     managed_roman_buildings: set[str] = set()
     for advance, buildings in ROMAN_ECONOMY_UNLOCKS.items():

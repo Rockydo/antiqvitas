@@ -333,3 +333,420 @@ antq_tribal_kingdom = {
 	}
 	years = 2
 }
+
+# Profile-locked alternative ancient reform paths.
+antq_augustan_dyarchy = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_augustan_dyarchy
+			has_reform = government_reform:antq_provincial_principate
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.10
+		global_nobles_estate_power = 0.10
+		nobles_estate_power_from_cabinet = 0.20
+		replace_cabinet_member_cost_modifier = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_roman_senate
+	}
+	years = 2
+}
+
+antq_provincial_principate = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_reform = government_reform:antq_dominate
+			has_reform = government_reform:antq_augustan_dyarchy
+			has_reform = government_reform:antq_provincial_principate
+		}
+	}
+	country_modifier = {
+		global_burghers_estate_power = 0.10
+		global_peasants_estate_power = 0.05
+		burghers_estate_power_from_cabinet = 0.20
+		set_cabinet_member_cost_modifier = -0.05
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_roman_senate
+	}
+	years = 2
+}
+
+antq_memorialist_han_court = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_han_imperial_bureaucracy
+			has_reform = government_reform:antq_memorialist_han_court
+			has_reform = government_reform:antq_commandery_supervision
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		global_burghers_estate_power = 0.10
+		estate_power_from_cabinet = 0.20
+		replace_cabinet_member_cost_modifier = 0.05
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_han_court_conference
+	}
+	years = 2
+}
+
+antq_commandery_supervision = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_han_imperial_bureaucracy
+			has_reform = government_reform:antq_memorialist_han_court
+			has_reform = government_reform:antq_commandery_supervision
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.20
+		global_peasants_estate_power = 0.05
+		crown_estate_power_from_cabinet = 0.30
+		set_cabinet_member_cost_modifier = -0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_han_court_conference
+	}
+	years = 2
+}
+
+antq_iranian_great_house_reform = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_iranian_great_house_reform
+			has_reform = government_reform:antq_iranian_royal_domain
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.20
+		global_tribes_estate_power = 0.10
+		nobles_estate_power_from_cabinet = 0.35
+		replace_cabinet_member_cost_modifier = 0.20
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_iranian_great_council
+	}
+	years = 2
+}
+
+antq_iranian_royal_domain = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_iranian_great_house_reform
+			has_reform = government_reform:antq_iranian_royal_domain
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.20
+		global_clergy_estate_power = 0.05
+		crown_estate_power_from_cabinet = 0.25
+		set_cabinet_member_cost_modifier = -0.05
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_iranian_great_council
+	}
+	years = 2
+}
+
+antq_boule_magistracy = {
+	major = yes
+	government = republic
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indo_greek_kingship
+			has_reform = government_reform:antq_settled_town_cluster
+			has_reform = government_reform:antq_boule_magistracy
+			has_reform = government_reform:antq_federal_synedrion
+		}
+	}
+	country_modifier = {
+		global_burghers_estate_power = 0.15
+		global_nobles_estate_power = 0.05
+		burghers_estate_power_from_cabinet = 0.25
+		set_cabinet_member_cost_modifier = -0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_civic_assembly
+	}
+	years = 2
+}
+
+antq_federal_synedrion = {
+	major = yes
+	government = republic
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indo_greek_kingship
+			has_reform = government_reform:antq_settled_town_cluster
+			has_reform = government_reform:antq_boule_magistracy
+			has_reform = government_reform:antq_federal_synedrion
+		}
+	}
+	country_modifier = {
+		global_peasants_estate_power = 0.10
+		global_burghers_estate_power = 0.10
+		estate_power_from_cabinet = 0.25
+		replace_cabinet_member_cost_modifier = 0.05
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_civic_assembly
+	}
+	years = 2
+}
+
+antq_lineage_rotation = {
+	major = yes
+	government = republic
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indian_ganasangha
+			has_reform = government_reform:antq_lineage_rotation
+			has_reform = government_reform:antq_gana_muster_confederacy
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		global_peasants_estate_power = 0.10
+		estate_power_from_cabinet = 0.25
+		replace_cabinet_member_cost_modifier = -0.15
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_gana_assembly
+	}
+	years = 2
+}
+
+antq_gana_muster_confederacy = {
+	major = yes
+	government = republic
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indian_ganasangha
+			has_reform = government_reform:antq_lineage_rotation
+			has_reform = government_reform:antq_gana_muster_confederacy
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.15
+		global_burghers_estate_power = 0.05
+		nobles_estate_power_from_cabinet = 0.20
+		replace_cabinet_member_cost_modifier = 0.05
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_gana_assembly
+	}
+	years = 2
+}
+
+antq_steppe_wing_confederacy = {
+	major = yes
+	government = steppe_horde
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_steppe_wing_confederacy
+			has_reform = government_reform:antq_steppe_gift_court
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.20
+		global_nobles_estate_power = 0.15
+		tribes_estate_power_from_cabinet = 0.35
+		replace_cabinet_member_cost_modifier = 0.15
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_confederation_council
+	}
+	years = 2
+}
+
+antq_steppe_gift_court = {
+	major = yes
+	government = steppe_horde
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_steppe_wing_confederacy
+			has_reform = government_reform:antq_steppe_gift_court
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.10
+		global_burghers_estate_power = 0.05
+		estate_power_from_cabinet = 0.20
+		set_cabinet_member_cost_modifier = -0.05
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_confederation_council
+	}
+	years = 2
+}
+
+antq_elder_moot_kingship = {
+	major = yes
+	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_advanced_chiefdom
+			has_reform = government_reform:antq_tribal_kingdom
+			has_reform = government_reform:antq_elder_moot_kingship
+			has_reform = government_reform:antq_warband_retinue_kingship
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.20
+		global_clergy_estate_power = 0.10
+		tribes_estate_power_from_cabinet = 0.25
+		replace_cabinet_member_cost_modifier = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_warband_retinue_kingship = {
+	major = yes
+	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_advanced_chiefdom
+			has_reform = government_reform:antq_tribal_kingdom
+			has_reform = government_reform:antq_elder_moot_kingship
+			has_reform = government_reform:antq_warband_retinue_kingship
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.15
+		global_tribes_estate_power = 0.10
+		nobles_estate_power_from_cabinet = 0.30
+		replace_cabinet_member_cost_modifier = 0.15
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_temple_endowment_court = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_lankan_kingdom
+			has_reform = government_reform:antq_kushite_dual_kingship
+			has_reform = government_reform:antq_temple_endowment_court
+			has_reform = government_reform:antq_irrigation_palace
+		}
+	}
+	country_modifier = {
+		global_clergy_estate_power = 0.20
+		global_crown_estate_power = 0.05
+		clergy_estate_power_from_cabinet = 0.30
+		replace_cabinet_member_cost_modifier = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_sacral_court
+	}
+	years = 2
+}
+
+antq_irrigation_palace = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_lankan_kingdom
+			has_reform = government_reform:antq_kushite_dual_kingship
+			has_reform = government_reform:antq_temple_endowment_court
+			has_reform = government_reform:antq_irrigation_palace
+		}
+	}
+	country_modifier = {
+		global_peasants_estate_power = 0.15
+		global_crown_estate_power = 0.10
+		crown_estate_power_from_cabinet = 0.20
+		set_cabinet_member_cost_modifier = -0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_sacral_court
+	}
+	years = 2
+}
+
+antq_petition_court = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_client_monarchy
+			has_reform = government_reform:antq_buffer_kingdom
+			has_reform = government_reform:antq_regional_kingship
+			has_reform = government_reform:antq_early_korean_kingdom
+			has_reform = government_reform:antq_petition_court
+			has_reform = government_reform:antq_frontier_muster_monarchy
+		}
+	}
+	country_modifier = {
+		global_burghers_estate_power = 0.10
+		global_nobles_estate_power = 0.05
+		estate_power_from_cabinet = 0.20
+		set_cabinet_member_cost_modifier = -0.05
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_royal_council
+	}
+	years = 2
+}
+
+antq_frontier_muster_monarchy = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_client_monarchy
+			has_reform = government_reform:antq_buffer_kingdom
+			has_reform = government_reform:antq_regional_kingship
+			has_reform = government_reform:antq_early_korean_kingdom
+			has_reform = government_reform:antq_petition_court
+			has_reform = government_reform:antq_frontier_muster_monarchy
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.15
+		global_tribes_estate_power = 0.05
+		nobles_estate_power_from_cabinet = 0.25
+		replace_cabinet_member_cost_modifier = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_royal_council
+	}
+	years = 2
+}

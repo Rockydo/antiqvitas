@@ -96,7 +96,7 @@ PROFILES = (
     Profile(
         "roman", "antq_roman_senate", "Roman Senate",
         "The Senate remains the Principate's principal arena for elite deliberation, provincial scrutiny, honors, finance, and the public language of the res publica.",
-        ("antq_principate", "antq_dominate"), ("nobles_estate", "burghers_estate", "clergy_estate"),
+        ("antq_principate", "antq_dominate", "antq_augustan_dyarchy", "antq_provincial_principate"), ("nobles_estate", "burghers_estate", "clergy_estate"),
         "roman_principate_atlas.png", "1e990edda4ce5fbba251e79738731b1141090ab6d69111895354474c00497f36",
         "P8.1;P11;P13;OCD", "secure",
         "Engine estates represent senators, equestrian contractors, and public priestly colleges; this does not turn the Augustan Senate into a sovereign legislature.",
@@ -116,7 +116,7 @@ PROFILES = (
     Profile(
         "han", "antq_han_court_conference", "Han Court Conference",
         "Imperial conferences reconcile memorials, commandery returns, fiscal registers, and the competing claims of palace, affinal, and scholarly officeholders.",
-        ("antq_han_imperial_bureaucracy",), ("nobles_estate", "burghers_estate", "peasants_estate"),
+        ("antq_han_imperial_bureaucracy", "antq_memorialist_han_court", "antq_commandery_supervision"), ("nobles_estate", "burghers_estate", "peasants_estate"),
         "han_court_atlas.png", "7d57f4dcc204afa0670c412fe1a649b257c6dcacd80dcf04d16216b6dede3380",
         "P8.3;P13;BHR;CTP-WM", "secure",
         "The three participating estates are technical proxies for court lineages, salaried administrators and registered cultivator households.",
@@ -136,7 +136,7 @@ PROFILES = (
     Profile(
         "iranian", "antq_iranian_great_council", "Iranian Great Council",
         "The king negotiates host service, regional authority, road security, and dynastic precedence with great houses and royal officers.",
-        ("antq_parthian_king_of_kings", "antq_parthian_subkingdom", "antq_indo_scythian_kingship", "antq_sassanid_centralized_monarchy"),
+        ("antq_parthian_king_of_kings", "antq_parthian_subkingdom", "antq_indo_scythian_kingship", "antq_sassanid_centralized_monarchy", "antq_iranian_great_house_reform", "antq_iranian_royal_domain"),
         ("nobles_estate", "clergy_estate", "burghers_estate"),
         "iranian_council_atlas.png", "4986d7ce7a8951994a1fb9dd3679b7cd7e89425c442960c9ce411847942972c3",
         "P8.2;P13;CAH-XI;OCD", "secure",
@@ -157,7 +157,7 @@ PROFILES = (
     Profile(
         "civic", "antq_civic_assembly", "Civic Council",
         "A boule or comparable civic body manages accounts, magistracies, sanctuaries, harbor obligations, and the enrolled citizen body.",
-        ("antq_indo_greek_kingship", "antq_settled_town_cluster"), ("burghers_estate", "nobles_estate", "peasants_estate"),
+        ("antq_indo_greek_kingship", "antq_settled_town_cluster", "antq_boule_magistracy", "antq_federal_synedrion"), ("burghers_estate", "nobles_estate", "peasants_estate"),
         "civic_assembly_atlas.png", "3a43c68d91f7436abfa49f1d703c284fcb192a400f5d317d083992826f90c158",
         "P8.4;P13;CAH-XI;OCD", "contested",
         "The civic surface is deliberately constitutional rather than ethnic and does not imply identical franchise rules in every city.",
@@ -177,7 +177,7 @@ PROFILES = (
     Profile(
         "gana", "antq_gana_assembly", "Gana Assembly",
         "Lineage delegates deliberate over arbitration, shared defense, hospitality, and common resources without a hereditary monarch.",
-        ("antq_indian_ganasangha",), ("nobles_estate", "peasants_estate", "burghers_estate"),
+        ("antq_indian_ganasangha", "antq_lineage_rotation", "antq_gana_muster_confederacy"), ("nobles_estate", "peasants_estate", "burghers_estate"),
         "gana_assembly_atlas.png", "6cc71845187d386edb2c22f9f580725b6f2af0190e42128f0228512ebee42608",
         "P8.4;P13;CAH-XI", "contested",
         "The mechanics are a conservative gana-sangha adapter and do not reconstruct one franchise or procedure for every polity.",
@@ -197,7 +197,7 @@ PROFILES = (
     Profile(
         "steppe", "antq_confederation_council", "Confederation Council",
         "Lineage leaders coordinate pasture circuits, left-right wings, gifts, envoys, and remounts around the chanyu's court.",
-        ("antq_steppe_confederation",), ("tribes_estate", "nobles_estate", "burghers_estate"),
+        ("antq_steppe_confederation", "antq_steppe_wing_confederacy", "antq_steppe_gift_court"), ("tribes_estate", "nobles_estate", "burghers_estate"),
         "steppe_council_atlas.png", "e191587a1bf4a4fd5bdb77f2a2f0b9ef350d46fb709b20ac1e8a71c22ddb9a7b",
         "P8.3;P13;CAH-XI", "secure",
         "Terminology avoids projecting the later Mongol quriltai and decimal institutions onto AD 1 confederations.",
@@ -217,7 +217,7 @@ PROFILES = (
     Profile(
         "tribal", "antq_tribal_assembly", "Elders' Assembly",
         "Local leading kindreds, ritual custodians, and specialist households negotiate season, muster, exchange, and customary settlement.",
-        ("antq_advanced_chiefdom", "antq_tribal_kingdom"), ("tribes_estate", "clergy_estate", "burghers_estate"),
+        ("antq_advanced_chiefdom", "antq_tribal_kingdom", "antq_elder_moot_kingship", "antq_warband_retinue_kingship"), ("tribes_estate", "clergy_estate", "burghers_estate"),
         "tribal_assembly_atlas.png", "7ab5f2b0be3cdc70c17ae253ae7143d4fa87cf57792becd0be4c0a119753c1af",
         "P8.7;P13;CAH-XI", "contested",
         "A minimal engine adapter for varied early Iron Age assemblies; regional laws and privileges carry narrower archaeological claims.",
@@ -237,7 +237,7 @@ PROFILES = (
     Profile(
         "sacral", "antq_sacral_court", "Sacral Court Council",
         "Royal, temple, scribal, and cultivating interests meet around stores, waterworks, ceremonial obligations, and frontier cult.",
-        ("antq_lankan_kingdom", "antq_kushite_dual_kingship"), ("clergy_estate", "nobles_estate", "peasants_estate"),
+        ("antq_lankan_kingdom", "antq_kushite_dual_kingship", "antq_temple_endowment_court", "antq_irrigation_palace"), ("clergy_estate", "nobles_estate", "peasants_estate"),
         "sacral_court_atlas.png", "e3f2c652277ae4a140c20c8fe64f6381efae9c53e54fae6e89271f12d2cff1fb",
         "P8.4;P8.5;P11;P13;CAH-XI;PLE", "contested",
         "The shared interface models administrative conjunction, not a claim that Kushite and Lankan sacred kingship were institutionally identical.",
@@ -257,7 +257,7 @@ PROFILES = (
     Profile(
         "royal", "antq_royal_council", "Royal Council",
         "A client or regional court coordinates petitions, tribute, embassies, dynastic guarantees, and fortress supply.",
-        ("antq_client_monarchy", "antq_buffer_kingdom", "antq_regional_kingship", "antq_early_korean_kingdom"),
+        ("antq_client_monarchy", "antq_buffer_kingdom", "antq_regional_kingship", "antq_early_korean_kingdom", "antq_petition_court", "antq_frontier_muster_monarchy"),
         ("nobles_estate", "burghers_estate", "clergy_estate"),
         "royal_council_atlas.png", "fe3e1232bff8a306800f20c5151590d4df405dabfe36e14a7ea87a9d450324a3",
         "P8.1;P8.2;P8.3;P13;OCD;PLE", "contested",
