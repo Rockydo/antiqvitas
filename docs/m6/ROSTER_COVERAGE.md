@@ -217,6 +217,6 @@ An anonymous/collective profile is not an omitted polity. It is the deliberate `
 | WHU | `antq_tribal_kingdom` | P8.8;P13;CAH-XI;S2-LAWS |
 | WSC | `antq_tribal_kingdom` | P8.7;P13;LIT-WLSC;P8.7;P11;P13;VU-BRUSH;LIT-WLSC;S2-LAWS |
 | WSN | `antq_regional_kingship` | P8.8;P13;CHG;S2-LAWS |
-| XIA | `antq_tribal_kingdom` | P8.8;P13;CAH-XI;S2-LAWS |
+| XIA | `antq_xianbei_eastern_confederacy` | P8.8;P9;P13;CAH-XI;XIANBEI-CONFEDERACY;S2-LAWS |
 | YDH | `antq_indian_ganasangha` | P8.4;P13;CAH-XI;S2-LAWS |
 | YUE | `antq_tribal_kingdom` | P8.4;P13;CAH-XI;S2-LAWS |

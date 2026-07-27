@@ -856,6 +856,141 @@ antq_issue_xiongnu_frontier_exchange = {
 	on_debate_failed = { parliament_debate_failed_effect = yes }
 }
 
+antq_issue_xiongnu_chanyu_succession = {
+	estate = nobles_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_xiongnu_chanyu_succession_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_xiongnu_wing_appointments = {
+	estate = tribes_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_xiongnu_wing_appointments_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_xiongnu_han_treaty = {
+	estate = burghers_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_xiongnu_han_treaty_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_xiongnu_western_tribute = {
+	estate = tribes_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_xiongnu_western_tribute_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_xiongnu_dependent_households = {
+	estate = burghers_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_xiongnu_dependent_households_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_xiongnu_seasonal_assembly = {
+	estate = tribes_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_xiongnu_seasonal_assembly_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_xianbei_lineage_federation = {
+	estate = nobles_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_xianbei_chiefly_assembly
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_xianbei_lineage_federation_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_xianbei_pasture_hunt = {
+	estate = tribes_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_xianbei_chiefly_assembly
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_xianbei_pasture_hunt_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
+antq_issue_xianbei_frontier_exchange = {
+	estate = burghers_estate
+	modifier_when_in_debate = {
+		country_cabinet_efficiency = 0.01
+	}
+	allow = {
+		parliament_type = parliament_type:antq_xianbei_chiefly_assembly
+	}
+	chance = { add = 1 }
+	on_debate_passed = {
+		add_country_modifier = { modifier = antq_issue_xianbei_frontier_exchange_outcome years = 10 mode = add_and_extend }
+	}
+	on_debate_failed = { parliament_debate_failed_effect = yes }
+}
+
 antq_issue_goguryeo_fortress_rotation = {
 	estate = nobles_estate
 	modifier_when_in_debate = {

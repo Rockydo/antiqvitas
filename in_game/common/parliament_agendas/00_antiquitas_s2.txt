@@ -742,6 +742,123 @@ antq_agenda_xiongnu_frontier_exchange = {
 	chance = 10
 }
 
+antq_agenda_xiongnu_chanyu_succession = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_xiongnu_chanyu_succession_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_xiongnu_wing_appointments = {
+	type = country
+	estate = tribes_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_xiongnu_wing_appointments_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_xiongnu_han_treaty = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_xiongnu_han_treaty_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_xiongnu_western_tribute = {
+	type = country
+	estate = tribes_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_xiongnu_western_tribute_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_xiongnu_dependent_households = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_xiongnu_dependent_households_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_xiongnu_seasonal_assembly = {
+	type = country
+	estate = tribes_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_xiongnu_seasonal_assembly_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_xianbei_lineage_federation = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_xianbei_chiefly_assembly
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_xianbei_lineage_federation_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_xianbei_pasture_hunt = {
+	type = country
+	estate = tribes_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_xianbei_chiefly_assembly
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_xianbei_pasture_hunt_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_xianbei_frontier_exchange = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_xianbei_chiefly_assembly
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_xianbei_frontier_exchange_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
 antq_agenda_goguryeo_fortress_rotation = {
 	type = country
 	estate = nobles_estate

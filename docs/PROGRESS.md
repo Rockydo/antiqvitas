@@ -1,5 +1,31 @@
 # Progress
 
+## 2026-07-27 - Xiongnu and Xianbei receive separate dated political arcs
+
+- Expanded the Xiongnu Wing Council from five to eleven programmes and from
+  three to nine issues/agendas. Succession, wing appointments, Han treaty
+  accounts, western tribute, specialist/dependent households, and seasonal
+  assembly now join the existing pasture, muster, gift, envoy, and surety
+  systems.
+- Replaced Xianbei's generic tribal-government shell with a separate eastern-
+  steppe base reform, chiefly assembly, five programmes, three issues/agendas,
+  six social-order identities, and six profile privileges. The AD 1 profile
+  deliberately represents multiple groups before Tanshihuai.
+- Added ten age-routed successors: five Xiongnu paths from the AD 48 division
+  through Han-Zhao, plus Tanshihuai's three divisions, post-181 federations,
+  Murong and Tuoba-Dai courts, and the AD 402 Rouran khaganate. Six exact-
+  Xiongnu privileges form three exclusive institutional choices.
+- Generated and reviewed four 3x2 archaeological atlases. Twelve privilege
+  icons and twelve political icons have direct BC7 chains; the global
+  nine-surface ledger now audits 1,210 direct assets.
+- Installed breadth is now 33 councils, 189 programmes, 123 issues, 123
+  agendas, 125 political contracts, 292 privileges, 227 laws, and 859
+  ancient-system unlocks. All 292 opening profiles remain researchable.
+- The permanent steppe-depth regression passes; `make validate` passes 107/107
+  commands. Paired vanilla/mod smoke reaches responsive rendered menus with
+  zero new or mod-unique `error.log` lines. Evidence is recorded in
+  `docs/playtests/S2_STEPPE_POLITICAL_DEPTH_20260727.md`.
+
 ## 2026-07-27 - Arsacid and Sasanian Iran receive separate political games
 
 - Expanded the Arsacid Great-House Council from five to eleven programmes and

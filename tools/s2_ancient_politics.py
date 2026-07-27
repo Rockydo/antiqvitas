@@ -408,9 +408,16 @@ PROFILES = (
     Profile(
         "xiongnu", "antq_xiongnu_wing_council", "Xiongnu Wing Council",
         "The chanyu's court coordinates left and right wings, lineage sureties, pasture circuits, envoys, remounts, and prestige-gift distribution.",
-        ("antq_steppe_confederation",), ("tribes_estate", "nobles_estate", "burghers_estate"),
+        (
+            "antq_steppe_confederation", "antq_xiongnu_dual_wing_command",
+            "antq_xiongnu_gift_circuit", "antq_xiongnu_southern_frontier_court",
+            "antq_xiongnu_northern_western_confederacy",
+            "antq_southern_xiongnu_commandery_settlement",
+            "antq_xiongnu_five_divisions_order", "antq_han_zhao_chanyu_court",
+        ),
+        ("tribes_estate", "nobles_estate", "burghers_estate"),
         "xiongnu_chanyu_atlas.png", "f458ad1af8ad185d10fb6eaf9c649231a5c9b69a6310752a7e63c7d4b5258ec9",
-        "P8.3;P13;CAH-XI", "secure",
+        "P8.3;P9;P13;BHR;CAH-XI;IRAN-XIO;XIONGNU-CONFEDERACY", "secure",
         "The wing council is a bounded Xiongnu adapter; it does not import later Mongol titles, decimal ranks, or a permanent representative assembly.",
         (
             a("pasture_returns", "Pasture Circuit Returns", "Reconcile lineage access to seasonal grazing and water before scarcity breaks confederate obligations.", "adm", FOOD),
@@ -418,11 +425,48 @@ PROFILES = (
             a("silk_gift_register", "Silk-Gift Register", "Track prestige silk, plaques, vessels, and livestock through the chanyu's negotiated gift hierarchy.", "dip", PRESTIGE),
             a("envoy_relays", "Envoy Relay Circuit", "Coordinate interpreters, escort guarantees, relay mounts, and tallies across distant lineages.", "dip", LOGISTICS),
             a("lineage_sureties", "Lineage Sureties", "Record wards, oath gifts, and witnessed guarantees without treating mobile lineages as salaried offices.", "adm", CONTROL),
+            a("chanyu_lineage_nominations", "Chanyu Lineage Nominations", "Review dynastic seniority, eligible royal kinsmen, left-wing standing, maternal alliances, and the sureties attached to succession.", "dip", PRESTIGE),
+            a("wing_command_returns", "Wing Command Returns", "Compare the left and right wings' subordinate rulers, mounted followings, pasture access, rendezvous, and gift obligations.", "mil", NOBLES),
+            a("frontier_treaty_accounts", "Frontier Treaty Accounts", "Track peace gifts, silk, grain, hostages, envoys, markets, and reciprocal obligations in relations with Han.", "dip", TRADE),
+            a("western_tribute_relays", "Western Tribute Relays", "Coordinate tribute, envoys, escorts, remounts, and route intelligence among western subordinate peoples and oasis courts.", "dip", LOGISTICS),
+            a("craft_household_stores", "Craft and Household Stores", "Inventory metal fittings, bows, leatherwork, textiles, grain, and dependent-household production needed by court and host.", "adm", MINT),
+            a("seasonal_assembly_dockets", "Seasonal Assembly Dockets", "Prepare tribute, oath, sacrifice, justice, marriage, and campaign business for the confederacy's recurring gatherings.", "adm", ASSIZE),
         ),
         (
             m("wing_contribution", "Left-Right Wing Contribution", "Set a bounded mounted contribution and rendezvous for each wing.", "Wing Command Precedence", "Leading commanders demand rank and gift shares proportionate to service.", "nobles_estate", MIL, NOBLES),
             m("pasture_compact", "Seasonal Pasture Compact", "Mediate water and grazing circuits among confederated lineages.", "Herding-Household Water Claim", "Mobile households seek protected seasonal access under prior compact.", "tribes_estate", FOOD, TRIBES),
             m("frontier_exchange", "Frontier Exchange Peace", "Guarantee a supervised meeting place for silk, livestock, and metal exchange.", "Caravan Broker Safe-Conduct", "Long-distance brokers seek escorts and compensation for losses.", "burghers_estate", TRADE, TRADE),
+            m("chanyu_succession", "Chanyu Succession Settlement", "Weigh dynastic seniority, royal-lineage claims, wing support, maternal alliances, and hostage guarantees in a contested succession.", "Wing Acclamation Claim", "Leading commanders seek a witnessed role in recognizing a successor while accepting responsibility for confederate unity.", "nobles_estate", PRESTIGE, NOBLES),
+            m("wing_appointments", "Wing Appointment Review", "Assign left and right commanders, subordinate rulers, rendezvous, pasture responsibilities, and campaign authority.", "Lineage Command Petition", "Major lineages seek commands proportionate to their following, routes, and remount contribution.", "tribes_estate", MIL, TRIBES),
+            m("han_treaty", "Han Frontier Treaty Review", "Set peace gifts, hostages, markets, envoys, frontier restraint, and reciprocal obligations without treating the relationship as simple tribute.", "Frontier Broker Petition", "Interpreters and exchange households seek protected markets, measured tallies, escorts, and compensation.", "burghers_estate", TRADE, TRADE),
+            m("western_tribute", "Western Tribute Circuit", "Allocate envoys, escorts, remounts, gifts, and route intelligence among western subordinate peoples and oasis courts.", "Western Lineage Autonomy Claim", "Distant confederates seek retained local rule in return for bounded tribute, host service, and passage.", "tribes_estate", LOGISTICS, TRIBES),
+            m("dependent_households", "Craft and Dependent-Household Provision", "Set measured deliveries of metalwork, bows, leather, textiles, grain, and transport without assuming uniform servile status.", "Craft-Household Delivery Petition", "Dependent and specialist households seek stable inputs, witnessed quotas, and protection from repeated requisition.", "burghers_estate", MINT, TRADE),
+            m("seasonal_assembly", "Seasonal Assembly Settlement", "Coordinate tribute, oath, sacrifice, justice, marriage alliances, and campaign decisions at a recurring gathering.", "Oath Custodian Petition", "Ritual custodians seek protected vessels, gifts, and a witnessed place in confederate settlements without becoming a centralized priesthood.", "tribes_estate", ASSIZE, TRIBES),
+        ),
+    ),
+    Profile(
+        "xianbei", "antq_xianbei_chiefly_assembly", "Xianbei Chiefly Assembly",
+        "Eastern-steppe leaders coordinate lineage allegiance, mounted followings, pasture movement, frontier embassies, seasonal gatherings, and compensation before the later Tanshihuai confederation.",
+        (
+            "antq_xianbei_eastern_confederacy", "antq_tanshihuai_three_divisions",
+            "antq_xianbei_successor_federations", "antq_murong_frontier_court",
+            "antq_tuoba_dai_confederacy", "antq_rouran_khaganate",
+        ),
+        ("tribes_estate", "nobles_estate", "burghers_estate"),
+        "xianbei_chiefly_council_atlas.png", "d2e1f5e05f34c9ed04ecbca830465b3b96f84fc506a9e0732165c67232c55ac5",
+        "P8.8;P9;P13;CAH-XI;CAH-XII;XIANBEI-CONFEDERACY;IRAN-KHAGAN", "contested",
+        "The opening profile models separate eastern-steppe Xianbei groups; Tanshihuai's three divisions and later successor federations are dated reforms, not institutions projected back to AD 1.",
+        (
+            a("lineage_circuit_returns", "Lineage Circuit Returns", "Reconcile eastern-steppe lineages, pasture routes, water, seasonal movement, wards, and gifts without imposing fixed territorial districts.", "adm", FOOD),
+            a("mounted_following_returns", "Mounted Following Returns", "Count bows, riders, remounts, harness, scouts, and rendezvous promised by leading households.", "mil", MIL),
+            a("frontier_embassies", "Frontier Embassy Tallies", "Coordinate interpreters, gifts, escorts, markets, and intelligence in dealings with Wuhuan, Xiongnu, Han, and northeastern neighbors.", "dip", TRADE),
+            a("seasonal_hunt_assemblies", "Seasonal Hunt Assemblies", "Use recurring gatherings and collective hunts to review allegiance, disputes, pasture access, and campaign readiness.", "dip", PRESTIGE),
+            a("lineage_compensation", "Lineage Compensation Dockets", "Set witnessed restitution for livestock, pasture, injury, broken guarantees, and failed service among federated groups.", "adm", ASSIZE),
+        ),
+        (
+            m("lineage_federation", "Lineage Federation Hearing", "Define shared allegiance, assembly attendance, wards, gifts, and the retained authority of participating leaders.", "Chiefly Precedence Claim", "Leading households seek precedence proportional to following, seniority, and service while accepting federation obligations.", "nobles_estate", PRESTIGE, NOBLES),
+            m("pasture_hunt", "Pasture and Hunt Circuit", "Set seasonal movement, shared hunting grounds, water access, scouts, and protection against overuse.", "Herding Circuit Petition", "Mobile households seek recognized water and grazing routes in return for warning, transport, and remount duties.", "tribes_estate", FOOD, TRIBES),
+            m("frontier_exchange", "Eastern Frontier Exchange", "Authorize bounded markets, interpreters, escorts, restitution, and intelligence exchange along the Han and Wuhuan approaches.", "Broker and Artisan Petition", "Exchange and craft households seek stable measures, inputs, safe conduct, and protection from repeated requisition.", "burghers_estate", TRADE, TRADE),
         ),
     ),
     Profile(
@@ -876,6 +920,10 @@ COUNCIL_DYNAMICS: dict[str, tuple[str, tuple[tuple[str, str], ...]]] = {
         "0.05",
         (("tribes_estate", "0.35"), ("nobles_estate", "0.20"), ("burghers_estate", "-0.05")),
     ),
+    "xianbei": (
+        "0.08",
+        (("tribes_estate", "0.30"), ("nobles_estate", "0.18"), ("burghers_estate", "0.02")),
+    ),
     "goguryeo": (
         "0.10",
         (("nobles_estate", "0.25"), ("peasants_estate", "0.10"), ("burghers_estate", "0.05")),
@@ -1203,6 +1251,21 @@ ART_SOURCE_OVERRIDES.update({
         "household_registration_returns",
         "salt_iron_accounts",
         "grand_herald_guest_registers",
+    ))
+})
+ART_SOURCE_OVERRIDES.update({
+    f"antq_xiongnu_{slug}": (
+        "xiongnu_state_offices_ii_atlas.png",
+        "ce9be47311990f525ae76b0665903e94017e3aadbd41c14ad39844f587d75fcd",
+        cell,
+    )
+    for cell, slug in enumerate((
+        "chanyu_lineage_nominations",
+        "wing_command_returns",
+        "frontier_treaty_accounts",
+        "western_tribute_relays",
+        "craft_household_stores",
+        "seasonal_assembly_dockets",
     ))
 })
 ART_SOURCE_OVERRIDES.update({

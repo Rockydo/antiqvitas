@@ -276,6 +276,12 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "P8.3;P13;CAH-XI", "secure",
         "Lineage leaders gain weight from office and resist rapid replacement.",
     ),
+    "antq_xianbei_eastern_confederacy": (
+        "global_tribes_estate_power=0.12|global_nobles_estate_power=0.06|"
+        "tribes_estate_power_from_cabinet=0.24|replace_cabinet_member_cost_modifier=0.06",
+        "P8.8;P9;P13;CAH-XI;XIANBEI-CONFEDERACY", "contested",
+        "Separate eastern-steppe Xianbei groups bargain through leading households, mounted followings, pasture circuits, and seasonal gatherings before later unification.",
+    ),
     "antq_early_korean_kingdom": (
         "global_crown_estate_power=0.10|nobles_estate_power_from_cabinet=0.15|"
         "set_cabinet_member_cost_modifier=-0.05",
@@ -736,6 +742,96 @@ SUCCESSOR_REFORMS: tuple[
         "Bahram V's accession in AD 420 and reliance on elite settlement are secure in broad outline; literary court motifs are not treated as literal administrative records.",
         "5",
     ),
+    (
+        "antq_xiongnu_southern_frontier_court", "xiongnu", "steppe_horde",
+        "Southern Xiongnu Frontier Court",
+        "Recast the southern wing as a frontier-facing chanyu court sustained by lineage recognition, Han stipends, hostage diplomacy, pasture access, and supervised markets.",
+        "global_tribes_estate_power=0.12|global_crown_estate_power=0.08|tribes_estate_power_from_cabinet=0.24|country_cabinet_efficiency=0.025|replace_cabinet_member_cost_modifier=0.06",
+        "P8.8;P9;P13;IRAN-XIO;BARFIELD-XIONGNU", "secure",
+        "The AD 48 division and southern submission in AD 50 are secure; this path models a negotiated frontier court without treating every southern group as uniformly settled.",
+        "0",
+    ),
+    (
+        "antq_xiongnu_northern_western_confederacy", "xiongnu", "steppe_horde",
+        "Northern and Western Xiongnu Confederacy",
+        "Preserve independent chanyu authority through western tribute relays, wing commands, mobile pasture circuits, fortified crossings, and negotiated clan hosts.",
+        "global_tribes_estate_power=0.18|global_nobles_estate_power=0.08|tribes_estate_power_from_cabinet=0.30|global_levy_size_modifier=0.04|replace_cabinet_member_cost_modifier=0.10",
+        "P8.8;P9;P13;IRAN-XIO;BARFIELD-XIONGNU", "secure",
+        "The northern polity after AD 48 and its displacement by AD 91 are secure; the western framing abstracts changing routes and does not assert one continuous territorial state.",
+        "0",
+    ),
+    (
+        "antq_southern_xiongnu_commandery_settlement", "xiongnu", "steppe_horde",
+        "Southern Xiongnu Commandery Settlement",
+        "Coordinate chanyu households, five regional divisions, Han commanderies, registered dependants, market supply, pasture allocation, and frontier defense.",
+        "global_crown_estate_power=0.11|global_tribes_estate_power=0.12|crown_estate_power_from_cabinet=0.22|global_monthly_control=0.0005|set_cabinet_member_cost_modifier=-0.04",
+        "P8.8;P9;P13;IRAN-XIO;CAH-X", "contested",
+        "Southern Xiongnu residence within the Han frontier is secure, but settlement patterns and commandery supervision varied; the path is not a claim of complete sedentarization.",
+        "0",
+    ),
+    (
+        "antq_xiongnu_five_divisions_order", "xiongnu", "steppe_horde",
+        "Five Xiongnu Divisions Order",
+        "Administer relocated southern Xiongnu communities through five divisions, hereditary leaders, household registers, military obligations, and provincial supervision.",
+        "global_crown_estate_power=0.12|global_tribes_estate_power=0.10|crown_estate_power_from_cabinet=0.24|global_monthly_control=0.0007|replace_cabinet_member_cost_modifier=0.07",
+        "P8.8;P9;P13;IRAN-XIO;CAH-XII", "secure",
+        "The reorganization into five divisions in AD 216 is secure; exact local practice and the balance between hereditary leadership and imperial supervision remain uneven.",
+        "2",
+    ),
+    (
+        "antq_han_zhao_chanyu_court", "xiongnu", "steppe_horde",
+        "Han-Zhao Chanyu Court",
+        "Join chanyu lineage legitimacy to an imperial claimant court, registered military households, provincial appointments, siege supply, and negotiated elite service.",
+        "global_crown_estate_power=0.16|global_tribes_estate_power=0.08|global_nobles_estate_power=0.06|crown_estate_power_from_cabinet=0.28|replace_cabinet_member_cost_modifier=0.10",
+        "P8.8;P9;P13;IRAN-XIO;CAH-XII", "secure",
+        "Liu Yuan's imperial claim from AD 304 and its Xiongnu political inheritance are secure; the path does not collapse the varied Sixteen Kingdoms into one ethnic polity.",
+        "3",
+    ),
+    (
+        "antq_tanshihuai_three_divisions", "xianbei", "tribe",
+        "Tanshihuai's Three Divisions",
+        "Coordinate a newly expansive Xianbei confederation through central, eastern, and western divisions, appointed chiefs, mounted followings, tribute, and seasonal assembly.",
+        "global_tribes_estate_power=0.16|global_nobles_estate_power=0.08|tribes_estate_power_from_cabinet=0.30|global_levy_size_modifier=0.045|replace_cabinet_member_cost_modifier=0.08",
+        "P8.8;P9;P13;XIANBEI-CONFEDERACY;CAH-XI", "secure",
+        "Tanshihuai's mid-second-century confederation and threefold organization are secure in broad outline; office detail remains dependent on later transmitted accounts.",
+        "1",
+    ),
+    (
+        "antq_xianbei_successor_federations", "xianbei", "tribe",
+        "Xianbei Successor Federations",
+        "Let regional lineages and mounted households rebuild smaller federations after failed central succession, using marriage, compensation, pasture bargains, and frontier embassies.",
+        "global_tribes_estate_power=0.20|global_nobles_estate_power=0.10|nobles_estate_power_from_cabinet=0.22|replace_cabinet_member_cost_modifier=0.12|stability_cost_efficiency=0.04",
+        "P8.8;P9;P13;XIANBEI-CONFEDERACY;CAH-XI", "secure",
+        "Fragmentation after Tanshihuai's death in AD 181 is secure; this plural path deliberately avoids inventing one continuous Xianbei central government.",
+        "1",
+    ),
+    (
+        "antq_murong_frontier_court", "xianbei", "tribe",
+        "Murong Frontier Court",
+        "Build a durable frontier court from lineage command, mounted households, fortified settlements, Chinese administrative expertise, embassies, and incorporated communities.",
+        "global_crown_estate_power=0.12|global_tribes_estate_power=0.10|global_nobles_estate_power=0.08|country_cabinet_efficiency=0.03|global_monthly_control=0.0006",
+        "P8.8;P9;P13;CAH-XII;XIANBEI-CONFEDERACY", "contested",
+        "Murong consolidation and mixed frontier institutions are secure later developments; the path abstracts several courts and does not invent a single constitutional founding date.",
+        "3",
+    ),
+    (
+        "antq_tuoba_dai_confederacy", "xianbei", "tribe",
+        "Tuoba Dai Confederacy",
+        "Bind Tuoba lineages, allied chiefs, pasture circuits, mounted hosts, frontier markets, and northern commandery relationships into a more durable confederate court.",
+        "global_tribes_estate_power=0.14|global_crown_estate_power=0.10|tribes_estate_power_from_cabinet=0.25|global_levy_size_modifier=0.035|set_cabinet_member_cost_modifier=-0.03",
+        "P8.8;P9;P13;CAH-XII;XIANBEI-CONFEDERACY", "secure",
+        "The Dai polity's recognition in AD 315 and Tuoba lineage framework are secure; later Northern Wei institutions are not projected back onto this confederate stage.",
+        "3",
+    ),
+    (
+        "antq_rouran_khaganate", "xianbei", "steppe_horde",
+        "Rouran Khaganate",
+        "Organize a fourth-century successor confederation through a khagan's court, ranked chiefs, ternary commands, tributary relations, mobile hosts, and seasonal encampments.",
+        "global_crown_estate_power=0.13|global_tribes_estate_power=0.13|crown_estate_power_from_cabinet=0.24|global_levy_size_modifier=0.05|replace_cabinet_member_cost_modifier=0.08",
+        "P8.8;P9;P13;IRAN-KHAGAN;ROURAN-ORGANIZATION", "secure",
+        "The Rouran confederation under Shelun from AD 402 and early khagan title are secure; neither institution is projected onto the AD 1 Xianbei opening.",
+        "5",
+    ),
 )
 
 
@@ -770,6 +866,7 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
         "antq_client_monarchy", "antq_buffer_kingdom", "antq_regional_kingship",
     ),
     "xiongnu": ("antq_steppe_confederation",),
+    "xianbei": ("antq_xianbei_eastern_confederacy",),
     "goguryeo": ("antq_early_korean_kingdom",),
     "kushite": ("antq_kushite_dual_kingship",),
     "lankan": ("antq_lankan_kingdom",),
@@ -804,6 +901,7 @@ PROFILE_PARLIAMENTS = {
     "sacral": "antq_sacral_court",
     "royal": "antq_royal_council",
     "xiongnu": "antq_xiongnu_wing_council",
+    "xianbei": "antq_xianbei_chiefly_assembly",
     "goguryeo": "antq_goguryeo_royal_council",
     "kushite": "antq_meroitic_royal_council",
     "lankan": "antq_anuradhapura_royal_council",
@@ -1319,7 +1417,7 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    expected_contract_count = 35 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    expected_contract_count = 36 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -1333,7 +1431,7 @@ def load_power_data() -> PowerData:
     alternative_profiles = [row[1] for row in path_rows]
     two_path_profiles = {
             "roman", "han", "civic", "gana", "steppe", "tribal",
-            "sacral", "royal", "xiongnu", "goguryeo", "kushite", "lankan",
+            "sacral", "royal", "goguryeo", "kushite", "lankan",
             "armenian", "nabataean", "himyarite", "satavahana",
             "catuvellaunian", "marcomannic", "sabaean", "mauretanian",
             "judean", "cappadocian", "thracian", "bosporan",
@@ -1347,10 +1445,12 @@ def load_power_data() -> PowerData:
         or alternative_profiles.count("late_han") != 6
         or alternative_profiles.count("iranian") != 5
         or alternative_profiles.count("sasanian") != 5
+        or alternative_profiles.count("xiongnu") != 7
+        or alternative_profiles.count("xianbei") != 5
         or any(alternative_profiles.count(profile) != 2 for profile in two_path_profiles)
     ):
         failures.append(
-            "reform paths must provide two regional alternatives plus deeper Roman, Han, Arsacid, and Sasanian successor arcs"
+            "reform paths must provide two regional alternatives plus deeper Roman, Han, Arsacid, Sasanian, Xiongnu, and Xianbei successor arcs"
         )
     for reform, (modifier_text, _source, confidence, note) in POLITICAL_CONTRACTS.items():
         try:
@@ -1638,6 +1738,17 @@ antq_steppe_confederation = {
 		global_tribes_estate_power = 0.10
 		monthly_towards_decentralization = societal_value_monthly_move
 		research_speed = 0.06
+	}
+	years = 2
+}
+
+antq_xianbei_eastern_confederacy = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		country_cabinet_efficiency = 0.025
+		research_speed = 0.07
 	}
 	years = 2
 }
@@ -2064,6 +2175,8 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_kushite_dual_kingship_desc", "A Kushite royal court represented through the named Natakamani-Amanitore co-rule."),
         ("antq_steppe_confederation", "Steppe Confederation"),
         ("antq_steppe_confederation_desc", "A confederation whose chanyu must balance the leading clans."),
+        ("antq_xianbei_eastern_confederacy", "Xianbei Eastern Confederacy"),
+        ("antq_xianbei_eastern_confederacy_desc", "Separate eastern-steppe chiefly groups negotiate mounted service, pasture access, and seasonal assembly before the later Tanshihuai confederation."),
         ("antq_early_korean_kingdom", "Early Korean Kingdom"),
         ("antq_early_korean_kingdom_desc", "A developing royal kingdom supported by leading political houses."),
         ("antq_regional_kingship", "Regional Kingship"),

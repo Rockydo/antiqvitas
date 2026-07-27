@@ -378,11 +378,25 @@ antq_xiongnu_wing_council = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
 		}
 	}
 	allow = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
 		}
 	}
 	modifier = {
@@ -394,6 +408,40 @@ antq_xiongnu_wing_council = {
 		tribes_estate_agenda_impact = 0.35
 		nobles_estate_agenda_impact = 0.20
 		burghers_estate_agenda_impact = -0.05
+	}
+}
+
+antq_xianbei_chiefly_assembly = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		tribes_estate_can_participate_in_parliament = yes
+		nobles_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.08
+		tribes_estate_agenda_impact = 0.30
+		nobles_estate_agenda_impact = 0.18
+		burghers_estate_agenda_impact = 0.02
 	}
 }
 

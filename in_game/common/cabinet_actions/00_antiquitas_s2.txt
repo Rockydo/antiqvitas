@@ -1398,6 +1398,13 @@ antq_xiongnu_pasture_returns = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
 		}
 	}
 	allow_multiple = no
@@ -1412,6 +1419,13 @@ antq_xiongnu_wing_muster = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
 		}
 	}
 	allow_multiple = no
@@ -1426,6 +1440,13 @@ antq_xiongnu_silk_gift_register = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
 		}
 	}
 	allow_multiple = no
@@ -1440,6 +1461,13 @@ antq_xiongnu_envoy_relays = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
 		}
 	}
 	allow_multiple = no
@@ -1454,12 +1482,240 @@ antq_xiongnu_lineage_sureties = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
 		}
 	}
 	allow_multiple = no
 	country_modifier = {
 		monthly_towards_centralization = societal_value_minor_monthly_move
 		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_xiongnu_chanyu_lineage_nominations = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_prestige = 0.05
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_xiongnu_wing_command_returns = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_nobles_estate_power = 0.025
+		land_morale_modifier = 0.01
+	}
+}
+
+antq_xiongnu_frontier_treaty_accounts = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_trade_through_owned_territory_efficiency = 0.05
+		global_burghers_estate_power = 0.025
+	}
+}
+
+antq_xiongnu_western_tribute_relays = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_supply_limit_modifier = 0.05
+		global_road_building_time = -0.05
+	}
+}
+
+antq_xiongnu_craft_household_stores = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		country_cabinet_efficiency = 0.02
+		global_trade_through_owned_territory_efficiency = 0.03
+	}
+}
+
+antq_xiongnu_seasonal_assembly_dockets = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		stability_cost_efficiency = -0.03
+		global_monthly_control = 0.002
+	}
+}
+
+antq_xianbei_lineage_circuit_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_pop_food_consumption = -0.01
+		global_production_efficiency = 0.025
+	}
+}
+
+antq_xianbei_mounted_following_returns = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.01
+	}
+}
+
+antq_xianbei_frontier_embassies = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_trade_through_owned_territory_efficiency = 0.05
+		global_burghers_estate_power = 0.025
+	}
+}
+
+antq_xianbei_seasonal_hunt_assemblies = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_prestige = 0.05
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_xianbei_lineage_compensation = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		stability_cost_efficiency = -0.03
+		global_monthly_control = 0.002
 	}
 }
 

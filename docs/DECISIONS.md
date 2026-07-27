@@ -1,5 +1,35 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - Xiongnu and Xianbei do not share a timeless steppe constitution
+
+The AD 1 Xiongnu retain the chanyu, left/right wing, lineage, gift,
+pasture, treaty, and subordinate-route framework. Xianbei instead receive a
+separate `antq_xianbei_eastern_confederacy` profile representing multiple
+eastern-steppe groups coordinated through chiefly households, mounted
+followings, seasonal gatherings, pasture circuits, and frontier exchange.
+This removes the generic tribal-kingdom presentation without claiming a
+unitary Xianbei state before Tanshihuai.
+
+Later political forms are research-routed by age. The Northern/Southern
+Xiongnu paths begin only after AD 48, the five-divisions order after AD 216,
+Han-Zhao after AD 304, Tanshihuai in Age II, Murong and Tuoba-Dai in Age IV,
+and Rouran in Age VI. `khagan` appears only in the Rouran path from AD 402;
+later Turkic and Mongol ranks, decimal commands, and imperial imagery remain
+excluded.
+
+`tools/s2_steppe_politics_depth.py` permanently verifies council activation,
+exact profile breadth, successor-age unlocks, exact-Xiongnu privilege gates,
+symmetric exclusions, and direct art.
+
+## 2026-07-27 - Xiongnu treaty, succession, and redistribution are player choices
+
+Three exact-Xiongnu privilege pairs expose recurring political tensions:
+dynastic nomination versus wing acclamation, dependable Han frontier
+stipends versus independent western tribute circuits, and central chanyu
+redistribution versus larger lineage retention shares. The pairwise exclusion
+creates meaningful institutional tradeoffs; it is not a claim that historical
+Xiongnu councils used three formally codified binary votes.
+
 ## 2026-07-27 - Han political depth separates the Western court from the Eastern Secretariat
 
 The AD 1 Western Han Court Conference remains centered on the Chancellor-era

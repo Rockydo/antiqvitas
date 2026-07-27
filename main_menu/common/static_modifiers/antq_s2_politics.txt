@@ -570,6 +570,96 @@ antq_agenda_xiongnu_frontier_exchange_concession = {
 	global_burghers_estate_power = 0.025
 }
 
+antq_issue_xiongnu_chanyu_succession_outcome = {
+	monthly_prestige = 0.05
+	country_cabinet_efficiency = 0.02
+}
+
+antq_agenda_xiongnu_chanyu_succession_concession = {
+	global_nobles_estate_power = 0.025
+	land_morale_modifier = 0.01
+}
+
+antq_issue_xiongnu_wing_appointments_outcome = {
+	global_levy_size_modifier = 0.05
+	land_morale_modifier = 0.01
+}
+
+antq_agenda_xiongnu_wing_appointments_concession = {
+	global_tribes_estate_power = 0.025
+	global_levy_size_modifier = 0.04
+}
+
+antq_issue_xiongnu_han_treaty_outcome = {
+	global_trade_through_owned_territory_efficiency = 0.05
+	global_burghers_estate_power = 0.025
+}
+
+antq_agenda_xiongnu_han_treaty_concession = {
+	global_trade_through_owned_territory_efficiency = 0.05
+	global_burghers_estate_power = 0.025
+}
+
+antq_issue_xiongnu_western_tribute_outcome = {
+	global_supply_limit_modifier = 0.05
+	global_road_building_time = -0.05
+}
+
+antq_agenda_xiongnu_western_tribute_concession = {
+	global_tribes_estate_power = 0.025
+	global_levy_size_modifier = 0.04
+}
+
+antq_issue_xiongnu_dependent_households_outcome = {
+	country_cabinet_efficiency = 0.02
+	global_trade_through_owned_territory_efficiency = 0.03
+}
+
+antq_agenda_xiongnu_dependent_households_concession = {
+	global_trade_through_owned_territory_efficiency = 0.05
+	global_burghers_estate_power = 0.025
+}
+
+antq_issue_xiongnu_seasonal_assembly_outcome = {
+	stability_cost_efficiency = -0.03
+	global_monthly_control = 0.002
+}
+
+antq_agenda_xiongnu_seasonal_assembly_concession = {
+	global_tribes_estate_power = 0.025
+	global_levy_size_modifier = 0.04
+}
+
+antq_issue_xianbei_lineage_federation_outcome = {
+	monthly_prestige = 0.05
+	country_cabinet_efficiency = 0.02
+}
+
+antq_agenda_xianbei_lineage_federation_concession = {
+	global_nobles_estate_power = 0.025
+	land_morale_modifier = 0.01
+}
+
+antq_issue_xianbei_pasture_hunt_outcome = {
+	global_pop_food_consumption = -0.01
+	global_production_efficiency = 0.025
+}
+
+antq_agenda_xianbei_pasture_hunt_concession = {
+	global_tribes_estate_power = 0.025
+	global_levy_size_modifier = 0.04
+}
+
+antq_issue_xianbei_frontier_exchange_outcome = {
+	global_trade_through_owned_territory_efficiency = 0.05
+	global_burghers_estate_power = 0.025
+}
+
+antq_agenda_xianbei_frontier_exchange_concession = {
+	global_trade_through_owned_territory_efficiency = 0.05
+	global_burghers_estate_power = 0.025
+}
+
 antq_issue_goguryeo_fortress_rotation_outcome = {
 	monthly_towards_centralization = societal_value_minor_monthly_move
 	country_cabinet_efficiency = 0.02

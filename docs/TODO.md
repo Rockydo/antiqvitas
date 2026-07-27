@@ -5,7 +5,7 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,186-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
+- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,210-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
   - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
 ## Second manual playtest remediation — 2026-07-26 (resume here)
@@ -44,7 +44,7 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 114 reforms and 280 privileges
+  thin outside the first replacement tranches: 125 reforms and 292 privileges
   serve 292 opening polities. The legal layer now has 227 ancient groups,
   including 182 profile laws with 584 total options, a 26-option dated
   development layer, and 12 country-specific exceptions.
@@ -141,8 +141,8 @@ and focused runtime probe all pass.
   - [ ] Replace required gameplay breadth at both definition and
     unlock/reference layers. Preserve only locally proven engine adapters, and
     guarantee that their names, descriptions, icons, and effects cannot surface.
-    Existing namespaced ancient content remains active (280 privileges, 227 laws,
-    114 reforms).
+    Existing namespaced ancient content remains active (292 privileges, 227 laws,
+    125 reforms).
     - [x] Supply the first deep council/state-office replacement tranche:
       nine reform-driven council profiles, 45 profile-locked administrative
       programmes, 27 issues, 27 agendas, 54 outcome/concession modifiers, and
@@ -266,6 +266,20 @@ and focused runtime probe all pass.
         114 issues, 114 agendas, 114 political contracts, 280 privileges, and
         836 ancient-system unlocks. The nine-surface art ledger contains 1,186
         direct chains; all 292 opening profiles remain researchable.
+      - [x] Deepen the Xiongnu and Xianbei political games without projecting
+        later steppe empires backward. Xiongnu now has eleven programmes and
+        nine debates/agendas; Xianbei has a separate AD 1 chiefly assembly,
+        five programmes, three debates/agendas, six order identities, and six
+        profile privileges. Ten age-correct successor reforms cover the AD
+        48/50 Xiongnu division and settlement, the AD 216 five divisions,
+        Han-Zhao, Tanshihuai, post-181 federations, Murong and Tuoba-Dai
+        courts, and the AD 402 Rouran khaganate. Six exact-Xiongnu privileges
+        form three exclusive choices. Installed breadth is now 33 councils,
+        189 programmes, 123 issues, 123 agendas, 125 political contracts, 292
+        privileges, 227 laws, and 859 ancient-system unlocks. The direct-art
+        ledger contains 1,210 chains; all 292 opening profiles remain
+        researchable. Full validation passes 107/107 commands and paired
+        vanilla/mod smoke adds zero new or mod-unique error lines.
       - [x] Add the first dated legal-development layer: two options for every
         one of the 13 legal profiles, 26 total, spanning AD 25-382. All gates
         use `AntqDate`, each option has a distinct three-effect package and an
@@ -633,6 +647,11 @@ and focused runtime probe all pass.
     successors model the AD 224 refoundation, Shapur's settlement, later
     provincial/frontier ranks, and the AD 399/420 courts. Each reform activates
     the correct council and has one unique age-correct research unlock.
+  - [x] Split the Xiongnu and Xianbei arcs. Xiongnu retains its chanyu and
+    left/right-wing framework through five dated successor paths; Xianbei
+    begins as separate eastern-steppe groups and gains five later paths from
+    Tanshihuai to the Rouran khaganate. The khagan title and Rouran ternary
+    organization are confined to the AD 402 path.
   - [ ] Subdivide the nine-family floor further for major countries and
     high-priority regional constitutions; connect later-century successor paths
     to their dated historical transitions.
@@ -702,6 +721,11 @@ and focused runtime probe all pass.
     reforms likewise switch between a Great-House Council and a Royal Council;
     both pairs have dedicated programmes, debates/agendas, order identities,
     privilege choices, successor paths, and focused permanent regressions.
+  - [x] Deepen the eastern-steppe panels. Xiongnu now has a full eleven-office,
+    nine-debate wing council; Xianbei uses a distinct chiefly assembly with
+    five offices, three debates, six order identities, and six privileges.
+    Exact-Xiongnu institutional choices and all ten dated successors are
+    checked by a permanent focused regression.
   - [ ] Expand major profiles beyond the nine-family regional floor and test
     focused Roman, Han, Iranian, civic, and assembly panels without requiring
     long playthroughs. Add further country-specific appointment logic only

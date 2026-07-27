@@ -249,6 +249,24 @@ antq_steppe_confederation = {
 	years = 2
 }
 
+antq_xianbei_eastern_confederacy = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.12
+		global_nobles_estate_power = 0.06
+		tribes_estate_power_from_cabinet = 0.24
+		replace_cabinet_member_cost_modifier = 0.06
+		global_tribes_estate_power = 0.08
+		country_cabinet_efficiency = 0.025
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_xianbei_chiefly_assembly
+	}
+	years = 2
+}
+
 antq_early_korean_kingdom = {
 	major = yes
 	government = monarchy
@@ -1052,6 +1070,11 @@ antq_xiongnu_dual_wing_command = {
 			has_reform = government_reform:antq_steppe_confederation
 			has_reform = government_reform:antq_xiongnu_dual_wing_command
 			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
 		}
 	}
 	country_modifier = {
@@ -1074,6 +1097,11 @@ antq_xiongnu_gift_circuit = {
 			has_reform = government_reform:antq_steppe_confederation
 			has_reform = government_reform:antq_xiongnu_dual_wing_command
 			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
 		}
 	}
 	country_modifier = {
@@ -2454,6 +2482,276 @@ antq_bahram_great_house_settlement = {
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_sasanian_royal_council
+	}
+	years = 2
+}
+
+antq_xiongnu_southern_frontier_court = {
+	major = yes
+	government = steppe_horde
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.12
+		global_crown_estate_power = 0.08
+		tribes_estate_power_from_cabinet = 0.24
+		country_cabinet_efficiency = 0.025
+		replace_cabinet_member_cost_modifier = 0.06
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	years = 2
+}
+
+antq_xiongnu_northern_western_confederacy = {
+	major = yes
+	government = steppe_horde
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.18
+		global_nobles_estate_power = 0.08
+		tribes_estate_power_from_cabinet = 0.30
+		global_levy_size_modifier = 0.04
+		replace_cabinet_member_cost_modifier = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	years = 2
+}
+
+antq_southern_xiongnu_commandery_settlement = {
+	major = yes
+	government = steppe_horde
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.11
+		global_tribes_estate_power = 0.12
+		crown_estate_power_from_cabinet = 0.22
+		global_monthly_control = 0.0005
+		set_cabinet_member_cost_modifier = -0.04
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	years = 2
+}
+
+antq_xiongnu_five_divisions_order = {
+	major = yes
+	government = steppe_horde
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.12
+		global_tribes_estate_power = 0.10
+		crown_estate_power_from_cabinet = 0.24
+		global_monthly_control = 0.0007
+		replace_cabinet_member_cost_modifier = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	years = 2
+}
+
+antq_han_zhao_chanyu_court = {
+	major = yes
+	government = steppe_horde
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.16
+		global_tribes_estate_power = 0.08
+		global_nobles_estate_power = 0.06
+		crown_estate_power_from_cabinet = 0.28
+		replace_cabinet_member_cost_modifier = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_xiongnu_wing_council
+	}
+	years = 2
+}
+
+antq_tanshihuai_three_divisions = {
+	major = yes
+	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.16
+		global_nobles_estate_power = 0.08
+		tribes_estate_power_from_cabinet = 0.30
+		global_levy_size_modifier = 0.045
+		replace_cabinet_member_cost_modifier = 0.08
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_xianbei_chiefly_assembly
+	}
+	years = 2
+}
+
+antq_xianbei_successor_federations = {
+	major = yes
+	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.20
+		global_nobles_estate_power = 0.10
+		nobles_estate_power_from_cabinet = 0.22
+		replace_cabinet_member_cost_modifier = 0.12
+		stability_cost_efficiency = 0.04
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_xianbei_chiefly_assembly
+	}
+	years = 2
+}
+
+antq_murong_frontier_court = {
+	major = yes
+	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.12
+		global_tribes_estate_power = 0.10
+		global_nobles_estate_power = 0.08
+		country_cabinet_efficiency = 0.03
+		global_monthly_control = 0.0006
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_xianbei_chiefly_assembly
+	}
+	years = 2
+}
+
+antq_tuoba_dai_confederacy = {
+	major = yes
+	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.14
+		global_crown_estate_power = 0.10
+		tribes_estate_power_from_cabinet = 0.25
+		global_levy_size_modifier = 0.035
+		set_cabinet_member_cost_modifier = -0.03
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_xianbei_chiefly_assembly
+	}
+	years = 2
+}
+
+antq_rouran_khaganate = {
+	major = yes
+	government = steppe_horde
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.13
+		global_tribes_estate_power = 0.13
+		crown_estate_power_from_cabinet = 0.24
+		global_levy_size_modifier = 0.05
+		replace_cabinet_member_cost_modifier = 0.08
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_xianbei_chiefly_assembly
 	}
 	years = 2
 }

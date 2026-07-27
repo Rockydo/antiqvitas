@@ -1570,6 +1570,13 @@ antq_xiongnu_wing_command_precedence = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
 		}
 	}
 	allow = {
@@ -1590,6 +1597,13 @@ antq_xiongnu_lineage_surety_exchange = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
 		}
 	}
 	allow = {
@@ -1611,6 +1625,13 @@ antq_xiongnu_cauldron_and_oath_custody = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
 		}
 	}
 	country_modifier = {
@@ -1627,6 +1648,13 @@ antq_xiongnu_frontier_market_tallies = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
 		}
 	}
 	country_modifier = {
@@ -1643,6 +1671,13 @@ antq_xiongnu_seasonal_pasture_compacts = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
 		}
 	}
 	country_modifier = {
@@ -1659,6 +1694,13 @@ antq_xiongnu_remount_quota_compacts = {
 	potential = {
 		OR = {
 			has_reform = government_reform:antq_steppe_confederation
+			has_reform = government_reform:antq_xiongnu_dual_wing_command
+			has_reform = government_reform:antq_xiongnu_gift_circuit
+			has_reform = government_reform:antq_xiongnu_southern_frontier_court
+			has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+			has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+			has_reform = government_reform:antq_xiongnu_five_divisions_order
+			has_reform = government_reform:antq_han_zhao_chanyu_court
 		}
 	}
 	country_modifier = {
@@ -4273,6 +4315,142 @@ antq_sasanian_frontier_service_settlements = {
 	}
 }
 
+antq_xianbei_chiefly_assembly_hearings = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_xianbei_mounted_following_service }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.1
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.03
+	}
+}
+
+antq_xianbei_mounted_following_service = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_xianbei_chiefly_assembly_hearings }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.035
+		land_morale_modifier = 0.015
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.04
+	}
+}
+
+antq_xianbei_seasonal_oath_custody = {
+	estate = clergy_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	country_modifier = {
+		global_clergy_estate_power = 0.10
+		clergy_estate_target_satisfaction = medium_privilege_target_satisfaction
+		research_speed_modifier = 0.015
+		stability_cost_efficiency = -0.05
+		clergy_estate_max_tax = -0.05
+	}
+}
+
+antq_xianbei_frontier_broker_safe_conducts = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	country_modifier = {
+		global_burghers_estate_power = 0.10
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.05
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.03
+	}
+}
+
+antq_xianbei_herding_circuit_compacts = {
+	estate = peasants_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	country_modifier = {
+		global_peasants_estate_power = 0.10
+		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_production_efficiency = 0.02
+		country_cabinet_efficiency = 0.015
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_xianbei_federated_lineage_guarantees = {
+	estate = tribes_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_reform = government_reform:antq_tanshihuai_three_divisions
+			has_reform = government_reform:antq_xianbei_successor_federations
+			has_reform = government_reform:antq_murong_frontier_court
+			has_reform = government_reform:antq_tuoba_dai_confederacy
+			has_reform = government_reform:antq_rouran_khaganate
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		tribes_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_pop_food_consumption = -0.006
+		global_levy_size_modifier = 0.03
+		monthly_towards_free_subjects = societal_value_minor_monthly_move
+		global_monthly_control = -0.0005
+	}
+}
+
 antq_roman_senatorial_fiscal_review = {
 	estate = nobles_estate
 	potential = {
@@ -5110,5 +5288,125 @@ antq_iranian_standing_royal_garrisons = {
 		country_cabinet_efficiency = 0.04
 		global_monthly_control = 0.001
 		nobles_estate_max_tax = -0.03
+	}
+}
+
+antq_xiongnu_chanyu_lineage_nomination = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XIO
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_xiongnu_wing_commander_acclamation }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.09
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.05
+		global_monthly_control = 0.0008
+		nobles_estate_max_tax = -0.035
+	}
+}
+
+antq_xiongnu_wing_commander_acclamation = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XIO
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_xiongnu_chanyu_lineage_nomination }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.14
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.02
+		nobles_estate_max_tax = -0.065
+	}
+}
+
+antq_xiongnu_han_frontier_stipend_treaty = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XIO
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_xiongnu_independent_western_tribute_circuit }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.11
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.055
+		global_pop_food_consumption = -0.008
+		burghers_estate_max_tax = -0.05
+	}
+}
+
+antq_xiongnu_independent_western_tribute_circuit = {
+	estate = tribes_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XIO
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_xiongnu_han_frontier_stipend_treaty }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_tribes_estate_power = 0.13
+		tribes_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.045
+		global_trade_through_owned_territory_efficiency = 0.04
+		global_monthly_control = -0.001
+	}
+}
+
+antq_xiongnu_chanyu_gift_redistribution = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XIO
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_xiongnu_lineage_gift_retention_quotas }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.09
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.045
+		global_monthly_control = 0.001
+		nobles_estate_max_tax = -0.035
+	}
+}
+
+antq_xiongnu_lineage_gift_retention_quotas = {
+	estate = tribes_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XIO
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_xiongnu_chanyu_gift_redistribution }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_tribes_estate_power = 0.15
+		tribes_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.055
+		land_morale_modifier = 0.015
+		global_monthly_control = -0.001
 	}
 }

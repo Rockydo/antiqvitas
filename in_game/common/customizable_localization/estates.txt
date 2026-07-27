@@ -117,6 +117,13 @@
 		trigger = {
 			OR = {
 				has_reform = government_reform:antq_steppe_confederation
+				has_reform = government_reform:antq_xiongnu_dual_wing_command
+				has_reform = government_reform:antq_xiongnu_gift_circuit
+				has_reform = government_reform:antq_xiongnu_southern_frontier_court
+				has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+				has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+				has_reform = government_reform:antq_xiongnu_five_divisions_order
+				has_reform = government_reform:antq_han_zhao_chanyu_court
 			}
 		}
 	}
@@ -365,6 +372,20 @@
 	}
 
 	text = {
+		localization_key = antq_estate_xianbei_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_xianbei_eastern_confederacy
+				has_reform = government_reform:antq_tanshihuai_three_divisions
+				has_reform = government_reform:antq_xianbei_successor_federations
+				has_reform = government_reform:antq_murong_frontier_court
+				has_reform = government_reform:antq_tuoba_dai_confederacy
+				has_reform = government_reform:antq_rouran_khaganate
+			}
+		}
+	}
+
+	text = {
 		localization_key = crown_estate_holy_order
 		trigger = {
 			has_reform = government_reform:military_order_reform
@@ -561,6 +582,13 @@ nobles_estate = {
 		trigger = {
 			OR = {
 				has_reform = government_reform:antq_steppe_confederation
+				has_reform = government_reform:antq_xiongnu_dual_wing_command
+				has_reform = government_reform:antq_xiongnu_gift_circuit
+				has_reform = government_reform:antq_xiongnu_southern_frontier_court
+				has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+				has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+				has_reform = government_reform:antq_xiongnu_five_divisions_order
+				has_reform = government_reform:antq_han_zhao_chanyu_court
 			}
 		}
 	}
@@ -804,6 +832,20 @@ nobles_estate = {
 				has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
 				has_reform = government_reform:antq_yazdegerd_concordat_court
 				has_reform = government_reform:antq_bahram_great_house_settlement
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_xianbei_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_xianbei_eastern_confederacy
+				has_reform = government_reform:antq_tanshihuai_three_divisions
+				has_reform = government_reform:antq_xianbei_successor_federations
+				has_reform = government_reform:antq_murong_frontier_court
+				has_reform = government_reform:antq_tuoba_dai_confederacy
+				has_reform = government_reform:antq_rouran_khaganate
 			}
 		}
 	}
@@ -1250,6 +1292,13 @@ burghers_estate = {
 		trigger = {
 			OR = {
 				has_reform = government_reform:antq_steppe_confederation
+				has_reform = government_reform:antq_xiongnu_dual_wing_command
+				has_reform = government_reform:antq_xiongnu_gift_circuit
+				has_reform = government_reform:antq_xiongnu_southern_frontier_court
+				has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+				has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+				has_reform = government_reform:antq_xiongnu_five_divisions_order
+				has_reform = government_reform:antq_han_zhao_chanyu_court
 			}
 		}
 	}
@@ -1493,6 +1542,20 @@ burghers_estate = {
 				has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
 				has_reform = government_reform:antq_yazdegerd_concordat_court
 				has_reform = government_reform:antq_bahram_great_house_settlement
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_xianbei_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_xianbei_eastern_confederacy
+				has_reform = government_reform:antq_tanshihuai_three_divisions
+				has_reform = government_reform:antq_xianbei_successor_federations
+				has_reform = government_reform:antq_murong_frontier_court
+				has_reform = government_reform:antq_tuoba_dai_confederacy
+				has_reform = government_reform:antq_rouran_khaganate
 			}
 		}
 	}
@@ -1829,6 +1892,13 @@ clergy_estate = {
 		trigger = {
 			OR = {
 				has_reform = government_reform:antq_steppe_confederation
+				has_reform = government_reform:antq_xiongnu_dual_wing_command
+				has_reform = government_reform:antq_xiongnu_gift_circuit
+				has_reform = government_reform:antq_xiongnu_southern_frontier_court
+				has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+				has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+				has_reform = government_reform:antq_xiongnu_five_divisions_order
+				has_reform = government_reform:antq_han_zhao_chanyu_court
 			}
 		}
 	}
@@ -2072,6 +2142,20 @@ clergy_estate = {
 				has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
 				has_reform = government_reform:antq_yazdegerd_concordat_court
 				has_reform = government_reform:antq_bahram_great_house_settlement
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_xianbei_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_xianbei_eastern_confederacy
+				has_reform = government_reform:antq_tanshihuai_three_divisions
+				has_reform = government_reform:antq_xianbei_successor_federations
+				has_reform = government_reform:antq_murong_frontier_court
+				has_reform = government_reform:antq_tuoba_dai_confederacy
+				has_reform = government_reform:antq_rouran_khaganate
 			}
 		}
 	}
@@ -2417,6 +2501,13 @@ peasants_estate = {
 		trigger = {
 			OR = {
 				has_reform = government_reform:antq_steppe_confederation
+				has_reform = government_reform:antq_xiongnu_dual_wing_command
+				has_reform = government_reform:antq_xiongnu_gift_circuit
+				has_reform = government_reform:antq_xiongnu_southern_frontier_court
+				has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+				has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+				has_reform = government_reform:antq_xiongnu_five_divisions_order
+				has_reform = government_reform:antq_han_zhao_chanyu_court
 			}
 		}
 	}
@@ -2660,6 +2751,20 @@ peasants_estate = {
 				has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
 				has_reform = government_reform:antq_yazdegerd_concordat_court
 				has_reform = government_reform:antq_bahram_great_house_settlement
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_xianbei_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_xianbei_eastern_confederacy
+				has_reform = government_reform:antq_tanshihuai_three_divisions
+				has_reform = government_reform:antq_xianbei_successor_federations
+				has_reform = government_reform:antq_murong_frontier_court
+				has_reform = government_reform:antq_tuoba_dai_confederacy
+				has_reform = government_reform:antq_rouran_khaganate
 			}
 		}
 	}
@@ -3017,6 +3122,13 @@ tribes_estate = {
 		trigger = {
 			OR = {
 				has_reform = government_reform:antq_steppe_confederation
+				has_reform = government_reform:antq_xiongnu_dual_wing_command
+				has_reform = government_reform:antq_xiongnu_gift_circuit
+				has_reform = government_reform:antq_xiongnu_southern_frontier_court
+				has_reform = government_reform:antq_xiongnu_northern_western_confederacy
+				has_reform = government_reform:antq_southern_xiongnu_commandery_settlement
+				has_reform = government_reform:antq_xiongnu_five_divisions_order
+				has_reform = government_reform:antq_han_zhao_chanyu_court
 			}
 		}
 	}
@@ -3260,6 +3372,20 @@ tribes_estate = {
 				has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
 				has_reform = government_reform:antq_yazdegerd_concordat_court
 				has_reform = government_reform:antq_bahram_great_house_settlement
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_xianbei_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_xianbei_eastern_confederacy
+				has_reform = government_reform:antq_tanshihuai_three_divisions
+				has_reform = government_reform:antq_xianbei_successor_federations
+				has_reform = government_reform:antq_murong_frontier_court
+				has_reform = government_reform:antq_tuoba_dai_confederacy
+				has_reform = government_reform:antq_rouran_khaganate
 			}
 		}
 	}

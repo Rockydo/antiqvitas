@@ -1,5 +1,39 @@
 # Historical Assumptions
 
+## 2026-07-27 - Xiongnu and Xianbei political depth follows dated boundaries
+
+The Xiongnu were an outwardly centralized but internally federated,
+multiethnic confederation whose chanyu worked through left/right branches,
+leading lineages, mobile hosts, tribute and gift circulation, frontier
+exchange, and subordinate peoples. These relationships support the expanded
+wing council, but not a recoverable written constitution, fixed modern
+territory, uniform subject status, or later Mongol administrative ranks.
+
+The AD 48 division, southern submission around AD 50, northern displacement by
+AD 91, five-divisions reorganization in AD 216, and Liu Yuan's claim in AD 304
+are represented as dated successor choices. Their exact territorial reach and
+local settlement practice remain variable. Sources weighed: plan sections
+8.8, 9, and 13; `CAH-X`-`CAH-XII`; [Encyclopaedia Iranica,
+Xiongnu](https://www.iranicaonline.org/articles/xiongnu/);
+[Barfield, “The Hsiung-nu Imperial Confederacy”](https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/hsiungnu-imperial-confederacy-organization-and-foreign-policy/FBE1CEAB67EF8D36048F31F7232D3B8F);
+and the [Tamir necropolis study](https://www.cambridge.org/core/journals/antiquity/article/genetic-relatedness-social-status-and-cemetery-organisation-the-xiongnu-tamir-necropolis-mongolia/14B189F4877F59E4F155D2788ABA2A1D).
+[secure broad structures and chronology; contested procedure, territorial
+continuity, and gameplay exclusivity]
+
+Xianbei in AD 1 are modeled as separate eastern-steppe groups, not as
+Tanshihuai's later unitary confederation. The mid-second-century central,
+eastern, and western divisions, the instability after Tanshihuai's death,
+Murong and Tuoba-Dai successor courts, and the Rouran confederation are
+age-routed later developments. The khagan title is not used before the Rouran
+path beginning in AD 402. Sources weighed: `P8.8`; `P9`; `P13`; `CAH-XI`;
+`CAH-XII`; the [Xianbei/Tanshihuai institutional
+study](https://www.sociostudies.org/journal/articles/140617/);
+[Encyclopaedia Iranica, Khagan](https://www.iranicaonline.org/articles/khagan/);
+and the [Rouran organization
+study](https://real.mtak.hu/45766/1/aorient.58.2005.2.3.pdf).
+[secure later chronology and broad confederate organization; contested AD 1
+office detail and exact successor continuity]
+
 ## 2026-07-27 - Han successor paths are bounded institutional models
 
 The Western Han high offices, Nine Ministers, commandery and kingdom
