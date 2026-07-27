@@ -449,6 +449,7 @@ antq_high_empire_administration = {
 		}
 	}
 	global_monthly_control = 0.001
+	unlock_government_reform = antq_arsacid_dual_court_compact
 	requires = antq_estate_registries
 	ai_weight = { add = 80 }
 }
@@ -2228,7 +2229,7 @@ antq_remount_pasture_registers = {
 		}
 	}
 	army_logistics_distance_modifier = 0.10
-	unlock_estate_privilege = antq_iranian_temple_endowment_registers
+	unlock_estate_privilege = antq_iranian_safe_conduct_guarantees
 	unlock_estate_privilege = antq_xiongnu_cauldron_and_oath_custody
 	unlock_estate_privilege = antq_armenian_sanctuary_offering_inventories
 	starting_technology_level = 2
@@ -2249,10 +2250,11 @@ antq_horse_archer_screening = {
 		}
 	}
 	army_maintenance_efficiency = 0.01
-	unlock_estate_privilege = antq_iranian_safe_conduct_guarantees
+	unlock_estate_privilege = antq_iranian_great_house_levy_exemptions
 	unlock_estate_privilege = antq_steppe_seasonal_pasture_circuits
 	unlock_estate_privilege = antq_xiongnu_seasonal_pasture_compacts
 	unlock_estate_privilege = antq_armenian_vineyard_grain_labor_compacts
+	unlock_estate_privilege = antq_sasanian_urban_workshop_delivery_credits
 	starting_technology_level = 3
 	requires = antq_remount_pasture_registers
 	ai_weight = { add = 80 }
@@ -2271,11 +2273,14 @@ antq_scale_armour_workshops = {
 		}
 	}
 	land_morale_modifier = 0.01
-	unlock_estate_privilege = antq_iranian_great_house_levy_exemptions
+	unlock_estate_privilege = antq_iranian_royal_domain_assessment
+	unlock_estate_privilege = antq_iranian_noble_mounted_host_exemptions
 	unlock_estate_privilege = antq_steppe_herding_household_remounts
 	unlock_estate_privilege = antq_xiongnu_pasture_circuit_autonomy
 	unlock_estate_privilege = antq_armenian_artaxata_court_arbitration
 	unlock_estate_privilege = antq_bosporan_steppe_frontier_terms
+	unlock_estate_privilege = antq_sasanian_frontier_service_settlements
+	unlock_government_reform = antq_vologasid_dynastic_settlement
 	starting_technology_level = 4
 	requires = antq_horse_archer_screening
 	ai_weight = { add = 70 }
@@ -2294,11 +2299,11 @@ antq_armoured_retinue_drill = {
 		}
 	}
 	land_morale_modifier = 0.01
-	unlock_estate_privilege = antq_iranian_royal_domain_review
+	unlock_estate_privilege = antq_iranian_subkingdom_tribute_autonomy
 	unlock_estate_privilege = antq_steppe_gift_circulation_obligations
 	unlock_estate_privilege = antq_xiongnu_wing_gift_precedence
 	unlock_estate_privilege = antq_armenian_fortress_dynast_service
-	unlock_government_reform = antq_iranian_royal_domain
+	unlock_estate_privilege = antq_sasanian_cultivating_tax_remissions
 	unlock_government_reform = antq_steppe_gift_court
 	unlock_government_reform = antq_xiongnu_gift_circuit
 	unlock_government_reform = antq_armenian_royal_domain_court
@@ -2320,6 +2325,7 @@ antq_cataphract_reserve_system = {
 		}
 	}
 	discipline = 0.005
+	unlock_estate_privilege = antq_iranian_standing_royal_garrisons
 	starting_technology_level = 4
 	requires = antq_scale_armour_workshops
 	requires = antq_armoured_retinue_drill
@@ -3216,6 +3222,7 @@ antq_emergency_tolls = {
 		}
 	}
 	global_trade_through_owned_territory_efficiency = 0.05
+	unlock_government_reform = antq_shapur_imperial_settlement
 	requires = antq_caravan_protection
 	ai_weight = { add = 80 }
 }
@@ -3251,6 +3258,8 @@ antq_crisis_exchange = {
 		}
 	}
 	global_trade_through_owned_territory_efficiency = 0.05
+	unlock_government_reform = antq_late_arsacid_house_mobilization
+	unlock_government_reform = antq_ardashir_unification_court
 	requires = antq_regional_exchange
 	ai_weight = { add = 80 }
 }
@@ -4085,10 +4094,12 @@ antq_library_catalogues = {
 	cultural_influence_modifier = 0.01
 	unlock_subject_type = antq_satrapy
 	unlock_casus_belli = antq_sasanid_unification
-	unlock_estate_privilege = antq_iranian_mounted_host_compacts
+	unlock_estate_privilege = antq_iranian_temple_endowment_registers
+	unlock_estate_privilege = antq_iranian_caravan_toll_compacts
 	unlock_estate_privilege = antq_steppe_mounted_retinue_quotas
 	unlock_estate_privilege = antq_xiongnu_lineage_surety_exchange
 	unlock_estate_privilege = antq_armenian_fortress_dynast_service_terms
+	unlock_estate_privilege = antq_sasanian_great_house_provincial_service
 	starting_technology_level = 2
 	requires = antq_paper_precursors
 	ai_weight = { add = 90 }
@@ -4108,9 +4119,11 @@ antq_han_classics = {
 	}
 	cultural_influence_modifier = 0.01
 	unlock_estate_privilege = antq_iranian_great_house_counsel
+	unlock_estate_privilege = antq_iranian_mounted_host_compacts
 	unlock_estate_privilege = antq_steppe_wing_council_precedence
 	unlock_estate_privilege = antq_xiongnu_wing_command_precedence
 	unlock_estate_privilege = antq_armenian_royal_seal_custody
+	unlock_estate_privilege = antq_sasanian_palace_seal_command_access
 	starting_technology_level = 2
 	requires = antq_paper_precursors
 	ai_weight = { add = 90 }
@@ -4174,11 +4187,13 @@ antq_legal_commentaries = {
 		}
 	}
 	global_monthly_literacy = 0.005
-	unlock_estate_privilege = antq_iranian_caravan_toll_compacts
+	unlock_estate_privilege = antq_iranian_irrigation_labor_compacts
+	unlock_estate_privilege = antq_iranian_royal_domain_review
 	unlock_estate_privilege = antq_steppe_cauldron_and_rite_custody
 	unlock_estate_privilege = antq_xiongnu_frontier_market_tallies
 	unlock_estate_privilege = antq_armenian_caravan_artisan_safe_conducts
 	unlock_estate_privilege = antq_bosporan_polis_sanctuary_inventories
+	unlock_estate_privilege = antq_sasanian_fire_judicial_endowment_registers
 	unlock_government_reform = antq_iranian_great_house_reform
 	unlock_government_reform = antq_steppe_wing_confederacy
 	unlock_government_reform = antq_xiongnu_dual_wing_command
@@ -4222,9 +4237,11 @@ antq_scholarly_correspondence = {
 		}
 	}
 	global_institution_growth_modifier = 0.10
-	unlock_estate_privilege = antq_iranian_irrigation_labor_compacts
+	unlock_estate_privilege = antq_iranian_great_house_succession_acclamation
+	unlock_estate_privilege = antq_iranian_royal_dynastic_nomination
 	unlock_estate_privilege = antq_xiongnu_remount_quota_compacts
 	unlock_estate_privilege = antq_armenian_fortress_pass_watch_rotations
+	unlock_government_reform = antq_iranian_royal_domain
 	starting_technology_level = 4
 	requires = antq_legal_commentaries
 	ai_weight = { add = 70 }
@@ -4721,6 +4738,7 @@ antq_dominate_learning = {
 		}
 	}
 	global_monthly_literacy = 0.005
+	unlock_government_reform = antq_sasanian_shahrdar_marzban_order
 	requires = antq_bureaucratic_education
 	ai_weight = { add = 80 }
 }
@@ -4866,6 +4884,8 @@ antq_migration_learning = {
 		}
 	}
 	global_monthly_literacy = 0.005
+	unlock_government_reform = antq_yazdegerd_concordat_court
+	unlock_government_reform = antq_bahram_great_house_settlement
 	requires = antq_successor_scholarship
 	ai_weight = { add = 80 }
 }

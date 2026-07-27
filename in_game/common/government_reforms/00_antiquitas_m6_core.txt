@@ -158,7 +158,7 @@ antq_sassanid_centralized_monarchy = {
 		research_speed = 0.15
 	}
 	on_activate = {
-		set_parliament_type = parliament_type:antq_iranian_great_council
+		set_parliament_type = parliament_type:antq_sasanian_royal_council
 	}
 	years = 2
 }
@@ -730,9 +730,11 @@ antq_iranian_great_house_reform = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
-			has_reform = government_reform:antq_sassanid_centralized_monarchy
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
 		}
 	}
 	country_modifier = {
@@ -755,9 +757,11 @@ antq_iranian_royal_domain = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
-			has_reform = government_reform:antq_sassanid_centralized_monarchy
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
 		}
 	}
 	country_modifier = {
@@ -2236,6 +2240,220 @@ antq_jin_reunification_court = {
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
+	}
+	years = 2
+}
+
+antq_vologasid_dynastic_settlement = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_iranian_great_house_reform
+			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.10
+		global_nobles_estate_power = 0.10
+		estate_power_from_cabinet = 0.20
+		country_cabinet_efficiency = 0.025
+		replace_cabinet_member_cost_modifier = -0.03
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_iranian_great_council
+	}
+	years = 2
+}
+
+antq_arsacid_dual_court_compact = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_iranian_great_house_reform
+			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.08
+		global_nobles_estate_power = 0.13
+		global_burghers_estate_power = 0.06
+		nobles_estate_power_from_cabinet = 0.22
+		set_cabinet_member_cost_modifier = -0.04
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_iranian_great_council
+	}
+	years = 2
+}
+
+antq_late_arsacid_house_mobilization = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_iranian_great_house_reform
+			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.16
+		global_crown_estate_power = 0.06
+		global_levy_size_modifier = 0.06
+		nobles_estate_power_from_cabinet = 0.28
+		replace_cabinet_member_cost_modifier = 0.12
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_iranian_great_council
+	}
+	years = 2
+}
+
+antq_ardashir_unification_court = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.20
+		global_nobles_estate_power = -0.03
+		crown_estate_power_from_cabinet = 0.32
+		global_monthly_control = 0.001
+		replace_cabinet_member_cost_modifier = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_sasanian_royal_council
+	}
+	years = 2
+}
+
+antq_shapur_imperial_settlement = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.16
+		global_burghers_estate_power = 0.08
+		estate_power_from_cabinet = 0.24
+		global_production_efficiency = 0.03
+		set_cabinet_member_cost_modifier = -0.06
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_sasanian_royal_council
+	}
+	years = 2
+}
+
+antq_sasanian_shahrdar_marzban_order = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.13
+		global_nobles_estate_power = 0.12
+		nobles_estate_power_from_cabinet = 0.24
+		global_levy_size_modifier = 0.045
+		replace_cabinet_member_cost_modifier = 0.06
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_sasanian_royal_council
+	}
+	years = 2
+}
+
+antq_yazdegerd_concordat_court = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.15
+		global_clergy_estate_power = 0.09
+		global_nobles_estate_power = 0.07
+		crown_estate_power_from_cabinet = 0.26
+		stability_cost_efficiency = -0.03
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_sasanian_royal_council
+	}
+	years = 2
+}
+
+antq_bahram_great_house_settlement = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.14
+		global_crown_estate_power = 0.11
+		nobles_estate_power_from_cabinet = 0.25
+		global_levy_size_modifier = 0.035
+		replace_cabinet_member_cost_modifier = 0.05
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_sasanian_royal_council
 	}
 	years = 2
 }

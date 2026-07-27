@@ -222,24 +222,66 @@ PROFILES = (
         ),
     ),
     Profile(
-        "iranian", "antq_iranian_great_council", "Iranian Great Council",
-        "The king negotiates host service, regional authority, road security, and dynastic precedence with great houses and royal officers.",
-        ("antq_parthian_king_of_kings", "antq_parthian_subkingdom", "antq_indo_scythian_kingship", "antq_sassanid_centralized_monarchy", "antq_iranian_great_house_reform", "antq_iranian_royal_domain"),
+        "iranian", "antq_iranian_great_council", "Arsacid Great-House Council",
+        "The Arsacid king of kings negotiates succession, subking tribute, mounted host service, royal domains, road security, and dynastic precedence with great houses and royal officers.",
+        (
+            "antq_parthian_king_of_kings", "antq_parthian_subkingdom",
+            "antq_indo_scythian_kingship", "antq_iranian_great_house_reform",
+            "antq_iranian_royal_domain", "antq_vologasid_dynastic_settlement",
+            "antq_arsacid_dual_court_compact", "antq_late_arsacid_house_mobilization",
+        ),
         ("nobles_estate", "clergy_estate", "burghers_estate"),
         "iranian_council_atlas.png", "4986d7ce7a8951994a1fb9dd3679b7cd7e89425c442960c9ce411847942972c3",
-        "P8.2;P13;CAH-XI;OCD", "secure",
-        "This shared engine surface covers related Iranian court negotiations while preserving polity-specific laws and privileges.",
+        "P8.2;P9;P13;CAH-XI;OCD;IRAN-ADMIN;IRAN-ARSACID", "contested",
+        "Great-house power, subkings, host service, and dynastic negotiation are secure; the council is a bounded gameplay arena and does not assert a fixed constitutional Mahistan.",
         (
             a("noble_host_musters", "Noble-Host Musters", "Record the mounted followings and equipment promised by royal and regional houses.", "mil", NOBLES),
             a("royal_road_couriers", "Royal-Road Couriers", "Protect relay mounts, sealed messages, and road stations between court and sub-kingdoms.", "dip", LOGISTICS),
             a("satrapal_accounts", "Regional Accounts", "Reconcile silver, gifts, levies, and retained local revenues without inventing uniform provinces.", "adm", ADMIN),
             a("caravan_protection", "Caravan Safe-Conducts", "Coordinate escorts, watering points, and compensation rules on long-distance routes.", "dip", TRADE),
             a("dynastic_arbitration", "Dynastic Arbitration", "Use hostages, oaths, marriages, and precedence rulings to contain disputes among houses.", "adm", PRESTIGE),
+            a("dynastic_succession_dockets", "Dynastic Succession Dockets", "Record royal nominations, Arsacid lineage claims, great-house acclamation, hostages, and the obligations attached to a succession settlement.", "dip", PRESTIGE),
+            a("subkingdom_tribute_returns", "Subkingdom Tribute Returns", "Review gifts, coin, mounted service, court attendance, and retained local authority among subordinate kings without pretending they form uniform provinces.", "adm", SUBJECTS),
+            a("royal_domain_accounts", "Royal-Domain Accounts", "Inventory selected royal lands, herds, workshops, stores, and revenues while distinguishing them from great-house and subking possessions.", "adm", CONTROL),
+            a("mounted_host_registers", "Mounted-Host Registers", "Compare promised cataphracts, horse archers, remounts, armor, baggage, and campaigning seasons before a royal muster.", "mil", MIL),
+            a("river_caravan_customs", "River and Caravan Customs", "Coordinate weights, sealed cargo, ferries, river landings, escorts, and compensation along Mesopotamian and Iranian exchange routes.", "dip", TRADE),
+            a("hostage_oath_registers", "Hostage and Oath Registers", "Preserve witnessed guarantees, dynastic hostages, marriage bonds, precedence, and restitution terms used to stabilize negotiated settlements.", "adm", ASSIZE),
         ),
         (
             m("host_contribution", "Noble-Host Contribution", "Set the scale and season of great-house mounted service.", "Great-House Precedence Claim", "Leading houses demand that court precedence reflect service, lineage, and negotiated autonomy.", "nobles_estate", MIL, NOBLES),
             m("road_protection", "Royal-Road Protection", "Fund relays and escorts on routes binding the royal court to regional powers.", "Fire-Custodian Endowment", "Ritual custodians request secure revenues for court and local sacred observance.", "clergy_estate", LOGISTICS, CLERGY),
             m("silver_reckoning", "Satrapal Silver Reckoning", "Review retained revenue, royal gifts, and coin remittances without asserting a uniform tax code.", "Caravan Safe-Conduct Petition", "Merchant households seek enforceable passage and compensation after losses on protected roads.", "burghers_estate", ADMIN, TRADE),
+            m("succession_acclamation", "Arsacid Succession Acclamation", "Weigh royal nomination, Arsacid lineage, great-house support, military command, and hostage guarantees in a disputed succession.", "Great-House Acclamation Claim", "Leading houses seek a witnessed voice in recognizing the next king while accepting responsibility for the settlement they endorse.", "nobles_estate", PRESTIGE, NOBLES),
+            m("subking_tribute", "Subking Tribute Settlement", "Set bounded tribute, attendance, host service, coin, gifts, and arbitration duties for subordinate kings.", "Subking Autonomy Petition", "Regional dynasts seek recognition of local law, cult, and succession in return for stated royal obligations.", "nobles_estate", SUBJECTS, NOBLES),
+            m("royal_domain_assessment", "Royal-Domain Assessment", "Review selected royal estates, herds, stores, workshops, and conveyance obligations without claiming a uniform empire-wide cadastre.", "Cultivator Liability Petition", "Royal-domain communities seek measured dues, seasonal labor limits, and witnessed correction after crop or herd loss.", "peasants_estate", CONTROL, PEASANTS),
+            m("mounted_host_quota", "Mounted-Host Quota", "Allocate cataphracts, horse archers, remounts, armor, baggage, and campaign duration among royal and great-house contingents.", "Mounted-House Exemption Claim", "Great houses seek fiscal and local exemptions proportional to the contingents, remounts, and command they provide.", "nobles_estate", MIL, NOBLES),
+            m("river_caravan_customs", "River and Caravan Customs Review", "Set weights, sealed cargo procedures, ferries, river landings, escort liability, and compensation on protected routes.", "Merchant Measure Petition", "Caravan and urban houses seek stable measures and predictable tolls in return for registered cargo and route intelligence.", "burghers_estate", TRADE, TRADE),
+            m("hostage_oath_settlement", "Hostage and Oath Settlement", "Review hostages, marriage bonds, witnessed oaths, restitution, and precedence after conflict among dynastic houses.", "Sanctuary Witness Petition", "Cult custodians seek recognized custody of oaths and deposits without claiming a uniform empire-wide religious jurisdiction.", "clergy_estate", ASSIZE, CLERGY),
+        ),
+    ),
+    Profile(
+        "sasanian", "antq_sasanian_royal_council", "Sasanian Royal Council",
+        "The Sasanian king of kings coordinates palace command, provincial revenue, frontier officers, the royal post, and judicial-religious petitions through a more directive court while still bargaining with great houses and local authorities.",
+        (
+            "antq_sassanid_centralized_monarchy", "antq_ardashir_unification_court",
+            "antq_shapur_imperial_settlement", "antq_sasanian_shahrdar_marzban_order",
+            "antq_yazdegerd_concordat_court", "antq_bahram_great_house_settlement",
+        ),
+        ("nobles_estate", "clergy_estate", "burghers_estate"),
+        "sasanian_royal_council_atlas.png", "d5a17faa93bc77d2595f1525473c4b2ad730f6599ad47be57dec1643f00489ce",
+        "P8.2;P9;P13;CAH-XII;IRAN-ADMIN;IRAN-FRAMADAR;IRAN-JUDICIAL", "secure",
+        "The profile uses securely attested Sasanian court, revenue, frontier, post, and judicial-religious functions; exact office titles and competencies varied across the dynasty and are not frozen into one recovered constitution.",
+        (
+            a("grand_command_office", "Grand Command Office", "Authenticate royal instructions, senior appointments, court precedence, military commissions, and the circulation of sealed commands.", "adm", ADMIN),
+            a("provincial_revenue_registers", "Provincial Revenue Registers", "Compare land, household, produce, coin, exemption, and arrears returns while allowing for regional variation and incomplete assessment.", "adm", CONTROL),
+            a("marzban_frontier_returns", "Marzban Frontier Returns", "Review fortified zones, mounted forces, garrison stores, intelligence, tribute, and diplomatic obligations along exposed frontiers.", "mil", MIL),
+            a("royal_post_dispatches", "Royal Post Dispatches", "Coordinate road stations, remounts, couriers, sealed intelligence, official travel, and emergency supply across the imperial network.", "dip", LOGISTICS),
+            a("judicial_religious_petitions", "Judicial and Religious Petitions", "Review appeals involving royal justice, local custom, endowments, fire establishments, family law, and conflicts of jurisdiction.", "adm", ASSIZE),
+        ),
+        (
+            m("provincial_assessment", "Provincial Assessment Review", "Set a bounded cycle for reconciling land, household, produce, coin, exemption, and arrears returns with regional officers.", "Great-House Assessment Petition", "Provincial houses seek witnessed limits and inherited exemptions while accepting audited service and remittance obligations.", "nobles_estate", CONTROL, NOBLES),
+            m("frontier_command", "Frontier Command Settlement", "Allocate fortified commands, cavalry, stores, intelligence, diplomacy, and relief duties among frontier officers and regional powers.", "Garrison Community Petition", "Frontier communities seek market access, restitution, and measured transport duties in return for watch and supply service.", "burghers_estate", MIL, TRADE),
+            m("judicial_religious_settlement", "Judicial and Religious Settlement", "Coordinate royal adjudication, local custom, family law, endowment disputes, and religious establishments without collapsing their distinct jurisdictions.", "Fire and Judicial Endowment Petition", "Religious and learned officers seek protected stores and hearings while accepting inventories and royal arbitration.", "clergy_estate", ASSIZE, CLERGY),
         ),
     ),
     Profile(
@@ -802,6 +844,10 @@ COUNCIL_DYNAMICS: dict[str, tuple[str, tuple[tuple[str, str], ...]]] = {
         "0.05",
         (("nobles_estate", "0.30"), ("clergy_estate", "0.10"), ("burghers_estate", "-0.05")),
     ),
+    "sasanian": (
+        "0.12",
+        (("nobles_estate", "0.22"), ("clergy_estate", "0.18"), ("burghers_estate", "0.08")),
+    ),
     "civic": (
         "0.10",
         (("burghers_estate", "0.25"), ("nobles_estate", "0.10"), ("peasants_estate", "0.15")),
@@ -1157,6 +1203,21 @@ ART_SOURCE_OVERRIDES.update({
         "household_registration_returns",
         "salt_iron_accounts",
         "grand_herald_guest_registers",
+    ))
+})
+ART_SOURCE_OVERRIDES.update({
+    f"antq_iranian_{slug}": (
+        "arsacid_state_offices_ii_atlas.png",
+        "48c033de6c0ecf548d271007dd1fac131af723a5a3324e26e3955d2e98875330",
+        cell,
+    )
+    for cell, slug in enumerate((
+        "dynastic_succession_dockets",
+        "subkingdom_tribute_returns",
+        "royal_domain_accounts",
+        "mounted_host_registers",
+        "river_caravan_customs",
+        "hostage_oath_registers",
     ))
 })
 

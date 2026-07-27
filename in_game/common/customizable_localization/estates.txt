@@ -35,9 +35,11 @@
 				has_reform = government_reform:antq_parthian_king_of_kings
 				has_reform = government_reform:antq_parthian_subkingdom
 				has_reform = government_reform:antq_indo_scythian_kingship
-				has_reform = government_reform:antq_sassanid_centralized_monarchy
 				has_reform = government_reform:antq_iranian_great_house_reform
 				has_reform = government_reform:antq_iranian_royal_domain
+				has_reform = government_reform:antq_vologasid_dynastic_settlement
+				has_reform = government_reform:antq_arsacid_dual_court_compact
+				has_reform = government_reform:antq_late_arsacid_house_mobilization
 			}
 		}
 	}
@@ -349,6 +351,20 @@
 	}
 
 	text = {
+		localization_key = antq_estate_sasanian_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_sassanid_centralized_monarchy
+				has_reform = government_reform:antq_ardashir_unification_court
+				has_reform = government_reform:antq_shapur_imperial_settlement
+				has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+				has_reform = government_reform:antq_yazdegerd_concordat_court
+				has_reform = government_reform:antq_bahram_great_house_settlement
+			}
+		}
+	}
+
+	text = {
 		localization_key = crown_estate_holy_order
 		trigger = {
 			has_reform = government_reform:military_order_reform
@@ -463,9 +479,11 @@ nobles_estate = {
 				has_reform = government_reform:antq_parthian_king_of_kings
 				has_reform = government_reform:antq_parthian_subkingdom
 				has_reform = government_reform:antq_indo_scythian_kingship
-				has_reform = government_reform:antq_sassanid_centralized_monarchy
 				has_reform = government_reform:antq_iranian_great_house_reform
 				has_reform = government_reform:antq_iranian_royal_domain
+				has_reform = government_reform:antq_vologasid_dynastic_settlement
+				has_reform = government_reform:antq_arsacid_dual_court_compact
+				has_reform = government_reform:antq_late_arsacid_house_mobilization
 			}
 		}
 	}
@@ -772,6 +790,20 @@ nobles_estate = {
 				has_reform = government_reform:antq_provincial_inspectorate_commands
 				has_reform = government_reform:antq_three_kingdoms_chancellery
 				has_reform = government_reform:antq_jin_reunification_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_sasanian_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_sassanid_centralized_monarchy
+				has_reform = government_reform:antq_ardashir_unification_court
+				has_reform = government_reform:antq_shapur_imperial_settlement
+				has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+				has_reform = government_reform:antq_yazdegerd_concordat_court
+				has_reform = government_reform:antq_bahram_great_house_settlement
 			}
 		}
 	}
@@ -1136,9 +1168,11 @@ burghers_estate = {
 				has_reform = government_reform:antq_parthian_king_of_kings
 				has_reform = government_reform:antq_parthian_subkingdom
 				has_reform = government_reform:antq_indo_scythian_kingship
-				has_reform = government_reform:antq_sassanid_centralized_monarchy
 				has_reform = government_reform:antq_iranian_great_house_reform
 				has_reform = government_reform:antq_iranian_royal_domain
+				has_reform = government_reform:antq_vologasid_dynastic_settlement
+				has_reform = government_reform:antq_arsacid_dual_court_compact
+				has_reform = government_reform:antq_late_arsacid_house_mobilization
 			}
 		}
 	}
@@ -1450,6 +1484,20 @@ burghers_estate = {
 	}
 
 	text = {
+		localization_key = antq_estate_sasanian_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_sassanid_centralized_monarchy
+				has_reform = government_reform:antq_ardashir_unification_court
+				has_reform = government_reform:antq_shapur_imperial_settlement
+				has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+				has_reform = government_reform:antq_yazdegerd_concordat_court
+				has_reform = government_reform:antq_bahram_great_house_settlement
+			}
+		}
+	}
+
+	text = {
 		localization_key = burghers_estate_greek
 		trigger = {
 			OR = {
@@ -1699,9 +1747,11 @@ clergy_estate = {
 				has_reform = government_reform:antq_parthian_king_of_kings
 				has_reform = government_reform:antq_parthian_subkingdom
 				has_reform = government_reform:antq_indo_scythian_kingship
-				has_reform = government_reform:antq_sassanid_centralized_monarchy
 				has_reform = government_reform:antq_iranian_great_house_reform
 				has_reform = government_reform:antq_iranian_royal_domain
+				has_reform = government_reform:antq_vologasid_dynastic_settlement
+				has_reform = government_reform:antq_arsacid_dual_court_compact
+				has_reform = government_reform:antq_late_arsacid_house_mobilization
 			}
 		}
 	}
@@ -2013,6 +2063,20 @@ clergy_estate = {
 	}
 
 	text = {
+		localization_key = antq_estate_sasanian_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_sassanid_centralized_monarchy
+				has_reform = government_reform:antq_ardashir_unification_court
+				has_reform = government_reform:antq_shapur_imperial_settlement
+				has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+				has_reform = government_reform:antq_yazdegerd_concordat_court
+				has_reform = government_reform:antq_bahram_great_house_settlement
+			}
+		}
+	}
+
+	text = {
 		localization_key = clergy_estate_greek
 		trigger = {
 			OR = {
@@ -2271,9 +2335,11 @@ peasants_estate = {
 				has_reform = government_reform:antq_parthian_king_of_kings
 				has_reform = government_reform:antq_parthian_subkingdom
 				has_reform = government_reform:antq_indo_scythian_kingship
-				has_reform = government_reform:antq_sassanid_centralized_monarchy
 				has_reform = government_reform:antq_iranian_great_house_reform
 				has_reform = government_reform:antq_iranian_royal_domain
+				has_reform = government_reform:antq_vologasid_dynastic_settlement
+				has_reform = government_reform:antq_arsacid_dual_court_compact
+				has_reform = government_reform:antq_late_arsacid_house_mobilization
 			}
 		}
 	}
@@ -2585,6 +2651,20 @@ peasants_estate = {
 	}
 
 	text = {
+		localization_key = antq_estate_sasanian_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_sassanid_centralized_monarchy
+				has_reform = government_reform:antq_ardashir_unification_court
+				has_reform = government_reform:antq_shapur_imperial_settlement
+				has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+				has_reform = government_reform:antq_yazdegerd_concordat_court
+				has_reform = government_reform:antq_bahram_great_house_settlement
+			}
+		}
+	}
+
+	text = {
 		localization_key = peasants_estate_greek
 		trigger = {
 			OR = {
@@ -2855,9 +2935,11 @@ tribes_estate = {
 				has_reform = government_reform:antq_parthian_king_of_kings
 				has_reform = government_reform:antq_parthian_subkingdom
 				has_reform = government_reform:antq_indo_scythian_kingship
-				has_reform = government_reform:antq_sassanid_centralized_monarchy
 				has_reform = government_reform:antq_iranian_great_house_reform
 				has_reform = government_reform:antq_iranian_royal_domain
+				has_reform = government_reform:antq_vologasid_dynastic_settlement
+				has_reform = government_reform:antq_arsacid_dual_court_compact
+				has_reform = government_reform:antq_late_arsacid_house_mobilization
 			}
 		}
 	}
@@ -3164,6 +3246,20 @@ tribes_estate = {
 				has_reform = government_reform:antq_provincial_inspectorate_commands
 				has_reform = government_reform:antq_three_kingdoms_chancellery
 				has_reform = government_reform:antq_jin_reunification_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_sasanian_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_sassanid_centralized_monarchy
+				has_reform = government_reform:antq_ardashir_unification_court
+				has_reform = government_reform:antq_shapur_imperial_settlement
+				has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+				has_reform = government_reform:antq_yazdegerd_concordat_court
+				has_reform = government_reform:antq_bahram_great_house_settlement
 			}
 		}
 	}

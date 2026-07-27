@@ -1,5 +1,31 @@
 # Progress
 
+## 2026-07-27 - Arsacid and Sasanian Iran receive separate political games
+
+- Expanded the Arsacid Great-House Council from five to eleven programmes and
+  from three to nine issues/agendas. The added surfaces cover succession,
+  subking tribute, royal domains, mounted hosts, river/caravan customs, and
+  hostage/oath settlements without treating the disputed Mahistan as a fixed
+  recoverable parliament.
+- Added a separate Sasanian Royal Council with five programmes, three
+  issues/agendas, six social-order identities, and six profile privileges.
+  Palace command, provincial revenue, marzban frontier returns, the royal post,
+  and judicial-religious petitions replace the old timeless Iranian shell.
+- Added eight age-routed successor reforms: three Arsacid paths from Vologases
+  through the late dynastic wars, and five Sasanian paths from Ardashir's AD 224
+  refoundation through Bahram V. Six exact-Arsacid privileges form three
+  exclusive institutional choices.
+- Generated and reviewed four 3x2 archaeological atlases. Twelve privilege
+  icons and twelve political icons have direct BC7 chains; the global
+  nine-surface ledger now audits 1,186 direct assets.
+- Installed breadth is now 32 councils, 178 programmes, 114 issues, 114
+  agendas, 114 political contracts, 280 privileges, 227 laws, and 836
+  ancient-system unlocks. All 292 opening profiles remain researchable.
+- The focused Iranian regression passes; `make validate` passes 106/106
+  commands. Paired vanilla/mod smoke reaches responsive rendered menus with
+  zero new or mod-unique `error.log` lines. Evidence:
+  `docs/playtests/S2_IRANIAN_POLITICAL_DEPTH_20260727.md`.
+
 ## 2026-07-27 - Han receives distinct Western, Eastern, and successor political games
 
 - Expanded the Western Han Court Conference from five to eleven state-office

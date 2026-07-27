@@ -5213,3 +5213,31 @@ textiles, mounted service, cultivation, and Roman patronage justify distinct
 mechanics without reconstructing exact offices or a uniform customs code.
 Sources: `P8.1`; `P11`; `P13`; `OCD`; `PLE`; `LBD-EME`. [secure opening
 court; contested descent and institutional detail]
+
+## 2026-07-27 - Arsacid and Sasanian political depth uses bounded institutions
+
+Arsacid great-house power, subordinate kings, regional authority, mounted
+service, dynastic rivalry, and multiple royal centers are secure enough to
+support a distinct negotiated political game. The exact existence, membership,
+and procedure of a permanent “Mahistan” remain disputed, so no fixed senate or
+electoral college is asserted. Succession acclamation, domain review, tribute
+returns, and oath/hostage records are conservative gameplay interfaces for
+attested relationships rather than claims for surviving uniform archives.
+Sources weighed: `P8.2`; `P9`; `P13`; `CAH-XI`; [Encyclopaedia Iranica,
+Arsacids II](https://www.iranicaonline.org/articles/arsacids-ii/);
+[Iran before Islam](https://www.iranicaonline.org/articles/iran-ii1-pre-islamic-times/);
+and the [administration index](https://www.iranicaonline.org/articles/administration-in-iran-index/).
+[secure political relationships; contested constitutional reconstruction]
+
+Sasanian palace command, revenue administration, frontier ranks, royal
+communications, religious establishments, and judicial petition are securely
+attested as broad functions. Their titles, hierarchy, and competence shifted
+across the dynasty; `wuzurg framadar`, shahrdar, and marzban evidence therefore
+supports a changing political profile, not one static AD 224 bureaucracy.
+Yazdegerd I's “concordat” and Bahram V's great-house settlement are gameplay
+labels for reign-specific bargaining, not names of recovered constitutional
+documents. Sources weighed: `P8.2`; `P9`; `P11`; `P13`; `CAH-XII`;
+[Encyclopaedia Iranica, Sasanian administration](https://www.iranicaonline.org/articles/administration-in-iran-iii-crossref/);
+[`FRAMADAR`](https://www.iranicaonline.org/articles/framadar/); and
+[Parthian and Sasanian judicial systems](https://www.iranicaonline.org/articles/judicial-and-legal-systems-ii-parthian-and-sasanian-judicial-systems/).
+[secure functional distinctions; contested office chronology]

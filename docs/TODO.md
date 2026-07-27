@@ -5,7 +5,7 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,138-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
+- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,186-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
   - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
 ## Second manual playtest remediation — 2026-07-26 (resume here)
@@ -44,7 +44,7 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 106 reforms and 268 privileges
+  thin outside the first replacement tranches: 114 reforms and 280 privileges
   serve 292 opening polities. The legal layer now has 227 ancient groups,
   including 182 profile laws with 584 total options, a 26-option dated
   development layer, and 12 country-specific exceptions.
@@ -141,8 +141,8 @@ and focused runtime probe all pass.
   - [ ] Replace required gameplay breadth at both definition and
     unlock/reference layers. Preserve only locally proven engine adapters, and
     guarantee that their names, descriptions, icons, and effects cannot surface.
-    Existing namespaced ancient content remains active (256 privileges, 227 laws,
-    99 reforms).
+    Existing namespaced ancient content remains active (280 privileges, 227 laws,
+    114 reforms).
     - [x] Supply the first deep council/state-office replacement tranche:
       nine reform-driven council profiles, 45 profile-locked administrative
       programmes, 27 issues, 27 agendas, 54 outcome/concession modifiers, and
@@ -156,13 +156,13 @@ and focused runtime probe all pass.
       type names remain polity-aware rather than being flattened into one
       generic label.
     - [x] Replace generic estate labels and shallow privilege breadth with
-      twenty-one reform-driven order identities and 126 additional
+      thirty-two reform-driven order identities and 192 additional
       profile-gated grants.
-      All six engine order slots now render polity-aware names; the 126 grants
+      All six engine order slots now render polity-aware names; the 192 grants
       use 30+ effect packages, mutually exclusive alternatives where
-      appropriate, explicit power/tax/control tradeoffs, and 126 unique direct
-      historical-material illustrations. Together with 24 exact-country
-      grants, the project now has 196/196
+      appropriate, explicit power/tax/control tradeoffs, and 192 unique direct
+      historical-material illustrations. Together with 42 exact-country
+      grants, the project now has 234/234
       directly illustrated ancient privileges.
     - [ ] Complete the remaining S2-P4 replacement breadth: profile-specific
       major-country subdivisions, additional reform paths, and later-century
@@ -253,6 +253,19 @@ and focused runtime probe all pass.
         ancient-system unlocks. The nine-surface global art ledger now
         contains 1,162 direct chains; all 292 opening profiles remain
         researchable.
+      - [x] Deepen Iranian government beyond a shared timeless court. Arsacid
+        reforms now retain an eleven-programme, nine-debate great-house council
+        centered on succession, subkings, mounted hosts, royal domains, routes,
+        and hostage/oath settlement. The Sasanian refoundation activates a
+        separate five-programme, three-debate royal council, six social orders,
+        and six profile privileges covering palace command, revenue, marzbans,
+        the royal post, and judicial-religious petitions. Eight age-correct
+        successor reforms run from Vologases through Bahram V; six exact-
+        Arsacid privileges form three exclusive choices without asserting a
+        fixed Mahistan. Installed breadth is now 32 councils, 178 programmes,
+        114 issues, 114 agendas, 114 political contracts, 280 privileges, and
+        836 ancient-system unlocks. The nine-surface art ledger contains 1,186
+        direct chains; all 292 opening profiles remain researchable.
       - [x] Add the first dated legal-development layer: two options for every
         one of the 13 legal profiles, 26 total, spanning AD 25-382. All gates
         use `AntqDate`, each option has a distinct three-effect package and an
@@ -615,6 +628,11 @@ and focused runtime probe all pass.
     Dominate as two static endpoints: Flavian, Antonine, Severan, Tetrarchic,
     Constantinian, and post-395 court paths unlock in their appropriate age and
     route to either the Roman Senate or Imperial Consistory as appropriate.
+  - [x] Split the Arsacid and Sasanian arcs. Three dated Arsacid successors
+    preserve negotiated great-house/subking government; five Sasanian
+    successors model the AD 224 refoundation, Shapur's settlement, later
+    provincial/frontier ranks, and the AD 399/420 courts. Each reform activates
+    the correct council and has one unique age-correct research unlock.
   - [ ] Subdivide the nine-family floor further for major countries and
     high-priority regional constitutions; connect later-century successor paths
     to their dated historical transitions.
@@ -679,6 +697,11 @@ and focused runtime probe all pass.
     Consistory with five programmes and three debates/agendas. The permanent
     focused validator checks council switching, successor-age unlocks,
     exact-tag privilege choice pairs, and all direct art.
+  - [x] Deepen Han and Iran's major-state panels. Western and Eastern Han now
+    use distinct Court Conference and Secretariat systems. Arsacid and Sasanian
+    reforms likewise switch between a Great-House Council and a Royal Council;
+    both pairs have dedicated programmes, debates/agendas, order identities,
+    privilege choices, successor paths, and focused permanent regressions.
   - [ ] Expand major profiles beyond the nine-family regional floor and test
     focused Roman, Han, Iranian, civic, and assembly panels without requiring
     long playthroughs. Add further country-specific appointment logic only

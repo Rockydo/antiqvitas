@@ -498,6 +498,7 @@ S2_ESTATE_ADVANCE_PROFILES: dict[str, tuple[str, ...]] = {
     "han": ("han_east_asian",),
     "late_han": ("han_east_asian",),
     "iranian": ("iranian_steppe",),
+    "sasanian": ("iranian_steppe",),
     "civic": ("hellenic",),
     "gana": ("indic",),
     "steppe": ("iranian_steppe",),

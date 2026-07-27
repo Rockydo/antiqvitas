@@ -664,6 +664,78 @@ SUCCESSOR_REFORMS: tuple[
         "Western Jin reunification in 280 is secure; the reform is a bounded successor path and does not imply lasting stability or project later northern and southern institutions backward.",
         "3",
     ),
+    (
+        "antq_vologasid_dynastic_settlement", "iranian", "monarchy",
+        "Vologasid Dynastic Settlement",
+        "Stabilize Arsacid rule through dynastic recognition, great-house bargaining, subking obligations, royal foundations, and renewed command of the Iranian and Mesopotamian routes.",
+        "global_crown_estate_power=0.10|global_nobles_estate_power=0.10|estate_power_from_cabinet=0.20|country_cabinet_efficiency=0.025|replace_cabinet_member_cost_modifier=-0.03",
+        "P8.2;P9;P13;CAH-XI;IRAN-ARSACID", "secure",
+        "Vologases I's accession in AD 51 and long consolidation are secure; the path abstracts a durable settlement without inventing a single promulgated constitution.",
+        "0",
+    ),
+    (
+        "antq_arsacid_dual_court_compact", "iranian", "monarchy",
+        "Arsacid Regional-Court Compact",
+        "Coordinate seasonal and regional courts, subkings, great-house retinues, caravan routes, and Mesopotamian-Iranian revenue without forcing them into uniform provinces.",
+        "global_crown_estate_power=0.08|global_nobles_estate_power=0.13|global_burghers_estate_power=0.06|nobles_estate_power_from_cabinet=0.22|set_cabinet_member_cost_modifier=-0.04",
+        "P8.2;P9;P13;CAH-XI;IRAN-ADMIN;IRAN-ARSACID", "contested",
+        "Multiple royal centers and regional bargaining are secure features; the compact is a gameplay path and not a claim for a formal two-capital constitution.",
+        "1",
+    ),
+    (
+        "antq_late_arsacid_house_mobilization", "iranian", "monarchy",
+        "Late Arsacid House Mobilization",
+        "Meet intensified Roman war and dynastic rivalry through larger great-house hosts, fortified corridors, emergency tribute, hostage guarantees, and contested royal leadership.",
+        "global_nobles_estate_power=0.16|global_crown_estate_power=0.06|global_levy_size_modifier=0.06|nobles_estate_power_from_cabinet=0.28|replace_cabinet_member_cost_modifier=0.12",
+        "P8.2;P9;P13;CAH-XII;IRAN-ARSACID", "secure",
+        "Late Arsacid dynastic conflict, Roman pressure, and dependence on regional military power are secure; the reform does not make collapse inevitable.",
+        "2",
+    ),
+    (
+        "antq_ardashir_unification_court", "sasanian", "monarchy",
+        "Ardashir's Unification Court",
+        "Replace Arsacid dynastic predominance through direct royal conquest, palace command, provincial submission, dynastic foundations, and a new Sasanian language of kingship.",
+        "global_crown_estate_power=0.20|global_nobles_estate_power=-0.03|crown_estate_power_from_cabinet=0.32|global_monthly_control=0.001|replace_cabinet_member_cost_modifier=0.10",
+        "P8.2;P9;P13;CAH-XII;IRAN-ADMIN", "secure",
+        "Ardashir I's victory in AD 224 and Sasanian refoundation are secure; the path does not imply instant administrative uniformity across the conquered realm.",
+        "2",
+    ),
+    (
+        "antq_shapur_imperial_settlement", "sasanian", "monarchy",
+        "Shapur's Imperial Settlement",
+        "Coordinate royal command, conquered populations, cities, frontier war, captives and specialists, provincial revenues, and a confidently imperial court.",
+        "global_crown_estate_power=0.16|global_burghers_estate_power=0.08|estate_power_from_cabinet=0.24|global_production_efficiency=0.03|set_cabinet_member_cost_modifier=-0.06",
+        "P8.2;P9;P13;CAH-XII;IRAN-ADMIN", "secure",
+        "Shapur I's campaigns, foundations, and imperial claims are secure; the settlement abstracts uneven incorporation and avoids assigning every later office to his reign.",
+        "2",
+    ),
+    (
+        "antq_sasanian_shahrdar_marzban_order", "sasanian", "monarchy",
+        "Shahrdar and Marzban Order",
+        "Balance royal princes, provincial lords, frontier commanders, fortified districts, mounted forces, tax returns, and the royal post in a ranked but negotiated imperial order.",
+        "global_crown_estate_power=0.13|global_nobles_estate_power=0.12|nobles_estate_power_from_cabinet=0.24|global_levy_size_modifier=0.045|replace_cabinet_member_cost_modifier=0.06",
+        "P8.2;P9;P13;CAH-XII;IRAN-ADMIN;IRAN-FRAMADAR", "contested",
+        "Sasanian provincial and frontier ranks are securely attested, but titles, hierarchy, and competencies changed; this is a bounded fourth-century development path.",
+        "3",
+    ),
+    (
+        "antq_yazdegerd_concordat_court", "sasanian", "monarchy",
+        "Yazdegerd's Concordat Court",
+        "Use royal protection, judicial petition, elite bargaining, and supervised religious establishments to manage a plural empire during renewed great-house tension.",
+        "global_crown_estate_power=0.15|global_clergy_estate_power=0.09|global_nobles_estate_power=0.07|crown_estate_power_from_cabinet=0.26|stability_cost_efficiency=-0.03",
+        "P8.2;P9;P11;P13;CAH-XII;IRAN-JUDICIAL", "secure",
+        "Yazdegerd I's reign from AD 399 and its changing religious policies are secure; concordat denotes a gameplay settlement, not a single surviving treaty or uniform toleration.",
+        "5",
+    ),
+    (
+        "antq_bahram_great_house_settlement", "sasanian", "monarchy",
+        "Bahram's Great-House Settlement",
+        "Reconcile a contested accession through aristocratic recognition, court ceremony, frontier command, hunting and martial prestige, and negotiated provincial service.",
+        "global_nobles_estate_power=0.14|global_crown_estate_power=0.11|nobles_estate_power_from_cabinet=0.25|global_levy_size_modifier=0.035|replace_cabinet_member_cost_modifier=0.05",
+        "P8.2;P9;P13;CAH-XII;IRAN-ADMIN", "secure",
+        "Bahram V's accession in AD 420 and reliance on elite settlement are secure in broad outline; literary court motifs are not treated as literal administrative records.",
+        "5",
+    ),
 )
 
 
@@ -686,8 +758,9 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
     "late_han": (),
     "iranian": (
         "antq_parthian_king_of_kings", "antq_parthian_subkingdom",
-        "antq_indo_scythian_kingship", "antq_sassanid_centralized_monarchy",
+        "antq_indo_scythian_kingship",
     ),
+    "sasanian": ("antq_sassanid_centralized_monarchy",),
     "civic": ("antq_indo_greek_kingship", "antq_settled_town_cluster"),
     "gana": ("antq_indian_ganasangha",),
     "steppe": (),
@@ -723,6 +796,7 @@ PROFILE_PARLIAMENTS = {
     "han": "antq_han_court_conference",
     "late_han": "antq_eastern_han_imperial_secretariat",
     "iranian": "antq_iranian_great_council",
+    "sasanian": "antq_sasanian_royal_council",
     "civic": "antq_civic_assembly",
     "gana": "antq_gana_assembly",
     "steppe": "antq_confederation_council",
@@ -1258,7 +1332,7 @@ def load_power_data() -> PowerData:
     path_rows = reform_path_rows()
     alternative_profiles = [row[1] for row in path_rows]
     two_path_profiles = {
-            "roman", "han", "iranian", "civic", "gana", "steppe", "tribal",
+            "roman", "han", "civic", "gana", "steppe", "tribal",
             "sacral", "royal", "xiongnu", "goguryeo", "kushite", "lankan",
             "armenian", "nabataean", "himyarite", "satavahana",
             "catuvellaunian", "marcomannic", "sabaean", "mauretanian",
@@ -1271,10 +1345,12 @@ def load_power_data() -> PowerData:
         or alternative_profiles.count("late_roman") != 3
         or alternative_profiles.count("han") != 3
         or alternative_profiles.count("late_han") != 6
+        or alternative_profiles.count("iranian") != 5
+        or alternative_profiles.count("sasanian") != 5
         or any(alternative_profiles.count(profile) != 2 for profile in two_path_profiles)
     ):
         failures.append(
-            "reform paths must provide two regional alternatives plus deeper Roman and Han successor arcs"
+            "reform paths must provide two regional alternatives plus deeper Roman, Han, Arsacid, and Sasanian successor arcs"
         )
     for reform, (modifier_text, _source, confidence, note) in POLITICAL_CONTRACTS.items():
         try:

@@ -136,9 +136,11 @@ antq_iranian_great_council = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
-			has_reform = government_reform:antq_sassanid_centralized_monarchy
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
 		}
 	}
 	allow = {
@@ -146,9 +148,11 @@ antq_iranian_great_council = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
-			has_reform = government_reform:antq_sassanid_centralized_monarchy
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
 		}
 	}
 	modifier = {
@@ -160,6 +164,40 @@ antq_iranian_great_council = {
 		nobles_estate_agenda_impact = 0.30
 		clergy_estate_agenda_impact = 0.10
 		burghers_estate_agenda_impact = -0.05
+	}
+}
+
+antq_sasanian_royal_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		clergy_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.12
+		nobles_estate_agenda_impact = 0.22
+		clergy_estate_agenda_impact = 0.18
+		burghers_estate_agenda_impact = 0.08
 	}
 }
 

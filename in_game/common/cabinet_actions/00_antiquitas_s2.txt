@@ -584,9 +584,11 @@ antq_iranian_noble_host_musters = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
-			has_reform = government_reform:antq_sassanid_centralized_monarchy
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
 		}
 	}
 	allow_multiple = no
@@ -603,9 +605,11 @@ antq_iranian_royal_road_couriers = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
-			has_reform = government_reform:antq_sassanid_centralized_monarchy
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
 		}
 	}
 	allow_multiple = no
@@ -622,9 +626,11 @@ antq_iranian_satrapal_accounts = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
-			has_reform = government_reform:antq_sassanid_centralized_monarchy
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
 		}
 	}
 	allow_multiple = no
@@ -641,9 +647,11 @@ antq_iranian_caravan_protection = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
-			has_reform = government_reform:antq_sassanid_centralized_monarchy
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
 		}
 	}
 	allow_multiple = no
@@ -660,15 +668,238 @@ antq_iranian_dynastic_arbitration = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
-			has_reform = government_reform:antq_sassanid_centralized_monarchy
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
 		}
 	}
 	allow_multiple = no
 	country_modifier = {
 		monthly_prestige = 0.05
 		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_iranian_dynastic_succession_dockets = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_iranian_great_house_reform
+			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_prestige = 0.05
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_iranian_subkingdom_tribute_returns = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_iranian_great_house_reform
+			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		subject_loyalty = 5
+		monthly_prestige = 0.04
+	}
+}
+
+antq_iranian_royal_domain_accounts = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_iranian_great_house_reform
+			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_towards_centralization = societal_value_minor_monthly_move
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_iranian_mounted_host_registers = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_iranian_great_house_reform
+			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.01
+	}
+}
+
+antq_iranian_river_caravan_customs = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_iranian_great_house_reform
+			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_trade_through_owned_territory_efficiency = 0.05
+		global_burghers_estate_power = 0.025
+	}
+}
+
+antq_iranian_hostage_oath_registers = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_iranian_great_house_reform
+			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		stability_cost_efficiency = -0.03
+		global_monthly_control = 0.002
+	}
+}
+
+antq_sasanian_grand_command_office = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		country_cabinet_efficiency = 0.025
+		global_monthly_control = 0.0025
+	}
+}
+
+antq_sasanian_provincial_revenue_registers = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		monthly_towards_centralization = societal_value_minor_monthly_move
+		country_cabinet_efficiency = 0.02
+	}
+}
+
+antq_sasanian_marzban_frontier_returns = {
+	ability = mil
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.01
+	}
+}
+
+antq_sasanian_royal_post_dispatches = {
+	ability = dip
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		global_supply_limit_modifier = 0.05
+		global_road_building_time = -0.05
+	}
+}
+
+antq_sasanian_judicial_religious_petitions = {
+	ability = adm
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	allow_multiple = no
+	country_modifier = {
+		stability_cost_efficiency = -0.03
+		global_monthly_control = 0.002
 	}
 }
 

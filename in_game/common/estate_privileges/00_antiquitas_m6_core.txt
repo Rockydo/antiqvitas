@@ -696,9 +696,11 @@ antq_iranian_great_house_counsel = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
-			has_reform = government_reform:antq_sassanid_centralized_monarchy
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
 		}
 	}
 	allow = {
@@ -721,9 +723,11 @@ antq_iranian_mounted_host_compacts = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
-			has_reform = government_reform:antq_sassanid_centralized_monarchy
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
 		}
 	}
 	allow = {
@@ -747,9 +751,11 @@ antq_iranian_temple_endowment_registers = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
-			has_reform = government_reform:antq_sassanid_centralized_monarchy
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
 		}
 	}
 	country_modifier = {
@@ -768,9 +774,11 @@ antq_iranian_caravan_toll_compacts = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
-			has_reform = government_reform:antq_sassanid_centralized_monarchy
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
 		}
 	}
 	allow = {
@@ -793,9 +801,11 @@ antq_iranian_safe_conduct_guarantees = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
-			has_reform = government_reform:antq_sassanid_centralized_monarchy
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
 		}
 	}
 	allow = {
@@ -818,9 +828,11 @@ antq_iranian_irrigation_labor_compacts = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
-			has_reform = government_reform:antq_sassanid_centralized_monarchy
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
+			has_reform = government_reform:antq_vologasid_dynastic_settlement
+			has_reform = government_reform:antq_arsacid_dual_court_compact
+			has_reform = government_reform:antq_late_arsacid_house_mobilization
 		}
 	}
 	country_modifier = {
@@ -4125,6 +4137,142 @@ antq_late_han_garrison_market_compacts = {
 	}
 }
 
+antq_sasanian_palace_seal_command_access = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_sasanian_great_house_provincial_service }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.09
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.0975
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.03
+	}
+}
+
+antq_sasanian_great_house_provincial_service = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_sasanian_palace_seal_command_access }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.09
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.05
+		land_morale_modifier = 0.0125
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		nobles_estate_max_tax = -0.04
+	}
+}
+
+antq_sasanian_fire_judicial_endowment_registers = {
+	estate = clergy_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	country_modifier = {
+		global_clergy_estate_power = 0.09
+		clergy_estate_target_satisfaction = medium_privilege_target_satisfaction
+		research_speed_modifier = 0.0225
+		stability_cost_efficiency = -0.05
+		clergy_estate_max_tax = -0.05
+	}
+}
+
+antq_sasanian_urban_workshop_delivery_credits = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	country_modifier = {
+		global_burghers_estate_power = 0.09
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.045
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.03
+	}
+}
+
+antq_sasanian_cultivating_tax_remissions = {
+	estate = peasants_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	country_modifier = {
+		global_peasants_estate_power = 0.09
+		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_production_efficiency = 0.0275
+		country_cabinet_efficiency = 0.015
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_sasanian_frontier_service_settlements = {
+	estate = tribes_estate
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+			has_reform = government_reform:antq_ardashir_unification_court
+			has_reform = government_reform:antq_shapur_imperial_settlement
+			has_reform = government_reform:antq_sasanian_shahrdar_marzban_order
+			has_reform = government_reform:antq_yazdegerd_concordat_court
+			has_reform = government_reform:antq_bahram_great_house_settlement
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.09
+		tribes_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_pop_food_consumption = -0.009
+		global_levy_size_modifier = 0.025
+		monthly_towards_free_subjects = societal_value_minor_monthly_move
+		global_monthly_control = -0.0005
+	}
+}
+
 antq_roman_senatorial_fiscal_review = {
 	estate = nobles_estate
 	potential = {
@@ -4842,5 +4990,125 @@ antq_han_local_market_workshop_compacts = {
 		global_trade_through_owned_territory_efficiency = 0.055
 		global_production_efficiency = 0.03
 		burghers_estate_max_tax = -0.065
+	}
+}
+
+antq_iranian_great_house_succession_acclamation = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAH
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_iranian_royal_dynastic_nomination }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.14
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		stability_cost_efficiency = -0.03
+		country_cabinet_efficiency = 0.025
+		nobles_estate_max_tax = -0.065
+	}
+}
+
+antq_iranian_royal_dynastic_nomination = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAH
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_iranian_great_house_succession_acclamation }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.09
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_monthly_control = 0.001
+		country_cabinet_efficiency = 0.055
+		nobles_estate_max_tax = -0.035
+	}
+}
+
+antq_iranian_subkingdom_tribute_autonomy = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAH
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_iranian_royal_domain_assessment }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.13
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.04
+		global_trade_through_owned_territory_efficiency = 0.035
+		global_monthly_control = -0.001
+	}
+}
+
+antq_iranian_royal_domain_assessment = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAH
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_iranian_subkingdom_tribute_autonomy }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.09
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_monthly_control = 0.0012
+		global_production_efficiency = 0.035
+		nobles_estate_max_tax = -0.035
+	}
+}
+
+antq_iranian_noble_mounted_host_exemptions = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAH
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_iranian_standing_royal_garrisons }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.15
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.065
+		land_morale_modifier = 0.025
+		nobles_estate_max_tax = -0.085
+	}
+}
+
+antq_iranian_standing_royal_garrisons = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XAH
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_iranian_noble_mounted_host_exemptions }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_nobles_estate_power = 0.08
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.04
+		global_monthly_control = 0.001
+		nobles_estate_max_tax = -0.03
 	}
 }

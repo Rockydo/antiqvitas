@@ -3729,3 +3729,27 @@ The profile contract remains atomic: opening reform, two research alternatives,
 council, programmes, issues/agendas, order labels, privileges, localization,
 and two pinned atlases move together. Shared Roman patronage remains a
 diplomatic constraint; it is not a shared constitution.
+
+## 2026-07-27 - Arsacid and Sasanian Iran do not share one timeless council
+
+The existing Iranian profile is narrowed to Arsacid and closely related
+subking government. It models dynastic recognition, great-house bargaining,
+subking tribute, mounted hosts, royal domains, protected routes, and witnessed
+hostage/oath settlements. “Arsacid Great-House Council” is the player-facing
+engine adapter; it deliberately does not present the debated Mahistan as a
+fixed constitutional parliament with known membership or procedure.
+
+The Sasanian refoundation activates a separate profile. Its Royal Council,
+programmes, order identities, and privileges emphasize palace command,
+provincial revenue, frontier officers, the royal post, and overlapping
+judicial-religious petition. Office names and competence are kept functional
+where the evidence changes across reigns rather than back-projecting a late
+administrative chart onto Ardashir.
+
+Successor reforms are bounded to the playable chronology: Vologases, the later
+Arsacid regional court and house mobilization, Ardashir, Shapur, a
+fourth-century shahrdar/marzban order, Yazdegerd I, and Bahram V. Khosrow I's
+sixth-century reforms and the later four-spahbed arrangement are excluded
+because they fall after 4 September 476. Each transition uses the existing
+research DAG and council-activation contract rather than an unverified scripted
+constitutional-switch command.

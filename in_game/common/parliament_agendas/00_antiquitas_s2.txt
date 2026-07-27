@@ -352,6 +352,123 @@ antq_agenda_iranian_silver_reckoning = {
 	chance = 10
 }
 
+antq_agenda_iranian_succession_acclamation = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_iranian_great_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_iranian_succession_acclamation_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_iranian_subking_tribute = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_iranian_great_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_iranian_subking_tribute_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_iranian_royal_domain_assessment = {
+	type = country
+	estate = peasants_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_iranian_great_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_iranian_royal_domain_assessment_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_iranian_mounted_host_quota = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_iranian_great_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_iranian_mounted_host_quota_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_iranian_river_caravan_customs = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_iranian_great_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_iranian_river_caravan_customs_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_iranian_hostage_oath_settlement = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_iranian_great_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_iranian_hostage_oath_settlement_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_sasanian_provincial_assessment = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_sasanian_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_sasanian_provincial_assessment_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_sasanian_frontier_command = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_sasanian_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_sasanian_frontier_command_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_sasanian_judicial_religious_settlement = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_sasanian_royal_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_sasanian_judicial_religious_settlement_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
 antq_agenda_civic_harbor_revision = {
 	type = country
 	estate = burghers_estate
