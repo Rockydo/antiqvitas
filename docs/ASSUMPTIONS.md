@@ -1,5 +1,35 @@
 # Historical Assumptions
 
+## 2026-07-27 - Tacitus differentiates four Germanic profiles but is not an AD 1 constitution
+
+Tacitus's *Germania* was written around AD 98 and is a literary, moralizing
+account, not a neutral administrative survey of the campaign start. Its general
+descriptions of armed assemblies, elite agenda preparation, compensation
+hearings, retinues, gift exchange, and settlement are therefore used as
+bounded political mechanics rather than copied as one timeless pan-Germanic
+constitution. Andrew Young's institutional reading supports the broad trend
+toward more regular assemblies, more durable retinues, and greater noble
+agenda control between Caesar and Tacitus, but does not recover exact AD 1
+offices.
+
+The four narrower distinctions are retained where Tacitus is unusually
+specific. Batavi are described as former Chatti living on the Rhine island and
+providing concentrated military service in place of ordinary tribute. Chatti
+are associated with selected leaders, preparation, infantry, tools and
+baggage, plus vowed front-rank warriors. Semnones gather delegates at a sacred
+grove, but the reported hundred cantons are not literalized. Cheruscan
+coalition and retinue mechanics combine Tacitus's general institutional frame
+with the securely later frontier-coalition record; no permanent federation or
+AD 1 king is invented.
+
+Sources weighed: plan sections 8.7, 11, and 13; `CAH-XI`;
+[Tacitus, *Germania* §§11-15, 29-31, 36, and 39](https://www.poetryintranslation.com/PITBR/Latin/TacitusGermania.php);
+[Andrew Young, “From Caesar to Tacitus”](https://ideas.repec.org/a/kap/pubcho/v164y2015i3p357-378.html);
+and the [Oxford Handbook of the Archaeology of Roman Germany](https://academic.oup.com/edited-volume/28292).
+
+[secure named distinctions in Tacitus; contested AD 1 procedure, territorial
+reach, formal exclusivity, and numerical effects]
+
 ## 2026-07-27 - Xiongnu and Xianbei political depth follows dated boundaries
 
 The Xiongnu were an outwardly centralized but internally federated,

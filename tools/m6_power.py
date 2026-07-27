@@ -155,6 +155,30 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "P8.7;P11;P13;CAH-XI;TAC-GER", "secure",
         "Maroboduus's organized kingdom rests on a royal retinue and negotiated allied kindreds without importing later Germanic institutions.",
     ),
+    "antq_cheruscan_kindred_assembly": (
+        "global_tribes_estate_power=0.12|global_nobles_estate_power=0.08|"
+        "tribes_estate_power_from_cabinet=0.24|replace_cabinet_member_cost_modifier=0.06",
+        "P8.7;P11;P13;CAH-XI;TAC-GER;YOUNG-GERMANIA", "contested",
+        "Cheruscan authority is modeled through armed kindred deliberation and negotiated coalition leadership without inventing a fixed constitution for AD 1.",
+    ),
+    "antq_chattian_host_order": (
+        "global_nobles_estate_power=0.11|global_tribes_estate_power=0.08|"
+        "nobles_estate_power_from_cabinet=0.25|global_levy_size_modifier=0.025",
+        "P8.7;P11;P13;CAH-XI;TAC-GER;YOUNG-GERMANIA", "contested",
+        "Chattian political weight is attached to selected leaders, disciplined infantry, and prepared host service while later office structures remain excluded.",
+    ),
+    "antq_batavian_rhine_compact": (
+        "global_nobles_estate_power=0.10|global_tribes_estate_power=0.06|"
+        "nobles_estate_power_from_cabinet=0.22|country_cabinet_efficiency=0.025",
+        "P8.1;P8.7;P11;P13;CAH-XI;TAC-GER;YOUNG-GERMANIA", "contested",
+        "The Batavian compact joins island councils and concentrated auxiliary service to Rome without projecting the later revolt or a modern treaty constitution backward.",
+    ),
+    "antq_semnonian_sacred_confederacy": (
+        "global_clergy_estate_power=0.12|global_tribes_estate_power=0.10|"
+        "tribes_estate_power_from_cabinet=0.22|replace_cabinet_member_cost_modifier=0.08",
+        "P8.7;P11;P13;CAH-XI;TAC-GER;YOUNG-GERMANIA", "contested",
+        "Delegated gathering and sacred-grove custody frame Semnonian authority while Tacitus's later rhetoric and exact district count are treated cautiously.",
+    ),
     "antq_sabaean_marib_kingship": (
         "global_peasants_estate_power=0.10|global_burghers_estate_power=0.08|"
         "estate_power_from_cabinet=0.23|replace_cabinet_member_cost_modifier=0.07",
@@ -548,6 +572,38 @@ ALTERNATIVE_REFORMS: tuple[tuple[str, str, str, str, str, str, str, str, str], .
      "Entrust route security, pack service, textile measures, water, escorts, and compensation to caravan and city houses.",
      "global_burghers_estate_power=0.20|global_nobles_estate_power=0.07|burghers_estate_power_from_cabinet=0.30|set_cabinet_member_cost_modifier=-0.05",
      "P8.1;P11;P13;OCD;PLE;LBD-EME", "contested", "Caravan and urban exchange support the branch without implying a surviving uniform customs code or permanent merchant constitution."),
+    ("antq_cheruscan_coalition_leadership", "cheruscan", "tribe", "Cheruscan Coalition Leadership",
+     "Coordinate kindred delegates, frontier intelligence, compensation settlements, and seasonal musters under a recognized coalition leader.",
+     "global_tribes_estate_power=0.16|global_nobles_estate_power=0.10|tribes_estate_power_from_cabinet=0.30|global_levy_size_modifier=0.025|replace_cabinet_member_cost_modifier=0.08",
+     "P8.7;P11;P13;CAH-XI;TAC-GER;YOUNG-GERMANIA", "contested", "Coalition leadership fits the later Cheruscan political record, but no permanent AD 1 confederate office or uniform territorial federation is claimed."),
+    ("antq_cheruscan_retinue_kingship", "cheruscan", "tribe", "Cheruscan Retinue Kingship",
+     "Concentrate gifts, hostages, scouts, and repeated frontier service around a prestigious leader and his armed following.",
+     "global_nobles_estate_power=0.18|global_tribes_estate_power=0.08|nobles_estate_power_from_cabinet=0.32|country_cabinet_efficiency=0.02|replace_cabinet_member_cost_modifier=0.14",
+     "P8.7;P11;P13;CAH-XI;TAC-GER;YOUNG-GERMANIA", "contested", "Retinue consolidation is securely attested as a Germanic tendency, but this branch does not invent hereditary kingship or medieval vassalage."),
+    ("antq_chattian_elder_war_council", "chattian", "tribe", "Chattian Elder War Council",
+     "Let proven elders prepare campaigns, hear compensation disputes, and allocate tools, baggage, provisions, and forest routes.",
+     "global_tribes_estate_power=0.13|global_nobles_estate_power=0.12|tribes_estate_power_from_cabinet=0.26|country_cabinet_efficiency=0.025|replace_cabinet_member_cost_modifier=0.07",
+     "P8.7;P11;P13;CAH-XI;TAC-GER;YOUNG-GERMANIA", "contested", "The path translates Tacitus's emphasis on preparation and selected leadership into bounded gameplay, not a recovered Chattian senate."),
+    ("antq_chattian_chosen_warrior_host", "chattian", "tribe", "Chattian Chosen-Warrior Host",
+     "Elevate oath-bound front-rank warriors and disciplined infantry as the political core of a repeatedly mustered host.",
+     "global_nobles_estate_power=0.18|global_tribes_estate_power=0.10|nobles_estate_power_from_cabinet=0.32|global_levy_size_modifier=0.045|replace_cabinet_member_cost_modifier=0.12",
+     "P8.7;P11;P13;CAH-XI;TAC-GER", "secure", "Tacitus securely describes vowed and selected Chattian warriors, while his moralizing contrast and the institution's exact earlier form remain bounded."),
+    ("antq_batavian_auxiliary_treaty", "batavian", "tribe", "Batavian Auxiliary Treaty",
+     "Make concentrated cavalry, swimming river assault, Roman stipends, and elite hostages the basis of a negotiated allied service order.",
+     "global_nobles_estate_power=0.16|global_crown_estate_power=0.06|nobles_estate_power_from_cabinet=0.30|global_levy_size_modifier=0.035|country_cabinet_efficiency=0.025",
+     "P8.1;P8.7;P11;P13;CAH-XI;TAC-GER", "secure", "Batavian exemption from ordinary tribute in return for concentrated military service is secure, but treaty clauses and institutional continuity are not reconstructed."),
+    ("antq_batavian_island_assembly", "batavian", "tribe", "Batavian Island Assembly",
+     "Give island communities greater authority over floodbank labor, ferry passage, pasture returns, musters, and compensation hearings.",
+     "global_tribes_estate_power=0.16|global_peasants_estate_power=0.08|tribes_estate_power_from_cabinet=0.28|global_monthly_control=0.0005|replace_cabinet_member_cost_modifier=0.06",
+     "P8.7;P11;P13;CAH-XI;TAC-GER;YOUNG-GERMANIA", "contested", "The assembly is a conservative local adapter for a Rhine-island community and does not claim a surviving Batavian civic constitution."),
+    ("antq_semnonian_grove_delegation", "semnonian", "tribe", "Semnonian Grove Delegation",
+     "Bind affiliated districts through escorted delegates, witnessed oaths, ritual peace, compensation, and seasonal sacred gathering.",
+     "global_clergy_estate_power=0.18|global_tribes_estate_power=0.12|clergy_estate_power_from_cabinet=0.28|stability_cost_efficiency=-0.03|replace_cabinet_member_cost_modifier=0.10",
+     "P8.7;P11;P13;CAH-XI;TAC-GER", "secure", "Tacitus securely reports delegated sacred-grove gathering; its constitutional reach and exact AD 1 procedure remain unrecoverable."),
+    ("antq_semnonian_district_muster", "semnonian", "tribe", "Semnonian District Muster",
+     "Distribute seasonal host, provision, amber-route, and affiliate guarantees among recognized districts and kindreds.",
+     "global_tribes_estate_power=0.18|global_nobles_estate_power=0.08|tribes_estate_power_from_cabinet=0.31|global_levy_size_modifier=0.03|replace_cabinet_member_cost_modifier=0.08",
+     "P8.7;P11;P13;CAH-XI;TAC-GER", "contested", "The district branch uses Tacitus's confederate scale without literalizing his rhetorical hundred-canton claim or inventing fixed quotas."),
 )
 
 SUCCESSOR_REFORMS: tuple[
@@ -876,6 +932,10 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
     "satavahana": ("antq_satavahana_deccan_kingship",),
     "catuvellaunian": ("antq_catuvellaunian_oppidum_kingship",),
     "marcomannic": ("antq_marcomannic_bohemian_kingship",),
+    "cheruscan": ("antq_cheruscan_kindred_assembly",),
+    "chattian": ("antq_chattian_host_order",),
+    "batavian": ("antq_batavian_rhine_compact",),
+    "semnonian": ("antq_semnonian_sacred_confederacy",),
     "sabaean": ("antq_sabaean_marib_kingship",),
     "mauretanian": ("antq_mauretanian_client_kingship",),
     "judean": ("antq_herodian_judean_ethnarchy",),
@@ -911,6 +971,10 @@ PROFILE_PARLIAMENTS = {
     "satavahana": "antq_satavahana_royal_council",
     "catuvellaunian": "antq_catuvellaunian_royal_council",
     "marcomannic": "antq_marcomannic_royal_council",
+    "cheruscan": "antq_cheruscan_coalition_assembly",
+    "chattian": "antq_chattian_host_council",
+    "batavian": "antq_batavian_island_council",
+    "semnonian": "antq_semnonian_grove_assembly",
     "sabaean": "antq_sabaean_royal_council",
     "mauretanian": "antq_mauretanian_royal_council",
     "judean": "antq_judean_ethnarchic_council",
@@ -1417,7 +1481,7 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    expected_contract_count = 36 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    expected_contract_count = 40 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -1436,6 +1500,7 @@ def load_power_data() -> PowerData:
             "catuvellaunian", "marcomannic", "sabaean", "mauretanian",
             "judean", "cappadocian", "thracian", "bosporan",
             "galilean", "batanean", "commagenean", "emesan",
+            "cheruscan", "chattian", "batavian", "semnonian",
     } - {"roman", "han"}
     if (
         len(path_rows) != len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
@@ -1450,7 +1515,7 @@ def load_power_data() -> PowerData:
         or any(alternative_profiles.count(profile) != 2 for profile in two_path_profiles)
     ):
         failures.append(
-            "reform paths must provide two regional alternatives plus deeper Roman, Han, Arsacid, Sasanian, Xiongnu, and Xianbei successor arcs"
+            "reform paths must provide two regional alternatives plus the documented deeper imperial and steppe successor arcs"
         )
     for reform, (modifier_text, _source, confidence, note) in POLITICAL_CONTRACTS.items():
         try:
@@ -1874,6 +1939,50 @@ antq_marcomannic_bohemian_kingship = {
 	years = 2
 }
 
+antq_cheruscan_kindred_assembly = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.07
+		country_cabinet_efficiency = 0.02
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_chattian_host_order = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_nobles_estate_power = 0.07
+		global_levy_size_modifier = 0.03
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_batavian_rhine_compact = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_nobles_estate_power = 0.06
+		country_cabinet_efficiency = 0.025
+		research_speed = 0.08
+	}
+	years = 2
+}
+
+antq_semnonian_sacred_confederacy = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_clergy_estate_power = 0.08
+		stability_cost_efficiency = -0.03
+		research_speed = 0.07
+	}
+	years = 2
+}
+
 antq_sabaean_marib_kingship = {
 	major = yes
 	government = monarchy
@@ -2135,6 +2244,14 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_catuvellaunian_oppidum_kingship_desc", "Tasciovanus's kingship coordinating dynastic mints, oppida, retinues, sacred places, cultivation, and Channel exchange."),
         ("antq_marcomannic_bohemian_kingship", "Marcomannic Bohemian Kingship"),
         ("antq_marcomannic_bohemian_kingship_desc", "Maroboduus's organized kingdom balancing the royal retinue, allied kindreds, settlement stores, exchange, and Roman-frontier diplomacy."),
+        ("antq_cheruscan_kindred_assembly", "Cheruscan Kindred Assembly"),
+        ("antq_cheruscan_kindred_assembly_desc", "An armed kindred assembly coordinating compensation, frontier intelligence, seasonal musters, and negotiated coalition leadership."),
+        ("antq_chattian_host_order", "Chattian Host Order"),
+        ("antq_chattian_host_order_desc", "A prepared infantry host whose selected leaders, vowed warriors, provisions, tools, and forest routes structure political authority."),
+        ("antq_batavian_rhine_compact", "Batavian Rhine Compact"),
+        ("antq_batavian_rhine_compact_desc", "A Rhine-island political order balancing local assembly, river service, and concentrated auxiliary obligations to Rome."),
+        ("antq_semnonian_sacred_confederacy", "Semnonian Sacred Confederacy"),
+        ("antq_semnonian_sacred_confederacy_desc", "A confederate order whose delegated gathering, district musters, compensation, and sacred-grove custody bind affiliated kindreds."),
         ("antq_sabaean_marib_kingship", "Sabaean Ma'rib Kingship"),
         ("antq_sabaean_marib_kingship_desc", "An anonymous Sabaean court grounded in Ma'rib waterworks, sanctuaries, incense routes, highland cultivation, and regional service."),
         ("antq_mauretanian_client_kingship", "Mauretanian Client Kingship"),

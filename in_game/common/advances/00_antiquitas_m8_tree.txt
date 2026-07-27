@@ -65,6 +65,10 @@ antq_provincial_census = {
 	unlock_government_reform = antq_satavahana_deccan_kingship
 	unlock_government_reform = antq_catuvellaunian_oppidum_kingship
 	unlock_government_reform = antq_marcomannic_bohemian_kingship
+	unlock_government_reform = antq_cheruscan_kindred_assembly
+	unlock_government_reform = antq_chattian_host_order
+	unlock_government_reform = antq_batavian_rhine_compact
+	unlock_government_reform = antq_semnonian_sacred_confederacy
 	unlock_government_reform = antq_sabaean_marib_kingship
 	unlock_government_reform = antq_mauretanian_client_kingship
 	unlock_government_reform = antq_herodian_judean_ethnarchy
@@ -1465,6 +1469,10 @@ antq_field_engineering = {
 	unlock_unit = antq_germanic_javelins
 	unlock_casus_belli = antq_loot_raid
 	unlock_estate_privilege = antq_marcomannic_retinue_command_terms
+	unlock_estate_privilege = antq_cheruscan_retinue_service_terms
+	unlock_estate_privilege = antq_chattian_prepared_foot_host_terms
+	unlock_estate_privilege = antq_batavian_auxiliary_service_terms
+	unlock_estate_privilege = antq_semnonian_retinue_muster_terms
 	starting_technology_level = 2
 	requires = antq_auxiliary_service
 	ai_weight = { add = 90 }
@@ -1485,6 +1493,7 @@ antq_frontier_patrols = {
 	unlock_unit = antq_germanic_horse
 	unlock_unit = antq_germanic_bodyguards
 	unlock_estate_privilege = antq_tribal_household_retinue_gifts
+	unlock_estate_privilege = antq_cheruscan_grove_oath_custody
 	starting_technology_level = 2
 	requires = antq_auxiliary_service
 	ai_weight = { add = 90 }
@@ -1527,6 +1536,7 @@ antq_siegecraft_basics = {
 	}
 	army_maintenance_efficiency = 0.01
 	unlock_estate_privilege = antq_tribal_seasonal_cattle_compacts
+	unlock_estate_privilege = antq_cheruscan_forest_community_compacts
 	starting_technology_level = 3
 	requires = antq_field_engineering
 	ai_weight = { add = 80 }
@@ -1566,7 +1576,10 @@ antq_principate_warfare = {
 	}
 	army_maintenance_efficiency = 0.01
 	unlock_estate_privilege = antq_marcomannic_iron_amber_safe_conducts
-	unlock_estate_privilege = antq_cheruscan_retinue_gift_precedence
+	unlock_estate_privilege = antq_cheruscan_settlement_provision_limits
+	unlock_estate_privilege = antq_chattian_smith_tool_exchange
+	unlock_estate_privilege = antq_batavian_ferry_horse_safe_conducts
+	unlock_estate_privilege = antq_semnonian_elbe_amber_safe_conducts
 	starting_technology_level = 3
 	requires = antq_frontier_patrols
 	ai_weight = { add = 80 }
@@ -6566,7 +6579,10 @@ antq_household_retinue_feasts = {
 	global_population_capacity_modifier = 0.02
 	unlock_estate_privilege = antq_tribal_elder_assembly_hearing
 	unlock_estate_privilege = antq_marcomannic_royal_gift_custody
-	unlock_estate_privilege = antq_cheruscan_coalition_assembly_hearing
+	unlock_estate_privilege = antq_cheruscan_kindred_assembly_guarantees
+	unlock_estate_privilege = antq_chattian_chosen_leader_hearings
+	unlock_estate_privilege = antq_batavian_island_council_hearings
+	unlock_estate_privilege = antq_semnonian_district_delegation_hearings
 	starting_technology_level = 2
 	requires = antq_civic_associations
 	ai_weight = { add = 90 }
@@ -6585,8 +6601,16 @@ antq_sacred_grove_custody = {
 	}
 	global_pop_promotion_speed_modifier = 0.025
 	unlock_estate_privilege = antq_marcomannic_sacred_oath_stores
+	unlock_estate_privilege = antq_cheruscan_frontier_broker_safe_conducts
+	unlock_estate_privilege = antq_chattian_warrior_vow_custody
+	unlock_estate_privilege = antq_batavian_river_oath_custody
+	unlock_estate_privilege = antq_semnonian_sacred_grove_custody
 	unlock_government_reform = antq_elder_moot_kingship
 	unlock_government_reform = antq_marcomannic_retinue_court
+	unlock_government_reform = antq_cheruscan_coalition_leadership
+	unlock_government_reform = antq_chattian_elder_war_council
+	unlock_government_reform = antq_batavian_auxiliary_treaty
+	unlock_government_reform = antq_semnonian_grove_delegation
 	starting_technology_level = 3
 	requires = antq_household_retinue_feasts
 	ai_weight = { add = 80 }
@@ -6605,6 +6629,10 @@ antq_wergild_arbitration = {
 	}
 	global_pop_assimilation_speed_modifier = 0.025
 	unlock_estate_privilege = antq_marcomannic_allied_kindred_muster_terms
+	unlock_estate_privilege = antq_cheruscan_retinue_gift_precedence
+	unlock_estate_privilege = antq_chattian_forest_district_musters
+	unlock_estate_privilege = antq_batavian_allied_rhine_guarantees
+	unlock_estate_privilege = antq_semnonian_suebian_affiliate_guarantees
 	starting_technology_level = 4
 	requires = antq_sacred_grove_custody
 	ai_weight = { add = 70 }
@@ -6623,7 +6651,15 @@ antq_fosterage_and_hostages = {
 	}
 	global_pop_assimilation_speed_modifier = 0.025
 	unlock_estate_privilege = antq_marcomannic_settlement_provision_compacts
+	unlock_estate_privilege = antq_cheruscan_coalition_assembly_hearing
+	unlock_estate_privilege = antq_chattian_host_provision_rotations
+	unlock_estate_privilege = antq_batavian_floodbank_labor_rotations
+	unlock_estate_privilege = antq_semnonian_assembly_provision_rotations
 	unlock_government_reform = antq_marcomannic_allied_host_compact
+	unlock_government_reform = antq_cheruscan_retinue_kingship
+	unlock_government_reform = antq_chattian_chosen_warrior_host
+	unlock_government_reform = antq_batavian_island_assembly
+	unlock_government_reform = antq_semnonian_district_muster
 	starting_technology_level = 4
 	requires = antq_sacred_grove_custody
 	ai_weight = { add = 70 }

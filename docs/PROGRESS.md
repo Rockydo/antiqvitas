@@ -1,5 +1,28 @@
 # Progress
 
+## 2026-07-27 - Cherusci, Chatti, Batavi, and Semnones receive distinct political games
+
+- Replaced the shared tribal-kingdom and elder-council shell for four
+  evidence-rich western Germanic peoples. Each now has a separate opening
+  reform, council, five programmes, three issues/agendas, six social-order
+  identities, and six profile privileges.
+- Added eight Age-I reform alternatives: Cheruscan coalition/retinue,
+  Chattian elder-host/chosen-warrior, Batavian auxiliary/island-assembly, and
+  Semnonian grove-delegation/district-muster paths. All twelve reforms activate
+  the correct local council and have unique research unlocks.
+- Generated and reviewed eight 3x2 archaeological still-life atlases. The 24
+  new political icons and 24 new privilege icons have complete direct BC7
+  chains; the global nine-surface ledger now audits 1,258 direct assets.
+- Installed breadth is now 37 councils, 209 programmes, 135 issues, 135
+  agendas, 137 political contracts, 316 privileges, 227 laws, and 895
+  ancient-system unlocks. All 292 opening profiles remain researchable.
+- `tools/s2_germanic_politics_depth.py` permanently verifies profile breadth,
+  opening assignments, council activation, Age-I research routing, privilege
+  gates, and direct art. `gmake validate` passes 108/108 commands; paired
+  vanilla/mod smoke reaches responsive rendered menus with zero new or
+  mod-unique `error.log` lines. Runtime and full-suite evidence is recorded in
+  `docs/playtests/S2_GERMANIC_POLITICAL_DEPTH_20260727.md`.
+
 ## 2026-07-27 - Xiongnu and Xianbei receive separate dated political arcs
 
 - Expanded the Xiongnu Wing Council from five to eleven programmes and from

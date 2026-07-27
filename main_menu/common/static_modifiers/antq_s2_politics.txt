@@ -930,6 +930,126 @@ antq_agenda_marcomannic_sacred_oath_review_concession = {
 	country_cabinet_efficiency = 0.02
 }
 
+antq_issue_cheruscan_coalition_leadership_outcome = {
+	global_levy_size_modifier = 0.05
+	land_morale_modifier = 0.01
+}
+
+antq_agenda_cheruscan_coalition_leadership_concession = {
+	global_nobles_estate_power = 0.025
+	land_morale_modifier = 0.01
+}
+
+antq_issue_cheruscan_compensation_peace_outcome = {
+	stability_cost_efficiency = -0.03
+	global_monthly_control = 0.002
+}
+
+antq_agenda_cheruscan_compensation_peace_concession = {
+	global_tribes_estate_power = 0.025
+	global_levy_size_modifier = 0.04
+}
+
+antq_issue_cheruscan_frontier_posture_outcome = {
+	monthly_towards_centralization = societal_value_minor_monthly_move
+	country_cabinet_efficiency = 0.02
+}
+
+antq_agenda_cheruscan_frontier_posture_concession = {
+	global_clergy_estate_power = 0.025
+	country_cabinet_efficiency = 0.02
+}
+
+antq_issue_chattian_host_levy_outcome = {
+	global_levy_size_modifier = 0.05
+	land_morale_modifier = 0.01
+}
+
+antq_agenda_chattian_host_levy_concession = {
+	global_nobles_estate_power = 0.025
+	land_morale_modifier = 0.01
+}
+
+antq_issue_chattian_warrior_vow_outcome = {
+	monthly_prestige = 0.05
+	country_cabinet_efficiency = 0.02
+}
+
+antq_agenda_chattian_warrior_vow_concession = {
+	global_pop_food_consumption = -0.01
+	global_levy_size_modifier = 0.03
+}
+
+antq_issue_chattian_forest_campaign_outcome = {
+	global_supply_limit_modifier = 0.05
+	global_road_building_time = -0.05
+}
+
+antq_agenda_chattian_forest_campaign_concession = {
+	global_tribes_estate_power = 0.025
+	global_levy_size_modifier = 0.04
+}
+
+antq_issue_batavian_treaty_levy_outcome = {
+	global_levy_size_modifier = 0.05
+	land_morale_modifier = 0.01
+}
+
+antq_agenda_batavian_treaty_levy_concession = {
+	global_nobles_estate_power = 0.025
+	land_morale_modifier = 0.01
+}
+
+antq_issue_batavian_river_passage_outcome = {
+	global_supply_limit_modifier = 0.05
+	global_road_building_time = -0.05
+}
+
+antq_agenda_batavian_river_passage_concession = {
+	global_trade_through_owned_territory_efficiency = 0.05
+	global_burghers_estate_power = 0.025
+}
+
+antq_issue_batavian_island_labor_outcome = {
+	global_pop_food_consumption = -0.01
+	global_production_efficiency = 0.025
+}
+
+antq_agenda_batavian_island_labor_concession = {
+	global_tribes_estate_power = 0.025
+	global_levy_size_modifier = 0.04
+}
+
+antq_issue_semnonian_grove_assembly_outcome = {
+	global_clergy_estate_power = 0.025
+	country_cabinet_efficiency = 0.02
+}
+
+antq_agenda_semnonian_grove_assembly_concession = {
+	global_clergy_estate_power = 0.025
+	country_cabinet_efficiency = 0.02
+}
+
+antq_issue_semnonian_district_muster_outcome = {
+	global_levy_size_modifier = 0.05
+	land_morale_modifier = 0.01
+}
+
+antq_agenda_semnonian_district_muster_concession = {
+	global_nobles_estate_power = 0.025
+	land_morale_modifier = 0.01
+}
+
+antq_issue_semnonian_affiliate_guarantees_outcome = {
+	monthly_towards_centralization = societal_value_minor_monthly_move
+	country_cabinet_efficiency = 0.02
+}
+
+antq_agenda_semnonian_affiliate_guarantees_concession = {
+	global_tribes_estate_power = 0.025
+	global_levy_size_modifier = 0.04
+}
+
 antq_issue_sabaean_waterwork_rotation_outcome = {
 	global_pop_food_consumption = -0.01
 	global_production_efficiency = 0.025

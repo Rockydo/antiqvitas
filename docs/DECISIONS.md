@@ -1,5 +1,26 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - Named Germanic political profiles replace the generic tribal floor in bounded tranches
+
+Cherusci, Chatti, Batavi, and Semnones no longer inherit
+`antq_tribal_kingdom` or `antq_tribal_elder_council`. They receive four
+separate reform/council families because the surviving literary evidence
+supports meaningfully different political pressures: Cheruscan coalition and
+retinue leadership, Chattian prepared infantry and vowed-warrior service,
+Batavian Rhine-island and Roman auxiliary obligations, and Semnonian delegated
+sacred-grove gathering.
+
+The differentiation is functional rather than decorative. Each profile has
+distinct participants, support weights, programmes, debates, agendas, order
+names, privileges, appointment contracts, and reform branches. Every opening
+and alternative reform explicitly activates its local council and is routed
+through the Age-I research graph.
+
+This is a bounded replacement tranche, not a claim that all Germania is now
+complete. `tools/s2_germanic_politics_depth.py` permanently guards the four
+profiles while the remaining lower-evidence Germanic polities stay in the
+broader granularity queue.
+
 ## 2026-07-27 - Xiongnu and Xianbei do not share a timeless steppe constitution
 
 The AD 1 Xiongnu retain the chanyu, left/right wing, lineage, gift,

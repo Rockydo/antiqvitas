@@ -656,6 +656,90 @@ PROFILES = (
         ),
     ),
     Profile(
+        "cheruscan", "antq_cheruscan_coalition_assembly", "Cheruscan Coalition Assembly",
+        "Cheruscan kindreds coordinate assembly hearings, temporary coalition leadership, retinue gifts, forest passage, compensation, and Roman-frontier policy without assuming a permanent monarchy.",
+        ("antq_cheruscan_kindred_assembly", "antq_cheruscan_coalition_leadership", "antq_cheruscan_retinue_kingship"),
+        ("tribes_estate", "nobles_estate", "clergy_estate"),
+        "cheruscan_coalition_council_atlas.png", "8b2426d5dacd24a05d8a1a06203d1a18b5096051973e7b2f76f2c9c242e7e4c9",
+        "P8.7;P9;P11;P13;CAH-XI;TAC-GER;TAC-ANN", "contested",
+        "Assembly, retinue, coalition, hostage, compensation, and frontier relationships are bounded from literary and archaeological evidence; no fixed Cheruscan constitution or inevitable Arminian monarchy is asserted.",
+        (
+            a("kindred_hearings", "Kindred Assembly Hearings", "Sequence speakers, witnesses, precedence, compensation claims, and collective obligations among participating kindreds.", "adm", ASSIZE),
+            a("coalition_musters", "Coalition Muster Returns", "Count shields, spears, provisions, scouts, and bounded service pledged to a temporary common campaign.", "mil", MIL),
+            a("retinue_gift_returns", "Retinue Gift Returns", "Track arms, fittings, livestock, imported vessels, and hospitality supporting leading warband households.", "dip", PRESTIGE),
+            a("forest_passage_scouts", "Forest Passage Scouts", "Coordinate guides, concealed stores, river crossings, warning routes, and restitution for allied passage.", "mil", LOGISTICS),
+            a("hostage_oath_settlements", "Hostage and Oath Settlements", "Witness wards, rings, vessels, compensation, and frontier guarantees without treating them as permanent peace.", "dip", CONTROL),
+        ),
+        (
+            m("coalition_leadership", "Coalition War Leadership", "Choose bounded campaign leadership, rendezvous, scouting, and contribution terms without creating a permanent crown.", "Leading-Kindred Command Claim", "Prominent kindreds seek command precedence proportionate to followers, gifts, and service.", "nobles_estate", MIL, NOBLES),
+            m("compensation_peace", "Kindred Compensation Peace", "Set cattle, weapons, hospitality, and witness obligations after injury, broken oaths, or disputed passage.", "Assembly Hearing Guarantee", "Participating kindreds demand a public hearing before renewed feud or extraordinary levy.", "tribes_estate", ASSIZE, TRIBES),
+            m("frontier_posture", "Roman Frontier Posture", "Balance embassies, hostages, markets, scouts, and resistance without assuming permanent alliance or war.", "Sacred Oath Custody", "Ritual custodians seek protected vessels and a witnessed place in external settlements.", "clergy_estate", CONTROL, CLERGY),
+        ),
+    ),
+    Profile(
+        "chattian", "antq_chattian_host_council", "Chattian Host Council",
+        "Chattian leaders coordinate a disciplined foot host, chosen-warrior vows, forest fieldworks, settlement provisions, rank, and deliberate campaign timing.",
+        ("antq_chattian_host_order", "antq_chattian_elder_war_council", "antq_chattian_chosen_warrior_host"),
+        ("tribes_estate", "nobles_estate", "peasants_estate"),
+        "chattian_host_council_atlas.png", "84bbc14bc77c3333a7669a85021f87f86fe4718b6e1b456d1d6a632b45699a60",
+        "P8.7;P9;P11;P13;CAH-XI;TAC-GER", "contested",
+        "Tacitus securely distinguishes Chattian infantry, preparation, selected leaders, baggage, and vowed warriors, but his moralizing account does not recover a complete AD 1 constitution.",
+        (
+            a("foot_host_musters", "Foot-Host Muster Returns", "Count shields, spears, tools, baggage, provisions, and rendezvous for a deliberately prepared infantry campaign.", "mil", MIL),
+            a("chosen_warrior_vows", "Chosen-Warrior Vow Custody", "Record bounded service and hospitality for vowed front-rank warriors without treating a literary custom as universal status.", "dip", PRESTIGE),
+            a("forest_fieldworks", "Forest Fieldwork Stores", "Maintain axes, spades, stakes, baskets, warning routes, and night camp works for sustained operations.", "mil", LOGISTICS),
+            a("settlement_provisions", "Settlement Provision Returns", "Set measured grain, livestock, wagon, tool, and hospitality duties for the host.", "adm", FOOD),
+            a("elder_discipline_hearings", "Elder Discipline Hearings", "Review appointment, rank, timing, compensation, and failures of service before the assembled host.", "adm", ASSIZE),
+        ),
+        (
+            m("host_levy", "Prepared Host Levy", "Set infantry, tool, baggage, and provision obligations for a sustained campaign.", "Commander and Rank Petition", "Chosen leaders seek recognized precedence and obedience for the campaign's bounded duration.", "nobles_estate", MIL, NOBLES),
+            m("warrior_vow", "Chosen-Warrior Vow", "Recognize a limited front-rank following and its support obligations without imposing the custom on every household.", "Household Provision Limit", "Settlement communities demand measured support and an end date for exceptional hospitality.", "peasants_estate", PRESTIGE, PEASANTS),
+            m("forest_campaign", "Forest Campaign Preparation", "Coordinate fieldworks, scouts, stores, routes, and deliberate timing before crossing a contested frontier.", "District Muster Hearing", "Participating communities seek witnessed quotas, warning duties, and compensation for losses.", "tribes_estate", LOGISTICS, TRIBES),
+        ),
+    ),
+    Profile(
+        "batavian", "antq_batavian_island_council", "Batavian Island Council",
+        "Batavian island households coordinate Roman-alliance obligations, elite auxiliary service, Rhine crossings, horses, floodbanks, pasture, gifts, and retained local authority.",
+        ("antq_batavian_rhine_compact", "antq_batavian_auxiliary_treaty", "antq_batavian_island_assembly"),
+        ("nobles_estate", "tribes_estate", "burghers_estate"),
+        "batavian_island_council_atlas.png", "03cfeeee8dc748dcd405299a9ca1bddc30d157f42e215f6891df8077f437e331",
+        "P8.7;P9;P11;P13;CAH-XI;TAC-GER;TAC-HIST", "secure",
+        "Batavian Rhine-island settlement, alliance, tax exemption, and concentrated military service are secure; council procedure and exact AD 1 levy terms remain bounded reconstructions.",
+        (
+            a("auxiliary_levy_returns", "Auxiliary Levy Returns", "Count selected fighters, equipment, officers, training, and replacement obligations under the Roman alliance.", "mil", MIL),
+            a("rhine_crossing_service", "Rhine Crossing Service", "Maintain ferries, ropes, oars, boat clamps, guides, and guarded landing places across the delta.", "mil", LOGISTICS),
+            a("horse_swimmer_musters", "Horse and River-Swimmer Musters", "Register horses, harness, waterproof stores, scouts, and specialist crossing service without projecting later unit tables backward.", "mil", NOBLES),
+            a("stipend_gift_accounts", "Stipend and Gift Accounts", "Track imported vessels, coin, wool, arms, hospitality, and reciprocal obligations attached to alliance service.", "dip", TRADE),
+            a("floodbank_pasture_returns", "Floodbank and Pasture Returns", "Coordinate dikes, revetments, water levels, cattle routes, grain stores, and seasonal communal labor.", "adm", FOOD),
+        ),
+        (
+            m("treaty_levy", "Alliance Levy Compact", "Set selected military service, equipment, command, replacement, and reciprocal protection under the Roman relationship.", "Auxiliary Household Precedence", "Leading service households seek command shares, gifts, and recognized exemptions.", "nobles_estate", MIL, NOBLES),
+            m("river_passage", "Rhine Passage Measure", "Guarantee ferries, landing places, escorts, compensation, and accountable movement through the island channels.", "Ferry and Exchange Petition", "Boat, horse, and exchange households seek stable access and measured obligations.", "burghers_estate", LOGISTICS, TRADE),
+            m("island_labor", "Island Waterwork Rotation", "Set bounded floodbank, pasture, warning, and store duties among island communities.", "Island Community Guarantee", "Local communities seek predictable labor rotations and retained authority over shared water and pasture.", "tribes_estate", FOOD, TRIBES),
+        ),
+    ),
+    Profile(
+        "semnonian", "antq_semnonian_grove_assembly", "Semnonian Grove Assembly",
+        "Semnonian district delegates coordinate the sacred-grove gathering, a large confederate muster, oath peace, Elbe and amber exchange, provisions, and Suebian affiliate guarantees.",
+        ("antq_semnonian_sacred_confederacy", "antq_semnonian_grove_delegation", "antq_semnonian_district_muster"),
+        ("clergy_estate", "tribes_estate", "nobles_estate"),
+        "semnonian_grove_council_atlas.png", "0c0fd4584af69ec59c7141105f9f6f25e97993fc70042399b0d00dff9c06b80b",
+        "P8.7;P9;P11;P13;CAH-XI;TAC-GER", "contested",
+        "Tacitus securely reports Semnonian precedence, numerous districts, and a delegated sacred-grove gathering; exact numbers, ritual procedure, and permanent political authority remain uncertain.",
+        (
+            a("grove_delegations", "Sacred-Grove Delegations", "Register participating districts, hospitality, protected objects, oath witnesses, and an assembly peace without inventing a centralized priesthood.", "adm", CLERGY),
+            a("district_muster_returns", "District Muster Returns", "Count shields, spears, leaders, provisions, and bounded service among the many participating districts.", "mil", MIL),
+            a("oath_peace_custody", "Oath-Peace Custody", "Protect the gathering's temporary peace, witnesses, compensation, and inter-district guarantees.", "dip", CONTROL),
+            a("elbe_amber_exchange", "Elbe and Amber Exchange", "Maintain river passage, raw amber, weights, cloth exchange, escorts, and restitution without claiming a royal monopoly.", "dip", TRADE),
+            a("seasonal_provision_returns", "Seasonal Provision Returns", "Set grain, livestock, pottery, basketry, and hospitality contributions for delegations and host.", "adm", FOOD),
+        ),
+        (
+            m("grove_assembly", "Sacred-Grove Assembly", "Set delegation, peace, offering, hospitality, and witness obligations for a bounded common gathering.", "Grove Custodian Petition", "Ritual custodians seek protected objects and authority to preserve the assembly peace.", "clergy_estate", CLERGY, CLERGY),
+            m("district_muster", "Confederate District Muster", "Set shields, spears, provisions, leaders, and rendezvous among participating districts.", "War-Leader Precedence", "Leading retinue households seek command and gift shares proportionate to service.", "nobles_estate", MIL, NOBLES),
+            m("affiliate_guarantees", "Suebian Affiliate Guarantees", "Exchange witnesses, rings, passage, compensation, and bounded aid while preserving local leadership.", "District Autonomy Claim", "Participating communities demand retained local judgment and limits on extraordinary calls.", "tribes_estate", CONTROL, TRIBES),
+        ),
+    ),
+    Profile(
         "sabaean", "antq_sabaean_royal_council", "Ma'rib Royal Council",
         "The anonymous Sabaean court coordinates the Ma'rib dam and canals, sanctuary stores, incense caravans, highland cultivation, levy service, and exchanges linking the interior and Red Sea.",
         ("antq_sabaean_marib_kingship", "antq_sabaean_irrigation_court", "antq_sabaean_sanctuary_route_court"),
@@ -960,6 +1044,22 @@ COUNCIL_DYNAMICS: dict[str, tuple[str, tuple[tuple[str, str], ...]]] = {
         "0.05",
         (("nobles_estate", "0.22"), ("tribes_estate", "0.28"), ("clergy_estate", "0.03")),
     ),
+    "cheruscan": (
+        "0.05",
+        (("tribes_estate", "0.28"), ("nobles_estate", "0.22"), ("clergy_estate", "0.08")),
+    ),
+    "chattian": (
+        "0.05",
+        (("tribes_estate", "0.20"), ("nobles_estate", "0.28"), ("peasants_estate", "0.08")),
+    ),
+    "batavian": (
+        "0.10",
+        (("nobles_estate", "0.24"), ("tribes_estate", "0.14"), ("burghers_estate", "0.16")),
+    ),
+    "semnonian": (
+        "0.05",
+        (("clergy_estate", "0.30"), ("tribes_estate", "0.22"), ("nobles_estate", "0.12")),
+    ),
     "sabaean": (
         "0.10",
         (("peasants_estate", "0.18"), ("clergy_estate", "0.12"), ("burghers_estate", "0.20")),
@@ -1038,7 +1138,7 @@ def parliament_types() -> str:
 
 
 def cabinet_actions() -> str:
-    lines = ["# Generated by tools/s2_ancient_politics.py --write.", "# Forty-five profile-locked ancient administrative programmes."]
+    lines = ["# Generated by tools/s2_ancient_politics.py --write.", "# Profile-locked ancient administrative programmes."]
     for profile in PROFILES:
         for action in profile.actions:
             key = f"antq_{profile.slug}_{action.slug}"
@@ -1051,7 +1151,7 @@ def cabinet_actions() -> str:
 
 
 def parliament_issues() -> str:
-    lines = ["# Generated by tools/s2_ancient_politics.py --write.", "# Twenty-seven council debates with profile-specific outcomes."]
+    lines = ["# Generated by tools/s2_ancient_politics.py --write.", "# Council debates with profile-specific outcomes."]
     for profile in PROFILES:
         for motion in profile.motions:
             key = f"antq_issue_{profile.slug}_{motion.slug}"
@@ -1068,7 +1168,7 @@ def parliament_issues() -> str:
 
 
 def parliament_agendas() -> str:
-    lines = ["# Generated by tools/s2_ancient_politics.py --write.", "# Twenty-seven estate requests tied to actual ancient council profiles."]
+    lines = ["# Generated by tools/s2_ancient_politics.py --write.", "# Estate requests tied to actual ancient council profiles."]
     for profile in PROFILES:
         for motion in profile.motions:
             key = f"antq_agenda_{profile.slug}_{motion.slug}"
@@ -1371,7 +1471,7 @@ def validate() -> list[str]:
     if any(len(row["description"]) < 55 for row in rows):
         failures.append("an ancient-politics description is too shallow")
     if set(COUNCIL_DYNAMICS) != {profile.slug for profile in PROFILES}:
-        failures.append("council political dynamics do not cover exactly the nine profiles")
+        failures.append("council political dynamics do not cover exactly the installed profiles")
     if len(set(COUNCIL_DYNAMICS.values())) != len(PROFILES):
         failures.append("council political dynamics must be distinct by profile")
     for profile in PROFILES:

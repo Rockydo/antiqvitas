@@ -5,7 +5,7 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,210-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
+- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,258-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
   - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
 ## Second manual playtest remediation — 2026-07-26 (resume here)
@@ -44,7 +44,7 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 125 reforms and 292 privileges
+  thin outside the first replacement tranches: 137 reforms and 316 privileges
   serve 292 opening polities. The legal layer now has 227 ancient groups,
   including 182 profile laws with 584 total options, a 26-option dated
   development layer, and 12 country-specific exceptions.
@@ -141,8 +141,8 @@ and focused runtime probe all pass.
   - [ ] Replace required gameplay breadth at both definition and
     unlock/reference layers. Preserve only locally proven engine adapters, and
     guarantee that their names, descriptions, icons, and effects cannot surface.
-    Existing namespaced ancient content remains active (292 privileges, 227 laws,
-    125 reforms).
+    Existing namespaced ancient content remains active (316 privileges, 227 laws,
+    137 reforms).
     - [x] Supply the first deep council/state-office replacement tranche:
       nine reform-driven council profiles, 45 profile-locked administrative
       programmes, 27 issues, 27 agendas, 54 outcome/concession modifiers, and
@@ -280,6 +280,22 @@ and focused runtime probe all pass.
         ledger contains 1,210 chains; all 292 opening profiles remain
         researchable. Full validation passes 107/107 commands and paired
         vanilla/mod smoke adds zero new or mod-unique error lines.
+      - [x] Replace the generic tribal-government floor for four evidence-rich
+        western Germanic opponents and allies of Rome. Cherusci, Chatti,
+        Batavi, and Semnones now have separate opening reforms, councils, 20
+        programmes, 12 debates/agendas, 24 order identities, 24 profile
+        privileges, and eight research-gated alternative reforms. Tacitus is
+        used as a bounded late-first-century witness rather than a literal AD 1
+        constitutional manual: no fixed Cheruscan federation, Chattian senate,
+        Batavian written treaty, or literal Semnonian hundred-canton system is
+        invented. Installed breadth is now 37 councils, 209 programmes, 135
+        issues, 135 agendas, 137 political contracts, 316 privileges, 227
+        laws, and 895 ancient-system unlocks. The direct-art ledger contains
+        1,258 chains; all 292 opening profiles remain researchable. The focused
+        permanent regression verifies exact starts, council activation,
+        privilege gates, Age-I unlocks, and complete direct art. Full
+        validation passes 108/108 commands; paired vanilla/mod smoke adds zero
+        new or mod-unique error lines.
       - [x] Add the first dated legal-development layer: two options for every
         one of the 13 legal profiles, 26 total, spanning AD 25-382. All gates
         use `AntqDate`, each option has a distinct three-effect package and an

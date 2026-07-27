@@ -222,6 +222,50 @@
 	}
 
 	text = {
+		localization_key = antq_estate_cheruscan_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_cheruscan_kindred_assembly
+				has_reform = government_reform:antq_cheruscan_coalition_leadership
+				has_reform = government_reform:antq_cheruscan_retinue_kingship
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_chattian_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_chattian_host_order
+				has_reform = government_reform:antq_chattian_elder_war_council
+				has_reform = government_reform:antq_chattian_chosen_warrior_host
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_batavian_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_batavian_rhine_compact
+				has_reform = government_reform:antq_batavian_auxiliary_treaty
+				has_reform = government_reform:antq_batavian_island_assembly
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_semnonian_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_semnonian_sacred_confederacy
+				has_reform = government_reform:antq_semnonian_grove_delegation
+				has_reform = government_reform:antq_semnonian_district_muster
+			}
+		}
+	}
+
+	text = {
 		localization_key = antq_estate_sabaean_crown_estate
 		trigger = {
 			OR = {
@@ -682,6 +726,50 @@ nobles_estate = {
 				has_reform = government_reform:antq_marcomannic_bohemian_kingship
 				has_reform = government_reform:antq_marcomannic_retinue_court
 				has_reform = government_reform:antq_marcomannic_allied_host_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_cheruscan_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_cheruscan_kindred_assembly
+				has_reform = government_reform:antq_cheruscan_coalition_leadership
+				has_reform = government_reform:antq_cheruscan_retinue_kingship
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_chattian_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_chattian_host_order
+				has_reform = government_reform:antq_chattian_elder_war_council
+				has_reform = government_reform:antq_chattian_chosen_warrior_host
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_batavian_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_batavian_rhine_compact
+				has_reform = government_reform:antq_batavian_auxiliary_treaty
+				has_reform = government_reform:antq_batavian_island_assembly
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_semnonian_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_semnonian_sacred_confederacy
+				has_reform = government_reform:antq_semnonian_grove_delegation
+				has_reform = government_reform:antq_semnonian_district_muster
 			}
 		}
 	}
@@ -1397,6 +1485,50 @@ burghers_estate = {
 	}
 
 	text = {
+		localization_key = antq_estate_cheruscan_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_cheruscan_kindred_assembly
+				has_reform = government_reform:antq_cheruscan_coalition_leadership
+				has_reform = government_reform:antq_cheruscan_retinue_kingship
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_chattian_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_chattian_host_order
+				has_reform = government_reform:antq_chattian_elder_war_council
+				has_reform = government_reform:antq_chattian_chosen_warrior_host
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_batavian_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_batavian_rhine_compact
+				has_reform = government_reform:antq_batavian_auxiliary_treaty
+				has_reform = government_reform:antq_batavian_island_assembly
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_semnonian_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_semnonian_sacred_confederacy
+				has_reform = government_reform:antq_semnonian_grove_delegation
+				has_reform = government_reform:antq_semnonian_district_muster
+			}
+		}
+	}
+
+	text = {
 		localization_key = antq_estate_sabaean_burghers_estate
 		trigger = {
 			OR = {
@@ -1992,6 +2124,50 @@ clergy_estate = {
 				has_reform = government_reform:antq_marcomannic_bohemian_kingship
 				has_reform = government_reform:antq_marcomannic_retinue_court
 				has_reform = government_reform:antq_marcomannic_allied_host_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_cheruscan_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_cheruscan_kindred_assembly
+				has_reform = government_reform:antq_cheruscan_coalition_leadership
+				has_reform = government_reform:antq_cheruscan_retinue_kingship
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_chattian_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_chattian_host_order
+				has_reform = government_reform:antq_chattian_elder_war_council
+				has_reform = government_reform:antq_chattian_chosen_warrior_host
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_batavian_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_batavian_rhine_compact
+				has_reform = government_reform:antq_batavian_auxiliary_treaty
+				has_reform = government_reform:antq_batavian_island_assembly
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_semnonian_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_semnonian_sacred_confederacy
+				has_reform = government_reform:antq_semnonian_grove_delegation
+				has_reform = government_reform:antq_semnonian_district_muster
 			}
 		}
 	}
@@ -2601,6 +2777,50 @@ peasants_estate = {
 				has_reform = government_reform:antq_marcomannic_bohemian_kingship
 				has_reform = government_reform:antq_marcomannic_retinue_court
 				has_reform = government_reform:antq_marcomannic_allied_host_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_cheruscan_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_cheruscan_kindred_assembly
+				has_reform = government_reform:antq_cheruscan_coalition_leadership
+				has_reform = government_reform:antq_cheruscan_retinue_kingship
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_chattian_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_chattian_host_order
+				has_reform = government_reform:antq_chattian_elder_war_council
+				has_reform = government_reform:antq_chattian_chosen_warrior_host
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_batavian_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_batavian_rhine_compact
+				has_reform = government_reform:antq_batavian_auxiliary_treaty
+				has_reform = government_reform:antq_batavian_island_assembly
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_semnonian_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_semnonian_sacred_confederacy
+				has_reform = government_reform:antq_semnonian_grove_delegation
+				has_reform = government_reform:antq_semnonian_district_muster
 			}
 		}
 	}
@@ -3222,6 +3442,50 @@ tribes_estate = {
 				has_reform = government_reform:antq_marcomannic_bohemian_kingship
 				has_reform = government_reform:antq_marcomannic_retinue_court
 				has_reform = government_reform:antq_marcomannic_allied_host_compact
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_cheruscan_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_cheruscan_kindred_assembly
+				has_reform = government_reform:antq_cheruscan_coalition_leadership
+				has_reform = government_reform:antq_cheruscan_retinue_kingship
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_chattian_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_chattian_host_order
+				has_reform = government_reform:antq_chattian_elder_war_council
+				has_reform = government_reform:antq_chattian_chosen_warrior_host
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_batavian_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_batavian_rhine_compact
+				has_reform = government_reform:antq_batavian_auxiliary_treaty
+				has_reform = government_reform:antq_batavian_island_assembly
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_semnonian_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_semnonian_sacred_confederacy
+				has_reform = government_reform:antq_semnonian_grove_delegation
+				has_reform = government_reform:antq_semnonian_district_muster
 			}
 		}
 	}
