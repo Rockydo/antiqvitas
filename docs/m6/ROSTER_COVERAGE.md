@@ -53,7 +53,7 @@ An anonymous/collective profile is not an omitted polity. It is the deliberate `
 
 | Tag | Government adapter | Source route |
 | --- | --- | --- |
-| AES | `antq_tribal_kingdom` | P8.7;P13;TAC-GER;OCD-GER;P8.7;P11;P13;PAN-WBB;TAC-GER-XLV;S2-LAWS |
+| AES | `antq_aestian_amber_coast_order` | P8.7;P13;TAC-GER-45;ARCHAEOMETRY-NE-BALTIC;P8.7;P11;P13;PAN-WBB;TAC-GER-XLV;S2-LAWS |
 | AGR | `antq_tribal_kingdom` | STR-ARAB;PLN-ARAB;P13;S2-LAWS |
 | AKL | `antq_tribal_kingdom` | ASU-ALTAI-KULAY;P13;ASU-ALTAI-KULAY;ACSS-ALTAI-XIONGNU;P13;S2-LAWS |
 | AKS | `antq_advanced_chiefdom` | P8.5;P13;PER;S2-LAWS |
@@ -90,7 +90,7 @@ An anonymous/collective profile is not an omitted polity. It is the deliberate `
 | CRE | `antq_tribal_kingdom` | P8.7;P13;PTO-GEO-II2;MANN-BRI;P8.7;P11;P13;HE-HILLFORT;BM-DRU;S2-LAWS |
 | CRU | `antq_cheruscan_kindred_assembly` | P8.7;P11;P13;CAH-XI;TAC-GER;YOUNG-GERMANIA;P8.7;P11;P13;TAC-GER;S2-LAWS |
 | CRV | `antq_tribal_kingdom` | P8.7;P13;PTO-GEO-II2;MANN-BRI;P8.7;P11;P13;HE-HILLFORT;BM-DRU;S2-LAWS |
-| DAC | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;PLE;S2-LAWS |
+| DAC | `antq_dacian_divided_kingships` | P8.7;P13;CAH-XI;PLE;STR-GEO-7.3.11;S2-LAWS |
 | DAM | `antq_tribal_kingdom` | P8.7;P13;PTO-GEO-II2;MANN-BRI;P8.7;P11;P13;HE-HILLFORT;BM-DRU;S2-LAWS |
 | DAR | `antq_tribal_kingdom` | P8.7;P13;PTO-GEO-II1;DARCY-IRE;P8.7;P11;P13;PTO-GEO-II1;DARCY-IRE;NMI-IRON-AGE;S2-LAWS |
 | DAY | `antq_regional_kingship` | P8.8;P13;CHG;S2-LAWS |
@@ -109,9 +109,9 @@ An anonymous/collective profile is not an omitted polity. It is the deliberate `
 | ERD | `antq_tribal_kingdom` | P8.7;P13;PTO-GEO-II1;DARCY-IRE;P8.7;P11;P13;PTO-GEO-II1;DARCY-IRE;NMI-IRON-AGE;S2-LAWS |
 | ETG | `antq_tribal_kingdom` | P8.7;P13;UT-TARAND;P8.7;P11;P13;UT-TARAND;S2-LAWS |
 | FIN | `antq_tribal_kingdom` | P8.7;P13;TAC-GER;OCD-GER;S2-LAWS |
-| FRI | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;P8.7;P11;P13;TAC-GER;S2-LAWS |
+| FRI | `antq_frisian_terp_community_order` | P8.7;P13;CAH-XI;TAC-ANN-4.72;GRONINGEN-TERP;PALEOHISTORIA-FRISII;P8.7;P11;P13;TAC-GER;S2-LAWS |
 | GAN | `antq_tribal_kingdom` | P8.7;P13;PTO-GEO-II1;DARCY-IRE;P8.7;P11;P13;PTO-GEO-II1;DARCY-IRE;NMI-IRON-AGE;S2-LAWS |
-| GAR | `antq_regional_kingship` | P8.5;P13;CAH-XI;PLE;S2-LAWS |
+| GAR | `antq_garamantian_oasis_state` | P8.5;P13;CAH-XI;PLE;LEICESTER-TRANSSAHARA;BILNAS-GARAMANTES;S2-LAWS |
 | GER | `antq_tribal_kingdom` | P8.7;P13;TAC-ANN-II;TAC-GER;OCD-GER;P8.7;P11;P13;TAC-GER;S2-LAWS |
 | GET | `antq_tribal_kingdom` | P8.7;P13;CAH-XI;S2-LAWS |
 | GOR | `antq_parthian_subkingdom` | P8.2;P13;OCD;PLE;S2-LAWS |

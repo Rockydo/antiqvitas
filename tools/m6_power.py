@@ -172,6 +172,34 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "P8.7;P11;P13;PTO-GEO-II1;DARCY-IRE;IRON-AGE-IRELAND", "contested",
         "A deliberately low-centralization Ivernian adapter represents seasonal coordination without back-projecting medieval Gaelic offices or false settlement density.",
     ),
+    "antq_aestian_amber_coast_order": (
+        "global_tribes_estate_power=0.14|global_burghers_estate_power=0.09|"
+        "tribes_estate_power_from_cabinet=0.23|burghers_estate_power_from_cabinet=0.15|"
+        "replace_cabinet_member_cost_modifier=0.06",
+        "P8.7;P11;P13;TAC-GER-45;ARCHAEOMETRY-NE-BALTIC", "contested",
+        "A plural amber-coast adapter coordinates shore and woodland communities without converting Tacitus's AD 98 description into a centralized AD 1 constitution.",
+    ),
+    "antq_frisian_terp_community_order": (
+        "global_tribes_estate_power=0.11|global_peasants_estate_power=0.10|"
+        "tribes_estate_power_from_cabinet=0.21|estate_power_from_cabinet=0.16|"
+        "replace_cabinet_member_cost_modifier=0.05",
+        "P8.7;P11;P13;TAC-ANN-4.72;GRONINGEN-TERP;PALEOHISTORIA-FRISII", "contested",
+        "Long-lived terp communities and early Roman contact support a distinct salt-marsh order without projecting the AD 28 revolt or later Frisian institutions backward.",
+    ),
+    "antq_dacian_divided_kingships": (
+        "global_nobles_estate_power=0.13|global_tribes_estate_power=0.08|"
+        "nobles_estate_power_from_cabinet=0.24|global_levy_size_modifier=0.025|"
+        "replace_cabinet_member_cost_modifier=0.09",
+        "P8.7;P11;P13;CAH-XI;PLE;STR-GEO-7.3.11", "contested",
+        "Post-Burebista Dacia begins as divided regional powers, not one restored kingdom; selected hillfort, metal, route, and mounted interests structure the adapter.",
+    ),
+    "antq_garamantian_oasis_state": (
+        "global_nobles_estate_power=0.10|global_burghers_estate_power=0.10|"
+        "burghers_estate_power_from_cabinet=0.20|country_cabinet_efficiency=0.025|"
+        "replace_cabinet_member_cost_modifier=0.07",
+        "P8.5;P11;P13;CAH-XI;PLE;LEICESTER-TRANSSAHARA;BILNAS-GARAMANTES", "secure",
+        "Archaeology securely supports an urbanized Garamantian oasis state, extensive irrigation, mobility, and long-distance exchange while its named AD 1 offices remain unknown.",
+    ),
     "antq_marcomannic_bohemian_kingship": (
         "global_tribes_estate_power=0.12|global_nobles_estate_power=0.10|"
         "tribes_estate_power_from_cabinet=0.20|nobles_estate_power_from_cabinet=0.16|"
@@ -660,6 +688,38 @@ ALTERNATIVE_REFORMS: tuple[tuple[str, str, str, str, str, str, str, str, str], .
      "Concentrate hospitality, cattle gifts, sureties, martial followings, ritual custody, and compensation around a prestigious household.",
      "global_nobles_estate_power=0.14|global_tribes_estate_power=0.13|nobles_estate_power_from_cabinet=0.25|global_levy_size_modifier=0.025|replace_cabinet_member_cost_modifier=0.10",
      "P8.7;P11;P13;PTO-GEO-II1;DARCY-IRE;IRON-AGE-IRELAND", "contested", "This is a playable concentration path, not a claim for an AD 1 Ivernian king, medieval Gaelic court, codified clientship, or island-wide political order."),
+    ("antq_aestian_shore_exchange_compact", "aestian", "tribe", "Aestian Shore-Exchange Compact",
+     "Entrust amber sorting, landing access, coastal passage, weights, escorts, and restitution to protected exchange households.",
+     "global_burghers_estate_power=0.18|global_tribes_estate_power=0.10|burghers_estate_power_from_cabinet=0.30|global_trade_through_owned_territory_efficiency=0.035|replace_cabinet_member_cost_modifier=0.06",
+     "P8.7;P11;P13;TAC-GER-45;ARCHAEOMETRY-NE-BALTIC", "secure", "Long-distance material connections and Baltic amber are secure, but no surviving customs compact, central market, or Aestian export monopoly is claimed."),
+    ("antq_aestian_woodland_assembly", "aestian", "tribe", "Aestian Woodland Assembly",
+     "Give shore and woodland communities greater authority over passage, refuge, watch, household contributions, compensation, and offering custody.",
+     "global_tribes_estate_power=0.20|global_peasants_estate_power=0.08|tribes_estate_power_from_cabinet=0.32|stability_cost_efficiency=-0.02|replace_cabinet_member_cost_modifier=0.05",
+     "P8.7;P11;P13;TAC-GER-45;ARCHAEOMETRY-NE-BALTIC", "contested", "The path preserves plural communities and local custody without treating Tacitus's later ethnographic summary as a recovered AD 1 assembly system."),
+    ("antq_frisian_tidal_compact", "frisian", "tribe", "Frisian Tidal Compact",
+     "Coordinate terp labor, changing channels, landing access, salt-marsh stores, guides, warning, and restitution through participating communities.",
+     "global_tribes_estate_power=0.18|global_peasants_estate_power=0.11|tribes_estate_power_from_cabinet=0.29|global_monthly_control=0.0005|replace_cabinet_member_cost_modifier=0.05",
+     "P8.7;P11;P13;GRONINGEN-TERP;PALEOHISTORIA-FRISII", "secure", "Terp settlement and adaptation to the salt-marsh landscape are secure; the compact is a gameplay abstraction rather than a recovered written league."),
+    ("antq_frisian_frontier_council", "frisian", "tribe", "Frisian Frontier Council",
+     "Concentrate negotiation of cattle, hides, service, landing rights, complaints, and resistance at the Roman Rhine frontier.",
+     "global_nobles_estate_power=0.13|global_burghers_estate_power=0.10|nobles_estate_power_from_cabinet=0.23|country_cabinet_efficiency=0.025|replace_cabinet_member_cost_modifier=0.09",
+     "P8.7;P11;P13;TAC-ANN-4.72;PALEOHISTORIA-FRISII", "contested", "The branch uses secure early Roman contact and the later tribute crisis without pre-scripting the AD 28 revolt or inventing permanent subjection."),
+    ("antq_dacian_hillfort_compact", "dacian", "tribe", "Dacian Hillfort Compact",
+     "Bind divided regional rulers through selected stores, metal contributions, pass warning, mounted service, external oaths, and mutual refuge.",
+     "global_tribes_estate_power=0.14|global_nobles_estate_power=0.13|estate_power_from_cabinet=0.28|global_levy_size_modifier=0.025|replace_cabinet_member_cost_modifier=0.08",
+     "P8.7;P11;P13;CAH-XI;PLE;STR-GEO-7.3.11", "contested", "Strabo securely reports political division after Burebista; the compact provides cooperation without reuniting Dacia under an invented AD 1 monarch."),
+    ("antq_dacian_mountain_court", "dacian", "tribe", "Dacian Mountain Court",
+     "Concentrate metal accounts, hillfort stores, mounted command, sanctuary oaths, and Carpathian passage around one ascendant regional house.",
+     "global_nobles_estate_power=0.19|global_burghers_estate_power=0.09|nobles_estate_power_from_cabinet=0.31|global_levy_size_modifier=0.035|replace_cabinet_member_cost_modifier=0.13",
+     "P8.7;P11;P13;CAH-XI;PLE;STR-GEO-7.3.11", "contested", "A concentration path is plausible within divided Dacia, but it is not Decebalus's later kingdom and does not assert one permanent capital or priestly monarchy."),
+    ("antq_garamantian_irrigation_court", "garamantian", "monarchy", "Garamantian Irrigation Court",
+     "Concentrate shaft clearing, underground-gallery repair, water rotation, oasis stores, field gates, and household petitions around the leading court.",
+     "global_crown_estate_power=0.12|global_peasants_estate_power=0.15|estate_power_from_cabinet=0.28|global_production_efficiency=0.03|set_cabinet_member_cost_modifier=-0.04",
+     "P8.5;P11;P13;LEICESTER-TRANSSAHARA", "secure", "Large irrigation systems and oasis agriculture are secure; the branch does not invent named water offices, a codified schedule, or unrestricted royal ownership."),
+    ("antq_garamantian_caravan_compact", "garamantian", "monarchy", "Garamantian Caravan Compact",
+     "Give caravan, craft, and outer-oasis interests greater authority over protected water, routes, measures, materials, guides, and restitution.",
+     "global_burghers_estate_power=0.19|global_tribes_estate_power=0.09|burghers_estate_power_from_cabinet=0.31|global_trade_through_owned_territory_efficiency=0.04|replace_cabinet_member_cost_modifier=0.08",
+     "P8.5;P11;P13;LEICESTER-TRANSSAHARA;BILNAS-GARAMANTES", "secure", "Saharan mobility and long-distance exchange are archaeologically secure, but no surviving caravan constitution or court monopoly is reconstructed."),
 )
 
 SUCCESSOR_REFORMS: tuple[
@@ -991,6 +1051,10 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
     "brigantian": ("antq_brigantian_hillfort_confederacy",),
     "durotrigian": ("antq_durotrigian_hillfort_coin_order",),
     "ivernian": ("antq_ivernian_regional_assembly",),
+    "aestian": ("antq_aestian_amber_coast_order",),
+    "frisian": ("antq_frisian_terp_community_order",),
+    "dacian": ("antq_dacian_divided_kingships",),
+    "garamantian": ("antq_garamantian_oasis_state",),
     "marcomannic": ("antq_marcomannic_bohemian_kingship",),
     "cheruscan": ("antq_cheruscan_kindred_assembly",),
     "chattian": ("antq_chattian_host_order",),
@@ -1034,6 +1098,10 @@ PROFILE_PARLIAMENTS = {
     "brigantian": "antq_brigantian_northern_council",
     "durotrigian": "antq_durotrigian_hillfort_assembly",
     "ivernian": "antq_ivernian_regional_gathering",
+    "aestian": "antq_aestian_amber_coast_gathering",
+    "frisian": "antq_frisian_terp_assembly",
+    "dacian": "antq_dacian_hillfort_council",
+    "garamantian": "antq_garamantian_oasis_council",
     "marcomannic": "antq_marcomannic_royal_council",
     "cheruscan": "antq_cheruscan_coalition_assembly",
     "chattian": "antq_chattian_host_council",
@@ -1545,7 +1613,7 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    expected_contract_count = 44 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    expected_contract_count = 48 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -1566,6 +1634,7 @@ def load_power_data() -> PowerData:
             "galilean", "batanean", "commagenean", "emesan",
             "cheruscan", "chattian", "batavian", "semnonian",
             "trinovantian", "brigantian", "durotrigian", "ivernian",
+            "aestian", "frisian", "dacian", "garamantian",
     } - {"roman", "han"}
     if (
         len(path_rows) != len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
@@ -2037,6 +2106,50 @@ antq_ivernian_regional_assembly = {
 	years = 2
 }
 
+antq_aestian_amber_coast_order = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		global_trade_through_owned_territory_efficiency = 0.025
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_frisian_terp_community_order = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_peasants_estate_power = 0.07
+		global_road_building_time = -0.04
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_dacian_divided_kingships = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_nobles_estate_power = 0.08
+		global_levy_size_modifier = 0.025
+		research_speed = 0.08
+	}
+	years = 2
+}
+
+antq_garamantian_oasis_state = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_burghers_estate_power = 0.07
+		global_production_efficiency = 0.025
+		research_speed = 0.08
+	}
+	years = 2
+}
+
 antq_marcomannic_bohemian_kingship = {
 	major = yes
 	government = tribe
@@ -2359,6 +2472,14 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_durotrigian_hillfort_coin_order_desc", "A distributed political order grounded in distinctive coinage, pottery, burial, settlement, coastal, and enclosure traditions."),
         ("antq_ivernian_regional_assembly", "Ivernian Regional Assembly"),
         ("antq_ivernian_regional_assembly_desc", "A low-centralization southwest-Irish gathering coordinating cattle gifts, seaway exchange, smithing, offerings, hospitality, and sureties."),
+        ("antq_aestian_amber_coast_order", "Aestian Amber-Coast Order"),
+        ("antq_aestian_amber_coast_order_desc", "A plural southeastern Baltic order coordinating amber exchange, coastal passage, woodland watch, household stores, and local offering custody."),
+        ("antq_frisian_terp_community_order", "Frisian Terp Community Order"),
+        ("antq_frisian_terp_community_order_desc", "A salt-marsh order coordinating terp maintenance, cattle and hides, tidal passage, household stores, and negotiated Roman-frontier obligations."),
+        ("antq_dacian_divided_kingships", "Dacian Divided Kingships"),
+        ("antq_dacian_divided_kingships_desc", "The post-Burebista regional powers coordinating selected hillfort stores, metalworking, Carpathian passages, mounted hosts, and external oaths."),
+        ("antq_garamantian_oasis_state", "Garamantian Oasis State"),
+        ("antq_garamantian_oasis_state_desc", "An urbanized Fazzan oasis state coordinating underground irrigation, settlement stores, caravan routes, mounted forces, and Saharan exchange."),
         ("antq_marcomannic_bohemian_kingship", "Marcomannic Bohemian Kingship"),
         ("antq_marcomannic_bohemian_kingship_desc", "Maroboduus's organized kingdom balancing the royal retinue, allied kindreds, settlement stores, exchange, and Roman-frontier diplomacy."),
         ("antq_cheruscan_kindred_assembly", "Cheruscan Kindred Assembly"),

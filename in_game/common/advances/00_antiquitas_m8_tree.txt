@@ -68,6 +68,10 @@ antq_provincial_census = {
 	unlock_government_reform = antq_brigantian_hillfort_confederacy
 	unlock_government_reform = antq_durotrigian_hillfort_coin_order
 	unlock_government_reform = antq_ivernian_regional_assembly
+	unlock_government_reform = antq_aestian_amber_coast_order
+	unlock_government_reform = antq_frisian_terp_community_order
+	unlock_government_reform = antq_dacian_divided_kingships
+	unlock_government_reform = antq_garamantian_oasis_state
 	unlock_government_reform = antq_marcomannic_bohemian_kingship
 	unlock_government_reform = antq_cheruscan_kindred_assembly
 	unlock_government_reform = antq_chattian_host_order
@@ -1069,6 +1073,7 @@ antq_meroitic_temple_stewardship = {
 	stability_cost_efficiency = 0.02
 	unlock_estate_privilege = antq_sacral_granary_endowments
 	unlock_estate_privilege = antq_kushite_provincial_tribute_bowls
+	unlock_estate_privilege = antq_garamantian_mounted_chariot_terms
 	unlock_estate_privilege = antq_mauretanian_court_regional_house_service
 	starting_technology_level = 2
 	requires = antq_imperial_cult
@@ -1091,6 +1096,7 @@ antq_kandake_court_delegates = {
 	global_monthly_control = 0.001
 	unlock_estate_privilege = antq_royal_tribute_assessment_registers
 	unlock_estate_privilege = antq_kushite_iron_and_gold_workshop_terms
+	unlock_estate_privilege = antq_garamantian_burial_ritual_custody
 	unlock_estate_privilege = antq_mauretanian_sanctuary_offering_inventories
 	starting_technology_level = 3
 	requires = antq_meroitic_temple_stewardship
@@ -1134,9 +1140,11 @@ antq_nile_caravan_adjudication = {
 	tax_income_efficiency = small_tax_income_efficiency_bonus
 	unlock_estate_privilege = antq_sacral_scribal_register_custody
 	unlock_estate_privilege = antq_kushite_desert_route_hospitality
+	unlock_estate_privilege = antq_garamantian_irrigator_cultivator_compacts
 	unlock_estate_privilege = antq_mauretanian_olive_grain_labor_compacts
 	unlock_government_reform = antq_kushite_temple_domain
 	unlock_government_reform = antq_mauretanian_frontier_compact
+	unlock_government_reform = antq_garamantian_caravan_compact
 	starting_technology_level = 4
 	requires = antq_kandake_court_delegates
 	ai_weight = { add = 70 }
@@ -1173,6 +1181,7 @@ antq_amber_coast_assemblies = {
 		}
 	}
 	stability_cost_efficiency = 0.02
+	unlock_estate_privilege = antq_aestian_shore_following_terms
 	starting_technology_level = 2
 	requires = antq_imperial_cult
 	ai_weight = { add = 90 }
@@ -1189,6 +1198,7 @@ antq_hillfort_household_speakers = {
 		}
 	}
 	global_monthly_control = 0.001
+	unlock_estate_privilege = antq_aestian_local_offering_custody
 	starting_technology_level = 3
 	requires = antq_amber_coast_assemblies
 	ai_weight = { add = 80 }
@@ -1205,6 +1215,8 @@ antq_burial_community_custodians = {
 		}
 	}
 	tax_income_efficiency = small_tax_income_efficiency_bonus
+	unlock_estate_privilege = antq_aestian_cultivator_woodland_compacts
+	unlock_government_reform = antq_aestian_woodland_assembly
 	starting_technology_level = 4
 	requires = antq_hillfort_household_speakers
 	ai_weight = { add = 70 }
@@ -1488,6 +1500,7 @@ antq_field_engineering = {
 	unlock_unit = antq_germanic_spearmen
 	unlock_unit = antq_germanic_javelins
 	unlock_casus_belli = antq_loot_raid
+	unlock_estate_privilege = antq_frisian_coastal_following_terms
 	unlock_estate_privilege = antq_marcomannic_retinue_command_terms
 	unlock_estate_privilege = antq_cheruscan_retinue_service_terms
 	unlock_estate_privilege = antq_chattian_prepared_foot_host_terms
@@ -1595,6 +1608,7 @@ antq_principate_warfare = {
 		}
 	}
 	army_maintenance_efficiency = 0.01
+	unlock_estate_privilege = antq_frisian_tidal_exchange_safe_conducts
 	unlock_estate_privilege = antq_marcomannic_iron_amber_safe_conducts
 	unlock_estate_privilege = antq_cheruscan_settlement_provision_limits
 	unlock_estate_privilege = antq_chattian_smith_tool_exchange
@@ -3907,6 +3921,7 @@ antq_garamantian_oasis_stages = {
 	}
 	merchant_maintenance_efficiency = 0.01
 	unlock_estate_privilege = antq_kushite_dual_court_seal_custody
+	unlock_estate_privilege = antq_garamantian_leading_oasis_hearings
 	unlock_estate_privilege = antq_mauretanian_royal_seal_custody
 	starting_technology_level = 2
 	requires = antq_monsoon_navigation
@@ -3930,6 +3945,7 @@ antq_meroe_nile_caravans = {
 	unlock_estate_privilege = antq_kushite_temple_storehouse_inventories
 	unlock_government_reform = antq_kushite_dual_household
 	unlock_government_reform = antq_mauretanian_urban_court
+	unlock_government_reform = antq_garamantian_irrigation_court
 	starting_technology_level = 3
 	requires = antq_garamantian_oasis_stages
 	ai_weight = { add = 80 }
@@ -3970,6 +3986,7 @@ antq_sahel_iron_exchange = {
 	import_efficiency = tiny_trade_efficiency_bonus
 	unlock_estate_privilege = antq_sacral_processional_provisioning
 	unlock_estate_privilege = antq_kushite_nile_cultivator_rotations
+	unlock_estate_privilege = antq_garamantian_caravan_craft_safe_conducts
 	unlock_estate_privilege = antq_mauretanian_port_craft_measures
 	starting_technology_level = 4
 	requires = antq_meroe_nile_caravans
@@ -3992,6 +4009,7 @@ antq_ivory_route_brokers = {
 	export_efficiency = small_trade_efficiency_bonus
 	unlock_estate_privilege = antq_sacral_frontier_hospitality_endowments
 	unlock_estate_privilege = antq_kushite_temple_storehouse_immunity
+	unlock_estate_privilege = antq_garamantian_outer_oasis_guarantees
 	unlock_estate_privilege = antq_mauretanian_frontier_watch_rotations
 	starting_technology_level = 4
 	requires = antq_red_sea_entrepots
@@ -4010,6 +4028,7 @@ antq_amber_route_waystations = {
 		}
 	}
 	merchant_maintenance_efficiency = 0.01
+	unlock_estate_privilege = antq_aestian_leading_household_hearings
 	starting_technology_level = 2
 	requires = antq_monsoon_navigation
 	ai_weight = { add = 90 }
@@ -4026,6 +4045,7 @@ antq_coastal_hide_fairs = {
 		}
 	}
 	global_trade_through_owned_territory_efficiency = 0.05
+	unlock_government_reform = antq_aestian_shore_exchange_compact
 	starting_technology_level = 3
 	requires = antq_amber_route_waystations
 	ai_weight = { add = 80 }
@@ -4042,6 +4062,7 @@ antq_river_portage_exchange = {
 		}
 	}
 	import_efficiency = tiny_trade_efficiency_bonus
+	unlock_estate_privilege = antq_aestian_amber_exchange_safe_conducts
 	starting_technology_level = 4
 	requires = antq_coastal_hide_fairs
 	ai_weight = { add = 70 }
@@ -4074,6 +4095,7 @@ antq_seasonal_market_circuits = {
 		}
 	}
 	export_efficiency = small_trade_efficiency_bonus
+	unlock_estate_privilege = antq_aestian_lagoon_community_guarantees
 	starting_technology_level = 4
 	requires = antq_river_portage_exchange
 	requires = antq_bloomery_iron_barter
@@ -4207,6 +4229,7 @@ antq_astronomical_tables = {
 	}
 	cultural_influence_modifier = 0.01
 	unlock_estate_privilege = antq_civic_magistrate_accountability
+	unlock_estate_privilege = antq_dacian_hillfort_house_hearings
 	unlock_estate_privilege = antq_cappadocian_royal_domain_custody
 	unlock_estate_privilege = antq_thracian_royal_seal_hearings
 	unlock_estate_privilege = antq_bosporan_royal_seal_custody
@@ -4229,6 +4252,7 @@ antq_medical_compendia = {
 	}
 	cultural_influence_modifier = 0.01
 	unlock_estate_privilege = antq_civic_euergetic_public_works
+	unlock_estate_privilege = antq_dacian_mounted_following_terms
 	unlock_estate_privilege = antq_cappadocian_estate_house_service_terms
 	unlock_estate_privilege = antq_thracian_retinue_horse_service_terms
 	unlock_estate_privilege = antq_bosporan_claimant_mounted_service_terms
@@ -4329,6 +4353,7 @@ antq_principate_learning = {
 	}
 	global_monthly_literacy = 0.005
 	unlock_estate_privilege = antq_civic_harbor_dues_farming
+	unlock_estate_privilege = antq_dacian_mining_smithing_safe_conducts
 	unlock_estate_privilege = antq_cappadocian_caravan_craft_safe_conducts
 	unlock_estate_privilege = antq_thracian_aegean_pontic_city_measures
 	unlock_estate_privilege = antq_commagenean_euphrates_passage_measures
@@ -5013,11 +5038,13 @@ antq_peripatetic_teaching_circles = {
 	}
 	global_monthly_literacy = 0.005
 	unlock_estate_privilege = antq_civic_sanctuary_inventory_rights
+	unlock_estate_privilege = antq_dacian_sanctuary_oath_custody
 	unlock_estate_privilege = antq_cappadocian_sanctuary_store_inventories
 	unlock_estate_privilege = antq_thracian_sanctuary_oath_stores
 	unlock_government_reform = antq_boule_magistracy
 	unlock_government_reform = antq_cappadocian_domain_court
 	unlock_government_reform = antq_thracian_dynastic_court
+	unlock_government_reform = antq_dacian_hillfort_compact
 	starting_technology_level = 3
 	requires = antq_polis_archive_stewards
 	ai_weight = { add = 80 }
@@ -5037,6 +5064,7 @@ antq_geometric_commentary_schools = {
 	}
 	global_institution_growth_modifier = 0.10
 	unlock_estate_privilege = antq_civic_recognized_craft_associations
+	unlock_estate_privilege = antq_dacian_cultivator_herd_compacts
 	unlock_estate_privilege = antq_cappadocian_grain_vine_pastoral_compacts
 	unlock_estate_privilege = antq_thracian_grain_timber_pastoral_compacts
 	unlock_estate_privilege = antq_commagenean_orchard_grain_compacts
@@ -5044,6 +5072,7 @@ antq_geometric_commentary_schools = {
 	unlock_government_reform = antq_cappadocian_pass_compact
 	unlock_government_reform = antq_thracian_mountain_host
 	unlock_government_reform = antq_commagenean_euphrates_compact
+	unlock_government_reform = antq_dacian_mountain_court
 	starting_technology_level = 4
 	requires = antq_peripatetic_teaching_circles
 	ai_weight = { add = 70 }
@@ -5063,6 +5092,7 @@ antq_medical_case_histories = {
 	}
 	global_institution_growth_modifier = 0.10
 	unlock_estate_privilege = antq_civic_grain_and_water_guarantees
+	unlock_estate_privilege = antq_dacian_mountain_pass_guarantees
 	unlock_estate_privilege = antq_cappadocian_highland_pass_watch_rotations
 	unlock_estate_privilege = antq_thracian_mountain_frontier_rotations
 	unlock_estate_privilege = antq_bosporan_cultivator_fisher_craft_compacts
@@ -6614,6 +6644,7 @@ antq_household_retinue_feasts = {
 	}
 	global_population_capacity_modifier = 0.02
 	unlock_estate_privilege = antq_tribal_elder_assembly_hearing
+	unlock_estate_privilege = antq_frisian_leading_terp_hearings
 	unlock_estate_privilege = antq_marcomannic_royal_gift_custody
 	unlock_estate_privilege = antq_cheruscan_kindred_assembly_guarantees
 	unlock_estate_privilege = antq_chattian_chosen_leader_hearings
@@ -6636,6 +6667,7 @@ antq_sacred_grove_custody = {
 		}
 	}
 	global_pop_promotion_speed_modifier = 0.025
+	unlock_estate_privilege = antq_frisian_oath_offering_custody
 	unlock_estate_privilege = antq_marcomannic_sacred_oath_stores
 	unlock_estate_privilege = antq_cheruscan_frontier_broker_safe_conducts
 	unlock_estate_privilege = antq_chattian_warrior_vow_custody
@@ -6647,6 +6679,7 @@ antq_sacred_grove_custody = {
 	unlock_government_reform = antq_chattian_elder_war_council
 	unlock_government_reform = antq_batavian_auxiliary_treaty
 	unlock_government_reform = antq_semnonian_grove_delegation
+	unlock_government_reform = antq_frisian_tidal_compact
 	starting_technology_level = 3
 	requires = antq_household_retinue_feasts
 	ai_weight = { add = 80 }
@@ -6664,6 +6697,7 @@ antq_wergild_arbitration = {
 		}
 	}
 	global_pop_assimilation_speed_modifier = 0.025
+	unlock_estate_privilege = antq_frisian_terp_community_guarantees
 	unlock_estate_privilege = antq_marcomannic_allied_kindred_muster_terms
 	unlock_estate_privilege = antq_cheruscan_retinue_gift_precedence
 	unlock_estate_privilege = antq_chattian_forest_district_musters
@@ -6686,6 +6720,7 @@ antq_fosterage_and_hostages = {
 		}
 	}
 	global_pop_assimilation_speed_modifier = 0.025
+	unlock_estate_privilege = antq_frisian_cattle_marsh_compacts
 	unlock_estate_privilege = antq_marcomannic_settlement_provision_compacts
 	unlock_estate_privilege = antq_cheruscan_coalition_assembly_hearing
 	unlock_estate_privilege = antq_chattian_host_provision_rotations
@@ -6696,6 +6731,7 @@ antq_fosterage_and_hostages = {
 	unlock_government_reform = antq_chattian_chosen_warrior_host
 	unlock_government_reform = antq_batavian_island_assembly
 	unlock_government_reform = antq_semnonian_district_muster
+	unlock_government_reform = antq_frisian_frontier_council
 	starting_technology_level = 4
 	requires = antq_sacred_grove_custody
 	ai_weight = { add = 70 }

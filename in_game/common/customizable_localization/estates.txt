@@ -255,6 +255,50 @@
 	}
 
 	text = {
+		localization_key = antq_estate_aestian_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_aestian_amber_coast_order
+				has_reform = government_reform:antq_aestian_shore_exchange_compact
+				has_reform = government_reform:antq_aestian_woodland_assembly
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_frisian_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_frisian_terp_community_order
+				has_reform = government_reform:antq_frisian_tidal_compact
+				has_reform = government_reform:antq_frisian_frontier_council
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_dacian_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_dacian_divided_kingships
+				has_reform = government_reform:antq_dacian_hillfort_compact
+				has_reform = government_reform:antq_dacian_mountain_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_garamantian_crown_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_garamantian_oasis_state
+				has_reform = government_reform:antq_garamantian_irrigation_court
+				has_reform = government_reform:antq_garamantian_caravan_compact
+			}
+		}
+	}
+
+	text = {
 		localization_key = antq_estate_marcomannic_crown_estate
 		trigger = {
 			OR = {
@@ -803,6 +847,50 @@ nobles_estate = {
 				has_reform = government_reform:antq_ivernian_regional_assembly
 				has_reform = government_reform:antq_ivernian_seaway_compact
 				has_reform = government_reform:antq_ivernian_cattle_gift_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_aestian_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_aestian_amber_coast_order
+				has_reform = government_reform:antq_aestian_shore_exchange_compact
+				has_reform = government_reform:antq_aestian_woodland_assembly
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_frisian_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_frisian_terp_community_order
+				has_reform = government_reform:antq_frisian_tidal_compact
+				has_reform = government_reform:antq_frisian_frontier_council
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_dacian_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_dacian_divided_kingships
+				has_reform = government_reform:antq_dacian_hillfort_compact
+				has_reform = government_reform:antq_dacian_mountain_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_garamantian_nobles_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_garamantian_oasis_state
+				has_reform = government_reform:antq_garamantian_irrigation_court
+				has_reform = government_reform:antq_garamantian_caravan_compact
 			}
 		}
 	}
@@ -1606,6 +1694,50 @@ burghers_estate = {
 	}
 
 	text = {
+		localization_key = antq_estate_aestian_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_aestian_amber_coast_order
+				has_reform = government_reform:antq_aestian_shore_exchange_compact
+				has_reform = government_reform:antq_aestian_woodland_assembly
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_frisian_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_frisian_terp_community_order
+				has_reform = government_reform:antq_frisian_tidal_compact
+				has_reform = government_reform:antq_frisian_frontier_council
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_dacian_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_dacian_divided_kingships
+				has_reform = government_reform:antq_dacian_hillfort_compact
+				has_reform = government_reform:antq_dacian_mountain_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_garamantian_burghers_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_garamantian_oasis_state
+				has_reform = government_reform:antq_garamantian_irrigation_court
+				has_reform = government_reform:antq_garamantian_caravan_compact
+			}
+		}
+	}
+
+	text = {
 		localization_key = antq_estate_marcomannic_burghers_estate
 		trigger = {
 			OR = {
@@ -2289,6 +2421,50 @@ clergy_estate = {
 				has_reform = government_reform:antq_ivernian_regional_assembly
 				has_reform = government_reform:antq_ivernian_seaway_compact
 				has_reform = government_reform:antq_ivernian_cattle_gift_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_aestian_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_aestian_amber_coast_order
+				has_reform = government_reform:antq_aestian_shore_exchange_compact
+				has_reform = government_reform:antq_aestian_woodland_assembly
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_frisian_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_frisian_terp_community_order
+				has_reform = government_reform:antq_frisian_tidal_compact
+				has_reform = government_reform:antq_frisian_frontier_council
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_dacian_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_dacian_divided_kingships
+				has_reform = government_reform:antq_dacian_hillfort_compact
+				has_reform = government_reform:antq_dacian_mountain_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_garamantian_clergy_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_garamantian_oasis_state
+				has_reform = government_reform:antq_garamantian_irrigation_court
+				has_reform = government_reform:antq_garamantian_caravan_compact
 			}
 		}
 	}
@@ -2986,6 +3162,50 @@ peasants_estate = {
 				has_reform = government_reform:antq_ivernian_regional_assembly
 				has_reform = government_reform:antq_ivernian_seaway_compact
 				has_reform = government_reform:antq_ivernian_cattle_gift_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_aestian_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_aestian_amber_coast_order
+				has_reform = government_reform:antq_aestian_shore_exchange_compact
+				has_reform = government_reform:antq_aestian_woodland_assembly
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_frisian_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_frisian_terp_community_order
+				has_reform = government_reform:antq_frisian_tidal_compact
+				has_reform = government_reform:antq_frisian_frontier_council
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_dacian_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_dacian_divided_kingships
+				has_reform = government_reform:antq_dacian_hillfort_compact
+				has_reform = government_reform:antq_dacian_mountain_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_garamantian_peasants_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_garamantian_oasis_state
+				has_reform = government_reform:antq_garamantian_irrigation_court
+				has_reform = government_reform:antq_garamantian_caravan_compact
 			}
 		}
 	}
@@ -3695,6 +3915,50 @@ tribes_estate = {
 				has_reform = government_reform:antq_ivernian_regional_assembly
 				has_reform = government_reform:antq_ivernian_seaway_compact
 				has_reform = government_reform:antq_ivernian_cattle_gift_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_aestian_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_aestian_amber_coast_order
+				has_reform = government_reform:antq_aestian_shore_exchange_compact
+				has_reform = government_reform:antq_aestian_woodland_assembly
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_frisian_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_frisian_terp_community_order
+				has_reform = government_reform:antq_frisian_tidal_compact
+				has_reform = government_reform:antq_frisian_frontier_council
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_dacian_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_dacian_divided_kingships
+				has_reform = government_reform:antq_dacian_hillfort_compact
+				has_reform = government_reform:antq_dacian_mountain_court
+			}
+		}
+	}
+
+	text = {
+		localization_key = antq_estate_garamantian_tribes_estate
+		trigger = {
+			OR = {
+				has_reform = government_reform:antq_garamantian_oasis_state
+				has_reform = government_reform:antq_garamantian_irrigation_court
+				has_reform = government_reform:antq_garamantian_caravan_compact
 			}
 		}
 	}

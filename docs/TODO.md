@@ -5,7 +5,7 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,306-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
+- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,354-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
   - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
 ## Second manual playtest remediation — 2026-07-26 (resume here)
@@ -44,7 +44,7 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 149 reforms and 340 privileges
+  thin outside the first replacement tranches: 161 reforms and 364 privileges
   serve 292 opening polities. The legal layer now has 227 ancient groups,
   including 182 profile laws with 584 total options, a 26-option dated
   development layer, and 12 country-specific exceptions.
@@ -141,8 +141,8 @@ and focused runtime probe all pass.
   - [ ] Replace required gameplay breadth at both definition and
     unlock/reference layers. Preserve only locally proven engine adapters, and
     guarantee that their names, descriptions, icons, and effects cannot surface.
-    Existing namespaced ancient content remains active (340 privileges, 227 laws,
-    149 reforms).
+    Existing namespaced ancient content remains active (364 privileges, 227 laws,
+    161 reforms).
     - [x] Supply the first deep council/state-office replacement tranche:
       nine reform-driven council profiles, 45 profile-locked administrative
       programmes, 27 issues, 27 agendas, 54 outcome/concession modifiers, and
@@ -311,6 +311,19 @@ and focused runtime probe all pass.
         chains and all 292 opening profiles remain researchable. Full
         validation passes 109/109 commands; paired vanilla/mod smoke reaches
         responsive rendered menus and adds zero new or mod-unique error lines.
+      - [x] Replace the generic political floor for four further frontier
+        societies: Aestii, Frisii, the divided Dacian kingdoms, and Garamantes.
+        Each now has a separate opening reform, council, five programmes, three
+        debates/agendas, six social-order identities, six privileges, and two
+        Age-I alternatives. The mechanics distinguish amber-coast exchange,
+        terp and tidal-frontier obligations, hillfort/mining/pass politics,
+        and oasis-water/caravan politics without inventing named AD 1 rulers
+        or formal constitutions. Installed breadth is now 45 councils, 249
+        programmes, 159 issues, 159 agendas, 161 political contracts, 364
+        privileges, 227 laws, and 967 ancient-system unlocks. The direct-art
+        ledger contains 1,354 chains; all 292 opening profiles remain
+        researchable. Full validation passes 110/110 commands and paired
+        vanilla/mod smoke adds zero new or mod-unique error lines.
       - [x] Add the first dated legal-development layer: two options for every
         one of the 13 legal profiles, 26 total, spanning AD 25-382. All gates
         use `AntqDate`, each option has a distinct three-effect package and an

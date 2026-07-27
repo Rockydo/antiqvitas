@@ -1,5 +1,25 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - Frontier depth follows evidence type rather than one tribal template
+
+Aestii, Frisii, Dacians, and Garamantes no longer share a generic tribal
+political floor. Their systems use different material and literary anchors:
+amber-coast exchange and local offering custody; terp maintenance, cattle and
+tidal-frontier obligations; divided hillfort rulers, mining, mounted hosts and
+Carpathian passes; and oasis irrigation, cultivation, caravan exchange and
+desert mobility.
+
+Each profile receives the same minimum playable breadth—one opening reform,
+one council, five programmes, three debates/agendas, six order identities, six
+privileges, and two reform alternatives—but not interchangeable names or
+effects. This regularity is a content-quality contract, not a claim that the
+four societies possessed equivalent constitutional offices.
+
+All twelve reforms activate their profile council and have checked Age-I
+research routes. `tools/s2_frontier_politics_depth.py` makes the complete
+opening assignment, breadth, council, privilege, unlock, and direct-art
+contract a permanent regression.
+
 ## 2026-07-27 - British and Irish map granularity now drives political differentiation
 
 The existing 35 British and 16 Hibernian polity split solved ownership and

@@ -769,6 +769,118 @@ antq_ivernian_regional_gathering = {
 	}
 }
 
+antq_aestian_amber_coast_gathering = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_aestian_amber_coast_order
+			has_reform = government_reform:antq_aestian_shore_exchange_compact
+			has_reform = government_reform:antq_aestian_woodland_assembly
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_aestian_amber_coast_order
+			has_reform = government_reform:antq_aestian_shore_exchange_compact
+			has_reform = government_reform:antq_aestian_woodland_assembly
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		tribes_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		clergy_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.00
+		tribes_estate_agenda_impact = 0.26
+		burghers_estate_agenda_impact = 0.18
+		clergy_estate_agenda_impact = 0.10
+	}
+}
+
+antq_frisian_terp_assembly = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_frisian_terp_community_order
+			has_reform = government_reform:antq_frisian_tidal_compact
+			has_reform = government_reform:antq_frisian_frontier_council
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_frisian_terp_community_order
+			has_reform = government_reform:antq_frisian_tidal_compact
+			has_reform = government_reform:antq_frisian_frontier_council
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		tribes_estate_can_participate_in_parliament = yes
+		peasants_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.05
+		tribes_estate_agenda_impact = 0.22
+		peasants_estate_agenda_impact = 0.18
+		burghers_estate_agenda_impact = 0.14
+	}
+}
+
+antq_dacian_hillfort_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dacian_divided_kingships
+			has_reform = government_reform:antq_dacian_hillfort_compact
+			has_reform = government_reform:antq_dacian_mountain_court
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_dacian_divided_kingships
+			has_reform = government_reform:antq_dacian_hillfort_compact
+			has_reform = government_reform:antq_dacian_mountain_court
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		tribes_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.05
+		nobles_estate_agenda_impact = 0.24
+		tribes_estate_agenda_impact = 0.18
+		burghers_estate_agenda_impact = 0.12
+	}
+}
+
+antq_garamantian_oasis_council = {
+	type = country
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_garamantian_oasis_state
+			has_reform = government_reform:antq_garamantian_irrigation_court
+			has_reform = government_reform:antq_garamantian_caravan_compact
+		}
+	}
+	allow = {
+		OR = {
+			has_reform = government_reform:antq_garamantian_oasis_state
+			has_reform = government_reform:antq_garamantian_irrigation_court
+			has_reform = government_reform:antq_garamantian_caravan_compact
+		}
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		nobles_estate_can_participate_in_parliament = yes
+		burghers_estate_can_participate_in_parliament = yes
+		peasants_estate_can_participate_in_parliament = yes
+		parliament_base_support = 0.10
+		nobles_estate_agenda_impact = 0.20
+		burghers_estate_agenda_impact = 0.18
+		peasants_estate_agenda_impact = 0.14
+	}
+}
+
 antq_marcomannic_royal_council = {
 	type = country
 	potential = {

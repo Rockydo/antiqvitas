@@ -1,5 +1,30 @@
 # Progress
 
+## 2026-07-27 - Four frontier societies receive evidence-bounded political games
+
+- Replaced the generic political floor for Aestii, Frisii, the divided Dacian
+  kingdoms, and Garamantes. Each now has a distinct opening reform and
+  council, five programmes, three issue/agenda pairs, six social-order
+  identities, six profile privileges, and two Age-I alternatives.
+- The systems differentiate amber-coast exchange and offering custody,
+  Frisian terp maintenance and tidal-frontier obligations, Dacian hillfort,
+  mining, mounted-host and pass politics, and Garamantian oasis-water,
+  caravan, cultivation and mobility politics.
+- Generated and reviewed eight archaeological 3x2 atlases. Five early trials
+  were rejected for medieval/fantasy styling, rune-like marks, an inserted
+  boat, pseudo-inscription, or incorrect square geometry; only the corrected
+  1536x1024 object-and-landscape atlases entered the asset pipeline.
+- Installed breadth is now 45 councils, 249 programmes, 159 issues, 159
+  agendas, 161 political contracts, 364 privileges, 227 laws, and 967
+  ancient-system unlocks. All 292 opening profiles remain researchable, and
+  the nine-surface direct-art ledger now audits 1,354 chains.
+- `tools/s2_frontier_politics_depth.py` permanently verifies exact starts,
+  breadth, council activation, privilege gates, Age-I routing, and direct art.
+  Full validation passes 110/110 commands; paired vanilla/mod smoke reaches
+  responsive rendered menus with zero new or mod-unique error-log lines.
+  Evidence is recorded in
+  `docs/playtests/S2_FRONTIER_POLITICAL_DEPTH_20260727.md`.
+
 ## 2026-07-27 - Four major Britain/Ireland starts receive distinct political games
 
 - Replaced the generic tribal-kingdom floor for Trinovantes, Brigantes,

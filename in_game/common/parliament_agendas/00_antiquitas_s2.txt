@@ -1327,6 +1327,162 @@ antq_agenda_ivernian_offering_custody = {
 	chance = 10
 }
 
+antq_agenda_aestian_amber_measure = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_aestian_amber_coast_gathering
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_aestian_amber_measure_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_aestian_shore_passage = {
+	type = country
+	estate = tribes_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_aestian_amber_coast_gathering
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_aestian_shore_passage_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_aestian_offering_custody = {
+	type = country
+	estate = clergy_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_aestian_amber_coast_gathering
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_aestian_offering_custody_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_frisian_terp_maintenance = {
+	type = country
+	estate = tribes_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_frisian_terp_assembly
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_frisian_terp_maintenance_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_frisian_hide_tribute = {
+	type = country
+	estate = peasants_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_frisian_terp_assembly
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_frisian_hide_tribute_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_frisian_frontier_posture = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_frisian_terp_assembly
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_frisian_frontier_posture_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_dacian_rulers_compact = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_dacian_hillfort_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_dacian_rulers_compact_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_dacian_workshop_contributions = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_dacian_hillfort_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_dacian_workshop_contributions_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_dacian_pass_muster = {
+	type = country
+	estate = tribes_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_dacian_hillfort_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_dacian_pass_muster_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_garamantian_water_rotation = {
+	type = country
+	estate = peasants_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_garamantian_oasis_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_garamantian_water_rotation_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_garamantian_caravan_passage = {
+	type = country
+	estate = burghers_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_garamantian_oasis_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_garamantian_caravan_passage_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
+antq_agenda_garamantian_oasis_contributions = {
+	type = country
+	estate = nobles_estate
+	importance = 1.5
+	potential = {
+		parliament_type = parliament_type:antq_garamantian_oasis_council
+	}
+	on_accept = {
+		add_country_modifier = { modifier = antq_agenda_garamantian_oasis_contributions_concession years = 5 mode = add_and_extend }
+	}
+	chance = 10
+}
+
 antq_agenda_marcomannic_retinue_service = {
 	type = country
 	estate = nobles_estate

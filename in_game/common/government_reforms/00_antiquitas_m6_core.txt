@@ -515,6 +515,82 @@ antq_ivernian_regional_assembly = {
 	years = 2
 }
 
+antq_aestian_amber_coast_order = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.14
+		global_burghers_estate_power = 0.09
+		tribes_estate_power_from_cabinet = 0.23
+		burghers_estate_power_from_cabinet = 0.15
+		replace_cabinet_member_cost_modifier = 0.06
+		global_tribes_estate_power = 0.08
+		global_trade_through_owned_territory_efficiency = 0.025
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_aestian_amber_coast_gathering
+	}
+	years = 2
+}
+
+antq_frisian_terp_community_order = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.11
+		global_peasants_estate_power = 0.10
+		tribes_estate_power_from_cabinet = 0.21
+		estate_power_from_cabinet = 0.16
+		replace_cabinet_member_cost_modifier = 0.05
+		global_peasants_estate_power = 0.07
+		global_road_building_time = -0.04
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_frisian_terp_assembly
+	}
+	years = 2
+}
+
+antq_dacian_divided_kingships = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_nobles_estate_power = 0.13
+		global_tribes_estate_power = 0.08
+		nobles_estate_power_from_cabinet = 0.24
+		global_levy_size_modifier = 0.025
+		replace_cabinet_member_cost_modifier = 0.09
+		global_nobles_estate_power = 0.08
+		global_levy_size_modifier = 0.025
+		research_speed = 0.08
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_dacian_hillfort_council
+	}
+	years = 2
+}
+
+antq_garamantian_oasis_state = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		global_burghers_estate_power = 0.10
+		burghers_estate_power_from_cabinet = 0.20
+		country_cabinet_efficiency = 0.025
+		replace_cabinet_member_cost_modifier = 0.07
+		global_burghers_estate_power = 0.07
+		global_production_efficiency = 0.025
+		research_speed = 0.08
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_garamantian_oasis_council
+	}
+	years = 2
+}
+
 antq_marcomannic_bohemian_kingship = {
 	major = yes
 	government = tribe
@@ -2460,6 +2536,190 @@ antq_ivernian_cattle_gift_court = {
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_ivernian_regional_gathering
+	}
+	years = 2
+}
+
+antq_aestian_shore_exchange_compact = {
+	major = yes
+	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_aestian_amber_coast_order
+			has_reform = government_reform:antq_aestian_shore_exchange_compact
+			has_reform = government_reform:antq_aestian_woodland_assembly
+		}
+	}
+	country_modifier = {
+		global_burghers_estate_power = 0.18
+		global_tribes_estate_power = 0.10
+		burghers_estate_power_from_cabinet = 0.30
+		global_trade_through_owned_territory_efficiency = 0.035
+		replace_cabinet_member_cost_modifier = 0.06
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_aestian_amber_coast_gathering
+	}
+	years = 2
+}
+
+antq_aestian_woodland_assembly = {
+	major = yes
+	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_aestian_amber_coast_order
+			has_reform = government_reform:antq_aestian_shore_exchange_compact
+			has_reform = government_reform:antq_aestian_woodland_assembly
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.20
+		global_peasants_estate_power = 0.08
+		tribes_estate_power_from_cabinet = 0.32
+		stability_cost_efficiency = -0.02
+		replace_cabinet_member_cost_modifier = 0.05
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_aestian_amber_coast_gathering
+	}
+	years = 2
+}
+
+antq_frisian_tidal_compact = {
+	major = yes
+	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_frisian_terp_community_order
+			has_reform = government_reform:antq_frisian_tidal_compact
+			has_reform = government_reform:antq_frisian_frontier_council
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.18
+		global_peasants_estate_power = 0.11
+		tribes_estate_power_from_cabinet = 0.29
+		global_monthly_control = 0.0005
+		replace_cabinet_member_cost_modifier = 0.05
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_frisian_terp_assembly
+	}
+	years = 2
+}
+
+antq_frisian_frontier_council = {
+	major = yes
+	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_frisian_terp_community_order
+			has_reform = government_reform:antq_frisian_tidal_compact
+			has_reform = government_reform:antq_frisian_frontier_council
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.13
+		global_burghers_estate_power = 0.10
+		nobles_estate_power_from_cabinet = 0.23
+		country_cabinet_efficiency = 0.025
+		replace_cabinet_member_cost_modifier = 0.09
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_frisian_terp_assembly
+	}
+	years = 2
+}
+
+antq_dacian_hillfort_compact = {
+	major = yes
+	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dacian_divided_kingships
+			has_reform = government_reform:antq_dacian_hillfort_compact
+			has_reform = government_reform:antq_dacian_mountain_court
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.14
+		global_nobles_estate_power = 0.13
+		estate_power_from_cabinet = 0.28
+		global_levy_size_modifier = 0.025
+		replace_cabinet_member_cost_modifier = 0.08
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_dacian_hillfort_council
+	}
+	years = 2
+}
+
+antq_dacian_mountain_court = {
+	major = yes
+	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dacian_divided_kingships
+			has_reform = government_reform:antq_dacian_hillfort_compact
+			has_reform = government_reform:antq_dacian_mountain_court
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.19
+		global_burghers_estate_power = 0.09
+		nobles_estate_power_from_cabinet = 0.31
+		global_levy_size_modifier = 0.035
+		replace_cabinet_member_cost_modifier = 0.13
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_dacian_hillfort_council
+	}
+	years = 2
+}
+
+antq_garamantian_irrigation_court = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_garamantian_oasis_state
+			has_reform = government_reform:antq_garamantian_irrigation_court
+			has_reform = government_reform:antq_garamantian_caravan_compact
+		}
+	}
+	country_modifier = {
+		global_crown_estate_power = 0.12
+		global_peasants_estate_power = 0.15
+		estate_power_from_cabinet = 0.28
+		global_production_efficiency = 0.03
+		set_cabinet_member_cost_modifier = -0.04
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_garamantian_oasis_council
+	}
+	years = 2
+}
+
+antq_garamantian_caravan_compact = {
+	major = yes
+	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_garamantian_oasis_state
+			has_reform = government_reform:antq_garamantian_irrigation_court
+			has_reform = government_reform:antq_garamantian_caravan_compact
+		}
+	}
+	country_modifier = {
+		global_burghers_estate_power = 0.19
+		global_tribes_estate_power = 0.09
+		burghers_estate_power_from_cabinet = 0.31
+		global_trade_through_owned_territory_efficiency = 0.04
+		replace_cabinet_member_cost_modifier = 0.08
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_garamantian_oasis_council
 	}
 	years = 2
 }

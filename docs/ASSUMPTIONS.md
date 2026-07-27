@@ -1,5 +1,39 @@
 # Historical Assumptions
 
+## 2026-07-27 - Aestian, Frisian, Dacian, and Garamantian mechanics remain bounded
+
+Tacitus's Aestii are a late-first-century literary witness, not a recovered
+AD 1 constitution. His amber gathering, coastal setting, agricultural emphasis
+and distinctive worship support an amber-coast gathering and local offering
+custody, but not a centralized Aestian kingdom, named ruler, priestly state, or
+fixed ethnic frontier.
+
+Frisian terp settlement and Roman frontier contact are secure. Tacitus's
+AD 28 ox-hide tribute crisis is used to shape a possible tribute-reckoning
+pressure, not moved backward into an opening revolt or a permanent written
+treaty. Dacia opens after Burebista's realm had fragmented: the game therefore
+uses divided hillfort kingships and regional compacts rather than a single
+Decebalan-style crown or centralized priesthood.
+
+Garamantian urban oasis settlement, irrigation, mobility, cultivation, craft
+production and trans-Saharan exchange support a state richer than a generic
+desert society. The exact AD 1 ruler, office titles, water-allocation procedure
+and territorial reach are not securely recoverable, so all such mechanisms
+remain anonymous gameplay abstractions.
+
+Sources weighed: plan sections 8, 11, and 13; `CAH-X` and `CAH-XI`;
+[Tacitus, *Germania* 45](https://projekt-gutenberg.org/authors/publius-cornelius-tacitus/books/c-cornelius-tacitus-germania/chapter/45/);
+[Tacitus, *Annals* 4.72](https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Tacitus/Annals/4E%2A.html);
+[University of Groningen, Frisian terp-site settlement development](https://www.rug.nl/research/groningen-institute-of-archaeology/research/research-groups/settlement-development-of-frisian-terp-sites-eia-lma);
+[Groningen Palaeohistoria, Frisii and Frisiavones](https://ugp.rug.nl/Palaeohistoria/article/view/25159);
+[Strabo 7.3.11](https://en.wikisource.org/wiki/Page%3AThe_geography_of_Strabo_%281854%29_Volume_1.djvu/481);
+[University of Leicester, Trans-Sahara/Garamantes project](https://le.ac.uk/news/2015/february/archaeologists-reveal-mysteries-of-2018lost2019-3-000-year-old-civilisation);
+[BILNAS, Garamantian metal trade](https://www.bilnas.org/graprojects/metal-trade-in-the-pre-islamic-sahara-lead-isotopes-analysis-of-garamantian-copper/);
+and [*Archaeometry*, North Eastern Baltic copper exchange](https://onlinelibrary.wiley.com/doi/abs/10.1111/arcm.12850).
+
+[secure broad material-economic frames; contested AD 1 ethnic reach,
+institutional procedure, office titles, rulers, and numerical effects]
+
 ## 2026-07-27 - Four Britain/Ireland political profiles use uneven evidence conservatively
 
 Dubnovellaunos is the strongest AD 1 anchor in this tranche: Oxford's Celtic
