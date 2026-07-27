@@ -46,8 +46,8 @@ and focused runtime probe all pass.
 - Only nine ancient institutions cover six ages. Government depth is still
   thin outside the first replacement tranches: 45 reforms and 124 privileges
   serve 292 opening polities. The legal layer now has 227 ancient groups,
-  including 182 profile laws with 572 total options and a first 26-option
-  dated development layer; country-specific exceptions remain open.
+  including 182 profile laws with 584 total options, a 26-option dated
+  development layer, and 12 country-specific exceptions.
 - Exact-name mirrors still leave most installed estates, privileges, parliament
   material, cabinet actions, laws, religious aspects, and artillery-facing UI in
   the mounted union. Rome now starts at technology level 3 with a 9.60K reserve
@@ -185,8 +185,13 @@ and focused runtime probe all pass.
       - [x] Add the first dated legal-development layer: two options for every
         one of the 13 legal profiles, 26 total, spanning AD 25-382. All gates
         use `AntqDate`, each option has a distinct three-effect package and an
-        evidence boundary, and the permanent regression now requires 572
-        options across the 182 groups.
+        evidence boundary; the permanent regression separately counts the 26
+        dated additions inside the current 584-option union.
+      - [x] Add 12 country-only exceptional law options for Rome, Han,
+        Parthia, Armenia, Xiongnu, Goguryeo, Anuradhapura, Satavahana, Kush,
+        Nabataea, Himyar, and the Cherusci. Availability uses exact
+        `has_or_had_tag` gates rendered from the collision-safe tag map; total
+        profile-law breadth is now 584 options.
   - [x] Eliminate the fresh-bookmark parliament compiler failures before the
     replacement UI probe. The 2026-07-26 Britain/Hibernia bookmark isolated all
     2,855 `Script system error!` entries to
@@ -586,8 +591,12 @@ and focused runtime probe all pass.
     restored Han administration, Sasanian court/domain changes, Xianbei
     confederation, federate settlements, Aksumite coinage, Himiko's embassy,
     South Arabian consolidation, and carefully bounded regional analogues.
-  - [ ] Add country-specific exceptional laws and dated later-century options;
-    continue expanding profile-specific privileges beyond the current 124.
+  - [x] Add the first country-specific exceptional-law tranche. Twelve major
+    states now expose one unique option inside their existing profile group,
+    with separate effects, descriptions, sources, and exact tag gates. The
+    legal layer now contains 584 options.
+  - [ ] Continue expanding country/culture-specific privileges beyond the
+    current 124, with prerequisites, revocation behavior, and direct art.
   - Acceptance: all 229 tags have useful legal/political choices; major countries
     have bespoke depth; no duplicate filler effect or post-476 inheritance.
 

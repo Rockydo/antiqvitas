@@ -279,6 +279,21 @@ class LateOption:
     boundary: str
 
 
+@dataclass(frozen=True)
+class CountryOption:
+    design_tag: str
+    profile: str
+    theme: str
+    key: str
+    name: str
+    description: str
+    effects: tuple[tuple[str, str], ...]
+    preferences: tuple[str, ...]
+    source: str
+    confidence: str
+    boundary: str
+
+
 THEMES = (
     Theme(
         "status", "Status and Incorporation", "socioeconomic",
@@ -745,6 +760,105 @@ LATE_OPTIONS = (
     ),
 )
 
+COUNTRY_OPTIONS = (
+    CountryOption(
+        "ROM", "roman", "offices", "antq_s2_roman_offices_consular_commissions",
+        "Consular and Senatorial Commissions",
+        "Reserve exceptional commands and public investigations for magistrates commissioned through the imperial Senate.",
+        (("country_cabinet_efficiency", "0.045"), ("global_nobles_estate_power", "0.055"), ("replace_cabinet_member_cost_modifier", "0.08")),
+        ("nobles_estate", "crown_estate"), "P8.1;P11;P13;OCD", "secure",
+        "Grounded in Augustan magistracies and commissions; their balance under a divergent Principate remains counterfactual.",
+    ),
+    CountryOption(
+        "HAN", "han", "revenue", "antq_s2_han_revenue_salt_iron_offices",
+        "Salt and Iron Offices",
+        "Maintain direct state supervision of strategic salt and iron revenues through audited officials and transport quotas.",
+        (("peasants_estate_max_tax", "0.045"), ("global_production_efficiency", "0.035"), ("global_crown_estate_power", "0.055")),
+        ("crown_estate", "burghers_estate"), "P8.3;P11;P13;BHR", "secure",
+        "The monopolies and their debate are secure; this policy abstracts changing Western Han administration and local enforcement.",
+    ),
+    CountryOption(
+        "PAR", "iranian", "external", "antq_s2_iranian_external_arsacid_subkings",
+        "Arsacid Subking and Hostage Compact",
+        "Bind subordinate dynasts through precedence, hostages, marriage diplomacy, and negotiated mounted service.",
+        (("subject_loyalty", "8"), ("diplomatic_reputation", "1"), ("global_nobles_estate_power", "0.06")),
+        ("nobles_estate", "crown_estate"), "P8.2;P11;P13;CAH-XI", "secure",
+        "Arsacid dynastic brokerage is secure, while a single empire-wide compact and its numerical balance are reconstructed.",
+    ),
+    CountryOption(
+        "ARM", "iranian", "local_rule", "antq_s2_iranian_local_rule_armenian_dynasts",
+        "Armenian Fortress-Dynast Compacts",
+        "Broker royal authority through hereditary houses, fortress districts, cavalry obligations, and court arbitration.",
+        (("global_max_rural_control", "0.025"), ("land_morale_modifier", "0.025"), ("global_nobles_estate_power", "0.058")),
+        ("nobles_estate", "crown_estate"), "P8.2;P11;P13;CAH-XI", "contested",
+        "Uses securely broad dynastic and fortress patterns without backdating a later formal nakharar order unchanged.",
+    ),
+    CountryOption(
+        "XIO", "steppe", "muster", "antq_s2_steppe_muster_xiongnu_wings",
+        "Xiongnu Wing Muster",
+        "Raise eastern and western commands through lineage quotas, remount obligations, and witnessed pasture returns.",
+        (("global_levy_size_modifier", "0.085"), ("global_levy_recruitment_speed_modifier", "0.08"), ("global_tribes_estate_power", "0.062")),
+        ("tribes_estate", "nobles_estate"), "P8.3;P11;P13;BHR", "secure",
+        "The wing structure is secure; exact quotas, hierarchy, and universal participation cannot be recovered.",
+    ),
+    CountryOption(
+        "GOG", "eastern", "muster", "antq_s2_eastern_muster_goguryeo_fortresses",
+        "Goguryeo Fortress-Household Muster",
+        "Tie household service, beacon relays, grain stores, and rotating commanders to the fortified royal network.",
+        (("global_levy_recruitment_speed_modifier", "0.105"), ("land_morale_modifier", "0.022"), ("global_crown_estate_power", "0.053")),
+        ("crown_estate", "nobles_estate"), "P8.3;P11;P13;CAH-XI", "contested",
+        "A bounded early-Goguryeo reconstruction that avoids importing the mature Three Kingdoms military administration.",
+    ),
+    CountryOption(
+        "ANU", "indic", "revenue", "antq_s2_indic_revenue_anuradhapura_tanks",
+        "Anuradhapura Tank-and-Field Rolls",
+        "Assess irrigated fields, reservoir labor, grain stores, and royal remissions through local custodians.",
+        (("global_monthly_food_modifier", "0.035"), ("global_monthly_control", "0.016"), ("global_peasants_estate_power", "0.052")),
+        ("peasants_estate", "crown_estate"), "P8.4;P11;P13", "secure",
+        "Irrigation and royal patronage are secure; a unified surviving assessment roll is not claimed.",
+    ),
+    CountryOption(
+        "SAT", "indic", "commerce", "antq_s2_indic_commerce_satavahana_guilds",
+        "Satavahana Guild and Endowment Charters",
+        "Recognize guild deposits, caravan protection, religious endowments, and witnessed urban measures.",
+        (("global_trade_through_owned_territory_efficiency", "0.065"), ("global_production_efficiency", "0.034"), ("global_burghers_estate_power", "0.052")),
+        ("burghers_estate", "clergy_estate"), "P8.4;P11;P13;CAH-XI", "secure",
+        "Draws on inscriptions and corporate practice while treating their combination as one selectable policy.",
+    ),
+    CountryOption(
+        "KUS", "african", "revenue", "antq_s2_african_revenue_meroitic_returns",
+        "Meroitic Temple and Workshop Returns",
+        "Coordinate Nile contributions, temple stores, iron workshops, gold routes, and sealed provincial tribute.",
+        (("global_production_efficiency", "0.038"), ("burghers_estate_max_tax", "0.032"), ("global_clergy_estate_power", "0.052")),
+        ("clergy_estate", "burghers_estate"), "P8.5;P11;P13;CAH-XI", "contested",
+        "Combines attested Meroitic material and cult contexts without claiming a complete surviving fiscal code.",
+    ),
+    CountryOption(
+        "NAB", "arabian", "external", "antq_s2_arabian_external_nabataean_routes",
+        "Nabataean Caravan and Water Compacts",
+        "Guarantee caravan passage, cistern custody, sanctuary hospitality, and negotiated frontier tolls.",
+        (("diplomatic_capacity_modifier", "0.052"), ("global_trade_through_owned_territory_efficiency", "0.068"), ("global_burghers_estate_power", "0.051")),
+        ("burghers_estate", "crown_estate"), "P8.5;P11;P13;PLE", "secure",
+        "Nabataean route and water management are secure; the unified compact is a gameplay synthesis.",
+    ),
+    CountryOption(
+        "HIM", "arabian", "land", "antq_s2_arabian_land_himyarite_irrigation",
+        "Himyarite Irrigation Obligations",
+        "Record terrace, dam, canal, field, and sanctuary obligations through royal and community inscriptions.",
+        (("global_max_rural_control", "0.032"), ("global_monthly_food_modifier", "0.034"), ("global_crown_estate_power", "0.054")),
+        ("crown_estate", "peasants_estate"), "P8.5;P11;P13;CAH-XI", "secure",
+        "South Arabian irrigation and inscription practice are secure; uniform enforcement across Himyar remains uncertain.",
+    ),
+    CountryOption(
+        "CRU", "germanic", "external", "antq_s2_germanic_external_cheruscan_coalition",
+        "Cheruscan Coalition Oaths",
+        "Coordinate envoys, hostages, sacred oaths, and temporary war leadership among allied communities.",
+        (("diplomatic_reputation", "1"), ("diplomatic_capacity_modifier", "0.048"), ("global_tribes_estate_power", "0.056")),
+        ("tribes_estate", "clergy_estate"), "P8.7;P11;P13;TAC-GER", "contested",
+        "The Arminian coalition is secure in outline; formal oath procedure and continued availability are inferred.",
+    ),
+)
+
 
 def read_roster() -> list[dict[str, str]]:
     with ROSTER.open(encoding="utf-8-sig", newline="") as handle:
@@ -813,6 +927,16 @@ def all_law_options() -> set[tuple[str, str]]:
     return base | {
         (law_key(option.profile, option.theme), option.key)
         for option in LATE_OPTIONS
+    } | {
+        (law_key(option.profile, option.theme), option.key)
+        for option in COUNTRY_OPTIONS
+    }
+
+
+def engine_tags() -> dict[str, str]:
+    return {
+        row["design_tag"]: row["engine_tag"]
+        for row in json.loads(TAG_MAP.read_text(encoding="utf-8"))["entries"]
     }
 
 
@@ -837,6 +961,7 @@ def render_laws() -> str:
         "# Generated by tools/s2_ancient_laws.py --write.",
         "# Thirteen profile-gated AD 1 legal systems; 14 questions and 3 policies each.",
     ]
+    tag_map = engine_tags()
     for profile in PROFILES:
         for theme in THEMES:
             lines.extend((
@@ -871,6 +996,26 @@ def render_laws() -> str:
                     f"\t{option.key} = {{",
                     "\t\tpotential = {",
                     f"\t\t\tcurrent_date >= {option.available.engine()}",
+                    "\t\t}",
+                    "\t\tcountry_modifier = {",
+                ))
+                lines.extend(
+                    f"\t\t\t{modifier} = {value}"
+                    for modifier, value in option.effects
+                )
+                lines.extend(("\t\t}", "\t\tyears = 2", "\t\testate_preferences = {"))
+                lines.extend(f"\t\t\t{estate}" for estate in option.preferences)
+                lines.extend(("\t\t}", "\t}"))
+            for option in (
+                candidate
+                for candidate in COUNTRY_OPTIONS
+                if candidate.profile == profile.key and candidate.theme == theme.key
+            ):
+                lines.extend((
+                    f"\t{option.key} = {{",
+                    "\t\tunique = yes",
+                    "\t\tpotential = {",
+                    f"\t\t\thas_or_had_tag = {tag_map[option.design_tag]}",
                     "\t\t}",
                     "\t\tcountry_modifier = {",
                 ))
@@ -927,7 +1072,8 @@ def option_ledger() -> str:
     writer.writerow((
         "profile", "law", "theme", "category", "law_name", "law_description",
         "option", "stance", "option_name", "option_description", "modifiers",
-        "estate_preferences", "starting", "available_date", "source", "confidence", "boundary",
+        "estate_preferences", "starting", "available_date", "design_tag",
+        "source", "confidence", "boundary",
     ))
     for profile in PROFILES:
         for theme in THEMES:
@@ -952,6 +1098,7 @@ def option_ledger() -> str:
                     "|".join(preferences),
                     "yes" if stance == profile.starting_stance else "no",
                     "",
+                    "",
                     profile.source,
                     profile.confidence,
                     profile.boundary,
@@ -974,6 +1121,30 @@ def option_ledger() -> str:
             "|".join(option.preferences),
             "no",
             option.available.engine(),
+            "",
+            option.source,
+            option.confidence,
+            option.boundary,
+        ))
+    for option in COUNTRY_OPTIONS:
+        profile = profile_by_key()[option.profile]
+        theme = next(candidate for candidate in THEMES if candidate.key == option.theme)
+        writer.writerow((
+            option.profile,
+            law_key(option.profile, option.theme),
+            option.theme,
+            theme.category,
+            f"{profile.name} {theme.title}",
+            f"Defines {theme.question} within the {profile.name} political sphere.",
+            option.key,
+            "country",
+            option.name,
+            option.description,
+            "|".join(f"{key}={value}" for key, value in option.effects),
+            "|".join(option.preferences),
+            "no",
+            "",
+            option.design_tag,
             option.source,
             option.confidence,
             option.boundary,
@@ -1004,6 +1175,14 @@ def localization(language: str) -> str:
             (f"{option.key}_desc", option.description),
         )
     )
+    rows.extend(
+        pair
+        for option in COUNTRY_OPTIONS
+        for pair in (
+            (option.key, option.name),
+            (f"{option.key}_desc", option.description),
+        )
+    )
     lines = [f"l_{language}:"]
     lines.extend(f' {key}: "{value}"' for key, value in rows)
     return "\n".join(lines) + "\n"
@@ -1028,8 +1207,8 @@ def validate_content() -> None:
         failures.append("legal layer must contain 13 profiles and 14 themes")
     if len(assignments) != 292:
         failures.append(f"legal profiles must cover 292 tags; found {len(assignments)}")
-    if len(profile_law_pairs()) != 182 or len(all_law_options()) != 572:
-        failures.append("legal breadth must be 182 groups and 572 options")
+    if len(profile_law_pairs()) != 182 or len(all_law_options()) != 584:
+        failures.append("legal breadth must be 182 groups and 584 options")
     if {theme.category for theme in THEMES} - LAW_CATEGORIES:
         failures.append("unsupported legal category")
     for profile in PROFILES:
@@ -1080,6 +1259,33 @@ def validate_content() -> None:
             failures.append(f"dated law option {option.key} lacks a bounded evidence note")
     if len(LATE_OPTIONS) != 26 or any(late_counts.get(key) != 2 for key in profile_keys):
         failures.append("dated legal development must provide two options for every profile")
+    assignments_by_tag = tag_profiles()
+    tag_map = engine_tags()
+    country_keys: set[str] = set()
+    country_packages: set[tuple[tuple[str, str], ...]] = set()
+    for option in COUNTRY_OPTIONS:
+        if (
+            option.design_tag not in assignments_by_tag
+            or assignments_by_tag[option.design_tag] != option.profile
+            or option.design_tag not in tag_map
+            or option.theme not in theme_keys
+        ):
+            failures.append(f"country law option {option.key} has an invalid tag/profile/theme")
+        if option.key in country_keys:
+            failures.append(f"duplicate country law option {option.key}")
+        country_keys.add(option.key)
+        if len(option.effects) < 3 or option.effects in country_packages:
+            failures.append(f"country law option {option.key} lacks a distinct three-effect package")
+        country_packages.add(option.effects)
+        for modifier, _value in option.effects:
+            if modifier not in ALLOWED_MODIFIERS:
+                failures.append(f"country law option {option.key} uses unverified modifier {modifier}")
+        if set(option.preferences) - ESTATES:
+            failures.append(f"country law option {option.key} uses unknown estate")
+        if option.confidence not in {"secure", "contested"} or len(option.boundary) < 55:
+            failures.append(f"country law option {option.key} lacks a bounded evidence note")
+    if len(COUNTRY_OPTIONS) != 12 or len({option.design_tag for option in COUNTRY_OPTIONS}) != 12:
+        failures.append("country legal exceptions must cover twelve distinct major-state tags")
     text = render_laws().lower()
     for word in FORBIDDEN:
         if f" {word}" in text:
@@ -1104,7 +1310,8 @@ def validate_content() -> None:
         "s2_ancient_laws: PASS "
         f"({len(PROFILES)} profiles; {len(assignments)} tags; "
         f"{len(profile_law_pairs())} law groups; {len(all_law_options())} options; "
-        f"{len(LATE_OPTIONS)} dated options; 42 distinct opening packages/profile; distribution "
+        f"{len(LATE_OPTIONS)} dated + {len(COUNTRY_OPTIONS)} country options; "
+        f"42 distinct opening packages/profile; distribution "
         + ", ".join(f"{key}={counts[key]}" for key in sorted(counts))
         + ")"
     )

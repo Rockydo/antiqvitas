@@ -1,5 +1,27 @@
 # Historical Assumptions
 
+## 2026-07-27 - Country exceptions represent distinctive practice, not exhaustive codes
+
+The twelve exceptional options identify a practice unusually important and
+well evidenced for a named opening polity. They do not claim that Rome had
+only senatorial commissions, Han only salt-and-iron offices, Parthia only
+subking brokerage, or that the selected policy governed every location
+uniformly.
+
+For Armenia, Goguryeo, Kush, Anuradhapura, Himyar, and the Cherusci especially,
+the option combines several attested institutional or material relationships
+into one gameplay choice. Later formal terminology is avoided where it would
+project mature structures backward. The `has_or_had_tag` gate intentionally
+allows a transformed successor controlled by the player to retain its inherited
+institutional option.
+
+Sources and boundaries are recorded per row in
+`docs/m6/ancient_law_options.csv`. Principal routes: `P8.1`-`P8.7`; `P11`;
+`P13`; `BHR`; `CAH-XI`; `OCD`; `PLE`; `TAC-GER`.
+
+[secure named polity/practice relationships; contested uniform policy form,
+exclusive importance, later continuity, and numerical effects]
+
 ## 2026-07-27 - Dated legal options mix event anchors with bounded diffusion windows
 
 Dates tied to Eastern Han restoration, the Antonine citizenship grant, the

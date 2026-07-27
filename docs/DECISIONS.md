@@ -1,5 +1,17 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - Country laws use collision-safe has-or-had-tag gates
+
+Country-specific legal options remain inside the polity's regional profile law
+group and add an option-level `unique = yes` plus `has_or_had_tag`. The
+generator never embeds the readable design tag directly: it resolves the
+current engine tag from `docs/world_1ad/tag_map.json`, then verifies that the
+design tag belongs to the same legal profile as the parent group.
+
+This preserves an exceptional law after a legal tag transition while
+preventing it from appearing to regional neighbors. It also avoids duplicating
+an entire 14-group legal system merely to add one state-specific institution.
+
 ## 2026-07-27 - Later legal developments are option-level date gates
 
 The installed `01_legal_system.txt` proves that a policy can carry its own

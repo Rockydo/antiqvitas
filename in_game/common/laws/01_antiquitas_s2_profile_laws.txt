@@ -581,6 +581,22 @@ antq_s2_roman_offices_law = {
 			burghers_estate
 		}
 	}
+	antq_s2_roman_offices_consular_commissions = {
+		unique = yes
+		potential = {
+			has_or_had_tag = XAA
+		}
+		country_modifier = {
+			country_cabinet_efficiency = 0.045
+			global_nobles_estate_power = 0.055
+			replace_cabinet_member_cost_modifier = 0.08
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			crown_estate
+		}
+	}
 }
 
 antq_s2_roman_migration_law = {
@@ -809,6 +825,22 @@ antq_s2_han_revenue_law = {
 		estate_preferences = {
 			peasants_estate
 			tribes_estate
+		}
+	}
+	antq_s2_han_revenue_salt_iron_offices = {
+		unique = yes
+		potential = {
+			has_or_had_tag = XAR
+		}
+		country_modifier = {
+			peasants_estate_max_tax = 0.045
+			global_production_efficiency = 0.035
+			global_crown_estate_power = 0.055
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			burghers_estate
 		}
 	}
 }
@@ -1622,6 +1654,22 @@ antq_s2_iranian_local_rule_law = {
 			tribes_estate
 		}
 	}
+	antq_s2_iranian_local_rule_armenian_dynasts = {
+		unique = yes
+		potential = {
+			has_or_had_tag = XAO
+		}
+		country_modifier = {
+			global_max_rural_control = 0.025
+			land_morale_modifier = 0.025
+			global_nobles_estate_power = 0.058
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			crown_estate
+		}
+	}
 }
 
 antq_s2_iranian_cult_law = {
@@ -1998,6 +2046,22 @@ antq_s2_iranian_external_law = {
 		estate_preferences = {
 			burghers_estate
 			tribes_estate
+		}
+	}
+	antq_s2_iranian_external_arsacid_subkings = {
+		unique = yes
+		potential = {
+			has_or_had_tag = XAH
+		}
+		country_modifier = {
+			subject_loyalty = 8
+			diplomatic_reputation = 1
+			global_nobles_estate_power = 0.06
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			crown_estate
 		}
 	}
 }
@@ -2812,6 +2876,22 @@ antq_s2_indic_revenue_law = {
 			tribes_estate
 		}
 	}
+	antq_s2_indic_revenue_anuradhapura_tanks = {
+		unique = yes
+		potential = {
+			has_or_had_tag = XBD
+		}
+		country_modifier = {
+			global_monthly_food_modifier = 0.035
+			global_monthly_control = 0.016
+			global_peasants_estate_power = 0.052
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			crown_estate
+		}
+	}
 }
 
 antq_s2_indic_land_law = {
@@ -3093,6 +3173,22 @@ antq_s2_indic_commerce_law = {
 		estate_preferences = {
 			peasants_estate
 			tribes_estate
+		}
+	}
+	antq_s2_indic_commerce_satavahana_guilds = {
+		unique = yes
+		potential = {
+			has_or_had_tag = SAT
+		}
+		country_modifier = {
+			global_trade_through_owned_territory_efficiency = 0.065
+			global_production_efficiency = 0.034
+			global_burghers_estate_power = 0.052
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			clergy_estate
 		}
 	}
 }
@@ -3561,6 +3657,22 @@ antq_s2_steppe_muster_law = {
 		estate_preferences = {
 			peasants_estate
 			tribes_estate
+		}
+	}
+	antq_s2_steppe_muster_xiongnu_wings = {
+		unique = yes
+		potential = {
+			has_or_had_tag = XIO
+		}
+		country_modifier = {
+			global_levy_size_modifier = 0.085
+			global_levy_recruitment_speed_modifier = 0.08
+			global_tribes_estate_power = 0.062
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+			nobles_estate
 		}
 	}
 }
@@ -4683,6 +4795,22 @@ antq_s2_germanic_external_law = {
 			peasants_estate
 		}
 	}
+	antq_s2_germanic_external_cheruscan_coalition = {
+		unique = yes
+		potential = {
+			has_or_had_tag = CRU
+		}
+		country_modifier = {
+			diplomatic_reputation = 1
+			diplomatic_capacity_modifier = 0.048
+			global_tribes_estate_power = 0.056
+		}
+		years = 2
+		estate_preferences = {
+			tribes_estate
+			clergy_estate
+		}
+	}
 }
 
 antq_s2_celtic_status_law = {
@@ -5557,6 +5685,22 @@ antq_s2_arabian_land_law = {
 			tribes_estate
 		}
 	}
+	antq_s2_arabian_land_himyarite_irrigation = {
+		unique = yes
+		potential = {
+			has_or_had_tag = HIM
+		}
+		country_modifier = {
+			global_max_rural_control = 0.032
+			global_monthly_food_modifier = 0.034
+			global_crown_estate_power = 0.054
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			peasants_estate
+		}
+	}
 }
 
 antq_s2_arabian_muster_law = {
@@ -6038,6 +6182,22 @@ antq_s2_arabian_external_law = {
 		estate_preferences = {
 			burghers_estate
 			tribes_estate
+		}
+	}
+	antq_s2_arabian_external_nabataean_routes = {
+		unique = yes
+		potential = {
+			has_or_had_tag = NAB
+		}
+		country_modifier = {
+			diplomatic_capacity_modifier = 0.052
+			global_trade_through_owned_territory_efficiency = 0.068
+			global_burghers_estate_power = 0.051
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			crown_estate
 		}
 	}
 }
@@ -6844,6 +7004,22 @@ antq_s2_african_revenue_law = {
 			tribes_estate
 		}
 	}
+	antq_s2_african_revenue_meroitic_returns = {
+		unique = yes
+		potential = {
+			has_or_had_tag = XBE
+		}
+		country_modifier = {
+			global_production_efficiency = 0.038
+			burghers_estate_max_tax = 0.032
+			global_clergy_estate_power = 0.052
+		}
+		years = 2
+		estate_preferences = {
+			clergy_estate
+			burghers_estate
+		}
+	}
 }
 
 antq_s2_african_land_law = {
@@ -7600,6 +7776,22 @@ antq_s2_eastern_muster_law = {
 			peasants_estate
 			tribes_estate
 			burghers_estate
+		}
+	}
+	antq_s2_eastern_muster_goguryeo_fortresses = {
+		unique = yes
+		potential = {
+			has_or_had_tag = GOG
+		}
+		country_modifier = {
+			global_levy_recruitment_speed_modifier = 0.105
+			land_morale_modifier = 0.022
+			global_crown_estate_power = 0.053
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			nobles_estate
 		}
 	}
 }

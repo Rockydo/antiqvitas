@@ -1,5 +1,24 @@
 # Progress
 
+## 2026-07-27 - Twelve country-specific legal exceptions
+
+- Added unique law options for Rome, Han, Parthia, Armenia, Xiongnu, Goguryeo,
+  Anuradhapura, Satavahana, Kush, Nabataea, Himyar, and the Cherusci.
+- The options cover consular commissions, salt-and-iron administration,
+  Arsacid subkings, Armenian fortress dynasts, Xiongnu wing musters, Goguryeo
+  fortress households, Lankan irrigation rolls, Satavahana guild charters,
+  Meroitic returns, Nabataean water-route compacts, Himyarite irrigation, and
+  Cheruscan coalition oaths.
+- Every option is `unique`, sits inside the state's existing profile law group,
+  and uses a collision-safe `has_or_had_tag` gate generated from
+  `tag_map.json`. The validator proves each design tag resolves to the intended
+  profile and engine tag.
+- Legal breadth is now 584 options: 546 opening profile choices, 26 dated
+  developments, and 12 country exceptions. Full validation passes 102/102
+  checks; paired vanilla/mod smoke reaches responsive rendered menus with zero
+  mod-unique `error.log` lines. Evidence is in
+  `docs/playtests/S2_COUNTRY_LEGAL_EXCEPTIONS_20260727.md`.
+
 ## 2026-07-27 - First dated legal-development layer
 
 - Added 26 later legal options, exactly two for every one of the 13 legal
