@@ -62,14 +62,23 @@ and focused runtime probe all pass.
     now shows +178.11 revenue, +15.46 monthly balance, and a 9.60K reserve.
     Replace the misleading vanilla no-market bankruptcy banner with
     "Treasury Under Emergency Administration."
-  - Capture a fresh, unpaused Rome economy breakdown and quantify taxes, trade,
-    subject income, army/navy, court, government, institution, and building costs.
+  - [x] Capture a fresh, unpaused Rome economy breakdown. The 1 January AD 1
+    panel records a 9.60K reserve, +181.65 income, -161.22 expenses, and
+    +20.42/month. Income is 178.11 in-kind provincial revenue and 3.54
+    diplomatic income; visible costs are 53.10 navy, 44.93 court, 39.18
+    diplomacy, 23.72 army, and 0.28 forts, with no separate opening tax, trade,
+    government, institution, or building charge.
   - Correct generator inputs rather than adding an arbitrary rescue event.
     Redistribute the implausibly concentrated building seed first; then set a
     documented starting treasury only if the engine's normal default is inadequate.
   - Acceptance: Rome starts solvent, can sustain its historical peacetime forces
     and administration at neutral spending, has at least a 12-month reserve, and
     remains non-bankrupt in a focused 12-month smoke probe.
+    Opening and three-month evidence is green: on 30 March Rome retains 9.67K
+    and +19.77/month. Two bounded attempts did not reach twelve months because
+    the first exposed a zero-duration driver-click defect and the second ended
+    in a DX12/FSR renderer access violation; the remaining runtime proof is
+    recorded in `BLOCKERS.md` and does not block other work.
 
 - [ ] Make research available to Rome and every playable opening profile.
   - [x] Lower Rome, Han, and Arsacid Iran from opening technology level 4 to 3;

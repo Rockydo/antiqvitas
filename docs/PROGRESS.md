@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-27 - Fresh Rome opening-budget evidence and driver repair
+
+- Entered a newly generated AD 1 bookmark as Rome and captured the complete
+  opening economy: 9.60K reserve, +181.65 income, -161.22 expenses, and
+  +20.42/month.
+- Verified the main cost structure directly: 53.10 navy, 44.93 court, 39.18
+  diplomacy, 23.72 army, and 0.28 forts. The emergency bridge supplies 178.11
+  while markets are absent; Rome's opening reserve is about 59 months of
+  current expenses.
+- Repaired the game driver's zero-duration click path with a short physical
+  press/release, allowing country selection and historical-current modals to
+  accept automation consistently.
+- Rome remained solvent through 30 March at 9.67K and +19.77/month. A renderer
+  access violation interrupted the second bounded run before the twelve-month
+  threshold; the remaining acceptance proof is recorded in `BLOCKERS.md`.
+
 ## 2026-07-26 - Finland-to-Altai and Upper-Dnieper granularity pass
 
 - Replaced or split 18 broad placeholders into 35 sourced, disjoint AD 1

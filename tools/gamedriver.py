@@ -505,7 +505,14 @@ def click_normalized(x_fraction: float, y_fraction: float, *, button: str = "lef
     window = activate_window()
     x = window.left + round(window.width * x_fraction)
     y = window.top + round(window.height * y_fraction)
-    pyautogui.click(x, y, button=button)
+    # Clausewitz/Jomini widgets can acknowledge hover yet drop pyautogui's
+    # zero-duration click when the frame is composing a tooltip or modal.
+    # A brief physical press/release is still imperceptible to the user and is
+    # markedly more reliable for selector, event-option, and dialog controls.
+    pyautogui.moveTo(x, y, duration=0.05)
+    pyautogui.mouseDown(button=button)
+    time.sleep(0.08)
+    pyautogui.mouseUp(button=button)
     return x, y
 
 

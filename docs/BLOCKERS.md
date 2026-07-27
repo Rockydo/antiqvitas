@@ -1,8 +1,31 @@
 # ANTIQVITAS BLOCKERS
 
+## 2026-07-27 - Rome twelve-month budget capture interrupted by renderer exit
+
+Status: bounded runtime-evidence limitation; does not block continued work.
+
+A fresh player-Rome start proves the intended opening state: 9.60K reserve,
++181.65 income, -161.22 expenses, and +20.42 monthly balance. The first
+one-year attempt exposed and repaired the game driver's zero-duration click
+problem, but stopped on a historical-current modal. The second reached
+30 March with 9.67K and +19.77/month before EU5 exited.
+
+The crash report at
+`<EU5_USER_DIR>\crashes\Europa Universalis V20260726_235150` records
+`C0000005` in the DX12/FSR renderer path and no content-side exception. The log
+also repeats two separately actionable mounted-union comparisons in
+`common/formable_countries/00_formable_countries.txt:3531` and
+`common/on_action/_hardcoded.txt:3853`; these belong to the vanilla-system
+quarantine task and were not named in the renderer stack.
+
+Per the reduced QA policy and two-attempt rule, the task remains open for a
+future non-debug or post-renderer-fix twelve-month capture. The verified
+opening reserve already covers roughly 59 months of current expenses, and the
+three observed month-end balances remain positive.
+
 ## 2026-07-26 - Optional eastern live-selector probe did not enter Observer
 
-Status: automation-only QA limitation; does not block continued work.
+Status: resolved 2026-07-27.
 
 After the complete 97-check validation and paired vanilla/mod menu smoke passed,
 the game driver enabled Observer and dismissed the selection popup, but two
@@ -15,6 +38,12 @@ The affected content is covered by the new deterministic
 government, agenda, localization, and art contracts. Per the reduced QA policy,
 this optional selector capture is not replaced with a long observer campaign;
 future driver work can revisit the main-menu transition independently.
+
+The later Rome budget probe established that this command had simply been
+invoked from the main menu rather than a generated country-selection map. A
+fresh New Game sequence reached the selector, selected Rome, and entered the
+live campaign. The held-click driver repair now makes selector and modal
+actions reliable.
 
 ## 2026-07-26 - Hardcoded absent-HRE country-selection notice
 
