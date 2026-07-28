@@ -2633,17 +2633,143 @@ PHL = { # Philippine Societies; P8.9;P20
 	}
 }
 
-XCN = { # Bornean Societies; P8.9;P20
+NBR = { # Niah-Brunei Bay Cave-River Communities; ANU-NIAH-METAL;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_boat_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+RSW = { # Rajang-Sarawak Coastal Networks; ANU-NIAH-METAL;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_fish_okeane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+KSB = { # Kinabatangan-Sabah Littoral Networks; MYH-BUKIT-TENGKORAK;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_asian_animist_sun.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+NEB = { # Northeast Borneo River-Sea Networks; QSR-LIANG-JON;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_boat_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.74 0.76 } }
+	}
+}
+
+SGK = { # Sangkulirang Karst Communities; QSR-LIANG-JON;QINT-LIANG-ABU;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XDM = { # Mahakam River Networks; QSR-LIANG-JON;QINT-LIANG-ABU;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+KPM = { # Kapuas-Melawi River Networks; ANTH-KAL-IRON;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_deer_kneeling.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.78 } }
+	}
+}
+
+WBC = { # Western Borneo Coastal Networks; ANU-NIAH-METAL;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_fish_okeane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+XGL = { # Central-Southern Borneo River Networks; ANTH-KAL-IRON;P20
 	pattern = "pattern_solid.dds"
 	color1 = "green"
 	color2 = "yellow"
-	color3 = "red"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_auspicious_conch_shell_simple.dds"
+		texture = "ce_spiral.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XGM = { # Banjar-Paser River-Coast Networks; ANTH-KAL-IRON;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_spear_head_random_small.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.74 0.78 } }
 	}
 }
 

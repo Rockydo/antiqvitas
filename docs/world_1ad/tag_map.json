@@ -1,8 +1,8 @@
 {
   "game_build": "24187685",
-  "entry_count": 380,
-  "collision_count": 143,
-  "localization_collision_count": 157,
+  "entry_count": 389,
+  "collision_count": 145,
+  "localization_collision_count": 159,
   "reserved_hash_collision_tags": [
     "XAD"
   ],
@@ -1324,11 +1324,74 @@
       "name": "Philippine Societies"
     },
     {
-      "design_tag": "BOR",
-      "engine_tag": "XCN",
+      "design_tag": "NBR",
+      "engine_tag": "NBR",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Niah-Brunei Bay Cave-River Communities"
+    },
+    {
+      "design_tag": "RSW",
+      "engine_tag": "RSW",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Rajang-Sarawak Coastal Networks"
+    },
+    {
+      "design_tag": "KSB",
+      "engine_tag": "KSB",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Kinabatangan-Sabah Littoral Networks"
+    },
+    {
+      "design_tag": "NEB",
+      "engine_tag": "NEB",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Northeast Borneo River-Sea Networks"
+    },
+    {
+      "design_tag": "SGK",
+      "engine_tag": "SGK",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Sangkulirang Karst Communities"
+    },
+    {
+      "design_tag": "MHK",
+      "engine_tag": "XDM",
       "vanilla_collision": true,
       "localization_collision": true,
-      "name": "Bornean Societies"
+      "name": "Mahakam River Networks"
+    },
+    {
+      "design_tag": "KPM",
+      "engine_tag": "KPM",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Kapuas-Melawi River Networks"
+    },
+    {
+      "design_tag": "WBC",
+      "engine_tag": "WBC",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Western Borneo Coastal Networks"
+    },
+    {
+      "design_tag": "CSB",
+      "engine_tag": "XGL",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Central-Southern Borneo River Networks"
+    },
+    {
+      "design_tag": "BPR",
+      "engine_tag": "XGM",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Banjar-Paser River-Coast Networks"
     },
     {
       "design_tag": "TON",

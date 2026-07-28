@@ -4896,3 +4896,93 @@ antq_northern_okjeo_tuanjie = { # NMJH-YIL;P10; Textual-archaeological corridor 
 		antq_korean_group
 	}
 }
+
+antq_niah_brunei_bay = { # ANU-NIAH-METAL;P10; Cave-river regional adapter; technical language fallback is not a later Brunei or Malay identity
+	language = antq_austronesian_dialect
+	color = antq_culture_color_antq_niah_brunei_bay
+	tags = { european_gfx }
+	culture_groups = {
+		antq_austronesian_group
+	}
+}
+
+antq_rajang_sarawak = { # ANU-NIAH-METAL;P10; Coastal-river adapter without later Iban Melanau or Sarawak identity
+	language = antq_austronesian_dialect
+	color = antq_culture_color_antq_rajang_sarawak
+	tags = { european_gfx }
+	culture_groups = {
+		antq_austronesian_group
+	}
+}
+
+antq_kinabatangan_sabah = { # MYH-BUKIT-TENGKORAK;P10; Littoral adapter without later Dusun Sama or Sabah identity
+	language = antq_austronesian_dialect
+	color = antq_culture_color_antq_kinabatangan_sabah
+	tags = { european_gfx }
+	culture_groups = {
+		antq_austronesian_group
+	}
+}
+
+antq_northeast_borneo_river_sea = { # QSR-LIANG-JON;P10; River-sea adapter without later Berau Tidung or political identity
+	language = antq_austronesian_dialect
+	color = antq_culture_color_antq_northeast_borneo_river_sea
+	tags = { european_gfx }
+	culture_groups = {
+		antq_austronesian_group
+	}
+}
+
+antq_sangkulirang_karst = { # QSR-LIANG-JON;QINT-LIANG-ABU;P10; Archaeological landscape adapter without one ethnicity
+	language = antq_austronesian_dialect
+	color = antq_culture_color_antq_sangkulirang_karst
+	tags = { european_gfx }
+	culture_groups = {
+		antq_austronesian_group
+	}
+}
+
+antq_mahakam_river = { # QSR-LIANG-JON;QINT-LIANG-ABU;P10; River corridor adapter without later Kutai Kayan or Kenyah identity
+	language = antq_austronesian_dialect
+	color = antq_culture_color_antq_mahakam_river
+	tags = { european_gfx }
+	culture_groups = {
+		antq_austronesian_group
+	}
+}
+
+antq_kapuas_melawi = { # ANTH-KAL-IRON;P10; Interior river adapter without later Dayak or Bidayuh identity
+	language = antq_austronesian_dialect
+	color = antq_culture_color_antq_kapuas_melawi
+	tags = { european_gfx }
+	culture_groups = {
+		antq_austronesian_group
+	}
+}
+
+antq_west_borneo_coastal = { # ANU-NIAH-METAL;P10; Western coastal-river adapter without later Malay courts
+	language = antq_austronesian_dialect
+	color = antq_culture_color_antq_west_borneo_coastal
+	tags = { european_gfx }
+	culture_groups = {
+		antq_austronesian_group
+	}
+}
+
+antq_central_south_borneo = { # ANTH-KAL-IRON;P10; Watershed adapter without later Ngaju Maanyan or Banjar identity
+	language = antq_austronesian_dialect
+	color = antq_culture_color_antq_central_south_borneo
+	tags = { european_gfx }
+	culture_groups = {
+		antq_austronesian_group
+	}
+}
+
+antq_banjar_paser = { # ANTH-KAL-IRON;P10; Foothill river-coast adapter without later Banjar or Paser identity
+	language = antq_austronesian_dialect
+	color = antq_culture_color_antq_banjar_paser
+	tags = { european_gfx }
+	culture_groups = {
+		antq_austronesian_group
+	}
+}

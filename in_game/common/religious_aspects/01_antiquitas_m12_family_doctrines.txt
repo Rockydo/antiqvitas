@@ -2520,3 +2520,59 @@ antq_doctrine_amur_ussuri_traditions_forest_iron_exchange = { # NMJH-YIL;CAM-PRO
 		antq_doctrine_amur_ussuri_traditions_forest_iron_exchange = 10
 	}
 }
+
+antq_doctrine_borneo_late_prehistoric_traditions_cave_mortuary_custody = { # ANU-NIAH-METAL;ANTH-KAL-IRON;MYH-BUKIT-TENGKORAK;P11; contested; Households maintained burial places remains paths and reciprocal obligations without one organized theology.
+	icon = antq_doctrine_borneo_late_prehistoric_traditions_cave_mortuary_custody
+	religion = antq_borneo_late_prehistoric_traditions
+
+	modifier = {
+		monthly_legitimacy = 0.03
+		cultural_tradition_modifier = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_borneo_late_prehistoric_traditions_cave_mortuary_custody = 10
+	}
+}
+
+antq_doctrine_borneo_late_prehistoric_traditions_river_portage_compacts = { # ANU-NIAH-METAL;ANTH-KAL-IRON;MYH-BUKIT-TENGKORAK;P11; contested; Witnessed agreements coordinated canoes landing places carrying routes restitution and exchange between otherwise separate river communities.
+	icon = antq_doctrine_borneo_late_prehistoric_traditions_river_portage_compacts
+	religion = antq_borneo_late_prehistoric_traditions
+
+	modifier = {
+		tolerance_own = 1
+		global_monthly_prosperity = 0.02
+	}
+
+	opinions = {
+		antq_doctrine_borneo_late_prehistoric_traditions_river_portage_compacts = 10
+	}
+}
+
+antq_doctrine_borneo_late_prehistoric_traditions_maritime_pottery_exchange = { # ANU-NIAH-METAL;ANTH-KAL-IRON;MYH-BUKIT-TENGKORAK;P11; contested; Pottery shell obsidian beads and forest products moved through coastal exchange without a centralized port state.
+	icon = antq_doctrine_borneo_late_prehistoric_traditions_maritime_pottery_exchange
+	religion = antq_borneo_late_prehistoric_traditions
+
+	modifier = {
+		global_monthly_prosperity = 0.02
+		global_monthly_food_modifier = 0.03
+	}
+
+	opinions = {
+		antq_doctrine_borneo_late_prehistoric_traditions_maritime_pottery_exchange = 10
+	}
+}
+
+antq_doctrine_borneo_late_prehistoric_traditions_iron_hearth_obligations = { # ANU-NIAH-METAL;ANTH-KAL-IRON;MYH-BUKIT-TENGKORAK;P11; contested; Ore charcoal furnaces specialist skill and exchange linked foothill households without inventing a uniform guild or ruling people.
+	icon = antq_doctrine_borneo_late_prehistoric_traditions_iron_hearth_obligations
+	religion = antq_borneo_late_prehistoric_traditions
+
+	modifier = {
+		monthly_legitimacy = 0.03
+		country_cabinet_efficiency = 0.02
+	}
+
+	opinions = {
+		antq_doctrine_borneo_late_prehistoric_traditions_iron_hearth_obligations = 10
+	}
+}

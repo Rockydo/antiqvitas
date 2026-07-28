@@ -4050,3 +4050,16 @@ The four doctrine icons come from one 2x2 generated atlas using four installed
 EU5 religious-aspect assets as the visual reference. The splitter pins source
 hash, quadrant order, dimensions, transparency, and DDS outputs; the aggregate
 UI ledger then verifies the installed chains.
+
+## 2026-07-28 - Borneo is split at whole-province archaeological grain
+
+`BOR` is replaced by ten exact frames totaling 110 fields. Boundaries follow
+installed provinces and distinguish Niah/Brunei Bay, Rajang-Sarawak, Sabah,
+northeast river-sea, Sangkulirang karst, Mahakam, Kapuas-Melawi, western coast,
+central-southern rivers, and Banjar-Paser foothills. Four network reforms avoid
+invented states. A checked validator pins selectors, capitals, ownership, art,
+research, settlements, and eleven-client localization.
+
+Religion and doctrine art uses two four-up generated atlases with installed EU5
+religion/aspect sheets as precise style references. The venv Python is the
+authoritative raster renderer because Pillow resampling differs by interpreter.

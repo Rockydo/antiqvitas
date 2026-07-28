@@ -245,6 +245,7 @@ jinju,Korea,regional_rule,silk,fiber_crops
 jinkang,China,regional_rule,sugar,fiber_crops
 jorquera,Rome,environment_rule,wine,fruit
 jowhar,Africa,regional_rule,sugar,fiber_crops
+julau,Southeast Asia,anchor,cloves,lumber
 jumilla,Rome,environment_rule,wine,fruit
 junnar,India,regional_rule,incense,medicaments
 juye,China,regional_rule,cotton,fiber_crops
@@ -437,6 +438,7 @@ pingba,China,regional_rule,cotton,fiber_crops
 pisa,Rome,regional_rule,silk,fiber_crops
 pithapuram,India,regional_rule,saltpeter,salt
 plenita,Danube,regional_rule,cotton,fiber_crops
+pontianak,Southeast Asia,anchor,sugar,fish
 pontikokastro,Rome,regional_rule,silk,fiber_crops
 prievidza,Germania,regional_rule,saffron,medicaments
 pristina,Rome,regional_rule,coal,lumber
@@ -487,6 +489,8 @@ samsun,Rome,environment_rule,olives,fruit
 sangju,Korea,regional_rule,silk,fiber_crops
 sanhe_chaozhou,China,regional_rule,sugar,fiber_crops
 sansevero,Rome,environment_rule,wine,fruit
+santubong,Southeast Asia,anchor,mercury,fish
+sarikei,Southeast Asia,anchor,cloves,fish
 sasaram,India,regional_rule,silk,fiber_crops
 satoraljaujhely,Germania,regional_rule,wine,fruit
 savur,Iran,regional_rule,olives,fruit
@@ -547,6 +551,7 @@ talak_burma,Southeast Asia,regional_rule,incense,medicaments
 tam_dai,China,regional_rule,incense,medicaments
 tamacine,Africa,regional_rule,saffron,medicaments
 tamdegost,Africa,regional_rule,sugar,fiber_crops
+tanjung_palas,Southeast Asia,anchor,cloves,beeswax
 tanjungpuri,Southeast Asia,regional_rule,coal,lumber
 taranto,Rome,environment_rule,wine,fruit
 tarascon,Rome,regional_rule,silk,fiber_crops
@@ -663,6 +668,9 @@ zwickau,Germania,regional_rule,coal,lumber
 # counts
 # anchor:beeswax->goods_gold,1
 # anchor:clay->silk,1
+# anchor:cloves->beeswax,1
+# anchor:cloves->fish,1
+# anchor:cloves->lumber,1
 # anchor:coffee->incense,1
 # anchor:copper->tin,1
 # anchor:cotton->dyes,1
@@ -676,10 +684,12 @@ zwickau,Germania,regional_rule,coal,lumber
 # anchor:livestock->pearls,1
 # anchor:lumber->pearls,1
 # anchor:marble->iron,1
+# anchor:mercury->fish,1
 # anchor:rice->silk,1
 # anchor:salt->antq_papyrus,1
 # anchor:salt->pearls,1
 # anchor:salt->silver,1
+# anchor:sugar->fish,1
 # anchor:wheat->antq_barley,1
 # anchor:wheat->antq_silphium,1
 # anchor:wool->antq_barley,2

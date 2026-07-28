@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-28 - Borneo becomes ten archaeological-geographic networks
+
+- Removed the 110-location `BOR` catch-all. Ten exact cave, karst, river,
+  littoral, and foothill frames raise the roster to 389 and reduce literal
+  placeholders to sixteen.
+- Added ten cultures, one plural traditions family, four direct-art doctrines,
+  four reforms, ten standards, settlements, laws, research, history, and
+  eleven-client localization. Five false inherited RGOs were conservatively
+  corrected.
+- `tools/s2_bornean_granularity.py` pins the transform. All 122 validation
+  commands pass; paired smoke reached rendered vanilla/mod menus in 198.6
+  seconds with zero mod-only normalized errors.
+
+Next: replace the 109-location Rajasthan-Gujarat frame.
+
 ## 2026-07-28 - Manchuria becomes six evidence-bounded horizons
 
 - Removed the 125-location `MNC` catch-all. Middle Amur (50), Lower Amur
@@ -13,8 +28,6 @@
 - `tools/s2_manchurian_granularity.py` pins the transform. All 121 validation
   commands pass; paired smoke reached rendered vanilla/mod menus in 197.1
   seconds with zero mod-only normalized errors.
-
-Next: replace the 110-location Bornean Societies frame.
 
 ## 2026-07-28 - Mainland Southeast Asia becomes eleven bounded networks
 

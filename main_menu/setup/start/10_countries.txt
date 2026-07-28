@@ -18314,117 +18314,312 @@ countries = {
 			capital = maynila
 		}
 
-		XCN = { # Bornean Societies; P8.9;CAH-XI
+		NBR = { # Niah-Brunei Bay Cave-River Communities; ANU-NIAH-METAL;P8.9
 			own_control_core = {
-				air_hitam
 				api_api
-				bangkalan_borneo
-				banjar
-				banua_lawas
-				barito
 				barulo
-				belayan
-				bengalon
 				berune
-				bunut
-				cantung
-				hulu_jelai
-				hulu_labuk
 				hulu_limbang
-				hulu_mahakam
 				hulu_padas
-				hulu_paser
-				hulu_pawan
-				hulu_sambas
-				hulu_segama
-				hulu_telen
-				igan
-				jelai
-				jembayan
-				jongkong
-				julau
-				julau_kutai
-				kahayan
-				kahayan_hilir
-				karangan
-				karau
-				kayan
-				kedang_pahu
-				kelay
-				kelinjau
-				kendawangan
-				kinabatangan
-				kota_marudu
-				kotawaringin_lama
-				kuamut
-				kubu
-				kudat
-				kumai
-				kuripan
-				kutai_lama
-				lahad_datu
-				lokan
-				mahakam
-				mandor
-				martapura
-				mempawah
-				mendawai
-				monterado
-				muara_bahan
-				muarakaman
-				mukah
-				nagara_borneo
-				ngabang
 				niah
 				padas
-				pagatan
-				paser
 				pegalan
-				pelaihari
-				pesaguan
-				pinoh
-				pontianak
-				sabangau
+				trusan
+				tutong
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_borneo_cave_river_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -78
+				traditionalist_vs_innovative = -12
+				aristocracy_vs_plutocracy = -68
+				capital_economy_vs_traditional_economy = 72
+			}
+			capital = niah
+		}
+
+		RSW = { # Rajang-Sarawak Coastal Networks; ANU-NIAH-METAL;P8.9
+			own_control_core = {
+				igan
+				julau
+				mukah
 				samarahan
-				sambaliung
-				sambas
-				sampit
-				sandakan
-				sandaran
-				sangata
-				sanggau
 				santubong
 				saribas
 				sarikei
-				sebuku
 				sebuyau
-				segah
-				sekadau
-				sekayam
-				selimbau
-				sepinang
-				seruyan
-				sesayap
-				sibumbong
-				sigam
-				silat
-				sugut
-				sukadana
-				sungai_lati
 				tandang_sari
-				tanjung_palas
-				tanjungpura
-				tanjungpuri
-				tarakan
 				tatau
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_borneo_coastal_exchange_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -72
+				traditionalist_vs_innovative = -8
+				aristocracy_vs_plutocracy = -62
+				capital_economy_vs_traditional_economy = 64
+			}
+			capital = santubong
+		}
+
+		KSB = { # Kinabatangan-Sabah Littoral Networks; MYH-BUKIT-TENGKORAK;P8.9
+			own_control_core = {
+				hulu_labuk
+				hulu_segama
+				kinabatangan
+				kota_marudu
+				kuamut
+				kudat
+				lahad_datu
+				lokan
+				sandakan
+				sibumbong
+				sugut
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_borneo_coastal_exchange_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -70
+				traditionalist_vs_innovative = -6
+				aristocracy_vs_plutocracy = -60
+				capital_economy_vs_traditional_economy = 62
+			}
+			capital = kinabatangan
+		}
+
+		NEB = { # Northeast Borneo River-Sea Networks; QSR-LIANG-JON;P8.9
+			own_control_core = {
+				kayan
+				kelay
+				sambaliung
+				sebuku
+				segah
+				sesayap
+				sungai_lati
+				tanjung_palas
+				tarakan
 				tawau
-				tayan
-				telen
-				teluk_melano
-				tenggarong
 				tong_talun
-				trusan
-				tutong
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_borneo_coastal_exchange_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -74
+				traditionalist_vs_innovative = -7
+				aristocracy_vs_plutocracy = -64
+				capital_economy_vs_traditional_economy = 66
+			}
+			capital = sesayap
+		}
+
+		SGK = { # Sangkulirang Karst Communities; QSR-LIANG-JON;QINT-LIANG-ABU;P8.9
+			own_control_core = {
+				bengalon
+				karangan
+				sandaran
+				sangata
+				sepinang
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_borneo_cave_river_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -86
+				traditionalist_vs_innovative = -18
+				aristocracy_vs_plutocracy = -76
+				capital_economy_vs_traditional_economy = 80
+			}
+			capital = karangan
+		}
+
+		XDM = { # Mahakam River Networks; QSR-LIANG-JON;QINT-LIANG-ABU;P8.9
+			own_control_core = {
+				belayan
+				hulu_mahakam
+				hulu_telen
+				jembayan
+				julau_kutai
+				kedang_pahu
+				kelinjau
+				kutai_lama
+				mahakam
+				muarakaman
+				telen
+				tenggarong
 				tuyuk
 			}
 
@@ -18441,10 +18636,282 @@ countries = {
 				heir_selection = tribal_oldest_male
 				ruler = random
 				reforms = {
-					antq_advanced_chiefdom
+					antq_borneo_interior_river_network
 				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -76
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -66
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = muarakaman
+		}
+
+		KPM = { # Kapuas-Melawi River Networks; ANTH-KAL-IRON;P8.9
+			own_control_core = {
+				bunut
+				jongkong
+				kubu
+				pinoh
+				pontianak
+				sanggau
+				sekadau
+				sekayam
+				selimbau
+				silat
+				tayan
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_borneo_interior_river_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -82
+				traditionalist_vs_innovative = -14
+				aristocracy_vs_plutocracy = -72
+				capital_economy_vs_traditional_economy = 76
 			}
 			capital = pinoh
+		}
+
+		WBC = { # Western Borneo Coastal Networks; ANU-NIAH-METAL;P8.9
+			own_control_core = {
+				hulu_pawan
+				hulu_sambas
+				kendawangan
+				mandor
+				mempawah
+				monterado
+				ngabang
+				pesaguan
+				sambas
+				sukadana
+				tanjungpura
+				teluk_melano
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_borneo_coastal_exchange_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -70
+				traditionalist_vs_innovative = -5
+				aristocracy_vs_plutocracy = -60
+				capital_economy_vs_traditional_economy = 60
+			}
+			capital = sambas
+		}
+
+		XGL = { # Central-Southern Borneo River Networks; ANTH-KAL-IRON;P8.9
+			own_control_core = {
+				air_hitam
+				barito
+				hulu_jelai
+				jelai
+				kahayan
+				kahayan_hilir
+				karau
+				kotawaringin_lama
+				kumai
+				kuripan
+				mendawai
+				sabangau
+				sampit
+				seruyan
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_borneo_interior_river_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -84
+				traditionalist_vs_innovative = -16
+				aristocracy_vs_plutocracy = -74
+				capital_economy_vs_traditional_economy = 78
+			}
+			capital = sampit
+		}
+
+		XGM = { # Banjar-Paser River-Coast Networks; ANTH-KAL-IRON;P8.9
+			own_control_core = {
+				bangkalan_borneo
+				banjar
+				banua_lawas
+				cantung
+				hulu_paser
+				martapura
+				muara_bahan
+				nagara_borneo
+				pagatan
+				paser
+				pelaihari
+				sigam
+				tanjungpuri
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_borneo_foothill_iron_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_free_household_muster
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -68
+				traditionalist_vs_innovative = -4
+				aristocracy_vs_plutocracy = -58
+				capital_economy_vs_traditional_economy = 58
+			}
+			capital = banua_lawas
 		}
 
 		XCO = { # Tonga-Samoa-Fiji; P8.9;CAH-XI

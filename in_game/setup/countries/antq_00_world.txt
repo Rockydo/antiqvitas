@@ -1693,12 +1693,93 @@ PHL = { # Philippine Societies; P8.9;CAH-XI
 	is_historic = yes
 }
 
-XCN = { # Bornean Societies; P8.9;CAH-XI
-	color = rgb { 56 133 89 }
-	color2 = rgb { 199 122 166 }
+NBR = { # Niah-Brunei Bay Cave-River Communities; ANU-NIAH-METAL;P8.9
+	color = rgb { 79 126 89 }
+	color2 = rgb { 176 129 166 }
 
-	culture_definition = antq_bornean
-	religion_definition = antq_mahayana
+	culture_definition = antq_niah_brunei_bay
+	religion_definition = antq_borneo_late_prehistoric_traditions
+	is_historic = yes
+}
+
+RSW = { # Rajang-Sarawak Coastal Networks; ANU-NIAH-METAL;P8.9
+	color = rgb { 75 135 88 }
+	color2 = rgb { 180 120 167 }
+
+	culture_definition = antq_rajang_sarawak
+	religion_definition = antq_borneo_late_prehistoric_traditions
+	is_historic = yes
+}
+
+KSB = { # Kinabatangan-Sabah Littoral Networks; MYH-BUKIT-TENGKORAK;P8.9
+	color = rgb { 67 132 104 }
+	color2 = rgb { 188 123 151 }
+
+	culture_definition = antq_kinabatangan_sabah
+	religion_definition = antq_borneo_late_prehistoric_traditions
+	is_historic = yes
+}
+
+NEB = { # Northeast Borneo River-Sea Networks; QSR-LIANG-JON;P8.9
+	color = rgb { 65 114 101 }
+	color2 = rgb { 190 141 154 }
+
+	culture_definition = antq_northeast_borneo_river_sea
+	religion_definition = antq_borneo_late_prehistoric_traditions
+	is_historic = yes
+}
+
+SGK = { # Sangkulirang Karst Communities; QSR-LIANG-JON;QINT-LIANG-ABU;P8.9
+	color = rgb { 68 134 87 }
+	color2 = rgb { 187 121 168 }
+
+	culture_definition = antq_sangkulirang_karst
+	religion_definition = antq_borneo_late_prehistoric_traditions
+	is_historic = yes
+}
+
+XDM = { # Mahakam River Networks; QSR-LIANG-JON;QINT-LIANG-ABU;P8.9
+	color = rgb { 72 115 76 }
+	color2 = rgb { 183 140 179 }
+
+	culture_definition = antq_mahakam_river
+	religion_definition = antq_borneo_late_prehistoric_traditions
+	is_historic = yes
+}
+
+KPM = { # Kapuas-Melawi River Networks; ANTH-KAL-IRON;P8.9
+	color = rgb { 72 119 97 }
+	color2 = rgb { 183 136 158 }
+
+	culture_definition = antq_kapuas_melawi
+	religion_definition = antq_borneo_late_prehistoric_traditions
+	is_historic = yes
+}
+
+WBC = { # Western Borneo Coastal Networks; ANU-NIAH-METAL;P8.9
+	color = rgb { 80 123 90 }
+	color2 = rgb { 175 132 165 }
+
+	culture_definition = antq_west_borneo_coastal
+	religion_definition = antq_borneo_late_prehistoric_traditions
+	is_historic = yes
+}
+
+XGL = { # Central-Southern Borneo River Networks; ANTH-KAL-IRON;P8.9
+	color = rgb { 70 126 85 }
+	color2 = rgb { 185 129 170 }
+
+	culture_definition = antq_central_south_borneo
+	religion_definition = antq_borneo_late_prehistoric_traditions
+	is_historic = yes
+}
+
+XGM = { # Banjar-Paser River-Coast Networks; ANTH-KAL-IRON;P8.9
+	color = rgb { 56 134 84 }
+	color2 = rgb { 199 121 171 }
+
+	culture_definition = antq_banjar_paser
+	religion_definition = antq_borneo_late_prehistoric_traditions
 	is_historic = yes
 }
 

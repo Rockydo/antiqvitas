@@ -5651,3 +5651,18 @@ The Maldivian frame is a decentralized maritime proxy. Its common ruler,
 language, religion, capital status, and universal AD 1 occupation are
 unresolved; marine fishing/shell production is a conservative correction to
 impossible inherited lumber. Source: `CAM-MALDIVES`. [contested]
+
+## 2026-07-28 - Bornean frames represent material networks, not later peoples
+
+Niah Metal-Age diversity, Sabah maritime pottery exchange, Sangkulirang cave
+sequences, and Kalimantan iron contexts support multiple playable networks but
+not AD 1 Brunei, Kutai, Srivijaya, Dayak, Iban, Dusun, Sama, Tidung, Kayan, or
+Malay states/ethnic borders. Santubong's later industry is not backdated.
+Sources: `ANU-NIAH-METAL`; `MYH-BUKIT-TENGKORAK`; `QSR-LIANG-JON`;
+`QINT-LIANG-ABU`; `ANTH-KAL-IRON`. [secure material contexts; contested
+political form and map extent]
+
+Inherited cloves at Julau, Sarikei, and Tanjung Palas, sugar at Pontianak, and
+mercury at Santubong lack defensible AD 1 local support. Lumber, fish, and
+beeswax are conservative environmental proxies, not site-specific production
+claims. Sources: `P12.1`; `PER`; Borneo sources above. [contested]

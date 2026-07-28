@@ -575,6 +575,34 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "NMJH-YIL;P13", "contested",
         "Tumen and southern Maritime communities coordinate passage and exchange without a later Korean court or fixed frontier.",
     ),
+    "antq_borneo_cave_river_network": (
+        "global_tribes_estate_power=0.10|global_peasants_estate_power=0.04|"
+        "tribes_estate_power_from_cabinet=0.20|global_trade_through_owned_territory_efficiency=0.02|"
+        "replace_cabinet_member_cost_modifier=0.025",
+        "ANU-NIAH-METAL;QSR-LIANG-JON;P13", "contested",
+        "Cave and river households coordinate burial places, forest access, landing places, and exchange without one island state.",
+    ),
+    "antq_borneo_coastal_exchange_network": (
+        "global_tribes_estate_power=0.07|global_burghers_estate_power=0.06|"
+        "tribes_estate_power_from_cabinet=0.16|global_trade_through_owned_territory_efficiency=0.03|"
+        "replace_cabinet_member_cost_modifier=0.025",
+        "ANU-NIAH-METAL;MYH-BUKIT-TENGKORAK;P13", "contested",
+        "River mouths, pottery, and maritime exchange link coastal households without a centralized port or later kingdom.",
+    ),
+    "antq_borneo_interior_river_network": (
+        "global_tribes_estate_power=0.10|global_peasants_estate_power=0.05|"
+        "tribes_estate_power_from_cabinet=0.20|global_trade_through_owned_territory_efficiency=0.02|"
+        "replace_cabinet_member_cost_modifier=0.025",
+        "ANTH-KAL-IRON;QINT-LIANG-ABU;P13", "contested",
+        "River communities coordinate portage, forest access, cultivation, and exchange without later ethnic borders.",
+    ),
+    "antq_borneo_foothill_iron_network": (
+        "global_tribes_estate_power=0.08|global_peasants_estate_power=0.06|"
+        "tribes_estate_power_from_cabinet=0.17|global_monthly_food_modifier=0.02|"
+        "replace_cabinet_member_cost_modifier=0.025",
+        "ANTH-KAL-IRON;P13", "contested",
+        "Foothill households coordinate ore, charcoal, furnaces, river passage, and cultivation without a uniform guild or later state.",
+    ),
     "antq_buffer_kingdom": (
         "global_burghers_estate_power=0.05|estate_power_from_cabinet=0.10|"
         "replace_cabinet_member_cost_modifier=0.05",
@@ -1345,6 +1373,10 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
         "antq_sakhalin_maritime_network",
         "antq_ussuri_poltsian_network",
         "antq_northern_okjeo_corridor",
+        "antq_borneo_cave_river_network",
+        "antq_borneo_coastal_exchange_network",
+        "antq_borneo_interior_river_network",
+        "antq_borneo_foothill_iron_network",
     ),
     "sacral": (),
     "royal": (
@@ -1931,9 +1963,9 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    # Core/regional contracts include the four reviewed mainland Southeast
-    # Asian network reforms defined above.
-    expected_contract_count = 90 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    # Core/regional contracts include the reviewed Manchurian and Bornean
+    # network reforms defined above.
+    expected_contract_count = 94 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -1941,7 +1973,7 @@ def load_power_data() -> PowerData:
         failures.append(
             "political appointment contracts must cover every core, regional, and successor reform"
         )
-    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 90:
+    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 94:
         failures.append("political appointment contracts are insufficiently differentiated")
     path_rows = reform_path_rows()
     alternative_profiles = [row[1] for row in path_rows]
@@ -2542,6 +2574,50 @@ antq_northern_okjeo_corridor = {
 	country_modifier = {
 		global_burghers_estate_power = 0.05
 		global_trade_through_owned_territory_efficiency = 0.025
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_borneo_cave_river_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		global_trade_through_owned_territory_efficiency = 0.02
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_borneo_coastal_exchange_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_burghers_estate_power = 0.06
+		global_trade_through_owned_territory_efficiency = 0.03
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_borneo_interior_river_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		global_trade_through_owned_territory_efficiency = 0.02
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_borneo_foothill_iron_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_peasants_estate_power = 0.06
+		global_monthly_food_modifier = 0.02
 		research_speed = 0.07
 	}
 	years = 2
@@ -3376,6 +3452,14 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_ussuri_poltsian_network_desc", "River and basin communities coordinate cultivation, forest access, exchange, and defence without a fixed Yilou state."),
         ("antq_northern_okjeo_corridor", "Northern Okjeo Corridor"),
         ("antq_northern_okjeo_corridor_desc", "Tumen and southern Maritime communities coordinate passage and exchange without a later Korean court."),
+        ("antq_borneo_cave_river_network", "Borneo Cave-River Network"),
+        ("antq_borneo_cave_river_network_desc", "Cave and river households coordinate burial places, forest access, landing places, and exchange without one island state."),
+        ("antq_borneo_coastal_exchange_network", "Borneo Coastal Exchange Network"),
+        ("antq_borneo_coastal_exchange_network_desc", "River mouths, pottery, and maritime exchange link coastal households without a centralized port or later kingdom."),
+        ("antq_borneo_interior_river_network", "Borneo Interior River Network"),
+        ("antq_borneo_interior_river_network_desc", "River communities coordinate portage, forest access, cultivation, and exchange without later ethnic borders."),
+        ("antq_borneo_foothill_iron_network", "Borneo Foothill Iron Network"),
+        ("antq_borneo_foothill_iron_network_desc", "Foothill households coordinate ore, charcoal, furnaces, river passage, and cultivation without a uniform guild or later state."),
         ("antq_buffer_kingdom", "Buffer Kingdom"),
         ("antq_buffer_kingdom_desc", "A frontier court balancing local authority against stronger neighbouring powers."),
         ("antq_kushite_dual_kingship", "Kushite Dual Kingship"),

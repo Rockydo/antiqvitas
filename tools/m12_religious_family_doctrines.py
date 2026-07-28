@@ -45,6 +45,11 @@ AMUR_USSURI_ATLAS = (
     / "assets_queue/generated_sources/"
     "antq_doctrine_amur_ussuri_traditions_fourup.png"
 )
+BORNEO_ATLAS = (
+    ROOT
+    / "assets_queue/generated_sources/"
+    "antq_doctrine_borneo_late_prehistoric_traditions_fourup.png"
+)
 CONTACT_SHEET = (
     ROOT / "docs/m12/religious_family_doctrines_contact_sheet.png"
 )
@@ -127,6 +132,10 @@ DIRECT_ATLASES = {
     "antq_doctrine_amur_ussuri_traditions_winter_pit_house_stores": (AMUR_USSURI_ATLAS, 1),
     "antq_doctrine_amur_ussuri_traditions_maritime_shore_compacts": (AMUR_USSURI_ATLAS, 2),
     "antq_doctrine_amur_ussuri_traditions_forest_iron_exchange": (AMUR_USSURI_ATLAS, 3),
+    "antq_doctrine_borneo_late_prehistoric_traditions_cave_mortuary_custody": (BORNEO_ATLAS, 0),
+    "antq_doctrine_borneo_late_prehistoric_traditions_river_portage_compacts": (BORNEO_ATLAS, 1),
+    "antq_doctrine_borneo_late_prehistoric_traditions_maritime_pottery_exchange": (BORNEO_ATLAS, 2),
+    "antq_doctrine_borneo_late_prehistoric_traditions_iron_hearth_obligations": (BORNEO_ATLAS, 3),
 }
 
 

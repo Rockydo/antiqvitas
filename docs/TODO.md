@@ -5,7 +5,7 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,357-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
+- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,365-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
   - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
 ## Second manual playtest remediation — 2026-07-26 (resume here)
@@ -24,15 +24,15 @@ and focused runtime probe all pass.
 
 ### Audit baseline
 
-- The roster now has 356 playable tags after the Arabia, Britain/Ireland,
+- The roster now has 389 playable tags after the Arabia, Britain/Ireland,
   Germania/Baltic, northern/eastern, Maghreb, Horn, Bantu-frontier, West
-  African, Gangetic, Inner Asian, and Tibetan Plateau archaeological splits. Twenty player-facing macro-polities
+  African, Gangetic, Inner Asian, Tibetan, Central Indian, mainland Southeast Asian, Manchurian, and Bornean archaeological splits. Sixteen player-facing macro-polities
   still contain “Societies” or another prohibited placeholder term in their
   names, concentrated in the Americas, Central/South/East/Southeast Asia, and
   Oceania. These are country-scale aggregations, not merely descriptive
   localization, and remain in the global granularity queue below.
 - The global RGO audit now covers all 13,549 controlled templates and applies
-  657 regional, environmental, and direct-anchor corrections. Most retained
+  665 regional, environmental, and direct-anchor corrections. Most retained
   staples remain inherited but are explicitly marked as contested where local
   extraction is not attested; deeper regional specialty work remains open.
 - The 265 ancient building definitions now seed 3,011 direct regional
@@ -609,11 +609,14 @@ and focused runtime probe all pass.
     archaeological/geographic community networks. Separate western Hausaland,
     Nsukka-Lejja, Lower Oueme, Volta-Cong, and Bosumtwi frames without
     backdating later named states or asserting unsupported ethnic borders.
-  - [ ] Literal African placeholder countries are exhausted and the Gangetic,
+- [ ] Literal African placeholder countries are exhausted and the Gangetic,
     Inner Asian, Tibetan, and Central Indian superstates are split. Continue
-    the size-ranked global census with Borneo (110) and
-    Rajasthan-Gujarat (109).
+    the size-ranked global census with Rajasthan-Gujarat (109).
     The parent task remains open until the census reaches zero.
+    - [x] Replace the 110-location `BOR` catch-all with ten exact Bornean
+      archaeological/geographic frames, ten cultures, four reforms, one
+      plural traditions family, four direct-art doctrines, and five reviewed
+      RGO corrections. All 122 validators and paired smoke pass.
     - [x] Replace `CIN` as a disconnected residual, not as a renamed Central
       Indian state. The audited footprint is 76 Gondwana/Bundelkhand
       locations, 36 Malwa/Narmada locations, 51 Tamilakam locations, and four
