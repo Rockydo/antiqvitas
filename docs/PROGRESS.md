@@ -1,5 +1,33 @@
 # Progress
 
+## 2026-07-28 - The Bantu superstate becomes eight evidence-bounded frontiers
+
+- Replaced the 94-location Bantu Societies placeholder with four early
+  ironworking or ceramic-horizon frames (Ngovo, Urewe, Kwale, and
+  Ruvuma-Lurio), two southern hunter-herder networks (Limpopo and Zambezi),
+  and separate Wadai and post-Nok Bauchi plateau communities. The revised
+  frames control 93 locations; Ngazidja is intentionally empty because no
+  secure AD 1 settlement evidence supports backdating later Comorian
+  occupation.
+- Removed five obsolete blanket Bantu culture identities and added eight
+  evidence-bounded cultures. Added two government reforms, eight direct
+  standards, owned capitals, opening research, settlement/building, legal,
+  agenda, rank, history, and eleven-client localization integration. The
+  inherited Wadai/Bauchi Bantu claims and premature southern-Zimbabwe farming
+  frame are gone.
+- Added `tools/s2_bantu_frontier_granularity.py` and its generated 93-location
+  ledger. The permanent gate pins ownership, cultures, political forms,
+  standards, localization, the Ngazidja evidence gap, and the absence of all
+  five retired broad culture keys. The global placeholder census falls from
+  25 to 24.
+- Full validation passes all 114 checks. Paired vanilla/mod smoke reaches
+  responsive rendered menus and reports zero mod-only normalized
+  `error.log` lines. Evidence is recorded in
+  `docs/playtests/S2_BANTU_FRONTIER_GRANULARITY_20260728.md`.
+
+Next: continue the global census through Sahara and West Africa, then the
+remaining size-ranked placeholder frames; do not claim closure before zero.
+
 ## 2026-07-27 - Barbaria becomes six ports and three bounded hinterlands
 
 - Replaced the 79-location Barbaria Societies placeholder with nine disjoint

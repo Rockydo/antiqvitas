@@ -799,17 +799,115 @@ WAF = { # West African Iron-Age Societies; P8.5;P20
 	}
 }
 
-XDE = { # Bantu Societies; P8.5;P20
+XDE = { # Ngovo Horizon; NGOVO-GROUP;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "orange"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+URW = { # Urewe Horizon; AZA-UREWE;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "black"
+	color3 = "orange"
+	colored_emblem = {
+		texture = "ce_spiral_star_06.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+KWL = { # Kwale Horizon; QI-EAFRICA;UC-MOMBASA;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "orange"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_fish_okeane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.76 } }
+	}
+}
+
+RUV = { # Ruvuma-Lurio Frontier; QI-EAFRICA;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "orange"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_conch_shell.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+LMP = { # Limpopo Hunter-Herder Networks; OUP-SOUTH-AFRICA;P20
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "black"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_african_ram_horns_02.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+ZHF = { # Zambezi Hunter-Herder Networks; OUP-SOUTH-AFRICA;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "orange"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_deer_kneeling.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+WDP = { # Wadai Plateau Communities; MEGACHAD-WADAI;P20
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
-	color2 = "black"
-	color3 = "red"
+	color2 = "red"
+	color3 = "black"
 	colored_emblem = {
 		texture = "ce_african_sun.dds"
-		color1 = color1
+		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XFR = { # Bauchi Plateau Communities; OUP-NOK;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "orange"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
 	}
 }
 

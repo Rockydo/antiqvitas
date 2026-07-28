@@ -295,8 +295,11 @@ def global_audit(
             confidence,
             note,
         ))
-    if len(seen) != 13550:
-        raise ValueError(f"global RGO audit must cover 13550 controlled locations; found {len(seen)}")
+    if len(seen) != len(ownership):
+        raise ValueError(
+            "global RGO audit must cover every controlled location; "
+            f"expected {len(ownership)}, found {len(seen)}"
+        )
     return output.getvalue()
 
 
@@ -320,7 +323,7 @@ def main() -> int:
         GLOBAL_AUDIT.write_text(audit, encoding="utf-8-sig", newline="\n")
         print(
             f"rgo_remap: wrote {OUTPUT.relative_to(ROOT)} "
-            f"({len(changes)} corrections; 13550 audited locations)"
+            f"({len(changes)} corrections; {len(rows(OWNERSHIP, comments=True))} audited locations)"
         )
         return 0
     failures = []
@@ -334,7 +337,10 @@ def main() -> int:
     if failures:
         print("rgo_remap: FAIL\n  - " + "\n  - ".join(failures))
         return 1
-    print(f"rgo_remap: PASS ({len(changes)} corrections; 13550 audited locations)")
+    print(
+        f"rgo_remap: PASS ({len(changes)} corrections; "
+        f"{len(rows(OWNERSHIP, comments=True))} audited locations)"
+    )
     return 0
 
 

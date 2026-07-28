@@ -342,6 +342,30 @@ antq_horn_pastoral_network = {
 	years = 2
 }
 
+antq_early_ironworking_community_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.07
+		global_peasants_estate_power = 0.07
+		global_production_efficiency = 0.025
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_mobile_hunter_herder_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.12
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		global_trade_through_owned_territory_efficiency = 0.02
+		research_speed = 0.05
+	}
+	years = 2
+}
+
 antq_settled_town_cluster = {
 	major = yes
 	government = republic

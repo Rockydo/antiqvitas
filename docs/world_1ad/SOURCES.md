@@ -705,3 +705,51 @@ single AD 1 census.
   metalwork, personal objects, subsistence, and ritual deposition. It supports
   conservative material-culture and votive gameplay adapters, not later written
   Irish law, a uniform druidic hierarchy, or exact AD 1 institutions.
+
+## Bantu-frontier and southern-African contracts
+
+- `JAH-BANTU-MOBILITY`: Kathryn de Luna and Jeffrey B. Fleisher,
+  ["Moving Histories: Bantu Language Expansions, Eclectic Economies, and
+  Mobilities"](https://www.cambridge.org/core/journals/journal-of-african-history/article/moving-histories-bantu-language-expansions-eclectic-economies-and-mobilities/F9F92F9C6A16A9633E75508E836C9C46),
+  *Journal of African History* 64 (2023). It rejects a simple one-package,
+  one-people migration model and warns that Urewe pottery does not by itself
+  prove language or ethnicity.
+- `SCI-CONGO-RAINFOREST`: Wannes Hubau et al.,
+  ["Population collapse in Congo rainforest from 400 CE urges reassessment of
+  the Bantu Expansion"](https://pmc.ncbi.nlm.nih.gov/articles/PMC7880602/),
+  *Science Advances* 7 (2021). It documents regionally varied rainforest
+  settlement histories and the Imbonga horizon, supporting multiple bounded
+  frames rather than a timeless Congo-wide people.
+- `NGOVO-GROUP`: Pierre de Maret, "The Ngovo Group: An Industry with Polished
+  Stone Tools and Pottery in Lower Zaire,"
+  [*African Archaeological Review*](https://doi.org/10.1007/BF01117037).
+  Its dates place the lower-Congo material group in the last two centuries BC;
+  the material horizon is not treated as an ethnic state.
+- `AZA-UREWE`: John Giblin, Anna Clement, and Jane Humphris,
+  ["An Urewe burial in Rwanda"](https://www.tandfonline.com/doi/full/10.1080/0067270X.2010.521677),
+  *Azania* 45 (2010). It places the Urewe archaeological horizon broadly from
+  about 500 BC to AD 800 while stressing how little is known of social and
+  symbolic organization.
+- `QI-EAFRICA`: Alison Crowther et al., ["Subsistence mosaics, forager-farmer
+  interactions, and the transition to food production in eastern
+  Africa"](https://discovery.ucl.ac.uk/10055008/1/1-s2.0-S1040618216302890-main.pdf),
+  *Quaternary International* 489 (2018). It documents overlapping Urewe,
+  pastoral, forager, and Kwale/early-ironworking economies around the BCE/CE
+  boundary rather than a uniform migration package.
+- `UC-MOMBASA`: Chapurukha Kusimba, [*Inland from
+  Mombasa*](https://webfiles.ucpress.edu/oa/9780520400498_WEB.pdf), University
+  of California Press (2024). It places the earliest known coastal
+  early-ironworking sites from the first century BC into the early Common Era
+  and treats Kwale ware as a material category, not a national identity.
+- `OUP-SOUTH-AFRICA`: Simon Hall and Shadreck Chirikure, ["Africa, south:
+  Herders, farmers, and metallurgists of South
+  Africa"](https://www.arch.ox.ac.uk/publication/1022876/scopus), in the
+  *Encyclopedia of Archaeology* (2008). Mixed farming reaches the summer-
+  rainfall zone only in the early first millennium AD; the AD 1 setup
+  therefore keeps the southern frontier hunter-herder rather than backdating
+  later farmer polities.
+- `MEGACHAD-WADAI`: Méga-Tchad, [2005 research
+  bulletin](https://www.cepam.cnrs.fr/megatchad/bulletin/Bulletin%20MT%202005.pdf),
+  records continuing research into the late-Holocene Stone/Iron-Age transition
+  in Wadai, Ennedi, and adjacent eastern Chad. It supports only a cautious
+  plateau-community frame, never the much later Wadai Sultanate.

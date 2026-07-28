@@ -532,45 +532,72 @@ antq_northern_azanian = { # PME-BARBARIA;P8.5;P10; Technical northern-Azanian co
 	}
 }
 
-antq_equatorial_bantu = { # P8.5;P10;CAH-XI; Central African Bantu-frontier regional proxy
+antq_wadai_plateau = { # MEGACHAD-WADAI;P8.5;P10; Eastern Chadian plateau gameplay proxy; technical naming fallback is not a language claim
 	language = antq_subsaharan_dialect
-	color = antq_culture_color_antq_equatorial_bantu
+	color = antq_culture_color_antq_wadai_plateau
 	tags = { european_gfx }
 	culture_groups = {
 		antq_subsaharan_group
 	}
 }
 
-antq_kongo_bantu = { # P8.5;P10;CAH-XI; Kongo-basin Bantu-frontier regional proxy
+antq_post_nok = { # OUP-NOK;P8.5;P10; Successor-community proxy after the diagnostic Nok horizon ended
 	language = antq_subsaharan_dialect
-	color = antq_culture_color_antq_kongo_bantu
+	color = antq_culture_color_antq_post_nok
 	tags = { european_gfx }
 	culture_groups = {
 		antq_subsaharan_group
 	}
 }
 
-antq_great_lakes_bantu = { # P8.5;P10;CAH-XI; Great Lakes Bantu-frontier regional proxy
+antq_ngovo = { # SCI-CONGO-RAINFOREST;NGOVO-GROUP;P8.5;P10; Lower Congo material horizon; pottery does not define one ethnicity or state
 	language = antq_subsaharan_dialect
-	color = antq_culture_color_antq_great_lakes_bantu
+	color = antq_culture_color_antq_ngovo
 	tags = { european_gfx }
 	culture_groups = {
 		antq_subsaharan_group
 	}
 }
 
-antq_eastern_bantu = { # P8.5;P10;CAH-XI; Eastern African Bantu-frontier regional proxy before later Swahili identities
+antq_urewe = { # JAH-BANTU-MOBILITY;AZA-UREWE;P8.5;P10; Great Lakes material horizon; language and political identity remain unresolved
 	language = antq_subsaharan_dialect
-	color = antq_culture_color_antq_eastern_bantu
+	color = antq_culture_color_antq_urewe
 	tags = { european_gfx }
 	culture_groups = {
 		antq_subsaharan_group
 	}
 }
 
-antq_southern_bantu = { # P8.5;P10;CAH-XI; Southern African Bantu-frontier regional proxy
+antq_kwale = { # QI-EAFRICA;UC-MOMBASA;P8.5;P10; Coastal early-ironworking material horizon and mixed-economy proxy
 	language = antq_subsaharan_dialect
-	color = antq_culture_color_antq_southern_bantu
+	color = antq_culture_color_antq_kwale
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_ruvuma_lurio = { # QI-EAFRICA;JAH-BANTU-MOBILITY;P8.5;P10; Southern coastal migration-frontier proxy without later ethnic labels
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_ruvuma_lurio
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_limpopo_hunter_herder = { # OUP-SOUTH-AFRICA;JAH-BANTU-MOBILITY;P8.5;P10; Southern hunter-herder proxy before securely dated farmer settlement; technical naming fallback is not a language claim
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_limpopo_hunter_herder
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_zambezi_forager = { # OUP-SOUTH-AFRICA;JAH-BANTU-MOBILITY;P8.5;P10; Save-Zambezi hunter-herder proxy before securely dated farmer settlement; technical naming fallback is not a language claim
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_zambezi_forager
 	tags = { european_gfx }
 	culture_groups = {
 		antq_subsaharan_group

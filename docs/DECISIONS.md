@@ -1,5 +1,27 @@
 # Technical and Design Decisions
 
+## 2026-07-28 - African horizons are modeled as bounded networks, not a Bantu state
+
+The old Bantu Societies country collapsed several unrelated evidence regimes
+into one 94-location polity: Wadai, Bauchi, the Congo rainforest, the Great
+Lakes, the East African coast, and lands south of the Zambezi. ANTIQVITAS now
+uses the archaeological or subsistence frame that the evidence can support.
+Ngovo, Urewe, and Kwale remain horizon labels; Ruvuma-Lurio is an explicitly
+mobile frontier; Limpopo and Zambezi are hunter-herder networks rather than
+premature first-century farming states; Wadai and Bauchi are non-Bantu plateau
+communities.
+
+This is a map-and-systems replacement, not a rename. Each frame has disjoint
+ownership, an owned capital, culture/religion profile, government reform,
+standard, agenda/history/rank path, opening research, settlement propagation,
+and eleven-client localization. Ngazidja is moved to the intentional-empty
+ledger because an engine-filled island would make a stronger historical claim
+than the evidence permits.
+
+`tools/s2_bantu_frontier_granularity.py` enforces this complete contract and
+forbids the five retired macro-culture keys. The global placeholder census
+remains open at 24.
+
 ## 2026-07-27 - Barbaria uses independent ports and bounded hinterland frames
 
 The *Periplus of the Erythraean Sea* explicitly describes the far-side market

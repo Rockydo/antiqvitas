@@ -1,5 +1,42 @@
 # Historical Assumptions
 
+## 2026-07-28 - Bantu-frontier labels describe evidence horizons, not ethnic states
+
+† Urewe, Ngovo, and Kwale are archaeological categories whose distributions do
+not prove a single language, ethnicity, migration wave, or centralized polity.
+They are used as bounded playable community networks because the engine
+requires political ownership, while their localization avoids claiming kings
+or fixed tribal borders. Ruvuma-Lurio is still less secure and deliberately
+presented as a frontier.
+
+The southern-African split follows chronology rather than later ethnolinguistic
+maps. Mixed farming reaches the summer-rainfall zone during the early first
+millennium AD, but projecting it across Limpopo and Zambezi at the AD 1 bookmark
+is too early. Those frames are therefore hunter-herder networks. Their current
+`antq_bantu_religion` assignment is only a technical local-traditions fallback,
+not a Bantu identity claim; a dedicated sourced southern-African doctrine and
+art tranche remains open in `TODO.md`.
+
+Wadai is a cautious eastern-Chadian plateau gameplay frame, not the later
+sultanate. Bauchi represents post-Nok communities and does not assert survival
+of a unified Nok state. Ngazidja is left unowned because secure AD 1 settlement
+evidence for the Comoros is absent; later island occupation is not backdated.
+
+Sources weighed: plan section 8.5; the
+[Cambridge *Journal of African History* review of mobile Bantu expansions](https://www.cambridge.org/core/journals/journal-of-african-history/article/moving-histories-bantu-language-expansions-eclectic-economies-and-mobilities/F9F92F9C6A16A9633E75508E836C9C46);
+the [Congo rainforest population-history synthesis](https://pmc.ncbi.nlm.nih.gov/articles/PMC7880602/);
+the [Ngovo Group chronology](https://doi.org/10.1007/BF01117037);
+the [Urewe burial review](https://www.tandfonline.com/doi/full/10.1080/0067270X.2010.521677);
+the [eastern African subsistence review](https://discovery.ucl.ac.uk/10055008/1/1-s2.0-S1040618216302890-main.pdf);
+the [Mombasa hinterland synthesis](https://webfiles.ucpress.edu/oa/9780520400498_WEB.pdf);
+the [Oxford southern-African farmer chronology](https://www.arch.ox.ac.uk/publication/1022876/scopus);
+the [Méga-Tchad regional bulletin](https://www.cepam.cnrs.fr/megatchad/bulletin/Bulletin%20MT%202005.pdf);
+and the [Oxford Nok overview](https://academic.oup.com/edited-volume/61663/chapter-abstract/553397313).
+
+[secure regional archaeological horizons and later first-millennium southern
+farmer expansion; contested AD 1 political ownership, precise cultural/language
+equations, capitals, borders, and Wadai/Bauchi constitutional forms]
+
 ## 2026-07-27 - The Horn split backdates near-contemporary port evidence cautiously
 
 The *Periplus of the Erythraean Sea* is usually dated around AD 40-70, so its

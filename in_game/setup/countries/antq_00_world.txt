@@ -514,12 +514,75 @@ WAF = { # West African Iron-Age Societies; P8.5;CAH-XI
 	is_historic = yes
 }
 
-XDE = { # Bantu Societies; P8.5;CAH-XI
+XDE = { # Ngovo Horizon; SCI-CONGO-RAINFOREST;NGOVO-GROUP;P8.5
 	color = rgb { 134 100 68 }
 	color2 = rgb { 121 155 187 }
 
-	culture_definition = antq_eastern_bantu
-	religion_definition = antq_kushite_amun
+	culture_definition = antq_ngovo
+	religion_definition = antq_bantu_religion
+	is_historic = yes
+}
+
+URW = { # Urewe Horizon; JAH-BANTU-MOBILITY;AZA-UREWE;P8.5
+	color = rgb { 118 99 59 }
+	color2 = rgb { 137 156 196 }
+
+	culture_definition = antq_urewe
+	religion_definition = antq_bantu_religion
+	is_historic = yes
+}
+
+KWL = { # Kwale Horizon; QI-EAFRICA;UC-MOMBASA;P8.5
+	color = rgb { 115 91 66 }
+	color2 = rgb { 140 164 189 }
+
+	culture_definition = antq_kwale
+	religion_definition = antq_bantu_religion
+	is_historic = yes
+}
+
+RUV = { # Ruvuma-Lurio Frontier; QI-EAFRICA;JAH-BANTU-MOBILITY;P8.5
+	color = rgb { 135 95 59 }
+	color2 = rgb { 120 160 196 }
+
+	culture_definition = antq_ruvuma_lurio
+	religion_definition = antq_bantu_religion
+	is_historic = yes
+}
+
+LMP = { # Limpopo Hunter-Herder Networks; OUP-SOUTH-AFRICA;JAH-BANTU-MOBILITY;P8.5
+	color = rgb { 114 119 71 }
+	color2 = rgb { 141 136 184 }
+
+	culture_definition = antq_limpopo_hunter_herder
+	religion_definition = antq_bantu_religion
+	is_historic = yes
+}
+
+ZHF = { # Zambezi Hunter-Herder Networks; OUP-SOUTH-AFRICA;JAH-BANTU-MOBILITY;P8.5
+	color = rgb { 120 105 54 }
+	color2 = rgb { 135 150 201 }
+
+	culture_definition = antq_zambezi_forager
+	religion_definition = antq_bantu_religion
+	is_historic = yes
+}
+
+WDP = { # Wadai Plateau Communities; MEGACHAD-WADAI;P8.5
+	color = rgb { 121 115 58 }
+	color2 = rgb { 134 140 197 }
+
+	culture_definition = antq_wadai_plateau
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+XFR = { # Bauchi Plateau Communities; OUP-NOK;P8.5
+	color = rgb { 147 89 29 }
+	color2 = rgb { 108 166 226 }
+
+	culture_definition = antq_post_nok
+	religion_definition = antq_west_african
 	is_historic = yes
 }
 

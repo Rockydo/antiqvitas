@@ -24,19 +24,20 @@ and focused runtime probe all pass.
 
 ### Audit baseline
 
-- The roster now has 292 playable tags after the Arabia, Britain/Ireland,
-  Germania/Baltic, and northern/eastern archaeological splits. Twenty-seven
-  player-facing macro-polities still contain “Societies” in their names,
+- The roster now has 308 playable tags after the Arabia, Britain/Ireland,
+  Germania/Baltic, northern/eastern, Maghreb, Horn, and Bantu-frontier
+  archaeological splits. Twenty-four player-facing macro-polities still
+  contain “Societies” or another prohibited placeholder term in their names,
   concentrated in Africa, the Americas, Central/South/East/Southeast Asia,
   and Oceania. These are country-scale aggregations, not merely descriptive
   localization, and remain in the global granularity queue below.
-- The global RGO audit now covers all 13,550 controlled templates and applies
+- The global RGO audit now covers all 13,549 controlled templates and applies
   652 regional, environmental, and direct-anchor corrections. Most retained
   staples remain inherited but are explicitly marked as contested where local
   extraction is not attested; deeper regional specialty work remains open.
-- The 265 ancient building definitions now seed 2,688 scalable regional
-  placements across 1,432 settlement-ranked locations and all 292 starting
-  polities. The top ten hold 7.2% because reviewed Roman metropolitan packages
+- The 265 ancient building definitions now seed 2,747 scalable regional
+  placements across 1,459 settlement-ranked locations and all 308 starting
+  polities. The top ten hold 7.1% because reviewed Roman metropolitan packages
   remain deliberately deep; ordinary locations are capped at six.
 - The advance DAG now has 360 nodes and 25 unique effect packages after the
   first 110-node Age-I expansion; 297 nodes still unlock no separate content.
@@ -44,15 +45,16 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 161 reforms and 364 privileges
-  serve 292 opening polities. The legal layer now has 227 ancient groups,
+  thin outside the first replacement tranches: 218 generated opening
+  government records and 364 privileges serve 308 opening polities. The legal
+  layer now has 227 ancient groups,
   including 182 profile laws with 584 total options, a 26-option dated
   development layer, and 12 country-specific exceptions.
-- Exact-name mirrors still leave most installed estates, privileges, parliament
-  material, cabinet actions, laws, religious aspects, and artillery-facing UI in
-  the mounted union. Rome now starts at technology level 3 with a 9.60K reserve
-  and positive opening balance; the remaining risk is incomplete 12-month
-  runtime proof.
+- Exact-name mirrors still leave much installed estate, parliament, cabinet,
+  and law material in the mounted union even though anachronistic options are
+  gated. Population summaries and artillery-facing UI now have direct ancient
+  resolver art. Rome starts at technology level 3 with a positive opening
+  balance; the remaining risk is incomplete 12-month runtime proof.
 - Existing building and advance art is generally strong, but centering, circular
   safe-area compliance, and outlier quality were not validated in the actual UI.
   Villa Liviae and Regional Law Codes are confirmed review targets. Location pop
@@ -412,6 +414,16 @@ and focused runtime probe all pass.
     Three cultures, two government reforms, nine owned capitals, nine direct
     standards, reviewed ancient port names, agendas, and eleven-client
     localization are pinned by `s2_horn_granularity.py`.
+  - [x] Replace the 94-location Bantu Societies placeholder and correct its
+    inherited geographic anachronisms. Ngovo, Urewe, Kwale, and Ruvuma-Lurio
+    are bounded archaeological/economic horizons rather than asserted ethnic
+    states; Limpopo and Zambezi are hunter-herder networks because mixed
+    farming reaches the far south later in the first millennium; Wadai and
+    Bauchi are separate non-Bantu plateau frames. Ngazidja is explicitly
+    unowned because secure AD 1 settlement evidence is absent. Eight cultures,
+    eight capitals, two reforms, direct standards, eleven-client localization,
+    and the exact 93-location contract are pinned by
+    `s2_bantu_frontier_granularity.py`.
   - Start from a generated census of country names, adjectives, map labels,
     government names, history text, and localization in every supported language.
   - Split broad ownership into geographically bounded peoples, confederations,
@@ -550,9 +562,16 @@ and focused runtime probe all pass.
     emporia and three bounded northern-coast, interior-pastoral, and northern-
     Azanian frames. Do not back-project later clan borders or a centralized
     Somali polity.
-  - [ ] Continue the African pass through the remaining Sahara, West African,
-    and Bantu placeholders, then proceed through the size-ranked global
+  - [x] Replace Bantu Societies with eight evidence-bounded central, eastern,
+    and southern African frames; remove its erroneous Wadai/Bauchi claims and
+    leave unverified AD 1 Comorian settlement unowned.
+  - [ ] Continue the African pass through the remaining Sahara and West African
+    placeholders, then proceed through the size-ranked global
     census. The parent task remains open until the census reaches zero.
+  - [ ] Replace the temporary `antq_bantu_religion` technical fallback on the
+    Limpopo and Zambezi hunter-herder frames with a sourced southern-African
+    traditions family, doctrines, and direct icon set; do not imply Bantu
+    identity merely to satisfy an engine religion slot.
   - Split Berber/Gaetulian, West African, Bantu, and other generic society tags
     using evidence-appropriate political/archaeological frames. Recheck Japan,
     Korea, Manchuria, Siberia, India, Southeast Asia, Oceania, and the Americas.
