@@ -1684,12 +1684,138 @@ JAV = { # Javanese Polities; P8.9;CAH-XI
 	is_historic = yes
 }
 
-PHL = { # Philippine Societies; P8.9;CAH-XI
-	color = rgb { 76 132 94 }
-	color2 = rgb { 179 123 161 }
+LZC = { # Northwest Luzon Coastal Communities; NMP-PH-METAL;NMP-PH-JARS
+	color = rgb { 73 114 96 }
+	color2 = rgb { 182 141 159 }
 
-	culture_definition = antq_philippine
-	religion_definition = antq_mahayana
+	culture_definition = antq_northwest_luzon_coast
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+CXR = { # Central Luzon River Communities; NMP-PH-METAL;NMP-PH-JARS
+	color = rgb { 59 139 81 }
+	color2 = rgb { 196 116 174 }
+
+	culture_definition = antq_central_luzon_river
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+XGX = { # Manila Bay-Laguna Communities; NMP-PH-METAL;NMP-PH-JARS
+	color = rgb { 64 130 101 }
+	color2 = rgb { 191 125 154 }
+
+	culture_definition = antq_manila_bay_laguna
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+BCP = { # Bicol Peninsula Metal-Age Communities; NMP-PH-METAL;NMP-PH-JARS;BELLINA-SHK
+	color = rgb { 60 132 83 }
+	color2 = rgb { 195 123 172 }
+
+	culture_definition = antq_bicol_peninsula_metal_age
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+XGY = { # Mindoro Maritime Communities; ATENEO-MINDORO;NMP-PH-JARS
+	color = rgb { 67 135 89 }
+	color2 = rgb { 188 120 166 }
+
+	culture_definition = antq_mindoro_maritime
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+PNY = { # Panay Metal-Age Communities; NMP-PH-METAL;NMP-PH-JARS;BELLINA-SHK
+	color = rgb { 56 115 104 }
+	color2 = rgb { 199 140 151 }
+
+	culture_definition = antq_panay_metal_age
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+XGZ = { # Negros Metal-Age Communities; NMP-PH-METAL;NMP-PH-JARS
+	color = rgb { 69 136 104 }
+	color2 = rgb { 186 119 151 }
+
+	culture_definition = antq_negros_metal_age
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+XHA = { # Cebu-Bohol Island Communities; NMP-KALANAY;BELLINA-SHK
+	color = rgb { 64 131 103 }
+	color2 = rgb { 191 124 152 }
+
+	culture_definition = antq_cebu_bohol_island
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+PLW = { # Palawan Cave-Coast Communities; NMP-TABON;NMP-PH-JARS
+	color = rgb { 69 118 102 }
+	color2 = rgb { 186 137 153 }
+
+	culture_definition = antq_palawan_cave_coast
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+AGS = { # Agusan River Communities; NMP-PH-METAL;NMP-PH-JARS
+	color = rgb { 52 113 101 }
+	color2 = rgb { 203 142 154 }
+
+	culture_definition = antq_agusan_river
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+XHB = { # Lanao Coast-Lake Communities; NMP-PH-METAL;NMP-PH-JARS
+	color = rgb { 52 127 86 }
+	color2 = rgb { 203 128 169 }
+
+	culture_definition = antq_lanao_coast_lake
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+XHC = { # Pulangi-Cotabato Basin Communities; NMP-PH-METAL;NMP-PH-JARS
+	color = rgb { 70 130 100 }
+	color2 = rgb { 185 125 155 }
+
+	culture_definition = antq_pulangi_cotabato_basin
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+MTT = { # Maitum-Sarangani Mortuary Communities; CCP-MAITUM;NMP-PH-JARS
+	color = rgb { 55 114 82 }
+	color2 = rgb { 200 141 173 }
+
+	culture_definition = antq_maitum_sarangani
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+ZBG = { # Zamboanga Peninsula Communities; NMP-PH-METAL;NMP-PH-JARS;BELLINA-SHK
+	color = rgb { 77 136 96 }
+	color2 = rgb { 178 119 159 }
+
+	culture_definition = antq_zamboanga_peninsula
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+SLU = { # Sulu Island Communities; NMP-PH-METAL;NMP-PH-JARS;BELLINA-SHK
+	color = rgb { 66 112 82 }
+	color2 = rgb { 189 143 173 }
+
+	culture_definition = antq_sulu_island
+	religion_definition = antq_austronesian_religion
 	is_historic = yes
 }
 

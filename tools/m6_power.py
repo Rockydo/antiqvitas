@@ -603,6 +603,34 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "ANTH-KAL-IRON;P13", "contested",
         "Foothill households coordinate ore, charcoal, furnaces, river passage, and cultivation without a uniform guild or later state.",
     ),
+    "antq_philippine_coastal_river_network": (
+        "global_tribes_estate_power=0.08|global_peasants_estate_power=0.05|"
+        "tribes_estate_power_from_cabinet=0.17|global_trade_through_owned_territory_efficiency=0.025|"
+        "replace_cabinet_member_cost_modifier=0.025",
+        "NMP-PH-METAL;NMP-PH-JARS;P13", "contested",
+        "River, bay, and coastal households coordinate landing places, cultivation, passage, and exchange without one island kingdom.",
+    ),
+    "antq_philippine_mortuary_community_network": (
+        "global_tribes_estate_power=0.08|global_clergy_estate_power=0.06|"
+        "tribes_estate_power_from_cabinet=0.17|global_monthly_food_modifier=0.02|"
+        "replace_cabinet_member_cost_modifier=0.025",
+        "NMP-PH-JARS;NMP-KALANAY;CCP-MAITUM;P13", "contested",
+        "Communities coordinate secondary burials, ancestral places, cultivation, and exchange without inventing a common priesthood or state.",
+    ),
+    "antq_philippine_island_exchange_network": (
+        "global_tribes_estate_power=0.07|global_burghers_estate_power=0.06|"
+        "tribes_estate_power_from_cabinet=0.15|global_trade_through_owned_territory_efficiency=0.03|"
+        "replace_cabinet_member_cost_modifier=0.025",
+        "NMP-KALANAY;BELLINA-SHK;P13", "contested",
+        "Island households coordinate anchorages, pottery exchange, passage, and restitution without a centralized thalassocracy.",
+    ),
+    "antq_philippine_cave_coast_network": (
+        "global_tribes_estate_power=0.09|global_peasants_estate_power=0.05|"
+        "tribes_estate_power_from_cabinet=0.18|global_trade_through_owned_territory_efficiency=0.02|"
+        "replace_cabinet_member_cost_modifier=0.025",
+        "NMP-TABON;ATENEO-MINDORO;NMP-PH-JARS;P13", "contested",
+        "Cave, rockshelter, and coastal households coordinate burial places, shore access, subsistence, and exchange without a later island polity.",
+    ),
     "antq_mesoamerican_urban_ritual_center": (
         "global_clergy_estate_power=0.10|global_burghers_estate_power=0.07|"
         "clergy_estate_power_from_cabinet=0.20|global_production_efficiency=0.025|"
@@ -1440,6 +1468,10 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
         "antq_borneo_coastal_exchange_network",
         "antq_borneo_interior_river_network",
         "antq_borneo_foothill_iron_network",
+        "antq_philippine_coastal_river_network",
+        "antq_philippine_mortuary_community_network",
+        "antq_philippine_island_exchange_network",
+        "antq_philippine_cave_coast_network",
     ),
     "sacral": (),
     "royal": (
@@ -2026,9 +2058,9 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    # Core/regional contracts include the reviewed Manchurian, Bornean, and
-    # Mesoamerican network reforms defined above.
-    expected_contract_count = 103 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    # Core/regional contracts include the reviewed Manchurian, Bornean,
+    # Philippine, and Mesoamerican network reforms defined above.
+    expected_contract_count = 107 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -2036,7 +2068,7 @@ def load_power_data() -> PowerData:
         failures.append(
             "political appointment contracts must cover every core, regional, and successor reform"
         )
-    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 103:
+    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 107:
         failures.append("political appointment contracts are insufficiently differentiated")
     path_rows = reform_path_rows()
     alternative_profiles = [row[1] for row in path_rows]
@@ -2681,6 +2713,50 @@ antq_borneo_foothill_iron_network = {
 	country_modifier = {
 		global_peasants_estate_power = 0.06
 		global_monthly_food_modifier = 0.02
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_philippine_coastal_river_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		global_trade_through_owned_territory_efficiency = 0.025
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_philippine_mortuary_community_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_clergy_estate_power = 0.06
+		global_monthly_food_modifier = 0.02
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_philippine_island_exchange_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_burghers_estate_power = 0.06
+		global_trade_through_owned_territory_efficiency = 0.03
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_philippine_cave_coast_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.09
+		global_trade_through_owned_territory_efficiency = 0.02
 		research_speed = 0.07
 	}
 	years = 2
@@ -3631,6 +3707,14 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_borneo_interior_river_network_desc", "River communities coordinate portage, forest access, cultivation, and exchange without later ethnic borders."),
         ("antq_borneo_foothill_iron_network", "Borneo Foothill Iron Network"),
         ("antq_borneo_foothill_iron_network_desc", "Foothill households coordinate ore, charcoal, furnaces, river passage, and cultivation without a uniform guild or later state."),
+        ("antq_philippine_coastal_river_network", "Philippine Coastal-River Network"),
+        ("antq_philippine_coastal_river_network_desc", "River, bay, and coastal households coordinate landing places, cultivation, passage, and exchange without one island kingdom."),
+        ("antq_philippine_mortuary_community_network", "Philippine Mortuary Community Network"),
+        ("antq_philippine_mortuary_community_network_desc", "Communities coordinate ancestral places, secondary burials, cultivation, and exchange without a common priesthood or state."),
+        ("antq_philippine_island_exchange_network", "Philippine Island Exchange Network"),
+        ("antq_philippine_island_exchange_network_desc", "Island households coordinate anchorages, pottery exchange, passage, and restitution without a centralized thalassocracy."),
+        ("antq_philippine_cave_coast_network", "Philippine Cave-Coast Network"),
+        ("antq_philippine_cave_coast_network_desc", "Cave, rockshelter, and coastal households coordinate burial places, shore access, subsistence, and exchange without a later island polity."),
         ("antq_mesoamerican_urban_ritual_center", "Mesoamerican Urban-Ritual Center"),
         ("antq_mesoamerican_urban_ritual_center_desc", "A first-order ceremonial and exchange center coordinates public space, specialist production, cultivation, and regional ties without an invented recovered constitution."),
         ("antq_mesoamerican_formative_civic_network", "Mesoamerican Formative Civic Network"),

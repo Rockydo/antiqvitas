@@ -2619,17 +2619,213 @@ JAV = { # Javanese Polities; P8.9;P20
 	}
 }
 
-PHL = { # Philippine Societies; P8.9;P20
+LZC = { # Northwest Luzon Coastal Communities; NMP-PH-METAL;NMP-PH-JARS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_boat_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+CXR = { # Central Luzon River Communities; NMP-PH-METAL;NMP-PH-JARS;P20
 	pattern = "pattern_solid.dds"
 	color1 = "green"
+	color2 = "white"
+	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_fish_naiant.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XGX = { # Manila Bay-Laguna Communities; NMP-PH-METAL;NMP-PH-JARS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_asian_animist_sun.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+BCP = { # Bicol Peninsula Metal-Age Communities; NMP-PH-METAL;NMP-PH-JARS;BELLINA-SHK;P20
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_spiral_star_06.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XGY = { # Mindoro Maritime Communities; ATENEO-MINDORO;NMP-PH-JARS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_conch_shell.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+PNY = { # Panay Metal-Age Communities; NMP-PH-METAL;NMP-PH-JARS;BELLINA-SHK;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XGZ = { # Negros Metal-Age Communities; NMP-PH-METAL;NMP-PH-JARS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
 	color2 = "yellow"
 	color3 = "red"
 	colored_emblem = {
-		texture = "ce_auspicious_conch_shell_simple.dds"
+		texture = "ce_circle.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XHA = { # Cebu-Bohol Island Communities; NMP-KALANAY;BELLINA-SHK;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_fishes_in_pale_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+PLW = { # Palawan Cave-Coast Communities; NMP-TABON;NMP-PH-JARS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_boat_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+AGS = { # Agusan River Communities; NMP-PH-METAL;NMP-PH-JARS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_fish_okeane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XHB = { # Lanao Coast-Lake Communities; NMP-PH-METAL;NMP-PH-JARS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_crescent_moon.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XHC = { # Pulangi-Cotabato Basin Communities; NMP-PH-METAL;NMP-PH-JARS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+MTT = { # Maitum-Sarangani Mortuary Communities; CCP-MAITUM;NMP-PH-JARS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "red"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_asian_animist_sun.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+ZBG = { # Zamboanga Peninsula Communities; NMP-PH-METAL;NMP-PH-JARS;BELLINA-SHK;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_spear_head_random_small.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+SLU = { # Sulu Island Communities; NMP-PH-METAL;NMP-PH-JARS;BELLINA-SHK;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_conch_shell.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
 	}
 }
 

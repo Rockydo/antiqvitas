@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-28 - The Philippines becomes fifteen Metal-Age regional frames
+
+- Removed the 69-location `PHL` catch-all. Fifteen whole-province frames raise
+  the roster to 431 and reduce placeholders to twelve.
+- Added fifteen cultures, four reforms, fifteen standards, and complete
+  start-system coverage; corrected the inherited Mahayana profile to the
+  Austronesian belief family.
+- `tools/s2_philippine_granularity.py` pins the transform.
+- All 126 validation commands pass; paired smoke found zero mod-only normalized
+  errors.
+
+Next: replace the 68-location Island Southeast Asian Societies frame.
+
 ## 2026-07-28 - West Mexico and the ancestral Sonoran desert are separated
 
 - Removed the 98-location `WMS` catch-all. Ten West Mexican frames and one
@@ -10,8 +23,6 @@
 - `tools/s2_west_mexican_granularity.py` pins the transform.
 - All 125 validation commands pass; paired smoke found zero mod-only normalized
   errors.
-
-Next: replace the 69-location Philippine Societies frame.
 
 ## 2026-07-28 - Mesoamerica becomes bounded start-era centers and networks
 

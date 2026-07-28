@@ -4093,3 +4093,13 @@ shaft-tomb, Teuchitlan, basin, highland-corridor, and desert-farming contexts.
 Existing religion-family art and reviewed vanilla emblem standards are reused;
 no new visual family is required. `tools/s2_west_mexican_granularity.py` pins
 the transform.
+
+## 2026-07-28 - Philippine gameplay follows whole-province Metal-Age frames
+
+`PHL` is replaced by fifteen disjoint province frames totaling 69 fields.
+Sarangani remains a two-field frame because the Maitum assemblage directly
+straddles AD 1; Palawan and Mindoro remain separate cave-coast networks.
+The inherited Mahayana profile is removed in favor of the existing Austronesian
+belief family. Four network reforms cover coastal-river, mortuary, island-
+exchange, and cave-coast contexts. Existing religion art and reviewed vanilla
+emblems suffice. `tools/s2_philippine_granularity.py` pins the transform.

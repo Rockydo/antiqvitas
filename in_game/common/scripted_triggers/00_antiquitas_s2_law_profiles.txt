@@ -387,8 +387,11 @@ antq_law_profile_african_trigger = {
 
 antq_law_profile_eastern_trigger = {
 	OR = {
+		has_or_had_tag = AGS
+		has_or_had_tag = BCP
 		has_or_had_tag = BUY
 		has_or_had_tag = BYE
+		has_or_had_tag = CXR
 		has_or_had_tag = EHW
 		has_or_had_tag = GOG
 		has_or_had_tag = HOK
@@ -402,16 +405,20 @@ antq_law_profile_eastern_trigger = {
 		has_or_had_tag = KPM
 		has_or_had_tag = KSB
 		has_or_had_tag = KYU
+		has_or_had_tag = LZC
+		has_or_had_tag = MTT
 		has_or_had_tag = NBR
 		has_or_had_tag = NEB
 		has_or_had_tag = OHW
-		has_or_had_tag = PHL
+		has_or_had_tag = PLW
+		has_or_had_tag = PNY
 		has_or_had_tag = PWB
 		has_or_had_tag = PYU
 		has_or_had_tag = RSW
 		has_or_had_tag = RYS
 		has_or_had_tag = SGK
 		has_or_had_tag = SHY
+		has_or_had_tag = SLU
 		has_or_had_tag = TKW
 		has_or_had_tag = UIR
 		has_or_had_tag = UMK
@@ -431,6 +438,13 @@ antq_law_profile_eastern_trigger = {
 		has_or_had_tag = XGH
 		has_or_had_tag = XGL
 		has_or_had_tag = XGM
+		has_or_had_tag = XGX
+		has_or_had_tag = XGY
+		has_or_had_tag = XGZ
+		has_or_had_tag = XHA
+		has_or_had_tag = XHB
+		has_or_had_tag = XHC
+		has_or_had_tag = ZBG
 	}
 }
 

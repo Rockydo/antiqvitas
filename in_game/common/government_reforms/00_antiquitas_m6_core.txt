@@ -815,6 +815,82 @@ antq_borneo_foothill_iron_network = {
 	years = 2
 }
 
+antq_philippine_coastal_river_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		global_peasants_estate_power = 0.05
+		tribes_estate_power_from_cabinet = 0.17
+		global_trade_through_owned_territory_efficiency = 0.025
+		replace_cabinet_member_cost_modifier = 0.025
+		global_tribes_estate_power = 0.08
+		global_trade_through_owned_territory_efficiency = 0.025
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_philippine_mortuary_community_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		global_clergy_estate_power = 0.06
+		tribes_estate_power_from_cabinet = 0.17
+		global_monthly_food_modifier = 0.02
+		replace_cabinet_member_cost_modifier = 0.025
+		global_clergy_estate_power = 0.06
+		global_monthly_food_modifier = 0.02
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_philippine_island_exchange_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.07
+		global_burghers_estate_power = 0.06
+		tribes_estate_power_from_cabinet = 0.15
+		global_trade_through_owned_territory_efficiency = 0.03
+		replace_cabinet_member_cost_modifier = 0.025
+		global_burghers_estate_power = 0.06
+		global_trade_through_owned_territory_efficiency = 0.03
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_philippine_cave_coast_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.09
+		global_peasants_estate_power = 0.05
+		tribes_estate_power_from_cabinet = 0.18
+		global_trade_through_owned_territory_efficiency = 0.02
+		replace_cabinet_member_cost_modifier = 0.025
+		global_tribes_estate_power = 0.09
+		global_trade_through_owned_territory_efficiency = 0.02
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
 antq_mesoamerican_urban_ritual_center = {
 	major = yes
 	government = tribe
@@ -2080,6 +2156,10 @@ antq_elder_moot_kingship = {
 			has_reform = government_reform:antq_borneo_coastal_exchange_network
 			has_reform = government_reform:antq_borneo_interior_river_network
 			has_reform = government_reform:antq_borneo_foothill_iron_network
+			has_reform = government_reform:antq_philippine_coastal_river_network
+			has_reform = government_reform:antq_philippine_mortuary_community_network
+			has_reform = government_reform:antq_philippine_island_exchange_network
+			has_reform = government_reform:antq_philippine_cave_coast_network
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}
@@ -2123,6 +2203,10 @@ antq_warband_retinue_kingship = {
 			has_reform = government_reform:antq_borneo_coastal_exchange_network
 			has_reform = government_reform:antq_borneo_interior_river_network
 			has_reform = government_reform:antq_borneo_foothill_iron_network
+			has_reform = government_reform:antq_philippine_coastal_river_network
+			has_reform = government_reform:antq_philippine_mortuary_community_network
+			has_reform = government_reform:antq_philippine_island_exchange_network
+			has_reform = government_reform:antq_philippine_cave_coast_network
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}

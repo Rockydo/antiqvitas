@@ -5701,3 +5701,15 @@ Sources: `INAH-WEST-SHAFT`; `INAH-TEUCHITLAN`; `INAH-COLIMA`;
 `INAH-CHUPICUARO`; `INAH-MEZCALA`; `INAH-TOLUCA`; `INAH-WEST-MEXICO`;
 `NPS-SONORAN`. [secure chronology/material regions; contested political form
 and exact extent]
+
+## 2026-07-28 - Philippine frames do not backdate later polities or peoples
+
+The 500 BCE-AD 1000 Metal-Age horizon and varied jar-burial contexts support
+regional community frames, not one Philippine state. Kalanay-related pottery
+is modeled as overlapping exchange networks, not a single people. Maitum is
+directly attested across AD 1; Tabon and Mindoro justify distinct cave-coast
+landscapes. Later Ma-i, Butuan, Tondo, Cebu, Sulu, datu, rajah, sultanate,
+Tagalog, Visayan, Moro, and Lumad political or ethnic identities are not
+backdated. Sources: `NMP-PH-METAL`; `NMP-PH-JARS`; `NMP-KALANAY`; `NMP-TABON`;
+`CCP-MAITUM`; `ATENEO-MINDORO`; `BELLINA-SHK`. [secure broad chronology and
+sites; contested political form and exact extent]
