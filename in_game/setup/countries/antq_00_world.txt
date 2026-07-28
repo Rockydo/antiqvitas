@@ -383,16 +383,16 @@ YDH = { # Yaudheya; P8.4;CAH-XI
 	color = rgb { 172 103 36 }
 	color2 = rgb { 83 152 219 }
 
-	culture_definition = antq_indo_aryan
+	culture_definition = antq_yaudheya_prakrit
 	religion_definition = antq_brahmanism
 	is_historic = yes
 }
 
-ARJ = { # Arjunayana; P8.4;CAH-XI
+ARJ = { # Arjunayana; BM-TRIBAL-COINS;P8.4
 	color = rgb { 190 119 55 }
 	color2 = rgb { 65 136 200 }
 
-	culture_definition = antq_indo_aryan
+	culture_definition = antq_arjunayana_prakrit
 	religion_definition = antq_brahmanism
 	is_historic = yes
 }
@@ -401,7 +401,7 @@ XAZ = { # Kuninda; P8.4;CAH-XI
 	color = rgb { 178 130 36 }
 	color2 = rgb { 77 125 219 }
 
-	culture_definition = antq_indo_aryan
+	culture_definition = antq_kuninda_hill
 	religion_definition = antq_brahmanism
 	is_historic = yes
 }
@@ -1963,12 +1963,219 @@ XDO = { # Tes-Tashtyk Transition; FU-TASHTYK;P8.8
 	is_historic = yes
 }
 
-XDP = { # Gangetic Societies; P8.4;CAH-XI
+XDP = { # Magadha; ASI-MITRA;P8.4;CAH-XI
 	color = rgb { 173 123 51 }
 	color2 = rgb { 82 132 204 }
 
-	culture_definition = antq_indo_aryan
+	culture_definition = antq_magadhi_prakrit
 	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+XFS = { # Audumbara; BM-TRIBAL-COINS;P8.4
+	color = rgb { 171 103 47 }
+	color2 = rgb { 84 152 208 }
+
+	culture_definition = antq_audumbara_hill
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+XFT = { # Northern Satrapy of Mathura; OX-MTH;BM-MATHURA;P8.4
+	color = rgb { 169 122 37 }
+	color2 = rgb { 86 133 218 }
+
+	culture_definition = antq_shauraseni_prakrit
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+PCM = { # Panchala Mitra Kingdom; ASI-MITRA;IGNCA-PANCHALA;P8.4
+	color = rgb { 190 106 53 }
+	color2 = rgb { 65 149 202 }
+
+	culture_definition = antq_panchala_prakrit
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+KSM = { # Kaushambi Mitra Kingdom; ASI-MITRA;P8.4
+	color = rgb { 174 117 32 }
+	color2 = rgb { 81 138 223 }
+
+	culture_definition = antq_kaushambi_prakrit
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+AYM = { # Ayodhya Mitra Kingdom; ASI-MITRA;P8.4
+	color = rgb { 174 102 44 }
+	color2 = rgb { 81 153 211 }
+
+	culture_definition = antq_kosala_prakrit
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+XFU = { # Kashi Janapada; ASI-MITRA;P8.4
+	color = rgb { 188 103 49 }
+	color2 = rgb { 67 152 206 }
+
+	culture_definition = antq_kashi_prakrit
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+XFV = { # Malla Assemblies; ASI-MITRA;P8.4
+	color = rgb { 185 106 35 }
+	color2 = rgb { 70 149 220 }
+
+	culture_definition = antq_malla_prakrit
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+VDJ = { # Videha Janapada; ASI-MITRA;P8.4
+	color = rgb { 168 103 53 }
+	color2 = rgb { 87 152 202 }
+
+	culture_definition = antq_videha_prakrit
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+AGA = { # Anga Janapada; ASI-MITRA;P8.4
+	color = rgb { 182 106 37 }
+	color2 = rgb { 73 149 218 }
+
+	culture_definition = antq_anga_prakrit
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+PDR = { # Pundravardhana; UNESCO-MAHASTHAN;CAM-BANGLADESH;P8.4
+	color = rgb { 179 115 46 }
+	color2 = rgb { 76 140 209 }
+
+	culture_definition = antq_pundra_early_historic
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+XFW = { # Rarh; CAM-BANGLADESH;P8.4
+	color = rgb { 165 115 55 }
+	color2 = rgb { 90 140 200 }
+
+	culture_definition = antq_rarh_early_historic
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+VNG = { # Vanga; CAM-BANGLADESH;P8.4
+	color = rgb { 186 117 55 }
+	color2 = rgb { 69 138 200 }
+
+	culture_definition = antq_vanga_early_historic
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+SMT = { # Samatata; CAM-BANGLADESH;P8.4
+	color = rgb { 176 119 31 }
+	color2 = rgb { 79 136 224 }
+
+	culture_definition = antq_samatata_early_historic
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+HRK = { # Harikela; CAM-BANGLADESH;P8.4
+	color = rgb { 187 108 27 }
+	color2 = rgb { 68 147 228 }
+
+	culture_definition = antq_harikela_early_historic
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+XFX = { # Chota Nagpur Megalithic Networks; OUP-NEINDIA;P8.4
+	color = rgb { 174 116 28 }
+	color2 = rgb { 81 139 227 }
+
+	culture_definition = antq_chota_nagpur_megalithic
+	religion_definition = antq_eastern_hill_traditions
+	is_historic = yes
+}
+
+XFY = { # Ambari Horizon; ASI-AMBARI;OUP-NEINDIA;P8.4
+	color = rgb { 178 117 35 }
+	color2 = rgb { 77 138 220 }
+
+	culture_definition = antq_ambari_horizon
+	religion_definition = antq_eastern_hill_traditions
+	is_historic = yes
+}
+
+DDV = { # Doyang-Dhansiri Valley; OUP-NEINDIA;P8.4
+	color = rgb { 184 115 53 }
+	color2 = rgb { 71 140 202 }
+
+	culture_definition = antq_doyang_dhansiri
+	religion_definition = antq_eastern_hill_traditions
+	is_historic = yes
+}
+
+KJH = { # Khasi-Jaintia Highlands; OUP-NEINDIA;P8.4
+	color = rgb { 173 127 42 }
+	color2 = rgb { 82 128 213 }
+
+	culture_definition = antq_khasi_jaintia_highland
+	religion_definition = antq_eastern_hill_traditions
+	is_historic = yes
+}
+
+UBR = { # Upper Brahmaputra Foothills; OUP-NEINDIA;P8.4
+	color = rgb { 165 125 46 }
+	color2 = rgb { 90 130 209 }
+
+	culture_definition = antq_upper_brahmaputra
+	religion_definition = antq_eastern_hill_traditions
+	is_historic = yes
+}
+
+SDY = { # Sadiya Foothills; OUP-NEINDIA;P8.4
+	color = rgb { 166 112 50 }
+	color2 = rgb { 89 143 205 }
+
+	culture_definition = antq_sadiya_foothill
+	religion_definition = antq_eastern_hill_traditions
+	is_historic = yes
+}
+
+MYL = { # Monyul Highlands; UCL-BHUTAN;OUP-NEINDIA;P8.4
+	color = rgb { 185 125 38 }
+	color2 = rgb { 70 130 217 }
+
+	culture_definition = antq_monyul_highland
+	religion_definition = antq_eastern_hill_traditions
+	is_historic = yes
+}
+
+SKM = { # Sikkim Foothills; UCL-BHUTAN;OUP-NEINDIA;P8.4
+	color = rgb { 170 109 35 }
+	color2 = rgb { 85 146 220 }
+
+	culture_definition = antq_sikkim_foothill
+	religion_definition = antq_eastern_hill_traditions
+	is_historic = yes
+}
+
+IMV = { # Imphal Valley Networks; OUP-NEINDIA;P8.4
+	color = rgb { 165 123 39 }
+	color2 = rgb { 90 132 216 }
+
+	culture_definition = antq_imphal_valley
+	religion_definition = antq_eastern_hill_traditions
 	is_historic = yes
 }
 

@@ -3313,6 +3313,231 @@ antq_shauraseni_prakrit = { # P8.4;P10;CAH-XI;RGU-PRK; Mathura and upper-Gangeti
 	}
 }
 
+antq_audumbara_hill = { # BM-TRIBAL-COINS;P8.4;P10; Numismatic hill-country profile; the later Nepali language key is only an engine name-list fallback
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_audumbara_hill
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_yaudheya_prakrit = { # BM-TRIBAL-COINS;P8.4;P10; Yaudheya coin-polity profile without asserting one uniform vernacular; the language key is technical
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_yaudheya_prakrit
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_arjunayana_prakrit = { # BM-TRIBAL-COINS;P8.4;P10; Arjunayana coin-polity profile without projecting later Rajasthani identities
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_arjunayana_prakrit
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_kuninda_hill = { # BM-TRIBAL-COINS;P8.4;P10; Kuninda Himalayan-foothill numismatic profile; the later Nepali language key is technical
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_kuninda_hill
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_panchala_prakrit = { # ASI-MITRA;IGNCA-PANCHALA;P8.4;P10; Panchala local-court profile without asserting a recovered AD 1 census language
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_panchala_prakrit
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_kaushambi_prakrit = { # ASI-MITRA;P8.4;P10; Kaushambi local-court profile; the language key supplies names rather than a linguistic frontier
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_kaushambi_prakrit
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_kosala_prakrit = { # ASI-MITRA;P8.4;P10; Ayodhya-Saketa regional Prakrit proxy without projecting later Awadhi identity
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_kosala_prakrit
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_kashi_prakrit = { # ASI-MITRA;P8.4;P10; Varanasi middle-Ganga regional profile; the later Bengali key is only an engine fallback
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_kashi_prakrit
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_malla_prakrit = { # ASI-MITRA;P8.4;P10; Kushinagara-Pava regional proxy without claiming political or linguistic uniformity
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_malla_prakrit
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_videha_prakrit = { # ASI-MITRA;P8.4;P10; Mithila-Videha regional proxy before later Maithili identity; the language key is technical
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_videha_prakrit
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_anga_prakrit = { # ASI-MITRA;P8.4;P10; Anga-Champa regional proxy before later Bengali identities
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_anga_prakrit
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_pundra_early_historic = { # UNESCO-MAHASTHAN;CAM-BANGLADESH;P8.4;P10; Pundranagara-centered early-historic profile; the Bengali name list is a later technical fallback
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_pundra_early_historic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_rarh_early_historic = { # CAM-BANGLADESH;P8.4;P10; Western Bengal early-historic regional profile without a fixed ethnic frontier
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_rarh_early_historic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_vanga_early_historic = { # CAM-BANGLADESH;P8.4;P10; Vanga delta regional profile; it does not project the later Bengali language unchanged into AD 1
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_vanga_early_historic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_samatata_early_historic = { # CAM-BANGLADESH;P8.4;P10; Lower Meghna early-historic profile without backdating later dynasties
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_samatata_early_historic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_harikela_early_historic = { # CAM-BANGLADESH;P8.4;P10; Eastern-delta early-historic profile; the later Bengali language key is technical
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_harikela_early_historic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_chota_nagpur_megalithic = { # OUP-NEINDIA;P8.4;P10; Plateau archaeological profile; the Munda key is a bounded name-list proxy rather than proof of one AD 1 ethnicity
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_chota_nagpur_megalithic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_ambari_horizon = { # ASI-AMBARI;OUP-NEINDIA;P8.4;P10; Lower Brahmaputra early-historic material horizon without a Kamarupa or Assamese-state claim
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_ambari_horizon
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_doyang_dhansiri = { # OUP-NEINDIA;P8.4;P10; Valley archaeological profile; the Meitei key is only the nearest installed name-list fallback
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_doyang_dhansiri
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_khasi_jaintia_highland = { # OUP-NEINDIA;P8.4;P10; Highland geographic profile without asserting that modern boundaries or identities were fixed in AD 1
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_khasi_jaintia_highland
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_upper_brahmaputra = { # OUP-NEINDIA;P8.4;P10; Upper-valley corridor profile without backdating Ahom or Chutia political identities
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_upper_brahmaputra
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_sadiya_foothill = { # OUP-NEINDIA;P8.4;P10; Eastern Himalayan foothill profile with no asserted unitary ethnicity
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_sadiya_foothill
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_monyul_highland = { # UCL-BHUTAN;OUP-NEINDIA;P8.4;P10; Eastern Himalayan highland proxy without a unified ancient Bhutan claim
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_monyul_highland
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_sikkim_foothill = { # UCL-BHUTAN;OUP-NEINDIA;P8.4;P10; Sikkim highland and foothill proxy without backdating later Lepcha Bhutia or royal boundaries
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_sikkim_foothill
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_imphal_valley = { # OUP-NEINDIA;P8.4;P10; Imphal archaeological frame; the Meitei name list is a technical fallback and later royal chronology is not backdated
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_imphal_valley
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
 antq_frisian = { # P8.7;P10;CAH-XI;CAM-GERM; North Sea Frisian regional proxy without projecting a later Frisian standard
 	language = antq_germanic_dialect
 	color = antq_culture_color_antq_frisian

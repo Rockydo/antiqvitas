@@ -44,6 +44,7 @@ POPULATION_LOCATION_OVERRIDES = ROOT / "docs/m4/population_location_overrides.cs
 POPULATION_GEOGRAPHIC_ALLOCATIONS = ROOT / "docs/m4/population_geographic_allocations.csv"
 POPULATION_CITY_TARGETS = ROOT / "docs/m4/population_city_targets.csv"
 CULTURE_REMAP = ROOT / "docs/culture_remap.csv"
+RELIGION_REMAP = ROOT / "docs/religion_remap.csv"
 M4_SYMBOLS = ROOT / "docs/m4/definition_symbols.json"
 CULTURE_PRESENCE = ROOT / "docs/m12/culture_presence.csv"
 GEOGRAPHY_HIERARCHY = ROOT / "docs/vanilla_symbols/geography_hierarchy.json"
@@ -1180,6 +1181,114 @@ def population_culture_remaps(owners: dict[str, str]) -> dict[str, dict[str, str
     return remaps
 
 
+def population_religion_remaps(owners: dict[str, str]) -> dict[str, dict[str, str]]:
+    """Resolve source-labelled local-faith selectors to controlled locations."""
+    required = ("selector_type", "selector", "religion", "source", "confidence", "note")
+    with RELIGION_REMAP.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if tuple(reader.fieldnames or ()) != required:
+            raise ValueError(
+                f"{RELIGION_REMAP.relative_to(ROOT)} must use header {','.join(required)}"
+            )
+        rows = list(reader)
+    if not rows:
+        raise ValueError(f"{RELIGION_REMAP.relative_to(ROOT)} has no remap rows")
+
+    symbols = json.loads(M4_SYMBOLS.read_text(encoding="utf-8"))
+    religions = set(symbols["religions"])
+    hierarchy = json.loads(GEOGRAPHY_HIERARCHY.read_text(encoding="utf-8-sig"))
+    valid = {
+        "area": set(json.loads(VANILLA_AREAS.read_text(encoding="utf-8-sig"))),
+        "province": set(json.loads(VANILLA_PROVINCES.read_text(encoding="utf-8-sig"))),
+        "location": set(json.loads(VANILLA_LOCATIONS.read_text(encoding="utf-8-sig"))),
+        "region": set(json.loads(VANILLA_REGIONS.read_text(encoding="utf-8-sig"))),
+    }
+
+    def leaves(selector: str, trail: tuple[str, ...] = ()) -> set[str]:
+        if selector in trail:
+            raise ValueError(
+                f"{RELIGION_REMAP.relative_to(ROOT)} has cyclic geography selector "
+                f"{' -> '.join((*trail, selector))}"
+            )
+        children = hierarchy.get(selector)
+        if not children:
+            return {selector}
+        resolved: set[str] = set()
+        for child in children:
+            if child == selector:
+                resolved.add(child)
+            else:
+                resolved.update(leaves(child, (*trail, selector)))
+        return resolved
+
+    remaps: dict[str, dict[str, str]] = {}
+    specificity = {"region": 0, "area": 1, "province": 2, "location": 3}
+    selectors: set[tuple[str, str]] = set()
+    failures: list[str] = []
+    for number, row in enumerate(rows, start=2):
+        values = {key: row.get(key, "").strip() for key in required}
+        if any(not values[key] for key in required):
+            failures.append(f"{RELIGION_REMAP.relative_to(ROOT)}:{number}: blank required field")
+            continue
+        selector_type = values["selector_type"]
+        selector = values["selector"]
+        selector_key = (selector_type, selector)
+        if selector_type not in valid:
+            failures.append(
+                f"{RELIGION_REMAP.relative_to(ROOT)}:{number}: invalid selector type {selector_type}"
+            )
+            continue
+        if selector not in valid[selector_type]:
+            failures.append(
+                f"{RELIGION_REMAP.relative_to(ROOT)}:{number}: unknown {selector_type} {selector}"
+            )
+            continue
+        if selector_key in selectors:
+            failures.append(
+                f"{RELIGION_REMAP.relative_to(ROOT)}:{number}: duplicate selector "
+                f"{selector_type} {selector}"
+            )
+            continue
+        selectors.add(selector_key)
+        if values["religion"] not in religions:
+            failures.append(
+                f"{RELIGION_REMAP.relative_to(ROOT)}:{number}: unknown M4 religion "
+                f"{values['religion']}"
+            )
+            continue
+        if values["confidence"] not in {"secure", "contested"}:
+            failures.append(
+                f"{RELIGION_REMAP.relative_to(ROOT)}:{number}: invalid confidence "
+                f"{values['confidence']}"
+            )
+            continue
+        selected = leaves(selector) & set(owners)
+        if not selected:
+            failures.append(
+                f"{RELIGION_REMAP.relative_to(ROOT)}:{number}: {selector_type} "
+                f"{selector} has no controlled locations"
+            )
+            continue
+        for location in selected:
+            existing = remaps.get(location)
+            if existing:
+                current_rank = specificity[selector_type]
+                existing_rank = specificity[existing["selector_type"]]
+                if current_rank == existing_rank:
+                    failures.append(
+                        f"{RELIGION_REMAP.relative_to(ROOT)}:{number}: equally-specific "
+                        f"overlap at {location} from {existing['selector_type']} "
+                        f"{existing['selector']}"
+                    )
+                    continue
+                if current_rank < existing_rank:
+                    continue
+            remaps[location] = values
+    if failures:
+        raise ValueError("\n".join(sorted(set(failures))))
+    return remaps
+
+
 def vanilla_pop_weights() -> dict[str, Decimal]:
     """Read installed-pop density as a geographic weighting template only."""
     config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
@@ -1364,6 +1473,7 @@ def population_manager(compatibility_cultures: list[str]) -> tuple[str, int, Dec
             owners[location] = tag
     overrides = population_location_overrides(owners, allocations)
     culture_remaps = population_culture_remaps(owners)
+    religion_remaps = population_religion_remaps(owners)
     if COMPATIBILITY_LOCATION not in owners:
         raise ValueError(f"compatibility location {COMPATIBILITY_LOCATION} is not controlled")
     geographic_allocations, geographic_location_groups = population_geographic_allocations(
@@ -1439,7 +1549,10 @@ def population_manager(compatibility_cultures: list[str]) -> tuple[str, int, Dec
         override = overrides.get(location, {})
         pop_type = override.get("pop_type", "tribesmen" if row["kind"] == "sop" else "peasants")
         culture = override.get("culture", culture_remaps.get(location, {}).get("culture", profile.culture))
-        religion = override.get("religion", profile.religion)
+        religion = override.get(
+            "religion",
+            religion_remaps.get(location, {}).get("religion", profile.religion),
+        )
         lines.extend(
             (
                 f"\t{location} = {{",

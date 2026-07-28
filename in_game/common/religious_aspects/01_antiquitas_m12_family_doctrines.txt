@@ -2016,3 +2016,59 @@ antq_doctrine_australian_dreaming_seasonal_knowledge = { # P11;CAH-XI; contested
 		antq_doctrine_australian_dreaming_seasonal_knowledge = 10
 	}
 }
+
+antq_doctrine_eastern_hill_traditions_ancestral_landscapes = { # OUP-NEINDIA;UCL-BHUTAN;P11; contested; Performed memory linked descent communities to valleys forests stones and routes.
+	icon = antq_doctrine_eastern_hill_traditions_ancestral_landscapes
+	religion = antq_eastern_hill_traditions
+
+	modifier = {
+		monthly_legitimacy = 0.03
+		cultural_tradition_modifier = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_eastern_hill_traditions_ancestral_landscapes = 10
+	}
+}
+
+antq_doctrine_eastern_hill_traditions_village_councils = { # OUP-NEINDIA;UCL-BHUTAN;P11; contested; Household representatives coordinated restitution access and collective labor.
+	icon = antq_doctrine_eastern_hill_traditions_village_councils
+	religion = antq_eastern_hill_traditions
+
+	modifier = {
+		tolerance_own = 1
+		global_monthly_prosperity = 0.02
+	}
+
+	opinions = {
+		antq_doctrine_eastern_hill_traditions_village_councils = 10
+	}
+}
+
+antq_doctrine_eastern_hill_traditions_seasonal_rounds = { # OUP-NEINDIA;UCL-BHUTAN;P11; contested; Ecological knowledge ordered cultivation gathering movement and exchange.
+	icon = antq_doctrine_eastern_hill_traditions_seasonal_rounds
+	religion = antq_eastern_hill_traditions
+
+	modifier = {
+		global_monthly_food_modifier = 0.03
+		global_hostile_attrition = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_eastern_hill_traditions_seasonal_rounds = 10
+	}
+}
+
+antq_doctrine_eastern_hill_traditions_highland_custodians = { # OUP-NEINDIA;UCL-BHUTAN;P11; contested; Local specialists guarded offerings remembered obligations and mediated communal crises.
+	icon = antq_doctrine_eastern_hill_traditions_highland_custodians
+	religion = antq_eastern_hill_traditions
+
+	modifier = {
+		stability_cost_efficiency = 0.05
+		monthly_religious_influence = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_eastern_hill_traditions_highland_custodians = 10
+	}
+}

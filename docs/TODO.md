@@ -5,7 +5,7 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,354-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
+- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,355-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
   - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
 ## Second manual playtest remediation — 2026-07-26 (resume here)
@@ -24,9 +24,9 @@ and focused runtime probe all pass.
 
 ### Audit baseline
 
-- The roster now has 315 playable tags after the Arabia, Britain/Ireland,
-  Germania/Baltic, northern/eastern, Maghreb, Horn, Bantu-frontier, and West
-  African archaeological splits. Twenty-three player-facing macro-polities
+- The roster now has 338 playable tags after the Arabia, Britain/Ireland,
+  Germania/Baltic, northern/eastern, Maghreb, Horn, Bantu-frontier, West
+  African, and Gangetic archaeological splits. Twenty-two player-facing macro-polities
   still contain “Societies” or another prohibited placeholder term in their
   names, concentrated in the Americas, Central/South/East/Southeast Asia, and
   Oceania. These are country-scale aggregations, not merely descriptive
@@ -35,8 +35,8 @@ and focused runtime probe all pass.
   652 regional, environmental, and direct-anchor corrections. Most retained
   staples remain inherited but are explicitly marked as contested where local
   extraction is not attested; deeper regional specialty work remains open.
-- The 265 ancient building definitions now seed 2,767 scalable regional
-  placements across 1,467 settlement-ranked locations and all 315 starting
+- The 265 ancient building definitions now seed 2,796 direct regional
+  placements across 1,542 settlement-ranked locations and all 338 starting
   polities. The top ten hold 7.0% because reviewed Roman metropolitan packages
   remain deliberately deep; ordinary locations are capped at six.
 - The advance DAG now has 360 nodes and 25 unique effect packages after the
@@ -45,8 +45,8 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 226 generated opening
-  government records and 364 privileges serve 315 opening polities. The legal
+  thin outside the first replacement tranches: 250 generated opening
+  government records and 364 privileges serve 338 opening polities. The legal
   layer now has 227 ancient groups,
   including 182 profile laws with 584 total options, a 26-option dated
   development layer, and 12 country-specific exceptions.
@@ -433,6 +433,37 @@ and focused runtime probe all pass.
     three political reforms, eight owned capitals, eight direct standards,
     full system integration, and the exact 24-location contract are pinned by
     `s2_west_africa_granularity.py`.
+  - [x] Replace the 411-location Gangetic Societies superstate as a full
+    northern-India ownership correction, not a rename.
+    - The generated audit finds 121 residual locations in Punjab, 35 in the
+      upper Doab, 24 in Awadh, 31 in Bhojpur, 31 in Mithila, 80 in Bengal,
+      15 in Jharkhand, 36 in Assam, 23 in the eastern Himalaya, and two in the
+      Imphal valley. The residual currently overrides or strands the intended
+      Indo-Scythian, Indo-Greek, Yaudheya, Arjunayana, and Kuninda theaters.
+    - Restore the northwestern coin-polity mosaic: bound the Indo-Scythian and
+      Strato II frames, expand Yaudheya and Arjunayana only through supported
+      find zones, add Audumbara, and give Rajuvula's contested Mathura
+      Northern Satrapy its own frame instead of leaving Mathura to Arjunayana.
+    - Split the Ganga plain among source-qualified Panchala, Kaushambi, and
+      Ayodhya Mitra courts; Kashi, Malla, Magadha, Videha, and Anga regional
+      polities; and do not invent one post-Kanva successor empire.
+    - Split Bengal into Pundravardhana, Rarh, Vanga, Samatata, and Harikela
+      frames using early urbanism and regional identities without backdating
+      later dynasties. Separate Chota Nagpur's megalithic belt.
+    - Keep the evidence-poor northeast explicit: Ambari, Doyang-Dhansiri,
+      Khasi-Jaintia, upper-Brahmaputra, Sadiya, Monyul, Sikkim, and Imphal
+      frames must be archaeological/geographic networks, not Kamarupa, Ahom,
+      Chutia, Manikya, or other later kingdoms projected into AD 1.
+    - Completed as 24 explicit opening frames controlling 301 locations after
+      restoring bounded Indo-Scythian, Indo-Greek, Yaudheya, Arjunayana, and
+      Kuninda assignments. Mathura belongs to the six-location Northern
+      Satrapy, while the largest replacement frame is the 27-location Chota
+      Nagpur megalithic belt.
+    - Added granular culture profiles, political forms, owned capitals, direct
+      standards, research/law/estate/building integration, eleven-client
+      localization, and a permanent exact-selector/count validator. Recorded
+      every linguistic or religious engine fallback as technical debt rather
+      than turning it into a historical assertion.
   - Start from a generated census of country names, adjectives, map labels,
     government names, history text, and localization in every supported language.
   - Split broad ownership into geographically bounded peoples, confederations,
@@ -578,10 +609,10 @@ and focused runtime probe all pass.
     archaeological/geographic community networks. Separate western Hausaland,
     Nsukka-Lejja, Lower Oueme, Volta-Cong, and Bosumtwi frames without
     backdating later named states or asserting unsupported ethnic borders.
-  - [ ] Literal African placeholder countries are now exhausted. Continue the
-    size-ranked global census with the 411-location Gangetic Societies frame,
-    then Inner Asian Oasis and Tibetan Societies. The parent task remains open
-    until the census reaches zero.
+  - [ ] Literal African placeholder countries are exhausted and the Gangetic
+    superstate is split. Continue the size-ranked global census with the
+    302-location Inner Asian Oasis Societies frame, then Tibetan Societies.
+    The parent task remains open until the census reaches zero.
   - [ ] Replace the temporary `mande_language` name-generator fallback on the
     six new bounded West African culture profiles with sourced language-family
     and onomastic roots. Do not turn the technical fallback into a claim of a

@@ -7468,7 +7468,9 @@ countries = {
 				agham_kot
 				agror
 				ahmad_khan
+				akora
 				altit
+				aror
 				asadabad_kunar
 				astore
 				attock
@@ -7476,44 +7478,78 @@ countries = {
 				bajaur
 				baligram
 				banihal
+				bannu
 				baramulla
 				behali
+				bhakkar
+				bijnot
 				bunji
+				chakwal
+				channan_pir
 				chilas
+				chishtian
 				chitral
 				chor
+				dajal
+				daraban
 				dasu
 				dera_bugti
+				dera_ghazi_khan
+				dera_ismail_khan
+				derawar
 				dhadar
+				dina
+				dinkot
 				dir
 				dubbi
+				duki
+				dunga_bunga
 				gandava
 				ganderbal
 				ghotki
 				gilgit
 				hajiabad
 				hala
+				hangu
+				harrand
+				isakhel
 				ishkoman
 				islamgarh
 				islamkot
 				jhal
 				jhatpat
 				jijial
+				kahan
 				kalam_swat
 				kandia
 				kandiaro
+				karor
+				karor_2
 				kashmore
+				khairpur
+				khewra
+				khost
+				khushab
+				kohat
+				kot_addu
 				kot_lalu
+				kot_marot
 				kotri
 				kupwara
 				lahri
+				lalpur
 				laribandar
+				lorelai
 				malakand
+				mankera
 				manora
 				mansura
+				mardan
 				marwah
 				mastuj
+				mir_garh_qila
 				misgar
+				mithankot
 				mithri
 				moro_sindh
 				muhammad_tur
@@ -7521,39 +7557,53 @@ countries = {
 				nagar
 				nagarparkar
 				naserpur
+				nawakot
+				omerkot
 				paat
 				parun
 				passu
+				peshawar
 				phander
+				pindi_gheb
 				poonch
 				pulawama
 				punial
 				rajabar
 				rajouri
+				rakni
 				ranikot
 				rasyal
 				rawalakot
+				rawalpindi
 				rohri
+				sangni
 				sehwan
 				shadodkot
 				sharda
 				sherwan
 				shikarpur
+				sitpur
 				siwi
 				sonda
 				srinagar
 				sui_pakistan
 				sukkur
 				tangir
+				tank
+				thal_daman
 				thatta
 				timergara
+				uch
 				udabhanda
 				umarkot
+				urgun
 				urtsun
 				vingur
+				wana
 				wanga_bazar
 				yarkhun
 				yasin
+				zhob
 			}
 
 			country_rank = rank_kingdom
@@ -7614,7 +7664,39 @@ countries = {
 
 		XAY = { # Indo-Greek Rump; P8.4;CAH-XI
 			own_control_core = {
+				batala
+				bhera
+				busal
+				chichawatni
+				chiniot
+				dijkot
+				dipalpur
+				eminabad
+				fatehabad
+				gugera
+				gujrat
+				jalalpur_pirwala
+				jaranwala
+				jhang
+				kalanaur
+				kamalia
+				karur_punjab
+				kasur
+				lahore
+				lalian
+				mailsi
+				multan
+				pakpattan
+				pasrur
+				pindi_bhattian
+				shahpur
+				shorkot
 				sialkot
+				sillanwali
+				sultanwind
+				talwandi
+				tulamba
+				virkgarh
 			}
 
 			country_rank = rank_kingdom
@@ -7761,7 +7843,33 @@ countries = {
 
 		YDH = { # Yaudheya; P8.4;CAH-XI
 			own_control_core = {
+				bajwara
+				bathinda
+				dadri
+				delhi
+				faridkot
+				firozpur
+				gurgaon
+				hajner
+				hansi
+				hisar
+				jalandhar
+				jind
+				kaithal
+				kapurthala
+				karnal
+				milwat
+				muktsar
+				panipat
+				rahon
+				raikot
 				rohtak
+				sadhaura
+				samana_india
+				sarsuti
+				sirhind
+				sunam
+				thanesar
 			}
 
 			country_rank = rank_kingdom
@@ -7817,9 +7925,11 @@ countries = {
 			capital = rohtak
 		}
 
-		ARJ = { # Arjunayana; P8.4;CAH-XI
+		ARJ = { # Arjunayana; BM-TRIBAL-COINS;P8.4
 			own_control_core = {
-				mathura
+				alwar
+				bharatpur
+				narnaul
 			}
 
 			country_rank = rank_kingdom
@@ -7872,7 +7982,7 @@ countries = {
 				aristocracy_vs_plutocracy = -30
 				capital_economy_vs_traditional_economy = 15
 			}
-			capital = mathura
+			capital = bharatpur
 		}
 
 		XAZ = { # Kuninda; P8.4;CAH-XI
@@ -20014,419 +20124,806 @@ countries = {
 			capital = abakasnk
 		}
 
-		XDP = { # Gangetic Societies; P8.4;CAH-XI
+		XDP = { # Magadha; ASI-MITRA;P8.4;CAH-XI
 			own_control_core = {
-				agartala
-				agra
-				akbarpur
-				akora
-				alamganj
-				alwar
-				ambikapur
-				andar
-				aror
 				arrah
-				asni
-				atiya
-				awadh
-				azamgarh
-				bahraich
-				bajaura
-				bajwara
 				ballia
-				balrampur
-				baniachang
-				bankura
-				bannu
-				bansi
-				barabhum
-				baragram
-				baran
-				barbakaabad
-				bardhaman
-				bareilly
-				barguna
-				barmaur
-				barpeta
-				basti
-				batala
-				bathinda
-				belabo
-				bengmara
-				bettiah
-				bhadohi
-				bhagalpur
-				bhakkar
-				bharatpur
-				bhera
-				bhimber
-				bhurwara
 				bihar_sharif
-				bihariganj
-				bijni
-				bijnot
-				bikrampur
-				bilgram
-				binayakpur
-				birampur
-				birpara
-				bishnupur
-				biswan
-				bogra
-				bordowa
-				budaun
-				bumthang
-				busal
 				buxar
-				chai
-				chakwal
-				chamba_india
-				chandpur
-				chandpur_uttar_pradesh
-				chandrabad
-				chandrakona
-				chandrapur
-				chandrawip
-				chandwar
-				channan_pir
-				charagua
-				charaideo
-				chatra
-				chichawatni
-				chillupar
-				chiniot
-				chishtian
-				chisobibra
-				chunar
-				daboka
-				dadri
-				daga
-				dajal
-				dalingkot
-				daraban
-				darbhanga
-				delhi
 				deo
-				deoghar
-				dera_ghazi_khan
-				dera_ismail_khan
-				derawar
-				dergaon
-				devkot
-				dhansiri
-				dholpur
-				dhubri
-				dibang
-				dibrugarh
-				dijkot
-				dimapur
-				dina
-				dinkot
-				dipalpur
-				diphu
-				dubrajpur
-				duki
-				dumka
-				dunga_bunga
-				dura
-				durjaya
-				east_sundarban
-				eminabad
-				etawah
-				faridkot
-				fatehabad
-				fathabad
-				firozpur
-				firuzabad_bahraich
-				gangtok
-				garhwa
-				gaur
 				gaya
-				ghazipur
-				gidhaur
-				goalpara
-				gobindpur
-				godagari
-				gomsi
-				gonda
-				goraghat
-				gorakhpur
-				gugera
-				gujrat
-				gunnaur
-				gurgaon
-				guwahati
-				hajipur
-				hajner
-				hajo
-				hangu
-				hansi
-				hapur
-				hardoi
-				harrand
-				hazaribagh
-				hijli
-				hisar
-				husaynabad
-				ibrahimabad
-				ichagarh
-				ilambazar
-				imphal
-				isakhel
-				itanagar
-				jabar_goemba
-				jaintiapur
-				jalalpur_pirwala
-				jalandhar
-				jalesar_doab
-				jalpaiguri
-				jammu
-				janakpur
-				janakpur_nepal
-				jangipur
-				jansath
-				jaranwala
 				jaund
-				jaunpur
-				jaynagar
-				jessore
-				jhang
-				jhanjharpur
-				jhenaidah
-				jind
-				kahan
-				kahlur
-				kailashahar
-				kaithal
-				kalanaur
-				kamalia
-				kamatapur
-				kanauj
-				kantit
-				kapasia
-				kapurthala
-				kara
-				karnal
-				karor
-				karor_2
-				karur_punjab
-				kasur
-				kathua
-				katihar
-				katrasgarh
-				keylong
-				khagaria
-				khairabad
-				khairpur
-				khaliajuri
-				khalifatabad
-				kharsawan
-				khaspur
-				kherigarh
-				khewra
-				khost
-				khukhragarh
-				khulna
-				khushab
-				kishi
-				kishtwar
-				kobirhat
-				koch_bihar
-				kohat
-				kohtali
-				kokrajhar
-				koksar
-				kol
-				konwargaon
-				korra
-				kosi
-				kot_addu
-				kot_marot
-				kotalipara
-				kulpi
-				kumilla
-				kushinagar
-				kutlehar
-				lahore
-				lakhimpur
-				lalian
-				lalpur
-				lanka
-				laskarpur
-				lorelai
-				lucknow
-				lumbini
-				lyngngam
-				madaran
-				madhubani
-				maheshpur
-				maibong
-				mailsi
-				makanpur
-				makwanpur
-				malinithan
-				mandar_parvat
-				mandi
-				manikpur
-				mankera
-				mardan
-				mau_jaunpur
-				mehsi
-				milwat
-				mir_garh_qila
-				mirat
-				mithankot
-				monghyr
-				morangi
-				muktagacha
-				muktsar
-				multan
-				mungra
-				mymensingh
-				nabagram
-				nadia
-				nagarkot
-				naggar
-				nagina
-				nahan
-				nahil
-				nakshaparvat
-				namrup
-				naogaon
 				narhat
-				narnaul
-				nawakot
-				noadihang
-				nurpur
-				omerkot
-				pabna
-				paddar
-				pakpattan
-				palamau
-				palampur
-				pali_uttar_pradesh
-				panchagarh
-				pandua
-				pandua_adina
-				pangi
-				panipat
-				paro
-				pasrur
-				pathankot
-				patharkandi
 				patna
-				peshawar
-				phari
-				pilak
-				pilibhit
-				pindi_bhattian
-				pindi_gheb
-				pipli
-				piran_i_kaliyar
-				porahat
-				prayag
-				punakha
-				purnia
-				qasba
-				raebareli
-				rahon
-				raikot
-				raipur_bengal
 				rajgir
-				rajmahal
-				rajnagar
-				rakni
-				ramgiri
-				ramkola
-				ramnagar_bihar
-				rampur_boalla
-				ranchi
-				rangamati
-				rangpur_bengal
-				rawalpindi
 				roh
 				rohtas
-				rowta
-				rudrapur
-				ruga
-				sadhaura
-				sadiya
-				saharanpur
-				saharsa
-				samana_india
-				samastipur
-				sambhal
-				sangni
-				sarahan
-				sargadwari
-				sarsuti
 				sasaram
-				satgaon
-				savar
+			}
+
+			country_rank = rank_kingdom
+			starting_technology_level = 3
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_northern_indian_coin_kingship
+				}
+				privilege = {
+					antq_regional_royal_court
+				}
+				laws = {
+					antq_regional_kingship_law = antq_royal_court_governance
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = 15
+				traditionalist_vs_innovative = -5
+				aristocracy_vs_plutocracy = -20
+				capital_economy_vs_traditional_economy = 25
+			}
+			capital = patna
+		}
+
+		XFS = { # Audumbara; BM-TRIBAL-COINS;P8.4
+			own_control_core = {
+				bajaura
+				barmaur
+				bhimber
+				chamba_india
+				jammu
+				kahlur
+				kathua
+				keylong
+				kishtwar
+				kohtali
+				koksar
+				kutlehar
+				mandi
+				nagarkot
+				naggar
+				nahan
+				nurpur
+				paddar
+				palampur
+				pangi
+				pathankot
+				sarahan
+				soonpur
+				suket
+				udamphur
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = republic
+				heir_selection = oligarchic_elective
+				ruler = random
+				reforms = {
+					antq_indian_ganasangha
+				}
+				privilege = {
+					antq_ganasangha_council
+				}
+				laws = {
+					antq_ganasangha_law = antq_clan_council_governance
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = -15
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -25
+				capital_economy_vs_traditional_economy = 20
+			}
+			capital = nagarkot
+		}
+
+		XFT = { # Northern Satrapy of Mathura; OX-MTH;BM-MATHURA;P8.4
+			own_control_core = {
+				agra
+				chandwar
+				dholpur
+				jalesar_doab
+				kol
+				mathura
+			}
+
+			country_rank = rank_kingdom
+			starting_technology_level = 3
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_indo_scythian_kingship
+				}
+				privilege = {
+					antq_indo_scythian_satraps
+				}
+				laws = {
+					antq_indo_scythian_law = antq_indo_scythian_satrapy
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = 15
+				traditionalist_vs_innovative = -5
+				aristocracy_vs_plutocracy = -30
+				capital_economy_vs_traditional_economy = 20
+			}
+			capital = mathura
+		}
+
+		PCM = { # Panchala Mitra Kingdom; ASI-MITRA;IGNCA-PANCHALA;P8.4
+			own_control_core = {
+				baran
+				bareilly
+				budaun
+				chandpur_uttar_pradesh
+				etawah
+				gunnaur
+				hapur
+				jansath
+				kanauj
+				makanpur
+				mirat
+				nagina
+				nahil
+				pilibhit
+				piran_i_kaliyar
+				saharanpur
+				sambhal
+				sargadwari
 				seohara
 				shahabad_uttar_pradesh
-				shaharpara
-				shahbazpur
-				shahjadpur
 				shahjahanpur
-				shahpur
-				shankargah
-				sheohar
-				shergarh
 				shishgarh
-				shorkot
+			}
+
+			country_rank = rank_kingdom
+			starting_technology_level = 3
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_northern_indian_coin_kingship
+				}
+				privilege = {
+					antq_regional_royal_court
+				}
+				laws = {
+					antq_regional_kingship_law = antq_royal_court_governance
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = 15
+				traditionalist_vs_innovative = -5
+				aristocracy_vs_plutocracy = -20
+				capital_economy_vs_traditional_economy = 25
+			}
+			capital = bareilly
+		}
+
+		KSM = { # Kaushambi Mitra Kingdom; ASI-MITRA;P8.4
+			own_control_core = {
+				asni
+				kara
+				korra
+				prayag
+				shankargah
+			}
+
+			country_rank = rank_kingdom
+			starting_technology_level = 3
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_northern_indian_coin_kingship
+				}
+				privilege = {
+					antq_regional_royal_court
+				}
+				laws = {
+					antq_regional_kingship_law = antq_royal_court_governance
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = 10
+				traditionalist_vs_innovative = -5
+				aristocracy_vs_plutocracy = -20
+				capital_economy_vs_traditional_economy = 25
+			}
+			capital = prayag
+		}
+
+		AYM = { # Ayodhya Mitra Kingdom; ASI-MITRA;P8.4
+			own_control_core = {
+				akbarpur
+				awadh
+				bahraich
+				balrampur
+				bhadohi
+				bhurwara
+				bilgram
+				biswan
+				firuzabad_bahraich
+				gonda
+				hardoi
+				ibrahimabad
+				khairabad
+				kherigarh
+				kishi
+				lucknow
+				manikpur
+				mungra
+				pali_uttar_pradesh
+				raebareli
 				shravasti
-				siliguri
-				sillanwali
+				sultanpur_uttar_pradesh
+				tulsipur
+				unnao
+			}
+
+			country_rank = rank_kingdom
+			starting_technology_level = 3
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_northern_indian_coin_kingship
+				}
+				privilege = {
+					antq_regional_royal_court
+				}
+				laws = {
+					antq_regional_kingship_law = antq_royal_court_governance
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = 10
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -20
+				capital_economy_vs_traditional_economy = 25
+			}
+			capital = awadh
+		}
+
+		XFU = { # Kashi Janapada; ASI-MITRA;P8.4
+			own_control_core = {
+				andar
+				azamgarh
+				chillupar
+				chunar
+				ghazipur
+				jaunpur
+				kantit
+				mau_jaunpur
+				rudrapur
+				sonepur_bihar
+				thawe
+				varanasi
+			}
+
+			country_rank = rank_kingdom
+			starting_technology_level = 3
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_northern_indian_coin_kingship
+				}
+				privilege = {
+					antq_regional_royal_court
+				}
+				laws = {
+					antq_regional_kingship_law = antq_royal_court_governance
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = 5
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -20
+				capital_economy_vs_traditional_economy = 30
+			}
+			capital = varanasi
+		}
+
+		XFV = { # Malla Assemblies; ASI-MITRA;P8.4
+			own_control_core = {
+				bansi
+				basti
+				binayakpur
+				gorakhpur
+				kushinagar
+				lumbini
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = republic
+				heir_selection = oligarchic_elective
+				ruler = random
+				reforms = {
+					antq_indian_ganasangha
+				}
+				privilege = {
+					antq_ganasangha_council
+				}
+				laws = {
+					antq_ganasangha_law = antq_clan_council_governance
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = -25
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -30
+				capital_economy_vs_traditional_economy = 20
+			}
+			capital = kushinagar
+		}
+
+		VDJ = { # Videha Janapada; ASI-MITRA;P8.4
+			own_control_core = {
+				alamganj
+				bettiah
+				bihariganj
+				darbhanga
+				janakpur_nepal
+				jhanjharpur
+				katihar
+				kosi
+				madhubani
+				makwanpur
+				mehsi
+				purnia
+				ramnagar_bihar
+				saharsa
+				sheohar
 				simraungadh
 				siraha
-				sirhind
 				sitamarhi
-				sitpur
-				sohra
-				sonargaon
-				sonepur_bihar
-				sonhat
-				soonpur
-				sreepur
-				suket
-				sultanpur_uttar_pradesh
-				sultanwind
-				sunam
-				sutnga
-				sylhet
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = republic
+				heir_selection = oligarchic_elective
+				ruler = random
+				reforms = {
+					antq_indian_ganasangha
+				}
+				privilege = {
+					antq_ganasangha_council
+				}
+				laws = {
+					antq_ganasangha_law = antq_clan_council_governance
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = -20
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -30
+				capital_economy_vs_traditional_economy = 20
+			}
+			capital = darbhanga
+		}
+
+		AGA = { # Anga Janapada; ASI-MITRA;P8.4
+			own_control_core = {
+				bhagalpur
+				gidhaur
+				hajipur
+				khagaria
+				monghyr
+				samastipur
+			}
+
+			country_rank = rank_kingdom
+			starting_technology_level = 3
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_northern_indian_coin_kingship
+				}
+				privilege = {
+					antq_regional_royal_court
+				}
+				laws = {
+					antq_regional_kingship_law = antq_royal_court_governance
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = 5
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -20
+				capital_economy_vs_traditional_economy = 30
+			}
+			capital = bhagalpur
+		}
+
+		PDR = { # Pundravardhana; UNESCO-MAHASTHAN;CAM-BANGLADESH;P8.4
+			own_control_core = {
+				barbakaabad
+				birampur
+				birpara
+				bogra
+				devkot
+				gaur
+				godagari
+				goraghat
+				jalpaiguri
+				kamatapur
+				koch_bihar
+				naogaon
+				pabna
+				panchagarh
+				pandua_adina
+				rampur_boalla
+				rangpur_bengal
+				shahjadpur
+				siliguri
 				tajpur
-				talwandi
+			}
+
+			country_rank = rank_kingdom
+			starting_technology_level = 3
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_pundranagara_urban_kingship
+				}
+				privilege = {
+					antq_regional_royal_court
+				}
+				laws = {
+					antq_regional_kingship_law = antq_royal_court_governance
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = 10
+				traditionalist_vs_innovative = -5
+				aristocracy_vs_plutocracy = -15
+				capital_economy_vs_traditional_economy = 20
+			}
+			capital = bogra
+		}
+
+		XFW = { # Rarh; CAM-BANGLADESH;P8.4
+			own_control_core = {
+				bankura
+				barabhum
+				baragram
+				bardhaman
+				bishnupur
+				chandrakona
+				dubrajpur
+				hijli
+				ilambazar
+				madaran
+				pandua
+				raipur_bengal
+				satgaon
 				tamluk
-				tank
-				tarakanda
-				tarhasi
-				teliagarhi
-				tengapani
-				tezpur
-				thal_daman
-				thanesar
-				thawe
-				thimpu
-				thoubal
-				trongsa
-				tsunthang
-				tulamba
-				tulsipur
-				uch
-				udamphur
-				unnao
-				untari
-				urda
-				urgun
-				varanasi
-				virkgarh
-				wana
-				wangdue
-				west_sundarban
-				yuksom
-				zhemgang
-				zhob
 			}
 
 			country_rank = rank_county
@@ -20452,10 +20949,861 @@ countries = {
 				heir_selection = tribal_oldest_male
 				ruler = random
 				reforms = {
-					antq_advanced_chiefdom
+					antq_bengal_riverine_community_network
 				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = -45
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 50
 			}
-			capital = varanasi
+			capital = bardhaman
+		}
+
+		VNG = { # Vanga; CAM-BANGLADESH;P8.4
+			own_control_core = {
+				barguna
+				chandrabad
+				chandrawip
+				east_sundarban
+				fathabad
+				husaynabad
+				jaynagar
+				jessore
+				jhenaidah
+				khalifatabad
+				khulna
+				kotalipara
+				kulpi
+				maheshpur
+				nadia
+				pipli
+				qasba
+				shahbazpur
+				sreepur
+				west_sundarban
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_bengal_riverine_community_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 45
+			}
+			capital = nadia
+		}
+
+		SMT = { # Samatata; CAM-BANGLADESH;P8.4
+			own_control_core = {
+				atiya
+				belabo
+				bikrampur
+				chandpur
+				kapasia
+				khaliajuri
+				khaspur
+				kobirhat
+				kumilla
+				muktagacha
+				mymensingh
+				patharkandi
+				rajnagar
+				savar
+				shaharpara
+				sonargaon
+				sylhet
+				tarakanda
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_bengal_riverine_community_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = -55
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 45
+			}
+			capital = sonargaon
+		}
+
+		HRK = { # Harikela; CAM-BANGLADESH;P8.4
+			own_control_core = {
+				agartala
+				baniachang
+				chandrapur
+				kailashahar
+				laskarpur
+				pilak
+				rangamati
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_bengal_riverine_community_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = -60
+				traditionalist_vs_innovative = -20
+				aristocracy_vs_plutocracy = -55
+				capital_economy_vs_traditional_economy = 55
+			}
+			capital = pilak
+		}
+
+		XFX = { # Chota Nagpur Megalithic Networks; OUP-NEINDIA;P8.4
+			own_control_core = {
+				ambikapur
+				chai
+				chatra
+				deoghar
+				dumka
+				garhwa
+				gobindpur
+				hazaribagh
+				ichagarh
+				janakpur
+				jangipur
+				katrasgarh
+				kharsawan
+				khukhragarh
+				mandar_parvat
+				palamau
+				porahat
+				rajmahal
+				ramgiri
+				ramkola
+				ranchi
+				shergarh
+				sonhat
+				tarhasi
+				teliagarhi
+				untari
+				urda
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_eastern_megalithic_community_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = -70
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -65
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = ranchi
+		}
+
+		XFY = { # Ambari Horizon; ASI-AMBARI;OUP-NEINDIA;P8.4
+			own_control_core = {
+				barpeta
+				bijni
+				bordowa
+				dhubri
+				durjaya
+				goalpara
+				guwahati
+				hajo
+				kokrajhar
+				rowta
+				tezpur
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_eastern_hill_valley_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = -55
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -55
+				capital_economy_vs_traditional_economy = 55
+			}
+			capital = guwahati
+		}
+
+		DDV = { # Doyang-Dhansiri Valley; OUP-NEINDIA;P8.4
+			own_control_core = {
+				daboka
+				dergaon
+				dhansiri
+				dimapur
+				diphu
+				lanka
+				maibong
+				morangi
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_eastern_hill_valley_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = -65
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -60
+				capital_economy_vs_traditional_economy = 65
+			}
+			capital = dimapur
+		}
+
+		KJH = { # Khasi-Jaintia Highlands; OUP-NEINDIA;P8.4
+			own_control_core = {
+				chisobibra
+				dura
+				jaintiapur
+				lyngngam
+				nabagram
+				ruga
+				sohra
+				sutnga
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_eastern_hill_valley_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = -75
+				traditionalist_vs_innovative = -20
+				aristocracy_vs_plutocracy = -70
+				capital_economy_vs_traditional_economy = 75
+			}
+			capital = sohra
+		}
+
+		UBR = { # Upper Brahmaputra Foothills; OUP-NEINDIA;P8.4
+			own_control_core = {
+				bengmara
+				charagua
+				charaideo
+				dibrugarh
+				konwargaon
+				lakhimpur
+				namrup
+				noadihang
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_eastern_hill_valley_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = -70
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -65
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = dibrugarh
+		}
+
+		SDY = { # Sadiya Foothills; OUP-NEINDIA;P8.4
+			own_control_core = {
+				dibang
+				gomsi
+				itanagar
+				malinithan
+				nakshaparvat
+				sadiya
+				tengapani
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_eastern_hill_valley_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = -75
+				traditionalist_vs_innovative = -20
+				aristocracy_vs_plutocracy = -70
+				capital_economy_vs_traditional_economy = 75
+			}
+			capital = sadiya
+		}
+
+		MYL = { # Monyul Highlands; UCL-BHUTAN;OUP-NEINDIA;P8.4
+			own_control_core = {
+				bumthang
+				daga
+				jabar_goemba
+				paro
+				punakha
+				thimpu
+				trongsa
+				wangdue
+				zhemgang
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_himalayan_highland_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = -85
+				traditionalist_vs_innovative = -25
+				aristocracy_vs_plutocracy = -78
+				capital_economy_vs_traditional_economy = 85
+			}
+			capital = paro
+		}
+
+		SKM = { # Sikkim Foothills; UCL-BHUTAN;OUP-NEINDIA;P8.4
+			own_control_core = {
+				dalingkot
+				gangtok
+				phari
+				tsunthang
+				yuksom
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_himalayan_highland_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = -85
+				traditionalist_vs_innovative = -25
+				aristocracy_vs_plutocracy = -80
+				capital_economy_vs_traditional_economy = 88
+			}
+			capital = yuksom
+		}
+
+		IMV = { # Imphal Valley Networks; OUP-NEINDIA;P8.4
+			own_control_core = {
+				imphal
+				thoubal
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_eastern_hill_valley_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_indic_status_law = antq_s2_indic_status_mediated
+					antq_s2_indic_dependent_labor_law = antq_s2_indic_dependent_labor_mediated
+					antq_s2_indic_revenue_law = antq_s2_indic_revenue_mediated
+					antq_s2_indic_land_law = antq_s2_indic_land_mediated
+					antq_s2_indic_muster_law = antq_s2_indic_muster_mediated
+					antq_s2_indic_local_rule_law = antq_s2_indic_local_rule_mediated
+					antq_s2_indic_cult_law = antq_s2_indic_cult_mediated
+					antq_s2_indic_household_law = antq_s2_indic_household_mediated
+					antq_s2_indic_commerce_law = antq_s2_indic_commerce_mediated
+					antq_s2_indic_coinage_law = antq_s2_indic_coinage_mediated
+					antq_s2_indic_courts_law = antq_s2_indic_courts_mediated
+					antq_s2_indic_offices_law = antq_s2_indic_offices_mediated
+					antq_s2_indic_migration_law = antq_s2_indic_migration_mediated
+					antq_s2_indic_external_law = antq_s2_indic_external_mediated
+				}
+				centralization_vs_decentralization = -60
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -60
+				capital_economy_vs_traditional_economy = 60
+			}
+			capital = imphal
 		}
 
 		XDQ = { # Central Indian Societies; P8.4;CAH-XI

@@ -1,5 +1,32 @@
 # Progress
 
+## 2026-07-28 - The Gangetic superstate becomes 24 bounded opening frames
+
+- Replaced the 411-location Gangetic Societies country and corrected the
+  ownership it had displaced from Punjab to Manipur. Twenty-four explicit
+  frames now control 301 locations: northwestern coin polities, Ganga-plain
+  courts and communities, five Bengal zones, Chota Nagpur, six northeastern
+  networks, and three eastern-Himalayan/Imphal frames. Mathura now belongs to
+  the Northern Satrapy; no post-Kanva successor empire or later eastern kingdom
+  is asserted.
+- Added twenty-four granular cultures, one technical eastern-hill traditions
+  faith with four direct-art doctrines, six political reforms, twenty-four
+  owned capitals and direct standards, plus opening research, law, estate,
+  settlement, building, rank, agenda, history, and eleven-client localization
+  integration. The generated roster rises from 315 to 338 playable polities.
+- Added `tools/s2_gangetic_granularity.py` and its exact 301-location ledger.
+  The permanent gate pins frame counts, capitals, cultures, religion, reforms,
+  standards, Mathura, retired residual selectors, research unlocks, and
+  localization. The literal-placeholder census falls from 23 to 22; the
+  302-location Inner Asian Oasis frame is now largest.
+- Full validation passes all 116 checks. The bounded vanilla/mod smoke pair
+  reached responsive rendered menus in 197.3 seconds and found zero mod-only
+  normalized `error.log` lines. No observer campaign was run. Evidence is in
+  `docs/playtests/S2_GANGETIC_GRANULARITY_20260728.md`.
+
+Next: split the 302-location Inner Asian Oasis Societies frame without merging
+the already explicit Tarim states into a false steppe or oasis empire.
+
 ## 2026-07-28 - West Africa becomes eight bounded archaeological networks
 
 - Replaced the disconnected 24-location West African Iron-Age Societies

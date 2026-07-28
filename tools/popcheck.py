@@ -21,6 +21,7 @@ from generate_start_mirror import (
     load_population_plan,
     population_city_targets,
     population_culture_remaps,
+    population_religion_remaps,
     population_geographic_allocations,
     population_location_overrides,
 )
@@ -109,6 +110,7 @@ def main() -> int:
     )
     city_rows, city_targets = population_city_targets(owners)
     culture_remaps = population_culture_remaps(owners)
+    religion_remaps = population_religion_remaps(owners)
     failures: list[str] = []
     records_by_location: defaultdict[str, list[dict[str, str]]] = defaultdict(list)
     region_totals: defaultdict[str, Decimal] = defaultdict(Decimal)
@@ -162,7 +164,10 @@ def main() -> int:
         profile = historical_profile_for(roster[tag])
         override = overrides.get(location, {})
         expected_culture = override.get("culture", culture_remaps.get(location, {}).get("culture", profile.culture))
-        expected_religion = override.get("religion", profile.religion)
+        expected_religion = override.get(
+            "religion",
+            religion_remaps.get(location, {}).get("religion", profile.religion),
+        )
         if record["culture"] != expected_culture or record["religion"] != expected_religion:
             failures.append(
                 f"{location}: profile {record['culture']}/{record['religion']} does not match {tag} "

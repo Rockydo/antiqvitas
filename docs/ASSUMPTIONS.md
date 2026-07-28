@@ -5490,3 +5490,46 @@ documents. Sources weighed: `P8.2`; `P9`; `P11`; `P13`; `CAH-XII`;
 [`FRAMADAR`](https://www.iranicaonline.org/articles/framadar/); and
 [Parthian and Sasanian judicial systems](https://www.iranicaonline.org/articles/judicial-and-legal-systems-ii-parthian-and-sasanian-judicial-systems/).
 [secure functional distinctions; contested office chronology]
+
+## 2026-07-28 - Gangetic, Bengal, northeastern, and Himalayan frames
+
+Rajuvula and Shodasa provide a defensible Indo-Scythian association for
+Mathura, but their exact chronology and the degree of territorial control at
+AD 1 remain disputed. The Northern Satrapy is therefore a compact
+Mathura-centered frame, not a claim to every later satrapal holding. The
+Audumbara, Panchala, Kaushambi, Ayodhya, and Kashi frames use coin and
+inscription horizons to distinguish local centers; local coinage does not
+prove one uniform dynasty, constitution, or sharply surveyed frontier.
+Sources: `BM-MATHURA`; `BM-INDO-SCYTHIAN`; `BM-TRIBAL-COINS`; `ASI-MITRA`;
+`IGNCA-PANCHALA`. [secure material and place anchors; contested chronology and
+political extent]
+
+Magadha remains a conservative Pataliputra-centered successor court because no
+securely named post-Kanva ruler can be placed over a reconstructed empire in
+AD 1. Videha, Anga, Malla, and the other Ganga-plain frames are regional
+political adapters, not assertions that later textual borders survived
+unchanged. [secure regional continuities; contested rulers and boundaries]
+
+Pundranagara/Mahasthangarh has enough urban and inscriptional weight for a
+bounded urban-kingship adapter, but its exact dynasty is unknown. Rarh, Vanga,
+Samatata, and Harikela distinguish early-historic Bengal zones without
+backdating their later kingdoms or dynasties. Chota Nagpur is represented as a
+megalithic community network and makes no claim that one later ethnonym or
+central authority covered the plateau. Sources: `UNESCO-MAHASTHAN`;
+`CAM-BANGLADESH`. [secure urban/material regions; contested political forms]
+
+Ambari, Doyang-Dhansiri, Khasi-Jaintia, upper Brahmaputra, Sadiya, Monyul,
+Sikkim, and Imphal are archaeological or geographic gameplay frames. They do
+not project Kamarupa, Ahom, Chutia, Manikya, or another later kingdom backward,
+nor do their culture keys prove a single AD 1 ethnicity within each polygon.
+The eastern-hill traditions family is similarly a technical plural container:
+ancestral landscapes, village councils, seasonal rounds, and custodianship are
+conservative mechanics, not a reconstructed common liturgy. Sources:
+`ASI-AMBARI`; `OUP-NEINDIA`; `UCL-BHUTAN`. [bounded material/geographic
+proxies; low-confidence political and religious reconstruction]
+
+Installed later language keys are used only as technical personal-name-list
+fallbacks where no sufficiently large AD 1 corpus exists. They must not be
+read as proof that a modern or medieval language identity, spelling standard,
+or ethnic boundary already existed in the opening year. [explicit engine
+adapter]

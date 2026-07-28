@@ -65,6 +65,7 @@ NATIVE_RELIGION_GROUPS = {
     "antq_indian_religion_group": "dharmic",
     "antq_iranian_religion_group": "zoroastrian_group",
     "antq_nile_religion_group": "folk_african_group",
+    "antq_northeast_indian_religion_group": "folk_asian_group",
     "antq_oceanic_religion_group": "folk_polynesian_group",
     "antq_steppe_religion_group": "folk_asian_group",
 }

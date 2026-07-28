@@ -1,5 +1,5 @@
 {
-  "choice_count": 144,
+  "choice_count": 148,
   "choices": [
     {
       "badge": "main_menu/gfx/interface/icons/religion/antq_chinese_state_cult.dds",
@@ -1728,6 +1728,54 @@
       "religion": "antq_australian_dreaming",
       "source": "P11;CAH-XI",
       "texture_sha256": "fa6e5e0435e332a3453a6d96d1ce2238c6a07a1a1d81a1085b6e13d7ae428575"
+    },
+    {
+      "badge": "main_menu/gfx/interface/icons/religion/antq_eastern_hill_traditions.dds",
+      "badge_sha256": "9b7c0c2f050c91151d18cc4244e8a42d23bba3cbad24323f7d97ea56e94c0e80",
+      "confidence": "contested",
+      "key": "antq_doctrine_eastern_hill_traditions_ancestral_landscapes",
+      "master_sha256": "66db92d7ff03a5a7ef2f2decd89d40a8ef442dbf5f62f40ed14981bac38d5e38",
+      "motif": "main_menu/gfx/interface/advance/antq_advance_interregional_oral_exchanges.dds",
+      "motif_sha256": "29719b66ddd0ab2a8088f8f18ed4da274f48b9aefdfe58d1debaaab8763bb76b",
+      "religion": "antq_eastern_hill_traditions",
+      "source": "OUP-NEINDIA;UCL-BHUTAN;P11",
+      "texture_sha256": "36d3ecd67d3712f0d89fd22aac3aaaa54401700aa1ce3785e43da388a3bd7519"
+    },
+    {
+      "badge": "main_menu/gfx/interface/icons/religion/antq_eastern_hill_traditions.dds",
+      "badge_sha256": "9b7c0c2f050c91151d18cc4244e8a42d23bba3cbad24323f7d97ea56e94c0e80",
+      "confidence": "contested",
+      "key": "antq_doctrine_eastern_hill_traditions_village_councils",
+      "master_sha256": "5db4ccaa85c18df16f454cdd4cdc1c4395c0963a3a73502ab40a5cdd747d7816",
+      "motif": "main_menu/gfx/interface/advance/antq_advance_village_elder_compacts.dds",
+      "motif_sha256": "c4eb1a53bf7c1a82f38a7a2303fa3ca117e86cd13b15e45b8193bff748eb0e1b",
+      "religion": "antq_eastern_hill_traditions",
+      "source": "OUP-NEINDIA;UCL-BHUTAN;P11",
+      "texture_sha256": "598393bb365b6f05ad2bab0bb027d035f6e6767b701b9c305b436d9642fc4d68"
+    },
+    {
+      "badge": "main_menu/gfx/interface/icons/religion/antq_eastern_hill_traditions.dds",
+      "badge_sha256": "9b7c0c2f050c91151d18cc4244e8a42d23bba3cbad24323f7d97ea56e94c0e80",
+      "confidence": "contested",
+      "key": "antq_doctrine_eastern_hill_traditions_seasonal_rounds",
+      "master_sha256": "558b4b2cfab8d0fa2d46f0dd3e534582b09831c75542cd9891b69be14f66ea3d",
+      "motif": "main_menu/gfx/interface/advance/antq_advance_seasonal_ecological_calendars.dds",
+      "motif_sha256": "d9b4bf2455f6afab600288aa089c07f337a6801f8f71d067560da73d622aa4d4",
+      "religion": "antq_eastern_hill_traditions",
+      "source": "OUP-NEINDIA;UCL-BHUTAN;P11",
+      "texture_sha256": "780140d8a26c17af019d6a393d5c72ae39084450cea8cba2afdaca8e74d0d4e2"
+    },
+    {
+      "badge": "main_menu/gfx/interface/icons/religion/antq_eastern_hill_traditions.dds",
+      "badge_sha256": "9b7c0c2f050c91151d18cc4244e8a42d23bba3cbad24323f7d97ea56e94c0e80",
+      "confidence": "contested",
+      "key": "antq_doctrine_eastern_hill_traditions_highland_custodians",
+      "master_sha256": "100191d4bc0c88e36e576ce147eeb9176f1bb4dc221518a64b4db4a337ff8902",
+      "motif": "main_menu/gfx/interface/advance/antq_advance_hillfort_household_speakers.dds",
+      "motif_sha256": "7d80ae25888bbe28591d27727aa41f7095d61df10119619edf7642fe012be451",
+      "religion": "antq_eastern_hill_traditions",
+      "source": "OUP-NEINDIA;UCL-BHUTAN;P11",
+      "texture_sha256": "ab0d11787a05f7b81bc0a1b1f530a79e274e3546a09322c40504fb3c3cb29917"
     }
   ],
   "choices_per_religion": 4,
@@ -1748,6 +1796,7 @@
     "antq_chinese_state_cult",
     "antq_daoism",
     "antq_early_christianity",
+    "antq_eastern_hill_traditions",
     "antq_finnic",
     "antq_germanic_religion",
     "antq_hellenic",
@@ -1770,7 +1819,7 @@
     "antq_west_african"
   ],
   "ledger": "docs/m12/religious_family_doctrines.csv",
-  "ledger_sha256": "a3c5ebc198d6cf573b66950581660aa81eb94ebeacbce9251ccd291bf2fb5d9b",
+  "ledger_sha256": "e96f955833b5e2a8c4a47d659e4e227ed5711aca0df1ce0ac30e1a65b27c1cf2",
   "starting_religions": [
     "antq_andean",
     "antq_arabian_polytheism",
@@ -1783,6 +1832,7 @@
     "antq_caribbean",
     "antq_celtic_religion",
     "antq_chinese_state_cult",
+    "antq_eastern_hill_traditions",
     "antq_finnic",
     "antq_germanic_religion",
     "antq_hellenic",

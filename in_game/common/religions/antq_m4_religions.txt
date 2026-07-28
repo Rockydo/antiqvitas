@@ -531,3 +531,17 @@ antq_caribbean = { # P11;CAH-XI; Caribbean ritual traditions
 	opinions = {
 	}
 }
+
+antq_eastern_hill_traditions = { # OUP-NEINDIA;P11; Plural northeast Indian plateau valley and highland traditions represented without backdating later organized religions or one uniform cult
+	color = antq_religion_color_antq_eastern_hill_traditions
+	group = folk_asian_group
+	religious_aspects = 2
+	has_religious_influence = yes
+	definition_modifier = {
+		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
+	}
+	opinions = {
+	}
+}

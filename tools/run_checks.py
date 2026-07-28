@@ -56,6 +56,7 @@ VALIDATE_COMMANDS = (
     Command("tools/s2_horn_granularity.py", ("--check",)),
     Command("tools/s2_bantu_frontier_granularity.py", ("--check",)),
     Command("tools/s2_west_africa_granularity.py", ("--check",)),
+    Command("tools/s2_gangetic_granularity.py", ("--check",)),
     Command("tools/s2_placeholder_polity_census.py", ("--check",)),
     Command("tools/generate_m4_definitions.py", ("--check",)),
     Command("tools/generate_m4_tier2_names.py", ("--check",)),

@@ -310,6 +310,48 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "P8.4;P13;CAH-XI;OCD", "contested",
         "Royal office works through established civic elites and magistracies.",
     ),
+    "antq_northern_indian_coin_kingship": (
+        "global_nobles_estate_power=0.08|global_burghers_estate_power=0.07|"
+        "nobles_estate_power_from_cabinet=0.16|burghers_estate_power_from_cabinet=0.12|"
+        "replace_cabinet_member_cost_modifier=0.05",
+        "P8.4;P13;ASI-MITRA;IGNCA-PANCHALA", "contested",
+        "Local coinages support differentiated courts and exchange interests without reconstructing one common post-Shunga constitution.",
+    ),
+    "antq_pundranagara_urban_kingship": (
+        "global_nobles_estate_power=0.06|global_burghers_estate_power=0.10|"
+        "burghers_estate_power_from_cabinet=0.18|country_cabinet_efficiency=0.025|"
+        "replace_cabinet_member_cost_modifier=0.05",
+        "P8.4;P13;UNESCO-MAHASTHAN;CAM-BANGLADESH", "contested",
+        "Mahasthan's fortified urban horizon supports a court-and-town adapter, but not a recovered AD 1 dynasty or office list.",
+    ),
+    "antq_bengal_riverine_community_network": (
+        "global_tribes_estate_power=0.07|global_burghers_estate_power=0.06|"
+        "tribes_estate_power_from_cabinet=0.16|global_trade_through_owned_territory_efficiency=0.03|"
+        "replace_cabinet_member_cost_modifier=0.04",
+        "P8.4;P13;CAM-BANGLADESH", "contested",
+        "Riverine early-historic zones coordinate households, landing places, cultivation, and exchange without backdating later Bengal kingdoms.",
+    ),
+    "antq_eastern_megalithic_community_network": (
+        "global_tribes_estate_power=0.09|global_peasants_estate_power=0.07|"
+        "tribes_estate_power_from_cabinet=0.18|global_production_efficiency=0.025|"
+        "replace_cabinet_member_cost_modifier=0.04",
+        "P8.4;P13;OUP-NEINDIA", "contested",
+        "Megalithic and iron-working settlement evidence supports local coordination, not one Chota Nagpur ethnicity, state, or ruler.",
+    ),
+    "antq_eastern_hill_valley_network": (
+        "global_tribes_estate_power=0.10|global_peasants_estate_power=0.05|"
+        "tribes_estate_power_from_cabinet=0.20|global_monthly_food_modifier=0.02|"
+        "replace_cabinet_member_cost_modifier=0.03",
+        "P8.4;P13;ASI-AMBARI;OUP-NEINDIA", "contested",
+        "Valley, foothill, and upland communities coordinate seasonal work, passage, and restitution without later kingdom or ethnic borders.",
+    ),
+    "antq_himalayan_highland_network": (
+        "global_tribes_estate_power=0.11|global_peasants_estate_power=0.04|"
+        "tribes_estate_power_from_cabinet=0.21|global_monthly_control=0.02|"
+        "replace_cabinet_member_cost_modifier=0.03",
+        "P8.4;P13;UCL-BHUTAN;OUP-NEINDIA", "contested",
+        "Highland route and settlement evidence supports decentralized coordination without projecting later Bhutanese or Sikkimese institutions backward.",
+    ),
     "antq_parthian_king_of_kings": (
         "global_tribes_estate_power=0.05|nobles_estate_power_from_cabinet=0.30|"
         "replace_cabinet_member_cost_modifier=0.15",
@@ -1088,6 +1130,7 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
     "sacral": (),
     "royal": (
         "antq_client_monarchy", "antq_buffer_kingdom", "antq_regional_kingship",
+        "antq_northern_indian_coin_kingship", "antq_pundranagara_urban_kingship",
     ),
     "xiongnu": ("antq_steppe_confederation",),
     "xianbei": ("antq_xianbei_eastern_confederacy",),
@@ -1665,7 +1708,7 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    expected_contract_count = 55 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    expected_contract_count = 61 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -2032,6 +2075,77 @@ antq_advanced_chiefdom = {
 	country_modifier = {
 		global_tribes_estate_power = 0.05
 		country_cabinet_efficiency = 0.025
+		research_speed = 0.06
+	}
+	years = 2
+}
+
+antq_northern_indian_coin_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.06
+		global_burghers_estate_power = 0.05
+		country_cabinet_efficiency = 0.025
+		research_speed = 0.10
+	}
+	years = 2
+}
+
+antq_pundranagara_urban_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_burghers_estate_power = 0.08
+		global_trade_through_owned_territory_efficiency = 0.03
+		research_speed = 0.09
+	}
+	years = 2
+}
+
+antq_bengal_riverine_community_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.06
+		global_burghers_estate_power = 0.05
+		global_trade_through_owned_territory_efficiency = 0.03
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_eastern_megalithic_community_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		global_peasants_estate_power = 0.06
+		global_production_efficiency = 0.025
+		research_speed = 0.065
+	}
+	years = 2
+}
+
+antq_eastern_hill_valley_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.09
+		global_monthly_food_modifier = 0.02
+		country_cabinet_efficiency = 0.02
+		research_speed = 0.06
+	}
+	years = 2
+}
+
+antq_himalayan_highland_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		global_monthly_control = 0.02
+		monthly_towards_decentralization = societal_value_minor_monthly_move
 		research_speed = 0.06
 	}
 	years = 2
@@ -2674,6 +2788,18 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_regional_kingship_desc", "A bounded technical monarchy adapter for an attested regional court without a defensible current ruler."),
         ("antq_advanced_chiefdom", "Advanced Chiefdom"),
         ("antq_advanced_chiefdom_desc", "A developing chiefly polity represented through the installed tribal government type."),
+        ("antq_northern_indian_coin_kingship", "Northern Indian Coin Kingship"),
+        ("antq_northern_indian_coin_kingship_desc", "A local northern Indian court whose coinage, leading houses, cultivators, and exchange networks are represented without imposing one shared post-Shunga constitution."),
+        ("antq_pundranagara_urban_kingship", "Pundranagara Urban Kingship"),
+        ("antq_pundranagara_urban_kingship_desc", "A fortified early-historic urban court at Pundranagara represented without inventing a recovered AD 1 dynasty or bureaucracy."),
+        ("antq_bengal_riverine_community_network", "Bengal Riverine Community Network"),
+        ("antq_bengal_riverine_community_network_desc", "Riverine households, landing places, cultivators, and exchange groups coordinate without backdating later Bengal kingdoms."),
+        ("antq_eastern_megalithic_community_network", "Eastern Megalithic Community Network"),
+        ("antq_eastern_megalithic_community_network_desc", "Plateau settlements, iron-working households, and commemorative landscapes coordinate without implying one ethnicity or state."),
+        ("antq_eastern_hill_valley_network", "Eastern Hill-Valley Network"),
+        ("antq_eastern_hill_valley_network_desc", "Valley and upland communities coordinate seasonal work, passage, restitution, and exchange without later political borders."),
+        ("antq_himalayan_highland_network", "Himalayan Highland Network"),
+        ("antq_himalayan_highland_network_desc", "Highland communities coordinate routes, cultivation, herding, and local obligations without projecting later Himalayan states backward."),
         ("antq_far_side_port_chiefdom", "Far-Side Port Chiefdom"),
         ("antq_far_side_port_chiefdom_desc", "A separately led northern-Horn market coordinating roadstead access, exchange households, mobile suppliers, and visiting merchants."),
         ("antq_horn_pastoral_network", "Horn Pastoral Network"),

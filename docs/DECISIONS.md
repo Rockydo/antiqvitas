@@ -3852,6 +3852,35 @@ When validation found that a Sabaean programme and privilege both resolved to
 `antq_sabaean_incense_caravan_dispatches`; semantic similarity is allowed, key
 aliasing is not.
 
+## 2026-07-28 - Northern India uses exact bounded ownership, not a successor blob
+
+The 411-location Gangetic residual crossed distinct northwestern, Gangetic,
+Bengal, northeastern, and Himalayan contexts and also overrode already intended
+Indo-Scythian, Indo-Greek, Yaudheya, Arjunayana, and Kuninda territory. Its
+replacement is therefore an exact location-selector contract, not a broad
+region repaint. Twenty-four opening frames own 301 locations, with Mathura
+assigned to its own Northern Satrapy frame and Bharatpur retained as the
+Arjunayana center. A permanent validator rejects restored Punjab, Hindustan, or
+Bengal residual selectors and any count or capital drift.
+
+Six political adapters distinguish coin-issuing northern courts, Pundranagara
+urban kingship, Bengal riverine communities, Chota Nagpur megalithic
+communities, eastern hill-valley networks, and Himalayan highland networks.
+They are shared only within a bounded institutional family; each country still
+receives its own history, agenda, rank, standard, culture, capital, settlement,
+law, estate, and opening-research propagation.
+
+The eastern-hill religion is a technical plural-family adapter rather than a
+claim of one historical creed. It receives its own direct material-culture icon
+and four direct-art doctrine choices so the engine does not force those
+communities into a later organized religion or an unrelated generic fallback.
+The art deliberately uses non-textual first-millennium material motifs and no
+later sectarian symbol.
+
+Acceptance follows the reduced QA rule: exact-selector and installed-union
+validation, then one fresh paired vanilla/mod menu-and-log smoke. The tranche
+does not spend time on a long observer campaign.
+
 ## 2026-07-27 - Finished workshop identity belongs in the goods graph
 
 A historically specific productive building must expose a correspondingly

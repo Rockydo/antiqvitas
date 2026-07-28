@@ -351,6 +351,69 @@ a row reaches `implemented` status.
 - `KCI-BUY`: Byungjin Jang, ["The Buyeo Succession of Goguryeo and Its Historical Reality"](https://www.kci.go.kr/kciportal/mobile/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003320607), *Northeast Asian History Review* 91 (2026), used for the caution that historical uses of "Buyeo" may encompass differing political realities including Northern and Eastern Buyeo.
 - `ZAV-ASP`: Natalia V. Zavoykina, ["Aspurgos - the king of Bosporan state (9/8 BC - AD 38)"](https://archaeolog-ru.academia.edu/NatalyaZavoykina), *Drevnosti Bospora* 28 (2023), used for the revisionist epigraphic and numismatic case that Aspurgus held Bosporan royal status by AD 6/7 and potentially across the AD 1 boundary; this does not settle the project's contested Dynamis start anchor.
 - `OX-MTH`: Shailendra Bhandare, ["The Numismatic Chronology of Mathura and its bearing on Art"](https://ora.ox.ac.uk/objects/uuid%3A1b163a70-9b70-4886-8d0e-ed8fda0244e8/files/rcf95jb441), Oxford, used for the contested Rajuvula/Shodasa chronology and the numismatic case placing their Mathura sequence c. AD 40-90 rather than securely at the campaign boundary.
+- `BM-MATHURA`: British Museum, [Mathura collection
+  record](https://www.britishmuseum.org/collection/term/x20925), including a
+  Rajuvula coin catalogued to AD 1-50 and Indo-Scythian architectural material.
+  It supports a separately playable Northern Satrapy at the campaign boundary
+  only as a contested numismatic frame; it does not settle Rajuvula's exact
+  accession day, the Shodasa sequence, or a fixed territorial border.
+- `BM-INDO-SCYTHIAN`: British Museum, [Indo-Scythian collection
+  term](https://www.britishmuseum.org/collection/term/x114171), used for the
+  late-first-century-BCE to early-first-century-CE currency horizon. It
+  corroborates an Indo-Scythian northwest but does not turn every find spot
+  into direct Azes administration.
+- `BM-TRIBAL-COINS`: British Museum, [Yaudheya/Kuninda collection
+  term](https://www.britishmuseum.org/collection/term/x114979) and its
+  [first-century-BCE to second-century-CE political-unit
+  record](https://www.britishmuseum.org/collection/term/x113572?page=0),
+  cross-checked with the Museum's cited Handa catalogue. These support
+  separate coin-polity frames for Yaudheya, Kuninda, Arjunayana, and the
+  Audumbara hill country; find zones remain campaign proxies rather than
+  surveyed borders.
+- `ASI-MITRA`: Archaeological Survey of India, [*Memoirs of the
+  Archaeological Survey of India*](https://ignca.gov.in/Asi_data/48711.pdf),
+  especially its review of local Mitra coinages at Kaushambi, Panchala,
+  Ayodhya, and Mathura in the second-first centuries BCE. The report explicitly
+  says their relationship to the imperial Shungas cannot be resolved. It
+  supports separate local-court frames, not one successor dynasty or secure
+  named AD 1 rulers.
+- `IGNCA-PANCHALA`: Indira Gandhi National Centre for the Arts,
+  [Panchala archaeological gazetteer](https://ignca.gov.in/coilnet/panch009.htm),
+  used for Ahichchhatra's long occupation, fortification, coin sequence, and
+  post-Mauryan local rulers. It supports the Bareilly field as a map proxy for
+  northern Panchala; the field is not the ancient city footprint.
+- `UNESCO-MAHASTHAN`: UNESCO World Heritage Centre, [Cultural Landscape of
+  Mahasthan and the Karatoya
+  River](https://whc.unesco.org/en/tentativelists/6671/), used for the
+  fourth-third-century-BCE fortified urban centre and its long-lived
+  administrative, economic, and riverine landscape. It anchors
+  Pundravardhana without defining an AD 1 royal dynasty.
+- `CAM-BANGLADESH`: Willem van Schendel, [*A History of
+  Bangladesh*](https://assets.cambridge.org/97805216/79749/frontmatter/9780521679749_frontmatter.pdf),
+  Cambridge University Press, chronology and regional overview. It places
+  urban centres, long-distance trade, and sizeable states from the fifth
+  century BCE and identifies Rarh, Pundra, Varendri, Gaur, Vanga, Samatata,
+  and Harikela as regional peoples or zones. The campaign frames do not imply
+  that later dynasties or medieval capitals already existed.
+- `ASI-AMBARI`: Archaeological Survey of India, Guwahati Circle,
+  [Ambari excavation summary](https://asiguwahaticircle.gov.in/excavation8.html),
+  cross-checked with [*Indian Archaeology 2008-09: A
+  Review*](https://nmma.nic.in/nmma/NAS1/nmma_doc/IAR/Indian%20Archaeology%20%202008%20-%202009%20%20A%20Review.pdf).
+  It supports a lower-Brahmaputra Sunga-Kushana-period horizon around the
+  second-first centuries BCE/CE, not an AD 1 Kamarupa kingdom.
+- `OUP-NEINDIA`: Tiatoshi Jamir and Manjil Hazarika, eds.,
+  [*Prehistory and Archaeology of Northeast
+  India*](https://academic.oup.com/book/27482), Oxford University Press. Its
+  description stresses the region's scant archaeological record and
+  multidisciplinary reconstruction of early farming communities. It supports
+  cautious valley, foothill, and highland frames and specifically does not
+  license backdating Ahom, Chutia, Kachari, Kamarupa, or later ethnic states.
+- `UCL-BHUTAN`: Timothy Skulberg, ["Silk Roads in the Kingdom of Bhutan and
+  the development of a national heritage
+  inventory"](https://discovery.ucl.ac.uk/1540006/), UCL Discovery, used for
+  the severe archaeological limitations and route/settlement modelling
+  problems on the eastern Himalayan slopes. It supports conservative Monyul
+  and Sikkim highland proxies, not a unified ancient Bhutan or later capital.
 - `TAC-LUC`: Tacitus, [*Annals* 1.3](https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0078%3Abook%3D1%3Achapter%3D3), used for Augustus admitting Gaius and Lucius into the house of the Caesars and their status as *principes iuventutis*. It supports Lucius as an AD 1 dynastic court figure, not a second engine-heir slot or an invented office.
 - `SUET-JUL`: Suetonius, [*Divus Augustus* 64](https://lexundria.com/suet_aug/64/), used for Augustus's grandchildren Agrippa Postumus, Julia the Younger, and Agrippina the Elder through Agrippa and Julia, and for their upbringing in the Augustan household. It supports constrained AD 1 court records, not a formal engine adoption, marriage, office, exile, later career, or day-level biography.
 - `BM-GER`: British Museum, [Germanicus Julius Caesar biography](https://www.britishmuseum.org/collection/term/BIOG140788), used for Germanicus's 15 BCE-AD 19 life span and Julio-Claudian relationship. It supports his presence as a court youth at the campaign boundary, not a premature German command, adoption, or exact day-level biography.
