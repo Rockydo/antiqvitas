@@ -757,6 +757,27 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "JFA-WANK;LAA-WANK;P13", "secure",
         "Central-Altiplano mound villages coordinate camelid herding, households, exchange, and ritual activity without inventing a Wankarani state or common ruler.",
     ),
+    "antq_herrera_plateau_exchange_network": (
+        "global_peasants_estate_power=0.073|global_burghers_estate_power=0.057|"
+        "tribes_estate_power_from_cabinet=0.151|global_monthly_food_modifier=0.021|"
+        "global_trade_through_owned_territory_efficiency=0.025",
+        "QINT-HERRERA;P13", "contested",
+        "Herrera-period plateau communities coordinate cultivation, salt and valley exchange, gathering obligations, and common works without backdating Muisca political institutions.",
+    ),
+    "antq_sierra_nevada_early_community_network": (
+        "global_tribes_estate_power=0.083|global_peasants_estate_power=0.061|"
+        "tribes_estate_power_from_cabinet=0.163|global_monthly_food_modifier=0.018|"
+        "global_trade_through_owned_territory_efficiency=0.017",
+        "CAM-SNSM;P13", "contested",
+        "Sierra slope and coast communities coordinate subsistence, river passage, exchange, and local obligations before the dated Neguanje and Tairona built-settlement systems.",
+    ),
+    "antq_loja_regional_development_network": (
+        "global_peasants_estate_power=0.071|global_tribes_estate_power=0.067|"
+        "tribes_estate_power_from_cabinet=0.157|global_monthly_food_modifier=0.020|"
+        "global_trade_through_owned_territory_efficiency=0.023",
+        "GUFFROY-LOJA;OGBURN-LOJA;P13", "contested",
+        "Loja and Catamayo valley communities coordinate cultivation, settlement, inter-valley passage, and exchange without backdating later ethnic polities.",
+    ),
     "antq_mesoamerican_urban_ritual_center": (
         "global_clergy_estate_power=0.10|global_burghers_estate_power=0.07|"
         "clergy_estate_power_from_cabinet=0.20|global_production_efficiency=0.025|"
@@ -1616,6 +1637,9 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
         "antq_andean_highland_community_network",
         "antq_andean_ceremonial_centre_network",
         "antq_wankarani_mound_village_network",
+        "antq_herrera_plateau_exchange_network",
+        "antq_sierra_nevada_early_community_network",
+        "antq_loja_regional_development_network",
     ),
     "sacral": (),
     "royal": (
@@ -2204,7 +2228,7 @@ def load_power_data() -> PowerData:
     used_reforms = {government["reform"] for government in governments.values()}
     # Core/regional contracts include the reviewed Manchurian, Bornean,
     # Philippine, Sulawesi, and North American network reforms defined above.
-    expected_contract_count = 125 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    expected_contract_count = 128 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -3092,6 +3116,44 @@ antq_wankarani_mound_village_network = {
 	major = yes
 	government = tribe
 	country_modifier = {
+		research_speed = 0.075
+	}
+	years = 2
+}
+
+antq_herrera_plateau_exchange_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_peasants_estate_power = 0.073
+		global_burghers_estate_power = 0.057
+		global_monthly_food_modifier = 0.021
+		global_trade_through_owned_territory_efficiency = 0.025
+		research_speed = 0.075
+	}
+	years = 2
+}
+
+antq_sierra_nevada_early_community_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.083
+		global_peasants_estate_power = 0.061
+		global_monthly_food_modifier = 0.018
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_loja_regional_development_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_peasants_estate_power = 0.071
+		global_tribes_estate_power = 0.067
+		global_monthly_food_modifier = 0.020
+		global_trade_through_owned_territory_efficiency = 0.023
 		research_speed = 0.075
 	}
 	years = 2
@@ -4086,6 +4148,12 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_andean_ceremonial_centre_network_desc", "Ceremonial centres coordinate public works, specialist production, cultivation, and exchange without asserting one uniform territorial state."),
         ("antq_wankarani_mound_village_network", "Wankarani Mound-Village Network"),
         ("antq_wankarani_mound_village_network_desc", "Central-Altiplano mound villages coordinate camelid herding, households, exchange, and ritual without inventing a common ruler."),
+        ("antq_herrera_plateau_exchange_network", "Herrera Plateau Exchange Network"),
+        ("antq_herrera_plateau_exchange_network_desc", "Plateau communities coordinate cultivation, salt and valley exchange, gatherings, and common works without backdating Muisca institutions."),
+        ("antq_sierra_nevada_early_community_network", "Sierra Nevada Early Community Network"),
+        ("antq_sierra_nevada_early_community_network_desc", "Slope and coast communities coordinate subsistence, river passage, exchange, and local obligations before the dated Neguanje and Tairona systems."),
+        ("antq_loja_regional_development_network", "Loja Regional Development Network"),
+        ("antq_loja_regional_development_network_desc", "Loja and Catamayo valley communities coordinate cultivation, passage, and exchange without backdating later ethnic polities."),
         ("antq_mesoamerican_urban_ritual_center", "Mesoamerican Urban-Ritual Center"),
         ("antq_mesoamerican_urban_ritual_center_desc", "A first-order ceremonial and exchange center coordinates public space, specialist production, cultivation, and regional ties without an invented recovered constitution."),
         ("antq_mesoamerican_formative_civic_network", "Mesoamerican Formative Civic Network"),

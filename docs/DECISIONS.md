@@ -4149,3 +4149,10 @@ the yungas, Tiwanaku Ayacucho, and Recuay unrelated northern highlands. Assign
 all 95 locations directly to fifteen bounded frames. Four shared reforms model
 valley irrigation, highland communities, ceremonial centres, and Wankarani
 mound villages. Reuse reviewed installed Andean emblems; add no audio.
+
+## 2026-07-28 - Replace CHI with three exact archaeological frames
+
+Remove both overbroad CHI area selectors and assign all sixteen former fields
+directly: Herrera Plateau 10, Sierra Nevada Early 3, Loja Regional Development
+3. Use anonymous tribal adapters and three bounded network reforms. Reuse
+installed Colombian/Andean emblems; add no raster art or audio.

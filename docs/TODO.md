@@ -615,7 +615,8 @@ and focused runtime probe all pass.
 - [ ] Literal African placeholder countries are exhausted and the Gangetic,
     Inner Asian, Tibetan, Central Indian, Mesoamerican, and West Mexican
     Philippine, Island Southeast Asian, and Plains-Woodland superstates are
-    split. Continue the size-ranked global census with Chibchan Societies (16).
+    split. Continue the size-ranked global census with Melanesian Societies
+    and Micronesian Societies (three locations each).
     The parent task remains open until the census reaches zero.
     - [x] Replace the 68-location `INS` catch-all with ten exact Sulawesi and
       two Halmahera province frames. Correct Mahayana to the Austronesian belief
@@ -641,6 +642,11 @@ and focused runtime probe all pass.
       fifteen bounded archaeological-geographic frames with eleven added
       cultures, four reforms, fifteen direct standards, complete start
       coverage, and an exact validator. All 131 checks and paired smoke pass.
+    - [x] Replace the 16-location `CHI` catch-all with ten-location Herrera
+      Plateau, three-location pre-Neguanje Sierra Nevada, and three-location
+      Loja Regional Development frames. Add three cultures, reforms, standards,
+      complete start coverage, and an exact validator. All 132 checks and
+      paired smoke pass.
     - [x] Replace the 69-location `PHL` catch-all with fifteen exact Luzon,
       Mindoro, central-island, Palawan, Mindanao, and Sulu frames. Correct the
       inherited Mahayana profile to the Austronesian belief family; add fifteen

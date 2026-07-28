@@ -10,6 +10,6 @@
 - Uncovered sources: 0
 - Player-visible prohibited-token hits: 0
 - Loading tips: 64/64 exact keys
-- Country-history agenda: complete_459_tag_exact_override (459 roster tags; 11 clients)
+- Country-history agenda: complete_461_tag_exact_override (461 roster tags; 11 clients)
 
 Every installed source hash and key union is pinned in `installed_content_leakage.json`; a base-game or DLC change makes `make validate` fail until `--write` explicitly accepts a reviewed classification.

@@ -20626,43 +20626,6 @@ countries = {
 			capital = shiewhibak
 		}
 
-		XCX = { # Chibchan Societies; P8.10;CAH-XI
-			own_control_core = {
-				boiaca
-				bosa_colombia
-				calvas
-				cangochamba
-				caqueza
-				chayrama
-				chicaquicha
-				choconta
-				chunsua
-				duitama
-				funza
-				malacatos
-				paribari
-				suamox
-				teyuna
-				yaharo
-			}
-
-			country_rank = rank_county
-			starting_technology_level = 1
-			discovered_regions = {
-				colombia_region
-				andes_region
-			}
-			government = {
-				type = tribe
-				heir_selection = tribal_oldest_male
-				ruler = random
-				reforms = {
-					antq_advanced_chiefdom
-				}
-			}
-			capital = paribari
-		}
-
 		XCY = { # Hopewell Sphere; P8.10;CAH-XI
 			own_control_core = {
 				olentangy
@@ -34372,6 +34335,162 @@ countries = {
 				capital_economy_vs_traditional_economy = 65
 			}
 			capital = ushguli
+		}
+
+		XHM = { # Herrera Plateau Communities; QINT-HERRERA;P8.10
+			own_control_core = {
+				boiaca
+				bosa_colombia
+				caqueza
+				chicaquicha
+				choconta
+				chunsua
+				duitama
+				funza
+				paribari
+				suamox
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				colombia_region
+				andes_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_herrera_plateau_exchange_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -50
+				traditionalist_vs_innovative = -18
+				aristocracy_vs_plutocracy = -42
+				capital_economy_vs_traditional_economy = 52
+			}
+			capital = funza
+		}
+
+		SNE = { # Sierra Nevada Early Communities; CAM-SNSM;P8.10
+			own_control_core = {
+				chayrama
+				teyuna
+				yaharo
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				colombia_region
+				andes_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_sierra_nevada_early_community_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -62
+				traditionalist_vs_innovative = -25
+				aristocracy_vs_plutocracy = -55
+				capital_economy_vs_traditional_economy = 44
+			}
+			capital = chayrama
+		}
+
+		LRC = { # Loja Regional-Development Communities; GUFFROY-LOJA;OGBURN-LOJA;P8.10
+			own_control_core = {
+				calvas
+				cangochamba
+				malacatos
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				andes_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_loja_regional_development_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -54
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -46
+				capital_economy_vs_traditional_economy = 50
+			}
+			capital = malacatos
 		}
 
 	}

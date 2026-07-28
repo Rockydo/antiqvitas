@@ -3207,20 +3207,6 @@ XGW = { # Ancestral Sonoran Desert Communities; NPS-SONORAN;P20
 	}
 }
 
-XCX = { # Chibchan Societies; P8.10;P20
-	pattern = "pattern_solid.dds"
-	color1 = "red"
-	color2 = "yellow"
-	color3 = "black"
-	colored_emblem = {
-		texture = "ce_andean_small_bird.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.84 0.84 } }
-	}
-}
-
 XCY = { # Hopewell Sphere; P8.10;P20
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
@@ -6424,5 +6410,47 @@ XDG = { # Soanes; STR-CAUC;P20
 		color2 = color2
 		color3 = color1
 		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XHM = { # Herrera Plateau Communities; QINT-HERRERA;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_colombia_narino_circle_birds.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+SNE = { # Sierra Nevada Early Communities; CAM-SNSM;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_colombia_bird_mask.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+LRC = { # Loja Regional-Development Communities; GUFFROY-LOJA;OGBURN-LOJA;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_andean_small_tocapu_04.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
 	}
 }

@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-07-28 - The Chibchan catch-all becomes three archaeological frames
+
+- Replaced `CHI` with Herrera Plateau 10, Sierra Nevada Early 3, and Loja
+  Regional Development 3; later Muisca, Tairona, Cañari, and Palta states are
+  not backdated.
+- Added three cultures, reforms, standards, complete start coverage, and an
+  exact validator. Roster: 461; placeholders: 6; largest: 3.
+- All 132 validation commands and paired smoke pass with zero mod-only errors.
+
+Next: replace the three-location Melanesian and Micronesian placeholders.
+
 ## 2026-07-28 - The Andes becomes fifteen bounded regional frames
 
 - Removed `AND` and corrected the complete 95-location surface: Nazca no
@@ -9,8 +20,6 @@
   complete start coverage, and an exact validator. Roster: 459; placeholders: 7.
 - All 131 validation commands pass; paired smoke reached both rendered menus
   with zero mod-only normalized errors.
-
-Next: replace the 16-location Chibchan Societies frame.
 
 ## 2026-07-28 - The Caucasus becomes Iberia, Colchis, Armenia, and Soanes
 

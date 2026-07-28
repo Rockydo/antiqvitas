@@ -2062,15 +2062,6 @@ XGW = { # Ancestral Sonoran Desert Communities; NPS-SONORAN
 	is_historic = yes
 }
 
-XCX = { # Chibchan Societies; P8.10;CAH-XI
-	color = rgb { 56 106 106 }
-	color2 = rgb { 199 149 149 }
-
-	culture_definition = antq_chibchan
-	religion_definition = antq_andean
-	is_historic = yes
-}
-
 XCY = { # Hopewell Sphere; P8.10;CAH-XI
 	color = rgb { 75 113 131 }
 	color2 = rgb { 180 142 124 }
@@ -4129,5 +4120,32 @@ XDG = { # Soanes; STR-CAUC;IRAN-COL
 
 	culture_definition = antq_soanian
 	religion_definition = antq_arsacid_zoroastrianism
+	is_historic = yes
+}
+
+XHM = { # Herrera Plateau Communities; QINT-HERRERA;P8.10
+	color = rgb { 127 104 59 }
+	color2 = rgb { 128 151 196 }
+
+	culture_definition = antq_herrera_plateau
+	religion_definition = antq_andean
+	is_historic = yes
+}
+
+SNE = { # Sierra Nevada Early Communities; CAM-SNSM;P8.10
+	color = rgb { 135 88 63 }
+	color2 = rgb { 120 167 192 }
+
+	culture_definition = antq_sierra_nevada_early
+	religion_definition = antq_andean
+	is_historic = yes
+}
+
+LRC = { # Loja Regional-Development Communities; GUFFROY-LOJA;OGBURN-LOJA;P8.10
+	color = rgb { 164 99 33 }
+	color2 = rgb { 91 156 222 }
+
+	culture_definition = antq_loja_regional_development
+	religion_definition = antq_andean
 	is_historic = yes
 }

@@ -5765,3 +5765,12 @@ is not Wari, and later Kuelap, Chimu, and Ishma map names do not date those
 polities to AD 1. Sources: `CWP-ANDES`; `MET-ANDES-1500`; `CAM-NASCA-EIP`;
 `ANT-HUARPA`; `JFA-WANK`; `LAA-WANK`; `MET-VICUS`; `CUSCO-FORMATIVE`.
 [secure regional diversity; contested exact boundaries and political form]
+
+## 2026-07-28 - Chibchan is not an AD 1 macro-polity
+
+The former 16-field frame combined three distinct archaeological geographies.
+Herrera labels the Cundiboyacense plateau at AD 1; it is not a Muisca state.
+Sierra Nevada remains anonymously pre-Neguanje and pre-Tairona. Loja uses the
+Regional Development chronology without backdating Cañari, Palta, or Saraguro
+identities. Sources: `QINT-HERRERA`; `CAM-SNSM`; `GUFFROY-LOJA`;
+`OGBURN-LOJA`. [secure broad chronology; contested boundaries and institutions]

@@ -5697,3 +5697,30 @@ antq_moyobamba_foothill = { # CWP-ANDES;P8.10; AD 1 archaeological-geographic po
 		antq_andean_group
 	}
 }
+
+antq_herrera_plateau = { # QINT-HERRERA;P10; AD 1 archaeological plateau frame; Chibchan is a technical language-family adapter, not a claim of Muisca political or ethnic continuity
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_herrera_plateau
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_sierra_nevada_early = { # CAM-SNSM;P10; AD 1 geographic population frame before the dated Neguanje and Tairona built-settlement horizons; language is an engine adapter
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_sierra_nevada_early
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_loja_regional_development = { # GUFFROY-LOJA;OGBURN-LOJA;P10; AD 1 southern-Ecuador archaeological frame; Quechuan is an installed technical fallback, not a linguistic or later ethnic identification
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_loja_regional_development
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}

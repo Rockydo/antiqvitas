@@ -1,6 +1,6 @@
 {
   "game_build": "24187685",
-  "entry_count": 459,
+  "entry_count": 461,
   "collision_count": 171,
   "localization_collision_count": 185,
   "reserved_hash_collision_tags": [
@@ -1611,13 +1611,6 @@
       "name": "Ancestral Sonoran Desert Communities"
     },
     {
-      "design_tag": "CHI",
-      "engine_tag": "XCX",
-      "vanilla_collision": true,
-      "localization_collision": true,
-      "name": "Chibchan Societies"
-    },
-    {
       "design_tag": "HOP",
       "engine_tag": "XCY",
       "vanilla_collision": true,
@@ -3219,6 +3212,27 @@
       "vanilla_collision": true,
       "localization_collision": true,
       "name": "Soanes"
+    },
+    {
+      "design_tag": "HRC",
+      "engine_tag": "XHM",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Herrera Plateau Communities"
+    },
+    {
+      "design_tag": "SNE",
+      "engine_tag": "SNE",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Sierra Nevada Early Communities"
+    },
+    {
+      "design_tag": "LRC",
+      "engine_tag": "LRC",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Loja Regional-Development Communities"
     }
   ]
 }
