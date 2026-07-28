@@ -2467,11 +2467,92 @@ IMV = { # Imphal Valley Networks; OUP-NEINDIA;P8.4
 	is_historic = yes
 }
 
-RJS = { # Rajasthan-Gujarat Societies; P8.4;CAH-XI
-	color = rgb { 189 102 33 }
-	color2 = rgb { 66 153 222 }
+XCN = { # Anarta-Sarasvati Settlement Networks; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+	color = rgb { 174 116 36 }
+	color2 = rgb { 81 139 219 }
 
-	culture_definition = antq_indo_aryan
+	culture_definition = antq_anarta_sarasvati
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+LBR = { # Lata-Barygaza Trade Corridor; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+	color = rgb { 180 107 42 }
+	color2 = rgb { 75 148 213 }
+
+	culture_definition = antq_lata_barygaza
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+RKU = { # Rewa-Kantha Upland Communities; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+	color = rgb { 172 108 29 }
+	color2 = rgb { 83 147 226 }
+
+	culture_definition = antq_rewa_kantha
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+SRS = { # Saurashtra Coastal Networks; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+	color = rgb { 184 120 43 }
+	color2 = rgb { 71 135 212 }
+
+	culture_definition = antq_saurashtra_early_historic
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+XGN = { # Kutch Island-Coast Networks; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+	color = rgb { 181 122 43 }
+	color2 = rgb { 74 133 212 }
+
+	culture_definition = antq_kutch_early_historic
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+XGO = { # Matsya-Dhundhar Communities; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+	color = rgb { 192 108 33 }
+	color2 = rgb { 63 147 222 }
+
+	culture_definition = antq_matsya_dhundhar
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+XGP = { # Chambal-Gird Communities; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+	color = rgb { 179 124 27 }
+	color2 = rgb { 76 131 228 }
+
+	culture_definition = antq_chambal_gird
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+ABN = { # Ahar-Banas Highland Communities; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+	color = rgb { 174 102 47 }
+	color2 = rgb { 81 153 208 }
+
+	culture_definition = antq_ahar_banas
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+XGQ = { # Marwar-Nagaur Caravan Networks; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+	color = rgb { 185 108 45 }
+	color2 = rgb { 70 147 210 }
+
+	culture_definition = antq_marwar_nagaur
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+XGR = { # Jangladesh Pastoral Networks; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+	color = rgb { 178 126 40 }
+	color2 = rgb { 77 129 215 }
+
+	culture_definition = antq_jangladesh_pastoral
 	religion_definition = antq_brahmanism
 	is_historic = yes
 }

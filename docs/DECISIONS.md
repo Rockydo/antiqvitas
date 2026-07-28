@@ -4063,3 +4063,11 @@ research, settlements, and eleven-client localization.
 Religion and doctrine art uses two four-up generated atlases with installed EU5
 religion/aspect sheets as precise style references. The venv Python is the
 authoritative raster renderer because Pillow resampling differs by interpreter.
+
+## 2026-07-28 - Western India is split at whole-province archaeological grain
+
+`RJS` is replaced by ten disjoint frames totaling 109 fields. Twenty installed
+provinces preserve exact coverage while separating Gujarat, Saurashtra, Kutch,
+the Aravalli/Chambal highlands, Ahar-Banas, and northern/western desert
+corridors. Network/community labels are preferred where AD 1 government is not
+recoverable; `tools/s2_rajasthan_gujarat_granularity.py` pins the transform.

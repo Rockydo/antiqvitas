@@ -1,8 +1,8 @@
 {
   "game_build": "24187685",
-  "entry_count": 389,
-  "collision_count": 145,
-  "localization_collision_count": 159,
+  "entry_count": 398,
+  "collision_count": 150,
+  "localization_collision_count": 165,
   "reserved_hash_collision_tags": [
     "XAD"
   ],
@@ -1926,11 +1926,74 @@
       "name": "Imphal Valley Networks"
     },
     {
-      "design_tag": "RJS",
-      "engine_tag": "RJS",
+      "design_tag": "ANR",
+      "engine_tag": "XCN",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Anarta-Sarasvati Settlement Networks"
+    },
+    {
+      "design_tag": "LBR",
+      "engine_tag": "LBR",
       "vanilla_collision": false,
       "localization_collision": false,
-      "name": "Rajasthan-Gujarat Societies"
+      "name": "Lata-Barygaza Trade Corridor"
+    },
+    {
+      "design_tag": "RKU",
+      "engine_tag": "RKU",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Rewa-Kantha Upland Communities"
+    },
+    {
+      "design_tag": "SRS",
+      "engine_tag": "SRS",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Saurashtra Coastal Networks"
+    },
+    {
+      "design_tag": "KCH",
+      "engine_tag": "XGN",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Kutch Island-Coast Networks"
+    },
+    {
+      "design_tag": "MTS",
+      "engine_tag": "XGO",
+      "vanilla_collision": false,
+      "localization_collision": true,
+      "name": "Matsya-Dhundhar Communities"
+    },
+    {
+      "design_tag": "CHB",
+      "engine_tag": "XGP",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Chambal-Gird Communities"
+    },
+    {
+      "design_tag": "ABN",
+      "engine_tag": "ABN",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Ahar-Banas Highland Communities"
+    },
+    {
+      "design_tag": "MRN",
+      "engine_tag": "XGQ",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Marwar-Nagaur Caravan Networks"
+    },
+    {
+      "design_tag": "JGP",
+      "engine_tag": "XGR",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Jangladesh Pastoral Networks"
     },
     {
       "design_tag": "INS",

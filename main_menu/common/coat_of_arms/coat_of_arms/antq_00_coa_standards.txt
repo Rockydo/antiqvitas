@@ -3837,17 +3837,143 @@ IMV = { # Imphal Valley Networks; OUP-NEINDIA;P20
 	}
 }
 
-RJS = { # Rajasthan-Gujarat Societies; P8.4;P20
+XCN = { # Anarta-Sarasvati Settlement Networks; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P20
 	pattern = "pattern_solid.dds"
-	color1 = "orange"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+LBR = { # Lata-Barygaza Trade Corridor; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_boat_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+RKU = { # Rewa-Kantha Upland Communities; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_deer_kneeling.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+SRS = { # Saurashtra Coastal Networks; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_fish_okeane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XGN = { # Kutch Island-Coast Networks; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_boat_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XGO = { # Matsya-Dhundhar Communities; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XGP = { # Chambal-Gird Communities; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
 	color2 = "yellow"
 	color3 = "red"
 	colored_emblem = {
-		texture = "ce_auspicious_conch_shell_simple.dds"
+		texture = "ce_elephant_asian.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+ABN = { # Ahar-Banas Highland Communities; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XGQ = { # Marwar-Nagaur Caravan Networks; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_spear_head_random_small.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XGR = { # Jangladesh Pastoral Networks; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P20
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_deer_kneeling.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
 	}
 }
 

@@ -1,5 +1,20 @@
 # Progress
 
+## 2026-07-28 - Rajasthan-Gujarat becomes ten bounded western-India frames
+
+- Removed the 109-location `RJS` catch-all. Ten exact Gujarat, Saurashtra,
+  Kutch, Aravalli, Chambal, Ahar-Banas, and desert-corridor frames raise the
+  roster to 398 and reduce literal placeholders to fifteen.
+- Added ten regional cultures, twenty whole-province selectors, ten standards,
+  settlement/economy seeds, law and research coverage, histories, rank
+  presentation, and eleven-client localization. Nahapana and a mature Western
+  Kshatrapa state are explicitly not backdated to AD 1.
+- `tools/s2_rajasthan_gujarat_granularity.py` pins all 109 reassigned fields.
+- All 123 validation commands pass; paired smoke reached rendered vanilla/mod
+  menus in 197.8 seconds with zero mod-only normalized errors.
+
+Next: replace the 102-location Mesoamerican Societies frame.
+
 ## 2026-07-28 - Borneo becomes ten archaeological-geographic networks
 
 - Removed the 110-location `BOR` catch-all. Ten exact cave, karst, river,
@@ -12,8 +27,6 @@
 - `tools/s2_bornean_granularity.py` pins the transform. All 122 validation
   commands pass; paired smoke reached rendered vanilla/mod menus in 198.6
   seconds with zero mod-only normalized errors.
-
-Next: replace the 109-location Rajasthan-Gujarat frame.
 
 ## 2026-07-28 - Manchuria becomes six evidence-bounded horizons
 

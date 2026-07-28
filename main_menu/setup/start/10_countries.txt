@@ -23517,114 +23517,411 @@ countries = {
 			capital = imphal
 		}
 
-		RJS = { # Rajasthan-Gujarat Societies; P8.4;CAH-XI
+		XCN = { # Anarta-Sarasvati Settlement Networks; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
 			own_control_core = {
-				ajmer
-				aklera
-				amber_loc
-				amet
-				amreli
-				anupgarh
 				ashaval
-				bahadamer
-				banswara
-				baria
-				baroda
-				bayana
-				bhanvad
-				bhatnir
-				bhilwara
-				bhind
-				broach
-				bundi
-				champaner
-				chandravati
-				chavand
-				chhaya
-				chittor
-				churu
-				daman
 				danduka
-				datia
-				dausa
 				deodar
 				dholka
+				idar
+				khambat
+				modasa
+				palanpur
+				patan
+				radhanpur
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_advanced_chiefdom
+				}
+			}
+			capital = patan
+		}
+
+		LBR = { # Lata-Barygaza Trade Corridor; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+			own_control_core = {
+				baroda
+				broach
+				daman
+				nandod
+				rander
+				surat
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_advanced_chiefdom
+				}
+			}
+			capital = broach
+		}
+
+		RKU = { # Rewa-Kantha Upland Communities; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+			own_control_core = {
+				baria
+				champaner
+				mohan
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_advanced_chiefdom
+				}
+			}
+			capital = champaner
+		}
+
+		SRS = { # Saurashtra Coastal Networks; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+			own_control_core = {
+				amreli
+				bhanvad
+				chhaya
 				dhrangadhra
 				diu
-				dungarpur
 				dwarka
-				gagraun
 				gondal
-				gudamalani
-				gwalior
-				idar
-				jaisalmer
-				jalor
-				jhunjhunu
 				junagarh
-				kantha
-				kanthal
-				kapilkot
-				karauli
-				khambat
-				khaniadhana
-				khed
-				kiradu
-				kolasar
-				kolayat
-				kota
-				kurki
-				lakhiyarvira
-				lakhpat
 				lathi
 				limbdi
-				ludrava
-				makrana
-				malpura
-				mandalgarh
-				mandore
-				mangrol
-				manoharpur
-				merta
-				modasa
-				mohan
 				morvi
-				nadol
-				nagahrada
-				nagaur
 				nagnes
-				nandod
-				narwar
-				osian
-				palanpur
-				pali
 				palitana
-				patan
-				phalvardhika
-				phulia
-				pokhran
-				pugal
-				radhanpur
-				ramgar
-				rander
 				ranpur
+				sihor
+				somnath
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_advanced_chiefdom
+				}
+			}
+			capital = junagarh
+		}
+
+		XGN = { # Kutch Island-Coast Networks; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+			own_control_core = {
+				kantha
+				kapilkot
+				lakhiyarvira
+				lakhpat
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_advanced_chiefdom
+				}
+			}
+			capital = lakhiyarvira
+		}
+
+		XGO = { # Matsya-Dhundhar Communities; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+			own_control_core = {
+				ajmer
+				amber_loc
+				bayana
+				dausa
+				karauli
+				malpura
 				ranthambore
-				rawatsar
-				sabalgarh
-				salumbar
 				sambhar
-				sardarshahar
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_advanced_chiefdom
+				}
+			}
+			capital = ajmer
+		}
+
+		XGP = { # Chambal-Gird Communities; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+			own_control_core = {
+				aklera
+				bhind
+				bundi
+				datia
+				gagraun
+				gwalior
+				khaniadhana
+				kota
+				mangrol
+				narwar
+				sabalgarh
 				shahabad
 				sheopur
-				sidhmukh
-				sihor
-				sikar
 				sipri
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_advanced_chiefdom
+				}
+			}
+			capital = kota
+		}
+
+		ABN = { # Ahar-Banas Highland Communities; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+			own_control_core = {
+				amet
+				banswara
+				bhilwara
+				chavand
+				chittor
+				dungarpur
+				kanthal
+				mandalgarh
+				nagahrada
+				phulia
+				salumbar
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_advanced_chiefdom
+				}
+			}
+			capital = chittor
+		}
+
+		XGQ = { # Marwar-Nagaur Caravan Networks; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+			own_control_core = {
+				bahadamer
+				chandravati
+				gudamalani
+				jaisalmer
+				jalor
+				khed
+				kiradu
+				kolayat
+				kurki
+				ludrava
+				makrana
+				mandore
+				merta
+				nadol
+				nagaur
+				osian
+				pali
+				phalvardhika
+				pokhran
+				ramgar
 				sirohi
 				siwana
-				somnath
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				arabia_region
+				crescent_region
+				persia_region
+				khorasan_region
+				western_india_region
+				central_india_region
+				deccan_region
+				hindustan_region
+				bengal_region
+				indian_ocean_region
+				indochina_region
+				indonesia_region
+				south_china_region
+				east_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_advanced_chiefdom
+				}
+			}
+			capital = osian
+		}
+
+		XGR = { # Jangladesh Pastoral Networks; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4
+			own_control_core = {
+				anupgarh
+				bhatnir
+				churu
+				jhunjhunu
+				kolasar
+				manoharpur
+				pugal
+				rawatsar
+				sardarshahar
+				sidhmukh
+				sikar
 				sui
-				surat
 				suratgarh
 				taranagar
 				udasar
@@ -23656,7 +23953,7 @@ countries = {
 					antq_advanced_chiefdom
 				}
 			}
-			capital = ajmer
+			capital = bhatnir
 		}
 
 		INS = { # Island Southeast Asian Societies; P8.9;CAH-XI

@@ -5666,3 +5666,14 @@ Inherited cloves at Julau, Sarikei, and Tanjung Palas, sugar at Pontianak, and
 mercury at Santubong lack defensible AD 1 local support. Lumber, fish, and
 beeswax are conservative environmental proxies, not site-specific production
 claims. Sources: `P12.1`; `PER`; Borneo sources above. [contested]
+
+## 2026-07-28 - Western-India frames are regional proxies, not later peoples
+
+Ahar-Banas and western-India ceramic/settlement evidence, coin-polity horizons,
+and the near-contemporary Barygaza description support distinct playable
+regions, not one Rajasthan-Gujarat state. Labels do not project later Gujarati,
+Rajasthani, Rajput, Kutch, or princely-state identities and do not assert fixed
+ethnic borders. Nahapana's mid-first-century horizon is a negative boundary:
+no Western Kshatrapa state is backdated to AD 1. Sources:
+`ASI-WESTERN-INDIA`; `ASI-AHAR-BANAS`; `UOA-PERIPLUS`;
+`BM-TRIBAL-COINS`; `BM-WESTERN-KSHATRAPA-BOUNDARY`. [contested]

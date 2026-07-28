@@ -24,9 +24,9 @@ and focused runtime probe all pass.
 
 ### Audit baseline
 
-- The roster now has 389 playable tags after the Arabia, Britain/Ireland,
+- The roster now has 398 playable tags after the Arabia, Britain/Ireland,
   Germania/Baltic, northern/eastern, Maghreb, Horn, Bantu-frontier, West
-  African, Gangetic, Inner Asian, Tibetan, Central Indian, mainland Southeast Asian, Manchurian, and Bornean archaeological splits. Sixteen player-facing macro-polities
+  African, Gangetic, Inner Asian, Tibetan, Central Indian, mainland Southeast Asian, Manchurian, Bornean, and western-Indian archaeological splits. Fifteen player-facing macro-polities
   still contain “Societies” or another prohibited placeholder term in their
   names, concentrated in the Americas, Central/South/East/Southeast Asia, and
   Oceania. These are country-scale aggregations, not merely descriptive
@@ -35,9 +35,9 @@ and focused runtime probe all pass.
   665 regional, environmental, and direct-anchor corrections. Most retained
   staples remain inherited but are explicitly marked as contested where local
   extraction is not attested; deeper regional specialty work remains open.
-- The 265 ancient building definitions now seed 3,011 direct regional
-  placements across 1,609 settlement-ranked locations and all 356 starting
-  polities. The top ten hold 6.4% because reviewed Roman metropolitan packages
+- The 265 ancient building definitions now seed 3,314 placements across 1,718
+  settlement-ranked locations and all 398 starting polities. The top ten hold
+  6.0% because reviewed Roman metropolitan packages
   remain deliberately deep; ordinary locations are capped at six.
 - The advance DAG now has 360 nodes and 25 unique effect packages after the
   first 110-node Age-I expansion; 297 nodes still unlock no separate content.
@@ -611,12 +611,16 @@ and focused runtime probe all pass.
     backdating later named states or asserting unsupported ethnic borders.
 - [ ] Literal African placeholder countries are exhausted and the Gangetic,
     Inner Asian, Tibetan, and Central Indian superstates are split. Continue
-    the size-ranked global census with Rajasthan-Gujarat (109).
+    the size-ranked global census with Mesoamerican Societies (102).
     The parent task remains open until the census reaches zero.
     - [x] Replace the 110-location `BOR` catch-all with ten exact Bornean
       archaeological/geographic frames, ten cultures, four reforms, one
       plural traditions family, four direct-art doctrines, and five reviewed
       RGO corrections. All 122 validators and paired smoke pass.
+    - [x] Replace the 109-location `RJS` catch-all with ten exact western-India
+      archaeological-geographic frames, ten cultures, twenty province
+      selectors, ten standards, settlements, laws, research, history, and
+      eleven-client localization. The permanent validator pins all 109 fields.
     - [x] Replace `CIN` as a disconnected residual, not as a renamed Central
       Indian state. The audited footprint is 76 Gondwana/Bundelkhand
       locations, 36 Malwa/Narmada locations, 51 Tamilakam locations, and four
