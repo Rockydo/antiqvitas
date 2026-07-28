@@ -1288,6 +1288,142 @@ antq_loja_regional_development_network = {
 	years = 2
 }
 
+antq_daga_highland_garden_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.085
+		global_peasants_estate_power = 0.065
+		tribes_estate_power_from_cabinet = 0.170
+		global_monthly_food_modifier = 0.024
+		replace_cabinet_member_cost_modifier = 0.026
+		research_speed = 0.065
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_bomberai_coastal_community_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.070
+		global_burghers_estate_power = 0.065
+		tribes_estate_power_from_cabinet = 0.160
+		global_trade_through_owned_territory_efficiency = 0.030
+		replace_cabinet_member_cost_modifier = 0.025
+		research_speed = 0.065
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_early_mariana_island_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.075
+		global_peasants_estate_power = 0.055
+		tribes_estate_power_from_cabinet = 0.160
+		global_trade_through_owned_territory_efficiency = 0.026
+		global_monthly_food_modifier = 0.020
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_yap_ulithi_island_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.080
+		global_burghers_estate_power = 0.060
+		tribes_estate_power_from_cabinet = 0.170
+		global_trade_through_owned_territory_efficiency = 0.032
+		global_monthly_food_modifier = 0.017
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_orinoco_llanos_ceramic_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_peasants_estate_power = 0.075
+		global_tribes_estate_power = 0.060
+		tribes_estate_power_from_cabinet = 0.155
+		global_monthly_food_modifier = 0.022
+		global_trade_through_owned_territory_efficiency = 0.020
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_windward_island_ceramic_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.070
+		global_peasants_estate_power = 0.050
+		global_burghers_estate_power = 0.055
+		global_trade_through_owned_territory_efficiency = 0.030
+		global_monthly_food_modifier = 0.019
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_central_california_coastal_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.080
+		global_peasants_estate_power = 0.070
+		tribes_estate_power_from_cabinet = 0.165
+		global_monthly_food_modifier = 0.026
+		global_trade_through_owned_territory_efficiency = 0.016
+		research_speed = 0.065
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_acutuba_central_amazon_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_peasants_estate_power = 0.080
+		global_tribes_estate_power = 0.060
+		tribes_estate_power_from_cabinet = 0.160
+		global_monthly_food_modifier = 0.028
+		global_trade_through_owned_territory_efficiency = 0.023
+		research_speed = 0.075
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
 antq_mesoamerican_urban_ritual_center = {
 	major = yes
 	government = tribe
@@ -2578,6 +2714,14 @@ antq_elder_moot_kingship = {
 			has_reform = government_reform:antq_herrera_plateau_exchange_network
 			has_reform = government_reform:antq_sierra_nevada_early_community_network
 			has_reform = government_reform:antq_loja_regional_development_network
+			has_reform = government_reform:antq_daga_highland_garden_network
+			has_reform = government_reform:antq_bomberai_coastal_community_network
+			has_reform = government_reform:antq_early_mariana_island_network
+			has_reform = government_reform:antq_yap_ulithi_island_network
+			has_reform = government_reform:antq_orinoco_llanos_ceramic_network
+			has_reform = government_reform:antq_windward_island_ceramic_network
+			has_reform = government_reform:antq_central_california_coastal_network
+			has_reform = government_reform:antq_acutuba_central_amazon_network
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}
@@ -2646,6 +2790,14 @@ antq_warband_retinue_kingship = {
 			has_reform = government_reform:antq_herrera_plateau_exchange_network
 			has_reform = government_reform:antq_sierra_nevada_early_community_network
 			has_reform = government_reform:antq_loja_regional_development_network
+			has_reform = government_reform:antq_daga_highland_garden_network
+			has_reform = government_reform:antq_bomberai_coastal_community_network
+			has_reform = government_reform:antq_early_mariana_island_network
+			has_reform = government_reform:antq_yap_ulithi_island_network
+			has_reform = government_reform:antq_orinoco_llanos_ceramic_network
+			has_reform = government_reform:antq_windward_island_ceramic_network
+			has_reform = government_reform:antq_central_california_coastal_network
+			has_reform = government_reform:antq_acutuba_central_amazon_network
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}

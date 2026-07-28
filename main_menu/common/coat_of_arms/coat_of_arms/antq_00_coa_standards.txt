@@ -3361,62 +3361,6 @@ KCP = { # Lower Missouri Hopewell Communities; MOSHPO-KC;NPS-OZARK-HOPEWELL;P20
 	}
 }
 
-XDH = { # Pacific Coast Societies; P8.10;P20
-	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
-	colored_emblem = {
-		texture = "ce_annulet.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.84 0.84 } }
-	}
-}
-
-XDB = { # Arawak Societies; P8.10;P20
-	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
-	colored_emblem = {
-		texture = "ce_taino_sun.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
-	}
-}
-
-XDC = { # Tupi Societies; P8.10;P20
-	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
-	colored_emblem = {
-		texture = "ce_taino_sun.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
-	}
-}
-
-XDD = { # Carib Societies; P8.10;P20
-	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
-	colored_emblem = {
-		texture = "ce_taino_sun.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
-	}
-}
-
 XDK = { # Angrivarii; TAC-ANN-II;TAC-GER;P20
 	pattern = "pattern_solid.dds"
 	color1 = "green"
@@ -4660,34 +4604,6 @@ CPH = { # Chiapas Highland-Lowland Networks; INAH-IZAPA;P8.10;CAH-XI;P20
 		color2 = color2
 		color3 = color1
 		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
-	}
-}
-
-MEL = { # Melanesian Societies; P8.9;P20
-	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
-	colored_emblem = {
-		texture = "ce_annulet.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.84 0.84 } }
-	}
-}
-
-XDS = { # Micronesian Societies; P8.9;P20
-	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
-	colored_emblem = {
-		texture = "ce_annulet.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.84 0.84 } }
 	}
 }
 
@@ -6448,6 +6364,118 @@ LRC = { # Loja Regional-Development Communities; GUFFROY-LOJA;OGBURN-LOJA;P8.10;
 	color3 = "black"
 	colored_emblem = {
 		texture = "ce_andean_small_tocapu_04.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+DGU = { # Daga Highland Communities; JPA-PAPUA;P8.9;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_papua_kapkap.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+KBC = { # Bomberai South-Coast Communities; ANU-BOMBERAI;P8.9;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_papua_kapkap_02.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+EMR = { # Early Mariana Island Communities; WA-MARIANA;P8.9;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_polynesian_star_08.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+WCR = { # Yap-Ulithi Island Communities; ICA-YAP;P8.9;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_polynesian_makau_02.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+OLC = { # Orinoco-Llanos Ceramic Communities; JWP-ORINOCO;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_taino_water_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+WIC = { # Windward Island Ceramic Communities; SCIADV-CARIB;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_taino_fish.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+CCF = { # Central California Coastal Communities; NOAA-MONTEREY;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_native_american_spider.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+ACU = { # Acutuba Central-Amazon Communities; SA-EXPANSIONS;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_native_american_spiral_circle.dds"
 		color1 = color2
 		color2 = color2
 		color3 = color3

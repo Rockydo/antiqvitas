@@ -74,8 +74,6 @@ BED,antq_arab,antq_arabian_polytheism,STR-ARAB;P8.6;P10;P11,contested,Chaulotaea
 VAN,antq_vandalic,antq_germanic_religion,P8.7;CAH-XI;P10;P11,contested,Vandilic profile
 GUT,antq_gothic,antq_germanic_religion,P8.7;CAH-XI;P10;P11,contested,Gutonic profile
 DOR,antq_inuit_dorset,antq_north_american,P8.10;CAH-XI;P10;P11,contested,Dorset profile
-TUP,antq_tupi,antq_caribbean,P8.10;CAH-XI;P10;P11,contested,Tupi profile
-CAR,antq_carib,antq_caribbean,P8.10;CAH-XI;P10;P11,contested,Carib profile
 OSR,antq_syriac,antq_arsacid_zoroastrianism,P8.2;OCD;P10;P11,contested,Edessan Syriac-Aramaic profile before later Christian confessional consolidation
 CAT,antq_catuvellaunian,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,secure,Catuvellauni use their matching campaign culture
 TRI,antq_trinovantian,antq_celtic_religion,P8.7;P10;CAH-XI;PTO-GEO-II2,secure,Trinovantes use their matching campaign culture
@@ -253,7 +251,6 @@ NHM,antq_north_halmahera_metal_age,antq_austronesian_religion,ANU-MALUKU;P10;P11
 SHM,antq_south_halmahera_metal_age,antq_austronesian_religion,ANU-MALUKU;P10;P11,contested,South Halmahera Metal-Age Communities archaeological-geographic population profile
 JAV,antq_javanese,antq_mahayana,P8.9;P10;P11;CAH-XI,contested,Javanese polity frame aligned to its island population atlas
 JIN,antq_samhan,antq_korean_muism,P8.3;P10;P11;SAM,contested,Jinhan is aligned to the southern Korean Samhan population atlas
-MEL,antq_new_guinean,antq_austronesian_religion,P8.9;P10;P11;CAH-XI,contested,Melanesian residual frame aligned to its New Guinean population atlas
 LZC,antq_northwest_luzon_coast,antq_austronesian_religion,NMP-PH-METAL;NMP-PH-JARS;P10;P11,contested,Northwest Luzon Coastal Communities archaeological-geographic population profile
 CXR,antq_central_luzon_river,antq_austronesian_religion,NMP-PH-METAL;NMP-PH-JARS;P10;P11,contested,Central Luzon River Communities archaeological-geographic population profile
 MBL,antq_manila_bay_laguna,antq_austronesian_religion,NMP-PH-METAL;NMP-PH-JARS;P10;P11,contested,Manila Bay-Laguna Communities archaeological-geographic population profile
@@ -287,7 +284,6 @@ BPR,antq_banjar_paser,antq_borneo_late_prehistoric_traditions,ANTH-KAL-IRON;P10;
 TON,antq_tongan,antq_austronesian_religion,P8.9;P10;P11;CAH-XI,contested,Western Polynesian frame aligned to its Tongan population plurality
 EPI,antq_mixe_zoquean,antq_mesoamerican,P8.10;P10;P11;CAH-XI,contested,Epi-Olmec frame aligned to its Mixe-Zoquean population atlas
 HOP,antq_adena_woodland,antq_north_american,P8.10;P10;P11;CAH-XI,contested,Hopewell interaction-sphere frame aligned to the local Woodland population atlas
-ARA,antq_chibchan,antq_caribbean,P8.10;P10;P11;CAH-XI,contested,Caribbean-Amazon residual frame aligned to its Chibchan population plurality
 WAF,antq_kebbi_river,antq_west_african,JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5;P10;P11,contested,Kebbi riverine-savanna community frame before later Hausaization
 ZMP,antq_zamfara_plateau,antq_west_african,JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5;P10;P11,contested,Zamfara plateau community frame before later Hausaization
 KPC,antq_katsina_plain,antq_west_african,JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5;P10;P11,contested,Katsina plain community frame without a later Hausa state claim
@@ -336,7 +332,6 @@ TSG,antq_western_tsang,antq_central_plateau_traditions,CAM-TIB-ARCH;P10;P11,cont
 QMC,antq_qamdo_corridor,antq_eastern_plateau_traditions,CAM-EAST-TIB;RAD-YUSHU;P10;P11,contested,Upper Salween and Mekong corridor profile without a single ethnic or mortuary identity
 DRC,antq_drichu_highland,antq_eastern_plateau_traditions,CAM-EAST-TIB;RAD-YUSHU;P10;P11,contested,Upper Yangtze highland profile without a backdated later Khampa identity
 EPC,antq_eastern_plateau_corridor,antq_eastern_plateau_traditions,CAM-EAST-TIB;OXF-EAST-RIM;P10;P11,contested,Eastern escarpment corridor profile without assigning every community to Qiang or Bailang
-MIC,antq_micronesian,antq_austronesian_religion,P8.9;P10;P11;CAH-XI,contested,Micronesian community frame aligned to its island population atlas
 GER,antq_angrivarian,antq_germanic_religion,P8.7;P10;TAC-ANN-II;TAC-GER;OCD-GER,contested,Angrivarian Weser-Elbe people-polity adapter; no homogeneous state or exact frontier is inferred
 AES,antq_aestian,antq_baltic_slavic,P8.7;P10;TAC-GER;OCD-GER,contested,Sambian amber-coast Aestii frame; Tacitus's plural ethnonym does not establish a centralized state
 WBB,antq_west_balt_barrows,antq_baltic_slavic,P8.7;P10;PAN-WBB,contested,West Balt Barrow archaeological frame at its AD 1 terminal horizon; not an ethnic polity
@@ -419,3 +414,11 @@ MYB,antq_moyobamba_foothill,antq_andean,CWP-ANDES;P8.10,contested,Bounded Moyoba
 HRC,antq_herrera_plateau,antq_andean,QINT-HERRERA;P8.10;P10;P11,contested,"Bounded Herrera-period plateau profile; archaeological identity is not a Muisca state, uniform language, or fixed frontier"
 SNE,antq_sierra_nevada_early,antq_andean,CAM-SNSM;P8.10;P10;P11,contested,"Bounded pre-Neguanje Sierra profile; no later Tairona identity, urban system, or common polity is backdated"
 LRC,antq_loja_regional_development,antq_andean,GUFFROY-LOJA;OGBURN-LOJA;P8.10;P10;P11,contested,"Bounded Loja Regional Development profile; no later Cañari, Palta, or Saraguro polity is backdated"
+DGU,antq_daga_highland,antq_papuan_local_traditions,JPA-PAPUA;CAM-NGU;P10;P11,contested,Daga highland-slope archaeological-geographic adapter; the installed language key is technical and no modern polity or uniform ancestry is backdated
+KBC,antq_bomberai_south_coast,antq_papuan_local_traditions,ANU-BOMBERAI;CAM-NGU;P10;P11,contested,Bomberai south-coast adapter bounded to Kaimana and Buruwai; no later coastal kingdom ethnicity or political hierarchy is backdated
+EMR,antq_early_mariana_island,antq_mariana_island_traditions,WA-MARIANA;ANU-MIC;P10;P11,secure,Early Mariana island archaeological frame at Guahan and Saipan; no later chiefdom constitution or named incumbent is reconstructed
+WCR,antq_yap_ulithi_island,antq_western_caroline_traditions,ICA-YAP;ANU-MIC;P10;P11,contested,Yap-Ulithi island frame at the era boundary; later sawei hierarchy and post-AD 650 material links are not backdated
+OLC,antq_orinoco_llanos_ceramic,antq_caribbean,JWP-ORINOCO;P10;P11,contested,Orinoco-Llanos ceramic-horticultural adapter; the language key is technical and neither Arawak ethnicity nor one migration polity is asserted
+WIC,antq_windward_island_ceramic,antq_caribbean,SCIADV-CARIB;P10;P11,contested,Windward Island ceramic-community adapter; no later Island Carib identity or uniform Antillean polity is backdated
+CCF,antq_central_california_coastal,antq_north_american,NOAA-MONTEREY;P10;P11,contested,Central California coast archaeological-geographic adapter; the technical Penutian key does not project a contact-era people or language boundary into AD 1
+ACU,antq_acutuba_central_amazon,antq_central_amazon_traditions,SA-EXPANSIONS;ACUTUBA-CHRON;P10;P11,secure,Acutuba-phase central-Amazon archaeological frame; the Manaos language key is a technical local adapter rather than an ethnic-continuity claim

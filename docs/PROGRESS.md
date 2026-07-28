@@ -7886,3 +7886,14 @@ reviewed 128px BC7 DDS.
 - Restored the repo master plan to the prompt-side canonical text.
 - All 119 validation checks and paired vanilla/mod smoke pass with zero
   mod-only normalized error-log lines.
+
+## 2026-07-28 - Exhausted the placeholder census
+
+- Replaced `MEL`, `MIC`, `ARA`, `CAR`, `PAC`, and `TUP` with eight exact
+  archaeological/geographic frames over fourteen land/island locations.
+- Added eight cultures, four local faiths, sixteen doctrine choices, eight
+  reforms, standards, settlements, and full 11-client presentation.
+- Corrected `mariana` (Brazil) and `monterey_coast` (sea zone) out of opening
+  ownership; reserved `MOC` for the dated Moche formation and used `OLC`.
+- Roster: 463; cultures: 644; religions: 51; literal placeholders: 0.
+- `make validate` passes 133/133; paired smoke reports zero mod-only errors.

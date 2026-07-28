@@ -2161,42 +2161,6 @@ KCP = { # Lower Missouri Hopewell Communities; MOSHPO-KC;NPS-OZARK-HOPEWELL
 	is_historic = yes
 }
 
-XDH = { # Pacific Coast Societies; P8.10;CAH-XI
-	color = rgb { 52 109 136 }
-	color2 = rgb { 203 146 119 }
-
-	culture_definition = antq_algonquian
-	religion_definition = antq_north_american
-	is_historic = yes
-}
-
-XDB = { # Arawak Societies; P8.10;CAH-XI
-	color = rgb { 34 144 155 }
-	color2 = rgb { 221 111 100 }
-
-	culture_definition = antq_chibchan
-	religion_definition = antq_caribbean
-	is_historic = yes
-}
-
-XDC = { # Tupi Societies; P8.10;CAH-XI
-	color = rgb { 23 124 134 }
-	color2 = rgb { 232 131 121 }
-
-	culture_definition = antq_tupi
-	religion_definition = antq_caribbean
-	is_historic = yes
-}
-
-XDD = { # Carib Societies; P8.10;CAH-XI
-	color = rgb { 51 136 129 }
-	color2 = rgb { 204 119 126 }
-
-	culture_definition = antq_carib
-	religion_definition = antq_caribbean
-	is_historic = yes
-}
-
 XDK = { # Angrivarii; TAC-ANN-II;TAC-GER;OCD-GER
 	color = rgb { 67 98 56 }
 	color2 = rgb { 188 157 199 }
@@ -2995,24 +2959,6 @@ CPH = { # Chiapas Highland-Lowland Networks; INAH-IZAPA;P8.10;CAH-XI
 
 	culture_definition = antq_chiapas_highland_lowland
 	religion_definition = antq_mesoamerican
-	is_historic = yes
-}
-
-MEL = { # Melanesian Societies; P8.9;CAH-XI
-	color = rgb { 42 124 131 }
-	color2 = rgb { 213 131 124 }
-
-	culture_definition = antq_new_guinean
-	religion_definition = antq_austronesian_religion
-	is_historic = yes
-}
-
-XDS = { # Micronesian Societies; P8.9;CAH-XI
-	color = rgb { 37 117 133 }
-	color2 = rgb { 218 138 122 }
-
-	culture_definition = antq_micronesian
-	religion_definition = antq_austronesian_religion
 	is_historic = yes
 }
 
@@ -4147,5 +4093,77 @@ LRC = { # Loja Regional-Development Communities; GUFFROY-LOJA;OGBURN-LOJA;P8.10
 
 	culture_definition = antq_loja_regional_development
 	religion_definition = antq_andean
+	is_historic = yes
+}
+
+DGU = { # Daga Highland Communities; JPA-PAPUA;CAM-NGU;P8.9
+	color = rgb { 34 117 146 }
+	color2 = rgb { 221 138 109 }
+
+	culture_definition = antq_daga_highland
+	religion_definition = antq_papuan_local_traditions
+	is_historic = yes
+}
+
+KBC = { # Bomberai South-Coast Communities; ANU-BOMBERAI;CAM-NGU;P8.9
+	color = rgb { 24 122 145 }
+	color2 = rgb { 231 133 110 }
+
+	culture_definition = antq_bomberai_south_coast
+	religion_definition = antq_papuan_local_traditions
+	is_historic = yes
+}
+
+EMR = { # Early Mariana Island Communities; WA-MARIANA;ANU-MIC;P8.9
+	color = rgb { 37 110 144 }
+	color2 = rgb { 218 145 111 }
+
+	culture_definition = antq_early_mariana_island
+	religion_definition = antq_mariana_island_traditions
+	is_historic = yes
+}
+
+WCR = { # Yap-Ulithi Island Communities; ICA-YAP;ANU-MIC;P8.9
+	color = rgb { 23 123 136 }
+	color2 = rgb { 232 132 119 }
+
+	culture_definition = antq_yap_ulithi_island
+	religion_definition = antq_western_caroline_traditions
+	is_historic = yes
+}
+
+OLC = { # Orinoco-Llanos Ceramic Communities; JWP-ORINOCO;P8.10
+	color = rgb { 23 129 149 }
+	color2 = rgb { 232 126 106 }
+
+	culture_definition = antq_orinoco_llanos_ceramic
+	religion_definition = antq_caribbean
+	is_historic = yes
+}
+
+WIC = { # Windward Island Ceramic Communities; SCIADV-CARIB;P8.10
+	color = rgb { 46 144 143 }
+	color2 = rgb { 209 111 112 }
+
+	culture_definition = antq_windward_island_ceramic
+	religion_definition = antq_caribbean
+	is_historic = yes
+}
+
+CCF = { # Central California Coastal Communities; NOAA-MONTEREY;P8.10
+	color = rgb { 49 97 145 }
+	color2 = rgb { 206 158 110 }
+
+	culture_definition = antq_central_california_coastal
+	religion_definition = antq_north_american
+	is_historic = yes
+}
+
+ACU = { # Acutuba Central-Amazon Communities; SA-EXPANSIONS;ACUTUBA-CHRON;P8.10
+	color = rgb { 28 139 139 }
+	color2 = rgb { 227 116 116 }
+
+	culture_definition = antq_acutuba_central_amazon
+	religion_definition = antq_central_amazon_traditions
 	is_historic = yes
 }

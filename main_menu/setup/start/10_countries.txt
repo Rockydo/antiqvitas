@@ -21175,98 +21175,6 @@ countries = {
 			capital = nodaway
 		}
 
-		XDH = { # Pacific Coast Societies; P8.10;CAH-XI
-			own_control_core = {
-				monterey_coast
-			}
-
-			country_rank = rank_county
-			starting_technology_level = 1
-			discovered_regions = {
-				alaska_region
-				canada_region
-				great_lakes_region
-				great_plains_region
-				east_coast_region
-				west_coast_region
-			}
-			government = {
-				type = tribe
-				heir_selection = tribal_oldest_male
-				ruler = random
-				reforms = {
-					antq_advanced_chiefdom
-				}
-			}
-			capital = monterey_coast
-		}
-
-		XDB = { # Arawak Societies; P8.10;CAH-XI
-			own_control_core = {
-				guamontey
-			}
-
-			country_rank = rank_county
-			starting_technology_level = 1
-			discovered_regions = {
-				caribbean_region
-				brazil_region
-			}
-			government = {
-				type = tribe
-				heir_selection = tribal_oldest_male
-				ruler = random
-				reforms = {
-					antq_advanced_chiefdom
-				}
-			}
-			capital = guamontey
-		}
-
-		XDC = { # Tupi Societies; P8.10;CAH-XI
-			own_control_core = {
-				manaos
-			}
-
-			country_rank = rank_county
-			starting_technology_level = 1
-			discovered_regions = {
-				caribbean_region
-				brazil_region
-			}
-			government = {
-				type = tribe
-				heir_selection = tribal_oldest_male
-				ruler = random
-				reforms = {
-					antq_advanced_chiefdom
-				}
-			}
-			capital = manaos
-		}
-
-		XDD = { # Carib Societies; P8.10;CAH-XI
-			own_control_core = {
-				carucairi
-			}
-
-			country_rank = rank_county
-			starting_technology_level = 1
-			discovered_regions = {
-				caribbean_region
-				brazil_region
-			}
-			government = {
-				type = tribe
-				heir_selection = tribal_oldest_male
-				ruler = random
-				reforms = {
-					antq_advanced_chiefdom
-				}
-			}
-			capital = carucairi
-		}
-
 		XDK = { # Angrivarii; TAC-ANN-II;TAC-GER;OCD-GER
 			own_control_core = {
 				buckeburg
@@ -26779,56 +26687,6 @@ countries = {
 				capital_economy_vs_traditional_economy = 48
 			}
 			capital = zinacantan
-		}
-
-		MEL = { # Melanesian Societies; P8.9;CAH-XI
-			own_control_core = {
-				buruwai
-				daga_papua
-				kaimana
-			}
-
-			country_rank = rank_county
-			starting_technology_level = 1
-			discovered_regions = {
-				melanesia_region
-				micronesia_region
-				polynesia_region
-			}
-			government = {
-				type = tribe
-				heir_selection = tribal_oldest_male
-				ruler = random
-				reforms = {
-					antq_advanced_chiefdom
-				}
-			}
-			capital = daga_papua
-		}
-
-		XDS = { # Micronesian Societies; P8.9;CAH-XI
-			own_control_core = {
-				mariana
-				ulithi_atoll
-				yap
-			}
-
-			country_rank = rank_county
-			starting_technology_level = 1
-			discovered_regions = {
-				melanesia_region
-				micronesia_region
-				polynesia_region
-			}
-			government = {
-				type = tribe
-				heir_selection = tribal_oldest_male
-				ruler = random
-				reforms = {
-					antq_advanced_chiefdom
-				}
-			}
-			capital = mariana
 		}
 
 		XDT = { # Chauci; P8.7;STR-GER;TAC-GER;OCD-GER;PLE
@@ -34491,6 +34349,404 @@ countries = {
 				capital_economy_vs_traditional_economy = 50
 			}
 			capital = malacatos
+		}
+
+		DGU = { # Daga Highland Communities; JPA-PAPUA;CAM-NGU;P8.9
+			own_control_core = {
+				daga_papua
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				melanesia_region
+				micronesia_region
+				polynesia_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_daga_highland_garden_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -66
+				traditionalist_vs_innovative = -24
+				aristocracy_vs_plutocracy = -58
+				capital_economy_vs_traditional_economy = 58
+			}
+			capital = daga_papua
+		}
+
+		KBC = { # Bomberai South-Coast Communities; ANU-BOMBERAI;CAM-NGU;P8.9
+			own_control_core = {
+				buruwai
+				kaimana
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				melanesia_region
+				micronesia_region
+				polynesia_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_bomberai_coastal_community_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -62
+				traditionalist_vs_innovative = -20
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 54
+			}
+			capital = kaimana
+		}
+
+		EMR = { # Early Mariana Island Communities; WA-MARIANA;ANU-MIC;P8.9
+			own_control_core = {
+				guahan
+				saipan
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				melanesia_region
+				micronesia_region
+				polynesia_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_early_mariana_island_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -58
+				traditionalist_vs_innovative = -18
+				aristocracy_vs_plutocracy = -48
+				capital_economy_vs_traditional_economy = 52
+			}
+			capital = guahan
+		}
+
+		WCR = { # Yap-Ulithi Island Communities; ICA-YAP;ANU-MIC;P8.9
+			own_control_core = {
+				ulithi_atoll
+				yap
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				melanesia_region
+				micronesia_region
+				polynesia_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_yap_ulithi_island_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -60
+				traditionalist_vs_innovative = -17
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 50
+			}
+			capital = yap
+		}
+
+		OLC = { # Orinoco-Llanos Ceramic Communities; JWP-ORINOCO;P8.10
+			own_control_core = {
+				guamontey
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				caribbean_region
+				brazil_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_orinoco_llanos_ceramic_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -58
+				traditionalist_vs_innovative = -16
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 54
+			}
+			capital = guamontey
+		}
+
+		WIC = { # Windward Island Ceramic Communities; SCIADV-CARIB;P8.10
+			own_control_core = {
+				carucairi
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				caribbean_region
+				brazil_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_windward_island_ceramic_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -60
+				traditionalist_vs_innovative = -18
+				aristocracy_vs_plutocracy = -52
+				capital_economy_vs_traditional_economy = 52
+			}
+			capital = carucairi
+		}
+
+		CCF = { # Central California Coastal Communities; NOAA-MONTEREY;P8.10
+			own_control_core = {
+				awaswas
+				chochenyo
+				mutsun
+				tepotahal
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				alaska_region
+				canada_region
+				great_lakes_region
+				great_plains_region
+				east_coast_region
+				west_coast_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_central_california_coastal_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -64
+				traditionalist_vs_innovative = -20
+				aristocracy_vs_plutocracy = -56
+				capital_economy_vs_traditional_economy = 56
+			}
+			capital = awaswas
+		}
+
+		ACU = { # Acutuba Central-Amazon Communities; SA-EXPANSIONS;ACUTUBA-CHRON;P8.10
+			own_control_core = {
+				manaos
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				caribbean_region
+				brazil_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_acutuba_central_amazon_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -56
+				traditionalist_vs_innovative = -14
+				aristocracy_vs_plutocracy = -48
+				capital_economy_vs_traditional_economy = 52
+			}
+			capital = manaos
 		}
 
 	}

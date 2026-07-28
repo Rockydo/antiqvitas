@@ -1,4 +1,4 @@
-# Technical and Design Decisions
+﻿# Technical and Design Decisions
 
 ## 2026-07-28 - Manchuria uses material and corridor frames
 
@@ -4156,3 +4156,14 @@ Remove both overbroad CHI area selectors and assign all sixteen former fields
 directly: Herrera Plateau 10, Sierra Nevada Early 3, Loja Regional Development
 3. Use anonymous tribal adapters and three bounded network reforms. Reuse
 installed Colombian/Andean emblems; add no raster art or audio.
+
+
+## 2026-07-28 - Eliminate the literal placeholder census and invalid anchors
+
+Remove `MEL`, `MIC`, `ARA`, `CAR`, `PAC`, and `TUP`; replace them with eight
+direct fourteen-field frames and eight anonymous network reforms. Correct the
+old `MIC` collision with Brazilian `mariana` to Guahan/Saipan and the old
+`PAC` sea-zone capital to four land fields around Monterey Bay. Add four local
+religion profiles, reuse reviewed installed regional emblems and faith icons,
+and add no original raster art or audio. Use `OLC` for the Orinoco frame because
+`MOC` remains reserved for the dated second-century Moche formation.

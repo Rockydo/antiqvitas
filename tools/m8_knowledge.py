@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Render and validate ANTIQVITAS's complete M8 knowledge layer.
 
 The installed database is deliberately replaced by exact filenames: continuing
@@ -197,6 +197,14 @@ CONTENT_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
         ("unlock_government_reform", "antq_herrera_plateau_exchange_network"),
         ("unlock_government_reform", "antq_sierra_nevada_early_community_network"),
         ("unlock_government_reform", "antq_loja_regional_development_network"),
+        ("unlock_government_reform", "antq_daga_highland_garden_network"),
+        ("unlock_government_reform", "antq_bomberai_coastal_community_network"),
+        ("unlock_government_reform", "antq_early_mariana_island_network"),
+        ("unlock_government_reform", "antq_yap_ulithi_island_network"),
+        ("unlock_government_reform", "antq_orinoco_llanos_ceramic_network"),
+        ("unlock_government_reform", "antq_windward_island_ceramic_network"),
+        ("unlock_government_reform", "antq_central_california_coastal_network"),
+        ("unlock_government_reform", "antq_acutuba_central_amazon_network"),
         ("unlock_government_reform", "antq_mesoamerican_urban_ritual_center"),
         ("unlock_government_reform", "antq_mesoamerican_formative_civic_network"),
         ("unlock_government_reform", "antq_mesoamerican_exchange_corridor_network"),

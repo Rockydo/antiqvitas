@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Generate checked M4 culture and religion definition foundations.
 
 The source CSVs are deliberately historical design data rather than an opaque
@@ -75,6 +75,10 @@ NATIVE_RELIGION_GROUP_OVERRIDES = {
     "antq_north_american": "folk_north_american_group",
     "antq_caribbean": "folk_caribbean_group",
     "antq_australian_dreaming": "folk_australian_group",
+    "antq_papuan_local_traditions": "folk_papuan_group",
+    "antq_mariana_island_traditions": "folk_micronesian_group",
+    "antq_western_caroline_traditions": "folk_micronesian_group",
+    "antq_central_amazon_traditions": "folk_brazilian_group",
 }
 RELIGIOUS_ASPECT_SLOTS = 2
 RELIGIOUS_ASPECT_FEATURES = (("has_religious_influence", "yes"),)

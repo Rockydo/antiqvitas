@@ -1,8 +1,8 @@
 {
   "game_build": "24187685",
-  "entry_count": 461,
-  "collision_count": 171,
-  "localization_collision_count": 185,
+  "entry_count": 463,
+  "collision_count": 166,
+  "localization_collision_count": 180,
   "reserved_hash_collision_tags": [
     "XAD"
   ],
@@ -1688,34 +1688,6 @@
       "name": "Lower Missouri Hopewell Communities"
     },
     {
-      "design_tag": "PAC",
-      "engine_tag": "XDH",
-      "vanilla_collision": true,
-      "localization_collision": true,
-      "name": "Pacific Coast Societies"
-    },
-    {
-      "design_tag": "ARA",
-      "engine_tag": "XDB",
-      "vanilla_collision": true,
-      "localization_collision": true,
-      "name": "Arawak Societies"
-    },
-    {
-      "design_tag": "TUP",
-      "engine_tag": "XDC",
-      "vanilla_collision": true,
-      "localization_collision": true,
-      "name": "Tupi Societies"
-    },
-    {
-      "design_tag": "CAR",
-      "engine_tag": "XDD",
-      "vanilla_collision": true,
-      "localization_collision": true,
-      "name": "Carib Societies"
-    },
-    {
       "design_tag": "GER",
       "engine_tag": "XDK",
       "vanilla_collision": false,
@@ -2337,20 +2309,6 @@
       "vanilla_collision": false,
       "localization_collision": false,
       "name": "Chiapas Highland-Lowland Networks"
-    },
-    {
-      "design_tag": "MEL",
-      "engine_tag": "MEL",
-      "vanilla_collision": false,
-      "localization_collision": false,
-      "name": "Melanesian Societies"
-    },
-    {
-      "design_tag": "MIC",
-      "engine_tag": "XDS",
-      "vanilla_collision": true,
-      "localization_collision": true,
-      "name": "Micronesian Societies"
     },
     {
       "design_tag": "CHC",
@@ -3233,6 +3191,62 @@
       "vanilla_collision": false,
       "localization_collision": false,
       "name": "Loja Regional-Development Communities"
+    },
+    {
+      "design_tag": "DGU",
+      "engine_tag": "DGU",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Daga Highland Communities"
+    },
+    {
+      "design_tag": "KBC",
+      "engine_tag": "KBC",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Bomberai South-Coast Communities"
+    },
+    {
+      "design_tag": "EMR",
+      "engine_tag": "EMR",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Early Mariana Island Communities"
+    },
+    {
+      "design_tag": "WCR",
+      "engine_tag": "WCR",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Yap-Ulithi Island Communities"
+    },
+    {
+      "design_tag": "OLC",
+      "engine_tag": "OLC",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Orinoco-Llanos Ceramic Communities"
+    },
+    {
+      "design_tag": "WIC",
+      "engine_tag": "WIC",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Windward Island Ceramic Communities"
+    },
+    {
+      "design_tag": "CCF",
+      "engine_tag": "CCF",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Central California Coastal Communities"
+    },
+    {
+      "design_tag": "ACU",
+      "engine_tag": "ACU",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Acutuba Central-Amazon Communities"
     }
   ]
 }

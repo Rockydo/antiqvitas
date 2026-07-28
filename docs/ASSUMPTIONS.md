@@ -1,4 +1,4 @@
-# Historical Assumptions
+﻿# Historical Assumptions
 
 ## 2026-07-28 - Amur, Ussuri, and Sakhalin labels are bounded proxies
 
@@ -5774,3 +5774,16 @@ Sierra Nevada remains anonymously pre-Neguanje and pre-Tairona. Loja uses the
 Regional Development chronology without backdating Cañari, Palta, or Saraguro
 identities. Sources: `QINT-HERRERA`; `CAM-SNSM`; `GUFFROY-LOJA`;
 `OGBURN-LOJA`. [secure broad chronology; contested boundaries and institutions]
+
+
+## 2026-07-28 - Final catch-alls are archaeological-geographic frames
+
+The six remaining macro-labels concealed distinct New Guinea, Micronesian,
+Orinoco, Antillean, California, and Amazon histories. Their replacements use
+dated settlement or ceramic evidence and anonymous governance. Later Daga,
+Chamoru, Yapese, Arawak, Carib, Ohlone, Salinan, Manaos, sawei, and hiri
+identities or institutions are not treated as unchanged AD 1 polities.
+Sources: `ANU-BOMBERAI`; `JPA-PAPUA`; `WA-MARIANA`; `ICA-YAP`;
+`JWP-ORINOCO`; `SCIADV-CARIB`; `NOAA-MONTEREY`; `SA-EXPANSIONS`;
+`ACUTUBA-CHRON`. [secure broad occupation and chronology; contested exact
+boundaries, institutions, language continuity, and local ritual content]

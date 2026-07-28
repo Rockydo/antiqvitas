@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Build and validate M11's religion and institution icon contracts.
 
 Religion icons migrate from exact-key, reviewed vanilla aliases to direct
@@ -94,6 +94,10 @@ RELIGION_ICONS = (
     ReligionIcon("antq_austronesian_religion", "anitism_religion"),
     ReligionIcon("antq_australian_dreaming", "dreamtime_religion"),
     ReligionIcon("antq_caribbean", "tain_feyentun_religion"),
+    ReligionIcon("antq_papuan_local_traditions", "imunu_religion"),
+    ReligionIcon("antq_mariana_island_traditions", "puntan_religion"),
+    ReligionIcon("antq_western_caroline_traditions", "yanolop_religion"),
+    ReligionIcon("antq_central_amazon_traditions", "namandu_religion"),
     ReligionIcon("antq_eastern_hill_traditions", "shamanism"),
     ReligionIcon("antq_eastern_iranian_traditions", "zoroastrian"),
     ReligionIcon("antq_tarim_oasis_traditions", "tengri"),

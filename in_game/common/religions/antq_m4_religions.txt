@@ -671,3 +671,59 @@ antq_borneo_late_prehistoric_traditions = { # ANU-NIAH-METAL;ANTH-KAL-IRON;MYH-B
 	opinions = {
 	}
 }
+
+antq_papuan_local_traditions = { # ANU-BOMBERAI;JPA-PAPUA;P11; Plural New Guinea local ritual traditions represented without reconstructing one theology or priesthood
+	color = antq_religion_color_antq_papuan_local_traditions
+	group = folk_papuan_group
+	religious_aspects = 2
+	has_religious_influence = yes
+	definition_modifier = {
+		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
+	}
+	opinions = {
+	}
+}
+
+antq_mariana_island_traditions = { # WA-MARIANA;ANU-MIC;P11; Early Mariana community traditions represented without backdating contact-era named deities or chiefly institutions
+	color = antq_religion_color_antq_mariana_island_traditions
+	group = folk_micronesian_group
+	religious_aspects = 2
+	has_religious_influence = yes
+	definition_modifier = {
+		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
+	}
+	opinions = {
+	}
+}
+
+antq_western_caroline_traditions = { # ICA-YAP;ANU-MIC;P11; Yap-Ulithi local traditions represented without projecting the later sawei order into AD 1
+	color = antq_religion_color_antq_western_caroline_traditions
+	group = folk_micronesian_group
+	religious_aspects = 2
+	has_religious_influence = yes
+	definition_modifier = {
+		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
+	}
+	opinions = {
+	}
+}
+
+antq_central_amazon_traditions = { # SA-EXPANSIONS;ACUTUBA-CHRON;P11; Central-Amazon local ritual traditions represented without equating ceramic horizons with one theology ethnicity or priesthood
+	color = antq_religion_color_antq_central_amazon_traditions
+	group = folk_brazilian_group
+	religious_aspects = 2
+	has_religious_influence = yes
+	definition_modifier = {
+		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
+	}
+	opinions = {
+	}
+}

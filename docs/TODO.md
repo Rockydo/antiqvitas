@@ -24,23 +24,20 @@ and focused runtime probe all pass.
 
 ### Audit baseline
 
-- The roster now has 459 playable tags after the Arabia, Britain/Ireland,
+- The roster now has 463 playable tags after the Arabia, Britain/Ireland,
   Germania/Baltic, northern/eastern, Maghreb, Horn, Bantu-frontier, West
   African, Gangetic, Inner Asian, Tibetan, Central Indian, mainland Southeast
   Asian, Manchurian, Bornean, western-Indian, Mesoamerican, West Mexican, and
   Philippine, Sulawesi, North Maluku, Plains-Woodland, Korean, Caucasian, and
-  Andean archaeological splits. Seven player-facing macro-polities
-  still contain “Societies” or another prohibited placeholder term in their
-  names, concentrated in the Americas, Central/South/East Asia, and
-  Oceania. These are country-scale aggregations, not merely descriptive
-  localization, and remain in the global granularity queue below.
-- The global RGO audit now covers all 13,549 controlled templates and applies
+  Andean and final-census archaeological splits. The generated literal
+  placeholder census is zero.
+- The global RGO audit now covers all 13,553 controlled templates and applies
   665 regional, environmental, and direct-anchor corrections. Most retained
   staples remain inherited but are explicitly marked as contested where local
   extraction is not attested; deeper regional specialty work remains open.
-- The 265 ancient building definitions now seed 3,556 placements across 1,838
-  settlement-ranked locations and all 450 starting polities. The top ten hold
-  5.7% because reviewed Roman metropolitan packages
+- The 265 ancient building definitions now seed 3,570 placements across 1,845
+  settlement-ranked locations and all 463 starting polities. The top ten hold
+  5.6% because reviewed Roman metropolitan packages
   remain deliberately deep; ordinary locations are capped at six.
 - The advance DAG now has 360 nodes and 25 unique effect packages after the
   first 110-node Age-I expansion; 297 nodes still unlock no separate content.
@@ -48,8 +45,8 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 383 explicit opening
-  government records and 364 privileges serve the 459-start roster. The legal
+  thin outside the first replacement tranches: 394 explicit opening
+  government records and 364 privileges serve the 463-start roster. The legal
   layer now has 227 ancient groups,
   including 182 profile laws with 584 total options, a 26-option dated
   development layer, and 12 country-specific exceptions.
@@ -399,7 +396,7 @@ and focused runtime probe all pass.
 
 ### S2-P1 — Replace macro-societies with historical peoples
 
-- [ ] Eliminate all player-facing generic “Societies”, “Land of”, macro-region,
+- [x] Eliminate all player-facing generic “Societies”, “Land of”, macro-region,
   and placeholder country names across the whole roster.
   - [x] Establish the generated global baseline and first Maghreb correction.
     `s2_placeholder_polity_census.py` records 25 remaining literal placeholder
@@ -475,6 +472,11 @@ and focused runtime probe all pass.
   - Every replacement requires a source, confidence level, defensible geographic
     frame, culture/religion/government package, ruler policy, capital rationale,
     flag, agenda, and setup validation.
+  - [x] Exhaust the final six placeholders as eight exact Papua, Bomberai,
+    Mariana, Yap-Ulithi, Orinoco-Llanos, Windward, central-California, and
+    Acutuba frames. Fourteen land/island locations, eight cultures, four local
+    faiths, eight reforms, and zero invalid sea/Brazilian capital adapters are
+    pinned by `s2_final_placeholder_granularity.py`.
   - Acceptance: zero player-facing generic society placeholders; no replacement
     exceeds its sourced frame; all roster tags are fully wired.
 
@@ -612,12 +614,11 @@ and focused runtime probe all pass.
     archaeological/geographic community networks. Separate western Hausaland,
     Nsukka-Lejja, Lower Oueme, Volta-Cong, and Bosumtwi frames without
     backdating later named states or asserting unsupported ethnic borders.
-- [ ] Literal African placeholder countries are exhausted and the Gangetic,
+- [x] Literal African placeholder countries are exhausted and the Gangetic,
     Inner Asian, Tibetan, Central Indian, Mesoamerican, and West Mexican
     Philippine, Island Southeast Asian, and Plains-Woodland superstates are
-    split. Continue the size-ranked global census with Melanesian Societies
-    and Micronesian Societies (three locations each).
-    The parent task remains open until the census reaches zero.
+    split. The final six residual placeholders are replaced by eight exact
+    fourteen-field frames; the generated census is zero.
     - [x] Replace the 68-location `INS` catch-all with ten exact Sulawesi and
       two Halmahera province frames. Correct Mahayana to the Austronesian belief
       family; add twelve cultures, a North Maluku language adapter, six reforms,

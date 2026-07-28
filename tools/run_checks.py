@@ -73,6 +73,7 @@ VALIDATE_COMMANDS = (
     Command("tools/s2_caucasian_granularity.py", ("--check",)),
     Command("tools/s2_andean_granularity.py", ("--check",)),
     Command("tools/s2_chibchan_granularity.py", ("--check",)),
+    Command("tools/s2_final_placeholder_granularity.py", ("--check",)),
     Command("tools/s2_placeholder_polity_census.py", ("--check",)),
     Command("tools/generate_m4_definitions.py", ("--check",)),
     Command("tools/generate_m4_tier2_names.py", ("--check",)),

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Validate and render the first sourced ANTIQVITAS M6 power foundation."""
 
 from __future__ import annotations
@@ -777,6 +777,62 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "global_trade_through_owned_territory_efficiency=0.023",
         "GUFFROY-LOJA;OGBURN-LOJA;P13", "contested",
         "Loja and Catamayo valley communities coordinate cultivation, settlement, inter-valley passage, and exchange without backdating later ethnic polities.",
+    ),
+    "antq_daga_highland_garden_network": (
+        "global_tribes_estate_power=0.085|global_peasants_estate_power=0.065|"
+        "tribes_estate_power_from_cabinet=0.170|global_monthly_food_modifier=0.024|"
+        "replace_cabinet_member_cost_modifier=0.026",
+        "JPA-PAPUA;CAM-NGU;P13", "contested",
+        "Highland-slope communities coordinate gardens, forest access, household obligations, and exchange without inventing one Daga constitution or fixed ethnic frontier.",
+    ),
+    "antq_bomberai_coastal_community_network": (
+        "global_tribes_estate_power=0.070|global_burghers_estate_power=0.065|"
+        "tribes_estate_power_from_cabinet=0.160|global_trade_through_owned_territory_efficiency=0.030|"
+        "replace_cabinet_member_cost_modifier=0.025",
+        "ANU-BOMBERAI;CAM-NGU;P13", "contested",
+        "Bomberai coastal communities coordinate landing places, forest products, exchange, and restitution without backdating a later kingdom or maritime constitution.",
+    ),
+    "antq_early_mariana_island_network": (
+        "global_tribes_estate_power=0.075|global_peasants_estate_power=0.055|"
+        "tribes_estate_power_from_cabinet=0.160|global_trade_through_owned_territory_efficiency=0.026|"
+        "global_monthly_food_modifier=0.020",
+        "WA-MARIANA;ANU-MIC;P13", "contested",
+        "Early Mariana communities coordinate island subsistence, passage, pottery, and gatherings without reconstructing a contact-era hierarchy or common state.",
+    ),
+    "antq_yap_ulithi_island_network": (
+        "global_tribes_estate_power=0.080|global_burghers_estate_power=0.060|"
+        "tribes_estate_power_from_cabinet=0.170|global_trade_through_owned_territory_efficiency=0.032|"
+        "global_monthly_food_modifier=0.017",
+        "ICA-YAP;ANU-MIC;P13", "contested",
+        "Yap and Ulithi communities coordinate island passage, provisioning, exchange, and restitution without projecting the later sawei hierarchy into AD 1.",
+    ),
+    "antq_orinoco_llanos_ceramic_network": (
+        "global_peasants_estate_power=0.075|global_tribes_estate_power=0.060|"
+        "tribes_estate_power_from_cabinet=0.155|global_monthly_food_modifier=0.022|"
+        "global_trade_through_owned_territory_efficiency=0.020",
+        "JWP-ORINOCO;P13", "contested",
+        "Orinoco-Llanos communities coordinate cultivation, ceramics, river passage, and exchange without equating material style with Arawak language or polity.",
+    ),
+    "antq_windward_island_ceramic_network": (
+        "global_tribes_estate_power=0.070|global_peasants_estate_power=0.050|"
+        "global_burghers_estate_power=0.055|global_trade_through_owned_territory_efficiency=0.030|"
+        "global_monthly_food_modifier=0.019",
+        "SCIADV-CARIB;P13", "contested",
+        "Windward Island communities coordinate gardens, fishing, pottery, passage, and exchange without backdating a later Island Carib identity or common polity.",
+    ),
+    "antq_central_california_coastal_network": (
+        "global_tribes_estate_power=0.080|global_peasants_estate_power=0.070|"
+        "tribes_estate_power_from_cabinet=0.165|global_monthly_food_modifier=0.026|"
+        "global_trade_through_owned_territory_efficiency=0.016",
+        "NOAA-MONTEREY;P13", "contested",
+        "Central-coast communities coordinate estuary, shore, woodland, gathering, and exchange obligations without imposing a contact-era ethnonym or language boundary.",
+    ),
+    "antq_acutuba_central_amazon_network": (
+        "global_peasants_estate_power=0.080|global_tribes_estate_power=0.060|"
+        "tribes_estate_power_from_cabinet=0.160|global_monthly_food_modifier=0.028|"
+        "global_trade_through_owned_territory_efficiency=0.023",
+        "SA-EXPANSIONS;ACUTUBA-CHRON;P13", "contested",
+        "Acutuba-phase communities coordinate floodplain cultivation, ceramics, river passage, and exchange without inventing one territorial state or priesthood.",
     ),
     "antq_mesoamerican_urban_ritual_center": (
         "global_clergy_estate_power=0.10|global_burghers_estate_power=0.07|"
@@ -1640,6 +1696,14 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
         "antq_herrera_plateau_exchange_network",
         "antq_sierra_nevada_early_community_network",
         "antq_loja_regional_development_network",
+        "antq_daga_highland_garden_network",
+        "antq_bomberai_coastal_community_network",
+        "antq_early_mariana_island_network",
+        "antq_yap_ulithi_island_network",
+        "antq_orinoco_llanos_ceramic_network",
+        "antq_windward_island_ceramic_network",
+        "antq_central_california_coastal_network",
+        "antq_acutuba_central_amazon_network",
     ),
     "sacral": (),
     "royal": (
@@ -2226,9 +2290,9 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    # Core/regional contracts include the reviewed Manchurian, Bornean,
-    # Philippine, Sulawesi, and North American network reforms defined above.
-    expected_contract_count = 128 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    # Core/regional contracts include every reviewed regional network above,
+    # including the eight exact final-placeholder replacements.
+    expected_contract_count = 136 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -3154,6 +3218,78 @@ antq_loja_regional_development_network = {
 		global_tribes_estate_power = 0.067
 		global_monthly_food_modifier = 0.020
 		global_trade_through_owned_territory_efficiency = 0.023
+		research_speed = 0.075
+	}
+	years = 2
+}
+
+antq_daga_highland_garden_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		research_speed = 0.065
+	}
+	years = 2
+}
+
+antq_bomberai_coastal_community_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		research_speed = 0.065
+	}
+	years = 2
+}
+
+antq_early_mariana_island_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_yap_ulithi_island_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_orinoco_llanos_ceramic_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_windward_island_ceramic_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_central_california_coastal_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		research_speed = 0.065
+	}
+	years = 2
+}
+
+antq_acutuba_central_amazon_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
 		research_speed = 0.075
 	}
 	years = 2
@@ -4154,6 +4290,22 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_sierra_nevada_early_community_network_desc", "Slope and coast communities coordinate subsistence, river passage, exchange, and local obligations before the dated Neguanje and Tairona systems."),
         ("antq_loja_regional_development_network", "Loja Regional Development Network"),
         ("antq_loja_regional_development_network_desc", "Loja and Catamayo valley communities coordinate cultivation, passage, and exchange without backdating later ethnic polities."),
+        ("antq_daga_highland_garden_network", "Daga Highland Garden Network"),
+        ("antq_daga_highland_garden_network_desc", "Highland-slope communities coordinate gardens, forest access, households, and exchange without a reconstructed common constitution."),
+        ("antq_bomberai_coastal_community_network", "Bomberai Coastal Community Network"),
+        ("antq_bomberai_coastal_community_network_desc", "Coastal communities coordinate landing places, forest products, exchange, and restitution without backdating a later kingdom."),
+        ("antq_early_mariana_island_network", "Early Mariana Island Network"),
+        ("antq_early_mariana_island_network_desc", "Island communities coordinate subsistence, passage, pottery, and gatherings without a reconstructed contact-era hierarchy."),
+        ("antq_yap_ulithi_island_network", "Yap-Ulithi Island Network"),
+        ("antq_yap_ulithi_island_network_desc", "Island communities coordinate passage, provisioning, exchange, and restitution without projecting the later sawei hierarchy into AD 1."),
+        ("antq_orinoco_llanos_ceramic_network", "Orinoco-Llanos Ceramic Network"),
+        ("antq_orinoco_llanos_ceramic_network_desc", "Communities coordinate cultivation, ceramics, river passage, and exchange without equating material style with language or polity."),
+        ("antq_windward_island_ceramic_network", "Windward Island Ceramic Network"),
+        ("antq_windward_island_ceramic_network_desc", "Island communities coordinate gardens, fishing, pottery, passage, and exchange without a later ethnic or political identity."),
+        ("antq_central_california_coastal_network", "Central California Coastal Network"),
+        ("antq_central_california_coastal_network_desc", "Coastal communities coordinate estuary, shore, woodland, gathering, and exchange obligations without a contact-era ethnonym."),
+        ("antq_acutuba_central_amazon_network", "Acutuba Central-Amazon Network"),
+        ("antq_acutuba_central_amazon_network_desc", "Floodplain communities coordinate cultivation, ceramics, river passage, and exchange without an invented territorial state."),
         ("antq_mesoamerican_urban_ritual_center", "Mesoamerican Urban-Ritual Center"),
         ("antq_mesoamerican_urban_ritual_center_desc", "A first-order ceremonial and exchange center coordinates public space, specialist production, cultivation, and regional ties without an invented recovered constitution."),
         ("antq_mesoamerican_formative_civic_network", "Mesoamerican Formative Civic Network"),

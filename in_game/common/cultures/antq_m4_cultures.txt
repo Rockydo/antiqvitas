@@ -5724,3 +5724,75 @@ antq_loja_regional_development = { # GUFFROY-LOJA;OGBURN-LOJA;P10; AD 1 southern
 		antq_andean_group
 	}
 }
+
+antq_daga_highland = { # JPA-PAPUA;CAM-NGU;P10; AD 1 highland-slope geographic adapter; the installed Dagan language is technical and does not prove unchanged later identity
+	language = antq_oceanic_dialect
+	color = antq_culture_color_antq_daga_highland
+	tags = { european_gfx }
+	culture_groups = {
+		antq_oceanic_group
+	}
+}
+
+antq_bomberai_south_coast = { # ANU-BOMBERAI;CAM-NGU;P10; Kaimana-Buruwai coastal adapter; installed Asmat is a technical New Guinea fallback not an asserted language
+	language = antq_oceanic_dialect
+	color = antq_culture_color_antq_bomberai_south_coast
+	tags = { european_gfx }
+	culture_groups = {
+		antq_oceanic_group
+	}
+}
+
+antq_early_mariana_island = { # WA-MARIANA;ANU-MIC;P10; Archaeological island frame after settlement by the second millennium BCE; no later political hierarchy is backdated
+	language = antq_oceanic_dialect
+	color = antq_culture_color_antq_early_mariana_island
+	tags = { european_gfx }
+	culture_groups = {
+		antq_oceanic_group
+	}
+}
+
+antq_yap_ulithi_island = { # ICA-YAP;ANU-MIC;P10; Yap-Ulithi geographic adapter around AD 1; later inter-island hierarchy is excluded
+	language = antq_oceanic_dialect
+	color = antq_culture_color_antq_yap_ulithi_island
+	tags = { european_gfx }
+	culture_groups = {
+		antq_oceanic_group
+	}
+}
+
+antq_orinoco_llanos_ceramic = { # JWP-ORINOCO;P10; Ceramic-horticultural archaeological frame; the Arawakan key is technical and does not equate material style with language or polity
+	language = antq_american_dialect
+	color = antq_culture_color_antq_orinoco_llanos_ceramic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_american_group
+	}
+}
+
+antq_windward_island_ceramic = { # SCIADV-CARIB;P10; Chronometric island-community frame around AD 1; later Island Carib labels and one common polity are excluded
+	language = antq_american_dialect
+	color = antq_culture_color_antq_windward_island_ceramic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_american_group
+	}
+}
+
+antq_central_california_coastal = { # NOAA-MONTEREY;P10; Long-duration coast and estuary archaeological frame; Penutian is an installed technical adapter not an AD 1 linguistic boundary
+	language = antq_american_dialect
+	color = antq_culture_color_antq_central_california_coastal
+	tags = { european_gfx }
+	culture_groups = {
+		antq_american_group
+	}
+}
+
+antq_acutuba_central_amazon = { # SA-EXPANSIONS;ACUTUBA-CHRON;P10; Acutuba-phase central-Amazon archaeological frame; Manaos is a technical regional language adapter not a continuity claim
+	language = antq_american_dialect
+	color = antq_culture_color_antq_acutuba_central_amazon
+	tags = { european_gfx }
+	culture_groups = {
+		antq_american_group
+	}
+}
