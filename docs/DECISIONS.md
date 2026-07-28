@@ -1,5 +1,24 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - The Maghreb uses one kingdom and two bounded interior people-frames
+
+The former Berber/Gaetulian macro-polity mixed Juba II's documented kingdom
+with classical umbrella terms for inland peoples. The opening map now treats
+these as three different political contracts. Mauretania is a client monarchy
+centered on Caesarea Mauretaniae and the northern coastal frame. Gaetuli retain
+only the Atlas high plateau and pre-desert residual. Musulamii receive the
+Aures and Hodna frontier provinces as a separate society-of-peoples frame.
+
+This is a political-map split, not a cosmetic rename. Each frame has its own
+owned capital, population culture, government/profile entry, presentation
+standard, agenda/history/rank path, economy propagation, and eleven-client
+localization. The code-native emblems are deliberately described as
+period-inspired UI standards, never reconstructed national flags.
+
+`tools/s2_placeholder_polity_census.py` keeps the incomplete global work
+visible, while `tools/s2_maghreb_granularity.py` prevents this reviewed split
+from silently collapsing back into a regional superstate.
+
 ## 2026-07-27 - Frontier depth follows evidence type rather than one tribal template
 
 Aestii, Frisii, Dacians, and Garamantes no longer share a generic tribal

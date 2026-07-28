@@ -1,5 +1,31 @@
 # Historical Assumptions
 
+## 2026-07-27 - Gaetulian and Musulamian boundaries are explicit gameplay proxies
+
+Juba II's Mauretania and its capital at Caesarea are secure enough to replace
+the old Volubilis-centered presentation. The installed `algiers_area` is used
+as a reproducible proxy for the kingdom's northern Algerian coastal component;
+it is not a claim that an EU5 area boundary reproduces an ancient frontier.
+
+Classical writers use *Gaetuli* broadly and inconsistently for peoples of the
+high plateau and pre-desert. The 19-location Gaetulian frame therefore remains
+a sourced umbrella society-of-peoples, not a single ethnic nation-state. The
+Musulamii are securely named in Tacitus's account of the AD 17 Tacfarinas war,
+but that later narrative does not recover their precise AD 1 extent,
+constitution, ruler, or capital. Biskra and the Aures/Hodna selectors are
+bounded gameplay anchors chosen from the installed geography; their ruler and
+elder-council adapter remain anonymous.
+
+Sources weighed: plan sections 8.1 and 8.5; `CAM-JUBA`; `OCD-CAESAREA`;
+`TAC-ANN-TACF`; `SOR-AFRICA-FRONTIER`;
+[Cambridge, Juba II and Mauretania](https://assets.cambridge.org/97810091/84229/excerpt/9781009184229_excerpt.pdf);
+[Oxford Classical Dictionary, Caesarea (Cherchel)](https://academic.oup.com/edited-volume/61673/chapter-abstract/548510297);
+[Tacitus, *Annals* 2.52](https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0078%3Abook%3D2%3Achapter%3D52);
+and [Jehan Desanges, North African spatial organization](https://books.openedition.org/psorbonne/119532).
+
+[secure Mauretanian kingdom/capital and Musulamian ethnonym; contested exact
+AD 1 ownership, interior political form, capitals, borders, and numerical effects]
+
 ## 2026-07-27 - Aestian, Frisian, Dacian, and Garamantian mechanics remain bounded
 
 Tacitus's Aestii are a late-first-century literary witness, not a recovered

@@ -222,8 +222,8 @@ def build_report() -> dict[str, object]:
     law_options = rows(ROOT / "docs/m6/ancient_law_options.csv")
     law_groups = {(row["profile"], row["law"]) for row in law_options}
     require(
-        len(law_profiles) == 292
-        and len({row["tag"] for row in law_profiles}) == 292
+        len(law_profiles) == 293
+        and len({row["tag"] for row in law_profiles}) == 293
         and len({row["profile"] for row in law_profiles}) == 13,
         "ancient legal-profile coverage regressed",
         failures,

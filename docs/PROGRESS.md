@@ -1,5 +1,31 @@
 # Progress
 
+## 2026-07-27 - The global placeholder census begins with a sourced Maghreb split
+
+- Added a permanent whole-roster census for literal `Societies`, `Land of`,
+  `Generic`, and `Placeholder` country names. The reviewed baseline falls from
+  27 to 26 remaining frames; the parent global-remediation task stays open.
+- Recentered Juba II's Mauretania on Caesarea Mauretaniae and its northern
+  coastal kingdom. Replaced the old Maghreb-wide Berber/Gaetulian residual with
+  two bounded interior frames: 19-location Gaetuli on the high plateau and
+  pre-desert, and 11-location Musulamii across the Aures/Hodna frontier.
+- Added the Musulamian culture definition and selectors, separate country
+  profile, anonymous evidence-bounded government adapter, owned capital,
+  starting settlement/economy propagation, agenda/rank/history integration,
+  and a direct period-inspired UI standard. The Gaetulian and Mauretanian
+  contracts received the same full-stack review.
+- `tools/s2_maghreb_granularity.py` pins exact names, 158 resolved locations,
+  three capitals, three cultures, ownership selectors, governments, reforms,
+  direct standards, source/confidence metadata, and all eleven localization
+  clients. The complete static suite passes 112/112 checks. Paired vanilla/mod
+  smoke reaches responsive rendered menus with zero new or mod-unique error
+  lines.
+- Research and test evidence is recorded in
+  `docs/playtests/S2_MAGHREB_GRANULARITY_20260727.md`.
+
+Next: continue the global census through Sahara/Horn/West-African/Bantu
+placeholders; do not claim closure until the generated count reaches zero.
+
 ## 2026-07-27 - Four frontier societies receive evidence-bounded political games
 
 - Replaced the generic political floor for Aestii, Frisii, the divided Dacian

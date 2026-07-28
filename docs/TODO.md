@@ -396,6 +396,14 @@ and focused runtime probe all pass.
 
 - [ ] Eliminate all player-facing generic “Societies”, “Land of”, macro-region,
   and placeholder country names across the whole roster.
+  - [x] Establish the generated global baseline and first Maghreb correction.
+    `s2_placeholder_polity_census.py` records 26 remaining literal placeholder
+    names, down from 27. Mauretania now owns its Caesarea-centered coastal
+    frame; Gaetuli are bounded to 19 high-plateau/pre-desert locations; and
+    Musulamii receive a separate 11-location Aures/Hodna frontier frame.
+    All three have owned capitals, culture/religion profiles, governments,
+    sourced presentation standards, agendas, and eleven-client localization.
+    `s2_maghreb_granularity.py` permanently pins the 158-location contract.
   - Start from a generated census of country names, adjectives, map labels,
     government names, history text, and localization in every supported language.
   - Split broad ownership into geographically bounded peoples, confederations,
@@ -526,6 +534,13 @@ and focused runtime probe all pass.
     Baltic superstate; Germania is one of the deepest non-Roman theaters.
 
 - [ ] Rebuild Maghreb, Sahara, West Africa, Japan, and every remaining macro frame.
+  - [x] Complete the first Maghreb split: replace the Maghreb-wide
+    Berber/Gaetulian placeholder with Juba II's Caesarea-centered Mauretania,
+    bounded Gaetuli, and separate Musulamii. Retain documented uncertainty
+    rather than presenting the two interior frames as fixed centralized states.
+  - [ ] Continue the African pass through the remaining Sahara, Horn, West
+    African, and Bantu placeholders, then proceed through the size-ranked global
+    census. The parent task remains open until the census reaches zero.
   - Split Berber/Gaetulian, West African, Bantu, and other generic society tags
     using evidence-appropriate political/archaeological frames. Recheck Japan,
     Korea, Manchuria, Siberia, India, Southeast Asia, Oceania, and the Americas.

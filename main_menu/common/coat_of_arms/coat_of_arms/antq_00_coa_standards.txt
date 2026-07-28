@@ -141,17 +141,17 @@ XAF = { # Bosporan Kingdom; P8.7;P20
 	}
 }
 
-XAG = { # Mauretania; P8.5;P20
+XAG = { # Mauretania; CAM-JUBA;OCD-CAESAREA;P20
 	pattern = "pattern_solid.dds"
-	color1 = "yellow"
-	color2 = "black"
+	color1 = "purple"
+	color2 = "white"
 	color3 = "red"
 	colored_emblem = {
-		texture = "ce_african_sun.dds"
-		color1 = color1
+		texture = "ce_horse_salient.dds"
+		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.82 } }
 	}
 }
 
@@ -2815,17 +2815,31 @@ INS = { # Island Southeast Asian Societies; P8.9;P20
 	}
 }
 
-XDR = { # Berber and Gaetulian Societies; P8.5;P20
+XDR = { # Gaetuli; TRE-GAE;SOR-AFRICA-FRONTIER;P20
 	pattern = "pattern_solid.dds"
-	color1 = "yellow"
+	color1 = "orange"
 	color2 = "black"
-	color3 = "red"
+	color3 = "white"
 	colored_emblem = {
-		texture = "ce_african_sun.dds"
-		color1 = color1
+		texture = "ce_african_ram_horns.dds"
+		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XFM = { # Musulamii; TAC-ANN-TACF;SOR-AFRICA-FRONTIER;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_horse_head.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.82 } }
 	}
 }
 

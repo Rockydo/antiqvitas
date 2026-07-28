@@ -52,6 +52,8 @@ VALIDATE_COMMANDS = (
     Command("tools/s2_britain_ireland_granularity.py", ("--check",)),
     Command("tools/s2_northern_granularity.py", ("--check",)),
     Command("tools/s2_eastern_granularity.py", ("--check",)),
+    Command("tools/s2_maghreb_granularity.py", ("--check",)),
+    Command("tools/s2_placeholder_polity_census.py", ("--check",)),
     Command("tools/generate_m4_definitions.py", ("--check",)),
     Command("tools/generate_m4_tier2_names.py", ("--check",)),
     Command("tools/generate_m4_tier2_wide_names.py", ("--check",)),

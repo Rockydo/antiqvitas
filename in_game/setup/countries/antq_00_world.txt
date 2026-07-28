@@ -91,7 +91,7 @@ XAF = { # Bosporan Kingdom; P8.1;OCD;PLE
 	is_historic = yes
 }
 
-XAG = { # Mauretania; P8.1;CAH-XI
+XAG = { # Mauretania; CAM-JUBA;OCD-CAESAREA;P8.1;CAH-XI
 	color = rgb { 128 95 71 }
 	color2 = rgb { 127 160 184 }
 
@@ -1810,12 +1810,21 @@ INS = { # Island Southeast Asian Societies; P8.9;CAH-XI
 	is_historic = yes
 }
 
-XDR = { # Berber and Gaetulian Societies; P8.5;CAH-XI
+XDR = { # Gaetuli; TRE-GAE;SOR-AFRICA-FRONTIER;P8.5
 	color = rgb { 134 92 46 }
 	color2 = rgb { 121 163 209 }
 
-	culture_definition = antq_nubian
-	religion_definition = antq_kushite_amun
+	culture_definition = antq_gaetulian
+	religion_definition = antq_berber_religion
+	is_historic = yes
+}
+
+XFM = { # Musulamii; TAC-ANN-TACF;SOR-AFRICA-FRONTIER;P8.5
+	color = rgb { 128 118 52 }
+	color2 = rgb { 127 137 203 }
+
+	culture_definition = antq_musulamian
+	religion_definition = antq_berber_religion
 	is_historic = yes
 }
 

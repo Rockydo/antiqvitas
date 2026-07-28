@@ -451,6 +451,15 @@ antq_gaetulian = { # P8.5;P10;CAH-XI; Southwestern Maghrebi Gaetulian regional p
 	}
 }
 
+antq_musulamian = { # P8.5;P10;TAC-ANN-TACF;SOR-AFRICA-FRONTIER; Eastern Numidian and Aures-frontier regional proxy; technical language fallback does not assert later Arabic speech
+	language = antq_berber_dialect
+	color = antq_culture_color_antq_musulamian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_berber_group
+	}
+}
+
 antq_garamantian = { # P8.5;P10;CAH-XI; Garamantian Fezzan regional proxy
 	language = antq_berber_dialect
 	color = antq_culture_color_antq_garamantian

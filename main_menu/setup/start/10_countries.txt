@@ -2732,7 +2732,7 @@ countries = {
 			capital = taman
 		}
 
-		XAG = { # Mauretania; P8.1;CAH-XI
+		XAG = { # Mauretania; CAM-JUBA;OCD-CAESAREA;P8.1;CAH-XI
 			own_control_core = {
 				afso
 				agadir
@@ -2741,11 +2741,14 @@ countries = {
 				aguz
 				ait_benhaddou
 				ait_daoud
+				al_khadra_ALG
 				al_mazamma
+				algiers
 				amergo
 				ameskour
 				anfa
 				aouint_yghomane
+				arzew
 				asfi
 				asilah
 				assa
@@ -2759,9 +2762,12 @@ countries = {
 				beni_sabih
 				boulaouane
 				boumalne_dades
+				brashk
 				bzou
 				ceuta
+				cherchell
 				chichaoua
+				chlef
 				debdou
 				demnate
 				echemmaia
@@ -2774,26 +2780,38 @@ countries = {
 				ifni
 				ifrane
 				igiliz
+				jarawah_abu_al_aysh
+				jerada
 				kalaat_sraghna
 				khenifra
+				ksar_el_kaoua
 				ksar_el_kebir
 				ksar_es_souk
+				ksar_ibn_senane
 				la_mamora
 				larache
 				marrakesh
+				mascara
 				massa_MOR
 				mazaghan
+				mazouna
+				medea
 				meknes
 				melilla
 				miatbir
 				midelt
+				miliana
 				mogador
+				mostaganem
 				mrirah
 				naffis
 				namalata
+				nedroma
 				noul_lamta
+				oran
 				ouarzazate
 				ouezzane
+				oujda
 				rabat
 				ras_kebdana
 				sale
@@ -2803,14 +2821,18 @@ countries = {
 				sijilmasa
 				skoura
 				tabarida
+				tablat
 				tadla
 				tafedna
 				tafraout
 				taghjijt
 				tagmadert
+				tamazaghrane
 				tamdegost
 				tamdoult
+				tamentfoust
 				tangier
+				taourirt
 				taroudant
 				tata_MOR
 				taunat
@@ -2822,7 +2844,9 @@ countries = {
 				tefelfelt
 				tegeget
 				temsamane
+				tenes
 				terrest
+				tessala
 				tetouan
 				tezerghe
 				thagia
@@ -2834,8 +2858,10 @@ countries = {
 				tizgane
 				tiznit
 				tizounine
+				tlemcen
 				todgha
 				volubilis
+				yellel
 			}
 
 			country_rank = rank_kingdom
@@ -2882,7 +2908,7 @@ countries = {
 				aristocracy_vs_plutocracy = -20
 				capital_economy_vs_traditional_economy = 25
 			}
-			capital = volubilis
+			capital = cherchell
 		}
 
 		XAH = { # Parthian Empire; P8.2;CAH-XI;PLE
@@ -19875,63 +19901,26 @@ countries = {
 			capital = maba_celebes
 		}
 
-		XDR = { # Berber and Gaetulian Societies; P8.5;CAH-XI
+		XDR = { # Gaetuli; TRE-GAE;SOR-AFRICA-FRONTIER;P8.5
 			own_control_core = {
 				ain_madhi
 				ain_sefra
-				al_khadra_ALG
-				algiers
-				amdoukal
-				arzew
 				asir_ALG
-				bades
-				bir_el_alter
-				biskra
-				bou_saada
-				brashk
 				brezina
 				charef
-				cherchell
-				chlef
 				djelfa
 				el_abiodh_sidi_cheikh
 				el_bayadh
-				el_kantara
-				jarawah_abu_al_aysh
-				jerada
 				ksar_el_boukhari
-				ksar_el_kaoua
-				ksar_ibn_senane
 				laghouat
-				madila
-				maqqara
-				mascara
-				mazouna
-				medea
 				medrissa
 				messaad
-				miliana
-				mostaganem
-				msila
 				naama
-				nedroma
-				oran
-				oujda
 				ouled_djellal
 				qal_at_ibn_salama
 				qutb
-				sidi_okba
-				tablat
 				tahert
-				tamazaghrane
-				tamentfoust
-				taourirt
-				tenes
-				tessala
 				tissemsilt
-				tlemcen
-				tolga
-				yellel
 				zenina
 			}
 
@@ -19949,10 +19938,93 @@ countries = {
 				heir_selection = tribal_oldest_male
 				ruler = random
 				reforms = {
-					antq_advanced_chiefdom
+					antq_tribal_kingdom
 				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_african_status_law = antq_s2_african_status_mediated
+					antq_s2_african_dependent_labor_law = antq_s2_african_dependent_labor_mediated
+					antq_s2_african_revenue_law = antq_s2_african_revenue_mediated
+					antq_s2_african_land_law = antq_s2_african_land_mediated
+					antq_s2_african_muster_law = antq_s2_african_muster_mediated
+					antq_s2_african_local_rule_law = antq_s2_african_local_rule_mediated
+					antq_s2_african_cult_law = antq_s2_african_cult_mediated
+					antq_s2_african_household_law = antq_s2_african_household_mediated
+					antq_s2_african_commerce_law = antq_s2_african_commerce_mediated
+					antq_s2_african_coinage_law = antq_s2_african_coinage_mediated
+					antq_s2_african_courts_law = antq_s2_african_courts_mediated
+					antq_s2_african_offices_law = antq_s2_african_offices_mediated
+					antq_s2_african_migration_law = antq_s2_african_migration_mediated
+					antq_s2_african_external_law = antq_s2_african_external_mediated
+				}
+				centralization_vs_decentralization = -55
+				traditionalist_vs_innovative = -45
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 75
 			}
-			capital = algiers
+			capital = djelfa
+		}
+
+		XFM = { # Musulamii; TAC-ANN-TACF;SOR-AFRICA-FRONTIER;P8.5
+			own_control_core = {
+				amdoukal
+				bades
+				bir_el_alter
+				biskra
+				bou_saada
+				el_kantara
+				madila
+				maqqara
+				msila
+				sidi_okba
+				tolga
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				maghreb_region
+				sahel_region
+				nubia_region
+				ethiopia_region
+				somalia_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_tribal_kingdom
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_african_status_law = antq_s2_african_status_mediated
+					antq_s2_african_dependent_labor_law = antq_s2_african_dependent_labor_mediated
+					antq_s2_african_revenue_law = antq_s2_african_revenue_mediated
+					antq_s2_african_land_law = antq_s2_african_land_mediated
+					antq_s2_african_muster_law = antq_s2_african_muster_mediated
+					antq_s2_african_local_rule_law = antq_s2_african_local_rule_mediated
+					antq_s2_african_cult_law = antq_s2_african_cult_mediated
+					antq_s2_african_household_law = antq_s2_african_household_mediated
+					antq_s2_african_commerce_law = antq_s2_african_commerce_mediated
+					antq_s2_african_coinage_law = antq_s2_african_coinage_mediated
+					antq_s2_african_courts_law = antq_s2_african_courts_mediated
+					antq_s2_african_offices_law = antq_s2_african_offices_mediated
+					antq_s2_african_migration_law = antq_s2_african_migration_mediated
+					antq_s2_african_external_law = antq_s2_african_external_mediated
+				}
+				centralization_vs_decentralization = -45
+				traditionalist_vs_innovative = -40
+				aristocracy_vs_plutocracy = -45
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = biskra
 		}
 
 		MSS = { # Mesoamerican Societies; P8.10;CAH-XI
