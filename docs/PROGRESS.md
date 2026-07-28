@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-28 - Mesoamerica becomes bounded start-era centers and networks
+
+- Removed the 102-location `MSS` catch-all. Ten successors take 93 fields;
+  emergent Teotihuacan takes nine, raising the roster to 407 and reducing
+  literal placeholders to fourteen.
+- Added ten cultures, four archaeological reforms, twelve explicit
+  political/standard profiles, and complete start-system coverage.
+- `tools/s2_mesoamerican_granularity.py` pins the transform and preserves
+  Cuicuilco as a separate southern-Basin center.
+- All 124 validation commands pass; paired smoke passed in 197.8 seconds with
+  zero mod-only normalized errors.
+
+Next: replace the 98-location West Mexican Societies frame.
+
 ## 2026-07-28 - Rajasthan-Gujarat becomes ten bounded western-India frames
 
 - Removed the 109-location `RJS` catch-all. Ten exact Gujarat, Saurashtra,

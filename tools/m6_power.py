@@ -603,6 +603,34 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "ANTH-KAL-IRON;P13", "contested",
         "Foothill households coordinate ore, charcoal, furnaces, river passage, and cultivation without a uniform guild or later state.",
     ),
+    "antq_mesoamerican_urban_ritual_center": (
+        "global_clergy_estate_power=0.10|global_burghers_estate_power=0.07|"
+        "clergy_estate_power_from_cabinet=0.20|global_production_efficiency=0.025|"
+        "replace_cabinet_member_cost_modifier=0.04",
+        "INAH-IZAPA;INAH-CUICUILCO-TEO;INAH-TEO-START;P13", "contested",
+        "A first-order ceremonial and exchange center coordinates public space, specialist production, cultivation, and regional ties without an invented recovered constitution.",
+    ),
+    "antq_mesoamerican_formative_civic_network": (
+        "global_clergy_estate_power=0.07|global_peasants_estate_power=0.06|"
+        "tribes_estate_power_from_cabinet=0.15|global_monthly_food_modifier=0.02|"
+        "replace_cabinet_member_cost_modifier=0.01",
+        "INAH-CANTONA;INAH-CHALCATZINGO;INAH-TAMTOC;P13", "contested",
+        "Formative centers and cultivating communities coordinate water, stores, ritual places, exchange, and common works without a falsely uniform state.",
+    ),
+    "antq_mesoamerican_exchange_corridor_network": (
+        "global_tribes_estate_power=0.08|global_burghers_estate_power=0.06|"
+        "tribes_estate_power_from_cabinet=0.15|global_trade_through_owned_territory_efficiency=0.03|"
+        "replace_cabinet_member_cost_modifier=0.02",
+        "INAH-TAPAK;P8.10;P13", "contested",
+        "Communities along coast, river, pass, and basin routes coordinate passage, exchange, restitution, and defence without later ethnic or imperial borders.",
+    ),
+    "antq_mesoamerican_highland_community_network": (
+        "global_tribes_estate_power=0.10|global_peasants_estate_power=0.06|"
+        "tribes_estate_power_from_cabinet=0.18|global_monthly_food_modifier=0.02|"
+        "replace_cabinet_member_cost_modifier=0.01",
+        "INAH-IZAPA;P8.10;P13", "contested",
+        "Highland settlements coordinate cultivation, passes, exchange, ritual obligations, and collective defence without imposing a later ethnic polity.",
+    ),
     "antq_buffer_kingdom": (
         "global_burghers_estate_power=0.05|estate_power_from_cabinet=0.10|"
         "replace_cabinet_member_cost_modifier=0.05",
@@ -1963,9 +1991,9 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    # Core/regional contracts include the reviewed Manchurian and Bornean
-    # network reforms defined above.
-    expected_contract_count = 94 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    # Core/regional contracts include the reviewed Manchurian, Bornean, and
+    # Mesoamerican network reforms defined above.
+    expected_contract_count = 98 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -1973,7 +2001,7 @@ def load_power_data() -> PowerData:
         failures.append(
             "political appointment contracts must cover every core, regional, and successor reform"
         )
-    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 94:
+    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 98:
         failures.append("political appointment contracts are insufficiently differentiated")
     path_rows = reform_path_rows()
     alternative_profiles = [row[1] for row in path_rows]
@@ -2619,6 +2647,54 @@ antq_borneo_foothill_iron_network = {
 		global_peasants_estate_power = 0.06
 		global_monthly_food_modifier = 0.02
 		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_mesoamerican_urban_ritual_center = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_clergy_estate_power = 0.10
+		global_burghers_estate_power = 0.07
+		global_production_efficiency = 0.025
+		research_speed = 0.09
+	}
+	years = 2
+}
+
+antq_mesoamerican_formative_civic_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_clergy_estate_power = 0.07
+		global_peasants_estate_power = 0.06
+		global_monthly_food_modifier = 0.02
+		research_speed = 0.075
+	}
+	years = 2
+}
+
+antq_mesoamerican_exchange_corridor_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		global_burghers_estate_power = 0.06
+		global_trade_through_owned_territory_efficiency = 0.03
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_mesoamerican_highland_community_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		global_peasants_estate_power = 0.06
+		global_monthly_food_modifier = 0.02
+		research_speed = 0.065
 	}
 	years = 2
 }
@@ -3460,6 +3536,14 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_borneo_interior_river_network_desc", "River communities coordinate portage, forest access, cultivation, and exchange without later ethnic borders."),
         ("antq_borneo_foothill_iron_network", "Borneo Foothill Iron Network"),
         ("antq_borneo_foothill_iron_network_desc", "Foothill households coordinate ore, charcoal, furnaces, river passage, and cultivation without a uniform guild or later state."),
+        ("antq_mesoamerican_urban_ritual_center", "Mesoamerican Urban-Ritual Center"),
+        ("antq_mesoamerican_urban_ritual_center_desc", "A first-order ceremonial and exchange center coordinates public space, specialist production, cultivation, and regional ties without an invented recovered constitution."),
+        ("antq_mesoamerican_formative_civic_network", "Mesoamerican Formative Civic Network"),
+        ("antq_mesoamerican_formative_civic_network_desc", "Formative centers and cultivating communities coordinate water, stores, ritual places, exchange, and common works without a falsely uniform state."),
+        ("antq_mesoamerican_exchange_corridor_network", "Mesoamerican Exchange-Corridor Network"),
+        ("antq_mesoamerican_exchange_corridor_network_desc", "Communities along coast, river, pass, and basin routes coordinate passage, exchange, restitution, and defence without later ethnic or imperial borders."),
+        ("antq_mesoamerican_highland_community_network", "Mesoamerican Highland Community Network"),
+        ("antq_mesoamerican_highland_community_network_desc", "Highland settlements coordinate cultivation, passes, exchange, ritual obligations, and collective defence without imposing a later ethnic polity."),
         ("antq_buffer_kingdom", "Buffer Kingdom"),
         ("antq_buffer_kingdom_desc", "A frontier court balancing local authority against stronger neighbouring powers."),
         ("antq_kushite_dual_kingship", "Kushite Dual Kingship"),

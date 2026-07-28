@@ -4071,3 +4071,14 @@ provinces preserve exact coverage while separating Gujarat, Saurashtra, Kutch,
 the Aravalli/Chambal highlands, Ahar-Banas, and northern/western desert
 corridors. Network/community labels are preferred where AD 1 government is not
 recoverable; `tools/s2_rajasthan_gujarat_granularity.py` pins the transform.
+
+## 2026-07-28 - Mesoamerica uses start-era centers and corridor networks
+
+`MSS` is replaced by ten frames totaling 93 fields; nine fields pass to
+emergent Teotihuacan. Four reform families distinguish urban-ritual centers,
+formative civic networks, exchange corridors, and highland communities without
+inventing constitutions.
+
+Cuicuilco's installed proxy shares a province with four southern-Basin fields.
+Those four use direct assignment, preserving Cuicuilco and exact 102-field
+coverage. `tools/s2_mesoamerican_granularity.py` pins this exception.

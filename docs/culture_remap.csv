@@ -1,4 +1,4 @@
-selector_type,selector,culture,source,confidence,note
+﻿selector_type,selector,culture,source,confidence,note
 area,lazio_area,antq_latin,P10;CAH-XI;PLE,secure,Latium is the core Latin cultural zone
 area,tuscany_area,antq_etruscan,P10;CAH-XI;PLE,contested,Residual Etruscan identity is represented without denying Romanization
 area,emilia_area,antq_cisalpine_gallic,P10;CAH-XI;PLE,contested,Po Valley Celtic frame before full imperial cultural consolidation
@@ -710,8 +710,6 @@ province,sangon_province,antq_eastern_plateau_corridor,CAM-EAST-TIB;OXF-EAST-RIM
 area,northern_tai_highland_area,antq_tai,P8.9;P10;CAH-XI,contested,Northern mainland Tai highland regional proxy before later state identities
 area,shan_highland_area,antq_tai,P8.9;P10;CAH-XI,contested,Shan highland Tai regional proxy before later state identities
 province,vijaya_province,antq_sa_huynh,P8.9;P10;CAM-SAH;VASS-SAH,contested,Narrow central-coast Sa Huynh archaeological frame preserved inside the broader Proto-Cham region
-province,tlatlauquitepec_province,antq_totonac,P8.10;P10;CAH-XI,contested,Gulf-slope Totonac campaign frame without projecting later political borders
-province,tuxpan_province,antq_totonac,P8.10;P10;CAH-XI,contested,Northern Gulf Totonac campaign frame without projecting later political borders
 province,coatzacoalco_province,antq_epi_olmec,P8.10;P10;CAH-XI,contested,Narrow Coatzacoalcos Epi-Olmec archaeological frame retained inside the broader Mixe-Zoquean region
 area,zacatecas_area,antq_oasisamerica,P8.10;P10;CAH-XI,contested,Northern Mesoamerican Oasisamerica exchange-zone frame rather than a single identity
 area,haudenosaunee_area,antq_iroquoian,P8.10;P10;CAH-XI,contested,Eastern Great Lakes Iroquoian regional frame before later confederacy boundaries
@@ -928,3 +926,28 @@ province,marwar,antq_marwar_nagaur,ASI-WESTERN-INDIA;P8.4;P10,contested,Marwar c
 province,nagaur_province,antq_marwar_nagaur,ASI-WESTERN-INDIA;P8.4;P10,contested,Nagaur desert-edge exchange proxy
 province,jangladesh,antq_jangladesh_pastoral,ASI-WESTERN-INDIA;P8.4;P10,contested,Northern desert pastoral-corridor proxy
 province,shekhawati,antq_jangladesh_pastoral,ASI-WESTERN-INDIA;P8.4;P10,contested,Northern desert and Aravalli pastoral-corridor proxy
+province,tetzcoco_province,antq_teotihuacano,INAH-CUICUILCO-TEO;INAH-TEO-START;P8.10;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,tlapacoya_province,antq_teotihuacano,INAH-CUICUILCO-TEO;INAH-TEO-START;P8.10;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+location,chalco,antq_basin_south_lake,INAH-CUICUILCO-TEO;P8.10;P10,contested,Southern Basin archaeological-cultural adapter without projecting later Chalco institutions
+location,tenochtitlan,antq_basin_south_lake,INAH-CUICUILCO-TEO;P8.10;P10,contested,Installed field proxy only; neither the Mexica city nor its identity is backdated to AD 1
+location,tlacopan,antq_basin_south_lake,INAH-CUICUILCO-TEO;P8.10;P10,contested,Installed field proxy only; later Tepanec political identity is not backdated to AD 1
+location,xochimilco,antq_basin_south_lake,INAH-CUICUILCO-TEO;P8.10;P10,contested,Southern Basin archaeological-cultural adapter without later Postclassic political borders
+province,tlaxcala_province,antq_puebla_tlaxcala_formative,INAH-CANTONA;P8.10;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,tepeyacac_province,antq_puebla_tlaxcala_formative,INAH-CANTONA;P8.10;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,tetela_province,antq_puebla_tlaxcala_formative,INAH-CANTONA;P8.10;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,tlalnahuac_province,antq_morelos_formative,INAH-CHALCATZINGO;P8.10;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,axocopan_province,antq_northern_highland_corridor,P8.10;CAH-XI;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,xilotepec_province,antq_northern_highland_corridor,P8.10;CAH-XI;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,metztitlan_province,antq_northern_highland_corridor,P8.10;CAH-XI;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,huasteca_province,antq_tamtoc_panuco,INAH-TAMTOC;P8.10;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,tetzapotitlan_province,antq_tamtoc_panuco,INAH-TAMTOC;P8.10;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,tlatlauquitepec_province,antq_gulf_lowland_sierra,INAH-TAPAK;P8.10;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,tuxpan_province,antq_gulf_lowland_sierra,INAH-TAPAK;P8.10;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,xalapa_province,antq_gulf_lowland_sierra,INAH-TAPAK;P8.10;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,cihuatlan_province,antq_guerrero_pacific,P8.10;CAH-XI;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,tlapan_province,antq_guerrero_pacific,P8.10;CAH-XI;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,yopitzinco_province,antq_guerrero_pacific,P8.10;CAH-XI;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,yohualtepec_province,antq_oaxaca_northwest_highland,P8.10;CAH-XI;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,zaklohpakab_province,antq_izapa_soconusco,INAH-IZAPA;P8.10;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,otolum_province,antq_chiapas_highland_lowland,INAH-IZAPA;P8.10;CAH-XI;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier
+province,zinacantan_province,antq_chiapas_highland_lowland,INAH-IZAPA;P8.10;CAH-XI;P10,contested,Province-scale archaeological-cultural adapter; installed geometry is not an exact ancient ethnic or political frontier

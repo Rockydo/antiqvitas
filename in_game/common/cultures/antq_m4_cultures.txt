@@ -5076,3 +5076,93 @@ antq_jangladesh_pastoral = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8
 		antq_indian_group
 	}
 }
+
+antq_basin_south_lake = { # INAH-CUICUILCO-TEO;P8.10;P10; Southern Basin communities without backdating Mexica Tenochtitlan or later Chalco institutions; language is an installed technical fallback, not a linguistic identification
+	language = antq_mesoamerican_dialect
+	color = antq_culture_color_antq_basin_south_lake
+	tags = { european_gfx }
+	culture_groups = {
+		antq_mesoamerican_group
+	}
+}
+
+antq_puebla_tlaxcala_formative = { # INAH-CANTONA;P8.10;P10; Formative center network without projecting later Tlaxcalan or Cholollan state borders; language is an installed technical fallback, not a linguistic identification
+	language = antq_mesoamerican_dialect
+	color = antq_culture_color_antq_puebla_tlaxcala_formative
+	tags = { european_gfx }
+	culture_groups = {
+		antq_mesoamerican_group
+	}
+}
+
+antq_morelos_formative = { # INAH-CHALCATZINGO;P8.10;P10; Morelos archaeological frame without backdating later Nahua identities or polities; language is an installed technical fallback, not a linguistic identification
+	language = antq_mesoamerican_dialect
+	color = antq_culture_color_antq_morelos_formative
+	tags = { european_gfx }
+	culture_groups = {
+		antq_mesoamerican_group
+	}
+}
+
+antq_northern_highland_corridor = { # P8.10;CAH-XI;P10; Highland exchange-corridor frame without projecting later Otomi or Chichimeca borders; language is an installed technical fallback, not a linguistic identification
+	language = antq_mesoamerican_dialect
+	color = antq_culture_color_antq_northern_highland_corridor
+	tags = { european_gfx }
+	culture_groups = {
+		antq_mesoamerican_group
+	}
+}
+
+antq_tamtoc_panuco = { # INAH-TAMTOC;P8.10;P10; Tamtoc-facing urbanizing corridor without imposing later Huastec political unity; language is an installed technical fallback, not a linguistic identification
+	language = antq_mesoamerican_dialect
+	color = antq_culture_color_antq_tamtoc_panuco
+	tags = { european_gfx }
+	culture_groups = {
+		antq_mesoamerican_group
+	}
+}
+
+antq_gulf_lowland_sierra = { # INAH-TAPAK;P8.10;P10; Lowland-sierra exchange frame without backdating later Totonac states or Tajin's mature florescence; language is an installed technical fallback, not a linguistic identification
+	language = antq_mesoamerican_dialect
+	color = antq_culture_color_antq_gulf_lowland_sierra
+	tags = { european_gfx }
+	culture_groups = {
+		antq_mesoamerican_group
+	}
+}
+
+antq_guerrero_pacific = { # P8.10;CAH-XI;P10; Pacific-slope community frame without projecting later Yope or Mexica borders; language is an installed technical fallback, not a linguistic identification
+	language = antq_mesoamerican_dialect
+	color = antq_culture_color_antq_guerrero_pacific
+	tags = { european_gfx }
+	culture_groups = {
+		antq_mesoamerican_group
+	}
+}
+
+antq_oaxaca_northwest_highland = { # P8.10;CAH-XI;P10; Northwestern Oaxaca archaeological frame without imposing later Mixtec political borders; language is an installed technical fallback, not a linguistic identification
+	language = antq_mesoamerican_dialect
+	color = antq_culture_color_antq_oaxaca_northwest_highland
+	tags = { european_gfx }
+	culture_groups = {
+		antq_mesoamerican_group
+	}
+}
+
+antq_izapa_soconusco = { # INAH-IZAPA;P8.10;P10; First-order Izapa political-center proxy at the nearest installed Soconusco field; language is an installed technical fallback, not a linguistic identification
+	language = antq_mesoamerican_dialect
+	color = antq_culture_color_antq_izapa_soconusco
+	tags = { european_gfx }
+	culture_groups = {
+		antq_mesoamerican_group
+	}
+}
+
+antq_chiapas_highland_lowland = { # INAH-IZAPA;P8.10;CAH-XI;P10; Chiapas corridor frame without merging highland communities into the Early Maya lowland polity; language is an installed technical fallback, not a linguistic identification
+	language = antq_mesoamerican_dialect
+	color = antq_culture_color_antq_chiapas_highland_lowland
+	tags = { european_gfx }
+	culture_groups = {
+		antq_mesoamerican_group
+	}
+}

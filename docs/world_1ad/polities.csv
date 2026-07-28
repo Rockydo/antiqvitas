@@ -1,4 +1,4 @@
-tag,name,tier,kind,region,historical_capital,map_capital,source,confidence,status
+﻿tag,name,tier,kind,region,historical_capital,map_capital,source,confidence,status
 ROM,Roman Empire,1,country,Rome,Roma,rome,P8.1;CAH-XI,secure,researched
 JUD,Herodian Judea,1,subject,Levant,Jerusalem,jerusalem,P8.1;OCD,secure,researched
 GAL,Herodian Galilee-Peraea,1,subject,Levant,Tiberias,safed,P8.1;OCD;PLE,secure,mapped
@@ -286,7 +286,16 @@ JGP,Jangladesh Pastoral Networks,3,sop,India,Jangladesh and Shekhawati pastoral 
 INS,Island Southeast Asian Societies,3,sop,Southeast Asia,Island Southeast Asian societies,maba_celebes,P8.9;CAH-XI,contested,mapped
 BER,Gaetuli,3,sop,Africa,Atlas high-plateau and pre-desert communities,djelfa,TRE-GAE;SOR-AFRICA-FRONTIER;P8.5,contested,mapped
 MUS,Musulamii,3,sop,Africa,Eastern Numidian and Aures frontier communities,biskra,TAC-ANN-TACF;SOR-AFRICA-FRONTIER;P8.5,contested,mapped
-MSS,Mesoamerican Societies,3,sop,Mesoamerica,Mesoamerican regional societies,chalco,P8.10;CAH-XI,contested,mapped
+SLC,Basin South-Lake Communities,3,sop,Mesoamerica,Southern Basin lake communities,chalco,INAH-CUICUILCO-TEO;P8.10,contested,mapped
+PTF,Puebla-Tlaxcala Formative Centers,3,sop,Mesoamerica,Puebla-Tlaxcala formative centers,cholollan,INAH-CANTONA;P8.10,contested,mapped
+MRF,Morelos Formative Communities,3,sop,Mesoamerica,Morelos formative communities,cuauhnahuac,INAH-CHALCATZINGO;P8.10,contested,mapped
+NHC,Northern Highland Corridor Communities,3,sop,Mesoamerica,Northern Central Mexican highland corridors,ixmiquilpan,P8.10;CAH-XI,contested,mapped
+TPC,Tamtoc-Panuco Communities,3,sop,Mesoamerica,Tamtoc and the Panuco corridor,tamtoc,INAH-TAMTOC;P8.10,contested,mapped
+GLS,Gulf Lowland-Sierra Networks,3,sop,Mesoamerica,Northern Gulf lowland-sierra corridors,xalapa,INAH-TAPAK;P8.10,contested,mapped
+GPC,Guerrero Pacific Communities,3,sop,Mesoamerica,Guerrero Pacific communities,tlapan,P8.10;CAH-XI,contested,mapped
+ONH,Oaxaca Northwest Highland Communities,3,sop,Mesoamerica,Oaxaca northwest highlands,huajuapan,P8.10;CAH-XI,contested,mapped
+IZA,Izapa-Soconusco Center,3,country,Mesoamerica,Izapa and the Soconusco plain,huehuetan,INAH-IZAPA;P8.10,contested,mapped
+CPH,Chiapas Highland-Lowland Networks,3,sop,Mesoamerica,Chiapas highland-lowland corridors,zinacantan,INAH-IZAPA;P8.10;CAH-XI,contested,mapped
 AND,Andean Societies,3,sop,Andes,Andean regional societies,arequipa,P8.10;CAH-XI,contested,mapped
 MEL,Melanesian Societies,3,sop,Oceania,Melanesian societies,daga_papua,P8.9;CAH-XI,contested,mapped
 MIC,Micronesian Societies,3,sop,Oceania,Micronesian societies,mariana,P8.9;CAH-XI,contested,mapped

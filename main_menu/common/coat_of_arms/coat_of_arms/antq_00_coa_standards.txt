@@ -2787,31 +2787,31 @@ XCO = { # Tonga-Samoa-Fiji; P8.9;P20
 	}
 }
 
-XCQ = { # Teotihuacan; P8.10;P20
+XCQ = { # Teotihuacan; INAH-CUICUILCO-TEO;INAH-TEO-START;P8.10;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
+	color1 = "red"
 	color2 = "yellow"
-	color3 = "red"
+	color3 = "black"
 	colored_emblem = {
-		texture = "ce_star_08.dds"
+		texture = "ce_asian_animist_sun.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.78 0.78 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
 	}
 }
 
-XCR = { # Cuicuilco; P8.10;P20
+XCR = { # Cuicuilco; INAH-CUICUILCO-TEO;P8.10;P20
 	pattern = "pattern_solid.dds"
 	color1 = "green"
-	color2 = "yellow"
-	color3 = "red"
+	color2 = "red"
+	color3 = "white"
 	colored_emblem = {
-		texture = "ce_star_08.dds"
+		texture = "ce_spiral.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.78 0.78 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
 	}
 }
 
@@ -4019,17 +4019,143 @@ XFM = { # Musulamii; TAC-ANN-TACF;SOR-AFRICA-FRONTIER;P20
 	}
 }
 
-MSS = { # Mesoamerican Societies; P8.10;P20
+SLC = { # Basin South-Lake Communities; INAH-CUICUILCO-TEO;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_fish_okeane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+PTF = { # Puebla-Tlaxcala Formative Centers; INAH-CANTONA;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+MRF = { # Morelos Formative Communities; INAH-CHALCATZINGO;P8.10;P20
 	pattern = "pattern_solid.dds"
 	color1 = "green"
 	color2 = "yellow"
 	color3 = "red"
 	colored_emblem = {
-		texture = "ce_star_08.dds"
+		texture = "ce_spiral.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.78 0.78 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+NHC = { # Northern Highland Corridor Communities; P8.10;CAH-XI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_spear_head_random_small.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XGS = { # Tamtoc-Panuco Communities; INAH-TAMTOC;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_fish_okeane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XGT = { # Gulf Lowland-Sierra Networks; INAH-TAPAK;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_asian_animist_sun.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+GPC = { # Guerrero Pacific Communities; P8.10;CAH-XI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_spear_head_random_small.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+ONH = { # Oaxaca Northwest Highland Communities; P8.10;CAH-XI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+IZA = { # Izapa-Soconusco Center; INAH-IZAPA;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "red"
+	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+CPH = { # Chiapas Highland-Lowland Networks; INAH-IZAPA;P8.10;CAH-XI;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "red"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
 	}
 }
 

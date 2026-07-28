@@ -5677,3 +5677,15 @@ ethnic borders. Nahapana's mid-first-century horizon is a negative boundary:
 no Western Kshatrapa state is backdated to AD 1. Sources:
 `ASI-WESTERN-INDIA`; `ASI-AHAR-BANAS`; `UOA-PERIPLUS`;
 `BM-TRIBAL-COINS`; `BM-WESTERN-KSHATRAPA-BOUNDARY`. [contested]
+
+## 2026-07-28 - Mesoamerican frames stop at the AD 1 evidence horizon
+
+Izapa's Late Preclassic scale supports a distinct Soconusco center; Huehuetan
+is only its nearest installed field. Cuicuilco is weakening near AD 1 while
+Teotihuacan is emerging, so Teotihuacan's later peak extent and later Mexica,
+Tepanec, Tlaxcalan, Totonac, Mixtec, Yope, and Huastec states are not
+backdated. Tamtoc and Cantona support differentiated urbanizing/formative
+frames; other holders are geographic-network proxies. Sources: `INAH-IZAPA`;
+`INAH-CUICUILCO-TEO`; `INAH-TEO-START`; `INAH-TAMTOC`; `INAH-CANTONA`;
+`INAH-CHALCATZINGO`; `INAH-TAPAK`. [secure centers/chronology; contested
+political form and extent]

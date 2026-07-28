@@ -2584,11 +2584,92 @@ XFM = { # Musulamii; TAC-ANN-TACF;SOR-AFRICA-FRONTIER;P8.5
 	is_historic = yes
 }
 
-MSS = { # Mesoamerican Societies; P8.10;CAH-XI
-	color = rgb { 41 134 101 }
-	color2 = rgb { 214 121 154 }
+SLC = { # Basin South-Lake Communities; INAH-CUICUILCO-TEO;P8.10
+	color = rgb { 50 120 87 }
+	color2 = rgb { 205 135 168 }
 
-	culture_definition = antq_teotihuacano
+	culture_definition = antq_basin_south_lake
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+PTF = { # Puebla-Tlaxcala Formative Centers; INAH-CANTONA;P8.10
+	color = rgb { 42 130 93 }
+	color2 = rgb { 213 125 162 }
+
+	culture_definition = antq_puebla_tlaxcala_formative
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+MRF = { # Morelos Formative Communities; INAH-CHALCATZINGO;P8.10
+	color = rgb { 30 125 110 }
+	color2 = rgb { 225 130 145 }
+
+	culture_definition = antq_morelos_formative
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+NHC = { # Northern Highland Corridor Communities; P8.10;CAH-XI
+	color = rgb { 41 129 87 }
+	color2 = rgb { 214 126 168 }
+
+	culture_definition = antq_northern_highland_corridor
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+XGS = { # Tamtoc-Panuco Communities; INAH-TAMTOC;P8.10
+	color = rgb { 32 129 96 }
+	color2 = rgb { 223 126 159 }
+
+	culture_definition = antq_tamtoc_panuco
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+XGT = { # Gulf Lowland-Sierra Networks; INAH-TAPAK;P8.10
+	color = rgb { 39 125 95 }
+	color2 = rgb { 216 130 160 }
+
+	culture_definition = antq_gulf_lowland_sierra
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+GPC = { # Guerrero Pacific Communities; P8.10;CAH-XI
+	color = rgb { 31 140 104 }
+	color2 = rgb { 224 115 151 }
+
+	culture_definition = antq_guerrero_pacific
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+ONH = { # Oaxaca Northwest Highland Communities; P8.10;CAH-XI
+	color = rgb { 35 121 106 }
+	color2 = rgb { 220 134 149 }
+
+	culture_definition = antq_oaxaca_northwest_highland
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+IZA = { # Izapa-Soconusco Center; INAH-IZAPA;P8.10
+	color = rgb { 48 129 103 }
+	color2 = rgb { 207 126 152 }
+
+	culture_definition = antq_izapa_soconusco
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+CPH = { # Chiapas Highland-Lowland Networks; INAH-IZAPA;P8.10;CAH-XI
+	color = rgb { 31 129 96 }
+	color2 = rgb { 224 126 159 }
+
+	culture_definition = antq_chiapas_highland_lowland
 	religion_definition = antq_mesoamerican
 	is_historic = yes
 }

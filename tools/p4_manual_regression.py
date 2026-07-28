@@ -195,9 +195,9 @@ def build_report() -> dict[str, object]:
     )
     political_contracts = rows(ROOT / "docs/m6/political_profile_contracts.csv")
     require(
-        len(political_contracts) == 207
-        and len({row["reform"] for row in political_contracts}) == 207
-        and len({row["modifiers"] for row in political_contracts}) >= 200,
+        len(political_contracts) == 211
+        and len({row["reform"] for row in political_contracts}) == 211
+        and len({row["modifiers"] for row in political_contracts}) >= 204,
         "ancient appointment and political-weight contracts regressed",
         failures,
     )
@@ -222,8 +222,8 @@ def build_report() -> dict[str, object]:
     law_options = rows(ROOT / "docs/m6/ancient_law_options.csv")
     law_groups = {(row["profile"], row["law"]) for row in law_options}
     require(
-        len(law_profiles) == 398
-        and len({row["tag"] for row in law_profiles}) == 398
+        len(law_profiles) == 407
+        and len({row["tag"] for row in law_profiles}) == 407
         and len({row["profile"] for row in law_profiles}) == 13,
         "ancient legal-profile coverage regressed",
         failures,
