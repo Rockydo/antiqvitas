@@ -1514,7 +1514,7 @@ antq_honor_a_royal_copartnership = {
 	}
 }
 
-# fund_an_exchange_feast: P8.10;CAH-XI [contested]
+# fund_an_exchange_feast: P8.10;NPS-HOPEWELL;NYSM-POINT;ISAS-HAVANA;MOSHPO-KC [contested]
 # Does not define a uniform North American institution or a dated ceremony.
 antq_fund_an_exchange_feast = {
 	type = owncountry
@@ -1526,7 +1526,14 @@ antq_fund_an_exchange_feast = {
 		scope:actor = {
 			OR = {
 				tag = XCY
-				tag = XDG
+				tag = PPA
+				tag = MHP
+				tag = FLP
+				tag = HVI
+				tag = XHH
+				tag = CMW
+				tag = XHI
+				tag = KCP
 				tag = XDH
 			}
 		}

@@ -4113,3 +4113,15 @@ a separate mixed-language adapter because the archaeological sequence records
 Austronesian/Papuan interaction; its engine family and Malay fallback are
 technical only. Existing Austronesian religion art and reviewed vanilla
 emblems suffice, so no new art or audio is added.
+
+## 2026-07-28 - PLA splits by material horizon and river-lake geography
+
+Replace the 51-field transcontinental catch-all with eight province-bounded
+community frames and four anonymous network reforms. Preserve `omaha` as an
+exact anchor because the installed field is absent from the vanilla-ownable
+province surface. Preserve the exact owned surface, use archaeological labels
+only, and exclude later nations and Cahokia's Mississippian city phase.
+Existing reviewed emblem textures suffice; no new art or audio is needed.
+The `KCP` display name is Lower Missouri Hopewell Communities because runtime
+smoke proved that EU5 rejects country names containing `City`; the culture and
+capital retain the sourced Kansas City Hopewell archaeological term.

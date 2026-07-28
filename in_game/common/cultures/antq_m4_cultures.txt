@@ -5508,3 +5508,75 @@ antq_south_halmahera_metal_age = { # ANU-MALUKU;P10; Archaeological-geographic a
 		antq_north_maluku_group
 	}
 }
+
+antq_adirondack_point_peninsula = { # NYSM-POINT;OAS-POINT;NPS-HOPEWELL;P10; Adirondack Point Peninsula archaeological-geographic frame; the engine language adapter does not claim Inuit, Iroquoian, Algonquian, or Siouan speech
+	language = antq_american_dialect
+	color = antq_culture_color_antq_adirondack_point_peninsula
+	tags = { european_gfx }
+	culture_groups = {
+		antq_american_group
+	}
+}
+
+antq_mohawk_point_peninsula = { # NYSM-POINT;OAS-POINT;NPS-HOPEWELL;P10; Mohawk Point Peninsula archaeological-geographic frame; the engine language adapter does not claim Inuit, Iroquoian, Algonquian, or Siouan speech
+	language = antq_american_dialect
+	color = antq_culture_color_antq_mohawk_point_peninsula
+	tags = { european_gfx }
+	culture_groups = {
+		antq_american_group
+	}
+}
+
+antq_finger_lakes_point_peninsula = { # NYSM-POINT;OAS-POINT;NPS-HOPEWELL;P10; Finger Lakes Point Peninsula archaeological-geographic frame; the engine language adapter does not claim Inuit, Iroquoian, Algonquian, or Siouan speech
+	language = antq_american_dialect
+	color = antq_culture_color_antq_finger_lakes_point_peninsula
+	tags = { european_gfx }
+	culture_groups = {
+		antq_american_group
+	}
+}
+
+antq_havana_illinois_valley = { # ISAS-HAVANA;ISM-DICKSON;NPS-HOPEWELL;P10; Havana-Illinois Valley archaeological-geographic frame; the engine language adapter does not claim Inuit, Iroquoian, Algonquian, or Siouan speech
+	language = antq_american_dialect
+	color = antq_culture_color_antq_havana_illinois_valley
+	tags = { european_gfx }
+	culture_groups = {
+		antq_american_group
+	}
+}
+
+antq_american_bottom_middle_woodland = { # ISAS-AMBOTTOM;NPS-HOPEWELL;P10; American Bottom Middle Woodland archaeological-geographic frame; the engine language adapter does not claim Inuit, Iroquoian, Algonquian, or Siouan speech
+	language = antq_american_dialect
+	color = antq_culture_color_antq_american_bottom_middle_woodland
+	tags = { european_gfx }
+	culture_groups = {
+		antq_american_group
+	}
+}
+
+antq_central_mississippi_woodland = { # NPS-OZARK-HOPEWELL;MOSHPO-CMO;P10; Central Mississippi Woodland archaeological-geographic frame; the engine language adapter does not claim Inuit, Iroquoian, Algonquian, or Siouan speech
+	language = antq_american_dialect
+	color = antq_culture_color_antq_central_mississippi_woodland
+	tags = { european_gfx }
+	culture_groups = {
+		antq_american_group
+	}
+}
+
+antq_meramec_missouri_woodland = { # NPS-OZARK-HOPEWELL;MOSHPO-CMO;P10; Meramec-Missouri Woodland archaeological-geographic frame; the engine language adapter does not claim Inuit, Iroquoian, Algonquian, or Siouan speech
+	language = antq_american_dialect
+	color = antq_culture_color_antq_meramec_missouri_woodland
+	tags = { european_gfx }
+	culture_groups = {
+		antq_american_group
+	}
+}
+
+antq_kansas_city_hopewell = { # MOSHPO-KC;NPS-OZARK-HOPEWELL;P10; Kansas City Hopewell archaeological-geographic frame; the engine language adapter does not claim Inuit, Iroquoian, Algonquian, or Siouan speech
+	language = antq_american_dialect
+	color = antq_culture_color_antq_kansas_city_hopewell
+	tags = { european_gfx }
+	culture_groups = {
+		antq_american_group
+	}
+}

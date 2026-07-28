@@ -673,6 +673,34 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "ANU-MALUKU;P13", "contested",
         "Metal-Age island communities coordinate pottery, landing places, food, and exchange without backdating the Ternate or Tidore sultanates.",
     ),
+    "antq_point_peninsula_seasonal_network": (
+        "global_tribes_estate_power=0.083|global_peasants_estate_power=0.047|"
+        "tribes_estate_power_from_cabinet=0.163|global_monthly_food_modifier=0.021|"
+        "replace_cabinet_member_cost_modifier=0.027",
+        "NYSM-POINT;OAS-POINT;NPS-HOPEWELL;P13", "contested",
+        "Lake, river, and forest communities coordinate seasonal fishing, gathering, cultivation, burial places, and exchange without a later confederacy or recovered common constitution.",
+    ),
+    "antq_havana_hopewell_exchange_network": (
+        "global_tribes_estate_power=0.071|global_clergy_estate_power=0.057|"
+        "tribes_estate_power_from_cabinet=0.151|global_trade_through_owned_territory_efficiency=0.031|"
+        "replace_cabinet_member_cost_modifier=0.028",
+        "ISAS-HAVANA;ISM-DICKSON;ISAS-AMBOTTOM;NPS-HOPEWELL;P13", "contested",
+        "Illinois-valley communities coordinate habitation, earthwork gatherings, mortuary obligations, craft exchange, and river passage without treating Hopewell as one people or state.",
+    ),
+    "antq_central_mississippi_woodland_network": (
+        "global_tribes_estate_power=0.087|global_peasants_estate_power=0.053|"
+        "tribes_estate_power_from_cabinet=0.177|global_monthly_food_modifier=0.023|"
+        "replace_cabinet_member_cost_modifier=0.029",
+        "NPS-OZARK-HOPEWELL;MOSHPO-CMO;P13", "contested",
+        "River-valley and upland communities coordinate subsistence, mound obligations, local exchange, and passage without projecting the later Mississippian world or historic nations backward.",
+    ),
+    "antq_kansas_city_hopewell_network": (
+        "global_tribes_estate_power=0.077|global_burghers_estate_power=0.063|"
+        "tribes_estate_power_from_cabinet=0.157|global_trade_through_owned_territory_efficiency=0.029|"
+        "replace_cabinet_member_cost_modifier=0.030",
+        "MOSHPO-KC;NPS-OZARK-HOPEWELL;P13", "contested",
+        "Lower-Missouri and eastern-Plains communities coordinate floodplain villages, tributary camps, resources, and exchange without treating an archaeological complex as a single polity.",
+    ),
     "antq_mesoamerican_urban_ritual_center": (
         "global_clergy_estate_power=0.10|global_burghers_estate_power=0.07|"
         "clergy_estate_power_from_cabinet=0.20|global_production_efficiency=0.025|"
@@ -1520,6 +1548,10 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
         "antq_sulawesi_river_lake_network",
         "antq_sulawesi_peninsula_community_network",
         "antq_north_maluku_metal_age_network",
+        "antq_point_peninsula_seasonal_network",
+        "antq_havana_hopewell_exchange_network",
+        "antq_central_mississippi_woodland_network",
+        "antq_kansas_city_hopewell_network",
     ),
     "sacral": (),
     "royal": (
@@ -2107,8 +2139,8 @@ def load_power_data() -> PowerData:
 
     used_reforms = {government["reform"] for government in governments.values()}
     # Core/regional contracts include the reviewed Manchurian, Bornean,
-    # Philippine, and Mesoamerican network reforms defined above.
-    expected_contract_count = 113 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    # Philippine, Sulawesi, and North American network reforms defined above.
+    expected_contract_count = 117 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -2116,7 +2148,7 @@ def load_power_data() -> PowerData:
         failures.append(
             "political appointment contracts must cover every core, regional, and successor reform"
         )
-    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 113:
+    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 117:
         failures.append("political appointment contracts are insufficiently differentiated")
     path_rows = reform_path_rows()
     alternative_profiles = [row[1] for row in path_rows]
@@ -2871,6 +2903,50 @@ antq_north_maluku_metal_age_network = {
 	country_modifier = {
 		global_burghers_estate_power = 0.07
 		global_trade_through_owned_territory_efficiency = 0.035
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_point_peninsula_seasonal_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.083
+		global_monthly_food_modifier = 0.021
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_havana_hopewell_exchange_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_clergy_estate_power = 0.057
+		global_trade_through_owned_territory_efficiency = 0.031
+		research_speed = 0.075
+	}
+	years = 2
+}
+
+antq_central_mississippi_woodland_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.087
+		global_monthly_food_modifier = 0.023
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_kansas_city_hopewell_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_burghers_estate_power = 0.063
+		global_trade_through_owned_territory_efficiency = 0.029
 		research_speed = 0.07
 	}
 	years = 2
@@ -3841,6 +3917,14 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_sulawesi_peninsula_community_network_desc", "Peninsular households coordinate coast, gardens, inland paths, and exchange without a later ethnic federation or named ruler."),
         ("antq_north_maluku_metal_age_network", "North Maluku Metal-Age Network"),
         ("antq_north_maluku_metal_age_network_desc", "Metal-Age island communities coordinate pottery, landing places, food, and exchange without backdating the Ternate or Tidore sultanates."),
+        ("antq_point_peninsula_seasonal_network", "Point Peninsula Seasonal Network"),
+        ("antq_point_peninsula_seasonal_network_desc", "Lake, river, and forest communities coordinate seasonal subsistence, burial places, and exchange without a later confederacy or common state."),
+        ("antq_havana_hopewell_exchange_network", "Havana Hopewell Exchange Network"),
+        ("antq_havana_hopewell_exchange_network_desc", "Illinois-valley communities coordinate earthwork gatherings, mortuary obligations, craft exchange, and river passage without treating Hopewell as one people."),
+        ("antq_central_mississippi_woodland_network", "Central Mississippi Woodland Network"),
+        ("antq_central_mississippi_woodland_network_desc", "River-valley and upland communities coordinate subsistence, mound obligations, exchange, and passage before the later Mississippian world."),
+        ("antq_kansas_city_hopewell_network", "Kansas City Hopewell Network"),
+        ("antq_kansas_city_hopewell_network_desc", "Lower-Missouri and eastern-Plains communities coordinate floodplain villages, tributary camps, resources, and exchange without one archaeological polity."),
         ("antq_mesoamerican_urban_ritual_center", "Mesoamerican Urban-Ritual Center"),
         ("antq_mesoamerican_urban_ritual_center_desc", "A first-order ceremonial and exchange center coordinates public space, specialist production, cultivation, and regional ties without an invented recovered constitution."),
         ("antq_mesoamerican_formative_civic_network", "Mesoamerican Formative Civic Network"),

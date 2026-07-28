@@ -20855,58 +20855,306 @@ countries = {
 			capital = iqaluit
 		}
 
-		XDG = { # Plains and Coastal Societies; P8.10;CAH-XI
+		PPA = { # Adirondack-St Lawrence Point Peninsula Communities; NYSM-POINT;OAS-POINT;NPS-HOPEWELL
 			own_control_core = {
-				amonokoa
-				assorodus
-				cahokia
-				canadaigua
-				canajoharie
-				chariton
-				chepoussa
-				emasulia
-				gahato
-				geneseo
-				irondequoit
 				itekiatonhniarikon
-				kaskankaham
-				kaskaskia
 				kawenote
-				macoupin
-				meramec
-				moingwena
-				niiohehsane
 				nikahionhwakowa
-				nodaway
-				nudarcha
-				oahaha
-				ochechiton
-				omaha
-				oneniote
-				onenioteke
-				oneonta
 				oronia
 				oskennonton
 				oswegatchie
+				ticonderoga
+				tsiietsenhtha
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				alaska_region
+				canada_region
+				great_lakes_region
+				great_plains_region
+				east_coast_region
+				west_coast_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_point_peninsula_seasonal_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -66
+				traditionalist_vs_innovative = -8
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 56
+			}
+			capital = oswegatchie
+		}
+
+		MHP = { # Mohawk Valley Point Peninsula Communities; NYSM-POINT;OAS-POINT;NPS-HOPEWELL
+			own_control_core = {
+				canajoharie
+				oneonta
+				saratoga
+				schenectady
+				teionontatatie
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				alaska_region
+				canada_region
+				great_lakes_region
+				great_plains_region
+				east_coast_region
+				west_coast_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_point_peninsula_seasonal_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -70
+				traditionalist_vs_innovative = -11
+				aristocracy_vs_plutocracy = -58
+				capital_economy_vs_traditional_economy = 60
+			}
+			capital = canajoharie
+		}
+
+		FLP = { # Finger Lakes Point Peninsula Communities; NYSM-POINT;OAS-POINT;NPS-HOPEWELL
+			own_control_core = {
+				assorodus
+				canadaigua
+				gahato
+				geneseo
+				irondequoit
+				niiohehsane
+				oneniote
+				onenioteke
 				oswego
 				otsiningo
-				pahatsi
+				skaniatares
+				teiehonwahkhkwatha
+				tsikahiotsisto
+				tsonentsiio
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				alaska_region
+				canada_region
+				great_lakes_region
+				great_plains_region
+				east_coast_region
+				west_coast_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_point_peninsula_seasonal_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -74
+				traditionalist_vs_innovative = -14
+				aristocracy_vs_plutocracy = -62
+				capital_economy_vs_traditional_economy = 64
+			}
+			capital = oswego
+		}
+
+		HVI = { # Havana-Illinois Valley Communities; ISAS-HAVANA;ISM-DICKSON;NPS-HOPEWELL
+			own_control_core = {
 				peewareewa
 				peoria
 				sangamon
-				saratoga
-				schenectady
-				skaniatares
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				alaska_region
+				canada_region
+				great_lakes_region
+				great_plains_region
+				east_coast_region
+				west_coast_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_havana_hopewell_exchange_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -78
+				traditionalist_vs_innovative = -8
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 68
+			}
+			capital = peoria
+		}
+
+		XHH = { # American Bottom Middle Woodland Communities; ISAS-AMBOTTOM;NPS-HOPEWELL
+			own_control_core = {
+				amonokoa
+				cahokia
+				kaskankaham
+				kaskaskia
+				macoupin
+				moingwena
+				ochechiton
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				alaska_region
+				canada_region
+				great_lakes_region
+				great_plains_region
+				east_coast_region
+				west_coast_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_havana_hopewell_exchange_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -82
+				traditionalist_vs_innovative = -11
+				aristocracy_vs_plutocracy = -58
+				capital_economy_vs_traditional_economy = 72
+			}
+			capital = cahokia
+		}
+
+		CMW = { # Central Mississippi Woodland Communities; NPS-OZARK-HOPEWELL;MOSHPO-CMO
+			own_control_core = {
+				chariton
+				chepoussa
+				emasulia
+				oahaha
 				st_francois_mts
 				tamaroa
-				tanwakanwakaghe
-				teiehonwahkhkwatha
-				teionontatatie
-				ticonderoga
-				tsiietsenhtha
-				tsikahiotsisto
-				tsonentsiio
-				wimihsoorita
 				wyaconda
 			}
 
@@ -20925,10 +21173,145 @@ countries = {
 				heir_selection = tribal_oldest_male
 				ruler = random
 				reforms = {
-					antq_advanced_chiefdom
+					antq_central_mississippi_woodland_network
 				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -66
+				traditionalist_vs_innovative = -14
+				aristocracy_vs_plutocracy = -62
+				capital_economy_vs_traditional_economy = 56
 			}
-			capital = omaha
+			capital = tamaroa
+		}
+
+		XHI = { # Meramec-Missouri Woodland Communities; NPS-OZARK-HOPEWELL;MOSHPO-CMO
+			own_control_core = {
+				meramec
+				pahatsi
+				tanwakanwakaghe
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				alaska_region
+				canada_region
+				great_lakes_region
+				great_plains_region
+				east_coast_region
+				west_coast_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_central_mississippi_woodland_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -70
+				traditionalist_vs_innovative = -8
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 60
+			}
+			capital = meramec
+		}
+
+		KCP = { # Lower Missouri Hopewell Communities; MOSHPO-KC;NPS-OZARK-HOPEWELL
+			own_control_core = {
+				nodaway
+				nudarcha
+				omaha
+				wimihsoorita
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				alaska_region
+				canada_region
+				great_lakes_region
+				great_plains_region
+				east_coast_region
+				west_coast_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_kansas_city_hopewell_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -74
+				traditionalist_vs_innovative = -11
+				aristocracy_vs_plutocracy = -58
+				capital_economy_vs_traditional_economy = 64
+			}
+			capital = nodaway
 		}
 
 		XDH = { # Pacific Coast Societies; P8.10;CAH-XI

@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-28 - Plains and eastern Woodlands become eight bounded networks
+
+- Removed the 51-location `PLA` catch-all. Eight archaeological-geographic
+  frames raise the roster to 449 and reduce placeholders to ten.
+- Added eight cultures, four exchange/governance reforms, eight standards, and
+  complete start-system coverage without backdating later nations or states.
+- `tools/s2_plains_woodland_granularity.py` pins all 51 former fields.
+- All 128 validation commands pass; paired smoke reached both rendered menus
+  with zero mod-only normalized errors.
+
+Next: replace the 50-location Korean Peninsula Societies frame.
+
 ## 2026-07-28 - Sulawesi and North Maluku become twelve Metal-Age frames
 
 - Removed the 68-location `INS` catch-all. Ten Sulawesi and two Halmahera

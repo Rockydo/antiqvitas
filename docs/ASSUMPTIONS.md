@@ -5725,3 +5725,14 @@ Luwu is therefore a lake-coast community frame, not an asserted AD 1 iron
 kingdom. Sources: `ANU-SULAWESI`; `UNESCO-LORE`; `BRIN-KARAMA`;
 `SPAFA-TOPOGARO`; `ANU-MALUKU`. [secure broad chronology/material contexts;
 contested political form and exact extent]
+
+## 2026-07-28 - North American labels are archaeological, not ethnic
+
+Point Peninsula, Havana, American Bottom, Central Missouri, and Kansas City
+Hopewell evidence supports eight bounded community frames across the former
+PLA fields. “Hopewell” never denotes one people or state; later Haudenosaunee,
+Illinois, Missouria, Omaha, and Mississippian identities are not backdated.
+Sources: `NPS-HOPEWELL`; `NYSM-POINT`; `OAS-POINT`; `ISAS-HAVANA`;
+`ISM-DICKSON`; `ISAS-AMBOTTOM`; `MOSHPO-KC`; `MOSHPO-CMO`;
+`NPS-OZARK-HOPEWELL`. [secure broad chronology; contested political form and
+exact extent]

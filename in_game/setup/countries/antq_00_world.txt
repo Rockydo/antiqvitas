@@ -2143,11 +2143,74 @@ DOR = { # Dorset; P8.10;CAH-XI
 	is_historic = yes
 }
 
-XDG = { # Plains and Coastal Societies; P8.10;CAH-XI
-	color = rgb { 51 115 139 }
-	color2 = rgb { 204 140 116 }
+PPA = { # Adirondack-St Lawrence Point Peninsula Communities; NYSM-POINT;OAS-POINT;NPS-HOPEWELL
+	color = rgb { 63 109 125 }
+	color2 = rgb { 192 146 130 }
 
-	culture_definition = antq_hopewellian
+	culture_definition = antq_adirondack_point_peninsula
+	religion_definition = antq_north_american
+	is_historic = yes
+}
+
+MHP = { # Mohawk Valley Point Peninsula Communities; NYSM-POINT;OAS-POINT;NPS-HOPEWELL
+	color = rgb { 57 113 123 }
+	color2 = rgb { 198 142 132 }
+
+	culture_definition = antq_mohawk_point_peninsula
+	religion_definition = antq_north_american
+	is_historic = yes
+}
+
+FLP = { # Finger Lakes Point Peninsula Communities; NYSM-POINT;OAS-POINT;NPS-HOPEWELL
+	color = rgb { 69 105 132 }
+	color2 = rgb { 186 150 123 }
+
+	culture_definition = antq_finger_lakes_point_peninsula
+	religion_definition = antq_north_american
+	is_historic = yes
+}
+
+HVI = { # Havana-Illinois Valley Communities; ISAS-HAVANA;ISM-DICKSON;NPS-HOPEWELL
+	color = rgb { 73 111 122 }
+	color2 = rgb { 182 144 133 }
+
+	culture_definition = antq_havana_illinois_valley
+	religion_definition = antq_north_american
+	is_historic = yes
+}
+
+XHH = { # American Bottom Middle Woodland Communities; ISAS-AMBOTTOM;NPS-HOPEWELL
+	color = rgb { 76 96 128 }
+	color2 = rgb { 179 159 127 }
+
+	culture_definition = antq_american_bottom_middle_woodland
+	religion_definition = antq_north_american
+	is_historic = yes
+}
+
+CMW = { # Central Mississippi Woodland Communities; NPS-OZARK-HOPEWELL;MOSHPO-CMO
+	color = rgb { 56 122 124 }
+	color2 = rgb { 199 133 131 }
+
+	culture_definition = antq_central_mississippi_woodland
+	religion_definition = antq_north_american
+	is_historic = yes
+}
+
+XHI = { # Meramec-Missouri Woodland Communities; NPS-OZARK-HOPEWELL;MOSHPO-CMO
+	color = rgb { 55 119 144 }
+	color2 = rgb { 200 136 111 }
+
+	culture_definition = antq_meramec_missouri_woodland
+	religion_definition = antq_north_american
+	is_historic = yes
+}
+
+KCP = { # Lower Missouri Hopewell Communities; MOSHPO-KC;NPS-OZARK-HOPEWELL
+	color = rgb { 70 103 119 }
+	color2 = rgb { 185 152 136 }
+
+	culture_definition = antq_kansas_city_hopewell
 	religion_definition = antq_north_american
 	is_historic = yes
 }

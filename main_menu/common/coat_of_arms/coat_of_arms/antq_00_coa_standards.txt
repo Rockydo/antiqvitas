@@ -3333,7 +3333,105 @@ DOR = { # Dorset; P8.10;P20
 	}
 }
 
-XDG = { # Plains and Coastal Societies; P8.10;P20
+PPA = { # Adirondack-St Lawrence Point Peninsula Communities; NYSM-POINT;OAS-POINT;NPS-HOPEWELL;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_fish_okeane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+MHP = { # Mohawk Valley Point Peninsula Communities; NYSM-POINT;OAS-POINT;NPS-HOPEWELL;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+FLP = { # Finger Lakes Point Peninsula Communities; NYSM-POINT;OAS-POINT;NPS-HOPEWELL;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_fish_naiant.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+HVI = { # Havana-Illinois Valley Communities; ISAS-HAVANA;ISM-DICKSON;NPS-HOPEWELL;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_spiral_star_06.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XHH = { # American Bottom Middle Woodland Communities; ISAS-AMBOTTOM;NPS-HOPEWELL;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+CMW = { # Central Mississippi Woodland Communities; NPS-OZARK-HOPEWELL;MOSHPO-CMO;P20
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XHI = { # Meramec-Missouri Woodland Communities; NPS-OZARK-HOPEWELL;MOSHPO-CMO;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_fish_okeane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+KCP = { # Lower Missouri Hopewell Communities; MOSHPO-KC;NPS-OZARK-HOPEWELL;P20
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
 	color2 = "white"
@@ -3342,8 +3440,8 @@ XDG = { # Plains and Coastal Societies; P8.10;P20
 		texture = "ce_annulet.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.84 0.84 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
 	}
 }
 

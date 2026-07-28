@@ -1,8 +1,8 @@
 {
   "game_build": "24187685",
-  "entry_count": 442,
-  "collision_count": 165,
-  "localization_collision_count": 180,
+  "entry_count": 449,
+  "collision_count": 166,
+  "localization_collision_count": 181,
   "reserved_hash_collision_tags": [
     "XAD"
   ],
@@ -1674,11 +1674,60 @@
       "name": "Dorset"
     },
     {
-      "design_tag": "PLA",
-      "engine_tag": "XDG",
+      "design_tag": "PPA",
+      "engine_tag": "PPA",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Adirondack-St Lawrence Point Peninsula Communities"
+    },
+    {
+      "design_tag": "MHP",
+      "engine_tag": "MHP",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Mohawk Valley Point Peninsula Communities"
+    },
+    {
+      "design_tag": "FLP",
+      "engine_tag": "FLP",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Finger Lakes Point Peninsula Communities"
+    },
+    {
+      "design_tag": "HVI",
+      "engine_tag": "HVI",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Havana-Illinois Valley Communities"
+    },
+    {
+      "design_tag": "ABW",
+      "engine_tag": "XHH",
       "vanilla_collision": true,
       "localization_collision": true,
-      "name": "Plains and Coastal Societies"
+      "name": "American Bottom Middle Woodland Communities"
+    },
+    {
+      "design_tag": "CMW",
+      "engine_tag": "CMW",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Central Mississippi Woodland Communities"
+    },
+    {
+      "design_tag": "MRW",
+      "engine_tag": "XHI",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Meramec-Missouri Woodland Communities"
+    },
+    {
+      "design_tag": "KCP",
+      "engine_tag": "KCP",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Lower Missouri Hopewell Communities"
     },
     {
       "design_tag": "PAC",
