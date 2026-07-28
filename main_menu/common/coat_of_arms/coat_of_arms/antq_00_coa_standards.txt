@@ -3207,76 +3207,6 @@ XGW = { # Ancestral Sonoran Desert Communities; NPS-SONORAN;P20
 	}
 }
 
-VIR = { # Gallinazo Communities; P8.10;P20
-	pattern = "pattern_solid.dds"
-	color1 = "red"
-	color2 = "yellow"
-	color3 = "black"
-	colored_emblem = {
-		texture = "ce_andean_small_bird.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.84 0.84 } }
-	}
-}
-
-NAZ = { # Nazca; P8.10;P20
-	pattern = "pattern_solid.dds"
-	color1 = "red"
-	color2 = "yellow"
-	color3 = "black"
-	colored_emblem = {
-		texture = "ce_andean_small_bird.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.84 0.84 } }
-	}
-}
-
-XCW = { # Lima Culture; P8.10;P20
-	pattern = "pattern_solid.dds"
-	color1 = "red"
-	color2 = "yellow"
-	color3 = "black"
-	colored_emblem = {
-		texture = "ce_andean_small_bird.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.84 0.84 } }
-	}
-}
-
-REC = { # Recuay; P8.10;P20
-	pattern = "pattern_solid.dds"
-	color1 = "red"
-	color2 = "yellow"
-	color3 = "black"
-	colored_emblem = {
-		texture = "ce_andean_small_bird.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.84 0.84 } }
-	}
-}
-
-TIW = { # Early Tiwanaku; P8.10;P20
-	pattern = "pattern_solid.dds"
-	color1 = "red"
-	color2 = "yellow"
-	color3 = "black"
-	colored_emblem = {
-		texture = "ce_andean_small_bird.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.84 0.84 } }
-	}
-}
-
 XCX = { # Chibchan Societies; P8.10;P20
 	pattern = "pattern_solid.dds"
 	color1 = "red"
@@ -4747,20 +4677,6 @@ CPH = { # Chiapas Highland-Lowland Networks; INAH-IZAPA;P8.10;CAH-XI;P20
 	}
 }
 
-AND = { # Andean Societies; P8.10;P20
-	pattern = "pattern_solid.dds"
-	color1 = "red"
-	color2 = "yellow"
-	color3 = "black"
-	colored_emblem = {
-		texture = "ce_andean_small_bird.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.84 0.84 } }
-	}
-}
-
 MEL = { # Melanesian Societies; P8.9;P20
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
@@ -4828,6 +4744,216 @@ CPS = { # Campsiani; P8.7;P20
 		color2 = color2
 		color3 = color3
 		instance = { position = { 0.5 0.52 } scale = { 0.82 0.70 } }
+	}
+}
+
+VCS = { # Vicus Communities; MET-VICUS;CWP-ANDES;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_andean_small_double_headed_feline.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+VIR = { # Gallinazo Communities; PNAS-VIR;WIL-GAL;CWP-ANDES;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "black"
+	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_andean_chimu_bird_disk.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+NAZ = { # Nazca; CAM-NASCA-EIP;CWP-ANDES;MET-ANDES-1500;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "yellow"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_andean_small_tocapu_03.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+XCW = { # Lima Culture; MET-ANDES-1500;CWP-ANDES;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_andean_small_fish_double.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+XDI = { # Atico-Caraveli Valley Communities; CWP-ANDES;MET-ANDES-1500;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_andean_chango_bird.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+XDL = { # Cusco Basin Communities; CUSCO-FORMATIVE;CWP-ANDES;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_andean_small_cross_cusco.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+REC = { # Recuay; MET-ANDES-1500;CWP-ANDES;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "black"
+	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_andean_cross_chavin.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+XHJ = { # Huarpa Communities; ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "yellow"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_andean_cross_huari.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+XHK = { # Pukara; CWP-ANDES;MET-ANDES-1500;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_andean_twin_deities.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+TIW = { # Early Tiwanaku; CWP-ANDES;MET-ANDES-1500;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_andean_cross_tiwanaku.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+WNK = { # Wankarani Communities; JFA-WANK;LAA-WANK;CWP-ANDES;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_andean_small_puma.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+XHL = { # Cajamarca-Marcahuamachuco Communities; CWP-ANDES;MET-ANDES-1500;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "black"
+	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_andean_small_mask.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+UTC = { # Upper Utcubamba Communities; CWP-ANDES;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "yellow"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_andean_small_bird_03.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+YUN = { # Eastern Yunga Valley Networks; CWP-ANDES;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_andean_small_double_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+	}
+}
+
+MYB = { # Moyobamba Foothill Communities; CWP-ANDES;P8.10;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_andean_small_bird_02.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
 	}
 }
 

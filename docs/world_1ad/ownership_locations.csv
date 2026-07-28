@@ -82,8 +82,6 @@ DUM,exeter,own_control_core,P8.7;CAH-XI,secure,Dumnonian capital control
 DAY,fergana,own_control_core,P8.8;CHG,secure,Dayuan capital control
 SOG,samarkand,own_control_core,P8.8;CHG,secure,Sogdian capital control
 TEO,tehotihuacan,own_control_core,P8.10;CAH-XI,secure,Teotihuacan capital control
-NAZ,cahuachi,own_control_core,P8.10;CAH-XI,secure,Nazca capital control
-TIW,tiwanaku,own_control_core,P8.10;CAH-XI,secure,Tiwanaku capital control
 BOS,taman,own_control_core,P8.1;OCD;PLE,contested,Bosporan Cimmerian capital-region proxy
 CHA,muhammerah,own_control_core,P8.2;OCD;PLE,contested,Charax Spasinu proxy at the head of the Gulf
 ATR,malekan,own_control_core,P8.2;OCD;PLE,secure,Ganzak proxy
@@ -188,9 +186,6 @@ TVC,ixtlahuaca,own_control_core,INAH-TOLUCA,contested,Toluca Valley settlement f
 MZC,tepecoacuilco,own_control_core,INAH-MEZCALA,contested,Late Preclassic Mezcala-Balsas preurban frame without a recovered common dynasty
 JZH,huaxtla,own_control_core,INAH-WEST-SHAFT;INAH-WEST-MEXICO,contested,Highland corridor frame within the western mortuary-exchange horizon without later frontier identities
 SDR,shiewhibak,own_control_core,NPS-SONORAN,contested,Ancestral Sonoran farming frame without treating Hohokam as a tribe name or projecting its later mature system
-VIR,chan_chan,own_control_core,P8.10;PNAS-VIR;WIL-GAL,contested,Coarse Moche-Valley proxy for Gallinazo communities; not a Chan Chan city claim
-LIM,rimaq,own_control_core,P8.10;CAH-XI,secure,Lima culture anchor
-REC,waricoto,own_control_core,P8.10;CAH-XI,secure,Callejon de Huaylas anchor
 CHI,paribari,own_control_core,P8.10;CAH-XI,secure,Chibchan highlands anchor
 HOP,olentangy,own_control_core,P8.10;CAH-XI,secure,Ohio Valley anchor
 BSK,moanunts,own_control_core,P8.10;CAH-XI,secure,Four Corners anchor
@@ -376,7 +371,6 @@ GPC,tlapan,own_control_core,P8.10;CAH-XI,contested,Pacific-slope community frame
 ONH,huajuapan,own_control_core,P8.10;CAH-XI,contested,Northwestern Oaxaca archaeological frame without imposing later Mixtec political borders
 IZA,huehuetan,own_control_core,INAH-IZAPA;P8.10,contested,First-order Izapa political-center proxy at the nearest installed Soconusco field
 CPH,zinacantan,own_control_core,INAH-IZAPA;P8.10;CAH-XI,contested,Chiapas corridor frame without merging highland communities into the Early Maya lowland polity
-AND,arequipa,own_control_core,P8.10;CAH-XI,contested,Andean SoP geographic anchor
 MEL,daga_papua,own_control_core,P8.9;CAH-XI,contested,Melanesian SoP geographic anchor
 MIC,mariana,own_control_core,P8.9;CAH-XI,contested,Micronesian SoP geographic anchor
 MUG,bialogard,own_control_core,P8.7;STR-GER;TAC-GER;OCD-GER;PLE,contested,Mugilones campaign proxy within the installed Koslin province
@@ -426,3 +420,98 @@ ARM,ardahan,own_control_core,STR-CAUC,contested,Armenian southern Moschian share
 ARM,ispir,own_control_core,STR-CAUC,contested,Armenian southern Moschian share
 ARM,khikhani,own_control_core,STR-CAUC,contested,Armenian southern Moschian share
 ARM,tortum,own_control_core,STR-CAUC,contested,Armenian southern Moschian share
+VCS,apurlec,own_control_core,MET-VICUS;CWP-ANDES;P8.10,contested,Exact AD 1 Vicus Communities archaeological-geographic frame
+VCS,xllang,own_control_core,MET-VICUS;CWP-ANDES;P8.10,contested,Exact AD 1 Vicus Communities archaeological-geographic frame
+VIR,chan_chan,own_control_core,PNAS-VIR;WIL-GAL;CWP-ANDES;P8.10,contested,Exact AD 1 Gallinazo Communities archaeological-geographic frame
+VIR,chao,own_control_core,PNAS-VIR;WIL-GAL;CWP-ANDES;P8.10,contested,Exact AD 1 Gallinazo Communities archaeological-geographic frame
+VIR,farfan,own_control_core,PNAS-VIR;WIL-GAL;CWP-ANDES;P8.10,contested,Exact AD 1 Gallinazo Communities archaeological-geographic frame
+VIR,pakatnamu,own_control_core,PNAS-VIR;WIL-GAL;CWP-ANDES;P8.10,contested,Exact AD 1 Gallinazo Communities archaeological-geographic frame
+VIR,paramonga,own_control_core,PNAS-VIR;WIL-GAL;CWP-ANDES;P8.10,contested,Exact AD 1 Gallinazo Communities archaeological-geographic frame
+VIR,sana,own_control_core,PNAS-VIR;WIL-GAL;CWP-ANDES;P8.10,contested,Exact AD 1 Gallinazo Communities archaeological-geographic frame
+NAZ,cahuachi,own_control_core,CAM-NASCA-EIP;CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Nazca archaeological-geographic frame
+NAZ,chinchay,own_control_core,CAM-NASCA-EIP;CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Nazca archaeological-geographic frame
+NAZ,ica,own_control_core,CAM-NASCA-EIP;CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Nazca archaeological-geographic frame
+NAZ,puka_tampu,own_control_core,CAM-NASCA-EIP;CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Nazca archaeological-geographic frame
+LIM,cantamarca,own_control_core,MET-ANDES-1500;CWP-ANDES;P8.10,contested,Exact AD 1 Lima Culture archaeological-geographic frame
+LIM,chilca,own_control_core,MET-ANDES-1500;CWP-ANDES;P8.10,contested,Exact AD 1 Lima Culture archaeological-geographic frame
+LIM,collique,own_control_core,MET-ANDES-1500;CWP-ANDES;P8.10,contested,Exact AD 1 Lima Culture archaeological-geographic frame
+LIM,huarco,own_control_core,MET-ANDES-1500;CWP-ANDES;P8.10,contested,Exact AD 1 Lima Culture archaeological-geographic frame
+LIM,huarochiri,own_control_core,MET-ANDES-1500;CWP-ANDES;P8.10,contested,Exact AD 1 Lima Culture archaeological-geographic frame
+LIM,incahuasi,own_control_core,MET-ANDES-1500;CWP-ANDES;P8.10,contested,Exact AD 1 Lima Culture archaeological-geographic frame
+LIM,ishma,own_control_core,MET-ANDES-1500;CWP-ANDES;P8.10,contested,Exact AD 1 Lima Culture archaeological-geographic frame
+LIM,rimaq,own_control_core,MET-ANDES-1500;CWP-ANDES;P8.10,contested,Exact AD 1 Lima Culture archaeological-geographic frame
+ATC,aruni,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,contested,Exact AD 1 Atico-Caraveli Valley Communities archaeological-geographic frame
+ATC,atico,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,contested,Exact AD 1 Atico-Caraveli Valley Communities archaeological-geographic frame
+ATC,caraveli,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,contested,Exact AD 1 Atico-Caraveli Valley Communities archaeological-geographic frame
+ATC,arequipa,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,contested,Exact AD 1 Atico-Caraveli Valley Communities archaeological-geographic frame
+CBA,pikillaqta,own_control_core,CUSCO-FORMATIVE;CWP-ANDES;P8.10,contested,Exact AD 1 Cusco Basin Communities archaeological-geographic frame
+CBA,pisaq,own_control_core,CUSCO-FORMATIVE;CWP-ANDES;P8.10,contested,Exact AD 1 Cusco Basin Communities archaeological-geographic frame
+CBA,quillarumiyoc,own_control_core,CUSCO-FORMATIVE;CWP-ANDES;P8.10,contested,Exact AD 1 Cusco Basin Communities archaeological-geographic frame
+CBA,qusqu,own_control_core,CUSCO-FORMATIVE;CWP-ANDES;P8.10,contested,Exact AD 1 Cusco Basin Communities archaeological-geographic frame
+CBA,urupampa,own_control_core,CUSCO-FORMATIVE;CWP-ANDES;P8.10,contested,Exact AD 1 Cusco Basin Communities archaeological-geographic frame
+CBA,waqrapukara,own_control_core,CUSCO-FORMATIVE;CWP-ANDES;P8.10,contested,Exact AD 1 Cusco Basin Communities archaeological-geographic frame
+CBA,ullantaytampu,own_control_core,CUSCO-FORMATIVE;CWP-ANDES;P8.10,contested,Exact AD 1 Cusco Basin Communities archaeological-geographic frame
+CBA,willka_pampa,own_control_core,CUSCO-FORMATIVE;CWP-ANDES;P8.10,contested,Exact AD 1 Cusco Basin Communities archaeological-geographic frame
+CBA,yanatile,own_control_core,CUSCO-FORMATIVE;CWP-ANDES;P8.10,contested,Exact AD 1 Cusco Basin Communities archaeological-geographic frame
+REC,waricoto,own_control_core,MET-ANDES-1500;CWP-ANDES;P8.10,contested,Exact AD 1 Recuay archaeological-geographic frame
+HUA,auccapana,own_control_core,ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10,secure,Exact AD 1 Huarpa Communities archaeological-geographic frame
+HUA,challwanqa,own_control_core,ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10,secure,Exact AD 1 Huarpa Communities archaeological-geographic frame
+HUA,huaman_karpa,own_control_core,ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10,secure,Exact AD 1 Huarpa Communities archaeological-geographic frame
+HUA,sondor,own_control_core,ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10,secure,Exact AD 1 Huarpa Communities archaeological-geographic frame
+HUA,soras,own_control_core,ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10,secure,Exact AD 1 Huarpa Communities archaeological-geographic frame
+HUA,allpas,own_control_core,ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10,secure,Exact AD 1 Huarpa Communities archaeological-geographic frame
+HUA,choccalpata,own_control_core,ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10,secure,Exact AD 1 Huarpa Communities archaeological-geographic frame
+HUA,paqwayranra,own_control_core,ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10,secure,Exact AD 1 Huarpa Communities archaeological-geographic frame
+HUA,pariahuanca,own_control_core,ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10,secure,Exact AD 1 Huarpa Communities archaeological-geographic frame
+HUA,wari_peru,own_control_core,ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10,secure,Exact AD 1 Huarpa Communities archaeological-geographic frame
+HUA,churkampa,own_control_core,ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10,secure,Exact AD 1 Huarpa Communities archaeological-geographic frame
+HUA,llacsapallanca,own_control_core,ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10,secure,Exact AD 1 Huarpa Communities archaeological-geographic frame
+HUA,tampu_machay,own_control_core,ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10,secure,Exact AD 1 Huarpa Communities archaeological-geographic frame
+HUA,tayaccasa,own_control_core,ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10,secure,Exact AD 1 Huarpa Communities archaeological-geographic frame
+PUK,sausaya,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Pukara archaeological-geographic frame
+PUK,tucssa,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Pukara archaeological-geographic frame
+PUK,yanahuara,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Pukara archaeological-geographic frame
+PUK,ayaviri,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Pukara archaeological-geographic frame
+PUK,macaya,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Pukara archaeological-geographic frame
+WNK,oruro,own_control_core,JFA-WANK;LAA-WANK;CWP-ANDES;P8.10,secure,Exact AD 1 Wankarani Communities archaeological-geographic frame
+PUK,wankani,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Pukara archaeological-geographic frame
+PUK,chucuito,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Pukara archaeological-geographic frame
+PUK,contornasa,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Pukara archaeological-geographic frame
+PUK,hatunqulla,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Pukara archaeological-geographic frame
+PUK,pomata,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Pukara archaeological-geographic frame
+TIW,achacachi,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Early Tiwanaku archaeological-geographic frame
+TIW,axawiri,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Early Tiwanaku archaeological-geographic frame
+TIW,calamarca,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Early Tiwanaku archaeological-geographic frame
+TIW,chuqiyapu,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Early Tiwanaku archaeological-geographic frame
+TIW,machaqa,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Early Tiwanaku archaeological-geographic frame
+TIW,tiwanaku,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Early Tiwanaku archaeological-geographic frame
+TIW,viacha,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Exact AD 1 Early Tiwanaku archaeological-geographic frame
+WNK,charka,own_control_core,JFA-WANK;LAA-WANK;CWP-ANDES;P8.10,secure,Exact AD 1 Wankarani Communities archaeological-geographic frame
+WNK,colquechaca,own_control_core,JFA-WANK;LAA-WANK;CWP-ANDES;P8.10,secure,Exact AD 1 Wankarani Communities archaeological-geographic frame
+WNK,kori_bara_karaa_ancas,own_control_core,JFA-WANK;LAA-WANK;CWP-ANDES;P8.10,secure,Exact AD 1 Wankarani Communities archaeological-geographic frame
+WNK,matarjawira,own_control_core,JFA-WANK;LAA-WANK;CWP-ANDES;P8.10,secure,Exact AD 1 Wankarani Communities archaeological-geographic frame
+WNK,sicasica,own_control_core,JFA-WANK;LAA-WANK;CWP-ANDES;P8.10,secure,Exact AD 1 Wankarani Communities archaeological-geographic frame
+WNK,sura,own_control_core,JFA-WANK;LAA-WANK;CWP-ANDES;P8.10,secure,Exact AD 1 Wankarani Communities archaeological-geographic frame
+WNK,karanka,own_control_core,JFA-WANK;LAA-WANK;CWP-ANDES;P8.10,secure,Exact AD 1 Wankarani Communities archaeological-geographic frame
+MRH,chimu,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,contested,Exact AD 1 Cajamarca-Marcahuamachuco Communities archaeological-geographic frame
+MRH,illapa,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,contested,Exact AD 1 Cajamarca-Marcahuamachuco Communities archaeological-geographic frame
+MRH,kaxa_marca,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,contested,Exact AD 1 Cajamarca-Marcahuamachuco Communities archaeological-geographic frame
+MRH,llucho,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,contested,Exact AD 1 Cajamarca-Marcahuamachuco Communities archaeological-geographic frame
+MRH,markahuamachuco,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,contested,Exact AD 1 Cajamarca-Marcahuamachuco Communities archaeological-geographic frame
+MRH,tantaricuy,own_control_core,CWP-ANDES;MET-ANDES-1500;P8.10,contested,Exact AD 1 Cajamarca-Marcahuamachuco Communities archaeological-geographic frame
+UTC,congona,own_control_core,CWP-ANDES;P8.10,contested,Exact AD 1 Upper Utcubamba Communities archaeological-geographic frame
+UTC,huamanpata,own_control_core,CWP-ANDES;P8.10,contested,Exact AD 1 Upper Utcubamba Communities archaeological-geographic frame
+UTC,kuelap,own_control_core,CWP-ANDES;P8.10,contested,Exact AD 1 Upper Utcubamba Communities archaeological-geographic frame
+UTC,olan,own_control_core,CWP-ANDES;P8.10,contested,Exact AD 1 Upper Utcubamba Communities archaeological-geographic frame
+UTC,huancachaca,own_control_core,CWP-ANDES;P8.10,contested,Exact AD 1 Upper Utcubamba Communities archaeological-geographic frame
+UTC,karajia,own_control_core,CWP-ANDES;P8.10,contested,Exact AD 1 Upper Utcubamba Communities archaeological-geographic frame
+UTC,utkhupampa,own_control_core,CWP-ANDES;P8.10,contested,Exact AD 1 Upper Utcubamba Communities archaeological-geographic frame
+YUN,arque,own_control_core,CWP-ANDES;P8.10,contested,Exact AD 1 Eastern Yunga Valley Networks archaeological-geographic frame
+YUN,incarraqay,own_control_core,CWP-ANDES;P8.10,contested,Exact AD 1 Eastern Yunga Valley Networks archaeological-geographic frame
+YUN,sachchaa_mukku,own_control_core,CWP-ANDES;P8.10,contested,Exact AD 1 Eastern Yunga Valley Networks archaeological-geographic frame
+YUN,ayopaya,own_control_core,CWP-ANDES;P8.10,contested,Exact AD 1 Eastern Yunga Valley Networks archaeological-geographic frame
+YUN,paititi,own_control_core,CWP-ANDES;P8.10,contested,Exact AD 1 Eastern Yunga Valley Networks archaeological-geographic frame
+YUN,sarkajpa,own_control_core,CWP-ANDES;P8.10,contested,Exact AD 1 Eastern Yunga Valley Networks archaeological-geographic frame
+MYB,chatuza,own_control_core,CWP-ANDES;P8.10,contested,Exact AD 1 Moyobamba Foothill Communities archaeological-geographic frame
+MYB,lamas,own_control_core,CWP-ANDES;P8.10,contested,Exact AD 1 Moyobamba Foothill Communities archaeological-geographic frame
+MYB,moyobamba,own_control_core,CWP-ANDES;P8.10,contested,Exact AD 1 Moyobamba Foothill Communities archaeological-geographic frame

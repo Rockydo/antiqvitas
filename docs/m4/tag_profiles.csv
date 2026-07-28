@@ -73,11 +73,6 @@ OMN,antq_arab,antq_arabian_polytheism,PLN-ARAB;PLE;P10;P11,contested,Omanitae ca
 BED,antq_arab,antq_arabian_polytheism,STR-ARAB;P8.6;P10;P11,contested,Chaulotaean north-central caravan-country campaign profile
 VAN,antq_vandalic,antq_germanic_religion,P8.7;CAH-XI;P10;P11,contested,Vandilic profile
 GUT,antq_gothic,antq_germanic_religion,P8.7;CAH-XI;P10;P11,contested,Gutonic profile
-VIR,antq_gallinazo,antq_andean,P8.10;PNAS-VIR;WIL-GAL,contested,AD 1 Gallinazo Moche-Valley proxy
-NAZ,antq_nazca,antq_andean,P8.10;CAH-XI;P10;P11,secure,Nazca profile
-LIM,antq_andean_regional,antq_andean,P8.10;P10;P11,contested,Generic AD 1 central-coast profile; later Lima culture is not backdated
-REC,antq_recuay,antq_andean,P8.10;P10;P11,contested,Recuay highland profile
-TIW,antq_tiwanaku,antq_andean,P8.10;P10;P11,contested,Early Tiwanaku altiplano profile
 CHI,antq_chibchan,antq_andean,P8.10;CAH-XI;P10;P11,contested,Chibchan profile
 DOR,antq_inuit_dorset,antq_north_american,P8.10;CAH-XI;P10;P11,contested,Dorset profile
 TUP,antq_tupi,antq_caribbean,P8.10;CAH-XI;P10;P11,contested,Tupi profile
@@ -407,3 +402,18 @@ SDR,antq_ancestral_sonoran_desert,antq_north_american,NPS-SONORAN;P10;P11,contes
 HMR,antq_samhan,antq_korean_muism,NAJU-MAHAN;NMK-SAMHAN;AKS-LELANG;P8.3;P10;P11,contested,Han River Mahan Communities regional population profile without a claim of one ethnic state
 GMR,antq_samhan,antq_korean_muism,NAJU-MAHAN;NMK-SAMHAN;AKS-LELANG;P8.3;P10;P11,contested,Geum River Mahan Communities regional population profile without a claim of one ethnic state
 SVA,antq_soanian,antq_arsacid_zoroastrianism,STR-CAUC;IRAN-COL;P10;P11,contested,"Soanian highland culture; the installed Arsacid-faith key is a court-facing Caucasian rendering proxy, not a claim of uniform popular Zoroastrianism"
+VCS,antq_vicus,antq_andean,MET-VICUS;CWP-ANDES;P8.10,contested,Bounded Vicus Communities profile; archaeological identity is not a uniform language or centralized-state claim
+VIR,antq_gallinazo,antq_andean,PNAS-VIR;WIL-GAL;CWP-ANDES;P8.10,contested,Bounded Gallinazo Communities profile; archaeological identity is not a uniform language or centralized-state claim
+NAZ,antq_nazca,antq_andean,CAM-NASCA-EIP;CWP-ANDES;MET-ANDES-1500;P8.10,secure,Bounded Nazca profile; archaeological identity is not a uniform language or centralized-state claim
+LIM,antq_lima_central_coast,antq_andean,MET-ANDES-1500;CWP-ANDES;P8.10,contested,Bounded Lima Culture profile; archaeological identity is not a uniform language or centralized-state claim
+ATC,antq_atico_caraveli,antq_andean,CWP-ANDES;MET-ANDES-1500;P8.10,contested,Bounded Atico-Caraveli Valley Communities profile; archaeological identity is not a uniform language or centralized-state claim
+CBA,antq_cusco_late_formative,antq_andean,CUSCO-FORMATIVE;CWP-ANDES;P8.10,contested,Bounded Cusco Basin Communities profile; archaeological identity is not a uniform language or centralized-state claim
+REC,antq_recuay,antq_andean,MET-ANDES-1500;CWP-ANDES;P8.10,contested,Bounded Recuay profile; archaeological identity is not a uniform language or centralized-state claim
+HUA,antq_huarpa,antq_andean,ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10,secure,Bounded Huarpa Communities profile; archaeological identity is not a uniform language or centralized-state claim
+PUK,antq_pukara,antq_andean,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Bounded Pukara profile; archaeological identity is not a uniform language or centralized-state claim
+TIW,antq_tiwanaku,antq_andean,CWP-ANDES;MET-ANDES-1500;P8.10,secure,Bounded Early Tiwanaku profile; archaeological identity is not a uniform language or centralized-state claim
+WNK,antq_wankarani,antq_andean,JFA-WANK;LAA-WANK;CWP-ANDES;P8.10,secure,Bounded Wankarani Communities profile; archaeological identity is not a uniform language or centralized-state claim
+MRH,antq_cajamarca_marcahuamachuco,antq_andean,CWP-ANDES;MET-ANDES-1500;P8.10,contested,Bounded Cajamarca-Marcahuamachuco Communities profile; archaeological identity is not a uniform language or centralized-state claim
+UTC,antq_upper_utcubamba,antq_andean,CWP-ANDES;P8.10,contested,Bounded Upper Utcubamba Communities profile; archaeological identity is not a uniform language or centralized-state claim
+YUN,antq_eastern_yunga,antq_andean,CWP-ANDES;P8.10,contested,Bounded Eastern Yunga Valley Networks profile; archaeological identity is not a uniform language or centralized-state claim
+MYB,antq_moyobamba_foothill,antq_andean,CWP-ANDES;P8.10,contested,Bounded Moyobamba Foothill Communities profile; archaeological identity is not a uniform language or centralized-state claim

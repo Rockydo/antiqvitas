@@ -1158,6 +1158,74 @@ antq_soanian_king_and_council = {
 	years = 2
 }
 
+antq_andean_irrigated_valley_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_peasants_estate_power = 0.077
+		global_clergy_estate_power = 0.051
+		tribes_estate_power_from_cabinet = 0.147
+		global_monthly_food_modifier = 0.024
+		global_trade_through_owned_territory_efficiency = 0.021
+		research_speed = 0.075
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_andean_highland_community_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.081
+		global_peasants_estate_power = 0.063
+		tribes_estate_power_from_cabinet = 0.159
+		global_monthly_food_modifier = 0.019
+		replace_cabinet_member_cost_modifier = 0.023
+		research_speed = 0.075
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_andean_ceremonial_centre_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_clergy_estate_power = 0.089
+		global_burghers_estate_power = 0.057
+		clergy_estate_power_from_cabinet = 0.181
+		global_production_efficiency = 0.023
+		replace_cabinet_member_cost_modifier = 0.029
+		research_speed = 0.09
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_wankarani_mound_village_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.087
+		global_peasants_estate_power = 0.069
+		tribes_estate_power_from_cabinet = 0.171
+		global_monthly_food_modifier = 0.017
+		global_trade_through_owned_territory_efficiency = 0.019
+		research_speed = 0.075
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
 antq_mesoamerican_urban_ritual_center = {
 	major = yes
 	government = tribe
@@ -2441,6 +2509,10 @@ antq_elder_moot_kingship = {
 			has_reform = government_reform:antq_jinhan_small_state_league
 			has_reform = government_reform:antq_byeonhan_iron_exchange_league
 			has_reform = government_reform:antq_soanian_king_and_council
+			has_reform = government_reform:antq_andean_irrigated_valley_network
+			has_reform = government_reform:antq_andean_highland_community_network
+			has_reform = government_reform:antq_andean_ceremonial_centre_network
+			has_reform = government_reform:antq_wankarani_mound_village_network
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}
@@ -2502,6 +2574,10 @@ antq_warband_retinue_kingship = {
 			has_reform = government_reform:antq_jinhan_small_state_league
 			has_reform = government_reform:antq_byeonhan_iron_exchange_league
 			has_reform = government_reform:antq_soanian_king_and_council
+			has_reform = government_reform:antq_andean_irrigated_valley_network
+			has_reform = government_reform:antq_andean_highland_community_network
+			has_reform = government_reform:antq_andean_ceremonial_centre_network
+			has_reform = government_reform:antq_wankarani_mound_village_network
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}

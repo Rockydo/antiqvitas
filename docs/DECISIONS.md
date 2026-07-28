@@ -4141,3 +4141,11 @@ gaps and keep every replacement below seventeen locations.
 province/location selectors restore those states; only the independently
 attested Soanes receive a new tag. Their faith key remains a documented
 engine-facing Caucasian court-cult proxy pending the global religion-depth pass.
+
+## 2026-07-28 - Rebuild the complete Andes surface with exact selectors
+
+Remove `AND` and the five overbroad area selectors that gave Nazca Cusco and
+the yungas, Tiwanaku Ayacucho, and Recuay unrelated northern highlands. Assign
+all 95 locations directly to fifteen bounded frames. Four shared reforms model
+valley irrigation, highland communities, ceremonial centres, and Wankarani
+mound villages. Reuse reviewed installed Andean emblems; add no audio.

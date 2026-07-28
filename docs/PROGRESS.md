@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-07-28 - The Andes becomes fifteen bounded regional frames
+
+- Removed `AND` and corrected the complete 95-location surface: Nazca no
+  longer owns Cusco/yungas, Tiwanaku no longer owns Ayacucho, and Recuay is
+  confined to Huaylas.
+- Added nine net polities, eleven cultures, four reforms, fifteen standards,
+  complete start coverage, and an exact validator. Roster: 459; placeholders: 7.
+- All 131 validation commands pass; paired smoke reached both rendered menus
+  with zero mod-only normalized errors.
+
+Next: replace the 16-location Chibchan Societies frame.
+
 ## 2026-07-28 - The Caucasus becomes Iberia, Colchis, Armenia, and Soanes
 
 - Removed the 47-location `CAU` residual; restored omitted state territory and

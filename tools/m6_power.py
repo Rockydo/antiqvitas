@@ -729,6 +729,34 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "STR-CAUC;P13", "secure",
         "Strabo explicitly records a Soanian king and three-hundred-member council; modifiers preserve both royal and council leverage without treating his reported host size as a census.",
     ),
+    "antq_andean_irrigated_valley_network": (
+        "global_peasants_estate_power=0.077|global_clergy_estate_power=0.051|"
+        "tribes_estate_power_from_cabinet=0.147|global_monthly_food_modifier=0.024|"
+        "global_trade_through_owned_territory_efficiency=0.021",
+        "CWP-ANDES;MET-ANDES-1500;P13", "contested",
+        "Coastal and intermontane valley communities coordinate irrigation, stores, ritual obligations, and exchange without imposing one coast-wide state or recovered water constitution.",
+    ),
+    "antq_andean_highland_community_network": (
+        "global_tribes_estate_power=0.081|global_peasants_estate_power=0.063|"
+        "tribes_estate_power_from_cabinet=0.159|global_monthly_food_modifier=0.019|"
+        "replace_cabinet_member_cost_modifier=0.023",
+        "CWP-ANDES;ANT-HUARPA;P13", "contested",
+        "Highland communities coordinate cultivation, pasture, passes, exchange, and collective ritual without backdating later ayllu constitutions or imperial administration.",
+    ),
+    "antq_andean_ceremonial_centre_network": (
+        "global_clergy_estate_power=0.089|global_burghers_estate_power=0.057|"
+        "clergy_estate_power_from_cabinet=0.181|global_production_efficiency=0.023|"
+        "replace_cabinet_member_cost_modifier=0.029",
+        "CWP-ANDES;CAM-NASCA-EIP;MET-ANDES-1500;P13", "contested",
+        "First-order Andean ceremonial centres coordinate public works, specialist production, cultivation, and regional exchange without asserting one uniform territorial state.",
+    ),
+    "antq_wankarani_mound_village_network": (
+        "global_tribes_estate_power=0.087|global_peasants_estate_power=0.069|"
+        "tribes_estate_power_from_cabinet=0.171|global_monthly_food_modifier=0.017|"
+        "global_trade_through_owned_territory_efficiency=0.019",
+        "JFA-WANK;LAA-WANK;P13", "secure",
+        "Central-Altiplano mound villages coordinate camelid herding, households, exchange, and ritual activity without inventing a Wankarani state or common ruler.",
+    ),
     "antq_mesoamerican_urban_ritual_center": (
         "global_clergy_estate_power=0.10|global_burghers_estate_power=0.07|"
         "clergy_estate_power_from_cabinet=0.20|global_production_efficiency=0.025|"
@@ -1584,6 +1612,10 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
         "antq_jinhan_small_state_league",
         "antq_byeonhan_iron_exchange_league",
         "antq_soanian_king_and_council",
+        "antq_andean_irrigated_valley_network",
+        "antq_andean_highland_community_network",
+        "antq_andean_ceremonial_centre_network",
+        "antq_wankarani_mound_village_network",
     ),
     "sacral": (),
     "royal": (
@@ -2172,7 +2204,7 @@ def load_power_data() -> PowerData:
     used_reforms = {government["reform"] for government in governments.values()}
     # Core/regional contracts include the reviewed Manchurian, Bornean,
     # Philippine, Sulawesi, and North American network reforms defined above.
-    expected_contract_count = 121 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    expected_contract_count = 125 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -3024,6 +3056,42 @@ antq_soanian_king_and_council = {
 		global_tribes_estate_power = 0.083
 		global_nobles_estate_power = 0.067
 		country_cabinet_efficiency = 0.03
+		research_speed = 0.075
+	}
+	years = 2
+}
+
+antq_andean_irrigated_valley_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		research_speed = 0.075
+	}
+	years = 2
+}
+
+antq_andean_highland_community_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		research_speed = 0.075
+	}
+	years = 2
+}
+
+antq_andean_ceremonial_centre_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		research_speed = 0.09
+	}
+	years = 2
+}
+
+antq_wankarani_mound_village_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
 		research_speed = 0.075
 	}
 	years = 2
@@ -4010,6 +4078,14 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_byeonhan_iron_exchange_league_desc", "Byeonhan small states coordinate iron, ports, navigation, and exchange without backdating Gaya."),
         ("antq_soanian_king_and_council", "Soanian King and Council"),
         ("antq_soanian_king_and_council_desc", "A highland king governs with the attested council of three hundred, balancing leading households without inventing an AD 1 ruler or succession code."),
+        ("antq_andean_irrigated_valley_network", "Andean Irrigated-Valley Network"),
+        ("antq_andean_irrigated_valley_network_desc", "Valley communities coordinate irrigation, stores, ritual obligations, and exchange without a coast-wide state or invented water constitution."),
+        ("antq_andean_highland_community_network", "Andean Highland Community Network"),
+        ("antq_andean_highland_community_network_desc", "Highland communities coordinate cultivation, pasture, passes, exchange, and ritual without backdating later imperial administration."),
+        ("antq_andean_ceremonial_centre_network", "Andean Ceremonial-Centre Network"),
+        ("antq_andean_ceremonial_centre_network_desc", "Ceremonial centres coordinate public works, specialist production, cultivation, and exchange without asserting one uniform territorial state."),
+        ("antq_wankarani_mound_village_network", "Wankarani Mound-Village Network"),
+        ("antq_wankarani_mound_village_network_desc", "Central-Altiplano mound villages coordinate camelid herding, households, exchange, and ritual without inventing a common ruler."),
         ("antq_mesoamerican_urban_ritual_center", "Mesoamerican Urban-Ritual Center"),
         ("antq_mesoamerican_urban_ritual_center_desc", "A first-order ceremonial and exchange center coordinates public space, specialist production, cultivation, and regional ties without an invented recovered constitution."),
         ("antq_mesoamerican_formative_civic_network", "Mesoamerican Formative Civic Network"),

@@ -3025,45 +3025,9 @@ antq_andean_regional = { # P8.10;P10;P11; Generic non-uniform Andean population 
 	}
 }
 
-antq_gallinazo = { # PNAS-VIR;WIL-GAL; North-coast archaeological proxy at AD 1; technical Quechuan fallback is not a language claim
-	language = antq_andean_dialect
-	color = antq_culture_color_antq_gallinazo
-	tags = { european_gfx }
-	culture_groups = {
-		antq_andean_group
-	}
-}
-
 antq_moche = { # JSTOR-MOC;CAM-MOC; Post-AD 100 north-coast Moche cultural proxy; not a claim of a unified state
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_moche
-	tags = { european_gfx }
-	culture_groups = {
-		antq_andean_group
-	}
-}
-
-antq_nazca = { # P10;CAH-XI; South-coast Andean Nazca communities
-	language = antq_andean_dialect
-	color = antq_culture_color_antq_nazca
-	tags = { european_gfx }
-	culture_groups = {
-		antq_andean_group
-	}
-}
-
-antq_tiwanaku = { # P8.10;P10;CAH-XI; Early Tiwanaku altiplano regional proxy
-	language = antq_andean_dialect
-	color = antq_culture_color_antq_tiwanaku
-	tags = { european_gfx }
-	culture_groups = {
-		antq_andean_group
-	}
-}
-
-antq_recuay = { # P8.10;P10;CAH-XI; Recuay highland regional proxy
-	language = antq_andean_dialect
-	color = antq_culture_color_antq_recuay
 	tags = { european_gfx }
 	culture_groups = {
 		antq_andean_group
@@ -5596,5 +5560,140 @@ antq_soanian = { # STR-CAUC;IRAN-COL;P10; Attested Soanes of the upper western C
 	tags = { european_gfx }
 	culture_groups = {
 		antq_caucasian_group
+	}
+}
+
+antq_vicus = { # MET-VICUS;CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_vicus
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_gallinazo = { # PNAS-VIR;WIL-GAL;CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_gallinazo
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_nazca = { # CAM-NASCA-EIP;CWP-ANDES;MET-ANDES-1500;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_nazca
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_lima_central_coast = { # MET-ANDES-1500;CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_lima_central_coast
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_atico_caraveli = { # CWP-ANDES;MET-ANDES-1500;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_atico_caraveli
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_cusco_late_formative = { # CUSCO-FORMATIVE;CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_cusco_late_formative
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_recuay = { # MET-ANDES-1500;CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_recuay
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_huarpa = { # ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_huarpa
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_pukara = { # CWP-ANDES;MET-ANDES-1500;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_pukara
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_tiwanaku = { # CWP-ANDES;MET-ANDES-1500;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_tiwanaku
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_wankarani = { # JFA-WANK;LAA-WANK;CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_wankarani
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_cajamarca_marcahuamachuco = { # CWP-ANDES;MET-ANDES-1500;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_cajamarca_marcahuamachuco
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_upper_utcubamba = { # CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_upper_utcubamba
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_eastern_yunga = { # CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_eastern_yunga
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
+	}
+}
+
+antq_moyobamba_foothill = { # CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
+	language = antq_andean_dialect
+	color = antq_culture_color_antq_moyobamba_foothill
+	tags = { european_gfx }
+	culture_groups = {
+		antq_andean_group
 	}
 }

@@ -2062,51 +2062,6 @@ XGW = { # Ancestral Sonoran Desert Communities; NPS-SONORAN
 	is_historic = yes
 }
 
-VIR = { # Gallinazo Communities; P8.10;PNAS-VIR;WIL-GAL
-	color = rgb { 150 91 34 }
-	color2 = rgb { 105 164 221 }
-
-	culture_definition = antq_gallinazo
-	religion_definition = antq_andean
-	is_historic = yes
-}
-
-NAZ = { # Nazca; P8.10;CAH-XI
-	color = rgb { 163 78 37 }
-	color2 = rgb { 92 177 218 }
-
-	culture_definition = antq_nazca
-	religion_definition = antq_andean
-	is_historic = yes
-}
-
-XCW = { # Lima Culture; P8.10;CAH-XI
-	color = rgb { 158 89 32 }
-	color2 = rgb { 97 166 223 }
-
-	culture_definition = antq_andean_regional
-	religion_definition = antq_andean
-	is_historic = yes
-}
-
-REC = { # Recuay; P8.10;CAH-XI
-	color = rgb { 169 96 36 }
-	color2 = rgb { 86 159 219 }
-
-	culture_definition = antq_recuay
-	religion_definition = antq_andean
-	is_historic = yes
-}
-
-TIW = { # Early Tiwanaku; P8.10;CAH-XI
-	color = rgb { 175 93 34 }
-	color2 = rgb { 80 162 221 }
-
-	culture_definition = antq_tiwanaku
-	religion_definition = antq_andean
-	is_historic = yes
-}
-
 XCX = { # Chibchan Societies; P8.10;CAH-XI
 	color = rgb { 56 106 106 }
 	color2 = rgb { 199 149 149 }
@@ -3052,15 +3007,6 @@ CPH = { # Chiapas Highland-Lowland Networks; INAH-IZAPA;P8.10;CAH-XI
 	is_historic = yes
 }
 
-AND = { # Andean Societies; P8.10;CAH-XI
-	color = rgb { 162 83 44 }
-	color2 = rgb { 93 172 211 }
-
-	culture_definition = antq_andean_regional
-	religion_definition = antq_andean
-	is_historic = yes
-}
-
 MEL = { # Melanesian Societies; P8.9;CAH-XI
 	color = rgb { 42 124 131 }
 	color2 = rgb { 213 131 124 }
@@ -3103,6 +3049,141 @@ CPS = { # Campsiani; P8.7;STR-GER;TAC-GER;OCD-GER;PLE
 
 	culture_definition = antq_campsian
 	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+VCS = { # Vicus Communities; MET-VICUS;CWP-ANDES;P8.10
+	color = rgb { 162 78 46 }
+	color2 = rgb { 93 177 209 }
+
+	culture_definition = antq_vicus
+	religion_definition = antq_andean
+	is_historic = yes
+}
+
+VIR = { # Gallinazo Communities; PNAS-VIR;WIL-GAL;CWP-ANDES;P8.10
+	color = rgb { 150 91 34 }
+	color2 = rgb { 105 164 221 }
+
+	culture_definition = antq_gallinazo
+	religion_definition = antq_andean
+	is_historic = yes
+}
+
+NAZ = { # Nazca; CAM-NASCA-EIP;CWP-ANDES;MET-ANDES-1500;P8.10
+	color = rgb { 163 78 37 }
+	color2 = rgb { 92 177 218 }
+
+	culture_definition = antq_nazca
+	religion_definition = antq_andean
+	is_historic = yes
+}
+
+XCW = { # Lima Culture; MET-ANDES-1500;CWP-ANDES;P8.10
+	color = rgb { 158 89 32 }
+	color2 = rgb { 97 166 223 }
+
+	culture_definition = antq_lima_central_coast
+	religion_definition = antq_andean
+	is_historic = yes
+}
+
+XDI = { # Atico-Caraveli Valley Communities; CWP-ANDES;MET-ANDES-1500;P8.10
+	color = rgb { 159 78 56 }
+	color2 = rgb { 96 177 199 }
+
+	culture_definition = antq_atico_caraveli
+	religion_definition = antq_andean
+	is_historic = yes
+}
+
+XDL = { # Cusco Basin Communities; CUSCO-FORMATIVE;CWP-ANDES;P8.10
+	color = rgb { 168 95 38 }
+	color2 = rgb { 87 160 217 }
+
+	culture_definition = antq_cusco_late_formative
+	religion_definition = antq_andean
+	is_historic = yes
+}
+
+REC = { # Recuay; MET-ANDES-1500;CWP-ANDES;P8.10
+	color = rgb { 169 96 36 }
+	color2 = rgb { 86 159 219 }
+
+	culture_definition = antq_recuay
+	religion_definition = antq_andean
+	is_historic = yes
+}
+
+XHJ = { # Huarpa Communities; ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10
+	color = rgb { 161 81 44 }
+	color2 = rgb { 94 174 211 }
+
+	culture_definition = antq_huarpa
+	religion_definition = antq_andean
+	is_historic = yes
+}
+
+XHK = { # Pukara; CWP-ANDES;MET-ANDES-1500;P8.10
+	color = rgb { 156 97 57 }
+	color2 = rgb { 99 158 198 }
+
+	culture_definition = antq_pukara
+	religion_definition = antq_andean
+	is_historic = yes
+}
+
+TIW = { # Early Tiwanaku; CWP-ANDES;MET-ANDES-1500;P8.10
+	color = rgb { 175 93 34 }
+	color2 = rgb { 80 162 221 }
+
+	culture_definition = antq_tiwanaku
+	religion_definition = antq_andean
+	is_historic = yes
+}
+
+WNK = { # Wankarani Communities; JFA-WANK;LAA-WANK;CWP-ANDES;P8.10
+	color = rgb { 163 83 50 }
+	color2 = rgb { 92 172 205 }
+
+	culture_definition = antq_wankarani
+	religion_definition = antq_andean
+	is_historic = yes
+}
+
+XHL = { # Cajamarca-Marcahuamachuco Communities; CWP-ANDES;MET-ANDES-1500;P8.10
+	color = rgb { 167 84 34 }
+	color2 = rgb { 88 171 221 }
+
+	culture_definition = antq_cajamarca_marcahuamachuco
+	religion_definition = antq_andean
+	is_historic = yes
+}
+
+UTC = { # Upper Utcubamba Communities; CWP-ANDES;P8.10
+	color = rgb { 157 85 31 }
+	color2 = rgb { 98 170 224 }
+
+	culture_definition = antq_upper_utcubamba
+	religion_definition = antq_andean
+	is_historic = yes
+}
+
+YUN = { # Eastern Yunga Valley Networks; CWP-ANDES;P8.10
+	color = rgb { 171 93 56 }
+	color2 = rgb { 84 162 199 }
+
+	culture_definition = antq_eastern_yunga
+	religion_definition = antq_andean
+	is_historic = yes
+}
+
+MYB = { # Moyobamba Foothill Communities; CWP-ANDES;P8.10
+	color = rgb { 169 90 44 }
+	color2 = rgb { 86 165 211 }
+
+	culture_definition = antq_moyobamba_foothill
+	religion_definition = antq_andean
 	is_historic = yes
 }
 

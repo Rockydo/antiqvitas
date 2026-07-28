@@ -5754,3 +5754,14 @@ Strabo places the Soanes in the heights above Dioscurias and gives them a king
 and council, but no exact frontier or ruler name. Four upper-Rioni fields form a
 contested proxy. His three-way Moschian division is represented among Colchis,
 Iberia, and Armenia, not as an invented Moschian state (`STR-CAUC`; `IRAN-COL`).
+
+## 2026-07-28 - Andean cultures are archaeological frames, not uniform peoples
+
+The 95-field Andes surface is divided among fifteen bounded valley, basin,
+highland, and foothill frames. Nazca, Lima, Recuay, Huarpa, Pukara, Tiwanaku,
+Wankarani, Vicus, and Gallinazo are material/chronological labels; none implies
+one language, fixed frontier, or centralized state. Cusco is not Inca, Huarpa
+is not Wari, and later Kuelap, Chimu, and Ishma map names do not date those
+polities to AD 1. Sources: `CWP-ANDES`; `MET-ANDES-1500`; `CAM-NASCA-EIP`;
+`ANT-HUARPA`; `JFA-WANK`; `LAA-WANK`; `MET-VICUS`; `CUSCO-FORMATIVE`.
+[secure regional diversity; contested exact boundaries and political form]
