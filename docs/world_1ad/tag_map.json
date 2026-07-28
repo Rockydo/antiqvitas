@@ -1,8 +1,8 @@
 {
   "game_build": "24187685",
-  "entry_count": 338,
-  "collision_count": 132,
-  "localization_collision_count": 146,
+  "entry_count": 348,
+  "collision_count": 134,
+  "localization_collision_count": 148,
   "reserved_hash_collision_tags": [
     "XAD"
   ],
@@ -1492,11 +1492,81 @@
       "name": "Angrivarii"
     },
     {
-      "design_tag": "OAS",
-      "engine_tag": "OAS",
+      "design_tag": "ARI",
+      "engine_tag": "XFZ",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Aria"
+    },
+    {
+      "design_tag": "YNC",
+      "engine_tag": "YNC",
       "vanilla_collision": false,
       "localization_collision": false,
-      "name": "Inner Asian Oasis Societies"
+      "name": "Yancai"
+    },
+    {
+      "design_tag": "SRY",
+      "engine_tag": "SRY",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Saryarka Late Iron-Age Horizon"
+    },
+    {
+      "design_tag": "GMU",
+      "engine_tag": "GMU",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Gumo"
+    },
+    {
+      "design_tag": "QIM",
+      "engine_tag": "XGA",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Qiemo"
+    },
+    {
+      "design_tag": "YQI",
+      "engine_tag": "YQI",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Yanqi"
+    },
+    {
+      "design_tag": "SHC",
+      "engine_tag": "SHC",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Shache"
+    },
+    {
+      "design_tag": "PUL",
+      "engine_tag": "PUL",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Puli"
+    },
+    {
+      "design_tag": "FJS",
+      "engine_tag": "FJS",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Further Jushi"
+    },
+    {
+      "design_tag": "IWL",
+      "engine_tag": "IWL",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Yiwulu"
+    },
+    {
+      "design_tag": "DNH",
+      "engine_tag": "DNH",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Danhuan"
     },
     {
       "design_tag": "KRS",

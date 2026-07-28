@@ -16,7 +16,7 @@ ELY,antq_persian,antq_arsacid_zoroastrianism,P8.2;OCD;P10;P11,contested,Elymaean
 PRS,antq_persian,antq_arsacid_zoroastrianism,P8.2;OCD;P10;P11,secure,Persis Iranian profile
 ATR,antq_median,antq_arsacid_zoroastrianism,P8.2;OCD;P10;P11,contested,Atropatenian Median profile
 SKT,antq_saka,antq_arsacid_zoroastrianism,P8.2;CAH-XI;P10;P11,contested,Sakastan eastern Iranian profile
-MRG,antq_sogdian,antq_arsacid_zoroastrianism,P8.2;CAH-XI;P10;P11,secure,Margian Sogdian profile
+MRG,antq_sogdian,antq_eastern_iranian_traditions,P8.2;IRAN-SOG-KANGJU;P10;P11,contested,Margian oasis profile without imposing one Arsacid religious orthodoxy
 ARM,antq_armenian,antq_arsacid_zoroastrianism,P8.2;CAH-XI;P10;P11,secure,Armenian Arsacid profile before Christian state conversion
 IBR,antq_kartvelian,antq_arsacid_zoroastrianism,P8.2;OCD;P10;P11,contested,Kartvelian Iberian profile
 CLZ,antq_colchian,antq_hellenic,P8.2;OCD;P10;P11,contested,Colchian Black Sea profile separated from inland Kartvelian communities
@@ -53,7 +53,7 @@ SDY,antq_sadiya_foothill,antq_eastern_hill_traditions,OUP-NEINDIA;P8.4;P10;P11,c
 MYL,antq_monyul_highland,antq_eastern_hill_traditions,UCL-BHUTAN;OUP-NEINDIA;P8.4;P10;P11,contested,Monyul highland profile without unified ancient Bhutan or organized later religion
 SKM,antq_sikkim_foothill,antq_eastern_hill_traditions,UCL-BHUTAN;OUP-NEINDIA;P8.4;P10;P11,contested,Sikkim foothill profile without later royal or ethnolinguistic borders
 IMV,antq_imphal_valley,antq_eastern_hill_traditions,OUP-NEINDIA;P8.4;P10;P11,contested,Imphal valley archaeological profile without backdating later court chronicles
-YUE,antq_bactrian,antq_arsacid_zoroastrianism,P8.4;CAH-XI;P10;P11,contested,Yuezhi Bactrian frontier profile
+YUE,antq_bactrian,antq_eastern_iranian_traditions,HAN-WR;P8.4;CAH-XI;P10;P11,contested,Yuezhi Bactrian frontier profile without imposing Arsacid religious institutions
 CHE,antq_tamil,antq_brahmanism,P8.4;PER;P10;P11,secure,Chera Tamilakam profile
 CHL,antq_tamil,antq_brahmanism,P8.4;PER;PLE;P10;P11,secure,Chola Tamilakam profile
 PND,antq_tamil,antq_brahmanism,P8.4;PER;PLE;P10;P11,secure,Pandya Tamilakam profile
@@ -195,6 +195,26 @@ SMY,antq_dzhudzhydyag,antq_finnic,ENC-NEEU;P10;P11,contested,Pechora-Timan Dzhud
 SRG,antq_sargat,antq_tengri,RAS-SAR;RAS-SARGAT-CHRON;P8.8;P10;P11,contested,Omsk-Ishim Sargat archaeological frame rather than an ethnicity or state
 AKL,antq_altai_kulay,antq_finnic,ASU-ALTAI-KULAY;P10;P11,contested,Forest-steppe Altai Kulay archaeological frame rather than an ethnicity or state
 ALT,antq_altai_xiongnu_contact,antq_tengri,ACSS-ALTAI-XIONGNU;P10;P11,contested,Altai contact-horizon frame without asserting Xiongnu political occupation
+ARI,antq_arian,antq_eastern_iranian_traditions,IRAN-ARIA;P8.2;P10;P11,contested,Aria regional profile without a named ruler or recovered satrapal cult settlement
+YNC,antq_yancai_aorsi,antq_tengri,HAN-WR;UNESCO-CA-NOMADS;WIL-SAR;P10;P11,contested,Yancai-Aorsi western-steppe proxy with a broad steppe-cult engine adapter
+SRY,antq_saryarka_late_iron,antq_tengri,UNESCO-CA-NOMADS;WIL-SAR;P10;P11,contested,Saryarka Late Iron-Age material frame rather than an ethnicity state or uniform cult
+KNG,antq_kangju,antq_eastern_iranian_traditions,HAN-WR;IRAN-SOG-KANGJU;P10;P11,contested,Kangju confederational profile preserving local Sogdian and steppe diversity
+SOG,antq_sogdian,antq_eastern_iranian_traditions,IRAN-SOG-KANGJU;P10;P11,contested,Sogdian city profile within wider Kangju hegemony
+DAY,antq_dayuan_ferghana,antq_eastern_iranian_traditions,HAN-WR;P10;P11,contested,Dayuan-Ferghana urban valley profile
+WSN,antq_wusun,antq_tengri,HAN-WR;HHS-WR;P10;P11,contested,Wusun pasture-confederation profile without resolving ethnolinguistic affiliation
+KHT,antq_khotan_oasis,antq_tarim_oasis_traditions,HAN-WR;IRAN-KHO;P10;P11,contested,Khotan local-oasis profile without backdating widespread organized Mahayana
+KUC,antq_kucha_oasis,antq_tarim_oasis_traditions,HAN-WR;IRAN-KUC;P10;P11,contested,Kucha local-oasis profile without backdating its later documented language or Buddhist institutions
+KAS,antq_kashgar_oasis,antq_tarim_oasis_traditions,HAN-WR;IRAN-KAS;P10;P11,contested,Kashgar-Shule local-oasis profile
+LOU,antq_loulan_oasis,antq_tarim_oasis_traditions,HAN-WR;CAM-LOU;P10;P11,contested,Loulan-Shanshan local-oasis profile
+TUR,antq_turpan_oasis,antq_tarim_oasis_traditions,HAN-WR;HHS-WR;IRAN-CT;P10;P11,contested,Nearer Jushi and Turpan local-oasis profile
+GMU,antq_aksu_oasis,antq_tarim_oasis_traditions,HAN-WR;IRAN-AKS;P10;P11,contested,Gumo-Aksu local-oasis profile
+QIM,antq_qiemo_oasis,antq_tarim_oasis_traditions,HAN-WR;P10;P11,contested,Qiemo-Cherchen local-oasis profile
+YQI,antq_yanqi_oasis,antq_tarim_oasis_traditions,HAN-WR;HHS-WR;P10;P11,contested,Yanqi-Karashahr local-oasis profile
+SHC,antq_yarkand_oasis,antq_tarim_oasis_traditions,HAN-WR;IRAN-YAR;P10;P11,contested,Shache-Yarkand local-oasis profile
+PUL,antq_puli_highland,antq_tarim_oasis_traditions,HAN-WR;P10;P11,contested,Puli Pamir-highland profile
+FJS,antq_further_jushi,antq_tarim_oasis_traditions,HAN-WR;HHS-WR;P10;P11,contested,Further Jushi north-Tianshan profile
+IWL,antq_hami_oasis,antq_tarim_oasis_traditions,HAN-WR;IRAN-CT;P10;P11,contested,Yiwulu-Hami local-oasis profile
+DNH,antq_danhuan_oasis,antq_tarim_oasis_traditions,HAN-WR;HHS-WR;P10;P11,contested,Compact Danhuan local-state profile
 KUL,antq_kulay,antq_finnic,TOM-KUL;P8.8;P10;P11,contested,Kulay archaeological horizon rather than an ethnicity or state
 UGR,antq_kulay,antq_finnic,TOM-KUL;BSE-UST-POLUY;P10;P11,contested,Lower-Irtysh Kulay archaeological frame without a modern-language boundary
 SIB,antq_tes_tashtyk,antq_tengri,FU-TASHTYK;P8.8;P10;P11,contested,Minusinsk Tes-Tashtyk transition frame rather than a unitary state

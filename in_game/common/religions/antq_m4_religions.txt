@@ -545,3 +545,31 @@ antq_eastern_hill_traditions = { # OUP-NEINDIA;P11; Plural northeast Indian plat
 	opinions = {
 	}
 }
+
+antq_eastern_iranian_traditions = { # HAN-WR;IRAN-SOG-KANGJU;UNESCO-CA-NOMADS;P11; Plural Bactrian Sogdian Ferghana Kangju and Aria cult contexts represented without imposing one Arsacid orthodoxy or recovered common liturgy
+	color = antq_religion_color_antq_eastern_iranian_traditions
+	group = zoroastrian_group
+	religious_aspects = 2
+	has_religious_influence = yes
+	definition_modifier = {
+		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
+	}
+	opinions = {
+	}
+}
+
+antq_tarim_oasis_traditions = { # HAN-WR;HHS-WR;IRAN-CT;P11; Plural Tarim and north-Tianshan local cults represented without backdating widespread Mahayana institutions later documented languages or one common creed
+	color = antq_religion_color_antq_tarim_oasis_traditions
+	group = zoroastrian_group
+	religious_aspects = 2
+	has_religious_influence = yes
+	definition_modifier = {
+		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
+	}
+	opinions = {
+	}
+}

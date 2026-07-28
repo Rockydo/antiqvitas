@@ -40,6 +40,7 @@ START_ADAPTERS = {
     "ROM": "antq_client_kingdom",
     "PAR": "antq_satrapy",
     "HAN": "antq_tributary",
+    "KNG": "antq_tributary",
 }
 FOEDERATI_UNLOCK = AntqDate.parse("382.1.1")
 HOLY_SUPPRESSION_UNLOCK = AntqDate.parse("325.1.1")
@@ -613,6 +614,17 @@ def organization_records() -> tuple[InternationalOrganization, ...]:
             leader_io(map_visible=True, leader_modifier=("\t\tmonthly_prestige = 0.05", "\t\tmonthly_tribal_cohesion = 0.03")),
         ),
         InternationalOrganization(
+            "antq_kangju_confederation", "Kangju Confederation",
+            "A light AD 1 confederational layer linking the Kangju king with constituent Sogdian city polities without treating Sogdiana as a unitary annexed province.",
+            leader_io(
+                map_visible=True,
+                leader_modifier=(
+                    "\t\tmonthly_prestige = 0.03",
+                    "\t\tglobal_trade_through_owned_territory_efficiency = 0.03",
+                ),
+            ),
+        ),
+        InternationalOrganization(
             "antq_panhellenic_games", "Panhellenic Games",
             "A prestige institution maintained as a light, non-territorial organization until its late-antique sunset.",
             "\n".join((
@@ -678,6 +690,7 @@ def io_bias_script(records: tuple[InternationalOrganization, ...]) -> str:
     values = {
         "antq_han_tributary_system": 5,
         "antq_xiongnu_confederation": 10,
+        "antq_kangju_confederation": 7,
         "antq_panhellenic_games": 0,
         "antq_christian_church": 0,
     }
@@ -760,14 +773,22 @@ def international_organization_manager() -> str:
     The one-member Xiongnu instance is intentional: its country is the
     attested confederation at the campaign boundary, while constituent
     membership is left to the M10 fracture/reform events rather than invented.
+    Kangju and Sogdiana receive a separate confederational layer because the
+    evidence supports Kangju predominance alongside constituent city polities.
     Rome is a non-leader technical custodian for a non-territorial Games IO;
     no claim about a uniform Roman membership is implied.
     """
     tags = engine_tag_map()
     start = CAMPAIGN_START.engine()
     entries = (
-        ("antq_han_tributary_system", ("HAN", "KHT", "KUC", "KAS", "LOU", "TUR"), "HAN", "hsv360 { 8 72 82 }"),
+        (
+            "antq_han_tributary_system",
+            ("HAN", "KHT", "KUC", "KAS", "LOU", "TUR", "GMU", "QIM", "YQI", "SHC", "PUL", "FJS", "IWL", "DNH"),
+            "HAN",
+            "hsv360 { 8 72 82 }",
+        ),
         ("antq_xiongnu_confederation", ("XIO",), "XIO", "hsv360 { 34 54 58 }"),
+        ("antq_kangju_confederation", ("KNG", "SOG"), "KNG", "hsv360 { 194 52 58 }"),
         ("antq_panhellenic_games", ("ROM",), None, "hsv360 { 220 18 74 }"),
     )
     blocks = [
@@ -915,9 +936,9 @@ def validate(records: tuple[SubjectContract, ...]) -> None:
             except ValueError as exc:
                 raise ValueError(f"{record.key} has invalid {field}") from exc
     balance = subject_balance_rows(records)
-    if len(balance) != 25:
-        raise ValueError(f"expected 25 start dependencies, found {len(balance)}")
-    if len({row["subject_engine_tag"] for row in balance}) != 25:
+    if len(balance) != 35:
+        raise ValueError(f"expected 35 start dependencies, found {len(balance)}")
+    if len({row["subject_engine_tag"] for row in balance}) != 35:
         raise ValueError("start dependency subjects must have unique engine tags")
     if {row["subject_type"] for row in balance} != set(START_ADAPTERS.values()):
         raise ValueError("start dependency balance ledger lacks a contract family")
@@ -961,7 +982,11 @@ def validate(records: tuple[SubjectContract, ...]) -> None:
     if len(io_keys) != len(set(io_keys)):
         raise ValueError("M9 international-organization keys must be unique")
     tags = engine_tag_map()
-    required_start_tags = {"ROM", "HAN", "KHT", "KUC", "KAS", "LOU", "TUR", "XIO"}
+    required_start_tags = {
+        "ROM", "HAN", "KHT", "KUC", "KAS", "LOU", "TUR", "XIO",
+        "GMU", "QIM", "YQI", "SHC", "PUL", "FJS", "IWL", "DNH",
+        "KNG", "SOG",
+    }
     if missing := sorted(required_start_tags - set(tags)):
         raise ValueError(f"M9 IO start tags are absent from the tag map: {', '.join(missing)}")
     validate_discovery()

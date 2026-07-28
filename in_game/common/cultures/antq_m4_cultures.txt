@@ -316,6 +316,96 @@ antq_sarmatian = { # P10;CAH-XI; Pontic Iranian steppe communities
 	}
 }
 
+antq_arian = { # IRAN-ARIA;P10; Hari-Rud and Herat regional adapter; the Persian name list is technical and does not establish a uniform AD 1 language
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_arian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
+antq_kangju = { # HAN-WR;IRAN-SOG-KANGJU;P10; Middle-Syr confederational adapter without a homogeneous Kangju ethnicity or language
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_kangju
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
+antq_dayuan_ferghana = { # HAN-WR;P10; Ferghana urban and irrigated-valley adapter; the naming list does not determine local language
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_dayuan_ferghana
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
+antq_yancai_aorsi = { # HAN-WR;UNESCO-CA-NOMADS;WIL-SAR;P10; Aral-Caspian textual and material proxy; Yancai-Aorsi equivalence and language remain contested
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_yancai_aorsi
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
+antq_saryarka_late_iron = { # UNESCO-CA-NOMADS;WIL-SAR;P10; Central-Saryarka material horizon rather than an ethnic or linguistic map
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_saryarka_late_iron
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
+antq_qiemo_oasis = { # HAN-WR;P10; Qiemo-Cherchen local oasis proxy with a purely technical Iranian naming adapter
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_qiemo_oasis
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
+antq_yanqi_oasis = { # HAN-WR;HHS-WR;P10; Yanqi-Karashahr local oasis proxy without backdating a later documented language
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_yanqi_oasis
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
+antq_puli_highland = { # HAN-WR;P10; Pamir-Sarikol highland-court proxy; linguistic affiliation is not asserted
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_puli_highland
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
+antq_further_jushi = { # HAN-WR;HHS-WR;P10; North-Tianshan Jushi proxy with a technical name-list fallback only
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_further_jushi
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
+antq_danhuan_oasis = { # HAN-WR;HHS-WR;P10; Very small north-Tianshan state proxy; its language and wider ethnicity are unresolved
+	language = antq_iranian_dialect
+	color = antq_culture_color_antq_danhuan_oasis
+	tags = { european_gfx }
+	culture_groups = {
+		antq_iranian_group
+	}
+}
+
 antq_scythian = { # P8.7;P10;CAH-XI; Crimean Scythian-remnant regional proxy
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_scythian

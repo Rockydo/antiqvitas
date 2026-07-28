@@ -376,6 +376,72 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "P8.2;P13;OCD", "contested",
         "Regional dynastic office remains negotiated with the great-house order.",
     ),
+    "antq_arian_satrapal_court": (
+        "global_nobles_estate_power=0.07|burghers_estate_power_from_cabinet=0.12|"
+        "global_trade_through_owned_territory_efficiency=0.03|"
+        "replace_cabinet_member_cost_modifier=0.07",
+        "IRAN-ARIA;P8.2;P13", "contested",
+        "Aria's old satrapal and urban frame is represented without inventing an independently attested AD 1 dynasty or fixed constitution.",
+    ),
+    "antq_kangju_confederated_kingship": (
+        "global_tribes_estate_power=0.08|nobles_estate_power_from_cabinet=0.18|"
+        "global_trade_through_owned_territory_efficiency=0.03|"
+        "replace_cabinet_member_cost_modifier=0.08",
+        "HAN-WR;IRAN-SOG-KANGJU;P8.3;P13", "contested",
+        "The Kangju king coordinates constituent rulers, mounted households, pasture routes, and Sogdian towns rather than administering one unitary state.",
+    ),
+    "antq_sogdian_city_compact": (
+        "global_burghers_estate_power=0.09|burghers_estate_power_from_cabinet=0.20|"
+        "global_trade_through_owned_territory_efficiency=0.04|"
+        "replace_cabinet_member_cost_modifier=0.05",
+        "IRAN-SOG-KANGJU;HAN-WR;P8.2;P13", "contested",
+        "Principal towns and landed houses coordinate exchange and defence beneath Kangju predominance without implying a unified Sogdian crown.",
+    ),
+    "antq_dayuan_oasis_kingship": (
+        "global_burghers_estate_power=0.06|nobles_estate_power_from_cabinet=0.12|"
+        "global_production_efficiency=0.025|replace_cabinet_member_cost_modifier=0.04",
+        "HAN-WR;P8.3;P13", "contested",
+        "The Ferghana court balances irrigated towns, horse-breeding households, route interests, and Han-facing diplomacy.",
+    ),
+    "antq_wusun_kunmi_confederacy": (
+        "global_tribes_estate_power=0.09|nobles_estate_power_from_cabinet=0.16|"
+        "land_morale_modifier=0.025|replace_cabinet_member_cost_modifier=0.07",
+        "HAN-WR;HHS-WR;P8.3;P13", "secure",
+        "The Kunmi's authority depends on mobile households, subordinate leaders, remount pastures, and negotiated relations with Han and Xiongnu.",
+    ),
+    "antq_yuezhi_five_yabghus": (
+        "global_tribes_estate_power=0.07|nobles_estate_power_from_cabinet=0.18|"
+        "land_morale_modifier=0.025|replace_cabinet_member_cost_modifier=0.08",
+        "HAN-WR;UNESCO-CA-NOMADS;P8.3;P13", "contested",
+        "The five yabghu framework represents a divided Yuezhi-Bactrian political field without fixing the disputed chronology of Kushan consolidation.",
+    ),
+    "antq_han_western_regions_kingship": (
+        "global_burghers_estate_power=0.05|nobles_estate_power_from_cabinet=0.10|"
+        "global_trade_through_owned_territory_efficiency=0.025|"
+        "replace_cabinet_member_cost_modifier=0.04",
+        "HAN-WR;HHS-WR;P8.3;P13", "contested",
+        "A local oasis king and court operate within tributary and protectorate relationships; this is not a Han commandery or direct cultural annexation.",
+    ),
+    "antq_yancai_aorsi_confederacy": (
+        "global_tribes_estate_power=0.10|tribes_estate_power_from_cabinet=0.22|"
+        "land_morale_modifier=0.02|replace_cabinet_member_cost_modifier=0.05",
+        "HAN-WR;UNESCO-CA-NOMADS;P8.3;P13", "contested",
+        "A mobile lower-Ural confederational adapter uses the debated Yancai-Aorsi association without asserting exact borders or a recovered office system.",
+    ),
+    "antq_saryarka_late_iron_network": (
+        "global_tribes_estate_power=0.11|global_peasants_estate_power=0.04|"
+        "tribes_estate_power_from_cabinet=0.20|global_monthly_food_modifier=0.02|"
+        "replace_cabinet_member_cost_modifier=0.02",
+        "UNESCO-CA-NOMADS;P8.3;P13", "contested",
+        "A material-horizon and route network represents central-steppe communities without manufacturing a single ethnicity, state, or ruler.",
+    ),
+    "antq_altai_contact_network": (
+        "global_tribes_estate_power=0.11|tribes_estate_power_from_cabinet=0.21|"
+        "global_trade_through_owned_territory_efficiency=0.02|"
+        "replace_cabinet_member_cost_modifier=0.02",
+        "UNESCO-CA-NOMADS;P8.3;P13", "contested",
+        "Altai herding, exchange, and ritual communities are represented as a contact network rather than a falsely unitary ancient nation.",
+    ),
     "antq_buffer_kingdom": (
         "global_burghers_estate_power=0.05|estate_power_from_cabinet=0.10|"
         "replace_cabinet_member_cost_modifier=0.05",
@@ -1120,17 +1186,26 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
     "late_han": (),
     "iranian": (
         "antq_parthian_king_of_kings", "antq_parthian_subkingdom",
-        "antq_indo_scythian_kingship",
+        "antq_indo_scythian_kingship", "antq_arian_satrapal_court",
+        "antq_yuezhi_five_yabghus",
     ),
     "sasanian": ("antq_sassanid_centralized_monarchy",),
     "civic": ("antq_indo_greek_kingship", "antq_settled_town_cluster"),
     "gana": ("antq_indian_ganasangha",),
-    "steppe": (),
-    "tribal": ("antq_advanced_chiefdom", "antq_tribal_kingdom"),
+    "steppe": (
+        "antq_kangju_confederated_kingship", "antq_wusun_kunmi_confederacy",
+        "antq_yancai_aorsi_confederacy",
+    ),
+    "tribal": (
+        "antq_advanced_chiefdom", "antq_tribal_kingdom",
+        "antq_saryarka_late_iron_network", "antq_altai_contact_network",
+    ),
     "sacral": (),
     "royal": (
         "antq_client_monarchy", "antq_buffer_kingdom", "antq_regional_kingship",
         "antq_northern_indian_coin_kingship", "antq_pundranagara_urban_kingship",
+        "antq_sogdian_city_compact", "antq_dayuan_oasis_kingship",
+        "antq_han_western_regions_kingship",
     ),
     "xiongnu": ("antq_steppe_confederation",),
     "xianbei": ("antq_xianbei_eastern_confederacy",),
@@ -1708,7 +1783,7 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    expected_contract_count = 61 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    expected_contract_count = 71 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -1999,6 +2074,116 @@ antq_parthian_subkingdom = {
 		global_nobles_estate_power = 0.10
 		monthly_towards_decentralization = societal_value_minor_monthly_move
 		research_speed = 0.08
+	}
+	years = 2
+}
+
+antq_arian_satrapal_court = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.05
+		global_trade_through_owned_territory_efficiency = 0.03
+		research_speed = 0.09
+	}
+	years = 2
+}
+
+antq_kangju_confederated_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		research_speed = 0.08
+	}
+	years = 2
+}
+
+antq_sogdian_city_compact = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_burghers_estate_power = 0.08
+		global_trade_through_owned_territory_efficiency = 0.04
+		research_speed = 0.10
+	}
+	years = 2
+}
+
+antq_dayuan_oasis_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_burghers_estate_power = 0.05
+		global_production_efficiency = 0.025
+		research_speed = 0.09
+	}
+	years = 2
+}
+
+antq_wusun_kunmi_confederacy = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		land_morale_modifier = 0.025
+		research_speed = 0.08
+	}
+	years = 2
+}
+
+antq_yuezhi_five_yabghus = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.07
+		land_morale_modifier = 0.025
+		research_speed = 0.08
+	}
+	years = 2
+}
+
+antq_han_western_regions_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_burghers_estate_power = 0.05
+		global_trade_through_owned_territory_efficiency = 0.025
+		research_speed = 0.09
+	}
+	years = 2
+}
+
+antq_yancai_aorsi_confederacy = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		land_morale_modifier = 0.02
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_saryarka_late_iron_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		global_monthly_food_modifier = 0.02
+		research_speed = 0.06
+	}
+	years = 2
+}
+
+antq_altai_contact_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		global_trade_through_owned_territory_efficiency = 0.02
+		research_speed = 0.06
 	}
 	years = 2
 }
@@ -2774,6 +2959,26 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_client_monarchy_desc", "A local royal court whose position is shaped by imperial patronage."),
         ("antq_parthian_subkingdom", "Parthian Sub-Kingdom"),
         ("antq_parthian_subkingdom_desc", "A regional Iranian court whose authority rests on local elites and an Arsacid-facing political order."),
+        ("antq_arian_satrapal_court", "Arian Satrapal Court"),
+        ("antq_arian_satrapal_court_desc", "Aria's old satrapal and urban frame balancing landed houses, caravan interests, cultivators, and Arsacid-facing authority."),
+        ("antq_kangju_confederated_kingship", "Kangju Confederated Kingship"),
+        ("antq_kangju_confederated_kingship_desc", "A royal confederation coordinating constituent rulers, mounted households, pasture routes, and Sogdian towns."),
+        ("antq_sogdian_city_compact", "Sogdian City Compact"),
+        ("antq_sogdian_city_compact_desc", "Principal towns and landed houses coordinating exchange and defence beneath Kangju predominance without a unitary Sogdian crown."),
+        ("antq_dayuan_oasis_kingship", "Dayuan Oasis Kingship"),
+        ("antq_dayuan_oasis_kingship_desc", "The Ferghana court balancing irrigated towns, horse-breeding households, route interests, and Han-facing diplomacy."),
+        ("antq_wusun_kunmi_confederacy", "Wusun Kunmi Confederacy"),
+        ("antq_wusun_kunmi_confederacy_desc", "The Kunmi's negotiated authority over mobile households, subordinate leaders, remount pastures, and frontier diplomacy."),
+        ("antq_yuezhi_five_yabghus", "Yuezhi Five Yabghus"),
+        ("antq_yuezhi_five_yabghus_desc", "A divided Yuezhi-Bactrian political field represented without fixing the disputed chronology of Kushan consolidation."),
+        ("antq_han_western_regions_kingship", "Western Regions Kingship"),
+        ("antq_han_western_regions_kingship_desc", "A local oasis king and court operating through tributary and protectorate relations rather than direct Han annexation."),
+        ("antq_yancai_aorsi_confederacy", "Yancai-Aorsi Confederacy"),
+        ("antq_yancai_aorsi_confederacy_desc", "A mobile lower-Ural confederational adapter using the debated Yancai-Aorsi association without invented borders or offices."),
+        ("antq_saryarka_late_iron_network", "Saryarka Late Iron-Age Network"),
+        ("antq_saryarka_late_iron_network_desc", "Central-steppe communities linked by herding, exchange, burial, and seasonal routes without a falsely unitary state."),
+        ("antq_altai_contact_network", "Altai Contact Network"),
+        ("antq_altai_contact_network_desc", "Altai herding, exchange, and ritual communities represented as a contact network rather than one ancient nation."),
         ("antq_buffer_kingdom", "Buffer Kingdom"),
         ("antq_buffer_kingdom_desc", "A frontier court balancing local authority against stronger neighbouring powers."),
         ("antq_kushite_dual_kingship", "Kushite Dual Kingship"),

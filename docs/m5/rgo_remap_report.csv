@@ -11,7 +11,7 @@ ahlat,Caucasus,regional_rule,silk,fiber_crops
 ahvaz,Iran,regional_rule,sugar,fiber_crops
 akbarpur,India,regional_rule,silk,fiber_crops
 akhmim,Rome,regional_rule,cotton,fiber_crops
-aksu,Central Asia,environment_rule,cotton,fiber_crops
+aksu,Tarim,regional_rule,cotton,fiber_crops
 akyazi,Rome,regional_rule,silk,fiber_crops
 al_ahsa,Arabia,regional_rule,rice,millet
 al_kadwa,Rome,regional_rule,cotton,fiber_crops
@@ -37,7 +37,7 @@ antioch,Rome,regional_rule,silk,fiber_crops
 aqca,Central Asia,environment_rule,cotton,fiber_crops
 arad,Danube,regional_rule,wine,fruit
 arrah,India,regional_rule,saltpeter,salt
-artush,Central Asia,environment_rule,cotton,fiber_crops
+artush,Tarim,regional_rule,cotton,fiber_crops
 ashaval,India,regional_rule,silk,fiber_crops
 ashigara,Japan,regional_rule,tea,medicaments
 ashikaga_loc,Japan,regional_rule,cotton,fiber_crops
@@ -108,7 +108,7 @@ chandwar,India,environment_rule,sugar,fiber_crops
 changle_xunzhou,China,regional_rule,cotton,fiber_crops
 changshu,China,regional_rule,cotton,fiber_crops
 changyang,China,regional_rule,cotton,fiber_crops
-charchan,Central Asia,environment_rule,cotton,fiber_crops
+charchan,Tarim,regional_rule,cotton,fiber_crops
 chebba,Rome,regional_rule,sugar,fiber_crops
 chengdu,China,anchor,rice,silk
 cherchell,Africa,regional_rule,sugar,fiber_crops
@@ -195,7 +195,7 @@ gremi,Caucasus,regional_rule,silk,fiber_crops
 guangchang,China,regional_rule,pepper,medicaments
 gugera,India,environment_rule,sugar,fiber_crops
 guishan,China,regional_rule,cotton,fiber_crops
-guma,Central Asia,regional_rule,rice,millet
+guma,Tarim,regional_rule,rice,millet
 guwan,China,regional_rule,pepper,medicaments
 gynaikokastro,Rome,environment_rule,wine,fruit
 ha_va_nguon,Southeast Asia,regional_rule,incense,medicaments
@@ -257,7 +257,7 @@ kanauj,India,regional_rule,silk,fiber_crops
 kandiaro,India,regional_rule,silk,fiber_crops
 kandy,Lanka,regional_rule,pepper,medicaments
 karajia,Andes,environment_rule,cotton,fiber_crops
-karakax,Central Asia,environment_rule,cotton,fiber_crops
+karakax,Tarim,regional_rule,cotton,fiber_crops
 karkevand,Iran,environment_rule,cotton,fiber_crops
 karpus_mahal,Southeast Asia,regional_rule,silk,fiber_crops
 karytaina,Rome,regional_rule,saltpeter,salt
@@ -288,7 +288,7 @@ krupina,Germania,regional_rule,wine,fruit
 ksar_el_boukhari,Africa,environment_rule,olives,fruit
 ksar_el_kebir,Africa,regional_rule,sugar,fiber_crops
 kuji,Japan,regional_rule,tea,medicaments
-kurla,Central Asia,regional_rule,rice,millet
+kurla,Tarim,regional_rule,rice,millet
 kuse,Japan,regional_rule,tea,medicaments
 kushinagar,India,regional_rule,silk,fiber_crops
 kuznetsk,Steppe,regional_rule,coal,lumber
@@ -311,10 +311,10 @@ lisle_jourdain,Rome,environment_rule,olives,fruit
 litomerice,Germania,regional_rule,wine,fruit
 loket,Germania,regional_rule,coal,lumber
 lomello,Rome,regional_rule,rice,millet
-lop,Central Asia,regional_rule,silk,fiber_crops
+lop,Tarim,regional_rule,silk,fiber_crops
 lorca,Rome,regional_rule,saltpeter,salt
 lucca,Rome,regional_rule,cotton,fiber_crops
-lukchun,Central Asia,regional_rule,saltpeter,salt
+lukchun,Tarim,regional_rule,saltpeter,salt
 luliang,China,regional_rule,cotton,fiber_crops
 lumajang,Southeast Asia,regional_rule,saltpeter,salt
 luoji,China,regional_rule,pepper,medicaments
@@ -451,7 +451,7 @@ qiubei,China,regional_rule,cotton,fiber_crops
 qobustan,Caucasus,regional_rule,cotton,fiber_crops
 quanjiao,China,regional_rule,cotton,fiber_crops
 quelimane,Africa,regional_rule,rice,millet
-qumbash,Central Asia,regional_rule,rice,millet
+qumbash,Tarim,regional_rule,rice,millet
 rahatgarh,India,regional_rule,saltpeter,salt
 rahba,Iran,regional_rule,sugar,fiber_crops
 rahsaan_khad,Steppe,regional_rule,coal,lumber
@@ -559,7 +559,7 @@ tijis,Rome,environment_rule,olives,fruit
 tiruccirapalli,India,regional_rule,incense,medicaments
 tissamaharama,Lanka,regional_rule,pepper,medicaments
 tissemsilt,Africa,environment_rule,cotton,fiber_crops
-tokkuzak,Central Asia,environment_rule,cotton,fiber_crops
+tokkuzak,Tarim,regional_rule,cotton,fiber_crops
 tolna,Danube,regional_rule,wine,fruit
 tomelloso,Rome,environment_rule,wine,fruit
 tonami,Japan,regional_rule,saltpeter,salt
@@ -625,7 +625,7 @@ yanbu,Arabia,regional_rule,saffron,medicaments
 yanci,China,regional_rule,cotton,fiber_crops
 yangchun,China,regional_rule,cotton,fiber_crops
 yangikent,Central Asia,environment_rule,cotton,fiber_crops
-yarkand,Central Asia,environment_rule,cotton,fiber_crops
+yarkand,Tarim,regional_rule,cotton,fiber_crops
 yasukand,Iran,environment_rule,wine,fruit
 yazd,Iran,regional_rule,silk,fiber_crops
 yeongdeok,Korea,regional_rule,coal,lumber
@@ -668,14 +668,14 @@ zwickau,Germania,regional_rule,coal,lumber
 # anchor:salt->antq_papyrus,1
 # anchor:salt->silver,1
 # anchor:wheat->antq_silphium,1
-# environment_rule:cotton->fiber_crops,35
+# environment_rule:cotton->fiber_crops,29
 # environment_rule:olives->fruit,25
 # environment_rule:pepper->medicaments,4
 # environment_rule:sugar->fiber_crops,9
 # environment_rule:wine->fruit,25
 # regional_rule:coal->lumber,49
 # regional_rule:coffee->medicaments,8
-# regional_rule:cotton->fiber_crops,95
+# regional_rule:cotton->fiber_crops,101
 # regional_rule:elephants->livestock,2
 # regional_rule:incense->medicaments,33
 # regional_rule:olives->fruit,7

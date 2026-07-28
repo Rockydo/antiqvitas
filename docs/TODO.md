@@ -5,7 +5,7 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,355-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
+- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,357-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
   - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
 ## Second manual playtest remediation — 2026-07-26 (resume here)
@@ -24,9 +24,9 @@ and focused runtime probe all pass.
 
 ### Audit baseline
 
-- The roster now has 338 playable tags after the Arabia, Britain/Ireland,
+- The roster now has 348 playable tags after the Arabia, Britain/Ireland,
   Germania/Baltic, northern/eastern, Maghreb, Horn, Bantu-frontier, West
-  African, and Gangetic archaeological splits. Twenty-two player-facing macro-polities
+  African, Gangetic, and Inner Asian archaeological splits. Twenty-one player-facing macro-polities
   still contain “Societies” or another prohibited placeholder term in their
   names, concentrated in the Americas, Central/South/East/Southeast Asia, and
   Oceania. These are country-scale aggregations, not merely descriptive
@@ -35,9 +35,9 @@ and focused runtime probe all pass.
   652 regional, environmental, and direct-anchor corrections. Most retained
   staples remain inherited but are explicitly marked as contested where local
   extraction is not attested; deeper regional specialty work remains open.
-- The 265 ancient building definitions now seed 2,796 direct regional
-  placements across 1,542 settlement-ranked locations and all 338 starting
-  polities. The top ten hold 7.0% because reviewed Roman metropolitan packages
+- The 265 ancient building definitions now seed 2,966 direct regional
+  placements across 1,583 settlement-ranked locations and all 348 starting
+  polities. The top ten hold 6.5% because reviewed Roman metropolitan packages
   remain deliberately deep; ordinary locations are capped at six.
 - The advance DAG now has 360 nodes and 25 unique effect packages after the
   first 110-node Age-I expansion; 297 nodes still unlock no separate content.
@@ -45,8 +45,8 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 250 generated opening
-  government records and 364 privileges serve 338 opening polities. The legal
+  thin outside the first replacement tranches: 261 generated opening
+  government records and 364 privileges serve 348 opening polities. The legal
   layer now has 227 ancient groups,
   including 182 profile laws with 584 total options, a 26-option dated
   development layer, and 12 country-specific exceptions.
@@ -56,9 +56,9 @@ and focused runtime probe all pass.
   resolver art. Rome starts at technology level 3 with a positive opening
   balance; the remaining risk is incomplete 12-month runtime proof.
 - Existing building and advance art is generally strong, but centering, circular
-  safe-area compliance, and outlier quality were not validated in the actual UI.
-  Villa Liviae and Regional Law Codes are confirmed review targets. Location pop
-  summaries and the artillery category still resolve vanilla imagery.
+  safe-area compliance, and outlier quality were not validated in every actual
+  gameplay panel. Villa Liviae and Regional Law Codes remain confirmed focused
+  review targets; location-pop and artillery resolvers now use direct ancient art.
 
 ### S2-P0 — Opening-state correctness and vanilla-system quarantine
 
@@ -610,9 +610,34 @@ and focused runtime probe all pass.
     Nsukka-Lejja, Lower Oueme, Volta-Cong, and Bosumtwi frames without
     backdating later named states or asserting unsupported ethnic borders.
   - [ ] Literal African placeholder countries are exhausted and the Gangetic
-    superstate is split. Continue the size-ranked global census with the
-    302-location Inner Asian Oasis Societies frame, then Tibetan Societies.
+    and Inner Asian superstates are split. Continue the size-ranked global
+    census with the 199-location Tibetan Societies frame.
     The parent task remains open until the census reaches zero.
+    - [x] Replace Inner Asian Oasis Societies as five separate
+      geographic audits, not a country rename. Its 302 locations comprise
+      Transoxiana (93), the Kazakh steppe (85), eastern Khorasan/Bactria (46),
+      Tarim (43), and Dzungaria (35).
+    - [x] Expand existing Dayuan, Sogdian, Kangju, Wusun, Yuezhi, Margianan, and
+      Tarim frames only through source-supported province groups. Represent
+      Kangju's relationship to Sogdian city polities through diplomacy rather
+      than painting all settled Transoxiana as one culture or direct state.
+    - [x] Add only Han-recorded or archaeologically bounded missing frames:
+      Aria, Yancai/Aorsi, a central-Saryarka Late Iron-Age horizon, Gumo,
+      Qiemo, Yanqi, Shache, Puli, Further Jushi, Yiwulu, and Danhuan. Keep tiny
+      recorded settlements compact; leave evidence-free desert or steppe
+      unowned instead of inflating them.
+    - [x] Give every new frame a culture/religion profile, political form, capital,
+      direct standard, opening research, laws/estates/buildings, history and
+      agenda text, eleven-client localization, and exact-selector validator.
+      Record Han suzerainty, Kangju confederational reach, Yuezhi chronology,
+      and every language/name-list fallback as contested rather than converting
+      diplomatic or archaeological evidence into fixed ethnic borders.
+    - [x] The 117-command static gate and reduced paired menu smoke pass. OAS is
+      absent from roster, ownership, residual selectors, and localization; the
+      smoke found zero mod-only normalized error-log lines.
+    - [ ] **Next:** audit Tibetan Societies as separate plateau, valley, and
+      frontier evidence zones. Do not backdate the later Tibetan Empire,
+      Buddhism's imperial establishment, or modern ethnolinguistic borders.
   - [ ] Replace the temporary `mande_language` name-generator fallback on the
     six new bounded West African culture profiles with sourced language-family
     and onomastic roots. Do not turn the technical fallback into a claim of a

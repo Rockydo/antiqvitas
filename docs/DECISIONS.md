@@ -1,5 +1,36 @@
 # Technical and Design Decisions
 
+## 2026-07-28 - Inner Asian hegemony is modeled through diplomacy, not paint
+
+The removed OAS country was neither geographically coherent nor meaningfully
+an oasis polity. Its 302 locations crossed five different evidence regimes.
+ANTIQVITAS therefore uses bounded ownership frames and relationship layers:
+Kangju controls its own steppe-and-route core while Sogdian principal towns
+remain a separate tributary member of a Kangju international organization;
+Han's Western Regions are local tributary kingships rather than commanderies
+or culturally Han annexations; Aria remains a local Arsacid-facing court.
+
+The eleven new frames deliberately distinguish attested named kingdoms from
+archaeological proxies. Gumo, Qiemo, Yanqi, Shache, Puli, Further Jushi,
+Yiwulu, and Danhuan are compact Hanshu/Hou Hanshu-facing courts. Yancai uses
+the debated Aorsi association only as a qualified confederational adapter.
+Saryarka is explicitly a Late Iron-Age material and route horizon, not a
+reconstructed ethnicity or state. Their standards are period-inspired UI
+identifiers and never presented as recovered flags.
+
+Two plural religion adapters prevent worse inherited claims. Eastern Iranian
+Traditions avoids imposing uniform Arsacid Zoroastrian institutions across
+Aria, Sogdiana, Kangju, Dayuan, Margiana, and Yuezhi-held Bactria. Western
+Regions Oasis Traditions avoids backdating the later documented Buddhist
+landscape across every Tarim court. Each has a direct badge and four unique
+direct-art doctrines. These are technical families, not claims of one creed.
+
+`tools/s2_inner_asian_granularity.py` makes this decision permanent: OAS may
+not return, all reviewed ownership counts and capitals are pinned, the
+thirteen Han tributaries and Kangju-Sogdian relation are required, and every
+new frame must retain its culture, religion, reform, standard, research
+unlock, and eleven-client localization.
+
 ## 2026-07-28 - West African residuals use archaeological networks, not later states
 
 The old West African Iron-Age Societies country was not one coherent map

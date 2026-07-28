@@ -2072,3 +2072,115 @@ antq_doctrine_eastern_hill_traditions_highland_custodians = { # OUP-NEINDIA;UCL-
 		antq_doctrine_eastern_hill_traditions_highland_custodians = 10
 	}
 }
+
+antq_doctrine_eastern_iranian_traditions_hearth_fire_custody = { # HAN-WR;IRAN-SOG-KANGJU;IRAN-ARIA;P11; contested; Household fires focused offerings hospitality and the continuity of eastern Iranian communities.
+	icon = antq_doctrine_eastern_iranian_traditions_hearth_fire_custody
+	religion = antq_eastern_iranian_traditions
+
+	modifier = {
+		stability_cost_efficiency = 0.05
+		monthly_religious_influence = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_eastern_iranian_traditions_hearth_fire_custody = 10
+	}
+}
+
+antq_doctrine_eastern_iranian_traditions_river_and_canal_offerings = { # HAN-WR;IRAN-SOG-KANGJU;IRAN-ARIA;P11; contested; Communities joined ritual obligation to the waters sustaining farms orchards and towns.
+	icon = antq_doctrine_eastern_iranian_traditions_river_and_canal_offerings
+	religion = antq_eastern_iranian_traditions
+
+	modifier = {
+		global_monthly_prosperity = 0.02
+		global_monthly_food_modifier = 0.03
+	}
+
+	opinions = {
+		antq_doctrine_eastern_iranian_traditions_river_and_canal_offerings = 10
+	}
+}
+
+antq_doctrine_eastern_iranian_traditions_caravan_oath_networks = { # HAN-WR;IRAN-SOG-KANGJU;IRAN-ARIA;P11; contested; Sworn protection and witnessed hospitality helped people and goods cross competing jurisdictions.
+	icon = antq_doctrine_eastern_iranian_traditions_caravan_oath_networks
+	religion = antq_eastern_iranian_traditions
+
+	modifier = {
+		tolerance_own = 1
+		global_monthly_prosperity = 0.02
+	}
+
+	opinions = {
+		antq_doctrine_eastern_iranian_traditions_caravan_oath_networks = 10
+	}
+}
+
+antq_doctrine_eastern_iranian_traditions_pasture_and_ancestor_rounds = { # HAN-WR;IRAN-SOG-KANGJU;IRAN-ARIA;P11; contested; Seasonal movement linked herds remembered kin and rights to water and grazing.
+	icon = antq_doctrine_eastern_iranian_traditions_pasture_and_ancestor_rounds
+	religion = antq_eastern_iranian_traditions
+
+	modifier = {
+		monthly_legitimacy = 0.03
+		cultural_tradition_modifier = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_eastern_iranian_traditions_pasture_and_ancestor_rounds = 10
+	}
+}
+
+antq_doctrine_tarim_oasis_traditions_oasis_water_custody = { # HAN-WR;HHS-WR;UNESCO-CA-NOMADS;P11; contested; Local custodians joined canal maintenance offerings and the survival of irrigated settlements.
+	icon = antq_doctrine_tarim_oasis_traditions_oasis_water_custody
+	religion = antq_tarim_oasis_traditions
+
+	modifier = {
+		global_monthly_prosperity = 0.02
+		global_monthly_food_modifier = 0.03
+	}
+
+	opinions = {
+		antq_doctrine_tarim_oasis_traditions_oasis_water_custody = 10
+	}
+}
+
+antq_doctrine_tarim_oasis_traditions_route_hospitality = { # HAN-WR;HHS-WR;UNESCO-CA-NOMADS;P11; contested; Guest protection and provisioning bound isolated oasis courts to long overland routes.
+	icon = antq_doctrine_tarim_oasis_traditions_route_hospitality
+	religion = antq_tarim_oasis_traditions
+
+	modifier = {
+		tolerance_own = 1
+		global_monthly_prosperity = 0.02
+	}
+
+	opinions = {
+		antq_doctrine_tarim_oasis_traditions_route_hospitality = 10
+	}
+}
+
+antq_doctrine_tarim_oasis_traditions_court_offerings_and_seals = { # HAN-WR;HHS-WR;UNESCO-CA-NOMADS;P11; contested; Court ritual and authenticated seals made local kingship legible to merchants and distant powers.
+	icon = antq_doctrine_tarim_oasis_traditions_court_offerings_and_seals
+	religion = antq_tarim_oasis_traditions
+
+	modifier = {
+		monthly_legitimacy = 0.03
+		country_cabinet_efficiency = 0.02
+	}
+
+	opinions = {
+		antq_doctrine_tarim_oasis_traditions_court_offerings_and_seals = 10
+	}
+}
+
+antq_doctrine_tarim_oasis_traditions_orchard_and_pasture_rounds = { # HAN-WR;HHS-WR;UNESCO-CA-NOMADS;P11; contested; Seasonal knowledge coordinated orchards fields flocks and exchange between basin and mountain.
+	icon = antq_doctrine_tarim_oasis_traditions_orchard_and_pasture_rounds
+	religion = antq_tarim_oasis_traditions
+
+	modifier = {
+		global_monthly_food_modifier = 0.03
+		global_hostile_attrition = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_tarim_oasis_traditions_orchard_and_pasture_rounds = 10
+	}
+}

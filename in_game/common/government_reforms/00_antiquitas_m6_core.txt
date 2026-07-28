@@ -197,6 +197,187 @@ antq_parthian_subkingdom = {
 	years = 2
 }
 
+antq_arian_satrapal_court = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.07
+		burghers_estate_power_from_cabinet = 0.12
+		global_trade_through_owned_territory_efficiency = 0.03
+		replace_cabinet_member_cost_modifier = 0.07
+		global_nobles_estate_power = 0.05
+		global_trade_through_owned_territory_efficiency = 0.03
+		research_speed = 0.09
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_iranian_great_council
+	}
+	years = 2
+}
+
+antq_kangju_confederated_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		nobles_estate_power_from_cabinet = 0.18
+		global_trade_through_owned_territory_efficiency = 0.03
+		replace_cabinet_member_cost_modifier = 0.08
+		global_tribes_estate_power = 0.08
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		research_speed = 0.08
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_confederation_council
+	}
+	years = 2
+}
+
+antq_sogdian_city_compact = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_burghers_estate_power = 0.09
+		burghers_estate_power_from_cabinet = 0.20
+		global_trade_through_owned_territory_efficiency = 0.04
+		replace_cabinet_member_cost_modifier = 0.05
+		global_burghers_estate_power = 0.08
+		global_trade_through_owned_territory_efficiency = 0.04
+		research_speed = 0.10
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_royal_council
+	}
+	years = 2
+}
+
+antq_dayuan_oasis_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_burghers_estate_power = 0.06
+		nobles_estate_power_from_cabinet = 0.12
+		global_production_efficiency = 0.025
+		replace_cabinet_member_cost_modifier = 0.04
+		global_burghers_estate_power = 0.05
+		global_production_efficiency = 0.025
+		research_speed = 0.09
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_royal_council
+	}
+	years = 2
+}
+
+antq_wusun_kunmi_confederacy = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_tribes_estate_power = 0.09
+		nobles_estate_power_from_cabinet = 0.16
+		land_morale_modifier = 0.025
+		replace_cabinet_member_cost_modifier = 0.07
+		global_tribes_estate_power = 0.08
+		land_morale_modifier = 0.025
+		research_speed = 0.08
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_confederation_council
+	}
+	years = 2
+}
+
+antq_yuezhi_five_yabghus = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.07
+		nobles_estate_power_from_cabinet = 0.18
+		land_morale_modifier = 0.025
+		replace_cabinet_member_cost_modifier = 0.08
+		global_tribes_estate_power = 0.07
+		land_morale_modifier = 0.025
+		research_speed = 0.08
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_iranian_great_council
+	}
+	years = 2
+}
+
+antq_han_western_regions_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_burghers_estate_power = 0.05
+		nobles_estate_power_from_cabinet = 0.10
+		global_trade_through_owned_territory_efficiency = 0.025
+		replace_cabinet_member_cost_modifier = 0.04
+		global_burghers_estate_power = 0.05
+		global_trade_through_owned_territory_efficiency = 0.025
+		research_speed = 0.09
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_royal_council
+	}
+	years = 2
+}
+
+antq_yancai_aorsi_confederacy = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		tribes_estate_power_from_cabinet = 0.22
+		land_morale_modifier = 0.02
+		replace_cabinet_member_cost_modifier = 0.05
+		global_tribes_estate_power = 0.10
+		land_morale_modifier = 0.02
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_confederation_council
+	}
+	years = 2
+}
+
+antq_saryarka_late_iron_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.11
+		global_peasants_estate_power = 0.04
+		tribes_estate_power_from_cabinet = 0.20
+		global_monthly_food_modifier = 0.02
+		replace_cabinet_member_cost_modifier = 0.02
+		global_tribes_estate_power = 0.10
+		global_monthly_food_modifier = 0.02
+		research_speed = 0.06
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_altai_contact_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.11
+		tribes_estate_power_from_cabinet = 0.21
+		global_trade_through_owned_territory_efficiency = 0.02
+		replace_cabinet_member_cost_modifier = 0.02
+		global_tribes_estate_power = 0.10
+		global_trade_through_owned_territory_efficiency = 0.02
+		research_speed = 0.06
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
 antq_buffer_kingdom = {
 	major = yes
 	government = monarchy
@@ -1139,6 +1320,8 @@ antq_iranian_great_house_reform = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_arian_satrapal_court
+			has_reform = government_reform:antq_yuezhi_five_yabghus
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
 			has_reform = government_reform:antq_vologasid_dynastic_settlement
@@ -1166,6 +1349,8 @@ antq_iranian_royal_domain = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_arian_satrapal_court
+			has_reform = government_reform:antq_yuezhi_five_yabghus
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
 			has_reform = government_reform:antq_vologasid_dynastic_settlement
@@ -1280,6 +1465,9 @@ antq_steppe_wing_confederacy = {
 	government = steppe_horde
 	potential = {
 		OR = {
+			has_reform = government_reform:antq_kangju_confederated_kingship
+			has_reform = government_reform:antq_wusun_kunmi_confederacy
+			has_reform = government_reform:antq_yancai_aorsi_confederacy
 			has_reform = government_reform:antq_steppe_wing_confederacy
 			has_reform = government_reform:antq_steppe_gift_court
 		}
@@ -1301,6 +1489,9 @@ antq_steppe_gift_court = {
 	government = steppe_horde
 	potential = {
 		OR = {
+			has_reform = government_reform:antq_kangju_confederated_kingship
+			has_reform = government_reform:antq_wusun_kunmi_confederacy
+			has_reform = government_reform:antq_yancai_aorsi_confederacy
 			has_reform = government_reform:antq_steppe_wing_confederacy
 			has_reform = government_reform:antq_steppe_gift_court
 		}
@@ -1324,6 +1515,8 @@ antq_elder_moot_kingship = {
 		OR = {
 			has_reform = government_reform:antq_advanced_chiefdom
 			has_reform = government_reform:antq_tribal_kingdom
+			has_reform = government_reform:antq_saryarka_late_iron_network
+			has_reform = government_reform:antq_altai_contact_network
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}
@@ -1347,6 +1540,8 @@ antq_warband_retinue_kingship = {
 		OR = {
 			has_reform = government_reform:antq_advanced_chiefdom
 			has_reform = government_reform:antq_tribal_kingdom
+			has_reform = government_reform:antq_saryarka_late_iron_network
+			has_reform = government_reform:antq_altai_contact_network
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}
@@ -1415,6 +1610,9 @@ antq_petition_court = {
 			has_reform = government_reform:antq_regional_kingship
 			has_reform = government_reform:antq_northern_indian_coin_kingship
 			has_reform = government_reform:antq_pundranagara_urban_kingship
+			has_reform = government_reform:antq_sogdian_city_compact
+			has_reform = government_reform:antq_dayuan_oasis_kingship
+			has_reform = government_reform:antq_han_western_regions_kingship
 			has_reform = government_reform:antq_petition_court
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
@@ -1441,6 +1639,9 @@ antq_frontier_muster_monarchy = {
 			has_reform = government_reform:antq_regional_kingship
 			has_reform = government_reform:antq_northern_indian_coin_kingship
 			has_reform = government_reform:antq_pundranagara_urban_kingship
+			has_reform = government_reform:antq_sogdian_city_compact
+			has_reform = government_reform:antq_dayuan_oasis_kingship
+			has_reform = government_reform:antq_han_western_regions_kingship
 			has_reform = government_reform:antq_petition_court
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
@@ -3227,6 +3428,8 @@ antq_vologasid_dynastic_settlement = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_arian_satrapal_court
+			has_reform = government_reform:antq_yuezhi_five_yabghus
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
 			has_reform = government_reform:antq_vologasid_dynastic_settlement
@@ -3255,6 +3458,8 @@ antq_arsacid_dual_court_compact = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_arian_satrapal_court
+			has_reform = government_reform:antq_yuezhi_five_yabghus
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
 			has_reform = government_reform:antq_vologasid_dynastic_settlement
@@ -3283,6 +3488,8 @@ antq_late_arsacid_house_mobilization = {
 			has_reform = government_reform:antq_parthian_king_of_kings
 			has_reform = government_reform:antq_parthian_subkingdom
 			has_reform = government_reform:antq_indo_scythian_kingship
+			has_reform = government_reform:antq_arian_satrapal_court
+			has_reform = government_reform:antq_yuezhi_five_yabghus
 			has_reform = government_reform:antq_iranian_great_house_reform
 			has_reform = government_reform:antq_iranian_royal_domain
 			has_reform = government_reform:antq_vologasid_dynastic_settlement

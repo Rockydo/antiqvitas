@@ -5,7 +5,7 @@ international_organization_manager = {
 		type = antq_han_tributary_system
 		creation_date = 1.1.1
 		map_color = hsv360 { 8 72 82 }
-		members = { XAR XAS KUC XAT LOU XAV }
+		members = { XAR XAS KUC XAT LOU XAV GMU XGA YQI SHC PUL FJS IWL DNH }
 		leader = XAR
 	}
 
@@ -15,6 +15,14 @@ international_organization_manager = {
 		map_color = hsv360 { 34 54 58 }
 		members = { XIO }
 		leader = XIO
+	}
+
+	add_international_organization = {
+		type = antq_kangju_confederation
+		creation_date = 1.1.1
+		map_color = hsv360 { 194 52 58 }
+		members = { XCI SOG }
+		leader = XCI
 	}
 
 	add_international_organization = {

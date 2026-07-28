@@ -1,5 +1,42 @@
 # Historical Assumptions
 
+## 2026-07-28 - Inner Asian boundaries are qualified reconstructions
+
+† The Hanshu's many Western Regions kingdoms and its travel distances support
+political plurality, not the exact borders drawn on EU5's much later map.
+Gumo, Qiemo, Yanqi, Shache, Puli, Further Jushi, Yiwulu, and Danhuan therefore
+use the smallest coherent installed province/location groups around their
+attested centres. Han recognition, hostages, tribute, colonies, and the
+Protectorate are modeled as tributary and organizational relationships; they
+do not make these populations culturally Han or directly annexed.
+
+† Kangju predominance and the inclusion of much of Sogdiana within its
+confederational sphere do not erase constituent city polities. Sogdian Cities
+is retained separately and made a Kangju tributary/member. Aria's Herat-centred
+frame uses the old regional/satrapal geography under Arsacid predominance
+without inventing an independently attested AD 1 dynasty.
+
+† Yancai's identification with the Aorsi is debated, so `antq_yancai_aorsi`
+is a qualified gameplay label rather than a settled ethnolinguistic equation.
+Saryarka is a Late Iron-Age material horizon, not a named people. The Yuezhi
+five-yabghu structure is used as a divided opening political adapter while the
+chronology and extent of Kushan consolidation remain contested.
+
+† The new cultures require installed name-list and graphical-template
+adapters. Persian- and Mongolian-facing technical templates provide playable
+names and portraits but do not prove language, ethnicity, or modern identity.
+The two new religion families are likewise plural engine adapters, and the
+direct standards are period-inspired UI art rather than reconstructed flags.
+
+Sources weighed: Ban Gu's
+[Hanshu Western Regions translation](https://depts.washington.edu/silkroad/texts/hantxt1.html);
+the annotated
+[Hou Hanshu Western Regions account](https://depts.washington.edu/silkroad/texts/hhshu/notes1.html);
+[Encyclopaedia Iranica on Sogdiana and Kangju](https://www.iranicaonline.org/articles/sogdiana-iii-history-and-archaeology/);
+[Encyclopaedia Iranica on Aria](https://www.iranicaonline.org/articles/aria-region-in-the-eastern-part-of-the-persian-empire/);
+and UNESCO's
+[History of Civilizations of Central Asia, volume II](https://unesdoc.unesco.org/ark:/48223/pf0000105703).
+
 ## 2026-07-28 - West African AD 1 frames are cautious geographic proxies
 
 † The four western-Hausaland frames are geographic and archaeological gameplay

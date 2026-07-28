@@ -1,5 +1,34 @@
 # Progress
 
+## 2026-07-28 - Inner Asia becomes a source-bounded political mosaic
+
+- Removed the 302-location Inner Asian Oasis Societies catch-all after auditing
+  its actual geography: Transoxiana, the Kazakh steppe, eastern
+  Khorasan/Bactria, the Tarim basin, and Dzungaria. Existing Dayuan, Sogdian,
+  Kangju, Wusun, Yuezhi, Margianan, Tarim, Altai, and Xiongnu frames were
+  corrected or expanded, while eleven missing frames were added: Aria,
+  Yancai, Saryarka Late Iron-Age Horizon, Gumo, Qiemo, Yanqi, Shache, Puli,
+  Further Jushi, Yiwulu, and Danhuan. The roster rises from 338 to 348.
+- Added ten opening political reforms, ten cultures, two plural belief-family
+  adapters with eight direct-art doctrines, eleven direct period-inspired
+  standards, and complete research, law, estate, settlement, building, rank,
+  agenda, history, and eleven-client localization integration. Han now has
+  thirteen distinct Western Regions tributaries, Aria is Arsacid-facing, and
+  Sogdian city polities sit in a separate Kangju confederational layer.
+- Added `tools/s2_inner_asian_granularity.py` and its generated ledger. The
+  permanent gate removes OAS from every ownership/localization path and pins
+  the revised counts, capitals, cultures, religions, reforms, standards,
+  dependencies, doctrine breadth, opening research, and localization.
+  The literal-placeholder census falls from twenty-two to twenty-one; the
+  199-location Tibetan Societies frame is now largest.
+- Full validation passes all 117 checks. The reduced vanilla/mod smoke pair
+  reached responsive rendered menus in 197.9 seconds and found zero mod-only
+  normalized `error.log` lines. No observer campaign was run. Evidence is in
+  `docs/playtests/S2_INNER_ASIAN_GRANULARITY_20260728.md`.
+
+Next: split the 199-location Tibetan Societies frame into evidence-bounded
+plateau, valley, and frontier communities without backdating the Tibetan Empire.
+
 ## 2026-07-28 - The Gangetic superstate becomes 24 bounded opening frames
 
 - Replaced the 411-location Gangetic Societies country and corrected the

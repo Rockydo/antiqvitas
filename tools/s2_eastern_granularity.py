@@ -63,7 +63,7 @@ EXPECTED = {
     "SMY": ("Dzhudzhydyag Culture", 3),
     "SRG": ("Omsk-Ishim Sargat Culture", 42),
     "AKL": ("Forest-Steppe Altai Kulay Group", 21),
-    "ALT": ("Altai Xiongnu-Contact Horizon", 25),
+    "ALT": ("Altai Xiongnu-Contact Horizon", 33),
     "KUL": ("Kulay Horizon", 19),
     "UGR": ("Lower Irtysh Kulay Horizon", 24),
     "SIB": ("Tes-Tashtyk Transition", 3),

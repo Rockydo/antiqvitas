@@ -111,6 +111,48 @@ a row reaches `implemented` status.
 - `RAS-SARGAT-CHRON`: Svetlana V. Sharapova, ["Upper Chronological Boundary of Sargat Culture"](https://doaj.org/article/bbdea945a29d42ada807b06b12d3d7b3), *Lower Volga Archaeological Bulletin* 19.2 (2020), pp. 218-246. It treats Sargat antiquities across the Trans-Ural and western-Siberian forest-steppe from the fifth century BCE and identifies late groups especially in the Tobol and Ishim basins. It supports a bounded Omsk-Ishim frame and guards against projecting Sargat uniformly across the Altai.
 - `IRAN-KHO`: Hiroshi Kumamoto, ["Khotan ii. History in the Pre-Islamic Period"](https://www.iranicaonline.org/articles/khotan-parent/khotan-ii-history-in-the-pre-islamic-period/), *Encyclopaedia Iranica* (2009), records Khotan's Han-era oasis/kingdom context and named first- and second-century CE rulers. It supports a local AD 1 oasis frame, not a complete southern-Tarim allocation, language determination, or political boundary.
 - `IRAN-CT`: Richard N. Frye, ["Chinese Turkestan ii. In Pre-Islamic Times"](https://www.iranicaonline.org/articles/chinese-turkestan-ii/), *Encyclopaedia Iranica* (1990), identifies Kumul (Hami) and Turfan among the ancient northern Silk Road oasis states, while cautioning that Han-era Khotan references do not establish whether its inhabitants were Iranian and locating the first concrete Iranian-presence evidence only around the third century CE. It supports exact oasis frames only and prevents projecting later Khotanese-Saka evidence into the start date.
+- `HAN-WR`: Ban Gu, *Hanshu* 96A-B, ["Notes on the Western
+  Regions"](https://depts.washington.edu/silkroad/texts/hantxt1.html), in the
+  University of Washington Silk Road Seattle historical-text collection
+  (Wylie translation with editorial identifications). The account records the
+  Western Regions as dozens of separately ruled settled kingdoms, distinguishes
+  their cities, cultivation, populations, offices, routes, and relations with
+  Han, Xiongnu, Wusun, Kangju, Dayuan, Yuezhi, and Yancai. It supports compact
+  campaign-boundary Gumo, Qiemo, Yanqi, Shache, Puli, Jushi, Yiwulu, and
+  Danhuan adapters and wider regional diplomatic relations; its ancient
+  distances and modern identifications do not establish exact EU5 polygons,
+  ethnicity, language, or continuous Han direct administration.
+- `HHS-WR`: Fan Ye, *Hou Hanshu* 88, ["The Western Regions according to the
+  Hou Hanshu"](https://depts.washington.edu/silkroad/texts/hhshu/hou_han_shu.html),
+  translated and annotated by John E. Hill in the University of Washington
+  Silk Road Seattle collection. The work preserves Eastern Han retrospective
+  geography and notes for very small north-Tianshan states including Danhuan,
+  Guhu, Wutanzili, and the paired Nearer/Further Jushi. It is used to keep these
+  frames small and distinct, not to project later Tarim languages or borders
+  into AD 1.
+- `IRAN-SOG-KANGJU`: Frantz Grenet and Étienne de la Vaissière,
+  ["Sogdiana iii. History and Archaeology"](https://www.iranicaonline.org/articles/sogdiana-iii-history-and-archaeology/),
+  *Encyclopaedia Iranica* (2011), places most Sogdiana within the Kangju
+  confederation from the first century BCE while preserving constituent petty
+  kingdoms and principal towns; southeast Sogdiana instead passed into the
+  Yuezhi/Kushan Bactrian sphere. It supports separate Sogdian city and Kangju
+  frames plus a tributary/confederational relationship, not direct cultural
+  homogenization or one surveyed frontier.
+- `IRAN-ARIA`: Rüdiger Schmitt,
+  ["Aria"](https://www.iranicaonline.org/articles/aria-region-in-the-eastern-part-of-the-persian-empire/),
+  *Encyclopaedia Iranica* (1986; updated 2016), identifies ancient Aria with
+  the Hari Rud/Herat region and its capital with Alexandria in Aria at modern
+  Herat. It supports a compact Herat-Badghis regional court inside the Arsacid
+  political sphere, not a named AD 1 ruler, recovered satrapal bureaucracy, or
+  exact frontier.
+- `UNESCO-CA-NOMADS`: János Harmatta (ed.), *History of Civilizations of
+  Central Asia*, vol. II, [*The Development of Sedentary and Nomadic
+  Civilizations: 700 BC to AD 250*](https://unesdoc.unesco.org/ark:/48223/pf0000105703)
+  (UNESCO, 1994), especially the chapters on northern Central Asian nomads,
+  Kangju, Wusun, Bactria, Transoxiana, and the western steppe. It supports
+  broad Yancai/Aorsi, Kangju, Wusun, and central-Saryarka Late Iron-Age
+  contexts while requiring archaeological and textual uncertainty; it does
+  not make an archaeological horizon a homogeneous ethnic state.
 - `OUP-XIO`: Hyun Jin Kim, ["The Xiongnu"](https://academic.oup.com/edited-volume/61799/chapter-abstract/546289184), *Oxford Research Encyclopedia of Asian History* (2017), describes a first-millennium-BCE/first-century-CE Inner Asian empire reaching from the Baikal region to Ordos/Gansu and stresses its multiethnic, multicultural, and polyglot character. It supports a contested Upper-Selenga campaign-boundary regional frame, not a homogeneous culture, language, or exact polity boundary.
 - `OCD-PAN`: John Wilkes, ["Pannonia"](https://academic.oup.com/edited-volume/61673/chapter-abstract/549687162), *Oxford Classical Dictionary* (2016), identifies the Pannonii as Illyrian peoples with varying Celtic influence in the Drava-Sava/Danube setting. It records completed Roman control before AD 1 and treats the formal province as an AD 9 institution. It supports a cautious Transdanubian Pannonian frame, not a CE 9 province, uniform Romanization, or an exact tribal boundary.
 - `RAS-SAR`: Sergei G. Botalov and Vladimir S. Mosin, ["Radiocarbon

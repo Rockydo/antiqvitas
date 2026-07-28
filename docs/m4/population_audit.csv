@@ -20,12 +20,12 @@ roster_region,Baltic,,non_roman_europe,349.908,4.117,P8.7;P12.4,contested,Observ
 roster_region,Britain,,non_roman_europe,1899.018,22.341,P8.7;P12.4,contested,Observed geography after macro allocation and caps
 roster_region,Caribbean-Amazon,,americas,163.624,1.169,P8.10;P12.4,contested,Observed geography after macro allocation and caps
 roster_region,Caucasus,,other_old_world,7925.551,26.866,P8.2;P12.4,contested,Observed geography after macro allocation and caps
-roster_region,Central Asia,,central_steppe,2677.880,53.558,P8.8;P12.4,contested,Observed geography after macro allocation and caps
+roster_region,Central Asia,,central_steppe,2435.328,48.707,P8.8;P12.4,contested,Observed geography after macro allocation and caps
 roster_region,China,,han,57671.000,100.000,P8.3;P12.4;BHR,secure,Observed geography after macro allocation and caps
 roster_region,Danube,,non_roman_europe,1049.547,12.348,P8.7;P12.4,contested,Observed geography after macro allocation and caps
 roster_region,Eastern Europe,,non_roman_europe,600.206,7.061,P8.7;P12.4,contested,Observed geography after macro allocation and caps
-roster_region,Finland,,non_roman_europe,151.588,1.783,P8.7;P12.4,contested,Observed geography after macro allocation and caps
-roster_region,Germania,,non_roman_europe,3000.181,35.296,P8.7;P12.4,contested,Observed geography after macro allocation and caps
+roster_region,Finland,,non_roman_europe,151.590,1.783,P8.7;P12.4,contested,Observed geography after macro allocation and caps
+roster_region,Germania,,non_roman_europe,3000.179,35.296,P8.7;P12.4,contested,Observed geography after macro allocation and caps
 roster_region,India,,india,38774.058,96.935,P8.4;P12.4,contested,Observed geography after macro allocation and caps
 roster_region,Iran,,parthia,8780.000,97.556,P8.2;P12.4,contested,Observed geography after macro allocation and caps
 roster_region,Ireland,,non_roman_europe,299.902,3.528,P8.7;P12.4,contested,Observed geography after macro allocation and caps
@@ -42,8 +42,8 @@ roster_region,Pontic,,non_roman_europe,699.893,8.234,P8.7;P12.4,contested,Observ
 roster_region,Rome,,roman_empire,47500.000,100.000,P8.1;P12.4,secure,Observed geography after macro allocation and caps
 roster_region,Scandinavia,,non_roman_europe,449.757,5.291,P8.7;P12.4,contested,Observed geography after macro allocation and caps
 roster_region,Southeast Asia,,southeast_asia,4000.000,100.000,P8.9;P12.4,contested,Observed geography after macro allocation and caps
-roster_region,Steppe,,central_steppe,2081.510,41.630,P8.8;P12.4,contested,Observed geography after macro allocation and caps
-roster_region,Tarim,,central_steppe,240.610,4.812,P8.3;P12.4,contested,Observed geography after macro allocation and caps
+roster_region,Steppe,,central_steppe,2128.299,42.566,P8.8;P12.4,contested,Observed geography after macro allocation and caps
+roster_region,Tarim,,central_steppe,436.373,8.727,P8.3;P12.4,contested,Observed geography after macro allocation and caps
 roster_region,West Africa,,sub_saharan_africa,2564.507,20.469,P8.5;P12.4,contested,Observed geography after macro allocation and caps
 italy_subregion,italy_campania,,Rome,1000.000,13.333,P12.4;FRIER-DEM;CAH-XI,contested,Campanian allocation includes Neapolis Puteoli Capua and dense coastal agriculture
 italy_subregion,italy_cisalpine,,Rome,2300.000,30.667,P12.4;FRIER-DEM;SCHEIDEL-ITALY,contested,Cisalpine and northeastern Italy gameplay partition
@@ -60,19 +60,18 @@ italy_culture,antq_venetic,,italy,591.032,7.880,generated-cross-table,audit,Cult
 italy_culture,antq_greek_koine,,italy,500.000,6.667,generated-cross-table,audit,Culture is reported separately from Italian geography
 italy_culture,antq_nuragic,,italy,250.000,3.333,generated-cross-table,audit,Culture is reported separately from Italian geography
 italy_culture,antq_ligurian,,italy,198.651,2.649,generated-cross-table,audit,Culture is reported separately from Italian geography
-global_culture,antq_indo_aryan,,world,13938.383,6.060,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_wu_yue,,world,9794.581,4.259,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_indo_aryan,,world,9270.672,4.031,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_jin_han,,world,6487.339,2.821,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_arab,,world,6353.776,2.763,generated-cross-table,audit,Generated AD 1 base-pop total
-global_culture,antq_magadhi_prakrit,,world,5868.715,2.552,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_yan_han,,world,5283.942,2.297,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_lingnan_yue,,world,5031.804,2.188,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_chu_han,,world,4990.323,2.170,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_zhongyuan_han,,world,4938.267,2.147,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_poyang_han,,world,4642.732,2.019,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_proto_telugu_kannada,,world,4494.952,1.954,generated-cross-table,audit,Generated AD 1 base-pop total
-global_culture,antq_gandhari,,world,4476.019,1.946,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_egyptian,,world,3635.779,1.581,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_gandhari,,world,3461.879,1.505,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_min_yue,,world,3239.938,1.409,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_armenian,,world,3220.151,1.400,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_deccan_prakrit,,world,3212.227,1.397,generated-cross-table,audit,Generated AD 1 base-pop total
@@ -91,7 +90,6 @@ global_culture,antq_berber,,world,2312.010,1.005,generated-cross-table,audit,Gen
 global_culture,antq_sabaean,,world,2178.564,0.947,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_cappadocian,,world,2175.149,0.946,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_parthian,,world,2049.478,0.891,generated-cross-table,audit,Generated AD 1 base-pop total
-global_culture,antq_shauraseni_prakrit,,world,2019.087,0.878,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_caucasian_albanian,,world,1921.502,0.835,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_belgic,,world,1899.821,0.826,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_kartvelian,,world,1830.619,0.796,generated-cross-table,audit,Generated AD 1 base-pop total
@@ -99,26 +97,35 @@ global_culture,antq_median,,world,1720.008,0.748,generated-cross-table,audit,Gen
 global_culture,antq_celtiberian,,world,1597.028,0.694,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_shu_han,,world,1580.575,0.687,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_cisalpine_gallic,,world,1510.317,0.657,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_kosala_prakrit,,world,1472.881,0.640,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_noric,,world,1466.223,0.637,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_kalingan,,world,1462.316,0.636,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_maya,,world,1421.416,0.618,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_vietic,,world,1396.308,0.607,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_yaudheya_prakrit,,world,1393.443,0.606,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_saka,,world,1380.304,0.600,generated-cross-table,audit,Generated AD 1 base-pop total
-global_culture,antq_tibeto_burman,,world,1300.525,0.565,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_andean_regional,,world,1273.820,0.554,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_sogdian,,world,1246.900,0.542,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_oscan_umbrian,,world,1242.868,0.540,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_sinhala,,world,1225.942,0.533,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_lusitanian,,world,1220.124,0.530,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_panchala_prakrit,,world,1219.075,0.530,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_javanese,,world,1190.763,0.518,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_magadhi_prakrit,,world,1174.389,0.511,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_ba_han,,world,1170.562,0.509,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_purepecha_precursor,,world,1131.340,0.492,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_geez,,world,1103.531,0.480,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_vanga_early_historic,,world,1069.195,0.465,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_rarh_early_historic,,world,1022.540,0.445,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_dian,,world,1012.023,0.440,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_meroitic,,world,991.326,0.431,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_samatata_early_historic,,world,978.585,0.425,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_pannonian,,world,960.793,0.418,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_colchian,,world,953.279,0.414,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_pundra_early_historic,,world,941.861,0.410,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_chota_nagpur_megalithic,,world,918.928,0.400,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_chibchan,,world,855.328,0.372,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_videha_prakrit,,world,844.535,0.367,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_gaetulian,,world,826.922,0.360,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_puquina,,world,823.974,0.358,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_buyeo_goguryeoic,,world,811.293,0.353,generated-cross-table,audit,Generated AD 1 base-pop total
@@ -126,12 +133,13 @@ global_culture,antq_blemmyan,,world,798.499,0.347,generated-cross-table,audit,Ge
 global_culture,antq_wa,,world,793.825,0.345,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_xiongnu,,world,777.168,0.338,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_aymara,,world,768.957,0.334,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_kashi_prakrit,,world,739.715,0.322,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_nubian,,world,736.508,0.320,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_khmer,,world,722.366,0.314,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_etruscan,,world,707.132,0.307,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_lower_niger,,world,693.120,0.301,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_arvernian,,world,673.987,0.293,generated-cross-table,audit,Generated AD 1 base-pop total
-global_culture,antq_germanic,,world,667.326,0.290,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_germanic,,world,667.324,0.290,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_dacian,,world,657.908,0.286,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_hopewellian,,world,646.324,0.281,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_iroquoian,,world,640.895,0.279,generated-cross-table,audit,Generated AD 1 base-pop total
@@ -158,7 +166,9 @@ global_culture,antq_comanaean,,world,450.000,0.196,generated-cross-table,audit,G
 global_culture,antq_samhan,,world,449.649,0.195,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_bactrian,,world,449.363,0.195,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_kwale,,world,446.610,0.194,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_tibeto_burman,,world,446.546,0.194,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_pictonian,,world,442.224,0.192,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_anga_prakrit,,world,430.210,0.187,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_senonian,,world,428.935,0.186,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_sequanian,,world,428.174,0.186,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_sapaean,,world,427.639,0.186,generated-cross-table,audit,Generated AD 1 base-pop total
@@ -169,6 +179,7 @@ global_culture,antq_ngovo,,world,383.409,0.167,generated-cross-table,audit,Gener
 global_culture,antq_mossynoecian,,world,375.000,0.163,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_mixe_zoquean,,world,374.180,0.163,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_odrysian,,world,373.990,0.163,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_shauraseni_prakrit,,world,369.873,0.161,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_rhaetic,,world,362.164,0.157,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_persian,,world,358.700,0.156,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_aeduan,,world,345.853,0.150,generated-cross-table,audit,Generated AD 1 base-pop total
@@ -188,6 +199,7 @@ global_culture,antq_senegambian,,world,311.378,0.135,generated-cross-table,audit
 global_culture,antq_iberian,,world,299.232,0.130,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_marcomannic,,world,296.253,0.129,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_nazca,,world,288.632,0.125,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_malla_prakrit,,world,285.604,0.124,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_aulerci_eburovician,,world,285.033,0.124,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_middle_niger,,world,282.553,0.123,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_garamantian,,world,279.962,0.122,generated-cross-table,audit,Generated AD 1 base-pop total
@@ -208,8 +220,10 @@ global_culture,antq_gallaecian,,world,230.333,0.100,generated-cross-table,audit,
 global_culture,antq_unellian,,world,229.118,0.100,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_tiwanaku,,world,226.247,0.098,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_caletian,,world,225.671,0.098,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_ambari_horizon,,world,225.493,0.098,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_samoan,,world,225.000,0.098,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_qiang,,world,224.980,0.098,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_audumbara_hill,,world,223.709,0.097,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_chalybian,,world,223.229,0.097,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_cilician_pedian,,world,222.728,0.097,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_macedonian,,world,221.037,0.096,generated-cross-table,audit,Generated AD 1 base-pop total
@@ -217,6 +231,7 @@ global_culture,antq_musulamian,,world,218.007,0.095,generated-cross-table,audit,
 global_culture,antq_volcan_arecomican,,world,217.342,0.094,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_redonian,,world,213.784,0.093,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_tai,,world,213.696,0.093,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_kaushambi_prakrit,,world,212.254,0.092,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_ionian,,world,211.511,0.092,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_arevacian,,world,210.101,0.091,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_cilician_trachean,,world,207.228,0.090,generated-cross-table,audit,Generated AD 1 base-pop total
@@ -252,14 +267,17 @@ global_culture,antq_new_guinean,,world,166.400,0.072,generated-cross-table,audit
 global_culture,antq_cadurcian,,world,166.108,0.072,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_micronesian,,world,165.457,0.072,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_helvian,,world,164.245,0.071,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_arjunayana_prakrit,,world,161.359,0.070,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_henetian,,world,161.349,0.070,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_brigantian,,world,158.882,0.069,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_elusatian,,world,158.117,0.069,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_mysian,,world,158.093,0.069,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_doyang_dhansiri,,world,157.505,0.068,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_coriosolitan,,world,156.285,0.068,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_corieltauvian,,world,155.816,0.068,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_austronesian,,world,154.906,0.067,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_northern_horn_coastal,,world,154.851,0.067,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_upper_brahmaputra,,world,152.723,0.066,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_elisycean,,world,148.110,0.064,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_epi_olmec,,world,146.993,0.064,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_lacetanian,,world,145.579,0.063,generated-cross-table,audit,Generated AD 1 base-pop total
@@ -290,6 +308,7 @@ global_culture,antq_treverian,,world,126.953,0.055,generated-cross-table,audit,G
 global_culture,antq_zarubintsy,,world,126.148,0.055,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_cabalian,,world,125.800,0.055,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_viromanduian,,world,124.683,0.054,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_khasi_jaintia_highland,,world,124.357,0.054,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_akan_forest,,world,123.928,0.054,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_dentheletian,,world,123.187,0.054,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_cavaric,,world,122.045,0.053,generated-cross-table,audit,Generated AD 1 base-pop total
@@ -304,6 +323,7 @@ global_culture,antq_aulerci_diablintian,,world,113.824,0.049,generated-cross-tab
 global_culture,antq_przeworsk,,world,113.679,0.049,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_ambianian,,world,112.377,0.049,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_semnonic,,world,111.767,0.049,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_harikela_early_historic,,world,111.497,0.048,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_leucian,,world,111.457,0.048,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_paeonian,,world,111.306,0.048,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_totonac,,world,111.034,0.048,generated-cross-table,audit,Generated AD 1 base-pop total
@@ -338,7 +358,7 @@ global_culture,antq_trocmian,,world,79.717,0.035,generated-cross-table,audit,Gen
 global_culture,antq_british_belgic,,world,78.944,0.034,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_tarbellian,,world,78.142,0.034,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_bornean,,world,77.788,0.034,generated-cross-table,audit,Generated AD 1 base-pop total
-global_culture,antq_batavian,,world,77.626,0.034,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_batavian,,world,77.625,0.034,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_pelagonian,,world,77.407,0.034,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_artabrian,,world,76.709,0.033,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_edetan,,world,76.170,0.033,generated-cross-table,audit,Generated AD 1 base-pop total
@@ -357,6 +377,7 @@ global_culture,antq_consorannian,,world,70.980,0.031,generated-cross-table,audit
 global_culture,antq_lycian,,world,70.384,0.031,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_trinovantian,,world,69.516,0.030,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_cynetan,,world,69.512,0.030,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_monyul_highland,,world,68.106,0.030,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_ceretanian,,world,67.861,0.030,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_lipita,,world,67.320,0.029,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_british_cornovian,,world,67.278,0.029,generated-cross-table,audit,Generated AD 1 base-pop total
@@ -396,10 +417,12 @@ global_culture,antq_liburnian_culture,,world,50.613,0.022,generated-cross-table,
 global_culture,antq_dnieper_venedi,,world,50.609,0.022,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_early_tarand,,world,50.113,0.022,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_kashgar_oasis,,world,50.000,0.022,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_sikkim_foothill,,world,49.135,0.021,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_limpopo_hunter_herder,,world,48.717,0.021,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_orestian,,world,48.465,0.021,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_frisian,,world,47.650,0.021,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_west_balt_barrows,,world,47.536,0.021,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_sadiya_foothill,,world,47.224,0.021,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_ordovician,,world,46.773,0.020,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_gorodets,,world,46.405,0.020,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_demetian,,world,45.971,0.020,generated-cross-table,audit,Generated AD 1 base-pop total
@@ -426,6 +449,7 @@ global_culture,antq_avionian,,world,30.853,0.013,generated-cross-table,audit,Gen
 global_culture,antq_oasisamerica,,world,30.568,0.013,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_carvetian,,world,30.502,0.013,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_striated_pottery_neman,,world,29.481,0.013,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_imphal_valley,,world,29.436,0.013,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_lusonian,,world,28.924,0.013,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_caulcian,,world,28.526,0.012,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_gamabrivian,,world,28.229,0.012,generated-cross-table,audit,Generated AD 1 base-pop total
@@ -436,7 +460,7 @@ global_culture,antq_scythian,,world,27.606,0.012,generated-cross-table,audit,Gen
 global_culture,antq_damnonian,,world,25.397,0.011,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_sugambrian,,world,24.320,0.011,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_nilotic,,world,24.003,0.010,generated-cross-table,audit,Generated AD 1 base-pop total
-global_culture,antq_late_dyakovo_north,,world,23.714,0.010,generated-cross-table,audit,Generated AD 1 base-pop total
+global_culture,antq_late_dyakovo_north,,world,23.716,0.010,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_chattuarian,,world,23.695,0.010,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_pyanobor,,world,23.057,0.010,generated-cross-table,audit,Generated AD 1 base-pop total
 global_culture,antq_veniconian,,world,22.757,0.010,generated-cross-table,audit,Generated AD 1 base-pop total
@@ -522,7 +546,7 @@ top_location,03,alexandria,antq_egyptian,500.000,0.217,generated-ranking,audit,T
 top_location,04,baghdad,antq_aramaic,350.000,0.152,generated-ranking,audit,Top 20 generated game locations after fixed targets and residual cap
 top_location,05,luoyang,antq_zhongyuan_han,350.000,0.152,generated-ranking,audit,Top 20 generated game locations after fixed targets and residual cap
 top_location,06,chengdu,antq_shu_han,300.000,0.130,generated-ranking,audit,Top 20 generated game locations after fixed targets and residual cap
-top_location,07,patna,antq_indo_aryan,300.000,0.130,generated-ranking,audit,Top 20 generated game locations after fixed targets and residual cap
+top_location,07,patna,antq_magadhi_prakrit,300.000,0.130,generated-ranking,audit,Top 20 generated game locations after fixed targets and residual cap
 top_location,08,antioch,antq_greek_koine,220.000,0.096,generated-ranking,audit,Top 20 generated game locations after fixed targets and residual cap
 top_location,09,ayasuluk,antq_aeolian,180.000,0.078,generated-ranking,audit,Top 20 generated game locations after fixed targets and residual cap
 top_location,10,tunis,antq_phoenician_punic,180.000,0.078,generated-ranking,audit,Top 20 generated game locations after fixed targets and residual cap

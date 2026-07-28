@@ -186,7 +186,7 @@ MRG = { # Margiana; P8.2;CAH-XI
 	color2 = rgb { 131 176 198 }
 
 	culture_definition = antq_sogdian
-	religion_definition = antq_arsacid_zoroastrianism
+	religion_definition = antq_eastern_iranian_traditions
 	is_historic = yes
 }
 
@@ -248,8 +248,8 @@ XAS = { # Khotan; P8.3;CHG
 	color = rgb { 152 112 48 }
 	color2 = rgb { 103 143 207 }
 
-	culture_definition = antq_bactrian
-	religion_definition = antq_mahayana
+	culture_definition = antq_khotan_oasis
+	religion_definition = antq_tarim_oasis_traditions
 	is_historic = yes
 }
 
@@ -257,8 +257,8 @@ KUC = { # Kucha; P8.3;CHG
 	color = rgb { 150 110 41 }
 	color2 = rgb { 105 145 214 }
 
-	culture_definition = antq_bactrian
-	religion_definition = antq_mahayana
+	culture_definition = antq_kucha_oasis
+	religion_definition = antq_tarim_oasis_traditions
 	is_historic = yes
 }
 
@@ -266,8 +266,8 @@ XAT = { # Kashgar; P8.3;CHG
 	color = rgb { 148 98 62 }
 	color2 = rgb { 107 157 193 }
 
-	culture_definition = antq_bactrian
-	religion_definition = antq_mahayana
+	culture_definition = antq_kashgar_oasis
+	religion_definition = antq_tarim_oasis_traditions
 	is_historic = yes
 }
 
@@ -275,8 +275,8 @@ LOU = { # Loulan; P8.3;CHG
 	color = rgb { 143 108 48 }
 	color2 = rgb { 112 147 207 }
 
-	culture_definition = antq_bactrian
-	religion_definition = antq_mahayana
+	culture_definition = antq_loulan_oasis
+	religion_definition = antq_tarim_oasis_traditions
 	is_historic = yes
 }
 
@@ -284,8 +284,8 @@ XAV = { # Turfan; P8.3;CHG
 	color = rgb { 134 107 43 }
 	color2 = rgb { 121 148 212 }
 
-	culture_definition = antq_bactrian
-	religion_definition = antq_mahayana
+	culture_definition = antq_turpan_oasis
+	religion_definition = antq_tarim_oasis_traditions
 	is_historic = yes
 }
 
@@ -375,7 +375,7 @@ YUE = { # Yuezhi Confederation; P8.4;CAH-XI
 	color2 = rgb { 132 186 207 }
 
 	culture_definition = antq_bactrian
-	religion_definition = antq_arsacid_zoroastrianism
+	religion_definition = antq_eastern_iranian_traditions
 	is_historic = yes
 }
 
@@ -1571,8 +1571,8 @@ XCI = { # Kangju; P8.8;CHG
 	color = rgb { 132 76 51 }
 	color2 = rgb { 123 179 204 }
 
-	culture_definition = antq_sogdian
-	religion_definition = antq_arsacid_zoroastrianism
+	culture_definition = antq_kangju
+	religion_definition = antq_eastern_iranian_traditions
 	is_historic = yes
 }
 
@@ -1580,8 +1580,8 @@ WSN = { # Wusun; P8.8;CHG
 	color = rgb { 126 82 71 }
 	color2 = rgb { 129 173 184 }
 
-	culture_definition = antq_sogdian
-	religion_definition = antq_arsacid_zoroastrianism
+	culture_definition = antq_wusun
+	religion_definition = antq_tengri
 	is_historic = yes
 }
 
@@ -1589,8 +1589,8 @@ DAY = { # Dayuan; P8.8;CHG
 	color = rgb { 141 68 66 }
 	color2 = rgb { 114 187 189 }
 
-	culture_definition = antq_sogdian
-	religion_definition = antq_arsacid_zoroastrianism
+	culture_definition = antq_dayuan_ferghana
+	religion_definition = antq_eastern_iranian_traditions
 	is_historic = yes
 }
 
@@ -1599,7 +1599,7 @@ SOG = { # Sogdian Cities; P8.8;CHG
 	color2 = rgb { 113 182 206 }
 
 	culture_definition = antq_sogdian
-	religion_definition = antq_arsacid_zoroastrianism
+	religion_definition = antq_eastern_iranian_traditions
 	is_historic = yes
 }
 
@@ -1909,12 +1909,102 @@ XDK = { # Angrivarii; TAC-ANN-II;TAC-GER;OCD-GER
 	is_historic = yes
 }
 
-OAS = { # Inner Asian Oasis Societies; P8.8;CAH-XI;CHG
-	color = rgb { 132 68 54 }
-	color2 = rgb { 123 187 201 }
+XFZ = { # Aria; IRAN-ARIA;P8.2;P8.8
+	color = rgb { 122 89 70 }
+	color2 = rgb { 133 166 185 }
 
-	culture_definition = antq_sogdian
-	religion_definition = antq_arsacid_zoroastrianism
+	culture_definition = antq_arian
+	religion_definition = antq_eastern_iranian_traditions
+	is_historic = yes
+}
+
+YNC = { # Yancai; HAN-WR;UNESCO-CA-NOMADS;WIL-SAR
+	color = rgb { 136 90 60 }
+	color2 = rgb { 119 165 195 }
+
+	culture_definition = antq_yancai_aorsi
+	religion_definition = antq_tengri
+	is_historic = yes
+}
+
+SRY = { # Saryarka Late Iron-Age Horizon; UNESCO-CA-NOMADS;WIL-SAR
+	color = rgb { 147 66 51 }
+	color2 = rgb { 108 189 204 }
+
+	culture_definition = antq_saryarka_late_iron
+	religion_definition = antq_tengri
+	is_historic = yes
+}
+
+GMU = { # Gumo; HAN-WR;IRAN-AKS
+	color = rgb { 152 90 61 }
+	color2 = rgb { 103 165 194 }
+
+	culture_definition = antq_aksu_oasis
+	religion_definition = antq_tarim_oasis_traditions
+	is_historic = yes
+}
+
+XGA = { # Qiemo; HAN-WR
+	color = rgb { 152 113 57 }
+	color2 = rgb { 103 142 198 }
+
+	culture_definition = antq_qiemo_oasis
+	religion_definition = antq_tarim_oasis_traditions
+	is_historic = yes
+}
+
+YQI = { # Yanqi; HAN-WR;HHS-WR
+	color = rgb { 152 97 65 }
+	color2 = rgb { 103 158 190 }
+
+	culture_definition = antq_yanqi_oasis
+	religion_definition = antq_tarim_oasis_traditions
+	is_historic = yes
+}
+
+SHC = { # Shache; HAN-WR;IRAN-YAR
+	color = rgb { 160 102 42 }
+	color2 = rgb { 95 153 213 }
+
+	culture_definition = antq_yarkand_oasis
+	religion_definition = antq_tarim_oasis_traditions
+	is_historic = yes
+}
+
+PUL = { # Puli; HAN-WR
+	color = rgb { 139 113 61 }
+	color2 = rgb { 116 142 194 }
+
+	culture_definition = antq_puli_highland
+	religion_definition = antq_tarim_oasis_traditions
+	is_historic = yes
+}
+
+FJS = { # Further Jushi; HAN-WR;HHS-WR
+	color = rgb { 154 105 63 }
+	color2 = rgb { 101 150 192 }
+
+	culture_definition = antq_further_jushi
+	religion_definition = antq_tarim_oasis_traditions
+	is_historic = yes
+}
+
+IWL = { # Yiwulu; HAN-WR;IRAN-CT
+	color = rgb { 145 102 50 }
+	color2 = rgb { 110 153 205 }
+
+	culture_definition = antq_hami_oasis
+	religion_definition = antq_tarim_oasis_traditions
+	is_historic = yes
+}
+
+DNH = { # Danhuan; HAN-WR;HHS-WR
+	color = rgb { 140 88 48 }
+	color2 = rgb { 115 167 207 }
+
+	culture_definition = antq_danhuan_oasis
+	religion_definition = antq_tarim_oasis_traditions
 	is_historic = yes
 }
 

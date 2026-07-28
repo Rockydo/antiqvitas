@@ -95,6 +95,8 @@ RELIGION_ICONS = (
     ReligionIcon("antq_australian_dreaming", "dreamtime_religion"),
     ReligionIcon("antq_caribbean", "tain_feyentun_religion"),
     ReligionIcon("antq_eastern_hill_traditions", "shamanism"),
+    ReligionIcon("antq_eastern_iranian_traditions", "zoroastrian"),
+    ReligionIcon("antq_tarim_oasis_traditions", "tengri"),
 )
 
 

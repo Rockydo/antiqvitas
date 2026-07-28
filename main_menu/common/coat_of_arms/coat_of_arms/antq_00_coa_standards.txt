@@ -2969,17 +2969,157 @@ XDK = { # Angrivarii; TAC-ANN-II;TAC-GER;P20
 	}
 }
 
-OAS = { # Inner Asian Oasis Societies; P8.8;P20
+XFZ = { # Aria; IRAN-ARIA;P20
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "yellow"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_spear_head_byzantine.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.72 0.82 } }
+	}
+}
+
+YNC = { # Yancai; HAN-WR;UNESCO-CA-NOMADS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_horse_courant.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.51 } scale = { 0.84 0.74 } }
+	}
+}
+
+SRY = { # Saryarka Late Iron-Age Horizon; UNESCO-CA-NOMADS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_spiral_star_06.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.77 0.77 } }
+	}
+}
+
+GMU = { # Gumo; HAN-WR;HHS-WR;P20
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "yellow"
-	color3 = "black"
+	color3 = "blue"
 	colored_emblem = {
-		texture = "ce_horse_salient.dds"
+		texture = "ce_bow_arrow.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.83 0.83 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+XGA = { # Qiemo; HAN-WR;HHS-WR;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_ibex_goat_passant.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.52 } scale = { 0.80 0.70 } }
+	}
+}
+
+YQI = { # Yanqi; HAN-WR;HHS-WR;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.70 0.70 } }
+	}
+}
+
+SHC = { # Shache; HAN-WR;HHS-WR;P20
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_horse_head.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.49 } scale = { 0.76 0.78 } }
+	}
+}
+
+PUL = { # Puli; HAN-WR;HHS-WR;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_stag.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+FJS = { # Further Jushi; HHS-WR;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_bow_arrows_03.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+IWL = { # Yiwulu; HHS-WR;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_crescent_moon.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.74 0.74 } }
+	}
+}
+
+DNH = { # Danhuan; HHS-WR;P20
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
 	}
 }
 
