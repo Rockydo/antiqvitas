@@ -4090,9 +4090,11 @@ countries = {
 			own_control_core = {
 				adakli
 				ahlat
+				akhalkalaki
 				amadiya
 				amberd
 				ani
+				ardahan
 				artashavan
 				bahcesaray
 				bargiri
@@ -4121,6 +4123,7 @@ countries = {
 				hosap
 				igdir
 				ilic
+				ispir
 				julfa
 				kagizman
 				kapan_armenia
@@ -4131,6 +4134,7 @@ countries = {
 				keban
 				kelkit
 				kemah
+				khikhani
 				khor_virap
 				khunani
 				kumayri
@@ -4153,6 +4157,7 @@ countries = {
 				tatvan
 				tekman
 				tercan
+				tortum
 				tutak
 				van
 				varto
@@ -4207,7 +4212,29 @@ countries = {
 
 		IBR = { # Caucasian Iberia; P8.2;OCD
 			own_control_core = {
+				akhaltsikhe
+				alaverdi
+				balakan
+				bodbe
+				dmanisi
+				dusheti
+				gori
+				gremi
+				hereti
+				kasriskari
+				khornabuji
+				kldekari
+				kvenipnevi
 				mtskheta
+				oltu
+				panaskerti
+				qakh
+				rustavi
+				shatili
+				tbilisi
+				telavi
+				tmogvi
+				tsagvli
 			}
 
 			country_rank = rank_kingdom
@@ -4256,7 +4283,23 @@ countries = {
 
 		CLZ = { # Colchis; P8.2;OCD;PLE
 			own_control_core = {
+				anacopia
+				anaklia
+				artanuji
+				batumi
+				bedia
+				kutaisi
+				lata_georgia
+				ozurgeti
+				parkhali
+				pitsunda
 				poti_caucasus
+				savsat
+				shorapani
+				skande
+				sukhumi
+				tsalenjikha
+				vartsikhe
 			}
 
 			country_rank = rank_kingdom
@@ -21429,75 +21472,6 @@ countries = {
 			capital = carucairi
 		}
 
-		XDI = { # Caucasian Highland Societies; P8.2;CAH-XI
-			own_control_core = {
-				akhalkalaki
-				akhaltsikhe
-				alaverdi
-				anacopia
-				anaklia
-				ardahan
-				artanuji
-				balakan
-				batumi
-				bedia
-				bodbe
-				dmanisi
-				dusheti
-				gori
-				gremi
-				hereti
-				ispir
-				kasriskari
-				khikhani
-				khornabuji
-				kldekari
-				kutaisi
-				kvenipnevi
-				lata_georgia
-				lentekhi
-				oltu
-				ozurgeti
-				panaskerti
-				parkhali
-				pitsunda
-				qakh
-				rustavi
-				savsat
-				shatili
-				shorapani
-				skande
-				sukhumi
-				tbilisi
-				telavi
-				tmogvi
-				tortum
-				tsageri
-				tsagvli
-				tsalenjikha
-				tsesi
-				ushguli
-				vartsikhe
-			}
-
-			country_rank = rank_county
-			starting_technology_level = 1
-			discovered_regions = {
-				caucasus_region
-				anatolia_region
-				persia_region
-			}
-			government = {
-				type = tribe
-				heir_selection = tribal_oldest_male
-				ruler = random
-				reforms = {
-					antq_advanced_chiefdom
-				}
-			}
-			capital = tbilisi
-		}
-
 		XDK = { # Angrivarii; TAC-ANN-II;TAC-GER;OCD-GER
 			own_control_core = {
 				buckeburg
@@ -33778,6 +33752,56 @@ countries = {
 				capital_economy_vs_traditional_economy = 68
 			}
 			capital = mongnai
+		}
+
+		XDG = { # Soanes; STR-CAUC;IRAN-COL
+			own_control_core = {
+				lentekhi
+				tsageri
+				tsesi
+				ushguli
+			}
+
+			country_rank = rank_kingdom
+			starting_technology_level = 3
+			discovered_regions = {
+				caucasus_region
+				anatolia_region
+				persia_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_soanian_king_and_council
+				}
+				privilege = {
+					antq_tribal_elder_council
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_iranian_status_law = antq_s2_iranian_status_mediated
+					antq_s2_iranian_dependent_labor_law = antq_s2_iranian_dependent_labor_mediated
+					antq_s2_iranian_revenue_law = antq_s2_iranian_revenue_mediated
+					antq_s2_iranian_land_law = antq_s2_iranian_land_mediated
+					antq_s2_iranian_muster_law = antq_s2_iranian_muster_mediated
+					antq_s2_iranian_local_rule_law = antq_s2_iranian_local_rule_mediated
+					antq_s2_iranian_cult_law = antq_s2_iranian_cult_mediated
+					antq_s2_iranian_household_law = antq_s2_iranian_household_mediated
+					antq_s2_iranian_commerce_law = antq_s2_iranian_commerce_mediated
+					antq_s2_iranian_coinage_law = antq_s2_iranian_coinage_mediated
+					antq_s2_iranian_courts_law = antq_s2_iranian_courts_mediated
+					antq_s2_iranian_offices_law = antq_s2_iranian_offices_mediated
+					antq_s2_iranian_migration_law = antq_s2_iranian_migration_mediated
+					antq_s2_iranian_external_law = antq_s2_iranian_external_mediated
+				}
+				centralization_vs_decentralization = -35
+				traditionalist_vs_innovative = -30
+				aristocracy_vs_plutocracy = -35
+				capital_economy_vs_traditional_economy = 65
+			}
+			capital = ushguli
 		}
 
 	}

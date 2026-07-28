@@ -5589,3 +5589,12 @@ antq_lelang_gojoseon = { # AKS-LELANG;P10; Indigenous Gojoseon-majority commande
 		antq_korean_group
 	}
 }
+
+antq_soanian = { # STR-CAUC;IRAN-COL;P10; Attested Soanes of the upper western Caucasus; language key is a rendering adapter within the Caucasian group
+	language = antq_caucasian_dialect
+	color = antq_culture_color_antq_soanian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_caucasian_group
+	}
+}

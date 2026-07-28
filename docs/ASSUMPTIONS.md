@@ -5747,3 +5747,10 @@ geography; it does not backdate Baekje, Silla, Gaya, named rulers, or the
 third-century statelet list as exact AD 1 borders. Sources: `AKS-LELANG`;
 `NAJU-MAHAN`; `NMK-SAMHAN`; `NMK-YEONGNAM`; `JINJU-BYEONHAN`. [secure broad
 chronology and regional placement; contested exact boundaries]
+
+## 2026-07-28 - The Soanian frame is narrow and Moschian country remains divided
+
+Strabo places the Soanes in the heights above Dioscurias and gives them a king
+and council, but no exact frontier or ruler name. Four upper-Rioni fields form a
+contested proxy. His three-way Moschian division is represented among Colchis,
+Iberia, and Armenia, not as an invented Moschian state (`STR-CAUC`; `IRAN-COL`).

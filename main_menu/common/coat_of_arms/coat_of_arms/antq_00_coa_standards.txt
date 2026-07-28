@@ -3501,20 +3501,6 @@ XDD = { # Carib Societies; P8.10;P20
 	}
 }
 
-XDI = { # Caucasian Highland Societies; P8.2;P20
-	pattern = "pattern_solid.dds"
-	color1 = "red"
-	color2 = "yellow"
-	color3 = "white"
-	colored_emblem = {
-		texture = "ce_horse_salient.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.83 0.83 } }
-	}
-}
-
 XDK = { # Angrivarii; TAC-ANN-II;TAC-GER;P20
 	pattern = "pattern_solid.dds"
 	color1 = "green"
@@ -6298,5 +6284,19 @@ XGH = { # Southern Plateau Corridor Networks; CAM-MYANMAR-CHRON;P20
 		color2 = color2
 		color3 = color1
 		instance = { position = { 0.5 0.50 } scale = { 0.74 0.78 } }
+	}
+}
+
+XDG = { # Soanes; STR-CAUC;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_ibex_goat_rampant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
 	}
 }

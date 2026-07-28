@@ -1138,6 +1138,26 @@ antq_byeonhan_iron_exchange_league = {
 	years = 2
 }
 
+antq_soanian_king_and_council = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.083
+		global_nobles_estate_power = 0.067
+		tribes_estate_power_from_cabinet = 0.173
+		nobles_estate_power_from_cabinet = 0.137
+		replace_cabinet_member_cost_modifier = 0.031
+		global_tribes_estate_power = 0.083
+		global_nobles_estate_power = 0.067
+		country_cabinet_efficiency = 0.03
+		research_speed = 0.075
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
 antq_mesoamerican_urban_ritual_center = {
 	major = yes
 	government = tribe
@@ -2420,6 +2440,7 @@ antq_elder_moot_kingship = {
 			has_reform = government_reform:antq_mahan_small_state_league
 			has_reform = government_reform:antq_jinhan_small_state_league
 			has_reform = government_reform:antq_byeonhan_iron_exchange_league
+			has_reform = government_reform:antq_soanian_king_and_council
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}
@@ -2480,6 +2501,7 @@ antq_warband_retinue_kingship = {
 			has_reform = government_reform:antq_mahan_small_state_league
 			has_reform = government_reform:antq_jinhan_small_state_league
 			has_reform = government_reform:antq_byeonhan_iron_exchange_league
+			has_reform = government_reform:antq_soanian_king_and_council
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}

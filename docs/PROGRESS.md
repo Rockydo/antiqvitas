@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-28 - The Caucasus becomes Iberia, Colchis, Armenia, and Soanes
+
+- Removed the 47-location `CAU` residual; restored omitted state territory and
+  retained only the source-attested Soanes.
+- Exact distribution: Iberia 22 former/23 total, Colchis 16/17, Armenia 5/75,
+  and Soanes 4. The roster remains 450 and placeholders fall to eight.
+- Added Soanian culture, exact populations, a king-and-council reform, a
+  standard, and a permanent exact validator.
+- All 130 validation commands pass; paired smoke reached both rendered menus
+  with zero mod-only normalized errors.
+
+Next: replace the 27-location Andean Societies frame.
+
 ## 2026-07-28 - Korea becomes Han Lelang and coherent Samhan clusters
 
 - Removed the 50-location `KRS` catch-all and repaired 16 erroneous Hoseo

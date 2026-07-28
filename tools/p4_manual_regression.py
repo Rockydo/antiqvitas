@@ -195,8 +195,8 @@ def build_report() -> dict[str, object]:
     )
     political_contracts = rows(ROOT / "docs/m6/political_profile_contracts.csv")
     require(
-        len(political_contracts) == 233
-        and len({row["reform"] for row in political_contracts}) == 233
+        len(political_contracts) == 234
+        and len({row["reform"] for row in political_contracts}) == 234
         and len({row["modifiers"] for row in political_contracts}) >= 223,
         "ancient appointment and political-weight contracts regressed",
         failures,

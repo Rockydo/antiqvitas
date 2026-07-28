@@ -722,6 +722,13 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "JINJU-BYEONHAN;NMK-YEONGNAM;P13", "contested",
         "Byeonhan's western-Gyeongnam small states coordinate iron, ports, navigation, and exchange without backdating the later Gaya confederacies.",
     ),
+    "antq_soanian_king_and_council": (
+        "global_tribes_estate_power=0.083|global_nobles_estate_power=0.067|"
+        "tribes_estate_power_from_cabinet=0.173|nobles_estate_power_from_cabinet=0.137|"
+        "replace_cabinet_member_cost_modifier=0.031",
+        "STR-CAUC;P13", "secure",
+        "Strabo explicitly records a Soanian king and three-hundred-member council; modifiers preserve both royal and council leverage without treating his reported host size as a census.",
+    ),
     "antq_mesoamerican_urban_ritual_center": (
         "global_clergy_estate_power=0.10|global_burghers_estate_power=0.07|"
         "clergy_estate_power_from_cabinet=0.20|global_production_efficiency=0.025|"
@@ -1576,6 +1583,7 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
         "antq_mahan_small_state_league",
         "antq_jinhan_small_state_league",
         "antq_byeonhan_iron_exchange_league",
+        "antq_soanian_king_and_council",
     ),
     "sacral": (),
     "royal": (
@@ -2164,7 +2172,7 @@ def load_power_data() -> PowerData:
     used_reforms = {government["reform"] for government in governments.values()}
     # Core/regional contracts include the reviewed Manchurian, Bornean,
     # Philippine, Sulawesi, and North American network reforms defined above.
-    expected_contract_count = 120 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    expected_contract_count = 121 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -2172,7 +2180,7 @@ def load_power_data() -> PowerData:
         failures.append(
             "political appointment contracts must cover every core, regional, and successor reform"
         )
-    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 120:
+    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 121:
         failures.append("political appointment contracts are insufficiently differentiated")
     path_rows = reform_path_rows()
     alternative_profiles = [row[1] for row in path_rows]
@@ -3004,6 +3012,18 @@ antq_byeonhan_iron_exchange_league = {
 	country_modifier = {
 		global_burghers_estate_power = 0.073
 		global_trade_through_owned_territory_efficiency = 0.035
+		research_speed = 0.075
+	}
+	years = 2
+}
+
+antq_soanian_king_and_council = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.083
+		global_nobles_estate_power = 0.067
+		country_cabinet_efficiency = 0.03
 		research_speed = 0.075
 	}
 	years = 2
@@ -3988,6 +4008,8 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_jinhan_small_state_league_desc", "Jinhan small states coordinate cultivation, bronze-working, exchange, and collective defence without backdating Silla."),
         ("antq_byeonhan_iron_exchange_league", "Byeonhan Iron-Exchange League"),
         ("antq_byeonhan_iron_exchange_league_desc", "Byeonhan small states coordinate iron, ports, navigation, and exchange without backdating Gaya."),
+        ("antq_soanian_king_and_council", "Soanian King and Council"),
+        ("antq_soanian_king_and_council_desc", "A highland king governs with the attested council of three hundred, balancing leading households without inventing an AD 1 ruler or succession code."),
         ("antq_mesoamerican_urban_ritual_center", "Mesoamerican Urban-Ritual Center"),
         ("antq_mesoamerican_urban_ritual_center_desc", "A first-order ceremonial and exchange center coordinates public space, specialist production, cultivation, and regional ties without an invented recovered constitution."),
         ("antq_mesoamerican_formative_civic_network", "Mesoamerican Formative Civic Network"),

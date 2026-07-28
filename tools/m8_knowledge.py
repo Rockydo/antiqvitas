@@ -189,6 +189,7 @@ CONTENT_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
         ("unlock_government_reform", "antq_mahan_small_state_league"),
         ("unlock_government_reform", "antq_jinhan_small_state_league"),
         ("unlock_government_reform", "antq_byeonhan_iron_exchange_league"),
+        ("unlock_government_reform", "antq_soanian_king_and_council"),
         ("unlock_government_reform", "antq_mesoamerican_urban_ritual_center"),
         ("unlock_government_reform", "antq_mesoamerican_formative_civic_network"),
         ("unlock_government_reform", "antq_mesoamerican_exchange_corridor_network"),

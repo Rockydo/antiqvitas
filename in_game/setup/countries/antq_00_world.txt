@@ -2251,15 +2251,6 @@ XDD = { # Carib Societies; P8.10;CAH-XI
 	is_historic = yes
 }
 
-XDI = { # Caucasian Highland Societies; P8.2;CAH-XI
-	color = rgb { 142 101 71 }
-	color2 = rgb { 113 154 184 }
-
-	culture_definition = antq_kartvelian
-	religion_definition = antq_arsacid_zoroastrianism
-	is_historic = yes
-}
-
 XDK = { # Angrivarii; TAC-ANN-II;TAC-GER;OCD-GER
 	color = rgb { 67 98 56 }
 	color2 = rgb { 188 157 199 }
@@ -4048,5 +4039,14 @@ XGH = { # Southern Plateau Corridor Networks; CAM-MYANMAR-CHRON;P8.9
 
 	culture_definition = antq_southern_plateau_corridor
 	religion_definition = antq_mainland_southeast_asian_traditions
+	is_historic = yes
+}
+
+XDG = { # Soanes; STR-CAUC;IRAN-COL
+	color = rgb { 145 85 52 }
+	color2 = rgb { 110 170 203 }
+
+	culture_definition = antq_soanian
+	religion_definition = antq_arsacid_zoroastrianism
 	is_historic = yes
 }

@@ -4134,3 +4134,10 @@ indigenous-majority population culture. Replace the erroneous Byeonhan Hoseo
 claim with Han River and Geum River Mahan clusters; confine Jinhan and Byeonhan
 to their reviewed Yeongnam province sets. Whole installed provinces prevent
 gaps and keep every replacement below seventeen locations.
+
+## 2026-07-28 - Remove the Caucasian residual instead of multiplying later states
+
+`CAU` concealed territory of existing Iberia, Colchis, and Armenia. Exact
+province/location selectors restore those states; only the independently
+attested Soanes receive a new tag. Their faith key remains a documented
+engine-facing Caucasian court-cult proxy pending the global religion-depth pass.
