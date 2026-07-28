@@ -318,6 +318,30 @@ antq_advanced_chiefdom = {
 	years = 2
 }
 
+antq_far_side_port_chiefdom = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_burghers_estate_power = 0.08
+		global_tribes_estate_power = 0.05
+		global_trade_through_owned_territory_efficiency = 0.04
+		research_speed = 0.08
+	}
+	years = 2
+}
+
+antq_horn_pastoral_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		global_trade_through_owned_territory_efficiency = 0.025
+		research_speed = 0.06
+	}
+	years = 2
+}
+
 antq_settled_town_cluster = {
 	major = yes
 	government = republic

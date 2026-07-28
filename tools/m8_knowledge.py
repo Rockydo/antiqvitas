@@ -141,6 +141,8 @@ CONTENT_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
         ("unlock_government_reform", "antq_early_korean_kingdom"),
         ("unlock_government_reform", "antq_regional_kingship"),
         ("unlock_government_reform", "antq_advanced_chiefdom"),
+        ("unlock_government_reform", "antq_far_side_port_chiefdom"),
+        ("unlock_government_reform", "antq_horn_pastoral_network"),
         ("unlock_government_reform", "antq_settled_town_cluster"),
         ("unlock_government_reform", "antq_tribal_kingdom"),
         ("unlock_government_reform", "antq_artaxiad_highland_kingship"),

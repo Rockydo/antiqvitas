@@ -1,5 +1,24 @@
 # Technical and Design Decisions
 
+## 2026-07-27 - Barbaria uses independent ports and bounded hinterland frames
+
+The *Periplus of the Erythraean Sea* explicitly describes the far-side market
+towns as lacking one king and having separate chiefs. ANTIQVITAS therefore
+does not replace Barbaria Societies with another unitary country. Avalites,
+Malao, Mundu, Mosyllon, Aromata Emporion, and Opone are six one-location port
+polities with a shared port-chiefdom reform but independent country, capital,
+standard, and setup contracts.
+
+The remaining installed geography is divided into Guban, Haud, and Northern
+Azanian gameplay frames. These are intentionally geographic/pastoral
+umbrellas, not invented ethnic kingdoms or later clan territories. The
+government adapter describes exchange, elders, and mobile pastoral
+obligations without asserting a common constitution. `MLA` is used for Malao
+because the design tag `MAL` is already occupied by Malay Polities.
+
+This split is enforced as a full-stack contract by
+`tools/s2_horn_granularity.py`; the global placeholder census remains open.
+
 ## 2026-07-27 - The Maghreb uses one kingdom and two bounded interior people-frames
 
 The former Berber/Gaetulian macro-polity mixed Juba II's documented kingdom

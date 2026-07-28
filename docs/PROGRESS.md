@@ -1,5 +1,31 @@
 # Progress
 
+## 2026-07-27 - Barbaria becomes six ports and three bounded hinterlands
+
+- Replaced the 79-location Barbaria Societies placeholder with nine disjoint
+  opening frames. Avalites, Malao, Mundu, Mosyllon, Aromata Emporion, and
+  Opone each own one named far-side market; Guban Pastoralists own 21 northern
+  coastal/interior locations, Haud Pastoralists own 22 interior locations, and
+  Northern Azania owns 30 southern locations.
+- Added nine owned capitals, three differentiated culture profiles, two
+  government reforms, nine direct period-inspired standards, opening agendas,
+  rank/history integration, economy/building propagation, research
+  reachability, and eleven-client localization. The six reviewed ancient port
+  labels also enter the global location-name correction chain.
+- Added `tools/s2_horn_granularity.py` and its generated 79-location evidence
+  ledger. The validator pins disjoint ownership, six independent ports, frame
+  size, profiles, reforms, standards, localization, and source/confidence
+  metadata. The global placeholder census falls from 26 to 25.
+- Full validation passes all 113 checks. Paired vanilla/mod smoke reaches
+  responsive rendered menus and reports zero mod-only normalized
+  `error.log` lines. Ten regenerated privilege PNGs differ only in encoding:
+  decoded size and every RGBA pixel match the committed files.
+- Research boundaries and runtime evidence are recorded in
+  `docs/playtests/S2_HORN_GRANULARITY_20260727.md`.
+
+Next: continue the size-ranked African census through the remaining Sahara,
+West-African, and Bantu placeholders; do not claim closure before zero.
+
 ## 2026-07-27 - The global placeholder census begins with a sourced Maghreb split
 
 - Added a permanent whole-roster census for literal `Societies`, `Land of`,

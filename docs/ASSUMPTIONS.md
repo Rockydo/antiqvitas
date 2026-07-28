@@ -1,5 +1,32 @@
 # Historical Assumptions
 
+## 2026-07-27 - The Horn split backdates near-contemporary port evidence cautiously
+
+The *Periplus of the Erythraean Sea* is usually dated around AD 40-70, so its
+six far-side markets are near-contemporary evidence rather than an exact AD 1
+gazetteer. Their use at the opening bookmark is an explicit backdating of
+roughly one to two generations. The text securely supports separate local
+chiefs and the names Avalites, Malao, Mundu, Mosyllon, Aromata Emporion, and
+Opone; it does not support a single Barbarian or Somali crown.
+
+Modern site equations remain uneven. Avalites/Zeila and Malao/Berbera are
+traditional regional identifications; Mundu/Xiis and Opone/Ras Hafun have
+stronger topographic and archaeological support. Mosyllon may be Qandala or
+Ceelayo, and the installed `qandala` anchor is a reproducible choice rather
+than a claim of certainty. Aromata is associated with the Guardafui/Daamo
+region; `bargaal` is the closest usable installed land location. The Guban,
+Haud, and Northern Azanian boundaries are gameplay proxies and do not project
+later ethnic or clan maps backward. Their anonymous rulers are deliberate.
+
+Sources weighed: plan section 8.5; `PME-BARBARIA`; `AJA-SOMALILAND`;
+`UOA-PERIPLUS`; the [Periplus translation](https://depts.washington.edu/silkroad/texts/periplus/periplus.html);
+the [American Journal of Archaeology study of ancient Somaliland exchange](https://www.journals.uchicago.edu/doi/full/10.1086/718184);
+and the [University of Athens Periplus introduction](https://periplus.arch.uoa.gr/texts/peripl_erythr/intro_en.html).
+
+[secure six names and independent chiefs in the mid-first century; contested
+exact AD 1 continuity, site equations, hinterland identities, capitals, and
+borders]
+
 ## 2026-07-27 - Gaetulian and Musulamian boundaries are explicit gameplay proxies
 
 Juba II's Mauretania and its capital at Caesarea are secure enough to replace

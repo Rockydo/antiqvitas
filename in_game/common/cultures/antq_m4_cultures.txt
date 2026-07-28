@@ -505,9 +505,27 @@ antq_nok = { # P8.5;P10;JAA-NOK;OUP-NOK; Central Nigerian late Nok archaeologica
 	}
 }
 
-antq_cushitic = { # P8.5;P10;CAH-XI; Horn regional proxy; technical naming layer does not decide local ethnolinguistic detail
+antq_northern_horn_coastal = { # AJA-SOMALILAND;PME-BARBARIA;P8.5;P10; Technical coastal interaction profile for heterogeneous Barbaroi and port communities; it is not an asserted common ethnonym or language
 	language = antq_subsaharan_dialect
-	color = antq_culture_color_antq_cushitic
+	color = antq_culture_color_antq_northern_horn_coastal
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_horn_pastoral = { # AJA-SOMALILAND;P8.5;P10; Technical interior mobile-pastoral profile; it does not backdate modern ethnic or clan boundaries
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_horn_pastoral
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_northern_azanian = { # PME-BARBARIA;P8.5;P10; Technical northern-Azanian coastal and river-course profile south of Opone
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_northern_azanian
 	tags = { european_gfx }
 	culture_groups = {
 		antq_subsaharan_group

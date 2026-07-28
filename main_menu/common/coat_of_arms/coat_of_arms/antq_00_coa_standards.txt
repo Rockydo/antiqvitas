@@ -813,17 +813,129 @@ XDE = { # Bantu Societies; P8.5;P20
 	}
 }
 
-XDF = { # Barbaria Societies; P8.5;P20
+XDF = { # Guban Pastoralists; AJA-SOMALILAND;P20
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "black"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_african_ram_horns_02.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XFN = { # Avalites; PME-BARBARIA;AJA-SOMALILAND;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_boat_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+MLA = { # Malao; PME-BARBARIA;AJA-SOMALILAND;P20
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_anchor_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+XFO = { # Mundu; PME-BARBARIA;AJA-SOMALILAND;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_conch_shell.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XFP = { # Mosyllon; PME-BARBARIA;AJA-SOMALILAND;P20
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_fish_okeane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.82 } }
+	}
+}
+
+ARO = { # Aromata Emporion; PME-BARBARIA;AJA-SOMALILAND;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_african_rising_sun.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+OPO = { # Opone; PME-BARBARIA;AJA-SOMALILAND;P20
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "black"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_elephant_african.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XFQ = { # Haud Pastoralists; AJA-SOMALILAND;P20
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "black"
-	color3 = "red"
+	color3 = "white"
 	colored_emblem = {
 		texture = "ce_african_sun.dds"
-		color1 = color1
+		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+AZA = { # Northern Azania; PME-BARBARIA;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_african_star_08.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
 	}
 }
 

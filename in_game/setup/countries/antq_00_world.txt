@@ -523,12 +523,84 @@ XDE = { # Bantu Societies; P8.5;CAH-XI
 	is_historic = yes
 }
 
-XDF = { # Barbaria Societies; P8.5;CAH-XI
+XDF = { # Guban Pastoralists; AJA-SOMALILAND;PME-BARBARIA;P8.5
 	color = rgb { 127 104 57 }
 	color2 = rgb { 128 151 198 }
 
-	culture_definition = antq_cushitic
-	religion_definition = antq_kushite_amun
+	culture_definition = antq_northern_horn_coastal
+	religion_definition = antq_nile_cushitic
+	is_historic = yes
+}
+
+XFN = { # Avalites; PME-BARBARIA;AJA-SOMALILAND;P8.5
+	color = rgb { 121 99 67 }
+	color2 = rgb { 134 156 188 }
+
+	culture_definition = antq_northern_horn_coastal
+	religion_definition = antq_nile_cushitic
+	is_historic = yes
+}
+
+MLA = { # Malao; PME-BARBARIA;AJA-SOMALILAND;P8.5
+	color = rgb { 116 92 54 }
+	color2 = rgb { 139 163 201 }
+
+	culture_definition = antq_northern_horn_coastal
+	religion_definition = antq_nile_cushitic
+	is_historic = yes
+}
+
+XFO = { # Mundu; PME-BARBARIA;AJA-SOMALILAND;P8.5
+	color = rgb { 114 111 60 }
+	color2 = rgb { 141 144 195 }
+
+	culture_definition = antq_northern_horn_coastal
+	religion_definition = antq_nile_cushitic
+	is_historic = yes
+}
+
+XFP = { # Mosyllon; PME-BARBARIA;AJA-SOMALILAND;P8.5
+	color = rgb { 128 112 55 }
+	color2 = rgb { 127 143 200 }
+
+	culture_definition = antq_northern_horn_coastal
+	religion_definition = antq_nile_cushitic
+	is_historic = yes
+}
+
+ARO = { # Aromata Emporion; PME-BARBARIA;AJA-SOMALILAND;P8.5
+	color = rgb { 122 98 65 }
+	color2 = rgb { 133 157 190 }
+
+	culture_definition = antq_northern_horn_coastal
+	religion_definition = antq_nile_cushitic
+	is_historic = yes
+}
+
+OPO = { # Opone; PME-BARBARIA;AJA-SOMALILAND;UOA-PERIPLUS;P8.5
+	color = rgb { 134 109 72 }
+	color2 = rgb { 121 146 183 }
+
+	culture_definition = antq_northern_horn_coastal
+	religion_definition = antq_nile_cushitic
+	is_historic = yes
+}
+
+XFQ = { # Haud Pastoralists; AJA-SOMALILAND;P8.5
+	color = rgb { 127 95 58 }
+	color2 = rgb { 128 160 197 }
+
+	culture_definition = antq_horn_pastoral
+	religion_definition = antq_nile_cushitic
+	is_historic = yes
+}
+
+AZA = { # Northern Azania; PME-BARBARIA;P8.5
+	color = rgb { 128 103 57 }
+	color2 = rgb { 127 152 198 }
+
+	culture_definition = antq_northern_azanian
+	religion_definition = antq_nile_cushitic
 	is_historic = yes
 }
 

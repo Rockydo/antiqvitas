@@ -397,13 +397,21 @@ and focused runtime probe all pass.
 - [ ] Eliminate all player-facing generic “Societies”, “Land of”, macro-region,
   and placeholder country names across the whole roster.
   - [x] Establish the generated global baseline and first Maghreb correction.
-    `s2_placeholder_polity_census.py` records 26 remaining literal placeholder
+    `s2_placeholder_polity_census.py` records 25 remaining literal placeholder
     names, down from 27. Mauretania now owns its Caesarea-centered coastal
     frame; Gaetuli are bounded to 19 high-plateau/pre-desert locations; and
     Musulamii receive a separate 11-location Aures/Hodna frontier frame.
     All three have owned capitals, culture/religion profiles, governments,
     sourced presentation standards, agendas, and eleven-client localization.
     `s2_maghreb_granularity.py` permanently pins the 158-location contract.
+  - [x] Replace the 79-location Barbaria Societies placeholder with six
+    independently ruled Periplus ports and three bounded hinterland frames.
+    Avalites, Malao, Mundu, Mosyllon, Aromata Emporion, and Opone each own their
+    market location; Guban Pastoralists, Haud Pastoralists, and Northern Azania
+    cover the residual geography without implying a unitary Somali state.
+    Three cultures, two government reforms, nine owned capitals, nine direct
+    standards, reviewed ancient port names, agendas, and eleven-client
+    localization are pinned by `s2_horn_granularity.py`.
   - Start from a generated census of country names, adjectives, map labels,
     government names, history text, and localization in every supported language.
   - Split broad ownership into geographically bounded peoples, confederations,
@@ -538,8 +546,12 @@ and focused runtime probe all pass.
     Berber/Gaetulian placeholder with Juba II's Caesarea-centered Mauretania,
     bounded Gaetuli, and separate Musulamii. Retain documented uncertainty
     rather than presenting the two interior frames as fixed centralized states.
-  - [ ] Continue the African pass through the remaining Sahara, Horn, West
-    African, and Bantu placeholders, then proceed through the size-ranked global
+  - [x] Replace Barbaria Societies with six independently governed far-side
+    emporia and three bounded northern-coast, interior-pastoral, and northern-
+    Azanian frames. Do not back-project later clan borders or a centralized
+    Somali polity.
+  - [ ] Continue the African pass through the remaining Sahara, West African,
+    and Bantu placeholders, then proceed through the size-ranked global
     census. The parent task remains open until the census reaches zero.
   - Split Berber/Gaetulian, West African, Bantu, and other generic society tags
     using evidence-appropriate political/archaeological frames. Recheck Japan,

@@ -376,6 +376,22 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "P8.7;P13;CAH-XI", "contested",
         "Recognized kindreds and ritual custodians share a comparatively accessible council.",
     ),
+    "antq_far_side_port_chiefdom": (
+        "global_burghers_estate_power=0.08|global_tribes_estate_power=0.05|"
+        "burghers_estate_power_from_cabinet=0.20|"
+        "global_trade_through_owned_territory_efficiency=0.04|"
+        "replace_cabinet_member_cost_modifier=0.02",
+        "PME-BARBARIA;AJA-SOMALILAND;P8.5;P13", "contested",
+        "A separate port chief mediates roadstead access, exchange households, mobile suppliers, and visiting merchants without ruling a unitary Barbaria.",
+    ),
+    "antq_horn_pastoral_network": (
+        "global_tribes_estate_power=0.10|global_peasants_estate_power=0.05|"
+        "tribes_estate_power_from_cabinet=0.20|"
+        "global_trade_through_owned_territory_efficiency=0.025|"
+        "replace_cabinet_member_cost_modifier=-0.02",
+        "AJA-SOMALILAND;P8.5;P13", "contested",
+        "Mobile and heterogeneous pastoral households coordinate routes, water, restitution, and exchange without a centralized state or fixed ethnic border.",
+    ),
     "antq_settled_town_cluster": (
         "global_peasants_estate_power=0.05|burghers_estate_power_from_cabinet=0.20|"
         "set_cabinet_member_cost_modifier=-0.10",
@@ -1613,7 +1629,7 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    expected_contract_count = 48 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    expected_contract_count = 50 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -1980,6 +1996,30 @@ antq_advanced_chiefdom = {
 	country_modifier = {
 		global_tribes_estate_power = 0.05
 		country_cabinet_efficiency = 0.025
+		research_speed = 0.06
+	}
+	years = 2
+}
+
+antq_far_side_port_chiefdom = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_burghers_estate_power = 0.08
+		global_tribes_estate_power = 0.05
+		global_trade_through_owned_territory_efficiency = 0.04
+		research_speed = 0.08
+	}
+	years = 2
+}
+
+antq_horn_pastoral_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		monthly_towards_decentralization = societal_value_minor_monthly_move
+		global_trade_through_owned_territory_efficiency = 0.025
 		research_speed = 0.06
 	}
 	years = 2
@@ -2538,6 +2578,10 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_regional_kingship_desc", "A bounded technical monarchy adapter for an attested regional court without a defensible current ruler."),
         ("antq_advanced_chiefdom", "Advanced Chiefdom"),
         ("antq_advanced_chiefdom_desc", "A developing chiefly polity represented through the installed tribal government type."),
+        ("antq_far_side_port_chiefdom", "Far-Side Port Chiefdom"),
+        ("antq_far_side_port_chiefdom_desc", "A separately led northern-Horn market coordinating roadstead access, exchange households, mobile suppliers, and visiting merchants."),
+        ("antq_horn_pastoral_network", "Horn Pastoral Network"),
+        ("antq_horn_pastoral_network_desc", "Mobile pastoral households coordinate routes, water, restitution, and exchange without a centralized state or fixed ethnic border."),
         ("antq_settled_town_cluster", "Settled Town Cluster"),
         ("antq_settled_town_cluster_desc", "A settled urban community represented through a bounded council adapter rather than an invented monarchy."),
         ("antq_tribal_kingdom", "Tribal Kingdom"),
