@@ -1,5 +1,21 @@
 # Progress
 
+## 2026-07-28 - Manchuria becomes six evidence-bounded horizons
+
+- Removed the 125-location `MNC` catch-all. Middle Amur (50), Lower Amur
+  mainland (35), Sakhalin (8), Ussuri-Sanjiang (16), Mudan (5), and Northern
+  Okjeo-Tuanjie (11) now have separate frames; the roster rises to 380 and the
+  placeholder census falls to seventeen.
+- Added six cultures, one plural faith, four direct-art doctrines, four
+  reforms, six standards, capitals, settlements, research, laws, histories,
+  and eleven-client localization. Actual installed EU5 religion/aspect assets
+  guided two four-up atlases.
+- `tools/s2_manchurian_granularity.py` pins the transform. All 121 validation
+  commands pass; paired smoke reached rendered vanilla/mod menus in 197.1
+  seconds with zero mod-only normalized errors.
+
+Next: replace the 110-location Bornean Societies frame.
+
 ## 2026-07-28 - Mainland Southeast Asia becomes eleven bounded networks
 
 - Removed the 136-location `SEA` catch-all. Eleven archaeological/geographic

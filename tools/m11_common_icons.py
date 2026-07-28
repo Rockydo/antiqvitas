@@ -102,6 +102,7 @@ RELIGION_ICONS = (
     ReligionIcon("antq_eastern_plateau_traditions", "tengri"),
     ReligionIcon("antq_central_indian_traditions", "shamanism"),
     ReligionIcon("antq_mainland_southeast_asian_traditions", "satsana_phi"),
+    ReligionIcon("antq_amur_ussuri_traditions", "tungusic_shamanism"),
 )
 
 

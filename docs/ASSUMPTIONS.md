@@ -1,5 +1,20 @@
 # Historical Assumptions
 
+## 2026-07-28 - Amur, Ussuri, and Sakhalin labels are bounded proxies
+
+Pol'tse is a material horizon, not a recovered state or ethnicity. Yilou is
+used only for the Ussuri-Sanjiang archaeological/textual fit; the Mudan basin
+and Northern Okjeo-Tuanjie corridor remain distinct. Language adapters do not
+identify these communities as later Tungusic, Nivkh, Ainu, or Korean peoples.
+
+Sakhalin's Susuya/Nhabil chronologies support a separate maritime Paleometal
+frame, not a uniform island polity or later identity. Capitals are geographic
+anchors, and governments, faith, doctrines, and standards are technical
+proxies. Sources: [Yilou archaeology](https://cir.nii.ac.jp/crid/1390009224089609984);
+[Proto-Tungusic archaeology/genomes](https://www.cambridge.org/core/journals/evolutionary-human-sciences/article/homeland-of-prototungusic-inferred-from-contemporary-words-and-ancient-genomes/950020A1799B4D7B71CCC57D04743B3E);
+[Russian Far East chronology](https://www.cambridge.org/core/journals/radiocarbon/article/14c-chronology-of-stone-age-cultures-in-the-russian-far-east/B8E3F89199A906FE2E0800BA643B2C9C);
+[Sakhalin chronology](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S0033822200039655).
+
 ## 2026-07-28 - Mainland Southeast Asian AD 1 frames are cautious proxies
 
 † Sa Huynh is an archaeological horizon, not an AD 1 Champa state. The Plain

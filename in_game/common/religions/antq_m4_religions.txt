@@ -643,3 +643,17 @@ antq_mainland_southeast_asian_traditions = { # CAM-SAH;UNESCO-JARS;CAM-SEA-IRON;
 	opinions = {
 	}
 }
+
+antq_amur_ussuri_traditions = { # NMJH-YIL;RAD-RFE-IRON;RAD-SAKHALIN;P11; Plural river forest maritime household and mortuary traditions without deriving theology from archaeological cultures or later ethnography
+	color = antq_religion_color_antq_amur_ussuri_traditions
+	group = folk_asian_group
+	religious_aspects = 2
+	has_religious_influence = yes
+	definition_modifier = {
+		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
+	}
+	opinions = {
+	}
+}

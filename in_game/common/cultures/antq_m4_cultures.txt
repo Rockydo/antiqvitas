@@ -4851,3 +4851,48 @@ antq_southern_plateau_corridor = { # CAM-MYANMAR-CHRON;P10; Pass-and-basin adapt
 		antq_southeast_asian_group
 	}
 }
+
+antq_middle_amur_poltsian = { # NMJH-YIL;CAM-PROTOTUNGUSIC;P10; Material-horizon proxy; language adapter does not identify Pol'tse people as Nivkh
+	language = antq_steppe_dialect
+	color = antq_culture_color_antq_middle_amur_poltsian
+	tags = { european_gfx }
+	culture_groups = {
+		antq_steppe_group
+	}
+}
+
+antq_lower_amur_estuary = { # NMJH-YIL;RAD-RFE-IRON;P10; River-estuary community adapter without one language or ethnicity
+	language = antq_steppe_dialect
+	color = antq_culture_color_antq_lower_amur_estuary
+	tags = { european_gfx }
+	culture_groups = {
+		antq_steppe_group
+	}
+}
+
+antq_sakhalin_paleometal = { # RAD-SAKHALIN;P10; Paleometal maritime adapter without equating Susuya or Nhabil archaeology with later Ainu identity
+	language = antq_japonic_dialect
+	color = antq_culture_color_antq_sakhalin_paleometal
+	tags = { european_gfx }
+	culture_groups = {
+		antq_japonic_group
+	}
+}
+
+antq_mudan_basin_iron_age = { # NMJH-YIL;CAM-PROTOTUNGUSIC;P10; Distinct basin material proxy; technical language does not assert ethnicity
+	language = antq_steppe_dialect
+	color = antq_culture_color_antq_mudan_basin_iron_age
+	tags = { european_gfx }
+	culture_groups = {
+		antq_steppe_group
+	}
+}
+
+antq_northern_okjeo_tuanjie = { # NMJH-YIL;P10; Textual-archaeological corridor proxy without fixed AD 1 borders or later Korean identity
+	language = antq_korean_dialect
+	color = antq_culture_color_antq_northern_okjeo_tuanjie
+	tags = { european_gfx }
+	culture_groups = {
+		antq_korean_group
+	}
+}

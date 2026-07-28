@@ -2464,3 +2464,59 @@ antq_doctrine_mainland_southeast_asian_traditions_highland_iron_forest_obligatio
 		antq_doctrine_mainland_southeast_asian_traditions_highland_iron_forest_obligations = 10
 	}
 }
+
+antq_doctrine_amur_ussuri_traditions_seasonal_salmon_obligations = { # NMJH-YIL;CAM-PROTOTUNGUSIC;RAD-RFE-IRON;RAD-SAKHALIN;P11; contested; Households coordinated river access drying stores and reciprocal shares without a centralized authority.
+	icon = antq_doctrine_amur_ussuri_traditions_seasonal_salmon_obligations
+	religion = antq_amur_ussuri_traditions
+
+	modifier = {
+		global_monthly_prosperity = 0.02
+		global_monthly_food_modifier = 0.03
+	}
+
+	opinions = {
+		antq_doctrine_amur_ussuri_traditions_seasonal_salmon_obligations = 10
+	}
+}
+
+antq_doctrine_amur_ussuri_traditions_winter_pit_house_stores = { # NMJH-YIL;CAM-PROTOTUNGUSIC;RAD-RFE-IRON;RAD-SAKHALIN;P11; contested; Bark vessels fuel and household stores sustained cold-season communities without implying a state granary.
+	icon = antq_doctrine_amur_ussuri_traditions_winter_pit_house_stores
+	religion = antq_amur_ussuri_traditions
+
+	modifier = {
+		tolerance_own = 1
+		global_monthly_prosperity = 0.02
+	}
+
+	opinions = {
+		antq_doctrine_amur_ussuri_traditions_winter_pit_house_stores = 10
+	}
+}
+
+antq_doctrine_amur_ussuri_traditions_maritime_shore_compacts = { # NMJH-YIL;CAM-PROTOTUNGUSIC;RAD-RFE-IRON;RAD-SAKHALIN;P11; contested; Witnessed understandings coordinated shore access fishing sea-mammal use and exchange without a uniform island polity.
+	icon = antq_doctrine_amur_ussuri_traditions_maritime_shore_compacts
+	religion = antq_amur_ussuri_traditions
+
+	modifier = {
+		global_monthly_food_modifier = 0.03
+		global_hostile_attrition = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_amur_ussuri_traditions_maritime_shore_compacts = 10
+	}
+}
+
+antq_doctrine_amur_ussuri_traditions_forest_iron_exchange = { # NMJH-YIL;CAM-PROTOTUNGUSIC;RAD-RFE-IRON;RAD-SAKHALIN;P11; contested; Iron charcoal millet forest products and specialist skill circulated without inventing one guild ethnicity or state.
+	icon = antq_doctrine_amur_ussuri_traditions_forest_iron_exchange
+	religion = antq_amur_ussuri_traditions
+
+	modifier = {
+		monthly_legitimacy = 0.03
+		country_cabinet_efficiency = 0.02
+	}
+
+	opinions = {
+		antq_doctrine_amur_ussuri_traditions_forest_iron_exchange = 10
+	}
+}

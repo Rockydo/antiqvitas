@@ -20143,131 +20143,56 @@ countries = {
 			capital = suwon
 		}
 
-		XDM = { # Manchurian Societies; P8.3;CAH-XI
+		XGI = { # Middle Amur Pol'tse Horizon; NMJH-YIL;CAM-PROTOTUNGUSIC;P8.3
 			own_control_core = {
-				achan
 				aigun
 				akishma
-				alchan
 				amazar
-				amgun
-				anchun
-				anju_nurgan
 				argi
 				arkhara
-				bidzhan
-				bikinka
 				bir_amur
-				bira
 				birma
-				bitki
-				boli
-				boluohe
 				bryante
-				bulava
 				burunda
 				buse
 				chenqing
-				datta
 				dep
-				deren
 				djee
-				dongning
-				dukin
-				dzhuk
 				emuer
-				evur
-				futi
 				gilyuy
 				gromatukha
-				guohuo
-				helong
-				hulin
 				humar
-				huncun
-				idy_sakhalin
-				imanka
-				imilen
 				jiajin
-				jixi
-				juru_hoton
-				kahari
-				kaiyuan_warka
-				katen
-				kedar
-				kema
-				kerbi
 				kogan
-				koppi
 				kuanhe
-				kukan
 				kupuri
-				kur
-				kushunkotan
-				lahasusu
-				longjing
 				mamyn
-				mishan
 				mogot
 				mohe
 				mulmuga
-				mulun
-				namunka
-				nanghaer
-				nayoro
 				nehru
-				nemptu
 				nioman
-				nogule
-				noto_ussuri
-				nuoluo
-				nurgan
 				ollo
 				olongki
 				pangu
-				pilda
-				porokotan
 				sahar
-				samarginka
 				selemde
-				shantar
-				shili
-				shuangyashan
-				simmi
-				suluk
-				sutara
 				tahe
 				tehcha
 				tok
 				tom
-				torom
-				tugur
 				tujun
 				tukuringra
-				tulazi
-				tulguur
-				tumzhdin
 				tygde
 				tynda
 				tyrma
 				ulma
-				uninka
 				upper_nioman
 				urgal
 				urka
 				urkan
-				urmi
-				usalgin
-				uschu
-				vaka
-				wuliehe
-				xungake
 				xunhe
-				xunka
 				yakesa
-				yenji
-				yiman
-				yongmingcheng
 				yor
 				zhanhe
 			}
@@ -20286,10 +20211,361 @@ countries = {
 				heir_selection = tribal_oldest_male
 				ruler = random
 				reforms = {
-					antq_advanced_chiefdom
+					antq_amur_forest_river_network
 				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_steppe_status_law = antq_s2_steppe_status_mediated
+					antq_s2_steppe_dependent_labor_law = antq_s2_steppe_dependent_labor_mediated
+					antq_s2_steppe_revenue_law = antq_s2_steppe_revenue_mediated
+					antq_s2_steppe_land_law = antq_s2_steppe_land_mediated
+					antq_s2_steppe_muster_law = antq_s2_steppe_muster_mediated
+					antq_s2_steppe_local_rule_law = antq_s2_steppe_local_rule_mediated
+					antq_s2_steppe_cult_law = antq_s2_steppe_cult_mediated
+					antq_s2_steppe_household_law = antq_s2_steppe_household_mediated
+					antq_s2_steppe_commerce_law = antq_s2_steppe_commerce_mediated
+					antq_s2_steppe_coinage_law = antq_s2_steppe_coinage_mediated
+					antq_s2_steppe_courts_law = antq_s2_steppe_courts_mediated
+					antq_s2_steppe_offices_law = antq_s2_steppe_offices_mediated
+					antq_s2_steppe_migration_law = antq_s2_steppe_migration_mediated
+					antq_s2_steppe_external_law = antq_s2_steppe_external_mediated
+				}
+				centralization_vs_decentralization = -82
+				traditionalist_vs_innovative = -18
+				aristocracy_vs_plutocracy = -72
+				capital_economy_vs_traditional_economy = 78
+			}
+			capital = aigun
+		}
+
+		XGJ = { # Lower Amur Estuary Networks; NMJH-YIL;RAD-RFE-IRON;P8.3
+			own_control_core = {
+				achan
+				amgun
+				bidzhan
+				bira
+				bitki
+				boli
+				bulava
+				datta
+				deren
+				dukin
+				dzhuk
+				evur
+				imilen
+				kedar
+				kema
+				kerbi
+				koppi
+				kukan
+				kur
+				nemptu
+				nurgan
+				pilda
+				samarginka
+				shantar
+				simmi
+				suluk
+				sutara
+				torom
+				tugur
+				tumzhdin
+				uninka
+				urmi
+				usalgin
+				uschu
+				xungake
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				steppes_region
+				mongolia_region
+				xinjiang_region
+				north_china_region
+				manchuria_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_amur_forest_river_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_steppe_status_law = antq_s2_steppe_status_mediated
+					antq_s2_steppe_dependent_labor_law = antq_s2_steppe_dependent_labor_mediated
+					antq_s2_steppe_revenue_law = antq_s2_steppe_revenue_mediated
+					antq_s2_steppe_land_law = antq_s2_steppe_land_mediated
+					antq_s2_steppe_muster_law = antq_s2_steppe_muster_mediated
+					antq_s2_steppe_local_rule_law = antq_s2_steppe_local_rule_mediated
+					antq_s2_steppe_cult_law = antq_s2_steppe_cult_mediated
+					antq_s2_steppe_household_law = antq_s2_steppe_household_mediated
+					antq_s2_steppe_commerce_law = antq_s2_steppe_commerce_mediated
+					antq_s2_steppe_coinage_law = antq_s2_steppe_coinage_mediated
+					antq_s2_steppe_courts_law = antq_s2_steppe_courts_mediated
+					antq_s2_steppe_offices_law = antq_s2_steppe_offices_mediated
+					antq_s2_steppe_migration_law = antq_s2_steppe_migration_mediated
+					antq_s2_steppe_external_law = antq_s2_steppe_external_mediated
+				}
+				centralization_vs_decentralization = -84
+				traditionalist_vs_innovative = -20
+				aristocracy_vs_plutocracy = -74
+				capital_economy_vs_traditional_economy = 80
 			}
 			capital = nurgan
+		}
+
+		SKH = { # Sakhalin Paleometal Communities; RAD-SAKHALIN;P8.3
+			own_control_core = {
+				boluohe
+				guohuo
+				idy_sakhalin
+				kushunkotan
+				nanghaer
+				nayoro
+				porokotan
+				wuliehe
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				steppes_region
+				mongolia_region
+				xinjiang_region
+				north_china_region
+				manchuria_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_sakhalin_maritime_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_steppe_status_law = antq_s2_steppe_status_mediated
+					antq_s2_steppe_dependent_labor_law = antq_s2_steppe_dependent_labor_mediated
+					antq_s2_steppe_revenue_law = antq_s2_steppe_revenue_mediated
+					antq_s2_steppe_land_law = antq_s2_steppe_land_mediated
+					antq_s2_steppe_muster_law = antq_s2_steppe_muster_mediated
+					antq_s2_steppe_local_rule_law = antq_s2_steppe_local_rule_mediated
+					antq_s2_steppe_cult_law = antq_s2_steppe_cult_mediated
+					antq_s2_steppe_household_law = antq_s2_steppe_household_mediated
+					antq_s2_steppe_commerce_law = antq_s2_steppe_commerce_mediated
+					antq_s2_steppe_coinage_law = antq_s2_steppe_coinage_mediated
+					antq_s2_steppe_courts_law = antq_s2_steppe_courts_mediated
+					antq_s2_steppe_offices_law = antq_s2_steppe_offices_mediated
+					antq_s2_steppe_migration_law = antq_s2_steppe_migration_mediated
+					antq_s2_steppe_external_law = antq_s2_steppe_external_mediated
+				}
+				centralization_vs_decentralization = -88
+				traditionalist_vs_innovative = -24
+				aristocracy_vs_plutocracy = -78
+				capital_economy_vs_traditional_economy = 82
+			}
+			capital = idy_sakhalin
+		}
+
+		YIL = { # Ussuri-Sanjiang Yilou Horizon; NMJH-YIL;P8.3
+			own_control_core = {
+				alchan
+				anchun
+				bikinka
+				futi
+				hulin
+				imanka
+				katen
+				lahasusu
+				namunka
+				noto_ussuri
+				nuoluo
+				shuangyashan
+				tulguur
+				vaka
+				xunka
+				yiman
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				steppes_region
+				mongolia_region
+				xinjiang_region
+				north_china_region
+				manchuria_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_ussuri_poltsian_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_steppe_status_law = antq_s2_steppe_status_mediated
+					antq_s2_steppe_dependent_labor_law = antq_s2_steppe_dependent_labor_mediated
+					antq_s2_steppe_revenue_law = antq_s2_steppe_revenue_mediated
+					antq_s2_steppe_land_law = antq_s2_steppe_land_mediated
+					antq_s2_steppe_muster_law = antq_s2_steppe_muster_mediated
+					antq_s2_steppe_local_rule_law = antq_s2_steppe_local_rule_mediated
+					antq_s2_steppe_cult_law = antq_s2_steppe_cult_mediated
+					antq_s2_steppe_household_law = antq_s2_steppe_household_mediated
+					antq_s2_steppe_commerce_law = antq_s2_steppe_commerce_mediated
+					antq_s2_steppe_coinage_law = antq_s2_steppe_coinage_mediated
+					antq_s2_steppe_courts_law = antq_s2_steppe_courts_mediated
+					antq_s2_steppe_offices_law = antq_s2_steppe_offices_mediated
+					antq_s2_steppe_migration_law = antq_s2_steppe_migration_mediated
+					antq_s2_steppe_external_law = antq_s2_steppe_external_mediated
+				}
+				centralization_vs_decentralization = -76
+				traditionalist_vs_innovative = -14
+				aristocracy_vs_plutocracy = -66
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = hulin
+		}
+
+		XGK = { # Mudan Basin Communities; NMJH-YIL;CAM-PROTOTUNGUSIC;P8.3
+			own_control_core = {
+				dongning
+				jixi
+				juru_hoton
+				mishan
+				mulun
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				steppes_region
+				mongolia_region
+				xinjiang_region
+				north_china_region
+				manchuria_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_ussuri_poltsian_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_steppe_status_law = antq_s2_steppe_status_mediated
+					antq_s2_steppe_dependent_labor_law = antq_s2_steppe_dependent_labor_mediated
+					antq_s2_steppe_revenue_law = antq_s2_steppe_revenue_mediated
+					antq_s2_steppe_land_law = antq_s2_steppe_land_mediated
+					antq_s2_steppe_muster_law = antq_s2_steppe_muster_mediated
+					antq_s2_steppe_local_rule_law = antq_s2_steppe_local_rule_mediated
+					antq_s2_steppe_cult_law = antq_s2_steppe_cult_mediated
+					antq_s2_steppe_household_law = antq_s2_steppe_household_mediated
+					antq_s2_steppe_commerce_law = antq_s2_steppe_commerce_mediated
+					antq_s2_steppe_coinage_law = antq_s2_steppe_coinage_mediated
+					antq_s2_steppe_courts_law = antq_s2_steppe_courts_mediated
+					antq_s2_steppe_offices_law = antq_s2_steppe_offices_mediated
+					antq_s2_steppe_migration_law = antq_s2_steppe_migration_mediated
+					antq_s2_steppe_external_law = antq_s2_steppe_external_mediated
+				}
+				centralization_vs_decentralization = -74
+				traditionalist_vs_innovative = -12
+				aristocracy_vs_plutocracy = -64
+				capital_economy_vs_traditional_economy = 68
+			}
+			capital = jixi
+		}
+
+		WJO = { # Northern Okjeo Corridor; NMJH-YIL;P8.3
+			own_control_core = {
+				anju_nurgan
+				helong
+				huncun
+				kahari
+				kaiyuan_warka
+				longjing
+				nogule
+				shili
+				tulazi
+				yenji
+				yongmingcheng
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				steppes_region
+				mongolia_region
+				xinjiang_region
+				north_china_region
+				manchuria_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_northern_okjeo_corridor
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_steppe_status_law = antq_s2_steppe_status_mediated
+					antq_s2_steppe_dependent_labor_law = antq_s2_steppe_dependent_labor_mediated
+					antq_s2_steppe_revenue_law = antq_s2_steppe_revenue_mediated
+					antq_s2_steppe_land_law = antq_s2_steppe_land_mediated
+					antq_s2_steppe_muster_law = antq_s2_steppe_muster_mediated
+					antq_s2_steppe_local_rule_law = antq_s2_steppe_local_rule_mediated
+					antq_s2_steppe_cult_law = antq_s2_steppe_cult_mediated
+					antq_s2_steppe_household_law = antq_s2_steppe_household_mediated
+					antq_s2_steppe_commerce_law = antq_s2_steppe_commerce_mediated
+					antq_s2_steppe_coinage_law = antq_s2_steppe_coinage_mediated
+					antq_s2_steppe_courts_law = antq_s2_steppe_courts_mediated
+					antq_s2_steppe_offices_law = antq_s2_steppe_offices_mediated
+					antq_s2_steppe_migration_law = antq_s2_steppe_migration_mediated
+					antq_s2_steppe_external_law = antq_s2_steppe_external_mediated
+				}
+				centralization_vs_decentralization = -68
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -58
+				capital_economy_vs_traditional_economy = 62
+			}
+			capital = yenji
 		}
 
 		ZHZ = { # Zhang Zhung; OXF-SINO-TIB;CAM-TIB-ARCH;P8.8

@@ -611,8 +611,8 @@ and focused runtime probe all pass.
     backdating later named states or asserting unsupported ethnic borders.
   - [ ] Literal African placeholder countries are exhausted and the Gangetic,
     Inner Asian, Tibetan, and Central Indian superstates are split. Continue
-    the size-ranked global census with Mainland Southeast Asia (136),
-    Manchuria (125), Borneo (110), and Rajasthan-Gujarat (109).
+    the size-ranked global census with Borneo (110) and
+    Rajasthan-Gujarat (109).
     The parent task remains open until the census reaches zero.
     - [x] Replace `CIN` as a disconnected residual, not as a renamed Central
       Indian state. The audited footprint is 76 Gondwana/Bundelkhand
@@ -659,6 +659,16 @@ and focused runtime probe all pass.
       - Pin the exact transform with `s2_mainland_sea_granularity.py`; prohibit
         `SEA` and the old player-facing placeholder. Full 120-command
         validation and paired smoke must remain green with zero mod-only lines.
+    - [x] Replace `MNC` across its 125-location footprint with Middle Amur
+      Pol'tse (50), Lower Amur mainland (35), Sakhalin Paleometal (8),
+      Ussuri-Sanjiang Yilou (16), Mudan basin (5), and Northern Okjeo-Tuanjie
+      corridor (11) frames.
+      - Add six cultures, one Amur-Ussuri traditions family with four
+        direct-art doctrines, four reforms, six standards, qualified capitals,
+        settlements, laws, research, histories, and eleven-client localization.
+      - Pin exact selectors and integration with
+        `s2_manchurian_granularity.py`. Full 121-command validation and paired
+        smoke must remain green with zero mod-only lines.
     - [x] Replace Inner Asian Oasis Societies as five separate
       geographic audits, not a country rename. Its 302 locations comprise
       Transoxiana (93), the Kazakh steppe (85), eastern Khorasan/Bactria (46),

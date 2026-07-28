@@ -1,8 +1,8 @@
 {
   "game_build": "24187685",
-  "entry_count": 375,
-  "collision_count": 141,
-  "localization_collision_count": 155,
+  "entry_count": 380,
+  "collision_count": 143,
+  "localization_collision_count": 157,
   "reserved_hash_collision_tags": [
     "XAD"
   ],
@@ -1576,11 +1576,46 @@
       "name": "Korean Peninsula Societies"
     },
     {
-      "design_tag": "MNC",
-      "engine_tag": "XDM",
+      "design_tag": "MAM",
+      "engine_tag": "XGI",
       "vanilla_collision": true,
       "localization_collision": true,
-      "name": "Manchurian Societies"
+      "name": "Middle Amur Pol'tse Horizon"
+    },
+    {
+      "design_tag": "LAM",
+      "engine_tag": "XGJ",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Lower Amur Estuary Networks"
+    },
+    {
+      "design_tag": "SKH",
+      "engine_tag": "SKH",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Sakhalin Paleometal Communities"
+    },
+    {
+      "design_tag": "YIL",
+      "engine_tag": "YIL",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Ussuri-Sanjiang Yilou Horizon"
+    },
+    {
+      "design_tag": "MDN",
+      "engine_tag": "XGK",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Mudan Basin Communities"
+    },
+    {
+      "design_tag": "WJO",
+      "engine_tag": "WJO",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Northern Okjeo Corridor"
     },
     {
       "design_tag": "ZHZ",

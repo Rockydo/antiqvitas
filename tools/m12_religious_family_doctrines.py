@@ -40,6 +40,11 @@ MAINLAND_SEA_ATLAS = (
     / "assets_queue/generated_sources/"
     "antq_doctrine_mainland_southeast_asian_traditions_fourup.png"
 )
+AMUR_USSURI_ATLAS = (
+    ROOT
+    / "assets_queue/generated_sources/"
+    "antq_doctrine_amur_ussuri_traditions_fourup.png"
+)
 CONTACT_SHEET = (
     ROOT / "docs/m12/religious_family_doctrines_contact_sheet.png"
 )
@@ -118,6 +123,10 @@ DIRECT_ATLASES = {
     "antq_doctrine_mainland_southeast_asian_traditions_wet_rice_water_compacts": (MAINLAND_SEA_ATLAS, 1),
     "antq_doctrine_mainland_southeast_asian_traditions_river_passage_exchange": (MAINLAND_SEA_ATLAS, 2),
     "antq_doctrine_mainland_southeast_asian_traditions_highland_iron_forest_obligations": (MAINLAND_SEA_ATLAS, 3),
+    "antq_doctrine_amur_ussuri_traditions_seasonal_salmon_obligations": (AMUR_USSURI_ATLAS, 0),
+    "antq_doctrine_amur_ussuri_traditions_winter_pit_house_stores": (AMUR_USSURI_ATLAS, 1),
+    "antq_doctrine_amur_ussuri_traditions_maritime_shore_compacts": (AMUR_USSURI_ATLAS, 2),
+    "antq_doctrine_amur_ussuri_traditions_forest_iron_exchange": (AMUR_USSURI_ATLAS, 3),
 }
 
 

@@ -1,5 +1,18 @@
 # Technical and Design Decisions
 
+## 2026-07-28 - Manchuria uses material and corridor frames
+
+`MNC` crossed three distinct evidence regimes. Middle/lower Amur Pol'tse-facing
+networks, Sakhalin Paleometal communities, and Ussuri/Mudan/Okjeo corridors are
+separate low-centralization frames; later Jurchen, Nivkh, Ainu, and Korean
+states or ethnic borders are not backdated.
+
+Sakhalin is split from the mainland and Northern Okjeo retains Korean Muism;
+the other five use one plural Amur-Ussuri technical faith. Four reforms
+distinguish forest-river, maritime, Pol'tse exchange, and Okjeo corridor
+governance. Religion/doctrine art used two four-up generations with exact
+installed EU5 religion and aspect references.
+
 ## 2026-07-28 - Mainland Southeast Asia uses corridors and material horizons
 
 `SEA` crossed Arakan, central Vietnam, Patkai/upper-Irrawaddy highlands,

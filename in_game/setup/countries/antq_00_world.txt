@@ -2017,12 +2017,57 @@ XDL = { # Korean Peninsula Societies; P8.3;SAM
 	is_historic = yes
 }
 
-XDM = { # Manchurian Societies; P8.3;CAH-XI
-	color = rgb { 110 98 105 }
-	color2 = rgb { 145 157 150 }
+XGI = { # Middle Amur Pol'tse Horizon; NMJH-YIL;CAM-PROTOTUNGUSIC;P8.3
+	color = rgb { 108 120 129 }
+	color2 = rgb { 147 135 126 }
+
+	culture_definition = antq_middle_amur_poltsian
+	religion_definition = antq_amur_ussuri_traditions
+	is_historic = yes
+}
+
+XGJ = { # Lower Amur Estuary Networks; NMJH-YIL;RAD-RFE-IRON;P8.3
+	color = rgb { 115 101 110 }
+	color2 = rgb { 140 154 145 }
+
+	culture_definition = antq_lower_amur_estuary
+	religion_definition = antq_amur_ussuri_traditions
+	is_historic = yes
+}
+
+SKH = { # Sakhalin Paleometal Communities; RAD-SAKHALIN;P8.3
+	color = rgb { 114 115 130 }
+	color2 = rgb { 141 140 125 }
+
+	culture_definition = antq_sakhalin_paleometal
+	religion_definition = antq_amur_ussuri_traditions
+	is_historic = yes
+}
+
+YIL = { # Ussuri-Sanjiang Yilou Horizon; NMJH-YIL;P8.3
+	color = rgb { 110 117 107 }
+	color2 = rgb { 145 138 148 }
 
 	culture_definition = antq_yilou
-	religion_definition = antq_tengri
+	religion_definition = antq_amur_ussuri_traditions
+	is_historic = yes
+}
+
+XGK = { # Mudan Basin Communities; NMJH-YIL;CAM-PROTOTUNGUSIC;P8.3
+	color = rgb { 104 122 124 }
+	color2 = rgb { 151 133 131 }
+
+	culture_definition = antq_mudan_basin_iron_age
+	religion_definition = antq_amur_ussuri_traditions
+	is_historic = yes
+}
+
+WJO = { # Northern Okjeo Corridor; NMJH-YIL;P8.3
+	color = rgb { 97 101 118 }
+	color2 = rgb { 158 154 137 }
+
+	culture_definition = antq_northern_okjeo_tuanjie
+	religion_definition = antq_korean_muism
 	is_historic = yes
 }
 
