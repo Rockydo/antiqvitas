@@ -392,6 +392,27 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "AJA-SOMALILAND;P8.5;P13", "contested",
         "Mobile and heterogeneous pastoral households coordinate routes, water, restitution, and exchange without a centralized state or fixed ethnic border.",
     ),
+    "antq_west_african_savanna_compound_network": (
+        "global_tribes_estate_power=0.08|global_peasants_estate_power=0.08|"
+        "tribes_estate_power_from_cabinet=0.14|burghers_estate_power_from_cabinet=0.08|"
+        "global_monthly_food_modifier=0.025|replace_cabinet_member_cost_modifier=-0.02",
+        "JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5;P13", "contested",
+        "Dispersed savanna compounds coordinate cultivation, grazing, river access, and restitution without backdating later Hausa identities or states.",
+    ),
+    "antq_west_african_ironworking_network": (
+        "global_tribes_estate_power=0.06|global_peasants_estate_power=0.06|"
+        "tribes_estate_power_from_cabinet=0.10|burghers_estate_power_from_cabinet=0.10|"
+        "global_production_efficiency=0.035|replace_cabinet_member_cost_modifier=-0.01",
+        "HER-LEJJA;MET-IRON;JAR-WA-NETWORKS;P8.5;P13", "contested",
+        "Ironworking, farming, and exchange households coordinate furnaces, fuel, food, and circulation without implying one ethnicity or centralized polity.",
+    ),
+    "antq_west_african_forest_network": (
+        "global_tribes_estate_power=0.09|global_peasants_estate_power=0.05|"
+        "tribes_estate_power_from_cabinet=0.14|clergy_estate_power_from_cabinet=0.08|"
+        "global_monthly_food_modifier=0.02|replace_cabinet_member_cost_modifier=-0.03",
+        "OUP-BENIN;JAH-GHANA;JAR-WA-NETWORKS;P8.5;P13", "contested",
+        "Forest households coordinate land access, cultivation, ritual custody, and river exchange without backdating later dynasties, cities, or states.",
+    ),
     "antq_early_ironworking_community_network": (
         "global_tribes_estate_power=0.07|global_peasants_estate_power=0.07|"
         "tribes_estate_power_from_cabinet=0.12|burghers_estate_power_from_cabinet=0.08|"
@@ -1644,7 +1665,7 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    expected_contract_count = 52 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    expected_contract_count = 55 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -2035,6 +2056,42 @@ antq_horn_pastoral_network = {
 		global_tribes_estate_power = 0.10
 		monthly_towards_decentralization = societal_value_minor_monthly_move
 		global_trade_through_owned_territory_efficiency = 0.025
+		research_speed = 0.06
+	}
+	years = 2
+}
+
+antq_west_african_savanna_compound_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		global_peasants_estate_power = 0.08
+		global_monthly_food_modifier = 0.025
+		research_speed = 0.065
+	}
+	years = 2
+}
+
+antq_west_african_ironworking_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.06
+		global_peasants_estate_power = 0.06
+		global_production_efficiency = 0.035
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_west_african_forest_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.09
+		global_peasants_estate_power = 0.05
+		monthly_towards_decentralization = societal_value_minor_monthly_move
 		research_speed = 0.06
 	}
 	years = 2
@@ -2621,6 +2678,12 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_far_side_port_chiefdom_desc", "A separately led northern-Horn market coordinating roadstead access, exchange households, mobile suppliers, and visiting merchants."),
         ("antq_horn_pastoral_network", "Horn Pastoral Network"),
         ("antq_horn_pastoral_network_desc", "Mobile pastoral households coordinate routes, water, restitution, and exchange without a centralized state or fixed ethnic border."),
+        ("antq_west_african_savanna_compound_network", "West African Savanna Compound Network"),
+        ("antq_west_african_savanna_compound_network_desc", "Dispersed savanna compounds coordinate cultivation, grazing, river access, and restitution without backdating later Hausa identities or states."),
+        ("antq_west_african_ironworking_network", "West African Ironworking Network"),
+        ("antq_west_african_ironworking_network_desc", "Ironworking, farming, and exchange households coordinate furnaces, fuel, food, and circulation without implying one ethnicity or centralized polity."),
+        ("antq_west_african_forest_network", "West African Forest Network"),
+        ("antq_west_african_forest_network_desc", "Forest households coordinate land access, cultivation, ritual custody, and river exchange without backdating later dynasties, cities, or states."),
         ("antq_early_ironworking_community_network", "Early Ironworking Community Network"),
         ("antq_early_ironworking_community_network_desc", "Dispersed farming, foraging, herding, potting, and ironworking communities coordinate exchange and local obligations without a centralized state or single ethnic identity."),
         ("antq_mobile_hunter_herder_network", "Mobile Hunter-Herder Network"),

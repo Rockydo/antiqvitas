@@ -1,5 +1,28 @@
 # Technical and Design Decisions
 
+## 2026-07-28 - West African residuals use archaeological networks, not later states
+
+The old West African Iron-Age Societies country was not one coherent map
+frame: twenty locations lay across four western-Hausaland province groups,
+while Awka Etiti, Ketu, Kong, and Kumasi were isolated singletons far to the
+south and west. A rename would have preserved that false political unity.
+ANTIQVITAS instead assigns eight disjoint low-centralization frames based on
+river basins, plateaux, forest zones, interfluves, and the Nsukka-Lejja
+ironworking horizon.
+
+The four northern frames deliberately use geographic names rather than later
+Hausa state names. The four southern anchors likewise do not backdate the
+kingdom of Ketu, the later Kong polity, Kumasi or Asante, or a unified Igbo
+state. Engine ownership remains necessary, but localization and reforms
+present communities and exchange networks rather than kingdoms.
+
+This is a complete system replacement: every frame has an owned capital,
+culture/religion profile, one of three environment-specific reforms, a direct
+period-inspired standard, agenda/history/rank integration, opening research,
+settlement/building propagation, laws, estates, and eleven-client
+localization. `tools/s2_west_africa_granularity.py` pins the exact disjoint
+contract. The global literal-placeholder census remains open at 23.
+
 ## 2026-07-28 - African horizons are modeled as bounded networks, not a Bantu state
 
 The old Bantu Societies country collapsed several unrelated evidence regimes

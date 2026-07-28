@@ -1,5 +1,35 @@
 # Historical Assumptions
 
+## 2026-07-28 - West African AD 1 frames are cautious geographic proxies
+
+† The four western-Hausaland frames are geographic and archaeological gameplay
+proxies, not claims that later Hausa kingdoms, a uniform Hausa ethnicity, or
+their historical borders existed in AD 1. Scholarship explicitly challenges
+simple orthodox expansion narratives, while recent network archaeology
+supports local, heterarchical community interaction more securely than a
+single political map.
+
+† Nsukka-Lejja is used for an ironworking horizon attested around two millennia
+ago; it does not establish one polity or ethnicity. `awka_etiti` is the
+available engine-map anchor, not evidence for an ancient state named Awka.
+Lower Oueme, Volta-Cong, and Bosumtwi are likewise conservative forest or
+interfluve networks. The map keys `ketu`, `kong`, and `kumasi` are inherited
+geometry labels: the later kingdoms and cities attached to those names are
+not projected into AD 1. The Bosumtwi standard is period-inspired and does not
+backdate Asante state symbolism.
+
+† Six new culture profiles currently use `mande_language` solely as the
+closest installed technical name-generator fallback. It is not a linguistic
+classification of these communities. Replacing it with sourced regional
+language-family and onomastic roots remains an explicit TODO.
+
+Sources weighed: the
+[Gallagher and Dueppen West African network synthesis](https://link.springer.com/article/10.1007/s10814-024-09201-w);
+[Newman's critique of orthodox Hausaland history](https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/towards-a-less-orthodox-history-of-hausaland/7DAC716970D5D7940ACA83020F8D0070);
+the [Lejja archaeological conservation study](https://www.nature.com/articles/s40494-024-01383-2);
+the [Oxford archaeology of Benin overview](https://academic.oup.com/edited-volume/61663/chapter-abstract/553388409);
+and [DeCorse on southern Ghana's pre-Atlantic history](https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/prelude-to-the-atlantic-trade-new-perspectives-on-southern-ghanas-preatlantic-history-8001500/A2BCDA39D5F2C38FBD1AD2368D969454).
+
 ## 2026-07-28 - Bantu-frontier labels describe evidence horizons, not ethnic states
 
 † Urewe, Ngovo, and Kwale are archaeological categories whose distributions do

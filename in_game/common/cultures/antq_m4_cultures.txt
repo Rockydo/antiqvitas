@@ -505,6 +505,60 @@ antq_nok = { # P8.5;P10;JAA-NOK;OUP-NOK; Central Nigerian late Nok archaeologica
 	}
 }
 
+antq_kebbi_river = { # JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5;P10; Geographic riverine-savanna profile before later Hausaization; the Mande language root is a technical name-generator fallback
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_kebbi_river
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_zamfara_plateau = { # JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5;P10; Geographic plateau profile before later Hausaization; the Mande language root is a technical name-generator fallback
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_zamfara_plateau
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_katsina_plain = { # JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5;P10; Geographic plain profile without backdating the later Hausa state; the Mande language root is technical
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_katsina_plain
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_gobir_tarka = { # JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5;P10; Geographic Tarka-plain profile without backdating the later Gobir state; the Mande language root is technical
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_gobir_tarka
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_nsukka_lejja = { # HER-LEJJA;P8.5;P10; Southeastern Nigerian early-ironworking horizon; the evidence does not establish one ethnicity polity or ancient Awka identity
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_nsukka_lejja
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
+antq_lower_oueme = { # OUP-BENIN;MET-IRON;P8.5;P10; Geographic forest-community proxy without backdating Ketu or later Gbe-speaking state borders
+	language = antq_subsaharan_dialect
+	color = antq_culture_color_antq_lower_oueme
+	tags = { european_gfx }
+	culture_groups = {
+		antq_subsaharan_group
+	}
+}
+
 antq_northern_horn_coastal = { # AJA-SOMALILAND;PME-BARBARIA;P8.5;P10; Technical coastal interaction profile for heterogeneous Barbaroi and port communities; it is not an asserted common ethnonym or language
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_northern_horn_coastal

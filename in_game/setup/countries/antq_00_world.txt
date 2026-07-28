@@ -505,11 +505,74 @@ DJN = { # Djenne-Djenno; P8.5;CAH-XI
 	is_historic = yes
 }
 
-WAF = { # West African Iron-Age Societies; P8.5;CAH-XI
+WAF = { # Kebbi River Communities; JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5
 	color = rgb { 128 94 55 }
 	color2 = rgb { 127 161 200 }
 
-	culture_definition = antq_mande
+	culture_definition = antq_kebbi_river
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+ZMP = { # Zamfara Plateau Communities; JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5
+	color = rgb { 137 93 57 }
+	color2 = rgb { 118 162 198 }
+
+	culture_definition = antq_zamfara_plateau
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+KPC = { # Katsina Plain Communities; JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5
+	color = rgb { 126 96 52 }
+	color2 = rgb { 129 159 203 }
+
+	culture_definition = antq_katsina_plain
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+GTC = { # Gobir Tarka Communities; JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5
+	color = rgb { 142 104 33 }
+	color2 = rgb { 113 151 222 }
+
+	culture_definition = antq_gobir_tarka
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+NSK = { # Nsukka-Lejja Ironworkers; HER-LEJJA;P8.5
+	color = rgb { 127 100 42 }
+	color2 = rgb { 128 155 213 }
+
+	culture_definition = antq_nsukka_lejja
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+OUE = { # Lower Oueme Forest Communities; OUP-BENIN;MET-IRON;P8.5
+	color = rgb { 147 84 46 }
+	color2 = rgb { 108 171 209 }
+
+	culture_definition = antq_lower_oueme
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+VIC = { # Volta-Cong Interfluve; JAR-WA-NETWORKS;MET-IRON;P8.5
+	color = rgb { 144 85 37 }
+	color2 = rgb { 111 170 218 }
+
+	culture_definition = antq_volta_basin
+	religion_definition = antq_west_african
+	is_historic = yes
+}
+
+BSW = { # Bosumtwi Forest Communities; JAH-GHANA;JAR-WA-NETWORKS;P8.5
+	color = rgb { 140 105 30 }
+	color2 = rgb { 115 150 225 }
+
+	culture_definition = antq_akan_forest
 	religion_definition = antq_west_african
 	is_historic = yes
 }

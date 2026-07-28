@@ -1,5 +1,30 @@
 # Progress
 
+## 2026-07-28 - West Africa becomes eight bounded archaeological networks
+
+- Replaced the disconnected 24-location West African Iron-Age Societies
+  placeholder with Kebbi River (7), Zamfara Plateau (5), Katsina Plain (4),
+  Gobir Tarka (4), Nsukka-Lejja (1), Lower Oueme (1), Volta-Cong (1), and
+  Bosumtwi Forest (1) community frames. West Africa rises from fourteen to
+  twenty-one tags, while the largest replacement is seven locations.
+- Added six new cultures and eight total frame profiles, three differentiated
+  reforms, eight owned capitals, eight direct period-inspired standards,
+  opening research, laws, estates, settlements, buildings, agendas, ranks,
+  history text, and eleven-client localization. Later Hausa states, Ketu,
+  Kong, Kumasi, and Asante political identities are not backdated.
+- Added `tools/s2_west_africa_granularity.py` and its exact 24-location ledger.
+  The permanent gate checks disjoint ownership, selector scope, cultures,
+  religion, reforms, standards, and localization. The roster rises to 315
+  playable polities and the global literal-placeholder census falls from 24
+  to 23.
+- Full validation passes all 115 checks. Paired vanilla/mod smoke reached
+  responsive rendered menus in 198.5 seconds and found zero mod-only
+  normalized `error.log` lines. Evidence is recorded in
+  `docs/playtests/S2_WEST_AFRICA_GRANULARITY_20260728.md`.
+
+Next: literal African placeholder countries are exhausted. Continue the
+size-ranked global census with the 411-location Gangetic Societies frame.
+
 ## 2026-07-28 - The Bantu superstate becomes eight evidence-bounded frontiers
 
 - Replaced the 94-location Bantu Societies placeholder with four early

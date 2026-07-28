@@ -43,6 +43,35 @@
 - `CAM-MLR`: Peter R. Coutros, ["The Malian Lakes Region redefined"](https://www.cambridge.org/core/journals/antiquity/article/malian-lakes-region-redefined-archaeological-survey-of-the-gorbi-valley/130FA79106C62F9C5B1FAAC9C8E6AAAE), *Antiquity* 91 (2017), pp. 474-489. Settlement mounds and changing networks from the first millennium BC onward support bounded Western Sahel and Middle Niger communities, not later imperial borders.
 - `MET-IND`: Metropolitan Museum of Art, ["Inland Niger Delta"](https://www.metmuseum.org/essays/inland-niger-delta), records Jenne-jeno occupation from about 250 BC and its later growth as an ironworking and exchange centre. It supports a Middle Niger settlement network while retaining Djenne-Djenno as its own SoP.
 - `MET-IRON`: Metropolitan Museum of Art, ["The Age of Iron in West Africa"](https://www.metmuseum.org/essays/the-age-of-iron-in-west-africa), documents pre-Common-Era West African ironworking while placing the rise of later centralized kingdoms much later. It supports regional iron-age community frames, not backdated medieval states or ethnonyms.
+- `JAR-WA-NETWORKS`: Daphne Gallagher and Stephen Dueppen,
+  ["Reconnecting the Forest, Savanna, and Sahel in West Africa"](https://link.springer.com/article/10.1007/s10814-024-09201-w),
+  *Journal of Archaeological Research* (2024). The synthesis emphasizes
+  locally varied but long-networked first-millennium BC/AD communities and
+  household-scale political forms. It supports bounded community networks,
+  not a single West African polity or later ethnolinguistic map.
+- `JAH-HAUSALAND`: Paul Newman, ["Towards a Less Orthodox History of
+  Hausaland"](https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/towards-a-less-orthodox-history-of-hausaland/7DAC716970D5D7940ACA83020F8D0070),
+  *Journal of African History* 54 (2013). The linguistic-historical argument
+  places Hausa expansion into western Hausaland, including Zamfara and Kebbi,
+  much later in the Common Era. It is used chiefly to prevent backdating Hausa
+  state and language labels to AD 1.
+- `HER-LEJJA`: Chika M. Maduabuchi et al., ["Lejja archaeological site,
+  Southeastern Nigeria and its potential for archaeological science
+  research"](https://www.nature.com/articles/s40494-024-01383-2),
+  *npj Heritage Science* 12 (2024). Repeated dates cluster around two thousand
+  years ago and support an early ironworking horizon, while the authors warn
+  that its social and community organization remains unresolved.
+- `OUP-BENIN`: Alexis Adande, ["Archaeology of Benin"](https://academic.oup.com/edited-volume/61663/chapter-abstract/553388409),
+  *Oxford Research Encyclopedia of African History* (2024). It supports a
+  cautious lower-Benin archaeological frame while exposing how limited the
+  evidence is for early settlement and political organization; no later Ketu,
+  Dahomey, or Benin-state geography is backdated.
+- `JAH-GHANA`: Christopher DeCorse, ["Prelude to the Atlantic Trade: New
+  Perspectives on Southern Ghana's Pre-Atlantic History"](https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/prelude-to-the-atlantic-trade-new-perspectives-on-southern-ghanas-preatlantic-history-8001500/A2BCDA39D5F2C38FBD1AD2368D969454),
+  *Journal of African History* 51 (2010). Its securely discussed forest
+  earthworks and dense settlement begin much later than AD 1, so the campaign
+  uses only a low-centralization Bosumtwi forest-community proxy and does not
+  backdate Kumasi or Asante.
 
 - `DAR-ARA-PACIS`: Digital Augustan Rome, [Pax Augusta, Ara](https://www.digitalaugustanrome.org/records/pax-augusta-ara/), records the Senate's 13 BC decree and 30 January 9 BC dedication of the Ara Pacis Augustae. It supports a bounded AD 1 open-air altar anchor, not a procession frieze, named family group, rite, or complete plaza reconstruction.
 - `DAR-MAUSOLEUM`: Digital Augustan Rome, [Mausoleum: Augustus](https://www.digitalaugustanrome.org/records/mausoleum-augustus/), records a pre-AD 1 Campus Martius tomb with public groves and walks, while retaining uncertainty over the exact construction sequence. It supports a bounded cultural-landscape anchor, not a tomb plan, occupant list, sculpture programme, full landscaping, or later ruin state.

@@ -73,9 +73,9 @@ def main() -> int:
 			f"top-ten locations hold {top_ten_ratio:.1%} of regional placements; "
 			"the reviewed-metropolis concentration cap is 10%"
 		)
-	if len(settlement_audit) != 308:
+	if len(settlement_audit) != 315:
 		failures.append(
-			f"global settlement audit has {len(settlement_audit)} polities; expected 308"
+			f"global settlement audit has {len(settlement_audit)} polities; expected 315"
 		)
 	for row in settlement_audit:
 		if int(row["placements"]) < 1:

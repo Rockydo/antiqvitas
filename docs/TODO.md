@@ -24,20 +24,20 @@ and focused runtime probe all pass.
 
 ### Audit baseline
 
-- The roster now has 308 playable tags after the Arabia, Britain/Ireland,
-  Germania/Baltic, northern/eastern, Maghreb, Horn, and Bantu-frontier
-  archaeological splits. Twenty-four player-facing macro-polities still
-  contain “Societies” or another prohibited placeholder term in their names,
-  concentrated in Africa, the Americas, Central/South/East/Southeast Asia,
-  and Oceania. These are country-scale aggregations, not merely descriptive
+- The roster now has 315 playable tags after the Arabia, Britain/Ireland,
+  Germania/Baltic, northern/eastern, Maghreb, Horn, Bantu-frontier, and West
+  African archaeological splits. Twenty-three player-facing macro-polities
+  still contain “Societies” or another prohibited placeholder term in their
+  names, concentrated in the Americas, Central/South/East/Southeast Asia, and
+  Oceania. These are country-scale aggregations, not merely descriptive
   localization, and remain in the global granularity queue below.
 - The global RGO audit now covers all 13,549 controlled templates and applies
   652 regional, environmental, and direct-anchor corrections. Most retained
   staples remain inherited but are explicitly marked as contested where local
   extraction is not attested; deeper regional specialty work remains open.
-- The 265 ancient building definitions now seed 2,747 scalable regional
-  placements across 1,459 settlement-ranked locations and all 308 starting
-  polities. The top ten hold 7.1% because reviewed Roman metropolitan packages
+- The 265 ancient building definitions now seed 2,767 scalable regional
+  placements across 1,467 settlement-ranked locations and all 315 starting
+  polities. The top ten hold 7.0% because reviewed Roman metropolitan packages
   remain deliberately deep; ordinary locations are capped at six.
 - The advance DAG now has 360 nodes and 25 unique effect packages after the
   first 110-node Age-I expansion; 297 nodes still unlock no separate content.
@@ -45,8 +45,8 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 218 generated opening
-  government records and 364 privileges serve 308 opening polities. The legal
+  thin outside the first replacement tranches: 226 generated opening
+  government records and 364 privileges serve 315 opening polities. The legal
   layer now has 227 ancient groups,
   including 182 profile laws with 584 total options, a 26-option dated
   development layer, and 12 country-specific exceptions.
@@ -424,6 +424,15 @@ and focused runtime probe all pass.
     eight capitals, two reforms, direct standards, eleven-client localization,
     and the exact 93-location contract are pinned by
     `s2_bantu_frontier_granularity.py`.
+  - [x] Replace the disconnected 24-location West African Iron-Age Societies
+    placeholder with eight bounded frames: Kebbi River, Zamfara Plateau,
+    Katsina Plain, Gobir Tarka, Nsukka-Lejja, Lower Oueme, Volta-Cong, and
+    Bosumtwi Forest communities. The former two-region residual is gone; no
+    later Hausa state, Ketu kingdom, Kong polity, Kumasi state, or Asante
+    standard is backdated to AD 1. Six new cultures (eight total profiles),
+    three political reforms, eight owned capitals, eight direct standards,
+    full system integration, and the exact 24-location contract are pinned by
+    `s2_west_africa_granularity.py`.
   - Start from a generated census of country names, adjectives, map labels,
     government names, history text, and localization in every supported language.
   - Split broad ownership into geographically bounded peoples, confederations,
@@ -565,9 +574,18 @@ and focused runtime probe all pass.
   - [x] Replace Bantu Societies with eight evidence-bounded central, eastern,
     and southern African frames; remove its erroneous Wadai/Bauchi claims and
     leave unverified AD 1 Comorian settlement unowned.
-  - [ ] Continue the African pass through the remaining Sahara and West African
-    placeholders, then proceed through the size-ranked global
-    census. The parent task remains open until the census reaches zero.
+  - [x] Replace West African Iron-Age Societies with eight disjoint
+    archaeological/geographic community networks. Separate western Hausaland,
+    Nsukka-Lejja, Lower Oueme, Volta-Cong, and Bosumtwi frames without
+    backdating later named states or asserting unsupported ethnic borders.
+  - [ ] Literal African placeholder countries are now exhausted. Continue the
+    size-ranked global census with the 411-location Gangetic Societies frame,
+    then Inner Asian Oasis and Tibetan Societies. The parent task remains open
+    until the census reaches zero.
+  - [ ] Replace the temporary `mande_language` name-generator fallback on the
+    six new bounded West African culture profiles with sourced language-family
+    and onomastic roots. Do not turn the technical fallback into a claim of a
+    uniform Mande, Hausa, or other later ethnolinguistic identity in AD 1.
   - [ ] Replace the temporary `antq_bantu_religion` technical fallback on the
     Limpopo and Zambezi hunter-herder frames with a sourced southern-African
     traditions family, doctrines, and direct icon set; do not imply Bantu
