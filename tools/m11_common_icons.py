@@ -97,6 +97,9 @@ RELIGION_ICONS = (
     ReligionIcon("antq_eastern_hill_traditions", "shamanism"),
     ReligionIcon("antq_eastern_iranian_traditions", "zoroastrian"),
     ReligionIcon("antq_tarim_oasis_traditions", "tengri"),
+    ReligionIcon("antq_western_plateau_traditions", "tengri"),
+    ReligionIcon("antq_central_plateau_traditions", "tengri"),
+    ReligionIcon("antq_eastern_plateau_traditions", "tengri"),
 )
 
 

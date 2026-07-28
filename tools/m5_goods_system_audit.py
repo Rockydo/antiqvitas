@@ -34,7 +34,7 @@ OUTPUT_FIELDS = (
 PERIOD_ROLE_GROUPS = {
     "food_crop_or_animal": {
         "fish", "fruit", "livestock", "millet", "olives", "rice",
-        "wheat", "wild_game",
+        "wheat", "wild_game", "antq_barley",
     },
     "organic_raw_or_exchange": {
         "amber", "beeswax", "cotton", "fiber_crops", "incense", "ivory",

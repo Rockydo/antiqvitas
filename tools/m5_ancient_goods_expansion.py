@@ -40,6 +40,12 @@ SHEETS = {
         ),
     ),
 }
+DIRECT_SOURCES = {
+    "antq_barley": (
+        "antq_barley_source.png",
+        "082e6302579b430313af9fb3e74adc11bf3cfcbb1b0afc241b5d01d56c0003d5",
+    ),
+}
 CELLS = ("top_left", "top_middle", "top_right", "bottom_left", "bottom_middle", "bottom_right")
 
 
@@ -81,6 +87,22 @@ def illustration(source: Image.Image, cell: str) -> Image.Image:
     return canvas
 
 
+def direct_icon_master(source: Image.Image) -> Image.Image:
+    icon = ImageOps.fit(source.convert("RGBA"), (128, 128), method=Image.Resampling.LANCZOS)
+    mask = Image.new("L", icon.size, 0)
+    ImageDraw.Draw(mask).ellipse((3, 3, 124, 124), fill=255)
+    icon.putalpha(mask.filter(ImageFilter.GaussianBlur(0.7)))
+    return icon
+
+
+def direct_illustration(source: Image.Image) -> Image.Image:
+    crop = source.convert("RGBA")
+    crop.thumbnail((440, 420), Image.Resampling.LANCZOS)
+    canvas = Image.new("RGBA", (1080, 440), (16, 25, 43, 255))
+    canvas.alpha_composite(crop, ((1080 - crop.width) // 2, (440 - crop.height) // 2))
+    return canvas
+
+
 def dds(source: Path, target: Path) -> None:
     subprocess.run(
         [sys.executable, str(DDS), "convert", str(source), str(target), "--compression", "dxt5"],
@@ -102,6 +124,14 @@ def ledger_text(rows: list[tuple[str, str, str]]) -> str:
             cell,
             "installed EU5 direct trade-good icons; restrained dark-blue archaeological still life",
             "docs/m5/custom_goods.csv; docs/m5/regional_building_families.csv",
+        ))
+    for key, (source, _digest) in sorted(DIRECT_SOURCES.items()):
+        writer.writerow((
+            key,
+            source,
+            "direct",
+            "installed EU5 direct trade-good icons; restrained dark-blue archaeological still life",
+            "docs/m5/custom_goods.csv; docs/world_1ad/SOURCES.md",
         ))
     return stream.getvalue()
 
@@ -134,6 +164,25 @@ def write() -> None:
         wide.save(wide_path)
         dds(wide_path, ILLUSTRATION_DIR / f"icon_goods_{key}.dds")
         previews.append((key, master))
+    for key, (filename, expected_hash) in sorted(DIRECT_SOURCES.items()):
+        source_path = ROOT / "assets_queue/generated_sources" / filename
+        if not source_path.is_file():
+            raise ValueError(f"missing generated direct source {source_path.relative_to(ROOT)}")
+        actual_hash = hashlib.sha256(source_path.read_bytes()).hexdigest()
+        if actual_hash != expected_hash:
+            raise ValueError(f"reviewed direct-source hash drift for {source_path.relative_to(ROOT)}")
+        with Image.open(source_path) as source:
+            master = direct_icon_master(source)
+            wide = direct_illustration(source)
+        retained = SOURCE_DIR / f"{key}.png"
+        general = GENERAL_SOURCE_DIR / f"{key}.png"
+        master.save(retained)
+        master.save(general)
+        dds(general, GOODS_DIR / f"icon_goods_{key}.dds")
+        wide_path = SOURCE_DIR / f"{key}_illustration.png"
+        wide.save(wide_path)
+        dds(wide_path, ILLUSTRATION_DIR / f"icon_goods_{key}.dds")
+        previews.append((key, master))
     for image in opened.values():
         image.close()
 
@@ -160,7 +209,12 @@ def check() -> None:
         path = SHEET_DIR / sheet
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected_hash:
             failures.append(f"missing or changed reviewed atlas {path.relative_to(ROOT)}")
-    for key, _sheet, _cell in rows:
+    for key, (filename, expected_hash) in sorted(DIRECT_SOURCES.items()):
+        path = ROOT / "assets_queue/generated_sources" / filename
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected_hash:
+            failures.append(f"missing or changed reviewed direct source {path.relative_to(ROOT)}")
+    keys = [key for key, _sheet, _cell in rows] + sorted(DIRECT_SOURCES)
+    for key in keys:
         master = SOURCE_DIR / f"{key}.png"
         general = GENERAL_SOURCE_DIR / f"{key}.png"
         icon = GOODS_DIR / f"icon_goods_{key}.dds"
@@ -197,7 +251,11 @@ def main() -> int:
     except (OSError, ValueError, subprocess.CalledProcessError) as exc:
         print(f"m5_ancient_goods_expansion: FAIL\n  - {exc}")
         return 1
-    print(f"m5_ancient_goods_expansion: PASS ({len(records())} direct goods from {len(SHEETS)} reviewed atlases)")
+    print(
+        "m5_ancient_goods_expansion: PASS "
+        f"({len(records()) + len(DIRECT_SOURCES)} direct goods from "
+        f"{len(SHEETS)} reviewed atlases and {len(DIRECT_SOURCES)} reviewed direct source)"
+    )
     return 0
 
 

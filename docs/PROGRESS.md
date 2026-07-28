@@ -7689,3 +7689,22 @@ reviewed 128px BC7 DDS.
 - `make validate` passes all 103 checks. Paired vanilla/mod smoke reaches the
   rendered menu with zero mod-unique `error.log` lines. Evidence is in
   `docs/playtests/S2_ANCIENT_CRAFT_GOODS_20260727.md`.
+
+## 2026-07-28 - Split the Tibetan Plateau catch-all
+
+- Replaced `TIB` / Tibetan Societies with nine source-bounded frames covering
+  the same 199 locations. The largest replacement is the 38-location Zhang
+  Zhung frame; no location is duplicated or dropped.
+- Added eight cultures, three plural belief families, twelve direct doctrines,
+  five plateau government reforms, nine direct standards, period-safe capital
+  names, and complete eleven-client presentation.
+- Added direct-art naked barley as the sixth custom raw good and anchored it in
+  the Yarlung and Tsangpo valleys. Corrected Changtang fiber crops and
+  unsupported Drichu gold to livestock.
+- Regenerated all dependent population, research, politics, law, settlement,
+  RGO, art, localization, capital, diplomacy, and start-state layers. The
+  project now has 356 opening polities, 522 cultures, 43 religions, 657 RGO
+  corrections, and 3,011 regional building placements.
+- Added a permanent Tibetan granularity validator and evidence ledger. The
+  complete 118-command validation gate and reduced paired menu smoke pass with
+  zero mod-only normalized error-log lines.

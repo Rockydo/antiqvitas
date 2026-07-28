@@ -4626,3 +4626,75 @@ antq_tes_tashtyk = { # FU-TASHTYK;P10; Minusinsk transition proxy at the campaig
 		antq_steppe_group
 	}
 }
+
+antq_sumpa = { # OXF-SINO-TIB;CAM-TIB-ARCH;P10; Northeastern plateau political-cultural adapter bounded to Amdo; later imperial sources do not recover an exact AD 1 language or tribal frontier
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_sumpa
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_changtang_pastoral = { # ANT-TIB-HERDING;CAM-TIB-ARCH;P10; Northern high-pasture archaeological-economic adapter rather than one ethnicity or state
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_changtang_pastoral
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_yarlung_agropastoral = { # ANT-BANGGA;CAM-TIB-ARCH;P10; Bangga-Yarlung first-millennium-BC material and subsistence horizon without backdating the later Yarlung dynasty
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_yarlung_agropastoral
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_central_tsangpo = { # ANT-BANGGA;CAM-TIB-ARCH;P10; Central river-valley agropastoral adapter; not a claim of uniform language identity or political unity
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_central_tsangpo
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_western_tsang = { # CAM-TIB-ARCH;P10; Western Tsangpo valley adapter without backdating the later Tsang administration or a recovered AD 1 ethnonym
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_western_tsang
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_qamdo_corridor = { # CAM-EAST-TIB;RAD-YUSHU;P10; Upper Salween and Mekong corridor adapter; material similarities do not define one ethnicity
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_qamdo_corridor
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_drichu_highland = { # CAM-EAST-TIB;RAD-YUSHU;P10; Upper Yangtze highland adapter; the geographic frame does not imply a uniform later Khampa identity
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_drichu_highland
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_eastern_plateau_corridor = { # CAM-EAST-TIB;OXF-EAST-RIM;P10; Plateau-escarpment exchange adapter without assigning the whole region to Qiang Bailang or any modern identity
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_eastern_plateau_corridor
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}

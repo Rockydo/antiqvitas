@@ -21,6 +21,7 @@ SPECIALS = ROOT / "docs/m5/special_buildings.csv"
 FORTS = ROOT / "docs/m7/forts.csv"
 SETTLEMENT_AUDIT = ROOT / "docs/m5/global_settlement_audit.csv"
 ROMAN_PROFILES = ROOT / "docs/m5/roman_economy_profiles.csv"
+ROSTER = ROOT / "docs/world_1ad/polities.csv"
 
 
 def rows(path: Path) -> list[dict[str, str]]:
@@ -73,9 +74,11 @@ def main() -> int:
 			f"top-ten locations hold {top_ten_ratio:.1%} of regional placements; "
 			"the reviewed-metropolis concentration cap is 10%"
 		)
-	if len(settlement_audit) != 348:
+	roster_count = len(rows(ROSTER))
+	if len(settlement_audit) != roster_count:
 		failures.append(
-			f"global settlement audit has {len(settlement_audit)} polities; expected 348"
+			f"global settlement audit has {len(settlement_audit)} polities; "
+			f"expected roster count {roster_count}"
 		)
 	for row in settlement_audit:
 		if int(row["placements"]) < 1:

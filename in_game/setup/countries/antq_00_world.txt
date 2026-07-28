@@ -2026,12 +2026,84 @@ XDM = { # Manchurian Societies; P8.3;CAH-XI
 	is_historic = yes
 }
 
-XDN = { # Tibetan Societies; P8.8;CAH-XI
-	color = rgb { 124 87 60 }
-	color2 = rgb { 131 168 195 }
+ZHZ = { # Zhang Zhung; OXF-SINO-TIB;CAM-TIB-ARCH;P8.8
+	color = rgb { 133 89 69 }
+	color2 = rgb { 122 166 186 }
 
-	culture_definition = antq_tibeto_burman
-	religion_definition = antq_arsacid_zoroastrianism
+	culture_definition = antq_zhangzhung
+	religion_definition = antq_western_plateau_traditions
+	is_historic = yes
+}
+
+SMP = { # Sumpa; OXF-SINO-TIB;CAM-TIB-ARCH;P8.8
+	color = rgb { 127 66 65 }
+	color2 = rgb { 128 189 190 }
+
+	culture_definition = antq_sumpa
+	religion_definition = antq_western_plateau_traditions
+	is_historic = yes
+}
+
+CTP = { # Changtang Pastoral Networks; ANT-TIB-HERDING;CAM-TIB-ARCH;P8.8
+	color = rgb { 131 77 61 }
+	color2 = rgb { 124 178 194 }
+
+	culture_definition = antq_changtang_pastoral
+	religion_definition = antq_western_plateau_traditions
+	is_historic = yes
+}
+
+XGB = { # Bangga-Yarlung Horizon; ANT-BANGGA;CAM-TIB-ARCH;P8.8
+	color = rgb { 138 70 49 }
+	color2 = rgb { 117 185 206 }
+
+	culture_definition = antq_yarlung_agropastoral
+	religion_definition = antq_central_plateau_traditions
+	is_historic = yes
+}
+
+UTV = { # Central Tsangpo Valley Network; ANT-BANGGA;CAM-TIB-ARCH;P8.8
+	color = rgb { 136 82 63 }
+	color2 = rgb { 119 173 192 }
+
+	culture_definition = antq_central_tsangpo
+	religion_definition = antq_central_plateau_traditions
+	is_historic = yes
+}
+
+XGC = { # Western Tsang Valley Network; CAM-TIB-ARCH;P8.8
+	color = rgb { 147 82 47 }
+	color2 = rgb { 108 173 208 }
+
+	culture_definition = antq_western_tsang
+	religion_definition = antq_central_plateau_traditions
+	is_historic = yes
+}
+
+QMC = { # Qamdo River-Corridor Network; CAM-EAST-TIB;RAD-YUSHU;P8.8
+	color = rgb { 139 73 60 }
+	color2 = rgb { 116 182 195 }
+
+	culture_definition = antq_qamdo_corridor
+	religion_definition = antq_eastern_plateau_traditions
+	is_historic = yes
+}
+
+DRC = { # Drichu Highland Network; CAM-EAST-TIB;RAD-YUSHU;P8.8
+	color = rgb { 126 76 57 }
+	color2 = rgb { 129 179 198 }
+
+	culture_definition = antq_drichu_highland
+	religion_definition = antq_eastern_plateau_traditions
+	is_historic = yes
+}
+
+EPC = { # Eastern Plateau Corridor Network; CAM-EAST-TIB;OXF-EAST-RIM;P8.8
+	color = rgb { 140 72 57 }
+	color2 = rgb { 115 183 198 }
+
+	culture_definition = antq_eastern_plateau_corridor
+	religion_definition = antq_eastern_plateau_traditions
 	is_historic = yes
 }
 

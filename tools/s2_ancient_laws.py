@@ -1205,8 +1205,12 @@ def validate_content() -> None:
     assignments = tag_profiles()
     if len(PROFILES) != 13 or len(THEMES) != 14:
         failures.append("legal layer must contain 13 profiles and 14 themes")
-    if len(assignments) != 348:
-        failures.append(f"legal profiles must cover 348 tags; found {len(assignments)}")
+    roster_count = len(read_roster())
+    if len(assignments) != roster_count:
+        failures.append(
+            f"legal profiles must cover all {roster_count} roster tags; "
+            f"found {len(assignments)}"
+        )
     if len(profile_law_pairs()) != 182 or len(all_law_options()) != 584:
         failures.append("legal breadth must be 182 groups and 584 options")
     if {theme.category for theme in THEMES} - LAW_CATEGORIES:

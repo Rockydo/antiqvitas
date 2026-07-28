@@ -3151,17 +3151,129 @@ XDM = { # Manchurian Societies; P8.8;P20
 	}
 }
 
-XDN = { # Tibetan Societies; P8.8;P20
+ZHZ = { # Zhang Zhung; OXF-SINO-TIB;CAM-TIB-ARCH;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_ibex_ram_horn_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.51 } scale = { 0.80 0.78 } }
+	}
+}
+
+SMP = { # Sumpa; OXF-SINO-TIB;CAM-TIB-ARCH;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_horse_heads_addorsed.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.74 } }
+	}
+}
+
+CTP = { # Changtang Pastoral Networks; ANT-TIB-HERDING;CAM-TIB-ARCH;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_ibex_segreant.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.51 } scale = { 0.78 0.76 } }
+	}
+}
+
+XGB = { # Bangga-Yarlung Horizon; ANT-BANGGA;CAM-TIB-ARCH;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_spiral_star_06.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+UTV = { # Central Tsangpo Valley Network; ANT-BANGGA;CAM-TIB-ARCH;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.70 0.70 } }
+	}
+}
+
+XGC = { # Western Tsang Valley Network; CAM-TIB-ARCH;P20
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_stag_head_antlers_embowed.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.49 } scale = { 0.78 0.80 } }
+	}
+}
+
+QMC = { # Qamdo River-Corridor Network; CAM-EAST-TIB;RAD-YUSHU;P20
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "yellow"
 	color3 = "black"
 	colored_emblem = {
-		texture = "ce_horse_salient.dds"
+		texture = "ce_spear_head_random_small.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.83 0.83 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.74 0.80 } }
+	}
+}
+
+DRC = { # Drichu Highland Network; CAM-EAST-TIB;RAD-YUSHU;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_bull_head_ringed.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.51 } scale = { 0.78 0.76 } }
+	}
+}
+
+EPC = { # Eastern Plateau Corridor Network; CAM-EAST-TIB;OXF-EAST-RIM;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.74 0.74 } }
 	}
 }
 

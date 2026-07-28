@@ -3990,3 +3990,24 @@ sixth-century reforms and the later four-spahbed arrangement are excluded
 because they fall after 4 September 476. Each transition uses the existing
 research DAG and council-activation contract rather than an unverified scripted
 constitutional-switch command.
+
+## 2026-07-28 - The plateau split uses bounded networks, not a backdated empire
+
+The 199-location Tibetan placeholder is replaced by nine frames at the
+installed area/province grain. Zhang Zhung and Sumpa retain source-attested
+names with explicit uncertainty; Changtang, Yarlung, Tsangpo, Qamdo, Drichu,
+and the eastern escarpment use pastoral, agropastoral, valley, mortuary, and
+route-network labels where no secure AD 1 state name survives.
+
+All nine are playable because EU5 requires political holders over the mapped
+population, but seven use anonymous decentralized adapters rather than
+invented rulers or bureaucracies. Three plural faith families replace the
+erroneous Arsacid-Zoroastrian fallback; their direct icons and doctrines use
+material contexts, never later Bon or Buddhist institutional symbols.
+
+Naked barley is promoted to a custom raw good because the installed wheat key
+would erase a defining high-altitude crop and because direct Yarlung/plateau
+archaeobotanical evidence exists. It is narrowly anchored to cultivated
+valleys; Changtang remains pastoral. Source art follows the checked trade-good
+pipeline: pinned full-resolution source, circle-safe RGBA master, 128px DXT5
+icon, and 1080x440 DXT5 illustration.

@@ -887,3 +887,69 @@ single AD 1 census.
   records continuing research into the late-Holocene Stone/Iron-Age transition
   in Wadai, Ennedi, and adjacent eastern Chad. It supports only a cautious
   plateau-community frame, never the much later Wadai Sultanate.
+
+## Tibetan Plateau political and archaeological contracts
+
+These sources support regional campaign frames at the BCE/CE boundary. The
+archaeological record is uneven and the useful textual names are recorded
+mainly in sources describing the much later rise of the Tibetan Empire.
+Accordingly, no selector below is treated as an exact AD 1 frontier, no
+anonymous frame receives an invented dynasty, and neither later organized Bon
+nor imperial Buddhism is projected backward.
+
+- `CAM-TIB-ARCH`: Jade d'Alpoim Guedes and Mark Aldenderfer,
+  [*The Archaeology of the Tibetan Plateau*](https://doi.org/10.1017/9781108680271),
+  Cambridge World Archaeology (2026), especially chapters 5–7. The synthesis
+  distinguishes economic and demographic developments through 0 CE, eastern
+  plateau status systems visible in mortuary evidence, and the named
+  pre-imperial formations later absorbed by the Tibetan Empire. It supports
+  multiple regional frames, not a plateau-wide AD 1 state.
+- `ANT-BANGGA`: Hongliang Lu et al.,
+  ["Early agropastoral settlement and cultural change in central Tibet in the
+  first millennium BC: excavations at Bangga"](https://doi.org/10.15184/aqy.2020.185),
+  *Antiquity* 95 (2021), 955–972. Bangga in the Yarlung Valley demonstrates
+  settled agropastoralism and regional material divergence during the first
+  millennium BC. The authors explicitly stress mobility between subsistence
+  modes and unresolved cultural contexts, so the mod uses a horizon rather
+  than inventing an early Yarlung kingdom.
+- `CAM-EAST-TIB`: Jade d'Alpoim Guedes and Mark Aldenderfer,
+  ["Status, Violence, and Burials on the Eastern Tibetan Plateau During the
+  Pre-Imperial Period"](https://doi.org/10.1017/9781108680271.009), in
+  *The Archaeology of the Tibetan Plateau* (2026). Mortuary evidence indicates
+  unequal access to long-distance exchange, weapons, and exotic goods. It
+  supports differentiated eastern highland political economies without
+  identifying one ethnicity or centralized state.
+- `RAD-YUSHU`: Guanghui Dong et al.,
+  ["Dating Human Settlement in the East-Central Tibetan Plateau during the
+  Late Holocene"](https://doi.org/10.1017/RDC.2017.117), *Radiocarbon* 60
+  (2018), 137–150. Secure dates demonstrate Bronze-Age presence but also show
+  that stone-built tombs and brown pottery persisted much later; those traits
+  cannot by themselves define an AD 1 people. The Yushu and Nangchen polygons
+  therefore remain a contested corridor frame.
+- `ANT-TIB-HERDING`: Hongliang Lu et al.,
+  ["Exploratory surveys of prehistoric highland herding facilities in
+  Tibet"](https://doi.org/10.15184/aqy.2025.58), *Antiquity* 99 (2025),
+  973–985. First-millennium-BC highland corrals support pastoral networks in
+  sparsely excavated uplands; they do not establish fixed tribal borders.
+- `OXF-SINO-TIB`: Stéphane Gros,
+  ["The Sino-Tibetan Borderlands"](https://academic.oup.com/edited-volume/61799/chapter/546340776),
+  *Oxford Research Encyclopedia of Asian History* (2023). It emphasizes the
+  borderlands' multiplicity and records Zhang Zhung and Sumpa as formations
+  flourishing on the upper plateau before imperial absorption. The mod bounds
+  them conservatively to Ngari and Amdo instead of reproducing later maximal
+  claims.
+- `OXF-EAST-RIM`: Anke Hein,
+  ["Early cultural developments on the eastern rim of the Tibetan Plateau:
+  establishing a new chronological scheme for southwest
+  Sichuan"](https://ora.ox.ac.uk/objects/uuid:61a959b3-bb5c-4e03-9136-93de0a714367),
+  *Asian Perspectives* 56 (2017). The study stresses weak chronologies and
+  regional cultural variability through the onset of large-scale Han
+  influence around AD 100. It supports corridor-scale eastern frames and
+  rejects a single material-culture-to-ethnicity equation.
+- `BLA-HAN`: Nathan W. Hill,
+  ["Songs of the Bailang: A New Transcription with Etymological
+  Commentary"](https://soas-repository.worktribe.com/output/419931/),
+  *Linguistics of the Tibeto-Burman Area* 40 (2017), and the late-Han notice
+  synthesized in `OXF-SINO-TIB`. The songs attest a distinct western-Sichuan
+  language and court only in AD 58–75. They inform later event potential but
+  are not backdated into a named AD 1 plateau country.

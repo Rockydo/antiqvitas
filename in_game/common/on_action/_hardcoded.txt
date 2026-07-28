@@ -149,6 +149,7 @@
 		location:dehua_jiujiang = { change_raw_material = goods:fiber_crops }
 		location:deir_qamar = { change_raw_material = goods:fiber_crops }
 		location:dergaon = { change_raw_material = goods:medicaments }
+		location:derge = { change_raw_material = goods:livestock }
 		location:dien_ban = { change_raw_material = goods:medicaments }
 		location:dingyuan_fengyang = { change_raw_material = goods:fiber_crops }
 		location:diu = { change_raw_material = goods:fiber_crops }
@@ -313,6 +314,10 @@
 		location:larantuka = { change_raw_material = goods:medicaments }
 		location:larnaca = { change_raw_material = goods:fiber_crops }
 		location:leuktron = { change_raw_material = goods:fiber_crops }
+		location:lhasa = {
+			change_raw_material = goods:antq_barley
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:lidian = { change_raw_material = goods:salt }
 		location:liege = { change_raw_material = goods:salt }
 		location:likusaen = { change_raw_material = goods:medicaments }
@@ -413,6 +418,10 @@
 		location:nandurbar = { change_raw_material = goods:fiber_crops }
 		location:nanning = { change_raw_material = goods:fiber_crops }
 		location:nazilli = { change_raw_material = goods:fiber_crops }
+		location:nedong = {
+			change_raw_material = goods:antq_barley
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:negombo = { change_raw_material = goods:medicaments }
 		location:neijiang = { change_raw_material = goods:fiber_crops }
 		location:niihari = { change_raw_material = goods:medicaments }
@@ -511,11 +520,16 @@
 		location:shakhty = { change_raw_material = goods:lumber }
 		location:shamakhi = { change_raw_material = goods:fiber_crops }
 		location:shansu = { change_raw_material = goods:fiber_crops }
+		location:shantsa = { change_raw_material = goods:livestock }
 		location:shanyang_huaian = { change_raw_material = goods:fiber_crops }
 		location:shaoxing = { change_raw_material = goods:fruit }
 		location:sheikh_hussein = { change_raw_material = goods:medicaments }
 		location:shenyang = { change_raw_material = goods:millet }
 		location:shida = { change_raw_material = goods:medicaments }
+		location:shigatse = {
+			change_raw_material = goods:antq_barley
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:shilong = { change_raw_material = goods:fiber_crops }
 		location:shouzhang = { change_raw_material = goods:fiber_crops }
 		location:shuqra = { change_raw_material = goods:fiber_crops }

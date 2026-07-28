@@ -24,20 +24,20 @@ and focused runtime probe all pass.
 
 ### Audit baseline
 
-- The roster now has 348 playable tags after the Arabia, Britain/Ireland,
+- The roster now has 356 playable tags after the Arabia, Britain/Ireland,
   Germania/Baltic, northern/eastern, Maghreb, Horn, Bantu-frontier, West
-  African, Gangetic, and Inner Asian archaeological splits. Twenty-one player-facing macro-polities
+  African, Gangetic, Inner Asian, and Tibetan Plateau archaeological splits. Twenty player-facing macro-polities
   still contain “Societies” or another prohibited placeholder term in their
   names, concentrated in the Americas, Central/South/East/Southeast Asia, and
   Oceania. These are country-scale aggregations, not merely descriptive
   localization, and remain in the global granularity queue below.
 - The global RGO audit now covers all 13,549 controlled templates and applies
-  652 regional, environmental, and direct-anchor corrections. Most retained
+  657 regional, environmental, and direct-anchor corrections. Most retained
   staples remain inherited but are explicitly marked as contested where local
   extraction is not attested; deeper regional specialty work remains open.
-- The 265 ancient building definitions now seed 2,966 direct regional
-  placements across 1,583 settlement-ranked locations and all 348 starting
-  polities. The top ten hold 6.5% because reviewed Roman metropolitan packages
+- The 265 ancient building definitions now seed 3,011 direct regional
+  placements across 1,609 settlement-ranked locations and all 356 starting
+  polities. The top ten hold 6.4% because reviewed Roman metropolitan packages
   remain deliberately deep; ordinary locations are capped at six.
 - The advance DAG now has 360 nodes and 25 unique effect packages after the
   first 110-node Age-I expansion; 297 nodes still unlock no separate content.
@@ -45,8 +45,8 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 261 generated opening
-  government records and 364 privileges serve 348 opening polities. The legal
+  thin outside the first replacement tranches: 270 generated opening
+  government records and 364 privileges serve 356 opening polities. The legal
   layer now has 227 ancient groups,
   including 182 profile laws with 584 total options, a 26-option dated
   development layer, and 12 country-specific exceptions.
@@ -609,9 +609,11 @@ and focused runtime probe all pass.
     archaeological/geographic community networks. Separate western Hausaland,
     Nsukka-Lejja, Lower Oueme, Volta-Cong, and Bosumtwi frames without
     backdating later named states or asserting unsupported ethnic borders.
-  - [ ] Literal African placeholder countries are exhausted and the Gangetic
-    and Inner Asian superstates are split. Continue the size-ranked global
-    census with the 199-location Tibetan Societies frame.
+  - [ ] Literal African placeholder countries are exhausted and the Gangetic,
+    Inner Asian, and Tibetan superstates are split. Continue the size-ranked
+    global census with the 167-location Central Indian Societies frame, then
+    Mainland Southeast Asia (136), Manchuria (125), Borneo (110), and
+    Rajasthan-Gujarat (109).
     The parent task remains open until the census reaches zero.
     - [x] Replace Inner Asian Oasis Societies as five separate
       geographic audits, not a country rename. Its 302 locations comprise
@@ -635,9 +637,50 @@ and focused runtime probe all pass.
     - [x] The 117-command static gate and reduced paired menu smoke pass. OAS is
       absent from roster, ownership, residual selectors, and localization; the
       smoke found zero mod-only normalized error-log lines.
-    - [ ] **Next:** audit Tibetan Societies as separate plateau, valley, and
-      frontier evidence zones. Do not backdate the later Tibetan Empire,
-      Buddhism's imperial establishment, or modern ethnolinguistic borders.
+    - [x] Replace the 199-location Tibetan Societies
+      superstate with nine source-bounded plateau, valley, and frontier
+      frames. Do not backdate the later Tibetan Empire, Buddhism's imperial
+      establishment, modern ethnolinguistic borders, or later provincial
+      administrations.
+      - [x] Bound Zhang Zhung to the 38 ownable Ngari locations and Sumpa to
+        the 33 ownable Amdo locations. Treat both as contested early
+        political-cultural frames: later imperial records prove that they
+        preceded Tibetan unification but do not recover exact AD 1 borders,
+        rulers, offices, or uniform identities.
+      - [x] Separate the seven-location Changtang pastoral surface, the
+        six-location Bangga-Yarlung agropastoral horizon, the 22-location
+        central Tsangpo valley network, and the 18-location western Tsang
+        valley network. Use archaeological/economic names where texts do not
+        preserve an AD 1 polity; never promote a modern location label into
+        an invented ancient state.
+      - [x] Divide the 75-location eastern plateau remainder into the
+        Qamdo river corridors (28), Drichu highlands (29), and eastern
+        plateau escarpment corridors (18). Pin the split to whole installed
+        province groups and the eastern-plateau mortuary/agropastoral record;
+        do not infer a single Qiang, Khampa, Bailang, or Tibetan nation from
+        later texts or present-day identity.
+      - [x] Replace the blanket Tibeto-Burman/Arsacid-Zoroastrian profile
+        with distinct, cautiously named regional culture adapters and plural
+        plateau-tradition faith families. Give every new faith four direct
+        doctrine choices and checked source/master/DDS art; do not backdate
+        organized later Bon or imperial Buddhist institutions.
+      - [x] Give all nine frames owned capitals, anonymous-source-safe
+        governments, useful opening research unlocks, period-inspired direct
+        standards, ancient agendas, rank presentation, settlements, RGOs,
+        and complete building distribution. Add direct location-name
+        corrections for the nine capital polygons so later monasteries,
+        kingdoms, and administrative names do not become AD 1 claims.
+      - [x] Add a permanent exact validator and generated evidence ledger
+        that pin all 199 former TIB locations, forbid TIB and “Tibetan
+        Societies” everywhere player-facing, check every content surface,
+        and prove no replacement exceeds 38 locations.
+      - [x] Run the full static gate, reduced paired menu smoke, and a rapid
+        ownership/profile subsystem probe; require zero mod-only normalized
+        error-log lines before the tranche commit.
+      - [x] Register naked barley as a direct-art ancient raw good for the
+        Yarlung and Tsangpo valleys; correct Changtang fiber crops and
+        unsupported Drichu gold to livestock. All nine frames receive at least
+        one productive capacity-bounded opening settlement seed.
   - [ ] Replace the temporary `mande_language` name-generator fallback on the
     six new bounded West African culture profiles with sourced language-family
     and onomastic roots. Do not turn the technical fallback into a claim of a

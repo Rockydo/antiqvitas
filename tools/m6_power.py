@@ -442,6 +442,41 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "UNESCO-CA-NOMADS;P8.3;P13", "contested",
         "Altai herding, exchange, and ritual communities are represented as a contact network rather than a falsely unitary ancient nation.",
     ),
+    "antq_zhangzhung_plateau_kingship": (
+        "global_nobles_estate_power=0.06|global_tribes_estate_power=0.05|"
+        "nobles_estate_power_from_cabinet=0.14|global_monthly_food_modifier=0.015|"
+        "replace_cabinet_member_cost_modifier=0.05",
+        "OXF-SINO-TIB;CAM-TIB-ARCH;P13", "contested",
+        "A bounded western-plateau court adapter models Zhang Zhung without inventing an AD 1 ruler list, fixed constitution, maximal borders, or organized later Bon.",
+    ),
+    "antq_sumpa_highland_confederacy": (
+        "global_tribes_estate_power=0.11|tribes_estate_power_from_cabinet=0.21|"
+        "global_monthly_food_modifier=0.02|global_trade_through_owned_territory_efficiency=0.015|"
+        "replace_cabinet_member_cost_modifier=0.03",
+        "OXF-SINO-TIB;CAM-TIB-ARCH;P13", "contested",
+        "A northeastern highland-confederational adapter models Sumpa without projecting later imperial administration or a recovered uniform political order.",
+    ),
+    "antq_changtang_pastoral_network": (
+        "global_tribes_estate_power=0.12|tribes_estate_power_from_cabinet=0.22|"
+        "global_monthly_food_modifier=0.025|land_morale_modifier=0.015|"
+        "replace_cabinet_member_cost_modifier=0.02",
+        "ANT-TIB-HERDING;CAM-TIB-ARCH;P13", "contested",
+        "High-pasture mobility, corrals, and seasonal coordination are represented without creating a unitary Changtang people or state.",
+    ),
+    "antq_central_plateau_agropastoral_network": (
+        "global_tribes_estate_power=0.09|global_peasants_estate_power=0.06|"
+        "tribes_estate_power_from_cabinet=0.18|global_production_efficiency=0.025|"
+        "replace_cabinet_member_cost_modifier=0.025",
+        "ANT-BANGGA;CAM-TIB-ARCH;P13", "contested",
+        "Settled cultivation, herd management, and river-valley exchange are represented without backdating the Yarlung dynasty or a central Tibetan state.",
+    ),
+    "antq_eastern_plateau_corridor_network": (
+        "global_tribes_estate_power=0.10|global_peasants_estate_power=0.04|"
+        "tribes_estate_power_from_cabinet=0.20|global_trade_through_owned_territory_efficiency=0.025|"
+        "replace_cabinet_member_cost_modifier=0.03",
+        "CAM-EAST-TIB;RAD-YUSHU;OXF-EAST-RIM;P13", "contested",
+        "Eastern river and escarpment corridors model unequal exchange and highland subsistence without treating mortuary forms as one ethnicity or state.",
+    ),
     "antq_buffer_kingdom": (
         "global_burghers_estate_power=0.05|estate_power_from_cabinet=0.10|"
         "replace_cabinet_member_cost_modifier=0.05",
@@ -1199,13 +1234,16 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
     "tribal": (
         "antq_advanced_chiefdom", "antq_tribal_kingdom",
         "antq_saryarka_late_iron_network", "antq_altai_contact_network",
+        "antq_sumpa_highland_confederacy", "antq_changtang_pastoral_network",
+        "antq_central_plateau_agropastoral_network",
+        "antq_eastern_plateau_corridor_network",
     ),
     "sacral": (),
     "royal": (
         "antq_client_monarchy", "antq_buffer_kingdom", "antq_regional_kingship",
         "antq_northern_indian_coin_kingship", "antq_pundranagara_urban_kingship",
         "antq_sogdian_city_compact", "antq_dayuan_oasis_kingship",
-        "antq_han_western_regions_kingship",
+        "antq_han_western_regions_kingship", "antq_zhangzhung_plateau_kingship",
     ),
     "xiongnu": ("antq_steppe_confederation",),
     "xianbei": ("antq_xianbei_eastern_confederacy",),
@@ -1783,7 +1821,9 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    expected_contract_count = 71 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    # Seventy-one earlier core/regional contracts plus the five reviewed
+    # Tibetan Plateau contracts defined above.
+    expected_contract_count = 76 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -2184,6 +2224,61 @@ antq_altai_contact_network = {
 		global_tribes_estate_power = 0.10
 		global_trade_through_owned_territory_efficiency = 0.02
 		research_speed = 0.06
+	}
+	years = 2
+}
+
+antq_zhangzhung_plateau_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.06
+		global_monthly_food_modifier = 0.015
+		research_speed = 0.08
+	}
+	years = 2
+}
+
+antq_sumpa_highland_confederacy = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		global_trade_through_owned_territory_efficiency = 0.015
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_changtang_pastoral_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.11
+		global_monthly_food_modifier = 0.025
+		research_speed = 0.06
+	}
+	years = 2
+}
+
+antq_central_plateau_agropastoral_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_peasants_estate_power = 0.06
+		global_production_efficiency = 0.025
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_eastern_plateau_corridor_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		global_trade_through_owned_territory_efficiency = 0.025
+		research_speed = 0.07
 	}
 	years = 2
 }
@@ -2979,6 +3074,16 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_saryarka_late_iron_network_desc", "Central-steppe communities linked by herding, exchange, burial, and seasonal routes without a falsely unitary state."),
         ("antq_altai_contact_network", "Altai Contact Network"),
         ("antq_altai_contact_network_desc", "Altai herding, exchange, and ritual communities represented as a contact network rather than one ancient nation."),
+        ("antq_zhangzhung_plateau_kingship", "Zhang Zhung Plateau Kingship"),
+        ("antq_zhangzhung_plateau_kingship_desc", "A bounded western-plateau court balancing leading houses, pastoral households, exchange routes, and local ritual custody without invented AD 1 offices."),
+        ("antq_sumpa_highland_confederacy", "Sumpa Highland Confederacy"),
+        ("antq_sumpa_highland_confederacy_desc", "Northeastern highland groups coordinate pasture, river passage, exchange, and collective defence without later imperial administration."),
+        ("antq_changtang_pastoral_network", "Changtang Pastoral Network"),
+        ("antq_changtang_pastoral_network_desc", "Mobile high-pasture households coordinate seasonal grazing, corrals, restitution, and common defence without a centralized state."),
+        ("antq_central_plateau_agropastoral_network", "Central Plateau Agropastoral Network"),
+        ("antq_central_plateau_agropastoral_network_desc", "River-valley settlements coordinate barley cultivation, herd management, storage, passage, and seasonal obligations without a backdated dynasty."),
+        ("antq_eastern_plateau_corridor_network", "Eastern Plateau Corridor Network"),
+        ("antq_eastern_plateau_corridor_network_desc", "Highland households and leading exchange brokers coordinate river corridors, pasture, mortuary obligations, and defence without one ethnic state."),
         ("antq_buffer_kingdom", "Buffer Kingdom"),
         ("antq_buffer_kingdom_desc", "A frontier court balancing local authority against stronger neighbouring powers."),
         ("antq_kushite_dual_kingship", "Kushite Dual Kingship"),

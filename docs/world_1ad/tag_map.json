@@ -1,8 +1,8 @@
 {
   "game_build": "24187685",
-  "entry_count": 348,
-  "collision_count": 134,
-  "localization_collision_count": 148,
+  "entry_count": 356,
+  "collision_count": 135,
+  "localization_collision_count": 149,
   "reserved_hash_collision_tags": [
     "XAD"
   ],
@@ -1583,11 +1583,67 @@
       "name": "Manchurian Societies"
     },
     {
-      "design_tag": "TIB",
-      "engine_tag": "XDN",
+      "design_tag": "ZHZ",
+      "engine_tag": "ZHZ",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Zhang Zhung"
+    },
+    {
+      "design_tag": "SMP",
+      "engine_tag": "SMP",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Sumpa"
+    },
+    {
+      "design_tag": "CTP",
+      "engine_tag": "CTP",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Changtang Pastoral Networks"
+    },
+    {
+      "design_tag": "YAR",
+      "engine_tag": "XGB",
       "vanilla_collision": true,
       "localization_collision": true,
-      "name": "Tibetan Societies"
+      "name": "Bangga-Yarlung Horizon"
+    },
+    {
+      "design_tag": "UTV",
+      "engine_tag": "UTV",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Central Tsangpo Valley Network"
+    },
+    {
+      "design_tag": "TSG",
+      "engine_tag": "XGC",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Western Tsang Valley Network"
+    },
+    {
+      "design_tag": "QMC",
+      "engine_tag": "QMC",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Qamdo River-Corridor Network"
+    },
+    {
+      "design_tag": "DRC",
+      "engine_tag": "DRC",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Drichu Highland Network"
+    },
+    {
+      "design_tag": "EPC",
+      "engine_tag": "EPC",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Eastern Plateau Corridor Network"
     },
     {
       "design_tag": "BED",

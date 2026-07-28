@@ -5570,3 +5570,29 @@ fallbacks where no sufficiently large AD 1 corpus exists. They must not be
 read as proof that a modern or medieval language identity, spelling standard,
 or ethnic boundary already existed in the opening year. [explicit engine
 adapter]
+
+## 2026-07-28 - Tibetan Plateau opening frames
+
+Zhang Zhung and Sumpa are treated as defensible pre-imperial names, but their
+AD 1 borders, rulers, offices, internal identities, and degree of political
+integration are not recovered. Ngari and Amdo are therefore bounded engine-map
+proxies, not surveyed ancient frontiers. Sources: `OXF-SINO-TIB`;
+`CAM-TIB-ARCH`. [contested political extent]
+
+Bangga supports a first-millennium-BC agropastoral horizon in the Yarlung
+valley, including barley, but does not license the later Yarlung dynasty,
+imperial institutions, or a unified central-Tibetan ethnicity in AD 1.
+Qugong/Lhasa and Shigatse are valley-production polygons rather than claims
+that the later cities or monasteries existed under those names. Sources:
+`ANT-BANGGA`; `CAM-TIB-ARCH`. [secure material horizon; contested political
+form and engine-polygon names]
+
+Changtang corrals and pastoral infrastructure justify a mobile-herding frame
+and livestock RGO, not a centralized tribe-state. Eastern plateau mortuary
+differentiation, exchange objects, and river corridors justify multiple
+political-network adapters, but stone-cist forms do not prove one ethnicity,
+cult, or constitution. Qamdo, Drichu, and eastern-escarpment labels are
+geographic gameplay frames; later Khampa, Qiang, Bailang, Tibetan, and
+provincial identities are not projected backward. Sources:
+`ANT-TIB-HERDING`; `CAM-EAST-TIB`; `RAD-YUSHU`; `OXF-EAST-RIM`.
+[secure material practices; contested identities and political forms]

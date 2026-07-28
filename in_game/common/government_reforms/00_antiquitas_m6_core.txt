@@ -378,6 +378,101 @@ antq_altai_contact_network = {
 	years = 2
 }
 
+antq_zhangzhung_plateau_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.06
+		global_tribes_estate_power = 0.05
+		nobles_estate_power_from_cabinet = 0.14
+		global_monthly_food_modifier = 0.015
+		replace_cabinet_member_cost_modifier = 0.05
+		global_nobles_estate_power = 0.06
+		global_monthly_food_modifier = 0.015
+		research_speed = 0.08
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_royal_council
+	}
+	years = 2
+}
+
+antq_sumpa_highland_confederacy = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.11
+		tribes_estate_power_from_cabinet = 0.21
+		global_monthly_food_modifier = 0.02
+		global_trade_through_owned_territory_efficiency = 0.015
+		replace_cabinet_member_cost_modifier = 0.03
+		global_tribes_estate_power = 0.10
+		global_trade_through_owned_territory_efficiency = 0.015
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_changtang_pastoral_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.12
+		tribes_estate_power_from_cabinet = 0.22
+		global_monthly_food_modifier = 0.025
+		land_morale_modifier = 0.015
+		replace_cabinet_member_cost_modifier = 0.02
+		global_tribes_estate_power = 0.11
+		global_monthly_food_modifier = 0.025
+		research_speed = 0.06
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_central_plateau_agropastoral_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.09
+		global_peasants_estate_power = 0.06
+		tribes_estate_power_from_cabinet = 0.18
+		global_production_efficiency = 0.025
+		replace_cabinet_member_cost_modifier = 0.025
+		global_peasants_estate_power = 0.06
+		global_production_efficiency = 0.025
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_eastern_plateau_corridor_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		global_peasants_estate_power = 0.04
+		tribes_estate_power_from_cabinet = 0.20
+		global_trade_through_owned_territory_efficiency = 0.025
+		replace_cabinet_member_cost_modifier = 0.03
+		global_tribes_estate_power = 0.10
+		global_trade_through_owned_territory_efficiency = 0.025
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
 antq_buffer_kingdom = {
 	major = yes
 	government = monarchy
@@ -1517,6 +1612,10 @@ antq_elder_moot_kingship = {
 			has_reform = government_reform:antq_tribal_kingdom
 			has_reform = government_reform:antq_saryarka_late_iron_network
 			has_reform = government_reform:antq_altai_contact_network
+			has_reform = government_reform:antq_sumpa_highland_confederacy
+			has_reform = government_reform:antq_changtang_pastoral_network
+			has_reform = government_reform:antq_central_plateau_agropastoral_network
+			has_reform = government_reform:antq_eastern_plateau_corridor_network
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}
@@ -1542,6 +1641,10 @@ antq_warband_retinue_kingship = {
 			has_reform = government_reform:antq_tribal_kingdom
 			has_reform = government_reform:antq_saryarka_late_iron_network
 			has_reform = government_reform:antq_altai_contact_network
+			has_reform = government_reform:antq_sumpa_highland_confederacy
+			has_reform = government_reform:antq_changtang_pastoral_network
+			has_reform = government_reform:antq_central_plateau_agropastoral_network
+			has_reform = government_reform:antq_eastern_plateau_corridor_network
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}
@@ -1613,6 +1716,7 @@ antq_petition_court = {
 			has_reform = government_reform:antq_sogdian_city_compact
 			has_reform = government_reform:antq_dayuan_oasis_kingship
 			has_reform = government_reform:antq_han_western_regions_kingship
+			has_reform = government_reform:antq_zhangzhung_plateau_kingship
 			has_reform = government_reform:antq_petition_court
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
@@ -1642,6 +1746,7 @@ antq_frontier_muster_monarchy = {
 			has_reform = government_reform:antq_sogdian_city_compact
 			has_reform = government_reform:antq_dayuan_oasis_kingship
 			has_reform = government_reform:antq_han_western_regions_kingship
+			has_reform = government_reform:antq_zhangzhung_plateau_kingship
 			has_reform = government_reform:antq_petition_court
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}

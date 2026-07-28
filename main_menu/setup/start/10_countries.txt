@@ -20240,207 +20240,182 @@ countries = {
 			capital = nurgan
 		}
 
-		XDN = { # Tibetan Societies; P8.8;CAH-XI
+		ZHZ = { # Zhang Zhung; OXF-SINO-TIB;CAM-TIB-ARCH;P8.8
 			own_control_core = {
-				amnye_machen
-				barom
 				baryang
-				batang
-				baurang
-				bayan_har
-				biru
-				buchu
-				buha
-				caka
-				chabcha
-				chamdo
 				charasa
-				chikchar
-				chodrak
-				chodrak_kham
-				chorten_nyima
-				chumdo
-				daklha_gampo
-				damzhung
-				daoba
 				dargyeling
-				darlag
-				dartang
-				dartsedo
-				dawu
-				densatil
-				derge
-				dingri
 				drangtse
-				drayab
-				drigung
-				droge
-				dulan
 				dungkar
-				dungkar_amdo
-				durgyeling
-				dzagyal
-				dzamtang
-				dzingcho
-				dzogang
-				dzogon
 				dzongkar
-				galo
-				ganden_delingshar
-				ganze
 				gartok
-				gechak
-				gegong
-				geshitsa
-				gonga_chode
-				gongkar
-				gonjo
-				gonkri
-				gonpatsi
-				guolimu
-				gyama
-				gyamda
 				gyanema
-				gyantse
 				hanle
-				jang_tana
-				jomda
-				jonang
-				jyekundo
 				kargil
-				karma_densa
 				karpokhar
-				katok
-				kazhi
-				khamgar
-				khana
 				khaplu
-				kharak
-				kheong
-				khordong
 				khyunglung
-				lab
 				lamayuru
 				leh
-				lhadrak
-				lhagang
-				lhakhang
-				lhari
-				lhasa
-				lho_taklung
-				lhodrak
-				litang
 				lo_mustang
-				longtang
-				lungkya
-				lungsho
-				madoi
-				mangge
-				manigango
-				markham
 				mendong
-				mengung
-				metog
-				metsang
-				muli
-				muxihe
-				nakchu
 				nako
-				namling
-				namtso_doring
-				nangchen
-				nedong
-				nenying
-				ngamring
-				nubzur
-				nyachukha
-				nyalam
-				nyarong
-				nyemo
 				ormogang
 				padum
-				pasho
-				pelme
-				pelmo
-				pema
-				pembar
 				phuktal
-				pome
 				purang
-				qardam
-				quge
-				rahor
 				rala
-				ralung
-				rigyal
-				rima
-				rinpung_yarlung
-				riwoche
-				ronglung
-				rongpo
 				rutok
-				sailahai
-				sakya
-				samda
-				sampheling
 				samten
-				samye
-				sangacho
-				sangme
-				sanjiaocheng
 				selephu
-				serkar
-				sershul
-				serta
-				serzhik
-				shantsa
-				shar_yelpuk
 				shey
 				shigar
-				shigatse
-				sho
-				shopando
-				shukden
-				shukjung
-				sibda
 				skardu
-				sok
 				tabo
-				tagmo_lingkha
-				takden
-				taklung
-				tangkya
 				tashigang
-				tengchen
-				tirkong
 				tokchen
 				toling
 				tradun
-				tragor
-				trigu
-				tromge
-				tropu
-				trotsang
-				tsakhalkho
-				tsangdram
 				tsaparang
-				tsedzong
 				tsherlung
-				tsora
 				tsorub
-				tsurphu
-				waerhdje
-				walong
-				wara_kham
-				yangdzong
-				yungdrung
-				zangchen
-				zangdan
 				zangla
+			}
+
+			country_rank = rank_kingdom
+			starting_technology_level = 3
+			discovered_regions = {
+				steppes_region
+				xinjiang_region
+				khorasan_region
+				persia_region
+			}
+			government = {
+				type = monarchy
+				heir_selection = cognatic_primogeniture
+				ruler = random
+				reforms = {
+					antq_zhangzhung_plateau_kingship
+				}
+				privilege = {
+					antq_regional_royal_court
+				}
+				laws = {
+					antq_regional_kingship_law = antq_royal_court_governance
+					antq_s2_steppe_status_law = antq_s2_steppe_status_mediated
+					antq_s2_steppe_dependent_labor_law = antq_s2_steppe_dependent_labor_mediated
+					antq_s2_steppe_revenue_law = antq_s2_steppe_revenue_mediated
+					antq_s2_steppe_land_law = antq_s2_steppe_land_mediated
+					antq_s2_steppe_muster_law = antq_s2_steppe_muster_mediated
+					antq_s2_steppe_local_rule_law = antq_s2_steppe_local_rule_mediated
+					antq_s2_steppe_cult_law = antq_s2_steppe_cult_mediated
+					antq_s2_steppe_household_law = antq_s2_steppe_household_mediated
+					antq_s2_steppe_commerce_law = antq_s2_steppe_commerce_mediated
+					antq_s2_steppe_coinage_law = antq_s2_steppe_coinage_mediated
+					antq_s2_steppe_courts_law = antq_s2_steppe_courts_mediated
+					antq_s2_steppe_offices_law = antq_s2_steppe_offices_mediated
+					antq_s2_steppe_migration_law = antq_s2_steppe_migration_mediated
+					antq_s2_steppe_external_law = antq_s2_steppe_external_mediated
+				}
+				centralization_vs_decentralization = -25
+				traditionalist_vs_innovative = -25
+				aristocracy_vs_plutocracy = -35
+				capital_economy_vs_traditional_economy = 60
+			}
+			capital = khyunglung
+		}
+
+		SMP = { # Sumpa; OXF-SINO-TIB;CAM-TIB-ARCH;P8.8
+			own_control_core = {
+				amnye_machen
+				bayan_har
+				buha
+				caka
+				chabcha
+				chodrak
+				darlag
+				dartang
+				droge
+				dulan
+				dungkar_amdo
+				dzagyal
+				gechak
+				guolimu
+				jang_tana
+				jyekundo
+				khana
+				lab
+				lungkya
+				lungsho
+				madoi
+				metsang
+				muxihe
+				nangchen
+				pelme
+				qardam
+				quge
+				sailahai
+				sanjiaocheng
+				serkar
+				takden
 				zeku
-				zhanggu
-				zhokha
 				zurmang_namgyaltse
+			}
+
+			country_rank = rank_kingdom
+			starting_technology_level = 3
+			discovered_regions = {
+				steppes_region
+				xinjiang_region
+				khorasan_region
+				persia_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_sumpa_highland_confederacy
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_seasonal_cattle_compacts
+					antq_tribal_river_exchange_protection
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_steppe_status_law = antq_s2_steppe_status_mediated
+					antq_s2_steppe_dependent_labor_law = antq_s2_steppe_dependent_labor_mediated
+					antq_s2_steppe_revenue_law = antq_s2_steppe_revenue_mediated
+					antq_s2_steppe_land_law = antq_s2_steppe_land_mediated
+					antq_s2_steppe_muster_law = antq_s2_steppe_muster_mediated
+					antq_s2_steppe_local_rule_law = antq_s2_steppe_local_rule_mediated
+					antq_s2_steppe_cult_law = antq_s2_steppe_cult_mediated
+					antq_s2_steppe_household_law = antq_s2_steppe_household_mediated
+					antq_s2_steppe_commerce_law = antq_s2_steppe_commerce_mediated
+					antq_s2_steppe_coinage_law = antq_s2_steppe_coinage_mediated
+					antq_s2_steppe_courts_law = antq_s2_steppe_courts_mediated
+					antq_s2_steppe_offices_law = antq_s2_steppe_offices_mediated
+					antq_s2_steppe_migration_law = antq_s2_steppe_migration_mediated
+					antq_s2_steppe_external_law = antq_s2_steppe_external_mediated
+				}
+				centralization_vs_decentralization = -55
+				traditionalist_vs_innovative = -25
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 65
+			}
+			capital = chabcha
+		}
+
+		CTP = { # Changtang Pastoral Networks; ANT-TIB-HERDING;CAM-TIB-ARCH;P8.8
+			own_control_core = {
+				gonkri
+				namtso_doring
+				ronglung
+				serzhik
+				shantsa
+				tsedzong
+				zangdan
 			}
 
 			country_rank = rank_county
@@ -20456,10 +20431,451 @@ countries = {
 				heir_selection = tribal_oldest_male
 				ruler = random
 				reforms = {
-					antq_advanced_chiefdom
+					antq_changtang_pastoral_network
 				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_seasonal_cattle_compacts
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_steppe_status_law = antq_s2_steppe_status_mediated
+					antq_s2_steppe_dependent_labor_law = antq_s2_steppe_dependent_labor_mediated
+					antq_s2_steppe_revenue_law = antq_s2_steppe_revenue_mediated
+					antq_s2_steppe_land_law = antq_s2_steppe_land_mediated
+					antq_s2_steppe_muster_law = antq_s2_steppe_muster_mediated
+					antq_s2_steppe_local_rule_law = antq_s2_steppe_local_rule_mediated
+					antq_s2_steppe_cult_law = antq_s2_steppe_cult_mediated
+					antq_s2_steppe_household_law = antq_s2_steppe_household_mediated
+					antq_s2_steppe_commerce_law = antq_s2_steppe_commerce_mediated
+					antq_s2_steppe_coinage_law = antq_s2_steppe_coinage_mediated
+					antq_s2_steppe_courts_law = antq_s2_steppe_courts_mediated
+					antq_s2_steppe_offices_law = antq_s2_steppe_offices_mediated
+					antq_s2_steppe_migration_law = antq_s2_steppe_migration_mediated
+					antq_s2_steppe_external_law = antq_s2_steppe_external_mediated
+				}
+				centralization_vs_decentralization = -85
+				traditionalist_vs_innovative = -20
+				aristocracy_vs_plutocracy = -75
+				capital_economy_vs_traditional_economy = 90
+			}
+			capital = shantsa
+		}
+
+		XGB = { # Bangga-Yarlung Horizon; ANT-BANGGA;CAM-TIB-ARCH;P8.8
+			own_control_core = {
+				densatil
+				gongkar
+				nedong
+				nyemo
+				rinpung_yarlung
+				samye
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				steppes_region
+				xinjiang_region
+				khorasan_region
+				persia_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_central_plateau_agropastoral_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_seasonal_cattle_compacts
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_steppe_status_law = antq_s2_steppe_status_mediated
+					antq_s2_steppe_dependent_labor_law = antq_s2_steppe_dependent_labor_mediated
+					antq_s2_steppe_revenue_law = antq_s2_steppe_revenue_mediated
+					antq_s2_steppe_land_law = antq_s2_steppe_land_mediated
+					antq_s2_steppe_muster_law = antq_s2_steppe_muster_mediated
+					antq_s2_steppe_local_rule_law = antq_s2_steppe_local_rule_mediated
+					antq_s2_steppe_cult_law = antq_s2_steppe_cult_mediated
+					antq_s2_steppe_household_law = antq_s2_steppe_household_mediated
+					antq_s2_steppe_commerce_law = antq_s2_steppe_commerce_mediated
+					antq_s2_steppe_coinage_law = antq_s2_steppe_coinage_mediated
+					antq_s2_steppe_courts_law = antq_s2_steppe_courts_mediated
+					antq_s2_steppe_offices_law = antq_s2_steppe_offices_mediated
+					antq_s2_steppe_migration_law = antq_s2_steppe_migration_mediated
+					antq_s2_steppe_external_law = antq_s2_steppe_external_mediated
+				}
+				centralization_vs_decentralization = -55
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -50
+				capital_economy_vs_traditional_economy = 45
+			}
+			capital = nedong
+		}
+
+		UTV = { # Central Tsangpo Valley Network; ANT-BANGGA;CAM-TIB-ARCH;P8.8
+			own_control_core = {
+				buchu
+				chikchar
+				daklha_gampo
+				damzhung
+				drigung
+				galo
+				gonpatsi
+				gyama
+				gyamda
+				lhasa
+				lho_taklung
+				lhodrak
+				metog
+				rigyal
+				taklung
+				tirkong
+				tragor
+				trigu
+				tsora
+				tsurphu
+				zangchen
+				zhokha
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				steppes_region
+				xinjiang_region
+				khorasan_region
+				persia_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_central_plateau_agropastoral_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_seasonal_cattle_compacts
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_steppe_status_law = antq_s2_steppe_status_mediated
+					antq_s2_steppe_dependent_labor_law = antq_s2_steppe_dependent_labor_mediated
+					antq_s2_steppe_revenue_law = antq_s2_steppe_revenue_mediated
+					antq_s2_steppe_land_law = antq_s2_steppe_land_mediated
+					antq_s2_steppe_muster_law = antq_s2_steppe_muster_mediated
+					antq_s2_steppe_local_rule_law = antq_s2_steppe_local_rule_mediated
+					antq_s2_steppe_cult_law = antq_s2_steppe_cult_mediated
+					antq_s2_steppe_household_law = antq_s2_steppe_household_mediated
+					antq_s2_steppe_commerce_law = antq_s2_steppe_commerce_mediated
+					antq_s2_steppe_coinage_law = antq_s2_steppe_coinage_mediated
+					antq_s2_steppe_courts_law = antq_s2_steppe_courts_mediated
+					antq_s2_steppe_offices_law = antq_s2_steppe_offices_mediated
+					antq_s2_steppe_migration_law = antq_s2_steppe_migration_mediated
+					antq_s2_steppe_external_law = antq_s2_steppe_external_mediated
+				}
+				centralization_vs_decentralization = -60
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -55
+				capital_economy_vs_traditional_economy = 50
 			}
 			capital = lhasa
+		}
+
+		XGC = { # Western Tsang Valley Network; CAM-TIB-ARCH;P8.8
+			own_control_core = {
+				chorten_nyima
+				dingri
+				ganden_delingshar
+				gonga_chode
+				gyantse
+				jonang
+				lhadrak
+				namling
+				nenying
+				ngamring
+				nyalam
+				pelmo
+				ralung
+				sakya
+				shigatse
+				tagmo_lingkha
+				tropu
+				tsangdram
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				steppes_region
+				xinjiang_region
+				khorasan_region
+				persia_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_central_plateau_agropastoral_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_steppe_status_law = antq_s2_steppe_status_mediated
+					antq_s2_steppe_dependent_labor_law = antq_s2_steppe_dependent_labor_mediated
+					antq_s2_steppe_revenue_law = antq_s2_steppe_revenue_mediated
+					antq_s2_steppe_land_law = antq_s2_steppe_land_mediated
+					antq_s2_steppe_muster_law = antq_s2_steppe_muster_mediated
+					antq_s2_steppe_local_rule_law = antq_s2_steppe_local_rule_mediated
+					antq_s2_steppe_cult_law = antq_s2_steppe_cult_mediated
+					antq_s2_steppe_household_law = antq_s2_steppe_household_mediated
+					antq_s2_steppe_commerce_law = antq_s2_steppe_commerce_mediated
+					antq_s2_steppe_coinage_law = antq_s2_steppe_coinage_mediated
+					antq_s2_steppe_courts_law = antq_s2_steppe_courts_mediated
+					antq_s2_steppe_offices_law = antq_s2_steppe_offices_mediated
+					antq_s2_steppe_migration_law = antq_s2_steppe_migration_mediated
+					antq_s2_steppe_external_law = antq_s2_steppe_external_mediated
+				}
+				centralization_vs_decentralization = -65
+				traditionalist_vs_innovative = -20
+				aristocracy_vs_plutocracy = -58
+				capital_economy_vs_traditional_economy = 55
+			}
+			capital = shigatse
+		}
+
+		QMC = { # Qamdo River-Corridor Network; CAM-EAST-TIB;RAD-YUSHU;P8.8
+			own_control_core = {
+				biru
+				chamdo
+				chumdo
+				drayab
+				dzogang
+				gonjo
+				karma_densa
+				khamgar
+				lhakhang
+				lhari
+				mengung
+				pasho
+				pema
+				pembar
+				pome
+				rima
+				riwoche
+				samda
+				sangacho
+				sho
+				shopando
+				shukden
+				sok
+				tangkya
+				tengchen
+				tsakhalkho
+				walong
+				yangdzong
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				steppes_region
+				xinjiang_region
+				khorasan_region
+				persia_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_eastern_plateau_corridor_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_steppe_status_law = antq_s2_steppe_status_mediated
+					antq_s2_steppe_dependent_labor_law = antq_s2_steppe_dependent_labor_mediated
+					antq_s2_steppe_revenue_law = antq_s2_steppe_revenue_mediated
+					antq_s2_steppe_land_law = antq_s2_steppe_land_mediated
+					antq_s2_steppe_muster_law = antq_s2_steppe_muster_mediated
+					antq_s2_steppe_local_rule_law = antq_s2_steppe_local_rule_mediated
+					antq_s2_steppe_cult_law = antq_s2_steppe_cult_mediated
+					antq_s2_steppe_household_law = antq_s2_steppe_household_mediated
+					antq_s2_steppe_commerce_law = antq_s2_steppe_commerce_mediated
+					antq_s2_steppe_coinage_law = antq_s2_steppe_coinage_mediated
+					antq_s2_steppe_courts_law = antq_s2_steppe_courts_mediated
+					antq_s2_steppe_offices_law = antq_s2_steppe_offices_mediated
+					antq_s2_steppe_migration_law = antq_s2_steppe_migration_mediated
+					antq_s2_steppe_external_law = antq_s2_steppe_external_mediated
+				}
+				centralization_vs_decentralization = -72
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -55
+				capital_economy_vs_traditional_economy = 60
+			}
+			capital = chamdo
+		}
+
+		DRC = { # Drichu Highland Network; CAM-EAST-TIB;RAD-YUSHU;P8.8
+			own_control_core = {
+				barom
+				chodrak_kham
+				dawu
+				derge
+				dzamtang
+				dzingcho
+				dzogon
+				ganze
+				gegong
+				jomda
+				katok
+				kharak
+				khordong
+				longtang
+				mangge
+				manigango
+				nakchu
+				nubzur
+				nyarong
+				rongpo
+				sampheling
+				sangme
+				sershul
+				serta
+				shukjung
+				sibda
+				tromge
+				trotsang
+				wara_kham
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				steppes_region
+				xinjiang_region
+				khorasan_region
+				persia_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_eastern_plateau_corridor_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_seasonal_cattle_compacts
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_steppe_status_law = antq_s2_steppe_status_mediated
+					antq_s2_steppe_dependent_labor_law = antq_s2_steppe_dependent_labor_mediated
+					antq_s2_steppe_revenue_law = antq_s2_steppe_revenue_mediated
+					antq_s2_steppe_land_law = antq_s2_steppe_land_mediated
+					antq_s2_steppe_muster_law = antq_s2_steppe_muster_mediated
+					antq_s2_steppe_local_rule_law = antq_s2_steppe_local_rule_mediated
+					antq_s2_steppe_cult_law = antq_s2_steppe_cult_mediated
+					antq_s2_steppe_household_law = antq_s2_steppe_household_mediated
+					antq_s2_steppe_commerce_law = antq_s2_steppe_commerce_mediated
+					antq_s2_steppe_coinage_law = antq_s2_steppe_coinage_mediated
+					antq_s2_steppe_courts_law = antq_s2_steppe_courts_mediated
+					antq_s2_steppe_offices_law = antq_s2_steppe_offices_mediated
+					antq_s2_steppe_migration_law = antq_s2_steppe_migration_mediated
+					antq_s2_steppe_external_law = antq_s2_steppe_external_mediated
+				}
+				centralization_vs_decentralization = -78
+				traditionalist_vs_innovative = -20
+				aristocracy_vs_plutocracy = -62
+				capital_economy_vs_traditional_economy = 72
+			}
+			capital = derge
+		}
+
+		EPC = { # Eastern Plateau Corridor Network; CAM-EAST-TIB;OXF-EAST-RIM;P8.8
+			own_control_core = {
+				batang
+				baurang
+				daoba
+				dartsedo
+				durgyeling
+				geshitsa
+				kazhi
+				kheong
+				lhagang
+				litang
+				markham
+				muli
+				nyachukha
+				rahor
+				shar_yelpuk
+				waerhdje
+				yungdrung
+				zhanggu
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				steppes_region
+				xinjiang_region
+				khorasan_region
+				persia_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_eastern_plateau_corridor_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_steppe_status_law = antq_s2_steppe_status_mediated
+					antq_s2_steppe_dependent_labor_law = antq_s2_steppe_dependent_labor_mediated
+					antq_s2_steppe_revenue_law = antq_s2_steppe_revenue_mediated
+					antq_s2_steppe_land_law = antq_s2_steppe_land_mediated
+					antq_s2_steppe_muster_law = antq_s2_steppe_muster_mediated
+					antq_s2_steppe_local_rule_law = antq_s2_steppe_local_rule_mediated
+					antq_s2_steppe_cult_law = antq_s2_steppe_cult_mediated
+					antq_s2_steppe_household_law = antq_s2_steppe_household_mediated
+					antq_s2_steppe_commerce_law = antq_s2_steppe_commerce_mediated
+					antq_s2_steppe_coinage_law = antq_s2_steppe_coinage_mediated
+					antq_s2_steppe_courts_law = antq_s2_steppe_courts_mediated
+					antq_s2_steppe_offices_law = antq_s2_steppe_offices_mediated
+					antq_s2_steppe_migration_law = antq_s2_steppe_migration_mediated
+					antq_s2_steppe_external_law = antq_s2_steppe_external_mediated
+				}
+				centralization_vs_decentralization = -68
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -52
+				capital_economy_vs_traditional_economy = 55
+			}
+			capital = dartsedo
 		}
 
 		BED = { # Chaulotaeans; STR-ARAB;P8.6

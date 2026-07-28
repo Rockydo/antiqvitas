@@ -2184,3 +2184,171 @@ antq_doctrine_tarim_oasis_traditions_orchard_and_pasture_rounds = { # HAN-WR;HHS
 		antq_doctrine_tarim_oasis_traditions_orchard_and_pasture_rounds = 10
 	}
 }
+
+antq_doctrine_western_plateau_traditions_mountain_and_lake_custody = { # CAM-TIB-ARCH;OXF-SINO-TIB;ANT-TIB-HERDING;P11; contested; Prominent peaks lakes and passes focused obligations to dangerous and sustaining landscapes.
+	icon = antq_doctrine_western_plateau_traditions_mountain_and_lake_custody
+	religion = antq_western_plateau_traditions
+
+	modifier = {
+		global_monthly_food_modifier = 0.03
+		global_hostile_attrition = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_western_plateau_traditions_mountain_and_lake_custody = 10
+	}
+}
+
+antq_doctrine_western_plateau_traditions_ancestor_feast_rounds = { # CAM-TIB-ARCH;OXF-SINO-TIB;ANT-TIB-HERDING;P11; contested; Seasonal gatherings joined remembered kin herd wealth hospitality and claims to pasture.
+	icon = antq_doctrine_western_plateau_traditions_ancestor_feast_rounds
+	religion = antq_western_plateau_traditions
+
+	modifier = {
+		monthly_legitimacy = 0.03
+		cultural_tradition_modifier = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_western_plateau_traditions_ancestor_feast_rounds = 10
+	}
+}
+
+antq_doctrine_western_plateau_traditions_highland_mortuary_custodians = { # CAM-TIB-ARCH;OXF-SINO-TIB;ANT-TIB-HERDING;P11; contested; Local specialists coordinated burial offerings and communal duties without implying a uniform priesthood.
+	icon = antq_doctrine_western_plateau_traditions_highland_mortuary_custodians
+	religion = antq_western_plateau_traditions
+
+	modifier = {
+		stability_cost_efficiency = 0.05
+		monthly_religious_influence = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_western_plateau_traditions_highland_mortuary_custodians = 10
+	}
+}
+
+antq_doctrine_western_plateau_traditions_pasture_hospitality_oaths = { # CAM-TIB-ARCH;OXF-SINO-TIB;ANT-TIB-HERDING;P11; contested; Witnessed hospitality and restitution helped mobile households share routes water and shelter.
+	icon = antq_doctrine_western_plateau_traditions_pasture_hospitality_oaths
+	religion = antq_western_plateau_traditions
+
+	modifier = {
+		tolerance_own = 1
+		global_monthly_prosperity = 0.02
+	}
+
+	opinions = {
+		antq_doctrine_western_plateau_traditions_pasture_hospitality_oaths = 10
+	}
+}
+
+antq_doctrine_central_plateau_traditions_barley_offering_cycles = { # ANT-BANGGA;CAM-TIB-ARCH;P11; contested; Valley households linked grain cycles storage and offerings to collective subsistence.
+	icon = antq_doctrine_central_plateau_traditions_barley_offering_cycles
+	religion = antq_central_plateau_traditions
+
+	modifier = {
+		global_monthly_prosperity = 0.02
+		global_monthly_food_modifier = 0.03
+	}
+
+	opinions = {
+		antq_doctrine_central_plateau_traditions_barley_offering_cycles = 10
+	}
+}
+
+antq_doctrine_central_plateau_traditions_household_hearth_custody = { # ANT-BANGGA;CAM-TIB-ARCH;P11; contested; Domestic hearths focused hospitality memory protection and reciprocal obligation.
+	icon = antq_doctrine_central_plateau_traditions_household_hearth_custody
+	religion = antq_central_plateau_traditions
+
+	modifier = {
+		stability_cost_efficiency = 0.05
+		monthly_religious_influence = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_central_plateau_traditions_household_hearth_custody = 10
+	}
+}
+
+antq_doctrine_central_plateau_traditions_river_valley_compacts = { # ANT-BANGGA;CAM-TIB-ARCH;P11; contested; Marriage hospitality and passage agreements connected otherwise independent valley settlements.
+	icon = antq_doctrine_central_plateau_traditions_river_valley_compacts
+	religion = antq_central_plateau_traditions
+
+	modifier = {
+		tolerance_own = 1
+		global_monthly_prosperity = 0.02
+	}
+
+	opinions = {
+		antq_doctrine_central_plateau_traditions_river_valley_compacts = 10
+	}
+}
+
+antq_doctrine_central_plateau_traditions_seasonal_herding_rounds = { # ANT-BANGGA;CAM-TIB-ARCH;P11; contested; Cultivation and herd movement were coordinated through changing valley and upland seasons.
+	icon = antq_doctrine_central_plateau_traditions_seasonal_herding_rounds
+	religion = antq_central_plateau_traditions
+
+	modifier = {
+		global_monthly_food_modifier = 0.03
+		global_hostile_attrition = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_central_plateau_traditions_seasonal_herding_rounds = 10
+	}
+}
+
+antq_doctrine_eastern_plateau_traditions_stone_cist_custodianship = { # CAM-EAST-TIB;RAD-YUSHU;OXF-EAST-RIM;P11; contested; Households maintained burial places and obligations without treating one tomb form as a single people.
+	icon = antq_doctrine_eastern_plateau_traditions_stone_cist_custodianship
+	religion = antq_eastern_plateau_traditions
+
+	modifier = {
+		monthly_legitimacy = 0.03
+		cultural_tradition_modifier = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_eastern_plateau_traditions_stone_cist_custodianship = 10
+	}
+}
+
+antq_doctrine_eastern_plateau_traditions_bronze_exchange_oaths = { # CAM-EAST-TIB;RAD-YUSHU;OXF-EAST-RIM;P11; contested; Witnessed exchange tied metal livestock and distant prestige goods to local authority.
+	icon = antq_doctrine_eastern_plateau_traditions_bronze_exchange_oaths
+	religion = antq_eastern_plateau_traditions
+
+	modifier = {
+		global_monthly_prosperity = 0.02
+		global_monthly_food_modifier = 0.03
+	}
+
+	opinions = {
+		antq_doctrine_eastern_plateau_traditions_bronze_exchange_oaths = 10
+	}
+}
+
+antq_doctrine_eastern_plateau_traditions_highland_passage_arbitration = { # CAM-EAST-TIB;RAD-YUSHU;OXF-EAST-RIM;P11; contested; Local mediators settled access restitution and safe passage along steep river corridors.
+	icon = antq_doctrine_eastern_plateau_traditions_highland_passage_arbitration
+	religion = antq_eastern_plateau_traditions
+
+	modifier = {
+		tolerance_own = 1
+		global_monthly_prosperity = 0.02
+	}
+
+	opinions = {
+		antq_doctrine_eastern_plateau_traditions_highland_passage_arbitration = 10
+	}
+}
+
+antq_doctrine_eastern_plateau_traditions_leading_house_mortuary_feasts = { # CAM-EAST-TIB;RAD-YUSHU;OXF-EAST-RIM;P11; contested; Unequal feasts and costly grave goods made highland status visible without proving centralized kingship.
+	icon = antq_doctrine_eastern_plateau_traditions_leading_house_mortuary_feasts
+	religion = antq_eastern_plateau_traditions
+
+	modifier = {
+		monthly_legitimacy = 0.03
+		country_cabinet_efficiency = 0.02
+	}
+
+	opinions = {
+		antq_doctrine_eastern_plateau_traditions_leading_house_mortuary_feasts = 10
+	}
+}

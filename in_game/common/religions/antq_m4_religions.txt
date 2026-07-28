@@ -573,3 +573,45 @@ antq_tarim_oasis_traditions = { # HAN-WR;HHS-WR;IRAN-CT;P11; Plural Tarim and no
 	opinions = {
 	}
 }
+
+antq_western_plateau_traditions = { # CAM-TIB-ARCH;OXF-SINO-TIB;P11; Plural western and northern plateau ritual traditions represented without equating archaeology with organized later Bon or one common creed
+	color = antq_religion_color_antq_western_plateau_traditions
+	group = folk_asian_group
+	religious_aspects = 2
+	has_religious_influence = yes
+	definition_modifier = {
+		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
+	}
+	opinions = {
+	}
+}
+
+antq_central_plateau_traditions = { # ANT-BANGGA;CAM-TIB-ARCH;P11; Plural central-valley household landscape ancestor and mortuary traditions without backdating imperial Buddhism or organized later Bon
+	color = antq_religion_color_antq_central_plateau_traditions
+	group = folk_asian_group
+	religious_aspects = 2
+	has_religious_influence = yes
+	definition_modifier = {
+		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
+	}
+	opinions = {
+	}
+}
+
+antq_eastern_plateau_traditions = { # CAM-EAST-TIB;RAD-YUSHU;OXF-EAST-RIM;P11; Plural eastern highland and corridor traditions without deriving one cult from stone-cist burials or later ethnography
+	color = antq_religion_color_antq_eastern_plateau_traditions
+	group = folk_asian_group
+	religious_aspects = 2
+	has_religious_influence = yes
+	definition_modifier = {
+		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
+	}
+	opinions = {
+	}
+}

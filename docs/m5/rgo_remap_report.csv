@@ -140,6 +140,7 @@ debdou,Africa,environment_rule,olives,fruit
 dehua_jiujiang,China,regional_rule,cotton,fiber_crops
 deir_qamar,Iran,regional_rule,silk,fiber_crops
 dergaon,India,regional_rule,tea,medicaments
+derge,Central Asia,anchor,goods_gold,livestock
 dien_ban,Southeast Asia,regional_rule,pepper,medicaments
 dingyuan_fengyang,China,regional_rule,cotton,fiber_crops
 diu,India,environment_rule,sugar,fiber_crops
@@ -298,6 +299,7 @@ langarud,Iran,regional_rule,silk,fiber_crops
 larantuka,Southeast Asia,regional_rule,incense,medicaments
 larnaca,Anatolia,regional_rule,silk,fiber_crops
 leuktron,Rome,regional_rule,silk,fiber_crops
+lhasa,Central Asia,anchor,wheat,antq_barley
 lidian,China,regional_rule,saltpeter,salt
 liege,Rome,regional_rule,saltpeter,salt
 likusaen,Southeast Asia,regional_rule,incense,medicaments
@@ -395,6 +397,7 @@ nanan_quanzhou,China,regional_rule,cotton,fiber_crops
 nandurbar,India,regional_rule,silk,fiber_crops
 nanning,China,regional_rule,cotton,fiber_crops
 nazilli,Rome,regional_rule,cotton,fiber_crops
+nedong,Central Asia,anchor,wool,antq_barley
 negombo,Lanka,regional_rule,pepper,medicaments
 neijiang,China,regional_rule,sugar,fiber_crops
 niihari,Japan,regional_rule,pepper,medicaments
@@ -493,11 +496,13 @@ seyitgazi,Rome,environment_rule,wine,fruit
 shakhty,Pontic,regional_rule,coal,lumber
 shamakhi,Caucasus,regional_rule,silk,fiber_crops
 shansu,China,regional_rule,cotton,fiber_crops
+shantsa,Central Asia,anchor,fiber_crops,livestock
 shanyang_huaian,China,regional_rule,cotton,fiber_crops
 shaoxing,China,regional_rule,wine,fruit
 sheikh_hussein,Africa,regional_rule,coffee,medicaments
 shenyang,Steppe,regional_rule,rice,millet
 shida,Japan,regional_rule,tea,medicaments
+shigatse,Central Asia,anchor,wool,antq_barley
 shilong,China,regional_rule,cotton,fiber_crops
 shouzhang,China,regional_rule,cotton,fiber_crops
 shuqra,Arabia,regional_rule,sugar,fiber_crops
@@ -658,16 +663,20 @@ zwickau,Germania,regional_rule,coal,lumber
 # anchor:coffee->incense,1
 # anchor:copper->tin,1
 # anchor:cotton->dyes,1
+# anchor:fiber_crops->livestock,1
 # anchor:fish->pepper,1
 # anchor:fruit->antq_camels,1
 # anchor:gems->antq_jade,1
 # anchor:gems->incense,1
+# anchor:goods_gold->livestock,1
 # anchor:legumes->antq_naphtha,1
 # anchor:marble->iron,1
 # anchor:rice->silk,1
 # anchor:salt->antq_papyrus,1
 # anchor:salt->silver,1
+# anchor:wheat->antq_barley,1
 # anchor:wheat->antq_silphium,1
+# anchor:wool->antq_barley,2
 # environment_rule:cotton->fiber_crops,29
 # environment_rule:olives->fruit,25
 # environment_rule:pepper->medicaments,4
