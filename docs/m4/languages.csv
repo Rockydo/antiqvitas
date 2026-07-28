@@ -1,4 +1,4 @@
-group,key,name,family,fallback,male_names,female_names,dynasty_names,source,confidence,note
+﻿group,key,name,family,fallback,male_names,female_names,dynasty_names,source,confidence,note
 antq_american_group,antq_american_language,North American,central_algonquian_language_family,inuit_language,Atahualpa|Hiawatha|Kitchi|Nokomis,Awenasa|Mika|Nokomis|Winona,Hopewell|Adena|Dorset,P10;CAH-XI,contested,Regional naming foundation
 antq_andean_group,antq_andean_language,Andean,southern_yutonahua_language_family,quechuan_language,Atahualpa|Manco|Rumi|Tupaq,Anahuarque|Cusi|Killa|Mama,Chimu|Moche|Nazca,P10;CAH-XI,contested,Regional naming foundation
 antq_anatolian_group,antq_anatolian_language,Anatolian,romance_language_family,greek_language,Ariarathes|Attis|Midas|Zeno,Ariarathia|Laodice|Nysa|Stratonice,Ariarathid|Cappadocian|Phrygian,P10;CAH-XI;PLE,contested,Anatolian residue naming adapter with Greek fallback; it is not a claim of linguistic uniformity
@@ -27,3 +27,4 @@ antq_steppe_group,antq_steppe_language,Steppe,turkic_language_family,mongolian_l
 antq_subsaharan_group,antq_subsaharan_language,Sub-Saharan,bantu_language_family,mande_language,Anokye|Kofi|Mansa|Sundiata,Abena|Ama|Kandake|Yaa,Akan|Bantu|Mande,P10;CAH-XI,contested,Regional naming foundation
 antq_tibetan_group,antq_tibetan_language,Tibetan,tibetic_language_family,mongolian_language,Nyatri|Songtsen|Trisong|Zhangzhung,Drolma|Lhamo|Tsering|Yarlung,Yarlung|Zhangzhung,P10;CAH-XI,contested,Highland naming foundation
 antq_uralic_group,antq_uralic_language,Uralic,uralic_language_family,sami_language,Ahti|Ilmarinen|Kaleva|Vainamoinen,Aino|Ilmatar|Kyllikki|Louhi,Finnic|Sami|Ugric,P10;CAH-XI,contested,Regional naming foundation
+antq_north_maluku_group,antq_north_maluku_language,North Maluku,oceanic_language_family,malay_language,Afa|Besi|Lamo|Tala,Boki|Dara|Mina|Sana,Gebe|Kayoa|Moro,ANU-MALUKU;P10,contested,Mixed North Maluku naming adapter; fallback and engine family are technical and do not erase North Halmahera non-Austronesian languages

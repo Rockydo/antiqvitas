@@ -588,3 +588,24 @@ antq_uralic_language = { # P10;CAH-XI; Regional naming foundation
 		antq_uralic_dialect = { }
 	}
 }
+
+antq_north_maluku_language = { # ANU-MALUKU;P10; Mixed North Maluku naming adapter; fallback and engine family are technical and do not erase North Halmahera non-Austronesian languages
+	color = antq_language_color_antq_north_maluku_language
+	family = oceanic_language_family
+	fallback = malay_language
+	male_names = {
+		antq_name_afa antq_name_besi antq_name_lamo antq_name_tala
+	}
+	female_names = {
+		antq_name_boki antq_name_dara antq_name_mina antq_name_sana
+	}
+	dynasty_names = {
+		antq_name_gebe antq_name_kayoa antq_name_moro
+	}
+	lowborn = {
+		antq_name_gebe antq_name_kayoa antq_name_moro
+	}
+	dialects = {
+		antq_north_maluku_dialect = { }
+	}
+}

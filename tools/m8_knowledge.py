@@ -176,6 +176,12 @@ CONTENT_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
         ("unlock_government_reform", "antq_philippine_mortuary_community_network"),
         ("unlock_government_reform", "antq_philippine_island_exchange_network"),
         ("unlock_government_reform", "antq_philippine_cave_coast_network"),
+        ("unlock_government_reform", "antq_sulawesi_coastal_exchange_network"),
+        ("unlock_government_reform", "antq_sulawesi_island_exchange_network"),
+        ("unlock_government_reform", "antq_sulawesi_highland_mortuary_network"),
+        ("unlock_government_reform", "antq_sulawesi_river_lake_network"),
+        ("unlock_government_reform", "antq_sulawesi_peninsula_community_network"),
+        ("unlock_government_reform", "antq_north_maluku_metal_age_network"),
         ("unlock_government_reform", "antq_mesoamerican_urban_ritual_center"),
         ("unlock_government_reform", "antq_mesoamerican_formative_civic_network"),
         ("unlock_government_reform", "antq_mesoamerican_exchange_corridor_network"),
@@ -537,7 +543,10 @@ ADVANCE_PROFILES = {
         AdvanceProfile(
             "oceanian", "Austronesian and Oceanian",
             "Austronesian, Southeast Asian, and Oceanian maritime and community practice.",
-            ("antq_austronesian_group", "antq_oceanic_group", "antq_southeast_asian_group"),
+            (
+                "antq_austronesian_group", "antq_oceanic_group",
+                "antq_southeast_asian_group", "antq_north_maluku_group",
+            ),
             (), "P8.9;P15",
         ),
         AdvanceProfile(

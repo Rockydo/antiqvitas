@@ -5713,3 +5713,15 @@ Tagalog, Visayan, Moro, and Lumad political or ethnic identities are not
 backdated. Sources: `NMP-PH-METAL`; `NMP-PH-JARS`; `NMP-KALANAY`; `NMP-TABON`;
 `CCP-MAITUM`; `ATENEO-MINDORO`; `BELLINA-SHK`. [secure broad chronology and
 sites; contested political form and exact extent]
+
+## 2026-07-28 - Sulawesi and North Maluku stop at material horizons
+
+Karama intensive occupation, Lore-Lindu megalithic/mortuary landscapes,
+Topogaro burial pottery, and North Maluku Metal-Age assemblages support
+separate regional networks around AD 1. They do not attest the later kingdoms
+of Gowa, Bone, Luwu, Buton, Gorontalo, Ternate, or Tidore, their sultanates,
+fixed ethnic borders, named rulers, or a uniform island constitution. Matano-
+Luwu is therefore a lake-coast community frame, not an asserted AD 1 iron
+kingdom. Sources: `ANU-SULAWESI`; `UNESCO-LORE`; `BRIN-KARAMA`;
+`SPAFA-TOPOGARO`; `ANU-MALUKU`. [secure broad chronology/material contexts;
+contested political form and exact extent]

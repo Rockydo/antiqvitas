@@ -25220,75 +25220,614 @@ countries = {
 			capital = bhatnir
 		}
 
-		INS = { # Island Southeast Asian Societies; P8.9;CAH-XI
+		XHD = { # Banggai-Tomini Maritime Communities; ANU-SULAWESI;SPAFA-TOPOGARO
 			own_control_core = {
-				amassing
-				amurang
-				andolo
-				atinggola
-				balanipa
 				banggai
+				bulakan
+				gori_gori
+				lingketeng
+				tojo
+				una_una
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_sulawesi_coastal_exchange_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -66
+				traditionalist_vs_innovative = -8
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 56
+			}
+			capital = banggai
+		}
+
+		BNC = { # Bone-Cenrana Coastal Communities; ANU-SULAWESI
+			own_control_core = {
 				bantayan
-				barru
-				belang
-				boalemo
 				bone
 				buki
-				bulakan
-				bungi
-				bungku
-				butung
 				cenrana
-				daratan
-				donggala
-				gane
-				gori_gori
-				gorontalo
-				gowa
-				guamonial
-				jailolo
-				kalisusu
-				kalumpang
+				tosora
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_sulawesi_coastal_exchange_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -70
+				traditionalist_vs_innovative = -11
+				aristocracy_vs_plutocracy = -58
+				capital_economy_vs_traditional_economy = 60
+			}
+			capital = bone
+		}
+
+		BGU = { # Bungku-Kendari Coast Communities; ANU-SULAWESI;SPAFA-TOPOGARO
+			own_control_core = {
+				bungku
 				kendari
+				mori_celebes
+				sambandete
+				unaaha
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_sulawesi_coastal_exchange_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -74
+				traditionalist_vs_innovative = -14
+				aristocracy_vs_plutocracy = -62
+				capital_economy_vs_traditional_economy = 64
+			}
+			capital = bungku
+		}
+
+		BTM = { # Buton-Muna Island Communities; ANU-SULAWESI
+			own_control_core = {
+				andolo
+				butung
+				kalisusu
 				kolumba
 				kotano_muna
+				taubonto
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_sulawesi_island_exchange_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -78
+				traditionalist_vs_innovative = -8
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 68
+			}
+			capital = butung
+		}
+
+		LRP = { # Lore-Poso Highland Communities; UNESCO-LORE;SPAFA-TOPOGARO
+			own_control_core = {
+				donggala
 				kulawi
-				kurri_kurri
-				lingketeng
-				loloda
 				loree
-				luwu
-				maba_celebes
-				malangke
-				malili
-				mamudju
-				manado
-				managalang
-				matano
-				mori_celebes
-				moro
-				paguat
-				palopo
 				parigi
 				pendau
 				poso
-				sambandete
-				sengkae
-				sidenreng
 				sigi
-				solimandungan
-				taubonto
-				ternate
-				tidore
-				tinco
-				tojo
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_sulawesi_highland_mortuary_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -82
+				traditionalist_vs_innovative = -11
+				aristocracy_vs_plutocracy = -58
+				capital_economy_vs_traditional_economy = 72
+			}
+			capital = loree
+		}
+
+		XHE = { # Gorontalo-Tomini Communities; ANU-SULAWESI
+			own_control_core = {
+				atinggola
+				boalemo
+				gorontalo
+				guamonial
+				paguat
 				toli_toli
 				tomini
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_sulawesi_peninsula_community_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -66
+				traditionalist_vs_innovative = -14
+				aristocracy_vs_plutocracy = -62
+				capital_economy_vs_traditional_economy = 56
+			}
+			capital = gorontalo
+		}
+
+		MKS = { # South Sulawesi Coastal Communities; ANU-SULAWESI
+			own_control_core = {
+				barru
+				bungi
+				gowa
+				sengkae
+				sidenreng
+				tinco
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_sulawesi_coastal_exchange_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -70
+				traditionalist_vs_innovative = -8
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 60
+			}
+			capital = gowa
+		}
+
+		XHF = { # Karama Valley Metal-Age Communities; BRIN-KARAMA;ANU-SULAWESI
+			own_control_core = {
+				balanipa
+				kalumpang
+				kurri_kurri
+				mamudju
+				managalang
 				toraja
-				tosora
-				una_una
-				unaaha
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_sulawesi_river_lake_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -74
+				traditionalist_vs_innovative = -11
+				aristocracy_vs_plutocracy = -58
+				capital_economy_vs_traditional_economy = 64
+			}
+			capital = kalumpang
+		}
+
+		MNH = { # North Sulawesi Peninsula Communities; ANU-SULAWESI
+			own_control_core = {
+				amurang
+				belang
+				manado
+				solimandungan
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_sulawesi_peninsula_community_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -78
+				traditionalist_vs_innovative = -14
+				aristocracy_vs_plutocracy = -62
+				capital_economy_vs_traditional_economy = 68
+			}
+			capital = manado
+		}
+
+		LWM = { # Matano-Luwu Lake-Coast Communities; ANU-SULAWESI
+			own_control_core = {
+				luwu
+				malangke
+				malili
+				matano
+				palopo
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_sulawesi_river_lake_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -82
+				traditionalist_vs_innovative = -8
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 72
+			}
+			capital = matano
+		}
+
+		NHM = { # North Halmahera Metal-Age Communities; ANU-MALUKU
+			own_control_core = {
+				daratan
+				jailolo
+				loloda
+				moro
+				ternate
 				wasilei
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_north_maluku_metal_age_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -66
+				traditionalist_vs_innovative = -11
+				aristocracy_vs_plutocracy = -58
+				capital_economy_vs_traditional_economy = 56
+			}
+			capital = jailolo
+		}
+
+		XHG = { # South Halmahera Metal-Age Communities; ANU-MALUKU
+			own_control_core = {
+				amassing
+				gane
+				maba_celebes
+				tidore
 				weda
 			}
 
@@ -25305,8 +25844,34 @@ countries = {
 				heir_selection = tribal_oldest_male
 				ruler = random
 				reforms = {
-					antq_advanced_chiefdom
+					antq_north_maluku_metal_age_network
 				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -70
+				traditionalist_vs_innovative = -14
+				aristocracy_vs_plutocracy = -62
+				capital_economy_vs_traditional_economy = 60
 			}
 			capital = maba_celebes
 		}

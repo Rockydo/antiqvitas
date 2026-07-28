@@ -62,6 +62,7 @@ GROUP_ENDINGS = {
     "antq_korean_group": "seong",
     "antq_mesoamerican_group": "can",
     "antq_nile_group": "a",
+    "antq_north_maluku_group": "on",
     "antq_oceanic_group": "nagara",
     "antq_semitic_group": "a",
     "antq_sinitic_group": "cheng",

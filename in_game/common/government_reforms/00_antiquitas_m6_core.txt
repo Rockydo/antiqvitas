@@ -891,6 +891,120 @@ antq_philippine_cave_coast_network = {
 	years = 2
 }
 
+antq_sulawesi_coastal_exchange_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.075
+		global_peasants_estate_power = 0.045
+		tribes_estate_power_from_cabinet = 0.165
+		global_trade_through_owned_territory_efficiency = 0.028
+		replace_cabinet_member_cost_modifier = 0.026
+		global_tribes_estate_power = 0.075
+		global_trade_through_owned_territory_efficiency = 0.028
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_sulawesi_island_exchange_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.065
+		global_burghers_estate_power = 0.065
+		tribes_estate_power_from_cabinet = 0.145
+		global_trade_through_owned_territory_efficiency = 0.032
+		replace_cabinet_member_cost_modifier = 0.026
+		global_burghers_estate_power = 0.065
+		global_trade_through_owned_territory_efficiency = 0.032
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_sulawesi_highland_mortuary_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.095
+		global_clergy_estate_power = 0.065
+		tribes_estate_power_from_cabinet = 0.185
+		global_monthly_food_modifier = 0.022
+		replace_cabinet_member_cost_modifier = 0.026
+		global_clergy_estate_power = 0.065
+		global_monthly_food_modifier = 0.022
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_sulawesi_river_lake_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.085
+		global_peasants_estate_power = 0.055
+		tribes_estate_power_from_cabinet = 0.175
+		global_monthly_food_modifier = 0.024
+		replace_cabinet_member_cost_modifier = 0.026
+		global_tribes_estate_power = 0.085
+		global_monthly_food_modifier = 0.024
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_sulawesi_peninsula_community_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.09
+		global_peasants_estate_power = 0.04
+		tribes_estate_power_from_cabinet = 0.16
+		global_trade_through_owned_territory_efficiency = 0.024
+		replace_cabinet_member_cost_modifier = 0.026
+		global_tribes_estate_power = 0.09
+		global_trade_through_owned_territory_efficiency = 0.024
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_north_maluku_metal_age_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.07
+		global_burghers_estate_power = 0.07
+		tribes_estate_power_from_cabinet = 0.15
+		global_trade_through_owned_territory_efficiency = 0.035
+		replace_cabinet_member_cost_modifier = 0.026
+		global_burghers_estate_power = 0.07
+		global_trade_through_owned_territory_efficiency = 0.035
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
 antq_mesoamerican_urban_ritual_center = {
 	major = yes
 	government = tribe
@@ -2160,6 +2274,12 @@ antq_elder_moot_kingship = {
 			has_reform = government_reform:antq_philippine_mortuary_community_network
 			has_reform = government_reform:antq_philippine_island_exchange_network
 			has_reform = government_reform:antq_philippine_cave_coast_network
+			has_reform = government_reform:antq_sulawesi_coastal_exchange_network
+			has_reform = government_reform:antq_sulawesi_island_exchange_network
+			has_reform = government_reform:antq_sulawesi_highland_mortuary_network
+			has_reform = government_reform:antq_sulawesi_river_lake_network
+			has_reform = government_reform:antq_sulawesi_peninsula_community_network
+			has_reform = government_reform:antq_north_maluku_metal_age_network
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}
@@ -2207,6 +2327,12 @@ antq_warband_retinue_kingship = {
 			has_reform = government_reform:antq_philippine_mortuary_community_network
 			has_reform = government_reform:antq_philippine_island_exchange_network
 			has_reform = government_reform:antq_philippine_cave_coast_network
+			has_reform = government_reform:antq_sulawesi_coastal_exchange_network
+			has_reform = government_reform:antq_sulawesi_island_exchange_network
+			has_reform = government_reform:antq_sulawesi_highland_mortuary_network
+			has_reform = government_reform:antq_sulawesi_river_lake_network
+			has_reform = government_reform:antq_sulawesi_peninsula_community_network
+			has_reform = government_reform:antq_north_maluku_metal_age_network
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}

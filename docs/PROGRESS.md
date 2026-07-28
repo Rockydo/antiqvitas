@@ -1,5 +1,19 @@
 # Progress
 
+## 2026-07-28 - Sulawesi and North Maluku become twelve Metal-Age frames
+
+- Removed the 68-location `INS` catch-all. Ten Sulawesi and two Halmahera
+  whole-province frames raise the roster to 442 and reduce placeholders to
+  eleven.
+- Added twelve cultures, a mixed North Maluku language adapter, six reforms,
+  twelve standards, and complete start-system coverage; corrected Mahayana to
+  the Austronesian belief family.
+- `tools/s2_sulawesi_maluku_granularity.py` pins the transform.
+- All 127 validation commands pass; paired smoke found zero mod-only normalized
+  errors on the confirming run.
+
+Next: replace the 51-location Plains and Coastal Societies frame.
+
 ## 2026-07-28 - The Philippines becomes fifteen Metal-Age regional frames
 
 - Removed the 69-location `PHL` catch-all. Fifteen whole-province frames raise
@@ -10,8 +24,6 @@
 - `tools/s2_philippine_granularity.py` pins the transform.
 - All 126 validation commands pass; paired smoke found zero mod-only normalized
   errors.
-
-Next: replace the 68-location Island Southeast Asian Societies frame.
 
 ## 2026-07-28 - West Mexico and the ancestral Sonoran desert are separated
 

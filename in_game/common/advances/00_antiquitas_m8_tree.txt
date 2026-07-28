@@ -92,6 +92,12 @@ antq_provincial_census = {
 	unlock_government_reform = antq_philippine_mortuary_community_network
 	unlock_government_reform = antq_philippine_island_exchange_network
 	unlock_government_reform = antq_philippine_cave_coast_network
+	unlock_government_reform = antq_sulawesi_coastal_exchange_network
+	unlock_government_reform = antq_sulawesi_island_exchange_network
+	unlock_government_reform = antq_sulawesi_highland_mortuary_network
+	unlock_government_reform = antq_sulawesi_river_lake_network
+	unlock_government_reform = antq_sulawesi_peninsula_community_network
+	unlock_government_reform = antq_north_maluku_metal_age_network
 	unlock_government_reform = antq_mesoamerican_urban_ritual_center
 	unlock_government_reform = antq_mesoamerican_formative_civic_network
 	unlock_government_reform = antq_mesoamerican_exchange_corridor_network
@@ -966,6 +972,7 @@ antq_settlement_registers = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	stability_cost_efficiency = 0.02
@@ -1000,6 +1007,7 @@ antq_post_roman_statecraft = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	global_monthly_control = 0.001
@@ -3612,6 +3620,7 @@ antq_kingdom_tolls = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	merchant_maintenance_efficiency = 0.01
@@ -3646,6 +3655,7 @@ antq_settlement_markets = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	global_trade_through_owned_territory_efficiency = 0.05
@@ -5730,6 +5740,7 @@ antq_religious_endowments = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	global_population_capacity_modifier = 0.02
@@ -5748,6 +5759,7 @@ antq_veteran_settlement = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	global_population_capacity_modifier = 0.02
@@ -5785,6 +5797,7 @@ antq_ritual_calendars = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	global_pop_promotion_speed_modifier = 0.025
@@ -5821,6 +5834,7 @@ antq_principate_society = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	global_pop_promotion_speed_modifier = 0.025
@@ -5861,6 +5875,7 @@ antq_legal_statuses = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	global_population_capacity_modifier = 0.02
@@ -5878,6 +5893,7 @@ antq_religious_plurals = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	global_population_capacity_modifier = 0.02
@@ -5931,6 +5947,7 @@ antq_athletic_festivals = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	global_pop_promotion_speed_modifier = 0.025
@@ -5967,6 +5984,7 @@ antq_high_empire_society = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	global_pop_assimilation_speed_modifier = 0.025
@@ -6420,6 +6438,7 @@ antq_successor_elites = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	global_population_capacity_modifier = 0.02
@@ -6453,6 +6472,7 @@ antq_migrations_society = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	global_pop_promotion_speed_modifier = 0.025
@@ -6905,6 +6925,7 @@ antq_outrigger_kin_voyages = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	global_population_capacity_modifier = 0.02
@@ -6923,6 +6944,7 @@ antq_shell_valuables_exchange = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	global_pop_promotion_speed_modifier = 0.025
@@ -6941,6 +6963,7 @@ antq_navigational_star_lore = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	global_pop_assimilation_speed_modifier = 0.025
@@ -6959,6 +6982,7 @@ antq_stilt_settlement_compacts = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	global_pop_assimilation_speed_modifier = 0.025
@@ -6977,6 +7001,7 @@ antq_island_feast_redistribution = {
 			culture = { has_culture_group = culture_group:antq_austronesian_group }
 			culture = { has_culture_group = culture_group:antq_oceanic_group }
 			culture = { has_culture_group = culture_group:antq_southeast_asian_group }
+			culture = { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	stability_cost_efficiency = 0.02

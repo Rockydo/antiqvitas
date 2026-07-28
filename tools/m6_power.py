@@ -631,6 +631,48 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "NMP-TABON;ATENEO-MINDORO;NMP-PH-JARS;P13", "contested",
         "Cave, rockshelter, and coastal households coordinate burial places, shore access, subsistence, and exchange without a later island polity.",
     ),
+    "antq_sulawesi_coastal_exchange_network": (
+        "global_tribes_estate_power=0.075|global_peasants_estate_power=0.045|"
+        "tribes_estate_power_from_cabinet=0.165|global_trade_through_owned_territory_efficiency=0.028|"
+        "replace_cabinet_member_cost_modifier=0.026",
+        "ANU-SULAWESI;SPAFA-TOPOGARO;P13", "contested",
+        "Coastal households coordinate landing places, cultivation, passage, and exchange without a later kingdom or common island government.",
+    ),
+    "antq_sulawesi_island_exchange_network": (
+        "global_tribes_estate_power=0.065|global_burghers_estate_power=0.065|"
+        "tribes_estate_power_from_cabinet=0.145|global_trade_through_owned_territory_efficiency=0.032|"
+        "replace_cabinet_member_cost_modifier=0.026",
+        "ANU-SULAWESI;P13", "contested",
+        "Island households coordinate anchorages, short crossings, exchange, and restitution without a centralized thalassocracy.",
+    ),
+    "antq_sulawesi_highland_mortuary_network": (
+        "global_tribes_estate_power=0.095|global_clergy_estate_power=0.065|"
+        "tribes_estate_power_from_cabinet=0.185|global_monthly_food_modifier=0.022|"
+        "replace_cabinet_member_cost_modifier=0.026",
+        "UNESCO-LORE;SPAFA-TOPOGARO;P13", "contested",
+        "Highland communities coordinate cultivation, ancestral places, jar burial, and valley passage without inventing a common priesthood.",
+    ),
+    "antq_sulawesi_river_lake_network": (
+        "global_tribes_estate_power=0.085|global_peasants_estate_power=0.055|"
+        "tribes_estate_power_from_cabinet=0.175|global_monthly_food_modifier=0.024|"
+        "replace_cabinet_member_cost_modifier=0.026",
+        "BRIN-KARAMA;ANU-SULAWESI;P13", "contested",
+        "River and lake communities coordinate cultivation, portage, forest access, and exchange without projecting later iron kingdoms backward.",
+    ),
+    "antq_sulawesi_peninsula_community_network": (
+        "global_tribes_estate_power=0.09|global_peasants_estate_power=0.04|"
+        "tribes_estate_power_from_cabinet=0.16|global_trade_through_owned_territory_efficiency=0.024|"
+        "replace_cabinet_member_cost_modifier=0.026",
+        "ANU-SULAWESI;P13", "contested",
+        "Peninsular households coordinate coast, gardens, inland paths, and exchange without a later ethnic federation or named ruler.",
+    ),
+    "antq_north_maluku_metal_age_network": (
+        "global_tribes_estate_power=0.07|global_burghers_estate_power=0.07|"
+        "tribes_estate_power_from_cabinet=0.15|global_trade_through_owned_territory_efficiency=0.035|"
+        "replace_cabinet_member_cost_modifier=0.026",
+        "ANU-MALUKU;P13", "contested",
+        "Metal-Age island communities coordinate pottery, landing places, food, and exchange without backdating the Ternate or Tidore sultanates.",
+    ),
     "antq_mesoamerican_urban_ritual_center": (
         "global_clergy_estate_power=0.10|global_burghers_estate_power=0.07|"
         "clergy_estate_power_from_cabinet=0.20|global_production_efficiency=0.025|"
@@ -1472,6 +1514,12 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
         "antq_philippine_mortuary_community_network",
         "antq_philippine_island_exchange_network",
         "antq_philippine_cave_coast_network",
+        "antq_sulawesi_coastal_exchange_network",
+        "antq_sulawesi_island_exchange_network",
+        "antq_sulawesi_highland_mortuary_network",
+        "antq_sulawesi_river_lake_network",
+        "antq_sulawesi_peninsula_community_network",
+        "antq_north_maluku_metal_age_network",
     ),
     "sacral": (),
     "royal": (
@@ -2060,7 +2108,7 @@ def load_power_data() -> PowerData:
     used_reforms = {government["reform"] for government in governments.values()}
     # Core/regional contracts include the reviewed Manchurian, Bornean,
     # Philippine, and Mesoamerican network reforms defined above.
-    expected_contract_count = 107 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    expected_contract_count = 113 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -2068,7 +2116,7 @@ def load_power_data() -> PowerData:
         failures.append(
             "political appointment contracts must cover every core, regional, and successor reform"
         )
-    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 107:
+    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 113:
         failures.append("political appointment contracts are insufficiently differentiated")
     path_rows = reform_path_rows()
     alternative_profiles = [row[1] for row in path_rows]
@@ -2757,6 +2805,72 @@ antq_philippine_cave_coast_network = {
 	country_modifier = {
 		global_tribes_estate_power = 0.09
 		global_trade_through_owned_territory_efficiency = 0.02
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_sulawesi_coastal_exchange_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.075
+		global_trade_through_owned_territory_efficiency = 0.028
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_sulawesi_island_exchange_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_burghers_estate_power = 0.065
+		global_trade_through_owned_territory_efficiency = 0.032
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_sulawesi_highland_mortuary_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_clergy_estate_power = 0.065
+		global_monthly_food_modifier = 0.022
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_sulawesi_river_lake_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.085
+		global_monthly_food_modifier = 0.024
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_sulawesi_peninsula_community_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.09
+		global_trade_through_owned_territory_efficiency = 0.024
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_north_maluku_metal_age_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_burghers_estate_power = 0.07
+		global_trade_through_owned_territory_efficiency = 0.035
 		research_speed = 0.07
 	}
 	years = 2
@@ -3715,6 +3829,18 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_philippine_island_exchange_network_desc", "Island households coordinate anchorages, pottery exchange, passage, and restitution without a centralized thalassocracy."),
         ("antq_philippine_cave_coast_network", "Philippine Cave-Coast Network"),
         ("antq_philippine_cave_coast_network_desc", "Cave, rockshelter, and coastal households coordinate burial places, shore access, subsistence, and exchange without a later island polity."),
+        ("antq_sulawesi_coastal_exchange_network", "Sulawesi Coastal Exchange Network"),
+        ("antq_sulawesi_coastal_exchange_network_desc", "Coastal households coordinate landing places, cultivation, passage, and exchange without a later kingdom or common island government."),
+        ("antq_sulawesi_island_exchange_network", "Sulawesi Island Exchange Network"),
+        ("antq_sulawesi_island_exchange_network_desc", "Island households coordinate anchorages, short crossings, exchange, and restitution without a centralized thalassocracy."),
+        ("antq_sulawesi_highland_mortuary_network", "Sulawesi Highland Mortuary Network"),
+        ("antq_sulawesi_highland_mortuary_network_desc", "Highland communities coordinate cultivation, ancestral places, jar burial, and valley passage without inventing a common priesthood."),
+        ("antq_sulawesi_river_lake_network", "Sulawesi River-Lake Network"),
+        ("antq_sulawesi_river_lake_network_desc", "River and lake communities coordinate cultivation, portage, forest access, and exchange without projecting later iron kingdoms backward."),
+        ("antq_sulawesi_peninsula_community_network", "Sulawesi Peninsula Community Network"),
+        ("antq_sulawesi_peninsula_community_network_desc", "Peninsular households coordinate coast, gardens, inland paths, and exchange without a later ethnic federation or named ruler."),
+        ("antq_north_maluku_metal_age_network", "North Maluku Metal-Age Network"),
+        ("antq_north_maluku_metal_age_network_desc", "Metal-Age island communities coordinate pottery, landing places, food, and exchange without backdating the Ternate or Tidore sultanates."),
         ("antq_mesoamerican_urban_ritual_center", "Mesoamerican Urban-Ritual Center"),
         ("antq_mesoamerican_urban_ritual_center_desc", "A first-order ceremonial and exchange center coordinates public space, specialist production, cultivation, and regional ties without an invented recovered constitution."),
         ("antq_mesoamerican_formative_civic_network", "Mesoamerican Formative Civic Network"),

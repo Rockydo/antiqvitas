@@ -4103,3 +4103,13 @@ The inherited Mahayana profile is removed in favor of the existing Austronesian
 belief family. Four network reforms cover coastal-river, mortuary, island-
 exchange, and cave-coast contexts. Existing religion art and reviewed vanilla
 emblems suffice. `tools/s2_philippine_granularity.py` pins the transform.
+
+## 2026-07-28 - Sulawesi and North Maluku use whole-province material networks
+
+`INS` is replaced by twelve disjoint installed provinces totaling 68 fields.
+Six reforms distinguish coastal, island, highland-mortuary, river-lake,
+peninsula, and North Maluku Metal-Age networks. North and South Halmahera use
+a separate mixed-language adapter because the archaeological sequence records
+Austronesian/Papuan interaction; its engine family and Malay fallback are
+technical only. Existing Austronesian religion art and reviewed vanilla
+emblems suffice, so no new art or audio is added.

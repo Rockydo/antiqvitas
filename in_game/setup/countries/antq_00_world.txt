@@ -2773,12 +2773,111 @@ XGR = { # Jangladesh Pastoral Networks; ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL
 	is_historic = yes
 }
 
-INS = { # Island Southeast Asian Societies; P8.9;CAH-XI
-	color = rgb { 69 115 90 }
-	color2 = rgb { 186 140 165 }
+XHD = { # Banggai-Tomini Maritime Communities; ANU-SULAWESI;SPAFA-TOPOGARO
+	color = rgb { 61 137 95 }
+	color2 = rgb { 194 118 160 }
 
-	culture_definition = antq_austronesian
-	religion_definition = antq_mahayana
+	culture_definition = antq_banggai_tomini_maritime
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+BNC = { # Bone-Cenrana Coastal Communities; ANU-SULAWESI
+	color = rgb { 77 120 84 }
+	color2 = rgb { 178 135 171 }
+
+	culture_definition = antq_bone_cenrana_coast
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+BGU = { # Bungku-Kendari Coast Communities; ANU-SULAWESI;SPAFA-TOPOGARO
+	color = rgb { 61 128 76 }
+	color2 = rgb { 194 127 179 }
+
+	culture_definition = antq_bungku_kendari_coast
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+BTM = { # Buton-Muna Island Communities; ANU-SULAWESI
+	color = rgb { 59 137 76 }
+	color2 = rgb { 196 118 179 }
+
+	culture_definition = antq_buton_muna_island
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+LRP = { # Lore-Poso Highland Communities; UNESCO-LORE;SPAFA-TOPOGARO
+	color = rgb { 70 111 100 }
+	color2 = rgb { 185 144 155 }
+
+	culture_definition = antq_lore_poso_highland
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+XHE = { # Gorontalo-Tomini Communities; ANU-SULAWESI
+	color = rgb { 77 131 84 }
+	color2 = rgb { 178 124 171 }
+
+	culture_definition = antq_gorontalo_tomini
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+MKS = { # South Sulawesi Coastal Communities; ANU-SULAWESI
+	color = rgb { 75 122 90 }
+	color2 = rgb { 180 133 165 }
+
+	culture_definition = antq_south_sulawesi_coast
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+XHF = { # Karama Valley Metal-Age Communities; BRIN-KARAMA;ANU-SULAWESI
+	color = rgb { 69 119 86 }
+	color2 = rgb { 186 136 169 }
+
+	culture_definition = antq_karama_valley_metal_age
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+MNH = { # North Sulawesi Peninsula Communities; ANU-SULAWESI
+	color = rgb { 77 118 101 }
+	color2 = rgb { 178 137 154 }
+
+	culture_definition = antq_north_sulawesi_peninsula
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+LWM = { # Matano-Luwu Lake-Coast Communities; ANU-SULAWESI
+	color = rgb { 67 124 79 }
+	color2 = rgb { 188 131 176 }
+
+	culture_definition = antq_matano_luwu_lake_coast
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+NHM = { # North Halmahera Metal-Age Communities; ANU-MALUKU
+	color = rgb { 52 130 104 }
+	color2 = rgb { 203 125 151 }
+
+	culture_definition = antq_north_halmahera_metal_age
+	religion_definition = antq_austronesian_religion
+	is_historic = yes
+}
+
+XHG = { # South Halmahera Metal-Age Communities; ANU-MALUKU
+	color = rgb { 55 131 99 }
+	color2 = rgb { 200 124 156 }
+
+	culture_definition = antq_south_halmahera_metal_age
+	religion_definition = antq_austronesian_religion
 	is_historic = yes
 }
 
