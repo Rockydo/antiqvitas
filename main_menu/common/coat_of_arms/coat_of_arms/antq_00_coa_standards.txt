@@ -3641,20 +3641,6 @@ IMV = { # Imphal Valley Networks; OUP-NEINDIA;P20
 	}
 }
 
-XDQ = { # Central Indian Societies; P8.4;P20
-	pattern = "pattern_solid.dds"
-	color1 = "orange"
-	color2 = "yellow"
-	color3 = "red"
-	colored_emblem = {
-		texture = "ce_auspicious_conch_shell_simple.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
-	}
-}
-
 RJS = { # Rajasthan-Gujarat Societies; P8.4;P20
 	pattern = "pattern_solid.dds"
 	color1 = "orange"
@@ -4982,5 +4968,145 @@ NNR = { # Hilleviones; PLN-NH-IV96;P20
 		color2 = color2
 		color3 = color1
 		instance = { position = { 0.5 0.50 } scale = { 0.80 0.80 } }
+	}
+}
+
+XDN = { # Tondai-Kanchi Polity; UNESCO-KANCHI;CAM-TAMIL-MERCHANTS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_bow_arrow.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+ATY = { # Atiyaman of Tagadur; JRAS-SATIYAPUTRA;CAM-TAMIL-MERCHANTS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_horse_salient.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.82 0.78 } }
+	}
+}
+
+XGD = { # Ujjayini Urban Polity; CAH-INDUS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.70 0.70 } }
+	}
+}
+
+VDS = { # Vedisa Urban Polity; JRAS-VEDISA;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.74 0.74 } }
+	}
+}
+
+CED = { # Chedi Janapada; CAH-INDUS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_elephant_asian.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.78 } }
+	}
+}
+
+NVM = { # Narmada-Vindhya Megalithic Networks; CAM-CENTRAL-INDIA-MEGALITHS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+XGE = { # Son-Vindhya Iron-Age Networks; INFLIB-EARLY-HISTORIC;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_spear_head_random_small.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.74 0.80 } }
+	}
+}
+
+DKS = { # Dakshina Kosala; INFLIB-DAKSHINA-KOSALA;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_elephant_asian.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.80 0.78 } }
+	}
+}
+
+BSR = { # Bastar Megalithic Networks; INFLIB-EARLY-HISTORIC;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_stag.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+MLD = { # Maldivian Atoll Networks; CAM-MALDIVES;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "yellow"
+	colored_emblem = {
+		texture = "ce_fishes_in_pale_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.80 } }
 	}
 }

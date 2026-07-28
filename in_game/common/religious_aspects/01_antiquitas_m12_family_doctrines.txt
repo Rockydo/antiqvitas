@@ -2352,3 +2352,59 @@ antq_doctrine_eastern_plateau_traditions_leading_house_mortuary_feasts = { # CAM
 		antq_doctrine_eastern_plateau_traditions_leading_house_mortuary_feasts = 10
 	}
 }
+
+antq_doctrine_central_indian_traditions_ancestor_stone_custody = { # CAM-CENTRAL-INDIA-MEGALITHS;INFLIB-EARLY-HISTORIC;P11; contested; Households maintained commemorative places and obligations without treating megalithic forms as one people or theology.
+	icon = antq_doctrine_central_indian_traditions_ancestor_stone_custody
+	religion = antq_central_indian_traditions
+
+	modifier = {
+		monthly_legitimacy = 0.03
+		cultural_tradition_modifier = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_central_indian_traditions_ancestor_stone_custody = 10
+	}
+}
+
+antq_doctrine_central_indian_traditions_field_and_forest_rounds = { # CAM-CENTRAL-INDIA-MEGALITHS;INFLIB-EARLY-HISTORIC;P11; contested; Seasonal knowledge coordinated cultivation grazing gathering and movement between valleys plateaus and forests.
+	icon = antq_doctrine_central_indian_traditions_field_and_forest_rounds
+	religion = antq_central_indian_traditions
+
+	modifier = {
+		global_monthly_food_modifier = 0.03
+		global_hostile_attrition = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_central_indian_traditions_field_and_forest_rounds = 10
+	}
+}
+
+antq_doctrine_central_indian_traditions_ironworking_hearth_obligations = { # CAM-CENTRAL-INDIA-MEGALITHS;INFLIB-EARLY-HISTORIC;P11; contested; Specialist production linked fuel ore skill exchange and household obligations without inventing a uniform ritual guild.
+	icon = antq_doctrine_central_indian_traditions_ironworking_hearth_obligations
+	religion = antq_central_indian_traditions
+
+	modifier = {
+		global_monthly_prosperity = 0.02
+		global_monthly_food_modifier = 0.03
+	}
+
+	opinions = {
+		antq_doctrine_central_indian_traditions_ironworking_hearth_obligations = 10
+	}
+}
+
+antq_doctrine_central_indian_traditions_river_passage_compacts = { # CAM-CENTRAL-INDIA-MEGALITHS;INFLIB-EARLY-HISTORIC;P11; contested; Witnessed agreements coordinated ferries paths restitution and exchange along the Narmada Son and upper Mahanadi corridors.
+	icon = antq_doctrine_central_indian_traditions_river_passage_compacts
+	religion = antq_central_indian_traditions
+
+	modifier = {
+		tolerance_own = 1
+		global_monthly_prosperity = 0.02
+	}
+
+	opinions = {
+		antq_doctrine_central_indian_traditions_river_passage_compacts = 10
+	}
+}

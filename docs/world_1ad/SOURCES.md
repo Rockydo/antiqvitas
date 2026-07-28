@@ -711,6 +711,74 @@ CAH-XI or *Periplus* on every area row. It captures coarse reviewed frames only;
 all such rows are explicitly `contested` rather than silently treating the
 installed area geometry as a period border.
 
+## Central India, Tamilakam, and Maldives residual repair
+
+- `CAH-INDUS`: *The Cambridge Ancient History*, [“The Indus
+  Lands”](https://www.cambridge.org/core/books/abs/cambridge-ancient-history/indus-lands/D108DCF1A58E67E6F3D61A8D9824A269),
+  places Avanti around Ujjayini and Chedi immediately east in Central India.
+  It supports the broad Ujjayini/Avanti and Chedi geographic frames, not the
+  survival of sixth-century-BCE constitutions, exact AD 1 borders, rulers, or a
+  secure identification of Chedi's capital.
+- `JRAS-VEDISA`: Michael Willis, [“Buddhist Saints in Ancient
+  Vedisa”](https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/buddhist-saints-in-ancientvedisa/4FD5378E4C2AD9306BC1849B1FAD8A6F),
+  *Journal of the Royal Asiatic Society* 11.2 (2001), dates the Sanchi-area
+  reliquary inscriptions to about the early first century BCE and identifies a
+  well-established post-Mauryan Buddhist landscape. It supports a separate
+  Vedisa-Sanchi urban/religious frame, not one Buddhist state or a recovered AD
+  1 dynasty and frontier.
+- `CAM-TAMIL-MERCHANTS`: Rebecca Darley, [“Indian merchants abroad:
+  Integrating the Indian Ocean world during the early first millennium
+  CE”](https://www.cambridge.org/core/journals/journal-of-global-history/article/indian-merchants-abroad-integrating-the-indian-ocean-world-during-the-early-first-millennium-ce/07C260E3C025C0203EA0E25A25242E69),
+  *Journal of Global History* (2023), treats Tamilakam through Tamil-Brahmi,
+  Sangam literature, production, and maritime exchange while explicitly
+  cautioning that material culture does not mechanically prove identity or
+  ownership. It supports the broad Tamil cultural and economic frame and the
+  conservative bounded expansion of already-attested Tamil courts, not later
+  administrative divisions or imperial borders.
+- `UNESCO-KANCHI`: UNESCO World Heritage Centre, [“Temples of
+  Kanchipuram”](https://whc.unesco.org/en/tentativelists/6528/), records
+  early-centuries-CE Sangam descriptions of Kanchi as an important centre of
+  Tondaimandalam. It supports a bounded Kanchi/Tondai frame and direct ancient
+  city label, not Pallava government, later temple fabric, or an exact AD 1
+  coastal frontier.
+- `JRAS-SATIYAPUTRA`: S. Krishnaswami Aiyangar, [“Satiyaputra of the
+  Asoka Edicts”](https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/abs/satiyaputra-of-the-asoka-edicts/40586CDD6BB62C4998AC1AC723B0ACD4),
+  *Journal of the Royal Asiatic Society* 51.4 (1919), reviews the explicitly
+  disputed Satiyaputra geography and associates it with the Satyamangalam/
+  Coimbatore uplands rather than Kanchi. It is used only as a contested
+  cross-check for a small Tagadur-facing upland frame; the identification,
+  Atiyaman connection, ruler, and border are not treated as secure.
+- `CAM-CENTRAL-INDIA-MEGALITHS`: Nikhil Patel et al., [“New chronology
+  for Megalithic Burials in Vidarbha (Central
+  India)”](https://www.cambridge.org/core/journals/radiocarbon/article/abs/new-chronology-for-megalithic-burials-in-vidarbha-central-india-insights-into-contemporary-hydroclimate-and-food-habits/BBA09B68622807C42B8CC5C994C5BFCC),
+  *Radiocarbon* 64 (2022), describes Central Indian megalithic traditions as a
+  bridge into the Early Historic period and also demonstrates how insecure
+  individual burial chronologies can be. The specific dated burials are later
+  than AD 1 and outside most of this campaign frame; the paper therefore
+  supports only cautious archaeological-network terminology and explicitly
+  does not support an ethnicity, state, cult, ruler, or exact start-date site.
+- `INFLIB-EARLY-HISTORIC`: INFLIBNET, [“Historical Archaeology in
+  India”](https://epgp.inflibnet.ac.in/epgpdata/uploads/epgp_content/S000829IC/P001688/M021974/ET/1504071423P07-M37-HistoricalArchaeologyinIndia-ET.pdf),
+  defines the Early Historic archaeological range broadly around 600 BCE–300
+  CE and warns against reducing complicated evidence to colonial linguistic
+  categories. It supports cautious Iron-Age/Early-Historic regional adapters
+  in evidence-poor Central Indian uplands, not exact AD 1 ethnic borders or
+  unitary states.
+- `INFLIB-DAKSHINA-KOSALA`: INFLIBNET, [“Allahabad Pillar Inscription
+  of Samudragupta”](https://epgp.inflibnet.ac.in/epgpdata/uploads/epgp_content/S000829IC/P001689/M022047/ET/1504072712P08-M33-AllahabadPillarInscriptionofSamudragupta-ET.pdf),
+  places the later-attested Kosala frame around Raipur, Bilaspur, and western
+  Odisha. Because its political evidence is fourth-century, it is used only to
+  bound a contested upper-Mahanadi geographic adapter; no Samudragupta-era
+  ruler, dynasty, office, or frontier is projected into AD 1.
+- `CAM-MALDIVES`: R. Michael Feener et al., [“The Maldives Heritage
+  Survey”](https://www.cambridge.org/core/journals/antiquity/article/maldives-heritage-survey/15F61521DF052F7FEA4CA8AEEEA554FC),
+  *Antiquity* 95.381 (2021), documents the archipelago's Indian Ocean
+  connections and pre-Islamic Buddhist material while stressing the lack of
+  documentary sources and the limited earlier excavation record. It supports
+  only a tiny decentralized maritime gameplay frame and marine economy; it
+  does not securely date every represented atoll to AD 1 or recover a common
+  ruler, language, faith, border, or capital.
+
 The Barbaricum expansion likewise uses P8.1/P8.2/P8.7 with CAH-XI. Its rows
 are deliberately marked `contested`: broad regional labels are a visible
 political-map scaffold, never an assertion that a present map-area boundary was

@@ -70,7 +70,7 @@ EXPECTED_SAFE_SCOPES = Counter({
     "international_organization:catholic_church": 2,
     "international_organization:shinto": 2,
 })
-EXPECTED_RGO_CHANGE_COUNT = 657
+EXPECTED_RGO_CHANGE_COUNT = 660
 EXPECTED_CUSTOM_RGO_GOODS = frozenset({
     "antq_barley",
     "antq_camels",

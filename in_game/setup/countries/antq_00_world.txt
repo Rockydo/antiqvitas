@@ -2341,15 +2341,6 @@ IMV = { # Imphal Valley Networks; OUP-NEINDIA;P8.4
 	is_historic = yes
 }
 
-XDQ = { # Central Indian Societies; P8.4;CAH-XI
-	color = rgb { 192 106 44 }
-	color2 = rgb { 63 149 211 }
-
-	culture_definition = antq_indo_aryan
-	religion_definition = antq_brahmanism
-	is_historic = yes
-}
-
 RJS = { # Rajasthan-Gujarat Societies; P8.4;CAH-XI
 	color = rgb { 189 102 33 }
 	color2 = rgb { 66 153 222 }
@@ -3202,5 +3193,95 @@ NNR = { # Hilleviones; PLN-NH-IV96;OCD-GER
 
 	culture_definition = antq_germanic
 	religion_definition = antq_germanic_religion
+	is_historic = yes
+}
+
+XDN = { # Tondai-Kanchi Polity; UNESCO-KANCHI;CAM-TAMIL-MERCHANTS;P8.4
+	color = rgb { 166 112 33 }
+	color2 = rgb { 89 143 222 }
+
+	culture_definition = antq_tamil
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+ATY = { # Atiyaman of Tagadur; JRAS-SATIYAPUTRA;CAM-TAMIL-MERCHANTS;P8.4
+	color = rgb { 173 105 38 }
+	color2 = rgb { 82 150 217 }
+
+	culture_definition = antq_tamil
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+XGD = { # Ujjayini Urban Polity; CAH-INDUS;JRAS-VEDISA;P8.4
+	color = rgb { 177 120 31 }
+	color2 = rgb { 78 135 224 }
+
+	culture_definition = antq_avanti_prakrit
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+VDS = { # Vedisa Urban Polity; JRAS-VEDISA;CAH-INDUS;P8.4
+	color = rgb { 166 122 28 }
+	color2 = rgb { 89 133 227 }
+
+	culture_definition = antq_avanti_prakrit
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+CED = { # Chedi Janapada; CAH-INDUS;P8.4
+	color = rgb { 183 121 52 }
+	color2 = rgb { 72 134 203 }
+
+	culture_definition = antq_chedi_prakrit
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+NVM = { # Narmada-Vindhya Megalithic Networks; CAM-CENTRAL-INDIA-MEGALITHS;P8.4
+	color = rgb { 167 116 32 }
+	color2 = rgb { 88 139 223 }
+
+	culture_definition = antq_narmada_vindhya_megalithic
+	religion_definition = antq_central_indian_traditions
+	is_historic = yes
+}
+
+XGE = { # Son-Vindhya Iron-Age Networks; INFLIB-EARLY-HISTORIC;P8.4
+	color = rgb { 186 120 27 }
+	color2 = rgb { 69 135 228 }
+
+	culture_definition = antq_son_vindhya_iron_age
+	religion_definition = antq_central_indian_traditions
+	is_historic = yes
+}
+
+DKS = { # Dakshina Kosala; INFLIB-DAKSHINA-KOSALA;P8.4
+	color = rgb { 189 120 39 }
+	color2 = rgb { 66 135 216 }
+
+	culture_definition = antq_upper_mahanadi
+	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+BSR = { # Bastar Megalithic Networks; INFLIB-EARLY-HISTORIC;P8.4
+	color = rgb { 181 123 50 }
+	color2 = rgb { 74 132 205 }
+
+	culture_definition = antq_bastar_megalithic
+	religion_definition = antq_central_indian_traditions
+	is_historic = yes
+}
+
+MLD = { # Maldivian Atoll Networks; CAM-MALDIVES;P8.4
+	color = rgb { 192 113 34 }
+	color2 = rgb { 63 142 221 }
+
+	culture_definition = antq_maldivian_maritime
+	religion_definition = antq_brahmanism
 	is_historic = yes
 }

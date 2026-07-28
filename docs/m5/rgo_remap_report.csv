@@ -265,6 +265,7 @@ karytaina,Rome,regional_rule,saltpeter,salt
 kashima,Japan,regional_rule,silk,fiber_crops
 kataka,India,regional_rule,silk,fiber_crops
 kawachi,Japan,regional_rule,pepper,medicaments
+kayal,India,anchor,salt,pearls
 kembhavi,India,regional_rule,incense,medicaments
 khairabad,India,regional_rule,silk,fiber_crops
 khargerd,Iran,regional_rule,silk,fiber_crops
@@ -333,6 +334,7 @@ madurai,India,regional_rule,silk,fiber_crops
 mainz,Germania,regional_rule,wine,fruit
 malaga,Rome,regional_rule,sugar,fiber_crops
 malapuram,India,regional_rule,incense,medicaments
+male_atoll,India,anchor,lumber,pearls
 malta,Rome,regional_rule,cotton,fiber_crops
 mandar_parvat,India,regional_rule,silk,fiber_crops
 mang_viet,China,regional_rule,saltpeter,salt
@@ -558,6 +560,7 @@ thakhek,Southeast Asia,regional_rule,saltpeter,salt
 tharrawaddy,Southeast Asia,regional_rule,incense,medicaments
 thebes,Rome,regional_rule,silk,fiber_crops
 thien_quan,China,regional_rule,sugar,fiber_crops
+thoothukudi,India,anchor,livestock,pearls
 tianchang,China,regional_rule,cotton,fiber_crops
 tidsi,Africa,regional_rule,sugar,fiber_crops
 tijis,Rome,environment_rule,olives,fruit
@@ -670,9 +673,12 @@ zwickau,Germania,regional_rule,coal,lumber
 # anchor:gems->incense,1
 # anchor:goods_gold->livestock,1
 # anchor:legumes->antq_naphtha,1
+# anchor:livestock->pearls,1
+# anchor:lumber->pearls,1
 # anchor:marble->iron,1
 # anchor:rice->silk,1
 # anchor:salt->antq_papyrus,1
+# anchor:salt->pearls,1
 # anchor:salt->silver,1
 # anchor:wheat->antq_barley,1
 # anchor:wheat->antq_silphium,1

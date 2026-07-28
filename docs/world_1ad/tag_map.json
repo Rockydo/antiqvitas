@@ -1,8 +1,8 @@
 {
   "game_build": "24187685",
-  "entry_count": 356,
-  "collision_count": 135,
-  "localization_collision_count": 149,
+  "entry_count": 365,
+  "collision_count": 137,
+  "localization_collision_count": 151,
   "reserved_hash_collision_tags": [
     "XAD"
   ],
@@ -1828,13 +1828,6 @@
       "name": "Imphal Valley Networks"
     },
     {
-      "design_tag": "CIN",
-      "engine_tag": "XDQ",
-      "vanilla_collision": true,
-      "localization_collision": true,
-      "name": "Central Indian Societies"
-    },
-    {
       "design_tag": "RJS",
       "engine_tag": "RJS",
       "vanilla_collision": false,
@@ -2498,6 +2491,76 @@
       "vanilla_collision": false,
       "localization_collision": false,
       "name": "Hilleviones"
+    },
+    {
+      "design_tag": "TND",
+      "engine_tag": "XDN",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Tondai-Kanchi Polity"
+    },
+    {
+      "design_tag": "ATY",
+      "engine_tag": "ATY",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Atiyaman of Tagadur"
+    },
+    {
+      "design_tag": "UJJ",
+      "engine_tag": "XGD",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Ujjayini Urban Polity"
+    },
+    {
+      "design_tag": "VDS",
+      "engine_tag": "VDS",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Vedisa Urban Polity"
+    },
+    {
+      "design_tag": "CED",
+      "engine_tag": "CED",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Chedi Janapada"
+    },
+    {
+      "design_tag": "NVM",
+      "engine_tag": "NVM",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Narmada-Vindhya Megalithic Networks"
+    },
+    {
+      "design_tag": "BGL",
+      "engine_tag": "XGE",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Son-Vindhya Iron-Age Networks"
+    },
+    {
+      "design_tag": "DKS",
+      "engine_tag": "DKS",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Dakshina Kosala"
+    },
+    {
+      "design_tag": "BSR",
+      "engine_tag": "BSR",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Bastar Megalithic Networks"
+    },
+    {
+      "design_tag": "MLD",
+      "engine_tag": "MLD",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Maldivian Atoll Networks"
     }
   ]
 }

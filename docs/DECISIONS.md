@@ -4011,3 +4011,15 @@ archaeobotanical evidence exists. It is narrowly anchored to cultivated
 valleys; Changtang remains pastoral. Source art follows the checked trade-good
 pipeline: pinned full-resolution source, circle-safe RGBA master, 128px DXT5
 icon, and 1080x440 DXT5 illustration.
+
+## 2026-07-28 - Central India repair is pinned as an exact residual transform
+
+`tools/s2_central_indian_granularity.py` treats the former 167-location `CIN`
+footprint as an immutable input set. It requires exact one-time reassignment,
+bounded expansion arithmetic, all start-state dependencies, six named RGO
+anchors, and absence of the old tag/name.
+
+The four doctrine icons come from one 2x2 generated atlas using four installed
+EU5 religious-aspect assets as the visual reference. The splitter pins source
+hash, quadrant order, dimensions, transparency, and DDS outputs; the aggregate
+UI ledger then verifies the installed chains.

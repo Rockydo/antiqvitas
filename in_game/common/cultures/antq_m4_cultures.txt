@@ -4698,3 +4698,66 @@ antq_eastern_plateau_corridor = { # CAM-EAST-TIB;OXF-EAST-RIM;P10; Plateau-escar
 		antq_tibetan_group
 	}
 }
+
+antq_avanti_prakrit = { # CAH-INDUS;JRAS-VEDISA;P10; Ujjayini-Vedisa regional Prakrit adapter; the language key is a technical name-list fallback and not a recovered AD 1 dialect boundary
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_avanti_prakrit
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_chedi_prakrit = { # CAH-INDUS;P10; Chedi regional Prakrit adapter without claiming a recovered AD 1 census language or exact janapada frontier
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_chedi_prakrit
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_narmada_vindhya_megalithic = { # CAM-CENTRAL-INDIA-MEGALITHS;P10; Upper Narmada and Vindhya archaeological adapter; the technical Munda name list does not establish ethnicity or language
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_narmada_vindhya_megalithic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_son_vindhya_iron_age = { # INFLIB-EARLY-HISTORIC;P10; Eastern Vindhya and Son-valley archaeological adapter without backdating later Bagheli or Gond identities
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_son_vindhya_iron_age
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_upper_mahanadi = { # INFLIB-DAKSHINA-KOSALA;INFLIB-EARLY-HISTORIC;P10; Dakshina Kosala regional adapter without inventing a uniform AD 1 language or dynasty
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_upper_mahanadi
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_bastar_megalithic = { # INFLIB-EARLY-HISTORIC;P10; Bastar plateau archaeological adapter; mortuary forms do not establish one ethnicity language or polity
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_bastar_megalithic
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}
+
+antq_maldivian_maritime = { # CAM-MALDIVES;P10; Atoll maritime adapter using a South Indian name-list fallback; it is not a claim of Tamil political or linguistic uniformity
+	language = antq_indian_dialect
+	color = antq_culture_color_antq_maldivian_maritime
+	tags = { european_gfx }
+	culture_groups = {
+		antq_indian_group
+	}
+}

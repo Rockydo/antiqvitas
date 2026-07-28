@@ -615,3 +615,17 @@ antq_eastern_plateau_traditions = { # CAM-EAST-TIB;RAD-YUSHU;OXF-EAST-RIM;P11; P
 	opinions = {
 	}
 }
+
+antq_central_indian_traditions = { # CAM-CENTRAL-INDIA-MEGALITHS;INFLIB-EARLY-HISTORIC;P11; Plural Narmada Vindhya Son and Bastar local traditions represented through archaeological landscapes without inventing one theology priesthood ethnicity or cult
+	color = antq_religion_color_antq_central_indian_traditions
+	group = folk_asian_group
+	religious_aspects = 2
+	has_religious_influence = yes
+	definition_modifier = {
+		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
+	}
+	opinions = {
+	}
+}

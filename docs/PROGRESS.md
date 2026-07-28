@@ -7708,3 +7708,15 @@ reviewed 128px BC7 DDS.
 - Added a permanent Tibetan granularity validator and evidence ledger. The
   complete 118-command validation gate and reduced paired menu smoke pass with
   zero mod-only normalized error-log lines.
+
+## 2026-07-28 - Repaired the Central India residual
+
+- Reassigned all 167 `CIN` locations to ten new and four bounded existing
+  frames; the largest new frame has 21 locations.
+- Added seven cultures, one plural faith with four direct doctrines, six
+  reforms, ten standards, period-safe names, and full 11-client propagation.
+- Replaced Maldivian lumber with marine production and anchored Gulf of Mannar
+  pearls. The roster now has 365 polities and 660 RGO corrections.
+- Restored the repo master plan to the prompt-side canonical text.
+- All 119 validation checks and paired vanilla/mod smoke pass with zero
+  mod-only normalized error-log lines.

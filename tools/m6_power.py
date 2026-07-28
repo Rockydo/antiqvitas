@@ -477,6 +477,48 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "CAM-EAST-TIB;RAD-YUSHU;OXF-EAST-RIM;P13", "contested",
         "Eastern river and escarpment corridors model unequal exchange and highland subsistence without treating mortuary forms as one ethnicity or state.",
     ),
+    "antq_tamilakam_velir_court": (
+        "global_nobles_estate_power=0.08|global_burghers_estate_power=0.05|"
+        "nobles_estate_power_from_cabinet=0.16|global_trade_through_owned_territory_efficiency=0.02|"
+        "replace_cabinet_member_cost_modifier=0.05",
+        "CAM-TAMIL-MERCHANTS;UNESCO-KANCHI;JRAS-SATIYAPUTRA;P13", "contested",
+        "A bounded Tamilakam chiefly court balances leading houses, cultivators, poets, and exchange without projecting medieval Chola or Pallava administration.",
+    ),
+    "antq_central_indian_urban_kingship": (
+        "global_nobles_estate_power=0.06|global_burghers_estate_power=0.08|"
+        "burghers_estate_power_from_cabinet=0.16|global_production_efficiency=0.02|"
+        "replace_cabinet_member_cost_modifier=0.04",
+        "CAH-INDUS;JRAS-VEDISA;P13", "contested",
+        "Post-Mauryan urban authority at Ujjayini and Vedisa is represented without inventing a shared dynasty, constitution, or uniform religious settlement.",
+    ),
+    "antq_central_indian_janapada": (
+        "global_nobles_estate_power=0.07|global_peasants_estate_power=0.05|"
+        "nobles_estate_power_from_cabinet=0.15|global_monthly_food_modifier=0.015|"
+        "replace_cabinet_member_cost_modifier=0.04",
+        "CAH-INDUS;P13", "contested",
+        "The Chedi regional identity supports a bounded janapada adapter while its AD 1 ruler, capital, offices, and exact frontier remain unrecovered.",
+    ),
+    "antq_central_indian_megalithic_network": (
+        "global_tribes_estate_power=0.10|global_peasants_estate_power=0.05|"
+        "tribes_estate_power_from_cabinet=0.20|global_production_efficiency=0.02|"
+        "replace_cabinet_member_cost_modifier=0.025",
+        "CAM-CENTRAL-INDIA-MEGALITHS;INFLIB-EARLY-HISTORIC;P13", "contested",
+        "Megalithic and Iron-Age landscapes support local coordination but do not establish one ethnicity, court, priesthood, or centralized state.",
+    ),
+    "antq_upper_mahanadi_kingship": (
+        "global_nobles_estate_power=0.06|global_peasants_estate_power=0.07|"
+        "estate_power_from_cabinet=0.15|global_monthly_food_modifier=0.02|"
+        "replace_cabinet_member_cost_modifier=0.04",
+        "INFLIB-DAKSHINA-KOSALA;INFLIB-EARLY-HISTORIC;P13", "contested",
+        "A conservative Dakshina Kosala court adapter coordinates the upper Mahanadi without backdating later Sirpur dynasties, offices, or capital claims.",
+    ),
+    "antq_indian_ocean_atoll_network": (
+        "global_tribes_estate_power=0.08|global_burghers_estate_power=0.06|"
+        "tribes_estate_power_from_cabinet=0.16|global_trade_through_owned_territory_efficiency=0.03|"
+        "replace_cabinet_member_cost_modifier=0.025",
+        "CAM-MALDIVES;P13", "contested",
+        "A decentralized atoll network models maritime exchange and local coordination without projecting the later sultanate, modern state, or uniform creed into AD 1.",
+    ),
     "antq_buffer_kingdom": (
         "global_burghers_estate_power=0.05|estate_power_from_cabinet=0.10|"
         "replace_cabinet_member_cost_modifier=0.05",
@@ -1237,6 +1279,8 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
         "antq_sumpa_highland_confederacy", "antq_changtang_pastoral_network",
         "antq_central_plateau_agropastoral_network",
         "antq_eastern_plateau_corridor_network",
+        "antq_central_indian_megalithic_network",
+        "antq_indian_ocean_atoll_network",
     ),
     "sacral": (),
     "royal": (
@@ -1244,6 +1288,8 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
         "antq_northern_indian_coin_kingship", "antq_pundranagara_urban_kingship",
         "antq_sogdian_city_compact", "antq_dayuan_oasis_kingship",
         "antq_han_western_regions_kingship", "antq_zhangzhung_plateau_kingship",
+        "antq_tamilakam_velir_court", "antq_central_indian_urban_kingship",
+        "antq_central_indian_janapada", "antq_upper_mahanadi_kingship",
     ),
     "xiongnu": ("antq_steppe_confederation",),
     "xianbei": ("antq_xianbei_eastern_confederacy",),
@@ -1823,7 +1869,7 @@ def load_power_data() -> PowerData:
     used_reforms = {government["reform"] for government in governments.values()}
     # Seventy-one earlier core/regional contracts plus the five reviewed
     # Tibetan Plateau contracts defined above.
-    expected_contract_count = 76 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    expected_contract_count = 82 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -2278,6 +2324,72 @@ antq_eastern_plateau_corridor_network = {
 	country_modifier = {
 		global_tribes_estate_power = 0.10
 		global_trade_through_owned_territory_efficiency = 0.025
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_tamilakam_velir_court = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.08
+		global_trade_through_owned_territory_efficiency = 0.02
+		research_speed = 0.09
+	}
+	years = 2
+}
+
+antq_central_indian_urban_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_burghers_estate_power = 0.08
+		global_production_efficiency = 0.02
+		research_speed = 0.09
+	}
+	years = 2
+}
+
+antq_central_indian_janapada = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_nobles_estate_power = 0.07
+		global_monthly_food_modifier = 0.015
+		research_speed = 0.08
+	}
+	years = 2
+}
+
+antq_central_indian_megalithic_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		global_production_efficiency = 0.02
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_upper_mahanadi_kingship = {
+	major = yes
+	government = monarchy
+	country_modifier = {
+		global_peasants_estate_power = 0.07
+		global_monthly_food_modifier = 0.02
+		research_speed = 0.08
+	}
+	years = 2
+}
+
+antq_indian_ocean_atoll_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_burghers_estate_power = 0.06
+		global_trade_through_owned_territory_efficiency = 0.03
 		research_speed = 0.07
 	}
 	years = 2
@@ -3084,6 +3196,18 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_central_plateau_agropastoral_network_desc", "River-valley settlements coordinate barley cultivation, herd management, storage, passage, and seasonal obligations without a backdated dynasty."),
         ("antq_eastern_plateau_corridor_network", "Eastern Plateau Corridor Network"),
         ("antq_eastern_plateau_corridor_network_desc", "Highland households and leading exchange brokers coordinate river corridors, pasture, mortuary obligations, and defence without one ethnic state."),
+        ("antq_tamilakam_velir_court", "Tamilakam Velir Court"),
+        ("antq_tamilakam_velir_court_desc", "A bounded chiefly court balancing leading houses, cultivators, poets, and exchange without projecting medieval administration."),
+        ("antq_central_indian_urban_kingship", "Central Indian Urban Kingship"),
+        ("antq_central_indian_urban_kingship_desc", "Post-Mauryan urban authority coordinates leading houses, workshops, cultivators, and religious patrons without an invented common dynasty."),
+        ("antq_central_indian_janapada", "Central Indian Janapada"),
+        ("antq_central_indian_janapada_desc", "A regional court and cultivating communities sustain an older janapada identity whose exact AD 1 offices and frontier are unrecovered."),
+        ("antq_central_indian_megalithic_network", "Central Indian Megalithic Network"),
+        ("antq_central_indian_megalithic_network_desc", "Iron-Age settlements and commemorative landscapes coordinate production, passage, restitution, and collective defence without one ethnic state."),
+        ("antq_upper_mahanadi_kingship", "Upper Mahanadi Kingship"),
+        ("antq_upper_mahanadi_kingship_desc", "A conservative Dakshina Kosala court coordinates riverine cultivation and inland exchange without projecting later Sirpur dynasties."),
+        ("antq_indian_ocean_atoll_network", "Indian Ocean Atoll Network"),
+        ("antq_indian_ocean_atoll_network_desc", "Atoll communities coordinate marine production, passage, and exchange without a later sultanate or centralized island state."),
         ("antq_buffer_kingdom", "Buffer Kingdom"),
         ("antq_buffer_kingdom_desc", "A frontier court balancing local authority against stronger neighbouring powers."),
         ("antq_kushite_dual_kingship", "Kushite Dual Kingship"),

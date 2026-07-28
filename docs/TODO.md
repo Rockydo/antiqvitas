@@ -610,11 +610,44 @@ and focused runtime probe all pass.
     Nsukka-Lejja, Lower Oueme, Volta-Cong, and Bosumtwi frames without
     backdating later named states or asserting unsupported ethnic borders.
   - [ ] Literal African placeholder countries are exhausted and the Gangetic,
-    Inner Asian, and Tibetan superstates are split. Continue the size-ranked
-    global census with the 167-location Central Indian Societies frame, then
-    Mainland Southeast Asia (136), Manchuria (125), Borneo (110), and
-    Rajasthan-Gujarat (109).
+    Inner Asian, Tibetan, and Central Indian superstates are split. Continue
+    the size-ranked global census with Mainland Southeast Asia (136),
+    Manchuria (125), Borneo (110), and Rajasthan-Gujarat (109).
     The parent task remains open until the census reaches zero.
+    - [x] Replace `CIN` as a disconnected residual, not as a renamed Central
+      Indian state. The audited footprint is 76 Gondwana/Bundelkhand
+      locations, 36 Malwa/Narmada locations, 51 Tamilakam locations, and four
+      Maldivian atolls.
+      - Expand Chola over Cola Nadu, Pandya over Pandya Nadu, Chera over the
+        Kongu corridor, and Satavahana over the Nimar/Khandesh approaches;
+        retain direct capital precedence and do not project later imperial
+        boundaries.
+      - Give Tondai/Kanchi and Tagadur's Atiyaman-Satiyaputra horizon separate
+        bounded Tamil frames. Keep all Tamilakam culture labels broad enough
+        for the evidence and do not backdate Pallava or medieval mandalam
+        administration.
+      - Divide the central remainder among Ujjayini/Avanti and Vedisa urban
+        frames, Chedi, an upper-Mahanadi/Dakshina-Kosala frame, and separate
+        Narmada-Vindhya, Baghelkhand, and Bastar archaeological networks.
+        Where the AD 1 ruler or frontier is unknown, use an anonymous opening
+        government and an archaeological/community label rather than inventing
+        a dynasty.
+      - Represent the four inhabited Maldives map fields as a small atoll
+        maritime network with explicitly contested religion/political
+        approximation; correct their impossible inherited lumber economy to
+        marine production.
+      - Add distinct cultures, government reforms, owned capitals,
+        period-safe capital labels, direct standards, agendas, research
+        reachability, productive settlement seeds, and eleven-client
+        localization for every new frame.
+      - Add a permanent exact validator and evidence ledger pinning all 167
+        former `CIN` locations, prohibiting `CIN` and “Central Indian
+        Societies” player-facing, and checking the disconnected-footprint
+        repair plus Tamilakam expansion.
+      - Acceptance: all 167 locations are reassigned exactly once; no new
+        frame exceeds its reviewed geography; direct RGO corrections cover the
+        Maldives and Gulf of Mannar; full static validation and paired
+        smoke have zero mod-only normalized error-log lines.
     - [x] Replace Inner Asian Oasis Societies as five separate
       geographic audits, not a country rename. Its 302 locations comprise
       Transoxiana (93), the Kazakh steppe (85), eastern Khorasan/Bactria (46),

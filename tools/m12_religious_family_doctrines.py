@@ -30,6 +30,11 @@ ADVANCE_ART = ROOT / "main_menu/gfx/interface/advance"
 RELIGION_ART = ROOT / "main_menu/gfx/interface/icons/religion"
 ICON_DIR = ROOT / "main_menu/gfx/interface/icons/religious_aspects"
 MASTER_DIR = ROOT / "assets_queue/religious_family_doctrines/masters"
+CENTRAL_INDIAN_ATLAS = (
+    ROOT
+    / "assets_queue/generated_sources/"
+    "antq_doctrine_central_indian_traditions_fourup.png"
+)
 CONTACT_SHEET = (
     ROOT / "docs/m12/religious_family_doctrines_contact_sheet.png"
 )
@@ -98,6 +103,12 @@ PACKAGES = {
         ("global_monthly_food_modifier", "0.03"),
         ("global_hostile_attrition", "0.05"),
     ),
+}
+DIRECT_ATLAS_INDEX = {
+    "antq_doctrine_central_indian_traditions_ancestor_stone_custody": 0,
+    "antq_doctrine_central_indian_traditions_field_and_forest_rounds": 1,
+    "antq_doctrine_central_indian_traditions_ironworking_hearth_obligations": 2,
+    "antq_doctrine_central_indian_traditions_river_passage_compacts": 3,
 }
 
 
@@ -235,6 +246,11 @@ def verify_components(row: Doctrine) -> None:
         raise ValueError(f"missing reviewed motif for {row.key}: {row.motif}")
     if not row.badge.is_file():
         raise ValueError(f"missing direct religion badge for {row.key}: {row.badge}")
+    if row.key in DIRECT_ATLAS_INDEX and not CENTRAL_INDIAN_ATLAS.is_file():
+        raise ValueError(
+            f"missing reviewed four-up doctrine atlas for {row.key}: "
+            f"{CENTRAL_INDIAN_ATLAS}"
+        )
 
 
 def render_script(doctrines: tuple[Doctrine, ...]) -> bytes:
@@ -301,6 +317,23 @@ def fit(image: Image.Image, size: tuple[int, int]) -> Image.Image:
 
 def render_master(row: Doctrine) -> Image.Image:
     verify_components(row)
+    if row.key in DIRECT_ATLAS_INDEX:
+        with Image.open(CENTRAL_INDIAN_ATLAS) as source:
+            atlas = source.convert("RGBA")
+        if atlas.width != atlas.height or atlas.width % 2:
+            raise ValueError(
+                "Central Indian doctrine atlas must be an even square 2x2 image"
+            )
+        side = atlas.width // 2
+        index = DIRECT_ATLAS_INDEX[row.key]
+        left = (index % 2) * side
+        top = (index // 2) * side
+        master = atlas.crop((left, top, left + side, top + side)).resize(
+            (128, 128), Image.Resampling.LANCZOS
+        )
+        for point in ((0, 0), (127, 0), (0, 127), (127, 127)):
+            master.putpixel(point, (0, 0, 0, 0))
+        return master
     with Image.open(row.motif) as source:
         master = fit(source, (128, 128))
     with Image.open(row.badge) as source:
@@ -375,6 +408,16 @@ def manifest_value(doctrines: tuple[Doctrine, ...]) -> dict[str, object]:
                 "motif_sha256": sha256(row.motif.read_bytes()),
                 "badge": row.badge.relative_to(ROOT).as_posix(),
                 "badge_sha256": sha256(row.badge.read_bytes()),
+                "direct_atlas": (
+                    CENTRAL_INDIAN_ATLAS.relative_to(ROOT).as_posix()
+                    if row.key in DIRECT_ATLAS_INDEX
+                    else None
+                ),
+                "direct_atlas_sha256": (
+                    sha256(CENTRAL_INDIAN_ATLAS.read_bytes())
+                    if row.key in DIRECT_ATLAS_INDEX
+                    else None
+                ),
                 "master_sha256": (
                     sha256(row.master.read_bytes())
                     if row.master.is_file()

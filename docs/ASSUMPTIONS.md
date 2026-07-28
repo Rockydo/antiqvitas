@@ -5596,3 +5596,24 @@ geographic gameplay frames; later Khampa, Qiang, Bailang, Tibetan, and
 provincial identities are not projected backward. Sources:
 `ANT-TIB-HERDING`; `CAM-EAST-TIB`; `RAD-YUSHU`; `OXF-EAST-RIM`.
 [secure material practices; contested identities and political forms]
+
+## 2026-07-28 - Central India, Tamilakam, and Maldives residual repair
+
+Ujjayini/Avanti, Vedisa-Sanchi, and bounded Chedi frames are defensible regional
+anchors, but their AD 1 rulers, constitutions, and exact borders are not
+recovered. Dakshina Kosala is a geographic upper-Mahanadi adapter based partly
+on later evidence. Narmada-Vindhya, Son-Vindhya, and Bastar therefore use
+archaeological-network governments rather than invented dynasties. Sources:
+`CAH-INDUS`; `JRAS-VEDISA`; `CAM-CENTRAL-INDIA-MEGALITHS`;
+`INFLIB-EARLY-HISTORIC`; `INFLIB-DAKSHINA-KOSALA`. [contested]
+
+Kanchi/Tondai and Tagadur are compact Tamil frames. They do not backdate
+Pallava administration, later mandalam borders, or a certain Satiyaputra-
+Atiyaman identification. Chola, Pandya, Chera, and Satavahana expansion is
+limited to reviewed adjacent regions. Sources: `CAM-TAMIL-MERCHANTS`;
+`UNESCO-KANCHI`; `JRAS-SATIYAPUTRA`. [mixed secure centers/contested extent]
+
+The Maldivian frame is a decentralized maritime proxy. Its common ruler,
+language, religion, capital status, and universal AD 1 occupation are
+unresolved; marine fishing/shell production is a conservative correction to
+impossible inherited lumber. Source: `CAM-MALDIVES`. [contested]
