@@ -19239,105 +19239,343 @@ countries = {
 			capital = tlacotlalpan
 		}
 
-		WMS = { # West Mexican Societies; P8.10;CAH-XI
+		XGU = { # Nayarit Shaft-Tomb Communities; INAH-WEST-SHAFT
 			own_control_core = {
-				aaku
-				acatic
-				aguacana
 				ahuacatlan
-				ajuchitlan
-				amaxacotlan
-				ameca
-				amollan
-				angamacutiro
-				apatzingan
-				autlan
 				aztatlan
-				caracuaro
-				caxitlan
-				chapallan
-				chucutitlan
-				churumekua
-				coahuayana
-				cocollan
-				coinan
-				coliman
-				cuauhchinanco
-				cuautla
-				cuitzeo
-				cutzalan
-				cutzamala
-				cuzalapa
-				erongaricuaro
-				etzatlan
-				guayangareo
 				hostoticpac
-				huandacareo
-				huaxtla
-				huitzquilic
-				ialophaybo
-				ixtlahuaca
-				ixtlahuacan
-				malinalco
-				melahuacan
-				metzquititlan
-				mextiacan
-				mitic
-				ninil
-				nochistlan
-				ohkweeo_owingeh
-				oztoman
-				patzcuaro
-				puruaran
-				sayula
 				sentispac
-				shiewhibak
-				tacambaro
-				tancitaro
-				taximaroa
-				teloloapan
-				temascaltepec
+				tzapotzingo
+				xalisco
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				mesoamerica_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_west_mexican_shaft_tomb_chiefdom
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -52
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 46
+			}
+			capital = ahuacatlan
+		}
+
+		TJC = { # Central Jalisco Teuchitlan Networks; INAH-TEUCHITLAN
+			own_control_core = {
+				acatic
+				ameca
+				autlan
+				chapallan
+				coinan
+				etzatlan
+				huitzquilic
+				ixtlahuacan
 				tenamaxtlan
-				teotenanco
-				tepactitlan
-				tepecoacuilco
-				tetellan
-				teulinchan
-				teypana
-				than_u_ge
-				tinguindin
-				tiripetio
-				tlacalahuastla
-				tlachco
-				tlalpan
+				tonala
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				mesoamerica_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_teuchitlan_civic_center_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -52
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 46
+			}
+			capital = etzatlan
+		}
+
+		SJB = { # Southern Jalisco Basin Communities; INAH-WEST-SHAFT;INAH-COLIMA
+			own_control_core = {
+				amollan
+				cocollan
+				cutzalan
+				cuzalapa
+				sayula
 				tlamazolan
 				tlayolan
-				tlazazalca
 				tochpan
-				tollohcan
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				mesoamerica_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_west_mexican_shaft_tomb_chiefdom
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -52
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 46
+			}
+			capital = sayula
+		}
+
+		XGV = { # Colima-Coahuayana Communities; INAH-COLIMA
+			own_control_core = {
+				apatzingan
+				caxitlan
+				chucutitlan
+				coahuayana
+				coliman
+				melahuacan
+				tlacalahuastla
 				tomatlan
-				tonala
-				tsiya
-				tuf_shur_tia
-				tuzantla
-				tzapotzingo
-				tzintzuntzan
-				tzitacuaro
-				uruapan
-				xacona
-				xalisco
-				xalostotitlan
 				xihutla
-				xilotlan
-				xochipillan
-				xochitepec
-				yahualican
+				zihuatlan
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				mesoamerica_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_west_mexican_shaft_tomb_chiefdom
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -52
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 46
+			}
+			capital = coliman
+		}
+
+		BJC = { # Chupicuaro-Bajio Communities; INAH-CHUPICUARO
+			own_control_core = {
+				caracuaro
+				churumekua
+				cuitzeo
+				huandacareo
+				puruaran
+				tuzantla
 				yuririapundaro
 				zacapu
-				zacazonapan
-				zihuatlan
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				mesoamerica_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_west_mexican_basin_community_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -52
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 46
+			}
+			capital = yuririapundaro
+		}
+
+		PHC = { # Patzcuaro Highland Communities; INAH-WEST-MEXICO
+			own_control_core = {
+				aguacana
+				erongaricuaro
+				patzcuaro
+				tancitaro
+				tinguindin
+				uruapan
+				xilotlan
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				mesoamerica_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_west_mexican_basin_community_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -52
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 46
+			}
+			capital = patzcuaro
+		}
+
+		MBC = { # Central Michoacan Basin Communities; INAH-WEST-MEXICO;INAH-CHUPICUARO
+			own_control_core = {
+				angamacutiro
+				guayangareo
+				tacambaro
+				taximaroa
+				tiripetio
+				tlazazalca
+				tzintzuntzan
+				tzitacuaro
+				xacona
 				zinapecuaro
-				zompanco
 				zula_michoacan
 			}
 
@@ -19351,10 +19589,263 @@ countries = {
 				heir_selection = tribal_oldest_male
 				ruler = random
 				reforms = {
-					antq_advanced_chiefdom
+					antq_west_mexican_basin_community_network
 				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -52
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 46
+			}
+			capital = zinapecuaro
+		}
+
+		TVC = { # Toluca Valley Formative Communities; INAH-TOLUCA
+			own_control_core = {
+				ixtlahuaca
+				malinalco
+				ninil
+				oztoman
+				temascaltepec
+				teotenanco
+				tlachco
+				tollohcan
+				zacazonapan
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				mesoamerica_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_west_mexican_basin_community_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -52
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 46
+			}
+			capital = ixtlahuaca
+		}
+
+		MZC = { # Mezcala-Balsas Preurban Communities; INAH-MEZCALA
+			own_control_core = {
+				ajuchitlan
+				cutzamala
+				teloloapan
+				tepecoacuilco
+				tetellan
+				zompanco
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				mesoamerica_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_west_mexican_highland_corridor_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -52
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 46
+			}
+			capital = tepecoacuilco
+		}
+
+		JZH = { # Jalisco-Zacatecas Highland Communities; INAH-WEST-SHAFT;INAH-WEST-MEXICO
+			own_control_core = {
+				amaxacotlan
+				cuauhchinanco
+				cuautla
+				huaxtla
+				metzquititlan
+				mextiacan
+				mitic
+				nochistlan
+				tepactitlan
+				teulinchan
+				tlalpan
+				xalostotitlan
+				xochipillan
+				xochitepec
+				yahualican
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				mesoamerica_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_west_mexican_highland_corridor_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -52
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 46
 			}
 			capital = huaxtla
+		}
+
+		XGW = { # Ancestral Sonoran Desert Communities; NPS-SONORAN
+			own_control_core = {
+				aaku
+				ialophaybo
+				ohkweeo_owingeh
+				shiewhibak
+				teypana
+				than_u_ge
+				tsiya
+				tuf_shur_tia
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				alaska_region
+				canada_region
+				great_lakes_region
+				great_plains_region
+				east_coast_region
+				west_coast_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_sonoran_desert_farming_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_transoceanic_status_law = antq_s2_transoceanic_status_mediated
+					antq_s2_transoceanic_dependent_labor_law = antq_s2_transoceanic_dependent_labor_mediated
+					antq_s2_transoceanic_revenue_law = antq_s2_transoceanic_revenue_mediated
+					antq_s2_transoceanic_land_law = antq_s2_transoceanic_land_mediated
+					antq_s2_transoceanic_muster_law = antq_s2_transoceanic_muster_mediated
+					antq_s2_transoceanic_local_rule_law = antq_s2_transoceanic_local_rule_mediated
+					antq_s2_transoceanic_cult_law = antq_s2_transoceanic_cult_mediated
+					antq_s2_transoceanic_household_law = antq_s2_transoceanic_household_mediated
+					antq_s2_transoceanic_commerce_law = antq_s2_transoceanic_commerce_mediated
+					antq_s2_transoceanic_coinage_law = antq_s2_transoceanic_coinage_mediated
+					antq_s2_transoceanic_courts_law = antq_s2_transoceanic_courts_mediated
+					antq_s2_transoceanic_offices_law = antq_s2_transoceanic_offices_mediated
+					antq_s2_transoceanic_migration_law = antq_s2_transoceanic_migration_mediated
+					antq_s2_transoceanic_external_law = antq_s2_transoceanic_external_mediated
+				}
+				centralization_vs_decentralization = -52
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -54
+				capital_economy_vs_traditional_economy = 46
+			}
+			capital = shiewhibak
 		}
 
 		VIR = { # Gallinazo Communities; P8.10;PNAS-VIR;WIL-GAL

@@ -631,6 +631,41 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "INAH-IZAPA;P8.10;P13", "contested",
         "Highland settlements coordinate cultivation, passes, exchange, ritual obligations, and collective defence without imposing a later ethnic polity.",
     ),
+    "antq_west_mexican_shaft_tomb_chiefdom": (
+        "global_clergy_estate_power=0.09|global_nobles_estate_power=0.06|"
+        "clergy_estate_power_from_cabinet=0.18|global_production_efficiency=0.02|"
+        "replace_cabinet_member_cost_modifier=0.03",
+        "INAH-WEST-SHAFT;INAH-COLIMA;P13", "contested",
+        "Ranked households coordinate mortuary places, specialist production, cultivation, and exchange without one western Mexican state.",
+    ),
+    "antq_teuchitlan_civic_center_network": (
+        "global_clergy_estate_power=0.08|global_burghers_estate_power=0.07|"
+        "estate_power_from_cabinet=0.18|global_trade_through_owned_territory_efficiency=0.025|"
+        "replace_cabinet_member_cost_modifier=0.03",
+        "INAH-TEUCHITLAN;P13", "contested",
+        "Central Jalisco chiefly centers coordinate circular precincts, households, production, and exchange without a fixed territorial kingdom.",
+    ),
+    "antq_west_mexican_basin_community_network": (
+        "global_tribes_estate_power=0.08|global_peasants_estate_power=0.07|"
+        "tribes_estate_power_from_cabinet=0.15|global_monthly_food_modifier=0.02|"
+        "replace_cabinet_member_cost_modifier=0.01",
+        "INAH-CHUPICUARO;INAH-WEST-MEXICO;INAH-TOLUCA;P13", "contested",
+        "Basin and highland communities coordinate cultivation, stores, mortuary obligations, and exchange without a later ethnic state.",
+    ),
+    "antq_west_mexican_highland_corridor_network": (
+        "global_tribes_estate_power=0.09|global_burghers_estate_power=0.05|"
+        "tribes_estate_power_from_cabinet=0.16|global_trade_through_owned_territory_efficiency=0.025|"
+        "replace_cabinet_member_cost_modifier=0.02",
+        "INAH-MEZCALA;INAH-WEST-SHAFT;P13", "contested",
+        "Highland communities coordinate passes, exchange, restitution, ritual places, and defence without later frontier identities.",
+    ),
+    "antq_sonoran_desert_farming_network": (
+        "global_tribes_estate_power=0.08|global_peasants_estate_power=0.08|"
+        "tribes_estate_power_from_cabinet=0.14|global_monthly_food_modifier=0.025|"
+        "replace_cabinet_member_cost_modifier=0.01",
+        "NPS-SONORAN;P13", "contested",
+        "Ancestral Sonoran households coordinate river and runoff farming, water access, exchange, and seasonal obligations before later mature systems.",
+    ),
     "antq_buffer_kingdom": (
         "global_burghers_estate_power=0.05|estate_power_from_cabinet=0.10|"
         "replace_cabinet_member_cost_modifier=0.05",
@@ -1993,7 +2028,7 @@ def load_power_data() -> PowerData:
     used_reforms = {government["reform"] for government in governments.values()}
     # Core/regional contracts include the reviewed Manchurian, Bornean, and
     # Mesoamerican network reforms defined above.
-    expected_contract_count = 98 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    expected_contract_count = 103 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -2001,7 +2036,7 @@ def load_power_data() -> PowerData:
         failures.append(
             "political appointment contracts must cover every core, regional, and successor reform"
         )
-    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 98:
+    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 103:
         failures.append("political appointment contracts are insufficiently differentiated")
     path_rows = reform_path_rows()
     alternative_profiles = [row[1] for row in path_rows]
@@ -2694,6 +2729,66 @@ antq_mesoamerican_highland_community_network = {
 		global_tribes_estate_power = 0.10
 		global_peasants_estate_power = 0.06
 		global_monthly_food_modifier = 0.02
+		research_speed = 0.065
+	}
+	years = 2
+}
+
+antq_west_mexican_shaft_tomb_chiefdom = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_clergy_estate_power = 0.09
+		global_nobles_estate_power = 0.06
+		global_production_efficiency = 0.02
+		research_speed = 0.075
+	}
+	years = 2
+}
+
+antq_teuchitlan_civic_center_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_clergy_estate_power = 0.08
+		global_burghers_estate_power = 0.07
+		global_trade_through_owned_territory_efficiency = 0.025
+		research_speed = 0.08
+	}
+	years = 2
+}
+
+antq_west_mexican_basin_community_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		global_peasants_estate_power = 0.07
+		global_monthly_food_modifier = 0.02
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_west_mexican_highland_corridor_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.09
+		global_burghers_estate_power = 0.05
+		global_trade_through_owned_territory_efficiency = 0.025
+		research_speed = 0.065
+	}
+	years = 2
+}
+
+antq_sonoran_desert_farming_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		global_peasants_estate_power = 0.08
+		global_monthly_food_modifier = 0.025
 		research_speed = 0.065
 	}
 	years = 2
@@ -3544,6 +3639,16 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_mesoamerican_exchange_corridor_network_desc", "Communities along coast, river, pass, and basin routes coordinate passage, exchange, restitution, and defence without later ethnic or imperial borders."),
         ("antq_mesoamerican_highland_community_network", "Mesoamerican Highland Community Network"),
         ("antq_mesoamerican_highland_community_network_desc", "Highland settlements coordinate cultivation, passes, exchange, ritual obligations, and collective defence without imposing a later ethnic polity."),
+        ("antq_west_mexican_shaft_tomb_chiefdom", "West Mexican Shaft-Tomb Chiefdom"),
+        ("antq_west_mexican_shaft_tomb_chiefdom_desc", "Ranked households coordinate mortuary places, specialist production, cultivation, and exchange without one western Mexican state."),
+        ("antq_teuchitlan_civic_center_network", "Teuchitlan Civic-Center Network"),
+        ("antq_teuchitlan_civic_center_network_desc", "Central Jalisco chiefly centers coordinate circular precincts, households, production, and exchange without a fixed territorial kingdom."),
+        ("antq_west_mexican_basin_community_network", "West Mexican Basin Community Network"),
+        ("antq_west_mexican_basin_community_network_desc", "Basin and highland communities coordinate cultivation, stores, mortuary obligations, and exchange without a later ethnic state."),
+        ("antq_west_mexican_highland_corridor_network", "West Mexican Highland-Corridor Network"),
+        ("antq_west_mexican_highland_corridor_network_desc", "Highland communities coordinate passes, exchange, restitution, ritual places, and defence without later frontier identities."),
+        ("antq_sonoran_desert_farming_network", "Sonoran Desert Farming Network"),
+        ("antq_sonoran_desert_farming_network_desc", "Ancestral Sonoran households coordinate river and runoff farming, water access, exchange, and seasonal obligations before later mature systems."),
         ("antq_buffer_kingdom", "Buffer Kingdom"),
         ("antq_buffer_kingdom_desc", "A frontier court balancing local authority against stronger neighbouring powers."),
         ("antq_kushite_dual_kingship", "Kushite Dual Kingship"),

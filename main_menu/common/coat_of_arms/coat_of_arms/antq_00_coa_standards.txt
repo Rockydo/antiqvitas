@@ -2857,17 +2857,157 @@ XCV = { # Epi-Olmec; P8.10;P20
 	}
 }
 
-WMS = { # West Mexican Societies; P8.10;P20
+XGU = { # Nayarit Shaft-Tomb Communities; INAH-WEST-SHAFT;P20
 	pattern = "pattern_solid.dds"
-	color1 = "green"
+	color1 = "blue"
 	color2 = "yellow"
 	color3 = "red"
 	colored_emblem = {
-		texture = "ce_star_08.dds"
+		texture = "ce_spiral.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.78 0.78 } }
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+TJC = { # Central Jalisco Teuchitlan Networks; INAH-TEUCHITLAN;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+SJB = { # Southern Jalisco Basin Communities; INAH-WEST-SHAFT;INAH-COLIMA;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_deer_kneeling.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XGV = { # Colima-Coahuayana Communities; INAH-COLIMA;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_fish_okeane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+BJC = { # Chupicuaro-Bajio Communities; INAH-CHUPICUARO;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+PHC = { # Patzcuaro Highland Communities; INAH-WEST-MEXICO;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_fish_okeane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+MBC = { # Central Michoacan Basin Communities; INAH-WEST-MEXICO;INAH-CHUPICUARO;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "red"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+TVC = { # Toluca Valley Formative Communities; INAH-TOLUCA;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_asian_animist_sun.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+MZC = { # Mezcala-Balsas Preurban Communities; INAH-MEZCALA;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_spear_head_random_small.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+JZH = { # Jalisco-Zacatecas Highland Communities; INAH-WEST-SHAFT;INAH-WEST-MEXICO;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_deer_kneeling.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+XGW = { # Ancestral Sonoran Desert Communities; NPS-SONORAN;P20
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_asian_animist_sun.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
 	}
 }
 

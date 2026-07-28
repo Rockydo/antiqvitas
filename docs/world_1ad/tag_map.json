@@ -1,8 +1,8 @@
 {
   "game_build": "24187685",
-  "entry_count": 407,
-  "collision_count": 152,
-  "localization_collision_count": 167,
+  "entry_count": 417,
+  "collision_count": 155,
+  "localization_collision_count": 170,
   "reserved_hash_collision_tags": [
     "XAD"
   ],
@@ -1436,11 +1436,81 @@
       "name": "Epi-Olmec"
     },
     {
-      "design_tag": "WMS",
-      "engine_tag": "WMS",
+      "design_tag": "NYS",
+      "engine_tag": "XGU",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Nayarit Shaft-Tomb Communities"
+    },
+    {
+      "design_tag": "TJC",
+      "engine_tag": "TJC",
       "vanilla_collision": false,
       "localization_collision": false,
-      "name": "West Mexican Societies"
+      "name": "Central Jalisco Teuchitlan Networks"
+    },
+    {
+      "design_tag": "SJB",
+      "engine_tag": "SJB",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Southern Jalisco Basin Communities"
+    },
+    {
+      "design_tag": "COL",
+      "engine_tag": "XGV",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Colima-Coahuayana Communities"
+    },
+    {
+      "design_tag": "BJC",
+      "engine_tag": "BJC",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Chupicuaro-Bajio Communities"
+    },
+    {
+      "design_tag": "PHC",
+      "engine_tag": "PHC",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Patzcuaro Highland Communities"
+    },
+    {
+      "design_tag": "MBC",
+      "engine_tag": "MBC",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Central Michoacan Basin Communities"
+    },
+    {
+      "design_tag": "TVC",
+      "engine_tag": "TVC",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Toluca Valley Formative Communities"
+    },
+    {
+      "design_tag": "MZC",
+      "engine_tag": "MZC",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Mezcala-Balsas Preurban Communities"
+    },
+    {
+      "design_tag": "JZH",
+      "engine_tag": "JZH",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Jalisco-Zacatecas Highland Communities"
+    },
+    {
+      "design_tag": "SDR",
+      "engine_tag": "XGW",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Ancestral Sonoran Desert Communities"
     },
     {
       "design_tag": "VIR",

@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-28 - West Mexico and the ancestral Sonoran desert are separated
+
+- Removed the 98-location `WMS` catch-all. Ten West Mexican frames and one
+  ancestral Sonoran frame raise the roster to 417 and reduce placeholders to
+  thirteen.
+- Added eleven cultures, five reforms, twenty province selectors, eleven
+  standards, and complete start-system coverage.
+- `tools/s2_west_mexican_granularity.py` pins the transform.
+- All 125 validation commands pass; paired smoke found zero mod-only normalized
+  errors.
+
+Next: replace the 69-location Philippine Societies frame.
+
 ## 2026-07-28 - Mesoamerica becomes bounded start-era centers and networks
 
 - Removed the 102-location `MSS` catch-all. Ten successors take 93 fields;
@@ -11,8 +24,6 @@
   Cuicuilco as a separate southern-Basin center.
 - All 124 validation commands pass; paired smoke passed in 197.8 seconds with
   zero mod-only normalized errors.
-
-Next: replace the 98-location West Mexican Societies frame.
 
 ## 2026-07-28 - Rajasthan-Gujarat becomes ten bounded western-India frames
 

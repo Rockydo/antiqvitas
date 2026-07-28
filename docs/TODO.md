@@ -24,11 +24,11 @@ and focused runtime probe all pass.
 
 ### Audit baseline
 
-- The roster now has 407 playable tags after the Arabia, Britain/Ireland,
+- The roster now has 417 playable tags after the Arabia, Britain/Ireland,
   Germania/Baltic, northern/eastern, Maghreb, Horn, Bantu-frontier, West
   African, Gangetic, Inner Asian, Tibetan, Central Indian, mainland Southeast
-  Asian, Manchurian, Bornean, western-Indian, and Mesoamerican archaeological
-  splits. Fourteen player-facing macro-polities
+  Asian, Manchurian, Bornean, western-Indian, Mesoamerican, and West Mexican
+  archaeological splits. Thirteen player-facing macro-polities
   still contain “Societies” or another prohibited placeholder term in their
   names, concentrated in the Americas, Central/South/East/Southeast Asia, and
   Oceania. These are country-scale aggregations, not merely descriptive
@@ -37,9 +37,9 @@ and focused runtime probe all pass.
   665 regional, environmental, and direct-anchor corrections. Most retained
   staples remain inherited but are explicitly marked as contested where local
   extraction is not attested; deeper regional specialty work remains open.
-- The 265 ancient building definitions now seed 3,354 placements across 1,739
-  settlement-ranked locations and all 407 starting polities. The top ten hold
-  6.0% because reviewed Roman metropolitan packages
+- The 265 ancient building definitions now seed 3,397 placements across 1,761
+  settlement-ranked locations and all 417 starting polities. The top ten hold
+  5.9% because reviewed Roman metropolitan packages
   remain deliberately deep; ordinary locations are capped at six.
 - The advance DAG now has 360 nodes and 25 unique effect packages after the
   first 110-node Age-I expansion; 297 nodes still unlock no separate content.
@@ -47,8 +47,8 @@ and focused runtime probe all pass.
   the remaining four conceptual age arcs still require expansion toward 750+
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
-  thin outside the first replacement tranches: 319 explicit opening
-  government records and 364 privileges serve the 407-start roster. The legal
+  thin outside the first replacement tranches: 330 explicit opening
+  government records and 364 privileges serve the 417-start roster. The legal
   layer now has 227 ancient groups,
   including 182 profile laws with 584 total options, a 26-option dated
   development layer, and 12 country-specific exceptions.
@@ -612,10 +612,15 @@ and focused runtime probe all pass.
     Nsukka-Lejja, Lower Oueme, Volta-Cong, and Bosumtwi frames without
     backdating later named states or asserting unsupported ethnic borders.
 - [ ] Literal African placeholder countries are exhausted and the Gangetic,
-    Inner Asian, Tibetan, Central Indian, and Mesoamerican superstates are
-    split. Continue the size-ranked global census with West Mexican Societies
-    (98).
+    Inner Asian, Tibetan, Central Indian, Mesoamerican, and West Mexican
+    superstates are split. Continue the size-ranked global census with
+    Philippine Societies (69).
     The parent task remains open until the census reaches zero.
+    - [x] Replace the 98-location `WMS` catch-all with ten bounded West Mexican
+      archaeological-geographic frames and one separate ancestral Sonoran
+      farming network. Eleven cultures, five reforms, twenty exact province
+      selectors, eleven standards, and a permanent validator pass all 125
+      checks and paired smoke.
     - [x] Replace the 102-location `MSS` catch-all with ten exact Basin,
       Puebla-Tlaxcala, Morelos, northern-highland, Gulf, Guerrero, Oaxaca,
       Izapa, and Chiapas frames plus a restrained nine-location Teotihuacan

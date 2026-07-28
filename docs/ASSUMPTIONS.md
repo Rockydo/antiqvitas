@@ -5689,3 +5689,15 @@ frames; other holders are geographic-network proxies. Sources: `INAH-IZAPA`;
 `INAH-CUICUILCO-TEO`; `INAH-TEO-START`; `INAH-TAMTOC`; `INAH-CANTONA`;
 `INAH-CHALCATZINGO`; `INAH-TAPAK`. [secure centers/chronology; contested
 political form and extent]
+
+## 2026-07-28 - West Mexican labels stop at archaeological horizons
+
+Shaft-tomb, Teuchitlan, Ortices, Chupicuaro, Mezcala, and Toluca evidence
+supports several interacting regional frames, not one West Mexican state.
+Comala is not projected before AD 100, and later Tarascan or Aztatlan states
+are not backdated. `shiewhibak_province` instead uses an ancestral Sonoran
+farming-network frame; “Hohokam” is not treated as an AD 1 tribe or polity.
+Sources: `INAH-WEST-SHAFT`; `INAH-TEUCHITLAN`; `INAH-COLIMA`;
+`INAH-CHUPICUARO`; `INAH-MEZCALA`; `INAH-TOLUCA`; `INAH-WEST-MEXICO`;
+`NPS-SONORAN`. [secure chronology/material regions; contested political form
+and exact extent]

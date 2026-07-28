@@ -1837,12 +1837,102 @@ XCV = { # Epi-Olmec; P8.10;CAH-XI
 	is_historic = yes
 }
 
-WMS = { # West Mexican Societies; P8.10;CAH-XI
-	color = rgb { 30 127 84 }
-	color2 = rgb { 225 128 171 }
+XGU = { # Nayarit Shaft-Tomb Communities; INAH-WEST-SHAFT
+	color = rgb { 49 139 103 }
+	color2 = rgb { 206 116 152 }
 
-	culture_definition = antq_purepecha_precursor
+	culture_definition = antq_nayarit_shaft_tomb
 	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+TJC = { # Central Jalisco Teuchitlan Networks; INAH-TEUCHITLAN
+	color = rgb { 47 143 93 }
+	color2 = rgb { 208 112 162 }
+
+	culture_definition = antq_central_jalisco_teuchitlan
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+SJB = { # Southern Jalisco Basin Communities; INAH-WEST-SHAFT;INAH-COLIMA
+	color = rgb { 40 141 89 }
+	color2 = rgb { 215 114 166 }
+
+	culture_definition = antq_southern_jalisco_basin
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+XGV = { # Colima-Coahuayana Communities; INAH-COLIMA
+	color = rgb { 40 122 99 }
+	color2 = rgb { 215 133 156 }
+
+	culture_definition = antq_colima_coahuayana
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+BJC = { # Chupicuaro-Bajio Communities; INAH-CHUPICUARO
+	color = rgb { 45 119 108 }
+	color2 = rgb { 210 136 147 }
+
+	culture_definition = antq_chupicuaro_bajio
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+PHC = { # Patzcuaro Highland Communities; INAH-WEST-MEXICO
+	color = rgb { 32 120 99 }
+	color2 = rgb { 223 135 156 }
+
+	culture_definition = antq_patzcuaro_highland
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+MBC = { # Central Michoacan Basin Communities; INAH-WEST-MEXICO;INAH-CHUPICUARO
+	color = rgb { 33 128 96 }
+	color2 = rgb { 222 127 159 }
+
+	culture_definition = antq_central_michoacan_basin
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+TVC = { # Toluca Valley Formative Communities; INAH-TOLUCA
+	color = rgb { 50 140 87 }
+	color2 = rgb { 205 115 168 }
+
+	culture_definition = antq_toluca_valley_formative
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+MZC = { # Mezcala-Balsas Preurban Communities; INAH-MEZCALA
+	color = rgb { 38 117 98 }
+	color2 = rgb { 217 138 157 }
+
+	culture_definition = antq_mezcala_balsas_preurban
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+JZH = { # Jalisco-Zacatecas Highland Communities; INAH-WEST-SHAFT;INAH-WEST-MEXICO
+	color = rgb { 36 127 92 }
+	color2 = rgb { 219 128 163 }
+
+	culture_definition = antq_jalisco_zacatecas_highland
+	religion_definition = antq_mesoamerican
+	is_historic = yes
+}
+
+XGW = { # Ancestral Sonoran Desert Communities; NPS-SONORAN
+	color = rgb { 53 99 145 }
+	color2 = rgb { 202 156 110 }
+
+	culture_definition = antq_ancestral_sonoran_desert
+	religion_definition = antq_north_american
 	is_historic = yes
 }
 

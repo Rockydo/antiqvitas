@@ -4082,3 +4082,14 @@ inventing constitutions.
 Cuicuilco's installed proxy shares a province with four southern-Basin fields.
 Those four use direct assignment, preserving Cuicuilco and exact 102-field
 coverage. `tools/s2_mesoamerican_granularity.py` pins this exception.
+
+## 2026-07-28 - West Mexico uses regional archaeological frames
+
+`WMS` is replaced by ten West Mexican frames and one ancestral Sonoran frame,
+using twenty whole-province selectors and exact 98-field coverage.
+`shiewhibak_province` is removed from Mesoamerica because its installed fields
+belong to the Sonoran/Southwest map frame. Five network reforms distinguish
+shaft-tomb, Teuchitlan, basin, highland-corridor, and desert-farming contexts.
+Existing religion-family art and reviewed vanilla emblem standards are reused;
+no new visual family is required. `tools/s2_west_mexican_granularity.py` pins
+the transform.
