@@ -2350,15 +2350,6 @@ RJS = { # Rajasthan-Gujarat Societies; P8.4;CAH-XI
 	is_historic = yes
 }
 
-SEA = { # Mainland Southeast Asian Societies; P8.9;CAH-XI
-	color = rgb { 60 129 83 }
-	color2 = rgb { 195 126 172 }
-
-	culture_definition = antq_mon
-	religion_definition = antq_mahayana
-	is_historic = yes
-}
-
 INS = { # Island Southeast Asian Societies; P8.9;CAH-XI
 	color = rgb { 69 115 90 }
 	color2 = rgb { 186 140 165 }
@@ -3283,5 +3274,104 @@ MLD = { # Maldivian Atoll Networks; CAM-MALDIVES;P8.4
 
 	culture_definition = antq_maldivian_maritime
 	religion_definition = antq_brahmanism
+	is_historic = yes
+}
+
+XDQ = { # Arakan Littoral Networks; CAM-ARAKAN-BOUNDARY;P8.9
+	color = rgb { 79 134 82 }
+	color2 = rgb { 176 121 173 }
+
+	culture_definition = antq_arakan_littoral
+	religion_definition = antq_mainland_southeast_asian_traditions
+	is_historic = yes
+}
+
+SHY = { # Sa Huynh Coastal Networks; CAM-SAH;VASS-SAH;P8.9
+	color = rgb { 69 112 82 }
+	color2 = rgb { 186 143 173 }
+
+	culture_definition = antq_sa_huynh
+	religion_definition = antq_mainland_southeast_asian_traditions
+	is_historic = yes
+}
+
+XGF = { # Central Vietnamese Highland Networks; CAM-SAH;P8.9
+	color = rgb { 73 130 82 }
+	color2 = rgb { 182 125 173 }
+
+	culture_definition = antq_central_vietnam_highland
+	religion_definition = antq_mainland_southeast_asian_traditions
+	is_historic = yes
+}
+
+XGG = { # Patkai-Upper Irrawaddy Highland Networks; CAM-MYANMAR-CHRON;P8.9
+	color = rgb { 52 119 102 }
+	color2 = rgb { 203 136 153 }
+
+	culture_definition = antq_patkai_upper_irrawaddy
+	religion_definition = antq_mainland_southeast_asian_traditions
+	is_historic = yes
+}
+
+UIR = { # Upper Irrawaddy Corridor Networks; CAM-MYANMAR-CHRON;P8.9
+	color = rgb { 62 135 98 }
+	color2 = rgb { 193 120 157 }
+
+	culture_definition = antq_upper_irrawaddy_corridor
+	religion_definition = antq_mainland_southeast_asian_traditions
+	is_historic = yes
+}
+
+PWB = { # Ping-Wang Basin Networks; CAM-SEA-IRON;P8.9
+	color = rgb { 60 120 91 }
+	color2 = rgb { 195 135 164 }
+
+	culture_definition = antq_ping_wang_iron_age
+	religion_definition = antq_mainland_southeast_asian_traditions
+	is_historic = yes
+}
+
+KIB = { # Kok-Ing-Nan Basin Networks; CAM-SEA-IRON;P8.9
+	color = rgb { 74 124 100 }
+	color2 = rgb { 181 131 155 }
+
+	culture_definition = antq_kok_ing_nan_iron_age
+	religion_definition = antq_mainland_southeast_asian_traditions
+	is_historic = yes
+}
+
+UMK = { # Upper Mekong Upland Networks; UNESCO-JARS;ANT-NLAOS;P8.9
+	color = rgb { 54 134 79 }
+	color2 = rgb { 201 121 176 }
+
+	culture_definition = antq_upper_mekong_upland
+	religion_definition = antq_mainland_southeast_asian_traditions
+	is_historic = yes
+}
+
+USH = { # Upper Salween-Shweli Networks; CAM-MYANMAR-CHRON;P8.9
+	color = rgb { 74 119 98 }
+	color2 = rgb { 181 136 157 }
+
+	culture_definition = antq_upper_salween_shweli
+	religion_definition = antq_mainland_southeast_asian_traditions
+	is_historic = yes
+}
+
+KGT = { # Kengtung Basin Networks; CAM-SEA-IRON;P8.9
+	color = rgb { 61 115 91 }
+	color2 = rgb { 194 140 164 }
+
+	culture_definition = antq_kengtung_basin
+	religion_definition = antq_mainland_southeast_asian_traditions
+	is_historic = yes
+}
+
+XGH = { # Southern Plateau Corridor Networks; CAM-MYANMAR-CHRON;P8.9
+	color = rgb { 53 133 84 }
+	color2 = rgb { 202 122 171 }
+
+	culture_definition = antq_southern_plateau_corridor
+	religion_definition = antq_mainland_southeast_asian_traditions
 	is_historic = yes
 }

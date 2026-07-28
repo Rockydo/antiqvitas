@@ -1,5 +1,19 @@
 # Technical and Design Decisions
 
+## 2026-07-28 - Mainland Southeast Asia uses corridors and material horizons
+
+`SEA` crossed Arakan, central Vietnam, Patkai/upper-Irrawaddy highlands,
+northern intermontane basins, upper Mekong, Salween-Shweli, Kengtung, and the
+southern plateau. These are separate low-centralization frames; later Champa,
+Lanna, Shan, Tai, and Arakan states are not backdated. Harikela alone receives
+the six Chittagong littoral fields.
+
+One plural engine religion family avoids worse Buddhist, Hindu, or uniform
+ethnic projections. Four reforms distinguish river corridors, Sa Huynh
+exchange, highland exchange, and Iron-Age basins. Religion and doctrine art
+comes from two four-up generations using actual installed EU5 religion and
+religious-aspect assets as style references.
+
 ## 2026-07-28 - Inner Asian hegemony is modeled through diplomacy, not paint
 
 The removed OAS country was neither geographically coherent nor meaningfully

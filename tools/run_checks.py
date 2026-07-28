@@ -60,6 +60,7 @@ VALIDATE_COMMANDS = (
     Command("tools/s2_inner_asian_granularity.py", ("--check",)),
     Command("tools/s2_tibetan_granularity.py", ("--check",)),
     Command("tools/s2_central_indian_granularity.py", ("--check",)),
+    Command("tools/s2_mainland_sea_granularity.py", ("--check",)),
     Command("tools/s2_placeholder_polity_census.py", ("--check",)),
     Command("tools/generate_m4_definitions.py", ("--check",)),
     Command("tools/generate_m4_tier2_names.py", ("--check",)),

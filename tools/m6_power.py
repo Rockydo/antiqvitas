@@ -519,6 +519,34 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "CAM-MALDIVES;P13", "contested",
         "A decentralized atoll network models maritime exchange and local coordination without projecting the later sultanate, modern state, or uniform creed into AD 1.",
     ),
+    "antq_mainland_river_corridor_network": (
+        "global_tribes_estate_power=0.08|global_burghers_estate_power=0.05|"
+        "tribes_estate_power_from_cabinet=0.17|global_trade_through_owned_territory_efficiency=0.025|"
+        "replace_cabinet_member_cost_modifier=0.025",
+        "CAM-MYANMAR-CHRON;CAM-ARAKAN-BOUNDARY;P13", "contested",
+        "River and littoral communities coordinate landing places, passage, restitution, and exchange without one ethnic state or centralized port authority.",
+    ),
+    "antq_sa_huynh_exchange_network": (
+        "global_tribes_estate_power=0.07|global_burghers_estate_power=0.06|"
+        "tribes_estate_power_from_cabinet=0.16|global_trade_through_owned_territory_efficiency=0.03|"
+        "replace_cabinet_member_cost_modifier=0.025",
+        "CAM-SAH;VASS-SAH;P13", "contested",
+        "Coastal production, burial communities, and maritime exchange are represented without backdating Champa or one Sa Huynh government.",
+    ),
+    "antq_mainland_highland_exchange_network": (
+        "global_tribes_estate_power=0.10|global_peasants_estate_power=0.04|"
+        "tribes_estate_power_from_cabinet=0.20|global_trade_through_owned_territory_efficiency=0.02|"
+        "replace_cabinet_member_cost_modifier=0.025",
+        "UNESCO-JARS;ANT-NLAOS;CAM-MYANMAR-CHRON;P13", "contested",
+        "Highland households coordinate forest access, mortuary obligations, passes, and exchange without later ethnic or state boundaries.",
+    ),
+    "antq_mainland_iron_age_basin_network": (
+        "global_tribes_estate_power=0.08|global_peasants_estate_power=0.07|"
+        "tribes_estate_power_from_cabinet=0.17|global_monthly_food_modifier=0.02|"
+        "replace_cabinet_member_cost_modifier=0.025",
+        "CAM-SEA-IRON;P13", "contested",
+        "Intermontane settlements coordinate rice cultivation, water, exchange, and defence without backdating Lanna, Shan, or Tai states.",
+    ),
     "antq_buffer_kingdom": (
         "global_burghers_estate_power=0.05|estate_power_from_cabinet=0.10|"
         "replace_cabinet_member_cost_modifier=0.05",
@@ -1281,6 +1309,10 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
         "antq_eastern_plateau_corridor_network",
         "antq_central_indian_megalithic_network",
         "antq_indian_ocean_atoll_network",
+        "antq_mainland_river_corridor_network",
+        "antq_sa_huynh_exchange_network",
+        "antq_mainland_highland_exchange_network",
+        "antq_mainland_iron_age_basin_network",
     ),
     "sacral": (),
     "royal": (
@@ -1867,9 +1899,9 @@ def load_power_data() -> PowerData:
             failures.append(f"regnal history for {design_tag} is not a contiguous sequence")
 
     used_reforms = {government["reform"] for government in governments.values()}
-    # Seventy-one earlier core/regional contracts plus the five reviewed
-    # Tibetan Plateau contracts defined above.
-    expected_contract_count = 82 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    # Core/regional contracts include the four reviewed mainland Southeast
+    # Asian network reforms defined above.
+    expected_contract_count = 86 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -2390,6 +2422,50 @@ antq_indian_ocean_atoll_network = {
 	country_modifier = {
 		global_burghers_estate_power = 0.06
 		global_trade_through_owned_territory_efficiency = 0.03
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_mainland_river_corridor_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		global_trade_through_owned_territory_efficiency = 0.025
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_sa_huynh_exchange_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_burghers_estate_power = 0.06
+		global_trade_through_owned_territory_efficiency = 0.03
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_mainland_highland_exchange_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		global_trade_through_owned_territory_efficiency = 0.02
+		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_mainland_iron_age_basin_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_peasants_estate_power = 0.07
+		global_monthly_food_modifier = 0.02
 		research_speed = 0.07
 	}
 	years = 2
@@ -3208,6 +3284,14 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_upper_mahanadi_kingship_desc", "A conservative Dakshina Kosala court coordinates riverine cultivation and inland exchange without projecting later Sirpur dynasties."),
         ("antq_indian_ocean_atoll_network", "Indian Ocean Atoll Network"),
         ("antq_indian_ocean_atoll_network_desc", "Atoll communities coordinate marine production, passage, and exchange without a later sultanate or centralized island state."),
+        ("antq_mainland_river_corridor_network", "Mainland River Corridor Network"),
+        ("antq_mainland_river_corridor_network_desc", "River and littoral communities coordinate landing places, passage, restitution, and exchange without one centralized state."),
+        ("antq_sa_huynh_exchange_network", "Sa Huynh Exchange Network"),
+        ("antq_sa_huynh_exchange_network_desc", "Coastal production, burial communities, and maritime exchange operate without a backdated Champa state."),
+        ("antq_mainland_highland_exchange_network", "Mainland Highland Exchange Network"),
+        ("antq_mainland_highland_exchange_network_desc", "Highland communities coordinate forest access, passes, mortuary duties, and exchange without later ethnic borders."),
+        ("antq_mainland_iron_age_basin_network", "Mainland Iron-Age Basin Network"),
+        ("antq_mainland_iron_age_basin_network_desc", "Intermontane settlements coordinate cultivation, water, exchange, and defence without backdating later Tai states."),
         ("antq_buffer_kingdom", "Buffer Kingdom"),
         ("antq_buffer_kingdom_desc", "A frontier court balancing local authority against stronger neighbouring powers."),
         ("antq_kushite_dual_kingship", "Kushite Dual Kingship"),

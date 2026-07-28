@@ -35,6 +35,11 @@ CENTRAL_INDIAN_ATLAS = (
     / "assets_queue/generated_sources/"
     "antq_doctrine_central_indian_traditions_fourup.png"
 )
+MAINLAND_SEA_ATLAS = (
+    ROOT
+    / "assets_queue/generated_sources/"
+    "antq_doctrine_mainland_southeast_asian_traditions_fourup.png"
+)
 CONTACT_SHEET = (
     ROOT / "docs/m12/religious_family_doctrines_contact_sheet.png"
 )
@@ -104,11 +109,15 @@ PACKAGES = {
         ("global_hostile_attrition", "0.05"),
     ),
 }
-DIRECT_ATLAS_INDEX = {
-    "antq_doctrine_central_indian_traditions_ancestor_stone_custody": 0,
-    "antq_doctrine_central_indian_traditions_field_and_forest_rounds": 1,
-    "antq_doctrine_central_indian_traditions_ironworking_hearth_obligations": 2,
-    "antq_doctrine_central_indian_traditions_river_passage_compacts": 3,
+DIRECT_ATLASES = {
+    "antq_doctrine_central_indian_traditions_ancestor_stone_custody": (CENTRAL_INDIAN_ATLAS, 0),
+    "antq_doctrine_central_indian_traditions_field_and_forest_rounds": (CENTRAL_INDIAN_ATLAS, 1),
+    "antq_doctrine_central_indian_traditions_ironworking_hearth_obligations": (CENTRAL_INDIAN_ATLAS, 2),
+    "antq_doctrine_central_indian_traditions_river_passage_compacts": (CENTRAL_INDIAN_ATLAS, 3),
+    "antq_doctrine_mainland_southeast_asian_traditions_mortuary_route_custody": (MAINLAND_SEA_ATLAS, 0),
+    "antq_doctrine_mainland_southeast_asian_traditions_wet_rice_water_compacts": (MAINLAND_SEA_ATLAS, 1),
+    "antq_doctrine_mainland_southeast_asian_traditions_river_passage_exchange": (MAINLAND_SEA_ATLAS, 2),
+    "antq_doctrine_mainland_southeast_asian_traditions_highland_iron_forest_obligations": (MAINLAND_SEA_ATLAS, 3),
 }
 
 
@@ -246,10 +255,11 @@ def verify_components(row: Doctrine) -> None:
         raise ValueError(f"missing reviewed motif for {row.key}: {row.motif}")
     if not row.badge.is_file():
         raise ValueError(f"missing direct religion badge for {row.key}: {row.badge}")
-    if row.key in DIRECT_ATLAS_INDEX and not CENTRAL_INDIAN_ATLAS.is_file():
+    if row.key in DIRECT_ATLASES and not DIRECT_ATLASES[row.key][0].is_file():
+        atlas = DIRECT_ATLASES[row.key][0]
         raise ValueError(
             f"missing reviewed four-up doctrine atlas for {row.key}: "
-            f"{CENTRAL_INDIAN_ATLAS}"
+            f"{atlas}"
         )
 
 
@@ -317,15 +327,13 @@ def fit(image: Image.Image, size: tuple[int, int]) -> Image.Image:
 
 def render_master(row: Doctrine) -> Image.Image:
     verify_components(row)
-    if row.key in DIRECT_ATLAS_INDEX:
-        with Image.open(CENTRAL_INDIAN_ATLAS) as source:
+    if row.key in DIRECT_ATLASES:
+        atlas_path, index = DIRECT_ATLASES[row.key]
+        with Image.open(atlas_path) as source:
             atlas = source.convert("RGBA")
         if atlas.width != atlas.height or atlas.width % 2:
-            raise ValueError(
-                "Central Indian doctrine atlas must be an even square 2x2 image"
-            )
+            raise ValueError("direct doctrine atlas must be an even square 2x2 image")
         side = atlas.width // 2
-        index = DIRECT_ATLAS_INDEX[row.key]
         left = (index % 2) * side
         top = (index // 2) * side
         master = atlas.crop((left, top, left + side, top + side)).resize(
@@ -409,13 +417,13 @@ def manifest_value(doctrines: tuple[Doctrine, ...]) -> dict[str, object]:
                 "badge": row.badge.relative_to(ROOT).as_posix(),
                 "badge_sha256": sha256(row.badge.read_bytes()),
                 "direct_atlas": (
-                    CENTRAL_INDIAN_ATLAS.relative_to(ROOT).as_posix()
-                    if row.key in DIRECT_ATLAS_INDEX
+                    DIRECT_ATLASES[row.key][0].relative_to(ROOT).as_posix()
+                    if row.key in DIRECT_ATLASES
                     else None
                 ),
                 "direct_atlas_sha256": (
-                    sha256(CENTRAL_INDIAN_ATLAS.read_bytes())
-                    if row.key in DIRECT_ATLAS_INDEX
+                    sha256(DIRECT_ATLASES[row.key][0].read_bytes())
+                    if row.key in DIRECT_ATLASES
                     else None
                 ),
                 "master_sha256": (

@@ -587,6 +587,82 @@ antq_indian_ocean_atoll_network = {
 	years = 2
 }
 
+antq_mainland_river_corridor_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		global_burghers_estate_power = 0.05
+		tribes_estate_power_from_cabinet = 0.17
+		global_trade_through_owned_territory_efficiency = 0.025
+		replace_cabinet_member_cost_modifier = 0.025
+		global_tribes_estate_power = 0.08
+		global_trade_through_owned_territory_efficiency = 0.025
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_sa_huynh_exchange_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.07
+		global_burghers_estate_power = 0.06
+		tribes_estate_power_from_cabinet = 0.16
+		global_trade_through_owned_territory_efficiency = 0.03
+		replace_cabinet_member_cost_modifier = 0.025
+		global_burghers_estate_power = 0.06
+		global_trade_through_owned_territory_efficiency = 0.03
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_mainland_highland_exchange_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.10
+		global_peasants_estate_power = 0.04
+		tribes_estate_power_from_cabinet = 0.20
+		global_trade_through_owned_territory_efficiency = 0.02
+		replace_cabinet_member_cost_modifier = 0.025
+		global_tribes_estate_power = 0.10
+		global_trade_through_owned_territory_efficiency = 0.02
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
+antq_mainland_iron_age_basin_network = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_tribes_estate_power = 0.08
+		global_peasants_estate_power = 0.07
+		tribes_estate_power_from_cabinet = 0.17
+		global_monthly_food_modifier = 0.02
+		replace_cabinet_member_cost_modifier = 0.025
+		global_peasants_estate_power = 0.07
+		global_monthly_food_modifier = 0.02
+		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
+	}
+	years = 2
+}
+
 antq_buffer_kingdom = {
 	major = yes
 	government = monarchy
@@ -1732,6 +1808,10 @@ antq_elder_moot_kingship = {
 			has_reform = government_reform:antq_eastern_plateau_corridor_network
 			has_reform = government_reform:antq_central_indian_megalithic_network
 			has_reform = government_reform:antq_indian_ocean_atoll_network
+			has_reform = government_reform:antq_mainland_river_corridor_network
+			has_reform = government_reform:antq_sa_huynh_exchange_network
+			has_reform = government_reform:antq_mainland_highland_exchange_network
+			has_reform = government_reform:antq_mainland_iron_age_basin_network
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}
@@ -1763,6 +1843,10 @@ antq_warband_retinue_kingship = {
 			has_reform = government_reform:antq_eastern_plateau_corridor_network
 			has_reform = government_reform:antq_central_indian_megalithic_network
 			has_reform = government_reform:antq_indian_ocean_atoll_network
+			has_reform = government_reform:antq_mainland_river_corridor_network
+			has_reform = government_reform:antq_sa_huynh_exchange_network
+			has_reform = government_reform:antq_mainland_highland_exchange_network
+			has_reform = government_reform:antq_mainland_iron_age_basin_network
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}

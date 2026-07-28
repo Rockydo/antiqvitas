@@ -629,3 +629,17 @@ antq_central_indian_traditions = { # CAM-CENTRAL-INDIA-MEGALITHS;INFLIB-EARLY-HI
 	opinions = {
 	}
 }
+
+antq_mainland_southeast_asian_traditions = { # CAM-SAH;UNESCO-JARS;CAM-SEA-IRON;CAM-MYANMAR-CHRON;P11; Plural river basin upland mortuary household and landscape traditions without backdating Buddhist Hindu Tai or centralized state institutions
+	color = antq_religion_color_antq_mainland_southeast_asian_traditions
+	group = buddhist
+	religious_aspects = 2
+	has_religious_influence = yes
+	definition_modifier = {
+		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
+	}
+	opinions = {
+	}
+}

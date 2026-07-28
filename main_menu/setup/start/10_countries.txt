@@ -22100,11 +22100,17 @@ countries = {
 			own_control_core = {
 				agartala
 				baniachang
+				chakaria
 				chandrapur
+				chittagong
 				kailashahar
+				kaptai
+				karpus_mahal
 				laskarpur
 				pilak
+				ramu
 				rangamati
+				sitakunda
 			}
 
 			country_rank = rank_county
@@ -22908,165 +22914,6 @@ countries = {
 				}
 			}
 			capital = ajmer
-		}
-
-		SEA = { # Mainland Southeast Asian Societies; P8.9;CAH-XI
-			own_control_core = {
-				akyab
-				amaravati
-				ann
-				apui
-				aryaru
-				bal_cattinon
-				ban_don
-				ban_luang_cheng
-				bang_keng
-				bong_son
-				camp_po_thit
-				cat_tien
-				chakaria
-				chan_bo
-				chiang_dao
-				chiang_khong
-				chiang_mai
-				chiang_rai
-				chiang_saen
-				chittagong
-				chom_khao_maneerat
-				dak_lak
-				di_dinh
-				dien_ban
-				gwa
-				ha_va_nguon
-				hongsa
-				hot
-				hsenwi
-				hsipaw
-				htamanthi
-				htigyaing
-				hukawng
-				ia
-				indrapura
-				injangyang
-				kampong_sraka_trey
-				kaptai
-				karpus_mahal
-				katha
-				kauthara
-				kehsi
-				kengkham
-				kengtawng
-				kengtung
-				kon_klor
-				kon_tum
-				kyaukme
-				lai_hka
-				lampang
-				lamphun
-				lashio
-				launggyet
-				lawksawk
-				mabein
-				mae_hong_son
-				maingkwan
-				manmaw
-				maungdaw
-				mawkmai
-				minbya
-				mong_hpayak
-				mong_hsat
-				mong_yai
-				mong_yang
-				mong_yawng
-				monghsu
-				mongkawng
-				mongkung
-				monglong
-				mongmit
-				mongnai
-				mongnawng
-				mongping
-				mongtung
-				mongyang
-				monhyin
-				mrauk_u
-				muang_et
-				muang_jam
-				muang_kham
-				muang_lang
-				muang_luang_phukha
-				muang_ngao
-				muang_sing
-				muang_sua
-				muang_thaeng
-				muang_wang
-				muang_xay
-				muang_yuam
-				mueng_thoen
-				muong_luan
-				muse
-				myedu
-				myitkyina
-				nam_thing
-				nam_xuang
-				namhkan
-				namhsan
-				nan
-				ngasingu
-				omkoi
-				panduranga
-				phakant
-				phayao
-				phongsali
-				phrae
-				pua
-				putao
-				ramree
-				ramu
-				samriddhipuri
-				sariang
-				shwegu
-				simhapura
-				sitakunda
-				song_be
-				suamprabon
-				ta_shwe_htan
-				takawng
-				talak_burma
-				tamu
-				tarung
-				taungup
-				thandwe
-				thaungdut
-				thung_yang
-				vieng_phouka
-				vijaya
-				waingmaw
-				weithali
-				wetwin
-				wiang_fang
-				wuntho
-				xam_neua
-				zalon_taung
-			}
-
-			country_rank = rank_county
-			starting_technology_level = 1
-			discovered_regions = {
-				indochina_region
-				indonesia_region
-				south_china_region
-				indian_ocean_region
-			}
-			government = {
-				type = tribe
-				heir_selection = tribal_oldest_male
-				ruler = random
-				reforms = {
-					antq_advanced_chiefdom
-				}
-			}
-			capital = chiang_mai
 		}
 
 		INS = { # Island Southeast Asian Societies; P8.9;CAH-XI
@@ -29506,6 +29353,674 @@ countries = {
 				capital_economy_vs_traditional_economy = 88
 			}
 			capital = male_atoll
+		}
+
+		XDQ = { # Arakan Littoral Networks; CAM-ARAKAN-BOUNDARY;P8.9
+			own_control_core = {
+				akyab
+				ann
+				gwa
+				launggyet
+				maungdaw
+				minbya
+				mrauk_u
+				ramree
+				talak_burma
+				taungup
+				thandwe
+				weithali
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_mainland_river_corridor_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -72
+				traditionalist_vs_innovative = -15
+				aristocracy_vs_plutocracy = -62
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = weithali
+		}
+
+		SHY = { # Sa Huynh Coastal Networks; CAM-SAH;VASS-SAH;P8.9
+			own_control_core = {
+				amaravati
+				aryaru
+				bal_cattinon
+				bang_keng
+				bong_son
+				camp_po_thit
+				chan_bo
+				dien_ban
+				ha_va_nguon
+				indrapura
+				kampong_sraka_trey
+				kauthara
+				panduranga
+				simhapura
+				vijaya
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_sa_huynh_exchange_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -58
+				traditionalist_vs_innovative = -5
+				aristocracy_vs_plutocracy = -48
+				capital_economy_vs_traditional_economy = 55
+			}
+			capital = amaravati
+		}
+
+		XGF = { # Central Vietnamese Highland Networks; CAM-SAH;P8.9
+			own_control_core = {
+				apui
+				ban_don
+				cat_tien
+				dak_lak
+				di_dinh
+				ia
+				kon_klor
+				kon_tum
+				samriddhipuri
+				song_be
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_mainland_highland_exchange_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_grove_custodianship
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -78
+				traditionalist_vs_innovative = -18
+				aristocracy_vs_plutocracy = -68
+				capital_economy_vs_traditional_economy = 72
+			}
+			capital = cat_tien
+		}
+
+		XGG = { # Patkai-Upper Irrawaddy Highland Networks; CAM-MYANMAR-CHRON;P8.9
+			own_control_core = {
+				htamanthi
+				hukawng
+				injangyang
+				maingkwan
+				phakant
+				putao
+				suamprabon
+				tamu
+				tarung
+				thaungdut
+				waingmaw
+				zalon_taung
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_mainland_highland_exchange_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_grove_custodianship
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -82
+				traditionalist_vs_innovative = -20
+				aristocracy_vs_plutocracy = -72
+				capital_economy_vs_traditional_economy = 78
+			}
+			capital = putao
+		}
+
+		UIR = { # Upper Irrawaddy Corridor Networks; CAM-MYANMAR-CHRON;P8.9
+			own_control_core = {
+				htigyaing
+				katha
+				mongkawng
+				mongyang
+				monhyin
+				myedu
+				myitkyina
+				wuntho
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_mainland_river_corridor_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -68
+				traditionalist_vs_innovative = -12
+				aristocracy_vs_plutocracy = -58
+				capital_economy_vs_traditional_economy = 64
+			}
+			capital = myitkyina
+		}
+
+		PWB = { # Ping-Wang Basin Networks; CAM-SEA-IRON;P8.9
+			own_control_core = {
+				chiang_dao
+				chiang_mai
+				hot
+				lampang
+				lamphun
+				mae_hong_son
+				muang_jam
+				muang_wang
+				muang_yuam
+				mueng_thoen
+				omkoi
+				sariang
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_mainland_iron_age_basin_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_seasonal_cattle_compacts
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -64
+				traditionalist_vs_innovative = -8
+				aristocracy_vs_plutocracy = -55
+				capital_economy_vs_traditional_economy = 58
+			}
+			capital = chiang_mai
+		}
+
+		KIB = { # Kok-Ing-Nan Basin Networks; CAM-SEA-IRON;P8.9
+			own_control_core = {
+				chiang_khong
+				chiang_rai
+				chiang_saen
+				muang_ngao
+				nan
+				phayao
+				phrae
+				pua
+				thung_yang
+				wiang_fang
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_mainland_iron_age_basin_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_seasonal_cattle_compacts
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -66
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -57
+				capital_economy_vs_traditional_economy = 60
+			}
+			capital = chiang_rai
+		}
+
+		UMK = { # Upper Mekong Upland Networks; UNESCO-JARS;ANT-NLAOS;P8.9
+			own_control_core = {
+				ban_luang_cheng
+				chom_khao_maneerat
+				hongsa
+				muang_et
+				muang_kham
+				muang_lang
+				muang_luang_phukha
+				muang_sing
+				muang_sua
+				muang_thaeng
+				muang_xay
+				muong_luan
+				nam_xuang
+				phongsali
+				vieng_phouka
+				xam_neua
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_mainland_highland_exchange_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_grove_custodianship
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -76
+				traditionalist_vs_innovative = -16
+				aristocracy_vs_plutocracy = -66
+				capital_economy_vs_traditional_economy = 70
+			}
+			capital = muang_sua
+		}
+
+		USH = { # Upper Salween-Shweli Networks; CAM-MYANMAR-CHRON;P8.9
+			own_control_core = {
+				hsenwi
+				hsipaw
+				kyaukme
+				lashio
+				mabein
+				manmaw
+				monglong
+				mongmit
+				muse
+				nam_thing
+				namhkan
+				namhsan
+				ngasingu
+				shwegu
+				ta_shwe_htan
+				takawng
+				wetwin
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_mainland_river_corridor_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -70
+				traditionalist_vs_innovative = -12
+				aristocracy_vs_plutocracy = -60
+				capital_economy_vs_traditional_economy = 66
+			}
+			capital = hsenwi
+		}
+
+		KGT = { # Kengtung Basin Networks; CAM-SEA-IRON;P8.9
+			own_control_core = {
+				kengtung
+				mong_hpayak
+				mong_hsat
+				mong_yang
+				mong_yawng
+				mongping
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_mainland_iron_age_basin_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_seasonal_cattle_compacts
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -68
+				traditionalist_vs_innovative = -10
+				aristocracy_vs_plutocracy = -58
+				capital_economy_vs_traditional_economy = 62
+			}
+			capital = kengtung
+		}
+
+		XGH = { # Southern Plateau Corridor Networks; CAM-MYANMAR-CHRON;P8.9
+			own_control_core = {
+				kehsi
+				kengkham
+				kengtawng
+				lai_hka
+				lawksawk
+				mawkmai
+				mong_yai
+				monghsu
+				mongkung
+				mongnai
+				mongnawng
+				mongtung
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				indochina_region
+				indonesia_region
+				south_china_region
+				indian_ocean_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_mainland_highland_exchange_network
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -74
+				traditionalist_vs_innovative = -14
+				aristocracy_vs_plutocracy = -64
+				capital_economy_vs_traditional_economy = 68
+			}
+			capital = mongnai
 		}
 
 	}

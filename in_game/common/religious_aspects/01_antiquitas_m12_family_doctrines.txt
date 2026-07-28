@@ -2408,3 +2408,59 @@ antq_doctrine_central_indian_traditions_river_passage_compacts = { # CAM-CENTRAL
 		antq_doctrine_central_indian_traditions_river_passage_compacts = 10
 	}
 }
+
+antq_doctrine_mainland_southeast_asian_traditions_mortuary_route_custody = { # CAM-SAH;UNESCO-JARS;ANT-NLAOS;CAM-SEA-IRON;CAM-MYANMAR-CHRON;P11; contested; Communities maintained burial places paths and obligations without treating one jar or bead tradition as a single people or theology.
+	icon = antq_doctrine_mainland_southeast_asian_traditions_mortuary_route_custody
+	religion = antq_mainland_southeast_asian_traditions
+
+	modifier = {
+		monthly_legitimacy = 0.03
+		cultural_tradition_modifier = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_mainland_southeast_asian_traditions_mortuary_route_custody = 10
+	}
+}
+
+antq_doctrine_mainland_southeast_asian_traditions_wet_rice_water_compacts = { # CAM-SAH;UNESCO-JARS;ANT-NLAOS;CAM-SEA-IRON;CAM-MYANMAR-CHRON;P11; contested; Seasonal agreements coordinated bunds channels fields and labor without inventing one centralized water authority.
+	icon = antq_doctrine_mainland_southeast_asian_traditions_wet_rice_water_compacts
+	religion = antq_mainland_southeast_asian_traditions
+
+	modifier = {
+		global_monthly_prosperity = 0.02
+		global_monthly_food_modifier = 0.03
+	}
+
+	opinions = {
+		antq_doctrine_mainland_southeast_asian_traditions_wet_rice_water_compacts = 10
+	}
+}
+
+antq_doctrine_mainland_southeast_asian_traditions_river_passage_exchange = { # CAM-SAH;UNESCO-JARS;ANT-NLAOS;CAM-SEA-IRON;CAM-MYANMAR-CHRON;P11; contested; Landing places boats baskets and witnessed exchange linked otherwise separate river and upland communities.
+	icon = antq_doctrine_mainland_southeast_asian_traditions_river_passage_exchange
+	religion = antq_mainland_southeast_asian_traditions
+
+	modifier = {
+		tolerance_own = 1
+		global_monthly_prosperity = 0.02
+	}
+
+	opinions = {
+		antq_doctrine_mainland_southeast_asian_traditions_river_passage_exchange = 10
+	}
+}
+
+antq_doctrine_mainland_southeast_asian_traditions_highland_iron_forest_obligations = { # CAM-SAH;UNESCO-JARS;ANT-NLAOS;CAM-SEA-IRON;CAM-MYANMAR-CHRON;P11; contested; Charcoal ore forest access and specialist skill joined upland households without implying one ritual guild.
+	icon = antq_doctrine_mainland_southeast_asian_traditions_highland_iron_forest_obligations
+	religion = antq_mainland_southeast_asian_traditions
+
+	modifier = {
+		global_monthly_food_modifier = 0.03
+		global_hostile_attrition = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_mainland_southeast_asian_traditions_highland_iron_forest_obligations = 10
+	}
+}

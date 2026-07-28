@@ -779,6 +779,35 @@ installed area geometry as a period border.
   does not securely date every represented atoll to AD 1 or recover a common
   ruler, language, faith, border, or capital.
 
+## Mainland Southeast Asian residual repair
+
+- `CAM-SAH` and `VASS-SAH` bound the Sa Huynh horizon to central Vietnam and
+  explicitly do not license an AD 1 Champa state.
+- `UNESCO-JARS`: UNESCO World Heritage Centre, [“Megalithic Jar Sites in
+  Xiengkhuang — Plain of Jars”](https://whc.unesco.org/en/list/1587), dates the
+  mortuary landscape broadly from 500 BCE to 500 CE. It supports an upland
+  Iron-Age network near the campaign frame, not one ethnicity, faith, or state.
+- `ANT-NLAOS`: Joyce White et al., [“Archaeological investigations in
+  northern Laos”](https://www.cambridge.org/core/journals/antiquity-project-gallery/article/archaeological-investigations-in-northern-laos-new-contributions-to-southeast-asian-prehistory/8E36EB4AA9F341F89B84C99283DD5891),
+  records late Iron-Age burial evidence and stresses the region's incomplete
+  archaeological coverage. It supports cautious upper-Mekong corridor labels.
+- `CAM-SEA-IRON`: regional Iron-Age syntheses represented by [Higham et al. on
+  wet-rice change](https://www.cambridge.org/core/journals/antiquity/article/social-responses-to-climate-change-in-iron-age-northeast-thailand-new-archaeobotanical-evidence/A04421856E5337EE51AA0C36FA7C0C38)
+  support basin settlement, cultivation, exchange, and growing differentiation
+  around the campaign era. They do not recover northern Thai/Shan ethnic maps
+  or authorize later Tai states.
+- `CAM-MYANMAR-CHRON`: Pryce et al., [“Late prehistoric and early historic
+  chronology of Myanmar”](https://www.cambridge.org/core/journals/antiquity/article/late-prehistoric-and-early-historic-chronology-of-myanmar-a-fourmillennia-sequence-from-halin/AC4E3D51A58B1E6F257FD90A2233E407),
+  supplies a dated Myanmar sequence while highlighting uneven coverage. It is
+  used as a broad chronological brake, not proof that Halin's lowland sequence
+  defines Kachin or Shan highland identities.
+- `CAM-ARAKAN-BOUNDARY`: Gutman et al., [“Rock art and artisans in the Lemro
+  Valley, Arakan”](https://www.cambridge.org/core/journals/antiquity/article/abs/rock-art-and-artisans-in-the-lemro-valley-arakan-myanmar/0333B4913E607FF0A531F796F3F487E4),
+  demonstrates that prominent Arakan material once read as ancient is actually
+  medieval or early modern. It is negative evidence: the AD 1 frame therefore
+  remains a geographic littoral network and does not backdate Dhanyawadi,
+  Vesali, Mrauk-U, their art, rulers, or borders.
+
 The Barbaricum expansion likewise uses P8.1/P8.2/P8.7 with CAH-XI. Its rows
 are deliberately marked `contested`: broad regional labels are a visible
 political-map scaffold, never an assertion that a present map-area boundary was

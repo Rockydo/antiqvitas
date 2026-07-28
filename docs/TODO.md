@@ -648,6 +648,17 @@ and focused runtime probe all pass.
         frame exceeds its reviewed geography; direct RGO corrections cover the
         Maldives and Gulf of Mannar; full static validation and paired
         smoke have zero mod-only normalized error-log lines.
+    - [x] Replace `SEA` across its 136-location footprint with eleven bounded
+      Arakan, central-Vietnamese, upper-Irrawaddy, northern-basin, upper-Mekong,
+      Salween-Shweli, Kengtung, and southern-plateau networks; expand Harikela
+      only across the six Chittagong littoral fields.
+      - Add ten cultures, one plural tradition family with four direct-art
+        doctrines, four reforms, eleven standards, period-safe capital labels,
+        settlements, research, laws, agendas, history, and eleven-client
+        localization.
+      - Pin the exact transform with `s2_mainland_sea_granularity.py`; prohibit
+        `SEA` and the old player-facing placeholder. Full 120-command
+        validation and paired smoke must remain green with zero mod-only lines.
     - [x] Replace Inner Asian Oasis Societies as five separate
       geographic audits, not a country rename. Its 302 locations comprise
       Transoxiana (93), the Kazakh steppe (85), eastern Khorasan/Bactria (46),

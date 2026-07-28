@@ -1,5 +1,22 @@
 # Progress
 
+## 2026-07-28 - Mainland Southeast Asia becomes eleven bounded networks
+
+- Removed the 136-location `SEA` catch-all. Eleven archaeological/geographic
+  frames now cover 130 fields; Harikela receives only the six-field Chittagong
+  littoral extension. The roster rises from 365 to 375 and the literal
+  placeholder census falls from nineteen to eighteen.
+- Added ten cultures, one plural traditions family, four direct-art doctrines,
+  four reforms, eleven standards, qualified capitals, settlements, research,
+  laws, agendas, history, and eleven-client localization. Art used actual
+  installed EU5 religion/aspect references in two four-up atlases.
+- `tools/s2_mainland_sea_granularity.py` pins the exact transform. All 120
+  validation commands pass; paired smoke reached responsive rendered vanilla
+  and mod menus in 197.7 seconds with zero mod-only normalized errors.
+
+Next: split the 125-location Manchurian Societies frame without projecting
+later Jurchen identities or states into AD 1.
+
 ## 2026-07-28 - Inner Asia becomes a source-bounded political mosaic
 
 - Removed the 302-location Inner Asian Oasis Societies catch-all after auditing

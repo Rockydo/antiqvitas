@@ -44,7 +44,9 @@ EXPECTED = {
     "RAR": ("Rarh", "bardhaman", 14, "antq_rarh_early_historic", "antq_bengal_riverine_community_network"),
     "VNG": ("Vanga", "nadia", 20, "antq_vanga_early_historic", "antq_bengal_riverine_community_network"),
     "SMT": ("Samatata", "sonargaon", 18, "antq_samatata_early_historic", "antq_bengal_riverine_community_network"),
-    "HRK": ("Harikela", "pilak", 7, "antq_harikela_early_historic", "antq_bengal_riverine_community_network"),
+    # Seven locations belong to the original Gangetic repair; the six-field
+    # Chittagong littoral extension is independently pinned by the SEA repair.
+    "HRK": ("Harikela", "pilak", 13, "antq_harikela_early_historic", "antq_bengal_riverine_community_network"),
     "CNP": ("Chota Nagpur Megalithic Networks", "ranchi", 27, "antq_chota_nagpur_megalithic", "antq_eastern_megalithic_community_network"),
     "AMB": ("Ambari Horizon", "guwahati", 11, "antq_ambari_horizon", "antq_eastern_hill_valley_network"),
     "DDV": ("Doyang-Dhansiri Valley", "dimapur", 8, "antq_doyang_dhansiri", "antq_eastern_hill_valley_network"),
@@ -105,7 +107,7 @@ def expected_rows() -> tuple[list[dict[str, str]], list[str]]:
         failures.append("obsolete Indo-Scythian Punjab residual survives")
     if owner.get("mathura") != "NMS":
         failures.append("Mathura must belong to the Northern Satrapy, not Arjunayana")
-    if sum(counts[tag] for tag in EXPECTED) != 301:
+    if sum(counts[tag] for tag in EXPECTED) - 6 != 301:
         failures.append("reviewed replacement frames must control exactly 301 locations")
 
     remapped_religions = {
@@ -217,7 +219,8 @@ def main() -> int:
             return 1
         print(
             "s2_gangetic_granularity: PASS "
-            "(24 frames; 301 locations; largest 27; 24 cultures; "
+            "(24 frames; 301 original locations + 6 Chittagong extension; "
+            "largest 27; 24 cultures; "
             "6 new reforms; 24 standards; 11-client localization)"
         )
         return 0

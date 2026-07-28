@@ -1,8 +1,8 @@
 {
   "game_build": "24187685",
-  "entry_count": 365,
-  "collision_count": 137,
-  "localization_collision_count": 151,
+  "entry_count": 375,
+  "collision_count": 141,
+  "localization_collision_count": 155,
   "reserved_hash_collision_tags": [
     "XAD"
   ],
@@ -1835,13 +1835,6 @@
       "name": "Rajasthan-Gujarat Societies"
     },
     {
-      "design_tag": "SEA",
-      "engine_tag": "SEA",
-      "vanilla_collision": false,
-      "localization_collision": false,
-      "name": "Mainland Southeast Asian Societies"
-    },
-    {
       "design_tag": "INS",
       "engine_tag": "INS",
       "vanilla_collision": false,
@@ -2561,6 +2554,83 @@
       "vanilla_collision": false,
       "localization_collision": false,
       "name": "Maldivian Atoll Networks"
+    },
+    {
+      "design_tag": "ARK",
+      "engine_tag": "XDQ",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Arakan Littoral Networks"
+    },
+    {
+      "design_tag": "SHY",
+      "engine_tag": "SHY",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Sa Huynh Coastal Networks"
+    },
+    {
+      "design_tag": "CHG",
+      "engine_tag": "XGF",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Central Vietnamese Highland Networks"
+    },
+    {
+      "design_tag": "KCN",
+      "engine_tag": "XGG",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Patkai-Upper Irrawaddy Highland Networks"
+    },
+    {
+      "design_tag": "UIR",
+      "engine_tag": "UIR",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Upper Irrawaddy Corridor Networks"
+    },
+    {
+      "design_tag": "PWB",
+      "engine_tag": "PWB",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Ping-Wang Basin Networks"
+    },
+    {
+      "design_tag": "KIB",
+      "engine_tag": "KIB",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Kok-Ing-Nan Basin Networks"
+    },
+    {
+      "design_tag": "UMK",
+      "engine_tag": "UMK",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Upper Mekong Upland Networks"
+    },
+    {
+      "design_tag": "USH",
+      "engine_tag": "USH",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Upper Salween-Shweli Networks"
+    },
+    {
+      "design_tag": "KGT",
+      "engine_tag": "KGT",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Kengtung Basin Networks"
+    },
+    {
+      "design_tag": "SSH",
+      "engine_tag": "XGH",
+      "vanilla_collision": true,
+      "localization_collision": true,
+      "name": "Southern Plateau Corridor Networks"
     }
   ]
 }

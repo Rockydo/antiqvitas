@@ -1,5 +1,24 @@
 # Historical Assumptions
 
+## 2026-07-28 - Mainland Southeast Asian AD 1 frames are cautious proxies
+
+† Sa Huynh is an archaeological horizon, not an AD 1 Champa state. The Plain
+of Jars supports an upland mortuary network, not one ethnicity or creed.
+Northern Thai, Lao, Kachin, and Shan map divisions are geographic gameplay
+adapters because the evidence cannot recover exact AD 1 frontiers or names.
+
+† Arakan remains a littoral network: material once used to support an ancient
+Lemro narrative is medieval or early modern. Installed city keys are map
+anchors only. The new cultures, faith, governments, and standards are technical
+adapters, not reconstructed peoples, theology, constitutions, or flags.
+
+Sources weighed: [central Vietnam 500 BCE–CE 500](https://www.cambridge.org/core/books/abs/early-interactions-between-south-and-southeast-asia/central-vietnam-during-the-period-from-500-bce-to-ce-500/FAB1EB61CFDC6B82E54B12E0B0CE2DFC);
+[Plain of Jars](https://whc.unesco.org/en/list/1587);
+[northern Laos](https://www.cambridge.org/core/journals/antiquity-project-gallery/article/archaeological-investigations-in-northern-laos-new-contributions-to-southeast-asian-prehistory/8E36EB4AA9F341F89B84C99283DD5891);
+[Iron-Age wet rice](https://www.cambridge.org/core/journals/antiquity/article/social-responses-to-climate-change-in-iron-age-northeast-thailand-new-archaeobotanical-evidence/A04421856E5337EE51AA0C36FA7C0C38);
+[Myanmar chronology](https://www.cambridge.org/core/journals/antiquity/article/late-prehistoric-and-early-historic-chronology-of-myanmar-a-fourmillennia-sequence-from-halin/AC4E3D51A58B1E6F257FD90A2233E407);
+and [Lemro dating](https://www.cambridge.org/core/journals/antiquity/article/abs/rock-art-and-artisans-in-the-lemro-valley-arakan-myanmar/0333B4913E607FF0A531F796F3F487E4).
+
 ## 2026-07-28 - Inner Asian boundaries are qualified reconstructions
 
 † The Hanshu's many Western Regions kingdoms and its travel distances support

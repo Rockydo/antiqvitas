@@ -3655,20 +3655,6 @@ RJS = { # Rajasthan-Gujarat Societies; P8.4;P20
 	}
 }
 
-SEA = { # Mainland Southeast Asian Societies; P8.9;P20
-	pattern = "pattern_solid.dds"
-	color1 = "green"
-	color2 = "yellow"
-	color3 = "red"
-	colored_emblem = {
-		texture = "ce_auspicious_conch_shell_simple.dds"
-		color1 = color2
-		color2 = color2
-		color3 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.82 0.82 } }
-	}
-}
-
 INS = { # Island Southeast Asian Societies; P8.9;P20
 	pattern = "pattern_solid.dds"
 	color1 = "green"
@@ -5108,5 +5094,159 @@ MLD = { # Maldivian Atoll Networks; CAM-MALDIVES;P20
 		color2 = color2
 		color3 = color1
 		instance = { position = { 0.5 0.50 } scale = { 0.76 0.80 } }
+	}
+}
+
+XDQ = { # Arakan Littoral Networks; CAM-ARAKAN-BOUNDARY;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_fish_okeane.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+SHY = { # Sa Huynh Coastal Networks; CAM-SAH;VASS-SAH;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.72 0.72 } }
+	}
+}
+
+XGF = { # Central Vietnamese Highland Networks; CAM-SAH;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_stag.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.78 } }
+	}
+}
+
+XGG = { # Patkai-Upper Irrawaddy Highland Networks; CAM-MYANMAR-CHRON;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_deer_kneeling.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.78 } }
+	}
+}
+
+UIR = { # Upper Irrawaddy Corridor Networks; CAM-MYANMAR-CHRON;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "blue"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.78 0.78 } }
+	}
+}
+
+PWB = { # Ping-Wang Basin Networks; CAM-SEA-IRON;P20
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_spiral_star_06.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.80 } }
+	}
+}
+
+KIB = { # Kok-Ing-Nan Basin Networks; CAM-SEA-IRON;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "red"
+	colored_emblem = {
+		texture = "ce_spiral.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.76 } }
+	}
+}
+
+UMK = { # Upper Mekong Upland Networks; UNESCO-JARS;ANT-NLAOS;P20
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.72 0.72 } }
+	}
+}
+
+USH = { # Upper Salween-Shweli Networks; CAM-MYANMAR-CHRON;P20
+	pattern = "pattern_solid.dds"
+	color1 = "purple"
+	color2 = "white"
+	color3 = "green"
+	colored_emblem = {
+		texture = "ce_cartwheel.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.74 0.74 } }
+	}
+}
+
+KGT = { # Kengtung Basin Networks; CAM-SEA-IRON;P20
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_bull_head_ringed.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.76 0.78 } }
+	}
+}
+
+XGH = { # Southern Plateau Corridor Networks; CAM-MYANMAR-CHRON;P20
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "ce_spear_head_random_small.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.50 } scale = { 0.74 0.78 } }
 	}
 }

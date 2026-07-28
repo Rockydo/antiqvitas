@@ -4761,3 +4761,93 @@ antq_maldivian_maritime = { # CAM-MALDIVES;P10; Atoll maritime adapter using a S
 		antq_indian_group
 	}
 }
+
+antq_arakan_littoral = { # CAM-ARAKAN-BOUNDARY;P10; Geographic coastal adapter without projecting later Rakhine identity language or kingdoms
+	language = antq_southeast_asian_dialect
+	color = antq_culture_color_antq_arakan_littoral
+	tags = { european_gfx }
+	culture_groups = {
+		antq_southeast_asian_group
+	}
+}
+
+antq_central_vietnam_highland = { # CAM-SAH;P10; Upper-river and highland adapter distinct from the Sa Huynh coast; technical name list does not settle language
+	language = antq_southeast_asian_dialect
+	color = antq_culture_color_antq_central_vietnam_highland
+	tags = { european_gfx }
+	culture_groups = {
+		antq_southeast_asian_group
+	}
+}
+
+antq_patkai_upper_irrawaddy = { # CAM-MYANMAR-CHRON;P10; Highland archaeological-geographic adapter without projecting later Kachin Naga or Tai identity
+	language = antq_tibetan_dialect
+	color = antq_culture_color_antq_patkai_upper_irrawaddy
+	tags = { european_gfx }
+	culture_groups = {
+		antq_tibetan_group
+	}
+}
+
+antq_upper_irrawaddy_corridor = { # CAM-MYANMAR-CHRON;P10; River-confluence adapter without backdating later cities ethnicities or states
+	language = antq_southeast_asian_dialect
+	color = antq_culture_color_antq_upper_irrawaddy_corridor
+	tags = { european_gfx }
+	culture_groups = {
+		antq_southeast_asian_group
+	}
+}
+
+antq_ping_wang_iron_age = { # CAM-SEA-IRON;P10; Intermontane basin adapter without backdating Lanna or a uniform Mon Lawa or Tai identity
+	language = antq_southeast_asian_dialect
+	color = antq_culture_color_antq_ping_wang_iron_age
+	tags = { european_gfx }
+	culture_groups = {
+		antq_southeast_asian_group
+	}
+}
+
+antq_kok_ing_nan_iron_age = { # CAM-SEA-IRON;P10; Northern basin adapter without backdating later Tai state or language boundaries
+	language = antq_southeast_asian_dialect
+	color = antq_culture_color_antq_kok_ing_nan_iron_age
+	tags = { european_gfx }
+	culture_groups = {
+		antq_southeast_asian_group
+	}
+}
+
+antq_upper_mekong_upland = { # UNESCO-JARS;ANT-NLAOS;P10; Heterogeneous upland and river-corridor adapter; burial evidence does not define ethnicity
+	language = antq_southeast_asian_dialect
+	color = antq_culture_color_antq_upper_mekong_upland
+	tags = { european_gfx }
+	culture_groups = {
+		antq_southeast_asian_group
+	}
+}
+
+antq_upper_salween_shweli = { # CAM-MYANMAR-CHRON;P10; Corridor adapter without backdating Shan principality or standard-language identity
+	language = antq_southeast_asian_dialect
+	color = antq_culture_color_antq_upper_salween_shweli
+	tags = { european_gfx }
+	culture_groups = {
+		antq_southeast_asian_group
+	}
+}
+
+antq_kengtung_basin = { # CAM-SEA-IRON;P10; Intermontane basin adapter without backdating a sawbwa state or uniform Tai identity
+	language = antq_southeast_asian_dialect
+	color = antq_culture_color_antq_kengtung_basin
+	tags = { european_gfx }
+	culture_groups = {
+		antq_southeast_asian_group
+	}
+}
+
+antq_southern_plateau_corridor = { # CAM-MYANMAR-CHRON;P10; Pass-and-basin adapter without backdating later Shan states or ethnic borders
+	language = antq_southeast_asian_dialect
+	color = antq_culture_color_antq_southern_plateau_corridor
+	tags = { european_gfx }
+	culture_groups = {
+		antq_southeast_asian_group
+	}
+}
