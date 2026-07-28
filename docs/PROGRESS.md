@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-07-28 - Korea becomes Han Lelang and coherent Samhan clusters
+
+- Removed the 50-location `KRS` catch-all and repaired 16 erroneous Hoseo
+  assignments, raising the roster to 450 and reducing placeholders to nine.
+- Han now holds Lelang while its 14 locations retain an indigenous-majority
+  Gojoseon-descended population; Mahan, Jinhan, and Byeonhan use bounded
+  small-state frames rather than later kingdoms.
+- Added three reforms, two standards, and an exact 66-location validator.
+- All 129 validation commands pass; confirming paired smoke reached both
+  rendered menus with zero mod-only normalized errors.
+
+Next: replace the 47-location Caucasian Highland Societies frame.
+
 ## 2026-07-28 - Plains and eastern Woodlands become eight bounded networks
 
 - Removed the 51-location `PLA` catch-all. Eight archaeological-geographic

@@ -701,6 +701,27 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "MOSHPO-KC;NPS-OZARK-HOPEWELL;P13", "contested",
         "Lower-Missouri and eastern-Plains communities coordinate floodplain villages, tributary camps, resources, and exchange without treating an archaeological complex as a single polity.",
     ),
+    "antq_mahan_small_state_league": (
+        "global_tribes_estate_power=0.071|global_peasants_estate_power=0.059|"
+        "tribes_estate_power_from_cabinet=0.159|global_monthly_food_modifier=0.024|"
+        "replace_cabinet_member_cost_modifier=0.031",
+        "NAJU-MAHAN;NMK-SAMHAN;AKS-LELANG;P13", "contested",
+        "Mahan's many agricultural small states coordinate assemblies, river access, stores, ritual obligations, and diplomacy without one recovered AD 1 constitution.",
+    ),
+    "antq_jinhan_small_state_league": (
+        "global_tribes_estate_power=0.073|global_burghers_estate_power=0.057|"
+        "tribes_estate_power_from_cabinet=0.161|global_trade_through_owned_territory_efficiency=0.027|"
+        "replace_cabinet_member_cost_modifier=0.032",
+        "NMK-YEONGNAM;NMK-SAMHAN;P13", "contested",
+        "Jinhan's Yeongnam small states coordinate cultivation, bronze-working, exchange, and collective defence without backdating the later Silla kingdom.",
+    ),
+    "antq_byeonhan_iron_exchange_league": (
+        "global_tribes_estate_power=0.067|global_burghers_estate_power=0.073|"
+        "tribes_estate_power_from_cabinet=0.153|global_trade_through_owned_territory_efficiency=0.035|"
+        "replace_cabinet_member_cost_modifier=0.033",
+        "JINJU-BYEONHAN;NMK-YEONGNAM;P13", "contested",
+        "Byeonhan's western-Gyeongnam small states coordinate iron, ports, navigation, and exchange without backdating the later Gaya confederacies.",
+    ),
     "antq_mesoamerican_urban_ritual_center": (
         "global_clergy_estate_power=0.10|global_burghers_estate_power=0.07|"
         "clergy_estate_power_from_cabinet=0.20|global_production_efficiency=0.025|"
@@ -1552,6 +1573,9 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
         "antq_havana_hopewell_exchange_network",
         "antq_central_mississippi_woodland_network",
         "antq_kansas_city_hopewell_network",
+        "antq_mahan_small_state_league",
+        "antq_jinhan_small_state_league",
+        "antq_byeonhan_iron_exchange_league",
     ),
     "sacral": (),
     "royal": (
@@ -2140,7 +2164,7 @@ def load_power_data() -> PowerData:
     used_reforms = {government["reform"] for government in governments.values()}
     # Core/regional contracts include the reviewed Manchurian, Bornean,
     # Philippine, Sulawesi, and North American network reforms defined above.
-    expected_contract_count = 117 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
+    expected_contract_count = 120 + len(ALTERNATIVE_REFORMS) + len(SUCCESSOR_REFORMS)
     if (
         len(POLITICAL_CONTRACTS) != expected_contract_count
         or not used_reforms.issubset(POLITICAL_CONTRACTS)
@@ -2148,7 +2172,7 @@ def load_power_data() -> PowerData:
         failures.append(
             "political appointment contracts must cover every core, regional, and successor reform"
         )
-    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 117:
+    if len({contract[0] for contract in POLITICAL_CONTRACTS.values()}) < 120:
         failures.append("political appointment contracts are insufficiently differentiated")
     path_rows = reform_path_rows()
     alternative_profiles = [row[1] for row in path_rows]
@@ -2948,6 +2972,39 @@ antq_kansas_city_hopewell_network = {
 		global_burghers_estate_power = 0.063
 		global_trade_through_owned_territory_efficiency = 0.029
 		research_speed = 0.07
+	}
+	years = 2
+}
+
+antq_mahan_small_state_league = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_peasants_estate_power = 0.059
+		global_monthly_food_modifier = 0.024
+		research_speed = 0.075
+	}
+	years = 2
+}
+
+antq_jinhan_small_state_league = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_burghers_estate_power = 0.057
+		global_trade_through_owned_territory_efficiency = 0.027
+		research_speed = 0.075
+	}
+	years = 2
+}
+
+antq_byeonhan_iron_exchange_league = {
+	major = yes
+	government = tribe
+	country_modifier = {
+		global_burghers_estate_power = 0.073
+		global_trade_through_owned_territory_efficiency = 0.035
+		research_speed = 0.075
 	}
 	years = 2
 }
@@ -3925,6 +3982,12 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_central_mississippi_woodland_network_desc", "River-valley and upland communities coordinate subsistence, mound obligations, exchange, and passage before the later Mississippian world."),
         ("antq_kansas_city_hopewell_network", "Kansas City Hopewell Network"),
         ("antq_kansas_city_hopewell_network_desc", "Lower-Missouri and eastern-Plains communities coordinate floodplain villages, tributary camps, resources, and exchange without one archaeological polity."),
+        ("antq_mahan_small_state_league", "Mahan Small-State League"),
+        ("antq_mahan_small_state_league_desc", "Mahan agricultural small states coordinate assemblies, river access, stores, ritual obligations, and diplomacy without one recovered AD 1 constitution."),
+        ("antq_jinhan_small_state_league", "Jinhan Small-State League"),
+        ("antq_jinhan_small_state_league_desc", "Jinhan small states coordinate cultivation, bronze-working, exchange, and collective defence without backdating Silla."),
+        ("antq_byeonhan_iron_exchange_league", "Byeonhan Iron-Exchange League"),
+        ("antq_byeonhan_iron_exchange_league_desc", "Byeonhan small states coordinate iron, ports, navigation, and exchange without backdating Gaya."),
         ("antq_mesoamerican_urban_ritual_center", "Mesoamerican Urban-Ritual Center"),
         ("antq_mesoamerican_urban_ritual_center_desc", "A first-order ceremonial and exchange center coordinates public space, specialist production, cultivation, and regional ties without an invented recovered constitution."),
         ("antq_mesoamerican_formative_civic_network", "Mesoamerican Formative Civic Network"),

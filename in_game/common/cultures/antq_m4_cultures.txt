@@ -5580,3 +5580,12 @@ antq_kansas_city_hopewell = { # MOSHPO-KC;NPS-OZARK-HOPEWELL;P10; Kansas City Ho
 		antq_american_group
 	}
 }
+
+antq_lelang_gojoseon = { # AKS-LELANG;P10; Indigenous Gojoseon-majority commandery population with Han migration and cultural fusion; not a uniform ethnic identity
+	language = antq_korean_dialect
+	color = antq_culture_color_antq_lelang_gojoseon
+	tags = { european_gfx }
+	culture_groups = {
+		antq_korean_group
+	}
+}

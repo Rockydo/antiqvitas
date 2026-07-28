@@ -4125,3 +4125,12 @@ Existing reviewed emblem textures suffice; no new art or audio is needed.
 The `KCP` display name is Lower Missouri Hopewell Communities because runtime
 smoke proved that EU5 rejects country names containing `City`; the culture and
 capital retain the sourced Kansas City Hopewell archaeological term.
+
+## 2026-07-28 - Korea uses commandery rule and small-state clusters
+
+Remove `KRS` and its residual `korea_region` selector. Give the two Hwanghae
+provinces directly to Western Han as Lelang while preserving a distinct
+indigenous-majority population culture. Replace the erroneous Byeonhan Hoseo
+claim with Han River and Geum River Mahan clusters; confine Jinhan and Byeonhan
+to their reviewed Yeongnam province sets. Whole installed provinces prevent
+gaps and keep every replacement below seventeen locations.

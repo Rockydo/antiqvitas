@@ -4385,6 +4385,7 @@ countries = {
 				amarendrapura
 				amchok
 				ami
+				anak
 				anbang
 				anbian
 				ande
@@ -4421,6 +4422,7 @@ countries = {
 				bac_thai_nguyen
 				bada
 				badong
+				baekcheon
 				bafan
 				baicang
 				baideng
@@ -4479,6 +4481,7 @@ countries = {
 				bohai
 				boluo
 				bomoping
+				bongju
 				boxing
 				boye
 				bozhou
@@ -4536,6 +4539,7 @@ countries = {
 				chengzhou
 				chenxi
 				chenyang
+				cheongsong
 				chi_la
 				chijin
 				chiping
@@ -4745,6 +4749,7 @@ countries = {
 				gegou
 				gengdang
 				gengma
+				gokju
 				gongan
 				gongcheng
 				gongshan
@@ -4805,6 +4810,7 @@ countries = {
 				guzhang
 				guzhen
 				guzhou
+				haeju
 				haifeng
 				haikang
 				hailing
@@ -4909,6 +4915,9 @@ countries = {
 				huoyi
 				huozhu
 				huxian
+				hwangju
+				jaeryeong
+				jangyeon
 				jiachuan
 				jiading
 				jiaha
@@ -5383,6 +5392,7 @@ countries = {
 				niushan
 				niuwu
 				nixi
+				ongjin
 				ordos
 				otog
 				ouning
@@ -5441,6 +5451,7 @@ countries = {
 				puge
 				pujiang
 				pujiang_qiongzhou
+				pungcheon
 				puning
 				puning_rongzhou
 				puqi
@@ -5449,6 +5460,7 @@ countries = {
 				puxian
 				puyang
 				puyin
+				pyeongju
 				qianan
 				qianhua
 				qianjiang
@@ -5680,6 +5692,7 @@ countries = {
 				songzhou_songpan
 				songzhou_songzhou
 				songzi
+				suan
 				suian
 				suichang
 				suide
@@ -5777,6 +5790,7 @@ countries = {
 				tongwei
 				tongxu
 				tongzhou
+				tosan
 				trang_an
 				tso_gon
 				tunliu
@@ -7001,7 +7015,7 @@ countries = {
 				heir_selection = tribal_oldest_male
 				ruler = random
 				reforms = {
-					antq_tribal_kingdom
+					antq_mahan_small_state_league
 				}
 				privilege = {
 					antq_tribal_elder_council
@@ -7033,7 +7047,22 @@ countries = {
 
 		JIN = { # Jinhan; P8.3;SAM
 			own_control_core = {
+				andong
+				bonghwa
+				boseongbu
+				gaeryeong
 				gyeongju
+				mungyeong
+				sangju
+				seongju
+				seonsan
+				taegu
+				uiseong
+				yeongcheon
+				yeongdeok
+				yeongil
+				yeongju
+				yeongyang
 			}
 
 			country_rank = rank_county
@@ -7048,7 +7077,7 @@ countries = {
 				heir_selection = tribal_oldest_male
 				ruler = random
 				reforms = {
-					antq_tribal_kingdom
+					antq_jinhan_small_state_league
 				}
 				privilege = {
 					antq_tribal_elder_council
@@ -7080,23 +7109,17 @@ countries = {
 
 		BYE = { # Byeonhan; P8.3;SAM
 			own_control_core = {
-				aju
-				boryeong
-				cheonan
-				cheongju
-				chungju
-				danyang_korea
-				eumseong
-				goeju
-				gongju
-				hansan
-				hongju
-				jecheon
-				jinjam
-				seosan
+				dongnae
+				geochang
+				geoje
+				hadong
+				hapcheon
+				jinju
+				miryang
+				namhae
+				sacheon
 				uian
-				yeongdong
-				yeonsan
+				ulju
 			}
 
 			country_rank = rank_county
@@ -7111,7 +7134,7 @@ countries = {
 				heir_selection = tribal_oldest_male
 				ruler = random
 				reforms = {
-					antq_tribal_kingdom
+					antq_byeonhan_iron_exchange_league
 				}
 				privilege = {
 					antq_tribal_elder_council
@@ -22185,58 +22208,24 @@ countries = {
 			capital = urumqi
 		}
 
-		XDL = { # Korean Peninsula Societies; P8.3;SAM
+		HMR = { # Han River Mahan Communities; NAJU-MAHAN;NMK-SAMHAN;AKS-LELANG;P8.3
 			own_control_core = {
-				anak
-				andong
-				baekcheon
-				bonghwa
-				bongju
-				boseongbu
-				cheongsong
-				dongnae
-				gaeryeong
+				chungju
+				danyang_korea
+				eumseong
 				gapyeong
-				geochang
-				geoje
-				gokju
+				goeju
 				gwangju
-				hadong
-				haeju
-				hapcheon
-				hwangju
 				icheon
 				inju
-				jaeryeong
-				jangyeon
-				jinju
+				jecheon
 				jipyeong
 				kaesong
-				miryang
-				mungyeong
 				namgyeong
-				namhae
-				ongjin
 				papyeong
 				pocheon
-				pungcheon
-				pyeongju
-				sacheon
-				sangju
-				seongju
-				seonsan
-				suan
 				suwon
-				taegu
-				tosan
-				uiseong
-				ulju
 				yangju
-				yeongcheon
-				yeongdeok
-				yeongil
-				yeongju
-				yeongyang
 			}
 
 			country_rank = rank_county
@@ -22251,10 +22240,95 @@ countries = {
 				heir_selection = tribal_oldest_male
 				ruler = random
 				reforms = {
-					antq_advanced_chiefdom
+					antq_mahan_small_state_league
 				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -42
+				traditionalist_vs_innovative = -22
+				aristocracy_vs_plutocracy = -38
+				capital_economy_vs_traditional_economy = 47
 			}
 			capital = suwon
+		}
+
+		GMR = { # Geum River Mahan Communities; NAJU-MAHAN;NMK-SAMHAN;AKS-LELANG;P8.3
+			own_control_core = {
+				aju
+				boryeong
+				cheonan
+				cheongju
+				gongju
+				hansan
+				hongju
+				jinjam
+				seosan
+				yeongdong
+				yeonsan
+			}
+
+			country_rank = rank_county
+			starting_technology_level = 1
+			discovered_regions = {
+				korea_region
+				manchuria_region
+				north_china_region
+			}
+			government = {
+				type = tribe
+				heir_selection = tribal_oldest_male
+				ruler = random
+				reforms = {
+					antq_mahan_small_state_league
+				}
+				privilege = {
+					antq_tribal_elder_assembly_hearing
+					antq_tribal_river_exchange_protection
+					antq_tribal_free_household_muster
+				}
+				laws = {
+					antq_tribal_governance_law = antq_elder_council
+					antq_s2_eastern_status_law = antq_s2_eastern_status_mediated
+					antq_s2_eastern_dependent_labor_law = antq_s2_eastern_dependent_labor_mediated
+					antq_s2_eastern_revenue_law = antq_s2_eastern_revenue_mediated
+					antq_s2_eastern_land_law = antq_s2_eastern_land_mediated
+					antq_s2_eastern_muster_law = antq_s2_eastern_muster_mediated
+					antq_s2_eastern_local_rule_law = antq_s2_eastern_local_rule_mediated
+					antq_s2_eastern_cult_law = antq_s2_eastern_cult_mediated
+					antq_s2_eastern_household_law = antq_s2_eastern_household_mediated
+					antq_s2_eastern_commerce_law = antq_s2_eastern_commerce_mediated
+					antq_s2_eastern_coinage_law = antq_s2_eastern_coinage_mediated
+					antq_s2_eastern_courts_law = antq_s2_eastern_courts_mediated
+					antq_s2_eastern_offices_law = antq_s2_eastern_offices_mediated
+					antq_s2_eastern_migration_law = antq_s2_eastern_migration_mediated
+					antq_s2_eastern_external_law = antq_s2_eastern_external_mediated
+				}
+				centralization_vs_decentralization = -38
+				traditionalist_vs_innovative = -20
+				aristocracy_vs_plutocracy = -35
+				capital_economy_vs_traditional_economy = 43
+			}
+			capital = gongju
 		}
 
 		XGI = { # Middle Amur Pol'tse Horizon; NMJH-YIL;CAM-PROTOTUNGUSIC;P8.3

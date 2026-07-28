@@ -2368,11 +2368,20 @@ DNH = { # Danhuan; HAN-WR;HHS-WR
 	is_historic = yes
 }
 
-XDL = { # Korean Peninsula Societies; P8.3;SAM
-	color = rgb { 63 101 156 }
-	color2 = rgb { 192 154 99 }
+HMR = { # Han River Mahan Communities; NAJU-MAHAN;NMK-SAMHAN;AKS-LELANG;P8.3
+	color = rgb { 66 88 160 }
+	color2 = rgb { 189 167 95 }
 
-	culture_definition = antq_korean
+	culture_definition = antq_samhan
+	religion_definition = antq_korean_muism
+	is_historic = yes
+}
+
+GMR = { # Geum River Mahan Communities; NAJU-MAHAN;NMK-SAMHAN;AKS-LELANG;P8.3
+	color = rgb { 44 86 147 }
+	color2 = rgb { 211 169 108 }
+
+	culture_definition = antq_samhan
 	religion_definition = antq_korean_muism
 	is_historic = yes
 }

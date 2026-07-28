@@ -1,8 +1,8 @@
 {
   "game_build": "24187685",
-  "entry_count": 449,
+  "entry_count": 450,
   "collision_count": 166,
-  "localization_collision_count": 181,
+  "localization_collision_count": 180,
   "reserved_hash_collision_tags": [
     "XAD"
   ],
@@ -1849,11 +1849,18 @@
       "name": "Danhuan"
     },
     {
-      "design_tag": "KRS",
-      "engine_tag": "XDL",
+      "design_tag": "HMR",
+      "engine_tag": "HMR",
       "vanilla_collision": false,
-      "localization_collision": true,
-      "name": "Korean Peninsula Societies"
+      "localization_collision": false,
+      "name": "Han River Mahan Communities"
+    },
+    {
+      "design_tag": "GMR",
+      "engine_tag": "GMR",
+      "vanilla_collision": false,
+      "localization_collision": false,
+      "name": "Geum River Mahan Communities"
     },
     {
       "design_tag": "MAM",

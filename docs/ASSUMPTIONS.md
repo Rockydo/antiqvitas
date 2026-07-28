@@ -5736,3 +5736,14 @@ Sources: `NPS-HOPEWELL`; `NYSM-POINT`; `OAS-POINT`; `ISAS-HAVANA`;
 `ISM-DICKSON`; `ISAS-AMBOTTOM`; `MOSHPO-KC`; `MOSHPO-CMO`;
 `NPS-OZARK-HOPEWELL`. [secure broad chronology; contested political form and
 exact extent]
+
+## 2026-07-28 - Korean small-state borders remain approximate
+
+Lelang is direct Western Han administration over an indigenous Gojoseon-majority
+population, not a separate Chinese settler state. Mahan, Jinhan, and Byeonhan
+are many small states, not three centralized kingdoms. The installed
+whole-province split follows Hwanghae, Gyeonggi-Chungcheong, and Yeongnam
+geography; it does not backdate Baekje, Silla, Gaya, named rulers, or the
+third-century statelet list as exact AD 1 borders. Sources: `AKS-LELANG`;
+`NAJU-MAHAN`; `NMK-SAMHAN`; `NMK-YEONGNAM`; `JINJU-BYEONHAN`. [secure broad
+chronology and regional placement; contested exact boundaries]
