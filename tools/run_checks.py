@@ -34,6 +34,7 @@ class Command:
 
 
 VALIDATE_COMMANDS = (
+    Command("tools/test_eu5_slot.py"),
     Command("tools/s2_estate_orders.py", ("--check",)),
     Command("tools/s2_ancient_laws.py", ("--check",)),
     Command("tools/pdxlint.py"),
@@ -192,10 +193,17 @@ def run_commands(label: str, commands: tuple[Command, ...], *, dry_run: bool) ->
             continue
         completed = subprocess.run(command.argv(), cwd=ROOT, check=False)
         if completed.returncode:
-            print(
-                f"{label}: FAIL ({command.script} exited {completed.returncode})",
-                file=sys.stderr,
-            )
+            if completed.returncode == 75:
+                print(
+                    f"{label}: DEFERRED — shared EU5 slot is busy "
+                    f"({command.script})",
+                    file=sys.stderr,
+                )
+            else:
+                print(
+                    f"{label}: FAIL ({command.script} exited {completed.returncode})",
+                    file=sys.stderr,
+                )
             return completed.returncode
     print(f"{label}: PASS")
     return 0

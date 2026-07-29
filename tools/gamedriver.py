@@ -15,6 +15,19 @@ from pathlib import Path
 
 import psutil
 
+TOOLS = Path(__file__).resolve().parent
+sys.path.insert(0, str(TOOLS))
+
+from eu5_slot import (
+    EX_TEMPFAIL,
+    SlotBusy,
+    acquire,
+    game_visible_fingerprint,
+    inspect_owner,
+    mark_pending,
+    release_token,
+    require_token,
+)
 from runtime_state import directory as runtime_state_directory
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -163,102 +176,139 @@ def save_state(value: dict[str, object]) -> None:
     STATE.write_text(json.dumps(value, indent=2) + "\n", encoding="utf-8")
 
 
+def validate_state_identity(value: dict[str, object]) -> None:
+    configured_user_dir = Path(str(config()["user_dir"])).resolve()
+    session_repo = Path(str(value.get("repo", ""))).resolve()
+    session_user_dir = Path(str(value.get("user_dir", ""))).resolve()
+    if session_repo != ROOT.resolve():
+        raise RuntimeError(
+            f"session belongs to {session_repo}, not repository {ROOT.resolve()}"
+        )
+    if session_user_dir != configured_user_dir:
+        raise RuntimeError(
+            f"session user directory is {session_user_dir}, expected {configured_user_dir}"
+        )
+
+
 def process_from_state() -> psutil.Process:
     value = state()
+    validate_state_identity(value)
     process = psutil.Process(int(value["pid"]))
     if process.create_time() != value["process_create_time"]:
         raise RuntimeError("PID was reused; refusing to control an unrelated process")
+    token = str(value.get("slot_token", ""))
+    if not token:
+        raise RuntimeError("session predates the shared EU5 slot; refusing unsafe control")
+    require_token(ROOT, token)
     return process
 
 
-def installed_game_processes(game_exe: Path) -> list[psutil.Process]:
-    """Return only processes whose executable is this configured EU5 install."""
-    expected = game_exe.resolve()
-    matches: list[psutil.Process] = []
-    for process in psutil.process_iter(("pid", "exe")):
-        try:
-            executable = process.info.get("exe")
-            if executable and Path(str(executable)).resolve() == expected:
-                matches.append(process)
-        except (psutil.AccessDenied, psutil.NoSuchProcess, OSError):
-            continue
-    return matches
-
-
-def stop_installed_game_processes(game_exe: Path, timeout: int) -> list[int]:
-    """Terminate stale sessions of the exact configured EU5 executable."""
-    processes = installed_game_processes(game_exe)
-    if not processes:
-        return []
-    pids = [process.pid for process in processes]
-    for process in processes:
-        try:
-            process.terminate()
-        except psutil.NoSuchProcess:
-            pass
-    _, alive = psutil.wait_procs(processes, timeout=timeout)
-    for process in alive:
+def stop_session_process(process: psutil.Process, timeout: int) -> bool:
+    """Stop only the PID proven by this repository's tokenized session state."""
+    try:
+        process.terminate()
+    except psutil.NoSuchProcess:
+        return False
+    _, alive = psutil.wait_procs([process], timeout=timeout)
+    if alive:
         try:
             process.kill()
         except psutil.NoSuchProcess:
             pass
-    if alive:
         psutil.wait_procs(alive, timeout=10)
-    return pids
+    return True
 
 
 def launch(args: argparse.Namespace) -> int:
-    ensure_steam()
-    cfg = config()
-    user_dir = Path(str(cfg["user_dir"]))
-    game_exe = Path(str(cfg["game_exe"]))
-    stale = stop_installed_game_processes(game_exe, timeout=10)
-    if stale:
-        print(f"gamedriver: stopped stale configured EU5 session(s): {stale}")
-    close_game_crash_reporters(game_exe)
-    set_fixed_settings(user_dir)
-    logs = user_dir / "logs"
-    logs.mkdir(parents=True, exist_ok=True)
-    command = [
-        str(game_exe),
-        f"--user_dir={user_dir}",
-        "--ignore-disable-mods-on-crash",
-    ]
-    if args.debug_mode:
-        command.append("-debug_mode")
-    if args.leavepops:
-        command.append("-leavepops")
-    command.extend(args.extra)
-    flags = subprocess.CREATE_NEW_PROCESS_GROUP
-    if args.hidden:
-        flags |= subprocess.CREATE_NO_WINDOW
-    popen = subprocess.Popen(
-        command,
-        cwd=game_exe.parent,
-        creationflags=flags,
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.DEVNULL,
+    fingerprint = game_visible_fingerprint(ROOT)
+    try:
+        lease = acquire(
+            ROOT,
+            f"gamedriver launch: {args.mode}",
+            fingerprint=fingerprint,
+            scope="session",
+        )
+    except SlotBusy as exc:
+        pending = mark_pending(ROOT, f"gamedriver:{args.mode}", fingerprint, exc.owner)
+        print(f"gamedriver: DEFERRED — {exc}", file=sys.stderr)
+        print(f"gamedriver: pending gate recorded at {pending}", file=sys.stderr)
+        return EX_TEMPFAIL
+    direct_lease = not lease.inherited
+    process: psutil.Process | None = None
+    try:
+        ensure_steam()
+        cfg = config()
+        user_dir = Path(str(cfg["user_dir"]))
+        game_exe = Path(str(cfg["game_exe"]))
+        close_game_crash_reporters(game_exe)
+        set_fixed_settings(user_dir)
+        logs = user_dir / "logs"
+        logs.mkdir(parents=True, exist_ok=True)
+        command = [
+            str(game_exe),
+            f"--user_dir={user_dir}",
+            "--ignore-disable-mods-on-crash",
+        ]
+        if args.debug_mode:
+            command.append("-debug_mode")
+        if args.leavepops:
+            command.append("-leavepops")
+        command.extend(args.extra)
+        flags = subprocess.CREATE_NEW_PROCESS_GROUP
+        if args.hidden:
+            flags |= subprocess.CREATE_NO_WINDOW
+        popen = subprocess.Popen(
+            command,
+            cwd=game_exe.parent,
+            creationflags=flags,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        process = psutil.Process(popen.pid)
+        value = {
+            "pid": popen.pid,
+            "process_create_time": process.create_time(),
+            "started_at": now(),
+            "command": command,
+            "user_dir": str(user_dir),
+            "error_log_initial_size": (logs / "error.log").stat().st_size
+            if (logs / "error.log").exists()
+            else 0,
+            "mode": args.mode,
+            "repo": str(ROOT.resolve()),
+            "slot_token": lease.token,
+            "slot_scope": lease.scope,
+            "tree_fingerprint": fingerprint,
+        }
+        save_state(value)
+        if direct_lease:
+            lease.handoff(
+                process,
+                operation=f"gamedriver session: {args.mode}",
+            )
+        print(json.dumps(value, indent=2))
+        return 0
+    except Exception:
+        if process is not None:
+            stop_session_process(process, timeout=10)
+        if direct_lease:
+            release_token(ROOT, lease.token)
+        raise
+
+
+def _window_process_id(window) -> int:
+    process_id = ctypes.c_ulong()
+    ctypes.windll.user32.GetWindowThreadProcessId(
+        window._hWnd,
+        ctypes.byref(process_id),
     )
-    process = psutil.Process(popen.pid)
-    value = {
-        "pid": popen.pid,
-        "process_create_time": process.create_time(),
-        "started_at": now(),
-        "command": command,
-        "user_dir": str(user_dir),
-        "error_log_initial_size": (logs / "error.log").stat().st_size
-        if (logs / "error.log").exists()
-        else 0,
-        "mode": args.mode,
-    }
-    save_state(value)
-    print(json.dumps(value, indent=2))
-    return 0
+    return int(process_id.value)
 
 
 def find_window():
     import pygetwindow
 
+    target_pid = process_from_state().pid
     candidates = [
         window
         for window in pygetwindow.getAllWindows()
@@ -267,6 +317,7 @@ def find_window():
         # rendered frame; filtering it here makes the autonomous driver lose a
         # perfectly healthy game between screenshot and click.
         if "Europa Universalis V" in window.title
+        and _window_process_id(window) == target_pid
     ]
     return max(candidates, key=lambda item: item.width * item.height) if candidates else None
 
@@ -703,7 +754,7 @@ def resume_observer_from_autosave(args: argparse.Namespace, cycle: int) -> bool:
     for ui_attempt in range(1, 3):
         evidence["ui_attempt"] = ui_attempt
         print(f"gamedriver: recovery cycle {cycle}, menu attempt {ui_attempt}")
-        launch(
+        launched = launch(
             argparse.Namespace(
                 mode="mod",
                 leavepops=False,
@@ -712,6 +763,10 @@ def resume_observer_from_autosave(args: argparse.Namespace, cycle: int) -> bool:
                 extra=[],
             )
         )
+        if launched:
+            evidence["steps"].append(f"launch-deferred-or-failed:{launched}")
+            record_recovery_evidence(session, evidence)
+            return False
         ready = wait_ready(
             argparse.Namespace(
                 timeout=args.menu_timeout,
@@ -723,6 +778,7 @@ def resume_observer_from_autosave(args: argparse.Namespace, cycle: int) -> bool:
         if ready:
             evidence["steps"].append("menu-ready-failed")
             record_recovery_evidence(session, evidence)
+            stop(argparse.Namespace(timeout=10))
             continue
 
         save_window_capture(target_dir / f"{prefix}_menu_attempt{ui_attempt}.png")
@@ -743,6 +799,7 @@ def resume_observer_from_autosave(args: argparse.Namespace, cycle: int) -> bool:
         ):
             evidence["steps"].append("mainmenu-to-game-transition-timeout")
             record_recovery_evidence(session, evidence)
+            stop(argparse.Namespace(timeout=10))
             continue
         time.sleep(args.ui_settle)
         save_window_capture(target_dir / f"{prefix}_country_select_attempt{ui_attempt}.png")
@@ -759,6 +816,7 @@ def resume_observer_from_autosave(args: argparse.Namespace, cycle: int) -> bool:
             return True
         evidence["steps"].append("live-observer-banner-timeout")
         record_recovery_evidence(session, evidence)
+        stop(argparse.Namespace(timeout=10))
     return False
 
 
@@ -1130,13 +1188,50 @@ def observer_run(args: argparse.Namespace) -> int:
 
 
 def stop(args: argparse.Namespace) -> int:
-    game_exe = Path(str(config()["game_exe"]))
-    stopped = stop_installed_game_processes(game_exe, timeout=args.timeout)
-    close_game_crash_reporters(game_exe)
+    try:
+        value = state()
+    except FileNotFoundError:
+        print("gamedriver: already stopped (no configured session)")
+        return 0
+    try:
+        validate_state_identity(value)
+    except RuntimeError as exc:
+        print(f"gamedriver: refusing foreign session state — {exc}", file=sys.stderr)
+        return 1
+    token = str(value.get("slot_token", ""))
+    if not token:
+        print(
+            "gamedriver: refusing to stop an unleased legacy session",
+            file=sys.stderr,
+        )
+        return 1
+    scope = str(value.get("slot_scope", "session"))
+    process: psutil.Process | None = None
+    try:
+        candidate = psutil.Process(int(value["pid"]))
+        if candidate.create_time() != value["process_create_time"]:
+            raise RuntimeError("PID was reused; refusing to stop an unrelated process")
+        process = candidate
+    except psutil.NoSuchProcess:
+        pass
+    owner = inspect_owner(ROOT, reclaim_stale=False)
+    if owner is not None and owner.get("token") != token:
+        print(
+            "gamedriver: refusing to stop a session owned by another token",
+            file=sys.stderr,
+        )
+        return 1
+    if process is not None:
+        require_token(ROOT, token)
+    stopped = stop_session_process(process, args.timeout) if process else False
+    if process is not None:
+        close_game_crash_reporters(Path(str(config()["game_exe"])))
+    if scope == "session":
+        release_token(ROOT, token)
     if stopped:
-        print(f"gamedriver: stopped configured EU5 session(s): {stopped}")
+        print(f"gamedriver: stopped configured EU5 session: {value['pid']}")
     else:
-        print("gamedriver: already stopped")
+        print("gamedriver: configured EU5 session was already stopped")
     return 0
 
 

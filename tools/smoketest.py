@@ -12,6 +12,18 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+TOOLS = Path(__file__).resolve().parent
+sys.path.insert(0, str(TOOLS))
+
+from eu5_slot import (
+    EX_TEMPFAIL,
+    PROTOCOL_VERSION,
+    SlotBusy,
+    acquire,
+    clear_pending,
+    game_visible_fingerprint,
+    mark_pending,
+)
 from runtime_state import directory as runtime_state_directory
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,12 +36,17 @@ if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8", errors="backslashreplace")
 
 
-def run(*args: str, check: bool = True) -> subprocess.CompletedProcess[str]:
+def run(
+    *args: str,
+    check: bool = True,
+    environment: dict[str, str] | None = None,
+) -> subprocess.CompletedProcess[str]:
     result = subprocess.run(
         [str(PYTHON), *args],
         cwd=ROOT,
         text=True,
         capture_output=True,
+        env=environment,
     )
     if result.stdout:
         print(result.stdout, end="")
@@ -58,13 +75,18 @@ def launch_and_capture(
     timeout: int,
     menu_minimum: int,
     quiet_seconds: int,
+    environment: dict[str, str],
 ) -> set[str]:
     """Reach the menu in one playset and return its normalized current log."""
-    run("tools/enable_mod.py", "--vanilla" if mode == "vanilla" else "--enable")
+    run(
+        "tools/enable_mod.py",
+        "--vanilla" if mode == "vanilla" else "--enable",
+        environment=environment,
+    )
     launch = ["tools/gamedriver.py", "launch", "--mode", mode]
     if leavepops:
         launch.append("--leavepops")
-    run(*launch)
+    run(*launch, environment=environment)
     try:
         ready = run(
             "tools/gamedriver.py",
@@ -76,11 +98,17 @@ def launch_and_capture(
             "--quiet-seconds",
             str(quiet_seconds),
             check=False,
+            environment=environment,
         )
         if ready.returncode:
             raise RuntimeError(f"{mode} game did not reach the menu")
     finally:
-        run("tools/gamedriver.py", "stop", check=False)
+        run(
+            "tools/gamedriver.py",
+            "stop",
+            check=False,
+            environment=environment,
+        )
     config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
     return normalize(Path(str(config["user_dir"])) / "logs/error.log")
 
@@ -110,58 +138,85 @@ def main() -> int:
     if not baseline.is_file():
         print("smoketest: FAIL (vanilla baseline not captured)", file=sys.stderr)
         return 1
+    fingerprint = game_visible_fingerprint(ROOT)
+    lease = None
+    environment = None
     if not args.resume:
-        if not baseline_only:
-            config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
-            if not Path(str(config["mod_dir"])).exists():
-                subprocess.run(
-                    [
-                        "powershell",
-                        "-NoProfile",
-                        "-ExecutionPolicy",
-                        "Bypass",
-                        "-File",
-                        str(ROOT / "tools/link_mod.ps1"),
-                    ],
-                    cwd=ROOT,
-                    check=True,
+        try:
+            lease = acquire(
+                ROOT,
+                "smoke: vanilla control + mod",
+                fingerprint=fingerprint,
+                scope="transaction",
+                allow_inherited=False,
+            )
+        except SlotBusy as exc:
+            pending = mark_pending(ROOT, "smoke", fingerprint, exc.owner)
+            print(f"smoketest: DEFERRED — {exc}", file=sys.stderr)
+            print(f"smoketest: pending gate recorded at {pending}", file=sys.stderr)
+            return EX_TEMPFAIL
+        environment = lease.child_environment()
+    try:
+        if not args.resume:
+            if not baseline_only:
+                config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
+                if not Path(str(config["mod_dir"])).exists():
+                    subprocess.run(
+                        [
+                            "powershell",
+                            "-NoProfile",
+                            "-ExecutionPolicy",
+                            "Bypass",
+                            "-File",
+                            str(ROOT / "tools/link_mod.ps1"),
+                        ],
+                        cwd=ROOT,
+                        check=True,
+                        env=environment,
+                    )
+            if baseline_only:
+                actual = launch_and_capture(
+                    "vanilla",
+                    leavepops=args.leavepops,
+                    timeout=args.timeout,
+                    menu_minimum=args.menu_minimum,
+                    quiet_seconds=args.quiet_seconds,
+                    environment=environment,
                 )
-        if baseline_only:
-            actual = launch_and_capture(
-                "vanilla",
-                leavepops=args.leavepops,
-                timeout=args.timeout,
-                menu_minimum=args.menu_minimum,
-                quiet_seconds=args.quiet_seconds,
-            )
-            vanilla_actual = actual
+                vanilla_actual = actual
+            else:
+                # Hold one machine lease across both halves.  This keeps the
+                # same-machine vanilla control inseparable from its mod run.
+                vanilla_actual = launch_and_capture(
+                    "vanilla",
+                    leavepops=args.leavepops,
+                    timeout=args.timeout,
+                    menu_minimum=args.menu_minimum,
+                    quiet_seconds=args.quiet_seconds,
+                    environment=environment,
+                )
+                actual = launch_and_capture(
+                    "mod",
+                    leavepops=args.leavepops,
+                    timeout=args.timeout,
+                    menu_minimum=args.menu_minimum,
+                    quiet_seconds=args.quiet_seconds,
+                    environment=environment,
+                )
         else:
-            # Every enabled-mod smoke has a same-machine vanilla control.  This
-            # prevents a driver/runtime update (such as the reproducible DX12
-            # Options8 assertion) from being misclassified as a mod regression.
-            vanilla_actual = launch_and_capture(
-                "vanilla",
-                leavepops=args.leavepops,
-                timeout=args.timeout,
-                menu_minimum=args.menu_minimum,
-                quiet_seconds=args.quiet_seconds,
-            )
-            actual = launch_and_capture(
-                "mod",
-                leavepops=args.leavepops,
-                timeout=args.timeout,
-                menu_minimum=args.menu_minimum,
-                quiet_seconds=args.quiet_seconds,
-            )
-    else:
-        config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
-        actual_path = Path(str(config["user_dir"])) / "logs/error.log"
-        actual = normalize(actual_path)
-        vanilla_actual = set()
+            config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
+            actual_path = Path(str(config["user_dir"])) / "logs/error.log"
+            actual = normalize(actual_path)
+            vanilla_actual = set()
+    finally:
+        if lease is not None:
+            lease.release()
     reference = normalize(baseline if baseline_only else accepted)
     effective_reference = reference | vanilla_actual
     new = sorted(actual - effective_reference)
     fixed = sorted(reference - actual)
+    final_fingerprint = game_visible_fingerprint(ROOT)
+    tree_changed = final_fingerprint != fingerprint
     report = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "mode": "vanilla" if baseline_only else "mod",
@@ -171,15 +226,27 @@ def main() -> int:
         "actual_unique_lines": len(actual),
         "reference_unique_lines": len(reference),
         "unmodded_unique_lines": len(vanilla_actual),
+        "slot_protocol": PROTOCOL_VERSION,
+        "tree_fingerprint": fingerprint,
+        "final_tree_fingerprint": final_fingerprint,
+        "tree_changed_during_smoke": tree_changed,
     }
     target = runtime_state_directory(ROOT) / "last_smoke.json"
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    if tree_changed:
+        print(
+            "smoketest: FAIL — game-visible tree changed during the smoke "
+            f"({fingerprint} -> {final_fingerprint})",
+            file=sys.stderr,
+        )
+        return 1
     if new:
         print("smoketest: FAIL — NEW error.log lines")
         for line in new:
             print(f"  {line}")
         return 1
+    clear_pending(ROOT)
     if not baseline_only and vanilla_actual - reference:
         print(
             "smoketest: current vanilla control contains "
