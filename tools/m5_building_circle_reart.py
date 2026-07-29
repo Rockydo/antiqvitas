@@ -24,6 +24,7 @@ ICON_DIR = ROOT / "main_menu/gfx/interface/icons/buildings"
 DDS = ROOT / "tools/dds.py"
 FIELDS = ("sheet", "quadrant", "key", "cohort", "style_references", "review")
 QUADRANTS = ("top_left", "top_right", "bottom_left", "bottom_right")
+NAVY = (16, 25, 43, 255)
 
 
 def rows() -> list[dict[str, str]]:
@@ -53,6 +54,9 @@ def box(size: tuple[int, int], quadrant: str) -> tuple[int, int, int, int]:
 def master(source: Image.Image, quadrant: str) -> Image.Image:
     crop = source.crop(box(source.size, quadrant)).convert("RGBA")
     icon = ImageOps.fit(crop, (128, 128), method=Image.Resampling.LANCZOS)
+    field = Image.new("RGBA", icon.size, NAVY)
+    field.alpha_composite(icon)
+    icon = field
     mask = Image.new("L", icon.size, 0)
     ImageDraw.Draw(mask).ellipse((3, 3, 124, 124), fill=255)
     icon.putalpha(mask.filter(ImageFilter.GaussianBlur(0.7)))

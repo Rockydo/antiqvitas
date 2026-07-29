@@ -1215,3 +1215,11 @@ fallback, full validation, and paired zero-mod-only-line smoke provide the
 reduced rapid acceptance gate. Evidence:
 `docs/screens/P4_court_backgrounds_20260725/` and
 `assets_queue/court_backgrounds/court_backgrounds_contact.png`.
+
+## 2026-07-29 - Shared EU5 coordination commit awaits a green content tree
+
+Status: **resolved in `ae9f195c`.** The shared machine lease, repository-bound
+PID control, exit-75 deferral, pending-gate marker, smoke fingerprint,
+documentation, and focused tests were committed as an isolated eight-file
+batch. Bidirectional live contention tests passed, and a paired ANTIQVITAS
+smoke reached both vanilla and mod menus with zero new error-log lines.

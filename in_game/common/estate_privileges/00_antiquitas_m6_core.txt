@@ -6986,3 +6986,203 @@ antq_xiongnu_lineage_gift_retention_quotas = {
 		global_monthly_control = -0.001
 	}
 }
+
+antq_agraean_oasis_watch_obligations = {
+	estate = tribes_estate
+	potential = {
+		OR = {
+			has_or_had_tag = AGR
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.11
+		tribes_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.035
+		global_monthly_control = -0.0005
+		global_pop_food_consumption = -0.008
+	}
+}
+
+antq_chaulotaean_pasture_route_compacts = {
+	estate = peasants_estate
+	potential = {
+		OR = {
+			has_or_had_tag = BED
+		}
+	}
+	country_modifier = {
+		global_peasants_estate_power = 0.10
+		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_monthly_food_modifier = 0.025
+		global_production_efficiency = 0.015
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_kindite_interior_caravan_escort_terms = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = KIN
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.11
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_levy_size_modifier = 0.04
+		land_morale_modifier = 0.0125
+		nobles_estate_max_tax = -0.04
+	}
+}
+
+antq_tamudaean_well_access_guarantees = {
+	estate = tribes_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XEQ
+		}
+	}
+	country_modifier = {
+		global_tribes_estate_power = 0.12
+		tribes_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_pop_food_consumption = -0.009
+		global_levy_size_modifier = 0.025
+		global_monthly_control = -0.0005
+	}
+}
+
+antq_gerrhaean_aromatic_transit_measures = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_or_had_tag = GRH
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_gerrhaean_oasis_customs_watch }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.13
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.06
+		global_production_efficiency = 0.025
+		burghers_estate_max_tax = -0.06
+	}
+}
+
+antq_gerrhaean_oasis_customs_watch = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_or_had_tag = GRH
+		}
+	}
+	allow = {
+		NOT = { has_estate_privilege = estate_privilege:antq_gerrhaean_aromatic_transit_measures }
+	}
+	can_revoke = { }
+	country_modifier = {
+		global_burghers_estate_power = 0.12
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		country_cabinet_efficiency = 0.02
+		global_monthly_control = 0.0005
+		burghers_estate_max_tax = -0.05
+	}
+}
+
+antq_cataraean_gulf_anchorage_safe_conducts = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XER
+		}
+	}
+	country_modifier = {
+		global_burghers_estate_power = 0.11
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.05
+		country_cabinet_efficiency = 0.015
+		burghers_estate_max_tax = -0.05
+	}
+}
+
+antq_omanite_coastal_pilotage_compacts = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_or_had_tag = OMN
+		}
+	}
+	country_modifier = {
+		global_burghers_estate_power = 0.11
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.05
+		global_pop_food_consumption = -0.006
+		burghers_estate_max_tax = -0.05
+	}
+}
+
+antq_qatabanian_timna_transit_assessments = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_or_had_tag = QAT
+		}
+	}
+	country_modifier = {
+		global_burghers_estate_power = 0.13
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.06
+		country_cabinet_efficiency = 0.02
+		burghers_estate_max_tax = -0.06
+	}
+}
+
+antq_hadramite_shabwa_incense_store_custody = {
+	estate = burghers_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XBJ
+		}
+	}
+	country_modifier = {
+		global_burghers_estate_power = 0.13
+		burghers_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_production_efficiency = 0.03
+		global_trade_through_owned_territory_efficiency = 0.055
+		burghers_estate_max_tax = -0.06
+	}
+}
+
+antq_sabaean_interkingdom_caravan_safe_conducts = {
+	estate = nobles_estate
+	potential = {
+		OR = {
+			has_or_had_tag = XBI
+		}
+	}
+	country_modifier = {
+		global_nobles_estate_power = 0.10
+		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_trade_through_owned_territory_efficiency = 0.045
+		country_cabinet_efficiency = 0.015
+		nobles_estate_max_tax = -0.04
+	}
+}
+
+antq_omanite_wadi_water_rotations = {
+	estate = peasants_estate
+	potential = {
+		OR = {
+			has_or_had_tag = OMN
+		}
+	}
+	country_modifier = {
+		global_peasants_estate_power = 0.12
+		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_monthly_food_modifier = 0.03
+		global_production_efficiency = 0.02
+		global_monthly_control = -0.0005
+	}
+}

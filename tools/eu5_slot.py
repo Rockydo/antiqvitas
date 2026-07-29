@@ -247,6 +247,7 @@ def acquire(
     fingerprint: str | None = None,
     scope: str = "transaction",
     allow_inherited: bool = True,
+    check_existing_game: bool = True,
 ) -> SlotLease:
     """Acquire immediately or raise SlotBusy; this function never waits."""
     root = root.resolve()
@@ -290,7 +291,7 @@ def acquire(
                 raise SlotBusy(current)
             continue
         _atomic_json(_owner_path(root), owner)
-        unmanaged = configured_game_processes(root)
+        unmanaged = configured_game_processes(root) if check_existing_game else []
         if unmanaged:
             release_token(root, token)
             raise SlotBusy(_unmanaged_owner(unmanaged))

@@ -32,4 +32,11 @@ international_organization_manager = {
 		members = { XAA }
 	}
 
+	add_international_organization = {
+		type = antq_arabian_route_exchanges
+		creation_date = 1.1.1
+		map_color = hsv360 { 30 50 70 }
+		members = { NAB XBI HIM QAT XBJ KIN XEQ AGR GRH XER OMN BED }
+	}
+
 }

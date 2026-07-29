@@ -27,6 +27,12 @@ EXPECTED_BUILD = "24187685"
 EXPECTED_SHA256 = "610D35361A27253F93EBF6EC3F74247124C998A859B0E6D2BC8908D8741BBD1F"
 EXPECTED_TYPE_COUNT = 1348
 PILOT_ACTION = "endow_public_games"
+ARABIAN_ROUTE_ACTIONS = (
+    "antq_negotiate_route_safe_conduct",
+    "antq_coordinate_cistern_repairs",
+    "antq_exchange_route_intelligence",
+    "antq_settle_transit_incident",
+)
 
 
 def message_block(message_type: str) -> str:
@@ -49,8 +55,12 @@ def scoped_types(scope: str) -> tuple[str, ...]:
     engines, roster = load_tag_maps()
     decisions = load_decisions()
     validate(decisions, engines, roster)
-    message_types = tuple(f"PERFORM_antq_{decision.identifier}_ACTION" for decision in decisions)
-    if len(message_types) != EXPECTED_COUNT or len(set(message_types)) != EXPECTED_COUNT:
+    decision_types = tuple(f"PERFORM_antq_{decision.identifier}_ACTION" for decision in decisions)
+    message_types = decision_types + tuple(
+        f"PERFORM_{action}_ACTION" for action in ARABIAN_ROUTE_ACTIONS
+    )
+    expected = EXPECTED_COUNT + len(ARABIAN_ROUTE_ACTIONS)
+    if len(message_types) != expected or len(set(message_types)) != expected:
         raise ValueError("M11 full message registry does not match the validated decision ledger")
     return message_types
 

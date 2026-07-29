@@ -50,6 +50,12 @@ BORNEO_ATLAS = (
     / "assets_queue/generated_sources/"
     "antq_doctrine_borneo_late_prehistoric_traditions_fourup.png"
 )
+ARABIAN_ATLAS = (
+    ROOT / "assets_queue/arabia_mechanics/sources/arabia_doctrines_north_01.png"
+)
+SOUTH_ARABIAN_ATLAS = (
+    ROOT / "assets_queue/arabia_mechanics/sources/arabia_doctrines_south_01.png"
+)
 CONTACT_SHEET = (
     ROOT / "docs/m12/religious_family_doctrines_contact_sheet.png"
 )
@@ -136,6 +142,14 @@ DIRECT_ATLASES = {
     "antq_doctrine_borneo_late_prehistoric_traditions_river_portage_compacts": (BORNEO_ATLAS, 1),
     "antq_doctrine_borneo_late_prehistoric_traditions_maritime_pottery_exchange": (BORNEO_ATLAS, 2),
     "antq_doctrine_borneo_late_prehistoric_traditions_iron_hearth_obligations": (BORNEO_ATLAS, 3),
+    "antq_doctrine_arabian_polytheism_sanctuary_leagues": (ARABIAN_ATLAS, 0),
+    "antq_doctrine_arabian_polytheism_aniconic_betyls": (ARABIAN_ATLAS, 1),
+    "antq_doctrine_arabian_polytheism_caravan_vows": (ARABIAN_ATLAS, 2),
+    "antq_doctrine_arabian_polytheism_rain_and_pasture_rites": (ARABIAN_ATLAS, 3),
+    "antq_doctrine_south_arabian_religion_temple_confederacies": (SOUTH_ARABIAN_ATLAS, 0),
+    "antq_doctrine_south_arabian_religion_incense_vows": (SOUTH_ARABIAN_ATLAS, 1),
+    "antq_doctrine_south_arabian_religion_irrigation_observance": (SOUTH_ARABIAN_ATLAS, 2),
+    "antq_doctrine_south_arabian_religion_pilgrimage_sanctuaries": (SOUTH_ARABIAN_ATLAS, 3),
 }
 
 

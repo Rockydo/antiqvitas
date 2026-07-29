@@ -80,6 +80,10 @@ SHEETS = (
         "antq_angrivarian_spear_following", "antq_suebian_household_retinue",
         "antq_baltic_hillfort_spearmen", "antq_baltic_forest_skirmishers",
     )),
+    Sheet("unit_sheet_14_arabia.png", (
+        "antq_nabataean_caravan_guards", "antq_north_arabian_camel_scouts",
+        "antq_south_arabian_highland_levies", "antq_omanite_coastal_warbands",
+    )),
 )
 
 CATEGORY_SUFFIXES = (
@@ -286,8 +290,8 @@ def validate() -> bool:
             failures.append("M7 art roster differs from active unit-quarantine definitions")
         if set(index) != active:
             failures.append("four-up unit-art mapping does not exactly cover active ancient units")
-        if len(SHEETS) != 13 or sum(len(sheet.keys) for sheet in SHEETS) != 52:
-            failures.append("unit-art source contract is not 13 sheets / 52 icons")
+        if len(SHEETS) != 14 or sum(len(sheet.keys) for sheet in SHEETS) != 56:
+            failures.append("unit-art source contract is not 14 sheets / 56 icons")
         for sheet in SHEETS:
             path = SOURCE_DIR / sheet.filename
             if not path.is_file():

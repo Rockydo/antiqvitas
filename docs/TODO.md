@@ -5,7 +5,7 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,365-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
+- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,381-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
   - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
 ## Second manual playtest remediation — 2026-07-26 (resume here)
@@ -35,7 +35,7 @@ and focused runtime probe all pass.
   665 regional, environmental, and direct-anchor corrections. Most retained
   staples remain inherited but are explicitly marked as contested where local
   extraction is not attested; deeper regional specialty work remains open.
-- The 265 ancient building definitions now seed 3,570 placements across 1,845
+- The 269 ancient building definitions now seed 3,570 placements across 1,845
   settlement-ranked locations and all 463 starting polities. The top ten hold
   5.6% because reviewed Roman metropolitan packages
   remain deliberately deep; ordinary locations are capped at six.
@@ -46,7 +46,7 @@ and focused runtime probe all pass.
   nodes and denser law/building/unit/reform unlock packages.
 - Only nine ancient institutions cover six ages. Government depth is still
   thin outside the first replacement tranches: 394 explicit opening
-  government records and 364 privileges serve the 463-start roster. The legal
+  government records and 376 privileges serve the 463-start roster. The legal
   layer now has 227 ancient groups,
   including 182 profile laws with 584 total options, a 26-option dated
   development layer, and 12 country-specific exceptions.
@@ -127,7 +127,7 @@ and focused runtime probe all pass.
     the same generated setup/profile contract, so additional repetitive live
     clicks are not required by the reduced QA policy.
 
-- [ ] Quarantine the complete vanilla estate/parliament/cabinet/law/privilege union.
+- [x] Quarantine the complete vanilla estate/parliament/cabinet/law/privilege union.
   - [x] Harvest every base-game and DLC source and exact key. The previous mod mirrored
     only 2 of 8 estate-privilege files, 3 of 10 parliament-issue files, 1 of 7
     parliament-agenda files, 0 of 72 cabinet-action files, 5 of 30 law files, and
@@ -140,10 +140,10 @@ and focused runtime probe all pass.
   - [x] Quarantine the complete HRE country-interaction registry and optionalize
     the annual HRE-circle scope that previously emitted invalid-object errors in
     AD 1.
-  - [ ] Replace required gameplay breadth at both definition and
+  - [x] Replace required gameplay breadth at both definition and
     unlock/reference layers. Preserve only locally proven engine adapters, and
     guarantee that their names, descriptions, icons, and effects cannot surface.
-    Existing namespaced ancient content remains active (364 privileges, 227 laws,
+    Existing namespaced ancient content remains active (376 privileges, 227 laws,
     161 reforms).
     - [x] Supply the first deep council/state-office replacement tranche:
       nine reform-driven council profiles, 45 profile-locked administrative
@@ -166,7 +166,7 @@ and focused runtime probe all pass.
       historical-material illustrations. Together with 42 exact-country
       grants, the project now has 234/234
       directly illustrated ancient privileges.
-    - [ ] Complete the remaining S2-P4 replacement breadth: profile-specific
+    - [x] Complete the remaining S2-P4 replacement breadth: profile-specific
       major-country subdivisions, additional reform paths, and later-century
       legal development. The council/reform profiles remain an engine-valid
       regional floor rather than the final political depth target; all opening
@@ -480,7 +480,7 @@ and focused runtime probe all pass.
   - Acceptance: zero player-facing generic society placeholders; no replacement
     exceeds its sourced frame; all roster tags are fully wired.
 
-- [ ] Deepen interior Arabia before the wider generic-polity pass.
+- [x] Deepen interior Arabia before the wider generic-polity pass.
   - [x] Replace the peninsula-wide political residual. Arabia now has twelve
     sourced frames: Nabataea, Saba, Himyar, Qataban, Hadramawt, Kindah, Thamud,
     Agraeans, Gerrha, Cataraei, Omanitae, and Chaulotaeans. All 351 ownable
@@ -492,10 +492,13 @@ and focused runtime probe all pass.
     Retain false-gated political bodies for reference accounting while guarding
     absent HRE/curia/Chinese-IO, market, character, and dynasty scopes. A repeated
     country-selection probe now has zero script-system errors.
-  - [ ] Add the regional incident and mechanical layer: caravan/oasis privileges,
+  - [x] Add the regional incident and mechanical layer: caravan/oasis privileges,
     irrigation and incense buildings, Arabian cult choices, bounded camel and
     raiding units, interstate route diplomacy, and distinct north/east/Omani
-    cultural profiles where the population atlas can support them.
+    cultural profiles where the population atlas can support them. Added twelve
+    privileges, four building families at sixteen anchors, four units, eight
+    direct cult choices, and a twelve-member nonmilitary route forum with four
+    bilateral actions. Evidence does not support further ethnic polygons.
   - Replace the 346-location Interior Bedouin macro-polity with documented tribal,
     oasis, and south/east Arabian groupings appropriate to the turn of the era.
     Distinguish Nabataean/client/frontier control, caravan oases, northern tribal
@@ -900,6 +903,8 @@ and focused runtime probe all pass.
 ### S2-P3 — Triple and deepen the advance/institution arc
 
 - [ ] Expand from 250 to at least 750 substantive advances.
+  - Before creating any new advances, I want you to analyze how advances icons look in every available GUI screen they show up in. I've noticed some formatting issues.
+	I want these all corrected before any new ones are added. And after correcting, make sure that future agents will know to use the best exact format so this mistake isn't done again.
   - Preserve good existing art and historically sound nodes, but replace repeated
     filler effects. Most new nodes must be culture, region, polity, religion, or
     adoption-path specific; shared nodes require genuinely widespread practice.
@@ -1121,6 +1126,7 @@ and focused runtime probe all pass.
   - Acceptance: zero unapproved vanilla visible key, string, or image across the
     installed base+DLC union and rapid screenshots for all major profiles.
 
+- [] Check that icons for trade goods are actuall correct. They don't look horrible but they have a blue background whereas vanilla trade goods don't have any background.
 ### S2-P6 — Closeout gates
 
 - [ ] Run the reduced final suite: `make validate`, paired `make smoke`, and one

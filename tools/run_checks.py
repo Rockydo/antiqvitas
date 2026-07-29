@@ -50,6 +50,7 @@ VALIDATE_COMMANDS = (
     Command("tools/world_roster.py"),
     Command("tools/generate_tag_map.py", ("--check",)),
     Command("tools/s2_arabia_granularity.py", ("--check",)),
+    Command("tools/s2_arabia_mechanics.py", ("--check",)),
     Command("tools/s2_britain_ireland_granularity.py", ("--check",)),
     Command("tools/s2_northern_granularity.py", ("--check",)),
     Command("tools/s2_eastern_granularity.py", ("--check",)),

@@ -4397,6 +4397,121 @@ antq_reg_tesserae_kiln = {
 	construction_demand = guild_construction
 }
 
+antq_reg_south_arabian_terrace_sluices = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = laborers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = infrastructure_category
+	employment_size = generic_peasant_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = infrastructure_build_time
+	modifier = {
+		local_population_capacity = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_south_arabian_terrace_sluices_maintenance = {
+			stone = 0.12
+			clay = 0.06
+			tools = 0.04
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_arabian_caravan_station = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = trade_category
+	employment_size = trade_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = market_build_time
+	modifier = {
+		local_merchant_capacity = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_arabian_caravan_station_maintenance = {
+			lumber = 0.07
+			fiber_crops = 0.05
+			pottery = 0.04
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_aromatic_resin_sorting_house = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_merchant_power = 0.015
+	}
+	unique_production_methods = {
+		antq_reg_aromatic_resin_sorting_house_maintenance = {
+			incense = 0.12
+			pottery = 0.05
+			lumber = 0.03
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_eastern_arabian_aflaj = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = laborers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = infrastructure_category
+	employment_size = generic_peasant_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = infrastructure_build_time
+	modifier = {
+		local_life_expectancy = 0.01
+		local_population_capacity = 0.015
+	}
+	unique_production_methods = {
+		antq_reg_eastern_arabian_aflaj_maintenance = {
+			stone = 0.10
+			clay = 0.06
+			tools = 0.04
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
 antq_reg_villa_rustica = {
 	audio_tier = 2
 	is_special = no

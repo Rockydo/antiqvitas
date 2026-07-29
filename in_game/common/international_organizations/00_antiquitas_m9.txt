@@ -107,6 +107,27 @@ antq_panhellenic_games = {
 	}
 }
 
+antq_arabian_route_exchanges = {
+	has_target = no
+	unique = yes
+	expel_members_who_are_targets_of_other_members = no
+	show_on_diplomatic_map = no
+	has_leader_country = no
+	create_visible_trigger = { always = no }
+	invite_visible_trigger = { always = no }
+	can_declare_war = { always = no }
+	can_join_trigger = { always = no }
+	can_leave_trigger = { always = no }
+	auto_leave_trigger = { always = no }
+	auto_disband_trigger = { always = no }
+	on_joined = {
+	}
+	on_left = {
+	}
+	variables = {
+	}
+}
+
 antq_christian_church = {
 	has_target = no
 	unique = yes

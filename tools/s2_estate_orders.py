@@ -402,6 +402,18 @@ XIO|xiongnu|han_frontier_stipend_treaty|burghers_estate|Han Frontier Stipend Tre
 XIO|xiongnu|independent_western_tribute_circuit|tribes_estate|Independent Western Tribute Circuit|The chanyu sustains authority through western subordinate peoples, oasis courts, escorts, route intelligence, and retained military freedom rather than Han stipends.|global_tribes_estate_power=0.13|tribes_estate_target_satisfaction=medium_privilege_target_satisfaction|global_levy_size_modifier=0.045|global_trade_through_owned_territory_efficiency=0.04|global_monthly_control=-0.001|P8.3;P9;P11;P13;CAH-XI;IRAN-XIO|secure|Xiongnu influence in the Western Regions is secure but fluctuating; the circuit does not claim uniform direct rule over every oasis.|xiongnu_major_privileges_ii_atlas.png|0c5c55a3a08b10d457144d709dc229039fa3042e38e82899aaf62d6afc1b1787|3|han_frontier_stipend_treaty
 XIO|xiongnu|chanyu_gift_redistribution|nobles_estate|Chanyu Gift Redistribution|Prestige silk, vessels, fittings, livestock, and captured goods pass through the chanyu's court for measured redistribution, strengthening central brokerage.|global_nobles_estate_power=0.09|nobles_estate_target_satisfaction=medium_privilege_target_satisfaction|country_cabinet_efficiency=0.045|global_monthly_control=0.001|nobles_estate_max_tax=-0.035|P8.3;P9;P11;P13;BHR;XIONGNU-CONFEDERACY|secure|Central redistribution is a secure political mechanism; exact shares and a permanent treasury administration are not asserted.|xiongnu_major_privileges_ii_atlas.png|0c5c55a3a08b10d457144d709dc229039fa3042e38e82899aaf62d6afc1b1787|4|lineage_gift_retention_quotas
 XIO|xiongnu|lineage_gift_retention_quotas|tribes_estate|Lineage Gift-Retention Quotas|Confederated lineages retain a larger stated share of gifts, livestock, and captured goods in return for explicit riders, remounts, and hospitality.|global_tribes_estate_power=0.15|tribes_estate_target_satisfaction=medium_privilege_target_satisfaction|global_levy_size_modifier=0.055|land_morale_modifier=0.015|global_monthly_control=-0.001|P8.3;P9;P11;P13;BHR;XIONGNU-CONFEDERACY|contested|Lineage retention and service bargaining are secure in principle; quantified quotas are gameplay abstractions.|xiongnu_major_privileges_ii_atlas.png|0c5c55a3a08b10d457144d709dc229039fa3042e38e82899aaf62d6afc1b1787|5|chanyu_gift_redistribution
+AGR|agraean|oasis_watch_obligations|tribes_estate|Oasis Watch Obligations|Agraean route communities maintain watch rotations at wells and interior caravan halts in return for recognized access to pasture and water.|global_tribes_estate_power=0.11|tribes_estate_target_satisfaction=medium_privilege_target_satisfaction|global_levy_size_modifier=0.035|global_monthly_control=-0.0005|global_pop_food_consumption=-0.008|P8.5;P11;P13;STR-ARAB;THAJ-ARCH|contested|The route and oasis function is secure at regional scale; formal Agraean watch offices and fixed quotas are not asserted.|arabia_privileges_north_01.png|4365986adcbac3a7fe1ebef66d4e9fcab04af596fa8b2b947b3afc15fee9ef43|0|
+BED|chaulotaean|pasture_route_compacts|peasants_estate|Pasture-Route Compacts|Chaoulotaean pastoral households receive bounded passage between seasonal grazing grounds while provisioning nearby caravan routes and wells.|global_peasants_estate_power=0.10|peasants_estate_target_satisfaction=medium_privilege_target_satisfaction|global_monthly_food_modifier=0.025|global_production_efficiency=0.015|global_monthly_control=-0.0005|P8.5;P11;P13;STR-ARAB;PTO-ARAB|contested|Ancient geography supports a pastoral regional frame, not a uniform written compact or permanently fixed migration corridor.|arabia_privileges_north_01.png|4365986adcbac3a7fe1ebef66d4e9fcab04af596fa8b2b947b3afc15fee9ef43|1|
+KIN|kindite|interior_caravan_escort_terms|nobles_estate|Interior Caravan Escort Terms|Kindite leading households furnish mounted escorts and route intelligence for interior caravans while retaining negotiated shares of tolls and gifts.|global_nobles_estate_power=0.11|nobles_estate_target_satisfaction=medium_privilege_target_satisfaction|global_levy_size_modifier=0.04|land_morale_modifier=0.0125|nobles_estate_max_tax=-0.04|P8.5;P11;P13;STR-ARAB;PTO-ARAB|contested|Mounted protection and inland exchange are bounded regional adaptations; the privilege does not project later Kindite institutions into AD 1.|arabia_privileges_north_01.png|4365986adcbac3a7fe1ebef66d4e9fcab04af596fa8b2b947b3afc15fee9ef43|2|
+THM|tamudaean|well_access_guarantees|tribes_estate|Well-Access Guarantees|Thamudic communities guarantee reciprocal access to marked wells and sheltered passages while sharing local warning duties along exposed routes.|global_tribes_estate_power=0.12|tribes_estate_target_satisfaction=medium_privilege_target_satisfaction|global_pop_food_consumption=-0.009|global_levy_size_modifier=0.025|global_monthly_control=-0.0005|P8.5;P11;P13;STR-ARAB;PTO-ARAB|contested|Inscriptions and geography support dispersed communities and route use, but not one Thamudic state or codified water law.|arabia_privileges_north_01.png|4365986adcbac3a7fe1ebef66d4e9fcab04af596fa8b2b947b3afc15fee9ef43|3|
+GRH|gerrhaean|aromatic_transit_measures|burghers_estate|Aromatic Transit Measures|Gerrhaean merchant houses supervise measures and storage for aromatics arriving across Arabia before redistribution through Gulf exchange networks.|global_burghers_estate_power=0.13|burghers_estate_target_satisfaction=medium_privilege_target_satisfaction|global_trade_through_owned_territory_efficiency=0.06|global_production_efficiency=0.025|burghers_estate_max_tax=-0.06|P8.5;P11;P13;STR-ARAB;OCD-GERRHA;THAJ-ARCH|secure|Gerrha's long-distance aromatic trade is secure; standardized offices and exact fiscal shares remain gameplay abstractions.|arabia_privileges_east_01.png|013a468f68cd38e9a7f4b3ce16af15f268f74260a4b39081a23c9d6f6f7e98b6|0|oasis_customs_watch
+GRH|gerrhaean|oasis_customs_watch|burghers_estate|Oasis Customs Watch|Gerrhaean customs households guard approaches to the al-Hasa oasis and register caravans without claiming direct control over every desert route.|global_burghers_estate_power=0.12|burghers_estate_target_satisfaction=medium_privilege_target_satisfaction|country_cabinet_efficiency=0.02|global_monthly_control=0.0005|burghers_estate_max_tax=-0.05|P8.5;P11;P13;STR-ARAB;OCD-GERRHA;THAJ-ARCH|contested|Customs supervision follows the attested entrepot role; the watch organization and coverage are bounded gameplay adapters.|arabia_privileges_east_01.png|013a468f68cd38e9a7f4b3ce16af15f268f74260a4b39081a23c9d6f6f7e98b6|1|aromatic_transit_measures
+QTR|cataraean|gulf_anchorage_safe_conducts|burghers_estate|Gulf Anchorage Safe-Conducts|Cataraean harbor households recognize pilots and sheltered anchorages for Gulf traffic while preserving local toll and provisioning rights.|global_burghers_estate_power=0.11|burghers_estate_target_satisfaction=medium_privilege_target_satisfaction|global_trade_through_owned_territory_efficiency=0.05|country_cabinet_efficiency=0.015|burghers_estate_max_tax=-0.05|P8.5;P11;P13;STR-ARAB;PTO-ARAB|contested|The Gulf port frame is source-bounded; the privilege does not claim a recovered harbor code or uninterrupted control of Qatar.|arabia_privileges_east_01.png|013a468f68cd38e9a7f4b3ce16af15f268f74260a4b39081a23c9d6f6f7e98b6|2|
+OMN|omanite|coastal_pilotage_compacts|burghers_estate|Coastal Pilotage Compacts|Omanite coastal communities provide pilots, watering knowledge, and harbor provisioning for traffic between the Gulf and Arabian Sea.|global_burghers_estate_power=0.11|burghers_estate_target_satisfaction=medium_privilege_target_satisfaction|global_trade_through_owned_territory_efficiency=0.05|global_pop_food_consumption=-0.006|burghers_estate_max_tax=-0.05|P8.6;P11;P13;STR-ARAB;PTO-ARAB|contested|Maritime exchange and coastal watering are secure regional practices; a single Oman-wide pilotage institution is not asserted.|arabia_privileges_east_01.png|013a468f68cd38e9a7f4b3ce16af15f268f74260a4b39081a23c9d6f6f7e98b6|3|
+QAT|qatabanian|timna_transit_assessments|burghers_estate|Timna Transit Assessments|Qatabanian merchant and temple households assess caravan goods passing through Timna while financing stores and route protection.|global_burghers_estate_power=0.13|burghers_estate_target_satisfaction=medium_privilege_target_satisfaction|global_trade_through_owned_territory_efficiency=0.06|country_cabinet_efficiency=0.02|burghers_estate_max_tax=-0.06|P8.5;P11;P13;UNESCO-QATABAN;UNESCO-INCENSE|secure|Timna's Qatabanian route role is secure; exact assessment rates and institutional division are not reconstructed.|arabia_privileges_south_01.png|6ad475653d6fc0a6ed7b452bbbf60c11fbb844680744d735d21c940dabd93dde|0|
+HAD|hadramite|shabwa_incense_store_custody|burghers_estate|Shabwa Incense-Store Custody|Hadramite storehouse custodians secure aromatics assembled around Shabwa and coordinate their guarded movement toward western and coastal routes.|global_burghers_estate_power=0.13|burghers_estate_target_satisfaction=medium_privilege_target_satisfaction|global_production_efficiency=0.03|global_trade_through_owned_territory_efficiency=0.055|burghers_estate_max_tax=-0.06|P8.5;P11;P13;UNESCO-INCENSE;STR-ARAB|secure|Shabwa and Hadramawt's incense role is secure; this does not reconstruct a complete royal warehouse administration.|arabia_privileges_south_01.png|6ad475653d6fc0a6ed7b452bbbf60c11fbb844680744d735d21c940dabd93dde|1|
+SAB|sabaean|interkingdom_caravan_safe_conducts|nobles_estate|Interkingdom Caravan Safe-Conducts|Sabaean route authorities exchange bounded guarantees with neighboring South Arabian kingdoms for caravans crossing contested jurisdictions.|global_nobles_estate_power=0.10|nobles_estate_target_satisfaction=medium_privilege_target_satisfaction|global_trade_through_owned_territory_efficiency=0.045|country_cabinet_efficiency=0.015|nobles_estate_max_tax=-0.04|P8.5;P11;P13;UNESCO-SABA;UNESCO-INCENSE|contested|Interkingdom exchange is secure, but a permanent peninsula-wide treaty system or uniform safe-conduct formula is not asserted.|arabia_privileges_south_01.png|6ad475653d6fc0a6ed7b452bbbf60c11fbb844680744d735d21c940dabd93dde|2|
+OMN|omanite|wadi_water_rotations|peasants_estate|Wadi Water Rotations|Omanite oasis households coordinate channel clearing and rotational access to wadi water while retaining strong local stewardship.|global_peasants_estate_power=0.12|peasants_estate_target_satisfaction=medium_privilege_target_satisfaction|global_monthly_food_modifier=0.03|global_production_efficiency=0.02|global_monthly_control=-0.0005|P8.6;P11;P13;STR-ARAB;CAH-XI|contested|Early irrigation practice is secure regionally; later formal aflaj institutions and exact rotations are not back-projected unchanged into AD 1.|arabia_privileges_south_01.png|6ad475653d6fc0a6ed7b452bbbf60c11fbb844680744d735d21c940dabd93dde|3|
 """.strip()
 
 
@@ -556,7 +568,11 @@ def content_ledger() -> str:
             country_item_key(privilege), privilege["estate"], privilege["name"],
             privilege["description"], privilege["modifiers"], privilege["source"],
             privilege["confidence"], privilege["note"], "", privilege["engine_tag"],
-            f"antq_{privilege['profile']}_{privilege['exclusive_slug']}",
+            (
+                f"antq_{privilege['profile']}_{privilege['exclusive_slug']}"
+                if privilege["exclusive_slug"]
+                else ""
+            ),
         ))
     return csv_text(
         (
@@ -701,14 +717,20 @@ def build_art() -> None:
             raise ValueError(f"source atlas hash drift: {atlas.relative_to(ROOT)}")
         with Image.open(atlas) as image:
             width, height = image.size
-            if width % 3 or height % 2 or width < 1200 or height < 1000:
-                raise ValueError(f"{atlas.relative_to(ROOT)} is not a usable 3x2 atlas")
-            cell_width, cell_height = width // 3, height // 2
+            if width == height and width % 2 == 0 and width >= 1000:
+                columns, rows = 2, 2
+            elif width % 3 == 0 and height % 2 == 0 and width >= 1200 and height >= 1000:
+                columns, rows = 3, 2
+            else:
+                raise ValueError(f"{atlas.relative_to(ROOT)} is not a usable 2x2 or 3x2 atlas")
+            cell_width, cell_height = width // columns, height // rows
             rgb = image.convert("RGB")
             for privilege in entries:
                 key = country_item_key(privilege)
                 cell = int(privilege["cell"])
-                x, y = (cell % 3) * cell_width, (cell // 3) * cell_height
+                if cell >= columns * rows:
+                    raise ValueError(f"{key} uses unavailable atlas cell {cell}")
+                x, y = (cell % columns) * cell_width, (cell // columns) * cell_height
                 available_width, available_height = cell_width - 16, cell_height - 16
                 target_aspect = 64 / 90
                 if available_width / available_height > target_aspect:
@@ -779,8 +801,9 @@ def validate() -> list[str]:
     return failures
 
 
-def write() -> None:
-    build_art()
+def write(*, build_images: bool = True) -> None:
+    if build_images:
+        build_art()
     for path, rendered in expected_files().items():
         path.parent.mkdir(parents=True, exist_ok=True)
         encoding = "utf-8-sig" if path.suffix == ".yml" or path == CUSTOM_LOC_OUT else "utf-8"
@@ -791,11 +814,14 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--write", action="store_true")
+    mode.add_argument("--write-ledgers-only", action="store_true")
     mode.add_argument("--check", action="store_true")
     args = parser.parse_args()
     try:
         if args.write:
             write()
+        elif args.write_ledgers_only:
+            write(build_images=False)
         failures = validate()
     except (OSError, ValueError, json.JSONDecodeError, subprocess.CalledProcessError) as exc:
         failures = [str(exc)]

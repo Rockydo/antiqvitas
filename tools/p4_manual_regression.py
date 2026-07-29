@@ -184,7 +184,7 @@ def build_report() -> dict[str, object]:
     )
     estate_orders = rows(ROOT / "docs/m6/estate_order_privileges.csv")
     require(
-        len(estate_orders) == 318 and len({row["key"] for row in estate_orders}) == 318,
+        len(estate_orders) == 330 and len({row["key"] for row in estate_orders}) == 330,
         "ancient estate-order privilege breadth regressed",
         failures,
     )

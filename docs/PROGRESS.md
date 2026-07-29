@@ -7897,3 +7897,17 @@ reviewed 128px BC7 DDS.
   ownership; reserved `MOC` for the dated Moche formation and used `OLC`.
 - Roster: 463; cultures: 644; religions: 51; literal placeholders: 0.
 - `make validate` passes 133/133; paired smoke reports zero mod-only errors.
+
+## 2026-07-29 - Deepened interior Arabia
+
+- Added 12 profile privileges, four building families at 16 anchors, four
+  units, eight direct cult choices, and four bilateral actions in a 12-member
+  nonmilitary route forum.
+- Generated 32 direct assets from eight four-up sheets using installed EU5
+  category references; all specialist art audits pass.
+- Kept north/east/Omani distinctions institutional where the evidence does not
+  support new ethnic polygons.
+- Isolated the shared-slot self-test so static validation remains concurrent
+  while another repository owns EU5.
+- Validation passes 135/135; paired smoke reaches both menus with zero
+  mod-unique lines.

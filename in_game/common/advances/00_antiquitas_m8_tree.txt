@@ -1466,6 +1466,10 @@ antq_professional_standing_armies = {
 	unlock_unit = antq_iberian_swordsmen
 	unlock_unit = antq_dacian_falxmen
 	unlock_unit = antq_armenian_horse
+	unlock_unit = antq_nabataean_caravan_guards
+	unlock_unit = antq_north_arabian_camel_scouts
+	unlock_unit = antq_south_arabian_highland_levies
+	unlock_unit = antq_omanite_coastal_warbands
 	unlock_law = antq_s2_roman_coinage_law
 	unlock_law = antq_s2_han_local_rule_law
 	unlock_law = antq_s2_iranian_dependent_labor_law
@@ -2801,6 +2805,7 @@ antq_monsoon_navigation = {
 	unlock_building = antq_reg_stone_yard
 	unlock_building = antq_reg_shipyard
 	unlock_building = antq_reg_silk_loom
+	unlock_building = antq_reg_jeweler
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
@@ -2831,7 +2836,6 @@ antq_red_sea_piloting = {
 	unlock_law = antq_s2_eastern_household_law
 	unlock_law = antq_s2_transoceanic_land_law
 	unlock_law = antq_s2_transoceanic_external_law
-	unlock_building = antq_reg_jeweler
 	unlock_building = antq_reg_cotton_weavery
 	unlock_building = antq_reg_linen_weavery
 	unlock_building = antq_reg_alum_dyehouse
@@ -2842,6 +2846,7 @@ antq_red_sea_piloting = {
 	unlock_building = antq_reg_amphora_depot
 	unlock_building = antq_reg_grain_mill
 	unlock_building = antq_reg_ropewalk
+	unlock_building = antq_reg_brickworks
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
@@ -2938,6 +2943,15 @@ antq_desert_waystations = {
 	unlock_estate_privilege = antq_batanean_tetrarchic_seal_custody
 	unlock_estate_privilege = antq_commagenean_royal_seal_custody
 	unlock_estate_privilege = antq_emesan_dynastic_seal_custody
+	unlock_estate_privilege = antq_agraean_oasis_watch_obligations
+	unlock_estate_privilege = antq_chaulotaean_pasture_route_compacts
+	unlock_estate_privilege = antq_kindite_interior_caravan_escort_terms
+	unlock_estate_privilege = antq_tamudaean_well_access_guarantees
+	unlock_estate_privilege = antq_gerrhaean_aromatic_transit_measures
+	unlock_estate_privilege = antq_cataraean_gulf_anchorage_safe_conducts
+	unlock_estate_privilege = antq_omanite_coastal_pilotage_compacts
+	unlock_estate_privilege = antq_qatabanian_timna_transit_assessments
+	unlock_estate_privilege = antq_hadramite_shabwa_incense_store_custody
 	starting_technology_level = 2
 	requires = antq_red_sea_piloting
 	ai_weight = { add = 90 }
@@ -2983,7 +2997,7 @@ antq_coin_exchange = {
 	global_trade_through_owned_territory_efficiency = 0.05
 	unlock_estate_privilege = antq_nabataean_merchant_artisan_safe_conducts
 	unlock_estate_privilege = antq_himyarite_incense_port_safe_conducts
-	unlock_estate_privilege = antq_sabaean_sanctuary_offering_inventories
+	unlock_estate_privilege = antq_sabaean_incense_caravan_safe_conducts
 	unlock_estate_privilege = antq_judean_temple_store_inventories
 	unlock_estate_privilege = antq_galilean_ritual_store_inventories
 	unlock_estate_privilege = antq_batanean_sanctuary_store_inventories
@@ -3042,11 +3056,12 @@ antq_principate_exchange = {
 	unlock_estate_privilege = antq_royal_sanctuary_patronage
 	unlock_estate_privilege = antq_nabataean_oasis_vineyard_water_compacts
 	unlock_estate_privilege = antq_himyarite_terrace_cultivator_water_compacts
-	unlock_estate_privilege = antq_sabaean_incense_caravan_safe_conducts
 	unlock_estate_privilege = antq_judean_pilgrim_market_safe_conducts
 	unlock_estate_privilege = antq_galilean_lake_market_measures
 	unlock_estate_privilege = antq_batanean_caravan_craft_safe_conducts
 	unlock_estate_privilege = antq_emesan_caravan_city_measures
+	unlock_estate_privilege = antq_gerrhaean_oasis_customs_watch
+	unlock_estate_privilege = antq_omanite_wadi_water_rotations
 	starting_technology_level = 3
 	requires = antq_desert_waystations
 	ai_weight = { add = 80 }
@@ -3058,7 +3073,6 @@ antq_silk_road_caravanserais = {
 	depth = 0
 	research_cost = 4.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_marble_yard
 	unlock_building = antq_reg_wool_carder
 	unlock_building = antq_reg_mordant_dyehouse
 	unlock_building = antq_reg_wheelwright
@@ -3068,6 +3082,8 @@ antq_silk_road_caravanserais = {
 	unlock_building = antq_reg_saddlery
 	unlock_building = antq_reg_stuccoworks
 	unlock_building = antq_reg_lead_foundry
+	unlock_building = antq_reg_lapidary
+	unlock_building = antq_reg_perfumery
 	ai_weight = { add = 100 }
 }
 
@@ -3077,7 +3093,6 @@ antq_long_distance_credit = {
 	depth = 0
 	research_cost = 4.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_brickworks
 	unlock_building = antq_reg_tile_yard
 	unlock_building = antq_reg_incense_workshop
 	unlock_building = antq_reg_basketry
@@ -3088,6 +3103,7 @@ antq_long_distance_credit = {
 	unlock_building = antq_reg_oil_bottler
 	unlock_building = antq_reg_garum_workshop
 	unlock_building = antq_reg_lime_kiln
+	unlock_building = antq_reg_marble_yard
 	ai_weight = { add = 100 }
 }
 
@@ -3248,8 +3264,6 @@ antq_crisis_trade_routes = {
 	depth = 0
 	research_cost = 6.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_lapidary
-	unlock_building = antq_reg_perfumery
 	unlock_building = antq_reg_wax_workshop
 	unlock_building = antq_reg_sailmaker
 	unlock_building = antq_reg_quernworks
@@ -3259,6 +3273,8 @@ antq_crisis_trade_routes = {
 	unlock_building = antq_reg_tegula_kiln
 	unlock_building = antq_reg_hypocaust_yard
 	unlock_building = antq_reg_ferry_quay
+	unlock_building = antq_reg_saltworks
+	unlock_building = antq_reg_purple_dyehouse
 	ai_weight = { add = 100 }
 }
 
@@ -3268,8 +3284,6 @@ antq_debased_currency_exchange = {
 	depth = 0
 	research_cost = 6.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_saltworks
-	unlock_building = antq_reg_purple_dyehouse
 	unlock_building = antq_reg_iron_bloomery
 	unlock_building = antq_reg_tin_smelter
 	unlock_building = antq_reg_charcoal_hearth
@@ -3279,6 +3293,8 @@ antq_debased_currency_exchange = {
 	unlock_building = antq_reg_packsaddle_workshop
 	unlock_building = antq_reg_stone_carver
 	unlock_building = antq_reg_cooperage
+	unlock_building = antq_reg_spice_warehouse
+	unlock_building = antq_reg_flax_retting_yard
 	ai_weight = { add = 100 }
 }
 
@@ -3434,9 +3450,6 @@ antq_state_annona_routes = {
 	depth = 0
 	research_cost = 8.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_caravanserai
-	unlock_building = antq_reg_wharf_crane
-	unlock_building = antq_reg_pack_animal_yard
 	unlock_building = antq_reg_grain_weighhouse
 	unlock_building = antq_reg_bronze_vessel_shop
 	unlock_building = antq_reg_fineware_kiln
@@ -3445,6 +3458,9 @@ antq_state_annona_routes = {
 	unlock_building = antq_reg_loom_house
 	unlock_building = antq_reg_cauldron_smithy
 	unlock_building = antq_reg_barge_chandlery
+	unlock_building = antq_reg_combmaker
+	unlock_building = antq_reg_bell_foundry
+	unlock_building = antq_reg_oarwright
 	ai_weight = { add = 100 }
 }
 
@@ -3454,8 +3470,6 @@ antq_bureaucratic_customs = {
 	depth = 0
 	research_cost = 8.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_spice_warehouse
-	unlock_building = antq_reg_flax_retting_yard
 	unlock_building = antq_reg_bone_carver
 	unlock_building = antq_reg_hornworker
 	unlock_building = antq_reg_amber_carver
@@ -3464,6 +3478,9 @@ antq_bureaucratic_customs = {
 	unlock_building = antq_reg_reed_matmaker
 	unlock_building = antq_reg_lacquer_workshop
 	unlock_building = antq_reg_way_station
+	unlock_building = antq_reg_caravanserai
+	unlock_building = antq_reg_wharf_crane
+	unlock_building = antq_reg_pack_animal_yard
 	ai_weight = { add = 100 }
 }
 
@@ -3602,9 +3619,6 @@ antq_migration_market_links = {
 	depth = 0
 	research_cost = 10.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_combmaker
-	unlock_building = antq_reg_bell_foundry
-	unlock_building = antq_reg_oarwright
 	unlock_building = antq_reg_spindlework
 	unlock_building = antq_reg_torchmaker
 	unlock_building = antq_reg_sieve_maker
@@ -3613,6 +3627,9 @@ antq_migration_market_links = {
 	unlock_building = antq_reg_sail_needle_shop
 	unlock_building = antq_reg_pulley_workshop
 	unlock_building = antq_reg_fishing_tackle
+	unlock_building = antq_reg_feltworks
+	unlock_building = antq_reg_carpet_loom
+	unlock_building = antq_reg_cork_workshop
 	ai_weight = { add = 100 }
 }
 
@@ -3692,11 +3709,12 @@ antq_regional_caravans = {
 	depth = 0
 	research_cost = 12.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_feltworks
-	unlock_building = antq_reg_carpet_loom
-	unlock_building = antq_reg_cork_workshop
 	unlock_building = antq_reg_brushmaker
 	unlock_building = antq_reg_tesserae_kiln
+	unlock_building = antq_reg_south_arabian_terrace_sluices
+	unlock_building = antq_reg_arabian_caravan_station
+	unlock_building = antq_reg_aromatic_resin_sorting_house
+	unlock_building = antq_reg_eastern_arabian_aflaj
 	unlock_building = antq_reg_wool_drapery
 	unlock_building = antq_reg_silk_drapery
 	unlock_building = antq_reg_dye_finishing_house
@@ -6627,6 +6645,7 @@ antq_temple_city_almonries = {
 	unlock_estate_privilege = antq_royal_dynastic_hostage_compacts
 	unlock_estate_privilege = antq_nabataean_sanctuary_offering_inventories
 	unlock_estate_privilege = antq_himyarite_sanctuary_offering_inventories
+	unlock_estate_privilege = antq_sabaean_sanctuary_offering_inventories
 	starting_technology_level = 2
 	requires = antq_civic_associations
 	ai_weight = { add = 90 }
@@ -6648,6 +6667,7 @@ antq_synagogue_councils = {
 	global_pop_promotion_speed_modifier = 0.025
 	unlock_estate_privilege = antq_nabataean_route_oasis_watch_rotations
 	unlock_estate_privilege = antq_himyarite_route_tribal_watch_rotations
+	unlock_estate_privilege = antq_sabaean_dam_canal_water_compacts
 	starting_technology_level = 3
 	requires = antq_temple_city_almonries
 	ai_weight = { add = 80 }
@@ -6669,7 +6689,7 @@ antq_caravan_diaspora_quarters = {
 	global_pop_assimilation_speed_modifier = 0.025
 	unlock_estate_privilege = antq_nabataean_caravan_water_guarantees
 	unlock_estate_privilege = antq_himyarite_terrace_water_compacts
-	unlock_estate_privilege = antq_sabaean_dam_canal_water_compacts
+	unlock_estate_privilege = antq_sabaean_highland_route_watch_rotations
 	unlock_estate_privilege = antq_judean_cultivator_assessment_compacts
 	unlock_estate_privilege = antq_galilean_olive_grain_labor_compacts
 	unlock_estate_privilege = antq_batanean_cultivator_pastoral_compacts
@@ -6702,7 +6722,7 @@ antq_civic_cult_associations = {
 	global_pop_assimilation_speed_modifier = 0.025
 	unlock_estate_privilege = antq_nabataean_royal_customs_inspection
 	unlock_estate_privilege = antq_himyarite_incense_route_toll_farm
-	unlock_estate_privilege = antq_sabaean_highland_route_watch_rotations
+	unlock_estate_privilege = antq_sabaean_interkingdom_caravan_safe_conducts
 	unlock_estate_privilege = antq_judean_pastoral_frontier_rotations
 	unlock_estate_privilege = antq_galilean_peraean_pastoral_rotations
 	unlock_estate_privilege = antq_batanean_mountain_frontier_rotations

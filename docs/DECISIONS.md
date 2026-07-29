@@ -4167,3 +4167,11 @@ old `MIC` collision with Brazilian `mariana` to Guahan/Saipan and the old
 religion profiles, reuse reviewed installed regional emblems and faith icons,
 and add no original raster art or audio. Use `OLC` for the Orinoco frame because
 `MOC` remains reserved for the dated second-century Moche formation.
+
+## 2026-07-29 - Arabian route cooperation is bounded and nonmilitary
+
+Model route exchange as a twelve-member, nonterritorial forum with four
+bilateral actions. It grants no defensive call, military access, annexation,
+territorial claim, leadership, or hegemony. Distinguish northern, eastern, and
+Omani profiles through water, route, cult, privilege, and force mechanics; do
+not fabricate unsupported ethnic population polygons.

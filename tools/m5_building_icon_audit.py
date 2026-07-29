@@ -21,10 +21,10 @@ from m11_ui_asset_ledger import building_master
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / "docs/m5/building_icon_audit.csv"
 CONTACT = ROOT / "docs/m5/BUILDING_ICON_CIRCLE_AUDIT.png"
-EXPECTED_TOTAL = 265
+EXPECTED_TOTAL = 269
 # Raise this after each reviewed re-art batch. It prevents regressions while the
 # open P3 task advances toward the final 265/265 gate.
-MIN_STYLE_PASS = 265
+MIN_STYLE_PASS = 269
 NAVY = (16, 25, 43, 255)
 
 

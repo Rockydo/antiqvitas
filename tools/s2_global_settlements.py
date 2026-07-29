@@ -102,6 +102,24 @@ CROP_GOODS = {
     "cassava", "fruit", "dates", "citrus",
 }
 ARID_CLIMATES = {"arid", "cold_arid", "hot_arid", "desert"}
+ARABIA_CURATED_SEEDS = (
+    ("reg_arabia_terraces_marib", "antq_reg_south_arabian_terrace_sluices", "marib", "UNESCO-SABA;HIMYAR-HIST;P12.1;P12.3", "secure", "Ma'rib anchors the securely attested South Arabian irrigation landscape; the building remains a market-scale terrace and sluice family rather than one reconstructed structure."),
+    ("reg_arabia_terraces_dhafar", "antq_reg_south_arabian_terrace_sluices", "dhafar", "HIMYAR-HIST;UNESCO-SABA;P12.1;P12.3", "contested", "Zafar's highland setting supports a bounded terrace-water portfolio without claiming that this engine location contains a specifically excavated AD 1 installation."),
+    ("reg_arabia_terraces_bayhan", "antq_reg_south_arabian_terrace_sluices", "bayhan", "UNESCO-QATABAN;UNESCO-SABA;P12.1;P12.3", "contested", "Timna's Qatabanian agricultural hinterland receives a regional terrace-water proxy, not a uniform kingdom-wide hydraulic plan."),
+    ("reg_arabia_terraces_shabwa", "antq_reg_south_arabian_terrace_sluices", "shabwa", "UNESCO-INCENSE;STR-ARAB;P12.1;P12.3", "contested", "Shabwa's cultivated wadi context supports bounded water management; exact works and chronology inside the engine polygon are not asserted."),
+    ("reg_arabia_station_shoubak", "antq_reg_arabian_caravan_station", "shoubak", "NABATAEA-MAP;STR-ARAB;P12.1;P12.3", "secure", "Petra's caravan and water-support role is secure; this is a scalable route-service family rather than a named excavated inn."),
+    ("reg_arabia_station_dumat", "antq_reg_arabian_caravan_station", "dumat_al_jandal", "THAJ-ARCH;STR-ARAB;P12.1;P12.3", "contested", "Dumat al-Jandal's oasis-route importance supports a bounded guarded station without claiming a recovered AD 1 administrative complex."),
+    ("reg_arabia_station_fayd", "antq_reg_arabian_caravan_station", "fayd", "STR-ARAB;PTO-ARAB;P12.1;P12.3", "contested", "Fayd represents an interior route halt in the engine geography; exact AD 1 fabric and institutional continuity are not asserted."),
+    ("reg_arabia_station_khaybar", "antq_reg_arabian_caravan_station", "khaybar", "STR-ARAB;PTO-ARAB;P12.1;P12.3", "contested", "Khaybar's oasis position supports a caravan-service proxy while avoiding claims for a specific excavated station or later-period institution."),
+    ("reg_arabia_resin_marib", "antq_reg_aromatic_resin_sorting_house", "marib", "UNESCO-SABA;UNESCO-INCENSE;P12.1", "secure", "Ma'rib's place in South Arabian aromatic exchange supports sorting and storage at market scale without a cargo-volume claim."),
+    ("reg_arabia_resin_bayhan", "antq_reg_aromatic_resin_sorting_house", "bayhan", "UNESCO-QATABAN;UNESCO-INCENSE;P12.1", "secure", "Timna's Qatabanian route role supports aromatic grading and packing; the represented workshop is a reusable family, not a named building."),
+    ("reg_arabia_resin_shabwa", "antq_reg_aromatic_resin_sorting_house", "shabwa", "UNESCO-INCENSE;STR-ARAB;P12.1", "secure", "Shabwa's incense nexus securely warrants an aromatic store and sorting family while exact ownership and throughput remain unspecified."),
+    ("reg_arabia_resin_dhafar", "antq_reg_aromatic_resin_sorting_house", "dhafar", "HIMYAR-HIST;UNESCO-INCENSE;P12.1", "contested", "The Himyarite highland route receives a bounded aromatic handling proxy without asserting direct control of every producing district."),
+    ("reg_arabia_water_suhar", "antq_reg_eastern_arabian_aflaj", "suhar", "STR-ARAB;P8.6;P12.1", "contested", "Suhar's Omanite coastal-oasis setting supports early gravity-water infrastructure, not an unchanged later legal or technical system."),
+    ("reg_arabia_water_nizwa", "antq_reg_eastern_arabian_aflaj", "nizwa", "STR-ARAB;P8.6;P12.1", "contested", "Nizwa provides an interior Omanite oasis proxy for local water channels; exact AD 1 construction and terminology remain uncertain."),
+    ("reg_arabia_water_ahsa", "antq_reg_eastern_arabian_aflaj", "al_ahsa", "OCD-GERRHA;STR-ARAB;P12.1", "contested", "The al-Hasa oasis warrants distributed water infrastructure while the Gerrha location mapping and individual channel chronology remain bounded."),
+    ("reg_arabia_water_harad", "antq_reg_eastern_arabian_aflaj", "harad_al_ahsa", "OCD-GERRHA;STR-ARAB;P12.1", "contested", "The eastern Arabian oasis hinterland receives a water-channel proxy without claiming a single polity-wide administration or excavated plan."),
+)
 
 
 def read_rows(path: Path) -> list[dict[str, str]]:
@@ -145,6 +163,21 @@ def expanded_bundle_rows() -> list[dict[str, str]]:
                 "note": bundle["note"],
             })
     return result
+
+
+def curated_arabia_rows() -> list[dict[str, str]]:
+    return [
+        {
+            "key": key,
+            "family": family,
+            "location": location,
+            "macro": "Middle East",
+            "source": source,
+            "confidence": confidence,
+            "note": note,
+        }
+        for key, family, location, source, confidence, note in ARABIA_CURATED_SEEDS
+    ]
 
 
 def candidate_score(
@@ -209,10 +242,12 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         owner_by_location[row["location"]] = row["tag"]
 
     bundle_rows = expanded_bundle_rows()
-    rows: list[dict[str, str]] = []
-    used_pairs = {(row["location"], row["family"]) for row in bundle_rows}
-    usage: Counter[str] = Counter(row["family"] for row in bundle_rows)
-    per_location: Counter[str] = Counter(row["location"] for row in bundle_rows)
+    rows = curated_arabia_rows()
+    curated_count = len(rows)
+    fixed_rows = rows + bundle_rows
+    used_pairs = {(row["location"], row["family"]) for row in fixed_rows}
+    usage: Counter[str] = Counter(row["family"] for row in fixed_rows)
+    per_location: Counter[str] = Counter(row["location"] for row in fixed_rows)
 
     def details(location: str) -> tuple[str, str, float, str, str]:
         tag = owner_by_location[location]
@@ -253,7 +288,7 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         if pair in used_pairs or per_location[location] >= cap:
             return False
         tag, region, _harbor, _urban_profile, good = details(location)
-        index = len(rows) + 1
+        index = len(rows) - curated_count + 1
         rows.append({
             "key": key or f"reg_world_{index:04d}_{location}",
             "family": family,

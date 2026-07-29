@@ -5787,3 +5787,15 @@ Sources: `ANU-BOMBERAI`; `JPA-PAPUA`; `WA-MARIANA`; `ICA-YAP`;
 `JWP-ORINOCO`; `SCIADV-CARIB`; `NOAA-MONTEREY`; `SA-EXPANSIONS`;
 `ACUTUBA-CHRON`. [secure broad occupation and chronology; contested exact
 boundaries, institutions, language continuity, and local ritual content]
+
+## 2026-07-29 - Arabian institutions do not imply fixed ethnic borders
+
+Classical geography, inscriptions, oasis archaeology, and incense-route
+evidence support distinct north/east/Omani political and economic profiles,
+not clean additional ethnic polygons. Early gravity-fed waterworks are modeled
+without projecting the later formal aflaj system unchanged. The route forum is
+a gameplay abstraction for bilateral safe-conduct, water, and transit practice,
+not an attested centralized league. Sources: `STR-ARAB`; `PTO-ARAB`;
+`OCD-GERRHA`; `THAJ-ARCH`; `UNESCO-QATABAN`; `UNESCO-INCENSE`;
+`UNESCO-SABA`; `HIMYAR-HIST`. [secure regional functions; contested
+institutions and exact cultural boundaries]

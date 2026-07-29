@@ -1,0 +1,55 @@
+{
+  "scope": "AD 1 interior Arabia regional mechanics",
+  "source_boundary": "Distinct political, water, route, military, and cult profiles; no unsupported north/east/Omani ethnic polygons or uniform peninsula constitution.",
+  "counts": {
+    "privileges": 12,
+    "buildings": 4,
+    "building_seeds": 16,
+    "units": 4,
+    "direct_doctrines": 8,
+    "route_actions": 4,
+    "route_io_members": 12,
+    "generated_assets": 32
+  },
+  "route_io": {
+    "key": "antq_arabian_route_exchanges",
+    "design_tags": [
+      "NAB",
+      "SAB",
+      "HIM",
+      "QAT",
+      "HAD",
+      "KIN",
+      "THM",
+      "AGR",
+      "GRH",
+      "QTR",
+      "OMN",
+      "BED"
+    ],
+    "nonmilitary": true,
+    "nonterritorial": true
+  },
+  "art": {
+    "action_sheet": "assets_queue/arabia_mechanics/sources/arabia_route_actions_01.png",
+    "action_sheet_sha256": "a239765376d2d8f6fc29b3334d084c42fa5debf5e25a3dd3e253b187fea6b8e3",
+    "style_references": "Installed EU5 category-matched building, privilege, unit, religious-aspect, and generic-action DDS assets under assets_queue/arabia_mechanics/vanilla_references.",
+    "four_up_contract": true
+  },
+  "sources": [
+    "P8.5",
+    "P8.6",
+    "P11",
+    "P13",
+    "P14",
+    "STR-ARAB",
+    "PTO-ARAB",
+    "OCD-GERRHA",
+    "THAJ-ARCH",
+    "NABATAEA-MAP",
+    "UNESCO-QATABAN",
+    "UNESCO-INCENSE",
+    "UNESCO-SABA",
+    "HIMYAR-HIST"
+  ]
+}

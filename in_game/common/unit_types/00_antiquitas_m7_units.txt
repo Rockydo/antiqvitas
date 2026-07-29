@@ -1297,3 +1297,84 @@ antq_cilician_marines = {
 	gfx_tags = { light_tag sword_tag }
 	# P14;CAH-XI; Era coastal marine-company adapter without a pirate fleet or named contract claim
 }
+
+antq_nabataean_caravan_guards = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_cavalry
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	movement_speed = 0.12
+	supply_weight = -0.08
+	combat = { desert = 0.10 hills = 0.05 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = NAB
+		}
+	}
+	gfx_tags = { light_tag }
+	# P8.1;P8.5;P14;NABATAEA-MAP;STR-ARAB; Mounted route guards adapt Nabataea's secure caravan and desert-water setting without claiming a uniform standing corps, equipment issue, or fixed establishment.
+}
+
+antq_north_arabian_camel_scouts = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_cavalry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_1_traditions
+	movement_speed = 0.15
+	supply_weight = -0.10
+	combat = { desert = 0.12 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XEQ
+			has_or_had_tag = AGR
+			has_or_had_tag = BED
+			has_or_had_tag = KIN
+		}
+	}
+	gfx_tags = { light_tag }
+	# P8.5;P14;STR-ARAB;PTO-ARAB; A bounded mounted scouting adapter for dispersed northern and interior Arabian route communities; it does not impose one ethnic army or permanent camel corps.
+}
+
+antq_south_arabian_highland_levies = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_1_traditions
+	morale_damage_taken = -0.04
+	movement_speed = -0.03
+	combat = { hills = 0.10 mountains = 0.08 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XBI
+			has_or_had_tag = HIM
+			has_or_had_tag = QAT
+			has_or_had_tag = XBJ
+		}
+	}
+	gfx_tags = { medium_tag heavy_tag }
+	# P8.5;P14;UNESCO-SABA;UNESCO-QATABAN;HIMYAR-HIST; Highland and terrace-country musters receive a restrained infantry adapter without claiming identical weapons, drill, or mobilization across the South Arabian kingdoms.
+}
+
+antq_omanite_coastal_warbands = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_1_traditions
+	movement_speed = 0.08
+	supply_weight = -0.05
+	combat = { coastal = 0.10 desert = 0.05 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = OMN
+		}
+	}
+	gfx_tags = { light_tag sword_tag }
+	# P8.6;P14;STR-ARAB;CAH-XI; A light coastal and oasis following for Omanite communities, bounded away from later naval institutions and any claim for standardized equipment or command.
+}

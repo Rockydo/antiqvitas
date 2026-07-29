@@ -61,9 +61,15 @@ def main() -> int:
             "unit-test-owner",
             fingerprint="test",
             allow_inherited=False,
+            check_existing_game=False,
         )
         try:
-            acquire(peer, "unit-test-contender", allow_inherited=False)
+            acquire(
+                peer,
+                "unit-test-contender",
+                allow_inherited=False,
+                check_existing_game=False,
+            )
         except SlotBusy as exc:
             require(
                 exc.owner.get("project") == ROOT.name.lower(),
@@ -80,6 +86,7 @@ def main() -> int:
             fingerprint="test",
             scope="session",
             allow_inherited=False,
+            check_existing_game=False,
         )
         child = subprocess.Popen(
             [sys.executable, "-c", "import time; time.sleep(30)"],
@@ -92,7 +99,12 @@ def main() -> int:
             operation="unit-test-eu5-session",
         )
         try:
-            acquire(peer, "unit-test-contender", allow_inherited=False)
+            acquire(
+                peer,
+                "unit-test-contender",
+                allow_inherited=False,
+                check_existing_game=False,
+            )
         except SlotBusy as exc:
             require(
                 exc.owner.get("owner_pid") == child.pid,
@@ -113,6 +125,7 @@ def main() -> int:
             "unit-test-stale",
             fingerprint="test",
             allow_inherited=False,
+            check_existing_game=False,
         )
         owner_path = shared_root(peer) / "lease" / "owner.json"
         owner = json.loads(owner_path.read_text(encoding="utf-8"))
