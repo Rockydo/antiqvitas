@@ -33,6 +33,20 @@ international_organization_manager = {
 	}
 
 	add_international_organization = {
+		type = antq_germanic_frontier_exchanges
+		creation_date = 1.1.1
+		map_color = hsv360 { 32 20 48 }
+		members = { XAA XBK CRU XBL XBM BTV XBN SEM HER XBO }
+	}
+
+	add_international_organization = {
+		type = antq_northern_amber_assemblies
+		creation_date = 1.1.1
+		map_color = hsv360 { 195 24 54 }
+		members = { XBM XBN SEM GUT XBR AES XDZ }
+	}
+
+	add_international_organization = {
 		type = antq_arabian_route_exchanges
 		creation_date = 1.1.1
 		map_color = hsv360 { 30 50 70 }

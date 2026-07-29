@@ -1378,3 +1378,174 @@ antq_omanite_coastal_warbands = {
 	gfx_tags = { light_tag sword_tag }
 	# P8.6;P14;STR-ARAB;CAH-XI; A light coastal and oasis following for Omanite communities, bounded away from later naval institutions and any claim for standardized equipment or command.
 }
+
+antq_marcomannic_royal_retinue = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	morale_damage_done = 0.10
+	strength_damage_taken = -0.04
+	combat = { forest = 0.08 hills = 0.05 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XBK
+		}
+		current_date >= 1.1.1
+	}
+	gfx_tags = { heavy_tag medium_tag }
+	# P8.7;P14;STR-GER;TAC-ANN-II; A bounded royal-following adapter for Maroboduus's court without asserting a fixed guard establishment, standardized equipment, or permanent Germanic monarchy.
+}
+
+antq_batavian_auxiliary_cohort = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	morale_damage_taken = -0.04
+	movement_speed = 0.05
+	combat = { river = 0.10 wetlands = 0.08 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = BTV
+			has_or_had_tag = XAA
+		}
+		current_date >= 1.1.1
+	}
+	gfx_tags = { medium_tag heavy_tag }
+	# P8.7;P14;TAC-BAT;CAH-XI; A bounded lower-Rhine auxiliary-service adapter without naming a permanent cohort, exact establishment, ethnic monopoly, or AD 1 deployment.
+}
+
+antq_semnonian_grove_muster = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_1_traditions
+	morale_damage_done = 0.08
+	initiative = 0.08
+	combat = { forest = 0.12 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = SEM
+		}
+		current_date >= 1.1.1
+	}
+	gfx_tags = { medium_tag sword_tag }
+	# P8.7;P14;TAC-GER;STR-GER; A district levy gathered under Semnonian sacred and assembly practice without turning the grove into a barracks or claiming uniform arms.
+}
+
+antq_aestian_amber_road_guards = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_1_traditions
+	movement_speed = 0.10
+	supply_weight = -0.06
+	combat = { forest = 0.10 coastal = 0.06 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = AES
+		}
+		current_date >= 1.1.1
+	}
+	gfx_tags = { light_tag archer_tag }
+	# P8.7;P14;TAC-GER;PAN-WBB;VU-BRUSH; A local escort adapter for plural Aestian shore and amber-route communities; it is not a unified state guard or reconstructed ethnic army.
+}
+
+antq_gothic_migrant_host = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_2_renaissance
+	movement_speed = 0.08
+	supply_weight = -0.08
+	combat = { forest = 0.08 grasslands = 0.06 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = GUT
+			has_or_had_tag = VAN
+			has_or_had_tag = RUG
+			has_or_had_tag = XBP
+		}
+		current_date >= 160.1.1
+	}
+	gfx_tags = { medium_tag heavy_tag }
+	# P8.7;P14;STR-GER;CAH-XI; A migration-era host adapter for changing lower-Vistula and Pontic coalitions without scripting one inevitable route, conquest, or pan-Gothic army.
+}
+
+antq_alamannic_confederate_host = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_3_discovery
+	morale_damage_done = 0.10
+	movement_speed = 0.05
+	combat = { forest = 0.08 hills = 0.08 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XBL
+			has_or_had_tag = HER
+			has_or_had_tag = SEM
+			has_or_had_tag = XBK
+		}
+		current_date >= 213.1.1
+	}
+	gfx_tags = { medium_tag heavy_tag }
+	# P8.7;P14;OCD-ALE;CAH-XI; A post-AD-213 upper-Rhine confederate-host adapter whose tag access represents possible constituent continuities rather than retrojecting Alemanni into AD 1.
+}
+
+antq_frankish_rhine_warband = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_3_discovery
+	morale_damage_done = 0.10
+	strength_damage_taken = -0.03
+	combat = { river = 0.10 forest = 0.06 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = BTV
+			has_or_had_tag = XBM
+			has_or_had_tag = CRU
+			has_or_had_tag = XBL
+		}
+		current_date >= 250.1.1
+	}
+	gfx_tags = { medium_tag sword_tag }
+	# P8.7;P14;CAM-FRK;CAH-XI; A post-AD-250 lower-Rhine confederate-warband adapter without treating earlier Batavian, Frisian, Cheruscan, or Chattian polities as already Frankish.
+}
+
+antq_saxon_coastal_warband = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_4_reformation
+	movement_speed = 0.12
+	supply_weight = -0.06
+	combat = { coastal = 0.12 wetlands = 0.06 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XBR
+			has_or_had_tag = XBQ
+			has_or_had_tag = JUT
+			has_or_had_tag = XBN
+		}
+		current_date >= 300.1.1
+	}
+	gfx_tags = { light_tag sword_tag }
+	# P8.7;P14;STR-GER;CAH-XII; A late-Roman North Sea coastal-warband adapter, available only after AD 300 and not a claim for the later Adventus Saxonum outcome.
+}

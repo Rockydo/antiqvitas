@@ -120,6 +120,32 @@ ARABIA_CURATED_SEEDS = (
     ("reg_arabia_water_ahsa", "antq_reg_eastern_arabian_aflaj", "al_ahsa", "OCD-GERRHA;STR-ARAB;P12.1", "contested", "The al-Hasa oasis warrants distributed water infrastructure while the Gerrha location mapping and individual channel chronology remain bounded."),
     ("reg_arabia_water_harad", "antq_reg_eastern_arabian_aflaj", "harad_al_ahsa", "OCD-GERRHA;STR-ARAB;P12.1", "contested", "The eastern Arabian oasis hinterland receives a water-channel proxy without claiming a single polity-wide administration or excavated plan."),
 )
+GERMANIA_CURATED_SEEDS = (
+    ("reg_germania_depth_marcomannic_prague", "antq_reg_marcomannic_royal_compound", "prague", "P8.7;STR-GER;TAC-ANN-II", "Bohemian court-region proxy; no excavated palace or fixed royal seat."),
+    ("reg_germania_depth_marcomannic_kourim", "antq_reg_marcomannic_royal_compound", "kourim", "P8.7;STR-GER;TAC-ANN-II", "Bohemian court-region proxy; no excavated palace or fixed royal seat."),
+    ("reg_germania_depth_marcomannic_hradec", "antq_reg_marcomannic_royal_compound", "hradec_kralove", "P8.7;STR-GER;TAC-ANN-II", "Bohemian court-region proxy; no excavated palace or fixed royal seat."),
+    ("reg_germania_depth_assembly_minden", "antq_reg_germanic_assembly_field", "minden", "P8.7;TAC-GER;STR-GER", "Cheruscan-region assembly proxy; no universal constitution or reconstructed site."),
+    ("reg_germania_depth_assembly_kassel", "antq_reg_germanic_assembly_field", "kassel", "P8.7;TAC-GER;STR-GER", "Chattian-region assembly proxy; no universal constitution or reconstructed site."),
+    ("reg_germania_depth_assembly_teltow", "antq_reg_germanic_assembly_field", "teltow", "P8.7;TAC-GER;STR-GER", "Semnonian-region assembly proxy distinct from the sacred-grove family."),
+    ("reg_germania_depth_grove_teltow", "antq_reg_semnonian_sacred_grove", "teltow", "P8.7;TAC-GER;STR-GER", "Semnonian sacred-landscape proxy; Tacitus's grove is not fixed to one polygon."),
+    ("reg_germania_depth_grove_ruppin", "antq_reg_semnonian_sacred_grove", "ruppin", "P8.7;TAC-GER;STR-GER", "Semnonian sacred-landscape proxy; no reconstructed sanctuary."),
+    ("reg_germania_depth_grove_juterbog", "antq_reg_semnonian_sacred_grove", "juterbog", "P8.7;TAC-GER;STR-GER", "Semnonian sacred-landscape proxy; no reconstructed sanctuary."),
+    ("reg_germania_depth_market_nijmegen", "antq_reg_rhine_frontier_market", "nijmegen", "P8.7;TAC-BAT;TAC-ANN-II", "Rhine exchange proxy; no permanent market charter or tariff regime."),
+    ("reg_germania_depth_market_bonn", "antq_reg_rhine_frontier_market", "bonn", "P8.7;TAC-GER;TAC-ANN-II", "Rhine exchange proxy; no permanent market charter or tariff regime."),
+    ("reg_germania_depth_market_mainz", "antq_reg_rhine_frontier_market", "mainz", "P8.7;TAC-GER;TAC-ANN-II", "Rhine exchange proxy; no permanent market charter or tariff regime."),
+    ("reg_germania_depth_batavian_nijmegen", "antq_reg_batavian_auxiliary_muster", "nijmegen", "P8.7;TAC-BAT;CAH-XI", "Lower-Rhine auxiliary-service proxy; no reconstructed cohort base."),
+    ("reg_germania_depth_batavian_antwerp", "antq_reg_batavian_auxiliary_muster", "antwerp", "P8.7;TAC-BAT;CAH-XI", "Lower-Rhine auxiliary-service proxy; no reconstructed cohort base."),
+    ("reg_germania_depth_batavian_hertogenbosch", "antq_reg_batavian_auxiliary_muster", "hertogenbosch", "P8.7;TAC-BAT;CAH-XI", "Lower-Rhine auxiliary-service proxy; no reconstructed cohort base."),
+    ("reg_germania_depth_amber_konigsberg", "antq_reg_aestian_amber_sorting_ground", "konigsberg", "P8.7;TAC-GER;PAN-WBB;VU-BRUSH", "Plural Aestian amber-shore proxy; not a central capital or monopoly."),
+    ("reg_germania_depth_amber_tilsit", "antq_reg_aestian_amber_sorting_ground", "tilsit", "P8.7;TAC-GER;PAN-WBB;VU-BRUSH", "Plural Aestian amber-shore proxy; not a central capital or monopoly."),
+    ("reg_germania_depth_amber_olsztyn", "antq_reg_aestian_amber_sorting_ground", "olsztyn", "P8.7;TAC-GER;PAN-WBB;LIT-WLSC", "Plural Aestian amber-shore proxy; not a central capital or monopoly."),
+    ("reg_germania_depth_migration_gdansk", "antq_reg_vistula_migration_staging", "gdansk", "P8.7;PAN-WBB;STR-GER", "Lower-Vistula movement proxy; no fixed ethnic route or inevitable destination."),
+    ("reg_germania_depth_migration_grudziadz", "antq_reg_vistula_migration_staging", "grudziadz", "P8.7;PAN-WBB;STR-GER", "Lower-Vistula movement proxy; no fixed ethnic route or inevitable destination."),
+    ("reg_germania_depth_migration_tczew", "antq_reg_vistula_migration_staging", "tczew", "P8.7;PAN-WBB;STR-GER", "Lower-Vistula movement proxy; no fixed ethnic route or inevitable destination."),
+    ("reg_germania_depth_landing_stavoren", "antq_reg_north_sea_boat_landing", "stavoren", "P8.7;TAC-GER;UT-TARAND", "North-Sea coastal-craft proxy; not a fleet base."),
+    ("reg_germania_depth_landing_sloten", "antq_reg_north_sea_boat_landing", "sloten", "P8.7;TAC-GER;UT-TARAND", "North-Sea coastal-craft proxy; not a fleet base."),
+    ("reg_germania_depth_landing_hamburg", "antq_reg_north_sea_boat_landing", "hamburg", "P8.7;TAC-GER;STR-GER", "Lower-Elbe coastal-craft proxy; not a navy or migration port."),
+)
 
 
 def read_rows(path: Path) -> list[dict[str, str]]:
@@ -177,6 +203,21 @@ def curated_arabia_rows() -> list[dict[str, str]]:
             "note": note,
         }
         for key, family, location, source, confidence, note in ARABIA_CURATED_SEEDS
+    ]
+
+
+def curated_germania_rows() -> list[dict[str, str]]:
+    return [
+        {
+            "key": key,
+            "family": family,
+            "location": location,
+            "macro": "Europe",
+            "source": source,
+            "confidence": "contested",
+            "note": note,
+        }
+        for key, family, location, source, note in GERMANIA_CURATED_SEEDS
     ]
 
 
@@ -242,7 +283,7 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         owner_by_location[row["location"]] = row["tag"]
 
     bundle_rows = expanded_bundle_rows()
-    rows = curated_arabia_rows()
+    rows = curated_arabia_rows() + curated_germania_rows()
     curated_count = len(rows)
     fixed_rows = rows + bundle_rows
     used_pairs = {(row["location"], row["family"]) for row in fixed_rows}

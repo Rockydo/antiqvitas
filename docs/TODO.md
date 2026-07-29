@@ -540,7 +540,7 @@ and focused runtime probe all pass.
     current 105+63 two-polity split, and visual/mechanical differentiation in four
     focused regional probes.
 
-- [ ] Rebuild Germania, the Baltic/Aestii frame, and northern Europe.
+- [x] Rebuild Germania, the Baltic/Aestii frame, and northern Europe.
   - Replace “Germanic Societies” with real bounded peoples. Split the oversized
     152-location Aestii frame wherever archaeological/textual evidence permits;
     distinguish archaeological cultures from claimed ethnic states.
@@ -572,7 +572,7 @@ and focused runtime probe all pass.
   - [x] Give every added/reframed polity an owned capital, matching start-pop
     culture, religion, tribal government/reform, direct period-inspired
     standard, non-medieval rank text, agenda, and a collision-safe engine tag.
-  - [ ] Add major rival/confederation dynamics, migrations, sacred landscapes,
+  - [x] Add major rival/confederation dynamics, migrations, sacred landscapes,
     assembly/retinue systems, trade, units, government content, and Roman-frontier
     diplomacy beyond the completed law/privilege/unit layer.
   - [x] Add at minimum separate Germanic assembly/sacred-grove/retinue and

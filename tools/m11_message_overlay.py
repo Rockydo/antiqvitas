@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Render the one-action exact-name M11 message-registry pilot.
+"""Render the exact-name ANTIQVITAS message registry.
 
 EU5 loads its message registry from the exact ``main_menu/gui/messagetypes``
-path, not an additive sibling.  This tool copies the pinned installed file byte
-for byte and appends one reviewed registration.  Any game patch or inventory
-change fails validation rather than silently replacing a changed vanilla GUI
-surface.
+path, not an additive sibling. This tool copies the pinned installed file byte
+for byte and appends the reviewed decision and generic-action registrations.
+Any game patch or inventory change fails validation rather than silently
+replacing a changed vanilla GUI surface.
 """
 
 from __future__ import annotations
@@ -17,6 +17,7 @@ import re
 from pathlib import Path
 
 from m11_decisions import EXPECTED_COUNT, load_decisions, load_tag_maps, validate
+from s2_germania_dynamics import ACTIONS as GERMANIA_ACTIONS
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -58,8 +59,10 @@ def scoped_types(scope: str) -> tuple[str, ...]:
     decision_types = tuple(f"PERFORM_antq_{decision.identifier}_ACTION" for decision in decisions)
     message_types = decision_types + tuple(
         f"PERFORM_{action}_ACTION" for action in ARABIAN_ROUTE_ACTIONS
+    ) + tuple(
+        f"PERFORM_{action.key}_ACTION" for action in GERMANIA_ACTIONS
     )
-    expected = EXPECTED_COUNT + len(ARABIAN_ROUTE_ACTIONS)
+    expected = EXPECTED_COUNT + len(ARABIAN_ROUTE_ACTIONS) + len(GERMANIA_ACTIONS)
     if len(message_types) != expected or len(set(message_types)) != expected:
         raise ValueError("M11 full message registry does not match the validated decision ledger")
     return message_types

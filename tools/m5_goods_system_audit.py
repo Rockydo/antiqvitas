@@ -95,9 +95,9 @@ def build() -> tuple[str, str, dict[str, int]]:
         for row in rows(ledger)
     ]
     building_keys = [row["key"] for row in building_rows]
-    if len(building_keys) != 269 or len(building_keys) != len(set(building_keys)):
+    if len(building_keys) != 277 or len(building_keys) != len(set(building_keys)):
         failures.append(
-            f"active building ledger must contain 269 unique keys, got "
+            f"active building ledger must contain 277 unique keys, got "
             f"{len(building_keys)}/{len(set(building_keys))}"
         )
 

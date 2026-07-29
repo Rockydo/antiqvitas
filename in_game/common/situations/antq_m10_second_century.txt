@@ -108,6 +108,12 @@ antq_m10_second_gothic_migration = {
 	on_start = {
 		c:GUT = { trigger_event_non_silently = antq_m10_second.2011 }
 	}
+	on_monthly = {
+		random_list = {
+			1 = { c:GUT = { add_prestige = prestige_weak_bonus } }
+			119 = {}
+		}
+	}
 }
 
 # Verus' Parthian War; ANTIQVITAS master plan §9
@@ -151,6 +157,12 @@ antq_m10_second_marcomannic_wars = {
 	}
 	on_start = {
 		c:XAA = { trigger_event_non_silently = antq_m10_second.2015 }
+	}
+	on_monthly = {
+		random_list = {
+			1 = { c:XAA = { add_stability = stability_weak_penalty } }
+			119 = {}
+		}
 	}
 }
 

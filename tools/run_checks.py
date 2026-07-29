@@ -53,6 +53,7 @@ VALIDATE_COMMANDS = (
     Command("tools/s2_arabia_mechanics.py", ("--check",)),
     Command("tools/s2_britain_ireland_granularity.py", ("--check",)),
     Command("tools/s2_northern_granularity.py", ("--check",)),
+    Command("tools/s2_germania_dynamics.py", ("--check",)),
     Command("tools/s2_eastern_granularity.py", ("--check",)),
     Command("tools/s2_maghreb_granularity.py", ("--check",)),
     Command("tools/s2_horn_granularity.py", ("--check",)),

@@ -43,6 +43,12 @@ antq_m10_immensum_bellum = {
 	on_start = {
 		c:XAA = { trigger_event_non_silently = antq_m10.1001 }
 	}
+	on_monthly = {
+		random_list = {
+			1 = { c:XAA = { add_stability = stability_weak_penalty } }
+			119 = {}
+		}
+	}
 }
 
 # Great Illyrian Revolt; ANTIQVITAS master plan §9
@@ -262,6 +268,12 @@ antq_m10_batavian_revolt = {
 	}
 	on_start = {
 		c:BTV = { trigger_event_non_silently = antq_m10.1022 }
+	}
+	on_monthly = {
+		random_list = {
+			1 = { c:BTV = { add_prestige = prestige_weak_bonus } }
+			119 = {}
+		}
 	}
 }
 

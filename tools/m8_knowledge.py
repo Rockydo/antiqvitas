@@ -353,6 +353,7 @@ CONTENT_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
         ("unlock_unit", "antq_north_arabian_camel_scouts"),
         ("unlock_unit", "antq_south_arabian_highland_levies"),
         ("unlock_unit", "antq_omanite_coastal_warbands"),
+        ("unlock_unit", "antq_gothic_migrant_host"),
     ),
     "antq_auxiliary_service": (
         ("unlock_unit", "antq_trireme"),
@@ -360,6 +361,7 @@ CONTENT_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
         ("unlock_unit", "antq_monsoon_dhow"),
         ("unlock_unit", "antq_austronesian_outrigger"),
         ("unlock_unit", "antq_cilician_marines"),
+        ("unlock_unit", "antq_batavian_auxiliary_cohort"),
     ),
     "antq_drill_routines": (
         ("unlock_unit", "antq_legionaries"),
@@ -377,9 +379,23 @@ CONTENT_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
     "antq_frontier_patrols": (
         ("unlock_unit", "antq_germanic_horse"),
         ("unlock_unit", "antq_germanic_bodyguards"),
+        ("unlock_unit", "antq_marcomannic_royal_retinue"),
     ),
     "antq_comitatenses_doctrine": (("unlock_unit", "antq_comitatenses"),),
-    "antq_limitanei_service": (("unlock_unit", "antq_limitanei"),),
+    "antq_limitanei_service": (
+        ("unlock_unit", "antq_limitanei"),
+        ("unlock_unit", "antq_saxon_coastal_warband"),
+    ),
+    "antq_mobile_field_armies": (
+        ("unlock_unit", "antq_alamannic_confederate_host"),
+        ("unlock_unit", "antq_frankish_rhine_warband"),
+    ),
+    "antq_sacred_grove_custody": (
+        ("unlock_unit", "antq_semnonian_grove_muster"),
+    ),
+    "antq_amber_route_waystations": (
+        ("unlock_unit", "antq_aestian_amber_road_guards"),
+    ),
     "antq_tax_registers": (
         ("unlock_subject_type", "antq_client_kingdom"),
         ("unlock_casus_belli", "antq_impose_client_king"),

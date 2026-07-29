@@ -321,6 +321,7 @@ locations = {
 	bolling = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	boluohe = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	bone = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
+	bonn = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	boorj = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	bor_tur = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	bordowa = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
@@ -663,6 +664,7 @@ locations = {
 	grimsby = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	grindsted = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	grodno = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
+	grudziadz = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	gryfow = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	guahan = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	guamontey = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
@@ -866,6 +868,7 @@ locations = {
 	kasan = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	kashima = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	kasimov = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
+	kassel = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	kataka = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	kath = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	katha = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
@@ -1102,6 +1105,7 @@ locations = {
 	merzig = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	mii = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	mikshino = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
+	minden = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	minehead = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	minsk = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	mirat = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
@@ -1618,6 +1622,7 @@ locations = {
 	tawau = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	tayma = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	taytay = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
+	tczew = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	tecoanapa = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	tegina = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
 	tehotihuacan = { rank = town } # P12.1;P12.3;P13;PER; contested regional settlement-capacity proxy
@@ -1898,6 +1903,30 @@ building_manager = {
 	antq_reg_eastern_arabian_aflaj = { tag = GRH level = 1 location = harad_al_ahsa } # reg_arabia_water_harad; OCD-GERRHA;STR-ARAB;P12.1
 	antq_reg_eastern_arabian_aflaj = { tag = OMN level = 1 location = nizwa } # reg_arabia_water_nizwa; STR-ARAB;P8.6;P12.1
 	antq_reg_eastern_arabian_aflaj = { tag = OMN level = 1 location = suhar } # reg_arabia_water_suhar; STR-ARAB;P8.6;P12.1
+	antq_reg_aestian_amber_sorting_ground = { tag = AES level = 1 location = konigsberg } # reg_germania_depth_amber_konigsberg; P8.7;TAC-GER;PAN-WBB;VU-BRUSH
+	antq_reg_aestian_amber_sorting_ground = { tag = AES level = 1 location = olsztyn } # reg_germania_depth_amber_olsztyn; P8.7;TAC-GER;PAN-WBB;LIT-WLSC
+	antq_reg_aestian_amber_sorting_ground = { tag = AES level = 1 location = tilsit } # reg_germania_depth_amber_tilsit; P8.7;TAC-GER;PAN-WBB;VU-BRUSH
+	antq_reg_germanic_assembly_field = { tag = XBL level = 1 location = kassel } # reg_germania_depth_assembly_kassel; P8.7;TAC-GER;STR-GER
+	antq_reg_germanic_assembly_field = { tag = CRU level = 1 location = minden } # reg_germania_depth_assembly_minden; P8.7;TAC-GER;STR-GER
+	antq_reg_germanic_assembly_field = { tag = SEM level = 1 location = teltow } # reg_germania_depth_assembly_teltow; P8.7;TAC-GER;STR-GER
+	antq_reg_batavian_auxiliary_muster = { tag = BTV level = 1 location = antwerp } # reg_germania_depth_batavian_antwerp; P8.7;TAC-BAT;CAH-XI
+	antq_reg_batavian_auxiliary_muster = { tag = BTV level = 1 location = hertogenbosch } # reg_germania_depth_batavian_hertogenbosch; P8.7;TAC-BAT;CAH-XI
+	antq_reg_batavian_auxiliary_muster = { tag = BTV level = 1 location = nijmegen } # reg_germania_depth_batavian_nijmegen; P8.7;TAC-BAT;CAH-XI
+	antq_reg_semnonian_sacred_grove = { tag = SEM level = 1 location = juterbog } # reg_germania_depth_grove_juterbog; P8.7;TAC-GER;STR-GER
+	antq_reg_semnonian_sacred_grove = { tag = SEM level = 1 location = ruppin } # reg_germania_depth_grove_ruppin; P8.7;TAC-GER;STR-GER
+	antq_reg_semnonian_sacred_grove = { tag = SEM level = 1 location = teltow } # reg_germania_depth_grove_teltow; P8.7;TAC-GER;STR-GER
+	antq_reg_north_sea_boat_landing = { tag = XBN level = 1 location = hamburg } # reg_germania_depth_landing_hamburg; P8.7;TAC-GER;STR-GER
+	antq_reg_north_sea_boat_landing = { tag = XBM level = 1 location = sloten } # reg_germania_depth_landing_sloten; P8.7;TAC-GER;UT-TARAND
+	antq_reg_north_sea_boat_landing = { tag = XBM level = 1 location = stavoren } # reg_germania_depth_landing_stavoren; P8.7;TAC-GER;UT-TARAND
+	antq_reg_marcomannic_royal_compound = { tag = XBK level = 1 location = hradec_kralove } # reg_germania_depth_marcomannic_hradec; P8.7;STR-GER;TAC-ANN-II
+	antq_reg_marcomannic_royal_compound = { tag = XBK level = 1 location = kourim } # reg_germania_depth_marcomannic_kourim; P8.7;STR-GER;TAC-ANN-II
+	antq_reg_marcomannic_royal_compound = { tag = XBK level = 1 location = prague } # reg_germania_depth_marcomannic_prague; P8.7;STR-GER;TAC-ANN-II
+	antq_reg_rhine_frontier_market = { tag = XDW level = 1 location = bonn } # reg_germania_depth_market_bonn; P8.7;TAC-GER;TAC-ANN-II
+	antq_reg_rhine_frontier_market = { tag = XBL level = 1 location = mainz } # reg_germania_depth_market_mainz; P8.7;TAC-GER;TAC-ANN-II
+	antq_reg_rhine_frontier_market = { tag = BTV level = 1 location = nijmegen } # reg_germania_depth_market_nijmegen; P8.7;TAC-BAT;TAC-ANN-II
+	antq_reg_vistula_migration_staging = { tag = GUT level = 1 location = gdansk } # reg_germania_depth_migration_gdansk; P8.7;PAN-WBB;STR-GER
+	antq_reg_vistula_migration_staging = { tag = GUT level = 1 location = grudziadz } # reg_germania_depth_migration_grudziadz; P8.7;PAN-WBB;STR-GER
+	antq_reg_vistula_migration_staging = { tag = GUT level = 1 location = tczew } # reg_germania_depth_migration_tczew; P8.7;PAN-WBB;STR-GER
 	antq_reg_annona_bakery = { tag = XAA level = 1 location = corinth } # reg_roman_economy_achaia_corinth_annona_bakery; P12.1;P12.3;CAH-XI;MET-ROMAN-TRADE
 	antq_reg_aqueduct_distribution = { tag = XAA level = 1 location = corinth } # reg_roman_economy_achaia_corinth_aqueduct_distribution; P12.1;P12.3;CAH-XI;MET-ROMAN-TRADE
 	antq_reg_bronze_workers_collegium = { tag = XAA level = 1 location = corinth } # reg_roman_economy_achaia_corinth_bronze_workers_collegium; P12.1;P12.3;CAH-XI;MET-ROMAN-TRADE
@@ -4846,19 +4875,19 @@ building_manager = {
 	antq_reg_granary = { tag = XDP level = 1 location = patna } # reg_world_2844_patna; P12.1;P12.3;P13;PER
 	antq_reg_sponge_drying_yard = { tag = XAA level = 1 location = naples } # reg_world_2845_naples; P12.1;P12.3;P13;PER
 	antq_reg_spice_warehouse = { tag = XBD level = 1 location = anuradhapura } # reg_world_2846_anuradhapura; P12.1;P12.3;P13;PER
-	antq_reg_pack_animal_yard = { tag = XAA level = 1 location = bergama } # reg_world_2847_bergama; P12.1;P12.3;P13;PER
+	antq_reg_rhine_frontier_market = { tag = XAA level = 1 location = bergama } # reg_world_2847_bergama; P12.1;P12.3;P13;PER
 	antq_reg_saltworks = { tag = JUD level = 1 location = jerusalem } # reg_world_2848_jerusalem; P12.1;P12.3;P13;PER
 	antq_reg_wharf_crane = { tag = XAR level = 1 location = panyu } # reg_world_2849_panyu; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = XAX level = 1 location = attock } # reg_world_2850_attock; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = MRG level = 1 location = merv } # reg_world_2851_merv; P12.1;P12.3;P13;PER
-	antq_reg_pack_animal_yard = { tag = SOG level = 1 location = samarkand } # reg_world_2852_samarkand; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = HIM level = 1 location = adan } # reg_world_2853_adan; P12.1;P12.3;P13;PER
+	antq_reg_pack_animal_yard = { tag = XAX level = 1 location = attock } # reg_world_2850_attock; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = MRG level = 1 location = merv } # reg_world_2851_merv; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = SOG level = 1 location = samarkand } # reg_world_2852_samarkand; P12.1;P12.3;P13;PER
+	antq_reg_pack_animal_yard = { tag = HIM level = 1 location = adan } # reg_world_2853_adan; P12.1;P12.3;P13;PER
 	antq_reg_lamp_oil_depot = { tag = XAE level = 1 location = adana } # reg_world_2854_adana; P12.1;P12.3;P13;PER
 	antq_reg_way_station = { tag = XAE level = 1 location = afsin } # reg_world_2855_afsin; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XAQ level = 1 location = agsu } # reg_world_2856_agsu; P12.1;P12.3;P13;PER
 	antq_reg_way_station = { tag = SAT level = 1 location = aheri } # reg_world_2857_aheri; P12.1;P12.3;P13;PER
 	antq_reg_mensores_office = { tag = THR level = 1 location = ahtopol } # reg_world_2858_ahtopol; P12.1;P12.3;P13;PER
-	antq_reg_pack_animal_yard = { tag = XAO level = 1 location = akhalkalaki } # reg_world_2859_akhalkalaki; P12.1;P12.3;P13;PER
+	antq_reg_vistula_migration_staging = { tag = XAO level = 1 location = akhalkalaki } # reg_world_2859_akhalkalaki; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = GRH level = 1 location = al_ahsa } # reg_world_2860_al_ahsa; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = HIM level = 1 location = al_arah } # reg_world_2861_al_arah; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = KIN level = 1 location = al_hajr } # reg_world_2862_al_hajr; P12.1;P12.3;P13;PER
@@ -4866,14 +4895,14 @@ building_manager = {
 	antq_reg_hypocaust_yard = { tag = XEQ level = 1 location = al_lith } # reg_world_2864_al_lith; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = HIM level = 1 location = al_mafalis } # reg_world_2865_al_mafalis; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = BED level = 1 location = al_majmaah } # reg_world_2866_al_majmaah; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = HIM level = 1 location = al_mandab } # reg_world_2867_al_mandab; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = HIM level = 1 location = al_mandab } # reg_world_2867_al_mandab; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XAA level = 1 location = al_mima } # reg_world_2868_al_mima; P12.1;P12.3;P13;PER
 	antq_reg_apothecary = { tag = HIM level = 1 location = al_mukha } # reg_world_2869_al_mukha; P12.1;P12.3;P13;PER
 	antq_reg_spice_warehouse = { tag = XBJ level = 1 location = al_shihr } # reg_world_2870_al_shihr; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = KIN level = 1 location = al_yamamah } # reg_world_2871_al_yamamah; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = IBR level = 1 location = alaverdi } # reg_world_2872_alaverdi; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XBH level = 1 location = alays } # reg_world_2873_alays; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = XAH level = 1 location = aleppo } # reg_world_2874_aleppo; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = XAH level = 1 location = aleppo } # reg_world_2874_aleppo; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = ARJ level = 1 location = alwar } # reg_world_2875_alwar; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = CAP level = 1 location = amasya } # reg_world_2876_amasya; P12.1;P12.3;P13;PER
 	antq_reg_grain_weighhouse = { tag = CLZ level = 1 location = anaklia } # reg_world_2877_anaklia; P12.1;P12.3;P13;PER
@@ -4893,7 +4922,7 @@ building_manager = {
 	antq_reg_amphora_warehouse = { tag = XAE level = 1 location = ayas } # reg_world_2891_ayas; P12.1;P12.3;P13;PER
 	antq_reg_amphora_depot = { tag = THR level = 1 location = aytos } # reg_world_2892_aytos; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = XAH level = 1 location = baalbek } # reg_world_2893_baalbek; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = XAQ level = 1 location = baku } # reg_world_2894_baku; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = XAQ level = 1 location = baku } # reg_world_2894_baku; P12.1;P12.3;P13;PER
 	antq_reg_mensores_office = { tag = IBR level = 1 location = balakan } # reg_world_2895_balakan; P12.1;P12.3;P13;PER
 	antq_reg_hypocaust_yard = { tag = XAR level = 1 location = baling } # reg_world_2896_baling; P12.1;P12.3;P13;PER
 	antq_reg_saltworks = { tag = XAR level = 1 location = banpu } # reg_world_2897_banpu; P12.1;P12.3;P13;PER
@@ -4901,24 +4930,24 @@ building_manager = {
 	antq_reg_granary = { tag = GRH level = 1 location = baqqa } # reg_world_2899_baqqa; P12.1;P12.3;P13;PER
 	antq_reg_lamp_oil_depot = { tag = XFW level = 1 location = barabhum } # reg_world_2900_barabhum; P12.1;P12.3;P13;PER
 	antq_reg_grain_weighhouse = { tag = XFW level = 1 location = baragram } # reg_world_2901_baragram; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = PCM level = 1 location = baran } # reg_world_2902_baran; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = PCM level = 1 location = baran } # reg_world_2902_baran; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XAQ level = 1 location = barda } # reg_world_2903_barda; P12.1;P12.3;P13;PER
 	antq_reg_fountain_house = { tag = XFW level = 1 location = bardhaman } # reg_world_2904_bardhaman; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = YDH level = 1 location = bathinda } # reg_world_2905_bathinda; P12.1;P12.3;P13;PER
 	antq_reg_bath_fuel_depot = { tag = XAO level = 1 location = bayburt } # reg_world_2906_bayburt; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = THR level = 1 location = beden } # reg_world_2907_beden; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = CLZ level = 1 location = bedia } # reg_world_2908_bedia; P12.1;P12.3;P13;PER
+	antq_reg_semnonian_sacred_grove = { tag = THR level = 1 location = beden } # reg_world_2907_beden; P12.1;P12.3;P13;PER
+	antq_reg_marcomannic_royal_compound = { tag = CLZ level = 1 location = bedia } # reg_world_2908_bedia; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = CAP level = 1 location = bekarlar } # reg_world_2909_bekarlar; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = XAQ level = 1 location = beylagan } # reg_world_2910_beylagan; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = XAQ level = 1 location = beylagan } # reg_world_2910_beylagan; P12.1;P12.3;P13;PER
 	antq_reg_customs_gate = { tag = XDP level = 1 location = bihar_sharif } # reg_world_2911_bihar_sharif; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XAX level = 1 location = bijnot } # reg_world_2912_bijnot; P12.1;P12.3;P13;PER
 	antq_reg_amphora_warehouse = { tag = XAR level = 1 location = bo_hai_khau } # reg_world_2913_bo_hai_khau; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = IBR level = 1 location = bodbe } # reg_world_2914_bodbe; P12.1;P12.3;P13;PER
-	antq_reg_saltworks = { tag = CAP level = 1 location = bor_tur } # reg_world_2915_bor_tur; P12.1;P12.3;P13;PER
+	antq_reg_rhine_frontier_market = { tag = CAP level = 1 location = bor_tur } # reg_world_2915_bor_tur; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = THR level = 1 location = boruy } # reg_world_2916_boruy; P12.1;P12.3;P13;PER
 	antq_reg_amphora_depot = { tag = XAA level = 1 location = bracciano } # reg_world_2917_bracciano; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = URW level = 1 location = buganda } # reg_world_2918_buganda; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = THR level = 1 location = bukelon } # reg_world_2919_bukelon; P12.1;P12.3;P13;PER
+	antq_reg_germanic_assembly_field = { tag = URW level = 1 location = buganda } # reg_world_2918_buganda; P12.1;P12.3;P13;PER
+	antq_reg_batavian_auxiliary_muster = { tag = THR level = 1 location = bukelon } # reg_world_2919_bukelon; P12.1;P12.3;P13;PER
 	antq_reg_stone_yard = { tag = XDP level = 1 location = buxar } # reg_world_2920_buxar; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XHH level = 1 location = cahokia } # reg_world_2921_cahokia; P12.1;P12.3;P13;PER
 	antq_reg_hypocaust_yard = { tag = NAZ level = 1 location = cahuachi } # reg_world_2922_cahuachi; P12.1;P12.3;P13;PER
@@ -4927,60 +4956,60 @@ building_manager = {
 	antq_reg_sponge_drying_yard = { tag = THR level = 1 location = catalca } # reg_world_2925_catalca; P12.1;P12.3;P13;PER
 	antq_reg_way_station = { tag = XAH level = 1 location = cermik } # reg_world_2926_cermik; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XAX level = 1 location = chakwal } # reg_world_2927_chakwal; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = VIR level = 1 location = chan_chan } # reg_world_2928_chan_chan; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = VIR level = 1 location = chan_chan } # reg_world_2928_chan_chan; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = VNG level = 1 location = chandrabad } # reg_world_2929_chandrabad; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = XAR level = 1 location = changle } # reg_world_2930_changle; P12.1;P12.3;P13;PER
+	antq_reg_vistula_migration_staging = { tag = XAR level = 1 location = changle } # reg_world_2930_changle; P12.1;P12.3;P13;PER
 	antq_reg_wharf_crane = { tag = XAR level = 1 location = changshi } # reg_world_2931_changshi; P12.1;P12.3;P13;PER
 	antq_reg_spice_warehouse = { tag = XAR level = 1 location = changshu } # reg_world_2932_changshu; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XAR level = 1 location = changyi } # reg_world_2933_changyi; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = VIR level = 1 location = chao } # reg_world_2934_chao; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = SNE level = 1 location = chayrama } # reg_world_2935_chayrama; P12.1;P12.3;P13;PER
 	antq_reg_saltworks = { tag = XHM level = 1 location = chicaquicha } # reg_world_2936_chicaquicha; P12.1;P12.3;P13;PER
-	antq_reg_lamp_oil_depot = { tag = XHM level = 1 location = choconta } # reg_world_2937_choconta; P12.1;P12.3;P13;PER
+	antq_reg_north_sea_boat_landing = { tag = XHM level = 1 location = choconta } # reg_world_2937_choconta; P12.1;P12.3;P13;PER
 	antq_reg_sponge_drying_yard = { tag = XHK level = 1 location = chucuito } # reg_world_2938_chucuito; P12.1;P12.3;P13;PER
 	antq_reg_mensores_office = { tag = XAR level = 1 location = chunan } # reg_world_2939_chunan; P12.1;P12.3;P13;PER
 	antq_reg_fountain_house = { tag = XFU level = 1 location = chunar } # reg_world_2940_chunar; P12.1;P12.3;P13;PER
-	antq_reg_grain_weighhouse = { tag = THR level = 1 location = corlu } # reg_world_2941_corlu; P12.1;P12.3;P13;PER
+	antq_reg_lamp_oil_depot = { tag = THR level = 1 location = corlu } # reg_world_2941_corlu; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = CAP level = 1 location = corum } # reg_world_2942_corum; P12.1;P12.3;P13;PER
 	antq_reg_sponge_drying_yard = { tag = CPH level = 1 location = cupilco } # reg_world_2943_cupilco; P12.1;P12.3;P13;PER
 	antq_reg_sponge_drying_yard = { tag = DGU level = 1 location = daga_papua } # reg_world_2944_daga_papua; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = XAA level = 1 location = damietta } # reg_world_2945_damietta; P12.1;P12.3;P13;PER
-	antq_reg_customs_gate = { tag = XAR level = 1 location = danyang } # reg_world_2946_danyang; P12.1;P12.3;P13;PER
-	antq_reg_bath_fuel_depot = { tag = XAR level = 1 location = dexing } # reg_world_2947_dexing; P12.1;P12.3;P13;PER
+	antq_reg_grain_weighhouse = { tag = XAR level = 1 location = danyang } # reg_world_2946_danyang; P12.1;P12.3;P13;PER
+	antq_reg_customs_gate = { tag = XAR level = 1 location = dexing } # reg_world_2947_dexing; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = HIM level = 1 location = dhafar } # reg_world_2948_dhafar; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XBI level = 1 location = dhamar } # reg_world_2949_dhamar; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = SRS level = 1 location = dhrangadhra } # reg_world_2950_dhrangadhra; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = SRS level = 1 location = dhrangadhra } # reg_world_2950_dhrangadhra; P12.1;P12.3;P13;PER
 	antq_reg_sponge_drying_yard = { tag = XBD level = 1 location = digavapi } # reg_world_2951_digavapi; P12.1;P12.3;P13;PER
-	antq_reg_apothecary = { tag = IBR level = 1 location = dmanisi } # reg_world_2952_dmanisi; P12.1;P12.3;P13;PER
+	antq_reg_bath_fuel_depot = { tag = IBR level = 1 location = dmanisi } # reg_world_2952_dmanisi; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = XBG level = 1 location = dongola } # reg_world_2953_dongola; P12.1;P12.3;P13;PER
-	antq_reg_amphora_warehouse = { tag = XFW level = 1 location = dubrajpur } # reg_world_2954_dubrajpur; P12.1;P12.3;P13;PER
+	antq_reg_apothecary = { tag = XFW level = 1 location = dubrajpur } # reg_world_2954_dubrajpur; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = XAA level = 1 location = el_balyana } # reg_world_2955_el_balyana; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = XBH level = 1 location = el_gadarif } # reg_world_2956_el_gadarif; P12.1;P12.3;P13;PER
-	antq_reg_amphora_depot = { tag = ADI level = 1 location = erbil } # reg_world_2957_erbil; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = XBH level = 1 location = el_gadarif } # reg_world_2956_el_gadarif; P12.1;P12.3;P13;PER
+	antq_reg_amphora_warehouse = { tag = ADI level = 1 location = erbil } # reg_world_2957_erbil; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XAM level = 1 location = eruh } # reg_world_2958_eruh; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XAO level = 1 location = erzurum } # reg_world_2959_erzurum; P12.1;P12.3;P13;PER
-	antq_reg_stone_yard = { tag = XAG level = 1 location = fez } # reg_world_2960_fez; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = XAR level = 1 location = fuliang } # reg_world_2961_fuliang; P12.1;P12.3;P13;PER
-	antq_reg_south_arabian_terrace_sluices = { tag = XHM level = 1 location = funza } # reg_world_2962_funza; P12.1;P12.3;P13;PER
+	antq_reg_amphora_depot = { tag = XAG level = 1 location = fez } # reg_world_2960_fez; P12.1;P12.3;P13;PER
+	antq_reg_semnonian_sacred_grove = { tag = XAR level = 1 location = fuliang } # reg_world_2961_fuliang; P12.1;P12.3;P13;PER
+	antq_reg_stone_yard = { tag = XHM level = 1 location = funza } # reg_world_2962_funza; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XAN level = 1 location = gandamak } # reg_world_2963_gandamak; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = AGA level = 1 location = gidhaur } # reg_world_2964_gidhaur; P12.1;P12.3;P13;PER
-	antq_reg_hypocaust_yard = { tag = XAA level = 1 location = granada } # reg_world_2965_granada; P12.1;P12.3;P13;PER
+	antq_reg_south_arabian_terrace_sluices = { tag = XAA level = 1 location = granada } # reg_world_2965_granada; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = EMR level = 1 location = guahan } # reg_world_2966_guahan; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = YDH level = 1 location = gurgaon } # reg_world_2967_gurgaon; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = GRH level = 1 location = harad_al_ahsa } # reg_world_2968_harad_al_ahsa; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XBI level = 1 location = harad_asir } # reg_world_2969_harad_asir; P12.1;P12.3;P13;PER
-	antq_reg_spice_warehouse = { tag = XAO level = 1 location = hasankale } # reg_world_2970_hasankale; P12.1;P12.3;P13;PER
-	antq_reg_mensores_office = { tag = XHK level = 1 location = hatunqulla } # reg_world_2971_hatunqulla; P12.1;P12.3;P13;PER
+	antq_reg_aestian_amber_sorting_ground = { tag = XAO level = 1 location = hasankale } # reg_world_2970_hasankale; P12.1;P12.3;P13;PER
+	antq_reg_spice_warehouse = { tag = XHK level = 1 location = hatunqulla } # reg_world_2971_hatunqulla; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XHJ level = 1 location = huaman_karpa } # reg_world_2972_huaman_karpa; P12.1;P12.3;P13;PER
-	antq_reg_lamp_oil_depot = { tag = AYM level = 1 location = ibrahimabad } # reg_world_2973_ibrahimabad; P12.1;P12.3;P13;PER
-	antq_reg_grain_weighhouse = { tag = XAO level = 1 location = ilic } # reg_world_2974_ilic; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = XCW level = 1 location = ishma } # reg_world_2975_ishma; P12.1;P12.3;P13;PER
-	antq_reg_fountain_house = { tag = TVC level = 1 location = ixtlahuaca } # reg_world_2976_ixtlahuaca; P12.1;P12.3;P13;PER
+	antq_reg_north_sea_boat_landing = { tag = AYM level = 1 location = ibrahimabad } # reg_world_2973_ibrahimabad; P12.1;P12.3;P13;PER
+	antq_reg_mensores_office = { tag = XAO level = 1 location = ilic } # reg_world_2974_ilic; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = XCW level = 1 location = ishma } # reg_world_2975_ishma; P12.1;P12.3;P13;PER
+	antq_reg_marcomannic_royal_compound = { tag = TVC level = 1 location = ixtlahuaca } # reg_world_2976_ixtlahuaca; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XAN level = 1 location = jalalabad } # reg_world_2977_jalalabad; P12.1;P12.3;P13;PER
-	antq_reg_saltworks = { tag = XEQ level = 1 location = jeddah } # reg_world_2978_jeddah; P12.1;P12.3;P13;PER
+	antq_reg_rhine_frontier_market = { tag = XEQ level = 1 location = jeddah } # reg_world_2978_jeddah; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = XAN level = 1 location = kabul } # reg_world_2979_kabul; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XAA level = 1 location = kafr_saqr } # reg_world_2980_kafr_saqr; P12.1;P12.3;P13;PER
-	antq_reg_eastern_arabian_aflaj = { tag = XBD level = 1 location = kandy } # reg_world_2981_kandy; P12.1;P12.3;P13;PER
+	antq_reg_lamp_oil_depot = { tag = XBD level = 1 location = kandy } # reg_world_2981_kandy; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XAO level = 1 location = karakilise } # reg_world_2982_karakilise; P12.1;P12.3;P13;PER
 	antq_reg_sponge_drying_yard = { tag = SMT level = 1 location = kobirhat } # reg_world_2983_kobirhat; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XBD level = 1 location = kotte } # reg_world_2984_kotte; P12.1;P12.3;P13;PER
@@ -4988,17 +5017,17 @@ building_manager = {
 	antq_reg_wharf_crane = { tag = XAH level = 1 location = latakia } # reg_world_2986_latakia; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = TIW level = 1 location = machaqa } # reg_world_2987_machaqa; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = PCM level = 1 location = makanpur } # reg_world_2988_makanpur; P12.1;P12.3;P13;PER
-	antq_reg_customs_gate = { tag = ACU level = 1 location = manaos } # reg_world_2989_manaos; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = NAB level = 1 location = medina } # reg_world_2990_medina; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = SAT level = 1 location = mehkar } # reg_world_2991_mehkar; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = IBR level = 1 location = mtskheta } # reg_world_2992_mtskheta; P12.1;P12.3;P13;PER
+	antq_reg_hypocaust_yard = { tag = ACU level = 1 location = manaos } # reg_world_2989_manaos; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = NAB level = 1 location = medina } # reg_world_2990_medina; P12.1;P12.3;P13;PER
+	antq_reg_germanic_assembly_field = { tag = SAT level = 1 location = mehkar } # reg_world_2991_mehkar; P12.1;P12.3;P13;PER
+	antq_reg_batavian_auxiliary_muster = { tag = IBR level = 1 location = mtskheta } # reg_world_2992_mtskheta; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = YDH level = 1 location = muktsar } # reg_world_2993_muktsar; P12.1;P12.3;P13;PER
-	antq_reg_bath_fuel_depot = { tag = IZA level = 1 location = napinaica } # reg_world_2994_napinaica; P12.1;P12.3;P13;PER
+	antq_reg_grain_weighhouse = { tag = IZA level = 1 location = napinaica } # reg_world_2994_napinaica; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XAC level = 1 location = nawa } # reg_world_2995_nawa; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = XAX level = 1 location = nawakot } # reg_world_2996_nawakot; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = XAX level = 1 location = nawakot } # reg_world_2996_nawakot; P12.1;P12.3;P13;PER
 	antq_reg_lamp_oil_depot = { tag = XAA level = 1 location = nola } # reg_world_2997_nola; P12.1;P12.3;P13;PER
 	antq_reg_saltworks = { tag = XHH level = 1 location = ochechiton } # reg_world_2998_ochechiton; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = XCN level = 1 location = patan } # reg_world_2999_patan; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = XCN level = 1 location = patan } # reg_world_2999_patan; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = HVI level = 1 location = peewareewa } # reg_world_3000_peewareewa; P12.1;P12.3;P13;PER
 	antq_reg_sponge_drying_yard = { tag = CLZ level = 1 location = poti_caucasus } # reg_world_3001_poti_caucasus; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XAQ level = 1 location = qabala } # reg_world_3002_qabala; P12.1;P12.3;P13;PER
@@ -5006,129 +5035,129 @@ building_manager = {
 	antq_reg_sponge_drying_yard = { tag = AGR level = 1 location = qurain } # reg_world_3004_qurain; P12.1;P12.3;P13;PER
 	antq_reg_caravanserai = { tag = XAH level = 1 location = rey } # reg_world_3005_rey; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XAB level = 1 location = safed } # reg_world_3006_safed; P12.1;P12.3;P13;PER
-	antq_reg_aromatic_resin_sorting_house = { tag = EMR level = 1 location = saipan } # reg_world_3007_saipan; P12.1;P12.3;P13;PER
+	antq_reg_fountain_house = { tag = EMR level = 1 location = saipan } # reg_world_3007_saipan; P12.1;P12.3;P13;PER
 	antq_reg_wharf_crane = { tag = XAA level = 1 location = salerno } # reg_world_3008_salerno; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XAE level = 1 location = samsat } # reg_world_3009_samsat; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = BED level = 1 location = saqra } # reg_world_3010_saqra; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = XCO level = 1 location = savaii } # reg_world_3011_savaii; P12.1;P12.3;P13;PER
 	antq_reg_arabian_caravan_station = { tag = GRH level = 1 location = sayhat } # reg_world_3012_sayhat; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = SAT level = 1 location = sholhapur } # reg_world_3013_sholhapur; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = SAT level = 1 location = sholhapur } # reg_world_3013_sholhapur; P12.1;P12.3;P13;PER
 	antq_reg_wharf_crane = { tag = XAH level = 1 location = sidon } # reg_world_3014_sidon; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = YDH level = 1 location = sirhind } # reg_world_3015_sirhind; P12.1;P12.3;P13;PER
-	antq_reg_stone_yard = { tag = XBH level = 1 location = soba } # reg_world_3016_soba; P12.1;P12.3;P13;PER
-	antq_reg_apothecary = { tag = XCS level = 1 location = sotuta } # reg_world_3017_sotuta; P12.1;P12.3;P13;PER
-	antq_reg_amphora_warehouse = { tag = VNG level = 1 location = sreepur } # reg_world_3018_sreepur; P12.1;P12.3;P13;PER
+	antq_reg_eastern_arabian_aflaj = { tag = XBH level = 1 location = soba } # reg_world_3016_soba; P12.1;P12.3;P13;PER
+	antq_reg_customs_gate = { tag = XCS level = 1 location = sotuta } # reg_world_3017_sotuta; P12.1;P12.3;P13;PER
+	antq_reg_bath_fuel_depot = { tag = VNG level = 1 location = sreepur } # reg_world_3018_sreepur; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = CPH level = 1 location = tatahuitalpan } # reg_world_3019_tatahuitalpan; P12.1;P12.3;P13;PER
-	antq_reg_amphora_depot = { tag = SNE level = 1 location = teyuna } # reg_world_3020_teyuna; P12.1;P12.3;P13;PER
+	antq_reg_aromatic_resin_sorting_house = { tag = SNE level = 1 location = teyuna } # reg_world_3020_teyuna; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = XAR level = 1 location = thang_long } # reg_world_3021_thang_long; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XAA level = 1 location = tinnis } # reg_world_3022_tinnis; P12.1;P12.3;P13;PER
 	antq_reg_colonia_forum = { tag = XAA level = 1 location = tivoli } # reg_world_3023_tivoli; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = XCV level = 1 location = tonala_coatzacoalco } # reg_world_3024_tonala_coatzacoalco; P12.1;P12.3;P13;PER
-	antq_reg_spice_warehouse = { tag = XCO level = 1 location = tongatapu } # reg_world_3025_tongatapu; P12.1;P12.3;P13;PER
+	antq_reg_apothecary = { tag = XCO level = 1 location = tongatapu } # reg_world_3025_tongatapu; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XAA level = 1 location = vallo } # reg_world_3026_vallo; P12.1;P12.3;P13;PER
-	antq_reg_south_arabian_terrace_sluices = { tag = SAT level = 1 location = wairagarh } # reg_world_3027_wairagarh; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = XBH level = 1 location = waylula } # reg_world_3028_waylula; P12.1;P12.3;P13;PER
+	antq_reg_amphora_warehouse = { tag = SAT level = 1 location = wairagarh } # reg_world_3027_wairagarh; P12.1;P12.3;P13;PER
+	antq_reg_vistula_migration_staging = { tag = XBH level = 1 location = waylula } # reg_world_3028_waylula; P12.1;P12.3;P13;PER
 	antq_reg_granary = { tag = PCM level = 1 location = jansath } # reg_world_3029_jansath; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = XCW level = 1 location = rimaq } # reg_world_3030_rimaq; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = XBG level = 1 location = shemkhiya } # reg_world_3031_shemkhiya; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = XCW level = 1 location = rimaq } # reg_world_3030_rimaq; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = XBG level = 1 location = shemkhiya } # reg_world_3031_shemkhiya; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = AYM level = 1 location = lucknow } # reg_world_3032_lucknow; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XCQ level = 1 location = tetzcoco } # reg_world_3033_tetzcoco; P12.1;P12.3;P13;PER
-	antq_reg_mensores_office = { tag = XCS level = 1 location = mani } # reg_world_3034_mani; P12.1;P12.3;P13;PER
+	antq_reg_amphora_depot = { tag = XCS level = 1 location = mani } # reg_world_3034_mani; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = KSM level = 1 location = shankargah } # reg_world_3035_shankargah; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = XGN level = 1 location = lakhiyarvira } # reg_world_3036_lakhiyarvira; P12.1;P12.3;P13;PER
-	antq_reg_hypocaust_yard = { tag = CMW level = 1 location = tamaroa } # reg_world_3037_tamaroa; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = XGN level = 1 location = lakhiyarvira } # reg_world_3036_lakhiyarvira; P12.1;P12.3;P13;PER
+	antq_reg_aestian_amber_sorting_ground = { tag = CMW level = 1 location = tamaroa } # reg_world_3037_tamaroa; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = QAT level = 1 location = al_bayda_yemen } # reg_world_3038_al_bayda_yemen; P12.1;P12.3;P13;PER
-	antq_reg_saltworks = { tag = XFT level = 1 location = kol } # reg_world_3039_kol; P12.1;P12.3;P13;PER
-	antq_reg_grain_weighhouse = { tag = RKU level = 1 location = baria } # reg_world_3040_baria; P12.1;P12.3;P13;PER
+	antq_reg_rhine_frontier_market = { tag = XFT level = 1 location = kol } # reg_world_3039_kol; P12.1;P12.3;P13;PER
+	antq_reg_way_station = { tag = RKU level = 1 location = baria } # reg_world_3040_baria; P12.1;P12.3;P13;PER
 	antq_reg_saltworks = { tag = CED level = 1 location = rath } # reg_world_3041_rath; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = YDH level = 1 location = rohtak } # reg_world_3042_rohtak; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = SMT level = 1 location = chandpur } # reg_world_3043_chandpur; P12.1;P12.3;P13;PER
-	antq_reg_fountain_house = { tag = URW level = 1 location = bigo_bya_mugenyi } # reg_world_3044_bigo_bya_mugenyi; P12.1;P12.3;P13;PER
-	antq_reg_eastern_arabian_aflaj = { tag = AYM level = 1 location = raebareli } # reg_world_3045_raebareli; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = XBH level = 1 location = karkuj } # reg_world_3046_karkuj; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = YDH level = 1 location = rohtak } # reg_world_3042_rohtak; P12.1;P12.3;P13;PER
+	antq_reg_semnonian_sacred_grove = { tag = SMT level = 1 location = chandpur } # reg_world_3043_chandpur; P12.1;P12.3;P13;PER
+	antq_reg_stone_yard = { tag = URW level = 1 location = bigo_bya_mugenyi } # reg_world_3044_bigo_bya_mugenyi; P12.1;P12.3;P13;PER
+	antq_reg_spice_warehouse = { tag = AYM level = 1 location = raebareli } # reg_world_3045_raebareli; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = XBH level = 1 location = karkuj } # reg_world_3046_karkuj; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = SMT level = 1 location = savar } # reg_world_3047_savar; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = CED level = 1 location = konch } # reg_world_3048_konch; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = XCW level = 1 location = huarco } # reg_world_3049_huarco; P12.1;P12.3;P13;PER
-	antq_reg_bath_fuel_depot = { tag = CED level = 1 location = banda } # reg_world_3050_banda; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = XCW level = 1 location = huarco } # reg_world_3049_huarco; P12.1;P12.3;P13;PER
+	antq_reg_south_arabian_terrace_sluices = { tag = CED level = 1 location = banda } # reg_world_3050_banda; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XBG level = 1 location = omdurman } # reg_world_3051_omdurman; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = AYM level = 1 location = kishi } # reg_world_3052_kishi; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = XAH level = 1 location = damascus } # reg_world_3053_damascus; P12.1;P12.3;P13;PER
-	antq_reg_customs_gate = { tag = AYM level = 1 location = awadh } # reg_world_3054_awadh; P12.1;P12.3;P13;PER
+	antq_reg_north_sea_boat_landing = { tag = AYM level = 1 location = awadh } # reg_world_3054_awadh; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = URW level = 1 location = rubaga } # reg_world_3055_rubaga; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = XAH level = 1 location = hamadan } # reg_world_3056_hamadan; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = XAH level = 1 location = hamadan } # reg_world_3056_hamadan; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XAJ level = 1 location = shush } # reg_world_3057_shush; P12.1;P12.3;P13;PER
-	antq_reg_aromatic_resin_sorting_house = { tag = OSR level = 1 location = urfa } # reg_world_3058_urfa; P12.1;P12.3;P13;PER
+	antq_reg_mensores_office = { tag = OSR level = 1 location = urfa } # reg_world_3058_urfa; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XAY level = 1 location = eminabad } # reg_world_3059_eminabad; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = XCN level = 1 location = deodar } # reg_world_3060_deodar; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = XCN level = 1 location = deodar } # reg_world_3060_deodar; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XAX level = 1 location = dera_ghazi_khan } # reg_world_3061_dera_ghazi_khan; P12.1;P12.3;P13;PER
-	antq_reg_apothecary = { tag = XCS level = 1 location = cuauhtemallan } # reg_world_3062_cuauhtemallan; P12.1;P12.3;P13;PER
+	antq_reg_marcomannic_royal_compound = { tag = XCS level = 1 location = cuauhtemallan } # reg_world_3062_cuauhtemallan; P12.1;P12.3;P13;PER
 	antq_reg_sponge_drying_yard = { tag = XEQ level = 1 location = asfan } # reg_world_3063_asfan; P12.1;P12.3;P13;PER
 	antq_reg_wharf_crane = { tag = XAH level = 1 location = beirut } # reg_world_3064_beirut; P12.1;P12.3;P13;PER
-	antq_reg_amphora_warehouse = { tag = YUN level = 1 location = incarraqay } # reg_world_3065_incarraqay; P12.1;P12.3;P13;PER
-	antq_reg_amphora_depot = { tag = VNG level = 1 location = khalifatabad } # reg_world_3066_khalifatabad; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = SAT level = 1 location = chandor } # reg_world_3067_chandor; P12.1;P12.3;P13;PER
+	antq_reg_hypocaust_yard = { tag = YUN level = 1 location = incarraqay } # reg_world_3065_incarraqay; P12.1;P12.3;P13;PER
+	antq_reg_grain_weighhouse = { tag = VNG level = 1 location = khalifatabad } # reg_world_3066_khalifatabad; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = SAT level = 1 location = chandor } # reg_world_3067_chandor; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XEQ level = 1 location = qasr_al_qaba } # reg_world_3068_qasr_al_qaba; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = XAX level = 1 location = muhammad_tur } # reg_world_3069_muhammad_tur; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = XBJ level = 1 location = sayun } # reg_world_3070_sayun; P12.1;P12.3;P13;PER
-	antq_reg_stone_yard = { tag = AGA level = 1 location = bhagalpur } # reg_world_3071_bhagalpur; P12.1;P12.3;P13;PER
-	antq_reg_saltworks = { tag = BED level = 1 location = unaizah } # reg_world_3072_unaizah; P12.1;P12.3;P13;PER
+	antq_reg_germanic_assembly_field = { tag = AGA level = 1 location = bhagalpur } # reg_world_3071_bhagalpur; P12.1;P12.3;P13;PER
+	antq_reg_rhine_frontier_market = { tag = BED level = 1 location = unaizah } # reg_world_3072_unaizah; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XFU level = 1 location = kantit } # reg_world_3073_kantit; P12.1;P12.3;P13;PER
 	antq_reg_sponge_drying_yard = { tag = XAH level = 1 location = tripoli_syria } # reg_world_3074_tripoli_syria; P12.1;P12.3;P13;PER
 	antq_reg_saltworks = { tag = XHJ level = 1 location = challwanqa } # reg_world_3075_challwanqa; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = SAT level = 1 location = daulatabad } # reg_world_3076_daulatabad; P12.1;P12.3;P13;PER
-	antq_reg_spice_warehouse = { tag = XBD level = 1 location = jaffna } # reg_world_3077_jaffna; P12.1;P12.3;P13;PER
-	antq_reg_south_arabian_terrace_sluices = { tag = LRC level = 1 location = malacatos } # reg_world_3078_malacatos; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = YQI level = 1 location = kurla } # reg_world_3079_kurla; P12.1;P12.3;P13;PER
-	antq_reg_mensores_office = { tag = SAT level = 1 location = panar } # reg_world_3080_panar; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = QAT level = 1 location = shuqra } # reg_world_3081_shuqra; P12.1;P12.3;P13;PER
-	antq_reg_lamp_oil_depot = { tag = PDR level = 1 location = naogaon } # reg_world_3082_naogaon; P12.1;P12.3;P13;PER
-	antq_reg_saltworks = { tag = XGN level = 1 location = kantha } # reg_world_3083_kantha; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = KIN level = 1 location = tamrah } # reg_world_3084_tamrah; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = PTF level = 1 location = tepexi } # reg_world_3085_tepexi; P12.1;P12.3;P13;PER
-	antq_reg_hypocaust_yard = { tag = XCN level = 1 location = radhanpur } # reg_world_3086_radhanpur; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = SAT level = 1 location = daulatabad } # reg_world_3076_daulatabad; P12.1;P12.3;P13;PER
+	antq_reg_fountain_house = { tag = XBD level = 1 location = jaffna } # reg_world_3077_jaffna; P12.1;P12.3;P13;PER
+	antq_reg_eastern_arabian_aflaj = { tag = LRC level = 1 location = malacatos } # reg_world_3078_malacatos; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = YQI level = 1 location = kurla } # reg_world_3079_kurla; P12.1;P12.3;P13;PER
+	antq_reg_customs_gate = { tag = SAT level = 1 location = panar } # reg_world_3080_panar; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = QAT level = 1 location = shuqra } # reg_world_3081_shuqra; P12.1;P12.3;P13;PER
+	antq_reg_bath_fuel_depot = { tag = PDR level = 1 location = naogaon } # reg_world_3082_naogaon; P12.1;P12.3;P13;PER
+	antq_reg_rhine_frontier_market = { tag = XGN level = 1 location = kantha } # reg_world_3083_kantha; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = KIN level = 1 location = tamrah } # reg_world_3084_tamrah; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = PTF level = 1 location = tepexi } # reg_world_3085_tepexi; P12.1;P12.3;P13;PER
+	antq_reg_south_arabian_terrace_sluices = { tag = XCN level = 1 location = radhanpur } # reg_world_3086_radhanpur; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = SMT level = 1 location = sonargaon } # reg_world_3087_sonargaon; P12.1;P12.3;P13;PER
-	antq_reg_grain_weighhouse = { tag = XGS level = 1 location = tamtoc } # reg_world_3088_tamtoc; P12.1;P12.3;P13;PER
-	antq_reg_fountain_house = { tag = XCL level = 1 location = chhmuoh_thmei } # reg_world_3089_chhmuoh_thmei; P12.1;P12.3;P13;PER
-	antq_reg_eastern_arabian_aflaj = { tag = OMN level = 1 location = as_sib } # reg_world_3090_as_sib; P12.1;P12.3;P13;PER
+	antq_reg_batavian_auxiliary_muster = { tag = XGS level = 1 location = tamtoc } # reg_world_3088_tamtoc; P12.1;P12.3;P13;PER
+	antq_reg_aromatic_resin_sorting_house = { tag = XCL level = 1 location = chhmuoh_thmei } # reg_world_3089_chhmuoh_thmei; P12.1;P12.3;P13;PER
+	antq_reg_hypocaust_yard = { tag = OMN level = 1 location = as_sib } # reg_world_3090_as_sib; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = VNG level = 1 location = nadia } # reg_world_3091_nadia; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = SRS level = 1 location = gondal } # reg_world_3092_gondal; P12.1;P12.3;P13;PER
 	antq_reg_way_station = { tag = XAY level = 1 location = pasrur } # reg_world_3093_pasrur; P12.1;P12.3;P13;PER
-	antq_reg_bath_fuel_depot = { tag = PDR level = 1 location = rampur_boalla } # reg_world_3094_rampur_boalla; P12.1;P12.3;P13;PER
-	antq_reg_customs_gate = { tag = XCS level = 1 location = coba } # reg_world_3095_coba; P12.1;P12.3;P13;PER
-	antq_reg_aromatic_resin_sorting_house = { tag = PCM level = 1 location = mirat } # reg_world_3096_mirat; P12.1;P12.3;P13;PER
-	antq_reg_apothecary = { tag = BJC level = 1 location = yuririapundaro } # reg_world_3097_yuririapundaro; P12.1;P12.3;P13;PER
+	antq_reg_fountain_house = { tag = PDR level = 1 location = rampur_boalla } # reg_world_3094_rampur_boalla; P12.1;P12.3;P13;PER
+	antq_reg_apothecary = { tag = XCS level = 1 location = coba } # reg_world_3095_coba; P12.1;P12.3;P13;PER
+	antq_reg_amphora_warehouse = { tag = PCM level = 1 location = mirat } # reg_world_3096_mirat; P12.1;P12.3;P13;PER
+	antq_reg_amphora_depot = { tag = BJC level = 1 location = yuririapundaro } # reg_world_3097_yuririapundaro; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = SLC level = 1 location = tenochtitlan } # reg_world_3098_tenochtitlan; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XEQ level = 1 location = dhalam } # reg_world_3099_dhalam; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = XCS level = 1 location = jootsuuk } # reg_world_3100_jootsuuk; P12.1;P12.3;P13;PER
+	antq_reg_vistula_migration_staging = { tag = XCS level = 1 location = jootsuuk } # reg_world_3100_jootsuuk; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XCR level = 1 location = azcapotzalco } # reg_world_3101_azcapotzalco; P12.1;P12.3;P13;PER
-	antq_reg_amphora_warehouse = { tag = EME level = 1 location = homs } # reg_world_3102_homs; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = XCN level = 1 location = khambat } # reg_world_3103_khambat; P12.1;P12.3;P13;PER
+	antq_reg_aestian_amber_sorting_ground = { tag = EME level = 1 location = homs } # reg_world_3102_homs; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = XCN level = 1 location = khambat } # reg_world_3103_khambat; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XCU level = 1 location = zaachila } # reg_world_3104_zaachila; P12.1;P12.3;P13;PER
 	antq_reg_mensores_office = { tag = XGO level = 1 location = ajmer } # reg_world_3105_ajmer; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = NAB level = 1 location = tabuk_arabia } # reg_world_3106_tabuk_arabia; P12.1;P12.3;P13;PER
-	antq_reg_amphora_depot = { tag = VDJ level = 1 location = ramnagar_bihar } # reg_world_3107_ramnagar_bihar; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = SAT level = 1 location = singarh } # reg_world_3108_singarh; P12.1;P12.3;P13;PER
-	antq_reg_stone_yard = { tag = PDR level = 1 location = godagari } # reg_world_3109_godagari; P12.1;P12.3;P13;PER
+	antq_reg_stone_yard = { tag = VDJ level = 1 location = ramnagar_bihar } # reg_world_3107_ramnagar_bihar; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = SAT level = 1 location = singarh } # reg_world_3108_singarh; P12.1;P12.3;P13;PER
+	antq_reg_spice_warehouse = { tag = PDR level = 1 location = godagari } # reg_world_3109_godagari; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XAG level = 1 location = tablat } # reg_world_3110_tablat; P12.1;P12.3;P13;PER
 	antq_reg_saltworks = { tag = NAZ level = 1 location = chinchay } # reg_world_3111_chinchay; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = XCS level = 1 location = zaci } # reg_world_3112_zaci; P12.1;P12.3;P13;PER
-	antq_reg_spice_warehouse = { tag = KWL level = 1 location = rasini } # reg_world_3113_rasini; P12.1;P12.3;P13;PER
-	antq_reg_south_arabian_terrace_sluices = { tag = XFV level = 1 location = lumbini } # reg_world_3114_lumbini; P12.1;P12.3;P13;PER
-	antq_reg_lamp_oil_depot = { tag = XHJ level = 1 location = allpas } # reg_world_3115_allpas; P12.1;P12.3;P13;PER
+	antq_reg_semnonian_sacred_grove = { tag = KWL level = 1 location = rasini } # reg_world_3113_rasini; P12.1;P12.3;P13;PER
+	antq_reg_north_sea_boat_landing = { tag = XFV level = 1 location = lumbini } # reg_world_3114_lumbini; P12.1;P12.3;P13;PER
+	antq_reg_marcomannic_royal_compound = { tag = XHJ level = 1 location = allpas } # reg_world_3115_allpas; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XBH level = 1 location = el_manaqil } # reg_world_3116_el_manaqil; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XDE level = 1 location = bula_kongo } # reg_world_3117_bula_kongo; P12.1;P12.3;P13;PER
-	antq_reg_hypocaust_yard = { tag = SAT level = 1 location = basim } # reg_world_3118_basim; P12.1;P12.3;P13;PER
+	antq_reg_lamp_oil_depot = { tag = SAT level = 1 location = basim } # reg_world_3118_basim; P12.1;P12.3;P13;PER
 	antq_reg_grain_weighhouse = { tag = PTF level = 1 location = tehuacan } # reg_world_3119_tehuacan; P12.1;P12.3;P13;PER
-	antq_reg_saltworks = { tag = XGQ level = 1 location = gudamalani } # reg_world_3120_gudamalani; P12.1;P12.3;P13;PER
-	antq_reg_fountain_house = { tag = CMW level = 1 location = chepoussa } # reg_world_3121_chepoussa; P12.1;P12.3;P13;PER
+	antq_reg_rhine_frontier_market = { tag = XGQ level = 1 location = gudamalani } # reg_world_3120_gudamalani; P12.1;P12.3;P13;PER
+	antq_reg_eastern_arabian_aflaj = { tag = CMW level = 1 location = chepoussa } # reg_world_3121_chepoussa; P12.1;P12.3;P13;PER
 	antq_reg_wharf_crane = { tag = OMN level = 1 location = masqat } # reg_world_3122_masqat; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = XEQ level = 1 location = yanbu } # reg_world_3123_yanbu; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = XEQ level = 1 location = yanbu } # reg_world_3123_yanbu; P12.1;P12.3;P13;PER
 	antq_reg_spice_warehouse = { tag = SAT level = 1 location = dabhol } # reg_world_3124_dabhol; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = AGR level = 1 location = kaf } # reg_world_3125_kaf; P12.1;P12.3;P13;PER
-	antq_reg_eastern_arabian_aflaj = { tag = XHH level = 1 location = amonokoa } # reg_world_3126_amonokoa; P12.1;P12.3;P13;PER
+	antq_reg_germanic_assembly_field = { tag = XHH level = 1 location = amonokoa } # reg_world_3126_amonokoa; P12.1;P12.3;P13;PER
 	antq_reg_saltworks = { tag = XCS level = 1 location = motul } # reg_world_3127_motul; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = XGQ level = 1 location = osian } # reg_world_3128_osian; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = XHJ level = 1 location = wari_peru } # reg_world_3129_wari_peru; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = XGQ level = 1 location = osian } # reg_world_3128_osian; P12.1;P12.3;P13;PER
+	antq_reg_batavian_auxiliary_muster = { tag = XHJ level = 1 location = wari_peru } # reg_world_3129_wari_peru; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XHL level = 1 location = markahuamachuco } # reg_world_3130_markahuamachuco; P12.1;P12.3;P13;PER
 	antq_reg_customs_gate = { tag = SAT level = 1 location = balaghat } # reg_world_3131_balaghat; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XGQ level = 1 location = phalvardhika } # reg_world_3132_phalvardhika; P12.1;P12.3;P13;PER
@@ -5140,183 +5169,183 @@ building_manager = {
 	antq_reg_amphora_warehouse = { tag = SAT level = 1 location = chhaparagarh } # reg_world_3138_chhaparagarh; P12.1;P12.3;P13;PER
 	antq_reg_sponge_drying_yard = { tag = KBC level = 1 location = kaimana } # reg_world_3139_kaimana; P12.1;P12.3;P13;PER
 	antq_reg_way_station = { tag = WHU level = 1 location = ningchang } # reg_world_3140_ningchang; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = XAG level = 1 location = marrakesh } # reg_world_3141_marrakesh; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = XAG level = 1 location = marrakesh } # reg_world_3141_marrakesh; P12.1;P12.3;P13;PER
 	antq_reg_stone_yard = { tag = XGQ level = 1 location = jaisalmer } # reg_world_3142_jaisalmer; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XFU level = 1 location = varanasi } # reg_world_3143_varanasi; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XBG level = 1 location = kerma } # reg_world_3144_kerma; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XFX level = 1 location = dumka } # reg_world_3145_dumka; P12.1;P12.3;P13;PER
 	antq_reg_amphora_depot = { tag = VDJ level = 1 location = janakpur_nepal } # reg_world_3146_janakpur_nepal; P12.1;P12.3;P13;PER
-	antq_reg_south_arabian_terrace_sluices = { tag = XAG level = 1 location = tlemcen } # reg_world_3147_tlemcen; P12.1;P12.3;P13;PER
-	antq_reg_mensores_office = { tag = VDJ level = 1 location = alamganj } # reg_world_3148_alamganj; P12.1;P12.3;P13;PER
-	antq_reg_lamp_oil_depot = { tag = XAH level = 1 location = nusaybin } # reg_world_3149_nusaybin; P12.1;P12.3;P13;PER
+	antq_reg_aestian_amber_sorting_ground = { tag = XAG level = 1 location = tlemcen } # reg_world_3147_tlemcen; P12.1;P12.3;P13;PER
+	antq_reg_vistula_migration_staging = { tag = VDJ level = 1 location = alamganj } # reg_world_3148_alamganj; P12.1;P12.3;P13;PER
+	antq_reg_south_arabian_terrace_sluices = { tag = XAH level = 1 location = nusaybin } # reg_world_3149_nusaybin; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = TVC level = 1 location = tollohcan } # reg_world_3150_tollohcan; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = OMN level = 1 location = rustaq } # reg_world_3151_rustaq; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = SRS level = 1 location = nagnes } # reg_world_3152_nagnes; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = SHC level = 1 location = yarkand } # reg_world_3153_yarkand; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = OMN level = 1 location = rustaq } # reg_world_3151_rustaq; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = SRS level = 1 location = nagnes } # reg_world_3152_nagnes; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = SHC level = 1 location = yarkand } # reg_world_3153_yarkand; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = OMN level = 1 location = nakhal } # reg_world_3154_nakhal; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XAG level = 1 location = namalata } # reg_world_3155_namalata; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XAH level = 1 location = jableh } # reg_world_3156_jableh; P12.1;P12.3;P13;PER
 	antq_reg_lamp_oil_depot = { tag = XAG level = 1 location = meknes } # reg_world_3157_meknes; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = XAO level = 1 location = khor_virap } # reg_world_3158_khor_virap; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = GMU level = 1 location = aksu } # reg_world_3159_aksu; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = XAO level = 1 location = khor_virap } # reg_world_3158_khor_virap; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = GMU level = 1 location = aksu } # reg_world_3159_aksu; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = HVI level = 1 location = peoria } # reg_world_3160_peoria; P12.1;P12.3;P13;PER
 	antq_reg_hypocaust_yard = { tag = WNK level = 1 location = charka } # reg_world_3161_charka; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = XFT level = 1 location = mathura } # reg_world_3162_mathura; P12.1;P12.3;P13;PER
-	antq_reg_grain_weighhouse = { tag = PND level = 1 location = madurai } # reg_world_3163_madurai; P12.1;P12.3;P13;PER
-	antq_reg_pack_animal_yard = { tag = KIN level = 1 location = ad_dilam } # reg_world_3164_ad_dilam; P12.1;P12.3;P13;PER
-	antq_reg_fountain_house = { tag = XHL level = 1 location = kaxa_marca } # reg_world_3165_kaxa_marca; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = XFT level = 1 location = mathura } # reg_world_3162_mathura; P12.1;P12.3;P13;PER
+	antq_reg_semnonian_sacred_grove = { tag = PND level = 1 location = madurai } # reg_world_3163_madurai; P12.1;P12.3;P13;PER
+	antq_reg_marcomannic_royal_compound = { tag = KIN level = 1 location = ad_dilam } # reg_world_3164_ad_dilam; P12.1;P12.3;P13;PER
+	antq_reg_north_sea_boat_landing = { tag = XHL level = 1 location = kaxa_marca } # reg_world_3165_kaxa_marca; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = PTF level = 1 location = cholollan } # reg_world_3166_cholollan; P12.1;P12.3;P13;PER
-	antq_reg_eastern_arabian_aflaj = { tag = XFX level = 1 location = ichagarh } # reg_world_3167_ichagarh; P12.1;P12.3;P13;PER
-	antq_reg_stone_yard = { tag = WCR level = 1 location = yap } # reg_world_3168_yap; P12.1;P12.3;P13;PER
+	antq_reg_mensores_office = { tag = XFX level = 1 location = ichagarh } # reg_world_3167_ichagarh; P12.1;P12.3;P13;PER
+	antq_reg_fountain_house = { tag = WCR level = 1 location = yap } # reg_world_3168_yap; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XAT level = 1 location = kashgar } # reg_world_3169_kashgar; P12.1;P12.3;P13;PER
-	antq_reg_pack_animal_yard = { tag = XBE level = 1 location = shendi } # reg_world_3170_shendi; P12.1;P12.3;P13;PER
-	antq_reg_customs_gate = { tag = XHK level = 1 location = ayaviri } # reg_world_3171_ayaviri; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = XDE level = 1 location = mbanza_nsundi } # reg_world_3172_mbanza_nsundi; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = XGR level = 1 location = sui } # reg_world_3173_sui; P12.1;P12.3;P13;PER
+	antq_reg_germanic_assembly_field = { tag = XBE level = 1 location = shendi } # reg_world_3170_shendi; P12.1;P12.3;P13;PER
+	antq_reg_grain_weighhouse = { tag = XHK level = 1 location = ayaviri } # reg_world_3171_ayaviri; P12.1;P12.3;P13;PER
+	antq_reg_batavian_auxiliary_muster = { tag = XDE level = 1 location = mbanza_nsundi } # reg_world_3172_mbanza_nsundi; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = XGR level = 1 location = sui } # reg_world_3173_sui; P12.1;P12.3;P13;PER
 	antq_reg_spice_warehouse = { tag = XBC level = 1 location = puddokothai } # reg_world_3174_puddokothai; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = NVM level = 1 location = mandla } # reg_world_3175_mandla; P12.1;P12.3;P13;PER
-	antq_reg_bath_fuel_depot = { tag = TVC level = 1 location = ninil } # reg_world_3176_ninil; P12.1;P12.3;P13;PER
+	antq_reg_eastern_arabian_aflaj = { tag = TVC level = 1 location = ninil } # reg_world_3176_ninil; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XAX level = 1 location = karor_2 } # reg_world_3177_karor_2; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = AGR level = 1 location = basithah } # reg_world_3178_basithah; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = XAX level = 1 location = mankera } # reg_world_3179_mankera; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = AGR level = 1 location = basithah } # reg_world_3178_basithah; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = XAX level = 1 location = mankera } # reg_world_3179_mankera; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = BUY level = 1 location = boduna } # reg_world_3180_boduna; P12.1;P12.3;P13;PER
-	antq_reg_aromatic_resin_sorting_house = { tag = XDN level = 1 location = tiruvannamalai } # reg_world_3181_tiruvannamalai; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = XAN level = 1 location = logar } # reg_world_3182_logar; P12.1;P12.3;P13;PER
+	antq_reg_customs_gate = { tag = XDN level = 1 location = tiruvannamalai } # reg_world_3181_tiruvannamalai; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = XAN level = 1 location = logar } # reg_world_3182_logar; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = XAG level = 1 location = volubilis } # reg_world_3183_volubilis; P12.1;P12.3;P13;PER
-	antq_reg_apothecary = { tag = PDR level = 1 location = bogra } # reg_world_3184_bogra; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = NHC level = 1 location = kerhiretarhu } # reg_world_3185_kerhiretarhu; P12.1;P12.3;P13;PER
+	antq_reg_bath_fuel_depot = { tag = PDR level = 1 location = bogra } # reg_world_3184_bogra; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = NHC level = 1 location = kerhiretarhu } # reg_world_3185_kerhiretarhu; P12.1;P12.3;P13;PER
 	antq_reg_south_arabian_terrace_sluices = { tag = SAT level = 1 location = mangapet } # reg_world_3186_mangapet; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = XAY level = 1 location = tulamba } # reg_world_3187_tulamba; P12.1;P12.3;P13;PER
-	antq_reg_saltworks = { tag = SAT level = 1 location = kothagudem } # reg_world_3188_kothagudem; P12.1;P12.3;P13;PER
-	antq_reg_pack_animal_yard = { tag = XAY level = 1 location = pindi_bhattian } # reg_world_3189_pindi_bhattian; P12.1;P12.3;P13;PER
-	antq_reg_amphora_warehouse = { tag = XBC level = 1 location = srirangam } # reg_world_3190_srirangam; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = XAY level = 1 location = tulamba } # reg_world_3187_tulamba; P12.1;P12.3;P13;PER
+	antq_reg_rhine_frontier_market = { tag = SAT level = 1 location = kothagudem } # reg_world_3188_kothagudem; P12.1;P12.3;P13;PER
+	antq_reg_way_station = { tag = XAY level = 1 location = pindi_bhattian } # reg_world_3189_pindi_bhattian; P12.1;P12.3;P13;PER
+	antq_reg_aromatic_resin_sorting_house = { tag = XBC level = 1 location = srirangam } # reg_world_3190_srirangam; P12.1;P12.3;P13;PER
 	antq_reg_saltworks = { tag = IZA level = 1 location = huehuetan } # reg_world_3191_huehuetan; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = ONH level = 1 location = chiautla } # reg_world_3192_chiautla; P12.1;P12.3;P13;PER
-	antq_reg_pack_animal_yard = { tag = XGQ level = 1 location = nagaur } # reg_world_3193_nagaur; P12.1;P12.3;P13;PER
-	antq_reg_amphora_depot = { tag = XFV level = 1 location = kushinagar } # reg_world_3194_kushinagar; P12.1;P12.3;P13;PER
-	antq_reg_saltworks = { tag = KWL level = 1 location = malindi } # reg_world_3195_malindi; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = XAY level = 1 location = gugera } # reg_world_3196_gugera; P12.1;P12.3;P13;PER
-	antq_reg_mensores_office = { tag = XGD level = 1 location = indore } # reg_world_3197_indore; P12.1;P12.3;P13;PER
-	antq_reg_hypocaust_yard = { tag = HRK level = 1 location = chakaria } # reg_world_3198_chakaria; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = NVM level = 1 location = hoshangabad } # reg_world_3199_hoshangabad; P12.1;P12.3;P13;PER
+	antq_reg_vistula_migration_staging = { tag = ONH level = 1 location = chiautla } # reg_world_3192_chiautla; P12.1;P12.3;P13;PER
+	antq_reg_marcomannic_royal_compound = { tag = XGQ level = 1 location = nagaur } # reg_world_3193_nagaur; P12.1;P12.3;P13;PER
+	antq_reg_apothecary = { tag = XFV level = 1 location = kushinagar } # reg_world_3194_kushinagar; P12.1;P12.3;P13;PER
+	antq_reg_rhine_frontier_market = { tag = KWL level = 1 location = malindi } # reg_world_3195_malindi; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = XAY level = 1 location = gugera } # reg_world_3196_gugera; P12.1;P12.3;P13;PER
+	antq_reg_amphora_warehouse = { tag = XGD level = 1 location = indore } # reg_world_3197_indore; P12.1;P12.3;P13;PER
+	antq_reg_amphora_depot = { tag = HRK level = 1 location = chakaria } # reg_world_3198_chakaria; P12.1;P12.3;P13;PER
+	antq_reg_germanic_assembly_field = { tag = NVM level = 1 location = hoshangabad } # reg_world_3199_hoshangabad; P12.1;P12.3;P13;PER
 	antq_reg_sponge_drying_yard = { tag = OMN level = 1 location = suhar } # reg_world_3200_suhar; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = MRF level = 1 location = cuauhnahuac } # reg_world_3201_cuauhnahuac; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = LBR level = 1 location = nandod } # reg_world_3202_nandod; P12.1;P12.3;P13;PER
-	antq_reg_grain_weighhouse = { tag = NHC level = 1 location = cuauhtitlan } # reg_world_3203_cuauhtitlan; P12.1;P12.3;P13;PER
-	antq_reg_fountain_house = { tag = NHC level = 1 location = oxtlipan } # reg_world_3204_oxtlipan; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = SAT level = 1 location = pune } # reg_world_3205_pune; P12.1;P12.3;P13;PER
+	antq_reg_aestian_amber_sorting_ground = { tag = NHC level = 1 location = cuauhtitlan } # reg_world_3203_cuauhtitlan; P12.1;P12.3;P13;PER
+	antq_reg_stone_yard = { tag = NHC level = 1 location = oxtlipan } # reg_world_3204_oxtlipan; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = SAT level = 1 location = pune } # reg_world_3205_pune; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = NAB level = 1 location = dhat_al_hajj } # reg_world_3206_dhat_al_hajj; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = WNK level = 1 location = colquechaca } # reg_world_3207_colquechaca; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = XBB level = 1 location = erode } # reg_world_3208_erode; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = WNK level = 1 location = colquechaca } # reg_world_3207_colquechaca; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = XBB level = 1 location = erode } # reg_world_3208_erode; P12.1;P12.3;P13;PER
 	antq_reg_wharf_crane = { tag = THR level = 1 location = constantinople } # reg_world_3209_constantinople; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XGP level = 1 location = sheopur } # reg_world_3210_sheopur; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = WNK level = 1 location = oruro } # reg_world_3211_oruro; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = MHP level = 1 location = canajoharie } # reg_world_3212_canajoharie; P12.1;P12.3;P13;PER
-	antq_reg_eastern_arabian_aflaj = { tag = VDJ level = 1 location = darbhanga } # reg_world_3213_darbhanga; P12.1;P12.3;P13;PER
-	antq_reg_customs_gate = { tag = PTF level = 1 location = tepeyacac } # reg_world_3214_tepeyacac; P12.1;P12.3;P13;PER
+	antq_reg_semnonian_sacred_grove = { tag = VDJ level = 1 location = darbhanga } # reg_world_3213_darbhanga; P12.1;P12.3;P13;PER
+	antq_reg_north_sea_boat_landing = { tag = PTF level = 1 location = tepeyacac } # reg_world_3214_tepeyacac; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = KIN level = 1 location = samakh } # reg_world_3215_samakh; P12.1;P12.3;P13;PER
-	antq_reg_bath_fuel_depot = { tag = XAY level = 1 location = sialkot } # reg_world_3216_sialkot; P12.1;P12.3;P13;PER
-	antq_reg_aromatic_resin_sorting_house = { tag = PCM level = 1 location = bareilly } # reg_world_3217_bareilly; P12.1;P12.3;P13;PER
+	antq_reg_mensores_office = { tag = XAY level = 1 location = sialkot } # reg_world_3216_sialkot; P12.1;P12.3;P13;PER
+	antq_reg_lamp_oil_depot = { tag = PCM level = 1 location = bareilly } # reg_world_3217_bareilly; P12.1;P12.3;P13;PER
 	antq_reg_saltworks = { tag = XAH level = 1 location = jabbul } # reg_world_3218_jabbul; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = XAG level = 1 location = tadla } # reg_world_3219_tadla; P12.1;P12.3;P13;PER
-	antq_reg_pack_animal_yard = { tag = XGR level = 1 location = jhunjhunu } # reg_world_3220_jhunjhunu; P12.1;P12.3;P13;PER
-	antq_reg_mensores_office = { tag = REC level = 1 location = waricoto } # reg_world_3221_waricoto; P12.1;P12.3;P13;PER
-	antq_reg_apothecary = { tag = XBB level = 1 location = palani } # reg_world_3222_palani; P12.1;P12.3;P13;PER
-	antq_reg_amphora_warehouse = { tag = ATY level = 1 location = jagadevipalayam } # reg_world_3223_jagadevipalayam; P12.1;P12.3;P13;PER
-	antq_reg_amphora_depot = { tag = HRK level = 1 location = sitakunda } # reg_world_3224_sitakunda; P12.1;P12.3;P13;PER
-	antq_reg_south_arabian_terrace_sluices = { tag = FLP level = 1 location = skaniatares } # reg_world_3225_skaniatares; P12.1;P12.3;P13;PER
-	antq_reg_stone_yard = { tag = XAZ level = 1 location = phakphok } # reg_world_3226_phakphok; P12.1;P12.3;P13;PER
+	antq_reg_batavian_auxiliary_muster = { tag = XAG level = 1 location = tadla } # reg_world_3219_tadla; P12.1;P12.3;P13;PER
+	antq_reg_way_station = { tag = XGR level = 1 location = jhunjhunu } # reg_world_3220_jhunjhunu; P12.1;P12.3;P13;PER
+	antq_reg_customs_gate = { tag = REC level = 1 location = waricoto } # reg_world_3221_waricoto; P12.1;P12.3;P13;PER
+	antq_reg_hypocaust_yard = { tag = XBB level = 1 location = palani } # reg_world_3222_palani; P12.1;P12.3;P13;PER
+	antq_reg_grain_weighhouse = { tag = ATY level = 1 location = jagadevipalayam } # reg_world_3223_jagadevipalayam; P12.1;P12.3;P13;PER
+	antq_reg_fountain_house = { tag = HRK level = 1 location = sitakunda } # reg_world_3224_sitakunda; P12.1;P12.3;P13;PER
+	antq_reg_eastern_arabian_aflaj = { tag = FLP level = 1 location = skaniatares } # reg_world_3225_skaniatares; P12.1;P12.3;P13;PER
+	antq_reg_bath_fuel_depot = { tag = XAZ level = 1 location = phakphok } # reg_world_3226_phakphok; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = FLP level = 1 location = geneseo } # reg_world_3227_geneseo; P12.1;P12.3;P13;PER
-	antq_reg_spice_warehouse = { tag = XAG level = 1 location = taunat } # reg_world_3228_taunat; P12.1;P12.3;P13;PER
-	antq_reg_lamp_oil_depot = { tag = XCQ level = 1 location = tollantzinco } # reg_world_3229_tollantzinco; P12.1;P12.3;P13;PER
+	antq_reg_aromatic_resin_sorting_house = { tag = XAG level = 1 location = taunat } # reg_world_3228_taunat; P12.1;P12.3;P13;PER
+	antq_reg_apothecary = { tag = XCQ level = 1 location = tollantzinco } # reg_world_3229_tollantzinco; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = ABN level = 1 location = chittor } # reg_world_3230_chittor; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XDN level = 1 location = padaividu } # reg_world_3231_padaividu; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = AZA level = 1 location = kismayo } # reg_world_3232_kismayo; P12.1;P12.3;P13;PER
-	antq_reg_hypocaust_yard = { tag = VDS level = 1 location = sarangpur } # reg_world_3233_sarangpur; P12.1;P12.3;P13;PER
+	antq_reg_amphora_warehouse = { tag = VDS level = 1 location = sarangpur } # reg_world_3233_sarangpur; P12.1;P12.3;P13;PER
 	antq_reg_sponge_drying_yard = { tag = KWL level = 1 location = gedi } # reg_world_3234_gedi; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = XAN level = 1 location = kohi_safi } # reg_world_3235_kohi_safi; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = AZA level = 1 location = jowhar } # reg_world_3236_jowhar; P12.1;P12.3;P13;PER
-	antq_reg_pack_animal_yard = { tag = XBJ level = 1 location = al_khuraybah } # reg_world_3237_al_khuraybah; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = XAN level = 1 location = kohi_safi } # reg_world_3235_kohi_safi; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = AZA level = 1 location = jowhar } # reg_world_3236_jowhar; P12.1;P12.3;P13;PER
+	antq_reg_vistula_migration_staging = { tag = XBJ level = 1 location = al_khuraybah } # reg_world_3237_al_khuraybah; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XAH level = 1 location = firuzkuh } # reg_world_3238_firuzkuh; P12.1;P12.3;P13;PER
-	antq_reg_pack_animal_yard = { tag = ATY level = 1 location = sendamangalam } # reg_world_3239_sendamangalam; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = XIO level = 1 location = gorlos } # reg_world_3240_gorlos; P12.1;P12.3;P13;PER
+	antq_reg_marcomannic_royal_compound = { tag = ATY level = 1 location = sendamangalam } # reg_world_3239_sendamangalam; P12.1;P12.3;P13;PER
+	antq_reg_germanic_assembly_field = { tag = XIO level = 1 location = gorlos } # reg_world_3240_gorlos; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XIO level = 1 location = xinkai } # reg_world_3241_xinkai; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = XGD level = 1 location = ujjain } # reg_world_3242_ujjain; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = XGD level = 1 location = ujjain } # reg_world_3242_ujjain; P12.1;P12.3;P13;PER
 	antq_reg_wharf_crane = { tag = KWL level = 1 location = mombasa } # reg_world_3243_mombasa; P12.1;P12.3;P13;PER
 	antq_reg_sponge_drying_yard = { tag = JAV level = 1 location = pangguyangan } # reg_world_3244_pangguyangan; P12.1;P12.3;P13;PER
-	antq_reg_grain_weighhouse = { tag = ATY level = 1 location = dharmapuri } # reg_world_3245_dharmapuri; P12.1;P12.3;P13;PER
-	antq_reg_fountain_house = { tag = XBS level = 1 location = stockholm } # reg_world_3246_stockholm; P12.1;P12.3;P13;PER
+	antq_reg_amphora_depot = { tag = ATY level = 1 location = dharmapuri } # reg_world_3245_dharmapuri; P12.1;P12.3;P13;PER
+	antq_reg_south_arabian_terrace_sluices = { tag = XBS level = 1 location = stockholm } # reg_world_3246_stockholm; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XBC level = 1 location = thanjavur } # reg_world_3247_thanjavur; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XBB level = 1 location = kottarakkara } # reg_world_3248_kottarakkara; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XAH level = 1 location = hillah } # reg_world_3249_hillah; P12.1;P12.3;P13;PER
 	antq_reg_spice_warehouse = { tag = XBB level = 1 location = kodungallur } # reg_world_3250_kodungallur; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = KUC level = 1 location = kucha } # reg_world_3251_kucha; P12.1;P12.3;P13;PER
-	antq_reg_pack_animal_yard = { tag = NAB level = 1 location = shoubak } # reg_world_3252_shoubak; P12.1;P12.3;P13;PER
-	antq_reg_eastern_arabian_aflaj = { tag = CMW level = 1 location = st_francois_mts } # reg_world_3253_st_francois_mts; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = XGR level = 1 location = bhatnir } # reg_world_3254_bhatnir; P12.1;P12.3;P13;PER
+	antq_reg_batavian_auxiliary_muster = { tag = NAB level = 1 location = shoubak } # reg_world_3252_shoubak; P12.1;P12.3;P13;PER
+	antq_reg_stone_yard = { tag = CMW level = 1 location = st_francois_mts } # reg_world_3253_st_francois_mts; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = XGR level = 1 location = bhatnir } # reg_world_3254_bhatnir; P12.1;P12.3;P13;PER
 	antq_reg_sponge_drying_yard = { tag = XAG level = 1 location = larache } # reg_world_3255_larache; P12.1;P12.3;P13;PER
-	antq_reg_customs_gate = { tag = UTC level = 1 location = karajia } # reg_world_3256_karajia; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = SRS level = 1 location = junagarh } # reg_world_3257_junagarh; P12.1;P12.3;P13;PER
+	antq_reg_aestian_amber_sorting_ground = { tag = UTC level = 1 location = karajia } # reg_world_3256_karajia; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = SRS level = 1 location = junagarh } # reg_world_3257_junagarh; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XAH level = 1 location = amman } # reg_world_3258_amman; P12.1;P12.3;P13;PER
-	antq_reg_bath_fuel_depot = { tag = XDE level = 1 location = ngimbo_amburi } # reg_world_3259_ngimbo_amburi; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = XBJ level = 1 location = arrayda } # reg_world_3260_arrayda; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = VCS level = 1 location = xllang } # reg_world_3261_xllang; P12.1;P12.3;P13;PER
+	antq_reg_semnonian_sacred_grove = { tag = XDE level = 1 location = ngimbo_amburi } # reg_world_3259_ngimbo_amburi; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = XBJ level = 1 location = arrayda } # reg_world_3260_arrayda; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = VCS level = 1 location = xllang } # reg_world_3261_xllang; P12.1;P12.3;P13;PER
 	antq_reg_wharf_crane = { tag = XCU level = 1 location = tehuantepec } # reg_world_3262_tehuantepec; P12.1;P12.3;P13;PER
-	antq_reg_aromatic_resin_sorting_house = { tag = MBC level = 1 location = xacona } # reg_world_3263_xacona; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = XBB level = 1 location = karur } # reg_world_3264_karur; P12.1;P12.3;P13;PER
-	antq_reg_pack_animal_yard = { tag = XGO level = 1 location = karauli } # reg_world_3265_karauli; P12.1;P12.3;P13;PER
-	antq_reg_south_arabian_terrace_sluices = { tag = TIW level = 1 location = tiwanaku } # reg_world_3266_tiwanaku; P12.1;P12.3;P13;PER
+	antq_reg_north_sea_boat_landing = { tag = MBC level = 1 location = xacona } # reg_world_3263_xacona; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = XBB level = 1 location = karur } # reg_world_3264_karur; P12.1;P12.3;P13;PER
+	antq_reg_way_station = { tag = XGO level = 1 location = karauli } # reg_world_3265_karauli; P12.1;P12.3;P13;PER
+	antq_reg_hypocaust_yard = { tag = TIW level = 1 location = tiwanaku } # reg_world_3266_tiwanaku; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = VCS level = 1 location = apurlec } # reg_world_3267_apurlec; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = XGP level = 1 location = kota } # reg_world_3268_kota; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = XGP level = 1 location = kota } # reg_world_3268_kota; P12.1;P12.3;P13;PER
 	antq_reg_public_cistern = { tag = XAN level = 1 location = alishang } # reg_world_3269_alishang; P12.1;P12.3;P13;PER
-	antq_reg_apothecary = { tag = XDL level = 1 location = urupampa } # reg_world_3270_urupampa; P12.1;P12.3;P13;PER
-	antq_reg_amphora_warehouse = { tag = XDL level = 1 location = qusqu } # reg_world_3271_qusqu; P12.1;P12.3;P13;PER
+	antq_reg_mensores_office = { tag = XDL level = 1 location = urupampa } # reg_world_3270_urupampa; P12.1;P12.3;P13;PER
+	antq_reg_lamp_oil_depot = { tag = XDL level = 1 location = qusqu } # reg_world_3271_qusqu; P12.1;P12.3;P13;PER
 	antq_reg_wharf_crane = { tag = HMR level = 1 location = kaesong } # reg_world_3272_kaesong; P12.1;P12.3;P13;PER
-	antq_reg_pack_animal_yard = { tag = ZHF level = 1 location = great_zimbabwe } # reg_world_3273_great_zimbabwe; P12.1;P12.3;P13;PER
+	antq_reg_vistula_migration_staging = { tag = ZHF level = 1 location = great_zimbabwe } # reg_world_3273_great_zimbabwe; P12.1;P12.3;P13;PER
 	antq_reg_sponge_drying_yard = { tag = HRK level = 1 location = chittagong } # reg_world_3274_chittagong; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = XAK level = 1 location = tabriz } # reg_world_3275_tabriz; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = ARJ level = 1 location = bharatpur } # reg_world_3276_bharatpur; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = XAK level = 1 location = tabriz } # reg_world_3275_tabriz; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = ARJ level = 1 location = bharatpur } # reg_world_3276_bharatpur; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = YQI level = 1 location = karasahr } # reg_world_3277_karasahr; P12.1;P12.3;P13;PER
 	antq_reg_stone_yard = { tag = XGR level = 1 location = kolasar } # reg_world_3278_kolasar; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XGE level = 1 location = sidhi } # reg_world_3279_sidhi; P12.1;P12.3;P13;PER
-	antq_reg_amphora_depot = { tag = XGV level = 1 location = chucutitlan } # reg_world_3280_chucutitlan; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = XAX level = 1 location = ranikot } # reg_world_3281_ranikot; P12.1;P12.3;P13;PER
+	antq_reg_grain_weighhouse = { tag = XGV level = 1 location = chucutitlan } # reg_world_3280_chucutitlan; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = XAX level = 1 location = ranikot } # reg_world_3281_ranikot; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XDQ level = 1 location = launggyet } # reg_world_3282_launggyet; P12.1;P12.3;P13;PER
-	antq_reg_mensores_office = { tag = JAV level = 1 location = cimanuk } # reg_world_3283_cimanuk; P12.1;P12.3;P13;PER
+	antq_reg_fountain_house = { tag = JAV level = 1 location = cimanuk } # reg_world_3283_cimanuk; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = WHU level = 1 location = yehe } # reg_world_3284_yehe; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = VDS level = 1 location = sironj } # reg_world_3285_sironj; P12.1;P12.3;P13;PER
 	antq_reg_sponge_drying_yard = { tag = XAX level = 1 location = manora } # reg_world_3286_manora; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = FLP level = 1 location = onenioteke } # reg_world_3287_onenioteke; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = JAV level = 1 location = cibadak } # reg_world_3288_cibadak; P12.1;P12.3;P13;PER
+	antq_reg_semnonian_sacred_grove = { tag = FLP level = 1 location = onenioteke } # reg_world_3287_onenioteke; P12.1;P12.3;P13;PER
+	antq_reg_marcomannic_royal_compound = { tag = JAV level = 1 location = cibadak } # reg_world_3288_cibadak; P12.1;P12.3;P13;PER
 	antq_reg_sponge_drying_yard = { tag = XIO level = 1 location = huolin } # reg_world_3289_huolin; P12.1;P12.3;P13;PER
-	antq_reg_saltworks = { tag = XGS level = 1 location = ozuluama } # reg_world_3290_ozuluama; P12.1;P12.3;P13;PER
+	antq_reg_rhine_frontier_market = { tag = XGS level = 1 location = ozuluama } # reg_world_3290_ozuluama; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = NVM level = 1 location = kherla } # reg_world_3291_kherla; P12.1;P12.3;P13;PER
-	antq_reg_lamp_oil_depot = { tag = XBB level = 1 location = coimbatore } # reg_world_3292_coimbatore; P12.1;P12.3;P13;PER
-	antq_reg_hypocaust_yard = { tag = XBA level = 1 location = kalinganagara } # reg_world_3293_kalinganagara; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = BED level = 1 location = nifi } # reg_world_3294_nifi; P12.1;P12.3;P13;PER
+	antq_reg_eastern_arabian_aflaj = { tag = XBB level = 1 location = coimbatore } # reg_world_3292_coimbatore; P12.1;P12.3;P13;PER
+	antq_reg_customs_gate = { tag = XBA level = 1 location = kalinganagara } # reg_world_3293_kalinganagara; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = BED level = 1 location = nifi } # reg_world_3294_nifi; P12.1;P12.3;P13;PER
 	antq_reg_public_cistern = { tag = XGO level = 1 location = ranthambore } # reg_world_3295_ranthambore; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = XAX level = 1 location = dhadar } # reg_world_3296_dhadar; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = LBR level = 1 location = broach } # reg_world_3297_broach; P12.1;P12.3;P13;PER
-	antq_reg_grain_weighhouse = { tag = XCL level = 1 location = angkor_knong } # reg_world_3298_angkor_knong; P12.1;P12.3;P13;PER
-	antq_reg_fountain_house = { tag = XDR level = 1 location = tahert } # reg_world_3299_tahert; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = XAX level = 1 location = dhadar } # reg_world_3296_dhadar; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = LBR level = 1 location = broach } # reg_world_3297_broach; P12.1;P12.3;P13;PER
+	antq_reg_bath_fuel_depot = { tag = XCL level = 1 location = angkor_knong } # reg_world_3298_angkor_knong; P12.1;P12.3;P13;PER
+	antq_reg_south_arabian_terrace_sluices = { tag = XDR level = 1 location = tahert } # reg_world_3299_tahert; P12.1;P12.3;P13;PER
 	antq_reg_public_cistern = { tag = XGD level = 1 location = rampura } # reg_world_3300_rampura; P12.1;P12.3;P13;PER
-	antq_reg_eastern_arabian_aflaj = { tag = PND level = 1 location = devakottai } # reg_world_3301_devakottai; P12.1;P12.3;P13;PER
+	antq_reg_hypocaust_yard = { tag = PND level = 1 location = devakottai } # reg_world_3301_devakottai; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = BUY level = 1 location = changchun } # reg_world_3302_changchun; P12.1;P12.3;P13;PER
-	antq_reg_customs_gate = { tag = PND level = 1 location = thoothukudi } # reg_world_3303_thoothukudi; P12.1;P12.3;P13;PER
-	antq_reg_bath_fuel_depot = { tag = XCS level = 1 location = noh_peten } # reg_world_3304_noh_peten; P12.1;P12.3;P13;PER
+	antq_reg_aromatic_resin_sorting_house = { tag = PND level = 1 location = thoothukudi } # reg_world_3303_thoothukudi; P12.1;P12.3;P13;PER
+	antq_reg_apothecary = { tag = XCS level = 1 location = noh_peten } # reg_world_3304_noh_peten; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XFM level = 1 location = msila } # reg_world_3305_msila; P12.1;P12.3;P13;PER
-	antq_reg_aromatic_resin_sorting_house = { tag = YUN level = 1 location = sarkajpa } # reg_world_3306_sarkajpa; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = XDI level = 1 location = arequipa } # reg_world_3307_arequipa; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = XAZ level = 1 location = upardang } # reg_world_3308_upardang; P12.1;P12.3;P13;PER
+	antq_reg_amphora_warehouse = { tag = YUN level = 1 location = sarkajpa } # reg_world_3306_sarkajpa; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = XDI level = 1 location = arequipa } # reg_world_3307_arequipa; P12.1;P12.3;P13;PER
+	antq_reg_germanic_assembly_field = { tag = XAZ level = 1 location = upardang } # reg_world_3308_upardang; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = HMR level = 1 location = namgyeong } # reg_world_3309_namgyeong; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = ABN level = 1 location = kanthal } # reg_world_3310_kanthal; P12.1;P12.3;P13;PER
-	antq_reg_stone_yard = { tag = NVM level = 1 location = lalitpur } # reg_world_3311_lalitpur; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = BED level = 1 location = tayma } # reg_world_3312_tayma; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = XGP level = 1 location = gagraun } # reg_world_3313_gagraun; P12.1;P12.3;P13;PER
+	antq_reg_caravanserai = { tag = ABN level = 1 location = kanthal } # reg_world_3310_kanthal; P12.1;P12.3;P13;PER
+	antq_reg_fountain_house = { tag = NVM level = 1 location = lalitpur } # reg_world_3311_lalitpur; P12.1;P12.3;P13;PER
+	antq_reg_arabian_caravan_station = { tag = BED level = 1 location = tayma } # reg_world_3312_tayma; P12.1;P12.3;P13;PER
+	antq_reg_public_cistern = { tag = XGP level = 1 location = gagraun } # reg_world_3313_gagraun; P12.1;P12.3;P13;PER
 	antq_reg_public_cistern = { tag = XGP level = 1 location = sabalgarh } # reg_world_3314_sabalgarh; P12.1;P12.3;P13;PER
 	antq_reg_public_cistern = { tag = XAX level = 1 location = wana } # reg_world_3315_wana; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XCL level = 1 location = vyadhapura } # reg_world_3316_vyadhapura; P12.1;P12.3;P13;PER
-	antq_reg_apothecary = { tag = XBA level = 1 location = parlakimidi } # reg_world_3317_parlakimidi; P12.1;P12.3;P13;PER
+	antq_reg_amphora_depot = { tag = XBA level = 1 location = parlakimidi } # reg_world_3317_parlakimidi; P12.1;P12.3;P13;PER
 	antq_reg_caravanserai = { tag = KIN level = 1 location = tathlith } # reg_world_3318_tathlith; P12.1;P12.3;P13;PER
 	antq_reg_macellum_stalls = { tag = PND level = 1 location = tenkasi } # reg_world_3319_tenkasi; P12.1;P12.3;P13;PER
 	antq_reg_saltworks = { tag = XBA level = 1 location = kalingapattanam } # reg_world_3320_kalingapattanam; P12.1;P12.3;P13;PER
@@ -5325,31 +5354,7 @@ building_manager = {
 	antq_reg_sponge_drying_yard = { tag = XGV level = 1 location = coahuayana } # reg_world_3323_coahuayana; P12.1;P12.3;P13;PER
 	antq_reg_raised_granary = { tag = XDN level = 1 location = kanchipuram } # reg_world_3324_kanchipuram; P12.1;P12.3;P13;PER
 	antq_reg_pack_animal_yard = { tag = XBG level = 1 location = kalabsha } # reg_world_3325_kalabsha; P12.1;P12.3;P13;PER
-	antq_reg_amphora_warehouse = { tag = MRF level = 1 location = itzocan } # reg_world_3326_itzocan; P12.1;P12.3;P13;PER
-	antq_reg_caravanserai = { tag = XFM level = 1 location = bades } # reg_world_3327_bades; P12.1;P12.3;P13;PER
-	antq_reg_raised_granary = { tag = BUY level = 1 location = itu_jilin } # reg_world_3328_itu_jilin; P12.1;P12.3;P13;PER
-	antq_reg_way_station = { tag = JAV level = 1 location = pajang } # reg_world_3329_pajang; P12.1;P12.3;P13;PER
-	antq_reg_south_arabian_terrace_sluices = { tag = XGE level = 1 location = nagod } # reg_world_3330_nagod; P12.1;P12.3;P13;PER
-	antq_reg_wharf_crane = { tag = XCK level = 1 location = ayodhya } # reg_world_3331_ayodhya; P12.1;P12.3;P13;PER
-	antq_reg_amphora_depot = { tag = XBA level = 1 location = khurda } # reg_world_3332_khurda; P12.1;P12.3;P13;PER
-	antq_reg_spice_warehouse = { tag = XHI level = 1 location = meramec } # reg_world_3333_meramec; P12.1;P12.3;P13;PER
-	antq_reg_hypocaust_yard = { tag = JAV level = 1 location = daha } # reg_world_3334_daha; P12.1;P12.3;P13;PER
-	antq_reg_wharf_crane = { tag = XCL level = 1 location = peam } # reg_world_3335_peam; P12.1;P12.3;P13;PER
-	antq_reg_raised_granary = { tag = AKS level = 1 location = tesenei } # reg_world_3336_tesenei; P12.1;P12.3;P13;PER
-	antq_reg_lamp_oil_depot = { tag = XEJ level = 1 location = niani } # reg_world_3337_niani; P12.1;P12.3;P13;PER
-	antq_reg_grain_weighhouse = { tag = XDG level = 1 location = tsageri } # reg_world_3338_tsageri; P12.1;P12.3;P13;PER
-	antq_reg_raised_granary = { tag = XBS level = 1 location = uppsala } # reg_world_3339_uppsala; P12.1;P12.3;P13;PER
-	antq_reg_fountain_house = { tag = XFQ level = 1 location = sheikh_hussein } # reg_world_3340_sheikh_hussein; P12.1;P12.3;P13;PER
-	antq_reg_raised_granary = { tag = BED level = 1 location = al_burud } # reg_world_3341_al_burud; P12.1;P12.3;P13;PER
-	antq_reg_raised_granary = { tag = JAV level = 1 location = mataram } # reg_world_3342_mataram; P12.1;P12.3;P13;PER
-	antq_reg_eastern_arabian_aflaj = { tag = MHP level = 1 location = teionontatatie } # reg_world_3343_teionontatatie; P12.1;P12.3;P13;PER
-	antq_reg_customs_gate = { tag = KSM level = 1 location = prayag } # reg_world_3344_prayag; P12.1;P12.3;P13;PER
-	antq_reg_aromatic_resin_sorting_house = { tag = AKS level = 1 location = massawa } # reg_world_3345_massawa; P12.1;P12.3;P13;PER
-	antq_reg_raised_granary = { tag = XBA level = 1 location = puri } # reg_world_3346_puri; P12.1;P12.3;P13;PER
-	antq_reg_arabian_caravan_station = { tag = ZHF level = 1 location = chibvumani } # reg_world_3347_chibvumani; P12.1;P12.3;P13;PER
-	antq_reg_pack_animal_yard = { tag = XBX level = 1 location = lynn } # reg_world_3348_lynn; P12.1;P12.3;P13;PER
-	antq_reg_macellum_stalls = { tag = XBX level = 1 location = norwich } # reg_world_3349_norwich; P12.1;P12.3;P13;PER
-	antq_reg_public_cistern = { tag = AZA level = 1 location = mogadishu } # reg_world_3350_mogadishu; P12.1;P12.3;P13;PER
+	antq_reg_aestian_amber_sorting_ground = { tag = MRF level = 1 location = itzocan } # reg_world_3326_itzocan; P12.1;P12.3;P13;PER
 	antq_aedes_bellonae = { tag = XAA level = 1 location = rome } # roma_aedes_bellonae; DAR-BELLONA
 	antq_aedes_concordiae_augustae = { tag = XAA level = 1 location = rome } # roma_aedes_concordiae_augustae; DAR-CONCORDIA-AUGUSTA
 	antq_aedes_divi_iulii = { tag = XAA level = 1 location = rome } # roma_aedes_divi_iulii; DAR-DIVUS-IULIUS

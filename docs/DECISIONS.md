@@ -4175,3 +4175,11 @@ bilateral actions. It grants no defensive call, military access, annexation,
 territorial claim, leadership, or hegemony. Distinguish northern, eastern, and
 Omani profiles through water, route, cult, privilege, and force mechanics; do
 not fabricate unsupported ethnic population polygons.
+
+## 2026-07-30 - Germania exchange forums are UI adapters
+
+Use two hidden, nonterritorial, nonmilitary organizations only to expose
+frontier and amber-network actions. They grant no unity, defense, access,
+leadership, annexation, or claims. Situation effects are low-frequency, units
+are date-gated, and curated building seeds remain owned by the global
+settlement generator.

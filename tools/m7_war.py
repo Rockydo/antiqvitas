@@ -16,7 +16,7 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 
-from dates import M2_MIRROR_LANGUAGES
+from dates import AntqDate, M2_MIRROR_LANGUAGES
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "docs/m7"
@@ -63,6 +63,16 @@ TERRAIN = frozenset((
     "grasslands", "hills", "forest", "desert", "jungle", "coastal", "river",
     "mountains", "wetlands",
 ))
+UNIT_START_DATES = {
+    "antq_marcomannic_royal_retinue": AntqDate.parse("1.1.1"),
+    "antq_batavian_auxiliary_cohort": AntqDate.parse("1.1.1"),
+    "antq_semnonian_grove_muster": AntqDate.parse("1.1.1"),
+    "antq_aestian_amber_road_guards": AntqDate.parse("1.1.1"),
+    "antq_gothic_migrant_host": AntqDate.parse("160.1.1"),
+    "antq_alamannic_confederate_host": AntqDate.parse("213.1.1"),
+    "antq_frankish_rhine_warband": AntqDate.parse("250.1.1"),
+    "antq_saxon_coastal_warband": AntqDate.parse("300.1.1"),
+}
 
 # These are role floors, not reconstructed orders of battle.  They keep the
 # source-bounded M7 catalogue from regressing into a single generic troop type
@@ -109,6 +119,7 @@ class Unit:
     source: str
     confidence: str
     note: str
+    start_date: AntqDate | None
 
 
 def read_rows(path: Path, fields: tuple[str, ...]) -> list[dict[str, str]]:
@@ -185,9 +196,10 @@ def load_units() -> tuple[Unit, ...]:
             combat = assignments(row["combat"], f"{key} combat", TERRAIN)
             if row["confidence"] not in {"secure", "contested"}:
                 raise ValueError(f"{key} has invalid confidence")
+            start_date = UNIT_START_DATES.get(key)
             units.append(Unit(
                 key, row["name"], row["kind"], row["copy_from"], row["status"], row["age"], tags,
-                gfx_tags, modifiers, combat, row["source"], row["confidence"], row["note"],
+                gfx_tags, modifiers, combat, row["source"], row["confidence"], row["note"], start_date,
             ))
             seen.add(key)
         except ValueError as exc:
@@ -318,7 +330,10 @@ def unit_script(units: tuple[Unit, ...]) -> str:
             lines.append("\tcombat = { " + " ".join(f"{key} = {value}" for key, value in unit.combat) + " }")
         lines.extend(("\tcountry_potential = {", "\t\tOR = {"))
         lines.extend(f"\t\t\thas_or_had_tag = {tags[tag]}" for tag in unit.tags)
-        lines.extend(("\t\t}", "\t}"))
+        lines.append("\t\t}")
+        if unit.start_date is not None:
+            lines.append(f"\t\tcurrent_date >= {unit.start_date.engine()}")
+        lines.append("\t}")
         if unit.gfx_tags:
             lines.append("\tgfx_tags = { " + " ".join(unit.gfx_tags) + " }")
         lines.extend((f"\t# {unit.source}; {unit.note}", "}", ""))

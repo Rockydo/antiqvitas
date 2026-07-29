@@ -4512,6 +4512,237 @@ antq_reg_eastern_arabian_aflaj = {
 	construction_demand = guild_construction
 }
 
+antq_reg_marcomannic_royal_compound = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = nobles
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = government_category
+	employment_size = generic_burgher_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = government_build_time
+	modifier = {
+		local_max_control = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_marcomannic_royal_compound_maintenance = {
+			lumber = 0.12
+			livestock = 0.06
+			pottery = 0.03
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_germanic_assembly_field = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = nobles
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = cultural_category
+	employment_size = cultural_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = cultural_building_time
+	modifier = {
+		local_cultural_tradition = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_germanic_assembly_field_maintenance = {
+			lumber = 0.08
+			livestock = 0.05
+			pottery = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_semnonian_sacred_grove = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = clergy
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = religious_category
+	employment_size = religious_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = religious_building_time
+	modifier = {
+		local_cultural_tradition = 0.012
+	}
+	unique_production_methods = {
+		antq_reg_semnonian_sacred_grove_maintenance = {
+			wild_game = 0.06
+			lumber = 0.04
+			pottery = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_rhine_frontier_market = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = trade_category
+	employment_size = trade_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = market_build_time
+	modifier = {
+		local_merchant_capacity = 0.015
+	}
+	unique_production_methods = {
+		antq_reg_rhine_frontier_market_maintenance = {
+			lumber = 0.08
+			livestock = 0.05
+			salt = 0.04
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_batavian_auxiliary_muster = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = soldiers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = defense_category
+	employment_size = stockade_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = small_fort_building
+	modifier = {
+		local_garrison_size = 0.015
+	}
+	unique_production_methods = {
+		antq_reg_batavian_auxiliary_muster_maintenance = {
+			lumber = 0.10
+			livestock = 0.07
+			leather = 0.04
+			tools = 0.04
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_aestian_amber_sorting_ground = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = trade_category
+	employment_size = trade_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = market_build_time
+	modifier = {
+		local_merchant_power = 0.012
+	}
+	unique_production_methods = {
+		antq_reg_aestian_amber_sorting_ground_maintenance = {
+			amber = 0.10
+			lumber = 0.05
+			leather = 0.03
+			tools = 0.02
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_vistula_migration_staging = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = soldiers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = infrastructure_category
+	employment_size = stockade_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = infrastructure_build_time
+	modifier = {
+		local_population_capacity = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_vistula_migration_staging_maintenance = {
+			lumber = 0.10
+			livestock = 0.08
+			wheat = 0.05
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_north_sea_boat_landing = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = soldiers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = naval_category
+	employment_size = dock_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = medium_port_building_time
+	modifier = {
+		local_sailors = 0.005
+		local_repair_speed = 0.005
+	}
+	unique_production_methods = {
+		antq_reg_north_sea_boat_landing_maintenance = {
+			lumber = 0.12
+			fiber_crops = 0.05
+			tar = 0.04
+			tools = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
 antq_reg_villa_rustica = {
 	audio_tier = 2
 	is_special = no

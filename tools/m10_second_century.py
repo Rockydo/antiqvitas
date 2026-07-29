@@ -346,9 +346,18 @@ def situation_script(records: tuple[Current, ...]) -> str:
             "\ton_start = {",
             f"\t\tc:{record.engine_tag} = {{ trigger_event_non_silently = {record.event_key} }}",
             "\t}",
-            "}",
-            "",
         ))
+        if record.key in {"gothic_migration", "marcomannic_wars"}:
+            effect = "add_prestige = prestige_weak_bonus" if record.key == "gothic_migration" else "add_stability = stability_weak_penalty"
+            lines.extend((
+                "\ton_monthly = {",
+                "\t\trandom_list = {",
+                f"\t\t\t1 = {{ c:{record.engine_tag} = {{ {effect} }} }}",
+                "\t\t\t119 = {}",
+                "\t\t}",
+                "\t}",
+            ))
+        lines.extend(("}", ""))
     return "\n".join(lines)
 
 

@@ -7911,3 +7911,12 @@ reviewed 128px BC7 DDS.
   while another repository owns EU5.
 - Validation passes 135/135; paired smoke reaches both menus with zero
   mod-unique lines.
+
+## 2026-07-30 - Deepened Germania and the amber coast
+
+- Added 12 bilateral actions, two nonmilitary forums, eight buildings at 24
+  anchors, eight dated units, and eight recurring/deepened situations.
+- Generated 36 direct assets from nine reviewed four-up sheets using installed
+  EU5 category references.
+- Expanded the active economy to 277 buildings and the unit roster to 64.
+- Validation passes 136/136; paired smoke reports zero mod-unique lines.

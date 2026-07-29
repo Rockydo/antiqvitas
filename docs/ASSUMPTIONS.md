@@ -5799,3 +5799,11 @@ not an attested centralized league. Sources: `STR-ARAB`; `PTO-ARAB`;
 `OCD-GERRHA`; `THAJ-ARCH`; `UNESCO-QATABAN`; `UNESCO-INCENSE`;
 `UNESCO-SABA`; `HIMYAR-HIST`. [secure regional functions; contested
 institutions and exact cultural boundaries]
+
+## 2026-07-30 - Northern dynamics remain plural and dated
+
+Aestii denotes plural amber-shore communities, not a state. Building anchors
+are coarse regional proxies. Alemannic, Frankish, Gothic, and Saxon mechanics
+activate only in their later campaign contexts and are not projected into
+AD 1. Sources: `STR-GER`; `TAC-GER`; `TAC-ANN-II`; `OCD-ALE`; `CAM-FRK`;
+`PAN-WBB`; `VU-BRUSH`; `LIT-WLSC`. [bounded gameplay abstraction]
