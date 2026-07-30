@@ -4237,3 +4237,10 @@ Generate law, privilege, decision, event, and unit-demand connections from one
 sourced ledger. Enrich existing historical definitions instead of duplicating
 them. Custom units receive explicit ancient construction and provisioning
 packages because inherited cavalry and naval costs do not cover these goods.
+
+## 2026-07-30 - Construction demand follows building semantics
+
+Assign all ancient buildings to eleven shared demand packages by stable
+function. Add bounded upkeep only to non-production institutions; never alter a
+calibrated recipe for generic upkeep. Keep trade emergent through the market
+network. Enforce explicit macro allowlists for bounded specialty production.

@@ -30,7 +30,7 @@ antq_reg_olive_press = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_wine_press = {
@@ -61,7 +61,7 @@ antq_reg_wine_press = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_fish_saltery = {
@@ -93,7 +93,7 @@ antq_reg_fish_saltery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_pottery_kiln = {
@@ -124,7 +124,7 @@ antq_reg_pottery_kiln = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_fullonica = {
@@ -153,7 +153,7 @@ antq_reg_fullonica = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_glassworks = {
@@ -184,7 +184,7 @@ antq_reg_glassworks = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_dye_workshop = {
@@ -215,7 +215,7 @@ antq_reg_dye_workshop = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_metalwork = {
@@ -244,7 +244,7 @@ antq_reg_metalwork = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_stone_yard = {
@@ -270,11 +270,13 @@ antq_reg_stone_yard = {
 			marble = 0.05
 			lumber = 0.04
 			tools = 0.05
+			antq_iron_hardware = 0.010
+			antq_cordage = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_shipyard = {
@@ -314,7 +316,7 @@ antq_reg_shipyard = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_port_construction
 }
 
 antq_reg_silk_loom = {
@@ -343,7 +345,7 @@ antq_reg_silk_loom = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_scriptorium = {
@@ -374,7 +376,7 @@ antq_reg_scriptorium = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_archive_construction
 }
 
 antq_reg_jeweler = {
@@ -403,7 +405,7 @@ antq_reg_jeweler = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_weapon_smith = {
@@ -435,7 +437,7 @@ antq_reg_weapon_smith = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_cotton_weavery = {
@@ -464,7 +466,7 @@ antq_reg_cotton_weavery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_linen_weavery = {
@@ -493,7 +495,7 @@ antq_reg_linen_weavery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_alum_dyehouse = {
@@ -524,7 +526,7 @@ antq_reg_alum_dyehouse = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_joinery = {
@@ -555,7 +557,7 @@ antq_reg_joinery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_bronze_foundry = {
@@ -587,7 +589,7 @@ antq_reg_bronze_foundry = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_ivory_carver = {
@@ -616,7 +618,7 @@ antq_reg_ivory_carver = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_leatherworks = {
@@ -648,7 +650,7 @@ antq_reg_leatherworks = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_amphora_depot = {
@@ -672,11 +674,14 @@ antq_reg_amphora_depot = {
 			pottery = 0.14
 			lumber = 0.05
 			tools = 0.03
+			antq_cordage = 0.020
+			antq_leather_goods = 0.015
+			antq_fine_ceramics = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_market_construction
 }
 
 antq_reg_grain_mill = {
@@ -707,7 +712,7 @@ antq_reg_grain_mill = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_ropewalk = {
@@ -739,7 +744,7 @@ antq_reg_ropewalk = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_brickworks = {
@@ -768,7 +773,7 @@ antq_reg_brickworks = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_lampworks = {
@@ -799,7 +804,7 @@ antq_reg_lampworks = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_tile_yard = {
@@ -830,7 +835,7 @@ antq_reg_tile_yard = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_papyrus_workshop = {
@@ -854,14 +859,14 @@ antq_reg_papyrus_workshop = {
 			antq_papyrus = 0.40
 			dyes = 0.05
 			lumber = 0.10
-			produced = books
-			output = 0.78
+			produced = paper
+			output = 1.17
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_incense_workshop = {
@@ -893,7 +898,7 @@ antq_reg_incense_workshop = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_basketry = {
@@ -924,7 +929,7 @@ antq_reg_basketry = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_linen_bleachery = {
@@ -953,7 +958,7 @@ antq_reg_linen_bleachery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_copper_smithy = {
@@ -985,7 +990,7 @@ antq_reg_copper_smithy = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_spice_grinder = {
@@ -1014,7 +1019,7 @@ antq_reg_spice_grinder = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_reed_boatyard = {
@@ -1053,7 +1058,7 @@ antq_reg_reed_boatyard = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_port_construction
 }
 
 antq_reg_oil_bottler = {
@@ -1085,7 +1090,7 @@ antq_reg_oil_bottler = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_market_construction
 }
 
 antq_reg_garum_workshop = {
@@ -1117,7 +1122,7 @@ antq_reg_garum_workshop = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_lime_kiln = {
@@ -1148,7 +1153,7 @@ antq_reg_lime_kiln = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_marble_yard = {
@@ -1179,7 +1184,7 @@ antq_reg_marble_yard = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_wool_carder = {
@@ -1208,7 +1213,7 @@ antq_reg_wool_carder = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_mordant_dyehouse = {
@@ -1239,7 +1244,7 @@ antq_reg_mordant_dyehouse = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_scale_armoury = {
@@ -1271,7 +1276,7 @@ antq_reg_scale_armoury = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_wheelwright = {
@@ -1302,7 +1307,7 @@ antq_reg_wheelwright = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_granary = {
@@ -1325,11 +1330,13 @@ antq_reg_granary = {
 		antq_reg_granary_maintenance = {
 			wheat = 0.16
 			lumber = 0.05
+			antq_cordage = 0.020
+			antq_iron_hardware = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_storehouse_construction
 }
 
 antq_reg_beadworks = {
@@ -1360,7 +1367,7 @@ antq_reg_beadworks = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_loomweight_weavery = {
@@ -1389,7 +1396,7 @@ antq_reg_loomweight_weavery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_bargeyard = {
@@ -1428,7 +1435,7 @@ antq_reg_bargeyard = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_port_construction
 }
 
 antq_reg_saddlery = {
@@ -1460,7 +1467,7 @@ antq_reg_saddlery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_parchmentery = {
@@ -1491,7 +1498,7 @@ antq_reg_parchmentery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_mosaic_workshop = {
@@ -1522,7 +1529,7 @@ antq_reg_mosaic_workshop = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_stuccoworks = {
@@ -1554,7 +1561,7 @@ antq_reg_stuccoworks = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_lead_foundry = {
@@ -1585,7 +1592,7 @@ antq_reg_lead_foundry = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_lapidary = {
@@ -1614,7 +1621,7 @@ antq_reg_lapidary = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_perfumery = {
@@ -1646,7 +1653,7 @@ antq_reg_perfumery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_wax_workshop = {
@@ -1678,7 +1685,7 @@ antq_reg_wax_workshop = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_sailmaker = {
@@ -1715,7 +1722,7 @@ antq_reg_sailmaker = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_brewhouse = {
@@ -1746,7 +1753,7 @@ antq_reg_brewhouse = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_quernworks = {
@@ -1777,7 +1784,7 @@ antq_reg_quernworks = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_textile_dye_finisher = {
@@ -1808,7 +1815,7 @@ antq_reg_textile_dye_finisher = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_monetal_workshop = {
@@ -1837,7 +1844,7 @@ antq_reg_monetal_workshop = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_hide_curing_yard = {
@@ -1869,7 +1876,7 @@ antq_reg_hide_curing_yard = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_apothecary = {
@@ -1894,11 +1901,13 @@ antq_reg_apothecary = {
 			dyes = 0.03
 			pottery = 0.04
 			tools = 0.02
+			antq_iron_hardware = 0.010
+			antq_cordage = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_bread_oven = {
@@ -1929,7 +1938,7 @@ antq_reg_bread_oven = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_amphora_warehouse = {
@@ -1953,11 +1962,13 @@ antq_reg_amphora_warehouse = {
 			pottery = 0.14
 			lumber = 0.06
 			tools = 0.03
+			antq_cordage = 0.020
+			antq_iron_hardware = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_storehouse_construction
 }
 
 antq_reg_tegula_kiln = {
@@ -1988,7 +1999,7 @@ antq_reg_tegula_kiln = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_hypocaust_yard = {
@@ -2014,11 +2025,13 @@ antq_reg_hypocaust_yard = {
 			clay = 0.06
 			stone = 0.06
 			tools = 0.03
+			antq_iron_hardware = 0.010
+			antq_cordage = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_stationer = {
@@ -2049,7 +2062,7 @@ antq_reg_stationer = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_archive_construction
 }
 
 antq_reg_weightmaker = {
@@ -2081,7 +2094,7 @@ antq_reg_weightmaker = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_chariotwright = {
@@ -2112,7 +2125,7 @@ antq_reg_chariotwright = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_ferry_quay = {
@@ -2150,7 +2163,7 @@ antq_reg_ferry_quay = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_roadworks_construction
 }
 
 antq_reg_raised_granary = {
@@ -2174,11 +2187,13 @@ antq_reg_raised_granary = {
 			wheat = 0.16
 			lumber = 0.08
 			tools = 0.02
+			antq_cordage = 0.020
+			antq_iron_hardware = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_storehouse_construction
 }
 
 antq_reg_saltworks = {
@@ -2203,11 +2218,13 @@ antq_reg_saltworks = {
 			stone = 0.05
 			lumber = 0.04
 			tools = 0.02
+			antq_iron_hardware = 0.010
+			antq_cordage = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_purple_dyehouse = {
@@ -2238,7 +2255,7 @@ antq_reg_purple_dyehouse = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_iron_bloomery = {
@@ -2267,7 +2284,7 @@ antq_reg_iron_bloomery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_tin_smelter = {
@@ -2299,7 +2316,7 @@ antq_reg_tin_smelter = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_charcoal_hearth = {
@@ -2320,16 +2337,15 @@ antq_reg_charcoal_hearth = {
 	}
 	unique_production_methods = {
 		antq_reg_charcoal_hearth_maintenance = {
-			lumber = 0.90
-			tools = 0.10
-			produced = coal
-			output = 0.99
+			lumber = 1.1111
+			produced = tar
+			output = 1.0
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_glass_bead_furnace = {
@@ -2360,7 +2376,7 @@ antq_reg_glass_bead_furnace = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_cordwainer = {
@@ -2392,7 +2408,7 @@ antq_reg_cordwainer = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_netmaker = {
@@ -2424,7 +2440,7 @@ antq_reg_netmaker = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_packsaddle_workshop = {
@@ -2456,7 +2472,7 @@ antq_reg_packsaddle_workshop = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_stone_carver = {
@@ -2487,7 +2503,7 @@ antq_reg_stone_carver = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_cooperage = {
@@ -2518,7 +2534,7 @@ antq_reg_cooperage = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_spice_warehouse = {
@@ -2543,11 +2559,13 @@ antq_reg_spice_warehouse = {
 			incense = 0.06
 			pottery = 0.05
 			tools = 0.02
+			antq_cordage = 0.020
+			antq_iron_hardware = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_storehouse_construction
 }
 
 antq_reg_honey_house = {
@@ -2578,7 +2596,7 @@ antq_reg_honey_house = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_soapworks = {
@@ -2610,7 +2628,7 @@ antq_reg_soapworks = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_flax_retting_yard = {
@@ -2639,7 +2657,7 @@ antq_reg_flax_retting_yard = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_bone_carver = {
@@ -2669,7 +2687,7 @@ antq_reg_bone_carver = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_hornworker = {
@@ -2699,7 +2717,7 @@ antq_reg_hornworker = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_amber_carver = {
@@ -2730,7 +2748,7 @@ antq_reg_amber_carver = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_coral_workshop = {
@@ -2759,7 +2777,7 @@ antq_reg_coral_workshop = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_sponge_drying_yard = {
@@ -2784,11 +2802,14 @@ antq_reg_sponge_drying_yard = {
 			fiber_crops = 0.06
 			lumber = 0.04
 			tools = 0.02
+			antq_cordage = 0.020
+			antq_leather_goods = 0.015
+			antq_fine_ceramics = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_market_construction
 }
 
 antq_reg_reed_matmaker = {
@@ -2819,7 +2840,7 @@ antq_reg_reed_matmaker = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_lacquer_workshop = {
@@ -2850,7 +2871,7 @@ antq_reg_lacquer_workshop = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_instrument_maker = {
@@ -2881,7 +2902,7 @@ antq_reg_instrument_maker = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_figurine_kiln = {
@@ -2912,7 +2933,7 @@ antq_reg_figurine_kiln = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_public_cistern = {
@@ -2936,11 +2957,13 @@ antq_reg_public_cistern = {
 			stone = 0.12
 			lumber = 0.04
 			tools = 0.03
+			antq_lead_wares = 0.030
+			antq_iron_hardware = 0.020
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_waterworks_construction
 }
 
 antq_reg_fountain_house = {
@@ -2964,11 +2987,15 @@ antq_reg_fountain_house = {
 			stone = 0.10
 			clay = 0.04
 			tools = 0.03
+			antq_papyrus = 0.020
+			antq_parchment = 0.010
+			antq_wax_goods = 0.010
+			antq_bronze_wares = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_civic_construction
 }
 
 antq_reg_macellum_stalls = {
@@ -2993,11 +3020,14 @@ antq_reg_macellum_stalls = {
 			fruit = 0.06
 			pottery = 0.03
 			tools = 0.02
+			antq_cordage = 0.020
+			antq_leather_goods = 0.015
+			antq_fine_ceramics = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_market_construction
 }
 
 antq_reg_mensores_office = {
@@ -3021,11 +3051,15 @@ antq_reg_mensores_office = {
 			copper = 0.04
 			lead = 0.04
 			tools = 0.03
+			antq_papyrus = 0.020
+			antq_parchment = 0.010
+			antq_wax_goods = 0.010
+			antq_bronze_wares = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_civic_construction
 }
 
 antq_reg_way_station = {
@@ -3050,11 +3084,15 @@ antq_reg_way_station = {
 			livestock = 0.06
 			fiber_crops = 0.04
 			tools = 0.03
+			antq_papyrus = 0.020
+			antq_parchment = 0.010
+			antq_wax_goods = 0.010
+			antq_bronze_wares = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_civic_construction
 }
 
 antq_reg_caravanserai = {
@@ -3079,11 +3117,14 @@ antq_reg_caravanserai = {
 			fiber_crops = 0.06
 			pottery = 0.04
 			tools = 0.03
+			antq_iron_hardware = 0.020
+			antq_cordage = 0.020
+			antq_leather_goods = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_roadworks_construction
 }
 
 antq_reg_wharf_crane = {
@@ -3114,11 +3155,14 @@ antq_reg_wharf_crane = {
 			naval_supplies = 0.06
 			fiber_crops = 0.04
 			tools = 0.04
+			antq_cordage = 0.020
+			antq_leather_goods = 0.015
+			antq_fine_ceramics = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_market_construction
 }
 
 antq_reg_lamp_oil_depot = {
@@ -3143,11 +3187,14 @@ antq_reg_lamp_oil_depot = {
 			pottery = 0.08
 			lumber = 0.04
 			tools = 0.02
+			antq_cordage = 0.020
+			antq_leather_goods = 0.015
+			antq_fine_ceramics = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_market_construction
 }
 
 antq_reg_bath_fuel_depot = {
@@ -3172,11 +3219,13 @@ antq_reg_bath_fuel_depot = {
 			lumber = 0.10
 			clay = 0.05
 			tools = 0.03
+			antq_lead_wares = 0.030
+			antq_iron_hardware = 0.020
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_waterworks_construction
 }
 
 antq_reg_pack_animal_yard = {
@@ -3201,11 +3250,14 @@ antq_reg_pack_animal_yard = {
 			leather = 0.04
 			wool = 0.03
 			lumber = 0.04
+			antq_cordage = 0.020
+			antq_leather_goods = 0.015
+			antq_fine_ceramics = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_market_construction
 }
 
 antq_reg_grain_weighhouse = {
@@ -3230,11 +3282,14 @@ antq_reg_grain_weighhouse = {
 			pottery = 0.04
 			lumber = 0.04
 			tools = 0.03
+			antq_cordage = 0.020
+			antq_leather_goods = 0.015
+			antq_fine_ceramics = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_market_construction
 }
 
 antq_reg_customs_gate = {
@@ -3259,11 +3314,15 @@ antq_reg_customs_gate = {
 			pottery = 0.04
 			copper = 0.03
 			tools = 0.03
+			antq_papyrus = 0.020
+			antq_parchment = 0.010
+			antq_wax_goods = 0.010
+			antq_bronze_wares = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_civic_construction
 }
 
 antq_reg_ironmongery = {
@@ -3292,7 +3351,7 @@ antq_reg_ironmongery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_bronze_vessel_shop = {
@@ -3324,7 +3383,7 @@ antq_reg_bronze_vessel_shop = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_oil_lamp_kiln = {
@@ -3355,7 +3414,7 @@ antq_reg_oil_lamp_kiln = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_fineware_kiln = {
@@ -3386,7 +3445,7 @@ antq_reg_fineware_kiln = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_scroll_workshop = {
@@ -3417,7 +3476,7 @@ antq_reg_scroll_workshop = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_silverworkshop = {
@@ -3446,7 +3505,7 @@ antq_reg_silverworkshop = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_arrow_fletchery = {
@@ -3477,7 +3536,7 @@ antq_reg_arrow_fletchery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_harness_maker = {
@@ -3509,7 +3568,7 @@ antq_reg_harness_maker = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_wickerwork = {
@@ -3540,7 +3599,7 @@ antq_reg_wickerwork = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_loom_house = {
@@ -3569,7 +3628,7 @@ antq_reg_loom_house = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_cauldron_smithy = {
@@ -3601,7 +3660,7 @@ antq_reg_cauldron_smithy = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_barge_chandlery = {
@@ -3639,7 +3698,7 @@ antq_reg_barge_chandlery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_combmaker = {
@@ -3668,7 +3727,7 @@ antq_reg_combmaker = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_bell_foundry = {
@@ -3700,7 +3759,7 @@ antq_reg_bell_foundry = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_oarwright = {
@@ -3738,7 +3797,7 @@ antq_reg_oarwright = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_spindlework = {
@@ -3767,7 +3826,7 @@ antq_reg_spindlework = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_torchmaker = {
@@ -3799,7 +3858,7 @@ antq_reg_torchmaker = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_sieve_maker = {
@@ -3830,7 +3889,7 @@ antq_reg_sieve_maker = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_mortar_grinder = {
@@ -3861,7 +3920,7 @@ antq_reg_mortar_grinder = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_seal_cutter = {
@@ -3890,7 +3949,7 @@ antq_reg_seal_cutter = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_kiln_furniture = {
@@ -3921,7 +3980,7 @@ antq_reg_kiln_furniture = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_reed_pen_maker = {
@@ -3952,7 +4011,7 @@ antq_reg_reed_pen_maker = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_sail_needle_shop = {
@@ -3990,7 +4049,7 @@ antq_reg_sail_needle_shop = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_pulley_workshop = {
@@ -4028,7 +4087,7 @@ antq_reg_pulley_workshop = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_locksmith = {
@@ -4057,7 +4116,7 @@ antq_reg_locksmith = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_nailery = {
@@ -4086,7 +4145,7 @@ antq_reg_nailery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_chainmaker = {
@@ -4115,7 +4174,7 @@ antq_reg_chainmaker = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_wiredrawer = {
@@ -4145,7 +4204,7 @@ antq_reg_wiredrawer = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_shieldmaker = {
@@ -4177,7 +4236,7 @@ antq_reg_shieldmaker = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_scabbard_maker = {
@@ -4209,7 +4268,7 @@ antq_reg_scabbard_maker = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_fishing_tackle = {
@@ -4241,7 +4300,7 @@ antq_reg_fishing_tackle = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_port_construction
 }
 
 antq_reg_feltworks = {
@@ -4270,7 +4329,7 @@ antq_reg_feltworks = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_carpet_loom = {
@@ -4301,7 +4360,7 @@ antq_reg_carpet_loom = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_cork_workshop = {
@@ -4332,7 +4391,7 @@ antq_reg_cork_workshop = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_brushmaker = {
@@ -4363,7 +4422,7 @@ antq_reg_brushmaker = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_tesserae_kiln = {
@@ -4394,7 +4453,7 @@ antq_reg_tesserae_kiln = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_south_arabian_terrace_sluices = {
@@ -4418,11 +4477,13 @@ antq_reg_south_arabian_terrace_sluices = {
 			stone = 0.12
 			clay = 0.06
 			tools = 0.04
+			antq_lead_wares = 0.030
+			antq_iron_hardware = 0.020
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_waterworks_construction
 }
 
 antq_reg_arabian_caravan_station = {
@@ -4447,11 +4508,14 @@ antq_reg_arabian_caravan_station = {
 			fiber_crops = 0.05
 			pottery = 0.04
 			tools = 0.03
+			antq_cordage = 0.020
+			antq_leather_goods = 0.015
+			antq_fine_ceramics = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_market_construction
 }
 
 antq_reg_aromatic_resin_sorting_house = {
@@ -4476,11 +4540,13 @@ antq_reg_aromatic_resin_sorting_house = {
 			pottery = 0.05
 			lumber = 0.03
 			tools = 0.02
+			antq_iron_hardware = 0.010
+			antq_cordage = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_eastern_arabian_aflaj = {
@@ -4505,11 +4571,15 @@ antq_reg_eastern_arabian_aflaj = {
 			stone = 0.10
 			clay = 0.06
 			tools = 0.04
+			antq_papyrus = 0.020
+			antq_parchment = 0.010
+			antq_wax_goods = 0.010
+			antq_bronze_wares = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_civic_construction
 }
 
 antq_reg_marcomannic_royal_compound = {
@@ -4534,11 +4604,15 @@ antq_reg_marcomannic_royal_compound = {
 			livestock = 0.06
 			pottery = 0.03
 			tools = 0.03
+			antq_papyrus = 0.020
+			antq_parchment = 0.010
+			antq_wax_goods = 0.010
+			antq_bronze_wares = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_civic_construction
 }
 
 antq_reg_germanic_assembly_field = {
@@ -4562,11 +4636,14 @@ antq_reg_germanic_assembly_field = {
 			lumber = 0.08
 			livestock = 0.05
 			pottery = 0.03
+			antq_cordage = 0.020
+			antq_leather_goods = 0.020
+			antq_iron_hardware = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_rural_construction
 }
 
 antq_reg_semnonian_sacred_grove = {
@@ -4590,11 +4667,15 @@ antq_reg_semnonian_sacred_grove = {
 			wild_game = 0.06
 			lumber = 0.04
 			pottery = 0.03
+			incense = 0.020
+			antq_wax_goods = 0.020
+			antq_perfumes = 0.010
+			antq_fine_ceramics = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_sanctuary_construction
 }
 
 antq_reg_rhine_frontier_market = {
@@ -4619,11 +4700,14 @@ antq_reg_rhine_frontier_market = {
 			livestock = 0.05
 			salt = 0.04
 			tools = 0.03
+			antq_cordage = 0.020
+			antq_leather_goods = 0.015
+			antq_fine_ceramics = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_market_construction
 }
 
 antq_reg_batavian_auxiliary_muster = {
@@ -4648,11 +4732,15 @@ antq_reg_batavian_auxiliary_muster = {
 			livestock = 0.07
 			leather = 0.04
 			tools = 0.04
+			steel = 0.005
+			antq_iron_hardware = 0.030
+			antq_leather_goods = 0.020
+			antq_cured_meat = 0.030
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_fortification_construction
 }
 
 antq_reg_aestian_amber_sorting_ground = {
@@ -4677,11 +4765,14 @@ antq_reg_aestian_amber_sorting_ground = {
 			lumber = 0.05
 			leather = 0.03
 			tools = 0.02
+			antq_cordage = 0.020
+			antq_leather_goods = 0.015
+			antq_fine_ceramics = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_market_construction
 }
 
 antq_reg_vistula_migration_staging = {
@@ -4706,11 +4797,15 @@ antq_reg_vistula_migration_staging = {
 			livestock = 0.08
 			wheat = 0.05
 			tools = 0.03
+			antq_papyrus = 0.020
+			antq_parchment = 0.010
+			antq_wax_goods = 0.010
+			antq_bronze_wares = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_civic_construction
 }
 
 antq_reg_north_sea_boat_landing = {
@@ -4736,11 +4831,15 @@ antq_reg_north_sea_boat_landing = {
 			fiber_crops = 0.05
 			tar = 0.04
 			tools = 0.03
+			antq_cordage = 0.040
+			antq_sailcloth = 0.030
+			antq_iron_hardware = 0.020
+			antq_cured_meat = 0.020
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_port_construction
 }
 
 antq_reg_southern_rock_shelter_custody = {
@@ -4765,11 +4864,15 @@ antq_reg_southern_rock_shelter_custody = {
 			stone = 0.04
 			wild_game = 0.04
 			fiber_crops = 0.03
+			antq_papyrus = 0.020
+			antq_parchment = 0.010
+			antq_wax_goods = 0.010
+			antq_bronze_wares = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_civic_construction
 }
 
 antq_reg_seasonal_waterhole_camp = {
@@ -4793,11 +4896,13 @@ antq_reg_seasonal_waterhole_camp = {
 			stone = 0.03
 			fiber_crops = 0.04
 			wild_game = 0.03
+			antq_lead_wares = 0.030
+			antq_iron_hardware = 0.020
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_waterworks_construction
 }
 
 antq_reg_riverine_gathering_ground = {
@@ -4822,11 +4927,15 @@ antq_reg_riverine_gathering_ground = {
 			fish = 0.05
 			fiber_crops = 0.04
 			wild_game = 0.03
+			antq_papyrus = 0.020
+			antq_parchment = 0.010
+			antq_wax_goods = 0.010
+			antq_bronze_wares = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_civic_construction
 }
 
 antq_reg_date_drying_yard = {
@@ -4857,7 +4966,7 @@ antq_reg_date_drying_yard = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_sesame_oil_press = {
@@ -4889,7 +4998,7 @@ antq_reg_sesame_oil_press = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_nut_grinding_house = {
@@ -4920,7 +5029,7 @@ antq_reg_nut_grinding_house = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_coconut_workshop = {
@@ -4951,7 +5060,7 @@ antq_reg_coconut_workshop = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_cheese_dairy = {
@@ -4982,7 +5091,7 @@ antq_reg_cheese_dairy = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_meat_curing_yard = {
@@ -5013,7 +5122,7 @@ antq_reg_meat_curing_yard = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_rice_wine_house = {
@@ -5044,7 +5153,7 @@ antq_reg_rice_wine_house = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_soy_fermentary = {
@@ -5075,7 +5184,7 @@ antq_reg_soy_fermentary = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_villa_rustica = {
@@ -5115,7 +5224,7 @@ antq_reg_villa_rustica = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_rural_construction
 }
 
 antq_reg_tabernae_row = {
@@ -5148,11 +5257,14 @@ antq_reg_tabernae_row = {
 			pottery = 0.05
 			lumber = 0.05
 			tools = 0.02
+			antq_cordage = 0.020
+			antq_leather_goods = 0.015
+			antq_fine_ceramics = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_market_construction
 }
 
 antq_reg_forum_basilica = {
@@ -5191,11 +5303,15 @@ antq_reg_forum_basilica = {
 			marble = 0.04
 			lumber = 0.05
 			tools = 0.03
+			antq_papyrus = 0.020
+			antq_parchment = 0.010
+			antq_wax_goods = 0.010
+			antq_bronze_wares = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_civic_construction
 }
 
 antq_reg_horrea_complex = {
@@ -5234,11 +5350,13 @@ antq_reg_horrea_complex = {
 			stone = 0.06
 			pottery = 0.06
 			tools = 0.03
+			antq_cordage = 0.020
+			antq_iron_hardware = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_storehouse_construction
 }
 
 antq_reg_annona_bakery = {
@@ -5278,7 +5396,7 @@ antq_reg_annona_bakery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_storehouse_construction
 }
 
 antq_reg_aqueduct_distribution = {
@@ -5317,11 +5435,13 @@ antq_reg_aqueduct_distribution = {
 			lead = 0.05
 			clay = 0.05
 			tools = 0.04
+			antq_lead_wares = 0.030
+			antq_iron_hardware = 0.020
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_waterworks_construction
 }
 
 antq_reg_thermae_complex = {
@@ -5361,11 +5481,13 @@ antq_reg_thermae_complex = {
 			coal = 0.06
 			lumber = 0.06
 			tools = 0.03
+			antq_lead_wares = 0.030
+			antq_iron_hardware = 0.020
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_waterworks_construction
 }
 
 antq_reg_cursus_mansio = {
@@ -5399,11 +5521,14 @@ antq_reg_cursus_mansio = {
 			livestock = 0.06
 			leather = 0.03
 			tools = 0.03
+			antq_iron_hardware = 0.020
+			antq_cordage = 0.020
+			antq_leather_goods = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_roadworks_construction
 }
 
 antq_reg_river_port = {
@@ -5443,11 +5568,14 @@ antq_reg_river_port = {
 			naval_supplies = 0.06
 			fiber_crops = 0.04
 			tools = 0.04
+			antq_cordage = 0.020
+			antq_leather_goods = 0.015
+			antq_fine_ceramics = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_market_construction
 }
 
 antq_reg_colonia_forum = {
@@ -5481,11 +5609,15 @@ antq_reg_colonia_forum = {
 			marble = 0.03
 			lumber = 0.05
 			tools = 0.03
+			antq_papyrus = 0.020
+			antq_parchment = 0.010
+			antq_wax_goods = 0.010
+			antq_bronze_wares = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_civic_construction
 }
 
 antq_reg_castra_fabrica = {
@@ -5526,7 +5658,7 @@ antq_reg_castra_fabrica = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_frontier_magazine = {
@@ -5560,11 +5692,15 @@ antq_reg_frontier_magazine = {
 			lumber = 0.08
 			leather = 0.03
 			tools = 0.03
+			steel = 0.005
+			antq_iron_hardware = 0.030
+			antq_leather_goods = 0.020
+			antq_cured_meat = 0.030
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_fortification_construction
 }
 
 antq_reg_quarry_contractors = {
@@ -5603,7 +5739,7 @@ antq_reg_quarry_contractors = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_olive_estate = {
@@ -5643,7 +5779,7 @@ antq_reg_olive_estate = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_rural_construction
 }
 
 antq_reg_vineyard_estate = {
@@ -5682,7 +5818,7 @@ antq_reg_vineyard_estate = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_rural_construction
 }
 
 antq_reg_textile_quarter = {
@@ -5719,7 +5855,7 @@ antq_reg_textile_quarter = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_ceramic_quarter = {
@@ -5758,7 +5894,7 @@ antq_reg_ceramic_quarter = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_insulae_quarter = {
@@ -5797,11 +5933,15 @@ antq_reg_insulae_quarter = {
 			lumber = 0.08
 			clay = 0.08
 			tools = 0.03
+			antq_papyrus = 0.020
+			antq_parchment = 0.010
+			antq_wax_goods = 0.010
+			antq_bronze_wares = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_civic_construction
 }
 
 antq_reg_temple_precinct = {
@@ -5838,13 +5978,16 @@ antq_reg_temple_precinct = {
 		antq_reg_temple_precinct_maintenance = {
 			stone = 0.08
 			marble = 0.04
-			incense = 0.03
+			incense = 0.05
 			tools = 0.03
+			antq_wax_goods = 0.020
+			antq_perfumes = 0.010
+			antq_fine_ceramics = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_sanctuary_construction
 }
 
 antq_reg_collegia_hall = {
@@ -5883,11 +6026,15 @@ antq_reg_collegia_hall = {
 			lumber = 0.06
 			pottery = 0.04
 			tools = 0.02
+			antq_papyrus = 0.020
+			antq_parchment = 0.010
+			antq_wax_goods = 0.010
+			antq_bronze_wares = 0.010
 			category = building_maintenance
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_civic_construction
 }
 
 antq_reg_bronze_workers_collegium = {
@@ -5927,7 +6074,7 @@ antq_reg_bronze_workers_collegium = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_lead_pipeworks = {
@@ -5966,7 +6113,7 @@ antq_reg_lead_pipeworks = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_unguentarium = {
@@ -6007,7 +6154,7 @@ antq_reg_unguentarium = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_herbal_apothecary = {
@@ -6037,7 +6184,7 @@ antq_reg_herbal_apothecary = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_wool_drapery = {
@@ -6066,7 +6213,7 @@ antq_reg_wool_drapery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_silk_drapery = {
@@ -6095,7 +6242,7 @@ antq_reg_silk_drapery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_dye_finishing_house = {
@@ -6125,7 +6272,7 @@ antq_reg_dye_finishing_house = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_wheat_brewery = {
@@ -6156,7 +6303,7 @@ antq_reg_wheat_brewery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_millet_brewery = {
@@ -6187,7 +6334,7 @@ antq_reg_millet_brewery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_fruit_brewery = {
@@ -6218,7 +6365,7 @@ antq_reg_fruit_brewery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_rice_brewery = {
@@ -6249,7 +6396,7 @@ antq_reg_rice_brewery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_stone_masonry_yard = {
@@ -6278,7 +6425,7 @@ antq_reg_stone_masonry_yard = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_clay_brickworks = {
@@ -6307,7 +6454,7 @@ antq_reg_clay_brickworks = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_crucible_steel_workshop = {
@@ -6337,7 +6484,7 @@ antq_reg_crucible_steel_workshop = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }
 
 antq_reg_materia_medica = {
@@ -6367,5 +6514,5 @@ antq_reg_materia_medica = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = guild_construction
+	construction_demand = antq_s2_workshop_construction
 }

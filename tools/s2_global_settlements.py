@@ -17,6 +17,7 @@ from pathlib import Path
 
 from m5_regional_buildings import (
     CITY_ONLY_FAMILIES,
+    FAMILY_MACRO_RESTRICTIONS,
     PRODUCTION_RECIPES,
     ROMAN_ECONOMY_FAMILIES,
     WATER_OR_PORT_FAMILIES,
@@ -267,12 +268,16 @@ def candidate_score(
     family: str,
     good: str,
     owner_region: str,
+    macro: str,
     harbor: float,
     urban_profile: str,
     climate: str,
     signatures: dict[str, set[str]],
     usage: Counter[str],
 ) -> tuple[float, str]:
+    allowed_macros = FAMILY_MACRO_RESTRICTIONS.get(family)
+    if allowed_macros is not None and macro not in allowed_macros:
+        return (-10_000.0, family)
     if family in ROMAN_ECONOMY_FAMILIES and owner_region != "Rome":
         return (-10_000.0, family)
     if family in CITY_ONLY_FAMILIES and urban_profile != "city":
@@ -351,6 +356,7 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
 
     def choose_family(location: str) -> str:
         _tag, region, harbor, urban_profile, good = details(location)
+        macro = LOCATION_MACRO_OVERRIDES.get(location, REGION_MACRO[region])
         candidates = [
             family for family in family_keys
             if family in PRODUCTION_RECIPES and (location, family) not in used_pairs
@@ -358,7 +364,7 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         return max(
             candidates,
             key=lambda family: candidate_score(
-                family, good, region, harbor, urban_profile,
+                family, good, region, macro, harbor, urban_profile,
                 rgo[location]["climate"], signatures, usage,
             ),
         )
@@ -471,8 +477,9 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         candidates: list[tuple[float, float, str]] = []
         for location in selected_locations:
             _tag, region, harbor, urban_profile, good = details(location)
+            macro = LOCATION_MACRO_OVERRIDES.get(location, REGION_MACRO[region])
             score, _ = candidate_score(
-                family, good, region, harbor, urban_profile,
+                family, good, region, macro, harbor, urban_profile,
                 rgo[location]["climate"], signatures, usage,
             )
             if score > -10_000 and per_location[location] < 6:
@@ -487,6 +494,7 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     # target, dispersed over the same reviewed settlement sample.
     def choose_service(location: str) -> str:
         _tag, region, harbor, urban_profile, good = details(location)
+        macro = LOCATION_MACRO_OVERRIDES.get(location, REGION_MACRO[region])
         candidates = [
             family for family in family_keys
             if family not in PRODUCTION_RECIPES and (location, family) not in used_pairs
@@ -494,7 +502,7 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         return max(
             candidates,
             key=lambda family: candidate_score(
-                family, good, region, harbor, urban_profile,
+                family, good, region, macro, harbor, urban_profile,
                 rgo[location]["climate"], signatures, usage,
             ),
         )
@@ -519,6 +527,10 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
             family,
             rgo[location]["ad1_good"],
             polities[owner_by_location[location]]["region"],
+            LOCATION_MACRO_OVERRIDES.get(
+                location,
+                REGION_MACRO[polities[owner_by_location[location]]["region"]],
+            ),
             details(location)[2],
             urban.get(location, ""),
             rgo[location]["climate"],

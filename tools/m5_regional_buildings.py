@@ -19,6 +19,7 @@ import sys
 from pathlib import Path
 
 from extract_vanilla import tokenize
+from economy_chains import construction_package, institutional_upkeep, merge_goods
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -283,7 +284,7 @@ COHERENT_RECIPE_OVERRIDES = {
     "antq_reg_textile_dye_finisher": ("fine_cloth", "0.49", (("cloth", "0.50"), ("dyes", "0.20"), ("tools", "0.05"))),
     "antq_reg_silk_loom": ("fine_cloth", "0.70", (("silk", "0.875"),)),
     "antq_reg_scriptorium": ("books", "0.78", (("antq_papyrus", "0.40"), ("dyes", "0.05"), ("lumber", "0.10"))),
-    "antq_reg_papyrus_workshop": ("books", "0.78", (("antq_papyrus", "0.40"), ("dyes", "0.05"), ("lumber", "0.10"))),
+    "antq_reg_papyrus_workshop": ("paper", "1.17", (("antq_papyrus", "0.40"), ("dyes", "0.05"), ("lumber", "0.10"))),
     "antq_reg_scroll_workshop": ("books", "0.78", (("antq_papyrus", "0.40"), ("dyes", "0.05"), ("lumber", "0.10"))),
     "antq_reg_stationer": ("books", "0.78", (("antq_papyrus", "0.40"), ("dyes", "0.05"), ("lumber", "0.10"))),
     "antq_reg_reed_pen_maker": ("books", "0.78", (("antq_papyrus", "0.40"), ("dyes", "0.05"), ("lumber", "0.10"))),
@@ -304,7 +305,8 @@ COHERENT_RECIPE_OVERRIDES = {
     "antq_reg_bone_carver": ("jewelry", "0.396", (("livestock", "0.80"), ("tools", "0.15"))),
     "antq_reg_hornworker": ("jewelry", "0.396", (("livestock", "0.80"), ("tools", "0.15"))),
     "antq_reg_beadworks": ("jewelry", "1.08", (("glass", "0.80"), ("dyes", "0.30"), ("tools", "0.30"))),
-    "antq_reg_charcoal_hearth": ("coal", "0.99", (("lumber", "0.90"), ("tools", "0.10"))),
+    # Exact installed tar-kiln contract: a period-safe wood-pitch producer.
+    "antq_reg_charcoal_hearth": ("tar", "1.0", (("lumber", "1.1111"),)),
     "antq_reg_villa_rustica": ("antq_grain_products", "1.10", (("wheat", "1.00"), ("lumber", "0.15"), ("tools", "0.05"))),
     "antq_reg_annona_bakery": ("antq_grain_products", "1.10", (("wheat", "1.00"), ("lumber", "0.15"), ("tools", "0.05"))),
     "antq_reg_quarry_contractors": ("masonry", "2.16", (("stone", "1.20"), ("lumber", "0.20"), ("tools", "0.10"))),
@@ -363,6 +365,53 @@ PRODUCTION_RECIPES.update(COHERENT_RECIPE_OVERRIDES)
 # fake export good would again make their labels cosmetic.
 for _service_key in ("antq_reg_sponge_drying_yard",):
     PRODUCTION_RECIPES.pop(_service_key, None)
+
+# Productive families remain constructible through advances, but opening
+# placement must respect securely different ancient production geographies.
+_OLD_WORLD = {
+    "Europe", "North Africa", "Middle East", "Central Asia", "South Asia",
+    "Southeast Asia", "East Asia", "West Africa",
+}
+_OLD_WORLD_METAL = _OLD_WORLD - {"West Africa"}
+_MEDITERRANEAN = {"Europe", "North Africa", "Middle East"}
+_OUTPUT_MACRO_RESTRICTIONS = {
+    "steel": {"South Asia"},
+    "paper": {"North Africa"},
+    "books": _OLD_WORLD,
+    "antq_grain_products": _OLD_WORLD,
+    "antq_olive_oil": _MEDITERRANEAN,
+    "antq_soap": _MEDITERRANEAN,
+    "antq_perfumes": _OLD_WORLD,
+    "antq_lacquerware": {"East Asia"},
+    "antq_amber_ornaments": {"Europe"},
+    "antq_bronze_wares": _OLD_WORLD_METAL,
+    "antq_lead_wares": _OLD_WORLD_METAL,
+    "antq_iron_hardware": _OLD_WORLD,
+    "antq_glasswares": {"Europe", "North Africa", "Middle East", "South Asia"},
+    "antq_glass_beads": {
+        "Europe", "North Africa", "Middle East", "Central Asia",
+        "South Asia", "East Asia",
+    },
+    "antq_parchment": {
+        "Europe", "North Africa", "Middle East", "Central Asia", "South Asia",
+    },
+    "antq_carpets": {
+        "Europe", "Middle East", "Central Asia", "South Asia", "East Asia",
+    },
+    "antq_felt_goods": {"Europe", "Middle East", "Central Asia", "East Asia"},
+    "antq_sailcloth": _OLD_WORLD | {"Oceania"},
+}
+FAMILY_MACRO_RESTRICTIONS = {
+    family: frozenset(_OUTPUT_MACRO_RESTRICTIONS[output])
+    for family, (output, _amount, _inputs) in PRODUCTION_RECIPES.items()
+    if output in _OUTPUT_MACRO_RESTRICTIONS
+}
+FAMILY_MACRO_RESTRICTIONS.update(
+    {
+        "antq_reg_silk_loom": frozenset({"East Asia"}),
+        "antq_reg_silk_drapery": frozenset({"East Asia"}),
+    }
+)
 
 WATER_OR_PORT_FAMILIES = {
     "antq_reg_shipyard", "antq_reg_reed_boatyard", "antq_reg_bargeyard",
@@ -607,6 +656,12 @@ def load() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
                 failures.append(f"{prefix}: {row['location']} is outside declared {row['macro']} scope")
         if row["confidence"] not in {"secure", "contested"}:
             failures.append(f"{prefix}: confidence must be secure or contested")
+        allowed_macros = FAMILY_MACRO_RESTRICTIONS.get(row["family"])
+        if allowed_macros is not None and row["macro"] not in allowed_macros:
+            failures.append(
+                f"{prefix}: {row['family']} is outside its reviewed production "
+                f"macros {sorted(allowed_macros)}"
+            )
         if row["macro"] in macro_counts:
             macro_counts[row["macro"]] += 1
         used.add(row["family"])
@@ -670,10 +725,20 @@ def definition(families: list[dict[str, str]]) -> str:
                 lines.append(f"\t\t\t{good} = {amount}")
             lines.extend((f"\t\t\tproduced = {produced}", f"\t\t\toutput = {output}", "\t\t\tdebug_max_profit = guild_profit_margin", "\t\t\tcategory = guild_input"))
         else:
-            for good, amount in pairs(row["maintenance"], "maintenance"):
+            maintenance = merge_goods(
+                pairs(row["maintenance"], "maintenance"),
+                institutional_upkeep(
+                    row["key"], row["category"], productive=False,
+                ),
+            )
+            for good, amount in maintenance:
                 lines.append(f"\t\t\t{good} = {amount}")
             lines.append("\t\t\tcategory = building_maintenance")
-        lines.extend(("\t\t}", "\t}", "\tcustom_tags = { guild }", "\tconstruction_demand = guild_construction", "}", ""))
+        lines.extend((
+            "\t\t}", "\t}", "\tcustom_tags = { guild }",
+            f"\tconstruction_demand = {construction_package(row['key'], row['category'])}",
+            "}", "",
+        ))
     return "\n".join(lines)
 
 

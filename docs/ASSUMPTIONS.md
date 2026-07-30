@@ -5863,3 +5863,12 @@ silphium production with medicaments represents successor medical land use, not
 a documented immediate crop conversion. Sources: `P12.1`; `P13`; `P14`;
 binding-ledger source labels. [secure broad associations; contested quantities
 and exact transitions]
+
+## 2026-07-30 - Economy-chain quantities are market abstractions
+
+Construction and upkeep bundles describe material classes, not excavated bills
+or fixed quantities. The wood-tar kiln uses the installed ancient-compatible
+tar contract; the papyrus workshop's `paper` output is an engine adapter for
+finished sheets. Specialty macro bounds are conservative production limits, not
+limits on trade. Sources: `P12.1`-`P12.3`; `P13`; `P14`; building-ledger
+sources. [secure broad materials and regions; contested local scale]

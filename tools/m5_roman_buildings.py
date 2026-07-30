@@ -16,6 +16,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from economy_chains import construction_package, institutional_upkeep, merge_goods
+
 
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER = ROOT / "docs/m5/roman_buildings.csv"
@@ -168,9 +170,16 @@ def definition(items: list[dict[str, str]]) -> str:
         for key, amount in pairs(row["modifier"], "modifier"):
             lines.append(f"\t\t{key} = {amount}")
         lines.extend(("\t}", "\tunique_production_methods = {", f"\t\t{row['key']}_maintenance = {{"))
-        for good, amount in pairs(row["maintenance"], "maintenance"):
+        maintenance = merge_goods(
+            pairs(row["maintenance"], "maintenance"),
+            institutional_upkeep(row["key"], row["category"], productive=False),
+        )
+        for good, amount in maintenance:
             lines.append(f"\t\t\t{good} = {amount}")
-        lines.extend(("\t\t\tcategory = building_maintenance", "\t\t}", "\t}", "\tconstruction_demand = town_building_construction"))
+        lines.extend((
+            "\t\t\tcategory = building_maintenance", "\t\t}", "\t}",
+            f"\tconstruction_demand = {construction_package(row['key'], row['category'])}",
+        ))
         if row["category"] == "defense_category":
             lines.extend(("\traw_modifier = {", "\t\tfort_level = 1", "\t\tpure_tooltip_entry = pte_no_propagating_zone_of_control", "\t}"))
         lines.extend(("}", ""))

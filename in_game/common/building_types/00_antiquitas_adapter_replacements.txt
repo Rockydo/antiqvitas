@@ -29,10 +29,12 @@ antq_irrigation_network = {
 		antq_irrigation_network_maintenance = {
 			tools = 0.10
 			lumber = 0.05
+			antq_lead_wares = 0.030
+			antq_iron_hardware = 0.020
 			category = building_maintenance
 		}
 	}
-	construction_demand = village_construction
+	construction_demand = antq_s2_waterworks_construction
 }
 
 antq_maritime_harbor = {
@@ -61,10 +63,14 @@ antq_maritime_harbor = {
 			tools = 0.10
 			lumber = 0.10
 			stone = 0.20
+			antq_cordage = 0.040
+			antq_sailcloth = 0.030
+			antq_iron_hardware = 0.020
+			antq_cured_meat = 0.020
 			category = building_maintenance
 		}
 	}
-	construction_demand = port_building_construction
+	construction_demand = antq_s2_port_construction
 }
 
 antq_earthwork_stockade = {
@@ -89,10 +95,14 @@ antq_earthwork_stockade = {
 			lumber = 0.16
 			weaponry = 0.05
 			tools = 0.04
+			steel = 0.005
+			antq_iron_hardware = 0.030
+			antq_leather_goods = 0.020
+			antq_cured_meat = 0.030
 			category = building_maintenance
 		}
 	}
-	construction_demand = fort_construction
+	construction_demand = antq_s2_fortification_construction
 	raw_modifier = {
 		fort_level = 1
 		pure_tooltip_entry = pte_no_propagating_zone_of_control
@@ -122,11 +132,14 @@ antq_buddhist_vihara = {
 		antq_buddhist_vihara_maintenance = {
 			rice = 0.10
 			paper = 0.05
-			incense = 0.03
+			incense = 0.05
+			antq_wax_goods = 0.020
+			antq_perfumes = 0.010
+			antq_fine_ceramics = 0.010
 			category = building_maintenance
 		}
 	}
-	construction_demand = town_building_construction
+	construction_demand = antq_s2_sanctuary_construction
 }
 
 antq_taixue_changan = {
@@ -153,10 +166,13 @@ antq_taixue_changan = {
 			books = 0.20
 			cloth = 0.20
 			beeswax = 0.10
+			antq_papyrus = 0.040
+			antq_parchment = 0.030
+			antq_wax_goods = 0.020
 			category = building_maintenance
 		}
 	}
-	construction_demand = academy_construction
+	construction_demand = antq_s2_archive_construction
 }
 
 antq_library_alexandria = {
@@ -182,10 +198,13 @@ antq_library_alexandria = {
 			paper = 0.30
 			books = 0.30
 			dyes = 0.05
+			antq_papyrus = 0.040
+			antq_parchment = 0.030
+			antq_wax_goods = 0.020
 			category = building_maintenance
 		}
 	}
-	construction_demand = library_construction
+	construction_demand = antq_s2_archive_construction
 }
 
 antq_pharos_alexandria = {
@@ -212,10 +231,14 @@ antq_pharos_alexandria = {
 			naval_supplies = 0.30
 			tar = 0.10
 			tools = 0.10
+			steel = 0.005
+			antq_iron_hardware = 0.030
+			antq_leather_goods = 0.020
+			antq_cured_meat = 0.030
 			category = building_maintenance
 		}
 	}
-	construction_demand = fort_construction
+	construction_demand = antq_s2_fortification_construction
 }
 
 antq_second_temple_jerusalem = {
@@ -238,11 +261,14 @@ antq_second_temple_jerusalem = {
 	}
 	unique_production_methods = {
 		antq_second_temple_jerusalem_maintenance = {
-			incense = 0.10
+			incense = 0.12
 			wine = 0.05
 			masonry = 0.08
+			antq_wax_goods = 0.020
+			antq_perfumes = 0.010
+			antq_fine_ceramics = 0.010
 			category = building_maintenance
 		}
 	}
-	construction_demand = town_building_construction
+	construction_demand = antq_s2_sanctuary_construction
 }

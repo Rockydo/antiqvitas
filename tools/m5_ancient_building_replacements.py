@@ -12,6 +12,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from economy_chains import construction_package, institutional_upkeep, merge_goods
+
 
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER = ROOT / "docs/m5/ancient_building_replacements.csv"
@@ -159,13 +161,17 @@ def definition(rows: list[dict[str, str]]) -> str:
             "\t}", "\tunique_production_methods = {",
             f"\t\t{row['key']}_maintenance = {{",
         ))
+        maintenance = merge_goods(
+            pairs(row["maintenance"], "maintenance"),
+            institutional_upkeep(row["key"], row["category"], productive=False),
+        )
         lines.extend(
             f"\t\t\t{key} = {amount}"
-            for key, amount in pairs(row["maintenance"], "maintenance")
+            for key, amount in maintenance
         )
         lines.extend((
             "\t\t\tcategory = building_maintenance", "\t\t}", "\t}",
-            f"\tconstruction_demand = {row['construction']}",
+            f"\tconstruction_demand = {construction_package(row['key'], row['category'])}",
         ))
         if row["key"] == "antq_earthwork_stockade":
             lines.extend((

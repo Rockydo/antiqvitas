@@ -7989,3 +7989,12 @@ reviewed 128px BC7 DDS.
   event/RGO, and 66 unit-demand connections.
 - Assigned 11 provisioning packages across all 64 custom units.
 - Validation passes 142/142; paired smoke adds zero mod-unique lines.
+
+## 2026-07-30 - Closed the active economy graph
+
+- All 104 goods and 151 recipes now have live producers and consumers.
+- Assigned 11 construction packages to 288 buildings and bounded upkeep to 137
+  non-production institutions without changing calibrated recipes.
+- Restricted 43 specialty families by production geography; all 10
+  macro-economies retain distinct portfolios.
+- Validation passes 143/143; paired smoke adds zero mod-unique lines.

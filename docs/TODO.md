@@ -876,7 +876,7 @@ and focused runtime probe all pass.
     zero geometry/climate edits; fresh-map Germania, Basra, and Anfu captures;
     25-second observer probe, 140/140 validation, and paired smoke green.)
 
-- [ ] Expand trade goods, recipes, and production chains to support the new depth.
+- [x] Expand trade goods, recipes, and production chains to support the new depth.
   - Audit the present 143 productive families/66 recipe signatures for meaningful
     regional differences. Add historically appropriate raw, processed, prestige,
     military, food, construction, and caravan/maritime goods as needed.
@@ -896,10 +896,14 @@ and focused runtime probe all pass.
     laws, privileges, military supply, events, and supportable trade decisions.
     Completed with 135 sourced bindings and 11 provisioning packages; validation
     and paired smoke are green.
-  - [ ] Tie RGOs, workshops, estates, urban demand, trade routes, military
+  - [x] Tie RGOs, workshops, estates, urban demand, trade routes, military
     supply, laws, privileges, advances, and events into coherent chains.
+    All 104 active goods now have producers and consumers; 151 recipes, 288
+    buildings, 137 institutional upkeep paths, 11 construction packages, 200
+    advance gates, and 10 distinct macro-economies are permanently audited.
   - Acceptance: every active good has real producers/consumers and UI art; no
     dead-end recipe or globally interchangeable regional economy.
+    (Complete: 143/143 validation and paired smoke green.)
 
 ### S2-P3 — Triple and deepen the advance/institution arc
 
