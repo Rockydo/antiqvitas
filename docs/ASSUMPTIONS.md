@@ -5844,3 +5844,12 @@ forest-steppe are regional presentations, not quantified palaeoland cover.
 Sources: `P8.6`-`P8.8`; `P12.1`; `P12.3`; `TAC-GER`; `STR-GER`;
 `SOR-AFRICA-FRONTIER`; `AES-SOUTH-URAL`; `RAS-SARGAT-CHRON`; `CAH-XI`;
 `BHR`; ledger row sources. [secure broad contexts; contested exact field extent]
+
+## 2026-07-30 - Food goods represent regional product classes
+
+Dates, sesame, tree nuts, and coconuts mark bounded producing environments, not
+reconstructed farm output. Dried fruit, nut paste, oil, coconut products,
+cheese/curds, cured meat, rice wine, and soy condiments aggregate period-safe
+processing classes without asserting a named recipe, monopoly, or later
+plantation system. Sources: `P12.1`; `P12.3`; `P14`; `PER`; `BHR`.
+[secure broad production; contested exact fields and workshop forms]

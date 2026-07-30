@@ -74,6 +74,7 @@ RESOURCE_FAMILIES = {
         "antq_barley", "legumes", "maize", "millet", "potato", "rice", "wheat",
     },
     "orchard_or_specialty_crop": {
+        "antq_coconuts", "antq_dates", "antq_sesame", "antq_tree_nuts",
         "chili", "cloves", "cocoa", "fruit", "olives", "pepper", "saffron",
         "sugar", "tea", "wine",
     },
@@ -95,8 +96,9 @@ RESOURCE_FAMILIES = {
     },
 }
 SPECIALTY_GOODS = {
-    "antq_camels", "antq_jade", "antq_naphtha", "antq_papyrus", "antq_silphium",
-    "cloves", "elephants", "incense", "pepper", "silk", "tea",
+    "antq_camels", "antq_coconuts", "antq_dates", "antq_jade",
+    "antq_naphtha", "antq_papyrus", "antq_sesame", "antq_silphium",
+    "antq_tree_nuts", "cloves", "elephants", "incense", "pepper", "silk", "tea",
 }
 
 

@@ -35,7 +35,8 @@ PERIOD_ROLE_GROUPS = {
     "food_crop_or_animal": {
         "chili", "cocoa", "elephants", "fish", "fruit", "horses", "legumes",
         "livestock", "maize", "millet", "olives", "potato", "rice", "sugar",
-        "wheat", "wild_game", "antq_barley",
+        "wheat", "wild_game", "antq_barley", "antq_coconuts", "antq_dates",
+        "antq_sesame", "antq_tree_nuts",
     },
     "organic_raw_or_exchange": {
         "amber", "beeswax", "cloves", "cotton", "fiber_crops", "fur",
@@ -50,7 +51,9 @@ PERIOD_ROLE_GROUPS = {
     },
     "processed_food_or_drink": {
         "beer", "wine", "antq_grain_products", "antq_olive_oil",
-        "antq_preserved_fish",
+        "antq_preserved_fish", "antq_cheese_curds", "antq_coconut_products",
+        "antq_cured_meat", "antq_dried_fruit", "antq_nut_pastes",
+        "antq_rice_wine", "antq_sesame_oil", "antq_soy_condiments",
     },
     "processed_craft_or_service": {
         "books", "cloth", "dyes", "fine_cloth", "furniture", "glass",
@@ -96,9 +99,9 @@ def build() -> tuple[str, str, dict[str, int]]:
         for row in rows(ledger)
     ]
     building_keys = [row["key"] for row in building_rows]
-    if len(building_keys) != 280 or len(building_keys) != len(set(building_keys)):
+    if len(building_keys) != 288 or len(building_keys) != len(set(building_keys)):
         failures.append(
-            f"active building ledger must contain 280 unique keys, got "
+            f"active building ledger must contain 288 unique keys, got "
             f"{len(building_keys)}/{len(set(building_keys))}"
         )
 

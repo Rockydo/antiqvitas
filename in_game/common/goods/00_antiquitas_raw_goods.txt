@@ -92,6 +92,64 @@ antq_carpets = {
 	no_demand_if_no_market_availability = yes
 }
 
+antq_cheese_curds = {
+	category = produced
+	color = rgb { 226 211 164 }
+	default_market_price = 2.4
+	transport_cost = 0.75
+	food = 5
+
+	demand_add = {
+		all = 0.0018
+		nobles = 0.010
+		burghers = 0.008
+		clergy = 0.004
+	}
+
+	origin_in_old_world = yes
+	custom_tags = { old_world_goods antq_ancient_economy }
+	no_demand_if_no_market_availability = yes
+}
+
+antq_coconut_products = {
+	category = produced
+	color = rgb { 203 199 156 }
+	default_market_price = 2.6
+	transport_cost = 1
+	food = 4
+
+	demand_add = {
+		all = 0.0014
+		nobles = 0.010
+		burghers = 0.008
+		clergy = 0.004
+	}
+
+	origin_in_old_world = yes
+	custom_tags = { old_world_goods antq_ancient_economy }
+	no_demand_if_no_market_availability = yes
+}
+
+antq_coconuts = {
+	method = farming
+	category = raw_material
+	color = rgb { 111 126 55 }
+	default_market_price = 1.8
+	transport_cost = 1
+	food = 5
+
+	demand_add = {
+		all = 0.0015
+		nobles = 0.006
+		burghers = 0.004
+		clergy = 0.002
+	}
+
+	origin_in_old_world = yes
+	custom_tags = { old_world_goods antq_ancient_economy }
+	no_demand_if_no_market_availability = yes
+}
+
 antq_cordage = {
 	category = produced
 	color = rgb { 173 139 89 }
@@ -102,6 +160,64 @@ antq_cordage = {
 		all = 0.0007
 		nobles = 0.005
 		burghers = 0.014
+		clergy = 0.004
+	}
+
+	origin_in_old_world = yes
+	custom_tags = { old_world_goods antq_ancient_economy }
+	no_demand_if_no_market_availability = yes
+}
+
+antq_cured_meat = {
+	category = produced
+	color = rgb { 142 67 54 }
+	default_market_price = 3.2
+	transport_cost = 1
+	food = 5
+
+	demand_add = {
+		all = 0.0015
+		nobles = 0.012
+		burghers = 0.010
+		clergy = 0.004
+	}
+
+	origin_in_old_world = yes
+	custom_tags = { old_world_goods antq_ancient_economy }
+	no_demand_if_no_market_availability = yes
+}
+
+antq_dates = {
+	method = farming
+	category = raw_material
+	color = rgb { 151 76 42 }
+	default_market_price = 1.8
+	transport_cost = 0.5
+	food = 5
+
+	demand_add = {
+		all = 0.0018
+		nobles = 0.004
+		burghers = 0.003
+		clergy = 0.002
+	}
+
+	origin_in_old_world = yes
+	custom_tags = { old_world_goods antq_ancient_economy }
+	no_demand_if_no_market_availability = yes
+}
+
+antq_dried_fruit = {
+	category = produced
+	color = rgb { 171 91 48 }
+	default_market_price = 2.8
+	transport_cost = 0.75
+	food = 4
+
+	demand_add = {
+		all = 0.0015
+		nobles = 0.010
+		burghers = 0.008
 		clergy = 0.004
 	}
 
@@ -309,6 +425,25 @@ antq_naphtha = {
 	no_demand_if_no_market_availability = yes
 }
 
+antq_nut_pastes = {
+	category = produced
+	color = rgb { 164 139 76 }
+	default_market_price = 3.4
+	transport_cost = 0.75
+	food = 5
+
+	demand_add = {
+		all = 0.0010
+		nobles = 0.015
+		burghers = 0.010
+		clergy = 0.006
+	}
+
+	origin_in_old_world = yes
+	custom_tags = { old_world_goods antq_ancient_economy }
+	no_demand_if_no_market_availability = yes
+}
+
 antq_olive_oil = {
 	category = produced
 	color = rgb { 123 151 63 }
@@ -400,6 +535,25 @@ antq_preserved_fish = {
 	no_demand_if_no_market_availability = yes
 }
 
+antq_rice_wine = {
+	category = produced
+	color = rgb { 192 154 83 }
+	default_market_price = 3
+	transport_cost = 1
+	food = 1
+
+	demand_add = {
+		all = 0.0004
+		nobles = 0.018
+		burghers = 0.012
+		clergy = 0.006
+	}
+
+	origin_in_old_world = yes
+	custom_tags = { old_world_goods antq_ancient_economy }
+	no_demand_if_no_market_availability = yes
+}
+
 antq_sailcloth = {
 	category = produced
 	color = rgb { 204 193 164 }
@@ -411,6 +565,45 @@ antq_sailcloth = {
 		nobles = 0.006
 		burghers = 0.014
 		clergy = 0.004
+	}
+
+	origin_in_old_world = yes
+	custom_tags = { old_world_goods antq_ancient_economy }
+	no_demand_if_no_market_availability = yes
+}
+
+antq_sesame = {
+	method = farming
+	category = raw_material
+	color = rgb { 218 196 138 }
+	default_market_price = 2.2
+	transport_cost = 0.75
+	food = 3
+
+	demand_add = {
+		all = 0.0010
+		nobles = 0.007
+		burghers = 0.005
+		clergy = 0.003
+	}
+
+	origin_in_old_world = yes
+	custom_tags = { old_world_goods antq_ancient_economy }
+	no_demand_if_no_market_availability = yes
+}
+
+antq_sesame_oil = {
+	category = produced
+	color = rgb { 188 148 49 }
+	default_market_price = 3
+	transport_cost = 0.75
+	food = 3
+
+	demand_add = {
+		all = 0.0012
+		nobles = 0.016
+		burghers = 0.010
+		clergy = 0.008
 	}
 
 	origin_in_old_world = yes
@@ -446,6 +639,45 @@ antq_soap = {
 		all = 0.0007
 		nobles = 0.004
 		burghers = 0.008
+		clergy = 0.004
+	}
+
+	origin_in_old_world = yes
+	custom_tags = { old_world_goods antq_ancient_economy }
+	no_demand_if_no_market_availability = yes
+}
+
+antq_soy_condiments = {
+	category = produced
+	color = rgb { 101 71 49 }
+	default_market_price = 2.4
+	transport_cost = 0.75
+	food = 2
+
+	demand_add = {
+		all = 0.0010
+		nobles = 0.010
+		burghers = 0.008
+		clergy = 0.004
+	}
+
+	origin_in_old_world = yes
+	custom_tags = { old_world_goods antq_ancient_economy }
+	no_demand_if_no_market_availability = yes
+}
+
+antq_tree_nuts = {
+	method = farming
+	category = raw_material
+	color = rgb { 151 119 65 }
+	default_market_price = 2.5
+	transport_cost = 0.75
+	food = 4
+
+	demand_add = {
+		all = 0.0010
+		nobles = 0.010
+		burghers = 0.006
 		clergy = 0.004
 	}
 

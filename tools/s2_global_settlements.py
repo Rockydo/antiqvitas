@@ -24,6 +24,16 @@ from m5_regional_buildings import (
 
 
 ROOT = Path(__file__).resolve().parents[1]
+DEDICATED_FOOD_FAMILIES = {
+    "antq_reg_date_drying_yard",
+    "antq_reg_sesame_oil_press",
+    "antq_reg_nut_grinding_house",
+    "antq_reg_coconut_workshop",
+    "antq_reg_cheese_dairy",
+    "antq_reg_meat_curing_yard",
+    "antq_reg_rice_wine_house",
+    "antq_reg_soy_fermentary",
+}
 FAMILIES = ROOT / "docs/m5/regional_building_families.csv"
 SEEDS = ROOT / "docs/m5/regional_building_seeds.csv"
 BUNDLES = ROOT / "docs/m5/s2_britain_ireland_building_seeds.csv"
@@ -294,7 +304,10 @@ def candidate_score(
 
 def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     families = read_rows(FAMILIES)
-    family_keys = [row["key"] for row in families]
+    family_keys = [
+        row["key"] for row in families
+        if row["key"] not in DEDICATED_FOOD_FAMILIES
+    ]
     signatures = {
         row["key"]: {
             good for good in row["goods"].split(";")

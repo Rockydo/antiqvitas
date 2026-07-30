@@ -25,6 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 FAMILIES = ROOT / "docs/m5/regional_building_families.csv"
 SEEDS = ROOT / "docs/m5/regional_building_seeds.csv"
 REGIONAL_SEED_BUNDLES = ROOT / "docs/m5/s2_britain_ireland_building_seeds.csv"
+FOOD_SEEDS = ROOT / "docs/m5/food_building_seeds.csv"
 URBAN_NODES = ROOT / "docs/m5/urban_nodes.csv"
 OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
@@ -88,6 +89,7 @@ MACRO_LOCATION_OVERRIDES = {
     "alexandria": "North Africa", "tunis": "North Africa",
     "annaba": "North Africa", "bizerte": "North Africa",
     "gabes": "North Africa", "sousse": "North Africa",
+    "ashmunayn": "North Africa", "siwa": "North Africa",
     "antioch": "Middle East", "baghdad": "Middle East", "ayasuluk": "Middle East",
     "shoubak": "Middle East", "homs": "Middle East", "sidon": "Middle East",
 }
@@ -344,6 +346,16 @@ COHERENT_RECIPE_OVERRIDES = {
     "antq_reg_feltworks": ("antq_felt_goods", "1.200", (("wool", "1.00"),)),
     "antq_reg_sailmaker": ("antq_sailcloth", "0.960", (("fiber_crops", "0.60"), ("cloth", "0.30"), ("tools", "0.10"))),
     "antq_reg_shipyard": ("naval_supplies", "1.140", (("lumber", "0.30"), ("antq_cordage", "0.30"), ("antq_sailcloth", "0.25"), ("tar", "0.30"), ("iron", "0.10"))),
+    # Fourteenth pass: regionally bounded foods use their own goods and retain
+    # the same checked 20% default-price guild margin as the craft expansion.
+    "antq_reg_date_drying_yard": ("antq_dried_fruit", "0.825", (("antq_dates", "1.00"), ("pottery", "0.05"), ("lumber", "0.05"))),
+    "antq_reg_sesame_oil_press": ("antq_sesame_oil", "1.002", (("antq_sesame", "1.00"), ("pottery", "0.08"), ("lumber", "0.05"), ("tools", "0.05"))),
+    "antq_reg_nut_grinding_house": ("antq_nut_pastes", "0.953", (("antq_tree_nuts", "1.00"), ("pottery", "0.05"), ("tools", "0.05"))),
+    "antq_reg_coconut_workshop": ("antq_coconut_products", "0.923", (("antq_coconuts", "1.00"), ("pottery", "0.05"), ("tools", "0.05"))),
+    "antq_reg_cheese_dairy": ("antq_cheese_curds", "0.975", (("livestock", "1.00"), ("salt", "0.10"), ("pottery", "0.05"))),
+    "antq_reg_meat_curing_yard": ("antq_cured_meat", "0.891", (("livestock", "1.00"), ("salt", "0.20"), ("lumber", "0.05"))),
+    "antq_reg_rice_wine_house": ("antq_rice_wine", "0.470", (("rice", "1.00"), ("pottery", "0.10"), ("lumber", "0.05"))),
+    "antq_reg_soy_fermentary": ("antq_soy_condiments", "0.750", (("legumes", "1.00"), ("salt", "0.10"), ("pottery", "0.10"))),
 }
 PRODUCTION_RECIPES.update(COHERENT_RECIPE_OVERRIDES)
 
@@ -454,6 +466,7 @@ def good_prices() -> dict[str, float]:
 def expanded_seed_rows() -> list[dict[str, str]]:
     """Return every regional seed, including compact reviewed regional bundles."""
     seeds = csv_rows(SEEDS, SEED_FIELDS)
+    seeds.extend(csv_rows(FOOD_SEEDS, SEED_FIELDS))
     for bundle in csv_rows(REGIONAL_SEED_BUNDLES, BUNDLE_FIELDS):
         bundled_families = tuple(part.strip() for part in bundle["families"].split("|"))
         if len(bundled_families) != 2 or any(not family for family in bundled_families):

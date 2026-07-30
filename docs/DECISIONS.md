@@ -4222,3 +4222,11 @@ Terrain presentation and raw materials use one deterministic location-template
 renderer. The landscape pass may change topography and vegetation classes but
 never geometry, coasts, rivers, adjacency, or climate. Before/after regional
 distributions and exact source rows are permanent checks.
+
+## 2026-07-30 - Food chains use explicit regional ownership
+
+Keep the 64 food-workshop seeds in a dedicated sourced ledger and exclude their
+families from heuristic global assignment. This prevents duplicate ownership,
+keeps ordinary locations below six opening buildings, and makes each food chain
+reviewable. Generate food art four-up against installed EU5 commodity/building
+references, then split and compile through one pinned deterministic pipeline.

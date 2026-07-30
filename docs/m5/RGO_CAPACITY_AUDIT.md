@@ -5,7 +5,7 @@ controlled AD 1 location and the distribution file groups the exact
 capacity/resource/fit/access union.
 
 - 13,553 audited controlled templates.
-- 745 installed-to-AD-1 corrections.
+- 767 installed-to-AD-1 corrections.
 - 148 fine location-allowlist corrections.
 - 1 honestly nonproductive templates.
 - Tea is confined to eleven Sichuan proxies; cloves to Ternate and
@@ -25,21 +25,21 @@ capacity/resource/fit/access union.
 ## Resource families
 
 - aquatic: 807
-- fiber_or_dye_crop: 1,017
+- fiber_or_dye_crop: 1,009
 - forest_or_gathered: 2,940
 - mineral_or_quarried: 2,304
 - none: 1
-- orchard_or_specialty_crop: 967
-- pastoral: 2,846
-- staple_crop: 2,671
+- orchard_or_specialty_crop: 978
+- pastoral: 2,845
+- staple_crop: 2,669
 
 ## Fit classes
 
 - bounded_specialty: 135
-- broad_capacity_proxy: 5,302
-- environmentally_aligned: 8,082
+- broad_capacity_proxy: 5,297
+- environmentally_aligned: 8,055
 - not_applicable: 1
-- source_anchored: 33
+- source_anchored: 65
 
 ## Trade access
 
@@ -53,10 +53,14 @@ capacity/resource/fit/access union.
 ## Bounded specialties
 
 - antq_camels: 1
+- antq_coconuts: 8
+- antq_dates: 8
 - antq_jade: 1
 - antq_naphtha: 1
 - antq_papyrus: 1
+- antq_sesame: 8
 - antq_silphium: 1
+- antq_tree_nuts: 8
 - cloves: 2
 - elephants: 75
 - incense: 17

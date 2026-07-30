@@ -17,16 +17,26 @@
 		location:akhmim = { change_raw_material = goods:fiber_crops }
 		location:aksu = { change_raw_material = goods:fiber_crops }
 		location:akyazi = { change_raw_material = goods:fiber_crops }
-		location:al_ahsa = { change_raw_material = goods:millet }
+		location:al_ahsa = {
+			change_raw_material = goods:antq_dates
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:al_kadwa = { change_raw_material = goods:fiber_crops }
 		location:al_mima = { change_raw_material = goods:millet }
 		location:al_mukha = { change_raw_material = goods:incense }
 		location:al_shuqayq = { change_raw_material = goods:fiber_crops }
+		location:al_ula = {
+			change_raw_material = goods:antq_dates
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:alamganj = { change_raw_material = goods:fiber_crops }
 		location:alasehir = { change_raw_material = goods:fiber_crops }
 		location:alcazar_de_san_juan = { change_raw_material = goods:salt }
 		location:alcobaca = { change_raw_material = goods:fruit }
-		location:aleppo = { change_raw_material = goods:fiber_crops }
+		location:aleppo = {
+			change_raw_material = goods:antq_sesame
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:alexandria = {
 			change_raw_material = goods:antq_papyrus
 			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
@@ -38,7 +48,15 @@
 		location:amol_turkmenabad = { change_raw_material = goods:fiber_crops }
 		location:amora_gadal = { change_raw_material = goods:fiber_crops }
 		location:amorgos = { change_raw_material = goods:fiber_crops }
+		location:anah = {
+			change_raw_material = goods:antq_dates
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:andijan = { change_raw_material = goods:fiber_crops }
+		location:angadippuram = {
+			change_raw_material = goods:antq_coconuts
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:angkor_knong = { change_raw_material = goods:medicaments }
 		location:anhua = { change_raw_material = goods:medicaments }
 		location:anji = { change_raw_material = goods:medicaments }
@@ -54,18 +72,37 @@
 		location:ashaval = { change_raw_material = goods:fiber_crops }
 		location:ashigara = { change_raw_material = goods:medicaments }
 		location:ashikaga_loc = { change_raw_material = goods:fiber_crops }
+		location:ashmunayn = {
+			change_raw_material = goods:antq_sesame
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:ashraf = { change_raw_material = goods:fiber_crops }
+		location:astarabad = {
+			change_raw_material = goods:antq_tree_nuts
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:awaji = { change_raw_material = goods:medicaments }
 		location:awaran = { change_raw_material = goods:fiber_crops }
 		location:axochiapan = { change_raw_material = goods:medicaments }
 		location:ayas = { change_raw_material = goods:fiber_crops }
-		location:ayasuluk = { change_raw_material = goods:fiber_crops }
+		location:ayasuluk = {
+			change_raw_material = goods:antq_tree_nuts
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:ayaviri = { change_raw_material = goods:fiber_crops }
 		location:azghand = { change_raw_material = goods:fiber_crops }
 		location:azumi = { change_raw_material = goods:fiber_crops }
+		location:baalbek = {
+			change_raw_material = goods:antq_tree_nuts
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:baciravan = { change_raw_material = goods:fiber_crops }
 		location:badami = { change_raw_material = goods:medicaments }
 		location:baden = { change_raw_material = goods:fruit }
+		location:baghdad = {
+			change_raw_material = goods:antq_sesame
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:baia_de_aries = { change_raw_material = goods:goods_gold }
 		location:baima = { change_raw_material = goods:medicaments }
 		location:baishui = { change_raw_material = goods:fiber_crops }
@@ -80,7 +117,10 @@
 		location:banten = { change_raw_material = goods:medicaments }
 		location:baojing = { change_raw_material = goods:medicaments }
 		location:baoning = { change_raw_material = goods:medicaments }
-		location:baramulla = { change_raw_material = goods:fiber_crops }
+		location:baramulla = {
+			change_raw_material = goods:antq_tree_nuts
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:baran = { change_raw_material = goods:fiber_crops }
 		location:barca = {
 			change_raw_material = goods:antq_silphium
@@ -89,8 +129,15 @@
 		location:bardhaman = { change_raw_material = goods:lumber }
 		location:baris = { change_raw_material = goods:fiber_crops }
 		location:barletta = { change_raw_material = goods:fruit }
-		location:basra = { change_raw_material = goods:fiber_crops }
+		location:basra = {
+			change_raw_material = goods:antq_dates
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:batang = { change_raw_material = goods:millet }
+		location:bawean = {
+			change_raw_material = goods:antq_coconuts
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:bekarlar = { change_raw_material = goods:fruit }
 		location:belchite = { change_raw_material = goods:fiber_crops }
 		location:belgaum = { change_raw_material = goods:medicaments }
@@ -158,7 +205,10 @@
 		location:dakahla = { change_raw_material = goods:millet }
 		location:dakkar = { change_raw_material = goods:medicaments }
 		location:dalinghe = { change_raw_material = goods:millet }
-		location:damascus = { change_raw_material = goods:fruit }
+		location:damascus = {
+			change_raw_material = goods:antq_sesame
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:damghan = { change_raw_material = goods:fiber_crops }
 		location:dangila = { change_raw_material = goods:medicaments }
 		location:darganata = { change_raw_material = goods:fiber_crops }
@@ -391,7 +441,10 @@
 		location:madaran = { change_raw_material = goods:fiber_crops }
 		location:madas = { change_raw_material = goods:fiber_crops }
 		location:madugula = { change_raw_material = goods:medicaments }
-		location:madurai = { change_raw_material = goods:fiber_crops }
+		location:madurai = {
+			change_raw_material = goods:antq_sesame
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:mainz = { change_raw_material = goods:fruit }
 		location:malacca = { change_raw_material = goods:medicaments }
 		location:malaga = { change_raw_material = goods:fiber_crops }
@@ -573,7 +626,18 @@
 		location:sarikei = { change_raw_material = goods:fish }
 		location:sasaram = { change_raw_material = goods:fiber_crops }
 		location:satoraljaujhely = { change_raw_material = goods:fruit }
-		location:savur = { change_raw_material = goods:fruit }
+		location:savaii = {
+			change_raw_material = goods:antq_coconuts
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
+		location:savur = {
+			change_raw_material = goods:antq_tree_nuts
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
+		location:sayun = {
+			change_raw_material = goods:antq_dates
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:seogyeong = { change_raw_material = goods:lumber }
 		location:seongcheon = { change_raw_material = goods:fiber_crops }
 		location:sepon = { change_raw_material = goods:lumber }
@@ -594,6 +658,10 @@
 		}
 		location:shilong = { change_raw_material = goods:fiber_crops }
 		location:shimian = { change_raw_material = goods:medicaments }
+		location:shiraz = {
+			change_raw_material = goods:antq_tree_nuts
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:shixi = { change_raw_material = goods:medicaments }
 		location:shouzhang = { change_raw_material = goods:fiber_crops }
 		location:shuicheng = { change_raw_material = goods:medicaments }
@@ -607,7 +675,15 @@
 		location:sime = { change_raw_material = goods:medicaments }
 		location:simhapura = { change_raw_material = goods:medicaments }
 		location:sishui = { change_raw_material = goods:fiber_crops }
+		location:sitavaka = {
+			change_raw_material = goods:antq_coconuts
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:sivas = { change_raw_material = goods:fiber_crops }
+		location:siwa = {
+			change_raw_material = goods:antq_dates
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:smila = { change_raw_material = goods:lumber }
 		location:sofala = { change_raw_material = goods:fiber_crops }
 		location:sohrfiruzan = { change_raw_material = goods:fiber_crops }
@@ -618,6 +694,10 @@
 		location:speyer = { change_raw_material = goods:fruit }
 		location:srinagar = { change_raw_material = goods:medicaments }
 		location:sringeri = { change_raw_material = goods:fiber_crops }
+		location:srirangam = {
+			change_raw_material = goods:antq_sesame
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:subaytila = { change_raw_material = goods:fruit }
 		location:suining_jing = { change_raw_material = goods:medicaments }
 		location:suixi = { change_raw_material = goods:fiber_crops }
@@ -629,6 +709,10 @@
 		location:suzhou_fengyang = { change_raw_material = goods:fiber_crops }
 		location:syracuse = { change_raw_material = goods:fiber_crops }
 		location:syvlyush = { change_raw_material = goods:fruit }
+		location:taghit = {
+			change_raw_material = goods:antq_dates
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:taikang = { change_raw_material = goods:fiber_crops }
 		location:taiping_ningguo = { change_raw_material = goods:medicaments }
 		location:taizz = { change_raw_material = goods:medicaments }
@@ -645,13 +729,20 @@
 		location:taranto = { change_raw_material = goods:fruit }
 		location:tarascon = { change_raw_material = goods:fiber_crops }
 		location:tarazona = { change_raw_material = goods:fruit }
-		location:tarsus = { change_raw_material = goods:fiber_crops }
+		location:tarsus = {
+			change_raw_material = goods:antq_tree_nuts
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:temasek = { change_raw_material = goods:medicaments }
 		location:terranovasic = { change_raw_material = goods:fiber_crops }
 		location:tetouan = { change_raw_material = goods:fiber_crops }
 		location:teypana = { change_raw_material = goods:fiber_crops }
 		location:thai_nguyen = { change_raw_material = goods:medicaments }
 		location:thakhek = { change_raw_material = goods:salt }
+		location:thanjavur = {
+			change_raw_material = goods:antq_sesame
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:tharrawaddy = { change_raw_material = goods:medicaments }
 		location:thebes = { change_raw_material = goods:fiber_crops }
 		location:thien_quan = { change_raw_material = goods:fiber_crops }
@@ -659,6 +750,10 @@
 		location:tianchang = { change_raw_material = goods:fiber_crops }
 		location:tidsi = { change_raw_material = goods:fiber_crops }
 		location:tijis = { change_raw_material = goods:fruit }
+		location:timimoun = {
+			change_raw_material = goods:antq_dates
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:tiruccirapalli = { change_raw_material = goods:medicaments }
 		location:tissamaharama = { change_raw_material = goods:medicaments }
 		location:tissemsilt = { change_raw_material = goods:fiber_crops }
@@ -673,7 +768,10 @@
 		location:tortosa = { change_raw_material = goods:millet }
 		location:tosan = { change_raw_material = goods:medicaments }
 		location:toyoda = { change_raw_material = goods:medicaments }
-		location:trapessac = { change_raw_material = goods:fruit }
+		location:trapessac = {
+			change_raw_material = goods:antq_tree_nuts
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:trebizond = { change_raw_material = goods:fiber_crops }
 		location:trier = { change_raw_material = goods:fruit }
 		location:trincomalee = { change_raw_material = goods:medicaments }
@@ -683,8 +781,20 @@
 		location:tsonentsiio = { change_raw_material = goods:salt }
 		location:tsuru = { change_raw_material = goods:fiber_crops }
 		location:tudela = { change_raw_material = goods:fruit }
+		location:tungkal = {
+			change_raw_material = goods:antq_coconuts
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:tunliu = { change_raw_material = goods:medicaments }
 		location:tus = { change_raw_material = goods:fiber_crops }
+		location:tutuala = {
+			change_raw_material = goods:antq_coconuts
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
+		location:ukbara = {
+			change_raw_material = goods:antq_sesame
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:ukhaa_khudag = { change_raw_material = goods:lumber }
 		location:unju = { change_raw_material = goods:fiber_crops }
 		location:urach = { change_raw_material = goods:fruit }
@@ -693,6 +803,10 @@
 		location:valencia = { change_raw_material = goods:fiber_crops }
 		location:valladolid = { change_raw_material = goods:fruit }
 		location:vang_vieng = { change_raw_material = goods:salt }
+		location:vauvau = {
+			change_raw_material = goods:antq_coconuts
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:velez_malaga = { change_raw_material = goods:fiber_crops }
 		location:vembar = { change_raw_material = goods:medicaments }
 		location:venafro = { change_raw_material = goods:fruit }
@@ -756,6 +870,10 @@
 		location:yuhang = { change_raw_material = goods:medicaments }
 		location:yusha = { change_raw_material = goods:fiber_crops }
 		location:yuzhou = { change_raw_material = goods:medicaments }
+		location:zanzibar = {
+			change_raw_material = goods:antq_coconuts
+			change_max_raw_material_workers = 1 # Seed one localized RGO level for a runtime-added good.
+		}
 		location:zarand_iran = { change_raw_material = goods:fiber_crops }
 		location:zaranj = { change_raw_material = goods:fiber_crops }
 		location:zardab = { change_raw_material = goods:fiber_crops }

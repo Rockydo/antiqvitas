@@ -5,7 +5,7 @@ after `make full` and its autonomous driver report are green.
 
 ## Active user priorities — 2026-07-22
 
-- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,381-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
+- [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,413-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
   - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
 ## Second manual playtest remediation — 2026-07-26 (resume here)
@@ -31,10 +31,10 @@ and focused runtime probe all pass.
   Philippine, Sulawesi, North Maluku, Plains-Woodland, Korean, Caucasian, and
   Andean and final-census archaeological splits. The generated literal
   placeholder census is zero.
-- The global RGO audit covers all 13,553 controlled templates and applies 745
+- The global RGO audit covers all 13,553 controlled templates and applies 767
   corrections. Capacity, resource family, fit, trade access, decision, source,
   and confidence are checked per location.
-- The 280 ancient building definitions seed 3,570 placements across 1,859
+- The 288 ancient building definitions support 3,633 placements across 1,881
   settlement-ranked locations and all 463 starting polities. The top ten hold
   5.6% because reviewed Roman metropolitan packages
   remain deliberately deep; ordinary locations are capped at six.
@@ -829,13 +829,13 @@ and focused runtime probe all pass.
     silk routes, Indian Ocean products, pastoral frontiers, forest products, salt,
     fisheries, and regional staples.
   - [x] Complete the first whole-map period/environment screen. All 13,553
-    controlled templates have an auditable capacity/access row; 745 corrections
+    controlled templates have an auditable capacity/access row; 767 corrections
     remove or bound unsupported production.
   - [x] Continue from the complete ledger with finer subregional specialty,
     extraction-capacity, and producer/consumer passes; replace contested
     retained defaults where evidence supports a better choice. Tea is limited
     to 11 Sichuan proxies, cloves to Ternate/Tidore, and pepper to 10
-    Malabar/Western Ghats proxies. All 92 visible goods are economy-audited.
+    Malabar/Western Ghats proxies. All 104 visible goods are economy-audited.
   - Acceptance: every assigned location is audited; regional distribution and
     outlier reports pass; no vanilla-only or post-476 RGO remains visible.
 
@@ -888,9 +888,12 @@ and focused runtime probe all pass.
     aliases; shipyards now consume cordage and sailcloth. The active union is
     77 goods, 143 productive families, and 66 recipe signatures, all within the
     checked 19–21% default-price guild margin.
-  - [ ] Continue with regionally bounded raw-material and processed-food chains,
-    then connect appropriate goods to advances, laws, privileges, military
-    supply, events, and historically supportable trade-route decisions.
+  - [x] Add a bounded food-chain tranche: dates, sesame, tree nuts, coconuts,
+    eight processed goods, eight calibrated workshop families, 32 RGO anchors,
+    64 explicit workshop seeds, and 20 direct assets from five reviewed four-up
+    sheets. All 104 goods, 288 buildings, and 151 productive families pass.
+  - [ ] Connect appropriate goods beyond their generated advance unlocks to
+    laws, privileges, military supply, events, and supportable trade decisions.
   - Tie RGOs, workshops, estates, urban demand, trade routes, military supply,
     laws, privileges, advances, and events into coherent chains.
   - Acceptance: every active good has real producers/consumers and UI art; no

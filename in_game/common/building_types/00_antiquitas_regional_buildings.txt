@@ -4829,6 +4829,255 @@ antq_reg_riverine_gathering_ground = {
 	construction_demand = guild_construction
 }
 
+antq_reg_date_drying_yard = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_monthly_food_modifier = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_date_drying_yard_maintenance = {
+			antq_dates = 1.00
+			pottery = 0.05
+			lumber = 0.05
+			produced = antq_dried_fruit
+			output = 0.825
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_sesame_oil_press = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_production_efficiency = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_sesame_oil_press_maintenance = {
+			antq_sesame = 1.00
+			pottery = 0.08
+			lumber = 0.05
+			tools = 0.05
+			produced = antq_sesame_oil
+			output = 1.002
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_nut_grinding_house = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_production_efficiency = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_nut_grinding_house_maintenance = {
+			antq_tree_nuts = 1.00
+			pottery = 0.05
+			tools = 0.05
+			produced = antq_nut_pastes
+			output = 0.953
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_coconut_workshop = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_monthly_food_modifier = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_coconut_workshop_maintenance = {
+			antq_coconuts = 1.00
+			pottery = 0.05
+			tools = 0.05
+			produced = antq_coconut_products
+			output = 0.923
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_cheese_dairy = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_monthly_food_modifier = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_cheese_dairy_maintenance = {
+			livestock = 1.00
+			salt = 0.10
+			pottery = 0.05
+			produced = antq_cheese_curds
+			output = 0.975
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_meat_curing_yard = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_monthly_food_modifier = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_meat_curing_yard_maintenance = {
+			livestock = 1.00
+			salt = 0.20
+			lumber = 0.05
+			produced = antq_cured_meat
+			output = 0.891
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_rice_wine_house = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_merchant_capacity = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_rice_wine_house_maintenance = {
+			rice = 1.00
+			pottery = 0.10
+			lumber = 0.05
+			produced = antq_rice_wine
+			output = 0.470
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_soy_fermentary = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	modifier = {
+		local_monthly_food_modifier = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_soy_fermentary_maintenance = {
+			legumes = 1.00
+			salt = 0.10
+			pottery = 0.10
+			produced = antq_soy_condiments
+			output = 0.750
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
 antq_reg_villa_rustica = {
 	audio_tier = 2
 	is_special = no

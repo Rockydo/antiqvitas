@@ -70,14 +70,18 @@ EXPECTED_SAFE_SCOPES = Counter({
     "international_organization:catholic_church": 2,
     "international_organization:shinto": 2,
 })
-EXPECTED_RGO_CHANGE_COUNT = 745
+EXPECTED_RGO_CHANGE_COUNT = 767
 EXPECTED_CUSTOM_RGO_GOODS = frozenset({
     "antq_barley",
     "antq_camels",
+    "antq_coconuts",
+    "antq_dates",
     "antq_jade",
     "antq_naphtha",
     "antq_papyrus",
+    "antq_sesame",
     "antq_silphium",
+    "antq_tree_nuts",
 })
 EXPECTED_ANNONA_SEED_LOCATIONS = frozenset({"cagliari", "faiyum", "sousse", "syracuse"})
 LEGACY_INSTITUTION_CALLBACK = """#root = country, scope:target = institution

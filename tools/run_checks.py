@@ -97,6 +97,7 @@ VALIDATE_COMMANDS = (
     Command("tools/culture_template_inventory.py", ("--check",)),
     Command("tools/m5_roman_economy_art.py", ("--check",)),
     Command("tools/m5_ancient_goods_expansion.py", ("--check",)),
+    Command("tools/m5_food_goods_expansion.py", ("--check",)),
     Command("tools/m5_building_circle_reart.py", ("--check",)),
     Command("tools/m5_building_icon_audit.py", ("--check",)),
     Command("tools/generate_ancient_goods.py", ("--check",)),

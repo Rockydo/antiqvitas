@@ -7971,3 +7971,14 @@ reviewed 128px BC7 DDS.
 - Fresh observer captures confirm Attendorn forest, Basra marsh, and Anfu wet
   rice presentation; a 25-second simulation probe remained stable.
 - Validation passes 140/140; paired smoke reports zero mod-unique lines.
+
+## 2026-07-30 - Added bounded food-production chains
+
+- Added four raw and eight processed goods, eight calibrated building families,
+  32 RGO anchors, and 64 explicit workshop seeds.
+- Generated 20 direct assets from five four-up sheets using installed EU5
+  commodity and building references.
+- Active totals are 104 goods, 288 buildings, 151 productive families, 767 RGO
+  corrections, and 3,531 scalable regional placements across 1,881 locations.
+- Validation passes 141/141; paired smoke adds zero mod-unique lines. Fresh AD 1
+  evidence confirms Dates and the Date Drying Yard/Dried Fruit chain at Siwa.
