@@ -8028,3 +8028,23 @@ reviewed 128px BC7 DDS.
   crop-origin gates, hard caps of 2-3, and direct localization in 11 clients.
 - Added six reviewed four-up sheets, 24 unique circle-safe masters/DDS files,
   and expanded the active building-icon audit from 288 to 312.
+
+## 2026-07-30 - Rebuilt loading and location illustration surfaces
+
+- Rebuilt 16 loading scenes as 128 true layers; all 11 selectable scenes are
+  exact-path covered.
+- Audited four installed location resolvers and 255 textures. Replaced 154
+  structural/sacred layers from 12 four-up sheets and 48 ancient masters;
+  retained five ancient monuments and 96 period-neutral natural/effect layers.
+- Routed all 644 ancient cultures to installed regional art families.
+- Expanded pop presentation from 56 to 88 resolvers, covering all nine
+  installed graphical families plus generic and map-mode calls.
+- Focused loading, location-union, culture, and pop validators pass.
+
+## 2026-07-30 - Trade goods now use direct cutouts
+
+- Rebuilt 32 goods from eight exact four-up sheets against installed EU5
+  references; rematted Barley and normalized five reviewed direct masters.
+- All 38 custom icons now have transparent silhouettes. Validation rejects
+  circle-level alpha or radial plate coverage.
+- Full validation passes 150/150; paired smoke adds zero mod-unique lines.

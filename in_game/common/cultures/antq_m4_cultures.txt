@@ -4,7 +4,7 @@
 antq_latin = { # P10;CAH-XI; Latin-speaking Roman core
 	language = antq_italic_dialect
 	color = antq_culture_color_antq_latin
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 		antq_etruscan = positive
 		antq_greek_koine = positive
@@ -18,7 +18,7 @@ antq_latin = { # P10;CAH-XI; Latin-speaking Roman core
 antq_etruscan = { # P10;CAH-XI; Residual Etruscan communities
 	language = antq_italic_dialect
 	color = antq_culture_color_antq_etruscan
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 		antq_latin = positive
 	}
@@ -30,7 +30,7 @@ antq_etruscan = { # P10;CAH-XI; Residual Etruscan communities
 antq_oscan_umbrian = { # P10;CAH-XI; Residual Italic communities
 	language = antq_italic_dialect
 	color = antq_culture_color_antq_oscan_umbrian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 		antq_latin = kindred
 	}
@@ -42,7 +42,7 @@ antq_oscan_umbrian = { # P10;CAH-XI; Residual Italic communities
 antq_venetic = { # P10;CAH-XI; Adriatic Venetic continuity
 	language = antq_italic_dialect
 	color = antq_culture_color_antq_venetic
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -53,7 +53,7 @@ antq_venetic = { # P10;CAH-XI; Adriatic Venetic continuity
 antq_greek_koine = { # P10;CAH-XI; Greek eastern Mediterranean continuum
 	language = antq_hellenic_dialect
 	color = antq_culture_color_antq_greek_koine
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 		antq_cappadocian = positive
 		antq_latin = positive
@@ -67,7 +67,7 @@ antq_greek_koine = { # P10;CAH-XI; Greek eastern Mediterranean continuum
 antq_macedonian = { # P10;CAH-XI; Hellenized Macedonian regional identity
 	language = antq_hellenic_dialect
 	color = antq_culture_color_antq_macedonian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -199,7 +199,7 @@ antq_armorican = { # P10;CAH-XI;PLE; Northwestern Gallic communities
 antq_parthian = { # P10;CAH-XI; Arsacid Iranian court culture
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_parthian
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 		antq_aramaic = positive
 		antq_carmanian = kindred
@@ -214,7 +214,7 @@ antq_parthian = { # P10;CAH-XI; Arsacid Iranian court culture
 antq_persian = { # P10;CAH-XI; Persian regional culture
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_persian
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -225,7 +225,7 @@ antq_persian = { # P10;CAH-XI; Persian regional culture
 antq_median = { # P10;CAH-XI; Median regional identity
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_median
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 		antq_carmanian = kindred
 		antq_hyrcanian = kindred
@@ -239,7 +239,7 @@ antq_median = { # P10;CAH-XI; Median regional identity
 antq_chorasmian = { # P8.8;P10;CAH-XI; Khwarazm oasis regional culture
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_chorasmian
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -250,7 +250,7 @@ antq_chorasmian = { # P8.8;P10;CAH-XI; Khwarazm oasis regional culture
 antq_carmanian = { # P8.2;P10;CAH-XI; Carmania regional Iranian proxy
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_carmanian
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 		antq_hyrcanian = kindred
 		antq_median = kindred
@@ -264,7 +264,7 @@ antq_carmanian = { # P8.2;P10;CAH-XI; Carmania regional Iranian proxy
 antq_hyrcanian = { # P8.2;P10;CAH-XI; Hyrcanian Caspian regional proxy
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_hyrcanian
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 		antq_carmanian = kindred
 		antq_median = kindred
@@ -278,7 +278,7 @@ antq_hyrcanian = { # P8.2;P10;CAH-XI; Hyrcanian Caspian regional proxy
 antq_sogdian = { # P10;CAH-XI; Transoxianan urban culture
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_sogdian
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 		antq_bactrian = positive
 	}
@@ -290,7 +290,7 @@ antq_sogdian = { # P10;CAH-XI; Transoxianan urban culture
 antq_bactrian = { # P10;CAH-XI; Bactrian-Yuezhi frontier culture
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_bactrian
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 		antq_saka = positive
 		antq_sogdian = positive
@@ -303,7 +303,7 @@ antq_bactrian = { # P10;CAH-XI; Bactrian-Yuezhi frontier culture
 antq_saka = { # P10;CAH-XI; Eastern Iranian steppe communities
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_saka
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 		antq_bactrian = positive
 		antq_gandhari = positive
@@ -316,7 +316,7 @@ antq_saka = { # P10;CAH-XI; Eastern Iranian steppe communities
 antq_khotan_oasis = { # IRAN-KHO;IRAN-CT; AD 1 Khotan oasis regional proxy; technical Iranian naming adapter does not determine first-century language
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_khotan_oasis
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -327,7 +327,7 @@ antq_khotan_oasis = { # IRAN-KHO;IRAN-CT; AD 1 Khotan oasis regional proxy; tech
 antq_kucha_oasis = { # P8.3;P10;IRAN-KUC; AD 1 Kucha oasis regional proxy; technical Iranian naming adapter does not determine first-century language
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_kucha_oasis
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -338,7 +338,7 @@ antq_kucha_oasis = { # P8.3;P10;IRAN-KUC; AD 1 Kucha oasis regional proxy; techn
 antq_loulan_oasis = { # P8.3;P10;CAM-LOU; AD 1 Loulan city-oasis proxy; technical Iranian naming adapter does not determine first-century language
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_loulan_oasis
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -349,7 +349,7 @@ antq_loulan_oasis = { # P8.3;P10;CAM-LOU; AD 1 Loulan city-oasis proxy; technica
 antq_yarkand_oasis = { # P8.3;P10;IRAN-YAR; AD 1 Yarkand oasis proxy; technical Iranian naming adapter does not determine first-century language
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_yarkand_oasis
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -360,7 +360,7 @@ antq_yarkand_oasis = { # P8.3;P10;IRAN-YAR; AD 1 Yarkand oasis proxy; technical 
 antq_aksu_oasis = { # P8.3;P10;IRAN-AKS; AD 1 Aksu oasis regional proxy; technical Iranian naming adapter does not determine first-century language
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_aksu_oasis
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -371,7 +371,7 @@ antq_aksu_oasis = { # P8.3;P10;IRAN-AKS; AD 1 Aksu oasis regional proxy; technic
 antq_kashgar_oasis = { # P8.3;P10;IRAN-KAS; AD 1 Kashgar oasis proxy; technical Iranian naming adapter does not determine first-century language
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_kashgar_oasis
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -382,7 +382,7 @@ antq_kashgar_oasis = { # P8.3;P10;IRAN-KAS; AD 1 Kashgar oasis proxy; technical 
 antq_hami_oasis = { # P8.3;P10;IRAN-CT; AD 1 Hami oasis regional proxy; technical Iranian naming adapter does not determine first-century language
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_hami_oasis
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -393,7 +393,7 @@ antq_hami_oasis = { # P8.3;P10;IRAN-CT; AD 1 Hami oasis regional proxy; technica
 antq_turpan_oasis = { # P8.3;P10;IRAN-CT; AD 1 Turpan oasis regional proxy; technical Iranian naming adapter does not determine first-century language
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_turpan_oasis
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -404,7 +404,7 @@ antq_turpan_oasis = { # P8.3;P10;IRAN-CT; AD 1 Turpan oasis regional proxy; tech
 antq_sarmatian = { # P10;CAH-XI; Pontic Iranian steppe communities
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_sarmatian
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -415,7 +415,7 @@ antq_sarmatian = { # P10;CAH-XI; Pontic Iranian steppe communities
 antq_arian = { # IRAN-ARIA;P10; Hari-Rud and Herat regional adapter; the Persian name list is technical and does not establish a uniform AD 1 language
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_arian
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -426,7 +426,7 @@ antq_arian = { # IRAN-ARIA;P10; Hari-Rud and Herat regional adapter; the Persian
 antq_kangju = { # HAN-WR;IRAN-SOG-KANGJU;P10; Middle-Syr confederational adapter without a homogeneous Kangju ethnicity or language
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_kangju
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -437,7 +437,7 @@ antq_kangju = { # HAN-WR;IRAN-SOG-KANGJU;P10; Middle-Syr confederational adapter
 antq_dayuan_ferghana = { # HAN-WR;P10; Ferghana urban and irrigated-valley adapter; the naming list does not determine local language
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_dayuan_ferghana
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -448,7 +448,7 @@ antq_dayuan_ferghana = { # HAN-WR;P10; Ferghana urban and irrigated-valley adapt
 antq_yancai_aorsi = { # HAN-WR;UNESCO-CA-NOMADS;WIL-SAR;P10; Aral-Caspian textual and material proxy; Yancai-Aorsi equivalence and language remain contested
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_yancai_aorsi
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -459,7 +459,7 @@ antq_yancai_aorsi = { # HAN-WR;UNESCO-CA-NOMADS;WIL-SAR;P10; Aral-Caspian textua
 antq_saryarka_late_iron = { # UNESCO-CA-NOMADS;WIL-SAR;P10; Central-Saryarka material horizon rather than an ethnic or linguistic map
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_saryarka_late_iron
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -470,7 +470,7 @@ antq_saryarka_late_iron = { # UNESCO-CA-NOMADS;WIL-SAR;P10; Central-Saryarka mat
 antq_qiemo_oasis = { # HAN-WR;P10; Qiemo-Cherchen local oasis proxy with a purely technical Iranian naming adapter
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_qiemo_oasis
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -481,7 +481,7 @@ antq_qiemo_oasis = { # HAN-WR;P10; Qiemo-Cherchen local oasis proxy with a purel
 antq_yanqi_oasis = { # HAN-WR;HHS-WR;P10; Yanqi-Karashahr local oasis proxy without backdating a later documented language
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_yanqi_oasis
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -492,7 +492,7 @@ antq_yanqi_oasis = { # HAN-WR;HHS-WR;P10; Yanqi-Karashahr local oasis proxy with
 antq_puli_highland = { # HAN-WR;P10; Pamir-Sarikol highland-court proxy; linguistic affiliation is not asserted
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_puli_highland
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -503,7 +503,7 @@ antq_puli_highland = { # HAN-WR;P10; Pamir-Sarikol highland-court proxy; linguis
 antq_further_jushi = { # HAN-WR;HHS-WR;P10; North-Tianshan Jushi proxy with a technical name-list fallback only
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_further_jushi
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -514,7 +514,7 @@ antq_further_jushi = { # HAN-WR;HHS-WR;P10; North-Tianshan Jushi proxy with a te
 antq_danhuan_oasis = { # HAN-WR;HHS-WR;P10; Very small north-Tianshan state proxy; its language and wider ethnicity are unresolved
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_danhuan_oasis
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -525,7 +525,7 @@ antq_danhuan_oasis = { # HAN-WR;HHS-WR;P10; Very small north-Tianshan state prox
 antq_scythian = { # P8.7;P10;CAH-XI; Crimean Scythian-remnant regional proxy
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_scythian
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -536,7 +536,7 @@ antq_scythian = { # P8.7;P10;CAH-XI; Crimean Scythian-remnant regional proxy
 antq_alan = { # P10;CAH-XI; Alan steppe communities
 	language = antq_iranian_dialect
 	color = antq_culture_color_antq_alan
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -547,7 +547,7 @@ antq_alan = { # P10;CAH-XI; Alan steppe communities
 antq_armenian = { # P10;CAH-XI; Armenian highland culture
 	language = antq_caucasian_dialect
 	color = antq_culture_color_antq_armenian
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 		antq_kartvelian = positive
 	}
@@ -559,7 +559,7 @@ antq_armenian = { # P10;CAH-XI; Armenian highland culture
 antq_kartvelian = { # P10;CAH-XI; Iberian-Colchian continuum
 	language = antq_caucasian_dialect
 	color = antq_culture_color_antq_kartvelian
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 		antq_armenian = positive
 	}
@@ -571,7 +571,7 @@ antq_kartvelian = { # P10;CAH-XI; Iberian-Colchian continuum
 antq_caucasian_albanian = { # P10;CAH-XI; Albanian Caucasus communities
 	language = antq_caucasian_dialect
 	color = antq_culture_color_antq_caucasian_albanian
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -582,7 +582,7 @@ antq_caucasian_albanian = { # P10;CAH-XI; Albanian Caucasus communities
 antq_aramaic = { # P10;CAH-XI; Near Eastern lingua franca communities
 	language = antq_semitic_dialect
 	color = antq_culture_color_antq_aramaic
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 		antq_parthian = positive
 	}
@@ -594,7 +594,7 @@ antq_aramaic = { # P10;CAH-XI; Near Eastern lingua franca communities
 antq_judean = { # P10;OCD; Judean and diaspora communities
 	language = antq_semitic_dialect
 	color = antq_culture_color_antq_judean
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -605,7 +605,7 @@ antq_judean = { # P10;OCD; Judean and diaspora communities
 antq_nabataean_arab = { # P10;CAH-XI; Nabataean urban communities
 	language = antq_semitic_dialect
 	color = antq_culture_color_antq_nabataean_arab
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -616,7 +616,7 @@ antq_nabataean_arab = { # P10;CAH-XI; Nabataean urban communities
 antq_arab = { # P10;CAH-XI; Arabian communities
 	language = antq_semitic_dialect
 	color = antq_culture_color_antq_arab
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -627,7 +627,7 @@ antq_arab = { # P10;CAH-XI; Arabian communities
 antq_samad = { # P8.6;P10;IRAQ-SAM;OUP-GUL; Late pre-Islamic central-Oman archaeological proxy; technical Arabic fallback is not a language claim
 	language = antq_semitic_dialect
 	color = antq_culture_color_antq_samad
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -638,7 +638,7 @@ antq_samad = { # P8.6;P10;IRAQ-SAM;OUP-GUL; Late pre-Islamic central-Oman archae
 antq_south_arabian = { # P10;CAH-XI; Sabaean-Himyarite communities
 	language = antq_semitic_dialect
 	color = antq_culture_color_antq_south_arabian
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -649,7 +649,7 @@ antq_south_arabian = { # P10;CAH-XI; Sabaean-Himyarite communities
 antq_egyptian = { # P10;CAH-XI; Egyptian Nile communities
 	language = antq_nile_dialect
 	color = antq_culture_color_antq_egyptian
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -660,7 +660,7 @@ antq_egyptian = { # P10;CAH-XI; Egyptian Nile communities
 antq_nubian = { # P10;CAH-XI; Kushite-Nubian communities
 	language = antq_nile_dialect
 	color = antq_culture_color_antq_nubian
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 		antq_meroitic = positive
 	}
@@ -672,7 +672,7 @@ antq_nubian = { # P10;CAH-XI; Kushite-Nubian communities
 antq_berber = { # P10;CAH-XI; Maghrebi Berber communities
 	language = antq_berber_dialect
 	color = antq_culture_color_antq_berber
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 		antq_gaetulian = positive
 	}
@@ -684,7 +684,7 @@ antq_berber = { # P10;CAH-XI; Maghrebi Berber communities
 antq_gaetulian = { # P8.5;P10;CAH-XI; Southwestern Maghrebi Gaetulian regional proxy
 	language = antq_berber_dialect
 	color = antq_culture_color_antq_gaetulian
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 		antq_berber = positive
 	}
@@ -696,7 +696,7 @@ antq_gaetulian = { # P8.5;P10;CAH-XI; Southwestern Maghrebi Gaetulian regional p
 antq_musulamian = { # P8.5;P10;TAC-ANN-TACF;SOR-AFRICA-FRONTIER; Eastern Numidian and Aures-frontier regional proxy; technical language fallback does not assert later Arabic speech
 	language = antq_berber_dialect
 	color = antq_culture_color_antq_musulamian
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -707,7 +707,7 @@ antq_musulamian = { # P8.5;P10;TAC-ANN-TACF;SOR-AFRICA-FRONTIER; Eastern Numidia
 antq_garamantian = { # P8.5;P10;CAH-XI; Garamantian Fezzan regional proxy
 	language = antq_berber_dialect
 	color = antq_culture_color_antq_garamantian
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -718,7 +718,7 @@ antq_garamantian = { # P8.5;P10;CAH-XI; Garamantian Fezzan regional proxy
 antq_bantu = { # P10;CAH-XI; Bantu expansion population frame
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_bantu
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -729,7 +729,7 @@ antq_bantu = { # P10;CAH-XI; Bantu expansion population frame
 antq_mande = { # P10;CAH-XI; West African Mande-area communities
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_mande
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -740,7 +740,7 @@ antq_mande = { # P10;CAH-XI; West African Mande-area communities
 antq_chadic = { # P8.5;P10;OUP-CHAD;CAM-DAI; Lake Chad Basin Chadic regional proxy; technical Mande fallback is not a language claim
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_chadic
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -751,7 +751,7 @@ antq_chadic = { # P8.5;P10;OUP-CHAD;CAM-DAI; Lake Chad Basin Chadic regional pro
 antq_nok = { # P8.5;P10;JAA-NOK;OUP-NOK; Central Nigerian late Nok archaeological horizon at the campaign boundary; technical Mande fallback is not a language claim
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_nok
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -762,7 +762,7 @@ antq_nok = { # P8.5;P10;JAA-NOK;OUP-NOK; Central Nigerian late Nok archaeologica
 antq_kebbi_river = { # JAH-HAUSALAND;JAR-WA-NETWORKS;GLOT-CHADIC;P8.5;P10; Geographic riverine-savanna profile before later Hausaization; Chadic family and geographic naming roots do not assert Hausa speech or recovered AD 1 names
 	language = antq_western_hausaland_dialect
 	color = antq_culture_color_antq_kebbi_river
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -773,7 +773,7 @@ antq_kebbi_river = { # JAH-HAUSALAND;JAR-WA-NETWORKS;GLOT-CHADIC;P8.5;P10; Geogr
 antq_zamfara_plateau = { # JAH-HAUSALAND;JAR-WA-NETWORKS;GLOT-CHADIC;P8.5;P10; Geographic plateau profile before later Hausaization; Chadic family and geographic naming roots do not assert Hausa speech or recovered AD 1 names
 	language = antq_western_hausaland_dialect
 	color = antq_culture_color_antq_zamfara_plateau
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -784,7 +784,7 @@ antq_zamfara_plateau = { # JAH-HAUSALAND;JAR-WA-NETWORKS;GLOT-CHADIC;P8.5;P10; G
 antq_katsina_plain = { # JAH-HAUSALAND;JAR-WA-NETWORKS;GLOT-CHADIC;P8.5;P10; Geographic plain profile without backdating the later Hausa state language or personal-name corpus
 	language = antq_western_hausaland_dialect
 	color = antq_culture_color_antq_katsina_plain
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -795,7 +795,7 @@ antq_katsina_plain = { # JAH-HAUSALAND;JAR-WA-NETWORKS;GLOT-CHADIC;P8.5;P10; Geo
 antq_gobir_tarka = { # JAH-HAUSALAND;JAR-WA-NETWORKS;GLOT-CHADIC;P8.5;P10; Geographic Tarka-plain profile without backdating the later Gobir state Hausa identity or personal names
 	language = antq_western_hausaland_dialect
 	color = antq_culture_color_antq_gobir_tarka
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -806,7 +806,7 @@ antq_gobir_tarka = { # JAH-HAUSALAND;JAR-WA-NETWORKS;GLOT-CHADIC;P8.5;P10; Geogr
 antq_nsukka_lejja = { # HER-LEJJA;GLOT-IGBOID;P8.5;P10; Southeastern Nigerian early-ironworking horizon; the broad engine family and place-name roots do not establish one ethnicity polity or recovered AD 1 name corpus
 	language = antq_nsukka_lejja_dialect
 	color = antq_culture_color_antq_nsukka_lejja
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -817,7 +817,7 @@ antq_nsukka_lejja = { # HER-LEJJA;GLOT-IGBOID;P8.5;P10; Southeastern Nigerian ea
 antq_lower_oueme = { # OUP-BENIN;GLOT-GBE;MET-IRON;P8.5;P10; Geographic forest-community proxy with a broad southern-Volta engine family; it does not backdate Ketu Gbe identity or personal names
 	language = antq_lower_oueme_dialect
 	color = antq_culture_color_antq_lower_oueme
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -828,7 +828,7 @@ antq_lower_oueme = { # OUP-BENIN;GLOT-GBE;MET-IRON;P8.5;P10; Geographic forest-c
 antq_northern_horn_coastal = { # AJA-SOMALILAND;PME-BARBARIA;P8.5;P10; Technical coastal interaction profile for heterogeneous Barbaroi and port communities; it is not an asserted common ethnonym or language
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_northern_horn_coastal
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -839,7 +839,7 @@ antq_northern_horn_coastal = { # AJA-SOMALILAND;PME-BARBARIA;P8.5;P10; Technical
 antq_horn_pastoral = { # AJA-SOMALILAND;P8.5;P10; Technical interior mobile-pastoral profile; it does not backdate modern ethnic or clan boundaries
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_horn_pastoral
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -850,7 +850,7 @@ antq_horn_pastoral = { # AJA-SOMALILAND;P8.5;P10; Technical interior mobile-past
 antq_northern_azanian = { # PME-BARBARIA;P8.5;P10; Technical northern-Azanian coastal and river-course profile south of Opone
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_northern_azanian
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -861,7 +861,7 @@ antq_northern_azanian = { # PME-BARBARIA;P8.5;P10; Technical northern-Azanian co
 antq_wadai_plateau = { # MEGACHAD-WADAI;P8.5;P10; Eastern Chadian plateau gameplay proxy; technical naming fallback is not a language claim
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_wadai_plateau
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -872,7 +872,7 @@ antq_wadai_plateau = { # MEGACHAD-WADAI;P8.5;P10; Eastern Chadian plateau gamepl
 antq_post_nok = { # OUP-NOK;P8.5;P10; Successor-community proxy after the diagnostic Nok horizon ended
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_post_nok
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -883,7 +883,7 @@ antq_post_nok = { # OUP-NOK;P8.5;P10; Successor-community proxy after the diagno
 antq_ngovo = { # SCI-CONGO-RAINFOREST;NGOVO-GROUP;JAH-BANTU-MOBILITY;P8.5;P10; Lower Congo material horizon with a broad Bantu-family engine adapter; pottery and geographic roots do not define one ethnicity state or recovered name corpus
 	language = antq_ngovo_horizon_dialect
 	color = antq_culture_color_antq_ngovo
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -894,7 +894,7 @@ antq_ngovo = { # SCI-CONGO-RAINFOREST;NGOVO-GROUP;JAH-BANTU-MOBILITY;P8.5;P10; L
 antq_urewe = { # JAH-BANTU-MOBILITY;AZA-UREWE;P8.5;P10; Great Lakes material horizon with a broad Bantu-family engine adapter; language political identity and AD 1 names remain unresolved
 	language = antq_urewe_horizon_dialect
 	color = antq_culture_color_antq_urewe
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -905,7 +905,7 @@ antq_urewe = { # JAH-BANTU-MOBILITY;AZA-UREWE;P8.5;P10; Great Lakes material hor
 antq_kwale = { # QI-EAFRICA;UC-MOMBASA;JAH-BANTU-MOBILITY;P8.5;P10; Coastal early-ironworking horizon with a broad Bantu-family engine adapter; the roots do not backdate Swahili identity or recovered names
 	language = antq_kwale_horizon_dialect
 	color = antq_culture_color_antq_kwale
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -916,7 +916,7 @@ antq_kwale = { # QI-EAFRICA;UC-MOMBASA;JAH-BANTU-MOBILITY;P8.5;P10; Coastal earl
 antq_ruvuma_lurio = { # QI-EAFRICA;JAH-BANTU-MOBILITY;P8.5;P10; Southern coastal migration-frontier proxy with a broad Bantu-family engine adapter and no later ethnic labels or recovered names
 	language = antq_ruvuma_lurio_dialect
 	color = antq_culture_color_antq_ruvuma_lurio
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -927,7 +927,7 @@ antq_ruvuma_lurio = { # QI-EAFRICA;JAH-BANTU-MOBILITY;P8.5;P10; Southern coastal
 antq_limpopo_hunter_herder = { # OUP-SOUTH-AFRICA;CAM-SA-2024;JAH-BANTU-MOBILITY;P8.5;P10; Southern hunter-herder proxy before securely dated farmer settlement; the Khoe fallback and geographic roots are an engine-local adapter not a uniform language identity or boundary
 	language = antq_limpopo_hunter_herder_dialect
 	color = antq_culture_color_antq_limpopo_hunter_herder
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -938,7 +938,7 @@ antq_limpopo_hunter_herder = { # OUP-SOUTH-AFRICA;CAM-SA-2024;JAH-BANTU-MOBILITY
 antq_zambezi_forager = { # OUP-SOUTH-AFRICA;CAM-SA-2024;JAH-BANTU-MOBILITY;P8.5;P10; Save-Zambezi hunter-herder proxy before securely dated farmer settlement; the Tuu fallback and geographic roots are an engine-local adapter not a uniform language identity or boundary
 	language = antq_zambezi_forager_dialect
 	color = antq_culture_color_antq_zambezi_forager
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -949,7 +949,7 @@ antq_zambezi_forager = { # OUP-SOUTH-AFRICA;CAM-SA-2024;JAH-BANTU-MOBILITY;P8.5;
 antq_indo_aryan = { # P10;CAH-XI; Northern Indian regional Prakrits
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_indo_aryan
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -960,7 +960,7 @@ antq_indo_aryan = { # P10;CAH-XI; Northern Indian regional Prakrits
 antq_tamil = { # P10;CAH-XI; Tamilakam culture
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_tamil
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -971,7 +971,7 @@ antq_tamil = { # P10;CAH-XI; Tamilakam culture
 antq_gandhari = { # P8.4;P10;CAH-XI; Northwestern South Asian regional proxy centered on the Gandharan cultural horizon
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_gandhari
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 		antq_saka = positive
 	}
@@ -983,7 +983,7 @@ antq_gandhari = { # P8.4;P10;CAH-XI; Northwestern South Asian regional proxy cen
 antq_kalingan = { # P8.4;P10;CAH-XI; Kalinga regional proxy without projecting a later linguistic boundary
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_kalingan
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -994,7 +994,7 @@ antq_kalingan = { # P8.4;P10;CAH-XI; Kalinga regional proxy without projecting a
 antq_deccan_prakrit = { # P8.4;P10;CAH-XI; Satavahana Deccan regional Prakrit proxy
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_deccan_prakrit
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 		antq_proto_telugu_kannada = positive
 	}
@@ -1006,7 +1006,7 @@ antq_deccan_prakrit = { # P8.4;P10;CAH-XI; Satavahana Deccan regional Prakrit pr
 antq_proto_telugu_kannada = { # P8.4;P10;CAH-XI; Eastern and southern Deccan Dravidian regional proxy before later standard languages
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_proto_telugu_kannada
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 		antq_deccan_prakrit = positive
 	}
@@ -1018,7 +1018,7 @@ antq_proto_telugu_kannada = { # P8.4;P10;CAH-XI; Eastern and southern Deccan Dra
 antq_sinhala = { # P8.4;P10;CAH-XI; Anuradhapura Lankan regional proxy
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_sinhala
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1029,7 +1029,7 @@ antq_sinhala = { # P8.4;P10;CAH-XI; Anuradhapura Lankan regional proxy
 antq_han = { # P10;BHR; Han Chinese population base
 	language = antq_sinitic_dialect
 	color = antq_culture_color_antq_han
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1040,7 +1040,7 @@ antq_han = { # P10;BHR; Han Chinese population base
 antq_tibeto_burman = { # P10;CAH-XI; Highland and frontier communities
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_tibeto_burman
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1051,7 +1051,7 @@ antq_tibeto_burman = { # P10;CAH-XI; Highland and frontier communities
 antq_mon = { # P10;CAH-XI; Mainland Southeast Asian communities
 	language = antq_southeast_asian_dialect
 	color = antq_culture_color_antq_mon
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1062,7 +1062,7 @@ antq_mon = { # P10;CAH-XI; Mainland Southeast Asian communities
 antq_khmer = { # P10;CAH-XI; Khmer regional communities
 	language = antq_southeast_asian_dialect
 	color = antq_culture_color_antq_khmer
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1073,7 +1073,7 @@ antq_khmer = { # P10;CAH-XI; Khmer regional communities
 antq_pyu = { # P8.9;P10;CAH-XI; Pyu city-network regional proxy
 	language = antq_southeast_asian_dialect
 	color = antq_culture_color_antq_pyu
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1084,7 +1084,7 @@ antq_pyu = { # P8.9;P10;CAH-XI; Pyu city-network regional proxy
 antq_vietic = { # P8.3;P10;CAH-XI; Red River regional proxy before later Vietnamese standardization
 	language = antq_southeast_asian_dialect
 	color = antq_culture_color_antq_vietic
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1095,7 +1095,7 @@ antq_vietic = { # P8.3;P10;CAH-XI; Red River regional proxy before later Vietnam
 antq_sa_huynh = { # P8.9;P10;CAM-SAH;VASS-SAH; Sa Huynh archaeological central-Vietnam proxy; technical Malay language fallback is not a language claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_sa_huynh
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1106,7 +1106,7 @@ antq_sa_huynh = { # P8.9;P10;CAM-SAH;VASS-SAH; Sa Huynh archaeological central-V
 antq_austronesian = { # P10;CAH-XI; Island Southeast Asian communities
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_austronesian
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1117,7 +1117,7 @@ antq_austronesian = { # P10;CAH-XI; Island Southeast Asian communities
 antq_malay = { # P8.9;P10;CAH-XI; Malay Peninsula and Sumatra regional proxy before later state identities
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_malay
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1128,7 +1128,7 @@ antq_malay = { # P8.9;P10;CAH-XI; Malay Peninsula and Sumatra regional proxy bef
 antq_javanese = { # P8.9;P10;CAH-XI; Java and Lesser Sunda regional proxy before later court traditions
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_javanese
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1139,7 +1139,7 @@ antq_javanese = { # P8.9;P10;CAH-XI; Java and Lesser Sunda regional proxy before
 antq_philippine = { # P8.9;P10;CAH-XI; Philippine societies regional proxy rather than a single identity
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_philippine
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1150,7 +1150,7 @@ antq_philippine = { # P8.9;P10;CAH-XI; Philippine societies regional proxy rathe
 antq_bornean = { # P8.9;P10;CAH-XI; Bornean societies regional proxy rather than a single identity
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_bornean
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1161,7 +1161,7 @@ antq_bornean = { # P8.9;P10;CAH-XI; Bornean societies regional proxy rather than
 antq_korean = { # P10;CAH-XI; Korean peninsula communities
 	language = antq_korean_dialect
 	color = antq_culture_color_antq_korean
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1172,7 +1172,7 @@ antq_korean = { # P10;CAH-XI; Korean peninsula communities
 antq_buyeo_goguryeoic = { # P8.3;P10;CAH-XI; Buyeo and Goguryeo regional proxy before later Korean consolidation
 	language = antq_korean_dialect
 	color = antq_culture_color_antq_buyeo_goguryeoic
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1183,7 +1183,7 @@ antq_buyeo_goguryeoic = { # P8.3;P10;CAH-XI; Buyeo and Goguryeo regional proxy b
 antq_samhan = { # P8.3;P10;CAH-XI; Samhan confederacy regional proxy before later peninsular states
 	language = antq_korean_dialect
 	color = antq_culture_color_antq_samhan
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1194,7 +1194,7 @@ antq_samhan = { # P8.3;P10;CAH-XI; Samhan confederacy regional proxy before late
 antq_wa = { # P10;CAH-XI; Yayoi Japanese communities
 	language = antq_japonic_dialect
 	color = antq_culture_color_antq_wa
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1205,7 +1205,7 @@ antq_wa = { # P10;CAH-XI; Yayoi Japanese communities
 antq_xiongnu = { # P10;CAH-XI; Xiongnu confederation communities
 	language = antq_steppe_dialect
 	color = antq_culture_color_antq_xiongnu
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 		antq_zhongyuan_han = negative
 	}
@@ -1217,7 +1217,7 @@ antq_xiongnu = { # P10;CAH-XI; Xiongnu confederation communities
 antq_wusun = { # P8.8;P10;CAH-XI; Zhetysu Wusun regional proxy without resolving ethnolinguistic affiliation
 	language = antq_steppe_dialect
 	color = antq_culture_color_antq_wusun
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1228,7 +1228,7 @@ antq_wusun = { # P8.8;P10;CAH-XI; Zhetysu Wusun regional proxy without resolving
 antq_wuhuan = { # P8.8;P10;CAH-XI; Liaodong Wuhuan regional proxy without resolving ethnolinguistic affiliation
 	language = antq_steppe_dialect
 	color = antq_culture_color_antq_wuhuan
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1239,7 +1239,7 @@ antq_wuhuan = { # P8.8;P10;CAH-XI; Liaodong Wuhuan regional proxy without resolv
 antq_xianbei = { # P8.8;P10;CAH-XI; Eastern-steppe Xianbei regional proxy before later confederation formations
 	language = antq_steppe_dialect
 	color = antq_culture_color_antq_xianbei
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1250,7 +1250,7 @@ antq_xianbei = { # P8.8;P10;CAH-XI; Eastern-steppe Xianbei regional proxy before
 antq_dingling = { # P8.8;P10;CAH-XI; Upper-Yenisei Dingling regional proxy without resolving later Tiele identities
 	language = antq_steppe_dialect
 	color = antq_culture_color_antq_dingling
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1261,7 +1261,7 @@ antq_dingling = { # P8.8;P10;CAH-XI; Upper-Yenisei Dingling regional proxy witho
 antq_tungusic = { # P10;CAH-XI; Yilou and Manchurian communities
 	language = antq_steppe_dialect
 	color = antq_culture_color_antq_tungusic
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1371,7 +1371,7 @@ antq_illyrian = { # P10;CAH-XI; Illyrian communities
 antq_iberian = { # P10;CAH-XI; Non-Indo-European Iberian communities
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_iberian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1415,7 +1415,7 @@ antq_bracaran = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Northwestern Iberian ethnog
 antq_cynetan = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Southern Portuguese ethnographic frame without projecting a later Algarve identity
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_cynetan
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1437,7 +1437,7 @@ antq_celtician = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Southwestern Iberian Celti
 antq_turdulian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Western Baetican Turduli frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_turdulian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1459,7 +1459,7 @@ antq_vettonian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Western Meseta Vettones fr
 antq_bastetan = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Southeastern Iberian Bastetani frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_bastetan
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1470,7 +1470,7 @@ antq_bastetan = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Southeastern Iberian Bastet
 antq_bastulian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Southern coastal Bastuli frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_bastulian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1481,7 +1481,7 @@ antq_bastulian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Southern coastal Bastuli f
 antq_oretan = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Upper Baetis Oretani frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_oretan
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1492,7 +1492,7 @@ antq_oretan = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Upper Baetis Oretani frame
 antq_edetan = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Ebro-south eastern-coast Edetani frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_edetan
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1503,7 +1503,7 @@ antq_edetan = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Ebro-south eastern-coast Edet
 antq_contestanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Southeastern Mediterranean Contestani frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_contestanian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1514,7 +1514,7 @@ antq_contestanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Southeastern Mediterran
 antq_ilercavonian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Lower-Ebro Ilercavones frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_ilercavonian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1525,7 +1525,7 @@ antq_ilercavonian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Lower-Ebro Ilercavones 
 antq_ilergetian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Middle-Ebro Ilergetes frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_ilergetian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1536,7 +1536,7 @@ antq_ilergetian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Middle-Ebro Ilergetes fra
 antq_lacetanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Central Catalan Lacetani frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_lacetanian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1547,7 +1547,7 @@ antq_lacetanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Central Catalan Lacetani 
 antq_ausetanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Central Catalan Ausetani frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_ausetanian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1558,7 +1558,7 @@ antq_ausetanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Central Catalan Ausetani 
 antq_indigetan = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Northeastern coastal Indigetes frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_indigetan
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1569,7 +1569,7 @@ antq_indigetan = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Northeastern coastal Indig
 antq_ceretanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Eastern Pyrenean Ceretani frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_ceretanian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1580,7 +1580,7 @@ antq_ceretanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Eastern Pyrenean Ceretani
 antq_vasconian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Upper-Ebro Vascones frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_vasconian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1591,7 +1591,7 @@ antq_vasconian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Upper-Ebro Vascones frame
 antq_suessetanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Middle-Ebro Suessetani frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_suessetanian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1602,7 +1602,7 @@ antq_suessetanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Middle-Ebro Suessetani 
 antq_sedetanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Middle-Ebro Sedetani frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_sedetanian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1613,7 +1613,7 @@ antq_sedetanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Middle-Ebro Sedetani fram
 antq_iacetanian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Pyrenean-footland Iacetani frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_iacetanian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1745,7 +1745,7 @@ antq_luggonian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Northern Asturian Luggones
 antq_caristian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Western Pyrenean Caristii frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_caristian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1756,7 +1756,7 @@ antq_caristian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Western Pyrenean Caristii 
 antq_vardulian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Western Pyrenean Varduli frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_vardulian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1800,7 +1800,7 @@ antq_lusonian = { # P10;STR-IBR;PLN-IBR;OCD-HIS;PLE; Eastern Celtiberian Lusones
 antq_auscian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Aquitanian Ausci regional frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_auscian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1811,7 +1811,7 @@ antq_auscian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Aquitanian Ausci regional fr
 antq_tarbellian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Aquitanian Tarbelli regional frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_tarbellian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1822,7 +1822,7 @@ antq_tarbellian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Aquitanian Tarbelli regio
 antq_bigerrionian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Aquitanian Bigerriones regional frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_bigerrionian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1833,7 +1833,7 @@ antq_bigerrionian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Aquitanian Bigerriones 
 antq_convenian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Pyrenean Convenae regional frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_convenian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -1844,7 +1844,7 @@ antq_convenian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Pyrenean Convenae regional
 antq_elusatian = { # P10;STR-GAL;PLN-GAL;OCD-GAL;PLE; Aquitanian Elusates regional frame
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_elusatian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2744,7 +2744,7 @@ antq_trocmian = { # P10;STR-ANA;MIT-ANA;OCD-GALATIA;PLE:619267; Galatian Trocmi 
 antq_lycaonian = { # P10;STR-ANA;MIT-ANA;PLE; Central Anatolian Lycaonians regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_lycaonian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2755,7 +2755,7 @@ antq_lycaonian = { # P10;STR-ANA;MIT-ANA;PLE; Central Anatolian Lycaonians regio
 antq_pisidian = { # P10;STR-ANA;MIT-ANA;PLE; Southwestern Anatolian Pisidians regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_pisidian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2766,7 +2766,7 @@ antq_pisidian = { # P10;STR-ANA;MIT-ANA;PLE; Southwestern Anatolian Pisidians re
 antq_homonadean = { # P10;STR-ANA;MIT-ANA;PLE; Taurus Homonadeis regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_homonadean
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2777,7 +2777,7 @@ antq_homonadean = { # P10;STR-ANA;MIT-ANA;PLE; Taurus Homonadeis regional frame
 antq_cataonian = { # P10;STR-ANA;MIT-ANA;PLE; Cappadocian Cataonians regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_cataonian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2788,7 +2788,7 @@ antq_cataonian = { # P10;STR-ANA;MIT-ANA;PLE; Cappadocian Cataonians regional fr
 antq_bithynian = { # P10;STR-ANA;MIT-ANA;PLE; Northwestern Anatolian Bithynians regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_bithynian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2799,7 +2799,7 @@ antq_bithynian = { # P10;STR-ANA;MIT-ANA;PLE; Northwestern Anatolian Bithynians 
 antq_mariandynian = { # P10;STR-ANA;MIT-ANA;PLE; Black-Sea Mariandyni regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_mariandynian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2810,7 +2810,7 @@ antq_mariandynian = { # P10;STR-ANA;MIT-ANA;PLE; Black-Sea Mariandyni regional f
 antq_paphlagonian = { # P10;STR-ANA;MIT-ANA;PLE; North Anatolian Paphlagonians regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_paphlagonian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2821,7 +2821,7 @@ antq_paphlagonian = { # P10;STR-ANA;MIT-ANA;PLE; North Anatolian Paphlagonians r
 antq_henetian = { # P10;STR-ANA;MIT-ANA;PLE; North Anatolian Heneti regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_henetian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2832,7 +2832,7 @@ antq_henetian = { # P10;STR-ANA;MIT-ANA;PLE; North Anatolian Heneti regional fra
 antq_chalybian = { # P10;STR-ANA;MIT-ANA;PLE; Black-Sea Chalybes regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_chalybian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2843,7 +2843,7 @@ antq_chalybian = { # P10;STR-ANA;MIT-ANA;PLE; Black-Sea Chalybes regional frame
 antq_tibarenian = { # P10;STR-ANA;MIT-ANA;PLE; Black-Sea Tibareni regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_tibarenian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2854,7 +2854,7 @@ antq_tibarenian = { # P10;STR-ANA;MIT-ANA;PLE; Black-Sea Tibareni regional frame
 antq_mossynoecian = { # P10;STR-ANA;MIT-ANA;PLE; Black-Sea Mossynoeci regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_mossynoecian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2865,7 +2865,7 @@ antq_mossynoecian = { # P10;STR-ANA;MIT-ANA;PLE; Black-Sea Mossynoeci regional f
 antq_macronian = { # P10;STR-ANA;MIT-ANA;PLE; Black-Sea Macrones regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_macronian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2876,7 +2876,7 @@ antq_macronian = { # P10;STR-ANA;MIT-ANA;PLE; Black-Sea Macrones regional frame
 antq_mysian = { # P10;STR-ANA;MIT-ANA;PLE; Northwestern Anatolian Mysians regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_mysian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2887,7 +2887,7 @@ antq_mysian = { # P10;STR-ANA;MIT-ANA;PLE; Northwestern Anatolian Mysians region
 antq_aeolian = { # P10;STR-ANA;MIT-ANA;PLE; Aeolian coastal Greek regional frame
 	language = antq_hellenic_dialect
 	color = antq_culture_color_antq_aeolian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2898,7 +2898,7 @@ antq_aeolian = { # P10;STR-ANA;MIT-ANA;PLE; Aeolian coastal Greek regional frame
 antq_ionian = { # P10;STR-ANA;MIT-ANA;PLE; Ionian coastal Greek regional frame
 	language = antq_hellenic_dialect
 	color = antq_culture_color_antq_ionian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2909,7 +2909,7 @@ antq_ionian = { # P10;STR-ANA;MIT-ANA;PLE; Ionian coastal Greek regional frame
 antq_lydian = { # P10;STR-ANA;MIT-ANA;PLE; Western Anatolian Lydians regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_lydian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2920,7 +2920,7 @@ antq_lydian = { # P10;STR-ANA;MIT-ANA;PLE; Western Anatolian Lydians regional fr
 antq_carian = { # P10;STR-ANA;MIT-ANA;PLE; Southwestern Anatolian Carians regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_carian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2931,7 +2931,7 @@ antq_carian = { # P10;STR-ANA;MIT-ANA;PLE; Southwestern Anatolian Carians region
 antq_lycian = { # P10;STR-ANA;MIT-ANA;PLE; Southwestern Anatolian Lycians regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_lycian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2942,7 +2942,7 @@ antq_lycian = { # P10;STR-ANA;MIT-ANA;PLE; Southwestern Anatolian Lycians region
 antq_cabalian = { # P10;STR-ANA;MIT-ANA;PLE; Inner-southwestern Anatolian Cabalians regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_cabalian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2953,7 +2953,7 @@ antq_cabalian = { # P10;STR-ANA;MIT-ANA;PLE; Inner-southwestern Anatolian Cabali
 antq_pamphylian = { # P10;STR-ANA;MIT-ANA;PLE; Southern Anatolian Pamphylians regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_pamphylian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2964,7 +2964,7 @@ antq_pamphylian = { # P10;STR-ANA;MIT-ANA;PLE; Southern Anatolian Pamphylians re
 antq_cilician_pedian = { # P10;STR-ANA;MIT-ANA;PLE; Cilicia Pedias regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_cilician_pedian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2975,7 +2975,7 @@ antq_cilician_pedian = { # P10;STR-ANA;MIT-ANA;PLE; Cilicia Pedias regional fram
 antq_cilician_trachean = { # P10;STR-ANA;MIT-ANA;PLE; Cilicia Tracheia regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_cilician_trachean
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2986,7 +2986,7 @@ antq_cilician_trachean = { # P10;STR-ANA;MIT-ANA;PLE; Cilicia Tracheia regional 
 antq_comanaean = { # P10;STR-ANA;MIT-ANA;PLE; Cappadocian Comana regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_comanaean
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -2997,7 +2997,7 @@ antq_comanaean = { # P10;STR-ANA;MIT-ANA;PLE; Cappadocian Comana regional frame
 antq_leucosyrian = { # P10;STR-ANA;MIT-ANA;PLE; Cappadocian Leucosyrians regional frame
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_leucosyrian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3470,7 +3470,7 @@ antq_gallaecian = { # P10;CAH-XI;PLE; Northwestern Iberian communities
 antq_aquitanian = { # P10;CAH-XI;PLE; Western Pyrenean communities
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_aquitanian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3481,7 +3481,7 @@ antq_aquitanian = { # P10;CAH-XI;PLE; Western Pyrenean communities
 antq_lusitanian = { # P10;CAH-XI;PLE; Western Iberian communities
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_lusitanian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3492,7 +3492,7 @@ antq_lusitanian = { # P10;CAH-XI;PLE; Western Iberian communities
 antq_turdetanian = { # P10;CAH-XI;PLE; Southwestern Iberian communities
 	language = antq_iberian_dialect
 	color = antq_culture_color_antq_turdetanian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3503,7 +3503,7 @@ antq_turdetanian = { # P10;CAH-XI;PLE; Southwestern Iberian communities
 antq_ligurian = { # P10;CAH-XI;PLE; Ligurian communities represented with the nearest verified technical language layer
 	language = antq_italic_dialect
 	color = antq_culture_color_antq_ligurian
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3514,7 +3514,7 @@ antq_ligurian = { # P10;CAH-XI;PLE; Ligurian communities represented with the ne
 antq_nuragic = { # P10;CAH-XI;PLE; Sardinian Nuragic-residual communities
 	language = antq_italic_dialect
 	color = antq_culture_color_antq_nuragic
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3551,7 +3551,7 @@ antq_pannonian = { # P10;CAH-XI;PLE; Pannonian communities
 antq_phrygian = { # P10;CAH-XI;PLE; Central Anatolian residue after Hellenization
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_phrygian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3562,7 +3562,7 @@ antq_phrygian = { # P10;CAH-XI;PLE; Central Anatolian residue after Hellenizatio
 antq_cappadocian = { # P10;CAH-XI;PLE; Cappadocian regional communities
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_cappadocian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 		antq_greek_koine = positive
 	}
@@ -3574,7 +3574,7 @@ antq_cappadocian = { # P10;CAH-XI;PLE; Cappadocian regional communities
 antq_isaurian = { # P10;CAH-XI;PLE; Isaurian highland communities
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_isaurian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3585,7 +3585,7 @@ antq_isaurian = { # P10;CAH-XI;PLE; Isaurian highland communities
 antq_lycian_carian = { # P10;CAH-XI;PLE; Southwestern Anatolian residue communities
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_lycian_carian
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3596,7 +3596,7 @@ antq_lycian_carian = { # P10;CAH-XI;PLE; Southwestern Anatolian residue communit
 antq_phoenician_punic = { # P10;CAH-XI;PLE; Phoenician and Punic communities
 	language = antq_semitic_dialect
 	color = antq_culture_color_antq_phoenician_punic
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3607,7 +3607,7 @@ antq_phoenician_punic = { # P10;CAH-XI;PLE; Phoenician and Punic communities
 antq_samaritan = { # P10;OCD;PLE; Samaritan communities distinct from Judean profile
 	language = antq_semitic_dialect
 	color = antq_culture_color_antq_samaritan
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3618,7 +3618,7 @@ antq_samaritan = { # P10;OCD;PLE; Samaritan communities distinct from Judean pro
 antq_sabaean = { # P10;CAH-XI;PLE; Sabaean South Arabian communities
 	language = antq_semitic_dialect
 	color = antq_culture_color_antq_sabaean
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 		antq_himyarite = kindred
 	}
@@ -3630,7 +3630,7 @@ antq_sabaean = { # P10;CAH-XI;PLE; Sabaean South Arabian communities
 antq_himyarite = { # P10;CAH-XI;PLE; Himyarite South Arabian communities
 	language = antq_semitic_dialect
 	color = antq_culture_color_antq_himyarite
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 		antq_sabaean = kindred
 	}
@@ -3642,7 +3642,7 @@ antq_himyarite = { # P10;CAH-XI;PLE; Himyarite South Arabian communities
 antq_geez = { # P10;CAH-XI;PLE; Northern Ethiopian Ethio-Semitic communities
 	language = antq_semitic_dialect
 	color = antq_culture_color_antq_geez
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3653,7 +3653,7 @@ antq_geez = { # P10;CAH-XI;PLE; Northern Ethiopian Ethio-Semitic communities
 antq_meroitic = { # P10;CAH-XI;PLE; Meroitic heartland communities
 	language = antq_nile_dialect
 	color = antq_culture_color_antq_meroitic
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 		antq_nubian = positive
 	}
@@ -3665,7 +3665,7 @@ antq_meroitic = { # P10;CAH-XI;PLE; Meroitic heartland communities
 antq_blemmyan = { # P10;CAH-XI;PLE; Eastern Desert Blemmyan communities
 	language = antq_nile_dialect
 	color = antq_culture_color_antq_blemmyan
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3676,7 +3676,7 @@ antq_blemmyan = { # P10;CAH-XI;PLE; Eastern Desert Blemmyan communities
 antq_beja = { # P10;CAH-XI;PLE; Red Sea Beja communities
 	language = antq_nile_dialect
 	color = antq_culture_color_antq_beja
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3687,7 +3687,7 @@ antq_beja = { # P10;CAH-XI;PLE; Red Sea Beja communities
 antq_maya = { # P10;CAH-XI; Maya lowland communities
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_maya
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3698,7 +3698,7 @@ antq_maya = { # P10;CAH-XI; Maya lowland communities
 antq_zapotec = { # P10;CAH-XI; Zapotec communities
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_zapotec
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3709,7 +3709,7 @@ antq_zapotec = { # P10;CAH-XI; Zapotec communities
 antq_teotihuacano = { # P10;CAH-XI; Central Mexican urban communities
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_teotihuacano
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3720,7 +3720,7 @@ antq_teotihuacano = { # P10;CAH-XI; Central Mexican urban communities
 antq_epi_olmec = { # P8.10;P10;CAH-XI; Veracruz Epi-Olmec regional proxy
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_epi_olmec
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3731,7 +3731,7 @@ antq_epi_olmec = { # P8.10;P10;CAH-XI; Veracruz Epi-Olmec regional proxy
 antq_west_mexican = { # P8.10;P10;CAH-XI; West Mexican shaft-tomb and northern-frontier regional proxy
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_west_mexican
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3742,7 +3742,7 @@ antq_west_mexican = { # P8.10;P10;CAH-XI; West Mexican shaft-tomb and northern-f
 antq_andean_regional = { # P8.10;P10;P11; Generic non-uniform Andean population scaffold; technical Quechuan fallback is not a linguistic-uniformity claim
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_andean_regional
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3753,7 +3753,7 @@ antq_andean_regional = { # P8.10;P10;P11; Generic non-uniform Andean population 
 antq_moche = { # JSTOR-MOC;CAM-MOC; Post-AD 100 north-coast Moche cultural proxy; not a claim of a unified state
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_moche
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3764,7 +3764,7 @@ antq_moche = { # JSTOR-MOC;CAM-MOC; Post-AD 100 north-coast Moche cultural proxy
 antq_chibchan = { # P10;CAH-XI; Northern Andean communities
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_chibchan
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3775,7 +3775,7 @@ antq_chibchan = { # P10;CAH-XI; Northern Andean communities
 antq_arawak = { # P10;CAH-XI; Caribbean-Amazonian Arawak communities
 	language = antq_american_dialect
 	color = antq_culture_color_antq_arawak
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3786,7 +3786,7 @@ antq_arawak = { # P10;CAH-XI; Caribbean-Amazonian Arawak communities
 antq_tupi = { # P10;CAH-XI; Amazonian Tupi communities
 	language = antq_american_dialect
 	color = antq_culture_color_antq_tupi
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3797,7 +3797,7 @@ antq_tupi = { # P10;CAH-XI; Amazonian Tupi communities
 antq_carib = { # P10;CAH-XI; Caribbean Carib communities
 	language = antq_american_dialect
 	color = antq_culture_color_antq_carib
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3808,7 +3808,7 @@ antq_carib = { # P10;CAH-XI; Caribbean Carib communities
 antq_algonquian = { # P10;CAH-XI; North American Algonquian communities
 	language = antq_american_dialect
 	color = antq_culture_color_antq_algonquian
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3819,7 +3819,7 @@ antq_algonquian = { # P10;CAH-XI; North American Algonquian communities
 antq_siouan = { # P10;CAH-XI; North American Siouan communities
 	language = antq_american_dialect
 	color = antq_culture_color_antq_siouan
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3830,7 +3830,7 @@ antq_siouan = { # P10;CAH-XI; North American Siouan communities
 antq_plains_woodland = { # P8.10;P10;CAH-XI; Plains and eastern Woodland regional proxy including Hopewell interaction frames
 	language = antq_american_dialect
 	color = antq_culture_color_antq_plains_woodland
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3841,7 +3841,7 @@ antq_plains_woodland = { # P8.10;P10;CAH-XI; Plains and eastern Woodland regiona
 antq_inuit_dorset = { # P10;CAH-XI; Arctic Dorset communities
 	language = antq_american_dialect
 	color = antq_culture_color_antq_inuit_dorset
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3852,7 +3852,7 @@ antq_inuit_dorset = { # P10;CAH-XI; Arctic Dorset communities
 antq_polynesian = { # P10;CAH-XI; Western Polynesian communities
 	language = antq_oceanic_dialect
 	color = antq_culture_color_antq_polynesian
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3863,7 +3863,7 @@ antq_polynesian = { # P10;CAH-XI; Western Polynesian communities
 antq_australian = { # P10;CAH-XI; Australian communities
 	language = antq_oceanic_dialect
 	color = antq_culture_color_antq_australian
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3874,7 +3874,7 @@ antq_australian = { # P10;CAH-XI; Australian communities
 antq_samoan = { # P8.9;P10;CAM-LAP; Pre-AD 1 Samoan regional frame after Lapita settlement
 	language = antq_oceanic_dialect
 	color = antq_culture_color_antq_samoan
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3885,7 +3885,7 @@ antq_samoan = { # P8.9;P10;CAM-LAP; Pre-AD 1 Samoan regional frame after Lapita 
 antq_tongan = { # P8.9;P10;CAM-LAP; Pre-AD 1 Tongan regional frame after Lapita settlement
 	language = antq_oceanic_dialect
 	color = antq_culture_color_antq_tongan
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3896,7 +3896,7 @@ antq_tongan = { # P8.9;P10;CAM-LAP; Pre-AD 1 Tongan regional frame after Lapita 
 antq_micronesian = { # P8.9;P10;ANU-MIC; Micronesian regional archaeological proxy with distinct local histories
 	language = antq_oceanic_dialect
 	color = antq_culture_color_antq_micronesian
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3907,7 +3907,7 @@ antq_micronesian = { # P8.9;P10;ANU-MIC; Micronesian regional archaeological pro
 antq_new_guinean = { # P8.9;P10;CAM-NGU; New Guinea regional proxy rather than a homogeneous ethnolinguistic claim
 	language = antq_oceanic_dialect
 	color = antq_culture_color_antq_new_guinean
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -3918,7 +3918,7 @@ antq_new_guinean = { # P8.9;P10;CAM-NGU; New Guinea regional proxy rather than a
 antq_yan_han = { # P8.3;P10;BHR;CAM-HAN-REG; Northern Han regional proxy retaining the Yan cultural horizon
 	language = antq_sinitic_dialect
 	color = antq_culture_color_antq_yan_han
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 		antq_ba_han = kindred
 		antq_chu_han = kindred
@@ -3939,7 +3939,7 @@ antq_yan_han = { # P8.3;P10;BHR;CAM-HAN-REG; Northern Han regional proxy retaini
 antq_jin_han = { # P8.3;P10;BHR;CAM-HAN-REG; Shanxi and northern frontier Han regional proxy retaining the Jin cultural horizon
 	language = antq_sinitic_dialect
 	color = antq_culture_color_antq_jin_han
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 		antq_ba_han = kindred
 		antq_chu_han = kindred
@@ -3960,7 +3960,7 @@ antq_jin_han = { # P8.3;P10;BHR;CAM-HAN-REG; Shanxi and northern frontier Han re
 antq_zhongyuan_han = { # P8.3;P10;BHR;CAM-HAN-REG; Central Plains Han regional proxy
 	language = antq_sinitic_dialect
 	color = antq_culture_color_antq_zhongyuan_han
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 		antq_ba_han = kindred
 		antq_chu_han = kindred
@@ -3984,7 +3984,7 @@ antq_zhongyuan_han = { # P8.3;P10;BHR;CAM-HAN-REG; Central Plains Han regional p
 antq_qilu_han = { # P8.3;P10;BHR;CAM-HAN-REG; Shandong Han regional proxy retaining the Qi-Lu cultural horizon
 	language = antq_sinitic_dialect
 	color = antq_culture_color_antq_qilu_han
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 		antq_ba_han = kindred
 		antq_chu_han = kindred
@@ -4005,7 +4005,7 @@ antq_qilu_han = { # P8.3;P10;BHR;CAM-HAN-REG; Shandong Han regional proxy retain
 antq_wu_yue = { # P8.3;P10;BHR;CAM-HAN-REG;CAM-YUE; Lower Yangtze regional proxy rather than a single ethnic boundary
 	language = antq_sinitic_dialect
 	color = antq_culture_color_antq_wu_yue
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 		antq_ba_han = kindred
 		antq_chu_han = kindred
@@ -4026,7 +4026,7 @@ antq_wu_yue = { # P8.3;P10;BHR;CAM-HAN-REG;CAM-YUE; Lower Yangtze regional proxy
 antq_chu_han = { # P8.3;P10;BHR;CAM-HAN-REG; Middle Yangtze Han regional proxy retaining the Chu cultural horizon
 	language = antq_sinitic_dialect
 	color = antq_culture_color_antq_chu_han
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 		antq_ba_han = kindred
 		antq_hexi_han = kindred
@@ -4047,7 +4047,7 @@ antq_chu_han = { # P8.3;P10;BHR;CAM-HAN-REG; Middle Yangtze Han regional proxy r
 antq_poyang_han = { # P8.3;P10;BHR;CAM-HAN-REG; Jiangxi and Poyang-basin Han regional proxy
 	language = antq_sinitic_dialect
 	color = antq_culture_color_antq_poyang_han
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 		antq_ba_han = kindred
 		antq_chu_han = kindred
@@ -4068,7 +4068,7 @@ antq_poyang_han = { # P8.3;P10;BHR;CAM-HAN-REG; Jiangxi and Poyang-basin Han reg
 antq_min_yue = { # P8.3;P10;BHR;CAM-YUE; Fujian regional proxy retaining a fluid Yue frontier identity
 	language = antq_sinitic_dialect
 	color = antq_culture_color_antq_min_yue
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 		antq_zhongyuan_han = positive
 	}
@@ -4080,7 +4080,7 @@ antq_min_yue = { # P8.3;P10;BHR;CAM-YUE; Fujian regional proxy retaining a fluid
 antq_dian = { # P8.3;P10;BHR;CAM-DIAN; Yunnan Dian regional proxy after Han incorporation
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_dian
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4091,7 +4091,7 @@ antq_dian = { # P8.3;P10;BHR;CAM-DIAN; Yunnan Dian regional proxy after Han inco
 antq_yelang = { # P8.3;P10;BHR;JAS-YEL; Guizhou Yelang regional proxy with unresolved language and extent
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_yelang
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4102,7 +4102,7 @@ antq_yelang = { # P8.3;P10;BHR;JAS-YEL; Guizhou Yelang regional proxy with unres
 antq_lingnan_yue = { # P8.3;P10;BHR;CAM-YUE; Lingnan Yue regional proxy after Han annexation rather than a fixed ethnicity
 	language = antq_sinitic_dialect
 	color = antq_culture_color_antq_lingnan_yue
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 		antq_zhongyuan_han = positive
 	}
@@ -4114,7 +4114,7 @@ antq_lingnan_yue = { # P8.3;P10;BHR;CAM-YUE; Lingnan Yue regional proxy after Ha
 antq_ba_han = { # P8.3;P10;BHR;CAM-HAN-REG; Eastern Sichuan regional proxy retaining the Ba cultural horizon
 	language = antq_sinitic_dialect
 	color = antq_culture_color_antq_ba_han
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 		antq_chu_han = kindred
 		antq_hexi_han = kindred
@@ -4135,7 +4135,7 @@ antq_ba_han = { # P8.3;P10;BHR;CAM-HAN-REG; Eastern Sichuan regional proxy retai
 antq_shu_han = { # P8.3;P10;BHR;CAM-HAN-REG; Sichuan basin regional proxy retaining the Shu cultural horizon
 	language = antq_sinitic_dialect
 	color = antq_culture_color_antq_shu_han
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 		antq_ba_han = kindred
 		antq_chu_han = kindred
@@ -4156,7 +4156,7 @@ antq_shu_han = { # P8.3;P10;BHR;CAM-HAN-REG; Sichuan basin regional proxy retain
 antq_qin_han = { # P8.3;P10;BHR;CAM-HAN-REG; Shaanxi Han regional proxy retaining the Qin cultural horizon
 	language = antq_sinitic_dialect
 	color = antq_culture_color_antq_qin_han
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 		antq_ba_han = kindred
 		antq_chu_han = kindred
@@ -4177,7 +4177,7 @@ antq_qin_han = { # P8.3;P10;BHR;CAM-HAN-REG; Shaanxi Han regional proxy retainin
 antq_hexi_han = { # P8.3;P10;BHR;CAM-HAN-REG; Hexi and Gansu Han regional proxy
 	language = antq_sinitic_dialect
 	color = antq_culture_color_antq_hexi_han
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 		antq_ba_han = kindred
 		antq_chu_han = kindred
@@ -4198,7 +4198,7 @@ antq_hexi_han = { # P8.3;P10;BHR;CAM-HAN-REG; Hexi and Gansu Han regional proxy
 antq_pontic = { # P8.1;P10;CAH-XI;PLE; Pontic regional proxy across a mixed coastal and inland Roman province
 	language = antq_anatolian_dialect
 	color = antq_culture_color_antq_pontic
-	tags = { european_gfx }
+	tags = { east_mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4220,7 +4220,7 @@ antq_noric = { # P8.1;P10;CAH-XI;PLE; Noricum regional proxy without a claim of 
 antq_rhaetic = { # P8.1;P10;CAH-XI;PLE; Alpine Rhaetic regional proxy with a technical Latin language fallback
 	language = antq_italic_dialect
 	color = antq_culture_color_antq_rhaetic
-	tags = { european_gfx }
+	tags = { mediterranean_gfx european_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4264,7 +4264,7 @@ antq_dnieper_venedi = { # P8.7;P10;CAH-XI; Dnieper Venedi regional proxy rather 
 antq_magadhi_prakrit = { # P8.4;P10;CAH-XI;INFLIB-PRK; Magadhan regional Prakrit proxy without projecting later Bengali or Bhojpuri identities
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_magadhi_prakrit
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4275,7 +4275,7 @@ antq_magadhi_prakrit = { # P8.4;P10;CAH-XI;INFLIB-PRK; Magadhan regional Prakrit
 antq_shauraseni_prakrit = { # P8.4;P10;CAH-XI;RGU-PRK; Mathura and upper-Gangetic Prakrit proxy without projecting later Hindi identities
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_shauraseni_prakrit
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4286,7 +4286,7 @@ antq_shauraseni_prakrit = { # P8.4;P10;CAH-XI;RGU-PRK; Mathura and upper-Gangeti
 antq_audumbara_hill = { # BM-TRIBAL-COINS;P8.4;P10; Numismatic hill-country profile; the later Nepali language key is only an engine name-list fallback
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_audumbara_hill
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4297,7 +4297,7 @@ antq_audumbara_hill = { # BM-TRIBAL-COINS;P8.4;P10; Numismatic hill-country prof
 antq_yaudheya_prakrit = { # BM-TRIBAL-COINS;P8.4;P10; Yaudheya coin-polity profile without asserting one uniform vernacular; the language key is technical
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_yaudheya_prakrit
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4308,7 +4308,7 @@ antq_yaudheya_prakrit = { # BM-TRIBAL-COINS;P8.4;P10; Yaudheya coin-polity profi
 antq_arjunayana_prakrit = { # BM-TRIBAL-COINS;P8.4;P10; Arjunayana coin-polity profile without projecting later Rajasthani identities
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_arjunayana_prakrit
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4319,7 +4319,7 @@ antq_arjunayana_prakrit = { # BM-TRIBAL-COINS;P8.4;P10; Arjunayana coin-polity p
 antq_kuninda_hill = { # BM-TRIBAL-COINS;P8.4;P10; Kuninda Himalayan-foothill numismatic profile; the later Nepali language key is technical
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_kuninda_hill
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4330,7 +4330,7 @@ antq_kuninda_hill = { # BM-TRIBAL-COINS;P8.4;P10; Kuninda Himalayan-foothill num
 antq_panchala_prakrit = { # ASI-MITRA;IGNCA-PANCHALA;P8.4;P10; Panchala local-court profile without asserting a recovered AD 1 census language
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_panchala_prakrit
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4341,7 +4341,7 @@ antq_panchala_prakrit = { # ASI-MITRA;IGNCA-PANCHALA;P8.4;P10; Panchala local-co
 antq_kaushambi_prakrit = { # ASI-MITRA;P8.4;P10; Kaushambi local-court profile; the language key supplies names rather than a linguistic frontier
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_kaushambi_prakrit
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4352,7 +4352,7 @@ antq_kaushambi_prakrit = { # ASI-MITRA;P8.4;P10; Kaushambi local-court profile; 
 antq_kosala_prakrit = { # ASI-MITRA;P8.4;P10; Ayodhya-Saketa regional Prakrit proxy without projecting later Awadhi identity
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_kosala_prakrit
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4363,7 +4363,7 @@ antq_kosala_prakrit = { # ASI-MITRA;P8.4;P10; Ayodhya-Saketa regional Prakrit pr
 antq_kashi_prakrit = { # ASI-MITRA;P8.4;P10; Varanasi middle-Ganga regional profile; the later Bengali key is only an engine fallback
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_kashi_prakrit
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4374,7 +4374,7 @@ antq_kashi_prakrit = { # ASI-MITRA;P8.4;P10; Varanasi middle-Ganga regional prof
 antq_malla_prakrit = { # ASI-MITRA;P8.4;P10; Kushinagara-Pava regional proxy without claiming political or linguistic uniformity
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_malla_prakrit
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4385,7 +4385,7 @@ antq_malla_prakrit = { # ASI-MITRA;P8.4;P10; Kushinagara-Pava regional proxy wit
 antq_videha_prakrit = { # ASI-MITRA;P8.4;P10; Mithila-Videha regional proxy before later Maithili identity; the language key is technical
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_videha_prakrit
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4396,7 +4396,7 @@ antq_videha_prakrit = { # ASI-MITRA;P8.4;P10; Mithila-Videha regional proxy befo
 antq_anga_prakrit = { # ASI-MITRA;P8.4;P10; Anga-Champa regional proxy before later Bengali identities
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_anga_prakrit
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4407,7 +4407,7 @@ antq_anga_prakrit = { # ASI-MITRA;P8.4;P10; Anga-Champa regional proxy before la
 antq_pundra_early_historic = { # UNESCO-MAHASTHAN;CAM-BANGLADESH;P8.4;P10; Pundranagara-centered early-historic profile; the Bengali name list is a later technical fallback
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_pundra_early_historic
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4418,7 +4418,7 @@ antq_pundra_early_historic = { # UNESCO-MAHASTHAN;CAM-BANGLADESH;P8.4;P10; Pundr
 antq_rarh_early_historic = { # CAM-BANGLADESH;P8.4;P10; Western Bengal early-historic regional profile without a fixed ethnic frontier
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_rarh_early_historic
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4429,7 +4429,7 @@ antq_rarh_early_historic = { # CAM-BANGLADESH;P8.4;P10; Western Bengal early-his
 antq_vanga_early_historic = { # CAM-BANGLADESH;P8.4;P10; Vanga delta regional profile; it does not project the later Bengali language unchanged into AD 1
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_vanga_early_historic
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4440,7 +4440,7 @@ antq_vanga_early_historic = { # CAM-BANGLADESH;P8.4;P10; Vanga delta regional pr
 antq_samatata_early_historic = { # CAM-BANGLADESH;P8.4;P10; Lower Meghna early-historic profile without backdating later dynasties
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_samatata_early_historic
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4451,7 +4451,7 @@ antq_samatata_early_historic = { # CAM-BANGLADESH;P8.4;P10; Lower Meghna early-h
 antq_harikela_early_historic = { # CAM-BANGLADESH;P8.4;P10; Eastern-delta early-historic profile; the later Bengali language key is technical
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_harikela_early_historic
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4462,7 +4462,7 @@ antq_harikela_early_historic = { # CAM-BANGLADESH;P8.4;P10; Eastern-delta early-
 antq_chota_nagpur_megalithic = { # OUP-NEINDIA;P8.4;P10; Plateau archaeological profile; the Munda key is a bounded name-list proxy rather than proof of one AD 1 ethnicity
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_chota_nagpur_megalithic
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4473,7 +4473,7 @@ antq_chota_nagpur_megalithic = { # OUP-NEINDIA;P8.4;P10; Plateau archaeological 
 antq_ambari_horizon = { # ASI-AMBARI;OUP-NEINDIA;P8.4;P10; Lower Brahmaputra early-historic material horizon without a Kamarupa or Assamese-state claim
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_ambari_horizon
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4484,7 +4484,7 @@ antq_ambari_horizon = { # ASI-AMBARI;OUP-NEINDIA;P8.4;P10; Lower Brahmaputra ear
 antq_doyang_dhansiri = { # OUP-NEINDIA;P8.4;P10; Valley archaeological profile; the Meitei key is only the nearest installed name-list fallback
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_doyang_dhansiri
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4495,7 +4495,7 @@ antq_doyang_dhansiri = { # OUP-NEINDIA;P8.4;P10; Valley archaeological profile; 
 antq_khasi_jaintia_highland = { # OUP-NEINDIA;P8.4;P10; Highland geographic profile without asserting that modern boundaries or identities were fixed in AD 1
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_khasi_jaintia_highland
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4506,7 +4506,7 @@ antq_khasi_jaintia_highland = { # OUP-NEINDIA;P8.4;P10; Highland geographic prof
 antq_upper_brahmaputra = { # OUP-NEINDIA;P8.4;P10; Upper-valley corridor profile without backdating Ahom or Chutia political identities
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_upper_brahmaputra
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4517,7 +4517,7 @@ antq_upper_brahmaputra = { # OUP-NEINDIA;P8.4;P10; Upper-valley corridor profile
 antq_sadiya_foothill = { # OUP-NEINDIA;P8.4;P10; Eastern Himalayan foothill profile with no asserted unitary ethnicity
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_sadiya_foothill
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4528,7 +4528,7 @@ antq_sadiya_foothill = { # OUP-NEINDIA;P8.4;P10; Eastern Himalayan foothill prof
 antq_monyul_highland = { # UCL-BHUTAN;OUP-NEINDIA;P8.4;P10; Eastern Himalayan highland proxy without a unified ancient Bhutan claim
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_monyul_highland
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4539,7 +4539,7 @@ antq_monyul_highland = { # UCL-BHUTAN;OUP-NEINDIA;P8.4;P10; Eastern Himalayan hi
 antq_sikkim_foothill = { # UCL-BHUTAN;OUP-NEINDIA;P8.4;P10; Sikkim highland and foothill proxy without backdating later Lepcha Bhutia or royal boundaries
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_sikkim_foothill
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4550,7 +4550,7 @@ antq_sikkim_foothill = { # UCL-BHUTAN;OUP-NEINDIA;P8.4;P10; Sikkim highland and 
 antq_imphal_valley = { # OUP-NEINDIA;P8.4;P10; Imphal archaeological frame; the Meitei name list is a technical fallback and later royal chronology is not backdated
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_imphal_valley
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4660,7 +4660,7 @@ antq_quadi = { # P8.7;P10;OCD-QUA; Moravian Quadi regional proxy without extendi
 antq_colchian = { # P10;CAH-XI;PLE; Eastern Black Sea Colchian regional frame distinct from the inland Kartvelian atlas
 	language = antq_caucasian_dialect
 	color = antq_culture_color_antq_colchian
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4671,7 +4671,7 @@ antq_colchian = { # P10;CAH-XI;PLE; Eastern Black Sea Colchian regional frame di
 antq_syriac = { # P10;CAH-XI;PLE; Edessan and upper Mesopotamian Aramaic regional frame before later Syriac confessional consolidation
 	language = antq_semitic_dialect
 	color = antq_culture_color_antq_syriac
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4682,7 +4682,7 @@ antq_syriac = { # P10;CAH-XI;PLE; Edessan and upper Mesopotamian Aramaic regiona
 antq_nilotic = { # P8.5;P10;CAH-XI; Upper Nile regional population frame; technical Nubian adapter is not a uniform language claim
 	language = antq_nile_dialect
 	color = antq_culture_color_antq_nilotic
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4693,7 +4693,7 @@ antq_nilotic = { # P8.5;P10;CAH-XI; Upper Nile regional population frame; techni
 antq_khoisan = { # P8.5;P10;CAH-XI; Southern African non-Bantu regional frame; technical Mande adapter is not a language claim
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_khoisan
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4704,7 +4704,7 @@ antq_khoisan = { # P8.5;P10;CAH-XI; Southern African non-Bantu regional frame; t
 antq_qiang = { # P8.3;P10;BHR;CAH-XI; Amdo and western-Sichuan Qiang frontier frame without fixing a single language or tribal polygon
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_qiang
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4715,7 +4715,7 @@ antq_qiang = { # P8.3;P10;BHR;CAH-XI; Amdo and western-Sichuan Qiang frontier fr
 antq_zhangzhung = { # P8.3;P10;CAH-XI; Western and northern Tibetan plateau Zhangzhung regional frame; technical adapter is not a language claim
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_zhangzhung
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4726,7 +4726,7 @@ antq_zhangzhung = { # P8.3;P10;CAH-XI; Western and northern Tibetan plateau Zhan
 antq_tai = { # P8.9;P10;CAH-XI; Northern mainland Tai highland frame before later state and standard-language identities
 	language = antq_southeast_asian_dialect
 	color = antq_culture_color_antq_tai
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4737,7 +4737,7 @@ antq_tai = { # P8.9;P10;CAH-XI; Northern mainland Tai highland frame before late
 antq_cham = { # P8.9;P10;CAH-XI;CAM-SAH; Central Vietnamese Austronesian regional frame alongside the narrower Sa Huynh archaeological horizon
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_cham
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4748,7 +4748,7 @@ antq_cham = { # P8.9;P10;CAH-XI;CAM-SAH; Central Vietnamese Austronesian regiona
 antq_yilou = { # P8.3;P10;CAH-XI; Lower-Amur and Ussuri Yilou regional frame without projecting a later Jurchen identity
 	language = antq_steppe_dialect
 	color = antq_culture_color_antq_yilou
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4792,7 +4792,7 @@ antq_samoyedic = { # P8.7;P10;CAH-XI; Northern West Siberian Samoyedic regional 
 antq_totonac = { # P8.10;P10;CAH-XI; Gulf lowland Totonac regional frame without projecting later political borders
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_totonac
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4803,7 +4803,7 @@ antq_totonac = { # P8.10;P10;CAH-XI; Gulf lowland Totonac regional frame without
 antq_na_dene = { # P8.10;P10;CAH-XI; Northwestern interior Na-Dene macro-regional frame; technical Inuit adapter is not a language claim
 	language = antq_american_dialect
 	color = antq_culture_color_antq_na_dene
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4814,7 +4814,7 @@ antq_na_dene = { # P8.10;P10;CAH-XI; Northwestern interior Na-Dene macro-regiona
 antq_iroquoian = { # P8.10;P10;CAH-XI; Eastern Great Lakes Iroquoian regional frame before later confederacy boundaries
 	language = antq_american_dialect
 	color = antq_culture_color_antq_iroquoian
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4825,7 +4825,7 @@ antq_iroquoian = { # P8.10;P10;CAH-XI; Eastern Great Lakes Iroquoian regional fr
 antq_mixe_zoquean = { # P8.10;P10;CAH-XI; Isthmian and Gulf Mixe-Zoquean regional frame distinct from the narrower Epi-Olmec horizon
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_mixe_zoquean
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4836,7 +4836,7 @@ antq_mixe_zoquean = { # P8.10;P10;CAH-XI; Isthmian and Gulf Mixe-Zoquean regiona
 antq_purepecha_precursor = { # P8.10;P10;CAH-XI; Michoacan precursor regional frame without projecting the later Tarascan state
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_purepecha_precursor
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4847,7 +4847,7 @@ antq_purepecha_precursor = { # P8.10;P10;CAH-XI; Michoacan precursor regional fr
 antq_oasisamerica = { # P8.10;P10;CAH-XI; Northern Mesoamerican and southwestern exchange-zone frame rather than a single identity
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_oasisamerica
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4858,7 +4858,7 @@ antq_oasisamerica = { # P8.10;P10;CAH-XI; Northern Mesoamerican and southwestern
 antq_hopewellian = { # P8.10;P10;CAH-XI; Hopewell interaction-sphere archaeological frame rather than a homogeneous people
 	language = antq_american_dialect
 	color = antq_culture_color_antq_hopewellian
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4869,7 +4869,7 @@ antq_hopewellian = { # P8.10;P10;CAH-XI; Hopewell interaction-sphere archaeologi
 antq_adena_woodland = { # P8.10;P10;CAH-XI; Eastern Woodland Adena-derived archaeological frame rather than a homogeneous people
 	language = antq_american_dialect
 	color = antq_culture_color_antq_adena_woodland
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4880,7 +4880,7 @@ antq_adena_woodland = { # P8.10;P10;CAH-XI; Eastern Woodland Adena-derived archa
 antq_aymara = { # P8.10;P10;CAH-XI; Altiplano Aymara regional frame; technical Quechuan adapter is not a language claim
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_aymara
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4891,7 +4891,7 @@ antq_aymara = { # P8.10;P10;CAH-XI; Altiplano Aymara regional frame; technical Q
 antq_puquina = { # P8.10;P10;CAH-XI; South-central Andean Puquina regional frame; technical Quechuan adapter is not a language claim
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_puquina
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -4902,7 +4902,7 @@ antq_puquina = { # P8.10;P10;CAH-XI; South-central Andean Puquina regional frame
 antq_quechua_zone = { # P8.10;P10;CAH-XI; Central Andean Quechua-zone regional frame without projecting the later Inca polity or a uniform dialect
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_quechua_zone
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5342,7 +5342,7 @@ antq_autinian = { # P8.7;P10;PTO-GEO-II1;DARCY-IRE; Autini campaign proxy in wes
 antq_ryukyu_shell_midden = { # RYU-ARC;P8.3;P10; Central Ryukyu archaeological community frame at AD 1; the Korean adapter is technical and does not assert language
 	language = antq_japonic_dialect
 	color = antq_culture_color_antq_ryukyu_shell_midden
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5353,7 +5353,7 @@ antq_ryukyu_shell_midden = { # RYU-ARC;P8.3;P10; Central Ryukyu archaeological c
 antq_middle_niger = { # CAM-MLR;MET-IND;P8.5;P10; Middle Niger settlement-network proxy rather than a single ethnicity or state
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_middle_niger
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5364,7 +5364,7 @@ antq_middle_niger = { # CAM-MLR;MET-IND;P8.5;P10; Middle Niger settlement-networ
 antq_western_sahel = { # CAM-MLR;P8.5;P10; Western Sahel settlement proxy before later imperial identities
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_western_sahel
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5375,7 +5375,7 @@ antq_western_sahel = { # CAM-MLR;P8.5;P10; Western Sahel settlement proxy before
 antq_volta_basin = { # JAR-WA-NETWORKS;MET-IRON;GLOT-GUR;P8.5;P10; Volta-Comoe interfluve iron-age proxy with a broad northern-Volta engine family and geographic roots; no uniform Gur identity or recovered AD 1 names
 	language = antq_volta_interfluve_dialect
 	color = antq_culture_color_antq_volta_basin
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5386,7 +5386,7 @@ antq_volta_basin = { # JAR-WA-NETWORKS;MET-IRON;GLOT-GUR;P8.5;P10; Volta-Comoe i
 antq_senegambian = { # CAM-MLR;MET-IRON;P8.5;P10; Senegambian iron-age regional proxy before later states and ethnonyms
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_senegambian
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5397,7 +5397,7 @@ antq_senegambian = { # CAM-MLR;MET-IRON;P8.5;P10; Senegambian iron-age regional 
 antq_akan_forest = { # JAH-GHANA;JAR-WA-NETWORKS;GLOT-AKANIC;MET-IRON;P8.5;P10; Bosumtwi forest-zone proxy with a broad southern-Volta engine family and geographic roots; no later Akan state identity or recovered AD 1 names
 	language = antq_bosumtwi_forest_dialect
 	color = antq_culture_color_antq_akan_forest
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5408,7 +5408,7 @@ antq_akan_forest = { # JAH-GHANA;JAR-WA-NETWORKS;GLOT-AKANIC;MET-IRON;P8.5;P10; 
 antq_lower_niger = { # MET-IRON;P8.5;P10; Lower Niger iron-age regional proxy before later Benin and Yoruba polities
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_lower_niger
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5419,7 +5419,7 @@ antq_lower_niger = { # MET-IRON;P8.5;P10; Lower Niger iron-age regional proxy be
 antq_gur = { # MET-IRON;P8.5;P10; Gur savanna regional proxy; the Mande adapter is technical
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_gur
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5430,7 +5430,7 @@ antq_gur = { # MET-IRON;P8.5;P10; Gur savanna regional proxy; the Mande adapter 
 antq_air_massif = { # CAM-DAI;P8.5;P10; Air massif community proxy without projecting later Tuareg confederations
 	language = antq_subsaharan_dialect
 	color = antq_culture_color_antq_air_massif
-	tags = { european_gfx }
+	tags = { african_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5760,7 +5760,7 @@ antq_altai_kulay = { # ASU-ALTAI-KULAY;P10; Forest-steppe Altai Kulay material p
 antq_altai_xiongnu_contact = { # ACSS-ALTAI-XIONGNU;P10; Altai and East-Kazakhstan contact-horizon proxy; technical steppe grouping does not assert Xiongnu occupation or linguistic identity
 	language = antq_steppe_dialect
 	color = antq_culture_color_antq_altai_xiongnu_contact
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5771,7 +5771,7 @@ antq_altai_xiongnu_contact = { # ACSS-ALTAI-XIONGNU;P10; Altai and East-Kazakhst
 antq_tes_tashtyk = { # FU-TASHTYK;P10; Minusinsk transition proxy at the campaign boundary; technical steppe grouping does not create a unitary Tashtyk state
 	language = antq_steppe_dialect
 	color = antq_culture_color_antq_tes_tashtyk
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5782,7 +5782,7 @@ antq_tes_tashtyk = { # FU-TASHTYK;P10; Minusinsk transition proxy at the campaig
 antq_sumpa = { # OXF-SINO-TIB;CAM-TIB-ARCH;P10; Northeastern plateau political-cultural adapter bounded to Amdo; later imperial sources do not recover an exact AD 1 language or tribal frontier
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_sumpa
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5793,7 +5793,7 @@ antq_sumpa = { # OXF-SINO-TIB;CAM-TIB-ARCH;P10; Northeastern plateau political-c
 antq_changtang_pastoral = { # ANT-TIB-HERDING;CAM-TIB-ARCH;P10; Northern high-pasture archaeological-economic adapter rather than one ethnicity or state
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_changtang_pastoral
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5804,7 +5804,7 @@ antq_changtang_pastoral = { # ANT-TIB-HERDING;CAM-TIB-ARCH;P10; Northern high-pa
 antq_yarlung_agropastoral = { # ANT-BANGGA;CAM-TIB-ARCH;P10; Bangga-Yarlung first-millennium-BC material and subsistence horizon without backdating the later Yarlung dynasty
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_yarlung_agropastoral
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5815,7 +5815,7 @@ antq_yarlung_agropastoral = { # ANT-BANGGA;CAM-TIB-ARCH;P10; Bangga-Yarlung firs
 antq_central_tsangpo = { # ANT-BANGGA;CAM-TIB-ARCH;P10; Central river-valley agropastoral adapter; not a claim of uniform language identity or political unity
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_central_tsangpo
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5826,7 +5826,7 @@ antq_central_tsangpo = { # ANT-BANGGA;CAM-TIB-ARCH;P10; Central river-valley agr
 antq_western_tsang = { # CAM-TIB-ARCH;P10; Western Tsangpo valley adapter without backdating the later Tsang administration or a recovered AD 1 ethnonym
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_western_tsang
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5837,7 +5837,7 @@ antq_western_tsang = { # CAM-TIB-ARCH;P10; Western Tsangpo valley adapter withou
 antq_qamdo_corridor = { # CAM-EAST-TIB;RAD-YUSHU;P10; Upper Salween and Mekong corridor adapter; material similarities do not define one ethnicity
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_qamdo_corridor
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5848,7 +5848,7 @@ antq_qamdo_corridor = { # CAM-EAST-TIB;RAD-YUSHU;P10; Upper Salween and Mekong c
 antq_drichu_highland = { # CAM-EAST-TIB;RAD-YUSHU;P10; Upper Yangtze highland adapter; the geographic frame does not imply a uniform later Khampa identity
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_drichu_highland
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5859,7 +5859,7 @@ antq_drichu_highland = { # CAM-EAST-TIB;RAD-YUSHU;P10; Upper Yangtze highland ad
 antq_eastern_plateau_corridor = { # CAM-EAST-TIB;OXF-EAST-RIM;P10; Plateau-escarpment exchange adapter without assigning the whole region to Qiang Bailang or any modern identity
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_eastern_plateau_corridor
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5870,7 +5870,7 @@ antq_eastern_plateau_corridor = { # CAM-EAST-TIB;OXF-EAST-RIM;P10; Plateau-escar
 antq_avanti_prakrit = { # CAH-INDUS;JRAS-VEDISA;P10; Ujjayini-Vedisa regional Prakrit adapter; the language key is a technical name-list fallback and not a recovered AD 1 dialect boundary
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_avanti_prakrit
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5881,7 +5881,7 @@ antq_avanti_prakrit = { # CAH-INDUS;JRAS-VEDISA;P10; Ujjayini-Vedisa regional Pr
 antq_chedi_prakrit = { # CAH-INDUS;P10; Chedi regional Prakrit adapter without claiming a recovered AD 1 census language or exact janapada frontier
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_chedi_prakrit
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5892,7 +5892,7 @@ antq_chedi_prakrit = { # CAH-INDUS;P10; Chedi regional Prakrit adapter without c
 antq_narmada_vindhya_megalithic = { # CAM-CENTRAL-INDIA-MEGALITHS;P10; Upper Narmada and Vindhya archaeological adapter; the technical Munda name list does not establish ethnicity or language
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_narmada_vindhya_megalithic
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5903,7 +5903,7 @@ antq_narmada_vindhya_megalithic = { # CAM-CENTRAL-INDIA-MEGALITHS;P10; Upper Nar
 antq_son_vindhya_iron_age = { # INFLIB-EARLY-HISTORIC;P10; Eastern Vindhya and Son-valley archaeological adapter without backdating later Bagheli or Gond identities
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_son_vindhya_iron_age
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5914,7 +5914,7 @@ antq_son_vindhya_iron_age = { # INFLIB-EARLY-HISTORIC;P10; Eastern Vindhya and S
 antq_upper_mahanadi = { # INFLIB-DAKSHINA-KOSALA;INFLIB-EARLY-HISTORIC;P10; Dakshina Kosala regional adapter without inventing a uniform AD 1 language or dynasty
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_upper_mahanadi
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5925,7 +5925,7 @@ antq_upper_mahanadi = { # INFLIB-DAKSHINA-KOSALA;INFLIB-EARLY-HISTORIC;P10; Daks
 antq_bastar_megalithic = { # INFLIB-EARLY-HISTORIC;P10; Bastar plateau archaeological adapter; mortuary forms do not establish one ethnicity language or polity
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_bastar_megalithic
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5936,7 +5936,7 @@ antq_bastar_megalithic = { # INFLIB-EARLY-HISTORIC;P10; Bastar plateau archaeolo
 antq_maldivian_maritime = { # CAM-MALDIVES;P10; Atoll maritime adapter using a South Indian name-list fallback; it is not a claim of Tamil political or linguistic uniformity
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_maldivian_maritime
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5947,7 +5947,7 @@ antq_maldivian_maritime = { # CAM-MALDIVES;P10; Atoll maritime adapter using a S
 antq_arakan_littoral = { # CAM-ARAKAN-BOUNDARY;P10; Geographic coastal adapter without projecting later Rakhine identity language or kingdoms
 	language = antq_southeast_asian_dialect
 	color = antq_culture_color_antq_arakan_littoral
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5958,7 +5958,7 @@ antq_arakan_littoral = { # CAM-ARAKAN-BOUNDARY;P10; Geographic coastal adapter w
 antq_central_vietnam_highland = { # CAM-SAH;P10; Upper-river and highland adapter distinct from the Sa Huynh coast; technical name list does not settle language
 	language = antq_southeast_asian_dialect
 	color = antq_culture_color_antq_central_vietnam_highland
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5969,7 +5969,7 @@ antq_central_vietnam_highland = { # CAM-SAH;P10; Upper-river and highland adapte
 antq_patkai_upper_irrawaddy = { # CAM-MYANMAR-CHRON;P10; Highland archaeological-geographic adapter without projecting later Kachin Naga or Tai identity
 	language = antq_tibetan_dialect
 	color = antq_culture_color_antq_patkai_upper_irrawaddy
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5980,7 +5980,7 @@ antq_patkai_upper_irrawaddy = { # CAM-MYANMAR-CHRON;P10; Highland archaeological
 antq_upper_irrawaddy_corridor = { # CAM-MYANMAR-CHRON;P10; River-confluence adapter without backdating later cities ethnicities or states
 	language = antq_southeast_asian_dialect
 	color = antq_culture_color_antq_upper_irrawaddy_corridor
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -5991,7 +5991,7 @@ antq_upper_irrawaddy_corridor = { # CAM-MYANMAR-CHRON;P10; River-confluence adap
 antq_ping_wang_iron_age = { # CAM-SEA-IRON;P10; Intermontane basin adapter without backdating Lanna or a uniform Mon Lawa or Tai identity
 	language = antq_southeast_asian_dialect
 	color = antq_culture_color_antq_ping_wang_iron_age
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6002,7 +6002,7 @@ antq_ping_wang_iron_age = { # CAM-SEA-IRON;P10; Intermontane basin adapter witho
 antq_kok_ing_nan_iron_age = { # CAM-SEA-IRON;P10; Northern basin adapter without backdating later Tai state or language boundaries
 	language = antq_southeast_asian_dialect
 	color = antq_culture_color_antq_kok_ing_nan_iron_age
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6013,7 +6013,7 @@ antq_kok_ing_nan_iron_age = { # CAM-SEA-IRON;P10; Northern basin adapter without
 antq_upper_mekong_upland = { # UNESCO-JARS;ANT-NLAOS;P10; Heterogeneous upland and river-corridor adapter; burial evidence does not define ethnicity
 	language = antq_southeast_asian_dialect
 	color = antq_culture_color_antq_upper_mekong_upland
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6024,7 +6024,7 @@ antq_upper_mekong_upland = { # UNESCO-JARS;ANT-NLAOS;P10; Heterogeneous upland a
 antq_upper_salween_shweli = { # CAM-MYANMAR-CHRON;P10; Corridor adapter without backdating Shan principality or standard-language identity
 	language = antq_southeast_asian_dialect
 	color = antq_culture_color_antq_upper_salween_shweli
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6035,7 +6035,7 @@ antq_upper_salween_shweli = { # CAM-MYANMAR-CHRON;P10; Corridor adapter without 
 antq_kengtung_basin = { # CAM-SEA-IRON;P10; Intermontane basin adapter without backdating a sawbwa state or uniform Tai identity
 	language = antq_southeast_asian_dialect
 	color = antq_culture_color_antq_kengtung_basin
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6046,7 +6046,7 @@ antq_kengtung_basin = { # CAM-SEA-IRON;P10; Intermontane basin adapter without b
 antq_southern_plateau_corridor = { # CAM-MYANMAR-CHRON;P10; Pass-and-basin adapter without backdating later Shan states or ethnic borders
 	language = antq_southeast_asian_dialect
 	color = antq_culture_color_antq_southern_plateau_corridor
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6057,7 +6057,7 @@ antq_southern_plateau_corridor = { # CAM-MYANMAR-CHRON;P10; Pass-and-basin adapt
 antq_middle_amur_poltsian = { # NMJH-YIL;CAM-PROTOTUNGUSIC;P10; Material-horizon proxy; language adapter does not identify Pol'tse people as Nivkh
 	language = antq_steppe_dialect
 	color = antq_culture_color_antq_middle_amur_poltsian
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6068,7 +6068,7 @@ antq_middle_amur_poltsian = { # NMJH-YIL;CAM-PROTOTUNGUSIC;P10; Material-horizon
 antq_lower_amur_estuary = { # NMJH-YIL;RAD-RFE-IRON;P10; River-estuary community adapter without one language or ethnicity
 	language = antq_steppe_dialect
 	color = antq_culture_color_antq_lower_amur_estuary
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6079,7 +6079,7 @@ antq_lower_amur_estuary = { # NMJH-YIL;RAD-RFE-IRON;P10; River-estuary community
 antq_sakhalin_paleometal = { # RAD-SAKHALIN;P10; Paleometal maritime adapter without equating Susuya or Nhabil archaeology with later Ainu identity
 	language = antq_japonic_dialect
 	color = antq_culture_color_antq_sakhalin_paleometal
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6090,7 +6090,7 @@ antq_sakhalin_paleometal = { # RAD-SAKHALIN;P10; Paleometal maritime adapter wit
 antq_mudan_basin_iron_age = { # NMJH-YIL;CAM-PROTOTUNGUSIC;P10; Distinct basin material proxy; technical language does not assert ethnicity
 	language = antq_steppe_dialect
 	color = antq_culture_color_antq_mudan_basin_iron_age
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6101,7 +6101,7 @@ antq_mudan_basin_iron_age = { # NMJH-YIL;CAM-PROTOTUNGUSIC;P10; Distinct basin m
 antq_northern_okjeo_tuanjie = { # NMJH-YIL;P10; Textual-archaeological corridor proxy without fixed AD 1 borders or later Korean identity
 	language = antq_korean_dialect
 	color = antq_culture_color_antq_northern_okjeo_tuanjie
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6112,7 +6112,7 @@ antq_northern_okjeo_tuanjie = { # NMJH-YIL;P10; Textual-archaeological corridor 
 antq_niah_brunei_bay = { # ANU-NIAH-METAL;P10; Cave-river regional adapter; technical language fallback is not a later Brunei or Malay identity
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_niah_brunei_bay
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6123,7 +6123,7 @@ antq_niah_brunei_bay = { # ANU-NIAH-METAL;P10; Cave-river regional adapter; tech
 antq_rajang_sarawak = { # ANU-NIAH-METAL;P10; Coastal-river adapter without later Iban Melanau or Sarawak identity
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_rajang_sarawak
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6134,7 +6134,7 @@ antq_rajang_sarawak = { # ANU-NIAH-METAL;P10; Coastal-river adapter without late
 antq_kinabatangan_sabah = { # MYH-BUKIT-TENGKORAK;P10; Littoral adapter without later Dusun Sama or Sabah identity
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_kinabatangan_sabah
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6145,7 +6145,7 @@ antq_kinabatangan_sabah = { # MYH-BUKIT-TENGKORAK;P10; Littoral adapter without 
 antq_northeast_borneo_river_sea = { # QSR-LIANG-JON;P10; River-sea adapter without later Berau Tidung or political identity
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_northeast_borneo_river_sea
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6156,7 +6156,7 @@ antq_northeast_borneo_river_sea = { # QSR-LIANG-JON;P10; River-sea adapter witho
 antq_sangkulirang_karst = { # QSR-LIANG-JON;QINT-LIANG-ABU;P10; Archaeological landscape adapter without one ethnicity
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_sangkulirang_karst
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6167,7 +6167,7 @@ antq_sangkulirang_karst = { # QSR-LIANG-JON;QINT-LIANG-ABU;P10; Archaeological l
 antq_mahakam_river = { # QSR-LIANG-JON;QINT-LIANG-ABU;P10; River corridor adapter without later Kutai Kayan or Kenyah identity
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_mahakam_river
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6178,7 +6178,7 @@ antq_mahakam_river = { # QSR-LIANG-JON;QINT-LIANG-ABU;P10; River corridor adapte
 antq_kapuas_melawi = { # ANTH-KAL-IRON;P10; Interior river adapter without later Dayak or Bidayuh identity
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_kapuas_melawi
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6189,7 +6189,7 @@ antq_kapuas_melawi = { # ANTH-KAL-IRON;P10; Interior river adapter without later
 antq_west_borneo_coastal = { # ANU-NIAH-METAL;P10; Western coastal-river adapter without later Malay courts
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_west_borneo_coastal
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6200,7 +6200,7 @@ antq_west_borneo_coastal = { # ANU-NIAH-METAL;P10; Western coastal-river adapter
 antq_central_south_borneo = { # ANTH-KAL-IRON;P10; Watershed adapter without later Ngaju Maanyan or Banjar identity
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_central_south_borneo
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6211,7 +6211,7 @@ antq_central_south_borneo = { # ANTH-KAL-IRON;P10; Watershed adapter without lat
 antq_banjar_paser = { # ANTH-KAL-IRON;P10; Foothill river-coast adapter without later Banjar or Paser identity
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_banjar_paser
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6222,7 +6222,7 @@ antq_banjar_paser = { # ANTH-KAL-IRON;P10; Foothill river-coast adapter without 
 antq_anarta_sarasvati = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P10; Regional Prakrit/material-culture adapter; technical language fallback does not project a later Gujarati or Rajasthani identity
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_anarta_sarasvati
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6233,7 +6233,7 @@ antq_anarta_sarasvati = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;
 antq_lata_barygaza = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P10; Regional Prakrit/material-culture adapter; technical language fallback does not project a later Gujarati or Rajasthani identity
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_lata_barygaza
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6244,7 +6244,7 @@ antq_lata_barygaza = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P10
 antq_rewa_kantha = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P10; Regional Prakrit/material-culture adapter; technical language fallback does not project a later Gujarati or Rajasthani identity
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_rewa_kantha
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6255,7 +6255,7 @@ antq_rewa_kantha = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P10; 
 antq_saurashtra_early_historic = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P10; Regional Prakrit/material-culture adapter; technical language fallback does not project a later Gujarati or Rajasthani identity
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_saurashtra_early_historic
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6266,7 +6266,7 @@ antq_saurashtra_early_historic = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-CO
 antq_kutch_early_historic = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P10; Regional Prakrit/material-culture adapter; technical language fallback does not project a later Gujarati or Rajasthani identity
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_kutch_early_historic
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6277,7 +6277,7 @@ antq_kutch_early_historic = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P
 antq_matsya_dhundhar = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P10; Regional Prakrit/material-culture adapter; technical language fallback does not project a later Gujarati or Rajasthani identity
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_matsya_dhundhar
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6288,7 +6288,7 @@ antq_matsya_dhundhar = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P
 antq_chambal_gird = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P10; Regional Prakrit/material-culture adapter; technical language fallback does not project a later Gujarati or Rajasthani identity
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_chambal_gird
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6299,7 +6299,7 @@ antq_chambal_gird = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P10;
 antq_ahar_banas = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P10; Regional Prakrit/material-culture adapter; technical language fallback does not project a later Gujarati or Rajasthani identity
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_ahar_banas
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6310,7 +6310,7 @@ antq_ahar_banas = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P10; R
 antq_marwar_nagaur = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P10; Regional Prakrit/material-culture adapter; technical language fallback does not project a later Gujarati or Rajasthani identity
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_marwar_nagaur
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6321,7 +6321,7 @@ antq_marwar_nagaur = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P10
 antq_jangladesh_pastoral = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8.4;P10; Regional Prakrit/material-culture adapter; technical language fallback does not project a later Gujarati or Rajasthani identity
 	language = antq_indian_dialect
 	color = antq_culture_color_antq_jangladesh_pastoral
-	tags = { european_gfx }
+	tags = { indian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6332,7 +6332,7 @@ antq_jangladesh_pastoral = { # ASI-WESTERN-INDIA;UOA-PERIPLUS;BM-TRIBAL-COINS;P8
 antq_basin_south_lake = { # INAH-CUICUILCO-TEO;P8.10;P10; Southern Basin communities without backdating Mexica Tenochtitlan or later Chalco institutions; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_basin_south_lake
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6343,7 +6343,7 @@ antq_basin_south_lake = { # INAH-CUICUILCO-TEO;P8.10;P10; Southern Basin communi
 antq_puebla_tlaxcala_formative = { # INAH-CANTONA;P8.10;P10; Formative center network without projecting later Tlaxcalan or Cholollan state borders; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_puebla_tlaxcala_formative
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6354,7 +6354,7 @@ antq_puebla_tlaxcala_formative = { # INAH-CANTONA;P8.10;P10; Formative center ne
 antq_morelos_formative = { # INAH-CHALCATZINGO;P8.10;P10; Morelos archaeological frame without backdating later Nahua identities or polities; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_morelos_formative
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6365,7 +6365,7 @@ antq_morelos_formative = { # INAH-CHALCATZINGO;P8.10;P10; Morelos archaeological
 antq_northern_highland_corridor = { # P8.10;CAH-XI;P10; Highland exchange-corridor frame without projecting later Otomi or Chichimeca borders; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_northern_highland_corridor
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6376,7 +6376,7 @@ antq_northern_highland_corridor = { # P8.10;CAH-XI;P10; Highland exchange-corrid
 antq_tamtoc_panuco = { # INAH-TAMTOC;P8.10;P10; Tamtoc-facing urbanizing corridor without imposing later Huastec political unity; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_tamtoc_panuco
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6387,7 +6387,7 @@ antq_tamtoc_panuco = { # INAH-TAMTOC;P8.10;P10; Tamtoc-facing urbanizing corrido
 antq_gulf_lowland_sierra = { # INAH-TAPAK;P8.10;P10; Lowland-sierra exchange frame without backdating later Totonac states or Tajin's mature florescence; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_gulf_lowland_sierra
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6398,7 +6398,7 @@ antq_gulf_lowland_sierra = { # INAH-TAPAK;P8.10;P10; Lowland-sierra exchange fra
 antq_guerrero_pacific = { # P8.10;CAH-XI;P10; Pacific-slope community frame without projecting later Yope or Mexica borders; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_guerrero_pacific
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6409,7 +6409,7 @@ antq_guerrero_pacific = { # P8.10;CAH-XI;P10; Pacific-slope community frame with
 antq_oaxaca_northwest_highland = { # P8.10;CAH-XI;P10; Northwestern Oaxaca archaeological frame without imposing later Mixtec political borders; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_oaxaca_northwest_highland
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6420,7 +6420,7 @@ antq_oaxaca_northwest_highland = { # P8.10;CAH-XI;P10; Northwestern Oaxaca archa
 antq_izapa_soconusco = { # INAH-IZAPA;P8.10;P10; First-order Izapa political-center proxy at the nearest installed Soconusco field; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_izapa_soconusco
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6431,7 +6431,7 @@ antq_izapa_soconusco = { # INAH-IZAPA;P8.10;P10; First-order Izapa political-cen
 antq_chiapas_highland_lowland = { # INAH-IZAPA;P8.10;CAH-XI;P10; Chiapas corridor frame without merging highland communities into the Early Maya lowland polity; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_chiapas_highland_lowland
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6442,7 +6442,7 @@ antq_chiapas_highland_lowland = { # INAH-IZAPA;P8.10;CAH-XI;P10; Chiapas corrido
 antq_nayarit_shaft_tomb = { # INAH-WEST-SHAFT;P10; Nayarit mortuary and settlement horizon without backdating the later Aztatlan tradition; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_nayarit_shaft_tomb
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6453,7 +6453,7 @@ antq_nayarit_shaft_tomb = { # INAH-WEST-SHAFT;P10; Nayarit mortuary and settleme
 antq_central_jalisco_teuchitlan = { # INAH-TEUCHITLAN;P10; Teuchitlan-period chiefly centers and surrounding households without one fixed territorial state; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_central_jalisco_teuchitlan
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6464,7 +6464,7 @@ antq_central_jalisco_teuchitlan = { # INAH-TEUCHITLAN;P10; Teuchitlan-period chi
 antq_southern_jalisco_basin = { # INAH-WEST-SHAFT;INAH-COLIMA;P10; Southern Jalisco basin communities within the broad shaft-tomb horizon; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_southern_jalisco_basin
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6475,7 +6475,7 @@ antq_southern_jalisco_basin = { # INAH-WEST-SHAFT;INAH-COLIMA;P10; Southern Jali
 antq_colima_coahuayana = { # INAH-COLIMA;P10; Ortices-era Colima-Coahuayana communities without projecting later Colima polities; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_colima_coahuayana
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6486,7 +6486,7 @@ antq_colima_coahuayana = { # INAH-COLIMA;P10; Ortices-era Colima-Coahuayana comm
 antq_chupicuaro_bajio = { # INAH-CHUPICUARO;P10; Chupicuaro material horizon in southern Guanajuato and northern Michoacan without one ethnic state; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_chupicuaro_bajio
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6497,7 +6497,7 @@ antq_chupicuaro_bajio = { # INAH-CHUPICUARO;P10; Chupicuaro material horizon in 
 antq_patzcuaro_highland = { # INAH-WEST-MEXICO;P10; Patzcuaro highland archaeological frame without backdating the Purepecha kingdom; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_patzcuaro_highland
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6508,7 +6508,7 @@ antq_patzcuaro_highland = { # INAH-WEST-MEXICO;P10; Patzcuaro highland archaeolo
 antq_central_michoacan_basin = { # INAH-WEST-MEXICO;INAH-CHUPICUARO;P10; Central Michoacan basin frame without backdating Tzintzuntzan or the Tarascan state; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_central_michoacan_basin
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6519,7 +6519,7 @@ antq_central_michoacan_basin = { # INAH-WEST-MEXICO;INAH-CHUPICUARO;P10; Central
 antq_toluca_valley_formative = { # INAH-TOLUCA;P10; Toluca Valley settlement frame without projecting later Matlatzinca or Mexica borders; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_toluca_valley_formative
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6530,7 +6530,7 @@ antq_toluca_valley_formative = { # INAH-TOLUCA;P10; Toluca Valley settlement fra
 antq_mezcala_balsas_preurban = { # INAH-MEZCALA;P10; Late Preclassic Mezcala-Balsas preurban frame without a recovered common dynasty; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_mezcala_balsas_preurban
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6541,7 +6541,7 @@ antq_mezcala_balsas_preurban = { # INAH-MEZCALA;P10; Late Preclassic Mezcala-Bal
 antq_jalisco_zacatecas_highland = { # INAH-WEST-SHAFT;INAH-WEST-MEXICO;P10; Highland corridor frame within the western mortuary-exchange horizon without later frontier identities; language is an installed technical fallback, not a linguistic identification
 	language = antq_mesoamerican_dialect
 	color = antq_culture_color_antq_jalisco_zacatecas_highland
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6552,7 +6552,7 @@ antq_jalisco_zacatecas_highland = { # INAH-WEST-SHAFT;INAH-WEST-MEXICO;P10; High
 antq_ancestral_sonoran_desert = { # NPS-SONORAN;P10; Ancestral Sonoran farming frame without treating Hohokam as a tribe name or projecting its later mature system; language is an installed technical fallback, not a linguistic identification
 	language = antq_american_dialect
 	color = antq_culture_color_antq_ancestral_sonoran_desert
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6563,7 +6563,7 @@ antq_ancestral_sonoran_desert = { # NPS-SONORAN;P10; Ancestral Sonoran farming f
 antq_northwest_luzon_coast = { # NMP-PH-METAL;NMP-PH-JARS;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_northwest_luzon_coast
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6574,7 +6574,7 @@ antq_northwest_luzon_coast = { # NMP-PH-METAL;NMP-PH-JARS;P10; Archaeological-ge
 antq_central_luzon_river = { # NMP-PH-METAL;NMP-PH-JARS;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_central_luzon_river
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6585,7 +6585,7 @@ antq_central_luzon_river = { # NMP-PH-METAL;NMP-PH-JARS;P10; Archaeological-geog
 antq_manila_bay_laguna = { # NMP-PH-METAL;NMP-PH-JARS;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_manila_bay_laguna
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6596,7 +6596,7 @@ antq_manila_bay_laguna = { # NMP-PH-METAL;NMP-PH-JARS;P10; Archaeological-geogra
 antq_bicol_peninsula_metal_age = { # NMP-PH-METAL;NMP-PH-JARS;BELLINA-SHK;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_bicol_peninsula_metal_age
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6607,7 +6607,7 @@ antq_bicol_peninsula_metal_age = { # NMP-PH-METAL;NMP-PH-JARS;BELLINA-SHK;P10; A
 antq_mindoro_maritime = { # ATENEO-MINDORO;NMP-PH-JARS;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_mindoro_maritime
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6618,7 +6618,7 @@ antq_mindoro_maritime = { # ATENEO-MINDORO;NMP-PH-JARS;P10; Archaeological-geogr
 antq_panay_metal_age = { # NMP-PH-METAL;NMP-PH-JARS;BELLINA-SHK;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_panay_metal_age
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6629,7 +6629,7 @@ antq_panay_metal_age = { # NMP-PH-METAL;NMP-PH-JARS;BELLINA-SHK;P10; Archaeologi
 antq_negros_metal_age = { # NMP-PH-METAL;NMP-PH-JARS;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_negros_metal_age
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6640,7 +6640,7 @@ antq_negros_metal_age = { # NMP-PH-METAL;NMP-PH-JARS;P10; Archaeological-geograp
 antq_cebu_bohol_island = { # NMP-KALANAY;BELLINA-SHK;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_cebu_bohol_island
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6651,7 +6651,7 @@ antq_cebu_bohol_island = { # NMP-KALANAY;BELLINA-SHK;P10; Archaeological-geograp
 antq_palawan_cave_coast = { # NMP-TABON;NMP-PH-JARS;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_palawan_cave_coast
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6662,7 +6662,7 @@ antq_palawan_cave_coast = { # NMP-TABON;NMP-PH-JARS;P10; Archaeological-geograph
 antq_agusan_river = { # NMP-PH-METAL;NMP-PH-JARS;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_agusan_river
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6673,7 +6673,7 @@ antq_agusan_river = { # NMP-PH-METAL;NMP-PH-JARS;P10; Archaeological-geographic 
 antq_lanao_coast_lake = { # NMP-PH-METAL;NMP-PH-JARS;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_lanao_coast_lake
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6684,7 +6684,7 @@ antq_lanao_coast_lake = { # NMP-PH-METAL;NMP-PH-JARS;P10; Archaeological-geograp
 antq_pulangi_cotabato_basin = { # NMP-PH-METAL;NMP-PH-JARS;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_pulangi_cotabato_basin
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6695,7 +6695,7 @@ antq_pulangi_cotabato_basin = { # NMP-PH-METAL;NMP-PH-JARS;P10; Archaeological-g
 antq_maitum_sarangani = { # CCP-MAITUM;NMP-PH-JARS;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_maitum_sarangani
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6706,7 +6706,7 @@ antq_maitum_sarangani = { # CCP-MAITUM;NMP-PH-JARS;P10; Archaeological-geographi
 antq_zamboanga_peninsula = { # NMP-PH-METAL;NMP-PH-JARS;BELLINA-SHK;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_zamboanga_peninsula
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6717,7 +6717,7 @@ antq_zamboanga_peninsula = { # NMP-PH-METAL;NMP-PH-JARS;BELLINA-SHK;P10; Archaeo
 antq_sulu_island = { # NMP-PH-METAL;NMP-PH-JARS;BELLINA-SHK;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_sulu_island
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6728,7 +6728,7 @@ antq_sulu_island = { # NMP-PH-METAL;NMP-PH-JARS;BELLINA-SHK;P10; Archaeological-
 antq_banggai_tomini_maritime = { # ANU-SULAWESI;SPAFA-TOPOGARO;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_banggai_tomini_maritime
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6739,7 +6739,7 @@ antq_banggai_tomini_maritime = { # ANU-SULAWESI;SPAFA-TOPOGARO;P10; Archaeologic
 antq_bone_cenrana_coast = { # ANU-SULAWESI;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_bone_cenrana_coast
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6750,7 +6750,7 @@ antq_bone_cenrana_coast = { # ANU-SULAWESI;P10; Archaeological-geographic adapte
 antq_bungku_kendari_coast = { # ANU-SULAWESI;SPAFA-TOPOGARO;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_bungku_kendari_coast
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6761,7 +6761,7 @@ antq_bungku_kendari_coast = { # ANU-SULAWESI;SPAFA-TOPOGARO;P10; Archaeological-
 antq_buton_muna_island = { # ANU-SULAWESI;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_buton_muna_island
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6772,7 +6772,7 @@ antq_buton_muna_island = { # ANU-SULAWESI;P10; Archaeological-geographic adapter
 antq_lore_poso_highland = { # UNESCO-LORE;SPAFA-TOPOGARO;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_lore_poso_highland
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6783,7 +6783,7 @@ antq_lore_poso_highland = { # UNESCO-LORE;SPAFA-TOPOGARO;P10; Archaeological-geo
 antq_gorontalo_tomini = { # ANU-SULAWESI;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_gorontalo_tomini
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6794,7 +6794,7 @@ antq_gorontalo_tomini = { # ANU-SULAWESI;P10; Archaeological-geographic adapter;
 antq_south_sulawesi_coast = { # ANU-SULAWESI;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_south_sulawesi_coast
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6805,7 +6805,7 @@ antq_south_sulawesi_coast = { # ANU-SULAWESI;P10; Archaeological-geographic adap
 antq_karama_valley_metal_age = { # BRIN-KARAMA;ANU-SULAWESI;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_karama_valley_metal_age
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6816,7 +6816,7 @@ antq_karama_valley_metal_age = { # BRIN-KARAMA;ANU-SULAWESI;P10; Archaeological-
 antq_north_sulawesi_peninsula = { # ANU-SULAWESI;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_north_sulawesi_peninsula
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6827,7 +6827,7 @@ antq_north_sulawesi_peninsula = { # ANU-SULAWESI;P10; Archaeological-geographic 
 antq_matano_luwu_lake_coast = { # ANU-SULAWESI;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_austronesian_dialect
 	color = antq_culture_color_antq_matano_luwu_lake_coast
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6838,7 +6838,7 @@ antq_matano_luwu_lake_coast = { # ANU-SULAWESI;P10; Archaeological-geographic ad
 antq_north_halmahera_metal_age = { # ANU-MALUKU;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_north_maluku_dialect
 	color = antq_culture_color_antq_north_halmahera_metal_age
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6849,7 +6849,7 @@ antq_north_halmahera_metal_age = { # ANU-MALUKU;P10; Archaeological-geographic a
 antq_south_halmahera_metal_age = { # ANU-MALUKU;P10; Archaeological-geographic adapter; technical Malay fallback is not a language or later ethnic claim
 	language = antq_north_maluku_dialect
 	color = antq_culture_color_antq_south_halmahera_metal_age
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6860,7 +6860,7 @@ antq_south_halmahera_metal_age = { # ANU-MALUKU;P10; Archaeological-geographic a
 antq_adirondack_point_peninsula = { # NYSM-POINT;OAS-POINT;NPS-HOPEWELL;P10; Adirondack Point Peninsula archaeological-geographic frame; the engine language adapter does not claim Inuit, Iroquoian, Algonquian, or Siouan speech
 	language = antq_american_dialect
 	color = antq_culture_color_antq_adirondack_point_peninsula
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6871,7 +6871,7 @@ antq_adirondack_point_peninsula = { # NYSM-POINT;OAS-POINT;NPS-HOPEWELL;P10; Adi
 antq_mohawk_point_peninsula = { # NYSM-POINT;OAS-POINT;NPS-HOPEWELL;P10; Mohawk Point Peninsula archaeological-geographic frame; the engine language adapter does not claim Inuit, Iroquoian, Algonquian, or Siouan speech
 	language = antq_american_dialect
 	color = antq_culture_color_antq_mohawk_point_peninsula
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6882,7 +6882,7 @@ antq_mohawk_point_peninsula = { # NYSM-POINT;OAS-POINT;NPS-HOPEWELL;P10; Mohawk 
 antq_finger_lakes_point_peninsula = { # NYSM-POINT;OAS-POINT;NPS-HOPEWELL;P10; Finger Lakes Point Peninsula archaeological-geographic frame; the engine language adapter does not claim Inuit, Iroquoian, Algonquian, or Siouan speech
 	language = antq_american_dialect
 	color = antq_culture_color_antq_finger_lakes_point_peninsula
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6893,7 +6893,7 @@ antq_finger_lakes_point_peninsula = { # NYSM-POINT;OAS-POINT;NPS-HOPEWELL;P10; F
 antq_havana_illinois_valley = { # ISAS-HAVANA;ISM-DICKSON;NPS-HOPEWELL;P10; Havana-Illinois Valley archaeological-geographic frame; the engine language adapter does not claim Inuit, Iroquoian, Algonquian, or Siouan speech
 	language = antq_american_dialect
 	color = antq_culture_color_antq_havana_illinois_valley
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6904,7 +6904,7 @@ antq_havana_illinois_valley = { # ISAS-HAVANA;ISM-DICKSON;NPS-HOPEWELL;P10; Hava
 antq_american_bottom_middle_woodland = { # ISAS-AMBOTTOM;NPS-HOPEWELL;P10; American Bottom Middle Woodland archaeological-geographic frame; the engine language adapter does not claim Inuit, Iroquoian, Algonquian, or Siouan speech
 	language = antq_american_dialect
 	color = antq_culture_color_antq_american_bottom_middle_woodland
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6915,7 +6915,7 @@ antq_american_bottom_middle_woodland = { # ISAS-AMBOTTOM;NPS-HOPEWELL;P10; Ameri
 antq_central_mississippi_woodland = { # NPS-OZARK-HOPEWELL;MOSHPO-CMO;P10; Central Mississippi Woodland archaeological-geographic frame; the engine language adapter does not claim Inuit, Iroquoian, Algonquian, or Siouan speech
 	language = antq_american_dialect
 	color = antq_culture_color_antq_central_mississippi_woodland
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6926,7 +6926,7 @@ antq_central_mississippi_woodland = { # NPS-OZARK-HOPEWELL;MOSHPO-CMO;P10; Centr
 antq_meramec_missouri_woodland = { # NPS-OZARK-HOPEWELL;MOSHPO-CMO;P10; Meramec-Missouri Woodland archaeological-geographic frame; the engine language adapter does not claim Inuit, Iroquoian, Algonquian, or Siouan speech
 	language = antq_american_dialect
 	color = antq_culture_color_antq_meramec_missouri_woodland
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6937,7 +6937,7 @@ antq_meramec_missouri_woodland = { # NPS-OZARK-HOPEWELL;MOSHPO-CMO;P10; Meramec-
 antq_kansas_city_hopewell = { # MOSHPO-KC;NPS-OZARK-HOPEWELL;P10; Kansas City Hopewell archaeological-geographic frame; the engine language adapter does not claim Inuit, Iroquoian, Algonquian, or Siouan speech
 	language = antq_american_dialect
 	color = antq_culture_color_antq_kansas_city_hopewell
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6948,7 +6948,7 @@ antq_kansas_city_hopewell = { # MOSHPO-KC;NPS-OZARK-HOPEWELL;P10; Kansas City Ho
 antq_lelang_gojoseon = { # AKS-LELANG;P10; Indigenous Gojoseon-majority commandery population with Han migration and cultural fusion; not a uniform ethnic identity
 	language = antq_korean_dialect
 	color = antq_culture_color_antq_lelang_gojoseon
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6959,7 +6959,7 @@ antq_lelang_gojoseon = { # AKS-LELANG;P10; Indigenous Gojoseon-majority commande
 antq_soanian = { # STR-CAUC;IRAN-COL;P10; Attested Soanes of the upper western Caucasus; language key is a rendering adapter within the Caucasian group
 	language = antq_caucasian_dialect
 	color = antq_culture_color_antq_soanian
-	tags = { european_gfx }
+	tags = { middle_east_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6970,7 +6970,7 @@ antq_soanian = { # STR-CAUC;IRAN-COL;P10; Attested Soanes of the upper western C
 antq_vicus = { # MET-VICUS;CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_vicus
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6981,7 +6981,7 @@ antq_vicus = { # MET-VICUS;CWP-ANDES;P8.10; AD 1 archaeological-geographic popul
 antq_gallinazo = { # PNAS-VIR;WIL-GAL;CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_gallinazo
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -6992,7 +6992,7 @@ antq_gallinazo = { # PNAS-VIR;WIL-GAL;CWP-ANDES;P8.10; AD 1 archaeological-geogr
 antq_nazca = { # CAM-NASCA-EIP;CWP-ANDES;MET-ANDES-1500;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_nazca
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7003,7 +7003,7 @@ antq_nazca = { # CAM-NASCA-EIP;CWP-ANDES;MET-ANDES-1500;P8.10; AD 1 archaeologic
 antq_lima_central_coast = { # MET-ANDES-1500;CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_lima_central_coast
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7014,7 +7014,7 @@ antq_lima_central_coast = { # MET-ANDES-1500;CWP-ANDES;P8.10; AD 1 archaeologica
 antq_atico_caraveli = { # CWP-ANDES;MET-ANDES-1500;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_atico_caraveli
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7025,7 +7025,7 @@ antq_atico_caraveli = { # CWP-ANDES;MET-ANDES-1500;P8.10; AD 1 archaeological-ge
 antq_cusco_late_formative = { # CUSCO-FORMATIVE;CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_cusco_late_formative
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7036,7 +7036,7 @@ antq_cusco_late_formative = { # CUSCO-FORMATIVE;CWP-ANDES;P8.10; AD 1 archaeolog
 antq_recuay = { # MET-ANDES-1500;CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_recuay
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7047,7 +7047,7 @@ antq_recuay = { # MET-ANDES-1500;CWP-ANDES;P8.10; AD 1 archaeological-geographic
 antq_huarpa = { # ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_huarpa
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7058,7 +7058,7 @@ antq_huarpa = { # ANT-HUARPA;MET-ANDES-1500;CWP-ANDES;P8.10; AD 1 archaeological
 antq_pukara = { # CWP-ANDES;MET-ANDES-1500;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_pukara
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7069,7 +7069,7 @@ antq_pukara = { # CWP-ANDES;MET-ANDES-1500;P8.10; AD 1 archaeological-geographic
 antq_tiwanaku = { # CWP-ANDES;MET-ANDES-1500;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_tiwanaku
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7080,7 +7080,7 @@ antq_tiwanaku = { # CWP-ANDES;MET-ANDES-1500;P8.10; AD 1 archaeological-geograph
 antq_wankarani = { # JFA-WANK;LAA-WANK;CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_wankarani
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7091,7 +7091,7 @@ antq_wankarani = { # JFA-WANK;LAA-WANK;CWP-ANDES;P8.10; AD 1 archaeological-geog
 antq_cajamarca_marcahuamachuco = { # CWP-ANDES;MET-ANDES-1500;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_cajamarca_marcahuamachuco
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7102,7 +7102,7 @@ antq_cajamarca_marcahuamachuco = { # CWP-ANDES;MET-ANDES-1500;P8.10; AD 1 archae
 antq_upper_utcubamba = { # CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_upper_utcubamba
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7113,7 +7113,7 @@ antq_upper_utcubamba = { # CWP-ANDES;P8.10; AD 1 archaeological-geographic popul
 antq_eastern_yunga = { # CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_eastern_yunga
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7124,7 +7124,7 @@ antq_eastern_yunga = { # CWP-ANDES;P8.10; AD 1 archaeological-geographic populat
 antq_moyobamba_foothill = { # CWP-ANDES;P8.10; AD 1 archaeological-geographic population frame; Quechuan is an installed technical fallback, not a linguistic identification
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_moyobamba_foothill
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7135,7 +7135,7 @@ antq_moyobamba_foothill = { # CWP-ANDES;P8.10; AD 1 archaeological-geographic po
 antq_herrera_plateau = { # QINT-HERRERA;P10; AD 1 archaeological plateau frame; Chibchan is a technical language-family adapter, not a claim of Muisca political or ethnic continuity
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_herrera_plateau
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7146,7 +7146,7 @@ antq_herrera_plateau = { # QINT-HERRERA;P10; AD 1 archaeological plateau frame; 
 antq_sierra_nevada_early = { # CAM-SNSM;P10; AD 1 geographic population frame before the dated Neguanje and Tairona built-settlement horizons; language is an engine adapter
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_sierra_nevada_early
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7157,7 +7157,7 @@ antq_sierra_nevada_early = { # CAM-SNSM;P10; AD 1 geographic population frame be
 antq_loja_regional_development = { # GUFFROY-LOJA;OGBURN-LOJA;P10; AD 1 southern-Ecuador archaeological frame; Quechuan is an installed technical fallback, not a linguistic or later ethnic identification
 	language = antq_andean_dialect
 	color = antq_culture_color_antq_loja_regional_development
-	tags = { european_gfx }
+	tags = { south_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7168,7 +7168,7 @@ antq_loja_regional_development = { # GUFFROY-LOJA;OGBURN-LOJA;P10; AD 1 southern
 antq_daga_highland = { # JPA-PAPUA;CAM-NGU;P10; AD 1 highland-slope geographic adapter; the installed Dagan language is technical and does not prove unchanged later identity
 	language = antq_oceanic_dialect
 	color = antq_culture_color_antq_daga_highland
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7179,7 +7179,7 @@ antq_daga_highland = { # JPA-PAPUA;CAM-NGU;P10; AD 1 highland-slope geographic a
 antq_bomberai_south_coast = { # ANU-BOMBERAI;CAM-NGU;P10; Kaimana-Buruwai coastal adapter; installed Asmat is a technical New Guinea fallback not an asserted language
 	language = antq_oceanic_dialect
 	color = antq_culture_color_antq_bomberai_south_coast
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7190,7 +7190,7 @@ antq_bomberai_south_coast = { # ANU-BOMBERAI;CAM-NGU;P10; Kaimana-Buruwai coasta
 antq_early_mariana_island = { # WA-MARIANA;ANU-MIC;P10; Archaeological island frame after settlement by the second millennium BCE; no later political hierarchy is backdated
 	language = antq_oceanic_dialect
 	color = antq_culture_color_antq_early_mariana_island
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7201,7 +7201,7 @@ antq_early_mariana_island = { # WA-MARIANA;ANU-MIC;P10; Archaeological island fr
 antq_yap_ulithi_island = { # ICA-YAP;ANU-MIC;P10; Yap-Ulithi geographic adapter around AD 1; later inter-island hierarchy is excluded
 	language = antq_oceanic_dialect
 	color = antq_culture_color_antq_yap_ulithi_island
-	tags = { european_gfx }
+	tags = { east_asian_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7212,7 +7212,7 @@ antq_yap_ulithi_island = { # ICA-YAP;ANU-MIC;P10; Yap-Ulithi geographic adapter 
 antq_orinoco_llanos_ceramic = { # JWP-ORINOCO;P10; Ceramic-horticultural archaeological frame; the Arawakan key is technical and does not equate material style with language or polity
 	language = antq_american_dialect
 	color = antq_culture_color_antq_orinoco_llanos_ceramic
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7223,7 +7223,7 @@ antq_orinoco_llanos_ceramic = { # JWP-ORINOCO;P10; Ceramic-horticultural archaeo
 antq_windward_island_ceramic = { # SCIADV-CARIB;P10; Chronometric island-community frame around AD 1; later Island Carib labels and one common polity are excluded
 	language = antq_american_dialect
 	color = antq_culture_color_antq_windward_island_ceramic
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7234,7 +7234,7 @@ antq_windward_island_ceramic = { # SCIADV-CARIB;P10; Chronometric island-communi
 antq_central_california_coastal = { # NOAA-MONTEREY;P10; Long-duration coast and estuary archaeological frame; Penutian is an installed technical adapter not an AD 1 linguistic boundary
 	language = antq_american_dialect
 	color = antq_culture_color_antq_central_california_coastal
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {
@@ -7245,7 +7245,7 @@ antq_central_california_coastal = { # NOAA-MONTEREY;P10; Long-duration coast and
 antq_acutuba_central_amazon = { # SA-EXPANSIONS;ACUTUBA-CHRON;P10; Acutuba-phase central-Amazon archaeological frame; Manaos is a technical regional language adapter not a continuity claim
 	language = antq_american_dialect
 	color = antq_culture_color_antq_acutuba_central_amazon
-	tags = { european_gfx }
+	tags = { north_american_gfx }
 	opinions = {
 	}
 	culture_groups = {

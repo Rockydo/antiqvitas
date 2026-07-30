@@ -94,3 +94,12 @@ a medieval institution into AD 1 state and risks player-facing leakage. The
 notice is therefore documented rather than “fixed” through an anachronistic
 object. Standard paired smoke remains green; focused probes distinguish this
 hardcoded notice from mod script errors.
+
+## 2026-07-30 - S3 visual smoke shared-slot delay
+
+Status: resolved 2026-07-30.
+
+Two smoke attempts were deferred by active `endore` game-driver leases (PIDs
+1868 and 35612). No ANTIQVITAS process launched and no log comparison failed.
+The next acquired paired run exposed and fixed graphical-culture resolver
+contracts; final validation is 150/150 and smoke has zero mod-unique lines.

@@ -36,17 +36,18 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 
 ### S3-P1 - Complete ancient visual surfaces
 
-- [ ] Rebuild all sixteen loading screens as the eight alpha/depth layers used
+- [x] Rebuild all sixteen loading screens as the eight alpha/depth layers used
   by the installed animated loading scenes; reject opaque duplicate layers and
   review every composite and motion-safe crop.
-- [ ] Replace the complete installed location-illustration union: terrain,
+- [x] Replace the complete installed location-illustration union: terrain,
   settlements, forts, ports, sacred buildings, workshops, weather, and
   foreground layers. No medieval structure or unintended blur may remain.
-- [ ] Replace every pop icon resolver used by the location view, including
+- [x] Replace every pop icon resolver used by the location view, including
   default, country, location, map-mode, and all installed graphical cultures.
-- [ ] Rework all custom trade-good icons as transparent object cutouts matching
+- [x] Rework all custom trade-good icons as transparent object cutouts matching
   installed wheat-style alpha, margins, scale, and lighting. No rounded,
-  circular, colored, or painted background may remain.
+  circular, colored, or painted background may remain. The full 38-good union
+  is plate-rejected and checkerboard-reviewed.
 
 ### S3-P2 - Agriculture, landscape, and opening economy
 
@@ -122,6 +123,16 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   fibers, oil crops, aromatics, and independent American crops. Exact climate,
   topography, vegetation, region, river, and coast gates cap marginal output at
   2-3 levels; 24 direct icons come from six reviewed four-up EU5-style sheets.
+- Static green: all 16 loading panoramas now use one opaque DXT1 base plus seven
+  distinct sparse DXT5 depth plates; 11 selectable scenes receive exact-path
+  hardlinks. The 128-layer ledger and contact sheet reject opaque duplicates.
+- Static green: all four installed location resolvers yield 255 textures. 154
+  structural/sacred paths use 48 ancient masters, five ancient monuments remain
+  verbatim, and 96 natural/effect layers are audited period-neutral. All 644
+  ancient cultures now route to the correct installed regional art family.
+- Static green: all eight pop classes use 48 distinct ancient masters across
+  generic, map-mode, and all nine installed graphical families (88 exact DDS
+  resolvers); European and Mediterranean location views no longer fall back.
 
 ## Active user priorities — 2026-07-22
 

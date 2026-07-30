@@ -4284,3 +4284,20 @@ Cultivators are universal as a mechanic but location-gated by installed
 climate, topography, vegetation, region, river, and coast triggers. They employ
 peasants, output 0.20-0.38, consume tools/lumber/livestock, and cap at 2-3;
 native RGOs therefore remain the efficient agricultural base.
+
+## 2026-07-30 - Location art follows the mounted resolver union
+
+Audit base plus all installed DLC resolver files. Override exact mounted paths
+for structures and sacred art; retain reviewed ancient monuments and
+period-neutral terrain/weather. Route cultures through installed regional tags.
+Loading scenes use vanilla-compatible legacy DXT1/DXT5 mip chains.
+
+Mediterranean and east-Mediterranean culture tags retain lower-priority
+`european_gfx` for installed audio/ethnicity fallback. Other continental tags
+are self-contained. Reject duplicate tags and equal-priority continental pairs.
+
+## 2026-07-30 - Trade-good icons are unframed object cutouts
+
+Use installed EU5 goods as style references, generate exactly four commodities
+per sheet, and remove a flat chroma field locally. Reject mean alpha >=0.67 or
+opaque radial rings; dark-blue still lifes remain valid only for wide event art.

@@ -108,11 +108,20 @@ def write_mipmapped_dds(source: Path, target: Path, compression: str) -> None:
 def convert(source: Path, target: Path, compression: str, mipmaps: bool) -> None:
     target.parent.mkdir(parents=True, exist_ok=True)
     normalized = compression.casefold()
-    if normalized in {"bc7", "bc7_srgb", "bc7_unorm_srgb"}:
+    directx_formats = {
+        "bc1": "BC1_UNORM",
+        "bc1_srgb": "BC1_UNORM",
+        "bc3": "BC3_UNORM",
+        "bc3_srgb": "BC3_UNORM",
+        "bc7": "BC7_UNORM_SRGB",
+        "bc7_srgb": "BC7_UNORM_SRGB",
+        "bc7_unorm_srgb": "BC7_UNORM_SRGB",
+    }
+    if normalized in directx_formats:
         encoder = texconv()
         if encoder is None:
             raise RuntimeError(
-                "BC7 conversion requires .tools/DirectXTex/texconv.exe; "
+                "DirectX block compression requires .tools/DirectXTex/texconv.exe; "
                 "install the reviewed DirectXTex tool on the work drive"
             )
         temp_root = ROOT / ".tmp"
@@ -124,13 +133,15 @@ def convert(source: Path, target: Path, compression: str, mipmaps: bool) -> None
                 "-nologo",
                 "-y",
                 "-f",
-                "BC7_UNORM_SRGB",
+                directx_formats[normalized],
                 "-m",
                 "0" if mipmaps else "1",
                 "-o",
                 str(output),
                 str(source),
             ]
+            if normalized in {"bc1", "bc1_srgb", "bc3", "bc3_srgb"}:
+                command.insert(command.index("-o"), "-dx9")
             subprocess.run(command, check=True)
             encoded = output / f"{source.stem}.dds"
             if not encoded.is_file():

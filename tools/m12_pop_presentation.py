@@ -46,6 +46,17 @@ REGIONS = (
     "generic", "african_gfx", "american_gfx", "east_asian_gfx",
     "indian_gfx", "middle_east_gfx",
 )
+REGION_FAMILIES = {
+    "generic": (
+        "european_gfx", "east_mediterranean_gfx",
+        "eastern_christian_gfx", "folk_european_gfx",
+    ),
+    "african_gfx": ("african_gfx",),
+    "american_gfx": ("american_gfx",),
+    "east_asian_gfx": ("east_asian_gfx",),
+    "indian_gfx": ("indian_gfx",),
+    "middle_east_gfx": ("middle_east_gfx",),
+}
 QUADRANTS = ("top_left", "top_right", "bottom_left", "bottom_right")
 ICON_SIZE = (128, 128)
 
@@ -223,8 +234,29 @@ def master_path(region: str, key: str) -> Path:
 
 def resolver_paths(region: str, key: str) -> tuple[Path, ...]:
     if region == "generic":
-        return (GENERIC_DIR / f"{key}.dds", MAPMODE_DIR / f"{key}.dds")
-    return (GRAPHICAL_ROOT / region / "pops" / f"{key}.dds",)
+        generic = (GENERIC_DIR / f"{key}.dds", MAPMODE_DIR / f"{key}.dds")
+    else:
+        generic = ()
+    return generic + tuple(
+        GRAPHICAL_ROOT / family / "pops" / f"{key}.dds"
+        for family in REGION_FAMILIES[region]
+    )
+
+
+def installed_graphical_families() -> set[str]:
+    mounts = [GAME / "main_menu", GAME / "loading_screen"]
+    mounts.extend(
+        mounted
+        for dlc in (GAME / "dlc").glob("*")
+        for mounted in (dlc / "main_menu", dlc / "loading_screen")
+    )
+    return {
+        path.parent.name
+        for mounted in mounts
+        if mounted.is_dir()
+        for path in mounted.glob("gfx/interface/graphical_cultures/*/pops")
+        if any(path.glob("*.dds"))
+    }
 
 
 def remove_chroma(source: Path, target: Path) -> None:
@@ -366,16 +398,16 @@ def write() -> None:
                 master.save(target, format="PNG", optimize=True)
                 destinations = resolver_paths(region, key)
                 convert(target, destinations[0], "dxt5", mipmaps=True)
-                if len(destinations) == 2:
-                    destinations[1].parent.mkdir(parents=True, exist_ok=True)
-                    destinations[1].write_bytes(destinations[0].read_bytes())
+                for destination in destinations[1:]:
+                    destination.parent.mkdir(parents=True, exist_ok=True)
+                    destination.write_bytes(destinations[0].read_bytes())
         finally:
             for image in opened.values():
                 image.close()
     write_localization()
     write_csv()
     write_contact_sheet()
-    print("m12_pop_presentation: wrote 48 ancient masters, 56 DDS resolvers, and 11 localization mirrors")
+    print("m12_pop_presentation: wrote 48 ancient masters, 88 DDS resolvers, and 11 localization mirrors")
 
 
 def sha256(path: Path) -> str:
@@ -406,6 +438,16 @@ def validate() -> bool:
         expected_art = {(region, key) for region in REGIONS for key in expected_keys}
         if set(index) != expected_art:
             failures.append("four-up mapping does not exactly cover 6 regions x 8 pop classes")
+        routed_families = {
+            family for families in REGION_FAMILIES.values() for family in families
+        }
+        installed_families = installed_graphical_families()
+        if routed_families != installed_families:
+            failures.append(
+                f"installed graphical pop-family union drifted: "
+                f"missing={sorted(installed_families - routed_families)}, "
+                f"extra={sorted(routed_families - installed_families)}"
+            )
         for filename in REFERENCE_FILES:
             path = REFERENCE_DIR / filename
             if not path.is_file():
@@ -448,8 +490,8 @@ def validate() -> bool:
                     or "a" not in details["channels"]
                 ):
                     failures.append(f"invalid DDS contract {relative(path)}: {details}")
-        if resolver_count != 56:
-            failures.append(f"expected 56 resolver targets, got {resolver_count}")
+        if resolver_count != 88:
+            failures.append(f"expected 88 resolver targets, got {resolver_count}")
         expected_ledger = ledger_rows()
         if not LEDGER.is_file():
             failures.append(f"missing {relative(LEDGER)}")
@@ -488,7 +530,7 @@ def validate() -> bool:
         for failure in failures:
             print(f"  - {failure}")
         return False
-    print("m12_pop_presentation: PASS (8 ancient classes; 48 unique masters; 56 direct resolvers; 11 clients)")
+    print("m12_pop_presentation: PASS (8 ancient classes; 48 unique masters; 88 direct resolvers; 9 graphical families; 11 clients)")
     return True
 
 

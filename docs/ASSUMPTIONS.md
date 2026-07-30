@@ -5904,3 +5904,9 @@ P12.1/P12.3/P14/PER evidence contract. Broad goods denote locally appropriate
 species (pulses, fruit, dyes); maize, cacao, and tobacco remain American, while
 tea, pepper, sugar cane, incense, papyrus, dates, and coconut retain narrow
 regional and ecological limits.
+
+## 2026-07-30 - Location structures are regional reconstructions
+
+Settlement, fort, port, workshop, wall, and cult cutouts represent attested
+regional material traditions around AD 1, not every location exactly. Sources:
+`P8.1`-`P8.10`; `P20`; regional profiles. [secure typology; contested local form]

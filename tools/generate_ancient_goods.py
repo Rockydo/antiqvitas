@@ -439,6 +439,17 @@ def validate(entries: list[dict[str, str]]) -> None:
                         failures.append(f"{png.relative_to(ROOT)} must have an alpha channel")
                     elif image.getpixel((0, 0))[3] != 0:
                         failures.append(f"{png.relative_to(ROOT)} must have a transparent corner")
+                    else:
+                        alpha = image.getchannel("A")
+                        histogram = alpha.histogram()
+                        mean_alpha = sum(value * count for value, count in enumerate(histogram)) / (
+                            255 * image.width * image.height
+                        )
+                        if mean_alpha >= 0.67:
+                            failures.append(
+                                f"{png.relative_to(ROOT)} has geometric backplate occupancy "
+                                f"({mean_alpha:.3f}); custom trade goods must be direct object cutouts"
+                            )
             except OSError as exc:
                 failures.append(f"{png.relative_to(ROOT)} is unreadable: {exc}")
         if not icon.is_file():
