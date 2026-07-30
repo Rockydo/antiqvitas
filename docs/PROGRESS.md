@@ -7938,3 +7938,14 @@ reviewed 128px BC7 DDS.
 - Added a permanent audit of promotion, assimilation, estates, subjects, and
   nationalist concessions against installed build 24187685.
 - Validation passes 138/138; paired smoke reports zero mod-unique lines.
+
+## 2026-07-30 - Normalized advance art across every GUI surface
+
+- Audited 16 installed advance-art calls across nine GUI contexts.
+- Converted all 365 current masters to transparent RGBA and BC7 sRGB/mipmapped
+  DDS; regenerated 204 dependent doctrine icons.
+- Replaced four outliers, including Regional Law Codes, from one four-up sheet
+  generated against installed EU5 cutout references.
+- Added permanent format, alpha, safe-area, surface-drift, and hash-chain
+  checks plus reviewed contact sheets and a live Advances-panel probe.
+- Validation passes 139/139; paired smoke reports zero mod-unique lines.

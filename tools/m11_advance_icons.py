@@ -68,6 +68,10 @@ def png_size(path: Path) -> tuple[int, int]:
     with Image.open(path) as image:
         if image.format != "PNG":
             raise ValueError(f"M11 advance-icon master is not PNG: {path}")
+        if image.mode != "RGBA":
+            raise ValueError(
+                f"M11 advance-icon master must be RGBA for unmasked GUI surfaces: {path}"
+            )
         return image.size
 
 

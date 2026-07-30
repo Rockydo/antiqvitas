@@ -1,0 +1,10 @@
+file,expression,count,surface,display,local_mask,asset_requirement
+main_menu/gui/shared/building_tooltips.gui,GetAdvanceIcon,1,building requirement tooltip,small prerequisite icon,none at asset call,RGBA; transparent perimeter; centered 3px-safe subject
+main_menu/gui/shared/advances_tooltips.gui,GetAdvanceIcon,3,current-research and advance tooltips,"79%, 97%, and 100% icon wells","mixed: none, round, and square-round",RGBA; transparent perimeter; centered 3px-safe subject
+in_game/gui/messages.gui,GetAdvanceIcon,2,research message decorations,60x60,none,RGBA; transparent perimeter; centered 3px-safe subject
+in_game/gui/technology_lateralview.gui,GetAdvanceIcon,2,technology current-research panels,compact and large current-research wells,none at asset call,RGBA; transparent perimeter; centered 3px-safe subject
+in_game/gui/technology_lateralview.gui,GetChoiceIcon,1,technology-tree choice node,tree node,GUI node chrome only,RGBA; transparent perimeter; centered 3px-safe subject
+in_game/gui/agenda_view.gui,GetAdvanceIcon,1,agenda current-research button,65% of round top-navigation well,none,RGBA; transparent perimeter; centered 3px-safe subject
+in_game/gui/advances_lateralview.gui,GetAdvanceIcon,3,"research list, queue, and age cards",full round/card wells,mixed,RGBA; transparent perimeter; centered 3px-safe subject
+in_game/gui/hud_topbar.gui,GetAdvanceIcon,1,HUD current-research button,65% of round topbar well,none,RGBA; transparent perimeter; centered 3px-safe subject
+in_game/gui/shared/combat_tooltips.gui,GetAdvanceIcon,2,combat unlock prerequisites,small prerequisite icons,none at asset call,RGBA; transparent perimeter; centered 3px-safe subject

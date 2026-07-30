@@ -139,6 +139,7 @@ VALIDATE_COMMANDS = (
     Command("tools/m12_disease_safety.py", ("--check",)),
     Command("tools/m12_installed_content_census.py", ("--check",)),
     Command("tools/m11_advance_icons.py", ("--check",)),
+    Command("tools/m11_advance_format.py", ("--check",)),
     Command("tools/m11_flavor_events.py", ("--check",)),
     Command("tools/m11_dynamic_coas.py", ("--check",)),
     Command("tools/m11_common_icons.py", ("--check",)),

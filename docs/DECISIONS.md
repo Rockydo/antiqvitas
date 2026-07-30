@@ -4198,3 +4198,13 @@ remainders may be tolerated but never silently accepted. Validate the hierarchy
 against the installed promotion, estate, subject, assimilation, and nationalist
 contracts; regenerate population-derived naming and presence layers whenever a
 court primary changes.
+
+## 2026-07-30 - Advance assets own their transparency
+
+Do not depend on GUI masks: installed advance calls include unmasked agenda,
+HUD, message, and tooltip contexts. Every master is 256x256 RGBA with a
+transparent perimeter and compiles to BC7 sRGB with mipmaps. Existing reviewed
+scenes may use the deterministic round-alpha compatibility treatment. New or
+reworked art uses four-up generation against installed EU5 advance cutouts,
+flat chroma removal, and a compact centered subject. Advance-derived doctrine
+icons must be regenerated after their source motifs change.

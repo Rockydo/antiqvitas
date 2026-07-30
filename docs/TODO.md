@@ -55,10 +55,9 @@ and focused runtime probe all pass.
   gated. Population summaries and artillery-facing UI now have direct ancient
   resolver art. Rome starts at technology level 3 with a positive opening
   balance; the remaining risk is incomplete 12-month runtime proof.
-- Existing building and advance art is generally strong, but centering, circular
-  safe-area compliance, and outlier quality were not validated in every actual
-  gameplay panel. Villa Liviae and Regional Law Codes remain confirmed focused
-  review targets; location-pop and artillery resolvers now use direct ancient art.
+- Existing building art is generally strong, but Villa Liviae remains a focused
+  review target. Advance alpha, safe-area, and GUI-surface formatting are now
+  audited; location-pop and artillery resolvers use direct ancient art.
 
 ### S2-P0 — Opening-state correctness and vanilla-system quarantine
 
@@ -903,7 +902,7 @@ and focused runtime probe all pass.
 ### S2-P3 — Triple and deepen the advance/institution arc
 
 - [ ] Expand from 250 to at least 750 substantive advances.
-  - Before creating any new advances, I want you to analyze how advances icons look in every available GUI screen they show up in. I've noticed some formatting issues.
+  - [x] Before creating any new advances, I want you to analyze how advances icons look in every available GUI screen they show up in. I've noticed some formatting issues.
 	I want these all corrected before any new ones are added. And after correcting, make sure that future agents will know to use the best exact format so this mistake isn't done again.
   - Preserve good existing art and historically sound nodes, but replace repeated
     filler effects. Most new nodes must be culture, region, polity, religion, or
@@ -930,9 +929,11 @@ and focused runtime probe all pass.
     unrelated institutions remain unavailable; panel density and spread probes pass.
 
 - [ ] Perform an art-quality pass while expanding the tree.
-  - Review all advance icons in circular UI context. Re-render composition,
-    lighting, framing, or historical object choice for outliers such as Regional
-    Law Codes while preserving the successful visual language.
+  - [x] Review all 365 current advance icons in circular UI context and replace
+    the confirmed formatting outliers.
+  - Re-render composition, lighting, framing, or historical object choice for
+    further outliers found during expansion while preserving the successful
+    visual language.
   - Acceptance: direct-art uniqueness, alpha/format/safe-area validators and
     reviewed contact sheets; no square crop, text artifact, modern object, or
     obvious quality outlier.
