@@ -2072,6 +2072,8 @@ countries = {
 				indian_ocean_region
 				east_china_region
 			}
+			accepted_cultures = { antq_etruscan antq_greek_koine antq_oscan_umbrian antq_venetic }
+			tolerated_cultures = { antq_aeduan antq_aeolian antq_allobrogian antq_ambarrian antq_ambianian antq_andecavian antq_aquitanian antq_aramaic antq_ardiaean antq_arevacian antq_armorican antq_artabrian antq_arvernian antq_asturian antq_atrebatian antq_aulerci_cenomanian antq_aulerci_diablintian antq_aulerci_eburovician antq_auscian antq_ausetanian antq_autariatan antq_autrigonian antq_baiocassian antq_bastetan antq_bastulian antq_belgic antq_bellian antq_bellovacian antq_bigerrionian antq_bithynian antq_biturigan_cubian antq_bracaran antq_breucian antq_cabalian antq_cadurcian antq_caletian antq_cantabrian antq_carian antq_caristian antq_carnutian antq_carpetanian antq_cataonian antq_cavaric antq_celtiberian antq_celtician antq_ceretanian antq_ceutronian antq_chalybian antq_cisalpine_gallic antq_consorannian antq_contestanian antq_convenian antq_coriosolitan antq_cynetan antq_dardanian antq_delmatian antq_dentheletian antq_edetan antq_egyptian antq_elisycean antq_elusatian antq_enchelean antq_gabalian antq_galatian_tectosagian antq_gallaecian antq_gigurrian antq_helvetian antq_helvian antq_henetian antq_homonadean antq_iacetanian antq_iapodian antq_iberian antq_ilercavonian antq_ilergetian antq_illyrian antq_indigetan antq_ionian antq_lacetanian antq_lemovician antq_leucian antq_liburnian_culture antq_ligurian antq_limican antq_lingonian antq_luggonian antq_lusitanian antq_lusonian antq_lycaonian antq_lycian antq_lydian antq_lyncestian antq_macedonian antq_maedian antq_mariandynian antq_mediomatrician antq_moesian antq_morinian antq_mysian antq_namnetian antq_nervian antq_nitiobrigian antq_noric antq_nuragic antq_olcadian antq_orestian antq_oretan antq_osismian antq_paeonian antq_paesician antq_pamphylian antq_pannonian antq_paphlagonian antq_parisian antq_parthinian antq_pelagonian antq_pelendonian antq_petrocorian antq_phoenician_punic antq_phrygian antq_pictonian antq_pisidian antq_pleraean antq_redonian antq_remian antq_rhaetic antq_rutenian antq_saluvian antq_santonian antq_scordiscan antq_sedetanian antq_segusiavian antq_senonian antq_sequanian antq_suessetanian antq_suessionian antq_tarbellian antq_taulantian antq_thracian antq_tibarenian antq_tolistobogian antq_treverian antq_triballian antq_trocmian antq_turdetanian antq_turdulian antq_turmodigian antq_turonian antq_unellian antq_vaccaean antq_vardulian antq_vasconian antq_veliocassian antq_venetian antq_vettonian antq_viromanduian antq_viviscan antq_vocontian antq_volcan_arecomican antq_volcan_tectosagian }
 			government = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
@@ -2407,6 +2409,8 @@ countries = {
 			discovered_regions = {
 				anatolia_region
 			}
+			accepted_cultures = { antq_cappadocian }
+			tolerated_cultures = { antq_macronian antq_mossynoecian }
 			government = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
@@ -2490,6 +2494,8 @@ countries = {
 			discovered_regions = {
 				anatolia_region
 			}
+			accepted_cultures = { antq_comanaean antq_leucosyrian }
+			tolerated_cultures = { antq_cilician_pedian antq_cilician_trachean }
 			government = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
@@ -2631,6 +2637,7 @@ countries = {
 			discovered_regions = {
 				balkan_region
 			}
+			accepted_cultures = { antq_bessian antq_odrysian antq_sapaean antq_thracian }
 			government = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
@@ -2873,6 +2880,7 @@ countries = {
 				ethiopia_region
 				somalia_region
 			}
+			accepted_cultures = { antq_gaetulian }
 			government = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
@@ -3442,6 +3450,8 @@ countries = {
 				caucasus_region
 				crescent_region
 			}
+			accepted_cultures = { antq_hyrcanian antq_median }
+			tolerated_cultures = { antq_aramaic antq_carmanian antq_judean antq_phoenician_punic antq_saka antq_syriac }
 			government = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
@@ -4172,6 +4182,7 @@ countries = {
 				anatolia_region
 				persia_region
 			}
+			accepted_cultures = { antq_kartvelian }
 			government = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
@@ -6324,6 +6335,8 @@ countries = {
 				crescent_region
 				anatolia_region
 			}
+			accepted_cultures = { antq_ba_han antq_chu_han antq_hexi_han antq_jin_han antq_poyang_han antq_qilu_han antq_qin_han antq_shu_han antq_wu_yue antq_yan_han }
+			tolerated_cultures = { antq_austronesian antq_dian antq_lelang_gojoseon antq_lingnan_yue antq_min_yue antq_qiang antq_vietic antq_yelang }
 			government = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
@@ -6527,6 +6540,7 @@ countries = {
 				north_china_region
 				manchuria_region
 			}
+			tolerated_cultures = { antq_wuhuan antq_xianbei }
 			government = {
 				type = steppe_horde
 				heir_selection = tribal_oldest_male
@@ -7539,6 +7553,7 @@ countries = {
 				south_china_region
 				east_china_region
 			}
+			accepted_cultures = { antq_proto_telugu_kannada }
 			government = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
@@ -7735,6 +7750,8 @@ countries = {
 				south_china_region
 				east_china_region
 			}
+			accepted_cultures = { antq_gandhari }
+			tolerated_cultures = { antq_indo_aryan }
 			government = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
@@ -7946,6 +7963,8 @@ countries = {
 				khorasan_region
 				persia_region
 			}
+			accepted_cultures = { antq_saka antq_sogdian }
+			tolerated_cultures = { antq_kucha_oasis }
 			government = {
 				type = tribe
 				heir_selection = tribal_oldest_male
@@ -9082,6 +9101,8 @@ countries = {
 				ethiopia_region
 				somalia_region
 			}
+			accepted_cultures = { antq_nubian }
+			tolerated_cultures = { antq_nilotic }
 			government = {
 				type = tribe
 				heir_selection = tribal_oldest_male
@@ -10617,6 +10638,7 @@ countries = {
 				persia_region
 				indian_ocean_region
 			}
+			accepted_cultures = { antq_himyarite }
 			government = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture
@@ -10699,6 +10721,7 @@ countries = {
 				persia_region
 				indian_ocean_region
 			}
+			accepted_cultures = { antq_sabaean }
 			government = {
 				type = monarchy
 				heir_selection = cognatic_primogeniture

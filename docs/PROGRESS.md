@@ -7928,3 +7928,13 @@ reviewed 128px BC7 DDS.
   12 anchors, and eight direct assets from two reviewed four-up sheets.
 - Active totals: 52 religions and 280 buildings.
 - Validation passes 137/137; paired smoke reports zero mod-unique lines.
+
+## 2026-07-30 - Rebuilt cultural integration
+
+- Added 15 plural-rule profiles and 168 directed affinity edges across four
+  controlled relationship classes.
+- Rome, Han, Arsacid Iran, Satavahana, Yuezhi/Xiongnu, and ten regional courts
+  now have distinct primary, accepted, tolerated, and future integration paths.
+- Added a permanent audit of promotion, assimilation, estates, subjects, and
+  nationalist concessions against installed build 24187685.
+- Validation passes 138/138; paired smoke reports zero mod-unique lines.

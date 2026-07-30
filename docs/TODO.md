@@ -811,7 +811,7 @@ and focused runtime probe all pass.
   - Acceptance: complete global placeholder census is zero and regional size/
     identity outliers are justified in `ASSUMPTIONS.md`.
 
-- [ ] Rebuild cultural affinity and multiethnic-rule behavior.
+- [x] Rebuild cultural affinity and multiethnic-rule behavior.
   - Audit culture groups, languages, dialects, religion, accepted-status rules,
     distance/similarity, assimilation, promotion, estate membership, subject
     relations, and revolt pressure against local engine behavior.

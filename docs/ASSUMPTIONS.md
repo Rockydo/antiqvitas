@@ -5816,3 +5816,14 @@ borders. Southern traditions represent plural material contexts, not one
 uniform religion. Sources: `GLOT-CHADIC`; `GLOT-IGBOID`; `GLOT-GBE`;
 `GLOT-GUR`; `GLOT-AKANIC`; `CAM-SA-2024`; `OUP-SOUTH-AFRICA`.
 [contested]
+
+## 2026-07-30 - Imperial integration statuses are political abstractions
+
+Roman Latin/Greek/Italian acceptance, Han commandery affinity, Arsacid
+satrapal pluralism, and the Satavahana, Yuezhi, Xiongnu, Thracian, Anatolian,
+South Arabian, and Nile-corridor paths model access to rule, not ethnic
+uniformity or a complete legal census. Han-Xiongnu negativity is a bounded
+opening court rivalry, not universal enmity. Sources: `P8.1`-`P8.5`; `P10`;
+`CAH-XI`; `BHR`; `CAM-HAN-REG`; `HAN-WR`; `IRAN-KUC`; `UNESCO-SABA`;
+`HIMYAR-HIST`; `OCD`; `PLE`. [secure broad imperial diversity; contested
+exact status boundaries]

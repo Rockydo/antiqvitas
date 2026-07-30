@@ -20,7 +20,7 @@ from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 
 from extract_vanilla import tokenize
-from generate_country_definitions import historical_profile_for
+from generate_country_definitions import historical_profile_for, load_integration_profiles
 from m5_regional_buildings import CITY_ONLY_FAMILIES, expanded_seed_rows
 from m6_power import character_manager, dynasty_manager, government_block, load_power_data
 from m7_war import load_units, tag_map as m7_tag_map, validate_start_ledgers
@@ -1451,7 +1451,9 @@ def allocate_population_group(
     return assigned
 
 
-def population_manager(compatibility_cultures: list[str]) -> tuple[str, int, Decimal]:
+def population_manager(
+    compatibility_cultures: list[str],
+) -> tuple[str, int, Decimal, dict[str, set[str]]]:
     """Render all controlled AD 1 locations against section 12.4 target totals."""
     roster_rows = csv_rows(ROSTER)
     roster = {row["tag"]: row for row in roster_rows}
@@ -1543,6 +1545,7 @@ def population_manager(compatibility_cultures: list[str]) -> tuple[str, int, Dec
         "# Installed vanilla density is a residual geographic weighting template only and never historical evidence.",
         "locations = {",
     ]
+    resident_cultures: defaultdict[str, set[str]] = defaultdict(set)
     for location in sorted(owners):
         row = roster[owners[location]]
         profile = historical_profile_for(row)
@@ -1553,6 +1556,7 @@ def population_manager(compatibility_cultures: list[str]) -> tuple[str, int, Dec
             "religion",
             religion_remaps.get(location, {}).get("religion", profile.religion),
         )
+        resident_cultures[owners[location]].add(culture)
         lines.extend(
             (
                 f"\t{location} = {{",
@@ -1562,7 +1566,12 @@ def population_manager(compatibility_cultures: list[str]) -> tuple[str, int, Dec
             )
         )
     lines.extend(("}", ""))
-    return "\n".join(lines), len(owners), sum(sizes.values(), Decimal()) + compatibility_total
+    return (
+        "\n".join(lines),
+        len(owners),
+        sum(sizes.values(), Decimal()) + compatibility_total,
+        dict(resident_cultures),
+    )
 
 
 def fallback_government_block(kind: str) -> list[str]:
@@ -1589,7 +1598,7 @@ def fallback_government_block(kind: str) -> list[str]:
     ]
 
 
-def country_manager() -> tuple[str, int, int]:
+def country_manager(resident_cultures: dict[str, set[str]]) -> tuple[str, int, int]:
     """Render M3 countries from checked ownership plus verified capitals.
 
     Generic random-ruler scaffolding remains only for countries outside the
@@ -1603,6 +1612,7 @@ def country_manager() -> tuple[str, int, int]:
         for entry in json.loads(TAG_MAP.read_text(encoding="utf-8"))["entries"]
     }
     power = load_power_data()
+    integration_profiles = load_integration_profiles()
     current_terms = {term["design_tag"]: term for term in power.ruler_terms}
     ownership: dict[str, dict[str, list[str]]] = {}
     with OWNERSHIP.open(encoding="utf-8-sig", newline="") as handle:
@@ -1640,6 +1650,30 @@ def country_manager() -> tuple[str, int, int]:
         lines.append("\t\t\tdiscovered_regions = {")
         lines.extend(f"\t\t\t\t{region}" for region in m9_discovery_regions(row))
         lines.append("\t\t\t}")
+        integration = integration_profiles.get(row["tag"])
+        if integration is not None:
+            accepted = set(integration.accepted_cultures)
+            if integration.tolerated_mode == "resident_remainder":
+                tolerated = (
+                    set(resident_cultures.get(row["tag"], set()))
+                    | set(integration.tolerated_cultures)
+                ) - accepted - {integration.primary_culture}
+            elif integration.tolerated_mode == "explicit":
+                tolerated = set(integration.tolerated_cultures)
+            else:
+                tolerated = set()
+            if accepted:
+                lines.append(
+                    "\t\t\taccepted_cultures = { "
+                    + " ".join(sorted(accepted))
+                    + " }"
+                )
+            if tolerated:
+                lines.append(
+                    "\t\t\ttolerated_cultures = { "
+                    + " ".join(sorted(tolerated))
+                    + " }"
+                )
         if row["tag"] in power.governments:
             lines.extend(
                 government_block(
@@ -1719,9 +1753,11 @@ def generated_files() -> tuple[dict[str, str], int, int, int, int, Decimal, int,
     roads, road_count = road_network()
     development, development_count = development_manager()
     compatibility_cultures = culture_presence_cultures()
-    pops, pop_locations, pop_total = population_manager(compatibility_cultures)
+    pops, pop_locations, pop_total, resident_cultures = population_manager(
+        compatibility_cultures
+    )
     power = load_power_data()
-    countries, count, controlled = country_manager()
+    countries, count, controlled = country_manager(resident_cultures)
     diplomacy, dependencies = diplomacy_manager()
     return (
         {

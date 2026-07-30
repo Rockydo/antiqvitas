@@ -4189,3 +4189,12 @@ settlement generator.
 Selected cultures may bind a reviewed custom dialect; all others retain their
 group default. The definition, dynamic-name, and correction generators share
 the same resolution rule. Familyless adapters follow installed Khoe/Tuu syntax.
+
+## 2026-07-30 - Cultural integration is explicit and asymmetric by status
+
+Use sparse reciprocal culture views plus country-specific primary, accepted,
+and tolerated lists. Unlisted pairs retain neutral engine affinity. Resident
+remainders may be tolerated but never silently accepted. Validate the hierarchy
+against the installed promotion, estate, subject, assimilation, and nationalist
+contracts; regenerate population-derived naming and presence layers whenever a
+court primary changes.

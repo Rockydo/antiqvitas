@@ -14,6 +14,7 @@ import hashlib
 import json
 import sys
 from dataclasses import dataclass
+from functools import cache
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -21,6 +22,7 @@ ROSTER = ROOT / "docs/world_1ad/polities.csv"
 TAG_MAP = ROOT / "docs/world_1ad/tag_map.json"
 M4_REGIONAL_PROFILES = ROOT / "docs/m4/regional_profiles.csv"
 M4_TAG_PROFILES = ROOT / "docs/m4/tag_profiles.csv"
+M4_INTEGRATION_PROFILES = ROOT / "docs/m4/cultural_integration_profiles.csv"
 M4_SYMBOLS = ROOT / "docs/m4/definition_symbols.json"
 CORE_COAS = ROOT / "docs/m11/core_coas.csv"
 COA_THEMES = ROOT / "docs/m11/coa_theme_catalog.csv"
@@ -129,6 +131,19 @@ class HistoricalProfile:
 
 
 @dataclass(frozen=True)
+class IntegrationProfile:
+    design_tag: str
+    path: str
+    primary_culture: str
+    accepted_cultures: tuple[str, ...]
+    tolerated_mode: str
+    tolerated_cultures: tuple[str, ...]
+    source: str
+    confidence: str
+    note: str
+
+
+@dataclass(frozen=True)
 class CoaOverride:
     emblem: str
     color1: str
@@ -155,6 +170,7 @@ def load_rows() -> list[dict[str, str]]:
         return list(csv.DictReader(handle))
 
 
+@cache
 def load_historical_profiles(path: Path, key_column: str) -> dict[str, HistoricalProfile]:
     """Load source-labelled M4 profile data without burying it in code."""
     with path.open(encoding="utf-8-sig", newline="") as handle:
@@ -180,6 +196,57 @@ def load_historical_profiles(path: Path, key_column: str) -> dict[str, Historica
             row["note"].strip(),
         )
     return profiles
+
+
+@cache
+def load_integration_profiles() -> dict[str, IntegrationProfile]:
+    required = (
+        "design_tag", "path", "primary_culture", "accepted_cultures",
+        "tolerated_mode", "tolerated_cultures", "source", "confidence", "note",
+    )
+    with M4_INTEGRATION_PROFILES.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if tuple(reader.fieldnames or ()) != required:
+            raise ValueError(
+                f"{M4_INTEGRATION_PROFILES.relative_to(ROOT)} has an unexpected header"
+            )
+        rows = list(reader)
+    result: dict[str, IntegrationProfile] = {}
+    for number, row in enumerate(rows, start=2):
+        tag = row["design_tag"].strip()
+        mandatory = (
+            "design_tag", "path", "primary_culture", "tolerated_mode",
+            "source", "confidence", "note",
+        )
+        if any(not row[field].strip() for field in mandatory):
+            raise ValueError(
+                f"{M4_INTEGRATION_PROFILES.relative_to(ROOT)}:{number}: blank required field"
+            )
+        if tag in result:
+            raise ValueError(
+                f"{M4_INTEGRATION_PROFILES.relative_to(ROOT)} repeats {tag}"
+            )
+        if row["tolerated_mode"].strip() not in {
+            "none", "explicit", "resident_remainder"
+        }:
+            raise ValueError(f"{tag}: invalid tolerated mode")
+        if row["confidence"].strip() not in {"secure", "contested"}:
+            raise ValueError(f"{tag}: invalid integration confidence")
+        split = lambda value: tuple(
+            item.strip() for item in value.split("|") if item.strip()
+        )
+        result[tag] = IntegrationProfile(
+            tag,
+            row["path"].strip(),
+            row["primary_culture"].strip(),
+            split(row["accepted_cultures"]),
+            row["tolerated_mode"].strip(),
+            split(row["tolerated_cultures"]),
+            row["source"].strip(),
+            row["confidence"].strip(),
+            row["note"].strip(),
+        )
+    return result
 
 
 def load_coa_overrides() -> dict[str, CoaOverride]:
@@ -227,7 +294,17 @@ def historical_profile_for(row: dict[str, str]) -> HistoricalProfile:
     regions = load_historical_profiles(M4_REGIONAL_PROFILES, "region")
     tags = load_historical_profiles(M4_TAG_PROFILES, "tag")
     try:
-        return tags.get(row["tag"], regions[row["region"]])
+        profile = tags.get(row["tag"], regions[row["region"]])
+        integration = load_integration_profiles().get(row["tag"])
+        if integration is None:
+            return profile
+        return HistoricalProfile(
+            integration.primary_culture,
+            profile.religion,
+            f"{profile.source};{integration.source}",
+            profile.confidence,
+            f"{profile.note}; {integration.note}",
+        )
     except KeyError as exc:
         raise ValueError(f"no M4 historical profile for {row.get('tag')} / {row.get('region')}") from exc
 
