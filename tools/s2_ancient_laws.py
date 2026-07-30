@@ -18,6 +18,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from dates import AntqDate, M2_MIRROR_LANGUAGES
+from goods_integration import bindings as goods_bindings, modifier_additions, modifier_name
 
 ROOT = Path(__file__).resolve().parents[1]
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
@@ -63,6 +64,11 @@ ALLOWED_MODIFIERS = frozenset((
     "tolerance_heathen", "tribes_estate_target_satisfaction",
     "wrong_culture_levy_size",
 ))
+ALLOWED_MODIFIERS |= frozenset(
+    modifier_name(row)
+    for row in goods_bindings()
+    if row.surface == "law_modifier"
+)
 FORBIDDEN = frozenset((
     "feudal", "renaissance", "parliament", "serf", "colonial", "national",
     "constitutional", "modern", "medieval",
@@ -953,7 +959,16 @@ def option_effects(
     power = profile_power_modifier(profile, stance_index)
     if power not in effects:
         effects.append(power)
-    return tuple(effects)
+    return integrated_effects(
+        option_key(profile.key, theme.key, STANCE_KEYS[stance_index]),
+        tuple(effects),
+    )
+
+
+def integrated_effects(
+    option: str, effects: tuple[tuple[str, str], ...]
+) -> tuple[tuple[str, str], ...]:
+    return tuple((*effects, *modifier_additions("law_modifier", option)))
 
 
 def render_laws() -> str:
@@ -1001,7 +1016,7 @@ def render_laws() -> str:
                 ))
                 lines.extend(
                     f"\t\t\t{modifier} = {value}"
-                    for modifier, value in option.effects
+                    for modifier, value in integrated_effects(option.key, option.effects)
                 )
                 lines.extend(("\t\t}", "\t\tyears = 2", "\t\testate_preferences = {"))
                 lines.extend(f"\t\t\t{estate}" for estate in option.preferences)
@@ -1021,7 +1036,7 @@ def render_laws() -> str:
                 ))
                 lines.extend(
                     f"\t\t\t{modifier} = {value}"
-                    for modifier, value in option.effects
+                    for modifier, value in integrated_effects(option.key, option.effects)
                 )
                 lines.extend(("\t\t}", "\t\tyears = 2", "\t\testate_preferences = {"))
                 lines.extend(f"\t\t\t{estate}" for estate in option.preferences)
@@ -1117,7 +1132,10 @@ def option_ledger() -> str:
             "dated",
             option.name,
             option.description,
-            "|".join(f"{key}={value}" for key, value in option.effects),
+            "|".join(
+                f"{key}={value}"
+                for key, value in integrated_effects(option.key, option.effects)
+            ),
             "|".join(option.preferences),
             "no",
             option.available.engine(),
@@ -1140,7 +1158,10 @@ def option_ledger() -> str:
             "country",
             option.name,
             option.description,
-            "|".join(f"{key}={value}" for key, value in option.effects),
+            "|".join(
+                f"{key}={value}"
+                for key, value in integrated_effects(option.key, option.effects)
+            ),
             "|".join(option.preferences),
             "no",
             "",
@@ -1251,10 +1272,11 @@ def validate_content() -> None:
         if option.key in late_keys:
             failures.append(f"duplicate dated law option {option.key}")
         late_keys.add(option.key)
-        if len(option.effects) < 3 or option.effects in late_packages:
+        effects = integrated_effects(option.key, option.effects)
+        if len(effects) < 3 or effects in late_packages:
             failures.append(f"dated law option {option.key} lacks a distinct three-effect package")
-        late_packages.add(option.effects)
-        for modifier, _value in option.effects:
+        late_packages.add(effects)
+        for modifier, _value in effects:
             if modifier not in ALLOWED_MODIFIERS:
                 failures.append(f"dated law option {option.key} uses unverified modifier {modifier}")
         if set(option.preferences) - ESTATES:
@@ -1278,10 +1300,11 @@ def validate_content() -> None:
         if option.key in country_keys:
             failures.append(f"duplicate country law option {option.key}")
         country_keys.add(option.key)
-        if len(option.effects) < 3 or option.effects in country_packages:
+        effects = integrated_effects(option.key, option.effects)
+        if len(effects) < 3 or effects in country_packages:
             failures.append(f"country law option {option.key} lacks a distinct three-effect package")
-        country_packages.add(option.effects)
-        for modifier, _value in option.effects:
+        country_packages.add(effects)
+        for modifier, _value in effects:
             if modifier not in ALLOWED_MODIFIERS:
                 failures.append(f"country law option {option.key} uses unverified modifier {modifier}")
         if set(option.preferences) - ESTATES:

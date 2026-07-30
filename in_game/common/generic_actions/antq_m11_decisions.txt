@@ -17,7 +17,9 @@ antq_endow_public_games = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 20 }
+		scope:actor = {
+			gold >= 20
+		}
 	}
 
 	cooldown = {
@@ -54,7 +56,14 @@ antq_fund_the_annona = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 30 }
+		scope:actor = {
+			gold >= 30
+			exists = capital.market
+			capital.market = {
+				"stockpile_in_market(goods:antq_grain_products)" >= 5
+				"stockpile_in_market(goods:antq_cured_meat)" >= 2
+			}
+		}
 	}
 
 	cooldown = {
@@ -66,6 +75,16 @@ antq_fund_the_annona = {
 		scope:actor = {
 			add_gold = -30
 			add_stability = stability_weak_bonus
+			capital.market = {
+				add_goods_supply = {
+					goods = goods:antq_grain_products
+					amount = market_goods_mild_gain
+				}
+				add_goods_supply = {
+					goods = goods:antq_cured_meat
+					amount = market_goods_weak_gain
+				}
+			}
 		}
 	}
 
@@ -91,7 +110,9 @@ antq_consult_the_senate = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 10 }
+		scope:actor = {
+			gold >= 10
+		}
 	}
 
 	cooldown = {
@@ -128,7 +149,9 @@ antq_audit_provincial_governors = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 15 }
+		scope:actor = {
+			gold >= 15
+		}
 	}
 
 	cooldown = {
@@ -165,7 +188,9 @@ antq_repair_consular_roads = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 25 }
+		scope:actor = {
+			gold >= 25
+		}
 	}
 
 	cooldown = {
@@ -202,7 +227,9 @@ antq_renew_auxiliary_compacts = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 20 }
+		scope:actor = {
+			gold >= 20
+		}
 	}
 
 	cooldown = {
@@ -239,7 +266,9 @@ antq_receive_foreign_embassy = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 10 }
+		scope:actor = {
+			gold >= 10
+		}
 	}
 
 	cooldown = {
@@ -276,7 +305,9 @@ antq_dedicate_a_votive_offering = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 10 }
+		scope:actor = {
+			gold >= 10
+		}
 	}
 
 	cooldown = {
@@ -313,7 +344,9 @@ antq_review_the_classics = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 15 }
+		scope:actor = {
+			gold >= 15
+		}
 	}
 
 	cooldown = {
@@ -350,7 +383,9 @@ antq_inspect_the_commanderies = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 20 }
+		scope:actor = {
+			gold >= 20
+		}
 	}
 
 	cooldown = {
@@ -387,7 +422,14 @@ antq_open_granary_reserves = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 30 }
+		scope:actor = {
+			gold >= 30
+			exists = capital.market
+			capital.market = {
+				"stockpile_in_market(goods:rice)" >= 5
+				"stockpile_in_market(goods:antq_soy_condiments)" >= 2
+			}
+		}
 	}
 
 	cooldown = {
@@ -399,6 +441,16 @@ antq_open_granary_reserves = {
 		scope:actor = {
 			add_gold = -30
 			add_stability = stability_weak_bonus
+			capital.market = {
+				add_goods_supply = {
+					goods = goods:rice
+					amount = market_goods_mild_gain
+				}
+				add_goods_supply = {
+					goods = goods:antq_soy_condiments
+					amount = market_goods_weak_gain
+				}
+			}
 		}
 	}
 
@@ -424,7 +476,9 @@ antq_dispatch_a_frontier_envoy = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 15 }
+		scope:actor = {
+			gold >= 15
+		}
 	}
 
 	cooldown = {
@@ -461,7 +515,14 @@ antq_sponsor_irrigation_works = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 25 }
+		scope:actor = {
+			gold >= 25
+			exists = capital.market
+			capital.market = {
+				"stockpile_in_market(goods:rice)" >= 3
+				"stockpile_in_market(goods:antq_sesame)" >= 2
+			}
+		}
 	}
 
 	cooldown = {
@@ -473,6 +534,16 @@ antq_sponsor_irrigation_works = {
 		scope:actor = {
 			add_gold = -25
 			add_stability = stability_weak_bonus
+			capital.market = {
+				add_goods_supply = {
+					goods = goods:rice
+					amount = market_goods_weak_gain
+				}
+				add_goods_supply = {
+					goods = goods:antq_sesame
+					amount = market_goods_weak_gain
+				}
+			}
 		}
 	}
 
@@ -498,7 +569,9 @@ antq_scrutinize_the_registers = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 15 }
+		scope:actor = {
+			gold >= 15
+		}
 	}
 
 	cooldown = {
@@ -535,7 +608,9 @@ antq_honor_filial_service = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 10 }
+		scope:actor = {
+			gold >= 10
+		}
 	}
 
 	cooldown = {
@@ -572,7 +647,9 @@ antq_remit_local_corvee = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 25 }
+		scope:actor = {
+			gold >= 25
+		}
 	}
 
 	cooldown = {
@@ -609,7 +686,9 @@ antq_convene_the_great_houses = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 20 }
+		scope:actor = {
+			gold >= 20
+		}
 	}
 
 	cooldown = {
@@ -649,7 +728,14 @@ antq_safeguard_caravan_routes = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 25 }
+		scope:actor = {
+			gold >= 25
+			exists = capital.market
+			capital.market = {
+				"stockpile_in_market(goods:antq_dates)" >= 3
+				"stockpile_in_market(goods:antq_dried_fruit)" >= 2
+			}
+		}
 	}
 
 	cooldown = {
@@ -661,6 +747,16 @@ antq_safeguard_caravan_routes = {
 		scope:actor = {
 			add_gold = -25
 			add_stability = stability_weak_bonus
+			capital.market = {
+				add_goods_supply = {
+					goods = goods:antq_dates
+					amount = market_goods_weak_gain
+				}
+				add_goods_supply = {
+					goods = goods:antq_dried_fruit
+					amount = market_goods_weak_gain
+				}
+			}
 		}
 	}
 
@@ -689,7 +785,9 @@ antq_mint_silver_drachms = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 20 }
+		scope:actor = {
+			gold >= 20
+		}
 	}
 
 	cooldown = {
@@ -726,7 +824,9 @@ antq_hold_a_royal_hunt = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 20 }
+		scope:actor = {
+			gold >= 20
+		}
 	}
 
 	cooldown = {
@@ -765,7 +865,14 @@ antq_endow_a_fire_temple = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 20 }
+		scope:actor = {
+			gold >= 20
+			exists = capital.market
+			capital.market = {
+				"stockpile_in_market(goods:incense)" >= 3
+				"stockpile_in_market(goods:antq_sesame_oil)" >= 2
+			}
+		}
 	}
 
 	cooldown = {
@@ -777,6 +884,16 @@ antq_endow_a_fire_temple = {
 		scope:actor = {
 			add_gold = -20
 			add_stability = stability_weak_bonus
+			capital.market = {
+				add_goods_supply = {
+					goods = goods:incense
+					amount = market_goods_weak_gain
+				}
+				add_goods_supply = {
+					goods = goods:antq_sesame_oil
+					amount = market_goods_weak_gain
+				}
+			}
 		}
 	}
 
@@ -805,7 +922,9 @@ antq_renew_dynastic_marriages = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 15 }
+		scope:actor = {
+			gold >= 15
+		}
 	}
 
 	cooldown = {
@@ -846,7 +965,9 @@ antq_endow_a_water_tank = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 20 }
+		scope:actor = {
+			gold >= 20
+		}
 	}
 
 	cooldown = {
@@ -887,7 +1008,9 @@ antq_invite_a_learned_teacher = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 15 }
+		scope:actor = {
+			gold >= 15
+		}
 	}
 
 	cooldown = {
@@ -926,7 +1049,9 @@ antq_patronize_sangam_poetry = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 15 }
+		scope:actor = {
+			gold >= 15
+		}
 	}
 
 	cooldown = {
@@ -968,7 +1093,14 @@ antq_maintain_a_monsoon_port = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 25 }
+		scope:actor = {
+			gold >= 25
+			exists = capital.market
+			capital.market = {
+				"stockpile_in_market(goods:antq_cordage)" >= 3
+				"stockpile_in_market(goods:antq_sailcloth)" >= 3
+			}
+		}
 	}
 
 	cooldown = {
@@ -980,6 +1112,16 @@ antq_maintain_a_monsoon_port = {
 		scope:actor = {
 			add_gold = -25
 			add_stability = stability_weak_bonus
+			capital.market = {
+				add_goods_supply = {
+					goods = goods:antq_cordage
+					amount = market_goods_mild_gain
+				}
+				add_goods_supply = {
+					goods = goods:antq_sailcloth
+					amount = market_goods_mild_gain
+				}
+			}
 		}
 	}
 
@@ -1010,7 +1152,14 @@ antq_receive_an_overseas_trader = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 10 }
+		scope:actor = {
+			gold >= 10
+			exists = capital.market
+			capital.market = {
+				"stockpile_in_market(goods:pepper)" >= 2
+				"stockpile_in_market(goods:antq_coconut_products)" >= 2
+			}
+		}
 	}
 
 	cooldown = {
@@ -1022,6 +1171,16 @@ antq_receive_an_overseas_trader = {
 		scope:actor = {
 			add_gold = -10
 			add_prestige = prestige_weak_bonus
+			capital.market = {
+				add_goods_supply = {
+					goods = goods:pepper
+					amount = market_goods_weak_gain
+				}
+				add_goods_supply = {
+					goods = goods:antq_coconut_products
+					amount = market_goods_weak_gain
+				}
+			}
 		}
 	}
 
@@ -1052,7 +1211,14 @@ antq_sponsor_a_pilgrimage = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 15 }
+		scope:actor = {
+			gold >= 15
+			exists = capital.market
+			capital.market = {
+				"stockpile_in_market(goods:incense)" >= 2
+				"stockpile_in_market(goods:antq_dried_fruit)" >= 2
+			}
+		}
 	}
 
 	cooldown = {
@@ -1064,6 +1230,16 @@ antq_sponsor_a_pilgrimage = {
 		scope:actor = {
 			add_gold = -15
 			add_stability = stability_weak_bonus
+			capital.market = {
+				add_goods_supply = {
+					goods = goods:incense
+					amount = market_goods_weak_gain
+				}
+				add_goods_supply = {
+					goods = goods:antq_dried_fruit
+					amount = market_goods_weak_gain
+				}
+			}
 		}
 	}
 
@@ -1095,7 +1271,9 @@ antq_recognize_a_local_cult = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 10 }
+		scope:actor = {
+			gold >= 10
+		}
 	}
 
 	cooldown = {
@@ -1138,7 +1316,9 @@ antq_convene_a_doctrinal_assembly = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 20 }
+		scope:actor = {
+			gold >= 20
+		}
 	}
 
 	cooldown = {
@@ -1182,7 +1362,9 @@ antq_patronize_a_meditation_house = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 20 }
+		scope:actor = {
+			gold >= 20
+		}
 	}
 
 	cooldown = {
@@ -1225,7 +1407,9 @@ antq_protect_a_sacred_grove = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 15 }
+		scope:actor = {
+			gold >= 15
+		}
 	}
 
 	cooldown = {
@@ -1273,7 +1457,9 @@ antq_renew_warband_oaths = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 15 }
+		scope:actor = {
+			gold >= 15
+		}
 	}
 
 	cooldown = {
@@ -1321,7 +1507,9 @@ antq_hold_a_tribal_assembly = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 10 }
+		scope:actor = {
+			gold >= 10
+		}
 	}
 
 	cooldown = {
@@ -1369,7 +1557,9 @@ antq_give_hall_gifts = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 20 }
+		scope:actor = {
+			gold >= 20
+		}
 	}
 
 	cooldown = {
@@ -1417,7 +1607,9 @@ antq_settle_a_blood_feud = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 20 }
+		scope:actor = {
+			gold >= 20
+		}
 	}
 
 	cooldown = {
@@ -1457,7 +1649,14 @@ antq_convene_a_desert_caravan = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 20 }
+		scope:actor = {
+			gold >= 20
+			exists = capital.market
+			capital.market = {
+				"stockpile_in_market(goods:antq_dates)" >= 3
+				"stockpile_in_market(goods:incense)" >= 2
+			}
+		}
 	}
 
 	cooldown = {
@@ -1469,6 +1668,16 @@ antq_convene_a_desert_caravan = {
 		scope:actor = {
 			add_gold = -20
 			add_prestige = prestige_weak_bonus
+			capital.market = {
+				add_goods_supply = {
+					goods = goods:antq_dates
+					amount = market_goods_mild_gain
+				}
+				add_goods_supply = {
+					goods = goods:incense
+					amount = market_goods_weak_gain
+				}
+			}
 		}
 	}
 
@@ -1494,7 +1703,9 @@ antq_honor_a_royal_copartnership = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 15 }
+		scope:actor = {
+			gold >= 15
+		}
 	}
 
 	cooldown = {
@@ -1540,7 +1751,9 @@ antq_fund_an_exchange_feast = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 15 }
+		scope:actor = {
+			gold >= 15
+		}
 	}
 
 	cooldown = {
@@ -1580,7 +1793,14 @@ antq_support_ocean_wayfinding = {
 	}
 
 	allow = {
-		scope:actor = { gold >= 20 }
+		scope:actor = {
+			gold >= 20
+			exists = capital.market
+			capital.market = {
+				"stockpile_in_market(goods:antq_cordage)" >= 2
+				"stockpile_in_market(goods:antq_coconut_products)" >= 2
+			}
+		}
 	}
 
 	cooldown = {
@@ -1592,6 +1812,16 @@ antq_support_ocean_wayfinding = {
 		scope:actor = {
 			add_gold = -20
 			add_stability = stability_weak_bonus
+			capital.market = {
+				add_goods_supply = {
+					goods = goods:antq_cordage
+					amount = market_goods_weak_gain
+				}
+				add_goods_supply = {
+					goods = goods:antq_coconut_products
+					amount = market_goods_weak_gain
+				}
+			}
 		}
 	}
 

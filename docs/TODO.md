@@ -892,10 +892,12 @@ and focused runtime probe all pass.
     eight processed goods, eight calibrated workshop families, 32 RGO anchors,
     64 explicit workshop seeds, and 20 direct assets from five reviewed four-up
     sheets. All 104 goods, 288 buildings, and 151 productive families pass.
-  - [ ] Connect appropriate goods beyond their generated advance unlocks to
+  - [x] Connect appropriate goods beyond their generated advance unlocks to
     laws, privileges, military supply, events, and supportable trade decisions.
-  - Tie RGOs, workshops, estates, urban demand, trade routes, military supply,
-    laws, privileges, advances, and events into coherent chains.
+    Completed with 135 sourced bindings and 11 provisioning packages; validation
+    and paired smoke are green.
+  - [ ] Tie RGOs, workshops, estates, urban demand, trade routes, military
+    supply, laws, privileges, advances, and events into coherent chains.
   - Acceptance: every active good has real producers/consumers and UI art; no
     dead-end recipe or globally interchangeable regional economy.
 

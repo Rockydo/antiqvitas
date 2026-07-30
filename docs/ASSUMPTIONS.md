@@ -5853,3 +5853,13 @@ cheese/curds, cured meat, rice wine, and soy condiments aggregate period-safe
 processing classes without asserting a named recipe, monopoly, or later
 plantation system. Sources: `P12.1`; `P12.3`; `P14`; `PER`; `BHR`.
 [secure broad production; contested exact fields and workshop forms]
+
+## 2026-07-30 - Goods bindings are institutional abstractions
+
+Provisioning packages represent product classes, not reconstructed issued
+rations or quantities. Good-specific law, privilege, event, and trade links
+encode attested regional associations at game scale. Replacing extinct
+silphium production with medicaments represents successor medical land use, not
+a documented immediate crop conversion. Sources: `P12.1`; `P13`; `P14`;
+binding-ledger source labels. [secure broad associations; contested quantities
+and exact transitions]

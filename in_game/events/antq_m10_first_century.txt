@@ -400,6 +400,15 @@ antq_m10.1014 = {
 		name = antq_m10.1014.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
+		capital.market = {
+			add_goods_supply = {
+				goods = goods:antq_silphium
+				amount = market_goods_severe_loss
+			}
+		}
+		location:barca = {
+			change_raw_material = goods:medicaments
+		}
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_civic_associations }
@@ -466,6 +475,16 @@ antq_m10.1017 = {
 		name = antq_m10.1017.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
+		capital.market = {
+			add_goods_supply = {
+				goods = goods:antq_grain_products
+				amount = market_goods_mild_loss
+			}
+			add_goods_supply = {
+				goods = goods:antq_papyrus
+				amount = market_goods_weak_loss
+			}
+		}
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_civic_associations }

@@ -16,6 +16,8 @@ from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
 
+from goods_integration import decision_market_rows
+
 
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER = ROOT / "docs/m11/decisions.csv"
@@ -116,7 +118,34 @@ def validate(decisions: list[Decision], engines: dict[str, str], roster: set[str
 
 def render_action(decision: Decision, engines: dict[str, str]) -> str:
     tag_lines = "\n".join(f"\t\t\t\ttag = {engines[tag]}" for tag in decision.tags)
-    return f'''# {decision.identifier}: {decision.source} [{decision.confidence}]\n# {decision.note}\nantq_{decision.identifier} = {{\n\ttype = owncountry\n\n\tai_tick = never\n\tautomation_tick = never\n\n\tpotential = {{\n\t\tscope:actor = {{\n\t\t\tOR = {{\n{tag_lines}\n\t\t\t}}\n\t\t}}\n\t}}\n\n\tallow = {{\n\t\tscope:actor = {{ gold >= {decision.gold} }}\n\t}}\n\n\tcooldown = {{\n\t\ttype = antq_{decision.identifier}\n\t\tyears = {decision.cooldown}\n\t}}\n\n\teffect = {{\n\t\tscope:actor = {{\n\t\t\tadd_gold = -{decision.gold}\n\t\t\tadd_{decision.effect} = {decision.effect}_weak_bonus\n\t\t}}\n\t}}\n\n\tai_will_do = {{\n\t\tadd = -1000\n\t}}\n}}\n'''
+    market_rows = decision_market_rows(decision.identifier)
+    market_allow = ""
+    market_effect = ""
+    if market_rows:
+        conditions = "\n".join(
+            f'\t\t\t\t"stockpile_in_market(goods:{good})" >= {threshold}'
+            for good, threshold, _supply in market_rows
+        )
+        market_allow = (
+            "\n\t\t\texists = capital.market\n"
+            "\t\t\tcapital.market = {\n"
+            f"{conditions}\n"
+            "\t\t\t}"
+        )
+        effects: list[str] = []
+        for good, _threshold, supply in market_rows:
+            effects.extend((
+                "\t\t\t\tadd_goods_supply = {",
+                f"\t\t\t\t\tgoods = goods:{good}",
+                f"\t\t\t\t\tamount = {supply}",
+                "\t\t\t\t}",
+            ))
+        market_effect = (
+            "\n\t\t\tcapital.market = {\n"
+            + "\n".join(effects)
+            + "\n\t\t\t}"
+        )
+    return f'''# {decision.identifier}: {decision.source} [{decision.confidence}]\n# {decision.note}\nantq_{decision.identifier} = {{\n\ttype = owncountry\n\n\tai_tick = never\n\tautomation_tick = never\n\n\tpotential = {{\n\t\tscope:actor = {{\n\t\t\tOR = {{\n{tag_lines}\n\t\t\t}}\n\t\t}}\n\t}}\n\n\tallow = {{\n\t\tscope:actor = {{\n\t\t\tgold >= {decision.gold}{market_allow}\n\t\t}}\n\t}}\n\n\tcooldown = {{\n\t\ttype = antq_{decision.identifier}\n\t\tyears = {decision.cooldown}\n\t}}\n\n\teffect = {{\n\t\tscope:actor = {{\n\t\t\tadd_gold = -{decision.gold}\n\t\t\tadd_{decision.effect} = {decision.effect}_weak_bonus{market_effect}\n\t\t}}\n\t}}\n\n\tai_will_do = {{\n\t\tadd = -1000\n\t}}\n}}\n'''
 
 
 def render_loc(decisions: list[Decision], language: str) -> str:

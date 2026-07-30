@@ -7982,3 +7982,10 @@ reviewed 128px BC7 DDS.
   corrections, and 3,531 scalable regional placements across 1,881 locations.
 - Validation passes 141/141; paired smoke adds zero mod-unique lines. Fresh AD 1
   evidence confirms Dates and the Date Drying Yard/Dried Fruit chain at Siwa.
+
+## 2026-07-30 - Connected goods to state and military systems
+
+- Added 135 sourced bindings: 16 law, 25 privilege, 20 decision, eight
+  event/RGO, and 66 unit-demand connections.
+- Assigned 11 provisioning packages across all 64 custom units.
+- Validation passes 142/142; paired smoke adds zero mod-unique lines.

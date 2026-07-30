@@ -12,6 +12,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from dates import AntqDate, BiographyDate, M2_MIRROR_LANGUAGES
+from goods_integration import bindings as goods_bindings, modifier_additions, modifier_name
 from s2_ancient_laws import (
     all_law_options as s2_all_law_options,
     profile_law_pairs as s2_profile_law_pairs,
@@ -91,6 +92,11 @@ MODIFIER_KEYS = frozenset((
     "tribes_estate_power_from_cabinet", "estate_power_from_cabinet",
     "set_cabinet_member_cost_modifier", "replace_cabinet_member_cost_modifier",
 ))
+MODIFIER_KEYS |= frozenset(
+    modifier_name(row)
+    for row in goods_bindings()
+    if row.surface == "privilege_modifier"
+)
 
 POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
     "antq_principate": (
@@ -1886,6 +1892,13 @@ def load_power_data() -> PowerData:
         row["potential_tags"] = ""
         row["exclusive_with"] = ""
     privileges.extend(read_rows(DATA / "estate_order_privileges.csv", S2_PRIV_FIELDS))
+    for row in privileges:
+        additions = modifier_additions("privilege_modifier", row["key"])
+        if additions:
+            suffix = "|".join(f"{key}={value}" for key, value in additions)
+            row["modifiers"] = "|".join(
+                part for part in (row["modifiers"], suffix) if part
+            )
     laws = read_rows(DATA / "laws.csv", LAW_FIELDS)
     tags = {entry["design_tag"]: entry["engine_tag"] for entry in json.loads(TAG_MAP.read_text(encoding="utf-8"))["entries"]}
     locations = set(json.loads((ROOT / "docs/vanilla_symbols/locations.json").read_text(encoding="utf-8-sig")))

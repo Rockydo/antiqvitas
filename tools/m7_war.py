@@ -17,6 +17,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from dates import AntqDate, M2_MIRROR_LANGUAGES
+from goods_integration import unit_package
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "docs/m7"
@@ -315,6 +316,7 @@ def unit_script(units: tuple[Unit, ...]) -> str:
         "# Vanilla unit and levy unlocks are pruned in the matching advance overrides.",
     ]
     for unit in units:
+        package = unit_package(unit.key, unit.copy_from)
         lines.extend((f"{unit.key} = {{", "\tis_special = yes", f"\tcopy_from = {unit.copy_from}", "\thide = no"))
         if unit.status == "regular":
             lines.append("\tbuildable = yes")
@@ -323,6 +325,8 @@ def unit_script(units: tuple[Unit, ...]) -> str:
         else:
             lines.extend(("\tbuildable = no", "\tmercenaries_per_location = { pop_type = peasants multiply = 0.01 }"))
         lines.append(f"\tage = {unit.age}")
+        lines.append(f"\tconstruction_demand = antq_{package}_construction")
+        lines.append(f"\tmaintenance_demand = antq_{package}_maintenance")
         if unit.kind == "navy":
             lines.append("\tcannons = 0")
         lines.extend(f"\t{key} = {value}" for key, value in unit.modifiers)

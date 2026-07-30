@@ -116,6 +116,7 @@ VALIDATE_COMMANDS = (
     Command("tools/m5_market_scope_guard.py", ("--check",)),
     Command("tools/m5_building_audit.py"),
     Command("tools/m5_roman_economy_audit.py", ("--check",)),
+    Command("tools/s2_goods_integration.py", ("--check",)),
     Command("tools/m7_war.py", ("--check",)),
     Command("tools/m7_levy_scope_guard.py", ("--check",)),
     Command("tools/m8_knowledge.py", ("--check",)),

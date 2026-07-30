@@ -4230,3 +4230,10 @@ families from heuristic global assignment. This prevents duplicate ownership,
 keeps ordinary locations below six opening buildings, and makes each food chain
 reviewable. Generate food art four-up against installed EU5 commodity/building
 references, then split and compile through one pinned deterministic pipeline.
+
+## 2026-07-30 - One ledger owns cross-system goods bindings
+
+Generate law, privilege, decision, event, and unit-demand connections from one
+sourced ledger. Enrich existing historical definitions instead of duplicating
+them. Custom units receive explicit ancient construction and provisioning
+packages because inherited cavalry and naval costs do not cover these goods.

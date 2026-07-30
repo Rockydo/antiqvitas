@@ -7,6 +7,8 @@ antq_british_hillfort_spearmen = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_taken = -0.05
 	movement_speed = -0.05
 	combat = { hills = 0.10 forest = 0.05 }
@@ -60,6 +62,8 @@ antq_northern_british_skirmishers = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	initiative = 0.20
 	movement_speed = 0.10
 	combat = { forest = 0.12 hills = 0.10 }
@@ -96,6 +100,8 @@ antq_hibernian_javelin_bands = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	initiative = 0.18
 	movement_speed = 0.12
 	combat = { forest = 0.10 hills = 0.08 }
@@ -130,6 +136,8 @@ antq_hibernian_coastal_warbands = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_done = 0.12
 	strength_damage_taken = 0.04
 	combat = { coastal = 0.10 river = 0.05 }
@@ -164,6 +172,8 @@ antq_angrivarian_spear_following = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_taken = -0.04
 	movement_speed = -0.03
 	combat = { forest = 0.10 river = 0.08 }
@@ -183,6 +193,8 @@ antq_suebian_household_retinue = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_done = 0.08
 	strength_damage_taken = -0.03
 	combat = { forest = 0.08 hills = 0.08 }
@@ -207,6 +219,8 @@ antq_baltic_hillfort_spearmen = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_taken = -0.04
 	movement_speed = -0.03
 	combat = { forest = 0.10 hills = 0.08 }
@@ -227,6 +241,8 @@ antq_baltic_forest_skirmishers = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	initiative = 0.18
 	movement_speed = 0.10
 	combat = { forest = 0.14 wetlands = 0.10 }
@@ -249,6 +265,8 @@ antq_legionaries = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	strength_damage_taken = -0.08
 	morale_damage_taken = -0.05
 	initiative = -0.25
@@ -269,6 +287,8 @@ antq_auxilia = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	movement_speed = 0.15
 	morale_damage_done = 0.05
 	combat = { forest = 0.10 hills = 0.05 }
@@ -287,6 +307,8 @@ antq_roman_alae = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_light_cavalry_construction
+	maintenance_demand = antq_light_cavalry_maintenance
 	movement_speed = 0.18
 	flanking_ability = 0.10
 	combat = { grasslands = 0.05 }
@@ -305,6 +327,8 @@ antq_thureophoroi = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	initiative = 0.25
 	morale_damage_done = 0.05
 	combat = { hills = 0.05 }
@@ -328,6 +352,8 @@ antq_hellenistic_phalanx = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	combat_speed = -0.20
 	morale_damage_done = 0.10
 	combat = { hills = -0.10 forest = -0.10 }
@@ -348,6 +374,8 @@ antq_warbands = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_done = 0.15
 	strength_damage_taken = 0.05
 	combat = { forest = 0.10 hills = 0.05 }
@@ -393,6 +421,8 @@ antq_han_crossbow_infantry = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	morale_damage_done = 0.15
 	initiative = 0.25
 	combat = { hills = 0.05 }
@@ -411,6 +441,8 @@ antq_indian_longbowmen = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	morale_damage_done = 0.10
 	initiative = 0.20
 	combat = { hills = 0.05 }
@@ -439,6 +471,8 @@ antq_war_elephants = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_elephant_construction
+	maintenance_demand = antq_elephant_maintenance
 	morale_damage_done = 0.20
 	strength_damage_taken = -0.05
 	combat = { jungle = 0.20 coastal = -0.10 }
@@ -467,6 +501,8 @@ antq_nubian_archers = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	initiative = 0.30
 	morale_damage_done = 0.10
 	combat = { desert = 0.10 }
@@ -488,6 +524,8 @@ antq_cataphracts = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_heavy_cavalry_construction
+	maintenance_demand = antq_heavy_cavalry_maintenance
 	morale_damage_done = 0.15
 	strength_damage_taken = -0.10
 	combat_speed = -0.20
@@ -514,6 +552,8 @@ antq_parthian_horse_archers = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_horse_archer_construction
+	maintenance_demand = antq_horse_archer_maintenance
 	movement_speed = 0.25
 	flanking_ability = 0.15
 	strength_damage_taken = 0.04
@@ -540,6 +580,8 @@ antq_steppe_horse_archers = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_horse_archer_construction
+	maintenance_demand = antq_horse_archer_maintenance
 	movement_speed = 0.30
 	flanking_ability = 0.20
 	strength_damage_taken = 0.05
@@ -566,6 +608,8 @@ antq_numidian_light_horse = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_light_cavalry_construction
+	maintenance_demand = antq_light_cavalry_maintenance
 	movement_speed = 0.30
 	flanking_ability = 0.20
 	combat = { desert = 0.10 }
@@ -586,6 +630,8 @@ antq_camelry = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_camel_construction
+	maintenance_demand = antq_camel_maintenance
 	movement_speed = 0.15
 	supply_weight = -0.10
 	combat = { desert = 0.15 }
@@ -611,6 +657,8 @@ antq_british_chariots = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_light_cavalry_construction
+	maintenance_demand = antq_light_cavalry_maintenance
 	movement_speed = 0.20
 	flanking_ability = 0.10
 	combat = { grasslands = 0.05 forest = -0.15 }
@@ -647,6 +695,8 @@ antq_germanic_horse = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_light_cavalry_construction
+	maintenance_demand = antq_light_cavalry_maintenance
 	movement_speed = 0.16
 	flanking_ability = 0.08
 	combat = { grasslands = 0.05 forest = 0.03 }
@@ -692,6 +742,8 @@ antq_comitatenses = {
 	hide = no
 	buildable = yes
 	age = age_4_reformation
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_done = 0.10
 	movement_speed = 0.10
 	combat = { hills = 0.05 }
@@ -710,6 +762,8 @@ antq_limitanei = {
 	hide = no
 	buildable = yes
 	age = age_4_reformation
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	strength_damage_taken = -0.05
 	combat_speed = -0.10
 	combat = { river = 0.10 }
@@ -729,6 +783,8 @@ antq_balearic_slingers = {
 	buildable = no
 	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	initiative = 0.30
 	morale_damage_done = 0.10
 	combat = { hills = 0.05 }
@@ -749,6 +805,8 @@ antq_cretan_archers = {
 	buildable = no
 	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	initiative = 0.30
 	morale_damage_done = 0.10
 	combat = { hills = 0.10 }
@@ -770,6 +828,8 @@ antq_germanic_bodyguards = {
 	buildable = no
 	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	strength_damage_taken = -0.05
 	morale_damage_done = 0.10
 	combat = { forest = 0.05 }
@@ -793,6 +853,8 @@ antq_saka_horse = {
 	buildable = no
 	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
 	age = age_1_traditions
+	construction_demand = antq_light_cavalry_construction
+	maintenance_demand = antq_light_cavalry_maintenance
 	movement_speed = 0.25
 	flanking_ability = 0.15
 	combat = { grasslands = 0.10 }
@@ -817,6 +879,8 @@ antq_galatian_swordsmen = {
 	buildable = no
 	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_done = 0.10
 	strength_damage_taken = -0.03
 	combat = { hills = 0.05 }
@@ -841,6 +905,8 @@ antq_thracian_peltasts = {
 	buildable = no
 	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	initiative = 0.20
 	morale_damage_done = 0.05
 	combat = { hills = 0.10 }
@@ -865,6 +931,8 @@ antq_numidian_horse_company = {
 	buildable = no
 	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
 	age = age_1_traditions
+	construction_demand = antq_light_cavalry_construction
+	maintenance_demand = antq_light_cavalry_maintenance
 	movement_speed = 0.25
 	flanking_ability = 0.15
 	combat = { desert = 0.10 }
@@ -886,6 +954,8 @@ antq_liburnian = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_galley_construction
+	maintenance_demand = antq_galley_maintenance
 	cannons = 0
 	movement_speed = 0.50
 	hull_size = -2
@@ -904,6 +974,8 @@ antq_trireme = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_galley_construction
+	maintenance_demand = antq_galley_maintenance
 	cannons = 0
 	hull_size = -1
 	crew_size = 0.01
@@ -925,6 +997,8 @@ antq_quinquereme = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_galley_construction
+	maintenance_demand = antq_galley_maintenance
 	cannons = 0
 	hull_size = 2
 	crew_size = 0.03
@@ -944,6 +1018,8 @@ antq_merchant_roundship = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
 	cannons = 0
 	transport_capacity = 0.35
 	hull_size = -2
@@ -965,6 +1041,8 @@ antq_monsoon_dhow = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
 	cannons = 0
 	movement_speed = 0.50
 	hull_size = -2
@@ -989,6 +1067,8 @@ antq_austronesian_outrigger = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
 	cannons = 0
 	movement_speed = 0.75
 	hull_size = -5
@@ -1037,6 +1117,8 @@ antq_roman_marines = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_done = 0.08
 	strength_damage_taken = -0.03
 	combat = { coastal = 0.10 }
@@ -1055,6 +1137,8 @@ antq_roman_sagittarii = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	initiative = 0.20
 	morale_damage_done = 0.08
 	combat = { hills = 0.05 }
@@ -1073,6 +1157,8 @@ antq_roman_scouts = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_light_cavalry_construction
+	maintenance_demand = antq_light_cavalry_maintenance
 	movement_speed = 0.22
 	flanking_ability = 0.12
 	combat = { forest = 0.05 }
@@ -1092,6 +1178,8 @@ antq_parthian_foot_archers = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	initiative = 0.18
 	morale_damage_done = 0.06
 	combat = { hills = 0.05 }
@@ -1111,6 +1199,8 @@ antq_parthian_noble_lancers = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_heavy_cavalry_construction
+	maintenance_demand = antq_heavy_cavalry_maintenance
 	morale_damage_done = 0.12
 	strength_damage_taken = -0.06
 	combat = { grasslands = 0.08 }
@@ -1131,6 +1221,8 @@ antq_germanic_spearmen = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_done = 0.08
 	strength_damage_taken = -0.02
 	combat = { forest = 0.08 }
@@ -1166,6 +1258,8 @@ antq_germanic_javelins = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	initiative = 0.18
 	movement_speed = 0.08
 	combat = { forest = 0.10 }
@@ -1201,6 +1295,8 @@ antq_syrian_archers = {
 	buildable = no
 	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	initiative = 0.24
 	morale_damage_done = 0.08
 	combat = { hills = 0.08 }
@@ -1222,6 +1318,8 @@ antq_iberian_swordsmen = {
 	buildable = no
 	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_done = 0.12
 	strength_damage_taken = -0.03
 	combat = { hills = 0.06 }
@@ -1242,6 +1340,8 @@ antq_dacian_falxmen = {
 	buildable = no
 	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_done = 0.14
 	strength_damage_taken = 0.04
 	combat = { hills = 0.12 }
@@ -1263,6 +1363,8 @@ antq_armenian_horse = {
 	buildable = no
 	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
 	age = age_1_traditions
+	construction_demand = antq_light_cavalry_construction
+	maintenance_demand = antq_light_cavalry_maintenance
 	movement_speed = 0.20
 	flanking_ability = 0.12
 	combat = { mountains = 0.08 }
@@ -1284,6 +1386,8 @@ antq_cilician_marines = {
 	buildable = no
 	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	movement_speed = 0.10
 	morale_damage_done = 0.06
 	combat = { coastal = 0.12 }
@@ -1304,6 +1408,8 @@ antq_nabataean_caravan_guards = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_light_cavalry_construction
+	maintenance_demand = antq_light_cavalry_maintenance
 	movement_speed = 0.12
 	supply_weight = -0.08
 	combat = { desert = 0.10 hills = 0.05 }
@@ -1323,6 +1429,8 @@ antq_north_arabian_camel_scouts = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_camel_construction
+	maintenance_demand = antq_camel_maintenance
 	movement_speed = 0.15
 	supply_weight = -0.10
 	combat = { desert = 0.12 }
@@ -1345,6 +1453,8 @@ antq_south_arabian_highland_levies = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_taken = -0.04
 	movement_speed = -0.03
 	combat = { hills = 0.10 mountains = 0.08 }
@@ -1367,6 +1477,8 @@ antq_omanite_coastal_warbands = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	movement_speed = 0.08
 	supply_weight = -0.05
 	combat = { coastal = 0.10 desert = 0.05 }
@@ -1385,6 +1497,8 @@ antq_marcomannic_royal_retinue = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_done = 0.10
 	strength_damage_taken = -0.04
 	combat = { forest = 0.08 hills = 0.05 }
@@ -1404,6 +1518,8 @@ antq_batavian_auxiliary_cohort = {
 	hide = no
 	buildable = yes
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_taken = -0.04
 	movement_speed = 0.05
 	combat = { river = 0.10 wetlands = 0.08 }
@@ -1425,6 +1541,8 @@ antq_semnonian_grove_muster = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_done = 0.08
 	initiative = 0.08
 	combat = { forest = 0.12 }
@@ -1445,6 +1563,8 @@ antq_aestian_amber_road_guards = {
 	buildable = no
 	levy = yes
 	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	movement_speed = 0.10
 	supply_weight = -0.06
 	combat = { forest = 0.10 coastal = 0.06 }
@@ -1465,6 +1585,8 @@ antq_gothic_migrant_host = {
 	buildable = no
 	levy = yes
 	age = age_2_renaissance
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	movement_speed = 0.08
 	supply_weight = -0.08
 	combat = { forest = 0.08 grasslands = 0.06 }
@@ -1488,6 +1610,8 @@ antq_alamannic_confederate_host = {
 	buildable = no
 	levy = yes
 	age = age_3_discovery
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_done = 0.10
 	movement_speed = 0.05
 	combat = { forest = 0.08 hills = 0.08 }
@@ -1511,6 +1635,8 @@ antq_frankish_rhine_warband = {
 	buildable = no
 	levy = yes
 	age = age_3_discovery
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
 	morale_damage_done = 0.10
 	strength_damage_taken = -0.03
 	combat = { river = 0.10 forest = 0.06 }
@@ -1534,6 +1660,8 @@ antq_saxon_coastal_warband = {
 	buildable = no
 	levy = yes
 	age = age_4_reformation
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
 	movement_speed = 0.12
 	supply_weight = -0.06
 	combat = { coastal = 0.12 wetlands = 0.06 }

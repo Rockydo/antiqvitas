@@ -20,6 +20,12 @@ antq_m10_second.2000 = {
 		name = antq_m10_second.2000.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
+		capital.market = {
+			add_goods_supply = {
+				goods = goods:silk
+				amount = market_goods_weak_gain
+			}
+		}
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_cosmopolitan_cities }
@@ -108,6 +114,12 @@ antq_m10_second.2003 = {
 		name = antq_m10_second.2003.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
+		capital.market = {
+			add_goods_supply = {
+				goods = goods:paper
+				amount = market_goods_severe_gain
+			}
+		}
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_cosmopolitan_cities }
@@ -332,6 +344,12 @@ antq_m10_second.2013 = {
 			add_stability = stability_weak_penalty
 			add_prestige = prestige_weak_penalty
 		}
+		capital.market = {
+			add_goods_supply = {
+				goods = goods:antq_cured_meat
+				amount = market_goods_mild_loss
+			}
+		}
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_cataphract_adoption }
@@ -358,6 +376,12 @@ antq_m10_second.2014 = {
 		name = antq_m10_second.2014.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
+		capital.market = {
+			add_goods_supply = {
+				goods = goods:silk
+				amount = market_goods_mild_gain
+			}
+		}
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_cosmopolitan_cities }

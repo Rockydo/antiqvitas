@@ -836,6 +836,8 @@ antq_s2_han_revenue_law = {
 			peasants_estate_max_tax = 0.045
 			global_production_efficiency = 0.035
 			global_crown_estate_power = 0.055
+			global_salt_output_modifier = 0.08
+			global_iron_output_modifier = 0.08
 		}
 		years = 2
 		estate_preferences = {
@@ -2885,6 +2887,8 @@ antq_s2_indic_revenue_law = {
 			global_monthly_food_modifier = 0.035
 			global_monthly_control = 0.016
 			global_peasants_estate_power = 0.052
+			global_rice_output_modifier = 0.06
+			global_antq_coconut_products_output_modifier = 0.04
 		}
 		years = 2
 		estate_preferences = {
@@ -3184,6 +3188,8 @@ antq_s2_indic_commerce_law = {
 			global_trade_through_owned_territory_efficiency = 0.065
 			global_production_efficiency = 0.034
 			global_burghers_estate_power = 0.052
+			global_pepper_output_modifier = 0.05
+			global_antq_coconut_products_output_modifier = 0.05
 		}
 		years = 2
 		estate_preferences = {
@@ -3668,6 +3674,8 @@ antq_s2_steppe_muster_law = {
 			global_levy_size_modifier = 0.085
 			global_levy_recruitment_speed_modifier = 0.08
 			global_tribes_estate_power = 0.062
+			global_antq_cheese_curds_pop_demand = 0.05
+			global_antq_cured_meat_pop_demand = 0.05
 		}
 		years = 2
 		estate_preferences = {
@@ -5694,6 +5702,8 @@ antq_s2_arabian_land_law = {
 			global_max_rural_control = 0.032
 			global_monthly_food_modifier = 0.034
 			global_crown_estate_power = 0.054
+			global_antq_dates_output_modifier = 0.05
+			global_antq_sesame_output_modifier = 0.05
 		}
 		years = 2
 		estate_preferences = {
@@ -6193,6 +6203,8 @@ antq_s2_arabian_external_law = {
 			diplomatic_capacity_modifier = 0.052
 			global_trade_through_owned_territory_efficiency = 0.068
 			global_burghers_estate_power = 0.051
+			global_antq_dates_output_modifier = 0.06
+			global_incense_output_modifier = 0.05
 		}
 		years = 2
 		estate_preferences = {
@@ -7013,6 +7025,8 @@ antq_s2_african_revenue_law = {
 			global_production_efficiency = 0.038
 			burghers_estate_max_tax = 0.032
 			global_clergy_estate_power = 0.052
+			global_iron_output_modifier = 0.06
+			global_antq_glass_beads_output_modifier = 0.04
 		}
 		years = 2
 		estate_preferences = {
@@ -7787,6 +7801,8 @@ antq_s2_eastern_muster_law = {
 			global_levy_recruitment_speed_modifier = 0.105
 			land_morale_modifier = 0.022
 			global_crown_estate_power = 0.053
+			global_rice_output_modifier = 0.05
+			global_antq_soy_condiments_output_modifier = 0.04
 		}
 		years = 2
 		estate_preferences = {

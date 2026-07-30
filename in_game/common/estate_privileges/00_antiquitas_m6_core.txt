@@ -266,6 +266,8 @@ antq_annona_privilege = {
 		global_burghers_estate_power = 0.05
 		burghers_estate_target_satisfaction = small_privilege_target_satisfaction
 		global_pop_food_consumption = -0.02
+		global_antq_grain_products_pop_demand = 0.08
+		global_antq_cured_meat_pop_demand = 0.03
 	}
 }
 
@@ -4529,6 +4531,8 @@ antq_mauretanian_olive_grain_labor_compacts = {
 		global_production_efficiency = 0.02
 		country_cabinet_efficiency = 0.015
 		global_monthly_control = -0.0005
+		global_antq_olive_oil_output_modifier = 0.06
+		global_antq_grain_products_output_modifier = 0.05
 	}
 }
 
@@ -4983,6 +4987,8 @@ antq_bosporan_grain_harbor_measures = {
 		global_trade_through_owned_territory_efficiency = 0.04
 		country_cabinet_efficiency = 0.015
 		burghers_estate_max_tax = -0.03
+		global_antq_grain_products_output_modifier = 0.06
+		global_antq_preserved_fish_output_modifier = 0.05
 	}
 }
 
@@ -5083,6 +5089,8 @@ antq_galilean_ritual_store_inventories = {
 		research_speed_modifier = 0.0175
 		stability_cost_efficiency = -0.05
 		clergy_estate_max_tax = -0.05
+		global_antq_olive_oil_pop_demand = 0.04
+		global_antq_wax_goods_pop_demand = 0.03
 	}
 }
 
@@ -6344,6 +6352,8 @@ antq_kushite_temple_storehouse_immunity = {
 		global_monthly_food_modifier = 0.03
 		stability_cost_efficiency = -0.04
 		clergy_estate_max_tax = -0.07
+		global_antq_iron_hardware_output_modifier = 0.05
+		global_antq_glass_beads_output_modifier = 0.04
 	}
 }
 
@@ -6444,6 +6454,8 @@ antq_nabataean_caravan_water_guarantees = {
 		global_trade_through_owned_territory_efficiency = 0.06
 		global_pop_food_consumption = -0.01
 		burghers_estate_max_tax = -0.06
+		global_antq_dates_output_modifier = 0.06
+		global_incense_output_modifier = 0.05
 	}
 }
 
@@ -6504,6 +6516,8 @@ antq_himyarite_incense_route_toll_farm = {
 		global_trade_through_owned_territory_efficiency = 0.065
 		country_cabinet_efficiency = 0.025
 		burghers_estate_max_tax = -0.07
+		global_incense_output_modifier = 0.08
+		global_antq_sesame_oil_output_modifier = 0.04
 	}
 }
 
@@ -6524,6 +6538,8 @@ antq_satavahana_guild_charter_arbitration = {
 		global_production_efficiency = 0.035
 		global_trade_through_owned_territory_efficiency = 0.05
 		burghers_estate_max_tax = -0.06
+		global_pepper_output_modifier = 0.06
+		global_antq_coconut_products_output_modifier = 0.04
 	}
 }
 
@@ -6584,6 +6600,8 @@ antq_goguryeo_royal_granary_inspection = {
 		global_monthly_food_modifier = 0.03
 		country_cabinet_efficiency = 0.03
 		global_monthly_control = -0.0005
+		global_rice_output_modifier = 0.06
+		global_antq_soy_condiments_output_modifier = 0.04
 	}
 }
 
@@ -6724,6 +6742,8 @@ antq_han_state_salt_iron_workshops = {
 		global_production_efficiency = 0.045
 		country_cabinet_efficiency = 0.035
 		burghers_estate_max_tax = -0.035
+		global_salt_output_modifier = 0.10
+		global_iron_output_modifier = 0.10
 	}
 }
 
@@ -6924,6 +6944,7 @@ antq_xiongnu_han_frontier_stipend_treaty = {
 		global_trade_through_owned_territory_efficiency = 0.055
 		global_pop_food_consumption = -0.008
 		burghers_estate_max_tax = -0.05
+		global_silk_pop_demand = 0.07
 	}
 }
 
@@ -7120,6 +7141,8 @@ antq_omanite_coastal_pilotage_compacts = {
 		global_trade_through_owned_territory_efficiency = 0.05
 		global_pop_food_consumption = -0.006
 		burghers_estate_max_tax = -0.05
+		global_antq_cordage_output_modifier = 0.06
+		global_antq_sailcloth_output_modifier = 0.05
 	}
 }
 
@@ -7152,6 +7175,8 @@ antq_hadramite_shabwa_incense_store_custody = {
 		global_production_efficiency = 0.03
 		global_trade_through_owned_territory_efficiency = 0.055
 		burghers_estate_max_tax = -0.06
+		global_incense_output_modifier = 0.08
+		global_antq_perfumes_output_modifier = 0.04
 	}
 }
 
