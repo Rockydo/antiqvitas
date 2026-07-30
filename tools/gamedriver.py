@@ -1002,6 +1002,43 @@ def hotkey(args: argparse.Namespace) -> int:
     return 0
 
 
+def type_text(args: argparse.Namespace) -> int:
+    """Paste text into a fixed-window edit box without changing map selection."""
+    import pyautogui
+    import pyperclip
+
+    if not (0 <= args.x <= 1 and 0 <= args.y <= 1):
+        raise ValueError("text coordinates must be normalized fractions from 0 through 1")
+    window = activate_window()
+    x = window.left + round(window.width * args.x)
+    y = window.top + round(window.height * args.y)
+    previous = pyperclip.paste()
+    try:
+        pyautogui.click(x, y)
+        time.sleep(0.25)
+        pyperclip.copy(args.text)
+        # Jomini's edit box does not consistently expose Select All to the
+        # Windows Ctrl+A virtual key on an AZERTY layout. Its installed
+        # max-length is 26, so bounded Backspace replacement is deterministic.
+        pyautogui.press("end")
+        pyautogui.press("backspace", presses=32, interval=0.01)
+        pyautogui.hotkey("ctrl", "v")
+        time.sleep(args.settle)
+    finally:
+        pyperclip.copy(previous)
+    print(f"text entered at normalized ({args.x:.3f}, {args.y:.3f})")
+    if args.capture:
+        session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
+        target = ROOT / "docs/screens" / session / f"{args.capture}.png"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        image = pyautogui.screenshot(
+            region=(window.left, window.top, window.width, window.height)
+        )
+        image.save(target)
+        print(target)
+    return 0
+
+
 def press_console_key(vk: int) -> None:
     key_up = 0x0002
     ctypes.windll.user32.keybd_event(vk, 0, 0, 0)
@@ -1314,6 +1351,14 @@ def build_parser() -> argparse.ArgumentParser:
     hotkey_parser.add_argument("--capture", help="capture this name after the hotkey")
     hotkey_parser.add_argument("--session")
     hotkey_parser.set_defaults(func=hotkey)
+    text_parser = sub.add_parser("text")
+    text_parser.add_argument("text")
+    text_parser.add_argument("--x", type=float, required=True)
+    text_parser.add_argument("--y", type=float, required=True)
+    text_parser.add_argument("--settle", type=float, default=2)
+    text_parser.add_argument("--capture", help="capture this name after text entry")
+    text_parser.add_argument("--session")
+    text_parser.set_defaults(func=type_text)
     console_parser = sub.add_parser("console")
     console_parser.add_argument("command")
     console_parser.add_argument("--settle", type=float, default=2)

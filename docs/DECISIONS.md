@@ -4208,3 +4208,10 @@ scenes may use the deterministic round-alpha compatibility treatment. New or
 reworked art uses four-up generation against installed EU5 advance cutouts,
 flat chroma removal, and a compact centered subject. Advance-derived doctrine
 icons must be regenerated after their source motifs change.
+
+## 2026-07-30 - Narrow commodities use exact location allowlists
+
+Exact location allowlists override broad ownership regions for tea, cloves,
+pepper, and comparable specialties. Every visible map RGO belongs to the active
+economy audit. Capacity, fit, and access classes are conservative audit proxies,
+not reconstructed output quantities.

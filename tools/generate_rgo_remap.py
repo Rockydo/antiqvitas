@@ -21,6 +21,10 @@ ANNONA_GRAIN_ANCHORS = ROOT / "docs/m5/annona_grain_anchors.csv"
 OUTPUT = ROOT / "in_game/map_data/location_templates.txt"
 REPORT = ROOT / "docs/m5/rgo_remap_report.csv"
 GLOBAL_AUDIT = ROOT / "docs/m5/global_rgo_audit.csv"
+CAPACITY_REPORT = ROOT / "docs/m5/rgo_capacity_distribution.csv"
+CAPACITY_SUMMARY = ROOT / "docs/m5/RGO_CAPACITY_AUDIT.md"
+MARKETS = ROOT / "docs/m5/markets.csv"
+ROADS = ROOT / "docs/m5/road_segments.csv"
 LINE = re.compile(r"^(?P<location>[A-Za-z0-9_]+)\s*=\s*\{(?P<body>.*?\braw_material\s*=\s*)(?P<good>[A-Za-z0-9_]+)(?P<tail>.*)$", re.MULTILINE)
 ENTRY_LINE = re.compile(
     r"^(?P<location>[A-Za-z0-9_]+)\s*=\s*\{(?P<body>[^\r\n]*)\}\s*$",
@@ -63,12 +67,138 @@ ENVIRONMENT_RULES = {
         "Minor Han-era tea production is retained only in plausible Chinese cultivation climates.",
     ),
 }
+RESOURCE_FAMILIES = {
+    "staple_crop": {
+        "antq_barley", "legumes", "maize", "millet", "potato", "rice", "wheat",
+    },
+    "orchard_or_specialty_crop": {
+        "chili", "cloves", "cocoa", "fruit", "olives", "pepper", "saffron",
+        "sugar", "tea", "wine",
+    },
+    "fiber_or_dye_crop": {
+        "antq_papyrus", "cotton", "dyes", "fiber_crops", "silk", "tobacco",
+    },
+    "pastoral": {
+        "antq_camels", "elephants", "horses", "livestock", "wool",
+    },
+    "aquatic": {"fish", "pearls"},
+    "forest_or_gathered": {
+        "antq_silphium", "beeswax", "fur", "incense", "ivory", "lumber",
+        "medicaments", "wild_game",
+    },
+    "mineral_or_quarried": {
+        "alum", "amber", "antq_jade", "antq_naphtha", "clay", "coal", "copper",
+        "gems", "goods_gold", "iron", "lead", "marble", "mercury", "salt", "sand",
+        "silver", "stone", "tin",
+    },
+}
+SPECIALTY_GOODS = {
+    "antq_camels", "antq_jade", "antq_naphtha", "antq_papyrus", "antq_silphium",
+    "cloves", "elephants", "incense", "pepper", "silk", "tea",
+}
 
 
 def rows(path: Path, comments: bool = False) -> list[dict[str, str]]:
     with path.open(encoding="utf-8-sig", newline="") as handle:
         source = (line for line in handle if not line.startswith("#")) if comments else handle
         return list(csv.DictReader(source))
+
+
+def split_pipe(value: str) -> set[str]:
+    return {item for item in value.split("|") if item}
+
+
+def capacity_class(fields: dict[str, str]) -> str:
+    topography = fields.get("topography", "")
+    vegetation = fields.get("vegetation", "")
+    climate = fields.get("climate", "")
+    if topography == "atoll":
+        return "marine_atoll"
+    if topography == "wetlands":
+        return "wetland_or_riverine"
+    if vegetation == "farmland":
+        return "intensive_cultivation"
+    if vegetation in {"forest", "jungle", "woods"}:
+        return "woodland_or_forest"
+    if vegetation in {"desert", "sparse"} and climate in {"arid", "cold_arid"}:
+        return "dryland_or_oasis"
+    if topography in {"mountains", "plateau", "high_lakes"}:
+        return "highland"
+    if vegetation == "grasslands":
+        return "open_mixed_land"
+    return "mixed_land"
+
+
+def resource_family(good: str) -> str:
+    if not good:
+        return "none"
+    matches = [family for family, goods in RESOURCE_FAMILIES.items() if good in goods]
+    if len(matches) != 1:
+        raise ValueError(f"RGO good {good} has no unique resource-family classification")
+    return matches[0]
+
+
+def fit_class(
+    family: str,
+    capacity: str,
+    good: str,
+    anchored: bool,
+    harbor: str,
+) -> str:
+    if family == "none":
+        return "not_applicable"
+    if anchored:
+        return "source_anchored"
+    if good in SPECIALTY_GOODS:
+        return "bounded_specialty"
+    aligned = {
+        "staple_crop": {
+            "intensive_cultivation", "mixed_land", "open_mixed_land",
+            "wetland_or_riverine",
+        },
+        "orchard_or_specialty_crop": {
+            "dryland_or_oasis", "intensive_cultivation", "mixed_land",
+            "open_mixed_land", "woodland_or_forest",
+        },
+        "fiber_or_dye_crop": {
+            "dryland_or_oasis", "intensive_cultivation", "mixed_land",
+            "open_mixed_land", "wetland_or_riverine",
+        },
+        "pastoral": {
+            "dryland_or_oasis", "highland", "mixed_land", "open_mixed_land",
+        },
+        "aquatic": {"marine_atoll", "wetland_or_riverine"},
+        "forest_or_gathered": {"highland", "woodland_or_forest"},
+        "mineral_or_quarried": {"dryland_or_oasis", "highland"},
+    }
+    if capacity in aligned.get(family, set()):
+        return "environmentally_aligned"
+    if family == "aquatic" and harbor:
+        return "environmentally_aligned"
+    return "broad_capacity_proxy"
+
+
+def trade_access_class(
+    location: str,
+    harbor: str,
+    market_locations: set[str],
+    road_locations: set[str],
+) -> str:
+    if location in market_locations:
+        return "market_anchor"
+    if location in road_locations:
+        return "reviewed_road_corridor"
+    if harbor:
+        try:
+            suitability = float(harbor)
+        except ValueError as exc:
+            raise ValueError(f"{location} has invalid harbor suitability {harbor}") from exc
+        if suitability >= 0.5:
+            return "major_harbor"
+        if suitability > 0:
+            return "coastal_access"
+        return "coastal_local"
+    return "inland"
 
 
 def runtime_worker_seeds() -> tuple[tuple[str, str, int, str, str, str], ...]:
@@ -133,6 +263,7 @@ def rendered() -> tuple[str, str, tuple[tuple[str, str, str, str, str], ...]]:
         raise ValueError("custom_goods.csv has blank or duplicate custom-good keys")
     valid_goods |= custom_keys
     valid_regions = {row["region"] for row in roster_rows}
+    controlled_locations = set(owner_region)
     for source_good, rule in rules.items():
         if source_good not in valid_goods or rule["replacement_good"] not in valid_goods:
             raise ValueError(f"RGO rule has unknown good {source_good}->{rule['replacement_good']}")
@@ -140,10 +271,28 @@ def rendered() -> tuple[str, str, tuple[tuple[str, str, str, str, str], ...]]:
             raise ValueError("RGO rule has blank required field")
         if rule["confidence"] not in {"secure", "contested"}:
             raise ValueError(f"RGO rule has invalid confidence {rule['confidence']}")
-        allowed = {item for item in rule.get("allowed_regions", "").split("|") if item}
+        allowed = split_pipe(rule.get("allowed_regions", ""))
+        allowed_locations = split_pipe(rule.get("allowed_locations", ""))
         unknown_regions = allowed - valid_regions
         if unknown_regions:
             raise ValueError(f"RGO rule for {source_good} has unknown regions {sorted(unknown_regions)}")
+        unknown_locations = allowed_locations - controlled_locations
+        if unknown_locations:
+            raise ValueError(
+                f"RGO rule for {source_good} has unknown controlled locations "
+                f"{sorted(unknown_locations)}"
+            )
+        if allowed and allowed_locations:
+            outside = {
+                location
+                for location in allowed_locations
+                if owner_region[location] not in allowed
+            }
+            if outside:
+                raise ValueError(
+                    f"RGO rule for {source_good} allowlist leaves its allowed regions: "
+                    f"{sorted(outside)}"
+                )
     locations = set(json.loads((ROOT / "docs/vanilla_symbols/locations.json").read_text(encoding="utf-8-sig")))
     anchors: dict[str, dict[str, str]] = {}
     for anchor in rows(ANCHORS):
@@ -176,10 +325,21 @@ def rendered() -> tuple[str, str, tuple[tuple[str, str, str, str, str], ...]]:
         operation = ""
         rule = rules.get(good)
         if rule and region:
-            allowed = {item for item in rule.get("allowed_regions", "").split("|") if item}
-            if not allowed or region not in allowed:
+            allowed = split_pipe(rule.get("allowed_regions", ""))
+            allowed_locations = split_pipe(rule.get("allowed_locations", ""))
+            if allowed_locations:
+                permitted = location in allowed_locations
+            elif allowed:
+                permitted = region in allowed
+            else:
+                permitted = False
+            if not permitted:
                 replacement = rule["replacement_good"]
-                operation = "regional_rule"
+                operation = (
+                    "location_allowlist_rule"
+                    if allowed_locations
+                    else "regional_rule"
+                )
         environment = ENVIRONMENT_RULES.get(replacement)
         if environment and region:
             fields = dict(FIELD.findall(match.group(0)))
@@ -230,11 +390,18 @@ def global_audit(
     }
     rules = {row["source_good"]: row for row in rows(RULES)}
     anchors = {row["location"]: row for row in rows(ANCHORS)}
+    market_locations = {row["location"] for row in rows(MARKETS)}
+    road_locations = {
+        location
+        for row in rows(ROADS)
+        for location in (row["origin"], row["destination"])
+    }
     output = io.StringIO(newline="")
     writer = csv.writer(output, lineterminator="\n")
     writer.writerow((
         "location", "tag", "region", "topography", "vegetation", "climate",
-        "natural_harbor_suitability", "installed_good", "ad1_good", "decision",
+        "natural_harbor_suitability", "capacity_class", "resource_family",
+        "fit_class", "trade_access", "installed_good", "ad1_good", "decision",
         "source", "confidence", "note",
     ))
     seen: set[str] = set()
@@ -280,6 +447,16 @@ def global_audit(
                 "Period-valid broad resource retained after regional and environmental "
                 "screen; this is not a claim of location-specific attested extraction."
             )
+        harbor = current.get("natural_harbor_suitability", "")
+        capacity = capacity_class(current)
+        family = resource_family(current.get("raw_material", ""))
+        fit = fit_class(
+            family,
+            capacity,
+            current.get("raw_material", ""),
+            anchor is not None,
+            harbor,
+        )
         writer.writerow((
             location,
             row["tag"],
@@ -287,7 +464,16 @@ def global_audit(
             current.get("topography", ""),
             current.get("vegetation", ""),
             current.get("climate", ""),
-            current.get("natural_harbor_suitability", ""),
+            harbor,
+            capacity,
+            family,
+            fit,
+            trade_access_class(
+                location,
+                harbor,
+                market_locations,
+                road_locations,
+            ),
             original.get("raw_material", ""),
             current.get("raw_material", ""),
             decision,
@@ -303,6 +489,96 @@ def global_audit(
     return output.getvalue()
 
 
+def capacity_distribution(audit: str) -> str:
+    audit_rows = list(csv.DictReader(io.StringIO(audit)))
+    counts = Counter(
+        (
+            row["region"],
+            row["capacity_class"],
+            row["resource_family"],
+            row["fit_class"],
+            row["trade_access"],
+        )
+        for row in audit_rows
+    )
+    output = io.StringIO(newline="")
+    writer = csv.writer(output, lineterminator="\n")
+    writer.writerow(
+        (
+            "region",
+            "capacity_class",
+            "resource_family",
+            "fit_class",
+            "trade_access",
+            "locations",
+        )
+    )
+    for key, count in sorted(counts.items()):
+        writer.writerow((*key, count))
+    return output.getvalue()
+
+
+def capacity_summary(
+    audit: str,
+    changes: tuple[tuple[str, str, str, str, str], ...],
+) -> str:
+    audit_rows = list(csv.DictReader(io.StringIO(audit)))
+    decision_counts = Counter(row["decision"] for row in audit_rows)
+    capacity_counts = Counter(row["capacity_class"] for row in audit_rows)
+    family_counts = Counter(row["resource_family"] for row in audit_rows)
+    fit_counts = Counter(row["fit_class"] for row in audit_rows)
+    trade_counts = Counter(row["trade_access"] for row in audit_rows)
+    good_counts = Counter(row["ad1_good"] for row in audit_rows if row["ad1_good"])
+    allowlist_corrections = sum(
+        1 for _location, _region, operation, _old, _new in changes
+        if operation == "location_allowlist_rule"
+    )
+    lines = [
+        "# Global RGO Capacity Audit",
+        "",
+        "Generated by `tools/generate_rgo_remap.py`; the CSV ledger covers every",
+        "controlled AD 1 location and the distribution file groups the exact",
+        "capacity/resource/fit/access union.",
+        "",
+        f"- {len(audit_rows):,} audited controlled templates.",
+        f"- {len(changes):,} installed-to-AD-1 corrections.",
+        f"- {allowlist_corrections:,} fine location-allowlist corrections.",
+        f"- {decision_counts.get('nonproductive_water_or_wasteland_template', 0):,} "
+        "honestly nonproductive templates.",
+        "- Tea is confined to eleven Sichuan proxies; cloves to Ternate and",
+        "  Tidore; pepper to ten Malabar/Western Ghats proxies.",
+        "",
+        "## Capacity classes",
+        "",
+    ]
+    lines.extend(
+        f"- {key}: {value:,}" for key, value in sorted(capacity_counts.items())
+    )
+    lines.extend(("", "## Resource families", ""))
+    lines.extend(
+        f"- {key}: {value:,}" for key, value in sorted(family_counts.items())
+    )
+    lines.extend(("", "## Fit classes", ""))
+    lines.extend(f"- {key}: {value:,}" for key, value in sorted(fit_counts.items()))
+    lines.extend(("", "## Trade access", ""))
+    lines.extend(
+        f"- {key}: {value:,}" for key, value in sorted(trade_counts.items())
+    )
+    lines.extend(("", "## Bounded specialties", ""))
+    for good in sorted(SPECIALTY_GOODS):
+        lines.append(f"- {good}: {good_counts.get(good, 0):,}")
+    lines.extend(
+        (
+            "",
+            "Capacity and fit are conservative map-level classifications, not",
+            "reconstructed output or a claim of site-level extraction. Direct",
+            "anchors retain their row-specific source and confidence.",
+            "",
+        )
+    )
+    return "\n".join(lines)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--write", action="store_true")
@@ -313,6 +589,8 @@ def main() -> int:
     try:
         content, report, changes = rendered()
         audit = global_audit(content, changes)
+        distribution = capacity_distribution(audit)
+        summary = capacity_summary(audit, changes)
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         print(f"rgo_remap: FAIL\n  - {exc}")
         return 1
@@ -321,6 +599,8 @@ def main() -> int:
         OUTPUT.write_text(content, encoding="utf-8", newline="\n")
         REPORT.write_text(report, encoding="utf-8-sig", newline="\n")
         GLOBAL_AUDIT.write_text(audit, encoding="utf-8-sig", newline="\n")
+        CAPACITY_REPORT.write_text(distribution, encoding="utf-8-sig", newline="\n")
+        CAPACITY_SUMMARY.write_text(summary, encoding="utf-8", newline="\n")
         print(
             f"rgo_remap: wrote {OUTPUT.relative_to(ROOT)} "
             f"({len(changes)} corrections; {len(rows(OWNERSHIP, comments=True))} audited locations)"
@@ -331,6 +611,8 @@ def main() -> int:
         (OUTPUT, content, "utf-8"),
         (REPORT, report, "utf-8-sig"),
         (GLOBAL_AUDIT, audit, "utf-8-sig"),
+        (CAPACITY_REPORT, distribution, "utf-8-sig"),
+        (CAPACITY_SUMMARY, summary, "utf-8"),
     ):
         if not path.is_file() or path.read_text(encoding=encoding) != expected:
             failures.append(f"stale or missing {path.relative_to(ROOT)}")

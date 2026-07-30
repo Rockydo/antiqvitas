@@ -16,7 +16,7 @@ from m5_regional_buildings import PRODUCTION_RECIPES
 ROOT = Path(__file__).resolve().parents[1]
 CUSTOM = ROOT / "docs/m5/custom_goods.csv"
 VANILLA = ROOT / "docs/vanilla_symbols/good.json"
-RGO_REPORT = ROOT / "docs/m5/rgo_remap_report.csv"
+GLOBAL_RGO_AUDIT = ROOT / "docs/m5/global_rgo_audit.csv"
 SEEDS = ROOT / "docs/m5/regional_building_seeds.csv"
 OUTPUT = ROOT / "docs/m5/active_goods_audit.csv"
 REPORT = ROOT / "docs/m5/ACTIVE_GOODS_AUDIT.md"
@@ -33,12 +33,14 @@ OUTPUT_FIELDS = (
 
 PERIOD_ROLE_GROUPS = {
     "food_crop_or_animal": {
-        "fish", "fruit", "livestock", "millet", "olives", "rice",
+        "chili", "cocoa", "elephants", "fish", "fruit", "horses", "legumes",
+        "livestock", "maize", "millet", "olives", "potato", "rice", "sugar",
         "wheat", "wild_game", "antq_barley",
     },
     "organic_raw_or_exchange": {
-        "amber", "beeswax", "cotton", "fiber_crops", "incense", "ivory",
-        "lumber", "pepper", "silk", "tar", "wool",
+        "amber", "beeswax", "cloves", "cotton", "fiber_crops", "fur",
+        "incense", "ivory", "lumber", "pearls", "pepper", "saffron", "silk", "tar",
+        "tea", "tobacco", "wool",
         "antq_camels", "antq_papyrus", "antq_silphium",
     },
     "mineral_or_quarried_raw": {
@@ -63,8 +65,7 @@ PERIOD_ROLE_GROUPS = {
     },
 }
 FORBIDDEN_POST_ANTIQUE = {
-    "cannons", "chili", "cloves", "cocoa", "coffee", "firearms", "potatoes",
-    "rubber", "sugar", "tea", "tobacco",
+    "cannons", "coffee", "firearms", "rubber", "saltpeter",
 }
 
 
@@ -115,7 +116,15 @@ def build() -> tuple[str, str, dict[str, int]]:
         for good, _input_amount in inputs:
             input_families[good].add(family)
 
+    rgo_locations: dict[str, set[str]] = defaultdict(set)
+    for row in rows(GLOBAL_RGO_AUDIT):
+        good = row.get("ad1_good", "")
+        location = row.get("location", "")
+        if good and location:
+            rgo_locations[good].add(location)
+
     active = set(custom_rows)
+    active.update(rgo_locations)
     active.update(good for goods in family_goods.values() for good in goods)
     active.update(input_families)
     active.update(output_families)
@@ -141,12 +150,6 @@ def build() -> tuple[str, str, dict[str, int]]:
     if stale_roles:
         failures.append(f"period-role review contains inactive goods: {sorted(stale_roles)}")
 
-    rgo_locations: dict[str, set[str]] = defaultdict(set)
-    for row in rows(RGO_REPORT):
-        good = row.get("replacement_good", "")
-        location = row.get("location", "")
-        if good and location and not location.startswith("#"):
-            rgo_locations[good].add(location)
     for key, row in custom_rows.items():
         if row["category"] == "raw_material" and not rgo_locations[key]:
             failures.append(f"{key}: custom raw good lacks an AD 1 RGO anchor")
@@ -229,8 +232,9 @@ def build() -> tuple[str, str, dict[str, int]]:
         f"{metrics['productive_families']} productive families.",
         f"- {metrics['roman_profile_families']} Roman-profile families and "
         f"{metrics['rgo_anchored_goods']} RGO-anchored active goods.",
-        "- Zero active cannon, firearm, colonial-crop, coffee, tea, tobacco, or",
-        "  other prohibited post-antique goods.",
+        "- Every visible RGO good is included. Coffee, saltpeter, firearms,",
+        "  cannon, and rubber are absent; American crops and the rare tea,",
+        "  sugar, clove, and tobacco surfaces remain geographically bounded.",
         "- `paper`, `coal`, `beer`, and `steel` remain engine keys only; mounted",
         "  localization and recipes present writing materials, charcoal/fuel,",
         "  fermented drinks, and bounded crucible steel.",

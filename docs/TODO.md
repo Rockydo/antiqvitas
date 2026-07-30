@@ -31,11 +31,10 @@ and focused runtime probe all pass.
   Philippine, Sulawesi, North Maluku, Plains-Woodland, Korean, Caucasian, and
   Andean and final-census archaeological splits. The generated literal
   placeholder census is zero.
-- The global RGO audit now covers all 13,553 controlled templates and applies
-  665 regional, environmental, and direct-anchor corrections. Most retained
-  staples remain inherited but are explicitly marked as contested where local
-  extraction is not attested; deeper regional specialty work remains open.
-- The 269 ancient building definitions now seed 3,570 placements across 1,845
+- The global RGO audit covers all 13,553 controlled templates and applies 745
+  corrections. Capacity, resource family, fit, trade access, decision, source,
+  and confidence are checked per location.
+- The 280 ancient building definitions seed 3,570 placements across 1,859
   settlement-ranked locations and all 463 starting polities. The top ten hold
   5.6% because reviewed Roman metropolitan packages
   remain deliberately deep; ordinary locations are capped at six.
@@ -821,27 +820,22 @@ and focused runtime probe all pass.
 
 ### S2-P2 — AD 1 economy, settlements, and historical landscape
 
-- [ ] Replace the inherited 1337 RGO geography with a global AD 1 resource pass.
-  - Build a full 13,552-location ledger, not a small correction list. Classify
+- [x] Replace the inherited 1337 RGO geography with a global AD 1 resource pass.
+  - Build a full 13,553-location ledger, not a small correction list. Classify
     every owned/populated location by environmental capacity, attested extraction/
     cultivation, trade access, and confidence.
   - Review every active good and remove post-antique production assumptions.
     Prioritize Mediterranean grain/wine/olive zones, mining, papyrus, incense,
     silk routes, Indian Ocean products, pastoral frontiers, forest products, salt,
     fisheries, and regional staples.
-  - [x] Complete the first whole-map period/environment screen. All 13,550
-    controlled templates now have an auditable row with owner region,
-    topography, vegetation, climate, installed and AD 1 goods, decision class,
-    source, confidence, and note. Expanded regional and climate rules apply
-    652 corrections (539 regional, 98 environmental, 15 direct anchors),
-    including global exclusions for misplaced cotton, silk, sugar, wine,
-    coal, pepper, incense, saltpeter, olives, tea, rice, saffron, coffee, and
-    elephants. Two controlled water/wasteland templates remain honestly
-    nonproductive rather than receiving fictitious RGOs.
-  - [ ] Continue from the complete ledger with finer subregional specialty,
+  - [x] Complete the first whole-map period/environment screen. All 13,553
+    controlled templates have an auditable capacity/access row; 745 corrections
+    remove or bound unsupported production.
+  - [x] Continue from the complete ledger with finer subregional specialty,
     extraction-capacity, and producer/consumer passes; replace contested
-    retained defaults where site-level or environmental evidence supports a
-    better choice.
+    retained defaults where evidence supports a better choice. Tea is limited
+    to 11 Sichuan proxies, cloves to Ternate/Tidore, and pepper to 10
+    Malabar/Western Ghats proxies. All 92 visible goods are economy-audited.
   - Acceptance: every assigned location is audited; regional distribution and
     outlier reports pass; no vanilla-only or post-476 RGO remains visible.
 

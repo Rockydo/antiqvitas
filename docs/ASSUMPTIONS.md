@@ -5827,3 +5827,11 @@ opening court rivalry, not universal enmity. Sources: `P8.1`-`P8.5`; `P10`;
 `CAH-XI`; `BHR`; `CAM-HAN-REG`; `HAN-WR`; `IRAN-KUC`; `UNESCO-SABA`;
 `HIMYAR-HIST`; `OCD`; `PLE`. [secure broad imperial diversity; contested
 exact status boundaries]
+
+## 2026-07-30 - Narrow crop anchors are regional production proxies
+
+Eleven Sichuan tea fields represent minor regional herb cultivation, not
+site-level plantations. Ternate and Tidore represent the Maluku clove source;
+ten Malabar/Western Ghats pepper fields represent a producing belt rather than
+reconstructed farms or output. Sources: `P12.1`; `PER`; `CAM-MUZIRIS`;
+`KER-MUZIRIS`. [secure broad source geography; contested exact field extent]

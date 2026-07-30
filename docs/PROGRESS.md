@@ -7949,3 +7949,15 @@ reviewed 128px BC7 DDS.
 - Added permanent format, alpha, safe-area, surface-drift, and hash-chain
   checks plus reviewed contact sheets and a live Advances-panel probe.
 - Validation passes 139/139; paired smoke reports zero mod-unique lines.
+
+## 2026-07-30 - Completed the global AD 1 resource pass
+
+- Classified all 13,553 controlled locations by capacity, resource family,
+  historical fit, trade access, decision, source, and confidence.
+- Applied 745 corrections; bounded tea to 11 Sichuan proxies, cloves to
+  Ternate/Tidore, and pepper to 10 Malabar/Western Ghats proxies.
+- Corrected the active-economy audit to include all map RGOs: 92 goods, 280
+  buildings, and 143 productive families.
+- A fresh observer start visibly confirmed Tea at Mingshan, Cloves at
+  Ternateon, and Pepper at Muziris.
+- Validation passes 139/139; paired smoke reports zero mod-unique lines.
