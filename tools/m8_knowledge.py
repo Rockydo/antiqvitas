@@ -21,6 +21,14 @@ from pathlib import Path
 
 from dates import AntqDate, M2_MIRROR_LANGUAGES
 from legacy_institutions import legacy_references, neutralize_references
+from m8_regional_depth import (
+    LATER_THEMES,
+    branch_names,
+    later_branch_pairs,
+    node_description,
+    node_effect,
+    validate_catalog,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 ADVANCES = ROOT / "in_game/common/advances"
@@ -60,6 +68,7 @@ FORBIDDEN = (
     "gunpowder", "cannon", "arquebus", "musket", "flintlock", "colonial",
     "ocean_crossing", "steam", "printing_press",
 )
+ENGINE_NUMBER = re.compile(r"-?\d+(?:\.(\d+))?")
 UNLOCK = re.compile(r"^\s*unlock_(?:unit|levy)\s*=", re.IGNORECASE)
 TOP_LEVEL = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*\s*=\s*\{")
 POTENTIAL = re.compile(r"^\s*potential\s*=")
@@ -526,62 +535,102 @@ ADVANCE_PROFILES = {
             "roman_italic", "Roman and Italic",
             "Roman and Italic civic, legal, logistical, and imperial practice.",
             ("antq_italic_group", "antq_iberian_group", "antq_balkan_group"),
-            ("antq_roman_law_engineering",), "P8.1;P15;CAH-XI;OCD",
+            (
+                "antq_roman_law_engineering", "antq_roman_juristic_science",
+                "antq_diocletianic_administration",
+                "antq_successor_kingdom_administration",
+            ), "P8.1;P15;CAH-XI;OCD",
         ),
         AdvanceProfile(
             "hellenic", "Hellenic",
             "Hellenic civic, scholarly, military, and eastern Mediterranean practice.",
             ("antq_hellenic_group", "antq_anatolian_group"),
-            ("antq_hellenism",), "P8.1;P15;CAH-XI;OCD",
+            (
+                "antq_hellenism", "antq_roman_juristic_science",
+                "antq_theological_orthodoxy",
+            ), "P8.1;P15;CAH-XI;OCD",
         ),
         AdvanceProfile(
             "celtic", "Celtic and Brittonic",
             "Celtic and Brittonic political, martial, exchange, and community practice.",
             ("antq_celtic_group",),
-            ("antq_foederati_statecraft",), "P8.7;P15;CAH-XI",
+            (
+                "antq_foederati_statecraft",
+                "antq_successor_kingdom_administration",
+            ), "P8.7;P15;CAH-XI",
         ),
         AdvanceProfile(
             "germanic", "Germanic",
             "Germanic assembly, warband, settlement, exchange, and confederation practice.",
             ("antq_germanic_group",),
-            ("antq_foederati_statecraft",), "P8.7;P15;CAH-XI;STR-GER",
+            (
+                "antq_foederati_statecraft", "antq_steppe_confederate_cavalry",
+                "antq_successor_kingdom_administration",
+            ), "P8.7;P15;CAH-XI;STR-GER",
         ),
         AdvanceProfile(
             "iranian_steppe", "Iranian and Steppe",
             "Iranian court, cavalry, caravan, and steppe-confederation practice.",
             ("antq_iranian_group", "antq_steppe_group"),
-            ("antq_cataphract_warfare",), "P8.2;P8.8;P15;CAH-XI",
+            (
+                "antq_cataphract_warfare", "antq_sasanian_fiscal_statecraft",
+                "antq_steppe_confederate_cavalry",
+                "antq_successor_kingdom_administration",
+            ), "P8.2;P8.8;P15;CAH-XI",
         ),
         AdvanceProfile(
             "indic", "Indic",
             "Indic court, monastic, agrarian, military, and Indian Ocean practice.",
             ("antq_indian_group", "antq_tibetan_group"),
-            ("antq_buddhist_monasticism",), "P8.4;P15;CAH-XI",
+            (
+                "antq_buddhist_monasticism",
+                "antq_indic_inscriptional_statecraft", "antq_monsoon_sea_networks",
+                "antq_kushan_buddhist_cosmopolis",
+                "antq_gupta_sanskrit_cosmopolis",
+                "antq_buddhist_translation_networks",
+            ), "P8.4;P15;CAH-XI",
         ),
         AdvanceProfile(
             "han_east_asian", "Han and East Asian",
             "Han and neighbouring East Asian administrative, textual, military, and agrarian practice.",
             ("antq_sinitic_group", "antq_korean_group", "antq_japonic_group"),
-            ("antq_han_bureaucratic_statecraft", "antq_papermaking"),
+            (
+                "antq_han_bureaucratic_statecraft", "antq_papermaking",
+                "antq_three_kingdoms_military_colonies",
+                "antq_northern_wei_statecraft",
+                "antq_buddhist_translation_networks",
+            ),
             "P8.3;P15;BHR;Bielenstein",
         ),
         AdvanceProfile(
             "near_eastern", "Near Eastern",
             "Levantine, Anatolian, Mesopotamian, and Caucasian urban and caravan practice.",
             ("antq_semitic_group", "antq_anatolian_group", "antq_caucasian_group"),
-            ("antq_theological_orthodoxy",), "P8.1;P8.2;P15;CAH-XI",
+            (
+                "antq_hellenism", "antq_sasanian_fiscal_statecraft",
+                "antq_christian_monasticism", "antq_theological_orthodoxy",
+                "antq_rabbinic_academy_networks",
+            ), "P8.1;P8.2;P15;CAH-XI",
         ),
         AdvanceProfile(
             "african", "African",
             "Nile, Maghrebi, Red Sea, and sub-Saharan political and exchange practice.",
             ("antq_nile_group", "antq_berber_group", "antq_subsaharan_group"),
-            ("antq_christian_monasticism",), "P8.5;P15;CAH-XI",
+            (
+                "antq_monsoon_sea_networks", "antq_red_sea_oceanic_exchange",
+                "antq_christian_monasticism",
+                "antq_aksumite_christian_kingship",
+            ), "P8.5;P15;CAH-XI",
         ),
         AdvanceProfile(
             "american", "American",
             "Regionally bounded American urban, agrarian, exchange, and political practice.",
             ("antq_american_group", "antq_mesoamerican_group", "antq_andean_group"),
-            (), "P8.10;P15",
+            (
+                "antq_teotihuacan_metropolitanism",
+                "antq_moche_irrigation_polities",
+                "antq_maya_dynastic_statecraft",
+            ), "P8.10;P15",
         ),
         AdvanceProfile(
             "oceanian", "Austronesian and Oceanian",
@@ -590,25 +639,39 @@ ADVANCE_PROFILES = {
                 "antq_austronesian_group", "antq_oceanic_group",
                 "antq_southeast_asian_group", "antq_north_maluku_group",
             ),
-            (), "P8.9;P15",
+            (
+                "antq_monsoon_sea_networks",
+                "antq_austronesian_harbor_chiefdoms",
+            ), "P8.9;P15",
         ),
         AdvanceProfile(
             "baltic", "Baltic",
             "Amber-coast, hillfort, mortuary, river-portage, and seasonal assembly practice.",
             ("antq_baltic_group",),
-            (), "P8.7;P15;TAC-GER;PAN-WBB",
+            (
+                "antq_forest_steppe_craft_exchange",
+                "antq_northern_forest_portage_networks",
+            ), "P8.7;P15;TAC-GER;PAN-WBB",
         ),
         AdvanceProfile(
             "slavic_eastern", "Vistula, Dnieper, and Eastern European",
             "Archaeologically bounded forest, river, settlement, and household practices without projecting later states.",
             ("antq_slavic_group",),
-            (), "P8.7;P15;AWE-DNIEPER-DVINA;ENC-NEEU",
+            (
+                "antq_forest_steppe_craft_exchange",
+                "antq_foederati_statecraft",
+                "antq_successor_kingdom_administration",
+            ), "P8.7;P15;AWE-DNIEPER-DVINA;ENC-NEEU",
         ),
         AdvanceProfile(
             "uralic", "Volga, Kama, and Northern Forest",
             "River-portage, sanctuary, metallurgical, oral, and seasonal-round practices of the northern forest and forest-steppe.",
             ("antq_uralic_group",),
-            (), "P8.7;P15;BSE-GORODETS;BSE-GLYADENOVO;BSE-UST-POLUY",
+            (
+                "antq_forest_steppe_craft_exchange",
+                "antq_steppe_confederate_cavalry",
+                "antq_northern_forest_portage_networks",
+            ), "P8.7;P15;BSE-GORODETS;BSE-GLYADENOVO;BSE-UST-POLUY",
         ),
     )
 }
@@ -757,11 +820,11 @@ TRACK_EFFECTS: dict[str, tuple[tuple[str, str], ...]] = {
     ),
 }
 
-# User-requested first tranche of the 3x advance expansion.  Twenty-two
+# Opening tranche of the 3x advance expansion. Twenty-two
 # five-node regional paths add 110 Age-I advances without creating isolated
 # roots: each path branches at its second node, converges, and ends in a
-# culture-bounded capstone.  Later ages receive equivalent depth in subsequent
-# tranches; this opening tranche first fixes every AD 1 start.
+# culture-bounded capstone. S2-P3 extends the same paths through every later
+# conceptual age in m8_regional_depth.py.
 AGE1_EXPANSION: dict[str, tuple[tuple[str, tuple[str, ...]], ...]] = {
     "statecraft": (
         ("celtic", (
@@ -1058,6 +1121,113 @@ INSTITUTION_PROFILES = {
                 "}",
             ),
         ),
+        InstitutionProfile(
+            "indic_inscriptional",
+            "Indic inscriptional, court, and monastic knowledge networks",
+            (
+                "OR = {",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_indian_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_tibetan_group }",
+                "\tregion = region:bengal_region",
+                "\tregion = region:central_india_region",
+                "\tregion = region:deccan_region",
+                "\tregion = region:hindustan_region",
+                "\tregion = region:western_india_region",
+                "}",
+            ),
+        ),
+        InstitutionProfile(
+            "monsoon_maritime",
+            "Indian Ocean and Austronesian seasonal maritime corridors",
+            (
+                "OR = {",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_indian_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_austronesian_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_oceanic_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_southeast_asian_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_nile_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_semitic_group }",
+                "}",
+            ),
+        ),
+        InstitutionProfile(
+            "red_sea_exchange",
+            "Nile, Horn, Arabian, and western Indian Ocean exchange societies",
+            (
+                "OR = {",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_nile_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_subsaharan_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_berber_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_semitic_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_indian_group }",
+                "}",
+            ),
+        ),
+        InstitutionProfile(
+            "iranian_fiscal",
+            "Iranian, Caucasian, Mesopotamian, and Central Asian state corridors",
+            (
+                "OR = {",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_iranian_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_steppe_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_caucasian_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_semitic_group }",
+                "\tregion = region:persia_region",
+                "\tregion = region:khorasan_region",
+                "\tregion = region:caucasus_region",
+                "}",
+            ),
+        ),
+        InstitutionProfile(
+            "american_metropolitan",
+            "Mesoamerican, Andean, and adjacent American civic-ritual networks",
+            (
+                "OR = {",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_american_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_mesoamerican_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_andean_group }",
+                "}",
+            ),
+        ),
+        InstitutionProfile(
+            "northern_craft",
+            "Baltic, eastern-European, and northern-forest craft and portage networks",
+            (
+                "OR = {",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_baltic_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_slavic_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_uralic_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_germanic_group }",
+                "}",
+            ),
+        ),
+        InstitutionProfile(
+            "oceanian_harbor",
+            "Austronesian, Southeast Asian, and Oceanian harbor-chiefdom networks",
+            (
+                "OR = {",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_austronesian_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_oceanic_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_southeast_asian_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_north_maluku_group }",
+                "}",
+            ),
+        ),
+        InstitutionProfile(
+            "successor_administration",
+            "Late Roman, federate, Iranian, and East Asian successor-state corridors",
+            (
+                "OR = {",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_italic_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_hellenic_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_germanic_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_celtic_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_iranian_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_sinitic_group }",
+                "\tdominant_culture = { has_culture_group = culture_group:antq_korean_group }",
+                "}",
+            ),
+        ),
     )
 }
 
@@ -1067,11 +1237,32 @@ INSTITUTION_DATA = (
     Institution("antq_roman_law_engineering", "Roman Law and Engineering", "Roman legal practice and public engineering circulate through imperial networks.", "age_1_traditions", "rome", True, "1.1.1", "early", "roman_imperial_practice", True, "P14.3;OCD;CAH-XI"),
     Institution("antq_han_bureaucratic_statecraft", "Han Bureaucratic Statecraft", "Written administration, registers, and examination-minded statecraft radiate from Han China.", "age_1_traditions", "jingzhao", True, "1.1.1", "early", "east_asian_administration", False, "P14.3;BHR;Bielenstein"),
     Institution("antq_buddhist_monasticism", "Buddhist Monasticism", "Buddhist monastic communities preserve learning and create durable religious networks.", "age_1_traditions", "anuradhapura", True, "1.1.1", "early", "buddhist_networks", True, "P14.3;CAH-XI"),
+    Institution("antq_indic_inscriptional_statecraft", "Indic Inscriptional Statecraft", "Court, guild, and monastic inscriptions make grants, status, and political claims durable across Indic networks.", "age_1_traditions", "patna", True, "1.1.1", "early", "indic_inscriptional", True, "P8.4;P14.3;CAH-XI"),
+    Institution("antq_monsoon_sea_networks", "Monsoon Navigation", "Seasonal wind knowledge, pilotage, and harbor brokerage organize Indian Ocean and Austronesian exchange.", "age_1_traditions", "kodungallur", True, "1.1.1", "early", "monsoon_maritime", True, "P8.4;P8.9;P14.3;PER"),
     Institution("antq_cataphract_warfare", "Cataphract Warfare", "Heavy armoured cavalry methods circulate from the Iranian and steppe worlds.", "age_2_renaissance", "merv", False, "96.1.1", "early", "iranian_steppe_cavalry", False, "P14.3;CAH-XI"),
     Institution("antq_papermaking", "Papermaking", "Paper and its associated craft knowledge spread outward from Luoyang.", "age_2_renaissance", "luoyang", False, "105.1.1", "mid", "east_central_asian_paper", True, "P14.3;BHR"),
+    Institution("antq_roman_juristic_science", "Roman Juristic Science", "Professional responsa and organized imperial constitutions turn legal interpretation into a transferable learned practice.", "age_2_renaissance", "rome", False, "130.1.1", "mid", "roman_imperial_practice", True, "P8.1;P15;OCD;CAH-XI"),
+    Institution("antq_red_sea_oceanic_exchange", "Red Sea Oceanic Exchange", "Customs, seasonal shipping, and multilingual brokerage bind the Horn, Arabia, India, and Roman seas.", "age_2_renaissance", "axum", False, "100.1.1", "mid", "red_sea_exchange", True, "P8.5;P14.3;PER;CAH-XI"),
+    Institution("antq_kushan_buddhist_cosmopolis", "Kushan Buddhist Cosmopolis", "Kushan patronage connects monasteries, coin routes, artistic workshops, and multilingual teaching across Central and South Asia.", "age_2_renaissance", "merv", False, "127.1.1", "mid", "buddhist_networks", True, "P8.2;P8.4;P14.3;CAH-XI"),
     Institution("antq_christian_monasticism", "Christian Monasticism", "Egyptian ascetic communities establish a second monastic centre of gravity.", "age_3_discovery", "alexandria", False, "270.1.1", "mid", "christian_monastic", True, "P14.3;CAH-XII"),
+    Institution("antq_sasanian_fiscal_statecraft", "Sasanian Fiscal Statecraft", "Royal mints, land revenues, court offices, and negotiated aristocratic service support the new Iranian dynasty.", "age_3_discovery", "baghdad", False, "226.1.1", "mid", "iranian_fiscal", False, "P8.2;P14.3;CAH-XII"),
+    Institution("antq_three_kingdoms_military_colonies", "Three Kingdoms Military Settlements", "Competing Chinese regimes organize soldiers, migrant households, granaries, and reclaimed fields around defended corridors.", "age_3_discovery", "luoyang", False, "220.1.1", "mid", "east_asian_administration", False, "P8.3;P14.3;CAH-XII"),
+    Institution("antq_teotihuacan_metropolitanism", "Teotihuacan Metropolitanism", "Apartment compounds, craft quarters, ritual precincts, and migrant neighborhoods sustain an exceptional American metropolis.", "age_3_discovery", "tehotihuacan", False, "200.1.1", "mid", "american_metropolitan", True, "P8.10;P14.3;INAH-TEO;MILLON"),
+    Institution("antq_forest_steppe_craft_exchange", "Forest-Steppe Craft Exchange", "Portage knowledge, bloomery iron, ritual valuables, and seasonal fairs connect Baltic and northern-forest communities.", "age_3_discovery", "kazan", False, "210.1.1", "mid", "northern_craft", True, "P8.7;P14.3;PAN-WBB;BSE-GORODETS"),
     Institution("antq_theological_orthodoxy", "Theological Orthodoxy", "Council-led doctrinal settlement shapes the late Roman religious world.", "age_4_reformation", "iznik", False, "325.1.1", "late", "christian_councils", False, "P14.3;CAH-XII"),
+    Institution("antq_diocletianic_administration", "Diocletianic Administration", "Layered provinces, census cycles, price regulation, and collegial rule reshape late Roman government.", "age_4_reformation", "iznik", False, "293.1.1", "late", "roman_imperial_practice", False, "P8.1;P14.3;CAH-XII"),
+    Institution("antq_gupta_sanskrit_cosmopolis", "Gupta Sanskrit Cosmopolis", "Sanskrit political expression, court patronage, learned sciences, and temple-monastic networks travel across South Asia.", "age_4_reformation", "patna", False, "320.1.1", "late", "indic_inscriptional", True, "P8.4;P14.3;CAH-XII"),
+    Institution("antq_steppe_confederate_cavalry", "Steppe Confederate Cavalry", "Composite bows, remount depth, subject contingents, and tribute politics support larger mobile confederations.", "age_4_reformation", "kazan", False, "350.1.1", "late", "iranian_steppe_cavalry", False, "P8.8;P14.3;CAH-XII;AMM"),
+    Institution("antq_austronesian_harbor_chiefdoms", "Austronesian Harbor Chiefdoms", "Harbor leaders coordinate seasonal sailing, lineage exchange, imported prestige goods, and protected anchorages.", "age_4_reformation", "guahan", False, "300.1.1", "late", "oceanian_harbor", True, "P8.9;P14.3;BELLWOOD;KIRCH"),
     Institution("antq_foederati_statecraft", "Foederati Statecraft", "Land-for-service settlements become a deliberate frontier and imperial practice.", "age_5_absolutism", "edirne", False, "382.1.1", "late", "late_roman_frontier", False, "P14.3;AMM-31"),
+    Institution("antq_rabbinic_academy_networks", "Rabbinic Academy Networks", "Learned communities connect legal debate, worship, charity, and communal adjudication across late antique Jewish diasporas.", "age_5_absolutism", "baghdad", False, "400.1.1", "late", "iranian_fiscal", True, "P8.2;P14.3;CAH-XII"),
+    Institution("antq_aksumite_christian_kingship", "Aksumite Christian Kingship", "Royal conversion, coin imagery, Red Sea diplomacy, and episcopal patronage reshape Aksumite authority.", "age_5_absolutism", "axum", False, "395.1.1", "late", "red_sea_exchange", True, "P8.5;P14.3;CAH-XII"),
+    Institution("antq_moche_irrigation_polities", "Moche Irrigation Polities", "Canal labor, monumental compounds, specialist production, and ritual redistribution support north Andean polities.", "age_5_absolutism", "chan_chan", False, "395.1.1", "late", "american_metropolitan", False, "P8.10;P14.3;MOSELEY"),
+    Institution("antq_northern_forest_portage_networks", "Northern Forest Portage Networks", "River carries, sanctuary gatherings, craft exchange, and seasonal protection bind dispersed northern communities.", "age_5_absolutism", "bolghar", False, "410.1.1", "late", "northern_craft", True, "P8.7;P14.3;BSE-UST-POLUY"),
+    Institution("antq_successor_kingdom_administration", "Successor Kingdom Administration", "Post-imperial rulers combine Roman fiscal memory, royal households, customary settlements, and ecclesiastical recordkeeping.", "age_6_revolutions", "ravenna", False, "455.1.1", "late", "successor_administration", True, "P8.1;P8.7;P14.3;CAH-XII"),
+    Institution("antq_northern_wei_statecraft", "Northern Wei Statecraft", "A conquering court integrates steppe military households, Chinese registers, Buddhist patronage, and provincial administration.", "age_6_revolutions", "datong_datong", False, "460.1.1", "late", "east_asian_administration", False, "P8.3;P8.8;P14.3;CAH-XII"),
+    Institution("antq_buddhist_translation_networks", "Buddhist Translation Networks", "Monasteries and traveling scholars coordinate manuscripts, multilingual teams, patronage, and doctrinal catalogues.", "age_6_revolutions", "jingzhao", False, "452.1.1", "late", "buddhist_networks", True, "P8.3;P8.4;P14.3;CAH-XII"),
+    Institution("antq_maya_dynastic_statecraft", "Maya Dynastic Statecraft", "Writing, calendrics, reservoirs, court ritual, and inter-city diplomacy support mature lowland dynastic centres.", "age_6_revolutions", "yax_mutal", False, "460.1.1", "late", "american_metropolitan", True, "P8.10;P14.3;MARTIN-GRUBE"),
 )
 
 # The institution manager resolves an exact institution_birth static modifier
@@ -1083,11 +1274,32 @@ INSTITUTION_BIRTH_EFFECTS: dict[str, tuple[str, str]] = {
     "antq_roman_law_engineering": ("local_monthly_development", "0.001"),
     "antq_han_bureaucratic_statecraft": ("local_cultural_tradition", "0.10"),
     "antq_buddhist_monasticism": ("local_max_literacy", "1"),
+    "antq_indic_inscriptional_statecraft": ("local_cultural_tradition", "0.08"),
+    "antq_monsoon_sea_networks": ("local_sailors", "0.05"),
     "antq_cataphract_warfare": ("local_manpower_modifier", "0.05"),
     "antq_papermaking": ("local_max_literacy", "2"),
+    "antq_roman_juristic_science": ("local_cultural_influence", "0.08"),
+    "antq_red_sea_oceanic_exchange": ("local_monthly_development", "0.0008"),
+    "antq_kushan_buddhist_cosmopolis": ("local_max_literacy", "1"),
     "antq_christian_monasticism": ("local_pop_conversion_speed_modifier", "0.10"),
+    "antq_sasanian_fiscal_statecraft": ("local_monthly_development", "0.0008"),
+    "antq_three_kingdoms_military_colonies": ("local_manpower_modifier", "0.04"),
+    "antq_teotihuacan_metropolitanism": ("local_population_capacity_modifier", "0.05"),
+    "antq_forest_steppe_craft_exchange": ("local_cultural_influence", "0.06"),
     "antq_theological_orthodoxy": ("local_pop_conversion_speed_modifier", "0.20"),
+    "antq_diocletianic_administration": ("local_monthly_development", "0.001"),
+    "antq_gupta_sanskrit_cosmopolis": ("local_max_literacy", "2"),
+    "antq_steppe_confederate_cavalry": ("local_manpower_modifier", "0.05"),
+    "antq_austronesian_harbor_chiefdoms": ("local_sailors", "0.05"),
     "antq_foederati_statecraft": ("local_levy_size_modifier", "0.05"),
+    "antq_rabbinic_academy_networks": ("local_max_literacy", "1"),
+    "antq_aksumite_christian_kingship": ("local_cultural_influence", "0.08"),
+    "antq_moche_irrigation_polities": ("local_population_capacity_modifier", "0.05"),
+    "antq_northern_forest_portage_networks": ("local_cultural_tradition", "0.06"),
+    "antq_successor_kingdom_administration": ("local_monthly_development", "0.0008"),
+    "antq_northern_wei_statecraft": ("local_cultural_tradition", "0.10"),
+    "antq_buddhist_translation_networks": ("local_max_literacy", "2"),
+    "antq_maya_dynastic_statecraft": ("local_cultural_influence", "0.08"),
 }
 
 
@@ -1124,6 +1336,15 @@ def advance_display_name(name: str, profile: str) -> str:
 
 def advance_records() -> tuple[Advance, ...]:
     records: list[Advance] = []
+    expected_later_pairs = {
+        (track, profile)
+        for track, paths in AGE1_EXPANSION.items()
+        for profile, _branch in paths
+    }
+    validate_catalog(expected_later_pairs)
+    later_ordinals = {
+        pair: ordinal for ordinal, pair in enumerate(later_branch_pairs())
+    }
     for track, age_groups in TRACKS.items():
         for conceptual_index, group in enumerate(age_groups):
             # EU5 validates `requires` within one age only. Each age therefore
@@ -1190,6 +1411,49 @@ def advance_records() -> tuple[Advance, ...]:
                     advance_description(display_name, track, profile, 0),
                     ADVANCE_PROFILES[profile].source,
                 ))
+        for profile, _opening_branch in AGE1_EXPANSION[track]:
+            branch_ordinal = later_ordinals[(track, profile)]
+            for conceptual_age, theme in enumerate(
+                LATER_THEMES[(track, profile)], start=1
+            ):
+                # EU5 exposes six age slots while the design has five
+                # conceptual ages. Split the final regional paths evenly
+                # across the two late slots so every mini-DAG stays within
+                # one age as required by the engine.
+                age_index = (
+                    conceptual_age
+                    if conceptual_age < 4
+                    else 4 + branch_ordinal % 2
+                )
+                root_offset = 5 if age_index == 5 else 0
+                age_root = f"antq_{TRACKS[track][conceptual_age][root_offset]}"
+                later_branch = branch_names(theme, track)
+                later_depths = (1, 2, 3, 3, 4)
+                later_parents = ((age_root,), (0,), (1,), (1,), (2, 3))
+                later_keys = tuple(f"antq_{name}" for name in later_branch)
+                for node_index, name in enumerate(later_branch):
+                    requirements = tuple(
+                        parent if isinstance(parent, str) else later_keys[parent]
+                        for parent in later_parents[node_index]
+                    )
+                    display_name = advance_display_name(name, profile)
+                    records.append(Advance(
+                        later_keys[node_index],
+                        display_name,
+                        AGE_KEYS[age_index],
+                        age_index,
+                        later_depths[node_index],
+                        track,
+                        profile,
+                        requirements,
+                        (
+                            node_effect(
+                                track, conceptual_age, branch_ordinal, node_index
+                            ),
+                        ),
+                        node_description(theme, track, node_index),
+                        theme.source,
+                    ))
     return tuple(records)
 
 
@@ -1536,18 +1800,18 @@ def institution_manager() -> str:
 def validate(records: tuple[Advance, ...]) -> None:
     failures: list[str] = []
     unlocks = content_unlocks(records)
-    if len(records) != 360:
-        failures.append(f"expected 360 advances after the Age-I expansion, got {len(records)}")
+    if len(records) != 800:
+        failures.append(f"expected 800 advances after the S2-P3 expansion, got {len(records)}")
     keys = [record.key for record in records]
     if len(keys) != len(set(keys)):
         failures.append("advance keys are not unique")
-    expected_counts = (160, 50, 50, 50, 25, 25)
+    expected_counts = (160, 160, 160, 160, 80, 80)
     for age_index, age in enumerate(AGE_KEYS):
         age_records = [record for record in records if record.age == age]
         expected = expected_counts[age_index]
         if len(age_records) != expected:
             failures.append(f"{age} has {len(age_records)}, not {expected} advances")
-        depth_limit = 5 if age_index == 0 else (4 if age_index < 4 else 3)
+        depth_limit = 5
         if any(record.depth not in range(depth_limit) for record in age_records):
             failures.append(f"{age} has a depth outside 0..{depth_limit - 1}")
         regional_profiles = {record.profile for record in age_records} - {"shared"}
@@ -1636,16 +1900,16 @@ def validate(records: tuple[Advance, ...]) -> None:
     by_key = {record.key: record for record in records}
     required_by = {required for record in records for required in record.requires}
     leaves = [record.key for record in records if record.key not in required_by]
-    if len(leaves) != 102:
-        failures.append("the expanded branching trees must have exactly 102 terminal choices")
+    if len(leaves) != 190:
+        failures.append("the expanded branching trees must have exactly 190 terminal choices")
     child_counts = {key: 0 for key in keys}
     for record in records:
         for required in record.requires:
             child_counts[required] += 1
-    if sum(count >= 2 for count in child_counts.values()) != 72:
-        failures.append("the expanded advance DAG must contain exactly 72 branch points")
-    if sum(len(record.requires) >= 2 for record in records) != 42:
-        failures.append("the expanded advance DAG must contain exactly 42 convergence nodes")
+    if sum(count >= 2 for count in child_counts.values()) != 160:
+        failures.append("the expanded advance DAG must contain exactly 160 branch points")
+    if sum(len(record.requires) >= 2 for record in records) != 130:
+        failures.append("the expanded advance DAG must contain exactly 130 convergence nodes")
     for profile in set(ADVANCE_PROFILES) - {"shared"}:
         profile_leaves = [key for key in leaves if by_key[key].profile == profile]
         minimum_leaves = 2 if profile in {"baltic", "slavic_eastern", "uralic"} else 3
@@ -1656,7 +1920,7 @@ def validate(records: tuple[Advance, ...]) -> None:
         for profile in ADVANCE_PROFILES
     }
     for profile, count in profile_counts.items():
-        minimum = 50 if profile == "shared" else 10
+        minimum = 50 if profile == "shared" else 20
         if count < minimum:
             failures.append(f"advance profile {profile} has only {count} nodes")
     for record in records:
@@ -1668,6 +1932,12 @@ def validate(records: tuple[Advance, ...]) -> None:
             failures.append(f"{record.key} has a placeholder description")
         if not record.source:
             failures.append(f"{record.key} has no source")
+        for field, value in record.effects:
+            numeric = ENGINE_NUMBER.fullmatch(value)
+            if numeric is not None and len(numeric.group(1) or "") > 5:
+                failures.append(
+                    f"{record.key} {field} exceeds EU5's five-decimal script limit: {value}"
+                )
         for required in record.requires:
             if required not in key_set:
                 failures.append(f"{record.key} requires an unknown advance")
@@ -1687,6 +1957,16 @@ def validate(records: tuple[Advance, ...]) -> None:
     institution_keys = [item.key for item in INSTITUTION_DATA]
     if len(institution_keys) != len(set(institution_keys)):
         failures.append("institution keys are not unique")
+    if len(institution_keys) != 30:
+        failures.append(f"S2-P3 requires 30 ancient institutions, got {len(institution_keys)}")
+    expected_institution_counts = (6, 5, 5, 5, 5, 4)
+    for age_index, age in enumerate(AGE_KEYS):
+        count = sum(item.age == age for item in INSTITUTION_DATA)
+        if count != expected_institution_counts[age_index]:
+            failures.append(
+                f"{age} has {count} institutions, not "
+                f"{expected_institution_counts[age_index]}"
+            )
     for item in INSTITUTION_DATA:
         if item.age not in AGE_KEYS:
             failures.append(f"{item.key} uses an invalid age")
@@ -1700,8 +1980,23 @@ def validate(records: tuple[Advance, ...]) -> None:
             failures.append(f"{item.key} uses unknown eligibility profile")
         if not item.source:
             failures.append(f"{item.key} has no historical source")
-    if sum(item.start_active for item in INSTITUTION_DATA) != 4:
-        failures.append("M8 requires four active AD 1 institution origins")
+    if sum(item.start_active for item in INSTITUTION_DATA) != 6:
+        failures.append("S2-P3 requires six active AD 1 institution origins")
+    adopted = {
+        institution
+        for profile in ADVANCE_PROFILES.values()
+        for institution in profile.adoption_institutions
+    }
+    if not adopted <= set(institution_keys):
+        failures.append(
+            "advance adoption paths reference unknown institutions: "
+            + ", ".join(sorted(adopted - set(institution_keys)))
+        )
+    for profile in set(ADVANCE_PROFILES) - {"shared"}:
+        if len(ADVANCE_PROFILES[profile].adoption_institutions) < 2:
+            failures.append(
+                f"advance profile {profile} lacks several institution adoption paths"
+            )
     han = next(item for item in INSTITUTION_DATA if item.key == "antq_han_bureaucratic_statecraft")
     han_profile = "\n".join(INSTITUTION_PROFILES[han.profile].script)
     if han.trade_spread or any(
@@ -2320,7 +2615,12 @@ def check(records: tuple[Advance, ...]) -> bool:
         text = custom_institutions.read_text(encoding="utf-8-sig")
         for item in INSTITUTION_DATA:
             marker = f"antq_institution_eligible_{item.profile}"
-            if text.count(marker) != 10:
+            header = f"{item.key} = {{\n"
+            if header not in text:
+                failures.append(f"{item.key} is missing from the custom institution registry")
+                continue
+            block = text.split(header, 1)[1].split("\n}\n", 1)[0]
+            if block.count(marker) != 10:
                 failures.append(f"{item.key} does not gate all ten spawn/spread channels")
     custom_tree = ADVANCES / "00_antiquitas_m8_tree.txt"
     if custom_tree.is_file() and any(token in custom_tree.read_text(encoding="utf-8-sig").lower() for token in FORBIDDEN):
@@ -2334,7 +2634,7 @@ def check(records: tuple[Advance, ...]) -> bool:
     unlock_count = sum(len(entries) for entries in unlock_map.values())
     print(
         "m8_knowledge: PASS "
-        f"(360 advances; 9 ancient institutions; 18 legacy institutions removed; "
+        f"(800 advances; {len(INSTITUTION_DATA)} ancient institutions; 18 legacy institutions removed; "
         f"{unlock_count} ancient-system unlocks; "
         f"{len(start_research_rows(records))} opening profiles researchable; "
         f"starting tiers 1/2/3/4 = {'/'.join(map(str, tiers))}; no vanilla unlocks)"

@@ -1,5 +1,18 @@
 # ANTIQVITAS BLOCKERS
 
+## 2026-07-30 - S2-P3 focused panels did not leave the front-end
+
+Status: bounded driver-evidence limitation; S2 content gates pass.
+
+The first acquired smoke exposed over-precision advance literals; the generator
+and permanent guard were fixed. `make validate` passes 146/146 and confirming
+paired smoke passes with zero mod-only errors at fingerprint
+`58c5baf8ef799d689e6a09b6f0e3447d431a91a551bb504eb3024badeeee4b58`.
+Two focused Observer starts returned to the front-end, so live knowledge and
+map/diplomacy captures remain unavailable under the two-attempt rule. Final
+`error.log` is 1,211 bytes with zero ANTIQVITAS, CoA, tree, or malformed-token
+lines. Captures: `docs/screens/S2_KNOWLEDGE_COA_20260730/`.
+
 ## 2026-07-27 - Focused S2 law-panel start did not leave the main menu
 
 Status: bounded driver-evidence limitation; does not block continued work.

@@ -292,6 +292,152 @@ antq_buddhist_monasticism = {
 	}
 }
 
+antq_indic_inscriptional_statecraft = {
+	age = age_1_traditions
+	location = patna
+	can_spawn = {
+		current_date >= 1.1.1
+		this = location:patna
+		antq_institution_eligible_indic_inscriptional = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_early
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = institution_base_spread_from_neighbor_with_early
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = institution_trade_spread_value_early
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = institution_trade_spread_value_early
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = institution_total_embraced_to_capital_early
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = institution_spread_to_market_member_early
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_monsoon_sea_networks = {
+	age = age_1_traditions
+	location = kodungallur
+	can_spawn = {
+		current_date >= 1.1.1
+		this = location:kodungallur
+		antq_institution_eligible_monsoon_maritime = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_monsoon_maritime = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_monsoon_maritime = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_early
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_monsoon_maritime = yes }
+			add = institution_base_spread_from_neighbor_with_early
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_monsoon_maritime = yes }
+			add = institution_trade_spread_value_early
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_monsoon_maritime = yes }
+			add = institution_trade_spread_value_early
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_monsoon_maritime = yes }
+			add = institution_total_embraced_to_capital_early
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_monsoon_maritime = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_monsoon_maritime = yes }
+			add = institution_spread_to_market_member_early
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_monsoon_maritime = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
 antq_cataphract_warfare = {
 	age = age_2_renaissance
 	location = merv
@@ -438,6 +584,225 @@ antq_papermaking = {
 	}
 }
 
+antq_roman_juristic_science = {
+	age = age_2_renaissance
+	location = rome
+	can_spawn = {
+		current_date >= 130.1.1
+		this = location:rome
+		antq_institution_eligible_roman_imperial_practice = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_mid
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = institution_base_spread_from_neighbor_with_mid
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = institution_trade_spread_value_mid
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = institution_trade_spread_value_mid
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = institution_total_embraced_to_capital_mid
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = institution_spread_to_market_member_mid
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_red_sea_oceanic_exchange = {
+	age = age_2_renaissance
+	location = axum
+	can_spawn = {
+		current_date >= 100.1.1
+		this = location:axum
+		antq_institution_eligible_red_sea_exchange = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_mid
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = institution_base_spread_from_neighbor_with_mid
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = institution_trade_spread_value_mid
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = institution_trade_spread_value_mid
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = institution_total_embraced_to_capital_mid
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = institution_spread_to_market_member_mid
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_kushan_buddhist_cosmopolis = {
+	age = age_2_renaissance
+	location = merv
+	can_spawn = {
+		current_date >= 127.1.1
+		this = location:merv
+		antq_institution_eligible_buddhist_networks = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_mid
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = institution_base_spread_from_neighbor_with_mid
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = institution_trade_spread_value_mid
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = institution_trade_spread_value_mid
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = institution_total_embraced_to_capital_mid
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = institution_spread_to_market_member_mid
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
 antq_christian_monasticism = {
 	age = age_3_discovery
 	location = alexandria
@@ -506,6 +871,298 @@ antq_christian_monasticism = {
 		value = 0
 		if = {
 			limit = { antq_institution_eligible_christian_monastic = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_sasanian_fiscal_statecraft = {
+	age = age_3_discovery
+	location = baghdad
+	can_spawn = {
+		current_date >= 226.1.1
+		this = location:baghdad
+		antq_institution_eligible_iranian_fiscal = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_mid
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = institution_base_spread_from_neighbor_with_mid
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = 0
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = 0
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = institution_total_embraced_to_capital_mid
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = institution_spread_to_market_member_mid
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_three_kingdoms_military_colonies = {
+	age = age_3_discovery
+	location = luoyang
+	can_spawn = {
+		current_date >= 220.1.1
+		this = location:luoyang
+		antq_institution_eligible_east_asian_administration = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_mid
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = institution_base_spread_from_neighbor_with_mid
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = 0
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = 0
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = institution_total_embraced_to_capital_mid
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = institution_spread_to_market_member_mid
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_teotihuacan_metropolitanism = {
+	age = age_3_discovery
+	location = tehotihuacan
+	can_spawn = {
+		current_date >= 200.1.1
+		this = location:tehotihuacan
+		antq_institution_eligible_american_metropolitan = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_mid
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_base_spread_from_neighbor_with_mid
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_trade_spread_value_mid
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_trade_spread_value_mid
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_total_embraced_to_capital_mid
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_spread_to_market_member_mid
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_forest_steppe_craft_exchange = {
+	age = age_3_discovery
+	location = kazan
+	can_spawn = {
+		current_date >= 210.1.1
+		this = location:kazan
+		antq_institution_eligible_northern_craft = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_mid
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
+			add = institution_base_spread_from_neighbor_with_mid
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
+			add = institution_trade_spread_value_mid
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
+			add = institution_trade_spread_value_mid
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
+			add = institution_total_embraced_to_capital_mid
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
+			add = institution_spread_to_market_member_mid
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
 			add = institution_spread_to_market_center
 		}
 	}
@@ -584,6 +1241,298 @@ antq_theological_orthodoxy = {
 	}
 }
 
+antq_diocletianic_administration = {
+	age = age_4_reformation
+	location = iznik
+	can_spawn = {
+		current_date >= 293.1.1
+		this = location:iznik
+		antq_institution_eligible_roman_imperial_practice = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_late
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = institution_base_spread_from_neighbor_with_late
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = 0
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = 0
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = institution_total_embraced_to_capital_late
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = institution_spread_to_market_member_late
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_roman_imperial_practice = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_gupta_sanskrit_cosmopolis = {
+	age = age_4_reformation
+	location = patna
+	can_spawn = {
+		current_date >= 320.1.1
+		this = location:patna
+		antq_institution_eligible_indic_inscriptional = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_late
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = institution_base_spread_from_neighbor_with_late
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = institution_trade_spread_value_late
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = institution_trade_spread_value_late
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = institution_total_embraced_to_capital_late
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = institution_spread_to_market_member_late
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_indic_inscriptional = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_steppe_confederate_cavalry = {
+	age = age_4_reformation
+	location = kazan
+	can_spawn = {
+		current_date >= 350.1.1
+		this = location:kazan
+		antq_institution_eligible_iranian_steppe_cavalry = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_steppe_cavalry = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_steppe_cavalry = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_late
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_steppe_cavalry = yes }
+			add = institution_base_spread_from_neighbor_with_late
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_steppe_cavalry = yes }
+			add = 0
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_steppe_cavalry = yes }
+			add = 0
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_steppe_cavalry = yes }
+			add = institution_total_embraced_to_capital_late
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_steppe_cavalry = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_steppe_cavalry = yes }
+			add = institution_spread_to_market_member_late
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_steppe_cavalry = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_austronesian_harbor_chiefdoms = {
+	age = age_4_reformation
+	location = guahan
+	can_spawn = {
+		current_date >= 300.1.1
+		this = location:guahan
+		antq_institution_eligible_oceanian_harbor = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_oceanian_harbor = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_oceanian_harbor = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_late
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_oceanian_harbor = yes }
+			add = institution_base_spread_from_neighbor_with_late
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_oceanian_harbor = yes }
+			add = institution_trade_spread_value_late
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_oceanian_harbor = yes }
+			add = institution_trade_spread_value_late
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_oceanian_harbor = yes }
+			add = institution_total_embraced_to_capital_late
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_oceanian_harbor = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_oceanian_harbor = yes }
+			add = institution_spread_to_market_member_late
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_oceanian_harbor = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
 antq_foederati_statecraft = {
 	age = age_5_absolutism
 	location = edirne
@@ -652,6 +1601,590 @@ antq_foederati_statecraft = {
 		value = 0
 		if = {
 			limit = { antq_institution_eligible_late_roman_frontier = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_rabbinic_academy_networks = {
+	age = age_5_absolutism
+	location = baghdad
+	can_spawn = {
+		current_date >= 400.1.1
+		this = location:baghdad
+		antq_institution_eligible_iranian_fiscal = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_late
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = institution_base_spread_from_neighbor_with_late
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = institution_trade_spread_value_late
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = institution_trade_spread_value_late
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = institution_total_embraced_to_capital_late
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = institution_spread_to_market_member_late
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_iranian_fiscal = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_aksumite_christian_kingship = {
+	age = age_5_absolutism
+	location = axum
+	can_spawn = {
+		current_date >= 395.1.1
+		this = location:axum
+		antq_institution_eligible_red_sea_exchange = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_late
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = institution_base_spread_from_neighbor_with_late
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = institution_trade_spread_value_late
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = institution_trade_spread_value_late
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = institution_total_embraced_to_capital_late
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = institution_spread_to_market_member_late
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_red_sea_exchange = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_moche_irrigation_polities = {
+	age = age_5_absolutism
+	location = chan_chan
+	can_spawn = {
+		current_date >= 395.1.1
+		this = location:chan_chan
+		antq_institution_eligible_american_metropolitan = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_late
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_base_spread_from_neighbor_with_late
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = 0
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = 0
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_total_embraced_to_capital_late
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_spread_to_market_member_late
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_northern_forest_portage_networks = {
+	age = age_5_absolutism
+	location = bolghar
+	can_spawn = {
+		current_date >= 410.1.1
+		this = location:bolghar
+		antq_institution_eligible_northern_craft = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_late
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
+			add = institution_base_spread_from_neighbor_with_late
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
+			add = institution_trade_spread_value_late
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
+			add = institution_trade_spread_value_late
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
+			add = institution_total_embraced_to_capital_late
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
+			add = institution_spread_to_market_member_late
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_northern_craft = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_successor_kingdom_administration = {
+	age = age_6_revolutions
+	location = ravenna
+	can_spawn = {
+		current_date >= 455.1.1
+		this = location:ravenna
+		antq_institution_eligible_successor_administration = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_successor_administration = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_successor_administration = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_late
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_successor_administration = yes }
+			add = institution_base_spread_from_neighbor_with_late
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_successor_administration = yes }
+			add = institution_trade_spread_value_late
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_successor_administration = yes }
+			add = institution_trade_spread_value_late
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_successor_administration = yes }
+			add = institution_total_embraced_to_capital_late
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_successor_administration = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_successor_administration = yes }
+			add = institution_spread_to_market_member_late
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_successor_administration = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_northern_wei_statecraft = {
+	age = age_6_revolutions
+	location = datong_datong
+	can_spawn = {
+		current_date >= 460.1.1
+		this = location:datong_datong
+		antq_institution_eligible_east_asian_administration = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_late
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = institution_base_spread_from_neighbor_with_late
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = 0
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = 0
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = institution_total_embraced_to_capital_late
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = institution_spread_to_market_member_late
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_east_asian_administration = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_buddhist_translation_networks = {
+	age = age_6_revolutions
+	location = jingzhao
+	can_spawn = {
+		current_date >= 452.1.1
+		this = location:jingzhao
+		antq_institution_eligible_buddhist_networks = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_late
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = institution_base_spread_from_neighbor_with_late
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = institution_trade_spread_value_late
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = institution_trade_spread_value_late
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = institution_total_embraced_to_capital_late
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = institution_spread_to_market_member_late
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_buddhist_networks = yes }
+			add = institution_spread_to_market_center
+		}
+	}
+}
+
+antq_maya_dynastic_statecraft = {
+	age = age_6_revolutions
+	location = yax_mutal
+	can_spawn = {
+		current_date >= 460.1.1
+		this = location:yax_mutal
+		antq_institution_eligible_american_metropolitan = yes
+	}
+	promote_chance = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = 100
+		}
+	}
+	spread_from_friendly_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_base_spread_from_friendly_neighbor_with_late
+		}
+	}
+	spread_from_any_coast_border_location = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_base_spread_from_neighbor_with_late
+		}
+	}
+	spread_from_any_import = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_trade_spread_value_late
+		}
+	}
+	spread_from_any_export = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_trade_spread_value_late
+		}
+	}
+	spread_embraced_to_capital = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_total_embraced_to_capital_late
+		}
+	}
+	spread_scale_on_control_if_owner_embraced = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = 2
+		}
+	}
+	spread_to_market_member = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
+			add = institution_spread_to_market_member_late
+		}
+	}
+	spread_to_market_center = {
+		value = 0
+		if = {
+			limit = { antq_institution_eligible_american_metropolitan = yes }
 			add = institution_spread_to_market_center
 		}
 	}

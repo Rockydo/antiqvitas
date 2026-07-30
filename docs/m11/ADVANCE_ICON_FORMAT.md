@@ -23,7 +23,7 @@ actual circular context.
 
 ## Targeted replacements
 
-Regional Law Codes, High Empire Administration, Seasonal Markets, and Standing
-Administration use one EU5-referenced four-up cutout sheet. The other 361
-reviewed illustrations retain their compositions under the deterministic
-round-alpha compatibility treatment.
+Regional Law Codes, High Empire Administration, Seasonal Markets, Standing
+Administration, and all 440 S2-P3 regional additions use EU5-referenced
+four-up cutout sheets. Compatible earlier illustrations retain their reviewed
+compositions under the deterministic alpha contract.

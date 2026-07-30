@@ -28,6 +28,20 @@ antq_buddhist_monasticism_birth = {
 	local_max_literacy = 1
 }
 
+antq_indic_inscriptional_statecraft_birth = {
+	game_data = {
+		category = location
+	}
+	local_cultural_tradition = 0.08
+}
+
+antq_monsoon_sea_networks_birth = {
+	game_data = {
+		category = location
+	}
+	local_sailors = 0.05
+}
+
 antq_cataphract_warfare_birth = {
 	game_data = {
 		category = location
@@ -42,11 +56,60 @@ antq_papermaking_birth = {
 	local_max_literacy = 2
 }
 
+antq_roman_juristic_science_birth = {
+	game_data = {
+		category = location
+	}
+	local_cultural_influence = 0.08
+}
+
+antq_red_sea_oceanic_exchange_birth = {
+	game_data = {
+		category = location
+	}
+	local_monthly_development = 0.0008
+}
+
+antq_kushan_buddhist_cosmopolis_birth = {
+	game_data = {
+		category = location
+	}
+	local_max_literacy = 1
+}
+
 antq_christian_monasticism_birth = {
 	game_data = {
 		category = location
 	}
 	local_pop_conversion_speed_modifier = 0.10
+}
+
+antq_sasanian_fiscal_statecraft_birth = {
+	game_data = {
+		category = location
+	}
+	local_monthly_development = 0.0008
+}
+
+antq_three_kingdoms_military_colonies_birth = {
+	game_data = {
+		category = location
+	}
+	local_manpower_modifier = 0.04
+}
+
+antq_teotihuacan_metropolitanism_birth = {
+	game_data = {
+		category = location
+	}
+	local_population_capacity_modifier = 0.05
+}
+
+antq_forest_steppe_craft_exchange_birth = {
+	game_data = {
+		category = location
+	}
+	local_cultural_influence = 0.06
 }
 
 antq_theological_orthodoxy_birth = {
@@ -56,9 +119,93 @@ antq_theological_orthodoxy_birth = {
 	local_pop_conversion_speed_modifier = 0.20
 }
 
+antq_diocletianic_administration_birth = {
+	game_data = {
+		category = location
+	}
+	local_monthly_development = 0.001
+}
+
+antq_gupta_sanskrit_cosmopolis_birth = {
+	game_data = {
+		category = location
+	}
+	local_max_literacy = 2
+}
+
+antq_steppe_confederate_cavalry_birth = {
+	game_data = {
+		category = location
+	}
+	local_manpower_modifier = 0.05
+}
+
+antq_austronesian_harbor_chiefdoms_birth = {
+	game_data = {
+		category = location
+	}
+	local_sailors = 0.05
+}
+
 antq_foederati_statecraft_birth = {
 	game_data = {
 		category = location
 	}
 	local_levy_size_modifier = 0.05
+}
+
+antq_rabbinic_academy_networks_birth = {
+	game_data = {
+		category = location
+	}
+	local_max_literacy = 1
+}
+
+antq_aksumite_christian_kingship_birth = {
+	game_data = {
+		category = location
+	}
+	local_cultural_influence = 0.08
+}
+
+antq_moche_irrigation_polities_birth = {
+	game_data = {
+		category = location
+	}
+	local_population_capacity_modifier = 0.05
+}
+
+antq_northern_forest_portage_networks_birth = {
+	game_data = {
+		category = location
+	}
+	local_cultural_tradition = 0.06
+}
+
+antq_successor_kingdom_administration_birth = {
+	game_data = {
+		category = location
+	}
+	local_monthly_development = 0.0008
+}
+
+antq_northern_wei_statecraft_birth = {
+	game_data = {
+		category = location
+	}
+	local_cultural_tradition = 0.10
+}
+
+antq_buddhist_translation_networks_birth = {
+	game_data = {
+		category = location
+	}
+	local_max_literacy = 2
+}
+
+antq_maya_dynastic_statecraft_birth = {
+	game_data = {
+		category = location
+	}
+	local_cultural_influence = 0.08
 }

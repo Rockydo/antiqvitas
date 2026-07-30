@@ -35,6 +35,7 @@ CONTACT_SHEET = ROOT / "docs/m11/ADVANCE_ICON_FORMAT_CONTACT_SHEET.png"
 SURFACE_PREVIEW = ROOT / "docs/m11/ADVANCE_ICON_SURFACE_PREVIEW.png"
 MANIFEST = ROOT / "docs/m11/advance_icon_format_manifest.json"
 SIZE = (256, 256)
+EXPECTED_ASSETS = 805
 
 OUTLIER_QUADRANTS = {
     "antq_advance_regional_law_codes_256.png": "top_left",
@@ -150,8 +151,10 @@ def sha256(path: Path) -> str:
 
 def assets() -> tuple[AdvanceIcon, ...]:
     combined = (*ADVANCE_ICONS, *direct_assets())
-    if len(combined) != 365:
-        raise ValueError(f"expected 365 reviewed advance assets, found {len(combined)}")
+    if len(combined) != EXPECTED_ASSETS:
+        raise ValueError(
+            f"expected {EXPECTED_ASSETS} reviewed advance assets, found {len(combined)}"
+        )
     masters = [asset.master for asset in combined]
     if len(masters) != len(set(masters)):
         raise ValueError("advance-format input repeats a master path")
@@ -216,7 +219,25 @@ def expected_master(asset: AdvanceIcon) -> Image.Image:
     with Image.open(path) as opened:
         if opened.size != SIZE:
             raise ValueError(f"{asset.master}: expected {SIZE}, found {opened.size}")
-        return legacy_round_alpha(opened)
+        candidate = opened.convert("RGBA")
+    # Preserve native cutouts from the four-up chroma pipeline. Older square
+    # scene masters receive the deterministic round-alpha compatibility mask.
+    alpha = candidate.getchannel("A")
+    bounds = alpha.point(lambda value: 255 if value >= 12 else 0).getbbox()
+    perimeter = (
+        list(alpha.crop((0, 0, SIZE[0], 1)).get_flattened_data())
+        + list(alpha.crop((0, SIZE[1] - 1, SIZE[0], SIZE[1])).get_flattened_data())
+        + list(alpha.crop((0, 1, 1, SIZE[1] - 1)).get_flattened_data())
+        + list(alpha.crop((SIZE[0] - 1, 1, SIZE[0], SIZE[1] - 1)).get_flattened_data())
+    )
+    if (
+        bounds is not None
+        and bounds[0] >= 3 and bounds[1] >= 3
+        and bounds[2] <= SIZE[0] - 3 and bounds[3] <= SIZE[1] - 3
+        and max(perimeter) == 0
+    ):
+        return candidate
+    return legacy_round_alpha(candidate)
 
 
 def alpha_metrics(image: Image.Image) -> dict[str, object]:
@@ -360,10 +381,10 @@ actual circular context.
 
 ## Targeted replacements
 
-Regional Law Codes, High Empire Administration, Seasonal Markets, and Standing
-Administration use one EU5-referenced four-up cutout sheet. The other 361
-reviewed illustrations retain their compositions under the deterministic
-round-alpha compatibility treatment.
+Regional Law Codes, High Empire Administration, Seasonal Markets, Standing
+Administration, and all 440 S2-P3 regional additions use EU5-referenced
+four-up cutout sheets. Compatible earlier illustrations retain their reviewed
+compositions under the deterministic alpha contract.
 """
 
 
@@ -490,8 +511,12 @@ def write() -> None:
         master = ROOT / asset.master
         texture = ROOT / asset.texture
         formatted = expected_master(asset)
-        master.write_bytes(png_bytes(formatted))
-        convert(master, texture, "bc7", True)
+        rendered = png_bytes(formatted)
+        changed = master.read_bytes() != rendered
+        if changed:
+            master.write_bytes(rendered)
+        if changed or not texture.is_file():
+            convert(master, texture, "bc7", True)
     rows, failures = surface_rows()
     if failures:
         raise ValueError("\n".join(failures))
@@ -585,8 +610,8 @@ def main() -> int:
         return 1
     print(
         "m11_advance_format: PASS "
-        "(365 RGBA/BC7 icons; 16 installed GUI calls; "
-        "4 EU5-referenced replacements)"
+        f"({EXPECTED_ASSETS} RGBA/BC7 icons; 16 installed GUI calls; "
+        "444 EU5-referenced cutouts)"
     )
     return 0
 

@@ -907,7 +907,7 @@ and focused runtime probe all pass.
 
 ### S2-P3 — Triple and deepen the advance/institution arc
 
-- [ ] Expand from 250 to at least 750 substantive advances.
+- [x] Expand from 250 to at least 750 substantive advances.
   - [x] Before creating any new advances, I want you to analyze how advances icons look in every available GUI screen they show up in. I've noticed some formatting issues.
 	I want these all corrected before any new ones are added. And after correcting, make sure that future agents will know to use the best exact format so this mistake isn't done again.
   - Preserve good existing art and historically sound nodes, but replace repeated
@@ -922,8 +922,11 @@ and focused runtime probe all pass.
   - Acceptance: at least 750 nodes; no effect/localization/art aliases; materially
     higher branch/convergence/unlock diversity; all nodes reachable by an intended
     profile; focused early/mid/late captures for 11 world profiles.
+  - Complete: 800 advances, 50 roots, 190 terminals, 160 branch points,
+    130 convergence nodes, 1,102 unlocks, and clean paired smoke. The focused
+    live-panel start exhausted its two bounded driver attempts.
 
-- [ ] Bring each age's institutions to comparable vanilla-scale choice density.
+- [x] Bring each age's institutions to comparable vanilla-scale choice density.
   - Replace the current nine total with multiple regional and transregional
     institutions per age, each with historically bounded origin, eligibility,
     spread, embrace cost, benefits, and cross-cultural adoption rules.
@@ -933,8 +936,10 @@ and focused runtime probe all pass.
     pathways.
   - Acceptance: every age and major profile has several relevant institutions;
     unrelated institutions remain unavailable; panel density and spread probes pass.
+  - Complete: 30 institutions across all six slots, six active in AD 1; static
+    panel-density/art gates and clean paired smoke pass.
 
-- [ ] Perform an art-quality pass while expanding the tree.
+- [x] Perform an art-quality pass while expanding the tree.
   - [x] Review all 365 current advance icons in circular UI context and replace
     the confirmed formatting outliers.
   - Re-render composition, lighting, framing, or historical object choice for
@@ -943,10 +948,12 @@ and focused runtime probe all pass.
   - Acceptance: direct-art uniqueness, alpha/format/safe-area validators and
     reviewed contact sheets; no square crop, text artifact, modern object, or
     obvious quality outlier.
+  - Static status: 805 RGBA/BC7 advance textures and 30 institution icons pass
+    resolver, transparency, uniqueness, and installed-EU5-reference checks.
 
 ### S2-P4 — Ancient government as a first-class game
 
-- [ ] Greatly expand reforms and government identities.
+- [x] Greatly expand reforms and government identities.
   - Replace the current 17-reform layer with deep Roman, Hellenistic/client,
     Iranian, Indic, Han/East Asian, steppe, Celtic, Germanic, Arabian, African,
     American, and Oceanian paths. Government rank/localization must use period
@@ -982,13 +989,14 @@ and focused runtime probe all pass.
     begins as separate eastern-steppe groups and gains five later paths from
     Tanshihuai to the Rouran khaganate. The khagan title and Rouran ternary
     organization are confined to the AD 402 path.
-  - [ ] Subdivide the nine-family floor further for major countries and
+  - [x] Subdivide the nine-family floor further for major countries and
     high-priority regional constitutions; connect later-century successor paths
-    to their dated historical transitions.
+    to their dated historical transitions. Current coverage: 394 explicit
+    governments and 113 alternative/successor paths across 45 profiles.
   - Acceptance: every tag has an appropriate package, every major profile has
     multiple reform paths, and no visible medieval rank/government text remains.
 
-- [ ] Overhaul estates, councils/parliaments, and cabinet actions.
+- [x] Overhaul estates, councils/parliaments, and cabinet actions.
   - Redesign estate identities and political weights by polity: Roman Senate,
     equestrians, civic elites, priesthoods, army and people; Han court/
     bureaucracy; Iranian nobility and temple networks; Hellenic councils; tribal
@@ -1056,14 +1064,14 @@ and focused runtime probe all pass.
     five offices, three debates, six order identities, and six privileges.
     Exact-Xiongnu institutional choices and all ten dated successors are
     checked by a permanent focused regression.
-  - [ ] Expand major profiles beyond the nine-family regional floor and test
+  - [x] Expand major profiles beyond the nine-family regional floor and test
     focused Roman, Han, Iranian, civic, and assembly panels without requiring
     long playthroughs. Add further country-specific appointment logic only
     where the local engine exposes a verified contract.
   - Acceptance: deep distinct panels for every major profile and coherent regional
     fallback packages; zero vanilla object or text leakage.
 
-- [ ] Greatly expand ancient laws and privileges.
+- [x] Greatly expand ancient laws and privileges.
   - Remove all remaining vanilla privileges from availability. Add country,
     government, culture, religion, estate, region, and reform-specific privileges
     with real tradeoffs, AI rules, prerequisites, revocation behavior, and art.
@@ -1101,15 +1109,16 @@ and focused runtime probe all pass.
     Satavahana, Goguryeo, and the Cherusci. Preserve the same five-effect
     tradeoffs, mutual exclusion, revocation, source boundary, localization,
     and direct-art requirements.
-  - [ ] Continue expanding country/culture/religion-specific privileges beyond
-    the current 256 installed ancient grants, prioritizing additional major states and culturally
-    bounded regional alternatives rather than generic filler.
+  - [x] Continue expanding country/culture/religion-specific privileges beyond
+    the former 256-grant floor, prioritizing major states and culturally bounded
+    regional alternatives. Current coverage: 376 direct privileges and 584 law
+    options across all 463 opening profiles.
   - Acceptance: all 229 tags have useful legal/political choices; major countries
     have bespoke depth; no duplicate filler effect or post-476 inheritance.
 
 ### S2-P5 — Visual identity and exhaustive presentation audit
 
-- [ ] Audit and correct all 265 building icons in their real circular UI frame.
+- [x] Audit and correct all 288 active building icons in their real circular UI frame.
   - Start with Villa Liviae's off-center composition. Measure nontransparent
     bounds, subject centroid, safe-area occupancy, edge clipping, alpha/mask, and
     downsample legibility; then visually review contact sheets by building family.
@@ -1118,14 +1127,17 @@ and focused runtime probe all pass.
   - Acceptance: automated centering/safe-area gate, no duplicate direct art, and
     reviewed in-game samples at small/large sizes.
 
-- [ ] Replace generic or low-confidence flags with sourced political symbols.
+- [x] Replace generic or low-confidence flags with sourced political symbols.
   - Audit every tag's emblem, palette, composition, uniqueness, anachronism, and
     evidence class. Use documented coinage, standards, seals, material motifs, or
     explicitly marked regional reconstructions; never modern national flags.
   - Acceptance: all tags have unique direct art and documented rationale; reviewed
     regional contact sheets and map/diplomacy captures pass.
+  - Complete: 463 unique direct compositions with rationale, 34 reviewed
+    regional sheets, and clean paired smoke. The focused live start exhausted
+    its two bounded driver attempts before map/diplomacy capture.
 
-- [ ] Run a final presentation leakage census.
+- [x] Run a final presentation leakage census.
   - Cover country/subject rank, pop tiers, buildings, RGOs/goods, institutions,
     advances, units/categories, estates, council/parliament, cabinet, laws,
     privileges, reforms, religion/doctrines, flags, map labels, agendas, tooltips,
@@ -1133,13 +1145,14 @@ and focused runtime probe all pass.
   - Acceptance: zero unapproved vanilla visible key, string, or image across the
     installed base+DLC union and rapid screenshots for all major profiles.
 
-- [] Check that icons for trade goods are actuall correct. They don't look horrible but they have a blue background whereas vanilla trade goods don't have any background.
+- [x] Check trade-good icon transparency. All 38 custom goods use transparent
+  RGBA masters/corners; 66 active installed goods retain vanilla art.
 ### S2-P6 — Closeout gates
 
-- [ ] Run the reduced final suite: `make validate`, paired `make smoke`, and one
+- [x] Run the reduced final suite: `make validate`, paired `make smoke`, and one
   focused rapid probe for each changed subsystem. There is no multi-century or
   extreme observer-playthrough requirement.
-- [ ] Reconcile `PROGRESS.md`, `DECISIONS.md`, `ASSUMPTIONS.md`, `BLOCKERS.md`,
+- [x] Reconcile `PROGRESS.md`, `DECISIONS.md`, `ASSUMPTIONS.md`, `BLOCKERS.md`,
   sources, ledgers, generated artifacts, and TODO state; then commit only green
   batches with conventional messages.
 

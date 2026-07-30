@@ -4244,3 +4244,23 @@ Assign all ancient buildings to eleven shared demand packages by stable
 function. Add bounded upkeep only to non-production institutions; never alter a
 calibrated recipe for generic upkeep. Keep trade emergent through the market
 network. Enforce explicit macro allowlists for bounded specialty production.
+
+## 2026-07-30 - Later knowledge stays inside engine age slots
+
+Keep every `requires` edge within one installed age. Split the final conceptual
+late-antique tranche evenly across slots 5-6; preserve chronology in names,
+eligibility, institution gates, and dates. New icons use direct transparent
+cutouts from installed-EU5-referenced four-up sheets.
+
+## 2026-07-30 - Ancient standards use direct engine-layer compositions
+
+Give every opening polity an explicit, unique solid-field and colored-emblem
+composition. Retain documented motifs; mark lower-confidence cases as regional
+material reconstructions. Reuse installed EU5 emblem layers and render review
+sheets locally because no new bitmap game asset is required.
+
+## 2026-07-30 - Generated script decimals stop at five places
+
+EU5's persistent reader rejected six- and seven-place advance literals in
+paired smoke. Generate unique later effects in 1e-5 steps and permanently
+reject numeric effect strings beyond five decimal places.

@@ -2,7 +2,7 @@
 """Build and validate M11's religion and institution icon contracts.
 
 Religion icons migrate from exact-key, reviewed vanilla aliases to direct
-ANTIQVITAS-owned assets through a checked ledger. The nine M8 institution keys
+ANTIQVITAS-owned assets through a checked ledger. Every M8 institution key
 already use ANTIQVITAS-owned generated masters. Both sets are checked against
 the asset resolver's direct key-to-filename contract.
 """
@@ -21,6 +21,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from PIL import Image
+from m8_knowledge import INSTITUTION_DATA
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -112,52 +113,13 @@ RELIGION_ICONS = (
 )
 
 
-INSTITUTION_ICONS = (
+INSTITUTION_ICONS = tuple(
     InstitutionIcon(
-        "antq_hellenism",
-        "assets_queue/generated_sources/antq_institution_hellenism_source.png",
-        "assets_queue/generated/antq_institution_hellenism_128.png",
-    ),
-    InstitutionIcon(
-        "antq_roman_law_engineering",
-        "assets_queue/generated_sources/antq_institution_roman_law_engineering_source.png",
-        "assets_queue/generated/antq_institution_roman_law_engineering_128.png",
-    ),
-    InstitutionIcon(
-        "antq_han_bureaucratic_statecraft",
-        "assets_queue/generated_sources/antq_institution_han_bureaucratic_statecraft_source.png",
-        "assets_queue/generated/antq_institution_han_bureaucratic_statecraft_128.png",
-    ),
-    InstitutionIcon(
-        "antq_buddhist_monasticism",
-        "assets_queue/generated_sources/antq_institution_buddhist_monasticism_source.png",
-        "assets_queue/generated/antq_institution_buddhist_monasticism_128.png",
-    ),
-    InstitutionIcon(
-        "antq_cataphract_warfare",
-        "assets_queue/generated_sources/antq_institution_cataphract_warfare_source.png",
-        "assets_queue/generated/antq_institution_cataphract_warfare_128.png",
-    ),
-    InstitutionIcon(
-        "antq_papermaking",
-        "assets_queue/generated_sources/antq_institution_papermaking_source.png",
-        "assets_queue/generated/antq_institution_papermaking_128.png",
-    ),
-    InstitutionIcon(
-        "antq_christian_monasticism",
-        "assets_queue/generated_sources/antq_institution_christian_monasticism_source.png",
-        "assets_queue/generated/antq_institution_christian_monasticism_128.png",
-    ),
-    InstitutionIcon(
-        "antq_theological_orthodoxy",
-        "assets_queue/generated_sources/antq_institution_theological_orthodoxy_source.png",
-        "assets_queue/generated/antq_institution_theological_orthodoxy_128.png",
-    ),
-    InstitutionIcon(
-        "antq_foederati_statecraft",
-        "assets_queue/generated_sources/antq_institution_foederati_statecraft_source.png",
-        "assets_queue/generated/antq_institution_foederati_statecraft_128.png",
-    ),
+        item.key,
+        f"assets_queue/generated_sources/{item.key.replace('antq_', 'antq_institution_', 1)}_source.png",
+        f"assets_queue/generated/{item.key.replace('antq_', 'antq_institution_', 1)}_128.png",
+    )
+    for item in INSTITUTION_DATA
 )
 
 

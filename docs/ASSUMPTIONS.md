@@ -5872,3 +5872,19 @@ tar contract; the papyrus workshop's `paper` output is an engine adapter for
 finished sheets. Specialty macro bounds are conservative production limits, not
 limits on trade. Sources: `P12.1`-`P12.3`; `P13`; `P14`; building-ledger
 sources. [secure broad materials and regions; contested local scale]
+
+## 2026-07-30 - Knowledge paths model bounded practice networks
+
+The 22 regional later-age paths and 30 institutions aggregate transmissible
+administrative, military, exchange, learned, and social practices; they do not
+assert uniform adoption or institutional continuity. Origins are gameplay
+anchors. Steppe cavalry art and rules exclude the contested stirrup. Sources:
+`P8.1`-`P8.10`; `P14.3`; `P15`; `CAH-XI`; `CAH-XII`; `BHR`; `Bielenstein`;
+`PER`; pathway ledger sources. [secure broad contexts; contested local timing]
+
+## 2026-07-30 - Ancient standards are interface reconstructions
+
+Coin, seal, standard, and material motifs support political differentiation but
+usually not fixed state flags. Direct compositions therefore encode sourced
+identity at game scale, never a claim of national-flag use. Sources: roster
+source labels; `P8.1`-`P8.10`; `P20`. [contested compositions]

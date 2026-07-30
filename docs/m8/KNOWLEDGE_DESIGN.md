@@ -1,67 +1,62 @@
 # M8 Knowledge Design
 
-`tools/m8_knowledge.py` renders 250 advances across the engine's six age slots:
-five statecraft, warfare, exchange, learning, and society DAGs per age. The
-first four ages contain ten-node trees with two shared roots, two regional
-branches, one convergence route, and alternative terminal choices; the final
-two contain five-node forked trees. Requirements remain inside one age because
-that is the installed engine contract. Validation proves 50 roots, 50 branch
-points, 20 convergence nodes, 80 terminal choices, acyclicity, direct art,
-complete descriptions/effects, and no post-antique token.
+`tools/m8_knowledge.py` renders 800 substantive advances across the installed
+engine's six age slots: 160 nodes in each of slots 1-4 and 80 in each of slots
+5-6. The five conceptual themes remain statecraft, warfare, exchange, learning,
+and society. Requirements stay within one engine age because local script-doc
+verification rejects cross-age `requires`.
 
-Eleven regional paths cover Roman/Italic, Hellenic, Celtic, Germanic,
-Iranian/steppe, Indic, Han/East Asian, Near Eastern, African, American, and
-Oceanian practice. Culture groups grant the native path; historically plausible
-institutions provide explicit adoption routes. Regional names are visible in
-the tree while the reviewed 250-icon corpus and stable script keys remain
-unchanged.
+The checked graph has 50 roots, 190 terminal choices, 160 branch points, and
+130 convergence nodes. Twenty-two reviewed regional paths continue through four
+later conceptual ages as five-node branch/convergence mini-DAGs. Culture groups
+grant native routes; historically plausible institution adoption supplies
+bounded transfer routes. Validation enforces acyclicity, useful distinct effects,
+AI weights, descriptions, unlocks, direct art, and at least two researchable
+options for every one of the 463 opening profiles.
 
-The DAG directly packages all 154 regional workshops, 44 ancient units, 19
-government reforms, 24 privileges, ten casus belli, five subject types, and the
-required start laws/policies. Workshop tiers represent capacity to reproduce a
-practice at scale, not invented dates. `tools/advance_event_packages.py` adds
-age/track preparedness bonuses to all 84 M10 historical currents without
-gating their occurrence. Institutions also act as cross-cultural prerequisites.
-
-The installed age contract exposes one `victory_card` per age, so those five
-cards are the engine-visible objectives. The locally verified `unique` block
-in the age definition carries one small era ability per age. No unverified
-custom objective or ability field is emitted.
+The graph carries 1,102 ancient-system unlocks across buildings, production,
+laws, privileges, reforms, units, diplomacy, and events. All 800 nodes have
+direct 256px BC7 cutout art; 440 later-node icons come from 110 four-up sheets
+generated against installed EU5 advance references. The installed age contract
+still owns objective and ability fields; no unverified custom field is emitted.
 
 ## Institutions
 
-| Institution | Origin / release | Engine representation |
-| --- | --- | --- |
-| Hellenism | active, Athens | active at start |
-| Roman Law and Engineering | active, Rome | active at start |
-| Han Bureaucratic Statecraft | active, Jingzhao/Chang'an | active at start |
-| Buddhist Monasticism | active, Anuradhapura | active at start |
-| Cataphract Warfare | Iran proxy, AD 96 | Merv fixed spawn |
-| Papermaking | Luoyang, AD 105 | Luoyang fixed spawn |
-| Christian Monasticism | Egypt, AD 270 | Alexandria fixed spawn |
-| Theological Orthodoxy | Nicaea, AD 325 | Iznik fixed spawn |
-| Foederati Statecraft | Thrace, AD 382 | Edirne fixed spawn |
+Thirty institutions provide comparable regional choice density: six in engine
+age 1, five in each of ages 2-5, and four in age 6.
 
-The two monastic entries are a mechanical representation of the plan's
-dual-origin Monasticism instruction, rather than a claim that either tradition
-was the other's origin. All release dates are rendered after `AntqDate`
-validation, never handwritten in generated script.
+- Age 1: Hellenism; Roman Law and Engineering; Han Bureaucratic Statecraft;
+  Buddhist Monasticism; Indic Inscriptional Statecraft; Monsoon Navigation.
+- Age 2: Cataphract Warfare; Papermaking; Roman Juristic Science; Red Sea
+  Oceanic Exchange; Kushan Buddhist Cosmopolis.
+- Age 3: Christian Monasticism; Sasanian Fiscal Statecraft; Three Kingdoms
+  Military Settlements; Teotihuacan Metropolitanism; Forest-Steppe Craft
+  Exchange.
+- Age 4: Theological Orthodoxy; Diocletianic Administration; Gupta Sanskrit
+  Cosmopolis; Steppe Confederate Cavalry; Austronesian Harbor Chiefdoms.
+- Age 5: Foederati Statecraft; Rabbinic Academy Networks; Aksumite Christian
+  Kingship; Moche Irrigation Polities; Northern Forest Portage Networks.
+- Age 6: Successor Kingdom Administration; Northern Wei Statecraft; Buddhist
+  Translation Networks; Maya Dynastic Statecraft.
+
+Six securely present networks are active at AD 1. Later entries use
+`AntqDate`-validated release dates, bounded eligibility, distinct birthplaces,
+spread rules, and cross-cultural adoption paths. Twenty-one expansion icons
+come from six installed-EU5-referenced four-up sheets. The monastic entries
+represent separate transmissible networks, not a claim that either tradition
+originated the other.
 
 ## Starting technology levels
 
-The checked M3 roster is partitioned mechanically as follows: Rome, Han, and
-Parthia are level 4; Tier-1/2 countries and subjects are level 3; Tier-3
-countries are level 2; and all societies-of-pops are level 1. This implements
-the plan's imperial-core > literate-periphery > tribal-world ordering without
-turning it into a claim of universal cultural rank. The integer scale is a
+The current opening partition is 337 level-1, 13 level-2, and 113 level-3
+profiles; no profile starts at level 4. Rome, Han, and Arsacid Iran remain level
+3 so advanced cores still have live Age-I research choices. This scale is a
 gameplay tuning surface, not a civilizational hierarchy.
 
 ## Evidence route
 
-Plan §15 fixes the age themes, institution names, and dated origins. `CAH-XI`
-supports the Roman and late-antique frameworks; `BHR` supports the Han
-administrative context; the plan's general research route includes scholarship
-on Roman, Persian/steppe, Indian, and Chinese worlds. M8 uses these only for
-the broad, source-labelled design surface. It does not infer that an innovation
-originated at one exact building, nor does it make contested stirrup adoption
-reachable before the end date.
+Plan §15 supplies the themes and chronology. Regional records cite the plan's
+`P8.*`, `P14.3`, and `P15` routes plus `CAH-XI/XII`, `BHR`, `Bielenstein`,
+`PER`, `OCD`, and the archaeological source labels recorded in the generated
+CSV manifests. Origins are map anchors for broad networks, not claims about one
+inventor or building. Contested stirrup adoption remains outside the campaign.

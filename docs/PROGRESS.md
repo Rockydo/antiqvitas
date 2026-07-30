@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-07-30 - Knowledge and direct standards reach final S2 scale
+
+- Expanded to 800 advances, 30 institutions, 805 direct advance textures, and
+  1,102 ancient-system unlocks; all 463 starts can research.
+- Replaced every CoA fallback with 463 unique direct compositions and 34
+  regional review sheets; 319 use documented motifs and 144 are marked
+  reconstructions.
+- `make validate` passes 146/146; paired smoke passes with zero mod-only errors.
+  The focused live-panel start exhausted its two bounded driver attempts.
+
 ## 2026-07-28 - The Chibchan catch-all becomes three archaeological frames
 
 - Replaced `CHI` with Herrera Plateau 10, Sierra Nevada Early 3, and Loja

@@ -11,7 +11,12 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 from dds import convert, identify
-from m8_knowledge import AGE_NAMES, DIRECT_ADVANCE_ART, TRACKS, advance_records
+from m8_knowledge import (
+    AGE1_EXPANSION,
+    AGE_NAMES,
+    DIRECT_ADVANCE_ART,
+    advance_records,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,13 +31,13 @@ LEDGER_FIELDS = ("key", "age", "subject", "source", "confidence", "status", "not
 
 
 def expansion_records():
-    original = {
+    owned = {
         f"antq_{name}"
-        for age_groups in TRACKS.values()
-        for group in age_groups
-        for name in group
+        for paths in AGE1_EXPANSION.values()
+        for _profile, names in paths
+        for name in names
     }
-    return tuple(record for record in advance_records() if record.key not in original)
+    return tuple(record for record in advance_records() if record.key in owned)
 
 
 def sheet_path(index: int) -> Path:
