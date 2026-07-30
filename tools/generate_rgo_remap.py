@@ -11,6 +11,8 @@ import re
 from collections import Counter
 from pathlib import Path
 
+from m5_landscape import landscape_changes
+
 ROOT = Path(__file__).resolve().parents[1]
 OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
@@ -353,6 +355,29 @@ def rendered() -> tuple[str, str, tuple[tuple[str, str, str, str, str], ...]]:
         changes.append((location, region, operation, good, replacement))
         return f"{location} = {{{match['body']}{replacement}{match['tail']}"
     content = LINE.sub(replace, source.read_text(encoding="utf-8"))
+    landscape = landscape_changes()
+
+    def replace_landscape(match: re.Match[str]) -> str:
+        change = landscape.get(match["location"])
+        if not change:
+            return match.group(0)
+        body = match["body"]
+        for field in ("topography", "vegetation", "climate"):
+            if field not in change:
+                continue
+            body, count = re.subn(
+                rf"\b{field}\s*=\s*[A-Za-z0-9_.-]+",
+                f"{field} = {change[field]}",
+                body,
+                count=1,
+            )
+            if count != 1:
+                raise ValueError(
+                    f"landscape change for {match['location']} cannot replace {field}"
+                )
+        return f"{match['location']} = {{{body}}}"
+
+    content = ENTRY_LINE.sub(replace_landscape, content)
     if not changes:
         raise ValueError("RGO rules produced no owned-location corrections")
     counts = Counter((operation, old, new) for _, _, operation, old, new in changes)

@@ -4215,3 +4215,10 @@ Exact location allowlists override broad ownership regions for tea, cloves,
 pepper, and comparable specialties. Every visible map RGO belongs to the active
 economy audit. Capacity, fit, and access classes are conservative audit proxies,
 not reconstructed output quantities.
+
+## 2026-07-30 - Landscape corrections share the RGO renderer
+
+Terrain presentation and raw materials use one deterministic location-template
+renderer. The landscape pass may change topography and vegetation classes but
+never geometry, coasts, rivers, adjacency, or climate. Before/after regional
+distributions and exact source rows are permanent checks.

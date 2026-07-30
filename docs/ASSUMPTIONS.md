@@ -5835,3 +5835,12 @@ site-level plantations. Ternate and Tidore represent the Maluku clove source;
 ten Malabar/Western Ghats pepper fields represent a producing belt rather than
 reconstructed farms or output. Sources: `P12.1`; `PER`; `CAM-MUZIRIS`;
 `KER-MUZIRIS`. [secure broad source geography; contested exact field extent]
+
+## 2026-07-30 - Landscape classes are coarse environmental proxies
+
+Wooded Germania and Atlantic margins, lower-Mesopotamian marsh/irrigation,
+Mediterranean cultivation, African dry uplands, Asian rice lowlands, and
+forest-steppe are regional presentations, not quantified palaeoland cover.
+Sources: `P8.6`-`P8.8`; `P12.1`; `P12.3`; `TAC-GER`; `STR-GER`;
+`SOR-AFRICA-FRONTIER`; `AES-SOUTH-URAL`; `RAS-SARGAT-CHRON`; `CAH-XI`;
+`BHR`; ledger row sources. [secure broad contexts; contested exact field extent]

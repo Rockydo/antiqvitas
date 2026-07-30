@@ -13,14 +13,14 @@ capacity/resource/fit/access union.
 
 ## Capacity classes
 
-- dryland_or_oasis: 1,906
-- highland: 890
-- intensive_cultivation: 674
+- dryland_or_oasis: 1,929
+- highland: 860
+- intensive_cultivation: 771
 - marine_atoll: 5
 - mixed_land: 272
-- open_mixed_land: 2,824
-- wetland_or_riverine: 716
-- woodland_or_forest: 6,266
+- open_mixed_land: 2,614
+- wetland_or_riverine: 825
+- woodland_or_forest: 6,277
 
 ## Resource families
 
@@ -36,8 +36,8 @@ capacity/resource/fit/access union.
 ## Fit classes
 
 - bounded_specialty: 135
-- broad_capacity_proxy: 5,352
-- environmentally_aligned: 8,032
+- broad_capacity_proxy: 5,302
+- environmentally_aligned: 8,082
 - not_applicable: 1
 - source_anchored: 33
 

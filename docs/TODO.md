@@ -863,7 +863,7 @@ and focused runtime probe all pass.
     maintenance outlier gates pass. (Complete: 1,432 locations; top-ten 7.2%;
     72.3% productive; 96.3% scalable; 102/102 validation and paired smoke green.)
 
-- [ ] Correct AD 1 terrain, vegetation, wetlands, and land-use presentation.
+- [x] Correct AD 1 terrain, vegetation, wetlands, and land-use presentation.
   - Preserve map geometry, but audit mutable topography/climate/vegetation fields
     and visual overlays against historical landscape evidence. Prioritize a much
     more forested Germania, British/Irish woodland and wetlands, Mediterranean
@@ -872,6 +872,9 @@ and focused runtime probe all pass.
     contexts that the engine can represent without geometry edits.
   - Acceptance: sourced change ledger, before/after regional distributions, map
     captures for priority regions, and no navigation/pathfinding regression.
+    (Complete: 430 sourced changes; 109 topography and 430 vegetation changes;
+    zero geometry/climate edits; fresh-map Germania, Basra, and Anfu captures;
+    25-second observer probe, 140/140 validation, and paired smoke green.)
 
 - [ ] Expand trade goods, recipes, and production chains to support the new depth.
   - Audit the present 143 productive families/66 recipe signatures for meaningful

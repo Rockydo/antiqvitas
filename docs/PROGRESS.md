@@ -7961,3 +7961,13 @@ reviewed 128px BC7 DDS.
 - A fresh observer start visibly confirmed Tea at Mingshan, Cloves at
   Ternateon, and Pepper at Muziris.
 - Validation passes 139/139; paired smoke reports zero mod-unique lines.
+
+## 2026-07-30 - Corrected AD 1 landscape presentation
+
+- Audited all 13,553 controlled locations and applied 430 sourced changes:
+  109 topography and 430 vegetation transitions, with no climate or geometry edits.
+- Covered Germania/Atlantic woodland, Mediterranean cultivation, Mesopotamian
+  marsh and irrigation, African aridity, Asian rice lowlands, and forest-steppe.
+- Fresh observer captures confirm Attendorn forest, Basra marsh, and Anfu wet
+  rice presentation; a 25-second simulation probe remained stable.
+- Validation passes 140/140; paired smoke reports zero mod-unique lines.
