@@ -146,6 +146,20 @@ GERMANIA_CURATED_SEEDS = (
     ("reg_germania_depth_landing_sloten", "antq_reg_north_sea_boat_landing", "sloten", "P8.7;TAC-GER;UT-TARAND", "North-Sea coastal-craft proxy; not a fleet base."),
     ("reg_germania_depth_landing_hamburg", "antq_reg_north_sea_boat_landing", "hamburg", "P8.7;TAC-GER;STR-GER", "Lower-Elbe coastal-craft proxy; not a navy or migration port."),
 )
+SOUTHERN_HUNTER_HERDER_CURATED_SEEDS = (
+    ("reg_southern_hh_shelter_impakwe", "antq_reg_southern_rock_shelter_custody", "impakwe", "OUP-SOUTH-AFRICA;CAM-SA-2024;P12.1;P12.3", "Repeated-use rock-shelter capacity in the Limpopo frame; no excavated shelter, named group, rite, or ownership boundary is assigned to this engine polygon."),
+    ("reg_southern_hh_shelter_mwenezi", "antq_reg_southern_rock_shelter_custody", "mwenezi", "OUP-SOUTH-AFRICA;CAM-SA-2024;P12.1;P12.3", "Repeated-use rock-shelter capacity in the Limpopo frame; no excavated shelter, named group, rite, or ownership boundary is assigned to this engine polygon."),
+    ("reg_southern_hh_shelter_inyanga", "antq_reg_southern_rock_shelter_custody", "inyanga", "OUP-SOUTH-AFRICA;CAM-SA-2024;P12.1;P12.3", "Highland shelter-use proxy in the Zambezi frame; later settlement systems and a specific archaeological shelter are not projected into AD 1."),
+    ("reg_southern_hh_shelter_mtoko", "antq_reg_southern_rock_shelter_custody", "mtoko", "OUP-SOUTH-AFRICA;CAM-SA-2024;P12.1;P12.3", "Highland shelter-use proxy in the Zambezi frame; later settlement systems and a specific archaeological shelter are not projected into AD 1."),
+    ("reg_southern_hh_water_chumnungwa", "antq_reg_seasonal_waterhole_camp", "chumnungwa", "OUP-SOUTH-AFRICA;CAM-SA-2024;P12.1;P12.3", "Seasonal water-access capacity in the Limpopo frame; no permanent village, exclusive circuit, chief, or named camp is claimed."),
+    ("reg_southern_hh_water_jahunda", "antq_reg_seasonal_waterhole_camp", "jahunda", "OUP-SOUTH-AFRICA;CAM-SA-2024;P12.1;P12.3", "Seasonal water-access capacity in the Limpopo frame; no permanent village, exclusive circuit, chief, or named camp is claimed."),
+    ("reg_southern_hh_water_charumani", "antq_reg_seasonal_waterhole_camp", "charumani", "OUP-SOUTH-AFRICA;CAM-SA-2024;P12.1;P12.3", "Seasonal water-access capacity in the Save frame; no permanent village, exclusive circuit, chief, or named camp is claimed."),
+    ("reg_southern_hh_water_majiri", "antq_reg_seasonal_waterhole_camp", "majiri", "OUP-SOUTH-AFRICA;CAM-SA-2024;P12.1;P12.3", "Seasonal water-access capacity in the Save frame; no permanent village, exclusive circuit, chief, or named camp is claimed."),
+    ("reg_southern_hh_river_chibuene", "antq_reg_riverine_gathering_ground", "chibuene", "OUP-SOUTH-AFRICA;CAM-SA-2024;P12.1;P12.3", "Coastal-river gathering capacity in the Limpopo frame; no permanent market, later port settlement, or named institution is backdated."),
+    ("reg_southern_hh_river_inhambane", "antq_reg_riverine_gathering_ground", "inhambane", "OUP-SOUTH-AFRICA;CAM-SA-2024;P12.1;P12.3", "Coastal-river gathering capacity in the Limpopo frame; no permanent market, later port settlement, or named institution is backdated."),
+    ("reg_southern_hh_river_sofala", "antq_reg_riverine_gathering_ground", "sofala", "OUP-SOUTH-AFRICA;CAM-SA-2024;P12.1;P12.3", "Riverine gathering capacity in the Save frame; no later Sofala port, trade monopoly, permanent village, or named institution is backdated."),
+    ("reg_southern_hh_river_chipagwe", "antq_reg_riverine_gathering_ground", "chipagwe", "OUP-SOUTH-AFRICA;CAM-SA-2024;P12.1;P12.3", "Riverine gathering capacity in the Save frame; no permanent market, settlement plan, or named institution is claimed."),
+)
 
 
 def read_rows(path: Path) -> list[dict[str, str]]:
@@ -221,6 +235,24 @@ def curated_germania_rows() -> list[dict[str, str]]:
     ]
 
 
+def curated_southern_hunter_herder_rows() -> list[dict[str, str]]:
+    return [
+        {
+            "key": key,
+            "family": family,
+            "location": location,
+            # The polity ledger's broad ``Africa`` region is represented by
+            # the legacy North Africa macro bucket in the building audit.
+            "macro": "North Africa",
+            "source": source,
+            "confidence": "contested",
+            "note": note,
+        }
+        for key, family, location, source, note
+        in SOUTHERN_HUNTER_HERDER_CURATED_SEEDS
+    ]
+
+
 def candidate_score(
     family: str,
     good: str,
@@ -283,7 +315,11 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         owner_by_location[row["location"]] = row["tag"]
 
     bundle_rows = expanded_bundle_rows()
-    rows = curated_arabia_rows() + curated_germania_rows()
+    rows = (
+        curated_arabia_rows()
+        + curated_germania_rows()
+        + curated_southern_hunter_herder_rows()
+    )
     curated_count = len(rows)
     fixed_rows = rows + bundle_rows
     used_pairs = {(row["location"], row["family"]) for row in fixed_rows}

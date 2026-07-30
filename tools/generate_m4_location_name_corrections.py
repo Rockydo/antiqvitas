@@ -153,12 +153,26 @@ def correction_entries() -> tuple[Correction, ...]:
         "key",
         "group",
     )
-    group_languages = unique_lookup(
-        LANGUAGES,
-        csv_rows(LANGUAGES, LANGUAGE_FIELDS),
-        "group",
+    culture_languages = unique_lookup(
+        CULTURES,
+        csv_rows(CULTURES, CULTURE_FIELDS),
         "key",
+        "language",
     )
+    custom_languages = {
+        row["key"].strip()
+        for row in csv_rows(LANGUAGES, LANGUAGE_FIELDS)
+    }
+    default_group_languages = {
+        group: group.removesuffix("_group") + "_language"
+        for group in set(culture_groups.values())
+    }
+    missing_defaults = set(default_group_languages.values()) - custom_languages
+    if missing_defaults:
+        raise ValueError(
+            f"{LANGUAGES.relative_to(ROOT)} lacks default group languages "
+            f"{','.join(sorted(missing_defaults))}"
+        )
     known_sources = source_codes()
     known_locations = installed_locations()
 
@@ -211,7 +225,12 @@ def correction_entries() -> tuple[Correction, ...]:
                 failures.append(f"{LEDGER.relative_to(ROOT)}:{number}: unknown M4 culture {culture}")
                 invalid_adapter = True
                 continue
-            language = group_languages.get(group)
+            configured = culture_languages.get(culture, "")
+            language = (
+                configured
+                if configured in custom_languages
+                else default_group_languages.get(group, "")
+            )
             if not language or not language.endswith("_language"):
                 failures.append(
                     f"{LEDGER.relative_to(ROOT)}:{number}: culture {culture} has no valid language"

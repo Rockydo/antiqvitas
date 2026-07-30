@@ -21,10 +21,10 @@ from m11_ui_asset_ledger import building_master
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / "docs/m5/building_icon_audit.csv"
 CONTACT = ROOT / "docs/m5/BUILDING_ICON_CIRCLE_AUDIT.png"
-EXPECTED_TOTAL = 277
+EXPECTED_TOTAL = 280
 # Raise this after each reviewed re-art batch. It prevents regressions while the
 # open P3 task advances toward the final 265/265 gate.
-MIN_STYLE_PASS = 277
+MIN_STYLE_PASS = 280
 NAVY = (16, 25, 43, 255)
 
 
@@ -65,7 +65,7 @@ def items() -> list[Item]:
 def difference_hash(image: Image.Image) -> int:
     """Return a compact visual hash used to expose near-aliases for review."""
     sample = image.convert("RGB").resize((9, 8), Image.Resampling.LANCZOS).convert("L")
-    pixels = list(sample.getdata())
+    pixels = list(sample.get_flattened_data())
     result = 0
     for y in range(8):
         for x in range(8):
@@ -78,7 +78,7 @@ def audit(item: Item) -> Audit:
         image = opened.convert("RGBA")
     if image.size != (128, 128):
         raise ValueError(f"{item.key} master is {image.size}, expected 128x128")
-    alpha = list(image.getchannel("A").getdata())
+    alpha = list(image.getchannel("A").get_flattened_data())
     opaque = sum(value >= 240 for value in alpha)
     transparent = sum(value <= 15 for value in alpha)
     corners = tuple(image.getpixel(point)[3] for point in ((0, 0), (127, 0), (0, 127), (127, 127)))

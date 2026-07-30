@@ -4183,3 +4183,9 @@ frontier and amber-network actions. They grant no unity, defense, access,
 leadership, annexation, or claims. Situation effects are low-frequency, units
 are date-gated, and curated building seeds remain owned by the global
 settlement generator.
+
+## 2026-07-30 - Culture-specific languages override group defaults
+
+Selected cultures may bind a reviewed custom dialect; all others retain their
+group default. The definition, dynamic-name, and correction generators share
+the same resolution rule. Familyless adapters follow installed Khoe/Tuu syntax.

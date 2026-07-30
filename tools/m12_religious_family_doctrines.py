@@ -56,6 +56,11 @@ ARABIAN_ATLAS = (
 SOUTH_ARABIAN_ATLAS = (
     ROOT / "assets_queue/arabia_mechanics/sources/arabia_doctrines_south_01.png"
 )
+SOUTHERN_AFRICAN_HUNTER_HERDER_ATLAS = (
+    ROOT
+    / "assets_queue/african_fallbacks/sources/"
+    "southern_hunter_herder_doctrines_01.png"
+)
 CONTACT_SHEET = (
     ROOT / "docs/m12/religious_family_doctrines_contact_sheet.png"
 )
@@ -150,6 +155,10 @@ DIRECT_ATLASES = {
     "antq_doctrine_south_arabian_religion_incense_vows": (SOUTH_ARABIAN_ATLAS, 1),
     "antq_doctrine_south_arabian_religion_irrigation_observance": (SOUTH_ARABIAN_ATLAS, 2),
     "antq_doctrine_south_arabian_religion_pilgrimage_sanctuaries": (SOUTH_ARABIAN_ATLAS, 3),
+    "antq_doctrine_southern_african_hunter_herder_traditions_ancestral_place_custody": (SOUTHERN_AFRICAN_HUNTER_HERDER_ATLAS, 0),
+    "antq_doctrine_southern_african_hunter_herder_traditions_seasonal_water_knowledge": (SOUTHERN_AFRICAN_HUNTER_HERDER_ATLAS, 1),
+    "antq_doctrine_southern_african_hunter_herder_traditions_hunting_share_obligations": (SOUTHERN_AFRICAN_HUNTER_HERDER_ATLAS, 2),
+    "antq_doctrine_southern_african_hunter_herder_traditions_healing_and_divination": (SOUTHERN_AFRICAN_HUNTER_HERDER_ATLAS, 3),
 }
 
 

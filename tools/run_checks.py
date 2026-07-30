@@ -59,6 +59,7 @@ VALIDATE_COMMANDS = (
     Command("tools/s2_horn_granularity.py", ("--check",)),
     Command("tools/s2_bantu_frontier_granularity.py", ("--check",)),
     Command("tools/s2_west_africa_granularity.py", ("--check",)),
+    Command("tools/s2_african_fallbacks.py", ("--check",)),
     Command("tools/s2_gangetic_granularity.py", ("--check",)),
     Command("tools/s2_inner_asian_granularity.py", ("--check",)),
     Command("tools/s2_tibetan_granularity.py", ("--check",)),

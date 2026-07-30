@@ -49,12 +49,14 @@ EXPECTED = {
     ),
     "LMP": (
         "Limpopo Hunter-Herder Networks", "impakwe", 10,
-        "antq_limpopo_hunter_herder", "antq_bantu_religion",
+        "antq_limpopo_hunter_herder",
+        "antq_southern_african_hunter_herder_traditions",
         "antq_mobile_hunter_herder_network",
     ),
     "ZHF": (
         "Zambezi Hunter-Herder Networks", "mtoko", 16,
-        "antq_zambezi_forager", "antq_bantu_religion",
+        "antq_zambezi_forager",
+        "antq_southern_african_hunter_herder_traditions",
         "antq_mobile_hunter_herder_network",
     ),
     "WDP": (
@@ -65,6 +67,14 @@ EXPECTED = {
         "Bauchi Plateau Communities", "bauchi", 1, "antq_post_nok",
         "antq_west_african", "antq_early_ironworking_community_network",
     ),
+}
+EXPECTED_CULTURE_LANGUAGES = {
+    "antq_ngovo": "antq_ngovo_horizon_language",
+    "antq_urewe": "antq_urewe_horizon_language",
+    "antq_kwale": "antq_kwale_horizon_language",
+    "antq_ruvuma_lurio": "antq_ruvuma_lurio_language",
+    "antq_limpopo_hunter_herder": "antq_limpopo_hunter_herder_language",
+    "antq_zambezi_forager": "antq_zambezi_forager_language",
 }
 FORBIDDEN_CULTURES = {
     "antq_equatorial_bantu", "antq_kongo_bantu", "antq_great_lakes_bantu",
@@ -165,6 +175,13 @@ def expected_rows() -> tuple[list[dict[str, str]], list[str]]:
                 )
         if culture not in cultures:
             failures.append(f"{tag} references undefined reviewed culture {culture}")
+        elif culture in EXPECTED_CULTURE_LANGUAGES:
+            expected_language = EXPECTED_CULTURE_LANGUAGES[culture]
+            if cultures[culture]["language"] != expected_language:
+                failures.append(
+                    f"{culture} language must be {expected_language}, "
+                    f"found {cultures[culture]['language']}"
+                )
         if government is None or government["reform"] != reform:
             found = government["reform"] if government else "<missing>"
             failures.append(f"{tag} reform must be {reform}, found {found}")

@@ -2812,6 +2812,7 @@ antq_monsoon_navigation = {
 	unlock_building = antq_reg_shipyard
 	unlock_building = antq_reg_silk_loom
 	unlock_building = antq_reg_jeweler
+	unlock_building = antq_reg_cotton_weavery
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
@@ -2842,7 +2843,6 @@ antq_red_sea_piloting = {
 	unlock_law = antq_s2_eastern_household_law
 	unlock_law = antq_s2_transoceanic_land_law
 	unlock_law = antq_s2_transoceanic_external_law
-	unlock_building = antq_reg_cotton_weavery
 	unlock_building = antq_reg_linen_weavery
 	unlock_building = antq_reg_alum_dyehouse
 	unlock_building = antq_reg_joinery
@@ -2854,6 +2854,7 @@ antq_red_sea_piloting = {
 	unlock_building = antq_reg_ropewalk
 	unlock_building = antq_reg_brickworks
 	unlock_building = antq_reg_tile_yard
+	unlock_building = antq_reg_incense_workshop
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
@@ -3080,7 +3081,6 @@ antq_silk_road_caravanserais = {
 	depth = 0
 	research_cost = 4.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_wheelwright
 	unlock_building = antq_reg_beadworks
 	unlock_building = antq_reg_loomweight_weavery
 	unlock_building = antq_reg_bargeyard
@@ -3092,6 +3092,7 @@ antq_silk_road_caravanserais = {
 	unlock_building = antq_reg_wax_workshop
 	unlock_building = antq_reg_sailmaker
 	unlock_building = antq_reg_quernworks
+	unlock_building = antq_reg_textile_dye_finisher
 	ai_weight = { add = 100 }
 }
 
@@ -3101,7 +3102,6 @@ antq_long_distance_credit = {
 	depth = 0
 	research_cost = 4.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_incense_workshop
 	unlock_building = antq_reg_basketry
 	unlock_building = antq_reg_linen_bleachery
 	unlock_building = antq_reg_copper_smithy
@@ -3113,6 +3113,7 @@ antq_long_distance_credit = {
 	unlock_building = antq_reg_marble_yard
 	unlock_building = antq_reg_wool_carder
 	unlock_building = antq_reg_mordant_dyehouse
+	unlock_building = antq_reg_wheelwright
 	ai_weight = { add = 100 }
 }
 
@@ -3273,7 +3274,6 @@ antq_crisis_trade_routes = {
 	depth = 0
 	research_cost = 6.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_textile_dye_finisher
 	unlock_building = antq_reg_hide_curing_yard
 	unlock_building = antq_reg_amphora_warehouse
 	unlock_building = antq_reg_tegula_kiln
@@ -3285,6 +3285,7 @@ antq_crisis_trade_routes = {
 	unlock_building = antq_reg_tin_smelter
 	unlock_building = antq_reg_charcoal_hearth
 	unlock_building = antq_reg_glass_bead_furnace
+	unlock_building = antq_reg_cordwainer
 	ai_weight = { add = 100 }
 }
 
@@ -3294,7 +3295,6 @@ antq_debased_currency_exchange = {
 	depth = 0
 	research_cost = 6.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_cordwainer
 	unlock_building = antq_reg_netmaker
 	unlock_building = antq_reg_packsaddle_workshop
 	unlock_building = antq_reg_stone_carver
@@ -3306,6 +3306,8 @@ antq_debased_currency_exchange = {
 	unlock_building = antq_reg_amber_carver
 	unlock_building = antq_reg_coral_workshop
 	unlock_building = antq_reg_sponge_drying_yard
+	unlock_building = antq_reg_reed_matmaker
+	unlock_building = antq_reg_lacquer_workshop
 	ai_weight = { add = 100 }
 }
 
@@ -3461,8 +3463,6 @@ antq_state_annona_routes = {
 	depth = 0
 	research_cost = 8.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_cauldron_smithy
-	unlock_building = antq_reg_barge_chandlery
 	unlock_building = antq_reg_combmaker
 	unlock_building = antq_reg_bell_foundry
 	unlock_building = antq_reg_oarwright
@@ -3473,6 +3473,8 @@ antq_state_annona_routes = {
 	unlock_building = antq_reg_kiln_furniture
 	unlock_building = antq_reg_sail_needle_shop
 	unlock_building = antq_reg_pulley_workshop
+	unlock_building = antq_reg_fishing_tackle
+	unlock_building = antq_reg_feltworks
 	ai_weight = { add = 100 }
 }
 
@@ -3482,8 +3484,6 @@ antq_bureaucratic_customs = {
 	depth = 0
 	research_cost = 8.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_reed_matmaker
-	unlock_building = antq_reg_lacquer_workshop
 	unlock_building = antq_reg_way_station
 	unlock_building = antq_reg_caravanserai
 	unlock_building = antq_reg_wharf_crane
@@ -3494,6 +3494,8 @@ antq_bureaucratic_customs = {
 	unlock_building = antq_reg_silverworkshop
 	unlock_building = antq_reg_wickerwork
 	unlock_building = antq_reg_loom_house
+	unlock_building = antq_reg_cauldron_smithy
+	unlock_building = antq_reg_barge_chandlery
 	ai_weight = { add = 100 }
 }
 
@@ -3632,8 +3634,6 @@ antq_migration_market_links = {
 	depth = 0
 	research_cost = 10.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_fishing_tackle
-	unlock_building = antq_reg_feltworks
 	unlock_building = antq_reg_carpet_loom
 	unlock_building = antq_reg_cork_workshop
 	unlock_building = antq_reg_brushmaker
@@ -3644,6 +3644,8 @@ antq_migration_market_links = {
 	unlock_building = antq_reg_eastern_arabian_aflaj
 	unlock_building = antq_reg_marcomannic_royal_compound
 	unlock_building = antq_reg_germanic_assembly_field
+	unlock_building = antq_reg_semnonian_sacred_grove
+	unlock_building = antq_reg_rhine_frontier_market
 	ai_weight = { add = 100 }
 }
 
@@ -3723,12 +3725,13 @@ antq_regional_caravans = {
 	depth = 0
 	research_cost = 12.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_semnonian_sacred_grove
-	unlock_building = antq_reg_rhine_frontier_market
 	unlock_building = antq_reg_batavian_auxiliary_muster
 	unlock_building = antq_reg_aestian_amber_sorting_ground
 	unlock_building = antq_reg_vistula_migration_staging
 	unlock_building = antq_reg_north_sea_boat_landing
+	unlock_building = antq_reg_southern_rock_shelter_custody
+	unlock_building = antq_reg_seasonal_waterhole_camp
+	unlock_building = antq_reg_riverine_gathering_ground
 	unlock_building = antq_reg_wool_drapery
 	unlock_building = antq_reg_silk_drapery
 	unlock_building = antq_reg_dye_finishing_house

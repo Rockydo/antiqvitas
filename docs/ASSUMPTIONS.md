@@ -5807,3 +5807,12 @@ are coarse regional proxies. Alemannic, Frankish, Gothic, and Saxon mechanics
 activate only in their later campaign contexts and are not projected into
 AD 1. Sources: `STR-GER`; `TAC-GER`; `TAC-ANN-II`; `OCD-ALE`; `CAM-FRK`;
 `PAN-WBB`; `VU-BRUSH`; `LIT-WLSC`. [bounded gameplay abstraction]
+
+## 2026-07-30 - African language roots remain technical and plural
+
+Modern/reconstructed classifications constrain engine adapters only;
+archaeological and geographic roots are not recovered AD 1 persons or ethnic
+borders. Southern traditions represent plural material contexts, not one
+uniform religion. Sources: `GLOT-CHADIC`; `GLOT-IGBOID`; `GLOT-GBE`;
+`GLOT-GUR`; `GLOT-AKANIC`; `CAM-SA-2024`; `OUP-SOUTH-AFRICA`.
+[contested]

@@ -74,6 +74,16 @@ EXPECTED_SINGLETONS = {
     ("NSK", "awka_etiti"), ("OUE", "ketu"), ("VIC", "kong"),
     ("BSW", "kumasi"),
 }
+EXPECTED_CULTURE_LANGUAGES = {
+    "antq_kebbi_river": "antq_western_hausaland_language",
+    "antq_zamfara_plateau": "antq_western_hausaland_language",
+    "antq_katsina_plain": "antq_western_hausaland_language",
+    "antq_gobir_tarka": "antq_western_hausaland_language",
+    "antq_nsukka_lejja": "antq_nsukka_lejja_language",
+    "antq_lower_oueme": "antq_lower_oueme_language",
+    "antq_volta_basin": "antq_volta_interfluve_language",
+    "antq_akan_forest": "antq_bosumtwi_forest_language",
+}
 FIELDS = (
     "design_tag", "engine_tag", "name", "map_capital", "location_count",
     "culture", "religion", "government_type", "reform", "emblem",
@@ -160,6 +170,13 @@ def expected_rows() -> tuple[list[dict[str, str]], list[str]]:
                 failures.append(f"{tag} must use the West-African religion family")
         if culture not in cultures:
             failures.append(f"{tag} references undefined culture {culture}")
+        else:
+            expected_language = EXPECTED_CULTURE_LANGUAGES[culture]
+            if cultures[culture]["language"] != expected_language:
+                failures.append(
+                    f"{culture} language must be {expected_language}, "
+                    f"found {cultures[culture]['language']}"
+                )
         if government is None or government["reform"] != reform:
             found = government["reform"] if government else "<missing>"
             failures.append(f"{tag} reform must be {reform}, found {found}")

@@ -4743,6 +4743,92 @@ antq_reg_north_sea_boat_landing = {
 	construction_demand = guild_construction
 }
 
+antq_reg_southern_rock_shelter_custody = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = laborers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = cultural_category
+	employment_size = cultural_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = cultural_building_time
+	modifier = {
+		local_cultural_tradition = 0.008
+		local_population_capacity = 0.005
+	}
+	unique_production_methods = {
+		antq_reg_southern_rock_shelter_custody_maintenance = {
+			stone = 0.04
+			wild_game = 0.04
+			fiber_crops = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_seasonal_waterhole_camp = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = laborers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = infrastructure_category
+	employment_size = generic_peasant_building_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = infrastructure_build_time
+	modifier = {
+		local_population_capacity = 0.01
+	}
+	unique_production_methods = {
+		antq_reg_seasonal_waterhole_camp_maintenance = {
+			stone = 0.03
+			fiber_crops = 0.04
+			wild_game = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
+antq_reg_riverine_gathering_ground = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = laborers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = cultural_category
+	employment_size = cultural_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = cultural_building_time
+	modifier = {
+		local_merchant_capacity = 0.006
+		local_population_capacity = 0.005
+	}
+	unique_production_methods = {
+		antq_reg_riverine_gathering_ground_maintenance = {
+			fish = 0.05
+			fiber_crops = 0.04
+			wild_game = 0.03
+			category = building_maintenance
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = guild_construction
+}
+
 antq_reg_villa_rustica = {
 	audio_tier = 2
 	is_special = no

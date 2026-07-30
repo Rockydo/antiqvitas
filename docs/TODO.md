@@ -601,7 +601,7 @@ and focused runtime probe all pass.
   - Acceptance: no generic Germanic country; Aestii no longer functions as a
     Baltic superstate; Germania is one of the deepest non-Roman theaters.
 
-- [ ] Rebuild Maghreb, Sahara, West Africa, Japan, and every remaining macro frame.
+- [x] Rebuild Maghreb, Sahara, West Africa, Japan, and every remaining macro frame.
   - [x] Complete the first Maghreb split: replace the Maghreb-wide
     Berber/Gaetulian placeholder with Juba II's Caesarea-centered Mauretania,
     bounded Gaetuli, and separate Musulamii. Retain documented uncertainty
@@ -795,11 +795,11 @@ and focused runtime probe all pass.
         Yarlung and Tsangpo valleys; correct Changtang fiber crops and
         unsupported Drichu gold to livestock. All nine frames receive at least
         one productive capacity-bounded opening settlement seed.
-  - [ ] Replace the temporary `mande_language` name-generator fallback on the
+  - [x] Replace the temporary `mande_language` name-generator fallback on the
     six new bounded West African culture profiles with sourced language-family
     and onomastic roots. Do not turn the technical fallback into a claim of a
     uniform Mande, Hausa, or other later ethnolinguistic identity in AD 1.
-  - [ ] Replace the temporary `antq_bantu_religion` technical fallback on the
+  - [x] Replace the temporary `antq_bantu_religion` technical fallback on the
     Limpopo and Zambezi hunter-herder frames with a sourced southern-African
     traditions family, doctrines, and direct icon set; do not imply Bantu
     identity merely to satisfy an engine religion slot.

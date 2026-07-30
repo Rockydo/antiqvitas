@@ -432,6 +432,20 @@ antq_bantu_religion = { # P11;CAH-XI; Bantu religious traditions
 	}
 }
 
+antq_southern_african_hunter_herder_traditions = { # OUP-SOUTH-AFRICA;CAM-SA-2024;P11; Plural material-context traditions adapter for southern hunter-herder frames; it does not assert one language theology people priesthood or boundary
+	color = antq_religion_color_antq_southern_african_hunter_herder_traditions
+	group = folk_african_group
+	religious_aspects = 2
+	has_religious_influence = yes
+	definition_modifier = {
+		tolerance_own = 0.01
+		monthly_religious_influence = 0.10
+		maximum_religious_influence = 400
+	}
+	opinions = {
+	}
+}
+
 antq_mesoamerican = { # P11;CAH-XI; Mesoamerican ritual traditions
 	color = antq_religion_color_antq_mesoamerican
 	group = tonal_group

@@ -87,6 +87,7 @@ RELIGION_ICONS = (
     ReligionIcon("antq_nile_cushitic", "ajok_religion"),
     ReligionIcon("antq_west_african", "songhai_religion"),
     ReligionIcon("antq_bantu_religion", "bantu_religion"),
+    ReligionIcon("antq_southern_african_hunter_herder_traditions", "badimo_religion"),
     ReligionIcon("antq_mesoamerican", "mesoamerican"),
     ReligionIcon("antq_andean", "inti"),
     ReligionIcon("antq_north_american", "great_plains_shamanism"),

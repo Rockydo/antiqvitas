@@ -595,8 +595,8 @@ antq_nok = { # P8.5;P10;JAA-NOK;OUP-NOK; Central Nigerian late Nok archaeologica
 	}
 }
 
-antq_kebbi_river = { # JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5;P10; Geographic riverine-savanna profile before later Hausaization; the Mande language root is a technical name-generator fallback
-	language = antq_subsaharan_dialect
+antq_kebbi_river = { # JAH-HAUSALAND;JAR-WA-NETWORKS;GLOT-CHADIC;P8.5;P10; Geographic riverine-savanna profile before later Hausaization; Chadic family and geographic naming roots do not assert Hausa speech or recovered AD 1 names
+	language = antq_western_hausaland_dialect
 	color = antq_culture_color_antq_kebbi_river
 	tags = { european_gfx }
 	culture_groups = {
@@ -604,8 +604,8 @@ antq_kebbi_river = { # JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5;P10; Geographic riveri
 	}
 }
 
-antq_zamfara_plateau = { # JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5;P10; Geographic plateau profile before later Hausaization; the Mande language root is a technical name-generator fallback
-	language = antq_subsaharan_dialect
+antq_zamfara_plateau = { # JAH-HAUSALAND;JAR-WA-NETWORKS;GLOT-CHADIC;P8.5;P10; Geographic plateau profile before later Hausaization; Chadic family and geographic naming roots do not assert Hausa speech or recovered AD 1 names
+	language = antq_western_hausaland_dialect
 	color = antq_culture_color_antq_zamfara_plateau
 	tags = { european_gfx }
 	culture_groups = {
@@ -613,8 +613,8 @@ antq_zamfara_plateau = { # JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5;P10; Geographic pl
 	}
 }
 
-antq_katsina_plain = { # JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5;P10; Geographic plain profile without backdating the later Hausa state; the Mande language root is technical
-	language = antq_subsaharan_dialect
+antq_katsina_plain = { # JAH-HAUSALAND;JAR-WA-NETWORKS;GLOT-CHADIC;P8.5;P10; Geographic plain profile without backdating the later Hausa state language or personal-name corpus
+	language = antq_western_hausaland_dialect
 	color = antq_culture_color_antq_katsina_plain
 	tags = { european_gfx }
 	culture_groups = {
@@ -622,8 +622,8 @@ antq_katsina_plain = { # JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5;P10; Geographic plai
 	}
 }
 
-antq_gobir_tarka = { # JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5;P10; Geographic Tarka-plain profile without backdating the later Gobir state; the Mande language root is technical
-	language = antq_subsaharan_dialect
+antq_gobir_tarka = { # JAH-HAUSALAND;JAR-WA-NETWORKS;GLOT-CHADIC;P8.5;P10; Geographic Tarka-plain profile without backdating the later Gobir state Hausa identity or personal names
+	language = antq_western_hausaland_dialect
 	color = antq_culture_color_antq_gobir_tarka
 	tags = { european_gfx }
 	culture_groups = {
@@ -631,8 +631,8 @@ antq_gobir_tarka = { # JAH-HAUSALAND;JAR-WA-NETWORKS;P8.5;P10; Geographic Tarka-
 	}
 }
 
-antq_nsukka_lejja = { # HER-LEJJA;P8.5;P10; Southeastern Nigerian early-ironworking horizon; the evidence does not establish one ethnicity polity or ancient Awka identity
-	language = antq_subsaharan_dialect
+antq_nsukka_lejja = { # HER-LEJJA;GLOT-IGBOID;P8.5;P10; Southeastern Nigerian early-ironworking horizon; the broad engine family and place-name roots do not establish one ethnicity polity or recovered AD 1 name corpus
+	language = antq_nsukka_lejja_dialect
 	color = antq_culture_color_antq_nsukka_lejja
 	tags = { european_gfx }
 	culture_groups = {
@@ -640,8 +640,8 @@ antq_nsukka_lejja = { # HER-LEJJA;P8.5;P10; Southeastern Nigerian early-ironwork
 	}
 }
 
-antq_lower_oueme = { # OUP-BENIN;MET-IRON;P8.5;P10; Geographic forest-community proxy without backdating Ketu or later Gbe-speaking state borders
-	language = antq_subsaharan_dialect
+antq_lower_oueme = { # OUP-BENIN;GLOT-GBE;MET-IRON;P8.5;P10; Geographic forest-community proxy with a broad southern-Volta engine family; it does not backdate Ketu Gbe identity or personal names
+	language = antq_lower_oueme_dialect
 	color = antq_culture_color_antq_lower_oueme
 	tags = { european_gfx }
 	culture_groups = {
@@ -694,8 +694,8 @@ antq_post_nok = { # OUP-NOK;P8.5;P10; Successor-community proxy after the diagno
 	}
 }
 
-antq_ngovo = { # SCI-CONGO-RAINFOREST;NGOVO-GROUP;P8.5;P10; Lower Congo material horizon; pottery does not define one ethnicity or state
-	language = antq_subsaharan_dialect
+antq_ngovo = { # SCI-CONGO-RAINFOREST;NGOVO-GROUP;JAH-BANTU-MOBILITY;P8.5;P10; Lower Congo material horizon with a broad Bantu-family engine adapter; pottery and geographic roots do not define one ethnicity state or recovered name corpus
+	language = antq_ngovo_horizon_dialect
 	color = antq_culture_color_antq_ngovo
 	tags = { european_gfx }
 	culture_groups = {
@@ -703,8 +703,8 @@ antq_ngovo = { # SCI-CONGO-RAINFOREST;NGOVO-GROUP;P8.5;P10; Lower Congo material
 	}
 }
 
-antq_urewe = { # JAH-BANTU-MOBILITY;AZA-UREWE;P8.5;P10; Great Lakes material horizon; language and political identity remain unresolved
-	language = antq_subsaharan_dialect
+antq_urewe = { # JAH-BANTU-MOBILITY;AZA-UREWE;P8.5;P10; Great Lakes material horizon with a broad Bantu-family engine adapter; language political identity and AD 1 names remain unresolved
+	language = antq_urewe_horizon_dialect
 	color = antq_culture_color_antq_urewe
 	tags = { european_gfx }
 	culture_groups = {
@@ -712,8 +712,8 @@ antq_urewe = { # JAH-BANTU-MOBILITY;AZA-UREWE;P8.5;P10; Great Lakes material hor
 	}
 }
 
-antq_kwale = { # QI-EAFRICA;UC-MOMBASA;P8.5;P10; Coastal early-ironworking material horizon and mixed-economy proxy
-	language = antq_subsaharan_dialect
+antq_kwale = { # QI-EAFRICA;UC-MOMBASA;JAH-BANTU-MOBILITY;P8.5;P10; Coastal early-ironworking horizon with a broad Bantu-family engine adapter; the roots do not backdate Swahili identity or recovered names
+	language = antq_kwale_horizon_dialect
 	color = antq_culture_color_antq_kwale
 	tags = { european_gfx }
 	culture_groups = {
@@ -721,8 +721,8 @@ antq_kwale = { # QI-EAFRICA;UC-MOMBASA;P8.5;P10; Coastal early-ironworking mater
 	}
 }
 
-antq_ruvuma_lurio = { # QI-EAFRICA;JAH-BANTU-MOBILITY;P8.5;P10; Southern coastal migration-frontier proxy without later ethnic labels
-	language = antq_subsaharan_dialect
+antq_ruvuma_lurio = { # QI-EAFRICA;JAH-BANTU-MOBILITY;P8.5;P10; Southern coastal migration-frontier proxy with a broad Bantu-family engine adapter and no later ethnic labels or recovered names
+	language = antq_ruvuma_lurio_dialect
 	color = antq_culture_color_antq_ruvuma_lurio
 	tags = { european_gfx }
 	culture_groups = {
@@ -730,8 +730,8 @@ antq_ruvuma_lurio = { # QI-EAFRICA;JAH-BANTU-MOBILITY;P8.5;P10; Southern coastal
 	}
 }
 
-antq_limpopo_hunter_herder = { # OUP-SOUTH-AFRICA;JAH-BANTU-MOBILITY;P8.5;P10; Southern hunter-herder proxy before securely dated farmer settlement; technical naming fallback is not a language claim
-	language = antq_subsaharan_dialect
+antq_limpopo_hunter_herder = { # OUP-SOUTH-AFRICA;CAM-SA-2024;JAH-BANTU-MOBILITY;P8.5;P10; Southern hunter-herder proxy before securely dated farmer settlement; the Khoe fallback and geographic roots are an engine-local adapter not a uniform language identity or boundary
+	language = antq_limpopo_hunter_herder_dialect
 	color = antq_culture_color_antq_limpopo_hunter_herder
 	tags = { european_gfx }
 	culture_groups = {
@@ -739,8 +739,8 @@ antq_limpopo_hunter_herder = { # OUP-SOUTH-AFRICA;JAH-BANTU-MOBILITY;P8.5;P10; S
 	}
 }
 
-antq_zambezi_forager = { # OUP-SOUTH-AFRICA;JAH-BANTU-MOBILITY;P8.5;P10; Save-Zambezi hunter-herder proxy before securely dated farmer settlement; technical naming fallback is not a language claim
-	language = antq_subsaharan_dialect
+antq_zambezi_forager = { # OUP-SOUTH-AFRICA;CAM-SA-2024;JAH-BANTU-MOBILITY;P8.5;P10; Save-Zambezi hunter-herder proxy before securely dated farmer settlement; the Tuu fallback and geographic roots are an engine-local adapter not a uniform language identity or boundary
+	language = antq_zambezi_forager_dialect
 	color = antq_culture_color_antq_zambezi_forager
 	tags = { european_gfx }
 	culture_groups = {
@@ -4258,8 +4258,8 @@ antq_western_sahel = { # CAM-MLR;P8.5;P10; Western Sahel settlement proxy before
 	}
 }
 
-antq_volta_basin = { # MET-IRON;P8.5;P10; Volta basin iron-age regional proxy; the Mande adapter is technical
-	language = antq_subsaharan_dialect
+antq_volta_basin = { # JAR-WA-NETWORKS;MET-IRON;GLOT-GUR;P8.5;P10; Volta-Comoe interfluve iron-age proxy with a broad northern-Volta engine family and geographic roots; no uniform Gur identity or recovered AD 1 names
+	language = antq_volta_interfluve_dialect
 	color = antq_culture_color_antq_volta_basin
 	tags = { european_gfx }
 	culture_groups = {
@@ -4276,8 +4276,8 @@ antq_senegambian = { # CAM-MLR;MET-IRON;P8.5;P10; Senegambian iron-age regional 
 	}
 }
 
-antq_akan_forest = { # MET-IRON;P8.5;P10; Forest-zone regional proxy without backdating later Akan state formations
-	language = antq_subsaharan_dialect
+antq_akan_forest = { # JAH-GHANA;JAR-WA-NETWORKS;GLOT-AKANIC;MET-IRON;P8.5;P10; Bosumtwi forest-zone proxy with a broad southern-Volta engine family and geographic roots; no later Akan state identity or recovered AD 1 names
+	language = antq_bosumtwi_forest_dialect
 	color = antq_culture_color_antq_akan_forest
 	tags = { european_gfx }
 	culture_groups = {

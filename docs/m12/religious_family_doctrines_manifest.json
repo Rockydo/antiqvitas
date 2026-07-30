@@ -1,5 +1,5 @@
 {
-  "choice_count": 200,
+  "choice_count": 204,
   "choices": [
     {
       "badge": "main_menu/gfx/interface/icons/religion/antq_chinese_state_cult.dds",
@@ -2800,6 +2800,62 @@
       "religion": "antq_central_amazon_traditions",
       "source": "SA-EXPANSIONS;ACUTUBA-CHRON;P11",
       "texture_sha256": "75405289f1791866b5c9943ce04deac0cc5c715a8d35dc41bf59c6c7e40ff8ef"
+    },
+    {
+      "badge": "main_menu/gfx/interface/icons/religion/antq_southern_african_hunter_herder_traditions.dds",
+      "badge_sha256": "75250ffd3de11524fdb4f0dcd94a13f2f2bfd06caa4f282ee97eae968a79f558",
+      "confidence": "contested",
+      "direct_atlas": "assets_queue/african_fallbacks/sources/southern_hunter_herder_doctrines_01.png",
+      "direct_atlas_sha256": "2a0c274ffb78ccd591923f50d76f812bb20e245daf2a8c3c7b6cdad013037042",
+      "key": "antq_doctrine_southern_african_hunter_herder_traditions_ancestral_place_custody",
+      "master_sha256": "78d118592c995c4c7864430f44013fc001664552eb366da1c4760718aae65ba5",
+      "motif": "main_menu/gfx/interface/advance/antq_advance_assembly_acclamation_customs.dds",
+      "motif_sha256": "ed6bbfe87f7e2f7b3b47ac9519c3f8c6af07b877f93cb59f7a2445b919c14f66",
+      "religion": "antq_southern_african_hunter_herder_traditions",
+      "source": "OUP-SOUTH-AFRICA;CAM-SA-2024;P11",
+      "texture_sha256": "e0bbb669a2871113e8a55198da1d60894b1243fded9b312260681ba7bfcc9e1b"
+    },
+    {
+      "badge": "main_menu/gfx/interface/icons/religion/antq_southern_african_hunter_herder_traditions.dds",
+      "badge_sha256": "75250ffd3de11524fdb4f0dcd94a13f2f2bfd06caa4f282ee97eae968a79f558",
+      "confidence": "contested",
+      "direct_atlas": "assets_queue/african_fallbacks/sources/southern_hunter_herder_doctrines_01.png",
+      "direct_atlas_sha256": "2a0c274ffb78ccd591923f50d76f812bb20e245daf2a8c3c7b6cdad013037042",
+      "key": "antq_doctrine_southern_african_hunter_herder_traditions_seasonal_water_knowledge",
+      "master_sha256": "da5bff13179925aefd5f2ebf6852d75e703090e4d999e1fc20b981f1f58f25e9",
+      "motif": "main_menu/gfx/interface/advance/antq_advance_calendrical_offices.dds",
+      "motif_sha256": "767a8503d7007ee8e100fd93249876df3448da48c49ca56821237ea577e48c83",
+      "religion": "antq_southern_african_hunter_herder_traditions",
+      "source": "OUP-SOUTH-AFRICA;CAM-SA-2024;P11",
+      "texture_sha256": "56d5dc6e1a5b2af92f2d28b48200e0876a53c52185d180d8120d30a4fa9a2a1b"
+    },
+    {
+      "badge": "main_menu/gfx/interface/icons/religion/antq_southern_african_hunter_herder_traditions.dds",
+      "badge_sha256": "75250ffd3de11524fdb4f0dcd94a13f2f2bfd06caa4f282ee97eae968a79f558",
+      "confidence": "contested",
+      "direct_atlas": "assets_queue/african_fallbacks/sources/southern_hunter_herder_doctrines_01.png",
+      "direct_atlas_sha256": "2a0c274ffb78ccd591923f50d76f812bb20e245daf2a8c3c7b6cdad013037042",
+      "key": "antq_doctrine_southern_african_hunter_herder_traditions_hunting_share_obligations",
+      "master_sha256": "7ada1d4532d140a3bf8f155fe8095d1749ae81fc332d485112c2197776ac5ad2",
+      "motif": "main_menu/gfx/interface/advance/antq_advance_champion_retinues.dds",
+      "motif_sha256": "59c6fb7751667fceda277087f89b4a60338730b870aae876697ca6090b5648ac",
+      "religion": "antq_southern_african_hunter_herder_traditions",
+      "source": "OUP-SOUTH-AFRICA;CAM-SA-2024;P11",
+      "texture_sha256": "71467a634086dd6a5480c768a792509c91d45567f451b5ce53dc53e1aaa925c6"
+    },
+    {
+      "badge": "main_menu/gfx/interface/icons/religion/antq_southern_african_hunter_herder_traditions.dds",
+      "badge_sha256": "75250ffd3de11524fdb4f0dcd94a13f2f2bfd06caa4f282ee97eae968a79f558",
+      "confidence": "contested",
+      "direct_atlas": "assets_queue/african_fallbacks/sources/southern_hunter_herder_doctrines_01.png",
+      "direct_atlas_sha256": "2a0c274ffb78ccd591923f50d76f812bb20e245daf2a8c3c7b6cdad013037042",
+      "key": "antq_doctrine_southern_african_hunter_herder_traditions_healing_and_divination",
+      "master_sha256": "629124cba3cc54e4446a18d2eabb11aab3fb2de88eb58d06341260bf0a7b17ef",
+      "motif": "main_menu/gfx/interface/advance/antq_advance_ayurvedic_compendia.dds",
+      "motif_sha256": "7158c175a2a1d4668b6ae71e69fa4c54a324cc02b6ec4180df30bfa96d66cf52",
+      "religion": "antq_southern_african_hunter_herder_traditions",
+      "source": "OUP-SOUTH-AFRICA;CAM-SA-2024;P11",
+      "texture_sha256": "e792cc0a216daa1c0587b673c45c726f20f2d0e2cf49c8361e74e8d3a0f8668c"
     }
   ],
   "choices_per_religion": 4,
@@ -2848,6 +2904,7 @@
     "antq_punic",
     "antq_siberian",
     "antq_south_arabian_religion",
+    "antq_southern_african_hunter_herder_traditions",
     "antq_tarim_oasis_traditions",
     "antq_tengri",
     "antq_theravada",
@@ -2856,7 +2913,7 @@
     "antq_western_plateau_traditions"
   ],
   "ledger": "docs/m12/religious_family_doctrines.csv",
-  "ledger_sha256": "cc072b2c6306101bd181a63ae68a8273cca7998c7034805756f959aa32698134",
+  "ledger_sha256": "39c37cbef9d22916dad12cd53856aed65074ba0093d2438e7ddfb68332202994",
   "starting_religions": [
     "antq_amur_ussuri_traditions",
     "antq_andean",
@@ -2892,6 +2949,7 @@
     "antq_north_american",
     "antq_papuan_local_traditions",
     "antq_south_arabian_religion",
+    "antq_southern_african_hunter_herder_traditions",
     "antq_tarim_oasis_traditions",
     "antq_tengri",
     "antq_theravada",

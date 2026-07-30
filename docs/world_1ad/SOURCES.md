@@ -72,6 +72,28 @@
   earthworks and dense settlement begin much later than AD 1, so the campaign
   uses only a low-centralization Bosumtwi forest-community proxy and does not
   backdate Kumasi or Asante.
+- `GLOT-CHADIC`: Glottolog 5.3, [Chadic](https://glottolog.org/resource/languoid/id/chad1250)
+  and [West Chadic](https://glottolog.org/resource/languoid/id/west2785).
+  Used only to constrain the western-Hausaland technical language family; it
+  does not establish Hausa speech, names, or identity in those AD 1 polygons.
+- `GLOT-IGBOID`: Glottolog 5.3, [Igboid](https://glottolog.org/resource/languoid/id/igbo1258).
+  Used only to avoid a Mande adapter at Nsukka-Lejja; the archaeological horizon
+  does not establish an AD 1 Igbo identity or recover personal names.
+- `GLOT-GBE`: Glottolog 5.3, [Gbe](https://glottolog.org/resource/languoid/id/gbee1241).
+  Used only as a broad southern-Volta engine-family constraint near the lower
+  Oueme, not to backdate a Gbe ethnonym, state, or personal-name corpus.
+- `GLOT-GUR`: Glottolog 5.3, [Gur](https://glottolog.org/resource/languoid/id/gura1261).
+  Used only as a broad northern-Volta engine-family constraint for the
+  Volta-Comoe interfluve, not as an AD 1 ethnic or linguistic boundary.
+- `GLOT-AKANIC`: Glottolog 5.3, [Akanic](https://glottolog.org/resource/languoid/id/akan1251).
+  Used only to avoid a Mande adapter in the Bosumtwi forest zone; later Akan
+  identities, states, and personal names are not projected into AD 1.
+- `CAM-SA-2024`: Peter Mitchell, [*The Archaeology of Southern
+  Africa*](https://www.cambridge.org/core/books/archaeology-of-southern-africa/86AE79774BE858E7A00547EE30B6B69E),
+  2nd ed. (Cambridge, 2024). The region's hunter-gatherer, pastoralist, and
+  farmer pasts are treated as varied and archaeologically mediated. It supports
+  a plural hunter-herder traditions adapter and material-context mechanics, not
+  a uniform Khoe-San language, theology, people, or territorial boundary.
 
 - `DAR-ARA-PACIS`: Digital Augustan Rome, [Pax Augusta, Ara](https://www.digitalaugustanrome.org/records/pax-augusta-ara/), records the Senate's 13 BC decree and 30 January 9 BC dedication of the Ara Pacis Augustae. It supports a bounded AD 1 open-air altar anchor, not a procession frieze, named family group, rite, or complete plaza reconstruction.
 - `DAR-MAUSOLEUM`: Digital Augustan Rome, [Mausoleum: Augustus](https://www.digitalaugustanrome.org/records/mausoleum-augustus/), records a pre-AD 1 Campus Martius tomb with public groves and walks, while retaining uncertainty over the exact construction sequence. It supports a bounded cultural-landscape anchor, not a tomb plan, occupant list, sculpture programme, full landscaping, or later ruin state.

@@ -2800,3 +2800,59 @@ antq_doctrine_central_amazon_traditions_community_ancestor_memory = { # SA-EXPAN
 		antq_doctrine_central_amazon_traditions_community_ancestor_memory = 10
 	}
 }
+
+antq_doctrine_southern_african_hunter_herder_traditions_ancestral_place_custody = { # OUP-SOUTH-AFRICA;CAM-SA-2024;P11; contested; Repeated use of places and transmitted landscape memory are represented without reconstructing one ancestor cult or territorial title.
+	icon = antq_doctrine_southern_african_hunter_herder_traditions_ancestral_place_custody
+	religion = antq_southern_african_hunter_herder_traditions
+
+	modifier = {
+		monthly_legitimacy = 0.03
+		cultural_tradition_modifier = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_southern_african_hunter_herder_traditions_ancestral_place_custody = 10
+	}
+}
+
+antq_doctrine_southern_african_hunter_herder_traditions_seasonal_water_knowledge = { # OUP-SOUTH-AFRICA;CAM-SA-2024;P11; contested; Water and seasonal movement knowledge supports resilience without inventing a priesthood calendar or fixed settlement system.
+	icon = antq_doctrine_southern_african_hunter_herder_traditions_seasonal_water_knowledge
+	religion = antq_southern_african_hunter_herder_traditions
+
+	modifier = {
+		global_monthly_food_modifier = 0.03
+		global_hostile_attrition = 0.05
+	}
+
+	opinions = {
+		antq_doctrine_southern_african_hunter_herder_traditions_seasonal_water_knowledge = 10
+	}
+}
+
+antq_doctrine_southern_african_hunter_herder_traditions_hunting_share_obligations = { # OUP-SOUTH-AFRICA;CAM-SA-2024;P11; contested; Food sharing and reciprocal obligation are cautious social mechanics rather than a recovered universal rule or named institution.
+	icon = antq_doctrine_southern_african_hunter_herder_traditions_hunting_share_obligations
+	religion = antq_southern_african_hunter_herder_traditions
+
+	modifier = {
+		tolerance_own = 1
+		global_monthly_prosperity = 0.02
+	}
+
+	opinions = {
+		antq_doctrine_southern_african_hunter_herder_traditions_hunting_share_obligations = 10
+	}
+}
+
+antq_doctrine_southern_african_hunter_herder_traditions_healing_and_divination = { # OUP-SOUTH-AFRICA;CAM-SA-2024;P11; contested; Specialist healing and interpretive knowledge are represented plurally without reconstructing titles rites or a uniform theology.
+	icon = antq_doctrine_southern_african_hunter_herder_traditions_healing_and_divination
+	religion = antq_southern_african_hunter_herder_traditions
+
+	modifier = {
+		research_speed_modifier = 0.02
+		global_max_literacy = 0.03
+	}
+
+	opinions = {
+		antq_doctrine_southern_african_hunter_herder_traditions_healing_and_divination = 10
+	}
+}

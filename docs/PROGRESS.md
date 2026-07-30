@@ -7920,3 +7920,11 @@ reviewed 128px BC7 DDS.
   EU5 category references.
 - Expanded the active economy to 277 buildings and the unit roster to 64.
 - Validation passes 136/136; paired smoke reports zero mod-unique lines.
+
+## 2026-07-30 - Removed African language and belief fallbacks
+
+- Bound 14 cultures to 11 cautious regional language adapters.
+- Added one plural southern belief profile, four doctrines, three buildings at
+  12 anchors, and eight direct assets from two reviewed four-up sheets.
+- Active totals: 52 religions and 280 buildings.
+- Validation passes 137/137; paired smoke reports zero mod-unique lines.
