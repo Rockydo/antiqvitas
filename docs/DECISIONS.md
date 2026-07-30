@@ -4264,3 +4264,23 @@ sheets locally because no new bitmap game asset is required.
 EU5's persistent reader rejected six- and seven-place advance literals in
 paired smoke. Generate unique later effects in 1e-5 steps and permanently
 reject numeric effect strings beyond five decimal places.
+
+## 2026-07-30 - Opening mechanics use bounded compatibility adapters
+
+Keep mandatory engine law categories active but override their player-facing
+names with ancient terms. Put universal RGO capacity and the minimum military
+floor on owned opening roots. Quarantine the complete installed levy filename
+union rather than patching one tribal file.
+
+## 2026-07-30 - Unlocks follow target eligibility
+
+Place reforms, privileges, units, laws, and buildings on advances matching
+their actual tag, culture, profile, or opening-placement geography. Duplicate
+an unlock only across distinct eligible research profiles. Cap every tooltip
+at eight; reserve dated nodes before distributing flexible content.
+# S3 Cultivator contract
+
+Cultivators are universal as a mechanic but location-gated by installed
+climate, topography, vegetation, region, river, and coast triggers. They employ
+peasants, output 0.20-0.38, consume tools/lumber/livestock, and cap at 2-3;
+native RGOs therefore remain the efficient agricultural base.

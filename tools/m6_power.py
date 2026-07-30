@@ -2232,6 +2232,30 @@ def load_power_data() -> PowerData:
                 f"anonymous M6 profile {design_tag} must state its evidence boundary in the note"
             )
 
+    # The compact M6 core privilege table predates the explicit potential columns
+    # used by the later estate-order table.  Derive an exact country boundary from
+    # the reviewed opening setups so none of those regional contracts appears in
+    # an unrelated country's estate UI.
+    privilege_start_tags: dict[str, list[str]] = {
+        row["key"]: [] for row in privileges
+    }
+    for design_tag, government in governments.items():
+        for privilege in pipe_values(
+            government["privileges"], f"government {design_tag} privileges"
+        ):
+            privilege_start_tags[privilege].append(tags[design_tag])
+    for privilege in privileges:
+        if privilege["potential_reforms"] or privilege["potential_tags"]:
+            continue
+        eligible_tags = tuple(dict.fromkeys(privilege_start_tags[privilege["key"]]))
+        if not eligible_tags:
+            failures.append(
+                f"privilege {privilege['key']} has neither an explicit potential nor "
+                "an opening country assignment"
+            )
+            continue
+        privilege["potential_tags"] = "|".join(eligible_tags)
+
     term_tags: set[str] = set()
     term_pairs: set[tuple[str, str]] = set()
     campaign_start = AntqDate.parse("1.1.1")

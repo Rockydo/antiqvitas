@@ -57,9 +57,17 @@ EXCLUDED_BY_SURFACE = {
 }
 YEARLY_ON_ACTION = "in_game/common/on_action/country_yearly.txt"
 TOP_LEVEL = re.compile(r"^\s*[A-Za-z_][A-Za-z0-9_]*\s*=\s*\{")
+TOP_LEVEL_KEY = re.compile(r"^\s*(?P<key>[A-Za-z_][A-Za-z0-9_]*)\s*=\s*\{")
 HRE_YEARLY_LINK = "\t\tinternational_organization:hre = { circles_are_active = yes }"
 HRE_YEARLY_GUARD = "\t\tinternational_organization:hre ?= { circles_are_active = yes }"
 MARKER = "ANTIQVITAS mounted-system quarantine"
+RETAINED_ENGINE_ADAPTERS = {
+    # EU5's bookmark initializer requires this category for countries with a
+    # succession law. False-gating it produces "has no heir_religion_law"
+    # for the roster and can suppress the law UI. Its player-facing text is
+    # ancientized separately; retaining the category is an engine contract.
+    "laws": {"heir_religion_law"},
+}
 
 
 def sha256(data: bytes) -> str:
@@ -239,13 +247,16 @@ def render_quarantine(
     depth = 0
     root_open = False
     root_has_gate = False
+    root_retained = False
     definitions = 0
+    retained_definitions = 0
     gate = re.compile(rf"^\s*{re.escape(gate_name)}\s*=\s*\{{")
 
     for line in text.splitlines():
         code = structural_code(line)
         delta = brace_delta(line)
-        if depth == 0 and TOP_LEVEL.match(code):
+        top_level = TOP_LEVEL_KEY.match(code)
+        if depth == 0 and top_level:
             if delta <= 0:
                 raise ValueError(
                     f"{source.name}: unsupported one-line top-level definition"
@@ -253,10 +264,13 @@ def render_quarantine(
             definitions += 1
             root_open = True
             root_has_gate = False
+            root_retained = top_level.group("key") in RETAINED_ENGINE_ADAPTERS.get(surface, set())
+            if root_retained:
+                retained_definitions += 1
             rendered.append(line.rstrip())
             depth += delta
             continue
-        if root_open and depth == 1 and gate.match(code):
+        if root_open and not root_retained and depth == 1 and gate.match(code):
             if delta == 0:
                 rendered.append(inject_inline_false(line.rstrip()))
             else:
@@ -271,7 +285,7 @@ def render_quarantine(
             root_has_gate = True
             depth += delta
             continue
-        if root_open and depth == 1 and delta < 0 and not root_has_gate:
+        if root_open and not root_retained and depth == 1 and delta < 0 and not root_has_gate:
             rendered.append(f"\t{gate_name} = {{ always = no }} # {MARKER}")
             root_has_gate = True
         rendered.append(line.rstrip())
@@ -295,9 +309,10 @@ def render_quarantine(
     output = quarantined.encode(
         "utf-8-sig" if has_bom else "utf-8"
     )
-    if output.decode("utf-8-sig").count(MARKER) != definitions:
+    guarded_definitions = definitions - retained_definitions
+    if output.decode("utf-8-sig").count(MARKER) != guarded_definitions:
         raise ValueError(f"{source.name}: quarantine marker count drift")
-    return output, definitions
+    return output, guarded_definitions
 
 
 def render_yearly_guard(source: Path) -> bytes:
@@ -396,7 +411,8 @@ def expected_outputs() -> tuple[dict[Path, bytes], dict[str, object]]:
         "schema": 1,
         "policy": (
             "Preserve installed keys for reference resolution; false-gate every "
-            "mounted post-antique definition and guard the HRE yearly pulse."
+            "mounted post-antique definition, retain required engine adapters, "
+            "and guard the HRE yearly pulse."
         ),
         "totals": totals,
         "files": records,

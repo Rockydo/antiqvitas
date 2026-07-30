@@ -5888,3 +5888,19 @@ Coin, seal, standard, and material motifs support political differentiation but
 usually not fixed state flags. Direct compositions therefore encode sourced
 identity at game scale, never a claim of national-flag use. Sources: roster
 source labels; `P8.1`-`P8.10`; `P20`. [contested compositions]
+
+## 2026-07-30 - Military availability is a role floor
+
+Universal spear, bow, skirmisher, retainer, muster, and hired-company entries
+prevent mechanical dead ends; they do not assert uniform organization.
+Parthian watercraft are bounded river, Gulf-coast, and Caspian adapters, not a
+blue-water royal navy. Regional hired companies represent military-labor
+markets, not named permanent regiments. Sources: `P8.1`-`P8.5`; `P8.10`;
+`P14`; `CAH-XI`; `PER`. [secure broad roles; contested local organization]
+# S3 marginal cultivation
+
+The crop envelopes in `docs/m5/cultivator_buildings.csv` use the existing
+P12.1/P12.3/P14/PER evidence contract. Broad goods denote locally appropriate
+species (pulses, fruit, dyes); maize, cacao, and tobacco remain American, while
+tea, pepper, sugar cane, incense, papyrus, dates, and coconut retain narrow
+regional and ecological limits.

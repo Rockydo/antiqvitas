@@ -8008,3 +8008,23 @@ reviewed 128px BC7 DDS.
 - Restricted 43 specialty families by production geography; all 10
   macro-economies retain distinct portfolios.
 - Validation passes 143/143; paired smoke adds zero mod-unique lines.
+
+## 2026-07-30 - Third-playtest opening-systems tranche
+
+- Quarantined all 43 installed levy definitions; added universal 4/2/2
+  regular/levy/mercenary floors for all 463 tags.
+- Expanded to 84 units and 22 mercenary companies with direct art; added
+  Parthian river/Gulf/Caspian craft and Han, Indian, African, and American pools.
+- Profile-gated all 376 privileges and distributed 1,116 unlock targets with an
+  eight-per-advance ceiling; Roman buildings no longer use shared unlocks.
+- Retained the mandatory heir-law adapter, restored Parthia's 15-law setup,
+  universalized basic RGO growth, raised Flour and Bread above wheat, and
+  ancientized steel plus 16 engine bridge labels.
+- `make validate` passed before the second expansion; final smoke is pending
+  because the shared EU5 slot is leased by `endore`.
+# 2026-07-30 - S3 Cultivator expansion
+
+- Added 24 lower-yield peasant Cultivator buildings with exact ecology and
+  crop-origin gates, hard caps of 2-3, and direct localization in 11 clients.
+- Added six reviewed four-up sheets, 24 unique circle-safe masters/DDS files,
+  and expanded the active building-icon audit from 288 to 312.

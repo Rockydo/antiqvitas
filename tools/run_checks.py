@@ -162,6 +162,8 @@ VALIDATE_COMMANDS = (
     Command("tools/m12_hardcoded_startup.py", ("--check",)),
     Command("tools/m12_coa_scope_guard.py", ("--check",)),
     Command("tools/m12_system_quarantine.py", ("--check",)),
+    Command("tools/s3_opening_systems.py", ("--check",)),
+    Command("tools/s3_cultivator_buildings.py", ("--check",)),
     Command("tools/m12_country_loc_scope_guard.py", ("--check",)),
     Command("tools/m12_flag_capital_guard.py", ("--check",)),
     Command("tools/m12_anachronism_audit.py", ("--check",)),

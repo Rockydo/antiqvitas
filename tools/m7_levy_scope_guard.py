@@ -1,56 +1,100 @@
 #!/usr/bin/env python3
-"""Guard the installed tribal-cavalry levy against an unset AD 1 market."""
+"""Independently guard the complete ANTIQVITAS levy-registry replacement."""
 
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config/local_paths.json"
-RELATIVE = Path("in_game/common/levies/06_tribal_levies.txt")
-TARGET = ROOT / RELATIVE
-UNSAFE = "\t\t\tmarket = {\n"
-SAFE = "\t\t\tmarket ?= {\n"
+RELATIVE_DIR = Path("in_game/common/levies")
+TARGET_DIR = ROOT / RELATIVE_DIR
+ACTIVE_FILE = "05_traditions_levies.txt"
+ACTIVE_KEYS = {
+    "antq_levy_district_spear_muster",
+    "antq_levy_seasonal_skirmishers",
+}
+ACTIVE_UNITS = {
+    "antq_district_spear_muster",
+    "antq_seasonal_skirmishers",
+}
+ROOT_KEY_RE = re.compile(r"^([a-z0-9_]+)\s*=\s*\{", re.MULTILINE)
+UNIT_RE = re.compile(r"^\s*unit\s*=\s*([a-z0-9_]+)\s*$", re.MULTILINE)
 
 
-def source() -> Path:
+def installed_dir() -> Path:
     data = json.loads(CONFIG.read_text(encoding="utf-8-sig"))
-    path = Path(data["game_dir"]) / "game" / RELATIVE
-    if not path.is_file():
-        raise ValueError(f"installed tribal levy source is missing: {path}")
+    path = Path(data["game_dir"]) / "game" / RELATIVE_DIR
+    if not path.is_dir():
+        raise ValueError(f"installed levy registry is missing: {path}")
     return path
 
 
-def rendered() -> bytes:
-    path = source()
-    content = path.read_text(encoding="utf-8-sig").replace("\r\n", "\n")
-    if content.count(UNSAFE) != 1:
-        raise ValueError(
-            "installed tribal levy drift: expected exactly one unsafe market link"
-        )
-    content = content.replace(UNSAFE, SAFE)
-    content = "\n".join(line.rstrip(" \t") for line in content.splitlines()).rstrip("\n") + "\n"
-    return b"\xef\xbb\xbf" + content.encode("utf-8")
+def registry_files(directory: Path) -> dict[str, Path]:
+    return {
+        path.name: path
+        for path in sorted(directory.glob("*.txt"))
+        if path.name[:1].isdigit()
+    }
 
 
 def check() -> bool:
-    expected = rendered()
-    if not TARGET.is_file() or TARGET.read_bytes() != expected:
-        print(f"m7_levy_scope_guard: FAIL\n  - stale or missing {TARGET.relative_to(ROOT)}")
-        return False
-    text = TARGET.read_text(encoding="utf-8-sig")
-    if text.count("market ?= {") != 1 or UNSAFE in text:
-        print("m7_levy_scope_guard: FAIL\n  - optional market guard is not exact")
+    failures: list[str] = []
+    installed = registry_files(installed_dir())
+    targets = registry_files(TARGET_DIR)
+    if set(targets) != set(installed):
+        missing = sorted(set(installed) - set(targets))
+        extra = sorted(set(targets) - set(installed))
+        if missing:
+            failures.append(f"missing exact levy mirrors: {', '.join(missing)}")
+        if extra:
+            failures.append(f"unexpected levy mirrors: {', '.join(extra)}")
+
+    installed_keys: set[str] = set()
+    for path in installed.values():
+        installed_keys.update(ROOT_KEY_RE.findall(path.read_text(encoding="utf-8-sig")))
+
+    active_keys: set[str] = set()
+    active_units: set[str] = set()
+    for name, path in targets.items():
+        text = path.read_text(encoding="utf-8-sig")
+        keys = set(ROOT_KEY_RE.findall(text))
+        units = set(UNIT_RE.findall(text))
+        if name == ACTIVE_FILE:
+            active_keys.update(keys)
+            active_units.update(units)
+            continue
+        if keys or units:
+            failures.append(f"quarantined levy source remains active: {name}")
+        if "installed levy registry quarantined" not in text:
+            failures.append(f"quarantine marker missing: {name}")
+
+    if active_keys != ACTIVE_KEYS:
+        failures.append(
+            "active levy keys differ from the two reviewed ancient adapters"
+        )
+    if active_units != ACTIVE_UNITS:
+        failures.append(
+            "active levy unit links differ from the two reviewed ancient units"
+        )
+    leaked = sorted(installed_keys & active_keys)
+    if leaked:
+        failures.append(f"installed levy definitions remain active: {', '.join(leaked)}")
+
+    if failures:
+        print("m7_levy_scope_guard: FAIL")
+        for failure in failures:
+            print(f"  - {failure}")
         return False
     print(
         "m7_levy_scope_guard: PASS "
-        f"(source {hashlib.sha256(source().read_bytes()).hexdigest()[:12]}; "
-        "tribal cavalry retains horse-market semantics)"
+        f"({len(targets)} exact mirrors; {len(installed_keys)} installed definitions "
+        "quarantined; 2 ancient levy adapters active)"
     )
     return True
 
@@ -62,12 +106,11 @@ def main() -> int:
     mode.add_argument("--check", action="store_true")
     args = parser.parse_args()
     try:
-        expected = rendered()
         if args.write:
-            TARGET.parent.mkdir(parents=True, exist_ok=True)
-            TARGET.write_bytes(expected)
-            print(f"m7_levy_scope_guard: wrote {TARGET.relative_to(ROOT)}")
-            return 0
+            print(
+                "m7_levy_scope_guard: levy files are owned by tools/m7_war.py; "
+                "checking generated output"
+            )
         return 0 if check() else 1
     except (OSError, UnicodeError, ValueError, json.JSONDecodeError) as exc:
         print(f"m7_levy_scope_guard: FAIL\n  - {exc}", file=sys.stderr)

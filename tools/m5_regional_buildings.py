@@ -601,18 +601,25 @@ def load() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
                 f"{key}: default-price guild margin {margin:.1%} must remain within 19%-21%"
             )
     with ADVANCES.open(encoding="utf-8-sig", newline="") as handle:
-        unlock_counts = {key: 0 for key in family_keys}
+        unlock_profiles: dict[str, list[str]] = {key: [] for key in family_keys}
         for advance in csv.DictReader(handle):
             for token in (advance.get("unlocks") or "").split(";"):
                 kind, separator, target = token.strip().partition("=")
-                if separator and kind == "unlock_building" and target in unlock_counts:
-                    unlock_counts[target] += 1
-    missing_unlocks = sorted(key for key, count in unlock_counts.items() if not count)
-    duplicate_unlocks = sorted(key for key, count in unlock_counts.items() if count > 1)
+                if separator and kind == "unlock_building" and target in unlock_profiles:
+                    unlock_profiles[target].append((advance.get("eligibility") or "").strip())
+    missing_unlocks = sorted(key for key, profiles in unlock_profiles.items() if not profiles)
+    duplicate_unlocks = sorted(
+        key for key, profiles in unlock_profiles.items()
+        if len(profiles) != len(set(profiles))
+        or (len(profiles) > 1 and any("Shared Foundations" in profile for profile in profiles))
+    )
     if missing_unlocks:
         failures.append(f"regional families lack an advance unlock: {missing_unlocks}")
     if duplicate_unlocks:
-        failures.append(f"regional families have duplicate advance unlocks: {duplicate_unlocks}")
+        failures.append(
+            "regional families repeat an unlock inside one profile or mix shared "
+            f"and regional placement: {duplicate_unlocks}"
+        )
     seen_keys: set[str] = set()
     seen_pairs: set[tuple[str, str]] = set()
     used: set[str] = set()

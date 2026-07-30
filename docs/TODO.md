@@ -3,6 +3,126 @@
 Tasks are taken top-to-bottom within the current milestone. A milestone closes only
 after `make full` and its autonomous driver report are green.
 
+## Third manual playtest remediation - 2026-07-30 (resume here)
+
+This section supersedes prior completion claims where the new playtest found
+visible inheritance or shallow availability. Close items only with an
+installed-union audit, generated ledger, static validator, and focused runtime
+evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
+
+### S3-P0 - Broken availability and profile isolation
+
+- [ ] Replace every active levy entry with profile-appropriate ancient units.
+  No levy may reference a vanilla unit key; every playable tag must receive at
+  least two valid levy roles and four recruitable land roles.
+- [ ] Make mercenaries nonzero and regionally diverse. Prove visible pools for
+  Rome, Parthia, Suebi, Han, India, Africa, and the Americas; expand the roster
+  and remove population rounding-to-zero.
+- [ ] Give every coastal polity valid ancient transport and combat vessels.
+  Parthian ports must offer more than merchant roundships; inland locations
+  must not gain ocean fleets.
+- [ ] Restore Parthia's law screen. Prove all opening profiles initialize,
+  display, and can change their own laws without seeing foreign profile laws.
+- [ ] Gate every privilege by country profile, culture, religion, reform, or a
+  justified universal category. No polity may see or grant a foreign grant.
+- [ ] Gate genuinely Roman, Han, Iranian, Indian, steppe, and other regional
+  buildings. Shared buildings must use neutral ancient identities; Suebi must
+  not see Roman institutional buildings without a documented adoption path.
+- [ ] Partition advance unlock packages by profile. A visible advance may not
+  advertise foreign laws, privileges, buildings, reforms, or units, and no
+  advance tooltip may list more than eight substantive unlocks.
+- [ ] Make basic RGO expansion available to every polity at game start, with
+  later advances improving rather than enabling the core mechanic.
+
+### S3-P1 - Complete ancient visual surfaces
+
+- [ ] Rebuild all sixteen loading screens as the eight alpha/depth layers used
+  by the installed animated loading scenes; reject opaque duplicate layers and
+  review every composite and motion-safe crop.
+- [ ] Replace the complete installed location-illustration union: terrain,
+  settlements, forts, ports, sacred buildings, workshops, weather, and
+  foreground layers. No medieval structure or unintended blur may remain.
+- [ ] Replace every pop icon resolver used by the location view, including
+  default, country, location, map-mode, and all installed graphical cultures.
+- [ ] Rework all custom trade-good icons as transparent object cutouts matching
+  installed wheat-style alpha, margins, scale, and lighting. No rounded,
+  circular, colored, or painted background may remain.
+
+### S3-P2 - Agriculture, landscape, and opening economy
+
+- [ ] Add a comprehensive Cultivator building system for every realistically
+  cultivable raw good. Use peasants, lower yield than native RGOs, strict
+  climate/topography/vegetation/coast gates, and low environment-specific caps.
+- [ ] Expand tree-nut RGOs and all other underrepresented agricultural anchors
+  to historically and ecologically justified coverage; keep RGOs superior to
+  Cultivator substitutes.
+- [ ] Raise Flour and Bread above wheat's food value and rebalance its recipe,
+  demand, price, and opening production.
+- [ ] Densify historically urbanized opening regions and guarantee viable
+  construction chains. Rome first, then every major market, must begin with
+  Iron Hardware, Cordage, Masonry, timber, stone, metal, and food supply.
+- [ ] Rework Germania and Iberia vegetation from sourced regional rules.
+  Germania must not retain implausible central grassland expanses; Iberia must
+  preserve open cereal zones while restoring ancient woodland mosaics.
+
+### S3-P3 - Knowledge, politics, diplomacy, names, and text
+
+- [ ] Expand visible advance depth per major profile in every age while keeping
+  foreign branches hidden. Report visible, owned, eligible, and total nodes for
+  representative tags; Rome must have a deep tree rather than 12-20 cards.
+- [ ] Replace the full societal-values union with AD 1 meanings, names,
+  effects, profile gates, and dated later-age sliders. No medieval or
+  early-modern political vocabulary may surface.
+- [ ] Audit the complete diplomacy union: interactions, generic actions,
+  subjects, CBs, war goals, peace terms, and objectives. Disable
+  anachronisms, localize every visible action and description, and add
+  profile-appropriate ancient diplomacy where coverage is thin.
+- [ ] Replace generic polity labels such as "Community" and "Group" with short
+  attested names. Uncertainty belongs in descriptions, not player-facing names.
+- [ ] Replace synthetic directional location names with curated language forms,
+  especially the Rhine-Danube, Germania, Gaul, Britain, Dacia, and every likely
+  post-AD 1 Roman frontier conquest. Verify the engine's owner/culture resolver.
+- [ ] Sweep all active and compatibility localization in every client language
+  for guns, muskets, rifles, cannon, feudalism, serfdom, manufactories, and
+  similar anachronisms. Steel must describe ancient ferrous production.
+
+### S3 audit findings
+
+- Loading art currently hard-links one opaque panorama into all eight animated
+  layer slots. Location illustrations have no mod override. Pop art omits active
+  resolver families. All 38 custom goods use painted dark backplates.
+- Germania is 45.7% forest/woods and Iberia 37.4%; current conversion rules are
+  overly RGO-coupled. Tree nuts have only eight global RGO anchors.
+- The original active tribal levy named vanilla units. Mercenaries used a 0.01
+  population multiplier, and Parthia had only one merchant vessel.
+- The original 46 core privileges were ungated. Shared advances advertised large
+  cross-profile unlock lists. Parthian opening laws are scripted but absent in
+  the observed runtime.
+- Flour and Bread has food 6 versus wheat 8. Existing building counts do not
+  guarantee construction-input supply in the opening market.
+- The roster contains 108 "Communities" and 12 "Group" labels; generated
+  location names include synthetic directional phrases. The steel description
+  still mentions guns.
+
+### S3 implementation evidence awaiting runtime
+
+- Static green: eight levy mirrors quarantine 43 installed definitions; 84
+  ancient units provide every tag 4 regular, 2 levy, and 2 mercenary roles.
+  Twenty-two mercenary types include regional proofs for Rome, Parthia, Suebi,
+  Han, India, Africa, and the Americas.
+- Static green: all 376 privileges have potentials; Parthia retains 15 opening
+  law groups; the mandatory heir-law adapter remains active.
+- Static green: 1,116 unlock targets are profile-balanced across 800 advances;
+  no node advertises more than eight. Roman building unlocks stay on the
+  Roman/Italic path.
+- Static green: basic RGO capacity is universal; Flour and Bread food is 10
+  versus installed wheat 8; steel and 16 engine bridge categories use ancient
+  localization in all 11 clients.
+- Static green: 24 peasant Cultivator buildings cover cereals, pulses, orchards,
+  fibers, oil crops, aromatics, and independent American crops. Exact climate,
+  topography, vegetation, region, river, and coast gates cap marginal output at
+  2-3 levels; 24 direct icons come from six reviewed four-up EU5-style sheets.
+
 ## Active user priorities — 2026-07-22
 
 - [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,413-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)

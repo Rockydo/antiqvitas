@@ -781,7 +781,8 @@ antq_balearic_slingers = {
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
 	buildable = no
-	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
 	construction_demand = antq_light_infantry_construction
 	maintenance_demand = antq_light_infantry_maintenance
@@ -803,7 +804,8 @@ antq_cretan_archers = {
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
 	buildable = no
-	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
 	construction_demand = antq_light_infantry_construction
 	maintenance_demand = antq_light_infantry_maintenance
@@ -826,7 +828,8 @@ antq_germanic_bodyguards = {
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
 	buildable = no
-	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
 	construction_demand = antq_heavy_infantry_construction
 	maintenance_demand = antq_heavy_infantry_maintenance
@@ -838,6 +841,7 @@ antq_germanic_bodyguards = {
 			has_or_had_tag = XAA
 			has_or_had_tag = XAH
 			has_or_had_tag = XBK
+			has_or_had_tag = XDZ
 			has_or_had_tag = CRU
 			has_or_had_tag = XBL
 		}
@@ -851,7 +855,8 @@ antq_saka_horse = {
 	copy_from = a_age_1_traditions_light_cavalry
 	hide = no
 	buildable = no
-	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
 	construction_demand = antq_light_cavalry_construction
 	maintenance_demand = antq_light_cavalry_maintenance
@@ -877,7 +882,8 @@ antq_galatian_swordsmen = {
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
 	buildable = no
-	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
 	construction_demand = antq_heavy_infantry_construction
 	maintenance_demand = antq_heavy_infantry_maintenance
@@ -903,7 +909,8 @@ antq_thracian_peltasts = {
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
 	buildable = no
-	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
 	construction_demand = antq_light_infantry_construction
 	maintenance_demand = antq_light_infantry_maintenance
@@ -929,7 +936,8 @@ antq_numidian_horse_company = {
 	copy_from = a_age_1_traditions_light_cavalry
 	hide = no
 	buildable = no
-	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
 	construction_demand = antq_light_cavalry_construction
 	maintenance_demand = antq_light_cavalry_maintenance
@@ -1293,7 +1301,8 @@ antq_syrian_archers = {
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
 	buildable = no
-	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
 	construction_demand = antq_light_infantry_construction
 	maintenance_demand = antq_light_infantry_maintenance
@@ -1316,7 +1325,8 @@ antq_iberian_swordsmen = {
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
 	buildable = no
-	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
 	construction_demand = antq_heavy_infantry_construction
 	maintenance_demand = antq_heavy_infantry_maintenance
@@ -1338,7 +1348,8 @@ antq_dacian_falxmen = {
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
 	buildable = no
-	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
 	construction_demand = antq_heavy_infantry_construction
 	maintenance_demand = antq_heavy_infantry_maintenance
@@ -1361,7 +1372,8 @@ antq_armenian_horse = {
 	copy_from = a_age_1_traditions_light_cavalry
 	hide = no
 	buildable = no
-	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
 	construction_demand = antq_light_cavalry_construction
 	maintenance_demand = antq_light_cavalry_maintenance
@@ -1384,7 +1396,8 @@ antq_cilician_marines = {
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
 	buildable = no
-	mercenaries_per_location = { pop_type = peasants multiply = 0.01 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
 	construction_demand = antq_light_infantry_construction
 	maintenance_demand = antq_light_infantry_maintenance
@@ -1676,4 +1689,736 @@ antq_saxon_coastal_warband = {
 	}
 	gfx_tags = { light_tag sword_tag }
 	# P8.7;P14;STR-GER;CAH-XII; A late-Roman North Sea coastal-warband adapter, available only after AD 300 and not a claim for the later Adventus Saxonum outcome.
+}
+
+antq_mesopotamian_river_patrol = {
+	is_special = yes
+	copy_from = n_age_1_traditions_galley
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_galley_construction
+	maintenance_demand = antq_galley_maintenance
+	cannons = 0
+	movement_speed = 0.35
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAH
+			has_or_had_tag = XAI
+			has_or_had_tag = XAJ
+			has_or_had_tag = PRS
+		}
+	}
+	# P8.2;P14;PER;CAH-XI; A shallow-draft oared patrol adapter for the Tigris-Euphrates corridor; it does not imply an Arsacid blue-water fleet or standardized hull.
+}
+
+antq_persian_gulf_patrol_craft = {
+	is_special = yes
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.45
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAH
+			has_or_had_tag = XAI
+			has_or_had_tag = XAJ
+			has_or_had_tag = PRS
+			has_or_had_tag = OMN
+			has_or_had_tag = XBI
+			has_or_had_tag = HIM
+			has_or_had_tag = QAT
+			has_or_had_tag = XBJ
+		}
+	}
+	# P8.2;P8.5;P14;PER;CAH-XI; A stitched-plank coastal patrol and escort adapter for Gulf ports and island passages without projecting later dhow rigs or a permanent state navy.
+}
+
+antq_mesopotamian_river_transport = {
+	is_special = yes
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.30
+	hull_size = -2
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAH
+			has_or_had_tag = XAI
+			has_or_had_tag = XAJ
+			has_or_had_tag = PRS
+		}
+	}
+	# P8.2;P14;PER;CAH-XI; A broad river cargo and troop-transport adapter for Mesopotamian waterways, distinct from an ocean-going merchant roundship.
+}
+
+antq_caspian_oared_boat = {
+	is_special = yes
+	copy_from = n_age_1_traditions_galley
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_galley_construction
+	maintenance_demand = antq_galley_maintenance
+	cannons = 0
+	movement_speed = 0.40
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAH
+			has_or_had_tag = XAK
+			has_or_had_tag = XAQ
+			has_or_had_tag = IBR
+			has_or_had_tag = XAO
+		}
+	}
+	# P8.2;P14;PER;CAH-XI; A compact oared coastal craft for Caspian shore movement and local patrol, not a Mediterranean trireme or a reconstructed royal squadron.
+}
+
+antq_spear_and_shield_infantry = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
+	morale_damage_taken = -0.02
+	movement_speed = -0.02
+	combat = { hills = 0.02 forest = 0.02 }
+	country_potential = {
+		always = yes
+	}
+	gfx_tags = { medium_tag heavy_tag }
+	# P14;CAH-XI; A universal ancient heavy-foot floor using broadly attested spear-and-shield equipment; regional specialists remain stronger and more distinctive.
+}
+
+antq_javelin_skirmishers = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
+	initiative = 0.10
+	movement_speed = 0.06
+	combat = { hills = 0.03 forest = 0.03 }
+	country_potential = {
+		always = yes
+	}
+	gfx_tags = { light_tag }
+	# P14;CAH-XI; A universal ancient light-foot floor for dispersed missile harassment without assigning one ethnic doctrine or equipment standard.
+}
+
+antq_bow_infantry = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
+	initiative = 0.12
+	morale_damage_done = 0.03
+	combat = { forest = 0.02 hills = 0.02 }
+	country_potential = {
+		always = yes
+	}
+	gfx_tags = { archer_tag light_tag }
+	# P14;CAH-XI; A conservative self-bow infantry floor available across the roster; composite bows and famous regional archers remain separate specialists.
+}
+
+antq_household_retainers = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
+	morale_damage_done = 0.04
+	strength_damage_taken = -0.02
+	combat = { hills = 0.02 }
+	country_potential = {
+		always = yes
+	}
+	gfx_tags = { medium_tag sword_tag }
+	# P14;CAH-XI; A small prestige-bound heavy-foot role abstracting household service without claiming a uniform aristocratic institution across all polities.
+}
+
+antq_district_spear_muster = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
+	morale_damage_taken = -0.01
+	movement_speed = -0.03
+	combat = { hills = 0.02 }
+	country_potential = {
+		always = yes
+	}
+	gfx_tags = { medium_tag heavy_tag }
+	# P14;CAH-XI; A universal levy floor for locality-based spear musters; the district label is mechanical and does not impose Roman territorial administration.
+}
+
+antq_seasonal_skirmishers = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = no
+	levy = yes
+	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
+	initiative = 0.08
+	movement_speed = 0.05
+	combat = { forest = 0.03 hills = 0.02 }
+	country_potential = {
+		always = yes
+	}
+	gfx_tags = { light_tag }
+	# P14;CAH-XI; A universal levy floor for seasonal light-foot service using locally available missiles and shields.
+}
+
+antq_frontier_spear_company = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
+	morale_damage_taken = -0.02
+	supply_weight = -0.03
+	combat = { hills = 0.03 river = 0.03 }
+	country_potential = {
+		always = yes
+	}
+	gfx_tags = { medium_tag heavy_tag }
+	# P14;CAH-XI; A portable paid spear-company role representing military labor markets without inventing a named permanent regiment.
+}
+
+antq_caravan_guard_company = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
+	movement_speed = 0.06
+	supply_weight = -0.05
+	combat = { desert = 0.03 hills = 0.03 }
+	country_potential = {
+		always = yes
+	}
+	gfx_tags = { archer_tag light_tag }
+	# P8.1;P8.2;P8.4;P8.5;P14;PER; A portable route-guard company role for paid escorts and armed brokers; local specialists and regional equipment remain represented by other companies.
+}
+
+antq_han_frontier_crossbow_company = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
+	initiative = 0.16
+	morale_damage_done = 0.04
+	combat = { hills = 0.05 river = 0.04 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAR
+		}
+	}
+	gfx_tags = { archer_tag light_tag }
+	# P8.3;P14;CAH-XI; A bounded hired or seconded Han crossbow role for frontier and escort service without inventing a permanent private regiment.
+}
+
+antq_yellow_river_escort_company = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
+	morale_damage_taken = -0.03
+	movement_speed = -0.02
+	combat = { river = 0.08 grasslands = 0.03 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAR
+		}
+	}
+	gfx_tags = { medium_tag heavy_tag }
+	# P8.3;P14;CAH-XI; A river-route spear escort adapter representing contracted and locally seconded guards rather than one named formation.
+}
+
+antq_indian_longbow_company = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
+	initiative = 0.14
+	morale_damage_done = 0.04
+	combat = { jungle = 0.05 grasslands = 0.03 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = SAT
+			has_or_had_tag = XAX
+			has_or_had_tag = XAY
+			has_or_had_tag = YDH
+			has_or_had_tag = ARJ
+			has_or_had_tag = XAZ
+			has_or_had_tag = XBA
+			has_or_had_tag = XBB
+			has_or_had_tag = XBC
+			has_or_had_tag = PND
+			has_or_had_tag = XBD
+			has_or_had_tag = XDP
+			has_or_had_tag = XFS
+			has_or_had_tag = XFT
+			has_or_had_tag = PCM
+			has_or_had_tag = KSM
+			has_or_had_tag = AYM
+			has_or_had_tag = XFU
+			has_or_had_tag = XFV
+			has_or_had_tag = VDJ
+			has_or_had_tag = AGA
+			has_or_had_tag = PDR
+			has_or_had_tag = XFW
+			has_or_had_tag = VNG
+			has_or_had_tag = SMT
+			has_or_had_tag = HRK
+			has_or_had_tag = XFX
+			has_or_had_tag = XFY
+			has_or_had_tag = DDV
+			has_or_had_tag = KJH
+			has_or_had_tag = UBR
+			has_or_had_tag = SDY
+			has_or_had_tag = MYL
+			has_or_had_tag = SKM
+			has_or_had_tag = IMV
+			has_or_had_tag = XCN
+			has_or_had_tag = LBR
+			has_or_had_tag = RKU
+			has_or_had_tag = SRS
+			has_or_had_tag = XGN
+			has_or_had_tag = XGO
+			has_or_had_tag = XGP
+			has_or_had_tag = ABN
+			has_or_had_tag = XGQ
+			has_or_had_tag = XGR
+			has_or_had_tag = XDN
+			has_or_had_tag = ATY
+			has_or_had_tag = XGD
+			has_or_had_tag = VDS
+			has_or_had_tag = CED
+			has_or_had_tag = NVM
+			has_or_had_tag = XGE
+			has_or_had_tag = DKS
+			has_or_had_tag = BSR
+			has_or_had_tag = MLD
+		}
+	}
+	gfx_tags = { archer_tag light_tag }
+	# P8.4;P14;CAH-XI; A broad early-historic longbow service company for Indian courts and cities without claiming uniform equipment caste or organization.
+}
+
+antq_deccan_spear_company = {
+	is_special = yes
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
+	morale_damage_taken = -0.03
+	strength_damage_taken = -0.02
+	combat = { hills = 0.06 desert = 0.04 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = SAT
+			has_or_had_tag = XAX
+			has_or_had_tag = XAY
+			has_or_had_tag = YDH
+			has_or_had_tag = ARJ
+			has_or_had_tag = XAZ
+			has_or_had_tag = XBA
+			has_or_had_tag = XBB
+			has_or_had_tag = XBC
+			has_or_had_tag = PND
+			has_or_had_tag = XBD
+			has_or_had_tag = XDP
+			has_or_had_tag = XFS
+			has_or_had_tag = XFT
+			has_or_had_tag = PCM
+			has_or_had_tag = KSM
+			has_or_had_tag = AYM
+			has_or_had_tag = XFU
+			has_or_had_tag = XFV
+			has_or_had_tag = VDJ
+			has_or_had_tag = AGA
+			has_or_had_tag = PDR
+			has_or_had_tag = XFW
+			has_or_had_tag = VNG
+			has_or_had_tag = SMT
+			has_or_had_tag = HRK
+			has_or_had_tag = XFX
+			has_or_had_tag = XFY
+			has_or_had_tag = DDV
+			has_or_had_tag = KJH
+			has_or_had_tag = UBR
+			has_or_had_tag = SDY
+			has_or_had_tag = MYL
+			has_or_had_tag = SKM
+			has_or_had_tag = IMV
+			has_or_had_tag = XCN
+			has_or_had_tag = LBR
+			has_or_had_tag = RKU
+			has_or_had_tag = SRS
+			has_or_had_tag = XGN
+			has_or_had_tag = XGO
+			has_or_had_tag = XGP
+			has_or_had_tag = ABN
+			has_or_had_tag = XGQ
+			has_or_had_tag = XGR
+			has_or_had_tag = XDN
+			has_or_had_tag = ATY
+			has_or_had_tag = XGD
+			has_or_had_tag = VDS
+			has_or_had_tag = CED
+			has_or_had_tag = NVM
+			has_or_had_tag = XGE
+			has_or_had_tag = DKS
+			has_or_had_tag = BSR
+			has_or_had_tag = MLD
+		}
+	}
+	gfx_tags = { medium_tag heavy_tag }
+	# P8.4;P14;CAH-XI; A conservative spear-and-shield company adapter for peninsular and inland service without asserting one Deccan-wide military institution.
+}
+
+antq_nile_bow_company = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
+	initiative = 0.16
+	movement_speed = 0.06
+	combat = { desert = 0.05 river = 0.06 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAG
+			has_or_had_tag = XBE
+			has_or_had_tag = AKS
+			has_or_had_tag = XBF
+			has_or_had_tag = XBG
+			has_or_had_tag = XBH
+			has_or_had_tag = DJN
+			has_or_had_tag = WAF
+			has_or_had_tag = ZMP
+			has_or_had_tag = KPC
+			has_or_had_tag = GTC
+			has_or_had_tag = NSK
+			has_or_had_tag = OUE
+			has_or_had_tag = VIC
+			has_or_had_tag = BSW
+			has_or_had_tag = XDE
+			has_or_had_tag = URW
+			has_or_had_tag = KWL
+			has_or_had_tag = RUV
+			has_or_had_tag = LMP
+			has_or_had_tag = ZHF
+			has_or_had_tag = WDP
+			has_or_had_tag = XFR
+			has_or_had_tag = XDF
+			has_or_had_tag = XFN
+			has_or_had_tag = MLA
+			has_or_had_tag = XFO
+			has_or_had_tag = XFP
+			has_or_had_tag = ARO
+			has_or_had_tag = OPO
+			has_or_had_tag = XFQ
+			has_or_had_tag = AZA
+			has_or_had_tag = XDR
+			has_or_had_tag = XFM
+			has_or_had_tag = NOK
+			has_or_had_tag = LCH
+			has_or_had_tag = XEJ
+			has_or_had_tag = WGD
+			has_or_had_tag = XEK
+			has_or_had_tag = XEL
+			has_or_had_tag = AKF
+			has_or_had_tag = XEM
+			has_or_had_tag = XEN
+			has_or_had_tag = MUP
+			has_or_had_tag = XEO
+		}
+	}
+	gfx_tags = { archer_tag light_tag }
+	# P8.5;P14;CAH-XI; A Nile-anchored bow-service company broadly available through African recruitment networks without flattening distinct regional traditions.
+}
+
+antq_sahel_javelin_company = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
+	initiative = 0.18
+	movement_speed = 0.08
+	combat = { grasslands = 0.08 desert = 0.04 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAG
+			has_or_had_tag = XBE
+			has_or_had_tag = AKS
+			has_or_had_tag = XBF
+			has_or_had_tag = XBG
+			has_or_had_tag = XBH
+			has_or_had_tag = DJN
+			has_or_had_tag = WAF
+			has_or_had_tag = ZMP
+			has_or_had_tag = KPC
+			has_or_had_tag = GTC
+			has_or_had_tag = NSK
+			has_or_had_tag = OUE
+			has_or_had_tag = VIC
+			has_or_had_tag = BSW
+			has_or_had_tag = XDE
+			has_or_had_tag = URW
+			has_or_had_tag = KWL
+			has_or_had_tag = RUV
+			has_or_had_tag = LMP
+			has_or_had_tag = ZHF
+			has_or_had_tag = WDP
+			has_or_had_tag = XFR
+			has_or_had_tag = XDF
+			has_or_had_tag = XFN
+			has_or_had_tag = MLA
+			has_or_had_tag = XFO
+			has_or_had_tag = XFP
+			has_or_had_tag = ARO
+			has_or_had_tag = OPO
+			has_or_had_tag = XFQ
+			has_or_had_tag = AZA
+			has_or_had_tag = XDR
+			has_or_had_tag = XFM
+			has_or_had_tag = NOK
+			has_or_had_tag = LCH
+			has_or_had_tag = XEJ
+			has_or_had_tag = WGD
+			has_or_had_tag = XEK
+			has_or_had_tag = XEL
+			has_or_had_tag = AKF
+			has_or_had_tag = XEM
+			has_or_had_tag = XEN
+			has_or_had_tag = MUP
+			has_or_had_tag = XEO
+		}
+	}
+	gfx_tags = { archer_tag light_tag }
+	# P8.5;P14;CAH-XI; A mobile javelin-and-hide-shield gameplay role for savanna service without projecting a single ethnicity polity or later military system.
+}
+
+antq_mesoamerican_atlatl_company = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
+	initiative = 0.18
+	morale_damage_done = 0.03
+	combat = { jungle = 0.06 hills = 0.04 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XCQ
+			has_or_had_tag = XCR
+			has_or_had_tag = XCS
+			has_or_had_tag = XCU
+			has_or_had_tag = XCV
+			has_or_had_tag = XGU
+			has_or_had_tag = TJC
+			has_or_had_tag = SJB
+			has_or_had_tag = XGV
+			has_or_had_tag = BJC
+			has_or_had_tag = PHC
+			has_or_had_tag = MBC
+			has_or_had_tag = TVC
+			has_or_had_tag = MZC
+			has_or_had_tag = JZH
+			has_or_had_tag = XGW
+			has_or_had_tag = XCY
+			has_or_had_tag = XCZ
+			has_or_had_tag = DOR
+			has_or_had_tag = PPA
+			has_or_had_tag = MHP
+			has_or_had_tag = FLP
+			has_or_had_tag = HVI
+			has_or_had_tag = XHH
+			has_or_had_tag = CMW
+			has_or_had_tag = XHI
+			has_or_had_tag = KCP
+			has_or_had_tag = SLC
+			has_or_had_tag = PTF
+			has_or_had_tag = MRF
+			has_or_had_tag = NHC
+			has_or_had_tag = XGS
+			has_or_had_tag = XGT
+			has_or_had_tag = GPC
+			has_or_had_tag = ONH
+			has_or_had_tag = IZA
+			has_or_had_tag = CPH
+			has_or_had_tag = VCS
+			has_or_had_tag = VIR
+			has_or_had_tag = NAZ
+			has_or_had_tag = XCW
+			has_or_had_tag = XDI
+			has_or_had_tag = XDL
+			has_or_had_tag = REC
+			has_or_had_tag = XHJ
+			has_or_had_tag = XHK
+			has_or_had_tag = TIW
+			has_or_had_tag = WNK
+			has_or_had_tag = XHL
+			has_or_had_tag = UTC
+			has_or_had_tag = YUN
+			has_or_had_tag = MYB
+			has_or_had_tag = XHM
+			has_or_had_tag = SNE
+			has_or_had_tag = LRC
+			has_or_had_tag = OLC
+			has_or_had_tag = WIC
+			has_or_had_tag = CCF
+			has_or_had_tag = ACU
+		}
+	}
+	gfx_tags = { archer_tag light_tag }
+	# P8.10;P14; A Late Formative spear-thrower company adapter without backdating Aztec imperial regalia organization or metal weapons.
+}
+
+antq_andean_sling_company = {
+	is_special = yes
+	copy_from = a_age_1_traditions_light_infantry
+	hide = no
+	buildable = no
+	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	age = age_1_traditions
+	construction_demand = antq_light_infantry_construction
+	maintenance_demand = antq_light_infantry_maintenance
+	initiative = 0.16
+	movement_speed = 0.06
+	combat = { mountains = 0.08 hills = 0.06 }
+	country_potential = {
+		OR = {
+			has_or_had_tag = XCQ
+			has_or_had_tag = XCR
+			has_or_had_tag = XCS
+			has_or_had_tag = XCU
+			has_or_had_tag = XCV
+			has_or_had_tag = XGU
+			has_or_had_tag = TJC
+			has_or_had_tag = SJB
+			has_or_had_tag = XGV
+			has_or_had_tag = BJC
+			has_or_had_tag = PHC
+			has_or_had_tag = MBC
+			has_or_had_tag = TVC
+			has_or_had_tag = MZC
+			has_or_had_tag = JZH
+			has_or_had_tag = XGW
+			has_or_had_tag = XCY
+			has_or_had_tag = XCZ
+			has_or_had_tag = DOR
+			has_or_had_tag = PPA
+			has_or_had_tag = MHP
+			has_or_had_tag = FLP
+			has_or_had_tag = HVI
+			has_or_had_tag = XHH
+			has_or_had_tag = CMW
+			has_or_had_tag = XHI
+			has_or_had_tag = KCP
+			has_or_had_tag = SLC
+			has_or_had_tag = PTF
+			has_or_had_tag = MRF
+			has_or_had_tag = NHC
+			has_or_had_tag = XGS
+			has_or_had_tag = XGT
+			has_or_had_tag = GPC
+			has_or_had_tag = ONH
+			has_or_had_tag = IZA
+			has_or_had_tag = CPH
+			has_or_had_tag = VCS
+			has_or_had_tag = VIR
+			has_or_had_tag = NAZ
+			has_or_had_tag = XCW
+			has_or_had_tag = XDI
+			has_or_had_tag = XDL
+			has_or_had_tag = REC
+			has_or_had_tag = XHJ
+			has_or_had_tag = XHK
+			has_or_had_tag = TIW
+			has_or_had_tag = WNK
+			has_or_had_tag = XHL
+			has_or_had_tag = UTC
+			has_or_had_tag = YUN
+			has_or_had_tag = MYB
+			has_or_had_tag = XHM
+			has_or_had_tag = SNE
+			has_or_had_tag = LRC
+			has_or_had_tag = OLC
+			has_or_had_tag = WIC
+			has_or_had_tag = CCF
+			has_or_had_tag = ACU
+		}
+	}
+	gfx_tags = { archer_tag light_tag }
+	# P8.10;P14; An Andean highland sling-service adapter without projecting later Inca state uniforms ranks or imperial recruitment systems.
 }

@@ -92,6 +92,26 @@ SHEETS = (
         "antq_gothic_migrant_host", "antq_alamannic_confederate_host",
         "antq_frankish_rhine_warband", "antq_saxon_coastal_warband",
     )),
+    Sheet("unit_sheet_17_arsacid_watercraft.png", (
+        "antq_mesopotamian_river_patrol", "antq_persian_gulf_patrol_craft",
+        "antq_mesopotamian_river_transport", "antq_caspian_oared_boat",
+    )),
+    Sheet("unit_sheet_18_universal_ancient_floor.png", (
+        "antq_spear_and_shield_infantry", "antq_javelin_skirmishers",
+        "antq_bow_infantry", "antq_household_retainers",
+    )),
+    Sheet("unit_sheet_19_levy_mercenary_floor.png", (
+        "antq_district_spear_muster", "antq_seasonal_skirmishers",
+        "antq_frontier_spear_company", "antq_caravan_guard_company",
+    )),
+    Sheet("unit_sheet_20_han_indian_companies.png", (
+        "antq_han_frontier_crossbow_company", "antq_yellow_river_escort_company",
+        "antq_indian_longbow_company", "antq_deccan_spear_company",
+    )),
+    Sheet("unit_sheet_21_african_american_companies.png", (
+        "antq_nile_bow_company", "antq_sahel_javelin_company",
+        "antq_mesoamerican_atlatl_company", "antq_andean_sling_company",
+    )),
 )
 
 CATEGORY_SUFFIXES = (
@@ -298,8 +318,8 @@ def validate() -> bool:
             failures.append("M7 art roster differs from active unit-quarantine definitions")
         if set(index) != active:
             failures.append("four-up unit-art mapping does not exactly cover active ancient units")
-        if len(SHEETS) != 16 or sum(len(sheet.keys) for sheet in SHEETS) != 64:
-            failures.append("unit-art source contract is not 16 sheets / 64 icons")
+        if len(SHEETS) != 21 or sum(len(sheet.keys) for sheet in SHEETS) != 84:
+            failures.append("unit-art source contract is not 21 sheets / 84 icons")
         for sheet in SHEETS:
             path = SOURCE_DIR / sheet.filename
             if not path.is_file():

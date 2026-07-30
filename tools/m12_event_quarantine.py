@@ -165,6 +165,13 @@ def render(relative: str) -> bytes:
         text, count = DAMAGE_REGIMENT.subn("", text)
         if count != 1:
             raise ValueError(f"{relative}: expected one obsolete damage_regiment effect, found {count}")
+        text, count = re.subn(
+            r"levy_setup:levy_a_late_longbowmen",
+            "levy_setup:antq_levy_district_spear_muster",
+            text,
+        )
+        if count != 1:
+            raise ValueError(f"{relative}: expected one obsolete levy debug link, found {count}")
     lines = text.splitlines(keepends=True)
     rendered: list[str] = []
     depth = 0

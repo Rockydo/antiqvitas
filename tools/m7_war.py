@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import io
 import json
 import re
 from dataclasses import dataclass
@@ -25,7 +26,9 @@ UNITS = DATA / "units.csv"
 ARMIES = DATA / "armies.csv"
 FORTS = DATA / "forts.csv"
 DIVERSITY_REPORT = DATA / "DIVERSITY_AUDIT.md"
+AVAILABILITY_REPORT = DATA / "start_force_availability.csv"
 UNIT_OUTPUT = ROOT / "in_game/common/unit_types/00_antiquitas_m7_units.txt"
+LEVY_OUTPUT = ROOT / "in_game/common/levies"
 ADVANCE_OUTPUT = ROOT / "in_game/common/advances"
 M8_TREE = ADVANCE_OUTPUT / "00_antiquitas_m8_tree.txt"
 LOC_ROOT = ROOT / "main_menu/localization"
@@ -40,6 +43,14 @@ TOKEN = re.compile(r"^[a-z][a-z0-9_]*$")
 IDENTIFIER = re.compile(r"^[A-Za-z][A-Za-z0-9_]*$")
 NUMBER = re.compile(r"^-?(?:\d+(?:\.\d+)?|\.\d+)$")
 UNLOCK = re.compile(r"^\s*unlock_(?:unit|levy)\s*=", re.IGNORECASE | re.MULTILINE)
+UNIVERSAL_TAG = "ALL"
+MERCENARY_POP_MULTIPLIER = "0.05"
+LEVY_FILENAMES = (
+    "00_revolutions_levies.txt", "01_absolutism_levies.txt",
+    "02_reformation_levies.txt", "03_discovery_levies.txt",
+    "04_renaissance_levies.txt", "05_traditions_levies.txt",
+    "06_tribal_levies.txt", "10_traditions_levies_navy.txt",
+)
 LAND_BASES = frozenset((
     "a_age_1_traditions_light_infantry", "a_age_1_traditions_heavy_infantry",
     "a_age_1_traditions_light_cavalry", "a_age_1_traditions_heavy_cavalry",
@@ -97,12 +108,22 @@ REQUIRED_MERCENARIES = {
     "antq_saka_horse", "antq_galatian_swordsmen", "antq_thracian_peltasts",
     "antq_numidian_horse_company", "antq_syrian_archers", "antq_iberian_swordsmen",
     "antq_dacian_falxmen", "antq_armenian_horse", "antq_cilician_marines",
+    "antq_frontier_spear_company", "antq_caravan_guard_company",
+    "antq_han_frontier_crossbow_company", "antq_yellow_river_escort_company",
+    "antq_indian_longbow_company", "antq_deccan_spear_company",
+    "antq_nile_bow_company", "antq_sahel_javelin_company",
+    "antq_mesoamerican_atlatl_company", "antq_andean_sling_company",
 }
 MERCENARY_PROFILES = {
     "foot skirmishers": {"antq_balearic_slingers", "antq_cretan_archers", "antq_syrian_archers", "antq_thracian_peltasts", "antq_cilician_marines"},
     "heavy foot": {"antq_germanic_bodyguards", "antq_galatian_swordsmen", "antq_iberian_swordsmen", "antq_dacian_falxmen"},
     "mounted companies": {"antq_saka_horse", "antq_numidian_horse_company", "antq_armenian_horse"},
+    "Han companies": {"antq_han_frontier_crossbow_company", "antq_yellow_river_escort_company"},
+    "Indian companies": {"antq_indian_longbow_company", "antq_deccan_spear_company"},
+    "African companies": {"antq_nile_bow_company", "antq_sahel_javelin_company"},
+    "American companies": {"antq_mesoamerican_atlatl_company", "antq_andean_sling_company"},
 }
+REGIONAL_MERCENARY_PROOFS = ("ROM", "PAR", "SUE", "HAN", "SAT", "KUS", "TEO")
 
 
 @dataclass(frozen=True)
@@ -163,6 +184,10 @@ def locations() -> set[str]:
     return set(json.loads((ROOT / "docs/vanilla_symbols/locations.json").read_text(encoding="utf-8-sig")))
 
 
+def available_to(unit: Unit, tag: str) -> bool:
+    return UNIVERSAL_TAG in unit.tags or tag in unit.tags
+
+
 def load_units() -> tuple[Unit, ...]:
     mapped_tags = tag_map()
     seen: set[str] = set()
@@ -189,9 +214,11 @@ def load_units() -> tuple[Unit, ...]:
             if row["copy_from"] not in base_set:
                 raise ValueError(f"{key} uses an invalid {row['kind']} base {row['copy_from']}")
             tags = tokens(row["tags"], f"{key} tags")
-            if not tags or any(tag not in mapped_tags for tag in tags):
-                unknown = sorted(set(tags) - set(mapped_tags))
+            if not tags or any(tag not in mapped_tags and tag != UNIVERSAL_TAG for tag in tags):
+                unknown = sorted(set(tags) - set(mapped_tags) - {UNIVERSAL_TAG})
                 raise ValueError(f"{key} has missing or unknown roster tags {unknown}")
+            if UNIVERSAL_TAG in tags and len(tags) != 1:
+                raise ValueError(f"{key} must use ALL alone")
             gfx_tags = tokens(row["gfx_tags"], f"{key} gfx_tags")
             modifiers = assignments(row["modifiers"], f"{key} modifiers", STAT_KEYS)
             combat = assignments(row["combat"], f"{key} combat", TERRAIN)
@@ -214,7 +241,7 @@ def load_units() -> tuple[Unit, ...]:
     if not required_land <= land or not required_navy <= navy:
         raise ValueError("units.csv is missing a plan-required M7 roster entry")
     for tag, expected in CORE_LAND.items():
-        available = {unit.key for unit in units if unit.kind == "land" and tag in unit.tags}
+        available = {unit.key for unit in units if unit.kind == "land" and available_to(unit, tag)}
         if not expected <= available:
             raise ValueError(f"M7 core diversity audit is missing {sorted(expected - available)} for {tag}")
     mercenaries = {unit.key for unit in units if unit.status == "mercenary"}
@@ -222,6 +249,17 @@ def load_units() -> tuple[Unit, ...]:
         raise ValueError("M7 mercenary audit is missing a reviewed company role")
     if any(not profile <= mercenaries for profile in MERCENARY_PROFILES.values()):
         raise ValueError("M7 mercenary audit is missing a reviewed tactical profile")
+    for tag in REGIONAL_MERCENARY_PROOFS:
+        visible = [
+            unit for unit in units
+            if unit.status == "mercenary" and available_to(unit, tag)
+        ]
+        regional = [unit for unit in visible if UNIVERSAL_TAG not in unit.tags]
+        if len(visible) < 3 or not regional:
+            raise ValueError(
+                f"M7 regional mercenary proof failed for {tag}: "
+                f"visible={len(visible)}, regional={len(regional)}"
+            )
     if any(unit.kind == "navy" and dict(unit.modifiers).get("cannons") for unit in units):
         raise ValueError("M7 navy data must never define cannons")
     return tuple(units)
@@ -248,7 +286,7 @@ def validate_start_ledgers(units: tuple[Unit, ...]) -> None:
                 raise ValueError(f"unknown M7 unit {row['unit_type']}")
             if (row["kind"] == "army") != (unit.kind == "land"):
                 raise ValueError("manager kind does not match unit kind")
-            if row["country"] not in unit.tags:
+            if not available_to(unit, row["country"]):
                 raise ValueError("starting country is outside the unit's bounded availability")
             strength = float(row["strength"])
             if not 0.05 <= strength <= 1.0:
@@ -323,7 +361,11 @@ def unit_script(units: tuple[Unit, ...]) -> str:
         elif unit.status == "levy":
             lines.extend(("\tbuildable = no", "\tlevy = yes"))
         else:
-            lines.extend(("\tbuildable = no", "\tmercenaries_per_location = { pop_type = peasants multiply = 0.01 }"))
+            lines.extend((
+                "\tbuildable = no",
+                f"\tmercenaries_per_location = {{ pop_type = peasants multiply = {MERCENARY_POP_MULTIPLIER} }}",
+                f"\tmercenaries_per_location = {{ pop_type = tribesmen multiply = {MERCENARY_POP_MULTIPLIER} }}",
+            ))
         lines.append(f"\tage = {unit.age}")
         lines.append(f"\tconstruction_demand = antq_{package}_construction")
         lines.append(f"\tmaintenance_demand = antq_{package}_maintenance")
@@ -332,9 +374,13 @@ def unit_script(units: tuple[Unit, ...]) -> str:
         lines.extend(f"\t{key} = {value}" for key, value in unit.modifiers)
         if unit.combat:
             lines.append("\tcombat = { " + " ".join(f"{key} = {value}" for key, value in unit.combat) + " }")
-        lines.extend(("\tcountry_potential = {", "\t\tOR = {"))
-        lines.extend(f"\t\t\thas_or_had_tag = {tags[tag]}" for tag in unit.tags)
-        lines.append("\t\t}")
+        lines.append("\tcountry_potential = {")
+        if UNIVERSAL_TAG in unit.tags:
+            lines.append("\t\talways = yes")
+        else:
+            lines.append("\t\tOR = {")
+            lines.extend(f"\t\t\thas_or_had_tag = {tags[tag]}" for tag in unit.tags)
+            lines.append("\t\t}")
         if unit.start_date is not None:
             lines.append(f"\t\tcurrent_date >= {unit.start_date.engine()}")
         lines.append("\t}")
@@ -394,6 +440,78 @@ def diversity_report(units: tuple[Unit, ...]) -> str:
     return "\n".join(lines)
 
 
+def force_availability(units: tuple[Unit, ...]) -> str:
+    with (ROOT / "docs/world_1ad/polities.csv").open(encoding="utf-8-sig", newline="") as handle:
+        roster = list(csv.DictReader(handle))
+    fields = (
+        "tag", "name", "region", "regular_land", "levy_land",
+        "mercenary_land", "regular_navy", "land_floor", "levy_floor",
+        "mercenary_floor",
+    )
+    output = io.StringIO(newline="")
+    writer = csv.DictWriter(output, fieldnames=fields, lineterminator="\n")
+    writer.writeheader()
+    failures: list[str] = []
+    for row in roster:
+        tag = row["tag"]
+        visible = [unit for unit in units if unit.age == "age_1_traditions" and available_to(unit, tag)]
+        regular = sorted(unit.key for unit in visible if unit.kind == "land" and unit.status == "regular")
+        levy = sorted(unit.key for unit in visible if unit.kind == "land" and unit.status == "levy")
+        mercenary = sorted(unit.key for unit in visible if unit.kind == "land" and unit.status == "mercenary")
+        navy = sorted(unit.key for unit in visible if unit.kind == "navy" and unit.status == "regular")
+        floors = (len(regular) >= 4, len(levy) >= 2, len(mercenary) >= 2)
+        if not all(floors):
+            failures.append(
+                f"{tag} has regular={len(regular)}, levy={len(levy)}, mercenary={len(mercenary)}"
+            )
+        writer.writerow({
+            "tag": tag,
+            "name": row["name"],
+            "region": row["region"],
+            "regular_land": ";".join(regular),
+            "levy_land": ";".join(levy),
+            "mercenary_land": ";".join(mercenary),
+            "regular_navy": ";".join(navy),
+            "land_floor": "pass" if floors[0] else "fail",
+            "levy_floor": "pass" if floors[1] else "fail",
+            "mercenary_floor": "pass" if floors[2] else "fail",
+        })
+    if failures:
+        raise ValueError("roster-wide force floor failed: " + "; ".join(failures[:12]))
+    return output.getvalue()
+
+
+def levy_outputs() -> dict[Path, str]:
+    active = "\n".join((
+        "# Generated by tools/m7_war.py --write; complete ancient levy registry.",
+        "# Scope is POP. Exact-name mirrors suppress every installed medieval levy.",
+        "",
+        "antq_levy_district_spear_muster = {",
+        "\tsize = levy_generic_infantry_size",
+        "\tallowed_pop_type = nobles",
+        "\tallowed_pop_type = soldiers",
+        "\tunit = antq_district_spear_muster",
+        "}",
+        "",
+        "antq_levy_seasonal_skirmishers = {",
+        "\tsize = levy_generic_infantry_size",
+        "\tallowed_pop_type = peasants",
+        "\tallowed_pop_type = laborers",
+        "\tallowed_pop_type = tribesmen",
+        "\tunit = antq_seasonal_skirmishers",
+        "}",
+        "",
+    ))
+    disabled = (
+        "# Generated by tools/m7_war.py --write; installed levy registry quarantined.\n"
+        "# ANTIQVITAS defines the complete active ancient registry in 05_traditions_levies.txt.\n"
+    )
+    return {
+        LEVY_OUTPUT / filename: active if filename == "05_traditions_levies.txt" else disabled
+        for filename in LEVY_FILENAMES
+    }
+
+
 def advance_overrides() -> dict[Path, str]:
     # M8 owns the complete exact-name advance replacement.  Retaining this
     # interim M7 layer after it is active would overwrite M8's clean blanks.
@@ -423,7 +541,13 @@ def advance_overrides() -> dict[Path, str]:
 
 
 def outputs(units: tuple[Unit, ...]) -> dict[Path, str]:
-    rendered = {UNIT_OUTPUT: unit_script(units), DIVERSITY_REPORT: diversity_report(units), **advance_overrides()}
+    rendered = {
+        UNIT_OUTPUT: unit_script(units),
+        DIVERSITY_REPORT: diversity_report(units),
+        AVAILABILITY_REPORT: force_availability(units),
+        **levy_outputs(),
+        **advance_overrides(),
+    }
     for language in ("english", *M2_MIRROR_LANGUAGES):
         rendered[LOC_ROOT / language / f"antq_m7_war_l_{language}.yml"] = localization(units, language)
     return rendered
@@ -444,8 +568,20 @@ def check(units: tuple[Unit, ...]) -> bool:
             failures.append(f"missing {path.relative_to(ROOT)}")
         elif path.read_text(encoding="utf-8-sig") != content:
             failures.append(f"stale {path.relative_to(ROOT)}")
-        elif path != UNIT_OUTPUT and UNLOCK.search(path.read_text(encoding="utf-8-sig")):
+        elif path not in {UNIT_OUTPUT, LEVY_OUTPUT / "05_traditions_levies.txt"} and UNLOCK.search(path.read_text(encoding="utf-8-sig")):
             failures.append(f"unit unlock survived in {path.relative_to(ROOT)}")
+    levy_union = "\n".join(
+        path.read_text(encoding="utf-8-sig")
+        for path in sorted(LEVY_OUTPUT.glob("*.txt"))
+        if path.is_file()
+    )
+    forbidden_levy_units = {
+        "a_mailed_knights", "a_feudal_levy", "a_crusader_knights_levy",
+        "a_tribal_cavalry", "a_tribesmen", "n_fishing_boat", "n_birlinn",
+    }
+    for key in sorted(forbidden_levy_units):
+        if re.search(rf"\b{re.escape(key)}\b", levy_union):
+            failures.append(f"vanilla levy unit survived: {key}")
     if failures:
         print("m7_war: FAIL")
         print("\n".join(f"  - {failure}" for failure in failures))

@@ -127,15 +127,31 @@ def main() -> int:
                 failures.append(f"wrong or missing Age-I alternative: {reform}")
             token = f"unlock_government_reform={reform}"
             matches = [row for row in advances if token in row["unlocks"].split(";")]
-            if len(matches) != 1 or matches[0]["age"] != "age_1_traditions":
-                failures.append(f"alternative unlock is not unique and Age-I: {reform}")
+            profiles = [row["eligibility"] for row in matches]
+            if (
+                not matches
+                or any(row["age"] != "age_1_traditions" for row in matches)
+                or len(profiles) != len(set(profiles))
+                or "Practices transferable" in " ".join(profiles)
+            ):
+                failures.append(
+                    f"alternative unlock is not profile-distinct and Age-I: {reform}"
+                )
 
         base_token = f"unlock_government_reform={contract['base']}"
         base_matches = [
             row for row in advances if base_token in row["unlocks"].split(";")
         ]
-        if len(base_matches) != 1 or base_matches[0]["age"] != "age_1_traditions":
-            failures.append(f"opening reform is not uniquely researchable: {contract['base']}")
+        base_profiles = [row["eligibility"] for row in base_matches]
+        if (
+            not base_matches
+            or any(row["age"] != "age_1_traditions" for row in base_matches)
+            or len(base_profiles) != len(set(base_profiles))
+            or "Practices transferable" in " ".join(base_profiles)
+        ):
+            failures.append(
+                f"opening reform is not profile-distinct and Age-I: {contract['base']}"
+            )
 
         government = governments.get(contract["tag"], {})
         if (

@@ -21,10 +21,10 @@ from m11_ui_asset_ledger import building_master
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / "docs/m5/building_icon_audit.csv"
 CONTACT = ROOT / "docs/m5/BUILDING_ICON_CIRCLE_AUDIT.png"
-EXPECTED_TOTAL = 288
+EXPECTED_TOTAL = 312
 # Raise this after each reviewed re-art batch. It prevents regressions while the
 # open P3 task advances toward the final 265/265 gate.
-MIN_STYLE_PASS = 288
+MIN_STYLE_PASS = 312
 NAVY = (16, 25, 43, 255)
 
 
@@ -59,6 +59,16 @@ def items() -> list[Item]:
     families, _seeds = m5_regional_buildings.load()
     for row in families:
         result.append(Item("regional_family", row["key"], row["name"], building_master(row["key"])))
+    with (ROOT / "docs/m5/cultivator_buildings.csv").open(encoding="utf-8-sig", newline="") as handle:
+        for row in csv.DictReader(handle):
+            result.append(
+                Item(
+                    "cultivator",
+                    row["key"],
+                    row["name"],
+                    ROOT / "assets_queue/generated/cultivator_buildings" / f"{row['key']}.png",
+                )
+            )
     return result
 
 

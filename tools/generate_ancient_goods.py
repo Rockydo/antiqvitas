@@ -104,6 +104,10 @@ ANCIENT_LOCALIZATION_REPLACEMENTS = {
         "Wheat represents staple cereals feeding people and animals; failed "
         "harvests threaten urban supply, prices, and public order."
     ),
+    "steel_desc": (
+        "Steel represents deliberately carburized, quenched, and refined iron "
+        "used for edged tools, armor fittings, springs, and high-quality weapons in ancient workshops."
+    ),
     "potato_desc": (
         "Potatoes represent Andean tubers cultivated around the Lake Titicaca "
         "basin and neighboring highlands within their native American range."
