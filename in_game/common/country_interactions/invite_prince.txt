@@ -6,7 +6,6 @@ invite_prince =  {
 	category = CATEGORY_INFLUENCE_ACTIONS
 
 	potential = {
-		always = no # ANTIQVITAS mounted-system quarantine
 		scope:actor = {
 			OR = {
 				succession_law = heir_selection:veche_selection

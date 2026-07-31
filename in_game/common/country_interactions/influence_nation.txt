@@ -6,7 +6,6 @@ influence_nation =  {
 	category = CATEGORY_INFLUENCE_ACTIONS
 
 	potential = {
-		always = no # ANTIQVITAS mounted-system quarantine
 		scope:actor = {
 			modifier:allow_diplomacy_influence_nation = yes
 		}

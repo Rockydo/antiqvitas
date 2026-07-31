@@ -18,7 +18,6 @@ RELATIVES = (
     "in_game/common/bureaucracies/generic.txt",
     "in_game/common/customizable_localization/character_title.txt",
     "in_game/common/disasters/revolution_disaster.txt",
-    "in_game/common/generic_actions/D008_fate_of_the_phoenix_actions.txt",
     "in_game/common/movements/calvinism_movement.txt",
     "in_game/common/movements/lutheranism_movement.txt",
     "in_game/common/religious_focuses/nahuatl.txt",
@@ -34,13 +33,6 @@ EMPTY_RELATIVES = frozenset((
     "in_game/common/scripted_effects/___test_effects.txt",
     "in_game/common/tests/age_of_discovery_tests.txt",
 ))
-DEAD_VARIABLE_LINES = {
-    "in_game/common/generic_actions/D008_fate_of_the_phoenix_actions.txt": re.compile(
-        r"^[ \t]*set_variable\s*=\s*grant_latin_merchants_privileges_variable"
-        r"[ \t]*(?:#.*)?\r?\n?",
-        re.MULTILINE,
-    ),
-}
 NAHUATL_GUARD = re.compile(
     r"(?P<indent>\s*)limit\s*=\s*\{\s*"
     r"NOT\s*=\s*\{\s*"
@@ -75,12 +67,6 @@ def render(relative: str) -> bytes:
     if relative in EMPTY_RELATIVES:
         label = "test content"
         text = f"# ANTIQVITAS disables installed {label}; no post-antique institution references.\n"
-    elif relative in DEAD_VARIABLE_LINES:
-        text = raw.decode("utf-8-sig")
-        text, count = DEAD_VARIABLE_LINES[relative].subn("", text)
-        if count != 1:
-            raise ValueError(f"{relative}: expected one orphaned institution variable setter, found {count}")
-        text = DATE.sub(sanitize_date, text)
     else:
         text = raw.decode("utf-8-sig")
         if not legacy_references(text):

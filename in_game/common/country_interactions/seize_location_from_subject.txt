@@ -8,7 +8,6 @@ seize_location_from_subject = {
 	ai_tick = never
 
 	potential = {
-		always = no # ANTIQVITAS mounted-system quarantine
 		scope:actor = { country_type = location }
 	}
 

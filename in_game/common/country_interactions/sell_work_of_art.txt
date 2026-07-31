@@ -32,7 +32,6 @@ sell_work_of_art = {
 	payee = scope:actor
 
 	potential = {
-		always = no # ANTIQVITAS mounted-system quarantine
 		scope:actor = {
 			has_sellable_art = yes
 		}

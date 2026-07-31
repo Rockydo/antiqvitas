@@ -79,6 +79,10 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 - [ ] Rework Germania and Iberia vegetation from sourced regional rules.
   Germania must not retain implausible central grassland expanses; Iberia must
   preserve open cereal zones while restoring ancient woodland mosaics.
+  Static complete: 631 sourced terrain changes leave the central German core
+  at 113 grasslands and 302 woodland locations, north/south Germania at
+  57.5%/67.5% woodland, and Iberia at 53.1% woodland with 31.8% open
+  cultivation and 76 open crop-bearing fields. Runtime map proof remains.
 
 ### S3-P3 - Knowledge, politics, diplomacy, names, and text
 
@@ -98,6 +102,10 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   subjects, CBs, war goals, peace terms, and objectives. Disable
   anachronisms, localize every visible action and description, and add
   profile-appropriate ancient diplomacy where coverage is thin.
+  Static complete: all 907 mounted definitions are classified; 620 inherited
+  definitions are false-gated, 185 reviewed definitions remain visible, and
+  13 retained interactions have ancient labels/descriptions in all 11 clients.
+  Runtime Rome/Parthia/Suebi panel proof remains.
 - [ ] Replace generic polity labels such as "Community" and "Group" with short
   attested names. Uncertainty belongs in descriptions, not player-facing names.
   All 120 suffixes are removed across the roster and generated mirrors; 463

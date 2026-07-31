@@ -4382,3 +4382,10 @@ Meet the per-tag age floor with neutral logistics, craft, exchange, health, and
 settlement practices. Give these nodes modest direct effects but no foreign
 profile content unlocks; identity-specific laws, buildings, privileges, and
 units remain isolated.
+
+## 2026-07-31 - Mounted diplomacy is default-deny
+
+Classify the complete installed base+DLC union. Expose only namespaced ancient
+content and an explicit allowlist of portable mechanics; false-gate all other
+interactions, actions, CBs, treaties, subjects, and objectives. Keep wargoals
+and hardcoded/event CBs resolvable only as backend contracts.

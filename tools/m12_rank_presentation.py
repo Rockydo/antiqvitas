@@ -10,6 +10,7 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 
+from s3_diplomacy_text import ANCIENT_TEXT
 
 ROOT = Path(__file__).resolve().parents[1]
 PATHS = ROOT / "config/local_paths.json"
@@ -388,9 +389,14 @@ def render_interaction_localization(client: str) -> str:
     output = [f"l_{client}:"]
     for line in lines[1:]:
         match = LOC_LINE.match(line)
-        if match and match.group("key") == "county_privileges":
+        key = match.group("key") if match else ""
+        ancient_key = key.removesuffix("_desc")
+        if ancient_key in ANCIENT_TEXT:
+            index = 1 if key.endswith("_desc") else 0
+            output.append(f' {key}: "{ANCIENT_TEXT[ancient_key][index]}"')
+        elif key == "county_privileges":
             output.append(' county_privileges: "Local-Polity Privileges"')
-        elif match and match.group("key") == "elevate_county":
+        elif key == "elevate_county":
             output.append(' elevate_county: "Elevate Local Polity"')
         else:
             # These exact mirrors retain inactive engine keys but must never

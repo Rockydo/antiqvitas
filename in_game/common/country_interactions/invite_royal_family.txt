@@ -5,7 +5,6 @@ invite_royal_family = {
 	type = union
 	category = CATEGORY_UNION_ACTIONS
 	potential = {
-		always = no # ANTIQVITAS mounted-system quarantine
 		scope:actor = {
             is_member_of_international_organization_of_type = { type = union }
             union ?= {

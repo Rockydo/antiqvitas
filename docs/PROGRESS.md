@@ -8145,3 +8145,14 @@ reviewed 128px BC7 DDS.
   proof remains open; no multiplier change is justified yet.
 - Final validation passes 151/151. Two smoke attempts were deferred by the
   shared `endore` EU5 lease; this game-visible batch remains uncommitted.
+
+## 2026-07-31 - Rebuilt ancient landscapes and diplomatic exposure
+
+- Replaced RGO-only vegetation inference with sourced area/region rules:
+  631 changes restore German woodland and Iberian woodland/open-field mosaics.
+- Classified all 907 mounted diplomacy definitions. False-gated 620 inherited
+  entries and ancientized 13 retained interactions in all 11 clients.
+- Generated exact mirrors for 508 installed files and 2,136 guarded roots.
+- Full validation passes 154/154. Paired vanilla/mod smoke reaches both
+  rendered menus with zero new or mod-unique error-log lines; tree fingerprint
+  `26538f756145d4fad39bf2365cf12b05030b98bb43e231af9b560e4d6f784380`.

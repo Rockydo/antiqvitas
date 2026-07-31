@@ -128,6 +128,7 @@ VALIDATE_COMMANDS = (
     Command("tools/m8_institution_expansion_art.py", ("--check",)),
     Command("tools/m8_legacy_institution_purge.py", ("--check",)),
     Command("tools/m9_diplomacy.py", ("--check",)),
+    Command("tools/s3_diplomacy_union.py", ("--check",)),
     Command("tools/m10_history.py", ("--check",)),
     Command("tools/m10_second_century.py", ("--check",)),
     Command("tools/m10_third_century.py", ("--check",)),

@@ -6,7 +6,6 @@ transfer_subject =  {
 	category = CATEGORY_ECONOMY_ACTIONS
 
 	potential = {
-		always = no # ANTIQVITAS mounted-system quarantine
 		scope:actor = {
             num_subjects > 0
         }

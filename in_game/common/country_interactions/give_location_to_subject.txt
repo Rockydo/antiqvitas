@@ -10,7 +10,6 @@ give_location_to_subject = {
 	use_enroute = no
 
 	potential = {
-		always = no # ANTIQVITAS mounted-system quarantine
 		scope:actor = {
 			num_locations > 1
 			at_war = no

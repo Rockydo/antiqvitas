@@ -12,7 +12,6 @@ give_province_to_subject = {
 	}
 
 	potential = {
-		always = no # ANTIQVITAS mounted-system quarantine
 		scope:actor = {
 			num_locations > 1
 			at_war = no

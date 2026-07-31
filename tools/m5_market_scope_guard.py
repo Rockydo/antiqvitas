@@ -16,8 +16,6 @@ CONFIG = ROOT / "config/local_paths.json"
 EXPECTED = {
     "in_game/common/generic_actions/languages.txt": 2,
     "in_game/common/generic_actions/markets.txt": 1,
-    "in_game/common/generic_actions/religious_factions.txt": 1,
-    "in_game/common/peace_treaties/sound_toll_exemption.txt": 1,
     "in_game/common/scripted_triggers/situation_triggers.txt": 2,
 }
 UNSAFE = re.compile(r"(?m)^(?P<indent>[ \t]+)market\s*=\s*\{")

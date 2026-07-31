@@ -8,7 +8,6 @@ renegotiate_loan = {
 	diplomatic_cost = renegotiate_loan_cost
 
 	potential = {
-		always = no # ANTIQVITAS mounted-system quarantine
 		scope:actor = {
 			has_reform = government_reform:banking_country
 		}

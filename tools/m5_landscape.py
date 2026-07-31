@@ -17,6 +17,8 @@ ROSTER = ROOT / "docs/world_1ad/polities.csv"
 LEDGER = ROOT / "docs/m5/landscape_changes.csv"
 DISTRIBUTION = ROOT / "docs/m5/landscape_distribution.csv"
 SUMMARY = ROOT / "docs/m5/LANDSCAPE_AUDIT.md"
+HIERARCHY = ROOT / "docs/vanilla_symbols/geography_hierarchy.json"
+REGIONS = ROOT / "docs/vanilla_symbols/regions.json"
 ENTRY = re.compile(
     r"^(?P<location>[A-Za-z0-9_]+)\s*=\s*\{(?P<body>[^\r\n]*)\}\s*$",
     re.MULTILINE,
@@ -31,6 +33,23 @@ MEDITERRANEAN_REGIONS = {
     "Africa", "Anatolia", "Balkans", "Iran", "Levant", "Rome",
 }
 ASIAN_REGIONS = {"China", "India", "Southeast Asia"}
+GERMAN_CORE_AREAS = {
+    "bavaria_area", "bohemia_area", "brandenburg_area", "franconia_area",
+    "hesse_area", "lower_saxony_area", "mecklenburg_area", "moravia_area",
+    "pomerania_area", "swabia_area", "upper_saxony_area", "westphalia_area",
+}
+IBERIAN_HUMID_AREAS = {
+    "galicia_area", "leon_area", "navarre_area", "north_portugal_area",
+}
+IBERIAN_MOSAIC_AREAS = {
+    "andalusia_area", "aragon_area", "castile_area", "catalonia_area",
+    "extremadura_area", "granada_area", "south_portugal_area", "toledo_area",
+    "valencia_area",
+}
+IBERIAN_WOOD_PASTURE_GOODS = {
+    "beeswax", "fruit", "horses", "livestock", "lumber", "medicaments",
+    "olives", "wild_game", "wine", "wool",
+}
 MARSH_GRASSLAND = {
     "abdas", "al_madar", "an_nil", "basra", "numaniyyah", "suq_al_shuyukh",
     "zuwayr",
@@ -58,6 +77,31 @@ RULE_META = {
     "germania_dense_woodland": (
         "P8.7;TAC-GER;STR-GER", "contested",
         "Forest-product field restored to denser ancient Germanic woodland.",
+    ),
+    "germania_central_mosaic": (
+        "P8.7;EURO-REVEALS;NORTH-EURO-POLLEN", "contested",
+        "Central German grassland field restored to a predominantly wooded "
+        "Barbaricum mosaic; crop clearings and coastal or river wetlands remain open.",
+    ),
+    "germania_upland_forest": (
+        "P8.7;EURO-REVEALS;BOHEMIAN-POLLEN", "contested",
+        "Existing central German upland woods receive the denser forest class; "
+        "this is a coarse canopy presentation rather than a local pollen estimate.",
+    ),
+    "iberian_atlantic_mosaic": (
+        "P8.6;IBERIA-NORTH-POLLEN;IBERIA-MOLINA", "contested",
+        "Humid Atlantic Iberian non-cereal ground receives a woodland-mosaic "
+        "presentation while documented upland heath and agricultural openings remain.",
+    ),
+    "iberian_mountain_forest": (
+        "P8.6;IBERIA-NORTH-POLLEN;IBERIA-TELENO", "contested",
+        "Existing humid mountain woods receive a denser forest presentation "
+        "without treating all Atlantic Iberian uplands as closed canopy.",
+    ),
+    "iberian_wood_pasture_mosaic": (
+        "P8.6;EURO-REVEALS;IBERIA-MOLINA", "contested",
+        "Non-cereal Iberian hill and plateau ground receives an open woodland "
+        "or wood-pasture mosaic; cereal basins and arid mineral ground remain open.",
     ),
     "atlantic_woodland": (
         "P8.6;PTO-GEO-II2;NMI-IRON-AGE", "contested",
@@ -109,9 +153,56 @@ def owner_regions() -> dict[str, str]:
     }
 
 
+def geographic_scopes(
+    entries: dict[str, dict[str, str]],
+) -> tuple[dict[str, str], dict[str, str]]:
+    hierarchy = json.loads(HIERARCHY.read_text(encoding="utf-8-sig"))
+    region_keys = set(json.loads(REGIONS.read_text(encoding="utf-8-sig")))
+    location_keys = set(entries)
+    map_regions: dict[str, str] = {}
+    map_areas: dict[str, str] = {}
+
+    def descendants(root: str) -> set[str]:
+        found: set[str] = set()
+        stack = list(hierarchy.get(root, ()))
+        seen: set[str] = set()
+        while stack:
+            key = stack.pop()
+            if key in seen:
+                continue
+            seen.add(key)
+            if key in location_keys:
+                found.add(key)
+            elif key in hierarchy:
+                stack.extend(hierarchy[key])
+        return found
+
+    for region in sorted(region_keys):
+        for location in descendants(region):
+            if location in map_regions and map_regions[location] != region:
+                raise ValueError(
+                    f"location {location} occurs in map regions "
+                    f"{map_regions[location]} and {region}"
+                )
+            map_regions[location] = region
+        for area in hierarchy.get(region, ()):
+            if not area.endswith("_area"):
+                continue
+            for location in descendants(area):
+                if location in map_areas and map_areas[location] != area:
+                    raise ValueError(
+                        f"location {location} occurs in map areas "
+                        f"{map_areas[location]} and {area}"
+                    )
+                map_areas[location] = area
+    return map_regions, map_areas
+
+
 def classify(
     location: str,
     region: str,
+    map_region: str,
+    map_area: str,
     fields: dict[str, str],
 ) -> tuple[str, dict[str, str]] | None:
     topography = fields.get("topography", "")
@@ -130,6 +221,20 @@ def classify(
     if location in IRRIGATED_MESOPOTAMIA:
         return "mesopotamian_irrigation", {"vegetation": "farmland"}
     if (
+        map_area in GERMAN_CORE_AREAS
+        and vegetation == "grasslands"
+        and topography in {"flatland", "hills", "plateau"}
+        and good not in CROPS
+    ):
+        return "germania_central_mosaic", {"vegetation": "woods"}
+    if (
+        map_area in GERMAN_CORE_AREAS
+        and vegetation == "woods"
+        and topography in {"hills", "mountains", "plateau"}
+        and good not in CROPS
+    ):
+        return "germania_upland_forest", {"vegetation": "forest"}
+    if (
         region == "Germania"
         and vegetation == "grasslands"
         and good in FOREST_GOODS
@@ -137,6 +242,39 @@ def classify(
         return "germania_forest_product", {"vegetation": "woods"}
     if region == "Germania" and vegetation == "woods" and good in FOREST_GOODS:
         return "germania_dense_woodland", {"vegetation": "forest"}
+    if (
+        map_region == "iberia_region"
+        and map_area in IBERIAN_HUMID_AREAS
+        and vegetation == "grasslands"
+        and topography in {"flatland", "hills", "mountains", "plateau"}
+        and good not in CROPS
+    ):
+        return "iberian_atlantic_mosaic", {"vegetation": "woods"}
+    if (
+        map_region == "iberia_region"
+        and map_area in IBERIAN_HUMID_AREAS
+        and vegetation == "sparse"
+        and climate == "oceanic"
+        and topography in {"hills", "mountains", "plateau"}
+    ):
+        return "iberian_atlantic_mosaic", {"vegetation": "woods"}
+    if (
+        map_region == "iberia_region"
+        and map_area in IBERIAN_HUMID_AREAS
+        and vegetation == "woods"
+        and climate == "oceanic"
+        and topography == "mountains"
+    ):
+        return "iberian_mountain_forest", {"vegetation": "forest"}
+    if (
+        map_region == "iberia_region"
+        and map_area in IBERIAN_MOSAIC_AREAS
+        and vegetation in {"grasslands", "sparse"}
+        and topography in {"hills", "plateau"}
+        and climate in {"mediterranean", "oceanic"}
+        and good in IBERIAN_WOOD_PASTURE_GOODS
+    ):
+        return "iberian_wood_pasture_mosaic", {"vegetation": "woods"}
     if (
         region in {"Britain", "Ireland"}
         and vegetation in {"farmland", "grasslands"}
@@ -186,11 +324,18 @@ def classify(
 def landscape_changes() -> dict[str, dict[str, str]]:
     entries = installed_entries()
     regions = owner_regions()
+    map_regions, map_areas = geographic_scopes(entries)
     changes: dict[str, dict[str, str]] = {}
     for location, region in sorted(regions.items()):
         if location not in entries:
             raise ValueError(f"controlled location {location} has no installed template")
-        result = classify(location, region, entries[location])
+        result = classify(
+            location,
+            region,
+            map_regions.get(location, ""),
+            map_areas.get(location, ""),
+            entries[location],
+        )
         if result is None:
             continue
         rule, updates = result
@@ -203,7 +348,7 @@ def landscape_changes() -> dict[str, dict[str, str]]:
         }
         if effective:
             changes[location] = {"rule": rule, **effective}
-    if len(changes) < 300:
+    if len(changes) < 500:
         raise ValueError(f"landscape pass is unexpectedly small: {len(changes)}")
     return changes
 
@@ -211,11 +356,13 @@ def landscape_changes() -> dict[str, dict[str, str]]:
 def rendered() -> tuple[str, str, str, int]:
     entries = installed_entries()
     regions = owner_regions()
+    map_regions, map_areas = geographic_scopes(entries)
     changes = landscape_changes()
     ledger_out = io.StringIO(newline="")
     writer = csv.writer(ledger_out, lineterminator="\n")
     writer.writerow((
-        "location", "region", "rule", "old_topography", "new_topography",
+        "location", "region", "map_region", "map_area", "rule",
+        "old_topography", "new_topography",
         "old_vegetation", "new_vegetation", "climate", "raw_material",
         "source", "confidence", "note",
     ))
@@ -230,6 +377,8 @@ def rendered() -> tuple[str, str, str, int]:
         writer.writerow((
             location,
             regions[location],
+            map_regions.get(location, ""),
+            map_areas.get(location, ""),
             rule,
             fields.get("topography", ""),
             after[location].get("topography", ""),
@@ -248,6 +397,102 @@ def rendered() -> tuple[str, str, str, int]:
         for dimension in ("topography", "vegetation", "climate"):
             before_counts[(region, dimension, entries[location].get(dimension, ""))] += 1
             after_counts[(region, dimension, after[location].get(dimension, ""))] += 1
+    focus_map_regions = {
+        "iberia_region", "north_german_region", "south_german_region",
+    }
+    for location, map_region in map_regions.items():
+        if location not in regions or map_region not in focus_map_regions:
+            continue
+        scope = f"map:{map_region}"
+        for dimension in ("topography", "vegetation", "climate"):
+            before_counts[
+                (scope, dimension, entries[location].get(dimension, ""))
+            ] += 1
+            after_counts[
+                (scope, dimension, after[location].get(dimension, ""))
+            ] += 1
+
+    def vegetation_counts(scope: set[str]) -> Counter[str]:
+        return Counter(after[location].get("vegetation", "") for location in scope)
+
+    german_core = {
+        location for location in regions
+        if map_areas.get(location, "") in GERMAN_CORE_AREAS
+    }
+    iberia = {
+        location for location in regions
+        if map_regions.get(location, "") == "iberia_region"
+    }
+    north_german = {
+        location for location in regions
+        if map_regions.get(location, "") == "north_german_region"
+    }
+    south_german = {
+        location for location in regions
+        if map_regions.get(location, "") == "south_german_region"
+    }
+    if not all((german_core, iberia, north_german, south_german)):
+        raise ValueError("priority landscape geography did not resolve")
+    core_counts = vegetation_counts(german_core)
+    iberia_counts = vegetation_counts(iberia)
+    north_counts = vegetation_counts(north_german)
+    south_counts = vegetation_counts(south_german)
+    if core_counts["grasslands"] > 120:
+        raise ValueError(
+            f"central Germania retains {core_counts['grasslands']} grassland fields"
+        )
+    for area in sorted(GERMAN_CORE_AREAS):
+        area_locations = {
+            location for location in regions if map_areas.get(location, "") == area
+        }
+        if not area_locations:
+            raise ValueError(f"central German audit area {area} did not resolve")
+        area_counts = vegetation_counts(area_locations)
+        area_grass = area_counts["grasslands"] / len(area_locations)
+        area_woodland = (
+            area_counts["forest"] + area_counts["woods"]
+        ) / len(area_locations)
+        if area_grass > 0.45:
+            raise ValueError(
+                f"{area} retains a {area_grass:.1%} grassland share"
+            )
+        if area_woodland < 0.50:
+            raise ValueError(
+                f"{area} woodland share fell below 50% ({area_woodland:.1%})"
+            )
+    if (north_counts["forest"] + north_counts["woods"]) / len(north_german) < 0.52:
+        raise ValueError("north German woodland share fell below 52%")
+    if (south_counts["forest"] + south_counts["woods"]) / len(south_german) < 0.62:
+        raise ValueError("south German woodland share fell below 62%")
+    iberian_woodland = iberia_counts["forest"] + iberia_counts["woods"]
+    if iberian_woodland / len(iberia) < 0.43:
+        raise ValueError("Iberian woodland share fell below 43%")
+    iberian_open = iberia_counts["farmland"] + iberia_counts["grasslands"]
+    if iberian_open / len(iberia) < 0.30:
+        raise ValueError("Iberian open cultivation share fell below 30%")
+    cereal_openings = sum(
+        after[location].get("vegetation", "") in {"farmland", "grasslands"}
+        and entries[location].get("raw_material", "") in CROPS
+        for location in iberia
+    )
+    if cereal_openings < 70:
+        raise ValueError(
+            f"Iberia retains only {cereal_openings} open crop-bearing fields"
+        )
+    for area in sorted(IBERIAN_HUMID_AREAS):
+        area_locations = {
+            location for location in iberia if map_areas.get(location, "") == area
+        }
+        if not area_locations:
+            raise ValueError(f"humid Iberian audit area {area} did not resolve")
+        area_counts = vegetation_counts(area_locations)
+        area_woodland = (
+            area_counts["forest"] + area_counts["woods"]
+        ) / len(area_locations)
+        if area_woodland < 0.60:
+            raise ValueError(
+                f"{area} woodland share fell below 60% ({area_woodland:.1%})"
+            )
     distribution_out = io.StringIO(newline="")
     distribution_writer = csv.writer(distribution_out, lineterminator="\n")
     distribution_writer.writerow(("region", "dimension", "value", "before", "after", "delta"))
@@ -269,6 +514,17 @@ def rendered() -> tuple[str, str, str, int]:
         f"- {sum('topography' in row for row in changes.values()):,} topography changes.",
         f"- {sum('vegetation' in row for row in changes.values()):,} vegetation changes.",
         "- Climate changes: 0.",
+        f"- Central German core: {core_counts['grasslands']:,} grasslands; "
+        f"{core_counts['forest'] + core_counts['woods']:,} forest/woods.",
+        f"- North German map region: "
+        f"{(north_counts['forest'] + north_counts['woods']) / len(north_german):.1%} "
+        "forest/woods.",
+        f"- South German map region: "
+        f"{(south_counts['forest'] + south_counts['woods']) / len(south_german):.1%} "
+        "forest/woods.",
+        f"- Iberian map region: {iberian_woodland / len(iberia):.1%} forest/woods; "
+        f"{iberian_open / len(iberia):.1%} open cultivation; "
+        f"{cereal_openings:,} open crop-bearing fields.",
         "",
         "## Rules",
         "",

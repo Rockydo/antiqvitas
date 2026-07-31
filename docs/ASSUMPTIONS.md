@@ -5971,3 +5971,13 @@ The 80 neutral depth nodes model transferable subsistence, logistics, craft,
 health, exchange, and mediation practices, not universal institutions or
 identities. Sources: `P15`; `CAH-XI`; `CAH-XII`. [secure broad transmission;
 contested local timing]
+
+## 2026-07-31 - Ancient woodland classes represent mosaics
+
+`woods` and `forest` encode wooded land, pasture, scrub, and managed/open
+canopy mosaics at game scale, not continuous closed forest. Germania receives
+the stronger woodland correction; Iberia retains open cereal and dry pastoral
+zones alongside Atlantic and mountain woodland. Sources: `EURO-REVEALS`;
+`NORTH-EURO-POLLEN`; `BOHEMIAN-POLLEN`; `IBERIA-NORTH-POLLEN`;
+`IBERIA-TELENO`; `IBERIA-MOLINA`. [secure regional pattern; contested local
+cover]
