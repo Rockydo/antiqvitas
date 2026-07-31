@@ -5981,3 +5981,11 @@ zones alongside Atlantic and mountain woodland. Sources: `EURO-REVEALS`;
 `NORTH-EURO-POLLEN`; `BOHEMIAN-POLLEN`; `IBERIA-NORTH-POLLEN`;
 `IBERIA-TELENO`; `IBERIA-MOLINA`. [secure regional pattern; contested local
 cover]
+
+## 2026-07-31 - Frontier aliases are viewing-language proxies
+
+Pleiades-derived names on non-Roman opening fields are Roman-view map proxies,
+not proof that the local population used the same form or that the engine field
+is the exact ancient site. Overt Roman administrative forms therefore keep a
+separate transparent local label. Sources: `PLE`; `PLN`; existing Tier-2
+distance ledgers. [secure name resources; contested field identity]

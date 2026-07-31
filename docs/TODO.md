@@ -42,6 +42,10 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 - [x] Rebuild all sixteen loading screens as vanilla-contract opaque depth
   plates. Live Camulodunum, Forum, and Monte Alban captures at 7/71/98/99%
   show no seam, slab, or ghosting (`S3_LOADING_PARALLAX_20260730`).
+- [ ] Re-audit loading screens against the installed vanilla scene stack after
+  the reported ghosted/blurred new-game render. Compare exact texture formats,
+  alpha, layer ordering, transforms, and shader use; require fresh vanilla/mod
+  captures through several new-game percentages before accepting the repair.
 - [x] Replace the complete installed location-illustration union: terrain,
   settlements, forts, ports, sacred buildings, workshops, weather, and
   foreground layers. No medieval structure or unintended blur may remain.
@@ -113,6 +117,11 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 - [ ] Replace synthetic directional location names with curated language forms,
   especially the Rhine-Danube, Germania, Gaul, Britain, Dacia, and every likely
   post-AD 1 Roman frontier conquest. Verify the engine's owner/culture resolver.
+  Static complete: 11,437 pseudo-morphology entries and 28,573 root fallbacks
+  now use transparent short map labels; 915 high-priority directional phrases
+  are gone. A 140-field frontier ledger adds Latin viewing aliases in Germania,
+  Britain, Gaul, and the Danube-Balkans, separating 18 overt Roman forms from
+  local display. Runtime Suebi/Rome conquest-view proof remains.
 - [ ] Sweep all active and compatibility localization in every client language
   for guns, muskets, rifles, cannon, feudalism, serfdom, manufactories, and
   similar anachronisms. Steel must describe ancient ferrous production.

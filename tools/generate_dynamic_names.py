@@ -30,6 +30,7 @@ TIER2_ULTRA = ROOT / "docs/m4/tier2_ultra_location_name_overrides.csv"
 TIER3 = ROOT / "docs/m4/tier3_location_name_overrides.csv"
 TIER3_MAP = ROOT / "docs/m4/tier3_map_name_fallbacks.csv"
 CORRECTIONS = ROOT / "docs/m4/location_name_corrections.csv"
+FRONTIER = ROOT / "docs/m4/frontier_language_names.csv"
 ROMAN = ROOT / "docs/m4/roman_location_name_overrides.csv"
 OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
 ENGINE_LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
@@ -227,6 +228,27 @@ def entries() -> list[dict[str, str]]:
     output.extend(ledger_entries(TIER3, "tier3", "tier3", "retained-label Tier-3", culture_groups, group_languages, installed_locations, seen_locations, roman | priority_locations))
     corrections = correction_locations()
     output = [entry for entry in output if entry["location"] not in corrections]
+    frontier = {row["location"]: row for row in rows(FRONTIER)}
+    matched_frontier: set[str] = set()
+    for entry in output:
+        alias = frontier.get(entry["location"])
+        if alias is None:
+            continue
+        if entry["culture"] != alias["local_culture"]:
+            raise ValueError(
+                f"{entry['location']}: frontier culture drift "
+                f"{entry['culture']} != {alias['local_culture']}"
+            )
+        entry["historical_name"] = alias["local_name"]
+        entry["source"] = f"{entry['source']};FRONTIER-LANGUAGE"
+        entry["note"] = f"{entry['note']} {alias['note']}"
+        matched_frontier.add(entry["location"])
+    missing_frontier = set(frontier) - matched_frontier
+    if missing_frontier:
+        raise ValueError(
+            "frontier aliases lack dynamic local entries: "
+            + ", ".join(sorted(missing_frontier))
+        )
     if not output:
         raise ValueError("no secure dynamic-name anchors were selected")
     return sorted(output, key=lambda entry: (entry["location"], entry["language"]))
@@ -266,6 +288,10 @@ def localization(entries_: list[dict[str, str]], roots: list[tuple[str, str]], l
         # the same reviewed name available to root-language localization paths.
         lines.append(f" {entry['location']}.{entry['dialect']}: \"{name}\"")
         lines.append(f" {entry['location']}.{entry['language']}: \"{name}\"")
+    for alias in rows(FRONTIER):
+        name = esc(alias["roman_name"])
+        lines.append(f" {alias['location']}.antq_latin_dialect: \"{name}\"")
+        lines.append(f" {alias['location']}.antq_latin_language: \"{name}\"")
     return "\n".join(lines) + "\n"
 
 

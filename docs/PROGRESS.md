@@ -8156,3 +8156,16 @@ reviewed 128px BC7 DDS.
 - Full validation passes 154/154. Paired vanilla/mod smoke reaches both
   rendered menus with zero new or mod-unique error-log lines; tree fingerprint
   `26538f756145d4fad39bf2365cf12b05030b98bb43e231af9b560e4d6f784380`.
+
+## 2026-07-31 - Replaced synthetic map-name fallbacks
+
+- Removed invented culture suffixes from 11,437 populated and 28,573 root
+  fallbacks; unresolved fields now keep short transparent cartographic labels.
+- Removed 915 high-priority centroid/directional names.
+- Added 140 Pleiades-derived local/Latin frontier aliases; 18 overt Roman
+  administrative names now render only through the Latin path.
+- Full validation passes 155/155. Paired vanilla/mod smoke reaches both
+  rendered menus with zero new or mod-unique error-log lines; tree fingerprint
+  `6abb1fd47fb2b242ffb75f13a3b248c817e98d50b81a16ac07bf764ff7542aa5`.
+- Reopened loading-screen runtime review after the reported ghosted new-game
+  render; menu smoke is not accepted as visual proof.

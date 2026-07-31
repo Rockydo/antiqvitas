@@ -18,6 +18,7 @@ from collections import Counter, defaultdict
 from io import StringIO
 from pathlib import Path
 
+from generate_m4_tier3_names import installed_names
 ROOT = Path(__file__).resolve().parents[1]
 POLITIES = ROOT / "docs/world_1ad/polities.csv"
 OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
@@ -98,6 +99,11 @@ LARGE_IMPERIAL_TAGS = {"ROM", "HAN", "PAR"}
 POP_RE = re.compile(
     r"(?m)^\t(?P<location>[a-z0-9_]+) = \{\r?\n"
     r"\t\tdefine_pop = \{[^\r\n]*\bsize = (?P<size>[0-9.]+)"
+)
+ALGORITHMIC_DIRECTIONAL = re.compile(
+    r"^(?:Core|Inner|Middle|Outer|Far)\b.*\bLands$|"
+    r"\b(?:Approaches|Hinterland|Region) of\b",
+    re.IGNORECASE,
 )
 
 
@@ -309,6 +315,7 @@ def generated_overrides() -> tuple[
     direct = intended_direct_names(polities)
     by_tag = {row["tag"]: row for row in polities}
     cultures = {row["key"]: row for row in rows(CULTURES)}
+    map_labels = installed_names()
 
     culture_locations: dict[str, list[str]] = defaultdict(list)
     for location, entry in effective.items():
@@ -388,105 +395,16 @@ def generated_overrides() -> tuple[
                 f"Tier-3 form. {selected['note']}; the engine field is a documented "
                 "proxy and not an exact settlement polygon."
             )
-        elif (
-            owner.get(location, "") not in LARGE_IMPERIAL_TAGS
-            and owner.get(location, "") in owner_geometry
-            and len(owner_locations[owner[location]]) >= 3
-            and len(owner_locations[owner[location]]) <= 200
-        ):
-            tag = owner[location]
-            polity = by_tag[tag]
-            cx, cy, distances = owner_geometry[tag]
-            x, y = coords[location]
-            ordered = sorted(distances.values())
-            rank = sum(value <= distances[location] for value in ordered) / len(ordered)
-            band = (
-                "Core"
-                if rank <= 0.2
-                else "Inner"
-                if rank <= 0.4
-                else "Middle"
-                if rank <= 0.6
-                else "Outer"
-                if rank <= 0.8
-                else "Far"
-            )
-            direction = bearing(x - cx, y - cy)
-            name = f"{band} {direction} {polity['name']} Lands"
-            source = f"{polity['source']};GEO-PROXY"
-            note = (
-                f"Conservative high-visibility territorial proxy within the reviewed "
-                f"{polity['name']} campaign frame; centroid-relative {band.lower()} "
-                f"{direction.lower()} sector. This is not an attested settlement "
-                "name, fixed boundary, or uniform-identity claim."
-            )
-        elif (
-            culture in culture_geometry
-            and len(culture_locations[culture]) <= 200
-            and len(culture_locations[culture]) >= 3
-        ):
-            culture_row = cultures[culture]
-            cx, cy, distances = culture_geometry[culture]
-            x, y = coords[location]
-            ordered = sorted(distances.values())
-            rank = sum(value <= distances[location] for value in ordered) / len(ordered)
-            band = (
-                "Core"
-                if rank <= 0.2
-                else "Inner"
-                if rank <= 0.4
-                else "Middle"
-                if rank <= 0.6
-                else "Outer"
-                if rank <= 0.8
-                else "Far"
-            )
-            direction = bearing(x - cx, y - cy)
-            name = f"{band} {direction} {culture_row['name']} Lands"
-            source = f"{culture_row['source']};GEO-PROXY"
-            note = (
-                f"Conservative high-visibility regional proxy within the reviewed "
-                f"{culture_row['name']} distribution; centroid-relative {band.lower()} "
-                f"{direction.lower()} sector. This is not an attested settlement "
-                "name, fixed boundary, or uniform-identity claim."
-            )
         else:
-            tag = owner.get(location, "")
-            polity = by_tag.get(tag, {})
-            same_owner = [
-                key
-                for key in anchors
-                if key != location and owner.get(key) == tag
-            ]
-            same_region = [
-                key
-                for key in anchors
-                if key != location
-                and by_tag.get(owner.get(key, ""), {}).get("region")
-                == polity.get("region")
-            ]
-            candidates = same_owner or same_region or [
-                key for key in anchors if key != location
-            ]
-            x, y = coords[location]
-            anchor_location = min(
-                candidates,
-                key=lambda key: (
-                    math.hypot(coords[key][0] - x, coords[key][1] - y),
-                    key,
-                ),
+            name = map_labels.get(
+                location,
+                location.replace("_", " ").replace("-", " ").title(),
             )
-            anchor_entry = anchors[anchor_location]
-            ax, ay = coords[anchor_location]
-            dx, dy = x - ax, y - ay
-            distance = math.hypot(dx, dy)
-            anchor_name = anchor_entry["historical_name"]
-            name = proxy_name(anchor_name, distance, bearing(dx, dy))
-            source = f"{anchor_entry['source']};GEO-PROXY"
+            source = f"{current['source']};T3N:transparent-map-label"
             note = (
-                "Conservative high-visibility geographic proxy relative to reviewed "
-                f"{anchor_name} ({anchor_location}), centroid offset {distance:.2f}px; "
-                "not an attested settlement name or boundary."
+                "High-visibility unresolved field retains a concise installed "
+                "cartographic label. It is explicitly not presented as an attested "
+                "ancient settlement name."
             )
         output.append(
             {
@@ -513,7 +431,11 @@ def audit_rows(
         if location in replacement:
             entry = replacement[location]
             layer = "priority_proxy"
-            classification = "conservative_regional_proxy"
+            classification = (
+                "transparent_map_fallback"
+                if "T3N:transparent-map-label" in entry["source"]
+                else "conservative_regional_proxy"
+            )
         elif (
             owner.get(location) == "ROM"
             and effective[location]["layer"] in {"tier3", "tier3_root"}
@@ -565,6 +487,15 @@ def csv_text(values: list[dict[str, str]], fields: tuple[str, ...]) -> str:
 def render() -> dict[Path, tuple[str, str]]:
     overrides, categories, effective, owner = generated_overrides()
     audit = audit_rows(overrides, categories, effective, owner)
+    directional = [
+        row["location"]
+        for row in overrides
+        if ALGORITHMIC_DIRECTIONAL.search(row["historical_name"])
+    ]
+    if directional:
+        raise ValueError(
+            "algorithmic directional names remain: " + ", ".join(directional)
+        )
     if len(audit) < 1900:
         raise ValueError(f"priority audit unexpectedly small: {len(audit)}")
     if len(overrides) < 1000:
@@ -601,6 +532,7 @@ def render() -> dict[Path, tuple[str, str]]:
             "attested",
             "securely_reconstructed",
             "conservative_regional_proxy",
+            "transparent_map_fallback",
             "unresolved_vanilla_passthrough",
         }
         for row in audit

@@ -4389,3 +4389,10 @@ Classify the complete installed base+DLC union. Expose only namespaced ancient
 content and an explicit allowlist of portable mechanics; false-gate all other
 interactions, actions, CBs, treaties, subjects, and objectives. Keep wargoals
 and hardcoded/event CBs resolvable only as backend contracts.
+
+## 2026-07-31 - Unresolved toponyms remain transparent
+
+Supersede the `T3M` pseudo-morphology contract. Never manufacture an ancient
+form by adding culture-shaped suffixes or centroid directions. Retain the
+installed cartographic label under `T3N` until a sourced identity replaces it.
+Use language-qualified localization for reviewed Roman frontier aliases.

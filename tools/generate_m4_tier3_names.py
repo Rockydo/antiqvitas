@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Generate explicit, synthetic Tier-3 forms for the remaining map fields.
+"""Generate transparent Tier-3 labels for otherwise unresolved map fields.
 
-Tier 3 deliberately does not claim an attested ancient toponym.  It produces
-a deterministic culture-shaped display proxy, marked as synthetic and
-replaceable; direct and Tier-2 evidence always take precedence.
+Tier 3 deliberately does not claim an attested ancient toponym. Direct and
+Tier-2 evidence always take precedence; unresolved fields retain the installed
+cartographic label instead of receiving invented pseudo-linguistic morphology.
 """
 
 from __future__ import annotations
@@ -13,7 +13,6 @@ import csv
 import json
 import re
 import sys
-import unicodedata
 from io import StringIO
 from pathlib import Path
 
@@ -37,61 +36,10 @@ HEADER = ("location", "culture", "historical_name", "source", "confidence", "not
 MAP_HEADER = ("location", "historical_name", "source", "confidence", "note")
 LOC_LINE = re.compile(r'^\s*([\w.-]+):\s*"([^"]+)"')
 
-# These are display morphology adapters, not linguistic reconstructions.  They
-# deliberately make unsourced modern labels visibly provisional while keeping
-# every generated label stable and culture-bound until a reviewed name replaces
-# it.  The group field is the only identity input, so this cannot imply a town,
-# boundary, language community, or historical polity at the map-field level.
-GROUP_ENDINGS = {
-    "antq_american_group": "can",
-    "antq_andean_group": "marka",
-    "antq_anatolian_group": "on",
-    "antq_austronesian_group": "nagara",
-    "antq_balkan_group": "on",
-    "antq_baltic_group": "ava",
-    "antq_berber_group": "a",
-    "antq_caucasian_group": "a",
-    "antq_celtic_group": "dun",
-    "antq_germanic_group": "haim",
-    "antq_hellenic_group": "on",
-    "antq_iberian_group": "dun",
-    "antq_indian_group": "pura",
-    "antq_iranian_group": "kan",
-    "antq_italic_group": "um",
-    "antq_japonic_group": "mura",
-    "antq_korean_group": "seong",
-    "antq_mesoamerican_group": "can",
-    "antq_nile_group": "a",
-    "antq_north_maluku_group": "on",
-    "antq_oceanic_group": "nagara",
-    "antq_semitic_group": "a",
-    "antq_sinitic_group": "cheng",
-    "antq_slavic_group": "ava",
-    "antq_southeast_asian_group": "nagara",
-    "antq_steppe_group": "kan",
-    "antq_subsaharan_group": "koro",
-    "antq_tibetan_group": "ling",
-    "antq_uralic_group": "ava",
-}
-
-
-def synthetic_stem(label: str) -> str:
-    """Return a stable ASCII-like display stem without asserting etymology."""
-    decomposed = unicodedata.normalize("NFKD", label)
-    letters = "".join(char for char in decomposed if not unicodedata.combining(char))
-    stem = re.sub(r"[^A-Za-z]+", "", letters).strip()
-    return (stem or "Topos").title()
-
-
-def synthetic_name(label: str, group: str) -> str:
-    """Make an explicit, non-attested Tier-3 culture display proxy."""
-    ending = GROUP_ENDINGS.get(group, "on")
-    stem = synthetic_stem(label)
-    # A doubled ending makes the mechanical nature harder to read and is not
-    # useful as a reconstruction; use a neutral alternate marker instead.
-    if stem.lower().endswith(ending):
-        ending = "ar"
-    return f"{stem}{ending}"
+def transparent_name(label: str) -> str:
+    """Preserve a concise cartographic label without asserting antiquity."""
+    cleaned = re.sub(r"\s+", " ", label.replace("_", " ").replace("-", " ")).strip()
+    return cleaned or "Unnamed Field"
 
 
 def ledger_rows(path: Path) -> list[dict[str, str]]:
@@ -119,9 +67,6 @@ def culture_groups() -> dict[str, str]:
     result = {row["key"]: row["group"] for row in rows}
     if not result:
         raise ValueError("no M4 cultures loaded")
-    unknown = sorted(set(result.values()) - set(GROUP_ENDINGS))
-    if unknown:
-        raise ValueError(f"Tier-3 morphology lacks groups: {', '.join(unknown)}")
     return result
 
 
@@ -148,10 +93,10 @@ def render_population() -> str:
             {
                 "location": location,
                 "culture": culture,
-                "historical_name": synthetic_name(name, cultures[culture]),
-                "source": "T3M:installed-label+M4-culture",
+                "historical_name": transparent_name(name),
+                "source": "T3N:installed-label",
                 "confidence": "tier3",
-                "note": "Synthetic culture-shaped Tier-3 display proxy; no attested toponym or historical identity claim.",
+                "note": "Transparent installed cartographic fallback; no claim that the label is ancient or locally attested.",
             }
         )
     if not rows:
@@ -169,14 +114,14 @@ def render_map() -> str:
     rows = []
     for location in sorted(installed):
         retained = names.get(location, "").strip()
-        seed = retained or location.replace("_", " ").replace("-", " ")
+        seed = retained or location
         rows.append(
             {
                 "location": location,
-                "historical_name": synthetic_name(seed, "map_fallback"),
-                "source": "T3M:installed-label" if retained else "T3M:location-key",
+                "historical_name": transparent_name(seed),
+                "source": "T3N:installed-label" if retained else "T3N:location-key",
                 "confidence": "tier3",
-                "note": "Synthetic neutral Tier-3 root display proxy; no attested toponym or historical identity claim.",
+                "note": "Transparent cartographic root fallback; no claim that the label is ancient or locally attested.",
             }
         )
     stream = StringIO(newline="")
