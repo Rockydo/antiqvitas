@@ -78,6 +78,77 @@ sasanian|antq_sassanid_centralized_monarchy~antq_ardashir_unification_court~antq
 xianbei|antq_xianbei_eastern_confederacy~antq_tanshihuai_three_divisions~antq_xianbei_successor_federations~antq_murong_frontier_court~antq_tuoba_dai_confederacy~antq_rouran_khaganate|xianbei_orders_atlas.png|d6a140da2d62355e9376de9116bde5c284963546dcc5aa307f508792c5921a14|P8.8;P9;P13;CAH-XI;CAH-XII;XIANBEI-CONFEDERACY;IRAN-KHAGAN|contested|These categories model separate eastern-steppe Xianbei groups and later dated federations through chiefly households, lineages, rites, brokers, herders, and federated communities without projecting Tanshihuai or Rouran institutions back to AD 1.|Chiefly Household and Assembly~Leading Lineages and Mounted Followings~Oath and Seasonal Rite Custodians~Frontier Brokers and Craft Households~Herding Households~Federated Eastern-Steppe Communities
 """.strip()
 
+# Later regional-government passes introduced evidence-bounded reforms after
+# the original estate atlases were generated.  They inherit only the matching
+# mechanical order profile; keeping the mapping explicit prevents the privilege
+# renderer from inferring unsafe gates from country starts.
+PROFILE_REFORM_EXTENSIONS = {
+    "tribal": (
+        "antq_acutuba_central_amazon_network",
+        "antq_amur_forest_river_network",
+        "antq_andean_ceremonial_centre_network",
+        "antq_andean_highland_community_network",
+        "antq_andean_irrigated_valley_network",
+        "antq_bomberai_coastal_community_network",
+        "antq_borneo_cave_river_network",
+        "antq_borneo_coastal_exchange_network",
+        "antq_borneo_foothill_iron_network",
+        "antq_borneo_interior_river_network",
+        "antq_byeonhan_iron_exchange_league",
+        "antq_central_california_coastal_network",
+        "antq_central_indian_megalithic_network",
+        "antq_central_mississippi_woodland_network",
+        "antq_daga_highland_garden_network",
+        "antq_early_mariana_island_network",
+        "antq_havana_hopewell_exchange_network",
+        "antq_herrera_plateau_exchange_network",
+        "antq_indian_ocean_atoll_network",
+        "antq_jinhan_small_state_league",
+        "antq_kansas_city_hopewell_network",
+        "antq_loja_regional_development_network",
+        "antq_mahan_small_state_league",
+        "antq_mainland_highland_exchange_network",
+        "antq_mainland_iron_age_basin_network",
+        "antq_mainland_river_corridor_network",
+        "antq_mesoamerican_exchange_corridor_network",
+        "antq_mesoamerican_formative_civic_network",
+        "antq_mesoamerican_highland_community_network",
+        "antq_mesoamerican_urban_ritual_center",
+        "antq_north_maluku_metal_age_network",
+        "antq_northern_okjeo_corridor",
+        "antq_orinoco_llanos_ceramic_network",
+        "antq_philippine_cave_coast_network",
+        "antq_philippine_coastal_river_network",
+        "antq_philippine_island_exchange_network",
+        "antq_philippine_mortuary_community_network",
+        "antq_point_peninsula_seasonal_network",
+        "antq_sa_huynh_exchange_network",
+        "antq_sakhalin_maritime_network",
+        "antq_sierra_nevada_early_community_network",
+        "antq_soanian_king_and_council",
+        "antq_sonoran_desert_farming_network",
+        "antq_sulawesi_coastal_exchange_network",
+        "antq_sulawesi_highland_mortuary_network",
+        "antq_sulawesi_island_exchange_network",
+        "antq_sulawesi_peninsula_community_network",
+        "antq_sulawesi_river_lake_network",
+        "antq_teuchitlan_civic_center_network",
+        "antq_ussuri_poltsian_network",
+        "antq_wankarani_mound_village_network",
+        "antq_west_mexican_basin_community_network",
+        "antq_west_mexican_highland_corridor_network",
+        "antq_west_mexican_shaft_tomb_chiefdom",
+        "antq_windward_island_ceramic_network",
+        "antq_yap_ulithi_island_network",
+    ),
+    "royal": (
+        "antq_central_indian_janapada",
+        "antq_central_indian_urban_kingship",
+        "antq_tamilakam_velir_court",
+        "antq_upper_mahanadi_kingship",
+    ),
+}
+
 # profile|slug|estate|display name|description
 PRIVILEGE_DATA = r"""
 roman|senatorial_commissions|nobles_estate|Senatorial Commissions|Recognized senatorial commissions scrutinize provincial accounts and public obligations while preserving the princeps' final authority.
@@ -421,8 +492,11 @@ def profiles() -> list[dict[str, object]]:
     result = []
     for line in PROFILE_DATA.splitlines():
         slug, reforms, atlas, digest, source, confidence, note, names = line.split("|")
+        reform_values = tuple(reforms.split("~")) + PROFILE_REFORM_EXTENSIONS.get(
+            slug, ()
+        )
         result.append({
-            "slug": slug, "reforms": tuple(reforms.split("~")), "atlas": atlas,
+            "slug": slug, "reforms": reform_values, "atlas": atlas,
             "hash": digest, "source": source, "confidence": confidence, "note": note,
             "names": tuple(names.split("~")),
         })

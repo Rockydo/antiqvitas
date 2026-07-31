@@ -95,11 +95,9 @@ antq_legal_petitions = {
 		}
 	}
 	stability_cost_efficiency = 0.02
-	unlock_government_reform = antq_buffer_kingdom
-	unlock_government_reform = antq_early_korean_kingdom
-	unlock_government_reform = antq_mahan_small_state_league
-	unlock_government_reform = antq_regional_kingship
-	unlock_government_reform = antq_zhangzhung_plateau_kingship
+	unlock_government_reform = antq_byeonhan_iron_exchange_league
+	unlock_government_reform = antq_jinhan_small_state_league
+	unlock_government_reform = antq_sakhalin_maritime_network
 	unlock_subject_type = antq_tributary
 	unlock_casus_belli = antq_chinese_warlord_unification
 	starting_technology_level = 2
@@ -126,9 +124,8 @@ antq_municipal_charters = {
 	}
 	stability_cost_efficiency = 0.02
 	unlock_law = feudal_de_jure_law
-	unlock_government_reform = antq_han_imperial_bureaucracy
-	unlock_government_reform = antq_northern_indian_coin_kingship
-	unlock_government_reform = antq_sakhalin_maritime_network
+	unlock_government_reform = antq_mahan_small_state_league
+	unlock_government_reform = antq_tribal_kingdom
 	unlock_subject_type = antq_autonomous_city
 	starting_technology_level = 2
 	requires = antq_provincial_census
@@ -177,10 +174,8 @@ antq_frontier_dispatches = {
 		}
 	}
 	global_monthly_control = 0.001
-	unlock_government_reform = antq_byeonhan_iron_exchange_league
-	unlock_government_reform = antq_han_western_regions_kingship
+	unlock_government_reform = antq_early_korean_kingdom
 	unlock_government_reform = antq_northern_okjeo_corridor
-	unlock_government_reform = antq_sogdian_city_compact
 	unlock_building = antq_reg_monetal_workshop
 	starting_technology_level = 3
 	requires = antq_legal_petitions
@@ -228,10 +223,8 @@ antq_standing_administration = {
 		}
 	}
 	global_monthly_control = 0.001
-	unlock_government_reform = antq_dayuan_oasis_kingship
-	unlock_government_reform = antq_jinhan_small_state_league
-	unlock_government_reform = antq_pundranagara_urban_kingship
-	unlock_government_reform = antq_tribal_kingdom
+	unlock_government_reform = antq_han_imperial_bureaucracy
+	unlock_government_reform = antq_regional_kingship
 	unlock_building = antq_reg_weightmaker
 	starting_technology_level = 3
 	requires = antq_municipal_charters
@@ -253,7 +246,6 @@ antq_commentary_schools = {
 	depth = 0
 	research_cost = 4.0
 	country_cabinet_efficiency = 0.01
-	unlock_casus_belli = antq_loot_raid
 	ai_weight = { add = 100 }
 }
 
@@ -1057,10 +1049,7 @@ antq_oppidum_council_summons = {
 		}
 	}
 	stability_cost_efficiency = 0.02
-	unlock_government_reform = antq_advanced_chiefdom
-	unlock_government_reform = antq_central_plateau_agropastoral_network
-	unlock_government_reform = antq_eastern_megalithic_community_network
-	unlock_government_reform = antq_ivernian_regional_assembly
+	unlock_government_reform = antq_brigantian_hillfort_confederacy
 	unlock_government_reform = antq_trinovantian_coin_kingship
 	starting_technology_level = 2
 	requires = antq_imperial_cult
@@ -1080,11 +1069,8 @@ antq_guest_friends_arbitration = {
 		}
 	}
 	global_monthly_control = 0.001
-	unlock_government_reform = antq_altai_contact_network
-	unlock_government_reform = antq_changtang_pastoral_network
-	unlock_government_reform = antq_eastern_plateau_corridor_network
-	unlock_government_reform = antq_mobile_hunter_herder_network
-	unlock_government_reform = antq_west_african_forest_network
+	unlock_government_reform = antq_catuvellaunian_oppidum_kingship
+	unlock_government_reform = antq_brigantian_kindred_compact
 	starting_technology_level = 3
 	requires = antq_oppidum_council_summons
 	ai_weight = { add = 80 }
@@ -1103,11 +1089,8 @@ antq_tribute_feast_tallies = {
 		}
 	}
 	tax_income_efficiency = small_tax_income_efficiency_bonus
-	unlock_government_reform = antq_brigantian_hillfort_confederacy
-	unlock_government_reform = antq_early_ironworking_community_network
-	unlock_government_reform = antq_himalayan_highland_network
-	unlock_government_reform = antq_sumpa_highland_confederacy
-	unlock_government_reform = antq_west_african_savanna_compound_network
+	unlock_government_reform = antq_ivernian_regional_assembly
+	unlock_government_reform = antq_durotrigian_settlement_compact
 	starting_technology_level = 4
 	requires = antq_guest_friends_arbitration
 	ai_weight = { add = 70 }
@@ -1126,11 +1109,8 @@ antq_clientage_oath_networks = {
 		}
 	}
 	tax_income_efficiency = small_tax_income_efficiency_bonus
-	unlock_government_reform = antq_bengal_riverine_community_network
 	unlock_government_reform = antq_durotrigian_hillfort_coin_order
-	unlock_government_reform = antq_far_side_port_chiefdom
-	unlock_government_reform = antq_saryarka_late_iron_network
-	unlock_government_reform = antq_west_african_ironworking_network
+	unlock_government_reform = antq_durotrigian_coin_weight_council
 	starting_technology_level = 4
 	requires = antq_guest_friends_arbitration
 	ai_weight = { add = 70 }
@@ -1149,9 +1129,6 @@ antq_confederated_council_customs = {
 		}
 	}
 	legislative_efficiency = 0.05
-	unlock_government_reform = antq_catuvellaunian_oppidum_kingship
-	unlock_government_reform = antq_eastern_hill_valley_network
-	unlock_government_reform = antq_horn_pastoral_network
 	unlock_government_reform = antq_tribal_kingdom
 	starting_technology_level = 4
 	requires = antq_tribute_feast_tallies
@@ -1177,10 +1154,9 @@ antq_meroitic_temple_stewardship = {
 	}
 	stability_cost_efficiency = 0.02
 	unlock_government_reform = antq_advanced_chiefdom
-	unlock_government_reform = antq_garamantian_oasis_state
-	unlock_government_reform = antq_mobile_hunter_herder_network
-	unlock_government_reform = antq_sogdian_city_compact
-	unlock_government_reform = antq_zhangzhung_plateau_kingship
+	unlock_government_reform = antq_kushite_dual_kingship
+	unlock_government_reform = antq_west_african_forest_network
+	unlock_unit = antq_sahel_javelin_company
 	starting_technology_level = 2
 	requires = antq_imperial_cult
 	ai_weight = { add = 90 }
@@ -1203,10 +1179,10 @@ antq_kandake_court_delegates = {
 		}
 	}
 	global_monthly_control = 0.001
-	unlock_government_reform = antq_buffer_kingdom
-	unlock_government_reform = antq_han_western_regions_kingship
-	unlock_government_reform = antq_northern_indian_coin_kingship
-	unlock_government_reform = antq_tribal_kingdom
+	unlock_government_reform = antq_early_ironworking_community_network
+	unlock_government_reform = antq_mauretanian_client_kingship
+	unlock_government_reform = antq_west_african_ironworking_network
+	unlock_unit = antq_kwale_sewn_plank_transport
 	starting_technology_level = 3
 	requires = antq_meroitic_temple_stewardship
 	ai_weight = { add = 80 }
@@ -1229,10 +1205,9 @@ antq_oasis_tribute_stations = {
 		}
 	}
 	tax_income_efficiency = small_tax_income_efficiency_bonus
-	unlock_government_reform = antq_early_ironworking_community_network
-	unlock_government_reform = antq_kushite_dual_kingship
-	unlock_government_reform = antq_regional_kingship
-	unlock_government_reform = antq_west_african_ironworking_network
+	unlock_government_reform = antq_garamantian_oasis_state
+	unlock_government_reform = antq_settled_town_cluster
+	unlock_unit = antq_monsoon_dhow
 	starting_technology_level = 4
 	requires = antq_kandake_court_delegates
 	ai_weight = { add = 70 }
@@ -1255,10 +1230,9 @@ antq_nile_caravan_adjudication = {
 		}
 	}
 	tax_income_efficiency = small_tax_income_efficiency_bonus
-	unlock_government_reform = antq_dayuan_oasis_kingship
-	unlock_government_reform = antq_horn_pastoral_network
-	unlock_government_reform = antq_pundranagara_urban_kingship
-	unlock_government_reform = antq_west_african_forest_network
+	unlock_government_reform = antq_far_side_port_chiefdom
+	unlock_government_reform = antq_mobile_hunter_herder_network
+	unlock_government_reform = antq_west_african_savanna_compound_network
 	starting_technology_level = 4
 	requires = antq_kandake_court_delegates
 	ai_weight = { add = 70 }
@@ -1281,10 +1255,9 @@ antq_royal_storehouse_seals = {
 		}
 	}
 	legislative_efficiency = 0.05
-	unlock_government_reform = antq_far_side_port_chiefdom
-	unlock_government_reform = antq_mauretanian_client_kingship
-	unlock_government_reform = antq_settled_town_cluster
-	unlock_government_reform = antq_west_african_savanna_compound_network
+	unlock_government_reform = antq_horn_pastoral_network
+	unlock_government_reform = antq_tribal_kingdom
+	unlock_unit = antq_quinquereme
 	starting_technology_level = 4
 	requires = antq_oasis_tribute_stations
 	requires = antq_nile_caravan_adjudication
@@ -3135,14 +3108,14 @@ antq_field_engineering = {
 		}
 	}
 	army_logistics_distance_modifier = 0.10
-	unlock_government_reform = antq_altai_contact_network
-	unlock_government_reform = antq_eastern_megalithic_community_network
-	unlock_government_reform = antq_semnonian_sacred_confederacy
+	unlock_government_reform = antq_chattian_host_order
 	unlock_government_reform = antq_marcomannic_allied_host_compact
 	unlock_government_reform = antq_frisian_tidal_compact
 	unlock_unit = antq_dacian_falxmen
 	unlock_unit = antq_germanic_bodyguards
 	unlock_unit = antq_frankish_rhine_warband
+	unlock_unit = antq_germanic_javelins
+	unlock_casus_belli = antq_loot_raid
 	starting_technology_level = 2
 	requires = antq_auxiliary_service
 	ai_weight = { add = 90 }
@@ -3162,14 +3135,13 @@ antq_frontier_patrols = {
 		}
 	}
 	army_logistics_distance_modifier = 0.10
-	unlock_government_reform = antq_batavian_rhine_compact
-	unlock_government_reform = antq_eastern_plateau_corridor_network
-	unlock_government_reform = antq_sumpa_highland_confederacy
+	unlock_government_reform = antq_cheruscan_kindred_assembly
 	unlock_government_reform = antq_cheruscan_coalition_leadership
 	unlock_government_reform = antq_frisian_frontier_council
 	unlock_unit = antq_gothic_migrant_host
 	unlock_unit = antq_marcomannic_royal_retinue
 	unlock_unit = antq_semnonian_grove_muster
+	unlock_unit = antq_germanic_north_sea_patrol
 	starting_technology_level = 2
 	requires = antq_auxiliary_service
 	ai_weight = { add = 90 }
@@ -3218,9 +3190,7 @@ antq_siegecraft_basics = {
 		}
 	}
 	army_maintenance_efficiency = 0.01
-	unlock_government_reform = antq_changtang_pastoral_network
-	unlock_government_reform = antq_himalayan_highland_network
-	unlock_government_reform = antq_west_african_ironworking_network
+	unlock_government_reform = antq_semnonian_sacred_confederacy
 	unlock_government_reform = antq_chattian_chosen_warrior_host
 	unlock_unit = antq_suebian_household_retinue
 	unlock_unit = antq_germanic_horse
@@ -3273,14 +3243,13 @@ antq_principate_warfare = {
 		}
 	}
 	army_maintenance_efficiency = 0.01
-	unlock_government_reform = antq_central_plateau_agropastoral_network
-	unlock_government_reform = antq_frisian_terp_community_order
-	unlock_government_reform = antq_west_african_forest_network
+	unlock_government_reform = antq_marcomannic_bohemian_kingship
 	unlock_government_reform = antq_chattian_elder_war_council
 	unlock_unit = antq_angrivarian_spear_following
 	unlock_unit = antq_batavian_auxiliary_cohort
 	unlock_unit = antq_saxon_coastal_warband
 	unlock_unit = antq_warbands
+	unlock_unit = antq_germanic_north_sea_transport
 	starting_technology_level = 3
 	requires = antq_frontier_patrols
 	ai_weight = { add = 80 }
@@ -4114,13 +4083,13 @@ antq_remount_pasture_registers = {
 	}
 	army_logistics_distance_modifier = 0.10
 	unlock_government_reform = antq_arian_satrapal_court
-	unlock_government_reform = antq_regional_kingship
-	unlock_government_reform = antq_yuezhi_five_yabghus
-	unlock_government_reform = antq_bosporan_polis_court
-	unlock_unit = antq_hellenistic_phalanx
-	unlock_unit = antq_steppe_horse_archers
-	unlock_unit = antq_parthian_foot_archers
-	unlock_unit = antq_merchant_roundship
+	unlock_government_reform = antq_saryarka_late_iron_network
+	unlock_government_reform = antq_iranian_great_house_reform
+	unlock_government_reform = antq_bosporan_steppe_compact
+	unlock_unit = antq_indian_longbowmen
+	unlock_unit = antq_cretan_archers
+	unlock_unit = antq_parthian_noble_lancers
+	unlock_unit = antq_cilician_marines
 	starting_technology_level = 2
 	requires = antq_professional_standing_armies
 	ai_weight = { add = 90 }
@@ -4142,14 +4111,14 @@ antq_horse_archer_screening = {
 		}
 	}
 	army_maintenance_efficiency = 0.01
-	unlock_government_reform = antq_bosporan_client_kingship
-	unlock_government_reform = antq_sogdian_city_compact
-	unlock_government_reform = antq_iranian_royal_domain
-	unlock_government_reform = antq_vologasid_dynastic_settlement
-	unlock_unit = antq_indian_longbowmen
-	unlock_unit = antq_cretan_archers
-	unlock_unit = antq_parthian_noble_lancers
-	unlock_unit = antq_cilician_marines
+	unlock_government_reform = antq_dayuan_oasis_kingship
+	unlock_government_reform = antq_steppe_confederation
+	unlock_government_reform = antq_steppe_wing_confederacy
+	unlock_government_reform = antq_xiongnu_southern_frontier_court
+	unlock_unit = antq_war_elephants
+	unlock_unit = antq_saka_horse
+	unlock_unit = antq_syrian_archers
+	unlock_unit = antq_mesopotamian_river_patrol
 	starting_technology_level = 3
 	requires = antq_remount_pasture_registers
 	ai_weight = { add = 80 }
@@ -4171,13 +4140,13 @@ antq_scale_armour_workshops = {
 		}
 	}
 	land_morale_modifier = 0.01
-	unlock_government_reform = antq_indo_scythian_kingship
-	unlock_government_reform = antq_ussuri_poltsian_network
-	unlock_government_reform = antq_xiongnu_dual_wing_command
-	unlock_government_reform = antq_southern_xiongnu_commandery_settlement
-	unlock_unit = antq_cataphracts
-	unlock_unit = antq_galatian_swordsmen
-	unlock_unit = antq_armenian_horse
+	unlock_government_reform = antq_kangju_confederated_kingship
+	unlock_government_reform = antq_wusun_kunmi_confederacy
+	unlock_government_reform = antq_xiongnu_gift_circuit
+	unlock_unit = antq_thureophoroi
+	unlock_unit = antq_parthian_horse_archers
+	unlock_unit = antq_thracian_peltasts
+	unlock_unit = antq_trireme
 	unlock_unit = antq_indian_longbow_company
 	starting_technology_level = 4
 	requires = antq_horse_archer_screening
@@ -4200,13 +4169,13 @@ antq_armoured_retinue_drill = {
 		}
 	}
 	land_morale_modifier = 0.01
-	unlock_government_reform = antq_han_western_regions_kingship
-	unlock_government_reform = antq_tribal_kingdom
-	unlock_government_reform = antq_steppe_gift_court
-	unlock_government_reform = antq_xiongnu_northern_western_confederacy
-	unlock_unit = antq_war_elephants
-	unlock_unit = antq_saka_horse
-	unlock_unit = antq_syrian_archers
+	unlock_government_reform = antq_indo_scythian_kingship
+	unlock_government_reform = antq_ussuri_poltsian_network
+	unlock_government_reform = antq_xiongnu_dual_wing_command
+	unlock_government_reform = antq_southern_xiongnu_commandery_settlement
+	unlock_unit = antq_cataphracts
+	unlock_unit = antq_galatian_swordsmen
+	unlock_unit = antq_armenian_horse
 	unlock_unit = antq_germanic_bodyguards
 	starting_technology_level = 4
 	requires = antq_horse_archer_screening
@@ -4229,13 +4198,13 @@ antq_cataphract_reserve_system = {
 		}
 	}
 	discipline = 0.005
-	unlock_government_reform = antq_kangju_confederated_kingship
-	unlock_government_reform = antq_wusun_kunmi_confederacy
-	unlock_government_reform = antq_xiongnu_gift_circuit
-	unlock_unit = antq_thureophoroi
-	unlock_unit = antq_parthian_horse_archers
-	unlock_unit = antq_thracian_peltasts
-	unlock_unit = antq_trireme
+	unlock_government_reform = antq_parthian_king_of_kings
+	unlock_government_reform = antq_xianbei_eastern_confederacy
+	unlock_government_reform = antq_armenian_dynast_compact
+	unlock_unit = antq_hellenistic_phalanx
+	unlock_unit = antq_steppe_horse_archers
+	unlock_unit = antq_parthian_foot_archers
+	unlock_unit = antq_merchant_roundship
 	unlock_unit = antq_deccan_spear_company
 	starting_technology_level = 4
 	requires = antq_scale_armour_workshops
@@ -4391,9 +4360,8 @@ antq_hillfort_muster_beacons = {
 	army_logistics_distance_modifier = 0.10
 	unlock_government_reform = antq_elder_moot_kingship
 	unlock_government_reform = antq_trinovantian_channel_compact
-	unlock_government_reform = antq_ivernian_seaway_compact
-	unlock_unit = antq_hibernian_javelin_bands
-	unlock_unit = antq_british_hide_transport
+	unlock_unit = antq_british_hillfort_spearmen
+	unlock_unit = antq_warbands
 	starting_technology_level = 2
 	requires = antq_professional_standing_armies
 	ai_weight = { add = 90 }
@@ -4413,10 +4381,9 @@ antq_chariot_screening = {
 	}
 	army_maintenance_efficiency = 0.01
 	unlock_government_reform = antq_warband_retinue_kingship
-	unlock_government_reform = antq_brigantian_kindred_compact
-	unlock_government_reform = antq_ivernian_cattle_gift_court
-	unlock_unit = antq_hibernian_coastal_warbands
-	unlock_unit = antq_hibernian_war_curragh
+	unlock_government_reform = antq_brigantian_hillfort_court
+	unlock_unit = antq_northern_british_skirmishers
+	unlock_unit = antq_british_coastal_warboat
 	starting_technology_level = 3
 	requires = antq_hillfort_muster_beacons
 	ai_weight = { add = 80 }
@@ -4436,10 +4403,9 @@ antq_champion_retinues = {
 	}
 	land_morale_modifier = 0.01
 	unlock_government_reform = antq_catuvellaunian_dynastic_mint_court
-	unlock_government_reform = antq_brigantian_hillfort_court
-	unlock_unit = antq_british_chariots
-	unlock_unit = antq_germanic_horse
-	unlock_unit = antq_hibernian_cargo_curragh
+	unlock_government_reform = antq_ivernian_seaway_compact
+	unlock_unit = antq_hibernian_javelin_bands
+	unlock_unit = antq_british_hide_transport
 	starting_technology_level = 4
 	requires = antq_chariot_screening
 	ai_weight = { add = 70 }
@@ -4459,9 +4425,9 @@ antq_oppidum_supply_caches = {
 	}
 	land_morale_modifier = 0.01
 	unlock_government_reform = antq_catuvellaunian_oppida_compact
-	unlock_government_reform = antq_durotrigian_coin_weight_council
-	unlock_unit = antq_british_hillfort_spearmen
-	unlock_unit = antq_warbands
+	unlock_government_reform = antq_ivernian_cattle_gift_court
+	unlock_unit = antq_hibernian_coastal_warbands
+	unlock_unit = antq_hibernian_war_curragh
 	starting_technology_level = 4
 	requires = antq_chariot_screening
 	ai_weight = { add = 70 }
@@ -4481,9 +4447,9 @@ antq_confederate_war_councils = {
 	}
 	discipline = 0.005
 	unlock_government_reform = antq_trinovantian_oppidum_court
-	unlock_government_reform = antq_durotrigian_settlement_compact
-	unlock_unit = antq_northern_british_skirmishers
-	unlock_unit = antq_british_coastal_warboat
+	unlock_unit = antq_british_chariots
+	unlock_unit = antq_germanic_horse
+	unlock_unit = antq_hibernian_cargo_curragh
 	starting_technology_level = 4
 	requires = antq_champion_retinues
 	requires = antq_oppidum_supply_caches
@@ -6405,12 +6371,11 @@ antq_port_customs = {
 	}
 	merchant_maintenance_efficiency = 0.01
 	unlock_government_reform = antq_buffer_kingdom
-	unlock_government_reform = antq_nabataean_caravan_kingship
-	unlock_government_reform = antq_zhangzhung_plateau_kingship
-	unlock_government_reform = antq_judean_temple_court
-	unlock_government_reform = antq_emesan_caravan_compact
-	unlock_unit = antq_syrian_archers
-	unlock_unit = antq_cilician_marines
+	unlock_government_reform = antq_regional_kingship
+	unlock_government_reform = antq_himyarite_incense_route_court
+	unlock_government_reform = antq_commagenean_sanctuary_court
+	unlock_unit = antq_cretan_archers
+	unlock_unit = antq_trireme
 	unlock_casus_belli = antq_succession_intervention
 	starting_technology_level = 2
 	requires = antq_red_sea_piloting
@@ -6436,12 +6401,12 @@ antq_desert_waystations = {
 	}
 	merchant_maintenance_efficiency = 0.01
 	unlock_government_reform = antq_artaxiad_highland_kingship
-	unlock_government_reform = antq_himyarite_terrace_kingship
-	unlock_government_reform = antq_tribal_kingdom
-	unlock_government_reform = antq_sabaean_sanctuary_route_court
-	unlock_government_reform = antq_emesan_sanctuary_court
-	unlock_unit = antq_thracian_peltasts
-	unlock_unit = antq_monsoon_dhow
+	unlock_government_reform = antq_parthian_subkingdom
+	unlock_government_reform = antq_himyarite_irrigation_court
+	unlock_government_reform = antq_batanean_frontier_compact
+	unlock_unit = antq_camelry
+	unlock_unit = antq_omanite_coastal_warbands
+	unlock_unit = antq_caspian_oared_boat
 	starting_technology_level = 2
 	requires = antq_red_sea_piloting
 	ai_weight = { add = 90 }
@@ -6495,13 +6460,12 @@ antq_coin_exchange = {
 		}
 	}
 	global_trade_through_owned_territory_efficiency = 0.05
-	unlock_government_reform = antq_dayuan_oasis_kingship
-	unlock_government_reform = antq_parthian_subkingdom
-	unlock_government_reform = antq_frontier_muster_monarchy
-	unlock_government_reform = antq_galilean_lake_court
-	unlock_unit = antq_hellenistic_phalanx
-	unlock_unit = antq_nabataean_caravan_guards
-	unlock_unit = antq_caspian_oared_boat
+	unlock_government_reform = antq_emesan_client_dynasty
+	unlock_government_reform = antq_soanian_king_and_council
+	unlock_government_reform = antq_sabaean_sanctuary_route_court
+	unlock_government_reform = antq_emesan_sanctuary_court
+	unlock_unit = antq_thracian_peltasts
+	unlock_unit = antq_monsoon_dhow
 	starting_technology_level = 3
 	requires = antq_port_customs
 	ai_weight = { add = 80 }
@@ -6554,12 +6518,12 @@ antq_principate_exchange = {
 		}
 	}
 	global_trade_through_owned_territory_efficiency = 0.05
-	unlock_government_reform = antq_emesan_client_dynasty
-	unlock_government_reform = antq_pundranagara_urban_kingship
-	unlock_government_reform = antq_nabataean_water_stewardship
-	unlock_government_reform = antq_galilean_peraean_compact
-	unlock_unit = antq_cataphracts
-	unlock_unit = antq_north_arabian_camel_scouts
+	unlock_government_reform = antq_herodian_batanean_tetrarchy
+	unlock_government_reform = antq_tribal_kingdom
+	unlock_government_reform = antq_judean_temple_court
+	unlock_government_reform = antq_emesan_caravan_compact
+	unlock_unit = antq_syrian_archers
+	unlock_unit = antq_cilician_marines
 	starting_technology_level = 3
 	requires = antq_desert_waystations
 	ai_weight = { add = 80 }
@@ -7711,8 +7675,7 @@ antq_garamantian_oasis_stages = {
 	unlock_government_reform = antq_temple_endowment_court
 	unlock_government_reform = antq_kushite_temple_domain
 	unlock_unit = antq_nubian_archers
-	unlock_unit = antq_balearic_slingers
-	unlock_unit = antq_kwale_sewn_plank_transport
+	unlock_unit = antq_nile_bow_company
 	starting_technology_level = 2
 	requires = antq_monsoon_navigation
 	ai_weight = { add = 90 }
@@ -7738,7 +7701,7 @@ antq_meroe_nile_caravans = {
 	unlock_government_reform = antq_irrigation_palace
 	unlock_government_reform = antq_mauretanian_urban_court
 	unlock_unit = antq_numidian_light_horse
-	unlock_unit = antq_quinquereme
+	unlock_unit = antq_kwale_coastal_patrol
 	starting_technology_level = 3
 	requires = antq_garamantian_oasis_stages
 	ai_weight = { add = 80 }
@@ -7764,7 +7727,6 @@ antq_red_sea_entrepots = {
 	unlock_government_reform = antq_petition_court
 	unlock_government_reform = antq_mauretanian_frontier_compact
 	unlock_unit = antq_numidian_horse_company
-	unlock_unit = antq_nile_bow_company
 	starting_technology_level = 4
 	requires = antq_meroe_nile_caravans
 	ai_weight = { add = 70 }
@@ -7790,7 +7752,6 @@ antq_sahel_iron_exchange = {
 	unlock_government_reform = antq_frontier_muster_monarchy
 	unlock_government_reform = antq_garamantian_irrigation_court
 	unlock_unit = antq_iberian_swordsmen
-	unlock_unit = antq_sahel_javelin_company
 	starting_technology_level = 4
 	requires = antq_meroe_nile_caravans
 	ai_weight = { add = 70 }
@@ -7815,8 +7776,7 @@ antq_ivory_route_brokers = {
 	export_efficiency = small_trade_efficiency_bonus
 	unlock_government_reform = antq_kushite_dual_household
 	unlock_government_reform = antq_garamantian_caravan_compact
-	unlock_unit = antq_monsoon_dhow
-	unlock_unit = antq_kwale_coastal_patrol
+	unlock_unit = antq_balearic_slingers
 	starting_technology_level = 4
 	requires = antq_red_sea_entrepots
 	requires = antq_sahel_iron_exchange
@@ -9762,10 +9722,10 @@ antq_library_catalogues = {
 	}
 	cultural_influence_modifier = 0.01
 	unlock_government_reform = antq_amur_forest_river_network
-	unlock_government_reform = antq_parthian_subkingdom
-	unlock_government_reform = antq_yancai_aorsi_confederacy
-	unlock_government_reform = antq_armenian_royal_domain_court
-	unlock_unit = antq_persian_gulf_patrol_craft
+	unlock_government_reform = antq_regional_kingship
+	unlock_government_reform = antq_yuezhi_five_yabghus
+	unlock_government_reform = antq_bosporan_polis_court
+	unlock_unit = antq_mesopotamian_river_transport
 	unlock_subject_type = antq_satrapy
 	unlock_casus_belli = antq_sasanid_unification
 	starting_technology_level = 2
@@ -9790,11 +9750,11 @@ antq_han_classics = {
 	}
 	cultural_influence_modifier = 0.01
 	unlock_government_reform = antq_altai_contact_network
-	unlock_government_reform = antq_parthian_king_of_kings
-	unlock_government_reform = antq_xianbei_eastern_confederacy
-	unlock_government_reform = antq_armenian_dynast_compact
-	unlock_unit = antq_mesopotamian_river_patrol
-	unlock_unit = antq_caspian_oared_boat
+	unlock_government_reform = antq_parthian_subkingdom
+	unlock_government_reform = antq_yancai_aorsi_confederacy
+	unlock_government_reform = antq_armenian_royal_domain_court
+	unlock_unit = antq_persian_gulf_patrol_craft
+	unlock_unit = antq_pontic_river_sea_transport
 	starting_technology_level = 2
 	requires = antq_paper_precursors
 	ai_weight = { add = 90 }
@@ -9815,9 +9775,9 @@ antq_astronomical_tables = {
 		}
 	}
 	cultural_influence_modifier = 0.01
-	unlock_government_reform = antq_bosporan_client_kingship
-	unlock_government_reform = antq_cappadocian_domain_court
-	unlock_government_reform = antq_dacian_mountain_court
+	unlock_government_reform = antq_cappadocian_client_kingship
+	unlock_government_reform = antq_thracian_mountain_host
+	unlock_unit = antq_war_elephants
 	starting_technology_level = 2
 	requires = antq_bamboo_registers
 	ai_weight = { add = 90 }
@@ -9838,9 +9798,9 @@ antq_medical_compendia = {
 		}
 	}
 	cultural_influence_modifier = 0.01
-	unlock_government_reform = antq_cappadocian_client_kingship
-	unlock_government_reform = antq_cappadocian_pass_compact
-	unlock_unit = antq_thureophoroi
+	unlock_government_reform = antq_dacian_divided_kingships
+	unlock_government_reform = antq_bosporan_polis_court
+	unlock_unit = antq_galatian_swordsmen
 	starting_technology_level = 2
 	requires = antq_bamboo_registers
 	ai_weight = { add = 90 }
@@ -9862,12 +9822,11 @@ antq_legal_commentaries = {
 		}
 	}
 	global_monthly_literacy = 0.005
-	unlock_government_reform = antq_artaxiad_highland_kingship
-	unlock_government_reform = antq_saryarka_late_iron_network
-	unlock_government_reform = antq_iranian_great_house_reform
-	unlock_government_reform = antq_bosporan_steppe_compact
-	unlock_unit = antq_mesopotamian_river_transport
-	unlock_unit = antq_pontic_river_sea_transport
+	unlock_government_reform = antq_bosporan_client_kingship
+	unlock_government_reform = antq_sogdian_city_compact
+	unlock_government_reform = antq_iranian_royal_domain
+	unlock_government_reform = antq_vologasid_dynastic_settlement
+	unlock_unit = antq_caspian_oared_boat
 	starting_technology_level = 3
 	requires = antq_library_catalogues
 	requires = antq_han_classics
@@ -9889,9 +9848,8 @@ antq_surveying_methods = {
 		}
 	}
 	global_monthly_literacy = 0.005
-	unlock_government_reform = antq_odrysian_client_kingship
-	unlock_government_reform = antq_bosporan_steppe_compact
-	unlock_unit = antq_thracian_peltasts
+	unlock_government_reform = antq_federal_synedrion
+	unlock_government_reform = antq_dacian_hillfort_compact
 	starting_technology_level = 3
 	requires = antq_astronomical_tables
 	ai_weight = { add = 80 }
@@ -9913,10 +9871,10 @@ antq_scholarly_correspondence = {
 		}
 	}
 	global_institution_growth_modifier = 0.10
-	unlock_government_reform = antq_dayuan_oasis_kingship
-	unlock_government_reform = antq_steppe_confederation
-	unlock_government_reform = antq_steppe_wing_confederacy
-	unlock_government_reform = antq_xiongnu_southern_frontier_court
+	unlock_government_reform = antq_han_western_regions_kingship
+	unlock_government_reform = antq_tribal_kingdom
+	unlock_government_reform = antq_steppe_gift_court
+	unlock_government_reform = antq_xiongnu_northern_western_confederacy
 	unlock_unit = antq_pontic_monoxylon_patrol
 	starting_technology_level = 4
 	requires = antq_legal_commentaries
@@ -9938,9 +9896,9 @@ antq_principate_learning = {
 		}
 	}
 	global_monthly_literacy = 0.005
-	unlock_government_reform = antq_indo_greek_kingship
-	unlock_government_reform = antq_bosporan_polis_court
-	unlock_unit = antq_galatian_swordsmen
+	unlock_government_reform = antq_boule_magistracy
+	unlock_government_reform = antq_commagenean_euphrates_compact
+	unlock_unit = antq_deccan_spear_company
 	starting_technology_level = 3
 	requires = antq_medical_compendia
 	ai_weight = { add = 80 }
@@ -10291,7 +10249,7 @@ antq_regional_schools = {
 	global_monthly_literacy = 0.005
 	unlock_estate_privilege = antq_cheruscan_retinue_service_terms
 	unlock_building = antq_reg_amber_carver
-	unlock_building = antq_reg_vistula_migration_staging
+	unlock_building = antq_reg_north_sea_boat_landing
 	requires = antq_medical_relief
 	ai_weight = { add = 80 }
 }
@@ -10332,7 +10290,7 @@ antq_survival_of_texts = {
 	global_monthly_literacy = 0.005
 	unlock_estate_privilege = antq_cheruscan_grove_oath_custody
 	unlock_building = antq_reg_coral_workshop
-	unlock_building = antq_reg_north_sea_boat_landing
+	unlock_building = antq_reg_wool_drapery
 	requires = antq_calendar_revision
 	ai_weight = { add = 80 }
 }
@@ -10761,9 +10719,9 @@ antq_polis_archive_stewards = {
 		}
 	}
 	cultural_influence_modifier = 0.01
-	unlock_government_reform = antq_commagenean_client_kingship
-	unlock_government_reform = antq_thracian_dynastic_court
-	unlock_unit = antq_indian_longbowmen
+	unlock_government_reform = antq_indo_greek_kingship
+	unlock_government_reform = antq_bosporan_steppe_compact
+	unlock_unit = antq_thracian_peltasts
 	starting_technology_level = 2
 	requires = antq_paper_precursors
 	ai_weight = { add = 90 }
@@ -10784,9 +10742,9 @@ antq_peripatetic_teaching_circles = {
 		}
 	}
 	global_monthly_literacy = 0.005
-	unlock_government_reform = antq_dacian_divided_kingships
-	unlock_government_reform = antq_thracian_mountain_host
-	unlock_unit = antq_war_elephants
+	unlock_government_reform = antq_odrysian_client_kingship
+	unlock_government_reform = antq_commagenean_sanctuary_court
+	unlock_unit = antq_indian_longbow_company
 	starting_technology_level = 3
 	requires = antq_polis_archive_stewards
 	ai_weight = { add = 80 }
@@ -10807,9 +10765,8 @@ antq_geometric_commentary_schools = {
 		}
 	}
 	global_institution_growth_modifier = 0.10
-	unlock_government_reform = antq_settled_town_cluster
-	unlock_government_reform = antq_commagenean_sanctuary_court
-	unlock_unit = antq_indian_longbow_company
+	unlock_government_reform = antq_cappadocian_domain_court
+	unlock_government_reform = antq_dacian_mountain_court
 	starting_technology_level = 4
 	requires = antq_peripatetic_teaching_circles
 	ai_weight = { add = 70 }
@@ -10830,9 +10787,8 @@ antq_medical_case_histories = {
 		}
 	}
 	global_institution_growth_modifier = 0.10
-	unlock_government_reform = antq_boule_magistracy
-	unlock_government_reform = antq_commagenean_euphrates_compact
-	unlock_unit = antq_deccan_spear_company
+	unlock_government_reform = antq_cappadocian_pass_compact
+	unlock_unit = antq_thureophoroi
 	starting_technology_level = 4
 	requires = antq_peripatetic_teaching_circles
 	ai_weight = { add = 70 }
@@ -10853,8 +10809,8 @@ antq_interpolis_scholarly_correspondence = {
 		}
 	}
 	research_speed_modifier = 0.015
-	unlock_government_reform = antq_federal_synedrion
-	unlock_government_reform = antq_dacian_hillfort_compact
+	unlock_government_reform = antq_thracian_dynastic_court
+	unlock_unit = antq_indian_longbowmen
 	starting_technology_level = 4
 	requires = antq_geometric_commentary_schools
 	requires = antq_medical_case_histories
@@ -14446,7 +14402,6 @@ antq_regional_identities = {
 	global_pop_promotion_speed_modifier = 0.025
 	unlock_estate_privilege = antq_chattian_warrior_vow_custody
 	unlock_building = antq_reg_oil_lamp_kiln
-	unlock_building = antq_reg_stone_masonry_yard
 	requires = antq_mixed_settlements
 	ai_weight = { add = 80 }
 }
@@ -14714,12 +14669,11 @@ antq_temple_city_almonries = {
 	}
 	global_population_capacity_modifier = 0.02
 	unlock_government_reform = antq_commagenean_client_kingship
-	unlock_government_reform = antq_northern_indian_coin_kingship
-	unlock_government_reform = antq_petition_court
-	unlock_government_reform = antq_judean_toparchy_compact
-	unlock_unit = antq_thureophoroi
-	unlock_unit = antq_armenian_horse
-	unlock_unit = antq_persian_gulf_patrol_craft
+	unlock_government_reform = antq_sabaean_marib_kingship
+	unlock_government_reform = antq_sabaean_irrigation_court
+	unlock_government_reform = antq_commagenean_euphrates_compact
+	unlock_unit = antq_galatian_swordsmen
+	unlock_unit = antq_merchant_roundship
 	starting_technology_level = 2
 	requires = antq_civic_associations
 	ai_weight = { add = 90 }
@@ -14743,12 +14697,12 @@ antq_synagogue_councils = {
 		}
 	}
 	global_pop_promotion_speed_modifier = 0.025
-	unlock_government_reform = antq_han_western_regions_kingship
-	unlock_government_reform = antq_regional_kingship
-	unlock_government_reform = antq_nabataean_customs_court
-	unlock_government_reform = antq_batanean_highland_court
-	unlock_unit = antq_parthian_horse_archers
-	unlock_unit = antq_south_arabian_highland_levies
+	unlock_government_reform = antq_herodian_galilean_tetrarchy
+	unlock_government_reform = antq_petition_court
+	unlock_government_reform = antq_judean_toparchy_compact
+	unlock_unit = antq_thureophoroi
+	unlock_unit = antq_armenian_horse
+	unlock_unit = antq_persian_gulf_patrol_craft
 	starting_technology_level = 3
 	requires = antq_temple_city_almonries
 	ai_weight = { add = 80 }
@@ -14772,12 +14726,11 @@ antq_caravan_diaspora_quarters = {
 		}
 	}
 	global_pop_assimilation_speed_modifier = 0.025
-	unlock_government_reform = antq_herodian_batanean_tetrarchy
-	unlock_government_reform = antq_sabaean_marib_kingship
-	unlock_government_reform = antq_himyarite_irrigation_court
-	unlock_government_reform = antq_batanean_frontier_compact
-	unlock_unit = antq_camelry
-	unlock_unit = antq_omanite_coastal_warbands
+	unlock_government_reform = antq_herodian_judean_ethnarchy
+	unlock_government_reform = antq_frontier_muster_monarchy
+	unlock_government_reform = antq_galilean_lake_court
+	unlock_unit = antq_hellenistic_phalanx
+	unlock_unit = antq_nabataean_caravan_guards
 	starting_technology_level = 4
 	requires = antq_synagogue_councils
 	ai_weight = { add = 70 }
@@ -14801,12 +14754,11 @@ antq_civic_cult_associations = {
 		}
 	}
 	global_pop_assimilation_speed_modifier = 0.025
-	unlock_government_reform = antq_herodian_galilean_tetrarchy
-	unlock_government_reform = antq_soanian_king_and_council
-	unlock_government_reform = antq_himyarite_incense_route_court
-	unlock_government_reform = antq_commagenean_sanctuary_court
-	unlock_unit = antq_cretan_archers
-	unlock_unit = antq_trireme
+	unlock_government_reform = antq_himyarite_terrace_kingship
+	unlock_government_reform = antq_nabataean_water_stewardship
+	unlock_government_reform = antq_galilean_peraean_compact
+	unlock_unit = antq_cataphracts
+	unlock_unit = antq_north_arabian_camel_scouts
 	starting_technology_level = 4
 	requires = antq_synagogue_councils
 	ai_weight = { add = 70 }
@@ -14830,12 +14782,11 @@ antq_village_elder_compacts = {
 		}
 	}
 	stability_cost_efficiency = 0.02
-	unlock_government_reform = antq_herodian_judean_ethnarchy
-	unlock_government_reform = antq_sogdian_city_compact
-	unlock_government_reform = antq_sabaean_irrigation_court
-	unlock_government_reform = antq_commagenean_euphrates_compact
-	unlock_unit = antq_galatian_swordsmen
-	unlock_unit = antq_merchant_roundship
+	unlock_government_reform = antq_nabataean_caravan_kingship
+	unlock_government_reform = antq_nabataean_customs_court
+	unlock_government_reform = antq_batanean_highland_court
+	unlock_unit = antq_parthian_horse_archers
+	unlock_unit = antq_south_arabian_highland_levies
 	starting_technology_level = 4
 	requires = antq_caravan_diaspora_quarters
 	requires = antq_civic_cult_associations
@@ -14856,9 +14807,7 @@ antq_household_retinue_feasts = {
 		}
 	}
 	global_population_capacity_modifier = 0.02
-	unlock_government_reform = antq_advanced_chiefdom
-	unlock_government_reform = antq_eastern_hill_valley_network
-	unlock_government_reform = antq_saryarka_late_iron_network
+	unlock_government_reform = antq_batavian_rhine_compact
 	unlock_government_reform = antq_marcomannic_retinue_court
 	unlock_government_reform = antq_semnonian_district_muster
 	starting_technology_level = 2
@@ -14880,11 +14829,9 @@ antq_sacred_grove_custody = {
 		}
 	}
 	global_pop_promotion_speed_modifier = 0.025
-	unlock_government_reform = antq_bengal_riverine_community_network
-	unlock_government_reform = antq_far_side_port_chiefdom
-	unlock_government_reform = antq_tribal_kingdom
+	unlock_government_reform = antq_frisian_terp_community_order
 	unlock_government_reform = antq_cheruscan_retinue_kingship
-	unlock_unit = antq_germanic_javelins
+	unlock_building = antq_reg_batavian_auxiliary_muster
 	starting_technology_level = 3
 	requires = antq_household_retinue_feasts
 	ai_weight = { add = 80 }
@@ -14904,11 +14851,8 @@ antq_wergild_arbitration = {
 		}
 	}
 	global_pop_assimilation_speed_modifier = 0.025
-	unlock_government_reform = antq_cheruscan_kindred_assembly
-	unlock_government_reform = antq_marcomannic_bohemian_kingship
 	unlock_government_reform = antq_elder_moot_kingship
 	unlock_government_reform = antq_batavian_island_assembly
-	unlock_unit = antq_germanic_north_sea_transport
 	starting_technology_level = 4
 	requires = antq_sacred_grove_custody
 	ai_weight = { add = 70 }
@@ -14928,11 +14872,8 @@ antq_fosterage_and_hostages = {
 		}
 	}
 	global_pop_assimilation_speed_modifier = 0.025
-	unlock_government_reform = antq_chattian_host_order
-	unlock_government_reform = antq_horn_pastoral_network
-	unlock_government_reform = antq_west_african_savanna_compound_network
+	unlock_government_reform = antq_tribal_kingdom
 	unlock_government_reform = antq_batavian_auxiliary_treaty
-	unlock_unit = antq_germanic_north_sea_patrol
 	starting_technology_level = 4
 	requires = antq_sacred_grove_custody
 	ai_weight = { add = 70 }
@@ -14952,8 +14893,6 @@ antq_assembly_acclamation_customs = {
 		}
 	}
 	stability_cost_efficiency = 0.02
-	unlock_government_reform = antq_early_ironworking_community_network
-	unlock_government_reform = antq_mobile_hunter_herder_network
 	unlock_government_reform = antq_warband_retinue_kingship
 	unlock_government_reform = antq_semnonian_grove_delegation
 	starting_technology_level = 4
@@ -16199,7 +16138,7 @@ antq_marcomannic_confederate_households_endowments = {
 	global_population_capacity_modifier = 0.0062
 	unlock_estate_privilege = antq_cheruscan_kindred_assembly_guarantees
 	unlock_building = antq_reg_cooperage
-	unlock_building = antq_reg_batavian_auxiliary_muster
+	unlock_building = antq_reg_vistula_migration_staging
 	requires = antq_marcomannic_confederate_households_households
 	ai_weight = { add = 80 }
 }
@@ -16302,7 +16241,7 @@ antq_gothic_chernyakhiv_communities_endowments = {
 	global_population_capacity_modifier = 0.00642
 	unlock_estate_privilege = antq_cheruscan_frontier_broker_safe_conducts
 	unlock_building = antq_reg_soapworks
-	unlock_building = antq_reg_wool_drapery
+	unlock_building = antq_reg_dye_finishing_house
 	requires = antq_gothic_chernyakhiv_communities_households
 	ai_weight = { add = 80 }
 }
@@ -16405,7 +16344,7 @@ antq_federate_settlement_societies_endowments = {
 	global_population_capacity_modifier = 0.00664
 	unlock_estate_privilege = antq_chattian_prepared_foot_host_terms
 	unlock_building = antq_reg_reed_matmaker
-	unlock_building = antq_reg_dye_finishing_house
+	unlock_building = antq_reg_stone_masonry_yard
 	requires = antq_federate_settlement_societies_households
 	ai_weight = { add = 80 }
 }

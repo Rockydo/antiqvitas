@@ -4415,3 +4415,11 @@ Keep population multipliers at 0.05. Give sub-500k polities a 250-gold
 Use Frontier Spear Company and Caravan Guard Company as the only defaults,
 strip legacy defaults, and do not classify the complete ancient roster as
 special forces.
+
+## 2026-07-31 - Privilege visibility is ledger-owned
+
+Never infer privilege gates from opening assignments. Shared mechanical reforms
+make that inference leak regional grants. Core grants use exact tags; profile
+grants use an explicit reform registry; country grants use one exact tag.
+Opening research forms retain their exact country research profiles rather than
+inheriting the broader estate profile.

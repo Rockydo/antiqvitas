@@ -1691,7 +1691,13 @@ def opening_content_profiles(
         if matched is None:
             continue
         for reform in row["potential_reforms"].split("|"):
-            if reform:
+            # Opening governments already carry an exact map from their actual
+            # country research profiles.  Estate profiles are intentionally
+            # broader mechanical order families; using them to overwrite that
+            # evidence would advertise every regional opening reform across
+            # unrelated Germanic, Celtic, American, Oceanian, and other trees.
+            # Retain the broad estate adapter only for non-opening alternatives.
+            if reform and reform not in reforms:
                 reforms[reform].update(S2_ESTATE_ADVANCE_PROFILES[matched])
     reforms["antq_dominate"].add("roman_italic")
     reforms["antq_sassanid_centralized_monarchy"].add("iranian_steppe")

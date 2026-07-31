@@ -1,5 +1,11 @@
 # ANTIQVITAS BLOCKERS
 
+## 2026-07-31 - Privilege panel proof deferred by shared EU5 lease
+
+Two bounded launches were protocol-deferred while `endore` held the EU5 slot
+for its smoke transaction. Static 463-tag isolation, full validation, and paired
+smoke are green; Rome/Parthia/Suebi/Teotihuacan panel captures remain open.
+
 ## 2026-07-31 - Opening custom-law groups are not awarded by starting advances
 
 Status: deferred after five distinct engine contracts; green setup restored.

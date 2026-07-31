@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-07-31 - Estate grants are profile-isolated
+
+- Removed inferred reform gates and registered 60 regional reforms explicitly.
+- All 463 starts see exactly six profile grants and 6-19 total; 261 installed
+  privileges remain quarantined.
+- Opening reform unlocks now retain exact research profiles.
+- `make validate` passes 156/156; paired smoke adds zero new or mod-unique
+  lines. Four-profile live proof is lease-deferred and remains open.
+
 ## 2026-07-31 - Major opening markets gain complete supply circuits
 
 - Added 357 productive workshops across 60 Tier 1-2 Old World markets.

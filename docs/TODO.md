@@ -33,6 +33,9 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   display, and can change their own laws without seeing foreign profile laws.
 - [ ] Gate every privilege by country profile, culture, religion, reform, or a
   justified universal category. No polity may see or grant a foreign grant.
+  Static complete: 376 custom grants resolve to 6-19 visible per tag across all
+  463 starts; each sees exactly six grants from one profile, while all 261
+  installed grants remain quarantined. Focused four-profile runtime remains.
 - [ ] Gate genuinely Roman, Han, Iranian, Indian, steppe, and other regional
   buildings. Shared buildings must use neutral ancient identities; Suebi must
   not see Roman institutional buildings without a documented adoption path.
