@@ -1,5 +1,24 @@
 # Progress
 
+## 2026-07-31 - Levy availability regains the installed opening switch
+
+- Bound the locally verified `always_allow_army_levies` modifier to the
+  universal Professional Standing Armies root.
+- M7 and M8 focused checks pass: 112 ancient units, 838 advances, 2,061
+  profile-isolated unlocks, and no vanilla recruitment unlocks.
+- Replaced the 54-entry direct-harbor proxy with the complete 13,553-location
+  ownership/4,421-port intersection: 231 coastal starts now have patrol and
+  transport roles; 232 inland starts have no navy.
+- Closed the special-building visibility leak: all 80 named Roman monuments
+  are setup-only; 23 reusable provincial families retain culture/institution
+  adoption gates.
+- Added a 463-tag advance-visibility ledger. It confirms every profile remains
+  below the 160-card target; Rome has 127, Han 122, Parthia/Suebi 98.
+- Two live launches were protocol-deferred by another project's EU5 lease;
+  runtime levy proof remains open while work continues.
+- Final `make validate` passes 150/150. Paired vanilla/mod `make smoke` renders
+  both menus with zero new or mod-unique error-log lines.
+
 ## 2026-07-30 - Knowledge and direct standards reach final S2 scale
 
 - Expanded to 800 advances, 30 institutions, 805 direct advance textures, and
@@ -8055,8 +8074,8 @@ reviewed 128px BC7 DDS.
 - Rebuilt 112 loading overlays from generated depth maps as nested opaque
   cutouts with narrow feathered edges. Four fresh loading captures are clean.
 - Expanded to 112 ancient units: 26 levy, 26 regular, 22 mercenary, and 38
-  naval. Every tag has 4/2/2 land roles; all 54 harbor owners have patrol and
-  transport roles.
+  naval. Every tag has 4/2/2 land roles; the later mounted-port correction
+  supersedes this section's 54-owner proxy.
 - Rome's mercenary-captain panel is populated and now labels origins by culture.
   Fresh setup removes zero invalid privileges and zero missing static-modifier
   names.

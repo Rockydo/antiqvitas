@@ -44,6 +44,7 @@ CULTURES_LEDGER = ROOT / "docs/m4/cultures.csv"
 DIRECT_ADVANCE_ART = ROOT / "docs/m11/direct_advance_icons.csv"
 ADVANCE_LEDGER = ROOT / "docs/m8/advances.csv"
 REACHABILITY_LEDGER = ROOT / "docs/m8/start_research_reachability.csv"
+VISIBILITY_LEDGER = ROOT / "docs/m8/advance_visibility.csv"
 INSTITUTION_LEDGER = ROOT / "docs/m8/institutions.csv"
 INSTALLED_INSTITUTION_LEDGER = ROOT / "docs/m8/installed_institution_inventory.csv"
 VANILLA_INSTITUTION_SYMBOLS = ROOT / "docs/vanilla_symbols/institution.json"
@@ -126,14 +127,17 @@ START_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
 
 # Engine capabilities that the disabled vanilla traditions tree used to grant.
 # These must live on a universally owned Age-I root or every AD 1 state has zero
-# tax base and the economy panel immediately declares it bankrupt.  Provincial
-# Census is the historical surface; `enable_taxation` and
-# `has_stability_investment` are locally verified engine switches.
+# tax base and military recruitment remain available at AD 1. Provincial Census
+# and Professional Standing Armies are the historical surfaces for locally
+# verified engine switches.
 START_CAPABILITIES: dict[str, tuple[tuple[str, str], ...]] = {
     "antq_provincial_census": (
         ("enable_taxation", "yes"),
         ("has_stability_investment", "yes"),
         ("global_max_rgo_size_modifier", "0.10"),
+    ),
+    "antq_professional_standing_armies": (
+        ("always_allow_army_levies", "yes"),
     ),
 }
 
@@ -2222,6 +2226,65 @@ def start_research_ledger(records: tuple[Advance, ...]) -> str:
     return buffer.getvalue()
 
 
+def advance_visibility_ledger(records: tuple[Advance, ...]) -> str:
+    """Report the cards each opening tag can actually see in every engine age."""
+    tag_profiles, _tag_cultures, _culture_groups = research_profile_maps()
+    law_profiles = {
+        row["tag"]: f"law_{row['profile']}"
+        for row in csv_rows(S2_ANCIENT_LAW_PROFILES)
+    }
+    with ROSTER.open(encoding="utf-8-sig", newline="") as handle:
+        roster = {row["tag"]: row for row in csv.DictReader(handle)}
+    fields = (
+        "tag", "name", "profiles", "principate", "high_empires", "crisis",
+        "dominate", "federate_age", "migrations", "visible_total",
+        "target_total", "gap", "status",
+    )
+    stream = io.StringIO(newline="")
+    writer = csv.DictWriter(stream, fieldnames=fields, lineterminator="\n")
+    writer.writeheader()
+    minimums = (21, 15, 15, 15, 7, 7)
+    targets = (32, 32, 32, 32, 16, 16)
+    for tag in sorted(tag_profiles):
+        profiles = set(tag_profiles[tag])
+        law_profile = law_profiles[tag]
+        counts = tuple(
+            sum(
+                record.age == age
+                and (
+                    record.profile == "shared"
+                    or record.profile in profiles
+                    or record.profile == law_profile
+                )
+                for record in records
+            )
+            for age in AGE_KEYS
+        )
+        if any(count < floor for count, floor in zip(counts, minimums)):
+            raise ValueError(f"{tag} visible advance floor regressed: {counts}")
+        total = sum(counts)
+        target = sum(targets)
+        writer.writerow({
+            "tag": tag,
+            "name": roster[tag]["name"],
+            "profiles": ";".join(sorted(profiles | {law_profile})),
+            "principate": counts[0],
+            "high_empires": counts[1],
+            "crisis": counts[2],
+            "dominate": counts[3],
+            "federate_age": counts[4],
+            "migrations": counts[5],
+            "visible_total": total,
+            "target_total": target,
+            "gap": max(0, target - total),
+            "status": "pass" if all(
+                count >= target_count
+                for count, target_count in zip(counts, targets)
+            ) else "expansion_required",
+        })
+    return stream.getvalue()
+
+
 def institution_manager() -> str:
     lines = ["institution_manager = {", "\tinstitutions = {"]
     for institution in INSTITUTION_DATA:
@@ -2280,6 +2343,12 @@ def validate(records: tuple[Advance, ...]) -> None:
         ("global_max_rgo_size_modifier", "0.10"),
     ):
         failures.append("the universally held Provincial Census lost its economy capabilities")
+    if START_CAPABILITIES.get("antq_professional_standing_armies") != (
+        ("always_allow_army_levies", "yes"),
+    ):
+        failures.append(
+            "the universally held Professional Standing Armies lost levy availability"
+        )
     unlock_fields = {
         field for entries in unlocks.values() for field, _target in entries
     }
@@ -3014,6 +3083,7 @@ def outputs(records: tuple[Advance, ...]) -> dict[Path, str]:
         INSTITUTION_LEDGER: institution_ledger(),
         INSTALLED_INSTITUTION_LEDGER: installed_institution_ledger(),
         REACHABILITY_LEDGER: start_research_ledger(records),
+        VISIBILITY_LEDGER: advance_visibility_ledger(records),
     }
     for language in ("english", *M2_MIRROR_LANGUAGES):
         rendered[LOC_ROOT / language / f"antq_m8_knowledge_l_{language}.yml"] = localization(records, language)

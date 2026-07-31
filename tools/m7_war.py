@@ -15,6 +15,7 @@ import io
 import json
 import re
 from dataclasses import dataclass
+from functools import cache
 from pathlib import Path
 
 from dates import AntqDate, M2_MIRROR_LANGUAGES
@@ -27,8 +28,8 @@ ARMIES = DATA / "armies.csv"
 FORTS = DATA / "forts.csv"
 DIVERSITY_REPORT = DATA / "DIVERSITY_AUDIT.md"
 AVAILABILITY_REPORT = DATA / "start_force_availability.csv"
-OWNERSHIP_LOCATIONS = ROOT / "docs/world_1ad/ownership_locations.csv"
-LOCATION_TEMPLATES = ROOT / "in_game/map_data/location_templates.txt"
+OWNERSHIP_LOCATIONS = ROOT / "docs/world_1ad/ownership_resolved.csv"
+LOCAL_PATHS = ROOT / "config/local_paths.json"
 UNIT_OUTPUT = ROOT / "in_game/common/unit_types/00_antiquitas_m7_units.txt"
 LEVY_OUTPUT = ROOT / "in_game/common/levies"
 ADVANCE_OUTPUT = ROOT / "in_game/common/advances"
@@ -134,6 +135,50 @@ MERCENARY_PROFILES = {
 }
 REGIONAL_MERCENARY_PROOFS = ("ROM", "PAR", "SUE", "HAN", "SAT", "KUS", "TEO")
 
+# The mounted port graph, not hand-authored exception rows, determines which
+# opening polities may recruit ships. Each broad historical coast receives one
+# patrol and one transport family; exact unit rows can add further specialist
+# vessels, but can never leak ships to a landlocked polity.
+NAVAL_PROFILE_BY_REGION = {
+    "Rome": ("antq_trireme", "antq_merchant_roundship"),
+    "Anatolia": ("antq_trireme", "antq_merchant_roundship"),
+    "Balkans": ("antq_trireme", "antq_merchant_roundship"),
+    "Levant": ("antq_trireme", "antq_merchant_roundship"),
+    "Africa": ("antq_kwale_coastal_patrol", "antq_kwale_sewn_plank_transport"),
+    "West Africa": ("antq_kwale_coastal_patrol", "antq_kwale_sewn_plank_transport"),
+    "Arabia": ("antq_persian_gulf_patrol_craft", "antq_mesopotamian_river_transport"),
+    "Iran": ("antq_persian_gulf_patrol_craft", "antq_mesopotamian_river_transport"),
+    "Mesopotamia": ("antq_mesopotamian_river_patrol", "antq_mesopotamian_river_transport"),
+    "Caucasus": ("antq_pontic_monoxylon_patrol", "antq_pontic_river_sea_transport"),
+    "China": ("antq_byeonhan_coastal_patrol", "antq_byeonhan_cargo_ferry"),
+    "Korea": ("antq_byeonhan_coastal_patrol", "antq_byeonhan_cargo_ferry"),
+    "Japan": ("antq_byeonhan_coastal_patrol", "antq_byeonhan_cargo_ferry"),
+    "India": ("antq_monsoon_dhow", "antq_merchant_roundship"),
+    "Lanka": ("antq_monsoon_dhow", "antq_merchant_roundship"),
+    "Britain": ("antq_british_coastal_warboat", "antq_british_hide_transport"),
+    "Ireland": ("antq_hibernian_war_curragh", "antq_hibernian_cargo_curragh"),
+    "Germania": ("antq_germanic_north_sea_patrol", "antq_germanic_north_sea_transport"),
+    "Scandinavia": ("antq_germanic_north_sea_patrol", "antq_germanic_north_sea_transport"),
+    "Baltic": ("antq_baltic_sewn_plank_patrol", "antq_baltic_sewn_plank_transport"),
+    "Eastern Europe": ("antq_baltic_sewn_plank_patrol", "antq_baltic_sewn_plank_transport"),
+    "Finland": ("antq_finnic_coastal_dugout_patrol", "antq_finnic_coastal_transport"),
+    "Danube": ("antq_pontic_monoxylon_patrol", "antq_pontic_river_sea_transport"),
+    "Pontic": ("antq_pontic_monoxylon_patrol", "antq_pontic_river_sea_transport"),
+    "Central Asia": ("antq_pontic_monoxylon_patrol", "antq_pontic_river_sea_transport"),
+    "Steppe": ("antq_pontic_monoxylon_patrol", "antq_pontic_river_sea_transport"),
+    "Tarim": ("antq_pontic_monoxylon_patrol", "antq_pontic_river_sea_transport"),
+    "Southeast Asia": ("antq_sulawesi_lashed_lug_patrol", "antq_sulawesi_outrigger_transport"),
+    "Oceania": ("antq_sulawesi_lashed_lug_patrol", "antq_sulawesi_outrigger_transport"),
+    "Mesoamerica": ("antq_caribbean_dugout_patrol", "antq_caribbean_dugout_transport"),
+    "Caribbean-Amazon": ("antq_caribbean_dugout_patrol", "antq_caribbean_dugout_transport"),
+    "North America": ("antq_caribbean_dugout_patrol", "antq_caribbean_dugout_transport"),
+    "Andes": ("antq_andean_balsa_patrol", "antq_andean_balsa_transport"),
+    "Northern Andes": ("antq_andean_balsa_patrol", "antq_andean_balsa_transport"),
+}
+NAVAL_PROFILE_BY_TAG = {
+    "MAU": ("antq_trireme", "antq_merchant_roundship"),
+}
+
 
 @dataclass(frozen=True)
 class Unit:
@@ -194,25 +239,73 @@ def locations() -> set[str]:
 
 
 def available_to(unit: Unit, tag: str) -> bool:
+    if unit.kind == "navy":
+        return tag in effective_start_tags(unit)
     return UNIVERSAL_TAG in unit.tags or tag in unit.tags
 
 
+@cache
 def coastal_owned_locations() -> dict[str, tuple[str, ...]]:
-    """Return direct-start owners of locations with positive installed harbor suitability."""
-    harbor_value = re.compile(
-        r"^([^\s=]+)\s*=.*\bnatural_harbor_suitability\s*=\s*([0-9]+(?:\.[0-9]+)?)"
-    )
-    harbors: set[str] = set()
-    for line in LOCATION_TEMPLATES.read_text(encoding="utf-8-sig").splitlines():
-        match = harbor_value.search(line)
-        if match and float(match.group(2)) > 0:
-            harbors.add(match.group(1))
+    """Return all opening owners with a location in the mounted port graph."""
+    mod_ports = ROOT / "in_game/map_data/ports.csv"
+    if mod_ports.is_file():
+        port_source = mod_ports
+    else:
+        config = json.loads(LOCAL_PATHS.read_text(encoding="utf-8-sig"))
+        port_source = Path(config["game_dir"]) / "game/in_game/map_data/ports.csv"
+    with port_source.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle, delimiter=";")
+        harbors = {
+            (row.get("LandProvince") or "").strip()
+            for row in reader
+            if (row.get("LandProvince") or "").strip()
+        }
+    if len(harbors) < 100:
+        raise ValueError(f"mounted port graph is implausibly small: {len(harbors)}")
     by_tag: dict[str, list[str]] = {}
     with OWNERSHIP_LOCATIONS.open(encoding="utf-8-sig", newline="") as handle:
-        for row in csv.DictReader(handle):
+        rows = (line for line in handle if not line.startswith("#"))
+        for row in csv.DictReader(rows):
             if row["location"] in harbors:
                 by_tag.setdefault(row["tag"], []).append(row["location"])
     return {tag: tuple(sorted(set(locations))) for tag, locations in by_tag.items()}
+
+
+@cache
+def derived_naval_tags() -> dict[str, set[str]]:
+    coastal = coastal_owned_locations()
+    with (ROOT / "docs/world_1ad/polities.csv").open(
+        encoding="utf-8-sig", newline=""
+    ) as handle:
+        roster = list(csv.DictReader(handle))
+    assignments: dict[str, set[str]] = {}
+    unknown_regions: set[str] = set()
+    for row in roster:
+        tag = row["tag"]
+        if tag not in coastal:
+            continue
+        pair = NAVAL_PROFILE_BY_TAG.get(tag)
+        if pair is None:
+            pair = NAVAL_PROFILE_BY_REGION.get(row["region"])
+        if pair is None:
+            unknown_regions.add(row["region"])
+            continue
+        for unit_key in pair:
+            assignments.setdefault(unit_key, set()).add(tag)
+    if unknown_regions:
+        raise ValueError(
+            "coastal regions lack naval profiles: " + ", ".join(sorted(unknown_regions))
+        )
+    return assignments
+
+
+@cache
+def effective_start_tags(unit: Unit) -> tuple[str, ...]:
+    if unit.kind != "navy":
+        return unit.tags
+    coastal = set(coastal_owned_locations())
+    tags = (set(unit.tags) & coastal) | derived_naval_tags().get(unit.key, set())
+    return tuple(sorted(tags))
 
 
 def load_units() -> tuple[Unit, ...]:
@@ -381,6 +474,9 @@ def unit_script(units: tuple[Unit, ...]) -> str:
         "# Vanilla unit and levy unlocks are pruned in the matching advance overrides.",
     ]
     for unit in units:
+        start_tags = effective_start_tags(unit)
+        if not start_tags:
+            raise ValueError(f"{unit.key} has no valid opening country potential")
         package = unit_package(unit.key, unit.copy_from)
         lines.extend((f"{unit.key} = {{", "\tis_special = yes", f"\tcopy_from = {unit.copy_from}", "\thide = no"))
         if unit.status == "regular":
@@ -405,11 +501,11 @@ def unit_script(units: tuple[Unit, ...]) -> str:
         if unit.combat:
             lines.append("\tcombat = { " + " ".join(f"{key} = {value}" for key, value in unit.combat) + " }")
         lines.append("\tcountry_potential = {")
-        if UNIVERSAL_TAG in unit.tags:
+        if UNIVERSAL_TAG in start_tags:
             lines.append("\t\talways = yes")
         else:
             lines.append("\t\tOR = {")
-            lines.extend(f"\t\t\thas_or_had_tag = {tags[tag]}" for tag in unit.tags)
+            lines.extend(f"\t\t\thas_or_had_tag = {tags[tag]}" for tag in start_tags)
             lines.append("\t\t}")
         if unit.start_date is not None:
             lines.append(f"\t\tcurrent_date >= {unit.start_date.engine()}")
@@ -478,7 +574,7 @@ def force_availability(units: tuple[Unit, ...]) -> str:
         "tag", "name", "region", "regular_land", "levy_land",
         "mercenary_land", "regular_navy", "coastal_locations", "patrol_navy",
         "transport_navy", "land_floor", "levy_floor", "mercenary_floor",
-        "naval_patrol_floor", "naval_transport_floor",
+        "naval_patrol_floor", "naval_transport_floor", "inland_exclusion_floor",
     )
     output = io.StringIO(newline="")
     writer = csv.DictWriter(output, fieldnames=fields, lineterminator="\n")
@@ -508,6 +604,7 @@ def force_availability(units: tuple[Unit, ...]) -> str:
             len(mercenary) >= 2,
             not coastal_locations or bool(patrol),
             not coastal_locations or bool(transport),
+            bool(coastal_locations) or not navy,
         )
         if not all(floors):
             failures.append(
@@ -531,6 +628,7 @@ def force_availability(units: tuple[Unit, ...]) -> str:
             "mercenary_floor": "pass" if floors[2] else "fail",
             "naval_patrol_floor": "pass" if floors[3] else "fail",
             "naval_transport_floor": "pass" if floors[4] else "fail",
+            "inland_exclusion_floor": "pass" if floors[5] else "fail",
         })
     if failures:
         raise ValueError("roster-wide force floor failed: " + "; ".join(failures[:12]))
@@ -666,7 +764,7 @@ def check(units: tuple[Unit, ...]) -> bool:
                 changed = [
                     (base.strip(), mod.strip())
                     for base, mod in zip(installed_lines, mounted_lines)
-                    if base != mod
+                    if base.strip() != mod.strip()
                 ]
                 if changed != [
                     (VANILLA_MERCENARY_AREA_LABEL, MERCENARY_CULTURE_LABEL)

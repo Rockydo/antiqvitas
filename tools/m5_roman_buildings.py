@@ -166,7 +166,11 @@ def definition(items: list[dict[str, str]]) -> str:
         lines.extend((f"{row['key']} = {{", "\taudio_tier = 2", "\tis_special = yes", "\tis_foreign = no",
                       f"\tpop_type = {row['pop_type']}", "\tmax_levels = 1", f"\tcategory = {row['category']}",
                       f"\temployment_size = {row['employment_size']}", "\ttown = yes", "\tcity = yes", "\tmegalopolis = yes",
-                      f"\tbuild_time = {row['build_time']}", "\tmodifier = {"))
+                      f"\tbuild_time = {row['build_time']}",
+                      "\t# Historical one-level monument: created only by the sourced AD 1 setup.",
+                      "\tcountry_potential = { always = no }",
+                      "\tallow = { always = no }",
+                      "\tmodifier = {"))
         for key, amount in pairs(row["modifier"], "modifier"):
             lines.append(f"\t\t{key} = {amount}")
         lines.extend(("\t}", "\tunique_production_methods = {", f"\t\t{row['key']}_maintenance = {{"))
@@ -252,6 +256,11 @@ def main() -> int:
         stale = [path.relative_to(ROOT) for path, (content, encoding) in outputs.items() if not path.is_file() or path.read_text(encoding=encoding) != content]
         if stale:
             raise ValueError(f"stale or missing generated Roman building output: {stale}")
+        definition_text = outputs[OUTPUT][0]
+        if definition_text.count("\tcountry_potential = { always = no }") != len(items):
+            raise ValueError("every named Roman monument must be setup-only")
+        if definition_text.count("\tallow = { always = no }") != len(items):
+            raise ValueError("every named Roman monument must reject new construction")
         validate_art(items)
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         print(f"m5_roman_buildings: FAIL\n  - {exc}")

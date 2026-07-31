@@ -989,10 +989,12 @@ antq_trireme = {
 	crew_size = 0.01
 	country_potential = {
 		OR = {
-			has_or_had_tag = XAA
 			has_or_had_tag = XAF
 			has_or_had_tag = CLZ
-			has_or_had_tag = JUD
+			has_or_had_tag = XAE
+			has_or_had_tag = XAG
+			has_or_had_tag = XAA
+			has_or_had_tag = THR
 		}
 	}
 	gfx_tags = { mediterranean_galley_tag }
@@ -1012,8 +1014,8 @@ antq_quinquereme = {
 	crew_size = 0.03
 	country_potential = {
 		OR = {
-			has_or_had_tag = XAA
 			has_or_had_tag = XAG
+			has_or_had_tag = XAA
 		}
 	}
 	gfx_tags = { mediterranean_galley_tag }
@@ -1033,14 +1035,32 @@ antq_merchant_roundship = {
 	hull_size = -2
 	country_potential = {
 		OR = {
-			has_or_had_tag = XAA
-			has_or_had_tag = XAH
-			has_or_had_tag = XAR
-			has_or_had_tag = SAT
-			has_or_had_tag = XBB
+			has_or_had_tag = XCN
+			has_or_had_tag = XBD
 			has_or_had_tag = XAF
+			has_or_had_tag = XBB
+			has_or_had_tag = XBC
 			has_or_had_tag = CLZ
+			has_or_had_tag = XAE
+			has_or_had_tag = XAR
+			has_or_had_tag = HRK
+			has_or_had_tag = XAX
+			has_or_had_tag = XBA
+			has_or_had_tag = XGN
+			has_or_had_tag = LBR
+			has_or_had_tag = XAG
+			has_or_had_tag = MLD
 			has_or_had_tag = OMN
+			has_or_had_tag = XAH
+			has_or_had_tag = PND
+			has_or_had_tag = XFW
+			has_or_had_tag = XAA
+			has_or_had_tag = SAT
+			has_or_had_tag = SMT
+			has_or_had_tag = SRS
+			has_or_had_tag = THR
+			has_or_had_tag = XDN
+			has_or_had_tag = VNG
 		}
 	}
 	# P14;CAH-XI; Ancient merchant carrier adapter; it is not an ocean-crossing early-modern class
@@ -1059,13 +1079,28 @@ antq_monsoon_dhow = {
 	hull_size = -2
 	country_potential = {
 		OR = {
-			has_or_had_tag = SAT
-			has_or_had_tag = XBB
-			has_or_had_tag = XBI
-			has_or_had_tag = HIM
-			has_or_had_tag = QAT
-			has_or_had_tag = XBJ
+			has_or_had_tag = XCN
+			has_or_had_tag = XBD
 			has_or_had_tag = XDF
+			has_or_had_tag = XBB
+			has_or_had_tag = XBC
+			has_or_had_tag = XBJ
+			has_or_had_tag = HIM
+			has_or_had_tag = HRK
+			has_or_had_tag = XAX
+			has_or_had_tag = XBA
+			has_or_had_tag = XGN
+			has_or_had_tag = LBR
+			has_or_had_tag = MLD
+			has_or_had_tag = PND
+			has_or_had_tag = QAT
+			has_or_had_tag = XFW
+			has_or_had_tag = XBI
+			has_or_had_tag = SAT
+			has_or_had_tag = SMT
+			has_or_had_tag = SRS
+			has_or_had_tag = XDN
+			has_or_had_tag = VNG
 		}
 	}
 	# P14;PER;CAH-XI; Indian-Ocean coastal and monsoon sailing vessel
@@ -1086,37 +1121,37 @@ antq_austronesian_outrigger = {
 	transport_capacity = -0.10
 	country_potential = {
 		OR = {
-			has_or_had_tag = XCM
-			has_or_had_tag = JAV
-			has_or_had_tag = LZC
-			has_or_had_tag = CXR
-			has_or_had_tag = XGX
-			has_or_had_tag = BCP
-			has_or_had_tag = XGY
-			has_or_had_tag = PNY
-			has_or_had_tag = XGZ
-			has_or_had_tag = XHA
-			has_or_had_tag = PLW
 			has_or_had_tag = AGS
-			has_or_had_tag = XHB
-			has_or_had_tag = XHC
-			has_or_had_tag = MTT
-			has_or_had_tag = ZBG
-			has_or_had_tag = SLU
-			has_or_had_tag = NBR
-			has_or_had_tag = RSW
-			has_or_had_tag = KSB
-			has_or_had_tag = NEB
-			has_or_had_tag = SGK
-			has_or_had_tag = XDM
-			has_or_had_tag = KPM
-			has_or_had_tag = WBC
-			has_or_had_tag = XGL
+			has_or_had_tag = BCP
 			has_or_had_tag = XGM
-			has_or_had_tag = XCO
-			has_or_had_tag = KBC
+			has_or_had_tag = XHA
+			has_or_had_tag = XGL
+			has_or_had_tag = CXR
 			has_or_had_tag = EMR
+			has_or_had_tag = JAV
+			has_or_had_tag = KBC
+			has_or_had_tag = KPM
+			has_or_had_tag = KSB
+			has_or_had_tag = XHB
+			has_or_had_tag = LZC
+			has_or_had_tag = XCM
+			has_or_had_tag = XGX
+			has_or_had_tag = XGY
+			has_or_had_tag = XDM
+			has_or_had_tag = MTT
+			has_or_had_tag = NBR
+			has_or_had_tag = NEB
+			has_or_had_tag = XGZ
+			has_or_had_tag = XHC
+			has_or_had_tag = PLW
+			has_or_had_tag = PNY
+			has_or_had_tag = RSW
+			has_or_had_tag = SGK
+			has_or_had_tag = SLU
+			has_or_had_tag = XCO
+			has_or_had_tag = WBC
 			has_or_had_tag = WCR
+			has_or_had_tag = ZBG
 		}
 	}
 	# P14;CAH-XI; Austronesian small-vessel adapter; no trans-Pacific discovery or oceanic class is implied
@@ -1708,8 +1743,6 @@ antq_mesopotamian_river_patrol = {
 	country_potential = {
 		OR = {
 			has_or_had_tag = XAH
-			has_or_had_tag = XAI
-			has_or_had_tag = XAJ
 			has_or_had_tag = PRS
 		}
 	}
@@ -1729,15 +1762,18 @@ antq_persian_gulf_patrol_craft = {
 	hull_size = -3
 	country_potential = {
 		OR = {
-			has_or_had_tag = XAH
-			has_or_had_tag = XAI
-			has_or_had_tag = XAJ
-			has_or_had_tag = PRS
-			has_or_had_tag = OMN
-			has_or_had_tag = XBI
-			has_or_had_tag = HIM
-			has_or_had_tag = QAT
+			has_or_had_tag = AGR
+			has_or_had_tag = GRH
 			has_or_had_tag = XBJ
+			has_or_had_tag = HIM
+			has_or_had_tag = NAB
+			has_or_had_tag = OMN
+			has_or_had_tag = XAH
+			has_or_had_tag = PRS
+			has_or_had_tag = QAT
+			has_or_had_tag = XER
+			has_or_had_tag = XBI
+			has_or_had_tag = XEQ
 		}
 	}
 	# P8.2;P8.5;P14;PER;CAH-XI; A stitched-plank coastal patrol and escort adapter for Gulf ports and island passages without projecting later dhow rigs or a permanent state navy.
@@ -1756,10 +1792,18 @@ antq_mesopotamian_river_transport = {
 	hull_size = -2
 	country_potential = {
 		OR = {
+			has_or_had_tag = AGR
+			has_or_had_tag = GRH
+			has_or_had_tag = XBJ
+			has_or_had_tag = HIM
+			has_or_had_tag = NAB
+			has_or_had_tag = OMN
 			has_or_had_tag = XAH
-			has_or_had_tag = XAI
-			has_or_had_tag = XAJ
 			has_or_had_tag = PRS
+			has_or_had_tag = QAT
+			has_or_had_tag = XER
+			has_or_had_tag = XBI
+			has_or_had_tag = XEQ
 		}
 	}
 	# P8.2;P14;PER;CAH-XI; A broad river cargo and troop-transport adapter for Mesopotamian waterways, distinct from an ocean-going merchant roundship.
@@ -1778,11 +1822,8 @@ antq_caspian_oared_boat = {
 	hull_size = -4
 	country_potential = {
 		OR = {
-			has_or_had_tag = XAH
-			has_or_had_tag = XAK
 			has_or_had_tag = XAQ
-			has_or_had_tag = IBR
-			has_or_had_tag = XAO
+			has_or_had_tag = XAH
 		}
 	}
 	# P8.2;P14;PER;CAH-XI; A compact oared coastal craft for Caspian shore movement and local patrol, not a Mediterranean trireme or a reconstructed royal squadron.
@@ -2439,27 +2480,41 @@ antq_british_coastal_warboat = {
 	hull_size = -4
 	country_potential = {
 		OR = {
-			has_or_had_tag = XCB
-			has_or_had_tag = DUM
-			has_or_had_tag = XES
+			has_or_had_tag = XBZ
 			has_or_had_tag = XET
-			has_or_had_tag = PBI
-			has_or_had_tag = CRV
-			has_or_had_tag = XEX
-			has_or_had_tag = VOT
-			has_or_had_tag = XEZ
-			has_or_had_tag = XFA
-			has_or_had_tag = VCN
-			has_or_had_tag = XFB
-			has_or_had_tag = EPD
-			has_or_had_tag = VAC
-			has_or_had_tag = DCT
-			has_or_had_tag = CRE
-			has_or_had_tag = XFD
-			has_or_had_tag = LGB
-			has_or_had_tag = XFE
-			has_or_had_tag = NCR
+			has_or_had_tag = XBY
+			has_or_had_tag = XDJ
+			has_or_had_tag = XFC
 			has_or_had_tag = CAL
+			has_or_had_tag = XBV
+			has_or_had_tag = XFD
+			has_or_had_tag = XEW
+			has_or_had_tag = XEV
+			has_or_had_tag = CRE
+			has_or_had_tag = CRV
+			has_or_had_tag = XFA
+			has_or_had_tag = DCT
+			has_or_had_tag = XEY
+			has_or_had_tag = XEX
+			has_or_had_tag = DOB
+			has_or_had_tag = DUM
+			has_or_had_tag = XEU
+			has_or_had_tag = EPD
+			has_or_had_tag = XBX
+			has_or_had_tag = LGB
+			has_or_had_tag = NCR
+			has_or_had_tag = XEZ
+			has_or_had_tag = XCB
+			has_or_had_tag = PBI
+			has_or_had_tag = XES
+			has_or_had_tag = SEL
+			has_or_had_tag = XCA
+			has_or_had_tag = XFE
+			has_or_had_tag = XFB
+			has_or_had_tag = XBW
+			has_or_had_tag = VAC
+			has_or_had_tag = VCN
+			has_or_had_tag = VOT
 		}
 	}
 	# P8.7;P14;CAH-XI; A bounded coastal patrol adapter for British harbor polities, not a reconstructed standardized state fleet.
@@ -2478,27 +2533,41 @@ antq_british_hide_transport = {
 	hull_size = -3
 	country_potential = {
 		OR = {
-			has_or_had_tag = XCB
-			has_or_had_tag = DUM
-			has_or_had_tag = XES
+			has_or_had_tag = XBZ
 			has_or_had_tag = XET
-			has_or_had_tag = PBI
-			has_or_had_tag = CRV
-			has_or_had_tag = XEX
-			has_or_had_tag = VOT
-			has_or_had_tag = XEZ
-			has_or_had_tag = XFA
-			has_or_had_tag = VCN
-			has_or_had_tag = XFB
-			has_or_had_tag = EPD
-			has_or_had_tag = VAC
-			has_or_had_tag = DCT
-			has_or_had_tag = CRE
-			has_or_had_tag = XFD
-			has_or_had_tag = LGB
-			has_or_had_tag = XFE
-			has_or_had_tag = NCR
+			has_or_had_tag = XBY
+			has_or_had_tag = XDJ
+			has_or_had_tag = XFC
 			has_or_had_tag = CAL
+			has_or_had_tag = XBV
+			has_or_had_tag = XFD
+			has_or_had_tag = XEW
+			has_or_had_tag = XEV
+			has_or_had_tag = CRE
+			has_or_had_tag = CRV
+			has_or_had_tag = XFA
+			has_or_had_tag = DCT
+			has_or_had_tag = XEY
+			has_or_had_tag = XEX
+			has_or_had_tag = DOB
+			has_or_had_tag = DUM
+			has_or_had_tag = XEU
+			has_or_had_tag = EPD
+			has_or_had_tag = XBX
+			has_or_had_tag = LGB
+			has_or_had_tag = NCR
+			has_or_had_tag = XEZ
+			has_or_had_tag = XCB
+			has_or_had_tag = PBI
+			has_or_had_tag = XES
+			has_or_had_tag = SEL
+			has_or_had_tag = XCA
+			has_or_had_tag = XFE
+			has_or_had_tag = XFB
+			has_or_had_tag = XBW
+			has_or_had_tag = VAC
+			has_or_had_tag = VCN
+			has_or_had_tag = VOT
 		}
 	}
 	# P8.7;P14;CAH-XI; A bounded hide-covered coastal carrier for British harbor polities, not a reconstructed standardized state fleet.
@@ -2517,15 +2586,20 @@ antq_hibernian_war_curragh = {
 	hull_size = -4
 	country_potential = {
 		OR = {
-			has_or_had_tag = VNI
-			has_or_had_tag = RHB
-			has_or_had_tag = XFF
 			has_or_had_tag = AUT
-			has_or_had_tag = IVN
-			has_or_had_tag = USD
-			has_or_had_tag = IBG
-			has_or_had_tag = XFI
 			has_or_had_tag = CCI
+			has_or_had_tag = DAR
+			has_or_had_tag = ERD
+			has_or_had_tag = GAN
+			has_or_had_tag = IBG
+			has_or_had_tag = IVN
+			has_or_had_tag = XFI
+			has_or_had_tag = XFF
+			has_or_had_tag = RHB
+			has_or_had_tag = XCC
+			has_or_had_tag = USD
+			has_or_had_tag = XFG
+			has_or_had_tag = VNI
 		}
 	}
 	# P8.7;P14;CAH-XI; A bounded Hibernian coastal patrol role, not a reconstructed standardized state fleet or a projection of later raiding institutions.
@@ -2544,15 +2618,20 @@ antq_hibernian_cargo_curragh = {
 	hull_size = -3
 	country_potential = {
 		OR = {
-			has_or_had_tag = VNI
-			has_or_had_tag = RHB
-			has_or_had_tag = XFF
 			has_or_had_tag = AUT
-			has_or_had_tag = IVN
-			has_or_had_tag = USD
-			has_or_had_tag = IBG
-			has_or_had_tag = XFI
 			has_or_had_tag = CCI
+			has_or_had_tag = DAR
+			has_or_had_tag = ERD
+			has_or_had_tag = GAN
+			has_or_had_tag = IBG
+			has_or_had_tag = IVN
+			has_or_had_tag = XFI
+			has_or_had_tag = XFF
+			has_or_had_tag = RHB
+			has_or_had_tag = XCC
+			has_or_had_tag = USD
+			has_or_had_tag = XFG
+			has_or_had_tag = VNI
 		}
 	}
 	# P8.7;P14;CAH-XI; A bounded Hibernian coastal carrier role, not a reconstructed standardized state fleet or a projection of later raiding institutions.
@@ -2571,8 +2650,29 @@ antq_germanic_north_sea_patrol = {
 	hull_size = -4
 	country_potential = {
 		OR = {
+			has_or_had_tag = XBQ
+			has_or_had_tag = AVN
+			has_or_had_tag = BTV
+			has_or_had_tag = XDU
+			has_or_had_tag = CMB
+			has_or_had_tag = CPS
+			has_or_had_tag = CTU
+			has_or_had_tag = XDX
+			has_or_had_tag = XBM
+			has_or_had_tag = GTL
 			has_or_had_tag = GUT
+			has_or_had_tag = JUT
+			has_or_had_tag = XBN
 			has_or_had_tag = XDV
+			has_or_had_tag = NNR
+			has_or_had_tag = RDN
+			has_or_had_tag = RUG
+			has_or_had_tag = SBN
+			has_or_had_tag = XEP
+			has_or_had_tag = SNR
+			has_or_had_tag = SRD
+			has_or_had_tag = XBS
+			has_or_had_tag = VRN
 		}
 	}
 	# P8.7;P14;CAH-XI;TAC-GER; A bounded North Sea patrol adapter for harbor-owning Germanic polities, not a reconstructed standardized state fleet.
@@ -2591,8 +2691,29 @@ antq_germanic_north_sea_transport = {
 	hull_size = -3
 	country_potential = {
 		OR = {
+			has_or_had_tag = XBQ
+			has_or_had_tag = AVN
+			has_or_had_tag = BTV
+			has_or_had_tag = XDU
+			has_or_had_tag = CMB
+			has_or_had_tag = CPS
+			has_or_had_tag = CTU
+			has_or_had_tag = XDX
+			has_or_had_tag = XBM
+			has_or_had_tag = GTL
 			has_or_had_tag = GUT
+			has_or_had_tag = JUT
+			has_or_had_tag = XBN
 			has_or_had_tag = XDV
+			has_or_had_tag = NNR
+			has_or_had_tag = RDN
+			has_or_had_tag = RUG
+			has_or_had_tag = SBN
+			has_or_had_tag = XEP
+			has_or_had_tag = SNR
+			has_or_had_tag = SRD
+			has_or_had_tag = XBS
+			has_or_had_tag = VRN
 		}
 	}
 	# P8.7;P14;CAH-XI;TAC-GER; A bounded North Sea carrier adapter for harbor-owning Germanic polities, not a reconstructed standardized state fleet.
@@ -2612,6 +2733,11 @@ antq_baltic_sewn_plank_patrol = {
 	country_potential = {
 		OR = {
 			has_or_had_tag = AES
+			has_or_had_tag = BPC
+			has_or_had_tag = ETG
+			has_or_had_tag = PLH
+			has_or_had_tag = WBB
+			has_or_had_tag = WSC
 		}
 	}
 	# P8.7;P14;CAH-XI;VU-BRUSH; A bounded sewn-plank Baltic patrol adapter for the Aestian coast, not a reconstructed standardized state fleet.
@@ -2631,6 +2757,11 @@ antq_baltic_sewn_plank_transport = {
 	country_potential = {
 		OR = {
 			has_or_had_tag = AES
+			has_or_had_tag = BPC
+			has_or_had_tag = ETG
+			has_or_had_tag = PLH
+			has_or_had_tag = WBB
+			has_or_had_tag = WSC
 		}
 	}
 	# P8.7;P14;CAH-XI;VU-BRUSH; A bounded sewn-plank Baltic carrier adapter for the Aestian coast, not a reconstructed standardized state fleet.
@@ -2650,6 +2781,9 @@ antq_finnic_coastal_dugout_patrol = {
 	country_potential = {
 		OR = {
 			has_or_had_tag = XBU
+			has_or_had_tag = XEF
+			has_or_had_tag = XFJ
+			has_or_had_tag = WHT
 		}
 	}
 	# P8.7;P14;CAH-XI; A bounded archipelago and coastal patrol adapter for Finnic harbor communities, not a reconstructed standardized state fleet.
@@ -2669,6 +2803,9 @@ antq_finnic_coastal_transport = {
 	country_potential = {
 		OR = {
 			has_or_had_tag = XBU
+			has_or_had_tag = XEF
+			has_or_had_tag = XFJ
+			has_or_had_tag = WHT
 		}
 	}
 	# P8.7;P14;CAH-XI; A bounded archipelago and coastal carrier adapter for Finnic harbor communities, not a reconstructed standardized state fleet.
@@ -2687,7 +2824,19 @@ antq_pontic_monoxylon_patrol = {
 	hull_size = -4
 	country_potential = {
 		OR = {
+			has_or_had_tag = XCF
+			has_or_had_tag = XAQ
+			has_or_had_tag = AOR
+			has_or_had_tag = XCD
+			has_or_had_tag = XAF
+			has_or_had_tag = CLZ
+			has_or_had_tag = KHW
+			has_or_had_tag = XGJ
 			has_or_had_tag = ROX
+			has_or_had_tag = SKH
+			has_or_had_tag = WHU
+			has_or_had_tag = WJO
+			has_or_had_tag = YNC
 		}
 	}
 	# P8.2;P14;CAH-XI; A bounded river-sea patrol adapter for the lower Pontic coast, not a reconstructed standardized state fleet.
@@ -2706,7 +2855,19 @@ antq_pontic_river_sea_transport = {
 	hull_size = -3
 	country_potential = {
 		OR = {
+			has_or_had_tag = XCF
+			has_or_had_tag = XAQ
+			has_or_had_tag = AOR
+			has_or_had_tag = XCD
+			has_or_had_tag = XAF
+			has_or_had_tag = CLZ
+			has_or_had_tag = KHW
+			has_or_had_tag = XGJ
 			has_or_had_tag = ROX
+			has_or_had_tag = SKH
+			has_or_had_tag = WHU
+			has_or_had_tag = WJO
+			has_or_had_tag = YNC
 		}
 	}
 	# P8.2;P14;CAH-XI; A bounded river-sea carrier adapter for the lower Pontic coast, not a reconstructed standardized state fleet.
@@ -2726,9 +2887,24 @@ antq_byeonhan_coastal_patrol = {
 	country_potential = {
 		OR = {
 			has_or_had_tag = BYE
+			has_or_had_tag = GMR
+			has_or_had_tag = GOG
+			has_or_had_tag = XAR
+			has_or_had_tag = HMR
+			has_or_had_tag = HOK
+			has_or_had_tag = IZM
+			has_or_had_tag = JIN
+			has_or_had_tag = KBI
+			has_or_had_tag = KYU
+			has_or_had_tag = XAW
+			has_or_had_tag = OHW
+			has_or_had_tag = RYS
+			has_or_had_tag = XEI
+			has_or_had_tag = TKW
+			has_or_had_tag = WAA
 		}
 	}
-	# P8.3;P14;CAH-XI; A bounded southern Korean coastal patrol adapter, not a reconstructed standardized state fleet.
+	# P8.3;P14;CAH-XI; A bounded East Asian coastal patrol adapter, not a reconstructed standardized state fleet.
 }
 
 antq_byeonhan_cargo_ferry = {
@@ -2745,9 +2921,24 @@ antq_byeonhan_cargo_ferry = {
 	country_potential = {
 		OR = {
 			has_or_had_tag = BYE
+			has_or_had_tag = GMR
+			has_or_had_tag = GOG
+			has_or_had_tag = XAR
+			has_or_had_tag = HMR
+			has_or_had_tag = HOK
+			has_or_had_tag = IZM
+			has_or_had_tag = JIN
+			has_or_had_tag = KBI
+			has_or_had_tag = KYU
+			has_or_had_tag = XAW
+			has_or_had_tag = OHW
+			has_or_had_tag = RYS
+			has_or_had_tag = XEI
+			has_or_had_tag = TKW
+			has_or_had_tag = WAA
 		}
 	}
-	# P8.3;P14;CAH-XI; A bounded southern Korean coastal carrier adapter, not a reconstructed standardized state fleet.
+	# P8.3;P14;CAH-XI; A bounded East Asian coastal carrier adapter, not a reconstructed standardized state fleet.
 }
 
 antq_philippine_outrigger_patrol = {
@@ -2763,8 +2954,8 @@ antq_philippine_outrigger_patrol = {
 	hull_size = -4
 	country_potential = {
 		OR = {
-			has_or_had_tag = XGX
 			has_or_had_tag = BCP
+			has_or_had_tag = XGX
 			has_or_had_tag = MTT
 		}
 	}
@@ -2784,8 +2975,8 @@ antq_philippine_outrigger_transport = {
 	hull_size = -3
 	country_potential = {
 		OR = {
-			has_or_had_tag = XGX
 			has_or_had_tag = BCP
+			has_or_had_tag = XGX
 			has_or_had_tag = MTT
 		}
 	}
@@ -2805,12 +2996,58 @@ antq_sulawesi_lashed_lug_patrol = {
 	hull_size = -4
 	country_potential = {
 		OR = {
+			has_or_had_tag = AGS
+			has_or_had_tag = XDQ
+			has_or_had_tag = BCP
+			has_or_had_tag = XHD
+			has_or_had_tag = BGU
+			has_or_had_tag = BNC
+			has_or_had_tag = XGM
 			has_or_had_tag = BTM
+			has_or_had_tag = XHA
+			has_or_had_tag = XGL
+			has_or_had_tag = CXR
+			has_or_had_tag = DGU
+			has_or_had_tag = EMR
+			has_or_had_tag = XHE
+			has_or_had_tag = JAV
+			has_or_had_tag = KBC
+			has_or_had_tag = XCL
+			has_or_had_tag = KPM
+			has_or_had_tag = XHF
+			has_or_had_tag = KSB
+			has_or_had_tag = XHB
+			has_or_had_tag = LRP
+			has_or_had_tag = LWM
+			has_or_had_tag = LZC
+			has_or_had_tag = XCM
+			has_or_had_tag = XGX
+			has_or_had_tag = XGY
+			has_or_had_tag = XDM
 			has_or_had_tag = MKS
 			has_or_had_tag = MNH
+			has_or_had_tag = XCK
+			has_or_had_tag = MTT
+			has_or_had_tag = NBR
+			has_or_had_tag = NEB
+			has_or_had_tag = XGZ
+			has_or_had_tag = NHM
+			has_or_had_tag = XHC
+			has_or_had_tag = PLW
+			has_or_had_tag = PNY
+			has_or_had_tag = PYU
+			has_or_had_tag = RSW
+			has_or_had_tag = SGK
+			has_or_had_tag = XHG
+			has_or_had_tag = SHY
+			has_or_had_tag = SLU
+			has_or_had_tag = XCO
+			has_or_had_tag = WBC
+			has_or_had_tag = WCR
+			has_or_had_tag = ZBG
 		}
 	}
-	# P8.9;P14;CAH-XI;ANU-SULAWESI; A bounded Sulawesi inter-island patrol adapter using lashed-lug construction, not a reconstructed standardized state fleet.
+	# P8.9;P14;CAH-XI;ANU-SULAWESI; A bounded island and littoral patrol adapter using lashed-lug construction, not a reconstructed standardized state fleet.
 }
 
 antq_sulawesi_outrigger_transport = {
@@ -2826,12 +3063,58 @@ antq_sulawesi_outrigger_transport = {
 	hull_size = -3
 	country_potential = {
 		OR = {
+			has_or_had_tag = AGS
+			has_or_had_tag = XDQ
+			has_or_had_tag = BCP
+			has_or_had_tag = XHD
+			has_or_had_tag = BGU
+			has_or_had_tag = BNC
+			has_or_had_tag = XGM
 			has_or_had_tag = BTM
+			has_or_had_tag = XHA
+			has_or_had_tag = XGL
+			has_or_had_tag = CXR
+			has_or_had_tag = DGU
+			has_or_had_tag = EMR
+			has_or_had_tag = XHE
+			has_or_had_tag = JAV
+			has_or_had_tag = KBC
+			has_or_had_tag = XCL
+			has_or_had_tag = KPM
+			has_or_had_tag = XHF
+			has_or_had_tag = KSB
+			has_or_had_tag = XHB
+			has_or_had_tag = LRP
+			has_or_had_tag = LWM
+			has_or_had_tag = LZC
+			has_or_had_tag = XCM
+			has_or_had_tag = XGX
+			has_or_had_tag = XGY
+			has_or_had_tag = XDM
 			has_or_had_tag = MKS
 			has_or_had_tag = MNH
+			has_or_had_tag = XCK
+			has_or_had_tag = MTT
+			has_or_had_tag = NBR
+			has_or_had_tag = NEB
+			has_or_had_tag = XGZ
+			has_or_had_tag = NHM
+			has_or_had_tag = XHC
+			has_or_had_tag = PLW
+			has_or_had_tag = PNY
+			has_or_had_tag = PYU
+			has_or_had_tag = RSW
+			has_or_had_tag = SGK
+			has_or_had_tag = XHG
+			has_or_had_tag = SHY
+			has_or_had_tag = SLU
+			has_or_had_tag = XCO
+			has_or_had_tag = WBC
+			has_or_had_tag = WCR
+			has_or_had_tag = ZBG
 		}
 	}
-	# P8.9;P14;CAH-XI;ANU-SULAWESI; A bounded Sulawesi inter-island carrier adapter using outrigger craft, not a reconstructed standardized state fleet.
+	# P8.9;P14;CAH-XI;ANU-SULAWESI; A bounded island and littoral carrier adapter using outrigger craft, not a reconstructed standardized state fleet.
 }
 
 antq_kwale_coastal_patrol = {
@@ -2847,10 +3130,26 @@ antq_kwale_coastal_patrol = {
 	hull_size = -4
 	country_potential = {
 		OR = {
+			has_or_had_tag = AKS
+			has_or_had_tag = ARO
+			has_or_had_tag = XFN
+			has_or_had_tag = AZA
+			has_or_had_tag = XDF
+			has_or_had_tag = XBG
 			has_or_had_tag = KWL
+			has_or_had_tag = LMP
+			has_or_had_tag = XEM
+			has_or_had_tag = MLA
+			has_or_had_tag = XFP
+			has_or_had_tag = XFO
+			has_or_had_tag = OPO
+			has_or_had_tag = RUV
+			has_or_had_tag = XEL
+			has_or_had_tag = WGD
+			has_or_had_tag = ZHF
 		}
 	}
-	# P8.5;P14;CAH-XI; A bounded East African coastal patrol adapter for Kwale communities, not a reconstructed standardized state fleet.
+	# P8.5;P14;CAH-XI; A bounded African coastal patrol adapter, not a reconstructed standardized state fleet.
 }
 
 antq_kwale_sewn_plank_transport = {
@@ -2866,10 +3165,26 @@ antq_kwale_sewn_plank_transport = {
 	hull_size = -3
 	country_potential = {
 		OR = {
+			has_or_had_tag = AKS
+			has_or_had_tag = ARO
+			has_or_had_tag = XFN
+			has_or_had_tag = AZA
+			has_or_had_tag = XDF
+			has_or_had_tag = XBG
 			has_or_had_tag = KWL
+			has_or_had_tag = LMP
+			has_or_had_tag = XEM
+			has_or_had_tag = MLA
+			has_or_had_tag = XFP
+			has_or_had_tag = XFO
+			has_or_had_tag = OPO
+			has_or_had_tag = RUV
+			has_or_had_tag = XEL
+			has_or_had_tag = WGD
+			has_or_had_tag = ZHF
 		}
 	}
-	# P8.5;P14;CAH-XI; A bounded East African sewn-plank carrier adapter for Kwale communities, not a reconstructed standardized state fleet.
+	# P8.5;P14;CAH-XI; A bounded African coastal carrier adapter using sewn-plank construction, not a reconstructed standardized state fleet.
 }
 
 antq_andean_balsa_patrol = {
@@ -2885,8 +3200,12 @@ antq_andean_balsa_patrol = {
 	hull_size = -4
 	country_potential = {
 		OR = {
-			has_or_had_tag = NAZ
+			has_or_had_tag = XDI
 			has_or_had_tag = XCW
+			has_or_had_tag = NAZ
+			has_or_had_tag = SNE
+			has_or_had_tag = VCS
+			has_or_had_tag = VIR
 		}
 	}
 	# P8.10;P14;CAH-XI; A bounded Pacific balsa-raft patrol adapter for coastal Andean polities, not a reconstructed standardized state fleet.
@@ -2905,8 +3224,12 @@ antq_andean_balsa_transport = {
 	hull_size = -3
 	country_potential = {
 		OR = {
-			has_or_had_tag = NAZ
+			has_or_had_tag = XDI
 			has_or_had_tag = XCW
+			has_or_had_tag = NAZ
+			has_or_had_tag = SNE
+			has_or_had_tag = VCS
+			has_or_had_tag = VIR
 		}
 	}
 	# P8.10;P14;CAH-XI; A bounded Pacific balsa-raft carrier adapter for coastal Andean polities, not a reconstructed standardized state fleet.
@@ -2965,10 +3288,24 @@ antq_caribbean_dugout_patrol = {
 	hull_size = -4
 	country_potential = {
 		OR = {
+			has_or_had_tag = CCF
+			has_or_had_tag = XGV
+			has_or_had_tag = CPH
+			has_or_had_tag = DOR
+			has_or_had_tag = XCV
+			has_or_had_tag = FLP
+			has_or_had_tag = XGT
+			has_or_had_tag = GPC
+			has_or_had_tag = IZA
+			has_or_had_tag = XCS
+			has_or_had_tag = XGU
+			has_or_had_tag = PPA
+			has_or_had_tag = XGS
 			has_or_had_tag = WIC
+			has_or_had_tag = XCU
 		}
 	}
-	# P8.10;P14;CAH-XI; A bounded Windward Caribbean dugout patrol adapter, not a reconstructed standardized state fleet.
+	# P8.10;P14;CAH-XI; A bounded American river and coastal dugout patrol adapter, not a reconstructed standardized state fleet.
 }
 
 antq_caribbean_dugout_transport = {
@@ -2984,10 +3321,24 @@ antq_caribbean_dugout_transport = {
 	hull_size = -3
 	country_potential = {
 		OR = {
+			has_or_had_tag = CCF
+			has_or_had_tag = XGV
+			has_or_had_tag = CPH
+			has_or_had_tag = DOR
+			has_or_had_tag = XCV
+			has_or_had_tag = FLP
+			has_or_had_tag = XGT
+			has_or_had_tag = GPC
+			has_or_had_tag = IZA
+			has_or_had_tag = XCS
+			has_or_had_tag = XGU
+			has_or_had_tag = PPA
+			has_or_had_tag = XGS
 			has_or_had_tag = WIC
+			has_or_had_tag = XCU
 		}
 	}
-	# P8.10;P14;CAH-XI; A bounded Windward Caribbean dugout carrier adapter, not a reconstructed standardized state fleet.
+	# P8.10;P14;CAH-XI; A bounded American river and coastal dugout carrier adapter, not a reconstructed standardized state fleet.
 }
 
 antq_californian_coastal_canoe_patrol = {

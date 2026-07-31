@@ -71,6 +71,9 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 - [ ] Expand visible advance depth per major profile in every age while keeping
   foreign branches hidden. Report visible, owned, eligible, and total nodes for
   representative tags; Rome must have a deep tree rather than 12-20 cards.
+  The 463-tag ledger now proves the gap: Rome sees 31/24/24/24/12/12,
+  Parthia 22/19/19/19/12/7, and Suebi 22/15/19/19/11/12. Target
+  32/32/32/32/16/16 with direct four-up art; all 463 remain open.
 - [ ] Replace the full societal-values union with AD 1 meanings, names,
   effects, profile gates, and dated later-age sliders. No medieval or
   early-modern political vocabulary may surface.
@@ -111,6 +114,9 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   ancient units provide every tag 4 regular, 2 levy, and 2 mercenary roles.
   Twenty-two mercenary types include regional proofs for Rome, Parthia, Suebi,
   Han, India, Africa, and the Americas.
+- Static green: the full 13,553-location ownership union intersects the mounted
+  4,421-port graph. All 231 coastal polities receive an ancient patrol and
+  transport profile; all 232 inland polities receive no naval unit.
 - Static green: all 376 privileges have potentials; fresh Rome initialization
   emits zero invalid-privilege removals. Parthia's 14 Iranian law packages
   remain isolated but are runtime-blocked; five distinct engine contracts are
@@ -119,6 +125,9 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   are profile-balanced across 838 advances;
   no node advertises more than eight. Roman building unlocks stay on the
   Roman/Italic path.
+- Static green: all 80 named Roman one-level monuments are setup-only and
+  reject new construction. The 23 reusable Roman provincial families require
+  an Italic/Iberian/Balkan culture group or Roman Law and Engineering adoption.
 - Static green: basic RGO capacity is universal; Flour and Bread food is 10
   versus installed wheat 8; steel and 16 engine bridge categories use ancient
   localization in all 11 clients.

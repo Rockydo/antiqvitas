@@ -13,6 +13,9 @@ antq_aqua_virgo = {
 	city = yes
 	megalopolis = yes
 	build_time = infrastructure_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_population_capacity = 1.0
 		local_monthly_food_modifier = 0.03
@@ -41,6 +44,9 @@ antq_horrea_publica = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_monthly_food_modifier = 0.03
 	}
@@ -69,6 +75,9 @@ antq_forum_romanum = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.04
 		local_merchant_capacity = 0.03
@@ -100,6 +109,9 @@ antq_forum_augusti = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.03
 		local_cultural_tradition = 0.10
@@ -131,6 +143,9 @@ antq_basilica_aemilia = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.02
 		local_merchant_capacity = 0.02
@@ -162,6 +177,9 @@ antq_macellum_romanum = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_merchant_capacity = 0.06
 		local_merchant_power = 0.03
@@ -195,6 +213,9 @@ antq_horrea_galbana = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_merchant_capacity = 0.08
 		local_merchant_power = 0.04
@@ -227,6 +248,9 @@ antq_thermae_agrippae = {
 	city = yes
 	megalopolis = yes
 	build_time = infrastructure_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_disease_resistance = 0.03
 		local_life_expectancy = 1
@@ -256,6 +280,9 @@ antq_theatrum_marcelli = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.10
 		local_unrest = -0.01
@@ -287,6 +314,9 @@ antq_theatrum_balbi = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.08
 		local_unrest = -0.006
@@ -318,6 +348,9 @@ antq_templum_martis_ultoris = {
 	city = yes
 	megalopolis = yes
 	build_time = religious_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_unrest = -0.015
 		local_clergy_max_literacy = 1
@@ -348,6 +381,9 @@ antq_tabularium = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.03
 	}
@@ -378,6 +414,9 @@ antq_circus_maximus = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.10
 		local_unrest = -0.02
@@ -409,6 +448,9 @@ antq_monetarium_roma = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.04
 	}
@@ -439,6 +481,9 @@ antq_navalia_romae = {
 	city = yes
 	megalopolis = yes
 	build_time = medium_port_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_sailors = 0.01
 		local_repair_speed = 0.01
@@ -472,6 +517,9 @@ antq_classis_ravennatis = {
 	city = yes
 	megalopolis = yes
 	build_time = medium_port_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_sailors = 0.012
 		local_repair_speed = 0.02
@@ -505,6 +553,9 @@ antq_castrum_mogontiacum = {
 	city = yes
 	megalopolis = yes
 	build_time = small_fort_building
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_garrison_size = 0.05
 		local_unrest = -0.01
@@ -541,6 +592,9 @@ antq_castrum_novaesium = {
 	city = yes
 	megalopolis = yes
 	build_time = small_fort_building
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_garrison_size = 0.04
 		local_unrest = -0.008
@@ -577,6 +631,9 @@ antq_castrum_hunnerberg = {
 	city = yes
 	megalopolis = yes
 	build_time = small_fort_building
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_garrison_size = 0.04
 		local_unrest = -0.008
@@ -613,6 +670,9 @@ antq_castrum_augusta_raurica = {
 	city = yes
 	megalopolis = yes
 	build_time = small_fort_building
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_garrison_size = 0.035
 		local_unrest = -0.006
@@ -649,6 +709,9 @@ antq_officinae_urbanae = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_production_efficiency = 0.03
 	}
@@ -678,6 +741,9 @@ antq_pistrina_urbana = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_monthly_food_modifier = 0.02
 	}
@@ -706,6 +772,9 @@ antq_villa_liviae = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_population_capacity = 0.20
 		local_production_efficiency = 0.01
@@ -736,6 +805,9 @@ antq_pantheum_agrippae = {
 	city = yes
 	megalopolis = yes
 	build_time = religious_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_unrest = -0.01
 		local_clergy_max_literacy = 0.5
@@ -768,6 +840,9 @@ antq_saepta_iulia = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.03
 		local_cultural_tradition = 0.04
@@ -801,6 +876,9 @@ antq_diribitorium = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.025
 	}
@@ -834,6 +912,9 @@ antq_templum_apollinis_palatini = {
 	city = yes
 	megalopolis = yes
 	build_time = religious_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_unrest = -0.012
 		local_clergy_max_literacy = 0.75
@@ -865,6 +946,9 @@ antq_bibliotheca_latina_graecaque = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.10
 		local_max_control = 0.01
@@ -897,6 +981,9 @@ antq_curia_iulia = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.05
 		local_cultural_tradition = 0.05
@@ -930,6 +1017,9 @@ antq_porticus_octaviae = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.08
 		local_unrest = -0.005
@@ -963,6 +1053,9 @@ antq_porticus_aemiliae = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_merchant_capacity = 0.06
 		local_merchant_power = 0.025
@@ -998,6 +1091,9 @@ antq_aqua_alsietina = {
 	city = yes
 	megalopolis = yes
 	build_time = infrastructure_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_population_capacity = 0.15
 		local_monthly_food_modifier = 0.015
@@ -1027,6 +1123,9 @@ antq_naumachia_augusti = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.08
 		local_unrest = -0.01
@@ -1060,6 +1159,9 @@ antq_horologium_augusti = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.10
 		local_max_control = 0.01
@@ -1091,6 +1193,9 @@ antq_ara_pacis_augustae = {
 	city = yes
 	megalopolis = yes
 	build_time = religious_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_unrest = -0.006
 		local_cultural_tradition = 0.04
@@ -1122,6 +1227,9 @@ antq_mausoleum_augusti = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.08
 		local_unrest = -0.006
@@ -1154,6 +1262,9 @@ antq_amphitheatrum_statilii_tauri = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.07
 		local_unrest = -0.006
@@ -1187,6 +1298,9 @@ antq_porticus_liviae = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.07
 		local_unrest = -0.005
@@ -1221,6 +1335,9 @@ antq_castrum_augusta_vindelicum = {
 	city = yes
 	megalopolis = yes
 	build_time = small_fort_building
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_garrison_size = 0.04
 		local_unrest = -0.008
@@ -1257,6 +1374,9 @@ antq_castrum_argentoratum = {
 	city = yes
 	megalopolis = yes
 	build_time = small_fort_building
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_garrison_size = 0.04
 		local_unrest = -0.008
@@ -1293,6 +1413,9 @@ antq_castrum_aliso = {
 	city = yes
 	megalopolis = yes
 	build_time = small_fort_building
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_garrison_size = 0.04
 		local_unrest = -0.008
@@ -1329,6 +1452,9 @@ antq_castrum_bonna = {
 	city = yes
 	megalopolis = yes
 	build_time = small_fort_building
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_garrison_size = 0.03
 		local_unrest = -0.006
@@ -1365,6 +1491,9 @@ antq_pons_fabricius = {
 	city = yes
 	megalopolis = yes
 	build_time = infrastructure_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.015
 		local_merchant_capacity = 0.015
@@ -1396,6 +1525,9 @@ antq_pons_aemilius = {
 	city = yes
 	megalopolis = yes
 	build_time = infrastructure_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.015
 		local_merchant_capacity = 0.015
@@ -1427,6 +1559,9 @@ antq_fornix_augusti = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.02
 		local_cultural_tradition = 0.01
@@ -1458,6 +1593,9 @@ antq_porticus_ad_nationes = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.03
 		local_unrest = -0.003
@@ -1490,6 +1628,9 @@ antq_porticus_octavia = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.025
 		local_unrest = -0.003
@@ -1522,6 +1663,9 @@ antq_hecatostylum = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.025
 		local_unrest = -0.003
@@ -1554,6 +1698,9 @@ antq_tiber_embankment = {
 	city = yes
 	megalopolis = yes
 	build_time = infrastructure_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.01
 		local_merchant_capacity = 0.015
@@ -1585,6 +1732,9 @@ antq_porticus_post_navalia = {
 	city = yes
 	megalopolis = yes
 	build_time = medium_port_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_sailors = 0.005
 		local_repair_speed = 0.005
@@ -1617,6 +1767,9 @@ antq_porticus_forum_holitorium = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_merchant_capacity = 0.02
 		local_merchant_power = 0.005
@@ -1648,6 +1801,9 @@ antq_aedes_portuni = {
 	city = yes
 	megalopolis = yes
 	build_time = religious_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_unrest = -0.003
 		local_cultural_tradition = 0.015
@@ -1679,6 +1835,9 @@ antq_regia = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.015
 		local_clergy_max_literacy = 0.005
@@ -1711,6 +1870,9 @@ antq_circus_flaminius = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.02
 		local_unrest = -0.004
@@ -1743,6 +1905,9 @@ antq_aedes_vestae = {
 	city = yes
 	megalopolis = yes
 	build_time = religious_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_unrest = -0.004
 		local_cultural_tradition = 0.015
@@ -1774,6 +1939,9 @@ antq_aedes_saturni = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.015
 		local_merchant_capacity = 0.01
@@ -1806,6 +1974,9 @@ antq_miliarium_aureum = {
 	city = yes
 	megalopolis = yes
 	build_time = infrastructure_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.01
 		local_merchant_capacity = 0.01
@@ -1837,6 +2008,9 @@ antq_aedes_penatium = {
 	city = yes
 	megalopolis = yes
 	build_time = religious_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_unrest = -0.003
 		local_cultural_tradition = 0.012
@@ -1868,6 +2042,9 @@ antq_fornix_fabianus = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.012
 		local_cultural_tradition = 0.01
@@ -1899,6 +2076,9 @@ antq_ara_saturni = {
 	city = yes
 	megalopolis = yes
 	build_time = religious_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_unrest = -0.002
 		local_cultural_tradition = 0.01
@@ -1930,6 +2110,9 @@ antq_rostra_augusti = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.02
 		local_cultural_tradition = 0.02
@@ -1962,6 +2145,9 @@ antq_basilica_iulia = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.025
 		local_merchant_capacity = 0.02
@@ -1994,6 +2180,9 @@ antq_porticus_pompeiana = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.03
 		local_unrest = -0.003
@@ -2026,6 +2215,9 @@ antq_theatrum_pompei = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.05
 		local_unrest = -0.004
@@ -2059,6 +2251,9 @@ antq_aedes_iovis_statoris = {
 	city = yes
 	megalopolis = yes
 	build_time = religious_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_unrest = -0.003
 		local_cultural_tradition = 0.012
@@ -2090,6 +2285,9 @@ antq_curiae_veteres = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.01
 		local_clergy_max_literacy = 0.005
@@ -2122,6 +2320,9 @@ antq_aedes_concordiae_augustae = {
 	city = yes
 	megalopolis = yes
 	build_time = religious_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_unrest = -0.008
 	}
@@ -2151,6 +2352,9 @@ antq_aedes_bellonae = {
 	city = yes
 	megalopolis = yes
 	build_time = religious_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_unrest = -0.006
 	}
@@ -2180,6 +2384,9 @@ antq_aedes_iovis_tonantis = {
 	city = yes
 	megalopolis = yes
 	build_time = religious_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_unrest = -0.006
 	}
@@ -2209,6 +2416,9 @@ antq_aedes_magnae_matris = {
 	city = yes
 	megalopolis = yes
 	build_time = religious_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_unrest = -0.007
 	}
@@ -2238,6 +2448,9 @@ antq_forum_iulium = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.02
 		local_merchant_capacity = 0.015
@@ -2269,6 +2482,9 @@ antq_aedes_divi_iulii = {
 	city = yes
 	megalopolis = yes
 	build_time = religious_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.03
 	}
@@ -2298,6 +2514,9 @@ antq_aedes_fortunae_primigeniae = {
 	city = yes
 	megalopolis = yes
 	build_time = religious_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_unrest = -0.004
 	}
@@ -2327,6 +2546,9 @@ antq_puteal_libonis = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.015
 	}
@@ -2356,6 +2578,9 @@ antq_casa_romuli = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.025
 	}
@@ -2385,6 +2610,9 @@ antq_porticus_gai_et_luci = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_cultural_tradition = 0.02
 	}
@@ -2415,6 +2643,9 @@ antq_chalcidicum_iulium = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_max_control = 0.012
 	}
@@ -2445,6 +2676,9 @@ antq_aedes_victoriae = {
 	city = yes
 	megalopolis = yes
 	build_time = religious_building_time
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_unrest = -0.005
 	}
@@ -2474,6 +2708,9 @@ antq_castra_vetera = {
 	city = yes
 	megalopolis = yes
 	build_time = small_fort_building
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_garrison_size = 0.04
 		local_unrest = -0.008
@@ -2510,6 +2747,9 @@ antq_castra_siscia = {
 	city = yes
 	megalopolis = yes
 	build_time = small_fort_building
+	# Historical one-level monument: created only by the sourced AD 1 setup.
+	country_potential = { always = no }
+	allow = { always = no }
 	modifier = {
 		local_garrison_size = 0.035
 		local_unrest = -0.006

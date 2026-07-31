@@ -123,3 +123,19 @@ Two smoke attempts were deferred by active `endore` game-driver leases (PIDs
 1868 and 35612). No ANTIQVITAS process launched and no log comparison failed.
 The next acquired paired run exposed and fixed graphical-culture resolver
 contracts; final validation is 150/150 and smoke has zero mod-unique lines.
+
+## 2026-07-31 - S3 levy runtime proof deferred by shared EU5 slot
+
+Status: smoke delay resolved; focused in-game evidence remains deferred.
+
+Two protocol-safe mod launches were deferred while `endore` owned the shared
+EU5 process (PID 39496). ANTIQVITAS did not launch or alter the other project.
+Static checks confirm the installed `always_allow_army_levies` contract and the
+universal ancient advance bridge; live levy availability remains open until the
+slot is released.
+
+The following 231-coast naval and 80-monument building batch passes all 150
+static checks. Its two paired-smoke acquisition attempts were also deferred by
+the continuing `endore` lease (later PID 19016). After release, paired smoke
+passed on fingerprint `2c5fe5d475bd8903a683a810ed691f1468c86b325e73e651be719afa9af1a68c`
+with zero new or mod-unique lines.

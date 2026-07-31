@@ -4321,3 +4321,24 @@ EU5 1.3.11 strips selected custom laws even when their holder is a universal,
 depth-zero, otherwise proven advance. Do not emit red or silently discarded
 law selections. Keep sourced profile packages isolated and resume only after a
 new locally verified award contract.
+
+## 2026-07-31 - Naval eligibility follows the mounted port graph
+
+Intersect all 13,553 resolved opening owners with mounted `ports.csv`; do not
+infer coasts from direct exception rows or positive harbor-suitability values.
+Assign one regional patrol/transport pair to every coastal tag, retain
+specialists as additive, and strip every naval potential from inland tags.
+
+## 2026-07-31 - Named Roman monuments are setup-only
+
+The 80 named one-level Roman civic and naval structures represent historical
+AD 1 placements, not a reusable construction family. Disable their build cards
+globally. Keep adoption gameplay on the 23 reusable provincial families,
+gated by Roman-connected culture groups or Roman Law and Engineering.
+
+## 2026-07-31 - Visible advance depth is measured per tag and age
+
+Do not use the global node count as player-facing evidence. Target
+32/32/32/32/16/16 visible cards across the six engine ages (160 total) for
+every opening tag, with profile isolation retained. The generated ledger keeps
+current floors green while marking every remaining gap for direct-art expansion.
