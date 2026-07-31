@@ -51,6 +51,9 @@ TARGETED_QUARANTINES = {
     ),
 }
 EXCLUDED_BY_SURFACE = {
+    # ANTIQVITAS retains and validates this engine action so players can move
+    # the fully replaced ancient societal-value axes.
+    "cabinet_actions": {"change_societal_values.txt"},
     # This exact file is jointly neutralized for legacy institution references
     # by m8_legacy_institution_purge.py.
     "disasters": {"revolution_disaster.txt"},

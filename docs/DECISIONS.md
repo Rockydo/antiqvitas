@@ -1,5 +1,36 @@
 ﻿# Technical and Design Decisions
 
+## 2026-07-31 - Guarantee supply at major market hubs, not every settlement
+
+Tier 1-2 Old World markets receive bounded opening circuits for hardware,
+cordage, masonry, tools, and processed grain. Ordinary hubs get one producer
+per output, reviewed flagships two, and Roma three. The 18-building market and
+40-building Roman-metropolis caps preserve density without spreading advanced
+urban workshops uniformly across rural locations.
+
+## 2026-07-31 - Preserve societal-value keys, replace their semantics
+
+Engine keys remain exact because setup, events, and GUI code reference them.
+ANTIQVITAS overrides the complete 17-key registry and its visible labels,
+effects, ages, and eligibility. Bound Tenure appears in Dominate, Frontier
+Engagement in Crisis, and Court Command in Federate Age. Han/eastern,
+Iranian/Arabian, and Roman/Hellenistic axes use existing profile triggers.
+
+## 2026-07-31 - Put uncertainty in descriptions, not country-name suffixes
+
+Lower-confidence countries use concise geographic, material-horizon, or
+attested labels. `Community` and `Group` are forbidden in player-facing polity
+names; their descriptions retain the non-state and evidentiary qualifications.
+No unattested ethnonym is invented to make a short name.
+
+## 2026-07-31 - Expand staple anchors without flattening crop geography
+
+Barley, dates, sesame, and tree nuts receive regional anchor networks because
+their original 3-8 RGOs understated ancient importance. Each assignment remains
+one contested location proxy inside a sourced climate envelope. Papyrus,
+silphium, naphtha, jade, and coconuts remain narrow; Cultivator buildings cover
+plausible secondary cultivation at lower efficiency.
+
 ## 2026-07-28 - Manchuria uses material and corridor frames
 
 `MNC` crossed three distinct evidence regimes. Middle/lower Amur Pol'tse-facing
@@ -4122,9 +4153,9 @@ exact anchor because the installed field is absent from the vanilla-ownable
 province surface. Preserve the exact owned surface, use archaeological labels
 only, and exclude later nations and Cahokia's Mississippian city phase.
 Existing reviewed emblem textures suffice; no new art or audio is needed.
-The `KCP` display name is Lower Missouri Hopewell Communities because runtime
-smoke proved that EU5 rejects country names containing `City`; the culture and
-capital retain the sourced Kansas City Hopewell archaeological term.
+The `KCP` display name is Lower Missouri Hopewell because EU5 rejects country
+names containing `City`; the culture and capital retain the sourced Kansas City
+Hopewell archaeological term.
 
 ## 2026-07-28 - Korea uses commandery rule and small-state clusters
 
@@ -4282,8 +4313,10 @@ at eight; reserve dated nodes before distributing flexible content.
 
 Cultivators are universal as a mechanic but location-gated by installed
 climate, topography, vegetation, region, river, and coast triggers. They employ
-peasants, output 0.20-0.38, consume tools/lumber/livestock, and cap at 2-3;
-native RGOs therefore remain the efficient agricultural base.
+peasants, output 0.18-0.38, consume tools/lumber/livestock, and cap at 2-3;
+native RGOs therefore remain the efficient agricultural base. The 36 families
+cover all 34 reviewed cultivable goods. Coffee is post-campaign; silphium is a
+narrow Cyrenaican resource, so neither receives a transplantable building.
 
 ## 2026-07-30 - Location art follows the mounted resolver union
 
@@ -4342,3 +4375,10 @@ Do not use the global node count as player-facing evidence. Target
 32/32/32/32/16/16 visible cards across the six engine ages (160 total) for
 every opening tag, with profile isolation retained. The generated ledger keeps
 current floors green while marking every remaining gap for direct-art expansion.
+
+## 2026-07-31 - Shared research depth represents transferable practice
+
+Meet the per-tag age floor with neutral logistics, craft, exchange, health, and
+settlement practices. Give these nodes modest direct effects but no foreign
+profile content unlocks; identity-specific laws, buildings, privileges, and
+units remain isolated.

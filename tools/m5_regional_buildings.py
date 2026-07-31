@@ -25,6 +25,7 @@ from economy_chains import construction_package, institutional_upkeep, merge_goo
 ROOT = Path(__file__).resolve().parents[1]
 FAMILIES = ROOT / "docs/m5/regional_building_families.csv"
 SEEDS = ROOT / "docs/m5/regional_building_seeds.csv"
+CORE_MARKET_SEEDS = ROOT / "docs/m5/opening_market_building_seeds.csv"
 REGIONAL_SEED_BUNDLES = ROOT / "docs/m5/s2_britain_ireland_building_seeds.csv"
 FOOD_SEEDS = ROOT / "docs/m5/food_building_seeds.csv"
 URBAN_NODES = ROOT / "docs/m5/urban_nodes.csv"
@@ -516,6 +517,7 @@ def expanded_seed_rows() -> list[dict[str, str]]:
     """Return every regional seed, including compact reviewed regional bundles."""
     seeds = csv_rows(SEEDS, SEED_FIELDS)
     seeds.extend(csv_rows(FOOD_SEEDS, SEED_FIELDS))
+    seeds.extend(csv_rows(CORE_MARKET_SEEDS, SEED_FIELDS))
     for bundle in csv_rows(REGIONAL_SEED_BUNDLES, BUNDLE_FIELDS):
         bundled_families = tuple(part.strip() for part in bundle["families"].split("|"))
         if len(bundled_families) != 2 or any(not family for family in bundled_families):

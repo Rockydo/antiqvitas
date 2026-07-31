@@ -32,12 +32,12 @@ LANGUAGES = (
 EXPECTED = {
     "ANR": ("Anarta-Sarasvati Settlement Networks", "patan", 10, "antq_anarta_sarasvati"),
     "LBR": ("Lata-Barygaza Trade Corridor", "broach", 6, "antq_lata_barygaza"),
-    "RKU": ("Rewa-Kantha Upland Communities", "champaner", 3, "antq_rewa_kantha"),
+    "RKU": ("Rewa-Kantha Upland", "champaner", 3, "antq_rewa_kantha"),
     "SRS": ("Saurashtra Coastal Networks", "junagarh", 16, "antq_saurashtra_early_historic"),
     "KCH": ("Kutch Island-Coast Networks", "lakhiyarvira", 4, "antq_kutch_early_historic"),
-    "MTS": ("Matsya-Dhundhar Communities", "ajmer", 8, "antq_matsya_dhundhar"),
-    "CHB": ("Chambal-Gird Communities", "kota", 14, "antq_chambal_gird"),
-    "ABN": ("Ahar-Banas Highland Communities", "chittor", 11, "antq_ahar_banas"),
+    "MTS": ("Matsya-Dhundhar", "ajmer", 8, "antq_matsya_dhundhar"),
+    "CHB": ("Chambal-Gird", "kota", 14, "antq_chambal_gird"),
+    "ABN": ("Ahar-Banas Highland", "chittor", 11, "antq_ahar_banas"),
     "MRN": ("Marwar-Nagaur Caravan Networks", "osian", 22, "antq_marwar_nagaur"),
     "JGP": ("Jangladesh Pastoral Networks", "bhatnir", 15, "antq_jangladesh_pastoral"),
 }

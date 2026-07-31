@@ -60,11 +60,11 @@ EXPECTED = {
         "antq_mobile_hunter_herder_network",
     ),
     "WDP": (
-        "Wadai Plateau Communities", "ouara", 5, "antq_wadai_plateau",
+        "Wadai Plateau", "ouara", 5, "antq_wadai_plateau",
         "antq_west_african", "antq_early_ironworking_community_network",
     ),
     "BCH": (
-        "Bauchi Plateau Communities", "bauchi", 1, "antq_post_nok",
+        "Bauchi Plateau", "bauchi", 1, "antq_post_nok",
         "antq_west_african", "antq_early_ironworking_community_network",
     ),
 }

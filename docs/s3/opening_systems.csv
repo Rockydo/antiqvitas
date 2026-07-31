@@ -1,5 +1,9 @@
 ﻿check,evidence,status
 processed_food_order,flour=10;wheat=8,pass
+processed_food_price,flour=1.5;wheat=1,pass
+processed_food_demand,flour=0.0020;wheat=0.001,pass
+processed_food_recipe,1 wheat + 0.15 lumber + 0.05 tools -> 1.10,pass
+opening_market_workshops,357 direct placements,pass
 opening_rgo_capacity,global_max_rgo_size_modifier=0.10,pass
 parthian_profile_laws,14 Iranian groups + Arsacid autonomy,pass
 mandatory_law_adapter,heir_religion_law retained and ancientized,pass

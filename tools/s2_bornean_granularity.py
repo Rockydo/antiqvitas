@@ -38,11 +38,11 @@ LANGUAGES = (
 
 RELIGION = "antq_borneo_late_prehistoric_traditions"
 EXPECTED = {
-    "NBR": ("Niah-Brunei Bay Cave-River Communities", "niah", 10, "antq_niah_brunei_bay", "antq_borneo_cave_river_network"),
+    "NBR": ("Niah-Brunei Cave-River", "niah", 10, "antq_niah_brunei_bay", "antq_borneo_cave_river_network"),
     "RSW": ("Rajang-Sarawak Coastal Networks", "santubong", 10, "antq_rajang_sarawak", "antq_borneo_coastal_exchange_network"),
     "KSB": ("Kinabatangan-Sabah Littoral Networks", "kinabatangan", 11, "antq_kinabatangan_sabah", "antq_borneo_coastal_exchange_network"),
     "NEB": ("Northeast Borneo River-Sea Networks", "sesayap", 11, "antq_northeast_borneo_river_sea", "antq_borneo_coastal_exchange_network"),
-    "SGK": ("Sangkulirang Karst Communities", "karangan", 5, "antq_sangkulirang_karst", "antq_borneo_cave_river_network"),
+    "SGK": ("Sangkulirang Karst", "karangan", 5, "antq_sangkulirang_karst", "antq_borneo_cave_river_network"),
     "MHK": ("Mahakam River Networks", "muarakaman", 13, "antq_mahakam_river", "antq_borneo_interior_river_network"),
     "KPM": ("Kapuas-Melawi River Networks", "pinoh", 11, "antq_kapuas_melawi", "antq_borneo_interior_river_network"),
     "WBC": ("Western Borneo Coastal Networks", "sambas", 12, "antq_west_borneo_coastal", "antq_borneo_coastal_exchange_network"),

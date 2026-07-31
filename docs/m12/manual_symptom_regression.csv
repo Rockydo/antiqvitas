@@ -16,6 +16,6 @@ institutions,Feudal or globally spreading Han institutions remain visible,m8_leg
 advance_tree,Advances are shallow linear undescribed and inert,m8_knowledge;m11_advance_icons,docs/m8/advances.csv,pass
 disease_panel,Diseases panel crashes or lacks dependencies,m12_disease_safety,docs/m12/DISEASE_CRASH_FIX.md,pass
 location_names,Priority and Roman fields retain unsuitable modern labels,m4_priority_location_names;m4_roman_location_name_audit,docs/m4/priority_location_name_audit.csv,pass
-rome_economy,Rome lacks dense buildings and appropriate goods,m5_roman_economy_audit;m5_building_audit;m5_goods_system_audit,docs/m5/active_goods_audit.csv,pass
+rome_economy,Rome lacks dense buildings and appropriate goods,m5_roman_economy_audit;m5_building_audit;m5_goods_system_audit;s3_opening_market_supply;s3_opening_systems,docs/m5/OPENING_MARKET_SUPPLY.md,pass
 frontend,Main menu and loading presentation remain vanilla,m12_frontend_assets;m11_loading_screens,docs/m12/M12_FRONTEND_ART.md,pass
 installed_leakage,Similar installed or DLC content can bypass individual fixes,m12_installed_content_census,docs/m12/installed_content_leakage.json,pass

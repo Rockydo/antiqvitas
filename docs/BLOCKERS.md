@@ -126,16 +126,42 @@ contracts; final validation is 150/150 and smoke has zero mod-unique lines.
 
 ## 2026-07-31 - S3 levy runtime proof deferred by shared EU5 slot
 
-Status: smoke delay resolved; focused in-game evidence remains deferred.
+Status: resolved 2026-07-31.
 
 Two protocol-safe mod launches were deferred while `endore` owned the shared
 EU5 process (PID 39496). ANTIQVITAS did not launch or alter the other project.
 Static checks confirm the installed `always_allow_army_levies` contract and the
-universal ancient advance bridge; live levy availability remains open until the
-slot is released.
+universal ancient advance bridge. After release, fresh Suebi runtime exposed
+12+ eligible levy regions and raised all 1,939 levies into ancient formations.
 
 The following 231-coast naval and 80-monument building batch passes all 150
 static checks. Its two paired-smoke acquisition attempts were also deferred by
 the continuing `endore` lease (later PID 19016). After release, paired smoke
 passed on fingerprint `2c5fe5d475bd8903a683a810ed691f1468c86b325e73e651be719afa9af1a68c`
 with zero new or mod-unique lines.
+
+Fresh Parthia runtime also exposed all five intended bounded vessel types.
+Its military header showed `0 + 0 / 0`, but the Gather workflow was not opened;
+fresh captain-list proof is a separate active task.
+
+## 2026-07-31 - Shared slot deferred 918-node smoke
+
+Status: resolved 2026-07-31.
+
+Five protocol-safe `make smoke` attempts were deferred while `endore` owned
+EU5 (PIDs 18848, 17852, 26556, and 11092). No ANTIQVITAS process launched or
+altered those sessions. After release, the final filesystem state passed
+153/153 validation commands and paired smoke at fingerprint
+`8b3af7b74a02f82cc03672bbd6a594f845c6c2cbf9df50a494fe0bc31834442f`
+with zero new or mod-unique lines.
+
+## 2026-07-31 - S3 focused panels returned to the front-end
+
+Status: bounded driver-evidence limitation; static and smoke gates pass.
+
+The enabled menu rendered, but two recorded New Game → Observer attempts
+returned to the ANTIQVITAS front-end instead of a paused map. Per the two-attempt
+rule, fresh Rome/Parthia/Suebi panel captures remain open without invalidating
+the clean paired smoke. Evidence:
+`docs/screens/S3_RUNTIME_20260731/manual_selection_start_attempt1.png` and
+`manual_selection_start_attempt2.png`.

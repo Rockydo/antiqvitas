@@ -1,5 +1,52 @@
 ﻿# Historical Assumptions
 
+## 2026-07-31 - Market workshops are capacity proxies
+
+The 357 opening placements assert that major AD 1 exchange centres could
+sustain core construction and food-processing chains; they do not identify
+excavated workshops in every engine polygon. Market-level trade supplies raw
+inputs, while the higher Roma/flagship floor represents exceptional urban and
+state demand rather than uniform productivity.
+
+Sources: plan §12.1-§12.3; `PER`; `CAH-XI`; `MET-ROMAN-TRADE`.
+
+## 2026-07-31 - Cultivator coverage represents capacity, not attestation
+
+Availability means a household production system is ecologically plausible,
+not that the location is documented producing that good in AD 1. Coffee is
+excluded because cultivation and beverage evidence is post-campaign; silphium
+remains a narrow, extinction-prone Cyrenaican resource. Pastoral Cultivators
+represent managed household production, not universal ranching.
+
+Sources: plan §12.1/§12.3; `PER`; `BHR`; `SRS-CAM`.
+
+## 2026-07-31 - Value axes are comparative pressures, not constitutions
+
+The sliders abstract tensions within many different polities; they do not
+assert that Rome, Han, an Arabian oasis, and a Germanic assembly shared one
+institutional vocabulary. Late Bound Tenure represents the plan's colonate
+drift, while urban/rural provision and court/local rule remain available
+earlier. Regional rite and public-form axes are bounded by profile.
+
+Sources: plan §13; `CAH-XI`; `CEHGRW`; [Western Han scholarly networks and
+bureaucracy](https://www.cambridge.org/core/journals/early-china/article/ru-scholars-social-networks-and-bureaucracy-donghai-men-and-models-for-success-in-western-han-china-206-bce9-ce/914C2482D9735A0AF09A32F569357957).
+
+## 2026-07-31 - Concise archaeological labels are interface shorthands
+
+Names such as Vicus, Przeworsk, and Lower Missouri Hopewell identify the
+roster's already sourced geographic or material frame. They do not assert a
+centralized polity, ethnicity, or recovered self-name; those limits remain in
+the roster confidence/source fields and regional ledgers.
+
+## 2026-07-31 - Agricultural anchors represent regional capacity
+
+The 117 custom barley, date, sesame, and tree-nut RGOs identify plausible
+production districts, not excavated field boundaries, monocultures, or exact
+output shares. Broad crop histories set the envelope; every added polygon is
+therefore `contested`. Sources: `PMC-MED-BARLEY`, `OXF-BRONZE-CROPS`,
+`ABD-ROM-BARLEY`, `SCIADV-DATE`, `NHM-DATE`, `PMC-SESAME-EXCHANGE`,
+`CAM-MED-NUTS`, and `PLOS-SILK-NUTS`.
+
 ## 2026-07-28 - Amur, Ussuri, and Sakhalin labels are bounded proxies
 
 Pol'tse is a material horizon, not a recovered state or ethnicity. Yilou is
@@ -5917,3 +5964,10 @@ Patrol and transport pairs represent locally plausible river, lake, estuary,
 coastal, and open-sea craft families, not named standing fleets or exact hull
 inventories. Harbor ownership controls opening availability. Sources:
 `P8.1`-`P8.10`; `P14`; `CAH-XI`; `PER`. [secure capability; contested local hull]
+
+## 2026-07-31 - Shared advances are adoptable practice networks
+
+The 80 neutral depth nodes model transferable subsistence, logistics, craft,
+health, exchange, and mediation practices, not universal institutions or
+identities. Sources: `P15`; `CAH-XI`; `CAH-XII`. [secure broad transmission;
+contested local timing]

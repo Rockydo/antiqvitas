@@ -12,15 +12,18 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 
 ### S3-P0 - Broken availability and profile isolation
 
-- [ ] Replace every active levy entry with profile-appropriate ancient units.
+- [x] Replace every active levy entry with profile-appropriate ancient units.
   No levy may reference a vanilla unit key; every playable tag must receive at
-  least two valid levy roles and four recruitable land roles.
+  least two valid levy roles and four recruitable land roles. Fresh Suebi
+  runtime raised all 1,939 levies from 12+ eligible regions; only ancient
+  levy types appeared.
 - [ ] Make mercenaries nonzero and regionally diverse. Prove visible pools for
   Rome, Parthia, Suebi, Han, India, Africa, and the Americas; expand the roster
   and remove population rounding-to-zero.
-- [ ] Give every coastal polity valid ancient transport and combat vessels.
+- [x] Give every coastal polity valid ancient transport and combat vessels.
   Parthian ports must offer more than merchant roundships; inland locations
-  must not gain ocean fleets.
+  must not gain ocean fleets. Fresh Parthia runtime exposed five bounded
+  river, Caspian, Gulf, merchant, and transport craft.
 - [ ] Restore Parthia's law screen. Prove all opening profiles initialize,
   display, and can change their own laws without seeing foreign profile laws.
 - [ ] Gate every privilege by country profile, culture, religion, reform, or a
@@ -54,14 +57,25 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 - [ ] Add a comprehensive Cultivator building system for every realistically
   cultivable raw good. Use peasants, lower yield than native RGOs, strict
   climate/topography/vegetation/coast gates, and low environment-specific caps.
+  Static complete: 36 families cover all 34 reviewed cultivable goods with
+  exact gates and caps. Coffee and silphium are explicit historical exclusions;
+  36 direct icons come from nine EU5-referenced four-up sheets. Runtime remains.
 - [ ] Expand tree-nut RGOs and all other underrepresented agricultural anchors
   to historically and ecologically justified coverage; keep RGOs superior to
   Cultivator substitutes.
+  Source-led anchors now cover 40 tree-nut, 32 barley, 20 date, and 25 sesame
+  RGOs across their bounded climates; full validation passes and smoke remains.
 - [ ] Raise Flour and Bread above wheat's food value and rebalance its recipe,
   demand, price, and opening production.
+  Static complete: food 10 vs wheat 8, price 1.5 vs 1, base demand 0.002
+  vs 0.001, and the checked recipe converts 1 wheat plus milling fuel/tools
+  into 1.10 output. Sixty major markets now have opening production.
 - [ ] Densify historically urbanized opening regions and guarantee viable
   construction chains. Rome first, then every major market, must begin with
   Iron Hardware, Cordage, Masonry, timber, stone, metal, and food supply.
+  Static complete: 357 workshops guarantee Iron Hardware, Cordage, Masonry,
+  Tools, and Flour/Bread at 60 Tier 1-2 Old World markets. Each has at least
+  one producer per output, flagships two, and Roma three.
 - [ ] Rework Germania and Iberia vegetation from sourced regional rules.
   Germania must not retain implausible central grassland expanses; Iberia must
   preserve open cereal zones while restoring ancient woodland mosaics.
@@ -71,18 +85,23 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 - [ ] Expand visible advance depth per major profile in every age while keeping
   foreign branches hidden. Report visible, owned, eligible, and total nodes for
   representative tags; Rome must have a deep tree rather than 12-20 cards.
-  The 463-tag ledger now proves the gap: Rome sees 31/24/24/24/12/12,
-  Parthia 22/19/19/19/12/7, and Suebi 22/15/19/19/11/12. Target
-  32/32/32/32/16/16 with direct four-up art; all 463 remain open.
+  The 918-node ledger now passes all 463 tags at 32/32/32/32/16/16 or
+  better. Rome sees 42/41/41/41/21/21, Parthia 33/36/36/36/21/16,
+  and Suebi 33/32/36/36/20/21; full validation and runtime proof remain.
 - [ ] Replace the full societal-values union with AD 1 meanings, names,
   effects, profile gates, and dated later-age sliders. No medieval or
   early-modern political vocabulary may surface.
+  Static complete: all 17 installed keys, 72 labels/descriptions, 11 clients,
+  three dated axes, three regional gates, and the cabinet movement action pass
+  the permanent union validator; focused runtime proof remains.
 - [ ] Audit the complete diplomacy union: interactions, generic actions,
   subjects, CBs, war goals, peace terms, and objectives. Disable
   anachronisms, localize every visible action and description, and add
   profile-appropriate ancient diplomacy where coverage is thin.
 - [ ] Replace generic polity labels such as "Community" and "Group" with short
   attested names. Uncertainty belongs in descriptions, not player-facing names.
+  All 120 suffixes are removed across the roster and generated mirrors; 463
+  unique names pass the permanent guard. Runtime representative proof remains.
 - [ ] Replace synthetic directional location names with curated language forms,
   especially the Rhine-Danube, Germania, Gaul, Britain, Dacia, and every likely
   post-AD 1 Roman frontier conquest. Verify the engine's owner/culture resolver.
@@ -122,19 +141,22 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   remain isolated but are runtime-blocked; five distinct engine contracts are
   documented in `BLOCKERS.md`, and green setup intentionally emits none.
 - Static green: 2,061 content unlocks plus eight mercenary-capability bridges
-  are profile-balanced across 838 advances;
+  are profile-balanced across 918 advances;
   no node advertises more than eight. Roman building unlocks stay on the
   Roman/Italic path.
 - Static green: all 80 named Roman one-level monuments are setup-only and
   reject new construction. The 23 reusable Roman provincial families require
   an Italic/Iberian/Balkan culture group or Roman Law and Engineering adoption.
 - Static green: basic RGO capacity is universal; Flour and Bread food is 10
-  versus installed wheat 8; steel and 16 engine bridge categories use ancient
+  versus installed wheat 8, with higher price/base demand and a complete
+  milling recipe. A 357-workshop opening-market circuit guarantees five core
+  outputs at 60 major hubs; steel and 16 engine bridge categories use ancient
   localization in all 11 clients.
-- Static green: 24 peasant Cultivator buildings cover cereals, pulses, orchards,
-  fibers, oil crops, aromatics, and independent American crops. Exact climate,
-  topography, vegetation, region, river, and coast gates cap marginal output at
-  2-3 levels; 24 direct icons come from six reviewed four-up EU5-style sheets.
+- Static green: 36 peasant Cultivator buildings cover all 34 reviewed
+  cultivable goods across crops, orchards, fibers, aromatics, sericulture,
+  apiaries, and managed pastoral production. Exact climate, topography,
+  vegetation, region, river, and coast gates cap marginal output at 2-3 levels;
+  36 direct icons come from nine reviewed four-up EU5-referenced sheets.
 - Static green: all 16 loading panoramas now use one opaque DXT1 base plus seven
   distinct sparse DXT5 depth plates; 11 selectable scenes receive exact-path
   hardlinks. The 128-layer ledger and contact sheet reject opaque duplicates.
@@ -146,11 +168,19 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   generic, map-mode, and all nine installed graphical families (88 exact DDS
   resolvers); European and Mediterranean location views no longer fall back.
 - Runtime: Rome's Mercenary Captain panel is populated with culture-labelled
-  pools and ancient units; its levy panel resolves only the two ancient levy
-  icons but begins at 0 recovered strength, so the levy parent remains open.
+  pools and ancient units. Fresh Suebi raised all 1,939 levies from 12+
+  eligible regions and queued two regional ancient levy formations.
+- Runtime: fresh Parthia ship recruitment exposes Mesopotamian River Patrol,
+  Caspian Oared Boat, Persian Gulf Patrol Craft, Merchant Roundship, and
+  Mesopotamian River Transport. Its military header showed `0 + 0 / 0`, as
+  Rome's does before opening Gather; the Parthian captain workflow was not
+  opened and remains unproved.
 - Runtime: fresh Camulodunum, Augustan Forum, Monte Alban, and Mixtec loading
   captures show clean opaque depth separation at 7-99%; the former translucent
   slab/ghost implementation is gone.
+- Runtime gate: final 153/153 validation and paired menu smoke have zero new or
+  mod-unique log lines. Two fresh S3 panel starts returned to the front-end;
+  the exact captures and deferred panel coverage are recorded in `BLOCKERS.md`.
 
 ## Active user priorities — 2026-07-22
 

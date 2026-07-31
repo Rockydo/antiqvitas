@@ -1,6 +1,6 @@
 {
   "game_build_id": "24187685",
-  "asset_count": 805,
+  "asset_count": 885,
   "gui_call_count": 16,
   "gui_context_count": 9,
   "contract": {
@@ -12101,6 +12101,1206 @@
         38,
         238,
         217
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_community_granary_customs_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_community_granary_customs.dds",
+      "master_sha256": "15b345983d1913047c2a22189141c0a12de80d59af9e93977f6ab3e04ff17303",
+      "texture_sha256": "2679d57542c2f02db3e5a0bee80fb9782ac2771ad0a518c10c0ba85ccc75859b",
+      "active_fraction": 0.501099,
+      "opaque_fraction": 0.477875,
+      "alpha_bbox": [
+        18,
+        29,
+        238,
+        227
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_seasonal_labour_calendars_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_seasonal_labour_calendars.dds",
+      "master_sha256": "304b735fbc9234c25b2c086d420581bdc8b4a41e344cd87e24cf884d930feae3",
+      "texture_sha256": "e0ceb73e629a90dc99bd687359eba551e796f972779803b4923b8dc0a0e50de4",
+      "active_fraction": 0.235001,
+      "opaque_fraction": 0.20166,
+      "alpha_bbox": [
+        18,
+        26,
+        238,
+        230
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_field_boundary_witnesses_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_field_boundary_witnesses.dds",
+      "master_sha256": "4560da3541479935fdfe74ceb220344e46320ed727107a05a09a117f746e763c",
+      "texture_sha256": "e2de79327bf723799b9f1b55f7afc7753f921b8b321372cd34ecc5f2332437b5",
+      "active_fraction": 0.295715,
+      "opaque_fraction": 0.26799,
+      "alpha_bbox": [
+        18,
+        34,
+        238,
+        222
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_river_crossing_guides_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_river_crossing_guides.dds",
+      "master_sha256": "0722c1d50e6406fba36770266506fb6f6e75e6254911e31be668b4f3aaf22f10",
+      "texture_sha256": "770204b3a96cc81085828230d83ef4736ebf308fbd097d9a1c0bf2a60bc8821a",
+      "active_fraction": 0.29126,
+      "opaque_fraction": 0.25737,
+      "alpha_bbox": [
+        20,
+        18,
+        235,
+        238
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_market_day_signals_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_market_day_signals.dds",
+      "master_sha256": "ef1db7f39a8231b58f649b50c14f2145f9a53848e279e6dc0da82f63a66d962d",
+      "texture_sha256": "f53ecff17cd2963af19163144e34ab15a9739f59129686dc2d33f9e3e042796d",
+      "active_fraction": 0.382523,
+      "opaque_fraction": 0.320633,
+      "alpha_bbox": [
+        18,
+        18,
+        237,
+        238
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_well_and_cistern_care_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_well_and_cistern_care.dds",
+      "master_sha256": "927a0daf71b3f30b91926c43374aa79086e3ce7b5dc585f7d3ca7dae31b560b3",
+      "texture_sha256": "9dbe602beab8db4ce429eeff06f33095e49673bd07a256a0ebafa85cee3933c7",
+      "active_fraction": 0.41185,
+      "opaque_fraction": 0.368011,
+      "alpha_bbox": [
+        22,
+        18,
+        233,
+        238
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_craft_apprentice_households_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_craft_apprentice_households.dds",
+      "master_sha256": "d8f5721f2a937da726f7de73c2357cfaf79e4926d971084fcdd4cc7aa3be3627",
+      "texture_sha256": "33ff049a869d3da140904b0cc581fd25559553d0e61ac240b929831f9930ec08",
+      "active_fraction": 0.341446,
+      "opaque_fraction": 0.304398,
+      "alpha_bbox": [
+        18,
+        42,
+        238,
+        215
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_muster_ground_markers_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_muster_ground_markers.dds",
+      "master_sha256": "7bfda38089acb2ed7ef75926d97169cfc04c9c1cff0feb7d56f82eb609bef49b",
+      "texture_sha256": "55f1e00786c5fb6d16795182a0a2dd7c404995c179379e3cda1d588d6b303613",
+      "active_fraction": 0.354248,
+      "opaque_fraction": 0.316147,
+      "alpha_bbox": [
+        18,
+        18,
+        238,
+        238
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_trusted_route_brokers_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_trusted_route_brokers.dds",
+      "master_sha256": "dc165dc19f75bd8c238010ed974520bb7b0352dcda62a47c2c759cdd918026c0",
+      "texture_sha256": "eb27a8384cfab52cbe759247a58d21a5eaed52d585beca11d93b996891954558",
+      "active_fraction": 0.337906,
+      "opaque_fraction": 0.258636,
+      "alpha_bbox": [
+        18,
+        24,
+        238,
+        231
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_gift_and_tribute_tallies_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_gift_and_tribute_tallies.dds",
+      "master_sha256": "bf7ce1a20c2e0dd7cacd2df27244df65d46bc11ab7183ad499cfab8cd3b5518f",
+      "texture_sha256": "0b556cfa6ffb80037a47fc802c63eee05cfa82e9a91e4c24981028fa9cfbb2fa",
+      "active_fraction": 0.385956,
+      "opaque_fraction": 0.333755,
+      "alpha_bbox": [
+        18,
+        33,
+        237,
+        223
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_healing_plant_memory_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_healing_plant_memory.dds",
+      "master_sha256": "b9971d37bd3f6a64518d77b0ce4e3afb83edd364fa893b960caf427992d357a3",
+      "texture_sha256": "d93d860560e9cbb3105e3b5e0cc9b95f5cfd0ed87ee17193de786ae65d8ccdb1",
+      "active_fraction": 0.324112,
+      "opaque_fraction": 0.228683,
+      "alpha_bbox": [
+        18,
+        31,
+        238,
+        225
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_relay_rest_stations_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_relay_rest_stations.dds",
+      "master_sha256": "b05506b3aa80ee655b2cb3ab9b1300be078717c0ca0a1bf77643d685ffa46837",
+      "texture_sha256": "491551f3519d960c9ef662a14a0dd1a4ef2dd049dc27e11d582afe21410334f7",
+      "active_fraction": 0.390121,
+      "opaque_fraction": 0.335022,
+      "alpha_bbox": [
+        18,
+        23,
+        237,
+        232
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_sealed_storage_customs_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_sealed_storage_customs.dds",
+      "master_sha256": "588984bfc8e165a9ddff758485a501b03ba3ad77388984cc368765fcb56c7218",
+      "texture_sha256": "ad13e4bf4bafc2cd1c8f6f0ae1e7c4b1550768e5e87d11dfa26bece7a3262079",
+      "active_fraction": 0.397018,
+      "opaque_fraction": 0.348053,
+      "alpha_bbox": [
+        18,
+        27,
+        238,
+        229
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_watch_fire_signals_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_watch_fire_signals.dds",
+      "master_sha256": "a0ad52948b15ab288d9ae45cb173cae19be9baa060a8140452c3023d765e03a7",
+      "texture_sha256": "486722d367c5f86450f3886689994e55b2486eec2a487e49672a5c01bbd9919e",
+      "active_fraction": 0.348297,
+      "opaque_fraction": 0.312622,
+      "alpha_bbox": [
+        18,
+        24,
+        238,
+        232
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_canal_and_ditch_musters_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_canal_and_ditch_musters.dds",
+      "master_sha256": "6ea9c8f8702a3ea0f4011dc8e33edceb4147eadce40d449b7b325ff621bc9969",
+      "texture_sha256": "df962b13f13878ded03767130bea2c340ca858a9130ce796127737fa52e96e6d",
+      "active_fraction": 0.339142,
+      "opaque_fraction": 0.296646,
+      "alpha_bbox": [
+        18,
+        30,
+        238,
+        225
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_travelling_healers_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_travelling_healers.dds",
+      "master_sha256": "533da3071ff876e35319656a6a81446b9de7bd6cb07ea05ef7739bd3d117c629",
+      "texture_sha256": "a2fb579a88278bcdccd5ff3f86b8de7591b2d591b31c755ae2d37ee906520c56",
+      "active_fraction": 0.405441,
+      "opaque_fraction": 0.318527,
+      "alpha_bbox": [
+        18,
+        32,
+        238,
+        223
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_portage_team_organization_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_portage_team_organization.dds",
+      "master_sha256": "ce5fdfe19efe6d3e5468f70feff3886ac1649cac88a67c9fa1d5d1fd815a7ad6",
+      "texture_sha256": "c067e7a4518de7d0e385274d1476f1826d16118eab8d05fa97db26778992465b",
+      "active_fraction": 0.313248,
+      "opaque_fraction": 0.29216,
+      "alpha_bbox": [
+        18,
+        54,
+        238,
+        201
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_public_measure_stones_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_public_measure_stones.dds",
+      "master_sha256": "70c1e9615aad0d46996ab3e29d445ecfbcf1183f964c44dbccd85bc3b543655d",
+      "texture_sha256": "23e1b1ef30de115afb0d050d63e9a3ffcae98a1306834998c7cac6e3de77b337",
+      "active_fraction": 0.286514,
+      "opaque_fraction": 0.249283,
+      "alpha_bbox": [
+        18,
+        39,
+        238,
+        216
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_reserve_seed_stores_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_reserve_seed_stores.dds",
+      "master_sha256": "8af90620bdafeffeab9331aa24ae08653803285638fb4298c218a2d9dc5212cd",
+      "texture_sha256": "b76f29706ac8e531d772c5752ffda565bd365e19876dcaee1fda727f75050185",
+      "active_fraction": 0.368317,
+      "opaque_fraction": 0.350662,
+      "alpha_bbox": [
+        18,
+        49,
+        238,
+        206
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_scout_interpreter_networks_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_scout_interpreter_networks.dds",
+      "master_sha256": "78d93934bea81dc82c35e874f7bc0ef8a8129e1eb32d39985da04d791cf08f77",
+      "texture_sha256": "6b299516780ec318a8617fe879f3e1f5032391cf94fd10f83e8492fa510a76fe",
+      "active_fraction": 0.250549,
+      "opaque_fraction": 0.222275,
+      "alpha_bbox": [
+        18,
+        47,
+        238,
+        208
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_fortified_store_compounds_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_fortified_store_compounds.dds",
+      "master_sha256": "33945f3aeaf06cc8203a4c4e247ec17ab16f5c6cdd4d0af85a6ffea2e0e981b5",
+      "texture_sha256": "e1170ff87ac641965c09c9036edba5f9fef826744251d5e26f2a453a5a705b63",
+      "active_fraction": 0.437408,
+      "opaque_fraction": 0.417786,
+      "alpha_bbox": [
+        21,
+        18,
+        235,
+        238
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_regional_arbitration_meetings_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_regional_arbitration_meetings.dds",
+      "master_sha256": "b278a58aaf50d56b32b5ab07089c5bf8bcdb39db008c2096e8d40395382d7e22",
+      "texture_sha256": "6022c3d7cd19e5e4970dc233c4ba967f38dc576994744e31680c205dc994dcb5",
+      "active_fraction": 0.27832,
+      "opaque_fraction": 0.227478,
+      "alpha_bbox": [
+        20,
+        18,
+        235,
+        238
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_specialist_tool_markets_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_specialist_tool_markets.dds",
+      "master_sha256": "2b76efd4d67607dc6def40ccf129004a94f01a56502c2f482cf8f9b34d9d51c8",
+      "texture_sha256": "297346d8bf7064f7c8c9b525ec75bc03472bb0b029d767f61b8c17bf86ac0cb8",
+      "active_fraction": 0.329727,
+      "opaque_fraction": 0.285706,
+      "alpha_bbox": [
+        20,
+        18,
+        236,
+        238
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_observational_weather_lore_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_observational_weather_lore.dds",
+      "master_sha256": "7cc5ec377c463dfdad7a97cb32cf3b03dbadd0e54ce8c529eff7f238f8861ea5",
+      "texture_sha256": "038c5481edb4d5ff3c2193310cc8c66484beab6f88eb27a752f645c5ab18dce0",
+      "active_fraction": 0.308823,
+      "opaque_fraction": 0.249084,
+      "alpha_bbox": [
+        21,
+        18,
+        235,
+        238
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_quarry_work_crews_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_quarry_work_crews.dds",
+      "master_sha256": "555fcfdcb7450db6185d03e12b08ca562d0bc60dd9527b0c4501b38251647bb5",
+      "texture_sha256": "83b24d2b41ae30b14f21e7096fe48fa12a06fbc9452820930ae696b95967fbdf",
+      "active_fraction": 0.447281,
+      "opaque_fraction": 0.410477,
+      "alpha_bbox": [
+        18,
+        30,
+        237,
+        226
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_boat_repair_yards_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_boat_repair_yards.dds",
+      "master_sha256": "f10b9ee10c5aa0143fc4c0ad52c15e1d9a6ce0910c96b98b3d0ff17c877718ef",
+      "texture_sha256": "b451cc270c415daf8c5c0916ffbd10c9ae8d0862342ffa308d2212244b58b80d",
+      "active_fraction": 0.360535,
+      "opaque_fraction": 0.320618,
+      "alpha_bbox": [
+        18,
+        49,
+        237,
+        207
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_campaign_fodder_stores_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_campaign_fodder_stores.dds",
+      "master_sha256": "1875eb2867216975459bc4bdb6b20293864488f4ca9210325def1171acfdcabd",
+      "texture_sha256": "d5b56352b707a81773da55e164b0235cf2daa6189ffef12006a50f91eb269137",
+      "active_fraction": 0.412201,
+      "opaque_fraction": 0.361984,
+      "alpha_bbox": [
+        18,
+        28,
+        238,
+        227
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_itinerant_memory_specialists_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_itinerant_memory_specialists.dds",
+      "master_sha256": "510fc3b68d9c7ed0c706777d7c09a64a30b068fea47b878cb03869dbaf907c89",
+      "texture_sha256": "bdd97fa1afe1b80874c4c2a81e837440f9b7d80eb1da662ef931e155c00a4050",
+      "active_fraction": 0.432587,
+      "opaque_fraction": 0.382507,
+      "alpha_bbox": [
+        18,
+        29,
+        238,
+        227
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_emergency_grain_reserves_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_emergency_grain_reserves.dds",
+      "master_sha256": "e95eefbd3ef2721a8c027b683c42cad56510e66e58abdce47f567900857f91db",
+      "texture_sha256": "85a259b7a58f2c8a2c356a13cf1d8cac9d9aad75f28990e7e4c6154c807d9137",
+      "active_fraction": 0.479767,
+      "opaque_fraction": 0.460129,
+      "alpha_bbox": [
+        18,
+        22,
+        238,
+        234
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_refuge_route_markers_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_refuge_route_markers.dds",
+      "master_sha256": "6fae43da909c48239852cf7308c4bfa5a4dbb796ce150ab64ee830d491f5efe0",
+      "texture_sha256": "a3b5811c709689b061d407b16846db99efd37a6198e5a71bb7f49cfb27978b18",
+      "active_fraction": 0.361084,
+      "opaque_fraction": 0.337204,
+      "alpha_bbox": [
+        27,
+        18,
+        228,
+        238
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_salvage_metal_workshops_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_salvage_metal_workshops.dds",
+      "master_sha256": "c9e34bae4e7785c8eb30a1094b58de2476e0377f93dba3d15fd5c2a5b6098d93",
+      "texture_sha256": "1db9d99a364a4607d95a55e2ca5c4dc5fc4910870d09f4d52cca57d0233a4320",
+      "active_fraction": 0.326477,
+      "opaque_fraction": 0.291504,
+      "alpha_bbox": [
+        18,
+        40,
+        238,
+        216
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_contingency_councils_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_contingency_councils.dds",
+      "master_sha256": "0fea1b586dbc5f356cadf6c107731045ee2758fe5e18902f32b65a3238e91859",
+      "texture_sha256": "898c05ac6bf09490488c4c29fcd35f37285e82cda3f047f948aff997f3093331",
+      "active_fraction": 0.332611,
+      "opaque_fraction": 0.301941,
+      "alpha_bbox": [
+        18,
+        38,
+        238,
+        217
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_mobile_field_stores_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_mobile_field_stores.dds",
+      "master_sha256": "d7f282a78c02ddf7b3c9a52f134c490b5f2e26294d26500cd842ff71eaea35f1",
+      "texture_sha256": "53999504cc8abf66dc19ac99d966eb307b21d2ee53e360b30b8db9d707ffced8",
+      "active_fraction": 0.37738,
+      "opaque_fraction": 0.345093,
+      "alpha_bbox": [
+        18,
+        45,
+        238,
+        211
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_guarded_market_enclosures_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_guarded_market_enclosures.dds",
+      "master_sha256": "b9632b2a1c0a44c3229b07487aafbdabc86594d245ebe72d0abdd7414ca1d21c",
+      "texture_sha256": "25196f2b8334bf5ce029bab678bc24e3933e810c465d668f545823d801a394ac",
+      "active_fraction": 0.37085,
+      "opaque_fraction": 0.330643,
+      "alpha_bbox": [
+        18,
+        37,
+        238,
+        219
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_epidemic_burial_protocols_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_epidemic_burial_protocols.dds",
+      "master_sha256": "2034ac505f10101c9b4feabe1066f60dc82c451feb0db9edf620e9e3bfcd48bf",
+      "texture_sha256": "87445fa0b44e53bc0fd0cbef17f6a2af16a91f185cc5b9f9338411b298aee653",
+      "active_fraction": 0.270126,
+      "opaque_fraction": 0.247147,
+      "alpha_bbox": [
+        18,
+        55,
+        238,
+        200
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_water_ration_customs_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_water_ration_customs.dds",
+      "master_sha256": "f2bbc222c1038988f1297b5b38105ab971b30598b9a8a4d33bf6dd35c852b746",
+      "texture_sha256": "1411e5e9a252db4a081084a597457c2970dac2cf2327c2cd52a9b9dad1e635ba",
+      "active_fraction": 0.491364,
+      "opaque_fraction": 0.471756,
+      "alpha_bbox": [
+        18,
+        27,
+        238,
+        228
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_replacement_tool_stocks_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_replacement_tool_stocks.dds",
+      "master_sha256": "04c372608f1687f5823179ea17f8c01cd981e7da56d1d320cf5adc3cb7795f1a",
+      "texture_sha256": "61a569216754aa7b62708bb3025cd5d7e66b2228305a2dff39cf93a9b574d218",
+      "active_fraction": 0.380096,
+      "opaque_fraction": 0.356125,
+      "alpha_bbox": [
+        18,
+        32,
+        238,
+        223
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_local_warning_runners_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_local_warning_runners.dds",
+      "master_sha256": "0d5df1b0a98d8ca5c9e0e45d731567beb665fa7252b729e3698f5ebb6c092995",
+      "texture_sha256": "a3f215cefa69f315391be470b74a6048420bd26838bcc539b8371165a1eaedca",
+      "active_fraction": 0.404877,
+      "opaque_fraction": 0.384705,
+      "alpha_bbox": [
+        18,
+        22,
+        238,
+        234
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_dispute_truce_days_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_dispute_truce_days.dds",
+      "master_sha256": "30d829efda3bbdf1f962ab2c2a1fead85963194ba5cead7b8c970e30dea0d4f4",
+      "texture_sha256": "92594ea0435379a765fb8486c4e7eb0253e8e8408443c0c3caff219301d4fa60",
+      "active_fraction": 0.291519,
+      "opaque_fraction": 0.265488,
+      "alpha_bbox": [
+        18,
+        46,
+        238,
+        210
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_healer_exchange_circuits_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_healer_exchange_circuits.dds",
+      "master_sha256": "a4eb58ae7b60f57903093bdb6412489e6d23da09ad6f304242f351439bb07a98",
+      "texture_sha256": "dc8a9e6bdbcbb67a7dcb11a9cb05d230381e146bee503735182a690f5cbed651",
+      "active_fraction": 0.350662,
+      "opaque_fraction": 0.305206,
+      "alpha_bbox": [
+        18,
+        33,
+        238,
+        222
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_temporary_river_ferries_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_temporary_river_ferries.dds",
+      "master_sha256": "3547a0e6e62de3bbf42c9806703bb1668703f91395d06afb7cd089c0e083cf2a",
+      "texture_sha256": "b4f3a4de61d2f95272e68b8c5aa208f6ddb2d79a1438f9c88184e987d883c025",
+      "active_fraction": 0.351593,
+      "opaque_fraction": 0.333466,
+      "alpha_bbox": [
+        18,
+        51,
+        238,
+        205
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_surplus_seed_protection_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_surplus_seed_protection.dds",
+      "master_sha256": "220aaddfefd191af6d0d7039552b8fd19bd3e8db183f7ce5baf0fc8aae483c6e",
+      "texture_sha256": "cd24d6d73b7a728c32c6f8117b8abb59034fe35d11cccbd2511854427f575291",
+      "active_fraction": 0.364487,
+      "opaque_fraction": 0.34523,
+      "alpha_bbox": [
+        18,
+        35,
+        238,
+        221
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_frontier_hostage_mediation_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_frontier_hostage_mediation.dds",
+      "master_sha256": "16e88ec407d5492f012be1b328d0ed1b3dbc82ad5c33414dfa0dde7db0c68125",
+      "texture_sha256": "c38bb9f211674ef6684a294b06e85f64c23b12abef28baaf449f32d982c39b97",
+      "active_fraction": 0.373322,
+      "opaque_fraction": 0.340881,
+      "alpha_bbox": [
+        18,
+        20,
+        238,
+        235
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_fortress_repair_musters_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_fortress_repair_musters.dds",
+      "master_sha256": "abaf7b120897485c924ef4f3f30b566e36e4a8e2c6b331f5417b01edb2baa6df",
+      "texture_sha256": "fd8f7beb5add3d196e3935c47a999fad4ce8b96744b03a59f674854da989f570",
+      "active_fraction": 0.354355,
+      "opaque_fraction": 0.324722,
+      "alpha_bbox": [
+        18,
+        38,
+        238,
+        217
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_oral_crisis_chronicles_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_oral_crisis_chronicles.dds",
+      "master_sha256": "fcc4368545a4631ad7b2ecce007156ccda950e484a83d4525f652f6e6c4b3cf8",
+      "texture_sha256": "0097ae37cb8601f6d20064ea870e5becd8de5a930405caaf7f8332cde0489624",
+      "active_fraction": 0.377625,
+      "opaque_fraction": 0.359726,
+      "alpha_bbox": [
+        21,
+        18,
+        235,
+        238
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_storehouse_oversight_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_storehouse_oversight.dds",
+      "master_sha256": "284e10cb4f11d94ff433c275fb3b53856ed8949a6caa692133ca8d6b1dfcd14b",
+      "texture_sha256": "488f2e9dd06cbed3dd0bd77dda1dbbf1b3fe970d07c34a603a8eff319e4c92eb",
+      "active_fraction": 0.396393,
+      "opaque_fraction": 0.369202,
+      "alpha_bbox": [
+        18,
+        40,
+        238,
+        215
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_road_and_portage_inspections_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_road_and_portage_inspections.dds",
+      "master_sha256": "52ad69b6edb479a366ba871d624a312901a5dd61d857d9d3b09ea8bba2a273a0",
+      "texture_sha256": "e315113408af30993db86bb4599fbcf4682933a04e85e92e6bc66eba1630e814",
+      "active_fraction": 0.41655,
+      "opaque_fraction": 0.383942,
+      "alpha_bbox": [
+        18,
+        22,
+        238,
+        234
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_river_embankment_musters_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_river_embankment_musters.dds",
+      "master_sha256": "ab99e5715f346eda82cff96c891c90fc6726f725a5102e3c521960f0b324c5a0",
+      "texture_sha256": "d51e52a23b2ff2654641c64e9989bfadaf7880f0fee1d709ea7641d280a58484",
+      "active_fraction": 0.384476,
+      "opaque_fraction": 0.355499,
+      "alpha_bbox": [
+        18,
+        42,
+        238,
+        213
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_settlement_watch_rotations_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_settlement_watch_rotations.dds",
+      "master_sha256": "31295a162f5632ebea0ab49fbd8f128377eb76e4ba016c7892fb2a157938de53",
+      "texture_sha256": "c13cc86022028952b7ad241b56b347ab88f77115152ba4b54318d471201775a4",
+      "active_fraction": 0.425186,
+      "opaque_fraction": 0.398361,
+      "alpha_bbox": [
+        25,
+        18,
+        231,
+        238
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_trained_messenger_relays_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_trained_messenger_relays.dds",
+      "master_sha256": "70a4780027d2eeea18b4ec8923e070147195734a021851b91ea558babfcbf650",
+      "texture_sha256": "76e9a8bd6f4ee433da0ee0b05718f214b3afa33cba172ab621a1c1bfac077a73",
+      "active_fraction": 0.317078,
+      "opaque_fraction": 0.287659,
+      "alpha_bbox": [
+        18,
+        34,
+        238,
+        221
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_standard_ration_bundles_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_standard_ration_bundles.dds",
+      "master_sha256": "777090bf2463ccfa6305af2cf11ec62132742c925559deee9c86565b4ee62392",
+      "texture_sha256": "03fdf5b8dd00782be9556211c929b0b663faf8c8dedceeee184ff7c454bd9767",
+      "active_fraction": 0.504898,
+      "opaque_fraction": 0.490433,
+      "alpha_bbox": [
+        18,
+        27,
+        238,
+        228
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_frontier_market_wards_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_frontier_market_wards.dds",
+      "master_sha256": "13eae5737e37286cc8e928563dabb9cff9e2a322c8c53074fe0a5e26f3a2a3be",
+      "texture_sha256": "faa1cfa296d07100bd9a9a7c56865141afacfd5d3536aeeb2a0c6169bcb81008",
+      "active_fraction": 0.313065,
+      "opaque_fraction": 0.27919,
+      "alpha_bbox": [
+        18,
+        30,
+        238,
+        226
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_healing_house_endowments_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_healing_house_endowments.dds",
+      "master_sha256": "ad4b6164550f2d49fad6b4ce2f9cd74bd83ec9a5b6efa7894ecf9c4da63845b9",
+      "texture_sha256": "73e02f33fa0f1d9e72dc61c9744619aed419eb5d6b0636c75f8caa34443489ec",
+      "active_fraction": 0.349655,
+      "opaque_fraction": 0.331223,
+      "alpha_bbox": [
+        18,
+        39,
+        238,
+        216
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_craft_quality_witnesses_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_craft_quality_witnesses.dds",
+      "master_sha256": "0baefb30273ddfb163684437d910ad22cf710365ebfc15893e560f66b50b231e",
+      "texture_sha256": "c38ebfd2286b0780d5a283727dffe46236773f5a855e9351e879ec70dc97d438",
+      "active_fraction": 0.442078,
+      "opaque_fraction": 0.424103,
+      "alpha_bbox": [
+        18,
+        28,
+        238,
+        227
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_reservoir_silt_clearance_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_reservoir_silt_clearance.dds",
+      "master_sha256": "792f59611a3f7e07f19fbc227e5f510958c2fac123e4ed3fbe1f9028f7db849d",
+      "texture_sha256": "0a1521000f9ccd90836848fa79e5569800bf261f4357607fc591fad0372401a0",
+      "active_fraction": 0.368179,
+      "opaque_fraction": 0.349899,
+      "alpha_bbox": [
+        18,
+        44,
+        238,
+        212
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_winter_fodder_planning_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_winter_fodder_planning.dds",
+      "master_sha256": "d34d40497eb78260cff7d1f57c50e1cf3fd15335093730593140fecda39709fe",
+      "texture_sha256": "80596e9f5e3b27876b43677ee6bea8110d4fa5cf4926c89be2dc94e316997196",
+      "active_fraction": 0.384827,
+      "opaque_fraction": 0.359711,
+      "alpha_bbox": [
+        18,
+        34,
+        238,
+        221
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_customary_appeal_hearings_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_customary_appeal_hearings.dds",
+      "master_sha256": "7deebd61cd91769cc706949c8725fc41158e6e38246e0c19c66706f82c80df72",
+      "texture_sha256": "72d98b785397955c7ad644a32e8c18230523ca7f1781f33dfdc73bd5ab9a4fd3",
+      "active_fraction": 0.441147,
+      "opaque_fraction": 0.412949,
+      "alpha_bbox": [
+        18,
+        29,
+        238,
+        226
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_regional_festival_calendars_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_regional_festival_calendars.dds",
+      "master_sha256": "5450fa252842b41a5a64c81ab012f611db38c8702b2faea84f3095e3a322878a",
+      "texture_sha256": "211fc8d77d8d7fcc10a2ae728a62cadb29f0e12db1a5b01445acaeafd0262120",
+      "active_fraction": 0.337051,
+      "opaque_fraction": 0.302155,
+      "alpha_bbox": [
+        18,
+        29,
+        238,
+        226
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_refuge_wall_maintenance_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_refuge_wall_maintenance.dds",
+      "master_sha256": "c95d5dc643d102542d54799e2b1c7a4642f88f9d222ee6d2eb58979f83fb71be",
+      "texture_sha256": "bd525ce686e9759572806b212ed65fc3ab7cc07c1d1d9d5d12b7eb5ea2217a94",
+      "active_fraction": 0.391663,
+      "opaque_fraction": 0.364426,
+      "alpha_bbox": [
+        19,
+        24,
+        238,
+        231
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_long_distance_pilotage_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_long_distance_pilotage.dds",
+      "master_sha256": "f510071cc7f846a0f8fa53d23df26abaf7b6c695cf3f7873e148253c3dad6be6",
+      "texture_sha256": "bbab82351ca11e1128f4bf34fc5805b6a1969e7ada3ae6758f999493d4bf196f",
+      "active_fraction": 0.423447,
+      "opaque_fraction": 0.399719,
+      "alpha_bbox": [
+        18,
+        19,
+        238,
+        236
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_granary_pest_control_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_granary_pest_control.dds",
+      "master_sha256": "79fddd8add8e2b4773e8f5e5cd00b1b9be1e8a81b3160929cc2504d51edc48c0",
+      "texture_sha256": "5edc2d8fa59641a8c9c8181bd031c315a31597a27e6d52daa8780646c58dec33",
+      "active_fraction": 0.391998,
+      "opaque_fraction": 0.36821,
+      "alpha_bbox": [
+        18,
+        22,
+        238,
+        234
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_shared_work_obligations_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_shared_work_obligations.dds",
+      "master_sha256": "5e33dab658d6b1f952a49441d8dcf2e9d313341bc1218a5a68a744be0e34d484",
+      "texture_sha256": "e9685a0118db4e77c4651f5f7b7dd5640286e25745b95e43474f41fd3375d791",
+      "active_fraction": 0.381622,
+      "opaque_fraction": 0.356735,
+      "alpha_bbox": [
+        18,
+        28,
+        238,
+        227
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_allied_contingent_musters_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_allied_contingent_musters.dds",
+      "master_sha256": "fbba39e0ff1820929139ee91d48794e56b695238aae70901e4626a206e678d3f",
+      "texture_sha256": "a205c483c604bd529aec2e88f6f0852c277a8c7ff76fd4e74bcaf3d9bbad6677",
+      "active_fraction": 0.354172,
+      "opaque_fraction": 0.314133,
+      "alpha_bbox": [
+        32,
+        18,
+        224,
+        238
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_frontier_exchange_fairs_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_frontier_exchange_fairs.dds",
+      "master_sha256": "8ad908937b7bf3f24efe088f0abe600079e306e7fa17aff1ba623180dba5f109",
+      "texture_sha256": "35dd76f4e09fe9691388e67ff9f2c33308abf1e97fdb690947b9b7caa549b6fa",
+      "active_fraction": 0.320068,
+      "opaque_fraction": 0.287445,
+      "alpha_bbox": [
+        18,
+        37,
+        238,
+        219
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_refuge_fortification_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_refuge_fortification.dds",
+      "master_sha256": "10f11bb2536d255ad5eda03c7ae0e920d2251b1df6c6388cf094e631693c6309",
+      "texture_sha256": "f0afd7f72585bc152af99880d49a20c2572d80979a551bf2516dc39a5797ab41",
+      "active_fraction": 0.483307,
+      "opaque_fraction": 0.447418,
+      "alpha_bbox": [
+        19,
+        18,
+        237,
+        238
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_migrant_craft_settlements_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_migrant_craft_settlements.dds",
+      "master_sha256": "700e9f566bb5f7b5db36e93a2ef1d62d6eafc942126bfba83631cc8145e43c89",
+      "texture_sha256": "dca654e9847d0d7a297ac349e3bf5496cb00b08b00806d82e0a3c0905e6eb910",
+      "active_fraction": 0.466583,
+      "opaque_fraction": 0.374985,
+      "alpha_bbox": [
+        18,
+        18,
+        238,
+        237
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_boat_bridge_teams_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_boat_bridge_teams.dds",
+      "master_sha256": "1bc5ea88ab0323459174f1911cfc4611318d7221b6e31131fc381d110d1e03e8",
+      "texture_sha256": "945d764bfa3f50a0d068dfc65e0499f9b6679b1ec79cc3940b3ca5a9e3bb76fc",
+      "active_fraction": 0.338455,
+      "opaque_fraction": 0.309174,
+      "alpha_bbox": [
+        18,
+        35,
+        238,
+        220
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_mixed_custom_arbitration_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_mixed_custom_arbitration.dds",
+      "master_sha256": "0c8b605459e0086769d6aa36b08d963385a0ef4c5f19e489e9e7e7bf7c73f281",
+      "texture_sha256": "0f5c37ae77bbac1cc50fc84935b979ce86a5c16eb205a86b4fe1f1060503f3ee",
+      "active_fraction": 0.315994,
+      "opaque_fraction": 0.293732,
+      "alpha_bbox": [
+        18,
+        53,
+        238,
+        203
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_winter_quarter_stores_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_winter_quarter_stores.dds",
+      "master_sha256": "f90e25ee0a0ee79b606a3fcf5b646d6cd40f2178fc3358e61d3f9b063cf88126",
+      "texture_sha256": "0aac52479898e092e385639899596dc4c5b04aa9a7f2a0d779d57d9238878500",
+      "active_fraction": 0.436356,
+      "opaque_fraction": 0.416138,
+      "alpha_bbox": [
+        18,
+        32,
+        238,
+        224
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_hostage_exchange_guarantees_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_hostage_exchange_guarantees.dds",
+      "master_sha256": "4e26bf51981e8ba1e8adf61f3a6d34770e897c62ac82f9e077427b2f3d323ba0",
+      "texture_sha256": "34c343623befb7f897bd394f84b19099b07c9ea43d9c38e58c765be75e32c487",
+      "active_fraction": 0.337982,
+      "opaque_fraction": 0.303467,
+      "alpha_bbox": [
+        18,
+        45,
+        238,
+        211
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_route_interpreter_households_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_route_interpreter_households.dds",
+      "master_sha256": "1b43b097998f7d9649dff16bfef355416fc2e55d7b054254301d8dc63f14c7ca",
+      "texture_sha256": "ea9a6596dde41b84c2c99468fb1c248d44a1eb58a63d9bf7a3a094a11733aa63",
+      "active_fraction": 0.351929,
+      "opaque_fraction": 0.286697,
+      "alpha_bbox": [
+        18,
+        37,
+        238,
+        218
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_resettlement_boundary_surveys_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_resettlement_boundary_surveys.dds",
+      "master_sha256": "3b2d732689d891c3fa8c7027c5c2bd14411687311d1f36029f28f0cb23d27f0c",
+      "texture_sha256": "26d0e19eaba054f8ac51351372780f2c7f9061574e230cec9291011b2d4ad0ca",
+      "active_fraction": 0.382248,
+      "opaque_fraction": 0.343155,
+      "alpha_bbox": [
+        18,
+        27,
+        238,
+        228
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_mobile_market_camps_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_mobile_market_camps.dds",
+      "master_sha256": "f5cea3096d5a7966791814cbe34e28b22af475a0a2e71eb1e538f596f045235b",
+      "texture_sha256": "ba6b3c4f6a5078bc7ceb355ec66deeb504fc8e84dc93baf95058bb4aec1d37fa",
+      "active_fraction": 0.390518,
+      "opaque_fraction": 0.357346,
+      "alpha_bbox": [
+        18,
+        37,
+        238,
+        218
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_portable_ritual_equipment_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_portable_ritual_equipment.dds",
+      "master_sha256": "ccf01ab4c997c0188cd01afc200e369d3b7cc515770c5e41000b57493ca67a4b",
+      "texture_sha256": "5fcb14d9cd1382338afa791f7e87781d20d09227c89d86780e44690cc103efc4",
+      "active_fraction": 0.295639,
+      "opaque_fraction": 0.259979,
+      "alpha_bbox": [
+        18,
+        40,
+        238,
+        215
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_migrant_crop_exchanges_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_migrant_crop_exchanges.dds",
+      "master_sha256": "2676a792212679dda1cf8030824205a9f714797026b5108e4fb40fcf416036d1",
+      "texture_sha256": "e240eab4e5ddfab1d11d32e2ea8581f57455f0d713785d8462e7d29b73a9fe68",
+      "active_fraction": 0.363602,
+      "opaque_fraction": 0.323654,
+      "alpha_bbox": [
+        18,
+        38,
+        238,
+        219
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_multilingual_brokers_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_multilingual_brokers.dds",
+      "master_sha256": "fa04e6dfc651a2b817b1a441e08a22a011f1c27771b2115a63cbd221cb9a18f0",
+      "texture_sha256": "31b53c2fcd183392ae94ece592e2d589402dcddcc7d3bd46f3c4419a9e785a5d",
+      "active_fraction": 0.274216,
+      "opaque_fraction": 0.234589,
+      "alpha_bbox": [
+        18,
+        30,
+        238,
+        226
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_transport_train_repairs_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_transport_train_repairs.dds",
+      "master_sha256": "2393b6e957a7a3f87ef015321e2dfd9308c66813b3d41b21e1ab36c6933393bb",
+      "texture_sha256": "066fc63a0bda4a1596aa1ed09f3ed873879c923f67781e3c46e960922ff5f79a",
+      "active_fraction": 0.372253,
+      "opaque_fraction": 0.334732,
+      "alpha_bbox": [
+        18,
+        33,
+        238,
+        222
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_river_crossing_flotillas_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_river_crossing_flotillas.dds",
+      "master_sha256": "4eb18ef4626c4e5af32fc7a2c9af1b30f7dd93c504d22448cea251823759da9e",
+      "texture_sha256": "0737be34c3f9223a471994014a6b15891948c772576715b48508f781a8bdb816",
+      "active_fraction": 0.36174,
+      "opaque_fraction": 0.334198,
+      "alpha_bbox": [
+        18,
+        44,
+        238,
+        212
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_dispersed_refuge_networks_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_dispersed_refuge_networks.dds",
+      "master_sha256": "6f35c56ca77d27ab3df31d4b8f58077346c17fda663e575a06a529cd505b7cfc",
+      "texture_sha256": "c4e625b614e76424b34a7fbc86037cb5439c6aff056b48b232d5f880de54c57b",
+      "active_fraction": 0.337997,
+      "opaque_fraction": 0.322021,
+      "alpha_bbox": [
+        18,
+        49,
+        238,
+        207
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_shared_successor_toll_compacts_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_shared_successor_toll_compacts.dds",
+      "master_sha256": "88d21c88de28c2e230c261d70ffd7bc5fe9fef87f0028fb4aee53dc88d9edb2d",
+      "texture_sha256": "f5aff1a7c179ee6ea5493e60e094a526d7532c2951c89cdfe78bb30ee69e1f5f",
+      "active_fraction": 0.327133,
+      "opaque_fraction": 0.299072,
+      "alpha_bbox": [
+        18,
+        41,
+        238,
+        214
       ],
       "perimeter_max": 0
     }

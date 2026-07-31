@@ -38,21 +38,21 @@ LANGUAGES = (
 )
 
 EXPECTED = {
-    "VCS": ("Vicus Communities", "apurlec", "antq_vicus", "antq_andean_irrigated_valley_network", {"apurlec", "xllang"}),
-    "VIR": ("Gallinazo Communities", "chan_chan", "antq_gallinazo", "antq_andean_irrigated_valley_network", {"chan_chan", "chao", "farfan", "pakatnamu", "paramonga", "sana"}),
+    "VCS": ("Vicus", "apurlec", "antq_vicus", "antq_andean_irrigated_valley_network", {"apurlec", "xllang"}),
+    "VIR": ("Gallinazo", "chan_chan", "antq_gallinazo", "antq_andean_irrigated_valley_network", {"chan_chan", "chao", "farfan", "pakatnamu", "paramonga", "sana"}),
     "NAZ": ("Nazca", "cahuachi", "antq_nazca", "antq_andean_ceremonial_centre_network", {"cahuachi", "chinchay", "ica", "puka_tampu"}),
     "LIM": ("Lima Culture", "rimaq", "antq_lima_central_coast", "antq_andean_irrigated_valley_network", {"cantamarca", "chilca", "collique", "huarco", "huarochiri", "incahuasi", "ishma", "rimaq"}),
-    "ATC": ("Atico-Caraveli Valley Communities", "atico", "antq_atico_caraveli", "antq_andean_irrigated_valley_network", {"aruni", "atico", "caraveli", "arequipa"}),
-    "CBA": ("Cusco Basin Communities", "qusqu", "antq_cusco_late_formative", "antq_andean_highland_community_network", {"pikillaqta", "pisaq", "quillarumiyoc", "qusqu", "urupampa", "waqrapukara", "ullantaytampu", "willka_pampa", "yanatile"}),
+    "ATC": ("Atico-Caraveli Valley", "atico", "antq_atico_caraveli", "antq_andean_irrigated_valley_network", {"aruni", "atico", "caraveli", "arequipa"}),
+    "CBA": ("Cusco Basin", "qusqu", "antq_cusco_late_formative", "antq_andean_highland_community_network", {"pikillaqta", "pisaq", "quillarumiyoc", "qusqu", "urupampa", "waqrapukara", "ullantaytampu", "willka_pampa", "yanatile"}),
     "REC": ("Recuay", "waricoto", "antq_recuay", "antq_andean_highland_community_network", {"waricoto"}),
-    "HUA": ("Huarpa Communities", "huaman_karpa", "antq_huarpa", "antq_andean_highland_community_network", {"auccapana", "challwanqa", "huaman_karpa", "sondor", "soras", "allpas", "choccalpata", "paqwayranra", "pariahuanca", "wari_peru", "churkampa", "llacsapallanca", "tampu_machay", "tayaccasa"}),
+    "HUA": ("Huarpa", "huaman_karpa", "antq_huarpa", "antq_andean_highland_community_network", {"auccapana", "challwanqa", "huaman_karpa", "sondor", "soras", "allpas", "choccalpata", "paqwayranra", "pariahuanca", "wari_peru", "churkampa", "llacsapallanca", "tampu_machay", "tayaccasa"}),
     "PUK": ("Pukara", "ayaviri", "antq_pukara", "antq_andean_ceremonial_centre_network", {"sausaya", "tucssa", "yanahuara", "ayaviri", "macaya", "wankani", "chucuito", "contornasa", "hatunqulla", "pomata"}),
     "TIW": ("Early Tiwanaku", "tiwanaku", "antq_tiwanaku", "antq_andean_ceremonial_centre_network", {"achacachi", "axawiri", "calamarca", "chuqiyapu", "machaqa", "tiwanaku", "viacha"}),
-    "WNK": ("Wankarani Communities", "oruro", "antq_wankarani", "antq_wankarani_mound_village_network", {"charka", "colquechaca", "kori_bara_karaa_ancas", "matarjawira", "sicasica", "sura", "karanka", "oruro"}),
-    "MRH": ("Cajamarca-Marcahuamachuco Communities", "markahuamachuco", "antq_cajamarca_marcahuamachuco", "antq_andean_highland_community_network", {"chimu", "illapa", "kaxa_marca", "llucho", "markahuamachuco", "tantaricuy"}),
-    "UTC": ("Upper Utcubamba Communities", "karajia", "antq_upper_utcubamba", "antq_andean_highland_community_network", {"congona", "huamanpata", "kuelap", "olan", "huancachaca", "karajia", "utkhupampa"}),
+    "WNK": ("Wankarani", "oruro", "antq_wankarani", "antq_wankarani_mound_village_network", {"charka", "colquechaca", "kori_bara_karaa_ancas", "matarjawira", "sicasica", "sura", "karanka", "oruro"}),
+    "MRH": ("Cajamarca-Marcahuamachuco", "markahuamachuco", "antq_cajamarca_marcahuamachuco", "antq_andean_highland_community_network", {"chimu", "illapa", "kaxa_marca", "llucho", "markahuamachuco", "tantaricuy"}),
+    "UTC": ("Upper Utcubamba", "karajia", "antq_upper_utcubamba", "antq_andean_highland_community_network", {"congona", "huamanpata", "kuelap", "olan", "huancachaca", "karajia", "utkhupampa"}),
     "YUN": ("Eastern Yunga Valley Networks", "incarraqay", "antq_eastern_yunga", "antq_andean_highland_community_network", {"arque", "incarraqay", "sachchaa_mukku", "ayopaya", "paititi", "sarkajpa"}),
-    "MYB": ("Moyobamba Foothill Communities", "moyobamba", "antq_moyobamba_foothill", "antq_andean_highland_community_network", {"chatuza", "lamas", "moyobamba"}),
+    "MYB": ("Moyobamba Foothill", "moyobamba", "antq_moyobamba_foothill", "antq_andean_highland_community_network", {"chatuza", "lamas", "moyobamba"}),
 }
 FIELDS = (
     "design_tag", "engine_tag", "name", "map_capital", "location_count",

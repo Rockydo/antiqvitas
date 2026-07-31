@@ -25,6 +25,47 @@
   ["Chang'an"](https://doi.org/10.1002/9781119399919.eahaa00645), *The
   Encyclopedia of Ancient History* (2022). The AD 2 register's nearly 700,000
   metropolitan residents is kept distinct from the city proper.
+- `CAM-MED-NUTS`: M. Salas-Salvadó et al.,
+  ["Mediterranean nuts: origins, ancient medicinal benefits and
+  symbolism"](https://doi.org/10.1017/S1368980010002540), *Public Health
+  Nutrition* 14 (2011). Supports broad ancient Mediterranean and Roman use and
+  dispersal of almonds, walnuts, hazelnuts, pine nuts, and pistachios; it does
+  not prove any individual engine polygon was a specialized producer.
+- `PLOS-SILK-NUTS`: Robert N. Spengler III et al.,
+  ["Arboreal crops on the medieval Silk Road: Archaeobotanical studies at
+  Tashbulak"](https://doi.org/10.1371/journal.pone.0201409), *PLOS ONE* 13
+  (2018). Its synthesis records much earlier walnut, almond, and pistachio
+  evidence across Iran and Central Asia. Used for broad ecological-historical
+  envelopes, not to backdate medieval orchard or bazaar scale.
+- `PMC-MED-BARLEY`: Marta Lister et al.,
+  ["Archaeobiological evolution of barley over the last eight millennia in the
+  northwestern Mediterranean Basin"](https://pmc.ncbi.nlm.nih.gov/articles/PMC12079129/).
+  Supports hulled barley as a major later-prehistoric and ancient Mediterranean
+  cereal; exact location shares remain contested.
+- `OXF-BRONZE-CROPS`: Amy Bogaard,
+  ["Plant Cultivation in the Bronze Age"](https://doi.org/10.1093/oxfordhb/9780199569885.013.0026),
+  *Oxford Handbook of the European Bronze Age*. Supports barley's established
+  pre-AD 1 breadth across Europe, not a uniform crop regime.
+- `ABD-ROM-BARLEY`: Kate Britton and Jacqui Huntley,
+  ["New evidence for the consumption of barley at Romano-British military and
+  civilian sites"](https://doi.org/10.1007/s00334-010-0245-3), *Vegetation
+  History and Archaeobotany* 20 (2011). Supports barley in Roman-period Britain;
+  opening local assignments remain ecological proxies.
+- `PMC-SESAME-EXCHANGE`: Nicole Boivin et al.,
+  ["Exotic foods reveal contact between South Asia and the Near East during the
+  second millennium BCE"](https://pmc.ncbi.nlm.nih.gov/articles/PMC7812755/),
+  *PNAS* 118 (2021). Supports sesame's South Asian base and pre-AD 1 westward
+  circulation; exact production polygons remain contested.
+- `SCIADV-DATE`: Sarah Sallon et al.,
+  ["Origins and insights into the historic Judean date
+  palm"](https://doi.org/10.1126/sciadv.aax0384), *Science Advances* 6 (2020).
+  Supports ancient date cultivation and eastern-western exchange across the
+  Near East and North Africa, not exact oasis boundaries.
+- `NHM-DATE`: Natural History Museum,
+  ["Date palm: the cornerstone of civilisation in the Middle East and North
+  Africa"](https://www.nhm.ac.uk/discover/date-palm-the-cornerstone-of-civilisation.html).
+  Summarizes domestication and ancient food, material, and trade importance;
+  used only for the broad arid-oasis envelope.
 
 - `IRAN-RHAGA`: Rüdiger Schmitt, ["Isfahan iv. Pre-Islamic Period"](https://www.iranicaonline.org/articles/isfahan-iv-pre-islamic-period/), *Encyclopaedia Iranica*, records the ancient city form Rhaga/Rhagae in the Ray region. It supports the direct period label `Rhaga` at the installed Ray city field, not a civic boundary, language, population, or political-status claim.
 - `OUP-REDSEA`: Lucy Blue and collaborators, ["The Archaeological Record of Indian Ocean Engagements in the Red Sea"](https://academic.oup.com/edited-volume/43506/chapter/364132532), *Oxford Handbook of Topics in Archaeology*, identifies Mouza as the Himyarite Red Sea outlet in the *Periplus* period but says it is unidentified and only probably at modern Mocha. It supports a qualified port-name label at al-Mukha, not an excavated site identity, city plan, population, or route claim.

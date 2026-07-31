@@ -32,19 +32,19 @@ LANGUAGES = (
 )
 EXPECTED = {
     "WAF": (
-        "Kebbi River Communities", "birnin_kebbi", 7, "antq_kebbi_river",
+        "Kebbi River", "birnin_kebbi", 7, "antq_kebbi_river",
         "antq_west_african_savanna_compound_network",
     ),
     "ZMP": (
-        "Zamfara Plateau Communities", "birnin_zamfara", 5,
+        "Zamfara Plateau", "birnin_zamfara", 5,
         "antq_zamfara_plateau", "antq_west_african_savanna_compound_network",
     ),
     "KPC": (
-        "Katsina Plain Communities", "katsina", 4, "antq_katsina_plain",
+        "Katsina Plain", "katsina", 4, "antq_katsina_plain",
         "antq_west_african_savanna_compound_network",
     ),
     "GTC": (
-        "Gobir Tarka Communities", "maradi", 4, "antq_gobir_tarka",
+        "Gobir Tarka", "maradi", 4, "antq_gobir_tarka",
         "antq_west_african_savanna_compound_network",
     ),
     "NSK": (
@@ -52,7 +52,7 @@ EXPECTED = {
         "antq_west_african_ironworking_network",
     ),
     "OUE": (
-        "Lower Oueme Forest Communities", "ketu", 1, "antq_lower_oueme",
+        "Lower Oueme Forest", "ketu", 1, "antq_lower_oueme",
         "antq_west_african_forest_network",
     ),
     "VIC": (
@@ -60,7 +60,7 @@ EXPECTED = {
         "antq_west_african_ironworking_network",
     ),
     "BSW": (
-        "Bosumtwi Forest Communities", "kumasi", 1, "antq_akan_forest",
+        "Bosumtwi Forest", "kumasi", 1, "antq_akan_forest",
         "antq_west_african_forest_network",
     ),
 }

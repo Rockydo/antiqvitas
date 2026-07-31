@@ -35,7 +35,7 @@ CONTACT_SHEET = ROOT / "docs/m11/ADVANCE_ICON_FORMAT_CONTACT_SHEET.png"
 SURFACE_PREVIEW = ROOT / "docs/m11/ADVANCE_ICON_SURFACE_PREVIEW.png"
 MANIFEST = ROOT / "docs/m11/advance_icon_format_manifest.json"
 SIZE = (256, 256)
-EXPECTED_ASSETS = 805
+EXPECTED_ASSETS = 885
 
 OUTLIER_QUADRANTS = {
     "antq_advance_regional_law_codes_256.png": "top_left",

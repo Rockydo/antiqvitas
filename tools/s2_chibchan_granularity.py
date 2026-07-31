@@ -39,7 +39,7 @@ LANGUAGES = (
 
 EXPECTED = {
     "HRC": (
-        "Herrera Plateau Communities",
+        "Herrera Plateau",
         "Northern Andes",
         "funza",
         "antq_herrera_plateau",
@@ -51,7 +51,7 @@ EXPECTED = {
         },
     ),
     "SNE": (
-        "Sierra Nevada Early Communities",
+        "Sierra Nevada Early",
         "Northern Andes",
         "chayrama",
         "antq_sierra_nevada_early",
@@ -60,7 +60,7 @@ EXPECTED = {
         {"chayrama", "teyuna", "yaharo"},
     ),
     "LRC": (
-        "Loja Regional-Development Communities",
+        "Loja Regional-Development",
         "Andes",
         "malacatos",
         "antq_loja_regional_development",

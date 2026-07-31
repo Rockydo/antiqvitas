@@ -29,6 +29,11 @@ from m8_regional_depth import (
     node_effect,
     validate_catalog,
 )
+from m8_shared_depth import (
+    EXPECTED_COUNTS as SHARED_DEPTH_COUNTS,
+    SHARED_DEPTH_BY_AGE,
+    validate_catalog as validate_shared_depth_catalog,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 ADVANCES = ROOT / "in_game/common/advances"
@@ -1500,7 +1505,43 @@ def advance_records() -> tuple[Advance, ...]:
                         node_description(theme, track, node_index),
                         theme.source,
                     ))
+    records.extend(shared_depth_records())
     records.extend(law_foundation_records())
+    return tuple(records)
+
+
+def shared_depth_records() -> tuple[Advance, ...]:
+    """Build 80 culture-neutral depth nodes against each age's shared roots."""
+    validate_shared_depth_catalog()
+    records: list[Advance] = []
+    track_ordinals = {track: 0 for track in TRACKS}
+    effect_fields = {
+        "statecraft": "country_cabinet_efficiency",
+        "warfare": "levy_recovery_modifier",
+        "exchange": "trade_range_modifier",
+        "learning": "research_speed_modifier",
+        "society": "global_disease_resistance",
+    }
+    for age_index, rows in enumerate(SHARED_DEPTH_BY_AGE):
+        conceptual_index = min(age_index, 4)
+        root_offset = 5 if age_index == 5 else 0
+        for slug, track, name, description in rows:
+            root = f"antq_{TRACKS[track][conceptual_index][root_offset]}"
+            track_ordinals[track] += 1
+            value = 0.0005 + track_ordinals[track] * 0.0001
+            records.append(Advance(
+                f"antq_shared_{slug}",
+                name,
+                AGE_KEYS[age_index],
+                age_index,
+                4,
+                track,
+                "shared",
+                (root,),
+                ((effect_fields[track], f"{value:.4f}"),),
+                description,
+                "P15;CAH-XI" if age_index < 2 else "P15;CAH-XII",
+            ))
     return tuple(records)
 
 
@@ -2298,7 +2339,7 @@ def validate(records: tuple[Advance, ...]) -> None:
     failures: list[str] = []
     unlocks = content_unlocks(records)
     law_foundation_count = len(law_unlock_packages())
-    expected_advance_count = 800 + law_foundation_count
+    expected_advance_count = 880 + law_foundation_count
     if len(records) != expected_advance_count:
         failures.append(
             f"expected {expected_advance_count} advances including exact legal "
@@ -2308,7 +2349,14 @@ def validate(records: tuple[Advance, ...]) -> None:
     by_key = {record.key: record for record in records}
     if len(keys) != len(set(keys)):
         failures.append("advance keys are not unique")
-    expected_counts = (160 + law_foundation_count, 160, 160, 160, 80, 80)
+    expected_counts = tuple(
+        base + shared + (law_foundation_count if index == 0 else 0)
+        for index, (base, shared) in enumerate(zip(
+            (160, 160, 160, 160, 80, 80),
+            SHARED_DEPTH_COUNTS,
+            strict=True,
+        ))
+    )
     for age_index, age in enumerate(AGE_KEYS):
         age_records = [record for record in records if record.age == age]
         expected = expected_counts[age_index]
@@ -2450,7 +2498,7 @@ def validate(records: tuple[Advance, ...]) -> None:
             )
     required_by = {required for record in records for required in record.requires}
     leaves = [record.key for record in records if record.key not in required_by]
-    if len(leaves) != 190 + law_foundation_count:
+    if len(leaves) != 270 + law_foundation_count:
         failures.append(
             "the expanded branching trees and exact legal holders have an invalid leaf count"
         )

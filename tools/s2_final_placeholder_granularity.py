@@ -51,49 +51,49 @@ OBSOLETE = {
 # name, region, capital, culture, religion, reform, emblem prefix, exact locations
 EXPECTED = {
     "DGU": (
-        "Daga Highland Communities", "Oceania", "daga_papua",
+        "Daga Highland", "Oceania", "daga_papua",
         "antq_daga_highland", "antq_papuan_local_traditions",
         "antq_daga_highland_garden_network", "ce_papua_",
         {"daga_papua"},
     ),
     "KBC": (
-        "Bomberai South-Coast Communities", "Oceania", "kaimana",
+        "Bomberai South-Coast", "Oceania", "kaimana",
         "antq_bomberai_south_coast", "antq_papuan_local_traditions",
         "antq_bomberai_coastal_community_network", "ce_papua_",
         {"buruwai", "kaimana"},
     ),
     "EMR": (
-        "Early Mariana Island Communities", "Oceania", "guahan",
+        "Early Mariana Island", "Oceania", "guahan",
         "antq_early_mariana_island", "antq_mariana_island_traditions",
         "antq_early_mariana_island_network", "ce_polynesian_",
         {"guahan", "saipan"},
     ),
     "WCR": (
-        "Yap-Ulithi Island Communities", "Oceania", "yap",
+        "Yap-Ulithi Island", "Oceania", "yap",
         "antq_yap_ulithi_island", "antq_western_caroline_traditions",
         "antq_yap_ulithi_island_network", "ce_polynesian_",
         {"ulithi_atoll", "yap"},
     ),
     "OLC": (
-        "Orinoco-Llanos Ceramic Communities", "Caribbean-Amazon", "guamontey",
+        "Orinoco-Llanos Ceramic", "Caribbean-Amazon", "guamontey",
         "antq_orinoco_llanos_ceramic", "antq_caribbean",
         "antq_orinoco_llanos_ceramic_network", "ce_taino_",
         {"guamontey"},
     ),
     "WIC": (
-        "Windward Island Ceramic Communities", "Caribbean-Amazon", "carucairi",
+        "Windward Island Ceramic", "Caribbean-Amazon", "carucairi",
         "antq_windward_island_ceramic", "antq_caribbean",
         "antq_windward_island_ceramic_network", "ce_taino_",
         {"carucairi"},
     ),
     "CCF": (
-        "Central California Coastal Communities", "North America", "awaswas",
+        "Central California Coast", "North America", "awaswas",
         "antq_central_california_coastal", "antq_north_american",
         "antq_central_california_coastal_network", "ce_native_american_",
         {"awaswas", "chochenyo", "mutsun", "tepotahal"},
     ),
     "ACU": (
-        "Acutuba Central-Amazon Communities", "Caribbean-Amazon", "manaos",
+        "Acutuba Central-Amazon", "Caribbean-Amazon", "manaos",
         "antq_acutuba_central_amazon", "antq_central_amazon_traditions",
         "antq_acutuba_central_amazon_network", "ce_native_american_",
         {"manaos"},

@@ -1,5 +1,49 @@
 # Progress
 
+## 2026-07-31 - Major opening markets gain complete supply circuits
+
+- Added 357 productive workshops across 60 Tier 1-2 Old World markets.
+  Hardware, cordage, masonry, tools, and processed grain now have one producer
+  per hub, two at reviewed flagships, and three at Roma.
+- Expanded the Flour and Bread guard to cover food, price, demand, the full
+  wheat/lumber/tools recipe, and direct opening production.
+- Full `make validate` passes 153/153; paired smoke has zero new or mod-unique
+  lines. Focused fresh-game panel entry returned to the front-end twice.
+
+## 2026-07-31 - Cultivator coverage reaches the reviewed ancient envelope
+
+- Expanded the lower-yield Cultivator system from 24 to 36 families covering
+  all 34 reviewed cultivable goods; coffee and silphium remain explicit
+  historical exclusions.
+- Added 12 direct building icons from three EU5-referenced four-up sheets.
+  The active building audit is now 324/324 and the direct UI ledger 1,990.
+- Full `make validate` passes 153/153; paired smoke has zero new or mod-unique
+  lines. Focused fresh-game panel entry returned to the front-end twice.
+
+## 2026-07-31 - Ancient societal values replace the installed union
+
+- Replaced all 17 installed value definitions and 72 labels/descriptions in
+  11 clients; no vanilla political vocabulary remains player-facing.
+- Three late transformations are age-gated and three regional axes are
+  profile-gated. The cabinet movement action is enabled again.
+- Full `make validate` passes 153/153; paired smoke has zero new or mod-unique
+  lines. Focused fresh-game panel entry returned to the front-end twice.
+
+## 2026-07-31 - Deep research and concise polity labels
+
+- Added 80 transferable practice advances from 20 reviewed four-up,
+  vanilla-referenced sheets: 918 total advances, 885 checked textures.
+- Every opening tag now sees at least 32/32/32/32/16/16 nodes by age; Rome
+  sees 207, Parthia 178, and Suebi 178.
+- Removed all 108 `Communities` and 12 `Group` roster suffixes; shortened 11
+  further labels, regenerated every country/name mirror, and added a recurrence
+  guard. All 463 names are unique and at most 25 characters.
+- Expanded source-led agricultural RGOs: tree nuts 8→40, barley 3→32, dates
+  8→20, and sesame 8→25. All 117 anchors pass climate, ownership, and
+  13,553-location economy audits; rare geographically narrow goods stay rare.
+- `make validate` passes 153/153. Paired smoke has zero new or mod-unique
+  lines; focused panel entry returned to the front-end twice.
+
 ## 2026-07-31 - Levy availability regains the installed opening switch
 
 - Bound the locally verified `always_allow_army_levies` modifier to the
@@ -8086,3 +8130,18 @@ reviewed 128px BC7 DDS.
   node remains capped at eight unlocks.
 - Final `make validate` passes 150/150. Paired vanilla/mod `make smoke` reaches
   both rendered menus and reports zero new or mod-unique error-log lines.
+
+## 2026-07-31 - Proved levies and navies; deepened research
+
+- Fresh Suebi runtime raised all 1,939 levies from 12+ regions; fresh Parthia
+  exposed five bounded river, Caspian, Gulf, merchant, and transport craft.
+- Added 80 transferable practice nodes from 20 reviewed four-up EU5-referenced
+  sheets. All 80 have unique transparent masters and BC7 textures.
+- The tree now has 918 advances. All 463 opening tags meet the per-age
+  32/32/32/32/16/16 visibility floor with profile isolation and an
+  eight-unlock ceiling.
+- Parthia's military header showed `0 + 0 / 0`, but the working Roman header
+  does too before Gather opens its captain list. Fresh Parthian click-through
+  proof remains open; no multiplier change is justified yet.
+- Final validation passes 151/151. Two smoke attempts were deferred by the
+  shared `endore` EU5 lease; this game-visible batch remains uncommitted.

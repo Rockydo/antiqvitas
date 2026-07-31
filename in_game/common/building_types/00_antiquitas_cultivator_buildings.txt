@@ -1697,3 +1697,810 @@ antq_cult_tobacco_plots = {
 	construction_demand = farm_constructions
 	custom_tags = { antq_cultivator }
 }
+
+antq_cult_vineyards = {
+	audio_tier = 1
+	is_foreign = no
+	pop_type = peasants
+	category = rgo_building_category
+	employment_size = rural_peasant_produce_employment
+	startup_ramp_target = rural_startup_ramp_target
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = rural_build_time
+	important_for_AI = yes
+	location_potential = {
+		OR = {
+			climate = continental
+			climate = oceanic
+			climate = mediterranean
+			climate = subtropical
+			climate = cold_arid
+		}
+		OR = {
+			topography = flatland
+			topography = hills
+			topography = plateau
+		}
+		OR = {
+			vegetation = farmland
+			vegetation = grasslands
+			vegetation = sparse
+			vegetation = woods
+		}
+		OR = {
+			region = region:iberia_region
+			region = region:france_region
+			region = region:italy_region
+			region = region:maghreb_region
+			region = region:balkan_region
+			region = region:anatolia_region
+			region = region:carpathia_region
+			region = region:caucasus_region
+			region = region:crescent_region
+			region = region:persia_region
+			region = region:khorasan_region
+			region = region:xinjiang_region
+			region = region:north_china_region
+		}
+	}
+	max_levels = {
+		value = 1
+		if = {
+			limit = { vegetation = farmland }
+			add = 1
+		}
+		min = 2
+	}
+	unique_production_methods = {
+		antq_cult_vineyards_maintenance = {
+			tools = 0.0333
+			lumber = 0.1000
+			livestock = 0.1667
+			produced = wine
+			output = 0.30
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+	modifier = {
+		local_food_capacity = 20
+		local_peasants_estate_power = 0.05
+	}
+	construction_demand = farm_constructions
+	custom_tags = { antq_cultivator }
+}
+
+antq_cult_saffron_beds = {
+	audio_tier = 1
+	is_foreign = no
+	pop_type = peasants
+	category = rgo_building_category
+	employment_size = rural_peasant_produce_employment
+	startup_ramp_target = rural_startup_ramp_target
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = rural_build_time
+	important_for_AI = yes
+	location_potential = {
+		OR = {
+			climate = mediterranean
+			climate = arid
+			climate = cold_arid
+		}
+		OR = {
+			topography = flatland
+			topography = hills
+			topography = plateau
+		}
+		OR = {
+			vegetation = farmland
+			vegetation = grasslands
+			vegetation = sparse
+			vegetation = woods
+		}
+		OR = {
+			region = region:iberia_region
+			region = region:france_region
+			region = region:italy_region
+			region = region:balkan_region
+			region = region:anatolia_region
+			region = region:crescent_region
+			region = region:persia_region
+			region = region:khorasan_region
+			region = region:western_india_region
+		}
+	}
+	max_levels = {
+		value = 1
+		if = {
+			limit = { vegetation = farmland }
+			add = 1
+		}
+		min = 2
+	}
+	unique_production_methods = {
+		antq_cult_saffron_beds_maintenance = {
+			tools = 0.0556
+			lumber = 0.1667
+			livestock = 0.2778
+			produced = saffron
+			output = 0.20
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+	modifier = {
+		local_food_capacity = 20
+		local_peasants_estate_power = 0.05
+	}
+	construction_demand = farm_constructions
+	custom_tags = { antq_cultivator }
+}
+
+antq_cult_black_pepper = {
+	audio_tier = 1
+	is_foreign = no
+	pop_type = peasants
+	category = rgo_building_category
+	employment_size = rural_peasant_produce_employment
+	startup_ramp_target = rural_startup_ramp_target
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = rural_build_time
+	important_for_AI = yes
+	location_potential = {
+		OR = {
+			climate = tropical
+			climate = subtropical
+		}
+		OR = {
+			topography = flatland
+			topography = hills
+			topography = plateau
+		}
+		OR = {
+			vegetation = farmland
+			vegetation = woods
+			vegetation = forest
+			vegetation = jungle
+		}
+		OR = {
+			region = region:western_india_region
+			region = region:deccan_region
+			region = region:indochina_region
+			region = region:indonesia_region
+		}
+		OR = {
+			climate = tropical
+			climate = subtropical
+			has_river = yes
+		}
+	}
+	max_levels = {
+		value = 1
+		if = {
+			limit = { vegetation = farmland }
+			add = 1
+		}
+		min = 2
+	}
+	unique_production_methods = {
+		antq_cult_black_pepper_maintenance = {
+			tools = 0.0556
+			lumber = 0.1667
+			livestock = 0.2778
+			produced = pepper
+			output = 0.20
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+	modifier = {
+		local_food_capacity = 20
+		local_peasants_estate_power = 0.05
+	}
+	construction_demand = farm_constructions
+	custom_tags = { antq_cultivator }
+}
+
+antq_cult_clove_groves = {
+	audio_tier = 1
+	is_foreign = no
+	pop_type = peasants
+	category = rgo_building_category
+	employment_size = rural_peasant_produce_employment
+	startup_ramp_target = rural_startup_ramp_target
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = rural_build_time
+	important_for_AI = yes
+	location_potential = {
+		OR = {
+			climate = tropical
+		}
+		OR = {
+			topography = flatland
+			topography = hills
+			topography = plateau
+		}
+		OR = {
+			vegetation = farmland
+			vegetation = woods
+			vegetation = forest
+			vegetation = jungle
+		}
+		OR = {
+			region = region:indonesia_region
+		}
+		OR = {
+			climate = tropical
+			climate = subtropical
+			has_river = yes
+		}
+	}
+	max_levels = {
+		value = 1
+		if = {
+			limit = { vegetation = farmland }
+			add = 1
+		}
+		min = 2
+	}
+	unique_production_methods = {
+		antq_cult_clove_groves_maintenance = {
+			tools = 0.0500
+			lumber = 0.1500
+			livestock = 0.2500
+			produced = cloves
+			output = 0.18
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+	modifier = {
+		local_food_capacity = 20
+		local_peasants_estate_power = 0.05
+	}
+	construction_demand = farm_constructions
+	custom_tags = { antq_cultivator }
+}
+
+antq_cult_chili_gardens = {
+	audio_tier = 1
+	is_foreign = no
+	pop_type = peasants
+	category = rgo_building_category
+	employment_size = rural_peasant_produce_employment
+	startup_ramp_target = rural_startup_ramp_target
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = rural_build_time
+	important_for_AI = yes
+	location_potential = {
+		OR = {
+			climate = tropical
+			climate = subtropical
+			climate = continental
+			climate = arid
+		}
+		OR = {
+			topography = flatland
+			topography = hills
+			topography = plateau
+			topography = wetlands
+		}
+		OR = {
+			vegetation = farmland
+			vegetation = grasslands
+			vegetation = sparse
+			vegetation = woods
+			vegetation = forest
+			vegetation = jungle
+		}
+		OR = {
+			region = region:mesoamerica_region
+			region = region:central_america_region
+			region = region:aridoamerica_region
+			region = region:andes_region
+			region = region:colombia_region
+			region = region:brazil_region
+			region = region:caribbean_region
+			region = region:great_plains_region
+			region = region:east_coast_region
+			region = region:west_coast_region
+		}
+	}
+	max_levels = {
+		value = 1
+		if = {
+			limit = { vegetation = farmland }
+			add = 1
+		}
+		min = 2
+	}
+	unique_production_methods = {
+		antq_cult_chili_gardens_maintenance = {
+			tools = 0.0694
+			lumber = 0.2083
+			livestock = 0.3472
+			produced = chili
+			output = 0.25
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+	modifier = {
+		local_food_capacity = 20
+		local_peasants_estate_power = 0.05
+	}
+	construction_demand = farm_constructions
+	custom_tags = { antq_cultivator }
+}
+
+antq_cult_potato_terraces = {
+	audio_tier = 1
+	is_foreign = no
+	pop_type = peasants
+	category = rgo_building_category
+	employment_size = rural_peasant_produce_employment
+	startup_ramp_target = rural_startup_ramp_target
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = rural_build_time
+	important_for_AI = yes
+	location_potential = {
+		OR = {
+			climate = cold_arid
+			climate = oceanic
+			climate = subtropical
+		}
+		OR = {
+			topography = flatland
+			topography = hills
+			topography = plateau
+			topography = mountains
+		}
+		OR = {
+			vegetation = farmland
+			vegetation = grasslands
+			vegetation = sparse
+			vegetation = woods
+		}
+		OR = {
+			region = region:andes_region
+			region = region:colombia_region
+		}
+	}
+	max_levels = {
+		value = 1
+		if = {
+			limit = { vegetation = farmland }
+			add = 1
+		}
+		if = {
+			limit = { has_river = yes }
+			add = 1
+		}
+		min = 3
+	}
+	unique_production_methods = {
+		antq_cult_potato_terraces_maintenance = {
+			tools = 0.0167
+			lumber = 0.0500
+			livestock = 0.0833
+			produced = potato
+			output = 0.30
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+	modifier = {
+		local_food_capacity = 20
+		local_peasants_estate_power = 0.05
+	}
+	construction_demand = farm_constructions
+	custom_tags = { antq_cultivator }
+}
+
+antq_cult_apiaries = {
+	audio_tier = 1
+	is_foreign = no
+	pop_type = peasants
+	category = rgo_building_category
+	employment_size = rural_peasant_produce_employment
+	startup_ramp_target = rural_startup_ramp_target
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = rural_build_time
+	important_for_AI = yes
+	location_potential = {
+		OR = {
+			climate = continental
+			climate = oceanic
+			climate = mediterranean
+			climate = subtropical
+			climate = tropical
+			climate = cold_arid
+		}
+		OR = {
+			topography = flatland
+			topography = hills
+			topography = plateau
+			topography = wetlands
+		}
+		OR = {
+			vegetation = farmland
+			vegetation = grasslands
+			vegetation = sparse
+			vegetation = woods
+			vegetation = forest
+			vegetation = jungle
+		}
+	}
+	max_levels = {
+		value = 1
+		if = {
+			limit = { vegetation = farmland }
+			add = 1
+		}
+		min = 2
+	}
+	unique_production_methods = {
+		antq_cult_apiaries_maintenance = {
+			tools = 0.0244
+			lumber = 0.0733
+			livestock = 0.1222
+			produced = beeswax
+			output = 0.22
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+	modifier = {
+		local_food_capacity = 20
+		local_peasants_estate_power = 0.05
+	}
+	construction_demand = farm_constructions
+	custom_tags = { antq_cultivator }
+}
+
+antq_cult_mulberry_sericulture = {
+	audio_tier = 1
+	is_foreign = no
+	pop_type = peasants
+	category = rgo_building_category
+	employment_size = rural_peasant_produce_employment
+	startup_ramp_target = rural_startup_ramp_target
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = rural_build_time
+	important_for_AI = yes
+	location_potential = {
+		OR = {
+			climate = continental
+			climate = subtropical
+			climate = tropical
+		}
+		OR = {
+			topography = flatland
+			topography = hills
+			topography = plateau
+			topography = wetlands
+		}
+		OR = {
+			vegetation = farmland
+			vegetation = grasslands
+			vegetation = woods
+			vegetation = forest
+			vegetation = jungle
+		}
+		OR = {
+			region = region:east_china_region
+			region = region:north_china_region
+			region = region:south_china_region
+			region = region:west_china_region
+			region = region:korea_region
+			region = region:indochina_region
+		}
+		OR = {
+			climate = tropical
+			climate = subtropical
+			has_river = yes
+		}
+	}
+	max_levels = {
+		value = 1
+		if = {
+			limit = { vegetation = farmland }
+			add = 1
+		}
+		min = 2
+	}
+	unique_production_methods = {
+		antq_cult_mulberry_sericulture_maintenance = {
+			tools = 0.0400
+			lumber = 0.1200
+			livestock = 0.2000
+			produced = silk
+			output = 0.18
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+	modifier = {
+		local_food_capacity = 20
+		local_peasants_estate_power = 0.05
+	}
+	construction_demand = farm_constructions
+	custom_tags = { antq_cultivator }
+}
+
+antq_cult_wool_flocks = {
+	audio_tier = 1
+	is_foreign = no
+	pop_type = peasants
+	category = rgo_building_category
+	employment_size = rural_peasant_produce_employment
+	startup_ramp_target = rural_startup_ramp_target
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = rural_build_time
+	important_for_AI = yes
+	location_potential = {
+		OR = {
+			climate = continental
+			climate = oceanic
+			climate = mediterranean
+			climate = subtropical
+			climate = arid
+			climate = cold_arid
+		}
+		OR = {
+			topography = flatland
+			topography = hills
+			topography = plateau
+			topography = mountains
+		}
+		OR = {
+			vegetation = farmland
+			vegetation = grasslands
+			vegetation = sparse
+			vegetation = woods
+		}
+	}
+	max_levels = {
+		value = 1
+		if = {
+			limit = { vegetation = farmland }
+			add = 1
+		}
+		min = 2
+	}
+	unique_production_methods = {
+		antq_cult_wool_flocks_maintenance = {
+			tools = 0.0417
+			lumber = 0.1250
+			livestock = 0.2083
+			produced = wool
+			output = 0.30
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+	modifier = {
+		local_food_capacity = 20
+		local_peasants_estate_power = 0.05
+	}
+	construction_demand = farm_constructions
+	custom_tags = { antq_cultivator }
+}
+
+antq_cult_cattle_pastures = {
+	audio_tier = 1
+	is_foreign = no
+	pop_type = peasants
+	category = rgo_building_category
+	employment_size = rural_peasant_produce_employment
+	startup_ramp_target = rural_startup_ramp_target
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = rural_build_time
+	important_for_AI = yes
+	location_potential = {
+		OR = {
+			climate = continental
+			climate = oceanic
+			climate = mediterranean
+			climate = subtropical
+			climate = tropical
+			climate = arid
+			climate = cold_arid
+		}
+		OR = {
+			topography = flatland
+			topography = hills
+			topography = plateau
+			topography = wetlands
+		}
+		OR = {
+			vegetation = farmland
+			vegetation = grasslands
+			vegetation = sparse
+			vegetation = woods
+			vegetation = forest
+		}
+	}
+	max_levels = {
+		value = 1
+		if = {
+			limit = { vegetation = farmland }
+			add = 1
+		}
+		min = 2
+	}
+	unique_production_methods = {
+		antq_cult_cattle_pastures_maintenance = {
+			tools = 0.0233
+			lumber = 0.0700
+			livestock = 0.1167
+			produced = livestock
+			output = 0.28
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+	modifier = {
+		local_food_capacity = 20
+		local_peasants_estate_power = 0.05
+	}
+	construction_demand = farm_constructions
+	custom_tags = { antq_cultivator }
+}
+
+antq_cult_horse_pastures = {
+	audio_tier = 1
+	is_foreign = no
+	pop_type = peasants
+	category = rgo_building_category
+	employment_size = rural_peasant_produce_employment
+	startup_ramp_target = rural_startup_ramp_target
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = rural_build_time
+	important_for_AI = yes
+	location_potential = {
+		OR = {
+			climate = continental
+			climate = oceanic
+			climate = mediterranean
+			climate = subtropical
+			climate = cold_arid
+		}
+		OR = {
+			topography = flatland
+			topography = hills
+			topography = plateau
+		}
+		OR = {
+			vegetation = farmland
+			vegetation = grasslands
+			vegetation = sparse
+			vegetation = woods
+		}
+	}
+	max_levels = {
+		value = 1
+		if = {
+			limit = { vegetation = farmland }
+			add = 1
+		}
+		min = 2
+	}
+	unique_production_methods = {
+		antq_cult_horse_pastures_maintenance = {
+			tools = 0.0367
+			lumber = 0.1100
+			livestock = 0.1833
+			produced = horses
+			output = 0.22
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+	modifier = {
+		local_food_capacity = 20
+		local_peasants_estate_power = 0.05
+	}
+	construction_demand = farm_constructions
+	custom_tags = { antq_cultivator }
+}
+
+antq_cult_camel_corrals = {
+	audio_tier = 1
+	is_foreign = no
+	pop_type = peasants
+	category = rgo_building_category
+	employment_size = rural_peasant_produce_employment
+	startup_ramp_target = rural_startup_ramp_target
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = rural_build_time
+	important_for_AI = yes
+	location_potential = {
+		OR = {
+			climate = subtropical
+			climate = arid
+			climate = cold_arid
+		}
+		OR = {
+			topography = flatland
+			topography = hills
+			topography = plateau
+		}
+		OR = {
+			vegetation = grasslands
+			vegetation = sparse
+			vegetation = desert
+		}
+		OR = {
+			region = region:arabia_region
+			region = region:egypt_region
+			region = region:nubia_region
+			region = region:somalia_region
+			region = region:crescent_region
+			region = region:persia_region
+			region = region:khorasan_region
+			region = region:xinjiang_region
+		}
+	}
+	max_levels = {
+		value = 1
+		if = {
+			limit = { vegetation = farmland }
+			add = 1
+		}
+		min = 2
+	}
+	unique_production_methods = {
+		antq_cult_camel_corrals_maintenance = {
+			tools = 0.0444
+			lumber = 0.1333
+			livestock = 0.2222
+			produced = antq_camels
+			output = 0.20
+			debug_max_profit = rural_profit_margin
+			category = building_maintenance
+		}
+	}
+	modifier = {
+		local_food_capacity = 20
+		local_peasants_estate_power = 0.05
+	}
+	construction_demand = farm_constructions
+	custom_tags = { antq_cultivator }
+}

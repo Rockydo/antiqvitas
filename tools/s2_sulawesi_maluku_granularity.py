@@ -35,18 +35,18 @@ LANGUAGE_CLIENTS = (
 )
 
 EXPECTED = {
-    "BGT": ("Banggai-Tomini Maritime Communities", "banggai", "banggai_province", 6, "antq_banggai_tomini_maritime", "antq_sulawesi_coastal_exchange_network"),
-    "BNC": ("Bone-Cenrana Coastal Communities", "bone", "bone_province", 5, "antq_bone_cenrana_coast", "antq_sulawesi_coastal_exchange_network"),
-    "BGU": ("Bungku-Kendari Coast Communities", "bungku", "bungku_province", 5, "antq_bungku_kendari_coast", "antq_sulawesi_coastal_exchange_network"),
-    "BTM": ("Buton-Muna Island Communities", "butung", "butung_province", 6, "antq_buton_muna_island", "antq_sulawesi_island_exchange_network"),
-    "LRP": ("Lore-Poso Highland Communities", "loree", "donggala_province", 7, "antq_lore_poso_highland", "antq_sulawesi_highland_mortuary_network"),
-    "GRT": ("Gorontalo-Tomini Communities", "gorontalo", "gorontalo_province", 7, "antq_gorontalo_tomini", "antq_sulawesi_peninsula_community_network"),
-    "MKS": ("South Sulawesi Coastal Communities", "gowa", "makassar_province", 6, "antq_south_sulawesi_coast", "antq_sulawesi_coastal_exchange_network"),
-    "KRM": ("Karama Valley Metal-Age Communities", "kalumpang", "mamudju_province", 6, "antq_karama_valley_metal_age", "antq_sulawesi_river_lake_network"),
-    "MNH": ("North Sulawesi Peninsula Communities", "manado", "manado_province", 4, "antq_north_sulawesi_peninsula", "antq_sulawesi_peninsula_community_network"),
-    "LWM": ("Matano-Luwu Lake-Coast Communities", "matano", "palopo_province", 5, "antq_matano_luwu_lake_coast", "antq_sulawesi_river_lake_network"),
-    "NHM": ("North Halmahera Metal-Age Communities", "jailolo", "ternate_province", 6, "antq_north_halmahera_metal_age", "antq_north_maluku_metal_age_network"),
-    "SHM": ("South Halmahera Metal-Age Communities", "maba_celebes", "tidore_province", 5, "antq_south_halmahera_metal_age", "antq_north_maluku_metal_age_network"),
+    "BGT": ("Banggai-Tomini Maritime", "banggai", "banggai_province", 6, "antq_banggai_tomini_maritime", "antq_sulawesi_coastal_exchange_network"),
+    "BNC": ("Bone-Cenrana Coastal", "bone", "bone_province", 5, "antq_bone_cenrana_coast", "antq_sulawesi_coastal_exchange_network"),
+    "BGU": ("Bungku-Kendari Coast", "bungku", "bungku_province", 5, "antq_bungku_kendari_coast", "antq_sulawesi_coastal_exchange_network"),
+    "BTM": ("Buton-Muna Island", "butung", "butung_province", 6, "antq_buton_muna_island", "antq_sulawesi_island_exchange_network"),
+    "LRP": ("Lore-Poso Highland", "loree", "donggala_province", 7, "antq_lore_poso_highland", "antq_sulawesi_highland_mortuary_network"),
+    "GRT": ("Gorontalo-Tomini", "gorontalo", "gorontalo_province", 7, "antq_gorontalo_tomini", "antq_sulawesi_peninsula_community_network"),
+    "MKS": ("South Sulawesi Coastal", "gowa", "makassar_province", 6, "antq_south_sulawesi_coast", "antq_sulawesi_coastal_exchange_network"),
+    "KRM": ("Karama Valley Metal-Age", "kalumpang", "mamudju_province", 6, "antq_karama_valley_metal_age", "antq_sulawesi_river_lake_network"),
+    "MNH": ("North Sulawesi Peninsula", "manado", "manado_province", 4, "antq_north_sulawesi_peninsula", "antq_sulawesi_peninsula_community_network"),
+    "LWM": ("Matano-Luwu Lake-Coast", "matano", "palopo_province", 5, "antq_matano_luwu_lake_coast", "antq_sulawesi_river_lake_network"),
+    "NHM": ("North Halmahera Metal-Age", "jailolo", "ternate_province", 6, "antq_north_halmahera_metal_age", "antq_north_maluku_metal_age_network"),
+    "SHM": ("South Halmahera Metal-Age", "maba_celebes", "tidore_province", 5, "antq_south_halmahera_metal_age", "antq_north_maluku_metal_age_network"),
 }
 FIELDS = (
     "design_tag", "engine_tag", "name", "map_capital", "province",

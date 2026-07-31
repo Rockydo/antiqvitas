@@ -22,6 +22,7 @@ import m11_privilege_icons
 import m5_ancient_building_replacements
 import m5_regional_buildings
 import m5_roman_buildings
+import s3_cultivator_buildings
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -97,6 +98,18 @@ def assets() -> list[Asset]:
         key = item["key"]
         result.append(Asset("Regional building family", key, None, building_master(key),
                             m5_regional_buildings.ICON_DIR / f"{key}.dds"))
+    for index, item in enumerate(s3_cultivator_buildings.load()):
+        key = item["key"]
+        sheet, _cell = s3_cultivator_buildings.sheet_cell(index)
+        result.append(
+            Asset(
+                "Cultivator building",
+                key,
+                s3_cultivator_buildings.SHEETS / sheet,
+                s3_cultivator_buildings.MASTERS / f"{key}.png",
+                s3_cultivator_buildings.ICONS / f"{key}.dds",
+            )
+        )
     with GOODS.open(encoding="utf-8-sig", newline="") as handle:
         for row in csv.DictReader(handle):
             key = (row.get("key") or "").strip()
@@ -151,7 +164,7 @@ def validate(items: list[Asset]) -> None:
                 failures.append(f"missing {label} for {item.surface} {item.key}: {relative(path)}")
         if item.surface in {
             "Named Roman building", "Regional building family",
-            "Ancient building replacement",
+            "Ancient building replacement", "Cultivator building",
         } and item.master:
             try:
                 with Image.open(item.master) as image:

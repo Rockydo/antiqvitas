@@ -19,6 +19,8 @@ ADVANCES = ROOT / "in_game/common/advances/00_antiquitas_m8_tree.txt"
 LAWS = ROOT / "in_game/common/laws/01_common.txt"
 SETUP = ROOT / "main_menu/setup/start/10_countries.txt"
 REPORT = ROOT / "docs/s3/opening_systems.csv"
+REGIONAL_BUILDINGS = ROOT / "in_game/common/building_types/00_antiquitas_regional_buildings.txt"
+MARKET_SUPPLY = ROOT / "docs/m5/opening_market_building_seeds.csv"
 LANGUAGES = ("english", *M2_MIRROR_LANGUAGES)
 LOC = {
     "legal_code_law": "Public Law Register",
@@ -92,17 +94,25 @@ def custom_good(key: str) -> dict[str, str]:
     return rows[key]
 
 
-def installed_wheat_food() -> float:
+def installed_wheat_metrics() -> dict[str, float]:
     config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
     directory = Path(config["game_dir"]) / "game/in_game/common/goods"
     for path in sorted(directory.glob("*.txt")):
         text = path.read_text(encoding="utf-8-sig")
         match = re.search(r"(?ms)^wheat\s*=\s*\{(?P<body>.*?)^\}", text)
         if match:
-            food = re.search(r"(?m)^\s*food\s*=\s*(?P<value>[0-9.]+)", match.group("body"))
-            if not food:
-                raise ValueError("installed wheat definition has no food value")
-            return float(food.group("value"))
+            result: dict[str, float] = {}
+            patterns = {
+                "food": r"(?m)^\s*food\s*=\s*(?P<value>[0-9.]+)",
+                "price": r"(?m)^\s*default_market_price\s*=\s*(?P<value>[0-9.]+)",
+                "all": r"(?m)^\s*all\s*=\s*(?P<value>[0-9.]+)",
+            }
+            for key, pattern in patterns.items():
+                value = re.search(pattern, match.group("body"))
+                if not value:
+                    raise ValueError(f"installed wheat definition has no {key} value")
+                result[key] = float(value.group("value"))
+            return result
     raise ValueError("installed wheat definition not found")
 
 
@@ -136,10 +146,18 @@ def top_level_block(text: str, key: str) -> str:
 
 
 def report() -> str:
-    flour = float(custom_good("antq_grain_products")["food"])
-    wheat = installed_wheat_food()
+    flour_row = custom_good("antq_grain_products")
+    flour = float(flour_row["food"])
+    wheat = installed_wheat_metrics()
+    market_rows = sum(1 for _row in csv.DictReader(
+        MARKET_SUPPLY.read_text(encoding="utf-8-sig").splitlines()
+    ))
     rows = (
-        ("processed_food_order", f"flour={flour:g};wheat={wheat:g}", "pass" if flour > wheat else "fail"),
+        ("processed_food_order", f"flour={flour:g};wheat={wheat['food']:g}", "pass" if flour > wheat["food"] else "fail"),
+        ("processed_food_price", f"flour={flour_row['price']};wheat={wheat['price']:g}", "pass"),
+        ("processed_food_demand", f"flour={flour_row['all']};wheat={wheat['all']:g}", "pass"),
+        ("processed_food_recipe", "1 wheat + 0.15 lumber + 0.05 tools -> 1.10", "pass"),
+        ("opening_market_workshops", f"{market_rows} direct placements", "pass"),
         ("opening_rgo_capacity", "global_max_rgo_size_modifier=0.10", "pass"),
         ("parthian_profile_laws", "14 Iranian groups + Arsacid autonomy", "pass"),
         ("mandatory_law_adapter", "heir_religion_law retained and ancientized", "pass"),
@@ -162,10 +180,41 @@ def expected() -> dict[Path, str]:
 
 def validate() -> list[str]:
     failures: list[str] = []
-    flour = float(custom_good("antq_grain_products")["food"])
-    wheat = installed_wheat_food()
-    if flour <= wheat:
-        failures.append(f"Flour and Bread food {flour:g} is not above wheat {wheat:g}")
+    flour_row = custom_good("antq_grain_products")
+    flour = float(flour_row["food"])
+    flour_price = float(flour_row["price"])
+    flour_demand = float(flour_row["all"])
+    wheat = installed_wheat_metrics()
+    if flour <= wheat["food"]:
+        failures.append(
+            f"Flour and Bread food {flour:g} is not above wheat {wheat['food']:g}"
+        )
+    if flour_price <= wheat["price"]:
+        failures.append("processed grain is not priced above its raw wheat input")
+    if flour_demand <= wheat["all"]:
+        failures.append("processed grain base demand is not above raw wheat")
+    grain_mill = top_level_block(
+        REGIONAL_BUILDINGS.read_text(encoding="utf-8-sig"),
+        "antq_reg_grain_mill",
+    )
+    recipe_literals = (
+        "wheat = 1.00",
+        "lumber = 0.15",
+        "tools = 0.05",
+        "produced = antq_grain_products",
+        "output = 1.10",
+    )
+    for literal in recipe_literals:
+        if literal not in grain_mill:
+            failures.append(f"grain-mill recipe lacks {literal}")
+    if not MARKET_SUPPLY.is_file():
+        failures.append("opening-market supply ledger is missing")
+    else:
+        market_rows = list(csv.DictReader(
+            MARKET_SUPPLY.read_text(encoding="utf-8-sig").splitlines()
+        ))
+        if len(market_rows) < 100:
+            failures.append("opening-market production expansion is too shallow")
 
     advance = top_level_block(
         ADVANCES.read_text(encoding="utf-8-sig"),

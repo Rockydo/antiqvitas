@@ -1,13 +1,17 @@
 ﻿location,region,operation,source_good,replacement_good
+aarhus,Germania,anchor,legumes,antq_barley
 abarkuh,Iran,environment_rule,cotton,fiber_crops
 abrahamtelke,Danube,regional_rule,saltpeter,salt
+achim,Germania,anchor,millet,antq_barley
 acre,Iran,regional_rule,sugar,fiber_crops
 adan,Arabia,regional_rule,sugar,fiber_crops
 adra,Rome,regional_rule,sugar,fiber_crops
+agadir,Africa,anchor,wheat,antq_barley
 agaro,Africa,regional_rule,coffee,medicaments
 agra,India,regional_rule,silk,fiber_crops
 ahar,Iran,environment_rule,cotton,fiber_crops
 ahlat,Caucasus,regional_rule,silk,fiber_crops
+ahrweiler,Germania,anchor,wild_game,antq_tree_nuts
 ahvaz,Iran,regional_rule,sugar,fiber_crops
 ajara,India,location_allowlist_rule,pepper,medicaments
 akbarpur,India,regional_rule,silk,fiber_crops
@@ -15,6 +19,7 @@ akhmim,Rome,regional_rule,cotton,fiber_crops
 aksu,Tarim,regional_rule,cotton,fiber_crops
 akyazi,Rome,regional_rule,silk,fiber_crops
 al_ahsa,Arabia,anchor,rice,antq_dates
+al_baharah,Arabia,anchor,wheat,antq_barley
 al_kadwa,Rome,regional_rule,cotton,fiber_crops
 al_mima,Rome,regional_rule,rice,millet
 al_mukha,Arabia,anchor,coffee,incense
@@ -26,7 +31,12 @@ alcazar_de_san_juan,Rome,regional_rule,saltpeter,salt
 alcobaca,Rome,environment_rule,olives,fruit
 aleppo,Iran,anchor,cotton,antq_sesame
 alexandria,Rome,anchor,salt,antq_papyrus
+almaliq,Central Asia,anchor,wheat,antq_tree_nuts
+almaty,Central Asia,anchor,wheat,antq_barley
+almudevar,Rome,anchor,wheat,antq_barley
+alvastra,Germania,anchor,millet,antq_barley
 amaigbo,West Africa,regional_rule,saffron,medicaments
+amasra,Rome,anchor,fruit,antq_tree_nuts
 amassing,Southeast Asia,location_allowlist_rule,cloves,medicaments
 ami,China,regional_rule,cotton,fiber_crops
 amol,Iran,regional_rule,silk,fiber_crops
@@ -44,9 +54,12 @@ anren,China,location_allowlist_rule,tea,medicaments
 antioch,Rome,regional_rule,silk,fiber_crops
 anxi,China,location_allowlist_rule,tea,medicaments
 anyuan_dingnan,China,location_allowlist_rule,tea,medicaments
+aqaba,Iran,anchor,fish,antq_dates
 aqca,Central Asia,environment_rule,cotton,fiber_crops
 arad,Danube,regional_rule,wine,fruit
 arrah,India,regional_rule,saltpeter,salt
+arslanbob,Central Asia,anchor,legumes,antq_tree_nuts
+artashavan,Caucasus,anchor,legumes,antq_tree_nuts
 artush,Tarim,regional_rule,cotton,fiber_crops
 ashaval,India,regional_rule,silk,fiber_crops
 ashigara,Japan,location_allowlist_rule,tea,medicaments
@@ -54,8 +67,10 @@ ashikaga_loc,Japan,regional_rule,cotton,fiber_crops
 ashmunayn,Rome,anchor,fruit,antq_sesame
 ashraf,Iran,regional_rule,sugar,fiber_crops
 astarabad,Iran,anchor,fruit,antq_tree_nuts
+avellino,Rome,anchor,wine,antq_tree_nuts
 awaji,Japan,regional_rule,incense,medicaments
 awaran,Iran,regional_rule,silk,fiber_crops
+awjila,Africa,anchor,livestock,antq_dates
 axochiapan,Mesoamerica,regional_rule,incense,medicaments
 ayas,Anatolia,regional_rule,cotton,fiber_crops
 ayasuluk,Rome,anchor,silk,antq_tree_nuts
@@ -64,9 +79,12 @@ azghand,Iran,regional_rule,sugar,fiber_crops
 azumi,Japan,regional_rule,cotton,fiber_crops
 baalbek,Iran,anchor,fruit,antq_tree_nuts
 baciravan,Caucasus,regional_rule,cotton,fiber_crops
+backnang,Germania,anchor,fruit,antq_tree_nuts
+badam,Central Asia,anchor,wild_game,antq_tree_nuts
 badami,India,location_allowlist_rule,pepper,medicaments
-baden,Germania,regional_rule,wine,fruit
+baden,Germania,anchor,wine,antq_tree_nuts
 baghdad,Iran,anchor,cotton,antq_sesame
+bahariyya,Rome,anchor,iron,antq_dates
 baia_de_aries,Danube,anchor,beeswax,goods_gold
 baima,China,location_allowlist_rule,tea,medicaments
 baishui,China,regional_rule,cotton,fiber_crops
@@ -90,34 +108,42 @@ barletta,Rome,environment_rule,olives,fruit
 basra,Iran,anchor,sugar,antq_dates
 batang,Central Asia,regional_rule,rice,millet
 bawean,Southeast Asia,anchor,fruit,antq_coconuts
+beirut,Iran,anchor,wine,antq_tree_nuts
 bekarlar,Anatolia,environment_rule,wine,fruit
 belchite,Rome,regional_rule,silk,fiber_crops
 belgaum,India,location_allowlist_rule,pepper,medicaments
 belur,India,regional_rule,incense,medicaments
+benevento,Rome,anchor,wheat,antq_barley
 bengkulu,Southeast Asia,location_allowlist_rule,cloves,medicaments
+berlin,Germania,anchor,fiber_crops,antq_barley
 bethune,Rome,regional_rule,coal,lumber
 biberach,Germania,regional_rule,cotton,fiber_crops
 bidar,India,regional_rule,silk,fiber_crops
 bihar,Danube,regional_rule,wine,fruit
 bihar_sharif,India,regional_rule,silk,fiber_crops
 bilbeis,Rome,regional_rule,cotton,fiber_crops
+biskra,Africa,anchor,fiber_crops,antq_dates
 bivona,Rome,regional_rule,cotton,fiber_crops
 bobai,China,regional_rule,sugar,fiber_crops
+bochum,Germania,anchor,millet,antq_barley
 bojano,Rome,environment_rule,olives,fruit
 bologna,Rome,regional_rule,silk,fiber_crops
 bombay,India,location_allowlist_rule,pepper,medicaments
 bonga,Africa,regional_rule,coffee,medicaments
+bonn,Germania,anchor,millet,antq_barley
 bor_tur,Anatolia,regional_rule,saltpeter,salt
 boseong,Korea,location_allowlist_rule,tea,medicaments
 bosra,Iran,environment_rule,cotton,fiber_crops
 brezina,Africa,environment_rule,cotton,fiber_crops
 briancon,Rome,regional_rule,coal,lumber
-brno,Germania,regional_rule,wine,fruit
+brno,Germania,anchor,wine,antq_tree_nuts
 buchen,Germania,regional_rule,wine,fruit
 buda,Danube,regional_rule,wine,fruit
 bursa,Rome,regional_rule,silk,fiber_crops
+bury,Britain,anchor,wheat,antq_barley
 buzau,Danube,regional_rule,wine,fruit
 bzou,Africa,regional_rule,sugar,fiber_crops
+cairo,Rome,anchor,wheat,antq_barley
 candia,Rome,regional_rule,cotton,fiber_crops
 carinena,Rome,environment_rule,wine,fruit
 caspe,Rome,environment_rule,olives,fruit
@@ -133,6 +159,7 @@ changxing,China,location_allowlist_rule,tea,medicaments
 changyang,China,regional_rule,cotton,fiber_crops
 charchan,Tarim,regional_rule,cotton,fiber_crops
 chebba,Rome,regional_rule,sugar,fiber_crops
+cheltenham,Britain,anchor,fruit,antq_tree_nuts
 chengdu,China,anchor,rice,silk
 cherchell,Africa,regional_rule,sugar,fiber_crops
 chichaoua,Africa,environment_rule,cotton,fiber_crops
@@ -160,6 +187,7 @@ dalinghe,Steppe,regional_rule,rice,millet
 damascus,Iran,anchor,olives,antq_sesame
 damghan,Iran,environment_rule,cotton,fiber_crops
 dangila,Africa,regional_rule,coffee,medicaments
+dara,Iran,anchor,fruit,antq_tree_nuts
 darganata,Central Asia,environment_rule,cotton,fiber_crops
 darwar,India,regional_rule,incense,medicaments
 dashev,Pontic,environment_rule,wine,fruit
@@ -174,17 +202,21 @@ dharmasraya,Southeast Asia,location_allowlist_rule,cloves,medicaments
 dien_ban,Southeast Asia,location_allowlist_rule,pepper,medicaments
 dingyuan_fengyang,China,regional_rule,cotton,fiber_crops
 diu,India,environment_rule,sugar,fiber_crops
+divandarreh,Iran,anchor,wheat,antq_barley
 dluk,Iran,regional_rule,olives,fruit
 dongguan,China,regional_rule,incense,medicaments
 dongping,China,location_allowlist_rule,tea,medicaments
 dortmund,Germania,regional_rule,coal,lumber
 dresden,Germania,regional_rule,wine,fruit
+dunbar,Britain,anchor,millet,antq_barley
 durgarazpatnam,India,location_allowlist_rule,pepper,medicaments
 duyun,China,location_allowlist_rule,tea,medicaments
 dvarasamudra,India,regional_rule,silk,fiber_crops
+edinburgh,Britain,anchor,millet,antq_barley
 el_bahnasa,Rome,regional_rule,cotton,fiber_crops
 el_buwit,Rome,regional_rule,sugar,fiber_crops
 el_mahalla,Rome,regional_rule,cotton,fiber_crops
+elgin,Britain,anchor,millet,antq_barley
 emei,China,regional_rule,saltpeter,salt
 epe,West Africa,regional_rule,saffron,medicaments
 eregli,Rome,regional_rule,coal,lumber
@@ -192,6 +224,8 @@ erode,India,regional_rule,incense,medicaments
 esna,Rome,regional_rule,sugar,fiber_crops
 essen,Germania,regional_rule,coal,lumber
 etawah,India,environment_rule,sugar,fiber_crops
+faiyum,Rome,anchor,fiber_crops,antq_sesame
+fakenham,Britain,anchor,millet,antq_barley
 fenouillet,Rome,regional_rule,silk,fiber_crops
 flix,Rome,environment_rule,olives,fruit
 florac,Rome,regional_rule,silk,fiber_crops
@@ -215,11 +249,14 @@ gandia,Rome,regional_rule,sugar,fiber_crops
 gayo_lues,Southeast Asia,location_allowlist_rule,cloves,medicaments
 geneve,Rome,regional_rule,silk,fiber_crops
 genoa,Rome,regional_rule,silk,fiber_crops
+ghadames,Africa,anchor,fruit,antq_dates
 ghardaia,Africa,regional_rule,saffron,medicaments
 ghatsila,India,regional_rule,saltpeter,salt
+gilan_gharb,Iran,anchor,wild_game,antq_tree_nuts
 giresun,Rome,environment_rule,olives,fruit
 girin_ula,Korea,regional_rule,cotton,fiber_crops
-giza,Rome,regional_rule,sugar,fiber_crops
+girona,Rome,anchor,wheat,antq_barley
+giza,Rome,anchor,sugar,antq_sesame
 goa,India,location_allowlist_rule,pepper,medicaments
 gonabad,Iran,regional_rule,silk,fiber_crops
 gonda,India,regional_rule,silk,fiber_crops
@@ -234,6 +271,7 @@ gugera,India,environment_rule,sugar,fiber_crops
 guiping,China,location_allowlist_rule,tea,medicaments
 guishan,China,regional_rule,cotton,fiber_crops
 guizhou_xunzhou,China,location_allowlist_rule,tea,medicaments
+gulja,Central Asia,anchor,wheat,antq_barley
 guma,Tarim,regional_rule,rice,millet
 guwan,China,location_allowlist_rule,pepper,medicaments
 gynaikokastro,Rome,environment_rule,wine,fruit
@@ -243,7 +281,9 @@ hadibu,Arabia,regional_rule,sugar,fiber_crops
 haditha,Iran,regional_rule,sugar,fiber_crops
 hadong,Korea,location_allowlist_rule,tea,medicaments
 hagios_pavlos,Rome,regional_rule,sugar,fiber_crops
+hajar,Arabia,anchor,fruit,antq_dates
 haleri,India,regional_rule,silk,fiber_crops
+hama,Iran,anchor,wheat,antq_sesame
 hamidiyeh,Iran,regional_rule,silk,fiber_crops
 harar,Africa,regional_rule,coffee,medicaments
 haskovo,Balkans,regional_rule,cotton,fiber_crops
@@ -251,6 +291,7 @@ hatthigiripura,Lanka,regional_rule,elephants,livestock
 hatunsaray,Rome,environment_rule,wine,fruit
 heilbronn,Germania,regional_rule,wine,fruit
 hellin,Rome,environment_rule,olives,fruit
+hissar,Central Asia,anchor,legumes,antq_tree_nuts
 hit,Iran,anchor,legumes,antq_naphtha
 hiw,Rome,regional_rule,sugar,fiber_crops
 honnavara,India,location_allowlist_rule,pepper,medicaments
@@ -260,9 +301,11 @@ huelva,Rome,anchor,salt,silver
 huichuan,China,regional_rule,cotton,fiber_crops
 huoqiu,China,regional_rule,wine,fruit
 iasi,Danube,regional_rule,wine,fruit
+idlib,Iran,anchor,wheat,antq_sesame
 igdir,Caucasus,regional_rule,cotton,fiber_crops
 ihara,Japan,location_allowlist_rule,tea,medicaments
 ikkeri,India,regional_rule,silk,fiber_crops
+ilanbalyk,Central Asia,anchor,wheat,antq_barley
 ilimo,Africa,regional_rule,coffee,medicaments
 ineu,Danube,regional_rule,wine,fruit
 irbid,Iran,regional_rule,olives,fruit
@@ -273,6 +316,7 @@ jama_TUN,Rome,environment_rule,olives,fruit
 jambi,Southeast Asia,location_allowlist_rule,cloves,medicaments
 jeongeup,Korea,location_allowlist_rule,pepper,medicaments
 jeonju,Korea,regional_rule,cotton,fiber_crops
+jerusalem,Levant,anchor,olives,antq_tree_nuts
 jhenaidah,India,location_allowlist_rule,pepper,medicaments
 jiaha,China,regional_rule,cotton,fiber_crops
 jiangan,China,location_allowlist_rule,pepper,medicaments
@@ -298,7 +342,9 @@ kaifeng,China,regional_rule,saltpeter,salt
 kalaa_of_ait_abbas,Rome,environment_rule,olives,fruit
 kalecik,Rome,environment_rule,wine,fruit
 kallakurichi,India,regional_rule,incense,medicaments
+kamyaran,Iran,anchor,wheat,antq_barley
 kanauj,India,regional_rule,silk,fiber_crops
+kanchipuram,India,anchor,rice,antq_sesame
 kandiaro,India,regional_rule,silk,fiber_crops
 kandy,Lanka,location_allowlist_rule,pepper,medicaments
 karajia,Andes,environment_rule,cotton,fiber_crops
@@ -306,12 +352,15 @@ karakax,Tarim,regional_rule,cotton,fiber_crops
 karkevand,Iran,environment_rule,cotton,fiber_crops
 karpus_mahal,India,regional_rule,silk,fiber_crops
 karytaina,Rome,regional_rule,saltpeter,salt
+kasan,Central Asia,anchor,wheat,antq_barley
 kashima,Japan,regional_rule,silk,fiber_crops
 kataka,India,regional_rule,silk,fiber_crops
 kawachi,Japan,location_allowlist_rule,pepper,medicaments
 kayal,India,anchor,salt,pearls
 kembhavi,India,regional_rule,incense,medicaments
+kermanshah,Iran,anchor,wheat,antq_tree_nuts
 khairabad,India,regional_rule,silk,fiber_crops
+kharga,Rome,anchor,alum,antq_dates
 khargerd,Iran,regional_rule,silk,fiber_crops
 kharsawan,India,regional_rule,incense,medicaments
 khatunabad,Iran,environment_rule,wine,fruit
@@ -387,6 +436,7 @@ malacca,Southeast Asia,location_allowlist_rule,cloves,medicaments
 malaga,Rome,regional_rule,sugar,fiber_crops
 malapuram,India,regional_rule,incense,medicaments
 male_atoll,India,anchor,lumber,pearls
+malekan,Iran,anchor,wheat,antq_barley
 malta,Rome,regional_rule,cotton,fiber_crops
 mandar_parvat,India,regional_rule,silk,fiber_crops
 mang_viet,China,regional_rule,saltpeter,salt
@@ -395,12 +445,16 @@ manresa,Rome,regional_rule,saltpeter,salt
 mansoura,Rome,regional_rule,sugar,fiber_crops
 maoming,China,regional_rule,sugar,fiber_crops
 marghinan,Central Asia,regional_rule,silk,fiber_crops
-maskanah,Iran,regional_rule,sugar,fiber_crops
+marseille,Rome,anchor,legumes,antq_tree_nuts
+maskanah,Iran,anchor,sugar,antq_dates
 massawa,Africa,anchor,gems,incense
+masulipatnam,India,anchor,cotton,antq_sesame
+masyaf,Iran,anchor,fruit,antq_tree_nuts
 matera,Rome,environment_rule,olives,fruit
 mateur,Rome,regional_rule,sugar,fiber_crops
-mathura,India,environment_rule,sugar,fiber_crops
+mathura,India,anchor,sugar,antq_sesame
 mazara,Rome,regional_rule,saltpeter,salt
+mecca,Arabia,anchor,fruit,antq_dates
 medias,Danube,regional_rule,wine,fruit
 medina,Arabia,anchor,fruit,antq_camels
 meiqiu,China,regional_rule,cotton,fiber_crops
@@ -418,19 +472,24 @@ miandoab,Iran,regional_rule,sugar,fiber_crops
 mianzhu,China,regional_rule,wine,fruit
 midu,China,regional_rule,cotton,fiber_crops
 mikasa,Japan,regional_rule,coal,lumber
+milano,Rome,anchor,wheat,antq_barley
 mima,Japan,location_allowlist_rule,tea,medicaments
 minab,Iran,regional_rule,sugar,fiber_crops
 mingying,China,location_allowlist_rule,tea,medicaments
 minokamo,Japan,regional_rule,silk,fiber_crops
 minqing,China,regional_rule,sugar,fiber_crops
 minxian,China,regional_rule,sugar,fiber_crops
+minya,Rome,anchor,wheat,antq_barley
 miyaneh,Iran,environment_rule,cotton,fiber_crops
 modica,Rome,regional_rule,silk,fiber_crops
+monmouth,Britain,anchor,fruit,antq_tree_nuts
 mons,Rome,regional_rule,coal,lumber
 montalban,Rome,regional_rule,coal,lumber
 moron,Rome,regional_rule,cotton,fiber_crops
 morphou,Anatolia,regional_rule,cotton,fiber_crops
 mostar,Rome,environment_rule,olives,fruit
+mosul,Iran,anchor,wheat,antq_sesame
+mtskheta,Caucasus,anchor,wild_game,antq_tree_nuts
 muang_sua,Southeast Asia,location_allowlist_rule,tea,medicaments
 mubarakabad,Iran,environment_rule,cotton,fiber_crops
 muko,Japan,location_allowlist_rule,tea,medicaments
@@ -453,13 +512,16 @@ nanan_quanzhou,China,regional_rule,cotton,fiber_crops
 nandurbar,India,regional_rule,silk,fiber_crops
 nanning,China,regional_rule,cotton,fiber_crops
 nansheng,China,location_allowlist_rule,tea,medicaments
+narni,Rome,anchor,lumber,antq_tree_nuts
 nazilli,Rome,regional_rule,cotton,fiber_crops
 nedong,Central Asia,anchor,wool,antq_barley
 negombo,Lanka,location_allowlist_rule,pepper,medicaments
 neijiang,China,regional_rule,sugar,fiber_crops
 niihari,Japan,location_allowlist_rule,pepper,medicaments
+nimes,Rome,anchor,olives,antq_tree_nuts
 ningjin,China,regional_rule,cotton,fiber_crops
 niwa,Japan,regional_rule,silk,fiber_crops
+nola,Rome,anchor,olives,antq_tree_nuts
 nora_eth,Africa,regional_rule,sugar,fiber_crops
 noto_jap,Japan,regional_rule,silk,fiber_crops
 nyemo,Central Asia,regional_rule,incense,medicaments
@@ -474,7 +536,9 @@ osh,Central Asia,regional_rule,silk,fiber_crops
 osnabruck,Germania,regional_rule,coal,lumber
 oster,Eastern Europe,regional_rule,coal,lumber
 otrar,Central Asia,environment_rule,cotton,fiber_crops
+ouargla,Africa,anchor,dyes,antq_dates
 ouning,China,location_allowlist_rule,tea,medicaments
+oxford,Britain,anchor,medicaments,antq_tree_nuts
 padang,Southeast Asia,location_allowlist_rule,cloves,medicaments
 pal_lahara,India,regional_rule,incense,medicaments
 palanpur,India,regional_rule,silk,fiber_crops
@@ -483,6 +547,8 @@ palitana,India,environment_rule,sugar,fiber_crops
 pangani,Africa,regional_rule,rice,millet
 panipat,India,environment_rule,sugar,fiber_crops
 panugallu,India,regional_rule,silk,fiber_crops
+patna,India,anchor,legumes,antq_sesame
+patna_garjat,India,anchor,rice,antq_sesame
 pazin,Rome,environment_rule,olives,fruit
 pekalongan,Southeast Asia,location_allowlist_rule,cloves,medicaments
 penafiel,Rome,environment_rule,wine,fruit
@@ -499,6 +565,7 @@ pondicherry,India,location_allowlist_rule,pepper,medicaments
 pontianak,Southeast Asia,anchor,sugar,fish
 pontikokastro,Rome,regional_rule,silk,fiber_crops
 prakkad,India,location_allowlist_rule,pepper,medicaments
+prayag,India,anchor,cotton,antq_sesame
 prievidza,Germania,regional_rule,saffron,medicaments
 pristina,Rome,regional_rule,coal,lumber
 prosek,Rome,environment_rule,wine,fruit
@@ -511,6 +578,7 @@ puqi,China,location_allowlist_rule,tea,medicaments
 puri_simao,China,location_allowlist_rule,tea,medicaments
 pyay,Southeast Asia,regional_rule,silk,fiber_crops
 qalhat,Arabia,regional_rule,sugar,fiber_crops
+qena,Rome,anchor,legumes,antq_sesame
 qianshan,China,regional_rule,cotton,fiber_crops
 qianzhou,China,regional_rule,cotton,fiber_crops
 qimen,China,location_allowlist_rule,tea,medicaments
@@ -520,6 +588,7 @@ qiongzhou,China,regional_rule,wine,fruit
 qiubei,China,regional_rule,cotton,fiber_crops
 qobustan,Caucasus,regional_rule,cotton,fiber_crops
 quanjiao,China,regional_rule,cotton,fiber_crops
+quchan,Iran,anchor,fruit,antq_tree_nuts
 quelimane,Africa,regional_rule,rice,millet
 qumbash,Tarim,regional_rule,rice,millet
 rahatgarh,India,regional_rule,saltpeter,salt
@@ -540,15 +609,16 @@ rayen,Iran,environment_rule,cotton,fiber_crops
 reggiocal,Rome,regional_rule,cotton,fiber_crops
 renhua,China,location_allowlist_rule,tea,medicaments
 rey,Iran,regional_rule,silk,fiber_crops
+rimini,Rome,anchor,wine,antq_barley
 rohri,India,environment_rule,sugar,fiber_crops
 rozkishna,Eastern Europe,regional_rule,coal,lumber
-rudbar,Iran,regional_rule,olives,fruit
+rudbar,Iran,anchor,olives,antq_tree_nuts
 sabac,Rome,regional_rule,coal,lumber
 sadiya,India,location_allowlist_rule,tea,medicaments
 sagaing,Southeast Asia,regional_rule,silk,fiber_crops
 sakju,Korea,regional_rule,silk,fiber_crops
 salaga,West Africa,regional_rule,saffron,medicaments
-samarkand,Central Asia,regional_rule,silk,fiber_crops
+samarkand,Central Asia,anchor,silk,antq_tree_nuts
 samsun,Rome,environment_rule,olives,fruit
 sangju,Korea,regional_rule,silk,fiber_crops
 sanhe_chaozhou,China,regional_rule,sugar,fiber_crops
@@ -590,6 +660,7 @@ sigam,Southeast Asia,regional_rule,coal,lumber
 sighnaq,Central Asia,environment_rule,cotton,fiber_crops
 sime,China,location_allowlist_rule,tea,medicaments
 simhapura,Southeast Asia,location_allowlist_rule,pepper,medicaments
+sinop,Rome,anchor,dyes,antq_tree_nuts
 sishui,China,regional_rule,cotton,fiber_crops
 sitavaka,Lanka,anchor,fruit,antq_coconuts
 sivas,Anatolia,regional_rule,silk,fiber_crops
@@ -602,9 +673,11 @@ somogyvar,Danube,regional_rule,wine,fruit
 sopron,Danube,regional_rule,wine,fruit
 sotk,Caucasus,regional_rule,cotton,fiber_crops
 speyer,Germania,regional_rule,wine,fruit
+srigangapatna,India,anchor,fruit,antq_sesame
 srinagar,India,location_allowlist_rule,pepper,medicaments
 sringeri,India,regional_rule,silk,fiber_crops
 srirangam,India,anchor,fiber_crops,antq_sesame
+stonehaven,Britain,anchor,millet,antq_barley
 subaytila,Rome,environment_rule,olives,fruit
 suining_jing,China,location_allowlist_rule,tea,medicaments
 suixi,China,regional_rule,sugar,fiber_crops
@@ -630,10 +703,12 @@ tamacine,Africa,regional_rule,saffron,medicaments
 tamdegost,Africa,regional_rule,sugar,fiber_crops
 tanjung_palas,Southeast Asia,anchor,cloves,beeswax
 tanjungpuri,Southeast Asia,regional_rule,coal,lumber
-taranto,Rome,environment_rule,wine,fruit
+taranto,Rome,anchor,wine,antq_barley
 tarascon,Rome,regional_rule,silk,fiber_crops
 tarazona,Rome,environment_rule,olives,fruit
+tarragona,Rome,anchor,wine,antq_tree_nuts
 tarsus,Anatolia,anchor,silk,antq_tree_nuts
+taunton,Britain,anchor,fruit,antq_tree_nuts
 temasek,Southeast Asia,regional_rule,incense,medicaments
 terranovasic,Rome,regional_rule,cotton,fiber_crops
 tetouan,Africa,regional_rule,sugar,fiber_crops
@@ -642,7 +717,7 @@ thai_nguyen,China,location_allowlist_rule,tea,medicaments
 thakhek,Southeast Asia,regional_rule,saltpeter,salt
 thanjavur,India,anchor,legumes,antq_sesame
 tharrawaddy,Southeast Asia,regional_rule,incense,medicaments
-thebes,Rome,regional_rule,silk,fiber_crops
+thebes,Rome,anchor,silk,antq_sesame
 thien_quan,China,regional_rule,sugar,fiber_crops
 thoothukudi,India,anchor,livestock,pearls
 tianchang,China,regional_rule,cotton,fiber_crops
@@ -663,6 +738,7 @@ toro,Rome,environment_rule,wine,fruit
 tortosa,Rome,regional_rule,rice,millet
 tosan,China,regional_rule,incense,medicaments
 toyoda,Japan,location_allowlist_rule,tea,medicaments
+tozeur,Rome,anchor,saffron,antq_dates
 trapessac,Iran,anchor,olives,antq_tree_nuts
 trebizond,Rome,regional_rule,silk,fiber_crops
 trier,Germania,regional_rule,wine,fruit
@@ -670,6 +746,7 @@ trincomalee,Lanka,location_allowlist_rule,pepper,medicaments
 tripolitsa,Rome,regional_rule,silk,fiber_crops
 trnava,Germania,regional_rule,wine,fruit
 truro,Britain,anchor,copper,tin
+tsalenjikha,Caucasus,anchor,fruit,antq_tree_nuts
 tsonentsiio,North America,regional_rule,saltpeter,salt
 tsuru,Japan,regional_rule,silk,fiber_crops
 tudela,Rome,environment_rule,wine,fruit
@@ -677,6 +754,8 @@ tungkal,Southeast Asia,anchor,fruit,antq_coconuts
 tunliu,China,location_allowlist_rule,pepper,medicaments
 tus,Iran,environment_rule,cotton,fiber_crops
 tutuala,Southeast Asia,anchor,fruit,antq_coconuts
+udakh,Arabia,anchor,fruit,antq_dates
+ujjain,India,anchor,dyes,antq_sesame
 ukbara,Iran,anchor,fruit,antq_sesame
 ukhaa_khudag,Steppe,regional_rule,coal,lumber
 unju,Korea,regional_rule,silk,fiber_crops
@@ -686,6 +765,7 @@ utondwe,Africa,regional_rule,rice,millet
 valencia,Rome,regional_rule,silk,fiber_crops
 valladolid,Rome,environment_rule,wine,fruit
 vang_vieng,Southeast Asia,regional_rule,saltpeter,salt
+varanasi,India,anchor,wheat,antq_sesame
 vauvau,Oceania,anchor,fruit,antq_coconuts
 velez_malaga,Rome,regional_rule,sugar,fiber_crops
 vembar,India,location_allowlist_rule,pepper,medicaments
@@ -697,6 +777,7 @@ villablino,Rome,regional_rule,coal,lumber
 villanueva_de_la_serena,Rome,environment_rule,olives,fruit
 villarobledo,Rome,environment_rule,wine,fruit
 villena,Rome,environment_rule,olives,fruit
+visakhapatnam,India,anchor,fruit,antq_sesame
 voitsberg,Rome,regional_rule,coal,lumber
 walden,Britain,regional_rule,saffron,medicaments
 wanggika,Steppe,location_allowlist_rule,pepper,medicaments
@@ -768,6 +849,7 @@ zozan,Iran,regional_rule,sugar,fiber_crops
 zwickau,Germania,regional_rule,coal,lumber
 
 # counts
+# anchor:alum->antq_dates,1
 # anchor:beeswax->goods_gold,1
 # anchor:clay->silk,1
 # anchor:cloves->beeswax,1
@@ -775,44 +857,65 @@ zwickau,Germania,regional_rule,coal,lumber
 # anchor:cloves->lumber,1
 # anchor:coffee->incense,1
 # anchor:copper->tin,1
-# anchor:cotton->antq_sesame,2
+# anchor:cotton->antq_sesame,4
 # anchor:cotton->dyes,1
-# anchor:fiber_crops->antq_sesame,1
+# anchor:dyes->antq_dates,1
+# anchor:dyes->antq_sesame,1
+# anchor:dyes->antq_tree_nuts,1
+# anchor:fiber_crops->antq_barley,1
+# anchor:fiber_crops->antq_dates,1
+# anchor:fiber_crops->antq_sesame,2
 # anchor:fiber_crops->livestock,1
+# anchor:fish->antq_dates,1
 # anchor:fish->pepper,1
 # anchor:fruit->antq_camels,1
 # anchor:fruit->antq_coconuts,8
-# anchor:fruit->antq_dates,5
-# anchor:fruit->antq_sesame,2
-# anchor:fruit->antq_tree_nuts,3
+# anchor:fruit->antq_dates,9
+# anchor:fruit->antq_sesame,4
+# anchor:fruit->antq_tree_nuts,12
 # anchor:gems->antq_jade,1
 # anchor:gems->incense,1
 # anchor:goods_gold->livestock,1
+# anchor:iron->antq_dates,1
+# anchor:legumes->antq_barley,1
 # anchor:legumes->antq_naphtha,1
-# anchor:legumes->antq_sesame,1
+# anchor:legumes->antq_sesame,3
+# anchor:legumes->antq_tree_nuts,4
+# anchor:livestock->antq_dates,1
 # anchor:livestock->pearls,1
+# anchor:lumber->antq_tree_nuts,1
 # anchor:lumber->pearls,1
 # anchor:marble->iron,1
+# anchor:medicaments->antq_tree_nuts,1
 # anchor:mercury->fish,1
+# anchor:millet->antq_barley,9
 # anchor:olives->antq_sesame,1
-# anchor:olives->antq_tree_nuts,2
+# anchor:olives->antq_tree_nuts,6
 # anchor:rice->antq_dates,1
+# anchor:rice->antq_sesame,2
 # anchor:rice->silk,1
+# anchor:saffron->antq_dates,1
 # anchor:salt->antq_papyrus,1
 # anchor:salt->pearls,1
 # anchor:salt->silver,1
-# anchor:silk->antq_sesame,1
-# anchor:silk->antq_tree_nuts,3
-# anchor:sugar->antq_dates,1
+# anchor:silk->antq_sesame,2
+# anchor:silk->antq_tree_nuts,4
+# anchor:sugar->antq_dates,2
+# anchor:sugar->antq_sesame,2
 # anchor:sugar->fish,1
-# anchor:wheat->antq_barley,1
+# anchor:wheat->antq_barley,17
+# anchor:wheat->antq_sesame,4
 # anchor:wheat->antq_silphium,1
+# anchor:wheat->antq_tree_nuts,2
+# anchor:wild_game->antq_tree_nuts,4
+# anchor:wine->antq_barley,2
+# anchor:wine->antq_tree_nuts,5
 # anchor:wool->antq_barley,2
 # anchor:wool->antq_dates,1
 # environment_rule:cotton->fiber_crops,27
 # environment_rule:olives->fruit,25
-# environment_rule:sugar->fiber_crops,9
-# environment_rule:wine->fruit,25
+# environment_rule:sugar->fiber_crops,8
+# environment_rule:wine->fruit,24
 # location_allowlist_rule:cloves->medicaments,10
 # location_allowlist_rule:pepper->medicaments,58
 # location_allowlist_rule:tea->medicaments,80
@@ -821,13 +924,13 @@ zwickau,Germania,regional_rule,coal,lumber
 # regional_rule:cotton->fiber_crops,102
 # regional_rule:elephants->livestock,2
 # regional_rule:incense->medicaments,33
-# regional_rule:olives->fruit,4
+# regional_rule:olives->fruit,3
 # regional_rule:rice->millet,19
 # regional_rule:saffron->medicaments,11
 # regional_rule:saltpeter->salt,32
-# regional_rule:silk->fiber_crops,106
-# regional_rule:sugar->fiber_crops,63
-# regional_rule:wine->fruit,44
+# regional_rule:silk->fiber_crops,104
+# regional_rule:sugar->fiber_crops,61
+# regional_rule:wine->fruit,42
 
 # runtime worker seeds
 # cagliari,wheat,3

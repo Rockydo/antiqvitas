@@ -21,6 +21,17 @@ DDS = ROOT/"tools/dds.py"
 LANGS=("english","french","german","spanish","polish","russian","braz_por","simp_chinese","japanese","korean","turkish")
 FIELDS=("key","name","good","output","climates","topographies","vegetations","regions","water","max","source","icon_subject")
 CELLS=("top_left","top_right","bottom_left","bottom_right")
+CULTIVABLE_GOODS={
+    "wheat","millet","antq_barley","rice","maize","legumes","fruit","olives",
+    "antq_dates","antq_tree_nuts","antq_sesame","fiber_crops","cotton","dyes",
+    "sugar","tea","medicaments","incense","antq_papyrus","antq_coconuts",
+    "cocoa","tobacco","wine","saffron","pepper","cloves","chili","potato",
+    "beeswax","silk","wool","livestock","horses","antq_camels",
+}
+REVIEWED_EXCLUSIONS={
+    "coffee":"documented beverage cultivation is post-campaign",
+    "antq_silphium":"extremely narrow Cyrenaican resource, not a transplantable tall-play crop",
+}
 
 def parts(v): return tuple(x for x in v.split("|") if x)
 def load():
@@ -107,7 +118,8 @@ def art(rows):
     finally:
         for im in opened.values(): im.close()
     if len(previews)==len(rows):
-        canvas=Image.new("RGBA",(1080,820),(16,25,43,255)); d=ImageDraw.Draw(canvas)
+        height=((len(rows)+5)//6)*205
+        canvas=Image.new("RGBA",(1080,height),(16,25,43,255)); d=ImageDraw.Draw(canvas)
         for i,(k,im) in enumerate(previews):
             x=(i%6)*180+10; y=(i//6)*205+3
             canvas.alpha_composite(im.resize((160,160),Image.Resampling.NEAREST),(x,y)); d.text((x,y+164),k[10:31],fill="white")
@@ -124,7 +136,14 @@ def write(rows):
     for lang in LANGS:
         p=ROOT/f"main_menu/localization/{lang}/antq_s3_cultivators_l_{lang}.yml"; p.write_text(loc_text(lang,rows),encoding="utf-8",newline="\n")
     AVAIL.write_text(availability(rows),encoding="utf-8-sig",newline="")
-    REPORT.write_text(f"# Cultivator System\n\n- {len(rows)} lower-yield peasant buildings from {len(rows)//4} four-up art sheets.\n- Exact climate, topography, vegetation, region, river, and coast gates.\n- Hard caps 2-3; outputs 0.20-0.38 versus native RGO production.\n",encoding="utf-8")
+    REPORT.write_text(
+        f"# Cultivator System\n\n"
+        f"- {len(rows)} lower-yield peasant buildings from {len(rows)//4} four-up art sheets.\n"
+        f"- {len(CULTIVABLE_GOODS)} reviewed cultivable goods covered; coffee and silphium remain explicit historical exclusions.\n"
+        f"- Exact climate, topography, vegetation, region, river, and coast gates.\n"
+        f"- Hard caps 2-3; outputs 0.18-0.38 versus native RGO production.\n",
+        encoding="utf-8",
+    )
     art(rows)
 
 def check(rows):
@@ -132,6 +151,14 @@ def check(rows):
     goods=set(json.loads((ROOT/"docs/vanilla_symbols/good.json").read_text()))
     with (ROOT/"docs/m5/custom_goods.csv").open(encoding="utf-8-sig",newline="") as f: goods.update(x["key"] for x in csv.DictReader(f))
     if len({r["key"] for r in rows})!=len(rows): failures.append("duplicate keys")
+    covered={r["good"] for r in rows}
+    if covered != CULTIVABLE_GOODS:
+        failures.append(
+            f"cultivable-good coverage drift: missing={sorted(CULTIVABLE_GOODS-covered)} "
+            f"unexpected={sorted(covered-CULTIVABLE_GOODS)}"
+        )
+    if set(REVIEWED_EXCLUSIONS) & covered:
+        failures.append("reviewed historical exclusions became cultivators")
     if not OUT.is_file() or OUT.read_text(encoding="utf-8-sig")!=building_text(rows): failures.append("building output stale")
     if not AVAIL.is_file() or AVAIL.read_text(encoding="utf-8-sig")!=availability(rows): failures.append("availability ledger stale")
     hashes={}

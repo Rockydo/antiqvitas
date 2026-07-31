@@ -34,7 +34,7 @@ LANGUAGE_CLIENTS = (
 
 EXPECTED = {
     "PPA": (
-        "Adirondack-St Lawrence Point Peninsula Communities", "oswegatchie",
+        "Adirondack-St Lawrence", "oswegatchie",
         ("adirondacks_province", "oswegatchie_province"),
         "antq_adirondack_point_peninsula", "antq_point_peninsula_seasonal_network",
         {
@@ -43,13 +43,13 @@ EXPECTED = {
         },
     ),
     "MHP": (
-        "Mohawk Valley Point Peninsula Communities", "canajoharie",
+        "Mohawk Point Peninsula", "canajoharie",
         ("kanienkehaka_province",), "antq_mohawk_point_peninsula",
         "antq_point_peninsula_seasonal_network",
         {"canajoharie", "oneonta", "saratoga", "schenectady", "teionontatatie"},
     ),
     "FLP": (
-        "Finger Lakes Point Peninsula Communities", "oswego",
+        "Finger Lakes Peninsula", "oswego",
         (
             "gayogohono_province", "onondagega_province",
             "onondowaga_province", "onyotaaka_province",
@@ -63,13 +63,13 @@ EXPECTED = {
         },
     ),
     "HVI": (
-        "Havana-Illinois Valley Communities", "peoria",
+        "Havana-Illinois Valley", "peoria",
         ("kishwaukee_province", "peoria_province"), "antq_havana_illinois_valley",
         "antq_havana_hopewell_exchange_network",
         {"peewareewa", "peoria", "sangamon"},
     ),
     "ABW": (
-        "American Bottom Middle Woodland Communities", "cahokia",
+        "American Bottom Woodland", "cahokia",
         ("cahokia_province", "mitchigamea_province", "moingwena_province"),
         "antq_american_bottom_middle_woodland",
         "antq_havana_hopewell_exchange_network",
@@ -79,20 +79,20 @@ EXPECTED = {
         },
     ),
     "CMW": (
-        "Central Mississippi Woodland Communities", "tamaroa",
+        "Mississippi Woodland", "tamaroa",
         ("tamaroa_province", "towosaghy_province"),
         "antq_central_mississippi_woodland",
         "antq_central_mississippi_woodland_network",
         {"chariton", "emasulia", "oahaha", "tamaroa", "wyaconda", "chepoussa", "st_francois_mts"},
     ),
     "MRW": (
-        "Meramec-Missouri Woodland Communities", "meramec",
+        "Meramec-Missouri Woodland", "meramec",
         ("meramec_province",), "antq_meramec_missouri_woodland",
         "antq_central_mississippi_woodland_network",
         {"meramec", "pahatsi", "tanwakanwakaghe"},
     ),
     "KCP": (
-        "Lower Missouri Hopewell Communities", "nodaway",
+        "Lower Missouri Hopewell", "nodaway",
         ("nodaway_province",), "antq_kansas_city_hopewell",
         "antq_kansas_city_hopewell_network",
         {"nodaway", "nudarcha", "wimihsoorita", "omaha"},

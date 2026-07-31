@@ -35,17 +35,17 @@ LANGUAGES = (
 )
 
 EXPECTED = {
-    "NYS": ("Nayarit Shaft-Tomb Communities", "Mesoamerica", "ahuacatlan", 6, "antq_nayarit_shaft_tomb", "antq_west_mexican_shaft_tomb_chiefdom"),
+    "NYS": ("Nayarit Shaft-Tomb", "Mesoamerica", "ahuacatlan", 6, "antq_nayarit_shaft_tomb", "antq_west_mexican_shaft_tomb_chiefdom"),
     "TJC": ("Central Jalisco Teuchitlan Networks", "Mesoamerica", "etzatlan", 10, "antq_central_jalisco_teuchitlan", "antq_teuchitlan_civic_center_network"),
-    "SJB": ("Southern Jalisco Basin Communities", "Mesoamerica", "sayula", 8, "antq_southern_jalisco_basin", "antq_west_mexican_shaft_tomb_chiefdom"),
-    "COL": ("Colima-Coahuayana Communities", "Mesoamerica", "coliman", 10, "antq_colima_coahuayana", "antq_west_mexican_shaft_tomb_chiefdom"),
-    "BJC": ("Chupicuaro-Bajio Communities", "Mesoamerica", "yuririapundaro", 8, "antq_chupicuaro_bajio", "antq_west_mexican_basin_community_network"),
-    "PHC": ("Patzcuaro Highland Communities", "Mesoamerica", "patzcuaro", 7, "antq_patzcuaro_highland", "antq_west_mexican_basin_community_network"),
-    "MBC": ("Central Michoacan Basin Communities", "Mesoamerica", "zinapecuaro", 11, "antq_central_michoacan_basin", "antq_west_mexican_basin_community_network"),
-    "TVC": ("Toluca Valley Formative Communities", "Mesoamerica", "ixtlahuaca", 9, "antq_toluca_valley_formative", "antq_west_mexican_basin_community_network"),
-    "MZC": ("Mezcala-Balsas Preurban Communities", "Mesoamerica", "tepecoacuilco", 6, "antq_mezcala_balsas_preurban", "antq_west_mexican_highland_corridor_network"),
-    "JZH": ("Jalisco-Zacatecas Highland Communities", "Mesoamerica", "huaxtla", 15, "antq_jalisco_zacatecas_highland", "antq_west_mexican_highland_corridor_network"),
-    "SDR": ("Ancestral Sonoran Desert Communities", "North America", "shiewhibak", 8, "antq_ancestral_sonoran_desert", "antq_sonoran_desert_farming_network"),
+    "SJB": ("Southern Jalisco Basin", "Mesoamerica", "sayula", 8, "antq_southern_jalisco_basin", "antq_west_mexican_shaft_tomb_chiefdom"),
+    "COL": ("Colima-Coahuayana", "Mesoamerica", "coliman", 10, "antq_colima_coahuayana", "antq_west_mexican_shaft_tomb_chiefdom"),
+    "BJC": ("Chupicuaro-Bajio", "Mesoamerica", "yuririapundaro", 8, "antq_chupicuaro_bajio", "antq_west_mexican_basin_community_network"),
+    "PHC": ("Patzcuaro Highland", "Mesoamerica", "patzcuaro", 7, "antq_patzcuaro_highland", "antq_west_mexican_basin_community_network"),
+    "MBC": ("Central Michoacan Basin", "Mesoamerica", "zinapecuaro", 11, "antq_central_michoacan_basin", "antq_west_mexican_basin_community_network"),
+    "TVC": ("Toluca Valley Formative", "Mesoamerica", "ixtlahuaca", 9, "antq_toluca_valley_formative", "antq_west_mexican_basin_community_network"),
+    "MZC": ("Mezcala-Balsas Preurban", "Mesoamerica", "tepecoacuilco", 6, "antq_mezcala_balsas_preurban", "antq_west_mexican_highland_corridor_network"),
+    "JZH": ("Jalisco-Zacatecas", "Mesoamerica", "huaxtla", 15, "antq_jalisco_zacatecas_highland", "antq_west_mexican_highland_corridor_network"),
+    "SDR": ("Ancestral Sonoran Desert", "North America", "shiewhibak", 8, "antq_ancestral_sonoran_desert", "antq_sonoran_desert_farming_network"),
 }
 PROVINCES = {
     "NYS": {"ahuacatlan_province", "aztatlan_province"},

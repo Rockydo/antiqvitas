@@ -40,9 +40,9 @@ RELIGION = "antq_amur_ussuri_traditions"
 EXPECTED = {
     "MAM": ("Middle Amur Pol'tse Horizon", "aigun", 50, "antq_middle_amur_poltsian", "antq_amur_forest_river_network"),
     "LAM": ("Lower Amur Estuary Networks", "nurgan", 35, "antq_lower_amur_estuary", "antq_amur_forest_river_network"),
-    "SKH": ("Sakhalin Paleometal Communities", "idy_sakhalin", 8, "antq_sakhalin_paleometal", "antq_sakhalin_maritime_network"),
+    "SKH": ("Sakhalin Paleometal", "idy_sakhalin", 8, "antq_sakhalin_paleometal", "antq_sakhalin_maritime_network"),
     "YIL": ("Ussuri-Sanjiang Yilou Horizon", "hulin", 16, "antq_yilou", "antq_ussuri_poltsian_network"),
-    "MDN": ("Mudan Basin Communities", "jixi", 5, "antq_mudan_basin_iron_age", "antq_ussuri_poltsian_network"),
+    "MDN": ("Mudan Basin", "jixi", 5, "antq_mudan_basin_iron_age", "antq_ussuri_poltsian_network"),
     "WJO": ("Northern Okjeo Corridor", "yenji", 11, "antq_northern_okjeo_tuanjie", "antq_northern_okjeo_corridor"),
 }
 CAPITAL_NAMES = {

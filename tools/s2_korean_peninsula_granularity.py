@@ -61,12 +61,12 @@ FORMER_BYE_HOSEO = HMR_HOSEO | GMR_HOSEO | {"uian"}
 
 EXPECTED = {
     "HMR": (
-        "Han River Mahan Communities", "suwon",
+        "Han River Mahan", "suwon",
         {"hanseong_province", "kaesong_province", "chungju_province"},
         "antq_mahan_small_state_league", HMR_KRS | HMR_HOSEO,
     ),
     "GMR": (
-        "Geum River Mahan Communities", "gongju",
+        "Geum River Mahan", "gongju",
         {"gongju_province", "hongju_province"},
         "antq_mahan_small_state_league", GMR_HOSEO,
     ),

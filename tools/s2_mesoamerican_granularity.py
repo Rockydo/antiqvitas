@@ -34,14 +34,14 @@ LANGUAGES = (
 )
 
 EXPECTED = {
-    "SLC": ("Basin South-Lake Communities", "chalco", 4, "antq_basin_south_lake", "antq_mesoamerican_formative_civic_network"),
+    "SLC": ("Basin South-Lake", "chalco", 4, "antq_basin_south_lake", "antq_mesoamerican_formative_civic_network"),
     "PTF": ("Puebla-Tlaxcala Formative Centers", "cholollan", 16, "antq_puebla_tlaxcala_formative", "antq_mesoamerican_formative_civic_network"),
-    "MRF": ("Morelos Formative Communities", "cuauhnahuac", 6, "antq_morelos_formative", "antq_mesoamerican_formative_civic_network"),
-    "NHC": ("Northern Highland Corridor Communities", "ixmiquilpan", 14, "antq_northern_highland_corridor", "antq_mesoamerican_exchange_corridor_network"),
-    "TPC": ("Tamtoc-Panuco Communities", "tamtoc", 6, "antq_tamtoc_panuco", "antq_mesoamerican_formative_civic_network"),
+    "MRF": ("Morelos Formative", "cuauhnahuac", 6, "antq_morelos_formative", "antq_mesoamerican_formative_civic_network"),
+    "NHC": ("Northern Highland", "ixmiquilpan", 14, "antq_northern_highland_corridor", "antq_mesoamerican_exchange_corridor_network"),
+    "TPC": ("Tamtoc-Panuco", "tamtoc", 6, "antq_tamtoc_panuco", "antq_mesoamerican_formative_civic_network"),
     "GLS": ("Gulf Lowland-Sierra Networks", "xalapa", 13, "antq_gulf_lowland_sierra", "antq_mesoamerican_exchange_corridor_network"),
-    "GPC": ("Guerrero Pacific Communities", "tlapan", 13, "antq_guerrero_pacific", "antq_mesoamerican_exchange_corridor_network"),
-    "ONH": ("Oaxaca Northwest Highland Communities", "huajuapan", 6, "antq_oaxaca_northwest_highland", "antq_mesoamerican_highland_community_network"),
+    "GPC": ("Guerrero Pacific", "tlapan", 13, "antq_guerrero_pacific", "antq_mesoamerican_exchange_corridor_network"),
+    "ONH": ("Oaxaca Northwest Highland", "huajuapan", 6, "antq_oaxaca_northwest_highland", "antq_mesoamerican_highland_community_network"),
     "IZA": ("Izapa-Soconusco Center", "huehuetan", 4, "antq_izapa_soconusco", "antq_mesoamerican_urban_ritual_center"),
     "CPH": ("Chiapas Highland-Lowland Networks", "zinacantan", 11, "antq_chiapas_highland_lowland", "antq_mesoamerican_highland_community_network"),
 }

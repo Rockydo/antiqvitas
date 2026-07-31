@@ -26,6 +26,7 @@ REQUIRED = (
     "status",
 )
 TAG = re.compile(r"[A-Z0-9]{3}$")
+GENERIC_POLITY_TERM = re.compile(r"\b(?:community|communities|group)\b", re.IGNORECASE)
 TIERS = {"1", "2", "3"}
 KINDS = {"country", "subject", "sop"}
 CONFIDENCE = {"secure", "contested"}
@@ -64,6 +65,9 @@ def main() -> int:
             failures.append(f"{prefix}: invalid confidence {row.get('confidence')!r}")
         if row.get("status") not in STATUSES:
             failures.append(f"{prefix}: invalid status {row.get('status')!r}")
+        name = row.get("name", "")
+        if GENERIC_POLITY_TERM.search(name):
+            failures.append(f"{prefix}: generic player-facing polity name {name!r}")
         map_capital = row.get("map_capital", "")
         if map_capital and map_capital != "TBD":
             mapped += 1

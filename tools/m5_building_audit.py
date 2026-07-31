@@ -21,6 +21,7 @@ SPECIALS = ROOT / "docs/m5/special_buildings.csv"
 FORTS = ROOT / "docs/m7/forts.csv"
 SETTLEMENT_AUDIT = ROOT / "docs/m5/global_settlement_audit.csv"
 ROMAN_PROFILES = ROOT / "docs/m5/roman_economy_profiles.csv"
+MARKETS = ROOT / "docs/m5/markets.csv"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
 
 
@@ -51,6 +52,7 @@ def main() -> int:
 		for location in row["locations"].split(";")
 		if location
 	}
+	market_locations = {row["location"] for row in rows(MARKETS)}
 	if len(location_counts) < 1200:
 		failures.append(
 			f"regional economy reaches only {len(location_counts)} distinct locations; "
@@ -58,16 +60,28 @@ def main() -> int:
 		)
 	ordinary_outliers = {
 		location: count for location, count in location_counts.items()
-		if location not in roman_profile_locations and count > 6
+		if location not in roman_profile_locations
+		and location not in market_locations
+		and count > 6
 	}
 	if ordinary_outliers:
 		failures.append(f"ordinary locations exceed the six-building cap: {ordinary_outliers}")
+	market_outliers = {
+		location: count for location, count in location_counts.items()
+		if location not in roman_profile_locations
+		and location in market_locations
+		and count > 18
+	}
+	if market_outliers:
+		failures.append(
+			f"reviewed market hubs exceed the 18-building cap: {market_outliers}"
+		)
 	roman_outliers = {
 		location: count for location, count in location_counts.items()
-		if location in roman_profile_locations and count > 32
+		if location in roman_profile_locations and count > 40
 	}
 	if roman_outliers:
-		failures.append(f"reviewed Roman metropolitan locations exceed 32 buildings: {roman_outliers}")
+		failures.append(f"reviewed Roman metropolitan locations exceed 40 buildings: {roman_outliers}")
 	top_ten_ratio = sum(count for _location, count in location_counts.most_common(10)) / max(len(seeds), 1)
 	if top_ten_ratio > 0.10:
 		failures.append(
