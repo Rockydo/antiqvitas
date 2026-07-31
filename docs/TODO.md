@@ -16,10 +16,15 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   No levy may reference a vanilla unit key; every playable tag must receive at
   least two valid levy roles and four recruitable land roles. Fresh Suebi
   runtime raised all 1,939 levies from 12+ eligible regions; only ancient
-  levy types appeared.
-- [ ] Make mercenaries nonzero and regionally diverse. Prove visible pools for
+  levy types appeared. Fresh Suebi, Kush, and Teotihuacan regular panels each
+  expose six ancient recruitment cards after removing the roster-wide special
+  force misclassification.
+- [x] Make mercenaries nonzero and regionally diverse. Prove visible pools for
   Rome, Parthia, Suebi, Han, India, Africa, and the Americas; expand the roster
-  and remove population rounding-to-zero.
+  and remove population rounding-to-zero. Fresh seven-profile proof shows
+  nonzero ancient bands throughout. The small-polity failure was affordability:
+  a generated sub-500k opening reserve now initializes Suebi, Kush, and
+  Teotihuacan without console funding.
 - [x] Give every coastal polity valid ancient transport and combat vessels.
   Parthian ports must offer more than merchant roundships; inland locations
   must not gain ocean fleets. Fresh Parthia runtime exposed five bounded
@@ -189,19 +194,21 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 - Static green: all eight pop classes use 48 distinct ancient masters across
   generic, map-mode, and all nine installed graphical families (88 exact DDS
   resolvers); European and Mediterranean location views no longer fall back.
-- Runtime: Rome's Mercenary Captain panel is populated with culture-labelled
-  pools and ancient units. Fresh Suebi raised all 1,939 levies from 12+
-  eligible regions and queued two regional ancient levy formations.
+- Runtime: fresh Rome, Parthia, Suebi, Han, Satavahana, Kush, and Teotihuacan
+  captain panels all contain nonzero ancient bands. Fresh Suebi raised all
+  1,939 levies from 12+ eligible regions and queued two regional ancient levy
+  formations.
 - Runtime: fresh Parthia ship recruitment exposes Mesopotamian River Patrol,
   Caspian Oared Boat, Persian Gulf Patrol Craft, Merchant Roundship, and
-  Mesopotamian River Transport. Its military header showed `0 + 0 / 0`, as
-  Rome's does before opening Gather; the Parthian captain workflow was not
-  opened and remains unproved.
+  Mesopotamian River Transport.
 - Runtime: fresh Arikamedu, Ephesus, and Pompeii captures show clean motion at
   8-14%; the rejected nested and disjoint-band implementations are gone.
 - Runtime gate: final 155/155 validation and paired menu smoke have zero new or
   mod-unique log lines. Loading fingerprint:
   `c7fa4f98de1b54000e4ae5dd4b443b98cc9d58cfb39ef92d0cb0aac80a5446f4`.
+- Mercenary repair gate: 155/155 validation and paired menu smoke pass with
+  zero new or mod-unique lines at fingerprint
+  `5791789bafe474ac9228e6577f3dc801f820dc8ef144e7942ba61318fac948f7`.
 
 ## Active user priorities — 2026-07-22
 

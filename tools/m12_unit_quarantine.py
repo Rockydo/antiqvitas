@@ -20,6 +20,7 @@ MANIFEST = ROOT / "docs/m12/unit_quarantine_manifest.json"
 DEFINITION = re.compile(r"^([A-Za-z][A-Za-z0-9_]*)\s*=\s*\{\s*(?:#.*)?$")
 UPGRADE = re.compile(r"^\s*upgrades_to(?:_only)?\s*=")
 VISIBILITY = re.compile(r"^\s*(?:hide|buildable)\s*=")
+DEFAULT = re.compile(r"^\s*default\s*=")
 COPY_FROM = re.compile(r"(?m)^\s*copy_from\s*=\s*([A-Za-z0-9_]+)")
 MARKER = "\t# ANTIQVITAS installed-unit quarantine.\n\thide = yes\n\tbuildable = no\n"
 
@@ -115,7 +116,9 @@ def quarantine(source: Path, adapters: set[str]) -> tuple[bytes, list[str]]:
         # restate visibility. Ancient units own their own graph. Preserve the
         # exact installed parent chain used by custom units: those definitions
         # are already technical hidden/non-buildable templates.
-        if not adapter and (UPGRADE.match(line) or VISIBILITY.match(line)):
+        if not adapter and (
+            UPGRADE.match(line) or VISIBILITY.match(line) or DEFAULT.match(line)
+        ):
             continue
         output.append(line)
         if match and not adapter:
@@ -215,6 +218,13 @@ def check() -> bool:
             != expected_markers
         ):
             failures.append(f"incomplete quarantine markers: {target}")
+        for match in re.finditer(
+            r"(?ms)^([A-Za-z][A-Za-z0-9_]*)\s*=\s*\{.*?(?=^[A-Za-z][A-Za-z0-9_]*\s*=\s*\{|\Z)",
+            text,
+        ):
+            key, body = match.group(1), match.group(0)
+            if key not in adapters and re.search(r"(?m)^\s*default\s*=\s*yes", body):
+                failures.append(f"quarantined legacy default remains: {key}")
     if failures:
         print("m12_unit_quarantine: FAIL")
         for failure in failures:

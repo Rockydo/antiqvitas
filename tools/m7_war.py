@@ -55,6 +55,10 @@ NUMBER = re.compile(r"^-?(?:\d+(?:\.\d+)?|\.\d+)$")
 UNLOCK = re.compile(r"^\s*unlock_(?:unit|levy)\s*=", re.IGNORECASE | re.MULTILINE)
 UNIVERSAL_TAG = "ALL"
 MERCENARY_POP_MULTIPLIER = "0.05"
+DEFAULT_MERCENARY_UNITS = frozenset((
+    "antq_frontier_spear_company",
+    "antq_caravan_guard_company",
+))
 LEVY_FILENAMES = (
     "00_revolutions_levies.txt", "01_absolutism_levies.txt",
     "02_reformation_levies.txt", "03_discovery_levies.txt",
@@ -478,7 +482,15 @@ def unit_script(units: tuple[Unit, ...]) -> str:
         if not start_tags:
             raise ValueError(f"{unit.key} has no valid opening country potential")
         package = unit_package(unit.key, unit.copy_from)
-        lines.extend((f"{unit.key} = {{", "\tis_special = yes", f"\tcopy_from = {unit.copy_from}", "\thide = no"))
+        lines.extend((
+            f"{unit.key} = {{",
+            # Country/date potentials already bound every ancient type.
+            # `is_special` is an engine force-limit class, not a custom-content
+            # marker; applying it roster-wide leaves small polities with no
+            # normal recruitable or default mercenary composition.
+            f"\tcopy_from = {unit.copy_from}",
+            "\thide = no",
+        ))
         if unit.status == "regular":
             lines.append("\tbuildable = yes")
         elif unit.status == "levy":
@@ -492,6 +504,12 @@ def unit_script(units: tuple[Unit, ...]) -> str:
                 f"\tmercenaries_per_location = {{ pop_type = peasants multiply = {MERCENARY_POP_MULTIPLIER} }}",
                 f"\tmercenaries_per_location = {{ pop_type = tribesmen multiply = {MERCENARY_POP_MULTIPLIER} }}",
             ))
+            # EU5 needs one unambiguous default per category to initialize a
+            # captain above zero. Every profile receives these universal
+            # ancient heavy- and light-foot defaults; regional companies remain
+            # selectable alternatives rather than competing defaults.
+            if unit.key in DEFAULT_MERCENARY_UNITS:
+                lines.append("\tdefault = yes")
         lines.append(f"\tage = {unit.age}")
         lines.append(f"\tconstruction_demand = antq_{package}_construction")
         lines.append(f"\tmaintenance_demand = antq_{package}_maintenance")
@@ -717,6 +735,23 @@ def write(units: tuple[Unit, ...]) -> None:
 def check(units: tuple[Unit, ...]) -> bool:
     failures: list[str] = []
     expected = outputs(units)
+    unit_text = expected[UNIT_OUTPUT]
+    if re.search(r"(?m)^\s*is_special\s*=\s*yes", unit_text):
+        failures.append("ancient roster is incorrectly classified as special forces")
+    default_units = {
+        match.group(1)
+        for match in re.finditer(
+            r"(?ms)^([A-Za-z][A-Za-z0-9_]*)\s*=\s*\{"
+            r".*?(?=^[A-Za-z][A-Za-z0-9_]*\s*=\s*\{|\Z)",
+            unit_text,
+        )
+        if re.search(r"(?m)^\s*default\s*=\s*yes", match.group(0))
+    }
+    if default_units != DEFAULT_MERCENARY_UNITS:
+        failures.append(
+            "default mercenary units differ from the universal ancient pair: "
+            f"{sorted(default_units)}"
+        )
     for path, content in expected.items():
         if not path.is_file():
             failures.append(f"missing {path.relative_to(ROOT)}")

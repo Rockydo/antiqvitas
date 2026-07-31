@@ -88,6 +88,8 @@ def m9_subject_adapter(row: dict[str, str]) -> str:
 THOUSANDTH = Decimal("0.001")
 MIN_LOCATION_POPULATION = Decimal("0.001")
 MAX_UNTARGETED_LOCATION_POPULATION = Decimal("75.000")
+OPENING_LIQUIDITY_POPULATION_CEILING = Decimal("500.000")
+OPENING_LIQUIDITY_FLOOR = 250
 COMPATIBILITY_LOCATION = "aachen"
 COMPATIBILITY_POP_SIZE = Decimal("0.001")
 COMPATIBILITY_RELIGION = "antq_germanic_religion"
@@ -1453,7 +1455,7 @@ def allocate_population_group(
 
 def population_manager(
     compatibility_cultures: list[str],
-) -> tuple[str, int, Decimal, dict[str, set[str]]]:
+) -> tuple[str, int, Decimal, dict[str, set[str]], dict[str, Decimal]]:
     """Render all controlled AD 1 locations against section 12.4 target totals."""
     roster_rows = csv_rows(ROSTER)
     roster = {row["tag"]: row for row in roster_rows}
@@ -1546,6 +1548,7 @@ def population_manager(
         "locations = {",
     ]
     resident_cultures: defaultdict[str, set[str]] = defaultdict(set)
+    country_populations: defaultdict[str, Decimal] = defaultdict(Decimal)
     for location in sorted(owners):
         row = roster[owners[location]]
         profile = historical_profile_for(row)
@@ -1557,6 +1560,7 @@ def population_manager(
             religion_remaps.get(location, {}).get("religion", profile.religion),
         )
         resident_cultures[owners[location]].add(culture)
+        country_populations[owners[location]] += sizes[location]
         lines.extend(
             (
                 f"\t{location} = {{",
@@ -1571,6 +1575,7 @@ def population_manager(
         len(owners),
         sum(sizes.values(), Decimal()) + compatibility_total,
         dict(resident_cultures),
+        dict(country_populations),
     )
 
 
@@ -1598,7 +1603,10 @@ def fallback_government_block(kind: str) -> list[str]:
     ]
 
 
-def country_manager(resident_cultures: dict[str, set[str]]) -> tuple[str, int, int]:
+def country_manager(
+    resident_cultures: dict[str, set[str]],
+    country_populations: dict[str, Decimal],
+) -> tuple[str, int, int]:
     """Render M3 countries from checked ownership plus verified capitals.
 
     Generic random-ruler scaffolding remains only for countries outside the
@@ -1647,6 +1655,17 @@ def country_manager(resident_cultures: dict[str, set[str]]) -> tuple[str, int, i
         # and emit invalid-government diagnostics at every AD 1 startup.
         lines.append(f"\t\t\tcountry_rank = {country_rank(row)}")
         lines.append(f'\t\t\tstarting_technology_level = {m8_technology_level(row)}')
+        if row["tag"] not in country_populations:
+            raise ValueError(f"{row['tag']} has no allocated opening population")
+        if country_populations[row["tag"]] < OPENING_LIQUIDITY_POPULATION_CEILING:
+            # The engine will not initialize an affordable default mercenary
+            # composition for very small treasuries. This floor is limited to
+            # sub-500k polities and matches an installed 1337 setup value.
+            lines.extend((
+                "\t\t\tcurrency_data = {",
+                f"\t\t\t\tgold = {OPENING_LIQUIDITY_FLOOR}",
+                "\t\t\t}",
+            ))
         lines.append("\t\t\tdiscovered_regions = {")
         lines.extend(f"\t\t\t\t{region}" for region in m9_discovery_regions(row))
         lines.append("\t\t\t}")
@@ -1753,11 +1772,20 @@ def generated_files() -> tuple[dict[str, str], int, int, int, int, Decimal, int,
     roads, road_count = road_network()
     development, development_count = development_manager()
     compatibility_cultures = culture_presence_cultures()
-    pops, pop_locations, pop_total, resident_cultures = population_manager(
+    (
+        pops,
+        pop_locations,
+        pop_total,
+        resident_cultures,
+        country_populations,
+    ) = population_manager(
         compatibility_cultures
     )
     power = load_power_data()
-    countries, count, controlled = country_manager(resident_cultures)
+    countries, count, controlled = country_manager(
+        resident_cultures,
+        country_populations,
+    )
     diplomacy, dependencies = diplomacy_manager()
     return (
         {

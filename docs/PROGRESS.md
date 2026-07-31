@@ -8184,3 +8184,16 @@ reviewed 128px BC7 DDS.
   Full validation passes 155/155; paired smoke adds zero new or mod-unique log
   lines. Fingerprint:
   `c7fa4f98de1b54000e4ae5dd4b443b98cc9d58cfb39ef92d0cb0aac80a5446f4`.
+
+## 2026-07-31 - Restored mercenary and regular recruitment
+
+- Proved `0 / N` was an unaffordable default composition, not missing manpower.
+- Added a generated 250-gold reserve to 405 sub-500k starts through the
+  installed `currency_data` contract; retained the 0.05 population rules.
+- Kept exactly two ancient default companies, stripped three medieval defaults,
+  and removed the erroneous special-force flag from all 112 ancient units.
+- Fresh Rome, Parthia, Suebi, Han, Satavahana, Kush, and Teotihuacan panels show
+  nonzero ancient bands. Suebi, Kush, and Teotihuacan each show six regular
+  ancient recruitment cards.
+- Final validation passes 155/155; paired smoke adds zero new or mod-unique
+  lines at `5791789bafe474ac9228e6577f3dc801f820dc8ef144e7942ba61318fac948f7`.

@@ -4406,3 +4406,12 @@ one contiguous `_01` foreground plane, and transparent `_02`-`_07`; BC1/BC3
 still follow the installed contract. Richer motion is deferred until elements
 are genuinely authored. The exact Rossbach layers remain the reference. Accept
 only after three distinct new-game scenes remain clean through 8-14% motion.
+
+## 2026-07-31 - Mercenary initialization follows opening liquidity
+
+`0 / N` is selected composition versus available capacity, not a zero pool.
+Keep population multipliers at 0.05. Give sub-500k polities a 250-gold
+`currency_data` reserve so the engine can afford its default ancient pair.
+Use Frontier Spear Company and Caravan Guard Company as the only defaults,
+strip legacy defaults, and do not classify the complete ancient roster as
+special forces.
