@@ -39,13 +39,17 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 
 ### S3-P1 - Complete ancient visual surfaces
 
-- [x] Rebuild all sixteen loading screens as vanilla-contract opaque depth
-  plates. Live Camulodunum, Forum, and Monte Alban captures at 7/71/98/99%
-  show no seam, slab, or ghosting (`S3_LOADING_PARALLAX_20260730`).
-- [ ] Re-audit loading screens against the installed vanilla scene stack after
+- [x] Rebuild all sixteen loading screens against the installed vanilla
+  eight-mesh contract.
+- [x] Re-audit loading screens against the installed vanilla scene stack after
   the reported ghosted/blurred new-game render. Compare exact texture formats,
   alpha, layer ordering, transforms, and shader use; require fresh vanilla/mod
   captures through several new-game percentages before accepting the repair.
+  A fresh 8% capture rejected automatic disjoint bands: mesh motion exposed
+  cracks around buildings. The replacement uses an opaque clean plate plus one
+  contiguous foreground plane; six meshes are transparent. Arikamedu, Ephesus,
+  and Pompeii are clean through fresh 8-14% motion captures; full validation is
+  155/155 and paired smoke adds zero new or mod-unique log lines.
 - [x] Replace the complete installed location-illustration union: terrain,
   settlements, forts, ports, sacred buildings, workshops, weather, and
   foreground layers. No medieval structure or unintended blur may remain.
@@ -174,9 +178,10 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   apiaries, and managed pastoral production. Exact climate, topography,
   vegetation, region, river, and coast gates cap marginal output at 2-3 levels;
   36 direct icons come from nine reviewed four-up EU5-referenced sheets.
-- Static green: all 16 loading panoramas now use one opaque DXT1 base plus seven
-  distinct sparse DXT5 depth plates; 11 selectable scenes receive exact-path
-  hardlinks. The 128-layer ledger and contact sheet reject opaque duplicates.
+- Static green: all 16 loading panoramas use a clean DXT1 background, one
+  contiguous DXT5 foreground, and six transparent compatibility planes. Eleven
+  selectable scenes receive exact-path copies; the 128-layer ledger rejects
+  duplicate RGB, overlap, wrong alpha, stale redirects, and wrong layer order.
 - Static green: all four installed location resolvers yield 255 textures. 154
   structural/sacred paths use 48 ancient masters, five ancient monuments remain
   verbatim, and 96 natural/effect layers are audited period-neutral. All 644
@@ -192,12 +197,11 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   Mesopotamian River Transport. Its military header showed `0 + 0 / 0`, as
   Rome's does before opening Gather; the Parthian captain workflow was not
   opened and remains unproved.
-- Runtime: fresh Camulodunum, Augustan Forum, Monte Alban, and Mixtec loading
-  captures show clean opaque depth separation at 7-99%; the former translucent
-  slab/ghost implementation is gone.
-- Runtime gate: final 153/153 validation and paired menu smoke have zero new or
-  mod-unique log lines. Two fresh S3 panel starts returned to the front-end;
-  the exact captures and deferred panel coverage are recorded in `BLOCKERS.md`.
+- Runtime: fresh Arikamedu, Ephesus, and Pompeii captures show clean motion at
+  8-14%; the rejected nested and disjoint-band implementations are gone.
+- Runtime gate: final 155/155 validation and paired menu smoke have zero new or
+  mod-unique log lines. Loading fingerprint:
+  `c7fa4f98de1b54000e4ae5dd4b443b98cc9d58cfb39ef92d0cb0aac80a5446f4`.
 
 ## Active user priorities — 2026-07-22
 

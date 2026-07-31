@@ -4335,12 +4335,11 @@ Use installed EU5 goods as style references, generate exactly four commodities
 per sheet, and remove a flat chroma field locally. Reject mean alpha >=0.67 or
 opaque radial rings; dark-blue still lifes remain valid only for wide event art.
 
-## 2026-07-31 - Loading layers are nested opaque depth cutouts
+## 2026-07-31 - Rejected: nested opaque loading cutouts
 
-Match the installed scene contract: one opaque base plus seven increasingly
-near depth masks. Keep mask interiors opaque and feather only a narrow outer
-edge. Reject broad semitransparent plates, which create the observed slabs and
-double-exposure seams.
+This provisional contract was rejected by later live motion evidence. Nested
+copies ghost, while disjoint automatic masks crack; use the superseding clean
+background contract below.
 
 ## 2026-07-31 - Mercenary origin labels use culture
 
@@ -4396,3 +4395,14 @@ Supersede the `T3M` pseudo-morphology contract. Never manufacture an ancient
 form by adding culture-shaped suffixes or centroid directions. Retain the
 installed cartographic label under `T3N` until a sourced identity replaces it.
 Use language-qualified localization for reviewed Roman frontier aliases.
+## 2026-07-31 - Loading parallax requires clean backgrounds
+
+The installed stack binds `_07` nearest through `_00` farthest. `_00` is an
+opaque clean plate; later files contain independently authored elements.
+Nested cutouts of a finished panorama repeat foreground RGB and ghost when
+meshes move. Automatic disjoint depth strata also fail: a fresh 8% load exposed
+cracks as meshes separated. ANTIQVITAS therefore uses a generated clean `_00`,
+one contiguous `_01` foreground plane, and transparent `_02`-`_07`; BC1/BC3
+still follow the installed contract. Richer motion is deferred until elements
+are genuinely authored. The exact Rossbach layers remain the reference. Accept
+only after three distinct new-game scenes remain clean through 8-14% motion.

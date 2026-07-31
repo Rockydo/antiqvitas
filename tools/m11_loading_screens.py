@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
-"""Build and validate ANTIQVITAS animated loading-screen depth plates.
+"""Build and validate ANTIQVITAS animated loading-screen clean plates.
 
 The EU5 loading-scene scripts are additive in the installed build.  We retain
 their engine-owned scene and image declarations, and instead VFS-override each
-of the exact eight DDS texture paths they already reference. Plate 00 is the
-reviewed opaque panorama; plates 01-07 are sparse, independently animated RGBA
-depth fields derived from that panorama rather than opaque duplicate hardlinks.
+of the exact eight DDS texture paths they already reference. Plate 00 is an
+opaque, subject-free background. Plate 01 is one contiguous foreground plane
+from the reviewed finished scene; 02-07 are transparent. This deliberately
+restrained two-plane fallback prevents both finished-scene ghost duplication
+and the animated cracks produced by automatically sliced depth bands. Vanilla's
+richer motion requires genuinely authored independent objects, not synthetic
+strata.
 """
 
 from __future__ import annotations
@@ -14,6 +18,7 @@ import argparse
 import csv
 import concurrent.futures
 import hashlib
+import json
 import os
 import tempfile
 from dataclasses import dataclass
@@ -28,11 +33,17 @@ from dds import convert, identify
 ROOT = Path(__file__).resolve().parents[1]
 CONTACT_SHEET = ROOT / "docs" / "m11" / "loading_screens_contact_sheet.png"
 LAYER_CONTACT_SHEET = ROOT / "docs" / "m11" / "loading_depth_layers_contact.png"
+COMPOSITE_CONTACT_SHEET = (
+    ROOT / "docs" / "m11" / "loading_depth_composites_contact.png"
+)
 LAYER_LEDGER = ROOT / "docs" / "m11" / "loading_depth_layers.csv"
 LAYER_ROOT = ROOT / "loading_screen/gfx/loading_screen_assets/antq/layers"
 DEPTH_ROOT = ROOT / "assets_queue/generated/loading_depth"
+CLEAN_ROOT = ROOT / "assets_queue/generated/loading_clean"
+CLEAN_SOURCE_ROOT = ROOT / "assets_queue/generated_sources/loading_clean"
+LOCAL_PATHS = ROOT / "config/local_paths.json"
 DIMENSIONS = (3840, 2160)
-DEPTH_QUANTILES = (30.0, 42.0, 54.0, 66.0, 76.0, 86.0, 94.0)
+FOREGROUND_POSITIVE_QUANTILE = 5.0
 
 
 @dataclass(frozen=True)
@@ -87,8 +98,6 @@ def digest(path: Path) -> str:
 
 
 def layer_texture(screen: LoadingScreen, index: int) -> Path:
-    if index == 0:
-        return ROOT / screen.texture
     return LAYER_ROOT / f"{screen.key}_{index:02d}.dds"
 
 
@@ -96,23 +105,40 @@ def depth_path(screen: LoadingScreen) -> Path:
     return DEPTH_ROOT / Path(screen.master).name
 
 
+def clean_path(screen: LoadingScreen) -> Path:
+    return CLEAN_ROOT / f"{screen.key}_clean_3840x2160.png"
+
+
+def clean_source_path(screen: LoadingScreen) -> Path:
+    return CLEAN_SOURCE_ROOT / f"{screen.key}_clean_source.png"
+
+
+def installed_loading_root() -> Path:
+    config = json.loads(LOCAL_PATHS.read_text(encoding="utf-8-sig"))
+    return (
+        Path(config["game_dir"])
+        / "game/loading_screen/gfx"
+    )
+
+
 def depth_masks(depth_image: Image.Image) -> tuple[np.ndarray, ...]:
-    """Build vanilla-shaped nested plates: opaque interiors, narrow soft edges."""
+    """Build one contiguous subject plane and six transparent safety planes."""
     depth = np.asarray(depth_image.convert("L"), dtype=np.uint8)
-    result: list[np.ndarray] = []
-    for quantile in DEPTH_QUANTILES:
-        threshold = float(np.percentile(depth, quantile))
-        binary = np.where(depth > threshold, 255, 0).astype(np.uint8)
-        # Vanilla plates are solid cutouts. Feather only the outside contour so
-        # identical RGB remains opaque wherever two animated plates overlap.
-        blurred = np.asarray(
-            Image.fromarray(binary, "L").filter(ImageFilter.GaussianBlur(radius=4.0)),
-            dtype=np.uint8,
-        )
-        alpha = np.maximum(binary, blurred)
-        alpha[alpha < 6] = 0
-        result.append(alpha)
-    return tuple(result)
+    positive = depth[depth > 2]
+    if positive.size == 0:
+        raise ValueError("depth map has no positive subject field")
+    threshold = float(
+        np.percentile(positive, FOREGROUND_POSITIVE_QUANTILE)
+    )
+    binary = np.where(depth > threshold, 255, 0).astype(np.uint8)
+    blurred = np.asarray(
+        Image.fromarray(binary, "L").filter(ImageFilter.GaussianBlur(radius=4.0)),
+        dtype=np.uint8,
+    )
+    foreground = np.maximum(binary, blurred)
+    foreground[foreground < 6] = 0
+    empty = np.zeros_like(foreground)
+    return (foreground, empty, empty, empty, empty, empty, empty)
 
 
 def render_depth_plate(image: Image.Image, alpha: np.ndarray) -> Image.Image:
@@ -139,9 +165,17 @@ def write_layers() -> None:
     temp_root.mkdir(parents=True, exist_ok=True)
     rows: list[dict[str, str]] = []
     previews: list[tuple[str, int, Image.Image]] = []
+    composites: list[tuple[str, Image.Image]] = []
     for screen in SCREENS:
         with Image.open(ROOT / screen.master) as opened:
             panorama = opened.convert("RGB")
+            with Image.open(clean_path(screen)) as clean_opened:
+                clean = clean_opened.convert("RGB")
+                if clean.size != panorama.size:
+                    raise ValueError(
+                        f"{screen.title} clean plate does not match panorama: "
+                        f"{clean.size} != {panorama.size}"
+                    )
             with Image.open(depth_path(screen)) as depth_opened:
                 if depth_opened.size != panorama.size:
                     raise ValueError(
@@ -149,25 +183,32 @@ def write_layers() -> None:
                         f"{depth_opened.size} != {panorama.size}"
                     )
                 masks = depth_masks(depth_opened)
-            previews.append((screen.key, 0, panorama.resize((240, 135))))
+            previews.append((screen.key, 0, clean.resize((240, 135))))
+            composite = clean.convert("RGBA")
             with tempfile.TemporaryDirectory(prefix="antq-loading-", dir=temp_root) as temporary:
                 work = Path(temporary)
-                conversions: list[tuple[Path, Path]] = []
+                conversions: list[tuple[Path, Path, str]] = [
+                    (clean_path(screen), layer_texture(screen, 0), "bc1")
+                ]
                 for index, alpha in enumerate(masks, start=1):
                     plate = render_depth_plate(panorama, alpha)
                     png = work / f"{screen.key}_{index:02d}.png"
                     plate.save(png, optimize=True)
                     target = layer_texture(screen, index)
-                    conversions.append((png, target))
+                    conversions.append((png, target, "bc3"))
+                    composite.alpha_composite(plate)
                     preview = plate.resize((240, 135), Image.Resampling.LANCZOS)
                     previews.append((screen.key, index, preview))
                 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
                     futures = [
-                        executor.submit(convert, png, target, "bc3", mipmaps=True)
-                        for png, target in conversions
+                        executor.submit(convert, png, target, compression, mipmaps=True)
+                        for png, target, compression in conversions
                     ]
                     for future in futures:
                         future.result()
+            composites.append(
+                (screen.key, composite.convert("RGB").resize((480, 270)))
+            )
         for index in range(8):
             texture = layer_texture(screen, index)
             zero, opaque, mean = alpha_stats(texture)
@@ -210,6 +251,24 @@ def write_layers() -> None:
             draw.text((x + 4, y + tile_height + 3), f"{screen.key} / {index:02d}", fill="#eef0e8", font=font)
     LAYER_CONTACT_SHEET.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(LAYER_CONTACT_SHEET, optimize=True)
+
+    composite_canvas = Image.new(
+        "RGB",
+        (4 * 480, 4 * (270 + label)),
+        "#171a1f",
+    )
+    composite_draw = ImageDraw.Draw(composite_canvas)
+    for index, (key, preview) in enumerate(composites):
+        x = (index % 4) * 480
+        y = (index // 4) * (270 + label)
+        composite_canvas.paste(preview, (x, y))
+        composite_draw.text(
+            (x + 4, y + 273),
+            f"{key} / assembled",
+            fill="#eef0e8",
+            font=font,
+        )
+    composite_canvas.save(COMPOSITE_CONTACT_SHEET, optimize=True)
 
 
 def render_contact_sheet() -> None:
@@ -261,8 +320,15 @@ def validate() -> None:
     for screen in SCREENS:
         source, master, texture = ROOT / screen.source, ROOT / screen.master, ROOT / screen.texture
         depth = depth_path(screen)
+        clean = clean_path(screen)
+        clean_source = clean_source_path(screen)
         for path, role in (
-            (source, "source"), (master, "master"), (depth, "depth map"), (texture, "texture"),
+            (source, "source"),
+            (master, "master"),
+            (depth, "depth map"),
+            (texture, "finished-scene texture"),
+            (clean_source, "clean-plate source"),
+            (clean, "clean plate"),
         ):
             if not path.is_file():
                 raise ValueError(f"{screen.title} loading-screen {role} is missing: {path}")
@@ -276,9 +342,15 @@ def validate() -> None:
             if not (np.array_equal(rgb[:, :, 0], rgb[:, :, 1])
                     and np.array_equal(rgb[:, :, 1], rgb[:, :, 2])):
                 raise ValueError(f"{screen.title} depth map is not grayscale: {depth}")
+        with Image.open(clean) as image:
+            if image.format != "PNG" or image.size != DIMENSIONS:
+                raise ValueError(
+                    f"{screen.title} clean plate must be 3840x2160 PNG: {clean}"
+                )
         if identify(texture) != {"format": "DDS", "width": "3840", "height": "2160", "depth": "8", "channels": "srgb  3.0"}:
             raise ValueError(f"{screen.title} loading-screen DDS has unexpected contract: {texture}")
         layer_hashes: set[str] = set()
+        layer_images: list[np.ndarray] = []
         for index in range(8):
             layer = layer_texture(screen, index)
             if not layer.is_file():
@@ -290,11 +362,20 @@ def validate() -> None:
                 raise ValueError(f"{screen.title} loading overlay lost alpha: {layer}")
             zero, opaque, mean = alpha_stats(layer)
             semitransparent = 100.0 - zero - opaque
+            foreground_contract = (
+                10.0 < zero < 75.0
+                and 20.0 < opaque < 90.0
+                and semitransparent < 8.0
+                and 40.0 < mean < 230.0
+            )
+            empty_contract = (
+                zero > 99.99
+                and opaque < 0.01
+                and semitransparent < 0.01
+                and mean < 0.01
+            )
             if index and not (
-                18.0 < zero < 99.0
-                and 1.0 < opaque < 80.0
-                and semitransparent < 12.0
-                and 3.0 < mean < 220.0
+                foreground_contract if index == 1 else empty_contract
             ):
                 raise ValueError(
                     f"{screen.title} layer {index:02d} violates vanilla plate alpha: "
@@ -302,8 +383,31 @@ def validate() -> None:
                     f"semi={semitransparent:.2f}, mean={mean:.2f}"
                 )
             layer_hashes.add(digest(layer))
-        if len(layer_hashes) != 8:
-            raise ValueError(f"{screen.title} loading layers contain opaque duplicates")
+            with Image.open(layer) as opened:
+                layer_images.append(np.asarray(opened.convert("RGBA")))
+        if len(layer_hashes) != 3:
+            raise ValueError(
+                f"{screen.title} loading stack is not clean/foreground/empty"
+            )
+        coverage = np.stack(
+            [image[:, :, 3] > 128 for image in layer_images[1:]],
+            axis=0,
+        ).sum(axis=0)
+        overlap = float((coverage > 1).mean() * 100.0)
+        if overlap > 0.01:
+            raise ValueError(
+                f"{screen.title} loading bands overlap {overlap:.2f}% of pixels"
+            )
+        clean_rgb = layer_images[0][:, :, :3].astype(np.int16)
+        for index, image in enumerate(layer_images[1:], start=1):
+            mask = image[:, :, 3] > 128
+            difference = np.abs(
+                image[:, :, :3].astype(np.int16) - clean_rgb
+            ).mean(axis=2)
+            if mask.any() and float(difference[mask].mean()) < 4.0:
+                raise ValueError(
+                    f"{screen.title} layer {index:02d} duplicates the clean plate"
+                )
     for scene_name, screen_key in SCENE_ASSIGNMENTS.items():
         screen = screens[screen_key]
         for index, target in enumerate(texture_targets(scene_name)):
@@ -311,8 +415,44 @@ def validate() -> None:
                 raise ValueError(f"{scene_name} inherited loading texture is stale: {target}")
     if not CONTACT_SHEET.is_file():
         raise ValueError("loading-screen contact sheet is missing; run tools/m11_loading_screens.py --write")
-    if not LAYER_CONTACT_SHEET.is_file() or not LAYER_LEDGER.is_file():
+    if (
+        not LAYER_CONTACT_SHEET.is_file()
+        or not COMPOSITE_CONTACT_SHEET.is_file()
+        or not LAYER_LEDGER.is_file()
+    ):
         raise ValueError("loading depth-layer review outputs are missing")
+    installed = installed_loading_root()
+    scene_text = (
+        installed / "scenes/00_loading_screens.txt"
+    ).read_text(encoding="utf-8-sig")
+    image_text = (
+        installed / "images/00_loading_screen_rossbach.txt"
+    ).read_text(encoding="utf-8-sig")
+    for index in range(8):
+        reference = (
+            installed
+            / "loading_screen_assets/00/images"
+            / f"loading_screen_rossbach_{index:02d}.dds"
+        )
+        if not reference.is_file():
+            raise ValueError(f"installed loading reference is missing: {reference}")
+        layer = 8 - index
+        image_marker = f"loading_screen_rossbach_layer{layer} ="
+        image_start = image_text.find(image_marker)
+        image_block = (
+            image_text[image_start:image_start + 360]
+            if image_start >= 0
+            else ""
+        )
+        texture = f"loading_screen_rossbach_{index:02d}.dds"
+        scene_binding = (
+            f'list = "loading_screen_rossbach_layer{layer}"\n'
+            f'\t\tpdxmesh = "layer_{layer}_mesh"'
+        )
+        if texture not in image_block or scene_binding not in scene_text:
+            raise ValueError(
+                f"installed _07-near/_00-far binding changed at {texture}"
+            )
 
 
 def main() -> int:
@@ -325,7 +465,7 @@ def main() -> int:
     if args.check or not args.write:
         validate()
     print(
-        f"m11_loading_screens: PASS ({len(SCREENS)} panoramas x 8 true depth layers; "
+        f"m11_loading_screens: PASS ({len(SCREENS)} clean plates + contiguous foreground planes; "
         f"{len(SCENE_ASSIGNMENTS)} selectable scenes VFS-overridden)"
     )
     return 0

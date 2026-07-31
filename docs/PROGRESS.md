@@ -8169,3 +8169,18 @@ reviewed 128px BC7 DDS.
   `6abb1fd47fb2b242ffb75f13a3b248c817e98d50b81a16ac07bf764ff7542aa5`.
 - Reopened loading-screen runtime review after the reported ghosted new-game
   render; menu smoke is not accepted as visual proof.
+
+## 2026-07-31 - Rebuilt loading screens from clean plates
+
+- Verified installed scene order and all eight Rossbach source layers. Vanilla
+  uses an opaque clean `_00` background and distinct `_01`-`_07` elements.
+- Generated 16 clean background plates using the installed eight-layer
+  Rossbach set as structural reference; no sepia/yellow treatment.
+- Rejected nested panorama copies, then rejected 112 disjoint bands after a
+  fresh 8% load exposed animated cracks around buildings.
+- Rebuilt all 128 textures as one clean plate, one contiguous foreground, and
+  six transparent compatibility planes. All 88 selectable paths are covered.
+- Fresh Arikamedu, Ephesus, and Pompeii runs are clean across 8-14% mesh motion.
+  Full validation passes 155/155; paired smoke adds zero new or mod-unique log
+  lines. Fingerprint:
+  `c7fa4f98de1b54000e4ae5dd4b443b98cc9d58cfb39ef92d0cb0aac80a5446f4`.
