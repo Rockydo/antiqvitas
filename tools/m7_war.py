@@ -27,11 +27,20 @@ ARMIES = DATA / "armies.csv"
 FORTS = DATA / "forts.csv"
 DIVERSITY_REPORT = DATA / "DIVERSITY_AUDIT.md"
 AVAILABILITY_REPORT = DATA / "start_force_availability.csv"
+OWNERSHIP_LOCATIONS = ROOT / "docs/world_1ad/ownership_locations.csv"
+LOCATION_TEMPLATES = ROOT / "in_game/map_data/location_templates.txt"
 UNIT_OUTPUT = ROOT / "in_game/common/unit_types/00_antiquitas_m7_units.txt"
 LEVY_OUTPUT = ROOT / "in_game/common/levies"
 ADVANCE_OUTPUT = ROOT / "in_game/common/advances"
 M8_TREE = ADVANCE_OUTPUT / "00_antiquitas_m8_tree.txt"
 LOC_ROOT = ROOT / "main_menu/localization"
+MERCENARY_GUI = ROOT / "in_game/gui/setup_mercenary_requirements.gui"
+MERCENARY_CULTURE_LABEL = (
+    'raw_text = "@culture! [Character.GetCulture.GetNameWithNoTooltip|L]"'
+)
+VANILLA_MERCENARY_AREA_LABEL = (
+    'raw_text = "@area! [Character.GetBirthLocation.GetArea.GetNameWithNoTooltip|L]"'
+)
 
 UNIT_FIELDS = (
     "key", "name", "kind", "copy_from", "status", "age", "tags", "gfx_tags",
@@ -186,6 +195,24 @@ def locations() -> set[str]:
 
 def available_to(unit: Unit, tag: str) -> bool:
     return UNIVERSAL_TAG in unit.tags or tag in unit.tags
+
+
+def coastal_owned_locations() -> dict[str, tuple[str, ...]]:
+    """Return direct-start owners of locations with positive installed harbor suitability."""
+    harbor_value = re.compile(
+        r"^([^\s=]+)\s*=.*\bnatural_harbor_suitability\s*=\s*([0-9]+(?:\.[0-9]+)?)"
+    )
+    harbors: set[str] = set()
+    for line in LOCATION_TEMPLATES.read_text(encoding="utf-8-sig").splitlines():
+        match = harbor_value.search(line)
+        if match and float(match.group(2)) > 0:
+            harbors.add(match.group(1))
+    by_tag: dict[str, list[str]] = {}
+    with OWNERSHIP_LOCATIONS.open(encoding="utf-8-sig", newline="") as handle:
+        for row in csv.DictReader(handle):
+            if row["location"] in harbors:
+                by_tag.setdefault(row["tag"], []).append(row["location"])
+    return {tag: tuple(sorted(set(locations))) for tag, locations in by_tag.items()}
 
 
 def load_units() -> tuple[Unit, ...]:
@@ -362,7 +389,10 @@ def unit_script(units: tuple[Unit, ...]) -> str:
             lines.extend(("\tbuildable = no", "\tlevy = yes"))
         else:
             lines.extend((
-                "\tbuildable = no",
+                # Installed unit definitions keep mercenary-capable types
+                # recruitable. `buildable = no` suppresses their computed
+                # location pools entirely and produces a live 0/0 panel.
+                "\tbuildable = yes",
                 f"\tmercenaries_per_location = {{ pop_type = peasants multiply = {MERCENARY_POP_MULTIPLIER} }}",
                 f"\tmercenaries_per_location = {{ pop_type = tribesmen multiply = {MERCENARY_POP_MULTIPLIER} }}",
             ))
@@ -443,10 +473,12 @@ def diversity_report(units: tuple[Unit, ...]) -> str:
 def force_availability(units: tuple[Unit, ...]) -> str:
     with (ROOT / "docs/world_1ad/polities.csv").open(encoding="utf-8-sig", newline="") as handle:
         roster = list(csv.DictReader(handle))
+    coastal = coastal_owned_locations()
     fields = (
         "tag", "name", "region", "regular_land", "levy_land",
-        "mercenary_land", "regular_navy", "land_floor", "levy_floor",
-        "mercenary_floor",
+        "mercenary_land", "regular_navy", "coastal_locations", "patrol_navy",
+        "transport_navy", "land_floor", "levy_floor", "mercenary_floor",
+        "naval_patrol_floor", "naval_transport_floor",
     )
     output = io.StringIO(newline="")
     writer = csv.DictWriter(output, fieldnames=fields, lineterminator="\n")
@@ -459,10 +491,29 @@ def force_availability(units: tuple[Unit, ...]) -> str:
         levy = sorted(unit.key for unit in visible if unit.kind == "land" and unit.status == "levy")
         mercenary = sorted(unit.key for unit in visible if unit.kind == "land" and unit.status == "mercenary")
         navy = sorted(unit.key for unit in visible if unit.kind == "navy" and unit.status == "regular")
-        floors = (len(regular) >= 4, len(levy) >= 2, len(mercenary) >= 2)
+        patrol = sorted(
+            unit.key for unit in visible
+            if unit.kind == "navy" and unit.status == "regular"
+            and unit.copy_from != "n_age_1_traditions_transport"
+        )
+        transport = sorted(
+            unit.key for unit in visible
+            if unit.kind == "navy" and unit.status == "regular"
+            and unit.copy_from == "n_age_1_traditions_transport"
+        )
+        coastal_locations = coastal.get(tag, ())
+        floors = (
+            len(regular) >= 4,
+            len(levy) >= 2,
+            len(mercenary) >= 2,
+            not coastal_locations or bool(patrol),
+            not coastal_locations or bool(transport),
+        )
         if not all(floors):
             failures.append(
-                f"{tag} has regular={len(regular)}, levy={len(levy)}, mercenary={len(mercenary)}"
+                f"{tag} has regular={len(regular)}, levy={len(levy)}, "
+                f"mercenary={len(mercenary)}, coastal={len(coastal_locations)}, "
+                f"patrol={len(patrol)}, transport={len(transport)}"
             )
         writer.writerow({
             "tag": tag,
@@ -472,9 +523,14 @@ def force_availability(units: tuple[Unit, ...]) -> str:
             "levy_land": ";".join(levy),
             "mercenary_land": ";".join(mercenary),
             "regular_navy": ";".join(navy),
+            "coastal_locations": ";".join(coastal_locations),
+            "patrol_navy": ";".join(patrol),
+            "transport_navy": ";".join(transport),
             "land_floor": "pass" if floors[0] else "fail",
             "levy_floor": "pass" if floors[1] else "fail",
             "mercenary_floor": "pass" if floors[2] else "fail",
+            "naval_patrol_floor": "pass" if floors[3] else "fail",
+            "naval_transport_floor": "pass" if floors[4] else "fail",
         })
     if failures:
         raise ValueError("roster-wide force floor failed: " + "; ".join(failures[:12]))
@@ -582,6 +638,42 @@ def check(units: tuple[Unit, ...]) -> bool:
     for key in sorted(forbidden_levy_units):
         if re.search(rf"\b{re.escape(key)}\b", levy_union):
             failures.append(f"vanilla levy unit survived: {key}")
+    if not MERCENARY_GUI.is_file():
+        failures.append("missing mounted mercenary setup UI override")
+    else:
+        gui = MERCENARY_GUI.read_text(encoding="utf-8-sig")
+        if gui.count(MERCENARY_CULTURE_LABEL) != 1:
+            failures.append("mercenary captain origin is not rendered as ancient culture")
+        if VANILLA_MERCENARY_AREA_LABEL in gui:
+            failures.append("medieval area label survived in mercenary captain rows")
+        config = json.loads(
+            (ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig")
+        )
+        installed_gui = (
+            Path(config["game_dir"])
+            / "game/in_game/gui/setup_mercenary_requirements.gui"
+        )
+        if not installed_gui.is_file():
+            failures.append("installed mercenary setup UI is missing")
+        else:
+            mounted_lines = gui.splitlines()
+            installed_lines = installed_gui.read_text(
+                encoding="utf-8-sig"
+            ).splitlines()
+            if len(mounted_lines) != len(installed_lines):
+                failures.append("mercenary UI override does not match installed structure")
+            else:
+                changed = [
+                    (base.strip(), mod.strip())
+                    for base, mod in zip(installed_lines, mounted_lines)
+                    if base != mod
+                ]
+                if changed != [
+                    (VANILLA_MERCENARY_AREA_LABEL, MERCENARY_CULTURE_LABEL)
+                ]:
+                    failures.append(
+                        "mercenary UI override changes more than the captain origin label"
+                    )
     if failures:
         print("m7_war: FAIL")
         print("\n".join(f"  - {failure}" for failure in failures))

@@ -4301,3 +4301,23 @@ are self-contained. Reject duplicate tags and equal-priority continental pairs.
 Use installed EU5 goods as style references, generate exactly four commodities
 per sheet, and remove a flat chroma field locally. Reject mean alpha >=0.67 or
 opaque radial rings; dark-blue still lifes remain valid only for wide event art.
+
+## 2026-07-31 - Loading layers are nested opaque depth cutouts
+
+Match the installed scene contract: one opaque base plus seven increasingly
+near depth masks. Keep mask interiors opaque and feather only a narrow outer
+edge. Reject broad semitransparent plates, which create the observed slabs and
+double-exposure seams.
+
+## 2026-07-31 - Mercenary origin labels use culture
+
+The installed captain panel derives its heading from a medieval area name.
+Override only that text expression and use the captain's culture, preserving
+all engine selection logic while removing anachronistic recruitment geography.
+
+## 2026-07-31 - Failed law awards remain absent from setup
+
+EU5 1.3.11 strips selected custom laws even when their holder is a universal,
+depth-zero, otherwise proven advance. Do not emit red or silently discarded
+law selections. Keep sourced profile packages isolated and resume only after a
+new locally verified award contract.

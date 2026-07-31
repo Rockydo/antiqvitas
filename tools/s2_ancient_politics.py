@@ -1420,15 +1420,31 @@ def localization(language: str) -> str:
         for motion in profile.motions:
             issue = f"antq_issue_{profile.slug}_{motion.slug}"
             agenda = f"antq_agenda_{profile.slug}_{motion.slug}"
+            issue_modifier = f"{issue}_outcome"
+            agenda_modifier = f"{agenda}_concession"
+            settlement_name = (
+                motion.issue_name
+                if motion.issue_name.lower().endswith(" settlement")
+                else f"{motion.issue_name} Settlement"
+            )
+            concession_name = (
+                motion.agenda_name
+                if motion.agenda_name.lower().endswith(" concession")
+                else f"{motion.agenda_name} Concession"
+            )
             lines.extend((
                 f' {issue}: "{q(motion.issue_name)}"',
                 f' {issue}_desc: "{q(motion.issue_description)}"',
-                f' {issue}_outcome: "{q(motion.issue_name)} Settlement"',
+                f' {issue_modifier}: "{q(settlement_name)}"',
                 f' {issue}_outcome_desc: "The council has enacted its reviewed settlement for a limited term."',
+                f' STATIC_MODIFIER_NAME_{issue_modifier}: "${issue_modifier}$"',
+                f' STATIC_MODIFIER_DESC_{issue_modifier}: "${issue_modifier}_desc$"',
                 f' {agenda}: "{q(motion.agenda_name)}"',
                 f' {agenda}_desc: "{q(motion.agenda_description)}"',
-                f' {agenda}_concession: "{q(motion.agenda_name)} Concession"',
+                f' {agenda_modifier}: "{q(concession_name)}"',
                 f" {agenda}_concession_desc: \"The court or council has accepted this interest group's bounded request.\"",
+                f' STATIC_MODIFIER_NAME_{agenda_modifier}: "${agenda_modifier}$"',
+                f' STATIC_MODIFIER_DESC_{agenda_modifier}: "${agenda_modifier}_desc$"',
             ))
     return "\n".join(lines) + "\n"
 

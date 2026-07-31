@@ -112,6 +112,34 @@ SHEETS = (
         "antq_nile_bow_company", "antq_sahel_javelin_company",
         "antq_mesoamerican_atlatl_company", "antq_andean_sling_company",
     )),
+    Sheet("unit_sheet_22_britain_hibernia_navy.png", (
+        "antq_british_coastal_warboat", "antq_british_hide_transport",
+        "antq_hibernian_war_curragh", "antq_hibernian_cargo_curragh",
+    )),
+    Sheet("unit_sheet_23_north_sea_baltic_navy.png", (
+        "antq_germanic_north_sea_patrol", "antq_germanic_north_sea_transport",
+        "antq_baltic_sewn_plank_patrol", "antq_baltic_sewn_plank_transport",
+    )),
+    Sheet("unit_sheet_24_finnic_pontic_navy.png", (
+        "antq_finnic_coastal_dugout_patrol", "antq_finnic_coastal_transport",
+        "antq_pontic_monoxylon_patrol", "antq_pontic_river_sea_transport",
+    )),
+    Sheet("unit_sheet_25_korean_philippine_navy.png", (
+        "antq_byeonhan_coastal_patrol", "antq_byeonhan_cargo_ferry",
+        "antq_philippine_outrigger_patrol", "antq_philippine_outrigger_transport",
+    )),
+    Sheet("unit_sheet_26_sulawesi_kwale_navy.png", (
+        "antq_sulawesi_lashed_lug_patrol", "antq_sulawesi_outrigger_transport",
+        "antq_kwale_coastal_patrol", "antq_kwale_sewn_plank_transport",
+    )),
+    Sheet("unit_sheet_27_andes_micronesia_navy.png", (
+        "antq_andean_balsa_patrol", "antq_andean_balsa_transport",
+        "antq_micronesian_outrigger_patrol", "antq_micronesian_double_outrigger_transport",
+    )),
+    Sheet("unit_sheet_28_caribbean_california_navy.png", (
+        "antq_caribbean_dugout_patrol", "antq_caribbean_dugout_transport",
+        "antq_californian_coastal_canoe_patrol", "antq_californian_tule_transport",
+    )),
 )
 
 CATEGORY_SUFFIXES = (
@@ -318,8 +346,8 @@ def validate() -> bool:
             failures.append("M7 art roster differs from active unit-quarantine definitions")
         if set(index) != active:
             failures.append("four-up unit-art mapping does not exactly cover active ancient units")
-        if len(SHEETS) != 21 or sum(len(sheet.keys) for sheet in SHEETS) != 84:
-            failures.append("unit-art source contract is not 21 sheets / 84 icons")
+        if len(SHEETS) != 28 or sum(len(sheet.keys) for sheet in SHEETS) != 112:
+            failures.append("unit-art source contract is not 28 sheets / 112 icons")
         for sheet in SHEETS:
             path = SOURCE_DIR / sheet.filename
             if not path.is_file():

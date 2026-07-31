@@ -780,7 +780,7 @@ antq_balearic_slingers = {
 	is_special = yes
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -803,7 +803,7 @@ antq_cretan_archers = {
 	is_special = yes
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -827,7 +827,7 @@ antq_germanic_bodyguards = {
 	is_special = yes
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -854,7 +854,7 @@ antq_saka_horse = {
 	is_special = yes
 	copy_from = a_age_1_traditions_light_cavalry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -881,7 +881,7 @@ antq_galatian_swordsmen = {
 	is_special = yes
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -908,7 +908,7 @@ antq_thracian_peltasts = {
 	is_special = yes
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -935,7 +935,7 @@ antq_numidian_horse_company = {
 	is_special = yes
 	copy_from = a_age_1_traditions_light_cavalry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -1038,6 +1038,9 @@ antq_merchant_roundship = {
 			has_or_had_tag = XAR
 			has_or_had_tag = SAT
 			has_or_had_tag = XBB
+			has_or_had_tag = XAF
+			has_or_had_tag = CLZ
+			has_or_had_tag = OMN
 		}
 	}
 	# P14;CAH-XI; Ancient merchant carrier adapter; it is not an ocean-crossing early-modern class
@@ -1300,7 +1303,7 @@ antq_syrian_archers = {
 	is_special = yes
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -1324,7 +1327,7 @@ antq_iberian_swordsmen = {
 	is_special = yes
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -1347,7 +1350,7 @@ antq_dacian_falxmen = {
 	is_special = yes
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -1371,7 +1374,7 @@ antq_armenian_horse = {
 	is_special = yes
 	copy_from = a_age_1_traditions_light_cavalry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -1395,7 +1398,7 @@ antq_cilician_marines = {
 	is_special = yes
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -1899,7 +1902,7 @@ antq_frontier_spear_company = {
 	is_special = yes
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -1919,7 +1922,7 @@ antq_caravan_guard_company = {
 	is_special = yes
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -1939,7 +1942,7 @@ antq_han_frontier_crossbow_company = {
 	is_special = yes
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -1961,7 +1964,7 @@ antq_yellow_river_escort_company = {
 	is_special = yes
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -1983,7 +1986,7 @@ antq_indian_longbow_company = {
 	is_special = yes
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -2059,7 +2062,7 @@ antq_deccan_spear_company = {
 	is_special = yes
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -2135,7 +2138,7 @@ antq_nile_bow_company = {
 	is_special = yes
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -2201,7 +2204,7 @@ antq_sahel_javelin_company = {
 	is_special = yes
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -2267,7 +2270,7 @@ antq_mesoamerican_atlatl_company = {
 	is_special = yes
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -2347,7 +2350,7 @@ antq_andean_sling_company = {
 	is_special = yes
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
-	buildable = no
+	buildable = yes
 	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
 	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
 	age = age_1_traditions
@@ -2421,4 +2424,606 @@ antq_andean_sling_company = {
 	}
 	gfx_tags = { archer_tag light_tag }
 	# P8.10;P14; An Andean highland sling-service adapter without projecting later Inca state uniforms ranks or imperial recruitment systems.
+}
+
+antq_british_coastal_warboat = {
+	is_special = yes
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.45
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = XCB
+			has_or_had_tag = DUM
+			has_or_had_tag = XES
+			has_or_had_tag = XET
+			has_or_had_tag = PBI
+			has_or_had_tag = CRV
+			has_or_had_tag = XEX
+			has_or_had_tag = VOT
+			has_or_had_tag = XEZ
+			has_or_had_tag = XFA
+			has_or_had_tag = VCN
+			has_or_had_tag = XFB
+			has_or_had_tag = EPD
+			has_or_had_tag = VAC
+			has_or_had_tag = DCT
+			has_or_had_tag = CRE
+			has_or_had_tag = XFD
+			has_or_had_tag = LGB
+			has_or_had_tag = XFE
+			has_or_had_tag = NCR
+			has_or_had_tag = CAL
+		}
+	}
+	# P8.7;P14;CAH-XI; A bounded coastal patrol adapter for British harbor polities, not a reconstructed standardized state fleet.
+}
+
+antq_british_hide_transport = {
+	is_special = yes
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.20
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = XCB
+			has_or_had_tag = DUM
+			has_or_had_tag = XES
+			has_or_had_tag = XET
+			has_or_had_tag = PBI
+			has_or_had_tag = CRV
+			has_or_had_tag = XEX
+			has_or_had_tag = VOT
+			has_or_had_tag = XEZ
+			has_or_had_tag = XFA
+			has_or_had_tag = VCN
+			has_or_had_tag = XFB
+			has_or_had_tag = EPD
+			has_or_had_tag = VAC
+			has_or_had_tag = DCT
+			has_or_had_tag = CRE
+			has_or_had_tag = XFD
+			has_or_had_tag = LGB
+			has_or_had_tag = XFE
+			has_or_had_tag = NCR
+			has_or_had_tag = CAL
+		}
+	}
+	# P8.7;P14;CAH-XI; A bounded hide-covered coastal carrier for British harbor polities, not a reconstructed standardized state fleet.
+}
+
+antq_hibernian_war_curragh = {
+	is_special = yes
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.45
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = VNI
+			has_or_had_tag = RHB
+			has_or_had_tag = XFF
+			has_or_had_tag = AUT
+			has_or_had_tag = IVN
+			has_or_had_tag = USD
+			has_or_had_tag = IBG
+			has_or_had_tag = XFI
+			has_or_had_tag = CCI
+		}
+	}
+	# P8.7;P14;CAH-XI; A bounded Hibernian coastal patrol role, not a reconstructed standardized state fleet or a projection of later raiding institutions.
+}
+
+antq_hibernian_cargo_curragh = {
+	is_special = yes
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.20
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = VNI
+			has_or_had_tag = RHB
+			has_or_had_tag = XFF
+			has_or_had_tag = AUT
+			has_or_had_tag = IVN
+			has_or_had_tag = USD
+			has_or_had_tag = IBG
+			has_or_had_tag = XFI
+			has_or_had_tag = CCI
+		}
+	}
+	# P8.7;P14;CAH-XI; A bounded Hibernian coastal carrier role, not a reconstructed standardized state fleet or a projection of later raiding institutions.
+}
+
+antq_germanic_north_sea_patrol = {
+	is_special = yes
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.45
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = GUT
+			has_or_had_tag = XDV
+		}
+	}
+	# P8.7;P14;CAH-XI;TAC-GER; A bounded North Sea patrol adapter for harbor-owning Germanic polities, not a reconstructed standardized state fleet.
+}
+
+antq_germanic_north_sea_transport = {
+	is_special = yes
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.20
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = GUT
+			has_or_had_tag = XDV
+		}
+	}
+	# P8.7;P14;CAH-XI;TAC-GER; A bounded North Sea carrier adapter for harbor-owning Germanic polities, not a reconstructed standardized state fleet.
+}
+
+antq_baltic_sewn_plank_patrol = {
+	is_special = yes
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.45
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = AES
+		}
+	}
+	# P8.7;P14;CAH-XI;VU-BRUSH; A bounded sewn-plank Baltic patrol adapter for the Aestian coast, not a reconstructed standardized state fleet.
+}
+
+antq_baltic_sewn_plank_transport = {
+	is_special = yes
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.20
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = AES
+		}
+	}
+	# P8.7;P14;CAH-XI;VU-BRUSH; A bounded sewn-plank Baltic carrier adapter for the Aestian coast, not a reconstructed standardized state fleet.
+}
+
+antq_finnic_coastal_dugout_patrol = {
+	is_special = yes
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.45
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = XBU
+		}
+	}
+	# P8.7;P14;CAH-XI; A bounded archipelago and coastal patrol adapter for Finnic harbor communities, not a reconstructed standardized state fleet.
+}
+
+antq_finnic_coastal_transport = {
+	is_special = yes
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.20
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = XBU
+		}
+	}
+	# P8.7;P14;CAH-XI; A bounded archipelago and coastal carrier adapter for Finnic harbor communities, not a reconstructed standardized state fleet.
+}
+
+antq_pontic_monoxylon_patrol = {
+	is_special = yes
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.45
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = ROX
+		}
+	}
+	# P8.2;P14;CAH-XI; A bounded river-sea patrol adapter for the lower Pontic coast, not a reconstructed standardized state fleet.
+}
+
+antq_pontic_river_sea_transport = {
+	is_special = yes
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.20
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = ROX
+		}
+	}
+	# P8.2;P14;CAH-XI; A bounded river-sea carrier adapter for the lower Pontic coast, not a reconstructed standardized state fleet.
+}
+
+antq_byeonhan_coastal_patrol = {
+	is_special = yes
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.45
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = BYE
+		}
+	}
+	# P8.3;P14;CAH-XI; A bounded southern Korean coastal patrol adapter, not a reconstructed standardized state fleet.
+}
+
+antq_byeonhan_cargo_ferry = {
+	is_special = yes
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.20
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = BYE
+		}
+	}
+	# P8.3;P14;CAH-XI; A bounded southern Korean coastal carrier adapter, not a reconstructed standardized state fleet.
+}
+
+antq_philippine_outrigger_patrol = {
+	is_special = yes
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.50
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = XGX
+			has_or_had_tag = BCP
+			has_or_had_tag = MTT
+		}
+	}
+	# P8.9;P14;CAH-XI;NMP-PH-METAL; A bounded Philippine inter-island patrol adapter using locally plausible outrigger craft, not a reconstructed standardized state fleet.
+}
+
+antq_philippine_outrigger_transport = {
+	is_special = yes
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.22
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = XGX
+			has_or_had_tag = BCP
+			has_or_had_tag = MTT
+		}
+	}
+	# P8.9;P14;CAH-XI;NMP-PH-METAL; A bounded Philippine inter-island carrier adapter using locally plausible outrigger craft, not a reconstructed standardized state fleet.
+}
+
+antq_sulawesi_lashed_lug_patrol = {
+	is_special = yes
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.50
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = BTM
+			has_or_had_tag = MKS
+			has_or_had_tag = MNH
+		}
+	}
+	# P8.9;P14;CAH-XI;ANU-SULAWESI; A bounded Sulawesi inter-island patrol adapter using lashed-lug construction, not a reconstructed standardized state fleet.
+}
+
+antq_sulawesi_outrigger_transport = {
+	is_special = yes
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.22
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = BTM
+			has_or_had_tag = MKS
+			has_or_had_tag = MNH
+		}
+	}
+	# P8.9;P14;CAH-XI;ANU-SULAWESI; A bounded Sulawesi inter-island carrier adapter using outrigger craft, not a reconstructed standardized state fleet.
+}
+
+antq_kwale_coastal_patrol = {
+	is_special = yes
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.45
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = KWL
+		}
+	}
+	# P8.5;P14;CAH-XI; A bounded East African coastal patrol adapter for Kwale communities, not a reconstructed standardized state fleet.
+}
+
+antq_kwale_sewn_plank_transport = {
+	is_special = yes
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.20
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = KWL
+		}
+	}
+	# P8.5;P14;CAH-XI; A bounded East African sewn-plank carrier adapter for Kwale communities, not a reconstructed standardized state fleet.
+}
+
+antq_andean_balsa_patrol = {
+	is_special = yes
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.40
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = NAZ
+			has_or_had_tag = XCW
+		}
+	}
+	# P8.10;P14;CAH-XI; A bounded Pacific balsa-raft patrol adapter for coastal Andean polities, not a reconstructed standardized state fleet.
+}
+
+antq_andean_balsa_transport = {
+	is_special = yes
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.20
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = NAZ
+			has_or_had_tag = XCW
+		}
+	}
+	# P8.10;P14;CAH-XI; A bounded Pacific balsa-raft carrier adapter for coastal Andean polities, not a reconstructed standardized state fleet.
+}
+
+antq_micronesian_outrigger_patrol = {
+	is_special = yes
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.55
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = EMR
+			has_or_had_tag = WCR
+		}
+	}
+	# P8.9;P14;CAH-XI;ANU-MIC; A bounded Micronesian inter-island patrol adapter, not a reconstructed standardized state fleet.
+}
+
+antq_micronesian_double_outrigger_transport = {
+	is_special = yes
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.22
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = EMR
+			has_or_had_tag = WCR
+		}
+	}
+	# P8.9;P14;CAH-XI;ANU-MIC; A bounded Micronesian inter-island carrier adapter, not a reconstructed standardized state fleet.
+}
+
+antq_caribbean_dugout_patrol = {
+	is_special = yes
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.50
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = WIC
+		}
+	}
+	# P8.10;P14;CAH-XI; A bounded Windward Caribbean dugout patrol adapter, not a reconstructed standardized state fleet.
+}
+
+antq_caribbean_dugout_transport = {
+	is_special = yes
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.20
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = WIC
+		}
+	}
+	# P8.10;P14;CAH-XI; A bounded Windward Caribbean dugout carrier adapter, not a reconstructed standardized state fleet.
+}
+
+antq_californian_coastal_canoe_patrol = {
+	is_special = yes
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.45
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = CCF
+		}
+	}
+	# P8.10;P14;CAH-XI;NOAA-MONTEREY; A bounded central Californian coastal patrol adapter, not a reconstructed standardized state fleet.
+}
+
+antq_californian_tule_transport = {
+	is_special = yes
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.18
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = CCF
+		}
+	}
+	# P8.10;P14;CAH-XI;NOAA-MONTEREY; A bounded central Californian tule carrier adapter, not a reconstructed standardized state fleet.
 }

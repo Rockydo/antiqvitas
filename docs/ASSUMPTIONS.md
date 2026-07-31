@@ -5910,3 +5910,10 @@ regional and ecological limits.
 Settlement, fort, port, workshop, wall, and cult cutouts represent attested
 regional material traditions around AD 1, not every location exactly. Sources:
 `P8.1`-`P8.10`; `P20`; regional profiles. [secure typology; contested local form]
+
+## 2026-07-31 - Regional craft are capability classes
+
+Patrol and transport pairs represent locally plausible river, lake, estuary,
+coastal, and open-sea craft families, not named standing fleets or exact hull
+inventories. Harbor ownership controls opening availability. Sources:
+`P8.1`-`P8.10`; `P14`; `CAH-XI`; `PER`. [secure capability; contested local hull]

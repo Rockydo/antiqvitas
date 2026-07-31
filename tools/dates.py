@@ -239,6 +239,11 @@ def m2_ages(timeline: dict[str, AntqDate], auc: bool = False) -> str:
                 "\tknown_goods_demand_threshold = 100",
                 "\tburgher_max_trade_range = 600",
                 "\tmonths_for_exploration_spread = 1800",
+                # The installed first playable age seeds location-derived
+                # mercenary pools at 0.25. Omitting this field produces a live
+                # 0/0 mercenary manager even when unit types define positive
+                # `mercenaries_per_location`.
+                "\tmercenaries = 0.25",
                 f"\tunique = {{ {ability} = {value} }}",
                 "\tefficiency = 1.0",
                 f"\tvictory_card = {victory_card}",

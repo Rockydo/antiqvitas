@@ -704,6 +704,7 @@ ADVANCE_PROFILES = {
 S2_ESTATE_PRIVILEGES = ROOT / "docs/m6/estate_order_privileges.csv"
 S2_ALTERNATIVE_REFORMS = ROOT / "docs/m6/alternative_reform_paths.csv"
 S2_ANCIENT_LAWS = ROOT / "docs/m6/ancient_law_options.csv"
+S2_ANCIENT_LAW_PROFILES = ROOT / "docs/m6/ancient_law_profiles.csv"
 S2_ESTATE_ADVANCE_PROFILES: dict[str, tuple[str, ...]] = {
     "roman": ("roman_italic",),
     "late_roman": ("roman_italic",),
@@ -1495,6 +1496,7 @@ def advance_records() -> tuple[Advance, ...]:
                         node_description(theme, track, node_index),
                         theme.source,
                     ))
+    records.extend(law_foundation_records())
     return tuple(records)
 
 
@@ -1651,6 +1653,125 @@ def opening_content_profiles(
     return reforms, privileges
 
 
+def law_profile_catalog() -> dict[str, dict[str, str]]:
+    """Return one reviewed identity row per exact S2 law profile."""
+    catalog: dict[str, dict[str, str]] = {}
+    for row in csv_rows(S2_ANCIENT_LAW_PROFILES):
+        catalog.setdefault(row["profile"], row)
+    if set(catalog) != set(LAW_ADVANCE_PROFILES):
+        raise ValueError("S2 law-profile catalog no longer matches the legal registry")
+    return catalog
+
+
+def opening_law_exact_profiles() -> dict[str, set[str]]:
+    """Map every custom AD 1 law to exact legal profiles, not broad cultures."""
+    tag_law_profile = {
+        row["tag"]: row["profile"] for row in csv_rows(S2_ANCIENT_LAW_PROFILES)
+    }
+    laws: dict[str, set[str]] = defaultdict(set)
+    for row in csv_rows(M6_GOVERNMENTS):
+        tag = row["design_tag"]
+        profile = tag_law_profile.get(tag)
+        if profile is None:
+            continue
+        for assignment in row["laws"].split("|"):
+            group, marker, _policy = assignment.partition("=")
+            if marker and group.startswith("antq_"):
+                laws[group].add(profile)
+    for row in csv_rows(M6_REGIONAL_GOVERNMENTS):
+        assigned = [
+            assignment.partition("=")[0]
+            for assignment in row["laws"].split("|")
+            if "=" in assignment
+        ]
+        for tag in row["tags"].split("|"):
+            profile = tag_law_profile.get(tag)
+            if profile is None:
+                continue
+            for group in assigned:
+                if group.startswith("antq_"):
+                    laws[group].add(profile)
+    for row in csv_rows(S2_ANCIENT_LAWS):
+        laws[row["law"]].add(row["profile"])
+    return laws
+
+
+def law_unlock_packages() -> dict[str, tuple[tuple[str, str], ...]]:
+    """Pack exact-profile opening laws into <=8-entry foundation advances."""
+    by_profile: dict[str, set[str]] = defaultdict(set)
+    for law, profiles in opening_law_exact_profiles().items():
+        for profile in profiles:
+            by_profile[profile].add(law)
+    packages: dict[str, tuple[tuple[str, str], ...]] = {}
+    for profile, laws in sorted(by_profile.items()):
+        ordered = sorted(laws)
+        for offset in range(0, len(ordered), 8):
+            ordinal = offset // 8 + 1
+            key = f"antq_{profile}_law_foundations_{ordinal}"
+            packages[key] = tuple(
+                ("unlock_law", law) for law in ordered[offset:offset + 8]
+            )
+    return packages
+
+
+def ensure_law_advance_profiles() -> None:
+    """Register exact tag-gated profile identities used only by law holders."""
+    for profile, row in law_profile_catalog().items():
+        key = f"law_{profile}"
+        ADVANCE_PROFILES.setdefault(
+            key,
+            AdvanceProfile(
+                key,
+                row["profile_name"],
+                f"Opening legal groups restricted to the {row['profile_name']} profile.",
+                (),
+                (),
+                row["source"],
+            ),
+        )
+
+
+def law_foundation_records() -> tuple[Advance, ...]:
+    """Create researched Age-I holders without polluting broad culture paths."""
+    ensure_law_advance_profiles()
+    catalog = law_profile_catalog()
+    records: list[Advance] = []
+    for key in law_unlock_packages():
+        profile = key.removeprefix("antq_").split("_law_foundations_", 1)[0]
+        ordinal = int(key.rsplit("_", 1)[1])
+        row = catalog[profile]
+        name = f"{row['profile_name']} Legal Foundations {ordinal}"
+        records.append(Advance(
+            key,
+            name,
+            AGE_KEYS[0],
+            0,
+            0,
+            "statecraft",
+            f"law_{profile}",
+            (),
+            (("country_cabinet_efficiency", "0.002"),),
+            (
+                f"Preserves the opening {row['profile_name']} law groups as "
+                "already-held institutions without exposing other legal systems."
+            ),
+            row["source"],
+        ))
+    return tuple(records)
+
+
+def starting_content_keys() -> tuple[set[str], set[str]]:
+    """Return only content actually active in the AD 1 country manager."""
+    reforms: set[str] = set()
+    privileges: set[str] = set()
+    for row in csv_rows(M6_GOVERNMENTS):
+        reforms.add(row["reform"])
+        privileges.update(row["privileges"].split("|"))
+    for row in csv_rows(M6_REGIONAL_GOVERNMENTS):
+        privileges.update(row["privileges"].split("|"))
+    return reforms, privileges
+
+
 def unit_content_profiles(
     tag_profiles: dict[str, tuple[str, ...]],
 ) -> dict[str, set[str]]:
@@ -1778,31 +1899,96 @@ def content_unlocks(records: tuple[Advance, ...]) -> dict[str, tuple[tuple[str, 
     result: dict[str, list[tuple[str, str]]] = defaultdict(list)
     for key, entries in START_UNLOCKS.items():
         result[key].extend(entries)
+    for key, entries in law_unlock_packages().items():
+        result[key].extend(entries)
 
     tag_profiles, _tag_cultures, _culture_groups = research_profile_maps()
     reform_profiles, core_privilege_profiles = opening_content_profiles(tag_profiles)
     unit_profiles = unit_content_profiles(tag_profiles)
     building_profiles = building_content_profiles(tag_profiles)
 
+    # Reviewed opening forms named by the cross-system inventory remain visible
+    # in Age I. Distribute them across their actual research profiles instead of
+    # restoring the former universal root node with an enormous foreign tooltip.
+    opening_reforms = set(starting_content_keys()[0])
+    inventoried_reforms = {
+        target
+        for entries in CONTENT_UNLOCKS.values()
+        for field, target in entries
+        if field == "unlock_government_reform"
+    }
+    exact_opening_profiles = {
+        reform: S2_ESTATE_ADVANCE_PROFILES[legal_profile]
+        for reform, legal_profile in (
+            ("antq_trinovantian_coin_kingship", "trinovantian"),
+            ("antq_brigantian_hillfort_confederacy", "brigantian"),
+            ("antq_durotrigian_hillfort_coin_order", "durotrigian"),
+            ("antq_ivernian_regional_assembly", "ivernian"),
+            ("antq_aestian_amber_coast_order", "aestian"),
+            ("antq_frisian_terp_community_order", "frisian"),
+            ("antq_dacian_divided_kingships", "dacian"),
+            ("antq_garamantian_oasis_state", "garamantian"),
+            ("antq_cheruscan_kindred_assembly", "cheruscan"),
+            ("antq_chattian_host_order", "chattian"),
+            ("antq_batavian_rhine_compact", "batavian"),
+            ("antq_semnonian_sacred_confederacy", "semnonian"),
+        )
+    }
+    for reform in sorted(opening_reforms & inventoried_reforms):
+        profiles = exact_opening_profiles.get(reform, reform_profiles.get(reform, set()))
+        if not profiles:
+            raise ValueError(f"opening reform {reform} has no research profile")
+        add_profiled_unlock(
+            records,
+            result,
+            "unlock_government_reform",
+            reform,
+            profiles,
+            age_index=0,
+            track="statecraft",
+            ceiling=8,
+        )
+
+    # Opening grants pass exact setup potentials and do not need duplicate
+    # advance entries. Only later and unassigned privileges belong in the tree.
+    #
+    # Law groups are different: the engine removes or hides a setup law unless
+    # a researched advance explicitly unlocks its group. Exact-profile,
+    # depth-zero legal foundations carry those groups above, capped at eight
+    # per node so broad culture paths never advertise foreign constitutions.
+
+    # Dated constitutional paths are likewise fixed to one profile and age.
+    # Place them before flexible unit, law, and workshop packages.
+    with S2_ALTERNATIVE_REFORMS.open(encoding="utf-8-sig", newline="") as handle:
+        reform_rows = list(csv.DictReader(handle))
+    for row in reform_rows:
+        profile = (row.get("profile") or "").strip()
+        reform = (row.get("reform") or "").strip()
+        age_index_text = (row.get("age_index") or "0").strip()
+        if profile not in S2_ESTATE_ADVANCE_PROFILES or not reform.startswith("antq_"):
+            raise ValueError(f"invalid alternative reform research profile: {profile}/{reform}")
+        try:
+            age_index = int(age_index_text)
+        except ValueError as exc:
+            raise ValueError(
+                f"invalid reform age index: {profile}/{reform}/{age_index_text}"
+            ) from exc
+        if not 0 <= age_index < len(AGE_KEYS):
+            raise ValueError(
+                f"out-of-range reform age index: {profile}/{reform}/{age_index}"
+            )
+        add_profiled_unlock(
+            records, result, "unlock_government_reform", reform,
+            S2_ESTATE_ADVANCE_PROFILES[profile], age_index=age_index,
+        )
+
     # The old hand-authored map remains the complete cross-system target
     # inventory, but its shared-root placement is intentionally discarded.
     for entries in CONTENT_UNLOCKS.values():
         for field, target in entries:
-            if field == "unlock_government_reform":
-                profiles = reform_profiles.get(target)
-                if not profiles:
-                    raise ValueError(f"reform {target} has no opening/profile boundary")
-                add_profiled_unlock(
-                    records, result, field, target, profiles, opening=True
-                )
-            elif field == "unlock_estate_privilege":
-                profiles = core_privilege_profiles.get(target)
-                if not profiles:
-                    raise ValueError(f"privilege {target} has no opening/profile boundary")
-                add_profiled_unlock(
-                    records, result, field, target, profiles, opening=True
-                )
-            elif field == "unlock_unit":
+            if field in {"unlock_government_reform", "unlock_estate_privilege"}:
+                continue
+            if field == "unlock_unit":
                 profiles = unit_profiles.get(target)
                 if not profiles:
                     raise ValueError(f"unit {target} has no availability profile")
@@ -1849,35 +2035,12 @@ def content_unlocks(records: tuple[Advance, ...]) -> dict[str, tuple[tuple[str, 
             age_index=0, track="warfare",
         )
 
-    # Age-specific constitutional paths reserve their dated profile nodes
-    # before flexible privilege, law, and workshop packages are balanced.
-    with S2_ALTERNATIVE_REFORMS.open(encoding="utf-8-sig", newline="") as handle:
-        reform_rows = list(csv.DictReader(handle))
-    for row in reform_rows:
-        profile = (row.get("profile") or "").strip()
-        reform = (row.get("reform") or "").strip()
-        age_index_text = (row.get("age_index") or "0").strip()
-        if profile not in S2_ESTATE_ADVANCE_PROFILES or not reform.startswith("antq_"):
-            raise ValueError(f"invalid alternative reform research profile: {profile}/{reform}")
-        try:
-            age_index = int(age_index_text)
-        except ValueError as exc:
-            raise ValueError(
-                f"invalid reform age index: {profile}/{reform}/{age_index_text}"
-            ) from exc
-        if not 0 <= age_index < len(AGE_KEYS):
-            raise ValueError(
-                f"out-of-range reform age index: {profile}/{reform}/{age_index}"
-            )
-        add_profiled_unlock(
-            records, result, "unlock_government_reform", reform,
-            S2_ESTATE_ADVANCE_PROFILES[profile], age_index=age_index,
-        )
-
     with S2_ESTATE_PRIVILEGES.open(encoding="utf-8-sig", newline="") as handle:
         estate_rows = list(csv.DictReader(handle))
     for row in estate_rows:
         key = (row.get("key") or "").strip()
+        if key in core_privilege_profiles:
+            continue
         matched = next(
             (
                 profile for profile in S2_ESTATE_ADVANCE_PROFILES
@@ -1901,12 +2064,15 @@ def content_unlocks(records: tuple[Advance, ...]) -> dict[str, tuple[tuple[str, 
         law_profiles.setdefault(law, profile)
     if len(law_profiles) != 182:
         raise ValueError("S2 legal registry must expose 182 unique profile law groups")
-    for law, profile in law_profiles.items():
-        add_profiled_unlock(
-            records, result, "unlock_law", law,
-            LAW_ADVANCE_PROFILES[profile],
-            track="statecraft", ceiling=6,
-        )
+
+    # These three are genuine transitions rather than active AD 1 forms, so
+    # retain their purpose-built research bridges.
+    for advance, reform in (
+        ("antq_imperial_cult", "antq_client_monarchy"),
+        ("antq_imperial_chancery", "antq_dominate"),
+        ("antq_regional_commands", "antq_sassanid_centralized_monarchy"),
+    ):
+        result[advance].append(("unlock_government_reform", reform))
 
     for building in regional_building_keys():
         add_profiled_unlock(
@@ -1988,6 +2154,9 @@ def start_research_rows(records: tuple[Advance, ...]) -> list[dict[str, str]]:
         }
     with ROSTER.open(encoding="utf-8-sig", newline="") as handle:
         roster = list(csv.DictReader(handle))
+    tag_law_profiles = {
+        row["tag"]: row["profile"] for row in csv_rows(S2_ANCIENT_LAW_PROFILES)
+    }
 
     age_one = tuple(record for record in records if record.age_index == 0)
     rows: list[dict[str, str]] = []
@@ -1999,7 +2168,16 @@ def start_research_rows(records: tuple[Advance, ...]) -> list[dict[str, str]]:
         owned = {
             record.key
             for record in age_one
-            if min(4, record.depth + 1) <= level
+            if (
+                (
+                    record.profile.startswith("law_")
+                    and record.profile == f"law_{tag_law_profiles.get(tag, '')}"
+                )
+                or (
+                    not record.profile.startswith("law_")
+                    and min(4, record.depth + 1) <= level
+                )
+            )
         }
         eligible = [
             record.key
@@ -2008,6 +2186,10 @@ def start_research_rows(records: tuple[Advance, ...]) -> list[dict[str, str]]:
             and all(required in owned for required in record.requires)
             and (
                 record.profile == "shared"
+                or (
+                    record.profile.startswith("law_")
+                    and record.profile == f"law_{tag_law_profiles.get(tag, '')}"
+                )
                 or group in ADVANCE_PROFILES[record.profile].culture_groups
             )
         ]
@@ -2052,13 +2234,18 @@ def institution_manager() -> str:
 def validate(records: tuple[Advance, ...]) -> None:
     failures: list[str] = []
     unlocks = content_unlocks(records)
-    if len(records) != 800:
-        failures.append(f"expected 800 advances after the S2-P3 expansion, got {len(records)}")
+    law_foundation_count = len(law_unlock_packages())
+    expected_advance_count = 800 + law_foundation_count
+    if len(records) != expected_advance_count:
+        failures.append(
+            f"expected {expected_advance_count} advances including exact legal "
+            f"foundations, got {len(records)}"
+        )
     keys = [record.key for record in records]
     by_key = {record.key: record for record in records}
     if len(keys) != len(set(keys)):
         failures.append("advance keys are not unique")
-    expected_counts = (160, 160, 160, 160, 80, 80)
+    expected_counts = (160 + law_foundation_count, 160, 160, 160, 80, 80)
     for age_index, age in enumerate(AGE_KEYS):
         age_records = [record for record in records if record.age == age]
         expected = expected_counts[age_index]
@@ -2071,8 +2258,10 @@ def validate(records: tuple[Advance, ...]) -> None:
         if len(regional_profiles) < 8:
             failures.append(f"{age} exposes only {len(regional_profiles)} regional profiles")
     roots = [record for record in records if not record.requires]
-    if len(roots) != 50:
-        failures.append("the 30 branching trees must have exactly 50 shared roots")
+    if len(roots) != 50 + law_foundation_count:
+        failures.append(
+            "the 30 branching trees and exact legal holders have an invalid root count"
+        )
     key_set = set(keys)
     unknown_unlock_keys = sorted(set(unlocks) - key_set)
     if unknown_unlock_keys:
@@ -2113,12 +2302,23 @@ def validate(records: tuple[Advance, ...]) -> None:
         "unlock_casus_belli": (ANCIENT_CASUS_BELLI, "antq_"),
         "unlock_subject_type": (ANCIENT_SUBJECT_TYPES, "antq_"),
     }
+    opening_reforms, opening_privileges = starting_content_keys()
     for field, (path, prefix) in target_sources.items():
         expected_targets = (
             set(regional_building_keys())
             if field == "unlock_building"
             else set(ordered_top_level_keys(path, prefix))
         )
+        if field == "unlock_government_reform":
+            expected_targets -= set(opening_reforms)
+            expected_targets |= set(opening_reforms) & {
+                target
+                for entries in CONTENT_UNLOCKS.values()
+                for unlock_field, target in entries
+                if unlock_field == "unlock_government_reform"
+            }
+        elif field == "unlock_estate_privilege":
+            expected_targets -= set(opening_privileges)
         actual_targets = [
             target
             for entries in unlocks.values()
@@ -2150,6 +2350,8 @@ def validate(records: tuple[Advance, ...]) -> None:
         expected_profile_laws = {
             (row.get("law") or "").strip() for row in csv.DictReader(handle)
         }
+    if len(expected_profile_laws) != 182:
+        failures.append("S2 legal registry lost one or more profile law groups")
     actual_profile_laws = [
         target
         for entries in unlocks.values()
@@ -2179,8 +2381,10 @@ def validate(records: tuple[Advance, ...]) -> None:
             )
     required_by = {required for record in records for required in record.requires}
     leaves = [record.key for record in records if record.key not in required_by]
-    if len(leaves) != 190:
-        failures.append("the expanded branching trees must have exactly 190 terminal choices")
+    if len(leaves) != 190 + law_foundation_count:
+        failures.append(
+            "the expanded branching trees and exact legal holders have an invalid leaf count"
+        )
     child_counts = {key: 0 for key in keys}
     for record in records:
         for required in record.requires:
@@ -2189,7 +2393,10 @@ def validate(records: tuple[Advance, ...]) -> None:
         failures.append("the expanded advance DAG must contain exactly 160 branch points")
     if sum(len(record.requires) >= 2 for record in records) != 130:
         failures.append("the expanded advance DAG must contain exactly 130 convergence nodes")
-    for profile in set(ADVANCE_PROFILES) - {"shared"}:
+    for profile in {
+        key for key in ADVANCE_PROFILES
+        if key != "shared" and not key.startswith("law_")
+    }:
         profile_leaves = [key for key in leaves if by_key[key].profile == profile]
         minimum_leaves = 2 if profile in {"baltic", "slavic_eastern", "uralic"} else 3
         if len(profile_leaves) < minimum_leaves:
@@ -2199,6 +2406,10 @@ def validate(records: tuple[Advance, ...]) -> None:
         for profile in ADVANCE_PROFILES
     }
     for profile, count in profile_counts.items():
+        if profile.startswith("law_"):
+            if count < 2:
+                failures.append(f"exact legal profile {profile} has only {count} holders")
+            continue
         minimum = 50 if profile == "shared" else 20
         if count < minimum:
             failures.append(f"advance profile {profile} has only {count} nodes")
@@ -2271,7 +2482,10 @@ def validate(records: tuple[Advance, ...]) -> None:
             "advance adoption paths reference unknown institutions: "
             + ", ".join(sorted(adopted - set(institution_keys)))
         )
-    for profile in set(ADVANCE_PROFILES) - {"shared"}:
+    for profile in {
+        key for key in ADVANCE_PROFILES
+        if key != "shared" and not key.startswith("law_")
+    }:
         if len(ADVANCE_PROFILES[profile].adoption_institutions) < 2:
             failures.append(
                 f"advance profile {profile} lacks several institution adoption paths"
@@ -2304,6 +2518,13 @@ def validate(records: tuple[Advance, ...]) -> None:
 
 
 def advance_potential(record: Advance) -> list[str]:
+    if record.profile.startswith("law_"):
+        legal_profile = record.profile.removeprefix("law_")
+        return [
+            "\tpotential = {",
+            f"\t\tantq_law_profile_{legal_profile}_trigger = yes",
+            "\t}",
+        ]
     profile = ADVANCE_PROFILES[record.profile]
     if record.profile == "shared":
         return []
@@ -2337,7 +2558,7 @@ def advance_script(records: tuple[Advance, ...]) -> str:
             lines.append(f"\t{field} = {value}")
         for field, target in unlocks.get(record.key, ()):
             lines.append(f"\t{field} = {target}")
-        if record.age_index == 0:
+        if record.age_index == 0 and not record.profile.startswith("law_"):
             lines.append(f"\tstarting_technology_level = {min(4, record.depth + 1)}")
         for required in record.requires:
             lines.append(f"\trequires = {required}")
@@ -2913,7 +3134,7 @@ def check(records: tuple[Advance, ...]) -> bool:
     unlock_count = sum(len(entries) for entries in unlock_map.values())
     print(
         "m8_knowledge: PASS "
-        f"(800 advances; {len(INSTITUTION_DATA)} ancient institutions; 18 legacy institutions removed; "
+        f"({len(records)} advances; {len(INSTITUTION_DATA)} ancient institutions; 18 legacy institutions removed; "
         f"{unlock_count} ancient-system unlocks; "
         f"{len(start_research_rows(records))} opening profiles researchable; "
         f"starting tiers 1/2/3/4 = {'/'.join(map(str, tiers))}; "

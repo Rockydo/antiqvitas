@@ -8013,12 +8013,13 @@ reviewed 128px BC7 DDS.
 
 - Quarantined all 43 installed levy definitions; added universal 4/2/2
   regular/levy/mercenary floors for all 463 tags.
-- Expanded to 84 units and 22 mercenary companies with direct art; added
+- Expanded to 112 units and 22 mercenary companies with direct art; added
   Parthian river/Gulf/Caspian craft and Han, Indian, African, and American pools.
 - Profile-gated all 376 privileges and distributed 1,116 unlock targets with an
   eight-per-advance ceiling; Roman buildings no longer use shared unlocks.
-- Retained the mandatory heir-law adapter, restored Parthia's 15-law setup,
-  universalized basic RGO growth, raised Flour and Bread above wheat, and
+- Retained the mandatory heir-law adapter and authored 14 profile-isolated
+  Iranian law groups; runtime setup remains blocked and is documented.
+  Universalized basic RGO growth, raised Flour and Bread above wheat, and
   ancientized steel plus 16 engine bridge labels.
 - `make validate` passed before the second expansion; final smoke is pending
   because the shared EU5 slot is leased by `endore`.
@@ -8048,3 +8049,21 @@ reviewed 128px BC7 DDS.
 - All 38 custom icons now have transparent silhouettes. Validation rejects
   circle-level alpha or radial plate coverage.
 - Full validation passes 150/150; paired smoke adds zero mod-unique lines.
+
+## 2026-07-31 - Repaired loading depth and military availability
+
+- Rebuilt 112 loading overlays from generated depth maps as nested opaque
+  cutouts with narrow feathered edges. Four fresh loading captures are clean.
+- Expanded to 112 ancient units: 26 levy, 26 regular, 22 mercenary, and 38
+  naval. Every tag has 4/2/2 land roles; all 54 harbor owners have patrol and
+  transport roles.
+- Rome's mercenary-captain panel is populated and now labels origins by culture.
+  Fresh setup removes zero invalid privileges and zero missing static-modifier
+  names.
+- Five law-award contracts, including a universal namespaced adapter, failed;
+  green no-law setup is restored and the exact blocker is recorded.
+- Distributed 2,061 ancient-system unlocks across 838 profile-isolated
+  advances; all inventoried opening constitutions are Age-I reachable and every
+  node remains capped at eight unlocks.
+- Final `make validate` passes 150/150. Paired vanilla/mod `make smoke` reaches
+  both rendered menus and reports zero new or mod-unique error-log lines.

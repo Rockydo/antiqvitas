@@ -136,3 +136,25 @@ base/DLC priority. The pre-game character popup cannot open the full scene, and
 the current scaled-map Observer route did not yield a stable culture matrix.
 Static contact review plus paired smoke is the accepted rapid gate; see
 `BLOCKERS.md`.
+
+## First bootstrap quote precedes mod localization
+
+The first executable-loading frame can select a vanilla quote before mod
+localization mounts. Exact-name overrides in both client modules work from New
+Game onward. Fixing the pre-mount frame would require modifying the install,
+which is prohibited.
+
+## Custom opening laws are stripped
+
+EU5 1.3.11 removes selected ANTIQVITAS law groups during bookmark
+initialization. Tag-, culture-, religion-, delayed-event-, direct-effect-, and
+universal-holder contracts all failed in fresh processes. Setup is restored to
+the green no-selection state; definitions remain isolated for a future engine
+contract. See `docs/BLOCKERS.md`.
+
+## Debug renderer can access-violate after entering the map
+
+Two fresh 2026-07-31 map sessions ended in the same FSR/D3D12 access violation
+already documented for long observer probes. Menu, loading, and paused-panel
+evidence remains usable; time-progression evidence requires a materially
+different verified renderer profile.

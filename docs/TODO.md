@@ -36,9 +36,9 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 
 ### S3-P1 - Complete ancient visual surfaces
 
-- [x] Rebuild all sixteen loading screens as the eight alpha/depth layers used
-  by the installed animated loading scenes; reject opaque duplicate layers and
-  review every composite and motion-safe crop.
+- [x] Rebuild all sixteen loading screens as vanilla-contract opaque depth
+  plates. Live Camulodunum, Forum, and Monte Alban captures at 7/71/98/99%
+  show no seam, slab, or ghosting (`S3_LOADING_PARALLAX_20260730`).
 - [x] Replace the complete installed location-illustration union: terrain,
   settlements, forts, ports, sacred buildings, workshops, weather, and
   foreground layers. No medieval structure or unintended blur may remain.
@@ -87,9 +87,9 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   for guns, muskets, rifles, cannon, feudalism, serfdom, manufactories, and
   similar anachronisms. Steel must describe ancient ferrous production.
 
-### S3 audit findings
+### S3 original audit findings
 
-- Loading art currently hard-links one opaque panorama into all eight animated
+- Loading art hard-linked one opaque panorama into all eight animated
   layer slots. Location illustrations have no mod override. Pop art omits active
   resolver families. All 38 custom goods use painted dark backplates.
 - Germania is 45.7% forest/woods and Iberia 37.4%; current conversion rules are
@@ -107,13 +107,16 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 
 ### S3 implementation evidence awaiting runtime
 
-- Static green: eight levy mirrors quarantine 43 installed definitions; 84
+- Static green: eight levy mirrors quarantine 43 installed definitions; 112
   ancient units provide every tag 4 regular, 2 levy, and 2 mercenary roles.
   Twenty-two mercenary types include regional proofs for Rome, Parthia, Suebi,
   Han, India, Africa, and the Americas.
-- Static green: all 376 privileges have potentials; Parthia retains 15 opening
-  law groups; the mandatory heir-law adapter remains active.
-- Static green: 1,116 unlock targets are profile-balanced across 800 advances;
+- Static green: all 376 privileges have potentials; fresh Rome initialization
+  emits zero invalid-privilege removals. Parthia's 14 Iranian law packages
+  remain isolated but are runtime-blocked; five distinct engine contracts are
+  documented in `BLOCKERS.md`, and green setup intentionally emits none.
+- Static green: 2,061 content unlocks plus eight mercenary-capability bridges
+  are profile-balanced across 838 advances;
   no node advertises more than eight. Roman building unlocks stay on the
   Roman/Italic path.
 - Static green: basic RGO capacity is universal; Flour and Bread food is 10
@@ -133,6 +136,12 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 - Static green: all eight pop classes use 48 distinct ancient masters across
   generic, map-mode, and all nine installed graphical families (88 exact DDS
   resolvers); European and Mediterranean location views no longer fall back.
+- Runtime: Rome's Mercenary Captain panel is populated with culture-labelled
+  pools and ancient units; its levy panel resolves only the two ancient levy
+  icons but begins at 0 recovered strength, so the levy parent remains open.
+- Runtime: fresh Camulodunum, Augustan Forum, Monte Alban, and Mixtec loading
+  captures show clean opaque depth separation at 7-99%; the former translucent
+  slab/ghost implementation is gone.
 
 ## Active user priorities — 2026-07-22
 

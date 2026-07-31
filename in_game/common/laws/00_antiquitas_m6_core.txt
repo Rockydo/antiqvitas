@@ -635,9 +635,12 @@ antq_kushite_governance_law = {
 
 antq_steppe_governance_law = {
 	law_category = administrative
-	law_gov_group = steppe_horde
 	potential = {
-		government_type = government_type:steppe_horde
+		OR = {
+			government_type = government_type:steppe_horde
+			government_type = government_type:tribe
+			government_type = government_type:monarchy
+		}
 	}
 	antq_confederated_chanyu = {
 		country_modifier = {

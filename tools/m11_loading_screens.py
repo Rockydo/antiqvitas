@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import concurrent.futures
 import hashlib
 import os
 import tempfile
@@ -19,7 +20,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from dds import convert, identify
 
@@ -29,7 +30,9 @@ CONTACT_SHEET = ROOT / "docs" / "m11" / "loading_screens_contact_sheet.png"
 LAYER_CONTACT_SHEET = ROOT / "docs" / "m11" / "loading_depth_layers_contact.png"
 LAYER_LEDGER = ROOT / "docs" / "m11" / "loading_depth_layers.csv"
 LAYER_ROOT = ROOT / "loading_screen/gfx/loading_screen_assets/antq/layers"
+DEPTH_ROOT = ROOT / "assets_queue/generated/loading_depth"
 DIMENSIONS = (3840, 2160)
+DEPTH_QUANTILES = (30.0, 42.0, 54.0, 66.0, 76.0, 86.0, 94.0)
 
 
 @dataclass(frozen=True)
@@ -89,44 +92,26 @@ def layer_texture(screen: LoadingScreen, index: int) -> Path:
     return LAYER_ROOT / f"{screen.key}_{index:02d}.dds"
 
 
-def depth_masks(image: Image.Image) -> tuple[np.ndarray, ...]:
-    """Return seven sparse masks tuned to the installed layer animation stack."""
-    rgb = np.asarray(image.convert("RGB"), dtype=np.float32) / 255.0
-    height, width = rgb.shape[:2]
-    yy, xx = np.mgrid[0:height, 0:width]
-    x = xx.astype(np.float32) / max(1, width - 1)
-    y = yy.astype(np.float32) / max(1, height - 1)
-    luminance = rgb[:, :, 0] * 0.2126 + rgb[:, :, 1] * 0.7152 + rgb[:, :, 2] * 0.0722
-    saturation = rgb.max(axis=2) - rgb.min(axis=2)
-    gradient_y, gradient_x = np.gradient(luminance)
-    detail = np.hypot(gradient_x, gradient_y)
-    scale = max(float(np.percentile(detail, 97.5)), 0.001)
-    detail = np.clip(detail / scale, 0.0, 1.0)
+def depth_path(screen: LoadingScreen) -> Path:
+    return DEPTH_ROOT / Path(screen.master).name
 
-    def window(value: np.ndarray, low: float, high: float, softness: float = 0.06) -> np.ndarray:
-        enter = np.clip((value - low) / softness, 0.0, 1.0)
-        leave = np.clip((high - value) / softness, 0.0, 1.0)
-        return enter * leave
 
-    def radial(cx: float, cy: float, sx: float, sy: float) -> np.ndarray:
-        return np.exp(-(((x - cx) / sx) ** 2 + ((y - cy) / sy) ** 2))
-
-    content = np.clip(0.18 + detail * 0.62 + saturation * 0.32, 0.0, 1.0)
-    masks = (
-        window(y, 0.28, 1.02, 0.08) * (0.48 + content * 0.52),
-        window(y, -0.02, 0.66, 0.10) * np.clip((luminance - 0.34) * 2.4, 0.0, 1.0),
-        window(y, 0.24, 0.88) * radial(0.22, 0.57, 0.34, 0.40) * content,
-        window(y, 0.24, 0.88) * radial(0.78, 0.57, 0.34, 0.40) * content,
-        window(y, 0.58, 1.03, 0.09) * (0.38 + content * 0.62),
-        window(y, 0.38, 1.03) * radial(0.30, 0.75, 0.25, 0.29) * np.clip(content * 1.3, 0.0, 1.0),
-        window(y, 0.38, 1.03) * radial(0.72, 0.75, 0.25, 0.29) * np.clip(content * 1.3, 0.0, 1.0),
-    )
-    strengths = (0.84, 0.48, 0.67, 0.67, 0.78, 0.88, 0.88)
+def depth_masks(depth_image: Image.Image) -> tuple[np.ndarray, ...]:
+    """Build vanilla-shaped nested plates: opaque interiors, narrow soft edges."""
+    depth = np.asarray(depth_image.convert("L"), dtype=np.uint8)
     result: list[np.ndarray] = []
-    for mask, strength in zip(masks, strengths, strict=True):
-        alpha = np.clip(mask * strength, 0.0, 1.0)
-        alpha[alpha < 0.055] = 0.0
-        result.append((alpha * 255.0).astype(np.uint8))
+    for quantile in DEPTH_QUANTILES:
+        threshold = float(np.percentile(depth, quantile))
+        binary = np.where(depth > threshold, 255, 0).astype(np.uint8)
+        # Vanilla plates are solid cutouts. Feather only the outside contour so
+        # identical RGB remains opaque wherever two animated plates overlap.
+        blurred = np.asarray(
+            Image.fromarray(binary, "L").filter(ImageFilter.GaussianBlur(radius=4.0)),
+            dtype=np.uint8,
+        )
+        alpha = np.maximum(binary, blurred)
+        alpha[alpha < 6] = 0
+        result.append(alpha)
     return tuple(result)
 
 
@@ -157,18 +142,32 @@ def write_layers() -> None:
     for screen in SCREENS:
         with Image.open(ROOT / screen.master) as opened:
             panorama = opened.convert("RGB")
-            masks = depth_masks(panorama)
+            with Image.open(depth_path(screen)) as depth_opened:
+                if depth_opened.size != panorama.size:
+                    raise ValueError(
+                        f"{screen.title} depth map does not match panorama: "
+                        f"{depth_opened.size} != {panorama.size}"
+                    )
+                masks = depth_masks(depth_opened)
             previews.append((screen.key, 0, panorama.resize((240, 135))))
             with tempfile.TemporaryDirectory(prefix="antq-loading-", dir=temp_root) as temporary:
                 work = Path(temporary)
+                conversions: list[tuple[Path, Path]] = []
                 for index, alpha in enumerate(masks, start=1):
                     plate = render_depth_plate(panorama, alpha)
                     png = work / f"{screen.key}_{index:02d}.png"
                     plate.save(png, optimize=True)
                     target = layer_texture(screen, index)
-                    convert(png, target, "bc3", mipmaps=True)
+                    conversions.append((png, target))
                     preview = plate.resize((240, 135), Image.Resampling.LANCZOS)
                     previews.append((screen.key, index, preview))
+                with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
+                    futures = [
+                        executor.submit(convert, png, target, "bc3", mipmaps=True)
+                        for png, target in conversions
+                    ]
+                    for future in futures:
+                        future.result()
         for index in range(8):
             texture = layer_texture(screen, index)
             zero, opaque, mean = alpha_stats(texture)
@@ -261,12 +260,22 @@ def validate() -> None:
         raise ValueError("loading-screen assignment refers to an unknown reviewed panorama")
     for screen in SCREENS:
         source, master, texture = ROOT / screen.source, ROOT / screen.master, ROOT / screen.texture
-        for path, role in ((source, "source"), (master, "master"), (texture, "texture")):
+        depth = depth_path(screen)
+        for path, role in (
+            (source, "source"), (master, "master"), (depth, "depth map"), (texture, "texture"),
+        ):
             if not path.is_file():
                 raise ValueError(f"{screen.title} loading-screen {role} is missing: {path}")
         with Image.open(master) as image:
             if image.format != "PNG" or image.size != DIMENSIONS:
                 raise ValueError(f"{screen.title} loading-screen master must be 3840x2160 PNG: {master}")
+        with Image.open(depth) as image:
+            if image.format != "PNG" or image.size != DIMENSIONS:
+                raise ValueError(f"{screen.title} depth map must be 3840x2160 PNG: {depth}")
+            rgb = np.asarray(image.convert("RGB"))
+            if not (np.array_equal(rgb[:, :, 0], rgb[:, :, 1])
+                    and np.array_equal(rgb[:, :, 1], rgb[:, :, 2])):
+                raise ValueError(f"{screen.title} depth map is not grayscale: {depth}")
         if identify(texture) != {"format": "DDS", "width": "3840", "height": "2160", "depth": "8", "channels": "srgb  3.0"}:
             raise ValueError(f"{screen.title} loading-screen DDS has unexpected contract: {texture}")
         layer_hashes: set[str] = set()
@@ -280,10 +289,17 @@ def validate() -> None:
             if index and "".join(details["channels"].split()) != "srgba4.0":
                 raise ValueError(f"{screen.title} loading overlay lost alpha: {layer}")
             zero, opaque, mean = alpha_stats(layer)
-            if index and not (10.0 < zero < 99.8 and opaque < 80.0 and 2.0 < mean < 235.0):
+            semitransparent = 100.0 - zero - opaque
+            if index and not (
+                18.0 < zero < 99.0
+                and 1.0 < opaque < 80.0
+                and semitransparent < 12.0
+                and 3.0 < mean < 220.0
+            ):
                 raise ValueError(
-                    f"{screen.title} layer {index:02d} is not a sparse depth plate: "
-                    f"zero={zero:.2f}, opaque={opaque:.2f}, mean={mean:.2f}"
+                    f"{screen.title} layer {index:02d} violates vanilla plate alpha: "
+                    f"zero={zero:.2f}, opaque={opaque:.2f}, "
+                    f"semi={semitransparent:.2f}, mean={mean:.2f}"
                 )
             layer_hashes.add(digest(layer))
         if len(layer_hashes) != 8:

@@ -1,5 +1,25 @@
 # ANTIQVITAS BLOCKERS
 
+## 2026-07-31 - Opening custom-law groups are not awarded by starting advances
+
+Status: deferred after five distinct engine contracts; green setup restored.
+
+Parthia still renders `No laws available`. Exact tag-gated, delayed hidden-event,
+tag-gated starting-advance, culture/religion starting-advance, and culture-only
+starting-advance variants all left the three visible Iranian foundation nodes
+unresearched (19/23). The locally documented `research_advance` effect also did
+nothing when its hidden country event was invoked after initialization. A fifth,
+non-profiled probe assigned eight namespaced law groups unlocked from proven
+universal depth-zero advances; EU5 again stripped every group and Parthia still
+rendered `No laws available`. Start policies, unlock packages, profile potentials,
+and the eight-unlock cap validate; resume only after finding a materially different
+local engine contract.
+
+Evidence: `docs/screens/20260731_020229/`,
+`docs/screens/20260731_021241/`, `docs/screens/20260731_022329/`, and
+`docs/screens/20260731_022915/`; universal-adapter probe:
+`docs/screens/20260731_laws_levies/parthia_laws.png`.
+
 ## 2026-07-30 - S2-P3 focused panels did not leave the front-end
 
 Status: bounded driver-evidence limitation; S2 content gates pass.

@@ -141,7 +141,7 @@ def report() -> str:
     rows = (
         ("processed_food_order", f"flour={flour:g};wheat={wheat:g}", "pass" if flour > wheat else "fail"),
         ("opening_rgo_capacity", "global_max_rgo_size_modifier=0.10", "pass"),
-        ("parthian_profile_laws", "15 Iranian groups + Arsacid autonomy", "pass"),
+        ("parthian_profile_laws", "14 Iranian groups + Arsacid autonomy", "pass"),
         ("mandatory_law_adapter", "heir_religion_law retained and ancientized", "pass"),
         ("engine_bridge_localization", "16 law/policy categories ancientized", "pass"),
         ("steel_text", "all 11 client mirrors", "pass"),
@@ -179,10 +179,26 @@ def validate() -> list[str]:
         failures.append("mandatory heir_religion_law remains quarantined")
 
     parthia = top_level_block(SETUP.read_text(encoding="utf-8-sig"), "XAH")
-    iranian_assignments = set(re.findall(r"\b(antq_s2_iranian_[a-z_]+_law)\s*=", parthia))
-    if len(iranian_assignments) != 14 or "antq_parthian_autonomy_law" not in parthia:
+    if re.search(r"(?m)^\s*laws\s*=", parthia):
+        failures.append("Parthia emits blocked custom law assignments during setup")
+    advances_text = ADVANCES.read_text(encoding="utf-8-sig")
+    for ordinal in (1, 2, 3):
+        holder = top_level_block(
+            advances_text,
+            f"antq_iranian_law_foundations_{ordinal}",
+        )
+        if "antq_law_profile_iranian_trigger = yes" not in holder:
+            failures.append(
+                f"Iranian legal foundation {ordinal} lacks exact-profile isolation"
+            )
+    iranian_unlocks = set(re.findall(
+        r"unlock_law = (antq_s2_iranian_[a-z_]+_law)",
+        advances_text,
+    ))
+    if len(iranian_unlocks) != 14:
         failures.append(
-            f"Parthia opening law assignment is incomplete: {len(iranian_assignments)} profile groups"
+            "Parthia law package is incomplete: "
+            f"{len(iranian_unlocks)} unlocked groups"
         )
 
     for language in LANGUAGES:
@@ -226,7 +242,7 @@ def main() -> int:
         return 1
     print(
         "s3_opening_systems: PASS "
-        "(Parthia laws; mandatory adapter; universal RGO; flour>wheat; ancient steel)"
+        "(profile-isolated law packages; mandatory adapter; universal RGO; flour>wheat; ancient steel)"
     )
     return 0
 
