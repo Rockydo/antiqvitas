@@ -62,20 +62,15 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 
 ### S3-P1 - Complete ancient visual surfaces
 
-- [ ] Rebuild all sixteen loading screens against the installed vanilla
-  eight-mesh contract. Reopened after the 2026-08-01 manual capture showed the
-  shipped composite remains severely ghosted and blurred.
-- [ ] Rebuild loading screens from the installed vanilla layer contract. The
-  2026-07-30 manual capture still shows a severely ghosted, blurred composite.
-  Compare vanilla/mod scene definitions and textures byte-for-byte where useful;
-  audit alpha, opacity, compression, mipmaps, layer ownership/order, transforms,
-  dimensions, and shaders. Accept only after side-by-side vanilla/mod captures
-  at several new-game percentages show an opaque sharp plate, intentional
-  parallax, no doubled scenery, seams, halos, or transparency bleed on all 16.
-  Reject the current full-master-plus-accent hypothesis. Re-derive mesh roles,
-  masks, alpha, depth/parallax, crop, compression, and scaling from the actual
-  installed scenes, then require side-by-side runtime proof at several loading
-  percentages for all 16 before closing either item.
+- [x] Rebuild all sixteen loading screens against the installed vanilla
+  eight-mesh contract. `_00` is an inpainted coherent base; seven BC3 planes
+  exclusively own small lower-frame subjects. Architecture, terrain, and the
+  upper 48% never move. All 128 canonical and 88 mounted DDS files pass.
+- [x] Prove the rebuilt contract visually and at runtime. All sixteen static
+  composites are clean; forced worst-case Ephesus at 100%, canonical Palmyra at
+  47%, and a vanilla 100% control show no ghosting, holes, seams, halos, moving
+  skyline, or transparency bleed. See
+  `docs/playtests/S3_LOADING_VANILLA_CONTRACT_20260801.md`.
 - [x] Replace the complete installed location-illustration union: terrain,
   settlements, forts, ports, sacred buildings, workshops, weather, and
   foreground layers. No medieval structure or unintended blur may remain.

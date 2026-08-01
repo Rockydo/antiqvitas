@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """Build and validate ANTIQVITAS animated loading-screen layer stacks.
 
-The EU5 loading-scene scripts are additive in the installed build.  We retain
-their engine-owned scene and image declarations, and instead VFS-override each
-of the exact eight DDS texture paths they already reference. Plate 00 is an
-opaque master background. Plates 04-07 are independently authored, whole-object
-accent groups derived from four-up guides made against the installed Rossbach
-stack; plates 01-03 remain transparent compatibility planes. The complete
-master stays in the stable base because EU5 fades overlays away at completion;
-terrain, trees, architecture, and generated replacement pixels must therefore
-never be required to keep the image coherent.
+The EU5 loading-scene scripts are additive in the installed build. We retain
+their engine-owned scene and image declarations and VFS-override the exact
+eight DDS paths they reference. Vanilla's _00 is a coherent background rather
+than a finished illustration duplicated beneath every plane. ANTIQVITAS keeps
+broad scenery and architecture stable, content-aware-inpaints the original
+positions of selected foreground subjects, and distributes those subjects over
+seven far-to-near meshes. A finished subject must never remain underneath its
+moving copy.
 """
 
 from __future__ import annotations
@@ -21,8 +20,10 @@ import hashlib
 import json
 import os
 import tempfile
+import urllib.parse
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Any
 
 import numpy as np
 import cv2
@@ -32,6 +33,9 @@ from dds import convert, identify
 
 
 ROOT = Path(__file__).resolve().parents[1]
+os.environ.setdefault("TORCH_HOME", str(ROOT / ".cache" / "torch"))
+os.environ.setdefault("TEMP", str(ROOT / ".tmp"))
+os.environ.setdefault("TMP", str(ROOT / ".tmp"))
 CONTACT_SHEET = ROOT / "docs" / "m11" / "loading_screens_contact_sheet.png"
 LAYER_CONTACT_SHEET = ROOT / "docs" / "m11" / "loading_depth_layers_contact.png"
 COMPOSITE_CONTACT_SHEET = (
@@ -55,14 +59,30 @@ GUIDE_PALETTE = np.asarray((
     (0, 255, 255),
     (255, 255, 255),
 ), dtype=np.int32)
-SEMANTIC_CLOSE_PIXELS = 11
-SEMANTIC_DILATE_PIXELS = 5
-FOREGROUND_CLASSES = frozenset((3, 4, 5, 6))
-ACTIVE_LAYER_OFFSET = 3
+SEMANTIC_CLOSE_PIXELS = 5
+SEMANTIC_DILATE_PIXELS = 3
 MIN_COMPONENT_PIXELS = 64
-MAX_COMPONENT_FRACTION = 0.01
-TARGET_ACCENT_FRACTION = 0.03
-MAX_ACCENT_COMPONENTS = 16
+MIN_ANIMATED_CENTROID_Y = 0.48
+MAX_COMPONENT_COVERAGE = {
+    3: 0.35,  # separable props
+    4: 0.35,  # individual figures / compact figure groups
+    5: 2.00,  # vessels over readily reconstructible water
+    6: 1.50,  # animals and exceptional closest subjects
+}
+LAMA_MODEL_URL = (
+    "https://github.com/enesmsahin/simple-lama-inpainting/releases/"
+    "download/v0.1.0/big-lama.pt"
+)
+MAX_CLASS_COVERAGE = {3: 1.25, 4: 1.50, 5: 3.50, 6: 2.50}
+MAX_RETAINED_CORRELATION = 0.76
+MIN_CHANGED_RGB_DELTA = 28.0
+MAX_FILLED_HOLE_PIXELS = 500
+BASE_INPAINT_DILATION = 5
+BASE_INPAINT_FEATHER = 2
+LAMA_WORK_SIZE = (1920, 1080)
+MIN_ACTIVE_LAYERS = 4
+MIN_TOTAL_LAYER_COVERAGE = 0.25
+MAX_TOTAL_LAYER_COVERAGE = 20.0
 
 
 @dataclass(frozen=True)
@@ -192,81 +212,106 @@ def guide_classes(screen: LoadingScreen) -> tuple[np.ndarray, np.ndarray]:
     return distance.argmin(axis=2).astype(np.uint8), rgb.max(axis=2) > 48
 
 
-def semantic_ownership(screen: LoadingScreen) -> tuple[np.ndarray, np.ndarray]:
-    """Return four exclusive, whole-object foreground planes.
+def semantic_ownership(
+    screen: LoadingScreen,
+    panorama: Image.Image,
+    clean: Image.Image,
+) -> tuple[np.ndarray, np.ndarray]:
+    """Return seven exclusive far-to-near foreground-object planes.
 
-    The guide's red/green/blue fields describe architecture, terrain, and broad
-    vegetation. Animating those fields duplicates the horizon and produces the
-    conspicuous ghost image seen in-game. Only yellow/magenta/cyan/white seeds
-    are foreground candidates. Connected components remain indivisible, then
-    are depth-ordered into four balanced planes so every scene has genuine
-    parallax without slicing a person, cart, vessel, or prop into fragments.
+    The reviewed guides use the same seven-step ownership order for every
+    scene. Broad terrain and architecture classes are deliberately rejected;
+    only separable props, figures, vessels, animals, and comparable foreground
+    subjects below the upper-frame lock can move. Structural correlation with
+    the independent clean study rejects objects that were never removed.
     """
     guide_class, guide_union = guide_classes(screen)
-    raw_foreground = guide_union & np.isin(
-        guide_class, np.asarray(sorted(FOREGROUND_CLASSES), dtype=np.uint8)
-    )
+    master_rgb = np.asarray(panorama.convert("RGB"), dtype=np.uint8)
+    clean_rgb = np.asarray(clean.convert("RGB"), dtype=np.uint8)
+    master_luma = cv2.cvtColor(master_rgb, cv2.COLOR_RGB2GRAY).astype(np.float32)
+    clean_luma = cv2.cvtColor(clean_rgb, cv2.COLOR_RGB2GRAY).astype(np.float32)
 
-    components: list[tuple[float, int, np.ndarray]] = []
-    for semantic_class in sorted(FOREGROUND_CLASSES):
+    seed_planes = np.full(guide_class.shape, 255, dtype=np.uint8)
+    image_pixels = guide_class.size
+    selected_components: list[tuple[float, int, np.ndarray]] = []
+    for semantic_class in range(len(GUIDE_PALETTE)):
+        if semantic_class not in MAX_COMPONENT_COVERAGE:
+            continue
         count, labels, stats, centroids = cv2.connectedComponentsWithStats(
-            (raw_foreground & (guide_class == semantic_class)).astype(np.uint8),
+            (guide_union & (guide_class == semantic_class)).astype(np.uint8),
             connectivity=8,
         )
+        accepted_components: list[tuple[int, int]] = []
         for label in range(1, count):
-            area = int(stats[label, cv2.CC_STAT_AREA])
+            x, y, width, height, area = (
+                int(value) for value in stats[label]
+            )
             if area < MIN_COMPONENT_PIXELS:
                 continue
-            center_y = float(centroids[label, 1]) / DIMENSIONS[1]
-            # Semantic color gives the primary back-to-front order; vertical
-            # position gives stable ordering among separate objects.
-            score = float(semantic_class - 3) + center_y
-            if area <= int(guide_class.size * MAX_COMPONENT_FRACTION):
-                components.append((score, area, labels == label))
+            if (
+                float(centroids[label][1]) / guide_class.shape[0]
+                < MIN_ANIMATED_CENTROID_Y
+            ):
+                continue
+            coverage = area * 100.0 / image_pixels
+            # Broad terrain, skylines, and whole architecture fields remain
+            # static in _00. Moving those exact cutouts exposes implausible
+            # holes at maximum parallax; vanilla reserves its closest planes
+            # for separable formations, figures, smoke, vessels, and props.
+            if coverage > MAX_COMPONENT_COVERAGE[semantic_class]:
+                continue
+            local_component = labels[y:y + height, x:x + width] == label
+            master_values = master_luma[y:y + height, x:x + width][local_component]
+            clean_values = clean_luma[y:y + height, x:x + width][local_component]
+            if master_values.std() > 1.0 and clean_values.std() > 1.0:
+                correlation = float(np.corrcoef(master_values, clean_values)[0, 1])
+            else:
+                correlation = 0.0
+            master_component = master_rgb[y:y + height, x:x + width][
+                local_component
+            ].astype(np.int16)
+            clean_component = clean_rgb[y:y + height, x:x + width][
+                local_component
+            ].astype(np.int16)
+            rgb_delta = float(
+                np.abs(master_component - clean_component).mean()
+            )
+            if (
+                correlation < MAX_RETAINED_CORRELATION
+                or rgb_delta > MIN_CHANGED_RGB_DELTA
+            ):
+                accepted_components.append((area, label))
 
-    if len(components) < 4:
-        raise ValueError(
-            f"{screen.title} guide contains only {len(components)} coherent "
-            "foreground objects; four are required"
+        selected_area = 0
+        for area, label in sorted(accepted_components, reverse=True):
+            prospective = (selected_area + area) * 100.0 / image_pixels
+            if (
+                prospective > MAX_CLASS_COVERAGE[semantic_class]
+                and selected_area
+            ):
+                continue
+            # Combine semantic depth with vertical placement, then distribute
+            # the retained foreground objects across the seven installed mesh
+            # depths below. This lets several rows of people pop separately
+            # without ever animating a whole city or terrain field.
+            depth_score = (
+                (semantic_class - min(MAX_COMPONENT_COVERAGE)) * 2.0
+                + float(centroids[label][1]) / guide_class.shape[0]
+            )
+            selected_components.append(
+                (depth_score, area, labels == label)
+            )
+            selected_area += area
+
+    selected_components.sort(key=lambda item: (item[0], item[1]))
+    component_count = len(selected_components)
+    for rank, (_score, _area, component) in enumerate(selected_components):
+        plane = (
+            round(rank * 6 / (component_count - 1))
+            if component_count > 1
+            else 3
         )
-    # Retain a restrained set of visible accents. A master painted as a single
-    # image cannot safely donate large cutouts: when EU5 fades an overlay, any
-    # synthetic fill beneath it becomes an obvious hole. Small intact objects
-    # provide the vanilla-style pop without making scene coherence depend on
-    # an overlay's current transform or opacity.
-    target_area = int(guide_class.size * TARGET_ACCENT_FRACTION)
-    selected: list[tuple[float, int, np.ndarray]] = []
-    selected_area = 0
-    for component in sorted(components, key=lambda item: item[1], reverse=True):
-        if len(selected) >= MAX_ACCENT_COMPONENTS:
-            break
-        if len(selected) < 4 or selected_area + component[1] <= target_area:
-            selected.append(component)
-            selected_area += component[1]
-    components = sorted(selected, key=lambda item: item[0])
-
-    # Partition the ordered whole objects into four approximately balanced
-    # planes. The leave-one-per-plane guard makes all four meshes meaningful.
-    seed_planes = np.full(guide_class.shape, 255, dtype=np.uint8)
-    cursor = 0
-    remaining_area = sum(item[1] for item in components)
-    for plane in range(4):
-        remaining_planes = 4 - plane
-        if plane == 3:
-            stop = len(components)
-        else:
-            target = remaining_area / remaining_planes
-            accumulated = 0
-            stop = cursor
-            maximum_stop = len(components) - (remaining_planes - 1)
-            while stop < maximum_stop and (accumulated < target or stop == cursor):
-                accumulated += components[stop][1]
-                stop += 1
-        for _score, _area, component in components[cursor:stop]:
-            seed_planes[component] = plane
-        consumed = sum(item[1] for item in components[cursor:stop])
-        remaining_area -= consumed
-        cursor = stop
+        seed_planes[component] = plane
 
     accepted = seed_planes != 255
     union = accepted.astype(np.uint8) * 255
@@ -278,14 +323,31 @@ def semantic_ownership(screen: LoadingScreen) -> tuple[np.ndarray, np.ndarray]:
     union = cv2.dilate(
         union,
         np.ones((SEMANTIC_DILATE_PIXELS, SEMANTIC_DILATE_PIXELS), dtype=np.uint8),
-    ) > 0
+    )
+    # Fill enclosed line-art holes such as windows, cart spokes, and gaps
+    # inside figures, but retain large courtyards and paddocks as clean plate.
+    inverse = (union == 0).astype(np.uint8)
+    count, holes, stats, _centroids = cv2.connectedComponentsWithStats(
+        inverse, connectivity=8,
+    )
+    for label in range(1, count):
+        x, y, width, height, area = (int(value) for value in stats[label])
+        if (
+            area <= MAX_FILLED_HOLE_PIXELS
+            and x > 0
+            and y > 0
+            and x + width < union.shape[1]
+            and y + height < union.shape[0]
+        ):
+            union[holes == label] = 255
+    union = union > 0
 
     nearest_distance = np.full(guide_class.shape, 1e9, dtype=np.float32)
     nearest_plane = np.zeros(guide_class.shape, dtype=np.uint8)
-    for index in range(4):
+    for index in range(len(GUIDE_PALETTE)):
         seed = (seed_planes == index).astype(np.uint8)
         if not np.any(seed):
-            raise ValueError(f"{screen.title} foreground plane {index + 1} is empty")
+            continue
         distance = cv2.distanceTransform(1 - seed, cv2.DIST_L2, 5)
         closer = distance < nearest_distance
         nearest_distance[closer] = distance[closer]
@@ -299,26 +361,23 @@ def depth_masks(
     clean: Image.Image,
     depth_image: Image.Image,
 ) -> tuple[np.ndarray, ...]:
-    """Turn semantic guides into four coherent whole-object planes.
-
-    The previous implementation intersected the guides with a pixel-difference
-    field. That looked correct in a static composite but shredded objects into
-    hundreds of independently displaced fragments in EU5. Vanilla layers use
-    whole silhouettes, so guide ownership is now the sole alpha authority.
-    """
+    """Turn semantic guides into seven coherent far-to-near plates."""
     depth = np.asarray(depth_image.convert("L"), dtype=np.uint8)
     if not np.any(depth > 3):
         raise ValueError(f"{screen.title} depth map has no subject field")
-    nearest_plane, candidate = semantic_ownership(screen)
+    nearest_plane, candidate = semantic_ownership(screen, panorama, clean)
+    return render_alpha_masks(nearest_plane, candidate)
+
+
+def render_alpha_masks(
+    nearest_plane: np.ndarray,
+    candidate: np.ndarray,
+) -> tuple[np.ndarray, ...]:
+    """Feather seven exclusive ownership fields for BC3 round-tripping."""
 
     masks: list[np.ndarray] = []
     for index in range(7):
-        active_plane = index - ACTIVE_LAYER_OFFSET
-        binary = (
-            candidate & (nearest_plane == active_plane)
-            if active_plane >= 0
-            else np.zeros(candidate.shape, dtype=bool)
-        ).astype(np.uint8) * 255
+        binary = (candidate & (nearest_plane == index)).astype(np.uint8) * 255
         alpha = np.asarray(
             Image.fromarray(binary, "L").filter(
                 ImageFilter.GaussianBlur(radius=1.25)
@@ -337,14 +396,41 @@ def render_depth_plate(image: Image.Image, alpha: np.ndarray) -> Image.Image:
     return Image.fromarray(rgba, "RGBA")
 
 
-def render_hybrid_plate(
+def render_clean_base(
     screen: LoadingScreen,
     panorama: Image.Image,
     generated_clean: Image.Image,
+    masks: tuple[np.ndarray, ...],
+    inpainting_model: Any,
 ) -> Image.Image:
-    """Return the pristine master as the always-coherent engine base plate."""
+    """Return vanilla-style _00 with selected foreground subjects removed.
+
+    Broad architecture and terrain stay in the base. Only coherent separable
+    subjects become moving overlays, and their original positions are filled
+    from adjacent master pixels. This preserves the scene's palette while
+    preventing both duplicate ghosts and clean-plate holes during parallax.
+    """
     del screen, generated_clean
-    return panorama.convert("RGB").copy()
+    master = panorama.convert("RGB")
+    animated = np.maximum.reduce(masks) > 5
+    removal = cv2.dilate(
+        animated.astype(np.uint8) * 255,
+        np.ones(
+            (BASE_INPAINT_DILATION, BASE_INPAINT_DILATION),
+            dtype=np.uint8,
+        ),
+    )
+    small_master = master.resize(LAMA_WORK_SIZE, Image.Resampling.LANCZOS)
+    small_mask = Image.fromarray(removal, "L").resize(
+        LAMA_WORK_SIZE, Image.Resampling.NEAREST,
+    )
+    filled = inpainting_model(small_master, small_mask).resize(
+        DIMENSIONS, Image.Resampling.LANCZOS,
+    )
+    feather = Image.fromarray(removal, "L").filter(
+        ImageFilter.GaussianBlur(BASE_INPAINT_FEATHER)
+    )
+    return Image.composite(filled, master, feather)
 
 
 def alpha_stats(path: Path) -> tuple[float, float, float]:
@@ -358,6 +444,50 @@ def alpha_stats(path: Path) -> tuple[float, float, float]:
     return zero, opaque, mean
 
 
+class LamaInpainter:
+    """Small TorchScript adapter for the published LaMa inference model."""
+
+    def __init__(self) -> None:
+        import torch
+
+        model_override = os.environ.get("LAMA_MODEL")
+        if model_override:
+            model_path = Path(model_override)
+        else:
+            model_path = (
+                Path(os.environ["TORCH_HOME"])
+                / "hub"
+                / "checkpoints"
+                / Path(urllib.parse.urlparse(LAMA_MODEL_URL).path).name
+            )
+        if not model_path.exists():
+            model_path.parent.mkdir(parents=True, exist_ok=True)
+            torch.hub.download_url_to_file(LAMA_MODEL_URL, str(model_path))
+        self.torch = torch
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.model = torch.jit.load(str(model_path), map_location=self.device)
+        self.model.eval().to(self.device)
+
+    def __call__(self, image: Image.Image, mask: Image.Image) -> Image.Image:
+        image_array = np.asarray(image.convert("RGB"), dtype=np.float32) / 255.0
+        mask_array = np.asarray(mask.convert("L"), dtype=np.float32) / 255.0
+        image_tensor = self.torch.from_numpy(
+            np.transpose(image_array, (2, 0, 1)).copy()
+        ).unsqueeze(0).to(self.device)
+        mask_tensor = self.torch.from_numpy(mask_array.copy()).unsqueeze(0).unsqueeze(0)
+        mask_tensor = (mask_tensor > 0).to(
+            device=self.device, dtype=image_tensor.dtype
+        )
+        with self.torch.inference_mode():
+            result = self.model(image_tensor, mask_tensor)[0]
+        pixels = np.clip(
+            np.transpose(result.detach().cpu().numpy(), (1, 2, 0)) * 255.0,
+            0,
+            255,
+        ).astype(np.uint8)
+        return Image.fromarray(pixels, "RGB")
+
+
 def write_layers() -> None:
     LAYER_ROOT.mkdir(parents=True, exist_ok=True)
     HYBRID_ROOT.mkdir(parents=True, exist_ok=True)
@@ -366,6 +496,7 @@ def write_layers() -> None:
     rows: list[dict[str, str]] = []
     previews: list[tuple[str, int, Image.Image]] = []
     composites: list[tuple[str, Image.Image]] = []
+    inpainting_model = LamaInpainter()
     for screen in SCREENS:
         with Image.open(ROOT / screen.master) as opened:
             panorama = opened.convert("RGB")
@@ -383,7 +514,9 @@ def write_layers() -> None:
                         f"{depth_opened.size} != {panorama.size}"
                     )
                 masks = depth_masks(screen, panorama, clean, depth_opened)
-            base = render_hybrid_plate(screen, panorama, clean)
+            base = render_clean_base(
+                screen, panorama, clean, masks, inpainting_model,
+            )
             base.save(hybrid_path(screen), optimize=True)
             previews.append((screen.key, 0, base.resize((240, 135))))
             composite = base.convert("RGBA")
@@ -597,9 +730,17 @@ def validate() -> None:
                 and semitransparent < 0.01
                 and mean < 0.01
             )
-            if index and semantic_contract:
+            sparse_contract = (
+                zero > 99.90
+                and opaque < 0.10
+                and semitransparent < 0.10
+                and mean < 0.10
+            )
+            if index and not empty_contract and mean >= 0.01:
                 nonempty_layers += 1
-            if index and not (semantic_contract or empty_contract):
+            if index and not (
+                semantic_contract or sparse_contract or empty_contract
+            ):
                 raise ValueError(
                     f"{screen.title} layer {index:02d} violates semantic alpha: "
                     f"zero={zero:.2f}, opaque={opaque:.2f}, "
@@ -608,16 +749,29 @@ def validate() -> None:
             layer_hashes.add(digest(layer))
             with Image.open(layer) as opened:
                 layer_images.append(np.asarray(opened.convert("RGBA")))
-        if nonempty_layers != 4 or len(layer_hashes) < 5:
+        if (
+            nonempty_layers < MIN_ACTIVE_LAYERS
+            or len(layer_hashes) < MIN_ACTIVE_LAYERS + 1
+        ):
             raise ValueError(
-                f"{screen.title} has {nonempty_layers}, not four, independent "
-                "foreground planes"
+                f"{screen.title} has only {nonempty_layers} active semantic "
+                f"planes; {MIN_ACTIVE_LAYERS} are required"
             )
         coverage = np.stack(
             [image[:, :, 3] > 128 for image in layer_images[1:]],
             axis=0,
         ).sum(axis=0)
-        expected_class, expected_union = semantic_ownership(screen)
+        with Image.open(master) as master_opened, Image.open(clean) as clean_opened:
+            master_image = master_opened.convert("RGB")
+            clean_image = clean_opened.convert("RGB")
+            expected_class, expected_union = semantic_ownership(
+                screen, master_image, clean_image,
+            )
+            master_rgb = np.asarray(master_image, dtype=np.int16)
+        with Image.open(hybrid) as expected_base_opened:
+            expected_base_rgb = np.asarray(
+                expected_base_opened.convert("RGB"), dtype=np.int16,
+            )
         actual_union = coverage > 0
         intersection = np.logical_and(actual_union, expected_union).sum()
         union_pixels = np.logical_or(actual_union, expected_union).sum()
@@ -629,12 +783,7 @@ def validate() -> None:
             )
         for index, image in enumerate(layer_images[1:]):
             actual = image[:, :, 3] > 128
-            active_plane = index - ACTIVE_LAYER_OFFSET
-            expected = (
-                expected_union & (expected_class == active_plane)
-                if active_plane >= 0
-                else np.zeros(expected_union.shape, dtype=bool)
-            )
+            expected = expected_union & (expected_class == index)
             class_union = np.logical_or(actual, expected).sum()
             class_iou = (
                 np.logical_and(actual, expected).sum() / class_union
@@ -650,29 +799,51 @@ def validate() -> None:
                 )
         overlap = float((coverage > 1).mean() * 100.0)
         union = float((coverage > 0).mean() * 100.0)
-        if not 0.5 < union < 6.0:
+        if not MIN_TOTAL_LAYER_COVERAGE < union < MAX_TOTAL_LAYER_COVERAGE:
             raise ValueError(
-                f"{screen.title} semantic foreground coverage is {union:.2f}%"
+                f"{screen.title} semantic layer coverage is {union:.2f}%; "
+                f"expected {MIN_TOTAL_LAYER_COVERAGE:.2f}-"
+                f"{MAX_TOTAL_LAYER_COVERAGE:.0f}%"
             )
         if overlap > 0.05:
             raise ValueError(
                 f"{screen.title} loading planes overlap {overlap:.2f}% of pixels"
             )
-        clean_rgb = layer_images[0][:, :, :3].astype(np.int16)
-        with Image.open(master) as opened:
-            master_rgb = np.asarray(opened.convert("RGB"), dtype=np.int16)
-        outside = ~expected_union
-        outside_difference = np.abs(clean_rgb - master_rgb).mean(axis=2)[outside]
-        if float(outside_difference.mean()) > 5.0:
+        base_rgb = layer_images[0][:, :, :3].astype(np.int16)
+        base_difference = np.abs(base_rgb - expected_base_rgb).mean()
+        if float(base_difference) > 5.0:
             raise ValueError(
-                f"{screen.title} base plate diverges from the master outside "
-                f"cutouts ({outside_difference.mean():.2f} mean RGB delta)"
+                f"{screen.title} _00 diverges from its inpainted subject-free base "
+                f"({base_difference:.2f} mean RGB delta)"
             )
-        all_difference = np.abs(clean_rgb - master_rgb).mean(axis=2)
-        if float(all_difference.mean()) > 5.0:
+        master_in_base = np.abs(base_rgb - master_rgb).mean(axis=2)[
+            expected_union
+        ].mean()
+        if float(master_in_base) < 1.0:
             raise ValueError(
-                f"{screen.title} base plate is not the complete master "
-                f"({all_difference.mean():.2f} mean RGB delta)"
+                f"{screen.title} _00 still contains finished subjects beneath "
+                f"their animation masks ({master_in_base:.2f} mean RGB delta)"
+            )
+        motion_margin = cv2.dilate(
+            expected_union.astype(np.uint8), np.ones((11, 11), np.uint8),
+        ) > 0
+        static_delta = np.abs(base_rgb - master_rgb).mean(axis=2)[
+            ~motion_margin
+        ].mean()
+        if float(static_delta) > 5.0:
+            raise ValueError(
+                f"{screen.title} _00 alters static scenery outside its "
+                f"foreground-removal masks ({static_delta:.2f} mean RGB delta)"
+            )
+        assembled = Image.fromarray(layer_images[0], "RGBA")
+        for image in layer_images[1:]:
+            assembled.alpha_composite(Image.fromarray(image, "RGBA"))
+        assembled_rgb = np.asarray(assembled.convert("RGB"), dtype=np.int16)
+        reconstruction_delta = np.abs(assembled_rgb - master_rgb).mean()
+        if float(reconstruction_delta) > 4.0:
+            raise ValueError(
+                f"{screen.title} assembled stack diverges from its master "
+                f"({reconstruction_delta:.2f} mean RGB delta)"
             )
     for scene_name, screen_key in SCENE_ASSIGNMENTS.items():
         screen = screens[screen_key]
@@ -731,8 +902,8 @@ def main() -> int:
     if args.check or not args.write:
         validate()
     print(
-        f"m11_loading_screens: PASS ({len(SCREENS)} exact master plates + "
-        f"four restrained accent planes; {len(SCENE_ASSIGNMENTS)} selectable "
+        f"m11_loading_screens: PASS ({len(SCREENS)} inpainted eight-mesh "
+        f"stacks; seven motion-safe foreground planes; {len(SCENE_ASSIGNMENTS)} selectable "
         "scenes VFS-overridden)"
     )
     return 0

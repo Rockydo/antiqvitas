@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-08-01 - Loading scenes follow the installed eight-mesh contract
+
+- Rejected finished-master duplication and broad exact-cutout layering.
+- Rebuilt sixteen scenes with inpainted static bases and seven exclusive,
+  lower-frame subject planes; all 88 installed selector paths resolve to them.
+- Forced Ephesus 100%, canonical Palmyra 47%, and vanilla 100% control are clean.
+  Validation passes 157/157; paired smoke has zero mod-unique lines at fingerprint
+  `d6473ab3ff9f1d2e0146b9a67481216bb248263c5bb32dc335079bd7aa9a817c`.
+
 ## 2026-08-01 - Frontier names follow political ownership
 
 - Corrected all 140 Latin aliases to the mounted Italic resolver in 11 clients.

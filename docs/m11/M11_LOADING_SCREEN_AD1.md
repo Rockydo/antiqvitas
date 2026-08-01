@@ -15,12 +15,12 @@ declarations alone. Instead it VFS-overrides the exact vanilla DDS paths below
 therefore resolves to its assigned reviewed panorama and no random vanilla
 scene can appear.
 
-`tools/m11_loading_screens.py` owns the VFS texture links, validates all
-masters and DDS contracts, and renders the review sheet
-`docs/m11/loading_screens_contact_sheet.png`. Its sixteen source PNGs and exact
-3840x2160 review masters are retained under `assets_queue/`; its sixteen
-game-facing DDS files use the inspected vanilla 3840x2160 BC1/sRGB class with
-mipmaps.
+`tools/m11_loading_screens.py` owns the VFS links and all sixteen canonical
+eight-mesh stacks. Each `_00` is a coherent BC1 base with selected foreground
+subjects removed by content-aware inpainting. Seven reverse-bound BC3 planes
+exclusively own small props, figures, vessels, and animals. Broad terrain,
+architecture, skyline, and every component centred in the upper 48% remain
+static. This prevents doubled scenery and parallax holes.
 
 ## Reviewed scenes
 
@@ -70,7 +70,8 @@ The local game contract was inspected before implementation:
 - `game/loading_screen/gfx/images/*.txt` supplies eight texture layers per
   definition.
 
-`tools/m11_loading_screens.py --check` verifies sixteen reviewed 3840x2160 PNG
-masters, sixteen canonical 3840x2160 DDS textures, the 88 inherited VFS texture
-overrides, and assignments for all eleven installed selectable scenes. It is part of
-`make validate`; menu smoke remains the runtime check.
+`tools/m11_loading_screens.py --check` verifies sixteen 3840x2160 masters,
+sixteen inpainted bases, 128 canonical DDS layers, seven active planes per
+scene, subject exclusivity, unchanged static scenery, reverse binding, and all
+88 inherited VFS overrides. It is part of `make validate`. Runtime evidence is
+recorded in `docs/playtests/S3_LOADING_VANILLA_CONTRACT_20260801.md`.

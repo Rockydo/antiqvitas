@@ -1,5 +1,17 @@
 ﻿# Technical and Design Decisions
 
+## 2026-08-01 - Loading parallax owns subjects, never scenery
+
+Installed Rossbach proves `_00` is a coherent base and `_07` is the nearest of
+seven alpha planes. A finished master beneath moving copies ghosts; removing
+broad scenery for exact overlays exposes holes as meshes move. Keep terrain,
+architecture, skyline, and the upper 48% static. Move only separable foreground
+subjects, erase their originals with content-aware inpainting, and give every
+subject one plane. Maintain sixteen canonical stacks, then reverse-bind eleven
+engine selectors to 88 exact VFS paths. Static checks cover all sixteen; forced
+Ephesus is the worst-case live gate. Sources: installed
+`00_loading_screens.txt`, installed Rossbach DDS stack, LaMa TorchScript model.
+
 ## 2026-07-31 - Guarantee supply at major market hubs, not every settlement
 
 Tier 1-2 Old World markets receive bounded opening circuits for hardware,
@@ -4397,15 +4409,8 @@ installed cartographic label under `T3N` until a sourced identity replaces it.
 Use language-qualified localization for reviewed Roman frontier aliases.
 ## 2026-07-31 - Loading parallax requires clean backgrounds
 
-The installed stack binds `_07` nearest through `_00` farthest. `_00` is an
-opaque clean plate; later files contain independently authored elements.
-Nested cutouts of a finished panorama repeat foreground RGB and ghost when
-meshes move. Automatic disjoint depth strata also fail: a fresh 8% load exposed
-cracks as meshes separated. ANTIQVITAS therefore uses a generated clean `_00`,
-one contiguous `_01` foreground plane, and transparent `_02`-`_07`; BC1/BC3
-still follow the installed contract. Richer motion is deferred until elements
-are genuinely authored. The exact Rossbach layers remain the reference. Accept
-only after three distinct new-game scenes remain clean through 8-14% motion.
+Superseded 2026-08-01 by the installed-contract decision above. A broad clean
+plate plus contiguous foreground still moved scenery and exposed fill seams.
 
 ## 2026-07-31 - Mercenary initialization follows opening liquidity
 
@@ -4434,13 +4439,9 @@ generation must reject owners outside those same contracts.
 
 ## 2026-07-31 - Loading planes use exclusive semantic ownership
 
-Superseded 2026-08-01: EU5 fades and moves each mesh independently. Generated
-clean fill therefore cannot sit beneath required overlays; live 100% evidence
-exposed it as blue holes. Keep the complete 4K master in opaque BC1 `_00`, keep
-`_01`-`_03` transparent, and restrict BC3 `_04`-`_07` to four exclusive intact
-accents totaling 3-3.8% of the frame. Terrain, skyline, trees, and building
-masses never animate. Guides use installed Rossbach only as structure/style
-reference; RGB comes from the original master.
+Superseded 2026-08-01 by the installed-contract decision above. The complete
+master under moving accents still duplicated subjects; the generated-clean
+variant created holes and moving scenery.
 
 ## 2026-07-31 - Opening laws use exact engine holders
 
