@@ -30,6 +30,7 @@ from m9_diplomacy import (
     discovery_regions as m9_discovery_regions,
     international_organization_manager as m9_international_organization_manager,
 )
+from s2_ancient_laws import opening_adapter_laws_by_tag
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "main_menu/setup/start"
@@ -1579,7 +1580,7 @@ def population_manager(
     )
 
 
-def fallback_government_block(kind: str) -> list[str]:
+def fallback_government_block(kind: str, design_tag: str) -> list[str]:
     """Render the minimal installed government shape for unsourced profiles.
 
     The AD 1 source ledger deliberately leaves some collective and otherwise
@@ -1591,7 +1592,7 @@ def fallback_government_block(kind: str) -> list[str]:
     government_type = "tribe" if kind == "sop" else "monarchy"
     heir_selection = "tribal_oldest_male" if kind == "sop" else "cognatic_primogeniture"
     reform = "antq_advanced_chiefdom" if kind == "sop" else "antq_regional_kingship"
-    return [
+    lines = [
         "\t\t\tgovernment = {",
         f"\t\t\t\ttype = {government_type}",
         f"\t\t\t\their_selection = {heir_selection}",
@@ -1599,8 +1600,14 @@ def fallback_government_block(kind: str) -> list[str]:
         "\t\t\t\treforms = {",
         f"\t\t\t\t\t{reform}",
         "\t\t\t\t}",
-        "\t\t\t}",
     ]
+    lines.append("\t\t\t\tlaws = {")
+    lines.extend(
+        f"\t\t\t\t\t{law} = {option}"
+        for law, option in opening_adapter_laws_by_tag()[design_tag]
+    )
+    lines.extend(("\t\t\t\t}", "\t\t\t}"))
+    return lines
 
 
 def country_manager(
@@ -1700,7 +1707,7 @@ def country_manager(
                 )
             )
         else:
-            lines.extend(fallback_government_block(row["kind"]))
+            lines.extend(fallback_government_block(row["kind"], row["tag"]))
         lines.extend((f"\t\t\tcapital = {capital}", "\t\t}", ""))
         count += 1
     lines.extend(("\t}", "}"))

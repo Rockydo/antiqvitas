@@ -17,7 +17,9 @@ from pathlib import Path
 
 from m5_regional_buildings import (
     CITY_ONLY_FAMILIES,
+    FAMILY_EXACT_TAG_GATES,
     FAMILY_MACRO_RESTRICTIONS,
+    FAMILY_REGION_RESTRICTIONS,
     PRODUCTION_RECIPES,
     ROMAN_ECONOMY_FAMILIES,
     WATER_OR_PORT_FAMILIES,
@@ -267,6 +269,7 @@ def curated_southern_hunter_herder_rows() -> list[dict[str, str]]:
 def candidate_score(
     family: str,
     good: str,
+    owner_tag: str,
     owner_region: str,
     macro: str,
     harbor: float,
@@ -275,8 +278,14 @@ def candidate_score(
     signatures: dict[str, set[str]],
     usage: Counter[str],
 ) -> tuple[float, str]:
+    allowed_tags = FAMILY_EXACT_TAG_GATES.get(family)
+    if allowed_tags is not None and owner_tag not in allowed_tags:
+        return (-10_000.0, family)
     allowed_macros = FAMILY_MACRO_RESTRICTIONS.get(family)
     if allowed_macros is not None and macro not in allowed_macros:
+        return (-10_000.0, family)
+    allowed_regions = FAMILY_REGION_RESTRICTIONS.get(family)
+    if allowed_regions is not None and owner_region not in allowed_regions:
         return (-10_000.0, family)
     if family in ROMAN_ECONOMY_FAMILIES and owner_region != "Rome":
         return (-10_000.0, family)
@@ -355,7 +364,7 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         return tag, region, harbor, urban.get(location, ""), data["ad1_good"]
 
     def choose_family(location: str) -> str:
-        _tag, region, harbor, urban_profile, good = details(location)
+        tag, region, harbor, urban_profile, good = details(location)
         macro = LOCATION_MACRO_OVERRIDES.get(location, REGION_MACRO[region])
         candidates = [
             family for family in family_keys
@@ -364,7 +373,7 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         return max(
             candidates,
             key=lambda family: candidate_score(
-                family, good, region, macro, harbor, urban_profile,
+                family, good, tag, region, macro, harbor, urban_profile,
                 rgo[location]["climate"], signatures, usage,
             ),
         )
@@ -476,10 +485,10 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
             continue
         candidates: list[tuple[float, float, str]] = []
         for location in selected_locations:
-            _tag, region, harbor, urban_profile, good = details(location)
+            tag, region, harbor, urban_profile, good = details(location)
             macro = LOCATION_MACRO_OVERRIDES.get(location, REGION_MACRO[region])
             score, _ = candidate_score(
-                family, good, region, macro, harbor, urban_profile,
+                family, good, tag, region, macro, harbor, urban_profile,
                 rgo[location]["climate"], signatures, usage,
             )
             if score > -10_000 and per_location[location] < 6:
@@ -493,7 +502,7 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     # civic capacity. Bring ordinary regional placements to a 75% productive
     # target, dispersed over the same reviewed settlement sample.
     def choose_service(location: str) -> str:
-        _tag, region, harbor, urban_profile, good = details(location)
+        tag, region, harbor, urban_profile, good = details(location)
         macro = LOCATION_MACRO_OVERRIDES.get(location, REGION_MACRO[region])
         candidates = [
             family for family in family_keys
@@ -502,7 +511,7 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         return max(
             candidates,
             key=lambda family: candidate_score(
-                family, good, region, macro, harbor, urban_profile,
+                family, good, tag, region, macro, harbor, urban_profile,
                 rgo[location]["climate"], signatures, usage,
             ),
         )
@@ -526,6 +535,7 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         score, _ = candidate_score(
             family,
             rgo[location]["ad1_good"],
+            owner_by_location[location],
             polities[owner_by_location[location]]["region"],
             LOCATION_MACRO_OVERRIDES.get(
                 location,

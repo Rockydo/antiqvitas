@@ -4423,3 +4423,28 @@ make that inference leak regional grants. Core grants use exact tags; profile
 grants use an explicit reform registry; country grants use one exact tag.
 Opening research forms retain their exact country research profiles rather than
 inheriting the broader estate profile.
+
+## 2026-07-31 - Regional building identity is explicit
+
+Do not infer regional ownership from arbitrary generated placements. Exact
+polity families use tag gates; transferable regional techniques use culture
+gates; Roman provincial institutions require a connected culture or Roman Law
+and Engineering. Portable workshops use neutral ancient names. Settlement
+generation must reject owners outside those same contracts.
+
+## 2026-07-31 - Loading planes use exclusive semantic ownership
+
+Superseded 2026-08-01: EU5 fades and moves each mesh independently. Generated
+clean fill therefore cannot sit beneath required overlays; live 100% evidence
+exposed it as blue holes. Keep the complete 4K master in opaque BC1 `_00`, keep
+`_01`-`_03` transparent, and restrict BC3 `_04`-`_07` to four exclusive intact
+accents totaling 3-3.8% of the frame. Terrain, skyline, trees, and building
+masses never animate. Guides use installed Rossbach only as structure/style
+reference; RGB comes from the original master.
+
+## 2026-07-31 - Opening laws use exact engine holders
+
+Namespaced law holders are stripped during bookmark initialization. Reuse only
+four installed keys already unlocked by universal depth-zero advances, replace
+their full policy bodies with 13-profile ancient options, and select exactly
+four per opening tag. Keep the 182 namespaced groups as later research content.

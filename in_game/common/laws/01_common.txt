@@ -152,14 +152,12 @@ education_elites_law = {
 
 education_masses_law = {
 	law_category = socioeconomic
-	potential = {
-		always = no # ANTIQVITAS mounted-system quarantine
-		"estate_power(estate_type:peasants_estate)" > 0
-	}
-	allow = {}
+	potential = { }
+	allow = { }
 
 	# BASIC EDUCATIONS
 	uneducated_masses_education = {
+		potential = { always = no } # ANTIQVITAS legacy-policy quarantine
 		country_modifier = {
 			nobles_estate_target_satisfaction = medium_permanent_target_satisfaction
 			monthly_towards_serfdom = societal_value_minor_monthly_move
@@ -174,6 +172,7 @@ education_masses_law = {
 	}
 
 	basic_religious_education = {
+		potential = { always = no } # ANTIQVITAS legacy-policy quarantine
 		country_modifier = {
 			clergy_estate_target_satisfaction = medium_permanent_target_satisfaction
 			global_nobles_max_literacy = 10
@@ -193,6 +192,7 @@ education_masses_law = {
 	# EXOTIC EDUCATIONS
 	theocratic_education = {
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			OR = {
 				government_type ?= government_type:theocracy
 				modifier:allow_theocratic_education = yes
@@ -218,7 +218,7 @@ education_masses_law = {
 	}
 
 	apprenticeships_education = {
-		potential = { modifier:allow_apprenticeships_education = yes }
+		potential = { always = no  modifier:allow_apprenticeships_education = yes } # ANTIQVITAS legacy-policy quarantine
 		country_modifier = {
 			global_nobles_max_literacy = 10
 			global_clergy_max_literacy = 10
@@ -233,6 +233,7 @@ education_masses_law = {
 
 	oral_tradition_education = {
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			OR = {
 				NOT = { has_advance = written_alphabet }
 				government_type ?= government_type:steppe_horde
@@ -255,6 +256,7 @@ education_masses_law = {
 	scottish_presbyterian_education = {
 		unique = yes
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			culture = culture:scottish
 			has_unlocked_policy_trigger = { type = scottish_presbyterian_education }
 		}
@@ -280,6 +282,7 @@ education_masses_law = {
 	# PRINTING-PRESS UNLOCKS
 	personal_religious_education = {
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			has_advance = written_alphabet
 			has_advance = printing_press_advance
 
@@ -308,6 +311,7 @@ education_masses_law = {
 
 	epic_tradition_education_sects = {
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			has_advance = written_alphabet
 			AND = {
 				OR = {
@@ -337,6 +341,7 @@ education_masses_law = {
 
 	epic_tradition_education = {
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			has_advance = written_alphabet
 			AND = {
 				OR = {
@@ -366,6 +371,7 @@ education_masses_law = {
 	# ILLUSTRATION (Enlightment) UNLOCKS
 	secular_education = {
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			NOT = { government_type ?= government_type:theocracy }
 			always = no
 		}
@@ -385,6 +391,7 @@ education_masses_law = {
 	vedic_education = {
 		unique = yes
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			has_unlocked_policy_trigger = {
 				type = vedic_education
 			}
@@ -397,6 +404,628 @@ education_masses_law = {
 			monthly_towards_spiritualist = societal_value_minor_monthly_move
 		}
 		years = 2
+	}
+	antq_s3_roman_status_central_adapter = {
+		potential = {
+			antq_law_profile_roman_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.06
+			global_pop_assimilation_speed_modifier = 0.01
+			monthly_towards_centralization = societal_value_minor_monthly_move
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_roman_status_mediated_adapter = {
+		potential = {
+			antq_law_profile_roman_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.03
+			pop_join_rebel_threshold = -0.01
+			global_nobles_estate_power = 0.03
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			burghers_estate
+		}
+	}
+	antq_s3_roman_status_local_adapter = {
+		potential = {
+			antq_law_profile_roman_trigger = yes
+		}
+		country_modifier = {
+			global_pop_assimilation_speed_modifier = 0.025
+			global_monthly_control = -0.01
+			global_pop_assimilation_speed_modifier = 0.01
+			global_burghers_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+			burghers_estate
+		}
+	}
+	antq_s3_han_status_central_adapter = {
+		potential = {
+			antq_law_profile_han_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.06
+			global_pop_assimilation_speed_modifier = 0.01
+			global_monthly_control = 0.02
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_han_status_mediated_adapter = {
+		potential = {
+			antq_law_profile_han_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.03
+			pop_join_rebel_threshold = -0.01
+			country_cabinet_efficiency = 0.02
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			burghers_estate
+		}
+	}
+	antq_s3_han_status_local_adapter = {
+		potential = {
+			antq_law_profile_han_trigger = yes
+		}
+		country_modifier = {
+			global_pop_assimilation_speed_modifier = 0.025
+			global_monthly_control = -0.01
+			peasants_estate_target_satisfaction = tiny_permanent_target_satisfaction
+			global_peasants_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s3_iranian_status_central_adapter = {
+		potential = {
+			antq_law_profile_iranian_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.06
+			global_pop_assimilation_speed_modifier = 0.01
+			global_crown_estate_power = 0.03
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_iranian_status_mediated_adapter = {
+		potential = {
+			antq_law_profile_iranian_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.03
+			pop_join_rebel_threshold = -0.01
+			global_nobles_estate_power = 0.03
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			burghers_estate
+		}
+	}
+	antq_s3_iranian_status_local_adapter = {
+		potential = {
+			antq_law_profile_iranian_trigger = yes
+		}
+		country_modifier = {
+			global_pop_assimilation_speed_modifier = 0.025
+			global_monthly_control = -0.01
+			global_tribes_estate_power = 0.03
+			global_tribes_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s3_hellenistic_status_central_adapter = {
+		potential = {
+			antq_law_profile_hellenistic_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.06
+			global_pop_assimilation_speed_modifier = 0.01
+			global_crown_estate_power = 0.03
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_hellenistic_status_mediated_adapter = {
+		potential = {
+			antq_law_profile_hellenistic_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.03
+			pop_join_rebel_threshold = -0.01
+			global_burghers_estate_power = 0.03
+			global_burghers_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			burghers_estate
+		}
+	}
+	antq_s3_hellenistic_status_local_adapter = {
+		potential = {
+			antq_law_profile_hellenistic_trigger = yes
+		}
+		country_modifier = {
+			global_pop_assimilation_speed_modifier = 0.025
+			global_monthly_control = -0.01
+			global_nobles_estate_power = 0.03
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+			nobles_estate
+		}
+	}
+	antq_s3_indic_status_central_adapter = {
+		potential = {
+			antq_law_profile_indic_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.06
+			global_pop_assimilation_speed_modifier = 0.01
+			monthly_towards_centralization = societal_value_minor_monthly_move
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_indic_status_mediated_adapter = {
+		potential = {
+			antq_law_profile_indic_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.03
+			pop_join_rebel_threshold = -0.01
+			global_nobles_estate_power = 0.03
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			burghers_estate
+		}
+	}
+	antq_s3_indic_status_local_adapter = {
+		potential = {
+			antq_law_profile_indic_trigger = yes
+		}
+		country_modifier = {
+			global_pop_assimilation_speed_modifier = 0.025
+			global_monthly_control = -0.01
+			global_peasants_estate_power = 0.03
+			global_peasants_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s3_steppe_status_central_adapter = {
+		potential = {
+			antq_law_profile_steppe_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.06
+			global_pop_assimilation_speed_modifier = 0.01
+			global_crown_estate_power = 0.03
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_steppe_status_mediated_adapter = {
+		potential = {
+			antq_law_profile_steppe_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.03
+			pop_join_rebel_threshold = -0.01
+			global_nobles_estate_power = 0.03
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			burghers_estate
+		}
+	}
+	antq_s3_steppe_status_local_adapter = {
+		potential = {
+			antq_law_profile_steppe_trigger = yes
+		}
+		country_modifier = {
+			global_pop_assimilation_speed_modifier = 0.025
+			global_monthly_control = -0.01
+			global_tribes_estate_power = 0.03
+			global_tribes_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s3_germanic_status_central_adapter = {
+		potential = {
+			antq_law_profile_germanic_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.06
+			global_pop_assimilation_speed_modifier = 0.01
+			nobles_estate_target_satisfaction = tiny_permanent_target_satisfaction
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			nobles_estate
+		}
+	}
+	antq_s3_germanic_status_mediated_adapter = {
+		potential = {
+			antq_law_profile_germanic_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.03
+			pop_join_rebel_threshold = -0.01
+			global_tribes_estate_power = 0.03
+			global_tribes_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			burghers_estate
+			tribes_estate
+		}
+	}
+	antq_s3_germanic_status_local_adapter = {
+		potential = {
+			antq_law_profile_germanic_trigger = yes
+		}
+		country_modifier = {
+			global_pop_assimilation_speed_modifier = 0.025
+			global_monthly_control = -0.01
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+			global_peasants_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s3_celtic_status_central_adapter = {
+		potential = {
+			antq_law_profile_celtic_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.06
+			global_pop_assimilation_speed_modifier = 0.01
+			global_nobles_estate_power = 0.03
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			nobles_estate
+		}
+	}
+	antq_s3_celtic_status_mediated_adapter = {
+		potential = {
+			antq_law_profile_celtic_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.03
+			pop_join_rebel_threshold = -0.01
+			global_tribes_estate_power = 0.03
+			global_tribes_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			burghers_estate
+			tribes_estate
+		}
+	}
+	antq_s3_celtic_status_local_adapter = {
+		potential = {
+			antq_law_profile_celtic_trigger = yes
+		}
+		country_modifier = {
+			global_pop_assimilation_speed_modifier = 0.025
+			global_monthly_control = -0.01
+			global_clergy_estate_power = 0.03
+			global_clergy_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+			clergy_estate
+		}
+	}
+	antq_s3_arabian_status_central_adapter = {
+		potential = {
+			antq_law_profile_arabian_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.06
+			global_pop_assimilation_speed_modifier = 0.01
+			global_crown_estate_power = 0.03
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_arabian_status_mediated_adapter = {
+		potential = {
+			antq_law_profile_arabian_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.03
+			pop_join_rebel_threshold = -0.01
+			global_burghers_estate_power = 0.03
+			global_burghers_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			burghers_estate
+		}
+	}
+	antq_s3_arabian_status_local_adapter = {
+		potential = {
+			antq_law_profile_arabian_trigger = yes
+		}
+		country_modifier = {
+			global_pop_assimilation_speed_modifier = 0.025
+			global_monthly_control = -0.01
+			global_tribes_estate_power = 0.03
+			global_tribes_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s3_northern_status_central_adapter = {
+		potential = {
+			antq_law_profile_northern_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.06
+			global_pop_assimilation_speed_modifier = 0.01
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			nobles_estate
+		}
+	}
+	antq_s3_northern_status_mediated_adapter = {
+		potential = {
+			antq_law_profile_northern_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.03
+			pop_join_rebel_threshold = -0.01
+			global_tribes_estate_power = 0.03
+			global_tribes_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			burghers_estate
+			tribes_estate
+		}
+	}
+	antq_s3_northern_status_local_adapter = {
+		potential = {
+			antq_law_profile_northern_trigger = yes
+		}
+		country_modifier = {
+			global_pop_assimilation_speed_modifier = 0.025
+			global_monthly_control = -0.01
+			global_pop_food_consumption = -0.005
+			global_peasants_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s3_african_status_central_adapter = {
+		potential = {
+			antq_law_profile_african_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.06
+			global_pop_assimilation_speed_modifier = 0.01
+			global_crown_estate_power = 0.03
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_african_status_mediated_adapter = {
+		potential = {
+			antq_law_profile_african_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.03
+			pop_join_rebel_threshold = -0.01
+			global_burghers_estate_power = 0.03
+			global_burghers_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			burghers_estate
+		}
+	}
+	antq_s3_african_status_local_adapter = {
+		potential = {
+			antq_law_profile_african_trigger = yes
+		}
+		country_modifier = {
+			global_pop_assimilation_speed_modifier = 0.025
+			global_monthly_control = -0.01
+			global_tribes_estate_power = 0.03
+			global_tribes_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s3_eastern_status_central_adapter = {
+		potential = {
+			antq_law_profile_eastern_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.06
+			global_pop_assimilation_speed_modifier = 0.01
+			global_crown_estate_power = 0.03
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_eastern_status_mediated_adapter = {
+		potential = {
+			antq_law_profile_eastern_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.03
+			pop_join_rebel_threshold = -0.01
+			global_nobles_estate_power = 0.03
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			burghers_estate
+		}
+	}
+	antq_s3_eastern_status_local_adapter = {
+		potential = {
+			antq_law_profile_eastern_trigger = yes
+		}
+		country_modifier = {
+			global_pop_assimilation_speed_modifier = 0.025
+			global_monthly_control = -0.01
+			global_burghers_estate_power = 0.03
+			global_burghers_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+			burghers_estate
+		}
+	}
+	antq_s3_transoceanic_status_central_adapter = {
+		potential = {
+			antq_law_profile_transoceanic_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.06
+			global_pop_assimilation_speed_modifier = 0.01
+			global_clergy_estate_power = 0.03
+			global_clergy_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			clergy_estate
+		}
+	}
+	antq_s3_transoceanic_status_mediated_adapter = {
+		potential = {
+			antq_law_profile_transoceanic_trigger = yes
+		}
+		country_modifier = {
+			global_integration_speed_modifier = 0.03
+			pop_join_rebel_threshold = -0.01
+			global_tribes_estate_power = 0.03
+			global_tribes_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			nobles_estate
+			burghers_estate
+			tribes_estate
+		}
+	}
+	antq_s3_transoceanic_status_local_adapter = {
+		potential = {
+			antq_law_profile_transoceanic_trigger = yes
+		}
+		country_modifier = {
+			global_pop_assimilation_speed_modifier = 0.025
+			global_monthly_control = -0.01
+			global_peasants_estate_power = 0.03
+			global_peasants_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
 	}
 }
 
@@ -597,11 +1226,9 @@ administrative_system = {
 
 	law_category = administrative
 	unique = yes
-	potential = {
-		always = no # ANTIQVITAS mounted-system quarantine
-		has_tribal_government = no
-	}
+	potential = { }
 	autonomous_councils = {
+		potential = { always = no } # ANTIQVITAS legacy-policy quarantine
 		country_modifier = {
 			legislative_efficiency = 0.1
 			monthly_towards_decentralization = societal_value_monthly_move
@@ -612,6 +1239,7 @@ administrative_system = {
 		years = 2
 	}
 	central_councils = {
+		potential = { always = no } # ANTIQVITAS legacy-policy quarantine
 		country_modifier = {
 			country_cabinet_efficiency = 0.05
 			monthly_towards_centralization = societal_value_monthly_move
@@ -624,6 +1252,7 @@ administrative_system = {
 		years = 2
 	}
 	local_courts_administration = {
+		potential = { always = no } # ANTIQVITAS legacy-policy quarantine
 		country_modifier = {
 			monthly_towards_decentralization = societal_value_monthly_move
 			pop_join_rebel_threshold = -0.03
@@ -635,6 +1264,7 @@ administrative_system = {
 		years = 2
 	}
 	feudal_administration = {
+		potential = { always = no } # ANTIQVITAS legacy-policy quarantine
 		country_modifier = {
 			monthly_towards_decentralization = societal_value_minor_monthly_move
 			global_monthly_food_modifier = 0.05
@@ -646,6 +1276,7 @@ administrative_system = {
 	}
 	confederal_union = {
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			current_age_or_later = { age = age_3_discovery }
 		}
 		country_modifier = {
@@ -659,6 +1290,7 @@ administrative_system = {
 	}
 	federal_state = {
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			current_age_or_later = { age = age_4_reformation }
 		}
 		country_modifier = {
@@ -672,6 +1304,7 @@ administrative_system = {
 	}
 	absolute_rulership = {
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			current_age_or_later = { age = age_5_absolutism }
 		}
 		country_modifier = {
@@ -686,6 +1319,7 @@ administrative_system = {
 
 	unitary_administration = {
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			current_age_or_later = { age = age_5_absolutism }
 		}
 		country_modifier = {
@@ -700,6 +1334,7 @@ administrative_system = {
 	pyatina_policy = {
 		unique = yes
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			has_or_had_tag = NOV
 		}
 		country_modifier = {
@@ -714,6 +1349,7 @@ administrative_system = {
 	eyalet_division = { #https://en.wikipedia.org/wiki/Eyalet
 		unique = yes
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			has_unlocked_policy_trigger = { type = eyalet_division }
 		}
 		country_modifier = {
@@ -729,6 +1365,7 @@ administrative_system = {
 	merindad_policy = {
 		unique = yes
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			OR = {
 				culture = culture:aragonese
 				culture = culture:basque
@@ -748,6 +1385,7 @@ administrative_system = {
 	calpixque_system_policy = {
 		unique = yes
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			culture = culture:nahua_culture
 		}
 		country_modifier = {
@@ -762,6 +1400,7 @@ administrative_system = {
 	tongues_policy = {
 		unique = yes
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			has_or_had_tag = KNI
 		}
 		country_modifier = {
@@ -776,6 +1415,7 @@ administrative_system = {
 	rajya_policy = {
 		unique = yes
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			has_or_had_tag = VIJ
 		}
 		country_modifier = {
@@ -791,6 +1431,7 @@ administrative_system = {
 	poligar_system_policy = {
 		unique = yes
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			OR = {
 				culture.language = language:telugu_language
 				culture.language = language:tamil_language
@@ -810,6 +1451,7 @@ administrative_system = {
 	zabt_system_policy = {
 		unique = yes
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			has_or_had_tag = MUG
 		}
 		country_modifier = {
@@ -825,6 +1467,7 @@ administrative_system = {
 	pronoia_system = {
 		unique = yes
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			has_or_had_tag = BYZ
 			NOT = { has_unlocked_policy_trigger = { type = komnenian_formalization } }
 			NOT = { has_unlocked_policy_trigger = { type = palaeologan_hereditary_transition } }
@@ -849,6 +1492,7 @@ administrative_system = {
 	komnenian_formalization = {
 		unique = yes
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			has_or_had_tag = BYZ
 			has_unlocked_policy_trigger = { type = komnenian_formalization }
 		}
@@ -872,6 +1516,7 @@ administrative_system = {
 	palaeologan_hereditary_transition = {
 		unique = yes
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			has_or_had_tag = BYZ
 			has_unlocked_policy_trigger = { type = palaeologan_hereditary_transition }
 		}
@@ -894,6 +1539,7 @@ administrative_system = {
 	reformed_pronoia_system = {
 		unique = yes
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			has_or_had_tag = BYZ
 			has_unlocked_policy_trigger = { type = reformed_pronoia_system }
 		}
@@ -917,6 +1563,7 @@ administrative_system = {
 	adelantamiento_system = {
 		unique = yes
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			culture = culture:castilian
 		}
 		country_modifier = {
@@ -931,6 +1578,7 @@ administrative_system = {
 	}
 	decentralized_trade_federations = {
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			country_type = building
 			is_merchant_republic = yes
 		}
@@ -947,6 +1595,7 @@ administrative_system = {
 	regulations_of_the_royal_court = {
 		unique = yes
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			has_or_had_tag = GEO
 		}
 		country_modifier = {
@@ -964,6 +1613,7 @@ administrative_system = {
 	maj_office_of_the_mahapatih = {
 		unique = yes
 		potential = {
+			always = no # ANTIQVITAS legacy-policy quarantine
 			has_or_had_tag = MAJ
 		}
 		country_modifier = {
@@ -975,6 +1625,628 @@ administrative_system = {
 			crown_estate
 		}
 		years = 2
+	}
+	antq_s3_roman_revenue_central_adapter = {
+		potential = {
+			antq_law_profile_roman_trigger = yes
+		}
+		country_modifier = {
+			peasants_estate_max_tax = 0.04
+			global_monthly_control = 0.015
+			monthly_towards_centralization = societal_value_minor_monthly_move
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_roman_revenue_mediated_adapter = {
+		potential = {
+			antq_law_profile_roman_trigger = yes
+		}
+		country_modifier = {
+			burghers_estate_max_tax = 0.025
+			stability_cost_efficiency = 0.025
+			global_nobles_estate_power = 0.03
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			nobles_estate
+		}
+	}
+	antq_s3_roman_revenue_local_adapter = {
+		potential = {
+			antq_law_profile_roman_trigger = yes
+		}
+		country_modifier = {
+			global_production_efficiency = 0.025
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+			global_pop_assimilation_speed_modifier = 0.01
+			global_burghers_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+			burghers_estate
+		}
+	}
+	antq_s3_han_revenue_central_adapter = {
+		potential = {
+			antq_law_profile_han_trigger = yes
+		}
+		country_modifier = {
+			peasants_estate_max_tax = 0.04
+			global_monthly_control = 0.015
+			global_monthly_control = 0.02
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_han_revenue_mediated_adapter = {
+		potential = {
+			antq_law_profile_han_trigger = yes
+		}
+		country_modifier = {
+			burghers_estate_max_tax = 0.025
+			stability_cost_efficiency = 0.025
+			country_cabinet_efficiency = 0.02
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			nobles_estate
+		}
+	}
+	antq_s3_han_revenue_local_adapter = {
+		potential = {
+			antq_law_profile_han_trigger = yes
+		}
+		country_modifier = {
+			global_production_efficiency = 0.025
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+			peasants_estate_target_satisfaction = tiny_permanent_target_satisfaction
+			global_peasants_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s3_iranian_revenue_central_adapter = {
+		potential = {
+			antq_law_profile_iranian_trigger = yes
+		}
+		country_modifier = {
+			peasants_estate_max_tax = 0.04
+			global_monthly_control = 0.015
+			global_crown_estate_power = 0.03
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_iranian_revenue_mediated_adapter = {
+		potential = {
+			antq_law_profile_iranian_trigger = yes
+		}
+		country_modifier = {
+			burghers_estate_max_tax = 0.025
+			stability_cost_efficiency = 0.025
+			global_nobles_estate_power = 0.03
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			nobles_estate
+		}
+	}
+	antq_s3_iranian_revenue_local_adapter = {
+		potential = {
+			antq_law_profile_iranian_trigger = yes
+		}
+		country_modifier = {
+			global_production_efficiency = 0.025
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+			global_tribes_estate_power = 0.03
+			global_tribes_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s3_hellenistic_revenue_central_adapter = {
+		potential = {
+			antq_law_profile_hellenistic_trigger = yes
+		}
+		country_modifier = {
+			peasants_estate_max_tax = 0.04
+			global_monthly_control = 0.015
+			global_crown_estate_power = 0.03
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_hellenistic_revenue_mediated_adapter = {
+		potential = {
+			antq_law_profile_hellenistic_trigger = yes
+		}
+		country_modifier = {
+			burghers_estate_max_tax = 0.025
+			stability_cost_efficiency = 0.025
+			global_burghers_estate_power = 0.03
+			global_burghers_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			nobles_estate
+		}
+	}
+	antq_s3_hellenistic_revenue_local_adapter = {
+		potential = {
+			antq_law_profile_hellenistic_trigger = yes
+		}
+		country_modifier = {
+			global_production_efficiency = 0.025
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+			global_nobles_estate_power = 0.03
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+			nobles_estate
+		}
+	}
+	antq_s3_indic_revenue_central_adapter = {
+		potential = {
+			antq_law_profile_indic_trigger = yes
+		}
+		country_modifier = {
+			peasants_estate_max_tax = 0.04
+			global_monthly_control = 0.015
+			monthly_towards_centralization = societal_value_minor_monthly_move
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_indic_revenue_mediated_adapter = {
+		potential = {
+			antq_law_profile_indic_trigger = yes
+		}
+		country_modifier = {
+			burghers_estate_max_tax = 0.025
+			stability_cost_efficiency = 0.025
+			global_nobles_estate_power = 0.03
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			nobles_estate
+		}
+	}
+	antq_s3_indic_revenue_local_adapter = {
+		potential = {
+			antq_law_profile_indic_trigger = yes
+		}
+		country_modifier = {
+			global_production_efficiency = 0.025
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+			global_peasants_estate_power = 0.03
+			global_peasants_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s3_steppe_revenue_central_adapter = {
+		potential = {
+			antq_law_profile_steppe_trigger = yes
+		}
+		country_modifier = {
+			peasants_estate_max_tax = 0.04
+			global_monthly_control = 0.015
+			global_crown_estate_power = 0.03
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_steppe_revenue_mediated_adapter = {
+		potential = {
+			antq_law_profile_steppe_trigger = yes
+		}
+		country_modifier = {
+			burghers_estate_max_tax = 0.025
+			stability_cost_efficiency = 0.025
+			global_nobles_estate_power = 0.03
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			nobles_estate
+		}
+	}
+	antq_s3_steppe_revenue_local_adapter = {
+		potential = {
+			antq_law_profile_steppe_trigger = yes
+		}
+		country_modifier = {
+			global_production_efficiency = 0.025
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+			global_tribes_estate_power = 0.03
+			global_tribes_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s3_germanic_revenue_central_adapter = {
+		potential = {
+			antq_law_profile_germanic_trigger = yes
+		}
+		country_modifier = {
+			peasants_estate_max_tax = 0.04
+			global_monthly_control = 0.015
+			nobles_estate_target_satisfaction = tiny_permanent_target_satisfaction
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			nobles_estate
+		}
+	}
+	antq_s3_germanic_revenue_mediated_adapter = {
+		potential = {
+			antq_law_profile_germanic_trigger = yes
+		}
+		country_modifier = {
+			burghers_estate_max_tax = 0.025
+			stability_cost_efficiency = 0.025
+			global_tribes_estate_power = 0.03
+			global_tribes_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			nobles_estate
+			tribes_estate
+		}
+	}
+	antq_s3_germanic_revenue_local_adapter = {
+		potential = {
+			antq_law_profile_germanic_trigger = yes
+		}
+		country_modifier = {
+			global_production_efficiency = 0.025
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+			global_peasants_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s3_celtic_revenue_central_adapter = {
+		potential = {
+			antq_law_profile_celtic_trigger = yes
+		}
+		country_modifier = {
+			peasants_estate_max_tax = 0.04
+			global_monthly_control = 0.015
+			global_nobles_estate_power = 0.03
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			nobles_estate
+		}
+	}
+	antq_s3_celtic_revenue_mediated_adapter = {
+		potential = {
+			antq_law_profile_celtic_trigger = yes
+		}
+		country_modifier = {
+			burghers_estate_max_tax = 0.025
+			stability_cost_efficiency = 0.025
+			global_tribes_estate_power = 0.03
+			global_tribes_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			nobles_estate
+			tribes_estate
+		}
+	}
+	antq_s3_celtic_revenue_local_adapter = {
+		potential = {
+			antq_law_profile_celtic_trigger = yes
+		}
+		country_modifier = {
+			global_production_efficiency = 0.025
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+			global_clergy_estate_power = 0.03
+			global_clergy_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+			clergy_estate
+		}
+	}
+	antq_s3_arabian_revenue_central_adapter = {
+		potential = {
+			antq_law_profile_arabian_trigger = yes
+		}
+		country_modifier = {
+			peasants_estate_max_tax = 0.04
+			global_monthly_control = 0.015
+			global_crown_estate_power = 0.03
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_arabian_revenue_mediated_adapter = {
+		potential = {
+			antq_law_profile_arabian_trigger = yes
+		}
+		country_modifier = {
+			burghers_estate_max_tax = 0.025
+			stability_cost_efficiency = 0.025
+			global_burghers_estate_power = 0.03
+			global_burghers_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			nobles_estate
+		}
+	}
+	antq_s3_arabian_revenue_local_adapter = {
+		potential = {
+			antq_law_profile_arabian_trigger = yes
+		}
+		country_modifier = {
+			global_production_efficiency = 0.025
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+			global_tribes_estate_power = 0.03
+			global_tribes_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s3_northern_revenue_central_adapter = {
+		potential = {
+			antq_law_profile_northern_trigger = yes
+		}
+		country_modifier = {
+			peasants_estate_max_tax = 0.04
+			global_monthly_control = 0.015
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			nobles_estate
+		}
+	}
+	antq_s3_northern_revenue_mediated_adapter = {
+		potential = {
+			antq_law_profile_northern_trigger = yes
+		}
+		country_modifier = {
+			burghers_estate_max_tax = 0.025
+			stability_cost_efficiency = 0.025
+			global_tribes_estate_power = 0.03
+			global_tribes_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			nobles_estate
+			tribes_estate
+		}
+	}
+	antq_s3_northern_revenue_local_adapter = {
+		potential = {
+			antq_law_profile_northern_trigger = yes
+		}
+		country_modifier = {
+			global_production_efficiency = 0.025
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+			global_pop_food_consumption = -0.005
+			global_peasants_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s3_african_revenue_central_adapter = {
+		potential = {
+			antq_law_profile_african_trigger = yes
+		}
+		country_modifier = {
+			peasants_estate_max_tax = 0.04
+			global_monthly_control = 0.015
+			global_crown_estate_power = 0.03
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_african_revenue_mediated_adapter = {
+		potential = {
+			antq_law_profile_african_trigger = yes
+		}
+		country_modifier = {
+			burghers_estate_max_tax = 0.025
+			stability_cost_efficiency = 0.025
+			global_burghers_estate_power = 0.03
+			global_burghers_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			nobles_estate
+		}
+	}
+	antq_s3_african_revenue_local_adapter = {
+		potential = {
+			antq_law_profile_african_trigger = yes
+		}
+		country_modifier = {
+			global_production_efficiency = 0.025
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+			global_tribes_estate_power = 0.03
+			global_tribes_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
+	}
+	antq_s3_eastern_revenue_central_adapter = {
+		potential = {
+			antq_law_profile_eastern_trigger = yes
+		}
+		country_modifier = {
+			peasants_estate_max_tax = 0.04
+			global_monthly_control = 0.015
+			global_crown_estate_power = 0.03
+			global_crown_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+		}
+	}
+	antq_s3_eastern_revenue_mediated_adapter = {
+		potential = {
+			antq_law_profile_eastern_trigger = yes
+		}
+		country_modifier = {
+			burghers_estate_max_tax = 0.025
+			stability_cost_efficiency = 0.025
+			global_nobles_estate_power = 0.03
+			global_nobles_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			nobles_estate
+		}
+	}
+	antq_s3_eastern_revenue_local_adapter = {
+		potential = {
+			antq_law_profile_eastern_trigger = yes
+		}
+		country_modifier = {
+			global_production_efficiency = 0.025
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+			global_burghers_estate_power = 0.03
+			global_burghers_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+			burghers_estate
+		}
+	}
+	antq_s3_transoceanic_revenue_central_adapter = {
+		potential = {
+			antq_law_profile_transoceanic_trigger = yes
+		}
+		country_modifier = {
+			peasants_estate_max_tax = 0.04
+			global_monthly_control = 0.015
+			global_clergy_estate_power = 0.03
+			global_clergy_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			crown_estate
+			clergy_estate
+		}
+	}
+	antq_s3_transoceanic_revenue_mediated_adapter = {
+		potential = {
+			antq_law_profile_transoceanic_trigger = yes
+		}
+		country_modifier = {
+			burghers_estate_max_tax = 0.025
+			stability_cost_efficiency = 0.025
+			global_tribes_estate_power = 0.03
+			global_tribes_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			burghers_estate
+			nobles_estate
+			tribes_estate
+		}
+	}
+	antq_s3_transoceanic_revenue_local_adapter = {
+		potential = {
+			antq_law_profile_transoceanic_trigger = yes
+		}
+		country_modifier = {
+			global_production_efficiency = 0.025
+			monthly_towards_decentralization = societal_value_minor_monthly_move
+			global_peasants_estate_power = 0.03
+			global_peasants_estate_power = 0.02
+		}
+		years = 2
+		estate_preferences = {
+			peasants_estate
+			tribes_estate
+		}
 	}
 }
 

@@ -31,6 +31,9 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   river, Caspian, Gulf, merchant, and transport craft.
 - [ ] Restore Parthia's law screen. Prove all opening profiles initialize,
   display, and can change their own laws without seeing foreign profile laws.
+  New static candidate: all 463 starts select four profile-filtered policies
+  through exact engine law keys on universally owned depth-zero advances;
+  182 deeper profile groups remain. Runtime Parthia/control proof remains.
 - [ ] Gate every privilege by country profile, culture, religion, reform, or a
   justified universal category. No polity may see or grant a foreign grant.
   Static complete: 376 custom grants resolve to 6-19 visible per tag across all
@@ -39,6 +42,11 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 - [ ] Gate genuinely Roman, Han, Iranian, Indian, steppe, and other regional
   buildings. Shared buildings must use neutral ancient identities; Suebi must
   not see Roman institutional buildings without a documented adoption path.
+  Static complete: the 200-family ledger has 14 exact-country, four
+  culture-group, and 23 Roman-adoption gates. All 3,888 opening placements
+  obey them; 18 portable Latin/region-specific labels are neutralized; 465
+  installed buildings remain quarantined. The 463-country visibility audit
+  gives Suebi zero exact foreign and zero Roman cards. Focused runtime remains.
 - [ ] Partition advance unlock packages by profile. A visible advance may not
   advertise foreign laws, privileges, buildings, reforms, or units, and no
   advance tooltip may list more than eight substantive unlocks.
@@ -49,15 +57,17 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 
 - [x] Rebuild all sixteen loading screens against the installed vanilla
   eight-mesh contract.
-- [x] Re-audit loading screens against the installed vanilla scene stack after
-  the reported ghosted/blurred new-game render. Compare exact texture formats,
-  alpha, layer ordering, transforms, and shader use; require fresh vanilla/mod
-  captures through several new-game percentages before accepting the repair.
-  A fresh 8% capture rejected automatic disjoint bands: mesh motion exposed
-  cracks around buildings. The replacement uses an opaque clean plate plus one
-  contiguous foreground plane; six meshes are transparent. Arikamedu, Ephesus,
-  and Pompeii are clean through fresh 8-14% motion captures; full validation is
-  155/155 and paired smoke adds zero new or mod-unique log lines.
+- [x] Rebuild loading screens from the installed vanilla layer contract. The
+  2026-07-30 manual capture still shows a severely ghosted, blurred composite.
+  Compare vanilla/mod scene definitions and textures byte-for-byte where useful;
+  audit alpha, opacity, compression, mipmaps, layer ownership/order, transforms,
+  dimensions, and shaders. Accept only after side-by-side vanilla/mod captures
+  at several new-game percentages show an opaque sharp plate, intentional
+  parallax, no doubled scenery, seams, halos, or transparency bleed on all 16.
+  Final candidate: all 16 use the complete opaque master, three transparent
+  compatibility planes, and four exclusive whole-object accents totaling
+  3.0-3.8% of the frame. Fresh Arikamedu 8%/61%, Forum 82%, and Pompeii 98%
+  captures are clean; final 157/157 validation and paired smoke are green.
 - [x] Replace the complete installed location-illustration union: terrain,
   settlements, forts, ports, sacred buildings, workshops, weather, and
   foreground layers. No medieval structure or unintended blur may remain.
@@ -186,10 +196,10 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   apiaries, and managed pastoral production. Exact climate, topography,
   vegetation, region, river, and coast gates cap marginal output at 2-3 levels;
   36 direct icons come from nine reviewed four-up EU5-referenced sheets.
-- Static green: all 16 loading panoramas use a clean DXT1 background, one
-  contiguous DXT5 foreground, and six transparent compatibility planes. Eleven
-  selectable scenes receive exact-path copies; the 128-layer ledger rejects
-  duplicate RGB, overlap, wrong alpha, stale redirects, and wrong layer order.
+- Static green: all 16 loading panoramas use an exact-master DXT1 background,
+  four restrained DXT5 accent planes, and three transparent compatibility
+  planes. Eleven selectable scenes receive exact-path copies; the 128-layer
+  ledger rejects overlap, broad animation, stale redirects, and wrong order.
 - Static green: all four installed location resolvers yield 255 textures. 154
   structural/sacred paths use 48 ancient masters, five ancient monuments remain
   verbatim, and 96 natural/effect layers are audited period-neutral. All 644

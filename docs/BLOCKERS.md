@@ -26,6 +26,10 @@ Evidence: `docs/screens/20260731_020229/`,
 `docs/screens/20260731_022915/`; universal-adapter probe:
 `docs/screens/20260731_laws_levies/parthia_laws.png`.
 
+Candidate 2026-07-31: exact installed holder keys now replace the five failed
+namespaced-holder approaches. Static setup is green for all 463 starts; this
+blocker remains open until fresh Parthia and control-country runtime.
+
 ## 2026-07-30 - S2-P3 focused panels did not leave the front-end
 
 Status: bounded driver-evidence limitation; S2 content gates pass.
@@ -171,3 +175,16 @@ rule, fresh Rome/Parthia/Suebi panel captures remain open without invalidating
 the clean paired smoke. Evidence:
 `docs/screens/S3_RUNTIME_20260731/manual_selection_start_attempt1.png` and
 `manual_selection_start_attempt2.png`.
+# 2026-07-31 - Building-isolation smoke deferred by shared EU5 lease
+
+Two lease checks after the 157/157 static pass found the live
+`baseline_v25_city` ENDORË game session still owning EU5. No process was
+touched. The exact-tree paired smoke and focused building-panel proof remain
+required before commit.
+
+## 2026-07-31 - Semantic-loading runtime deferred by shared EU5 lease
+
+Two checks after the 157/157 pass found ENDORË's valid PID 14284 lease. No
+process was touched. Fingerprint
+`5185eb8577f542b8cff0d3747d9087d4bc1c1cffc4a74fd84d0d3f855dd4a75d`
+still requires paired smoke and fresh percentage captures.

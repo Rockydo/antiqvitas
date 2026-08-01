@@ -24,6 +24,9 @@ ROOT = Path(__file__).resolve().parents[1]
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
 TAG_MAP = ROOT / "docs/world_1ad/tag_map.json"
 LAW_OUTPUT = ROOT / "in_game/common/laws/01_antiquitas_s2_profile_laws.txt"
+LEGACY_OPENING_ADAPTER_OUTPUT = (
+    ROOT / "in_game/common/laws/99_antiquitas_s3_opening_law_adapters.txt"
+)
 TRIGGER_OUTPUT = ROOT / "in_game/common/scripted_triggers/00_antiquitas_s2_law_profiles.txt"
 PROFILE_LEDGER = ROOT / "docs/m6/ancient_law_profiles.csv"
 OPTION_LEDGER = ROOT / "docs/m6/ancient_law_options.csv"
@@ -529,6 +532,16 @@ THEMES = (
 
 STANCE_KEYS = ("central", "mediated", "local")
 
+# These exact installed law keys are unlocked by the two universally owned
+# depth-zero advances in M8. Unlike namespaced law holders, EU5's bookmark
+# initializer preserves them when selected in a starting government.
+OPENING_ADAPTERS = (
+    ("legal_code_law", "courts"),
+    ("education_masses_law", "status"),
+    ("tribal_legal_basis_law", "local_rule"),
+    ("administrative_system", "revenue"),
+)
+
 LATE_OPTIONS = (
     LateOption(
         "roman", "status", "antq_s2_roman_status_antonine_grant",
@@ -897,6 +910,10 @@ def option_key(profile: str, theme: str, stance: str) -> str:
     return f"antq_s2_{profile}_{theme}_{stance}"
 
 
+def opening_adapter_option_key(profile: str, theme: str, stance: str) -> str:
+    return f"antq_s3_{profile}_{theme}_{stance}_adapter"
+
+
 def profile_by_key() -> dict[str, Profile]:
     return {profile.key: profile for profile in PROFILES}
 
@@ -910,6 +927,24 @@ def starting_laws_by_tag() -> dict[str, tuple[tuple[str, str], ...]]:
                 option_key(profile_key, theme.key, profiles[profile_key].starting_stance),
             )
             for theme in THEMES
+        )
+        for tag, profile_key in tag_profiles().items()
+    }
+
+
+def opening_adapter_laws_by_tag() -> dict[str, tuple[tuple[str, str], ...]]:
+    profiles = profile_by_key()
+    return {
+        tag: tuple(
+            (
+                law,
+                opening_adapter_option_key(
+                    profile_key,
+                    theme,
+                    profiles[profile_key].starting_stance,
+                ),
+            )
+            for law, theme in OPENING_ADAPTERS
         )
         for tag, profile_key in tag_profiles().items()
     }
@@ -930,7 +965,13 @@ def all_law_options() -> set[tuple[str, str]]:
         for theme in THEMES
         for stance in STANCE_KEYS
     }
-    return base | {
+    adapters = {
+        (law, opening_adapter_option_key(profile.key, theme, stance))
+        for law, theme in OPENING_ADAPTERS
+        for profile in PROFILES
+        for stance in STANCE_KEYS
+    }
+    return base | adapters | {
         (law_key(option.profile, option.theme), option.key)
         for option in LATE_OPTIONS
     } | {
@@ -1042,6 +1083,73 @@ def render_laws() -> str:
                 lines.extend(f"\t\t\t{estate}" for estate in option.preferences)
                 lines.extend(("\t\t}", "\t}"))
             lines.append("}")
+    return "\n".join(lines) + "\n"
+
+
+def opening_adapter_policy_blocks() -> dict[str, str]:
+    """Render only the ancient policy children for each exact law holder."""
+    blocks: dict[str, str] = {}
+    profiles = profile_by_key()
+    themes = {theme.key: theme for theme in THEMES}
+    for law, theme_key in OPENING_ADAPTERS:
+        theme = themes[theme_key]
+        lines: list[str] = []
+        for profile in PROFILES:
+            for stance_index, stance in enumerate(STANCE_KEYS):
+                option = opening_adapter_option_key(
+                    profile.key, theme.key, stance
+                )
+                lines.extend((
+                    f"\t{option} = {{",
+                    "\t\tpotential = {",
+                    f"\t\t\tantq_law_profile_{profile.key}_trigger = yes",
+                    "\t\t}",
+                    "\t\tcountry_modifier = {",
+                ))
+                lines.extend(
+                    f"\t\t\t{modifier} = {value}"
+                    for modifier, value in option_effects(
+                        profile, theme, stance_index
+                    )
+                )
+                preferences = tuple(dict.fromkeys(
+                    (*theme.preferences[stance_index], profile.estates[stance_index])
+                ))
+                lines.extend((
+                    "\t\t}",
+                    "\t\tyears = 2",
+                    "\t\testate_preferences = {",
+                    *(f"\t\t\t{estate}" for estate in preferences),
+                    "\t\t}",
+                    "\t}",
+                ))
+        blocks[law] = "\n".join(lines) + "\n"
+    return blocks
+
+
+def opening_adapter_definitions() -> dict[str, str]:
+    definitions: dict[str, str] = {}
+    themes = {theme.key: theme for theme in THEMES}
+    policy_blocks = opening_adapter_policy_blocks()
+    for law, theme_key in OPENING_ADAPTERS:
+        definitions[law] = (
+            f"{law} = {{\n"
+            f"\tlaw_category = {themes[theme_key].category}\n"
+            "\tpotential = { }\n"
+            f"{policy_blocks[law]}"
+            "}\n"
+        )
+    return definitions
+
+
+def render_opening_adapters() -> str:
+    """Return exact-key bodies for insertion into their installed VFS files."""
+    lines = [
+        "# Generated by tools/s2_ancient_laws.py.",
+        "# Inserted into exact installed filenames by m12_system_quarantine.py.",
+    ]
+    for definition in opening_adapter_definitions().values():
+        lines.extend(("", definition.rstrip()))
     return "\n".join(lines) + "\n"
 
 
@@ -1188,6 +1296,18 @@ def localization(language: str) -> str:
                     (option, f"{getattr(profile, stance)} {theme.labels[stance_index]}"),
                     (f"{option}_desc", theme.descriptions[stance_index]),
                 ))
+    themes = {theme.key: theme for theme in THEMES}
+    for _law, theme_key in OPENING_ADAPTERS:
+        theme = themes[theme_key]
+        for profile in PROFILES:
+            for stance_index, stance in enumerate(STANCE_KEYS):
+                option = opening_adapter_option_key(
+                    profile.key, theme.key, stance
+                )
+                rows.extend((
+                    (option, f"{getattr(profile, stance)} {theme.labels[stance_index]}"),
+                    (f"{option}_desc", theme.descriptions[stance_index]),
+                ))
     rows.extend(
         pair
         for option in LATE_OPTIONS
@@ -1232,8 +1352,10 @@ def validate_content() -> None:
             f"legal profiles must cover all {roster_count} roster tags; "
             f"found {len(assignments)}"
         )
-    if len(profile_law_pairs()) != 182 or len(all_law_options()) != 584:
-        failures.append("legal breadth must be 182 groups and 584 options")
+    if len(profile_law_pairs()) != 182 or len(all_law_options()) != 740:
+        failures.append(
+            "legal breadth must be 182 profile groups and 740 total options"
+        )
     if {theme.category for theme in THEMES} - LAW_CATEGORIES:
         failures.append("unsupported legal category")
     for profile in PROFILES:
@@ -1323,13 +1445,19 @@ def validate_content() -> None:
             continue
         encoding = (
             "utf-8-sig"
-            if path.suffix == ".yml" or path in {LAW_OUTPUT, TRIGGER_OUTPUT}
+            if path.suffix == ".yml"
+            or path in {LAW_OUTPUT, TRIGGER_OUTPUT}
             else "utf-8"
         )
         if path.read_text(encoding=encoding) != expected:
             failures.append(f"stale generated law artifact {path.relative_to(ROOT)}")
     if failures:
         raise ValueError("\n".join(failures))
+    if LEGACY_OPENING_ADAPTER_OUTPUT.exists():
+        raise ValueError(
+            "legacy late-loading opening-law adapter file still exists; exact "
+            "keys must be emitted only in their installed VFS filenames"
+        )
     counts: dict[str, int] = {}
     for profile in assignments.values():
         counts[profile] = counts.get(profile, 0) + 1
@@ -1351,11 +1479,13 @@ def main() -> int:
     mode.add_argument("--check", action="store_true")
     args = parser.parse_args()
     if args.write:
+        LEGACY_OPENING_ADAPTER_OUTPUT.unlink(missing_ok=True)
         for path, text in outputs().items():
             path.parent.mkdir(parents=True, exist_ok=True)
             encoding = (
                 "utf-8-sig"
-                if path.suffix == ".yml" or path in {LAW_OUTPUT, TRIGGER_OUTPUT}
+                if path.suffix == ".yml"
+                or path in {LAW_OUTPUT, TRIGGER_OUTPUT}
                 else "utf-8"
             )
             path.write_text(text, encoding=encoding, newline="\n")

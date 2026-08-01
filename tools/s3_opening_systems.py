@@ -10,6 +10,7 @@ import re
 from pathlib import Path
 
 from dates import M2_MIRROR_LANGUAGES
+from s2_ancient_laws import opening_adapter_laws_by_tag
 
 ROOT = Path(__file__).resolve().parents[1]
 LOC_ROOT = ROOT / "main_menu/localization"
@@ -17,7 +18,9 @@ GOODS = ROOT / "docs/m5/custom_goods.csv"
 GOODS_SCRIPT = ROOT / "in_game/common/goods/00_antiquitas_raw_goods.txt"
 ADVANCES = ROOT / "in_game/common/advances/00_antiquitas_m8_tree.txt"
 LAWS = ROOT / "in_game/common/laws/01_common.txt"
+OPENING_LAW_ROOT = ROOT / "in_game/common/laws"
 SETUP = ROOT / "main_menu/setup/start/10_countries.txt"
+TAG_MAP = ROOT / "docs/world_1ad/tag_map.json"
 REPORT = ROOT / "docs/s3/opening_systems.csv"
 REGIONAL_BUILDINGS = ROOT / "in_game/common/building_types/00_antiquitas_regional_buildings.txt"
 MARKET_SUPPLY = ROOT / "docs/m5/opening_market_building_seeds.csv"
@@ -159,8 +162,9 @@ def report() -> str:
         ("processed_food_recipe", "1 wheat + 0.15 lumber + 0.05 tools -> 1.10", "pass"),
         ("opening_market_workshops", f"{market_rows} direct placements", "pass"),
         ("opening_rgo_capacity", "global_max_rgo_size_modifier=0.10", "pass"),
-        ("parthian_profile_laws", "14 Iranian groups + Arsacid autonomy", "pass"),
-        ("mandatory_law_adapter", "heir_religion_law retained and ancientized", "pass"),
+        ("opening_profile_laws", "463 tags x 4 engine-key opening policies", "pass"),
+        ("parthian_deeper_laws", "14 Iranian research groups retained", "pass"),
+        ("mandatory_law_adapter", "5 exact engine categories retained and ancientized", "pass"),
         ("engine_bridge_localization", "16 law/policy categories ancientized", "pass"),
         ("steel_text", "all 11 client mirrors", "pass"),
     )
@@ -224,12 +228,58 @@ def validate() -> list[str]:
         failures.append("universally owned Provincial Census lacks opening RGO capacity")
 
     law = top_level_block(LAWS.read_text(encoding="utf-8-sig"), "heir_religion_law")
-    if "ANTIQVITAS mounted-system quarantine" in law or "potential = { always = no }" in law:
+    if "ANTIQVITAS mounted-system quarantine" in law or re.search(
+        r"(?m)^\tpotential\s*=\s*\{\s*always\s*=\s*no",
+        law,
+    ):
         failures.append("mandatory heir_religion_law remains quarantined")
 
-    parthia = top_level_block(SETUP.read_text(encoding="utf-8-sig"), "XAH")
-    if re.search(r"(?m)^\s*laws\s*=", parthia):
-        failures.append("Parthia emits blocked custom law assignments during setup")
+    setup_text = SETUP.read_text(encoding="utf-8-sig")
+    engine_tags = {
+        row["design_tag"]: row["engine_tag"]
+        for row in json.loads(TAG_MAP.read_text(encoding="utf-8"))["entries"]
+    }
+    opening_by_tag = opening_adapter_laws_by_tag()
+    for design_tag, expected_opening in opening_by_tag.items():
+        country = top_level_block(setup_text, engine_tags[design_tag])
+        for law_key, option_key in expected_opening:
+            if not re.search(
+                rf"(?m)^\s*{re.escape(law_key)}\s*=\s*"
+                rf"{re.escape(option_key)}\s*$",
+                country,
+            ):
+                failures.append(
+                    f"{design_tag} lacks opening law {law_key}={option_key}"
+                )
+        if re.search(r"(?m)^\s*antq_s2_[a-z_]+_law\s*=", country):
+            failures.append(
+                f"{design_tag} still emits stripped namespaced law holders"
+            )
+    expected_opening = opening_by_tag["PAR"]
+    opening_text = "\n".join(
+        path.read_text(encoding="utf-8-sig")
+        for path in sorted(OPENING_LAW_ROOT.glob("*.txt"))
+    )
+    for law_key, _option_key in expected_opening:
+        occurrences = len(re.findall(
+            rf"(?m)^{re.escape(law_key)}\s*=\s*\{{",
+            opening_text,
+        ))
+        if occurrences != 1:
+            failures.append(
+                f"opening law adapter {law_key} has {occurrences} definitions"
+            )
+            continue
+        block = top_level_block(opening_text, law_key)
+        if re.search(
+            r"(?m)^\tpotential\s*=\s*\{\s*always\s*=\s*no",
+            block,
+        ):
+            failures.append(f"opening law adapter {law_key} is quarantined")
+        if "ANTIQVITAS legacy-policy quarantine" not in block:
+            failures.append(
+                f"opening law adapter {law_key} does not preserve hidden legacy policies"
+            )
     advances_text = ADVANCES.read_text(encoding="utf-8-sig")
     for ordinal in (1, 2, 3):
         holder = top_level_block(

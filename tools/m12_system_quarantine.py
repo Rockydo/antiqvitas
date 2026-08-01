@@ -24,6 +24,8 @@ import json
 import re
 from pathlib import Path
 
+from s2_ancient_laws import opening_adapter_policy_blocks
+
 from legacy_institutions import neutralize_references
 
 
@@ -91,6 +93,7 @@ TOP_LEVEL_KEY = re.compile(r"^\s*(?P<key>[A-Za-z_][A-Za-z0-9_]*)\s*=\s*\{")
 HRE_YEARLY_LINK = "\t\tinternational_organization:hre = { circles_are_active = yes }"
 HRE_YEARLY_GUARD = "\t\tinternational_organization:hre ?= { circles_are_active = yes }"
 MARKER = "ANTIQVITAS mounted-system quarantine"
+LEGACY_POLICY_MARKER = "ANTIQVITAS legacy-policy quarantine"
 MARKET_SCOPE_GUARDS = {
     ("generic_actions", "religious_factions.txt"): 1,
     ("peace_treaties", "sound_toll_exemption.txt"): 1,
@@ -107,7 +110,13 @@ RETAINED_ENGINE_ADAPTERS = {
     # succession law. False-gating it produces "has no heir_religion_law"
     # for the roster and can suppress the law UI. Its player-facing text is
     # ancientized separately; retaining the category is an engine contract.
-    "laws": {"heir_religion_law"},
+    "laws": {
+        "heir_religion_law",
+        "legal_code_law",
+        "education_masses_law",
+        "tribal_legal_basis_law",
+        "administrative_system",
+    },
     "country_interactions": {
         "ask_for_access_for_war_side",
         "ask_for_money",
@@ -231,6 +240,130 @@ RETAINED_ENGINE_ADAPTERS = {
         "cb_tribal_feud",
     },
 }
+
+
+def _consume_block(lines: list[str], start: int, base_depth: int) -> int:
+    """Return the first index after a brace block beginning at ``start``."""
+    depth = base_depth
+    index = start
+    while index < len(lines):
+        depth += brace_delta(lines[index])
+        index += 1
+        if depth == base_depth:
+            return index
+    raise ValueError("unbalanced retained law child block")
+
+
+def _hide_legacy_policy(block: list[str]) -> list[str]:
+    """Keep a referenced installed policy resolvable but never selectable."""
+    rendered = [block[0]]
+    index = 1
+    depth = 1
+    replaced_potential = False
+    while index < len(block) - 1:
+        line = block[index]
+        code = structural_code(line)
+        child = TOP_LEVEL_KEY.match(code) if depth == 1 else None
+        if child and child.group("key") == "potential":
+            end = _consume_block(block, index, depth)
+            potential = block[index:end]
+            if len(potential) == 1:
+                rendered.append(
+                    re.sub(
+                        r"\{",
+                        "{ always = no ",
+                        potential[0],
+                        count=1,
+                    ).rstrip()
+                    + f" # {LEGACY_POLICY_MARKER}"
+                )
+            else:
+                rendered.append(potential[0].rstrip())
+                rendered.append(
+                    "\t\t\talways = no "
+                    f"# {LEGACY_POLICY_MARKER}"
+                )
+                rendered.extend(line.rstrip() for line in potential[1:])
+            replaced_potential = True
+            index = end
+            continue
+        rendered.append(line.rstrip())
+        depth += brace_delta(line)
+        index += 1
+    if not replaced_potential:
+        rendered.insert(
+            1,
+            "\t\tpotential = { always = no } "
+            f"# {LEGACY_POLICY_MARKER}",
+        )
+    rendered.append(block[-1])
+    return rendered
+
+
+def _adapt_retained_law(block: list[str], key: str, policies: str) -> list[str]:
+    """Open an engine law to antiquity while preserving hidden legacy policies."""
+    rendered = [block[0]]
+    index = 1
+    depth = 1
+    root_controls = {
+        "potential": "\tpotential = { }",
+        "allow": "\tallow = { }",
+        "locked": "\tlocked = { always = no }",
+    }
+    while index < len(block) - 1:
+        line = block[index]
+        code = structural_code(line)
+        child = TOP_LEVEL_KEY.match(code) if depth == 1 else None
+        if child:
+            child_key = child.group("key")
+            end = _consume_block(block, index, depth)
+            if child_key in root_controls:
+                rendered.append(root_controls[child_key])
+            else:
+                rendered.extend(_hide_legacy_policy(block[index:end]))
+            index = end
+            continue
+        rendered.append(line.rstrip())
+        depth += brace_delta(line)
+        index += 1
+    rendered.extend(policies.rstrip().splitlines())
+    rendered.append(block[-1])
+    return rendered
+
+
+def replace_retained_law_definitions(text: str) -> tuple[str, set[str]]:
+    """Adapt retained law roots inside their original mounted filenames."""
+    replacements = opening_adapter_policy_blocks()
+    lines = text.splitlines()
+    rendered: list[str] = []
+    found: set[str] = set()
+    index = 0
+    depth = 0
+
+    while index < len(lines):
+        line = lines[index]
+        code = structural_code(line)
+        top_level = TOP_LEVEL_KEY.match(code) if depth == 0 else None
+        if top_level and top_level.group("key") in replacements:
+            key = top_level.group("key")
+            if brace_delta(line) <= 0:
+                raise ValueError(
+                    f"unsupported one-line retained law definition: {key}"
+                )
+            end = _consume_block(lines, index, 0)
+            rendered.extend(
+                _adapt_retained_law(lines[index:end], key, replacements[key])
+            )
+            found.add(key)
+            index = end
+            continue
+        rendered.append(line.rstrip())
+        depth += brace_delta(line)
+        index += 1
+
+    if depth != 0:
+        raise ValueError("unbalanced law source while replacing retained roots")
+    return "\n".join(rendered) + "\n", found
 
 
 def sha256(data: bytes) -> str:
@@ -408,6 +541,8 @@ def render_quarantine(
     raw = source.read_bytes()
     has_bom = raw.startswith(b"\xef\xbb\xbf")
     text = raw.decode("utf-8-sig")
+    if surface == "laws":
+        text, _ = replace_retained_law_definitions(text)
     rendered = [
         f"# Generated by tools/m12_system_quarantine.py --write ({surface}).",
         f"# Installed source SHA256: {sha256(raw)}",

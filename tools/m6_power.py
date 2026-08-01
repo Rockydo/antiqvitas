@@ -15,6 +15,7 @@ from dates import AntqDate, BiographyDate, M2_MIRROR_LANGUAGES
 from goods_integration import bindings as goods_bindings, modifier_additions, modifier_name
 from s2_ancient_laws import (
     all_law_options as s2_all_law_options,
+    opening_adapter_laws_by_tag as s2_opening_adapter_laws_by_tag,
     profile_law_pairs as s2_profile_law_pairs,
     starting_laws_by_tag as s2_starting_laws_by_tag,
 )
@@ -2513,10 +2514,17 @@ def government_block(
     lines.append("\t\t\t\tprivilege = {")
     lines.extend(f"\t\t\t\t\t{privilege}" for privilege in pipe_values(row["privileges"], "government privileges"))
     lines.append("\t\t\t\t}")
-    # M8 retains the selected policies in its sourced ledger, but the installed
-    # build does not award tag-gated law-holder advances during setup. Emitting
-    # them here creates hundreds of active "doesn't have the advance" errors.
-    # Keep runtime setup green until the documented blocker has a new contract.
+    # Namespaced law holders are stripped during bookmark initialization. These
+    # four exact installed keys are different: M8 places them on universally
+    # owned depth-zero advances, and the S3 adapter file replaces their medieval
+    # policies with profile-filtered ancient settlements.
+    adapter_laws = s2_opening_adapter_laws_by_tag()[row["design_tag"]]
+    lines.append("\t\t\t\tlaws = {")
+    lines.extend(
+        f"\t\t\t\t\t{law} = {option}"
+        for law, option in adapter_laws
+    )
+    lines.append("\t\t\t\t}")
     lines.extend(f"\t\t\t\t{key} = {value}" for key, value in assignments(row["societal_values"], "government societal values"))
     lines.append("\t\t\t}")
     return lines

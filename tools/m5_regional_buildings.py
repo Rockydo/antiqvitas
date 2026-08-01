@@ -28,6 +28,7 @@ SEEDS = ROOT / "docs/m5/regional_building_seeds.csv"
 CORE_MARKET_SEEDS = ROOT / "docs/m5/opening_market_building_seeds.csv"
 REGIONAL_SEED_BUNDLES = ROOT / "docs/m5/s2_britain_ireland_building_seeds.csv"
 FOOD_SEEDS = ROOT / "docs/m5/food_building_seeds.csv"
+TAG_MAP = ROOT / "docs/world_1ad/tag_map.json"
 URBAN_NODES = ROOT / "docs/m5/urban_nodes.csv"
 OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
@@ -434,6 +435,64 @@ ROMAN_ECONOMY_FAMILIES = {
     "antq_reg_temple_precinct", "antq_reg_collegia_hall", "antq_reg_bronze_workers_collegium",
     "antq_reg_lead_pipeworks", "antq_reg_unguentarium",
 }
+FAMILY_EXACT_TAG_GATES = {
+    "antq_reg_south_arabian_terrace_sluices": ("HAD", "HIM", "QAT", "SAB"),
+    "antq_reg_arabian_caravan_station": ("AGR", "BED", "NAB", "THM"),
+    "antq_reg_aromatic_resin_sorting_house": ("HAD", "HIM", "QAT", "SAB"),
+    "antq_reg_eastern_arabian_aflaj": ("GRH", "OMN"),
+    "antq_reg_marcomannic_royal_compound": ("MCM",),
+    "antq_reg_semnonian_sacred_grove": ("SEM",),
+    "antq_reg_rhine_frontier_market": ("BRC", "BTV", "CHT"),
+    "antq_reg_batavian_auxiliary_muster": ("BTV",),
+    "antq_reg_aestian_amber_sorting_ground": ("AES",),
+    "antq_reg_vistula_migration_staging": ("GUT",),
+    "antq_reg_north_sea_boat_landing": ("FRI", "LAN"),
+    "antq_reg_southern_rock_shelter_custody": ("LMP", "ZHF"),
+    "antq_reg_seasonal_waterhole_camp": ("LMP", "ZHF"),
+    "antq_reg_riverine_gathering_ground": ("LMP", "ZHF"),
+}
+FAMILY_CULTURE_GROUP_GATES = {
+    "antq_reg_germanic_assembly_field": ("antq_germanic_group",),
+    "antq_reg_silk_loom": (
+        "antq_sinitic_group", "antq_korean_group", "antq_japonic_group",
+    ),
+    "antq_reg_silk_drapery": (
+        "antq_sinitic_group", "antq_korean_group", "antq_japonic_group",
+    ),
+    "antq_reg_lacquer_workshop": (
+        "antq_sinitic_group", "antq_korean_group", "antq_japonic_group",
+    ),
+}
+FAMILY_REGION_RESTRICTIONS = {
+    **{key: frozenset({"Arabia"}) for key in (
+        "antq_reg_south_arabian_terrace_sluices",
+        "antq_reg_arabian_caravan_station",
+        "antq_reg_aromatic_resin_sorting_house",
+        "antq_reg_eastern_arabian_aflaj",
+    )},
+    **{key: frozenset({"Germania"}) for key in (
+        "antq_reg_marcomannic_royal_compound",
+        "antq_reg_germanic_assembly_field",
+        "antq_reg_semnonian_sacred_grove",
+        "antq_reg_rhine_frontier_market",
+        "antq_reg_batavian_auxiliary_muster",
+        "antq_reg_north_sea_boat_landing",
+    )},
+    "antq_reg_aestian_amber_sorting_ground": frozenset({"Baltic"}),
+    # Gutones are a Germania polity profile on the lower-Vistula Baltic macro.
+    "antq_reg_vistula_migration_staging": frozenset({"Germania"}),
+    **{key: frozenset({"Africa"}) for key in (
+        "antq_reg_southern_rock_shelter_custody",
+        "antq_reg_seasonal_waterhole_camp",
+        "antq_reg_riverine_gathering_ground",
+    )},
+    **{key: frozenset({"China", "Korea", "Japan"}) for key in (
+        "antq_reg_silk_loom",
+        "antq_reg_silk_drapery",
+        "antq_reg_lacquer_workshop",
+    )},
+    **{key: frozenset({"Rome"}) for key in ROMAN_ECONOMY_FAMILIES},
+}
 CITY_ONLY_FAMILIES = {
     "antq_reg_forum_basilica", "antq_reg_horrea_complex", "antq_reg_aqueduct_distribution",
     "antq_reg_thermae_complex", "antq_reg_insulae_quarter", "antq_reg_temple_precinct",
@@ -474,6 +533,13 @@ def owner_regions() -> dict[str, str]:
             for row in csv.DictReader(line for line in handle if not line.startswith("#"))
         }
     return result
+
+
+def engine_tags() -> dict[str, str]:
+    return {
+        row["design_tag"]: row["engine_tag"]
+        for row in json.loads(TAG_MAP.read_text(encoding="utf-8"))["entries"]
+    }
 
 
 def good_prices() -> dict[str, float]:
@@ -671,6 +737,13 @@ def load() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
                 f"{prefix}: {row['family']} is outside its reviewed production "
                 f"macros {sorted(allowed_macros)}"
             )
+        allowed_regions = FAMILY_REGION_RESTRICTIONS.get(row["family"])
+        owner_region = regions.get(row["location"])
+        if allowed_regions is not None and owner_region not in allowed_regions:
+            failures.append(
+                f"{prefix}: {row['family']} is outside its reviewed polity "
+                f"regions {sorted(allowed_regions)}"
+            )
         if row["macro"] in macro_counts:
             macro_counts[row["macro"]] += 1
         used.add(row["family"])
@@ -693,6 +766,7 @@ def definition(families: list[dict[str, str]]) -> str:
         "# Reusable AD 1 regional production specials; ledger: docs/m5/regional_building_families.csv.",
         "",
     ]
+    tags = engine_tags()
     for row in families:
         lines.extend((f"{row['key']} = {{", "\taudio_tier = 2", "\tis_special = no", "\tis_foreign = no",
                       f"\tpop_type = {row['pop_type']}", "\tmax_levels = guild_max_level", "\tstartup_ramp_target = guild_startup_ramp_target", f"\tcategory = {row['category']}",
@@ -708,6 +782,29 @@ def definition(families: list[dict[str, str]]) -> str:
                 "\t\t\tculture = { has_culture_group = culture_group:antq_iberian_group }",
                 "\t\t\tculture = { has_culture_group = culture_group:antq_balkan_group }",
                 "\t\t\thas_embraced_institution = institution:antq_roman_law_engineering",
+                "\t\t}",
+                "\t}",
+            ))
+        elif row["key"] in FAMILY_EXACT_TAG_GATES:
+            lines.extend((
+                "\tcountry_potential = {",
+                "\t\tOR = {",
+                *(
+                    f"\t\t\thas_or_had_tag = {tags[design_tag]}"
+                    for design_tag in FAMILY_EXACT_TAG_GATES[row["key"]]
+                ),
+                "\t\t}",
+                "\t}",
+            ))
+        elif row["key"] in FAMILY_CULTURE_GROUP_GATES:
+            lines.extend((
+                "\tcountry_potential = {",
+                "\t\tOR = {",
+                *(
+                    "\t\t\tculture = { has_culture_group = "
+                    f"culture_group:{culture_group} }}"
+                    for culture_group in FAMILY_CULTURE_GROUP_GATES[row["key"]]
+                ),
                 "\t\t}",
                 "\t}",
             ))

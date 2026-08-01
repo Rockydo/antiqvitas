@@ -676,6 +676,142 @@ def wait_for_transition_log(
     return False
 
 
+def loading_progress(image) -> float | None:
+    """Estimate EU5's rendered new-game progress bar without OCR.
+
+    The installed GUI uses a gold contiguous fill inside a dark horizontal
+    track. Sampling its centre avoids the ornamental gold frame and remains
+    stable across the fixed 1920x1080 client plus Windows title bar.
+    """
+    rgb = image.convert("RGB")
+    y = round(rgb.height * 0.919)
+    start = round(rgb.width * 0.061)
+    end = round(rgb.width * 0.940)
+    if end - start < 100:
+        return None
+    row = [rgb.getpixel((x, y)) for x in range(start, end)]
+    gold = [
+        red > 90 and green > 55 and red > blue * 1.45 and green > blue * 1.15
+        for red, green, blue in row
+    ]
+    radius = 4
+    smooth = [
+        sum(gold[max(0, index - radius):index + radius + 1]) >= radius + 1
+        for index in range(len(gold))
+    ]
+    # The loading bar begins with a short empty inset. Reject ordinary menu
+    # frames, whose pixels do not form a sustained left-origin gold run.
+    if sum(smooth[:32]) < 8:
+        return None
+    filled = 0
+    false_run = 0
+    for index, active in enumerate(smooth):
+        if active:
+            false_run = 0
+            filled = index + 1
+        else:
+            false_run += 1
+            if false_run >= 18:
+                filled = max(0, index - false_run + 1)
+                break
+    return max(0.0, min(100.0, 100.0 * filled / len(smooth)))
+
+
+def capture_new_game_loading(args: argparse.Namespace) -> int:
+    """Click New Game and retain sharp frames at specific rendered percentages."""
+    import pyautogui
+
+    process = process_from_state()
+    value = state()
+    user_dir = Path(str(value["user_dir"]))
+    debug = user_dir / "logs/debug.log"
+    debug_offset = debug.stat().st_size if debug.exists() else 0
+    session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
+    target_dir = ROOT / "docs/screens" / session
+    target_dir.mkdir(parents=True, exist_ok=True)
+    requested = tuple(sorted(set(args.percentages)))
+    pending = list(requested)
+    records: list[dict[str, object]] = []
+
+    save_window_capture(target_dir / "loading_000_menu.png")
+    click_normalized(args.x, args.y)
+    started = time.monotonic()
+    deadline = started + args.timeout
+    saw_loading = False
+    last_progress: float | None = None
+    while time.monotonic() < deadline:
+        try:
+            if not process.is_running() or process.status() == psutil.STATUS_ZOMBIE:
+                raise RuntimeError("EU5 exited during new-game loading capture")
+            window = activate_window()
+        except (psutil.NoSuchProcess, RuntimeError) as error:
+            print(f"gamedriver: loading capture stopped: {error}", file=sys.stderr)
+            break
+        image = pyautogui.screenshot(
+            region=(window.left, window.top, window.width, window.height)
+        )
+        progress = loading_progress(image)
+        elapsed = time.monotonic() - started
+        if progress is not None:
+            saw_loading = True
+            last_progress = progress
+            while pending and progress >= pending[0]:
+                requested_progress = pending.pop(0)
+                target = target_dir / (
+                    f"loading_{requested_progress:03d}pct_"
+                    f"observed_{round(progress):03d}.png"
+                )
+                image.save(target)
+                records.append(
+                    {
+                        "requested_percent": requested_progress,
+                        "observed_percent": round(progress, 2),
+                        "elapsed_seconds": round(elapsed, 2),
+                        "path": str(target.relative_to(ROOT)),
+                    }
+                )
+                print(
+                    f"gamedriver: captured loading {progress:.1f}% for "
+                    f"{requested_progress}% target: {target}",
+                    flush=True,
+                )
+        # State 4 is emitted after the loading presentation is finished. It is
+        # a safer terminal than screen-colour guesses and does not require UI
+        # interaction with the newly built country selector.
+        if debug.exists():
+            with debug.open("rb") as stream:
+                stream.seek(min(debug_offset, debug.stat().st_size))
+                suffix = stream.read().decode("utf-8", errors="replace")
+            if "Setting Task state 4" in suffix and "MainMenu->Game" in suffix:
+                break
+        time.sleep(args.interval)
+
+    manifest = {
+        "started_at": now(),
+        "session": session,
+        "requested_percentages": requested,
+        "captured": records,
+        "saw_loading": saw_loading,
+        "last_observed_percent": (
+            round(last_progress, 2) if last_progress is not None else None
+        ),
+        "completed_targets": not pending,
+    }
+    manifest_path = target_dir / "loading_capture.json"
+    manifest_path.write_text(
+        json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
+    )
+    print(manifest_path)
+    if not saw_loading or len(records) < args.minimum_captures:
+        print(
+            f"gamedriver: only {len(records)} loading frames captured; "
+            f"minimum is {args.minimum_captures}",
+            file=sys.stderr,
+        )
+        return 1
+    return 0
+
+
 def enter_live_observer(args: argparse.Namespace, target_dir: Path, prefix: str) -> bool:
     """Turn the loaded country-selection map into a paused live Observer HUD."""
     # A visible country-selection map is not necessarily input-ready directly
@@ -1305,6 +1441,20 @@ def build_parser() -> argparse.ArgumentParser:
     screenshot_parser.add_argument("name")
     screenshot_parser.add_argument("--session")
     screenshot_parser.set_defaults(func=screenshot)
+    loading_parser = sub.add_parser("capture-new-game-loading")
+    loading_parser.add_argument("--session", help="evidence session directory")
+    loading_parser.add_argument("--timeout", type=int, default=900)
+    loading_parser.add_argument("--interval", type=float, default=0.25)
+    loading_parser.add_argument("--x", type=float, default=0.14)
+    loading_parser.add_argument("--y", type=float, default=0.43)
+    loading_parser.add_argument(
+        "--percentages",
+        type=int,
+        nargs="+",
+        default=[2, 5, 8, 12, 18, 25, 37, 50, 65, 80, 95],
+    )
+    loading_parser.add_argument("--minimum-captures", type=int, default=6)
+    loading_parser.set_defaults(func=capture_new_game_loading)
     click_parser = sub.add_parser("click")
     click_parser.add_argument("x", type=float, help="horizontal normalized position")
     click_parser.add_argument("y", type=float, help="vertical normalized position")

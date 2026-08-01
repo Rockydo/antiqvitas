@@ -169,6 +169,7 @@ VALIDATE_COMMANDS = (
     Command("tools/m12_system_quarantine.py", ("--check",)),
     Command("tools/s3_opening_systems.py", ("--check",)),
     Command("tools/s3_privilege_isolation.py", ("--check",)),
+    Command("tools/s3_building_isolation.py", ("--check",)),
     Command("tools/s3_cultivator_buildings.py", ("--check",)),
     Command("tools/s3_opening_market_supply.py", ("--check",)),
     Command("tools/s3_societal_values.py", ("--check",)),

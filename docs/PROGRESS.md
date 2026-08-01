@@ -8206,3 +8206,49 @@ reviewed 128px BC7 DDS.
   ancient recruitment cards.
 - Final validation passes 155/155; paired smoke adds zero new or mod-unique
   lines at `5791789bafe474ac9228e6577f3dc801f820dc8ef144e7942ba61318fac948f7`.
+
+## 2026-07-31 - Isolated reusable regional buildings
+
+- Restricted 14 named families by exact polity, four by culture group, and 23
+  Roman provincial families by Roman culture/adoption.
+- Regenerated 3,888 placements; no exact family remains under a foreign owner.
+- Neutralized 18 portable workshop labels and redistributed advance unlocks.
+- Added a 463-country visibility audit. Suebi see 84 neutral and one generic
+  Germanic family, with zero exact foreign or Roman cards.
+- Full validation passes 157/157. Two runtime attempts were deferred by the
+  shared `baseline_v25_city` EU5 lease; smoke and focused runtime remain.
+- Reopened all loading screens after the user's new capture proved the prior
+  clean-plate/parallax repair still ghosts and blurs in a real new-game load.
+
+## 2026-07-31 - Loading-stack contract rebuilt
+
+- Audited installed Rossbach: one opaque background and seven independent
+  additive-alpha subjects, `_07` nearest through `_00` farthest.
+- Rebuilt all 16 scenes from four-screen semantic guides using installed
+  Rossbach layers as style/structure reference and original 4K master RGB.
+- Static layer audit passes: at least four distinct overlays per scene,
+  exclusive ownership, <=0.05% overlap, valid BC1/BC3 mip chains, and clean
+  recomposition. Runtime new-game captures remain required.
+- Added driver-side progress-bar measurement and automatic captures at
+  2/5/8/12/18/25/37/50/65/80/95%; historical frames remeasure 8.3, 9.1,
+  14.2, and 37.0%. The shared ENDORË lease deferred live execution.
+
+## 2026-07-31 - Exact-key opening-law candidate
+
+- Rebuilt four universally unlocked installed law holders with 156
+  profile-filtered ancient options; all 463 starts select exactly four.
+- Retained 182 deeper groups and 584 existing options; the legal registry now
+  validates 740 options total. Focused generators, setup, quarantine, and
+  `pdxlint` pass; full validation and fresh Parthia runtime remain.
+
+## 2026-08-01 - Rejected and replaced the loading clean-fill model
+
+- Reproduced the report: broad semantic planes ghosted; a corrected-mask build
+  then exposed blue generated-fill holes when EU5 faded overlays at 100%.
+- Final contract uses the complete master as `_00`, transparent `_01`-`_03`,
+  and four exclusive whole-object accents in `_04`-`_07` (3.0-3.8% total).
+- Fresh New Game captures are clean: Arikamedu 8%/61%, Forum 82%, Pompeii 98%.
+  Germanic terrain/forest/buildings stay entirely in its exact master base.
+- Final validation passes 157/157; paired vanilla/mod smoke adds zero new or
+  mod-unique log lines at fingerprint
+  `12a73e47c6c5a73dc705d0b4f38887ab1949048f89944200a3d1fceae7ce1c4a`.

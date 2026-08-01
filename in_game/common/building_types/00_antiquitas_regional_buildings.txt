@@ -332,6 +332,13 @@ antq_reg_silk_loom = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_sinitic_group }
+			culture = { has_culture_group = culture_group:antq_korean_group }
+			culture = { has_culture_group = culture_group:antq_japonic_group }
+		}
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -2856,6 +2863,13 @@ antq_reg_lacquer_workshop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_sinitic_group }
+			culture = { has_culture_group = culture_group:antq_korean_group }
+			culture = { has_culture_group = culture_group:antq_japonic_group }
+		}
+	}
 	modifier = {
 		local_cultural_tradition = 0.01
 	}
@@ -4469,6 +4483,14 @@ antq_reg_south_arabian_terrace_sluices = {
 	city = yes
 	megalopolis = yes
 	build_time = infrastructure_build_time
+	country_potential = {
+		OR = {
+			has_or_had_tag = XBJ
+			has_or_had_tag = HIM
+			has_or_had_tag = QAT
+			has_or_had_tag = XBI
+		}
+	}
 	modifier = {
 		local_population_capacity = 0.02
 	}
@@ -4499,6 +4521,14 @@ antq_reg_arabian_caravan_station = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	country_potential = {
+		OR = {
+			has_or_had_tag = AGR
+			has_or_had_tag = BED
+			has_or_had_tag = NAB
+			has_or_had_tag = XEQ
+		}
+	}
 	modifier = {
 		local_merchant_capacity = 0.02
 	}
@@ -4531,6 +4561,14 @@ antq_reg_aromatic_resin_sorting_house = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			has_or_had_tag = XBJ
+			has_or_had_tag = HIM
+			has_or_had_tag = QAT
+			has_or_had_tag = XBI
+		}
+	}
 	modifier = {
 		local_merchant_power = 0.015
 	}
@@ -4562,6 +4600,12 @@ antq_reg_eastern_arabian_aflaj = {
 	city = yes
 	megalopolis = yes
 	build_time = infrastructure_build_time
+	country_potential = {
+		OR = {
+			has_or_had_tag = GRH
+			has_or_had_tag = OMN
+		}
+	}
 	modifier = {
 		local_life_expectancy = 0.01
 		local_population_capacity = 0.015
@@ -4595,6 +4639,11 @@ antq_reg_marcomannic_royal_compound = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	country_potential = {
+		OR = {
+			has_or_had_tag = XBK
+		}
+	}
 	modifier = {
 		local_max_control = 0.01
 	}
@@ -4628,6 +4677,11 @@ antq_reg_germanic_assembly_field = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_germanic_group }
+		}
+	}
 	modifier = {
 		local_cultural_tradition = 0.01
 	}
@@ -4659,6 +4713,11 @@ antq_reg_semnonian_sacred_grove = {
 	city = yes
 	megalopolis = yes
 	build_time = religious_building_time
+	country_potential = {
+		OR = {
+			has_or_had_tag = SEM
+		}
+	}
 	modifier = {
 		local_cultural_tradition = 0.012
 	}
@@ -4691,6 +4750,13 @@ antq_reg_rhine_frontier_market = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	country_potential = {
+		OR = {
+			has_or_had_tag = XDW
+			has_or_had_tag = BTV
+			has_or_had_tag = XBL
+		}
+	}
 	modifier = {
 		local_merchant_capacity = 0.015
 	}
@@ -4723,6 +4789,11 @@ antq_reg_batavian_auxiliary_muster = {
 	city = yes
 	megalopolis = yes
 	build_time = small_fort_building
+	country_potential = {
+		OR = {
+			has_or_had_tag = BTV
+		}
+	}
 	modifier = {
 		local_garrison_size = 0.015
 	}
@@ -4756,6 +4827,11 @@ antq_reg_aestian_amber_sorting_ground = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	country_potential = {
+		OR = {
+			has_or_had_tag = AES
+		}
+	}
 	modifier = {
 		local_merchant_power = 0.012
 	}
@@ -4788,6 +4864,11 @@ antq_reg_vistula_migration_staging = {
 	city = yes
 	megalopolis = yes
 	build_time = infrastructure_build_time
+	country_potential = {
+		OR = {
+			has_or_had_tag = GUT
+		}
+	}
 	modifier = {
 		local_population_capacity = 0.01
 	}
@@ -4821,6 +4902,12 @@ antq_reg_north_sea_boat_landing = {
 	city = yes
 	megalopolis = yes
 	build_time = medium_port_building_time
+	country_potential = {
+		OR = {
+			has_or_had_tag = XBM
+			has_or_had_tag = XBN
+		}
+	}
 	modifier = {
 		local_sailors = 0.005
 		local_repair_speed = 0.005
@@ -4855,6 +4942,12 @@ antq_reg_southern_rock_shelter_custody = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	country_potential = {
+		OR = {
+			has_or_had_tag = LMP
+			has_or_had_tag = ZHF
+		}
+	}
 	modifier = {
 		local_cultural_tradition = 0.008
 		local_population_capacity = 0.005
@@ -4888,6 +4981,12 @@ antq_reg_seasonal_waterhole_camp = {
 	city = yes
 	megalopolis = yes
 	build_time = infrastructure_build_time
+	country_potential = {
+		OR = {
+			has_or_had_tag = LMP
+			has_or_had_tag = ZHF
+		}
+	}
 	modifier = {
 		local_population_capacity = 0.01
 	}
@@ -4918,6 +5017,12 @@ antq_reg_riverine_gathering_ground = {
 	city = yes
 	megalopolis = yes
 	build_time = cultural_building_time
+	country_potential = {
+		OR = {
+			has_or_had_tag = LMP
+			has_or_had_tag = ZHF
+		}
+	}
 	modifier = {
 		local_merchant_capacity = 0.006
 		local_population_capacity = 0.005
@@ -6229,6 +6334,13 @@ antq_reg_silk_drapery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:antq_sinitic_group }
+			culture = { has_culture_group = culture_group:antq_korean_group }
+			culture = { has_culture_group = culture_group:antq_japonic_group }
+		}
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
