@@ -949,6 +949,8 @@ def localization(
             (f"{record.key}_desc", record.description),
             (f"AM_{record.key}", record.label),
             (f"LEAD_{record.key}", record.label),
+            (f"OFFER_{record.key}_CATEGORY", "CATEGORY_SUBJECT_ACTIONS"),
+            (f"REQUEST_{record.key}_CATEGORY", "CATEGORY_SUBJECT_ACTIONS"),
         ))
     for record in cbs:
         entries.extend(((record.key, record.label), (f"{record.key}_desc", record.description), (f"{record.key}_PROV", record.label)))
@@ -1009,7 +1011,19 @@ def validate(records: tuple[SubjectContract, ...]) -> None:
     missing = sorted(set(START_ADAPTERS.values()) - set(keys))
     if missing:
         raise ValueError(f"start adapters lack M9 contract definitions: {', '.join(missing)}")
+    rendered_loc = localization(
+        records, cb_records(), peace_records(), organization_records(), "english"
+    )
     for record in records:
+        for prefix in ("OFFER", "REQUEST"):
+            category = (
+                f' {prefix}_{record.key}_CATEGORY: '
+                '"CATEGORY_SUBJECT_ACTIONS"'
+            )
+            if category not in rendered_loc:
+                raise ValueError(
+                    f"{record.key} lacks the installed {prefix} subject-category alias"
+                )
         if not 1 <= record.loyalty_to_overlord <= 50:
             raise ValueError(
                 f"{record.key} loyalty_to_overlord must stay in installed 1-50 scale"

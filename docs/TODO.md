@@ -94,29 +94,30 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   exact gates and caps. Coffee and silphium are explicit historical exclusions;
   36 direct icons come from nine EU5-referenced four-up sheets. Fresh Stuttgart
   exposes its ecology-valid plots, pastures, flocks, orchards, and gardens.
-- [ ] Expand tree-nut RGOs and all other underrepresented agricultural anchors
+- [x] Expand tree-nut RGOs and all other underrepresented agricultural anchors
   to historically and ecologically justified coverage; keep RGOs superior to
   Cultivator substitutes.
   Source-led anchors now cover 40 tree-nut, 32 barley, 20 date, and 25 sesame
-  RGOs across their bounded climates; full validation passes and smoke remains.
-- [ ] Raise Flour and Bread above wheat's food value and rebalance its recipe,
+  RGOs across their bounded climates; full validation and paired smoke pass.
+- [x] Raise Flour and Bread above wheat's food value and rebalance its recipe,
   demand, price, and opening production.
   Static complete: food 10 vs wheat 8, price 1.5 vs 1, base demand 0.002
   vs 0.001, and the checked recipe converts 1 wheat plus milling fuel/tools
-  into 1.10 output. Sixty major markets now have opening production.
-- [ ] Densify historically urbanized opening regions and guarantee viable
+  into 1.10 output. Sixty major markets have opening production; paired smoke passes.
+- [x] Densify historically urbanized opening regions and guarantee viable
   construction chains. Rome first, then every major market, must begin with
   Iron Hardware, Cordage, Masonry, timber, stone, metal, and food supply.
   Static complete: 357 workshops guarantee Iron Hardware, Cordage, Masonry,
   Tools, and Flour/Bread at 60 Tier 1-2 Old World markets. Each has at least
-  one producer per output, flagships two, and Roma three.
-- [ ] Rework Germania and Iberia vegetation from sourced regional rules.
+  one producer per output, flagships two, and Roma three; paired smoke passes.
+- [x] Rework Germania and Iberia vegetation from sourced regional rules.
   Germania must not retain implausible central grassland expanses; Iberia must
   preserve open cereal zones while restoring ancient woodland mosaics.
   Static complete: 631 sourced terrain changes leave the central German core
   at 113 grasslands and 302 woodland locations, north/south Germania at
   57.5%/67.5% woodland, and Iberia at 53.1% woodland with 31.8% open
-  cultivation and 76 open crop-bearing fields. Runtime map proof remains.
+  cultivation and 76 open crop-bearing fields. The live vegetation map confirms
+  dense German woodland and a mixed Iberian cultivation/woodland mosaic.
 
 ### S3-P3 - Knowledge, politics, diplomacy, names, and text
 
@@ -128,24 +129,26 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   and Suebi 33/32/36/36/20/21. Fresh Age-I panels show Rome 24/43,
   Parthia 19/34, and Suebi 14/34 owned/visible; day-one eligible counts are
   17/14/14 and the global total is 918.
-- [ ] Replace the full societal-values union with AD 1 meanings, names,
+- [x] Replace the full societal-values union with AD 1 meanings, names,
   effects, profile gates, and dated later-age sliders. No medieval or
   early-modern political vocabulary may surface.
   Static complete: all 17 installed keys, 72 labels/descriptions, 11 clients,
   three dated axes, three regional gates, and the cabinet movement action pass
-  the permanent union validator; focused runtime proof remains.
-- [ ] Audit the complete diplomacy union: interactions, generic actions,
+  the permanent union validator; Rome's live panel exposes only the periodized axes.
+- [x] Audit the complete diplomacy union: interactions, generic actions,
   subjects, CBs, war goals, peace terms, and objectives. Disable
   anachronisms, localize every visible action and description, and add
   profile-appropriate ancient diplomacy where coverage is thin.
   Static complete: all 907 mounted definitions are classified; 620 inherited
   definitions are false-gated, 185 reviewed definitions remain visible, and
   13 retained interactions have ancient labels/descriptions in all 11 clients.
-  Runtime Rome/Parthia/Suebi panel proof remains.
-- [ ] Replace generic polity labels such as "Community" and "Group" with short
+  Live Rome/Parthia panels expose the retained friendly/hostile set; a fresh
+  restart loads every custom OFFER/REQUEST category alias with zero log errors.
+- [x] Replace generic polity labels such as "Community" and "Group" with short
   attested names. Uncertainty belongs in descriptions, not player-facing names.
   All 120 suffixes are removed across the roster and generated mirrors; 463
-  unique names pass the permanent guard. Runtime representative proof remains.
+  unique names pass the permanent guard; the live country selector confirms the
+  suffix-free roster across the visible European and Inner Asian field.
 - [ ] Replace synthetic directional location names with curated language forms,
   especially the Rhine-Danube, Germania, Gaul, Britain, Dacia, and every likely
   post-AD 1 Roman frontier conquest. Verify the engine's owner/culture resolver.

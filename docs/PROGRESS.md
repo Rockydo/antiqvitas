@@ -8277,3 +8277,16 @@ reviewed 128px BC7 DDS.
 - Expanded the 43-file authored-text audit to 73,152 entries and rewrote active goods, inactive compatibility goods/actions, and 463 agendas. Fresh Suebi text is in-world.
 - Final validation passes 157/157; paired vanilla/mod smoke adds zero new or
   mod-unique lines at `3a2ebb7edb4ecff7e3670c51c6889c30528db910bcf4fb833cf5e82897c4385a`.
+
+## 2026-08-01 - Closed remaining economy and political presentation probes
+
+- Live vegetation confirms dense Germania and mixed Iberia; Rome's Values panel
+  exposes only ancient axes; the country selector has no Community/Group suffix.
+- Closed the tree-nut, flour/bread, and opening-construction tasks on the paired
+  green smoke already recorded above.
+- Found raw subject-category keys in live Rome/Parthia diplomacy and added the
+  installed OFFER/REQUEST category aliases across all eleven clients.
+- Fresh restart loads the aliases with zero error-log output; the generator now
+  rejects any custom subject missing either installed category key.
+- Full validation passes 157/157; paired smoke adds zero new or mod-unique
+  lines at `8e7112df1ca01296b2e785683a7cf4af142c3b54f3fc9bea7ef802e9b00859ce`.
