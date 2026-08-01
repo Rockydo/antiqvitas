@@ -115,6 +115,7 @@ on_institution_embraced = {
 		}
 	}
 }"""
+FRONTIER_OWNER_HOOK = "\t\tantq_frontier_owner_name_effect = yes"
 
 
 def source_path() -> Path:
@@ -458,6 +459,18 @@ def render() -> bytes:
     if text.count(legacy_callback) != 1:
         raise ValueError("installed post-antique institution callback inventory drift")
     text = text.replace(legacy_callback, antique_callback)
+    owner_effect = re.search(
+        r"(?ms)^on_location_changed_owner\s*=\s*\{.*?^\teffect\s*=\s*\{\s*(?:#.*)?\r?\n",
+        text,
+    )
+    if owner_effect is None or text.count(FRONTIER_OWNER_HOOK) != 0:
+        raise ValueError("installed location-owner callback inventory drift")
+    text = (
+        text[: owner_effect.end()]
+        + FRONTIER_OWNER_HOOK
+        + newline
+        + text[owner_effect.end() :]
+    )
     bankruptcy_anchor = (
         f"on_bankruptcy = {{{newline}"
         f"\teffect = {{{newline}"

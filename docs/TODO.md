@@ -31,7 +31,7 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   river, Caspian, Gulf, merchant, and transport craft.
 - [ ] Restore Parthia's law screen. Prove all opening profiles initialize,
   display, and can change their own laws without seeing foreign profile laws.
-  Blocked after six distinct engine contracts. The exact-key candidate also
+  Blocked after seven distinct engine contracts. The exact-key candidate also
   renders no laws in fresh Observer-tagged and direct Parthia starts, with Rome
   equally empty. Static setup remains green; do not retry without new engine
   evidence (`BLOCKERS.md`).
@@ -149,14 +149,18 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   All 120 suffixes are removed across the roster and generated mirrors; 463
   unique names pass the permanent guard; the live country selector confirms the
   suffix-free roster across the visible European and Inner Asian field.
-- [ ] Replace synthetic directional location names with curated language forms,
+- [x] Replace synthetic directional location names with curated language forms,
   especially the Rhine-Danube, Germania, Gaul, Britain, Dacia, and every likely
   post-AD 1 Roman frontier conquest. Verify the engine's owner/culture resolver.
   Static complete: 11,437 pseudo-morphology entries and 28,573 root fallbacks
   now use transparent short map labels; 915 high-priority directional phrases
   are gone. A 140-field frontier ledger adds Latin viewing aliases in Germania,
   Britain, Gaul, and the Danube-Balkans, separating 18 overt Roman forms from
-  local display. Runtime Suebi/Rome conquest-view proof remains.
+  local display. All 11 clients use the mounted Italic language/dialect keys.
+  A generated owner-change adapter applies and reverses all 140 political
+  exonyms without changing local culture. Fresh runtime proves Suebi local
+  labels and the `Überlingen` → `Constantia` → `Überlingen` → `Constantia`
+  Roman/Parthian/Roman ownership cycle. Full validation and paired smoke pass.
 - [x] Sweep all active and compatibility localization in every client language
   for guns, muskets, rifles, cannon, feudalism, serfdom, manufactories, and
   similar anachronisms. Steel must describe ancient ferrous production. The

@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-08-01 - Frontier names follow political ownership
+
+- Corrected all 140 Latin aliases to the mounted Italic resolver in 11 clients.
+- Added a reversible owner-change adapter with per-location state markers.
+- Fresh Suebi and a live Roman/Parthian/Roman ownership cycle prove local and
+  political names; static checks cover every alias and reversion contract.
+- `make validate` passes 157/157; paired smoke has zero new or mod-unique lines
+  at fingerprint `621082f959a1e6837dcca54175aead7d985a9b7948dc506f676357c84ceea908`.
+
 ## 2026-08-01 - Privilege and building profiles proven live
 
 - Removed 270 opening profile grants from later advance unlocks; fresh Parthia,

@@ -21,7 +21,7 @@ smoke are green; Rome/Parthia/Suebi/Teotihuacan panel captures remain open.
 
 ## 2026-07-31 - Opening custom-law groups are not awarded by starting advances
 
-Status: deferred after five distinct engine contracts; green setup restored.
+Status: deferred after seven distinct engine contracts; green setup restored.
 
 Parthia still renders `No laws available`. Exact tag-gated, delayed hidden-event,
 tag-gated starting-advance, culture/religion starting-advance, and culture-only
@@ -39,9 +39,13 @@ Evidence: `docs/screens/20260731_020229/`,
 `docs/screens/20260731_022915/`; universal-adapter probe:
 `docs/screens/20260731_laws_levies/parthia_laws.png`.
 
-Candidate 2026-07-31: exact installed holder keys now replace the five failed
-namespaced-holder approaches. Static setup is green for all 463 starts; this
-blocker remains open until fresh Parthia and control-country runtime.
+Exact installed holder keys then failed in fresh Parthia and Rome. A seventh
+probe attached the holder to the exact mounted `taxation_advance`; both fresh
+starts still rendered `No laws available`. Candidate changes were rolled back;
+focused legal, knowledge, census, and opening-system checks pass. Do not retry
+without a new locally verified engine contract. Evidence:
+`docs/screens/S3_LAWS_FRONTIER_20260801/parthia_laws_exact_advance.png` and
+`rome_laws_exact_advance2.png`.
 
 ## 2026-07-30 - S2-P3 focused panels did not leave the front-end
 

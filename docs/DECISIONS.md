@@ -4452,3 +4452,11 @@ four per opening tag. Keep the 182 namespaced groups as later research content.
 ## 2026-08-01 - Opening constitutions are setup state, not research rewards
 
 Never infer a research audience from holders of a shared opening reform. Opening forms are already active and receive no unlock card. Only later transitions enter the advance tree, through explicit source-profile allocation and a validator that rejects foreign rewards.
+
+## 2026-08-01 - Frontier exonyms are reversible political names
+
+Use the mounted Italic language/dialect for cultural resolution. For the 140
+reviewed Roman frontier aliases, hook `on_location_changed_owner`: Latin-primary
+winners apply the Roman exonym; other winners restore the local root. Set a
+location marker before `rename_location`, because that effect mutates the
+runtime location tag and otherwise makes later reversion unreachable.

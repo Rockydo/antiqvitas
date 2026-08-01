@@ -11,6 +11,14 @@ from io import StringIO
 from pathlib import Path
 
 from generate_m4_tier3_names import installed_names
+from generate_dynamic_names import (
+    CLIENT_LANGUAGES,
+    LOC_ROOT,
+    ON_ACTIONS,
+    OWNER_EFFECT,
+    OWNER_HOOK,
+    roman_resolver_keys,
+)
 from m4_priority_location_names import effective_entries, leaves, rows
 
 
@@ -121,6 +129,59 @@ def render() -> str:
     return stream.getvalue()
 
 
+def validate_resolver_localizations(values: list[dict[str, str]]) -> None:
+    """Require every frontier alias under the culture's actual mounted keys."""
+    roman_language, roman_dialect = roman_resolver_keys()
+    failures: list[str] = []
+    for client in CLIENT_LANGUAGES:
+        path = LOC_ROOT / client / f"antq_m4_location_names_l_{client}.yml"
+        text = path.read_text(encoding="utf-8-sig")
+        if ".antq_latin_dialect:" in text or ".antq_latin_language:" in text:
+            failures.append(f"{path.relative_to(ROOT)} retains nonexistent antq_latin resolver keys")
+        for row in values:
+            location = row["location"]
+            if f" antq_roman_{location}:" not in text:
+                failures.append(
+                    f"{path.relative_to(ROOT)} lacks antq_roman_{location}"
+                )
+            for resolver in (roman_dialect, roman_language):
+                if f" {location}.{resolver}:" not in text:
+                    failures.append(
+                        f"{path.relative_to(ROOT)} lacks {location}.{resolver}"
+                    )
+    if failures:
+        raise ValueError("\n".join(failures))
+
+
+def validate_owner_adapter(values: list[dict[str, str]]) -> None:
+    """Keep each political exonym reversible after rename_location mutates its tag."""
+    raw = OWNER_EFFECT.read_bytes()
+    if not raw.startswith(b"\xef\xbb\xbf"):
+        raise ValueError(f"{OWNER_EFFECT.relative_to(ROOT)} lacks the required UTF-8 BOM")
+    text = raw.decode("utf-8-sig")
+    failures: list[str] = []
+    for row in values:
+        location = row["location"]
+        marker = f"antq_frontier_name_{location}"
+        required = (
+            f"this = location:{location}",
+            f"has_variable = {marker}",
+            f"set_variable = {marker}",
+            f"rename_location = antq_roman_{location}",
+            f"rename_location = {location}",
+            f"remove_variable = {marker}",
+        )
+        for contract in required:
+            if text.count(contract) != 1:
+                failures.append(
+                    f"{OWNER_EFFECT.relative_to(ROOT)} requires exactly one {contract}"
+                )
+    if OWNER_HOOK not in ON_ACTIONS.read_text(encoding="utf-8-sig"):
+        failures.append(f"{ON_ACTIONS.relative_to(ROOT)} lacks the owner-change hook")
+    if failures:
+        raise ValueError("\n".join(failures))
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     mode = parser.add_mutually_exclusive_group(required=True)
@@ -142,6 +203,12 @@ def main() -> int:
         return 0
     if not OUTPUT.is_file() or OUTPUT.read_text(encoding="utf-8-sig") != expected:
         print("m4_frontier_language_names: FAIL\n  - stale or missing ledger")
+        return 1
+    try:
+        validate_resolver_localizations(values)
+        validate_owner_adapter(values)
+    except (OSError, ValueError) as exc:
+        print(f"m4_frontier_language_names: FAIL\n  - {exc}")
         return 1
     local_overrides = sum(
         row["local_name"] != row["roman_name"] for row in values
