@@ -197,8 +197,8 @@ def audit() -> tuple[list[dict[str, str]], list[str]]:
             failures.append(f"{tag} lacks the reviewed eastern legal profile")
         if not re.search(rf"(?m)^{re.escape(reform)}\s*=\s*\{{", reform_text):
             failures.append(f"generated reform definition missing {reform}")
-        if f"unlock_government_reform = {reform}" not in advance_text:
-            failures.append(f"opening research does not unlock {reform}")
+        if f"unlock_government_reform = {reform}" in advance_text:
+            failures.append(f"opening reform leaked into research: {reform}")
         engine_tag = mapping.get(tag, "")
         if not engine_tag:
             failures.append(f"{tag} lacks a collision-safe engine tag")

@@ -31,27 +31,34 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   river, Caspian, Gulf, merchant, and transport craft.
 - [ ] Restore Parthia's law screen. Prove all opening profiles initialize,
   display, and can change their own laws without seeing foreign profile laws.
-  New static candidate: all 463 starts select four profile-filtered policies
-  through exact engine law keys on universally owned depth-zero advances;
-  182 deeper profile groups remain. Runtime Parthia/control proof remains.
-- [ ] Gate every privilege by country profile, culture, religion, reform, or a
+  Blocked after six distinct engine contracts. The exact-key candidate also
+  renders no laws in fresh Observer-tagged and direct Parthia starts, with Rome
+  equally empty. Static setup remains green; do not retry without new engine
+  evidence (`BLOCKERS.md`).
+- [x] Gate every privilege by country profile, culture, religion, reform, or a
   justified universal category. No polity may see or grant a foreign grant.
   Static complete: 376 custom grants resolve to 6-19 visible per tag across all
   463 starts; each sees exactly six grants from one profile, while all 261
-  installed grants remain quarantined. Focused four-profile runtime remains.
-- [ ] Gate genuinely Roman, Han, Iranian, Indian, steppe, and other regional
+  installed grants remain quarantined. Fresh Parthia, Rome, Suebi, and
+  Teotihuacan dialogs show only their own profile grants.
+- [x] Gate genuinely Roman, Han, Iranian, Indian, steppe, and other regional
   buildings. Shared buildings must use neutral ancient identities; Suebi must
   not see Roman institutional buildings without a documented adoption path.
   Static complete: the 200-family ledger has 14 exact-country, four
   culture-group, and 23 Roman-adoption gates. All 3,888 opening placements
   obey them; 18 portable Latin/region-specific labels are neutralized; 465
   installed buildings remain quarantined. The 463-country visibility audit
-  gives Suebi zero exact foreign and zero Roman cards. Focused runtime remains.
-- [ ] Partition advance unlock packages by profile. A visible advance may not
+  gives Suebi zero exact foreign and zero Roman cards. Fresh Suebi's complete
+  build menu exposes neutral ancient workshops and no Roman institution.
+- [x] Partition advance unlock packages by profile. A visible advance may not
   advertise foreign laws, privileges, buildings, reforms, or units, and no
-  advance tooltip may list more than eight substantive unlocks.
-- [ ] Make basic RGO expansion available to every polity at game start, with
-  later advances improving rather than enabling the core mechanic.
+  advance tooltip may list more than eight substantive unlocks. All 1,519
+  unlocks pass source-profile checks; 148 opening-form duplicates are removed.
+  Fresh Rome's Imperial Archives exposes one Roman office and no Tribal Kingdom.
+- [x] Make basic RGO expansion available to every polity at game start, with
+  later advances improving rather than enabling the core mechanic. All 19
+  extraction capabilities sit on universal Provincial Census; fresh Suebi
+  horse and Roman iron expansions queue immediately.
 
 ### S3-P1 - Complete ancient visual surfaces
 
@@ -80,12 +87,13 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 
 ### S3-P2 - Agriculture, landscape, and opening economy
 
-- [ ] Add a comprehensive Cultivator building system for every realistically
+- [x] Add a comprehensive Cultivator building system for every realistically
   cultivable raw good. Use peasants, lower yield than native RGOs, strict
   climate/topography/vegetation/coast gates, and low environment-specific caps.
   Static complete: 36 families cover all 34 reviewed cultivable goods with
   exact gates and caps. Coffee and silphium are explicit historical exclusions;
-  36 direct icons come from nine EU5-referenced four-up sheets. Runtime remains.
+  36 direct icons come from nine EU5-referenced four-up sheets. Fresh Stuttgart
+  exposes its ecology-valid plots, pastures, flocks, orchards, and gardens.
 - [ ] Expand tree-nut RGOs and all other underrepresented agricultural anchors
   to historically and ecologically justified coverage; keep RGOs superior to
   Cultivator substitutes.
@@ -112,12 +120,14 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 
 ### S3-P3 - Knowledge, politics, diplomacy, names, and text
 
-- [ ] Expand visible advance depth per major profile in every age while keeping
+- [x] Expand visible advance depth per major profile in every age while keeping
   foreign branches hidden. Report visible, owned, eligible, and total nodes for
   representative tags; Rome must have a deep tree rather than 12-20 cards.
-  The 918-node ledger now passes all 463 tags at 32/32/32/32/16/16 or
+  The 918-node ledger passes all 463 tags at 32/32/32/32/16/16 or
   better. Rome sees 42/41/41/41/21/21, Parthia 33/36/36/36/21/16,
-  and Suebi 33/32/36/36/20/21; full validation and runtime proof remain.
+  and Suebi 33/32/36/36/20/21. Fresh Age-I panels show Rome 24/43,
+  Parthia 19/34, and Suebi 14/34 owned/visible; day-one eligible counts are
+  17/14/14 and the global total is 918.
 - [ ] Replace the full societal-values union with AD 1 meanings, names,
   effects, profile gates, and dated later-age sliders. No medieval or
   early-modern political vocabulary may surface.
@@ -144,9 +154,12 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   are gone. A 140-field frontier ledger adds Latin viewing aliases in Germania,
   Britain, Gaul, and the Danube-Balkans, separating 18 overt Roman forms from
   local display. Runtime Suebi/Rome conquest-view proof remains.
-- [ ] Sweep all active and compatibility localization in every client language
+- [x] Sweep all active and compatibility localization in every client language
   for guns, muskets, rifles, cannon, feudalism, serfdom, manufactories, and
-  similar anachronisms. Steel must describe ancient ferrous production.
+  similar anachronisms. Steel must describe ancient ferrous production. The
+  43-file/73,152-entry English guard now includes optics, print, later military,
+  religious, and industrial vocabulary; all eleven clients mirror the ancient
+  goods and interaction text. Fresh Suebi's Agenda is fully in-world.
 
 ### S3 original audit findings
 
@@ -179,7 +192,7 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   emits zero invalid-privilege removals. Parthia's 14 Iranian law packages
   remain isolated but are runtime-blocked; five distinct engine contracts are
   documented in `BLOCKERS.md`, and green setup intentionally emits none.
-- Static green: 2,061 content unlocks plus eight mercenary-capability bridges
+- Static green: 1,519 content unlocks plus eight mercenary-capability bridges
   are profile-balanced across 918 advances;
   no node advertises more than eight. Roman building unlocks stay on the
   Roman/Italic path.
@@ -216,9 +229,9 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   Mesopotamian River Transport.
 - Runtime: fresh Arikamedu, Ephesus, and Pompeii captures show clean motion at
   8-14%; the rejected nested and disjoint-band implementations are gone.
-- Runtime gate: final 155/155 validation and paired menu smoke have zero new or
-  mod-unique log lines. Loading fingerprint:
-  `c7fa4f98de1b54000e4ae5dd4b443b98cc9d58cfb39ef92d0cb0aac80a5446f4`.
+- Runtime gate: final 157/157 validation and paired menu smoke have zero new or
+  mod-unique log lines at fingerprint
+  `3a2ebb7edb4ecff7e3670c51c6889c30528db910bcf4fb833cf5e82897c4385a`.
 - Mercenary repair gate: 155/155 validation and paired menu smoke pass with
   zero new or mod-unique lines at fingerprint
   `5791789bafe474ac9228e6577f3dc801f820dc8ef144e7942ba61318fac948f7`.

@@ -25,6 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
 REPORT = ROOT / "docs/m6/privilege_visibility.csv"
 SCRIPT = ROOT / "in_game/common/estate_privileges/00_antiquitas_m6_core.txt"
+ADVANCE_TREE = ROOT / "in_game/common/advances/00_antiquitas_m8_tree.txt"
 PRIVILEGE_DIR = ROOT / "in_game/common/estate_privileges"
 MANIFEST = ROOT / "docs/m12/system_quarantine_manifest.json"
 REFORM_RE = re.compile(r"\bhas_reform\s*=\s*government_reform:([a-z][a-z0-9_]*)")
@@ -111,6 +112,21 @@ def expected_report() -> tuple[str, list[str], dict[str, int]]:
         )) if row["potential_tags"] else frozenset()
         if reforms != profile_reforms[slug] or tags:
             failures.append(f"profile privilege gate drift: {key}")
+
+    advance_text = ADVANCE_TREE.read_text(encoding="utf-8-sig")
+    profile_unlocks = sorted(
+        key for key in privilege_profiles
+        if re.search(
+            rf"^\s*unlock_estate_privilege\s*=\s*{re.escape(key)}\s*$",
+            advance_text,
+            re.MULTILINE,
+        )
+    )
+    if profile_unlocks:
+        failures.append(
+            "baseline profile privileges are incorrectly research-locked: "
+            + ",".join(profile_unlocks)
+        )
 
     for key, contract in country_contracts.items():
         row = privilege_by_key.get(key)

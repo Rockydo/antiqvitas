@@ -69,7 +69,7 @@ REGIONS: dict[str, tuple[str, str]] = {
     ),
     "West Africa": (
         "Iron-working communities and inland exchange networks grow along the Niger, Volta, and their neighbouring zones.",
-        "strengthen settlement and exchange without projecting later states onto the present landscape",
+        "strengthen settlement, ironworking, river exchange, and obligations among neighbouring communities",
     ),
     "Iran": (
         "The Arsacid order joins Iranian uplands, Mesopotamian cities, caravan routes, and powerful local houses.",
@@ -105,7 +105,7 @@ REGIONS: dict[str, tuple[str, str]] = {
     ),
     "Japan": (
         "Yayoi communities are regionally divided, with wet-rice agriculture, bronze and iron exchange, and kin leadership.",
-        "build durable regional ties without assuming a unified court or later political order",
+        "build durable regional ties through rice cultivation, seaborne exchange, ritual authority, and kin leadership",
     ),
     "India": (
         "The subcontinent contains major courts, republic-like communities, ports, caravan routes, and competing religious traditions.",
@@ -117,7 +117,7 @@ REGIONS: dict[str, tuple[str, str]] = {
     ),
     "Germania": (
         "Kin groups, assemblies, war leaders, farms, and exchange routes shape Germania beyond direct Roman rule.",
-        "hold followers and neighbours together without turning a negotiated people into an anachronistic bureaucracy",
+        "hold followers and neighbours together while keeping authority rooted in assemblies, oaths, hospitality, and personal obligation",
     ),
     "Scandinavia": (
         "Farming, seaborne exchange, and local chiefly networks connect communities around the Baltic approaches.",
@@ -129,19 +129,19 @@ REGIONS: dict[str, tuple[str, str]] = {
     ),
     "Eastern Europe": (
         "Forest, river, and steppe margins contain dispersed peoples known imperfectly to Mediterranean authors.",
-        "preserve local networks and avoid false centralization while responding to pressure from mobile neighbours",
+        "preserve river and forest networks while coordinating defence against pressure from mobile neighbours",
     ),
     "Finland": (
         "Small coastal and inland communities depend on fishing, hunting, farming, and northern exchange.",
-        "sustain local networks across a sparse landscape without imposing later ethnic borders",
+        "sustain coastal and inland networks through fishing, hunting, farming, portage, and seasonal exchange",
     ),
     "Britain": (
         "Britain is divided among regional peoples, oppida, farmed lowlands, and less centralized upland communities.",
         "manage neighbouring peoples and growing Roman attention while keeping local authority credible",
     ),
     "Ireland": (
-        "Hibernian communities are represented through a cautious regional frame because surviving geography is late and imprecise.",
-        "strengthen local exchange and leadership without converting uncertain names into fixed borders",
+        "Hibernian communities rely on cattle, mixed farming, river routes, coastal exchange, and local assemblies.",
+        "strengthen local exchange, household alliances, and defensible centres while preserving negotiated authority",
     ),
     "Danube": (
         "Dacian, Getic, Germanic, and Sarmatian powers meet along the Danube and Carpathian approaches.",
@@ -149,11 +149,11 @@ REGIONS: dict[str, tuple[str, str]] = {
     ),
     "Southeast Asia": (
         "River valleys, early cities, ports, and forest exchange connect mainland and island Southeast Asia to wider seas.",
-        "support settlement and exchange while keeping political claims no stronger than the evidence",
+        "support settlement, forest exchange, river transport, and maritime ties while balancing local authorities",
     ),
     "Oceania": (
         "Seafaring communities maintain island networks through navigation, kinship, horticulture, and exchange.",
-        "sustain voyaging and local resilience without projecting later island kingdoms backward",
+        "sustain voyaging, horticulture, reciprocal exchange, and resilient ties among island communities",
     ),
     "Mesoamerica": (
         "Urban centres and regional communities compete through agriculture, exchange, ritual authority, and monument building.",
@@ -161,19 +161,19 @@ REGIONS: dict[str, tuple[str, str]] = {
     ),
     "Andes": (
         "Coastal valleys and highland basins support distinct communities linked by exchange and ritual landscapes.",
-        "coordinate water, labour, and exchange without assuming later imperial institutions",
+        "coordinate water, labour, exchange, and ritual centres across coastal valleys and highland basins",
     ),
     "Northern Andes": (
         "Highland and intermontane communities combine farming, exchange, and localized political authority.",
-        "secure productive landscapes and regional ties without backdating later confederations",
+        "secure productive landscapes and regional ties through local councils, exchange, and mutual defence",
     ),
     "North America": (
         "Woodland, plains, coastal, desert, and Arctic communities follow diverse subsistence and exchange strategies.",
-        "strengthen reciprocal networks while keeping authority appropriate to local evidence",
+        "strengthen reciprocal networks, seasonal stores, exchange routes, and trusted community leadership",
     ),
     "Caribbean-Amazon": (
         "River and island communities rely on horticulture, fishing, mobility, and long exchange networks.",
-        "protect settlement and exchange while avoiding later external categories",
+        "protect settlements, fisheries, gardens, river passages, and long-distance exchange",
     ),
 }
 
@@ -246,7 +246,7 @@ SPECIAL: dict[str, str] = {
     ),
     "THM": (
         "On 1 January AD 1, Thamud is represented across a bounded northwestern Arabian range-and-oasis frame attested by classical ethnography. "
-        "The people-name is not applied to every inscription modern scholars classify as Thamudic, and Khaybar is only a practical campaign anchor.\n\n"
+        "The people-name is applied only to groups attested by classical ethnography, and Khaybar serves as the practical campaign anchor.\n\n"
         "Coordinate wells, grazing, and caravan passage through assemblies and local leaders while resisting Nabataean expansion and avoiding claims to a centralized territorial state unsupported by the evidence."
     ),
     "AGR": (
@@ -342,7 +342,7 @@ BRITAIN_IRELAND_FOCUS: dict[str, str] = {
     "DAR": "the northern coastal proxy distinguishes the Darini from neighbouring Voluntii and Rhobogdii",
     "ERD": "the northwestern interior frame connects lakes, rivers, and Atlantic-facing routes across an uncertain boundary",
     "ULA": "the Voluntian northeastern frame replaces the later blanket Ulaid label and faces the North Channel and Irish Sea",
-    "NAG": "the Magnata-facing western frame links Atlantic inlets to inland movement without asserting a modern county boundary",
+    "NAG": "the Magnata-facing western frame links Atlantic inlets to inland movement while its exact AD 1 frontier remains uncertain",
     "AUT": "the western Hibernian frame follows Ptolemy's coastal ordering across a landscape of dispersed communities",
     "GAN": "the west-central frame links the Shannon system and Atlantic approaches, with Sligo excluded for the Nagnatae",
     "VEL": "the southwestern peninsula depends on Atlantic routes, pasture, and local strongholds",
@@ -419,8 +419,8 @@ def role_text(kind: str) -> str:
             "obligations to its overlord and managing its own elites."
         ),
         "sop": (
-            "This playable frame represents a bounded network of communities, "
-            "not a claim of uniform centralized statehood."
+            "Its neighbouring communities are joined by seasonal assemblies, "
+            "kinship, exchange, ritual obligations, and mutual defence."
         ),
         "country": (
             "Its authority rests on the institutions, assemblies, courts, and "
@@ -434,9 +434,8 @@ def generic_text(row: dict[str, str]) -> str:
     return (
         f"On 1 January AD 1, {row['name']} is centred on "
         f"{row['historical_capital']}. {context} {role_text(row['kind'])}\n\n"
-        f"The immediate task is to {task}. Choices should strengthen this "
-        "position through period institutions, local alliances, and sustainable "
-        "resources rather than knowledge of later history."
+        f"The immediate task is to {task}. Durable rule will depend on local "
+        "alliances, dependable stores, legitimate arbitration, and secure routes."
     )
 
 

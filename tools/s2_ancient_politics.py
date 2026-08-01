@@ -177,7 +177,7 @@ PROFILES = (
             a("granary_registers", "Granary Registers", "Compare receipts, spoilage, release orders, and local price pressures across official stores.", "adm", FOOD),
             a("courier_relays", "Courier Relays", "Maintain tallies, relay horses, sealed document tubes, and the roads between reporting stations.", "dip", LOGISTICS),
             a("frontier_command", "Frontier Command Returns", "Synchronize beacon reports, garrison strength, remount needs, and crossbow stores.", "mil", MIL),
-            a("three_excellencies_reviews", "Three Excellencies Reviews", "Coordinate high-level civil, military, and supervisory recommendations without presenting the offices as a modern separation of powers.", "adm", ADMIN),
+            a("three_excellencies_reviews", "Three Excellencies Reviews", "Coordinate high-level civil, military, and supervisory recommendations among the empire's senior offices.", "adm", ADMIN),
             a("nine_ministers_dockets", "Nine Ministers Dockets", "Order ritual, household, guard, horse, justice, diplomatic, clan, revenue, and palace-service business for conference and decision.", "adm", CONTROL),
             a("regional_inspector_reports", "Regional Inspector Reports", "Collate rotating inspectors' reports on commandery officials, powerful households, justice, revenue, roads, and public order.", "dip", ASSIZE),
             a("household_registration_returns", "Household Registration Returns", "Reconcile registered households, land, age and service categories, grain obligations, migration, and local discrepancies.", "adm", FOOD),
@@ -481,7 +481,7 @@ PROFILES = (
             a("millet_stores", "Millet Store Accounts", "Review receipts, seed reserves, spoilage, and emergency releases at defended centers.", "adm", FOOD),
             a("beacon_dispatches", "Beacon Frontier Dispatches", "Coordinate watch rotations, signal fuel, arrows, and relief from one fortified node to the next.", "mil", LOGISTICS),
             a("lineage_petitions", "Senior-Lineage Petitions", "Hear witnessed claims over commands, land, compensation, and court precedence.", "dip", CONTROL),
-            a("artisan_obligations", "Fortress Artisan Obligations", "Measure iron, tile, pottery, and repair duties without converting specialists into medieval guilds.", "adm", TRADE),
+            a("artisan_obligations", "Fortress Artisan Obligations", "Measure iron, tile, pottery, and repair duties among attached specialists and household workshops.", "adm", TRADE),
         ),
         (
             m("fortress_rotation", "Fortress Command Rotation", "Set bounded command and provisioning turns among senior houses.", "Senior-Lineage Command Claim", "Leading houses demand a witnessed share of fortress authority.", "nobles_estate", CONTROL, NOBLES),
@@ -602,7 +602,7 @@ PROFILES = (
         "Maharathi and mahabhoja titles, donations, routes, and exchange inform a conservative interface; no named AD 1 ruler or uniform Deccan bureaucracy is invented.",
         (
             a("deccan_route_returns", "Deccan Route Returns", "Coordinate water, pack service, beads, textiles, and safe passage between inland exchange centers.", "dip", LOGISTICS),
-            a("guild_donation_records", "Guild and Donation Records", "Witness weights, gifts, craft obligations, and hospitality without projecting medieval guild constitutions.", "adm", TRADE),
+            a("guild_donation_records", "Guild and Donation Records", "Witness weights, gifts, craft obligations, hospitality, and the customary compacts of exchange households.", "adm", TRADE),
             a("market_measures", "Market Weights and Measures", "Maintain balanced weights, containers, and inspected measures across connected markets.", "adm", ADMIN),
             a("elephant_mounted_musters", "Elephant and Mounted Musters", "Register handlers, harness, fodder, mounted followings, and bounded seasons of service.", "mil", MIL),
             a("tank_irrigation_accounts", "Tank and Irrigation Accounts", "Review water release, silt clearing, repair labor, seed needs, and community shares.", "adm", FOOD),
@@ -623,7 +623,7 @@ PROFILES = (
         "Tasciovanus and Cunobelinus anchor the opening dynasty, while coinage, oppida, exchange, and retinue mechanics remain bounded interpretations rather than a recovered constitution.",
         (
             a("oppidum_store_returns", "Oppidum Store Returns", "Review grain, livestock, craft stock, and hospitality obligations at fortified settlement centers.", "adm", FOOD),
-            a("weight_die_oversight", "Weight and Die Oversight", "Maintain witnessed weights, blank flans, dies, and accountable distribution without treating coinage as modern fiscal bureaucracy.", "adm", ADMIN),
+            a("weight_die_oversight", "Weight and Die Oversight", "Maintain witnessed weights, blank flans, dies, and accountable distribution among the ruler's trusted officers.", "adm", ADMIN),
             a("chariot_retinue_muster", "Chariot and Retinue Muster", "Register vehicles, harness, spears, provisions, and bounded seasons of service among leading households.", "mil", MIL),
             a("channel_exchange_guarantees", "Channel Exchange Guarantees", "Coordinate landing places, measures, escorts, and restitution for cross-Channel and regional exchange.", "dip", TRADE),
             a("sanctuary_assembly_hearing", "Sanctuary Assembly Hearing", "Hear witnessed oaths, offerings, succession claims, and inter-community petitions at recognized gathering places.", "dip", PRESTIGE),
@@ -643,7 +643,7 @@ PROFILES = (
         "P8.7;P11;P13;CAH-XI;CCI-DUB;BM-DRU", "contested",
         "Dubnovellaunos and an AD 1 coin horizon are attested, while the Camulodunon council, exact royal reach, and relationship with neighboring dynasties remain bounded gameplay reconstructions.",
         (
-            a("coin_die_returns", "Coin and Die Returns", "Review blank flans, dies, weights, metal stocks, and accountable distribution without treating coinage as a modern treasury.", "adm", ADMIN),
+            a("coin_die_returns", "Coin and Die Returns", "Review blank flans, dies, weights, metal stocks, and accountable distribution through the royal storehouse.", "adm", ADMIN),
             a("oppidum_store_returns", "Oppidum Store Returns", "Reconcile grain, livestock, pottery, craft stock, and hospitality at the principal settlement centers.", "adm", FOOD),
             a("channel_landing_guarantees", "Channel Landing Guarantees", "Maintain landing places, escorts, measures, imported vessels, and restitution for registered cross-Channel exchange.", "dip", TRADE),
             a("chariot_retinue_musters", "Chariot-Retinue Musters", "Count vehicles, harness, spear equipment, provisions, and bounded service among leading households.", "mil", MIL),
@@ -762,7 +762,7 @@ PROFILES = (
     ),
     Profile(
         "dacian", "antq_dacian_hillfort_council", "Dacian Hillfort Council",
-        "The divided post-Burebista Dacian and Getic rulers coordinate selected hillfort stores, metalworking, Carpathian passages, mounted hosts, and external oaths without restoring one anachronistic united kingdom.",
+        "The divided post-Burebista Dacian and Getic rulers coordinate selected hillfort stores, metalworking, Carpathian passages, mounted hosts, and external oaths while preserving their separate courts.",
         ("antq_dacian_divided_kingships", "antq_dacian_hillfort_compact", "antq_dacian_mountain_court"),
         ("nobles_estate", "tribes_estate", "burghers_estate"),
         "dacian_council_atlas.png", "90ccb887d6f47f06f248b07317bcf2365fb316492e508b44b302ffbbf5826e60",

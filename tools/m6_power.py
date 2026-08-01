@@ -489,7 +489,7 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
         "nobles_estate_power_from_cabinet=0.16|global_trade_through_owned_territory_efficiency=0.02|"
         "replace_cabinet_member_cost_modifier=0.05",
         "CAM-TAMIL-MERCHANTS;UNESCO-KANCHI;JRAS-SATIYAPUTRA;P13", "contested",
-        "A bounded Tamilakam chiefly court balances leading houses, cultivators, poets, and exchange without projecting medieval Chola or Pallava administration.",
+        "A bounded Tamilakam chiefly court balances leading houses, cultivators, poets, and exchange while later Chola and Pallava institutions remain outside its frame.",
     ),
     "antq_central_indian_urban_kingship": (
         "global_nobles_estate_power=0.06|global_burghers_estate_power=0.08|"
@@ -4305,7 +4305,7 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_eastern_plateau_corridor_network", "Eastern Plateau Corridor Network"),
         ("antq_eastern_plateau_corridor_network_desc", "Highland households and leading exchange brokers coordinate river corridors, pasture, mortuary obligations, and defence without one ethnic state."),
         ("antq_tamilakam_velir_court", "Tamilakam Velir Court"),
-        ("antq_tamilakam_velir_court_desc", "A bounded chiefly court balancing leading houses, cultivators, poets, and exchange without projecting medieval administration."),
+        ("antq_tamilakam_velir_court_desc", "A bounded chiefly court balancing leading houses, cultivators, poets, and exchange through attested early Tamil institutions."),
         ("antq_central_indian_urban_kingship", "Central Indian Urban Kingship"),
         ("antq_central_indian_urban_kingship_desc", "Post-Mauryan urban authority coordinates leading houses, workshops, cultivators, and religious patrons without an invented common dynasty."),
         ("antq_central_indian_janapada", "Central Indian Janapada"),

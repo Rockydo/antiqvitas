@@ -169,8 +169,8 @@ def audit() -> tuple[list[dict[str, str]], list[str]]:
     advance_text = ADVANCES.read_text(encoding="utf-8-sig")
     if not re.search(rf"(?m)^{re.escape(reform)}\s*=\s*\{{", reform_text):
         failures.append("generated Soanian king-and-council reform is missing")
-    if f"unlock_government_reform = {reform}" not in advance_text:
-        failures.append("opening research does not unlock the Soanian reform")
+    if f"unlock_government_reform = {reform}" in advance_text:
+        failures.append("opening Soanian reform leaked into research")
 
     engine_tag = mapping.get("SVA", "")
     for language in LANGUAGE_CLIENTS:

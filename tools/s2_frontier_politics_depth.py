@@ -142,16 +142,8 @@ def main() -> int:
         base_matches = [
             row for row in advances if base_token in row["unlocks"].split(";")
         ]
-        base_profiles = [row["eligibility"] for row in base_matches]
-        if (
-            not base_matches
-            or any(row["age"] != "age_1_traditions" for row in base_matches)
-            or len(base_profiles) != len(set(base_profiles))
-            or "Practices transferable" in " ".join(base_profiles)
-        ):
-            failures.append(
-                f"opening reform is not profile-distinct and Age-I: {contract['base']}"
-            )
+        if base_matches:
+            failures.append(f"opening reform leaked into research: {contract['base']}")
 
         government = governments.get(contract["tag"], {})
         if (

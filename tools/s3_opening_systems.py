@@ -25,6 +25,11 @@ REPORT = ROOT / "docs/s3/opening_systems.csv"
 REGIONAL_BUILDINGS = ROOT / "in_game/common/building_types/00_antiquitas_regional_buildings.txt"
 MARKET_SUPPLY = ROOT / "docs/m5/opening_market_building_seeds.csv"
 LANGUAGES = ("english", *M2_MIRROR_LANGUAGES)
+OPENING_EXTRACTION_GOODS = (
+    "wheat", "maize", "potato", "rice", "millet", "legumes", "horses",
+    "stone", "marble", "copper", "tin", "lead", "coal", "iron",
+    "saltpeter", "alum", "goods_gold", "silver", "mercury",
+)
 LOC = {
     "legal_code_law": "Public Law Register",
     "legal_code_law_desc": "Defines how judgments, obligations, and protected statuses are recorded and applied.",
@@ -226,6 +231,11 @@ def validate() -> list[str]:
     )
     if "global_max_rgo_size_modifier = 0.10" not in advance:
         failures.append("universally owned Provincial Census lacks opening RGO capacity")
+    for good in OPENING_EXTRACTION_GOODS:
+        if f"can_extract_{good} = yes" not in advance:
+            failures.append(
+                f"universally owned Provincial Census cannot expand the {good} RGO"
+            )
 
     law = top_level_block(LAWS.read_text(encoding="utf-8-sig"), "heir_religion_law")
     if "ANTIQVITAS mounted-system quarantine" in law or re.search(

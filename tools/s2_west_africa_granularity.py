@@ -209,8 +209,8 @@ def expected_rows() -> tuple[list[dict[str, str]], list[str]]:
     }:
         if not re.search(rf"(?m)^{re.escape(reform)}\s*=\s*\{{", reform_text):
             failures.append(f"generated reform definition missing {reform}")
-        if f"unlock_government_reform = {reform}" not in advance_text:
-            failures.append(f"opening research does not unlock {reform}")
+        if f"unlock_government_reform = {reform}" in advance_text:
+            failures.append(f"opening reform leaked into research: {reform}")
 
     for language in LANGUAGES:
         path = (

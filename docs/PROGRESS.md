@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-08-01 - Privilege and building profiles proven live
+
+- Removed 270 opening profile grants from later advance unlocks; fresh Parthia,
+  Rome, Suebi, and Teotihuacan dialogs now show only their profile grants.
+- Fresh Suebi's full build menu has neutral ancient workshops, ecology-valid
+  Cultivator families, and no Roman institution; Stuttgart's plate is clean.
+- Static profile unions remain complete; focused RGO expansion exposed a
+  separate nineteen-good engine capability gate now repaired pending relaunch.
+
 ## 2026-07-31 - Estate grants are profile-isolated
 
 - Removed inferred reform gates and registered 60 regional reforms explicitly.
@@ -8252,3 +8261,19 @@ reviewed 128px BC7 DDS.
 - Final validation passes 157/157; paired vanilla/mod smoke adds zero new or
   mod-unique log lines at fingerprint
   `12a73e47c6c5a73dc705d0b4f38887ab1949048f89944200a3d1fceae7ce1c4a`.
+
+## 2026-08-01 - Exact-key law runtime candidate rejected
+
+- Fresh Observer-tagged and direct Parthia starts both show no laws; Rome does
+  too. The sixth distinct engine contract is blocked after two valid attempts.
+- Retained the committed, 157/157-green setup; see `BLOCKERS.md` for evidence.
+
+## 2026-08-01 - Closed privilege, building, RGO, advance, and text regressions
+
+- Fresh Parthia, Rome, Suebi, and Teotihuacan expose only their own privilege profiles; fresh Suebi exposes no Roman building family.
+- Universal Provincial Census now carries all 19 extraction capabilities; fresh Suebi horse and Roman iron RGOs expand immediately.
+- Removed 148 redundant opening-form research unlocks and profile-checked all 1,519 rewards. Fresh Rome's Imperial Archives now exposes only Weights and Measures Office.
+- Fresh Age-I panels show Rome 24/43, Parthia 19/34, and Suebi 14/34 owned/visible.
+- Expanded the 43-file authored-text audit to 73,152 entries and rewrote active goods, inactive compatibility goods/actions, and 463 agendas. Fresh Suebi text is in-world.
+- Final validation passes 157/157; paired vanilla/mod smoke adds zero new or
+  mod-unique lines at `3a2ebb7edb4ecff7e3670c51c6889c30528db910bcf4fb833cf5e82897c4385a`.

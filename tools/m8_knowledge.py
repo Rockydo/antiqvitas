@@ -135,12 +135,26 @@ START_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
 # tax base and military recruitment remain available at AD 1. Provincial Census
 # and Professional Standing Armies are the historical surfaces for locally
 # verified engine switches.
+# EU5 gates expansion of these nineteen RGOs on country modifiers carried by
+# the installed traditions tree.  ANTIQVITAS quarantines that tree, so the
+# complete engine capability union belongs on a universally owned ancient root.
+# Goods without a can_extract_* modifier in the installed registry are not
+# advance-gated by the engine and need no adapter.
+OPENING_EXTRACTION_CAPABILITIES: tuple[tuple[str, str], ...] = tuple(
+    (f"can_extract_{good}", "yes")
+    for good in (
+        "wheat", "maize", "potato", "rice", "millet", "legumes", "horses",
+        "stone", "marble", "copper", "tin", "lead", "coal", "iron",
+        "saltpeter", "alum", "goods_gold", "silver", "mercury",
+    )
+)
+
 START_CAPABILITIES: dict[str, tuple[tuple[str, str], ...]] = {
     "antq_provincial_census": (
         ("enable_taxation", "yes"),
         ("has_stability_investment", "yes"),
         ("global_max_rgo_size_modifier", "0.10"),
-    ),
+    ) + OPENING_EXTRACTION_CAPABILITIES,
     "antq_professional_standing_armies": (
         ("always_allow_army_levies", "yes"),
     ),
@@ -1704,6 +1718,20 @@ def opening_content_profiles(
     return reforms, privileges
 
 
+def opening_profile_privilege_keys() -> set[str]:
+    """Return the six baseline social-order grants for every estate profile."""
+    keys = {
+        row["key"]
+        for row in csv_rows(S2_ESTATE_PRIVILEGES)
+        if row["potential_reforms"] and not row["potential_tags"]
+    }
+    if len(keys) != 270:
+        raise ValueError(
+            f"S2 estate profiles must expose 270 baseline privileges, found {len(keys)}"
+        )
+    return keys
+
+
 def law_profile_catalog() -> dict[str, dict[str, str]]:
     """Return one reviewed identity row per exact S2 law profile."""
     catalog: dict[str, dict[str, str]] = {}
@@ -1955,53 +1983,15 @@ def content_unlocks(records: tuple[Advance, ...]) -> dict[str, tuple[tuple[str, 
 
     tag_profiles, _tag_cultures, _culture_groups = research_profile_maps()
     reform_profiles, core_privilege_profiles = opening_content_profiles(tag_profiles)
+    opening_profile_privileges = opening_profile_privilege_keys()
     unit_profiles = unit_content_profiles(tag_profiles)
     building_profiles = building_content_profiles(tag_profiles)
 
-    # Reviewed opening forms named by the cross-system inventory remain visible
-    # in Age I. Distribute them across their actual research profiles instead of
-    # restoring the former universal root node with an enormous foreign tooltip.
-    opening_reforms = set(starting_content_keys()[0])
-    inventoried_reforms = {
-        target
-        for entries in CONTENT_UNLOCKS.values()
-        for field, target in entries
-        if field == "unlock_government_reform"
-    }
-    exact_opening_profiles = {
-        reform: S2_ESTATE_ADVANCE_PROFILES[legal_profile]
-        for reform, legal_profile in (
-            ("antq_trinovantian_coin_kingship", "trinovantian"),
-            ("antq_brigantian_hillfort_confederacy", "brigantian"),
-            ("antq_durotrigian_hillfort_coin_order", "durotrigian"),
-            ("antq_ivernian_regional_assembly", "ivernian"),
-            ("antq_aestian_amber_coast_order", "aestian"),
-            ("antq_frisian_terp_community_order", "frisian"),
-            ("antq_dacian_divided_kingships", "dacian"),
-            ("antq_garamantian_oasis_state", "garamantian"),
-            ("antq_cheruscan_kindred_assembly", "cheruscan"),
-            ("antq_chattian_host_order", "chattian"),
-            ("antq_batavian_rhine_compact", "batavian"),
-            ("antq_semnonian_sacred_confederacy", "semnonian"),
-        )
-    }
-    for reform in sorted(opening_reforms & inventoried_reforms):
-        profiles = exact_opening_profiles.get(reform, reform_profiles.get(reform, set()))
-        if not profiles:
-            raise ValueError(f"opening reform {reform} has no research profile")
-        add_profiled_unlock(
-            records,
-            result,
-            "unlock_government_reform",
-            reform,
-            profiles,
-            age_index=0,
-            track="statecraft",
-            ceiling=8,
-        )
-
-    # Opening grants pass exact setup potentials and do not need duplicate
-    # advance entries. Only later and unassigned privileges belong in the tree.
+    # Opening governments already exist in setup and must never be advertised
+    # as research rewards. A shared opening form can span many unrelated setup
+    # tags (the generic tribal adapter is the important example), so deriving an
+    # advance audience from its holders leaks it into foreign culture trees.
+    # Only genuine constitutional transitions belong in research.
     #
     # Law groups are different: the engine removes or hides a setup law unless
     # a researched advance explicitly unlocks its group. Exact-profile,
@@ -2090,7 +2080,7 @@ def content_unlocks(records: tuple[Advance, ...]) -> dict[str, tuple[tuple[str, 
         estate_rows = list(csv.DictReader(handle))
     for row in estate_rows:
         key = (row.get("key") or "").strip()
-        if key in core_privilege_profiles:
+        if key in core_privilege_profiles or key in opening_profile_privileges:
             continue
         matched = next(
             (
@@ -2116,14 +2106,22 @@ def content_unlocks(records: tuple[Advance, ...]) -> dict[str, tuple[tuple[str, 
     if len(law_profiles) != 182:
         raise ValueError("S2 legal registry must expose 182 unique profile law groups")
 
-    # These three are genuine transitions rather than active AD 1 forms, so
-    # retain their purpose-built research bridges.
-    for advance, reform in (
-        ("antq_imperial_cult", "antq_client_monarchy"),
-        ("antq_imperial_chancery", "antq_dominate"),
-        ("antq_regional_commands", "antq_sassanid_centralized_monarchy"),
+    # These three are genuine transitions rather than active AD 1 forms. Place
+    # each through the same profile-aware allocator as every other constitution;
+    # the old direct placement put Client Monarchy on a shared root and the
+    # Sassanid transition on an Indic card.
+    for reform, age_index in (
+        ("antq_client_monarchy", 0),
+        ("antq_dominate", 3),
+        ("antq_sassanid_centralized_monarchy", 2),
     ):
-        result[advance].append(("unlock_government_reform", reform))
+        profiles = reform_profiles.get(reform, set())
+        if not profiles:
+            raise ValueError(f"transition reform {reform} has no research profile")
+        add_profiled_unlock(
+            records, result, "unlock_government_reform", reform, profiles,
+            age_index=age_index, track="statecraft", ceiling=6,
+        )
 
     for building in regional_building_keys():
         add_profiled_unlock(
@@ -2395,7 +2393,7 @@ def validate(records: tuple[Advance, ...]) -> None:
         ("enable_taxation", "yes"),
         ("has_stability_investment", "yes"),
         ("global_max_rgo_size_modifier", "0.10"),
-    ):
+    ) + OPENING_EXTRACTION_CAPABILITIES:
         failures.append("the universally held Provincial Census lost its economy capabilities")
     if START_CAPABILITIES.get("antq_professional_standing_armies") != (
         ("always_allow_army_levies", "yes"),
@@ -2426,6 +2424,46 @@ def validate(records: tuple[Advance, ...]) -> None:
         "unlock_subject_type": (ANCIENT_SUBJECT_TYPES, "antq_"),
     }
     opening_reforms, opening_privileges = starting_content_keys()
+    tag_profiles, _tag_cultures, _culture_groups = research_profile_maps()
+    reform_profiles, _core_privilege_profiles = opening_content_profiles(tag_profiles)
+    unit_profiles = unit_content_profiles(tag_profiles)
+    building_profiles = building_content_profiles(tag_profiles)
+    allowed_reform_profiles: dict[str, set[str]] = {}
+    for row in csv_rows(S2_ALTERNATIVE_REFORMS):
+        allowed_reform_profiles[row["reform"]] = set(
+            S2_ESTATE_ADVANCE_PROFILES[row["profile"]]
+        )
+    for reform in (
+        "antq_client_monarchy",
+        "antq_dominate",
+        "antq_sassanid_centralized_monarchy",
+    ):
+        allowed_reform_profiles[reform] = set(reform_profiles.get(reform, set()))
+    allowed_privilege_profiles: dict[str, set[str]] = {}
+    for row in csv_rows(S2_ESTATE_PRIVILEGES):
+        key = row["key"]
+        matched = next(
+            (
+                profile for profile in S2_ESTATE_ADVANCE_PROFILES
+                if key.startswith(f"antq_{profile}_")
+            ),
+            None,
+        )
+        if matched is not None:
+            allowed_privilege_profiles[key] = set(
+                S2_ESTATE_ADVANCE_PROFILES[matched]
+            )
+    exact_law_profiles = {
+        law: {f"law_{profile}" for profile in profiles}
+        for law, profiles in opening_law_exact_profiles().items()
+    }
+    profiled_targets: dict[str, dict[str, set[str]]] = {
+        "unlock_government_reform": allowed_reform_profiles,
+        "unlock_estate_privilege": allowed_privilege_profiles,
+        "unlock_unit": unit_profiles,
+        "unlock_building": building_profiles,
+        "unlock_law": exact_law_profiles,
+    }
     for field, (path, prefix) in target_sources.items():
         expected_targets = (
             set(regional_building_keys())
@@ -2434,14 +2472,9 @@ def validate(records: tuple[Advance, ...]) -> None:
         )
         if field == "unlock_government_reform":
             expected_targets -= set(opening_reforms)
-            expected_targets |= set(opening_reforms) & {
-                target
-                for entries in CONTENT_UNLOCKS.values()
-                for unlock_field, target in entries
-                if unlock_field == "unlock_government_reform"
-            }
         elif field == "unlock_estate_privilege":
             expected_targets -= set(opening_privileges)
+            expected_targets -= opening_profile_privilege_keys()
         actual_targets = [
             target
             for entries in unlocks.values()
@@ -2468,6 +2501,30 @@ def validate(records: tuple[Advance, ...]) -> None:
             if "shared" in profiles and len(profiles) > 1:
                 failures.append(
                     f"{field} {target} mixes a shared unlock with regional duplicates"
+                )
+    # A tooltip is part of a culture's visible research contract. Check the
+    # audience of every profile-bound reward against the source subsystem, not
+    # merely target existence and duplicate counts. This prevents a valid but
+    # foreign reform, unit, privilege, law, or workshop from silently landing
+    # on an unrelated card.
+    for advance, entries in unlocks.items():
+        record_profile = by_key[advance].profile
+        for field, target in entries:
+            target_map = profiled_targets.get(field)
+            if target_map is None:
+                continue
+            if field == "unlock_law" and not target.startswith("antq_s2_"):
+                continue
+            allowed = target_map.get(target)
+            if allowed is None:
+                failures.append(
+                    f"{field} {target} has no checked research-profile contract"
+                )
+                continue
+            if record_profile not in allowed:
+                failures.append(
+                    f"{advance} ({record_profile}) advertises foreign {field} "
+                    f"{target}; allowed={sorted(allowed)}"
                 )
     with S2_ANCIENT_LAWS.open(encoding="utf-8-sig", newline="") as handle:
         expected_profile_laws = {

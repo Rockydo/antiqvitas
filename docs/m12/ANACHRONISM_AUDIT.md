@@ -46,16 +46,23 @@ separately proves the other supported language folders exactly mirror English.
 - `main_menu/localization/english/antq_s3_opening_systems_l_english.yml`
 - `main_menu/localization/english/antq_s3_societal_values_l_english.yml`
 - `main_menu/localization/english/antq_zz_m4_location_name_corrections_l_english.yml`
+- `main_menu/localization/english/country_history_l_english.yml`
+- `main_menu/localization/english/country_interactions_l_english.yml`
+- `main_menu/localization/english/goods_l_english.yml`
+- `main_menu/localization/english/government_names_l_english.yml`
+- `main_menu/localization/english/load_tips_l_english.yml`
+- `main_menu/localization/english/pops_l_english.yml`
+- `main_menu/localization/english/zz_antq_s2_ui_l_english.yml`
 
 ## Clear post-476 vocabulary
 
-The prohibited vocabulary is deliberately narrow: `absolutism`, `absolutist`, `calvinism`, `calvinist`, `cannon`, `cannons`, `colonial`, `colonialism`, `colonies`, `colonist`, `colonization`, `colonize`, `colonized`, `crusade`, `crusader`, `factory`, `factories`, `habsburg`, `industrial`, `industrialization`, `lutheran`, `lutheranism`, `musket`, `muskets`, `napoleon`, `napoleonic`, `ottoman`, `pistol`, `pistols`, `protestant`, `protestantism`, `railroad`, `railroads`, `railway`, `railways`, `reformation`, `renaissance`, `rifle`, `rifles`, `safavid`, `steam engine`, `steam engines`, `steamship`, `steamships`, `united states`. Context-sensitive
+The prohibited vocabulary is deliberately narrow: `absolutism`, `absolutist`, `anachronistic`, `anglican`, `calvinism`, `calvinist`, `columbian exchange`, `cannon`, `cannons`, `colonial`, `colonialism`, `colonies`, `colonist`, `colonization`, `colonize`, `colonized`, `crusade`, `crusader`, `factory`, `factories`, `feudalism`, `firearm`, `firearms`, `gun`, `guns`, `habsburg`, `industrial`, `industrialization`, `janissary`, `janissaries`, `jesuit`, `jesuits`, `lutheran`, `lutheranism`, `later history`, `middle ages`, `manufactory`, `manufactories`, `medieval`, `modern`, `musket`, `muskets`, `napoleon`, `napoleonic`, `newspaper`, `newspapers`, `ottoman`, `pistol`, `pistols`, `playable frame`, `printing press`, `protestant`, `protestantism`, `railroad`, `railroads`, `railway`, `railways`, `reformation`, `renaissance`, `rifle`, `rifles`, `qizilbash`, `safavid`, `safaviyya`, `serfdom`, `steam engine`, `steam engines`, `steamship`, `steamships`, `spectacle`, `spectacles`, `telescope`, `telescopes`, `united states`, `whisky`. Context-sensitive
 words such as `empire`, `church`, and `feudal` are not blocked because a raw
 word match would make unsupported historical assertions rather than improve
 the audit.
 
 ## Result
 
-36 English files and 69055 quoted player-facing entries contain
+43 English files and 73152 quoted player-facing entries contain
 zero prohibited terms. The check is pinned in `make validate`; a newly authored
 anachronism fails before it can reach a smoke run.

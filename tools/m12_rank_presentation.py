@@ -398,12 +398,26 @@ def render_interaction_localization(client: str) -> str:
             output.append(' county_privileges: "Local-Polity Privileges"')
         elif key == "elevate_county":
             output.append(' elevate_county: "Elevate Local Polity"')
+        elif key.startswith("demand_conversion_to_islam"):
+            if key == "demand_conversion_to_islam":
+                text = "Inactive Legacy Religious Demand"
+            else:
+                text = "This compatibility action is unavailable in ANTIQVITAS."
+            output.append(f' {key}: "{text}"')
         else:
             # These exact mirrors retain inactive engine keys but must never
             # reintroduce a visible early-modern adjective.
             value = line
             if ":" in line:
                 key, tail = line.split(":", 1)
+                tail = re.sub(r"\bPrussian Crusade\b", "Baltic Expedition", tail)
+                tail = re.sub(r"\bprussian crusade\b", "Baltic expedition", tail)
+                tail = re.sub(r"\bCrusade\b", "Campaign", tail)
+                tail = re.sub(r"\bcrusade\b", "campaign", tail)
+                tail = re.sub(r"\bColonies\b", "Settlements", tail)
+                tail = re.sub(r"\bcolonies\b", "settlements", tail)
+                tail = re.sub(r"\bColony\b", "Dependency", tail)
+                tail = re.sub(r"\bcolony\b", "dependency", tail)
                 tail = re.sub(r"\bColonial\b", "Chartered", tail)
                 tail = re.sub(r"\bcolonial\b", "chartered", tail)
                 value = f"{key}:{tail}"

@@ -4448,3 +4448,7 @@ Namespaced law holders are stripped during bookmark initialization. Reuse only
 four installed keys already unlocked by universal depth-zero advances, replace
 their full policy bodies with 13-profile ancient options, and select exactly
 four per opening tag. Keep the 182 namespaced groups as later research content.
+
+## 2026-08-01 - Opening constitutions are setup state, not research rewards
+
+Never infer a research audience from holders of a shared opening reform. Opening forms are already active and receive no unlock card. Only later transitions enter the advance tree, through explicit source-profile allocation and a validator that rejects foreign rewards.

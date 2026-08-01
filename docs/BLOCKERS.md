@@ -1,5 +1,18 @@
 # ANTIQVITAS BLOCKERS
 
+## 2026-08-01 - Exact installed law-holder candidate rejected at runtime
+
+Status: blocked after two valid starts; green committed state retained.
+
+The exact-key candidate also fails: fresh Observer-to-`XAH` and direct Parthia
+starts both render `No laws available`; an `XAA` control does likewise. Thus
+four scripted policies and their unlock advances validate but are discarded or
+remain unowned by the runtime. This is the sixth materially distinct contract;
+do not retry without new local engine evidence. Captures:
+`docs/screens/S3_PARTHIA_LAWS_20260801_B/parthia_laws.png`,
+`docs/screens/S3_PARTHIA_LAWS_20260801_B/rome_laws_control2.png`, and
+`docs/screens/S3_PARTHIA_LAWS_20260801_C/parthia_direct_laws.png`.
+
 ## 2026-07-31 - Privilege panel proof deferred by shared EU5 lease
 
 Two bounded launches were protocol-deferred while `endore` held the EU5 slot

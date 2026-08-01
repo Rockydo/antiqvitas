@@ -64,6 +64,14 @@ POP_DEMAND_INSERTION = re.compile(r"^(?P<indent>[ \t]*)mercury\s*=\s*1(?P<ending
 COAL_NAME = re.compile(r'^(?P<indent>[ \t]*)coal:\s*".*"$', re.MULTILINE)
 COAL_DESCRIPTION = re.compile(r'^(?P<indent>[ \t]*)coal_desc:\s*".*"$', re.MULTILINE)
 ANCIENT_LOCALIZATION_REPLACEMENTS = {
+    "horses_desc": (
+        "Horses provide remounts, traction, prestige, courier service, and the "
+        "mounted arm of armies from Atlantic Europe to the Eurasian steppe."
+    ),
+    "tar_desc": (
+        "Wood tar and natural bitumen seal hulls, roofs, ropes, baskets, and "
+        "containers, making them essential to shipyards and waterproof construction."
+    ),
     "copper_desc": (
         "Copper is worked alone and with tin as bronze for tools, vessels, "
         "coinage, fittings, armor, and weapons across the ancient world."
@@ -72,13 +80,45 @@ ANCIENT_LOCALIZATION_REPLACEMENTS = {
         "Lead is obtained from galena, often alongside silver, and used for "
         "pipes, weights, anchors, roofing, vessels, pigments, and other ancient crafts."
     ),
+    "goods_gold_desc": (
+        "Gold is worked into coin, plate, jewellery, cult offerings, and royal "
+        "gifts; its durability and scarcity make it a portable store of prestige and wealth."
+    ),
+    "silver_desc": (
+        "Silver supports coinage, tribute, plate, jewellery, and temple wealth, "
+        "linking mines and mints to armies, courts, cities, and long-distance trade."
+    ),
+    "gems_desc": (
+        "Rubies, sapphires, diamonds, emeralds, garnets, and jade adorn regalia, "
+        "jewellery, seals, cult objects, and elite gifts across ancient exchange networks."
+    ),
+    "stone_desc": (
+        "Quarried stone supplies walls, roads, bridges, temples, monuments, mills, "
+        "drains, and durable civic construction."
+    ),
+    "tin_desc": (
+        "Tin is prized above all as the alloying metal for bronze, and also serves "
+        "in pewter, coatings, vessels, fittings, and specialist metalwork."
+    ),
+    "silk_desc": (
+        "Silk is reeled and woven in East Asia, then exchanged as cloth, thread, "
+        "gifts, and tribute through Central Asian, Indian, and maritime routes."
+    ),
+    "dyes_desc": (
+        "Indigo, madder, woad, saffron, murex, and other dyestuffs colour cloth, "
+        "leather, paint, and ritual materials; vivid and fast colours command high prices."
+    ),
+    "sugar_desc": (
+        "Cane sugar is a scarce South Asian sweetener and medicinal preparation, "
+        "traded in limited quantities alongside honey, fruits, and syrups."
+    ),
     "tobacco_desc": (
         "Tobacco represents locally cultivated American Nicotiana plants used "
         "within Indigenous ritual, medicinal, and social traditions; it has no Old World trade route."
     ),
     "tea_desc": (
         "Tea represents the bounded use of tea leaves and related infusions in "
-        "southern and western Han contexts, before later mass commerce."
+        "southern and western Han contexts."
     ),
     "cocoa_desc": (
         "Cacao represents locally cultivated American Theobroma used in drinks, "
@@ -91,6 +131,27 @@ ANCIENT_LOCALIZATION_REPLACEMENTS = {
     "naval_supplies_desc": (
         "Naval supplies combine timber, tar, rope, sailcloth, cordage, fittings, "
         "and other materials needed to build and maintain ancient ships."
+    ),
+    "ivory_desc": (
+        "Elephant and hippopotamus ivory is carved into inlays, handles, furniture, "
+        "statuettes, writing tablets, ornaments, and prestigious gifts."
+    ),
+    "fur_desc": (
+        "Furs and dressed pelts provide warm clothing, bedding, trim, tribute, and "
+        "exchange goods from northern forests, mountains, and steppe margins."
+    ),
+    "lumber_desc": (
+        "Cut timber supplies houses, halls, ships, carts, bridges, scaffolds, mines, "
+        "fortifications, fuel, and countless household implements."
+    ),
+    "salt_desc": (
+        "Mined, boiled, or solar-evaporated salt preserves food, supports livestock, "
+        "seasons diets, and moves in bulk along roads, rivers, and coasts."
+    ),
+    "porcelain": "High-Fired Ceramics",
+    "porcelain_desc": (
+        "High-fired, fine-bodied ceramics represent the developing glazed and "
+        "vitrified wares of ancient East Asian kilns."
     ),
     "firearms": "Unavailable Legacy Armament",
     "firearms_desc": (
@@ -108,9 +169,80 @@ ANCIENT_LOCALIZATION_REPLACEMENTS = {
         "Steel represents deliberately carburized, quenched, and refined iron "
         "used for edged tools, armor fittings, springs, and high-quality weapons in ancient workshops."
     ),
+    "glass_desc": (
+        "Glassworkers shape vessels, beads, inlays, windows, mirrors, and ornaments "
+        "from silica, fluxes, colourants, and recycled cullet."
+    ),
+    "cloth_desc": (
+        "Cloth comprises woven wool, linen, cotton, hemp, and other fibres used for "
+        "clothing, blankets, sails, tents, wrappings, and household textiles."
+    ),
+    "wine_desc": (
+        "Wine is a staple drink, ration, offering, medicine, and trade good produced "
+        "in vineyards and stored or shipped in jars, skins, and barrels."
+    ),
+    "liquor": "Infused Wine",
+    "liquor_desc": (
+        "Infused wines combine fermented grape or grain drinks with herbs, resins, "
+        "honey, fruits, and spices for household, medicinal, and ceremonial use."
+    ),
+    "paper": "Writing Materials",
+    "paper_desc": (
+        "Prepared papyrus, bark sheets, early fibre paper, parchment, bamboo slips, "
+        "wooden tablets, and other writing materials sustain records and correspondence."
+    ),
+    "books": "Scrolls and Codices",
+    "books_desc": (
+        "Scrolls, stitched manuscripts, tablets, and early codices preserve law, "
+        "accounts, literature, ritual, scholarship, and official correspondence."
+    ),
+    "leather_desc": (
+        "Tanned hides supply footwear, belts, harness, shields, armour fittings, "
+        "containers, parchment, tents, upholstery, and durable clothing."
+    ),
     "potato_desc": (
         "Potatoes represent Andean tubers cultivated around the Lake Titicaca "
         "basin and neighboring highlands within their native American range."
+    ),
+    "fish_desc": (
+        "Fresh, dried, salted, smoked, and fermented fish feed inland and coastal "
+        "communities while fisheries supply sailors, merchants, and military stores."
+    ),
+    "maize_desc": (
+        "Maize is a major Indigenous American cereal cultivated in fields and gardens, "
+        "eaten fresh or dried, ground into meal, stored, and exchanged within its native range."
+    ),
+    "legumes_desc": (
+        "Beans, peas, lentils, chickpeas, and other pulses provide storable protein, "
+        "restore soils, and complement cereal diets across many farming systems."
+    ),
+    "amber_desc": (
+        "Fossil resin from Baltic and other deposits is gathered and worked into "
+        "beads, amulets, inlays, ornaments, and valuable long-distance exchange goods."
+    ),
+    "alum_desc": (
+        "Alum serves as a mordant for dyes and as an ingredient in tanning, medicine, "
+        "pigments, and specialist crafts; desert and volcanic sources support wide trade."
+    ),
+    "slaves_goods_desc": (
+        "Enslaved people are moved between markets to fill vacant @slaves! "
+        "[ShowPopTypeName('slaves')] work through warfare, raiding, punishment, debt, and trade."
+    ),
+    "beer_desc": (
+        "Beer brewed from barley, wheat, millet, sorghum, rice, or other grains is a "
+        "staple drink, ration, offering, and source of calories in many ancient societies."
+    ),
+    "fruit_desc": (
+        "Dates, figs, grapes, apples, pears, citrus, melons, and other fruits supply "
+        "fresh, dried, pressed, fermented, and preserved foods suited to local climates."
+    ),
+    "mercury_desc": (
+        "Mercury and cinnabar are used cautiously in pigments, gilding, ritual objects, "
+        "medicine, and specialist metallurgical experiments."
+    ),
+    "cloves_desc": (
+        "Cloves are aromatic flower buds from the Maluku Islands, valued in food, "
+        "medicine, fragrance, court ritual, and long-distance maritime exchange."
     ),
     "saltpeter_desc": (
         "Saltpeter is a naturally occurring mineral used in limited ancient "
@@ -131,9 +263,85 @@ ANCIENT_LOCALIZATION_REPLACEMENTS = {
     "colonial_charter_maintenance": "Inactive Overseas Charter Maintenance",
     "colonial_administration_requirements": "Inactive Overseas Administrations",
     "modern_council_hall_maintenance": "Inactive Council Halls",
+    "cotton_desc": (
+        "Cotton represents ancient South Asian and African fibre crops spun, "
+        "woven, and exchanged through regional and maritime networks."
+    ),
+    "rifle_infantry_maintenance": "Inactive Legacy Missile-Troop Upkeep",
+    "rifle_infantry_construction": "Inactive Legacy Missile-Troop Equipment",
+    "build_railroad_demand": "Inactive Legacy Road Construction",
+    "maintain_railroad_demand": "Inactive Legacy Road Maintenance",
+    "demands_of_muskets": "Inactive Legacy Weapon Demand",
+    "manufactory_input": "Workshop Input",
+    "naval_supplies_manufactory_maintenance": "Naval-Supply Workshops",
+    "printing_manufactory_maintenance": "Document Workshops",
+    "paper_manufactory_maintenance": "Paper Workshops",
+    "firearms_guild_steel_maintenance": "Inactive Legacy Armament Shops",
+    "cannon_foundry_maintenance": "Inactive Legacy Siege Works",
+    "firearms_manufactory_maintenance": "Inactive Legacy Armament Workshops",
+    "pottery_manufactory_maintenance": "Pottery Workshops",
+    "furniture_manufactory_maintenance": "Furniture Workshops",
+    "manufactory_construction": "Workshop Construction",
+    "porcelain_manufactory_maintenance": "Porcelain Workshops",
+    "tannery_manufactory_maintenance": "Tanning Workshops",
+    "gun_factory_maintenance": "Inactive Legacy Armament Works",
+    "weapon_manufactory_maintenance": "Weapon Workshops",
+    "lutheran_preacher_maintenance": "Inactive Legacy Preachers",
+    "lacquerware_manufactory_maintenance": "Lacquerware Workshops",
+    "guns_foundry_maintenance": "Inactive Legacy Siege Works",
+    "brewery_manufactory_maintenance": "Brewing Workshops",
+    "leather_manufactory_maintenance": "Leather Workshops",
+    "hand_cannon_guild_maintenance": "Inactive Legacy Siege-Artisan Shops",
+    "fine_cloth_manufactory_maintenance": "Fine-Cloth Workshops",
+    "silk_cloth_manufactory_maintenance": "Silk Workshops",
+    "firearms_factory_maintenance": "Inactive Legacy Armament Works",
+    "jesuit_college_maintenance": "Inactive Legacy Religious College",
+    "janissary_barracks_maintenance": "Inactive Legacy Barracks",
+    "ghilman_barracks_maintenance": "Inactive Legacy Barracks",
+    "safaviyya_order_hall_maintenance": "Inactive Legacy Order Hall",
+    "scottish_whisky_distillery_maintenance": "Inactive Legacy Distillery",
+    "scottish_whisky_distillery_mill_maintenance": "Inactive Legacy Distillery Mills",
+    "novodevichy_building_construction": "Inactive Legacy Religious Construction",
+    "dutch_trade_outpost_maintenance": "Inactive Legacy Overseas Outpost",
+    "local_newspaper_needs": "Inactive Legacy Printed News",
+    "POP_DEMAND_PRINTING_PRESS": "Inactive Legacy Printing",
+    "POP_DEMAND_ANGLICAN_VESTMENTS": "Inactive Legacy Clerical Vestments",
+    "gun_smith_slot_0": "Inactive Legacy Armament Method",
+    "guns_guild_lumber_maintenance": "Inactive Legacy Armament Material",
+    "guns_guild_bronze_maintenance": "Inactive Legacy Armament Material",
+    "guns_guild_iron_maintenance": "Inactive Legacy Armament Material",
+    "guns_guild_steel_maintenance": "Inactive Legacy Armament Material",
+    "gun_smith_slot_1": "Inactive Legacy Projectile Method",
+    "guns_guild_ammunition_stone_maintenance": "Inactive Legacy Projectiles",
+    "guns_guild_ammunition_lead_maintenance": "Inactive Legacy Projectiles",
+    "guns_guild_ammunition_iron_maintenance": "Inactive Legacy Projectiles",
+    "hab_reformed_monastery_maintenance_desc": (
+        "An inactive compatibility method retained only for engine references."
+    ),
+    "guns_guild_lumber_maintenance_desc": (
+        "An inactive compatibility method retained only for engine references."
+    ),
+    "jesuit_college_maintenance_desc": (
+        "An inactive compatibility method retained only for engine references."
+    ),
+    "janissary_barracks_maintenance_desc": (
+        "An inactive compatibility method retained only for engine references."
+    ),
+    "ghilman_barracks_maintenance_desc": (
+        "An inactive compatibility method retained only for engine references."
+    ),
+    "safaviyya_order_hall_maintenance_desc": (
+        "An inactive compatibility method retained only for engine references."
+    ),
+    "scottish_whisky_distillery_maintenance_desc": (
+        "An inactive compatibility method retained only for engine references."
+    ),
+    "guns_guild_ammunition_stone_maintenance_desc": (
+        "An inactive compatibility method retained only for engine references."
+    ),
 }
 LOCALIZATION_LINE = re.compile(
-    r'^(?P<indent>[ \t]*)(?P<key>[A-Za-z0-9_]+):\s*".*"$',
+    r'^(?P<indent>[ \t]*)(?P<key>[A-Za-z0-9_]+):\s*".*"\s*$',
     re.MULTILINE,
 )
 

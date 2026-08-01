@@ -130,8 +130,8 @@ def main() -> int:
         base_matches = [
             row for row in advances if base_token in row["unlocks"].split(";")
         ]
-        if len(base_matches) != 1 or base_matches[0]["age"] != "age_1_traditions":
-            failures.append(f"opening reform is not uniquely researchable: {contract['base']}")
+        if base_matches:
+            failures.append(f"opening reform leaked into research: {contract['base']}")
 
         government = government_rows.get(contract["tag"], {})
         if government.get("reform") != contract["base"]:
