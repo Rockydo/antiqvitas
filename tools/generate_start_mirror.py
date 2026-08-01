@@ -30,7 +30,7 @@ from m9_diplomacy import (
     discovery_regions as m9_discovery_regions,
     international_organization_manager as m9_international_organization_manager,
 )
-from s2_ancient_laws import opening_adapter_laws_by_tag
+from s2_ancient_laws import starting_laws_by_tag
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "main_menu/setup/start"
@@ -1604,7 +1604,7 @@ def fallback_government_block(kind: str, design_tag: str) -> list[str]:
     lines.append("\t\t\t\tlaws = {")
     lines.extend(
         f"\t\t\t\t\t{law} = {option}"
-        for law, option in opening_adapter_laws_by_tag()[design_tag]
+        for law, option in starting_laws_by_tag()[design_tag]
     )
     lines.extend(("\t\t\t\t}", "\t\t\t}"))
     return lines

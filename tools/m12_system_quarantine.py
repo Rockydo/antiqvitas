@@ -112,10 +112,6 @@ RETAINED_ENGINE_ADAPTERS = {
     # ancientized separately; retaining the category is an engine contract.
     "laws": {
         "heir_religion_law",
-        "legal_code_law",
-        "education_masses_law",
-        "tribal_legal_basis_law",
-        "administrative_system",
     },
     "country_interactions": {
         "ask_for_access_for_war_side",

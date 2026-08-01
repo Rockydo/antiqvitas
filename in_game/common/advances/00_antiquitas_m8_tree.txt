@@ -6,9 +6,7 @@ antq_imperial_cult = {
 	depth = 0
 	research_cost = 2.0
 	country_cabinet_efficiency = 0.01
-	unlock_law = legal_code_law
-	unlock_law = education_masses_law
-	unlock_law = tribal_legal_basis_law
+	has_codified_laws = yes
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
@@ -41,7 +39,6 @@ antq_provincial_census = {
 	can_extract_goods_gold = yes
 	can_extract_silver = yes
 	can_extract_mercury = yes
-	unlock_law = administrative_system
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
@@ -63,7 +60,6 @@ antq_tax_registers = {
 		}
 	}
 	stability_cost_efficiency = 0.02
-	unlock_law = distribution_of_power_law
 	unlock_subject_type = antq_client_kingdom
 	unlock_casus_belli = antq_impose_client_king
 	starting_technology_level = 2
@@ -88,7 +84,7 @@ antq_road_milestones = {
 		}
 	}
 	stability_cost_efficiency = 0.02
-	unlock_law = royal_court_customs_law
+	unlock_government_reform = antq_flavian_imperial_settlement
 	unlock_casus_belli = antq_frontier_rectification
 	starting_technology_level = 2
 	requires = antq_imperial_cult
@@ -139,7 +135,7 @@ antq_municipal_charters = {
 		}
 	}
 	stability_cost_efficiency = 0.02
-	unlock_law = feudal_de_jure_law
+	unlock_government_reform = antq_frontier_muster_monarchy
 	unlock_subject_type = antq_autonomous_city
 	unlock_building = antq_reg_weightmaker
 	starting_technology_level = 2
@@ -189,7 +185,7 @@ antq_frontier_dispatches = {
 		}
 	}
 	global_monthly_control = 0.001
-	unlock_government_reform = antq_goguryeo_granary_court
+	unlock_government_reform = antq_xin_state_reorganization
 	unlock_government_reform = antq_client_monarchy
 	unlock_building = antq_reg_mensores_office
 	starting_technology_level = 3
@@ -238,7 +234,7 @@ antq_standing_administration = {
 		}
 	}
 	global_monthly_control = 0.001
-	unlock_government_reform = antq_xin_state_reorganization
+	unlock_government_reform = antq_guangwu_restoration_court
 	unlock_building = antq_reg_monetal_workshop
 	unlock_building = antq_reg_customs_gate
 	starting_technology_level = 3
@@ -2959,13 +2955,11 @@ antq_professional_standing_armies = {
 	research_cost = 2.0
 	levy_recovery_modifier = 0.01
 	always_allow_army_levies = yes
-	unlock_law = medieval_levy_law
-	unlock_policy = aristocratic_court_policy
 	unlock_levy = antq_levy_district_spear_muster
 	unlock_levy = antq_levy_seasonal_skirmishers
 	unlock_casus_belli = antq_punitive_expedition
-	unlock_unit = antq_seasonal_skirmishers
-	unlock_unit = antq_caravan_guard_company
+	unlock_unit = antq_district_spear_muster
+	unlock_unit = antq_frontier_spear_company
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
@@ -2976,13 +2970,12 @@ antq_auxiliary_service = {
 	depth = 0
 	research_cost = 2.0
 	levy_recovery_modifier = 0.01
-	unlock_law = tribal_religious_values_law
 	unlock_unit = antq_spear_and_shield_infantry
 	unlock_unit = antq_javelin_skirmishers
 	unlock_unit = antq_bow_infantry
 	unlock_unit = antq_household_retainers
-	unlock_unit = antq_district_spear_muster
-	unlock_unit = antq_frontier_spear_company
+	unlock_unit = antq_seasonal_skirmishers
+	unlock_unit = antq_caravan_guard_company
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
@@ -3004,13 +2997,12 @@ antq_drill_routines = {
 		}
 	}
 	army_logistics_distance_modifier = 0.10
-	unlock_law = tribal_organization_law
-	unlock_unit = antq_thracian_peltasts
-	unlock_unit = antq_dacian_falxmen
-	unlock_unit = antq_cilician_marines
-	unlock_unit = antq_roman_alae
-	unlock_unit = antq_balearic_slingers
-	unlock_unit = antq_comitatenses
+	unlock_unit = antq_cretan_archers
+	unlock_unit = antq_syrian_archers
+	unlock_unit = antq_trireme
+	unlock_unit = antq_legionaries
+	unlock_unit = antq_roman_sagittarii
+	unlock_unit = antq_quinquereme
 	starting_technology_level = 2
 	requires = antq_professional_standing_armies
 	ai_weight = { add = 90 }
@@ -3033,13 +3025,12 @@ antq_supply_columns = {
 		}
 	}
 	army_logistics_distance_modifier = 0.10
-	unlock_government_reform = antq_flavian_imperial_settlement
-	unlock_unit = antq_numidian_horse_company
-	unlock_unit = antq_armenian_horse
-	unlock_unit = antq_batavian_auxiliary_cohort
-	unlock_unit = antq_roman_marines
-	unlock_unit = antq_liburnian
-	unlock_unit = antq_limitanei
+	unlock_unit = antq_galatian_swordsmen
+	unlock_unit = antq_iberian_swordsmen
+	unlock_unit = antq_merchant_roundship
+	unlock_unit = antq_auxilia
+	unlock_unit = antq_roman_scouts
+	unlock_unit = antq_germanic_bodyguards
 	starting_technology_level = 2
 	requires = antq_professional_standing_armies
 	ai_weight = { add = 90 }
@@ -3113,12 +3104,12 @@ antq_river_crossings = {
 		}
 	}
 	army_maintenance_efficiency = 0.01
-	unlock_unit = antq_cretan_archers
-	unlock_unit = antq_syrian_archers
-	unlock_unit = antq_trireme
-	unlock_unit = antq_legionaries
-	unlock_unit = antq_roman_sagittarii
-	unlock_unit = antq_quinquereme
+	unlock_unit = antq_thracian_peltasts
+	unlock_unit = antq_dacian_falxmen
+	unlock_unit = antq_cilician_marines
+	unlock_unit = antq_roman_alae
+	unlock_unit = antq_balearic_slingers
+	unlock_unit = antq_comitatenses
 	starting_technology_level = 3
 	requires = antq_drill_routines
 	requires = antq_supply_columns
@@ -3167,12 +3158,12 @@ antq_legionary_logistics = {
 		}
 	}
 	land_morale_modifier = 0.01
-	unlock_unit = antq_galatian_swordsmen
-	unlock_unit = antq_iberian_swordsmen
-	unlock_unit = antq_merchant_roundship
-	unlock_unit = antq_auxilia
-	unlock_unit = antq_roman_scouts
-	unlock_unit = antq_germanic_bodyguards
+	unlock_unit = antq_numidian_horse_company
+	unlock_unit = antq_armenian_horse
+	unlock_unit = antq_batavian_auxiliary_cohort
+	unlock_unit = antq_roman_marines
+	unlock_unit = antq_liburnian
+	unlock_unit = antq_limitanei
 	starting_technology_level = 4
 	requires = antq_river_crossings
 	ai_weight = { add = 70 }
@@ -3775,7 +3766,7 @@ antq_late_antique_logistics = {
 		}
 	}
 	land_morale_modifier = 0.01
-	unlock_building = antq_reg_caravanserai
+	unlock_building = antq_reg_pack_animal_yard
 	requires = antq_mobile_reserves
 	ai_weight = { add = 70 }
 }
@@ -4148,7 +4139,7 @@ antq_elephant_corps_stables = {
 		}
 	}
 	army_logistics_distance_modifier = 0.10
-	unlock_government_reform = antq_temple_endowment_court
+	unlock_government_reform = antq_irrigation_palace
 	unlock_unit = antq_monsoon_dhow
 	starting_technology_level = 2
 	requires = antq_professional_standing_armies
@@ -4173,7 +4164,7 @@ antq_longbow_guild_levies = {
 		}
 	}
 	army_maintenance_efficiency = 0.01
-	unlock_government_reform = antq_lankan_sangha_endowments
+	unlock_government_reform = antq_satavahana_guild_court
 	unlock_unit = antq_indian_longbow_company
 	starting_technology_level = 3
 	requires = antq_elephant_corps_stables
@@ -4964,7 +4955,7 @@ antq_satavahana_frontier_corps_musters = {
 	}
 	army_logistics_distance_modifier = 0.02006
 	unlock_building = antq_reg_amphora_warehouse
-	unlock_building = antq_reg_dye_finishing_house
+	unlock_building = antq_reg_stone_masonry_yard
 	requires = antq_satavahana_frontier_corps_scouts
 	ai_weight = { add = 80 }
 }
@@ -4987,7 +4978,7 @@ antq_satavahana_frontier_corps_supply = {
 		}
 	}
 	army_maintenance_efficiency = 0.00456
-	unlock_building = antq_reg_spice_warehouse
+	unlock_building = antq_reg_flax_retting_yard
 	requires = antq_satavahana_frontier_corps_musters
 	ai_weight = { add = 70 }
 }
@@ -5010,7 +5001,7 @@ antq_satavahana_frontier_corps_drill = {
 		}
 	}
 	land_morale_modifier = 0.00306
-	unlock_building = antq_reg_cooperage
+	unlock_building = antq_reg_spice_warehouse
 	requires = antq_satavahana_frontier_corps_musters
 	ai_weight = { add = 70 }
 }
@@ -5033,7 +5024,7 @@ antq_satavahana_frontier_corps_command = {
 		}
 	}
 	discipline = 0.00106
-	unlock_building = antq_reg_loom_house
+	unlock_building = antq_reg_cauldron_smithy
 	requires = antq_satavahana_frontier_corps_supply
 	requires = antq_satavahana_frontier_corps_drill
 	ai_weight = { add = 60 }
@@ -5105,7 +5096,7 @@ antq_post_kushan_cavalry_elephants_supply = {
 		}
 	}
 	army_maintenance_efficiency = 0.00478
-	unlock_building = antq_reg_reed_matmaker
+	unlock_building = antq_reg_way_station
 	requires = antq_post_kushan_cavalry_elephants_musters
 	ai_weight = { add = 70 }
 }
@@ -5128,7 +5119,7 @@ antq_post_kushan_cavalry_elephants_drill = {
 		}
 	}
 	land_morale_modifier = 0.00328
-	unlock_building = antq_reg_sponge_drying_yard
+	unlock_building = antq_reg_reed_matmaker
 	requires = antq_post_kushan_cavalry_elephants_musters
 	ai_weight = { add = 70 }
 }
@@ -5151,7 +5142,7 @@ antq_post_kushan_cavalry_elephants_command = {
 		}
 	}
 	discipline = 0.00128
-	unlock_building = antq_reg_combmaker
+	unlock_building = antq_reg_bell_foundry
 	requires = antq_post_kushan_cavalry_elephants_supply
 	requires = antq_post_kushan_cavalry_elephants_drill
 	ai_weight = { add = 60 }
@@ -5222,7 +5213,7 @@ antq_samudragupta_campaign_system_supply = {
 		}
 	}
 	army_maintenance_efficiency = 0.005
-	unlock_building = antq_reg_grain_weighhouse
+	unlock_building = antq_reg_ironmongery
 	requires = antq_samudragupta_campaign_system_musters
 	ai_weight = { add = 70 }
 }
@@ -5245,7 +5236,7 @@ antq_samudragupta_campaign_system_drill = {
 		}
 	}
 	land_morale_modifier = 0.0035
-	unlock_building = antq_reg_pack_animal_yard
+	unlock_building = antq_reg_grain_weighhouse
 	requires = antq_samudragupta_campaign_system_musters
 	ai_weight = { add = 70 }
 }
@@ -5268,7 +5259,7 @@ antq_samudragupta_campaign_system_command = {
 		}
 	}
 	discipline = 0.0015
-	unlock_building = antq_reg_spindlework
+	unlock_building = antq_reg_torchmaker
 	requires = antq_samudragupta_campaign_system_supply
 	requires = antq_samudragupta_campaign_system_drill
 	ai_weight = { add = 60 }
@@ -5339,7 +5330,7 @@ antq_late_gupta_frontier_defence_supply = {
 		}
 	}
 	army_maintenance_efficiency = 0.00522
-	unlock_building = antq_reg_silverworkshop
+	unlock_building = antq_reg_wickerwork
 	requires = antq_late_gupta_frontier_defence_musters
 	ai_weight = { add = 70 }
 }
@@ -5362,7 +5353,7 @@ antq_late_gupta_frontier_defence_drill = {
 		}
 	}
 	land_morale_modifier = 0.00372
-	unlock_building = antq_reg_ironmongery
+	unlock_building = antq_reg_silverworkshop
 	requires = antq_late_gupta_frontier_defence_musters
 	ai_weight = { add = 70 }
 }
@@ -5385,7 +5376,7 @@ antq_late_gupta_frontier_defence_command = {
 		}
 	}
 	discipline = 0.00172
-	unlock_building = antq_reg_sieve_maker
+	unlock_building = antq_reg_mortar_grinder
 	requires = antq_late_gupta_frontier_defence_supply
 	requires = antq_late_gupta_frontier_defence_drill
 	ai_weight = { add = 60 }
@@ -6123,7 +6114,6 @@ antq_monsoon_navigation = {
 	depth = 0
 	research_cost = 2.0
 	trade_range_modifier = 0.02
-	unlock_law = coin_laws
 	unlock_casus_belli = antq_demand_tribute
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
@@ -6135,7 +6125,7 @@ antq_red_sea_piloting = {
 	depth = 0
 	research_cost = 2.0
 	trade_range_modifier = 0.02
-	unlock_law = mining_law
+	unlock_building = antq_reg_fish_saltery
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
@@ -6158,7 +6148,7 @@ antq_caravan_accounting = {
 		}
 	}
 	merchant_maintenance_efficiency = 0.01
-	unlock_law = immigration_law
+	unlock_government_reform = antq_lineage_rotation
 	unlock_building = antq_reg_wine_press
 	unlock_building = antq_reg_jeweler
 	unlock_building = antq_reg_ivory_carver
@@ -6187,7 +6177,7 @@ antq_silk_exchange = {
 		}
 	}
 	merchant_maintenance_efficiency = 0.01
-	unlock_government_reform = antq_lineage_rotation
+	unlock_government_reform = antq_gana_muster_confederacy
 	unlock_building = antq_reg_glassworks
 	unlock_building = antq_reg_cotton_weavery
 	unlock_building = antq_reg_amphora_depot
@@ -6274,7 +6264,7 @@ antq_merchant_diasporas = {
 		}
 	}
 	global_trade_through_owned_territory_efficiency = 0.05
-	unlock_government_reform = antq_irrigation_palace
+	unlock_government_reform = antq_lankan_reservoir_kingship
 	unlock_building = antq_reg_stone_yard
 	unlock_building = antq_reg_linen_weavery
 	unlock_building = antq_reg_ropewalk
@@ -6333,7 +6323,7 @@ antq_seasonal_markets = {
 		}
 	}
 	import_efficiency = tiny_trade_efficiency_bonus
-	unlock_government_reform = antq_satavahana_guild_court
+	unlock_government_reform = antq_satavahana_maharathi_compact
 	unlock_casus_belli = antq_gupta_digvijaya
 	unlock_building = antq_reg_joinery
 	unlock_building = antq_reg_brickworks
@@ -6379,7 +6369,7 @@ antq_silk_road_caravanserais = {
 	depth = 0
 	research_cost = 4.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_fullonica
+	unlock_building = antq_reg_dye_workshop
 	ai_weight = { add = 100 }
 }
 
@@ -6389,7 +6379,7 @@ antq_long_distance_credit = {
 	depth = 0
 	research_cost = 4.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_fish_saltery
+	unlock_building = antq_reg_fullonica
 	ai_weight = { add = 100 }
 }
 
@@ -6412,7 +6402,7 @@ antq_market_regulation = {
 	}
 	merchant_maintenance_efficiency = 0.01
 	unlock_government_reform = antq_affinal_regency_court
-	unlock_building = antq_reg_spice_warehouse
+	unlock_building = antq_reg_coral_workshop
 	requires = antq_silk_road_caravanserais
 	ai_weight = { add = 90 }
 }
@@ -6436,7 +6426,7 @@ antq_eastern_mediterranean_routes = {
 	}
 	merchant_maintenance_efficiency = 0.01
 	unlock_government_reform = antq_eastern_han_secretariat
-	unlock_building = antq_reg_cooperage
+	unlock_building = antq_reg_spice_warehouse
 	requires = antq_silk_road_caravanserais
 	ai_weight = { add = 90 }
 }
@@ -6508,7 +6498,7 @@ antq_merchant_associations = {
 	}
 	global_trade_through_owned_territory_efficiency = 0.05
 	unlock_building = antq_reg_pottery_kiln
-	unlock_building = antq_reg_grain_weighhouse
+	unlock_building = antq_reg_bronze_vessel_shop
 	requires = antq_market_regulation
 	requires = antq_eastern_mediterranean_routes
 	ai_weight = { add = 80 }
@@ -6557,7 +6547,7 @@ antq_imperial_trade = {
 	}
 	import_efficiency = tiny_trade_efficiency_bonus
 	unlock_building = antq_reg_bronze_foundry
-	unlock_building = antq_reg_spindlework
+	unlock_building = antq_reg_torchmaker
 	requires = antq_merchant_associations
 	ai_weight = { add = 70 }
 }
@@ -6592,7 +6582,7 @@ antq_crisis_trade_routes = {
 	depth = 0
 	research_cost = 6.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_dye_workshop
+	unlock_building = antq_reg_leatherworks
 	ai_weight = { add = 100 }
 }
 
@@ -6602,7 +6592,7 @@ antq_debased_currency_exchange = {
 	depth = 0
 	research_cost = 6.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_leatherworks
+	unlock_building = antq_reg_grain_mill
 	ai_weight = { add = 100 }
 }
 
@@ -6809,7 +6799,7 @@ antq_state_annona_routes = {
 	depth = 0
 	research_cost = 8.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_garum_workshop
+	unlock_building = antq_reg_wool_carder
 	ai_weight = { add = 100 }
 }
 
@@ -6819,7 +6809,7 @@ antq_bureaucratic_customs = {
 	depth = 0
 	research_cost = 8.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_grain_mill
+	unlock_building = antq_reg_garum_workshop
 	ai_weight = { add = 100 }
 }
 
@@ -7018,7 +7008,7 @@ antq_migration_market_links = {
 	depth = 0
 	research_cost = 10.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_wool_carder
+	unlock_building = antq_reg_hide_curing_yard
 	ai_weight = { add = 100 }
 }
 
@@ -7132,7 +7122,7 @@ antq_regional_caravans = {
 	depth = 0
 	research_cost = 12.0
 	trade_range_modifier = 0.02
-	unlock_building = antq_reg_hide_curing_yard
+	unlock_building = antq_reg_purple_dyehouse
 	ai_weight = { add = 100 }
 }
 
@@ -7382,7 +7372,7 @@ antq_bronze_cash_strings = {
 	}
 	merchant_maintenance_efficiency = 0.01
 	unlock_government_reform = antq_memorialist_han_court
-	unlock_unit = antq_byeonhan_cargo_ferry
+	unlock_building = antq_reg_cooperage
 	starting_technology_level = 2
 	requires = antq_monsoon_navigation
 	ai_weight = { add = 90 }
@@ -7406,8 +7396,8 @@ antq_state_granary_carriage = {
 		}
 	}
 	global_trade_through_owned_territory_efficiency = 0.05
-	unlock_government_reform = antq_frontier_muster_monarchy
-	unlock_building = antq_reg_wharf_crane
+	unlock_government_reform = antq_goguryeo_fortress_lineages
+	unlock_building = antq_reg_grain_weighhouse
 	starting_technology_level = 3
 	requires = antq_bronze_cash_strings
 	ai_weight = { add = 80 }
@@ -7431,8 +7421,8 @@ antq_relay_market_stations = {
 		}
 	}
 	import_efficiency = tiny_trade_efficiency_bonus
-	unlock_government_reform = antq_guangwu_restoration_court
-	unlock_building = antq_reg_combmaker
+	unlock_unit = antq_han_crossbow_infantry
+	unlock_building = antq_reg_bell_foundry
 	starting_technology_level = 4
 	requires = antq_state_granary_carriage
 	ai_weight = { add = 70 }
@@ -7456,8 +7446,8 @@ antq_salt_iron_bureau_exchange = {
 		}
 	}
 	import_efficiency = tiny_trade_efficiency_bonus
-	unlock_unit = antq_han_crossbow_infantry
-	unlock_building = antq_reg_bell_foundry
+	unlock_unit = antq_merchant_roundship
+	unlock_building = antq_reg_spindlework
 	starting_technology_level = 4
 	requires = antq_state_granary_carriage
 	ai_weight = { add = 70 }
@@ -7481,8 +7471,7 @@ antq_western_regions_caravan_seals = {
 		}
 	}
 	export_efficiency = small_trade_efficiency_bonus
-	unlock_unit = antq_yellow_river_escort_company
-	unlock_building = antq_reg_clay_brickworks
+	unlock_unit = antq_byeonhan_coastal_patrol
 	starting_technology_level = 4
 	requires = antq_relay_market_stations
 	requires = antq_salt_iron_bureau_exchange
@@ -8191,7 +8180,7 @@ antq_western_regions_relay_trade_waystations = {
 	}
 	trade_range_modifier = 0.0081
 	unlock_estate_privilege = antq_han_court_remonstrance_access
-	unlock_building = antq_reg_coral_workshop
+	unlock_building = antq_reg_sponge_drying_yard
 	requires = antq_silk_road_caravanserais
 	ai_weight = { add = 90 }
 }
@@ -8215,7 +8204,7 @@ antq_western_regions_relay_trade_weights = {
 	}
 	merchant_maintenance_efficiency = 0.0041
 	unlock_building = antq_reg_stone_yard
-	unlock_building = antq_reg_bronze_vessel_shop
+	unlock_building = antq_reg_fineware_kiln
 	requires = antq_western_regions_relay_trade_waystations
 	ai_weight = { add = 80 }
 }
@@ -8239,7 +8228,7 @@ antq_western_regions_relay_trade_brokers = {
 	}
 	global_trade_through_owned_territory_efficiency = 0.0151
 	unlock_building = antq_reg_amphora_depot
-	unlock_building = antq_reg_torchmaker
+	unlock_building = antq_reg_kiln_furniture
 	requires = antq_western_regions_relay_trade_weights
 	ai_weight = { add = 70 }
 }
@@ -8263,7 +8252,7 @@ antq_western_regions_relay_trade_convoys = {
 	}
 	import_efficiency = 0.0036
 	unlock_building = antq_reg_tile_yard
-	unlock_building = antq_reg_kiln_furniture
+	unlock_building = antq_reg_cheese_dairy
 	requires = antq_western_regions_relay_trade_weights
 	ai_weight = { add = 70 }
 }
@@ -8311,7 +8300,7 @@ antq_three_kingdoms_river_exchange_waystations = {
 	}
 	trade_range_modifier = 0.00832
 	unlock_government_reform = antq_provincial_inspectorate_commands
-	unlock_building = antq_reg_sponge_drying_yard
+	unlock_building = antq_reg_lacquer_workshop
 	requires = antq_crisis_trade_routes
 	ai_weight = { add = 90 }
 }
@@ -8335,7 +8324,7 @@ antq_three_kingdoms_river_exchange_weights = {
 	}
 	merchant_maintenance_efficiency = 0.00432
 	unlock_building = antq_reg_shipyard
-	unlock_building = antq_reg_fineware_kiln
+	unlock_building = antq_reg_silverworkshop
 	requires = antq_three_kingdoms_river_exchange_waystations
 	ai_weight = { add = 80 }
 }
@@ -8359,7 +8348,7 @@ antq_three_kingdoms_river_exchange_brokers = {
 	}
 	global_trade_through_owned_territory_efficiency = 0.01532
 	unlock_building = antq_reg_copper_smithy
-	unlock_building = antq_reg_cheese_dairy
+	unlock_building = antq_reg_meat_curing_yard
 	requires = antq_three_kingdoms_river_exchange_weights
 	ai_weight = { add = 70 }
 }
@@ -8383,7 +8372,7 @@ antq_three_kingdoms_river_exchange_convoys = {
 	}
 	import_efficiency = 0.00382
 	unlock_building = antq_reg_lime_kiln
-	unlock_building = antq_reg_meat_curing_yard
+	unlock_building = antq_reg_rice_wine_house
 	requires = antq_three_kingdoms_river_exchange_weights
 	ai_weight = { add = 70 }
 }
@@ -8431,7 +8420,7 @@ antq_jin_migrant_market_networks_waystations = {
 	}
 	trade_range_modifier = 0.00854
 	unlock_government_reform = antq_jin_reunification_court
-	unlock_building = antq_reg_lacquer_workshop
+	unlock_building = antq_reg_way_station
 	requires = antq_state_annona_routes
 	ai_weight = { add = 90 }
 }
@@ -8455,7 +8444,7 @@ antq_jin_migrant_market_networks_weights = {
 	}
 	merchant_maintenance_efficiency = 0.00454
 	unlock_building = antq_reg_silk_loom
-	unlock_building = antq_reg_silverworkshop
+	unlock_building = antq_reg_barge_chandlery
 	requires = antq_jin_migrant_market_networks_waystations
 	ai_weight = { add = 80 }
 }
@@ -8479,7 +8468,7 @@ antq_jin_migrant_market_networks_brokers = {
 	}
 	global_trade_through_owned_territory_efficiency = 0.01554
 	unlock_building = antq_reg_bargeyard
-	unlock_building = antq_reg_rice_wine_house
+	unlock_building = antq_reg_soy_fermentary
 	requires = antq_jin_migrant_market_networks_weights
 	ai_weight = { add = 70 }
 }
@@ -8503,7 +8492,7 @@ antq_jin_migrant_market_networks_convoys = {
 	}
 	import_efficiency = 0.00404
 	unlock_building = antq_reg_lead_foundry
-	unlock_building = antq_reg_soy_fermentary
+	unlock_building = antq_reg_silk_drapery
 	requires = antq_jin_migrant_market_networks_weights
 	ai_weight = { add = 70 }
 }
@@ -8551,7 +8540,7 @@ antq_northern_southern_granary_circuits_waystations = {
 	}
 	trade_range_modifier = 0.00876
 	unlock_estate_privilege = antq_han_local_market_workshop_compacts
-	unlock_building = antq_reg_way_station
+	unlock_building = antq_reg_wharf_crane
 	requires = antq_regional_caravans
 	ai_weight = { add = 90 }
 }
@@ -8575,7 +8564,7 @@ antq_northern_southern_granary_circuits_weights = {
 	}
 	merchant_maintenance_efficiency = 0.00476
 	unlock_building = antq_reg_joinery
-	unlock_building = antq_reg_barge_chandlery
+	unlock_building = antq_reg_combmaker
 	requires = antq_northern_southern_granary_circuits_waystations
 	ai_weight = { add = 80 }
 }
@@ -8599,7 +8588,7 @@ antq_northern_southern_granary_circuits_brokers = {
 	}
 	global_trade_through_owned_territory_efficiency = 0.01576
 	unlock_building = antq_reg_wax_workshop
-	unlock_building = antq_reg_silk_drapery
+	unlock_building = antq_reg_dye_finishing_house
 	requires = antq_northern_southern_granary_circuits_weights
 	ai_weight = { add = 70 }
 }
@@ -8623,7 +8612,7 @@ antq_northern_southern_granary_circuits_convoys = {
 	}
 	import_efficiency = 0.00426
 	unlock_building = antq_reg_amphora_warehouse
-	unlock_building = antq_reg_dye_finishing_house
+	unlock_building = antq_reg_clay_brickworks
 	requires = antq_northern_southern_granary_circuits_weights
 	ai_weight = { add = 70 }
 }
@@ -9486,7 +9475,6 @@ antq_paper_precursors = {
 	depth = 0
 	research_cost = 2.0
 	research_speed_modifier = 0.01
-	unlock_law = cultural_traditions_law
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
@@ -9727,7 +9715,7 @@ antq_medical_schools = {
 	}
 	cultural_influence_modifier = 0.01
 	unlock_estate_privilege = antq_lankan_monastic_endowment_immunity
-	unlock_building = antq_reg_reed_pen_maker
+	unlock_building = antq_reg_sail_needle_shop
 	requires = antq_juristic_schools
 	ai_weight = { add = 90 }
 }
@@ -9751,7 +9739,7 @@ antq_textual_criticism = {
 	}
 	cultural_influence_modifier = 0.01
 	unlock_estate_privilege = antq_satavahana_guild_charter_arbitration
-	unlock_building = antq_reg_sail_needle_shop
+	unlock_building = antq_reg_feltworks
 	requires = antq_juristic_schools
 	ai_weight = { add = 90 }
 }
@@ -9819,7 +9807,7 @@ antq_philosophical_dialogue = {
 	}
 	global_monthly_literacy = 0.005
 	unlock_building = antq_reg_textile_dye_finisher
-	unlock_building = antq_reg_wool_drapery
+	unlock_building = antq_reg_dye_finishing_house
 	requires = antq_medical_schools
 	requires = antq_textual_criticism
 	ai_weight = { add = 80 }
@@ -9865,7 +9853,7 @@ antq_scholarly_networks = {
 		}
 	}
 	global_institution_growth_modifier = 0.10
-	unlock_building = antq_reg_stone_carver
+	unlock_building = antq_reg_cooperage
 	requires = antq_philosophical_dialogue
 	ai_weight = { add = 70 }
 }
@@ -10309,7 +10297,7 @@ antq_kingdom_schools = {
 	}
 	cultural_influence_modifier = 0.01
 	unlock_building = antq_reg_parchmentery
-	unlock_building = antq_reg_tesserae_kiln
+	unlock_building = antq_reg_sesame_oil_press
 	requires = antq_monastic_libraries
 	ai_weight = { add = 90 }
 }
@@ -10725,7 +10713,7 @@ antq_clerical_script_examinations = {
 		}
 	}
 	global_monthly_literacy = 0.005
-	unlock_government_reform = antq_goguryeo_fortress_lineages
+	unlock_government_reform = antq_goguryeo_granary_court
 	starting_technology_level = 3
 	requires = antq_bamboo_slip_collation
 	ai_weight = { add = 80 }
@@ -10749,7 +10737,7 @@ antq_calendrical_offices = {
 		}
 	}
 	global_institution_growth_modifier = 0.10
-	unlock_unit = antq_merchant_roundship
+	unlock_unit = antq_han_frontier_crossbow_company
 	starting_technology_level = 4
 	requires = antq_clerical_script_examinations
 	ai_weight = { add = 70 }
@@ -10773,7 +10761,7 @@ antq_hydraulic_administration_manuals = {
 		}
 	}
 	global_institution_growth_modifier = 0.10
-	unlock_unit = antq_han_frontier_crossbow_company
+	unlock_unit = antq_yellow_river_escort_company
 	starting_technology_level = 4
 	requires = antq_clerical_script_examinations
 	ai_weight = { add = 70 }
@@ -10797,7 +10785,7 @@ antq_court_classics_recensions = {
 		}
 	}
 	research_speed_modifier = 0.015
-	unlock_unit = antq_byeonhan_coastal_patrol
+	unlock_unit = antq_byeonhan_cargo_ferry
 	starting_technology_level = 4
 	requires = antq_calendrical_offices
 	requires = antq_hydraulic_administration_manuals
@@ -10822,8 +10810,8 @@ antq_brahmi_scribal_schools = {
 		}
 	}
 	cultural_influence_modifier = 0.01
-	unlock_government_reform = antq_gana_muster_confederacy
-	unlock_building = antq_reg_mortar_grinder
+	unlock_government_reform = antq_temple_endowment_court
+	unlock_building = antq_reg_kiln_furniture
 	starting_technology_level = 2
 	requires = antq_paper_precursors
 	ai_weight = { add = 90 }
@@ -10847,8 +10835,8 @@ antq_recitation_lineages = {
 		}
 	}
 	global_monthly_literacy = 0.005
-	unlock_government_reform = antq_lankan_reservoir_kingship
-	unlock_building = antq_reg_coconut_workshop
+	unlock_government_reform = antq_lankan_sangha_endowments
+	unlock_building = antq_reg_cheese_dairy
 	starting_technology_level = 3
 	requires = antq_brahmi_scribal_schools
 	ai_weight = { add = 80 }
@@ -10872,7 +10860,7 @@ antq_ayurvedic_compendia = {
 		}
 	}
 	global_institution_growth_modifier = 0.10
-	unlock_building = antq_reg_glass_bead_furnace
+	unlock_building = antq_reg_cordwainer
 	starting_technology_level = 4
 	requires = antq_recitation_lineages
 	ai_weight = { add = 70 }
@@ -10896,7 +10884,7 @@ antq_astronomical_reckoning = {
 		}
 	}
 	global_institution_growth_modifier = 0.10
-	unlock_government_reform = antq_satavahana_maharathi_compact
+	unlock_building = antq_reg_glass_bead_furnace
 	starting_technology_level = 4
 	requires = antq_recitation_lineages
 	ai_weight = { add = 70 }
@@ -12315,7 +12303,7 @@ antq_kushan_buddhist_scholasticism_teachers = {
 	}
 	research_speed_modifier = 0.00416
 	unlock_estate_privilege = antq_lankan_reservoir_audit_grants
-	unlock_building = antq_reg_kiln_furniture
+	unlock_building = antq_reg_reed_pen_maker
 	requires = antq_juristic_schools
 	ai_weight = { add = 90 }
 }
@@ -12339,7 +12327,7 @@ antq_kushan_buddhist_scholasticism_catalogues = {
 	}
 	cultural_influence_modifier = 0.00466
 	unlock_building = antq_reg_sailmaker
-	unlock_building = antq_reg_cheese_dairy
+	unlock_building = antq_reg_wool_drapery
 	requires = antq_kushan_buddhist_scholasticism_teachers
 	ai_weight = { add = 80 }
 }
@@ -12362,7 +12350,7 @@ antq_kushan_buddhist_scholasticism_commentaries = {
 		}
 	}
 	global_monthly_literacy = 0.00116
-	unlock_building = antq_reg_cordwainer
+	unlock_building = antq_reg_netmaker
 	requires = antq_kushan_buddhist_scholasticism_catalogues
 	ai_weight = { add = 70 }
 }
@@ -12385,7 +12373,7 @@ antq_kushan_buddhist_scholasticism_observations = {
 		}
 	}
 	global_institution_growth_modifier = 0.02516
-	unlock_building = antq_reg_netmaker
+	unlock_building = antq_reg_stone_carver
 	requires = antq_kushan_buddhist_scholasticism_catalogues
 	ai_weight = { add = 70 }
 }
@@ -12408,7 +12396,7 @@ antq_kushan_buddhist_scholasticism_curriculum = {
 		}
 	}
 	research_speed_modifier = 0.01316
-	unlock_building = antq_reg_wickerwork
+	unlock_building = antq_reg_loom_house
 	requires = antq_kushan_buddhist_scholasticism_commentaries
 	requires = antq_kushan_buddhist_scholasticism_observations
 	ai_weight = { add = 60 }
@@ -12433,7 +12421,7 @@ antq_sanskrit_courtly_synthesis_teachers = {
 	}
 	research_speed_modifier = 0.00438
 	unlock_building = antq_reg_scriptorium
-	unlock_building = antq_reg_feltworks
+	unlock_building = antq_reg_carpet_loom
 	requires = antq_crisis_scholarly_preservation
 	ai_weight = { add = 90 }
 }
@@ -12457,7 +12445,7 @@ antq_sanskrit_courtly_synthesis_catalogues = {
 	}
 	cultural_influence_modifier = 0.00488
 	unlock_building = antq_reg_apothecary
-	unlock_building = antq_reg_stone_masonry_yard
+	unlock_building = antq_reg_materia_medica
 	requires = antq_sanskrit_courtly_synthesis_teachers
 	ai_weight = { add = 80 }
 }
@@ -12480,7 +12468,7 @@ antq_sanskrit_courtly_synthesis_commentaries = {
 		}
 	}
 	global_monthly_literacy = 0.00138
-	unlock_building = antq_reg_flax_retting_yard
+	unlock_building = antq_reg_coral_workshop
 	requires = antq_sanskrit_courtly_synthesis_catalogues
 	ai_weight = { add = 70 }
 }
@@ -12503,7 +12491,7 @@ antq_sanskrit_courtly_synthesis_observations = {
 		}
 	}
 	global_institution_growth_modifier = 0.02538
-	unlock_building = antq_reg_coral_workshop
+	unlock_building = antq_reg_sponge_drying_yard
 	requires = antq_sanskrit_courtly_synthesis_catalogues
 	ai_weight = { add = 70 }
 }
@@ -12526,7 +12514,7 @@ antq_sanskrit_courtly_synthesis_curriculum = {
 		}
 	}
 	research_speed_modifier = 0.01338
-	unlock_building = antq_reg_cauldron_smithy
+	unlock_building = antq_reg_combmaker
 	requires = antq_sanskrit_courtly_synthesis_commentaries
 	requires = antq_sanskrit_courtly_synthesis_observations
 	ai_weight = { add = 60 }
@@ -12551,7 +12539,7 @@ antq_gupta_mathematical_astronomy_teachers = {
 	}
 	research_speed_modifier = 0.0046
 	unlock_building = antq_reg_beadworks
-	unlock_building = antq_reg_carpet_loom
+	unlock_building = antq_reg_tesserae_kiln
 	requires = antq_state_church
 	ai_weight = { add = 90 }
 }
@@ -12575,7 +12563,6 @@ antq_gupta_mathematical_astronomy_catalogues = {
 	}
 	cultural_influence_modifier = 0.0051
 	unlock_building = antq_reg_stationer
-	unlock_building = antq_reg_materia_medica
 	requires = antq_gupta_mathematical_astronomy_teachers
 	ai_weight = { add = 80 }
 }
@@ -12621,7 +12608,7 @@ antq_gupta_mathematical_astronomy_observations = {
 		}
 	}
 	global_institution_growth_modifier = 0.0256
-	unlock_building = antq_reg_way_station
+	unlock_building = antq_reg_caravanserai
 	requires = antq_gupta_mathematical_astronomy_catalogues
 	ai_weight = { add = 70 }
 }
@@ -12644,7 +12631,7 @@ antq_gupta_mathematical_astronomy_curriculum = {
 		}
 	}
 	research_speed_modifier = 0.0136
-	unlock_building = antq_reg_bell_foundry
+	unlock_building = antq_reg_spindlework
 	requires = antq_gupta_mathematical_astronomy_commentaries
 	requires = antq_gupta_mathematical_astronomy_observations
 	ai_weight = { add = 60 }
@@ -12669,7 +12656,7 @@ antq_monastic_pilgrimage_texts_teachers = {
 	}
 	research_speed_modifier = 0.00482
 	unlock_building = antq_reg_perfumery
-	unlock_building = antq_reg_sesame_oil_press
+	unlock_building = antq_reg_coconut_workshop
 	requires = antq_regional_chronicles
 	ai_weight = { add = 90 }
 }
@@ -12761,7 +12748,7 @@ antq_monastic_pilgrimage_texts_curriculum = {
 		}
 	}
 	research_speed_modifier = 0.01382
-	unlock_building = antq_reg_torchmaker
+	unlock_building = antq_reg_sieve_maker
 	requires = antq_monastic_pilgrimage_texts_commentaries
 	requires = antq_monastic_pilgrimage_texts_observations
 	ai_weight = { add = 60 }
@@ -13158,7 +13145,7 @@ antq_civic_associations = {
 	depth = 0
 	research_cost = 2.0
 	global_disease_resistance = 0.005
-	unlock_law = marriage_law
+	unlock_building = antq_reg_brewhouse
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
@@ -13169,7 +13156,7 @@ antq_imperial_ceremony = {
 	depth = 0
 	research_cost = 2.0
 	global_disease_resistance = 0.005
-	unlock_building = antq_reg_brewhouse
+	unlock_building = antq_reg_bread_oven
 	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
@@ -13365,7 +13352,7 @@ antq_cosmopolitan_cities = {
 	depth = 0
 	research_cost = 4.0
 	global_disease_resistance = 0.005
-	unlock_building = antq_reg_bread_oven
+	unlock_building = antq_reg_honey_house
 	ai_weight = { add = 100 }
 }
 
@@ -13375,7 +13362,7 @@ antq_public_philanthropy = {
 	depth = 0
 	research_cost = 4.0
 	global_disease_resistance = 0.005
-	unlock_building = antq_reg_honey_house
+	unlock_building = antq_reg_wheat_brewery
 	ai_weight = { add = 100 }
 }
 
@@ -13571,7 +13558,7 @@ antq_crisis_communities = {
 	depth = 0
 	research_cost = 6.0
 	global_disease_resistance = 0.005
-	unlock_building = antq_reg_wheat_brewery
+	unlock_building = antq_reg_millet_brewery
 	ai_weight = { add = 100 }
 }
 
@@ -13581,7 +13568,7 @@ antq_refugee_settlement = {
 	depth = 0
 	research_cost = 6.0
 	global_disease_resistance = 0.005
-	unlock_building = antq_reg_millet_brewery
+	unlock_building = antq_reg_fruit_brewery
 	ai_weight = { add = 100 }
 }
 
@@ -13777,7 +13764,6 @@ antq_church_endowments = {
 	depth = 0
 	research_cost = 8.0
 	global_disease_resistance = 0.005
-	unlock_building = antq_reg_fruit_brewery
 	ai_weight = { add = 100 }
 }
 
@@ -16923,7 +16909,7 @@ antq_shared_market_day_signals = {
 	depth = 4
 	research_cost = 4.0
 	trade_range_modifier = 0.0006
-	unlock_building = antq_reg_purple_dyehouse
+	unlock_building = antq_reg_packsaddle_workshop
 	starting_technology_level = 4
 	requires = antq_monsoon_navigation
 	ai_weight = { add = 60 }
@@ -16968,7 +16954,7 @@ antq_shared_trusted_route_brokers = {
 	depth = 4
 	research_cost = 4.0
 	trade_range_modifier = 0.0007
-	unlock_building = antq_reg_packsaddle_workshop
+	unlock_building = antq_reg_bone_carver
 	starting_technology_level = 4
 	requires = antq_monsoon_navigation
 	ai_weight = { add = 60 }
@@ -17002,7 +16988,6 @@ antq_shared_relay_rest_stations = {
 	depth = 4
 	research_cost = 6.0
 	trade_range_modifier = 0.0008
-	unlock_building = antq_reg_brushmaker
 	requires = antq_silk_road_caravanserais
 	ai_weight = { add = 60 }
 }
@@ -17053,7 +17038,7 @@ antq_shared_portage_team_organization = {
 	depth = 4
 	research_cost = 6.0
 	trade_range_modifier = 0.0009
-	unlock_building = antq_reg_hornworker
+	unlock_building = antq_reg_brushmaker
 	requires = antq_silk_road_caravanserais
 	ai_weight = { add = 60 }
 }
@@ -17144,7 +17129,7 @@ antq_shared_boat_repair_yards = {
 	depth = 4
 	research_cost = 6.0
 	trade_range_modifier = 0.0011
-	unlock_building = antq_reg_bone_carver
+	unlock_building = antq_reg_hornworker
 	requires = antq_silk_road_caravanserais
 	ai_weight = { add = 60 }
 }
@@ -17698,14 +17683,15 @@ antq_african_law_foundations_1 = {
 		antq_law_profile_african_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_chiefdom_governance_law
-	unlock_law = antq_client_governance_law
-	unlock_law = antq_kushite_governance_law
-	unlock_law = antq_regional_kingship_law
 	unlock_law = antq_s2_african_coinage_law
 	unlock_law = antq_s2_african_commerce_law
 	unlock_law = antq_s2_african_courts_law
 	unlock_law = antq_s2_african_cult_law
+	unlock_law = antq_s2_african_dependent_labor_law
+	unlock_law = antq_s2_african_external_law
+	unlock_law = antq_s2_african_household_law
+	unlock_law = antq_s2_african_land_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -17718,30 +17704,13 @@ antq_african_law_foundations_2 = {
 		antq_law_profile_african_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_s2_african_dependent_labor_law
-	unlock_law = antq_s2_african_external_law
-	unlock_law = antq_s2_african_household_law
-	unlock_law = antq_s2_african_land_law
 	unlock_law = antq_s2_african_local_rule_law
 	unlock_law = antq_s2_african_migration_law
 	unlock_law = antq_s2_african_muster_law
 	unlock_law = antq_s2_african_offices_law
-	ai_weight = { add = 100 }
-}
-
-antq_african_law_foundations_3 = {
-	age = age_1_traditions
-	icon = abacus_advance
-	depth = 0
-	research_cost = 2.0
-	potential = {
-		antq_law_profile_african_trigger = yes
-	}
-	country_cabinet_efficiency = 0.002
 	unlock_law = antq_s2_african_revenue_law
 	unlock_law = antq_s2_african_status_law
-	unlock_law = antq_town_cluster_law
-	unlock_law = antq_tribal_governance_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -17754,14 +17723,15 @@ antq_arabian_law_foundations_1 = {
 		antq_law_profile_arabian_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_client_governance_law
-	unlock_law = antq_regional_kingship_law
 	unlock_law = antq_s2_arabian_coinage_law
 	unlock_law = antq_s2_arabian_commerce_law
 	unlock_law = antq_s2_arabian_courts_law
 	unlock_law = antq_s2_arabian_cult_law
 	unlock_law = antq_s2_arabian_dependent_labor_law
 	unlock_law = antq_s2_arabian_external_law
+	unlock_law = antq_s2_arabian_household_law
+	unlock_law = antq_s2_arabian_land_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -17774,27 +17744,13 @@ antq_arabian_law_foundations_2 = {
 		antq_law_profile_arabian_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_s2_arabian_household_law
-	unlock_law = antq_s2_arabian_land_law
 	unlock_law = antq_s2_arabian_local_rule_law
 	unlock_law = antq_s2_arabian_migration_law
 	unlock_law = antq_s2_arabian_muster_law
 	unlock_law = antq_s2_arabian_offices_law
 	unlock_law = antq_s2_arabian_revenue_law
 	unlock_law = antq_s2_arabian_status_law
-	ai_weight = { add = 100 }
-}
-
-antq_arabian_law_foundations_3 = {
-	age = age_1_traditions
-	icon = abacus_advance
-	depth = 0
-	research_cost = 2.0
-	potential = {
-		antq_law_profile_arabian_trigger = yes
-	}
-	country_cabinet_efficiency = 0.002
-	unlock_law = antq_tribal_governance_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -17807,14 +17763,15 @@ antq_celtic_law_foundations_1 = {
 		antq_law_profile_celtic_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_british_landholding_law
-	unlock_law = antq_british_muster_law
-	unlock_law = antq_british_ritual_law
-	unlock_law = antq_hibernian_cattle_law
-	unlock_law = antq_hibernian_ritual_law
-	unlock_law = antq_hibernian_seaway_law
 	unlock_law = antq_s2_celtic_coinage_law
 	unlock_law = antq_s2_celtic_commerce_law
+	unlock_law = antq_s2_celtic_courts_law
+	unlock_law = antq_s2_celtic_cult_law
+	unlock_law = antq_s2_celtic_dependent_labor_law
+	unlock_law = antq_s2_celtic_external_law
+	unlock_law = antq_s2_celtic_household_law
+	unlock_law = antq_s2_celtic_land_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -17827,31 +17784,13 @@ antq_celtic_law_foundations_2 = {
 		antq_law_profile_celtic_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_s2_celtic_courts_law
-	unlock_law = antq_s2_celtic_cult_law
-	unlock_law = antq_s2_celtic_dependent_labor_law
-	unlock_law = antq_s2_celtic_external_law
-	unlock_law = antq_s2_celtic_household_law
-	unlock_law = antq_s2_celtic_land_law
 	unlock_law = antq_s2_celtic_local_rule_law
 	unlock_law = antq_s2_celtic_migration_law
-	ai_weight = { add = 100 }
-}
-
-antq_celtic_law_foundations_3 = {
-	age = age_1_traditions
-	icon = abacus_advance
-	depth = 0
-	research_cost = 2.0
-	potential = {
-		antq_law_profile_celtic_trigger = yes
-	}
-	country_cabinet_efficiency = 0.002
 	unlock_law = antq_s2_celtic_muster_law
 	unlock_law = antq_s2_celtic_offices_law
 	unlock_law = antq_s2_celtic_revenue_law
 	unlock_law = antq_s2_celtic_status_law
-	unlock_law = antq_tribal_governance_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -17864,14 +17803,15 @@ antq_eastern_law_foundations_1 = {
 		antq_law_profile_eastern_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_early_korean_governance_law
-	unlock_law = antq_regional_kingship_law
 	unlock_law = antq_s2_eastern_coinage_law
 	unlock_law = antq_s2_eastern_commerce_law
 	unlock_law = antq_s2_eastern_courts_law
 	unlock_law = antq_s2_eastern_cult_law
 	unlock_law = antq_s2_eastern_dependent_labor_law
 	unlock_law = antq_s2_eastern_external_law
+	unlock_law = antq_s2_eastern_household_law
+	unlock_law = antq_s2_eastern_land_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -17884,27 +17824,13 @@ antq_eastern_law_foundations_2 = {
 		antq_law_profile_eastern_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_s2_eastern_household_law
-	unlock_law = antq_s2_eastern_land_law
 	unlock_law = antq_s2_eastern_local_rule_law
 	unlock_law = antq_s2_eastern_migration_law
 	unlock_law = antq_s2_eastern_muster_law
 	unlock_law = antq_s2_eastern_offices_law
 	unlock_law = antq_s2_eastern_revenue_law
 	unlock_law = antq_s2_eastern_status_law
-	ai_weight = { add = 100 }
-}
-
-antq_eastern_law_foundations_3 = {
-	age = age_1_traditions
-	icon = abacus_advance
-	depth = 0
-	research_cost = 2.0
-	potential = {
-		antq_law_profile_eastern_trigger = yes
-	}
-	country_cabinet_efficiency = 0.002
-	unlock_law = antq_tribal_governance_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -17917,14 +17843,15 @@ antq_germanic_law_foundations_1 = {
 		antq_law_profile_germanic_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_germanic_assembly_law
-	unlock_law = antq_germanic_grove_law
-	unlock_law = antq_germanic_retinue_law
 	unlock_law = antq_s2_germanic_coinage_law
 	unlock_law = antq_s2_germanic_commerce_law
 	unlock_law = antq_s2_germanic_courts_law
 	unlock_law = antq_s2_germanic_cult_law
 	unlock_law = antq_s2_germanic_dependent_labor_law
+	unlock_law = antq_s2_germanic_external_law
+	unlock_law = antq_s2_germanic_household_law
+	unlock_law = antq_s2_germanic_land_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -17937,28 +17864,13 @@ antq_germanic_law_foundations_2 = {
 		antq_law_profile_germanic_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_s2_germanic_external_law
-	unlock_law = antq_s2_germanic_household_law
-	unlock_law = antq_s2_germanic_land_law
 	unlock_law = antq_s2_germanic_local_rule_law
 	unlock_law = antq_s2_germanic_migration_law
 	unlock_law = antq_s2_germanic_muster_law
 	unlock_law = antq_s2_germanic_offices_law
 	unlock_law = antq_s2_germanic_revenue_law
-	ai_weight = { add = 100 }
-}
-
-antq_germanic_law_foundations_3 = {
-	age = age_1_traditions
-	icon = abacus_advance
-	depth = 0
-	research_cost = 2.0
-	potential = {
-		antq_law_profile_germanic_trigger = yes
-	}
-	country_cabinet_efficiency = 0.002
 	unlock_law = antq_s2_germanic_status_law
-	unlock_law = antq_tribal_governance_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -17971,14 +17883,15 @@ antq_han_law_foundations_1 = {
 		antq_law_profile_han_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_han_administration_law
-	unlock_law = antq_han_coinage_law
 	unlock_law = antq_s2_han_coinage_law
 	unlock_law = antq_s2_han_commerce_law
 	unlock_law = antq_s2_han_courts_law
 	unlock_law = antq_s2_han_cult_law
 	unlock_law = antq_s2_han_dependent_labor_law
 	unlock_law = antq_s2_han_external_law
+	unlock_law = antq_s2_han_household_law
+	unlock_law = antq_s2_han_land_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -17991,14 +17904,13 @@ antq_han_law_foundations_2 = {
 		antq_law_profile_han_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_s2_han_household_law
-	unlock_law = antq_s2_han_land_law
 	unlock_law = antq_s2_han_local_rule_law
 	unlock_law = antq_s2_han_migration_law
 	unlock_law = antq_s2_han_muster_law
 	unlock_law = antq_s2_han_offices_law
 	unlock_law = antq_s2_han_revenue_law
 	unlock_law = antq_s2_han_status_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -18011,14 +17923,15 @@ antq_hellenistic_law_foundations_1 = {
 		antq_law_profile_hellenistic_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_client_governance_law
-	unlock_law = antq_judean_temple_law
 	unlock_law = antq_s2_hellenistic_coinage_law
 	unlock_law = antq_s2_hellenistic_commerce_law
 	unlock_law = antq_s2_hellenistic_courts_law
 	unlock_law = antq_s2_hellenistic_cult_law
 	unlock_law = antq_s2_hellenistic_dependent_labor_law
 	unlock_law = antq_s2_hellenistic_external_law
+	unlock_law = antq_s2_hellenistic_household_law
+	unlock_law = antq_s2_hellenistic_land_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -18031,27 +17944,13 @@ antq_hellenistic_law_foundations_2 = {
 		antq_law_profile_hellenistic_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_s2_hellenistic_household_law
-	unlock_law = antq_s2_hellenistic_land_law
 	unlock_law = antq_s2_hellenistic_local_rule_law
 	unlock_law = antq_s2_hellenistic_migration_law
 	unlock_law = antq_s2_hellenistic_muster_law
 	unlock_law = antq_s2_hellenistic_offices_law
 	unlock_law = antq_s2_hellenistic_revenue_law
 	unlock_law = antq_s2_hellenistic_status_law
-	ai_weight = { add = 100 }
-}
-
-antq_hellenistic_law_foundations_3 = {
-	age = age_1_traditions
-	icon = abacus_advance
-	depth = 0
-	research_cost = 2.0
-	potential = {
-		antq_law_profile_hellenistic_trigger = yes
-	}
-	country_cabinet_efficiency = 0.002
-	unlock_law = antq_tribal_governance_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -18064,14 +17963,15 @@ antq_indic_law_foundations_1 = {
 		antq_law_profile_indic_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_ganasangha_law
-	unlock_law = antq_indo_greek_law
-	unlock_law = antq_indo_scythian_law
-	unlock_law = antq_lankan_water_law
-	unlock_law = antq_regional_kingship_law
 	unlock_law = antq_s2_indic_coinage_law
 	unlock_law = antq_s2_indic_commerce_law
 	unlock_law = antq_s2_indic_courts_law
+	unlock_law = antq_s2_indic_cult_law
+	unlock_law = antq_s2_indic_dependent_labor_law
+	unlock_law = antq_s2_indic_external_law
+	unlock_law = antq_s2_indic_household_law
+	unlock_law = antq_s2_indic_land_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -18084,30 +17984,13 @@ antq_indic_law_foundations_2 = {
 		antq_law_profile_indic_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_s2_indic_cult_law
-	unlock_law = antq_s2_indic_dependent_labor_law
-	unlock_law = antq_s2_indic_external_law
-	unlock_law = antq_s2_indic_household_law
-	unlock_law = antq_s2_indic_land_law
 	unlock_law = antq_s2_indic_local_rule_law
 	unlock_law = antq_s2_indic_migration_law
 	unlock_law = antq_s2_indic_muster_law
-	ai_weight = { add = 100 }
-}
-
-antq_indic_law_foundations_3 = {
-	age = age_1_traditions
-	icon = abacus_advance
-	depth = 0
-	research_cost = 2.0
-	potential = {
-		antq_law_profile_indic_trigger = yes
-	}
-	country_cabinet_efficiency = 0.002
 	unlock_law = antq_s2_indic_offices_law
 	unlock_law = antq_s2_indic_revenue_law
 	unlock_law = antq_s2_indic_status_law
-	unlock_law = antq_tribal_governance_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -18120,14 +18003,15 @@ antq_iranian_law_foundations_1 = {
 		antq_law_profile_iranian_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_buffer_kingdom_law
-	unlock_law = antq_parthian_autonomy_law
-	unlock_law = antq_parthian_subking_law
 	unlock_law = antq_s2_iranian_coinage_law
 	unlock_law = antq_s2_iranian_commerce_law
 	unlock_law = antq_s2_iranian_courts_law
 	unlock_law = antq_s2_iranian_cult_law
 	unlock_law = antq_s2_iranian_dependent_labor_law
+	unlock_law = antq_s2_iranian_external_law
+	unlock_law = antq_s2_iranian_household_law
+	unlock_law = antq_s2_iranian_land_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -18140,28 +18024,13 @@ antq_iranian_law_foundations_2 = {
 		antq_law_profile_iranian_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_s2_iranian_external_law
-	unlock_law = antq_s2_iranian_household_law
-	unlock_law = antq_s2_iranian_land_law
 	unlock_law = antq_s2_iranian_local_rule_law
 	unlock_law = antq_s2_iranian_migration_law
 	unlock_law = antq_s2_iranian_muster_law
 	unlock_law = antq_s2_iranian_offices_law
 	unlock_law = antq_s2_iranian_revenue_law
-	ai_weight = { add = 100 }
-}
-
-antq_iranian_law_foundations_3 = {
-	age = age_1_traditions
-	icon = abacus_advance
-	depth = 0
-	research_cost = 2.0
-	potential = {
-		antq_law_profile_iranian_trigger = yes
-	}
-	country_cabinet_efficiency = 0.002
 	unlock_law = antq_s2_iranian_status_law
-	unlock_law = antq_tribal_governance_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -18174,14 +18043,15 @@ antq_northern_law_foundations_1 = {
 		antq_law_profile_northern_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_baltic_amber_law
-	unlock_law = antq_baltic_hillfort_law
-	unlock_law = antq_baltic_mortuary_law
-	unlock_law = antq_dnieper_exchange_law
-	unlock_law = antq_dyakovo_settlement_law
-	unlock_law = antq_gorodets_fortification_law
-	unlock_law = antq_kama_ritual_law
-	unlock_law = antq_kulay_casting_law
+	unlock_law = antq_s2_northern_coinage_law
+	unlock_law = antq_s2_northern_commerce_law
+	unlock_law = antq_s2_northern_courts_law
+	unlock_law = antq_s2_northern_cult_law
+	unlock_law = antq_s2_northern_dependent_labor_law
+	unlock_law = antq_s2_northern_external_law
+	unlock_law = antq_s2_northern_household_law
+	unlock_law = antq_s2_northern_land_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -18194,48 +18064,13 @@ antq_northern_law_foundations_2 = {
 		antq_law_profile_northern_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_northern_round_law
-	unlock_law = antq_przeworsk_production_law
-	unlock_law = antq_pyanobor_mortuary_law
-	unlock_law = antq_s2_northern_coinage_law
-	unlock_law = antq_s2_northern_commerce_law
-	unlock_law = antq_s2_northern_courts_law
-	unlock_law = antq_s2_northern_cult_law
-	unlock_law = antq_s2_northern_dependent_labor_law
-	ai_weight = { add = 100 }
-}
-
-antq_northern_law_foundations_3 = {
-	age = age_1_traditions
-	icon = abacus_advance
-	depth = 0
-	research_cost = 2.0
-	potential = {
-		antq_law_profile_northern_trigger = yes
-	}
-	country_cabinet_efficiency = 0.002
-	unlock_law = antq_s2_northern_external_law
-	unlock_law = antq_s2_northern_household_law
-	unlock_law = antq_s2_northern_land_law
 	unlock_law = antq_s2_northern_local_rule_law
 	unlock_law = antq_s2_northern_migration_law
 	unlock_law = antq_s2_northern_muster_law
 	unlock_law = antq_s2_northern_offices_law
 	unlock_law = antq_s2_northern_revenue_law
-	ai_weight = { add = 100 }
-}
-
-antq_northern_law_foundations_4 = {
-	age = age_1_traditions
-	icon = abacus_advance
-	depth = 0
-	research_cost = 2.0
-	potential = {
-		antq_law_profile_northern_trigger = yes
-	}
-	country_cabinet_efficiency = 0.002
 	unlock_law = antq_s2_northern_status_law
-	unlock_law = antq_tribal_governance_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -18248,14 +18083,15 @@ antq_roman_law_foundations_1 = {
 		antq_law_profile_roman_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_citizenship_law
-	unlock_law = antq_recruitment_law
-	unlock_law = antq_roman_coinage_law
-	unlock_law = antq_roman_cult_law
-	unlock_law = antq_roman_status_law
 	unlock_law = antq_s2_roman_coinage_law
 	unlock_law = antq_s2_roman_commerce_law
 	unlock_law = antq_s2_roman_courts_law
+	unlock_law = antq_s2_roman_cult_law
+	unlock_law = antq_s2_roman_dependent_labor_law
+	unlock_law = antq_s2_roman_external_law
+	unlock_law = antq_s2_roman_household_law
+	unlock_law = antq_s2_roman_land_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -18268,29 +18104,13 @@ antq_roman_law_foundations_2 = {
 		antq_law_profile_roman_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_s2_roman_cult_law
-	unlock_law = antq_s2_roman_dependent_labor_law
-	unlock_law = antq_s2_roman_external_law
-	unlock_law = antq_s2_roman_household_law
-	unlock_law = antq_s2_roman_land_law
 	unlock_law = antq_s2_roman_local_rule_law
 	unlock_law = antq_s2_roman_migration_law
 	unlock_law = antq_s2_roman_muster_law
-	ai_weight = { add = 100 }
-}
-
-antq_roman_law_foundations_3 = {
-	age = age_1_traditions
-	icon = abacus_advance
-	depth = 0
-	research_cost = 2.0
-	potential = {
-		antq_law_profile_roman_trigger = yes
-	}
-	country_cabinet_efficiency = 0.002
 	unlock_law = antq_s2_roman_offices_law
 	unlock_law = antq_s2_roman_revenue_law
 	unlock_law = antq_s2_roman_status_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -18303,14 +18123,15 @@ antq_steppe_law_foundations_1 = {
 		antq_law_profile_steppe_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_altai_contact_law
-	unlock_law = antq_kulay_casting_law
-	unlock_law = antq_parthian_subking_law
-	unlock_law = antq_regional_kingship_law
 	unlock_law = antq_s2_steppe_coinage_law
 	unlock_law = antq_s2_steppe_commerce_law
 	unlock_law = antq_s2_steppe_courts_law
 	unlock_law = antq_s2_steppe_cult_law
+	unlock_law = antq_s2_steppe_dependent_labor_law
+	unlock_law = antq_s2_steppe_external_law
+	unlock_law = antq_s2_steppe_household_law
+	unlock_law = antq_s2_steppe_land_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -18323,31 +18144,13 @@ antq_steppe_law_foundations_2 = {
 		antq_law_profile_steppe_trigger = yes
 	}
 	country_cabinet_efficiency = 0.002
-	unlock_law = antq_s2_steppe_dependent_labor_law
-	unlock_law = antq_s2_steppe_external_law
-	unlock_law = antq_s2_steppe_household_law
-	unlock_law = antq_s2_steppe_land_law
 	unlock_law = antq_s2_steppe_local_rule_law
 	unlock_law = antq_s2_steppe_migration_law
 	unlock_law = antq_s2_steppe_muster_law
 	unlock_law = antq_s2_steppe_offices_law
-	ai_weight = { add = 100 }
-}
-
-antq_steppe_law_foundations_3 = {
-	age = age_1_traditions
-	icon = abacus_advance
-	depth = 0
-	research_cost = 2.0
-	potential = {
-		antq_law_profile_steppe_trigger = yes
-	}
-	country_cabinet_efficiency = 0.002
 	unlock_law = antq_s2_steppe_revenue_law
 	unlock_law = antq_s2_steppe_status_law
-	unlock_law = antq_sargat_retinue_law
-	unlock_law = antq_steppe_governance_law
-	unlock_law = antq_tribal_governance_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -18368,6 +18171,7 @@ antq_transoceanic_law_foundations_1 = {
 	unlock_law = antq_s2_transoceanic_external_law
 	unlock_law = antq_s2_transoceanic_household_law
 	unlock_law = antq_s2_transoceanic_land_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }
 
@@ -18386,6 +18190,6 @@ antq_transoceanic_law_foundations_2 = {
 	unlock_law = antq_s2_transoceanic_offices_law
 	unlock_law = antq_s2_transoceanic_revenue_law
 	unlock_law = antq_s2_transoceanic_status_law
-	unlock_law = antq_tribal_governance_law
+	starting_technology_level = 1
 	ai_weight = { add = 100 }
 }

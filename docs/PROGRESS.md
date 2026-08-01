@@ -8299,3 +8299,14 @@ reviewed 128px BC7 DDS.
   rejects any custom subject missing either installed category key.
 - Full validation passes 157/157; paired smoke adds zero new or mod-unique
   lines at `8e7112df1ca01296b2e785683a7cf4af142c3b54f3fc9bea7ef802e9b00859ce`.
+
+## 2026-08-01 - Restored profile-native law UI
+
+- Restored the engine's `has_codified_laws` capability on a universal root.
+- All 463 starts initialize 14 laws; 26 profile foundations are owned at tier 1.
+- False-gated 45 superseded custom groups and every installed holder except the
+  required succession adapter; no foreign or `no policy` rows remain.
+- Fresh Rome, Parthia, Suebi, and Teotihuacan show only their exact profiles;
+  Parthia reaches the normal paid policy-change confirmation.
+- Validation passes 157/157; paired smoke adds zero new or mod-unique lines at
+  `7f0fa02deac469e1d2c15cce005970f659e807d32d1b44d0eba77b63d62cb7c7`.

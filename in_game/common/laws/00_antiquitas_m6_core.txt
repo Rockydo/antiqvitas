@@ -3,7 +3,7 @@ antq_british_landholding_law = {
 	law_category = socioeconomic
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_british_kin_land_allotments = {
 		country_modifier = {
@@ -21,7 +21,7 @@ antq_przeworsk_production_law = {
 	law_category = socioeconomic
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_przeworsk_distributed_workshops = {
 		country_modifier = {
@@ -39,7 +39,7 @@ antq_dyakovo_settlement_law = {
 	law_category = administrative
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_dyakovo_shared_rampart_labor = {
 		country_modifier = {
@@ -57,7 +57,7 @@ antq_gorodets_fortification_law = {
 	law_category = military
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_gorodets_seasonal_watch = {
 		country_modifier = {
@@ -75,7 +75,7 @@ antq_northern_round_law = {
 	law_category = socioeconomic
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_northern_reciprocal_access = {
 		country_modifier = {
@@ -93,7 +93,7 @@ antq_dnieper_exchange_law = {
 	law_category = socioeconomic
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_dnieper_household_brokerage = {
 		country_modifier = {
@@ -111,7 +111,7 @@ antq_kama_ritual_law = {
 	law_category = religious
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_kama_local_sanctuary_custody = {
 		country_modifier = {
@@ -129,7 +129,7 @@ antq_pyanobor_mortuary_law = {
 	law_category = religious
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_pyanobor_kin_cemetery_custody = {
 		country_modifier = {
@@ -147,7 +147,7 @@ antq_sargat_retinue_law = {
 	law_category = military
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_sargat_gift_bound_retinues = {
 		country_modifier = {
@@ -165,7 +165,7 @@ antq_altai_contact_law = {
 	law_category = socioeconomic
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_altai_negotiated_passage = {
 		country_modifier = {
@@ -183,7 +183,7 @@ antq_kulay_casting_law = {
 	law_category = socioeconomic
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_kulay_household_casting = {
 		country_modifier = {
@@ -201,7 +201,7 @@ antq_british_muster_law = {
 	law_category = military
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_british_seasonal_muster = {
 		country_modifier = {
@@ -219,7 +219,7 @@ antq_british_ritual_law = {
 	law_category = religious
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_british_local_sanctuaries = {
 		country_modifier = {
@@ -238,7 +238,7 @@ antq_hibernian_cattle_law = {
 	law_category = socioeconomic
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_hibernian_herd_compacts = {
 		country_modifier = {
@@ -256,7 +256,7 @@ antq_hibernian_seaway_law = {
 	law_category = military
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_hibernian_coastal_muster = {
 		country_modifier = {
@@ -274,7 +274,7 @@ antq_hibernian_ritual_law = {
 	law_category = religious
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_hibernian_local_vows = {
 		country_modifier = {
@@ -293,7 +293,7 @@ antq_germanic_assembly_law = {
 	law_category = administrative
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_germanic_public_acclamation = {
 		country_modifier = {
@@ -311,7 +311,7 @@ antq_germanic_retinue_law = {
 	law_category = military
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_germanic_gift_bound_followings = {
 		country_modifier = {
@@ -330,7 +330,7 @@ antq_germanic_grove_law = {
 	law_category = religious
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_germanic_local_grove_custody = {
 		country_modifier = {
@@ -349,7 +349,7 @@ antq_baltic_amber_law = {
 	law_category = socioeconomic
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_baltic_household_amber_exchange = {
 		country_modifier = {
@@ -368,7 +368,7 @@ antq_baltic_hillfort_law = {
 	law_category = military
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_baltic_seasonal_hillfort_muster = {
 		country_modifier = {
@@ -386,7 +386,7 @@ antq_baltic_mortuary_law = {
 	law_category = religious
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_baltic_local_cemetery_custody = {
 		country_modifier = {
@@ -405,7 +405,7 @@ antq_indo_scythian_law = {
 	law_category = administrative
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_indo_scythian_satrapy = {
 		country_modifier = {
@@ -423,7 +423,7 @@ antq_indo_greek_law = {
 	law_category = administrative
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_indo_greek_city_compact = {
 		country_modifier = {
@@ -441,7 +441,7 @@ antq_ganasangha_law = {
 	law_category = administrative
 	law_gov_group = republic
 	potential = {
-		government_type = government_type:republic
+		always = no
 	}
 	antq_clan_council_governance = {
 		country_modifier = {
@@ -459,7 +459,7 @@ antq_roman_cult_law = {
 	law_category = religious
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_local_cults_permitted = {
 		country_modifier = {
@@ -477,7 +477,7 @@ antq_roman_status_law = {
 	law_category = socioeconomic
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_roman_slavery_permitted = {
 		country_modifier = {
@@ -497,7 +497,7 @@ antq_lankan_water_law = {
 	law_category = administrative
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_royal_canal_endowments = {
 		country_modifier = {
@@ -516,7 +516,7 @@ antq_citizenship_law = {
 	law_category = administrative
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_peregrini_status = {
 		country_modifier = {
@@ -546,7 +546,7 @@ antq_recruitment_law = {
 	law_category = military
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_professional_legions = {
 		country_modifier = {
@@ -564,7 +564,7 @@ antq_han_administration_law = {
 	law_category = administrative
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_commandery_bureaucracy = {
 		country_modifier = {
@@ -583,7 +583,7 @@ antq_parthian_autonomy_law = {
 	law_category = administrative
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_great_house_compact = {
 		country_modifier = {
@@ -601,7 +601,7 @@ antq_client_governance_law = {
 	law_category = administrative
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_roman_client_compact = {
 		country_modifier = {
@@ -619,7 +619,7 @@ antq_kushite_governance_law = {
 	law_category = administrative
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_kushite_sacral_kingship = {
 		country_modifier = {
@@ -636,11 +636,7 @@ antq_kushite_governance_law = {
 antq_steppe_governance_law = {
 	law_category = administrative
 	potential = {
-		OR = {
-			government_type = government_type:steppe_horde
-			government_type = government_type:tribe
-			government_type = government_type:monarchy
-		}
+		always = no
 	}
 	antq_confederated_chanyu = {
 		country_modifier = {
@@ -658,7 +654,7 @@ antq_early_korean_governance_law = {
 	law_category = administrative
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_goguryeo_royal_court = {
 		country_modifier = {
@@ -676,7 +672,7 @@ antq_tribal_governance_law = {
 	law_category = administrative
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_elder_council = {
 		country_modifier = {
@@ -694,7 +690,7 @@ antq_parthian_subking_law = {
 	law_category = administrative
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_regional_court_compact = {
 		country_modifier = {
@@ -712,7 +708,7 @@ antq_buffer_kingdom_law = {
 	law_category = administrative
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_balanced_allegiance = {
 		country_modifier = {
@@ -730,7 +726,7 @@ antq_judean_temple_law = {
 	law_category = administrative
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_temple_priestly_administration = {
 		country_modifier = {
@@ -749,7 +745,7 @@ antq_roman_coinage_law = {
 	law_category = socioeconomic
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_augustan_bimetallic_standard = {
 		country_modifier = {
@@ -769,7 +765,7 @@ antq_han_coinage_law = {
 	law_category = socioeconomic
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_wuzhu_copper_cash = {
 		country_modifier = {
@@ -791,7 +787,7 @@ antq_regional_kingship_law = {
 	law_category = administrative
 	law_gov_group = monarchy
 	potential = {
-		government_type = government_type:monarchy
+		always = no
 	}
 	antq_royal_court_governance = {
 		country_modifier = {
@@ -809,7 +805,7 @@ antq_chiefdom_governance_law = {
 	law_category = administrative
 	law_gov_group = tribe
 	potential = {
-		government_type = government_type:tribe
+		always = no
 	}
 	antq_chiefly_governance = {
 		country_modifier = {
@@ -827,7 +823,7 @@ antq_town_cluster_law = {
 	law_category = administrative
 	law_gov_group = republic
 	potential = {
-		government_type = government_type:republic
+		always = no
 	}
 	antq_town_cluster_council_governance = {
 		country_modifier = {

@@ -3,7 +3,7 @@
 # Definitions stay resolvable but cannot enter AD 1 gameplay.
 legal_code_law = {
 	law_category = administrative
-	potential = { }
+	potential = { always = no } # ANTIQVITAS mounted-system quarantine
 
 	locked = { always = no }
 

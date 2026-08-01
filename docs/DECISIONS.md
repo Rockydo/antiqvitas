@@ -4460,3 +4460,11 @@ reviewed Roman frontier aliases, hook `on_location_changed_owner`: Latin-primary
 winners apply the Roman exonym; other winners restore the local root. Set a
 location marker before `rename_location`, because that effect mutates the
 runtime location tag and otherwise makes later reversion unreachable.
+
+## 2026-08-01 - Codified laws are an engine capability
+
+Transfer `has_codified_laws` from the quarantined vanilla traditions root to a
+universal ancient root. Research two exact-profile foundation advances per law
+profile and initialize all 14 profile laws in setup. Keep only
+`heir_religion_law` as an engine adapter; false-gate all other superseded law
+holders so codified-law access cannot expose foreign or empty rows.

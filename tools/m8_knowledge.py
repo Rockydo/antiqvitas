@@ -89,45 +89,15 @@ POTENTIAL = re.compile(r"^\s*potential\s*=")
 CAN_SPAWN = re.compile(r"^\s*can_spawn\s*=")
 ALLOW = re.compile(r"^\s*allow\s*=")
 CORE_TAGS = frozenset(("ROM", "HAN", "PAR"))
-# The AD 1 setup retains a small, engine-native law/policy surface for
-# administrative continuity.  M8 replaces the vanilla advances that formerly
-# unlocked these categories, so matching ancient advances must carry the
-# unlocks or the engine strips otherwise valid start laws at initialization.
-# These are mechanics-category bridges, not claims that their vanilla labels
-# describe the historical institutions represented by M6's custom adapters.
+# Opening law access is supplied exclusively by the profile-native foundations
+# generated below.  Exact vanilla law bridges used during early engine probing
+# are deliberately absent: once has_codified_laws is restored they surface as
+# duplicate, uninitialized "no policy" rows beside the ancient law package.
 START_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
-    # Every AD 1 technology tier receives the five depth-zero advances.  The
-    # installed tribal templates set these two engine-native law categories at
-    # creation, so their category bridges must live at that universally held
-    # depth rather than at later thematic advances.  This is only a mechanical
-    # compatibility mapping; M6's custom laws remain the historical surface.
-    "antq_imperial_cult": (
-        ("unlock_law", "legal_code_law"),
-        ("unlock_law", "education_masses_law"),
-        ("unlock_law", "tribal_legal_basis_law"),
-    ),
-    "antq_provincial_census": (("unlock_law", "administrative_system"),),
-    "antq_tax_registers": (("unlock_law", "distribution_of_power_law"),),
-    "antq_road_milestones": (("unlock_law", "royal_court_customs_law"),),
-    "antq_municipal_charters": (("unlock_law", "feudal_de_jure_law"),),
-    # Vanilla's first infantry advance unlocks this court policy.  Its units
-    # are deliberately suppressed, but this category bridge is still needed
-    # for monarchies that retain the engine-native court selection.
     "antq_professional_standing_armies": (
-        ("unlock_law", "medieval_levy_law"),
-        ("unlock_policy", "aristocratic_court_policy"),
         ("unlock_levy", "antq_levy_district_spear_muster"),
         ("unlock_levy", "antq_levy_seasonal_skirmishers"),
     ),
-    "antq_auxiliary_service": (("unlock_law", "tribal_religious_values_law"),),
-    "antq_drill_routines": (("unlock_law", "tribal_organization_law"),),
-    "antq_monsoon_navigation": (("unlock_law", "coin_laws"),),
-    "antq_red_sea_piloting": (("unlock_law", "mining_law"),),
-    "antq_caravan_accounting": (("unlock_law", "immigration_law"),),
-    "antq_paper_precursors": (("unlock_law", "cultural_traditions_law"),),
-    # Polygyny is a policy inside the religious marriage_law category; it is
-    # not itself granted by a vanilla advance.  Unlock its parent category.
-    "antq_civic_associations": (("unlock_law", "marriage_law"),),
 }
 
 # Engine capabilities that the disabled vanilla traditions tree used to grant.
@@ -150,6 +120,9 @@ OPENING_EXTRACTION_CAPABILITIES: tuple[tuple[str, str], ...] = tuple(
 )
 
 START_CAPABILITIES: dict[str, tuple[tuple[str, str], ...]] = {
+    "antq_imperial_cult": (
+        ("has_codified_laws", "yes"),
+    ),
     "antq_provincial_census": (
         ("enable_taxation", "yes"),
         ("has_stability_investment", "yes"),
@@ -1743,33 +1716,8 @@ def law_profile_catalog() -> dict[str, dict[str, str]]:
 
 
 def opening_law_exact_profiles() -> dict[str, set[str]]:
-    """Map every custom AD 1 law to exact legal profiles, not broad cultures."""
-    tag_law_profile = {
-        row["tag"]: row["profile"] for row in csv_rows(S2_ANCIENT_LAW_PROFILES)
-    }
+    """Map the complete profile-native AD 1 law surface to exact profiles."""
     laws: dict[str, set[str]] = defaultdict(set)
-    for row in csv_rows(M6_GOVERNMENTS):
-        tag = row["design_tag"]
-        profile = tag_law_profile.get(tag)
-        if profile is None:
-            continue
-        for assignment in row["laws"].split("|"):
-            group, marker, _policy = assignment.partition("=")
-            if marker and group.startswith("antq_"):
-                laws[group].add(profile)
-    for row in csv_rows(M6_REGIONAL_GOVERNMENTS):
-        assigned = [
-            assignment.partition("=")[0]
-            for assignment in row["laws"].split("|")
-            if "=" in assignment
-        ]
-        for tag in row["tags"].split("|"):
-            profile = tag_law_profile.get(tag)
-            if profile is None:
-                continue
-            for group in assigned:
-                if group.startswith("antq_"):
-                    laws[group].add(profile)
     for row in csv_rows(S2_ANCIENT_LAWS):
         laws[row["law"]].add(row["profile"])
     return laws
@@ -2395,6 +2343,10 @@ def validate(records: tuple[Advance, ...]) -> None:
         ("global_max_rgo_size_modifier", "0.10"),
     ) + OPENING_EXTRACTION_CAPABILITIES:
         failures.append("the universally held Provincial Census lost its economy capabilities")
+    if START_CAPABILITIES.get("antq_imperial_cult") != (
+        ("has_codified_laws", "yes"),
+    ):
+        failures.append("the universally held Imperial Cult lost law-system availability")
     if START_CAPABILITIES.get("antq_professional_standing_armies") != (
         ("always_allow_army_levies", "yes"),
     ):
@@ -2738,8 +2690,9 @@ def advance_script(records: tuple[Advance, ...]) -> str:
             lines.append(f"\t{field} = {value}")
         for field, target in unlocks.get(record.key, ()):
             lines.append(f"\t{field} = {target}")
-        if record.age_index == 0 and not record.profile.startswith("law_"):
-            lines.append(f"\tstarting_technology_level = {min(4, record.depth + 1)}")
+        if record.age_index == 0:
+            starting_level = 1 if record.profile.startswith("law_") else min(4, record.depth + 1)
+            lines.append(f"\tstarting_technology_level = {starting_level}")
         for required in record.requires:
             lines.append(f"\trequires = {required}")
         lines.extend((f"\tai_weight = {{ add = {100 - record.depth * 10} }}", "}", ""))

@@ -2,7 +2,7 @@
 
 ## 2026-08-01 - Exact installed law-holder candidate rejected at runtime
 
-Status: blocked after two valid starts; green committed state retained.
+Status: resolved 2026-08-01.
 
 The exact-key candidate also fails: fresh Observer-to-`XAH` and direct Parthia
 starts both render `No laws available`; an `XAA` control does likewise. Thus
@@ -13,6 +13,11 @@ do not retry without new local engine evidence. Captures:
 `docs/screens/S3_PARTHIA_LAWS_20260801_B/rome_laws_control2.png`, and
 `docs/screens/S3_PARTHIA_LAWS_20260801_C/parthia_direct_laws.png`.
 
+The missing contract was the vanilla traditions-root modifier
+`has_codified_laws = yes`, not holder naming. Transferring it to a universal
+ancient root makes namespaced laws render. Final evidence is in
+`docs/screens/20260801_law_final4/`.
+
 ## 2026-07-31 - Privilege panel proof deferred by shared EU5 lease
 
 Two bounded launches were protocol-deferred while `endore` held the EU5 slot
@@ -21,7 +26,7 @@ smoke are green; Rome/Parthia/Suebi/Teotihuacan panel captures remain open.
 
 ## 2026-07-31 - Opening custom-law groups are not awarded by starting advances
 
-Status: deferred after seven distinct engine contracts; green setup restored.
+Status: resolved 2026-08-01 by the codified-law capability above.
 
 Parthia still renders `No laws available`. Exact tag-gated, delayed hidden-event,
 tag-gated starting-advance, culture/religion starting-advance, and culture-only

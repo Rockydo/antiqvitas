@@ -152,7 +152,7 @@ education_elites_law = {
 
 education_masses_law = {
 	law_category = socioeconomic
-	potential = { }
+	potential = { always = no } # ANTIQVITAS mounted-system quarantine
 	allow = { }
 
 	# BASIC EDUCATIONS
@@ -1226,7 +1226,7 @@ administrative_system = {
 
 	law_category = administrative
 	unique = yes
-	potential = { }
+	potential = { always = no } # ANTIQVITAS mounted-system quarantine
 	autonomous_councils = {
 		potential = { always = no } # ANTIQVITAS legacy-policy quarantine
 		country_modifier = {

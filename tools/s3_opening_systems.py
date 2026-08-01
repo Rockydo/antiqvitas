@@ -10,7 +10,7 @@ import re
 from pathlib import Path
 
 from dates import M2_MIRROR_LANGUAGES
-from s2_ancient_laws import opening_adapter_laws_by_tag
+from s2_ancient_laws import profile_law_pairs, starting_laws_by_tag
 
 ROOT = Path(__file__).resolve().parents[1]
 LOC_ROOT = ROOT / "main_menu/localization"
@@ -167,9 +167,9 @@ def report() -> str:
         ("processed_food_recipe", "1 wheat + 0.15 lumber + 0.05 tools -> 1.10", "pass"),
         ("opening_market_workshops", f"{market_rows} direct placements", "pass"),
         ("opening_rgo_capacity", "global_max_rgo_size_modifier=0.10", "pass"),
-        ("opening_profile_laws", "463 tags x 4 engine-key opening policies", "pass"),
-        ("parthian_deeper_laws", "14 Iranian research groups retained", "pass"),
-        ("mandatory_law_adapter", "5 exact engine categories retained and ancientized", "pass"),
+        ("opening_profile_laws", "463 tags x 14 profile-native opening policies", "pass"),
+        ("profile_law_foundations", "26 exact-profile foundations researched at tier 1", "pass"),
+        ("mandatory_law_capability", "has_codified_laws transferred to the universal ancient root", "pass"),
         ("engine_bridge_localization", "16 law/policy categories ancientized", "pass"),
         ("steel_text", "all 11 client mirrors", "pass"),
     )
@@ -236,6 +236,14 @@ def validate() -> list[str]:
             failures.append(
                 f"universally owned Provincial Census cannot expand the {good} RGO"
             )
+    law_root = top_level_block(
+        ADVANCES.read_text(encoding="utf-8-sig"),
+        "antq_imperial_cult",
+    )
+    if "has_codified_laws = yes" not in law_root:
+        failures.append("universally owned Imperial Cult lacks law-system availability")
+    if "starting_technology_level = 1" not in law_root:
+        failures.append("universally owned Imperial Cult is not researched at tier 1")
 
     law = top_level_block(LAWS.read_text(encoding="utf-8-sig"), "heir_religion_law")
     if "ANTIQVITAS mounted-system quarantine" in law or re.search(
@@ -249,7 +257,7 @@ def validate() -> list[str]:
         row["design_tag"]: row["engine_tag"]
         for row in json.loads(TAG_MAP.read_text(encoding="utf-8"))["entries"]
     }
-    opening_by_tag = opening_adapter_laws_by_tag()
+    opening_by_tag = starting_laws_by_tag()
     for design_tag, expected_opening in opening_by_tag.items():
         country = top_level_block(setup_text, engine_tags[design_tag])
         for law_key, option_key in expected_opening:
@@ -261,45 +269,62 @@ def validate() -> list[str]:
                 failures.append(
                     f"{design_tag} lacks opening law {law_key}={option_key}"
                 )
-        if re.search(r"(?m)^\s*antq_s2_[a-z_]+_law\s*=", country):
+        emitted = re.findall(r"(?m)^\s*(antq_s2_[a-z_]+_law)\s*=", country)
+        if len(emitted) != 14 or len(set(emitted)) != 14:
             failures.append(
-                f"{design_tag} still emits stripped namespaced law holders"
+                f"{design_tag} emits {len(emitted)} profile law assignments, not 14 unique"
             )
-    expected_opening = opening_by_tag["PAR"]
     opening_text = "\n".join(
         path.read_text(encoding="utf-8-sig")
         for path in sorted(OPENING_LAW_ROOT.glob("*.txt"))
     )
-    for law_key, _option_key in expected_opening:
+    legacy_laws = sorted(set(re.findall(
+        r"(?m)^([a-z][a-z0-9_]*)\s*=\s*\{",
+        opening_text,
+    )) - {law for _profile, law, _theme in profile_law_pairs()} - {"heir_religion_law"})
+    for law_key in legacy_laws:
+        block = top_level_block(opening_text, law_key)
+        if not re.search(r"(?ms)^\s*potential\s*=\s*\{.*?always\s*=\s*no.*?^\s*\}", block):
+            failures.append(f"superseded law remains visible: {law_key}")
+    for _profile, law_key, _theme in profile_law_pairs():
         occurrences = len(re.findall(
             rf"(?m)^{re.escape(law_key)}\s*=\s*\{{",
             opening_text,
         ))
         if occurrences != 1:
             failures.append(
-                f"opening law adapter {law_key} has {occurrences} definitions"
+                f"profile law {law_key} has {occurrences} definitions"
             )
             continue
         block = top_level_block(opening_text, law_key)
-        if re.search(
-            r"(?m)^\tpotential\s*=\s*\{\s*always\s*=\s*no",
-            block,
-        ):
-            failures.append(f"opening law adapter {law_key} is quarantined")
-        if "ANTIQVITAS legacy-policy quarantine" not in block:
-            failures.append(
-                f"opening law adapter {law_key} does not preserve hidden legacy policies"
-            )
+        profile = law_key.removeprefix("antq_s2_").split("_", 1)[0]
+        if f"antq_law_profile_{profile}_trigger = yes" not in block:
+            failures.append(f"profile law {law_key} lacks exact-profile potential")
     advances_text = ADVANCES.read_text(encoding="utf-8-sig")
-    for ordinal in (1, 2, 3):
-        holder = top_level_block(
-            advances_text,
-            f"antq_iranian_law_foundations_{ordinal}",
+    legacy_law_unlocks = sorted(set(re.findall(
+        r"(?m)^\s*unlock_law\s*=\s*((?!antq_s2_)[a-z0-9_]+)\s*$",
+        advances_text,
+    )))
+    if legacy_law_unlocks:
+        failures.append(
+            "ancient advances expose duplicate engine-law rows: "
+            + ", ".join(legacy_law_unlocks)
         )
-        if "antq_law_profile_iranian_trigger = yes" not in holder:
-            failures.append(
-                f"Iranian legal foundation {ordinal} lacks exact-profile isolation"
-            )
+    foundation_keys = re.findall(
+        r"(?m)^(antq_[a-z_]+_law_foundations_[123])\s*=\s*\{",
+        advances_text,
+    )
+    if len(foundation_keys) != 26:
+        failures.append(f"expected 26 exact legal foundations, found {len(foundation_keys)}")
+    for key in foundation_keys:
+        holder = top_level_block(advances_text, key)
+        profile = key.removeprefix("antq_").split("_law_foundations_", 1)[0]
+        if f"antq_law_profile_{profile}_trigger = yes" not in holder:
+            failures.append(f"{key} lacks exact-profile isolation")
+        if "starting_technology_level = 1" not in holder:
+            failures.append(f"{key} is not researched at opening tier 1")
+        if len(re.findall(r"(?m)^\s*unlock_law\s*=", holder)) > 8:
+            failures.append(f"{key} exceeds the eight-unlock tooltip ceiling")
     iranian_unlocks = set(re.findall(
         r"unlock_law = (antq_s2_iranian_[a-z_]+_law)",
         advances_text,
@@ -351,7 +376,7 @@ def main() -> int:
         return 1
     print(
         "s3_opening_systems: PASS "
-        "(profile-isolated law packages; mandatory adapter; universal RGO; flour>wheat; ancient steel)"
+        "(463 complete legal profiles; codified-law capability; universal RGO; flour>wheat; ancient steel)"
     )
     return 0
 

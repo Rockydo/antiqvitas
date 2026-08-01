@@ -15,7 +15,6 @@ from dates import AntqDate, BiographyDate, M2_MIRROR_LANGUAGES
 from goods_integration import bindings as goods_bindings, modifier_additions, modifier_name
 from s2_ancient_laws import (
     all_law_options as s2_all_law_options,
-    opening_adapter_laws_by_tag as s2_opening_adapter_laws_by_tag,
     profile_law_pairs as s2_profile_law_pairs,
     starting_laws_by_tag as s2_starting_laws_by_tag,
 )
@@ -2514,15 +2513,14 @@ def government_block(
     lines.append("\t\t\t\tprivilege = {")
     lines.extend(f"\t\t\t\t\t{privilege}" for privilege in pipe_values(row["privileges"], "government privileges"))
     lines.append("\t\t\t\t}")
-    # Namespaced law holders are stripped during bookmark initialization. These
-    # four exact installed keys are different: M8 places them on universally
-    # owned depth-zero advances, and the S3 adapter file replaces their medieval
-    # policies with profile-filtered ancient settlements.
-    adapter_laws = s2_opening_adapter_laws_by_tag()[row["design_tag"]]
+    # M8 gives every exact legal profile its own already-researched Age-I
+    # foundation. Install the complete fourteen-question ancient profile here;
+    # holder potentials and isolated unlocks keep foreign law systems invisible.
+    profile_laws = s2_starting_laws_by_tag()[row["design_tag"]]
     lines.append("\t\t\t\tlaws = {")
     lines.extend(
         f"\t\t\t\t\t{law} = {option}"
-        for law, option in adapter_laws
+        for law, option in profile_laws
     )
     lines.append("\t\t\t\t}")
     lines.extend(f"\t\t\t\t{key} = {value}" for key, value in assignments(row["societal_values"], "government societal values"))
@@ -4144,28 +4142,16 @@ def law_definitions(data: PowerData) -> str:
             f"{row['law']} = {{",
             f"\tlaw_category = {row['law_category']}",
         ))
-        if row["law"] == "antq_steppe_governance_law":
-            # Xiongnu uses the native steppe-horde government, while the
-            # independently attested Yuezhi, Wusun, Kangju, and Yancai opening
-            # adapters use tribe/monarchy. Vanilla permits laws without one
-            # `law_gov_group`; keep this confederation law valid for those
-            # three engine shapes instead of silently deleting it at startup.
-            lines.extend((
-                "\tpotential = {",
-                "\t\tOR = {",
-                "\t\t\tgovernment_type = government_type:steppe_horde",
-                "\t\t\tgovernment_type = government_type:tribe",
-                "\t\t\tgovernment_type = government_type:monarchy",
-                "\t\t}",
-                "\t}",
-            ))
-        else:
-            lines.extend((
-                f"\tlaw_gov_group = {row['law_gov_group']}",
-                "\tpotential = {",
-                f"\t\tgovernment_type = government_type:{row['law_gov_group']}",
-                "\t}",
-            ))
+        if row["law"] != "antq_steppe_governance_law":
+            lines.append(f"\tlaw_gov_group = {row['law_gov_group']}")
+        # These first-generation adapters are retained for save/event symbol
+        # compatibility only.  The complete S2 profile laws supersede them;
+        # making them visible produces foreign, uninitialized duplicate rows.
+        lines.extend((
+            "\tpotential = {",
+            "\t\talways = no",
+            "\t}",
+        ))
         lines.extend((
             f"\t{row['option']} = {{",
             "\t\tcountry_modifier = {",

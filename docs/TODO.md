@@ -29,12 +29,12 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   Parthian ports must offer more than merchant roundships; inland locations
   must not gain ocean fleets. Fresh Parthia runtime exposed five bounded
   river, Caspian, Gulf, merchant, and transport craft.
-- [ ] Restore Parthia's law screen. Prove all opening profiles initialize,
+- [x] Restore Parthia's law screen. Prove all opening profiles initialize,
   display, and can change their own laws without seeing foreign profile laws.
-  Blocked after seven distinct engine contracts. The exact-key candidate also
-  renders no laws in fresh Observer-tagged and direct Parthia starts, with Rome
-  equally empty. Static setup remains green; do not retry without new engine
-  evidence (`BLOCKERS.md`).
+  Restored the missing `has_codified_laws` capability, researched all 26 exact
+  profile foundations at tier 1, initialized 14 policies for every start, and
+  false-gated all superseded law groups. Fresh Rome, Parthia, Suebi, and
+  Teotihuacan show only their own profiles; Parthia accepts a policy change.
 - [x] Gate every privilege by country profile, culture, religion, reform, or a
   justified universal category. No polity may see or grant a foreign grant.
   Static complete: 376 custom grants resolve to 6-19 visible per tag across all
@@ -62,19 +62,20 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 
 ### S3-P1 - Complete ancient visual surfaces
 
-- [x] Rebuild all sixteen loading screens against the installed vanilla
-  eight-mesh contract.
-- [x] Rebuild loading screens from the installed vanilla layer contract. The
+- [ ] Rebuild all sixteen loading screens against the installed vanilla
+  eight-mesh contract. Reopened after the 2026-08-01 manual capture showed the
+  shipped composite remains severely ghosted and blurred.
+- [ ] Rebuild loading screens from the installed vanilla layer contract. The
   2026-07-30 manual capture still shows a severely ghosted, blurred composite.
   Compare vanilla/mod scene definitions and textures byte-for-byte where useful;
   audit alpha, opacity, compression, mipmaps, layer ownership/order, transforms,
   dimensions, and shaders. Accept only after side-by-side vanilla/mod captures
   at several new-game percentages show an opaque sharp plate, intentional
   parallax, no doubled scenery, seams, halos, or transparency bleed on all 16.
-  Final candidate: all 16 use the complete opaque master, three transparent
-  compatibility planes, and four exclusive whole-object accents totaling
-  3.0-3.8% of the frame. Fresh Arikamedu 8%/61%, Forum 82%, and Pompeii 98%
-  captures are clean; final 157/157 validation and paired smoke are green.
+  Reject the current full-master-plus-accent hypothesis. Re-derive mesh roles,
+  masks, alpha, depth/parallax, crop, compression, and scaling from the actual
+  installed scenes, then require side-by-side runtime proof at several loading
+  percentages for all 16 before closing either item.
 - [x] Replace the complete installed location-illustration union: terrain,
   settlements, forts, ports, sacred buildings, workshops, weather, and
   foreground layers. No medieval structure or unintended blur may remain.
@@ -197,8 +198,8 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
   transport profile; all 232 inland polities receive no naval unit.
 - Static green: all 376 privileges have potentials; fresh Rome initialization
   emits zero invalid-privilege removals. Parthia's 14 Iranian law packages
-  remain isolated but are runtime-blocked; five distinct engine contracts are
-  documented in `BLOCKERS.md`, and green setup intentionally emits none.
+  initialize and render; 463 starts each receive exactly 14 profile laws, while
+  every superseded installed and custom holder is false-gated.
 - Static green: 1,519 content unlocks plus eight mercenary-capability bridges
   are profile-balanced across 918 advances;
   no node advertises more than eight. Roman building unlocks stay on the
