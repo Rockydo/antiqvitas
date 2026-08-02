@@ -6005,3 +6005,10 @@ simultaneous global outbreak. Cyprian's testimony supports severe social and
 mortality pressure; pathogen identity remains contested, so smallpox is only an
 engine proxy. Sources: `JRA-CYP-2015`; `JRA-CYP-2021`. [secure broad disruption;
 contested onset, reach, and pathogen]
+
+## 2026-08-02 - Dated religion foundation seeds
+
+The AD 30 Jerusalem Christian (2%), AD 142 Chengdu Daoist (3%), and AD 240
+Arsacid Manichaean (2%) conversions are bounded gameplay seeds, not census
+claims. Sources: master plan §9; `P11`; `CAH-XI`; `IRAN-MANI`.
+[secure broad chronology; contested local share]

@@ -1257,6 +1257,41 @@
 			change_raw_material = goods:wheat
 			change_max_raw_material_workers = 4
 		}
+		# ANTIQVITAS M5: country-scoped annona routes; live-proven after monthly settlement.
+		c:XAA = {
+			create_trade = {
+				from = location:faiyum.market
+				to = location:rome.market
+				merchant = location:rome.market
+				goods = goods:wheat
+				desired = 1
+				locked = yes
+			} # OCD-ANNONA;P12.3
+			create_trade = {
+				from = location:sousse.market
+				to = location:rome.market
+				merchant = location:rome.market
+				goods = goods:wheat
+				desired = 1
+				locked = yes
+			} # OCD-ANNONA;P8.1
+			create_trade = {
+				from = location:syracuse.market
+				to = location:rome.market
+				merchant = location:rome.market
+				goods = goods:wheat
+				desired = 1
+				locked = yes
+			} # OCD-ANNONA;P8.1
+			create_trade = {
+				from = location:cagliari.market
+				to = location:rome.market
+				merchant = location:rome.market
+				goods = goods:wheat
+				desired = 1
+				locked = yes
+			} # OCD-ANNONA;P8.1
+		}
 		# ANTIQVITAS M6: source-led Wang Mang regency at the AD 1 bookmark.
 		c:XAR = { set_regent = character:antq_wang_mang }
 		# ANTIQVITAS S2: establish each reform's source-bounded ancient council.
@@ -4836,7 +4871,7 @@ on_ruler_death = {
 
 	effect = {
 		if = {
-			limit = { scope:old_ruler = character:maj_hayam_wuruk }
+			limit = { always = no } # ANTIQVITAS: post-campaign Hayam Wuruk hook
 			set_variable = {
 				name = eligible_for_dohw_disaster_variable
 				years = 10

@@ -226,6 +226,13 @@ antq_m10.1009 = {
 	option = {
 		name = antq_m10.1009.a
 		historical_option = yes
+		# The AD 30 current seeds a small Jerusalem community; it does not convert Judea.
+		location:jerusalem = {
+			every_pop = {
+				limit = { religion = religion:antq_judaism }
+				split_pop = { fraction = 0.02 religion = religion:antq_early_christianity }
+			}
+		}
 		add_prestige = prestige_mild_bonus
 		# Learned practice shapes the response; it never gates the current.
 		if = {

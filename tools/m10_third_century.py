@@ -178,6 +178,17 @@ def event_outcome(record: Current) -> str:
 
 def impact_lines(record: Current) -> tuple[str, ...]:
     """Use only effects verified by the local event corpus/script-doc dump."""
+    if record.key == "manichaeism_foundation":
+        return (
+            "\t\t# IRAN-MANI: seed a bounded community without converting the Iranian state.",
+            "\t\tcapital = {",
+            "\t\t\tevery_pop = {",
+            "\t\t\t\tlimit = { religion = religion:antq_arsacid_zoroastrianism }",
+            "\t\t\t\tsplit_pop = { fraction = 0.02 religion = religion:antq_manichaeism }",
+            "\t\t\t}",
+            "\t\t}",
+            "\t\tadd_prestige = prestige_mild_bonus",
+        )
     if record.key == "constitutio_antoniniana":
         return (
             "\t\tremove_policy = policy:antq_peregrini_status",

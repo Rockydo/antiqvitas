@@ -401,6 +401,17 @@ def event_outcome(record: Current) -> str:
 
 def impact_lines(record: Current) -> tuple[str, ...]:
     """Use only effects harvested from installed country-event files."""
+    if record.key == "christianity_foundation":
+        return (
+            "\t\t# The AD 30 current seeds a small Jerusalem community; it does not convert Judea.",
+            "\t\tlocation:jerusalem = {",
+            "\t\t\tevery_pop = {",
+            "\t\t\t\tlimit = { religion = religion:antq_judaism }",
+            "\t\t\t\tsplit_pop = { fraction = 0.02 religion = religion:antq_early_christianity }",
+            "\t\t\t}",
+            "\t\t}",
+            "\t\tadd_prestige = prestige_mild_bonus",
+        )
     if record.key == "second_temple_destruction":
         return (
             "\t\tlocation:jerusalem = {",

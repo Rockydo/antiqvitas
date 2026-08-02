@@ -38,9 +38,12 @@ runtime evidence agree.
 
 ### S4-P1 - Economy, knowledge, and forces
 
-- [ ] Prove a real opening annona route into Rome with the engine `create_trade`
+- [x] Prove a real opening annona route into Rome with the engine `create_trade`
   contract, wheat surplus, merchant capacity, path/range, and a visible Rome import
   row. Add a deterministic ledger/test and fresh Roman market runtime evidence.
+  Four XAA-scoped locked routes now run after country/market creation. Fresh
+  AD 1 exports show Roma `0 -> 0.97866` wheat imports at the first monthly pulse;
+  see `docs/playtests/S4_RELIGION_ANNONA_20260802.md`.
 - [ ] Remove the Principate's flat `monthly_gold_income = 500`. Balance Rome through
   historically bounded taxes, annona logistics, production, buildings, control,
   market supply, and opening reserves; prove construction viability without a

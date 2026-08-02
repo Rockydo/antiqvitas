@@ -278,6 +278,13 @@ antq_m10_second.2010 = {
 	option = {
 		name = antq_m10_second.2010.a
 		historical_option = yes
+		# CAM-CM: bounded Chengdu-basin seed for the organized Celestial Masters current.
+		location:chengdu = {
+			every_pop = {
+				limit = { religion = religion:antq_chinese_state_cult }
+				split_pop = { fraction = 0.03 religion = religion:antq_daoism }
+			}
+		}
 		add_prestige = prestige_mild_bonus
 		# Learned practice shapes the response; it never gates the current.
 		if = {

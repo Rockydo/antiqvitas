@@ -123,6 +123,10 @@ def set_fixed_settings(user_dir: Path) -> None:
     )
     value.setdefault("Graphics", {}).update(
         {
+            # The installed default is Vulkan.  DX12 repeatedly exits inside
+            # ffxFsr2ResourceIsNull on this host during observer runs even with
+            # FSR disabled, so keep autonomous evidence on the stable backend.
+            "renderer": "Vulkan",
             "display_mode": "windowed",
             "resolution": f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}",
             # 70% is an installed-UI setting value verified in a live menu.

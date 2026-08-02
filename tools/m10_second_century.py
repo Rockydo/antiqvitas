@@ -262,6 +262,17 @@ def moche_formation_lines() -> tuple[str, ...]:
 
 
 def impact_lines(record: Current) -> tuple[str, ...]:
+    if record.key == "celestial_masters":
+        return (
+            "\t\t# CAM-CM: bounded Chengdu-basin seed for the organized Celestial Masters current.",
+            "\t\tlocation:chengdu = {",
+            "\t\t\tevery_pop = {",
+            "\t\t\t\tlimit = { religion = religion:antq_chinese_state_cult }",
+            "\t\t\t\tsplit_pop = { fraction = 0.03 religion = religion:antq_daoism }",
+            "\t\t\t}",
+            "\t\t}",
+            "\t\tadd_prestige = prestige_mild_bonus",
+        )
     if record.key == "champa_formation":
         return champa_formation_lines()
     if record.key == "moche_formation":

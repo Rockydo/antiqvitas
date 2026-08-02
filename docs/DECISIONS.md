@@ -4505,3 +4505,12 @@ commit/tag identities; release validation also runs `public_release_guard.py
 --history`. Local path configuration remains ignored and only its tokenized example
 is tracked. Any future history rewrite requires exact ref leases, fresh network
 mirror connectivity, a deep privacy scan, and removal of transfer-only refs.
+
+## 2026-08-02 - Faith profiles and annona require live contracts
+
+Use inhabited native religion groups; express semantic families through
+explicit profiles and sparse reciprocal views, never empty adapters. Create the
+annona only after countries/markets exist, under mapped tag XAA; accept it only
+when a fresh monthly export shows a Roma import. Unreachable post-campaign
+character comparisons in global ancient callbacks are false-gated by exact
+installed-source guards.

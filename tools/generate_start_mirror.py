@@ -55,7 +55,6 @@ VANILLA_PROVINCES = ROOT / "docs/vanilla_symbols/provinces.json"
 VANILLA_LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
 VANILLA_REGIONS = ROOT / "docs/vanilla_symbols/regions.json"
 MARKETS = ROOT / "docs/m5/markets.csv"
-ANNONA_ROUTES = ROOT / "docs/m5/annona_trade_routes.csv"
 URBAN_NODES = ROOT / "docs/m5/urban_nodes.csv"
 ROAD_SEGMENTS = ROOT / "docs/m5/road_segments.csv"
 DEVELOPMENT_PROFILE = ROOT / "docs/m5/development_profile.csv"
@@ -374,54 +373,6 @@ def market_manager() -> tuple[str, int]:
             f"\tadd_market = {row['location']} # {row['name']}; {row['source']}"
         )
 
-    route_fields = (
-        "source_location", "destination_location", "merchant_location", "good",
-        "desired", "locked", "source", "confidence", "note",
-    )
-    routes = csv_rows(ANNONA_ROUTES)
-    known_goods = set(json.loads(
-        (ROOT / "docs/vanilla_symbols/good.json").read_text(encoding="utf-8-sig")
-    ))
-    for row in routes:
-        if tuple(row) != route_fields:
-            failures.append("annona_trade_routes.csv has an invalid field order")
-            break
-        if any(not row[field].strip() for field in route_fields):
-            failures.append("annona_trade_routes.csv contains a blank required field")
-        for field in ("source_location", "destination_location", "merchant_location"):
-            if row[field] not in locations:
-                failures.append(f"annona route uses unknown {field} {row[field]}")
-        if row["good"] not in known_goods:
-            failures.append(f"annona route uses unknown good {row['good']}")
-        try:
-            if Decimal(row["desired"]) <= 0:
-                raise ValueError
-        except ValueError:
-            failures.append(f"annona route has invalid desired capacity {row['desired']}")
-        if row["locked"] not in {"yes", "no"}:
-            failures.append(f"annona route has invalid locked value {row['locked']}")
-        if row["confidence"] not in {"secure", "contested"}:
-            failures.append(f"annona route has invalid confidence {row['confidence']}")
-    if len(routes) < 4:
-        failures.append("annona route ledger must cover Egypt, Africa, Sicily, and Sardinia")
-    if failures:
-        raise ValueError("\n".join(sorted(set(failures))))
-    lines.extend((
-        "\t# Augustan annona: real locked import rows, not inferred source surplus.",
-        "\tc:ROM = {",
-    ))
-    for row in routes:
-        lines.extend((
-            "\t\tcreate_trade = {",
-            f"\t\t\tfrom = location:{row['source_location']}.market",
-            f"\t\t\tto = location:{row['destination_location']}.market",
-            f"\t\t\tmerchant = location:{row['merchant_location']}.market",
-            f"\t\t\tgoods = goods:{row['good']}",
-            f"\t\t\tdesired = {row['desired']}",
-            f"\t\t\tlocked = {row['locked']}",
-            f"\t\t}} # {row['source']}",
-        ))
-    lines.append("\t}")
     lines.extend(("}", ""))
     return "\n".join(lines), len(entries)
 

@@ -1,5 +1,11 @@
 # Blockers
 
+## Resolved 2026-08-02 - DX12 observer renderer exits
+
+Two fresh DX12 runs exited in the same FSR2 renderer stack. The installed
+default Vulkan backend completed fresh startup and Observer through 26 March
+AD 1 without a renderer exit; the autonomous driver now requests Vulkan.
+
 ## Resolved 2026-07-23 - M5 scalable output contract calibration
 
 Two menu-smoke probes accepted native guild production syntax but rejected the

@@ -8359,3 +8359,13 @@ reviewed 128px BC7 DDS.
 - Extended `public_release_guard.py` to reject private commit/tag identities and
   historical local config; `--history` performs the full release audit.
 - Final validation passes 159/159; the deep all-object guard also passes.
+
+## 2026-08-02 - Religion profiles and live annona
+
+- Rebuilt 52 religions into 22 mechanical profiles and seeded three dated
+  foundations; added exact regression ledgers/guards.
+- Moved four annona routes into post-country XAA scope. Fresh Roma wheat imports
+  rise `0 -> 0.97866` at the first monthly pulse without a console route effect.
+- Neutralized two globally reachable medieval-character comparisons. Fresh
+  Observer reached 26 March with neither diagnostic recurring.
+- Validation passes 161/161; paired smoke adds zero new/mod-unique lines.

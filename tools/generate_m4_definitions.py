@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import io
 import json
 import re
 import sys
@@ -18,7 +19,7 @@ from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 
-from dates import AntqDate, END
+from dates import AntqDate, END, START, load_timeline
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "docs/m4"
@@ -31,6 +32,8 @@ M4_LANGUAGES = DATA / "languages.csv"
 CULTURAL_VIEW_CLUSTERS = DATA / "cultural_view_clusters.csv"
 CULTURAL_VIEWS = DATA / "cultural_views.csv"
 SYMBOLS = DATA / "definition_symbols.json"
+RELIGION_MECHANICS_AUDIT = DATA / "religion_mechanics.csv"
+TIMELINE = ROOT / "docs/timeline.csv"
 COMMON = ROOT / "in_game/common"
 LOC_ROOT = ROOT / "main_menu/localization"
 START_POPS = ROOT / "main_menu/setup/start/06_pops.txt"
@@ -82,14 +85,30 @@ NATIVE_RELIGION_GROUP_OVERRIDES = {
     "antq_mariana_island_traditions": "folk_micronesian_group",
     "antq_western_caroline_traditions": "folk_micronesian_group",
     "antq_central_amazon_traditions": "folk_brazilian_group",
+    "antq_mainland_southeast_asian_traditions": "folk_se_asian_group",
 }
-ORGANIZED_RELIGIONS = {
-    "antq_religio_romana", "antq_hellenic", "antq_early_christianity",
-    "antq_arsacid_zoroastrianism", "antq_manichaeism", "antq_theravada",
-    "antq_mahayana", "antq_brahmanism", "antq_jainism",
-    "antq_chinese_state_cult", "antq_daoism", "antq_kemetic",
-    "antq_kushite_amun", "antq_punic", "antq_mesoamerican", "antq_andean",
+RELIGION_TIMELINE_KEYS = {
+    "antq_early_christianity": "christianity_foundation",
+    "antq_daoism": "celestial_masters",
+    "antq_manichaeism": "manichaeism_foundation",
 }
+RELIGIOUS_VIEW_PAIRS = (
+    ("antq_religio_romana", "antq_hellenic", "kindred"),
+    ("antq_religio_romana", "antq_punic", "positive"),
+    ("antq_hellenic", "antq_punic", "positive"),
+    ("antq_early_christianity", "antq_judaism", "positive"),
+    ("antq_arsacid_zoroastrianism", "antq_eastern_iranian_traditions", "positive"),
+    ("antq_eastern_iranian_traditions", "antq_tarim_oasis_traditions", "positive"),
+    ("antq_arsacid_zoroastrianism", "antq_manichaeism", "negative"),
+    ("antq_theravada", "antq_mahayana", "kindred"),
+    ("antq_brahmanism", "antq_jainism", "positive"),
+    ("antq_chinese_state_cult", "antq_daoism", "positive"),
+    ("antq_kami", "antq_korean_muism", "positive"),
+    ("antq_tengri", "antq_siberian", "positive"),
+    ("antq_kemetic", "antq_kushite_amun", "kindred"),
+    ("antq_kushite_amun", "antq_aksumite_paganism", "positive"),
+    ("antq_arabian_polytheism", "antq_south_arabian_religion", "positive"),
+)
 
 
 @dataclass(frozen=True)
@@ -101,6 +120,14 @@ class Definition:
     source: str
     confidence: str
     note: str
+
+
+@dataclass(frozen=True)
+class ReligionMechanics:
+    profile: str
+    slots: int
+    influence: bool
+    modifiers: tuple[tuple[str, str], ...]
 
 
 @dataclass(frozen=True)
@@ -186,39 +213,139 @@ def native_religion_group(row: Definition) -> str:
     return NATIVE_RELIGION_GROUP_OVERRIDES.get(row.key, NATIVE_RELIGION_GROUPS[row.group])
 
 
-def religion_mechanics(row: Definition) -> tuple[int, bool, tuple[tuple[str, str], ...]]:
-    organized = row.key in ORGANIZED_RELIGIONS
-    slots = 3 if row.key == "antq_early_christianity" else 2 if organized else 1
-    tolerance = {
-        "antq_abrahamic_group": "1.50",
-        "antq_buddhist_group": "1.00",
-        "antq_indian_religion_group": "0.75",
-        "antq_classical_pagan_group": "0.75",
-        "antq_iranian_religion_group": "0.75",
-    }.get(row.group, "0.50")
-    modifiers: list[tuple[str, str]] = [("tolerance_own", tolerance)]
-    if organized:
-        modifiers.extend((
-            ("monthly_religious_influence", "0.08"),
-            ("maximum_religious_influence", "300"),
-            ("global_max_literacy", "2"),
-        ))
-    elif row.group in {"antq_steppe_religion_group", "antq_european_folk_group"}:
-        modifiers.append(("land_morale_modifier", "0.01"))
-    else:
-        modifiers.append(("global_monthly_food_modifier", "0.01"))
-    return slots, organized, tuple(modifiers)
+def mechanic(
+    profile: str,
+    slots: int,
+    influence: bool,
+    *modifiers: tuple[str, str],
+) -> ReligionMechanics:
+    return ReligionMechanics(profile, slots, influence, tuple(modifiers))
+
+
+def religion_mechanics(row: Definition) -> ReligionMechanics:
+    """Return a bounded historical family profile, never a universal clone."""
+    key = row.key
+    if key == "antq_early_christianity":
+        return mechanic("christian_missionary", 3, True,
+            ("tolerance_own", "1.00"), ("tolerance_heretic", "0.50"),
+            ("monthly_religious_influence", "0.10"), ("maximum_religious_influence", "400"),
+            ("global_pop_conversion_speed_modifier", "0.08"), ("global_max_literacy", "2"))
+    if key == "antq_judaism":
+        return mechanic("jewish_covenantal", 2, True,
+            ("tolerance_own", "1.50"), ("tolerance_heathen", "0.50"),
+            ("monthly_religious_influence", "0.06"), ("maximum_religious_influence", "250"),
+            ("global_pop_conversion_speed_modifier", "-0.10"), ("monthly_legitimacy", "0.02"))
+    if row.group == "antq_classical_pagan_group":
+        return mechanic("mediterranean_civic", 2, True,
+            ("tolerance_own", "0.75"), ("tolerance_heathen", "1.00"),
+            ("monthly_religious_influence", "0.08"), ("maximum_religious_influence", "300"),
+            ("monthly_legitimacy", "0.03"))
+    if key == "antq_arsacid_zoroastrianism":
+        return mechanic("iranian_state", 2, True,
+            ("tolerance_own", "1.00"), ("tolerance_heathen", "0.50"),
+            ("monthly_religious_influence", "0.08"), ("maximum_religious_influence", "300"),
+            ("global_pop_conversion_speed_modifier", "0.02"), ("monthly_legitimacy", "0.03"))
+    if key == "antq_manichaeism":
+        return mechanic("manichaean_missionary", 3, True,
+            ("tolerance_own", "1.00"), ("tolerance_heretic", "1.00"),
+            ("monthly_religious_influence", "0.10"), ("maximum_religious_influence", "350"),
+            ("global_pop_conversion_speed_modifier", "0.10"), ("global_max_literacy", "2"))
+    if key in {"antq_theravada", "antq_mahayana"}:
+        return mechanic("buddhist_monastic", 2, True,
+            ("tolerance_own", "1.00"), ("tolerance_heathen", "1.00"),
+            ("monthly_religious_influence", "0.08"), ("maximum_religious_influence", "300"),
+            ("global_pop_conversion_speed_modifier", "0.04"), ("global_max_literacy", "2"))
+    if key == "antq_brahmanism":
+        return mechanic("brahmanical_ritual", 2, True,
+            ("tolerance_own", "1.00"), ("tolerance_heathen", "0.75"),
+            ("monthly_religious_influence", "0.07"), ("maximum_religious_influence", "300"),
+            ("global_pop_conversion_speed_modifier", "0.02"), ("monthly_legitimacy", "0.03"))
+    if key == "antq_jainism":
+        return mechanic("jain_community", 2, True,
+            ("tolerance_own", "1.25"), ("tolerance_heathen", "1.00"),
+            ("monthly_religious_influence", "0.06"), ("maximum_religious_influence", "250"),
+            ("global_pop_conversion_speed_modifier", "-0.05"), ("global_life_expectancy", "0.02"))
+    if key == "antq_chinese_state_cult":
+        return mechanic("han_state_rites", 2, True,
+            ("tolerance_own", "0.75"), ("tolerance_heathen", "1.00"),
+            ("monthly_religious_influence", "0.08"), ("maximum_religious_influence", "300"),
+            ("global_pop_conversion_speed_modifier", "0.01"), ("monthly_legitimacy", "0.04"))
+    if key == "antq_daoism":
+        return mechanic("daoist_organized", 2, True,
+            ("tolerance_own", "1.00"), ("tolerance_heathen", "1.00"),
+            ("monthly_religious_influence", "0.07"), ("maximum_religious_influence", "275"),
+            ("global_pop_conversion_speed_modifier", "0.03"), ("global_monthly_prosperity", "0.02"))
+    if row.group == "antq_east_asian_religion_group":
+        return mechanic("east_asian_local", 1, False,
+            ("tolerance_own", "0.75"), ("tolerance_heathen", "1.00"),
+            ("global_pop_conversion_speed_modifier", "-0.05"),
+            ("global_monthly_food_modifier", "0.01"), ("global_monthly_prosperity", "0.01"))
+    if key == "antq_tengri":
+        return mechanic("steppe_sky", 1, False,
+            ("tolerance_own", "0.75"), ("tolerance_heathen", "0.50"),
+            ("global_pop_conversion_speed_modifier", "-0.05"), ("land_morale_modifier", "0.02"))
+    if row.group == "antq_steppe_religion_group":
+        return mechanic("highland_forest_local", 1, False,
+            ("tolerance_own", "0.75"), ("tolerance_heathen", "0.75"),
+            ("global_pop_conversion_speed_modifier", "-0.10"),
+            ("global_monthly_food_modifier", "0.02"), ("global_hostile_attrition", "0.02"))
+    if row.group == "antq_nile_religion_group":
+        return mechanic("nile_state_temple", 2, True,
+            ("tolerance_own", "0.75"), ("tolerance_heathen", "1.00"),
+            ("monthly_religious_influence", "0.07"), ("maximum_religious_influence", "275"),
+            ("monthly_legitimacy", "0.03"), ("global_monthly_prosperity", "0.02"))
+    if row.group == "antq_arabian_religion_group":
+        return mechanic("arabian_temple_network", 2, True,
+            ("tolerance_own", "0.75"), ("tolerance_heathen", "0.75"),
+            ("monthly_religious_influence", "0.06"), ("maximum_religious_influence", "250"),
+            ("monthly_legitimacy", "0.02"), ("global_monthly_food_modifier", "0.01"))
+    if row.group == "antq_european_folk_group":
+        return mechanic("european_local_cult", 1, False,
+            ("tolerance_own", "0.75"), ("tolerance_heathen", "0.50"),
+            ("global_pop_conversion_speed_modifier", "-0.08"), ("land_morale_modifier", "0.01"))
+    if row.group == "antq_african_folk_group":
+        return mechanic("african_local_cult", 1, False,
+            ("tolerance_own", "0.75"), ("tolerance_heathen", "0.75"),
+            ("global_pop_conversion_speed_modifier", "-0.10"),
+            ("global_monthly_food_modifier", "0.02"), ("global_life_expectancy", "0.01"))
+    if key in {"antq_mesoamerican", "antq_andean"}:
+        return mechanic("american_state_ritual", 2, True,
+            ("tolerance_own", "0.75"), ("tolerance_heathen", "0.50"),
+            ("monthly_religious_influence", "0.06"), ("maximum_religious_influence", "250"),
+            ("monthly_legitimacy", "0.02"), ("global_monthly_food_modifier", "0.02"))
+    if row.group == "antq_american_religion_group":
+        return mechanic("american_local_cult", 1, False,
+            ("tolerance_own", "0.75"), ("tolerance_heathen", "0.75"),
+            ("global_pop_conversion_speed_modifier", "-0.10"),
+            ("global_monthly_food_modifier", "0.02"), ("global_hostile_attrition", "0.03"))
+    if row.group == "antq_oceanic_religion_group":
+        return mechanic("oceanic_local_cult", 1, False,
+            ("tolerance_own", "0.75"), ("tolerance_heathen", "1.00"),
+            ("global_pop_conversion_speed_modifier", "-0.10"),
+            ("global_monthly_food_modifier", "0.02"), ("global_monthly_prosperity", "0.02"))
+    if row.group == "antq_iranian_religion_group":
+        return mechanic("iranian_local_cult", 1, False,
+            ("tolerance_own", "0.75"), ("tolerance_heathen", "0.75"),
+            ("global_pop_conversion_speed_modifier", "-0.08"),
+            ("global_monthly_prosperity", "0.01"), ("cultural_tradition_modifier", "0.02"))
+    if row.group in {"antq_northeast_indian_religion_group", "antq_buddhist_group"}:
+        return mechanic("asian_local_cult", 1, False,
+            ("tolerance_own", "0.75"), ("tolerance_heathen", "1.00"),
+            ("global_pop_conversion_speed_modifier", "-0.10"),
+            ("global_monthly_food_modifier", "0.02"), ("global_monthly_prosperity", "0.01"))
+    raise ValueError(f"{row.key}: no explicit religion-mechanics profile")
 
 
 def religious_opinions(row: Definition, rows: list[Definition]) -> tuple[tuple[str, str], ...]:
-    opinions = [
-        (other.key, "kindred") for other in rows
-        if other.key != row.key and other.group == row.group
-    ]
-    if row.key == "antq_early_christianity":
-        opinions.append(("antq_judaism", "positive"))
-    elif row.key == "antq_judaism":
-        opinions.append(("antq_early_christianity", "positive"))
+    known = {item.key for item in rows}
+    opinions: list[tuple[str, str]] = []
+    for left, right, view in RELIGIOUS_VIEW_PAIRS:
+        if left not in known or right not in known:
+            raise ValueError(f"religious view references unknown pair: {left}, {right}")
+        if row.key == left:
+            opinions.append((right, view))
+        elif row.key == right:
+            opinions.append((left, view))
     return tuple(sorted(opinions))
 
 
@@ -328,6 +455,38 @@ def starting_pop_religions() -> set[str]:
     return set(re.findall(r"\breligion\s*=\s*([A-Za-z0-9_]+)", START_POPS.read_text(encoding="utf-8")))
 
 
+def religion_availability() -> dict[str, tuple[AntqDate, str]]:
+    timeline = {row["key"]: row for row in load_timeline(TIMELINE)}
+    result: dict[str, tuple[AntqDate, str]] = {}
+    for religion, timeline_key in RELIGION_TIMELINE_KEYS.items():
+        if timeline_key not in timeline:
+            raise ValueError(f"timeline lacks religion foundation current {timeline_key}")
+        row = timeline[timeline_key]
+        result[religion] = (AntqDate.parse(row["date"]), row["source"].strip())
+    return result
+
+
+def render_religion_mechanics_audit(rows: list[Definition]) -> str:
+    availability = religion_availability()
+    output = io.StringIO(newline="")
+    writer = csv.writer(output, lineterminator="\n")
+    writer.writerow((
+        "religion", "semantic_group", "native_group", "profile", "slots",
+        "influence", "modifiers", "enable_date", "source", "confidence", "note",
+    ))
+    for row in rows:
+        mechanics = religion_mechanics(row)
+        enabled = availability.get(row.key)
+        writer.writerow((
+            row.key, row.group, native_religion_group(row), mechanics.profile,
+            mechanics.slots, "yes" if mechanics.influence else "no",
+            ";".join(f"{key}={value}" for key, value in mechanics.modifiers),
+            enabled[0].engine() if enabled else AntqDate(*START).engine(),
+            enabled[1] if enabled else row.source, row.confidence, row.note,
+        ))
+    return output.getvalue()
+
+
 def validate(
     cultures: list[Definition], religions: list[Definition], regional: list[Profile], language_rows: list[Language]
 ) -> list[str]:
@@ -361,6 +520,23 @@ def validate(
                     failures.append(f"{row.key}: unknown native religion group {native_religion_group(row)}")
     culture_keys = {row.key for row in cultures}
     religion_keys = {row.key for row in religions}
+    availability = religion_availability()
+    if set(availability) != set(RELIGION_TIMELINE_KEYS):
+        failures.append("religion availability does not match the dated foundation roster")
+    if not set(availability).issubset(religion_keys):
+        failures.append("religion availability references an unknown religion")
+    mechanics = [religion_mechanics(row) for row in religions]
+    if len({item.profile for item in mechanics}) < 20:
+        failures.append("religion mechanics expose fewer than 20 distinct historical profiles")
+    if {item.slots for item in mechanics} != {1, 2, 3}:
+        failures.append("religion aspect slots do not span local, organized, and missionary profiles")
+    if {item.influence for item in mechanics} != {False, True}:
+        failures.append("religious influence access is not differentiated")
+    opinion_values = {
+        view for row in religions for _, view in religious_opinions(row, religions)
+    }
+    if not {"kindred", "positive", "negative"}.issubset(opinion_values):
+        failures.append("interfaith opinion profiles lack kindred/positive/negative distinctions")
     overlap = sorted(culture_keys & religion_keys)
     if overlap:
         failures.append(f"culture/religion keys share a localization namespace: {', '.join(overlap)}")
@@ -536,40 +712,43 @@ def cultural_opinions(culture_keys: set[str]) -> dict[str, dict[str, str]]:
 
 
 def render_religions(rows: list[Definition]) -> str:
-    absent_from_start = {row.key for row in rows} - starting_pop_religions()
-    aspect_religions = {row.key for row in rows}
-    terminal_date = AntqDate(*END).engine()
+    availability = religion_availability()
     lines = [
         f"# Generated by {Path(__file__).name} --write.",
         "# M4 sourced religion foundation; M10 owns dated conversions and schisms.",
         "# Native groups preserve engine pagan/mechanics contracts; semantic ANTIQVITAS families remain localized separately.",
     ]
     for row in rows:
-        slots, influence, modifiers = religion_mechanics(row)
+        mechanics = religion_mechanics(row)
+        enabled = availability.get(row.key)
+        opinions = religious_opinions(row, rows)
         lines.extend(
             (
                 "",
                 f"{row.key} = {{ # {row.source}; {row.note}",
                 f"\tcolor = antq_religion_color_{row.key}",
                 f"\tgroup = {native_religion_group(row)}",
-                f"\treligious_aspects = {slots}",
-                *(("\thas_religious_influence = yes",) if influence else ()),
+                f"\treligious_aspects = {mechanics.slots}",
+                *(("\thas_religious_influence = yes",) if mechanics.influence else ()),
                 *(("\thas_omens = yes",) if row.key == "antq_religio_romana" else ()),
                 *(
-                    (f"\tenable = {terminal_date} # unavailable before ANTIQVITAS campaign end",)
-                    if row.key in absent_from_start
+                    (f"\tenable = {enabled[0].engine()} # {enabled[1]}",)
+                    if enabled
                     else ()
                 ),
                 "\tdefinition_modifier = {",
-                *(f"\t\t{field} = {value}" for field, value in modifiers),
+                *(f"\t\t{field} = {value}" for field, value in mechanics.modifiers),
                 *(("\t\tomens_offered = 3",) if row.key == "antq_religio_romana" else ()),
                 "\t}",
-                "\topinions = {",
-                *(f"\t\t{target} = {opinion}" for target, opinion in religious_opinions(row, rows)),
-                "\t}",
-                "}",
             )
         )
+        if opinions:
+            lines.extend((
+                "\topinions = {",
+                *(f"\t\t{target} = {opinion}" for target, opinion in opinions),
+                "\t}",
+            ))
+        lines.append("}")
     return "\n".join(lines) + "\n"
 
 
@@ -725,6 +904,7 @@ def outputs() -> tuple[dict[Path, tuple[str, str]], dict[str, object]]:
         COMMON / "religions/antq_m4_religions.txt": (render_religions(religion_rows), "utf-8-sig"),
         COMMON / "languages/antq_m4_languages.txt": (render_languages(language_rows), "utf-8-sig"),
         ROOT / "main_menu/common/named_colors/antq_m4_colors.txt": (render_named_colors(culture_rows, religion_rows, language_rows), "utf-8-sig"),
+        RELIGION_MECHANICS_AUDIT: (render_religion_mechanics_audit(religion_rows), "utf-8-sig"),
     }
     files.update(vanilla_compatibility_outputs("cultures"))
     files.update(vanilla_compatibility_outputs("religions"))
@@ -740,6 +920,12 @@ def outputs() -> tuple[dict[Path, tuple[str, str]], dict[str, object]]:
         "dialects": [row.key.replace("_language", "_dialect") for row in language_rows],
         "regional_profiles": {row.region: {"culture": row.culture, "religion": row.religion} for row in profile_rows},
         "religions_absent_from_start": sorted(absent_from_start),
+        "religion_mechanics_profiles": {
+            row.key: religion_mechanics(row).profile for row in religion_rows
+        },
+        "religion_enable_dates": {
+            key: value[0].engine() for key, value in religion_availability().items()
+        },
     }
     return files, index
 

@@ -181,6 +181,13 @@ antq_m10_third.3006 = {
 	option = {
 		name = antq_m10_third.3006.a
 		historical_option = yes
+		# IRAN-MANI: seed a bounded community without converting the Iranian state.
+		capital = {
+			every_pop = {
+				limit = { religion = religion:antq_arsacid_zoroastrianism }
+				split_pop = { fraction = 0.02 religion = religion:antq_manichaeism }
+			}
+		}
 		add_prestige = prestige_mild_bonus
 		# Learned practice shapes the response; it never gates the current.
 		if = {

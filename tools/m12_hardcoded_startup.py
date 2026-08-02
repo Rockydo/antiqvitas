@@ -6,15 +6,19 @@ initializers and assumes that Catholic and Shinto IO instances always exist.
 ANTIQVITAS replaces the start managers and deliberately has neither instance
 at AD 1.  This renderer preserves the installed source byte-for-byte except
 for safe-scope operators on those absent IO lookups and dynamic post-campaign
-date gates around the dated country setup blocks.
+date gates around dated country setup blocks. It also neutralizes two globally
+reachable comparisons against post-campaign characters which do not exist in
+the AD 1 registry.
 """
 
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import re
 from collections import Counter
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
 from dates import AntqDate, END
@@ -34,6 +38,10 @@ ECONOMY_GUI_RELATIVE = Path("game/in_game/gui/economy_lateralview.gui")
 ECONOMY_GUI_OUTPUT = ROOT / "in_game/gui/economy_lateralview.gui"
 CREDIT_GUI_RELATIVE = Path("game/in_game/gui/credit.gui")
 CREDIT_GUI_OUTPUT = ROOT / "in_game/gui/credit.gui"
+MARRY_NOBLE_RELATIVE = Path(
+    "game/in_game/common/character_interactions/marry_noble.txt"
+)
+MARRY_NOBLE_OUTPUT = ROOT / "in_game/common/character_interactions/marry_noble.txt"
 LOC_ROOT = ROOT / "main_menu/localization"
 MIRROR_LANGUAGES = (
     "english",
@@ -84,6 +92,13 @@ EXPECTED_CUSTOM_RGO_GOODS = frozenset({
     "antq_tree_nuts",
 })
 EXPECTED_ANNONA_SEED_LOCATIONS = frozenset({"cagliari", "faiyum", "sousse", "syracuse"})
+ANNONA_ROUTES = ROOT / "docs/m5/annona_trade_routes.csv"
+TAG_MAP = ROOT / "docs/world_1ad/tag_map.json"
+ANNONA_ROUTE_FIELDS = (
+    "source_location", "destination_location", "merchant_location", "good",
+    "desired", "locked", "source", "confidence", "note",
+)
+EXPECTED_ANNONA_ROUTE_SOURCES = frozenset({"cagliari", "faiyum", "sousse", "syracuse"})
 LEGACY_INSTITUTION_CALLBACK = """#root = country, scope:target = institution
 on_institution_embraced = {
 	effect = {
@@ -116,6 +131,18 @@ on_institution_embraced = {
 	}
 }"""
 FRONTIER_OWNER_HOOK = "\t\tantq_frontier_owner_name_effect = yes"
+HAYAM_WURUK_COMPARISON = (
+    "\t\t\tlimit = { scope:old_ruler = character:maj_hayam_wuruk }"
+)
+HAYAM_WURUK_NEUTRAL = (
+    "\t\t\tlimit = { always = no } # ANTIQVITAS: post-campaign Hayam Wuruk hook"
+)
+BUKKA_RAYA_COMPARISON = (
+    "\t\t\t\tscope:recipient = character:vij_bukka_raya_sangama"
+)
+BUKKA_RAYA_NEUTRAL = (
+    "\t\t\t\talways = no # ANTIQVITAS: post-campaign Bukka Raya hook"
+)
 
 
 def source_path() -> Path:
@@ -147,6 +174,18 @@ def brace_delta(line: str) -> int:
 
 def newline_for(line: str) -> str:
     return "\r\n" if line.endswith("\r\n") else "\n"
+
+
+def neutral_marry_noble() -> bytes:
+    """Preserve ancient marriage while removing one absent medieval identity."""
+    raw = installed_path(MARRY_NOBLE_RELATIVE).read_bytes()
+    has_bom = raw.startswith(b"\xef\xbb\xbf")
+    text = raw.decode("utf-8-sig")
+    if text.count(BUKKA_RAYA_COMPARISON) != 1:
+        raise ValueError("installed Bukka Raya marriage hook inventory drift")
+    text = text.replace(BUKKA_RAYA_COMPARISON, BUKKA_RAYA_NEUTRAL, 1)
+    text = re.sub(r"[ \t]+(?=\r?$)", "", text, flags=re.MULTILINE)
+    return (b"\xef\xbb\xbf" if has_bom else b"") + text.encode("utf-8")
 
 
 def runtime_rgo_effects(newline: str) -> list[str]:
@@ -208,6 +247,72 @@ def runtime_rgo_effects(newline: str) -> list[str]:
             )
         )
     return effects
+
+
+def annona_route_rows() -> tuple[list[dict[str, str]], str]:
+    """Load the route ledger and resolve Rome through the generated tag map."""
+    with ANNONA_ROUTES.open(encoding="utf-8-sig", newline="") as stream:
+        reader = csv.DictReader(stream)
+        if tuple(reader.fieldnames or ()) != ANNONA_ROUTE_FIELDS:
+            raise ValueError("annona route ledger field order drift")
+        rows = list(reader)
+    locations = set(json.loads(
+        (ROOT / "docs/vanilla_symbols/locations.json").read_text(encoding="utf-8-sig")
+    ))
+    goods = set(json.loads(
+        (ROOT / "docs/vanilla_symbols/good.json").read_text(encoding="utf-8-sig")
+    ))
+    sources: set[str] = set()
+    for row in rows:
+        if any(not row[field].strip() for field in ANNONA_ROUTE_FIELDS):
+            raise ValueError("annona route ledger contains a blank required field")
+        sources.add(row["source_location"])
+        for field in ("source_location", "destination_location", "merchant_location"):
+            if row[field] not in locations:
+                raise ValueError(f"annona route uses unknown {field} {row[field]}")
+        if row["good"] not in goods:
+            raise ValueError(f"annona route uses unknown good {row['good']}")
+        try:
+            desired = Decimal(row["desired"])
+        except InvalidOperation as exc:
+            raise ValueError(f"annona route has invalid desired capacity {row['desired']}") from exc
+        if desired <= 0 or row["locked"] != "yes":
+            raise ValueError("annona routes must have positive capacity and remain locked")
+        if row["destination_location"] != "rome" or row["merchant_location"] != "rome":
+            raise ValueError("annona route does not terminate through Rome's merchant market")
+        if row["good"] != "wheat":
+            raise ValueError("annona route ledger contains a non-wheat route")
+        if row["confidence"] not in {"secure", "contested"}:
+            raise ValueError(f"annona route has invalid confidence {row['confidence']}")
+    if sources != EXPECTED_ANNONA_ROUTE_SOURCES or len(rows) != len(sources):
+        raise ValueError(f"annona route source inventory drift: {sorted(sources)}")
+    entries = json.loads(TAG_MAP.read_text(encoding="utf-8-sig"))["entries"]
+    roman_tags = [entry["engine_tag"] for entry in entries if entry["design_tag"] == "ROM"]
+    if len(roman_tags) != 1:
+        raise ValueError(f"Roman engine-tag mapping is not singular: {roman_tags}")
+    return rows, roman_tags[0]
+
+
+def annona_trade_effects(newline: str) -> list[str]:
+    """Create proven country-scoped routes after markets and countries exist."""
+    rows, roman_tag = annona_route_rows()
+    lines = [
+        f"\t\t# ANTIQVITAS M5: country-scoped annona routes; live-proven after monthly settlement.{newline}",
+        f"\t\tc:{roman_tag} = {{{newline}",
+    ]
+    for row in rows:
+        lines.extend((
+            f"\t\t\tcreate_trade = {{{newline}",
+            f"\t\t\t\tfrom = location:{row['source_location']}.market{newline}",
+            f"\t\t\t\tto = location:{row['destination_location']}.market{newline}",
+            f"\t\t\t\tmerchant = location:{row['merchant_location']}.market{newline}",
+            f"\t\t\t\tgoods = goods:{row['good']}{newline}",
+            f"\t\t\t\tdesired = {row['desired']}{newline}",
+            f"\t\t\t\tlocked = {row['locked']}{newline}",
+            f"\t\t\t}} # {row['source']}{newline}",
+        ))
+    lines.append(f"\t\t}}{newline}")
+    return lines
 
 
 def han_regency_effect(newline: str) -> list[str]:
@@ -393,6 +498,7 @@ def render() -> bytes:
         if in_start and not rgo_injected and RGO_SETUP_ANCHOR.match(code):
             rendered.append(line)
             rendered.extend(runtime_rgo_effects(newline_for(line)))
+            rendered.extend(annona_trade_effects(newline_for(line)))
             rendered.extend(han_regency_effect(newline_for(line)))
             rendered.extend(ancient_parliament_effect(newline_for(line)))
             rgo_injected = True
@@ -454,6 +560,11 @@ def render() -> bytes:
         )
     text = "".join(rendered)
     newline = "\r\n" if "\r\n" in text else "\n"
+    hayam_source = HAYAM_WURUK_COMPARISON.replace("\n", newline)
+    hayam_neutral = HAYAM_WURUK_NEUTRAL.replace("\n", newline)
+    if text.count(hayam_source) != 1:
+        raise ValueError("installed Hayam Wuruk ruler-death hook inventory drift")
+    text = text.replace(hayam_source, hayam_neutral, 1)
     legacy_callback = LEGACY_INSTITUTION_CALLBACK.replace("\n", newline)
     antique_callback = ANTIQUE_INSTITUTION_CALLBACK.replace("\n", newline)
     if text.count(legacy_callback) != 1:
@@ -498,6 +609,7 @@ def write() -> None:
         BANKRUPTCY_STATIC_OUTPUT: genuine_bankruptcy_static(),
         ECONOMY_GUI_OUTPUT: bankruptcy_gui(ECONOMY_GUI_RELATIVE),
         CREDIT_GUI_OUTPUT: bankruptcy_gui(CREDIT_GUI_RELATIVE),
+        MARRY_NOBLE_OUTPUT: neutral_marry_noble(),
     }
     for language in MIRROR_LANGUAGES:
         outputs[
@@ -521,6 +633,7 @@ def check() -> bool:
         BANKRUPTCY_STATIC_OUTPUT: genuine_bankruptcy_static(),
         ECONOMY_GUI_OUTPUT: bankruptcy_gui(ECONOMY_GUI_RELATIVE),
         CREDIT_GUI_OUTPUT: bankruptcy_gui(CREDIT_GUI_RELATIVE),
+        MARRY_NOBLE_OUTPUT: neutral_marry_noble(),
     }
     for language in MIRROR_LANGUAGES:
         expected_outputs[
@@ -541,7 +654,7 @@ def check() -> bool:
         "m12_hardcoded_startup: PASS "
         f"(5 safe absent-IO scopes; 8 dated country-startup gates; "
         f"{EXPECTED_RGO_CHANGE_COUNT} runtime RGO corrections; "
-        "1 low-year bankruptcy epoch adapter)"
+        "2 absent future-character hooks; 1 low-year bankruptcy epoch adapter)"
     )
     return True
 
