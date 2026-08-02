@@ -147,7 +147,7 @@ def definition(rows: list[dict[str, str]]) -> str:
         elif potential == "buddhist":
             lines.extend((
                 "\tcountry_potential = {",
-                "\t\treligion ?= { group = religion_group:antq_buddhist_group }",
+                "\t\treligion ?= { group = religion_group:buddhist }",
                 "\t}",
             ))
         elif potential == "disabled":

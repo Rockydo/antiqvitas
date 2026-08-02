@@ -34,6 +34,7 @@ class Command:
 
 
 VALIDATE_COMMANDS = (
+    Command("tools/public_release_guard.py"),
     Command("tools/test_eu5_slot.py"),
     Command("tools/s2_estate_orders.py", ("--check",)),
     Command("tools/s2_ancient_laws.py", ("--check",)),

@@ -1,5 +1,5 @@
 {
-  "active_custom_definition_count": 112,
+  "active_custom_definition_count": 117,
   "active_custom_definitions": [
     "antq_aestian_amber_road_guards",
     "antq_alamannic_confederate_host",
@@ -32,6 +32,7 @@
     "antq_caspian_oared_boat",
     "antq_cataphracts",
     "antq_cilician_marines",
+    "antq_coastal_watch_craft",
     "antq_comitatenses",
     "antq_cretan_archers",
     "antq_dacian_falxmen",
@@ -66,6 +67,8 @@
     "antq_legionaries",
     "antq_liburnian",
     "antq_limitanei",
+    "antq_limited_coastal_transport",
+    "antq_local_watercraft",
     "antq_marcomannic_royal_retinue",
     "antq_merchant_roundship",
     "antq_mesoamerican_atlatl_company",
@@ -82,6 +85,7 @@
     "antq_numidian_horse_company",
     "antq_numidian_light_horse",
     "antq_omanite_coastal_warbands",
+    "antq_open_sea_merchantmen",
     "antq_parthian_foot_archers",
     "antq_parthian_horse_archers",
     "antq_parthian_noble_lancers",
@@ -102,6 +106,7 @@
     "antq_semnonian_grove_muster",
     "antq_south_arabian_highland_levies",
     "antq_spear_and_shield_infantry",
+    "antq_state_oared_squadron",
     "antq_steppe_horse_archers",
     "antq_suebian_household_retinue",
     "antq_sulawesi_lashed_lug_patrol",
@@ -175,7 +180,7 @@
       ],
       "relative": "00_age_templates_land.txt",
       "rendered_sha256": "bf5d6b9419d5b3edd62f71cacf86ee6a114def3e492cf59f8fb35490914263fe",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\00_age_templates_land.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/00_age_templates_land.txt",
       "source_sha256": "0f0fd855a6ec5bcc42beb13d45d48c1e073ef3a9ca60287bcc5a583f7995ce8f",
       "target": "in_game/common/unit_types/00_age_templates_land.txt"
     },
@@ -208,7 +213,7 @@
       ],
       "relative": "00_age_templates_navy.txt",
       "rendered_sha256": "b2e192811f48e20fd760b0bdc7e9dc2854c55c97316978c4956d9ba61d09e9ae",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\00_age_templates_navy.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/00_age_templates_navy.txt",
       "source_sha256": "dbb47ce5cfc7170041acbf30cf8a05db3626975fa87d790513836e28cb107675",
       "target": "in_game/common/unit_types/00_age_templates_navy.txt"
     },
@@ -227,7 +232,7 @@
       ],
       "relative": "0_knights.txt",
       "rendered_sha256": "5133877364094e617f02114a1f048b690f71f23904684e7a6679cdf4e9e1d875",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\0_knights.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/0_knights.txt",
       "source_sha256": "1abff563e3043fd6832cbf0ecba7ff9f66d51f6289892e78d49988656bbb24fd",
       "target": "in_game/common/unit_types/0_knights.txt"
     },
@@ -241,7 +246,7 @@
       ],
       "relative": "0_tribal.txt",
       "rendered_sha256": "451811c18b3e0712501f342ff7cbfb4ff233579f01d92b2cdbf0cf706f5d4ac3",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\0_tribal.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/0_tribal.txt",
       "source_sha256": "8db80c4afe9d119bbd946fba96463569e592b0500b7ea9ca9641011788ae0e52",
       "target": "in_game/common/unit_types/0_tribal.txt"
     },
@@ -286,7 +291,7 @@
       ],
       "relative": "1_uniques_for_age_1_traditions.txt",
       "rendered_sha256": "f601617cff7851fd1e05045f5a2be15031fffc4ae19c426a048000f853a0004a",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\1_uniques_for_age_1_traditions.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/1_uniques_for_age_1_traditions.txt",
       "source_sha256": "e529723142ee415381656fed756ca789df3204769eed091050bbcc01efb3533a",
       "target": "in_game/common/unit_types/1_uniques_for_age_1_traditions.txt"
     },
@@ -309,7 +314,7 @@
       ],
       "relative": "1_uniques_for_age_2_renaissance.txt",
       "rendered_sha256": "7f417044e64e626224639047590885cff1b1f938fc5bd7e5617021a350fc63ef",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\1_uniques_for_age_2_renaissance.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/1_uniques_for_age_2_renaissance.txt",
       "source_sha256": "242653a68a834289f059715fa2d05fc1d1374745f99bfcc4ba502eac3537ee5b",
       "target": "in_game/common/unit_types/1_uniques_for_age_2_renaissance.txt"
     },
@@ -332,7 +337,7 @@
       ],
       "relative": "1_uniques_for_age_3_discovery.txt",
       "rendered_sha256": "bdb20e771e71a380cf6ab6e16d0e4be7a2108431e24f3c5908c664c1eb931421",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\1_uniques_for_age_3_discovery.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/1_uniques_for_age_3_discovery.txt",
       "source_sha256": "32769fea7e0761b0860f0341ea3bfa378437fa6830f4620cae8e2aeca14afd7e",
       "target": "in_game/common/unit_types/1_uniques_for_age_3_discovery.txt"
     },
@@ -355,7 +360,7 @@
       ],
       "relative": "1_uniques_for_age_4_reformation.txt",
       "rendered_sha256": "a099d8a0ab728d64cf43b3cd5455a0703a35de2f57d8a14f0a86fbd4c64ba1f2",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\1_uniques_for_age_4_reformation.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/1_uniques_for_age_4_reformation.txt",
       "source_sha256": "f1956a746363636a51d256511c551af6d85f72c85048afc45ac6e97a6354f319",
       "target": "in_game/common/unit_types/1_uniques_for_age_4_reformation.txt"
     },
@@ -376,7 +381,7 @@
       ],
       "relative": "1_uniques_for_age_5_absolutism.txt",
       "rendered_sha256": "4ba71c9656face46187dda74475dbfe29d07c6a9b9a9b1ee216e508e7d430b2b",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\1_uniques_for_age_5_absolutism.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/1_uniques_for_age_5_absolutism.txt",
       "source_sha256": "3d1b254f5ce5a57837471cbfebf840b57bc788053e9610335fe004e5b300171f",
       "target": "in_game/common/unit_types/1_uniques_for_age_5_absolutism.txt"
     },
@@ -394,7 +399,7 @@
       ],
       "relative": "1_uniques_for_age_6_revolutions.txt",
       "rendered_sha256": "d037350c156f97ccf23002f4b0370f6684d7eb3de50687af5aea1a138f38b2c3",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\1_uniques_for_age_6_revolutions.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/1_uniques_for_age_6_revolutions.txt",
       "source_sha256": "ba52bf380413f891b76870599044f3cedbd973b6dd06215019d4de9bcfbaa111",
       "target": "in_game/common/unit_types/1_uniques_for_age_6_revolutions.txt"
     },
@@ -405,7 +410,7 @@
       ],
       "relative": "2_conquistador.txt",
       "rendered_sha256": "dfa70f85699388ae1bfb1af7b98d42f142d464cd5d0b31bef50fa86b18afe954",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\2_conquistador.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/2_conquistador.txt",
       "source_sha256": "1028b018ecfa1cddf271b4761a4efcbc66072a56efbecdc65d608bcf73e41784",
       "target": "in_game/common/unit_types/2_conquistador.txt"
     },
@@ -457,7 +462,7 @@
       ],
       "relative": "2_unlocked_through_tech.txt",
       "rendered_sha256": "983e87ea7d3e3c8f0e2caa645416ce809feae05bea0a78be6312db5a419744a5",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\2_unlocked_through_tech.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/2_unlocked_through_tech.txt",
       "source_sha256": "467cc36e00e596cf279df3e3445641c8be39f789e42ff10d3c1169dd56fb10a2",
       "target": "in_game/common/unit_types/2_unlocked_through_tech.txt"
     },
@@ -472,7 +477,7 @@
       ],
       "relative": "3_cawa_regiments.txt",
       "rendered_sha256": "b4c18a5b4f5b742ea7f0843acb557a0dcdbb33b84ad0a728b24c0bcdf8a77c7a",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\3_cawa_regiments.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/3_cawa_regiments.txt",
       "source_sha256": "8342f6131a4a6488a859bcf0e998a94c27b63019b16ee7f23f424184933a0b12",
       "target": "in_game/common/unit_types/3_cawa_regiments.txt"
     },
@@ -488,7 +493,7 @@
       ],
       "relative": "3_elephant_units.txt",
       "rendered_sha256": "53f8c0bc3544de1672cba552fc739e4bbbfd7c6550f541f1750ddb62ff49ffe3",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\3_elephant_units.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/3_elephant_units.txt",
       "source_sha256": "9099f92731cc59a68628afe2417c3be7bdaa693867d8e9acedc2123cc8cd09f6",
       "target": "in_game/common/unit_types/3_elephant_units.txt"
     },
@@ -502,7 +507,7 @@
       ],
       "relative": "3_janissaries.txt",
       "rendered_sha256": "adfab671509c3d0c12f068b4edf32a26e500ff84053f5e59f80656f575a8d221",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\3_janissaries.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/3_janissaries.txt",
       "source_sha256": "0968140859a92207a0df7dfab4ddbf7ad9728152f135d0056fa36ad72aa710a1",
       "target": "in_game/common/unit_types/3_janissaries.txt"
     },
@@ -522,7 +527,7 @@
       ],
       "relative": "3_naval_uniques_for_age_1_traditions.txt",
       "rendered_sha256": "e8d6866f991253ae2fc6bec590df2120053c83d5da23d269c160abec5346246d",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\3_naval_uniques_for_age_1_traditions.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/3_naval_uniques_for_age_1_traditions.txt",
       "source_sha256": "fcd9750898637544a26e63fcd704433db67e65d7049ea29f72cc2848ac1c2195",
       "target": "in_game/common/unit_types/3_naval_uniques_for_age_1_traditions.txt"
     },
@@ -535,7 +540,7 @@
       ],
       "relative": "3_naval_uniques_for_age_2_renaissance.txt",
       "rendered_sha256": "096d92655539cd2e8ad22633fa93daa4209194a2c97ccd3b17923931ab06bd9b",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\3_naval_uniques_for_age_2_renaissance.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/3_naval_uniques_for_age_2_renaissance.txt",
       "source_sha256": "7b5c8d6e2d4bf339cb2f618091fa8c4bc1d420e81bff433ec37751437fb70405",
       "target": "in_game/common/unit_types/3_naval_uniques_for_age_2_renaissance.txt"
     },
@@ -548,7 +553,7 @@
       ],
       "relative": "3_naval_uniques_for_age_3_discovery.txt",
       "rendered_sha256": "81235176c80a156bfa7bd2d3c0a13d5f250839c8ea4c18ed4f8c47cf3dcad4f0",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\3_naval_uniques_for_age_3_discovery.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/3_naval_uniques_for_age_3_discovery.txt",
       "source_sha256": "8064d5e01e51c5e1de79a01fbba404715ee5c2b98c1ab150605e753f186bd9e0",
       "target": "in_game/common/unit_types/3_naval_uniques_for_age_3_discovery.txt"
     },
@@ -566,7 +571,7 @@
       ],
       "relative": "3_naval_uniques_for_age_4_reformation.txt",
       "rendered_sha256": "cc4476094171d4d6fec4d8c6b5f1d44f483abe44f0ad319c418c64e904be39fd",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\3_naval_uniques_for_age_4_reformation.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/3_naval_uniques_for_age_4_reformation.txt",
       "source_sha256": "385ced5a026cded0123aaebf1ac49d6aafe53c0803935c7b21e2aaf2a311db1a",
       "target": "in_game/common/unit_types/3_naval_uniques_for_age_4_reformation.txt"
     },
@@ -576,7 +581,7 @@
       ],
       "relative": "3_naval_uniques_for_age_5_absolutism.txt",
       "rendered_sha256": "0acdd34a1c09775b60c8d48e67832efcd2c70859ab64876238ceae870e4276b7",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\3_naval_uniques_for_age_5_absolutism.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/3_naval_uniques_for_age_5_absolutism.txt",
       "source_sha256": "fcb8527c179c45a8c97732165b78177a9a44d9b7dd21a8827134d9974f57bcdc",
       "target": "in_game/common/unit_types/3_naval_uniques_for_age_5_absolutism.txt"
     },
@@ -588,7 +593,7 @@
       ],
       "relative": "3_naval_uniques_for_age_6_revolutions.txt",
       "rendered_sha256": "e1ba3cd9c8cebfc5170e31edca31fd7e37639e3deebcfcec942c10e6c61e0e3c",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\3_naval_uniques_for_age_6_revolutions.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/3_naval_uniques_for_age_6_revolutions.txt",
       "source_sha256": "c6571273ee74be9c79e9be5403699f5f68b6410cd77ce9383d39a8fab350ee93",
       "target": "in_game/common/unit_types/3_naval_uniques_for_age_6_revolutions.txt"
     },
@@ -599,7 +604,7 @@
       ],
       "relative": "3_qizilbash.txt",
       "rendered_sha256": "8b99bf8de253206405e6daae1b1921e6ea1d0c6ec7f9abc4369f8d1ab7100a8b",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\3_qizilbash.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/3_qizilbash.txt",
       "source_sha256": "e5d6c95b86e9815f979d502924a20b061f3b0bb6fdbc2b3e84018e58501d2ecd",
       "target": "in_game/common/unit_types/3_qizilbash.txt"
     },
@@ -628,7 +633,7 @@
       ],
       "relative": "D008_byzantine_unit_types.txt",
       "rendered_sha256": "187a0dac1d2c80504ff151bccb5093ee8eaa53ae5865c9e8fba15935c12f3fcc",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\D008_byzantine_unit_types.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/D008_byzantine_unit_types.txt",
       "source_sha256": "84d23fadca23a61aea8310c0daf0d93d3f6e1cced0729c8101a586551c92a891",
       "target": "in_game/common/unit_types/D008_byzantine_unit_types.txt"
     },
@@ -638,7 +643,7 @@
       ],
       "relative": "a_bedouin_cavalry.txt",
       "rendered_sha256": "4f040dc8ebf7ecc276a15eecf9a1e1b363ded4cac9bd252d3ea96c687cb422c2",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\a_bedouin_cavalry.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/a_bedouin_cavalry.txt",
       "source_sha256": "66611c7cc8324e9b65475dbed322c91342c64271cf3fc6c26a1e1f79096edccc",
       "target": "in_game/common/unit_types/a_bedouin_cavalry.txt"
     },
@@ -649,7 +654,7 @@
       ],
       "relative": "a_nahuatl.txt",
       "rendered_sha256": "dd7c7d271a5cd1c4c8e2bf27b329ddf5bfe56d3c208ba678c1e55f2b666598da",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\a_nahuatl.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/a_nahuatl.txt",
       "source_sha256": "c6ad525a836c59ed67d3afb8557dc0ed42aefb52c99f1901f7bf80f7a08afbbe",
       "target": "in_game/common/unit_types/a_nahuatl.txt"
     },
@@ -660,7 +665,7 @@
       ],
       "relative": "a_north_american.txt",
       "rendered_sha256": "811a972ace730529c238df623610da052fbc3eef99bc0e87b3e6ad0e27f48b26",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\a_north_american.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/a_north_american.txt",
       "source_sha256": "14966d30d56714ca06e269838ce5661de66947623297f30e1b91f35c1df3960a",
       "target": "in_game/common/unit_types/a_north_american.txt"
     },
@@ -675,7 +680,7 @@
       ],
       "relative": "navy_galley.txt",
       "rendered_sha256": "07e19b114c61f82edcdf0e8a3718b988b5c512b9532808788d9a65d543702ebf",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\navy_galley.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/navy_galley.txt",
       "source_sha256": "3ac120749206f1df5bbbcb65e99d5d8432d55aa085d50935fe739380078a49ee",
       "target": "in_game/common/unit_types/navy_galley.txt"
     },
@@ -689,7 +694,7 @@
       ],
       "relative": "navy_heavy_ship.txt",
       "rendered_sha256": "6c45021fb5e2d2240074c52df31b863b53997de966deb8cb9b4994354701383c",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\navy_heavy_ship.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/navy_heavy_ship.txt",
       "source_sha256": "7765d62ac17f5019d442624d2398f72a9f11b66f5b26c84cbf5061d879736c40",
       "target": "in_game/common/unit_types/navy_heavy_ship.txt"
     },
@@ -703,7 +708,7 @@
       ],
       "relative": "navy_light_ship.txt",
       "rendered_sha256": "d1953d9d13b3452c538d1aa5126cfd766bd39d52dae0cf7bb5b72f5978834814",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\navy_light_ship.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/navy_light_ship.txt",
       "source_sha256": "b297533a2d14e6be537294e2fc67537dd7284664e3446abd0ffac0a05c73a10e",
       "target": "in_game/common/unit_types/navy_light_ship.txt"
     },
@@ -719,7 +724,7 @@
       ],
       "relative": "navy_transport.txt",
       "rendered_sha256": "1deeafea39de4b1f25cd12c1e551344c596e3d16d234c3247d0a324194eefa12",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\navy_transport.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/navy_transport.txt",
       "source_sha256": "58175249810427fe065fa9f5255568e77c8d037a51e982e8fbb51712f1015495",
       "target": "in_game/common/unit_types/navy_transport.txt"
     },
@@ -727,7 +732,7 @@
       "definitions": [],
       "relative": "readme.txt",
       "rendered_sha256": "29a5bb38585949f9b787c09269dea1054f29777aed46f3265946c93fba3fe9fd",
-      "source": "<GAME_DIR>\\game\\in_game\\common\\unit_types\\readme.txt",
+      "source": "<GAME_ROOT>/in_game/common/unit_types/readme.txt",
       "source_sha256": "29a5bb38585949f9b787c09269dea1054f29777aed46f3265946c93fba3fe9fd",
       "target": "in_game/common/unit_types/readme.txt"
     }

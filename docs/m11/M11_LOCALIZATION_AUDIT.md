@@ -9,8 +9,8 @@ The current contract has fifteen English source files mirrored exactly to
 Brazilian Portuguese, French, German, Japanese, Korean, Polish, Russian,
 Simplified Chinese, Spanish, and Turkish. Each mirror has the correct language
 header and UTF-8 BOM; after normalizing that header, every file matches the
-English source byte-for-byte in text. This includes the 328 M11 phase-event
-notifications and all M2-M10 material.
+English source byte-for-byte in text. This includes the 332 consequential M11
+phase events and all M2-M10 material.
 
 `tools/m11_localization.py --check` now enforces that inventory, BOM/header
 rule, exact English content mirror, and stub-free text on every `make validate`.

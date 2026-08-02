@@ -27,4 +27,4 @@ the AD 1 unit-manager ledger.
 | African Companies | Nile Bow Company, Sahel Javelin Company |
 | American Companies | Andean Sling Company, Mesoamerican Atlatl Company |
 
-The roster contains **112** ancient unit types, including **22** reviewed mercenary companies. The M7 validator fails if a listed core type loses its bounded country availability, a required company or tactical profile disappears, or a core AD 1 seed no longer contains every required role.
+The roster contains **117** ancient unit types, including **22** reviewed mercenary companies. The M7 validator fails if a listed core type loses its bounded country availability, a required company or tactical profile disappears, or a core AD 1 seed no longer contains every required role.

@@ -40,6 +40,8 @@ DEDICATED_FOOD_FAMILIES = {
 FAMILIES = ROOT / "docs/m5/regional_building_families.csv"
 SEEDS = ROOT / "docs/m5/regional_building_seeds.csv"
 BUNDLES = ROOT / "docs/m5/s2_britain_ireland_building_seeds.csv"
+FOOD_SEEDS = ROOT / "docs/m5/food_building_seeds.csv"
+CORE_MARKET_SEEDS = ROOT / "docs/m5/opening_market_building_seeds.csv"
 URBAN_NODES = ROOT / "docs/m5/urban_nodes.csv"
 OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
 POLITIES = ROOT / "docs/world_1ad/polities.csv"
@@ -347,9 +349,31 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         + curated_germania_rows()
         + curated_southern_hunter_herder_rows()
     )
+    reserved_pairs = {
+        (row["location"], row["family"])
+        for path in (FOOD_SEEDS, CORE_MARKET_SEEDS)
+        for row in read_rows(path)
+    }
+    rows = [
+        row for row in rows
+        if (row["location"], row["family"]) not in reserved_pairs
+    ]
     curated_count = len(rows)
+    fixed_pairs = reserved_pairs | {
+        (row["location"], row["family"]) for row in rows
+    }
+    deduplicated_bundles: list[dict[str, str]] = []
+    for row in bundle_rows:
+        pair = (row["location"], row["family"])
+        if pair in fixed_pairs:
+            continue
+        fixed_pairs.add(pair)
+        deduplicated_bundles.append(row)
+    bundle_rows = deduplicated_bundles
     fixed_rows = rows + bundle_rows
-    used_pairs = {(row["location"], row["family"]) for row in fixed_rows}
+    used_pairs = reserved_pairs | {
+        (row["location"], row["family"]) for row in fixed_rows
+    }
     usage: Counter[str] = Counter(row["family"] for row in fixed_rows)
     per_location: Counter[str] = Counter(row["location"] for row in fixed_rows)
 

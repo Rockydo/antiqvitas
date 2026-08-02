@@ -11,7 +11,14 @@ antq_m10_year_four_emperors = {
 		has_any_active_disaster = no
 	}
 	can_end = {
-		current_date >= 70.1.1
+		OR = {
+			current_date >= 70.1.1
+			AND = {
+				current_date >= 68.12.31
+				stability >= 20
+				at_war = no
+			}
+		}
 	}
 	on_start = {
 		trigger_event_non_silently = antq_m10.1021
@@ -28,7 +35,14 @@ antq_m10_vesuvius = {
 		has_any_active_disaster = no
 	}
 	can_end = {
-		current_date >= 80.1.1
+		OR = {
+			current_date >= 80.1.1
+			AND = {
+				current_date >= 79.7.2
+				stability >= 20
+				at_war = no
+			}
+		}
 	}
 	on_start = {
 		trigger_event_non_silently = antq_m10.1024

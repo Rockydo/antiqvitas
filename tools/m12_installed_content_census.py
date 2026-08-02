@@ -135,6 +135,11 @@ def game_root() -> Path:
     return Path(str(config()["game_dir"])) / "game"
 
 
+def installed_reference(path: Path) -> str:
+    """Serialize provenance without publishing the developer's machine path."""
+    return "<GAME_ROOT>/" + path.relative_to(game_root()).as_posix()
+
+
 def mounted_files(relative: str, suffixes: tuple[str, ...]) -> dict[str, Path]:
     game = game_root()
     rel = Path(relative)
@@ -211,7 +216,7 @@ def source_record(surface: str, relative: str, source: Path) -> dict[str, object
             status = "uncovered"
     return {
         "relative": relative,
-        "source": str(source),
+        "source": installed_reference(source),
         "source_sha256": sha256(raw),
         "mod_mirror": mod.relative_to(ROOT).as_posix() if mirrored else None,
         "mod_sha256": sha256(mod.read_bytes()) if mirrored else None,
@@ -314,7 +319,7 @@ def localization_contract() -> dict[str, object]:
         "loading_tip_installed_keys": sorted(tips),
         "loading_tip_override_keys": sorted(overridden),
         "loading_tip_complete": tips == overridden,
-        "country_history_source": str(history_source),
+        "country_history_source": installed_reference(history_source),
         "country_history_keys": history_keys,
         "country_history_exact_override": history_target.is_file(),
         "country_history_override_keys": history_override_keys,

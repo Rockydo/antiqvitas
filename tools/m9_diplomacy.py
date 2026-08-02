@@ -583,6 +583,11 @@ def leader_io(*, map_visible: bool, leader_modifier: tuple[str, ...]) -> str:
         "\tcan_leave_trigger = { always = no }",
         "\tauto_leave_trigger = { always = no }",
         "\tauto_disband_trigger = { always = no }",
+        "\tmodifier = {",
+        "\t\tmonthly_prestige = 0.01",
+        "\t\tglobal_trade_through_owned_territory_efficiency = 0.01",
+        "\t}",
+        "\topinion_bonus = 5",
         "\ton_joined = {",
         "\t}",
         "\ton_left = {",
@@ -640,6 +645,8 @@ def organization_records() -> tuple[InternationalOrganization, ...]:
                 "\tcan_leave_trigger = { always = no }",
                 "\tauto_leave_trigger = { always = no }",
                 "\tauto_disband_trigger = { always = no }",
+                "\tmodifier = { monthly_prestige = 0.03 }",
+                "\topinion_bonus = 10",
                 "\ton_joined = {",
                 "\t}",
                 "\ton_left = {",
@@ -664,6 +671,8 @@ def organization_records() -> tuple[InternationalOrganization, ...]:
                 "\tcan_leave_trigger = { always = no }",
                 "\tauto_leave_trigger = { always = no }",
                 "\tauto_disband_trigger = { always = no }",
+                "\tmodifier = { monthly_prestige = 0.02 global_trade_through_owned_territory_efficiency = 0.01 }",
+                "\topinion_bonus = 8",
                 "\ton_joined = {",
                 "\t}",
                 "\ton_left = {",
@@ -688,6 +697,8 @@ def organization_records() -> tuple[InternationalOrganization, ...]:
                 "\tcan_leave_trigger = { always = no }",
                 "\tauto_leave_trigger = { always = no }",
                 "\tauto_disband_trigger = { always = no }",
+                "\tmodifier = { global_trade_through_owned_territory_efficiency = 0.02 }",
+                "\topinion_bonus = 6",
                 "\ton_joined = {",
                 "\t}",
                 "\ton_left = {",
@@ -712,6 +723,9 @@ def organization_records() -> tuple[InternationalOrganization, ...]:
                 "\tcan_leave_trigger = { always = no }",
                 "\tauto_leave_trigger = { always = no }",
                 "\tauto_disband_trigger = { always = no }",
+                "\tmodifier = { global_trade_through_owned_territory_efficiency = 0.025 }",
+                "\tgives_food_access_to_members = yes",
+                "\topinion_bonus = 7",
                 "\ton_joined = {",
                 "\t}",
                 "\ton_left = {",
@@ -845,9 +859,10 @@ def subject_balance_csv(records: tuple[SubjectContract, ...]) -> str:
 def international_organization_manager() -> str:
     """Render only source-bounded AD 1 IO instances.
 
-    The one-member Xiongnu instance is intentional: its country is the
-    attested confederation at the campaign boundary, while constituent
-    membership is left to the M10 fracture/reform events rather than invented.
+    The Xiongnu instance represents the attested confederation at the campaign
+    boundary without inventing constituent sovereign tags; its leader and
+    member modifiers make it a functioning cohesion mechanic before M10's
+    fracture rather than a decorative duplicate label.
     Kangju and Sogdiana receive a separate confederational layer because the
     evidence supports Kangju predominance alongside constituent city polities.
     Rome is a non-leader technical custodian for a non-territorial Games IO;
@@ -1115,6 +1130,9 @@ def check(records: tuple[SubjectContract, ...]) -> bool:
             failures.append(f"missing {path.relative_to(ROOT)}")
         elif path.read_text(encoding="utf-8-sig") != expected:
             failures.append(f"stale {path.relative_to(ROOT)}")
+    io_rendered = outputs(records)[IO_OUTPUT]
+    if "opinion_trust" in io_rendered:
+        failures.append("runtime-rejected opinion_trust survived in IO definitions")
     if failures:
         print("m9_diplomacy: FAIL")
         print("\n".join(f"  - {failure}" for failure in failures))

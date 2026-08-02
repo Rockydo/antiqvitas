@@ -5989,3 +5989,11 @@ not proof that the local population used the same form or that the engine field
 is the exact ancient site. Overt Roman administrative forms therefore keep a
 separate transparent local label. Sources: `PLE`; `PLN`; existing Tier-2
 distance ledgers. [secure name resources; contested field identity]
+
+## 2026-08-02 - Epidemic engine proxy
+
+The Antonine and third-century epidemic currents use the installed smallpox
+outbreak as a bounded mortality-system proxy, not a claim that every episode's
+pathogen is securely identified. Material effects also hit manpower, food, and
+fiscal capacity. Sources: `CAH-XI`; `CAH-XII`; `P14`. [contested pathogen;
+secure broad demographic and fiscal disruption]

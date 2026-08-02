@@ -1223,3 +1223,12 @@ PID control, exit-75 deferral, pending-gate marker, smoke fingerprint,
 documentation, and focused tests were committed as an isolated eight-file
 batch. Bidirectional live contention tests passed, and a paired ANTIQVITAS
 smoke reached both vanilla and mod menus with zero new error-log lines.
+
+## 2026-08-02 - Pre-public Git history sanitation
+
+Status: **current tree clean; destructive history rewrite deferred.** The
+tracked-file release guard reports no local identity or absolute machine path,
+and future commits use a noreply identity. Older reachable commits retain
+retired local-path artifacts and personal commit metadata. Public release needs
+a coordinated filter-repo rewrite and force-push; this batch does not rewrite
+published history.

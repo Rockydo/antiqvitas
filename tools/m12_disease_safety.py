@@ -113,6 +113,12 @@ def resolve_source(
     return module, path, tuple(str(item[1]) for item in candidates)
 
 
+def public_source(path: Path) -> str:
+    if path.is_relative_to(ROOT):
+        return "<REPO_ROOT>/" + path.relative_to(ROOT).as_posix()
+    return "<GAME_ROOT>/" + path.relative_to(game_root()).as_posix()
+
+
 def inventory() -> dict[str, object]:
     game = game_root()
     roots = mount_roots(game)
@@ -140,8 +146,8 @@ def inventory() -> dict[str, object]:
             {
                 "texture": relative,
                 "module": module,
-                "source": str(source),
-                "source_candidates": list(candidates),
+                "source": public_source(source),
+                "source_candidates": [public_source(Path(item)) for item in candidates],
                 "target": target.relative_to(ROOT).as_posix(),
                 "sha256": sha256(source),
                 "bytes": source.stat().st_size,
@@ -198,7 +204,13 @@ Runtime acceptance is recorded separately in
 def write() -> None:
     value = inventory()
     for asset in value["assets"]:
-        source = Path(str(asset["source"]))
+        texture = str(asset["texture"])
+        if texture in PERIOD_ART_DEPENDENCIES:
+            source = ROOT / str(asset["module"]) / texture
+        else:
+            _module, source, _candidates = resolve_source(
+                mount_roots(game_root()), texture
+            )
         target = ROOT / str(asset["target"])
         target.parent.mkdir(parents=True, exist_ok=True)
         if source.resolve() != target.resolve():

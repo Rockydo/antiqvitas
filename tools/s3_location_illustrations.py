@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import json
 import re
 import shutil
 import subprocess
@@ -27,7 +28,7 @@ from dds import convert, identify
 
 
 ROOT = Path(__file__).resolve().parents[1]
-GAME = Path(r"<GAME_DIR>\game")
+GAME = Path(json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))["game_dir"]) / "game"
 SOURCE_DIR = ROOT / "assets_queue/generated_sources/location_view"
 MASTER_DIR = ROOT / "assets_queue/generated/location_view/masters"
 LEDGER = ROOT / "docs/s3/location_illustration_union.csv"
@@ -348,7 +349,10 @@ def write(force: bool = False) -> None:
         rows.append({
             "category": cat,
             "texture": relative,
-            "installed_source": str(installed or ""),
+            "installed_source": (
+                "<GAME_ROOT>/" + installed.relative_to(GAME).as_posix()
+                if installed else ""
+            ),
             "status": status,
             "region": region_for(relative) if cat in STRUCTURAL else "",
             "art_kind": kind if cat in STRUCTURAL else "",

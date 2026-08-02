@@ -340,9 +340,27 @@ antq_m10_second.2013 = {
 		historical_option = yes
 		add_stability = stability_mild_penalty
 		add_prestige = prestige_mild_penalty
+		add_manpower = { value = root.monthly_manpower multiply = -6 }
+		add_gold = { value = root.monthly_income_trade_and_tax multiply = -4 }
+		capital = {
+			set_disease_presence = {
+				disease_outbreak = disease:smallpox.original_outbreak
+				value = 0.35
+			}
+			province = { change_province_food_percentage = -0.15 }
+		}
 		c:XAR = {
 			add_stability = stability_weak_penalty
 			add_prestige = prestige_weak_penalty
+			add_manpower = { value = monthly_manpower multiply = -3 }
+			add_gold = { value = monthly_income_trade_and_tax multiply = -2 }
+			capital = {
+				set_disease_presence = {
+					disease_outbreak = disease:smallpox.original_outbreak
+					value = 0.20
+				}
+				province = { change_province_food_percentage = -0.08 }
+			}
 		}
 		capital.market = {
 			add_goods_supply = {

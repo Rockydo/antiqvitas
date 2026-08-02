@@ -3536,8 +3536,9 @@ Next: continue the decision, per-advance-icon, common-screen, and localization s
 
 ## 2026-07-20 - M11 section-18 event-density pass
 
-- Added 328 source-window phase events to the 83 M10 primary currents, reaching 411 total events with their existing 83 reviewed shared paintings.
-- The no-effect notifications preserve alt-history outcomes and avoid inventing separate historical incidents; the terminal 476 finale remains unexpanded.
+- Added the original 328 source-window phase events to 83 expandable M10
+  currents. Superseded 2026-08-02 by 332 consequential phases and 416 total
+  events; the terminal 476 finale remains unexpanded.
 - Updated the date gateway with checked campaign-date interpolation and anchored only future-only event recipients to existing AD 1 tags after the enabled-game loader rejected them directly.
 - Full validation and a corrective enabled-mod menu smoke are green with zero new error-log lines.
 
@@ -8319,3 +8320,17 @@ reviewed 128px BC7 DDS.
   Parthia reaches the normal paid policy-change confirmation.
 - Validation passes 157/157; paired smoke adds zero new or mod-unique lines at
   `7f0fa02deac469e1d2c15cce005970f659e807d32d1b44d0eba77b63d62cb7c7`.
+
+## 2026-08-02 - Advanced structural audit batch
+
+- Rebuilt AD 1 population as 81,706 strata in 13,553 locations, totaling
+  230,000.000 thousand; removed the 1337 weighting dependency.
+- Repaired religion groups/profiles, ancient-law isolation, annona routes,
+  Principate economy, five-level naval access, 463 AI personalities, 40 AI
+  decisions, 416 consequential events, material epidemics, early-resolution
+  currents, and functional IO modifiers.
+- Added 117-unit direct art coverage from 30 four-up sheets and a tracked-file
+  privacy guard; local paths now use an ignored config plus public template.
+- Validation passes 158/158. Paired smoke initially found and then verified the
+  repair of AI-list, event script-value, and IO-parser errors; final smoke adds
+  zero new or mod-unique lines.

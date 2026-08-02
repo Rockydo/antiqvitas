@@ -2539,7 +2539,10 @@ antq_principate = {
 	country_modifier = {
 		global_crown_estate_power = 0.10
 		monthly_towards_centralization = societal_value_monthly_move
-		monthly_gold_income = 500
+		global_monthly_control = 0.0005
+		global_trade_through_owned_territory_efficiency = 0.03
+		nobles_estate_max_tax = 0.02
+		burghers_estate_max_tax = 0.03
 		research_speed = 0.15
 	}
 	years = 2

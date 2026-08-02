@@ -210,3 +210,10 @@ Two checks after the 157/157 pass found ENDORË's valid PID 14284 lease. No
 process was touched. Fingerprint
 `5185eb8577f542b8cff0d3747d9087d4bc1c1cffc4a74fd84d0d3f855dd4a75d`
 still requires paired smoke and fresh percentage captures.
+
+## 2026-08-02 - Pre-public Git history sanitation
+
+`HEAD` is privacy-clean and guarded, but older reachable commits retain retired
+machine-path content and personal author metadata. Public release requires a
+coordinated filter-repo rewrite and force-push; no published history was changed
+inside this content batch.

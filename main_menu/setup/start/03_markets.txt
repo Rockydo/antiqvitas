@@ -75,4 +75,39 @@ market_manager = {
 	add_market = azcapotzalco # Teotihuacan; P12.2;P8.10;CAH-XI
 	add_market = thang_long # Thang Long; P8.9;CAH-XI
 	add_market = noh_peten # Tikal-zone; P12.2;P8.10;CAH-XI
+	# Augustan annona: real locked import rows, not inferred source surplus.
+	c:ROM = {
+		create_trade = {
+			from = location:faiyum.market
+			to = location:rome.market
+			merchant = location:rome.market
+			goods = goods:wheat
+			desired = 1
+			locked = yes
+		} # OCD-ANNONA;P12.3
+		create_trade = {
+			from = location:sousse.market
+			to = location:rome.market
+			merchant = location:rome.market
+			goods = goods:wheat
+			desired = 1
+			locked = yes
+		} # OCD-ANNONA;P8.1
+		create_trade = {
+			from = location:syracuse.market
+			to = location:rome.market
+			merchant = location:rome.market
+			goods = goods:wheat
+			desired = 1
+			locked = yes
+		} # OCD-ANNONA;P8.1
+		create_trade = {
+			from = location:cagliari.market
+			to = location:rome.market
+			merchant = location:rome.market
+			goods = goods:wheat
+			desired = 1
+			locked = yes
+		} # OCD-ANNONA;P8.1
+	}
 }

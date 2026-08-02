@@ -28,14 +28,14 @@ Construction assignments:
 Regional portfolios:
 
 - Americas: 53 goods.
-- Central Asia: 57 goods.
+- Central Asia: 56 goods.
 - East Asia: 58 goods.
-- Europe: 75 goods.
-- Middle East: 77 goods.
+- Europe: 76 goods.
+- Middle East: 73 goods.
 - North Africa: 67 goods.
 - Oceania: 13 goods.
-- South Asia: 75 goods.
-- Southeast Asia: 65 goods.
+- South Asia: 73 goods.
+- Southeast Asia: 64 goods.
 - West Africa: 46 goods.
 
 These are bounded market-scale product classes and demand links, not

@@ -10,7 +10,14 @@ antq_m10_second_antioch_earthquake = {
 		has_any_active_disaster = no
 	}
 	can_end = {
-		current_date >= 116.1.1
+		OR = {
+			current_date >= 116.1.1
+			AND = {
+				current_date >= 115.7.2
+				stability >= 20
+				at_war = no
+			}
+		}
 	}
 	on_start = {
 		trigger_event_non_silently = antq_m10_second.2005
@@ -27,7 +34,14 @@ antq_m10_second_antonine_plague = {
 		has_any_active_disaster = no
 	}
 	can_end = {
-		current_date >= 186.1.1
+		OR = {
+			current_date >= 186.1.1
+			AND = {
+				current_date >= 175.7.3
+				stability >= 20
+				at_war = no
+			}
+		}
 	}
 	on_start = {
 		trigger_event_non_silently = antq_m10_second.2013

@@ -20,6 +20,11 @@ antq_han_tributary_system = {
 	can_leave_trigger = { always = no }
 	auto_leave_trigger = { always = no }
 	auto_disband_trigger = { always = no }
+	modifier = {
+		monthly_prestige = 0.01
+		global_trade_through_owned_territory_efficiency = 0.01
+	}
+	opinion_bonus = 5
 	on_joined = {
 	}
 	on_left = {
@@ -51,6 +56,11 @@ antq_xiongnu_confederation = {
 	can_leave_trigger = { always = no }
 	auto_leave_trigger = { always = no }
 	auto_disband_trigger = { always = no }
+	modifier = {
+		monthly_prestige = 0.01
+		global_trade_through_owned_territory_efficiency = 0.01
+	}
+	opinion_bonus = 5
 	on_joined = {
 	}
 	on_left = {
@@ -78,6 +88,11 @@ antq_kangju_confederation = {
 	can_leave_trigger = { always = no }
 	auto_leave_trigger = { always = no }
 	auto_disband_trigger = { always = no }
+	modifier = {
+		monthly_prestige = 0.01
+		global_trade_through_owned_territory_efficiency = 0.01
+	}
+	opinion_bonus = 5
 	on_joined = {
 	}
 	on_left = {
@@ -99,6 +114,8 @@ antq_panhellenic_games = {
 	can_leave_trigger = { always = no }
 	auto_leave_trigger = { always = no }
 	auto_disband_trigger = { always = no }
+	modifier = { monthly_prestige = 0.03 }
+	opinion_bonus = 10
 	on_joined = {
 	}
 	on_left = {
@@ -120,6 +137,8 @@ antq_germanic_frontier_exchanges = {
 	can_leave_trigger = { always = no }
 	auto_leave_trigger = { always = no }
 	auto_disband_trigger = { always = no }
+	modifier = { monthly_prestige = 0.02 global_trade_through_owned_territory_efficiency = 0.01 }
+	opinion_bonus = 8
 	on_joined = {
 	}
 	on_left = {
@@ -141,6 +160,8 @@ antq_northern_amber_assemblies = {
 	can_leave_trigger = { always = no }
 	auto_leave_trigger = { always = no }
 	auto_disband_trigger = { always = no }
+	modifier = { global_trade_through_owned_territory_efficiency = 0.02 }
+	opinion_bonus = 6
 	on_joined = {
 	}
 	on_left = {
@@ -162,6 +183,9 @@ antq_arabian_route_exchanges = {
 	can_leave_trigger = { always = no }
 	auto_leave_trigger = { always = no }
 	auto_disband_trigger = { always = no }
+	modifier = { global_trade_through_owned_territory_efficiency = 0.025 }
+	gives_food_access_to_members = yes
+	opinion_bonus = 7
 	on_joined = {
 	}
 	on_left = {

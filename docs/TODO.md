@@ -3,6 +3,88 @@
 Tasks are taken top-to-bottom within the current milestone. A milestone closes only
 after `make full` and its autonomous driver report are green.
 
+## Advanced structural audit remediation - 2026-08-02 (resume here)
+
+This section supersedes affected completion claims below. Close each item only
+after its generator, generated output, regression validator, and relevant fresh
+runtime evidence agree.
+
+### S4-P0 - Public safety and foundational simulation
+
+- [ ] Remove personal data and machine-specific absolute paths from every tracked
+  text/binary artifact and generated manifest. Replace tracked local configuration
+  with a template plus ignored runtime state; make `make validate` fail on usernames,
+  home paths, drive-qualified repo/game paths, or embedded local metadata. Audit all
+  Git history and document/sanitize any remaining public-release risk.
+- [x] Replace the one-pop-per-location start with historically plausible strata.
+  Preserve sourced regional totals while distributing nobles, clergy, burghers,
+  peasants, laborers, soldiers, slaves, and tribesmen by polity, settlement rank,
+  economy, and social system; no inhabited major city may be a single base pop.
+- [x] Remove the installed 1337 population file from allocation inputs. Rebuild
+  residual weights solely from ancient settlement rank, agriculture, terrain,
+  water, roads, harbors, markets, and documented regional controls; validate that
+  no medieval population path or value influences AD 1 output.
+- [x] Repair religion-group semantics. Institution and gameplay triggers must use
+  the native groups actually inhabited by custom religions (or explicit religion
+  sets); delete or quarantine empty `antq_*_group` adapters and validate that every
+  referenced group has members.
+- [ ] Give religion families materially distinct aspect counts, influence access,
+  tolerance, conversion, authority, and interfaith opinions. No universal cloned
+  profile or empty opinion block may remain; runtime-prove Christian eligibility
+  and representative Roman, Iranian, Indic, East Asian, tribal, and American faiths.
+
+### S4-P1 - Economy, knowledge, and forces
+
+- [ ] Prove a real opening annona route into Rome with the engine `create_trade`
+  contract, wheat surplus, merchant capacity, path/range, and a visible Rome import
+  row. Add a deterministic ledger/test and fresh Roman market runtime evidence.
+- [ ] Remove the Principate's flat `monthly_gold_income = 500`. Balance Rome through
+  historically bounded taxes, annona logistics, production, buildings, control,
+  market supply, and opening reserves; prove construction viability without a
+  permanent treasury cheat and check peer great powers for solvency.
+- [x] Quarantine legacy advance/law compatibility files from the playable union.
+  Visible ancient advances may unlock only ANTIQVITAS laws; scan the installed union
+  for medieval IDs such as `education_masses_law`, `feudal_de_jure_law`, and
+  `royal_court_customs_law`, while retaining only explicitly documented inert engine
+  adapters that cannot appear in UI or progression.
+- [ ] Replace universal coastal patrol-plus-transport grants with five evidence-led
+  naval capabilities: local watercraft, limited transport, organized patrol, state
+  fleet, and long-distance capacity. Classify every coastal polity; gate units by
+  capability, coast/river basin, institutions, and advances; keep inland and
+  ocean-crossing restrictions intact and runtime-prove contrasting naval powers.
+
+### S4-P2 - Agency, historical currents, and institutions
+
+- [x] Replace the 332 mechanically empty phase notifications with substantive,
+  sourced events. Keep at least 400 real events, each with contextual effects or
+  choices, nontrivial AI weights, and no count-only notification padding; validate
+  mechanical effect and localization coverage for the full event union.
+- [x] Make all 40 decisions usable by AI and automation where appropriate. Replace
+  blanket `never`/`-1000` settings with bounded eligibility, cadence, affordability,
+  and historical utility. Any stockpile prerequisite must consume the promised good
+  before granting benefits; validate same-market debit and prevent free supply.
+- [x] Populate the opening AI personality manager for every playable tag with
+  profile-appropriate personalities and validate full coverage plus representative
+  Rome, Parthia, Suebi, Han, Indic, African, and American assignments.
+- [ ] Rebuild situations and disasters around staged progress, recurring material
+  pressures, and player/AI resolution paths. A date may be a safety bound, never the
+  sole exit; expose progress and validate at least two viable responses per current.
+- [ ] Make epidemic currents affect mortality/population growth, labor, armies,
+  food, markets, and state finances according to reach and severity. Prestige and
+  stability may be secondary only; validate Antonine and Cyprian trajectories and
+  recovery without deterministic modern-style global spread.
+- [ ] Turn international organizations into functioning systems: historically
+  credible membership, join/leave rules, recurring actions, AI participation,
+  benefits, obligations, and dissolution/evolution. Eliminate static labels and
+  unexplained one-member shells; runtime-prove at least four contrasting bodies.
+
+### S4 release gate
+
+- [ ] Run `make validate`, `make smoke`, representative fresh-start UI tests, and
+  multi-decade observer runs. Accept only zero new baseline errors, no privacy hits,
+  no medieval leakage in affected unions, viable great-power and small-polity
+  economies, and saved evidence under `docs/playtests/`.
+
 ## Third manual playtest remediation - 2026-07-30 (resume here)
 
 This section supersedes prior completion claims where the new playtest found

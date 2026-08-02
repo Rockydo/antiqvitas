@@ -12,7 +12,16 @@ antq_m10_second_trajan_dacia = {
 		country_exists = c:XAA
 	}
 	can_end = {
-		current_date >= 107.1.1
+		OR = {
+			current_date >= 107.1.1
+			AND = {
+				current_date >= 104.1.1
+				c:XAA ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAA
@@ -34,7 +43,16 @@ antq_m10_second_trajan_parthia = {
 		country_exists = c:XAA
 	}
 	can_end = {
-		current_date >= 118.1.1
+		OR = {
+			current_date >= 118.1.1
+			AND = {
+				current_date >= 115.7.3
+				c:XAA ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAA
@@ -56,7 +74,16 @@ antq_m10_second_kanishka_apogee = {
 		country_exists = c:YUE
 	}
 	can_end = {
-		current_date >= 128.1.1
+		OR = {
+			current_date >= 128.1.1
+			AND = {
+				current_date >= 127.7.2
+				c:YUE ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:YUE
@@ -78,7 +105,16 @@ antq_m10_second_bar_kokhba = {
 		country_exists = c:JUD
 	}
 	can_end = {
-		current_date >= 136.1.1
+		OR = {
+			current_date >= 136.1.1
+			AND = {
+				current_date >= 133.12.31
+				c:JUD ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:JUD
@@ -100,7 +136,16 @@ antq_m10_second_gothic_migration = {
 		country_exists = c:GUT
 	}
 	can_end = {
-		current_date >= 231.1.1
+		OR = {
+			current_date >= 231.1.1
+			AND = {
+				current_date >= 195.7.2
+				c:GUT ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:GUT
@@ -128,7 +173,16 @@ antq_m10_second_verus_parthia = {
 		country_exists = c:XAA
 	}
 	can_end = {
-		current_date >= 167.1.1
+		OR = {
+			current_date >= 167.1.1
+			AND = {
+				current_date >= 164.1.1
+				c:XAA ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAA
@@ -150,7 +204,16 @@ antq_m10_second_marcomannic_wars = {
 		country_exists = c:XAA
 	}
 	can_end = {
-		current_date >= 181.1.1
+		OR = {
+			current_date >= 181.1.1
+			AND = {
+				current_date >= 173.7.2
+				c:XAA ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAA
@@ -178,7 +241,16 @@ antq_m10_second_yellow_turbans = {
 		country_exists = c:XAR
 	}
 	can_end = {
-		current_date >= 190.1.1
+		OR = {
+			current_date >= 190.1.1
+			AND = {
+				current_date >= 187.1.1
+				c:XAR ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAR
@@ -200,7 +272,16 @@ antq_m10_second_five_emperors = {
 		country_exists = c:XAA
 	}
 	can_end = {
-		current_date >= 199.1.1
+		OR = {
+			current_date >= 199.1.1
+			AND = {
+				current_date >= 196.1.1
+				c:XAA ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAA

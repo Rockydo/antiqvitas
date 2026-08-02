@@ -9,7 +9,14 @@ antq_m10_final_constantinople_earthquake = {
 		country_exists = c:ERO
 	}
 	can_end = {
-		current_date >= 448.1.1
+		OR = {
+			current_date >= 448.1.1
+			AND = {
+				current_date >= 447.7.2
+				stability >= 20
+				at_war = no
+			}
+		}
 	}
 	on_start = {
 		c:ERO = { trigger_event_non_silently = antq_m10_final.5007 }
@@ -25,7 +32,14 @@ antq_m10_final_cape_bon = {
 		country_exists = c:ERO
 	}
 	can_end = {
-		current_date >= 469.1.1
+		OR = {
+			current_date >= 469.1.1
+			AND = {
+				current_date >= 468.7.2
+				stability >= 20
+				at_war = no
+			}
+		}
 	}
 	on_start = {
 		c:ERO = { trigger_event_non_silently = antq_m10_final.5011 }

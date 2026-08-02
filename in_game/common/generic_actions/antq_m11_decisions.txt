@@ -5,8 +5,9 @@
 antq_endow_public_games = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -35,7 +36,11 @@ antq_endow_public_games = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 40 } }
+			add = -8
+		}
 	}
 }
 
@@ -44,8 +49,9 @@ antq_endow_public_games = {
 antq_fund_the_annona = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -78,18 +84,22 @@ antq_fund_the_annona = {
 			capital.market = {
 				add_goods_supply = {
 					goods = goods:antq_grain_products
-					amount = market_goods_mild_gain
+					amount = -5
 				}
 				add_goods_supply = {
 					goods = goods:antq_cured_meat
-					amount = market_goods_weak_gain
+					amount = -2
 				}
 			}
 		}
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 60 } }
+			add = -8
+		}
 	}
 }
 
@@ -98,8 +108,9 @@ antq_fund_the_annona = {
 antq_consult_the_senate = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -128,7 +139,11 @@ antq_consult_the_senate = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 20 } }
+			add = -8
+		}
 	}
 }
 
@@ -137,8 +152,9 @@ antq_consult_the_senate = {
 antq_audit_provincial_governors = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -167,7 +183,11 @@ antq_audit_provincial_governors = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 30 } }
+			add = -8
+		}
 	}
 }
 
@@ -176,8 +196,9 @@ antq_audit_provincial_governors = {
 antq_repair_consular_roads = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -206,7 +227,11 @@ antq_repair_consular_roads = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 50 } }
+			add = -8
+		}
 	}
 }
 
@@ -215,8 +240,9 @@ antq_repair_consular_roads = {
 antq_renew_auxiliary_compacts = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -245,7 +271,11 @@ antq_renew_auxiliary_compacts = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 40 } }
+			add = -8
+		}
 	}
 }
 
@@ -254,8 +284,9 @@ antq_renew_auxiliary_compacts = {
 antq_receive_foreign_embassy = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -284,7 +315,11 @@ antq_receive_foreign_embassy = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 20 } }
+			add = -8
+		}
 	}
 }
 
@@ -293,8 +328,9 @@ antq_receive_foreign_embassy = {
 antq_dedicate_a_votive_offering = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -323,7 +359,11 @@ antq_dedicate_a_votive_offering = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 20 } }
+			add = -8
+		}
 	}
 }
 
@@ -332,8 +372,9 @@ antq_dedicate_a_votive_offering = {
 antq_review_the_classics = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -362,7 +403,11 @@ antq_review_the_classics = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 30 } }
+			add = -8
+		}
 	}
 }
 
@@ -371,8 +416,9 @@ antq_review_the_classics = {
 antq_inspect_the_commanderies = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -401,7 +447,11 @@ antq_inspect_the_commanderies = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 40 } }
+			add = -8
+		}
 	}
 }
 
@@ -410,8 +460,9 @@ antq_inspect_the_commanderies = {
 antq_open_granary_reserves = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -444,18 +495,22 @@ antq_open_granary_reserves = {
 			capital.market = {
 				add_goods_supply = {
 					goods = goods:rice
-					amount = market_goods_mild_gain
+					amount = -5
 				}
 				add_goods_supply = {
 					goods = goods:antq_soy_condiments
-					amount = market_goods_weak_gain
+					amount = -2
 				}
 			}
 		}
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 60 } }
+			add = -8
+		}
 	}
 }
 
@@ -464,8 +519,9 @@ antq_open_granary_reserves = {
 antq_dispatch_a_frontier_envoy = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -494,7 +550,11 @@ antq_dispatch_a_frontier_envoy = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 30 } }
+			add = -8
+		}
 	}
 }
 
@@ -503,8 +563,9 @@ antq_dispatch_a_frontier_envoy = {
 antq_sponsor_irrigation_works = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -537,18 +598,22 @@ antq_sponsor_irrigation_works = {
 			capital.market = {
 				add_goods_supply = {
 					goods = goods:rice
-					amount = market_goods_weak_gain
+					amount = -3
 				}
 				add_goods_supply = {
 					goods = goods:antq_sesame
-					amount = market_goods_weak_gain
+					amount = -2
 				}
 			}
 		}
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 50 } }
+			add = -8
+		}
 	}
 }
 
@@ -557,8 +622,9 @@ antq_sponsor_irrigation_works = {
 antq_scrutinize_the_registers = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -587,7 +653,11 @@ antq_scrutinize_the_registers = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 30 } }
+			add = -8
+		}
 	}
 }
 
@@ -596,8 +666,9 @@ antq_scrutinize_the_registers = {
 antq_honor_filial_service = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -626,7 +697,11 @@ antq_honor_filial_service = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 20 } }
+			add = -8
+		}
 	}
 }
 
@@ -635,8 +710,9 @@ antq_honor_filial_service = {
 antq_remit_local_corvee = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -665,7 +741,11 @@ antq_remit_local_corvee = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 50 } }
+			add = -8
+		}
 	}
 }
 
@@ -674,8 +754,9 @@ antq_remit_local_corvee = {
 antq_convene_the_great_houses = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -704,7 +785,11 @@ antq_convene_the_great_houses = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 40 } }
+			add = -8
+		}
 	}
 }
 
@@ -713,8 +798,9 @@ antq_convene_the_great_houses = {
 antq_safeguard_caravan_routes = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -750,18 +836,22 @@ antq_safeguard_caravan_routes = {
 			capital.market = {
 				add_goods_supply = {
 					goods = goods:antq_dates
-					amount = market_goods_weak_gain
+					amount = -3
 				}
 				add_goods_supply = {
 					goods = goods:antq_dried_fruit
-					amount = market_goods_weak_gain
+					amount = -2
 				}
 			}
 		}
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 50 } }
+			add = -8
+		}
 	}
 }
 
@@ -770,8 +860,9 @@ antq_safeguard_caravan_routes = {
 antq_mint_silver_drachms = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -803,7 +894,11 @@ antq_mint_silver_drachms = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 40 } }
+			add = -8
+		}
 	}
 }
 
@@ -812,8 +907,9 @@ antq_mint_silver_drachms = {
 antq_hold_a_royal_hunt = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -842,7 +938,11 @@ antq_hold_a_royal_hunt = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 40 } }
+			add = -8
+		}
 	}
 }
 
@@ -851,8 +951,9 @@ antq_hold_a_royal_hunt = {
 antq_endow_a_fire_temple = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -887,18 +988,22 @@ antq_endow_a_fire_temple = {
 			capital.market = {
 				add_goods_supply = {
 					goods = goods:incense
-					amount = market_goods_weak_gain
+					amount = -3
 				}
 				add_goods_supply = {
 					goods = goods:antq_sesame_oil
-					amount = market_goods_weak_gain
+					amount = -2
 				}
 			}
 		}
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 40 } }
+			add = -8
+		}
 	}
 }
 
@@ -907,8 +1012,9 @@ antq_endow_a_fire_temple = {
 antq_renew_dynastic_marriages = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -940,7 +1046,11 @@ antq_renew_dynastic_marriages = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 30 } }
+			add = -8
+		}
 	}
 }
 
@@ -949,8 +1059,9 @@ antq_renew_dynastic_marriages = {
 antq_endow_a_water_tank = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -983,7 +1094,11 @@ antq_endow_a_water_tank = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 40 } }
+			add = -8
+		}
 	}
 }
 
@@ -992,8 +1107,9 @@ antq_endow_a_water_tank = {
 antq_invite_a_learned_teacher = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -1026,7 +1142,11 @@ antq_invite_a_learned_teacher = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 30 } }
+			add = -8
+		}
 	}
 }
 
@@ -1035,8 +1155,9 @@ antq_invite_a_learned_teacher = {
 antq_patronize_sangam_poetry = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -1067,7 +1188,11 @@ antq_patronize_sangam_poetry = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 30 } }
+			add = -8
+		}
 	}
 }
 
@@ -1076,8 +1201,9 @@ antq_patronize_sangam_poetry = {
 antq_maintain_a_monsoon_port = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -1115,18 +1241,22 @@ antq_maintain_a_monsoon_port = {
 			capital.market = {
 				add_goods_supply = {
 					goods = goods:antq_cordage
-					amount = market_goods_mild_gain
+					amount = -3
 				}
 				add_goods_supply = {
 					goods = goods:antq_sailcloth
-					amount = market_goods_mild_gain
+					amount = -3
 				}
 			}
 		}
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 50 } }
+			add = -8
+		}
 	}
 }
 
@@ -1135,8 +1265,9 @@ antq_maintain_a_monsoon_port = {
 antq_receive_an_overseas_trader = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -1174,18 +1305,22 @@ antq_receive_an_overseas_trader = {
 			capital.market = {
 				add_goods_supply = {
 					goods = goods:pepper
-					amount = market_goods_weak_gain
+					amount = -2
 				}
 				add_goods_supply = {
 					goods = goods:antq_coconut_products
-					amount = market_goods_weak_gain
+					amount = -2
 				}
 			}
 		}
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 20 } }
+			add = -8
+		}
 	}
 }
 
@@ -1194,8 +1329,9 @@ antq_receive_an_overseas_trader = {
 antq_sponsor_a_pilgrimage = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -1233,18 +1369,22 @@ antq_sponsor_a_pilgrimage = {
 			capital.market = {
 				add_goods_supply = {
 					goods = goods:incense
-					amount = market_goods_weak_gain
+					amount = -2
 				}
 				add_goods_supply = {
 					goods = goods:antq_dried_fruit
-					amount = market_goods_weak_gain
+					amount = -2
 				}
 			}
 		}
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 30 } }
+			add = -8
+		}
 	}
 }
 
@@ -1253,8 +1393,9 @@ antq_sponsor_a_pilgrimage = {
 antq_recognize_a_local_cult = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -1289,7 +1430,11 @@ antq_recognize_a_local_cult = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 20 } }
+			add = -8
+		}
 	}
 }
 
@@ -1298,8 +1443,9 @@ antq_recognize_a_local_cult = {
 antq_convene_a_doctrinal_assembly = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -1334,7 +1480,11 @@ antq_convene_a_doctrinal_assembly = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 40 } }
+			add = -8
+		}
 	}
 }
 
@@ -1343,8 +1493,9 @@ antq_convene_a_doctrinal_assembly = {
 antq_patronize_a_meditation_house = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -1380,7 +1531,11 @@ antq_patronize_a_meditation_house = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 40 } }
+			add = -8
+		}
 	}
 }
 
@@ -1389,8 +1544,9 @@ antq_patronize_a_meditation_house = {
 antq_protect_a_sacred_grove = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -1425,7 +1581,11 @@ antq_protect_a_sacred_grove = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 30 } }
+			add = -8
+		}
 	}
 }
 
@@ -1434,8 +1594,9 @@ antq_protect_a_sacred_grove = {
 antq_renew_warband_oaths = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -1475,7 +1636,11 @@ antq_renew_warband_oaths = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 30 } }
+			add = -8
+		}
 	}
 }
 
@@ -1484,8 +1649,9 @@ antq_renew_warband_oaths = {
 antq_hold_a_tribal_assembly = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -1525,7 +1691,11 @@ antq_hold_a_tribal_assembly = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 20 } }
+			add = -8
+		}
 	}
 }
 
@@ -1534,8 +1704,9 @@ antq_hold_a_tribal_assembly = {
 antq_give_hall_gifts = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -1575,7 +1746,11 @@ antq_give_hall_gifts = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 40 } }
+			add = -8
+		}
 	}
 }
 
@@ -1584,8 +1759,9 @@ antq_give_hall_gifts = {
 antq_settle_a_blood_feud = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -1625,7 +1801,11 @@ antq_settle_a_blood_feud = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 40 } }
+			add = -8
+		}
 	}
 }
 
@@ -1634,8 +1814,9 @@ antq_settle_a_blood_feud = {
 antq_convene_a_desert_caravan = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -1671,18 +1852,22 @@ antq_convene_a_desert_caravan = {
 			capital.market = {
 				add_goods_supply = {
 					goods = goods:antq_dates
-					amount = market_goods_mild_gain
+					amount = -3
 				}
 				add_goods_supply = {
 					goods = goods:incense
-					amount = market_goods_weak_gain
+					amount = -2
 				}
 			}
 		}
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 40 } }
+			add = -8
+		}
 	}
 }
 
@@ -1691,8 +1876,9 @@ antq_convene_a_desert_caravan = {
 antq_honor_a_royal_copartnership = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -1721,7 +1907,11 @@ antq_honor_a_royal_copartnership = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 30 } }
+			add = -8
+		}
 	}
 }
 
@@ -1730,8 +1920,9 @@ antq_honor_a_royal_copartnership = {
 antq_fund_an_exchange_feast = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -1769,7 +1960,11 @@ antq_fund_an_exchange_feast = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 30 } }
+			add = -8
+		}
 	}
 }
 
@@ -1778,8 +1973,9 @@ antq_fund_an_exchange_feast = {
 antq_support_ocean_wayfinding = {
 	type = owncountry
 
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	automation_tick = monthly
+	automation_tick_frequency = 12
 
 	potential = {
 		scope:actor = {
@@ -1815,17 +2011,21 @@ antq_support_ocean_wayfinding = {
 			capital.market = {
 				add_goods_supply = {
 					goods = goods:antq_cordage
-					amount = market_goods_weak_gain
+					amount = -2
 				}
 				add_goods_supply = {
 					goods = goods:antq_coconut_products
-					amount = market_goods_weak_gain
+					amount = -2
 				}
 			}
 		}
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = 10
+		if = {
+			limit = { scope:actor = { gold < 40 } }
+			add = -8
+		}
 	}
 }

@@ -4469,3 +4469,16 @@ universal ancient root. Research two exact-profile foundation advances per law
 profile and initialize all 14 profile laws in setup. Keep only
 `heir_religion_law` as an engine adapter; false-gate all other superseded law
 holders so codified-law access cannot expose foreign or empty rows.
+
+## 2026-08-02 - Structural audit remediation contracts
+
+AD 1 population weights use ancient RGO, settlement, market, road, and urban
+ledgers only; the installed 1337 population file is not an input. Religions use
+their inhabited native groups and differentiated doctrine profiles. Coastal
+access follows five capability levels, not a universal patrol/transport pair.
+Opening annona uses four locked `create_trade` routes into Rome. Active advances
+unlock only `antq_s2_*` laws; compatibility holders are inert. All 40 decisions
+are AI-registered and consume gated stock. Phase events have two mechanical
+choices; crises may resolve through peace and stability before their hard date.
+IO trust was dropped after the runtime parser rejected the documented field;
+accepted member modifiers and opinion bonuses remain.

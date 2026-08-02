@@ -83,12 +83,13 @@ NATIVE_RELIGION_GROUP_OVERRIDES = {
     "antq_western_caroline_traditions": "folk_micronesian_group",
     "antq_central_amazon_traditions": "folk_brazilian_group",
 }
-RELIGIOUS_ASPECT_SLOTS = 2
-RELIGIOUS_ASPECT_FEATURES = (("has_religious_influence", "yes"),)
-RELIGIOUS_ASPECT_DEFINITION_MODIFIERS = (
-    ("monthly_religious_influence", "0.10"),
-    ("maximum_religious_influence", "400"),
-)
+ORGANIZED_RELIGIONS = {
+    "antq_religio_romana", "antq_hellenic", "antq_early_christianity",
+    "antq_arsacid_zoroastrianism", "antq_manichaeism", "antq_theravada",
+    "antq_mahayana", "antq_brahmanism", "antq_jainism",
+    "antq_chinese_state_cult", "antq_daoism", "antq_kemetic",
+    "antq_kushite_amun", "antq_punic", "antq_mesoamerican", "antq_andean",
+}
 
 
 @dataclass(frozen=True)
@@ -183,6 +184,42 @@ def title(key: str) -> str:
 
 def native_religion_group(row: Definition) -> str:
     return NATIVE_RELIGION_GROUP_OVERRIDES.get(row.key, NATIVE_RELIGION_GROUPS[row.group])
+
+
+def religion_mechanics(row: Definition) -> tuple[int, bool, tuple[tuple[str, str], ...]]:
+    organized = row.key in ORGANIZED_RELIGIONS
+    slots = 3 if row.key == "antq_early_christianity" else 2 if organized else 1
+    tolerance = {
+        "antq_abrahamic_group": "1.50",
+        "antq_buddhist_group": "1.00",
+        "antq_indian_religion_group": "0.75",
+        "antq_classical_pagan_group": "0.75",
+        "antq_iranian_religion_group": "0.75",
+    }.get(row.group, "0.50")
+    modifiers: list[tuple[str, str]] = [("tolerance_own", tolerance)]
+    if organized:
+        modifiers.extend((
+            ("monthly_religious_influence", "0.08"),
+            ("maximum_religious_influence", "300"),
+            ("global_max_literacy", "2"),
+        ))
+    elif row.group in {"antq_steppe_religion_group", "antq_european_folk_group"}:
+        modifiers.append(("land_morale_modifier", "0.01"))
+    else:
+        modifiers.append(("global_monthly_food_modifier", "0.01"))
+    return slots, organized, tuple(modifiers)
+
+
+def religious_opinions(row: Definition, rows: list[Definition]) -> tuple[tuple[str, str], ...]:
+    opinions = [
+        (other.key, "kindred") for other in rows
+        if other.key != row.key and other.group == row.group
+    ]
+    if row.key == "antq_early_christianity":
+        opinions.append(("antq_judaism", "positive"))
+    elif row.key == "antq_judaism":
+        opinions.append(("antq_early_christianity", "positive"))
+    return tuple(sorted(opinions))
 
 
 def language_families() -> set[str]:
@@ -508,25 +545,15 @@ def render_religions(rows: list[Definition]) -> str:
         "# Native groups preserve engine pagan/mechanics contracts; semantic ANTIQVITAS families remain localized separately.",
     ]
     for row in rows:
+        slots, influence, modifiers = religion_mechanics(row)
         lines.extend(
             (
                 "",
                 f"{row.key} = {{ # {row.source}; {row.note}",
                 f"\tcolor = antq_religion_color_{row.key}",
                 f"\tgroup = {native_religion_group(row)}",
-                *(
-                    (f"\treligious_aspects = {RELIGIOUS_ASPECT_SLOTS}",)
-                    if row.key in aspect_religions
-                    else ()
-                ),
-                *(
-                    f"\t{field} = {value}"
-                    for field, value in (
-                        RELIGIOUS_ASPECT_FEATURES
-                        if row.key in aspect_religions
-                        else ()
-                    )
-                ),
+                f"\treligious_aspects = {slots}",
+                *(("\thas_religious_influence = yes",) if influence else ()),
                 *(("\thas_omens = yes",) if row.key == "antq_religio_romana" else ()),
                 *(
                     (f"\tenable = {terminal_date} # unavailable before ANTIQVITAS campaign end",)
@@ -534,18 +561,11 @@ def render_religions(rows: list[Definition]) -> str:
                     else ()
                 ),
                 "\tdefinition_modifier = {",
-                "\t\ttolerance_own = 0.01",
-                *(
-                    f"\t\t{field} = {value}"
-                    for field, value in (
-                        RELIGIOUS_ASPECT_DEFINITION_MODIFIERS
-                        if row.key in aspect_religions
-                        else ()
-                    )
-                ),
+                *(f"\t\t{field} = {value}" for field, value in modifiers),
                 *(("\t\tomens_offered = 3",) if row.key == "antq_religio_romana" else ()),
                 "\t}",
                 "\topinions = {",
+                *(f"\t\t{target} = {opinion}" for target, opinion in religious_opinions(row, rows)),
                 "\t}",
                 "}",
             )
@@ -554,10 +574,11 @@ def render_religions(rows: list[Definition]) -> str:
 
 
 def render_religion_groups(groups: set[str]) -> str:
-    lines = [f"# Generated by {Path(__file__).name} --write.", "# M4 ancient religion groups."]
-    for group in sorted(groups):
-        lines.extend(("", f"{group} = {{", "\tcolor = map_ROM", "\tconvert_slaves_at_start = no", "}"))
-    return "\n".join(lines) + "\n"
+    return (
+        f"# Generated by {Path(__file__).name} --write.\n"
+        "# Semantic ANTIQVITAS families live in docs/m4/religions.csv; engine-facing religions use populated native groups.\n"
+        "# No empty custom religion-group adapters are mounted.\n"
+    )
 
 
 def render_languages(rows: list[Language]) -> str:

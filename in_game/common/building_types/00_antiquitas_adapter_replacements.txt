@@ -122,7 +122,7 @@ antq_buddhist_vihara = {
 	megalopolis = yes
 	build_time = religious_building_time
 	country_potential = {
-		religion ?= { group = religion_group:antq_buddhist_group }
+		religion ?= { group = religion_group:buddhist }
 	}
 	modifier = {
 		local_clergy_max_literacy = 2

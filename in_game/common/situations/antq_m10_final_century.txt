@@ -11,7 +11,16 @@ antq_m10_final_radagaisus_rhine = {
 		country_exists = c:XAA
 	}
 	can_end = {
-		current_date >= 407.1.1
+		OR = {
+			current_date >= 407.1.1
+			AND = {
+				current_date >= 406.1.1
+				c:XAA ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	on_start = {
 		c:XAA = { trigger_event_non_silently = antq_m10_final.5000 }
@@ -29,7 +38,16 @@ antq_m10_final_britain_abandoned = {
 		country_exists = c:XAA
 	}
 	can_end = {
-		current_date >= 411.1.1
+		OR = {
+			current_date >= 411.1.1
+			AND = {
+				current_date >= 408.12.31
+				c:XAA ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	on_start = {
 		c:XAA = { trigger_event_non_silently = antq_m10_final.5001 }
@@ -47,7 +65,16 @@ antq_m10_final_vandal_africa = {
 		country_exists = c:XAA
 	}
 	can_end = {
-		current_date >= 440.1.1
+		OR = {
+			current_date >= 440.1.1
+			AND = {
+				current_date >= 434.7.2
+				c:XAA ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	on_start = {
 		c:XAA = { trigger_event_non_silently = antq_m10_final.5004 }
@@ -65,7 +92,16 @@ antq_m10_final_attila = {
 		country_exists = c:HNS
 	}
 	can_end = {
-		current_date >= 455.1.1
+		OR = {
+			current_date >= 455.1.1
+			AND = {
+				current_date >= 444.7.2
+				c:HNS ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	on_start = {
 		c:HNS = { trigger_event_non_silently = antq_m10_final.5005 }
@@ -83,7 +119,16 @@ antq_m10_final_hephthalites = {
 		country_exists = c:XAH
 	}
 	can_end = {
-		current_date >= 461.1.1
+		OR = {
+			current_date >= 461.1.1
+			AND = {
+				current_date >= 450.7.2
+				c:XAH ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	on_start = {
 		c:XAH = { trigger_event_non_silently = antq_m10_final.5006 }
@@ -101,7 +146,16 @@ antq_m10_final_adventus_saxonum = {
 		country_exists = c:XAA
 	}
 	can_end = {
-		current_date >= 451.1.1
+		OR = {
+			current_date >= 451.1.1
+			AND = {
+				current_date >= 450.1.1
+				c:XAA ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	on_start = {
 		c:XAA = { trigger_event_non_silently = antq_m10_final.5008 }

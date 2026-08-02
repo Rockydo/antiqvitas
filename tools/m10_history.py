@@ -17,7 +17,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from advance_event_packages import knowledge_response_lines
-from dates import AntqDate, M2_MIRROR_LANGUAGES, load_timeline
+from dates import AntqDate, M2_MIRROR_LANGUAGES, days_between, load_timeline, offset_date
 from goods_integration import event_effect_lines
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -33,6 +33,34 @@ NORTH_XIONGNU_SEED = ROOT / "docs/m10/northern_xiongnu_48_locations.csv"
 START_COUNTRIES = ROOT / "main_menu/setup/start/10_countries.txt"
 LOCATION_COORDINATES = ROOT / "docs/vanilla_symbols/location_coordinates.json"
 BATCH_END = AntqDate.parse("96.1.1")
+
+
+def resolution_trigger_lines(record: object, *, country_scoped: bool) -> tuple[str, ...]:
+    """Permit an early, earned resolution after half the sourced window."""
+    midpoint = offset_date(
+        record.date, max(1, days_between(record.date, record.end_date) // 2)
+    )
+    state_lines = (
+        ("\t\t\tstability >= 20", "\t\t\tat_war = no")
+        if country_scoped else
+        (
+            f"\t\t\tc:{record.engine_tag} ?= {{",
+            "\t\t\t\tstability >= 20",
+            "\t\t\t\tat_war = no",
+            "\t\t\t}",
+        )
+    )
+    return (
+        "\tcan_end = {",
+        "\t\tOR = {",
+        f"\t\t\tcurrent_date >= {record.end_date.engine()}",
+        "\t\t\tAND = {",
+        f"\t\t\t\tcurrent_date >= {midpoint.engine()}",
+        *tuple("\t" + line for line in state_lines),
+        "\t\t\t}",
+        "\t\t}",
+        "\t}",
+    )
 NORTH_XIONGNU_TAG = "XNO"
 NORTH_XIONGNU_MAX_Y = 1945.0
 
@@ -407,9 +435,7 @@ def situation_script(records: tuple[Current, ...]) -> str:
             f"\t\tcurrent_date < {record.end_date.engine()}",
             f"\t\tcountry_exists = c:{record.engine_tag}",
             "\t}",
-            "\tcan_end = {",
-            f"\t\tcurrent_date >= {record.end_date.engine()}",
-            "\t}",
+            *resolution_trigger_lines(record, country_scoped=False),
             "\tvisible = {",
             f"\t\tcountry_exists = c:{record.engine_tag}",
             "\t}",
@@ -450,9 +476,7 @@ def disaster_script(records: tuple[Current, ...]) -> str:
             f"\t\tcurrent_date < {record.end_date.engine()}",
             "\t\thas_any_active_disaster = no",
             "\t}",
-            "\tcan_end = {",
-            f"\t\tcurrent_date >= {record.end_date.engine()}",
-            "\t}",
+            *resolution_trigger_lines(record, country_scoped=True),
             "\ton_start = {",
             f"\t\ttrigger_event_non_silently = {record.event_key}",
             "\t}",

@@ -139,10 +139,34 @@ MERCENARY_PROFILES = {
 }
 REGIONAL_MERCENARY_PROOFS = ("ROM", "PAR", "SUE", "HAN", "SAT", "KUS", "TEO")
 
-# The mounted port graph, not hand-authored exception rows, determines which
-# opening polities may recruit ships. Each broad historical coast receives one
-# patrol and one transport family; exact unit rows can add further specialist
-# vessels, but can never leak ships to a landlocked polity.
+# The mounted port graph establishes water access; it does not by itself imply
+# an organized navy.  A five-step capability ladder separates local craft,
+# transport, patrol, state fleets, and long-distance capacity.
+NAVAL_CAPABILITY_NAMES = {
+    1: "local_watercraft",
+    2: "limited_transport",
+    3: "organized_patrol",
+    4: "state_fleet",
+    5: "long_distance_naval_capacity",
+}
+LOCAL_WATERCRAFT = "antq_local_watercraft"
+LIMITED_TRANSPORT = "antq_limited_coastal_transport"
+ORGANIZED_PATROL = "antq_coastal_watch_craft"
+STATE_FLEET = "antq_state_oared_squadron"
+LONG_DISTANCE_CAPACITY = "antq_open_sea_merchantmen"
+STATE_FLEET_TAGS = frozenset({
+    "ROM", "MAU", "BOS", "CLZ", "PAR", "CHA", "ELY", "PRS", "HAN",
+    "SAT", "CHE", "KUS", "SAB", "HIM", "OMN", "HAD", "BAR", "QAT",
+})
+ORGANIZED_PATROL_TAGS = frozenset({
+    "EPD", "DUM", "VNI", "GUT", "MUG", "AES", "FIN", "ROX", "BYE",
+    "MBL", "BCP", "MTT", "BTM", "MKS", "MNH", "KWL", "NAZ", "LIM",
+    "EMR", "WCR", "WIC", "CCF",
+})
+LONG_DISTANCE_TAGS = frozenset({
+    "ROM", "HAN", "SAT", "CHE", "SAB", "HIM", "OMN", "MAL", "JAV",
+    "LZC", "CXR",
+})
 NAVAL_PROFILE_BY_REGION = {
     "Rome": ("antq_trireme", "antq_merchant_roundship"),
     "Anatolia": ("antq_trireme", "antq_merchant_roundship"),
@@ -181,6 +205,20 @@ NAVAL_PROFILE_BY_REGION = {
 }
 NAVAL_PROFILE_BY_TAG = {
     "MAU": ("antq_trireme", "antq_merchant_roundship"),
+}
+
+NAVAL_REQUIRED_CAPABILITY = {
+    LOCAL_WATERCRAFT: 1,
+    LIMITED_TRANSPORT: 2,
+    ORGANIZED_PATROL: 3,
+    STATE_FLEET: 4,
+    LONG_DISTANCE_CAPACITY: 5,
+    "antq_trireme": 3,
+    "antq_merchant_roundship": 5,
+    "antq_monsoon_dhow": 5,
+    "antq_austronesian_outrigger": 5,
+    "antq_liburnian": 4,
+    "antq_quinquereme": 4,
 }
 
 
@@ -249,6 +287,46 @@ def available_to(unit: Unit, tag: str) -> bool:
 
 
 @cache
+def polity_rows() -> dict[str, dict[str, str]]:
+    with (ROOT / "docs/world_1ad/polities.csv").open(
+        encoding="utf-8-sig", newline=""
+    ) as handle:
+        return {row["tag"]: row for row in csv.DictReader(handle)}
+
+
+@cache
+def naval_capabilities() -> dict[str, int]:
+    """Classify coastal states without turning every harbor into a fleet."""
+    result: dict[str, int] = {}
+    for tag, ports in coastal_owned_locations().items():
+        row = polity_rows()[tag]
+        tier = int(row["tier"])
+        level = 1
+        if len(ports) >= 3 or tier <= 2:
+            level = 2
+        if len(ports) >= 5 or tier == 1 or tag in ORGANIZED_PATROL_TAGS:
+            level = 3
+        if tag in STATE_FLEET_TAGS:
+            level = 4
+        if tag in LONG_DISTANCE_TAGS:
+            level = 5
+        result[tag] = level
+    return result
+
+
+def required_naval_capability(unit: Unit) -> int:
+    if unit.key in NAVAL_REQUIRED_CAPABILITY:
+        return NAVAL_REQUIRED_CAPABILITY[unit.key]
+    if unit.copy_from == "n_age_1_traditions_transport":
+        return 2
+    # Regionally identified war craft represent an organized patrol; the
+    # remaining heavy/oared types require state naval organization.
+    if any(token in unit.key for token in ("patrol", "warboat", "curragh", "canoe")):
+        return 3
+    return 4
+
+
+@cache
 def coastal_owned_locations() -> dict[str, tuple[str, ...]]:
     """Return all opening owners with a location in the mounted port graph."""
     mod_ports = ROOT / "in_game/map_data/ports.csv"
@@ -288,14 +366,26 @@ def derived_naval_tags() -> dict[str, set[str]]:
         tag = row["tag"]
         if tag not in coastal:
             continue
+        level = naval_capabilities()[tag]
+        assignments.setdefault(LOCAL_WATERCRAFT, set()).add(tag)
+        if level >= 2:
+            assignments.setdefault(LIMITED_TRANSPORT, set()).add(tag)
+        if level >= 3:
+            assignments.setdefault(ORGANIZED_PATROL, set()).add(tag)
+        if level >= 4:
+            assignments.setdefault(STATE_FLEET, set()).add(tag)
+        if level >= 5:
+            assignments.setdefault(LONG_DISTANCE_CAPACITY, set()).add(tag)
+        if level < 3:
+            continue
         pair = NAVAL_PROFILE_BY_TAG.get(tag)
         if pair is None:
             pair = NAVAL_PROFILE_BY_REGION.get(row["region"])
         if pair is None:
             unknown_regions.add(row["region"])
             continue
-        for unit_key in pair:
-            assignments.setdefault(unit_key, set()).add(tag)
+        patrol = pair[0]
+        assignments.setdefault(patrol, set()).add(tag)
     if unknown_regions:
         raise ValueError(
             "coastal regions lack naval profiles: " + ", ".join(sorted(unknown_regions))
@@ -308,8 +398,11 @@ def effective_start_tags(unit: Unit) -> tuple[str, ...]:
     if unit.kind != "navy":
         return unit.tags
     coastal = set(coastal_owned_locations())
-    tags = (set(unit.tags) & coastal) | derived_naval_tags().get(unit.key, set())
-    return tuple(sorted(tags))
+    explicit = coastal if UNIVERSAL_TAG in unit.tags else set(unit.tags) & coastal
+    tags = explicit | derived_naval_tags().get(unit.key, set())
+    required = required_naval_capability(unit)
+    capability = naval_capabilities()
+    return tuple(sorted(tag for tag in tags if capability.get(tag, 0) >= required))
 
 
 def load_units() -> tuple[Unit, ...]:
@@ -588,11 +681,12 @@ def force_availability(units: tuple[Unit, ...]) -> str:
     with (ROOT / "docs/world_1ad/polities.csv").open(encoding="utf-8-sig", newline="") as handle:
         roster = list(csv.DictReader(handle))
     coastal = coastal_owned_locations()
+    unit_map = {unit.key: unit for unit in units}
     fields = (
         "tag", "name", "region", "regular_land", "levy_land",
-        "mercenary_land", "regular_navy", "coastal_locations", "patrol_navy",
-        "transport_navy", "land_floor", "levy_floor", "mercenary_floor",
-        "naval_patrol_floor", "naval_transport_floor", "inland_exclusion_floor",
+        "mercenary_land", "regular_navy", "coastal_locations", "naval_capability",
+        "patrol_navy", "transport_navy", "land_floor", "levy_floor", "mercenary_floor",
+        "naval_capability_floor", "inland_exclusion_floor",
     )
     output = io.StringIO(newline="")
     writer = csv.DictWriter(output, fieldnames=fields, lineterminator="\n")
@@ -609,6 +703,7 @@ def force_availability(units: tuple[Unit, ...]) -> str:
             unit.key for unit in visible
             if unit.kind == "navy" and unit.status == "regular"
             and unit.copy_from != "n_age_1_traditions_transport"
+            and required_naval_capability(unit) >= 3
         )
         transport = sorted(
             unit.key for unit in visible
@@ -616,19 +711,23 @@ def force_availability(units: tuple[Unit, ...]) -> str:
             and unit.copy_from == "n_age_1_traditions_transport"
         )
         coastal_locations = coastal.get(tag, ())
+        capability = naval_capabilities().get(tag, 0)
         floors = (
             len(regular) >= 4,
             len(levy) >= 2,
             len(mercenary) >= 2,
-            not coastal_locations or bool(patrol),
-            not coastal_locations or bool(transport),
+            not coastal_locations or LOCAL_WATERCRAFT in navy,
+            not coastal_locations or capability < 2 or LIMITED_TRANSPORT in navy,
+            not coastal_locations or capability < 3 or ORGANIZED_PATROL in navy,
+            not coastal_locations or capability < 4 or STATE_FLEET in navy,
+            not coastal_locations or capability < 5 or LONG_DISTANCE_CAPACITY in navy,
             bool(coastal_locations) or not navy,
         )
         if not all(floors):
             failures.append(
                 f"{tag} has regular={len(regular)}, levy={len(levy)}, "
                 f"mercenary={len(mercenary)}, coastal={len(coastal_locations)}, "
-                f"patrol={len(patrol)}, transport={len(transport)}"
+                f"capability={capability}, patrol={len(patrol)}, transport={len(transport)}"
             )
         writer.writerow({
             "tag": tag,
@@ -639,14 +738,14 @@ def force_availability(units: tuple[Unit, ...]) -> str:
             "mercenary_land": ";".join(mercenary),
             "regular_navy": ";".join(navy),
             "coastal_locations": ";".join(coastal_locations),
+            "naval_capability": NAVAL_CAPABILITY_NAMES.get(capability, "inland"),
             "patrol_navy": ";".join(patrol),
             "transport_navy": ";".join(transport),
             "land_floor": "pass" if floors[0] else "fail",
             "levy_floor": "pass" if floors[1] else "fail",
             "mercenary_floor": "pass" if floors[2] else "fail",
-            "naval_patrol_floor": "pass" if floors[3] else "fail",
-            "naval_transport_floor": "pass" if floors[4] else "fail",
-            "inland_exclusion_floor": "pass" if floors[5] else "fail",
+            "naval_capability_floor": "pass" if all(floors[3:8]) else "fail",
+            "inland_exclusion_floor": "pass" if floors[8] else "fail",
         })
     if failures:
         raise ValueError("roster-wide force floor failed: " + "; ".join(failures[:12]))

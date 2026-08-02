@@ -1068,7 +1068,7 @@ INSTITUTION_PROFILES = {
             "Buddhist communities across South, Central, and East Asian corridors",
             (
                 "OR = {",
-                "\tdominant_religion = { group = religion_group:antq_buddhist_group }",
+                "\tdominant_religion = { group = religion_group:buddhist }",
                 "\tregion = region:bengal_region",
                 "\tregion = region:central_india_region",
                 "\tregion = region:deccan_region",
@@ -1123,14 +1123,14 @@ INSTITUTION_PROFILES = {
             "christian_monastic",
             "Locations whose dominant faith belongs to the Christian family",
             (
-                "dominant_religion = { group = religion_group:antq_christian_group }",
+                "dominant_religion = { group = religion_group:christian }",
             ),
         ),
         InstitutionProfile(
             "christian_councils",
             "Christian communities participating in conciliar networks",
             (
-                "dominant_religion = { group = religion_group:antq_christian_group }",
+                "dominant_religion = { group = religion_group:christian }",
             ),
         ),
         InstitutionProfile(
@@ -3205,6 +3205,29 @@ def unsafe_disabled_allows(text: str) -> list[str]:
     return failures
 
 
+def top_level_definition_blocks(text: str) -> tuple[str, ...]:
+    blocks: list[str] = []
+    current: list[str] = []
+    depth = 0
+    for line in text.splitlines():
+        code = line.split("#", 1)[0]
+        delta = brace_delta(line)
+        if depth == 0 and TOP_LEVEL.match(code):
+            current = [line]
+            depth = delta
+            if depth == 0:
+                blocks.append("\n".join(current))
+                current = []
+            continue
+        if current:
+            current.append(line)
+            depth += delta
+            if depth == 0:
+                blocks.append("\n".join(current))
+                current = []
+    return tuple(blocks)
+
+
 def write(records: tuple[Advance, ...]) -> None:
     for path, content in outputs(records).items():
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -3235,6 +3258,18 @@ def check(records: tuple[Advance, ...]) -> bool:
             failures.append(f"unit or levy unlock survived in {path.relative_to(ROOT)}")
         for reason in unsafe_disabled_allows(text):
             failures.append(f"{reason} in {path.relative_to(ROOT)}")
+        if path.name != "00_antiquitas_m8_tree.txt":
+            for block in top_level_definition_blocks(text):
+                legacy_laws = re.findall(r"(?m)^\s*unlock_law\s*=\s*([A-Za-z0-9_]+)", block)
+                if legacy_laws and not all(law.startswith("antq_s2_") for law in legacy_laws):
+                    if not re.search(
+                        r"potential\s*=\s*\{[^}]*always\s*=\s*no[^}]*\}",
+                        block,
+                        re.DOTALL,
+                    ):
+                        failures.append(
+                            f"legacy law unlock lacks a permanent compatibility gate in {path.relative_to(ROOT)}"
+                        )
     for path in institution_inventory:
         text = path.read_text(encoding="utf-8-sig") if path.is_file() else ""
         if "00_antiquitas_m8" not in path.name:
@@ -3257,8 +3292,14 @@ def check(records: tuple[Advance, ...]) -> bool:
             if block.count(marker) != 10:
                 failures.append(f"{item.key} does not gate all ten spawn/spread channels")
     custom_tree = ADVANCES / "00_antiquitas_m8_tree.txt"
-    if custom_tree.is_file() and any(token in custom_tree.read_text(encoding="utf-8-sig").lower() for token in FORBIDDEN):
-        failures.append("anachronistic token survived in the M8 tree")
+    if custom_tree.is_file():
+        tree_text = custom_tree.read_text(encoding="utf-8-sig")
+        if any(token in tree_text.lower() for token in FORBIDDEN):
+            failures.append("anachronistic token survived in the M8 tree")
+        active_laws = re.findall(r"(?m)^\s*unlock_law\s*=\s*([A-Za-z0-9_]+)", tree_text)
+        leaked = sorted(law for law in active_laws if not law.startswith("antq_s2_"))
+        if leaked:
+            failures.append(f"active M8 tree unlocks legacy laws: {', '.join(leaked)}")
     if failures:
         print("m8_knowledge: FAIL")
         print("\n".join(f"  - {failure}" for failure in failures))

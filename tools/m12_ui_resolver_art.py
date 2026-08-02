@@ -16,6 +16,7 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import json
 import math
 from dataclasses import dataclass
 from pathlib import Path
@@ -26,10 +27,7 @@ from dds import convert, identify
 
 
 ROOT = Path(__file__).resolve().parents[1]
-GAME_UI = Path(
-    r"<GAME_DIR>"
-    r"\game\main_menu\gfx\interface"
-)
+GAME_UI = Path(json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))["game_dir"]) / "game/main_menu/gfx/interface"
 MOD_UI = ROOT / "main_menu/gfx/interface"
 SOURCE_DIR = ROOT / "assets_queue/ui_resolvers"
 RENDER_DIR = SOURCE_DIR / "rendered"

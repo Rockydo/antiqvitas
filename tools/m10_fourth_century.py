@@ -22,7 +22,7 @@ from pathlib import Path
 
 from advance_event_packages import knowledge_response_lines
 from dates import AntqDate, M2_MIRROR_LANGUAGES, indexed_timeline, load_timeline
-from m10_history import engine_tags, start_country_locations
+from m10_history import engine_tags, resolution_trigger_lines, start_country_locations
 
 ROOT = Path(__file__).resolve().parents[1]
 TIMELINE = ROOT / "docs/timeline.csv"
@@ -434,9 +434,7 @@ def situation_script(records: tuple[Current, ...]) -> str:
             f"\t\tcurrent_date < {record.end_date.engine()}",
             f"\t\tcountry_exists = c:{record.engine_tag}",
             "\t}",
-            "\tcan_end = {",
-            f"\t\tcurrent_date >= {record.end_date.engine()}",
-            "\t}",
+            *resolution_trigger_lines(record, country_scoped=False),
             "\tvisible = {",
             f"\t\tcountry_exists = c:{record.engine_tag}",
             "\t}",
@@ -464,9 +462,7 @@ def disaster_script(records: tuple[Current, ...]) -> str:
             f"\t\tcurrent_date < {record.end_date.engine()}",
             "\t\thas_any_active_disaster = no",
             "\t}",
-            "\tcan_end = {",
-            f"\t\tcurrent_date >= {record.end_date.engine()}",
-            "\t}",
+            *resolution_trigger_lines(record, country_scoped=True),
             "\ton_start = {",
             f"\t\ttrigger_event_non_silently = {record.event_key}",
             "\t}",

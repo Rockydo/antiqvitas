@@ -228,7 +228,7 @@ def inventory() -> dict[str, object]:
         files.append(
             {
                 "relative": relative,
-                "source": str(source),
+                "source": "<GAME_ROOT>/" + source.relative_to(game_root()).as_posix(),
                 "source_sha256": sha256(source.read_bytes()),
                 "rendered_sha256": sha256(rendered),
                 "definitions": keys,

@@ -12,7 +12,16 @@ antq_m10_third_three_kingdoms = {
 		country_exists = c:XAR
 	}
 	can_end = {
-		current_date >= 281.1.1
+		OR = {
+			current_date >= 281.1.1
+			AND = {
+				current_date >= 250.7.2
+				c:XAR ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAR
@@ -34,7 +43,16 @@ antq_m10_third_diocletian_dominate = {
 		country_exists = c:XAA
 	}
 	can_end = {
-		current_date >= 306.1.1
+		OR = {
+			current_date >= 306.1.1
+			AND = {
+				current_date >= 294.12.31
+				c:XAA ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAA
@@ -56,7 +74,16 @@ antq_m10_third_eight_princes = {
 		country_exists = c:XAR
 	}
 	can_end = {
-		current_date >= 318.1.1
+		OR = {
+			current_date >= 318.1.1
+			AND = {
+				current_date >= 304.7.2
+				c:XAR ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAR

@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import json
 import subprocess
 import sys
 import tempfile
@@ -24,7 +25,7 @@ from dds import convert, identify
 
 
 ROOT = Path(__file__).resolve().parents[1]
-GAME = Path(r"<GAME_DIR>\game")
+GAME = Path(json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))["game_dir"]) / "game"
 ENGINE_POP_TYPES = GAME / "in_game/common/pop_types/00_default.txt"
 SHEET_DIR = ROOT / "assets_queue/generated/pop_types/sheets"
 MASTER_DIR = ROOT / "assets_queue/generated/pop_types/masters"

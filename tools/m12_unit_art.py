@@ -35,7 +35,7 @@ QUADRANTS = ("top_left", "top_right", "bottom_left", "bottom_right")
 @dataclass(frozen=True)
 class Sheet:
     filename: str
-    keys: tuple[str, str, str, str]
+    keys: tuple[str | None, str | None, str | None, str | None]
 
 
 SHEETS = (
@@ -140,6 +140,13 @@ SHEETS = (
         "antq_caribbean_dugout_patrol", "antq_caribbean_dugout_transport",
         "antq_californian_coastal_canoe_patrol", "antq_californian_tule_transport",
     )),
+    Sheet("unit_sheet_29_capability_ladder.png", (
+        "antq_local_watercraft", "antq_limited_coastal_transport",
+        "antq_coastal_watch_craft", "antq_state_oared_squadron",
+    )),
+    Sheet("unit_sheet_30_long_distance_capacity.png", (
+        "antq_open_sea_merchantmen", None, None, None,
+    )),
 )
 
 CATEGORY_SUFFIXES = (
@@ -181,6 +188,8 @@ def art_index() -> dict[str, tuple[Sheet, str]]:
         if len(sheet.keys) != 4:
             raise ValueError(f"{sheet.filename} does not map exactly four icons")
         for quadrant, key in zip(QUADRANTS, sheet.keys, strict=True):
+            if key is None:
+                continue
             if key in result:
                 raise ValueError(f"unit art mapping repeats {key}")
             result[key] = (sheet, quadrant)
@@ -346,8 +355,8 @@ def validate() -> bool:
             failures.append("M7 art roster differs from active unit-quarantine definitions")
         if set(index) != active:
             failures.append("four-up unit-art mapping does not exactly cover active ancient units")
-        if len(SHEETS) != 28 or sum(len(sheet.keys) for sheet in SHEETS) != 112:
-            failures.append("unit-art source contract is not 28 sheets / 112 icons")
+        if len(SHEETS) != 30 or sum(len(sheet.keys) for sheet in SHEETS) != 120:
+            failures.append("unit-art source contract is not 30 four-up sheets / 120 panels")
         for sheet in SHEETS:
             path = SOURCE_DIR / sheet.filename
             if not path.is_file():

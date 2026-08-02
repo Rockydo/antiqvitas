@@ -10,7 +10,14 @@ antq_m10_fourth_crete_earthquake = {
 		has_any_active_disaster = no
 	}
 	can_end = {
-		current_date >= 366.1.1
+		OR = {
+			current_date >= 366.1.1
+			AND = {
+				current_date >= 365.7.2
+				stability >= 20
+				at_war = no
+			}
+		}
 	}
 	on_start = {
 		trigger_event_non_silently = antq_m10_fourth.4005

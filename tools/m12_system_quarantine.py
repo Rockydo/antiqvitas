@@ -712,7 +712,7 @@ def expected_outputs() -> tuple[dict[Path, bytes], dict[str, object]]:
                 {
                     "surface": surface,
                     "relative": name,
-                    "source": str(source),
+                    "source": "<GAME_ROOT>/" + source.relative_to(game_root()).as_posix(),
                     "source_sha256": sha256(source.read_bytes()),
                     "definition_count": count,
                     "output": output.relative_to(ROOT).as_posix(),
@@ -738,7 +738,7 @@ def expected_outputs() -> tuple[dict[Path, bytes], dict[str, object]]:
             {
                 "surface": surface,
                 "relative": Path(relative).name,
-                "source": str(source),
+                "source": "<GAME_ROOT>/" + source.relative_to(game_root()).as_posix(),
                 "source_sha256": sha256(source.read_bytes()),
                 "definition_count": count,
                 "output": output.relative_to(ROOT).as_posix(),
@@ -755,7 +755,7 @@ def expected_outputs() -> tuple[dict[Path, bytes], dict[str, object]]:
         {
             "surface": "hre_yearly_scope_guard",
             "relative": "country_yearly.txt",
-            "source": str(yearly_source),
+            "source": "<GAME_ROOT>/" + yearly_source.relative_to(game_root()).as_posix(),
             "source_sha256": sha256(yearly_source.read_bytes()),
             "definition_count": 1,
             "output": yearly_output.relative_to(ROOT).as_posix(),

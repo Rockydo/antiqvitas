@@ -57,16 +57,18 @@ def render() -> str:
     )
     cities, _ = population_city_targets(owners)
     records = parse_records(POP_FILE)
-    by_location = {record["location"]: record for record in records}
-    sizes = {
-        location: Decimal(record["size"]) for location, record in by_location.items()
-    }
+    by_location: defaultdict[str, list[dict[str, str]]] = defaultdict(list)
+    sizes: defaultdict[str, Decimal] = defaultdict(Decimal)
+    for record in records:
+        by_location[record["location"]].append(record)
+        sizes[record["location"]] += Decimal(record["size"])
     region_totals: defaultdict[str, Decimal] = defaultdict(Decimal)
     macro_totals: defaultdict[str, Decimal] = defaultdict(Decimal)
     culture_totals: defaultdict[str, Decimal] = defaultdict(Decimal)
     geographic_totals: defaultdict[str, Decimal] = defaultdict(Decimal)
     geographic_cultures: defaultdict[tuple[str, str], Decimal] = defaultdict(Decimal)
-    for location, record in by_location.items():
+    for location, location_records in by_location.items():
+        record = location_records[0]
         region = overrides.get(location, {}).get(
             "region", roster[owners[location]]["region"]
         )
@@ -74,11 +76,13 @@ def render() -> str:
         size = sizes[location]
         region_totals[region] += size
         macro_totals[macro] += size
-        culture_totals[record["culture"]] += size
+        for stratum in location_records:
+            culture_totals[stratum["culture"]] += Decimal(stratum["size"])
         if location in location_groups:
             group = location_groups[location]
             geographic_totals[group] += size
-            geographic_cultures[(group, record["culture"])] += size
+            for stratum in location_records:
+                geographic_cultures[(group, stratum["culture"])] += Decimal(stratum["size"])
     for record in parse_records(COMPATIBILITY_POP_FILE):
         location = record["location"]
         region = overrides.get(location, {}).get(
@@ -187,16 +191,18 @@ def render() -> str:
             "Generated AD 1 base-pop total",
         )
     for rank, record in enumerate(
-        sorted(records, key=lambda row: (-Decimal(row["size"]), row["location"]))[:20],
+        sorted(by_location, key=lambda location: (-sizes[location], location))[:20],
         start=1,
     ):
+        location = record
+        representative = by_location[location][0]
         add(
             "top_location",
             f"{rank:02d}",
-            record["location"],
-            record["culture"],
-            Decimal(record["size"]),
-            percentage(Decimal(record["size"]), world_total),
+            location,
+            representative["culture"],
+            sizes[location],
+            percentage(sizes[location], world_total),
             "generated-ranking",
             "audit",
             "Top 20 generated game locations after fixed targets and residual cap",

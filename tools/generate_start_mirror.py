@@ -44,6 +44,7 @@ POPULATION_ALLOCATIONS = ROOT / "docs/m4/population_region_allocations.csv"
 POPULATION_LOCATION_OVERRIDES = ROOT / "docs/m4/population_location_overrides.csv"
 POPULATION_GEOGRAPHIC_ALLOCATIONS = ROOT / "docs/m4/population_geographic_allocations.csv"
 POPULATION_CITY_TARGETS = ROOT / "docs/m4/population_city_targets.csv"
+POPULATION_GEOGRAPHY = ROOT / "docs/m5/global_rgo_audit.csv"
 CULTURE_REMAP = ROOT / "docs/culture_remap.csv"
 RELIGION_REMAP = ROOT / "docs/religion_remap.csv"
 M4_SYMBOLS = ROOT / "docs/m4/definition_symbols.json"
@@ -54,6 +55,7 @@ VANILLA_PROVINCES = ROOT / "docs/vanilla_symbols/provinces.json"
 VANILLA_LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
 VANILLA_REGIONS = ROOT / "docs/vanilla_symbols/regions.json"
 MARKETS = ROOT / "docs/m5/markets.csv"
+ANNONA_ROUTES = ROOT / "docs/m5/annona_trade_routes.csv"
 URBAN_NODES = ROOT / "docs/m5/urban_nodes.csv"
 ROAD_SEGMENTS = ROOT / "docs/m5/road_segments.csv"
 DEVELOPMENT_PROFILE = ROOT / "docs/m5/development_profile.csv"
@@ -244,7 +246,7 @@ STATIC_FILES = {
     "23_colonies.txt": "colony_manager = {\n}\n",
     "24_town_rights.txt": "townrights_manager = {\n}\n",
     "25_area_preferences.txt": "countries = {\n\tcountries = {\n\t}\n}\n",
-    "26_ai_personalities.txt": "countries = {\n\tcountries = {\n\t}\n}\n",
+    "26_ai_personalities.txt": "",
 }
 
 
@@ -371,8 +373,105 @@ def market_manager() -> tuple[str, int]:
         lines.append(
             f"\tadd_market = {row['location']} # {row['name']}; {row['source']}"
         )
+
+    route_fields = (
+        "source_location", "destination_location", "merchant_location", "good",
+        "desired", "locked", "source", "confidence", "note",
+    )
+    routes = csv_rows(ANNONA_ROUTES)
+    known_goods = set(json.loads(
+        (ROOT / "docs/vanilla_symbols/good.json").read_text(encoding="utf-8-sig")
+    ))
+    for row in routes:
+        if tuple(row) != route_fields:
+            failures.append("annona_trade_routes.csv has an invalid field order")
+            break
+        if any(not row[field].strip() for field in route_fields):
+            failures.append("annona_trade_routes.csv contains a blank required field")
+        for field in ("source_location", "destination_location", "merchant_location"):
+            if row[field] not in locations:
+                failures.append(f"annona route uses unknown {field} {row[field]}")
+        if row["good"] not in known_goods:
+            failures.append(f"annona route uses unknown good {row['good']}")
+        try:
+            if Decimal(row["desired"]) <= 0:
+                raise ValueError
+        except ValueError:
+            failures.append(f"annona route has invalid desired capacity {row['desired']}")
+        if row["locked"] not in {"yes", "no"}:
+            failures.append(f"annona route has invalid locked value {row['locked']}")
+        if row["confidence"] not in {"secure", "contested"}:
+            failures.append(f"annona route has invalid confidence {row['confidence']}")
+    if len(routes) < 4:
+        failures.append("annona route ledger must cover Egypt, Africa, Sicily, and Sardinia")
+    if failures:
+        raise ValueError("\n".join(sorted(set(failures))))
+    lines.extend((
+        "\t# Augustan annona: real locked import rows, not inferred source surplus.",
+        "\tc:ROM = {",
+    ))
+    for row in routes:
+        lines.extend((
+            "\t\tcreate_trade = {",
+            f"\t\t\tfrom = location:{row['source_location']}.market",
+            f"\t\t\tto = location:{row['destination_location']}.market",
+            f"\t\t\tmerchant = location:{row['merchant_location']}.market",
+            f"\t\t\tgoods = goods:{row['good']}",
+            f"\t\t\tdesired = {row['desired']}",
+            f"\t\t\tlocked = {row['locked']}",
+            f"\t\t}} # {row['source']}",
+        ))
+    lines.append("\t}")
     lines.extend(("}", ""))
     return "\n".join(lines), len(entries)
+
+
+def ai_personality_manager() -> str:
+    """Give every opening polity a bounded strategic posture."""
+    mapping = {
+        entry["design_tag"]: entry["engine_tag"]
+        for entry in json.loads(TAG_MAP.read_text(encoding="utf-8-sig"))["entries"]
+    }
+    rows = csv_rows(ROSTER)
+    assignments: list[tuple[str, str, str]] = []
+    for row in rows:
+        tag = row["tag"]
+        tier = int(row["tier"])
+        region = row["region"]
+        if tag in {"ROM", "HAN"}:
+            personality = "ai_balanced"
+        elif tag == "PAR":
+            personality = "ai_aggressive"
+        elif row["kind"] == "subject":
+            personality = "ai_defensive"
+        elif tier == 1:
+            personality = "ai_expansionist"
+        elif region in {"Steppe", "Pontic", "Germania", "Danube"} and tier <= 2:
+            personality = "ai_aggressive"
+        elif tier == 2 and region in {
+            "Arabia", "India", "Lanka", "Southeast Asia", "Oceania",
+            "Levant", "Africa", "West Africa",
+        }:
+            personality = "ai_opportunistic"
+        elif tier == 2:
+            personality = "ai_cautious"
+        elif row["kind"] == "sop":
+            personality = "ai_defensive"
+        else:
+            personality = "ai_balanced"
+        assignments.append((mapping[tag], personality, tag))
+    if len(assignments) != len(rows) or len({engine for engine, _, _ in assignments}) != len(rows):
+        raise ValueError("AI personality manager does not cover the unique opening engine roster")
+    lines = [
+        "# Generated by tools/generate_start_mirror.py --write.",
+        "# AD 1 roster-wide strategic postures; no opening country uses engine defaults.",
+        "countries = {",
+        "\tcountries = {",
+    ]
+    for engine, personality, design in sorted(assignments):
+        lines.append(f"\t\t{engine} = {{ ai_personality = {personality} }} # {design}")
+    lines.extend(("\t}", "}", ""))
+    return "\n".join(lines)
 
 
 def urban_manager() -> tuple[str, int]:
@@ -1292,49 +1391,116 @@ def population_religion_remaps(owners: dict[str, str]) -> dict[str, dict[str, st
     return remaps
 
 
-def vanilla_pop_weights() -> dict[str, Decimal]:
-    """Read installed-pop density as a geographic weighting template only."""
-    config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
-    source = Path(config["game_dir"]) / "game/main_menu/setup/start/06_pops.txt"
-    if not source.is_file():
-        raise ValueError(f"installed vanilla pop template is missing: {source}")
-    tokens = list(tokenize(source.read_text(encoding="utf-8-sig", errors="replace")))
-    stack: list[str] = []
-    weights: defaultdict[str, Decimal] = defaultdict(Decimal)
-    index = 0
-    while index < len(tokens):
-        value = tokens[index].value
-        if (
-            index + 2 < len(tokens)
-            and tokens[index + 1].value == "="
-            and tokens[index + 2].value == "{"
-        ):
-            stack.append(value)
-            index += 3
+def ancient_pop_weights(owners: dict[str, str]) -> dict[str, Decimal]:
+    """Derive residual density from the reviewed AD 1 geography/economy ledgers."""
+    topography = {
+        "flatland": Decimal("1.20"), "hills": Decimal("0.90"),
+        "plateau": Decimal("0.80"), "wetlands": Decimal("0.75"),
+        "mountains": Decimal("0.50"),
+    }
+    vegetation = {
+        "farmland": Decimal("1.65"), "grasslands": Decimal("1.20"),
+        "woods": Decimal("0.90"), "forest": Decimal("0.72"),
+        "jungle": Decimal("0.58"), "sparse": Decimal("0.42"),
+        "desert": Decimal("0.24"),
+    }
+    resource = {
+        "staple_crop": Decimal("0.45"), "orchard_vine": Decimal("0.30"),
+        "pastoral": Decimal("0.22"), "aquatic": Decimal("0.18"),
+        "fiber_dye": Decimal("0.16"), "forest": Decimal("0.10"),
+        "mineral_or_quarried": Decimal("0.08"),
+    }
+    weights: dict[str, Decimal] = {}
+    for row in csv_rows(POPULATION_GEOGRAPHY):
+        location = row["location"].strip()
+        if location not in owners:
             continue
-        if value == "}":
-            if stack:
-                stack.pop()
-            index += 1
-            continue
-        if (
-            value == "size"
-            and index + 2 < len(tokens)
-            and tokens[index + 1].value == "="
-            and len(stack) == 3
-            and stack[0] == "locations"
-            and stack[2] == "define_pop"
-        ):
-            try:
-                weights[stack[1]] += Decimal(tokens[index + 2].value)
-            except Exception as exc:
-                raise ValueError(f"invalid vanilla pop size at {stack[1]}") from exc
-            index += 3
-            continue
-        index += 1
-    if not weights:
-        raise ValueError("could not read any installed vanilla population weights")
-    return dict(weights)
+        value = topography.get(row["topography"].strip(), Decimal("0.70"))
+        value *= vegetation.get(row["vegetation"].strip(), Decimal("0.65"))
+        value += resource.get(row["resource_family"].strip(), Decimal("0.05"))
+        access = row["trade_access"].strip()
+        if access == "major_harbor":
+            value += Decimal("0.80")
+        elif access == "coastal_access":
+            value += Decimal("0.30")
+        weights[location] = value
+    missing = sorted(set(owners) - set(weights))
+    if missing:
+        raise ValueError(f"AD 1 population geography lacks {len(missing)} controlled locations")
+    urban = {row["location"].strip(): row["profile"].strip() for row in csv_rows(URBAN_NODES)}
+    for location, profile in urban.items():
+        if location in weights:
+            weights[location] += Decimal("8.0" if profile == "city" else "3.0")
+    for row in csv_rows(MARKETS):
+        location = row["location"].strip()
+        if location in weights:
+            weights[location] += Decimal("2.0")
+    for row in csv_rows(ROAD_SEGMENTS):
+        for field in ("origin", "destination"):
+            location = row[field].strip()
+            if location in weights:
+                weights[location] += Decimal("0.75")
+    return weights
+
+
+def population_strata(
+    total: Decimal, primary: str, kind: str, rank: str, region: str
+) -> tuple[tuple[str, Decimal], ...]:
+    """Split a location total into ancient social strata with exact preservation."""
+    if primary == "tribesmen" or kind == "sop":
+        shares = {
+            "tribesmen": Decimal("0.74"), "peasants": Decimal("0.08"),
+            "soldiers": Decimal("0.07"), "nobles": Decimal("0.04"),
+            "clergy": Decimal("0.03"), "laborers": Decimal("0.02"),
+            "burghers": Decimal("0.02"),
+        }
+    elif rank == "city":
+        shares = {
+            "peasants": Decimal("0.40"), "burghers": Decimal("0.18"),
+            "laborers": Decimal("0.13"), "soldiers": Decimal("0.07"),
+            "nobles": Decimal("0.05"), "clergy": Decimal("0.05"),
+            "slaves": Decimal("0.12"),
+        }
+    elif rank == "town":
+        shares = {
+            "peasants": Decimal("0.58"), "burghers": Decimal("0.12"),
+            "laborers": Decimal("0.09"), "soldiers": Decimal("0.06"),
+            "nobles": Decimal("0.04"), "clergy": Decimal("0.04"),
+            "slaves": Decimal("0.07"),
+        }
+    else:
+        shares = {
+            "peasants": Decimal("0.79"), "laborers": Decimal("0.06"),
+            "soldiers": Decimal("0.05"), "nobles": Decimal("0.025"),
+            "clergy": Decimal("0.025"), "slaves": Decimal("0.05"),
+        }
+    # Dependent labor was important but not uniform. Keep the highest opening
+    # shares in Mediterranean and Near Eastern state economies; elsewhere it
+    # becomes free cultivator/laborer population rather than invented slavery.
+    if "slaves" in shares and region not in {"Rome", "Levant", "Mesopotamia", "Iran", "Egypt", "Maghreb", "Greece-Anatolia"}:
+        transfer = shares.pop("slaves")
+        shares["peasants"] += transfer * Decimal("0.65")
+        shares["laborers"] += transfer * Decimal("0.35")
+    units = int(total / THOUSANDTH)
+    if units <= 1:
+        return ((primary, total),)
+    exact = {key: value * units for key, value in shares.items()}
+    allocated = {key: int(value) for key, value in exact.items() if value >= 1}
+    if primary not in allocated:
+        allocated[primary] = 1
+    remainder = units - sum(allocated.values())
+    order = sorted(
+        allocated,
+        key=lambda key: (exact.get(key, Decimal()), shares.get(key, Decimal()), key),
+        reverse=True,
+    )
+    for index in range(remainder):
+        allocated[order[index % len(order)]] += 1
+    return tuple(
+        (key, Decimal(value) * THOUSANDTH)
+        for key, value in sorted(allocated.items())
+        if value > 0
+    )
 
 
 def culture_presence_cultures() -> list[str]:
@@ -1486,7 +1652,7 @@ def population_manager(
     )
     _, city_targets = population_city_targets(owners)
     compatibility_total = COMPATIBILITY_POP_SIZE * len(compatibility_cultures)
-    weights = vanilla_pop_weights()
+    weights = ancient_pop_weights(owners)
     effective_regions = {
         location: overrides.get(location, {}).get("region", roster[tag]["region"])
         for location, tag in owners.items()
@@ -1543,13 +1709,17 @@ def population_manager(
     lines = [
         "# Generated by tools/generate_start_mirror.py --write.",
         "# M4 AD 1 population totals: plan section 12.4; allocation inputs are source-labelled in docs/m4/.",
-        "# Ancient city and Italy targets are fixed first; residual geography uses capped vanilla weights.",
+        "# Ancient city and Italy targets are fixed first; residual geography uses reviewed AD 1 environment and networks.",
         "# Roster regions weight macro allocation but do not become political-tag population bins.",
-        "# Installed vanilla density is a residual geographic weighting template only and never historical evidence.",
+        "# No installed 1337 population value participates in allocation.",
         "locations = {",
     ]
     resident_cultures: defaultdict[str, set[str]] = defaultdict(set)
     country_populations: defaultdict[str, Decimal] = defaultdict(Decimal)
+    urban_profiles = {
+        entry["location"].strip(): entry["profile"].strip()
+        for entry in csv_rows(URBAN_NODES)
+    }
     for location in sorted(owners):
         row = roster[owners[location]]
         profile = historical_profile_for(row)
@@ -1562,14 +1732,16 @@ def population_manager(
         )
         resident_cultures[owners[location]].add(culture)
         country_populations[owners[location]] += sizes[location]
-        lines.extend(
-            (
-                f"\t{location} = {{",
-                f"\t\tdefine_pop = {{ type = {pop_type} size = {sizes[location]:.3f} "
-                f"culture = {culture} religion = {religion} }}",
-                "\t}",
+        rank = urban_profiles.get(location, "rural")
+        lines.append(f"\t{location} = {{")
+        for stratum, stratum_size in population_strata(
+            sizes[location], pop_type, row["kind"], rank, row["region"]
+        ):
+            lines.append(
+                f"\t\tdefine_pop = {{ type = {stratum} size = {stratum_size:.3f} "
+                f"culture = {culture} religion = {religion} }}"
             )
-        )
+        lines.append("\t}")
     lines.extend(("}", ""))
     return (
         "\n".join(lines),
@@ -1809,6 +1981,7 @@ def generated_files() -> tuple[dict[str, str], int, int, int, int, Decimal, int,
             "14_development.txt": development,
             "15_international_organizations.txt": m9_international_organization_manager(),
             "21_locations.txt": compatibility_presence_manager(compatibility_cultures),
+            "26_ai_personalities.txt": ai_personality_manager(),
             "27_armies.txt": units,
         },
         count,

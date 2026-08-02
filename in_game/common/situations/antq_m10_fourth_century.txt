@@ -12,7 +12,16 @@ antq_m10_fourth_constantine_civil_wars = {
 		country_exists = c:XAA
 	}
 	can_end = {
-		current_date >= 331.1.1
+		OR = {
+			current_date >= 331.1.1
+			AND = {
+				current_date >= 318.7.2
+				c:XAA ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAA
@@ -34,7 +43,16 @@ antq_m10_fourth_shapur_julian = {
 		country_exists = c:XAH
 	}
 	can_end = {
-		current_date >= 364.1.1
+		OR = {
+			current_date >= 364.1.1
+			AND = {
+				current_date >= 350.7.2
+				c:XAH ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAH
@@ -56,7 +74,16 @@ antq_m10_fourth_aksum_meroe = {
 		country_exists = c:AKS
 	}
 	can_end = {
-		current_date >= 351.1.1
+		OR = {
+			current_date >= 351.1.1
+			AND = {
+				current_date >= 350.7.2
+				c:AKS ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:AKS
@@ -78,7 +105,16 @@ antq_m10_fourth_gothic_refugees = {
 		country_exists = c:GUT
 	}
 	can_end = {
-		current_date >= 383.1.1
+		OR = {
+			current_date >= 383.1.1
+			AND = {
+				current_date >= 379.7.2
+				c:GUT ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:GUT
@@ -100,7 +136,16 @@ antq_m10_fourth_fei_river = {
 		country_exists = c:XAR
 	}
 	can_end = {
-		current_date >= 440.1.1
+		OR = {
+			current_date >= 440.1.1
+			AND = {
+				current_date >= 411.7.2
+				c:XAR ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAR
@@ -122,7 +167,16 @@ antq_m10_fourth_gwanggaeto = {
 		country_exists = c:GOG
 	}
 	can_end = {
-		current_date >= 414.1.1
+		OR = {
+			current_date >= 414.1.1
+			AND = {
+				current_date >= 402.7.2
+				c:GOG ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:GOG
@@ -144,7 +198,16 @@ antq_m10_fourth_faxian_gupta = {
 		country_exists = c:XAR
 	}
 	can_end = {
-		current_date >= 413.1.1
+		OR = {
+			current_date >= 413.1.1
+			AND = {
+				current_date >= 406.1.1
+				c:XAR ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAR

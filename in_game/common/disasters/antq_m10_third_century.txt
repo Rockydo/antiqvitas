@@ -10,7 +10,14 @@ antq_m10_third_third_century_crisis = {
 		has_any_active_disaster = no
 	}
 	can_end = {
-		current_date >= 285.1.1
+		OR = {
+			current_date >= 285.1.1
+			AND = {
+				current_date >= 260.1.1
+				stability >= 20
+				at_war = no
+			}
+		}
 	}
 	on_start = {
 		trigger_event_non_silently = antq_m10_third.3005

@@ -145,8 +145,17 @@ antq_m10_third.3005 = {
 	option = {
 		name = antq_m10_third.3005.a
 		historical_option = yes
-		add_stability = stability_mild_penalty
+		add_stability = stability_severe_penalty
 		add_prestige = prestige_mild_penalty
+		add_manpower = { value = root.monthly_manpower multiply = -8 }
+		add_gold = { value = root.monthly_income_trade_and_tax multiply = -6 }
+		capital = {
+			set_disease_presence = {
+				disease_outbreak = disease:smallpox.original_outbreak
+				value = 0.25
+			}
+			province = { change_province_food_percentage = -0.12 }
+		}
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_mobile_field_armies }

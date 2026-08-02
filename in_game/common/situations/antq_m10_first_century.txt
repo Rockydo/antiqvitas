@@ -13,7 +13,16 @@ antq_m10_gaius_eastern_settlement = {
 		country_exists = c:XAO
 	}
 	can_end = {
-		current_date >= 5.1.1
+		OR = {
+			current_date >= 5.1.1
+			AND = {
+				current_date >= 3.1.1
+				c:XAO ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAO
@@ -35,7 +44,16 @@ antq_m10_immensum_bellum = {
 		country_exists = c:XAA
 	}
 	can_end = {
-		current_date >= 6.1.1
+		OR = {
+			current_date >= 6.1.1
+			AND = {
+				current_date >= 3.7.3
+				c:XAA ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAA
@@ -63,7 +81,16 @@ antq_m10_illyrian_revolt = {
 		country_exists = c:XAA
 	}
 	can_end = {
-		current_date >= 10.1.1
+		OR = {
+			current_date >= 10.1.1
+			AND = {
+				current_date >= 8.1.1
+				c:XAA ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAA
@@ -85,7 +112,16 @@ antq_m10_wang_mang_xin = {
 		country_exists = c:XAR
 	}
 	can_end = {
-		current_date >= 26.1.1
+		OR = {
+			current_date >= 26.1.1
+			AND = {
+				current_date >= 17.7.2
+				c:XAR ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAR
@@ -107,7 +143,16 @@ antq_m10_tacfarinas_war = {
 		country_exists = c:XAA
 	}
 	can_end = {
-		current_date >= 25.1.1
+		OR = {
+			current_date >= 25.1.1
+			AND = {
+				current_date >= 21.1.1
+				c:XAA ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAA
@@ -129,7 +174,16 @@ antq_m10_trung_sisters = {
 		country_exists = c:XAR
 	}
 	can_end = {
-		current_date >= 44.1.1
+		OR = {
+			current_date >= 44.1.1
+			AND = {
+				current_date >= 41.12.31
+				c:XAR ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAR
@@ -151,7 +205,16 @@ antq_m10_mauretania_annexation = {
 		country_exists = c:XAG
 	}
 	can_end = {
-		current_date >= 45.1.1
+		OR = {
+			current_date >= 45.1.1
+			AND = {
+				current_date >= 42.7.2
+				c:XAG ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAG
@@ -173,7 +236,16 @@ antq_m10_claudian_britain = {
 		country_exists = c:XAA
 	}
 	can_end = {
-		current_date >= 44.1.1
+		OR = {
+			current_date >= 44.1.1
+			AND = {
+				current_date >= 43.7.2
+				c:XAA ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAA
@@ -195,7 +267,16 @@ antq_m10_armenian_war = {
 		country_exists = c:XAO
 	}
 	can_end = {
-		current_date >= 64.1.1
+		OR = {
+			current_date >= 64.1.1
+			AND = {
+				current_date >= 60.12.31
+				c:XAO ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAO
@@ -217,7 +298,16 @@ antq_m10_boudica_revolt = {
 		country_exists = c:XBX
 	}
 	can_end = {
-		current_date >= 62.1.1
+		OR = {
+			current_date >= 62.1.1
+			AND = {
+				current_date >= 60.12.31
+				c:XBX ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XBX
@@ -239,7 +329,16 @@ antq_m10_great_jewish_revolt = {
 		country_exists = c:JUD
 	}
 	can_end = {
-		current_date >= 74.1.1
+		OR = {
+			current_date >= 74.1.1
+			AND = {
+				current_date >= 70.1.1
+				c:JUD ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:JUD
@@ -261,7 +360,16 @@ antq_m10_batavian_revolt = {
 		country_exists = c:BTV
 	}
 	can_end = {
-		current_date >= 71.1.1
+		OR = {
+			current_date >= 71.1.1
+			AND = {
+				current_date >= 70.1.1
+				c:BTV ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:BTV
@@ -289,7 +397,16 @@ antq_m10_dacian_wars = {
 		country_exists = c:DAC
 	}
 	can_end = {
-		current_date >= 93.1.1
+		OR = {
+			current_date >= 93.1.1
+			AND = {
+				current_date >= 89.1.1
+				c:DAC ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:DAC
@@ -311,7 +428,16 @@ antq_m10_han_xianbei = {
 		country_exists = c:XAR
 	}
 	can_end = {
-		current_date >= 92.1.1
+		OR = {
+			current_date >= 92.1.1
+			AND = {
+				current_date >= 90.7.2
+				c:XAR ?= {
+					stability >= 20
+					at_war = no
+				}
+			}
+		}
 	}
 	visible = {
 		country_exists = c:XAR

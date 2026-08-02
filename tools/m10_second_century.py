@@ -16,7 +16,7 @@ from pathlib import Path
 from advance_event_packages import knowledge_response_lines
 from dates import AntqDate, M2_MIRROR_LANGUAGES, load_timeline
 from goods_integration import event_effect_lines
-from m10_history import engine_tags, start_country_locations
+from m10_history import engine_tags, resolution_trigger_lines, start_country_locations
 
 ROOT = Path(__file__).resolve().parents[1]
 TIMELINE = ROOT / "docs/timeline.csv"
@@ -265,9 +265,27 @@ def impact_lines(record: Current) -> tuple[str, ...]:
         return (
             "\t\tadd_stability = stability_mild_penalty",
             "\t\tadd_prestige = prestige_mild_penalty",
+            "\t\tadd_manpower = { value = root.monthly_manpower multiply = -6 }",
+            "\t\tadd_gold = { value = root.monthly_income_trade_and_tax multiply = -4 }",
+            "\t\tcapital = {",
+            "\t\t\tset_disease_presence = {",
+            "\t\t\t\tdisease_outbreak = disease:smallpox.original_outbreak",
+            "\t\t\t\tvalue = 0.35",
+            "\t\t\t}",
+            "\t\t\tprovince = { change_province_food_percentage = -0.15 }",
+            "\t\t}",
             f"\t\tc:{han} = {{",
             "\t\t\tadd_stability = stability_weak_penalty",
             "\t\t\tadd_prestige = prestige_weak_penalty",
+            "\t\t\tadd_manpower = { value = monthly_manpower multiply = -3 }",
+            "\t\t\tadd_gold = { value = monthly_income_trade_and_tax multiply = -2 }",
+            "\t\t\tcapital = {",
+            "\t\t\t\tset_disease_presence = {",
+            "\t\t\t\t\tdisease_outbreak = disease:smallpox.original_outbreak",
+            "\t\t\t\t\tvalue = 0.20",
+            "\t\t\t\t}",
+            "\t\t\t\tprovince = { change_province_food_percentage = -0.08 }",
+            "\t\t\t}",
             "\t\t}",
         )
     if record.kind == "disaster":
@@ -339,9 +357,7 @@ def situation_script(records: tuple[Current, ...]) -> str:
             f"\t\tcurrent_date < {record.end_date.engine()}",
             f"\t\tcountry_exists = c:{record.engine_tag}",
             "\t}",
-            "\tcan_end = {",
-            f"\t\tcurrent_date >= {record.end_date.engine()}",
-            "\t}",
+            *resolution_trigger_lines(record, country_scoped=False),
             "\tvisible = {",
             f"\t\tcountry_exists = c:{record.engine_tag}",
             "\t}",
@@ -378,9 +394,7 @@ def disaster_script(records: tuple[Current, ...]) -> str:
             f"\t\tcurrent_date < {record.end_date.engine()}",
             "\t\thas_any_active_disaster = no",
             "\t}",
-            "\tcan_end = {",
-            f"\t\tcurrent_date >= {record.end_date.engine()}",
-            "\t}",
+            *resolution_trigger_lines(record, country_scoped=True),
             "\ton_start = {",
             f"\t\ttrigger_event_non_silently = {record.event_key}",
             "\t}",
@@ -470,11 +484,14 @@ def write(records: tuple[Current, ...]) -> None:
 
 
 def check(records: tuple[Current, ...]) -> bool:
+    rendered_events = outputs(records)[EVENT_OUTPUT]
     failures = [
         f"missing {path.relative_to(ROOT)}" if not path.is_file() else f"stale {path.relative_to(ROOT)}"
         for path, expected in outputs(records).items()
         if not path.is_file() or path.read_text(encoding="utf-8-sig") != expected
     ]
+    if "monthly_gold_income" in rendered_events:
+        failures.append("non-readable monthly_gold_income survived in event arithmetic")
     if failures:
         print("m10_second_century: FAIL")
         print("\n".join(f"  - {failure}" for failure in failures))

@@ -117,7 +117,8 @@ def main() -> int:
     macro_totals: defaultdict[str, Decimal] = defaultdict(Decimal)
     geographic_totals: defaultdict[str, Decimal] = defaultdict(Decimal)
     italy_cultures: defaultdict[str, Decimal] = defaultdict(Decimal)
-    location_sizes: dict[str, Decimal] = {}
+    location_sizes: defaultdict[str, Decimal] = defaultdict(Decimal)
+    type_totals: defaultdict[str, Decimal] = defaultdict(Decimal)
     total = Decimal()
     for record in records:
         location = record.get("location", "")
@@ -144,22 +145,8 @@ def main() -> int:
         if size <= 0:
             failures.append(f"{location}: non-positive size {size}")
             continue
-        location_sizes[location] = size
-        if location in city_targets:
-            city = city_targets[location]
-            if size != city.game_target:
-                failures.append(
-                    f"{location}: city target is {size}, expected exact {city.game_target}"
-                )
-            if not (city.game_minimum <= size <= city.game_maximum):
-                failures.append(
-                    f"{location}: city target {size} outside {city.game_minimum}-{city.game_maximum}"
-                )
-        elif size > MAX_UNTARGETED_LOCATION_POPULATION:
-            failures.append(
-                f"{location}: untargeted population {size} exceeds "
-                f"{MAX_UNTARGETED_LOCATION_POPULATION}"
-            )
+        location_sizes[location] += size
+        type_totals[record["type"]] += size
         tag = owners[location]
         profile = historical_profile_for(roster[tag])
         override = overrides.get(location, {})
@@ -215,8 +202,24 @@ def main() -> int:
         failures.append("compatibility culture ledger and generated manager differ")
     for location in sorted(owners):
         count = len(records_by_location[location])
-        if count != 1:
-            failures.append(f"{location}: expected exactly one generated base pop, found {count}")
+        if count < 1:
+            failures.append(f"{location}: expected at least one generated base pop, found {count}")
+        size = location_sizes[location]
+        if location in city_targets:
+            city = city_targets[location]
+            if size != city.game_target:
+                failures.append(f"{location}: city target is {size}, expected exact {city.game_target}")
+            if not (city.game_minimum <= size <= city.game_maximum):
+                failures.append(f"{location}: city target {size} outside {city.game_minimum}-{city.game_maximum}")
+            if count < 4:
+                failures.append(f"{location}: mapped major city has only {count} social strata")
+        elif size > MAX_UNTARGETED_LOCATION_POPULATION:
+            failures.append(
+                f"{location}: untargeted population {size} exceeds {MAX_UNTARGETED_LOCATION_POPULATION}"
+            )
+    absent_types = sorted(valid_types - set(type_totals))
+    if absent_types:
+        failures.append(f"opening world has no substantive strata for {absent_types}")
     for group, allocation in geographic_allocations.items():
         actual = geographic_totals[group]
         if abs(actual - allocation.target) > EPSILON:
@@ -256,7 +259,7 @@ def main() -> int:
         f"{macro}={macro_totals[macro]:,.3f}" for macro in sorted(macro_totals)
     )
     print(
-        f"popcheck: PASS ({total:,.3f} thousand people; {len(records)} base pops; "
+        f"popcheck: PASS ({total:,.3f} thousand people; {len(records)} stratified pops; "
         f"{len(records_by_location)} populated locations; {len(mapped_cities)} fixed cities; "
         f"{macro_summary})"
     )

@@ -58,7 +58,7 @@ antq_institution_eligible_east_asian_administration = {
 
 antq_institution_eligible_buddhist_networks = {
 	OR = {
-		dominant_religion = { group = religion_group:antq_buddhist_group }
+		dominant_religion = { group = religion_group:buddhist }
 		region = region:bengal_region
 		region = region:central_india_region
 		region = region:deccan_region
@@ -104,11 +104,11 @@ antq_institution_eligible_east_central_asian_paper = {
 }
 
 antq_institution_eligible_christian_monastic = {
-	dominant_religion = { group = religion_group:antq_christian_group }
+	dominant_religion = { group = religion_group:christian }
 }
 
 antq_institution_eligible_christian_councils = {
-	dominant_religion = { group = religion_group:antq_christian_group }
+	dominant_religion = { group = religion_group:christian }
 }
 
 antq_institution_eligible_late_roman_frontier = {

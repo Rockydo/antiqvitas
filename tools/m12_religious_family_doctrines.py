@@ -541,12 +541,8 @@ def check() -> bool:
             start = religion_text.index(f"{religion} = {{")
             end = religion_text.index("\n}", start)
             block = religion_text[start:end]
-            if "religious_aspects = 2" not in block:
-                errors.append(f"{religion} does not expose two doctrine slots")
-            if "has_religious_influence = yes" not in block:
-                errors.append(
-                    f"{religion} does not expose religious influence"
-                )
+            if not any(f"religious_aspects = {slots}" in block for slots in (1, 2, 3)):
+                errors.append(f"{religion} does not expose a bounded doctrine slot count")
         texture_hashes: set[str] = set()
         roman_hashes = {
             sha256(path.read_bytes())

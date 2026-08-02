@@ -9,12 +9,15 @@ antq_religio_romana = { # P11;CAH-XI; Roman civic polytheism
 	has_religious_influence = yes
 	has_omens = yes
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.75
+		monthly_religious_influence = 0.08
+		maximum_religious_influence = 300
+		global_max_literacy = 2
 		omens_offered = 3
 	}
 	opinions = {
+		antq_hellenic = kindred
+		antq_punic = kindred
 	}
 }
 
@@ -24,40 +27,44 @@ antq_hellenic = { # P11;CAH-XI; Greek civic polytheism
 	religious_aspects = 2
 	has_religious_influence = yes
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.75
+		monthly_religious_influence = 0.08
+		maximum_religious_influence = 300
+		global_max_literacy = 2
 	}
 	opinions = {
+		antq_punic = kindred
+		antq_religio_romana = kindred
 	}
 }
 
 antq_early_christianity = { # P11;CAH-XI; Pre-Nicene Christian communities
 	color = antq_religion_color_antq_early_christianity
 	group = christian
-	religious_aspects = 2
+	religious_aspects = 3
 	has_religious_influence = yes
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		monthly_religious_influence = 0.08
+		maximum_religious_influence = 300
+		global_max_literacy = 2
 	}
 	opinions = {
+		antq_judaism = positive
 	}
 }
 
 antq_judaism = { # P11;OCD; Second Temple Judaism and diaspora
 	color = antq_religion_color_antq_judaism
 	group = israelite_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 1.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_early_christianity = positive
 	}
 }
 
@@ -67,11 +74,15 @@ antq_arsacid_zoroastrianism = { # P11;CAH-XI; Arsacid syncretic Zoroastrianism
 	religious_aspects = 2
 	has_religious_influence = yes
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.75
+		monthly_religious_influence = 0.08
+		maximum_religious_influence = 300
+		global_max_literacy = 2
 	}
 	opinions = {
+		antq_eastern_iranian_traditions = kindred
+		antq_manichaeism = kindred
+		antq_tarim_oasis_traditions = kindred
 	}
 }
 
@@ -82,11 +93,15 @@ antq_manichaeism = { # P11;CAH-XI; Manichaean future faith scaffold
 	has_religious_influence = yes
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.75
+		monthly_religious_influence = 0.08
+		maximum_religious_influence = 300
+		global_max_literacy = 2
 	}
 	opinions = {
+		antq_arsacid_zoroastrianism = kindred
+		antq_eastern_iranian_traditions = kindred
+		antq_tarim_oasis_traditions = kindred
 	}
 }
 
@@ -96,11 +111,14 @@ antq_theravada = { # P11;CAH-XI; Lankan Buddhist tradition
 	religious_aspects = 2
 	has_religious_influence = yes
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 1.00
+		monthly_religious_influence = 0.08
+		maximum_religious_influence = 300
+		global_max_literacy = 2
 	}
 	opinions = {
+		antq_mahayana = kindred
+		antq_mainland_southeast_asian_traditions = kindred
 	}
 }
 
@@ -110,11 +128,14 @@ antq_mahayana = { # P11;CAH-XI; Mahayana and Silk Road tradition
 	religious_aspects = 2
 	has_religious_influence = yes
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 1.00
+		monthly_religious_influence = 0.08
+		maximum_religious_influence = 300
+		global_max_literacy = 2
 	}
 	opinions = {
+		antq_mainland_southeast_asian_traditions = kindred
+		antq_theravada = kindred
 	}
 }
 
@@ -124,11 +145,13 @@ antq_brahmanism = { # P11;CAH-XI; Pre-Puranic Hindu tradition
 	religious_aspects = 2
 	has_religious_influence = yes
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.75
+		monthly_religious_influence = 0.08
+		maximum_religious_influence = 300
+		global_max_literacy = 2
 	}
 	opinions = {
+		antq_jainism = kindred
 	}
 }
 
@@ -139,11 +162,13 @@ antq_jainism = { # P11;CAH-XI; Jain communities
 	has_religious_influence = yes
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.75
+		monthly_religious_influence = 0.08
+		maximum_religious_influence = 300
+		global_max_literacy = 2
 	}
 	opinions = {
+		antq_brahmanism = kindred
 	}
 }
 
@@ -153,11 +178,15 @@ antq_chinese_state_cult = { # P11;BHR; Confucian rites and folk cults
 	religious_aspects = 2
 	has_religious_influence = yes
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		monthly_religious_influence = 0.08
+		maximum_religious_influence = 300
+		global_max_literacy = 2
 	}
 	opinions = {
+		antq_daoism = kindred
+		antq_kami = kindred
+		antq_korean_muism = kindred
 	}
 }
 
@@ -168,68 +197,82 @@ antq_daoism = { # P11;CAH-XI; Daoist future organization scaffold
 	has_religious_influence = yes
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		monthly_religious_influence = 0.08
+		maximum_religious_influence = 300
+		global_max_literacy = 2
 	}
 	opinions = {
+		antq_chinese_state_cult = kindred
+		antq_kami = kindred
+		antq_korean_muism = kindred
 	}
 }
 
 antq_kami = { # P11;CAH-XI; Early Japanese ritual communities
 	color = antq_religion_color_antq_kami
 	group = folk_asian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_chinese_state_cult = kindred
+		antq_daoism = kindred
+		antq_korean_muism = kindred
 	}
 }
 
 antq_korean_muism = { # P11;CAH-XI; Korean ritual communities
 	color = antq_religion_color_antq_korean_muism
 	group = folk_asian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_chinese_state_cult = kindred
+		antq_daoism = kindred
+		antq_kami = kindred
 	}
 }
 
 antq_tengri = { # P11;CAH-XI; Steppe sky cults
 	color = antq_religion_color_antq_tengri
 	group = folk_asian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		land_morale_modifier = 0.01
 	}
 	opinions = {
+		antq_amur_ussuri_traditions = kindred
+		antq_bon = kindred
+		antq_central_plateau_traditions = kindred
+		antq_eastern_plateau_traditions = kindred
+		antq_siberian = kindred
+		antq_western_plateau_traditions = kindred
 	}
 }
 
 antq_bon = { # P11;CAH-XI; Tibetan highland traditions
 	color = antq_religion_color_antq_bon
 	group = folk_asian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		land_morale_modifier = 0.01
 	}
 	opinions = {
+		antq_amur_ussuri_traditions = kindred
+		antq_central_plateau_traditions = kindred
+		antq_eastern_plateau_traditions = kindred
+		antq_siberian = kindred
+		antq_tengri = kindred
+		antq_western_plateau_traditions = kindred
 	}
 }
 
@@ -240,11 +283,14 @@ antq_kemetic = { # P11;CAH-XI; Egyptian temple religion
 	has_religious_influence = yes
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		monthly_religious_influence = 0.08
+		maximum_religious_influence = 300
+		global_max_literacy = 2
 	}
 	opinions = {
+		antq_aksumite_paganism = kindred
+		antq_kushite_amun = kindred
 	}
 }
 
@@ -254,54 +300,55 @@ antq_kushite_amun = { # P11;CAH-XI; Meroitic Kushite state cult
 	religious_aspects = 2
 	has_religious_influence = yes
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		monthly_religious_influence = 0.08
+		maximum_religious_influence = 300
+		global_max_literacy = 2
 	}
 	opinions = {
+		antq_aksumite_paganism = kindred
+		antq_kemetic = kindred
 	}
 }
 
 antq_aksumite_paganism = { # P11;CAH-XI; Pre-conversion Aksumite religion
 	color = antq_religion_color_antq_aksumite_paganism
 	group = folk_african_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_kemetic = kindred
+		antq_kushite_amun = kindred
 	}
 }
 
 antq_arabian_polytheism = { # P11;CAH-XI; Arabian cults and Kaaba tradition
 	color = antq_religion_color_antq_arabian_polytheism
 	group = folk_asian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_south_arabian_religion = kindred
 	}
 }
 
 antq_south_arabian_religion = { # P11;CAH-XI; Sabaean and Himyarite cults
 	color = antq_religion_color_antq_south_arabian_religion
 	group = folk_asian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_arabian_polytheism = kindred
 	}
 }
 
@@ -312,137 +359,154 @@ antq_punic = { # P11;CAH-XI; Punic residual communities
 	has_religious_influence = yes
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.75
+		monthly_religious_influence = 0.08
+		maximum_religious_influence = 300
+		global_max_literacy = 2
 	}
 	opinions = {
+		antq_hellenic = kindred
+		antq_religio_romana = kindred
 	}
 }
 
 antq_celtic_religion = { # P11;CAH-XI; Druidic and Celtic cults
 	color = antq_religion_color_antq_celtic_religion
 	group = folk_european_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		land_morale_modifier = 0.01
 	}
 	opinions = {
+		antq_baltic_slavic = kindred
+		antq_finnic = kindred
+		antq_germanic_religion = kindred
 	}
 }
 
 antq_germanic_religion = { # P11;CAH-XI; Germanic cults
 	color = antq_religion_color_antq_germanic_religion
 	group = folk_european_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		land_morale_modifier = 0.01
 	}
 	opinions = {
+		antq_baltic_slavic = kindred
+		antq_celtic_religion = kindred
+		antq_finnic = kindred
 	}
 }
 
 antq_baltic_slavic = { # P11;CAH-XI; Baltic and Venedi cults
 	color = antq_religion_color_antq_baltic_slavic
 	group = folk_european_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		land_morale_modifier = 0.01
 	}
 	opinions = {
+		antq_celtic_religion = kindred
+		antq_finnic = kindred
+		antq_germanic_religion = kindred
 	}
 }
 
 antq_finnic = { # P11;CAH-XI; Finnic and Uralic cults
 	color = antq_religion_color_antq_finnic
 	group = folk_european_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		land_morale_modifier = 0.01
 	}
 	opinions = {
+		antq_baltic_slavic = kindred
+		antq_celtic_religion = kindred
+		antq_germanic_religion = kindred
 	}
 }
 
 antq_berber_religion = { # P11;CAH-XI; Berber ritual traditions
 	color = antq_religion_color_antq_berber_religion
 	group = folk_african_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_bantu_religion = kindred
+		antq_nile_cushitic = kindred
+		antq_southern_african_hunter_herder_traditions = kindred
+		antq_west_african = kindred
 	}
 }
 
 antq_nile_cushitic = { # P11;CAH-XI; Nilotic and Cushitic traditions
 	color = antq_religion_color_antq_nile_cushitic
 	group = folk_african_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_bantu_religion = kindred
+		antq_berber_religion = kindred
+		antq_southern_african_hunter_herder_traditions = kindred
+		antq_west_african = kindred
 	}
 }
 
 antq_west_african = { # P11;CAH-XI; West African religious traditions
 	color = antq_religion_color_antq_west_african
 	group = folk_african_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_bantu_religion = kindred
+		antq_berber_religion = kindred
+		antq_nile_cushitic = kindred
+		antq_southern_african_hunter_herder_traditions = kindred
 	}
 }
 
 antq_bantu_religion = { # P11;CAH-XI; Bantu religious traditions
 	color = antq_religion_color_antq_bantu_religion
 	group = folk_african_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_berber_religion = kindred
+		antq_nile_cushitic = kindred
+		antq_southern_african_hunter_herder_traditions = kindred
+		antq_west_african = kindred
 	}
 }
 
 antq_southern_african_hunter_herder_traditions = { # OUP-SOUTH-AFRICA;CAM-SA-2024;P11; Plural material-context traditions adapter for southern hunter-herder frames; it does not assert one language theology people priesthood or boundary
 	color = antq_religion_color_antq_southern_african_hunter_herder_traditions
 	group = folk_african_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_bantu_religion = kindred
+		antq_berber_religion = kindred
+		antq_nile_cushitic = kindred
+		antq_west_african = kindred
 	}
 }
 
@@ -452,11 +516,16 @@ antq_mesoamerican = { # P11;CAH-XI; Mesoamerican ritual traditions
 	religious_aspects = 2
 	has_religious_influence = yes
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		monthly_religious_influence = 0.08
+		maximum_religious_influence = 300
+		global_max_literacy = 2
 	}
 	opinions = {
+		antq_andean = kindred
+		antq_caribbean = kindred
+		antq_central_amazon_traditions = kindred
+		antq_north_american = kindred
 	}
 }
 
@@ -466,278 +535,327 @@ antq_andean = { # P11;CAH-XI; Andean ritual traditions
 	religious_aspects = 2
 	has_religious_influence = yes
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		monthly_religious_influence = 0.08
+		maximum_religious_influence = 300
+		global_max_literacy = 2
 	}
 	opinions = {
+		antq_caribbean = kindred
+		antq_central_amazon_traditions = kindred
+		antq_mesoamerican = kindred
+		antq_north_american = kindred
 	}
 }
 
 antq_north_american = { # P11;CAH-XI; North American ritual traditions
 	color = antq_religion_color_antq_north_american
 	group = folk_north_american_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_andean = kindred
+		antq_caribbean = kindred
+		antq_central_amazon_traditions = kindred
+		antq_mesoamerican = kindred
 	}
 }
 
 antq_siberian = { # P11;CAH-XI; Siberian ritual traditions
 	color = antq_religion_color_antq_siberian
 	group = folk_asian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		land_morale_modifier = 0.01
 	}
 	opinions = {
+		antq_amur_ussuri_traditions = kindred
+		antq_bon = kindred
+		antq_central_plateau_traditions = kindred
+		antq_eastern_plateau_traditions = kindred
+		antq_tengri = kindred
+		antq_western_plateau_traditions = kindred
 	}
 }
 
 antq_austronesian_religion = { # P11;CAH-XI; Austronesian and Polynesian traditions
 	color = antq_religion_color_antq_austronesian_religion
 	group = folk_polynesian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_australian_dreaming = kindred
+		antq_borneo_late_prehistoric_traditions = kindred
+		antq_mariana_island_traditions = kindred
+		antq_papuan_local_traditions = kindred
+		antq_western_caroline_traditions = kindred
 	}
 }
 
 antq_australian_dreaming = { # P11;CAH-XI; Australian traditions
 	color = antq_religion_color_antq_australian_dreaming
 	group = folk_australian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	enable = 476.9.4 # unavailable before ANTIQVITAS campaign end
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_austronesian_religion = kindred
+		antq_borneo_late_prehistoric_traditions = kindred
+		antq_mariana_island_traditions = kindred
+		antq_papuan_local_traditions = kindred
+		antq_western_caroline_traditions = kindred
 	}
 }
 
 antq_caribbean = { # P11;CAH-XI; Caribbean ritual traditions
 	color = antq_religion_color_antq_caribbean
 	group = folk_caribbean_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_andean = kindred
+		antq_central_amazon_traditions = kindred
+		antq_mesoamerican = kindred
+		antq_north_american = kindred
 	}
 }
 
 antq_eastern_hill_traditions = { # OUP-NEINDIA;P11; Plural northeast Indian plateau valley and highland traditions represented without backdating later organized religions or one uniform cult
 	color = antq_religion_color_antq_eastern_hill_traditions
 	group = folk_asian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_central_indian_traditions = kindred
 	}
 }
 
 antq_eastern_iranian_traditions = { # HAN-WR;IRAN-SOG-KANGJU;UNESCO-CA-NOMADS;P11; Plural Bactrian Sogdian Ferghana Kangju and Aria cult contexts represented without imposing one Arsacid orthodoxy or recovered common liturgy
 	color = antq_religion_color_antq_eastern_iranian_traditions
 	group = zoroastrian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.75
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_arsacid_zoroastrianism = kindred
+		antq_manichaeism = kindred
+		antq_tarim_oasis_traditions = kindred
 	}
 }
 
 antq_tarim_oasis_traditions = { # HAN-WR;HHS-WR;IRAN-CT;P11; Plural Tarim and north-Tianshan local cults represented without backdating widespread Mahayana institutions later documented languages or one common creed
 	color = antq_religion_color_antq_tarim_oasis_traditions
 	group = zoroastrian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.75
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_arsacid_zoroastrianism = kindred
+		antq_eastern_iranian_traditions = kindred
+		antq_manichaeism = kindred
 	}
 }
 
 antq_western_plateau_traditions = { # CAM-TIB-ARCH;OXF-SINO-TIB;P11; Plural western and northern plateau ritual traditions represented without equating archaeology with organized later Bon or one common creed
 	color = antq_religion_color_antq_western_plateau_traditions
 	group = folk_asian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		land_morale_modifier = 0.01
 	}
 	opinions = {
+		antq_amur_ussuri_traditions = kindred
+		antq_bon = kindred
+		antq_central_plateau_traditions = kindred
+		antq_eastern_plateau_traditions = kindred
+		antq_siberian = kindred
+		antq_tengri = kindred
 	}
 }
 
 antq_central_plateau_traditions = { # ANT-BANGGA;CAM-TIB-ARCH;P11; Plural central-valley household landscape ancestor and mortuary traditions without backdating imperial Buddhism or organized later Bon
 	color = antq_religion_color_antq_central_plateau_traditions
 	group = folk_asian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		land_morale_modifier = 0.01
 	}
 	opinions = {
+		antq_amur_ussuri_traditions = kindred
+		antq_bon = kindred
+		antq_eastern_plateau_traditions = kindred
+		antq_siberian = kindred
+		antq_tengri = kindred
+		antq_western_plateau_traditions = kindred
 	}
 }
 
 antq_eastern_plateau_traditions = { # CAM-EAST-TIB;RAD-YUSHU;OXF-EAST-RIM;P11; Plural eastern highland and corridor traditions without deriving one cult from stone-cist burials or later ethnography
 	color = antq_religion_color_antq_eastern_plateau_traditions
 	group = folk_asian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		land_morale_modifier = 0.01
 	}
 	opinions = {
+		antq_amur_ussuri_traditions = kindred
+		antq_bon = kindred
+		antq_central_plateau_traditions = kindred
+		antq_siberian = kindred
+		antq_tengri = kindred
+		antq_western_plateau_traditions = kindred
 	}
 }
 
 antq_central_indian_traditions = { # CAM-CENTRAL-INDIA-MEGALITHS;INFLIB-EARLY-HISTORIC;P11; Plural Narmada Vindhya Son and Bastar local traditions represented through archaeological landscapes without inventing one theology priesthood ethnicity or cult
 	color = antq_religion_color_antq_central_indian_traditions
 	group = folk_asian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_eastern_hill_traditions = kindred
 	}
 }
 
 antq_mainland_southeast_asian_traditions = { # CAM-SAH;UNESCO-JARS;CAM-SEA-IRON;CAM-MYANMAR-CHRON;P11; Plural river basin upland mortuary household and landscape traditions without backdating Buddhist Hindu Tai or centralized state institutions
 	color = antq_religion_color_antq_mainland_southeast_asian_traditions
 	group = buddhist
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 1.00
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_mahayana = kindred
+		antq_theravada = kindred
 	}
 }
 
 antq_amur_ussuri_traditions = { # NMJH-YIL;RAD-RFE-IRON;RAD-SAKHALIN;P11; Plural river forest maritime household and mortuary traditions without deriving theology from archaeological cultures or later ethnography
 	color = antq_religion_color_antq_amur_ussuri_traditions
 	group = folk_asian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		land_morale_modifier = 0.01
 	}
 	opinions = {
+		antq_bon = kindred
+		antq_central_plateau_traditions = kindred
+		antq_eastern_plateau_traditions = kindred
+		antq_siberian = kindred
+		antq_tengri = kindred
+		antq_western_plateau_traditions = kindred
 	}
 }
 
 antq_borneo_late_prehistoric_traditions = { # ANU-NIAH-METAL;ANTH-KAL-IRON;MYH-BUKIT-TENGKORAK;P11; Plural cave river forest mortuary maritime and metalworking traditions without backdating organized religion or later ethnic theology
 	color = antq_religion_color_antq_borneo_late_prehistoric_traditions
 	group = folk_polynesian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_australian_dreaming = kindred
+		antq_austronesian_religion = kindred
+		antq_mariana_island_traditions = kindred
+		antq_papuan_local_traditions = kindred
+		antq_western_caroline_traditions = kindred
 	}
 }
 
 antq_papuan_local_traditions = { # ANU-BOMBERAI;JPA-PAPUA;P11; Plural New Guinea local ritual traditions represented without reconstructing one theology or priesthood
 	color = antq_religion_color_antq_papuan_local_traditions
 	group = folk_papuan_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_australian_dreaming = kindred
+		antq_austronesian_religion = kindred
+		antq_borneo_late_prehistoric_traditions = kindred
+		antq_mariana_island_traditions = kindred
+		antq_western_caroline_traditions = kindred
 	}
 }
 
 antq_mariana_island_traditions = { # WA-MARIANA;ANU-MIC;P11; Early Mariana community traditions represented without backdating contact-era named deities or chiefly institutions
 	color = antq_religion_color_antq_mariana_island_traditions
 	group = folk_micronesian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_australian_dreaming = kindred
+		antq_austronesian_religion = kindred
+		antq_borneo_late_prehistoric_traditions = kindred
+		antq_papuan_local_traditions = kindred
+		antq_western_caroline_traditions = kindred
 	}
 }
 
 antq_western_caroline_traditions = { # ICA-YAP;ANU-MIC;P11; Yap-Ulithi local traditions represented without projecting the later sawei order into AD 1
 	color = antq_religion_color_antq_western_caroline_traditions
 	group = folk_micronesian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_australian_dreaming = kindred
+		antq_austronesian_religion = kindred
+		antq_borneo_late_prehistoric_traditions = kindred
+		antq_mariana_island_traditions = kindred
+		antq_papuan_local_traditions = kindred
 	}
 }
 
 antq_central_amazon_traditions = { # SA-EXPANSIONS;ACUTUBA-CHRON;P11; Central-Amazon local ritual traditions represented without equating ceramic horizons with one theology ethnicity or priesthood
 	color = antq_religion_color_antq_central_amazon_traditions
 	group = folk_brazilian_group
-	religious_aspects = 2
-	has_religious_influence = yes
+	religious_aspects = 1
 	definition_modifier = {
-		tolerance_own = 0.01
-		monthly_religious_influence = 0.10
-		maximum_religious_influence = 400
+		tolerance_own = 0.50
+		global_monthly_food_modifier = 0.01
 	}
 	opinions = {
+		antq_andean = kindred
+		antq_caribbean = kindred
+		antq_mesoamerican = kindred
+		antq_north_american = kindred
 	}
 }
