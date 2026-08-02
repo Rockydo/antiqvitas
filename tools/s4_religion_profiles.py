@@ -9,6 +9,7 @@ from collections import defaultdict
 from pathlib import Path
 
 import generate_m4_definitions as m4
+import generate_start_mirror as m4_start
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,6 +20,8 @@ INSTITUTION_SPREAD = ROOT / "in_game/common/scripted_triggers/00_antiquitas_m8_i
 FIRST_CENTURY = ROOT / "in_game/events/antq_m10_first_century.txt"
 SECOND_CENTURY = ROOT / "in_game/events/antq_m10_second_century.txt"
 THIRD_CENTURY = ROOT / "in_game/events/antq_m10_third_century.txt"
+START_POPS = ROOT / "main_menu/setup/start/06_pops.txt"
+COMPATIBILITY_POPS = ROOT / "main_menu/setup/start/21_locations.txt"
 
 
 def block(text: str, key: str) -> str:
@@ -118,7 +121,14 @@ def check() -> int:
         key: value[0].engine() for key, value in m4.religion_availability().items()
     }
     if enable_rows != expected_dates:
-        failures.append(f"religion enable dates drifted: {enable_rows}")
+        failures.append(f"future-religion enable dates drifted: {enable_rows}")
+    ledger_dates = {
+        row["religion"]: row["enable_date"]
+        for row in rows
+        if row["religion"] in expected_dates
+    }
+    if ledger_dates != expected_dates:
+        failures.append(f"historical emergence dates drifted: {ledger_dates}")
     if not {"kindred", "positive", "negative"}.issubset(opinion_values):
         failures.append("interfaith views lack kindred/positive/negative distinctions")
     for source, targets in rendered_opinions.items():
@@ -154,14 +164,33 @@ def check() -> int:
     if spread.count("religion_group:christian") < 2 or "antq_christian_group" in spread:
         failures.append("Christian institutions do not use the populated native group")
     foundation_contracts = (
-        (FIRST_CENTURY, "location:jerusalem", "fraction = 0.02 religion = religion:antq_early_christianity"),
-        (SECOND_CENTURY, "location:chengdu", "fraction = 0.03 religion = religion:antq_daoism"),
-        (THIRD_CENTURY, "capital = {", "fraction = 0.02 religion = religion:antq_manichaeism"),
+        (FIRST_CENTURY, "location:jerusalem", "fraction = 0.02 religion = religion:antq_early_christianity", "antq_early_christianity"),
+        (SECOND_CENTURY, "location:chengdu", "fraction = 0.03 religion = religion:antq_daoism", "antq_daoism"),
+        (THIRD_CENTURY, "capital = {", "fraction = 0.02 religion = religion:antq_manichaeism", "antq_manichaeism"),
     )
-    for path, anchor, seed in foundation_contracts:
+    for path, anchor, seed, future in foundation_contracts:
         payload = path.read_text(encoding="utf-8-sig")
         if anchor not in payload or seed not in payload:
             failures.append(f"{path.name}: religion foundation does not seed a bounded pop")
+        enable = f"religion:{future} = {{ enable_religion = yes }}"
+        if enable not in payload or payload.index(enable) > payload.index(seed):
+            failures.append(f"{path.name}: native religion enable effect must precede the seed")
+
+    start_pops = START_POPS.read_text(encoding="utf-8-sig")
+    compatibility_pops = COMPATIBILITY_POPS.read_text(encoding="utf-8-sig")
+    for location, (religion, _contemporary, culture, pop_type) in m4_start.OPENING_RELIGION_SEEDS.items():
+        adapter = (
+            f"type = {pop_type} size = 1.000 culture = {culture} religion = {religion}"
+        )
+        if start_pops.count(adapter) != 1 or start_pops.count(f"religion = {religion}") != 1:
+            failures.append(f"{religion}: bounded AD 1 community is not singular")
+        if f"\t{location} = {{" not in start_pops:
+            failures.append(f"{religion}: opening anchor {location} is absent")
+    for future in expected_dates:
+        if f"religion = {future}" in start_pops or f"religion = {future}" in compatibility_pops:
+            failures.append(f"{future}: premature historical start pop survived")
+    if len(m4_start.OPENING_RELIGION_SEEDS) != 7 or len(expected_dates) != 3:
+        failures.append("zero-pop religion inventory is not partitioned 7 opening / 3 future")
 
     if failures:
         print("s4_religion_profiles: FAIL")

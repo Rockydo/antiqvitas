@@ -2921,9 +2921,10 @@ locations = {
 		define_pop = { type = clergy size = 25.000 culture = antq_egyptian religion = antq_religio_romana }
 		define_pop = { type = laborers size = 65.000 culture = antq_egyptian religion = antq_religio_romana }
 		define_pop = { type = nobles size = 25.000 culture = antq_egyptian religion = antq_religio_romana }
-		define_pop = { type = peasants size = 200.000 culture = antq_egyptian religion = antq_religio_romana }
+		define_pop = { type = peasants size = 199.000 culture = antq_egyptian religion = antq_religio_romana }
 		define_pop = { type = slaves size = 60.000 culture = antq_egyptian religion = antq_religio_romana }
 		define_pop = { type = soldiers size = 35.000 culture = antq_egyptian religion = antq_religio_romana }
+		define_pop = { type = peasants size = 1.000 culture = antq_egyptian religion = antq_kemetic } # Bounded opening community; total-neutral.
 	}
 	alexandrov_gay = {
 		define_pop = { type = clergy size = 0.025 culture = antq_sarmatian religion = antq_tengri }
@@ -7130,8 +7131,9 @@ locations = {
 		define_pop = { type = clergy size = 0.344 culture = antq_geez religion = antq_kushite_amun }
 		define_pop = { type = laborers size = 1.070 culture = antq_geez religion = antq_kushite_amun }
 		define_pop = { type = nobles size = 0.344 culture = antq_geez religion = antq_kushite_amun }
-		define_pop = { type = peasants size = 11.346 culture = antq_geez religion = antq_kushite_amun }
+		define_pop = { type = peasants size = 10.346 culture = antq_geez religion = antq_kushite_amun }
 		define_pop = { type = soldiers size = 0.690 culture = antq_geez religion = antq_kushite_amun }
+		define_pop = { type = peasants size = 1.000 culture = antq_geez religion = antq_aksumite_paganism } # Bounded opening community; total-neutral.
 	}
 	aya = {
 		define_pop = { type = burghers size = 0.064 culture = antq_wa religion = antq_kami }
@@ -21549,9 +21551,10 @@ locations = {
 		define_pop = { type = clergy size = 2.250 culture = antq_daga_highland religion = antq_papuan_local_traditions }
 		define_pop = { type = laborers size = 1.500 culture = antq_daga_highland religion = antq_papuan_local_traditions }
 		define_pop = { type = nobles size = 3.000 culture = antq_daga_highland religion = antq_papuan_local_traditions }
-		define_pop = { type = peasants size = 6.000 culture = antq_daga_highland religion = antq_papuan_local_traditions }
+		define_pop = { type = peasants size = 5.000 culture = antq_daga_highland religion = antq_papuan_local_traditions }
 		define_pop = { type = soldiers size = 5.250 culture = antq_daga_highland religion = antq_papuan_local_traditions }
 		define_pop = { type = tribesmen size = 55.500 culture = antq_daga_highland religion = antq_papuan_local_traditions }
+		define_pop = { type = peasants size = 1.000 culture = antq_daga_highland religion = antq_australian_dreaming } # Bounded opening community; total-neutral.
 	}
 	dagana = {
 		define_pop = { type = burghers size = 0.262 culture = antq_senegambian religion = antq_west_african }
@@ -52356,7 +52359,8 @@ locations = {
 		define_pop = { type = nobles size = 0.154 culture = antq_central_tsangpo religion = antq_central_plateau_traditions }
 		define_pop = { type = peasants size = 0.307 culture = antq_central_tsangpo religion = antq_central_plateau_traditions }
 		define_pop = { type = soldiers size = 0.269 culture = antq_central_tsangpo religion = antq_central_plateau_traditions }
-		define_pop = { type = tribesmen size = 2.837 culture = antq_central_tsangpo religion = antq_central_plateau_traditions }
+		define_pop = { type = tribesmen size = 1.837 culture = antq_central_tsangpo religion = antq_central_plateau_traditions }
+		define_pop = { type = tribesmen size = 1.000 culture = antq_central_tsangpo religion = antq_bon } # Bounded opening community; total-neutral.
 	}
 	lho_taklung = {
 		define_pop = { type = burghers size = 0.058 culture = antq_central_tsangpo religion = antq_central_plateau_traditions }
@@ -70601,8 +70605,9 @@ locations = {
 		define_pop = { type = clergy size = 15.000 culture = antq_magadhi_prakrit religion = antq_brahmanism }
 		define_pop = { type = laborers size = 51.600 culture = antq_magadhi_prakrit religion = antq_brahmanism }
 		define_pop = { type = nobles size = 15.000 culture = antq_magadhi_prakrit religion = antq_brahmanism }
-		define_pop = { type = peasants size = 143.400 culture = antq_magadhi_prakrit religion = antq_brahmanism }
+		define_pop = { type = peasants size = 142.400 culture = antq_magadhi_prakrit religion = antq_brahmanism }
 		define_pop = { type = soldiers size = 21.000 culture = antq_magadhi_prakrit religion = antq_brahmanism }
+		define_pop = { type = peasants size = 1.000 culture = antq_magadhi_prakrit religion = antq_jainism } # Bounded opening community; total-neutral.
 	}
 	patna_garjat = {
 		define_pop = { type = clergy size = 1.656 culture = antq_kalingan religion = antq_brahmanism }
@@ -89015,7 +89020,8 @@ locations = {
 		define_pop = { type = nobles size = 0.088 culture = antq_kulay religion = antq_finnic }
 		define_pop = { type = peasants size = 0.176 culture = antq_kulay religion = antq_finnic }
 		define_pop = { type = soldiers size = 0.154 culture = antq_kulay religion = antq_finnic }
-		define_pop = { type = tribesmen size = 1.630 culture = antq_kulay religion = antq_finnic }
+		define_pop = { type = tribesmen size = 0.630 culture = antq_kulay religion = antq_finnic }
+		define_pop = { type = tribesmen size = 1.000 culture = antq_kulay religion = antq_siberian } # Bounded opening community; total-neutral.
 	}
 	surigao = {
 		define_pop = { type = burghers size = 0.076 culture = antq_agusan_river religion = antq_austronesian_religion }
@@ -96457,9 +96463,10 @@ locations = {
 		define_pop = { type = clergy size = 9.000 culture = antq_phoenician_punic religion = antq_religio_romana }
 		define_pop = { type = laborers size = 23.400 culture = antq_phoenician_punic religion = antq_religio_romana }
 		define_pop = { type = nobles size = 9.000 culture = antq_phoenician_punic religion = antq_religio_romana }
-		define_pop = { type = peasants size = 72.000 culture = antq_phoenician_punic religion = antq_religio_romana }
+		define_pop = { type = peasants size = 71.000 culture = antq_phoenician_punic religion = antq_religio_romana }
 		define_pop = { type = slaves size = 21.600 culture = antq_phoenician_punic religion = antq_religio_romana }
 		define_pop = { type = soldiers size = 12.600 culture = antq_phoenician_punic religion = antq_religio_romana }
+		define_pop = { type = peasants size = 1.000 culture = antq_phoenician_punic religion = antq_punic } # Bounded opening community; total-neutral.
 	}
 	tunliu = {
 		define_pop = { type = clergy size = 0.520 culture = antq_jin_han religion = antq_chinese_state_cult }

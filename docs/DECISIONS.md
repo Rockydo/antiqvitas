@@ -4514,3 +4514,10 @@ annona only after countries/markets exist, under mapped tag XAA; accept it only
 when a fresh monthly export shows a Roma import. Unreachable post-campaign
 character comparisons in global ancient callbacks are false-gated by exact
 installed-source guards.
+
+## 2026-08-02 - Future faiths use native dated enablement
+
+Follow installed Sikhism: keep a sourced future `enable` date and execute
+`enable_religion` before the foundation event seeds adherents. Do not retain
+Christianity, organized Daoism, or Manichaeism through ahistorical setup pops.
+Seven faiths genuinely present in AD 1 retain bounded, total-neutral communities.

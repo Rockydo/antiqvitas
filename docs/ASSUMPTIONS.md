@@ -6012,3 +6012,8 @@ The AD 30 Jerusalem Christian (2%), AD 142 Chengdu Daoist (3%), and AD 240
 Arsacid Manichaean (2%) conversions are bounded gameplay seeds, not census
 claims. Sources: master plan §9; `P11`; `CAH-XI`; `IRAN-MANI`.
 [secure broad chronology; contested local share]
+
+Christianity, organized Daoism, and Manichaeism have no AD 1 compatibility
+population. Their native dated definitions are explicitly enabled by the same
+foundation event that creates the bounded historical seed. Seven other faiths
+receive plausible, total-neutral AD 1 communities.

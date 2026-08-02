@@ -403,6 +403,7 @@ def impact_lines(record: Current) -> tuple[str, ...]:
     """Use only effects harvested from installed country-event files."""
     if record.key == "christianity_foundation":
         return (
+            "\t\treligion:antq_early_christianity = { enable_religion = yes }",
             "\t\t# The AD 30 current seeds a small Jerusalem community; it does not convert Judea.",
             "\t\tlocation:jerusalem = {",
             "\t\t\tevery_pop = {",

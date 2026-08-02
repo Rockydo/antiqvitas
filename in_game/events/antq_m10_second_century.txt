@@ -278,6 +278,7 @@ antq_m10_second.2010 = {
 	option = {
 		name = antq_m10_second.2010.a
 		historical_option = yes
+		religion:antq_daoism = { enable_religion = yes }
 		# CAM-CM: bounded Chengdu-basin seed for the organized Celestial Masters current.
 		location:chengdu = {
 			every_pop = {
@@ -349,9 +350,10 @@ antq_m10_second.2013 = {
 		add_prestige = prestige_mild_penalty
 		add_manpower = { value = root.monthly_manpower multiply = -6 }
 		add_gold = { value = root.monthly_income_trade_and_tax multiply = -4 }
-		capital = {
-			set_disease_presence = {
-				disease_outbreak = disease:smallpox.original_outbreak
+		# SCI-ANT: Antioch is an eastern-circuit anchor, not a claimed first case.
+		location:antioch = {
+			spawn_disease = {
+				disease = disease:smallpox
 				value = 0.35
 			}
 			province = { change_province_food_percentage = -0.15 }
@@ -361,9 +363,10 @@ antq_m10_second.2013 = {
 			add_prestige = prestige_weak_penalty
 			add_manpower = { value = monthly_manpower multiply = -3 }
 			add_gold = { value = monthly_income_trade_and_tax multiply = -2 }
-			capital = {
-				set_disease_presence = {
-					disease_outbreak = disease:smallpox.original_outbreak
+			# A separate outbreak proxy avoids asserting one intercontinental chain.
+			location:luoyang = {
+				spawn_disease = {
+					disease = disease:smallpox
 					value = 0.20
 				}
 				province = { change_province_food_percentage = -0.08 }

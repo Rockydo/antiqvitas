@@ -149,13 +149,7 @@ antq_m10_third.3005 = {
 		add_prestige = prestige_mild_penalty
 		add_manpower = { value = root.monthly_manpower multiply = -8 }
 		add_gold = { value = root.monthly_income_trade_and_tax multiply = -6 }
-		capital = {
-			set_disease_presence = {
-				disease_outbreak = disease:smallpox.original_outbreak
-				value = 0.25
-			}
-			province = { change_province_food_percentage = -0.12 }
-		}
+		capital = { province = { change_province_food_percentage = -0.12 } }
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_mobile_field_armies }
@@ -181,6 +175,7 @@ antq_m10_third.3006 = {
 	option = {
 		name = antq_m10_third.3006.a
 		historical_option = yes
+		religion:antq_manichaeism = { enable_religion = yes }
 		# IRAN-MANI: seed a bounded community without converting the Iranian state.
 		capital = {
 			every_pop = {
@@ -239,9 +234,10 @@ antq_m10_third.3008 = {
 		add_stability = stability_mild_penalty
 		add_manpower = { value = root.monthly_manpower multiply = -7 }
 		add_gold = { value = root.monthly_income_trade_and_tax multiply = -5 }
-		capital = {
-			set_disease_presence = {
-				disease_outbreak = disease:smallpox.original_outbreak
+		# JRA-CYP-2015/2021: Tunis is the reviewed Carthage location proxy.
+		location:tunis = {
+			spawn_disease = {
+				disease = disease:smallpox
 				value = 0.30
 			}
 			province = { change_province_food_percentage = -0.15 }

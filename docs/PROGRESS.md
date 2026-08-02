@@ -1,5 +1,15 @@
 # Progress
 
+## 2026-08-02 - Structural simulation audit hardened
+
+- Added exact guards for Principate finance, major-market inputs, native epidemic
+  mortality/spread, bounded outbreak anchors, and dated religion foundations.
+- Differentiated 52 religions; seven AD 1 minority communities are total-neutral.
+  Three future faiths follow native dated enablement and have no opening pop.
+- Confirmed five naval tiers across all 463 starts and zero legacy law unlocks.
+- `make validate` passes 163/163; paired smoke adds zero lines at fingerprint
+  `452d1f5f1125c17024dce10a746cabdcabed870eef2b95e579c1c13941479067`.
+
 ## 2026-08-01 - Loading scenes follow the installed eight-mesh contract
 
 - Rejected finished-master duplication and broad exact-cutout layering.

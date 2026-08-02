@@ -41,6 +41,8 @@ VALIDATE_COMMANDS = (
     Command("tools/pdxlint.py"),
     Command("tools/s4_structural_audit.py"),
     Command("tools/s4_annona_route.py"),
+    Command("tools/s4_principate_economy.py"),
+    Command("tools/s4_epidemic_trajectories.py"),
     Command("tools/m6_power.py", ("--check",)),
     Command("tools/s2_ancient_politics.py", ("--check",)),
     Command("tools/s2_roman_politics_depth.py"),

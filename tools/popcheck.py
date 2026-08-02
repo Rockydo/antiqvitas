@@ -17,6 +17,8 @@ from generate_start_mirror import (
     COMPATIBILITY_POP_SIZE,
     COMPATIBILITY_RELIGION,
     MAX_UNTARGETED_LOCATION_POPULATION,
+    OPENING_RELIGION_SEEDS,
+    RELIGION_RETENTION_POP_SIZE,
     culture_presence_cultures,
     load_population_plan,
     population_city_targets,
@@ -155,7 +157,17 @@ def main() -> int:
             "religion",
             religion_remaps.get(location, {}).get("religion", profile.religion),
         )
-        if record["culture"] != expected_culture or record["religion"] != expected_religion:
+        opening_seed = OPENING_RELIGION_SEEDS.get(location)
+        is_opening_seed = bool(
+            opening_seed
+            and record["religion"] == opening_seed[0]
+            and record["culture"] == opening_seed[2]
+            and record["type"] == opening_seed[3]
+            and size == RELIGION_RETENTION_POP_SIZE
+        )
+        if not is_opening_seed and (
+            record["culture"] != expected_culture or record["religion"] != expected_religion
+        ):
             failures.append(
                 f"{location}: profile {record['culture']}/{record['religion']} does not match {tag} "
                 f"({expected_culture}/{expected_religion})"
@@ -177,10 +189,11 @@ def main() -> int:
     seen_compatibility: set[str] = set()
     for record in compatibility:
         culture = record.get("culture", "")
-        seen_compatibility.add(culture)
         if record.get("location") != COMPATIBILITY_LOCATION:
             failures.append(f"compatibility pop is not at {COMPATIBILITY_LOCATION}")
-        if record.get("type") != "peasants" or record.get("religion") != COMPATIBILITY_RELIGION:
+        religion = record.get("religion", "")
+        seen_compatibility.add(culture)
+        if record.get("type") != "peasants" or religion != COMPATIBILITY_RELIGION:
             failures.append(f"{culture}: invalid compatibility population contract")
         if culture not in valid_cultures and culture not in set(json.loads((ROOT / "docs/vanilla_symbols/culture.json").read_text(encoding="utf-8-sig"))):
             failures.append(f"{culture}: invalid compatibility culture")
@@ -191,7 +204,6 @@ def main() -> int:
             continue
         if size != COMPATIBILITY_POP_SIZE:
             failures.append(f"{culture}: compatibility size {size} is not {COMPATIBILITY_POP_SIZE}")
-            continue
         region = overrides.get(COMPATIBILITY_LOCATION, {}).get(
             "region", roster[owners[COMPATIBILITY_LOCATION]]["region"]
         )

@@ -31,10 +31,14 @@ runtime evidence agree.
   the native groups actually inhabited by custom religions (or explicit religion
   sets); delete or quarantine empty `antq_*_group` adapters and validate that every
   referenced group has members.
-- [ ] Give religion families materially distinct aspect counts, influence access,
+- [x] Give religion families materially distinct aspect counts, influence access,
   tolerance, conversion, authority, and interfaith opinions. No universal cloned
   profile or empty opinion block may remain; runtime-prove Christian eligibility
   and representative Roman, Iranian, Indic, East Asian, tribal, and American faiths.
+  Static and six-family UI proof pass. Future faiths use the installed native
+  pattern: dated definitions plus `enable_religion` before bounded M10 seeding;
+  no premature registry pop exists. Seven genuine AD 1 faiths have bounded,
+  total-neutral communities. Fresh event/target and smoke proof pass.
 
 ### S4-P1 - Economy, knowledge, and forces
 
@@ -47,17 +51,22 @@ runtime evidence agree.
 - [ ] Remove the Principate's flat `monthly_gold_income = 500`. Balance Rome through
   historically bounded taxes, annona logistics, production, buildings, control,
   market supply, and opening reserves; prove construction viability without a
-  permanent treasury cheat and check peer great powers for solvency.
+  permanent treasury cheat and check peer great powers for solvency. Static gate
+  passes: no reform grant, bounded pre-market bridge, 405 small-polity reserves,
+  Rome 3x core industrial coverage, and five peer markets 2x; runtime remains.
 - [x] Quarantine legacy advance/law compatibility files from the playable union.
   Visible ancient advances may unlock only ANTIQVITAS laws; scan the installed union
   for medieval IDs such as `education_masses_law`, `feudal_de_jure_law`, and
   `royal_court_customs_law`, while retaining only explicitly documented inert engine
   adapters that cannot appear in UI or progression.
-- [ ] Replace universal coastal patrol-plus-transport grants with five evidence-led
+- [x] Replace universal coastal patrol-plus-transport grants with five evidence-led
   naval capabilities: local watercraft, limited transport, organized patrol, state
   fleet, and long-distance capacity. Classify every coastal polity; gate units by
   capability, coast/river basin, institutions, and advances; keep inland and
   ocean-crossing restrictions intact and runtime-prove contrasting naval powers.
+  All 463 starts resolve: 232 inland, 17 local, 76 limited transport, 119 patrol,
+  8 state fleet, and 11 long-distance; Rome/Parthia/Han/Satavahana contrast with
+  inland Suebi in the ledger and fresh UI.
 
 ### S4-P2 - Agency, historical currents, and institutions
 
@@ -75,10 +84,12 @@ runtime evidence agree.
 - [x] Rebuild situations and disasters around staged progress, recurring material
   pressures, and player/AI resolution paths. A date may be a safety bound, never the
   sole exit; expose progress and validate at least two viable responses per current.
-- [ ] Make epidemic currents affect mortality/population growth, labor, armies,
+- [x] Make epidemic currents affect mortality/population growth, labor, armies,
   food, markets, and state finances according to reach and severity. Prestige and
   stability may be secondary only; validate Antonine and Cyprian trajectories and
-  recovery without deterministic modern-style global spread.
+  recovery without deterministic modern-style global spread. Antonine and Cyprian
+  now use three bounded native-smallpox anchors with mortality/spread, manpower,
+  food, tax, and fiscal trajectories; final smoke is zero-delta.
 - [x] Turn international organizations into functioning systems: historically
   credible membership, join/leave rules, recurring actions, AI participation,
   benefits, obligations, and dissolution/evolution. Eliminate static labels and

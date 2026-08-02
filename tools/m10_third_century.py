@@ -180,6 +180,7 @@ def impact_lines(record: Current) -> tuple[str, ...]:
     """Use only effects verified by the local event corpus/script-doc dump."""
     if record.key == "manichaeism_foundation":
         return (
+            "\t\treligion:antq_manichaeism = { enable_religion = yes }",
             "\t\t# IRAN-MANI: seed a bounded community without converting the Iranian state.",
             "\t\tcapital = {",
             "\t\t\tevery_pop = {",
@@ -227,22 +228,17 @@ def impact_lines(record: Current) -> tuple[str, ...]:
             "\t\tadd_prestige = prestige_mild_penalty",
             "\t\tadd_manpower = { value = root.monthly_manpower multiply = -8 }",
             "\t\tadd_gold = { value = root.monthly_income_trade_and_tax multiply = -6 }",
-            "\t\tcapital = {",
-            "\t\t\tset_disease_presence = {",
-            "\t\t\t\tdisease_outbreak = disease:smallpox.original_outbreak",
-            "\t\t\t\tvalue = 0.25",
-            "\t\t\t}",
-            "\t\t\tprovince = { change_province_food_percentage = -0.12 }",
-            "\t\t}",
+            "\t\tcapital = { province = { change_province_food_percentage = -0.12 } }",
         )
     if record.key == "cyprian_plague":
         return (
             "\t\tadd_stability = stability_mild_penalty",
             "\t\tadd_manpower = { value = root.monthly_manpower multiply = -7 }",
             "\t\tadd_gold = { value = root.monthly_income_trade_and_tax multiply = -5 }",
-            "\t\tcapital = {",
-            "\t\t\tset_disease_presence = {",
-            "\t\t\t\tdisease_outbreak = disease:smallpox.original_outbreak",
+            "\t\t# JRA-CYP-2015/2021: Tunis is the reviewed Carthage location proxy.",
+            "\t\tlocation:tunis = {",
+            "\t\t\tspawn_disease = {",
+            "\t\t\t\tdisease = disease:smallpox",
             "\t\t\t\tvalue = 0.30",
             "\t\t\t}",
             "\t\t\tprovince = { change_province_food_percentage = -0.15 }",
