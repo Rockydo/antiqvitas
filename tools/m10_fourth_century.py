@@ -22,7 +22,13 @@ from pathlib import Path
 
 from advance_event_packages import knowledge_response_lines
 from dates import AntqDate, M2_MIRROR_LANGUAGES, indexed_timeline, load_timeline
-from m10_history import engine_tags, resolution_trigger_lines, start_country_locations
+from m10_history import (
+    current_lifecycle_lines,
+    disaster_modifier_lines,
+    engine_tags,
+    resolution_trigger_lines,
+    start_country_locations,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 TIMELINE = ROOT / "docs/timeline.csv"
@@ -316,7 +322,6 @@ def impact_lines(record: Current, eastern_locations: tuple[tuple[str, str], ...]
         )
     if record.key == "olympic_sunset":
         return (
-            "\t\tdestroy_international_organization = { target = international_organization:antq_panhellenic_games }",
             "\t\tadd_legitimacy = legitimacy_mild_bonus",
         )
     if record.key == "east_west_division":
@@ -438,9 +443,7 @@ def situation_script(records: tuple[Current, ...]) -> str:
             "\tvisible = {",
             f"\t\tcountry_exists = c:{record.engine_tag}",
             "\t}",
-            "\ton_start = {",
-            f"\t\tc:{record.engine_tag} = {{ trigger_event_non_silently = {record.event_key} }}",
-            "\t}",
+            *current_lifecycle_lines(record, country_scoped=False),
             "}",
             "",
         ))
@@ -463,9 +466,8 @@ def disaster_script(records: tuple[Current, ...]) -> str:
             "\t\thas_any_active_disaster = no",
             "\t}",
             *resolution_trigger_lines(record, country_scoped=True),
-            "\ton_start = {",
-            f"\t\ttrigger_event_non_silently = {record.event_key}",
-            "\t}",
+            *disaster_modifier_lines(record),
+            *current_lifecycle_lines(record, country_scoped=True),
             "}",
             "",
         ))

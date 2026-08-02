@@ -55,7 +55,7 @@ runtime evidence agree.
 
 ### S4-P2 - Agency, historical currents, and institutions
 
-- [x] Replace the 332 mechanically empty phase notifications with substantive,
+- [x] Replace the 336 mechanically empty phase notifications with substantive,
   sourced events. Keep at least 400 real events, each with contextual effects or
   choices, nontrivial AI weights, and no count-only notification padding; validate
   mechanical effect and localization coverage for the full event union.
@@ -66,14 +66,14 @@ runtime evidence agree.
 - [x] Populate the opening AI personality manager for every playable tag with
   profile-appropriate personalities and validate full coverage plus representative
   Rome, Parthia, Suebi, Han, Indic, African, and American assignments.
-- [ ] Rebuild situations and disasters around staged progress, recurring material
+- [x] Rebuild situations and disasters around staged progress, recurring material
   pressures, and player/AI resolution paths. A date may be a safety bound, never the
   sole exit; expose progress and validate at least two viable responses per current.
 - [ ] Make epidemic currents affect mortality/population growth, labor, armies,
   food, markets, and state finances according to reach and severity. Prestige and
   stability may be secondary only; validate Antonine and Cyprian trajectories and
   recovery without deterministic modern-style global spread.
-- [ ] Turn international organizations into functioning systems: historically
+- [x] Turn international organizations into functioning systems: historically
   credible membership, join/leave rules, recurring actions, AI participation,
   benefits, obligations, and dissolution/evolution. Eliminate static labels and
   unexplained one-member shells; runtime-prove at least four contrasting bodies.
@@ -2289,17 +2289,17 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 468 Cape Bon illustration through a landscape-only northeastern-Tunisian coast treatment.
 - [x] Generate, dimension-check, round-trip review, wire, and smoke-test the AD 476 finale illustration through a landscape-only northern-Italian lowland treatment.
 - [x] Enforce complete reviewed illustration coverage for all 13 final-century generated currents.
-- [x] Render and review the maintained M11 event-art contact sheet (84 retained 1080x440 masters).
+- [x] Render and review the maintained M11 event-art contact sheet (85 retained 1080x440 masters).
 - [x] Replace all 157 AD 1 solid-colour CoA placeholders with validated, explicitly non-reconstructed standards; retain direct Rome, Han, and Parthia reviews above the regional catalog.
 - [x] Remove the obsolete M2 no-op age-scaffold definitions and their mirrored localization after M8's complete advance tree superseded them.
 - [x] Add the source-keyed concept glossary and project credits, including Pleiades attribution in game-visible metadata.
 - [x] Replace the five active age-view illustrations with reviewed, non-reconstructive 1080x440 DDS panels and retain their source/master chain.
 - [x] Replace the five M8 age-group icon surfaces used by all 250 advances; validate the source/master/DDS chain and the 50-per-group bindings.
 - [x] Establish and smoke-check the direct M8 advance-icon migration, beginning with Imperial Cult; completion remains open until every advance has its dedicated checked asset.
-- [x] Reach the section 18 event target with 416 sourced-window events using 84 reviewed shared paintings without inventing historical incidents.
+- [x] Reach the section 18 event target with 421 sourced-window events using 85 reviewed shared paintings without inventing historical incidents.
 - [x] Replace the 14 scripted-formation and successor-state solid-color CoAs with reviewed non-reconstructive standards and generation checks.
 - [x] Replace the `_default` fallbacks on every direct-key M4 religion and M8 institution screen surface with checked, source/master/DDS contracts.
-- [x] Complete the plan-permitted shared-icon fallback coverage: five reviewed advance icons cover all 250 advances, and 84 reviewed paintings cover all 416 historical-current events.
+- [x] Complete the plan-permitted shared-icon fallback coverage: five reviewed advance icons cover all 250 advances, and 85 reviewed paintings cover all 421 historical-current events.
 - [x] Complete the English-first localization audit: fifteen source files mirror exactly across all ten supported clients, with no game-visible stub text.
 - [x] Reach the decision target with 40 source-led own-country actions, exact action-message localization, and bounded player-only effects.
 - [x] Resolve the M11 generic-action message-registry blocker through a one-action exact-name pilot and a pinned full 40-action overlay; the source ledger is retained in `docs/m11/decisions.csv`.
@@ -2329,5 +2329,5 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
 - [x] Eliminate every fresh AD 1 culture/religion no-pop diagnostic without weakening the accepted baseline. The additive one-person compatibility ledger is engine-proven, population-offset, and rapid-probe clean.
 - [x] Run and record the final static/menu `make full` gate (rerun 2026-07-21:
       all checks pass and the enabled-mod smoke has zero new lines).
-- [x] Run the current full gate and record its report: `make full` is green at 350 cultures, 37 religions, 416 historical-current events, and the 230,000.000-thousand population target, with zero new smoke lines.
+- [x] Run the current full gate and record its report: `make full` is green at 350 cultures, 37 religions, 421 historical-current events, and the 230,000.000-thousand population target, with zero new smoke lines.
 - [x] Run the checkpointed autonomous observer game to 476 with decade screenshots and live log watch. (Superseded by the revised rapid-test acceptance policy: a full observer is optional evidence, not a ship gate.)

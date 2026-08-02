@@ -35,30 +35,122 @@ LOCATION_COORDINATES = ROOT / "docs/vanilla_symbols/location_coordinates.json"
 BATCH_END = AntqDate.parse("96.1.1")
 
 
+def progress_variable(record: object) -> str:
+    """Return a collision-proof progress variable for a historical current."""
+    return f"{record.script_key}_resolution_progress"
+
+
 def resolution_trigger_lines(record: object, *, country_scoped: bool) -> tuple[str, ...]:
-    """Permit an early, earned resolution after half the sourced window."""
-    midpoint = offset_date(
-        record.date, max(1, days_between(record.date, record.end_date) // 2)
-    )
-    state_lines = (
-        ("\t\t\tstability >= 20", "\t\t\tat_war = no")
-        if country_scoped else
-        (
-            f"\t\t\tc:{record.engine_tag} ?= {{",
-            "\t\t\t\tstability >= 20",
-            "\t\t\t\tat_war = no",
-            "\t\t\t}",
-        )
-    )
+    """End through earned progress; the sourced date is only a safety bound."""
+    variable = progress_variable(record)
     return (
         "\tcan_end = {",
         "\t\tOR = {",
         f"\t\t\tcurrent_date >= {record.end_date.engine()}",
-        "\t\t\tAND = {",
-        f"\t\t\t\tcurrent_date >= {midpoint.engine()}",
-        *tuple("\t" + line for line in state_lines),
-        "\t\t\t}",
+        f"\t\t\tvar:{variable} >= 100",
         "\t\t}",
+        "\t}",
+    )
+
+
+def current_lifecycle_lines(record: object, *, country_scoped: bool) -> tuple[str, ...]:
+    """Render staged progress, recurring pressure, and recovery for a current.
+
+    Peaceful consolidation is the fastest route. A stable mobilized state can
+    force a slower resolution, while a collapsing state still inches toward the
+    safety bound. The pressure tick spends manpower, tax/market income, and food
+    instead of substituting prestige notifications for material consequences.
+    """
+    variable = progress_variable(record)
+    disease = record.key in {"antonine_plague", "cyprian_plague"}
+    pressure_weight = 3 if disease else 1
+    empty_weight = 9 if disease else 23
+    start_event = (
+        f"\t\ttrigger_event_non_silently = {record.event_key}"
+        if country_scoped else
+        f"\t\tc:{record.engine_tag} = {{ trigger_event_non_silently = {record.event_key} }}"
+    )
+    end_key = "on_end" if country_scoped else "on_ended"
+    if country_scoped:
+        monthly_lines = (
+            "\ton_monthly = {",
+            "\t\tif = {",
+            "\t\t\tlimit = { stability >= 20 at_war = no }",
+            f"\t\t\tchange_variable = {{ name = {variable} add = 3 }}",
+            "\t\t}",
+            "\t\telse_if = {",
+            "\t\t\tlimit = { stability >= 0 at_war = yes }",
+            f"\t\t\tchange_variable = {{ name = {variable} add = 1.5 }}",
+            "\t\t}",
+            "\t\telse = {",
+            f"\t\t\tchange_variable = {{ name = {variable} add = 0.5 }}",
+            "\t\t}",
+            "\t\trandom_list = {",
+            f"\t\t\t{pressure_weight} = {{",
+            "\t\t\t\tadd_manpower = { value = monthly_manpower multiply = -0.5 }",
+            "\t\t\t\tadd_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }",
+            "\t\t\t\tcapital = { province = { change_province_food_percentage = -0.01 } }",
+            "\t\t\t}",
+            f"\t\t\t{empty_weight} = {{}}",
+            "\t\t}",
+            "\t}",
+        )
+    else:
+        monthly_lines = (
+            "\ton_monthly = {",
+            f"\t\tc:{record.engine_tag} = {{",
+            "\t\t\tif = {",
+            "\t\t\t\tlimit = { stability >= 20 at_war = no }",
+            f"\t\t\t\troot = {{ change_variable = {{ name = {variable} add = 3 }} }}",
+            "\t\t\t}",
+            "\t\t\telse_if = {",
+            "\t\t\t\tlimit = { stability >= 0 at_war = yes }",
+            f"\t\t\t\troot = {{ change_variable = {{ name = {variable} add = 1.5 }} }}",
+            "\t\t\t}",
+            "\t\t\telse = {",
+            f"\t\t\t\troot = {{ change_variable = {{ name = {variable} add = 0.5 }} }}",
+            "\t\t\t}",
+            "\t\t\trandom_list = {",
+            f"\t\t\t\t{pressure_weight} = {{",
+            "\t\t\t\t\tadd_manpower = { value = monthly_manpower multiply = -0.5 }",
+            "\t\t\t\t\tadd_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }",
+            "\t\t\t\t\tcapital = { province = { change_province_food_percentage = -0.01 } }",
+            "\t\t\t\t}",
+            f"\t\t\t\t{empty_weight} = {{}}",
+            "\t\t\t}",
+            "\t\t}",
+            "\t}",
+        )
+    return (
+        "\ton_start = {",
+        f"\t\tset_variable = {{ name = {variable} value = 0 }}",
+        start_event,
+        "\t}",
+        *monthly_lines,
+        f"\t{end_key} = {{",
+        f"\t\tif = {{ limit = {{ has_variable = {variable} }} remove_variable = {variable} }}",
+        "\t\tadd_stability = stability_weak_bonus" if country_scoped else
+        f"\t\tc:{record.engine_tag} ?= {{ add_stability = stability_weak_bonus }}",
+        "\t}",
+    )
+
+
+def disaster_modifier_lines(record: object) -> tuple[str, ...]:
+    """Apply continuous human and fiscal costs while a disaster is active."""
+    if record.key in {"antonine_plague", "cyprian_plague"}:
+        return (
+            "\tmodifier = {",
+            "\t\tglobal_population_growth = -0.003",
+            "\t\tglobal_manpower_modifier = -0.12",
+            "\t\tglobal_monthly_food_modifier = -0.10",
+            "\t\ttax_income_efficiency = small_tax_income_efficiency_penalty",
+            "\t}",
+        )
+    return (
+        "\tmodifier = {",
+        "\t\tglobal_manpower_modifier = -0.04",
+        "\t\tglobal_monthly_food_modifier = -0.025",
+        "\t\ttax_income_efficiency = tiny_tax_income_efficiency_penalty",
         "\t}",
     )
 NORTH_XIONGNU_TAG = "XNO"
@@ -358,7 +450,6 @@ def impact_lines(record: Current) -> tuple[str, ...]:
             f"\t\t\tadd_core = c:{NORTH_XIONGNU_TAG}",
             "\t\t}",
             "\t\tchange_tag_cosmetic = { tag = XSO }",
-            "\t\tdestroy_international_organization = { target = international_organization:antq_xiongnu_confederation }",
             "\t\tadd_stability = stability_mild_penalty",
         ))
         return tuple(lines)
@@ -439,20 +530,8 @@ def situation_script(records: tuple[Current, ...]) -> str:
             "\tvisible = {",
             f"\t\tcountry_exists = c:{record.engine_tag}",
             "\t}",
-            "\ton_start = {",
-            f"\t\tc:{record.engine_tag} = {{ trigger_event_non_silently = {record.event_key} }}",
-            "\t}",
+            *current_lifecycle_lines(record, country_scoped=False),
         ))
-        if record.key in {"immensum_bellum", "batavian_revolt"}:
-            effect = "add_prestige = prestige_weak_bonus" if record.key == "batavian_revolt" else "add_stability = stability_weak_penalty"
-            lines.extend((
-                "\ton_monthly = {",
-                "\t\trandom_list = {",
-                f"\t\t\t1 = {{ c:{record.engine_tag} = {{ {effect} }} }}",
-                "\t\t\t119 = {}",
-                "\t\t}",
-                "\t}",
-            ))
         lines.extend(("}", ""))
     return "\n".join(lines)
 
@@ -477,9 +556,8 @@ def disaster_script(records: tuple[Current, ...]) -> str:
             "\t\thas_any_active_disaster = no",
             "\t}",
             *resolution_trigger_lines(record, country_scoped=True),
-            "\ton_start = {",
-            f"\t\ttrigger_event_non_silently = {record.event_key}",
-            "\t}",
+            *disaster_modifier_lines(record),
+            *current_lifecycle_lines(record, country_scoped=True),
             "}",
             "",
         ))

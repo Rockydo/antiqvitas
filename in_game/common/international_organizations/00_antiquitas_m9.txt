@@ -10,27 +10,84 @@ antq_han_tributary_system = {
 	leader_type = country
 	leader_color = define:NMapColors|INTERNATIONAL_ORGANIZATION_LEADER_COLOR
 	create_visible_trigger = { always = no }
-	invite_visible_trigger = { always = no }
 	can_declare_war = { always = yes }
 	leader_modifier = {
 		monthly_prestige = 0.05
 		diplomatic_capacity_modifier = 0.10
 	}
-	can_join_trigger = { always = no }
-	can_leave_trigger = { always = no }
-	auto_leave_trigger = { always = no }
-	auto_disband_trigger = { always = no }
 	modifier = {
 		monthly_prestige = 0.01
 		global_trade_through_owned_territory_efficiency = 0.01
 	}
 	opinion_bonus = 5
-	on_joined = {
+	join_visible_trigger = { always = yes }
+	join_enabled_trigger = { always = yes }
+	invite_visible_trigger = { always = yes }
+	invite_enabled_trigger = { always = yes }
+	can_join_trigger = {
+		OR = {
+			tag = XAR
+			tag = XAS
+			tag = KUC
+			tag = XAT
+			tag = LOU
+			tag = XAV
+			tag = GMU
+			tag = XGA
+			tag = YQI
+			tag = SHC
+			tag = PUL
+			tag = FJS
+			tag = IWL
+			tag = DNH
+		}
+		is_rebel_country = no
 	}
-	on_left = {
+	can_leave_trigger = { NOT = { is_leader_of_international_organization = scope:recipient } }
+	auto_leave_trigger = {
+		NOT = {
+			OR = {
+				tag = XAR
+				tag = XAS
+				tag = KUC
+				tag = XAT
+				tag = LOU
+				tag = XAV
+				tag = GMU
+				tag = XGA
+				tag = YQI
+				tag = SHC
+				tag = PUL
+				tag = FJS
+				tag = IWL
+				tag = DNH
+			}
+		}
+	}
+	auto_disband_trigger = { total_members < 2 }
+	disband_minimum_member_count = 1
+	on_joined = { add_prestige = prestige_weak_bonus }
+	on_left = { add_prestige = prestige_weak_penalty }
+	monthly_effect = {
+		random_list = {
+			1 = {
+				every_international_organization_member = {
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.02 }
+				}
+			}
+			59 = {}
+		}
 	}
 	variables = {
+		antq_cohesion = {
+			monthly_change = 0.05
+			start = 50
+			min = 0
+			max = 100
+		}
 	}
+	ai_desire_to_join = { add = { desc = BASE_VALUE value = 25 } }
+	ai_desire_to_allow_new_member = { add = { desc = WE_WANT_THE_ORGANIZATION_TO_GROW value = 20 } }
 	only_leader_country_joins_defensive_wars = yes
 	join_defensive_wars_auto_call = {
 		scope:target ?= { NOT = { is_member_of_international_organization = root } }
@@ -46,27 +103,22 @@ antq_xiongnu_confederation = {
 	leader_type = country
 	leader_color = define:NMapColors|INTERNATIONAL_ORGANIZATION_LEADER_COLOR
 	create_visible_trigger = { always = no }
-	invite_visible_trigger = { always = no }
 	can_declare_war = { always = yes }
 	leader_modifier = {
 		monthly_prestige = 0.05
 		monthly_tribal_cohesion = 0.03
 	}
-	can_join_trigger = { always = no }
-	can_leave_trigger = { always = no }
-	auto_leave_trigger = { always = no }
-	auto_disband_trigger = { always = no }
 	modifier = {
 		monthly_prestige = 0.01
 		global_trade_through_owned_territory_efficiency = 0.01
 	}
 	opinion_bonus = 5
-	on_joined = {
-	}
-	on_left = {
-	}
-	variables = {
-	}
+	invite_visible_trigger = { always = no }
+	can_join_trigger = { always = no }
+	can_leave_trigger = { always = no }
+	auto_leave_trigger = { always = no }
+	auto_disband_trigger = { always = yes }
+	variables = {}
 }
 
 antq_kangju_confederation = {
@@ -78,27 +130,60 @@ antq_kangju_confederation = {
 	leader_type = country
 	leader_color = define:NMapColors|INTERNATIONAL_ORGANIZATION_LEADER_COLOR
 	create_visible_trigger = { always = no }
-	invite_visible_trigger = { always = no }
 	can_declare_war = { always = yes }
 	leader_modifier = {
 		monthly_prestige = 0.03
 		global_trade_through_owned_territory_efficiency = 0.03
 	}
-	can_join_trigger = { always = no }
-	can_leave_trigger = { always = no }
-	auto_leave_trigger = { always = no }
-	auto_disband_trigger = { always = no }
 	modifier = {
 		monthly_prestige = 0.01
 		global_trade_through_owned_territory_efficiency = 0.01
 	}
 	opinion_bonus = 5
-	on_joined = {
+	join_visible_trigger = { always = yes }
+	join_enabled_trigger = { always = yes }
+	invite_visible_trigger = { always = yes }
+	invite_enabled_trigger = { always = yes }
+	can_join_trigger = {
+		OR = {
+			tag = XCI
+			tag = SOG
+		}
+		is_rebel_country = no
 	}
-	on_left = {
+	can_leave_trigger = { NOT = { is_leader_of_international_organization = scope:recipient } }
+	auto_leave_trigger = {
+		NOT = {
+			OR = {
+				tag = XCI
+				tag = SOG
+			}
+		}
+	}
+	auto_disband_trigger = { total_members < 2 }
+	disband_minimum_member_count = 1
+	on_joined = { add_prestige = prestige_weak_bonus }
+	on_left = { add_prestige = prestige_weak_penalty }
+	monthly_effect = {
+		random_list = {
+			1 = {
+				every_international_organization_member = {
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.02 }
+				}
+			}
+			59 = {}
+		}
 	}
 	variables = {
+		antq_cohesion = {
+			monthly_change = 0.05
+			start = 50
+			min = 0
+			max = 100
+		}
 	}
+	ai_desire_to_join = { add = { desc = BASE_VALUE value = 25 } }
+	ai_desire_to_allow_new_member = { add = { desc = WE_WANT_THE_ORGANIZATION_TO_GROW value = 20 } }
 }
 
 antq_panhellenic_games = {
@@ -131,20 +216,69 @@ antq_germanic_frontier_exchanges = {
 	show_on_diplomatic_map = no
 	has_leader_country = no
 	create_visible_trigger = { always = no }
-	invite_visible_trigger = { always = no }
 	can_declare_war = { always = no }
-	can_join_trigger = { always = no }
-	can_leave_trigger = { always = no }
-	auto_leave_trigger = { always = no }
-	auto_disband_trigger = { always = no }
 	modifier = { monthly_prestige = 0.02 global_trade_through_owned_territory_efficiency = 0.01 }
 	opinion_bonus = 8
-	on_joined = {
+	join_visible_trigger = { always = yes }
+	join_enabled_trigger = { always = yes }
+	invite_visible_trigger = { always = yes }
+	invite_enabled_trigger = { always = yes }
+	can_join_trigger = {
+		OR = {
+			tag = XAA
+			tag = XBK
+			tag = CRU
+			tag = XBL
+			tag = XBM
+			tag = BTV
+			tag = XBN
+			tag = SEM
+			tag = HER
+			tag = XBO
+		}
+		is_rebel_country = no
 	}
-	on_left = {
+	can_leave_trigger = { always = yes }
+	auto_leave_trigger = {
+		NOT = {
+			OR = {
+				tag = XAA
+				tag = XBK
+				tag = CRU
+				tag = XBL
+				tag = XBM
+				tag = BTV
+				tag = XBN
+				tag = SEM
+				tag = HER
+				tag = XBO
+			}
+		}
+	}
+	auto_disband_trigger = { total_members < 2 }
+	disband_minimum_member_count = 1
+	on_joined = { add_prestige = prestige_weak_bonus }
+	on_left = { add_prestige = prestige_weak_penalty }
+	monthly_effect = {
+		random_list = {
+			1 = {
+				every_international_organization_member = {
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.02 }
+				}
+			}
+			59 = {}
+		}
 	}
 	variables = {
+		antq_cohesion = {
+			monthly_change = 0.05
+			start = 50
+			min = 0
+			max = 100
+		}
 	}
+	ai_desire_to_join = { add = { desc = BASE_VALUE value = 25 } }
+	ai_desire_to_allow_new_member = { add = { desc = WE_WANT_THE_ORGANIZATION_TO_GROW value = 20 } }
 }
 
 antq_northern_amber_assemblies = {
@@ -154,20 +288,63 @@ antq_northern_amber_assemblies = {
 	show_on_diplomatic_map = no
 	has_leader_country = no
 	create_visible_trigger = { always = no }
-	invite_visible_trigger = { always = no }
 	can_declare_war = { always = no }
-	can_join_trigger = { always = no }
-	can_leave_trigger = { always = no }
-	auto_leave_trigger = { always = no }
-	auto_disband_trigger = { always = no }
 	modifier = { global_trade_through_owned_territory_efficiency = 0.02 }
 	opinion_bonus = 6
-	on_joined = {
+	join_visible_trigger = { always = yes }
+	join_enabled_trigger = { always = yes }
+	invite_visible_trigger = { always = yes }
+	invite_enabled_trigger = { always = yes }
+	can_join_trigger = {
+		OR = {
+			tag = XBM
+			tag = XBN
+			tag = SEM
+			tag = GUT
+			tag = XBR
+			tag = AES
+			tag = XDZ
+		}
+		is_rebel_country = no
 	}
-	on_left = {
+	can_leave_trigger = { always = yes }
+	auto_leave_trigger = {
+		NOT = {
+			OR = {
+				tag = XBM
+				tag = XBN
+				tag = SEM
+				tag = GUT
+				tag = XBR
+				tag = AES
+				tag = XDZ
+			}
+		}
+	}
+	auto_disband_trigger = { total_members < 2 }
+	disband_minimum_member_count = 1
+	on_joined = { add_prestige = prestige_weak_bonus }
+	on_left = { add_prestige = prestige_weak_penalty }
+	monthly_effect = {
+		random_list = {
+			1 = {
+				every_international_organization_member = {
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.02 }
+				}
+			}
+			59 = {}
+		}
 	}
 	variables = {
+		antq_cohesion = {
+			monthly_change = 0.05
+			start = 50
+			min = 0
+			max = 100
+		}
 	}
+	ai_desire_to_join = { add = { desc = BASE_VALUE value = 25 } }
+	ai_desire_to_allow_new_member = { add = { desc = WE_WANT_THE_ORGANIZATION_TO_GROW value = 20 } }
 }
 
 antq_arabian_route_exchanges = {
@@ -177,21 +354,74 @@ antq_arabian_route_exchanges = {
 	show_on_diplomatic_map = no
 	has_leader_country = no
 	create_visible_trigger = { always = no }
-	invite_visible_trigger = { always = no }
 	can_declare_war = { always = no }
-	can_join_trigger = { always = no }
-	can_leave_trigger = { always = no }
-	auto_leave_trigger = { always = no }
-	auto_disband_trigger = { always = no }
 	modifier = { global_trade_through_owned_territory_efficiency = 0.025 }
 	gives_food_access_to_members = yes
 	opinion_bonus = 7
-	on_joined = {
+	join_visible_trigger = { always = yes }
+	join_enabled_trigger = { always = yes }
+	invite_visible_trigger = { always = yes }
+	invite_enabled_trigger = { always = yes }
+	can_join_trigger = {
+		OR = {
+			tag = NAB
+			tag = XBI
+			tag = HIM
+			tag = QAT
+			tag = XBJ
+			tag = KIN
+			tag = XEQ
+			tag = AGR
+			tag = GRH
+			tag = XER
+			tag = OMN
+			tag = BED
+		}
+		is_rebel_country = no
 	}
-	on_left = {
+	can_leave_trigger = { always = yes }
+	auto_leave_trigger = {
+		NOT = {
+			OR = {
+				tag = NAB
+				tag = XBI
+				tag = HIM
+				tag = QAT
+				tag = XBJ
+				tag = KIN
+				tag = XEQ
+				tag = AGR
+				tag = GRH
+				tag = XER
+				tag = OMN
+				tag = BED
+			}
+		}
+	}
+	auto_disband_trigger = { total_members < 2 }
+	disband_minimum_member_count = 1
+	on_joined = { add_prestige = prestige_weak_bonus }
+	on_left = { add_prestige = prestige_weak_penalty }
+	monthly_effect = {
+		random_list = {
+			1 = {
+				every_international_organization_member = {
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.02 }
+				}
+			}
+			59 = {}
+		}
 	}
 	variables = {
+		antq_cohesion = {
+			monthly_change = 0.05
+			start = 50
+			min = 0
+			max = 100
+		}
 	}
+	ai_desire_to_join = { add = { desc = BASE_VALUE value = 25 } }
+	ai_desire_to_allow_new_member = { add = { desc = WE_WANT_THE_ORGANIZATION_TO_GROW value = 20 } }
 }
 
 antq_christian_church = {

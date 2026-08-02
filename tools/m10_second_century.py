@@ -16,7 +16,13 @@ from pathlib import Path
 from advance_event_packages import knowledge_response_lines
 from dates import AntqDate, M2_MIRROR_LANGUAGES, load_timeline
 from goods_integration import event_effect_lines
-from m10_history import engine_tags, resolution_trigger_lines, start_country_locations
+from m10_history import (
+    current_lifecycle_lines,
+    disaster_modifier_lines,
+    engine_tags,
+    resolution_trigger_lines,
+    start_country_locations,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 TIMELINE = ROOT / "docs/timeline.csv"
@@ -361,20 +367,8 @@ def situation_script(records: tuple[Current, ...]) -> str:
             "\tvisible = {",
             f"\t\tcountry_exists = c:{record.engine_tag}",
             "\t}",
-            "\ton_start = {",
-            f"\t\tc:{record.engine_tag} = {{ trigger_event_non_silently = {record.event_key} }}",
-            "\t}",
+            *current_lifecycle_lines(record, country_scoped=False),
         ))
-        if record.key in {"gothic_migration", "marcomannic_wars"}:
-            effect = "add_prestige = prestige_weak_bonus" if record.key == "gothic_migration" else "add_stability = stability_weak_penalty"
-            lines.extend((
-                "\ton_monthly = {",
-                "\t\trandom_list = {",
-                f"\t\t\t1 = {{ c:{record.engine_tag} = {{ {effect} }} }}",
-                "\t\t\t119 = {}",
-                "\t\t}",
-                "\t}",
-            ))
         lines.extend(("}", ""))
     return "\n".join(lines)
 
@@ -395,9 +389,8 @@ def disaster_script(records: tuple[Current, ...]) -> str:
             "\t\thas_any_active_disaster = no",
             "\t}",
             *resolution_trigger_lines(record, country_scoped=True),
-            "\ton_start = {",
-            f"\t\ttrigger_event_non_silently = {record.event_key}",
-            "\t}",
+            *disaster_modifier_lines(record),
+            *current_lifecycle_lines(record, country_scoped=True),
             "}",
             "",
         ))

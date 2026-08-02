@@ -11,7 +11,13 @@ from pathlib import Path
 from advance_event_packages import knowledge_response_lines
 from dates import AntqDate, M2_MIRROR_LANGUAGES, indexed_timeline, load_timeline
 from m10_fourth_century import script_token
-from m10_history import engine_tags, resolution_trigger_lines, start_country_locations
+from m10_history import (
+    current_lifecycle_lines,
+    disaster_modifier_lines,
+    engine_tags,
+    resolution_trigger_lines,
+    start_country_locations,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 TIMELINE = ROOT / "docs/timeline.csv"
@@ -244,7 +250,9 @@ def manager_script(records: tuple[Current, ...], kind: str) -> str:
             f"\t\tcurrent_date >= {record.date.engine()}", f"\t\tcurrent_date < {end.engine()}",
             f"\t\tcountry_exists = c:{record.engine_tag}", "\t}",
             *resolution_trigger_lines(record, country_scoped=kind == "disaster"),
-            "\ton_start = {", f"\t\tc:{record.engine_tag} = {{ trigger_event_non_silently = {record.event_key} }}", "\t}", "}", "",
+            *(disaster_modifier_lines(record) if kind == "disaster" else ()),
+            *current_lifecycle_lines(record, country_scoped=kind == "disaster"),
+            "}", "",
         ))
     return "\n".join(lines)
 

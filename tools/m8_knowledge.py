@@ -435,7 +435,6 @@ CONTENT_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
         ("unlock_casus_belli", "antq_sasanid_unification"),
     ),
     "antq_legal_petitions": (
-        ("unlock_subject_type", "antq_tributary"),
         ("unlock_casus_belli", "antq_chinese_warlord_unification"),
     ),
     "antq_municipal_charters": (("unlock_subject_type", "antq_autonomous_city"),),
@@ -2427,6 +2426,10 @@ def validate(records: tuple[Advance, ...]) -> None:
         elif field == "unlock_estate_privilege":
             expected_targets -= set(opening_privileges)
             expected_targets -= opening_profile_privilege_keys()
+        elif field == "unlock_subject_type":
+            # Tributary relationships are present across the AD 1 world and
+            # must be legal before any regional research is initialized.
+            expected_targets.discard("antq_tributary")
         actual_targets = [
             target
             for entries in unlocks.values()

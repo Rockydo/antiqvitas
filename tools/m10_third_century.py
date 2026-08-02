@@ -17,7 +17,12 @@ from pathlib import Path
 
 from advance_event_packages import knowledge_response_lines
 from dates import AntqDate, M2_MIRROR_LANGUAGES, load_timeline
-from m10_history import engine_tags, resolution_trigger_lines
+from m10_history import (
+    current_lifecycle_lines,
+    disaster_modifier_lines,
+    engine_tags,
+    resolution_trigger_lines,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 TIMELINE = ROOT / "docs/timeline.csv"
@@ -43,6 +48,7 @@ TARGETS = {
     "third_century_crisis": "ROM",
     "manichaeism_foundation": "PAR",
     "frankish_formation": "GER",
+    "cyprian_plague": "ROM",
     "diocletian_dominate": "ROM",
     "eight_princes": "HAN",
 }
@@ -56,6 +62,7 @@ EVENT_IMAGES = {
     "diocletian_dominate": "gfx/interface/illustrations/event/antq_diocletian_dominate.dds",
     "eight_princes": "gfx/interface/illustrations/event/antq_eight_princes.dds",
     "frankish_formation": "gfx/interface/illustrations/event/antq_frankish_formation.dds",
+    "cyprian_plague": "gfx/interface/illustrations/event/antq_cyprian_plague.dds",
     "manichaeism_foundation": "gfx/interface/illustrations/event/antq_manichaeism_foundation.dds",
     "sassanid_revolution": "gfx/interface/illustrations/event/antq_sassanid_revolution.dds",
     "severus_caledonia": "gfx/interface/illustrations/event/antq_severus_caledonia.dds",
@@ -217,6 +224,19 @@ def impact_lines(record: Current) -> tuple[str, ...]:
             "\t\t\tprovince = { change_province_food_percentage = -0.12 }",
             "\t\t}",
         )
+    if record.key == "cyprian_plague":
+        return (
+            "\t\tadd_stability = stability_mild_penalty",
+            "\t\tadd_manpower = { value = root.monthly_manpower multiply = -7 }",
+            "\t\tadd_gold = { value = root.monthly_income_trade_and_tax multiply = -5 }",
+            "\t\tcapital = {",
+            "\t\t\tset_disease_presence = {",
+            "\t\t\t\tdisease_outbreak = disease:smallpox.original_outbreak",
+            "\t\t\t\tvalue = 0.30",
+            "\t\t\t}",
+            "\t\t\tprovince = { change_province_food_percentage = -0.15 }",
+            "\t\t}",
+        )
     if record.kind == "disaster":
         return ("\t\tadd_stability = stability_mild_penalty", "\t\tadd_prestige = prestige_mild_penalty")
     if record.kind == "situation":
@@ -289,9 +309,7 @@ def situation_script(records: tuple[Current, ...]) -> str:
             "\tvisible = {",
             f"\t\tcountry_exists = c:{record.engine_tag}",
             "\t}",
-            "\ton_start = {",
-            f"\t\tc:{record.engine_tag} = {{ trigger_event_non_silently = {record.event_key} }}",
-            "\t}",
+            *current_lifecycle_lines(record, country_scoped=False),
             "}",
             "",
         ))
@@ -311,12 +329,11 @@ def disaster_script(records: tuple[Current, ...]) -> str:
             f"\t\ttag = {record.engine_tag}",
             f"\t\tcurrent_date >= {record.date.engine()}",
             f"\t\tcurrent_date < {record.end_date.engine()}",
-            "\t\thas_any_active_disaster = no",
+            *( () if record.key == "cyprian_plague" else ("\t\thas_any_active_disaster = no",) ),
             "\t}",
             *resolution_trigger_lines(record, country_scoped=True),
-            "\ton_start = {",
-            f"\t\ttrigger_event_non_silently = {record.event_key}",
-            "\t}",
+            *disaster_modifier_lines(record),
+            *current_lifecycle_lines(record, country_scoped=True),
             "}",
             "",
         ))

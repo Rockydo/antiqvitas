@@ -8327,10 +8327,24 @@ reviewed 128px BC7 DDS.
   230,000.000 thousand; removed the 1337 weighting dependency.
 - Repaired religion groups/profiles, ancient-law isolation, annona routes,
   Principate economy, five-level naval access, 463 AI personalities, 40 AI
-  decisions, 416 consequential events, material epidemics, early-resolution
+  decisions, 421 consequential events, material epidemics, early-resolution
   currents, and functional IO modifiers.
 - Added 117-unit direct art coverage from 30 four-up sheets and a tracked-file
   privacy guard; local paths now use an ignored config plus public template.
 - Validation passes 158/158. Paired smoke initially found and then verified the
   repair of AI-list, event script-value, and IO-parser errors; final smoke adds
   zero new or mod-unique lines.
+
+## 2026-08-02 - Staged currents and active organization systems
+
+- Rebuilt 52 situations/disasters with earned resolution progress, two response
+  paths, recurring manpower/food/fiscal pressure, recovery, and date safety bounds.
+- Added the AD 251-270 Cyprian epidemic current and four-panel referenced art;
+  M10/M11 now provide 85 primary currents and 421 consequential events.
+- Replaced opening IO shells with five multi-member systems and 18 AI actions;
+  added exact structural regression coverage for currents, epidemics, and IOs.
+- Validation passes 159/159; paired smoke adds zero new or mod-unique lines.
+  Fresh AD 1 saves prove five bodies retain 2-14 members and cohesion advances
+  50.00->50.05 after the first monthly tick. Four currents initialize staged state.
+- Fresh runtime exposed Sogdian tributary initialization behind a Han-only
+  unlock. Tributary status is now universally formable; M9 rejects future locks.

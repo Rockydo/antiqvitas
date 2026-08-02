@@ -10,14 +10,36 @@ antq_s2_maroboduus_rivalry = {
 		current_date < 20.1.1
 		country_exists = c:XBK
 	}
-	can_end = { current_date >= 20.1.1 }
-	visible = { country_exists = c:XBK }
-	on_start = { c:XBK = { add_legitimacy = legitimacy_weak_bonus } }
-	on_monthly = {
-		random_list = {
-			1 = { c:XBK = { add_legitimacy = legitimacy_weak_bonus } }
-			119 = {}
+	can_end = {
+		OR = {
+			current_date >= 20.1.1
+			var:antq_s2_maroboduus_rivalry_resolution_progress >= 100
 		}
+	}
+	visible = { country_exists = c:XBK }
+	on_start = {
+		set_variable = { name = antq_s2_maroboduus_rivalry_resolution_progress value = 0 }
+		c:XBK = { add_legitimacy = legitimacy_weak_bonus }
+	}
+	on_monthly = {
+		c:XBK = {
+			if = {
+				limit = { stability >= 20 at_war = no }
+				root = { change_variable = { name = antq_s2_maroboduus_rivalry_resolution_progress add = 3 } }
+			}
+			else_if = {
+				limit = { stability >= 0 at_war = yes }
+				root = { change_variable = { name = antq_s2_maroboduus_rivalry_resolution_progress add = 1.5 } }
+			}
+			else = { root = { change_variable = { name = antq_s2_maroboduus_rivalry_resolution_progress add = 0.5 } } }
+			random_list = {
+				1 = { add_legitimacy = legitimacy_weak_bonus }
+				23 = {}
+			}
+		}
+	}
+	on_ended = {
+		if = { limit = { has_variable = antq_s2_maroboduus_rivalry_resolution_progress } remove_variable = antq_s2_maroboduus_rivalry_resolution_progress }
 	}
 }
 
@@ -30,14 +52,36 @@ antq_s2_alemannic_formation = {
 		current_date < 215.1.1
 		country_exists = c:XBL
 	}
-	can_end = { current_date >= 215.1.1 }
-	visible = { country_exists = c:XBL }
-	on_start = { c:XBL = { add_prestige = prestige_weak_bonus } }
-	on_monthly = {
-		random_list = {
-			1 = { c:XBL = { add_prestige = prestige_weak_bonus } }
-			119 = {}
+	can_end = {
+		OR = {
+			current_date >= 215.1.1
+			var:antq_s2_alemannic_formation_resolution_progress >= 100
 		}
+	}
+	visible = { country_exists = c:XBL }
+	on_start = {
+		set_variable = { name = antq_s2_alemannic_formation_resolution_progress value = 0 }
+		c:XBL = { add_prestige = prestige_weak_bonus }
+	}
+	on_monthly = {
+		c:XBL = {
+			if = {
+				limit = { stability >= 20 at_war = no }
+				root = { change_variable = { name = antq_s2_alemannic_formation_resolution_progress add = 3 } }
+			}
+			else_if = {
+				limit = { stability >= 0 at_war = yes }
+				root = { change_variable = { name = antq_s2_alemannic_formation_resolution_progress add = 1.5 } }
+			}
+			else = { root = { change_variable = { name = antq_s2_alemannic_formation_resolution_progress add = 0.5 } } }
+			random_list = {
+				1 = { add_prestige = prestige_weak_bonus }
+				23 = {}
+			}
+		}
+	}
+	on_ended = {
+		if = { limit = { has_variable = antq_s2_alemannic_formation_resolution_progress } remove_variable = antq_s2_alemannic_formation_resolution_progress }
 	}
 }
 
@@ -50,14 +94,36 @@ antq_s2_frankish_formation = {
 		current_date < 261.1.1
 		country_exists = c:BTV
 	}
-	can_end = { current_date >= 261.1.1 }
-	visible = { country_exists = c:BTV }
-	on_start = { c:BTV = { add_prestige = prestige_weak_bonus } }
-	on_monthly = {
-		random_list = {
-			1 = { c:BTV = { add_prestige = prestige_weak_bonus } }
-			119 = {}
+	can_end = {
+		OR = {
+			current_date >= 261.1.1
+			var:antq_s2_frankish_formation_resolution_progress >= 100
 		}
+	}
+	visible = { country_exists = c:BTV }
+	on_start = {
+		set_variable = { name = antq_s2_frankish_formation_resolution_progress value = 0 }
+		c:BTV = { add_prestige = prestige_weak_bonus }
+	}
+	on_monthly = {
+		c:BTV = {
+			if = {
+				limit = { stability >= 20 at_war = no }
+				root = { change_variable = { name = antq_s2_frankish_formation_resolution_progress add = 3 } }
+			}
+			else_if = {
+				limit = { stability >= 0 at_war = yes }
+				root = { change_variable = { name = antq_s2_frankish_formation_resolution_progress add = 1.5 } }
+			}
+			else = { root = { change_variable = { name = antq_s2_frankish_formation_resolution_progress add = 0.5 } } }
+			random_list = {
+				1 = { add_prestige = prestige_weak_bonus }
+				23 = {}
+			}
+		}
+	}
+	on_ended = {
+		if = { limit = { has_variable = antq_s2_frankish_formation_resolution_progress } remove_variable = antq_s2_frankish_formation_resolution_progress }
 	}
 }
 
@@ -70,13 +136,35 @@ antq_s2_aestian_amber_shore = {
 		current_date < 476.9.4
 		country_exists = c:AES
 	}
-	can_end = { current_date >= 476.9.4 }
-	visible = { country_exists = c:AES }
-	on_start = { c:AES = { add_stability = stability_weak_bonus } }
-	on_monthly = {
-		random_list = {
-			1 = { c:AES = { add_stability = stability_weak_bonus } }
-			119 = {}
+	can_end = {
+		OR = {
+			current_date >= 476.9.4
+			var:antq_s2_aestian_amber_shore_resolution_progress >= 100
 		}
+	}
+	visible = { country_exists = c:AES }
+	on_start = {
+		set_variable = { name = antq_s2_aestian_amber_shore_resolution_progress value = 0 }
+		c:AES = { add_stability = stability_weak_bonus }
+	}
+	on_monthly = {
+		c:AES = {
+			if = {
+				limit = { stability >= 20 at_war = no }
+				root = { change_variable = { name = antq_s2_aestian_amber_shore_resolution_progress add = 3 } }
+			}
+			else_if = {
+				limit = { stability >= 0 at_war = yes }
+				root = { change_variable = { name = antq_s2_aestian_amber_shore_resolution_progress add = 1.5 } }
+			}
+			else = { root = { change_variable = { name = antq_s2_aestian_amber_shore_resolution_progress add = 0.5 } } }
+			random_list = {
+				1 = { add_stability = stability_weak_bonus }
+				23 = {}
+			}
+		}
+	}
+	on_ended = {
+		if = { limit = { has_variable = antq_s2_aestian_amber_shore_resolution_progress } remove_variable = antq_s2_aestian_amber_shore_resolution_progress }
 	}
 }

@@ -110,8 +110,8 @@ antq_legal_petitions = {
 	}
 	stability_cost_efficiency = 0.02
 	unlock_government_reform = antq_petition_court
-	unlock_subject_type = antq_tributary
 	unlock_casus_belli = antq_chinese_warlord_unification
+	unlock_building = antq_reg_customs_gate
 	starting_technology_level = 2
 	requires = antq_provincial_census
 	ai_weight = { add = 90 }
@@ -137,7 +137,6 @@ antq_municipal_charters = {
 	stability_cost_efficiency = 0.02
 	unlock_government_reform = antq_frontier_muster_monarchy
 	unlock_subject_type = antq_autonomous_city
-	unlock_building = antq_reg_customs_gate
 	starting_technology_level = 2
 	requires = antq_provincial_census
 	ai_weight = { add = 90 }

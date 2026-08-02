@@ -5,8 +5,10 @@
 antq_send_frontier_envoys = {
 	icon = antq_send_frontier_envoys
 	type = internationalorganization
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = monthly
+	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -51,7 +53,13 @@ antq_send_frontier_envoys = {
 			add_opinion = { target = scope:actor modifier = antq_opinion_frontier_envoys }
 		}
 	}
-	ai_will_do = { add = -1000 }
+	ai_will_do = {
+		add = { value = 12 }
+		if = {
+			limit = { scope:actor = { gold < 20 } }
+			add = { value = -30 }
+		}
+	}
 }
 
 # STR-GER; TAC-GER; TAC-ANN-II [contested]
@@ -59,8 +67,10 @@ antq_send_frontier_envoys = {
 antq_hold_rhine_frontier_market = {
 	icon = antq_hold_rhine_frontier_market
 	type = internationalorganization
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = monthly
+	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -105,7 +115,13 @@ antq_hold_rhine_frontier_market = {
 			add_stability = stability_weak_bonus
 		}
 	}
-	ai_will_do = { add = -1000 }
+	ai_will_do = {
+		add = { value = 12 }
+		if = {
+			limit = { scope:actor = { gold < 30 } }
+			add = { value = -30 }
+		}
+	}
 }
 
 # STR-GER; TAC-GER; TAC-ANN-II [contested]
@@ -113,8 +129,10 @@ antq_hold_rhine_frontier_market = {
 antq_exchange_frontier_hostages = {
 	icon = antq_exchange_frontier_hostages
 	type = internationalorganization
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = monthly
+	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -159,7 +177,13 @@ antq_exchange_frontier_hostages = {
 			add_opinion = { target = scope:actor modifier = antq_opinion_frontier_hostages }
 		}
 	}
-	ai_will_do = { add = -1000 }
+	ai_will_do = {
+		add = { value = 12 }
+		if = {
+			limit = { scope:actor = { gold < 24 } }
+			add = { value = -30 }
+		}
+	}
 }
 
 # STR-GER; TAC-GER; TAC-ANN-II [contested]
@@ -167,8 +191,10 @@ antq_exchange_frontier_hostages = {
 antq_settle_rhine_border_incident = {
 	icon = antq_settle_rhine_border_incident
 	type = internationalorganization
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = monthly
+	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -213,7 +239,13 @@ antq_settle_rhine_border_incident = {
 			add_opinion = { target = scope:actor modifier = antq_opinion_border_settlement }
 		}
 	}
-	ai_will_do = { add = -1000 }
+	ai_will_do = {
+		add = { value = 12 }
+		if = {
+			limit = { scope:actor = { gold < 24 } }
+			add = { value = -30 }
+		}
+	}
 }
 
 # STR-GER; TAC-GER; TAC-ANN-II [contested]
@@ -221,8 +253,10 @@ antq_settle_rhine_border_incident = {
 antq_coordinate_river_passage = {
 	icon = antq_coordinate_river_passage
 	type = internationalorganization
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = monthly
+	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -267,7 +301,13 @@ antq_coordinate_river_passage = {
 			add_opinion = { target = scope:actor modifier = antq_opinion_river_passage }
 		}
 	}
-	ai_will_do = { add = -1000 }
+	ai_will_do = {
+		add = { value = 12 }
+		if = {
+			limit = { scope:actor = { gold < 28 } }
+			add = { value = -30 }
+		}
+	}
 }
 
 # STR-GER; TAC-GER; TAC-ANN-II [contested]
@@ -275,8 +315,10 @@ antq_coordinate_river_passage = {
 antq_renew_auxiliary_compact = {
 	icon = antq_renew_auxiliary_compact
 	type = internationalorganization
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = monthly
+	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -322,7 +364,13 @@ antq_renew_auxiliary_compact = {
 			add_prestige = prestige_weak_bonus
 		}
 	}
-	ai_will_do = { add = -1000 }
+	ai_will_do = {
+		add = { value = 12 }
+		if = {
+			limit = { scope:actor = { gold < 36 } }
+			add = { value = -30 }
+		}
+	}
 }
 
 # TAC-GER; PAN-WBB; VU-BRUSH [contested]
@@ -330,8 +378,10 @@ antq_renew_auxiliary_compact = {
 antq_send_amber_convoy = {
 	icon = antq_send_amber_convoy
 	type = internationalorganization
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = monthly
+	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -376,7 +426,13 @@ antq_send_amber_convoy = {
 			add_opinion = { target = scope:actor modifier = antq_opinion_amber_convoy }
 		}
 	}
-	ai_will_do = { add = -1000 }
+	ai_will_do = {
+		add = { value = 12 }
+		if = {
+			limit = { scope:actor = { gold < 20 } }
+			add = { value = -30 }
+		}
+	}
 }
 
 # TAC-GER; PAN-WBB; VU-BRUSH [contested]
@@ -384,8 +440,10 @@ antq_send_amber_convoy = {
 antq_negotiate_migrant_transit = {
 	icon = antq_negotiate_migrant_transit
 	type = internationalorganization
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = monthly
+	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -430,7 +488,13 @@ antq_negotiate_migrant_transit = {
 			add_opinion = { target = scope:actor modifier = antq_opinion_migrant_transit }
 		}
 	}
-	ai_will_do = { add = -1000 }
+	ai_will_do = {
+		add = { value = 12 }
+		if = {
+			limit = { scope:actor = { gold < 24 } }
+			add = { value = -30 }
+		}
+	}
 }
 
 # TAC-GER; PAN-WBB; VU-BRUSH [contested]
@@ -438,8 +502,10 @@ antq_negotiate_migrant_transit = {
 antq_muster_allied_host = {
 	icon = antq_muster_allied_host
 	type = internationalorganization
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = monthly
+	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -485,7 +551,13 @@ antq_muster_allied_host = {
 			add_legitimacy = legitimacy_weak_bonus
 		}
 	}
-	ai_will_do = { add = -1000 }
+	ai_will_do = {
+		add = { value = 12 }
+		if = {
+			limit = { scope:actor = { gold < 36 } }
+			add = { value = -30 }
+		}
+	}
 }
 
 # TAC-GER; PAN-WBB; VU-BRUSH [contested]
@@ -493,8 +565,10 @@ antq_muster_allied_host = {
 antq_witness_assembly_compact = {
 	icon = antq_witness_assembly_compact
 	type = internationalorganization
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = monthly
+	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -539,7 +613,13 @@ antq_witness_assembly_compact = {
 			add_opinion = { target = scope:actor modifier = antq_opinion_assembly_compact }
 		}
 	}
-	ai_will_do = { add = -1000 }
+	ai_will_do = {
+		add = { value = 12 }
+		if = {
+			limit = { scope:actor = { gold < 20 } }
+			add = { value = -30 }
+		}
+	}
 }
 
 # TAC-GER; PAN-WBB; VU-BRUSH [contested]
@@ -547,8 +627,10 @@ antq_witness_assembly_compact = {
 antq_exchange_retinue_gifts = {
 	icon = antq_exchange_retinue_gifts
 	type = internationalorganization
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = monthly
+	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -593,7 +675,13 @@ antq_exchange_retinue_gifts = {
 			add_opinion = { target = scope:actor modifier = antq_opinion_retinue_gifts }
 		}
 	}
-	ai_will_do = { add = -1000 }
+	ai_will_do = {
+		add = { value = 12 }
+		if = {
+			limit = { scope:actor = { gold < 24 } }
+			add = { value = -30 }
+		}
+	}
 }
 
 # TAC-GER; PAN-WBB; VU-BRUSH [contested]
@@ -601,8 +689,10 @@ antq_exchange_retinue_gifts = {
 antq_proclaim_sacred_truce = {
 	icon = antq_proclaim_sacred_truce
 	type = internationalorganization
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = monthly
+	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -648,5 +738,11 @@ antq_proclaim_sacred_truce = {
 			add_stability = stability_weak_bonus
 		}
 	}
-	ai_will_do = { add = -1000 }
+	ai_will_do = {
+		add = { value = 12 }
+		if = {
+			limit = { scope:actor = { gold < 28 } }
+			add = { value = -30 }
+		}
+	}
 }

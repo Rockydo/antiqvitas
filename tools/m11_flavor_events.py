@@ -78,8 +78,8 @@ def timeline_rows() -> dict[str, dict[str, str]]:
         for row in load_timeline(TIMELINE)
         if row["rails_strength"].strip() != "system"
     }
-    if len(result) != 84:
-        raise ValueError(f"expected 84 non-system historical currents, found {len(result)}")
+    if len(result) < 84:
+        raise ValueError(f"historical-current ledger regressed below 84 records: {len(result)}")
     return result
 
 
@@ -93,8 +93,13 @@ def m10_currents() -> tuple[tuple[object, str], ...]:
         if set(images) != keys:
             raise ValueError(f"{module_name} does not map every current to reviewed event art")
         records.extend((record, images[record.key]) for record in module_records)
-    if len(records) != 84 or len({record.key for record, _ in records}) != len(records):
-        raise ValueError("M10 current inventory must contain 84 unique records")
+    expected_keys = set(timeline_rows())
+    actual_keys = {record.key for record, _ in records}
+    if actual_keys != expected_keys or len(actual_keys) != len(records):
+        raise ValueError(
+            f"M10 current inventory/ledger mismatch: "
+            f"missing={sorted(expected_keys - actual_keys)}, extra={sorted(actual_keys - expected_keys)}"
+        )
     return tuple(sorted(records, key=lambda item: (item[0].date, item[0].key)))
 
 
@@ -231,7 +236,9 @@ def validate(items: tuple[PhaseEvent, ...]) -> None:
     # The terminal 4 September 476 finale has no post-end window and therefore
     # correctly remains an M10-only event. Every other historical current gets
     # the complete review-phase set.
-    expected = 83 * len(PHASES)
+    expected = sum(
+        bool(row["end_date"].strip()) for row in timeline_rows().values()
+    ) * len(PHASES)
     if len(items) != expected:
         raise ValueError(f"expected {expected} M11 phase events, found {len(items)}")
     if len({item.event_id for item in items}) != len(items):

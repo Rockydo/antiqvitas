@@ -27,11 +27,14 @@ WARGOAL_OUTPUT = ROOT / "in_game/common/wargoals/00_antiquitas_m9.txt"
 PEACE_OUTPUT = ROOT / "in_game/common/peace_treaties/00_antiquitas_m9.txt"
 IO_OUTPUT = ROOT / "in_game/common/international_organizations/00_antiquitas_m9.txt"
 BIAS_OUTPUT = ROOT / "in_game/common/biases/00_antiquitas_m9.txt"
+IO_ACTION_OUTPUT = ROOT / "in_game/common/generic_actions/antq_m9_organization_actions.txt"
+IO_AI_LIST_OUTPUT = ROOT / "in_game/common/generic_action_ai_lists/antq_m9_organization_actions_list.txt"
 LOC_ROOT = ROOT / "main_menu/localization"
 ROSTER = ROOT / "docs/world_1ad/polities.csv"
 TAG_MAP = ROOT / "docs/world_1ad/tag_map.json"
 REGIONS = ROOT / "docs/vanilla_symbols/regions.json"
 LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
+ADVANCE_OUTPUT = ROOT / "in_game/common/advances/00_antiquitas_m8_tree.txt"
 
 # The historical relations themselves and their citations are in
 # docs/world_1ad/subjects.csv.  These adapters are deliberately keyed by the
@@ -64,6 +67,10 @@ DORMANT_CB_KEYS = {
     "antq_sasanid_unification",
     "antq_gupta_digvijaya",
 }
+IO_ACTION_KEYS = (
+    "antq_present_han_tribute",
+    "antq_convene_kangju_route_council",
+)
 
 
 @dataclass(frozen=True)
@@ -566,8 +573,80 @@ def peace_script(records: tuple[PeaceTreaty, ...]) -> str:
     return "\n".join(blocks)
 
 
-def leader_io(*, map_visible: bool, leader_modifier: tuple[str, ...]) -> str:
-    """The locally verified minimal leader-country IO contract."""
+def io_tag_trigger(design_tags: tuple[str, ...], indent: str) -> tuple[str, ...]:
+    if not design_tags:
+        return (f"{indent}always = no",)
+    tags = engine_tag_map()
+    return (
+        f"{indent}OR = {{",
+        *(f"{indent}\ttag = {tags[tag]}" for tag in design_tags),
+        f"{indent}}}",
+    )
+
+
+def functional_io_lines(
+    eligible: tuple[str, ...], *, leader_locked: bool
+) -> tuple[str, ...]:
+    """Verified join/leave, recurring obligation, and AI participation surface."""
+    if not eligible:
+        return (
+            "\tinvite_visible_trigger = { always = no }",
+            "\tcan_join_trigger = { always = no }",
+            "\tcan_leave_trigger = { always = no }",
+            "\tauto_leave_trigger = { always = no }",
+            "\tauto_disband_trigger = { always = yes }",
+            "\tvariables = {}",
+        )
+    leave = (
+        "\tcan_leave_trigger = { NOT = { is_leader_of_international_organization = scope:recipient } }"
+        if leader_locked else "\tcan_leave_trigger = { always = yes }"
+    )
+    return (
+        "\tjoin_visible_trigger = { always = yes }",
+        "\tjoin_enabled_trigger = { always = yes }",
+        "\tinvite_visible_trigger = { always = yes }",
+        "\tinvite_enabled_trigger = { always = yes }",
+        "\tcan_join_trigger = {",
+        *io_tag_trigger(eligible, "\t\t"),
+        "\t\tis_rebel_country = no",
+        "\t}",
+        leave,
+        "\tauto_leave_trigger = {",
+        "\t\tNOT = {",
+        *io_tag_trigger(eligible, "\t\t\t"),
+        "\t\t}",
+        "\t}",
+        "\tauto_disband_trigger = { total_members < 2 }",
+        "\tdisband_minimum_member_count = 1",
+        "\ton_joined = { add_prestige = prestige_weak_bonus }",
+        "\ton_left = { add_prestige = prestige_weak_penalty }",
+        "\tmonthly_effect = {",
+        "\t\trandom_list = {",
+        "\t\t\t1 = {",
+        "\t\t\t\tevery_international_organization_member = {",
+        "\t\t\t\t\tadd_gold = { value = monthly_income_trade_and_tax multiply = -0.02 }",
+        "\t\t\t\t}",
+        "\t\t\t}",
+        "\t\t\t59 = {}",
+        "\t\t}",
+        "\t}",
+        "\tvariables = {",
+        "\t\tantq_cohesion = {",
+            "\t\t\tmonthly_change = 0.05",
+        "\t\t\tstart = 50",
+        "\t\t\tmin = 0",
+        "\t\t\tmax = 100",
+        "\t\t}",
+        "\t}",
+        "\tai_desire_to_join = { add = { desc = BASE_VALUE value = 25 } }",
+        "\tai_desire_to_allow_new_member = { add = { desc = WE_WANT_THE_ORGANIZATION_TO_GROW value = 20 } }",
+    )
+
+
+def leader_io(
+    *, map_visible: bool, leader_modifier: tuple[str, ...], eligible: tuple[str, ...]
+) -> str:
+    """A leader-country IO with bounded membership and active obligations."""
     lines = [
         "\thas_target = no",
         "\tunique = yes",
@@ -577,26 +656,16 @@ def leader_io(*, map_visible: bool, leader_modifier: tuple[str, ...]) -> str:
         "\tleader_type = country",
         "\tleader_color = define:NMapColors|INTERNATIONAL_ORGANIZATION_LEADER_COLOR",
         "\tcreate_visible_trigger = { always = no }",
-        "\tinvite_visible_trigger = { always = no }",
         "\tcan_declare_war = { always = yes }",
-        "\tcan_join_trigger = { always = no }",
-        "\tcan_leave_trigger = { always = no }",
-        "\tauto_leave_trigger = { always = no }",
-        "\tauto_disband_trigger = { always = no }",
         "\tmodifier = {",
         "\t\tmonthly_prestige = 0.01",
         "\t\tglobal_trade_through_owned_territory_efficiency = 0.01",
         "\t}",
         "\topinion_bonus = 5",
-        "\ton_joined = {",
-        "\t}",
-        "\ton_left = {",
-        "\t}",
-        "\tvariables = {",
-        "\t}",
+        *functional_io_lines(eligible, leader_locked=True),
     ]
     if leader_modifier:
-        lines[10:10] = ("\tleader_modifier = {", *leader_modifier, "\t}")
+        lines[9:9] = ("\tleader_modifier = {", *leader_modifier, "\t}")
     return "\n".join(lines)
 
 
@@ -606,7 +675,7 @@ def organization_records() -> tuple[InternationalOrganization, ...]:
             "antq_han_tributary_system", "Han Tributary System",
             "An AD 1 network of tribute, recognition, and frontier diplomacy centred on the Han court.",
             "\n".join((
-                leader_io(map_visible=True, leader_modifier=("\t\tmonthly_prestige = 0.05", "\t\tdiplomatic_capacity_modifier = 0.10")),
+                leader_io(map_visible=True, leader_modifier=("\t\tmonthly_prestige = 0.05", "\t\tdiplomatic_capacity_modifier = 0.10"), eligible=("HAN", "KHT", "KUC", "KAS", "LOU", "TUR", "GMU", "QIM", "YQI", "SHC", "PUL", "FJS", "IWL", "DNH")),
                 "\tonly_leader_country_joins_defensive_wars = yes",
                 "\tjoin_defensive_wars_auto_call = {",
                 "\t\tscope:target ?= { NOT = { is_member_of_international_organization = root } }",
@@ -616,7 +685,7 @@ def organization_records() -> tuple[InternationalOrganization, ...]:
         InternationalOrganization(
             "antq_xiongnu_confederation", "Xiongnu Confederation",
             "The Chanyu's confederation is represented separately from the Xiongnu country to preserve its later shatter-and-reform path.",
-            leader_io(map_visible=True, leader_modifier=("\t\tmonthly_prestige = 0.05", "\t\tmonthly_tribal_cohesion = 0.03")),
+            leader_io(map_visible=True, leader_modifier=("\t\tmonthly_prestige = 0.05", "\t\tmonthly_tribal_cohesion = 0.03"), eligible=()),
         ),
         InternationalOrganization(
             "antq_kangju_confederation", "Kangju Confederation",
@@ -627,6 +696,7 @@ def organization_records() -> tuple[InternationalOrganization, ...]:
                     "\t\tmonthly_prestige = 0.03",
                     "\t\tglobal_trade_through_owned_territory_efficiency = 0.03",
                 ),
+                eligible=("KNG", "SOG"),
             ),
         ),
         InternationalOrganization(
@@ -665,20 +735,10 @@ def organization_records() -> tuple[InternationalOrganization, ...]:
                 "\tshow_on_diplomatic_map = no",
                 "\thas_leader_country = no",
                 "\tcreate_visible_trigger = { always = no }",
-                "\tinvite_visible_trigger = { always = no }",
                 "\tcan_declare_war = { always = no }",
-                "\tcan_join_trigger = { always = no }",
-                "\tcan_leave_trigger = { always = no }",
-                "\tauto_leave_trigger = { always = no }",
-                "\tauto_disband_trigger = { always = no }",
                 "\tmodifier = { monthly_prestige = 0.02 global_trade_through_owned_territory_efficiency = 0.01 }",
                 "\topinion_bonus = 8",
-                "\ton_joined = {",
-                "\t}",
-                "\ton_left = {",
-                "\t}",
-                "\tvariables = {",
-                "\t}",
+                *functional_io_lines(("ROM", "MCM", "CRU", "CHT", "FRI", "BTV", "LAN", "SEM", "HER", "QUA"), leader_locked=False),
             )),
         ),
         InternationalOrganization(
@@ -691,20 +751,10 @@ def organization_records() -> tuple[InternationalOrganization, ...]:
                 "\tshow_on_diplomatic_map = no",
                 "\thas_leader_country = no",
                 "\tcreate_visible_trigger = { always = no }",
-                "\tinvite_visible_trigger = { always = no }",
                 "\tcan_declare_war = { always = no }",
-                "\tcan_join_trigger = { always = no }",
-                "\tcan_leave_trigger = { always = no }",
-                "\tauto_leave_trigger = { always = no }",
-                "\tauto_disband_trigger = { always = no }",
                 "\tmodifier = { global_trade_through_owned_territory_efficiency = 0.02 }",
                 "\topinion_bonus = 6",
-                "\ton_joined = {",
-                "\t}",
-                "\ton_left = {",
-                "\t}",
-                "\tvariables = {",
-                "\t}",
+                *functional_io_lines(("FRI", "LAN", "SEM", "GUT", "SAX", "AES", "SUE"), leader_locked=False),
             )),
         ),
         InternationalOrganization(
@@ -717,21 +767,11 @@ def organization_records() -> tuple[InternationalOrganization, ...]:
                 "\tshow_on_diplomatic_map = no",
                 "\thas_leader_country = no",
                 "\tcreate_visible_trigger = { always = no }",
-                "\tinvite_visible_trigger = { always = no }",
                 "\tcan_declare_war = { always = no }",
-                "\tcan_join_trigger = { always = no }",
-                "\tcan_leave_trigger = { always = no }",
-                "\tauto_leave_trigger = { always = no }",
-                "\tauto_disband_trigger = { always = no }",
                 "\tmodifier = { global_trade_through_owned_territory_efficiency = 0.025 }",
                 "\tgives_food_access_to_members = yes",
                 "\topinion_bonus = 7",
-                "\ton_joined = {",
-                "\t}",
-                "\ton_left = {",
-                "\t}",
-                "\tvariables = {",
-                "\t}",
+                *functional_io_lines(("NAB", "SAB", "HIM", "QAT", "HAD", "KIN", "THM", "AGR", "GRH", "QTR", "OMN", "BED"), leader_locked=False),
             )),
         ),
         InternationalOrganization(
@@ -770,6 +810,74 @@ def organization_script(records: tuple[InternationalOrganization, ...]) -> str:
     for record in records:
         blocks.extend((f"{record.key} = {{", record.script, "}", ""))
     return "\n".join(blocks)
+
+
+def io_action_block(
+    key: str, io_key: str, icon: str, cost: int, actor_effect: str
+) -> str:
+    return f"""{key} = {{
+\ticon = {icon}
+\ttype = internationalorganization
+\tai_tick = monthly
+\tai_tick_frequency = 12
+\tautomation_tick = monthly
+\tautomation_tick_frequency = 1
+\tpotential = {{
+\t\texists = international_organization:{io_key}
+\t\tscope:actor = {{ is_member_of_international_organization = international_organization:{io_key} }}
+\t}}
+\tselect_trigger = {{
+\t\tlooking_for_a = international_organization
+\t\tsource = actor
+\t\ttarget_flag = recipient
+\t\tname = "choose_international_organization"
+\t\tcolumn = {{ data = name }}
+\t\tvisible = {{
+\t\t\tinternational_organization_type = international_organization_type:{io_key}
+\t\t\tscope:actor = {{ is_member_of_international_organization = root }}
+\t\t}}
+\t}}
+\tallow = {{ scope:actor = {{ gold >= {cost} }} }}
+\tcooldown = {{ type = {key} years = 3 }}
+\teffect = {{
+\t\tscope:actor = {{
+\t\t\tadd_gold = -{cost}
+\t\t\t{actor_effect}
+\t\t}}
+\t\tscope:recipient = {{ change_variable = {{ name = antq_cohesion add = 3 }} }}
+\t}}
+\tai_will_do = {{
+\t\tadd = {{ value = 15 }}
+\t\tif = {{ limit = {{ scope:actor = {{ gold < {cost * 2} }} }} add = {{ value = -40 }} }}
+\t}}
+}}"""
+
+
+def io_action_script() -> str:
+    return "# Generated by tools/m9_diplomacy.py --write.\n\n" + "\n\n".join((
+        io_action_block(
+            "antq_present_han_tribute", "antq_han_tributary_system",
+            "antq_exchange_route_intelligence", 15,
+            "add_legitimacy = legitimacy_weak_bonus",
+        ),
+        io_action_block(
+            "antq_convene_kangju_route_council", "antq_kangju_confederation",
+            "antq_send_frontier_envoys", 12,
+            "add_prestige = prestige_weak_bonus",
+        ),
+    )) + "\n"
+
+
+def io_ai_list_script() -> str:
+    return """# Generated by tools/m9_diplomacy.py --write.
+antq_m9_organization_actions_list = {
+\tpotential = { always = yes }
+\tactions = {
+\t\tantq_present_han_tribute
+\t\tantq_convene_kangju_route_council
+\t}
+}
+"""
 
 
 def io_bias_script(records: tuple[InternationalOrganization, ...]) -> str:
@@ -859,14 +967,12 @@ def subject_balance_csv(records: tuple[SubjectContract, ...]) -> str:
 def international_organization_manager() -> str:
     """Render only source-bounded AD 1 IO instances.
 
-    The Xiongnu instance represents the attested confederation at the campaign
-    boundary without inventing constituent sovereign tags; its leader and
-    member modifiers make it a functioning cohesion mechanic before M10's
-    fracture rather than a decorative duplicate label.
+    Xiongnu cohesion belongs to the Xiongnu country and its reform because the
+    map has no evidence-led constituent sovereign tags; no one-member duplicate
+    organization is created. The Games likewise remain provincial Roman civic
+    life rather than a one-country international shell.
     Kangju and Sogdiana receive a separate confederational layer because the
     evidence supports Kangju predominance alongside constituent city polities.
-    Rome is a non-leader technical custodian for a non-territorial Games IO;
-    no claim about a uniform Roman membership is implied.
     """
     tags = engine_tag_map()
     start = CAMPAIGN_START.engine()
@@ -877,9 +983,7 @@ def international_organization_manager() -> str:
             "HAN",
             "hsv360 { 8 72 82 }",
         ),
-        ("antq_xiongnu_confederation", ("XIO",), "XIO", "hsv360 { 34 54 58 }"),
         ("antq_kangju_confederation", ("KNG", "SOG"), "KNG", "hsv360 { 194 52 58 }"),
-        ("antq_panhellenic_games", ("ROM",), None, "hsv360 { 220 18 74 }"),
         (
             "antq_germanic_frontier_exchanges",
             ("ROM", "MCM", "CRU", "CHT", "FRI", "BTV", "LAN", "SEM", "HER", "QUA"),
@@ -985,6 +1089,26 @@ def localization(
             (f"diplomatic_status_{record.key}_tooltip", f"#T {record.label}#!\\nThis country is a member of the {record.label}."),
             (f"{record.key}_list_who_tt", f"$WHO$ is in the {record.label} with $LIST$"),
         ))
+    entries.extend((
+        ("antq_cohesion", "Organization Cohesion"),
+        ("antq_cohesion_desc", "The accumulated capacity of this organization to coordinate shared obligations."),
+        ("antq_present_han_tribute", "Present Court Tribute"),
+        ("antq_present_han_tribute_desc", "Present a bounded embassy gift and register of obligations at the Han court."),
+        ("antq_convene_kangju_route_council", "Convene Route Council"),
+        ("antq_convene_kangju_route_council_desc", "Convene Kangju and Sogdian delegates over caravan passage and shared route obligations."),
+    ))
+    for action in IO_ACTION_KEYS:
+        entries.extend((
+            (f"PERFORM_{action}_ACTION_SETUP", f"When a member polity uses the ${action}$ action."),
+            (f"PERFORM_{action}_ACTION_HEADER", "$MESSENGER$"),
+            (f"PERFORM_{action}_ACTION_TITLE", f"[SCOPE.sCountry('actor').GetName] has ${action}$."),
+            (f"PERFORM_{action}_ACTION_EFFECTS", "$EFFECT$"),
+            (f"PERFORM_{action}_ACTION_LOG", f"$PERFORM_{action}_ACTION_TITLE$"),
+            (f"PERFORM_{action}_ACTION_BTN1", "OK"),
+            (f"PERFORM_{action}_ACTION_BTN2", "OK"),
+            (f"PERFORM_{action}_ACTION_BTN3", "$common_string_go_to$"),
+            (f"PERFORM_{action}_ACTION_MAP", ""),
+        ))
     for key, label, description in (
         ("antq_punitive_superiority", "Win battles", "Win battles to demonstrate punitive superiority."),
         ("antq_raid_superiority", "Win raids", "Win battles while conducting a limited raid."),
@@ -1010,6 +1134,8 @@ def outputs(subjects: tuple[SubjectContract, ...]) -> dict[Path, str]:
         PEACE_OUTPUT: peace_script(treaties),
         IO_OUTPUT: organization_script(organizations),
         BIAS_OUTPUT: io_bias_script(organizations),
+        IO_ACTION_OUTPUT: io_action_script(),
+        IO_AI_LIST_OUTPUT: io_ai_list_script(),
         SUBJECT_BALANCE_OUTPUT: subject_balance_csv(subjects),
     }
     for language in ("english", *M2_MIRROR_LANGUAGES):
@@ -1026,6 +1152,11 @@ def validate(records: tuple[SubjectContract, ...]) -> None:
     missing = sorted(set(START_ADAPTERS.values()) - set(keys))
     if missing:
         raise ValueError(f"start adapters lack M9 contract definitions: {', '.join(missing)}")
+    knowledge = ADVANCE_OUTPUT.read_text(encoding="utf-8-sig")
+    if "unlock_subject_type = antq_tributary" in knowledge:
+        raise ValueError(
+            "AD 1 tributaries must not require a research unlock from their subjects"
+        )
     rendered_loc = localization(
         records, cb_records(), peace_records(), organization_records(), "english"
     )

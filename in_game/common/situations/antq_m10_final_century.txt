@@ -13,17 +13,39 @@ antq_m10_final_radagaisus_rhine = {
 	can_end = {
 		OR = {
 			current_date >= 407.1.1
-			AND = {
-				current_date >= 406.1.1
-				c:XAA ?= {
-					stability >= 20
-					at_war = no
-				}
-			}
+			var:antq_m10_final_radagaisus_rhine_resolution_progress >= 100
 		}
 	}
 	on_start = {
+		set_variable = { name = antq_m10_final_radagaisus_rhine_resolution_progress value = 0 }
 		c:XAA = { trigger_event_non_silently = antq_m10_final.5000 }
+	}
+	on_monthly = {
+		c:XAA = {
+			if = {
+				limit = { stability >= 20 at_war = no }
+				root = { change_variable = { name = antq_m10_final_radagaisus_rhine_resolution_progress add = 3 } }
+			}
+			else_if = {
+				limit = { stability >= 0 at_war = yes }
+				root = { change_variable = { name = antq_m10_final_radagaisus_rhine_resolution_progress add = 1.5 } }
+			}
+			else = {
+				root = { change_variable = { name = antq_m10_final_radagaisus_rhine_resolution_progress add = 0.5 } }
+			}
+			random_list = {
+				1 = {
+					add_manpower = { value = monthly_manpower multiply = -0.5 }
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }
+					capital = { province = { change_province_food_percentage = -0.01 } }
+				}
+				23 = {}
+			}
+		}
+	}
+	on_ended = {
+		if = { limit = { has_variable = antq_m10_final_radagaisus_rhine_resolution_progress } remove_variable = antq_m10_final_radagaisus_rhine_resolution_progress }
+		c:XAA ?= { add_stability = stability_weak_bonus }
 	}
 }
 
@@ -40,17 +62,39 @@ antq_m10_final_britain_abandoned = {
 	can_end = {
 		OR = {
 			current_date >= 411.1.1
-			AND = {
-				current_date >= 408.12.31
-				c:XAA ?= {
-					stability >= 20
-					at_war = no
-				}
-			}
+			var:antq_m10_final_britain_abandoned_resolution_progress >= 100
 		}
 	}
 	on_start = {
+		set_variable = { name = antq_m10_final_britain_abandoned_resolution_progress value = 0 }
 		c:XAA = { trigger_event_non_silently = antq_m10_final.5001 }
+	}
+	on_monthly = {
+		c:XAA = {
+			if = {
+				limit = { stability >= 20 at_war = no }
+				root = { change_variable = { name = antq_m10_final_britain_abandoned_resolution_progress add = 3 } }
+			}
+			else_if = {
+				limit = { stability >= 0 at_war = yes }
+				root = { change_variable = { name = antq_m10_final_britain_abandoned_resolution_progress add = 1.5 } }
+			}
+			else = {
+				root = { change_variable = { name = antq_m10_final_britain_abandoned_resolution_progress add = 0.5 } }
+			}
+			random_list = {
+				1 = {
+					add_manpower = { value = monthly_manpower multiply = -0.5 }
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }
+					capital = { province = { change_province_food_percentage = -0.01 } }
+				}
+				23 = {}
+			}
+		}
+	}
+	on_ended = {
+		if = { limit = { has_variable = antq_m10_final_britain_abandoned_resolution_progress } remove_variable = antq_m10_final_britain_abandoned_resolution_progress }
+		c:XAA ?= { add_stability = stability_weak_bonus }
 	}
 }
 
@@ -67,17 +111,39 @@ antq_m10_final_vandal_africa = {
 	can_end = {
 		OR = {
 			current_date >= 440.1.1
-			AND = {
-				current_date >= 434.7.2
-				c:XAA ?= {
-					stability >= 20
-					at_war = no
-				}
-			}
+			var:antq_m10_final_vandal_africa_resolution_progress >= 100
 		}
 	}
 	on_start = {
+		set_variable = { name = antq_m10_final_vandal_africa_resolution_progress value = 0 }
 		c:XAA = { trigger_event_non_silently = antq_m10_final.5004 }
+	}
+	on_monthly = {
+		c:XAA = {
+			if = {
+				limit = { stability >= 20 at_war = no }
+				root = { change_variable = { name = antq_m10_final_vandal_africa_resolution_progress add = 3 } }
+			}
+			else_if = {
+				limit = { stability >= 0 at_war = yes }
+				root = { change_variable = { name = antq_m10_final_vandal_africa_resolution_progress add = 1.5 } }
+			}
+			else = {
+				root = { change_variable = { name = antq_m10_final_vandal_africa_resolution_progress add = 0.5 } }
+			}
+			random_list = {
+				1 = {
+					add_manpower = { value = monthly_manpower multiply = -0.5 }
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }
+					capital = { province = { change_province_food_percentage = -0.01 } }
+				}
+				23 = {}
+			}
+		}
+	}
+	on_ended = {
+		if = { limit = { has_variable = antq_m10_final_vandal_africa_resolution_progress } remove_variable = antq_m10_final_vandal_africa_resolution_progress }
+		c:XAA ?= { add_stability = stability_weak_bonus }
 	}
 }
 
@@ -94,17 +160,39 @@ antq_m10_final_attila = {
 	can_end = {
 		OR = {
 			current_date >= 455.1.1
-			AND = {
-				current_date >= 444.7.2
-				c:HNS ?= {
-					stability >= 20
-					at_war = no
-				}
-			}
+			var:antq_m10_final_attila_resolution_progress >= 100
 		}
 	}
 	on_start = {
+		set_variable = { name = antq_m10_final_attila_resolution_progress value = 0 }
 		c:HNS = { trigger_event_non_silently = antq_m10_final.5005 }
+	}
+	on_monthly = {
+		c:HNS = {
+			if = {
+				limit = { stability >= 20 at_war = no }
+				root = { change_variable = { name = antq_m10_final_attila_resolution_progress add = 3 } }
+			}
+			else_if = {
+				limit = { stability >= 0 at_war = yes }
+				root = { change_variable = { name = antq_m10_final_attila_resolution_progress add = 1.5 } }
+			}
+			else = {
+				root = { change_variable = { name = antq_m10_final_attila_resolution_progress add = 0.5 } }
+			}
+			random_list = {
+				1 = {
+					add_manpower = { value = monthly_manpower multiply = -0.5 }
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }
+					capital = { province = { change_province_food_percentage = -0.01 } }
+				}
+				23 = {}
+			}
+		}
+	}
+	on_ended = {
+		if = { limit = { has_variable = antq_m10_final_attila_resolution_progress } remove_variable = antq_m10_final_attila_resolution_progress }
+		c:HNS ?= { add_stability = stability_weak_bonus }
 	}
 }
 
@@ -121,17 +209,39 @@ antq_m10_final_hephthalites = {
 	can_end = {
 		OR = {
 			current_date >= 461.1.1
-			AND = {
-				current_date >= 450.7.2
-				c:XAH ?= {
-					stability >= 20
-					at_war = no
-				}
-			}
+			var:antq_m10_final_hephthalites_resolution_progress >= 100
 		}
 	}
 	on_start = {
+		set_variable = { name = antq_m10_final_hephthalites_resolution_progress value = 0 }
 		c:XAH = { trigger_event_non_silently = antq_m10_final.5006 }
+	}
+	on_monthly = {
+		c:XAH = {
+			if = {
+				limit = { stability >= 20 at_war = no }
+				root = { change_variable = { name = antq_m10_final_hephthalites_resolution_progress add = 3 } }
+			}
+			else_if = {
+				limit = { stability >= 0 at_war = yes }
+				root = { change_variable = { name = antq_m10_final_hephthalites_resolution_progress add = 1.5 } }
+			}
+			else = {
+				root = { change_variable = { name = antq_m10_final_hephthalites_resolution_progress add = 0.5 } }
+			}
+			random_list = {
+				1 = {
+					add_manpower = { value = monthly_manpower multiply = -0.5 }
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }
+					capital = { province = { change_province_food_percentage = -0.01 } }
+				}
+				23 = {}
+			}
+		}
+	}
+	on_ended = {
+		if = { limit = { has_variable = antq_m10_final_hephthalites_resolution_progress } remove_variable = antq_m10_final_hephthalites_resolution_progress }
+		c:XAH ?= { add_stability = stability_weak_bonus }
 	}
 }
 
@@ -148,16 +258,38 @@ antq_m10_final_adventus_saxonum = {
 	can_end = {
 		OR = {
 			current_date >= 451.1.1
-			AND = {
-				current_date >= 450.1.1
-				c:XAA ?= {
-					stability >= 20
-					at_war = no
-				}
-			}
+			var:antq_m10_final_adventus_saxonum_resolution_progress >= 100
 		}
 	}
 	on_start = {
+		set_variable = { name = antq_m10_final_adventus_saxonum_resolution_progress value = 0 }
 		c:XAA = { trigger_event_non_silently = antq_m10_final.5008 }
+	}
+	on_monthly = {
+		c:XAA = {
+			if = {
+				limit = { stability >= 20 at_war = no }
+				root = { change_variable = { name = antq_m10_final_adventus_saxonum_resolution_progress add = 3 } }
+			}
+			else_if = {
+				limit = { stability >= 0 at_war = yes }
+				root = { change_variable = { name = antq_m10_final_adventus_saxonum_resolution_progress add = 1.5 } }
+			}
+			else = {
+				root = { change_variable = { name = antq_m10_final_adventus_saxonum_resolution_progress add = 0.5 } }
+			}
+			random_list = {
+				1 = {
+					add_manpower = { value = monthly_manpower multiply = -0.5 }
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }
+					capital = { province = { change_province_food_percentage = -0.01 } }
+				}
+				23 = {}
+			}
+		}
+	}
+	on_ended = {
+		if = { limit = { has_variable = antq_m10_final_adventus_saxonum_resolution_progress } remove_variable = antq_m10_final_adventus_saxonum_resolution_progress }
+		c:XAA ?= { add_stability = stability_weak_bonus }
 	}
 }

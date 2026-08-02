@@ -767,7 +767,11 @@ def capture_new_game_loading(args: argparse.Namespace) -> int:
                         "requested_percent": requested_progress,
                         "observed_percent": round(progress, 2),
                         "elapsed_seconds": round(elapsed, 2),
-                        "path": str(target.relative_to(ROOT)),
+                        "path": str(
+                            target.relative_to(ROOT)
+                            if target.is_relative_to(ROOT)
+                            else target
+                        ),
                     }
                 )
                 print(

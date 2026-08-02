@@ -218,16 +218,45 @@ antq_m10_third.3007 = {
 	}
 }
 
-# Diocletian and the Dominate; ANTIQVITAS master plan §9; CAH-DIO; CAM-TET; recipient=ROM
+# Plague Described by Cyprian; ANTIQVITAS master plan §9; JRA-CYP-2015; JRA-CYP-2021; recipient=ROM
 antq_m10_third.3008 = {
 	type = country_event
 	title = antq_m10_third.3008.title
 	desc = antq_m10_third.3008.desc
+	outcome = negative
+	fire_only_once = yes
+	image = "gfx/interface/illustrations/event/antq_cyprian_plague.dds"
+	option = {
+		name = antq_m10_third.3008.a
+		historical_option = yes
+		add_stability = stability_mild_penalty
+		add_manpower = { value = root.monthly_manpower multiply = -7 }
+		add_gold = { value = root.monthly_income_trade_and_tax multiply = -5 }
+		capital = {
+			set_disease_presence = {
+				disease_outbreak = disease:smallpox.original_outbreak
+				value = 0.30
+			}
+			province = { change_province_food_percentage = -0.15 }
+		}
+		# Learned practice shapes the response; it never gates the current.
+		if = {
+			limit = { has_advance = antq_mobile_field_armies }
+			add_stability = stability_weak_bonus
+		}
+	}
+}
+
+# Diocletian and the Dominate; ANTIQVITAS master plan §9; CAH-DIO; CAM-TET; recipient=ROM
+antq_m10_third.3009 = {
+	type = country_event
+	title = antq_m10_third.3009.title
+	desc = antq_m10_third.3009.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_diocletian_dominate.dds"
 	option = {
-		name = antq_m10_third.3008.a
+		name = antq_m10_third.3009.a
 		historical_option = yes
 		remove_reform = government_reform:antq_principate
 		add_reform = government_reform:antq_dominate
@@ -241,15 +270,15 @@ antq_m10_third.3008 = {
 }
 
 # War of the Eight Princes; ANTIQVITAS master plan §9; CAM-8P; recipient=HAN
-antq_m10_third.3009 = {
+antq_m10_third.3010 = {
 	type = country_event
-	title = antq_m10_third.3009.title
-	desc = antq_m10_third.3009.desc
+	title = antq_m10_third.3010.title
+	desc = antq_m10_third.3010.desc
 	outcome = neutral
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_eight_princes.dds"
 	option = {
-		name = antq_m10_third.3009.a
+		name = antq_m10_third.3010.a
 		historical_option = yes
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.

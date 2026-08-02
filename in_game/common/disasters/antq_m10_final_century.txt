@@ -11,15 +11,42 @@ antq_m10_final_constantinople_earthquake = {
 	can_end = {
 		OR = {
 			current_date >= 448.1.1
-			AND = {
-				current_date >= 447.7.2
-				stability >= 20
-				at_war = no
-			}
+			var:antq_m10_final_constantinople_earthquake_resolution_progress >= 100
 		}
 	}
+	modifier = {
+		global_manpower_modifier = -0.04
+		global_monthly_food_modifier = -0.025
+		tax_income_efficiency = tiny_tax_income_efficiency_penalty
+	}
 	on_start = {
-		c:ERO = { trigger_event_non_silently = antq_m10_final.5007 }
+		set_variable = { name = antq_m10_final_constantinople_earthquake_resolution_progress value = 0 }
+		trigger_event_non_silently = antq_m10_final.5007
+	}
+	on_monthly = {
+		if = {
+			limit = { stability >= 20 at_war = no }
+			change_variable = { name = antq_m10_final_constantinople_earthquake_resolution_progress add = 3 }
+		}
+		else_if = {
+			limit = { stability >= 0 at_war = yes }
+			change_variable = { name = antq_m10_final_constantinople_earthquake_resolution_progress add = 1.5 }
+		}
+		else = {
+			change_variable = { name = antq_m10_final_constantinople_earthquake_resolution_progress add = 0.5 }
+		}
+		random_list = {
+			1 = {
+				add_manpower = { value = monthly_manpower multiply = -0.5 }
+				add_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }
+				capital = { province = { change_province_food_percentage = -0.01 } }
+			}
+			23 = {}
+		}
+	}
+	on_end = {
+		if = { limit = { has_variable = antq_m10_final_constantinople_earthquake_resolution_progress } remove_variable = antq_m10_final_constantinople_earthquake_resolution_progress }
+		add_stability = stability_weak_bonus
 	}
 }
 
@@ -34,14 +61,41 @@ antq_m10_final_cape_bon = {
 	can_end = {
 		OR = {
 			current_date >= 469.1.1
-			AND = {
-				current_date >= 468.7.2
-				stability >= 20
-				at_war = no
-			}
+			var:antq_m10_final_cape_bon_resolution_progress >= 100
 		}
 	}
+	modifier = {
+		global_manpower_modifier = -0.04
+		global_monthly_food_modifier = -0.025
+		tax_income_efficiency = tiny_tax_income_efficiency_penalty
+	}
 	on_start = {
-		c:ERO = { trigger_event_non_silently = antq_m10_final.5011 }
+		set_variable = { name = antq_m10_final_cape_bon_resolution_progress value = 0 }
+		trigger_event_non_silently = antq_m10_final.5011
+	}
+	on_monthly = {
+		if = {
+			limit = { stability >= 20 at_war = no }
+			change_variable = { name = antq_m10_final_cape_bon_resolution_progress add = 3 }
+		}
+		else_if = {
+			limit = { stability >= 0 at_war = yes }
+			change_variable = { name = antq_m10_final_cape_bon_resolution_progress add = 1.5 }
+		}
+		else = {
+			change_variable = { name = antq_m10_final_cape_bon_resolution_progress add = 0.5 }
+		}
+		random_list = {
+			1 = {
+				add_manpower = { value = monthly_manpower multiply = -0.5 }
+				add_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }
+				capital = { province = { change_province_food_percentage = -0.01 } }
+			}
+			23 = {}
+		}
+	}
+	on_end = {
+		if = { limit = { has_variable = antq_m10_final_cape_bon_resolution_progress } remove_variable = antq_m10_final_cape_bon_resolution_progress }
+		add_stability = stability_weak_bonus
 	}
 }

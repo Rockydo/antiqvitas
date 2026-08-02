@@ -6,8 +6,10 @@
 antq_negotiate_route_safe_conduct = {
 	icon = antq_negotiate_route_safe_conduct
 	type = internationalorganization
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = monthly
+	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -70,7 +72,11 @@ antq_negotiate_route_safe_conduct = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = { value = 12 }
+		if = {
+			limit = { scope:actor = { gold < 20 } }
+			add = { value = -30 }
+		}
 	}
 }
 
@@ -79,8 +85,10 @@ antq_negotiate_route_safe_conduct = {
 antq_coordinate_cistern_repairs = {
 	icon = antq_coordinate_cistern_repairs
 	type = internationalorganization
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = monthly
+	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -143,7 +151,11 @@ antq_coordinate_cistern_repairs = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = { value = 12 }
+		if = {
+			limit = { scope:actor = { gold < 30 } }
+			add = { value = -30 }
+		}
 	}
 }
 
@@ -152,8 +164,10 @@ antq_coordinate_cistern_repairs = {
 antq_exchange_route_intelligence = {
 	icon = antq_exchange_route_intelligence
 	type = internationalorganization
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = monthly
+	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -216,7 +230,11 @@ antq_exchange_route_intelligence = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = { value = 12 }
+		if = {
+			limit = { scope:actor = { gold < 16 } }
+			add = { value = -30 }
+		}
 	}
 }
 
@@ -225,8 +243,10 @@ antq_exchange_route_intelligence = {
 antq_settle_transit_incident = {
 	icon = antq_settle_transit_incident
 	type = internationalorganization
-	ai_tick = never
-	automation_tick = never
+	ai_tick = monthly
+	ai_tick_frequency = 12
+	automation_tick = monthly
+	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -289,6 +309,10 @@ antq_settle_transit_incident = {
 	}
 
 	ai_will_do = {
-		add = -1000
+		add = { value = 12 }
+		if = {
+			limit = { scope:actor = { gold < 24 } }
+			add = { value = -30 }
+		}
 	}
 }

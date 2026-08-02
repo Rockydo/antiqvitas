@@ -5942,18 +5942,18 @@ antq_m11_flavor.6219 = {
 	}
 }
 
-# Diocletian and the Dominate — Conditions Develop; ANTIQVITAS master plan §9; CAH-DIO; CAM-TET; recipient=XAA; trigger=XAA
+# Plague Described by Cyprian — Conditions Develop; ANTIQVITAS master plan §9; JRA-CYP-2015; JRA-CYP-2021; recipient=XAA; trigger=XAA
 antq_m11_flavor.6220 = {
 	type = country_event
 	title = antq_m11_flavor.6220.title
 	desc = antq_m11_flavor.6220.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_diocletian_dominate.dds"
+	image = "gfx/interface/illustrations/event/antq_cyprian_plague.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 288.5.26
-		to = 288.7.27
+		from = 255.3.13
+		to = 255.5.14
 		monthly_chance = 100
 	}
 	option = {
@@ -5969,18 +5969,18 @@ antq_m11_flavor.6220 = {
 	}
 }
 
-# Diocletian and the Dominate — Pressure Builds; ANTIQVITAS master plan §9; CAH-DIO; CAM-TET; recipient=XAA; trigger=XAA
+# Plague Described by Cyprian — Pressure Builds; ANTIQVITAS master plan §9; JRA-CYP-2015; JRA-CYP-2021; recipient=XAA; trigger=XAA
 antq_m11_flavor.6221 = {
 	type = country_event
 	title = antq_m11_flavor.6221.title
 	desc = antq_m11_flavor.6221.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_diocletian_dominate.dds"
+	image = "gfx/interface/illustrations/event/antq_cyprian_plague.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 292.10.19
-		to = 292.12.20
+		from = 258.11.24
+		to = 259.1.25
 		monthly_chance = 100
 	}
 	option = {
@@ -5996,18 +5996,18 @@ antq_m11_flavor.6221 = {
 	}
 }
 
-# Diocletian and the Dominate — A Contested Moment; ANTIQVITAS master plan §9; CAH-DIO; CAM-TET; recipient=XAA; trigger=XAA
+# Plague Described by Cyprian — A Contested Moment; ANTIQVITAS master plan §9; JRA-CYP-2015; JRA-CYP-2021; recipient=XAA; trigger=XAA
 antq_m11_flavor.6222 = {
 	type = country_event
 	title = antq_m11_flavor.6222.title
 	desc = antq_m11_flavor.6222.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_diocletian_dominate.dds"
+	image = "gfx/interface/illustrations/event/antq_cyprian_plague.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 297.3.14
-		to = 297.5.15
+		from = 262.8.7
+		to = 262.10.8
 		monthly_chance = 100
 	}
 	option = {
@@ -6023,18 +6023,18 @@ antq_m11_flavor.6222 = {
 	}
 }
 
-# Diocletian and the Dominate — The Window Narrows; ANTIQVITAS master plan §9; CAH-DIO; CAM-TET; recipient=XAA; trigger=XAA
+# Plague Described by Cyprian — The Window Narrows; ANTIQVITAS master plan §9; JRA-CYP-2015; JRA-CYP-2021; recipient=XAA; trigger=XAA
 antq_m11_flavor.6223 = {
 	type = country_event
 	title = antq_m11_flavor.6223.title
 	desc = antq_m11_flavor.6223.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_diocletian_dominate.dds"
+	image = "gfx/interface/illustrations/event/antq_cyprian_plague.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 301.8.8
-		to = 301.10.9
+		from = 266.4.20
+		to = 266.6.21
 		monthly_chance = 100
 	}
 	option = {
@@ -6050,18 +6050,18 @@ antq_m11_flavor.6223 = {
 	}
 }
 
-# War of the Eight Princes — Conditions Develop; ANTIQVITAS master plan §9; CAM-8P; recipient=XAR; trigger=XAR
+# Diocletian and the Dominate — Conditions Develop; ANTIQVITAS master plan §9; CAH-DIO; CAM-TET; recipient=XAA; trigger=XAA
 antq_m11_flavor.6224 = {
 	type = country_event
 	title = antq_m11_flavor.6224.title
 	desc = antq_m11_flavor.6224.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_eight_princes.dds"
+	image = "gfx/interface/illustrations/event/antq_diocletian_dominate.dds"
 	dynamic_historical_event = {
-		tag = XAR
-		from = 296.5.26
-		to = 296.7.27
+		tag = XAA
+		from = 288.5.26
+		to = 288.7.27
 		monthly_chance = 100
 	}
 	option = {
@@ -6077,18 +6077,18 @@ antq_m11_flavor.6224 = {
 	}
 }
 
-# War of the Eight Princes — Pressure Builds; ANTIQVITAS master plan §9; CAM-8P; recipient=XAR; trigger=XAR
+# Diocletian and the Dominate — Pressure Builds; ANTIQVITAS master plan §9; CAH-DIO; CAM-TET; recipient=XAA; trigger=XAA
 antq_m11_flavor.6225 = {
 	type = country_event
 	title = antq_m11_flavor.6225.title
 	desc = antq_m11_flavor.6225.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_eight_princes.dds"
+	image = "gfx/interface/illustrations/event/antq_diocletian_dominate.dds"
 	dynamic_historical_event = {
-		tag = XAR
-		from = 301.10.20
-		to = 301.12.21
+		tag = XAA
+		from = 292.10.19
+		to = 292.12.20
 		monthly_chance = 100
 	}
 	option = {
@@ -6104,18 +6104,18 @@ antq_m11_flavor.6225 = {
 	}
 }
 
-# War of the Eight Princes — A Contested Moment; ANTIQVITAS master plan §9; CAM-8P; recipient=XAR; trigger=XAR
+# Diocletian and the Dominate — A Contested Moment; ANTIQVITAS master plan §9; CAH-DIO; CAM-TET; recipient=XAA; trigger=XAA
 antq_m11_flavor.6226 = {
 	type = country_event
 	title = antq_m11_flavor.6226.title
 	desc = antq_m11_flavor.6226.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_eight_princes.dds"
+	image = "gfx/interface/illustrations/event/antq_diocletian_dominate.dds"
 	dynamic_historical_event = {
-		tag = XAR
-		from = 307.3.15
-		to = 307.5.16
+		tag = XAA
+		from = 297.3.14
+		to = 297.5.15
 		monthly_chance = 100
 	}
 	option = {
@@ -6131,18 +6131,18 @@ antq_m11_flavor.6226 = {
 	}
 }
 
-# War of the Eight Princes — The Window Narrows; ANTIQVITAS master plan §9; CAM-8P; recipient=XAR; trigger=XAR
+# Diocletian and the Dominate — The Window Narrows; ANTIQVITAS master plan §9; CAH-DIO; CAM-TET; recipient=XAA; trigger=XAA
 antq_m11_flavor.6227 = {
 	type = country_event
 	title = antq_m11_flavor.6227.title
 	desc = antq_m11_flavor.6227.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_eight_princes.dds"
+	image = "gfx/interface/illustrations/event/antq_diocletian_dominate.dds"
 	dynamic_historical_event = {
-		tag = XAR
-		from = 312.8.7
-		to = 312.10.8
+		tag = XAA
+		from = 301.8.8
+		to = 301.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -6158,18 +6158,18 @@ antq_m11_flavor.6227 = {
 	}
 }
 
-# Armenian Conversion — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
+# War of the Eight Princes — Conditions Develop; ANTIQVITAS master plan §9; CAM-8P; recipient=XAR; trigger=XAR
 antq_m11_flavor.6228 = {
 	type = country_event
 	title = antq_m11_flavor.6228.title
 	desc = antq_m11_flavor.6228.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_armenia_conversion.dds"
+	image = "gfx/interface/illustrations/event/antq_eight_princes.dds"
 	dynamic_historical_event = {
-		tag = XAO
-		from = 303.10.20
-		to = 303.12.21
+		tag = XAR
+		from = 296.5.26
+		to = 296.7.27
 		monthly_chance = 100
 	}
 	option = {
@@ -6185,18 +6185,18 @@ antq_m11_flavor.6228 = {
 	}
 }
 
-# Armenian Conversion — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
+# War of the Eight Princes — Pressure Builds; ANTIQVITAS master plan §9; CAM-8P; recipient=XAR; trigger=XAR
 antq_m11_flavor.6229 = {
 	type = country_event
 	title = antq_m11_flavor.6229.title
 	desc = antq_m11_flavor.6229.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_armenia_conversion.dds"
+	image = "gfx/interface/illustrations/event/antq_eight_princes.dds"
 	dynamic_historical_event = {
-		tag = XAO
-		from = 306.8.8
-		to = 306.10.9
+		tag = XAR
+		from = 301.10.20
+		to = 301.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -6212,18 +6212,18 @@ antq_m11_flavor.6229 = {
 	}
 }
 
-# Armenian Conversion — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
+# War of the Eight Princes — A Contested Moment; ANTIQVITAS master plan §9; CAM-8P; recipient=XAR; trigger=XAR
 antq_m11_flavor.6230 = {
 	type = country_event
 	title = antq_m11_flavor.6230.title
 	desc = antq_m11_flavor.6230.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_armenia_conversion.dds"
+	image = "gfx/interface/illustrations/event/antq_eight_princes.dds"
 	dynamic_historical_event = {
-		tag = XAO
-		from = 309.5.26
-		to = 309.7.27
+		tag = XAR
+		from = 307.3.15
+		to = 307.5.16
 		monthly_chance = 100
 	}
 	option = {
@@ -6239,18 +6239,18 @@ antq_m11_flavor.6230 = {
 	}
 }
 
-# Armenian Conversion — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
+# War of the Eight Princes — The Window Narrows; ANTIQVITAS master plan §9; CAM-8P; recipient=XAR; trigger=XAR
 antq_m11_flavor.6231 = {
 	type = country_event
 	title = antq_m11_flavor.6231.title
 	desc = antq_m11_flavor.6231.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_armenia_conversion.dds"
+	image = "gfx/interface/illustrations/event/antq_eight_princes.dds"
 	dynamic_historical_event = {
-		tag = XAO
-		from = 312.3.14
-		to = 312.5.15
+		tag = XAR
+		from = 312.8.7
+		to = 312.10.8
 		monthly_chance = 100
 	}
 	option = {
@@ -6266,18 +6266,18 @@ antq_m11_flavor.6231 = {
 	}
 }
 
-# Constantine's Civil Wars — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Armenian Conversion — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
 antq_m11_flavor.6232 = {
 	type = country_event
 	title = antq_m11_flavor.6232.title
 	desc = antq_m11_flavor.6232.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds"
+	image = "gfx/interface/illustrations/event/antq_armenia_conversion.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 311.1.1
-		to = 311.3.4
+		tag = XAO
+		from = 303.10.20
+		to = 303.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -6293,18 +6293,18 @@ antq_m11_flavor.6232 = {
 	}
 }
 
-# Constantine's Civil Wars — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Armenian Conversion — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
 antq_m11_flavor.6233 = {
 	type = country_event
 	title = antq_m11_flavor.6233.title
 	desc = antq_m11_flavor.6233.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds"
+	image = "gfx/interface/illustrations/event/antq_armenia_conversion.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 316.1.1
-		to = 316.3.3
+		tag = XAO
+		from = 306.8.8
+		to = 306.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -6320,18 +6320,18 @@ antq_m11_flavor.6233 = {
 	}
 }
 
-# Constantine's Civil Wars — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Armenian Conversion — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
 antq_m11_flavor.6234 = {
 	type = country_event
 	title = antq_m11_flavor.6234.title
 	desc = antq_m11_flavor.6234.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds"
+	image = "gfx/interface/illustrations/event/antq_armenia_conversion.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 320.12.31
-		to = 321.3.3
+		tag = XAO
+		from = 309.5.26
+		to = 309.7.27
 		monthly_chance = 100
 	}
 	option = {
@@ -6347,18 +6347,18 @@ antq_m11_flavor.6234 = {
 	}
 }
 
-# Constantine's Civil Wars — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Armenian Conversion — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
 antq_m11_flavor.6235 = {
 	type = country_event
 	title = antq_m11_flavor.6235.title
 	desc = antq_m11_flavor.6235.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds"
+	image = "gfx/interface/illustrations/event/antq_armenia_conversion.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 325.12.31
-		to = 326.3.3
+		tag = XAO
+		from = 312.3.14
+		to = 312.5.15
 		monthly_chance = 100
 	}
 	option = {
@@ -6374,18 +6374,18 @@ antq_m11_flavor.6235 = {
 	}
 }
 
-# Council of Nicaea — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Constantine's Civil Wars — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6236 = {
 	type = country_event
 	title = antq_m11_flavor.6236.title
 	desc = antq_m11_flavor.6236.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_nicaea.dds"
+	image = "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 325.3.15
-		to = 325.5.16
+		from = 311.1.1
+		to = 311.3.4
 		monthly_chance = 100
 	}
 	option = {
@@ -6401,18 +6401,18 @@ antq_m11_flavor.6236 = {
 	}
 }
 
-# Council of Nicaea — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Constantine's Civil Wars — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6237 = {
 	type = country_event
 	title = antq_m11_flavor.6237.title
 	desc = antq_m11_flavor.6237.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_nicaea.dds"
+	image = "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 325.5.27
-		to = 325.7.28
+		from = 316.1.1
+		to = 316.3.3
 		monthly_chance = 100
 	}
 	option = {
@@ -6428,18 +6428,18 @@ antq_m11_flavor.6237 = {
 	}
 }
 
-# Council of Nicaea — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Constantine's Civil Wars — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6238 = {
 	type = country_event
 	title = antq_m11_flavor.6238.title
 	desc = antq_m11_flavor.6238.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_nicaea.dds"
+	image = "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 325.8.8
-		to = 325.10.9
+		from = 320.12.31
+		to = 321.3.3
 		monthly_chance = 100
 	}
 	option = {
@@ -6455,18 +6455,18 @@ antq_m11_flavor.6238 = {
 	}
 }
 
-# Council of Nicaea — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Constantine's Civil Wars — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6239 = {
 	type = country_event
 	title = antq_m11_flavor.6239.title
 	desc = antq_m11_flavor.6239.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_nicaea.dds"
+	image = "gfx/interface/illustrations/event/antq_constantine_civil_wars.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 325.10.20
-		to = 325.12.21
+		from = 325.12.31
+		to = 326.3.3
 		monthly_chance = 100
 	}
 	option = {
@@ -6482,18 +6482,18 @@ antq_m11_flavor.6239 = {
 	}
 }
 
-# Shapur II and Julian — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
+# Council of Nicaea — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6240 = {
 	type = country_event
 	title = antq_m11_flavor.6240.title
 	desc = antq_m11_flavor.6240.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_shapur_julian.dds"
+	image = "gfx/interface/illustrations/event/antq_nicaea.dds"
 	dynamic_historical_event = {
-		tag = XAH
-		from = 342.5.27
-		to = 342.7.28
+		tag = XAA
+		from = 325.3.15
+		to = 325.5.16
 		monthly_chance = 100
 	}
 	option = {
@@ -6509,18 +6509,18 @@ antq_m11_flavor.6240 = {
 	}
 }
 
-# Shapur II and Julian — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
+# Council of Nicaea — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6241 = {
 	type = country_event
 	title = antq_m11_flavor.6241.title
 	desc = antq_m11_flavor.6241.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_shapur_julian.dds"
+	image = "gfx/interface/illustrations/event/antq_nicaea.dds"
 	dynamic_historical_event = {
-		tag = XAH
-		from = 347.10.20
-		to = 347.12.21
+		tag = XAA
+		from = 325.5.27
+		to = 325.7.28
 		monthly_chance = 100
 	}
 	option = {
@@ -6536,18 +6536,18 @@ antq_m11_flavor.6241 = {
 	}
 }
 
-# Shapur II and Julian — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
+# Council of Nicaea — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6242 = {
 	type = country_event
 	title = antq_m11_flavor.6242.title
 	desc = antq_m11_flavor.6242.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_shapur_julian.dds"
+	image = "gfx/interface/illustrations/event/antq_nicaea.dds"
 	dynamic_historical_event = {
-		tag = XAH
-		from = 353.3.14
-		to = 353.5.15
+		tag = XAA
+		from = 325.8.8
+		to = 325.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -6563,18 +6563,18 @@ antq_m11_flavor.6242 = {
 	}
 }
 
-# Shapur II and Julian — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
+# Council of Nicaea — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6243 = {
 	type = country_event
 	title = antq_m11_flavor.6243.title
 	desc = antq_m11_flavor.6243.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_shapur_julian.dds"
+	image = "gfx/interface/illustrations/event/antq_nicaea.dds"
 	dynamic_historical_event = {
-		tag = XAH
-		from = 358.8.7
-		to = 358.10.8
+		tag = XAA
+		from = 325.10.20
+		to = 325.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -6590,18 +6590,18 @@ antq_m11_flavor.6243 = {
 	}
 }
 
-# Aksum and Meroë — Conditions Develop; ANTIQVITAS master plan §9; recipient=AKS; trigger=AKS
+# Shapur II and Julian — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
 antq_m11_flavor.6244 = {
 	type = country_event
 	title = antq_m11_flavor.6244.title
 	desc = antq_m11_flavor.6244.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_aksum_meroe.dds"
+	image = "gfx/interface/illustrations/event/antq_shapur_julian.dds"
 	dynamic_historical_event = {
-		tag = AKS
-		from = 350.3.15
-		to = 350.5.16
+		tag = XAH
+		from = 342.5.27
+		to = 342.7.28
 		monthly_chance = 100
 	}
 	option = {
@@ -6617,18 +6617,18 @@ antq_m11_flavor.6244 = {
 	}
 }
 
-# Aksum and Meroë — Pressure Builds; ANTIQVITAS master plan §9; recipient=AKS; trigger=AKS
+# Shapur II and Julian — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
 antq_m11_flavor.6245 = {
 	type = country_event
 	title = antq_m11_flavor.6245.title
 	desc = antq_m11_flavor.6245.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_aksum_meroe.dds"
+	image = "gfx/interface/illustrations/event/antq_shapur_julian.dds"
 	dynamic_historical_event = {
-		tag = AKS
-		from = 350.5.27
-		to = 350.7.28
+		tag = XAH
+		from = 347.10.20
+		to = 347.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -6644,18 +6644,18 @@ antq_m11_flavor.6245 = {
 	}
 }
 
-# Aksum and Meroë — A Contested Moment; ANTIQVITAS master plan §9; recipient=AKS; trigger=AKS
+# Shapur II and Julian — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
 antq_m11_flavor.6246 = {
 	type = country_event
 	title = antq_m11_flavor.6246.title
 	desc = antq_m11_flavor.6246.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_aksum_meroe.dds"
+	image = "gfx/interface/illustrations/event/antq_shapur_julian.dds"
 	dynamic_historical_event = {
-		tag = AKS
-		from = 350.8.8
-		to = 350.10.9
+		tag = XAH
+		from = 353.3.14
+		to = 353.5.15
 		monthly_chance = 100
 	}
 	option = {
@@ -6671,18 +6671,18 @@ antq_m11_flavor.6246 = {
 	}
 }
 
-# Aksum and Meroë — The Window Narrows; ANTIQVITAS master plan §9; recipient=AKS; trigger=AKS
+# Shapur II and Julian — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
 antq_m11_flavor.6247 = {
 	type = country_event
 	title = antq_m11_flavor.6247.title
 	desc = antq_m11_flavor.6247.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_aksum_meroe.dds"
+	image = "gfx/interface/illustrations/event/antq_shapur_julian.dds"
 	dynamic_historical_event = {
-		tag = AKS
-		from = 350.10.20
-		to = 350.12.21
+		tag = XAH
+		from = 358.8.7
+		to = 358.10.8
 		monthly_chance = 100
 	}
 	option = {
@@ -6698,18 +6698,18 @@ antq_m11_flavor.6247 = {
 	}
 }
 
-# Crete Earthquake and Tsunami — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Aksum and Meroë — Conditions Develop; ANTIQVITAS master plan §9; recipient=AKS; trigger=AKS
 antq_m11_flavor.6248 = {
 	type = country_event
 	title = antq_m11_flavor.6248.title
 	desc = antq_m11_flavor.6248.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_crete_earthquake.dds"
+	image = "gfx/interface/illustrations/event/antq_aksum_meroe.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 365.3.15
-		to = 365.5.16
+		tag = AKS
+		from = 350.3.15
+		to = 350.5.16
 		monthly_chance = 100
 	}
 	option = {
@@ -6725,18 +6725,18 @@ antq_m11_flavor.6248 = {
 	}
 }
 
-# Crete Earthquake and Tsunami — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Aksum and Meroë — Pressure Builds; ANTIQVITAS master plan §9; recipient=AKS; trigger=AKS
 antq_m11_flavor.6249 = {
 	type = country_event
 	title = antq_m11_flavor.6249.title
 	desc = antq_m11_flavor.6249.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_crete_earthquake.dds"
+	image = "gfx/interface/illustrations/event/antq_aksum_meroe.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 365.5.27
-		to = 365.7.28
+		tag = AKS
+		from = 350.5.27
+		to = 350.7.28
 		monthly_chance = 100
 	}
 	option = {
@@ -6752,18 +6752,18 @@ antq_m11_flavor.6249 = {
 	}
 }
 
-# Crete Earthquake and Tsunami — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Aksum and Meroë — A Contested Moment; ANTIQVITAS master plan §9; recipient=AKS; trigger=AKS
 antq_m11_flavor.6250 = {
 	type = country_event
 	title = antq_m11_flavor.6250.title
 	desc = antq_m11_flavor.6250.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_crete_earthquake.dds"
+	image = "gfx/interface/illustrations/event/antq_aksum_meroe.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 365.8.8
-		to = 365.10.9
+		tag = AKS
+		from = 350.8.8
+		to = 350.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -6779,18 +6779,18 @@ antq_m11_flavor.6250 = {
 	}
 }
 
-# Crete Earthquake and Tsunami — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Aksum and Meroë — The Window Narrows; ANTIQVITAS master plan §9; recipient=AKS; trigger=AKS
 antq_m11_flavor.6251 = {
 	type = country_event
 	title = antq_m11_flavor.6251.title
 	desc = antq_m11_flavor.6251.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_crete_earthquake.dds"
+	image = "gfx/interface/illustrations/event/antq_aksum_meroe.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 365.10.20
-		to = 365.12.21
+		tag = AKS
+		from = 350.10.20
+		to = 350.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -6806,18 +6806,18 @@ antq_m11_flavor.6251 = {
 	}
 }
 
-# Hunnic Arrival — Conditions Develop; ANTIQVITAS master plan §9; recipient=VLF; trigger=VLF
+# Crete Earthquake and Tsunami — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6252 = {
 	type = country_event
 	title = antq_m11_flavor.6252.title
 	desc = antq_m11_flavor.6252.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_huns_arrive.dds"
+	image = "gfx/interface/illustrations/event/antq_crete_earthquake.dds"
 	dynamic_historical_event = {
-		tag = VLF
-		from = 370.3.15
-		to = 370.5.16
+		tag = XAA
+		from = 365.3.15
+		to = 365.5.16
 		monthly_chance = 100
 	}
 	option = {
@@ -6833,18 +6833,18 @@ antq_m11_flavor.6252 = {
 	}
 }
 
-# Hunnic Arrival — Pressure Builds; ANTIQVITAS master plan §9; recipient=VLF; trigger=VLF
+# Crete Earthquake and Tsunami — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6253 = {
 	type = country_event
 	title = antq_m11_flavor.6253.title
 	desc = antq_m11_flavor.6253.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_huns_arrive.dds"
+	image = "gfx/interface/illustrations/event/antq_crete_earthquake.dds"
 	dynamic_historical_event = {
-		tag = VLF
-		from = 370.5.27
-		to = 370.7.28
+		tag = XAA
+		from = 365.5.27
+		to = 365.7.28
 		monthly_chance = 100
 	}
 	option = {
@@ -6860,18 +6860,18 @@ antq_m11_flavor.6253 = {
 	}
 }
 
-# Hunnic Arrival — A Contested Moment; ANTIQVITAS master plan §9; recipient=VLF; trigger=VLF
+# Crete Earthquake and Tsunami — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6254 = {
 	type = country_event
 	title = antq_m11_flavor.6254.title
 	desc = antq_m11_flavor.6254.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_huns_arrive.dds"
+	image = "gfx/interface/illustrations/event/antq_crete_earthquake.dds"
 	dynamic_historical_event = {
-		tag = VLF
-		from = 370.8.8
-		to = 370.10.9
+		tag = XAA
+		from = 365.8.8
+		to = 365.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -6887,18 +6887,18 @@ antq_m11_flavor.6254 = {
 	}
 }
 
-# Hunnic Arrival — The Window Narrows; ANTIQVITAS master plan §9; recipient=VLF; trigger=VLF
+# Crete Earthquake and Tsunami — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6255 = {
 	type = country_event
 	title = antq_m11_flavor.6255.title
 	desc = antq_m11_flavor.6255.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_huns_arrive.dds"
+	image = "gfx/interface/illustrations/event/antq_crete_earthquake.dds"
 	dynamic_historical_event = {
-		tag = VLF
-		from = 370.10.20
-		to = 370.12.21
+		tag = XAA
+		from = 365.10.20
+		to = 365.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -6914,18 +6914,18 @@ antq_m11_flavor.6255 = {
 	}
 }
 
-# Gothic Refugee Crisis — Conditions Develop; ANTIQVITAS master plan §9; recipient=GUT; trigger=GUT
+# Hunnic Arrival — Conditions Develop; ANTIQVITAS master plan §9; recipient=VLF; trigger=VLF
 antq_m11_flavor.6256 = {
 	type = country_event
 	title = antq_m11_flavor.6256.title
 	desc = antq_m11_flavor.6256.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_gothic_refugees.dds"
+	image = "gfx/interface/illustrations/event/antq_huns_arrive.dds"
 	dynamic_historical_event = {
-		tag = GUT
-		from = 377.5.26
-		to = 377.7.27
+		tag = VLF
+		from = 370.3.15
+		to = 370.5.16
 		monthly_chance = 100
 	}
 	option = {
@@ -6941,18 +6941,18 @@ antq_m11_flavor.6256 = {
 	}
 }
 
-# Gothic Refugee Crisis — Pressure Builds; ANTIQVITAS master plan §9; recipient=GUT; trigger=GUT
+# Hunnic Arrival — Pressure Builds; ANTIQVITAS master plan §9; recipient=VLF; trigger=VLF
 antq_m11_flavor.6257 = {
 	type = country_event
 	title = antq_m11_flavor.6257.title
 	desc = antq_m11_flavor.6257.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_gothic_refugees.dds"
+	image = "gfx/interface/illustrations/event/antq_huns_arrive.dds"
 	dynamic_historical_event = {
-		tag = GUT
-		from = 378.10.19
-		to = 378.12.20
+		tag = VLF
+		from = 370.5.27
+		to = 370.7.28
 		monthly_chance = 100
 	}
 	option = {
@@ -6968,18 +6968,18 @@ antq_m11_flavor.6257 = {
 	}
 }
 
-# Gothic Refugee Crisis — A Contested Moment; ANTIQVITAS master plan §9; recipient=GUT; trigger=GUT
+# Hunnic Arrival — A Contested Moment; ANTIQVITAS master plan §9; recipient=VLF; trigger=VLF
 antq_m11_flavor.6258 = {
 	type = country_event
 	title = antq_m11_flavor.6258.title
 	desc = antq_m11_flavor.6258.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_gothic_refugees.dds"
+	image = "gfx/interface/illustrations/event/antq_huns_arrive.dds"
 	dynamic_historical_event = {
-		tag = GUT
-		from = 380.3.14
-		to = 380.5.15
+		tag = VLF
+		from = 370.8.8
+		to = 370.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -6995,18 +6995,18 @@ antq_m11_flavor.6258 = {
 	}
 }
 
-# Gothic Refugee Crisis — The Window Narrows; ANTIQVITAS master plan §9; recipient=GUT; trigger=GUT
+# Hunnic Arrival — The Window Narrows; ANTIQVITAS master plan §9; recipient=VLF; trigger=VLF
 antq_m11_flavor.6259 = {
 	type = country_event
 	title = antq_m11_flavor.6259.title
 	desc = antq_m11_flavor.6259.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_gothic_refugees.dds"
+	image = "gfx/interface/illustrations/event/antq_huns_arrive.dds"
 	dynamic_historical_event = {
-		tag = GUT
-		from = 381.8.7
-		to = 381.10.8
+		tag = VLF
+		from = 370.10.20
+		to = 370.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -7022,18 +7022,18 @@ antq_m11_flavor.6259 = {
 	}
 }
 
-# Edict of Thessalonica — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Gothic Refugee Crisis — Conditions Develop; ANTIQVITAS master plan §9; recipient=GUT; trigger=GUT
 antq_m11_flavor.6260 = {
 	type = country_event
 	title = antq_m11_flavor.6260.title
 	desc = antq_m11_flavor.6260.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_thessalonica.dds"
+	image = "gfx/interface/illustrations/event/antq_gothic_refugees.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 380.3.14
-		to = 380.5.15
+		tag = GUT
+		from = 377.5.26
+		to = 377.7.27
 		monthly_chance = 100
 	}
 	option = {
@@ -7049,18 +7049,18 @@ antq_m11_flavor.6260 = {
 	}
 }
 
-# Edict of Thessalonica — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Gothic Refugee Crisis — Pressure Builds; ANTIQVITAS master plan §9; recipient=GUT; trigger=GUT
 antq_m11_flavor.6261 = {
 	type = country_event
 	title = antq_m11_flavor.6261.title
 	desc = antq_m11_flavor.6261.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_thessalonica.dds"
+	image = "gfx/interface/illustrations/event/antq_gothic_refugees.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 380.5.26
-		to = 380.7.27
+		tag = GUT
+		from = 378.10.19
+		to = 378.12.20
 		monthly_chance = 100
 	}
 	option = {
@@ -7076,18 +7076,18 @@ antq_m11_flavor.6261 = {
 	}
 }
 
-# Edict of Thessalonica — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Gothic Refugee Crisis — A Contested Moment; ANTIQVITAS master plan §9; recipient=GUT; trigger=GUT
 antq_m11_flavor.6262 = {
 	type = country_event
 	title = antq_m11_flavor.6262.title
 	desc = antq_m11_flavor.6262.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_thessalonica.dds"
+	image = "gfx/interface/illustrations/event/antq_gothic_refugees.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 380.8.7
-		to = 380.10.8
+		tag = GUT
+		from = 380.3.14
+		to = 380.5.15
 		monthly_chance = 100
 	}
 	option = {
@@ -7103,18 +7103,18 @@ antq_m11_flavor.6262 = {
 	}
 }
 
-# Edict of Thessalonica — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Gothic Refugee Crisis — The Window Narrows; ANTIQVITAS master plan §9; recipient=GUT; trigger=GUT
 antq_m11_flavor.6263 = {
 	type = country_event
 	title = antq_m11_flavor.6263.title
 	desc = antq_m11_flavor.6263.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_thessalonica.dds"
+	image = "gfx/interface/illustrations/event/antq_gothic_refugees.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 380.10.19
-		to = 380.12.20
+		tag = GUT
+		from = 381.8.7
+		to = 381.10.8
 		monthly_chance = 100
 	}
 	option = {
@@ -7130,18 +7130,18 @@ antq_m11_flavor.6263 = {
 	}
 }
 
-# Fei River and Northern Wei — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
+# Edict of Thessalonica — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6264 = {
 	type = country_event
 	title = antq_m11_flavor.6264.title
 	desc = antq_m11_flavor.6264.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_fei_river.dds"
+	image = "gfx/interface/illustrations/event/antq_thessalonica.dds"
 	dynamic_historical_event = {
-		tag = XAR
-		from = 394.5.26
-		to = 394.7.27
+		tag = XAA
+		from = 380.3.14
+		to = 380.5.15
 		monthly_chance = 100
 	}
 	option = {
@@ -7157,18 +7157,18 @@ antq_m11_flavor.6264 = {
 	}
 }
 
-# Fei River and Northern Wei — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
+# Edict of Thessalonica — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6265 = {
 	type = country_event
 	title = antq_m11_flavor.6265.title
 	desc = antq_m11_flavor.6265.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_fei_river.dds"
+	image = "gfx/interface/illustrations/event/antq_thessalonica.dds"
 	dynamic_historical_event = {
-		tag = XAR
-		from = 405.10.19
-		to = 405.12.20
+		tag = XAA
+		from = 380.5.26
+		to = 380.7.27
 		monthly_chance = 100
 	}
 	option = {
@@ -7184,18 +7184,18 @@ antq_m11_flavor.6265 = {
 	}
 }
 
-# Fei River and Northern Wei — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
+# Edict of Thessalonica — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6266 = {
 	type = country_event
 	title = antq_m11_flavor.6266.title
 	desc = antq_m11_flavor.6266.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_fei_river.dds"
+	image = "gfx/interface/illustrations/event/antq_thessalonica.dds"
 	dynamic_historical_event = {
-		tag = XAR
-		from = 417.3.14
-		to = 417.5.15
+		tag = XAA
+		from = 380.8.7
+		to = 380.10.8
 		monthly_chance = 100
 	}
 	option = {
@@ -7211,18 +7211,18 @@ antq_m11_flavor.6266 = {
 	}
 }
 
-# Fei River and Northern Wei — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
+# Edict of Thessalonica — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6267 = {
 	type = country_event
 	title = antq_m11_flavor.6267.title
 	desc = antq_m11_flavor.6267.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_fei_river.dds"
+	image = "gfx/interface/illustrations/event/antq_thessalonica.dds"
 	dynamic_historical_event = {
-		tag = XAR
-		from = 428.8.7
-		to = 428.10.8
+		tag = XAA
+		from = 380.10.19
+		to = 380.12.20
 		monthly_chance = 100
 	}
 	option = {
@@ -7238,18 +7238,18 @@ antq_m11_flavor.6267 = {
 	}
 }
 
-# Gwanggaeto the Great — Conditions Develop; ANTIQVITAS master plan §9; recipient=GOG; trigger=GOG
+# Fei River and Northern Wei — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
 antq_m11_flavor.6268 = {
 	type = country_event
 	title = antq_m11_flavor.6268.title
 	desc = antq_m11_flavor.6268.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_gwanggaeto.dds"
+	image = "gfx/interface/illustrations/event/antq_fei_river.dds"
 	dynamic_historical_event = {
-		tag = GOG
-		from = 395.8.8
-		to = 395.10.9
+		tag = XAR
+		from = 394.5.26
+		to = 394.7.27
 		monthly_chance = 100
 	}
 	option = {
@@ -7265,18 +7265,18 @@ antq_m11_flavor.6268 = {
 	}
 }
 
-# Gwanggaeto the Great — Pressure Builds; ANTIQVITAS master plan §9; recipient=GOG; trigger=GOG
+# Fei River and Northern Wei — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
 antq_m11_flavor.6269 = {
 	type = country_event
 	title = antq_m11_flavor.6269.title
 	desc = antq_m11_flavor.6269.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_gwanggaeto.dds"
+	image = "gfx/interface/illustrations/event/antq_fei_river.dds"
 	dynamic_historical_event = {
-		tag = GOG
-		from = 400.3.14
-		to = 400.5.15
+		tag = XAR
+		from = 405.10.19
+		to = 405.12.20
 		monthly_chance = 100
 	}
 	option = {
@@ -7292,18 +7292,18 @@ antq_m11_flavor.6269 = {
 	}
 }
 
-# Gwanggaeto the Great — A Contested Moment; ANTIQVITAS master plan §9; recipient=GOG; trigger=GOG
+# Fei River and Northern Wei — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
 antq_m11_flavor.6270 = {
 	type = country_event
 	title = antq_m11_flavor.6270.title
 	desc = antq_m11_flavor.6270.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_gwanggaeto.dds"
+	image = "gfx/interface/illustrations/event/antq_fei_river.dds"
 	dynamic_historical_event = {
-		tag = GOG
-		from = 404.10.19
-		to = 404.12.20
+		tag = XAR
+		from = 417.3.14
+		to = 417.5.15
 		monthly_chance = 100
 	}
 	option = {
@@ -7319,18 +7319,18 @@ antq_m11_flavor.6270 = {
 	}
 }
 
-# Gwanggaeto the Great — The Window Narrows; ANTIQVITAS master plan §9; recipient=GOG; trigger=GOG
+# Fei River and Northern Wei — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
 antq_m11_flavor.6271 = {
 	type = country_event
 	title = antq_m11_flavor.6271.title
 	desc = antq_m11_flavor.6271.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_gwanggaeto.dds"
+	image = "gfx/interface/illustrations/event/antq_fei_river.dds"
 	dynamic_historical_event = {
-		tag = GOG
-		from = 409.5.26
-		to = 409.7.27
+		tag = XAR
+		from = 428.8.7
+		to = 428.10.8
 		monthly_chance = 100
 	}
 	option = {
@@ -7346,18 +7346,18 @@ antq_m11_flavor.6271 = {
 	}
 }
 
-# Olympic Games Sunset — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Gwanggaeto the Great — Conditions Develop; ANTIQVITAS master plan §9; recipient=GOG; trigger=GOG
 antq_m11_flavor.6272 = {
 	type = country_event
 	title = antq_m11_flavor.6272.title
 	desc = antq_m11_flavor.6272.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_olympic_sunset.dds"
+	image = "gfx/interface/illustrations/event/antq_gwanggaeto.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 393.3.15
-		to = 393.5.16
+		tag = GOG
+		from = 395.8.8
+		to = 395.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -7373,18 +7373,18 @@ antq_m11_flavor.6272 = {
 	}
 }
 
-# Olympic Games Sunset — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Gwanggaeto the Great — Pressure Builds; ANTIQVITAS master plan §9; recipient=GOG; trigger=GOG
 antq_m11_flavor.6273 = {
 	type = country_event
 	title = antq_m11_flavor.6273.title
 	desc = antq_m11_flavor.6273.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_olympic_sunset.dds"
+	image = "gfx/interface/illustrations/event/antq_gwanggaeto.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 393.5.27
-		to = 393.7.28
+		tag = GOG
+		from = 400.3.14
+		to = 400.5.15
 		monthly_chance = 100
 	}
 	option = {
@@ -7400,18 +7400,18 @@ antq_m11_flavor.6273 = {
 	}
 }
 
-# Olympic Games Sunset — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Gwanggaeto the Great — A Contested Moment; ANTIQVITAS master plan §9; recipient=GOG; trigger=GOG
 antq_m11_flavor.6274 = {
 	type = country_event
 	title = antq_m11_flavor.6274.title
 	desc = antq_m11_flavor.6274.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_olympic_sunset.dds"
+	image = "gfx/interface/illustrations/event/antq_gwanggaeto.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 393.8.8
-		to = 393.10.9
+		tag = GOG
+		from = 404.10.19
+		to = 404.12.20
 		monthly_chance = 100
 	}
 	option = {
@@ -7427,18 +7427,18 @@ antq_m11_flavor.6274 = {
 	}
 }
 
-# Olympic Games Sunset — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Gwanggaeto the Great — The Window Narrows; ANTIQVITAS master plan §9; recipient=GOG; trigger=GOG
 antq_m11_flavor.6275 = {
 	type = country_event
 	title = antq_m11_flavor.6275.title
 	desc = antq_m11_flavor.6275.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_olympic_sunset.dds"
+	image = "gfx/interface/illustrations/event/antq_gwanggaeto.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 393.10.20
-		to = 393.12.21
+		tag = GOG
+		from = 409.5.26
+		to = 409.7.27
 		monthly_chance = 100
 	}
 	option = {
@@ -7454,18 +7454,18 @@ antq_m11_flavor.6275 = {
 	}
 }
 
-# East-West Roman Division — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Olympic Games Sunset — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6276 = {
 	type = country_event
 	title = antq_m11_flavor.6276.title
 	desc = antq_m11_flavor.6276.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_east_west_division.dds"
+	image = "gfx/interface/illustrations/event/antq_olympic_sunset.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 394.5.27
-		to = 394.7.28
+		from = 393.3.15
+		to = 393.5.16
 		monthly_chance = 100
 	}
 	option = {
@@ -7481,18 +7481,18 @@ antq_m11_flavor.6276 = {
 	}
 }
 
-# East-West Roman Division — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Olympic Games Sunset — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6277 = {
 	type = country_event
 	title = antq_m11_flavor.6277.title
 	desc = antq_m11_flavor.6277.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_east_west_division.dds"
+	image = "gfx/interface/illustrations/event/antq_olympic_sunset.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 394.10.20
-		to = 394.12.21
+		from = 393.5.27
+		to = 393.7.28
 		monthly_chance = 100
 	}
 	option = {
@@ -7508,18 +7508,18 @@ antq_m11_flavor.6277 = {
 	}
 }
 
-# East-West Roman Division — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Olympic Games Sunset — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6278 = {
 	type = country_event
 	title = antq_m11_flavor.6278.title
 	desc = antq_m11_flavor.6278.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_east_west_division.dds"
+	image = "gfx/interface/illustrations/event/antq_olympic_sunset.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 395.3.15
-		to = 395.5.16
+		from = 393.8.8
+		to = 393.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -7535,18 +7535,18 @@ antq_m11_flavor.6278 = {
 	}
 }
 
-# East-West Roman Division — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Olympic Games Sunset — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6279 = {
 	type = country_event
 	title = antq_m11_flavor.6279.title
 	desc = antq_m11_flavor.6279.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_east_west_division.dds"
+	image = "gfx/interface/illustrations/event/antq_olympic_sunset.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 395.8.8
-		to = 395.10.9
+		from = 393.10.20
+		to = 393.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -7562,18 +7562,18 @@ antq_m11_flavor.6279 = {
 	}
 }
 
-# Faxian and Gupta Apogee — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
+# East-West Roman Division — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6280 = {
 	type = country_event
 	title = antq_m11_flavor.6280.title
 	desc = antq_m11_flavor.6280.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_faxian_gupta.dds"
+	image = "gfx/interface/illustrations/event/antq_east_west_division.dds"
 	dynamic_historical_event = {
-		tag = XAR
-		from = 401.10.19
-		to = 401.12.20
+		tag = XAA
+		from = 394.5.27
+		to = 394.7.28
 		monthly_chance = 100
 	}
 	option = {
@@ -7589,18 +7589,18 @@ antq_m11_flavor.6280 = {
 	}
 }
 
-# Faxian and Gupta Apogee — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
+# East-West Roman Division — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6281 = {
 	type = country_event
 	title = antq_m11_flavor.6281.title
 	desc = antq_m11_flavor.6281.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_faxian_gupta.dds"
+	image = "gfx/interface/illustrations/event/antq_east_west_division.dds"
 	dynamic_historical_event = {
-		tag = XAR
-		from = 404.8.7
-		to = 404.10.8
+		tag = XAA
+		from = 394.10.20
+		to = 394.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -7616,18 +7616,18 @@ antq_m11_flavor.6281 = {
 	}
 }
 
-# Faxian and Gupta Apogee — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
+# East-West Roman Division — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6282 = {
 	type = country_event
 	title = antq_m11_flavor.6282.title
 	desc = antq_m11_flavor.6282.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_faxian_gupta.dds"
+	image = "gfx/interface/illustrations/event/antq_east_west_division.dds"
 	dynamic_historical_event = {
-		tag = XAR
-		from = 407.5.27
-		to = 407.7.28
+		tag = XAA
+		from = 395.3.15
+		to = 395.5.16
 		monthly_chance = 100
 	}
 	option = {
@@ -7643,18 +7643,18 @@ antq_m11_flavor.6282 = {
 	}
 }
 
-# Faxian and Gupta Apogee — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
+# East-West Roman Division — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6283 = {
 	type = country_event
 	title = antq_m11_flavor.6283.title
 	desc = antq_m11_flavor.6283.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_faxian_gupta.dds"
+	image = "gfx/interface/illustrations/event/antq_east_west_division.dds"
 	dynamic_historical_event = {
-		tag = XAR
-		from = 410.3.15
-		to = 410.5.16
+		tag = XAA
+		from = 395.8.8
+		to = 395.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -7670,18 +7670,18 @@ antq_m11_flavor.6283 = {
 	}
 }
 
-# Crossing of the Rhine — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Faxian and Gupta Apogee — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
 antq_m11_flavor.6284 = {
 	type = country_event
 	title = antq_m11_flavor.6284.title
 	desc = antq_m11_flavor.6284.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds"
+	image = "gfx/interface/illustrations/event/antq_faxian_gupta.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 405.5.27
-		to = 405.7.28
+		tag = XAR
+		from = 401.10.19
+		to = 401.12.20
 		monthly_chance = 100
 	}
 	option = {
@@ -7697,18 +7697,18 @@ antq_m11_flavor.6284 = {
 	}
 }
 
-# Crossing of the Rhine — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Faxian and Gupta Apogee — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
 antq_m11_flavor.6285 = {
 	type = country_event
 	title = antq_m11_flavor.6285.title
 	desc = antq_m11_flavor.6285.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds"
+	image = "gfx/interface/illustrations/event/antq_faxian_gupta.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 405.10.20
-		to = 405.12.21
+		tag = XAR
+		from = 404.8.7
+		to = 404.10.8
 		monthly_chance = 100
 	}
 	option = {
@@ -7724,18 +7724,18 @@ antq_m11_flavor.6285 = {
 	}
 }
 
-# Crossing of the Rhine — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Faxian and Gupta Apogee — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
 antq_m11_flavor.6286 = {
 	type = country_event
 	title = antq_m11_flavor.6286.title
 	desc = antq_m11_flavor.6286.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds"
+	image = "gfx/interface/illustrations/event/antq_faxian_gupta.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 406.3.15
-		to = 406.5.16
+		tag = XAR
+		from = 407.5.27
+		to = 407.7.28
 		monthly_chance = 100
 	}
 	option = {
@@ -7751,18 +7751,18 @@ antq_m11_flavor.6286 = {
 	}
 }
 
-# Crossing of the Rhine — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Faxian and Gupta Apogee — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAR; trigger=XAR
 antq_m11_flavor.6287 = {
 	type = country_event
 	title = antq_m11_flavor.6287.title
 	desc = antq_m11_flavor.6287.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds"
+	image = "gfx/interface/illustrations/event/antq_faxian_gupta.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 406.8.8
-		to = 406.10.9
+		tag = XAR
+		from = 410.3.15
+		to = 410.5.16
 		monthly_chance = 100
 	}
 	option = {
@@ -7778,18 +7778,18 @@ antq_m11_flavor.6287 = {
 	}
 }
 
-# Britain Abandoned — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Crossing of the Rhine — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6288 = {
 	type = country_event
 	title = antq_m11_flavor.6288.title
 	desc = antq_m11_flavor.6288.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_britain_abandoned.dds"
+	image = "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 407.10.20
-		to = 407.12.21
+		from = 405.5.27
+		to = 405.7.28
 		monthly_chance = 100
 	}
 	option = {
@@ -7805,18 +7805,18 @@ antq_m11_flavor.6288 = {
 	}
 }
 
-# Britain Abandoned — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Crossing of the Rhine — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6289 = {
 	type = country_event
 	title = antq_m11_flavor.6289.title
 	desc = antq_m11_flavor.6289.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_britain_abandoned.dds"
+	image = "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 408.8.7
-		to = 408.10.8
+		from = 405.10.20
+		to = 405.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -7832,18 +7832,18 @@ antq_m11_flavor.6289 = {
 	}
 }
 
-# Britain Abandoned — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Crossing of the Rhine — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6290 = {
 	type = country_event
 	title = antq_m11_flavor.6290.title
 	desc = antq_m11_flavor.6290.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_britain_abandoned.dds"
+	image = "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 409.5.26
-		to = 409.7.27
+		from = 406.3.15
+		to = 406.5.16
 		monthly_chance = 100
 	}
 	option = {
@@ -7859,18 +7859,18 @@ antq_m11_flavor.6290 = {
 	}
 }
 
-# Britain Abandoned — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Crossing of the Rhine — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6291 = {
 	type = country_event
 	title = antq_m11_flavor.6291.title
 	desc = antq_m11_flavor.6291.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_britain_abandoned.dds"
+	image = "gfx/interface/illustrations/event/antq_radagaisus_rhine.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 410.3.14
-		to = 410.5.15
+		from = 406.8.8
+		to = 406.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -7886,18 +7886,18 @@ antq_m11_flavor.6291 = {
 	}
 }
 
-# Sack of Rome — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Britain Abandoned — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6292 = {
 	type = country_event
 	title = antq_m11_flavor.6292.title
 	desc = antq_m11_flavor.6292.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_alaric_sack.dds"
+	image = "gfx/interface/illustrations/event/antq_britain_abandoned.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 410.3.15
-		to = 410.5.16
+		from = 407.10.20
+		to = 407.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -7913,18 +7913,18 @@ antq_m11_flavor.6292 = {
 	}
 }
 
-# Sack of Rome — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Britain Abandoned — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6293 = {
 	type = country_event
 	title = antq_m11_flavor.6293.title
 	desc = antq_m11_flavor.6293.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_alaric_sack.dds"
+	image = "gfx/interface/illustrations/event/antq_britain_abandoned.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 410.5.27
-		to = 410.7.28
+		from = 408.8.7
+		to = 408.10.8
 		monthly_chance = 100
 	}
 	option = {
@@ -7940,18 +7940,18 @@ antq_m11_flavor.6293 = {
 	}
 }
 
-# Sack of Rome — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Britain Abandoned — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6294 = {
 	type = country_event
 	title = antq_m11_flavor.6294.title
 	desc = antq_m11_flavor.6294.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_alaric_sack.dds"
+	image = "gfx/interface/illustrations/event/antq_britain_abandoned.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 410.8.8
-		to = 410.10.9
+		from = 409.5.26
+		to = 409.7.27
 		monthly_chance = 100
 	}
 	option = {
@@ -7967,18 +7967,18 @@ antq_m11_flavor.6294 = {
 	}
 }
 
-# Sack of Rome — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Britain Abandoned — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6295 = {
 	type = country_event
 	title = antq_m11_flavor.6295.title
 	desc = antq_m11_flavor.6295.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_alaric_sack.dds"
+	image = "gfx/interface/illustrations/event/antq_britain_abandoned.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 410.10.20
-		to = 410.12.21
+		from = 410.3.14
+		to = 410.5.15
 		monthly_chance = 100
 	}
 	option = {
@@ -7994,18 +7994,18 @@ antq_m11_flavor.6295 = {
 	}
 }
 
-# Visigothic Settlement — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Sack of Rome — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6296 = {
 	type = country_event
 	title = antq_m11_flavor.6296.title
 	desc = antq_m11_flavor.6296.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_visigoth_settlement.dds"
+	image = "gfx/interface/illustrations/event/antq_alaric_sack.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 418.3.15
-		to = 418.5.16
+		from = 410.3.15
+		to = 410.5.16
 		monthly_chance = 100
 	}
 	option = {
@@ -8021,18 +8021,18 @@ antq_m11_flavor.6296 = {
 	}
 }
 
-# Visigothic Settlement — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Sack of Rome — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6297 = {
 	type = country_event
 	title = antq_m11_flavor.6297.title
 	desc = antq_m11_flavor.6297.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_visigoth_settlement.dds"
+	image = "gfx/interface/illustrations/event/antq_alaric_sack.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 418.5.27
-		to = 418.7.28
+		from = 410.5.27
+		to = 410.7.28
 		monthly_chance = 100
 	}
 	option = {
@@ -8048,18 +8048,18 @@ antq_m11_flavor.6297 = {
 	}
 }
 
-# Visigothic Settlement — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Sack of Rome — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6298 = {
 	type = country_event
 	title = antq_m11_flavor.6298.title
 	desc = antq_m11_flavor.6298.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_visigoth_settlement.dds"
+	image = "gfx/interface/illustrations/event/antq_alaric_sack.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 418.8.8
-		to = 418.10.9
+		from = 410.8.8
+		to = 410.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -8075,18 +8075,18 @@ antq_m11_flavor.6298 = {
 	}
 }
 
-# Visigothic Settlement — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Sack of Rome — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6299 = {
 	type = country_event
 	title = antq_m11_flavor.6299.title
 	desc = antq_m11_flavor.6299.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_visigoth_settlement.dds"
+	image = "gfx/interface/illustrations/event/antq_alaric_sack.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 418.10.20
-		to = 418.12.21
+		from = 410.10.20
+		to = 410.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -8102,18 +8102,18 @@ antq_m11_flavor.6299 = {
 	}
 }
 
-# Vandal Conquest of Africa — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Visigothic Settlement — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6300 = {
 	type = country_event
 	title = antq_m11_flavor.6300.title
 	desc = antq_m11_flavor.6300.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_vandal_africa.dds"
+	image = "gfx/interface/illustrations/event/antq_visigoth_settlement.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 431.3.15
-		to = 431.5.16
+		from = 418.3.15
+		to = 418.5.16
 		monthly_chance = 100
 	}
 	option = {
@@ -8129,18 +8129,18 @@ antq_m11_flavor.6300 = {
 	}
 }
 
-# Vandal Conquest of Africa — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Visigothic Settlement — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6301 = {
 	type = country_event
 	title = antq_m11_flavor.6301.title
 	desc = antq_m11_flavor.6301.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_vandal_africa.dds"
+	image = "gfx/interface/illustrations/event/antq_visigoth_settlement.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 433.5.26
-		to = 433.7.27
+		from = 418.5.27
+		to = 418.7.28
 		monthly_chance = 100
 	}
 	option = {
@@ -8156,18 +8156,18 @@ antq_m11_flavor.6301 = {
 	}
 }
 
-# Vandal Conquest of Africa — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Visigothic Settlement — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6302 = {
 	type = country_event
 	title = antq_m11_flavor.6302.title
 	desc = antq_m11_flavor.6302.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_vandal_africa.dds"
+	image = "gfx/interface/illustrations/event/antq_visigoth_settlement.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 435.8.8
-		to = 435.10.9
+		from = 418.8.8
+		to = 418.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -8183,18 +8183,18 @@ antq_m11_flavor.6302 = {
 	}
 }
 
-# Vandal Conquest of Africa — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Visigothic Settlement — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6303 = {
 	type = country_event
 	title = antq_m11_flavor.6303.title
 	desc = antq_m11_flavor.6303.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_vandal_africa.dds"
+	image = "gfx/interface/illustrations/event/antq_visigoth_settlement.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 437.10.19
-		to = 437.12.20
+		from = 418.10.20
+		to = 418.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -8210,18 +8210,18 @@ antq_m11_flavor.6303 = {
 	}
 }
 
-# Attila — Conditions Develop; ANTIQVITAS master plan §9; recipient=HNS; trigger=XIO
+# Vandal Conquest of Africa — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6304 = {
 	type = country_event
 	title = antq_m11_flavor.6304.title
 	desc = antq_m11_flavor.6304.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_attila.dds"
+	image = "gfx/interface/illustrations/event/antq_vandal_africa.dds"
 	dynamic_historical_event = {
-		tag = XIO
-		from = 438.3.15
-		to = 438.5.16
+		tag = XAA
+		from = 431.3.15
+		to = 431.5.16
 		monthly_chance = 100
 	}
 	option = {
@@ -8237,18 +8237,18 @@ antq_m11_flavor.6304 = {
 	}
 }
 
-# Attila — Pressure Builds; ANTIQVITAS master plan §9; recipient=HNS; trigger=XIO
+# Vandal Conquest of Africa — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6305 = {
 	type = country_event
 	title = antq_m11_flavor.6305.title
 	desc = antq_m11_flavor.6305.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_attila.dds"
+	image = "gfx/interface/illustrations/event/antq_vandal_africa.dds"
 	dynamic_historical_event = {
-		tag = XIO
-		from = 442.5.27
-		to = 442.7.28
+		tag = XAA
+		from = 433.5.26
+		to = 433.7.27
 		monthly_chance = 100
 	}
 	option = {
@@ -8264,18 +8264,18 @@ antq_m11_flavor.6305 = {
 	}
 }
 
-# Attila — A Contested Moment; ANTIQVITAS master plan §9; recipient=HNS; trigger=XIO
+# Vandal Conquest of Africa — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6306 = {
 	type = country_event
 	title = antq_m11_flavor.6306.title
 	desc = antq_m11_flavor.6306.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_attila.dds"
+	image = "gfx/interface/illustrations/event/antq_vandal_africa.dds"
 	dynamic_historical_event = {
-		tag = XIO
-		from = 446.8.8
-		to = 446.10.9
+		tag = XAA
+		from = 435.8.8
+		to = 435.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -8291,18 +8291,18 @@ antq_m11_flavor.6306 = {
 	}
 }
 
-# Attila — The Window Narrows; ANTIQVITAS master plan §9; recipient=HNS; trigger=XIO
+# Vandal Conquest of Africa — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6307 = {
 	type = country_event
 	title = antq_m11_flavor.6307.title
 	desc = antq_m11_flavor.6307.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_attila.dds"
+	image = "gfx/interface/illustrations/event/antq_vandal_africa.dds"
 	dynamic_historical_event = {
-		tag = XIO
-		from = 450.10.20
-		to = 450.12.21
+		tag = XAA
+		from = 437.10.19
+		to = 437.12.20
 		monthly_chance = 100
 	}
 	option = {
@@ -8318,18 +8318,18 @@ antq_m11_flavor.6307 = {
 	}
 }
 
-# Hephthalites — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
+# Attila — Conditions Develop; ANTIQVITAS master plan §9; recipient=HNS; trigger=XIO
 antq_m11_flavor.6308 = {
 	type = country_event
 	title = antq_m11_flavor.6308.title
 	desc = antq_m11_flavor.6308.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_hephthalites.dds"
+	image = "gfx/interface/illustrations/event/antq_attila.dds"
 	dynamic_historical_event = {
-		tag = XAH
-		from = 444.3.14
-		to = 444.5.15
+		tag = XIO
+		from = 438.3.15
+		to = 438.5.16
 		monthly_chance = 100
 	}
 	option = {
@@ -8345,18 +8345,18 @@ antq_m11_flavor.6308 = {
 	}
 }
 
-# Hephthalites — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
+# Attila — Pressure Builds; ANTIQVITAS master plan §9; recipient=HNS; trigger=XIO
 antq_m11_flavor.6309 = {
 	type = country_event
 	title = antq_m11_flavor.6309.title
 	desc = antq_m11_flavor.6309.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_hephthalites.dds"
+	image = "gfx/interface/illustrations/event/antq_attila.dds"
 	dynamic_historical_event = {
-		tag = XAH
-		from = 448.5.26
-		to = 448.7.27
+		tag = XIO
+		from = 442.5.27
+		to = 442.7.28
 		monthly_chance = 100
 	}
 	option = {
@@ -8372,18 +8372,18 @@ antq_m11_flavor.6309 = {
 	}
 }
 
-# Hephthalites — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
+# Attila — A Contested Moment; ANTIQVITAS master plan §9; recipient=HNS; trigger=XIO
 antq_m11_flavor.6310 = {
 	type = country_event
 	title = antq_m11_flavor.6310.title
 	desc = antq_m11_flavor.6310.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_hephthalites.dds"
+	image = "gfx/interface/illustrations/event/antq_attila.dds"
 	dynamic_historical_event = {
-		tag = XAH
-		from = 452.8.7
-		to = 452.10.8
+		tag = XIO
+		from = 446.8.8
+		to = 446.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -8399,18 +8399,18 @@ antq_m11_flavor.6310 = {
 	}
 }
 
-# Hephthalites — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
+# Attila — The Window Narrows; ANTIQVITAS master plan §9; recipient=HNS; trigger=XIO
 antq_m11_flavor.6311 = {
 	type = country_event
 	title = antq_m11_flavor.6311.title
 	desc = antq_m11_flavor.6311.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_hephthalites.dds"
+	image = "gfx/interface/illustrations/event/antq_attila.dds"
 	dynamic_historical_event = {
-		tag = XAH
-		from = 456.10.19
-		to = 456.12.20
+		tag = XIO
+		from = 450.10.20
+		to = 450.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -8426,18 +8426,18 @@ antq_m11_flavor.6311 = {
 	}
 }
 
-# Constantinople Earthquake — Conditions Develop; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
+# Hephthalites — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
 antq_m11_flavor.6312 = {
 	type = country_event
 	title = antq_m11_flavor.6312.title
 	desc = antq_m11_flavor.6312.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_constantinople_earthquake.dds"
+	image = "gfx/interface/illustrations/event/antq_hephthalites.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 447.3.15
-		to = 447.5.16
+		tag = XAH
+		from = 444.3.14
+		to = 444.5.15
 		monthly_chance = 100
 	}
 	option = {
@@ -8453,18 +8453,18 @@ antq_m11_flavor.6312 = {
 	}
 }
 
-# Constantinople Earthquake — Pressure Builds; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
+# Hephthalites — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
 antq_m11_flavor.6313 = {
 	type = country_event
 	title = antq_m11_flavor.6313.title
 	desc = antq_m11_flavor.6313.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_constantinople_earthquake.dds"
+	image = "gfx/interface/illustrations/event/antq_hephthalites.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 447.5.27
-		to = 447.7.28
+		tag = XAH
+		from = 448.5.26
+		to = 448.7.27
 		monthly_chance = 100
 	}
 	option = {
@@ -8480,18 +8480,18 @@ antq_m11_flavor.6313 = {
 	}
 }
 
-# Constantinople Earthquake — A Contested Moment; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
+# Hephthalites — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
 antq_m11_flavor.6314 = {
 	type = country_event
 	title = antq_m11_flavor.6314.title
 	desc = antq_m11_flavor.6314.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_constantinople_earthquake.dds"
+	image = "gfx/interface/illustrations/event/antq_hephthalites.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 447.8.8
-		to = 447.10.9
+		tag = XAH
+		from = 452.8.7
+		to = 452.10.8
 		monthly_chance = 100
 	}
 	option = {
@@ -8507,18 +8507,18 @@ antq_m11_flavor.6314 = {
 	}
 }
 
-# Constantinople Earthquake — The Window Narrows; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
+# Hephthalites — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAH; trigger=XAH
 antq_m11_flavor.6315 = {
 	type = country_event
 	title = antq_m11_flavor.6315.title
 	desc = antq_m11_flavor.6315.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_constantinople_earthquake.dds"
+	image = "gfx/interface/illustrations/event/antq_hephthalites.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 447.10.20
-		to = 447.12.21
+		tag = XAH
+		from = 456.10.19
+		to = 456.12.20
 		monthly_chance = 100
 	}
 	option = {
@@ -8534,18 +8534,18 @@ antq_m11_flavor.6315 = {
 	}
 }
 
-# Adventus Saxonum — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Constantinople Earthquake — Conditions Develop; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
 antq_m11_flavor.6316 = {
 	type = country_event
 	title = antq_m11_flavor.6316.title
 	desc = antq_m11_flavor.6316.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_adventus_saxonum.dds"
+	image = "gfx/interface/illustrations/event/antq_constantinople_earthquake.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 449.5.27
-		to = 449.7.28
+		from = 447.3.15
+		to = 447.5.16
 		monthly_chance = 100
 	}
 	option = {
@@ -8561,18 +8561,18 @@ antq_m11_flavor.6316 = {
 	}
 }
 
-# Adventus Saxonum — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Constantinople Earthquake — Pressure Builds; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
 antq_m11_flavor.6317 = {
 	type = country_event
 	title = antq_m11_flavor.6317.title
 	desc = antq_m11_flavor.6317.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_adventus_saxonum.dds"
+	image = "gfx/interface/illustrations/event/antq_constantinople_earthquake.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 449.10.20
-		to = 449.12.21
+		from = 447.5.27
+		to = 447.7.28
 		monthly_chance = 100
 	}
 	option = {
@@ -8588,18 +8588,18 @@ antq_m11_flavor.6317 = {
 	}
 }
 
-# Adventus Saxonum — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Constantinople Earthquake — A Contested Moment; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
 antq_m11_flavor.6318 = {
 	type = country_event
 	title = antq_m11_flavor.6318.title
 	desc = antq_m11_flavor.6318.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_adventus_saxonum.dds"
+	image = "gfx/interface/illustrations/event/antq_constantinople_earthquake.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 450.3.15
-		to = 450.5.16
+		from = 447.8.8
+		to = 447.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -8615,18 +8615,18 @@ antq_m11_flavor.6318 = {
 	}
 }
 
-# Adventus Saxonum — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
+# Constantinople Earthquake — The Window Narrows; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
 antq_m11_flavor.6319 = {
 	type = country_event
 	title = antq_m11_flavor.6319.title
 	desc = antq_m11_flavor.6319.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_adventus_saxonum.dds"
+	image = "gfx/interface/illustrations/event/antq_constantinople_earthquake.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 450.8.8
-		to = 450.10.9
+		from = 447.10.20
+		to = 447.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -8642,18 +8642,18 @@ antq_m11_flavor.6319 = {
 	}
 }
 
-# Chalcedon and Avarayr — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
+# Adventus Saxonum — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6320 = {
 	type = country_event
 	title = antq_m11_flavor.6320.title
 	desc = antq_m11_flavor.6320.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_chalcedon_avarayr.dds"
+	image = "gfx/interface/illustrations/event/antq_adventus_saxonum.dds"
 	dynamic_historical_event = {
-		tag = XAO
-		from = 451.3.15
-		to = 451.5.16
+		tag = XAA
+		from = 449.5.27
+		to = 449.7.28
 		monthly_chance = 100
 	}
 	option = {
@@ -8669,18 +8669,18 @@ antq_m11_flavor.6320 = {
 	}
 }
 
-# Chalcedon and Avarayr — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
+# Adventus Saxonum — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6321 = {
 	type = country_event
 	title = antq_m11_flavor.6321.title
 	desc = antq_m11_flavor.6321.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_chalcedon_avarayr.dds"
+	image = "gfx/interface/illustrations/event/antq_adventus_saxonum.dds"
 	dynamic_historical_event = {
-		tag = XAO
-		from = 451.5.27
-		to = 451.7.28
+		tag = XAA
+		from = 449.10.20
+		to = 449.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -8696,18 +8696,18 @@ antq_m11_flavor.6321 = {
 	}
 }
 
-# Chalcedon and Avarayr — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
+# Adventus Saxonum — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6322 = {
 	type = country_event
 	title = antq_m11_flavor.6322.title
 	desc = antq_m11_flavor.6322.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_chalcedon_avarayr.dds"
+	image = "gfx/interface/illustrations/event/antq_adventus_saxonum.dds"
 	dynamic_historical_event = {
-		tag = XAO
-		from = 451.8.8
-		to = 451.10.9
+		tag = XAA
+		from = 450.3.15
+		to = 450.5.16
 		monthly_chance = 100
 	}
 	option = {
@@ -8723,18 +8723,18 @@ antq_m11_flavor.6322 = {
 	}
 }
 
-# Chalcedon and Avarayr — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
+# Adventus Saxonum — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAA; trigger=XAA
 antq_m11_flavor.6323 = {
 	type = country_event
 	title = antq_m11_flavor.6323.title
 	desc = antq_m11_flavor.6323.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_chalcedon_avarayr.dds"
+	image = "gfx/interface/illustrations/event/antq_adventus_saxonum.dds"
 	dynamic_historical_event = {
-		tag = XAO
-		from = 451.10.20
-		to = 451.12.21
+		tag = XAA
+		from = 450.8.8
+		to = 450.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -8750,18 +8750,18 @@ antq_m11_flavor.6323 = {
 	}
 }
 
-# Vandal Sack of Rome — Conditions Develop; ANTIQVITAS master plan §9; recipient=VND; trigger=XAA
+# Chalcedon and Avarayr — Conditions Develop; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
 antq_m11_flavor.6324 = {
 	type = country_event
 	title = antq_m11_flavor.6324.title
 	desc = antq_m11_flavor.6324.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_vandal_sack_rome.dds"
+	image = "gfx/interface/illustrations/event/antq_chalcedon_avarayr.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 455.3.15
-		to = 455.5.16
+		tag = XAO
+		from = 451.3.15
+		to = 451.5.16
 		monthly_chance = 100
 	}
 	option = {
@@ -8777,18 +8777,18 @@ antq_m11_flavor.6324 = {
 	}
 }
 
-# Vandal Sack of Rome — Pressure Builds; ANTIQVITAS master plan §9; recipient=VND; trigger=XAA
+# Chalcedon and Avarayr — Pressure Builds; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
 antq_m11_flavor.6325 = {
 	type = country_event
 	title = antq_m11_flavor.6325.title
 	desc = antq_m11_flavor.6325.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_vandal_sack_rome.dds"
+	image = "gfx/interface/illustrations/event/antq_chalcedon_avarayr.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 455.5.27
-		to = 455.7.28
+		tag = XAO
+		from = 451.5.27
+		to = 451.7.28
 		monthly_chance = 100
 	}
 	option = {
@@ -8804,18 +8804,18 @@ antq_m11_flavor.6325 = {
 	}
 }
 
-# Vandal Sack of Rome — A Contested Moment; ANTIQVITAS master plan §9; recipient=VND; trigger=XAA
+# Chalcedon and Avarayr — A Contested Moment; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
 antq_m11_flavor.6326 = {
 	type = country_event
 	title = antq_m11_flavor.6326.title
 	desc = antq_m11_flavor.6326.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_vandal_sack_rome.dds"
+	image = "gfx/interface/illustrations/event/antq_chalcedon_avarayr.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 455.8.8
-		to = 455.10.9
+		tag = XAO
+		from = 451.8.8
+		to = 451.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -8831,18 +8831,18 @@ antq_m11_flavor.6326 = {
 	}
 }
 
-# Vandal Sack of Rome — The Window Narrows; ANTIQVITAS master plan §9; recipient=VND; trigger=XAA
+# Chalcedon and Avarayr — The Window Narrows; ANTIQVITAS master plan §9; recipient=XAO; trigger=XAO
 antq_m11_flavor.6327 = {
 	type = country_event
 	title = antq_m11_flavor.6327.title
 	desc = antq_m11_flavor.6327.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_vandal_sack_rome.dds"
+	image = "gfx/interface/illustrations/event/antq_chalcedon_avarayr.dds"
 	dynamic_historical_event = {
-		tag = XAA
-		from = 455.10.20
-		to = 455.12.21
+		tag = XAO
+		from = 451.10.20
+		to = 451.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -8858,18 +8858,18 @@ antq_m11_flavor.6327 = {
 	}
 }
 
-# Cape Bon — Conditions Develop; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
+# Vandal Sack of Rome — Conditions Develop; ANTIQVITAS master plan §9; recipient=VND; trigger=XAA
 antq_m11_flavor.6328 = {
 	type = country_event
 	title = antq_m11_flavor.6328.title
 	desc = antq_m11_flavor.6328.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_cape_bon.dds"
+	image = "gfx/interface/illustrations/event/antq_vandal_sack_rome.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 468.3.14
-		to = 468.5.15
+		from = 455.3.15
+		to = 455.5.16
 		monthly_chance = 100
 	}
 	option = {
@@ -8885,18 +8885,18 @@ antq_m11_flavor.6328 = {
 	}
 }
 
-# Cape Bon — Pressure Builds; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
+# Vandal Sack of Rome — Pressure Builds; ANTIQVITAS master plan §9; recipient=VND; trigger=XAA
 antq_m11_flavor.6329 = {
 	type = country_event
 	title = antq_m11_flavor.6329.title
 	desc = antq_m11_flavor.6329.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_cape_bon.dds"
+	image = "gfx/interface/illustrations/event/antq_vandal_sack_rome.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 468.5.26
-		to = 468.7.27
+		from = 455.5.27
+		to = 455.7.28
 		monthly_chance = 100
 	}
 	option = {
@@ -8912,18 +8912,18 @@ antq_m11_flavor.6329 = {
 	}
 }
 
-# Cape Bon — A Contested Moment; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
+# Vandal Sack of Rome — A Contested Moment; ANTIQVITAS master plan §9; recipient=VND; trigger=XAA
 antq_m11_flavor.6330 = {
 	type = country_event
 	title = antq_m11_flavor.6330.title
 	desc = antq_m11_flavor.6330.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_cape_bon.dds"
+	image = "gfx/interface/illustrations/event/antq_vandal_sack_rome.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 468.8.7
-		to = 468.10.8
+		from = 455.8.8
+		to = 455.10.9
 		monthly_chance = 100
 	}
 	option = {
@@ -8939,18 +8939,18 @@ antq_m11_flavor.6330 = {
 	}
 }
 
-# Cape Bon — The Window Narrows; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
+# Vandal Sack of Rome — The Window Narrows; ANTIQVITAS master plan §9; recipient=VND; trigger=XAA
 antq_m11_flavor.6331 = {
 	type = country_event
 	title = antq_m11_flavor.6331.title
 	desc = antq_m11_flavor.6331.desc
 	outcome = neutral
 	fire_only_once = yes
-	image = "gfx/interface/illustrations/event/antq_cape_bon.dds"
+	image = "gfx/interface/illustrations/event/antq_vandal_sack_rome.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 468.10.19
-		to = 468.12.20
+		from = 455.10.20
+		to = 455.12.21
 		monthly_chance = 100
 	}
 	option = {
@@ -8961,6 +8961,114 @@ antq_m11_flavor.6331 = {
 	}
 	option = {
 		name = antq_m11_flavor.6331.b
+		ai_chance = { base = 35 }
+		add_legitimacy = legitimacy_weak_penalty
+	}
+}
+
+# Cape Bon — Conditions Develop; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
+antq_m11_flavor.6332 = {
+	type = country_event
+	title = antq_m11_flavor.6332.title
+	desc = antq_m11_flavor.6332.desc
+	outcome = neutral
+	fire_only_once = yes
+	image = "gfx/interface/illustrations/event/antq_cape_bon.dds"
+	dynamic_historical_event = {
+		tag = XAA
+		from = 468.3.14
+		to = 468.5.15
+		monthly_chance = 100
+	}
+	option = {
+		name = antq_m11_flavor.6332.a
+		ai_chance = { base = 65 }
+		add_gold = -3
+		add_stability = stability_weak_bonus
+	}
+	option = {
+		name = antq_m11_flavor.6332.b
+		ai_chance = { base = 35 }
+		add_prestige = prestige_weak_penalty
+	}
+}
+
+# Cape Bon — Pressure Builds; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
+antq_m11_flavor.6333 = {
+	type = country_event
+	title = antq_m11_flavor.6333.title
+	desc = antq_m11_flavor.6333.desc
+	outcome = neutral
+	fire_only_once = yes
+	image = "gfx/interface/illustrations/event/antq_cape_bon.dds"
+	dynamic_historical_event = {
+		tag = XAA
+		from = 468.5.26
+		to = 468.7.27
+		monthly_chance = 100
+	}
+	option = {
+		name = antq_m11_flavor.6333.a
+		ai_chance = { base = 65 }
+		add_gold = -5
+		add_legitimacy = legitimacy_weak_bonus
+	}
+	option = {
+		name = antq_m11_flavor.6333.b
+		ai_chance = { base = 35 }
+		add_stability = stability_weak_penalty
+	}
+}
+
+# Cape Bon — A Contested Moment; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
+antq_m11_flavor.6334 = {
+	type = country_event
+	title = antq_m11_flavor.6334.title
+	desc = antq_m11_flavor.6334.desc
+	outcome = neutral
+	fire_only_once = yes
+	image = "gfx/interface/illustrations/event/antq_cape_bon.dds"
+	dynamic_historical_event = {
+		tag = XAA
+		from = 468.8.7
+		to = 468.10.8
+		monthly_chance = 100
+	}
+	option = {
+		name = antq_m11_flavor.6334.a
+		ai_chance = { base = 65 }
+		add_gold = -8
+		add_prestige = prestige_weak_bonus
+	}
+	option = {
+		name = antq_m11_flavor.6334.b
+		ai_chance = { base = 35 }
+		add_legitimacy = legitimacy_weak_penalty
+	}
+}
+
+# Cape Bon — The Window Narrows; ANTIQVITAS master plan §9; recipient=ERO; trigger=XAA
+antq_m11_flavor.6335 = {
+	type = country_event
+	title = antq_m11_flavor.6335.title
+	desc = antq_m11_flavor.6335.desc
+	outcome = neutral
+	fire_only_once = yes
+	image = "gfx/interface/illustrations/event/antq_cape_bon.dds"
+	dynamic_historical_event = {
+		tag = XAA
+		from = 468.10.19
+		to = 468.12.20
+		monthly_chance = 100
+	}
+	option = {
+		name = antq_m11_flavor.6335.a
+		ai_chance = { base = 65 }
+		add_gold = -4
+		add_stability = stability_weak_bonus
+	}
+	option = {
+		name = antq_m11_flavor.6335.b
 		ai_chance = { base = 35 }
 		add_legitimacy = legitimacy_weak_penalty
 	}

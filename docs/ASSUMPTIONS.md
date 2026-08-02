@@ -5997,3 +5997,11 @@ outbreak as a bounded mortality-system proxy, not a claim that every episode's
 pathogen is securely identified. Material effects also hit manpower, food, and
 fiscal capacity. Sources: `CAH-XI`; `CAH-XII`; `P14`. [contested pathogen;
 secure broad demographic and fiscal disruption]
+
+## 2026-08-02 - Cyprian epidemic chronology and reach
+
+Model AD 251-270 as uneven, port-connected Mediterranean waves rather than a
+simultaneous global outbreak. Cyprian's testimony supports severe social and
+mortality pressure; pathogen identity remains contested, so smallpox is only an
+engine proxy. Sources: `JRA-CYP-2015`; `JRA-CYP-2021`. [secure broad disruption;
+contested onset, reach, and pathogen]

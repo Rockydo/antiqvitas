@@ -14,20 +14,42 @@ antq_m10_fourth_constantine_civil_wars = {
 	can_end = {
 		OR = {
 			current_date >= 331.1.1
-			AND = {
-				current_date >= 318.7.2
-				c:XAA ?= {
-					stability >= 20
-					at_war = no
-				}
-			}
+			var:antq_m10_fourth_constantine_civil_wars_resolution_progress >= 100
 		}
 	}
 	visible = {
 		country_exists = c:XAA
 	}
 	on_start = {
+		set_variable = { name = antq_m10_fourth_constantine_civil_wars_resolution_progress value = 0 }
 		c:XAA = { trigger_event_non_silently = antq_m10_fourth.4001 }
+	}
+	on_monthly = {
+		c:XAA = {
+			if = {
+				limit = { stability >= 20 at_war = no }
+				root = { change_variable = { name = antq_m10_fourth_constantine_civil_wars_resolution_progress add = 3 } }
+			}
+			else_if = {
+				limit = { stability >= 0 at_war = yes }
+				root = { change_variable = { name = antq_m10_fourth_constantine_civil_wars_resolution_progress add = 1.5 } }
+			}
+			else = {
+				root = { change_variable = { name = antq_m10_fourth_constantine_civil_wars_resolution_progress add = 0.5 } }
+			}
+			random_list = {
+				1 = {
+					add_manpower = { value = monthly_manpower multiply = -0.5 }
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }
+					capital = { province = { change_province_food_percentage = -0.01 } }
+				}
+				23 = {}
+			}
+		}
+	}
+	on_ended = {
+		if = { limit = { has_variable = antq_m10_fourth_constantine_civil_wars_resolution_progress } remove_variable = antq_m10_fourth_constantine_civil_wars_resolution_progress }
+		c:XAA ?= { add_stability = stability_weak_bonus }
 	}
 }
 
@@ -45,20 +67,42 @@ antq_m10_fourth_shapur_julian = {
 	can_end = {
 		OR = {
 			current_date >= 364.1.1
-			AND = {
-				current_date >= 350.7.2
-				c:XAH ?= {
-					stability >= 20
-					at_war = no
-				}
-			}
+			var:antq_m10_fourth_shapur_julian_resolution_progress >= 100
 		}
 	}
 	visible = {
 		country_exists = c:XAH
 	}
 	on_start = {
+		set_variable = { name = antq_m10_fourth_shapur_julian_resolution_progress value = 0 }
 		c:XAH = { trigger_event_non_silently = antq_m10_fourth.4003 }
+	}
+	on_monthly = {
+		c:XAH = {
+			if = {
+				limit = { stability >= 20 at_war = no }
+				root = { change_variable = { name = antq_m10_fourth_shapur_julian_resolution_progress add = 3 } }
+			}
+			else_if = {
+				limit = { stability >= 0 at_war = yes }
+				root = { change_variable = { name = antq_m10_fourth_shapur_julian_resolution_progress add = 1.5 } }
+			}
+			else = {
+				root = { change_variable = { name = antq_m10_fourth_shapur_julian_resolution_progress add = 0.5 } }
+			}
+			random_list = {
+				1 = {
+					add_manpower = { value = monthly_manpower multiply = -0.5 }
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }
+					capital = { province = { change_province_food_percentage = -0.01 } }
+				}
+				23 = {}
+			}
+		}
+	}
+	on_ended = {
+		if = { limit = { has_variable = antq_m10_fourth_shapur_julian_resolution_progress } remove_variable = antq_m10_fourth_shapur_julian_resolution_progress }
+		c:XAH ?= { add_stability = stability_weak_bonus }
 	}
 }
 
@@ -76,20 +120,42 @@ antq_m10_fourth_aksum_meroe = {
 	can_end = {
 		OR = {
 			current_date >= 351.1.1
-			AND = {
-				current_date >= 350.7.2
-				c:AKS ?= {
-					stability >= 20
-					at_war = no
-				}
-			}
+			var:antq_m10_fourth_aksum_meroe_resolution_progress >= 100
 		}
 	}
 	visible = {
 		country_exists = c:AKS
 	}
 	on_start = {
+		set_variable = { name = antq_m10_fourth_aksum_meroe_resolution_progress value = 0 }
 		c:AKS = { trigger_event_non_silently = antq_m10_fourth.4004 }
+	}
+	on_monthly = {
+		c:AKS = {
+			if = {
+				limit = { stability >= 20 at_war = no }
+				root = { change_variable = { name = antq_m10_fourth_aksum_meroe_resolution_progress add = 3 } }
+			}
+			else_if = {
+				limit = { stability >= 0 at_war = yes }
+				root = { change_variable = { name = antq_m10_fourth_aksum_meroe_resolution_progress add = 1.5 } }
+			}
+			else = {
+				root = { change_variable = { name = antq_m10_fourth_aksum_meroe_resolution_progress add = 0.5 } }
+			}
+			random_list = {
+				1 = {
+					add_manpower = { value = monthly_manpower multiply = -0.5 }
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }
+					capital = { province = { change_province_food_percentage = -0.01 } }
+				}
+				23 = {}
+			}
+		}
+	}
+	on_ended = {
+		if = { limit = { has_variable = antq_m10_fourth_aksum_meroe_resolution_progress } remove_variable = antq_m10_fourth_aksum_meroe_resolution_progress }
+		c:AKS ?= { add_stability = stability_weak_bonus }
 	}
 }
 
@@ -107,20 +173,42 @@ antq_m10_fourth_gothic_refugees = {
 	can_end = {
 		OR = {
 			current_date >= 383.1.1
-			AND = {
-				current_date >= 379.7.2
-				c:GUT ?= {
-					stability >= 20
-					at_war = no
-				}
-			}
+			var:antq_m10_fourth_gothic_refugees_resolution_progress >= 100
 		}
 	}
 	visible = {
 		country_exists = c:GUT
 	}
 	on_start = {
+		set_variable = { name = antq_m10_fourth_gothic_refugees_resolution_progress value = 0 }
 		c:GUT = { trigger_event_non_silently = antq_m10_fourth.4007 }
+	}
+	on_monthly = {
+		c:GUT = {
+			if = {
+				limit = { stability >= 20 at_war = no }
+				root = { change_variable = { name = antq_m10_fourth_gothic_refugees_resolution_progress add = 3 } }
+			}
+			else_if = {
+				limit = { stability >= 0 at_war = yes }
+				root = { change_variable = { name = antq_m10_fourth_gothic_refugees_resolution_progress add = 1.5 } }
+			}
+			else = {
+				root = { change_variable = { name = antq_m10_fourth_gothic_refugees_resolution_progress add = 0.5 } }
+			}
+			random_list = {
+				1 = {
+					add_manpower = { value = monthly_manpower multiply = -0.5 }
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }
+					capital = { province = { change_province_food_percentage = -0.01 } }
+				}
+				23 = {}
+			}
+		}
+	}
+	on_ended = {
+		if = { limit = { has_variable = antq_m10_fourth_gothic_refugees_resolution_progress } remove_variable = antq_m10_fourth_gothic_refugees_resolution_progress }
+		c:GUT ?= { add_stability = stability_weak_bonus }
 	}
 }
 
@@ -138,20 +226,42 @@ antq_m10_fourth_fei_river = {
 	can_end = {
 		OR = {
 			current_date >= 440.1.1
-			AND = {
-				current_date >= 411.7.2
-				c:XAR ?= {
-					stability >= 20
-					at_war = no
-				}
-			}
+			var:antq_m10_fourth_fei_river_resolution_progress >= 100
 		}
 	}
 	visible = {
 		country_exists = c:XAR
 	}
 	on_start = {
+		set_variable = { name = antq_m10_fourth_fei_river_resolution_progress value = 0 }
 		c:XAR = { trigger_event_non_silently = antq_m10_fourth.4009 }
+	}
+	on_monthly = {
+		c:XAR = {
+			if = {
+				limit = { stability >= 20 at_war = no }
+				root = { change_variable = { name = antq_m10_fourth_fei_river_resolution_progress add = 3 } }
+			}
+			else_if = {
+				limit = { stability >= 0 at_war = yes }
+				root = { change_variable = { name = antq_m10_fourth_fei_river_resolution_progress add = 1.5 } }
+			}
+			else = {
+				root = { change_variable = { name = antq_m10_fourth_fei_river_resolution_progress add = 0.5 } }
+			}
+			random_list = {
+				1 = {
+					add_manpower = { value = monthly_manpower multiply = -0.5 }
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }
+					capital = { province = { change_province_food_percentage = -0.01 } }
+				}
+				23 = {}
+			}
+		}
+	}
+	on_ended = {
+		if = { limit = { has_variable = antq_m10_fourth_fei_river_resolution_progress } remove_variable = antq_m10_fourth_fei_river_resolution_progress }
+		c:XAR ?= { add_stability = stability_weak_bonus }
 	}
 }
 
@@ -169,20 +279,42 @@ antq_m10_fourth_gwanggaeto = {
 	can_end = {
 		OR = {
 			current_date >= 414.1.1
-			AND = {
-				current_date >= 402.7.2
-				c:GOG ?= {
-					stability >= 20
-					at_war = no
-				}
-			}
+			var:antq_m10_fourth_gwanggaeto_resolution_progress >= 100
 		}
 	}
 	visible = {
 		country_exists = c:GOG
 	}
 	on_start = {
+		set_variable = { name = antq_m10_fourth_gwanggaeto_resolution_progress value = 0 }
 		c:GOG = { trigger_event_non_silently = antq_m10_fourth.4010 }
+	}
+	on_monthly = {
+		c:GOG = {
+			if = {
+				limit = { stability >= 20 at_war = no }
+				root = { change_variable = { name = antq_m10_fourth_gwanggaeto_resolution_progress add = 3 } }
+			}
+			else_if = {
+				limit = { stability >= 0 at_war = yes }
+				root = { change_variable = { name = antq_m10_fourth_gwanggaeto_resolution_progress add = 1.5 } }
+			}
+			else = {
+				root = { change_variable = { name = antq_m10_fourth_gwanggaeto_resolution_progress add = 0.5 } }
+			}
+			random_list = {
+				1 = {
+					add_manpower = { value = monthly_manpower multiply = -0.5 }
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }
+					capital = { province = { change_province_food_percentage = -0.01 } }
+				}
+				23 = {}
+			}
+		}
+	}
+	on_ended = {
+		if = { limit = { has_variable = antq_m10_fourth_gwanggaeto_resolution_progress } remove_variable = antq_m10_fourth_gwanggaeto_resolution_progress }
+		c:GOG ?= { add_stability = stability_weak_bonus }
 	}
 }
 
@@ -200,19 +332,41 @@ antq_m10_fourth_faxian_gupta = {
 	can_end = {
 		OR = {
 			current_date >= 413.1.1
-			AND = {
-				current_date >= 406.1.1
-				c:XAR ?= {
-					stability >= 20
-					at_war = no
-				}
-			}
+			var:antq_m10_fourth_faxian_gupta_resolution_progress >= 100
 		}
 	}
 	visible = {
 		country_exists = c:XAR
 	}
 	on_start = {
+		set_variable = { name = antq_m10_fourth_faxian_gupta_resolution_progress value = 0 }
 		c:XAR = { trigger_event_non_silently = antq_m10_fourth.4013 }
+	}
+	on_monthly = {
+		c:XAR = {
+			if = {
+				limit = { stability >= 20 at_war = no }
+				root = { change_variable = { name = antq_m10_fourth_faxian_gupta_resolution_progress add = 3 } }
+			}
+			else_if = {
+				limit = { stability >= 0 at_war = yes }
+				root = { change_variable = { name = antq_m10_fourth_faxian_gupta_resolution_progress add = 1.5 } }
+			}
+			else = {
+				root = { change_variable = { name = antq_m10_fourth_faxian_gupta_resolution_progress add = 0.5 } }
+			}
+			random_list = {
+				1 = {
+					add_manpower = { value = monthly_manpower multiply = -0.5 }
+					add_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }
+					capital = { province = { change_province_food_percentage = -0.01 } }
+				}
+				23 = {}
+			}
+		}
+	}
+	on_ended = {
+		if = { limit = { has_variable = antq_m10_fourth_faxian_gupta_resolution_progress } remove_variable = antq_m10_fourth_faxian_gupta_resolution_progress }
+		c:XAR ?= { add_stability = stability_weak_bonus }
 	}
 }

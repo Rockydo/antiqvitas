@@ -4482,3 +4482,17 @@ are AI-registered and consume gated stock. Phase events have two mechanical
 choices; crises may resolve through peace and stability before their hard date.
 IO trust was dropped after the runtime parser rejected the documented field;
 accepted member modifiers and opinion bonuses remain.
+
+## 2026-08-02 - Currents earn resolution; organizations require agency
+
+Every situation/disaster has a progress variable, peaceful and mobilized
+response paths, recurring material cost, recovery, and a sourced date only as
+safety bound. Opening IOs require at least two eligible members, recurring
+benefits/obligations, AI join logic/actions, and automatic exit/dissolution;
+unsupported one-member shells stay dormant. Event art uses four-up sheets made
+against installed EU5 paintings, then split and encoded through the local pipeline.
+
+Tributary status is a universal ancient diplomatic contract, not a Han-only
+advance reward. Removing its research lock prevents the engine rejecting an
+opening dependency when the subject lacks Legal Petitions; that advance keeps
+only its later Han unification reward.

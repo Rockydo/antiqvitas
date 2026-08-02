@@ -17,6 +17,7 @@ import re
 from pathlib import Path
 
 from m11_decisions import EXPECTED_COUNT, load_decisions, load_tag_maps, validate
+from m9_diplomacy import IO_ACTION_KEYS
 from s2_germania_dynamics import ACTIONS as GERMANIA_ACTIONS
 
 
@@ -61,8 +62,13 @@ def scoped_types(scope: str) -> tuple[str, ...]:
         f"PERFORM_{action}_ACTION" for action in ARABIAN_ROUTE_ACTIONS
     ) + tuple(
         f"PERFORM_{action.key}_ACTION" for action in GERMANIA_ACTIONS
+    ) + tuple(
+        f"PERFORM_{action}_ACTION" for action in IO_ACTION_KEYS
     )
-    expected = EXPECTED_COUNT + len(ARABIAN_ROUTE_ACTIONS) + len(GERMANIA_ACTIONS)
+    expected = (
+        EXPECTED_COUNT + len(ARABIAN_ROUTE_ACTIONS) + len(GERMANIA_ACTIONS)
+        + len(IO_ACTION_KEYS)
+    )
     if len(message_types) != expected or len(set(message_types)) != expected:
         raise ValueError("M11 full message registry does not match the validated decision ledger")
     return message_types
