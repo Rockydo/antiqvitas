@@ -8348,3 +8348,14 @@ reviewed 128px BC7 DDS.
   50.00->50.05 after the first monthly tick. Four currents initialize staged state.
 - Fresh runtime exposed Sogdian tributary initialization behind a Han-only
   unlock. Tributary status is now universally formable; M9 rejects future locks.
+
+## 2026-08-02 - Public-history privacy remediation
+
+- Rewrote all reachable branches, milestone tags, commits, taggers, and preserved
+  stashes to public identities; removed tracked local-path configuration from history.
+- Force-updated the remote behind exact leases and removed all transfer-only refs.
+- A new network mirror passes full connectivity and scans 11,282 current paths plus
+  every unique reachable historical blob with no identity or machine-path finding.
+- Extended `public_release_guard.py` to reject private commit/tag identities and
+  historical local config; `--history` performs the full release audit.
+- Final validation passes 159/159; the deep all-object guard also passes.

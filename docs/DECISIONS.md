@@ -4496,3 +4496,12 @@ Tributary status is a universal ancient diplomatic contract, not a Han-only
 advance reward. Removing its research lock prevents the engine rejecting an
 opening dependency when the subject lacks Legal Petitions; that advance keeps
 only its later Han unification reward.
+
+## 2026-08-02 - Public history is release surface
+
+Treat every advertised commit, tag, and historical blob as public output,
+not only the checkout. Normal validation checks current files plus reachable
+commit/tag identities; release validation also runs `public_release_guard.py
+--history`. Local path configuration remains ignored and only its tokenized example
+is tracked. Any future history rewrite requires exact ref leases, fresh network
+mirror connectivity, a deep privacy scan, and removal of transfer-only refs.

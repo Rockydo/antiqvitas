@@ -11,11 +11,14 @@ runtime evidence agree.
 
 ### S4-P0 - Public safety and foundational simulation
 
-- [ ] Remove personal data and machine-specific absolute paths from every tracked
+- [x] Remove personal data and machine-specific absolute paths from every tracked
   text/binary artifact and generated manifest. Replace tracked local configuration
   with a template plus ignored runtime state; make `make validate` fail on usernames,
   home paths, drive-qualified repo/game paths, or embedded local metadata. Audit all
   Git history and document/sanitize any remaining public-release risk.
+  Reachable branches, tags, identities, and historical blobs were rewritten and
+  fresh-mirror audited; both preserved stashes are sanitized and the old local
+  graph was pruned. See `docs/m12/PUBLIC_RELEASE_PRIVACY_AUDIT.md`.
 - [x] Replace the one-pop-per-location start with historically plausible strata.
   Preserve sourced regional totals while distributing nobles, clergy, burghers,
   peasants, laborers, soldiers, slaves, and tribesmen by polity, settlement rank,
