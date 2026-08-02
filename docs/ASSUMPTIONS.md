@@ -6017,3 +6017,10 @@ Christianity, organized Daoism, and Manichaeism have no AD 1 compatibility
 population. Their native dated definitions are explicitly enabled by the same
 foundation event that creates the bounded historical seed. Seven other faiths
 receive plausible, total-neutral AD 1 communities.
+
+## 2026-08-02 - Capacity adapters represent omitted ancient settlement systems
+
+Where the engine's 1337 terrain/rank capacity rejects the sourced AD 1 population,
+the adapter represents dispersed farms, terraces, waterworks, and storage absent
+from that baseline; it is not a higher population estimate. Location tiers are
+engine-calibrated, not census claims. Sources: master plan §12; `P15`; `CAH-XI`.

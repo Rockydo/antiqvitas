@@ -129,10 +129,11 @@ def set_fixed_settings(user_dir: Path) -> None:
             "renderer": "Vulkan",
             "display_mode": "windowed",
             "resolution": f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}",
-            # 70% is an installed-UI setting value verified in a live menu.
-            # The local UI already reports Upscale Method Disabled and Upscale
-            # Quality Off, so this is a standalone render-load reduction.
-            "render_scale": 0.7,
+            # Native scale is required on this host.  The installed FSR2 path
+            # still initializes at sub-native scale even when the UI reports
+            # upscaling disabled, and repeatedly crashed observer runs inside
+            # ffxFsr2ResourceIsNull.  Native scale has remained stable.
+            "render_scale": 1.0,
             "vsync": False,
             "setting_framerate_cap": "30",
             # The installed settings tooltip documents this as the maximum-speed

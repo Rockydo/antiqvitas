@@ -85,6 +85,7 @@ antq_m10_final.5003 = {
 		name = antq_m10_final.5003.a
 		historical_option = yes
 		# CAM-GAUL: Aquitanian/Toulouse local-mesh proxy; see ASSUMPTIONS.md.
+		religion:antq_early_christianity = { enable_religion = yes }
 		location:toulouse = {
 			create_country_from_location = {
 				define_unique_country_tag = VSG
@@ -136,6 +137,7 @@ antq_m10_final.5004 = {
 		name = antq_m10_final.5004.a
 		historical_option = yes
 		# CAM-VANDAL: Tunis is the installed local proxy for Carthage; see ASSUMPTIONS.md.
+		religion:antq_early_christianity = { enable_religion = yes }
 		location:tunis = {
 			create_country_from_location = {
 				define_unique_country_tag = VND

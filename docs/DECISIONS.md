@@ -4521,3 +4521,11 @@ Follow installed Sikhism: keep a sourced future `enable` date and execute
 `enable_religion` before the foundation event seeds adherents. Do not retain
 Christianity, organized Daoism, or Manichaeism through ahistorical setup pops.
 Seven faiths genuinely present in AD 1 retain bounded, total-neutral communities.
+
+## 2026-08-02 - Opening stores and settlement capacity are bounded state
+
+Seed province food to 50% of its own capacity once at startup; never add recurring
+gold or goods. Preserve sourced AD 1 populations and adapt only the 464 locations
+the fresh engine `overpopulation` command identifies. Use permanent additive
+capacity tiers with no growth, tax, or production effect; calibrate terrain/climate
+attenuation from a second fresh run and require zero at bookmark and after February.

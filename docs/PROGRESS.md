@@ -8379,3 +8379,14 @@ reviewed 128px BC7 DDS.
 - Neutralized two globally reachable medieval-character comparisons. Fresh
   Observer reached 26 March with neither diagnostic recurring.
 - Validation passes 161/161; paired smoke adds zero new/mod-unique lines.
+
+## 2026-08-02 - Principate economy and population-capacity repair
+
+- Replaced flat Principate income with one 50%-capacity opening food reserve;
+  Rome and peer AI economies settle without recurring gold.
+- Engine-audited 464 overcapacity locations (6,506,587 people), calibrated 61
+  climate-scaled residuals, and reached zero at bookmark and after February.
+- Future Christianity, organized Daoism, and Manichaeism now enable before their
+  bounded foundation seeds; native-scale Observer is renderer-stable.
+- Validation passes 164/164; paired smoke adds zero new lines at
+  `a687df49daa5aa30ad920d2a3915792d0dcb00413367375001e3c0602e6b760c`.

@@ -185,12 +185,14 @@ def impact(record: Current) -> tuple[str, ...]:
     if record.key == "visigoth_settlement":
         return (
             "\t\t# CAM-GAUL: Aquitanian/Toulouse local-mesh proxy; see ASSUMPTIONS.md.",
+            "\t\treligion:antq_early_christianity = { enable_religion = yes }",
             *form_country("VSG", "toulouse", "antq_gothic", "antq_early_christianity", VISIGOTH_LOCATIONS),
             "\t\tadd_stability = stability_mild_penalty",
         )
     if record.key == "vandal_africa":
         return (
             "\t\t# CAM-VANDAL: Tunis is the installed local proxy for Carthage; see ASSUMPTIONS.md.",
+            "\t\treligion:antq_early_christianity = { enable_religion = yes }",
             *form_country("VND", "tunis", "antq_vandalic", "antq_early_christianity", VANDAL_LOCATIONS),
             "\t\tadd_stability = stability_mild_penalty",
         )

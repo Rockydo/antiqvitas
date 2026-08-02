@@ -288,11 +288,13 @@ def impact_lines(record: Current, eastern_locations: tuple[tuple[str, str], ...]
     if record.key == "armenia_conversion":
         return (
             "\t\t# IRAN-ARMCONV: 301 is the plan's traditional-current anchor; chronology is contested.",
+            "\t\treligion:antq_early_christianity = { enable_religion = yes }",
             "\t\tchange_religion = religion:antq_early_christianity",
             "\t\tadd_prestige = prestige_mild_bonus",
         )
     if record.key == "thessalonica":
         return (
+            "\t\treligion:antq_early_christianity = { enable_religion = yes }",
             "\t\tchange_religion = religion:antq_early_christianity",
             "\t\tadd_legitimacy = legitimacy_mild_bonus",
         )

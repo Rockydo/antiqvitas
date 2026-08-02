@@ -34,6 +34,7 @@ OUTPUT = ROOT / "in_game/common/on_action/_hardcoded.txt"
 COUNTRY_STATIC_RELATIVE = Path("game/main_menu/common/static_modifiers/country.txt")
 COUNTRY_STATIC_OUTPUT = ROOT / "main_menu/common/static_modifiers/country.txt"
 BANKRUPTCY_STATIC_OUTPUT = ROOT / "main_menu/common/static_modifiers/antq_bankruptcy.txt"
+CAPACITY_STATIC_OUTPUT = ROOT / "main_menu/common/static_modifiers/antq_opening_capacity.txt"
 ECONOMY_GUI_RELATIVE = Path("game/in_game/gui/economy_lateralview.gui")
 ECONOMY_GUI_OUTPUT = ROOT / "in_game/gui/economy_lateralview.gui"
 CREDIT_GUI_RELATIVE = Path("game/in_game/gui/credit.gui")
@@ -99,6 +100,21 @@ ANNONA_ROUTE_FIELDS = (
     "desired", "locked", "source", "confidence", "note",
 )
 EXPECTED_ANNONA_ROUTE_SOURCES = frozenset({"cagliari", "faiyum", "sousse", "syracuse"})
+OPENING_PROVINCE_FOOD_RESERVE = Decimal("0.50")
+OPENING_CAPACITY_LEDGER = ROOT / "docs/world_1ad/opening_capacity_adapters.csv"
+OPENING_CAPACITY_FIELDS = (
+    "location", "engine_excess_people", "capacity_bonus_thousands",
+)
+OPENING_CAPACITY_CALIBRATION = ROOT / "docs/world_1ad/opening_capacity_residual_calibration.csv"
+OPENING_CAPACITY_CALIBRATION_FIELDS = (
+    "location", "initial_bonus_thousands", "residual_excess_people",
+    "effective_capacity_rate", "final_bonus_thousands",
+)
+OPENING_CAPACITY_TIERS = (1, 2, 5, 10, 15, 20, 25, 30, 35, 40, 50, 60, 75, 100, 150, 200, 300, 400)
+EXPECTED_OPENING_CAPACITY_LOCATIONS = 464
+EXPECTED_OPENING_CAPACITY_EXCESS = 6_506_587
+EXPECTED_OPENING_CAPACITY_RESIDUAL_LOCATIONS = 61
+EXPECTED_OPENING_CAPACITY_RESIDUAL_EXCESS = 322_966
 LEGACY_INSTITUTION_CALLBACK = """#root = country, scope:target = institution
 on_institution_embraced = {
 	effect = {
@@ -315,6 +331,134 @@ def annona_trade_effects(newline: str) -> list[str]:
     return lines
 
 
+def opening_food_reserve_effects(newline: str) -> list[str]:
+    """Seed bounded household, civic, and state grain stores at the bookmark.
+
+    The installed setup surface creates every AD 1 province with an empty food
+    stockpile.  Once markets settle, countries therefore buy several months of
+    food at once and large states appear insolvent despite viable production.
+    A percentage effect is capacity-bounded and scales with each province; it
+    supplies no recurring income or production bonus.
+    """
+    reserve = format(OPENING_PROVINCE_FOOD_RESERVE, "f")
+    return [
+        f"\t\t# ANTIQVITAS S4: capacity-bounded opening food stores; not recurring supply.{newline}",
+        f"\t\tevery_country = {{{newline}",
+        f"\t\t\tevery_province = {{{newline}",
+        f"\t\t\t\tchange_province_food_percentage = {reserve}{newline}",
+        f"\t\t\t}}{newline}",
+        f"\t\t}}{newline}",
+    ]
+
+
+def opening_capacity_rows() -> list[dict[str, str]]:
+    """Load the fresh-bookmark engine audit and verify its bounded adapters."""
+    with OPENING_CAPACITY_LEDGER.open(encoding="utf-8-sig", newline="") as stream:
+        reader = csv.DictReader(stream)
+        if tuple(reader.fieldnames or ()) != OPENING_CAPACITY_FIELDS:
+            raise ValueError("opening-capacity ledger field order drift")
+        rows = list(reader)
+    locations = set(json.loads(
+        (ROOT / "docs/vanilla_symbols/locations.json").read_text(encoding="utf-8-sig")
+    ))
+    seen: set[str] = set()
+    total_excess = 0
+    for row in rows:
+        location = row["location"]
+        if location in seen or location not in locations:
+            raise ValueError(f"duplicate or unknown opening-capacity location {location}")
+        seen.add(location)
+        try:
+            excess = int(row["engine_excess_people"])
+            bonus = int(row["capacity_bonus_thousands"])
+        except ValueError as exc:
+            raise ValueError(f"non-integer opening-capacity row for {location}") from exc
+        if excess <= 0 or bonus not in OPENING_CAPACITY_TIERS:
+            raise ValueError(f"invalid opening-capacity values for {location}")
+        # Engine capacity modifiers use thousands, as population setup does.
+        # Retain at least ten percent headroom over the observed day-one deficit.
+        if bonus * 1000 < excess * 1.10:
+            raise ValueError(f"opening-capacity adapter lacks margin for {location}")
+        total_excess += excess
+    if len(rows) != EXPECTED_OPENING_CAPACITY_LOCATIONS:
+        raise ValueError(
+            f"opening-capacity inventory drift: expected {EXPECTED_OPENING_CAPACITY_LOCATIONS}, "
+            f"found {len(rows)}"
+        )
+    if total_excess != EXPECTED_OPENING_CAPACITY_EXCESS:
+        raise ValueError(
+            f"opening-capacity excess drift: expected {EXPECTED_OPENING_CAPACITY_EXCESS}, "
+            f"found {total_excess}"
+        )
+    if [row["location"] for row in rows] != sorted(seen):
+        raise ValueError("opening-capacity ledger must remain location-sorted")
+    anchors = {row["location"]: int(row["capacity_bonus_thousands"]) for row in rows}
+    if anchors.get("rome") != 300 or anchors.get("jingzhao") != 400:
+        raise ValueError("Rome/Jingzhao opening-capacity anchors drifted")
+    with OPENING_CAPACITY_CALIBRATION.open(encoding="utf-8-sig", newline="") as stream:
+        reader = csv.DictReader(stream)
+        if tuple(reader.fieldnames or ()) != OPENING_CAPACITY_CALIBRATION_FIELDS:
+            raise ValueError("opening-capacity calibration field order drift")
+        calibration = list(reader)
+    if len(calibration) != EXPECTED_OPENING_CAPACITY_RESIDUAL_LOCATIONS:
+        raise ValueError("opening-capacity residual calibration inventory drift")
+    residual_total = 0
+    for row in calibration:
+        location = row["location"]
+        if location not in anchors:
+            raise ValueError(f"capacity calibration uses unknown adapter {location}")
+        try:
+            initial = int(row["initial_bonus_thousands"])
+            residual = int(row["residual_excess_people"])
+            rate = Decimal(row["effective_capacity_rate"])
+            final = int(row["final_bonus_thousands"])
+        except (ValueError, InvalidOperation) as exc:
+            raise ValueError(f"invalid capacity calibration values for {location}") from exc
+        original = int(next(item["engine_excess_people"] for item in rows if item["location"] == location))
+        if initial <= 0 or residual <= 0 or rate <= 0 or final != anchors[location]:
+            raise ValueError(f"capacity calibration/adapter mismatch for {location}")
+        if final * 1000 * rate < Decimal(original) * Decimal("1.25"):
+            raise ValueError(f"capacity calibration lacks measured margin for {location}")
+        residual_total += residual
+    if residual_total != EXPECTED_OPENING_CAPACITY_RESIDUAL_EXCESS:
+        raise ValueError("opening-capacity residual total drift")
+    return rows
+
+
+def opening_capacity_effects(newline: str) -> list[str]:
+    """Apply only the capacity the fresh engine audit proved was missing."""
+    lines = [
+        f"\t\t# ANTIQVITAS S4: engine-proven AD 1 settlement capacity adapters.{newline}",
+    ]
+    for row in opening_capacity_rows():
+        tier = int(row["capacity_bonus_thousands"])
+        lines.extend((
+            f"\t\tlocation:{row['location']} = {{{newline}",
+            f"\t\t\tadd_location_modifier = {{{newline}",
+            f"\t\t\t\tmodifier = antq_opening_capacity_{tier:03d}{newline}",
+            f"\t\t\t\tyears = -1{newline}",
+            f"\t\t\t\tmode = add_and_extend{newline}",
+            f"\t\t\t}}{newline}",
+            f"\t\t}}{newline}",
+        ))
+    return lines
+
+
+def opening_capacity_static() -> bytes:
+    """Render reusable location-capacity tiers in engine population units."""
+    chunks: list[str] = []
+    for tier in OPENING_CAPACITY_TIERS:
+        chunks.append(
+            f"antq_opening_capacity_{tier:03d} = {{\n"
+            "\tgame_data = {\n"
+            "\t\tcategory = location\n"
+            "\t}\n\n"
+            f"\tlocal_population_capacity = {tier}\n"
+            "}\n"
+        )
+    return b"\xef\xbb\xbf" + "\n".join(chunks).encode("utf-8")
+
+
 def han_regency_effect(newline: str) -> list[str]:
     """Bind the source-led Wang Mang regent after the bookmark state exists.
 
@@ -470,6 +614,14 @@ def bankruptcy_localization(language: str) -> bytes:
         ' STATIC_MODIFIER_DESC_antq_genuine_bankruptcy: "A genuine state default '
         'has disrupted credit, administration, morale, and construction."\n'
     )
+    for tier in OPENING_CAPACITY_TIERS:
+        text += (
+            f' STATIC_MODIFIER_NAME_antq_opening_capacity_{tier:03d}: '
+            '"Ancient Settlement Network"\n'
+            f' STATIC_MODIFIER_DESC_antq_opening_capacity_{tier:03d}: '
+            '"Dispersed farms, waterworks, storage, and settlement systems support the '
+            'documented population of this location."\n'
+        )
     return b"\xef\xbb\xbf" + text.encode("utf-8")
 
 
@@ -498,6 +650,8 @@ def render() -> bytes:
         if in_start and not rgo_injected and RGO_SETUP_ANCHOR.match(code):
             rendered.append(line)
             rendered.extend(runtime_rgo_effects(newline_for(line)))
+            rendered.extend(opening_capacity_effects(newline_for(line)))
+            rendered.extend(opening_food_reserve_effects(newline_for(line)))
             rendered.extend(annona_trade_effects(newline_for(line)))
             rendered.extend(han_regency_effect(newline_for(line)))
             rendered.extend(ancient_parliament_effect(newline_for(line)))
@@ -607,6 +761,7 @@ def write() -> None:
         OUTPUT: render(),
         COUNTRY_STATIC_OUTPUT: neutral_country_static(),
         BANKRUPTCY_STATIC_OUTPUT: genuine_bankruptcy_static(),
+        CAPACITY_STATIC_OUTPUT: opening_capacity_static(),
         ECONOMY_GUI_OUTPUT: bankruptcy_gui(ECONOMY_GUI_RELATIVE),
         CREDIT_GUI_OUTPUT: bankruptcy_gui(CREDIT_GUI_RELATIVE),
         MARRY_NOBLE_OUTPUT: neutral_marry_noble(),
@@ -631,6 +786,7 @@ def check() -> bool:
         OUTPUT: expected,
         COUNTRY_STATIC_OUTPUT: neutral_country_static(),
         BANKRUPTCY_STATIC_OUTPUT: genuine_bankruptcy_static(),
+        CAPACITY_STATIC_OUTPUT: opening_capacity_static(),
         ECONOMY_GUI_OUTPUT: bankruptcy_gui(ECONOMY_GUI_RELATIVE),
         CREDIT_GUI_OUTPUT: bankruptcy_gui(CREDIT_GUI_RELATIVE),
         MARRY_NOBLE_OUTPUT: neutral_marry_noble(),
@@ -654,6 +810,7 @@ def check() -> bool:
         "m12_hardcoded_startup: PASS "
         f"(5 safe absent-IO scopes; 8 dated country-startup gates; "
         f"{EXPECTED_RGO_CHANGE_COUNT} runtime RGO corrections; "
+        f"{EXPECTED_OPENING_CAPACITY_LOCATIONS} bounded capacity adapters; "
         "2 absent future-character hooks; 1 low-year bankruptcy epoch adapter)"
     )
     return True

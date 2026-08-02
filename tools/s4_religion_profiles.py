@@ -20,6 +20,8 @@ INSTITUTION_SPREAD = ROOT / "in_game/common/scripted_triggers/00_antiquitas_m8_i
 FIRST_CENTURY = ROOT / "in_game/events/antq_m10_first_century.txt"
 SECOND_CENTURY = ROOT / "in_game/events/antq_m10_second_century.txt"
 THIRD_CENTURY = ROOT / "in_game/events/antq_m10_third_century.txt"
+FOURTH_CENTURY = ROOT / "in_game/events/antq_m10_fourth_century.txt"
+FINAL_CENTURY = ROOT / "in_game/events/antq_m10_final_century.txt"
 START_POPS = ROOT / "main_menu/setup/start/06_pops.txt"
 COMPATIBILITY_POPS = ROOT / "main_menu/setup/start/21_locations.txt"
 
@@ -175,6 +177,31 @@ def check() -> int:
         enable = f"religion:{future} = {{ enable_religion = yes }}"
         if enable not in payload or payload.index(enable) > payload.index(seed):
             failures.append(f"{path.name}: native religion enable effect must precede the seed")
+
+    # Any later fallback consumer must remain valid even if sandbox play removed
+    # the original foundation recipient before its dynamic historical event.
+    for path in (FIRST_CENTURY, SECOND_CENTURY, THIRD_CENTURY, FOURTH_CENTURY, FINAL_CENTURY):
+        payload = path.read_text(encoding="utf-8-sig")
+        for event_key in re.findall(r"(?m)^(antq_m10\.[0-9]+)\s*=\s*\{", payload):
+            event = block(payload, event_key)
+            for future in expected_dates:
+                uses = [
+                    position
+                    for token in (
+                        f"change_religion = religion:{future}",
+                        f"change_pop_religion = religion:{future}",
+                        f"religion = religion:{future}",
+                    )
+                    if (position := event.find(token)) >= 0
+                ]
+                if not uses:
+                    continue
+                enable = f"religion:{future} = {{ enable_religion = yes }}"
+                enable_position = event.find(enable)
+                if enable_position < 0 or enable_position > min(uses):
+                    failures.append(
+                        f"{path.name}/{event_key}: {future} is consumed before native enablement"
+                    )
 
     start_pops = START_POPS.read_text(encoding="utf-8-sig")
     compatibility_pops = COMPATIBILITY_POPS.read_text(encoding="utf-8-sig")

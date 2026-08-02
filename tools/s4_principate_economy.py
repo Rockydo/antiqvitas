@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REFORMS = ROOT / "in_game/common/government_reforms/00_antiquitas_m6_core.txt"
 COUNTRIES = ROOT / "main_menu/setup/start/10_countries.txt"
 PRE_MARKET = ROOT / "in_game/common/auto_modifiers/00_antiquitas_pre_market_revenue.txt"
+STARTUP = ROOT / "in_game/common/on_action/_hardcoded.txt"
 PEER_MARKETS = ("alexandria", "baghdad", "luoyang", "patna", "anuradhapura")
 
 
@@ -79,6 +80,21 @@ def main() -> int:
     if bridge_block.count("monthly_gold_income") != 1:
         failures.append("pre-market bridge income shape drifted")
 
+    startup = STARTUP.read_text(encoding="utf-8-sig")
+    food_reserve = re.findall(
+        r"every_country\s*=\s*\{\s*every_province\s*=\s*\{\s*"
+        r"change_province_food_percentage\s*=\s*([0-9.]+)",
+        startup,
+        re.S,
+    )
+    if food_reserve != ["0.50"]:
+        failures.append(
+            "opening province food reserve is not one capacity-bounded 0.50 seed: "
+            f"{food_reserve!r}"
+        )
+    if startup.count("change_province_food_percentage = 0.50") != 1:
+        failures.append("opening food reserve effect duplicated or drifted")
+
     compatibility = start.culture_presence_cultures()
     _, _, _, _, populations = start.population_manager(compatibility)
     tag_map = {
@@ -122,7 +138,8 @@ def main() -> int:
     print(
         "s4_principate_economy: PASS "
         f"({reserve_count} bounded small-polity reserves; "
-        f"Rome 3x and {len(PEER_MARKETS)} peer markets 2x supplied)"
+        f"50% opening province food stores; Rome 3x and "
+        f"{len(PEER_MARKETS)} peer markets 2x supplied)"
     )
     return 0
 

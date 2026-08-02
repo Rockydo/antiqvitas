@@ -48,12 +48,15 @@ runtime evidence agree.
   Four XAA-scoped locked routes now run after country/market creation. Fresh
   AD 1 exports show Roma `0 -> 0.97866` wheat imports at the first monthly pulse;
   see `docs/playtests/S4_RELIGION_ANNONA_20260802.md`.
-- [ ] Remove the Principate's flat `monthly_gold_income = 500`. Balance Rome through
+- [x] Remove the Principate's flat `monthly_gold_income = 500`. Balance Rome through
   historically bounded taxes, annona logistics, production, buildings, control,
   market supply, and opening reserves; prove construction viability without a
   permanent treasury cheat and check peer great powers for solvency. Static gate
   passes: no reform grant, bounded pre-market bridge, 405 small-polity reserves,
-  Rome 3x core industrial coverage, and five peer markets 2x; runtime remains.
+  Rome 3x core industrial coverage, and five peer markets 2x. Fresh Rome settles
+  at +20.31/month with 6.34K construction cash; Han and Satavahana self-correct
+  to +73.72/+5.34. Engine-derived capacity adapters reduce 464 day-one excess
+  locations to zero at bookmark and after the February pulse without growth/income.
 - [x] Quarantine legacy advance/law compatibility files from the playable union.
   Visible ancient advances may unlock only ANTIQVITAS laws; scan the installed union
   for medieval IDs such as `education_masses_law`, `feudal_de_jure_law`, and
@@ -97,10 +100,13 @@ runtime evidence agree.
 
 ### S4 release gate
 
-- [ ] Run `make validate`, `make smoke`, representative fresh-start UI tests, and
+- [x] Run `make validate`, `make smoke`, representative fresh-start UI tests, and
   multi-decade observer runs. Accept only zero new baseline errors, no privacy hits,
   no medieval leakage in affected unions, viable great-power and small-polity
-  economies, and saved evidence under `docs/playtests/`.
+  economies, and saved evidence under `docs/playtests/`. Validation is 164/164;
+  paired smoke is zero-delta at `a687df49daa5aa30ad920d2a3915792d0dcb00413367375001e3c0602e6b760c`.
+  Fresh runtime covers Rome, Parthia, Han, Satavahana, faith/annona contracts,
+  five IOs, staged currents, and zero bookmark/post-February overpopulation.
 
 ## Third manual playtest remediation - 2026-07-30 (resume here)
 

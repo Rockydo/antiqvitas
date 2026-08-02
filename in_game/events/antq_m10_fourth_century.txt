@@ -20,6 +20,7 @@ antq_m10_fourth.4000 = {
 		name = antq_m10_fourth.4000.a
 		historical_option = yes
 		# IRAN-ARMCONV: 301 is the plan's traditional-current anchor; chronology is contested.
+		religion:antq_early_christianity = { enable_religion = yes }
 		change_religion = religion:antq_early_christianity
 		add_prestige = prestige_mild_bonus
 		# Learned practice shapes the response; it never gates the current.
@@ -220,6 +221,7 @@ antq_m10_fourth.4008 = {
 	option = {
 		name = antq_m10_fourth.4008.a
 		historical_option = yes
+		religion:antq_early_christianity = { enable_religion = yes }
 		change_religion = religion:antq_early_christianity
 		add_legitimacy = legitimacy_mild_bonus
 		# Learned practice shapes the response; it never gates the current.
