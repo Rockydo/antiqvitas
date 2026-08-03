@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-08-03 - AD 1 geography reaches 31,628 rows
+
+- Researched locations 22,401-26,400; all coarse levels and the first 26,400
+  locations now generate through the canonical ledger in all 11 clients.
+- Independent review applied 127 definite repairs across engine kinds, sources,
+  eponyms, formulas, spatial directions, collisions, and shortcut labels.
+- `make validate` passes 170/170; paired smoke adds zero lines at fingerprint
+  `3822fd3f52e7d55fea4473728eddd2d35510e38c16319fb452ecdd74c1e42cf2`.
+
 ## 2026-08-03 - AD 1 geography reaches 27,628 rows
 
 - Researched locations 18,401-22,400; all coarse levels and the first 22,400
