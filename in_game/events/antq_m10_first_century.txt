@@ -226,7 +226,13 @@ antq_m10.1009 = {
 	option = {
 		name = antq_m10.1009.a
 		historical_option = yes
-		religion:antq_early_christianity = { enable_religion = yes }
+		religion:antq_early_christianity = {
+			enable_religion = yes
+			create_holy_site = { name = antq_christian_jerusalem_memory type = pilgrimage_city importance = 5 location = location:jerusalem religions = { religion:antq_early_christianity } }
+			create_holy_site = { name = antq_christian_antioch_community type = pilgrimage_city importance = 4 location = location:antioch religions = { religion:antq_early_christianity } }
+			create_holy_site = { name = antq_christian_ephesos_community type = pilgrimage_city importance = 3 location = location:ayasuluk religions = { religion:antq_early_christianity } }
+			create_holy_site = { name = antq_christian_roman_memory type = pilgrimage_city importance = 5 location = location:rome religions = { religion:antq_early_christianity } }
+		}
 		# The AD 30 current seeds a small Jerusalem community; it does not convert Judea.
 		location:jerusalem = {
 			every_pop = {

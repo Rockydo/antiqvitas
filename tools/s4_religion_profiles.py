@@ -174,8 +174,11 @@ def check() -> int:
         payload = path.read_text(encoding="utf-8-sig")
         if anchor not in payload or seed not in payload:
             failures.append(f"{path.name}: religion foundation does not seed a bounded pop")
-        enable = f"religion:{future} = {{ enable_religion = yes }}"
-        if enable not in payload or payload.index(enable) > payload.index(seed):
+        enable = re.search(
+            rf"religion:{re.escape(future)}\s*=\s*\{{\s*enable_religion\s*=\s*yes",
+            payload,
+        )
+        if enable is None or enable.start() > payload.index(seed):
             failures.append(f"{path.name}: native religion enable effect must precede the seed")
 
     # Any later fallback consumer must remain valid even if sandbox play removed
@@ -196,9 +199,11 @@ def check() -> int:
                 ]
                 if not uses:
                     continue
-                enable = f"religion:{future} = {{ enable_religion = yes }}"
-                enable_position = event.find(enable)
-                if enable_position < 0 or enable_position > min(uses):
+                enable = re.search(
+                    rf"religion:{re.escape(future)}\s*=\s*\{{\s*enable_religion\s*=\s*yes",
+                    event,
+                )
+                if enable is None or enable.start() > min(uses):
                     failures.append(
                         f"{path.name}/{event_key}: {future} is consumed before native enablement"
                     )

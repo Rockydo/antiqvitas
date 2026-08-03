@@ -180,7 +180,10 @@ def impact_lines(record: Current) -> tuple[str, ...]:
     """Use only effects verified by the local event corpus/script-doc dump."""
     if record.key == "manichaeism_foundation":
         return (
-            "\t\treligion:antq_manichaeism = { enable_religion = yes }",
+            "\t\treligion:antq_manichaeism = {",
+            "\t\t\tenable_religion = yes",
+            "\t\t\tcreate_holy_site = { name = antq_manichaean_babylonia_mission type = pilgrimage_city importance = 5 location = location:baghdad religions = { religion:antq_manichaeism } }",
+            "\t\t}",
             "\t\t# IRAN-MANI: seed a bounded community without converting the Iranian state.",
             "\t\tcapital = {",
             "\t\t\tevery_pop = {",

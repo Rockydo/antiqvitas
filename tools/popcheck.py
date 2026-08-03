@@ -26,6 +26,8 @@ from generate_start_mirror import (
     population_religion_remaps,
     population_geographic_allocations,
     population_location_overrides,
+    POPULATION_GEOGRAPHY,
+    TRIBAL_POPULATION_TARGETS,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -121,6 +123,8 @@ def main() -> int:
     italy_cultures: defaultdict[str, Decimal] = defaultdict(Decimal)
     location_sizes: defaultdict[str, Decimal] = defaultdict(Decimal)
     type_totals: defaultdict[str, Decimal] = defaultdict(Decimal)
+    tribal_totals: defaultdict[tuple[str, str], Decimal] = defaultdict(Decimal)
+    scope_totals: defaultdict[tuple[str, str], Decimal] = defaultdict(Decimal)
     total = Decimal()
     for record in records:
         location = record.get("location", "")
@@ -150,6 +154,18 @@ def main() -> int:
         location_sizes[location] += size
         type_totals[record["type"]] += size
         tag = owners[location]
+        kind_group = "sop" if roster[tag]["kind"] == "sop" else "country_subject"
+        scope_keys = (
+            ("world", "world"),
+            ("kind", kind_group),
+            ("tag", tag),
+        )
+        if roster[tag]["kind"] != "sop":
+            scope_keys += (("region", roster[tag]["region"]),)
+        for scope_key in scope_keys:
+            scope_totals[scope_key] += size
+            if record["type"] == "tribesmen":
+                tribal_totals[scope_key] += size
         profile = historical_profile_for(roster[tag])
         override = overrides.get(location, {})
         expected_culture = override.get("culture", culture_remaps.get(location, {}).get("culture", profile.culture))
@@ -232,6 +248,40 @@ def main() -> int:
     absent_types = sorted(valid_types - set(type_totals))
     if absent_types:
         failures.append(f"opening world has no substantive strata for {absent_types}")
+    target_rows = csv_rows(TRIBAL_POPULATION_TARGETS)
+    required_header = ("scope", "selector", "minimum", "target", "maximum", "source", "note")
+    if tuple(target_rows[0]) != required_header:
+        failures.append("tribal population target ledger has a stale header")
+    tribal_summaries: list[str] = []
+    for row in target_rows:
+        token = (row["scope"], row["selector"])
+        denominator = scope_totals[token]
+        if denominator <= 0:
+            failures.append(f"tribal population target {token} has no population")
+            continue
+        share = tribal_totals[token] / denominator
+        minimum = Decimal(row["minimum"])
+        maximum = Decimal(row["maximum"])
+        if not minimum <= share <= maximum:
+            failures.append(
+                f"tribesmen share {token} is {share:.3%}, expected {minimum:.1%}-{maximum:.1%}"
+            )
+        if not row["source"] or not row["note"]:
+            failures.append(f"tribal population target {token} lacks source/note")
+        tribal_summaries.append(f"{row['selector']}={share:.1%}")
+    geography = {row["location"]: row for row in csv_rows(POPULATION_GEOGRAPHY)}
+    frontier_locations = {
+        location for location, tag in owners.items()
+        if roster[tag]["kind"] != "sop"
+        and (
+            geography[location]["topography"] in {"mountains", "hills", "plateau", "wetlands"}
+            or geography[location]["vegetation"] in {"forest", "woods", "jungle", "sparse"}
+        )
+    }
+    for location in sorted(frontier_locations):
+        location_records = records_by_location[location]
+        if len(location_records) < 2 or not any(row.get("type") == "tribesmen" for row in location_records):
+            failures.append(f"{location}: settled frontier lacks a tribesmen stratum")
     for group, allocation in geographic_allocations.items():
         actual = geographic_totals[group]
         if abs(actual - allocation.target) > EPSILON:
@@ -278,6 +328,7 @@ def main() -> int:
     print(f"  Italy geography: {italy_summary}")
     print(f"  Italy cultures: {italy_culture_summary}")
     print(f"  Top mapped cities: {city_summary}")
+    print(f"  Tribesmen shares: {', '.join(tribal_summaries)}")
     return 0
 
 

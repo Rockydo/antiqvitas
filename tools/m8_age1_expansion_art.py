@@ -21,12 +21,21 @@ from m8_knowledge import (
 
 ROOT = Path(__file__).resolve().parents[1]
 SHEET_DIR = ROOT / "assets_queue/generated_sources/age1_expansion"
+R5_SHEET_DIR = ROOT / "assets_queue/generated_sources/age1_expansion_r5"
 SOURCE_DIR = ROOT / "assets_queue/generated_sources"
 MASTER_DIR = ROOT / "assets_queue/generated"
 TEXTURE_DIR = ROOT / "main_menu/gfx/interface/advance"
 CONTACT = ROOT / "docs/m8/age1_expansion_art_contact_sheet.png"
 SHEET_CAPACITY = 16
-EXPECTED_COUNT = 110
+R5_SHEET_CAPACITY = 4
+EXPECTED_COUNT = 155
+EXPECTED_R5_COUNT = 60
+R5_PROFILE_PREFIXES = (
+    "Iranian:",
+    "Inner Asian Steppe:",
+    "Nile and North African:",
+    "Sub-Saharan African:",
+)
 LEDGER_FIELDS = ("key", "age", "subject", "source", "confidence", "status", "note")
 
 
@@ -42,6 +51,18 @@ def expansion_records():
 
 def sheet_path(index: int) -> Path:
     return SHEET_DIR / f"sheet_{index // SHEET_CAPACITY + 1:02}.png"
+
+
+def r5_records(records):
+    """Return Round-5 split-profile records in their explicit tree order."""
+    return tuple(
+        record for record in records
+        if record.name.startswith(R5_PROFILE_PREFIXES)
+    )
+
+
+def r5_sheet_path(index: int) -> Path:
+    return R5_SHEET_DIR / f"sheet_{index // R5_SHEET_CAPACITY + 1:02}.png"
 
 
 def cell_box(size: tuple[int, int], index: int) -> tuple[int, int, int, int]:
@@ -78,9 +99,15 @@ def ledger_rows() -> list[dict[str, str]]:
 
 
 def write_ledger(records) -> None:
-    expansion_keys = {record.key for record in records}
-    retained = [row for row in ledger_rows() if row["key"] not in expansion_keys]
-    for index, record in enumerate(records):
+    new_records = r5_records(records)
+    r5_keys = {record.key for record in new_records}
+    retained = [row for row in ledger_rows() if row["key"] not in r5_keys]
+    for index, record in enumerate(new_records):
+        review_note = (
+            "Dedicated archaeological scene; visually reviewed in "
+            f"Round-5 four-up sheet {index // R5_SHEET_CAPACITY + 1}, "
+            f"cell {index % R5_SHEET_CAPACITY + 1}."
+        )
         retained.append({
             "key": record.key,
             "age": AGE_NAMES[record.age_index],
@@ -88,11 +115,7 @@ def write_ledger(records) -> None:
             "source": f"{record.source};P20",
             "confidence": "secure",
             "status": "complete",
-            "note": (
-                "Dedicated archaeological still-life; visually reviewed in "
-                f"Age-I expansion sheet {index // SHEET_CAPACITY + 1}, "
-                f"cell {index % SHEET_CAPACITY + 1}."
-            ),
+            "note": review_note,
         })
     with DIRECT_ADVANCE_ART.open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=LEDGER_FIELDS, lineterminator="\n")
@@ -125,17 +148,19 @@ def write(records) -> None:
         directory.mkdir(parents=True, exist_ok=True)
     opened: dict[Path, Image.Image] = {}
     try:
-        for index, record in enumerate(records):
-            sheet = sheet_path(index)
+        for index, record in enumerate(r5_records(records)):
+            sheet = r5_sheet_path(index)
             if not sheet.is_file():
                 raise ValueError(f"missing generated sheet {sheet.relative_to(ROOT)}")
             if sheet not in opened:
                 opened[sheet] = Image.open(sheet).convert("RGB")
-            crop = opened[sheet].crop(cell_box(opened[sheet].size, index))
+            crop = opened[sheet].crop(
+                cell_box(opened[sheet].size, index % R5_SHEET_CAPACITY)
+            )
             master = ImageOps.fit(
                 crop, (256, 256), method=Image.Resampling.LANCZOS,
                 centering=(0.5, 0.5),
-            )
+            ).convert("RGBA")
             source_path, master_path, texture_path = paths(record.key)
             crop.save(source_path, format="PNG", optimize=True)
             master.save(master_path, format="PNG", optimize=True)
@@ -155,12 +180,17 @@ def check(records) -> None:
         if row["status"] == "complete"
     }
     hashes: dict[str, str] = {}
+    r5_index_by_key = {
+        record.key: index for index, record in enumerate(r5_records(records))
+    }
     for index, record in enumerate(records):
-        sheet = sheet_path(index)
         source, master, texture = paths(record.key)
         if record.key not in complete:
             failures.append(f"direct art ledger is missing {record.key}")
-        for path, role in ((sheet, "sheet"), (source, "source"), (master, "master"), (texture, "texture")):
+        required = [(source, "source"), (master, "master"), (texture, "texture")]
+        if record.key in r5_index_by_key:
+            required.insert(0, (r5_sheet_path(r5_index_by_key[record.key]), "sheet"))
+        for path, role in required:
             if not path.is_file():
                 failures.append(f"missing {role} for {record.key}: {path.relative_to(ROOT)}")
         if master.is_file():
@@ -181,6 +211,11 @@ def check(records) -> None:
                 failures.append(f"invalid DDS for {record.key}: {details}")
     if len(records) != EXPECTED_COUNT:
         failures.append(f"expected {EXPECTED_COUNT} expansion records, got {len(records)}")
+    if len(r5_records(records)) != EXPECTED_R5_COUNT:
+        failures.append(
+            f"expected {EXPECTED_R5_COUNT} Round-5 records, "
+            f"got {len(r5_records(records))}"
+        )
     if not CONTACT.is_file():
         failures.append("missing Age-I expansion art contact sheet")
     if failures:
@@ -204,7 +239,7 @@ def main() -> int:
         return 1
     print(
         "m8_age1_expansion_art: PASS "
-        f"({len(records)} direct BC7 icons from 7 reviewed sheets)"
+        f"({len(records)} direct BC7 icons from 7 legacy + 15 Round-5 sheets)"
     )
     return 0
 

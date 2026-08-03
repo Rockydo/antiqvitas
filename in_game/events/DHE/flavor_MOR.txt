@@ -237,13 +237,6 @@ flavor_mor.4 = {
 
 		change_societal_value = { type = mysticism_vs_jurisprudence value = societal_value_move_to_left }
 		scope:target_location = {
-			create_holy_site = {
-				name = zawiya_of_moulay_idris_ii
-				type = shrine
-				importance = 1
-				location = this
-				religions = { religion:sunni religion:shia religion:ibadi }
-			}
 			random_pop = {
 				limit = {
 					owner = root
@@ -1577,13 +1570,6 @@ flavor_mor.25 = { #GRAVEYARD
 
 		change_gold_effect = { scale = -3 }
 		scope:target_location = {
-			create_holy_site = {
-				name = resting_place_of_sidi_ahmed_ou_moussa
-				type = shrine
-				importance = 1
-				location = this
-				religions = { religion:sunni religion:shia religion:ibadi }
-			}
 			random_pop = {
 				limit = {
 					owner = root

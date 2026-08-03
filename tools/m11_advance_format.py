@@ -35,7 +35,7 @@ CONTACT_SHEET = ROOT / "docs/m11/ADVANCE_ICON_FORMAT_CONTACT_SHEET.png"
 SURFACE_PREVIEW = ROOT / "docs/m11/ADVANCE_ICON_SURFACE_PREVIEW.png"
 MANIFEST = ROOT / "docs/m11/advance_icon_format_manifest.json"
 SIZE = (256, 256)
-EXPECTED_ASSETS = 885
+EXPECTED_ASSETS = 886
 
 OUTLIER_QUADRANTS = {
     "antq_advance_regional_law_codes_256.png": "top_left",
@@ -156,8 +156,17 @@ def assets() -> tuple[AdvanceIcon, ...]:
             f"expected {EXPECTED_ASSETS} reviewed advance assets, found {len(combined)}"
         )
     masters = [asset.master for asset in combined]
-    if len(masters) != len(set(masters)):
-        raise ValueError("advance-format input repeats a master path")
+    repeated = {
+        master for master in masters if masters.count(master) > 1
+    }
+    expected_shared = {
+        "assets_queue/generated/antq_advance_migrations_256.png"
+    }
+    if repeated != expected_shared or masters.count(next(iter(expected_shared))) != 2:
+        raise ValueError(
+            "only the two mandatory late engine slots may share the reviewed "
+            "Migrations master"
+        )
     return combined
 
 
@@ -225,10 +234,10 @@ def expected_master(asset: AdvanceIcon) -> Image.Image:
     alpha = candidate.getchannel("A")
     bounds = alpha.point(lambda value: 255 if value >= 12 else 0).getbbox()
     perimeter = (
-        list(alpha.crop((0, 0, SIZE[0], 1)).get_flattened_data())
-        + list(alpha.crop((0, SIZE[1] - 1, SIZE[0], SIZE[1])).get_flattened_data())
-        + list(alpha.crop((0, 1, 1, SIZE[1] - 1)).get_flattened_data())
-        + list(alpha.crop((SIZE[0] - 1, 1, SIZE[0], SIZE[1] - 1)).get_flattened_data())
+        list(alpha.crop((0, 0, SIZE[0], 1)).getdata())
+        + list(alpha.crop((0, SIZE[1] - 1, SIZE[0], SIZE[1])).getdata())
+        + list(alpha.crop((0, 1, 1, SIZE[1] - 1)).getdata())
+        + list(alpha.crop((SIZE[0] - 1, 1, SIZE[0], SIZE[1] - 1)).getdata())
     )
     if (
         bounds is not None
@@ -242,21 +251,21 @@ def expected_master(asset: AdvanceIcon) -> Image.Image:
 
 def alpha_metrics(image: Image.Image) -> dict[str, object]:
     alpha = image.getchannel("A")
-    values = list(alpha.get_flattened_data())
+    values = list(alpha.getdata())
     active = sum(value >= 12 for value in values)
     opaque = sum(value >= 245 for value in values)
     threshold = alpha.point(lambda value: 255 if value >= 12 else 0)
     bounds = threshold.getbbox()
     perimeter = (
-        list(alpha.crop((0, 0, SIZE[0], 1)).get_flattened_data())
+        list(alpha.crop((0, 0, SIZE[0], 1)).getdata())
         + list(
-            alpha.crop((0, SIZE[1] - 1, SIZE[0], SIZE[1])).get_flattened_data()
+            alpha.crop((0, SIZE[1] - 1, SIZE[0], SIZE[1])).getdata()
         )
-        + list(alpha.crop((0, 1, 1, SIZE[1] - 1)).get_flattened_data())
+        + list(alpha.crop((0, 1, 1, SIZE[1] - 1)).getdata())
         + list(
             alpha.crop(
                 (SIZE[0] - 1, 1, SIZE[0], SIZE[1] - 1)
-            ).get_flattened_data()
+            ).getdata()
         )
     )
     return {

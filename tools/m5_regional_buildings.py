@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import io
 import json
 import re
 import subprocess
@@ -38,6 +39,7 @@ ADVANCES = ROOT / "docs/m8/advances.csv"
 LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
 ICON_DIR = ROOT / "main_menu/gfx/interface/icons/buildings"
 OUTPUT = ROOT / "in_game/common/building_types/00_antiquitas_regional_buildings.txt"
+METHOD_LEDGER = ROOT / "docs/m5/regional_production_methods.csv"
 LOC_ROOT = ROOT / "main_menu/localization"
 DDS = ROOT / "tools/dds.py"
 LOCAL_PATHS = ROOT / "config/local_paths.json"
@@ -414,6 +416,19 @@ FAMILY_MACRO_RESTRICTIONS.update(
         "antq_reg_silk_drapery": frozenset({"East Asia"}),
     }
 )
+PRODUCTIVE_METHOD_TIERS = (
+    ("maintenance", "Established Practice", 1.00, 1.00, "opening"),
+    ("organized", "Organized Workshop", 1.081, 1.08, "age_3_discovery"),
+    ("intensive", "Specialist Workshop", 1.182, 1.18, "age_4_reformation"),
+)
+
+
+def productive_method_key(building: str, suffix: str) -> str:
+    # EU5's 32-bit localization hash collides for the ordinary honey-house
+    # intensive slug and the installed location key `fatezh`.
+    if building == "antq_reg_honey_house" and suffix == "intensive":
+        return "antq_reg_honey_house_specialist"
+    return f"{building}_{suffix}"
 
 WATER_OR_PORT_FAMILIES = {
     "antq_reg_shipyard", "antq_reg_reed_boatyard", "antq_reg_bargeyard",
@@ -823,14 +838,17 @@ def definition(families: list[dict[str, str]]) -> str:
         lines.append("\tmodifier = {")
         for key, amount in pairs(row["modifier"], "modifier"):
             lines.append(f"\t\t{key} = {amount}")
-        lines.extend(("\t}", "\tunique_production_methods = {", f"\t\t{row['key']}_maintenance = {{"))
+        lines.extend(("\t}", "\tunique_production_methods = {"))
         recipe = PRODUCTION_RECIPES.get(row["key"])
         if recipe:
             produced, output, inputs = recipe
-            for good, amount in inputs:
-                lines.append(f"\t\t\t{good} = {amount}")
-            lines.extend((f"\t\t\tproduced = {produced}", f"\t\t\toutput = {output}", "\t\t\tdebug_max_profit = guild_profit_margin", "\t\t\tcategory = guild_input"))
+            for suffix, _name, output_mult, input_mult, _age in PRODUCTIVE_METHOD_TIERS:
+                lines.append(f"\t\t{productive_method_key(row['key'], suffix)} = {{")
+                for good, amount in inputs:
+                    lines.append(f"\t\t\t{good} = {float(amount)*input_mult:.4f}")
+                lines.extend((f"\t\t\tproduced = {produced}", f"\t\t\toutput = {float(output)*output_mult:.4f}", "\t\t\tdebug_max_profit = guild_profit_margin", "\t\t\tcategory = guild_input", "\t\t}"))
         else:
+            lines.append(f"\t\t{row['key']}_maintenance = {{")
             maintenance = merge_goods(
                 pairs(row["maintenance"], "maintenance"),
                 institutional_upkeep(
@@ -840,8 +858,9 @@ def definition(families: list[dict[str, str]]) -> str:
             for good, amount in maintenance:
                 lines.append(f"\t\t\t{good} = {amount}")
             lines.append("\t\t\tcategory = building_maintenance")
+            lines.append("\t\t}")
         lines.extend((
-            "\t\t}", "\t}", "\tcustom_tags = { guild }",
+            "\t}", "\tcustom_tags = { guild }",
             f"\tconstruction_demand = {construction_package(row['key'], row['category'])}",
             "}", "",
         ))
@@ -856,11 +875,25 @@ def loc(families: list[dict[str, str]], language: str) -> str:
         lines.append(f" {row['key']}: \"{name}\"")
         lines.append(f" {row['key']}_desc: \"{description}\"")
         lines.append(f" {row['key']}_maintenance: \"{name} Upkeep\"")
+        if row["key"] in PRODUCTION_RECIPES:
+            for suffix, method_name, _output_mult, _input_mult, _age in PRODUCTIVE_METHOD_TIERS[1:]:
+                lines.append(f" {productive_method_key(row['key'], suffix)}: \"{name}: {method_name}\"")
     return "\n".join(lines) + "\n"
 
 
+def method_ledger(families: list[dict[str, str]]) -> str:
+    fields=("key","building","tier","name","unlock_age","profile","output_multiplier","input_multiplier","source")
+    stream=io.StringIO(newline=""); writer=csv.DictWriter(stream,fieldnames=fields,lineterminator="\n"); writer.writeheader()
+    by_key={row["key"]:row for row in families}
+    for building in sorted(PRODUCTION_RECIPES):
+        row=by_key[building]
+        for suffix,name,output_mult,input_mult,age in PRODUCTIVE_METHOD_TIERS:
+            writer.writerow({"key":productive_method_key(building, suffix),"building":building,"tier":suffix,"name":name,"unlock_age":age,"profile":"shared","output_multiplier":f"{output_mult:.3f}","input_multiplier":f"{input_mult:.3f}","source":row["source"]})
+    return stream.getvalue()
+
+
 def expected(families: list[dict[str, str]]) -> dict[Path, tuple[str, str]]:
-    result: dict[Path, tuple[str, str]] = {OUTPUT: (definition(families), "utf-8-sig")}
+    result: dict[Path, tuple[str, str]] = {OUTPUT: (definition(families), "utf-8-sig"), METHOD_LEDGER:(method_ledger(families),"utf-8-sig")}
     for language in LANGUAGES:
         result[LOC_ROOT / language / f"antq_m5_regional_buildings_l_{language}.yml"] = (loc(families, language), "utf-8-sig")
     return result

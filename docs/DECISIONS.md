@@ -4529,3 +4529,19 @@ gold or goods. Preserve sourced AD 1 populations and adapt only the 464 location
 the fresh engine `overpopulation` command identifies. Use permanent additive
 capacity tiers with no growth, tax, or production effect; calibrate terrain/climate
 attenuation from a second fresh run and require zero at bookmark and after February.
+
+## 2026-08-03 - Loading screens are fixed plates
+
+Use one complete 3840x2160 plate in plane `_00`; planes `_01`-`_07` are transparent
+contract adapters. Do not synthesize parallax until the engine contract is proven.
+
+## 2026-08-03 - Later workshops use bounded markup gains
+
+EU5 validates production profit as markup on input cost. Later methods increase
+throughput and efficiency only within the engine's 19-21% default-price band.
+
+## 2026-08-03 - Obsolete disease references remain unreachable
+
+Preserve required installed event references behind exact `always = no` gates and
+initialize variables only inside permanently inert situation adapters. This keeps
+the engine reference graph complete without exposing post-antique situations.

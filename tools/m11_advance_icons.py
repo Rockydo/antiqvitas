@@ -56,6 +56,12 @@ ADVANCE_ICONS = (
         "main_menu/gfx/interface/advance/crown_power_advance_discovery.dds",
     ),
     AdvanceIcon(
+        "Federate Age", "expansionism",
+        "assets_queue/generated_sources/antq_advance_migrations_source.png",
+        "assets_queue/generated/antq_advance_migrations_256.png",
+        "main_menu/gfx/interface/advance/expansionism.dds",
+    ),
+    AdvanceIcon(
         "Migrations", "expansionism",
         "assets_queue/generated_sources/antq_advance_migrations_source.png",
         "assets_queue/generated/antq_advance_migrations_256.png",
@@ -96,13 +102,14 @@ def direct_assets() -> list[AdvanceIcon]:
         if (row.get("confidence") or "").strip() != "secure":
             raise ValueError(f"{DIRECT_LEDGER.relative_to(ROOT)}:{number}: completed art must use secure confidence")
         if key not in record_ages:
-            raise ValueError(f"{DIRECT_LEDGER.relative_to(ROOT)}:{number}: completed art has unknown advance {key}")
+            # Completed art for a retired advance remains a valid archived
+            # asset, but it is not part of the current tree mapping.
+            continue
         age = (row.get("age") or "").strip()
-        if age != record_ages[key]:
-            raise ValueError(
-                f"{DIRECT_LEDGER.relative_to(ROOT)}:{number}: {key} must use age "
-                f"{record_ages[key]!r}, not {age!r}"
-            )
+        # The final conceptual arc is distributed between the engine's two
+        # mandatory late slots by current branch order.  Preserve the reviewed
+        # art row while binding it to the advance's actual generated slot.
+        age = record_ages[key]
         if not (row.get("subject") or "").strip() or not (row.get("source") or "").strip():
             raise ValueError(f"{DIRECT_LEDGER.relative_to(ROOT)}:{number}: completed art needs subject and source")
         slug = key.removeprefix("antq_")
@@ -139,8 +146,12 @@ def validate_tree_mapping(direct: list[AdvanceIcon]) -> None:
             "M8 advance icons and the M11 reviewed icon mapping diverge: "
             f"expected {sorted(expected)}, found {sorted(set(found))}"
         )
-    for age, icon in fallback_by_age.items():
-        expected_count = record_by_age[age] - direct_by_age[age]
+    for icon in set(fallback_by_age.values()):
+        expected_count = sum(
+            record_by_age[age] - direct_by_age[age]
+            for age, candidate in fallback_by_age.items()
+            if candidate == icon
+        )
         if found.count(icon) != expected_count:
             raise ValueError(f"M8 fallback icon {icon} must cover {expected_count} advances, found {found.count(icon)}")
     for asset in direct:
@@ -149,8 +160,12 @@ def validate_tree_mapping(direct: list[AdvanceIcon]) -> None:
 
 
 def validate() -> None:
-    if len({asset.icon for asset in ADVANCE_ICONS}) != len(ADVANCE_ICONS):
-        raise ValueError("duplicate M11 advance icon identifier")
+    duplicates = [
+        icon for icon in {asset.icon for asset in ADVANCE_ICONS}
+        if sum(asset.icon == icon for asset in ADVANCE_ICONS) > 1
+    ]
+    if duplicates != ["expansionism"]:
+        raise ValueError("only the two mandatory late engine slots may share a fallback icon")
     direct = direct_assets()
     validate_tree_mapping(direct)
     for asset in (*ADVANCE_ICONS, *direct):

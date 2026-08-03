@@ -1427,6 +1427,7 @@ antq_coastal_watch_craft = {
 			has_or_had_tag = XDF
 			has_or_had_tag = BCP
 			has_or_had_tag = XHD
+			has_or_had_tag = XBG
 			has_or_had_tag = XAF
 			has_or_had_tag = BPC
 			has_or_had_tag = XGM
@@ -1654,7 +1655,6 @@ antq_trireme = {
 			has_or_had_tag = XAF
 			has_or_had_tag = CLZ
 			has_or_had_tag = XAE
-			has_or_had_tag = XAG
 			has_or_had_tag = XAA
 			has_or_had_tag = THR
 		}
@@ -2356,8 +2356,18 @@ antq_mesopotamian_river_transport = {
 	hull_size = -2
 	country_potential = {
 		OR = {
+			has_or_had_tag = AGR
+			has_or_had_tag = GRH
+			has_or_had_tag = XBJ
+			has_or_had_tag = HIM
+			has_or_had_tag = NAB
+			has_or_had_tag = OMN
 			has_or_had_tag = XAH
 			has_or_had_tag = PRS
+			has_or_had_tag = QAT
+			has_or_had_tag = XER
+			has_or_had_tag = XBI
+			has_or_had_tag = XEQ
 		}
 	}
 	# P8.2;P14;PER;CAH-XI; A broad river cargo and troop-transport adapter for Mesopotamian waterways, distinct from an ocean-going merchant roundship.
@@ -3048,24 +3058,38 @@ antq_british_hide_transport = {
 	hull_size = -3
 	country_potential = {
 		OR = {
+			has_or_had_tag = XBZ
 			has_or_had_tag = XET
+			has_or_had_tag = XBY
+			has_or_had_tag = XDJ
+			has_or_had_tag = XFC
 			has_or_had_tag = CAL
+			has_or_had_tag = XBV
 			has_or_had_tag = XFD
+			has_or_had_tag = XEW
+			has_or_had_tag = XEV
 			has_or_had_tag = CRE
 			has_or_had_tag = CRV
 			has_or_had_tag = XFA
 			has_or_had_tag = DCT
+			has_or_had_tag = XEY
 			has_or_had_tag = XEX
+			has_or_had_tag = DOB
 			has_or_had_tag = DUM
+			has_or_had_tag = XEU
 			has_or_had_tag = EPD
+			has_or_had_tag = XBX
 			has_or_had_tag = LGB
 			has_or_had_tag = NCR
 			has_or_had_tag = XEZ
 			has_or_had_tag = XCB
 			has_or_had_tag = PBI
 			has_or_had_tag = XES
+			has_or_had_tag = SEL
+			has_or_had_tag = XCA
 			has_or_had_tag = XFE
 			has_or_had_tag = XFB
+			has_or_had_tag = XBW
 			has_or_had_tag = VAC
 			has_or_had_tag = VCN
 			has_or_had_tag = VOT
@@ -3107,12 +3131,17 @@ antq_hibernian_cargo_curragh = {
 		OR = {
 			has_or_had_tag = AUT
 			has_or_had_tag = CCI
+			has_or_had_tag = DAR
+			has_or_had_tag = ERD
+			has_or_had_tag = GAN
 			has_or_had_tag = IBG
 			has_or_had_tag = IVN
 			has_or_had_tag = XFI
 			has_or_had_tag = XFF
 			has_or_had_tag = RHB
+			has_or_had_tag = XCC
 			has_or_had_tag = USD
+			has_or_had_tag = XFG
 			has_or_had_tag = VNI
 		}
 	}
@@ -3166,8 +3195,29 @@ antq_germanic_north_sea_transport = {
 	hull_size = -3
 	country_potential = {
 		OR = {
+			has_or_had_tag = XBQ
+			has_or_had_tag = AVN
+			has_or_had_tag = BTV
+			has_or_had_tag = XDU
+			has_or_had_tag = CMB
+			has_or_had_tag = CPS
+			has_or_had_tag = CTU
+			has_or_had_tag = XDX
+			has_or_had_tag = XBM
+			has_or_had_tag = GTL
 			has_or_had_tag = GUT
+			has_or_had_tag = JUT
+			has_or_had_tag = XBN
 			has_or_had_tag = XDV
+			has_or_had_tag = NNR
+			has_or_had_tag = RDN
+			has_or_had_tag = RUG
+			has_or_had_tag = SBN
+			has_or_had_tag = XEP
+			has_or_had_tag = SNR
+			has_or_had_tag = SRD
+			has_or_had_tag = XBS
+			has_or_had_tag = VRN
 		}
 	}
 	# P8.7;P14;CAH-XI;TAC-GER; A bounded North Sea carrier adapter for harbor-owning Germanic polities, not a reconstructed standardized state fleet.
@@ -3208,6 +3258,11 @@ antq_baltic_sewn_plank_transport = {
 	country_potential = {
 		OR = {
 			has_or_had_tag = AES
+			has_or_had_tag = BPC
+			has_or_had_tag = ETG
+			has_or_had_tag = PLH
+			has_or_had_tag = WBB
+			has_or_had_tag = WSC
 		}
 	}
 	# P8.7;P14;CAH-XI;VU-BRUSH; A bounded sewn-plank Baltic carrier adapter for the Aestian coast, not a reconstructed standardized state fleet.
@@ -3245,6 +3300,7 @@ antq_finnic_coastal_transport = {
 	country_potential = {
 		OR = {
 			has_or_had_tag = XBU
+			has_or_had_tag = WHT
 		}
 	}
 	# P8.7;P14;CAH-XI; A bounded archipelago and coastal carrier adapter for Finnic harbor communities, not a reconstructed standardized state fleet.
@@ -3288,7 +3344,19 @@ antq_pontic_river_sea_transport = {
 	hull_size = -3
 	country_potential = {
 		OR = {
+			has_or_had_tag = XCF
+			has_or_had_tag = XAQ
+			has_or_had_tag = AOR
+			has_or_had_tag = XCD
+			has_or_had_tag = XAF
+			has_or_had_tag = CLZ
+			has_or_had_tag = KHW
+			has_or_had_tag = XGJ
 			has_or_had_tag = ROX
+			has_or_had_tag = SKH
+			has_or_had_tag = WHU
+			has_or_had_tag = WJO
+			has_or_had_tag = YNC
 		}
 	}
 	# P8.2;P14;CAH-XI; A bounded river-sea carrier adapter for the lower Pontic coast, not a reconstructed standardized state fleet.
@@ -3307,17 +3375,6 @@ antq_byeonhan_coastal_patrol = {
 	country_potential = {
 		OR = {
 			has_or_had_tag = BYE
-			has_or_had_tag = GMR
-			has_or_had_tag = GOG
-			has_or_had_tag = XAR
-			has_or_had_tag = HOK
-			has_or_had_tag = IZM
-			has_or_had_tag = KBI
-			has_or_had_tag = KYU
-			has_or_had_tag = XAW
-			has_or_had_tag = OHW
-			has_or_had_tag = XEI
-			has_or_had_tag = TKW
 		}
 	}
 	# P8.3;P14;CAH-XI; A bounded East Asian coastal patrol adapter, not a reconstructed standardized state fleet.
@@ -3393,40 +3450,9 @@ antq_sulawesi_lashed_lug_patrol = {
 	hull_size = -4
 	country_potential = {
 		OR = {
-			has_or_had_tag = AGS
-			has_or_had_tag = XDQ
-			has_or_had_tag = BCP
-			has_or_had_tag = XHD
-			has_or_had_tag = XGM
 			has_or_had_tag = BTM
-			has_or_had_tag = XGL
-			has_or_had_tag = CXR
-			has_or_had_tag = EMR
-			has_or_had_tag = XHE
-			has_or_had_tag = JAV
-			has_or_had_tag = XCL
-			has_or_had_tag = KSB
-			has_or_had_tag = LRP
-			has_or_had_tag = LZC
-			has_or_had_tag = XCM
-			has_or_had_tag = XGX
 			has_or_had_tag = MKS
 			has_or_had_tag = MNH
-			has_or_had_tag = XCK
-			has_or_had_tag = MTT
-			has_or_had_tag = NBR
-			has_or_had_tag = NEB
-			has_or_had_tag = NHM
-			has_or_had_tag = PNY
-			has_or_had_tag = PYU
-			has_or_had_tag = RSW
-			has_or_had_tag = SGK
-			has_or_had_tag = XHG
-			has_or_had_tag = SHY
-			has_or_had_tag = XCO
-			has_or_had_tag = WBC
-			has_or_had_tag = WCR
-			has_or_had_tag = ZBG
 		}
 	}
 	# P8.9;P14;CAH-XI;ANU-SULAWESI; A bounded island and littoral patrol adapter using lashed-lug construction, not a reconstructed standardized state fleet.
@@ -3464,13 +3490,10 @@ antq_kwale_coastal_patrol = {
 	hull_size = -4
 	country_potential = {
 		OR = {
-			has_or_had_tag = AKS
 			has_or_had_tag = AZA
 			has_or_had_tag = XDF
 			has_or_had_tag = KWL
-			has_or_had_tag = XEM
 			has_or_had_tag = RUV
-			has_or_had_tag = XEL
 		}
 	}
 	# P8.5;P14;CAH-XI; A bounded African coastal patrol adapter, not a reconstructed standardized state fleet.
@@ -3488,7 +3511,11 @@ antq_kwale_sewn_plank_transport = {
 	hull_size = -3
 	country_potential = {
 		OR = {
+			has_or_had_tag = AZA
+			has_or_had_tag = XDF
 			has_or_had_tag = KWL
+			has_or_had_tag = XFO
+			has_or_had_tag = RUV
 		}
 	}
 	# P8.5;P14;CAH-XI; A bounded African coastal carrier adapter using sewn-plank construction, not a reconstructed standardized state fleet.
@@ -3528,6 +3555,7 @@ antq_andean_balsa_transport = {
 		OR = {
 			has_or_had_tag = XCW
 			has_or_had_tag = NAZ
+			has_or_had_tag = VIR
 		}
 	}
 	# P8.10;P14;CAH-XI; A bounded Pacific balsa-raft carrier adapter for coastal Andean polities, not a reconstructed standardized state fleet.
@@ -3583,15 +3611,7 @@ antq_caribbean_dugout_patrol = {
 	hull_size = -4
 	country_potential = {
 		OR = {
-			has_or_had_tag = CCF
-			has_or_had_tag = XGV
-			has_or_had_tag = DOR
-			has_or_had_tag = XCV
-			has_or_had_tag = XGT
-			has_or_had_tag = GPC
-			has_or_had_tag = XCS
 			has_or_had_tag = WIC
-			has_or_had_tag = XCU
 		}
 	}
 	# P8.10;P14;CAH-XI; A bounded American river and coastal dugout patrol adapter, not a reconstructed standardized state fleet.
@@ -3649,4 +3669,542 @@ antq_californian_tule_transport = {
 		}
 	}
 	# P8.10;P14;CAH-XI;NOAA-MONTEREY; A bounded central Californian tule carrier adapter, not a reconstructed standardized state fleet.
+}
+
+antq_han_river_sea_patrol = {
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.43
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAR
+		}
+	}
+	# P8.3;P14;BHR;CAH-XI; A bounded Han river and sheltered-coast patrol role using oared and sailed craft without projecting later ship classes.
+}
+
+antq_han_grain_transport = {
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.24
+	hull_size = -2
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAR
+		}
+	}
+	# P8.3;P14;BHR;CAH-XI; A bounded Han river and coastal bulk-carrier role for grain and stores rather than a standardized hull reconstruction.
+}
+
+antq_korean_plank_patrol = {
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.46
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = BYE
+			has_or_had_tag = GMR
+			has_or_had_tag = GOG
+			has_or_had_tag = XAW
+		}
+	}
+	# P8.3;P14;CAH-XI; A bounded Korean coastal and estuarine patrol role distinguished from Han river fleets and Wa logboats.
+}
+
+antq_korean_cargo_ferry = {
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.21
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = BYE
+			has_or_had_tag = GMR
+			has_or_had_tag = GOG
+			has_or_had_tag = HMR
+			has_or_had_tag = JIN
+			has_or_had_tag = XAW
+		}
+	}
+	# P8.3;P14;CAH-XI; A bounded Korean ferry and coastal carrier role without claiming a uniform state design.
+}
+
+antq_wa_logboat_patrol = {
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.50
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = HOK
+			has_or_had_tag = IZM
+			has_or_had_tag = KBI
+			has_or_had_tag = KYU
+			has_or_had_tag = OHW
+			has_or_had_tag = XEI
+			has_or_had_tag = TKW
+		}
+	}
+	# P8.3;P14;CAH-XI; A bounded Wa sheltered-water patrol using logboat and lashed timber traditions rather than later Japanese naval forms.
+}
+
+antq_wa_coastal_transport = {
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.18
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = HOK
+			has_or_had_tag = IZM
+			has_or_had_tag = KBI
+			has_or_had_tag = KYU
+			has_or_had_tag = OHW
+			has_or_had_tag = RYS
+			has_or_had_tag = XEI
+			has_or_had_tag = TKW
+			has_or_had_tag = WAA
+		}
+	}
+	# P8.3;P14;CAH-XI; A bounded Wa coastal carrier for people, tribute, and stores, built for sheltered straits and short island passages.
+}
+
+antq_nile_patrol_boat = {
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.40
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = XBG
+		}
+	}
+	# P8.5;P14;CAH-XI; A bounded Nile and Eastern Desert patrol role adapted to river channels Red Sea approaches and local military transport.
+}
+
+antq_nile_grain_barge = {
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.28
+	hull_size = -2
+	country_potential = {
+		OR = {
+			has_or_had_tag = XBG
+		}
+	}
+	# P8.5;P14;CAH-XI; A bounded Nile bulk-carrier role for grain livestock and stores using the river's established transport economy.
+}
+
+antq_red_sea_sewn_patrol = {
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.47
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = AKS
+		}
+	}
+	# P8.5;P14;PER;CAH-XI; A bounded Horn and Red Sea patrol role using sewn-plank construction and seasonal coastal knowledge.
+}
+
+antq_red_sea_cargo_boat = {
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.23
+	hull_size = -2
+	country_potential = {
+		OR = {
+			has_or_had_tag = AKS
+			has_or_had_tag = ARO
+			has_or_had_tag = XFN
+			has_or_had_tag = MLA
+			has_or_had_tag = XFP
+			has_or_had_tag = OPO
+		}
+	}
+	# P8.5;P14;PER;CAH-XI; A bounded Horn and Red Sea carrier for aromatics ivory livestock and imported wares without claiming a single hull standard.
+}
+
+antq_punic_light_galley = {
+	copy_from = n_age_1_traditions_galley
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_galley_construction
+	maintenance_demand = antq_galley_maintenance
+	cannons = 0
+	movement_speed = 0.35
+	hull_size = -1
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAG
+		}
+	}
+	# P8.5;P14;CAH-XI; A bounded Maghrebi and Punic oared patrol inheritance distinct from Rome's heavier state squadrons.
+}
+
+antq_punic_cargo_coaster = {
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.25
+	hull_size = -1
+	country_potential = {
+		OR = {
+			has_or_had_tag = XAG
+		}
+	}
+	# P8.5;P14;CAH-XI; A bounded North African coastal merchant role preserving Punic seamanship without inventing a uniform royal fleet.
+}
+
+antq_west_african_estuary_canoe = {
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.50
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = XEM
+			has_or_had_tag = XEL
+		}
+	}
+	# P8.5;P14;CAH-XI; A bounded Atlantic estuary and river-mouth patrol role rooted in local dugout watercraft.
+}
+
+antq_west_african_river_transport = {
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.19
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = XEM
+			has_or_had_tag = XEL
+		}
+	}
+	# P8.5;P14;CAH-XI; A bounded West African river and lagoon carrier role for people food and exchange goods.
+}
+
+antq_mekong_river_sea_patrol = {
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.48
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = AGS
+			has_or_had_tag = XDQ
+			has_or_had_tag = XHD
+			has_or_had_tag = XGM
+			has_or_had_tag = BTM
+			has_or_had_tag = XGL
+			has_or_had_tag = CXR
+			has_or_had_tag = XHE
+			has_or_had_tag = XCL
+			has_or_had_tag = KSB
+			has_or_had_tag = LRP
+			has_or_had_tag = LZC
+			has_or_had_tag = MKS
+			has_or_had_tag = MNH
+			has_or_had_tag = XCK
+			has_or_had_tag = NBR
+			has_or_had_tag = NEB
+			has_or_had_tag = NHM
+			has_or_had_tag = PNY
+			has_or_had_tag = PYU
+			has_or_had_tag = RSW
+			has_or_had_tag = SGK
+			has_or_had_tag = XHG
+			has_or_had_tag = SHY
+			has_or_had_tag = WBC
+			has_or_had_tag = ZBG
+		}
+	}
+	# P8.9;P14;CAH-XI; A bounded mainland Southeast Asian patrol role joining river mouths deltas and sheltered coasts.
+}
+
+antq_mekong_cargo_transport = {
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.22
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = AGS
+			has_or_had_tag = XDQ
+			has_or_had_tag = XHD
+			has_or_had_tag = BGU
+			has_or_had_tag = BNC
+			has_or_had_tag = XGM
+			has_or_had_tag = BTM
+			has_or_had_tag = XHA
+			has_or_had_tag = XGL
+			has_or_had_tag = CXR
+			has_or_had_tag = XHE
+			has_or_had_tag = XCL
+			has_or_had_tag = XHF
+			has_or_had_tag = KSB
+			has_or_had_tag = XHB
+			has_or_had_tag = LRP
+			has_or_had_tag = LWM
+			has_or_had_tag = LZC
+			has_or_had_tag = XGY
+			has_or_had_tag = XDM
+			has_or_had_tag = MKS
+			has_or_had_tag = MNH
+			has_or_had_tag = XCK
+			has_or_had_tag = NBR
+			has_or_had_tag = NEB
+			has_or_had_tag = XGZ
+			has_or_had_tag = NHM
+			has_or_had_tag = PLW
+			has_or_had_tag = PNY
+			has_or_had_tag = PYU
+			has_or_had_tag = RSW
+			has_or_had_tag = SGK
+			has_or_had_tag = XHG
+			has_or_had_tag = SHY
+			has_or_had_tag = SLU
+			has_or_had_tag = WBC
+			has_or_had_tag = ZBG
+		}
+	}
+	# P8.9;P14;CAH-XI; A bounded mainland Southeast Asian carrier role for rice forest products ceramics and passengers.
+}
+
+antq_nusantaran_lashed_lug_patrol = {
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.56
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = JAV
+			has_or_had_tag = XCM
+		}
+	}
+	# P8.9;P14;CAH-XI; A bounded western archipelago patrol role using lashed-lug and outrigger traditions without flattening island variation.
+}
+
+antq_nusantaran_interisland_transport = {
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.25
+	hull_size = -2
+	country_potential = {
+		OR = {
+			has_or_had_tag = JAV
+			has_or_had_tag = XCM
+		}
+	}
+	# P8.9;P14;CAH-XI; A bounded western archipelago carrier role suited to monsoon passages and inter-island redistribution.
+}
+
+antq_mesoamerican_dugout_patrol = {
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.49
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = XGV
+			has_or_had_tag = XCV
+			has_or_had_tag = XGT
+			has_or_had_tag = GPC
+			has_or_had_tag = XCS
+			has_or_had_tag = XCU
+		}
+	}
+	# P8.10;P14; A bounded Mesoamerican lake river and coastal patrol role without projecting Caribbean or Andean craft.
+}
+
+antq_mesoamerican_trade_canoe = {
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.18
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = XGV
+			has_or_had_tag = XCV
+			has_or_had_tag = XGT
+			has_or_had_tag = GPC
+			has_or_had_tag = XCS
+			has_or_had_tag = XGU
+			has_or_had_tag = XCU
+		}
+	}
+	# P8.10;P14; A bounded Mesoamerican carrier role for food ceramics valuables and travelers on protected waters.
+}
+
+antq_north_american_woodland_canoe = {
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.53
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = CCF
+			has_or_had_tag = DOR
+		}
+	}
+	# P8.10;P14; A bounded eastern North American river lake and coastal patrol role distinct from Caribbean dugouts.
+}
+
+antq_north_american_cargo_canoe = {
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.17
+	hull_size = -4
+	country_potential = {
+		OR = {
+			has_or_had_tag = CCF
+			has_or_had_tag = DOR
+			has_or_had_tag = FLP
+		}
+	}
+	# P8.10;P14; A bounded eastern North American carrier role for households food and exchange cargo across connected waterways.
+}
+
+antq_oceanian_double_canoe_patrol = {
+	copy_from = n_age_1_traditions_light_ship
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_light_ship_construction
+	maintenance_demand = antq_light_ship_maintenance
+	cannons = 0
+	movement_speed = 0.57
+	hull_size = -3
+	country_potential = {
+		OR = {
+			has_or_had_tag = XCO
+		}
+	}
+	# P8.9;P14;CAH-XI; A bounded Remote Oceanian patrol role using paired hulls sailing knowledge and archipelagic seamanship.
+}
+
+antq_oceanian_voyaging_transport = {
+	copy_from = n_age_1_traditions_transport
+	hide = no
+	buildable = yes
+	age = age_1_traditions
+	construction_demand = antq_transport_construction
+	maintenance_demand = antq_transport_maintenance
+	cannons = 0
+	transport_capacity = 0.24
+	hull_size = -2
+	country_potential = {
+		OR = {
+			has_or_had_tag = XCO
+		}
+	}
+	# P8.9;P14;CAH-XI; A bounded Remote Oceanian carrier role for kin groups crops animals and exchange cargo on inter-island passages.
 }

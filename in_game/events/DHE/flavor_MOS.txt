@@ -4020,13 +4020,6 @@ flavor_mos.38 = {
 		historical_option = yes
 
 		religion:orthodox = {
-			create_holy_site = {
-				name = trinity_lavra_st_sergius
-				type = orthodox_church_holy_site
-				importance = 2
-				location = scope:target_location
-				religions = { religion:orthodox }
-			}
 		}
 
 		add_religious_influence = religious_influence_mild_penalty

@@ -23,12 +23,12 @@ RELATIVES = (
     "in_game/common/religious_focuses/nahuatl.txt",
     "in_game/common/scripted_effects/___test_effects.txt",
     "in_game/common/scripted_triggers/institution_triggers.txt",
-    "in_game/common/situations/colonial_revolution.txt",
-    "in_game/common/situations/reformation.txt",
     "in_game/common/tests/age_of_discovery_tests.txt",
     "main_menu/common/achievements/standard_achievements.txt",
     "main_menu/gfx/portraits/portrait_modifiers/01_headwear_special.txt",
 )
+# The two installed legacy situations are owned by r5_visible_unions.py, which
+# applies the stronger exact-quarantine contract after institution replacement.
 EMPTY_RELATIVES = frozenset((
     "in_game/common/scripted_effects/___test_effects.txt",
     "in_game/common/tests/age_of_discovery_tests.txt",

@@ -752,13 +752,6 @@ flavor_ser.31 = { #The Dawn of a New Empire
 				}
 			}
 			religion:orthodox = {
-				create_holy_site = {
-					name = episcopal_see
-					type = episcopal_see
-					importance = 2
-					location = scope:selected_location
-					religions = { religion:orthodox }
-				}
 			}
 			autocephalous_patriarchate = {
 				set_variable = {

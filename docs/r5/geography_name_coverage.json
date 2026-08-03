@@ -1,0 +1,87 @@
+{
+  "complete": false,
+  "distinct_researched_keys": 6025,
+  "expected_distinct_keys": 33795,
+  "expected_rows": 33801,
+  "levels": {
+    "area": {
+      "expected": 805,
+      "researched": 805
+    },
+    "continent": {
+      "expected": 9,
+      "researched": 9
+    },
+    "location": {
+      "expected": 28573,
+      "researched": 800
+    },
+    "province": {
+      "expected": 4309,
+      "researched": 4309
+    },
+    "region": {
+      "expected": 82,
+      "researched": 82
+    },
+    "subcontinent": {
+      "expected": 23,
+      "researched": 23
+    }
+  },
+  "researched_rows": 6028,
+  "shards": [
+    "names_areas_001_100.csv",
+    "names_areas_101_200.csv",
+    "names_areas_201_300.csv",
+    "names_areas_301_400.csv",
+    "names_areas_401_500.csv",
+    "names_areas_501_600.csv",
+    "names_areas_601_700.csv",
+    "names_areas_701_805.csv",
+    "names_coarse_continents_subcontinents.csv",
+    "names_locations_00001_00200.csv",
+    "names_locations_00201_00400.csv",
+    "names_locations_00401_00600.csv",
+    "names_locations_00601_00800.csv",
+    "names_provinces_0001_0100.csv",
+    "names_provinces_0101_0200.csv",
+    "names_provinces_0201_0300.csv",
+    "names_provinces_0301_0400.csv",
+    "names_provinces_0401_0500.csv",
+    "names_provinces_0501_0600.csv",
+    "names_provinces_0601_0700.csv",
+    "names_provinces_0701_0800.csv",
+    "names_provinces_0801_0900.csv",
+    "names_provinces_0901_1000.csv",
+    "names_provinces_1001_1100.csv",
+    "names_provinces_1101_1200.csv",
+    "names_provinces_1201_1300.csv",
+    "names_provinces_1301_1400.csv",
+    "names_provinces_1401_1500.csv",
+    "names_provinces_1501_1600.csv",
+    "names_provinces_1601_1700.csv",
+    "names_provinces_1701_1800.csv",
+    "names_provinces_1801_1900.csv",
+    "names_provinces_1901_2000.csv",
+    "names_provinces_2001_2100.csv",
+    "names_provinces_2101_2200.csv",
+    "names_provinces_2201_2300.csv",
+    "names_provinces_2301_2400.csv",
+    "names_provinces_2401_2500.csv",
+    "names_provinces_2501_2600.csv",
+    "names_provinces_2601_2700.csv",
+    "names_provinces_2701_2800.csv",
+    "names_provinces_2801_2900.csv",
+    "names_provinces_2901_3000.csv",
+    "names_provinces_3001_3200.csv",
+    "names_provinces_3201_3400.csv",
+    "names_provinces_3401_3600.csv",
+    "names_provinces_3601_3800.csv",
+    "names_provinces_3801_4000.csv",
+    "names_provinces_4001_4200.csv",
+    "names_provinces_4201_4309.csv",
+    "names_regions_a.csv",
+    "names_regions_b.csv"
+  ]
+}

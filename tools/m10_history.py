@@ -403,7 +403,13 @@ def impact_lines(record: Current) -> tuple[str, ...]:
     """Use only effects harvested from installed country-event files."""
     if record.key == "christianity_foundation":
         return (
-            "\t\treligion:antq_early_christianity = { enable_religion = yes }",
+            "\t\treligion:antq_early_christianity = {",
+            "\t\t\tenable_religion = yes",
+            "\t\t\tcreate_holy_site = { name = antq_christian_jerusalem_memory type = pilgrimage_city importance = 5 location = location:jerusalem religions = { religion:antq_early_christianity } }",
+            "\t\t\tcreate_holy_site = { name = antq_christian_antioch_community type = pilgrimage_city importance = 4 location = location:antioch religions = { religion:antq_early_christianity } }",
+            "\t\t\tcreate_holy_site = { name = antq_christian_ephesos_community type = pilgrimage_city importance = 3 location = location:ayasuluk religions = { religion:antq_early_christianity } }",
+            "\t\t\tcreate_holy_site = { name = antq_christian_roman_memory type = pilgrimage_city importance = 5 location = location:rome religions = { religion:antq_early_christianity } }",
+            "\t\t}",
             "\t\t# The AD 30 current seeds a small Jerusalem community; it does not convert Judea.",
             "\t\tlocation:jerusalem = {",
             "\t\t\tevery_pop = {",

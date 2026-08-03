@@ -2529,13 +2529,6 @@ flavor_swe.48 = {
 		make_birgitta_saint = yes
 
 		religion:catholic = {
-			create_holy_site = {
-				name = vadstena_holy_site
-				type = christian_holy_site
-				importance = 1
-				location = location:vadstena
-				religions = { religion:catholic }
-			}
 		}
 
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_mild_bonus }

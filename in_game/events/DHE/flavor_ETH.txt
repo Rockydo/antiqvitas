@@ -917,13 +917,6 @@ flavor_eth.110 = { #Independence from the Patriarchate
 		}
 		#Create the Holy see
 		religion:miaphysite = {
-			create_holy_site = {
-				name = episcopal_see
-				type = episcopal_see
-				importance = 2
-				location = scope:selected_location
-				religions = { religion:miaphysite }
-			}
 		}
 		autocephalous_patriarchate = {
 			set_variable = {
@@ -2692,13 +2685,6 @@ flavor_eth.220 = { #Saint George Church at Lalibela
 		add_religious_influence = religious_influence_severe_bonus
 
 		location:lalibela = {
-			create_holy_site = {
-				name = rock_hewn_churches_at_lalibela
-				type = shrine
-				importance = 1
-				location = this
-				religions = { religion:miaphysite }
-			}
 		}
 	}
 

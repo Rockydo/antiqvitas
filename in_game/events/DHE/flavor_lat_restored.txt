@@ -300,13 +300,6 @@ flavor_lat.4 = { # Restoration of the Holy Patriarchate of Constantinople
                 years = -1
                 mode = add
             }
-            create_holy_site = {
-                name = latin_patriarchate_of_constantinople
-                type = christian_holy_site
-                importance = 1
-                location = this
-                religions = { religion:catholic }
-            }
         }
         add_opinion = { target = c:PAP modifier = lat_patriarchate_of_constantinople_restored }
         c:PAP = {
@@ -324,13 +317,6 @@ flavor_lat.4 = { # Restoration of the Holy Patriarchate of Constantinople
                 modifier = lat_restoration_of_the_constantinople_patriarchate
                 years = -1
                 mode = add
-            }
-            create_holy_site = {
-                name = latin_patriarchate_of_constantinople
-                type = christian_holy_site
-                importance = 1
-                location = this
-                religions = { religion:catholic }
             }
         }
         add_opinion = { target = c:PAP modifier = lat_patriarchate_of_constantinople_restored }
@@ -350,13 +336,6 @@ flavor_lat.4 = { # Restoration of the Holy Patriarchate of Constantinople
                 modifier = lat_restoration_of_the_constantinople_patriarchate
                 years = -1
                 mode = add
-            }
-            create_holy_site = {
-                name = latin_patriarchate_of_constantinople
-                type = christian_holy_site
-                importance = 1
-                location = this
-                religions = { religion:catholic }
             }
         }
         add_opinion = { target = c:PAP modifier = lat_patriarchate_of_constantinople_restored }

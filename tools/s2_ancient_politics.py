@@ -336,7 +336,7 @@ PROFILES = (
             a("wing_musters", "Left-Right Wing Musters", "Count mounted followings and assign a campaign direction without inventing later decimal ranks.", "mil", MIL),
             a("gift_circulation", "Prestige-Gift Circulation", "Move silk, plaques, vessels, livestock, and honors through the confederate hierarchy.", "dip", PRESTIGE),
             a("envoy_circuits", "Envoy Circuits", "Maintain tallies, interpreters, escorts, and relay mounts for distant lineages.", "dip", LOGISTICS),
-            a("remount_herds", "Remount Herd Registers", "Protect breeding stock and allocate fresh mounts to envoys and war leaders.", "mil", NOBLES),
+            a("remount_registers", "Remount Herd Registers", "Protect breeding stock and allocate fresh mounts to envoys and war leaders.", "mil", NOBLES),
         ),
         (
             m("pasture_circuit", "Seasonal Pasture Circuit", "Mediate grazing routes before scarcity turns lineage disputes violent.", "Herding-Household Pasture Claim", "Mobile households demand access consistent with seasonal need and prior compact.", "tribes_estate", FOOD, TRIBES),

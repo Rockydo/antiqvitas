@@ -47,16 +47,11 @@ antq_cult_wheat_fields = {
 		}
 		min = 3
 	}
-	unique_production_methods = {
-		antq_cult_wheat_fields_maintenance = {
-			tools = 0.0211
-			lumber = 0.0633
-			livestock = 0.1056
-			produced = wheat
-			output = 0.38
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_wheat_fields_maintenance
+		antq_cult_wheat_fields_managed
+		antq_cult_wheat_fields_intensive
+		antq_cult_wheat_fields_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -114,16 +109,11 @@ antq_cult_millet_plots = {
 		}
 		min = 3
 	}
-	unique_production_methods = {
-		antq_cult_millet_plots_maintenance = {
-			tools = 0.0200
-			lumber = 0.0600
-			livestock = 0.1000
-			produced = millet
-			output = 0.36
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_millet_plots_maintenance
+		antq_cult_millet_plots_managed
+		antq_cult_millet_plots_intensive
+		antq_cult_millet_plots_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -180,16 +170,11 @@ antq_cult_barley_plots = {
 		}
 		min = 3
 	}
-	unique_production_methods = {
-		antq_cult_barley_plots_maintenance = {
-			tools = 0.0240
-			lumber = 0.0720
-			livestock = 0.1200
-			produced = antq_barley
-			output = 0.36
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_barley_plots_maintenance
+		antq_cult_barley_plots_managed
+		antq_cult_barley_plots_intensive
+		antq_cult_barley_plots_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -260,16 +245,11 @@ antq_cult_rice_paddies = {
 		}
 		min = 3
 	}
-	unique_production_methods = {
-		antq_cult_rice_paddies_maintenance = {
-			tools = 0.0189
-			lumber = 0.0567
-			livestock = 0.0944
-			produced = rice
-			output = 0.34
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_rice_paddies_maintenance
+		antq_cult_rice_paddies_managed
+		antq_cult_rice_paddies_intensive
+		antq_cult_rice_paddies_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -339,16 +319,11 @@ antq_cult_maize_plots = {
 		}
 		min = 3
 	}
-	unique_production_methods = {
-		antq_cult_maize_plots_maintenance = {
-			tools = 0.0200
-			lumber = 0.0600
-			livestock = 0.1000
-			produced = maize
-			output = 0.36
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_maize_plots_maintenance
+		antq_cult_maize_plots_managed
+		antq_cult_maize_plots_intensive
+		antq_cult_maize_plots_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -408,16 +383,11 @@ antq_cult_pulse_plots = {
 		}
 		min = 3
 	}
-	unique_production_methods = {
-		antq_cult_pulse_plots_maintenance = {
-			tools = 0.0206
-			lumber = 0.0617
-			livestock = 0.1028
-			produced = legumes
-			output = 0.37
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_pulse_plots_maintenance
+		antq_cult_pulse_plots_managed
+		antq_cult_pulse_plots_intensive
+		antq_cult_pulse_plots_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -472,16 +442,11 @@ antq_cult_fruit_orchards = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_fruit_orchards_maintenance = {
-			tools = 0.0178
-			lumber = 0.0533
-			livestock = 0.0889
-			produced = fruit
-			output = 0.32
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_fruit_orchards_maintenance
+		antq_cult_fruit_orchards_managed
+		antq_cult_fruit_orchards_intensive
+		antq_cult_fruit_orchards_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -539,16 +504,11 @@ antq_cult_olive_groves = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_olive_groves_maintenance = {
-			tools = 0.0156
-			lumber = 0.0467
-			livestock = 0.0778
-			produced = olives
-			output = 0.28
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_olive_groves_maintenance
+		antq_cult_olive_groves_managed
+		antq_cult_olive_groves_intensive
+		antq_cult_olive_groves_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -614,16 +574,11 @@ antq_cult_grape_arbors = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_grape_arbors_maintenance = {
-			tools = 0.0167
-			lumber = 0.0500
-			livestock = 0.0833
-			produced = fruit
-			output = 0.30
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_grape_arbors_maintenance
+		antq_cult_grape_arbors_managed
+		antq_cult_grape_arbors_intensive
+		antq_cult_grape_arbors_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -685,16 +640,11 @@ antq_cult_date_groves = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_date_groves_maintenance = {
-			tools = 0.0300
-			lumber = 0.0900
-			livestock = 0.1500
-			produced = antq_dates
-			output = 0.30
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_date_groves_maintenance
+		antq_cult_date_groves_managed
+		antq_cult_date_groves_intensive
+		antq_cult_date_groves_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -763,16 +713,11 @@ antq_cult_nut_orchards = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_nut_orchards_maintenance = {
-			tools = 0.0417
-			lumber = 0.1250
-			livestock = 0.2083
-			produced = antq_tree_nuts
-			output = 0.30
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_nut_orchards_maintenance
+		antq_cult_nut_orchards_managed
+		antq_cult_nut_orchards_intensive
+		antq_cult_nut_orchards_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -839,16 +784,11 @@ antq_cult_sesame_plots = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_sesame_plots_maintenance = {
-			tools = 0.0391
-			lumber = 0.1173
-			livestock = 0.1956
-			produced = antq_sesame
-			output = 0.32
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_sesame_plots_maintenance
+		antq_cult_sesame_plots_managed
+		antq_cult_sesame_plots_intensive
+		antq_cult_sesame_plots_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -904,16 +844,11 @@ antq_cult_flax_hemp_fields = {
 		}
 		min = 3
 	}
-	unique_production_methods = {
-		antq_cult_flax_hemp_fields_maintenance = {
-			tools = 0.0378
-			lumber = 0.1133
-			livestock = 0.1889
-			produced = fiber_crops
-			output = 0.34
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_flax_hemp_fields_maintenance
+		antq_cult_flax_hemp_fields_managed
+		antq_cult_flax_hemp_fields_intensive
+		antq_cult_flax_hemp_fields_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -991,16 +926,11 @@ antq_cult_cotton_plots = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_cotton_plots_maintenance = {
-			tools = 0.0500
-			lumber = 0.1500
-			livestock = 0.2500
-			produced = cotton
-			output = 0.30
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_cotton_plots_maintenance
+		antq_cult_cotton_plots_managed
+		antq_cult_cotton_plots_intensive
+		antq_cult_cotton_plots_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -1055,16 +985,11 @@ antq_cult_dye_gardens = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_dye_gardens_maintenance = {
-			tools = 0.0600
-			lumber = 0.1800
-			livestock = 0.3000
-			produced = dyes
-			output = 0.27
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_dye_gardens_maintenance
+		antq_cult_dye_gardens_managed
+		antq_cult_dye_gardens_intensive
+		antq_cult_dye_gardens_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -1129,16 +1054,11 @@ antq_cult_sugar_cane = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_sugar_cane_maintenance = {
-			tools = 0.0417
-			lumber = 0.1250
-			livestock = 0.2083
-			produced = sugar
-			output = 0.25
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_sugar_cane_maintenance
+		antq_cult_sugar_cane_managed
+		antq_cult_sugar_cane_intensive
+		antq_cult_sugar_cane_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -1200,16 +1120,11 @@ antq_cult_tea_gardens = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_tea_gardens_maintenance = {
-			tools = 0.0367
-			lumber = 0.1100
-			livestock = 0.1833
-			produced = tea
-			output = 0.22
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_tea_gardens_maintenance
+		antq_cult_tea_gardens_managed
+		antq_cult_tea_gardens_intensive
+		antq_cult_tea_gardens_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -1268,16 +1183,11 @@ antq_cult_pepper_gardens = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_pepper_gardens_maintenance = {
-			tools = 0.0122
-			lumber = 0.0367
-			livestock = 0.0611
-			produced = medicaments
-			output = 0.22
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_pepper_gardens_maintenance
+		antq_cult_pepper_gardens_managed
+		antq_cult_pepper_gardens_intensive
+		antq_cult_pepper_gardens_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -1333,16 +1243,11 @@ antq_cult_incense_gardens = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_incense_gardens_maintenance = {
-			tools = 0.0278
-			lumber = 0.0833
-			livestock = 0.1389
-			produced = incense
-			output = 0.20
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_incense_gardens_maintenance
+		antq_cult_incense_gardens_managed
+		antq_cult_incense_gardens_intensive
+		antq_cult_incense_gardens_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -1397,16 +1302,11 @@ antq_cult_papyrus_beds = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_papyrus_beds_maintenance = {
-			tools = 0.0489
-			lumber = 0.1467
-			livestock = 0.2444
-			produced = antq_papyrus
-			output = 0.22
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_papyrus_beds_maintenance
+		antq_cult_papyrus_beds_managed
+		antq_cult_papyrus_beds_intensive
+		antq_cult_papyrus_beds_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -1468,16 +1368,11 @@ antq_cult_coconut_groves = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_coconut_groves_maintenance = {
-			tools = 0.0270
-			lumber = 0.0810
-			livestock = 0.1350
-			produced = antq_coconuts
-			output = 0.27
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_coconut_groves_maintenance
+		antq_cult_coconut_groves_managed
+		antq_cult_coconut_groves_intensive
+		antq_cult_coconut_groves_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -1538,16 +1433,11 @@ antq_cult_spice_gardens = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_spice_gardens_maintenance = {
-			tools = 0.0111
-			lumber = 0.0333
-			livestock = 0.0556
-			produced = medicaments
-			output = 0.20
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_spice_gardens_maintenance
+		antq_cult_spice_gardens_managed
+		antq_cult_spice_gardens_intensive
+		antq_cult_spice_gardens_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -1605,16 +1495,11 @@ antq_cult_cacao_groves = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_cacao_groves_maintenance = {
-			tools = 0.0444
-			lumber = 0.1333
-			livestock = 0.2222
-			produced = cocoa
-			output = 0.20
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_cacao_groves_maintenance
+		antq_cult_cacao_groves_managed
+		antq_cult_cacao_groves_intensive
+		antq_cult_cacao_groves_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -1679,16 +1564,11 @@ antq_cult_tobacco_plots = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_tobacco_plots_maintenance = {
-			tools = 0.0367
-			lumber = 0.1100
-			livestock = 0.1833
-			produced = tobacco
-			output = 0.22
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_tobacco_plots_maintenance
+		antq_cult_tobacco_plots_managed
+		antq_cult_tobacco_plots_intensive
+		antq_cult_tobacco_plots_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -1754,16 +1634,11 @@ antq_cult_vineyards = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_vineyards_maintenance = {
-			tools = 0.0333
-			lumber = 0.1000
-			livestock = 0.1667
-			produced = wine
-			output = 0.30
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_vineyards_maintenance
+		antq_cult_vineyards_managed
+		antq_cult_vineyards_intensive
+		antq_cult_vineyards_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -1823,16 +1698,11 @@ antq_cult_saffron_beds = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_saffron_beds_maintenance = {
-			tools = 0.0556
-			lumber = 0.1667
-			livestock = 0.2778
-			produced = saffron
-			output = 0.20
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_saffron_beds_maintenance
+		antq_cult_saffron_beds_managed
+		antq_cult_saffron_beds_intensive
+		antq_cult_saffron_beds_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -1891,16 +1761,11 @@ antq_cult_black_pepper = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_black_pepper_maintenance = {
-			tools = 0.0556
-			lumber = 0.1667
-			livestock = 0.2778
-			produced = pepper
-			output = 0.20
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_black_pepper_maintenance
+		antq_cult_black_pepper_managed
+		antq_cult_black_pepper_intensive
+		antq_cult_black_pepper_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -1955,16 +1820,11 @@ antq_cult_clove_groves = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_clove_groves_maintenance = {
-			tools = 0.0500
-			lumber = 0.1500
-			livestock = 0.2500
-			produced = cloves
-			output = 0.18
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_clove_groves_maintenance
+		antq_cult_clove_groves_managed
+		antq_cult_clove_groves_intensive
+		antq_cult_clove_groves_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -2029,16 +1889,11 @@ antq_cult_chili_gardens = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_chili_gardens_maintenance = {
-			tools = 0.0694
-			lumber = 0.2083
-			livestock = 0.3472
-			produced = chili
-			output = 0.25
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_chili_gardens_maintenance
+		antq_cult_chili_gardens_managed
+		antq_cult_chili_gardens_intensive
+		antq_cult_chili_gardens_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -2096,16 +1951,11 @@ antq_cult_potato_terraces = {
 		}
 		min = 3
 	}
-	unique_production_methods = {
-		antq_cult_potato_terraces_maintenance = {
-			tools = 0.0167
-			lumber = 0.0500
-			livestock = 0.0833
-			produced = potato
-			output = 0.30
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_potato_terraces_maintenance
+		antq_cult_potato_terraces_managed
+		antq_cult_potato_terraces_intensive
+		antq_cult_potato_terraces_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -2160,16 +2010,11 @@ antq_cult_apiaries = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_apiaries_maintenance = {
-			tools = 0.0244
-			lumber = 0.0733
-			livestock = 0.1222
-			produced = beeswax
-			output = 0.22
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_apiaries_maintenance
+		antq_cult_apiaries_managed
+		antq_cult_apiaries_intensive
+		antq_cult_apiaries_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -2233,16 +2078,11 @@ antq_cult_mulberry_sericulture = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_mulberry_sericulture_maintenance = {
-			tools = 0.0400
-			lumber = 0.1200
-			livestock = 0.2000
-			produced = silk
-			output = 0.18
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_mulberry_sericulture_maintenance
+		antq_cult_mulberry_sericulture_managed
+		antq_cult_mulberry_sericulture_intensive
+		antq_cult_mulberry_sericulture_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -2295,16 +2135,11 @@ antq_cult_wool_flocks = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_wool_flocks_maintenance = {
-			tools = 0.0417
-			lumber = 0.1250
-			livestock = 0.2083
-			produced = wool
-			output = 0.30
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_wool_flocks_maintenance
+		antq_cult_wool_flocks_managed
+		antq_cult_wool_flocks_intensive
+		antq_cult_wool_flocks_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -2359,16 +2194,11 @@ antq_cult_cattle_pastures = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_cattle_pastures_maintenance = {
-			tools = 0.0233
-			lumber = 0.0700
-			livestock = 0.1167
-			produced = livestock
-			output = 0.28
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_cattle_pastures_maintenance
+		antq_cult_cattle_pastures_managed
+		antq_cult_cattle_pastures_intensive
+		antq_cult_cattle_pastures_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -2419,16 +2249,11 @@ antq_cult_horse_pastures = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_horse_pastures_maintenance = {
-			tools = 0.0367
-			lumber = 0.1100
-			livestock = 0.1833
-			produced = horses
-			output = 0.22
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_horse_pastures_maintenance
+		antq_cult_horse_pastures_managed
+		antq_cult_horse_pastures_intensive
+		antq_cult_horse_pastures_specialized
 	}
 	modifier = {
 		local_food_capacity = 20
@@ -2486,16 +2311,11 @@ antq_cult_camel_corrals = {
 		}
 		min = 2
 	}
-	unique_production_methods = {
-		antq_cult_camel_corrals_maintenance = {
-			tools = 0.0444
-			lumber = 0.1333
-			livestock = 0.2222
-			produced = antq_camels
-			output = 0.20
-			debug_max_profit = rural_profit_margin
-			category = building_maintenance
-		}
+	possible_production_methods = {
+		antq_cult_camel_corrals_maintenance
+		antq_cult_camel_corrals_managed
+		antq_cult_camel_corrals_intensive
+		antq_cult_camel_corrals_specialized
 	}
 	modifier = {
 		local_food_capacity = 20

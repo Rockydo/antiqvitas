@@ -1,14 +1,10 @@
 #!/usr/bin/env python3
-"""Build and validate ANTIQVITAS animated loading-screen layer stacks.
+"""Build and validate fixed ANTIQVITAS loading panoramas.
 
-The EU5 loading-scene scripts are additive in the installed build. We retain
-their engine-owned scene and image declarations and VFS-override the exact
-eight DDS paths they reference. Vanilla's _00 is a coherent background rather
-than a finished illustration duplicated beneath every plane. ANTIQVITAS keeps
-broad scenery and architecture stable, content-aware-inpaints the original
-positions of selected foreground subjects, and distributes those subjects over
-seven far-to-near meshes. A finished subject must never remain underneath its
-moving copy.
+EU5 still binds eight texture paths per installed loading scene. ANTIQVITAS
+keeps that engine contract but mounts one complete reviewed panorama at `_00`
+and seven fully transparent compatibility planes. No generated cutout,
+inpainting, depth mask, or parallax layer participates in the rendered image.
 """
 
 from __future__ import annotations
@@ -26,7 +22,10 @@ from pathlib import Path
 from typing import Any
 
 import numpy as np
-import cv2
+try:  # Legacy depth helpers remain readable for audit but are no longer invoked.
+    import cv2
+except ModuleNotFoundError:  # Fixed panoramas do not require OpenCV.
+    cv2 = None
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from dds import convert, identify
@@ -490,72 +489,51 @@ class LamaInpainter:
 
 def write_layers() -> None:
     LAYER_ROOT.mkdir(parents=True, exist_ok=True)
-    HYBRID_ROOT.mkdir(parents=True, exist_ok=True)
     temp_root = ROOT / ".tmp"
     temp_root.mkdir(parents=True, exist_ok=True)
     rows: list[dict[str, str]] = []
     previews: list[tuple[str, int, Image.Image]] = []
     composites: list[tuple[str, Image.Image]] = []
-    inpainting_model = LamaInpainter()
-    for screen in SCREENS:
-        with Image.open(ROOT / screen.master) as opened:
-            panorama = opened.convert("RGB")
-            with Image.open(clean_path(screen)) as clean_opened:
-                clean = clean_opened.convert("RGB")
-                if clean.size != panorama.size:
-                    raise ValueError(
-                        f"{screen.title} clean plate does not match panorama: "
-                        f"{clean.size} != {panorama.size}"
-                    )
-            with Image.open(depth_path(screen)) as depth_opened:
-                if depth_opened.size != panorama.size:
-                    raise ValueError(
-                        f"{screen.title} depth map does not match panorama: "
-                        f"{depth_opened.size} != {panorama.size}"
-                    )
-                masks = depth_masks(screen, panorama, clean, depth_opened)
-            base = render_clean_base(
-                screen, panorama, clean, masks, inpainting_model,
-            )
-            base.save(hybrid_path(screen), optimize=True)
-            previews.append((screen.key, 0, base.resize((240, 135))))
-            composite = base.convert("RGBA")
-            with tempfile.TemporaryDirectory(prefix="antq-loading-", dir=temp_root) as temporary:
-                work = Path(temporary)
-                conversions: list[tuple[Path, Path, str]] = [
-                    (hybrid_path(screen), layer_texture(screen, 0), "bc1")
-                ]
-                for index, alpha in enumerate(masks, start=1):
-                    plate = render_depth_plate(panorama, alpha)
-                    png = work / f"{screen.key}_{index:02d}.png"
-                    plate.save(png, optimize=True)
-                    target = layer_texture(screen, index)
-                    conversions.append((png, target, "bc3"))
-                    composite.alpha_composite(plate)
-                    preview = plate.resize((240, 135), Image.Resampling.LANCZOS)
-                    previews.append((screen.key, index, preview))
-                with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
-                    futures = [
-                        executor.submit(convert, png, target, compression, mipmaps=True)
-                        for png, target, compression in conversions
-                    ]
-                    for future in futures:
-                        future.result()
-            composites.append(
-                (screen.key, composite.convert("RGB").resize((480, 270)))
-            )
-        for index in range(8):
-            texture = layer_texture(screen, index)
-            zero, opaque, mean = alpha_stats(texture)
-            rows.append({
-                "screen": screen.key,
-                "layer": str(index),
-                "texture": str(texture.relative_to(ROOT)),
-                "sha256": digest(texture),
-                "zero_alpha_percent": f"{zero:.3f}",
-                "opaque_alpha_percent": f"{opaque:.3f}",
-                "mean_alpha": f"{mean:.3f}",
-            })
+    with tempfile.TemporaryDirectory(prefix="antq-loading-fixed-", dir=temp_root) as temporary:
+        transparent_png = Path(temporary) / "transparent_3840x2160.png"
+        transparent_dds = Path(temporary) / "transparent_3840x2160.dds"
+        Image.new("RGBA", DIMENSIONS, (0, 0, 0, 0)).save(transparent_png)
+        convert(transparent_png, transparent_dds, "bc3", mipmaps=True)
+        for screen in SCREENS:
+            master = ROOT / screen.master
+            finished = ROOT / screen.texture
+            with Image.open(master) as opened:
+                panorama = opened.convert("RGB")
+                previews.append((screen.key, 0, panorama.resize((240, 135))))
+                transparent_preview = Image.new("RGBA", (240, 135), (0, 0, 0, 0))
+                previews.extend(
+                    (screen.key, index, transparent_preview.copy())
+                    for index in range(1, 8)
+                )
+                composites.append(
+                    (screen.key, panorama.resize((480, 270)))
+                )
+            base = layer_texture(screen, 0)
+            if base.exists():
+                base.unlink()
+            os.link(finished, base)
+            for index in range(1, 8):
+                target = layer_texture(screen, index)
+                if target.exists():
+                    target.unlink()
+                os.link(transparent_dds, target)
+            for index in range(8):
+                texture = layer_texture(screen, index)
+                zero, opaque, mean = alpha_stats(texture)
+                rows.append({
+                    "screen": screen.key,
+                    "layer": str(index),
+                    "texture": str(texture.relative_to(ROOT)),
+                    "sha256": digest(texture),
+                    "zero_alpha_percent": f"{zero:.3f}",
+                    "opaque_alpha_percent": f"{opaque:.3f}",
+                    "mean_alpha": f"{mean:.3f}",
+                })
     LAYER_LEDGER.parent.mkdir(parents=True, exist_ok=True)
     with LAYER_LEDGER.open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(
@@ -599,7 +577,7 @@ def write_layers() -> None:
         composite_canvas.paste(preview, (x, y))
         composite_draw.text(
             (x + 4, y + 273),
-            f"{key} / assembled",
+            f"{key} / fixed panorama",
             fill="#eef0e8",
             font=font,
         )
@@ -652,57 +630,21 @@ def validate() -> None:
     screens = {screen.key: screen for screen in SCREENS}
     if not set(SCENE_ASSIGNMENTS.values()) <= set(screens):
         raise ValueError("loading-screen assignment refers to an unknown reviewed panorama")
-    if set(GUIDE_ASSIGNMENTS) != set(screens):
-        raise ValueError("semantic loading guides must cover all sixteen screens")
-    for filename, _panel in set(GUIDE_ASSIGNMENTS.values()):
-        guide = GUIDE_ROOT / filename
-        if not guide.is_file():
-            raise ValueError(f"missing four-up semantic loading guide: {guide}")
-        with Image.open(guide) as image:
-            if image.format != "PNG" or image.width < 1600 or image.height < 900:
-                raise ValueError(f"invalid four-up semantic loading guide: {guide}")
     for screen in SCREENS:
         source, master, texture = ROOT / screen.source, ROOT / screen.master, ROOT / screen.texture
-        depth = depth_path(screen)
-        clean = clean_path(screen)
-        hybrid = hybrid_path(screen)
-        clean_source = clean_source_path(screen)
         for path, role in (
             (source, "source"),
             (master, "master"),
-            (depth, "depth map"),
             (texture, "finished-scene texture"),
-            (clean_source, "clean-plate source"),
-            (clean, "clean plate"),
-            (hybrid, "hybrid plate"),
         ):
             if not path.is_file():
                 raise ValueError(f"{screen.title} loading-screen {role} is missing: {path}")
         with Image.open(master) as image:
             if image.format != "PNG" or image.size != DIMENSIONS:
                 raise ValueError(f"{screen.title} loading-screen master must be 3840x2160 PNG: {master}")
-        with Image.open(depth) as image:
-            if image.format != "PNG" or image.size != DIMENSIONS:
-                raise ValueError(f"{screen.title} depth map must be 3840x2160 PNG: {depth}")
-            rgb = np.asarray(image.convert("RGB"))
-            if not (np.array_equal(rgb[:, :, 0], rgb[:, :, 1])
-                    and np.array_equal(rgb[:, :, 1], rgb[:, :, 2])):
-                raise ValueError(f"{screen.title} depth map is not grayscale: {depth}")
-        with Image.open(clean) as image:
-            if image.format != "PNG" or image.size != DIMENSIONS:
-                raise ValueError(
-                    f"{screen.title} clean plate must be 3840x2160 PNG: {clean}"
-                )
-        with Image.open(hybrid) as image:
-            if image.format != "PNG" or image.size != DIMENSIONS:
-                raise ValueError(
-                    f"{screen.title} hybrid plate must be 3840x2160 PNG: {hybrid}"
-                )
         if identify(texture) != {"format": "DDS", "width": "3840", "height": "2160", "depth": "8", "channels": "srgb  3.0"}:
             raise ValueError(f"{screen.title} loading-screen DDS has unexpected contract: {texture}")
-        layer_hashes: set[str] = set()
-        layer_images: list[np.ndarray] = []
-        nonempty_layers = 0
+        transparent_hashes: set[str] = set()
         for index in range(8):
             layer = layer_texture(screen, index)
             if not layer.is_file():
@@ -710,140 +652,26 @@ def validate() -> None:
             details = identify(layer)
             if details["width"] != "3840" or details["height"] != "2160":
                 raise ValueError(f"{screen.title} loading layer has invalid dimensions: {layer}")
-            if index and "".join(details["channels"].split()) != "srgba4.0":
+            if index == 0:
+                if digest(layer) != digest(texture):
+                    raise ValueError(
+                        f"{screen.title} _00 is not the reviewed fixed panorama"
+                    )
+            elif "".join(details["channels"].split()) != "srgba4.0":
                 raise ValueError(f"{screen.title} loading overlay lost alpha: {layer}")
             zero, opaque, mean = alpha_stats(layer)
-            semitransparent = 100.0 - zero - opaque
-            semantic_contract = (
-                # Vanilla Rossbach's broad terrain plane is ~73% opaque; plane
-                # area alone is not evidence of duplication.
-                20.0 < zero < 99.99
-                and 0.0 <= opaque < 80.0
-                # Vanilla deliberately uses broad translucent atmosphere and
-                # fine silhouettes; feather ratio is not an ownership test.
-                and 0.01 < semitransparent < 45.0
-                and 0.01 < mean < 125.0
-            )
-            empty_contract = (
-                zero > 99.99
-                and opaque < 0.01
-                and semitransparent < 0.01
-                and mean < 0.01
-            )
-            sparse_contract = (
-                zero > 99.90
-                and opaque < 0.10
-                and semitransparent < 0.10
-                and mean < 0.10
-            )
-            if index and not empty_contract and mean >= 0.01:
-                nonempty_layers += 1
             if index and not (
-                semantic_contract or sparse_contract or empty_contract
+                zero > 99.999 and opaque < 0.001 and mean < 0.001
             ):
                 raise ValueError(
-                    f"{screen.title} layer {index:02d} violates semantic alpha: "
-                    f"zero={zero:.2f}, opaque={opaque:.2f}, "
-                    f"semi={semitransparent:.2f}, mean={mean:.2f}"
+                    f"{screen.title} compatibility plane {index:02d} is visible: "
+                    f"zero={zero:.5f}, opaque={opaque:.5f}, mean={mean:.5f}"
                 )
-            layer_hashes.add(digest(layer))
-            with Image.open(layer) as opened:
-                layer_images.append(np.asarray(opened.convert("RGBA")))
-        if (
-            nonempty_layers < MIN_ACTIVE_LAYERS
-            or len(layer_hashes) < MIN_ACTIVE_LAYERS + 1
-        ):
+            if index:
+                transparent_hashes.add(digest(layer))
+        if len(transparent_hashes) != 1:
             raise ValueError(
-                f"{screen.title} has only {nonempty_layers} active semantic "
-                f"planes; {MIN_ACTIVE_LAYERS} are required"
-            )
-        coverage = np.stack(
-            [image[:, :, 3] > 128 for image in layer_images[1:]],
-            axis=0,
-        ).sum(axis=0)
-        with Image.open(master) as master_opened, Image.open(clean) as clean_opened:
-            master_image = master_opened.convert("RGB")
-            clean_image = clean_opened.convert("RGB")
-            expected_class, expected_union = semantic_ownership(
-                screen, master_image, clean_image,
-            )
-            master_rgb = np.asarray(master_image, dtype=np.int16)
-        with Image.open(hybrid) as expected_base_opened:
-            expected_base_rgb = np.asarray(
-                expected_base_opened.convert("RGB"), dtype=np.int16,
-            )
-        actual_union = coverage > 0
-        intersection = np.logical_and(actual_union, expected_union).sum()
-        union_pixels = np.logical_or(actual_union, expected_union).sum()
-        guide_iou = float(intersection / max(1, union_pixels))
-        if guide_iou < 0.94:
-            raise ValueError(
-                f"{screen.title} animated silhouettes diverge from semantic "
-                f"guide (IoU={guide_iou:.3f})"
-            )
-        for index, image in enumerate(layer_images[1:]):
-            actual = image[:, :, 3] > 128
-            expected = expected_union & (expected_class == index)
-            class_union = np.logical_or(actual, expected).sum()
-            class_iou = (
-                np.logical_and(actual, expected).sum() / class_union
-                if class_union else 1.0
-            )
-            # Small sparse classes lose proportionally more edge pixels in
-            # BC3; 0.85 still rejects the former texture-difference fragments
-            # while allowing the measured 0.888 round-trip minimum.
-            if class_iou < 0.85:
-                raise ValueError(
-                    f"{screen.title} layer {index + 1:02d} is not a coherent "
-                    f"semantic silhouette (IoU={class_iou:.3f})"
-                )
-        overlap = float((coverage > 1).mean() * 100.0)
-        union = float((coverage > 0).mean() * 100.0)
-        if not MIN_TOTAL_LAYER_COVERAGE < union < MAX_TOTAL_LAYER_COVERAGE:
-            raise ValueError(
-                f"{screen.title} semantic layer coverage is {union:.2f}%; "
-                f"expected {MIN_TOTAL_LAYER_COVERAGE:.2f}-"
-                f"{MAX_TOTAL_LAYER_COVERAGE:.0f}%"
-            )
-        if overlap > 0.05:
-            raise ValueError(
-                f"{screen.title} loading planes overlap {overlap:.2f}% of pixels"
-            )
-        base_rgb = layer_images[0][:, :, :3].astype(np.int16)
-        base_difference = np.abs(base_rgb - expected_base_rgb).mean()
-        if float(base_difference) > 5.0:
-            raise ValueError(
-                f"{screen.title} _00 diverges from its inpainted subject-free base "
-                f"({base_difference:.2f} mean RGB delta)"
-            )
-        master_in_base = np.abs(base_rgb - master_rgb).mean(axis=2)[
-            expected_union
-        ].mean()
-        if float(master_in_base) < 1.0:
-            raise ValueError(
-                f"{screen.title} _00 still contains finished subjects beneath "
-                f"their animation masks ({master_in_base:.2f} mean RGB delta)"
-            )
-        motion_margin = cv2.dilate(
-            expected_union.astype(np.uint8), np.ones((11, 11), np.uint8),
-        ) > 0
-        static_delta = np.abs(base_rgb - master_rgb).mean(axis=2)[
-            ~motion_margin
-        ].mean()
-        if float(static_delta) > 5.0:
-            raise ValueError(
-                f"{screen.title} _00 alters static scenery outside its "
-                f"foreground-removal masks ({static_delta:.2f} mean RGB delta)"
-            )
-        assembled = Image.fromarray(layer_images[0], "RGBA")
-        for image in layer_images[1:]:
-            assembled.alpha_composite(Image.fromarray(image, "RGBA"))
-        assembled_rgb = np.asarray(assembled.convert("RGB"), dtype=np.int16)
-        reconstruction_delta = np.abs(assembled_rgb - master_rgb).mean()
-        if float(reconstruction_delta) > 4.0:
-            raise ValueError(
-                f"{screen.title} assembled stack diverges from its master "
-                f"({reconstruction_delta:.2f} mean RGB delta)"
+                f"{screen.title} uses more than one transparent compatibility plane"
             )
     for scene_name, screen_key in SCENE_ASSIGNMENTS.items():
         screen = screens[screen_key]
@@ -857,7 +685,7 @@ def validate() -> None:
         or not COMPOSITE_CONTACT_SHEET.is_file()
         or not LAYER_LEDGER.is_file()
     ):
-        raise ValueError("loading depth-layer review outputs are missing")
+        raise ValueError("fixed loading-screen review outputs are missing")
     installed = installed_loading_root()
     scene_text = (
         installed / "scenes/00_loading_screens.txt"
@@ -902,8 +730,8 @@ def main() -> int:
     if args.check or not args.write:
         validate()
     print(
-        f"m11_loading_screens: PASS ({len(SCREENS)} inpainted eight-mesh "
-        f"stacks; seven motion-safe foreground planes; {len(SCENE_ASSIGNMENTS)} selectable "
+        f"m11_loading_screens: PASS ({len(SCREENS)} fixed panoramas; "
+        f"seven transparent compatibility planes; {len(SCENE_ASSIGNMENTS)} selectable "
         "scenes VFS-overridden)"
     )
     return 0

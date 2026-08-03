@@ -23,12 +23,14 @@ from dates import AntqDate, M2_MIRROR_LANGUAGES
 from legacy_institutions import legacy_references, neutralize_references
 from m8_regional_depth import (
     LATER_THEMES,
+    RegionalTheme,
     branch_names,
     later_branch_pairs,
     node_description,
     node_effect,
     validate_catalog,
 )
+from r5_knowledge_profiles import LATER_PATHS as R5_LATER_PATHS, OPENING_PATHS as R5_OPENING_PATHS
 from m8_shared_depth import (
     EXPECTED_COUNTS as SHARED_DEPTH_COUNTS,
     SHARED_DEPTH_BY_AGE,
@@ -48,6 +50,8 @@ REGIONAL_PROFILES = ROOT / "docs/m4/regional_profiles.csv"
 CULTURES_LEDGER = ROOT / "docs/m4/cultures.csv"
 DIRECT_ADVANCE_ART = ROOT / "docs/m11/direct_advance_icons.csv"
 ADVANCE_LEDGER = ROOT / "docs/m8/advances.csv"
+CULTIVATOR_METHOD_LEDGER = ROOT / "docs/m5/cultivator_production_methods.csv"
+REGIONAL_METHOD_LEDGER = ROOT / "docs/m5/regional_production_methods.csv"
 REACHABILITY_LEDGER = ROOT / "docs/m8/start_research_reachability.csv"
 VISIBILITY_LEDGER = ROOT / "docs/m8/advance_visibility.csv"
 INSTITUTION_LEDGER = ROOT / "docs/m8/institutions.csv"
@@ -589,14 +593,22 @@ ADVANCE_PROFILES = {
             ), "P8.7;P15;CAH-XI;STR-GER",
         ),
         AdvanceProfile(
-            "iranian_steppe", "Iranian and Steppe",
-            "Iranian court, cavalry, caravan, and steppe-confederation practice.",
-            ("antq_iranian_group", "antq_steppe_group"),
+            "iranian", "Iranian",
+            "Iranian court, estate, cavalry, caravan, and imperial practice.",
+            ("antq_iranian_group",),
             (
                 "antq_cataphract_warfare", "antq_sasanian_fiscal_statecraft",
-                "antq_steppe_confederate_cavalry",
                 "antq_successor_kingdom_administration",
-            ), "P8.2;P8.8;P15;CAH-XI",
+            ), "P8.2;P15;CAH-XI;CAH-XII",
+        ),
+        AdvanceProfile(
+            "inner_asian_steppe", "Inner Asian Steppe",
+            "Inner Asian confederate, pastoral, mounted, and frontier-exchange practice.",
+            ("antq_steppe_group",),
+            (
+                "antq_cataphract_warfare", "antq_steppe_confederate_cavalry",
+                "antq_northern_wei_statecraft",
+            ), "P8.8;P15;CAH-XI;CAH-XII",
         ),
         AdvanceProfile(
             "indic", "Indic",
@@ -633,14 +645,22 @@ ADVANCE_PROFILES = {
             ), "P8.1;P8.2;P15;CAH-XI",
         ),
         AdvanceProfile(
-            "african", "African",
-            "Nile, Maghrebi, Red Sea, and sub-Saharan political and exchange practice.",
-            ("antq_nile_group", "antq_berber_group", "antq_subsaharan_group"),
+            "nile_north_african", "Nile and North African",
+            "Nile, Nubian, Maghrebi, oasis, and Horn/Red-Sea state and exchange practice.",
+            ("antq_nile_group", "antq_berber_group"),
             (
                 "antq_monsoon_sea_networks", "antq_red_sea_oceanic_exchange",
-                "antq_christian_monasticism",
-                "antq_aksumite_christian_kingship",
-            ), "P8.5;P15;CAH-XI",
+                "antq_christian_monasticism", "antq_aksumite_christian_kingship",
+            ), "P8.5;P15;PER;CAH-XI;CAH-XII",
+        ),
+        AdvanceProfile(
+            "subsaharan", "Sub-Saharan African",
+            "Savanna, forest, river, pastoral, ironworking, and coastal-hinterland practice.",
+            ("antq_subsaharan_group",),
+            (
+                "antq_red_sea_oceanic_exchange", "antq_aksumite_christian_kingship",
+                "antq_successor_kingdom_administration",
+            ), "P8.5;P15;CAH-XI;CAH-XII",
         ),
         AdvanceProfile(
             "american", "American",
@@ -705,20 +725,20 @@ S2_ESTATE_ADVANCE_PROFILES: dict[str, tuple[str, ...]] = {
     "late_roman": ("roman_italic",),
     "han": ("han_east_asian",),
     "late_han": ("han_east_asian",),
-    "iranian": ("iranian_steppe",),
-    "sasanian": ("iranian_steppe",),
+    "iranian": ("iranian",),
+    "sasanian": ("iranian",),
     "civic": ("hellenic",),
     "gana": ("indic",),
-    "steppe": ("iranian_steppe",),
+    "steppe": ("inner_asian_steppe",),
     "tribal": ("celtic", "germanic"),
-    "sacral": ("african", "indic"),
-    "royal": ("near_eastern", "han_east_asian", "african"),
-    "xiongnu": ("iranian_steppe",),
-    "xianbei": ("iranian_steppe",),
+    "sacral": ("nile_north_african", "subsaharan", "indic"),
+    "royal": ("near_eastern", "han_east_asian", "nile_north_african", "subsaharan"),
+    "xiongnu": ("inner_asian_steppe",),
+    "xianbei": ("inner_asian_steppe",),
     "goguryeo": ("han_east_asian",),
-    "kushite": ("african",),
+    "kushite": ("nile_north_african",),
     "lankan": ("indic",),
-    "armenian": ("iranian_steppe",),
+    "armenian": ("iranian",),
     "nabataean": ("near_eastern",),
     "himyarite": ("near_eastern",),
     "agraean": ("near_eastern",),
@@ -743,14 +763,14 @@ S2_ESTATE_ADVANCE_PROFILES: dict[str, tuple[str, ...]] = {
     "aestian": ("baltic",),
     "frisian": ("germanic",),
     "dacian": ("hellenic",),
-    "garamantian": ("african",),
+    "garamantian": ("nile_north_african",),
     "marcomannic": ("germanic",),
     "sabaean": ("near_eastern",),
-    "mauretanian": ("african",),
+    "mauretanian": ("nile_north_african",),
     "judean": ("near_eastern",),
     "cappadocian": ("hellenic",),
     "thracian": ("hellenic",),
-    "bosporan": ("hellenic", "iranian_steppe"),
+    "bosporan": ("hellenic", "iranian"),
     "galilean": ("near_eastern",),
     "batanean": ("near_eastern",),
     "commagenean": ("near_eastern", "hellenic"),
@@ -760,15 +780,15 @@ S2_ESTATE_ADVANCE_PROFILES: dict[str, tuple[str, ...]] = {
 LAW_ADVANCE_PROFILES: dict[str, tuple[str, ...]] = {
     "roman": ("roman_italic",),
     "han": ("han_east_asian",),
-    "iranian": ("iranian_steppe",),
+    "iranian": ("iranian",),
     "hellenistic": ("hellenic", "near_eastern"),
     "indic": ("indic",),
-    "steppe": ("iranian_steppe",),
+    "steppe": ("inner_asian_steppe",),
     "germanic": ("germanic",),
     "celtic": ("celtic",),
     "arabian": ("near_eastern",),
     "northern": ("baltic", "slavic_eastern", "uralic"),
-    "african": ("african",),
+    "african": ("nile_north_african", "subsaharan"),
     "eastern": ("han_east_asian", "oceanian"),
     "transoceanic": ("american", "oceanian"),
 }
@@ -779,42 +799,42 @@ LAW_ADVANCE_PROFILES: dict[str, tuple[str, ...]] = {
 BRANCH_PROFILES: dict[str, tuple[tuple[str, str], ...]] = {
     "statecraft": (
         ("roman_italic", "han_east_asian"),
-        ("hellenic", "iranian_steppe"),
+        ("hellenic", "iranian"),
         ("near_eastern", "indic"),
-        ("roman_italic", "african"),
+        ("roman_italic", "nile_north_african"),
         ("germanic", "celtic"),
         ("american", "oceanian"),
     ),
     "warfare": (
         ("roman_italic", "germanic"),
         ("american", "celtic"),
-        ("han_east_asian", "african"),
+        ("han_east_asian", "subsaharan"),
         ("indic", "near_eastern"),
         ("germanic", "roman_italic"),
         ("roman_italic", "germanic"),
     ),
     "exchange": (
         ("indic", "near_eastern"),
-        ("han_east_asian", "african"),
-        ("roman_italic", "iranian_steppe"),
+        ("han_east_asian", "nile_north_african"),
+        ("roman_italic", "iranian"),
         ("celtic", "germanic"),
         ("american", "oceanian"),
         ("hellenic", "near_eastern"),
     ),
     "learning": (
-        ("iranian_steppe", "hellenic"),
+        ("iranian", "hellenic"),
         ("indic", "roman_italic"),
         ("hellenic", "germanic"),
-        ("hellenic", "iranian_steppe"),
+        ("hellenic", "inner_asian_steppe"),
         ("han_east_asian", "indic"),
-        ("iranian_steppe", "han_east_asian"),
+        ("inner_asian_steppe", "han_east_asian"),
     ),
     "society": (
         ("american", "oceanian"),
         ("oceanian", "near_eastern"),
-        ("african", "american"),
+        ("subsaharan", "american"),
         ("indic", "han_east_asian"),
-        ("germanic", "iranian_steppe"),
+        ("germanic", "inner_asian_steppe"),
         ("oceanian", "celtic"),
     ),
 }
@@ -984,6 +1004,24 @@ AGE1_EXPANSION: dict[str, tuple[tuple[str, tuple[str, ...]], ...]] = {
         )),
     ),
 }
+
+# Round 5 removes the two blended identities rather than preserving them as
+# hidden compatibility paths.  Twelve distinct paths give each replacement
+# profile three tracks and 75 substantive nodes across all conceptual ages.
+for _track in tuple(AGE1_EXPANSION):
+    AGE1_EXPANSION[_track] = tuple(
+        row for row in AGE1_EXPANSION[_track]
+        if row[0] not in {"african", "iranian_steppe"}
+    ) + tuple(
+        (profile, branch)
+        for (track, profile), branch in R5_OPENING_PATHS.items()
+        if track == _track
+    )
+for _pair in tuple(LATER_THEMES):
+    if _pair[1] in {"african", "iranian_steppe"}:
+        del LATER_THEMES[_pair]
+for _pair, _themes in R5_LATER_PATHS.items():
+    LATER_THEMES[_pair] = tuple(RegionalTheme(*theme) for theme in _themes)
 
 TRACK_DESCRIPTIONS = {
     "statecraft": "recordkeeping, adjudication, revenue, and political coordination",
@@ -1618,6 +1656,24 @@ def csv_rows(path: Path, *, comments: bool = False) -> list[dict[str, str]]:
     ]
 
 
+def cultivator_method_rows() -> list[dict[str, str]]:
+    rows = csv_rows(CULTIVATOR_METHOD_LEDGER)
+    required = {
+        "key", "building", "tier", "unlock_age", "profile", "source",
+    }
+    if not rows or not required <= set(rows[0]):
+        raise ValueError("cultivator production-method ledger is missing or malformed")
+    return rows
+
+
+def regional_method_rows() -> list[dict[str, str]]:
+    rows = csv_rows(REGIONAL_METHOD_LEDGER)
+    required = {"key", "building", "tier", "unlock_age", "profile", "source"}
+    if not rows or not required <= set(rows[0]):
+        raise ValueError("regional production-method ledger is missing or malformed")
+    return rows
+
+
 def research_profile_maps() -> tuple[
     dict[str, tuple[str, ...]], dict[str, str], dict[str, str]
 ]:
@@ -1686,7 +1742,7 @@ def opening_content_profiles(
             if reform and reform not in reforms:
                 reforms[reform].update(S2_ESTATE_ADVANCE_PROFILES[matched])
     reforms["antq_dominate"].add("roman_italic")
-    reforms["antq_sassanid_centralized_monarchy"].add("iranian_steppe")
+    reforms["antq_sassanid_centralized_monarchy"].add("iranian")
     return reforms, privileges
 
 
@@ -2075,6 +2131,29 @@ def content_unlocks(records: tuple[Advance, ...]) -> dict[str, tuple[tuple[str, 
             records, result, "unlock_building", building,
             building_profiles[building], track=building_track(building), ceiling=6,
         )
+    age_indexes = {age: index for index, age in enumerate(AGE_KEYS)}
+    for method in cultivator_method_rows():
+        if method["unlock_age"] == "opening":
+            continue
+        age_index = age_indexes.get(method["unlock_age"])
+        if age_index is None or method["profile"] != "shared":
+            raise ValueError(
+                f"invalid cultivator method unlock contract: {method['key']}"
+            )
+        add_profiled_unlock(
+            records, result, "unlock_production_method", method["key"],
+            {method["profile"]}, age_index=age_index, track="production", ceiling=8,
+        )
+    for method in regional_method_rows():
+        if method["unlock_age"] == "opening":
+            continue
+        age_index = age_indexes.get(method["unlock_age"])
+        if age_index is None or method["profile"] != "shared":
+            raise ValueError(f"invalid regional method unlock contract: {method['key']}")
+        add_profiled_unlock(
+            records, result, "unlock_production_method", method["key"],
+            {method["profile"]}, age_index=age_index, ceiling=8,
+        )
     return {key: tuple(entries) for key, entries in result.items()}
 
 
@@ -2091,7 +2170,9 @@ def direct_advance_icons(records: tuple[Advance, ...]) -> dict[str, str]:
         if (row.get("status") or "").strip() != "complete":
             continue
         if key not in valid:
-            raise ValueError(f"direct advance-art ledger has unknown advance {key}")
+            # Keep completed source art for retired/replaced advances in the
+            # asset ledger, but never bind it into the playable tree.
+            continue
         if key in direct:
             raise ValueError(f"direct advance-art ledger repeats completed advance {key}")
         direct[key] = "antq_advance_" + key.removeprefix("antq_")
@@ -2290,7 +2371,8 @@ def validate(records: tuple[Advance, ...]) -> None:
     failures: list[str] = []
     unlocks = content_unlocks(records)
     law_foundation_count = len(law_unlock_packages())
-    expected_advance_count = 880 + law_foundation_count
+    regional_path_count = sum(len(paths) for paths in AGE1_EXPANSION.values())
+    expected_advance_count = 330 + 25 * regional_path_count + law_foundation_count
     if len(records) != expected_advance_count:
         failures.append(
             f"expected {expected_advance_count} advances including exact legal "
@@ -2300,13 +2382,15 @@ def validate(records: tuple[Advance, ...]) -> None:
     by_key = {record.key: record for record in records}
     if len(keys) != len(set(keys)):
         failures.append("advance keys are not unique")
-    expected_counts = tuple(
-        base + shared + (law_foundation_count if index == 0 else 0)
-        for index, (base, shared) in enumerate(zip(
-            (160, 160, 160, 160, 80, 80),
-            SHARED_DEPTH_COUNTS,
-            strict=True,
-        ))
+    late_even = sum(ordinal % 2 == 0 for ordinal, _pair in enumerate(later_branch_pairs()))
+    late_odd = regional_path_count - late_even
+    expected_counts = (
+        61 + 5 * regional_path_count + law_foundation_count,
+        67 + 5 * regional_path_count,
+        67 + 5 * regional_path_count,
+        67 + 5 * regional_path_count,
+        34 + 5 * late_even,
+        34 + 5 * late_odd,
     )
     for age_index, age in enumerate(AGE_KEYS):
         age_records = [record for record in records if record.age == age]
@@ -2358,7 +2442,7 @@ def validate(records: tuple[Advance, ...]) -> None:
     supported_unlock_fields = {
         "unlock_building", "unlock_unit", "unlock_levy", "unlock_law", "unlock_policy",
         "unlock_estate_privilege", "unlock_government_reform",
-        "unlock_casus_belli", "unlock_subject_type",
+        "unlock_casus_belli", "unlock_subject_type", "unlock_production_method",
     }
     if unlock_fields - supported_unlock_fields:
         failures.append(
@@ -2509,6 +2593,33 @@ def validate(records: tuple[Advance, ...]) -> None:
             failures.append(f"S2 profile law {target} repeats inside one research profile")
         if "shared" in profiles:
             failures.append(f"S2 profile law {target} leaked onto a shared advance")
+    method_rows = cultivator_method_rows() + regional_method_rows()
+    expected_methods = {
+        row["key"] for row in method_rows if row["unlock_age"] != "opening"
+    }
+    actual_methods = [
+        target
+        for entries in unlocks.values()
+        for unlock_field, target in entries
+        if unlock_field == "unlock_production_method"
+    ]
+    if set(actual_methods) != expected_methods or len(actual_methods) != len(expected_methods):
+        failures.append(
+            "cultivator production-method unlock coverage mismatch: "
+            f"missing={sorted(expected_methods - set(actual_methods))}, "
+            f"extra={sorted(set(actual_methods) - expected_methods)}, "
+            f"duplicates={len(actual_methods) - len(set(actual_methods))}"
+        )
+    expected_ages = {row["key"]: row["unlock_age"] for row in method_rows}
+    for advance, entries in unlocks.items():
+        for unlock_field, target in entries:
+            if unlock_field == "unlock_production_method":
+                if by_key[advance].age != expected_ages.get(target):
+                    failures.append(
+                        f"{target} unlock age drift on {advance}: {by_key[advance].age}"
+                    )
+                if by_key[advance].profile != "shared":
+                    failures.append(f"universal production method {target} is not on a shared advance")
     for advance, entries in unlocks.items():
         if len(entries) > 8:
             failures.append(
@@ -2516,7 +2627,8 @@ def validate(records: tuple[Advance, ...]) -> None:
             )
     required_by = {required for record in records for required in record.requires}
     leaves = [record.key for record in records if record.key not in required_by]
-    if len(leaves) != 270 + law_foundation_count:
+    expected_leaves = 160 + 5 * regional_path_count + law_foundation_count
+    if len(leaves) != expected_leaves:
         failures.append(
             "the expanded branching trees and exact legal holders have an invalid leaf count"
         )
@@ -2524,10 +2636,16 @@ def validate(records: tuple[Advance, ...]) -> None:
     for record in records:
         for required in record.requires:
             child_counts[required] += 1
-    if sum(count >= 2 for count in child_counts.values()) != 160:
-        failures.append("the expanded advance DAG must contain exactly 160 branch points")
-    if sum(len(record.requires) >= 2 for record in records) != 130:
-        failures.append("the expanded advance DAG must contain exactly 130 convergence nodes")
+    expected_branches = 50 + 5 * regional_path_count
+    if sum(count >= 2 for count in child_counts.values()) != expected_branches:
+        failures.append(
+            f"the expanded advance DAG must contain exactly {expected_branches} branch points"
+        )
+    expected_convergences = 20 + 5 * regional_path_count
+    if sum(len(record.requires) >= 2 for record in records) != expected_convergences:
+        failures.append(
+            f"the expanded advance DAG must contain exactly {expected_convergences} convergence nodes"
+        )
     for profile in {
         key for key in ADVANCE_PROFILES
         if key != "shared" and not key.startswith("law_")
@@ -2548,6 +2666,40 @@ def validate(records: tuple[Advance, ...]) -> None:
         minimum = 50 if profile == "shared" else 20
         if count < minimum:
             failures.append(f"advance profile {profile} has only {count} nodes")
+    split_profiles = {
+        "iranian", "inner_asian_steppe", "nile_north_african", "subsaharan",
+    }
+    if {profile for profile in ADVANCE_PROFILES if profile in split_profiles} != split_profiles:
+        failures.append("Round 5 split knowledge profiles are incomplete")
+    split_groups: dict[str, set[str]] = {
+        profile: set(ADVANCE_PROFILES[profile].culture_groups)
+        for profile in split_profiles
+    }
+    for profile in split_profiles:
+        profile_records = [record for record in records if record.profile == profile]
+        if len(profile_records) < 75:
+            failures.append(f"split profile {profile} has only {len(profile_records)} nodes")
+        if len({record.track for record in profile_records}) < 3:
+            failures.append(f"split profile {profile} lacks three substantive tracks")
+        conceptual_coverage = {record.age_index for record in profile_records}
+        if not {0, 1, 2, 3} <= conceptual_coverage or not ({4, 5} & conceptual_coverage):
+            failures.append(f"split profile {profile} does not span every conceptual age")
+    for left in split_profiles:
+        for right in split_profiles:
+            if left < right and split_groups[left] & split_groups[right]:
+                failures.append(f"split profiles {left}/{right} share culture groups")
+    if any(record.profile in {"iranian_steppe", "african"} for record in records):
+        failures.append("retired blended Iranian/steppe or African advance profile remains playable")
+    if not (
+        set(ADVANCE_PROFILES["iranian"].adoption_institutions)
+        & set(ADVANCE_PROFILES["inner_asian_steppe"].adoption_institutions)
+    ):
+        failures.append("Iranian and Inner-Asian paths lack an explicit adoption bridge")
+    if not (
+        set(ADVANCE_PROFILES["nile_north_african"].adoption_institutions)
+        & set(ADVANCE_PROFILES["subsaharan"].adoption_institutions)
+    ):
+        failures.append("Nile/North-African and sub-Saharan paths lack a Horn/Red-Sea bridge")
     for record in records:
         if record.profile not in ADVANCE_PROFILES:
             failures.append(f"{record.key} uses an unknown advance profile")

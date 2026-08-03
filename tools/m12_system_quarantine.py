@@ -83,6 +83,7 @@ EXCLUDED_BY_SURFACE = {
     # These exact filenames are full ANTIQVITAS ancient rewrites maintained by
     # their own generators rather than inherited installed action bodies.
     "generic_actions": {
+        "autocephalous_patriarchates.txt",
         "languages.txt",
         "markets.txt",
     },

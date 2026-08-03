@@ -147,6 +147,30 @@ SHEETS = (
     Sheet("unit_sheet_30_long_distance_capacity.png", (
         "antq_open_sea_merchantmen", None, None, None,
     )),
+    Sheet("unit_sheet_31_han_korean_navy.png", (
+        "antq_han_river_sea_patrol", "antq_han_grain_transport",
+        "antq_korean_plank_patrol", "antq_korean_cargo_ferry",
+    )),
+    Sheet("unit_sheet_32_wa_nile_navy.png", (
+        "antq_wa_logboat_patrol", "antq_wa_coastal_transport",
+        "antq_nile_patrol_boat", "antq_nile_grain_barge",
+    )),
+    Sheet("unit_sheet_33_red_sea_punic_navy.png", (
+        "antq_red_sea_sewn_patrol", "antq_red_sea_cargo_boat",
+        "antq_punic_light_galley", "antq_punic_cargo_coaster",
+    )),
+    Sheet("unit_sheet_34_west_africa_mekong_navy.png", (
+        "antq_west_african_estuary_canoe", "antq_west_african_river_transport",
+        "antq_mekong_river_sea_patrol", "antq_mekong_cargo_transport",
+    )),
+    Sheet("unit_sheet_35_nusantara_mesoamerica_navy.png", (
+        "antq_nusantaran_lashed_lug_patrol", "antq_nusantaran_interisland_transport",
+        "antq_mesoamerican_dugout_patrol", "antq_mesoamerican_trade_canoe",
+    )),
+    Sheet("unit_sheet_36_north_america_oceania_navy.png", (
+        "antq_north_american_woodland_canoe", "antq_north_american_cargo_canoe",
+        "antq_oceanian_double_canoe_patrol", "antq_oceanian_voyaging_transport",
+    )),
 )
 
 CATEGORY_SUFFIXES = (
@@ -355,8 +379,8 @@ def validate() -> bool:
             failures.append("M7 art roster differs from active unit-quarantine definitions")
         if set(index) != active:
             failures.append("four-up unit-art mapping does not exactly cover active ancient units")
-        if len(SHEETS) != 30 or sum(len(sheet.keys) for sheet in SHEETS) != 120:
-            failures.append("unit-art source contract is not 30 four-up sheets / 120 panels")
+        if len(SHEETS) != 36 or sum(len(sheet.keys) for sheet in SHEETS) != 144:
+            failures.append("unit-art source contract is not 36 four-up sheets / 144 panels")
         for sheet in SHEETS:
             path = SOURCE_DIR / sheet.filename
             if not path.is_file():

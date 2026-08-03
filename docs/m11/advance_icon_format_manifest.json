@@ -1,6 +1,6 @@
 {
   "game_build_id": "24187685",
-  "asset_count": 885,
+  "asset_count": 886,
   "gui_call_count": 16,
   "gui_context_count": 9,
   "contract": {
@@ -79,6 +79,21 @@
       "texture": "main_menu/gfx/interface/advance/crown_power_advance_discovery.dds",
       "master_sha256": "0b576de105b6482676e4e98a609d6ffc4717c200f2d852e170ba7bd4021faec5",
       "texture_sha256": "d2eea1a32a6eab52ab10ef703b5e1c49d8d77e0375b17bbff3aca9bc5618a2f2",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_migrations_256.png",
+      "texture": "main_menu/gfx/interface/advance/expansionism.dds",
+      "master_sha256": "76664fa11a96afa575dece22e5a22748ca79e3bdfcb74fb813d3cb55bc8160ba",
+      "texture_sha256": "c35d50f7a9024ddfbc3fb0ea1593adc6dcf4d2de59441d5bde60ff857cf1acec",
       "active_fraction": 0.731201,
       "opaque_fraction": 0.671875,
       "alpha_bbox": [
@@ -3930,81 +3945,6 @@
       "perimeter_max": 0
     },
     {
-      "master": "assets_queue/generated/antq_advance_meroitic_temple_stewardship_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_meroitic_temple_stewardship.dds",
-      "master_sha256": "5600652a686ab0abb7dd9b2dd9a3b9a7574061914f7029ebea73bfcb18472a99",
-      "texture_sha256": "1bb7fdd605a30e8e32b90c8cc0b65d84e370d4123e2f38dbb306241e153e8811",
-      "active_fraction": 0.731201,
-      "opaque_fraction": 0.671875,
-      "alpha_bbox": [
-        4,
-        4,
-        252,
-        252
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_kandake_court_delegates_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_kandake_court_delegates.dds",
-      "master_sha256": "7594a0c16ccd04793bc6ef9335f975e4f7b06369641117e51c2ada45067701a4",
-      "texture_sha256": "cd6a553779c32374faca22f0e372547d117d002e107838e825413fd9540e945a",
-      "active_fraction": 0.731201,
-      "opaque_fraction": 0.671875,
-      "alpha_bbox": [
-        4,
-        4,
-        252,
-        252
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_oasis_tribute_stations_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_oasis_tribute_stations.dds",
-      "master_sha256": "4b518edcb49136f341e2aada38ff8bb58b6b76dfd8aa690fb80b60ddb8bff71c",
-      "texture_sha256": "21ad2c229cb2f91fa9e5bf4c6d2f28a7d3874e1decc7af7c81948fd1f080cb51",
-      "active_fraction": 0.731201,
-      "opaque_fraction": 0.671875,
-      "alpha_bbox": [
-        4,
-        4,
-        252,
-        252
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_nile_caravan_adjudication_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_nile_caravan_adjudication.dds",
-      "master_sha256": "e6acfbc1d1568252f578774673e4c8b6dad2bec43957162894d971ed6d7a337f",
-      "texture_sha256": "6b6f664820a119395bd402777348ca5736529bde497a46cdbf7267e9f264c668",
-      "active_fraction": 0.731201,
-      "opaque_fraction": 0.671875,
-      "alpha_bbox": [
-        4,
-        4,
-        252,
-        252
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_royal_storehouse_seals_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_royal_storehouse_seals.dds",
-      "master_sha256": "5d1a62965731a9b4a65be4abdd69e58dac458a65d514a33b6edc8511dfae5721",
-      "texture_sha256": "d2b97b0348914995fcd2d8e4a4ff0506fdc2eed54cbad6f46f5409fb857401a0",
-      "active_fraction": 0.731201,
-      "opaque_fraction": 0.671875,
-      "alpha_bbox": [
-        4,
-        4,
-        252,
-        252
-      ],
-      "perimeter_max": 0
-    },
-    {
       "master": "assets_queue/generated/antq_advance_amber_coast_assemblies_256.png",
       "texture": "main_menu/gfx/interface/advance/antq_advance_amber_coast_assemblies.dds",
       "master_sha256": "c6d7c91c5d50021310f50001c8c47f24a0055fe007d606f34a691acaaa3be1ac",
@@ -4144,81 +4084,6 @@
       "texture": "main_menu/gfx/interface/advance/antq_advance_dispersed_household_compacts.dds",
       "master_sha256": "fc6a2b455d0d3a57691c5765615cf3c941c795fab17c4a0840ca32228ac2543b",
       "texture_sha256": "fcfd9fa1ab4de9a1444f0b4bd1dd736253deb54d0caf6ac239f108ec39f0d1dc",
-      "active_fraction": 0.731201,
-      "opaque_fraction": 0.671875,
-      "alpha_bbox": [
-        4,
-        4,
-        252,
-        252
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_remount_pasture_registers_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_remount_pasture_registers.dds",
-      "master_sha256": "df9f9195c5c96fc09f01c48c266d96651c58429817182a4061ddb58e84c359e5",
-      "texture_sha256": "6fe6d532c8ad97e2d5c20f8442e7cf89368fedd0b413f03c4b5505a30618eb63",
-      "active_fraction": 0.731201,
-      "opaque_fraction": 0.671875,
-      "alpha_bbox": [
-        4,
-        4,
-        252,
-        252
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_horse_archer_screening_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_horse_archer_screening.dds",
-      "master_sha256": "ecd17954fdd9326842fb78eaae1aed28d6e15e26a4b55279044eb1b24cee0d8c",
-      "texture_sha256": "2ea3eb97e0fb847240f57b8eabd7da6cdd4bb5f422d600a9a816b53f6355c72d",
-      "active_fraction": 0.731201,
-      "opaque_fraction": 0.671875,
-      "alpha_bbox": [
-        4,
-        4,
-        252,
-        252
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_scale_armour_workshops_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_scale_armour_workshops.dds",
-      "master_sha256": "040376b6ca8a2cd2103d6e9ed2c577236350ca24359a835bc17bef330c2d4f70",
-      "texture_sha256": "247a07de77b59c33dc7b166a20b9caafc7d59223c7f81ccb7a090caec2891209",
-      "active_fraction": 0.731201,
-      "opaque_fraction": 0.671875,
-      "alpha_bbox": [
-        4,
-        4,
-        252,
-        252
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_armoured_retinue_drill_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_armoured_retinue_drill.dds",
-      "master_sha256": "1b0a592468cf84d5c7ed4b9cdc6990cfdbd0d4bf9d5d9e92bdeb3d49d8d17c0d",
-      "texture_sha256": "a5cf55ff86c3481e0d55f8a24cb8f29d01e397d769682fe41f072224653c4a24",
-      "active_fraction": 0.731201,
-      "opaque_fraction": 0.671875,
-      "alpha_bbox": [
-        4,
-        4,
-        252,
-        252
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_cataphract_reserve_system_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_cataphract_reserve_system.dds",
-      "master_sha256": "1ff97ad118c93d9cf113b38d5d8a3dfe5db531a227f89a22758e37a5a9d6aa87",
-      "texture_sha256": "63b4fda3deaaf285e557df3aab8ab28bbe83432fa553414dad30a3195bea3aaf",
       "active_fraction": 0.731201,
       "opaque_fraction": 0.671875,
       "alpha_bbox": [
@@ -4594,81 +4459,6 @@
       "texture": "main_menu/gfx/interface/advance/antq_advance_western_regions_caravan_seals.dds",
       "master_sha256": "02ea236c07779e4ac5255e2395d423b0ac64882f017bbb9f40fa72009f88b513",
       "texture_sha256": "034f84153b35164d0e259c1148a1e261e6dff6723755f003940785fa44d739fb",
-      "active_fraction": 0.731201,
-      "opaque_fraction": 0.671875,
-      "alpha_bbox": [
-        4,
-        4,
-        252,
-        252
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_garamantian_oasis_stages_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_garamantian_oasis_stages.dds",
-      "master_sha256": "8580739a5e85e2b59a3d288eb6dad1d592cbb0f47b83cd21dd764d901f245c31",
-      "texture_sha256": "72a73f1ae8bb360dbd5080b4cf1a1b9f3e2414b4bb6b88c93bbb0e393d932f40",
-      "active_fraction": 0.731201,
-      "opaque_fraction": 0.671875,
-      "alpha_bbox": [
-        4,
-        4,
-        252,
-        252
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_meroe_nile_caravans_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_meroe_nile_caravans.dds",
-      "master_sha256": "5fb4fff85b3fc0e0d81a92482aba822c8d0aed1d873e13995add807afa1a5adb",
-      "texture_sha256": "cb5c88eff53a49dbc11aee456f3fe18e6ce2e6a3da6a48d830335668a8a5b64a",
-      "active_fraction": 0.731201,
-      "opaque_fraction": 0.671875,
-      "alpha_bbox": [
-        4,
-        4,
-        252,
-        252
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_red_sea_entrepots_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_red_sea_entrepots.dds",
-      "master_sha256": "8117dc6e616a1f0c4f0b1d51d7b64ade0d704c4ec7a4d2b98b977a2eaca2e68e",
-      "texture_sha256": "4ecdedc1142689598a4723c63d3ffa85b3953df9cb20e54c55b496bed770cf09",
-      "active_fraction": 0.731201,
-      "opaque_fraction": 0.671875,
-      "alpha_bbox": [
-        4,
-        4,
-        252,
-        252
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_sahel_iron_exchange_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_sahel_iron_exchange.dds",
-      "master_sha256": "8dfff591a365f68bfc0ad2d348dffa6c9fbba697dc5400f8c3c179157cd6fc7f",
-      "texture_sha256": "afa4886e53dab75048824eee3d52aab5969d0a797a5e7e5910cb5692d1c6f8bc",
-      "active_fraction": 0.731201,
-      "opaque_fraction": 0.671875,
-      "alpha_bbox": [
-        4,
-        4,
-        252,
-        252
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_ivory_route_brokers_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_ivory_route_brokers.dds",
-      "master_sha256": "da3148ba51b02d595214498c52b6062eead7e65d6764188acfcad9da4dbd3d45",
-      "texture_sha256": "929bc8a7dd3d087871b3eccc728d48dad501374567b344d157e2af886a84145d",
       "active_fraction": 0.731201,
       "opaque_fraction": 0.671875,
       "alpha_bbox": [
@@ -5805,81 +5595,6 @@
       "perimeter_max": 0
     },
     {
-      "master": "assets_queue/generated/antq_advance_aksumite_red_sea_chancery_delegates_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_aksumite_red_sea_chancery_delegates.dds",
-      "master_sha256": "875b10ca4a94bb7a71a43b89c572d59a78855921420b2138788c6c12276ab569",
-      "texture_sha256": "fa080cf741fdbdd26826fa52d5568111b726a51c4177c0844409e1d0850a6271",
-      "active_fraction": 0.350189,
-      "opaque_fraction": 0.326401,
-      "alpha_bbox": [
-        18,
-        30,
-        238,
-        226
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_aksumite_red_sea_chancery_tallies_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_aksumite_red_sea_chancery_tallies.dds",
-      "master_sha256": "4039271a606c0fe5c5fc0e287311bfdb5d01d32dbf859393ba4d98ee94f5867e",
-      "texture_sha256": "0ce7d37c9a8f9514df3b191195ab377a0b2869810d76cbbf915b8521caf24440",
-      "active_fraction": 0.378571,
-      "opaque_fraction": 0.358856,
-      "alpha_bbox": [
-        18,
-        28,
-        238,
-        228
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_aksumite_red_sea_chancery_arbitration_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_aksumite_red_sea_chancery_arbitration.dds",
-      "master_sha256": "7c2b2f24eeca799e2e62e84020ba6b239f4fa4b406c01d465007a63355f22be3",
-      "texture_sha256": "c81f19be2e8bfcbd4a0a63b1162dfa90ce0fc2ce4258fc38bdb8d8059fe93eab",
-      "active_fraction": 0.379791,
-      "opaque_fraction": 0.357254,
-      "alpha_bbox": [
-        18,
-        32,
-        238,
-        224
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_aksumite_red_sea_chancery_stewardship_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_aksumite_red_sea_chancery_stewardship.dds",
-      "master_sha256": "d42126233c469a929fb2dab819e25e0c23b6e47e672ffe8a821155f07f20662e",
-      "texture_sha256": "07635f9c17acb8b0e0b76b142cc0a0e9cb9917fd3af64dfb03e7e8c624c5c08b",
-      "active_fraction": 0.364182,
-      "opaque_fraction": 0.339172,
-      "alpha_bbox": [
-        18,
-        29,
-        238,
-        227
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_aksumite_red_sea_chancery_compact_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_aksumite_red_sea_chancery_compact.dds",
-      "master_sha256": "9330b561ed8d83a6917f5f3c005268bb0f19460b8c2bf6a9d54ee54618efbb1d",
-      "texture_sha256": "84052d3cbcf0aa030eee8586f0ffd96dbbff4d06bfa6e0f4794ce45e091f72e2",
-      "active_fraction": 0.463379,
-      "opaque_fraction": 0.435776,
-      "alpha_bbox": [
-        18,
-        18,
-        237,
-        238
-      ],
-      "perimeter_max": 0
-    },
-    {
       "master": "assets_queue/generated/antq_advance_meroe_nobadia_transition_delegates_256.png",
       "texture": "main_menu/gfx/interface/advance/antq_advance_meroe_nobadia_transition_delegates.dds",
       "master_sha256": "fb61cf759095efd1e737ce44ebe71a50da715687775f988d8a7ae98bac0af48d",
@@ -5951,156 +5666,6 @@
         22,
         238,
         233
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_aksumite_inscriptional_kingship_delegates_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_aksumite_inscriptional_kingship_delegates.dds",
-      "master_sha256": "62ea6419e4d24bbff9b07a44f512c2e87a5b6057d8f8b7406828fcc4c85f93d7",
-      "texture_sha256": "0ceb3f20be7166542723945455bd99e91556a6470a46d4d54184842f5f36695e",
-      "active_fraction": 0.350128,
-      "opaque_fraction": 0.330231,
-      "alpha_bbox": [
-        18,
-        20,
-        238,
-        236
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_aksumite_inscriptional_kingship_tallies_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_aksumite_inscriptional_kingship_tallies.dds",
-      "master_sha256": "9db119b85a1dbad106f2f33cc49b6b708dbaa4282163b9b67ab63964eb42ab95",
-      "texture_sha256": "20aa20c748a1e37ba5114ddf10f7488b4c24415ca8503e6dde16ace8370f2162",
-      "active_fraction": 0.378555,
-      "opaque_fraction": 0.33989,
-      "alpha_bbox": [
-        18,
-        19,
-        238,
-        236
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_aksumite_inscriptional_kingship_arbitration_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_aksumite_inscriptional_kingship_arbitration.dds",
-      "master_sha256": "e2ac8b250b104d06d3edd537e248d1b66e1a7ed96c777342df45ac134f47c25a",
-      "texture_sha256": "1f6dbf92a12d1c0d3e579d95d912470546551d5ac7e74bfcc1069a8d8b8e35f9",
-      "active_fraction": 0.359818,
-      "opaque_fraction": 0.336411,
-      "alpha_bbox": [
-        18,
-        28,
-        238,
-        228
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_aksumite_inscriptional_kingship_stewardship_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_aksumite_inscriptional_kingship_stewardship.dds",
-      "master_sha256": "bcdc0aab6093ce833e9639563cf65335058ad4ca38d70c10e8a226753856f2b8",
-      "texture_sha256": "c4f26588c8d92c37f669e6e9b8b936a78271a14a65f61cc66c630c65b39fb3f6",
-      "active_fraction": 0.354904,
-      "opaque_fraction": 0.328094,
-      "alpha_bbox": [
-        18,
-        42,
-        238,
-        213
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_aksumite_inscriptional_kingship_compact_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_aksumite_inscriptional_kingship_compact.dds",
-      "master_sha256": "792a6b88ae4cea8896ed8425891dff384d776ff036ef792c8edd6f56742220dc",
-      "texture_sha256": "302708e7202c8bd0319a6f4931c4b18758a402168b10e48207cb9be59c6f6e74",
-      "active_fraction": 0.322952,
-      "opaque_fraction": 0.297516,
-      "alpha_bbox": [
-        18,
-        45,
-        238,
-        211
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_nubian_frontier_courts_delegates_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_nubian_frontier_courts_delegates.dds",
-      "master_sha256": "ed643d96b727abf08d9d636f98d76b8de0f1efe5a3ccc13c084d05751bead86b",
-      "texture_sha256": "4462b6b5ff658057db31ed2feed72973ed1869bee49ee627ac6770745d25509f",
-      "active_fraction": 0.474518,
-      "opaque_fraction": 0.450974,
-      "alpha_bbox": [
-        18,
-        29,
-        238,
-        227
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_nubian_frontier_courts_tallies_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_nubian_frontier_courts_tallies.dds",
-      "master_sha256": "c6e9a4245930bf9a00b0cb8f40c6668cd4d645014bb9cc217ad7f2e34f2192fe",
-      "texture_sha256": "8061cb0885189a6f8570aa5b484a3ebec39d133c97995f42f90eb9a94e11fbab",
-      "active_fraction": 0.396896,
-      "opaque_fraction": 0.346771,
-      "alpha_bbox": [
-        18,
-        39,
-        238,
-        216
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_nubian_frontier_courts_arbitration_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_nubian_frontier_courts_arbitration.dds",
-      "master_sha256": "4d87b078baf7bdc7dc403bb8189d8c6f77ed1ddd1bc69fac9392d42396a2040d",
-      "texture_sha256": "555295a3d6eaad74f8a3e86ddc3c53cbeb5623ec3b6130f6438453bf76dbe78d",
-      "active_fraction": 0.339874,
-      "opaque_fraction": 0.320633,
-      "alpha_bbox": [
-        18,
-        37,
-        238,
-        218
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_nubian_frontier_courts_stewardship_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_nubian_frontier_courts_stewardship.dds",
-      "master_sha256": "ab236e9e515a6b53fdca11b893b3ccbfcbe0f45f57d0f54754f945cfce5ee697",
-      "texture_sha256": "1587a37e94e15e62fe4185f7b64951f210ea1f4d5408b355e1880ac785029a62",
-      "active_fraction": 0.33638,
-      "opaque_fraction": 0.315262,
-      "alpha_bbox": [
-        18,
-        40,
-        238,
-        216
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_nubian_frontier_courts_compact_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_nubian_frontier_courts_compact.dds",
-      "master_sha256": "38eb16331aa690bbfbbe236da1a73f68efb2254967ce882b853101d33868bcb5",
-      "texture_sha256": "89e8723a9ec8315ee1f7b2686201010a272d1984265d840c13c650bb3030c8e5",
-      "active_fraction": 0.335022,
-      "opaque_fraction": 0.314835,
-      "alpha_bbox": [
-        18,
-        34,
-        238,
-        222
       ],
       "perimeter_max": 0
     },
@@ -6776,231 +6341,6 @@
         18,
         224,
         217
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_sasanian_aswaran_reform_scouts_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_sasanian_aswaran_reform_scouts.dds",
-      "master_sha256": "24f89a224a143359cf8a33e165e2db0f18f2763f21c21a2ed95ba0f3801178bd",
-      "texture_sha256": "c664d13f4ac49770b01e4353aacd820ed044e4dac114ad1b69f39ed5d2a5c177",
-      "active_fraction": 0.313766,
-      "opaque_fraction": 0.280029,
-      "alpha_bbox": [
-        18,
-        27,
-        238,
-        229
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_sasanian_aswaran_reform_musters_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_sasanian_aswaran_reform_musters.dds",
-      "master_sha256": "3e5c02f8cd1e1cf429ac7d79736b014f857c1103f1059d6ac1bef7e0fdf5b390",
-      "texture_sha256": "4872ca8f7aebcf5f8d8b2ea12a08445d94e8067364fb3b3d3ff52f3e9b83eb0b",
-      "active_fraction": 0.452545,
-      "opaque_fraction": 0.426437,
-      "alpha_bbox": [
-        30,
-        18,
-        226,
-        238
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_sasanian_aswaran_reform_supply_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_sasanian_aswaran_reform_supply.dds",
-      "master_sha256": "f66bfce1876a98d1edccac383cc5267a8d040c2218f3c4a173a8bac6606b333d",
-      "texture_sha256": "0544e7e0541a3bd4ec1e1d34b519db58277842c53decd59b907251b2326c1bc7",
-      "active_fraction": 0.441818,
-      "opaque_fraction": 0.416595,
-      "alpha_bbox": [
-        18,
-        39,
-        238,
-        216
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_sasanian_aswaran_reform_drill_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_sasanian_aswaran_reform_drill.dds",
-      "master_sha256": "cddc2636ecf87e7f51305bb3fddb6967059207c3d863e03fc1da8d9c1ee1cad5",
-      "texture_sha256": "3ed11fbf171f7313df31cd492c9bd451afbc867d4b693f95a843cf20ce17e4af",
-      "active_fraction": 0.454498,
-      "opaque_fraction": 0.428299,
-      "alpha_bbox": [
-        18,
-        18,
-        237,
-        238
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_sasanian_aswaran_reform_command_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_sasanian_aswaran_reform_command.dds",
-      "master_sha256": "fdddfad1a680cf43cffc001773b3bde5b70eccfd9160ef42c09ba23c43b73597",
-      "texture_sha256": "f73a9b358ff4b828ad20b08f563f8e3e86d1cf416b06d3913ca831077d65d804",
-      "active_fraction": 0.422913,
-      "opaque_fraction": 0.385742,
-      "alpha_bbox": [
-        21,
-        20,
-        235,
-        238
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_shapur_frontier_armies_scouts_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_shapur_frontier_armies_scouts.dds",
-      "master_sha256": "fea66cfd8b3139778404538888fc34f50620994e6d751e905ca8cfe3dc39005e",
-      "texture_sha256": "8d2b38c7d345b0763b97266ebd6daf463c977c42b0be14e7d36bb35e7a4dc228",
-      "active_fraction": 0.387436,
-      "opaque_fraction": 0.357773,
-      "alpha_bbox": [
-        18,
-        21,
-        238,
-        234
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_shapur_frontier_armies_musters_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_shapur_frontier_armies_musters.dds",
-      "master_sha256": "a3f45d2589d8032f8bfed14ca5c496962d54bd544ff963150870247b080cd9af",
-      "texture_sha256": "bddc92cd90ebe0ec2ae13a9d0f166d1a8b308074a691cee2e78bc42175fe64b6",
-      "active_fraction": 0.37677,
-      "opaque_fraction": 0.354156,
-      "alpha_bbox": [
-        18,
-        25,
-        238,
-        231
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_shapur_frontier_armies_supply_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_shapur_frontier_armies_supply.dds",
-      "master_sha256": "7c5a62307bc573b68e011c7db66152aa8e9ea8ab61f087b56f82499d0b1787bb",
-      "texture_sha256": "b50c119bcbfd006dc476ef52feb26ef0b5ace20de8701c3eeed6ccbbad22df48",
-      "active_fraction": 0.437225,
-      "opaque_fraction": 0.402069,
-      "alpha_bbox": [
-        18,
-        28,
-        238,
-        228
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_shapur_frontier_armies_drill_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_shapur_frontier_armies_drill.dds",
-      "master_sha256": "8381eedbaa369391ae3be1936653d3ff4ad0c27896e2da75deca8144e9cba50b",
-      "texture_sha256": "b3951c34e11ecd392e4e70a23500d4c8ca4285dcab5a037d466f205ce07f2382",
-      "active_fraction": 0.344467,
-      "opaque_fraction": 0.315643,
-      "alpha_bbox": [
-        19,
-        19,
-        237,
-        238
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_shapur_frontier_armies_command_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_shapur_frontier_armies_command.dds",
-      "master_sha256": "c57a936ba39b57b9091f834bc63e252ff4c207a459e46e6910e5dfa283b5a884",
-      "texture_sha256": "4cb425db6cc4d24a5169f878e6c20d18fa1e090d0035b96752fc0a1b20c28cb0",
-      "active_fraction": 0.335419,
-      "opaque_fraction": 0.293304,
-      "alpha_bbox": [
-        21,
-        18,
-        234,
-        238
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_hunnic_iranian_composite_cavalry_scouts_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_hunnic_iranian_composite_cavalry_scouts.dds",
-      "master_sha256": "90c358897b902ca6629fd8b1d299b174b8929a92ae0779fe5267696f8da7f3e1",
-      "texture_sha256": "d981e3262b70c075917882f82bb88b0faa87ca085e39827f0c67757c7727dfe7",
-      "active_fraction": 0.369888,
-      "opaque_fraction": 0.338257,
-      "alpha_bbox": [
-        18,
-        25,
-        238,
-        230
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_hunnic_iranian_composite_cavalry_musters_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_hunnic_iranian_composite_cavalry_musters.dds",
-      "master_sha256": "e28a8cfecfe399be6bbcc9ad509ea28c3686d8a160a3be93f9a92bca1f8d9024",
-      "texture_sha256": "e5f1980871f54952362b941b5148165c6e1a6ada94b9271a76d04e88a72cbcaf",
-      "active_fraction": 0.352402,
-      "opaque_fraction": 0.317337,
-      "alpha_bbox": [
-        22,
-        18,
-        234,
-        238
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_hunnic_iranian_composite_cavalry_supply_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_hunnic_iranian_composite_cavalry_supply.dds",
-      "master_sha256": "e0fd3cd4cb1b7cbaa4d1cc3e2d0272dec51fd139f5fd7076065fbed428ee627d",
-      "texture_sha256": "5b3c033f6d0ac7e6caf7ca029401f23e82ddb943ac04aecdc404c93efb65f43f",
-      "active_fraction": 0.529022,
-      "opaque_fraction": 0.5065,
-      "alpha_bbox": [
-        18,
-        23,
-        238,
-        233
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_hunnic_iranian_composite_cavalry_drill_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_hunnic_iranian_composite_cavalry_drill.dds",
-      "master_sha256": "ee4b6ebcbe77cea8902628180c9bd859ee3fe2b1f23f58ef6f9abc653b75fc6b",
-      "texture_sha256": "48d29bae0c1771c8f6391c983143bc3fb272a26e8d74a941a0a5804c59ba2060",
-      "active_fraction": 0.336563,
-      "opaque_fraction": 0.310165,
-      "alpha_bbox": [
-        30,
-        19,
-        226,
-        238
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_hunnic_iranian_composite_cavalry_command_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_hunnic_iranian_composite_cavalry_command.dds",
-      "master_sha256": "44abf6a5d6cc4cfa35d9acd2d5724a8746f769c9b974c70a66dad28c4a9720c2",
-      "texture_sha256": "6720706d411f92cc33284510a4ad7fc1e7c5988587d2761b51fae43b001f0389",
-      "active_fraction": 0.309891,
-      "opaque_fraction": 0.282074,
-      "alpha_bbox": [
-        24,
-        18,
-        232,
-        238
       ],
       "perimeter_max": 0
     },
@@ -8505,156 +7845,6 @@
       "perimeter_max": 0
     },
     {
-      "master": "assets_queue/generated/antq_advance_adulis_indian_ocean_exchange_waystations_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_adulis_indian_ocean_exchange_waystations.dds",
-      "master_sha256": "e4d3a3bb09ee19467bfc17e23e1024e362c3b8d0c6ab52010e03a0e0252ab614",
-      "texture_sha256": "f7c6de662ceb7e0ecccca2fdcea4606f1399064686d14763e452c21ba918a8ec",
-      "active_fraction": 0.383209,
-      "opaque_fraction": 0.358337,
-      "alpha_bbox": [
-        18,
-        34,
-        238,
-        222
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_adulis_indian_ocean_exchange_weights_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_adulis_indian_ocean_exchange_weights.dds",
-      "master_sha256": "5b60c2e55885d7e0447a42430731794befa781e5e1d4eacc585bee7e25f8b06d",
-      "texture_sha256": "b53a7ddce583cae711a6126b004f6ecc6ebb4dc79387de183f939f4c17c19aa1",
-      "active_fraction": 0.33223,
-      "opaque_fraction": 0.299713,
-      "alpha_bbox": [
-        18,
-        27,
-        238,
-        229
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_adulis_indian_ocean_exchange_brokers_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_adulis_indian_ocean_exchange_brokers.dds",
-      "master_sha256": "991e73251bde82d3bd889076d835ef1c5ebcb05a2873622ba88cd72f0659a5b0",
-      "texture_sha256": "80eb1ef691eaf3a1c5dae3e8f3002e881158a2d0429cd26d47b88d3639fdcaff",
-      "active_fraction": 0.388,
-      "opaque_fraction": 0.339294,
-      "alpha_bbox": [
-        18,
-        27,
-        238,
-        229
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_adulis_indian_ocean_exchange_convoys_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_adulis_indian_ocean_exchange_convoys.dds",
-      "master_sha256": "a1b0bfd45f6de30b0e8d99c09ad718d58a2d08e1be0bd0d74e28fce7be2d0d8d",
-      "texture_sha256": "87b0b16046f2f1a0d34ceead176ea5bd4ec84f5be505ab67ece5a009adc20142",
-      "active_fraction": 0.405228,
-      "opaque_fraction": 0.37915,
-      "alpha_bbox": [
-        18,
-        22,
-        238,
-        234
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_adulis_indian_ocean_exchange_circuits_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_adulis_indian_ocean_exchange_circuits.dds",
-      "master_sha256": "f78bcae8813bf4644eff177c289c7f3679ad37c4eaa9ccf24a58f3de67dc8761",
-      "texture_sha256": "0e4bba63aa8ebef429a29b322a478372bd02b893eb2ab0abd1884bc079e2b5ce",
-      "active_fraction": 0.391373,
-      "opaque_fraction": 0.365585,
-      "alpha_bbox": [
-        18,
-        32,
-        238,
-        224
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_sahel_iron_cattle_corridors_waystations_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_sahel_iron_cattle_corridors_waystations.dds",
-      "master_sha256": "8cfaf9e26c1e8708721e6a6d658f898eb1fcd5369a0a23f0b2e457de0417d9d0",
-      "texture_sha256": "d36b42e9af37c3b8b8964da581227ad03a18724b7d75a5ca651ec84272604682",
-      "active_fraction": 0.367615,
-      "opaque_fraction": 0.338577,
-      "alpha_bbox": [
-        18,
-        27,
-        238,
-        229
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_sahel_iron_cattle_corridors_weights_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_sahel_iron_cattle_corridors_weights.dds",
-      "master_sha256": "1324f4f3c6d21e0b735af9c5aa0c1a4301ea96a6d54eb7ea8c5462e7b255e282",
-      "texture_sha256": "c4c5f39a722718f0984a70db8a086fcca73d2833bbdf9f70258618dc2f871cf7",
-      "active_fraction": 0.331482,
-      "opaque_fraction": 0.299637,
-      "alpha_bbox": [
-        18,
-        24,
-        238,
-        231
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_sahel_iron_cattle_corridors_brokers_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_sahel_iron_cattle_corridors_brokers.dds",
-      "master_sha256": "12969d989412988c98323c35f9bfb189750c0510340907c40b8eecf9aa16e2b3",
-      "texture_sha256": "2bb3b659450c63c83d033599909c8de8c220cfd0623ed9171bfb65087fdeed73",
-      "active_fraction": 0.31691,
-      "opaque_fraction": 0.276306,
-      "alpha_bbox": [
-        18,
-        27,
-        238,
-        229
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_sahel_iron_cattle_corridors_convoys_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_sahel_iron_cattle_corridors_convoys.dds",
-      "master_sha256": "0c2da331c8decf85ab6d7e8fd3f0e5c6f32e951bee94b43caa8202a55db14efa",
-      "texture_sha256": "acdf115806d5eec580263637e466aaf3f4e5f6c25da968e2ecbf000f5f29dbdc",
-      "active_fraction": 0.347,
-      "opaque_fraction": 0.321213,
-      "alpha_bbox": [
-        18,
-        41,
-        238,
-        214
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_sahel_iron_cattle_corridors_circuits_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_sahel_iron_cattle_corridors_circuits.dds",
-      "master_sha256": "a388bb54e643907c1b21a10ce2fb6da5f8556112bb7d9af9d91b90486b06ec6c",
-      "texture_sha256": "8a96d2faa3d1224a19ab226159277dfc2dec0afb8841ed649d702b9319df6fcf",
-      "active_fraction": 0.347092,
-      "opaque_fraction": 0.309738,
-      "alpha_bbox": [
-        18,
-        40,
-        238,
-        215
-      ],
-      "perimeter_max": 0
-    },
-    {
       "master": "assets_queue/generated/antq_advance_aksumite_coin_customs_waystations_256.png",
       "texture": "main_menu/gfx/interface/advance/antq_advance_aksumite_coin_customs_waystations.dds",
       "master_sha256": "fa4f371b091c7d1e855506f75868256d932d6eac6acf071f3b940b06f2320d1d",
@@ -8726,81 +7916,6 @@
         44,
         238,
         211
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_horn_oceanic_entrepots_waystations_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_horn_oceanic_entrepots_waystations.dds",
-      "master_sha256": "efd507af73aa0bcaf5cc279d4e3e6aaf1fde2d10c83b3d913769cc5976349d4d",
-      "texture_sha256": "e4c22c8e9e8b496a0b46db813ddfa6f84321a721dfd20691cf0d03d8e40257b5",
-      "active_fraction": 0.355621,
-      "opaque_fraction": 0.319717,
-      "alpha_bbox": [
-        18,
-        34,
-        238,
-        221
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_horn_oceanic_entrepots_weights_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_horn_oceanic_entrepots_weights.dds",
-      "master_sha256": "d1d6031917e0a31f0b1fa96627c2ec6530a0dc49e225e1a42123b648af6c6d0e",
-      "texture_sha256": "1e0fca899cbe3180d01fe93572d0c819581558fe3210a68a3c6c4650410199f7",
-      "active_fraction": 0.37883,
-      "opaque_fraction": 0.357361,
-      "alpha_bbox": [
-        18,
-        35,
-        238,
-        221
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_horn_oceanic_entrepots_brokers_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_horn_oceanic_entrepots_brokers.dds",
-      "master_sha256": "204a1d96254537937b47cfce6a96bebe749c7908a417f4b38930235651b68e03",
-      "texture_sha256": "3818bd3941f8e3ef7b5e625f2d03ff70f18852d35086d03a8e0f6d9e5c5fee1a",
-      "active_fraction": 0.311813,
-      "opaque_fraction": 0.229416,
-      "alpha_bbox": [
-        18,
-        38,
-        238,
-        217
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_horn_oceanic_entrepots_convoys_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_horn_oceanic_entrepots_convoys.dds",
-      "master_sha256": "759b21c0d9fc39c27c7bd06bbf6554b63648fbf71dc9c3385f56ece3efd5a349",
-      "texture_sha256": "a35fb84d29f9c6a72f99c352b0a23499cfba48fa566cb0959b27e1e720b8b70d",
-      "active_fraction": 0.398285,
-      "opaque_fraction": 0.36879,
-      "alpha_bbox": [
-        18,
-        26,
-        238,
-        229
-      ],
-      "perimeter_max": 0
-    },
-    {
-      "master": "assets_queue/generated/antq_advance_horn_oceanic_entrepots_circuits_256.png",
-      "texture": "main_menu/gfx/interface/advance/antq_advance_horn_oceanic_entrepots_circuits.dds",
-      "master_sha256": "64580b980c413000fffa9765becfcc9b6a2214d76c36eb3a94d3fe89507e76e5",
-      "texture_sha256": "c1e297612f51065bc298c09a3040b0ec812fbb6c5fb6754ebed733a897fac401",
-      "active_fraction": 0.186508,
-      "opaque_fraction": 0.140808,
-      "alpha_bbox": [
-        18,
-        38,
-        238,
-        217
       ],
       "perimeter_max": 0
     },
@@ -13301,6 +12416,906 @@
         41,
         238,
         214
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_satrapal_household_registers_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_satrapal_household_registers.dds",
+      "master_sha256": "5cc71c5ccddcc93fdf89b9cb8a2fd83d1f2f860725ec5c0e63409e9eb4d72965",
+      "texture_sha256": "39e43d9fa84af22d2d907db90de39af96f55574b8c70a6242595b6deef64fc76",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_arsacid_dynastic_compacts_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_arsacid_dynastic_compacts.dds",
+      "master_sha256": "45af7de6fce595dcfad43488152bf35a71f6d25c37cb9966e536db1a14ca6a73",
+      "texture_sha256": "1aeaa3b9a77b6291147c6587b18c1bfc198a751d84eb6b1617c95b7c29f76ba8",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_temple_estate_adjudication_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_temple_estate_adjudication.dds",
+      "master_sha256": "9973d1ffbcdb1e1832dcb7637cc1847d4f7f8d287a5f1df60ca253fa4205e34b",
+      "texture_sha256": "b7228e39b47fa6466f87ca602ae599bfb19e3b1a2ed58ac8e08f3253bd2c8ca5",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_royal_road_station_offices_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_royal_road_station_offices.dds",
+      "master_sha256": "33352737fc7d020c020247524b2b1fe362a0e0f4986f41437e5d0342e1ef7f19",
+      "texture_sha256": "56e08366b26066a022d797f430c39a50de685d3cd62be29d4a88756d73d9d078",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_king_of_kings_delegated_rule_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_king_of_kings_delegated_rule.dds",
+      "master_sha256": "53faa4ded35fdafeb73adb4930ac3b05aa32abba69feb69143caeac980d790c4",
+      "texture_sha256": "07265768a43b0f97b5ca3cb4f3b7a4933ed22d1e26c7feb1ea7984f32993a048",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_seasonal_horde_councils_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_seasonal_horde_councils.dds",
+      "master_sha256": "57595774935b1147ca48cb67c66f1c326c5d2ff42b12b6443cd8db004c239999",
+      "texture_sha256": "d9389c06960d46432564ad988fe958971447597355f17a0d3c4d5a31dcf9574f",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_left_right_wing_commands_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_left_right_wing_commands.dds",
+      "master_sha256": "8f1afa3322a6bfb7c0ba0cfcde7557103156d6a5d555f812896ff607cdc78e27",
+      "texture_sha256": "f2bcbda3f6e458fe6fbe3430110fa2c1d79e2561302821e803056e39e58d8c82",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_tribute_envoy_protocols_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_tribute_envoy_protocols.dds",
+      "master_sha256": "1d878b76b0e0b30a1327fa3c0fc9a14d02c808bb098157a872d4fd5e87f774e9",
+      "texture_sha256": "4ecd5fc8ea0ab955f08689d1f981233795a523355c63006c3a2e4b89f966864f",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_subject_people_interpreters_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_subject_people_interpreters.dds",
+      "master_sha256": "5a3bfc47888d7123e3741db64b621836abb1930aaebfc6c2cc659b2628d93a62",
+      "texture_sha256": "d35e519efc02520314a660c9d6318710e4f9a7f34fa8762e93a9f2f9c88a7d37",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_chanyu_confederate_authority_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_chanyu_confederate_authority.dds",
+      "master_sha256": "7f3c6f41a9d09670bdc8beee7b37a2e931abd5e0f6fc7a8bd6d65552362e1ebf",
+      "texture_sha256": "82c3ae9fa57b1e90bbc4de3ce24109cbb0b9dd352305328fc71c142bf7f04b6b",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_nile_temple_land_stewards_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_nile_temple_land_stewards.dds",
+      "master_sha256": "46160b5c4b1e4d6910c143e49b355450395e2cc11847950282093611ea8527a5",
+      "texture_sha256": "a89ac95b7c7ebcdeae5769fbfd09dee8dbad5674b548976341bad8a970472861",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_nomos_petition_delegates_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_nomos_petition_delegates.dds",
+      "master_sha256": "9a564e864021dfa3c986204dcb81692e106dec4350623b3517a87d73fe7c68da",
+      "texture_sha256": "ecbf7eb7ae2e693920fddb870444dd0ee49c7b4f7087bbf5a55d97d731de974f",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_desert_oasis_tribute_tallies_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_desert_oasis_tribute_tallies.dds",
+      "master_sha256": "7695d4f8bbf739dc2292106a4d29649fe16a504a41ffc9a0e5aec9c6e6b8854e",
+      "texture_sha256": "15e5bd249f76757834ddcb2ca4bc8182456f4cb2dd0da516c03a4c9bbe2bc476",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_caravan_route_arbitration_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_caravan_route_arbitration.dds",
+      "master_sha256": "881a0ead2f04249c6540bb58fec6fbfc444f6ef93bd011ad410a5997fc89fed0",
+      "texture_sha256": "4f9d86a01236c4f5fbc58f803d0a22bf08f7d628bcd0c23d4aaada3d44f01ec9",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_river_desert_court_compacts_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_river_desert_court_compacts.dds",
+      "master_sha256": "e845cd5c3a8568131627dd513dc178efeea88059dba87802ace7a8df5b45b3d4",
+      "texture_sha256": "0efd2008a48c66de008a1e040d0f151ed63a6718b34cdaf610393b8c6bc60aca",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_lineage_council_speakers_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_lineage_council_speakers.dds",
+      "master_sha256": "fca4564fe6b66aa8b0639a196bfa29923ac0370ad77b266cec4cf8a96f05da82",
+      "texture_sha256": "6bbed9b5efc7baac4a1b1f0143c13ebab5678114653ab7462fa3183aaf09d91f",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_cattle_tribute_tallies_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_cattle_tribute_tallies.dds",
+      "master_sha256": "1db70f37ec20512a38aea7ea881c242ae3c890af1cbee2fc0b88c49e8243484a",
+      "texture_sha256": "012168c6a425ff0035aaab74a07eddd714909bc8022b6136fbabe915779a725d",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_ironworking_custodian_compacts_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_ironworking_custodian_compacts.dds",
+      "master_sha256": "ef6961327e75fb387da4b5dfbd4cc5c767286dcba2bcfa73458af69dfe27823e",
+      "texture_sha256": "e12aa452734a306149aa9c41d51fafa8ee7728d9c564bfd3c7b78938919d74f2",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_river_crossing_arbitration_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_river_crossing_arbitration.dds",
+      "master_sha256": "78adce62a66a82e1fb8977bb3827769bc41ede1321a43085ff93cbbf4ac2e174",
+      "texture_sha256": "9c5f85fd413a526ffb7f9d035214193bca6291a0fcff1e7ef9300d9658f211c3",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_savanna_forest_authority_networks_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_savanna_forest_authority_networks.dds",
+      "master_sha256": "0fec5fd07c05700745d927718cc786b45bd9e1f829f113cee15aa343e4759378",
+      "texture_sha256": "8bafaca32d30dc0461dbfb651cb75c71c4885f42a652cac37053f7caa79f7b6f",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_iranian_remount_estates_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_iranian_remount_estates.dds",
+      "master_sha256": "2137e16c06608a6a0471dd07051a3c1d673c0aade153cbc2031ae0021f07e678",
+      "texture_sha256": "30dc8c7242ba5b00b1705a30537fac99288bd35841546ccde0f58b6953201288",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_parthian_shot_drill_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_parthian_shot_drill.dds",
+      "master_sha256": "a35612779f236044cf87edf5a6241f03b871e7c5b0a47b4af90d197f5ec8805e",
+      "texture_sha256": "eff3c62715b86fce9e295b38f6e0b1a836e7aa56067f3243996f6e0e5fa2081f",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_cataphract_armour_workshops_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_cataphract_armour_workshops.dds",
+      "master_sha256": "e17ea7047fbf1813e869ab6064d17634238074632a6f4af887a69ea81babf226",
+      "texture_sha256": "287663d2fcba44a96797bdb7a40d60795013569bcbab910650f4a3cde9dd8b2e",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_noble_cavalry_retinues_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_noble_cavalry_retinues.dds",
+      "master_sha256": "f12003990677cb7512c66a28de7dde55d75d00108de55ea7378bd50424240782",
+      "texture_sha256": "fc7eaf0c6ddcb553715b3297cb5d5b302c0faff8b086f6b4c7df739cb9e125a3",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_arsacid_combined_cavalry_command_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_arsacid_combined_cavalry_command.dds",
+      "master_sha256": "e4763e680698ba06e1d0ea2e308730efadc89eb67fc9ca770ba9685b9d2d162f",
+      "texture_sha256": "85bc1386119f0cb983a2da35a42ac4e48d339efba249cfbb0b139525938c1beb",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_steppe_remount_herds_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_steppe_remount_herds.dds",
+      "master_sha256": "ad27f9018d3098c08bbae3f088c2baa6520097d423ef353aa6bcc95306384049",
+      "texture_sha256": "836f8bff70f1ec7ea3a7092c9e852a786c77693b4e80c450c2ef57b3184f7460",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_composite_bow_screening_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_composite_bow_screening.dds",
+      "master_sha256": "a8dec108d0bfb93acb7ab76a953d1f6511ce8938f0094a26ee487cb4cd88d2ca",
+      "texture_sha256": "91fae95cc6362f18f6e3d25850926233636c3e0d87c641ef5c35d65f9fcd19ad",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_decimal_riding_musters_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_decimal_riding_musters.dds",
+      "master_sha256": "08b65e8fbbfc19c52d8ab0c874ec514b56ebb05c995032ac4d443e7e8ce68fae",
+      "texture_sha256": "3101c8a298ece55823890529ab6eb76ced1fb85f7f714989ea1417844f20ef70",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_mobile_felt_supply_camps_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_mobile_felt_supply_camps.dds",
+      "master_sha256": "92ca71287aa10d1e195b87a71a005f0b2c6e7affb46a9d12a4502cdd001ceb07",
+      "texture_sha256": "96614cf43ded8ba26916fad9be5f626398acd35e94f5dcf275661a3d7f9cc7c2",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_confederate_horse_archer_command_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_confederate_horse_archer_command.dds",
+      "master_sha256": "86200e9d6f7271e538863d7475c7c78c63fbba2e5f3e720f28f35bb3e7b453b1",
+      "texture_sha256": "1fe45b17415f4ab950d9e6106c1f88a8a337d188ca04309f4300857e62783d76",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_savanna_scouting_parties_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_savanna_scouting_parties.dds",
+      "master_sha256": "9029d6d5336ba0c3ab45fa9c97330256d5b5a648e2cff22a1550f67362212c62",
+      "texture_sha256": "0c941a4f941e28baf95a19ce921f20fb8efe4ef613f9d50e427d3c3636c842a0",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_age_grade_musters_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_age_grade_musters.dds",
+      "master_sha256": "3849c4db041c60b08129cc9730e66e7fd4e4e792aa56405dd8901ffd5aa0c11e",
+      "texture_sha256": "1b80bda1de55b65b37d8deba5fc16bcb8dbbdff6877de5d2fc5d121fe684986f",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_iron_spear_supply_households_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_iron_spear_supply_households.dds",
+      "master_sha256": "e93f7e5a2957f21e77a3544b21b821a0fcd6cba403c8351bd351ebf8bc2912ea",
+      "texture_sha256": "57499625a3b23eafeba090dcfd68e4ba69fd2d1b75081701c6951b357f1a4887",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_woodland_ambush_drill_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_woodland_ambush_drill.dds",
+      "master_sha256": "a12c9230bf0c442e181b46d02556223d3db1b106ce7d0129daa5cd82fb8361cf",
+      "texture_sha256": "274e69d7138d8641c4e9568584052b0dc2e0b10265f1767466cdd0348ac676de",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_regional_war_league_command_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_regional_war_league_command.dds",
+      "master_sha256": "5c787eafbf7dd909e65ace84d27d28f5c17b7ce819acce370ee27cad581a1e5c",
+      "texture_sha256": "64f06ad1acd98f9fe9068c9b07daaea2aca0a7773d952a97240f11007c01169c",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_iranian_caravanserai_precursors_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_iranian_caravanserai_precursors.dds",
+      "master_sha256": "8ef4b77dde4d4dac1d4848ed479931e1461963501967df27dbaa68a60840ddc1",
+      "texture_sha256": "e1482d2082c891778d31316a8be90a2c2ad4c399db0520b120f0cb0d15c94e39",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_silver_drachm_accounts_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_silver_drachm_accounts.dds",
+      "master_sha256": "76b988f63ee46193e49b437dff12ca3cc4cece8965fbbeeedfdf3d1e4f9854ed",
+      "texture_sha256": "55edc0fddb9139098fafbccb3ce006b2808aa3e4aff5155efcc324346299d32b",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_mesopotamian_plateau_brokers_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_mesopotamian_plateau_brokers.dds",
+      "master_sha256": "745e94af02cbc691d9c402c357a7f4092fc2e1ee9f514d682570642812710fe7",
+      "texture_sha256": "7f41bc614451861a3398c9b2d2a313d09b19249fd836502c4c184709db590999",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_caspian_gate_convoys_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_caspian_gate_convoys.dds",
+      "master_sha256": "a5ed0ede3f8af7ad541dd566ba3608606bbabcb789b9822596a94b5991331432",
+      "texture_sha256": "053039be6b8fb127453990209accfc5ac6e69cab493261bafd8b62b5fe013a26",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_silk_road_customs_compacts_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_silk_road_customs_compacts.dds",
+      "master_sha256": "e3c166f13dbec3b3a9b452693e700410c81cda48d99731097a2913ebc5a73295",
+      "texture_sha256": "e890eedf5ee1a5d336d60a57ca42d54f2ff98d2f8ddc581499b3ef93055c4a7f",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_pastoral_surplus_fairs_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_pastoral_surplus_fairs.dds",
+      "master_sha256": "b5d53e971ae3032af0b630d3570ab25a493710fc0226d00fa17c1394fe02a32d",
+      "texture_sha256": "07c0da7ee2a2bd039d25f74d6121cd3f7cc280d2cdfa1de32c77d2ed465277c3",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_frontier_gift_tallies_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_frontier_gift_tallies.dds",
+      "master_sha256": "baf1a4077e7c26c4c0e6789455166a2341f4fc56d3130a1220d6937472024db7",
+      "texture_sha256": "54d471c9462da25c887a0ce38cc717a96c8576dfa358e3bb0b24f358dd0d14b4",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_oasis_interpreter_brokers_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_oasis_interpreter_brokers.dds",
+      "master_sha256": "0fc5831217c4614aa5a3470dfb784d4712d98a3e37db499b039f0fc81dff1439",
+      "texture_sha256": "0c9ead41f9522949165fa3a2b5c81445d4a2adc5c5e8b541cacc1256b1cad216",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_caravan_protection_rides_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_caravan_protection_rides.dds",
+      "master_sha256": "f8d22a3afbde9c8f071b7e054b0ed0e71299981ce09d757cacb86bec1cef85ab",
+      "texture_sha256": "73d03685f7f6655ccdd73d0d34ce73eafcc7ec2573d501a10189a0949f9c7a9e",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_steppe_sown_exchange_corridors_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_steppe_sown_exchange_corridors.dds",
+      "master_sha256": "2384adedf50fb7350c75e6063f49001cb55b4c4b72914e1f22c93299de743573",
+      "texture_sha256": "8f84a8e121a6716d437ec372b388228742515ab78ca7d9c834bbec742169240d",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_nile_quay_storehouses_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_nile_quay_storehouses.dds",
+      "master_sha256": "f6c13426cc875ca000b15bfba5bfde5e31bae640d9242c4faa07e136430d83fb",
+      "texture_sha256": "b5a6dcda03ac6496f0b29c30a1e2e8d5ea3e61ecba9147681f8f4cf87e1dd40d",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_alexandrian_measure_offices_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_alexandrian_measure_offices.dds",
+      "master_sha256": "bc5123c20385535db91f80cfd38fe0a7df0d0b38d49384bac5deaa449309ed9d",
+      "texture_sha256": "067c4541d80a3a6056f17f0b0568620d89c0a7b5ee1af2ad9c6d43369f84afd6",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_red_sea_customs_brokers_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_red_sea_customs_brokers.dds",
+      "master_sha256": "601b0938540dedcc11997a4c12c8839e5aae9272a7b3694dbea79fbe14fdb48f",
+      "texture_sha256": "c51ab99007f4affc624b8be3bf7149b5c5e0869680df6dfd5392b02354969aa1",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_horn_monsoon_convoys_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_horn_monsoon_convoys.dds",
+      "master_sha256": "3aeb520127b8081894f562e36a8fa63197a81985de9732cd0546e3f50d6b5fc9",
+      "texture_sha256": "e7691c360245387c441a7b02e4254df0fd3a06ddbc7298e696b19cd82369fe87",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_nile_red_sea_exchange_circuits_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_nile_red_sea_exchange_circuits.dds",
+      "master_sha256": "96335c953b5384ff1bf944a1486b7d7b2060e5efd24340ed2cdbe714d05387dd",
+      "texture_sha256": "77800315b877d53ce036356145fe45b8202ec844ceec2a1521b6cb1d38d218dd",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_niger_river_waystations_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_niger_river_waystations.dds",
+      "master_sha256": "edd05a75e3b80a9115319c2c253f553a5d1c8d091c6599deea1d2d3a206d164a",
+      "texture_sha256": "9cce91665730fc60ea305c67ad7c445aff3198bcf48b2c42bf307457aebcff8d",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_iron_cattle_value_tallies_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_iron_cattle_value_tallies.dds",
+      "master_sha256": "705f4041f1a2308728cb62f7e67a8c386022d3756fdb1008510759a8796a0a82",
+      "texture_sha256": "ab8e67044bed2c9c3184969b1d08781c990ff655d2bc54be56d4d8881697c48c",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_forest_savanna_brokers_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_forest_savanna_brokers.dds",
+      "master_sha256": "bf9bb4d0544d4ad350e4d22fe82b83a4dec78c17f8efad50089f4771bf29293d",
+      "texture_sha256": "e820e61ee4d7fde906aae029b976ff883361a22bbd5425214ea5ced05fa6ed68",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_seasonal_porter_convoys_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_seasonal_porter_convoys.dds",
+      "master_sha256": "d003f9ba45d992b6a424e5c384e9c65c0684744b1a6a6ac5b72c04faf4124705",
+      "texture_sha256": "d8ccea6609c89363ccaeb1a6a7bdb59eab0a00e86a9242abc447c32e9e5e5c8b",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_interregional_exchange_circuits_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_interregional_exchange_circuits.dds",
+      "master_sha256": "09e2e911ea5a85a441f30079471ba9e8b43e10c8a7ce0c56c8b180d40e1714e5",
+      "texture_sha256": "8b2ec834c438858286908b6b4d30482b3c402e6b5c36eafe077aec7c626bd4bf",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_temple_scribal_houses_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_temple_scribal_houses.dds",
+      "master_sha256": "b6d7b7dc70ff7ae52684043491ab2ec3d84e505c8130dd371695382402762873",
+      "texture_sha256": "c3474f248c0fce9df0a25b5a012143253a49a11a7eef3f0750d0eb06331b3c9a",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_demotic_greek_catalogues_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_demotic_greek_catalogues.dds",
+      "master_sha256": "3633dcb176b84e8f2d8e51ed7a24303520757a39fae9b3a15b2f5cf36ada3d85",
+      "texture_sha256": "ac1d4a20e86eb6722aa12b32c95792ab10721480763e521ff1266c601dd6641b",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_alexandrian_medical_commentaries_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_alexandrian_medical_commentaries.dds",
+      "master_sha256": "823d44a8d6ae9898de5abe1f3e4f3200fff0a1b1eae7f7971cbe64a6545b11e2",
+      "texture_sha256": "6e8de8661ff4adde35bae2d2c5d87d58a1b76e193698256b30998fcd75008652",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_nile_flood_observations_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_nile_flood_observations.dds",
+      "master_sha256": "7b1167209d760850675cea3c36e5a3d7f89fe9cd685a68f1289ea3137cd9a1b0",
+      "texture_sha256": "5e02c316f3f4bcb8760f06d14ce2923cb87aeb34fb35deba99cba43bd752d3a6",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
+      ],
+      "perimeter_max": 0
+    },
+    {
+      "master": "assets_queue/generated/antq_advance_north_african_scribal_curricula_256.png",
+      "texture": "main_menu/gfx/interface/advance/antq_advance_north_african_scribal_curricula.dds",
+      "master_sha256": "c74fe29baeff233f1844eab565a90ea9e0a0d416ffb7166b200d1d9db0659495",
+      "texture_sha256": "3ae24562432e6afb01f9b1adc6ad1c1a7d324a9f693f1f3079585e6df7cbf402",
+      "active_fraction": 0.731201,
+      "opaque_fraction": 0.671875,
+      "alpha_bbox": [
+        4,
+        4,
+        252,
+        252
       ],
       "perimeter_max": 0
     }

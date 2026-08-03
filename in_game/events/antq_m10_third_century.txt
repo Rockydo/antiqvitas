@@ -175,7 +175,10 @@ antq_m10_third.3006 = {
 	option = {
 		name = antq_m10_third.3006.a
 		historical_option = yes
-		religion:antq_manichaeism = { enable_religion = yes }
+		religion:antq_manichaeism = {
+			enable_religion = yes
+			create_holy_site = { name = antq_manichaean_babylonia_mission type = pilgrimage_city importance = 5 location = location:baghdad religions = { religion:antq_manichaeism } }
+		}
 		# IRAN-MANI: seed a bounded community without converting the Iranian state.
 		capital = {
 			every_pop = {

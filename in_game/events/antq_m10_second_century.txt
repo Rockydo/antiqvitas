@@ -278,7 +278,11 @@ antq_m10_second.2010 = {
 	option = {
 		name = antq_m10_second.2010.a
 		historical_option = yes
-		religion:antq_daoism = { enable_religion = yes }
+		religion:antq_daoism = {
+			enable_religion = yes
+			create_holy_site = { name = antq_daoist_chengdu_community type = pilgrimage_city importance = 5 location = location:chengdu religions = { religion:antq_daoism } }
+			create_holy_site = { name = antq_daoist_hanzhong_community type = sanctuary importance = 4 location = location:nanzheng religions = { religion:antq_daoism } }
+		}
 		# CAM-CM: bounded Chengdu-basin seed for the organized Celestial Masters current.
 		location:chengdu = {
 			every_pop = {

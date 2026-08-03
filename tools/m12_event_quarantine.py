@@ -35,6 +35,7 @@ DAMAGE_REGIMENT = re.compile(
 BLOCK_HEADER = {
     "center_of_renaissance_variable": re.compile(r"^\s*set_variable\s*=\s*\{"),
     "show_all_event_targets": re.compile(r"^\s*show_all_event_targets\s*=\s*\{"),
+    "create_holy_site": re.compile(r"^\s*create_holy_site\s*=\s*\{"),
 }
 TARGETED_SANITIZATIONS = {
     "in_game/events/DHE/flavor_BYZ.txt": ("center_of_renaissance_variable",),
@@ -157,6 +158,14 @@ def remove_blocks_containing(text: str, needle: str) -> tuple[str, int]:
 
 def render(relative: str) -> bytes:
     text, bom = source_text(relative)
+    expected_holy_site_calls = len(re.findall(r"(?m)^\s*create_holy_site\s*=\s*\{", text))
+    if expected_holy_site_calls:
+        text, count = remove_blocks_containing(text, "create_holy_site")
+        if count != expected_holy_site_calls:
+            raise ValueError(
+                f"{relative}: expected {expected_holy_site_calls} inherited "
+                f"create_holy_site blocks, removed {count}"
+            )
     for needle in TARGETED_SANITIZATIONS.get(relative, ()):
         text, count = remove_blocks_containing(text, needle)
         if count != 1:
@@ -256,6 +265,8 @@ def render(relative: str) -> bytes:
         )
     result = DATE.sub(sanitized_date, "".join(rendered))
     result = neutralize_references(result, remap_effects=True)
+    if "create_holy_site" in result:
+        raise ValueError(f"{relative}: inherited create_holy_site call survived")
     return (b"\xef\xbb\xbf" if bom else b"") + result.encode("utf-8")
 
 

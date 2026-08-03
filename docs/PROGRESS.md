@@ -8390,3 +8390,13 @@ reviewed 128px BC7 DDS.
   bounded foundation seeds; native-scale Observer is renderer-stable.
 - Validation passes 164/164; paired smoke adds zero new lines at
   `a687df49daa5aa30ad920d2a3915792d0dcb00413367375001e3c0602e6b760c`.
+
+## 2026-08-03 - Round 5 systems batch
+
+- Replaced layered loading with 16 fixed panoramas and transparent compatibility
+  planes; rebuilt seven diseases, 22 situation adapters, 62 holy sites, and Wealth.
+- Added 144 Cultivator methods, 453 regional methods, 84 tribal buildings, 1,131
+  advances, and 67 ships across 27 maritime profiles; AD 1 tribesmen reach 24.4%.
+- Geography is intentionally open at 6,028/33,801 hierarchy rows.
+- Validation passes 170/170. Paired smoke reaches both menus with zero new lines
+  at `efeb63c4bd530a1b6f8406caed8baf4a757c75132f4f25900f0f776ce481b99e`.

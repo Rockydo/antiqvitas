@@ -6024,3 +6024,9 @@ Where the engine's 1337 terrain/rank capacity rejects the sourced AD 1 populatio
 the adapter represents dispersed farms, terraces, waterworks, and storage absent
 from that baseline; it is not a higher population estimate. Location tiers are
 engine-calibrated, not census claims. Sources: master plan §12; `P15`; `CAH-XI`.
+
+## 2026-08-03 - Tribal population and production are macro reconstructions
+
+The 24.4% world tribesmen share and regional tribal workshops represent mobile,
+frontier, upland, and weakly urbanized communities at game scale, not local census
+claims. Sources: master plan §§8, 12; `P8.1`-`P8.10`; `P12.1`; `P15`.

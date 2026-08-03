@@ -18,6 +18,8 @@ TARGET = ROOT / RELATIVE
 MANIFEST = ROOT / "docs/m5/building_quarantine_manifest.json"
 CUSTOM_SOURCES = {
     "00_antiquitas_adapter_replacements.txt",
+    "00_antiquitas_cultivator_buildings.txt",
+    "00_antiquitas_r5_tribal_buildings.txt",
     "00_antiquitas_regional_buildings.txt",
     "00_antiquitas_roman_buildings.txt",
 }

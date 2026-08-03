@@ -288,5 +288,8 @@ def validate_catalog(expected_pairs: set[tuple[str, str]]) -> None:
                 if effect in effects:
                     raise ValueError(f"repeated S2-P3 regional effect {effect}")
                 effects.add(effect)
-    if len(keys) != 440 or len(effects) != 440:
-        raise ValueError(f"S2-P3 regional catalog must contain 440 unique nodes, got {len(keys)}")
+    expected_nodes = len(expected_pairs) * 4 * 5
+    if len(keys) != expected_nodes or len(effects) != expected_nodes:
+        raise ValueError(
+            f"regional catalog must contain {expected_nodes} unique nodes, got {len(keys)}"
+        )

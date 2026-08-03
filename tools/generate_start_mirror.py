@@ -30,6 +30,8 @@ from m9_diplomacy import (
     discovery_regions as m9_discovery_regions,
     international_organization_manager as m9_international_organization_manager,
 )
+from r5_tribal_buildings import rows as r5_tribal_building_rows, seed_rows as r5_tribal_seed_rows
+from r5_settled_buildings import floor_rows as r5_settled_floor_rows
 from s2_ancient_laws import starting_laws_by_tag
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -45,6 +47,7 @@ POPULATION_LOCATION_OVERRIDES = ROOT / "docs/m4/population_location_overrides.cs
 POPULATION_GEOGRAPHIC_ALLOCATIONS = ROOT / "docs/m4/population_geographic_allocations.csv"
 POPULATION_CITY_TARGETS = ROOT / "docs/m4/population_city_targets.csv"
 POPULATION_GEOGRAPHY = ROOT / "docs/m5/global_rgo_audit.csv"
+TRIBAL_POPULATION_TARGETS = ROOT / "docs/m4/tribal_population_targets.csv"
 CULTURE_REMAP = ROOT / "docs/culture_remap.csv"
 RELIGION_REMAP = ROOT / "docs/religion_remap.csv"
 M4_SYMBOLS = ROOT / "docs/m4/definition_symbols.json"
@@ -62,6 +65,7 @@ SPECIAL_BUILDINGS = ROOT / "docs/m5/special_buildings.csv"
 ROMAN_BUILDINGS = ROOT / "docs/m5/roman_buildings.csv"
 ANCIENT_BUILDING_REPLACEMENTS = ROOT / "docs/m5/ancient_building_replacements.csv"
 REGIONAL_BUILDINGS = ROOT / "docs/m5/regional_building_families.csv"
+TRIBAL_BUILDINGS = ROOT / "docs/m5/tribal_buildings.csv"
 HISTORIC_BUILDING_SITES = ROOT / "docs/m5/historic_building_sites.csv"
 M7_FORTS = ROOT / "docs/m7/forts.csv"
 M7_ARMIES = ROOT / "docs/m7/armies.csv"
@@ -554,6 +558,11 @@ def special_building_manager() -> tuple[str, int, int]:
         entry["building"] = row["family"]
         entry["level"] = "1"
         entries.append((entry, "M5 regional"))
+    entries.extend(
+        (row, "R5 tribal")
+        for row in r5_tribal_seed_rows(r5_tribal_building_rows())
+    )
+    entries.extend((row, "R5 settled floor") for row in r5_settled_floor_rows())
     entries.extend((row, "M7") for row in csv_rows(M7_FORTS))
     if not entries:
         raise ValueError("special_buildings.csv has no specialist-building entries")
@@ -568,6 +577,8 @@ def special_building_manager() -> tuple[str, int, int]:
     with ANCIENT_BUILDING_REPLACEMENTS.open(encoding="utf-8-sig", newline="") as handle:
         buildings.update((row.get("key") or "").strip() for row in csv.DictReader(handle))
     with REGIONAL_BUILDINGS.open(encoding="utf-8-sig", newline="") as handle:
+        buildings.update((row.get("key") or "").strip() for row in csv.DictReader(handle))
+    with TRIBAL_BUILDINGS.open(encoding="utf-8-sig", newline="") as handle:
         buildings.update((row.get("key") or "").strip() for row in csv.DictReader(handle))
     urban_locations = {row["location"].strip() for row in csv_rows(URBAN_NODES)}
     capital_sites = {
@@ -1424,8 +1435,41 @@ def ancient_pop_weights(owners: dict[str, str]) -> dict[str, Decimal]:
     return weights
 
 
+def settled_tribal_share(
+    tag: str, kind: str, rank: str, region: str, topography: str, vegetation: str
+) -> Decimal:
+    """Return a bounded tribesmen share for a location inside a settled polity."""
+    if tag in {"ROM", "HAN"}:
+        base = Decimal("0.050")
+    elif tag == "PAR":
+        base = Decimal("0.150")
+    elif region == "India":
+        base = Decimal("0.130")
+    elif region in {"Iran", "Central Asia", "Caucasus", "Steppe", "Tarim"}:
+        base = Decimal("0.130")
+    elif region in {"Germania", "Britain", "Ireland", "Baltic", "Finland", "Scandinavia", "Africa", "West Africa", "Southeast Asia", "Oceania", "North America", "Andes", "Northern Andes", "Caribbean-Amazon"}:
+        base = Decimal("0.110")
+    else:
+        base = Decimal("0.080")
+    if kind == "subject":
+        base += Decimal("0.015")
+    rank_factor = {
+        "city": Decimal("0.30"),
+        "town": Decimal("0.70"),
+        "rural": Decimal("1.18"),
+    }.get(rank, Decimal("1.18"))
+    share = base * rank_factor
+    if rank == "rural":
+        if topography in {"mountains", "hills", "plateau", "wetlands"}:
+            share += Decimal("0.025")
+        if vegetation in {"forest", "woods", "jungle", "sparse"}:
+            share += Decimal("0.020")
+    return min(Decimal("0.28"), max(Decimal("0.01"), share))
+
+
 def population_strata(
-    total: Decimal, primary: str, kind: str, rank: str, region: str
+    total: Decimal, primary: str, tag: str, kind: str, rank: str, region: str,
+    topography: str, vegetation: str,
 ) -> tuple[tuple[str, Decimal], ...]:
     """Split a location total into ancient social strata with exact preservation."""
     if primary == "tribesmen" or kind == "sop":
@@ -1455,6 +1499,13 @@ def population_strata(
             "soldiers": Decimal("0.05"), "nobles": Decimal("0.025"),
             "clergy": Decimal("0.025"), "slaves": Decimal("0.05"),
         }
+    if primary != "tribesmen" and kind != "sop":
+        tribal_share = settled_tribal_share(
+            tag, kind, rank, region, topography, vegetation,
+        )
+        for key in tuple(shares):
+            shares[key] *= Decimal("1") - tribal_share
+        shares["tribesmen"] = tribal_share
     # Dependent labor was important but not uniform. Keep the highest opening
     # shares in Mediterranean and Near Eastern state economies; elsewhere it
     # becomes free cultivator/laborer population rather than invented slavery.
@@ -1701,6 +1752,10 @@ def population_manager(
         entry["location"].strip(): entry["profile"].strip()
         for entry in csv_rows(URBAN_NODES)
     }
+    population_geography = {
+        entry["location"].strip(): entry
+        for entry in csv_rows(POPULATION_GEOGRAPHY)
+    }
     for location in sorted(owners):
         row = roster[owners[location]]
         profile = historical_profile_for(row)
@@ -1714,9 +1769,12 @@ def population_manager(
         resident_cultures[owners[location]].add(culture)
         country_populations[owners[location]] += sizes[location]
         rank = urban_profiles.get(location, "rural")
+        geography = population_geography[location]
         lines.append(f"\t{location} = {{")
         strata = list(population_strata(
-            sizes[location], pop_type, row["kind"], rank, row["region"]
+            sizes[location], pop_type, owners[location], row["kind"], rank,
+            row["region"], geography["topography"].strip(),
+            geography["vegetation"].strip(),
         ))
         opening_seed = OPENING_RELIGION_SEEDS.get(location)
         if opening_seed:

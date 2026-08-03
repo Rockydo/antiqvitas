@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build and validate four-up direct art for S2-P3's 440 later advances."""
+"""Build and validate S2-P3's keyed later-advance art archive."""
 
 from __future__ import annotations
 
@@ -24,7 +24,9 @@ TEXTURE_DIR = ROOT / "main_menu/gfx/interface/advance"
 MANIFEST = ROOT / "docs/m8/s2_p3_advance_art_manifest.csv"
 CONTACT = ROOT / "docs/m8/s2_p3_advance_art_contact_sheet.png"
 REFERENCE = ROOT / "assets_queue/references/vanilla_advance_style_reference.png"
-EXPECTED_COUNT = 440
+EXPECTED_ACTIVE_COUNT = 395
+EXPECTED_ARCHIVE_COUNT = 440
+EXPECTED_SHEET_COUNT = 110
 SHEET_CAPACITY = 4
 LEDGER_FIELDS = ("key", "age", "subject", "source", "confidence", "status", "note")
 MANIFEST_FIELDS = (
@@ -54,12 +56,30 @@ def later_keys() -> set[str]:
 
 def expansion_records():
     keys = later_keys()
-    records = tuple(record for record in advance_records() if record.key in keys)
-    if len(records) != EXPECTED_COUNT or {record.key for record in records} != keys:
+    reviewed = {
+        row["key"] for row in ledger_rows()
+        if "S2-P3 four-up sheet" in row["note"]
+    }
+    records = tuple(
+        record for record in advance_records()
+        if record.key in keys and record.key in reviewed
+    )
+    if len(records) != EXPECTED_ACTIVE_COUNT:
         raise ValueError(
-            f"S2-P3 later-art selection must cover {EXPECTED_COUNT} records exactly"
+            "S2-P3 keyed later-art selection must cover "
+            f"{EXPECTED_ACTIVE_COUNT} active records exactly"
         )
     return records
+
+
+def manifest_rows() -> list[dict[str, str]]:
+    if not MANIFEST.is_file():
+        return []
+    with MANIFEST.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if tuple(reader.fieldnames or ()) != MANIFEST_FIELDS:
+            raise ValueError(f"advance-art manifest must use {MANIFEST_FIELDS}")
+        return [dict(row) for row in reader]
 
 
 def sheet_path(index: int) -> Path:
@@ -276,47 +296,58 @@ def write(records) -> None:
 
 def check(records) -> None:
     failures: list[str] = []
-    expected_manifest = manifest_text(records)
-    actual_manifest = (
-        MANIFEST.read_text(encoding="utf-8-sig") if MANIFEST.is_file() else ""
-    )
-    if actual_manifest != expected_manifest:
-        failures.append("S2-P3 advance-art manifest is stale")
+    manifest = manifest_rows()
+    manifest_keys = [row["key"] for row in manifest]
+    if len(manifest) != EXPECTED_ARCHIVE_COUNT:
+        failures.append(
+            f"expected {EXPECTED_ARCHIVE_COUNT} archived manifest rows, "
+            f"got {len(manifest)}"
+        )
+    if len(set(manifest_keys)) != len(manifest_keys):
+        failures.append("S2-P3 advance-art manifest has duplicate keys")
+    if len({row["sheet"] for row in manifest}) != EXPECTED_SHEET_COUNT:
+        failures.append(
+            f"S2-P3 advance art must retain {EXPECTED_SHEET_COUNT} four-up sheets"
+        )
+    active_keys = {record.key for record in records}
+    if not active_keys.issubset(set(manifest_keys)):
+        failures.append("active S2-P3 art keys are absent from the archive manifest")
     complete = {
         row["key"]: row for row in ledger_rows() if row["status"] == "complete"
     }
     hashes: dict[str, str] = {}
-    for index, record in enumerate(records):
-        sheet = sheet_path(index)
-        source, master, texture = paths(record.key)
-        if record.key not in complete:
-            failures.append(f"direct art ledger is missing {record.key}")
+    for row in manifest:
+        key = row["key"]
+        sheet = SHEET_DIR / row["sheet"]
+        source, master, texture = paths(key)
+        if key not in complete:
+            failures.append(f"direct art ledger is missing {key}")
         for path, role in (
             (sheet, "four-up sheet"), (source, "source"),
             (master, "master"), (texture, "texture"),
         ):
             if not path.is_file():
-                failures.append(f"missing {role} for {record.key}: {path.relative_to(ROOT)}")
+                failures.append(f"missing {role} for {key}: {path.relative_to(ROOT)}")
         if master.is_file():
             with Image.open(master) as image:
                 rgba = image.convert("RGBA")
                 if image.format != "PNG" or image.size != (256, 256):
-                    failures.append(f"invalid master contract for {record.key}")
+                    failures.append(f"invalid master contract for {key}")
                 alpha = rgba.getchannel("A")
                 bounds = alpha.getbbox()
                 if bounds is None:
-                    failures.append(f"empty alpha for {record.key}")
+                    failures.append(f"empty alpha for {key}")
                 elif (
                     bounds[0] < 12 or bounds[1] < 12
                     or bounds[2] > 244 or bounds[3] > 244
                 ):
-                    failures.append(f"unsafe circular framing for {record.key}: {bounds}")
+                    failures.append(f"unsafe circular framing for {key}: {bounds}")
                 if alpha.getpixel((0, 0)) or alpha.getpixel((255, 255)):
-                    failures.append(f"opaque master corner for {record.key}")
+                    failures.append(f"opaque master corner for {key}")
                 digest = hashlib.sha256(rgba.tobytes()).hexdigest()
             if digest in hashes:
-                failures.append(f"visual alias: {hashes[digest]} and {record.key}")
-            hashes[digest] = record.key
+                failures.append(f"visual alias: {hashes[digest]} and {key}")
+            hashes[digest] = key
         if texture.is_file():
             details = identify(texture)
             expected = {
@@ -324,11 +355,11 @@ def check(records) -> None:
                 "depth": "8", "channels": "srgba 4.0",
             }
             if details != expected:
-                failures.append(f"invalid DDS for {record.key}: {details}")
-    if len(records) != EXPECTED_COUNT:
-        failures.append(f"expected {EXPECTED_COUNT} later records, got {len(records)}")
-    if len({sheet_path(index) for index in range(len(records))}) != 110:
-        failures.append("S2-P3 advance art must use exactly 110 four-up sheets")
+                failures.append(f"invalid DDS for {key}: {details}")
+    if len(records) != EXPECTED_ACTIVE_COUNT:
+        failures.append(
+            f"expected {EXPECTED_ACTIVE_COUNT} active later records, got {len(records)}"
+        )
     if not REFERENCE.is_file():
         failures.append("installed EU5 advance style reference is missing")
     if not CONTACT.is_file():
@@ -353,21 +384,24 @@ def main() -> int:
     try:
         records = expansion_records()
         if args.manifest:
-            write_manifest(records)
-            print(
-                "m8_later_expansion_art: wrote 110 four-up prompts for "
-                f"{len(records)} later advances"
+            raise ValueError(
+                "the 440-key S2-P3 manifest is an archival contract; "
+                "do not rebuild it from the split active tree"
             )
-            return 0
         if args.write:
-            write(records)
+            raise ValueError(
+                "the 440-key S2-P3 art archive is already rendered; "
+                "do not positionally rewrite it from the split active tree"
+            )
         check(records)
     except (OSError, ValueError, csv.Error) as exc:
         print(f"m8_later_expansion_art: FAIL\n  - {exc}")
         return 1
     print(
         "m8_later_expansion_art: PASS "
-        f"({len(records)} direct BC7 icons from 110 EU5-referenced four-up sheets)"
+        f"({len(records)} active + "
+        f"{EXPECTED_ARCHIVE_COUNT - len(records)} retired direct BC7 icons from "
+        f"{EXPECTED_SHEET_COUNT} EU5-referenced four-up sheets)"
     )
     return 0
 

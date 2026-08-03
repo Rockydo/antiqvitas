@@ -161,7 +161,7 @@ STATE_FLEET_TAGS = frozenset({
 ORGANIZED_PATROL_TAGS = frozenset({
     "EPD", "DUM", "VNI", "GUT", "MUG", "AES", "FIN", "ROX", "BYE",
     "MBL", "BCP", "MTT", "BTM", "MKS", "MNH", "KWL", "NAZ", "LIM",
-    "EMR", "WCR", "WIC", "CCF",
+    "EMR", "WCR", "WIC", "CCF", "BLM",
 })
 LONG_DISTANCE_TAGS = frozenset({
     "ROM", "HAN", "SAT", "CHE", "SAB", "HIM", "OMN", "MAL", "JAV",
@@ -173,14 +173,14 @@ NAVAL_PROFILE_BY_REGION = {
     "Balkans": ("antq_trireme", "antq_merchant_roundship"),
     "Levant": ("antq_trireme", "antq_merchant_roundship"),
     "Africa": ("antq_kwale_coastal_patrol", "antq_kwale_sewn_plank_transport"),
-    "West Africa": ("antq_kwale_coastal_patrol", "antq_kwale_sewn_plank_transport"),
+    "West Africa": ("antq_west_african_estuary_canoe", "antq_west_african_river_transport"),
     "Arabia": ("antq_persian_gulf_patrol_craft", "antq_mesopotamian_river_transport"),
     "Iran": ("antq_persian_gulf_patrol_craft", "antq_mesopotamian_river_transport"),
     "Mesopotamia": ("antq_mesopotamian_river_patrol", "antq_mesopotamian_river_transport"),
     "Caucasus": ("antq_pontic_monoxylon_patrol", "antq_pontic_river_sea_transport"),
-    "China": ("antq_byeonhan_coastal_patrol", "antq_byeonhan_cargo_ferry"),
-    "Korea": ("antq_byeonhan_coastal_patrol", "antq_byeonhan_cargo_ferry"),
-    "Japan": ("antq_byeonhan_coastal_patrol", "antq_byeonhan_cargo_ferry"),
+    "China": ("antq_han_river_sea_patrol", "antq_han_grain_transport"),
+    "Korea": ("antq_korean_plank_patrol", "antq_korean_cargo_ferry"),
+    "Japan": ("antq_wa_logboat_patrol", "antq_wa_coastal_transport"),
     "India": ("antq_monsoon_dhow", "antq_merchant_roundship"),
     "Lanka": ("antq_monsoon_dhow", "antq_merchant_roundship"),
     "Britain": ("antq_british_coastal_warboat", "antq_british_hide_transport"),
@@ -195,16 +195,30 @@ NAVAL_PROFILE_BY_REGION = {
     "Central Asia": ("antq_pontic_monoxylon_patrol", "antq_pontic_river_sea_transport"),
     "Steppe": ("antq_pontic_monoxylon_patrol", "antq_pontic_river_sea_transport"),
     "Tarim": ("antq_pontic_monoxylon_patrol", "antq_pontic_river_sea_transport"),
-    "Southeast Asia": ("antq_sulawesi_lashed_lug_patrol", "antq_sulawesi_outrigger_transport"),
-    "Oceania": ("antq_sulawesi_lashed_lug_patrol", "antq_sulawesi_outrigger_transport"),
-    "Mesoamerica": ("antq_caribbean_dugout_patrol", "antq_caribbean_dugout_transport"),
+    "Southeast Asia": ("antq_mekong_river_sea_patrol", "antq_mekong_cargo_transport"),
+    "Oceania": ("antq_oceanian_double_canoe_patrol", "antq_oceanian_voyaging_transport"),
+    "Mesoamerica": ("antq_mesoamerican_dugout_patrol", "antq_mesoamerican_trade_canoe"),
     "Caribbean-Amazon": ("antq_caribbean_dugout_patrol", "antq_caribbean_dugout_transport"),
-    "North America": ("antq_caribbean_dugout_patrol", "antq_caribbean_dugout_transport"),
+    "North America": ("antq_north_american_woodland_canoe", "antq_north_american_cargo_canoe"),
     "Andes": ("antq_andean_balsa_patrol", "antq_andean_balsa_transport"),
     "Northern Andes": ("antq_andean_balsa_patrol", "antq_andean_balsa_transport"),
 }
 NAVAL_PROFILE_BY_TAG = {
-    "MAU": ("antq_trireme", "antq_merchant_roundship"),
+    "MAU": ("antq_punic_light_galley", "antq_punic_cargo_coaster"),
+    "BLM": ("antq_nile_patrol_boat", "antq_nile_grain_barge"),
+    "AKS": ("antq_red_sea_sewn_patrol", "antq_red_sea_cargo_boat"),
+    "ARO": ("antq_red_sea_sewn_patrol", "antq_red_sea_cargo_boat"),
+    "AVA": ("antq_red_sea_sewn_patrol", "antq_red_sea_cargo_boat"),
+    "MLA": ("antq_red_sea_sewn_patrol", "antq_red_sea_cargo_boat"),
+    "MOS": ("antq_red_sea_sewn_patrol", "antq_red_sea_cargo_boat"),
+    "OPO": ("antq_red_sea_sewn_patrol", "antq_red_sea_cargo_boat"),
+    "MAL": ("antq_nusantaran_lashed_lug_patrol", "antq_nusantaran_interisland_transport"),
+    "JAV": ("antq_nusantaran_lashed_lug_patrol", "antq_nusantaran_interisland_transport"),
+    "MBL": ("antq_philippine_outrigger_patrol", "antq_philippine_outrigger_transport"),
+    "BCP": ("antq_philippine_outrigger_patrol", "antq_philippine_outrigger_transport"),
+    "MTT": ("antq_philippine_outrigger_patrol", "antq_philippine_outrigger_transport"),
+    "EMR": ("antq_micronesian_outrigger_patrol", "antq_micronesian_double_outrigger_transport"),
+    "WCR": ("antq_micronesian_outrigger_patrol", "antq_micronesian_double_outrigger_transport"),
 }
 
 NAVAL_REQUIRED_CAPABILITY = {
@@ -376,16 +390,16 @@ def derived_naval_tags() -> dict[str, set[str]]:
             assignments.setdefault(STATE_FLEET, set()).add(tag)
         if level >= 5:
             assignments.setdefault(LONG_DISTANCE_CAPACITY, set()).add(tag)
-        if level < 3:
-            continue
         pair = NAVAL_PROFILE_BY_TAG.get(tag)
         if pair is None:
             pair = NAVAL_PROFILE_BY_REGION.get(row["region"])
         if pair is None:
             unknown_regions.add(row["region"])
             continue
-        patrol = pair[0]
-        assignments.setdefault(patrol, set()).add(tag)
+        if level >= 2:
+            assignments.setdefault(pair[1], set()).add(tag)
+        if level >= 3:
+            assignments.setdefault(pair[0], set()).add(tag)
     if unknown_regions:
         raise ValueError(
             "coastal regions lack naval profiles: " + ", ".join(sorted(unknown_regions))
@@ -479,6 +493,31 @@ def load_units() -> tuple[Unit, ...]:
             )
     if any(unit.kind == "navy" and dict(unit.modifiers).get("cannons") for unit in units):
         raise ValueError("M7 navy data must never define cannons")
+    if len(navy) < 60:
+        raise ValueError(f"Round 5 requires at least 60 ancient ships, found {len(navy)}")
+    maritime_profiles = set(NAVAL_PROFILE_BY_REGION.values()) | set(NAVAL_PROFILE_BY_TAG.values())
+    if len(maritime_profiles) < 20:
+        raise ValueError(
+            f"Round 5 requires at least 20 maritime profiles, found {len(maritime_profiles)}"
+        )
+    mapped_ship_keys = {key for pair in maritime_profiles for key in pair}
+    if not mapped_ship_keys <= navy:
+        raise ValueError(
+            "maritime profile references unknown ships: "
+            + ", ".join(sorted(mapped_ship_keys - navy))
+        )
+    required_flavor = {
+        "antq_han_river_sea_patrol", "antq_korean_plank_patrol",
+        "antq_wa_logboat_patrol", "antq_nile_patrol_boat",
+        "antq_red_sea_sewn_patrol", "antq_punic_light_galley",
+        "antq_west_african_estuary_canoe", "antq_mekong_river_sea_patrol",
+        "antq_nusantaran_lashed_lug_patrol", "antq_philippine_outrigger_patrol",
+        "antq_oceanian_double_canoe_patrol", "antq_mesoamerican_dugout_patrol",
+        "antq_caribbean_dugout_patrol", "antq_north_american_woodland_canoe",
+        "antq_pontic_monoxylon_patrol", "antq_persian_gulf_patrol_craft",
+    }
+    if not required_flavor <= navy:
+        raise ValueError("Round 5 maritime identity roster is incomplete")
     return tuple(units)
 
 

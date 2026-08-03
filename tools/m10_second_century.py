@@ -264,7 +264,11 @@ def moche_formation_lines() -> tuple[str, ...]:
 def impact_lines(record: Current) -> tuple[str, ...]:
     if record.key == "celestial_masters":
         return (
-            "\t\treligion:antq_daoism = { enable_religion = yes }",
+            "\t\treligion:antq_daoism = {",
+            "\t\t\tenable_religion = yes",
+            "\t\t\tcreate_holy_site = { name = antq_daoist_chengdu_community type = pilgrimage_city importance = 5 location = location:chengdu religions = { religion:antq_daoism } }",
+            "\t\t\tcreate_holy_site = { name = antq_daoist_hanzhong_community type = sanctuary importance = 4 location = location:nanzheng religions = { religion:antq_daoism } }",
+            "\t\t}",
             "\t\t# CAM-CM: bounded Chengdu-basin seed for the organized Celestial Masters current.",
             "\t\tlocation:chengdu = {",
             "\t\t\tevery_pop = {",
