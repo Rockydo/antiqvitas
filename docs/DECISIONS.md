@@ -1,5 +1,13 @@
 ﻿# Technical and Design Decisions
 
+## 2026-08-03 - Geography names reject mechanical shortcuts globally
+
+The six-level ledger is one authored corpus, so QA is global rather than limited
+to each batch. Reject digits, Roman ordinal tokens, modern colonial/eponym labels,
+terrain-clause tautologies, duplicate location display names, unresolved sources,
+kind mismatches, and unharnessed cross-level key collisions. Geographic fallback
+names remain valid only when they are locally specific, directional, and sourced.
+
 ## 2026-08-01 - Loading parallax owns subjects, never scenery
 
 Installed Rossbach proves `_00` is a coherent base and `_07` is the nearest of

@@ -1,5 +1,5 @@
 {
-  "complete": false,
+  "complete": true,
   "cross_level_collisions": {
     "aahkawiraahkata": {
       "labels": [
@@ -80,12 +80,13 @@
         "location"
       ],
       "researched_levels": [
-        "province"
+        "province",
+        "location"
       ],
-      "resolved": false
+      "resolved": true
     }
   },
-  "distinct_researched_keys": 31623,
+  "distinct_researched_keys": 33795,
   "expected_distinct_keys": 33795,
   "expected_rows": 33801,
   "levels": {
@@ -99,7 +100,7 @@
     },
     "location": {
       "expected": 28573,
-      "researched": 26400
+      "researched": 28573
     },
     "province": {
       "expected": 4309,
@@ -114,7 +115,7 @@
       "researched": 23
     }
   },
-  "researched_rows": 31628,
+  "researched_rows": 33801,
   "shards": [
     "names_areas_001_100.csv",
     "names_areas_101_200.csv",
@@ -193,6 +194,12 @@
     "names_locations_25201_25600.csv",
     "names_locations_25601_26000.csv",
     "names_locations_26001_26400.csv",
+    "names_locations_26401_26800.csv",
+    "names_locations_26801_27200.csv",
+    "names_locations_27201_27600.csv",
+    "names_locations_27601_28000.csv",
+    "names_locations_28001_28400.csv",
+    "names_locations_28401_28573.csv",
     "names_provinces_0001_0100.csv",
     "names_provinces_0101_0200.csv",
     "names_provinces_0201_0300.csv",

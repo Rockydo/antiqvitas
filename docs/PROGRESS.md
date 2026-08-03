@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-08-03 - AD 1 geography completes all 33,801 rows
+
+- Authored the final 2,173 locations; the canonical ledger now covers 28,573
+  locations and all 5,228 coarser hierarchy rows in all 11 clients.
+- Re-audited the full corpus and removed thousands of shortcut, eponym, formula,
+  collision, kind, and spatial defects; permanent global guards reject recurrence.
+- `make validate` passes 170/170; paired smoke adds zero lines at fingerprint
+  `571e335babf09bb4e925780b5a5ada2c6c3cc658724df1482c263a0be46fd133`.
+
 ## 2026-08-03 - AD 1 geography reaches 31,628 rows
 
 - Researched locations 22,401-26,400; all coarse levels and the first 26,400

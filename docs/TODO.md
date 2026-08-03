@@ -11,9 +11,9 @@ when the authored ledger, generated union, validator, and fresh runtime evidence
 Current green batch: fixed panoramas; 62-site holy-site union; seven ancient
 diseases; 22 inert situation adapters; Wealth localization; target tribesmen
 shares; 36 Cultivator families/144 methods; 151 productive families/453 methods;
-84 tribal buildings; 1,131 advances; 67 ships/27 profiles. Geography is
-31,628/33,801 (all coarse levels plus the first 26,400 locations) and remains the
-highest-priority open content task.
+84 tribal buildings; 1,131 advances; 67 ships/27 profiles. Geography authoring is
+33,801/33,801 across all six levels; runtime map-mode sampling remains the
+highest-priority open acceptance task.
 
 ### S5-P0 - Broken visible unions and AD 1 geography
 
@@ -22,13 +22,13 @@ highest-priority open content task.
   seven fully transparent compatibility planes; remove cutouts, inpainting,
   parallax, duplicate opacity, and depth motion. Stress every scene at forced
   loading percentages and compare with a vanilla static control.
-- [ ] Replace the complete six-level map-name union with deliberate AD 1 names:
+- [x] Replace the complete six-level map-name union with deliberate AD 1 names:
   28,573 locations, 4,309 provinces, 805 areas, 82 regions, 23 subcontinents, and
   9 continents (33,801 rows / 33,795 distinct keys, including six cross-level key
   collisions). Cover 4,745 marine locations, 886 lakes, 421 pure-marine provinces,
   and 102 pure-marine areas. No installed-label copy, raw-key humanization, Tier-3
   pass-through, blank, or unexplained vanilla-equal value may remain.
-- [ ] Build the canonical naming ledger from coarse to fine: continents,
+- [x] Build the canonical naming ledger from coarse to fine: continents,
   subcontinents, regions, areas, provinces, then locations grouped by parent.
   Record parent, kind, AD 1 name, language, method, source, confidence, and any
   sourced `unchanged_verified` exception. Attested names come first; otherwise use

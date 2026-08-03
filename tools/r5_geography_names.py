@@ -60,6 +60,25 @@ POSTCLASSICAL_LABEL = re.compile(
     r")\b",
     re.IGNORECASE,
 )
+COLONIAL_GEOGRAPHY_LABEL = re.compile(
+    r"\b(?:"
+    r"Alaska|Amazon|Baffin|Bering|Burdekin|Cabot|Caroline|Churchill|"
+    r"Columbia|Cook|Cooper|Darling|Diamantina|Falkland|Fitzroy|Florida|"
+    r"Fraser|Georgina|Hudson|Kimberley|Lynn|Mackenzie|Madeira|Magellan|"
+    r"Malheur|Murchison|Murray|Nelson|New Zealand|Norton|Patagonia|"
+    r"Pennsylvania|Schuylkill|Seward|Stuart|Tasman|Thompson|Uninhabited|"
+    r"Unpeopled|Whitsunday|Yukon|Zealandia"
+    r")\b",
+    re.IGNORECASE,
+)
+NUMERIC_SHORTCUT_LABEL = re.compile(r"(?:\d+|\b[IVXLCDM]{2,}\b)")
+FORMULA_SPLIT = re.compile(r"\s+(?:-|–|—)\s+|:\s+")
+TAUTOLOGY_TERMS = {
+    "atoll", "bay", "basin", "cape", "channel", "coast", "delta",
+    "desert", "estuary", "forest", "gulf", "highland", "hill", "lake",
+    "land", "lowland", "marsh", "mountain", "ocean", "plain", "plateau",
+    "reef", "river", "salt", "sea", "shore", "strait", "valley", "water",
+}
 PLACEHOLDER_LABEL = re.compile(r"(?:_SHORT\b|\b(?:TODO|TBD|placeholder)\b)", re.IGNORECASE)
 
 
@@ -153,6 +172,30 @@ def normalized_label(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", value.casefold()).strip()
 
 
+def formula_tautology(value: str) -> list[str]:
+    parts = FORMULA_SPLIT.split(value)
+    if len(parts) < 2:
+        return []
+    seen: set[str] = set()
+    repeated: set[str] = set()
+    for part in parts:
+        terms: set[str] = set()
+        for word in re.findall(r"[A-Za-z]+", part.casefold()):
+            if word == "waters":
+                word = "water"
+            elif word == "lands":
+                word = "land"
+            elif word == "estuaries":
+                word = "estuary"
+            elif word.endswith("s") and word[:-1] in TAUTOLOGY_TERMS:
+                word = word[:-1]
+            if word in TAUTOLOGY_TERMS:
+                terms.add(word)
+        repeated.update(seen & terms)
+        seen.update(terms)
+    return sorted(repeated)
+
+
 def installed_names() -> dict[tuple[str, str], str]:
     game = Path(json.loads(CONFIG.read_text(encoding="utf-8-sig"))["game_dir"]) / "game"
     english = game / "main_menu/localization/english"
@@ -232,6 +275,16 @@ def canonical_rows() -> tuple[list[dict[str, str]], dict[str, object]]:
                 failures.append(f"{path.name}: generic Community/Group label for {token}")
             if POSTCLASSICAL_LABEL.search(row["ad1_name"]):
                 failures.append(f"{path.name}: post-classical geography label for {token}")
+            if COLONIAL_GEOGRAPHY_LABEL.search(row["ad1_name"]):
+                failures.append(f"{path.name}: colonial/eponymic geography label for {token}")
+            if NUMERIC_SHORTCUT_LABEL.search(row["ad1_name"]):
+                failures.append(f"{path.name}: numeric shortcut geography label for {token}")
+            repeated_terms = formula_tautology(row["ad1_name"])
+            if repeated_terms:
+                failures.append(
+                    f"{path.name}: tautological geography label for {token}: "
+                    f"{','.join(repeated_terms)}"
+                )
             if len(row["ad1_name"]) > 60:
                 failures.append(
                     f"{path.name}: overlong geography label for {token} "
@@ -270,6 +323,13 @@ def canonical_rows() -> tuple[list[dict[str, str]], dict[str, object]]:
     for (level, parent, name), keys in siblings.items():
         if len(keys) > 1:
             failures.append(f"sibling collision {level}/{parent}/{name}: {sorted(keys)}")
+    location_labels: dict[str, list[str]] = defaultdict(list)
+    for (level, key), row in rows_by_token.items():
+        if level == "location":
+            location_labels[normalized_label(row["ad1_name"])].append(key)
+    for name, keys in location_labels.items():
+        if len(keys) > 1:
+            failures.append(f"global location-label collision {name}: {sorted(keys)}")
     key_levels: dict[str, list[str]] = defaultdict(list)
     for level, values in expected.items():
         for key in values:
