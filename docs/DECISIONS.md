@@ -4557,4 +4557,5 @@ and any effective-value mismatch.
 
 When the engine reuses one localization key at multiple geography levels, keep
 one reviewed label at every level. `kilkenny` therefore uses `Brigantes of the
-Nore` for both province and location instead of creating an impossible override.
+Nore` for both province and location instead of creating an impossible override;
+`qingchi` likewise uses `Bohai–Hejian Salt Plain` at both levels.

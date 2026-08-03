@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-08-03 - AD 1 geography reaches 27,628 rows
+
+- Researched locations 18,401-22,400; all coarse levels and the first 22,400
+  locations now generate through the canonical ledger in all 11 clients.
+- Independent review applied 116 definite repairs; `qingchi` now shares its one
+  reviewed display value across the engine's province/location key collision.
+- `make validate` passes 170/170; paired smoke adds zero lines at fingerprint
+  `fdec58f68155a7978d0ef5e96183b6a4c51157d27aed9ccb95a404b48ccbaee0`.
+
 ## 2026-08-03 - AD 1 geography reaches 23,628 rows
 
 - Researched locations 14,401-18,400; all coarse levels and the first 18,400
