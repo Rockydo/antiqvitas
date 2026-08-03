@@ -1,5 +1,14 @@
 # Progress
 
+## 2026-08-03 - AD 1 geography reaches 19,628 rows
+
+- Researched locations 10,401-14,400, bringing all coarse levels plus the first
+  14,400 locations into the canonical ledger and all 11 clients.
+- Independent QA repaired 97 kind/name defects; the `kilkenny` cross-level key
+  now has one intentional value. Single-owner localization remains exact.
+- `make validate` passes 170/170; paired smoke adds zero lines at fingerprint
+  `f6be4102a529f3ff3350df1928259d9ea1e19972f511f301056ad350e8b54f56`.
+
 ## 2026-08-03 - AD 1 geography reaches 15,628 rows
 
 - Researched the first 10,400 locations after completing every coarser level;

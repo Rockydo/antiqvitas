@@ -67,6 +67,6 @@ the audit.
 
 ## Result
 
-47 English files and 80943 quoted player-facing entries contain
+47 English files and 81125 quoted player-facing entries contain
 zero prohibited terms. The check is pinned in `make validate`; a newly authored
 anachronism fails before it can reach a smoke run.

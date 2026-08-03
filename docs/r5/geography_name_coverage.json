@@ -38,9 +38,10 @@
         "location"
       ],
       "researched_levels": [
-        "province"
+        "province",
+        "location"
       ],
-      "resolved": false
+      "resolved": true
     },
     "limousin_province": {
       "labels": [
@@ -83,7 +84,7 @@
       "resolved": false
     }
   },
-  "distinct_researched_keys": 15625,
+  "distinct_researched_keys": 19624,
   "expected_distinct_keys": 33795,
   "expected_rows": 33801,
   "levels": {
@@ -97,7 +98,7 @@
     },
     "location": {
       "expected": 28573,
-      "researched": 10400
+      "researched": 14400
     },
     "province": {
       "expected": 4309,
@@ -112,7 +113,7 @@
       "researched": 23
     }
   },
-  "researched_rows": 15628,
+  "researched_rows": 19628,
   "shards": [
     "names_areas_001_100.csv",
     "names_areas_101_200.csv",
@@ -151,6 +152,16 @@
     "names_locations_09201_09600.csv",
     "names_locations_09601_10000.csv",
     "names_locations_10001_10400.csv",
+    "names_locations_10401_10800.csv",
+    "names_locations_10801_11200.csv",
+    "names_locations_11201_11600.csv",
+    "names_locations_11601_12000.csv",
+    "names_locations_12001_12400.csv",
+    "names_locations_12401_12800.csv",
+    "names_locations_12801_13200.csv",
+    "names_locations_13201_13600.csv",
+    "names_locations_13601_14000.csv",
+    "names_locations_14001_14400.csv",
     "names_provinces_0001_0100.csv",
     "names_provinces_0101_0200.csv",
     "names_provinces_0201_0300.csv",

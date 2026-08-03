@@ -4552,3 +4552,9 @@ Feed researched values into existing M4 owners and place only previously absent
 keys in `zzz_antq_r5_geography`. Require exactly one owner per client. Reject
 generic/post-colonial labels, placeholders, damage, overlong names, collisions,
 and any effective-value mismatch.
+
+## 2026-08-03 - Cross-level keys have one display value
+
+When the engine reuses one localization key at multiple geography levels, keep
+one reviewed label at every level. `kilkenny` therefore uses `Brigantes of the
+Nore` for both province and location instead of creating an impossible override.
