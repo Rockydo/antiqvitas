@@ -1,6 +1,89 @@
 {
   "complete": false,
-  "distinct_researched_keys": 6025,
+  "cross_level_collisions": {
+    "aahkawiraahkata": {
+      "labels": [
+        "Aahkawiraahkata River Villages"
+      ],
+      "levels": [
+        "province",
+        "location"
+      ],
+      "researched_levels": [
+        "province",
+        "location"
+      ],
+      "resolved": true
+    },
+    "eastern_baltic_sea": {
+      "labels": [
+        "Sinus Venedicus and Aestian Waters"
+      ],
+      "levels": [
+        "area",
+        "province"
+      ],
+      "researched_levels": [
+        "area",
+        "province"
+      ],
+      "resolved": true
+    },
+    "kilkenny": {
+      "labels": [
+        "Brigantes of the Nore"
+      ],
+      "levels": [
+        "province",
+        "location"
+      ],
+      "researched_levels": [
+        "province"
+      ],
+      "resolved": false
+    },
+    "limousin_province": {
+      "labels": [
+        "Lemovices of Augustoritum"
+      ],
+      "levels": [
+        "area",
+        "province"
+      ],
+      "researched_levels": [
+        "area",
+        "province"
+      ],
+      "resolved": true
+    },
+    "qingchi": {
+      "labels": [
+        "Bohai\u2013Hejian Salt Plain"
+      ],
+      "levels": [
+        "province",
+        "location"
+      ],
+      "researched_levels": [
+        "province"
+      ],
+      "resolved": false
+    },
+    "windward_passage": {
+      "labels": [
+        "Ayiti\u2013Cubanacan Passage Waters"
+      ],
+      "levels": [
+        "province",
+        "location"
+      ],
+      "researched_levels": [
+        "province"
+      ],
+      "resolved": false
+    }
+  },
+  "distinct_researched_keys": 15625,
   "expected_distinct_keys": 33795,
   "expected_rows": 33801,
   "levels": {
@@ -14,7 +97,7 @@
     },
     "location": {
       "expected": 28573,
-      "researched": 800
+      "researched": 10400
     },
     "province": {
       "expected": 4309,
@@ -29,7 +112,7 @@
       "researched": 23
     }
   },
-  "researched_rows": 6028,
+  "researched_rows": 15628,
   "shards": [
     "names_areas_001_100.csv",
     "names_areas_101_200.csv",
@@ -44,6 +127,30 @@
     "names_locations_00201_00400.csv",
     "names_locations_00401_00600.csv",
     "names_locations_00601_00800.csv",
+    "names_locations_00801_01200.csv",
+    "names_locations_01201_01600.csv",
+    "names_locations_01601_02000.csv",
+    "names_locations_02001_02400.csv",
+    "names_locations_02401_02800.csv",
+    "names_locations_02801_03200.csv",
+    "names_locations_03201_03600.csv",
+    "names_locations_03601_04000.csv",
+    "names_locations_04001_04400.csv",
+    "names_locations_04401_04800.csv",
+    "names_locations_04801_05200.csv",
+    "names_locations_05201_05600.csv",
+    "names_locations_05601_06000.csv",
+    "names_locations_06001_06400.csv",
+    "names_locations_06401_06800.csv",
+    "names_locations_06801_07200.csv",
+    "names_locations_07201_07600.csv",
+    "names_locations_07601_08000.csv",
+    "names_locations_08001_08400.csv",
+    "names_locations_08401_08800.csv",
+    "names_locations_08801_09200.csv",
+    "names_locations_09201_09600.csv",
+    "names_locations_09601_10000.csv",
+    "names_locations_10001_10400.csv",
     "names_provinces_0001_0100.csv",
     "names_provinces_0101_0200.csv",
     "names_provinces_0201_0300.csv",

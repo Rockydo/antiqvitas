@@ -38,6 +38,7 @@ FRONTIER = ROOT / "docs/m4/frontier_language_names.csv"
 ROMAN = ROOT / "docs/m4/roman_location_name_overrides.csv"
 OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
 ENGINE_LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
+R5_GEOGRAPHY = ROOT / "docs/r5/geography_names.csv"
 CLIENT_LANGUAGES = (
     "english",
     "french",
@@ -58,6 +59,22 @@ OWNER_HOOK = "\t\tantq_frontier_owner_name_effect = yes"
 def rows(path: Path) -> list[dict[str, str]]:
     with path.open(encoding="utf-8-sig", newline="") as handle:
         return list(csv.DictReader(handle))
+
+
+def r5_root_overrides() -> dict[str, str]:
+    if not R5_GEOGRAPHY.is_file():
+        return {}
+    result: dict[str, str] = {}
+    for row in rows(R5_GEOGRAPHY):
+        key = row.get("key", "").strip()
+        name = row.get("ad1_name", "").strip()
+        if not key or not name:
+            raise ValueError(f"{R5_GEOGRAPHY.relative_to(ROOT)} has blank name data")
+        prior = result.get(key)
+        if prior is not None and prior != name:
+            raise ValueError(f"{R5_GEOGRAPHY.relative_to(ROOT)} diverges for {key}")
+        result[key] = name
+    return result
 
 
 def esc(value: str) -> str:
@@ -298,6 +315,9 @@ def root_entries(entries_: list[dict[str, str]]) -> list[tuple[str, str]]:
         raise ValueError(f"{TIER3_MAP.relative_to(ROOT)} has blank root fallback data")
     for entry in entries_:
         roots[entry["location"]] = entry["historical_name"]
+    for location, name in r5_root_overrides().items():
+        if location in roots:
+            roots[location] = name
     return sorted(roots.items())
 
 

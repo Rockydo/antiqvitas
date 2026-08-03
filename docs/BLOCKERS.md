@@ -217,3 +217,13 @@ still requires paired smoke and fresh percentage captures.
 machine-path content and personal author metadata. Public release requires a
 coordinated filter-repo rewrite and force-push; no published history was changed
 inside this content batch.
+
+## 2026-08-03 - Round 5 geography smoke blocked by vanilla renderer
+
+Status: resolved 2026-08-03.
+
+Two paired-smoke attempts failed before the mod half. Vanilla EU5 PIDs 25984 and
+31376 stayed responsive but presented a 0% non-black window for the full 480s;
+debug logs completed normal asset initialization. Static validation is 170/170.
+A clean Steam restart restored rendering; smoke then exposed and drove removal
+of duplicate localization ownership. Final paired smoke is zero-delta.

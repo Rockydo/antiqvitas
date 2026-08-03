@@ -6030,3 +6030,10 @@ engine-calibrated, not census claims. Sources: master plan §12; `P15`; `CAH-XI`
 The 24.4% world tribesmen share and regional tribal workshops represent mobile,
 frontier, upland, and weakly urbanized communities at game scale, not local census
 claims. Sources: master plan §§8, 12; `P8.1`-`P8.10`; `P12.1`; `P15`.
+
+## 2026-08-03 - Unattested local names use bounded reconstructions
+
+Where no AD 1 settlement name survives, use the ledger's contemporary people,
+archaeological horizon, hydronym, or physical feature and distinguish siblings by
+direction or reach. These are map-scale reconstructions, not claims of attestation.
+Sources are recorded per row in `docs/r5/geography_names.csv`.

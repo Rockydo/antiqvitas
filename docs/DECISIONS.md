@@ -4545,3 +4545,10 @@ throughput and efficiency only within the engine's 19-21% default-price band.
 Preserve required installed event references behind exact `always = no` gates and
 initialize variables only inside permanently inert situation adapters. This keeps
 the engine reference graph complete without exposing post-antique situations.
+
+## 2026-08-03 - Geography names have one localization owner
+
+Feed researched values into existing M4 owners and place only previously absent
+keys in `zzz_antq_r5_geography`. Require exactly one owner per client. Reject
+generic/post-colonial labels, placeholders, damage, overlong names, collisions,
+and any effective-value mismatch.

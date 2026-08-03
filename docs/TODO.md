@@ -11,8 +11,9 @@ when the authored ledger, generated union, validator, and fresh runtime evidence
 Current green batch: fixed panoramas; 62-site holy-site union; seven ancient
 diseases; 22 inert situation adapters; Wealth localization; target tribesmen
 shares; 36 Cultivator families/144 methods; 151 productive families/453 methods;
-84 tribal buildings; 1,131 advances; 67 ships/27 profiles. Geography remains
-6,028/33,801 and is the highest-priority open content task.
+84 tribal buildings; 1,131 advances; 67 ships/27 profiles. Geography is
+15,628/33,801 (all coarse levels plus the first 10,400 locations) and remains the
+highest-priority open content task.
 
 ### S5-P0 - Broken visible unions and AD 1 geography
 

@@ -1,5 +1,16 @@
 # Progress
 
+## 2026-08-03 - AD 1 geography reaches 15,628 rows
+
+- Researched the first 10,400 locations after completing every coarser level;
+  generated 15,625 distinct keys in all 11 clients.
+- Removed generic suffixes and post-colonial eponyms; capped labels at 60
+  characters and rejected encoding damage, placeholders, collisions, and later
+  localization overrides.
+- `make validate` passes 170/170. After a clean Steam restart and localization
+  ownership repair, paired smoke adds zero lines at fingerprint
+  `030e91e96e5e694afae86aa0d6369583b07efa57cbb742d6c785282dcaea02b4`.
+
 ## 2026-08-02 - Structural simulation audit hardened
 
 - Added exact guards for Principate finance, major-market inputs, native epidemic

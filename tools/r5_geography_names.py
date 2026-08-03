@@ -19,6 +19,11 @@ OUTPUT = DOCS / "geography_names.csv"
 COVERAGE = DOCS / "geography_name_coverage.json"
 CONFIG = ROOT / "config/local_paths.json"
 SYMBOLS = ROOT / "docs/vanilla_symbols"
+LOC_ROOT = ROOT / "main_menu/localization"
+CLIENTS = (
+    "english", "french", "german", "spanish", "polish", "russian",
+    "turkish", "braz_por", "simp_chinese", "japanese", "korean",
+)
 FIELDS = (
     "granularity", "key", "parent", "kind", "ad1_name", "language",
     "method", "source", "confidence", "note", "unchanged_verified",
@@ -31,8 +36,31 @@ LEVELS = (
     ("province", "provinces.json"),
     ("location", "locations.json"),
 )
+KINDS_BY_LEVEL = {
+    "continent": {"land", "marine"},
+    "subcontinent": {"land", "marine"},
+    "region": {"land", "marine"},
+    "area": {"land", "marine"},
+    "province": {"land", "marine", "sea"},
+    "location": {"land", "sea", "lake"},
+}
 ASSIGNED_SHARD = re.compile(r"^names_(areas|provinces|locations)_(\d+)_(\d+)\.csv$")
 LOC_LINE = re.compile(r'^\s*([^#\s][^:]*):(?:\d+)?\s+"(.*)"\s*$')
+GENERIC_LABEL = re.compile(
+    r"\b(?:communit(?:y|ies)|groups?|indigenous|unsettled)\b",
+    re.IGNORECASE,
+)
+POSTCLASSICAL_LABEL = re.compile(
+    r"\b(?:"
+    r"Saint|Sainte|Victoria|Prince|Princess|King|Queen|George|Elizabeth|"
+    r"James|Charles|"
+    r"San Pedro|San Juan|San Gabriel|San Jacinto|Santa Cruz|Santa Barbara|"
+    r"Prince Rupert|Victoria River|Victoria[- ]Nile|French[- ]River|"
+    r"Flinders|Norman Gulf|Roebuck[- ]King"
+    r")\b",
+    re.IGNORECASE,
+)
+PLACEHOLDER_LABEL = re.compile(r"(?:_SHORT\b|\b(?:TODO|TBD|placeholder)\b)", re.IGNORECASE)
 
 
 def expected_sets() -> dict[str, tuple[str, ...]]:
@@ -67,6 +95,11 @@ def expected_parents(expected: dict[str, tuple[str, ...]]) -> dict[tuple[str, st
 
 
 def read_shard(path: Path) -> list[dict[str, str]]:
+    payload = path.read_bytes()
+    if payload.startswith(b"\xef\xbb\xbf"):
+        raise ValueError(f"{path.name}: research shards must be UTF-8 without BOM")
+    if b"\r" in payload:
+        raise ValueError(f"{path.name}: research shards must use LF line endings")
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
         if tuple(reader.fieldnames or ()) != FIELDS:
@@ -92,6 +125,32 @@ def shard_assignment(path: Path, expected: dict[str, tuple[str, ...]]) -> set[tu
         keys = sorted(expected[level])[int(first) - 1:int(last)]
         return {(level, key) for key in keys}
     return None
+
+
+def shard_order(path: Path, expected: dict[str, tuple[str, ...]]) -> list[tuple[str, str]] | None:
+    if path.name == "names_coarse_continents_subcontinents.csv":
+        return [
+            (level, key)
+            for level in ("continent", "subcontinent")
+            for key in expected[level]
+        ]
+    if path.name == "names_regions_a.csv":
+        return [("region", key) for key in sorted(expected["region"])[:41]]
+    if path.name == "names_regions_b.csv":
+        return [("region", key) for key in sorted(expected["region"])[41:]]
+    match = ASSIGNED_SHARD.match(path.name)
+    if match:
+        plural, first, last = match.groups()
+        level = plural[:-1] if plural.endswith("s") else plural
+        return [
+            (level, key)
+            for key in sorted(expected[level])[int(first) - 1:int(last)]
+        ]
+    return None
+
+
+def normalized_label(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", value.casefold()).strip()
 
 
 def installed_names() -> dict[tuple[str, str], str]:
@@ -128,8 +187,10 @@ def canonical_rows() -> tuple[list[dict[str, str]], dict[str, object]]:
     )
     for path in shard_files:
         rows = read_shard(path)
-        tokens = {(row["granularity"], row["key"]) for row in rows}
+        token_order = [(row["granularity"], row["key"]) for row in rows]
+        tokens = set(token_order)
         assigned = shard_assignment(path, expected)
+        assigned_order = shard_order(path, expected)
         if assigned is None:
             failures.append(f"unrecognized research shard filename: {path.name}")
         elif tokens != assigned:
@@ -137,6 +198,8 @@ def canonical_rows() -> tuple[list[dict[str, str]], dict[str, object]]:
                 f"{path.name}: assigned-set mismatch missing={len(assigned - tokens)} "
                 f"extra={len(tokens - assigned)}"
             )
+        elif token_order != assigned_order:
+            failures.append(f"{path.name}: rows are not in exact canonical key order")
         for row in rows:
             token = (row["granularity"], row["key"])
             if token in rows_by_token:
@@ -153,9 +216,37 @@ def canonical_rows() -> tuple[list[dict[str, str]], dict[str, object]]:
             for field in ("kind", "ad1_name", "language", "method", "source", "confidence", "note"):
                 if not row[field]:
                     failures.append(f"{path.name}: {token} lacks {field}")
+            if row["kind"] not in KINDS_BY_LEVEL[row["granularity"]]:
+                failures.append(
+                    f"{path.name}: {token} has invalid kind {row['kind']!r}"
+                )
             if row["confidence"].lower() not in {"high", "medium", "low"}:
                 failures.append(f"{path.name}: {token} has invalid confidence")
             unchanged = row["unchanged_verified"].lower() in {"1", "true", "yes"}
+            if (
+                normalized_label(row["key"]) == normalized_label(row["ad1_name"])
+                and not unchanged
+            ):
+                failures.append(f"{path.name}: raw-key humanization for {token}")
+            if GENERIC_LABEL.search(row["ad1_name"]):
+                failures.append(f"{path.name}: generic Community/Group label for {token}")
+            if POSTCLASSICAL_LABEL.search(row["ad1_name"]):
+                failures.append(f"{path.name}: post-classical geography label for {token}")
+            if len(row["ad1_name"]) > 60:
+                failures.append(
+                    f"{path.name}: overlong geography label for {token} "
+                    f"({len(row['ad1_name'])} characters)"
+                )
+            if "?" in row["ad1_name"] or "\ufffd" in row["ad1_name"]:
+                failures.append(f"{path.name}: corrupted character in label for {token}")
+            if (
+                "â€" in row["ad1_name"]
+                or "Â\u00a0" in row["ad1_name"]
+                or re.search(r"Ã[^\x00-\x7f]", row["ad1_name"])
+            ):
+                failures.append(f"{path.name}: mojibake in label for {token}")
+            if PLACEHOLDER_LABEL.search(row["ad1_name"]):
+                failures.append(f"{path.name}: placeholder text in label for {token}")
             if token in vanilla and row["ad1_name"].casefold() == vanilla[token].casefold():
                 if not unchanged:
                     failures.append(f"{path.name}: unexplained vanilla-equal name for {token}")
@@ -179,6 +270,27 @@ def canonical_rows() -> tuple[list[dict[str, str]], dict[str, object]]:
     for (level, parent, name), keys in siblings.items():
         if len(keys) > 1:
             failures.append(f"sibling collision {level}/{parent}/{name}: {sorted(keys)}")
+    key_levels: dict[str, list[str]] = defaultdict(list)
+    for level, values in expected.items():
+        for key in values:
+            key_levels[key].append(level)
+    collision_report: dict[str, object] = {}
+    for key, levels in sorted(key_levels.items()):
+        if len(levels) < 2:
+            continue
+        researched = [rows_by_token[(level, key)] for level in levels if (level, key) in rows_by_token]
+        labels = sorted({row["ad1_name"] for row in researched})
+        resolved = len(researched) == len(levels) and len(labels) == 1
+        collision_report[key] = {
+            "levels": levels,
+            "researched_levels": [row["granularity"] for row in researched],
+            "labels": labels,
+            "resolved": resolved,
+        }
+        if len(researched) > 1 and len(labels) != 1:
+            failures.append(
+                f"cross-level localization collision {key} has divergent labels {labels}"
+            )
     if failures:
         raise ValueError("\n  - ".join(["geography research validation failed", *failures]))
 
@@ -198,6 +310,7 @@ def canonical_rows() -> tuple[list[dict[str, str]], dict[str, object]]:
             level: {"researched": counts[level], "expected": len(expected[level])}
             for level, _filename in LEVELS
         },
+        "cross_level_collisions": collision_report,
         "shards": [path.name for path in shard_files],
     }
     return rows, report
@@ -215,11 +328,94 @@ def coverage_bytes(report: dict[str, object]) -> bytes:
     return (json.dumps(report, indent=2, sort_keys=True) + "\n").encode("utf-8")
 
 
+def externally_owned_keys(client: str) -> set[str]:
+    owned: set[str] = set()
+    own_path = localization_path(client)
+    for path in sorted((LOC_ROOT / client).rglob("*.yml")):
+        if path == own_path:
+            continue
+        for line in path.read_text(encoding="utf-8-sig").splitlines():
+            match = LOC_LINE.match(line)
+            if match:
+                owned.add(match.group(1))
+    return owned
+
+
+def localization_bytes(
+    client: str,
+    rows: list[dict[str, str]],
+    externally_owned: set[str],
+) -> bytes:
+    values: dict[str, str] = {}
+    for row in rows:
+        prior = values.get(row["key"])
+        if prior is not None and prior != row["ad1_name"]:
+            raise ValueError(
+                f"cross-level key {row['key']} cannot localize both {prior!r} "
+                f"and {row['ad1_name']!r}"
+            )
+        values[row["key"]] = row["ad1_name"]
+    lines = [f"l_{client}:"]
+    for key, value in values.items():
+        if key in externally_owned:
+            continue
+        escaped = value.replace("\\", "\\\\").replace('"', '\\"')
+        lines.append(f' {key}:0 "{escaped}"')
+    return ("\n".join(lines) + "\n").encode("utf-8-sig")
+
+
+def localization_path(client: str) -> Path:
+    return LOC_ROOT / client / f"zzz_antq_r5_geography_l_{client}.yml"
+
+
+def effective_mod_localization(client: str) -> dict[str, str]:
+    values: dict[str, str] = {}
+    for path in sorted((LOC_ROOT / client).rglob("*.yml")):
+        for line in path.read_text(encoding="utf-8-sig").splitlines():
+            match = LOC_LINE.match(line)
+            if match:
+                values[match.group(1)] = match.group(2)
+    return values
+
+
+def localization_owners(client: str) -> dict[str, list[Path]]:
+    owners: dict[str, list[Path]] = defaultdict(list)
+    for path in sorted((LOC_ROOT / client).rglob("*.yml")):
+        for line in path.read_text(encoding="utf-8-sig").splitlines():
+            match = LOC_LINE.match(line)
+            if match:
+                owners[match.group(1)].append(path)
+    return owners
+
+
+def write_upstream_location_owners() -> None:
+    from generate_dynamic_names import outputs as dynamic_outputs
+    from generate_m4_location_name_corrections import (
+        correction_entries,
+        outputs as correction_outputs,
+    )
+
+    for path, (content, encoding) in dynamic_outputs().items():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding=encoding, newline="\n")
+    for path, content in correction_outputs(correction_entries()).items():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(content)
+
+
 def write() -> None:
     rows, report = canonical_rows()
     OUTPUT.write_bytes(csv_bytes(rows))
     COVERAGE.write_bytes(coverage_bytes(report))
-    print(f"r5_geography_names: merged {len(rows)}/{report['expected_rows']} sourced rows")
+    write_upstream_location_owners()
+    for client in CLIENTS:
+        path = localization_path(client)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(localization_bytes(client, rows, externally_owned_keys(client)))
+    print(
+        f"r5_geography_names: merged {len(rows)}/{report['expected_rows']} sourced rows "
+        f"and wrote {len(CLIENTS)} localization mirrors"
+    )
 
 
 def check() -> None:
@@ -228,9 +424,40 @@ def check() -> None:
         raise ValueError(f"stale {OUTPUT.relative_to(ROOT)}")
     if not COVERAGE.is_file() or COVERAGE.read_bytes() != coverage_bytes(report):
         raise ValueError(f"stale {COVERAGE.relative_to(ROOT)}")
+    reference: bytes | None = None
+    for client in CLIENTS:
+        path = localization_path(client)
+        expected = localization_bytes(client, rows, externally_owned_keys(client))
+        if not path.is_file() or path.read_bytes() != expected:
+            raise ValueError(f"stale {path.relative_to(ROOT)}")
+        normalized = expected.replace(f"l_{client}:".encode(), b"l_CLIENT:")
+        if reference is None:
+            reference = normalized
+        elif normalized != reference:
+            raise ValueError(f"geography localization diverges for {client}")
+        owners = localization_owners(client)
+        ownership_failures = [
+            row["key"] for row in rows
+            if len(owners.get(row["key"], ())) != 1
+        ]
+        if ownership_failures:
+            raise ValueError(
+                f"{client}: researched geography keys do not have exactly one "
+                f"localization owner {ownership_failures[:12]}"
+            )
+        effective = effective_mod_localization(client)
+        mismatches = [
+            row["key"] for row in rows
+            if effective.get(row["key"]) != row["ad1_name"]
+        ]
+        if mismatches:
+            raise ValueError(
+                f"{client}: later localization overrides researched geography "
+                f"{mismatches[:12]}"
+            )
     print(
         f"r5_geography_names: PASS ({len(rows)}/{report['expected_rows']} sourced "
-        f"hierarchy rows; complete={report['complete']})"
+        f"hierarchy rows; 11 clients; complete={report['complete']})"
     )
 
 
