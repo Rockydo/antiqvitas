@@ -634,13 +634,14 @@ def wait_for_observer_pause(timeout: int, poll_interval: float = 1.0) -> bool:
 def wait_for_transition_log(
     user_dir: Path, start_offset: int, timeout: int, cache_settle: int
 ) -> bool:
-    """Wait for EU5's own MainMenu->Game completion marker after Continue.
+    """Wait for a fully rendered Continue-to-game transition.
 
     A loaded save can display an almost-full loading bar for several minutes;
-    a fixed sleep was therefore unsafe.  The installed build writes state 4
-    only after committing the MainMenu->Game transaction.  The same local log
-    then records cached-data rebuilds; waiting for it to go quiet after their
-    completion prevents clicks landing on the 98%-complete loading screen.
+    a fixed sleep is unsafe.  The installed build writes state 4 and a cached-
+    data completion marker *before* the final visible loading frame disappears,
+    so neither log marker alone authorizes selector input.  Require both the
+    local transition records and five stable rendered frames without the
+    verified loading bar before clicking an Observer control.
     """
     debug = user_dir / "logs" / "debug.log"
     deadline = time.monotonic() + timeout
@@ -649,6 +650,7 @@ def wait_for_transition_log(
     saw_cache_finish = False
     last_change = time.monotonic()
     last_size = start_offset
+    non_loading_since: float | None = None
     while time.monotonic() < deadline:
         if debug.exists():
             size = debug.stat().st_size
@@ -670,13 +672,32 @@ def wait_for_transition_log(
                 saw_cache_finish = saw_cache_finish or (
                     "Finished ClearAndRecalculateCachedData" in suffix
                 )
-        if (
+        logs_ready = (
             saw_state_four
             and saw_cache_finish
             and time.monotonic() - last_change >= cache_settle
-        ):
-            print("gamedriver: MainMenu->Game and cached-data completion detected")
-            return True
+        )
+        if logs_ready:
+            try:
+                import pyautogui
+
+                window = activate_window()
+                image = pyautogui.screenshot(
+                    region=(window.left, window.top, window.width, window.height)
+                )
+                visible_loading = loading_progress(image) is not None
+            except RuntimeError:
+                visible_loading = True
+            if visible_loading:
+                non_loading_since = None
+            elif non_loading_since is None:
+                non_loading_since = time.monotonic()
+            elif time.monotonic() - non_loading_since >= 5:
+                print(
+                    "gamedriver: MainMenu->Game, cached-data, and visible "
+                    "loading completion detected"
+                )
+                return True
         time.sleep(2)
     return False
 

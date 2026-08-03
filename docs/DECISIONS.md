@@ -1,5 +1,11 @@
 ﻿# Technical and Design Decisions
 
+## 2026-08-03 - Recovery input waits for visible save-load completion
+
+`MainMenu->Game` and cached-data log markers occur while EU5 still renders a
+99% save-loading plate. Recovery now requires five stable non-loading frames
+before country-selection input; this prevents false observer-recovery claims.
+
 ## 2026-08-03 - Seed only terrain-neutral tribal openings
 
 Regional tribal buildings remain culture/terrain construction choices, but

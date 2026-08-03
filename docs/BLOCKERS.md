@@ -1,5 +1,17 @@
 # ANTIQVITAS BLOCKERS
 
+## 2026-08-03 - Save-to-Observer recovery resets the campaign date
+
+Status: bounded engine/renderer limitation; no further retry without a new
+save-observer contract.
+
+The explicit `r5_population_normal_end.eu5` menu entry advertises `1.5.30.12`
+and serializes `start_of_day=1.5.30`, but its fully loaded country selector
+renders `08:00, 1 January, 1`. After the repaired visible-load gate, both
+Observer entries exited in the known renderer path before useful playback.
+All temporarily isolated autosaves were restored. Evidence:
+`docs/screens/R5_POPULATION_CHECKPOINT_RECOVERY_20260803/`.
+
 ## 2026-08-03 - Round 5 one-year and century situation observers
 
 Status: bounded host-renderer limitation; static and five-month proofs pass.

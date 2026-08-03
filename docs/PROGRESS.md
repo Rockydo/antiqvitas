@@ -8,7 +8,9 @@
 - Replaced 494 rejected terrain-gated regional tribal starts at source with
   2,696 valid neutral seeds; all 36 regional choices remain gated buildables.
 - A normal Observer held tribesmen at 24.419% to 24.381% through five months.
-  One-year/century playback remains blocked by the recorded EU5 renderer fault.
+  A fully loaded `1.5.30` checkpoint resets to `1.1.1` on the engine's
+  Continue-to-Observer handoff, and both corrected recovery entries hit the
+  renderer exit; one-year/century playback remains blocked.
 - Final `make validate` passes 170/170; paired vanilla/mod smoke reaches both
   rendered menus with zero new lines at
   `223ab95ebb2526b1186c8989d0b0eef2f0fcd813390fb9f416db3c6db2328b94`.

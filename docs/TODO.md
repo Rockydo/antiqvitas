@@ -113,7 +113,8 @@ geography rows. Remaining release work is situation UI and one-year population.
   `docs/playtests/`; then update progress/decisions/assumptions and ship one large
   green Round 5 commit. Static validation is 170/170 and paired smoke is zero-delta
   at `223ab95ebb2526b1186c8989d0b0eef2f0fcd813390fb9f416db3c6db2328b94`;
-  only the recorded one-year/century renderer-blocked proofs remain open.
+  only the recorded one-year/century renderer-blocked proofs remain open. The
+  repaired save-recovery route also resets `1.5.30` to `1.1.1` before Observer.
 
 ## Advanced structural audit remediation - 2026-08-02 (resume here)
 

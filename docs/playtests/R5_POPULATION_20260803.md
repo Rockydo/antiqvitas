@@ -5,5 +5,8 @@
 - Speed-five calibration completed 120 seconds without pause recovery.
 - Full-year retries reproduced EU5 1.3.11 `C0000005` at
   `ffxFsr2ResourceIsNull`; no content frame appears in the stack.
+- A repaired non-debug recovery waited for visible save-load completion, but
+  the engine reset the explicit `1.5.30` checkpoint to `1.1.1` before Observer;
+  both recovery entries exited in the same renderer family.
 - Static population targets, capacity, and bookmark mirrors pass. One-year and
   `leavepops` visual proof remain blocked per `BLOCKERS.md`.
