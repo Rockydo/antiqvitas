@@ -41,7 +41,7 @@ gyeongju,antq_samhan,Jinhan,P8.3;SAM,tier2,Qualified Samhan polity anchor rather
 uian,antq_samhan,Byeonhan,P8.3;SAM,tier2,Qualified Samhan polity anchor rather than a claim about the later Uian name.
 nara,antq_wa,Yamato Basin,P8.3;CAH-XI,tier2,Qualified Yayoi Wa regional anchor without asserting a later Yamato state or capital.
 sagala,antq_greek_koine,Sagala,P8.4;CAH-XI,tier2,Qualified Indo-Greek rump anchor using the period Sagala form.
-rohtak,antq_shauraseni_prakrit,Yaudheya Territory,P8.4;CAH-XI,tier2,Qualified Yaudheya regional anchor rather than a claim about the modern Rohtak name.
+rohtak,antq_shauraseni_prakrit,Southwestern Indraprastha–Kuru Lowlands,P8.4;CAH-XI;R5-GEOGRAPHY,tier2,Qualified Yaudheya regional anchor rather than a claim about the modern Rohtak name. Round 5 researched geography replaces the installed or descriptive fallback.
 marib,antq_himyarite,Ma'rib,P8.6;CAH-XI,tier2,Qualified Sabaean anchor using the period Ma'rib form.
 shabwa,antq_himyarite,Šabwa,P8.6;CAH-XI,tier2,Qualified Hadramawt anchor using the period Šabwa form.
 fergana,antq_sogdian,Fergana Valley,P8.8;CHG,tier2,Qualified Dayuan regional anchor rather than a reconstructed capital site.
@@ -50,15 +50,15 @@ magway,antq_pyu,Pyu Cities,P8.9;CAH-XI,tier2,Qualified Pyu regional anchor rathe
 chaisri,antq_mon,Mon Plain,P8.9;CAH-XI,tier2,Qualified Mon precursor anchor rather than a claim about the later Nakhon Chaisri name.
 kedah,antq_malay,Malay Peninsula,P8.9;CAH-XI,tier2,Qualified early Malay regional anchor rather than a reconstructed polity capital.
 mataram,antq_javanese,Java,P8.9;CAH-XI,tier2,Qualified early Javanese regional anchor without asserting the later Mataram polity.
-niah,antq_niah_brunei_bay,Niah Cave-River Corridor,ANU-NIAH-METAL;P8.9,tier2,Archaeological-geographic anchor without naming one AD 1 settlement or polity.
-santubong,antq_rajang_sarawak,Sarawak Delta Corridors,ANU-NIAH-METAL;P8.9,tier2,Geographic anchor without backdating the later Santubong industrial centre.
-kinabatangan,antq_kinabatangan_sabah,Kinabatangan Littoral Corridor,MYH-BUKIT-TENGKORAK;P8.9,tier2,Geographic anchor without backdating the modern name as an AD 1 settlement.
-sesayap,antq_northeast_borneo_river_sea,Northeast River-Sea Corridors,QSR-LIANG-JON;P8.9,tier2,Geographic anchor without a named ancient polity.
+niah,antq_niah_brunei_bay,Niah Cave-River Corridor,ANU-NIAH-METAL;P8.9;R5-GEOGRAPHY,tier2,Archaeological-geographic anchor without naming one AD 1 settlement or polity. Round 5 researched geography replaces the installed or descriptive fallback.
+santubong,antq_rajang_sarawak,Sarawak Delta Corridors,ANU-NIAH-METAL;P8.9;R5-GEOGRAPHY,tier2,Geographic anchor without backdating the later Santubong industrial centre. Round 5 researched geography replaces the installed or descriptive fallback.
+kinabatangan,antq_kinabatangan_sabah,Kinabatangan Littoral Corridor,MYH-BUKIT-TENGKORAK;P8.9;R5-GEOGRAPHY,tier2,Geographic anchor without backdating the modern name as an AD 1 settlement. Round 5 researched geography replaces the installed or descriptive fallback.
+sesayap,antq_northeast_borneo_river_sea,Northeast River-Sea Corridors,QSR-LIANG-JON;P8.9;R5-GEOGRAPHY,tier2,Geographic anchor without a named ancient polity. Round 5 researched geography replaces the installed or descriptive fallback.
 karangan,antq_sangkulirang_karst,Sangkulirang Karst,QSR-LIANG-JON;QINT-LIANG-ABU;P8.9,tier2,Archaeological landscape anchor without backdating the modern location.
-muarakaman,antq_mahakam_river,Middle Mahakam Corridor,QSR-LIANG-JON;QINT-LIANG-ABU;P8.9,tier2,Geographic anchor without backdating Kutai or the Yupa court.
+muarakaman,antq_mahakam_river,Middle Mahakam Corridor,QSR-LIANG-JON;QINT-LIANG-ABU;P8.9;R5-GEOGRAPHY,tier2,Geographic anchor without backdating Kutai or the Yupa court. Round 5 researched geography replaces the installed or descriptive fallback.
 pinoh,antq_kapuas_melawi,Kapuas-Melawi Interior,ANTH-KAL-IRON;P8.9,tier2,Geographic anchor without a named AD 1 settlement.
 sambas,antq_west_borneo_coastal,Western Borneo Littoral,ANU-NIAH-METAL;P8.9,tier2,Geographic anchor without backdating Sambas or a Malay court.
-sampit,antq_central_south_borneo,Central-Southern River Corridors,ANTH-KAL-IRON;P8.9,tier2,Geographic anchor without later ethnic or political identity.
+sampit,antq_central_south_borneo,Central-Southern River Corridors,ANTH-KAL-IRON;P8.9;R5-GEOGRAPHY,tier2,Geographic anchor without later ethnic or political identity. Round 5 researched geography replaces the installed or descriptive fallback.
 banua_lawas,antq_banjar_paser,Meratus-Barito Foothills,ANTH-KAL-IRON;P8.9,tier2,Geographic anchor without backdating Banjar or the later place-name.
 tongatapu,antq_tongan,Tonga-Samoa-Fiji,P8.9;CAH-XI,tier2,Qualified western-Polynesian regional anchor rather than a reconstructed capital.
 tehotihuacan,antq_teotihuacano,Teōtīhuacān,P8.10;CAH-XI,tier2,Qualified period Teōtīhuacān form.
@@ -69,7 +69,7 @@ rimaq,antq_andean_regional,Lima Culture,P8.10;CAH-XI,tier2,Qualified Lima-cultur
 tiwanaku,antq_tiwanaku,Tiwanaku,P8.10;CAH-XI,tier2,Qualified early Tiwanaku period form.
 paribari,antq_chibchan,Chibchan Highlands,P8.10;CAH-XI,tier2,Qualified Chibchan society anchor rather than a claim about the installed locality.
 olentangy,antq_plains_woodland,Hopewell Sphere,P8.10;CAH-XI,tier2,Qualified Hopewell regional anchor rather than a reconstructed capital.
-moanunts,antq_algonquian,Basketmaker II,P8.10;CAH-XI,tier2,Qualified Basketmaker-II regional anchor rather than a claim about the installed locality.
+moanunts,antq_algonquian,Late Basketmaker Highlands,P8.10;CAH-XI;R5-GEOGRAPHY,tier2,Qualified Basketmaker-II regional anchor rather than a claim about the installed locality. Round 5 researched geography replaces the installed or descriptive fallback.
 iqaluit,antq_inuit_dorset,Dorset,P8.10;CAH-XI,tier2,Qualified Dorset regional anchor rather than a claim about the later Iqaluit name.
 omaha,antq_plains_woodland,Plains Societies,P8.10;CAH-XI,tier2,Qualified Plains society anchor rather than a claim about the later Omaha name.
 suwon,antq_korean,Samhan,P8.3;SAM,tier2,Qualified Korean-peninsula society anchor rather than the later Suwon name.
@@ -79,7 +79,7 @@ chabcha,antq_sumpa,Sumpa Northeastern Plateau,OXF-SINO-TIB;CAM-TIB-ARCH;P8.8,tie
 shantsa,antq_changtang_pastoral,Northern Changtang Pastures,ANT-TIB-HERDING;CAM-TIB-ARCH;P8.8,tier2,Qualified high-pasture archaeological-economic anchor rather than the later Shantsa administrative name.
 nedong,antq_yarlung_agropastoral,Bangga-Yarlung Valley,ANT-BANGGA;CAM-TIB-ARCH;P8.8,tier2,Qualified Yarlung valley anchor for the excavated Bangga horizon; the engine polygon is not claimed as the exact site.
 shigatse,antq_western_tsang,Western Tsangpo Valleys,CAM-TIB-ARCH;P8.8,tier2,Qualified western river-valley anchor rather than the later Shigatse city or Tsang administration.
-chamdo,antq_qamdo_corridor,Qamdo River Corridors,CAM-EAST-TIB;RAD-YUSHU;P8.8,tier2,Qualified upper-river corridor anchor rather than a securely recovered AD 1 settlement name.
+chamdo,antq_qamdo_corridor,Qamdo River Corridors,CAM-EAST-TIB;RAD-YUSHU;P8.8;R5-GEOGRAPHY,tier2,Qualified upper-river corridor anchor rather than a securely recovered AD 1 settlement name. Round 5 researched geography replaces the installed or descriptive fallback.
 derge,antq_drichu_highland,Drichu Highlands,CAM-EAST-TIB;RAD-YUSHU;P8.8,tier2,Qualified upper-Yangtze highland anchor rather than the much later Derge polity.
 dartsedo,antq_eastern_plateau_corridor,Eastern Plateau Passage,CAM-EAST-TIB;OXF-EAST-RIM;P8.8,tier2,Qualified plateau-escarpment exchange anchor rather than the later Dartsedo market-town name.
 kazan,antq_xiongnu,Siberian Steppe,P8.8;CAH-XI,tier2,Qualified Siberian society anchor rather than the later Kazan name.
@@ -89,30 +89,30 @@ dharmapuri,antq_tamil,Tagadur Uplands,JRAS-SATIYAPUTRA;CAM-TAMIL-MERCHANTS;P8.4,
 ujjain,antq_avanti_prakrit,Ujjayini,CAH-INDUS;P8.4,tier2,Direct ancient Ujjayini form at the installed city location.
 bhilsa,antq_avanti_prakrit,Vedisa,JRAS-VEDISA;P8.4,tier2,Qualified Vedisa-Sanchi urban-region anchor rather than an assertion that the polygon equals one excavated settlement boundary.
 kalinjar,antq_chedi_prakrit,Chedi Uplands,CAH-INDUS;P8.4,tier2,Qualified Chedi campaign anchor without treating later Kalanjara as the recovered AD 1 capital Suktimati.
-mandla,antq_narmada_vindhya_megalithic,Upper Narmada Corridor,CAM-CENTRAL-INDIA-MEGALITHS;P8.4,tier2,Qualified archaeological-geographic anchor rather than the later Mandla town or a recovered capital.
+mandla,antq_narmada_vindhya_megalithic,Upper Narmada Corridor,CAM-CENTRAL-INDIA-MEGALITHS;P8.4,tier2,Qualified archaeological-geographic anchor rather than the later Mandla town or a recovered capital. Concise period geography replaces the descriptive campaign-label formula.
 rewa,antq_son_vindhya_iron_age,Son-Vindhya Uplands,INFLIB-EARLY-HISTORIC;P8.4,tier2,Qualified archaeological-geographic anchor rather than the later Rewa polity or identity.
-jagdalpur,antq_bastar_megalithic,Bastar Plateau Horizon,INFLIB-EARLY-HISTORIC;P8.4,tier2,Qualified archaeological-region anchor rather than the later Jagdalpur city or dynasty.
+jagdalpur,antq_bastar_megalithic,Bastar Plateau Horizon,INFLIB-EARLY-HISTORIC;P8.4;R5-GEOGRAPHY,tier2,Qualified archaeological-region anchor rather than the later Jagdalpur city or dynasty. Round 5 researched geography replaces the installed or descriptive fallback.
 male_atoll,antq_maldivian_maritime,Central Maldivian Atolls,CAM-MALDIVES;P8.4,tier2,Qualified atoll-network anchor rather than the later Male sultanate capital or a securely dated AD 1 settlement.
 weithali,antq_arakan_littoral,Kaladan-Lemro Littoral,CAM-ARAKAN-BOUNDARY;P8.9,tier2,Qualified geographic anchor; the installed Vesali-derived field is not treated as an AD 1 city or polity.
 amaravati,antq_sa_huynh,Thu Bon Sa Huynh Coast,CAM-SAH;VASS-SAH;P8.9,tier2,Qualified archaeological-coastal anchor without backdating Amaravati or Champa.
-cat_tien,antq_central_vietnam_highland,Central Highland Exchange Corridors,CAM-SAH;P8.9,tier2,Qualified geographic-material anchor without backdating the later Cat Tien sanctuary.
+cat_tien,antq_central_vietnam_highland,Central Highland Exchange Corridors,CAM-SAH;P8.9;R5-GEOGRAPHY,tier2,Qualified geographic-material anchor without backdating the later Cat Tien sanctuary. Round 5 researched geography replaces the installed or descriptive fallback.
 putao,antq_patkai_upper_irrawaddy,Patkai-Upper Irrawaddy Highlands,CAM-MYANMAR-CHRON;P8.9,tier2,Qualified highland anchor rather than the modern Putao settlement.
 myitkyina,antq_upper_irrawaddy_corridor,Upper Irrawaddy Confluence,CAM-MYANMAR-CHRON;P8.9,tier2,Qualified river-geographic anchor rather than the modern city.
 chiang_mai,antq_ping_wang_iron_age,Ping-Wang Basin,CAM-SEA-IRON;P8.9,tier2,Qualified basin anchor without backdating Chiang Mai or Lanna.
 chiang_rai,antq_kok_ing_nan_iron_age,Kok-Ing Basin,CAM-SEA-IRON;P8.9,tier2,Qualified basin anchor without backdating Chiang Rai or a later Tai state.
 muang_sua,antq_upper_mekong_upland,Upper Mekong Uplands,UNESCO-JARS;ANT-NLAOS;P8.9,tier2,Qualified corridor anchor without backdating Muang Sua or Luang Prabang.
-hsenwi,antq_upper_salween_shweli,Upper Salween-Shweli Corridors,CAM-MYANMAR-CHRON;P8.9,tier2,Qualified geographic anchor without backdating a Hsenwi principality.
+hsenwi,antq_upper_salween_shweli,Upper Salween-Shweli Corridors,CAM-MYANMAR-CHRON;P8.9,tier2,Qualified geographic anchor without backdating a Hsenwi principality. Concise period geography replaces the descriptive campaign-label formula.
 kengtung,antq_kengtung_basin,Kengtung Intermontane Basin,CAM-SEA-IRON;P8.9,tier2,Qualified basin label without backdating a Kengtung sawbwa state.
-mongnai,antq_southern_plateau_corridor,Southern Plateau Corridors,CAM-MYANMAR-CHRON;P8.9,tier2,Qualified geographic anchor without backdating a Mongnai principality.
+mongnai,antq_southern_plateau_corridor,Southern Plateau Corridors,CAM-MYANMAR-CHRON;P8.9,tier2,Qualified geographic anchor without backdating a Mongnai principality. Concise period geography replaces the descriptive campaign-label formula.
 maba_celebes,antq_mon,Island Southeast Asia,P8.9;CAH-XI,tier2,Qualified island-Southeast-Asian society anchor rather than a reconstructed capital.
-chalco,antq_teotihuacano,Central Mexican Highlands,P8.10;CAH-XI,tier2,Qualified Mesoamerican society anchor rather than a claim about the installed locality.
+chalco,antq_teotihuacano,Chalco Lands,P8.10;CAH-XI;R5-GEOGRAPHY,tier2,Qualified Mesoamerican society anchor rather than a claim about the installed locality. Round 5 researched geography replaces the installed or descriptive fallback.
 arequipa,antq_andean_regional,Andean Highlands,P8.10;CAH-XI,tier2,Qualified Andean society anchor rather than the later Arequipa name.
 aigun,antq_middle_amur_poltsian,Middle Amur Confluence,NMJH-YIL;CAM-PROTOTUNGUSIC;P8.3,tier2,Qualified geographic anchor without backdating the later Aigun settlement.
 nurgan,antq_lower_amur_estuary,Lower Amur Estuary,NMJH-YIL;RAD-RFE-IRON;P8.3,tier2,Qualified estuary anchor without backdating Nurgan administration.
 idy_sakhalin,antq_sakhalin_paleometal,Northern Sakhalin Coast,RAD-SAKHALIN;P8.3,tier2,Qualified island-coast anchor without projecting a later settlement or identity.
-hulin,antq_yilou,Ussuri Wetland Corridor,NMJH-YIL;P8.3,tier2,Qualified river-geographic anchor without backdating the modern city.
+hulin,antq_yilou,Ussuri Wetland Corridor,NMJH-YIL;P8.3,tier2,Qualified river-geographic anchor without backdating the modern city. Concise period geography replaces the descriptive campaign-label formula.
 jixi,antq_mudan_basin_iron_age,Mudan Basin,NMJH-YIL;CAM-PROTOTUNGUSIC;P8.3,tier2,Qualified basin anchor without backdating the modern city.
-yenji,antq_northern_okjeo_tuanjie,Tumen Corridor,NMJH-YIL;P8.3,tier2,Qualified corridor anchor without backdating the modern city or later Korean administration.
+yenji,antq_northern_okjeo_tuanjie,Tumen Corridor,NMJH-YIL;P8.3;R5-GEOGRAPHY,tier2,Qualified corridor anchor without backdating the modern city or later Korean administration. Round 5 researched geography replaces the installed or descriptive fallback.
 daga_papua,antq_daga_highland,Daga Highlands,JPA-PAPUA;CAM-NGU,tier2,Qualified geographic campaign anchor; no unattested AD 1 settlement name or later polity is asserted
 kaimana,antq_bomberai_south_coast,Bomberai South Coast,ANU-BOMBERAI;CAM-NGU,tier2,Qualified geographic campaign anchor; no unattested AD 1 settlement name or later polity is asserted
 guahan,antq_early_mariana_island,Guahan,WA-MARIANA;ANU-MIC,tier2,Qualified geographic campaign anchor; no unattested AD 1 settlement name or later polity is asserted
@@ -120,4 +120,4 @@ yap,antq_yap_ulithi_island,Yap Island,ICA-YAP;ANU-MIC,tier2,Qualified geographic
 guamontey,antq_orinoco_llanos_ceramic,Orinoco Llanos,JWP-ORINOCO,tier2,Qualified geographic campaign anchor; no unattested AD 1 settlement name or later polity is asserted
 carucairi,antq_windward_island_ceramic,Windward Islands,SCIADV-CARIB,tier2,Qualified geographic campaign anchor; no unattested AD 1 settlement name or later polity is asserted
 awaswas,antq_central_california_coastal,Monterey Bay Coast,NOAA-MONTEREY,tier2,Qualified geographic campaign anchor; no unattested AD 1 settlement name or later polity is asserted
-manaos,antq_acutuba_central_amazon,Central Amazon Floodplain,SA-EXPANSIONS;ACUTUBA-CHRON,tier2,Qualified geographic campaign anchor; no unattested AD 1 settlement name or later polity is asserted
+manaos,antq_acutuba_central_amazon,Solimoes–Negro Floodplain,SA-EXPANSIONS;ACUTUBA-CHRON;R5-GEOGRAPHY,tier2,Qualified geographic campaign anchor; no unattested AD 1 settlement name or later polity is asserted Round 5 researched geography replaces the installed or descriptive fallback.

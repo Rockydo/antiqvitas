@@ -744,6 +744,9 @@ def capture_new_game_loading(args: argparse.Namespace) -> int:
     deadline = started + args.timeout
     saw_loading = False
     last_progress: float | None = None
+    saw_state_four = False
+    non_loading_since: float | None = None
+    selector_ready = False
     while time.monotonic() < deadline:
         try:
             if not process.is_running() or process.status() == psutil.STATUS_ZOMBIE:
@@ -760,6 +763,7 @@ def capture_new_game_loading(args: argparse.Namespace) -> int:
         if progress is not None:
             saw_loading = True
             last_progress = progress
+            non_loading_since = None
             while pending and progress >= pending[0]:
                 requested_progress = pending.pop(0)
                 target = target_dir / (
@@ -784,14 +788,22 @@ def capture_new_game_loading(args: argparse.Namespace) -> int:
                     f"{requested_progress}% target: {target}",
                     flush=True,
                 )
-        # State 4 is emitted after the loading presentation is finished. It is
-        # a safer terminal than screen-colour guesses and does not require UI
-        # interaction with the newly built country selector.
+        # State 4 may be emitted while the visible new-game generator is still
+        # near the beginning of its work.  Treat it only as a prerequisite;
+        # the loading bar must then disappear and remain absent for several
+        # frames before the country selector is safe to click.
         if debug.exists():
             with debug.open("rb") as stream:
                 stream.seek(min(debug_offset, debug.stat().st_size))
                 suffix = stream.read().decode("utf-8", errors="replace")
             if "Setting Task state 4" in suffix and "MainMenu->Game" in suffix:
+                saw_state_four = True
+        if saw_loading and progress is None:
+            if non_loading_since is None:
+                non_loading_since = time.monotonic()
+            elif saw_state_four and time.monotonic() - non_loading_since >= 5:
+                print("gamedriver: country selector remained visible for 5s")
+                selector_ready = True
                 break
         time.sleep(args.interval)
 
@@ -805,16 +817,17 @@ def capture_new_game_loading(args: argparse.Namespace) -> int:
             round(last_progress, 2) if last_progress is not None else None
         ),
         "completed_targets": not pending,
+        "selector_ready": selector_ready,
     }
     manifest_path = target_dir / "loading_capture.json"
     manifest_path.write_text(
         json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
     )
     print(manifest_path)
-    if not saw_loading or len(records) < args.minimum_captures:
+    if not saw_loading or len(records) < args.minimum_captures or not selector_ready:
         print(
-            f"gamedriver: only {len(records)} loading frames captured; "
-            f"minimum is {args.minimum_captures}",
+            f"gamedriver: loading gate incomplete (captures={len(records)}, "
+            f"minimum={args.minimum_captures}, selector_ready={selector_ready})",
             file=sys.stderr,
         )
         return 1
@@ -1107,7 +1120,13 @@ def scroll(args: argparse.Namespace) -> int:
     y = window.top + round(window.height * args.y)
     pyautogui.FAILSAFE = False
     pyautogui.moveTo(x, y, duration=args.duration)
-    pyautogui.scroll(args.clicks)
+    # EU5 clamps a large synthetic wheel delta to roughly one zoom step. Send
+    # real detents across separate frames so +40/-40 actually reach the two
+    # map-scale endpoints used by the geography runtime gate.
+    direction = 1 if args.clicks >= 0 else -1
+    for _ in range(abs(args.clicks)):
+        pyautogui.scroll(direction)
+        time.sleep(0.035)
     time.sleep(args.settle)
     print(
         f"scrolled {args.clicks:+d} detents at normalized "
@@ -1197,6 +1216,26 @@ def press_scan_code(scan_code: int) -> None:
     ctypes.windll.user32.keybd_event(0, scan_code, scan_flag | key_up, 0)
 
 
+def debug_console_visible(image) -> bool:
+    """Detect the fixed-layout console from its prompt/toolbox gold borders."""
+    rgb = image.convert("RGB")
+    width, height = rgb.size
+    gold = 0
+    for y_fraction in (0.683, 0.710, 0.719, 0.754, 0.777, 0.785):
+        for x_fraction in (0.03, 0.05, 0.155, 0.28):
+            red, green, blue = rgb.getpixel(
+                (round(width * x_fraction), round(height * y_fraction))
+            )
+            if (
+                red >= 90
+                and green >= 60
+                and red >= green * 1.08
+                and green >= blue * 1.18
+            ):
+                gold += 1
+    return gold >= 8
+
+
 def console(args: argparse.Namespace) -> int:
     import pyautogui
 
@@ -1206,12 +1245,24 @@ def console(args: argparse.Namespace) -> int:
     # Physical key directly below Escape (scan code 0x29) works across QWERTY
     # and AZERTY layouts; virtual-key fallbacks cover OEM mappings.
     if args.already_open:
-        pyautogui.click(
-            window.left + int(window.width * 0.14),
-            window.top + int(window.height * 0.74),
+        visible = debug_console_visible(
+            pyautogui.screenshot(
+                region=(window.left, window.top, window.width, window.height)
+            )
         )
-        time.sleep(0.4)
+        if visible:
+            pyautogui.click(
+                window.left + int(window.width * 0.14),
+                window.top + int(window.height * 0.74),
+            )
+            time.sleep(0.4)
+        else:
+            press_scan_code(0x29)
+            time.sleep(1)
     else:
+        # Normal driver commands begin and end with a closed console.  Toggle
+        # it deterministically instead of inferring state from gold UI pixels:
+        # tag switches can make ordinary panels resemble the console frame.
         press_scan_code(0x29)
         time.sleep(1)
     if args.paste:
@@ -1229,8 +1280,9 @@ def console(args: argparse.Namespace) -> int:
     press_scan_code(0x1C)
     time.sleep(args.settle)
     if not args.leave_open:
+        activate_window()
         press_scan_code(0x29)
-        time.sleep(0.5)
+        time.sleep(0.8)
     print(f"console command sent: {args.command}")
     return 0
 
@@ -1302,11 +1354,15 @@ def observer_run(args: argparse.Namespace) -> int:
     last_pause_state: bool | None = None
 
     if args.maximum_speed:
-        # A direct UI coordinate is not stable here: in the current 1920px
-        # layout the former target is the multiplayer control.  Fresh Observer
-        # games enter paused; physical Space is the locally verified play
-        # toggle and keeps the existing maximum-tick-speed setting effective.
+        # The installed default.profile binds increase_speed to SDL scancodes
+        # 46 ('=') and 87 (keypad '+').  Windows' physical keypad-plus scan code
+        # is 0x4E.  Fresh games begin at speed three.  Speed five is the highest
+        # stable setting for this 230-million-population world on the reference
+        # host; the uncapped sixth/seventh engine speeds can starve the renderer.
         activate_window()
+        for _ in range(2):
+            press_scan_code(0x4E)
+            time.sleep(0.08)
         press_scan_code(0x39)
         time.sleep(0.5)
 

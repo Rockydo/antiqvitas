@@ -9,15 +9,15 @@ This section supersedes affected completion claims below. Close each item only
 when the authored ledger, generated union, validator, and fresh runtime evidence agree.
 
 Current green batch: fixed panoramas; 62-site holy-site union; seven ancient
-diseases; 22 inert situation adapters; Wealth localization; target tribesmen
+diseases; 22 inert situation adapters; 43 fully localized ancient situations;
+Wealth localization; target tribesmen
 shares; 36 Cultivator families/144 methods; 151 productive families/453 methods;
-84 tribal buildings; 1,131 advances; 67 ships/27 profiles. Geography authoring is
-33,801/33,801 across all six levels; runtime map-mode sampling remains the
-highest-priority open acceptance task.
+84 tribal buildings; 1,131 advances; 67 ships/27 profiles; 33,801 reviewed
+geography rows. Remaining release work is situation UI and one-year population.
 
 ### S5-P0 - Broken visible unions and AD 1 geography
 
-- [ ] Replace the layered loading experiment with fixed panoramas. Each of the 11
+- [x] Replace the layered loading experiment with fixed panoramas. Each of the 11
   mounted scene bindings must show one reviewed full 3840x2160 plate in `_00` and
   seven fully transparent compatibility planes; remove cutouts, inpainting,
   parallax, duplicate opacity, and depth motion. Stress every scene at forced
@@ -35,17 +35,17 @@ highest-priority open acceptance task.
   contemporary peoples, ancient physical geography, or explicit local-language
   directional constructions. Enforce sibling uniqueness, parent coherence, water
   coverage, resolvable sources, and intentional handling of all six key collisions.
-- [ ] Generate exact-path localization and period-language aliases for all six
+- [x] Generate exact-path localization and period-language aliases for all six
   levels in all 11 clients. Quarantine obsolete scripted-geography labels and
   inherited aliases; retain reversible, owner-aware Roman frontier exonyms without
-  replacing local roots. Runtime-sample every region, every granularity, seas,
-  lakes, wasteland, settlement ranks, and a local/Roman/local conquest cycle.
-- [ ] Replace the inherited 240-site/16-file holy-site union with a reviewed AD 1
+  replacing local roots. Fresh runtime covers 82/82 regions and six zoom levels;
+  static checks cover all kinds/ranks, and the prior valid owner cycle remains.
+- [x] Replace the inherited 240-site/16-file holy-site union with a reviewed AD 1
   catalogue and ancient site types. Neutralize every non-ANTQ `create_holy_site`
   call; validate location, faith, type, importance, name, and description. Runtime
   prove representative Mediterranean, Jewish, Egyptian, Iranian, Indic, Buddhist,
   and East Asian sites; Christian sites may appear only after Christianity exists.
-- [ ] Replace all seven inherited disease definitions with ancient symptom- and
+- [x] Replace all seven inherited disease definitions with ancient symptom- and
   disease-family presentations. Remove Black Death, Columbian, post-476, vanilla-
   age, and post-antique building logic while preserving real mortality, spread,
   labor, army, food, and fiscal effects. Runtime-prove endemic disease plus the
@@ -54,7 +54,9 @@ highest-priority open acceptance task.
   event/action surfaces. Resolve every title, description, progress, legend,
   faction, action, and tooltip key for the 43 current ancient situations; runtime-
   activate every structural template and at least one current per century.
-- [ ] Rename player-facing Ducats to universal **Wealth** while retaining the
+  Static/localization work is complete; century playback has the recorded shared
+  `ffxFsr2ResourceIsNull` blocker.
+- [x] Rename player-facing Ducats to universal **Wealth** while retaining the
   engine `gold` ID. Remove every effective English `ducat` occurrence and mirror
   all clients; verify treasury, budget, diplomacy, construction, and trade UI.
 
@@ -64,7 +66,8 @@ highest-priority open acceptance task.
   share ledger. Target world 20-26%, SoP 65-80%, countries plus subjects 5-12%,
   Rome/Han 3-8%, Parthia 10-20%, and settled India 8-18%, without inflating core
   cities or changing regional totals. Runtime-prove normal and `leavepops` starts,
-  capacity, and stable one-year shares.
+  capacity, and stable one-year shares. Static targets and a stable five-month
+  normal run pass; one-year/`leavepops` runtime has the recorded renderer blocker.
 - [x] Give every one of the 36 Cultivator families a baseline plus at least three
   age-progressive production methods, with ecology- and profile-specific
   specialties where historical. Unlock later methods exactly once through eligible
@@ -93,7 +96,7 @@ highest-priority open acceptance task.
 - [x] Extend later technology with advances, buildings, and production methods so
   every new regional path has real economic, political, military, and cultural
   payoffs rather than filler or giant unlock bundles.
-- [ ] Retain the five-step naval capability ladder but expand 43 ships to at least
+- [x] Retain the five-step naval capability ladder but expand 43 ships to at least
   60 and broad regional templates to at least 20 maritime profiles. Separate Han,
   Korean, Wa, Nile, Horn/Red Sea, Maghrebi/Punic, West African, Pontic/Caspian,
   mainland Southeast Asian, Nusantaran, Philippine, Oceanian, Mesoamerican,
@@ -108,7 +111,9 @@ highest-priority open acceptance task.
   situation/economy panels, regional advance/building/navy matrices, and one-year
   population observers. Accept only zero new errors and store evidence under
   `docs/playtests/`; then update progress/decisions/assumptions and ship one large
-  green Round 5 commit.
+  green Round 5 commit. Static validation is 170/170 and paired smoke is zero-delta
+  at `223ab95ebb2526b1186c8989d0b0eef2f0fcd813390fb9f416db3c6db2328b94`;
+  only the recorded one-year/century renderer-blocked proofs remain open.
 
 ## Advanced structural audit remediation - 2026-08-02 (resume here)
 

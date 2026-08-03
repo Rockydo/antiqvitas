@@ -229,9 +229,45 @@ def disease_loc() -> dict[str, str]:
     return values
 
 
+def custom_situation_ids() -> tuple[str, ...]:
+    values: set[str] = set()
+    for path in SITUATION_DIR.glob("antq*.txt"):
+        values.update(TOP_LEVEL.findall(path.read_text(encoding="utf-8-sig")))
+    return tuple(sorted(values))
+
+
+def situation_surface_loc() -> dict[str, str]:
+    """Own every conventional situation-panel localization surface.
+
+    The engine currently consumes the bare ID and ``_desc``.  The remaining
+    keys cover its progress/legend/faction/action/tooltip naming conventions
+    and keep future UI templates from exposing raw identifiers.
+    """
+    existing = effective_mod_loc("english")
+    values: dict[str, str] = {}
+    for key in custom_situation_ids():
+        title = existing.get(key, key.replace("antq_", "").replace("_", " ").title())
+        description = existing.get(
+            f"{key}_desc", f"The choices of participating states shape {title}."
+        )
+        values.update({
+            f"{key}_resolution_progress": "Resolution Progress",
+            f"{key}_progress": "Resolution Progress",
+            f"{key}_progress_desc": f"Political, military, and economic choices determine how {title} develops.",
+            f"{key}_legend": title,
+            f"{key}_faction": "Participants",
+            f"{key}_action": f"Respond to {title}",
+            f"{key}_action_desc": description,
+            f"{key}_tooltip": description,
+        })
+    return values
+
+
 def loc_bytes(client: str) -> bytes:
     lines = [f"l_{client}:"]
-    for key, value in sorted({**currency_entries(), **disease_loc()}.items()):
+    for key, value in sorted({
+        **currency_entries(), **disease_loc(), **situation_surface_loc()
+    }.items()):
         escaped = value.replace('"', '\\"')
         lines.append(f' {key}: "{escaped}"')
     return ("\n".join(lines) + "\n").encode("utf-8-sig")
@@ -306,9 +342,7 @@ def validate() -> None:
             failures.append(f"inherited situation adapter is stale: {filename}")
         elif TOP_LEVEL.findall(path.read_text(encoding="utf-8-sig")) != [Path(filename).stem]:
             failures.append(f"inherited situation adapter lost its registry key: {filename}")
-    custom_ids: set[str] = set()
-    for path in SITUATION_DIR.glob("antq*.txt"):
-        custom_ids.update(TOP_LEVEL.findall(path.read_text(encoding="utf-8-sig")))
+    custom_ids = set(custom_situation_ids())
     if len(custom_ids) != 43:
         failures.append(f"expected 43 ancient situations, found {len(custom_ids)}")
 
@@ -334,6 +368,12 @@ def validate() -> None:
         for situation in custom_ids:
             if situation not in loc or f"{situation}_desc" not in loc:
                 failures.append(f"{client}: missing situation title/description for {situation}")
+            for suffix in (
+                "_resolution_progress", "_progress", "_progress_desc", "_legend",
+                "_faction", "_action", "_action_desc", "_tooltip",
+            ):
+                if f"{situation}{suffix}" not in loc:
+                    failures.append(f"{client}: missing situation surface {situation}{suffix}")
         for disease in (*DISEASES, MALARIA):
             if loc.get(disease.key) != disease.name or loc.get(f"{disease.key}_desc") != disease.description:
                 failures.append(f"{client}: stale disease localization for {disease.key}")

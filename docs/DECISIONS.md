@@ -1,5 +1,11 @@
 ﻿# Technical and Design Decisions
 
+## 2026-08-03 - Seed only terrain-neutral tribal openings
+
+Regional tribal buildings remain culture/terrain construction choices, but
+opening placement uses eight shared terrain-neutral buildings per SoP. This
+prevents arbitrary owned-location ordering from invalidating regional seeds.
+
 ## 2026-08-03 - Geography names reject mechanical shortcuts globally
 
 The six-level ledger is one authored corpus, so QA is global rather than limited

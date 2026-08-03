@@ -1,5 +1,12 @@
 ﻿# Historical Assumptions
 
+## 2026-08-03 - Tribal starts represent household capacity
+
+The eight shared opening buildings represent widespread household production,
+storage, assembly, and defense capacity, not excavated structures in each map
+cell. Terrain-gated regional forms remain available but are not asserted at an
+arbitrary starting location. Sources: plan §8.7, §12.1, §13.
+
 ## 2026-07-31 - Market workshops are capacity proxies
 
 The 357 opening placements assert that major AD 1 exchange centres could

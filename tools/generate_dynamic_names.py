@@ -7,6 +7,7 @@ import argparse
 import csv
 import json
 import sys
+import unicodedata
 from io import StringIO
 from pathlib import Path
 
@@ -79,6 +80,11 @@ def r5_root_overrides() -> dict[str, str]:
 
 def esc(value: str) -> str:
     return value.replace('"', "'")
+
+
+def comparable_name(value: str) -> str:
+    folded = unicodedata.normalize("NFKD", value.casefold())
+    return "".join(character for character in folded if character.isalnum())
 
 
 def roman_resolver_keys() -> tuple[str, str]:
@@ -292,6 +298,34 @@ def entries() -> list[dict[str, str]]:
             "frontier aliases lack dynamic local entries: "
             + ", ".join(sorted(missing_frontier))
         )
+    # Tier-3 was originally an installed-label compatibility layer.  Round 5
+    # supplies a researched AD 1 root for every field, so letting those culture
+    # adapters retain their old names would silently resurrect vanilla labels.
+    # Frontier local forms use that researched root only when they merely echo
+    # the installed fallback; independently reviewed ancient local forms remain
+    # available beside the Roman political exonym.
+    geography = r5_root_overrides()
+    installed_fallbacks = {
+        row["location"].strip(): row["historical_name"].strip()
+        for row in rows(TIER3_MAP)
+    }
+    for entry in output:
+        location = entry["location"]
+        frontier_is_installed_fallback = (
+            location in frontier
+            and location in installed_fallbacks
+            and comparable_name(entry["historical_name"])
+            == comparable_name(installed_fallbacks[location])
+        )
+        if entry["anchor_kind"] == "tier3" or frontier_is_installed_fallback:
+            if location not in geography:
+                raise ValueError(f"{location}: dynamic fallback lacks Round 5 geography")
+            entry["historical_name"] = geography[location]
+            entry["source"] = f"{entry['source']};R5-GEOGRAPHY"
+            entry["note"] = (
+                f"{entry['note']} Round 5 researched geography replaces the "
+                "installed-label fallback."
+            )
     if not output:
         raise ValueError("no secure dynamic-name anchors were selected")
     return sorted(output, key=lambda entry: (entry["location"], entry["language"]))

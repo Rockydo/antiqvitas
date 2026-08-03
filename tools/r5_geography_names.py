@@ -9,6 +9,7 @@ import io
 import json
 import re
 import sys
+import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -62,16 +63,77 @@ POSTCLASSICAL_LABEL = re.compile(
 )
 COLONIAL_GEOGRAPHY_LABEL = re.compile(
     r"\b(?:"
-    r"Alaska|Amazon|Baffin|Bering|Burdekin|Cabot|Caroline|Churchill|"
-    r"Columbia|Cook|Cooper|Darling|Diamantina|Falkland|Fitzroy|Florida|"
-    r"Fraser|Georgina|Hudson|Kimberley|Lynn|Mackenzie|Madeira|Magellan|"
-    r"Malheur|Murchison|Murray|Nelson|New Zealand|Norton|Patagonia|"
-    r"Pennsylvania|Schuylkill|Seward|Stuart|Tasman|Thompson|Uninhabited|"
-    r"Unpeopled|Whitsunday|Yukon|Zealandia"
+    r"Aberdeen|Alaska|America|American|Amazon|Australia|Australian|Baffin|"
+    r"Baker|Basswood|Bering|Buchanan|Burdekin|Cabot|Canadian|Carnegie|"
+    r"Caroline|Carpentaria|Charleston|Churchill|Colombia|"
+    r"Colombian|Columbia|Cook|Cooper|Darling|Diamantina|Falkland|Fitzroy|"
+    r"Cork|Cowan|Cree|Crescent Lake|Cross Lake|Florida|Fausse Pointe|Fraser|"
+    r"Georgina|Greenland|Hudson|Iceland|Kimberley|Labrador|"
+    r"Lynn|Mackenzie|Madeira|Magellan|Malheur|Mauritius|Mexico|Mexican|"
+    r"Murchison|Murray|Nelson|New Zealand|Norton|Patagonia|Pennsylvania|"
+    r"Peru|Peruvian|Schuylkill|Seward|Stuart|Tasman|Thompson|Uninhabited|"
+    r"Unpeopled|Venezuela|Victoria|Whitsunday|Yukon|Zealandia"
     r")\b",
     re.IGNORECASE,
 )
 NUMERIC_SHORTCUT_LABEL = re.compile(r"(?:\d+|\b[IVXLCDM]{2,}\b)")
+COMPASS_ABBREVIATION = re.compile(
+    r"\b(?:N|S|E|W|NE|NW|SE|SW|NNE|NNW|ENE|ESE|SSE|SSW|WSW|WNW)\b"
+)
+GENERIC_ERA_FORMULA = re.compile(
+    r"\b(?:Formative-Era|Iron-Age|Early-Historic|High-Wilds|Low-Wilds|"
+    r"Mid-Wilds|Sand-Waste)\b",
+    re.IGNORECASE,
+)
+LATIN_COMPASS_PROXY = re.compile(r"\b(?:Austral|Boreal|Hesperian)\b", re.IGNORECASE)
+GENERIC_FALLBACK_NOUN = re.compile(r"\b(?:Tract|Wilds)\b", re.IGNORECASE)
+MECHANICAL_MARITIME = re.compile(
+    r"(?:\bWaters\b.{0,45}\bReach(?:es)?\b|"
+    r"\bReach(?:es)?\b.{0,45}\bWaters\b|"
+    r"\b(?:Cape|Coastal|Littoral|Mouth|Point|Promontory|Shore)\s+Reach\b)",
+    re.IGNORECASE,
+)
+DISPLAY_SEPARATOR = re.compile(r"[,;:]|\s+-\s+")
+POSITION_TERMS = {
+    "central", "east", "eastern", "far", "high", "inner", "lower", "low",
+    "mid", "near", "north", "northeast", "northeastern", "northern",
+    "northwest", "northwestern", "outer", "south", "southeast",
+    "southeastern", "southern", "southwest", "southwestern", "upper",
+    "west", "western",
+}
+SEMANTIC_FAMILIES = {
+    "arid": {"desert", "deserts", "dune", "dunes", "sandland", "sandlands", "wasteland", "wastelands"},
+    "elevation": {"height", "heights", "highland", "highlands", "mountain", "mountains", "peak", "peaks", "upland", "uplands"},
+    "river": {
+        "river", "rivers", "riverland", "riverlands", "stream", "streams",
+    },
+    "landform": {
+        "atoll", "atolls", "basin", "basins", "country", "forest", "forests",
+        "height", "heights", "highland", "highlands", "hill", "hills", "island",
+        "islands", "land", "lands", "lowland", "lowlands", "marsh", "marshes",
+        "marshland", "marshlands", "mountain", "mountains", "plain", "plains",
+        "plateau", "plateaus", "upland", "uplands", "woodland", "woodlands",
+    },
+    "waterbody": {
+        "bay", "bays", "gulf", "gulfs", "lake", "lakes", "mare", "ocean",
+        "oceans", "sea", "seas", "water", "waters",
+    },
+    "harbour": {
+        "harbor", "harbors", "harbour", "harbours", "limen", "port", "ports",
+        "portus", "roadstead", "roadsteads", "sea", "seas", "water", "waters",
+    },
+}
+STACKED_COMPASS = re.compile(
+    r"\b(?:north|south|east|west)[a-z]*-(?:north|south|east|west)[a-z]*\b",
+    re.IGNORECASE,
+)
+DANGLING_PREPOSITION = re.compile(r"\b(?:at|in|of|on)\s*$", re.IGNORECASE)
+LOWERCASE_FEATURE_SUFFIX = re.compile(
+    r"\b(?:bay|basin|bight|channel|coast|country|current|forest|heights|hills|"
+    r"highlands|island|islands|lands|lake|lowlands|marshes|marshlands|ocean|"
+    r"offing|passage|plain|plains|plateau|range|sea|steppe|strait|uplands|"
+    r"waters|woodland|woodlands)\s*$"
+)
 FORMULA_SPLIT = re.compile(r"\s+(?:-|–|—)\s+|:\s+")
 TAUTOLOGY_TERMS = {
     "atoll", "bay", "basin", "cape", "channel", "coast", "delta",
@@ -80,6 +142,25 @@ TAUTOLOGY_TERMS = {
     "reef", "river", "salt", "sea", "shore", "strait", "valley", "water",
 }
 PLACEHOLDER_LABEL = re.compile(r"(?:_SHORT\b|\b(?:TODO|TBD|placeholder)\b)", re.IGNORECASE)
+SUSPICIOUS_RETAINED_ROOT_NOTE = re.compile(
+    r"\b(?:medieval|modern|postdates?|later (?:city|name|settlement|town)|"
+    r"without projecting (?:a )?later|before (?:a )?later)\b",
+    re.IGNORECASE,
+)
+GENERIC_KEY_TOKENS = {
+    "area", "basin", "bay", "cape", "central", "channel", "coast",
+    "continent", "country", "current", "desert", "east", "eastern",
+    "forest", "forests", "great", "gulf", "harbor", "harbour", "high",
+    "highland", "highlands", "hill", "hills", "inner", "island", "islands",
+    "lake", "lakes", "land", "lands", "low", "lower", "lowland",
+    "lowlands", "marsh", "marshes", "middle", "mountain", "mountains",
+    "north", "northeast", "northern", "northwest", "ocean", "outer",
+    "plain", "plains", "plateau", "point", "province", "region", "river",
+    "rivers", "sea", "south", "southeast", "southern", "southwest", "steppe",
+    "strait", "sub", "upper", "upland", "uplands", "valley", "wasteland",
+    "west", "western", "wetland", "wetlands", "wilds", "woodland",
+    "woodlands", "woods", "zone", "zones",
+}
 
 
 def expected_sets() -> dict[str, tuple[str, ...]]:
@@ -169,7 +250,18 @@ def shard_order(path: Path, expected: dict[str, tuple[str, ...]]) -> list[tuple[
 
 
 def normalized_label(value: str) -> str:
-    return re.sub(r"[^a-z0-9]+", " ", value.casefold()).strip()
+    folded = unicodedata.normalize("NFKD", value.casefold())
+    comparable = folded.encode("ascii", errors="ignore").decode("ascii")
+    return re.sub(r"[^a-z0-9]+", " ", comparable).strip()
+
+
+def echoed_key_tokens(key: str, value: str) -> list[str]:
+    key_words = {
+        word for word in normalized_label(key).split()
+        if len(word) >= 4 and word not in GENERIC_KEY_TOKENS and not word.isdigit()
+    }
+    value_words = set(normalized_label(value).split())
+    return sorted(key_words & value_words)
 
 
 def formula_tautology(value: str) -> list[str]:
@@ -194,6 +286,19 @@ def formula_tautology(value: str) -> list[str]:
         repeated.update(seen & terms)
         seen.update(terms)
     return sorted(repeated)
+
+
+def mechanical_formula(value: str) -> list[str]:
+    words = re.findall(r"[A-Za-z]+", value.casefold())
+    failures: list[str] = []
+    positions = [word for word in words if word in POSITION_TERMS]
+    if len(positions) >= 3:
+        failures.append("stacked-position:" + ",".join(positions))
+    for family, terms in SEMANTIC_FAMILIES.items():
+        matches = [word for word in words if word in terms]
+        if len(matches) >= 2:
+            failures.append(f"semantic-{family}:" + ",".join(matches))
+    return failures
 
 
 def installed_names() -> dict[tuple[str, str], str]:
@@ -279,16 +384,50 @@ def canonical_rows() -> tuple[list[dict[str, str]], dict[str, object]]:
                 failures.append(f"{path.name}: colonial/eponymic geography label for {token}")
             if NUMERIC_SHORTCUT_LABEL.search(row["ad1_name"]):
                 failures.append(f"{path.name}: numeric shortcut geography label for {token}")
+            if COMPASS_ABBREVIATION.search(row["ad1_name"]):
+                failures.append(f"{path.name}: abbreviated compass geography label for {token}")
+            if GENERIC_ERA_FORMULA.search(row["ad1_name"]):
+                failures.append(f"{path.name}: generic era/formula geography label for {token}")
+            if LATIN_COMPASS_PROXY.search(row["ad1_name"]):
+                failures.append(f"{path.name}: Latinized compass proxy geography label for {token}")
+            if GENERIC_FALLBACK_NOUN.search(row["ad1_name"]):
+                failures.append(f"{path.name}: generic fallback-noun geography label for {token}")
+            if MECHANICAL_MARITIME.search(row["ad1_name"]):
+                failures.append(f"{path.name}: mechanical maritime geography label for {token}")
+            if DISPLAY_SEPARATOR.search(row["ad1_name"]):
+                failures.append(f"{path.name}: prose separator in geography label for {token}")
+            if STACKED_COMPASS.search(row["ad1_name"]):
+                failures.append(f"{path.name}: stacked compass geography label for {token}")
+            if DANGLING_PREPOSITION.search(row["ad1_name"]):
+                failures.append(f"{path.name}: dangling preposition in geography label for {token}")
+            if "$" in row["ad1_name"]:
+                failures.append(f"{path.name}: unresolved substitution in geography label for {token}")
+            if LOWERCASE_FEATURE_SUFFIX.search(row["ad1_name"]):
+                failures.append(f"{path.name}: lowercase feature suffix in geography label for {token}")
+            if len(re.findall(r"\bof\b", row["ad1_name"], re.IGNORECASE)) >= 2:
+                failures.append(f"{path.name}: chained-of prose geography label for {token}")
             repeated_terms = formula_tautology(row["ad1_name"])
             if repeated_terms:
                 failures.append(
                     f"{path.name}: tautological geography label for {token}: "
                     f"{','.join(repeated_terms)}"
                 )
+            mechanical_terms = mechanical_formula(row["ad1_name"])
+            if mechanical_terms:
+                failures.append(
+                    f"{path.name}: mechanical geography label for {token}: "
+                    f"{';'.join(mechanical_terms)}"
+                )
             if len(row["ad1_name"]) > 60:
                 failures.append(
                     f"{path.name}: overlong geography label for {token} "
                     f"({len(row['ad1_name'])} characters)"
+                )
+            word_count = len(re.findall(r"[^\W\d_]+", row["ad1_name"], re.UNICODE))
+            if word_count > 7:
+                failures.append(
+                    f"{path.name}: prose-like geography label for {token} "
+                    f"({word_count} words)"
                 )
             if "?" in row["ad1_name"] or "\ufffd" in row["ad1_name"]:
                 failures.append(f"{path.name}: corrupted character in label for {token}")
@@ -306,6 +445,25 @@ def canonical_rows() -> tuple[list[dict[str, str]], dict[str, object]]:
             elif unchanged:
                 failures.append(f"{path.name}: false unchanged_verified flag for {token}")
             source_tokens = [part.strip() for part in row["source"].split(";")]
+            historical_sources = [
+                part for part in source_tokens
+                if part != "GEO-PROXY" and not part.startswith("installed:")
+            ]
+            echoed = echoed_key_tokens(row["key"], row["ad1_name"])
+            if echoed and not historical_sources:
+                failures.append(
+                    f"{path.name}: unsupported raw-key root for {token}: "
+                    f"{','.join(echoed)}"
+                )
+            elif (
+                echoed
+                and SUSPICIOUS_RETAINED_ROOT_NOTE.search(row["note"])
+                and row["confidence"].lower() != "high"
+            ):
+                failures.append(
+                    f"{path.name}: insufficiently proven retained later root for "
+                    f"{token}: {','.join(echoed)}"
+                )
             if not all(
                 part.startswith(("http://", "https://", "installed:"))
                 or part == "GEO-PROXY"

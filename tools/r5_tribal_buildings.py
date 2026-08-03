@@ -192,7 +192,21 @@ def owner_rows():
         return list(csv.DictReader(line for line in f if not line.startswith("#")))
 
 def seed_rows(entries):
-    opening=("antq_trib_raised_granary","antq_trib_household_loom","antq_trib_assembly_ground","antq_trib_warrior_lodge")
+    # Opening buildings must be valid in every seeded location. Regional
+    # choices remain visible through culture-group potential, but their terrain
+    # gates mean blindly distributing all four creates hundreds of rejected
+    # bookmark placements. Seed eight deliberately terrain-neutral shared
+    # buildings spanning all six branches instead.
+    opening=(
+        "antq_trib_pulse_garden",
+        "antq_trib_pottery_hearth",
+        "antq_trib_household_loom",
+        "antq_trib_hide_curing_rack",
+        "antq_trib_raised_granary",
+        "antq_trib_assembly_ground",
+        "antq_trib_oath_stone",
+        "antq_trib_warrior_lodge",
+    )
     with ROSTER.open(encoding="utf-8-sig",newline="") as f: sops={r["tag"]:r for r in csv.DictReader(f) if r["kind"]=="sop"}
     with TAG_PROFILES.open(encoding="utf-8-sig",newline="") as f: tag_cultures={r["tag"]:r["culture"] for r in csv.DictReader(f)}
     with REGIONAL_PROFILES.open(encoding="utf-8-sig",newline="") as f: region_cultures={r["region"]:r["culture"] for r in csv.DictReader(f)}
@@ -209,7 +223,7 @@ def seed_rows(entries):
         group=culture_groups.get(culture,"")
         regional=tuple(e["key"] for e in entries if e["scope"]=="regional" and group in e["profiles"].split("|"))
         if len(regional)!=4: raise ValueError(f"SoP {tag} culture {culture}/{group} has {len(regional)} regional tribal buildings")
-        for index,building in enumerate((*opening,*regional)):
+        for index,building in enumerate(opening):
             result.append({"key":f"r5_trib_{tag.lower()}_{index+1}","tag":tag,"location":locations[index%len(locations)],"building":building,"level":"1","source":"P8.7;P12.1;P13","confidence":"contested","note":"Balanced collective-polity opening package; not an excavated structure claim."})
     return result
 

@@ -1,5 +1,25 @@
 # ANTIQVITAS BLOCKERS
 
+## 2026-08-03 - Round 5 one-year and century situation observers
+
+Status: bounded host-renderer limitation; static and five-month proofs pass.
+
+Normal Observer reached `1.5.30.12`; tribesmen moved only 24.419% to 24.381%.
+Two acceleration profiles then reproduced EU5 1.3.11 `C0000005` at the same
+`ffxFsr2ResourceIsNull` address, including native-scale Vulkan. This is the
+existing M10 century-playback blocker, not a script stack. Do not retry until a
+game/driver/renderer change. Evidence: `docs/playtests/R5_POPULATION_20260803.md`.
+
+## 2026-08-03 - Observer owner-mutation screenshot probe
+
+Status: bounded evidence limitation; static and prior live proofs pass.
+
+Fresh `tag`/`conquer` attempts left the debug console focus nondeterministic, and
+EU5 rejected `conquer baden` as unavailable for Observer. Rejected screenshots
+are excluded. Do not retry without a non-Observer driver contract. The current
+dynamic-name generator/check passes; the prior valid Roman/local cycle remains
+documented in `PROGRESS.md` (2026-08-01).
+
 ## 2026-08-01 - Exact installed law-holder candidate rejected at runtime
 
 Status: resolved 2026-08-01.

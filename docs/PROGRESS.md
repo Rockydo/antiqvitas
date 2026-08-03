@@ -1,13 +1,45 @@
 # Progress
 
+## 2026-08-03 - Round 5 runtime and union hardening
+
+- All 43 ancient situations now own title, description, progress, legend,
+  faction, action, and tooltip surfaces in 11 clients; 22 inherited situations
+  remain inert.
+- Replaced 494 rejected terrain-gated regional tribal starts at source with
+  2,696 valid neutral seeds; all 36 regional choices remain gated buildables.
+- A normal Observer held tribesmen at 24.419% to 24.381% through five months.
+  One-year/century playback remains blocked by the recorded EU5 renderer fault.
+- Final `make validate` passes 170/170; paired vanilla/mod smoke reaches both
+  rendered menus with zero new lines at
+  `223ab95ebb2526b1186c8989d0b0eef2f0fcd813390fb9f416db3c6db2328b94`.
+
+## 2026-08-03 - Round 5 geography hardening and live proof
+
+- Removed 9,000+ surviving installed roots and 1,000+ dynamic-alias defects;
+  guards now reject formulas, unsupported roots, semantic duplication, and
+  Unicode evasions across all 33,801 rows and 11 clients.
+- Fresh debug runtime opened exact representatives for all 82 regions and rendered
+  all six hierarchy zoom levels. Fixed loading stress remains 11/11 clean.
+- Holy sites, ancient diseases, Wealth, and Rome/Parthia/Han naval contrast are
+  visible in the fresh Round 5 panel session.
+
+## 2026-08-03 - Fixed loading panoramas pass all 11 live selectors
+
+- Added a bounded stress runner that forces each mounted panorama through every
+  selector, captures a real New Game load, and always restores canonical bindings.
+- All 11 scenes rendered coherently at observed 97-100% with no duplicated layers,
+  holes, seams, alpha blocks, blur patches, or selector mismatches.
+- Canonical restoration passes the 16-screen/eight-plane contract at fingerprint
+  `9eee7240af472557f4bf502f969be2be0dfca87c4957498080c9ba6ca484c895`.
+
 ## 2026-08-03 - AD 1 geography completes all 33,801 rows
 
 - Authored the final 2,173 locations; the canonical ledger now covers 28,573
   locations and all 5,228 coarser hierarchy rows in all 11 clients.
 - Re-audited the full corpus and removed thousands of shortcut, eponym, formula,
   collision, kind, and spatial defects; permanent global guards reject recurrence.
-- `make validate` passes 170/170; paired smoke adds zero lines at fingerprint
-  `571e335babf09bb4e925780b5a5ada2c6c3cc658724df1482c263a0be46fd133`.
+- The completed ledger and all derived capital/history reports pass the final
+  170/170 validation and zero-delta paired smoke recorded above.
 
 ## 2026-08-03 - AD 1 geography reaches 31,628 rows
 
