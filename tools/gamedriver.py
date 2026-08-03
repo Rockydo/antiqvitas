@@ -1308,6 +1308,48 @@ def console(args: argparse.Namespace) -> int:
     return 0
 
 
+def wait_loading_complete(args: argparse.Namespace) -> int:
+    """Wait for a currently active save-load plate to disappear visibly.
+
+    Console ``load`` does not emit the menu transition markers used by
+    ``resume-observer``.  Visual completion is the only safe common contract:
+    never issue a follow-up console command while the percentage plate remains.
+    """
+    import pyautogui
+
+    deadline = time.monotonic() + args.timeout
+    stable = 0
+    saw_loading = False
+    while time.monotonic() < deadline:
+        window = activate_window()
+        image = pyautogui.screenshot(
+            region=(window.left, window.top, window.width, window.height)
+        )
+        progress = loading_progress(image)
+        if progress is None:
+            stable += 1
+            if stable >= args.stable_frames:
+                if args.require_loading_plate and not saw_loading:
+                    stable = 0
+                    time.sleep(args.interval)
+                    continue
+                if args.session:
+                    capture = ROOT / "docs/screens" / args.session / "load_complete.png"
+                    capture.parent.mkdir(parents=True, exist_ok=True)
+                    image.save(capture)
+                    print(capture)
+                print(
+                    "gamedriver: visible load complete"
+                    + (" after loading plate" if saw_loading else " (no loading plate seen)")
+                )
+                return 0
+        else:
+            saw_loading = True
+            stable = 0
+        time.sleep(args.interval)
+    raise RuntimeError("timed out waiting for visible load completion")
+
+
 def key(args: argparse.Namespace) -> int:
     import pyautogui
 
@@ -1602,6 +1644,13 @@ def build_parser() -> argparse.ArgumentParser:
     console_parser.add_argument("--leave-open", action="store_true")
     console_parser.add_argument("--paste", action="store_true")
     console_parser.set_defaults(func=console)
+    load_wait_parser = sub.add_parser("wait-loading-complete")
+    load_wait_parser.add_argument("--timeout", type=int, default=300)
+    load_wait_parser.add_argument("--interval", type=float, default=1)
+    load_wait_parser.add_argument("--stable-frames", type=int, default=5)
+    load_wait_parser.add_argument("--require-loading-plate", action="store_true")
+    load_wait_parser.add_argument("--session")
+    load_wait_parser.set_defaults(func=wait_loading_complete)
     key_parser = sub.add_parser("key")
     key_parser.add_argument("code")
     key_parser.add_argument("--scan", action="store_true")

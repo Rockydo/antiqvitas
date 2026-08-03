@@ -1232,9 +1232,17 @@ smoke reached both vanilla and mod menus with zero new error-log lines.
 
 ## 2026-08-02 - Pre-public Git history sanitation
 
-Status: **current tree clean; destructive history rewrite deferred.** The
-tracked-file release guard reports no local identity or absolute machine path,
-and future commits use a noreply identity. Older reachable commits retain
-retired local-path artifacts and personal commit metadata. Public release needs
-a coordinated filter-repo rewrite and force-push; this batch does not rewrite
-published history.
+Status: **resolved 2026-08-03.** The full reachable-object release audit passes
+for all 12,057 tracked files/objects: no local identity or absolute machine path
+remains. The reachable author/committer set is noreply-only. No rewrite or
+force-push is required; unreferenced local Git recovery objects are not release
+content.
+
+## 2026-08-03 - R5 population console-load route
+
+Status: **bounded engine-input limitation after two captured forms.** The local
+console reference exposes `load [file name]`, but both the exact relative `.eu5`
+name and quoted absolute checkpoint path return EU5's `File doesn't exist`.
+The probe refuses false success unless a re-saved date matches `1.5.30`.
+Do not retry these forms unchanged; retain static, paired-smoke, and five-month
+evidence until a game/console contract change or a verified UI Load Game route.

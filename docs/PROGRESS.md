@@ -8487,6 +8487,34 @@ reviewed 128px BC7 DDS.
   planes; rebuilt seven diseases, 22 situation adapters, 62 holy sites, and Wealth.
 - Added 144 Cultivator methods, 453 regional methods, 84 tribal buildings, 1,131
   advances, and 67 ships across 27 maritime profiles; AD 1 tribesmen reach 24.4%.
-- Geography is intentionally open at 6,028/33,801 hierarchy rows.
+- Geography now covers all 33,801 hierarchy rows across eleven client mirrors.
 - Validation passes 170/170. Paired smoke reaches both menus with zero new lines
   at `efeb63c4bd530a1b6f8406caed8baf4a757c75132f4f25900f0f776ce481b99e`.
+
+## 2026-08-03 - Map readability and tribal icon completion
+
+- Compacted 19,013 researched geography labels while preserving all 14,788 labels
+  already at 30 characters or fewer; the 33,801-row, eleven-client ledger is clean.
+- Rebuilt all 84 tribal building masters with the verified circular alpha mask and
+  extended the visual audit to 408/408 active building icons.
+- Static validation passes 170/170; a fresh smoke is pending the externally held
+  EU5 runtime slot.
+
+## 2026-08-03 - Public-release history audit
+
+- Full reachable-object audit passes 12,057 files/objects with no personal identity
+  or machine path; the reachable Git identity set is noreply-only.
+
+## 2026-08-03 - Round 5 runtime checkpoint
+
+- Paired smoke passes at `d9cf3c3b50145c8003283cd804cb6c30697e6a10ded8f4aecdaea2c73c4f6a60`
+  with zero new normalized error-log lines.
+- Fresh Observer reaches the live map. EU5 rejects both captured direct-console
+  checkpoint forms as missing files; the one-year continuation remains bounded.
+
+## 2026-08-03 - Round 5 release proof refresh
+
+- Validation passes 170/170 and paired smoke adds zero new normalized lines at
+  `7a728e2a4ca0cb64d412814d3637feb27ad392a7a2229d7dcf58dc672816e9af`.
+- Console-checkpoint evidence uses portable `<EU5_USER_DIR>` paths. Reachable
+  history still requires its corresponding public-path rewrite before release.

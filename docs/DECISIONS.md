@@ -4579,3 +4579,15 @@ When the engine reuses one localization key at multiple geography levels, keep
 one reviewed label at every level. `kilkenny` therefore uses `Brigantes of the
 Nore` for both province and location instead of creating an impossible override;
 `qingchi` likewise uses `Bohai–Hejian Salt Plain` at both levels.
+
+## 2026-08-03 - Map labels prioritize map legibility
+
+Keep every researched label at 30 characters or fewer. Preserve existing values at
+that limit or below byte-for-byte; reduce former overages to complete, collision-safe
+local anchors rather than truncating words. Enforce this through one generated ledger
+and all eleven client mirrors.
+
+## 2026-08-03 - Tribal icons use the installed circular contract
+
+Rebuild every tribal icon with the same transparent circular perimeter as active
+vanilla-format building icons, then include all 84 in the global 408-icon audit.

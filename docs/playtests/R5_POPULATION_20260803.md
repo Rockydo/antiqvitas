@@ -8,5 +8,9 @@
 - A repaired non-debug recovery waited for visible save-load completion, but
   the engine reset the explicit `1.5.30` checkpoint to `1.1.1` before Observer;
   both recovery entries exited in the same renderer family.
+- Console-load follow-up: the installed `load [file name]` command rejects both
+  `r5_population_normal_end.eu5` and the quoted absolute path with its own
+  `File doesn't exist` response. The fail-closed probe retains captures and
+  never accepts a loading plate without an exact re-saved date match.
 - Static population targets, capacity, and bookmark mirrors pass. One-year and
   `leavepops` visual proof remain blocked per `BLOCKERS.md`.

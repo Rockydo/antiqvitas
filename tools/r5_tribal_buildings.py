@@ -6,7 +6,7 @@ import argparse, csv, hashlib, json, subprocess, sys
 from collections import defaultdict
 from io import StringIO
 from pathlib import Path
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 
 from m5_regional_buildings import good_prices
 
@@ -26,6 +26,7 @@ REGIONAL_PROFILES=ROOT/"docs/m4/regional_profiles.csv"
 CULTURES=ROOT/"docs/m4/cultures.csv"
 LANGS=("english","french","german","spanish","polish","russian","braz_por","simp_chinese","japanese","korean","turkish")
 BRANCHES=("subsistence","pastoral","craft","exchange","ritual","warrior")
+NAVY=(16,25,43,255)
 
 # Rows follow the twelve reviewed four-up source sheets in lexical sheet/cell order.
 # Gate vocabulary is rendered to locally verified location-scope triggers below.
@@ -240,7 +241,15 @@ def art(entries):
             if w!=h or w<1024: raise ValueError(f"bad tribal four-up source {source.name}: {rgba.size}")
             half=w//2; gap=max(2,w//512); q=index%4; x=q%2; y=q//2
             box=(x*half+(gap if x else 0),y*half+(gap if y else 0),(x+1)*half-(gap if not x else 0),(y+1)*half-(gap if not y else 0))
+            # Building wells use vanilla's round, transparent-perimeter contract.
+            # The reviewed sheets already carry the common navy field; preserve
+            # it inside the circle and remove the old square crop completely.
             icon=rgba.crop(box).resize((128,128),Image.Resampling.LANCZOS)
+            field=Image.new("RGBA",(128,128),NAVY); field.alpha_composite(icon)
+            mask=Image.new("L",(128,128),0)
+            ImageDraw.Draw(mask).ellipse((3,3,124,124),fill=255)
+            field.putalpha(mask.filter(ImageFilter.GaussianBlur(0.7)))
+            icon=field
         master=MASTERS/f"{e['key']}.png"; icon.save(master)
         subprocess.run([sys.executable,str(DDS),"convert",str(master),str(ICONS/f"{e['key']}.dds"),"--compression","dxt5"],cwd=ROOT,check=True,stdout=subprocess.DEVNULL)
         previews.append((e["key"],icon.copy()))
@@ -278,6 +287,17 @@ def check(entries):
             h=hashlib.sha256(p.read_bytes()).hexdigest()
             if h in hashes: failures.append(f"tribal icon alias {hashes[h]} / {e['key']}")
             hashes[h]=e["key"]
+        master=MASTERS/f"{e['key']}.png"
+        if master.is_file():
+            with Image.open(master) as image:
+                rgba=image.convert("RGBA")
+                alpha=rgba.getchannel("A")
+                alpha_values=alpha.get_flattened_data()
+                opaque=sum(value>=240 for value in alpha_values)
+                transparent=sum(value<=15 for value in alpha_values)
+                corners=[rgba.getpixel(point)[3] for point in ((0,0),(127,0),(0,127),(127,127))]
+            if max(corners)>15 or not (10_500<=opaque<=12_800 and 3_300<=transparent<=5_200):
+                failures.append(f"tribal icon is not vanilla-circle-safe: {e['key']}")
     seeds=seed_rows(entries); counts=defaultdict(int)
     for seed in seeds: counts[seed["tag"]]+=1
     if len(counts)!=337 or set(counts.values())!={8}: failures.append(f"SoP opening tribal placement coverage drift: tags={len(counts)} counts={sorted(set(counts.values()))}")

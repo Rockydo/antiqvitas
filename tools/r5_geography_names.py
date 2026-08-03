@@ -418,7 +418,10 @@ def canonical_rows() -> tuple[list[dict[str, str]], dict[str, object]]:
                     f"{path.name}: mechanical geography label for {token}: "
                     f"{';'.join(mechanical_terms)}"
                 )
-            if len(row["ad1_name"]) > 60:
+            # Map labels are read at several zoom levels.  Thirty is retained
+            # only for pre-existing concise labels; every formerly over-limit
+            # construction is compacted to 29 complete characters or fewer.
+            if len(row["ad1_name"]) > 30:
                 failures.append(
                     f"{path.name}: overlong geography label for {token} "
                     f"({len(row['ad1_name'])} characters)"

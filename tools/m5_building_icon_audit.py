@@ -15,16 +15,17 @@ from PIL import Image, ImageDraw, ImageFont
 import m5_ancient_building_replacements
 import m5_regional_buildings
 import m5_roman_buildings
+import r5_tribal_buildings
 from m11_ui_asset_ledger import building_master
 
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / "docs/m5/building_icon_audit.csv"
 CONTACT = ROOT / "docs/m5/BUILDING_ICON_CIRCLE_AUDIT.png"
-EXPECTED_TOTAL = 324
+EXPECTED_TOTAL = 408
 # Raise this after each reviewed re-art batch. It prevents regressions while the
 # open P3 task advances toward the final 265/265 gate.
-MIN_STYLE_PASS = 312
+MIN_STYLE_PASS = 408
 NAVY = (16, 25, 43, 255)
 
 
@@ -69,6 +70,15 @@ def items() -> list[Item]:
                     ROOT / "assets_queue/generated/cultivator_buildings" / f"{row['key']}.png",
                 )
             )
+    for row in r5_tribal_buildings.rows():
+        result.append(
+            Item(
+                "tribal",
+                row["key"],
+                row["name"],
+                ROOT / "assets_queue/generated/tribal_buildings" / f"{row['key']}.png",
+            )
+        )
     return result
 
 
