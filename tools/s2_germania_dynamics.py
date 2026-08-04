@@ -14,6 +14,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter, ImageOps
 
 from dates import AntqDate, M2_MIRROR_LANGUAGES
+from m10_history import situation_presentation_lines
 from dds import convert, identify
 
 
@@ -254,6 +255,7 @@ def situation_script() -> str:
             "\t\t}",
             "\t}",
             f"\tvisible = {{ country_exists = c:{record.anchor} }}",
+            *situation_presentation_lines(record.key, record.anchor),
             "\ton_start = {",
             f"\t\tset_variable = {{ name = {record.key}_resolution_progress value = 0 }}",
             f"\t\tc:{record.anchor} = {{ {record.monthly_effect} }}",

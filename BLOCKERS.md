@@ -1268,3 +1268,19 @@ returned there after both bounded start clicks. Captures are under
 `docs/screens/R5_SITUATION_ACTIONS_20260804/`. Do not repeat this selector
 route unchanged; resume after a verified menu-to-new-game observer input
 contract. This is a capture gap, not a smoke or parser failure.
+
+## 2026-08-04 - Rome real-time monthly market pulse
+
+The final Rome century gate remains open. A fresh **non-debug**, real-time
+Roman Imperium start reached 08:00, 1 February AD 1 at the driver's bounded
+stable maximum speed and rendered the agenda, market list, *Immensum Bellum*,
+and a layered New Market Underway notification without an FSR exit. The same
+monthly pulse appended `Getting relation with itself` to `error.log`, however.
+
+This is independent of the earlier debug `tick_day 12000` reproduction: it
+uses the real player selector, normal simulation, and no debug console. The
+market-action overlay only guards player-created market selections; it does not
+cover the seeded startup-market manager that remains implicated by the error.
+Evidence is in `docs/screens/R5_ROME_MONTHLY_20260804/`; the process was
+stopped immediately after recording the error. Do not repeat this route without
+a changed startup-market or engine contract.

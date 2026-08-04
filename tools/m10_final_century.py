@@ -16,6 +16,7 @@ from m10_history import (
     disaster_modifier_lines,
     engine_tags,
     resolution_trigger_lines,
+    situation_presentation_lines,
     start_country_locations,
 )
 
@@ -252,6 +253,7 @@ def manager_script(records: tuple[Current, ...], kind: str) -> str:
             f"\t\tcurrent_date >= {record.date.engine()}", f"\t\tcurrent_date < {end.engine()}",
             f"\t\tcountry_exists = c:{record.engine_tag}", "\t}",
             *resolution_trigger_lines(record, country_scoped=kind == "disaster"),
+            *(situation_presentation_lines(record.script_key, record.engine_tag) if kind == "situation" else ()),
             *(disaster_modifier_lines(record) if kind == "disaster" else ()),
             *current_lifecycle_lines(record, country_scoped=kind == "disaster"),
             "}", "",

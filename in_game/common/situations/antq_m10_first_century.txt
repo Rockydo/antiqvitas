@@ -21,6 +21,23 @@ antq_m10_gaius_eastern_settlement = {
 	visible = {
 		country_exists = c:XAO
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_gaius_eastern_settlement_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAO }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_gaius_eastern_settlement_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_gaius_eastern_settlement_resolution_progress value = 0 }
 		c:XAO = { trigger_event_non_silently = antq_m10.1000 }
@@ -73,6 +90,23 @@ antq_m10_immensum_bellum = {
 	}
 	visible = {
 		country_exists = c:XAA
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_immensum_bellum_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAA }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_immensum_bellum_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_immensum_bellum_resolution_progress value = 0 }
@@ -127,6 +161,23 @@ antq_m10_illyrian_revolt = {
 	visible = {
 		country_exists = c:XAA
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_illyrian_revolt_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAA }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_illyrian_revolt_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_illyrian_revolt_resolution_progress value = 0 }
 		c:XAA = { trigger_event_non_silently = antq_m10.1002 }
@@ -179,6 +230,23 @@ antq_m10_wang_mang_xin = {
 	}
 	visible = {
 		country_exists = c:XAR
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_wang_mang_xin_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAR }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_wang_mang_xin_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_wang_mang_xin_resolution_progress value = 0 }
@@ -233,6 +301,23 @@ antq_m10_tacfarinas_war = {
 	visible = {
 		country_exists = c:XAA
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_tacfarinas_war_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAA }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_tacfarinas_war_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_tacfarinas_war_resolution_progress value = 0 }
 		c:XAA = { trigger_event_non_silently = antq_m10.1006 }
@@ -285,6 +370,23 @@ antq_m10_trung_sisters = {
 	}
 	visible = {
 		country_exists = c:XAR
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_trung_sisters_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAR }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_trung_sisters_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_trung_sisters_resolution_progress value = 0 }
@@ -339,6 +441,23 @@ antq_m10_mauretania_annexation = {
 	visible = {
 		country_exists = c:XAG
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_mauretania_annexation_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAG }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_mauretania_annexation_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_mauretania_annexation_resolution_progress value = 0 }
 		c:XAG = { trigger_event_non_silently = antq_m10.1011 }
@@ -391,6 +510,23 @@ antq_m10_claudian_britain = {
 	}
 	visible = {
 		country_exists = c:XAA
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_claudian_britain_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAA }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_claudian_britain_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_claudian_britain_resolution_progress value = 0 }
@@ -445,6 +581,23 @@ antq_m10_armenian_war = {
 	visible = {
 		country_exists = c:XAO
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_armenian_war_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAO }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_armenian_war_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_armenian_war_resolution_progress value = 0 }
 		c:XAO = { trigger_event_non_silently = antq_m10.1015 }
@@ -497,6 +650,23 @@ antq_m10_boudica_revolt = {
 	}
 	visible = {
 		country_exists = c:XBX
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_boudica_revolt_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XBX }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_boudica_revolt_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_boudica_revolt_resolution_progress value = 0 }
@@ -551,6 +721,23 @@ antq_m10_great_jewish_revolt = {
 	visible = {
 		country_exists = c:JUD
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_great_jewish_revolt_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:JUD }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_great_jewish_revolt_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_great_jewish_revolt_resolution_progress value = 0 }
 		c:JUD = { trigger_event_non_silently = antq_m10.1020 }
@@ -603,6 +790,23 @@ antq_m10_batavian_revolt = {
 	}
 	visible = {
 		country_exists = c:BTV
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_batavian_revolt_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:BTV }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_batavian_revolt_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_batavian_revolt_resolution_progress value = 0 }
@@ -657,6 +861,23 @@ antq_m10_dacian_wars = {
 	visible = {
 		country_exists = c:DAC
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_dacian_wars_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:DAC }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_dacian_wars_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_dacian_wars_resolution_progress value = 0 }
 		c:DAC = { trigger_event_non_silently = antq_m10.1026 }
@@ -709,6 +930,23 @@ antq_m10_han_xianbei = {
 	}
 	visible = {
 		country_exists = c:XAR
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_han_xianbei_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAR }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_han_xianbei_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_han_xianbei_resolution_progress value = 0 }

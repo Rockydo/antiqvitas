@@ -17,6 +17,23 @@ antq_s2_maroboduus_rivalry = {
 		}
 	}
 	visible = { country_exists = c:XBK }
+	tooltip = {
+		custom_tooltip = "antq_s2_maroboduus_rivalry_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XBK }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_s2_maroboduus_rivalry_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_s2_maroboduus_rivalry_resolution_progress value = 0 }
 		c:XBK = { add_legitimacy = legitimacy_weak_bonus }
@@ -59,6 +76,23 @@ antq_s2_alemannic_formation = {
 		}
 	}
 	visible = { country_exists = c:XBL }
+	tooltip = {
+		custom_tooltip = "antq_s2_alemannic_formation_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XBL }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_s2_alemannic_formation_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_s2_alemannic_formation_resolution_progress value = 0 }
 		c:XBL = { add_prestige = prestige_weak_bonus }
@@ -101,6 +135,23 @@ antq_s2_frankish_formation = {
 		}
 	}
 	visible = { country_exists = c:BTV }
+	tooltip = {
+		custom_tooltip = "antq_s2_frankish_formation_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:BTV }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_s2_frankish_formation_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_s2_frankish_formation_resolution_progress value = 0 }
 		c:BTV = { add_prestige = prestige_weak_bonus }
@@ -143,6 +194,23 @@ antq_s2_aestian_amber_shore = {
 		}
 	}
 	visible = { country_exists = c:AES }
+	tooltip = {
+		custom_tooltip = "antq_s2_aestian_amber_shore_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:AES }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_s2_aestian_amber_shore_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_s2_aestian_amber_shore_resolution_progress value = 0 }
 		c:AES = { add_stability = stability_weak_bonus }

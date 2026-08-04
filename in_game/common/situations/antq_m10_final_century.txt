@@ -16,6 +16,23 @@ antq_m10_final_radagaisus_rhine = {
 			var:antq_m10_final_radagaisus_rhine_resolution_progress >= 100
 		}
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_final_radagaisus_rhine_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAA }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_final_radagaisus_rhine_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_final_radagaisus_rhine_resolution_progress value = 0 }
 		c:XAA = { trigger_event_non_silently = antq_m10_final.5000 }
@@ -64,6 +81,23 @@ antq_m10_final_britain_abandoned = {
 			current_date >= 411.1.1
 			var:antq_m10_final_britain_abandoned_resolution_progress >= 100
 		}
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_final_britain_abandoned_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAA }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_final_britain_abandoned_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_final_britain_abandoned_resolution_progress value = 0 }
@@ -114,6 +148,23 @@ antq_m10_final_vandal_africa = {
 			var:antq_m10_final_vandal_africa_resolution_progress >= 100
 		}
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_final_vandal_africa_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAA }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_final_vandal_africa_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_final_vandal_africa_resolution_progress value = 0 }
 		c:XAA = { trigger_event_non_silently = antq_m10_final.5004 }
@@ -162,6 +213,23 @@ antq_m10_final_attila = {
 			current_date >= 455.1.1
 			var:antq_m10_final_attila_resolution_progress >= 100
 		}
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_final_attila_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:HNS }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_final_attila_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_final_attila_resolution_progress value = 0 }
@@ -212,6 +280,23 @@ antq_m10_final_hephthalites = {
 			var:antq_m10_final_hephthalites_resolution_progress >= 100
 		}
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_final_hephthalites_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAH }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_final_hephthalites_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_final_hephthalites_resolution_progress value = 0 }
 		c:XAH = { trigger_event_non_silently = antq_m10_final.5006 }
@@ -260,6 +345,23 @@ antq_m10_final_adventus_saxonum = {
 			current_date >= 451.1.1
 			var:antq_m10_final_adventus_saxonum_resolution_progress >= 100
 		}
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_final_adventus_saxonum_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAA }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_final_adventus_saxonum_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_final_adventus_saxonum_resolution_progress value = 0 }

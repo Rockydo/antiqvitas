@@ -19,6 +19,7 @@ ACTION_FILES = (
 )
 AI_LIST_ROOT = ROOT / "in_game/common/generic_action_ai_lists"
 SITUATION_ACTION_FILE = ROOT / "in_game/common/generic_actions/antq_m10_situation_actions.txt"
+SITUATION_PANEL_ROOT = ROOT / "in_game/gui/panels/situation"
 ACTIVE_IOS = {
     "antq_han_tributary_system",
     "antq_kangju_confederation",
@@ -82,6 +83,27 @@ def main() -> int:
         failures.append("missing generated ancient situation actions")
     ai_text = "\n".join(path.read_text(encoding="utf-8-sig") for path in AI_LIST_ROOT.glob("*.txt"))
     for key in situation_managers:
+        panel = SITUATION_PANEL_ROOT / f"{key}.gui"
+        if not panel.is_file():
+            failures.append(f"situation {key} lacks its readable panel layout")
+        else:
+            panel_text = panel.read_text(encoding="utf-8-sig")
+            for token in ("TooltipRequirementsList", f"{key}_tooltip", f"{key}_resolution_progress", "situation_disaster_progressbar_with_thresholds"):
+                if token not in panel_text:
+                    failures.append(f"situation {key} panel lacks {token}")
+        presentation = (
+            "tooltip = {",
+            f'custom_tooltip = "{key}_tooltip"',
+            "is_data_map = yes",
+            "map_color = {",
+            "value = owner.country_color",
+            "legend_key = {",
+            f'desc = "{key}_legend"',
+            "color = define:NMapColors|MAP_COLOR_HIGH",
+        )
+        for token in presentation:
+            if token not in situation_managers[key]:
+                failures.append(f"situation {key} lacks panel/map presentation token: {token}")
         progress = f"{key}_resolution_progress"
         for response in ("relief", "mobilize"):
             action = f"{key}_{response}"

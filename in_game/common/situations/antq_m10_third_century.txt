@@ -20,6 +20,23 @@ antq_m10_third_three_kingdoms = {
 	visible = {
 		country_exists = c:XAR
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_third_three_kingdoms_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAR }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_third_three_kingdoms_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_third_three_kingdoms_resolution_progress value = 0 }
 		c:XAR = { trigger_event_non_silently = antq_m10_third.3003 }
@@ -73,6 +90,23 @@ antq_m10_third_diocletian_dominate = {
 	visible = {
 		country_exists = c:XAA
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_third_diocletian_dominate_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAA }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_third_diocletian_dominate_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_third_diocletian_dominate_resolution_progress value = 0 }
 		c:XAA = { trigger_event_non_silently = antq_m10_third.3009 }
@@ -125,6 +159,23 @@ antq_m10_third_eight_princes = {
 	}
 	visible = {
 		country_exists = c:XAR
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_third_eight_princes_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAR }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_third_eight_princes_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_third_eight_princes_resolution_progress value = 0 }

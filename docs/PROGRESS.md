@@ -8578,3 +8578,16 @@ reviewed 128px BC7 DDS.
   culture adapters.
 - Full validation passes 171/171 and paired smoke is zero-delta at
   `485b3bdd72fa559a3fc93d4eaf3d407472557f24aa82f24e8e1405505c483052`.
+
+## 2026-08-04 - Ancient situation-panel repair
+
+- Added the missing tooltip/data-map/legend presentation contract to all 43
+  ancient situations and generated their readable panel metadata.
+- The shared installed situation-panel fallback is mirrored with only a generic
+  current body (plus whitespace canonicalization), so every new situation has
+  its name and expandable end requirements even without a bespoke vanilla layout.
+- A live Rome run unlocked and opened Aestian Amber Shore; its panel rendered
+  the illustration, localized description, requirements, progress card, and
+  data map. Evidence: `docs/playtests/R5_SITUATION_PANEL_20260804.md`.
+- Full validation passes 172/172 and paired smoke adds zero mod-only lines at
+  `36cd6032834641f9f376693ccf634626f05e9bc231bab775f3c8588dde6c186f`.

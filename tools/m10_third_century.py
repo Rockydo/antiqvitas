@@ -22,6 +22,7 @@ from m10_history import (
     disaster_modifier_lines,
     engine_tags,
     resolution_trigger_lines,
+    situation_presentation_lines,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -319,6 +320,7 @@ def situation_script(records: tuple[Current, ...]) -> str:
             "\tvisible = {",
             f"\t\tcountry_exists = c:{record.engine_tag}",
             "\t}",
+            *situation_presentation_lines(record.script_key, record.engine_tag),
             *current_lifecycle_lines(record, country_scoped=False),
             "}",
             "",

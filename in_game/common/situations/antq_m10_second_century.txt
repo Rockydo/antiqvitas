@@ -20,6 +20,23 @@ antq_m10_second_trajan_dacia = {
 	visible = {
 		country_exists = c:XAA
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_second_trajan_dacia_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAA }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_second_trajan_dacia_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_second_trajan_dacia_resolution_progress value = 0 }
 		c:XAA = { trigger_event_non_silently = antq_m10_second.2002 }
@@ -72,6 +89,23 @@ antq_m10_second_trajan_parthia = {
 	}
 	visible = {
 		country_exists = c:XAA
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_second_trajan_parthia_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAA }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_second_trajan_parthia_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_second_trajan_parthia_resolution_progress value = 0 }
@@ -126,6 +160,23 @@ antq_m10_second_kanishka_apogee = {
 	visible = {
 		country_exists = c:YUE
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_second_kanishka_apogee_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:YUE }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_second_kanishka_apogee_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_second_kanishka_apogee_resolution_progress value = 0 }
 		c:YUE = { trigger_event_non_silently = antq_m10_second.2007 }
@@ -178,6 +229,23 @@ antq_m10_second_bar_kokhba = {
 	}
 	visible = {
 		country_exists = c:JUD
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_second_bar_kokhba_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:JUD }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_second_bar_kokhba_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_second_bar_kokhba_resolution_progress value = 0 }
@@ -232,6 +300,23 @@ antq_m10_second_gothic_migration = {
 	visible = {
 		country_exists = c:GUT
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_second_gothic_migration_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:GUT }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_second_gothic_migration_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_second_gothic_migration_resolution_progress value = 0 }
 		c:GUT = { trigger_event_non_silently = antq_m10_second.2011 }
@@ -284,6 +369,23 @@ antq_m10_second_verus_parthia = {
 	}
 	visible = {
 		country_exists = c:XAA
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_second_verus_parthia_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAA }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_second_verus_parthia_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_second_verus_parthia_resolution_progress value = 0 }
@@ -338,6 +440,23 @@ antq_m10_second_marcomannic_wars = {
 	visible = {
 		country_exists = c:XAA
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_second_marcomannic_wars_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAA }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_second_marcomannic_wars_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_second_marcomannic_wars_resolution_progress value = 0 }
 		c:XAA = { trigger_event_non_silently = antq_m10_second.2015 }
@@ -391,6 +510,23 @@ antq_m10_second_yellow_turbans = {
 	visible = {
 		country_exists = c:XAR
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_second_yellow_turbans_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAR }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_second_yellow_turbans_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_second_yellow_turbans_resolution_progress value = 0 }
 		c:XAR = { trigger_event_non_silently = antq_m10_second.2016 }
@@ -443,6 +579,23 @@ antq_m10_second_five_emperors = {
 	}
 	visible = {
 		country_exists = c:XAA
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_second_five_emperors_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAA }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_second_five_emperors_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_second_five_emperors_resolution_progress value = 0 }

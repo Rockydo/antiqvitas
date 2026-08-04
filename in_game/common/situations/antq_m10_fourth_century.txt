@@ -20,6 +20,23 @@ antq_m10_fourth_constantine_civil_wars = {
 	visible = {
 		country_exists = c:XAA
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_fourth_constantine_civil_wars_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAA }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_fourth_constantine_civil_wars_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_fourth_constantine_civil_wars_resolution_progress value = 0 }
 		c:XAA = { trigger_event_non_silently = antq_m10_fourth.4001 }
@@ -72,6 +89,23 @@ antq_m10_fourth_shapur_julian = {
 	}
 	visible = {
 		country_exists = c:XAH
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_fourth_shapur_julian_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAH }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_fourth_shapur_julian_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_fourth_shapur_julian_resolution_progress value = 0 }
@@ -126,6 +160,23 @@ antq_m10_fourth_aksum_meroe = {
 	visible = {
 		country_exists = c:AKS
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_fourth_aksum_meroe_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:AKS }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_fourth_aksum_meroe_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_fourth_aksum_meroe_resolution_progress value = 0 }
 		c:AKS = { trigger_event_non_silently = antq_m10_fourth.4004 }
@@ -178,6 +229,23 @@ antq_m10_fourth_gothic_refugees = {
 	}
 	visible = {
 		country_exists = c:GUT
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_fourth_gothic_refugees_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:GUT }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_fourth_gothic_refugees_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_fourth_gothic_refugees_resolution_progress value = 0 }
@@ -232,6 +300,23 @@ antq_m10_fourth_fei_river = {
 	visible = {
 		country_exists = c:XAR
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_fourth_fei_river_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAR }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_fourth_fei_river_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_fourth_fei_river_resolution_progress value = 0 }
 		c:XAR = { trigger_event_non_silently = antq_m10_fourth.4009 }
@@ -285,6 +370,23 @@ antq_m10_fourth_gwanggaeto = {
 	visible = {
 		country_exists = c:GOG
 	}
+	tooltip = {
+		custom_tooltip = "antq_m10_fourth_gwanggaeto_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:GOG }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_fourth_gwanggaeto_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
 	on_start = {
 		set_variable = { name = antq_m10_fourth_gwanggaeto_resolution_progress value = 0 }
 		c:GOG = { trigger_event_non_silently = antq_m10_fourth.4010 }
@@ -337,6 +439,23 @@ antq_m10_fourth_faxian_gupta = {
 	}
 	visible = {
 		country_exists = c:XAR
+	}
+	tooltip = {
+		custom_tooltip = "antq_m10_fourth_faxian_gupta_tooltip"
+	}
+	is_data_map = yes
+	map_color = {
+		if = {
+			limit = { owner ?= c:XAR }
+			value = owner.country_color
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	legend_key = {
+		desc = "antq_m10_fourth_faxian_gupta_legend"
+		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	on_start = {
 		set_variable = { name = antq_m10_fourth_faxian_gupta_resolution_progress value = 0 }
