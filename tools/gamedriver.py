@@ -79,6 +79,24 @@ def ensure_steam() -> None:
     print(result.stdout.strip())
 
 
+def select_playset(mode: str) -> None:
+    """Make the requested launch mode real before starting EU5.
+
+    The game executable reads the persisted launcher playset; a launch flag does
+    not choose between vanilla and ANTIQVITAS.  Keep this in the driver so every
+    standalone control run has the mode it reports in its session state.
+    """
+    argument = "--enable" if mode == "mod" else "--vanilla"
+    result = subprocess.run(
+        [sys.executable, str(ROOT / "tools/enable_mod.py"), argument],
+        text=True,
+        capture_output=True,
+    )
+    if result.returncode:
+        raise RuntimeError(result.stderr or result.stdout)
+    print(result.stdout.strip())
+
+
 def close_game_crash_reporters(game_exe: Path) -> int:
     """Close only stale reporters belonging to this exact EU5 installation."""
     expected = (
@@ -238,6 +256,7 @@ def launch(args: argparse.Namespace) -> int:
     process: psutil.Process | None = None
     try:
         ensure_steam()
+        select_playset(args.mode)
         cfg = config()
         user_dir = Path(str(cfg["user_dir"]))
         game_exe = Path(str(cfg["game_exe"]))
