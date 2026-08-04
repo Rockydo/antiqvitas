@@ -8537,3 +8537,10 @@ reviewed 128px BC7 DDS.
 - BCE character dates were removed from game-facing scripts and rejected by the
   linter. The engine still substitutes generated rulers for pre-campaign adults;
   the two failed native-form probes are logged as an engine blocker.
+
+## 2026-08-04 - Strict map-label cap
+
+- Compacted all 1,175 exact-30-character labels to complete, collision-safe
+  anchors of 29 characters or fewer; all 32,626 prior shorter labels are exact.
+- Validation passes 170/170 and paired smoke adds zero new lines at
+  `b8a1f5cc7aa538413a97d2203e16bba596f0cdb19a47c2527d6353f3cfbd260d`.

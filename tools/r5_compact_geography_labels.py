@@ -253,7 +253,7 @@ def compact(rows: list[dict[str, str]]) -> tuple[dict[int, str], dict[str, int]]
     occupied_siblings: set[tuple[str, str, str]] = set()
     for index, row in enumerate(rows):
         label = row["ad1_name"]
-        if len(label) > 30:
+        if len(label) > LIMIT:
             continue
         name = normalized_label(label)
         if row["granularity"] == "location":
@@ -264,7 +264,7 @@ def compact(rows: list[dict[str, str]]) -> tuple[dict[int, str], dict[str, int]]
     # one replacement.  Grouping them makes that invariant explicit.
     clusters: dict[str, list[int]] = defaultdict(list)
     for index, row in enumerate(rows):
-        if len(row["ad1_name"]) > 30:
+        if len(row["ad1_name"]) > LIMIT:
             clusters[row["key"]].append(index)
     valid: dict[str, tuple[str, ...]] = {}
     for key, indices in clusters.items():
@@ -351,11 +351,11 @@ def main() -> int:
         sum(before["ad1_name"] != after["ad1_name"] for before, after in zip(source[path], compacted[path]))
         for path in SHARDS
     )
-    # Existing 30-character labels are intentionally untouched.  The user asked
-    # to preserve labels at or below that threshold; every changed label is 29
+    # Only already-short labels are retained verbatim.  Every label at least 30
+    # characters long is replaced by a collision-safe complete phrase of 29
     # characters or fewer.
     remaining = [
-        row for rows in compacted.values() for row in rows if len(row["ad1_name"]) > 30
+        row for rows in compacted.values() for row in rows if len(row["ad1_name"]) > LIMIT
     ]
     if remaining:
         raise ValueError(f"{len(remaining)} labels remain above {LIMIT}: {remaining[:3]}")
