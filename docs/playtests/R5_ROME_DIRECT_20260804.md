@@ -16,7 +16,8 @@
   known installed market self-relation assertion and then the FSR crash path;
   that shortcut is excluded from further century tests.
 
-- Fresh selector probes after BCE-date removal and after the installed `age`
-  adapter both still substituted a generated Roman regent. The engine-level
-  pre-campaign-adult limitation is recorded in `BLOCKERS.md`; the green
-  no-BCE generator and its static/smoke coverage are retained.
+- The former pre-campaign-adult limitation is resolved by the generated
+  `on_game_start` native-age bootstrap. A fresh selector and live Rome start
+  show Augustus (63) with Gaius Caesar as heir; a live Han switch renders the
+  Ping/Wang regency context. Validation passes 170/170 and paired smoke is
+  zero-delta after that repair.
