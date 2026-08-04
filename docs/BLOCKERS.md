@@ -259,3 +259,21 @@ Two paired-smoke attempts failed before the mod half. Vanilla EU5 PIDs 25984 and
 debug logs completed normal asset initialization. Static validation is 170/170.
 A clean Steam restart restored rendering; smoke then exposed and drove removal
 of duplicate localization ownership. Final paired smoke is zero-delta.
+
+## 2026-08-04 - Deferred-market control still asserts
+
+A fresh player-Rome control deferred every pre-game market seed while retaining
+all 72 ledgered hubs and their urban data. At 1 February, automatic capital
+market construction produced three `Getting relation with itself` assertions.
+The seeded build was restored: deferral removes historical hubs and does not
+repair the engine fault. Evidence: `docs/playtests/R5_DEFERRED_MARKETS_20260804.md`.
+
+## 2026-08-04 - Rome market pulse remains after AI notice suppression
+
+The generated message overlay now makes only
+`OTHER_PERFORMS_create_market_ACTION` non-modal. A fresh non-debug 1280x720
+player-Rome run acknowledged the visible *Immensum Bellum* current and advanced
+from February into March without a renderer exit, so the AI-market popup is no
+longer the immediate pacing obstruction. The monthly pulse still appended one
+`Getting relation with itself` assertion, however. The Rome century gate remains
+open. Evidence: `docs/playtests/R5_RENDER_720_SILENT_20260804.md`.

@@ -8591,3 +8591,13 @@ reviewed 128px BC7 DDS.
   data map. Evidence: `docs/playtests/R5_SITUATION_PANEL_20260804.md`.
 - Full validation passes 172/172 and paired smoke adds zero mod-only lines at
   `36cd6032834641f9f376693ccf634626f05e9bc231bab775f3c8588dde6c186f`.
+
+## 2026-08-04 - Rome current acknowledgement and market-notice control
+
+- The message overlay preserves all 1,348 exact installed message definitions
+  and 58 M11 registrations, with the sole behavioural adjustment that other
+  countries' `create_market` notifications no longer become popups.
+- Fresh non-debug Rome at native 1280x720 rendered and acknowledged the
+  *Immensum Bellum* historical current, then advanced from February into March
+  without a renderer exit. The known monthly market assertion remains open;
+  this is a focused runtime improvement, not a release-gate clearance.

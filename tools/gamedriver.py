@@ -127,7 +127,7 @@ def close_game_crash_reporters(game_exe: Path) -> int:
     return len(reporters)
 
 
-def set_fixed_settings(user_dir: Path) -> None:
+def set_fixed_settings(user_dir: Path, resolution: str | None = None) -> None:
     path = user_dir / "pdx_settings.json"
     value = json.loads(path.read_text(encoding="utf-8-sig")) if path.exists() else {}
     value.setdefault("Audio", {}).update(
@@ -142,7 +142,7 @@ def set_fixed_settings(user_dir: Path) -> None:
     value.setdefault("Graphics", {}).update(
         {
             "display_mode": "windowed",
-            "resolution": f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}",
+            "resolution": resolution or f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}",
             # These are the installed JSON keys (not the display labels).  A
             # missing key lets the renderer choose an FSR2 path; that path has
             # repeatedly crashed this host inside ffxFsr2ResourceIsNull.
@@ -261,7 +261,7 @@ def launch(args: argparse.Namespace) -> int:
         user_dir = Path(str(cfg["user_dir"]))
         game_exe = Path(str(cfg["game_exe"]))
         close_game_crash_reporters(game_exe)
-        set_fixed_settings(user_dir)
+        set_fixed_settings(user_dir, args.resolution)
         logs = user_dir / "logs"
         logs.mkdir(parents=True, exist_ok=True)
         command = [
@@ -1564,6 +1564,11 @@ def build_parser() -> argparse.ArgumentParser:
         help="Launch without -debug_mode for a bounded non-debug renderer probe.",
     )
     launch_parser.set_defaults(debug_mode=True)
+    launch_parser.add_argument(
+        "--resolution",
+        choices=("1280x720", "1920x1080"),
+        help="Use a supported native window resolution for a bounded renderer probe.",
+    )
     launch_parser.add_argument("--hidden", action="store_true")
     launch_parser.add_argument("extra", nargs="*")
     launch_parser.set_defaults(func=launch)

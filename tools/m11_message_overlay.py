@@ -35,6 +35,9 @@ ARABIAN_ROUTE_ACTIONS = (
     "antq_exchange_route_intelligence",
     "antq_settle_transit_incident",
 )
+SILENT_OTHER_ACTION_MESSAGES = (
+    "OTHER_PERFORMS_create_market_ACTION",
+)
 
 
 def message_block(message_type: str) -> str:
@@ -99,7 +102,16 @@ def installed_source(message_types: tuple[str, ...]) -> bytes:
     collisions = [message_type for message_type in message_types if message_type in text]
     if collisions:
         raise ValueError(f"M11 message types collide with the installed registry: {', '.join(collisions)}")
-    return raw
+    for message_type in SILENT_OTHER_ACTION_MESSAGES:
+        pattern = re.compile(rf"(?ms)^{re.escape(message_type)}=\{{.*?^\}}")
+        match = pattern.search(text)
+        if match is None:
+            raise ValueError(f"installed message type {message_type} is missing or changed")
+        block = match.group(0)
+        if block.count("popup=yes") != 1:
+            raise ValueError(f"installed message type {message_type} popup contract changed")
+        text = text[:match.start()] + block.replace("popup=yes", "popup=no", 1) + text[match.end():]
+    return text.encode("utf-8-sig")
 
 
 def expected(message_types: tuple[str, ...]) -> bytes:

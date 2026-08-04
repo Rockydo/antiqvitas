@@ -4608,3 +4608,11 @@ Historical BCE births remain in `docs/m6/characters.csv`; generated game files
 omit them and the linter rejects any recurrence. The direct native `age` form
 does not repair bookmark characters. Use the plan's AUC contingency only in a
 dedicated calendar-conversion batch.
+
+## 2026-08-04 - Keep AI market notices non-modal
+
+The overlay changes only `OTHER_PERFORMS_create_market_ACTION` from `popup=yes`
+to `popup=no`. In a seeded AD 1 world, other countries can create many markets
+at a monthly pulse; those notices should remain visible in the feed without
+stopping a player's campaign. Retain player `WE_PERFORM` market feedback and
+all unrelated installed definitions unchanged.
