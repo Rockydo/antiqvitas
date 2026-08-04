@@ -8601,11 +8601,3 @@ reviewed 128px BC7 DDS.
   *Immensum Bellum* historical current, then advanced from February into March
   without a renderer exit. The known monthly market assertion remains open;
   this is a focused runtime improvement, not a release-gate clearance.
-
-## 2026-08-04 - AD 1 ruler-term startup repair
-
-- Removed the redundant serialized ruler-term boundary records from the 31
-  named AD 1 government starts. The sourced ruler-term ledger remains validated;
-  the installed bookmark initializer now creates the one open campaign term.
-- Fresh non-debug Rome at 1920x1080 has no `ruler_term_container` diagnostic.
-  Evidence: `docs/screens/R5_RULER_TERM_FINAL_1080/`.
