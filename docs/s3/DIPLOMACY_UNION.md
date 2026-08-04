@@ -2,15 +2,15 @@
 
 Generated from the installed base+DLC filename union and ANTIQVITAS.
 
-- 909 definitions classified.
-- 192 player-visible definitions.
+- 995 definitions classified.
+- 278 player-visible definitions.
 - 615 installed definitions false-gated.
 - 13 retained interactions ancientized in all 11 clients.
 
 ## Surface totals
 
 - country_interactions: 138; visible 31; quarantined 107, retained_neutral 31.
-- generic_actions: 486; visible 134; active_ancient 58, ancient_rewrite 11, quarantined 352, retained_neutral 65.
+- generic_actions: 572; visible 220; active_ancient 144, ancient_rewrite 11, quarantined 352, retained_neutral 65.
 - casus_belli: 112; visible 18; active_ancient 7, dated_dormant 3, engine_internal 23, quarantined 68, retained_neutral 11.
 - peace_treaties: 67; visible 3; active_ancient 3, quarantined 64.
 - subject_types: 25; visible 6; active_ancient 5, quarantined 19, retained_neutral 1.

@@ -1258,3 +1258,13 @@ the engine FSR path. Do not use large `tick_day` bursts for century evidence.
 `on_game_start` can create a named character with native exact age, then assign
 it as ruler, heir, or regent. The generated AD 1 bootstrap restores Augustus,
 Gaius Caesar, Emperor Ping, and Wang Mang without shifting the calendar.
+
+## 2026-08-04 - Situation-panel runtime capture control drift
+
+The repaired 43-current response surface passes full static validation and
+paired smoke, but two fresh `gamedriver start-observer` attempts did not reach
+the live map. The first raced window creation; the second reached the menu then
+returned there after both bounded start clicks. Captures are under
+`docs/screens/R5_SITUATION_ACTIONS_20260804/`. Do not repeat this selector
+route unchanged; resume after a verified menu-to-new-game observer input
+contract. This is a capture gap, not a smoke or parser failure.

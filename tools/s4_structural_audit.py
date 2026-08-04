@@ -18,6 +18,7 @@ ACTION_FILES = (
     ROOT / "in_game/common/generic_actions/antq_s2_arabian_route_actions.txt",
 )
 AI_LIST_ROOT = ROOT / "in_game/common/generic_action_ai_lists"
+SITUATION_ACTION_FILE = ROOT / "in_game/common/generic_actions/antq_m10_situation_actions.txt"
 ACTIVE_IOS = {
     "antq_han_tributary_system",
     "antq_kangju_confederation",
@@ -70,6 +71,32 @@ def main() -> int:
             for token in ("add_manpower", "monthly_income_trade_and_tax", "change_province_food_percentage"):
                 if token not in block:
                     failures.append(f"{key} lacks recurring material pressure: {token}")
+
+    situation_managers: dict[str, str] = {}
+    for path in (*M10_SITUATIONS, *S2_SITUATIONS):
+        situation_managers.update(blocks(path.read_text(encoding="utf-8-sig"), "antq_"))
+    try:
+        situation_actions = SITUATION_ACTION_FILE.read_text(encoding="utf-8-sig")
+    except OSError:
+        situation_actions = ""
+        failures.append("missing generated ancient situation actions")
+    ai_text = "\n".join(path.read_text(encoding="utf-8-sig") for path in AI_LIST_ROOT.glob("*.txt"))
+    for key in situation_managers:
+        progress = f"{key}_resolution_progress"
+        for response in ("relief", "mobilize"):
+            action = f"{key}_{response}"
+            required = (
+                f"{action} = {{",
+                "type = situation",
+                f"situation:{key} = this",
+                f"name = {progress}",
+                "ai_will_do = {",
+            )
+            for token in required:
+                if token not in situation_actions:
+                    failures.append(f"situation action {action} lacks {token}")
+            if len(re.findall(rf"(?m)^\s*{re.escape(action)}\s*$", ai_text)) != 1:
+                failures.append(f"situation action AI registry is not exactly once: {action}")
 
     disaster_text = "\n".join(path.read_text(encoding="utf-8-sig") for path in M10_DISASTERS)
     for disease in ("antq_m10_second_antonine_plague", "antq_m10_third_cyprian_plague"):
@@ -131,7 +158,6 @@ def main() -> int:
             for token in ("ai_tick = monthly", "automation_tick = monthly", "ai_will_do = {"):
                 if token not in block:
                     failures.append(f"organization action {key} lacks {token}")
-    ai_text = "\n".join(path.read_text(encoding="utf-8-sig") for path in AI_LIST_ROOT.glob("*.txt"))
     for key in actions:
         if len(re.findall(rf"(?m)^\s*{re.escape(key)}\s*$", ai_text)) != 1:
             failures.append(f"organization action AI registry is not exactly once: {key}")

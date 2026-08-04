@@ -8557,3 +8557,13 @@ reviewed 128px BC7 DDS.
   anchors of 29 characters or fewer; all 32,626 prior shorter labels are exact.
 - Validation passes 170/170 and paired smoke adds zero new lines at
   `b8a1f5cc7aa538413a97d2203e16bba596f0cdb19a47c2527d6353f3cfbd260d`.
+
+## 2026-08-04 - Situation response surface
+
+- Added 86 exact-situation actions across all 43 ancient currents: relief and
+  negotiation or coordinated mobilization. Each spends Wealth, changes the
+  current's resolution progress, has AI weights/cooldown, and is locale-mirrored.
+- Full validation passes 171/171 and paired smoke is zero-delta at
+  `98d51c936f74b3d2029524a8da9ecd6d6d1b7d2fab57400e2d199b995ea58c71`.
+- Live panel capture remains deferred by the two-attempt observer-control drift
+  recorded in `BLOCKERS.md`.
