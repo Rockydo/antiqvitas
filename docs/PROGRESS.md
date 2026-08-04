@@ -8524,3 +8524,16 @@ reviewed 128px BC7 DDS.
 - All 463 AD 1 governments now initialize culture, a nested council, and fallback
   societal values; fresh map setup has zero ancient council, value, or estate-culture diagnostics.
 - Validation passes 170/170 and smoke adds zero lines.
+
+## 2026-08-04 - Rome direct UI checkpoint
+
+- Fresh player Rome reaches AD 100 through the verified date command, changes age,
+  opens its 41-node filtered advance panel, and renders two first-century current
+  event surfaces without a new diagnostic or crash.
+- The uninterrupted renderer-driven century run remains open.
+- The driver now writes accepted disabled-upscale keys. A `tick_day 12000` burst
+  still reaches the known installed market assertion before the FSR crash, so it
+  is excluded from continuation testing.
+- BCE character dates were removed from game-facing scripts and rejected by the
+  linter. The engine still substitutes generated rulers for pre-campaign adults;
+  the two failed native-form probes are logged as an engine blocker.

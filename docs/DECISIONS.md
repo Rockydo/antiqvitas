@@ -4596,3 +4596,15 @@ vanilla-format building icons, then include all 84 in the global 408-icon audit.
 
 Write `government.parliament.parliament_type` directly in AD 1 starts. Reform
 activation effects do not execute while bookmarks load.
+
+## 2026-08-04 - Use the installed disabled-upscale settings
+
+The engine accepts `upscale = DISABLED` and `upscale_quality = off`; the former
+lowercase guesses were rejected by its settings parser.
+
+## 2026-08-04 - Preserve source BCE dates outside engine scripts
+
+Historical BCE births remain in `docs/m6/characters.csv`; generated game files
+omit them and the linter rejects any recurrence. The direct native `age` form
+does not repair bookmark characters. Use the plan's AUC contingency only in a
+dedicated calendar-conversion batch.

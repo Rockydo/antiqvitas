@@ -1246,3 +1246,15 @@ name and quoted absolute checkpoint path return EU5's `File doesn't exist`.
 The probe refuses false success unless a re-saved date matches `1.5.30`.
 Do not retry these forms unchanged; retain static, paired-smoke, and five-month
 evidence until a game/console contract change or a verified UI Load Game route.
+
+## 2026-08-04 - Large debug tick remains unsafe
+
+Fresh player Rome with accepted disabled-upscale fields still reaches the known
+installed market self-relation assertion under `tick_day 12000`, then exits in
+the engine FSR path. Do not use large `tick_day` bursts for century evidence.
+
+## 2026-08-04 - Pre-campaign named adults lack a supported AD-1 encoding
+
+The loader rejects BCE `birth_date` values; omitting them and the native
+`age` adapter both replace Rome's sourced ruler with a generated regent. Keep
+the last green omission form. The plan's AUC contingency is the next route.

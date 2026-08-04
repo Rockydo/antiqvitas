@@ -141,11 +141,16 @@ def validate() -> list[str]:
             if relative not in EXACT_SOURCE_DATE_OVERLAYS:
                 for match in BIOGRAPHY_DATE_RE.finditer(text):
                     try:
-                        BiographyDate.parse(match.group(1))
+                        date = BiographyDate.parse(match.group(1))
                     except ValueError as exc:
                         failures.append(
                             f"{path.relative_to(ROOT)}: invalid biography date {match.group(1)} ({exc})"
                         )
+                    else:
+                        if date.year < 1:
+                            failures.append(
+                                f"{path.relative_to(ROOT)}: pre-campaign biography date {match.group(1)}"
+                            )
                 for match in DATE_RE.finditer(text):
                     year, month, day = (int(value) for value in match.groups())
                     if not (1 <= year <= 476 and 1 <= month <= 12 and 1 <= day <= 31):

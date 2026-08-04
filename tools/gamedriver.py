@@ -123,17 +123,13 @@ def set_fixed_settings(user_dir: Path) -> None:
     )
     value.setdefault("Graphics", {}).update(
         {
-            # The installed default is Vulkan.  DX12 repeatedly exits inside
-            # ffxFsr2ResourceIsNull on this host during observer runs even with
-            # FSR disabled, so keep autonomous evidence on the stable backend.
-            "renderer": "Vulkan",
             "display_mode": "windowed",
             "resolution": f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}",
-            # Native scale is required on this host.  The installed FSR2 path
-            # still initializes at sub-native scale even when the UI reports
-            # upscaling disabled, and repeatedly crashed observer runs inside
-            # ffxFsr2ResourceIsNull.  Native scale has remained stable.
-            "render_scale": 1.0,
+            # These are the installed JSON keys (not the display labels).  A
+            # missing key lets the renderer choose an FSR2 path; that path has
+            # repeatedly crashed this host inside ffxFsr2ResourceIsNull.
+            "upscale": "DISABLED",
+            "upscale_quality": "off",
             "vsync": False,
             "setting_framerate_cap": "30",
             # The installed settings tooltip documents this as the maximum-speed
