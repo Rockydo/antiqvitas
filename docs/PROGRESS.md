@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-08-04 - AD 1 officeholder runtime repair
+
+- Generated a game-start native-age bootstrap for the four BCE-born opening
+  officeholders. Fresh Rome shows Augustus (63) and Gaius Caesar; a live Han
+  switch renders the Ping/Wang regency context at AD 1.
+- Full validation passes 170/170; paired smoke adds zero new lines.
+
 ## 2026-08-03 - Round 5 runtime and union hardening
 
 - All 43 ancient situations now own title, description, progress, legend,

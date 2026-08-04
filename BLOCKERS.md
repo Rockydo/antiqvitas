@@ -1253,8 +1253,8 @@ Fresh player Rome with accepted disabled-upscale fields still reaches the known
 installed market self-relation assertion under `tick_day 12000`, then exits in
 the engine FSR path. Do not use large `tick_day` bursts for century evidence.
 
-## 2026-08-04 - Pre-campaign named adults lack a supported AD-1 encoding
+## Resolved 2026-08-04 - Pre-campaign named adults
 
-The loader rejects BCE `birth_date` values; omitting them and the native
-`age` adapter both replace Rome's sourced ruler with a generated regent. Keep
-the last green omission form. The plan's AUC contingency is the next route.
+`on_game_start` can create a named character with native exact age, then assign
+it as ruler, heir, or regent. The generated AD 1 bootstrap restores Augustus,
+Gaius Caesar, Emperor Ping, and Wang Mang without shifting the calendar.
