@@ -41,6 +41,7 @@ LEDGERS = (
     ("tier3", ROOT / "docs/m4/tier3_location_name_overrides.csv"),
 )
 ROOT_FALLBACKS = ROOT / "docs/m4/tier3_map_name_fallbacks.csv"
+R5_GEOGRAPHY = ROOT / "docs/r5/geography_names.csv"
 OUTPUT = ROOT / "docs/m4/priority_location_name_overrides.csv"
 AUDIT = ROOT / "docs/m4/priority_location_name_audit.csv"
 SUMMARY = ROOT / "docs/m4/priority_location_name_summary.json"
@@ -111,6 +112,45 @@ def rows(path: Path, *, comments: bool = False) -> list[dict[str, str]]:
     with path.open(encoding="utf-8-sig", newline="") as handle:
         lines = (line for line in handle if not comments or not line.startswith("#"))
         return list(csv.DictReader(lines))
+
+
+def r5_location_names() -> dict[str, dict[str, str]]:
+    """Return the reviewed AD 1 root name for each installed location.
+
+    Priority adapters are written after the Round 5 geography pass.  They must
+    preserve its researched roots rather than promoting a vanilla cartographic
+    fallback merely because a field is populous or otherwise prominent.
+    """
+    required = {
+        "granularity", "key", "ad1_name", "source", "confidence", "note",
+    }
+    result: dict[str, dict[str, str]] = {}
+    for row in rows(R5_GEOGRAPHY):
+        if not required.issubset(row):
+            raise ValueError(
+                f"{R5_GEOGRAPHY.relative_to(ROOT)} lacks required Round 5 columns"
+            )
+        if row["granularity"] != "location":
+            continue
+        location = row["key"].strip()
+        name = row["ad1_name"].strip()
+        if not location or not name:
+            raise ValueError(
+                f"{R5_GEOGRAPHY.relative_to(ROOT)} has blank location name data"
+            )
+        if location in result:
+            raise ValueError(
+                f"{R5_GEOGRAPHY.relative_to(ROOT)} has duplicate location {location}"
+            )
+        result[location] = {
+            "historical_name": name,
+            "source": row["source"].strip(),
+            "confidence": row["confidence"].strip(),
+            "note": row["note"].strip(),
+        }
+    if not result:
+        raise ValueError(f"{R5_GEOGRAPHY.relative_to(ROOT)} has no location names")
+    return result
 
 
 def leaves(
@@ -316,6 +356,7 @@ def generated_overrides() -> tuple[
     by_tag = {row["tag"]: row for row in polities}
     cultures = {row["key"]: row for row in rows(CULTURES)}
     map_labels = installed_names()
+    r5_names = r5_location_names()
 
     culture_locations: dict[str, list[str]] = defaultdict(list)
     for location, entry in effective.items():
@@ -396,16 +437,26 @@ def generated_overrides() -> tuple[
                 "proxy and not an exact settlement polygon."
             )
         else:
-            name = map_labels.get(
-                location,
-                location.replace("_", " ").replace("-", " ").title(),
-            )
-            source = f"{current['source']};T3N:transparent-map-label"
-            note = (
-                "High-visibility unresolved field retains a concise installed "
-                "cartographic label. It is explicitly not presented as an attested "
-                "ancient settlement name."
-            )
+            reviewed = r5_names.get(location)
+            if reviewed:
+                name = reviewed["historical_name"]
+                source = f"{current['source']};R5-GEOGRAPHY;{reviewed['source']}"
+                note = (
+                    "High-visibility field replaces the installed cartographic "
+                    "fallback with its reviewed Round 5 AD 1 geography root. "
+                    f"{reviewed['note']}"
+                )
+            else:
+                name = map_labels.get(
+                    location,
+                    location.replace("_", " ").replace("-", " ").title(),
+                )
+                source = f"{current['source']};T3N:transparent-map-label"
+                note = (
+                    "High-visibility unresolved field retains a concise installed "
+                    "cartographic label. It is explicitly not presented as an attested "
+                    "ancient settlement name."
+                )
         output.append(
             {
                 "location": location,

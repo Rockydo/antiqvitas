@@ -8567,3 +8567,14 @@ reviewed 128px BC7 DDS.
   `98d51c936f74b3d2029524a8da9ecd6d6d1b7d2fab57400e2d199b995ea58c71`.
 - Live panel capture remains deferred by the two-attempt observer-control drift
   recorded in `BLOCKERS.md`.
+
+## 2026-08-04 - Dynamic geography-label regression repair
+
+- Replaced the modern Stuttgart display name with Nicer Valley, a transparent
+  AD 1 Neckar hydronym landscape label; it is now shared by root, Germanic, and
+  Suebian resolver paths.
+- Priority-field generation now consumes the fully reviewed R5 geography ledger
+  rather than reintroducing installed cartographic labels for high-visibility
+  culture adapters.
+- Full validation passes 171/171 and paired smoke is zero-delta at
+  `485b3bdd72fa559a3fc93d4eaf3d407472557f24aa82f24e8e1405505c483052`.
