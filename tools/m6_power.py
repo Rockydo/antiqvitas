@@ -2570,12 +2570,11 @@ def government_block(
     ]
     if row["ruler"]:
         lines.append(f"\t\t\t\truler = {row['ruler']}")
-    if current_term:
-        lines.append("\t\t\t\truler_term = {")
-        lines.append(f"\t\t\t\t\tcharacter = {current_term['character']}")
-        if current_term["regnal_number"]:
-            lines.append(f"\t\t\t\t\tregnal_number = {current_term['regnal_number']}")
-        lines.append("\t\t\t\t}")
+    # The bookmark's explicit `ruler` initializes the open campaign term.  A
+    # second ruler_term at the exact AD 1 boundary makes 1.3.11 synthesize a
+    # duplicate successor and emit `ruler_term_container` diagnostics.  Keep
+    # the sourced ledger for validation and historical metadata, but leave the
+    # live boundary term to the installed bookmark initializer.
 
     def append_field(field: str) -> None:
         if row[field]:

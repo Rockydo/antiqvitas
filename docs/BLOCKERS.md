@@ -277,3 +277,12 @@ from February into March without a renderer exit, so the AI-market popup is no
 longer the immediate pacing obstruction. The monthly pulse still appended one
 `Getting relation with itself` assertion, however. The Rome century gate remains
 open. Evidence: `docs/playtests/R5_RENDER_720_SILENT_20260804.md`.
+
+## 2026-08-04 - Direct-date situation probe still hits the installed FSR crash
+
+A fresh debug Rome session reached AD 110 through `change_date 110`; a subsequent
+`change_date 115` created `Europa Universalis V20260804_192629` with an
+`ffxFsr2ResourceIsNull` access violation before the planned one-month situation
+tick. The saved console history and crash bundle show no script assertion at the
+failure point. Direct-date century probes therefore remain supplementary only;
+they cannot clear the continuous Rome gate.

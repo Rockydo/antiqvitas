@@ -4616,3 +4616,10 @@ to `popup=no`. In a seeded AD 1 world, other countries can create many markets
 at a monthly pulse; those notices should remain visible in the feed without
 stopping a player's campaign. Retain player `WE_PERFORM` market feedback and
 all unrelated installed definitions unchanged.
+
+## 2026-08-04 - Let the bookmark initializer create AD 1 ruler terms
+
+Keep the source-led ruler-term ledger for validation and historical metadata,
+but do not serialize a second `ruler_term` beside an explicit AD 1 `ruler`.
+EU5 1.3.11 already creates the active term and treats the duplicate boundary
+record as a later successor.

@@ -14,3 +14,12 @@
   never accepts a loading plate without an exact re-saved date match.
 - Static population targets, capacity, and bookmark mirrors pass. One-year and
   `leavepops` visual proof remain blocked per `BLOCKERS.md`.
+
+## 2026-08-04 high-resolution `-leavepops` control
+
+- Fresh non-debug player Rome at 1920x1080 reached the full live opening UI,
+  including the Principate agenda and seeded market list. Evidence:
+  `docs/screens/R5_LEAVEPOPS_1080/leavepops_live_1080.png`.
+- The expected `Culture has no pops in the setup` diagnostics occur under
+  `-leavepops`; no claim is made for one-year stability. The continuous normal
+  and `-leavepops` gates remain governed by the FSR renderer blocker.
