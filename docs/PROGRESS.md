@@ -1,5 +1,11 @@
 # Progress
 
+## 2026-08-04 - Round 5 completion audit
+
+- Fresh `make full` passes all 170 static checks and paired smoke has zero new
+  lines. The requirement-by-requirement audit is in
+  `docs/playtests/R5_COMPLETION_AUDIT_20260804.md`.
+
 ## 2026-08-04 - AD 1 officeholder runtime repair
 
 - Generated a game-start native-age bootstrap for the four BCE-born opening
