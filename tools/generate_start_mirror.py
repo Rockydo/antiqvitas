@@ -22,7 +22,13 @@ from pathlib import Path
 from extract_vanilla import tokenize
 from generate_country_definitions import historical_profile_for, load_integration_profiles
 from m5_regional_buildings import CITY_ONLY_FAMILIES, expanded_seed_rows
-from m6_power import character_manager, dynasty_manager, government_block, load_power_data
+from m6_power import (
+    PARLIAMENT_BY_REFORM,
+    character_manager,
+    dynasty_manager,
+    government_block,
+    load_power_data,
+)
 from m7_war import load_units, tag_map as m7_tag_map, validate_start_ledgers
 from m8_knowledge import institution_manager as m8_institution_manager, technology_level as m8_technology_level
 from m9_diplomacy import (
@@ -1747,6 +1753,9 @@ def population_manager(
         "locations = {",
     ]
     resident_cultures: defaultdict[str, set[str]] = defaultdict(set)
+    country_culture_populations: defaultdict[str, defaultdict[str, Decimal]] = defaultdict(
+        lambda: defaultdict(Decimal)
+    )
     country_populations: defaultdict[str, Decimal] = defaultdict(Decimal)
     urban_profiles = {
         entry["location"].strip(): entry["profile"].strip()
@@ -1767,6 +1776,7 @@ def population_manager(
             religion_remaps.get(location, {}).get("religion", profile.religion),
         )
         resident_cultures[owners[location]].add(culture)
+        country_culture_populations[owners[location]][culture] += sizes[location]
         country_populations[owners[location]] += sizes[location]
         rank = urban_profiles.get(location, "rural")
         geography = population_geography[location]
@@ -1813,6 +1823,10 @@ def population_manager(
         len(owners),
         sum(sizes.values(), Decimal()) + compatibility_total,
         dict(resident_cultures),
+        {
+            tag: dict(cultures)
+            for tag, cultures in country_culture_populations.items()
+        },
         dict(country_populations),
     )
 
@@ -1834,6 +1848,10 @@ def fallback_government_block(kind: str, design_tag: str) -> list[str]:
         f"\t\t\t\ttype = {government_type}",
         f"\t\t\t\their_selection = {heir_selection}",
         "\t\t\t\truler = random",
+        "\t\t\t\tparliament = {",
+        "\t\t\t\t\tparliament_type = "
+        + ("antq_tribal_assembly" if kind == "sop" else "antq_royal_council"),
+        "\t\t\t\t}",
         "\t\t\t\treforms = {",
         f"\t\t\t\t\t{reform}",
         "\t\t\t\t}",
@@ -1843,12 +1861,20 @@ def fallback_government_block(kind: str, design_tag: str) -> list[str]:
         f"\t\t\t\t\t{law} = {option}"
         for law, option in starting_laws_by_tag()[design_tag]
     )
-    lines.extend(("\t\t\t\t}", "\t\t\t}"))
+    lines.extend((
+        "\t\t\t\t}",
+        "\t\t\t\tcentralization_vs_decentralization = "
+        + ("-20" if kind == "sop" else "10"),
+        "\t\t\t\ttraditionalist_vs_innovative = "
+        + ("-15" if kind == "sop" else "0"),
+        "\t\t\t}",
+    ))
     return lines
 
 
 def country_manager(
     resident_cultures: dict[str, set[str]],
+    country_culture_populations: dict[str, dict[str, Decimal]],
     country_populations: dict[str, Decimal],
 ) -> tuple[str, int, int]:
     """Render M3 countries from checked ownership plus verified capitals.
@@ -1897,6 +1923,14 @@ def country_manager(
         # Do not include installed vanilla country templates.  Their modern
         # default laws and estate privileges survive alongside the M6 adapter
         # and emit invalid-government diagnostics at every AD 1 startup.
+        # Country definitions supply the selectable identity, but the bookmark
+        # manager must also initialize the live country culture.  Without this
+        # explicit vanilla-supported field, estate creation sees a null or
+        # inherited culture and reports every locally rooted estate as
+        # discriminated even when its country definition is correct.
+        lines.append(
+            f"\t\t\tculture = {historical_profile_for(row).culture}"
+        )
         lines.append(f"\t\t\tcountry_rank = {country_rank(row)}")
         lines.append(f'\t\t\tstarting_technology_level = {m8_technology_level(row)}')
         if row["tag"] not in country_populations:
@@ -1914,6 +1948,9 @@ def country_manager(
         lines.extend(f"\t\t\t\t{region}" for region in m9_discovery_regions(row))
         lines.append("\t\t\t}")
         integration = integration_profiles.get(row["tag"])
+        primary_culture = historical_profile_for(row).culture
+        accepted: set[str] = set()
+        tolerated: set[str] = set()
         if integration is not None:
             accepted = set(integration.accepted_cultures)
             if integration.tolerated_mode == "resident_remainder":
@@ -1925,18 +1962,33 @@ def country_manager(
                 tolerated = set(integration.tolerated_cultures)
             else:
                 tolerated = set()
-            if accepted:
-                lines.append(
-                    "\t\t\taccepted_cultures = { "
-                    + " ".join(sorted(accepted))
-                    + " }"
-                )
-            if tolerated:
-                lines.append(
-                    "\t\t\ttolerated_cultures = { "
-                    + " ".join(sorted(tolerated))
-                    + " }"
-                )
+        residents = set(resident_cultures.get(row["tag"], set()))
+        # A profile can deliberately describe a court language not represented
+        # in its compact AD 1 location allocation.  The engine then gives a
+        # powerful opening estate to a discriminated local culture, producing
+        # a bookmark diagnostic and a broken estate relationship.  Promote only
+        # the dominant resident culture in that exceptional no-primary-population
+        # case, retaining every other sourced accepted/tolerated distinction.
+        if primary_culture not in residents:
+            population_by_culture = country_culture_populations[row["tag"]]
+            dominant_culture = min(
+                population_by_culture,
+                key=lambda culture: (-population_by_culture[culture], culture),
+            )
+            accepted.add(dominant_culture)
+        tolerated -= accepted
+        if accepted:
+            lines.append(
+                "\t\t\taccepted_cultures = { "
+                + " ".join(sorted(accepted))
+                + " }"
+            )
+        if tolerated:
+            lines.append(
+                "\t\t\ttolerated_cultures = { "
+                + " ".join(sorted(tolerated))
+                + " }"
+            )
         if row["tag"] in power.governments:
             lines.extend(
                 government_block(
@@ -2021,6 +2073,7 @@ def generated_files() -> tuple[dict[str, str], int, int, int, int, Decimal, int,
         pop_locations,
         pop_total,
         resident_cultures,
+        country_culture_populations,
         country_populations,
     ) = population_manager(
         compatibility_cultures
@@ -2028,6 +2081,7 @@ def generated_files() -> tuple[dict[str, str], int, int, int, int, Decimal, int,
     power = load_power_data()
     countries, count, controlled = country_manager(
         resident_cultures,
+        country_culture_populations,
         country_populations,
     )
     diplomacy, dependencies = diplomacy_manager()

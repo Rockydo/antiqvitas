@@ -4,8 +4,8 @@
 
 - Installed union: 17 exact technical keys, all overridden.
 - Ancient presentation: 72 localized labels/descriptions in 11 clients.
-- Opening seeds: centralization 394;
-  custom/inquiry 370; landed/merchant
+- Opening seeds: centralization 463;
+  custom/inquiry 439; landed/merchant
   391; urban/rural
   394.
 - Dated axes: Bound Tenure in Dominate; Frontier Engagement in Crisis; Court

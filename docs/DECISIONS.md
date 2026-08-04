@@ -4591,3 +4591,8 @@ and all eleven client mirrors.
 
 Rebuild every tribal icon with the same transparent circular perimeter as active
 vanilla-format building icons, then include all 84 in the global 408-icon audit.
+
+## 2026-08-04 - Initialize councils in bookmark state
+
+Write `government.parliament.parliament_type` directly in AD 1 starts. Reform
+activation effects do not execute while bookmarks load.

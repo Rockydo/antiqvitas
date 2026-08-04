@@ -96,7 +96,7 @@ def main() -> int:
         failures.append("opening food reserve effect duplicated or drifted")
 
     compatibility = start.culture_presence_cultures()
-    _, _, _, _, populations = start.population_manager(compatibility)
+    _, _, _, _, _, populations = start.population_manager(compatibility)
     tag_map = {
         row["design_tag"]: row["engine_tag"]
         for row in json.loads(start.TAG_MAP.read_text(encoding="utf-8-sig"))["entries"]

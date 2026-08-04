@@ -1802,6 +1802,14 @@ PROFILE_PARLIAMENTS = {
     "emesan": "antq_emesan_dynastic_council",
 }
 
+# Bookmark setup does not execute a reform's ``on_activate`` effect.  Export
+# the same council contract so generated AD 1 governments begin initialized.
+PARLIAMENT_BY_REFORM = {
+    reform: PROFILE_PARLIAMENTS[profile]
+    for profile, reforms_for_profile in PROFILE_BASE_REFORMS.items()
+    for reform in reforms_for_profile
+}
+
 
 @dataclass(frozen=True)
 class PowerData:
@@ -2471,6 +2479,15 @@ def government_block(
         "\t\t\tgovernment = {",
         f"\t\t\t\ttype = {row['government_type']}",
         f"\t\t\t\their_selection = {row['heir_selection']}",
+        "\t\t\t\tparliament = {",
+        "\t\t\t\t\tparliament_type = "
+        + PARLIAMENT_BY_REFORM.get(
+            row["reform"],
+            "antq_tribal_assembly"
+            if row["government_type"] == "tribe"
+            else "antq_royal_council",
+        ),
+        "\t\t\t\t}",
     ]
     if row["ruler"]:
         lines.append(f"\t\t\t\truler = {row['ruler']}")

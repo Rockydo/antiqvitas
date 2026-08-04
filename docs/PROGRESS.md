@@ -8518,3 +8518,9 @@ reviewed 128px BC7 DDS.
   `7a728e2a4ca0cb64d412814d3637feb27ad392a7a2229d7dcf58dc672816e9af`.
 - Console-checkpoint evidence uses portable `<EU5_USER_DIR>` paths. Reachable
   history still requires its corresponding public-path rewrite before release.
+
+## 2026-08-04 - Opening-government runtime repair
+
+- All 463 AD 1 governments now initialize culture, a nested council, and fallback
+  societal values; fresh map setup has zero ancient council, value, or estate-culture diagnostics.
+- Validation passes 170/170 and smoke adds zero lines.
