@@ -7,15 +7,25 @@ import argparse
 import csv
 import hashlib
 import io
+import json
 import subprocess
 import sys
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 
 from PIL import Image
 
 from dates import M2_MIRROR_LANGUAGES
 from dds import identify
+from m5_trade_good_cutouts import magenta_cutout
+from m6_power import PROFILE_BASE_REFORMS
+from s2_regional_programmes import (
+    REGIONAL_PACKS,
+    SHEET_HASHES,
+    SMALL_STATE_PROFILE_SLUGS,
+    action_key,
+    all_programmes,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = ROOT / "assets_queue/politics/sources"
@@ -28,6 +38,12 @@ AGENDA_OUT = ROOT / "in_game/common/parliament_agendas/00_antiquitas_s2.txt"
 MODIFIER_OUT = ROOT / "main_menu/common/static_modifiers/antq_s2_politics.txt"
 CONTENT_LEDGER = ROOT / "docs/m6/ancient_politics_content.csv"
 ART_LEDGER = ROOT / "docs/m6/ancient_politics_art.csv"
+CONFIG = ROOT / "config/local_paths.json"
+CABINET_GUI_RELATIVE = Path("in_game/gui/shared/cabinet_cards.gui")
+CABINET_GUI_OUT = ROOT / CABINET_GUI_RELATIVE
+CABINET_GUI_SOURCE_SHA256 = "1e1d7464d31bfe2b3b17ddbc2764755132bc0e70118f4dbd46a186233e4f71fa"
+CABINET_GUI_BAD_CONTEXT = 'text = "[CabinetItem.GetActionProgressLongWordier]"'
+CABINET_GUI_SAFE_CONTEXT = 'text = "[Cabinet.GetActionProgressLongWordier]"'
 
 
 @dataclass(frozen=True)
@@ -297,6 +313,8 @@ PROFILES = (
             a("citizen_muster", "Citizen Muster Roll", "Keep an enrolled civic levy and its equipment obligations current.", "mil", MIL),
             a("magistrate_rotations", "Magistrate Rotations", "Sequence offices, handovers, seals, and public accounting to limit administrative capture.", "adm", CONTROL),
             a("sanctuary_embassies", "Sanctuary Embassies", "Coordinate sacred envoys, interstate honors, and treaty deposits at recognized sanctuaries.", "dip", PRESTIGE),
+            a("ward_assessment_returns", "Ward Assessment Returns", "Reconcile household, property, boundary, and service tallies by civic ward while accepting scrutiny from enrolled local interests.", "adm", ADMIN + (("global_burghers_estate_power", "0.02"),)),
+            a("harbor_market_arbitration", "Harbor-Market Arbitration", "Hear disputed measures, berthing obligations, storage claims, and damaged cargo before they disrupt civic exchange.", "dip", TRADE + (("global_burghers_estate_power", "0.02"),)),
         ),
         (
             m("harbor_revision", "Harbor Dues Revision", "Review weights, exemptions, and wharf obligations without choking exchange.", "Merchant Wharf Petition", "Exchange households request predictable dues and protection for civic storage space.", "burghers_estate", TRADE, TRADE),
@@ -317,6 +335,8 @@ PROFILES = (
             a("confederate_muster", "Confederate Muster", "Count each participating lineage's equipment and seasonal service.", "mil", MIL),
             a("road_hospitality", "Road Hospitality", "Coordinate water, shelter, safe conduct, and reciprocal duties for travelers.", "dip", TRADE),
             a("communal_granaries", "Communal Granaries", "Audit shared measures, seed reserves, spoilage, and emergency distributions.", "adm", FOOD),
+            a("clan_seat_rotation", "Clan-Seat Rotation", "Record the speaking tokens, rotation, witnesses, and handover obligations that keep one lineage from capturing the assembly.", "adm", CONTROL + (("global_nobles_estate_power", "0.02"),)),
+            a("irrigation_labor_registers", "Irrigation Labor Registers", "Apportion channel clearance, embankment repair, and water turns among represented communities without fixing one universal tenure.", "adm", PUBLIC_WORKS + (("global_peasants_estate_power", "0.02"),)),
         ),
         (
             m("delegate_apportionment", "Clan Delegate Apportionment", "Reconcile recognized lineages and their speaking weight for the next assembly.", "Lineage Seniority Petition", "Senior lineages demand that precedence and witnessed obligations remain legible.", "nobles_estate", ADMIN, NOBLES),
@@ -337,6 +357,8 @@ PROFILES = (
             a("gift_circulation", "Prestige-Gift Circulation", "Move silk, plaques, vessels, livestock, and honors through the confederate hierarchy.", "dip", PRESTIGE),
             a("envoy_circuits", "Envoy Circuits", "Maintain tallies, interpreters, escorts, and relay mounts for distant lineages.", "dip", LOGISTICS),
             a("remount_registers", "Remount Herd Registers", "Protect breeding stock and allocate fresh mounts to envoys and war leaders.", "mil", NOBLES),
+            a("pasture_circuit_tallies", "Pasture-Circuit Tallies", "Witness seasonal routes, water access, reserve grazing, and compensation before herd movements become armed disputes.", "adm", FOOD + (("global_tribes_estate_power", "0.02"),)),
+            a("remount_herd_levies", "Remount and Herd Levies", "Count serviceable mounts, replacement animals, fodder burdens, and lineage contributions for a bounded campaign season.", "mil", MIL + (("global_tribes_estate_power", "0.02"),)),
         ),
         (
             m("pasture_circuit", "Seasonal Pasture Circuit", "Mediate grazing routes before scarcity turns lineage disputes violent.", "Herding-Household Pasture Claim", "Mobile households demand access consistent with seasonal need and prior compact.", "tribes_estate", FOOD, TRIBES),
@@ -357,6 +379,8 @@ PROFILES = (
             a("grove_custody", "Sacred-Place Custody", "Maintain offerings, boundaries, and seasonal observance without inventing a central priesthood.", "adm", CLERGY),
             a("seasonal_muster", "Seasonal Muster", "Count shields, spears, provisions, and expected service for a limited campaign.", "mil", MIL),
             a("river_exchange", "River Exchange Peace", "Protect weights, ferries, guest-right, and specialist traffic at meeting places.", "dip", TRADE),
+            a("seasonal_subsistence_round", "Seasonal Subsistence Round", "Coordinate field, woodland, fishing, and hunting access through the locally recognized seasonal round.", "adm", FOOD + (("global_tribes_estate_power", "0.02"),)),
+            a("intercommunity_envoys", "Intercommunity Envoys", "Send witnessed staffs, gifts, safe-conduct terms, and compensation proposals to neighboring communities.", "dip", PRESTIGE + (("global_tribes_estate_power", "0.02"),)),
         ),
         (
             m("moot_calendar", "Assembly Calendar", "Set a season and place for witnessed settlement of collective disputes.", "Leading-Kindred Gift Claim", "Prominent kindreds seek recognized compensation for hosting and military service.", "tribes_estate", ADMIN, TRIBES),
@@ -377,6 +401,8 @@ PROFILES = (
             a("cult_processions", "Cult Processions", "Sequence regalia, offerings, routes, and hospitality for public royal rites.", "dip", PRESTIGE),
             a("scribal_accounts", "Scribal Accounts", "Reconcile weights, stores, grants, and labor through locally appropriate records.", "adm", ADMIN),
             a("frontier_offerings", "Frontier Offerings", "Support boundary sanctuaries and local compacts without asserting uniform doctrine.", "dip", CLERGY),
+            a("sanctuary_estate_accounts", "Sanctuary Estate Accounts", "Inventory endowed plots, tenant obligations, offerings, seals, and authorized releases while preserving royal oversight.", "adm", ADMIN + (("global_clergy_estate_power", "0.02"),)),
+            a("festival_supply_calendar", "Festival Supply Calendar", "Sequence grain, vessels, garlands, animals, labor, and hospitality so public rites do not empty emergency stores.", "dip", FOOD + (("global_clergy_estate_power", "0.02"),)),
         ),
         (
             m("storehouse_audit", "Temple Storehouse Audit", "Review offerings, sealed reserves, and endowed receipts under royal protection.", "Priestly Offering Share", "Temple custodians request a stable share for ritual, hospitality, and maintenance.", "clergy_estate", FOOD, CLERGY),
@@ -398,6 +424,8 @@ PROFILES = (
             a("court_embassies", "Court Embassies", "Prepare gifts, interpreters, routes, and treaty copies for neighboring great powers.", "dip", PRESTIGE),
             a("dynastic_compacts", "Dynastic Compacts", "Record hostages, marriages, oaths, and succession guarantees without making them permanent peace.", "dip", CONTROL),
             a("fortress_provisioning", "Fortress Provisioning", "Balance grain, missiles, water, and garrison service at strategic strongholds.", "mil", LOGISTICS),
+            a("provincial_envoy_returns", "Provincial Envoy Returns", "Collate petitions, local judgments, travel conditions, gifts, and urgent warnings carried back from subordinate districts.", "dip", CONTROL + (("global_nobles_estate_power", "0.02"),)),
+            a("royal_storehouse_inspection", "Royal Storehouse Inspection", "Check seals, measures, grain quality, tools, arrears, and release orders in the court's principal reserves.", "adm", FOOD + (("global_burghers_estate_power", "0.02"),)),
         ),
         (
             m("tribute_review", "Tribute Register Review", "Reconcile local obligations, court needs, and remittances owed beyond the kingdom.", "Retainer Garrison Petition", "Landed retainers seek clear service and provisioning obligations.", "nobles_estate", ADMIN, NOBLES),
@@ -540,7 +568,7 @@ PROFILES = (
         (
             a("highland_fortress_musters", "Highland Fortress Musters", "Reconcile dynastic mounted followings, garrison stores, and bounded service at the highland strongholds.", "mil", MIL),
             a("pass_courier_relays", "Pass Courier Relays", "Maintain horses, bells, sealed dispatches, and safe stages across exposed mountain routes.", "dip", LOGISTICS),
-            a("dynastic_arbitration", "Dynastic Arbitration", "Use witnessed oaths, precedence, sureties, and compensation to contain disputes among leading houses.", "dip", PRESTIGE),
+            a("dynastic_arbitration", "Artaxata Dynastic Arbitration", "Use witnessed oaths, precedence, sureties, and compensation to contain disputes among leading houses.", "dip", PRESTIGE),
             a("royal_domain_accounts", "Royal Domain Accounts", "Review grain, wine, livestock, and retained domain obligations without inventing a uniform cadastre.", "adm", ADMIN),
             a("frontier_embassies", "Roman-Arsacid Embassy Reception", "Coordinate gifts, interpreters, guarantees, and precedence under pressure from both imperial frontiers.", "dip", CONTROL),
         ),
@@ -560,7 +588,7 @@ PROFILES = (
         "The named court and importance of exchange and water management are secure; exact council membership and one kingdom-wide administrative code are not claimed.",
         (
             a("cistern_channel_returns", "Cistern and Channel Returns", "Review storage, channel clearing, water release, and measured labor across royal and community works.", "adm", FOOD),
-            a("caravan_safe_conducts", "Caravan Safe-Conducts", "Coordinate escorts, watering places, compensation rules, and protected movement between route communities.", "dip", LOGISTICS),
+            a("caravan_safe_conducts", "Desert Caravan Safe-Conducts", "Coordinate escorts, watering places, compensation rules, and protected movement between route communities.", "dip", LOGISTICS),
             a("customs_measures", "Customs Measures", "Maintain weights, containers, assessed dues, and exemptions at connected exchange points.", "adm", TRADE),
             a("sanctuary_store_inventories", "Sanctuary and Store Inventories", "Witness offerings, lamps, vessels, and hospitality stores without absorbing sanctuaries into the palace.", "adm", CLERGY),
             a("client_embassies", "Client Embassy Reception", "Manage gifts, interpreters, dynastic standing, and guarantees within the kingdom's Roman relationship.", "dip", PRESTIGE),
@@ -644,7 +672,7 @@ PROFILES = (
         "Dubnovellaunos and an AD 1 coin horizon are attested, while the Camulodunon council, exact royal reach, and relationship with neighboring dynasties remain bounded gameplay reconstructions.",
         (
             a("coin_die_returns", "Coin and Die Returns", "Review blank flans, dies, weights, metal stocks, and accountable distribution through the royal storehouse.", "adm", ADMIN),
-            a("oppidum_store_returns", "Oppidum Store Returns", "Reconcile grain, livestock, pottery, craft stock, and hospitality at the principal settlement centers.", "adm", FOOD),
+            a("oppidum_store_returns", "Camulodunon Store Returns", "Reconcile grain, livestock, pottery, craft stock, and hospitality at the principal settlement centers.", "adm", FOOD),
             a("channel_landing_guarantees", "Channel Landing Guarantees", "Maintain landing places, escorts, measures, imported vessels, and restitution for registered cross-Channel exchange.", "dip", TRADE),
             a("chariot_retinue_musters", "Chariot-Retinue Musters", "Count vehicles, harness, spear equipment, provisions, and bounded service among leading households.", "mil", MIL),
             a("sacred_place_hearings", "Sacred-Place Hearings", "Witness succession claims, external oaths, offerings, and inter-community settlements without inventing a centralized priesthood.", "dip", PRESTIGE),
@@ -769,7 +797,7 @@ PROFILES = (
         "P8.7;P11;P13;CAH-XI;PLE;STR-GEO-7.3.11", "contested",
         "Strabo reports that Burebista's successors divided power into several states; the profile therefore models negotiated hillfort rulers and material capacities rather than a single AD 1 monarch or a Decebalan state.",
         (
-            a("hillfort_store_returns", "Hillfort Store Returns", "Review grain, amphorae, timber, iron fittings, refuge, and hospitality at selected defended centers.", "adm", CONTROL),
+            a("hillfort_store_returns", "Dacian Fortress Store Returns", "Review grain, amphorae, timber, iron fittings, refuge, and hospitality at selected defended centers.", "adm", CONTROL),
             a("iron_silver_accounts", "Iron and Silver Accounts", "Reconcile ore, bloomery iron, silver-bearing material, tools, ingots, weights, and specialist obligations.", "adm", MINT),
             a("carpathian_pass_watch", "Carpathian Pass Watch", "Coordinate trail markers, signals, scouts, timber obstacles, river crossings, and protected supply caches.", "mil", LOGISTICS),
             a("mounted_host_muster", "Mounted Host Muster", "Count bridle fittings, remount obligations, spears, shields, provisions, and bounded campaign service.", "mil", MIL),
@@ -793,7 +821,7 @@ PROFILES = (
             a("foggara_water_accounts", "Foggara Water Accounts", "Review shafts, underground galleries, lamps, rope, clearing labor, water shares, and repair priorities across oasis communities.", "adm", PUBLIC_WORKS),
             a("oasis_store_returns", "Oasis Store Returns", "Reconcile dates, grain, jars, seed, fodder, irrigation gates, and emergency household access.", "adm", FOOD),
             a("caravan_route_guarantees", "Caravan Route Guarantees", "Coordinate water skins, route stones, guides, pack equipment, beads, restitution, and protected passage.", "dip", TRADE),
-            a("mounted_chariot_musters", "Mounted and Chariot Musters", "Count bridle fittings, wheel equipment, shields, spears, water, provisions, and bounded desert service.", "mil", MIL),
+            a("mounted_chariot_musters", "Saharan Chariot Musters", "Count bridle fittings, wheel equipment, shields, spears, water, provisions, and bounded desert service.", "mil", MIL),
             a("trans_saharan_exchange_inventory", "Trans-Saharan Exchange Inventory", "Review copper, beads, ivory, cloth, ceramics, weights, and accountable shares without treating exchange as one royal monopoly.", "dip", MINT),
         ),
         (
@@ -1065,9 +1093,9 @@ PROFILES = (
         (
             a("basalt_cistern_returns", "Basalt and Cistern Returns", "Coordinate masonry, jars, cistern clearing, measured water access, and bounded settlement labor.", "adm", FOOD),
             a("highland_route_watch", "Highland Route Watch", "Maintain guides, cairns, signals, lamps, road repairs, and restitution across northern routes.", "dip", LOGISTICS),
-            a("sanctuary_store_returns", "Sanctuary Store Returns", "Witness lamps, offerings, vessels, textiles, and protected hospitality without centralizing every cult.", "adm", CLERGY),
+            a("sanctuary_store_returns", "Panias Sanctuary Store Returns", "Witness lamps, offerings, vessels, textiles, and protected hospitality without centralizing every cult.", "adm", CLERGY),
             a("horse_frontier_muster", "Horse and Frontier Muster", "Register mounts, tack, spear fittings, feed, guides, and bounded seasons of service.", "mil", MIL),
-            a("roman_client_embassies", "Roman Client Embassies", "Coordinate interpreters, guarantees, petitions, gifts, and tetrarchic standing with the patron court.", "dip", PRESTIGE),
+            a("roman_client_embassies", "Batanaean Frontier Embassies", "Coordinate interpreters, guarantees, petitions, gifts, and tetrarchic standing with the patron court.", "dip", PRESTIGE),
         ),
         (
             m("highland_house_service", "Highland-House Service", "Set witnessed possession, hospitality, horse, and route duties among leading houses.", "Highland-House Petition", "Leading households seek recognized precedence and bounded service terms.", "nobles_estate", ADMIN, NOBLES),
@@ -1086,7 +1114,7 @@ PROFILES = (
         (
             a("royal_domain_returns", "Commagenean Domain Returns", "Review orchards, grain, vines, storage, and bounded cultivating obligations without inventing a uniform cadastre.", "adm", FOOD),
             a("euphrates_ferry_measures", "Euphrates Ferry Measures", "Coordinate ropes, boats, pilots, weights, landing stores, assessed passage, and restitution.", "dip", TRADE),
-            a("sanctuary_inventory_returns", "Sanctuary Inventory Returns", "Witness offerings, incense, lamps, vessels, and hospitality without projecting one centralized priesthood.", "adm", CLERGY),
+            a("sanctuary_inventory_returns", "Nemrud Sanctuary Inventories", "Witness offerings, incense, lamps, vessels, and hospitality without projecting one centralized priesthood.", "adm", CLERGY),
             a("highland_cavalry_muster", "Commagenean Cavalry Muster", "Register horses, tack, scale fittings, spears, feed, and bounded seasonal service.", "mil", MIL),
             a("roman_arsacid_embassies", "Roman and Arsacid Embassies", "Coordinate interpreters, gifts, guarantees, hostages, and dynastic standing between neighboring powers.", "dip", PRESTIGE),
         ),
@@ -1117,6 +1145,18 @@ PROFILES = (
             m("caravan_city_measures", "Caravan and City Measures", "Balance route security, workshop measures, market dues, and court receipts.", "Caravan and Artisan Petition", "Exchange and specialist households seek secure passage and stable measures.", "burghers_estate", TRADE, TRADE),
         ),
     ),
+)
+
+# M6 owns the complete opening-reform registry. Keep bespoke successor reforms
+# declared beside their councils, but merge every later-added regional opening
+# reform into the same authoritative profile so small states cannot silently
+# lose all cabinet programmes when the government catalogue expands.
+PROFILES = tuple(
+    replace(
+        profile,
+        reforms=tuple(dict.fromkeys(PROFILE_BASE_REFORMS.get(profile.slug, ()) + profile.reforms)),
+    )
+    for profile in PROFILES
 )
 
 COUNCIL_DYNAMICS: dict[str, tuple[str, tuple[tuple[str, str], ...]]] = {
@@ -1344,9 +1384,42 @@ def cabinet_actions() -> str:
             key = f"antq_{profile.slug}_{action.slug}"
             lines.extend(("", f"{key} = {{", f"\tability = {action.ability}", "\tpotential = {"))
             lines.extend(reform_trigger(profile.reforms))
-            lines.extend(("\t}", "\tallow_multiple = no", "\tcountry_modifier = {"))
+            lines.extend((
+                "\t}",
+                "\tallow_multiple = no",
+                "\tai_will_do = {",
+                "\t\tvalue = 1",
+                "\t}",
+                "\tcountry_modifier = {",
+            ))
             lines.extend(modifier_lines(action.modifiers, "\t\t"))
             lines.extend(("\t}", "}"))
+    small_reforms = tuple(dict.fromkeys(
+        reform
+        for profile in PROFILES
+        if profile.slug in SMALL_STATE_PROFILE_SLUGS
+        for reform in profile.reforms
+    ))
+    for pack, programme in all_programmes():
+        key = action_key(pack, programme)
+        lines.extend(("", f"{key} = {{", f"\tability = {programme.ability}", "\tpotential = {"))
+        lines.extend(reform_trigger(small_reforms))
+        lines.append("\t\tOR = {")
+        lines.extend(
+            f"\t\t\tdominant_culture = {{ has_culture_group = culture_group:{group} }}"
+            for group in pack.culture_groups
+        )
+        lines.extend((
+            "\t\t}",
+            "\t}",
+            "\tallow_multiple = no",
+            "\tai_will_do = {",
+            "\t\tvalue = 1",
+            "\t}",
+            "\tcountry_modifier = {",
+        ))
+        lines.extend(modifier_lines(programme.modifiers, "\t\t"))
+        lines.extend(("\t}", "}"))
     return "\n".join(lines) + "\n"
 
 
@@ -1360,7 +1433,10 @@ def parliament_issues() -> str:
                 "", f"{key} = {{", f"\testate = {motion.estate}",
                 "\tmodifier_when_in_debate = {", "\t\tcountry_cabinet_efficiency = 0.01", "\t}",
                 "\tallow = {", f"\t\tparliament_type = parliament_type:{profile.parliament}", "\t}",
-                "\tchance = { add = 1 }", "\ton_debate_passed = {",
+                "\tchance = {", "\t\tadd = {", "\t\t\tif = {", "\t\t\t\tlimit = {",
+                f"\t\t\t\t\tparliament_type = parliament_type:{profile.parliament}",
+                "\t\t\t\t}", "\t\t\t\tvalue = 1", "\t\t\t}",
+                "\t\t\telse = { value = 0 }", "\t\t}", "\t}", "\ton_debate_passed = {",
                 f"\t\tadd_country_modifier = {{ modifier = {modifier} years = 10 mode = add_and_extend }}",
                 "\t}", "\ton_debate_failed = { parliament_debate_failed_effect = yes }", "}",
             ))
@@ -1446,6 +1522,18 @@ def localization(language: str) -> str:
                 f' STATIC_MODIFIER_NAME_{agenda_modifier}: "${agenda_modifier}$"',
                 f' STATIC_MODIFIER_DESC_{agenda_modifier}: "${agenda_modifier}_desc$"',
             ))
+    for pack, programme in all_programmes():
+        key = action_key(pack, programme)
+        lines.extend((
+            f' {key}: "{q(programme.name)}"',
+            f' {key}_desc: "{q(programme.description)}"',
+            f' {key}_action: "{q(programme.name)}"',
+            f' {key}_active: "Administering {q(programme.name)}"',
+            f' {key}_action_progress: "In progress"',
+            f' {key}_action_progress_wordier: "{q(programme.name)}: in progress"',
+            f' {key}_action_progress_long_wordier: "{q(programme.name)}: administrative programme in progress"',
+            f' {key}_action_progress_tooltip: "{q(programme.description)}"',
+        ))
     return "\n".join(lines) + "\n"
 
 
@@ -1528,6 +1616,11 @@ def content_ledger() -> str:
         for motion in profile.motions:
             rows.append(("parliament_issue", f"antq_issue_{profile.slug}_{motion.slug}", profile.slug, motion.issue_name, motion.issue_description, profile.source, profile.confidence, profile.note))
             rows.append(("parliament_agenda", f"antq_agenda_{profile.slug}_{motion.slug}", profile.slug, motion.agenda_name, motion.agenda_description, profile.source, profile.confidence, profile.note))
+    for pack, programme in all_programmes():
+        rows.append((
+            "cabinet_action", action_key(pack, programme), f"regional_{pack.slug}",
+            programme.name, programme.description, programme.source, programme.confidence, programme.note,
+        ))
     return csv_text(("category", "key", "profile", "name", "description", "source", "confidence", "note"), rows)
 
 
@@ -1536,6 +1629,12 @@ def art_records() -> list[tuple[str, str, Profile, int]]:
     for profile in PROFILES:
         records.append(("parliament_type", profile.parliament, profile, 0))
         records.extend(("cabinet_action", f"antq_{profile.slug}_{action.slug}", profile, index) for index, action in enumerate(profile.actions, 1))
+    tribal = next(profile for profile in PROFILES if profile.slug == "tribal")
+    for pack in REGIONAL_PACKS:
+        records.extend(
+            ("cabinet_action", action_key(pack, programme), tribal, cell)
+            for cell, programme in enumerate(pack.programmes)
+        )
     return records
 
 
@@ -1568,6 +1667,47 @@ ART_SOURCE_OVERRIDES.update({
         "salt_iron_accounts",
         "grand_herald_guest_registers",
     ))
+})
+ART_SOURCE_OVERRIDES.update({
+    key: (sheet, digest, cell)
+    for sheet, digest, keys in (
+        (
+            "small_state_programmes_01.png",
+            "7424a09449823235bc0c3051587a7dee5406ae3152c0a66d61393f18201b1562",
+            (
+                "antq_civic_ward_assessment_returns",
+                "antq_civic_harbor_market_arbitration",
+                "antq_gana_clan_seat_rotation",
+                "antq_gana_irrigation_labor_registers",
+            ),
+        ),
+        (
+            "small_state_programmes_02.png",
+            "d288ea77e1f5a45f701f175a0dfe78745548f035471394048d76a59d7706a1a2",
+            (
+                "antq_steppe_pasture_circuit_tallies",
+                "antq_steppe_remount_herd_levies",
+                "antq_tribal_seasonal_subsistence_round",
+                "antq_tribal_intercommunity_envoys",
+            ),
+        ),
+        (
+            "small_state_programmes_03.png",
+            "a46bf3282ccff4315d28f7bb5e7bd852caaaa2a8ee929182b1abc5c2dfe50257",
+            (
+                "antq_sacral_sanctuary_estate_accounts",
+                "antq_sacral_festival_supply_calendar",
+                "antq_royal_provincial_envoy_returns",
+                "antq_royal_royal_storehouse_inspection",
+            ),
+        ),
+    )
+    for cell, key in enumerate(keys)
+})
+ART_SOURCE_OVERRIDES.update({
+    action_key(pack, programme): (pack.sheet, SHEET_HASHES[pack.sheet], cell)
+    for pack in REGIONAL_PACKS
+    for cell, programme in enumerate(pack.programmes)
 })
 ART_SOURCE_OVERRIDES.update({
     f"antq_xiongnu_{slug}": (
@@ -1603,10 +1743,16 @@ ART_SOURCE_OVERRIDES.update({
 
 def art_source_contract(
     key: str, profile: Profile, default_cell: int,
-) -> tuple[str, str, int]:
-    return ART_SOURCE_OVERRIDES.get(
+) -> tuple[str, str, int, str]:
+    source_file, source_hash, cell = ART_SOURCE_OVERRIDES.get(
         key, (profile.source_file, profile.source_hash, default_cell)
     )
+    layout = (
+        "four_up_chroma"
+        if source_file.startswith(("small_state_programmes_", "regional_programmes_"))
+        else "six_up_painting"
+    )
+    return source_file, source_hash, cell, layout
 
 
 def master_path(key: str) -> Path:
@@ -1621,13 +1767,44 @@ def texture_path(category: str, key: str) -> Path:
 def art_ledger() -> str:
     rows = []
     for category, key, profile, cell in art_records():
-        source_file, source_hash, source_cell = art_source_contract(key, profile, cell)
+        source_file, source_hash, source_cell, layout = art_source_contract(key, profile, cell)
         rows.append((
             category, key, profile.slug, f"assets_queue/politics/sources/{source_file}",
-            source_hash, str(source_cell), master_path(key).relative_to(ROOT).as_posix(),
+            source_hash, str(source_cell), layout, master_path(key).relative_to(ROOT).as_posix(),
             texture_path(category, key).relative_to(ROOT).as_posix(), "128x128 BC7 sRGBA + full mip chain",
         ))
-    return csv_text(("category", "key", "profile", "source", "source_sha256", "cell", "master", "texture", "contract"), rows)
+    return csv_text(("category", "key", "profile", "source", "source_sha256", "cell", "source_layout", "master", "texture", "contract"), rows)
+
+
+def installed_game_root() -> Path:
+    """Return the installed data root used by deterministic compatibility mirrors."""
+    config = json.loads(CONFIG.read_text(encoding="utf-8-sig"))
+    return Path(config["game_dir"]) / "game"
+
+
+def cabinet_gui() -> str:
+    """Mirror the installed cabinet card with its invalid data-context call repaired.
+
+    The installed widget sets the surrounding data context to ``Cabinet`` but then
+    invokes ``GetActionProgressLongWordier`` through ``CabinetItem``.  Active
+    administrative programmes consequently flood error.log whenever the card is
+    refreshed without an incidental CabinetItem context.  Engine data-type docs
+    expose this method on Cabinet, so retain the installed UI byte-for-byte apart
+    from that single receiver correction.
+    """
+    source = installed_game_root() / CABINET_GUI_RELATIVE
+    raw = source.read_bytes()
+    digest = hashlib.sha256(raw).hexdigest()
+    if digest != CABINET_GUI_SOURCE_SHA256:
+        raise ValueError(
+            f"installed cabinet GUI hash drift: expected {CABINET_GUI_SOURCE_SHA256}, got {digest}"
+        )
+    text = raw.decode("utf-8-sig")
+    if text.count(CABINET_GUI_BAD_CONTEXT) != 1:
+        raise ValueError("installed cabinet GUI no longer has exactly one unsafe progress receiver")
+    if CABINET_GUI_SAFE_CONTEXT in text:
+        raise ValueError("installed cabinet GUI unexpectedly already contains the safe progress receiver")
+    return text.replace(CABINET_GUI_BAD_CONTEXT, CABINET_GUI_SAFE_CONTEXT, 1)
 
 
 def expected_files() -> dict[Path, str]:
@@ -1639,6 +1816,7 @@ def expected_files() -> dict[Path, str]:
         MODIFIER_OUT: static_modifiers(),
         CONTENT_LEDGER: content_ledger(),
         ART_LEDGER: art_ledger(),
+        CABINET_GUI_OUT: cabinet_gui(),
     }
     for language in ("english", *M2_MIRROR_LANGUAGES):
         outputs[ROOT / f"main_menu/localization/{language}/antq_s2_politics_l_{language}.yml"] = localization(language)
@@ -1649,15 +1827,22 @@ def expected_files() -> dict[Path, str]:
 def build_art() -> None:
     MASTERS.mkdir(parents=True, exist_ok=True)
     for category, key, profile, cell in art_records():
-        source_file, source_hash, source_cell = art_source_contract(key, profile, cell)
+        source_file, source_hash, source_cell, layout = art_source_contract(key, profile, cell)
         source = SOURCES / source_file
         if hashlib.sha256(source.read_bytes()).hexdigest() != source_hash:
             raise ValueError(f"source hash drift: {source.relative_to(ROOT)}")
         with Image.open(source) as image:
-            if image.size != (1536, 1024):
-                raise ValueError(f"{source.relative_to(ROOT)} must be 1536x1024")
-            x, y = (source_cell % 3) * 512, (source_cell // 3) * 512
-            rendered = image.convert("RGB").crop((x + 8, y + 8, x + 504, y + 504)).resize((128, 128), Image.Resampling.LANCZOS)
+            if layout == "six_up_painting":
+                if image.size != (1536, 1024):
+                    raise ValueError(f"{source.relative_to(ROOT)} must be 1536x1024")
+                x, y = (source_cell % 3) * 512, (source_cell // 3) * 512
+                rendered = image.convert("RGB").crop((x + 8, y + 8, x + 504, y + 504)).resize((128, 128), Image.Resampling.LANCZOS)
+            else:
+                if image.width != image.height or image.width % 2:
+                    raise ValueError(f"{source.relative_to(ROOT)} must be a square four-up atlas")
+                half = image.width // 2
+                x, y = (source_cell % 2) * half, (source_cell // 2) * half
+                rendered = magenta_cutout(image.crop((x, y, x + half, y + half)))
             master = master_path(key)
             master.parent.mkdir(parents=True, exist_ok=True)
             rendered.save(master, format="PNG", optimize=True)
@@ -1676,10 +1861,39 @@ def validate() -> list[str]:
     counts = {category: sum(row["category"] == category for row in rows) for category in {row["category"] for row in rows}}
     expected_counts = {
         "parliament_type": len(PROFILES),
-        "cabinet_action": sum(len(profile.actions) for profile in PROFILES),
+        "cabinet_action": sum(len(profile.actions) for profile in PROFILES) + len(all_programmes()),
         "parliament_issue": sum(len(profile.motions) for profile in PROFILES),
         "parliament_agenda": sum(len(profile.motions) for profile in PROFILES),
     }
+    rendered_actions = cabinet_actions()
+    rendered_issues = parliament_issues()
+    rendered_cabinet_gui = cabinet_gui()
+    if CABINET_GUI_BAD_CONTEXT in rendered_cabinet_gui:
+        failures.append("cabinet GUI retains the invalid CabinetItem progress receiver")
+    if rendered_cabinet_gui.count(CABINET_GUI_SAFE_CONTEXT) != 1:
+        failures.append("cabinet GUI does not contain exactly one context-safe Cabinet progress receiver")
+    action_count = expected_counts["cabinet_action"]
+    if "ai_will_do = { base =" in rendered_actions:
+        failures.append("cabinet-action AI uses invalid modifier-style base syntax")
+    if rendered_actions.count("\tai_will_do = {\n\t\tvalue = 1\n\t}") != action_count:
+        failures.append("cabinet actions do not all use the installed effect-script AI contract")
+    issue_count = expected_counts["parliament_issue"]
+    if rendered_issues.count("\t\t\telse = { value = 0 }\n") != issue_count:
+        failures.append("parliament issues do not all zero-weight mismatched council profiles")
+    for profile in PROFILES:
+        expected = sum(
+            len(candidate.motions)
+            for candidate in PROFILES
+            if candidate.parliament == profile.parliament
+        )
+        actual = rendered_issues.count(
+            f"\t\t\t\t\tparliament_type = parliament_type:{profile.parliament}\n"
+        )
+        if actual != expected:
+            failures.append(
+                f"parliament issue AI profile weight coverage differs for {profile.slug}: "
+                f"expected {expected}, found {actual}"
+            )
     if counts != expected_counts:
         failures.append(f"content counts differ: {counts}")
     if len({row["key"] for row in rows}) != len(rows):

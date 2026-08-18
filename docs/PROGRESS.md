@@ -1,5 +1,37 @@
 # Progress
 
+## 2026-08-19 - Regional administrative programmes for small states
+
+- Added 56 culture-gated cabinet programmes in 14 packs so tribal and royal
+  floors get setting-specific offices instead of one 360-tag generic set.
+- Packs cover Germanic/Baltic, Celtic, Uralic/Slavic, African, Indic, Island
+  SE Asia, Mesoamerican, Andean, Woodland, Tibetan, Semitic, Berber, Caucasian/
+  Balkan, and Inner Asian leftovers. Each has four unique names, effects, and
+  magenta four-up still-life icons referenced to existing EU5 programme art.
+- Visibility matrix: 463/463 tags, 5-11 visible programmes, 317 total actions.
+  Dedicated flagship councils are unchanged. Runtime panel proof remains open.
+
+## 2026-08-06 - Round 6 crash/start-state and identity remediation
+
+- Reduced the opening-building union from 6,706 to 2,950 bounded placements;
+  Roma's market panel opens while paused on 1 January and the same fresh Rome
+  process survived the former April/year-4 crash windows through 1 January AD 5.
+- Rebalanced structural court/diplomatic spending without income or treasury
+  cheats. Settled March balances were Rome +7.18, Parthia +19.25, and Han -7.76
+  with 10.03k reserves; all three major-market cordage circuits are present.
+- Removed Rome's culture-capacity collapse and municipal monthly-control loss;
+  added bounded administrative/control networks and exact reform visibility for
+  all 463 opening profiles.
+- Added 243 exact-country/culture advances, 129 themed situation actions, and
+  consequential validation for 336 phase events; removed the implementation
+  phrase from all clients.
+- Repaired 59 North-African names and added a zero-survivor lexeme gate over 843
+  descendant rows and all 11 clients. Focused evidence is in
+  `docs/playtests/ROUND6_REMEDIATION_20260806.md`.
+- The canonical repository gate passes all 172 checks after reconciling cultural
+  integration, combined tribal/settled audits, source-owned message settings,
+  building-family ownership, and every derived report.
+
 ## 2026-08-04 - Round 5 completion audit
 
 - Fresh `make full` passes all 170 static checks and paired smoke has zero new
@@ -8601,3 +8633,135 @@ reviewed 128px BC7 DDS.
   *Immensum Bellum* historical current, then advanced from February into March
   without a renderer exit. The known monthly market assertion remains open;
   this is a focused runtime improvement, not a release-gate clearance.
+# 2026-08-06 - Round 7 conditional Teutoburg static implementation
+
+- Replaced the unconditional AD 9 Teutoburg battle and its four unconditional
+  flavor phases with a shared campaign gate requiring a persisted, living Varus
+  and an actual Roman war against one of nine reviewed Germanic frontier polities.
+- Recreated the source-led Varus court record as an adult AD 1 runtime character
+  without inventing a precise birth year; the country stores the character scope
+  for death-safe and save-safe event checks.
+- Moved the possible battle culmination to 9.8.8 within the sourced AD 9-10
+  window, made three developing phases contingent on the same campaign, and made
+  the aftermath contingent on a recorded battle resolution.
+- Added *The Germania Frontier Policy* as the non-battle counterfactual after the
+  sourced window. It offers consolidation, forward occupation, or negotiated
+  compacts and never forces a war or describes an ahistorical defeat.
+- Added `tools/s7_teutoburg_scenarios.py`,
+  `docs/m10/teutoburg_scenario_matrix.csv`, and
+  `docs/m10/TEUTOBURG_FRONTIER_CHAIN.md`. All 13 structural scenarios pass,
+  including peace, unrelated war, truce/alliance, ownership without war,
+  conquered Germania, missing/dead actors, AI/player parity, and persisted
+  resolution markers. `m10_history`, `m11_flavor_events`, `m6_power`, and
+  `pdxlint` pass. Runtime scenario proof is still open.
+
+# 2026-08-06 - Round 7 canonical validation and smoke repair
+
+- Completed an uninterrupted 172-command `make validate` pass after synchronizing
+  the shared building-family generators, 412-icon audit, quarantine manifests,
+  advance tree/format, 2,010-asset UI ledger, and manual regression report.
+- A first formal smoke and a bounded non-debug probe both stalled before menu
+  finalization. The engine log exposed 261 parser errors in
+  `00_antiquitas_s2.txt`: cabinet actions use an effect-script `ai_will_do`
+  contract, while the generator had emitted modifier-style `base = 1` syntax.
+- Changed all programme AI blocks to the installed `value = 1` effect-script
+  form and added a generator assertion rejecting `base` syntax or incomplete AI
+  coverage. A 1920x1080 enabled-mod probe then rendered within six seconds and
+  reached stable menu readiness in 47 seconds.
+- The formal vanilla-control/enabled-mod smoke subsequently passed at 1920x1080
+  with zero new error-log lines. `eu5_slot.py assert-smoked` covers game-visible
+  fingerprint `ae7a56c3ae9bc835431162e1a4699c768616aab0220760ef5e9153744125332b`.
+- Registered `s7_administrative_depth`, `s7_crown_power`,
+  `s7_late_goods_building_art`, `s7_goods_reachability`, and
+  `s7_teutoburg_scenarios` in the canonical validator, increasing it to 177
+  commands. All five dedicated checks pass. Feature-specific fresh-start,
+  tooltip, construction, AI, event-scenario, and save/reload evidence remains
+  open; Round 7 is not marked complete.
+
+# 2026-08-08 - Map-label formatter and Proximity legend runtime repair
+
+- Reproduced the Country Market formatter burst in a fresh mod process and
+  traced its source string at the engine's geography-name formatter boundary.
+  The invalid `l` tag was the installed `|L` style after a second formatting
+  pass, not an ANTIQVITAS geography value or the Economy/Trading interface.
+- Proved the same engine defect in a genuinely fresh unmodded 1920x1080
+  Viennois campaign: Country Rank emitted 2,366 identical warnings and Country
+  Market another 58, while Political emitted none.
+- Extended the repair across province, area, region, subcontinent, continent,
+  and scripted-geography tooltip structs without removing their tooltip
+  targets. Fixed the separate installed Proximity legend reference to the
+  nonexistent `local_proximity_source` data function.
+- Added `tools/m12_engine_loc_workarounds.py` to generate and verify all eleven
+  localization mirrors and registered it in the canonical validator.
+  `m11_localization`, `pdxlint`, and the dedicated check pass.
+- A fresh enabled-mod runtime sweep of Political, Country Rank, Country Market,
+  Area, Region, Subcontinent, Continent, and Proximity added zero relevant
+  warnings and zero total `error.log` lines after its baseline. Evidence is in
+  `docs/playtests/R18_MAPMODE_LOCALIZATION_RUNTIME_20260808.md`.
+
+# 2026-08-08 - Construction-selector empty-model repair
+
+- Reproduced two `Construction` data-context errors whenever the Ropewalk
+  location selector displayed the empty Roma and Neapolis construction lists.
+- Reduced four unsuccessful cancel-header hypotheses to the actual row badge:
+  its hidden `datacontext_from_model` indexed every empty civil-construction
+  model. Restored all original cancel and tooltip code changed during diagnosis.
+- Added `tools/m12_construction_gui_guard.py`, generating an exact installed-GUI
+  overlay with a zero-safe one-item badge model, and registered it in the
+  canonical validator. The dedicated check and `pdxlint` pass.
+- Candidate 32 loaded the new overlay from process startup at 1920x1080. Opening
+  Ropewalk over two empty rows, queueing it in Neapolis, hovering both the
+  latest-construction and row construction tooltips, and canceling it left
+  `error.log` unchanged at 1,084 bytes / 12 baseline lines with zero
+  construction, formatter, or script errors. Evidence is in
+  `docs/playtests/R19_CONSTRUCTION_GUI_RUNTIME_20260808.md`.
+
+# 2026-08-08 - Fresh-world legacy building diagnostic repair
+
+- Candidate 33's first fresh AD 1 generation exposed 13 new-game efficiency
+  warnings from permanently unavailable installed building shells. Because they
+  were absent from the accepted menu baseline, the campaign did not advance.
+- Generalized `m5_building_quarantine.py` to strip inert direct and
+  owner-directed manpower/sailor capacity from all 465 quarantined definitions,
+  rather than special-casing the observed barracks, shipyard, and order keys.
+- Candidate 34 proved 11 warnings removed and isolated the remaining two to
+  `trade_company_governance` owner-directed modifiers. The generalized rule now
+  covers those forms too.
+- Candidate 35 generated a new world at 1920x1080 with zero efficiency,
+  construction, formatter, script, or assertion diagnostics. Its 11-line log
+  contains only the established store-backend and AudioArena environment
+  baseline. Evidence is in
+  `docs/playtests/R20_BUILDING_EFFICIENCY_RUNTIME_20260808.md`.
+
+# 2026-08-08 - First-frame Augustus and clean ruler-term handoff
+
+- Candidate 36 exposed Rome's one-day random ruler before the sourced court
+  adapter ran. The delay had removed same-day overlapping ruler terms but left
+  the first playable frame historically wrong.
+- The opening ID-zero term holder is now transformed into Augustus during
+  `on_game_start`, with the Julio-Claudian court identity, Gaius heir, Livia
+  consort, no regency, and mortality protection. The sourced age-63 character
+  takes office on 2 January under a new, non-overlapping term.
+- The save validator has a strict ID-zero opening phase and retains mandatory
+  persisted identity checks after the handoff. Candidate 42 passes both exact
+  saves and the 1920x1080 UI proof with an unchanged 995-byte environment-only
+  log. Evidence is in
+  `docs/playtests/R21_ROMAN_OPENING_RULER_RUNTIME_20260808.md`.
+## 2026-08-12 - R13 AD 11 runtime defects isolated and adapted
+
+- The new estate identity-settlement hook kept all 2,531 live estates above
+  0.33 through AD 4 and Rome's five estate groups healthy through AD 11.
+- Intermediate production-save melts traced the sole bankruptcy to Thamud's
+  native RGO-upgrade path: seven starts, 104.86 debt, then default in AD 10.
+  Native RGO material flow now uses ancient rural-capital intensity without
+  removing universal expansion or shortening construction.
+- The remaining generic-action warning was localized to the non-atomic
+  two-selector `prepare_for_war` AI action and made manual-only; its player and
+  diplomacy contracts remain intact.
+- R14 reached AD 9 without default and with no generic-action warnings, but its
+  save exposed 112.71 Thamud debt from the independent native RGO cash formula.
+  The rejected campaign was stopped; both cash-cost defines are now generated
+  at the same ancient one-twentieth scale as RGO material demand.
+- R14's sole remaining diplomacy warning is a measured stock 1.3.11 race (38
+  in the matched vanilla year versus one in eight mod years), now classified
+  only under a length-scaled exact-family ceiling.

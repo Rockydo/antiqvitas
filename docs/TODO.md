@@ -2,8 +2,305 @@
 
 Tasks are taken top-to-bottom within the current milestone. A milestone closes only
 after `make full` and its autonomous driver report are green.
+Every open checkbox is mandatory and remains in scope until its stated behavior is
+implemented and proved by evidence matching that checkbox's full breadth.
 
-## Fifth manual playtest remediation - 2026-08-02 (resume here)
+## Seventh manual playtest remediation - 2026-08-06
+
+This section supersedes affected Round 6 completion claims, especially
+advance-effect quality and opening cordage supply: a pre-seeded building is not
+proof that the player can construct its building type. Static remediation is now
+implemented for the magnitude catalogue, recursive 108-good/463-polity production
+graph, four later-antique goods, 463-polity programme coverage, Augustan structural
+crown contribution, and conditional Teutoburg chain. The checkboxes remain open
+because fresh UI/tooltips, construction queues, economy panels, AI behavior,
+event scenarios, and save/reload evidence are still mandatory.
+
+The initial repository analysis found five systemic causes: ordinal-derived
+advance micro-values; opening ropewalk/tar visibility and a circular construction
+input lock; producer-count audits without recursive unlock reachability; programme
+counts without a 463-polity coverage floor; a Principate contract that strengthened
+estates without an Augustan crown component; and five unconditional Teutoburg
+calendar events lacking war, actor, or opponent conditions. The new generated
+ledgers and validators guard each repaired source, but do not substitute for the
+Round 7 runtime gate.
+
+Current gate status: the canonical validator includes five dedicated Round 7
+checks and contains 177 commands. All five pass, the prior uninterrupted 172-command
+gate passed before their registration, and the exact current game-visible tree has
+a green vanilla-versus-mod 1920x1080 smoke with zero new error-log lines. During
+that smoke, EU5 exposed invalid modifier-style `base` syntax in all generated
+cabinet-action AI blocks; the generator now emits the installed effect-script
+contract and carries a regression assertion. Feature-specific fresh starts and
+save/reload scenarios remain open, so no Round 7 checkbox is closed yet.
+
+### S7-P0 - Advance-effect scale and presentation
+
+- [ ] Inventory every modifier on every active advance, including generated,
+  hand-authored, starting, country, culture, shared, identity, and legal-foundation
+  nodes. Resolve named/scripted values to their numeric runtime values and record
+  engine unit, UI conversion, displayed precision, stacking family, acquisition
+  age, and representative baseline impact; do not audit only the four modifiers
+  noticed in this playtest.
+- [ ] Replace ordinal-derived micro-values and arbitrary precision with a reviewed
+  magnitude catalogue by modifier family. Every numeric reward must use an
+  intentional, human-readable increment appropriate to its unit (percentage,
+  percentage point, monthly rate, flat value, capacity, range, or efficiency),
+  survive the actual tooltip's rounding, and produce a measurable gameplay change.
+  Reject displayed `0%` effects, values such as `+0.06%`/`+0.07%` that are merely
+  generator fingerprints, and effects whose practical impact is swallowed by
+  normal monthly or UI precision.
+- [ ] Balance effects by total node package and cumulative branch, not by blindly
+  raising every number. Compare against vanilla and current ANTIQVITAS baselines;
+  preserve distinctions between minor supporting nodes and capstones, prevent
+  country/culture identity paths from becoming automatic overpowered bundles, and
+  replace unsuitable modifiers with clearer mechanics or unlocks where a sensible
+  perceptible value would be too strong.
+- [ ] Add a generated effect-scale ledger and validator that fails on unresolved
+  constants, excessive decimal precision, values below the modifier's display or
+  impact floor, unintended duplicate stacking, zero/negative rewards, and branch
+  totals outside reviewed bands. Runtime-check tooltips and before/after results
+  for cabinet efficiency, levy recovery, trade range, disease resistance, control,
+  research, production, military, demographic, diplomatic, and every other effect
+  family represented in the tree.
+
+### S7-P1 - Complete opening production graph and later-age goods
+
+- [ ] Replace the current producer-count audit with a recursive, unlock-aware
+  production graph for all 104 active goods and every newly added good. For every
+  opening polity and market, distinguish RGO extraction, pre-seeded workshops, and
+  player-constructible producers; follow every recipe input back to a valid source;
+  detect cycles, missing inputs, culture/terrain/profile lockouts, and goods first
+  demanded before they can be produced or imported. A seeded producer must never
+  satisfy the constructibility assertion by itself.
+- [ ] Make every good realistically producible in AD 1 available through a
+  historically and geographically appropriate day-one production means. Every
+  processed good needs at least one visible, constructible opening building for
+  each culture/profile that can reasonably make it; every raw good needs a working
+  RGO/extraction route and any engine-required extraction building. Availability
+  need not be universal, but no polity may be hard-locked out of ordinary
+  construction because the required good has no reachable producer or trade path.
+- [ ] Reopen cordage specifically. Make Ropewalks and appropriate regional
+  equivalents visible and constructible in Rome and all relevant AD 1 profiles,
+  with achievable fiber, lumber, tool, cloth, and tar inputs. Verify the building
+  browser, location eligibility, construction queue, staffing, production method,
+  output, market balance, AI construction, and downstream shipyard/building use on
+  fresh starts; do not accept the existing pre-seeded ropewalks as the fix.
+- [ ] Reopen tar and audit all analogous bottlenecks. Make the period-appropriate
+  Wood-Tar Kiln/pitch producer constructible where timber and local practice allow,
+  provide appropriate non-forest or trade alternatives, and test its lumber/tool
+  inputs and all tar-consuming cordage, leather, and naval chains. Generate a
+  complete list of zero-producer, seeded-only, locked-producer, unreachable-input,
+  and market-isolated goods and reduce every category to zero.
+- [ ] Design a sourced portfolio of genuinely later-antique goods whose technique,
+  quality, or regional diffusion supports a later-age unlock. Give each a distinct
+  economic role, historically appropriate names and culture/locality variants,
+  prices, categories, icons, production buildings and methods, advance gates, AI
+  behavior, and localization in all 11 clients. Do not relabel an AD 1 staple as a
+  late invention merely to create progression.
+- [ ] Prove that later-age goods have exactly zero premature demand: no opening pop
+  need, construction cost, maintenance, unit cost, production input, trade desire,
+  event, situation, law, or seeded building may require them before their first
+  reachable producer unlocks. Introduce demand alongside or after supply, provide
+  sensible substitution/transition paths, and runtime-test first unlock,
+  construction, staffing, trade, consumption, AI adoption, and save/reload in each
+  intended culture region.
+
+### S7-P2 - Administrative depth and Augustan crown power
+
+Static 2026-08-19: 56 culture-gated regional programmes in 14 packs overlay the
+tribal/royal/civic/gana/steppe/sacral floor. The 463-row matrix now reports
+5-11 visible programmes per tag and counts setting-tied regional offices for
+the generic floors. Dedicated flagship councils are unchanged. Runtime cabinet
+UI, AI weights in play, and save/reload proof remain mandatory.
+
+- [ ] Build a 463-opening-polity administrative-programme visibility matrix rather
+  than counting only the 45 council profiles. Identify countries and cultures with
+  zero, generic-only, duplicated, inappropriate, or too few viable programmes;
+  ensure every opening polity has at least five meaningful choices and at least two
+  tied to its actual political/cultural setting rather than borrowed major-power
+  content.
+- [ ] Expand administrative programmes for smaller states and underrepresented
+  cultures across every macro-region. Author distinct fiscal, judicial, diplomatic,
+  military, infrastructural, religious, pastoral, maritime, urban, and subsistence
+  programmes where historically appropriate; give them real tradeoffs, cabinet
+  aptitude links, AI weights, costs, durations, effects, progress text, and all-client
+  localization. Reject cloned names/effects and foreign-profile leakage, and retain
+  deeper flagship packages without making country size the sole source of variety.
+- [ ] Audit Rome's actual fresh-start crown power and every contributing source:
+  government reform, laws, privileges, estates, land ownership, cabinet, ruler,
+  legitimacy, accepted cultures, subjects, and scripted modifiers. Rebalance the
+  Augustan Principate toward materially stronger imperial authority without
+  depicting AD 1 Rome as a later absolutist Dominate or erasing senatorial,
+  equestrian, municipal, and provincial bargaining. Use structural historical
+  sources and counterplay, not a hidden flat crown-power cheat.
+- [ ] Compare the resulting Roman distribution with Parthia, Han, republics,
+  client kingdoms, city-states, and tribal confederations. Capture day-one and
+  settled crown/estate panels, explain every major percentage, test cabinet and law
+  changes, succession and reform transitions, and enforce reviewed profile bands so
+  a future generator change cannot silently return Rome to implausibly weak crown
+  power or make every empire identical.
+
+### S7-P3 - Conditional Teutoburg frontier chain
+
+Static implementation: `antq_teutoburg_campaign_ready_trigger` now requires the
+persisted living Varus scope and an actual war with one of nine reviewed Germanic
+frontier polities. Three pre-battle phases share that gate; the battle cannot fire
+before 9.8.8; its aftermath requires the battle-resolution variable; and peaceful
+or otherwise ineligible histories receive *The Germania Frontier Policy* after
+the sourced window without a forced war. `tools/s7_teutoburg_scenarios.py` passes
+13 structural scenarios and writes `docs/m10/teutoburg_scenario_matrix.csv`; engine
+scenario and save/reload proof remains outstanding.
+
+- [ ] Replace the unconditional AD 9-10 Teutoburg event with an actor- and
+  state-aware frontier chain. It may culminate in Teutoburg only when a living,
+  eligible Varus/Roman command and an eligible Germanic opponent exist and Rome is
+  actually campaigning, occupying, invading, or at war in the relevant Germania
+  frontier. Peaceful Rome must not receive a completed battle that never occurred.
+- [ ] Choose and document the counterfactual behavior when historical conditions
+  are absent: delay/suppress the battle and offer an appropriately named frontier
+  policy current, or create an explicit, warned escalation path with player agency.
+  Do not silently force an arbitrary war merely to preserve the date, and do not
+  present diplomacy or uneventful frontier administration as the historical defeat.
+- [ ] Give the chain meaningful preparation, escalation, battle, and aftermath
+  states with visible progression, participants, objectives, casualties, command
+  consequences, territorial/war effects, Germanic outcomes, Roman strategic
+  choices, and alternate conclusions. Integrate it with the wider situation/event
+  framework instead of another isolated stability/prestige popup.
+- [ ] Add a scenario matrix for Rome at peace, at war with an eligible Germanic
+  polity, at war elsewhere, allied or truced with frontier tribes, east-of-Rhine
+  occupation, a conquered Germania, missing/dead Varus, missing Germanic actors,
+  AI Rome, and player Rome. Prove correct timing, no duplicate firing, no phantom
+  wars/battles, valid scopes after deaths or annexations, and save/reload continuity.
+
+### S7-P4 - Round 7 regression gate
+
+- [ ] Run the full installed-union validation only after the above work is
+  complete. The closing batch must include the complete advance-effect
+  scale ledger, 104-plus-good recursive reachability graph, fresh constructibility
+  captures for cordage and tar, all-goods zero-lockout results, late-good no-demand
+  proofs, the 463-polity programme matrix, comparative crown-power captures, and
+  every Teutoburg scenario. Then run paired smoke and uninterrupted representative
+  campaigns; update completion claims only from that final green evidence.
+
+## Sixth manual playtest remediation - 2026-08-06
+
+This section supersedes affected completion claims below. Round 6 closes only
+when its generated sources, static gates, fresh starts, and uninterrupted runtime
+evidence agree; an old save cannot prove a start-state repair.
+
+Current verified batch: 2,950 bounded opening buildings; day-one Roma market
+opens while paused; fresh Rome survives through 1 January AD 5; settled Rome,
+Parthia, and Han economy panels captured; 463-profile reform matrix; 243 new
+exact-country/culture advances; 129 themed situation actions; 336 consequential
+phase events; and zero forbidden lexemes in 843 North-African descendant rows.
+Evidence: `docs/playtests/ROUND6_REMEDIATION_20260806.md`.
+
+### S6-P0 - Crash path and generated-start resource budget
+
+- [x] Fix the common resource path behind the 2026-08-05 23:25 market-panel
+  crash and the 2026-08-06 00:05 year-4 termination. Preserve the dumps and
+  diagnostics: the first is a Vulkan `ErrorDeviceLost` write AV with an exact
+  `nvlddmkm` event; the second entered the same renderer failure path after system
+  commit fell to 5 MB. Do not classify either as the repaired building-AI crash or
+  dismiss either as a resolution issue.
+- [x] Replace indiscriminate opening-building saturation with a bounded economic
+  seed model. The current union creates 6,706 buildings versus vanilla's 2,646;
+  Roma alone has 107 versus vanilla's 7. Cap per-location and per-market density,
+  preserve only historically meaningful landmarks and viable supply chains, and
+  prove that market/construction panels do not accumulate invalid data contexts or
+  runaway GUI/widget/commit growth.
+- [ ] Re-run the immediate 1 January market-panel test repeatedly and a fresh
+  continuous Rome campaign past year 5 at 1920x1080. Record RAM, commit, VRAM,
+  building/construction counts, GUI widgets, driver events, logs, and dumps. Accept
+  only zero new crashes and no monotonic resource leak; retain 2560x1440 as an
+  additional stress case rather than a substitute for crash analysis.
+- [ ] Audit the year-3/4 wave of civil wars and invalid AI commands as a separate
+  simulation defect. Establish a representative global stability distribution and
+  reject accidental systemic collapse before continuing the century gate.
+
+### S6-P1 - AD 1 start-state viability and imperial control
+
+- [x] Rebalance Rome, Parthia, and Han from economic causes, not flat treasury or
+  income cheats. On fresh starts, document budget components, staffing, market
+  inputs, food, administration, stability, control, research, and military upkeep;
+  keep historically justified pressures but remove unintended dire states. Rome's
+  ordinary peacetime opening balance must not be about -300 Wealth per month.
+- [ ] Make the Roman cordage circuit real and visible. Ensure a staffed, supplied,
+  constructible rope/cordage producer operates in the Roman market on day one and
+  that downstream buildings no longer deadlock; add equivalent bounded supply
+  checks for Parthia and Han rather than merely counting inert seeded buildings.
+  Round 6 proved seeded supply only; Round 7 confirmed that Rome cannot construct
+  any current cordage producer and therefore supersedes the former completion.
+- [x] Repair Rome's opening government state so Augustus is the active ruler, not
+  a regency, and add a runtime assertion for ruler, heir, consort, and ruler-term
+  integrity. Verify the actual save state rather than accepting setup-script text.
+- [x] Remove the accidental administrative-efficiency collapse caused by the
+  accepted/tolerated-culture setup. Model Roman provincial pluralism through
+  supported culture capacity, administration, subjects, and local institutions;
+  add equivalent scale-aware audits for Parthia and Han.
+- [x] Remove the opening `Municipal Lineage Arbitration` global monthly-control
+  penalty of -0.50% or replace it with a proportionate local/administrative
+  tradeoff. Audit every starting law and privilege for magnitude, stacking, and a
+  usable counterplay path.
+- [x] Add historically grounded capital/provincial administrative buildings that
+  raise local maximum and monthly control and radiate bounded proximity from
+  appropriate centers. Seed reviewed networks for Rome, Parthia, Han, and other
+  large empires; unlock stronger apex-era centralization without granting universal
+  map control. Keep the proximity-AI crash fix until the new source graph passes
+  null-manager, ownership, market, and repeated runtime stress tests.
+- [ ] Compare effective research time with vanilla and with the expanded tree.
+  Preserve meaningful pacing while adding staffed libraries, archives, schools,
+  observatories, and other tall-investment routes; validate representative small,
+  large, literate, and low-literacy countries over at least ten years.
+
+### S6-P2 - Country and culture identity
+
+- [x] Gate every government reform by an exact historical family, culture/profile,
+  tag, or explicitly authored adoption bridge. The current major reform definitions
+  lack potentials, so Rome can see Han Imperial Bureaucracy and Indo-Scythian
+  Kingship. Add a full cross-profile visibility matrix and reject all foreign reform
+  leakage at start and after research.
+- [x] Deepen the advance system beyond broad culture-group templates. Add substantial
+  exact-culture and flagship-country branches with distinct effects, units,
+  buildings, production methods, laws, actions, and strategic strengths; include
+  authored diffusion/conquest bridges where defensible. Prove that representative
+  countries in every macro-region have materially different early, middle, and late
+  research choices and that no branch is cosmetic or an overpowered bundle.
+
+### S6-P3 - Situations and events
+
+- [ ] Replace the 43 cloned relief/mobilize situations with authored mechanics,
+  participants, milestones, opposing pressures, automatic progression, actions,
+  outcomes, and clear player-facing explanations appropriate to each current.
+  Gaius Caesar's Eastern Settlement must visibly progress and give Rome, Armenia,
+  and Parthia meaningful roles; validate its numeric bar and all start/end paths.
+- [x] Remove `This historical current follows the strong setting` and every related
+  generator phrase from all languages. Replace template prose with immersive
+  descriptions that explain stakes, progress sources, available interventions, and
+  consequences without exposing implementation terminology.
+- [ ] Overhaul the event corpus so choices are not repeated weak stability/prestige
+  swaps. Give each chain specific actors, triggers, branching consequences,
+  follow-ups, AI weights, and integration with governments, markets, warfare,
+  culture, religion, advances, and situations. Add diversity/signature validators
+  and runtime-play every first-century chain before resuming the 100 AD gate.
+
+### S6-P4 - North-African names and Round 6 release gate
+
+- [x] Re-audit all 843 North-African geography rows for post-antique Arabic-derived
+  definite articles and modern Arabic/French geographic vocabulary, not only the
+  visible `Al Jamah of Bagradas-Thugga`. Replace anachronistic Al-/Ar-/El-, Oued,
+  Jebel/Djebel, and similar forms with attested ancient names or conservative
+  physical/people-based proxies; preserve genuinely ancient names and document any
+  defensible exception. Add a scoped lexeme gate across all six map levels and 11
+  client localizations.
+- [ ] Run full installed-union validation, paired smoke, immediate market stress,
+  fresh Rome/Parthia/Han start audits, reform/advance visibility matrices, situation
+  and event playback, and a continuous Rome run to 100 AD. Any crash restarts the
+  century run at 1 AD. Update progress, decisions, assumptions, crash evidence, and
+  this TODO only from the final green batch.
+
+## Fifth manual playtest remediation - 2026-08-02
 
 This section supersedes affected completion claims below. Close each item only
 when the authored ledger, generated union, validator, and fresh runtime evidence agree.
@@ -40,6 +337,10 @@ geography rows. Remaining release work is situation UI and one-year population.
   inherited aliases; retain reversible, owner-aware Roman frontier exonyms without
   replacing local roots. Fresh runtime covers 82/82 regions and six zoom levels;
   static checks cover all kinds/ranks, and the prior valid owner cycle remains.
+- [x] Compact every label at least 30 characters into a collision-safe, complete
+  ancient/local anchor of at most 29 characters; preserve every existing <30
+  label byte-for-byte. Enforce the cap in the canonical geography validator and
+  regenerate all 11 client mirrors.
 - [x] Replace the inherited 240-site/16-file holy-site union with a reviewed AD 1
   catalogue and ancient site types. Neutralize every non-ANTQ `create_holy_site`
   call; validate location, faith, type, importance, name, and description. Runtime
@@ -62,12 +363,14 @@ geography rows. Remaining release work is situation UI and one-year population.
 
 ### S5-P1 - Population, cultivation, and productive depth
 
-- [ ] Rebalance tribesmen total-neutrally from a sourced macro/tag/frontier/upland
+- [x] Rebalance tribesmen total-neutrally from a sourced macro/tag/frontier/upland
   share ledger. Target world 20-26%, SoP 65-80%, countries plus subjects 5-12%,
   Rome/Han 3-8%, Parthia 10-20%, and settled India 8-18%, without inflating core
   cities or changing regional totals. Runtime-prove normal and `leavepops` starts,
   capacity, and stable one-year shares. Static targets and a stable five-month
-  normal run pass; one-year/`leavepops` runtime has the recorded renderer blocker.
+  normal run pass. The obsolete menu-recovery route is rejected; two captured
+  console `load` forms return `File doesn't exist`, so resume one-year/`leavepops`
+  playback after a verified console or UI-load contract change.
 - [x] Give every one of the 36 Cultivator families a baseline plus at least three
   age-progressive production methods, with ecology- and profile-specific
   specialties where historical. Unlock later methods exactly once through eligible
@@ -84,6 +387,9 @@ geography rows. Remaining release work is situation UI and one-year population.
   at least four balanced opening placements and six profile-specific buildables;
   every tag must have at least six culture/profile-specific choices. Preserve Roman
   special isolation and block unrelated tribal specialties from settled profiles.
+- [x] Rebuild all 84 tribal building icons with the vanilla circular transparent-perimeter
+  mask and include them in the global building audit; 408/408 active building icons
+  must be circle-safe, navy-field aligned, and non-aliased.
 
 ### S5-P2 - Knowledge and maritime identity
 
@@ -104,6 +410,14 @@ geography rows. Remaining release work is situation UI and one-year population.
   Prevent inland grants, foreign patrol profiles, cannon ships, and premature
   oceanic capacity; runtime-prove representative tier and culture contrasts.
 
+### S5 Misc
+
+- [x] Remove newer-looking location/town/city names from active root and culture-adapter paths. Stuttgart now renders as the period-appropriate Nicer Valley at every active name resolver; the high-visibility generator consumes the reviewed R5 geography ledger instead of reviving vanilla labels.
+- [x] Situation pages render through the shared installed panel contract: the
+  2026-08-04 live Aestian Amber Shore capture shows its illustration, name,
+  description, end requirements, resolution-progress control, and situation
+  data map. The 86 response actions remain available to qualifying participants.
+
 ### S5 release gate
 
 - [ ] Run the full installed-union validators, `make validate`, paired `make smoke`,
@@ -115,8 +429,13 @@ geography rows. Remaining release work is situation UI and one-year population.
   at `223ab95ebb2526b1186c8989d0b0eef2f0fcd813390fb9f416db3c6db2328b94`;
   only the recorded one-year/century renderer-blocked proofs remain open. The
   repaired save-recovery route also resets `1.5.30` to `1.1.1` before Observer.
+- [ ] Final validation gate : Select Rome and play untill 100AD without a single crash. Make sure every expected situation unlocks correctly. That advances work, etc. Click on a lot of stuff.
+	- Make sure situations and events work exactly as planned and have their full breadth. Fix any issues you find, I expect some.
+	- If anything doesn't work as planned fix it. If you get a crash, fix it thoroughly
+	- if at any point the game crashes, you must restart again in 1AD. Do not stop untill you get a full uninterrupted run up to 100 AD with Rome.
+ -> THIS GATE IS NON NEGOCIABLE, THE MOD CANNOT BE CONSIDERED FINISHED IF IT'S STILL CRASHING. THIS IS CRITICAL
 
-## Advanced structural audit remediation - 2026-08-02 (resume here)
+## Advanced structural audit remediation - 2026-08-02
 
 This section supersedes affected completion claims below. Close each item only
 after its generator, generated output, regression validator, and relevant fresh
@@ -221,7 +540,7 @@ runtime evidence agree.
   Fresh runtime covers Rome, Parthia, Han, Satavahana, faith/annona contracts,
   five IOs, staged currents, and zero bookmark/post-February overpopulation.
 
-## Third manual playtest remediation - 2026-07-30 (resume here)
+## Third manual playtest remediation - 2026-07-30
 
 This section supersedes prior completion claims where the new playtest found
 visible inheritance or shallow availability. Close items only with an
@@ -462,7 +781,7 @@ evidence for Rome, Parthia, Suebi, and one non-Eurasian control where relevant.
 - [x] Replace all shared/fallback UI visuals with dedicated illustrations for every ANTIQVITAS advance, privilege, building, good, religion, institution, council, and state office; retain a checked asset ledger and contact-sheet review. (Validated by the 1,413-chain direct UI ledger and reviewed contact sheet; all 360 advances have direct art and zero religion or privilege aliases remain.)
   - [x] Complete the direct M8 migration: all 250 foundation-tree advances plus 110 Age-I expansion advances have unique reviewed masters and BC7 textures.
 
-## Second manual playtest remediation — 2026-07-26 (resume here)
+## Second manual playtest remediation — 2026-07-26
 
 This section supersedes earlier completion claims wherever the second manual
 playtest exposed shallow coverage or visible vanilla inheritance. The existing
@@ -1930,7 +2249,7 @@ subsystem probes; do not substitute multi-year or exhaustive observer runs.
   - Acceptance: every current and newly added tag resolves to a documented period
     label in selection, diplomacy, map tooltips, and rank panel; no tribal/SoP
     sample shows County.
-  - Completed: all 229 design/engine tags resolve through 12 documented ancient
+  - Completed: all current design/engine tags resolve through 11 documented ancient
     presentation classes while retaining required technical ranks. Raw fallbacks,
     ruler labels, and elevation actions are neutralized in all 11 clients; the
     New Game probe shows `People of Venedi`, `Leader`, and `Realm of Roxolani`.

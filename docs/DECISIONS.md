@@ -1,5 +1,103 @@
 ﻿# Technical and Design Decisions
 
+## 2026-08-19 - Regional programmes overlay the small-state floor
+
+One `antq_tribal_kingdom` reform cannot map to many councils. Extra programmes
+are therefore culture-gated overlays: small-state reforms AND
+`dominant_culture.has_culture_group`. Dedicated councils stay exclusive.
+Art uses the existing four-up magenta still-life contract, not new 6-up
+council paintings.
+
+## 2026-08-08 - Remove inert capacity output from quarantined buildings
+
+EU5 performs new-game per-worker efficiency validation even for building types
+whose `country_potential` and `allow` are permanently false. Source-preserving
+legacy shells therefore emitted warnings from medieval manpower/naval capacity
+modifiers that could never affect an AD 1 campaign. The quarantine generator
+now removes direct local manpower/sailor output and owner-directed equivalents
+from every one of its 465 inert definitions while retaining keys, employment,
+production-method references, variable-reader contracts, and all other script
+shape. Active ANTIQVITAS buildings are untouched.
+
+This is a global quarantine rule, not a list of the 13 definitions observed in
+one log. A fresh-world generation proves zero efficiency diagnostics.
+
+## 2026-08-08 - Bind construction badges through a zero-safe item model
+
+The installed build-location row asks `datacontext_from_model` for index zero
+of each location's civil-construction list. GUI visibility is not lazy, so an
+empty list still emits an out-of-range `Construction` diagnostic. ANTIQVITAS
+mirrors the exact installed lateral view and changes only that badge: a
+`DataModelFirst(..., 1)` item container now instantiates the original count and
+`Construction_tooltip` only when a construction exists. The installed cancel,
+mass-build, row-build, and dequeue actions remain unchanged.
+
+The overlay is generated and checked against the installed 1.3.11 source so a
+game update cannot silently leave a stale UI fork. Runtime proof covers empty
+Rome/Neapolis rows, a queued Ropewalk, the full construction tooltip, and the
+original cancel path with no error-log delta.
+
+## 2026-08-08 - Preserve geography tooltips while removing double-formatted styles
+
+EU5 1.3.11 formats tooltip-backed geography map names twice. The installed
+`|L` style becomes an internal link marker after the first pass and an unknown
+`l` formatting tag after the second; a fresh unmodded campaign reproduced the
+same defect. ANTIQVITAS overrides only that redundant style on province, area,
+region, subcontinent, continent, and scripted-geography structs. Every original
+`#TOOLTIP` target remains, so hover and selection semantics are retained.
+
+The installed Proximity legend separately resolves `local_proximity_source` as
+a data-system function even though it is a building modifier. Its replacement
+is a static, equivalent legend label. A generator synchronizes both workarounds
+across all localization mirrors and the canonical validator checks their exact
+contents.
+
+## 2026-08-06 - Bound the opening economy instead of saturating locations
+
+The AD 1 start now contains 2,950 buildings rather than 6,706. Productive supply
+chains are concentrated at 60 major markets and reviewed regional/capital
+centers, while ordinary locations receive at most the scalable capacity their
+rank, population, polity, and market role justify. This keeps cordage and other
+construction inputs available without making every settlement a complete
+industrial stack or retaining Roma's former 107-building load.
+
+## 2026-08-06 - Keep proximity-control buildings but quarantine their AI search
+
+Round 6 introduces authored scriptoria, forum-basilicas, cursus stations, and
+peer administrative centers with bounded `local_proximity_source` and control
+modifiers. The engine's proximity-candidate search remains disabled because the
+R34 dump proved that its optional candidate lookup can dereference a null
+market-like object. The define does not disable the buildings' modifiers or
+ordinary construction, road, city, building, and market AI. Re-enable that one
+search only after a future engine fix or a debugger-backed null-manager proof.
+
+## 2026-08-06 - Derive situation validation from authored response themes
+
+The structural gate imports the situation-action generator's exact three
+responses per current. Retired `_relief` and `_mobilize` names are no longer a
+valid proxy for depth; all 129 themed actions must exist, target their matching
+progress variable, and appear exactly once in the AI registry.
+
+## 2026-08-05 - Disable only the unused proximity-building evaluator
+
+The Rome April crash is a null dereference inside
+`CBuildingAi::HandleProximityBuildings`, not the renderer or the automatic
+market initializer. At R34 ANTIQVITAS had quarantined the installed proximity
+chain, so it set only `NAI.AI_PROXIMITY_CANDIDATE_UPDATE_CHANCE = 0` while
+retaining normal building, construction, road, city, and market AI. Round 6 now
+adds bounded authored proximity-control buildings but deliberately retains the
+narrow engine-safety define, as recorded in the newer decision above.
+
+## 2026-08-05 - Keep altered raw materials quarantined pending a clean proof
+
+The complete historical RGO ledger remains generated and checked, but neither
+`change_raw_material` at `on_game_start` nor bookmark `locations` assignment is
+emitted into the live start. Earlier RGO control runs were confounded by the
+separate proximity-building AI crash, so they do not prove that RGO mutation
+caused the native failure. Re-enable this surface only in a dedicated fresh
+campaign test now that R34 removes the known crash path. The map-template
+generator continues to retain installed raw-material fields meanwhile.
+
 ## 2026-08-03 - Recovery input waits for visible save-load completion
 
 `MainMenu->Game` and cached-data log markers occur while EU5 still renders a
@@ -4616,3 +4714,116 @@ to `popup=no`. In a seeded AD 1 world, other countries can create many markets
 at a monthly pulse; those notices should remain visible in the feed without
 stopping a player's campaign. Retain player `WE_PERFORM` market feedback and
 all unrelated installed definitions unchanged.
+
+## 2026-08-08 - Preserve the opening ruler term and hand off Augustus by date
+
+Do not replace EU5's generated Roman ruler on 1 January: the engine records two
+same-day terms even if the first holder is retired first. Instead, transform the
+existing ID-zero holder into the complete player-facing Augustus identity for
+the first playable day, while retaining a hidden age-63 target for a 2 January
+handoff. ID zero is a valid active ruler and term character but the null sentinel
+for saved character variables, so the opening save gate must inspect the actual
+government and character databases; persisted-variable identity becomes
+mandatory immediately after the dated handoff.
+## 2026-08-12 - Native RGO capital and compound council targets need separate AI adapters
+
+The generic construction queue controls do not govern native RGO upgrades.
+In the R13 fresh Rome observer campaign, Thamud began seven such upgrades and
+reached 104.86 gold of debt by AD 10 despite a positive settled peacetime
+budget; its surviving project ledger also showed 83.75 gold spent before 62%
+completion.  RGO material intensity is therefore one twentieth of the installed
+value (0.005 daily lumber or masonry). R14 then proved this is only half the
+path: Thamud still accumulated 112.71 debt by AD 9 because the native
+`GOODS_RGO_BASE_COST` and `GOODS_RGO_PRICE_SCALE` cash purchase bypasses the
+demand file. Those two defines now use the same one-twentieth capital scale,
+retaining both priced cash and material investment plus the full build time.
+
+The installed `prepare_for_war` generic action chooses a country and then a
+province in separate selector passes.  R13 logged one invalid generic command
+immediately after its Indo-Greek target became stale and immediately before the
+resulting war declaration.  Because no actor prerequisite can make those two
+target passes atomic, autonomous and player-automation ticks are disabled for
+that action; the player council action, ordinary diplomatic AI, and ancient
+casus-belli systems remain available.
+
+The matched unmodified EU5 1.3.11 control emitted 38
+`diplomaticactioncommand` warnings in its first year. R14 emitted one in eight
+years amid simultaneous `OfferScriptedRelationObjective` cancellations. The
+runtime gate therefore baselines that exact command family, like
+`change_trade_capacity`, against a campaign-length-scaled stock ceiling. All
+other commands remain actionable, and either family still fails above its
+measured control rate.
+## 2026-08-13 - Production mercenary gates follow live combat-class slots
+
+EU5 1.3.11 persists one eligible mercenary representative per combat class in
+each geographic availability cell. A regional company replaces the universal
+company copied from the same base class; it does not create a second same-class
+slot. The final production gate therefore requires heavy-infantry,
+light-infantry, and light-cavalry coverage in every live cell, requires Hired
+Horse and Local Retainers to instantiate somewhere in the manager, and requires
+live specialists from six regional families. It does not require a universal
+fallback name to survive in cells where an eligible regional specialist wins.
+
+R25 at AD 2 provides the direct evidence: all 451 cells contain exactly those
+three classes. Local Retainers occupy 353 heavy-foot cells and five regional
+heavy-foot types occupy the other 98; Hired Horse occupies 446 mounted cells
+and Armenian/Saka horse occupy the other five; Caravan Guards occupy 325
+light-foot cells and six regional skirmisher types occupy the other 126. The
+pre-fix R24 save still fails the class-aware gate because both portable systems
+are absent and 446 cells lack mounted coverage.
+
+## 2026-08-13 - Subject relationships and polity ranks remain separate
+
+EU5 1.3.11's subject-war notifications concatenate the relationship type and
+the subject country's already styled long name. R26 exposed the resulting
+`Client Kingdom Client Kingdom of Mauretania` text. Dependency status is not a
+constitutional rank, so all monarchical starting dependencies now retain the
+period-neutral `Kingdom` country style, while the tribal Batavi retain `People`.
+The five M9 relationship types remain independently named in diplomacy.
+
+The two installed subject-war notification keys are exactly overridden to name
+the styled subject once. Generator checks reject any `$TYPE$ $SUBJECT$`
+composition and reject any future dependency whose relationship leaks back
+into its M12 country-rank class.
+
+## 2026-08-13 - Mercenary AI remains active with bounded captain demand
+
+R27's clean production log exposed two simultaneous
+`hire_mercenary_from_leader` rejections at AD 11. Both successful contracts
+went to the same borrower with distinct leaders, both corresponding pool cells
+correctly changed to `state=hired`, and no leader was duplicated in the pool.
+The failures are therefore competing AI plans against globally shared captains
+on one tick, not malformed availability or insufficient class depth.
+
+Keep player access, the live pool, regional companies, prices, and the native
+AI hiring path intact. Set the engine's land force-composition preference
+`NAI.DEFAULT_MERCENARY_ARMY_PREFERENCE` from 1.0 to 0.25 so autonomous
+countries still hire mercenaries without concentrating simultaneous bids on
+the same scarce captains. The generator rejects omission or duplication of the
+exact assignment; naval mercenary preference is unchanged.
+## 2026-08-13 - Retain ancient expansion mechanics but replace their complete presentation layer
+
+R28 proved that EU5's always-available Geopolitics window can expose stock
+early-modern labels even though ANTIQVITAS replaces the advance tree and gates
+later content. Settlement founding, geographic survey expeditions, and
+state-sanctioned sea raiding all have defensible ancient counterparts and add
+useful play, so the mechanics remain enabled. Their player presentation is now
+consistently `Settlement Charters`, `Survey Expeditions` led by `Survey Leaders`,
+and `Commissioned Raiders`; the top-level window is `Frontiers and Sea Lanes`.
+
+`tools/m12_ancient_expansion_loc.py` harvests matching keys and rendered prose
+from the complete mounted base+DLC English localization union, preserves script
+expressions and concept-link identifiers, and generates a synchronized late
+layer for all eleven clients. The validator compares the exact generated result,
+so a game patch or DLC addition cannot silently reopen this surface.
+## 2026-08-13 — Retain ancient dynastic marriage; quarantine chivalric orders
+
+R30 exposed an enabled Order of Chivalry action in Rome's AD 4 character menu.
+The complete mounted registry review found fifteen order definitions, including
+six German society definitions without a potential gate, and 35 character
+interaction definitions.  ANTIQVITAS now exact-mirrors both filename unions:
+all orders and culture-, religion-, institution-, or era-specific interactions
+are false-gated, while a pinned portable ancient court/state interaction set is
+retained.  The valid inter-country marriage mechanic remains active but its
+systemic UI is presented as “Dynastic Marriage,” which works for empires,
+kingdoms, tribes, and republics without importing medieval chivalric framing.

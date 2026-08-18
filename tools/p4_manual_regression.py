@@ -175,7 +175,7 @@ def build_report() -> dict[str, object]:
     require(
         politics_counts == {
             "parliament_type": 45,
-            "cabinet_action": 249,
+            "cabinet_action": 317,
             "parliament_issue": 159,
             "parliament_agenda": 159,
         },

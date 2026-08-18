@@ -1,5 +1,31 @@
 ﻿# Historical Assumptions
 
+## 2026-08-19 - Regional programmes are conservative public offices
+
+The 14 culture packs assert only widely attested local practices (grove
+custody, tank sluices, milpa seed, llama packs, well rights, foggaras, jar
+burial, Hopewell exchange). They do not invent AD 1 constitutions or backdate
+later empires (Inka, Aztec, Chola, Islamic waqf, Mongol decimal relays).
+Sources in `tools/s2_regional_programmes.py`.
+
+## 2026-08-06 - Imperial household costs are represented structurally
+
+The generic engine court and diplomatic budget shares assume that these costs
+sit mainly in two abstract national sliders. ANTIQVITAS already charges ancient
+imperial obligations through household, elite, temple, municipal, military,
+market, and subject systems. Using two percent for the residual court share and
+one percent for residual diplomatic spending avoids double-counting; it is not
+a claim that Rome, Parthia, or Han spent those exact proportions historically.
+No flat income or opening-treasury bonus is inferred from this adapter.
+
+## 2026-08-06 - Administrative centers represent bounded service networks
+
+Scriptoria, forum-basilicas, cursus stations, and their Iranian and Han peers
+represent staffed archives, municipal courts, dispatch routes, and provincial
+coordination. Their control effect is intentionally local and proximity-bounded;
+it does not assert uniform effective control over an empire or a recovered
+standard bureaucracy in every seeded engine location.
+
 ## 2026-08-03 - Tribal starts represent household capacity
 
 The eight shared opening buildings represent widespread household production,
@@ -6044,3 +6070,25 @@ Where no AD 1 settlement name survives, use the ledger's contemporary people,
 archaeological horizon, hydronym, or physical feature and distinguish siblings by
 direction or reach. These are map-scale reconstructions, not claims of attestation.
 Sources are recorded per row in `docs/r5/geography_names.csv`.
+## 2026-08-13 - Mercenary availability cells are class slots, not roster lists
+
+The production-save `mercenary_manager` is treated as the authoritative engine
+contract. In EU5 1.3.11, a cell containing a regional heavy-foot, light-foot, or
+mounted company may omit the universal company copied from that same base unit
+without losing the tactical role. This is an observed technical rule, not a
+claim that ancient military labor was organized into uniform worldwide class
+slots. Company names, quantities, and regional availability remain bounded
+gameplay adapters. Evidence: R25 AD 2 live save and the deliberately failing
+pre-fix R24 comparison. [secure engine behavior; contested historical scale and
+organization]
+
+## 2026-08-13 - Dependency status does not erase local polity form
+
+Roman clientage, Arsacid subordination, and Han tribute are modeled as
+diplomatic relationships layered over local government. A monarchical
+dependency therefore displays as a Kingdom and the tribal Batavi as a People;
+the relationship panel separately identifies Client Kingdom, Satrapy, or
+Tributary obligations. This avoids treating all dependent courts as one
+constitutional species. Evidence: `docs/world_1ad/subjects.csv`, M9 contract
+ledger, and the R26 subject-war notification regression. [secure engine
+composition; secure broad constitutional distinction; contested local titles]
