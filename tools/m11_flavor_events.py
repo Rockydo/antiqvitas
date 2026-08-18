@@ -21,7 +21,7 @@ from m10_history import (
     validate_ai_chance_syntax,
 )
 from m10_situation_actions import THEME_BY_KEY as SITUATION_THEMES
-from m11_first_century_events import FIRST_CENTURY_EFFECTS, packages_are_unique
+from m11_first_century_events import CURRENT_EFFECTS, packages_are_unique
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -318,7 +318,7 @@ def branch_effects(item: PhaseEvent, *, directed: bool) -> tuple[str, ...]:
     phase = item.phase
     cost = PHASE_COSTS[phase]
     strong = "mild" if phase in {"contest", "closing"} else "weak"
-    override = FIRST_CENTURY_EFFECTS.get(item.key)
+    override = CURRENT_EFFECTS.get(item.key)
     if override:
         themed = list(override["directed" if directed else "delegated"])
         common: list[str] = []
@@ -591,11 +591,11 @@ def validate(items: tuple[PhaseEvent, ...]) -> None:
         raise ValueError("M11 flavor-event IDs must be unique")
     if len({(item.key, item.phase) for item in items}) != len(items):
         raise ValueError("M11 current phases must be unique")
-    first_century_keys = {item.key for item in items if item.date.year <= 100}
-    missing = sorted(first_century_keys - set(FIRST_CENTURY_EFFECTS))
-    extra = sorted(set(FIRST_CENTURY_EFFECTS) - first_century_keys)
+    covered_keys = {item.key for item in items if item.date.year <= 200}
+    missing = sorted(covered_keys - set(CURRENT_EFFECTS))
+    extra = sorted(set(CURRENT_EFFECTS) - covered_keys)
     if missing or extra:
-        raise ValueError(f"first-century effect coverage mismatch missing={missing} extra={extra}")
+        raise ValueError(f"early-current effect coverage mismatch missing={missing} extra={extra}")
     package_failures = packages_are_unique()
     if package_failures:
         raise ValueError("; ".join(package_failures))

@@ -143,14 +143,89 @@ FIRST_CENTURY_EFFECTS: dict[str, dict[str, tuple[str, ...]]] = {
 }
 
 
+SECOND_CENTURY_EFFECTS: dict[str, dict[str, tuple[str, ...]]] = {
+    "trajan_dacia": {
+        "directed": (gold(26), manpower("-1.2"), "\t\tadd_army_tradition = army_tradition_mild_bonus"),
+        "delegated": (gold(12), "\t\tadd_war_exhaustion = war_exhaustion_weak_bonus", "\t\tadd_prestige = prestige_weak_bonus"),
+    },
+    "cai_lun_paper": {
+        "directed": (gold(9), "\t\tadd_research_progress = research_progress_mild_bonus", "\t\tadd_prestige = prestige_weak_bonus"),
+        "delegated": (gold(3), "\t\tadd_legitimacy = legitimacy_weak_bonus", "\t\tadd_research_progress = research_progress_weak_bonus"),
+    },
+    "trajan_parthia": {
+        "directed": (gold(27), manpower("-1.15"), "\t\tadd_legitimacy = legitimacy_weak_bonus"),
+        "delegated": (gold(12), "\t\tadd_prestige = prestige_mild_bonus", "\t\tadd_war_exhaustion = war_exhaustion_weak_bonus"),
+    },
+    "antioch_earthquake": {
+        "directed": (gold(20), "\t\tadd_stability = stability_mild_bonus", manpower("-0.15")),
+        "delegated": (gold(8), "\t\tadd_prestige = prestige_weak_penalty", "\t\tadd_legitimacy = legitimacy_weak_bonus"),
+    },
+    "hadrians_wall": {
+        "directed": (gold(19), "\t\tadd_stability = stability_weak_bonus", manpower("-0.35")),
+        "delegated": (gold(8), "\t\tadd_army_tradition = army_tradition_weak_bonus", "\t\tadd_prestige = prestige_weak_penalty"),
+    },
+    "kanishka_apogee": {
+        "directed": (gold(14), "\t\tadd_legitimacy = legitimacy_mild_bonus", "\t\tadd_research_progress = research_progress_weak_bonus"),
+        "delegated": (gold(6), "\t\tadd_prestige = prestige_mild_bonus", "\t\tadd_stability = stability_weak_penalty"),
+    },
+    "bar_kokhba": {
+        "directed": (gold(24), manpower("-1.0"), "\t\tadd_stability = stability_weak_bonus"),
+        "delegated": (gold(11), "\t\tadd_army_tradition = army_tradition_mild_bonus", "\t\tadd_prestige = prestige_mild_penalty"),
+    },
+    "antonine_wall": {
+        "directed": (gold(17), manpower("-0.4"), "\t\tadd_prestige = prestige_weak_bonus"),
+        "delegated": (gold(7), "\t\tadd_stability = stability_weak_bonus", "\t\tadd_war_exhaustion = war_exhaustion_weak_bonus"),
+    },
+    "celestial_masters": {
+        "directed": (gold(10), "\t\tadd_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }", "\t\tadd_stability = stability_weak_penalty"),
+        "delegated": (gold(4), "\t\tadd_legitimacy = legitimacy_mild_bonus", "\t\tadd_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }"),
+    },
+    "gothic_migration": {
+        "directed": (gold(16), "\t\tadd_stability = stability_mild_bonus", manpower("-0.3")),
+        "delegated": (gold(7), manpower("-0.55"), "\t\tadd_prestige = prestige_weak_penalty"),
+    },
+    "verus_parthia": {
+        "directed": (gold(22), manpower("-0.8"), "\t\tadd_army_tradition = army_tradition_weak_bonus"),
+        "delegated": (gold(10), "\t\tadd_prestige = prestige_weak_bonus", "\t\tadd_stability = stability_weak_penalty"),
+    },
+    "antonine_plague": {
+        "directed": (gold(23), "\t\tadd_stability = stability_mild_bonus", manpower("-0.6")),
+        "delegated": (gold(9), "\t\tadd_legitimacy = legitimacy_weak_bonus", "\t\tadd_prestige = prestige_mild_penalty"),
+    },
+    "daqin_embassy": {
+        "directed": (gold(12), "\t\tadd_prestige = prestige_mild_bonus", "\t\tadd_research_progress = research_progress_weak_bonus"),
+        "delegated": (gold(5), "\t\tadd_legitimacy = legitimacy_weak_bonus", "\t\tadd_prestige = prestige_weak_bonus"),
+    },
+    "marcomannic_wars": {
+        "directed": (gold(25), manpower("-1.05"), "\t\tadd_army_tradition = army_tradition_mild_bonus"),
+        "delegated": (gold(11), "\t\tadd_war_exhaustion = war_exhaustion_weak_bonus", "\t\tadd_stability = stability_weak_penalty"),
+    },
+    "yellow_turbans": {
+        "directed": (gold(21), manpower("-0.85"), "\t\tadd_stability = stability_weak_bonus"),
+        "delegated": (gold(9), "\t\tadd_legitimacy = legitimacy_mild_penalty", "\t\tadd_army_tradition = army_tradition_weak_bonus"),
+    },
+    "champa_formation": {
+        "directed": (gold(11), "\t\tadd_legitimacy = legitimacy_mild_bonus", "\t\tadd_prestige = prestige_weak_bonus"),
+        "delegated": (gold(4), manpower("-0.25"), "\t\tadd_stability = stability_weak_bonus"),
+    },
+    "five_emperors": {
+        "directed": (gold(22), "\t\tadd_legitimacy = legitimacy_mild_bonus", manpower("-0.65")),
+        "delegated": (gold(9), "\t\tadd_stability = stability_mild_penalty", "\t\tadd_prestige = prestige_weak_bonus"),
+    },
+}
+
+
+CURRENT_EFFECTS = {**FIRST_CENTURY_EFFECTS, **SECOND_CENTURY_EFFECTS}
+
+
 def packages_are_unique() -> list[str]:
     failures: list[str] = []
     seen: dict[tuple[tuple[str, ...], tuple[str, ...]], str] = {}
-    for key, package in FIRST_CENTURY_EFFECTS.items():
+    for key, package in CURRENT_EFFECTS.items():
         signature = (package["directed"], package["delegated"])
         prior = seen.get(signature)
         if prior:
-            failures.append(f"{key} reuses first-century effect pair from {prior}")
+            failures.append(f"{key} reuses effect pair from {prior}")
         else:
             seen[signature] = key
     return failures

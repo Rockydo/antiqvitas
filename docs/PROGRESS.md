@@ -2,9 +2,9 @@
 
 ## 2026-08-19 - First-century phase events get unique effect packages
 
-- 30 AD 1-100 currents now have distinct directed/delegated costs instead of
+- 47 AD 1-200 currents now have distinct directed/delegated costs instead of
   shared theme stability/prestige pairs. Later centuries still use the theme
-  fallback. Validator rejects duplicate first-century packages.
+  fallback. Validator rejects duplicate packages.
 
 ## 2026-08-19 - Regional administrative programmes for small states
 
