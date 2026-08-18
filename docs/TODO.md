@@ -284,6 +284,8 @@ Evidence: `docs/playtests/ROUND6_REMEDIATION_20260806.md`.
   follow-ups, AI weights, and integration with governments, markets, warfare,
   culture, religion, advances, and situations. Add diversity/signature validators
   and runtime-play every first-century chain before resuming the 100 AD gate.
+  Static 2026-08-19: 30 first-century currents have unique directed/delegated
+  effect packages; later centuries and runtime playback remain open.
 
 ### S6-P4 - North-African names and Round 6 release gate
 

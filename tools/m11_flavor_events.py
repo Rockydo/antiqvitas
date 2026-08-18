@@ -15,6 +15,13 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from dates import AntqDate, M2_MIRROR_LANGUAGES, days_between, load_timeline, offset_date
+from m10_history import (
+    event_path_variable,
+    teutoburg_opponent_capture_lines,
+    validate_ai_chance_syntax,
+)
+from m10_situation_actions import THEME_BY_KEY as SITUATION_THEMES
+from m11_first_century_events import FIRST_CENTURY_EFFECTS, packages_are_unique
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -31,11 +38,74 @@ PHASES = (
     ("contest", "A Contested Moment"),
     ("closing", "The Window Narrows"),
 )
-PHASE_MECHANICS = {
-    "conditions": (3, "stability", "stability_weak_bonus", "prestige", "prestige_weak_penalty"),
-    "pressure": (5, "legitimacy", "legitimacy_weak_bonus", "stability", "stability_weak_penalty"),
-    "contest": (8, "prestige", "prestige_weak_bonus", "legitimacy", "legitimacy_weak_penalty"),
-    "closing": (4, "stability", "stability_weak_bonus", "legitimacy", "legitimacy_weak_penalty"),
+PHASE_COSTS = {"conditions": 8, "pressure": 14, "contest": 22, "closing": 12}
+THEME_KEYWORDS = (
+    ("belief", ("religion", "christian", "buddh", "temple", "council", "conversion", "manichae", "olympic")),
+    ("exchange", ("embassy", "mission", "paper", "silk", "trade", "faxian", "learning", "silphium")),
+    ("migration", ("migration", "refugee", "settlement", "abandoned", "adventus", "crossing")),
+    ("civil_war", ("civil", "succession", "emperors", "three_kingdoms", "eight_princes", "usurp")),
+    ("rebellion", ("revolt", "rebellion", "uprising", "turbans", "boudica", "tacfarinas")),
+    ("campaign", ("war", "battle", "campaign", "invasion", "conquest", "sack", "frontier", "teutoburg")),
+    ("diplomacy", ("settlement", "treaty", "coronation", "annexation", "partition", "embassy")),
+)
+
+# Every phrase contains the current's reviewed title, so no two historical
+# currents present cloned choices even when they share a broad mechanic family.
+CHOICE_TEXT = {
+    "campaign": {
+        "conditions": ("Survey the approaches for {label}", "Rely on the frontier commands during {label}"),
+        "pressure": ("Reinforce the field depots for {label}", "Call allied contingents into {label}"),
+        "contest": ("Commit the central reserve to {label}", "Trade ground for time during {label}"),
+        "closing": ("Fund the military settlement of {label}", "Entrust the settlement of {label} to provincial commanders"),
+    },
+    "rebellion": {
+        "conditions": ("Investigate the grievances behind {label}", "Demand immediate obedience during {label}"),
+        "pressure": ("Offer redress and conditional amnesty in {label}", "Secure loyal garrisons against {label}"),
+        "contest": ("Separate negotiators from the leaders of {label}", "Concentrate the field army for {label}"),
+        "closing": ("Guarantee the negotiated settlement of {label}", "Impose a punitive settlement after {label}"),
+    },
+    "civil_war": {
+        "conditions": ("Convene the rival courts in {label}", "Recognize one claimant in {label} at once"),
+        "pressure": ("Broker offices and guarantees during {label}", "Secure the armies' acclamation during {label}"),
+        "contest": ("Finance a constitutional compact for {label}", "Commit the palace reserve to {label}"),
+        "closing": ("Bind the victors of {label} to a public settlement", "Let the victorious court settle {label}"),
+    },
+    "migration": {
+        "conditions": ("Survey land and routes for {label}", "Close the principal crossings used in {label}"),
+        "pressure": ("Issue grain and travel provisions for {label}", "Channel {label} through guarded corridors"),
+        "contest": ("Negotiate service and settlement obligations in {label}", "Mobilize to contain {label}"),
+        "closing": ("Register the communities shaped by {label}", "Leave settlement after {label} to frontier patrons"),
+    },
+    "belief": {
+        "conditions": ("Protect inquiry surrounding {label}", "Require a court formula for {label}"),
+        "pressure": ("Endow debate and teaching during {label}", "Bind patronage in {label} to one party"),
+        "contest": ("Hear the competing communities of {label}", "Call the court to decide {label}"),
+        "closing": ("Publish a bounded settlement for {label}", "Leave enforcement of {label} to local sanctuaries"),
+    },
+    "exchange": {
+        "conditions": ("Receive the travelers of {label}", "Confine the knowledge of {label} to the court"),
+        "pressure": ("Fund interpreters and archives for {label}", "License selected brokers of {label}"),
+        "contest": ("Open workshops and schools to {label}", "Reserve the practices of {label} for state use"),
+        "closing": ("Disseminate the record of {label}", "Let regional patrons carry the exchange of {label}"),
+    },
+    "diplomacy": {
+        "conditions": ("Exchange envoys and hostages for {label}", "Issue a binding claim in {label} before talks"),
+        "pressure": ("Subsidize a durable settlement for {label}", "Back the ultimatum in {label} with an army"),
+        "contest": ("Convene every principal in {label}", "Recognize the strongest claimant in {label}"),
+        "closing": ("Guarantee the final compact of {label}", "Accept a narrower settlement for {label}"),
+    },
+    "statecraft": {
+        "conditions": ("Commission records for {label}", "Announce the order of {label} by decree"),
+        "pressure": ("Negotiate offices and obligations in {label}", "Dispatch inspectors to enforce {label}"),
+        "contest": ("Fund the institutions required by {label}", "Concentrate appointments for {label} at court"),
+        "closing": ("Publish the reviewed settlement of {label}", "Permit regional adaptation after {label}"),
+    },
+    "crisis": {
+        "conditions": ("Commission a full account of {label}", "Empower emergency magistrates for {label}"),
+        "pressure": ("Fund relief and protected supply during {label}", "Ration stores under guard during {label}"),
+        "contest": ("Coordinate local recovery councils for {label}", "Concentrate all reserves against {label}"),
+        "closing": ("Endow reconstruction after {label}", "Return recovery from {label} to provincial authorities"),
+    },
 }
 MODULES = (
     "m10_history",
@@ -66,6 +136,7 @@ class PhaseEvent:
     trigger_tag: str
     image: str
     event_id: int
+    theme: str
 
     @property
     def event_key(self) -> str:
@@ -117,6 +188,22 @@ def phase_dates(start: AntqDate, end: AntqDate) -> tuple[tuple[AntqDate, AntqDat
     return tuple(result)
 
 
+def current_theme(current: object, row: dict[str, str]) -> str:
+    """Classify a sourced current into a reviewed gameplay mechanic family."""
+    if current.kind == "disaster":
+        return "crisis"
+    situation_theme = SITUATION_THEMES.get(getattr(current, "script_key", ""))
+    if situation_theme:
+        return "campaign" if situation_theme == "frontier" else situation_theme
+    haystack = " ".join(
+        (current.key, row["label"], row["summary"], row["region"])
+    ).lower()
+    for theme, keywords in THEME_KEYWORDS:
+        if any(keyword in haystack for keyword in keywords):
+            return theme
+    return "statecraft"
+
+
 def records() -> tuple[PhaseEvent, ...]:
     rows = timeline_rows()
     result: list[PhaseEvent] = []
@@ -148,6 +235,7 @@ def records() -> tuple[PhaseEvent, ...]:
                 trigger_tag=trigger_tag,
                 image=image,
                 event_id=6000 + len(result),
+                theme=current_theme(current, row),
             ))
     return tuple(result)
 
@@ -165,6 +253,216 @@ def start_tags() -> frozenset[str]:
     return frozenset(re.findall(r"(?m)^([A-Z0-9]{3})\s*=\s*\{", text))
 
 
+def branch_variable(item: PhaseEvent, branch: str) -> str:
+    return f"antq_m11_{item.key}_{branch}_path"
+
+
+def primary_path_variable(item: PhaseEvent, branch: str) -> str:
+    return f"antq_m10_{item.key}_{branch}_path"
+
+
+def branch_initialization_lines(
+    item: PhaseEvent, *, indent: str = "\t\t"
+) -> tuple[str, ...]:
+    """Initialize both persistent counters before any ``var:`` comparison."""
+    directed = branch_variable(item, "directed")
+    delegated = branch_variable(item, "delegated")
+    return (
+        f"{indent}if = {{",
+        f"{indent}\tlimit = {{ NOT = {{ has_variable = {directed} }} }}",
+        f"{indent}\tset_variable = {{ name = {directed} value = 0 }}",
+        f"{indent}}}",
+        f"{indent}if = {{",
+        f"{indent}\tlimit = {{ NOT = {{ has_variable = {delegated} }} }}",
+        f"{indent}\tset_variable = {{ name = {delegated} value = 0 }}",
+        f"{indent}}}",
+    )
+
+
+def branch_seed_lines(item: PhaseEvent) -> tuple[str, ...]:
+    """Carry the primary decision forward and make both counters readable.
+
+    Clausewitz reports a script error when ``var:name`` is compared before the
+    variable exists.  Every continuation choice compares both branch counters,
+    including the counter for the choice the player did not take.  Seed a
+    historical branch when one exists, then explicitly initialize either
+    missing counter to zero before the event options can be evaluated.
+    """
+    directed = branch_variable(item, "directed")
+    delegated = branch_variable(item, "delegated")
+    return (
+        "\timmediate = {",
+        "\t\tif = {",
+        f"\t\t\tlimit = {{ NOT = {{ has_variable = {directed} }} NOT = {{ has_variable = {delegated} }} }}",
+        "\t\t\tif = {",
+        "\t\t\t\tlimit = {",
+        "\t\t\t\t\tOR = {",
+        f"\t\t\t\t\t\thas_variable = {primary_path_variable(item, 'chronicle')}",
+        f"\t\t\t\t\t\thas_variable = {primary_path_variable(item, 'command')}",
+        "\t\t\t\t\t}",
+        "\t\t\t\t}",
+        f"\t\t\t\tset_variable = {{ name = {directed} value = 1 }}",
+        "\t\t\t}",
+        "\t\t\telse_if = {",
+        f"\t\t\t\tlimit = {{ has_variable = {primary_path_variable(item, 'compact')} }}",
+        f"\t\t\t\tset_variable = {{ name = {delegated} value = 1 }}",
+        "\t\t\t}",
+        "\t\t}",
+        *branch_initialization_lines(item),
+        "\t}",
+    )
+
+
+def branch_effects(item: PhaseEvent, *, directed: bool) -> tuple[str, ...]:
+    """Return thematic costs and payoffs for one persistent phase branch."""
+    phase = item.phase
+    cost = PHASE_COSTS[phase]
+    strong = "mild" if phase in {"contest", "closing"} else "weak"
+    override = FIRST_CENTURY_EFFECTS.get(item.key)
+    if override:
+        themed = list(override["directed" if directed else "delegated"])
+        common: list[str] = []
+    elif directed:
+        common = [f"\t\tadd_gold = -{cost}"]
+        themed = {
+            "campaign": [
+                "\t\tadd_manpower = { value = monthly_manpower multiply = -0.75 }",
+                f"\t\tadd_army_tradition = army_tradition_{strong}_bonus",
+            ],
+            "rebellion": [
+                f"\t\tadd_stability = stability_{strong}_bonus",
+                "\t\tadd_prestige = prestige_weak_penalty",
+            ],
+            "civil_war": [
+                f"\t\tadd_legitimacy = legitimacy_{strong}_bonus",
+                "\t\tadd_stability = stability_weak_bonus",
+            ],
+            "migration": [
+                f"\t\tadd_stability = stability_{strong}_bonus",
+                "\t\tadd_manpower = { value = monthly_manpower multiply = -0.25 }",
+            ],
+            "belief": [
+                "\t\tadd_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }",
+                "\t\tadd_stability = stability_weak_penalty",
+            ],
+            "exchange": [
+                f"\t\tadd_research_progress = research_progress_{strong}_bonus",
+                "\t\tadd_prestige = prestige_weak_bonus",
+            ],
+            "diplomacy": [
+                f"\t\tadd_legitimacy = legitimacy_{strong}_bonus",
+                "\t\tadd_stability = stability_weak_bonus",
+            ],
+            "statecraft": [
+                f"\t\tadd_research_progress = research_progress_{strong}_bonus",
+                "\t\tadd_stability = stability_weak_bonus",
+            ],
+            "crisis": [
+                f"\t\tadd_stability = stability_{strong}_bonus",
+                "\t\tadd_manpower = { value = monthly_manpower multiply = -0.5 }",
+            ],
+        }[item.theme]
+    else:
+        common = [f"\t\tadd_gold = -{max(2, cost // 2)}"]
+        themed = {
+            "campaign": [
+                "\t\tadd_war_exhaustion = war_exhaustion_weak_bonus",
+                "\t\tadd_prestige = prestige_weak_bonus",
+            ],
+            "rebellion": [
+                "\t\tadd_manpower = { value = monthly_manpower multiply = -0.5 }",
+                "\t\tadd_stability = stability_weak_penalty",
+                "\t\tadd_army_tradition = army_tradition_weak_bonus",
+            ],
+            "civil_war": [
+                "\t\tadd_manpower = { value = monthly_manpower multiply = -0.75 }",
+                "\t\tadd_stability = stability_weak_penalty",
+                "\t\tadd_prestige = prestige_weak_bonus",
+            ],
+            "migration": [
+                "\t\tadd_manpower = { value = monthly_manpower multiply = -0.5 }",
+                "\t\tadd_prestige = prestige_weak_penalty",
+            ],
+            "belief": [
+                f"\t\tadd_legitimacy = legitimacy_{strong}_bonus",
+                "\t\tadd_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }",
+            ],
+            "exchange": [
+                f"\t\tadd_legitimacy = legitimacy_{strong}_bonus",
+                "\t\tadd_prestige = prestige_weak_penalty",
+            ],
+            "diplomacy": [
+                "\t\tadd_manpower = { value = monthly_manpower multiply = -0.5 }",
+                "\t\tadd_prestige = prestige_weak_bonus",
+                "\t\tadd_stability = stability_weak_penalty",
+            ],
+            "statecraft": [
+                f"\t\tadd_legitimacy = legitimacy_{strong}_bonus",
+                "\t\tadd_stability = stability_weak_penalty",
+            ],
+            "crisis": [
+                "\t\tadd_manpower = { value = monthly_manpower multiply = -0.75 }",
+                f"\t\tadd_legitimacy = legitimacy_{strong}_bonus",
+                "\t\tadd_prestige = prestige_weak_penalty",
+            ],
+        }[item.theme]
+    branch = "directed" if directed else "delegated"
+    opposite = "delegated" if directed else "directed"
+    lines = [
+        *common,
+        *themed,
+        "\t\tif = {",
+        f"\t\t\tlimit = {{ NOT = {{ has_variable = {branch_variable(item, branch)} }} }}",
+        f"\t\t\tset_variable = {{ name = {branch_variable(item, branch)} value = 0 }}",
+        "\t\t}",
+        f"\t\tchange_variable = {{ name = {branch_variable(item, branch)} add = 1 }}",
+    ]
+    if phase != "conditions":
+        lines.extend((
+            "\t\tif = {",
+            # The engine evaluates option limits before an event's immediate block
+            # on some UI/AI paths.  A direct var: comparison on an absent counter
+            # therefore logs a script error even though the immediate block later
+            # seeds it.  Guard every read; this also makes a saved/in-flight event
+            # safe if its originating phase has been removed or superseded.
+            f"\t\t\tlimit = {{ has_variable = {branch_variable(item, branch)} var:{branch_variable(item, branch)} >= 2 }}",
+            "\t\t\tadd_prestige = prestige_weak_bonus",
+            "\t\t}",
+            "\t\tif = {",
+            f"\t\t\tlimit = {{ has_variable = {branch_variable(item, opposite)} var:{branch_variable(item, opposite)} >= 2 }}",
+            "\t\t\tadd_stability = stability_weak_penalty",
+            "\t\t}",
+        ))
+    if phase == "closing":
+        lines.extend((
+            f"\t\tremove_variable = {branch_variable(item, 'directed')}",
+            f"\t\tremove_variable = {branch_variable(item, 'delegated')}",
+            f"\t\tif = {{ limit = {{ has_variable = {primary_path_variable(item, 'chronicle')} }} remove_variable = {primary_path_variable(item, 'chronicle')} }}",
+            f"\t\tif = {{ limit = {{ has_variable = {primary_path_variable(item, 'compact')} }} remove_variable = {primary_path_variable(item, 'compact')} }}",
+            f"\t\tif = {{ limit = {{ has_variable = {primary_path_variable(item, 'command')} }} remove_variable = {primary_path_variable(item, 'command')} }}",
+        ))
+    return tuple(lines)
+
+
+def ai_chance_lines(item: PhaseEvent, *, directed: bool) -> tuple[str, ...]:
+    cost = PHASE_COSTS[item.phase]
+    if directed:
+        return (
+            "\t\tai_chance = {",
+            "\t\t\tbase = 58",
+            f"\t\t\tmodifier = {{ factor = 0.3 gold < {cost * 2} }}",
+            "\t\t\tmodifier = { factor = 1.25 stability < 0 }",
+            "\t\t}",
+        )
+    return (
+        "\t\tai_chance = {",
+        "\t\t\tbase = 42",
+        f"\t\t\tmodifier = {{ factor = 1.7 gold < {cost * 2} }}",
+        "\t\t\tmodifier = { factor = 1.2 at_war = yes }",
+        "\t\t}",
+    )
+
+
 def event_script(items: tuple[PhaseEvent, ...]) -> str:
     lines = [
         "# Generated by tools/m11_flavor_events.py --write; consequential current phases.",
@@ -173,7 +471,6 @@ def event_script(items: tuple[PhaseEvent, ...]) -> str:
         "",
     ]
     for item in items:
-        cost, benefit, bonus, exposure, penalty = PHASE_MECHANICS[item.phase]
         lines.extend((
             f"# {item.label} — {item.phase_label}; {item.source}; recipient={item.engine_tag}; trigger={item.trigger_tag}",
             f"{item.event_key} = {{",
@@ -189,16 +486,44 @@ def event_script(items: tuple[PhaseEvent, ...]) -> str:
             f"\t\tto = {item.close_date.engine()}",
             "\t\tmonthly_chance = 100",
             "\t}",
+        ))
+        if item.key == "teutoburg":
+            if item.phase == "closing":
+                trigger_lines = (
+                    "\ttrigger = {",
+                    "\t\thas_variable = antq_teutoburg_battle_resolved",
+                    "\t\tNOT = { has_variable = antq_teutoburg_aftermath_seen }",
+                    "\t}",
+                    "\timmediate = {",
+                    "\t\tset_variable = antq_teutoburg_aftermath_seen",
+                    *branch_initialization_lines(item),
+                    "\t}",
+                )
+            else:
+                trigger_lines = (
+                    "\ttrigger = {",
+                    "\t\tantq_teutoburg_campaign_ready_trigger = yes",
+                    "\t\tNOT = { has_variable = antq_teutoburg_battle_resolved }",
+                    "\t}",
+                    "\timmediate = {",
+                    "\t\tset_variable = antq_teutoburg_chain_active",
+                    *teutoburg_opponent_capture_lines(indent="\t\t"),
+                    *branch_initialization_lines(item),
+                    "\t}",
+                )
+            lines.extend(trigger_lines)
+        else:
+            lines.extend(branch_seed_lines(item))
+        lines.extend((
             "\toption = {",
             f"\t\tname = {item.event_key}.a",
-            "\t\tai_chance = { base = 65 }",
-            f"\t\tadd_gold = -{cost}",
-            f"\t\tadd_{benefit} = {bonus}",
+            *ai_chance_lines(item, directed=True),
+            *branch_effects(item, directed=True),
             "\t}",
             "\toption = {",
             f"\t\tname = {item.event_key}.b",
-            "\t\tai_chance = { base = 35 }",
-            f"\t\tadd_{exposure} = {penalty}",
+            *ai_chance_lines(item, directed=False),
+            *branch_effects(item, directed=False),
             "\t}",
             "}",
             "",
@@ -209,16 +534,37 @@ def event_script(items: tuple[PhaseEvent, ...]) -> str:
 def localization(items: tuple[PhaseEvent, ...], language: str) -> str:
     lines = [f"l_{language}:"]
     for item in items:
-        title = f"{item.label}: {item.phase_label}"
-        description = (
-            f"{item.summary} remains a documented historical current in {item.region}. "
-            "Its pressures now demand a response, while the outcome remains contingent on the campaign."
+        if item.key == "teutoburg":
+            titles = {
+                "conditions": "Varus and the Germanic Campaign",
+                "pressure": "Strain Along the Northern Roads",
+                "contest": "The Forest Corridors Narrow",
+                "closing": "After the Varian Disaster",
+            }
+            descriptions = {
+                "conditions": "Varus remains alive in Roman service, and a real war against a Germanic frontier polity has drawn the northern command beyond routine policing. Scouts, roads, and auxiliary loyalties now matter.",
+                "pressure": "The campaign is active rather than ceremonial: dispersed columns, uncertain supply routes, and contested local alliances are placing the Roman field command under pressure.",
+                "contest": "With Roman and Germanic forces committed to the same frontier war, the wooded corridors can become a battlefield. The result is not predetermined, but delay now carries military risk.",
+                "closing": "A qualifying frontier campaign has culminated in the Varian disaster. Rome must absorb the losses and decide how the Rhine and the forward districts are to be governed afterward.",
+            }
+            title = titles[item.phase]
+            description = descriptions[item.phase]
+        else:
+            title = f"{item.label}: {item.phase_label}"
+            description = (
+                f"{item.summary} remains a documented historical current in {item.region}. "
+                "Earlier choices in this chain shape the cost of changing course; "
+                "consistent direction earns political confidence, while reversal creates strain."
+            )
+        directed_text, delegated_text = (
+            text.format(label=item.label)
+            for text in CHOICE_TEXT[item.theme][item.phase]
         )
         lines.extend((
             f' {item.event_key}.title: "{title}"',
             f' {item.event_key}.desc: "{description}"',
-            f' {item.event_key}.a: "Commit resources to shape the response."',
-            f' {item.event_key}.b: "Accept the immediate political strain."',
+            f' {item.event_key}.a: "{directed_text}."',
+            f' {item.event_key}.b: "{delegated_text}."',
             f' {item.event_key}.entry: "{title}"',
             f' {item.event_key}.entry_short: "{title}"',
         ))
@@ -245,6 +591,14 @@ def validate(items: tuple[PhaseEvent, ...]) -> None:
         raise ValueError("M11 flavor-event IDs must be unique")
     if len({(item.key, item.phase) for item in items}) != len(items):
         raise ValueError("M11 current phases must be unique")
+    first_century_keys = {item.key for item in items if item.date.year <= 100}
+    missing = sorted(first_century_keys - set(FIRST_CENTURY_EFFECTS))
+    extra = sorted(set(FIRST_CENTURY_EFFECTS) - first_century_keys)
+    if missing or extra:
+        raise ValueError(f"first-century effect coverage mismatch missing={missing} extra={extra}")
+    package_failures = packages_are_unique()
+    if package_failures:
+        raise ValueError("; ".join(package_failures))
     known_start_tags = start_tags()
     for item in items:
         if not item.region or not item.summary or not item.source or not item.image:
@@ -259,12 +613,97 @@ def validate(items: tuple[PhaseEvent, ...]) -> None:
                 f"{item.event_key} -> {item.trigger_tag}"
             )
     rendered = event_script(items)
+    validate_ai_chance_syntax(rendered, source=str(EVENT_OUTPUT.relative_to(ROOT)))
+    if "add_cultural_influence" in rendered:
+        raise ValueError("country-scoped phase event contains culture-scoped add_cultural_influence")
     if rendered.count("\toption = {") != len(items) * 2:
         raise ValueError("every phase event must have two player choices")
-    if rendered.count("\t\tadd_gold = -") != len(items):
-        raise ValueError("phase interventions lost their resource cost")
-    if rendered.count("_weak_penalty") != len(items):
-        raise ValueError("phase non-intervention choices lost their political cost")
+    if rendered.count("\t\tchange_variable = { name = antq_m11_") != len(items) * 2:
+        raise ValueError("phase choices lost their persistent branch state")
+    if rendered.count("gold < ") != len(items) * 2:
+        raise ValueError("phase AI weights lost their treasury-aware conditions")
+    continuations = sum(item.phase != "conditions" for item in items)
+    guarded_var_limits = re.findall(
+        # Tags and geography-derived current keys may include non-ASCII letters
+        # (for example ``aksum_meroë``), so match a script token rather than a
+        # restrictive ASCII identifier here.
+        r"\t\t\tlimit = \{ has_variable = (antq_m11_\S+) "
+        r"var:\1 >= 2 \}",
+        rendered,
+    )
+    if len(guarded_var_limits) != continuations * 4:
+        raise ValueError("later phases lost branch-consistency and reversal consequences")
+    if re.search(r"\t\t\tlimit = \{ var:antq_m11_", rendered):
+        raise ValueError("unguarded M11 branch counter comparison can log at runtime")
+    # Check the rendered event contract, including Teutoburg's custom immediate
+    # blocks: every phase must create both counters before its first option and
+    # any var: comparison can execute.
+    for item in items:
+        marker = f"\n{item.event_key} = {{\n"
+        if marker not in rendered:
+            raise ValueError(f"rendered phase event is missing: {item.event_key}")
+        before_options = rendered.split(marker, 1)[1].split("\n\toption = {\n", 1)[0]
+        for branch in ("directed", "delegated"):
+            expected_line = (
+                f"\t\t\tset_variable = {{ name = {branch_variable(item, branch)} "
+                "value = 0 }"
+            )
+            if expected_line not in before_options:
+                raise ValueError(
+                    f"phase branch counter lacks safe initialization: "
+                    f"{item.event_key}/{branch}"
+                )
+    english = localization(items, "english")
+    if (
+        "Commit resources to shape the response" in english
+        or "Accept the immediate political strain" in english
+    ):
+        raise ValueError("generic phase-choice prose survived the authored pass")
+    choice_values = [
+        match.group(1)
+        for line in english.splitlines()
+        if (match := re.match(
+            r'\s*antq_m11_flavor\.\d+\.[ab]:\s*"([^"]+)"', line
+        ))
+    ]
+    if len(choice_values) != len(items) * 2 or len(set(choice_values)) != len(choice_values):
+        raise ValueError("phase choice localization is missing or cloned")
+    represented_themes = {item.theme for item in items}
+    if represented_themes != set(CHOICE_TEXT):
+        raise ValueError(
+            f"phase mechanic-family coverage changed: {sorted(represented_themes)}"
+        )
+    for item in items:
+        for directed in (True, False):
+            effects = branch_effects(item, directed=directed)
+            if len(effects) < 4 or not any("add_gold" in line for line in effects):
+                raise ValueError(f"thin phase branch: {item.event_key}/{directed}")
+    primary_script = "\n".join(
+        path.read_text(encoding="utf-8-sig") for path in M10_EVENT_FILES
+    )
+    validate_ai_chance_syntax(primary_script, source="generated M10 event batches")
+    primary_choices: list[str] = []
+    for path in sorted((LOC_ROOT / "english").glob("antq_m10*_l_english.yml")):
+        for line in path.read_text(encoding="utf-8-sig").splitlines():
+            match = re.match(
+                r'\s*antq_m10(?:_[a-z]+)?\.\d+\.[abc]:\s*"([^"]+)"',
+                line,
+            )
+            if match:
+                primary_choices.append(match.group(1))
+    expected_primary_choices = source_event_count() * 3
+    if (
+        len(primary_choices) != expected_primary_choices
+        or len(set(primary_choices)) != len(primary_choices)
+    ):
+        raise ValueError("primary historical-current choices are missing or cloned")
+    for current, _ in m10_currents():
+        if current.key == "odoacer_finale":
+            continue
+        for branch in ("chronicle", "compact", "command"):
+            variable = event_path_variable(current, branch)
+            if f"set_variable = {variable}" not in primary_script:
+                raise ValueError(f"primary current lost persistent branch: {variable}")
     if source_event_count() + len(items) < TARGET_TOTAL:
         raise ValueError(
             f"M11 flavor pass misses the section 18 event target: "
