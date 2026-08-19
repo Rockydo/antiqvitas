@@ -275,6 +275,8 @@ Evidence: `docs/playtests/ROUND6_REMEDIATION_20260806.md`.
   outcomes, and clear player-facing explanations appropriate to each current.
   Gaius Caesar's Eastern Settlement must visibly progress and give Rome, Armenia,
   and Parthia meaningful roles; validate its numeric bar and all start/end paths.
+  Static 2026-08-19: 129 responses have unique titles/costs/progress/effects;
+  Rome/Armenia/Parthia remain Gaius actors. Runtime bar/path proof remains open.
 - [x] Remove `This historical current follows the strong setting` and every related
   generator phrase from all languages. Replace template prose with immersive
   descriptions that explain stakes, progress sources, available interventions, and
@@ -284,8 +286,8 @@ Evidence: `docs/playtests/ROUND6_REMEDIATION_20260806.md`.
   follow-ups, AI weights, and integration with governments, markets, warfare,
   culture, religion, advances, and situations. Add diversity/signature validators
   and runtime-play every first-century chain before resuming the 100 AD gate.
-  Static 2026-08-19: 30 first-century currents have unique directed/delegated
-  effect packages; later centuries and runtime playback remain open.
+  Static 2026-08-19: all 83 dated currents have unique directed/delegated
+  effect packages. Runtime playback of first-century chains remains open.
 
 ### S6-P4 - North-African names and Round 6 release gate
 

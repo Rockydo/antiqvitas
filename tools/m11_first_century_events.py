@@ -215,7 +215,159 @@ SECOND_CENTURY_EFFECTS: dict[str, dict[str, tuple[str, ...]]] = {
 }
 
 
-CURRENT_EFFECTS = {**FIRST_CENTURY_EFFECTS, **SECOND_CENTURY_EFFECTS}
+LATER_CENTURY_EFFECTS: dict[str, dict[str, tuple[str, ...]]] = {
+    "severus_caledonia": {
+        "directed": (gold(23), manpower("-0.95"), "\t\tadd_army_tradition = army_tradition_weak_bonus"),
+        "delegated": (gold(10), "\t\tadd_war_exhaustion = war_exhaustion_weak_bonus", "\t\tadd_prestige = prestige_mild_penalty"),
+    },
+    "constitutio_antoniniana": {
+        "directed": (gold(18), "\t\tadd_legitimacy = legitimacy_mild_bonus", "\t\tadd_stability = stability_weak_penalty"),
+        "delegated": (gold(7), "\t\tadd_prestige = prestige_weak_bonus", "\t\tadd_legitimacy = legitimacy_weak_penalty"),
+    },
+    "alemanni_formation": {
+        "directed": (gold(13), manpower("-0.45"), "\t\tadd_prestige = prestige_mild_bonus"),
+        "delegated": (gold(5), "\t\tadd_stability = stability_weak_bonus", manpower("-0.2")),
+    },
+    "three_kingdoms": {
+        "directed": (gold(24), manpower("-0.9"), "\t\tadd_legitimacy = legitimacy_mild_bonus"),
+        "delegated": (gold(11), "\t\tadd_stability = stability_mild_penalty", manpower("-0.4")),
+    },
+    "sassanid_revolution": {
+        "directed": (gold(20), "\t\tadd_legitimacy = legitimacy_mild_bonus", manpower("-0.7")),
+        "delegated": (gold(8), "\t\tadd_prestige = prestige_mild_penalty", "\t\tadd_army_tradition = army_tradition_weak_bonus"),
+    },
+    "third_century_crisis": {
+        "directed": (gold(28), "\t\tadd_stability = stability_mild_bonus", manpower("-0.8")),
+        "delegated": (gold(12), "\t\tadd_legitimacy = legitimacy_mild_penalty", "\t\tadd_war_exhaustion = war_exhaustion_weak_bonus"),
+    },
+    "manichaeism_foundation": {
+        "directed": (gold(11), "\t\tadd_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }", "\t\tadd_prestige = prestige_weak_bonus"),
+        "delegated": (gold(4), "\t\tadd_stability = stability_weak_penalty", "\t\tadd_research_progress = research_progress_weak_bonus"),
+    },
+    "frankish_formation": {
+        "directed": (gold(14), manpower("-0.5"), "\t\tadd_prestige = prestige_weak_bonus"),
+        "delegated": (gold(6), "\t\tadd_stability = stability_weak_bonus", "\t\tadd_army_tradition = army_tradition_weak_bonus"),
+    },
+    "cyprian_plague": {
+        "directed": (gold(21), "\t\tadd_stability = stability_mild_bonus", manpower("-0.55")),
+        "delegated": (gold(9), "\t\tadd_prestige = prestige_mild_penalty", "\t\tadd_legitimacy = legitimacy_weak_bonus"),
+    },
+    "diocletian_dominate": {
+        "directed": (gold(22), "\t\tadd_legitimacy = legitimacy_mild_bonus", "\t\tadd_research_progress = research_progress_weak_bonus"),
+        "delegated": (gold(9), "\t\tadd_stability = stability_weak_penalty", "\t\tadd_prestige = prestige_weak_bonus"),
+    },
+    "eight_princes": {
+        "directed": (gold(25), manpower("-1.0"), "\t\tadd_legitimacy = legitimacy_weak_bonus"),
+        "delegated": (gold(11), "\t\tadd_stability = stability_mild_penalty", "\t\tadd_prestige = prestige_weak_penalty"),
+    },
+    "armenia_conversion": {
+        "directed": (gold(12), "\t\tadd_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }", "\t\tadd_legitimacy = legitimacy_weak_bonus"),
+        "delegated": (gold(5), "\t\tadd_stability = stability_weak_penalty", "\t\tadd_prestige = prestige_mild_bonus"),
+    },
+    "constantine_civil_wars": {
+        "directed": (gold(26), manpower("-1.1"), "\t\tadd_legitimacy = legitimacy_mild_bonus"),
+        "delegated": (gold(12), "\t\tadd_army_tradition = army_tradition_mild_bonus", "\t\tadd_stability = stability_weak_penalty"),
+    },
+    "nicaea": {
+        "directed": (gold(10), "\t\tadd_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }", "\t\tadd_stability = stability_weak_bonus"),
+        "delegated": (gold(4), "\t\tadd_legitimacy = legitimacy_weak_bonus", "\t\tadd_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }"),
+    },
+    "shapur_julian": {
+        "directed": (gold(24), manpower("-0.95"), "\t\tadd_army_tradition = army_tradition_mild_bonus"),
+        "delegated": (gold(11), "\t\tadd_prestige = prestige_weak_bonus", "\t\tadd_war_exhaustion = war_exhaustion_weak_bonus"),
+    },
+    "aksum_meroë": {
+        "directed": (gold(15), manpower("-0.6"), "\t\tadd_prestige = prestige_mild_bonus"),
+        "delegated": (gold(6), "\t\tadd_legitimacy = legitimacy_weak_bonus", manpower("-0.3")),
+    },
+    "crete_earthquake": {
+        "directed": (gold(16), "\t\tadd_stability = stability_mild_bonus", "\t\tadd_prestige = prestige_weak_penalty"),
+        "delegated": (gold(7), manpower("-0.15"), "\t\tadd_legitimacy = legitimacy_weak_bonus"),
+    },
+    "huns_arrive": {
+        "directed": (gold(17), manpower("-0.55"), "\t\tadd_war_exhaustion = war_exhaustion_weak_bonus"),
+        "delegated": (gold(7), "\t\tadd_stability = stability_weak_bonus", "\t\tadd_prestige = prestige_mild_penalty"),
+    },
+    "gothic_refugees": {
+        "directed": (gold(18), "\t\tadd_stability = stability_mild_bonus", manpower("-0.35")),
+        "delegated": (gold(8), manpower("-0.6"), "\t\tadd_prestige = prestige_weak_penalty"),
+    },
+    "thessalonica": {
+        "directed": (gold(13), "\t\tadd_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }", "\t\tadd_legitimacy = legitimacy_mild_bonus"),
+        "delegated": (gold(5), "\t\tadd_stability = stability_weak_penalty", "\t\tadd_prestige = prestige_weak_bonus"),
+    },
+    "fei_river": {
+        "directed": (gold(23), manpower("-0.85"), "\t\tadd_legitimacy = legitimacy_weak_bonus"),
+        "delegated": (gold(10), "\t\tadd_stability = stability_weak_bonus", "\t\tadd_army_tradition = army_tradition_mild_bonus"),
+    },
+    "gwanggaeto": {
+        "directed": (gold(16), manpower("-0.5"), "\t\tadd_legitimacy = legitimacy_mild_bonus"),
+        "delegated": (gold(6), "\t\tadd_prestige = prestige_mild_bonus", "\t\tadd_stability = stability_weak_penalty"),
+    },
+    "olympic_sunset": {
+        "directed": (gold(9), "\t\tadd_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }", "\t\tadd_prestige = prestige_mild_penalty"),
+        "delegated": (gold(3), "\t\tadd_stability = stability_weak_bonus", "\t\tadd_legitimacy = legitimacy_weak_penalty"),
+    },
+    "east_west_division": {
+        "directed": (gold(19), "\t\tadd_legitimacy = legitimacy_mild_bonus", "\t\tadd_stability = stability_weak_penalty"),
+        "delegated": (gold(8), "\t\tadd_prestige = prestige_weak_penalty", manpower("-0.25")),
+    },
+    "faxian_gupta": {
+        "directed": (gold(12), "\t\tadd_research_progress = research_progress_mild_bonus", "\t\tadd_prestige = prestige_mild_bonus"),
+        "delegated": (gold(5), "\t\tadd_legitimacy = legitimacy_weak_bonus", "\t\tadd_research_progress = research_progress_weak_bonus"),
+    },
+    "radagaisus_rhine": {
+        "directed": (gold(21), manpower("-0.75"), "\t\tadd_war_exhaustion = war_exhaustion_weak_bonus"),
+        "delegated": (gold(9), "\t\tadd_stability = stability_weak_penalty", "\t\tadd_army_tradition = army_tradition_weak_bonus"),
+    },
+    "britain_abandoned": {
+        "directed": (gold(14), "\t\tadd_stability = stability_weak_bonus", manpower("-0.4")),
+        "delegated": (gold(6), "\t\tadd_prestige = prestige_mild_penalty", "\t\tadd_war_exhaustion = war_exhaustion_weak_bonus"),
+    },
+    "alaric_sack": {
+        "directed": (gold(20), manpower("-0.7"), "\t\tadd_prestige = prestige_mild_penalty"),
+        "delegated": (gold(8), "\t\tadd_stability = stability_mild_penalty", "\t\tadd_legitimacy = legitimacy_weak_bonus"),
+    },
+    "visigoth_settlement": {
+        "directed": (gold(15), "\t\tadd_stability = stability_mild_bonus", "\t\tadd_prestige = prestige_weak_bonus"),
+        "delegated": (gold(6), manpower("-0.35"), "\t\tadd_legitimacy = legitimacy_weak_penalty"),
+    },
+    "vandal_africa": {
+        "directed": (gold(22), manpower("-0.8"), "\t\tadd_prestige = prestige_weak_penalty"),
+        "delegated": (gold(10), "\t\tadd_stability = stability_weak_penalty", "\t\tadd_army_tradition = army_tradition_mild_bonus"),
+    },
+    "attila": {
+        "directed": (gold(27), manpower("-1.15"), "\t\tadd_army_tradition = army_tradition_mild_bonus"),
+        "delegated": (gold(12), "\t\tadd_war_exhaustion = war_exhaustion_weak_bonus", "\t\tadd_stability = stability_mild_penalty"),
+    },
+    "hephthalites": {
+        "directed": (gold(18), manpower("-0.65"), "\t\tadd_prestige = prestige_weak_bonus"),
+        "delegated": (gold(7), "\t\tadd_stability = stability_weak_bonus", manpower("-0.35")),
+    },
+    "constantinople_earthquake": {
+        "directed": (gold(17), "\t\tadd_stability = stability_mild_bonus", "\t\tadd_prestige = prestige_weak_penalty"),
+        "delegated": (gold(7), "\t\tadd_legitimacy = legitimacy_weak_bonus", manpower("-0.2")),
+    },
+    "adventus_saxonum": {
+        "directed": (gold(14), manpower("-0.45"), "\t\tadd_stability = stability_weak_bonus"),
+        "delegated": (gold(6), "\t\tadd_prestige = prestige_weak_penalty", "\t\tadd_army_tradition = army_tradition_weak_bonus"),
+    },
+    "chalcedon_avarayr": {
+        "directed": (gold(16), "\t\tadd_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }", manpower("-0.4")),
+        "delegated": (gold(7), "\t\tadd_legitimacy = legitimacy_weak_bonus", "\t\tadd_stability = stability_weak_penalty"),
+    },
+    "vandal_sack_rome": {
+        "directed": (gold(19), manpower("-0.55"), "\t\tadd_prestige = prestige_mild_penalty"),
+        "delegated": (gold(8), "\t\tadd_stability = stability_mild_penalty", "\t\tadd_war_exhaustion = war_exhaustion_weak_bonus"),
+    },
+    "cape_bon": {
+        "directed": (gold(18), manpower("-0.7"), "\t\tadd_army_tradition = army_tradition_weak_bonus"),
+        "delegated": (gold(8), "\t\tadd_prestige = prestige_weak_bonus", "\t\tadd_stability = stability_weak_penalty"),
+    },
+}
+
+
+CURRENT_EFFECTS = {**FIRST_CENTURY_EFFECTS, **SECOND_CENTURY_EFFECTS, **LATER_CENTURY_EFFECTS}
 
 
 def packages_are_unique() -> list[str]:

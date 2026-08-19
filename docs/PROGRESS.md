@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-08-19 - Unique situation responses and remaining-century events
+
+- All 83 dated historical currents now have unique directed/delegated effect
+  packages; the validator rejects any reused pair.
+- All 129 situation responses now have unique titles, costs, progress, and
+  extra-effect signatures instead of cloned theme copies.
+
 ## 2026-08-19 - First-century phase events get unique effect packages
 
 - 47 AD 1-200 currents now have distinct directed/delegated costs instead of

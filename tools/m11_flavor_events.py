@@ -591,11 +591,11 @@ def validate(items: tuple[PhaseEvent, ...]) -> None:
         raise ValueError("M11 flavor-event IDs must be unique")
     if len({(item.key, item.phase) for item in items}) != len(items):
         raise ValueError("M11 current phases must be unique")
-    covered_keys = {item.key for item in items if item.date.year <= 200}
+    covered_keys = {item.key for item in items}
     missing = sorted(covered_keys - set(CURRENT_EFFECTS))
     extra = sorted(set(CURRENT_EFFECTS) - covered_keys)
     if missing or extra:
-        raise ValueError(f"early-current effect coverage mismatch missing={missing} extra={extra}")
+        raise ValueError(f"current effect coverage mismatch missing={missing} extra={extra}")
     package_failures = packages_are_unique()
     if package_failures:
         raise ValueError("; ".join(package_failures))

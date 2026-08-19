@@ -16778,8 +16778,8 @@ antq_m11_flavor.6188 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
+		add_gold = -23
+		add_manpower = { value = monthly_manpower multiply = -0.95 }
 		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_severus_caledonia_directed_path } }
@@ -16794,9 +16794,9 @@ antq_m11_flavor.6188 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
+		add_gold = -10
 		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_severus_caledonia_delegated_path } }
 			set_variable = { name = antq_m11_severus_caledonia_delegated_path value = 0 }
@@ -16852,8 +16852,8 @@ antq_m11_flavor.6189 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
+		add_gold = -23
+		add_manpower = { value = monthly_manpower multiply = -0.95 }
 		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_severus_caledonia_directed_path } }
@@ -16876,9 +16876,9 @@ antq_m11_flavor.6189 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
+		add_gold = -10
 		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_severus_caledonia_delegated_path } }
 			set_variable = { name = antq_m11_severus_caledonia_delegated_path value = 0 }
@@ -16942,9 +16942,9 @@ antq_m11_flavor.6190 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_mild_bonus
+		add_gold = -23
+		add_manpower = { value = monthly_manpower multiply = -0.95 }
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_severus_caledonia_directed_path } }
 			set_variable = { name = antq_m11_severus_caledonia_directed_path value = 0 }
@@ -16966,9 +16966,9 @@ antq_m11_flavor.6190 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
+		add_gold = -10
 		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_severus_caledonia_delegated_path } }
 			set_variable = { name = antq_m11_severus_caledonia_delegated_path value = 0 }
@@ -17032,9 +17032,9 @@ antq_m11_flavor.6191 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_mild_bonus
+		add_gold = -23
+		add_manpower = { value = monthly_manpower multiply = -0.95 }
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_severus_caledonia_directed_path } }
 			set_variable = { name = antq_m11_severus_caledonia_directed_path value = 0 }
@@ -17061,9 +17061,9 @@ antq_m11_flavor.6191 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
+		add_gold = -10
 		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_severus_caledonia_delegated_path } }
 			set_variable = { name = antq_m11_severus_caledonia_delegated_path value = 0 }
@@ -17132,9 +17132,9 @@ antq_m11_flavor.6192 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_research_progress = research_progress_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -18
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constitutio_antoniniana_directed_path } }
 			set_variable = { name = antq_m11_constitutio_antoniniana_directed_path value = 0 }
@@ -17148,9 +17148,9 @@ antq_m11_flavor.6192 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -7
+		add_prestige = prestige_weak_bonus
+		add_legitimacy = legitimacy_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constitutio_antoniniana_delegated_path } }
 			set_variable = { name = antq_m11_constitutio_antoniniana_delegated_path value = 0 }
@@ -17206,9 +17206,9 @@ antq_m11_flavor.6193 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_research_progress = research_progress_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -18
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constitutio_antoniniana_directed_path } }
 			set_variable = { name = antq_m11_constitutio_antoniniana_directed_path value = 0 }
@@ -17231,8 +17231,8 @@ antq_m11_flavor.6193 = {
 			modifier = { factor = 1.2 at_war = yes }
 		}
 		add_gold = -7
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_penalty
+		add_prestige = prestige_weak_bonus
+		add_legitimacy = legitimacy_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constitutio_antoniniana_delegated_path } }
 			set_variable = { name = antq_m11_constitutio_antoniniana_delegated_path value = 0 }
@@ -17296,9 +17296,9 @@ antq_m11_flavor.6194 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_research_progress = research_progress_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -18
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constitutio_antoniniana_directed_path } }
 			set_variable = { name = antq_m11_constitutio_antoniniana_directed_path value = 0 }
@@ -17320,9 +17320,9 @@ antq_m11_flavor.6194 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -7
+		add_prestige = prestige_weak_bonus
+		add_legitimacy = legitimacy_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constitutio_antoniniana_delegated_path } }
 			set_variable = { name = antq_m11_constitutio_antoniniana_delegated_path value = 0 }
@@ -17386,9 +17386,9 @@ antq_m11_flavor.6195 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_research_progress = research_progress_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -18
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constitutio_antoniniana_directed_path } }
 			set_variable = { name = antq_m11_constitutio_antoniniana_directed_path value = 0 }
@@ -17415,9 +17415,9 @@ antq_m11_flavor.6195 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -7
+		add_prestige = prestige_weak_bonus
+		add_legitimacy = legitimacy_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constitutio_antoniniana_delegated_path } }
 			set_variable = { name = antq_m11_constitutio_antoniniana_delegated_path value = 0 }
@@ -17486,9 +17486,9 @@ antq_m11_flavor.6196 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_research_progress = research_progress_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -13
+		add_manpower = { value = monthly_manpower multiply = -0.45 }
+		add_prestige = prestige_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_alemanni_formation_directed_path } }
 			set_variable = { name = antq_m11_alemanni_formation_directed_path value = 0 }
@@ -17502,9 +17502,9 @@ antq_m11_flavor.6196 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -5
+		add_stability = stability_weak_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.2 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_alemanni_formation_delegated_path } }
 			set_variable = { name = antq_m11_alemanni_formation_delegated_path value = 0 }
@@ -17560,9 +17560,9 @@ antq_m11_flavor.6197 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_research_progress = research_progress_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -13
+		add_manpower = { value = monthly_manpower multiply = -0.45 }
+		add_prestige = prestige_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_alemanni_formation_directed_path } }
 			set_variable = { name = antq_m11_alemanni_formation_directed_path value = 0 }
@@ -17584,9 +17584,9 @@ antq_m11_flavor.6197 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -5
+		add_stability = stability_weak_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.2 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_alemanni_formation_delegated_path } }
 			set_variable = { name = antq_m11_alemanni_formation_delegated_path value = 0 }
@@ -17650,9 +17650,9 @@ antq_m11_flavor.6198 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_research_progress = research_progress_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -13
+		add_manpower = { value = monthly_manpower multiply = -0.45 }
+		add_prestige = prestige_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_alemanni_formation_directed_path } }
 			set_variable = { name = antq_m11_alemanni_formation_directed_path value = 0 }
@@ -17674,9 +17674,9 @@ antq_m11_flavor.6198 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -5
+		add_stability = stability_weak_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.2 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_alemanni_formation_delegated_path } }
 			set_variable = { name = antq_m11_alemanni_formation_delegated_path value = 0 }
@@ -17740,9 +17740,9 @@ antq_m11_flavor.6199 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_research_progress = research_progress_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -13
+		add_manpower = { value = monthly_manpower multiply = -0.45 }
+		add_prestige = prestige_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_alemanni_formation_directed_path } }
 			set_variable = { name = antq_m11_alemanni_formation_directed_path value = 0 }
@@ -17769,9 +17769,9 @@ antq_m11_flavor.6199 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -5
+		add_stability = stability_weak_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.2 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_alemanni_formation_delegated_path } }
 			set_variable = { name = antq_m11_alemanni_formation_delegated_path value = 0 }
@@ -17840,9 +17840,9 @@ antq_m11_flavor.6200 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -24
+		add_manpower = { value = monthly_manpower multiply = -0.9 }
+		add_legitimacy = legitimacy_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_three_kingdoms_directed_path } }
 			set_variable = { name = antq_m11_three_kingdoms_directed_path value = 0 }
@@ -17856,10 +17856,9 @@ antq_m11_flavor.6200 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_stability = stability_weak_penalty
-		add_prestige = prestige_weak_bonus
+		add_gold = -11
+		add_stability = stability_mild_penalty
+		add_manpower = { value = monthly_manpower multiply = -0.4 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_three_kingdoms_delegated_path } }
 			set_variable = { name = antq_m11_three_kingdoms_delegated_path value = 0 }
@@ -17915,9 +17914,9 @@ antq_m11_flavor.6201 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -24
+		add_manpower = { value = monthly_manpower multiply = -0.9 }
+		add_legitimacy = legitimacy_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_three_kingdoms_directed_path } }
 			set_variable = { name = antq_m11_three_kingdoms_directed_path value = 0 }
@@ -17939,10 +17938,9 @@ antq_m11_flavor.6201 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_stability = stability_weak_penalty
-		add_prestige = prestige_weak_bonus
+		add_gold = -11
+		add_stability = stability_mild_penalty
+		add_manpower = { value = monthly_manpower multiply = -0.4 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_three_kingdoms_delegated_path } }
 			set_variable = { name = antq_m11_three_kingdoms_delegated_path value = 0 }
@@ -18006,9 +18004,9 @@ antq_m11_flavor.6202 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
+		add_gold = -24
+		add_manpower = { value = monthly_manpower multiply = -0.9 }
 		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_three_kingdoms_directed_path } }
 			set_variable = { name = antq_m11_three_kingdoms_directed_path value = 0 }
@@ -18031,9 +18029,8 @@ antq_m11_flavor.6202 = {
 			modifier = { factor = 1.2 at_war = yes }
 		}
 		add_gold = -11
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_stability = stability_weak_penalty
-		add_prestige = prestige_weak_bonus
+		add_stability = stability_mild_penalty
+		add_manpower = { value = monthly_manpower multiply = -0.4 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_three_kingdoms_delegated_path } }
 			set_variable = { name = antq_m11_three_kingdoms_delegated_path value = 0 }
@@ -18097,9 +18094,9 @@ antq_m11_flavor.6203 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
+		add_gold = -24
+		add_manpower = { value = monthly_manpower multiply = -0.9 }
 		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_three_kingdoms_directed_path } }
 			set_variable = { name = antq_m11_three_kingdoms_directed_path value = 0 }
@@ -18126,10 +18123,9 @@ antq_m11_flavor.6203 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_stability = stability_weak_penalty
-		add_prestige = prestige_weak_bonus
+		add_gold = -11
+		add_stability = stability_mild_penalty
+		add_manpower = { value = monthly_manpower multiply = -0.4 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_three_kingdoms_delegated_path } }
 			set_variable = { name = antq_m11_three_kingdoms_delegated_path value = 0 }
@@ -18198,9 +18194,9 @@ antq_m11_flavor.6204 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_research_progress = research_progress_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -20
+		add_legitimacy = legitimacy_mild_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.7 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_sassanid_revolution_directed_path } }
 			set_variable = { name = antq_m11_sassanid_revolution_directed_path value = 0 }
@@ -18214,9 +18210,9 @@ antq_m11_flavor.6204 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -8
+		add_prestige = prestige_mild_penalty
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_sassanid_revolution_delegated_path } }
 			set_variable = { name = antq_m11_sassanid_revolution_delegated_path value = 0 }
@@ -18272,9 +18268,9 @@ antq_m11_flavor.6205 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_research_progress = research_progress_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -20
+		add_legitimacy = legitimacy_mild_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.7 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_sassanid_revolution_directed_path } }
 			set_variable = { name = antq_m11_sassanid_revolution_directed_path value = 0 }
@@ -18296,9 +18292,9 @@ antq_m11_flavor.6205 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -8
+		add_prestige = prestige_mild_penalty
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_sassanid_revolution_delegated_path } }
 			set_variable = { name = antq_m11_sassanid_revolution_delegated_path value = 0 }
@@ -18362,9 +18358,9 @@ antq_m11_flavor.6206 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_research_progress = research_progress_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -20
+		add_legitimacy = legitimacy_mild_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.7 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_sassanid_revolution_directed_path } }
 			set_variable = { name = antq_m11_sassanid_revolution_directed_path value = 0 }
@@ -18386,9 +18382,9 @@ antq_m11_flavor.6206 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -8
+		add_prestige = prestige_mild_penalty
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_sassanid_revolution_delegated_path } }
 			set_variable = { name = antq_m11_sassanid_revolution_delegated_path value = 0 }
@@ -18452,9 +18448,9 @@ antq_m11_flavor.6207 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_research_progress = research_progress_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -20
+		add_legitimacy = legitimacy_mild_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.7 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_sassanid_revolution_directed_path } }
 			set_variable = { name = antq_m11_sassanid_revolution_directed_path value = 0 }
@@ -18481,9 +18477,9 @@ antq_m11_flavor.6207 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -8
+		add_prestige = prestige_mild_penalty
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_sassanid_revolution_delegated_path } }
 			set_variable = { name = antq_m11_sassanid_revolution_delegated_path value = 0 }
@@ -18552,9 +18548,9 @@ antq_m11_flavor.6208 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -28
+		add_stability = stability_mild_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.8 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_third_century_crisis_directed_path } }
 			set_variable = { name = antq_m11_third_century_crisis_directed_path value = 0 }
@@ -18568,10 +18564,9 @@ antq_m11_flavor.6208 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_legitimacy = legitimacy_weak_bonus
-		add_prestige = prestige_weak_penalty
+		add_gold = -12
+		add_legitimacy = legitimacy_mild_penalty
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_third_century_crisis_delegated_path } }
 			set_variable = { name = antq_m11_third_century_crisis_delegated_path value = 0 }
@@ -18627,9 +18622,9 @@ antq_m11_flavor.6209 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -28
+		add_stability = stability_mild_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.8 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_third_century_crisis_directed_path } }
 			set_variable = { name = antq_m11_third_century_crisis_directed_path value = 0 }
@@ -18651,10 +18646,9 @@ antq_m11_flavor.6209 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_legitimacy = legitimacy_weak_bonus
-		add_prestige = prestige_weak_penalty
+		add_gold = -12
+		add_legitimacy = legitimacy_mild_penalty
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_third_century_crisis_delegated_path } }
 			set_variable = { name = antq_m11_third_century_crisis_delegated_path value = 0 }
@@ -18718,9 +18712,9 @@ antq_m11_flavor.6210 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
+		add_gold = -28
 		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_manpower = { value = monthly_manpower multiply = -0.8 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_third_century_crisis_directed_path } }
 			set_variable = { name = antq_m11_third_century_crisis_directed_path value = 0 }
@@ -18742,10 +18736,9 @@ antq_m11_flavor.6210 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_legitimacy = legitimacy_mild_bonus
-		add_prestige = prestige_weak_penalty
+		add_gold = -12
+		add_legitimacy = legitimacy_mild_penalty
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_third_century_crisis_delegated_path } }
 			set_variable = { name = antq_m11_third_century_crisis_delegated_path value = 0 }
@@ -18809,9 +18802,9 @@ antq_m11_flavor.6211 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
+		add_gold = -28
 		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_manpower = { value = monthly_manpower multiply = -0.8 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_third_century_crisis_directed_path } }
 			set_variable = { name = antq_m11_third_century_crisis_directed_path value = 0 }
@@ -18838,10 +18831,9 @@ antq_m11_flavor.6211 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_legitimacy = legitimacy_mild_bonus
-		add_prestige = prestige_weak_penalty
+		add_gold = -12
+		add_legitimacy = legitimacy_mild_penalty
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_third_century_crisis_delegated_path } }
 			set_variable = { name = antq_m11_third_century_crisis_delegated_path value = 0 }
@@ -18910,9 +18902,9 @@ antq_m11_flavor.6212 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -11
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_manichaeism_foundation_directed_path } }
 			set_variable = { name = antq_m11_manichaeism_foundation_directed_path value = 0 }
@@ -18927,8 +18919,8 @@ antq_m11_flavor.6212 = {
 			modifier = { factor = 1.2 at_war = yes }
 		}
 		add_gold = -4
-		add_legitimacy = legitimacy_weak_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_stability = stability_weak_penalty
+		add_research_progress = research_progress_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_manichaeism_foundation_delegated_path } }
 			set_variable = { name = antq_m11_manichaeism_foundation_delegated_path value = 0 }
@@ -18984,9 +18976,9 @@ antq_m11_flavor.6213 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -11
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_manichaeism_foundation_directed_path } }
 			set_variable = { name = antq_m11_manichaeism_foundation_directed_path value = 0 }
@@ -19008,9 +19000,9 @@ antq_m11_flavor.6213 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_legitimacy = legitimacy_weak_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_gold = -4
+		add_stability = stability_weak_penalty
+		add_research_progress = research_progress_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_manichaeism_foundation_delegated_path } }
 			set_variable = { name = antq_m11_manichaeism_foundation_delegated_path value = 0 }
@@ -19074,9 +19066,9 @@ antq_m11_flavor.6214 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -11
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_manichaeism_foundation_directed_path } }
 			set_variable = { name = antq_m11_manichaeism_foundation_directed_path value = 0 }
@@ -19098,9 +19090,9 @@ antq_m11_flavor.6214 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_legitimacy = legitimacy_mild_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_gold = -4
+		add_stability = stability_weak_penalty
+		add_research_progress = research_progress_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_manichaeism_foundation_delegated_path } }
 			set_variable = { name = antq_m11_manichaeism_foundation_delegated_path value = 0 }
@@ -19164,9 +19156,9 @@ antq_m11_flavor.6215 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -11
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_manichaeism_foundation_directed_path } }
 			set_variable = { name = antq_m11_manichaeism_foundation_directed_path value = 0 }
@@ -19193,9 +19185,9 @@ antq_m11_flavor.6215 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_legitimacy = legitimacy_mild_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_gold = -4
+		add_stability = stability_weak_penalty
+		add_research_progress = research_progress_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_manichaeism_foundation_delegated_path } }
 			set_variable = { name = antq_m11_manichaeism_foundation_delegated_path value = 0 }
@@ -19264,9 +19256,9 @@ antq_m11_flavor.6216 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_research_progress = research_progress_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -14
+		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_frankish_formation_directed_path } }
 			set_variable = { name = antq_m11_frankish_formation_directed_path value = 0 }
@@ -19280,9 +19272,9 @@ antq_m11_flavor.6216 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -6
+		add_stability = stability_weak_bonus
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_frankish_formation_delegated_path } }
 			set_variable = { name = antq_m11_frankish_formation_delegated_path value = 0 }
@@ -19339,8 +19331,8 @@ antq_m11_flavor.6217 = {
 			modifier = { factor = 1.25 stability < 0 }
 		}
 		add_gold = -14
-		add_research_progress = research_progress_weak_bonus
-		add_stability = stability_weak_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_frankish_formation_directed_path } }
 			set_variable = { name = antq_m11_frankish_formation_directed_path value = 0 }
@@ -19362,9 +19354,9 @@ antq_m11_flavor.6217 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -6
+		add_stability = stability_weak_bonus
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_frankish_formation_delegated_path } }
 			set_variable = { name = antq_m11_frankish_formation_delegated_path value = 0 }
@@ -19428,9 +19420,9 @@ antq_m11_flavor.6218 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_research_progress = research_progress_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -14
+		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_frankish_formation_directed_path } }
 			set_variable = { name = antq_m11_frankish_formation_directed_path value = 0 }
@@ -19452,9 +19444,9 @@ antq_m11_flavor.6218 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -6
+		add_stability = stability_weak_bonus
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_frankish_formation_delegated_path } }
 			set_variable = { name = antq_m11_frankish_formation_delegated_path value = 0 }
@@ -19518,9 +19510,9 @@ antq_m11_flavor.6219 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_research_progress = research_progress_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -14
+		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_frankish_formation_directed_path } }
 			set_variable = { name = antq_m11_frankish_formation_directed_path value = 0 }
@@ -19548,8 +19540,8 @@ antq_m11_flavor.6219 = {
 			modifier = { factor = 1.2 at_war = yes }
 		}
 		add_gold = -6
-		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_penalty
+		add_stability = stability_weak_bonus
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_frankish_formation_delegated_path } }
 			set_variable = { name = antq_m11_frankish_formation_delegated_path value = 0 }
@@ -19618,9 +19610,9 @@ antq_m11_flavor.6220 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -21
+		add_stability = stability_mild_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.55 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_cyprian_plague_directed_path } }
 			set_variable = { name = antq_m11_cyprian_plague_directed_path value = 0 }
@@ -19634,10 +19626,9 @@ antq_m11_flavor.6220 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
+		add_gold = -9
+		add_prestige = prestige_mild_penalty
 		add_legitimacy = legitimacy_weak_bonus
-		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_cyprian_plague_delegated_path } }
 			set_variable = { name = antq_m11_cyprian_plague_delegated_path value = 0 }
@@ -19693,9 +19684,9 @@ antq_m11_flavor.6221 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -21
+		add_stability = stability_mild_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.55 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_cyprian_plague_directed_path } }
 			set_variable = { name = antq_m11_cyprian_plague_directed_path value = 0 }
@@ -19717,10 +19708,9 @@ antq_m11_flavor.6221 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
+		add_gold = -9
+		add_prestige = prestige_mild_penalty
 		add_legitimacy = legitimacy_weak_bonus
-		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_cyprian_plague_delegated_path } }
 			set_variable = { name = antq_m11_cyprian_plague_delegated_path value = 0 }
@@ -19784,9 +19774,9 @@ antq_m11_flavor.6222 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
+		add_gold = -21
 		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_manpower = { value = monthly_manpower multiply = -0.55 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_cyprian_plague_directed_path } }
 			set_variable = { name = antq_m11_cyprian_plague_directed_path value = 0 }
@@ -19808,10 +19798,9 @@ antq_m11_flavor.6222 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_legitimacy = legitimacy_mild_bonus
-		add_prestige = prestige_weak_penalty
+		add_gold = -9
+		add_prestige = prestige_mild_penalty
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_cyprian_plague_delegated_path } }
 			set_variable = { name = antq_m11_cyprian_plague_delegated_path value = 0 }
@@ -19875,9 +19864,9 @@ antq_m11_flavor.6223 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
+		add_gold = -21
 		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_manpower = { value = monthly_manpower multiply = -0.55 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_cyprian_plague_directed_path } }
 			set_variable = { name = antq_m11_cyprian_plague_directed_path value = 0 }
@@ -19904,10 +19893,9 @@ antq_m11_flavor.6223 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_legitimacy = legitimacy_mild_bonus
-		add_prestige = prestige_weak_penalty
+		add_gold = -9
+		add_prestige = prestige_mild_penalty
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_cyprian_plague_delegated_path } }
 			set_variable = { name = antq_m11_cyprian_plague_delegated_path value = 0 }
@@ -19976,9 +19964,9 @@ antq_m11_flavor.6224 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
+		add_gold = -22
+		add_legitimacy = legitimacy_mild_bonus
 		add_research_progress = research_progress_weak_bonus
-		add_stability = stability_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_diocletian_dominate_directed_path } }
 			set_variable = { name = antq_m11_diocletian_dominate_directed_path value = 0 }
@@ -19992,9 +19980,9 @@ antq_m11_flavor.6224 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_legitimacy = legitimacy_weak_bonus
+		add_gold = -9
 		add_stability = stability_weak_penalty
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_diocletian_dominate_delegated_path } }
 			set_variable = { name = antq_m11_diocletian_dominate_delegated_path value = 0 }
@@ -20050,9 +20038,9 @@ antq_m11_flavor.6225 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
+		add_gold = -22
+		add_legitimacy = legitimacy_mild_bonus
 		add_research_progress = research_progress_weak_bonus
-		add_stability = stability_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_diocletian_dominate_directed_path } }
 			set_variable = { name = antq_m11_diocletian_dominate_directed_path value = 0 }
@@ -20074,9 +20062,9 @@ antq_m11_flavor.6225 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_legitimacy = legitimacy_weak_bonus
+		add_gold = -9
 		add_stability = stability_weak_penalty
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_diocletian_dominate_delegated_path } }
 			set_variable = { name = antq_m11_diocletian_dominate_delegated_path value = 0 }
@@ -20141,8 +20129,8 @@ antq_m11_flavor.6226 = {
 			modifier = { factor = 1.25 stability < 0 }
 		}
 		add_gold = -22
-		add_research_progress = research_progress_mild_bonus
-		add_stability = stability_weak_bonus
+		add_legitimacy = legitimacy_mild_bonus
+		add_research_progress = research_progress_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_diocletian_dominate_directed_path } }
 			set_variable = { name = antq_m11_diocletian_dominate_directed_path value = 0 }
@@ -20164,9 +20152,9 @@ antq_m11_flavor.6226 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_legitimacy = legitimacy_mild_bonus
+		add_gold = -9
 		add_stability = stability_weak_penalty
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_diocletian_dominate_delegated_path } }
 			set_variable = { name = antq_m11_diocletian_dominate_delegated_path value = 0 }
@@ -20230,9 +20218,9 @@ antq_m11_flavor.6227 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_research_progress = research_progress_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -22
+		add_legitimacy = legitimacy_mild_bonus
+		add_research_progress = research_progress_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_diocletian_dominate_directed_path } }
 			set_variable = { name = antq_m11_diocletian_dominate_directed_path value = 0 }
@@ -20259,9 +20247,9 @@ antq_m11_flavor.6227 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_legitimacy = legitimacy_mild_bonus
+		add_gold = -9
 		add_stability = stability_weak_penalty
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_diocletian_dominate_delegated_path } }
 			set_variable = { name = antq_m11_diocletian_dominate_delegated_path value = 0 }
@@ -20330,9 +20318,9 @@ antq_m11_flavor.6228 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
+		add_gold = -25
+		add_manpower = { value = monthly_manpower multiply = -1.0 }
 		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_eight_princes_directed_path } }
 			set_variable = { name = antq_m11_eight_princes_directed_path value = 0 }
@@ -20346,10 +20334,9 @@ antq_m11_flavor.6228 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_stability = stability_weak_penalty
-		add_prestige = prestige_weak_bonus
+		add_gold = -11
+		add_stability = stability_mild_penalty
+		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_eight_princes_delegated_path } }
 			set_variable = { name = antq_m11_eight_princes_delegated_path value = 0 }
@@ -20405,9 +20392,9 @@ antq_m11_flavor.6229 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
+		add_gold = -25
+		add_manpower = { value = monthly_manpower multiply = -1.0 }
 		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_eight_princes_directed_path } }
 			set_variable = { name = antq_m11_eight_princes_directed_path value = 0 }
@@ -20429,10 +20416,9 @@ antq_m11_flavor.6229 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_stability = stability_weak_penalty
-		add_prestige = prestige_weak_bonus
+		add_gold = -11
+		add_stability = stability_mild_penalty
+		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_eight_princes_delegated_path } }
 			set_variable = { name = antq_m11_eight_princes_delegated_path value = 0 }
@@ -20496,9 +20482,9 @@ antq_m11_flavor.6230 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -25
+		add_manpower = { value = monthly_manpower multiply = -1.0 }
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_eight_princes_directed_path } }
 			set_variable = { name = antq_m11_eight_princes_directed_path value = 0 }
@@ -20521,9 +20507,8 @@ antq_m11_flavor.6230 = {
 			modifier = { factor = 1.2 at_war = yes }
 		}
 		add_gold = -11
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_stability = stability_weak_penalty
-		add_prestige = prestige_weak_bonus
+		add_stability = stability_mild_penalty
+		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_eight_princes_delegated_path } }
 			set_variable = { name = antq_m11_eight_princes_delegated_path value = 0 }
@@ -20587,9 +20572,9 @@ antq_m11_flavor.6231 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -25
+		add_manpower = { value = monthly_manpower multiply = -1.0 }
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_eight_princes_directed_path } }
 			set_variable = { name = antq_m11_eight_princes_directed_path value = 0 }
@@ -20616,10 +20601,9 @@ antq_m11_flavor.6231 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_stability = stability_weak_penalty
-		add_prestige = prestige_weak_bonus
+		add_gold = -11
+		add_stability = stability_mild_penalty
+		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_eight_princes_delegated_path } }
 			set_variable = { name = antq_m11_eight_princes_delegated_path value = 0 }
@@ -20688,9 +20672,9 @@ antq_m11_flavor.6232 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -12
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_armenia_conversion_directed_path } }
 			set_variable = { name = antq_m11_armenia_conversion_directed_path value = 0 }
@@ -20704,9 +20688,9 @@ antq_m11_flavor.6232 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_legitimacy = legitimacy_weak_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_gold = -5
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_armenia_conversion_delegated_path } }
 			set_variable = { name = antq_m11_armenia_conversion_delegated_path value = 0 }
@@ -20762,9 +20746,9 @@ antq_m11_flavor.6233 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -12
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_armenia_conversion_directed_path } }
 			set_variable = { name = antq_m11_armenia_conversion_directed_path value = 0 }
@@ -20786,9 +20770,9 @@ antq_m11_flavor.6233 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_legitimacy = legitimacy_weak_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_gold = -5
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_armenia_conversion_delegated_path } }
 			set_variable = { name = antq_m11_armenia_conversion_delegated_path value = 0 }
@@ -20852,9 +20836,9 @@ antq_m11_flavor.6234 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -12
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_armenia_conversion_directed_path } }
 			set_variable = { name = antq_m11_armenia_conversion_directed_path value = 0 }
@@ -20876,9 +20860,9 @@ antq_m11_flavor.6234 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_legitimacy = legitimacy_mild_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_gold = -5
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_armenia_conversion_delegated_path } }
 			set_variable = { name = antq_m11_armenia_conversion_delegated_path value = 0 }
@@ -20943,8 +20927,8 @@ antq_m11_flavor.6235 = {
 			modifier = { factor = 1.25 stability < 0 }
 		}
 		add_gold = -12
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_armenia_conversion_directed_path } }
 			set_variable = { name = antq_m11_armenia_conversion_directed_path value = 0 }
@@ -20971,9 +20955,9 @@ antq_m11_flavor.6235 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_legitimacy = legitimacy_mild_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_gold = -5
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_armenia_conversion_delegated_path } }
 			set_variable = { name = antq_m11_armenia_conversion_delegated_path value = 0 }
@@ -21042,9 +21026,9 @@ antq_m11_flavor.6236 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -26
+		add_manpower = { value = monthly_manpower multiply = -1.1 }
+		add_legitimacy = legitimacy_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constantine_civil_wars_directed_path } }
 			set_variable = { name = antq_m11_constantine_civil_wars_directed_path value = 0 }
@@ -21058,10 +21042,9 @@ antq_m11_flavor.6236 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
+		add_gold = -12
+		add_army_tradition = army_tradition_mild_bonus
 		add_stability = stability_weak_penalty
-		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constantine_civil_wars_delegated_path } }
 			set_variable = { name = antq_m11_constantine_civil_wars_delegated_path value = 0 }
@@ -21117,9 +21100,9 @@ antq_m11_flavor.6237 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -26
+		add_manpower = { value = monthly_manpower multiply = -1.1 }
+		add_legitimacy = legitimacy_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constantine_civil_wars_directed_path } }
 			set_variable = { name = antq_m11_constantine_civil_wars_directed_path value = 0 }
@@ -21141,10 +21124,9 @@ antq_m11_flavor.6237 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
+		add_gold = -12
+		add_army_tradition = army_tradition_mild_bonus
 		add_stability = stability_weak_penalty
-		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constantine_civil_wars_delegated_path } }
 			set_variable = { name = antq_m11_constantine_civil_wars_delegated_path value = 0 }
@@ -21208,9 +21190,9 @@ antq_m11_flavor.6238 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
+		add_gold = -26
+		add_manpower = { value = monthly_manpower multiply = -1.1 }
 		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constantine_civil_wars_directed_path } }
 			set_variable = { name = antq_m11_constantine_civil_wars_directed_path value = 0 }
@@ -21232,10 +21214,9 @@ antq_m11_flavor.6238 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
+		add_gold = -12
+		add_army_tradition = army_tradition_mild_bonus
 		add_stability = stability_weak_penalty
-		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constantine_civil_wars_delegated_path } }
 			set_variable = { name = antq_m11_constantine_civil_wars_delegated_path value = 0 }
@@ -21299,9 +21280,9 @@ antq_m11_flavor.6239 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
+		add_gold = -26
+		add_manpower = { value = monthly_manpower multiply = -1.1 }
 		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constantine_civil_wars_directed_path } }
 			set_variable = { name = antq_m11_constantine_civil_wars_directed_path value = 0 }
@@ -21328,10 +21309,9 @@ antq_m11_flavor.6239 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
+		add_gold = -12
+		add_army_tradition = army_tradition_mild_bonus
 		add_stability = stability_weak_penalty
-		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constantine_civil_wars_delegated_path } }
 			set_variable = { name = antq_m11_constantine_civil_wars_delegated_path value = 0 }
@@ -21400,9 +21380,9 @@ antq_m11_flavor.6240 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -10
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_stability = stability_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_nicaea_directed_path } }
 			set_variable = { name = antq_m11_nicaea_directed_path value = 0 }
@@ -21474,9 +21454,9 @@ antq_m11_flavor.6241 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -10
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_stability = stability_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_nicaea_directed_path } }
 			set_variable = { name = antq_m11_nicaea_directed_path value = 0 }
@@ -21498,7 +21478,7 @@ antq_m11_flavor.6241 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
+		add_gold = -4
 		add_legitimacy = legitimacy_weak_bonus
 		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
 		if = {
@@ -21564,9 +21544,9 @@ antq_m11_flavor.6242 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -10
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_stability = stability_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_nicaea_directed_path } }
 			set_variable = { name = antq_m11_nicaea_directed_path value = 0 }
@@ -21588,8 +21568,8 @@ antq_m11_flavor.6242 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_legitimacy = legitimacy_mild_bonus
+		add_gold = -4
+		add_legitimacy = legitimacy_weak_bonus
 		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_nicaea_delegated_path } }
@@ -21654,9 +21634,9 @@ antq_m11_flavor.6243 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -10
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_stability = stability_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_nicaea_directed_path } }
 			set_variable = { name = antq_m11_nicaea_directed_path value = 0 }
@@ -21683,8 +21663,8 @@ antq_m11_flavor.6243 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_legitimacy = legitimacy_mild_bonus
+		add_gold = -4
+		add_legitimacy = legitimacy_weak_bonus
 		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_nicaea_delegated_path } }
@@ -21754,9 +21734,9 @@ antq_m11_flavor.6244 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -24
+		add_manpower = { value = monthly_manpower multiply = -0.95 }
+		add_army_tradition = army_tradition_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_shapur_julian_directed_path } }
 			set_variable = { name = antq_m11_shapur_julian_directed_path value = 0 }
@@ -21770,10 +21750,9 @@ antq_m11_flavor.6244 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -11
 		add_prestige = prestige_weak_bonus
-		add_stability = stability_weak_penalty
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_shapur_julian_delegated_path } }
 			set_variable = { name = antq_m11_shapur_julian_delegated_path value = 0 }
@@ -21829,9 +21808,9 @@ antq_m11_flavor.6245 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -24
+		add_manpower = { value = monthly_manpower multiply = -0.95 }
+		add_army_tradition = army_tradition_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_shapur_julian_directed_path } }
 			set_variable = { name = antq_m11_shapur_julian_directed_path value = 0 }
@@ -21853,10 +21832,9 @@ antq_m11_flavor.6245 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -11
 		add_prestige = prestige_weak_bonus
-		add_stability = stability_weak_penalty
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_shapur_julian_delegated_path } }
 			set_variable = { name = antq_m11_shapur_julian_delegated_path value = 0 }
@@ -21920,9 +21898,9 @@ antq_m11_flavor.6246 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -24
+		add_manpower = { value = monthly_manpower multiply = -0.95 }
+		add_army_tradition = army_tradition_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_shapur_julian_directed_path } }
 			set_variable = { name = antq_m11_shapur_julian_directed_path value = 0 }
@@ -21945,9 +21923,8 @@ antq_m11_flavor.6246 = {
 			modifier = { factor = 1.2 at_war = yes }
 		}
 		add_gold = -11
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
 		add_prestige = prestige_weak_bonus
-		add_stability = stability_weak_penalty
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_shapur_julian_delegated_path } }
 			set_variable = { name = antq_m11_shapur_julian_delegated_path value = 0 }
@@ -22011,9 +21988,9 @@ antq_m11_flavor.6247 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -24
+		add_manpower = { value = monthly_manpower multiply = -0.95 }
+		add_army_tradition = army_tradition_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_shapur_julian_directed_path } }
 			set_variable = { name = antq_m11_shapur_julian_directed_path value = 0 }
@@ -22040,10 +22017,9 @@ antq_m11_flavor.6247 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -11
 		add_prestige = prestige_weak_bonus
-		add_stability = stability_weak_penalty
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_shapur_julian_delegated_path } }
 			set_variable = { name = antq_m11_shapur_julian_delegated_path value = 0 }
@@ -22112,9 +22088,9 @@ antq_m11_flavor.6248 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_weak_bonus
+		add_gold = -15
+		add_manpower = { value = monthly_manpower multiply = -0.6 }
+		add_prestige = prestige_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_aksum_meroë_directed_path } }
 			set_variable = { name = antq_m11_aksum_meroë_directed_path value = 0 }
@@ -22128,9 +22104,9 @@ antq_m11_flavor.6248 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -6
+		add_legitimacy = legitimacy_weak_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.3 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_aksum_meroë_delegated_path } }
 			set_variable = { name = antq_m11_aksum_meroë_delegated_path value = 0 }
@@ -22186,9 +22162,9 @@ antq_m11_flavor.6249 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_weak_bonus
+		add_gold = -15
+		add_manpower = { value = monthly_manpower multiply = -0.6 }
+		add_prestige = prestige_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_aksum_meroë_directed_path } }
 			set_variable = { name = antq_m11_aksum_meroë_directed_path value = 0 }
@@ -22210,9 +22186,9 @@ antq_m11_flavor.6249 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -6
+		add_legitimacy = legitimacy_weak_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.3 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_aksum_meroë_delegated_path } }
 			set_variable = { name = antq_m11_aksum_meroë_delegated_path value = 0 }
@@ -22276,9 +22252,9 @@ antq_m11_flavor.6250 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_mild_bonus
+		add_gold = -15
+		add_manpower = { value = monthly_manpower multiply = -0.6 }
+		add_prestige = prestige_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_aksum_meroë_directed_path } }
 			set_variable = { name = antq_m11_aksum_meroë_directed_path value = 0 }
@@ -22300,9 +22276,9 @@ antq_m11_flavor.6250 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -6
+		add_legitimacy = legitimacy_weak_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.3 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_aksum_meroë_delegated_path } }
 			set_variable = { name = antq_m11_aksum_meroë_delegated_path value = 0 }
@@ -22366,9 +22342,9 @@ antq_m11_flavor.6251 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_mild_bonus
+		add_gold = -15
+		add_manpower = { value = monthly_manpower multiply = -0.6 }
+		add_prestige = prestige_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_aksum_meroë_directed_path } }
 			set_variable = { name = antq_m11_aksum_meroë_directed_path value = 0 }
@@ -22396,8 +22372,8 @@ antq_m11_flavor.6251 = {
 			modifier = { factor = 1.2 at_war = yes }
 		}
 		add_gold = -6
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_legitimacy = legitimacy_weak_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.3 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_aksum_meroë_delegated_path } }
 			set_variable = { name = antq_m11_aksum_meroë_delegated_path value = 0 }
@@ -22466,9 +22442,9 @@ antq_m11_flavor.6252 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -16
+		add_stability = stability_mild_bonus
+		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_crete_earthquake_directed_path } }
 			set_variable = { name = antq_m11_crete_earthquake_directed_path value = 0 }
@@ -22482,10 +22458,9 @@ antq_m11_flavor.6252 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
+		add_gold = -7
+		add_manpower = { value = monthly_manpower multiply = -0.15 }
 		add_legitimacy = legitimacy_weak_bonus
-		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_crete_earthquake_delegated_path } }
 			set_variable = { name = antq_m11_crete_earthquake_delegated_path value = 0 }
@@ -22541,9 +22516,9 @@ antq_m11_flavor.6253 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -16
+		add_stability = stability_mild_bonus
+		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_crete_earthquake_directed_path } }
 			set_variable = { name = antq_m11_crete_earthquake_directed_path value = 0 }
@@ -22566,9 +22541,8 @@ antq_m11_flavor.6253 = {
 			modifier = { factor = 1.2 at_war = yes }
 		}
 		add_gold = -7
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
+		add_manpower = { value = monthly_manpower multiply = -0.15 }
 		add_legitimacy = legitimacy_weak_bonus
-		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_crete_earthquake_delegated_path } }
 			set_variable = { name = antq_m11_crete_earthquake_delegated_path value = 0 }
@@ -22632,9 +22606,9 @@ antq_m11_flavor.6254 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
+		add_gold = -16
 		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_crete_earthquake_directed_path } }
 			set_variable = { name = antq_m11_crete_earthquake_directed_path value = 0 }
@@ -22656,10 +22630,9 @@ antq_m11_flavor.6254 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_legitimacy = legitimacy_mild_bonus
-		add_prestige = prestige_weak_penalty
+		add_gold = -7
+		add_manpower = { value = monthly_manpower multiply = -0.15 }
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_crete_earthquake_delegated_path } }
 			set_variable = { name = antq_m11_crete_earthquake_delegated_path value = 0 }
@@ -22723,9 +22696,9 @@ antq_m11_flavor.6255 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
+		add_gold = -16
 		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_crete_earthquake_directed_path } }
 			set_variable = { name = antq_m11_crete_earthquake_directed_path value = 0 }
@@ -22752,10 +22725,9 @@ antq_m11_flavor.6255 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_legitimacy = legitimacy_mild_bonus
-		add_prestige = prestige_weak_penalty
+		add_gold = -7
+		add_manpower = { value = monthly_manpower multiply = -0.15 }
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_crete_earthquake_delegated_path } }
 			set_variable = { name = antq_m11_crete_earthquake_delegated_path value = 0 }
@@ -22824,9 +22796,9 @@ antq_m11_flavor.6256 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_research_progress = research_progress_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -17
+		add_manpower = { value = monthly_manpower multiply = -0.55 }
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_huns_arrive_directed_path } }
 			set_variable = { name = antq_m11_huns_arrive_directed_path value = 0 }
@@ -22840,9 +22812,9 @@ antq_m11_flavor.6256 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -7
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_huns_arrive_delegated_path } }
 			set_variable = { name = antq_m11_huns_arrive_delegated_path value = 0 }
@@ -22898,9 +22870,9 @@ antq_m11_flavor.6257 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_research_progress = research_progress_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -17
+		add_manpower = { value = monthly_manpower multiply = -0.55 }
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_huns_arrive_directed_path } }
 			set_variable = { name = antq_m11_huns_arrive_directed_path value = 0 }
@@ -22923,8 +22895,8 @@ antq_m11_flavor.6257 = {
 			modifier = { factor = 1.2 at_war = yes }
 		}
 		add_gold = -7
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_penalty
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_huns_arrive_delegated_path } }
 			set_variable = { name = antq_m11_huns_arrive_delegated_path value = 0 }
@@ -22988,9 +22960,9 @@ antq_m11_flavor.6258 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_research_progress = research_progress_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -17
+		add_manpower = { value = monthly_manpower multiply = -0.55 }
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_huns_arrive_directed_path } }
 			set_variable = { name = antq_m11_huns_arrive_directed_path value = 0 }
@@ -23012,9 +22984,9 @@ antq_m11_flavor.6258 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -7
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_huns_arrive_delegated_path } }
 			set_variable = { name = antq_m11_huns_arrive_delegated_path value = 0 }
@@ -23078,9 +23050,9 @@ antq_m11_flavor.6259 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_research_progress = research_progress_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -17
+		add_manpower = { value = monthly_manpower multiply = -0.55 }
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_huns_arrive_directed_path } }
 			set_variable = { name = antq_m11_huns_arrive_directed_path value = 0 }
@@ -23107,9 +23079,9 @@ antq_m11_flavor.6259 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -7
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_huns_arrive_delegated_path } }
 			set_variable = { name = antq_m11_huns_arrive_delegated_path value = 0 }
@@ -23178,9 +23150,9 @@ antq_m11_flavor.6260 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.25 }
+		add_gold = -18
+		add_stability = stability_mild_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.35 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_gothic_refugees_directed_path } }
 			set_variable = { name = antq_m11_gothic_refugees_directed_path value = 0 }
@@ -23194,8 +23166,8 @@ antq_m11_flavor.6260 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -8
+		add_manpower = { value = monthly_manpower multiply = -0.6 }
 		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_gothic_refugees_delegated_path } }
@@ -23252,9 +23224,9 @@ antq_m11_flavor.6261 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.25 }
+		add_gold = -18
+		add_stability = stability_mild_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.35 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_gothic_refugees_directed_path } }
 			set_variable = { name = antq_m11_gothic_refugees_directed_path value = 0 }
@@ -23276,8 +23248,8 @@ antq_m11_flavor.6261 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -8
+		add_manpower = { value = monthly_manpower multiply = -0.6 }
 		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_gothic_refugees_delegated_path } }
@@ -23342,9 +23314,9 @@ antq_m11_flavor.6262 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
+		add_gold = -18
 		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.25 }
+		add_manpower = { value = monthly_manpower multiply = -0.35 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_gothic_refugees_directed_path } }
 			set_variable = { name = antq_m11_gothic_refugees_directed_path value = 0 }
@@ -23366,8 +23338,8 @@ antq_m11_flavor.6262 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -8
+		add_manpower = { value = monthly_manpower multiply = -0.6 }
 		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_gothic_refugees_delegated_path } }
@@ -23432,9 +23404,9 @@ antq_m11_flavor.6263 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
+		add_gold = -18
 		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.25 }
+		add_manpower = { value = monthly_manpower multiply = -0.35 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_gothic_refugees_directed_path } }
 			set_variable = { name = antq_m11_gothic_refugees_directed_path value = 0 }
@@ -23461,8 +23433,8 @@ antq_m11_flavor.6263 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -8
+		add_manpower = { value = monthly_manpower multiply = -0.6 }
 		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_gothic_refugees_delegated_path } }
@@ -23532,9 +23504,9 @@ antq_m11_flavor.6264 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -13
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_legitimacy = legitimacy_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_thessalonica_directed_path } }
 			set_variable = { name = antq_m11_thessalonica_directed_path value = 0 }
@@ -23548,9 +23520,9 @@ antq_m11_flavor.6264 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_legitimacy = legitimacy_weak_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_gold = -5
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_thessalonica_delegated_path } }
 			set_variable = { name = antq_m11_thessalonica_delegated_path value = 0 }
@@ -23606,9 +23578,9 @@ antq_m11_flavor.6265 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -13
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_legitimacy = legitimacy_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_thessalonica_directed_path } }
 			set_variable = { name = antq_m11_thessalonica_directed_path value = 0 }
@@ -23630,9 +23602,9 @@ antq_m11_flavor.6265 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_legitimacy = legitimacy_weak_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_gold = -5
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_thessalonica_delegated_path } }
 			set_variable = { name = antq_m11_thessalonica_delegated_path value = 0 }
@@ -23696,9 +23668,9 @@ antq_m11_flavor.6266 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -13
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_legitimacy = legitimacy_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_thessalonica_directed_path } }
 			set_variable = { name = antq_m11_thessalonica_directed_path value = 0 }
@@ -23720,9 +23692,9 @@ antq_m11_flavor.6266 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_legitimacy = legitimacy_mild_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_gold = -5
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_thessalonica_delegated_path } }
 			set_variable = { name = antq_m11_thessalonica_delegated_path value = 0 }
@@ -23786,9 +23758,9 @@ antq_m11_flavor.6267 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -13
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_legitimacy = legitimacy_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_thessalonica_directed_path } }
 			set_variable = { name = antq_m11_thessalonica_directed_path value = 0 }
@@ -23815,9 +23787,9 @@ antq_m11_flavor.6267 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_legitimacy = legitimacy_mild_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_gold = -5
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_thessalonica_delegated_path } }
 			set_variable = { name = antq_m11_thessalonica_delegated_path value = 0 }
@@ -23886,9 +23858,9 @@ antq_m11_flavor.6268 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_weak_bonus
+		add_gold = -23
+		add_manpower = { value = monthly_manpower multiply = -0.85 }
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_fei_river_directed_path } }
 			set_variable = { name = antq_m11_fei_river_directed_path value = 0 }
@@ -23902,9 +23874,9 @@ antq_m11_flavor.6268 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -10
+		add_stability = stability_weak_bonus
+		add_army_tradition = army_tradition_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_fei_river_delegated_path } }
 			set_variable = { name = antq_m11_fei_river_delegated_path value = 0 }
@@ -23960,9 +23932,9 @@ antq_m11_flavor.6269 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_weak_bonus
+		add_gold = -23
+		add_manpower = { value = monthly_manpower multiply = -0.85 }
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_fei_river_directed_path } }
 			set_variable = { name = antq_m11_fei_river_directed_path value = 0 }
@@ -23984,9 +23956,9 @@ antq_m11_flavor.6269 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -10
+		add_stability = stability_weak_bonus
+		add_army_tradition = army_tradition_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_fei_river_delegated_path } }
 			set_variable = { name = antq_m11_fei_river_delegated_path value = 0 }
@@ -24050,9 +24022,9 @@ antq_m11_flavor.6270 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_mild_bonus
+		add_gold = -23
+		add_manpower = { value = monthly_manpower multiply = -0.85 }
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_fei_river_directed_path } }
 			set_variable = { name = antq_m11_fei_river_directed_path value = 0 }
@@ -24074,9 +24046,9 @@ antq_m11_flavor.6270 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -10
+		add_stability = stability_weak_bonus
+		add_army_tradition = army_tradition_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_fei_river_delegated_path } }
 			set_variable = { name = antq_m11_fei_river_delegated_path value = 0 }
@@ -24140,9 +24112,9 @@ antq_m11_flavor.6271 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_mild_bonus
+		add_gold = -23
+		add_manpower = { value = monthly_manpower multiply = -0.85 }
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_fei_river_directed_path } }
 			set_variable = { name = antq_m11_fei_river_directed_path value = 0 }
@@ -24169,9 +24141,9 @@ antq_m11_flavor.6271 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -10
+		add_stability = stability_weak_bonus
+		add_army_tradition = army_tradition_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_fei_river_delegated_path } }
 			set_variable = { name = antq_m11_fei_river_delegated_path value = 0 }
@@ -24240,9 +24212,9 @@ antq_m11_flavor.6272 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_research_progress = research_progress_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -16
+		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_legitimacy = legitimacy_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_gwanggaeto_directed_path } }
 			set_variable = { name = antq_m11_gwanggaeto_directed_path value = 0 }
@@ -24256,8 +24228,8 @@ antq_m11_flavor.6272 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_legitimacy = legitimacy_weak_bonus
+		add_gold = -6
+		add_prestige = prestige_mild_bonus
 		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_gwanggaeto_delegated_path } }
@@ -24314,9 +24286,9 @@ antq_m11_flavor.6273 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_research_progress = research_progress_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -16
+		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_legitimacy = legitimacy_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_gwanggaeto_directed_path } }
 			set_variable = { name = antq_m11_gwanggaeto_directed_path value = 0 }
@@ -24338,8 +24310,8 @@ antq_m11_flavor.6273 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_legitimacy = legitimacy_weak_bonus
+		add_gold = -6
+		add_prestige = prestige_mild_bonus
 		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_gwanggaeto_delegated_path } }
@@ -24404,9 +24376,9 @@ antq_m11_flavor.6274 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_research_progress = research_progress_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -16
+		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_legitimacy = legitimacy_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_gwanggaeto_directed_path } }
 			set_variable = { name = antq_m11_gwanggaeto_directed_path value = 0 }
@@ -24428,8 +24400,8 @@ antq_m11_flavor.6274 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_legitimacy = legitimacy_mild_bonus
+		add_gold = -6
+		add_prestige = prestige_mild_bonus
 		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_gwanggaeto_delegated_path } }
@@ -24494,9 +24466,9 @@ antq_m11_flavor.6275 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_research_progress = research_progress_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -16
+		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_legitimacy = legitimacy_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_gwanggaeto_directed_path } }
 			set_variable = { name = antq_m11_gwanggaeto_directed_path value = 0 }
@@ -24524,7 +24496,7 @@ antq_m11_flavor.6275 = {
 			modifier = { factor = 1.2 at_war = yes }
 		}
 		add_gold = -6
-		add_legitimacy = legitimacy_mild_bonus
+		add_prestige = prestige_mild_bonus
 		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_gwanggaeto_delegated_path } }
@@ -24594,9 +24566,9 @@ antq_m11_flavor.6276 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -9
+		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_olympic_sunset_directed_path } }
 			set_variable = { name = antq_m11_olympic_sunset_directed_path value = 0 }
@@ -24610,9 +24582,9 @@ antq_m11_flavor.6276 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_legitimacy = legitimacy_weak_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_gold = -3
+		add_stability = stability_weak_bonus
+		add_legitimacy = legitimacy_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_olympic_sunset_delegated_path } }
 			set_variable = { name = antq_m11_olympic_sunset_delegated_path value = 0 }
@@ -24668,9 +24640,9 @@ antq_m11_flavor.6277 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -9
+		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_olympic_sunset_directed_path } }
 			set_variable = { name = antq_m11_olympic_sunset_directed_path value = 0 }
@@ -24692,9 +24664,9 @@ antq_m11_flavor.6277 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_legitimacy = legitimacy_weak_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_gold = -3
+		add_stability = stability_weak_bonus
+		add_legitimacy = legitimacy_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_olympic_sunset_delegated_path } }
 			set_variable = { name = antq_m11_olympic_sunset_delegated_path value = 0 }
@@ -24758,9 +24730,9 @@ antq_m11_flavor.6278 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -9
+		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_olympic_sunset_directed_path } }
 			set_variable = { name = antq_m11_olympic_sunset_directed_path value = 0 }
@@ -24782,9 +24754,9 @@ antq_m11_flavor.6278 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_legitimacy = legitimacy_mild_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_gold = -3
+		add_stability = stability_weak_bonus
+		add_legitimacy = legitimacy_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_olympic_sunset_delegated_path } }
 			set_variable = { name = antq_m11_olympic_sunset_delegated_path value = 0 }
@@ -24848,9 +24820,9 @@ antq_m11_flavor.6279 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -9
+		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_olympic_sunset_directed_path } }
 			set_variable = { name = antq_m11_olympic_sunset_directed_path value = 0 }
@@ -24877,9 +24849,9 @@ antq_m11_flavor.6279 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_legitimacy = legitimacy_mild_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_gold = -3
+		add_stability = stability_weak_bonus
+		add_legitimacy = legitimacy_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_olympic_sunset_delegated_path } }
 			set_variable = { name = antq_m11_olympic_sunset_delegated_path value = 0 }
@@ -24948,9 +24920,9 @@ antq_m11_flavor.6280 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_research_progress = research_progress_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -19
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_east_west_division_directed_path } }
 			set_variable = { name = antq_m11_east_west_division_directed_path value = 0 }
@@ -24964,9 +24936,9 @@ antq_m11_flavor.6280 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -8
+		add_prestige = prestige_weak_penalty
+		add_manpower = { value = monthly_manpower multiply = -0.25 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_east_west_division_delegated_path } }
 			set_variable = { name = antq_m11_east_west_division_delegated_path value = 0 }
@@ -25022,9 +24994,9 @@ antq_m11_flavor.6281 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_research_progress = research_progress_weak_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -19
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_east_west_division_directed_path } }
 			set_variable = { name = antq_m11_east_west_division_directed_path value = 0 }
@@ -25046,9 +25018,9 @@ antq_m11_flavor.6281 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_legitimacy = legitimacy_weak_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -8
+		add_prestige = prestige_weak_penalty
+		add_manpower = { value = monthly_manpower multiply = -0.25 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_east_west_division_delegated_path } }
 			set_variable = { name = antq_m11_east_west_division_delegated_path value = 0 }
@@ -25112,9 +25084,9 @@ antq_m11_flavor.6282 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_research_progress = research_progress_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -19
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_east_west_division_directed_path } }
 			set_variable = { name = antq_m11_east_west_division_directed_path value = 0 }
@@ -25136,9 +25108,9 @@ antq_m11_flavor.6282 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -8
+		add_prestige = prestige_weak_penalty
+		add_manpower = { value = monthly_manpower multiply = -0.25 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_east_west_division_delegated_path } }
 			set_variable = { name = antq_m11_east_west_division_delegated_path value = 0 }
@@ -25202,9 +25174,9 @@ antq_m11_flavor.6283 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_research_progress = research_progress_mild_bonus
-		add_stability = stability_weak_bonus
+		add_gold = -19
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_east_west_division_directed_path } }
 			set_variable = { name = antq_m11_east_west_division_directed_path value = 0 }
@@ -25231,9 +25203,9 @@ antq_m11_flavor.6283 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_legitimacy = legitimacy_mild_bonus
-		add_stability = stability_weak_penalty
+		add_gold = -8
+		add_prestige = prestige_weak_penalty
+		add_manpower = { value = monthly_manpower multiply = -0.25 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_east_west_division_delegated_path } }
 			set_variable = { name = antq_m11_east_west_division_delegated_path value = 0 }
@@ -25302,9 +25274,9 @@ antq_m11_flavor.6284 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_research_progress = research_progress_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -12
+		add_research_progress = research_progress_mild_bonus
+		add_prestige = prestige_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_faxian_gupta_directed_path } }
 			set_variable = { name = antq_m11_faxian_gupta_directed_path value = 0 }
@@ -25318,9 +25290,9 @@ antq_m11_flavor.6284 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
+		add_gold = -5
 		add_legitimacy = legitimacy_weak_bonus
-		add_prestige = prestige_weak_penalty
+		add_research_progress = research_progress_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_faxian_gupta_delegated_path } }
 			set_variable = { name = antq_m11_faxian_gupta_delegated_path value = 0 }
@@ -25376,9 +25348,9 @@ antq_m11_flavor.6285 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_research_progress = research_progress_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -12
+		add_research_progress = research_progress_mild_bonus
+		add_prestige = prestige_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_faxian_gupta_directed_path } }
 			set_variable = { name = antq_m11_faxian_gupta_directed_path value = 0 }
@@ -25400,9 +25372,9 @@ antq_m11_flavor.6285 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
+		add_gold = -5
 		add_legitimacy = legitimacy_weak_bonus
-		add_prestige = prestige_weak_penalty
+		add_research_progress = research_progress_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_faxian_gupta_delegated_path } }
 			set_variable = { name = antq_m11_faxian_gupta_delegated_path value = 0 }
@@ -25466,9 +25438,9 @@ antq_m11_flavor.6286 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
+		add_gold = -12
 		add_research_progress = research_progress_mild_bonus
-		add_prestige = prestige_weak_bonus
+		add_prestige = prestige_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_faxian_gupta_directed_path } }
 			set_variable = { name = antq_m11_faxian_gupta_directed_path value = 0 }
@@ -25490,9 +25462,9 @@ antq_m11_flavor.6286 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_legitimacy = legitimacy_mild_bonus
-		add_prestige = prestige_weak_penalty
+		add_gold = -5
+		add_legitimacy = legitimacy_weak_bonus
+		add_research_progress = research_progress_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_faxian_gupta_delegated_path } }
 			set_variable = { name = antq_m11_faxian_gupta_delegated_path value = 0 }
@@ -25558,7 +25530,7 @@ antq_m11_flavor.6287 = {
 		}
 		add_gold = -12
 		add_research_progress = research_progress_mild_bonus
-		add_prestige = prestige_weak_bonus
+		add_prestige = prestige_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_faxian_gupta_directed_path } }
 			set_variable = { name = antq_m11_faxian_gupta_directed_path value = 0 }
@@ -25585,9 +25557,9 @@ antq_m11_flavor.6287 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_legitimacy = legitimacy_mild_bonus
-		add_prestige = prestige_weak_penalty
+		add_gold = -5
+		add_legitimacy = legitimacy_weak_bonus
+		add_research_progress = research_progress_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_faxian_gupta_delegated_path } }
 			set_variable = { name = antq_m11_faxian_gupta_delegated_path value = 0 }
@@ -25656,9 +25628,9 @@ antq_m11_flavor.6288 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
+		add_gold = -21
 		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_weak_bonus
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_radagaisus_rhine_directed_path } }
 			set_variable = { name = antq_m11_radagaisus_rhine_directed_path value = 0 }
@@ -25672,9 +25644,9 @@ antq_m11_flavor.6288 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -9
+		add_stability = stability_weak_penalty
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_radagaisus_rhine_delegated_path } }
 			set_variable = { name = antq_m11_radagaisus_rhine_delegated_path value = 0 }
@@ -25730,9 +25702,9 @@ antq_m11_flavor.6289 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
+		add_gold = -21
 		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_weak_bonus
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_radagaisus_rhine_directed_path } }
 			set_variable = { name = antq_m11_radagaisus_rhine_directed_path value = 0 }
@@ -25754,9 +25726,9 @@ antq_m11_flavor.6289 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -9
+		add_stability = stability_weak_penalty
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_radagaisus_rhine_delegated_path } }
 			set_variable = { name = antq_m11_radagaisus_rhine_delegated_path value = 0 }
@@ -25820,9 +25792,9 @@ antq_m11_flavor.6290 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
+		add_gold = -21
 		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_mild_bonus
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_radagaisus_rhine_directed_path } }
 			set_variable = { name = antq_m11_radagaisus_rhine_directed_path value = 0 }
@@ -25844,9 +25816,9 @@ antq_m11_flavor.6290 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -9
+		add_stability = stability_weak_penalty
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_radagaisus_rhine_delegated_path } }
 			set_variable = { name = antq_m11_radagaisus_rhine_delegated_path value = 0 }
@@ -25910,9 +25882,9 @@ antq_m11_flavor.6291 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
+		add_gold = -21
 		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_mild_bonus
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_radagaisus_rhine_directed_path } }
 			set_variable = { name = antq_m11_radagaisus_rhine_directed_path value = 0 }
@@ -25939,9 +25911,9 @@ antq_m11_flavor.6291 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -9
+		add_stability = stability_weak_penalty
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_radagaisus_rhine_delegated_path } }
 			set_variable = { name = antq_m11_radagaisus_rhine_delegated_path value = 0 }
@@ -26010,9 +25982,9 @@ antq_m11_flavor.6292 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
+		add_gold = -14
 		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.25 }
+		add_manpower = { value = monthly_manpower multiply = -0.4 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_britain_abandoned_directed_path } }
 			set_variable = { name = antq_m11_britain_abandoned_directed_path value = 0 }
@@ -26026,9 +25998,9 @@ antq_m11_flavor.6292 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
-		add_prestige = prestige_weak_penalty
+		add_gold = -6
+		add_prestige = prestige_mild_penalty
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_britain_abandoned_delegated_path } }
 			set_variable = { name = antq_m11_britain_abandoned_delegated_path value = 0 }
@@ -26086,7 +26058,7 @@ antq_m11_flavor.6293 = {
 		}
 		add_gold = -14
 		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.25 }
+		add_manpower = { value = monthly_manpower multiply = -0.4 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_britain_abandoned_directed_path } }
 			set_variable = { name = antq_m11_britain_abandoned_directed_path value = 0 }
@@ -26108,9 +26080,9 @@ antq_m11_flavor.6293 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
-		add_prestige = prestige_weak_penalty
+		add_gold = -6
+		add_prestige = prestige_mild_penalty
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_britain_abandoned_delegated_path } }
 			set_variable = { name = antq_m11_britain_abandoned_delegated_path value = 0 }
@@ -26174,9 +26146,9 @@ antq_m11_flavor.6294 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.25 }
+		add_gold = -14
+		add_stability = stability_weak_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.4 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_britain_abandoned_directed_path } }
 			set_variable = { name = antq_m11_britain_abandoned_directed_path value = 0 }
@@ -26198,9 +26170,9 @@ antq_m11_flavor.6294 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
-		add_prestige = prestige_weak_penalty
+		add_gold = -6
+		add_prestige = prestige_mild_penalty
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_britain_abandoned_delegated_path } }
 			set_variable = { name = antq_m11_britain_abandoned_delegated_path value = 0 }
@@ -26264,9 +26236,9 @@ antq_m11_flavor.6295 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.25 }
+		add_gold = -14
+		add_stability = stability_weak_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.4 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_britain_abandoned_directed_path } }
 			set_variable = { name = antq_m11_britain_abandoned_directed_path value = 0 }
@@ -26294,8 +26266,8 @@ antq_m11_flavor.6295 = {
 			modifier = { factor = 1.2 at_war = yes }
 		}
 		add_gold = -6
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
-		add_prestige = prestige_weak_penalty
+		add_prestige = prestige_mild_penalty
+		add_war_exhaustion = war_exhaustion_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_britain_abandoned_delegated_path } }
 			set_variable = { name = antq_m11_britain_abandoned_delegated_path value = 0 }
@@ -26364,9 +26336,9 @@ antq_m11_flavor.6296 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_weak_bonus
+		add_gold = -20
+		add_manpower = { value = monthly_manpower multiply = -0.7 }
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_alaric_sack_directed_path } }
 			set_variable = { name = antq_m11_alaric_sack_directed_path value = 0 }
@@ -26380,9 +26352,9 @@ antq_m11_flavor.6296 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -8
+		add_stability = stability_mild_penalty
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_alaric_sack_delegated_path } }
 			set_variable = { name = antq_m11_alaric_sack_delegated_path value = 0 }
@@ -26438,9 +26410,9 @@ antq_m11_flavor.6297 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_weak_bonus
+		add_gold = -20
+		add_manpower = { value = monthly_manpower multiply = -0.7 }
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_alaric_sack_directed_path } }
 			set_variable = { name = antq_m11_alaric_sack_directed_path value = 0 }
@@ -26462,9 +26434,9 @@ antq_m11_flavor.6297 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -8
+		add_stability = stability_mild_penalty
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_alaric_sack_delegated_path } }
 			set_variable = { name = antq_m11_alaric_sack_delegated_path value = 0 }
@@ -26528,9 +26500,9 @@ antq_m11_flavor.6298 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_mild_bonus
+		add_gold = -20
+		add_manpower = { value = monthly_manpower multiply = -0.7 }
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_alaric_sack_directed_path } }
 			set_variable = { name = antq_m11_alaric_sack_directed_path value = 0 }
@@ -26552,9 +26524,9 @@ antq_m11_flavor.6298 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -8
+		add_stability = stability_mild_penalty
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_alaric_sack_delegated_path } }
 			set_variable = { name = antq_m11_alaric_sack_delegated_path value = 0 }
@@ -26618,9 +26590,9 @@ antq_m11_flavor.6299 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_mild_bonus
+		add_gold = -20
+		add_manpower = { value = monthly_manpower multiply = -0.7 }
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_alaric_sack_directed_path } }
 			set_variable = { name = antq_m11_alaric_sack_directed_path value = 0 }
@@ -26647,9 +26619,9 @@ antq_m11_flavor.6299 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -8
+		add_stability = stability_mild_penalty
+		add_legitimacy = legitimacy_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_alaric_sack_delegated_path } }
 			set_variable = { name = antq_m11_alaric_sack_delegated_path value = 0 }
@@ -26718,9 +26690,9 @@ antq_m11_flavor.6300 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.25 }
+		add_gold = -15
+		add_stability = stability_mild_bonus
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_visigoth_settlement_directed_path } }
 			set_variable = { name = antq_m11_visigoth_settlement_directed_path value = 0 }
@@ -26734,9 +26706,9 @@ antq_m11_flavor.6300 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
-		add_prestige = prestige_weak_penalty
+		add_gold = -6
+		add_manpower = { value = monthly_manpower multiply = -0.35 }
+		add_legitimacy = legitimacy_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_visigoth_settlement_delegated_path } }
 			set_variable = { name = antq_m11_visigoth_settlement_delegated_path value = 0 }
@@ -26792,9 +26764,9 @@ antq_m11_flavor.6301 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.25 }
+		add_gold = -15
+		add_stability = stability_mild_bonus
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_visigoth_settlement_directed_path } }
 			set_variable = { name = antq_m11_visigoth_settlement_directed_path value = 0 }
@@ -26816,9 +26788,9 @@ antq_m11_flavor.6301 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
-		add_prestige = prestige_weak_penalty
+		add_gold = -6
+		add_manpower = { value = monthly_manpower multiply = -0.35 }
+		add_legitimacy = legitimacy_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_visigoth_settlement_delegated_path } }
 			set_variable = { name = antq_m11_visigoth_settlement_delegated_path value = 0 }
@@ -26882,9 +26854,9 @@ antq_m11_flavor.6302 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
+		add_gold = -15
 		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.25 }
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_visigoth_settlement_directed_path } }
 			set_variable = { name = antq_m11_visigoth_settlement_directed_path value = 0 }
@@ -26906,9 +26878,9 @@ antq_m11_flavor.6302 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
-		add_prestige = prestige_weak_penalty
+		add_gold = -6
+		add_manpower = { value = monthly_manpower multiply = -0.35 }
+		add_legitimacy = legitimacy_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_visigoth_settlement_delegated_path } }
 			set_variable = { name = antq_m11_visigoth_settlement_delegated_path value = 0 }
@@ -26972,9 +26944,9 @@ antq_m11_flavor.6303 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
+		add_gold = -15
 		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.25 }
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_visigoth_settlement_directed_path } }
 			set_variable = { name = antq_m11_visigoth_settlement_directed_path value = 0 }
@@ -27002,8 +26974,8 @@ antq_m11_flavor.6303 = {
 			modifier = { factor = 1.2 at_war = yes }
 		}
 		add_gold = -6
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
-		add_prestige = prestige_weak_penalty
+		add_manpower = { value = monthly_manpower multiply = -0.35 }
+		add_legitimacy = legitimacy_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_visigoth_settlement_delegated_path } }
 			set_variable = { name = antq_m11_visigoth_settlement_delegated_path value = 0 }
@@ -27072,9 +27044,9 @@ antq_m11_flavor.6304 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_weak_bonus
+		add_gold = -22
+		add_manpower = { value = monthly_manpower multiply = -0.8 }
+		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_vandal_africa_directed_path } }
 			set_variable = { name = antq_m11_vandal_africa_directed_path value = 0 }
@@ -27088,9 +27060,9 @@ antq_m11_flavor.6304 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -10
+		add_stability = stability_weak_penalty
+		add_army_tradition = army_tradition_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_vandal_africa_delegated_path } }
 			set_variable = { name = antq_m11_vandal_africa_delegated_path value = 0 }
@@ -27146,9 +27118,9 @@ antq_m11_flavor.6305 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_weak_bonus
+		add_gold = -22
+		add_manpower = { value = monthly_manpower multiply = -0.8 }
+		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_vandal_africa_directed_path } }
 			set_variable = { name = antq_m11_vandal_africa_directed_path value = 0 }
@@ -27170,9 +27142,9 @@ antq_m11_flavor.6305 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -10
+		add_stability = stability_weak_penalty
+		add_army_tradition = army_tradition_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_vandal_africa_delegated_path } }
 			set_variable = { name = antq_m11_vandal_africa_delegated_path value = 0 }
@@ -27237,8 +27209,8 @@ antq_m11_flavor.6306 = {
 			modifier = { factor = 1.25 stability < 0 }
 		}
 		add_gold = -22
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_mild_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.8 }
+		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_vandal_africa_directed_path } }
 			set_variable = { name = antq_m11_vandal_africa_directed_path value = 0 }
@@ -27260,9 +27232,9 @@ antq_m11_flavor.6306 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -10
+		add_stability = stability_weak_penalty
+		add_army_tradition = army_tradition_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_vandal_africa_delegated_path } }
 			set_variable = { name = antq_m11_vandal_africa_delegated_path value = 0 }
@@ -27326,9 +27298,9 @@ antq_m11_flavor.6307 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_mild_bonus
+		add_gold = -22
+		add_manpower = { value = monthly_manpower multiply = -0.8 }
+		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_vandal_africa_directed_path } }
 			set_variable = { name = antq_m11_vandal_africa_directed_path value = 0 }
@@ -27355,9 +27327,9 @@ antq_m11_flavor.6307 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -10
+		add_stability = stability_weak_penalty
+		add_army_tradition = army_tradition_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_vandal_africa_delegated_path } }
 			set_variable = { name = antq_m11_vandal_africa_delegated_path value = 0 }
@@ -27426,9 +27398,9 @@ antq_m11_flavor.6308 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_weak_bonus
+		add_gold = -27
+		add_manpower = { value = monthly_manpower multiply = -1.15 }
+		add_army_tradition = army_tradition_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_attila_directed_path } }
 			set_variable = { name = antq_m11_attila_directed_path value = 0 }
@@ -27442,9 +27414,9 @@ antq_m11_flavor.6308 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
+		add_gold = -12
 		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_stability = stability_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_attila_delegated_path } }
 			set_variable = { name = antq_m11_attila_delegated_path value = 0 }
@@ -27500,9 +27472,9 @@ antq_m11_flavor.6309 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_weak_bonus
+		add_gold = -27
+		add_manpower = { value = monthly_manpower multiply = -1.15 }
+		add_army_tradition = army_tradition_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_attila_directed_path } }
 			set_variable = { name = antq_m11_attila_directed_path value = 0 }
@@ -27524,9 +27496,9 @@ antq_m11_flavor.6309 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
+		add_gold = -12
 		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_stability = stability_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_attila_delegated_path } }
 			set_variable = { name = antq_m11_attila_delegated_path value = 0 }
@@ -27590,8 +27562,8 @@ antq_m11_flavor.6310 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
+		add_gold = -27
+		add_manpower = { value = monthly_manpower multiply = -1.15 }
 		add_army_tradition = army_tradition_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_attila_directed_path } }
@@ -27614,9 +27586,9 @@ antq_m11_flavor.6310 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
+		add_gold = -12
 		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_stability = stability_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_attila_delegated_path } }
 			set_variable = { name = antq_m11_attila_delegated_path value = 0 }
@@ -27680,8 +27652,8 @@ antq_m11_flavor.6311 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
+		add_gold = -27
+		add_manpower = { value = monthly_manpower multiply = -1.15 }
 		add_army_tradition = army_tradition_mild_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_attila_directed_path } }
@@ -27709,9 +27681,9 @@ antq_m11_flavor.6311 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
+		add_gold = -12
 		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_stability = stability_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_attila_delegated_path } }
 			set_variable = { name = antq_m11_attila_delegated_path value = 0 }
@@ -27780,9 +27752,9 @@ antq_m11_flavor.6312 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_weak_bonus
+		add_gold = -18
+		add_manpower = { value = monthly_manpower multiply = -0.65 }
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_hephthalites_directed_path } }
 			set_variable = { name = antq_m11_hephthalites_directed_path value = 0 }
@@ -27796,9 +27768,9 @@ antq_m11_flavor.6312 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -7
+		add_stability = stability_weak_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.35 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_hephthalites_delegated_path } }
 			set_variable = { name = antq_m11_hephthalites_delegated_path value = 0 }
@@ -27854,9 +27826,9 @@ antq_m11_flavor.6313 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_weak_bonus
+		add_gold = -18
+		add_manpower = { value = monthly_manpower multiply = -0.65 }
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_hephthalites_directed_path } }
 			set_variable = { name = antq_m11_hephthalites_directed_path value = 0 }
@@ -27879,8 +27851,8 @@ antq_m11_flavor.6313 = {
 			modifier = { factor = 1.2 at_war = yes }
 		}
 		add_gold = -7
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_stability = stability_weak_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.35 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_hephthalites_delegated_path } }
 			set_variable = { name = antq_m11_hephthalites_delegated_path value = 0 }
@@ -27944,9 +27916,9 @@ antq_m11_flavor.6314 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_mild_bonus
+		add_gold = -18
+		add_manpower = { value = monthly_manpower multiply = -0.65 }
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_hephthalites_directed_path } }
 			set_variable = { name = antq_m11_hephthalites_directed_path value = 0 }
@@ -27968,9 +27940,9 @@ antq_m11_flavor.6314 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -7
+		add_stability = stability_weak_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.35 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_hephthalites_delegated_path } }
 			set_variable = { name = antq_m11_hephthalites_delegated_path value = 0 }
@@ -28034,9 +28006,9 @@ antq_m11_flavor.6315 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_mild_bonus
+		add_gold = -18
+		add_manpower = { value = monthly_manpower multiply = -0.65 }
+		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_hephthalites_directed_path } }
 			set_variable = { name = antq_m11_hephthalites_directed_path value = 0 }
@@ -28063,9 +28035,9 @@ antq_m11_flavor.6315 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
+		add_gold = -7
+		add_stability = stability_weak_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.35 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_hephthalites_delegated_path } }
 			set_variable = { name = antq_m11_hephthalites_delegated_path value = 0 }
@@ -28134,9 +28106,9 @@ antq_m11_flavor.6316 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -17
+		add_stability = stability_mild_bonus
+		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constantinople_earthquake_directed_path } }
 			set_variable = { name = antq_m11_constantinople_earthquake_directed_path value = 0 }
@@ -28150,10 +28122,9 @@ antq_m11_flavor.6316 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
+		add_gold = -7
 		add_legitimacy = legitimacy_weak_bonus
-		add_prestige = prestige_weak_penalty
+		add_manpower = { value = monthly_manpower multiply = -0.2 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constantinople_earthquake_delegated_path } }
 			set_variable = { name = antq_m11_constantinople_earthquake_delegated_path value = 0 }
@@ -28209,9 +28180,9 @@ antq_m11_flavor.6317 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -17
+		add_stability = stability_mild_bonus
+		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constantinople_earthquake_directed_path } }
 			set_variable = { name = antq_m11_constantinople_earthquake_directed_path value = 0 }
@@ -28234,9 +28205,8 @@ antq_m11_flavor.6317 = {
 			modifier = { factor = 1.2 at_war = yes }
 		}
 		add_gold = -7
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
 		add_legitimacy = legitimacy_weak_bonus
-		add_prestige = prestige_weak_penalty
+		add_manpower = { value = monthly_manpower multiply = -0.2 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constantinople_earthquake_delegated_path } }
 			set_variable = { name = antq_m11_constantinople_earthquake_delegated_path value = 0 }
@@ -28300,9 +28270,9 @@ antq_m11_flavor.6318 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
+		add_gold = -17
 		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constantinople_earthquake_directed_path } }
 			set_variable = { name = antq_m11_constantinople_earthquake_directed_path value = 0 }
@@ -28324,10 +28294,9 @@ antq_m11_flavor.6318 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_legitimacy = legitimacy_mild_bonus
-		add_prestige = prestige_weak_penalty
+		add_gold = -7
+		add_legitimacy = legitimacy_weak_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.2 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constantinople_earthquake_delegated_path } }
 			set_variable = { name = antq_m11_constantinople_earthquake_delegated_path value = 0 }
@@ -28391,9 +28360,9 @@ antq_m11_flavor.6319 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
+		add_gold = -17
 		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_prestige = prestige_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constantinople_earthquake_directed_path } }
 			set_variable = { name = antq_m11_constantinople_earthquake_directed_path value = 0 }
@@ -28420,10 +28389,9 @@ antq_m11_flavor.6319 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_legitimacy = legitimacy_mild_bonus
-		add_prestige = prestige_weak_penalty
+		add_gold = -7
+		add_legitimacy = legitimacy_weak_bonus
+		add_manpower = { value = monthly_manpower multiply = -0.2 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_constantinople_earthquake_delegated_path } }
 			set_variable = { name = antq_m11_constantinople_earthquake_delegated_path value = 0 }
@@ -28492,9 +28460,9 @@ antq_m11_flavor.6320 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
+		add_gold = -14
+		add_manpower = { value = monthly_manpower multiply = -0.45 }
 		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.25 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_adventus_saxonum_directed_path } }
 			set_variable = { name = antq_m11_adventus_saxonum_directed_path value = 0 }
@@ -28508,9 +28476,9 @@ antq_m11_flavor.6320 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -6
 		add_prestige = prestige_weak_penalty
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_adventus_saxonum_delegated_path } }
 			set_variable = { name = antq_m11_adventus_saxonum_delegated_path value = 0 }
@@ -28567,8 +28535,8 @@ antq_m11_flavor.6321 = {
 			modifier = { factor = 1.25 stability < 0 }
 		}
 		add_gold = -14
+		add_manpower = { value = monthly_manpower multiply = -0.45 }
 		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.25 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_adventus_saxonum_directed_path } }
 			set_variable = { name = antq_m11_adventus_saxonum_directed_path value = 0 }
@@ -28590,9 +28558,9 @@ antq_m11_flavor.6321 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -6
 		add_prestige = prestige_weak_penalty
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_adventus_saxonum_delegated_path } }
 			set_variable = { name = antq_m11_adventus_saxonum_delegated_path value = 0 }
@@ -28656,9 +28624,9 @@ antq_m11_flavor.6322 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.25 }
+		add_gold = -14
+		add_manpower = { value = monthly_manpower multiply = -0.45 }
+		add_stability = stability_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_adventus_saxonum_directed_path } }
 			set_variable = { name = antq_m11_adventus_saxonum_directed_path value = 0 }
@@ -28680,9 +28648,9 @@ antq_m11_flavor.6322 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -6
 		add_prestige = prestige_weak_penalty
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_adventus_saxonum_delegated_path } }
 			set_variable = { name = antq_m11_adventus_saxonum_delegated_path value = 0 }
@@ -28746,9 +28714,9 @@ antq_m11_flavor.6323 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.25 }
+		add_gold = -14
+		add_manpower = { value = monthly_manpower multiply = -0.45 }
+		add_stability = stability_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_adventus_saxonum_directed_path } }
 			set_variable = { name = antq_m11_adventus_saxonum_directed_path value = 0 }
@@ -28776,8 +28744,8 @@ antq_m11_flavor.6323 = {
 			modifier = { factor = 1.2 at_war = yes }
 		}
 		add_gold = -6
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
 		add_prestige = prestige_weak_penalty
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_adventus_saxonum_delegated_path } }
 			set_variable = { name = antq_m11_adventus_saxonum_delegated_path value = 0 }
@@ -28846,9 +28814,9 @@ antq_m11_flavor.6324 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -16
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_manpower = { value = monthly_manpower multiply = -0.4 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_chalcedon_avarayr_directed_path } }
 			set_variable = { name = antq_m11_chalcedon_avarayr_directed_path value = 0 }
@@ -28862,9 +28830,9 @@ antq_m11_flavor.6324 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
+		add_gold = -7
 		add_legitimacy = legitimacy_weak_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_chalcedon_avarayr_delegated_path } }
 			set_variable = { name = antq_m11_chalcedon_avarayr_delegated_path value = 0 }
@@ -28920,9 +28888,9 @@ antq_m11_flavor.6325 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -16
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_manpower = { value = monthly_manpower multiply = -0.4 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_chalcedon_avarayr_directed_path } }
 			set_variable = { name = antq_m11_chalcedon_avarayr_directed_path value = 0 }
@@ -28946,7 +28914,7 @@ antq_m11_flavor.6325 = {
 		}
 		add_gold = -7
 		add_legitimacy = legitimacy_weak_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_chalcedon_avarayr_delegated_path } }
 			set_variable = { name = antq_m11_chalcedon_avarayr_delegated_path value = 0 }
@@ -29010,9 +28978,9 @@ antq_m11_flavor.6326 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -16
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_manpower = { value = monthly_manpower multiply = -0.4 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_chalcedon_avarayr_directed_path } }
 			set_variable = { name = antq_m11_chalcedon_avarayr_directed_path value = 0 }
@@ -29034,9 +29002,9 @@ antq_m11_flavor.6326 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_legitimacy = legitimacy_mild_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_gold = -7
+		add_legitimacy = legitimacy_weak_bonus
+		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_chalcedon_avarayr_delegated_path } }
 			set_variable = { name = antq_m11_chalcedon_avarayr_delegated_path value = 0 }
@@ -29100,9 +29068,9 @@ antq_m11_flavor.6327 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_bonus }
-		add_stability = stability_weak_penalty
+		add_gold = -16
+		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
+		add_manpower = { value = monthly_manpower multiply = -0.4 }
 		if = {
 			limit = { NOT = { has_variable = antq_m11_chalcedon_avarayr_directed_path } }
 			set_variable = { name = antq_m11_chalcedon_avarayr_directed_path value = 0 }
@@ -29129,9 +29097,9 @@ antq_m11_flavor.6327 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_legitimacy = legitimacy_mild_bonus
-		add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }
+		add_gold = -7
+		add_legitimacy = legitimacy_weak_bonus
+		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_chalcedon_avarayr_delegated_path } }
 			set_variable = { name = antq_m11_chalcedon_avarayr_delegated_path value = 0 }
@@ -29200,9 +29168,9 @@ antq_m11_flavor.6328 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_weak_bonus
+		add_gold = -19
+		add_manpower = { value = monthly_manpower multiply = -0.55 }
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_vandal_sack_rome_directed_path } }
 			set_variable = { name = antq_m11_vandal_sack_rome_directed_path value = 0 }
@@ -29216,9 +29184,9 @@ antq_m11_flavor.6328 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
+		add_gold = -8
+		add_stability = stability_mild_penalty
 		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_vandal_sack_rome_delegated_path } }
 			set_variable = { name = antq_m11_vandal_sack_rome_delegated_path value = 0 }
@@ -29274,9 +29242,9 @@ antq_m11_flavor.6329 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_weak_bonus
+		add_gold = -19
+		add_manpower = { value = monthly_manpower multiply = -0.55 }
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_vandal_sack_rome_directed_path } }
 			set_variable = { name = antq_m11_vandal_sack_rome_directed_path value = 0 }
@@ -29298,9 +29266,9 @@ antq_m11_flavor.6329 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
+		add_gold = -8
+		add_stability = stability_mild_penalty
 		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_vandal_sack_rome_delegated_path } }
 			set_variable = { name = antq_m11_vandal_sack_rome_delegated_path value = 0 }
@@ -29364,9 +29332,9 @@ antq_m11_flavor.6330 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_mild_bonus
+		add_gold = -19
+		add_manpower = { value = monthly_manpower multiply = -0.55 }
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_vandal_sack_rome_directed_path } }
 			set_variable = { name = antq_m11_vandal_sack_rome_directed_path value = 0 }
@@ -29388,9 +29356,9 @@ antq_m11_flavor.6330 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
+		add_gold = -8
+		add_stability = stability_mild_penalty
 		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_vandal_sack_rome_delegated_path } }
 			set_variable = { name = antq_m11_vandal_sack_rome_delegated_path value = 0 }
@@ -29454,9 +29422,9 @@ antq_m11_flavor.6331 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_army_tradition = army_tradition_mild_bonus
+		add_gold = -19
+		add_manpower = { value = monthly_manpower multiply = -0.55 }
+		add_prestige = prestige_mild_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_vandal_sack_rome_directed_path } }
 			set_variable = { name = antq_m11_vandal_sack_rome_directed_path value = 0 }
@@ -29483,9 +29451,9 @@ antq_m11_flavor.6331 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
+		add_gold = -8
+		add_stability = stability_mild_penalty
 		add_war_exhaustion = war_exhaustion_weak_bonus
-		add_prestige = prestige_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_vandal_sack_rome_delegated_path } }
 			set_variable = { name = antq_m11_vandal_sack_rome_delegated_path value = 0 }
@@ -29554,9 +29522,9 @@ antq_m11_flavor.6332 = {
 			modifier = { factor = 0.3 gold < 16 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -8
-		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -18
+		add_manpower = { value = monthly_manpower multiply = -0.7 }
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_cape_bon_directed_path } }
 			set_variable = { name = antq_m11_cape_bon_directed_path value = 0 }
@@ -29570,10 +29538,9 @@ antq_m11_flavor.6332 = {
 			modifier = { factor = 1.7 gold < 16 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -4
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_legitimacy = legitimacy_weak_bonus
-		add_prestige = prestige_weak_penalty
+		add_gold = -8
+		add_prestige = prestige_weak_bonus
+		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_cape_bon_delegated_path } }
 			set_variable = { name = antq_m11_cape_bon_delegated_path value = 0 }
@@ -29629,9 +29596,9 @@ antq_m11_flavor.6333 = {
 			modifier = { factor = 0.3 gold < 28 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -14
-		add_stability = stability_weak_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -18
+		add_manpower = { value = monthly_manpower multiply = -0.7 }
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_cape_bon_directed_path } }
 			set_variable = { name = antq_m11_cape_bon_directed_path value = 0 }
@@ -29653,10 +29620,9 @@ antq_m11_flavor.6333 = {
 			modifier = { factor = 1.7 gold < 28 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -7
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_legitimacy = legitimacy_weak_bonus
-		add_prestige = prestige_weak_penalty
+		add_gold = -8
+		add_prestige = prestige_weak_bonus
+		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_cape_bon_delegated_path } }
 			set_variable = { name = antq_m11_cape_bon_delegated_path value = 0 }
@@ -29720,9 +29686,9 @@ antq_m11_flavor.6334 = {
 			modifier = { factor = 0.3 gold < 44 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -22
-		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -18
+		add_manpower = { value = monthly_manpower multiply = -0.7 }
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_cape_bon_directed_path } }
 			set_variable = { name = antq_m11_cape_bon_directed_path value = 0 }
@@ -29744,10 +29710,9 @@ antq_m11_flavor.6334 = {
 			modifier = { factor = 1.7 gold < 44 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -11
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_legitimacy = legitimacy_mild_bonus
-		add_prestige = prestige_weak_penalty
+		add_gold = -8
+		add_prestige = prestige_weak_bonus
+		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_cape_bon_delegated_path } }
 			set_variable = { name = antq_m11_cape_bon_delegated_path value = 0 }
@@ -29811,9 +29776,9 @@ antq_m11_flavor.6335 = {
 			modifier = { factor = 0.3 gold < 24 }
 			modifier = { factor = 1.25 stability < 0 }
 		}
-		add_gold = -12
-		add_stability = stability_mild_bonus
-		add_manpower = { value = monthly_manpower multiply = -0.5 }
+		add_gold = -18
+		add_manpower = { value = monthly_manpower multiply = -0.7 }
+		add_army_tradition = army_tradition_weak_bonus
 		if = {
 			limit = { NOT = { has_variable = antq_m11_cape_bon_directed_path } }
 			set_variable = { name = antq_m11_cape_bon_directed_path value = 0 }
@@ -29840,10 +29805,9 @@ antq_m11_flavor.6335 = {
 			modifier = { factor = 1.7 gold < 24 }
 			modifier = { factor = 1.2 at_war = yes }
 		}
-		add_gold = -6
-		add_manpower = { value = monthly_manpower multiply = -0.75 }
-		add_legitimacy = legitimacy_mild_bonus
-		add_prestige = prestige_weak_penalty
+		add_gold = -8
+		add_prestige = prestige_weak_bonus
+		add_stability = stability_weak_penalty
 		if = {
 			limit = { NOT = { has_variable = antq_m11_cape_bon_delegated_path } }
 			set_variable = { name = antq_m11_cape_bon_delegated_path value = 0 }
